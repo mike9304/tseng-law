@@ -1,8 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
-
-const DATA_FILE = path.join(process.cwd(), 'data', 'reviews.json');
+import { put, list } from '@vercel/blob';
 
 export type Review = {
   id: string;
@@ -13,18 +10,24 @@ export type Review = {
   createdAt: string;
 };
 
+const BLOB_NAME = 'reviews.json';
+
 async function readReviews(): Promise<Review[]> {
   try {
-    const raw = await fs.readFile(DATA_FILE, 'utf-8');
-    return JSON.parse(raw);
+    const { blobs } = await list({ prefix: BLOB_NAME });
+    if (blobs.length === 0) return [];
+    const res = await fetch(blobs[0].url);
+    return await res.json();
   } catch {
     return [];
   }
 }
 
 async function writeReviews(reviews: Review[]): Promise<void> {
-  await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
-  await fs.writeFile(DATA_FILE, JSON.stringify(reviews, null, 2), 'utf-8');
+  await put(BLOB_NAME, JSON.stringify(reviews, null, 2), {
+    access: 'public',
+    addRandomSuffix: false,
+  });
 }
 
 export async function GET() {

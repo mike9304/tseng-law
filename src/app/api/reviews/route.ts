@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { put, list } from '@vercel/blob';
+import { put, list, head } from '@vercel/blob';
 
 export type Review = {
   id: string;
@@ -16,7 +16,8 @@ async function readReviews(): Promise<Review[]> {
   try {
     const { blobs } = await list({ prefix: BLOB_NAME });
     if (blobs.length === 0) return [];
-    const res = await fetch(blobs[0].url);
+    const blob = blobs[0];
+    const res = await fetch(blob.downloadUrl);
     return await res.json();
   } catch (err) {
     console.error('[Reviews] readReviews error:', err);
@@ -26,7 +27,7 @@ async function readReviews(): Promise<Review[]> {
 
 async function writeReviews(reviews: Review[]): Promise<void> {
   await put(BLOB_NAME, JSON.stringify(reviews, null, 2), {
-    access: 'public',
+    access: 'private',
     addRandomSuffix: false,
   });
 }

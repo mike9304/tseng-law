@@ -29,6 +29,7 @@ async function writeReviews(reviews: Review[]): Promise<void> {
   await put(BLOB_NAME, JSON.stringify(reviews, null, 2), {
     access: 'private',
     addRandomSuffix: false,
+    allowOverwrite: true,
   });
 }
 

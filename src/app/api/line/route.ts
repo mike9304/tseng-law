@@ -57,21 +57,6 @@ async function replyMessage(replyToken: string, text: string): Promise<void> {
   });
 }
 
-// ── LINE Push API (인사말용) ──
-async function pushMessage(userId: string, text: string): Promise<void> {
-  await fetch('https://api.line.me/v2/bot/message/push', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${CHANNEL_ACCESS_TOKEN}`,
-    },
-    body: JSON.stringify({
-      to: userId,
-      messages: [{ type: 'text', text }],
-    }),
-  });
-}
-
 // ── 이메일 알림 ──
 async function sendEmailNotification(userId: string, userText: string): Promise<void> {
   if (!SMTP_USER || !SMTP_PASS) {

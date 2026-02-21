@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { put, list, head } from '@vercel/blob';
+import { put, list } from '@vercel/blob';
 
 export type Review = {
   id: string;

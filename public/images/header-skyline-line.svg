@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 600" role="img" aria-label="Seoul and Taipei skyline sketch">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f7f7f7" />
+    </linearGradient>
+    <linearGradient id="roofBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4564b0" />
+      <stop offset="100%" stop-color="#2f4a88" />
+    </linearGradient>
+    <style>
+      .ink {
+        fill: none;
+        stroke: #141414;
+        stroke-width: 2.4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        opacity: 0.7;
+      }
+      .thin {
+        stroke-width: 1.4;
+        opacity: 0.55;
+      }
+      .fill-ink {
+        fill: #ffffff;
+        stroke: #141414;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        opacity: 0.72;
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="2400" height="600" fill="url(#paper)" />
+
+  <path class="ink thin" d="M0 532H2400" />
+
+  <!-- Left gate -->
+  <path class="fill-ink" d="M290 468h620v54H290z" />
+  <path class="fill-ink" d="M318 412h564v56H318z" />
+  <path class="fill-ink" d="M352 346h496v66H352z" />
+  <path class="ink thin" d="M268 532h664m-642-18h618m-574-186h532" />
+
+  <!-- N Seoul tower -->
+  <path class="ink" d="M1030 184h18l10 18-10 16h-18l-10-16z" />
+  <path class="fill-ink" d="M1018 218h44v28h-44z" />
+  <path class="fill-ink" d="M1002 246h76v12h-76z" />
+  <path class="ink" d="M1038 258v218m-18 0h36" />
+  <path class="ink thin" d="M1038 84v100m0-44l-8 12m8-12l8 12m-8-32l-8 10m8-10l8 10" />
+
+  <!-- Small tower -->
+  <path class="ink thin" d="M1176 220v256m-8-202h16m-12-40h8m-6-18h4" />
+
+  <!-- Right gate with blue roof -->
+  <path class="fill-ink" d="M1508 486h440v46h-440z" />
+  <path class="fill-ink" d="M1588 322h280v164h-280z" />
+  <path d="M1552 332l174-84 174 84-26 20h-322z" fill="url(#roofBlue)" stroke="#141414" stroke-width="2.2" opacity="0.85" />
+  <path class="fill-ink" d="M1678 384h96v148h-96z" />
+  <path class="ink thin" d="M1726 384v148m-24-74h48" />
+
+  <!-- Taipei 101 -->
+  <path class="fill-ink" d="M2042 120h88v412h-88z" />
+  <path class="ink thin" d="M2050 158h72m-72 50h72m-72 50h72m-72 50h72m-72 50h72m-72 50h72m-72 50h72" />
+  <path class="ink" d="M2086 54h8v66h-8zm-6 0h20l8 10h-36z" />
+
+  <!-- Foreground city hints -->
+  <path class="ink thin" d="M1298 520h80v-42h-80zm102 0h44v-58h-44zm516 0h72v-34h-72zm736 0h86v-26h-86" />
+</svg>

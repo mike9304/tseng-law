@@ -69,7 +69,7 @@ export default function MobileNavDrawer({
 
   const closeLabel = locale === 'ko' ? '닫기' : locale === 'zh-hant' ? '關閉' : 'Close';
   const drawerLabel = locale === 'ko' ? '모바일 메뉴' : locale === 'zh-hant' ? '行動選單' : 'Mobile menu';
-  const brandText = locale === 'ko' ? '법무법인 호정국제' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
+  const brandText = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
   const brandLogo = locale === 'zh-hant' ? '/images/brand/hovering-logo-zh.png' : '/images/brand/hovering-logo-ko.png';
 
   return (

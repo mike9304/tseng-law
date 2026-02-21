@@ -12,7 +12,7 @@ const SMTP_USER = process.env.SMTP_USER || '';
 const SMTP_PASS = process.env.SMTP_PASS || '';
 
 // ── 인사말 템플릿 ──
-const GREETING_MESSAGE = `안녕하세요! 법무법인 호정국제(昊鼎國際法律事務所)입니다 🏛️
+const GREETING_MESSAGE = `안녕하세요! 법무법인 호정(昊鼎國際法律事務所)입니다 🏛️
 
 상담 예약을 원하시면 아래 정보를 남겨주세요:
 
@@ -74,7 +74,7 @@ async function sendEmailNotification(userId: string, userText: string): Promise<
   const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Taipei' });
 
   await transporter.sendMail({
-    from: `"호정국제 LINE Bot" <${SMTP_USER}>`,
+    from: `"호정 LINE Bot" <${SMTP_USER}>`,
     to: NOTIFY_EMAIL,
     subject: `[LINE 상담문의] 새 메시지 접수 - ${now}`,
     html: `

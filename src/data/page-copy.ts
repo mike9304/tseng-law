@@ -65,12 +65,12 @@ export const pageCopy: Record<Locale, PageCopy> = {
     pricing: {
       label: 'PRICING',
       title: '서비스 비용 안내',
-      description: '호정국제법률사무소의 주요 서비스별 비용을 안내합니다.'
+      description: '호정법률사무소의 주요 서비스별 비용을 안내합니다.'
     },
     reviews: {
       label: 'REVIEWS',
       title: '고객 후기',
-      description: '호정국제법률사무소를 이용하신 고객님들의 솔직한 후기입니다.'
+      description: '호정법률사무소를 이용하신 고객님들의 솔직한 후기입니다.'
     }
   },
   'zh-hant': {

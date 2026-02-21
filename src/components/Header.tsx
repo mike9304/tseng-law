@@ -174,7 +174,7 @@ function buildMegaPanels(locale: Locale): MegaPanel[] {
 
 export default function Header({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
-  const brandText = locale === 'ko' ? '법무법인 호정국제' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
+  const brandText = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
   const brandLogo = locale === 'zh-hant' ? '/images/brand/hovering-logo-zh.png' : '/images/brand/hovering-logo-ko.png';
   const pathname = usePathname();
   const [searchOpen, setSearchOpen] = useState(false);

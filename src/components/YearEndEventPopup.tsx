@@ -23,7 +23,7 @@ const copyByLocale: Record<Locale, PopupCopy> = {
     title: '2026년 기념 리뷰 이벤트',
     body:
       '호정법률사무소를 이용하신 모든 고객님을 대상으로 무료 30분 상담 리뷰 이벤트를 진행합니다. 변호사와 직원이 함께 Google Meet 30분 상담을 진행하며, 상담 후 리뷰를 남겨주시면 참여가 완료됩니다.',
-    points: ['대상: 신규/기존 모든 고객', '진행: Google Meet 30분 무료 상담', '참여: 상담 후 리뷰 1건 작성'],
+    points: ['대상: 신규/기존 모든 고객', '진행: Google Meet 30분 무료 상담', '참여: 상담 후 구글지도 리뷰 1건 작성'],
     cta: '이벤트 문의하기',
     close: '닫기',
     closeForDay: '오늘 하루 보지 않기'
@@ -33,7 +33,7 @@ const copyByLocale: Record<Locale, PopupCopy> = {
     title: '2026年紀念評論活動',
     body:
       '昊鼎國際法律事務所針對所有客戶提供免費 30 分鐘諮詢評論活動。由律師與團隊共同進行 30 分鐘 Google Meet 諮詢，諮詢後留下評論即可完成參與。',
-    points: ['對象：新客戶與既有客戶', '方式：Google Meet 30 分鐘免費諮詢', '參與：諮詢後留下 1 則評論'],
+    points: ['對象：新客戶與既有客戶', '方式：Google Meet 30 分鐘免費諮詢', '參與：諮詢後在 Google Maps 留下 1 則評論'],
     cta: '活動洽詢',
     close: '關閉',
     closeForDay: '今天不再顯示'
@@ -43,7 +43,7 @@ const copyByLocale: Record<Locale, PopupCopy> = {
     title: '2026 Commemorative Review Event',
     body:
       'Hovering International Law Firm is hosting a free 30-minute consultation review event for all clients. Our lawyer and staff will join a Google Meet session, and participation is completed after you leave a review.',
-    points: ['Eligible: all new and existing clients', 'Format: 30-minute free Google Meet consultation', 'How to join: leave one review after consultation'],
+    points: ['Eligible: all new and existing clients', 'Format: 30-minute free Google Meet consultation', 'How to join: leave one Google Maps review after consultation'],
     cta: 'Contact about this event',
     close: 'Close',
     closeForDay: "Don't show today"

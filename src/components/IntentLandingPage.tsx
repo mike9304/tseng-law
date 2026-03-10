@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '@/components/JsonLd';
 import FAQAccordion from '@/components/FAQAccordion';
 import PageHeader from '@/components/PageHeader';
@@ -295,7 +296,11 @@ export default function IntentLandingPage({
             <div className="svc-columns-grid">
               {columns.map((column) => (
                 <Link key={column.slug} href={`/${locale}/columns/${column.slug}`} className="svc-col-card">
-                  <span className="svc-col-badge">{column.categoryLabel}</span>
+                  <div className="svc-col-card-media">
+                    <Image src={column.featuredImage} alt={column.title} width={640} height={360} />
+                    <div className="svc-col-card-overlay" />
+                    <span className="svc-col-badge">{column.categoryLabel}</span>
+                  </div>
                   <h3 className="svc-col-card-title">{column.title}</h3>
                   <p className="svc-col-card-summary">{column.summary}</p>
                   <span className="svc-col-card-meta">

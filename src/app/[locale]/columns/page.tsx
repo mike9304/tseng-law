@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getAllColumnPosts } from '@/lib/columns';
+import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import { pageCopy } from '@/data/page-copy';
-import { buildSeoMetadata } from '@/lib/seo';
+import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 const columnKeywords: Record<Locale, string[]> = {
   ko: ['대만 법률 칼럼', '대만 회사설립 정보', '대만 소송 사례', '대만 노동법', '대만 변호사 블로그'],
@@ -29,9 +30,29 @@ export default function ColumnsPage({ params }: { params: { locale: Locale } }) 
   const locale = normalizeLocale(params.locale);
   const copy = pageCopy[locale].insights;
   const posts = getAllColumnPosts(locale);
+  const byline = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
 
   return (
     <>
+      <JsonLd
+        data={buildBreadcrumbJsonLd(locale, [
+          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+          { name: copy.title, path: `/${locale}/columns` },
+        ])}
+      />
+      <JsonLd
+        data={buildCollectionPageJsonLd({
+          locale,
+          path: `/${locale}/columns`,
+          name: copy.title,
+          description: copy.description,
+          items: posts.slice(0, 20).map((post) => ({
+            name: `${post.title} · ${byline}`,
+            path: `/${locale}/columns/${post.slug}`,
+            description: post.summary,
+          })),
+        })}
+      />
       <PageHeader locale={locale} label="COLUMNS" title={copy.title} description={copy.description} />
       <ColumnsGrid locale={locale} posts={posts} />
     </>

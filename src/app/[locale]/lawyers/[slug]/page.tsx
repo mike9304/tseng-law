@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
+import FAQAccordion from '@/components/FAQAccordion';
 import { getAttorneyProfile, getAttorneyProfilePath, getAttorneyProfileSlugs } from '@/data/attorney-profiles';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { buildBreadcrumbJsonLd, buildProfilePageJsonLd, buildSeoMetadata } from '@/lib/seo';
@@ -18,6 +19,7 @@ const sectionLabels = {
     internalLinks: '관련 서비스 및 콘텐츠',
     externalProfiles: '외부 프로필 및 채널',
     contact: '상담 문의',
+    searchTerms: '자주 찾는 검색 주제',
   },
   'zh-hant': {
     pageLabel: 'PROFILE',
@@ -28,6 +30,7 @@ const sectionLabels = {
     internalLinks: '相關服務與內容',
     externalProfiles: '外部簡介與頻道',
     contact: '聯絡諮詢',
+    searchTerms: '常見搜尋主題',
   },
   en: {
     pageLabel: 'PROFILE',
@@ -38,6 +41,7 @@ const sectionLabels = {
     internalLinks: 'Related Services and Content',
     externalProfiles: 'External Profiles and Channels',
     contact: 'Book Consultation',
+    searchTerms: 'Common Search Topics',
   },
 } as const;
 
@@ -75,6 +79,18 @@ export default function LawyerProfilePage({ params }: { params: { locale: Locale
   }
 
   const profilePath = getAttorneyProfilePath(locale, profile.slug);
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: profile.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
 
   return (
     <>
@@ -101,6 +117,7 @@ export default function LawyerProfilePage({ params }: { params: { locale: Locale
           alumniOf: profile.education,
         })}
       />
+      <JsonLd data={faqSchema} />
 
       <PageHeader
         locale={locale}
@@ -143,6 +160,25 @@ export default function LawyerProfilePage({ params }: { params: { locale: Locale
                 {labels.contact}
               </Link>
             </div>
+          </div>
+
+          <article className="profile-entity-card">
+            <div className="section-label">{labels.searchTerms}</div>
+            <div className="profile-chip-group">
+              {profile.searchTerms.map((term) => (
+                <span key={term} className="profile-chip profile-chip--entity">
+                  {term}
+                </span>
+              ))}
+            </div>
+          </article>
+
+          <div className="profile-proof-grid">
+            {profile.proofPoints.map((item) => (
+              <article key={item} className="profile-proof-card">
+                <p className="profile-proof-text">{item}</p>
+              </article>
+            ))}
           </div>
 
           <div className="profile-card-grid">
@@ -212,6 +248,8 @@ export default function LawyerProfilePage({ params }: { params: { locale: Locale
           </div>
         </div>
       </section>
+
+      <FAQAccordion locale={locale} items={profile.faq} sectionClassName="section section--gray" />
     </>
   );
 }

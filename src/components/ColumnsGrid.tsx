@@ -27,6 +27,7 @@ const categoryLabels = {
 
 export default function ColumnsGrid({ locale, posts }: { locale: Locale; posts: ColumnListItem[] }) {
   const labels = categoryLabels[locale];
+  const byline = locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
   const [active, setActive] = useState<ColumnCategory | 'all'>('all');
   const filtered = active === 'all' ? posts : posts.filter((p) => p.category === active);
 
@@ -56,15 +57,22 @@ export default function ColumnsGrid({ locale, posts }: { locale: Locale; posts: 
             <Link key={post.slug} href={`/${locale}/columns/${post.slug}`} className="columns-card">
               <div className="columns-card-img">
                 <Image src={post.featuredImage} alt={post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                <div className="columns-card-image-overlay" />
+                <div className="columns-card-image-meta">
+                  <span className="columns-category-badge columns-category-badge--image">{post.categoryLabel}</span>
+                  {post.dateDisplay ? <time className="columns-card-datechip">{post.dateDisplay}</time> : null}
+                </div>
               </div>
               <div className="columns-card-body">
                 <div className="columns-card-meta">
-                  <span className="columns-category-badge">{post.categoryLabel}</span>
-                  {post.dateDisplay && <time className="columns-date">{post.dateDisplay}</time>}
+                  <span className="columns-card-byline">{byline}</span>
+                  {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
                 </div>
                 <h3 className="columns-card-title">{post.title}</h3>
                 <p className="columns-card-summary">{post.summary}</p>
-                {post.readTime && <span className="columns-readtime">{post.readTime}</span>}
+                <span className="columns-card-linkhint">
+                  {locale === 'ko' ? '칼럼 보기 →' : locale === 'zh-hant' ? '查看專欄 →' : 'Open column →'}
+                </span>
               </div>
             </Link>
           ))}

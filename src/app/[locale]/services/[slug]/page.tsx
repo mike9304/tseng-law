@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
@@ -158,7 +159,11 @@ export default function ServiceDetailPage({ params }: { params: { locale: Locale
                       href={`/${locale}/columns/${col.slug}`}
                       className="svc-col-card"
                     >
-                      <span className="svc-col-badge">{col.categoryLabel}</span>
+                      <div className="svc-col-card-media">
+                        <Image src={col.featuredImage} alt={col.title} width={640} height={360} />
+                        <div className="svc-col-card-overlay" />
+                        <span className="svc-col-badge">{col.categoryLabel}</span>
+                      </div>
                       <h3 className="svc-col-card-title">{col.title}</h3>
                       <p className="svc-col-card-summary">{col.summary}</p>
                       <span className="svc-col-card-meta">

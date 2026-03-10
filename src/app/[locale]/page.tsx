@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getAllColumnPosts } from '@/lib/columns';
+import JsonLd from '@/components/JsonLd';
 import HeroSearch from '@/components/HeroSearch';
 import ServicesBento from '@/components/ServicesBento';
 import HomeAttorneySplit from '@/components/HomeAttorneySplit';
@@ -12,7 +13,8 @@ import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import Reveal from '@/components/Reveal';
 import { faqContent } from '@/data/faq-content';
-import { buildSeoMetadata } from '@/lib/seo';
+import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
+import { buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 const homeSeoCopy: Record<Locale, { title: string; description: string; keywords: string[] }> = {
   ko: {
@@ -51,9 +53,28 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
   const locale = normalizeLocale(params.locale);
   const faqItems = faqContent[locale];
   const allPosts = getAllColumnPosts(locale);
+  const profile = getAttorneyProfile(locale, primaryAttorneySlug);
 
   return (
     <>
+      {profile ? (
+        <JsonLd
+          data={buildPersonJsonLd({
+            locale,
+            path: `/${locale}/lawyers/${profile.slug}`,
+            name: profile.name,
+            alternateName: profile.alternateNames,
+            description: profile.description,
+            image: profile.image,
+            email: profile.email,
+            jobTitle: profile.role,
+            sameAs: profile.sameAs,
+            knowsLanguage: profile.languages,
+            knowsAbout: profile.practiceAreas,
+            alumniOf: profile.education,
+          })}
+        />
+      ) : null}
       <HeroSearch locale={locale} />
       <Reveal>
         <InsightsArchiveSection locale={locale} posts={allPosts} />

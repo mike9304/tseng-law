@@ -6,6 +6,7 @@ import type { Locale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import SmartLink from '@/components/SmartLink';
+import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 
 interface ArchivePost {
   slug: string;
@@ -59,6 +60,8 @@ export default function InsightsArchiveSection({
   posts: ArchivePost[];
 }) {
   const copy = copyByLocale[locale];
+  const authorLabel = locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
+  const authorHref = getAttorneyProfilePath(locale);
   const [featured, ...rest] = posts;
   const listItems = rest;
   const pageSize = 3;
@@ -93,6 +96,9 @@ export default function InsightsArchiveSection({
                 <time className="insights-date">{featured.dateDisplay || featured.date || copy.dateFallback}</time>
                 {featured.readTime ? <span className="insights-readtime">{featured.readTime}</span> : null}
               </div>
+              <SmartLink className="insights-byline" href={authorHref}>
+                {authorLabel}
+              </SmartLink>
               <h3 className="insights-featured-title">{featured.title}</h3>
               <p className="insights-featured-summary">{featured.summary}</p>
               <SmartLink className="link-underline" href={`/${locale}/columns/${featured.slug}`}>
@@ -127,16 +133,25 @@ export default function InsightsArchiveSection({
             <div className="insights-list" key={`page-${page}`}>
               {visibleItems.map((post) => (
                 <article key={post.slug} className="insights-list-item">
-                  <div className="insights-meta-row">
-                    <time className="insights-date">{post.dateDisplay || post.date || copy.dateFallback}</time>
-                    <span className="tag">{post.categoryLabel}</span>
+                  <div className="insights-list-thumb">
+                    <Image src={post.featuredImage} alt={post.title} width={240} height={160} />
+                    <span className="insights-category-badge insights-category-badge--compact">{post.categoryLabel}</span>
                   </div>
-                  <h4 className="insights-list-title">
-                    <SmartLink className="link-underline" href={`/${locale}/columns/${post.slug}`}>
-                      {post.title}
+                  <div className="insights-list-copy">
+                    <div className="insights-meta-row">
+                      <time className="insights-date">{post.dateDisplay || post.date || copy.dateFallback}</time>
+                      {post.readTime ? <span className="insights-readtime">{post.readTime}</span> : null}
+                    </div>
+                    <SmartLink className="insights-byline" href={authorHref}>
+                      {authorLabel}
                     </SmartLink>
-                  </h4>
-                  <p className="insights-list-summary">{post.summary}</p>
+                    <h4 className="insights-list-title">
+                      <SmartLink className="link-underline" href={`/${locale}/columns/${post.slug}`}>
+                        {post.title}
+                      </SmartLink>
+                    </h4>
+                    <p className="insights-list-summary">{post.summary}</p>
+                  </div>
                 </article>
               ))}
             </div>

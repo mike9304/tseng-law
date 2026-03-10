@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { getColumnPost, getColumnSlugs } from '@/lib/columns';
@@ -40,8 +41,25 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
   if (!post) return notFound();
 
   const backLabel = locale === 'ko' ? '← 칼럼 목록으로' : locale === 'zh-hant' ? '← 返回專欄列表' : '← Back to columns';
-  const authorName = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋 律師' : 'Attorney Wei Tseng';
+  const authorName = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
   const authorProfilePath = getAttorneyProfilePath(locale);
+  const attorneyHeading = locale === 'ko' ? '이 글 검토 변호사' : locale === 'zh-hant' ? '審閱本文的律師' : 'Reviewing Attorney';
+  const guideTitle = locale === 'ko' ? '관련 검색 안내' : locale === 'zh-hant' ? '相關搜尋指南' : 'Related Search Guides';
+  const guideLinks =
+    post.category === 'formation'
+      ? [
+          { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립 변호사 안내' : locale === 'zh-hant' ? '台灣公司設立律師指南' : 'Taiwan Company Setup Lawyer Guide' },
+          { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만변호사 안내' : locale === 'zh-hant' ? '台灣律師指南' : 'Taiwan Lawyer Guide' },
+        ]
+      : post.category === 'case'
+        ? [
+            { href: `/${locale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송 변호사 안내' : locale === 'zh-hant' ? '台灣訴訟律師指南' : 'Taiwan Litigation Lawyer Guide' },
+            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만변호사 안내' : locale === 'zh-hant' ? '台灣律師指南' : 'Taiwan Lawyer Guide' },
+          ]
+        : [
+            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만변호사 안내' : locale === 'zh-hant' ? '台灣律師指南' : 'Taiwan Lawyer Guide' },
+            { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립 변호사 안내' : locale === 'zh-hant' ? '台灣公司設立律師指南' : 'Taiwan Company Setup Lawyer Guide' },
+          ];
 
   return (
     <>
@@ -59,6 +77,7 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
           description: post.summary,
           path: `/${locale}/columns/${post.slug}`,
           image: post.featuredImage,
+          datePublished: post.date,
           dateModified: post.date,
           authorName,
           authorUrl: authorProfilePath,
@@ -110,6 +129,21 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
               <Link href={`/${locale}/contact`} className="button blog-sidebar-btn">
                 {locale === 'ko' ? '문의하기' : locale === 'zh-hant' ? '聯絡我們' : 'Contact Us'}
               </Link>
+            </div>
+            <div className="blog-sidebar-card blog-sidebar-card--attorney">
+              <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
+            </div>
+            <div className="blog-sidebar-card">
+              <h3 className="blog-sidebar-title">{guideTitle}</h3>
+              <ul className="blog-related-list">
+                {guideLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="blog-related-link">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>

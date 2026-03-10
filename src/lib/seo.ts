@@ -34,6 +34,7 @@ type ArticleJsonLdInput = {
   description: string;
   path: string;
   image?: string;
+  datePublished?: string;
   dateModified?: string;
   authorName: string;
   authorUrl?: string;
@@ -269,6 +270,12 @@ export function buildLegalServiceJsonLd(
         url: buildAbsoluteUrl(getLocalizedPath(locale, '/contact')),
       },
     ],
+    employee: {
+      '@type': 'Person',
+      '@id': `${buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng'))}#person`,
+      name: locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng',
+      url: buildAbsoluteUrl(getLocalizedPath(locale, '/lawyers/wei-tseng')),
+    },
     image: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE),
     logo: buildAbsoluteUrl(LOGO_IMAGE),
     address: {
@@ -286,6 +293,7 @@ export function buildArticleJsonLd({
   description,
   path,
   image = DEFAULT_SOCIAL_IMAGE,
+  datePublished,
   dateModified,
   authorName,
   authorUrl,
@@ -296,14 +304,17 @@ export function buildArticleJsonLd({
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${buildAbsoluteUrl(path)}#article`,
     headline: title,
     description,
     image: [buildAbsoluteUrl(image)],
+    datePublished,
     dateModified,
     mainEntityOfPage: buildAbsoluteUrl(path),
     articleSection,
     author: {
       '@type': 'Person',
+      '@id': authorUrl ? `${buildAbsoluteUrl(authorUrl)}#person` : undefined,
       name: authorName,
       url: authorUrl ? buildAbsoluteUrl(authorUrl) : undefined,
       sameAs: authorSameAs,
@@ -339,6 +350,7 @@ export function buildPersonJsonLd({
 
   const personEntity = {
     '@type': 'Person',
+    '@id': `${pageUrl}#person`,
     name,
     alternateName,
     description,
@@ -390,6 +402,7 @@ export function buildProfilePageJsonLd({
     inLanguage: getLocaleLanguageTag(locale),
     mainEntity: {
       '@type': 'Person',
+      '@id': `${pageUrl}#person`,
       name,
       alternateName,
       description,

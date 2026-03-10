@@ -883,6 +883,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             { label: '영상', href: '/ko/videos' },
             { label: 'FAQ', href: '/ko/faq' }
           ]
+        },
+        {
+          title: '검색 가이드',
+          links: [
+            { label: '대만변호사', href: '/ko/taiwan-lawyer' },
+            { label: '대만 회사설립 변호사', href: '/ko/taiwan-company-setup-lawyer' },
+            { label: '대만 소송 변호사', href: '/ko/taiwan-litigation-lawyer' }
+          ]
         }
       ],
       legal: '© 2026 법무법인 호정. All rights reserved.'
@@ -1586,6 +1594,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             { label: '影音', href: '/zh-hant/videos' },
             { label: 'FAQ', href: '/zh-hant/faq' }
           ]
+        },
+        {
+          title: '搜尋指南',
+          links: [
+            { label: '台灣律師', href: '/zh-hant/taiwan-lawyer' },
+            { label: '台灣公司設立律師', href: '/zh-hant/taiwan-company-setup-lawyer' },
+            { label: '台灣訴訟律師', href: '/zh-hant/taiwan-litigation-lawyer' }
+          ]
         }
       ],
       legal: '© 2026 昊鼎國際法律事務所. All rights reserved.'
@@ -2242,6 +2258,14 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             { label: 'Columns', href: '/en/columns' },
             { label: 'Videos', href: '/en/videos' },
             { label: 'FAQ', href: '/en/faq' }
+          ]
+        },
+        {
+          title: 'Search Guides',
+          links: [
+            { label: 'Taiwan Lawyer', href: '/en/taiwan-lawyer' },
+            { label: 'Taiwan Company Setup Lawyer', href: '/en/taiwan-company-setup-lawyer' },
+            { label: 'Taiwan Litigation Lawyer', href: '/en/taiwan-litigation-lawyer' }
           ]
         }
       ],

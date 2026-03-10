@@ -1,14 +1,35 @@
 <svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#12324f" />
-      <stop offset="100%" stop-color="#4b5868" />
+    <linearGradient id="feature3-bg" x1="102" y1="88" x2="706" y2="388" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#102f4d" />
+      <stop offset="0.58" stop-color="#355672" />
+      <stop offset="1" stop-color="#c89855" />
+    </linearGradient>
+    <linearGradient id="feature3-card" x1="440" y1="124" x2="618" y2="344" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffdfa" />
+      <stop offset="1" stop-color="#f0e7da" />
     </linearGradient>
   </defs>
-  <rect width="800" height="480" fill="#f8f7f4" />
-  <rect x="60" y="60" width="680" height="360" rx="28" fill="url(#g3)" opacity="0.13" />
-  <circle cx="180" cy="240" r="60" fill="#c39a53" opacity="0.22" />
-  <line x1="280" y1="190" x2="680" y2="190" stroke="#12324f" stroke-width="2" opacity="0.3" />
-  <line x1="280" y1="250" x2="620" y2="250" stroke="#12324f" stroke-width="2" opacity="0.25" />
-  <line x1="280" y1="310" x2="660" y2="310" stroke="#12324f" stroke-width="2" opacity="0.2" />
+  <rect width="800" height="480" rx="28" fill="#f6f1e8" />
+  <circle cx="136" cy="362" r="108" fill="#ede0ca" />
+  <rect x="62" y="58" width="676" height="364" rx="30" fill="url(#feature3-bg)" />
+  <path d="M118 192c74-30 167-20 222 28 41 35 58 85 107 111 57 30 126 15 174-28" stroke="#efe2cc" stroke-opacity="0.18" stroke-width="2.5" stroke-linecap="round" />
+  <rect x="120" y="126" width="250" height="220" rx="28" fill="#143452" fill-opacity="0.52" stroke="#d1ae76" stroke-opacity="0.22" />
+  <path d="M154 316h188" stroke="#ece0ce" stroke-opacity="0.16" stroke-width="2" />
+  <path d="M180 286c18-46 52-84 95-107" stroke="#d0a15d" stroke-width="4" stroke-linecap="round" />
+  <path d="M214 316c-28-17-46-48-46-82v-52l78-32 78 32v52c0 34-18 65-46 82l-32 18-32-18Z" fill="#f6efdf" fill-opacity="0.9" />
+  <path d="M246 188v106" stroke="#13314e" stroke-opacity="0.2" stroke-width="5" stroke-linecap="round" />
+  <path d="M206 208 246 170l40 38" fill="none" stroke="#b9853f" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M214 252h64" stroke="#13314e" stroke-opacity="0.24" stroke-width="4" stroke-linecap="round" />
+  <path d="M214 278h44" stroke="#13314e" stroke-opacity="0.18" stroke-width="4" stroke-linecap="round" />
+  <rect x="438" y="118" width="220" height="230" rx="28" fill="url(#feature3-card)" />
+  <rect x="468" y="146" width="100" height="18" rx="9" fill="#e4d2b5" />
+  <path d="M472 206h150" stroke="#13314e" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round" />
+  <path d="M472 238h112" stroke="#13314e" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round" />
+  <path d="M472 270h96" stroke="#13314e" stroke-opacity="0.16" stroke-width="4" stroke-linecap="round" />
+  <circle cx="596" cy="280" r="44" fill="#d2a15c" opacity="0.86" />
+  <path d="M578 281h36" stroke="#fffaf2" stroke-width="4" stroke-linecap="round" />
+  <path d="M596 263v36" stroke="#fffaf2" stroke-width="4" stroke-linecap="round" />
+  <path d="M622 160c24 18 41 45 48 76" stroke="#f0e0c6" stroke-opacity="0.36" stroke-width="3.2" stroke-linecap="round" />
+  <path d="M654 254h28" stroke="#f0e0c6" stroke-opacity="0.22" stroke-width="3.2" stroke-linecap="round" />
 </svg>

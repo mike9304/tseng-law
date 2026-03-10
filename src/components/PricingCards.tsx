@@ -1,8 +1,9 @@
 import type { Locale } from '@/lib/locales';
 import Link from 'next/link';
+import PricingIcon, { type PricingIconName } from '@/components/PricingIcon';
 
 type PricingItem = {
-  icon: string;
+  icon: PricingIconName;
   title: string;
   price: string;
   unit: string;
@@ -24,7 +25,7 @@ const pricingData: Record<Locale, PricingContent> = {
     currency: 'NTD (대만달러)',
     items: [
       {
-        icon: '💬',
+        icon: 'consultation',
         title: '일반 법률상담',
         price: 'NT$ 3,000',
         unit: '/ 1시간',
@@ -36,7 +37,7 @@ const pricingData: Record<Locale, PricingContent> = {
         ]
       },
       {
-        icon: '⚖️',
+        icon: 'litigation',
         title: '민사·형사 소송',
         price: '견적 문의',
         unit: '',
@@ -50,7 +51,7 @@ const pricingData: Record<Locale, PricingContent> = {
         highlighted: true
       },
       {
-        icon: '🏢',
+        icon: 'company',
         title: '대만 법인설립',
         price: 'NT$ 50,000',
         unit: '',
@@ -64,7 +65,7 @@ const pricingData: Record<Locale, PricingContent> = {
         note: '자본금 초과·복수 주주·특수 법인(지사, 합자 등)은 별도 견적 문의가 필요합니다.'
       },
       {
-        icon: '📋',
+        icon: 'retainer',
         title: '연간 법률고문',
         price: 'NT$ 50,000',
         unit: '/ 1년',
@@ -85,7 +86,7 @@ const pricingData: Record<Locale, PricingContent> = {
     currency: 'NTD (新台幣)',
     items: [
       {
-        icon: '💬',
+        icon: 'consultation',
         title: '一般法律諮詢',
         price: 'NT$ 3,000',
         unit: '/ 1小時',
@@ -97,7 +98,7 @@ const pricingData: Record<Locale, PricingContent> = {
         ]
       },
       {
-        icon: '⚖️',
+        icon: 'litigation',
         title: '民事·刑事訴訟',
         price: '報價諮詢',
         unit: '',
@@ -111,7 +112,7 @@ const pricingData: Record<Locale, PricingContent> = {
         highlighted: true
       },
       {
-        icon: '🏢',
+        icon: 'company',
         title: '台灣公司設立',
         price: 'NT$ 50,000',
         unit: '',
@@ -125,7 +126,7 @@ const pricingData: Record<Locale, PricingContent> = {
         note: '資本額超過、多位股東或特殊法人（分公司、合資等）需另行詢價。'
       },
       {
-        icon: '📋',
+        icon: 'retainer',
         title: '年度法律顧問',
         price: 'NT$ 50,000',
         unit: '/ 1年',
@@ -146,7 +147,7 @@ const pricingData: Record<Locale, PricingContent> = {
     currency: 'NTD (New Taiwan Dollar)',
     items: [
       {
-        icon: '💬',
+        icon: 'consultation',
         title: 'General Legal Consultation',
         price: 'NT$ 3,000',
         unit: '/ 1 hour',
@@ -158,7 +159,7 @@ const pricingData: Record<Locale, PricingContent> = {
         ]
       },
       {
-        icon: '⚖️',
+        icon: 'litigation',
         title: 'Civil & Criminal Litigation',
         price: 'Request a Quote',
         unit: '',
@@ -172,7 +173,7 @@ const pricingData: Record<Locale, PricingContent> = {
         highlighted: true
       },
       {
-        icon: '🏢',
+        icon: 'company',
         title: 'Taiwan Company Setup',
         price: 'NT$ 50,000',
         unit: '',
@@ -186,7 +187,7 @@ const pricingData: Record<Locale, PricingContent> = {
         note: 'Higher capital, multiple shareholders, or special entities (branch, JV, etc.) require a separate quote.'
       },
       {
-        icon: '📋',
+        icon: 'retainer',
         title: 'Annual Legal Retainer',
         price: 'NT$ 50,000',
         unit: '/ 1 year',
@@ -216,7 +217,9 @@ export default function PricingCards({ locale }: { locale: Locale }) {
         <div className="pricing-grid">
           {data.items.map((item) => (
             <div key={item.title} className={`card pricing-card${item.highlighted ? ' pricing-card--highlight' : ''}`}>
-              <div className="pricing-card-icon">{item.icon}</div>
+              <div className="pricing-card-icon" aria-hidden>
+                <PricingIcon name={item.icon} />
+              </div>
               <h3 className="pricing-card-title">{item.title}</h3>
               <div className="pricing-card-price">
                 <span className="pricing-amount">{item.price}</span>

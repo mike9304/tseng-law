@@ -1,6 +1,21 @@
 <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="320" height="200" fill="#f5f3f1" />
-  <rect x="16" y="16" width="288" height="168" rx="16" fill="#2f485f" opacity="0.14" />
-  <circle cx="160" cy="100" r="26" fill="#2f485f" opacity="0.45" />
-  <polygon points="155,88 175,100 155,112" fill="#f7f5f0" />
+  <defs>
+    <linearGradient id="video3-bg" x1="22" y1="20" x2="288" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#12314d" />
+      <stop offset="0.6" stop-color="#2e516e" />
+      <stop offset="1" stop-color="#c79854" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="22" fill="#f5f0e8" />
+  <rect x="20" y="18" width="280" height="164" rx="22" fill="url(#video3-bg)" />
+  <rect x="44" y="38" width="232" height="124" rx="16" fill="#173654" fill-opacity="0.46" stroke="#d0a15d" stroke-opacity="0.24" />
+  <path d="M84 132V76l36-16v72" fill="#f4ecdf" fill-opacity="0.92" />
+  <path d="M124 132V66l40-16v82" fill="#f4ecdf" fill-opacity="0.76" />
+  <path d="M170 132V58l44-18v92" fill="#f4ecdf" fill-opacity="0.58" />
+  <path d="M72 144h156" stroke="#d0a15d" stroke-width="5" stroke-linecap="round" />
+  <circle cx="228" cy="84" r="22" fill="#c79854" opacity="0.92" />
+  <path d="M218 84h20" stroke="#fffaf2" stroke-width="3" stroke-linecap="round" />
+  <path d="M228 74v20" stroke="#fffaf2" stroke-width="3" stroke-linecap="round" />
+  <rect x="210" y="112" width="42" height="18" rx="9" fill="#f2e4cb" fill-opacity="0.84" />
+  <path d="M70 62c26-14 56-18 86-11" stroke="#f1dfc3" stroke-opacity="0.26" stroke-width="3" stroke-linecap="round" />
 </svg>

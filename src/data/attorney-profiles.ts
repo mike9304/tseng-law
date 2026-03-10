@@ -70,6 +70,8 @@ export const attorneyProfiles: Record<Locale, Record<AttorneyProfileSlug, Attorn
         '상표·특허 신청, 기업 계약 검토, 민사·가사·노동 분쟁 자문',
       ],
       internalLinks: [
+        { label: '대만변호사 안내', href: '/ko/taiwan-lawyer' },
+        { label: '대만 회사설립 변호사 안내', href: '/ko/taiwan-company-setup-lawyer' },
         { label: '대만 회사설립 서비스', href: '/ko/services/investment' },
         { label: '민사소송·손해배상 서비스', href: '/ko/services/civil' },
         { label: '헬스장 부상 소송 칼럼', href: '/ko/columns/taiwan-gym-injury-lawsuit' },
@@ -115,6 +117,8 @@ export const attorneyProfiles: Record<Locale, Record<AttorneyProfileSlug, Attorn
         '處理商標、專利、契約審閱及民事、家事、勞動爭議',
       ],
       internalLinks: [
+        { label: '台灣律師指南', href: '/zh-hant/taiwan-lawyer' },
+        { label: '台灣公司設立律師指南', href: '/zh-hant/taiwan-company-setup-lawyer' },
         { label: '台灣公司設立服務', href: '/zh-hant/services/investment' },
         { label: '民事訴訟服務', href: '/zh-hant/services/civil' },
         { label: '健身房受傷案件專欄', href: '/zh-hant/columns/taiwan-gym-injury-lawsuit' },
@@ -160,6 +164,8 @@ export const attorneyProfiles: Record<Locale, Record<AttorneyProfileSlug, Attorn
         'Advises on trademark, patent, contract review, and cross-border civil, family, and labor disputes',
       ],
       internalLinks: [
+        { label: 'Taiwan Lawyer Guide', href: '/en/taiwan-lawyer' },
+        { label: 'Taiwan Company Setup Lawyer Guide', href: '/en/taiwan-company-setup-lawyer' },
         { label: 'Taiwan Company Setup Service', href: '/en/services/investment' },
         { label: 'Civil Litigation Service', href: '/en/services/civil' },
         { label: 'Gym Injury Case Column', href: '/en/columns/taiwan-gym-injury-lawsuit' },

@@ -20,6 +20,7 @@ type SeoMetadataInput = {
   images?: ImageInput | ImageInput[];
   noindex?: boolean;
   type?: 'website' | 'article';
+  alternateLocales?: readonly Locale[];
 };
 
 type BreadcrumbItem = {
@@ -101,8 +102,8 @@ function normalizeImages(images?: ImageInput | ImageInput[]) {
   });
 }
 
-export function getLanguageAlternates(path = ''): Record<string, string> {
-  const entries = locales.map((locale) => [getLocaleLanguageTag(locale), buildAbsoluteUrl(getLocalizedPath(locale, path))]);
+export function getLanguageAlternates(path = '', alternateLocales: readonly Locale[] = locales): Record<string, string> {
+  const entries = alternateLocales.map((locale) => [getLocaleLanguageTag(locale), buildAbsoluteUrl(getLocalizedPath(locale, path))]);
   return {
     ...Object.fromEntries(entries),
     'x-default': buildAbsoluteUrl(getLocalizedPath(defaultLocale, path)),
@@ -118,6 +119,7 @@ export function buildSeoMetadata({
   images,
   noindex = false,
   type = 'website',
+  alternateLocales = locales,
 }: SeoMetadataInput): Metadata {
   const canonicalPath = getLocalizedPath(locale, path);
   const canonicalUrl = buildAbsoluteUrl(canonicalPath);
@@ -133,7 +135,7 @@ export function buildSeoMetadata({
     },
     alternates: {
       canonical: canonicalUrl,
-      languages: getLanguageAlternates(path),
+      languages: getLanguageAlternates(path, alternateLocales),
     },
     openGraph: {
       title,

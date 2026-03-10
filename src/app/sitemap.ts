@@ -27,6 +27,7 @@ function createEntry(
     lastModified?: string | Date;
     changeFrequency?: 'daily' | 'weekly' | 'monthly';
     priority?: number;
+    alternateLocales?: (typeof locales)[number][];
   }
 ): MetadataRoute.Sitemap[number] {
   return {
@@ -35,7 +36,7 @@ function createEntry(
     changeFrequency: options?.changeFrequency ?? 'weekly',
     priority: options?.priority ?? 0.8,
     alternates: {
-      languages: getLanguageAlternates(path),
+      languages: getLanguageAlternates(path, options?.alternateLocales),
     },
   };
 }
@@ -73,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           lastModified: post.date ? new Date(post.date) : new Date(),
           changeFrequency: 'monthly',
           priority: 0.68,
+          alternateLocales: ['ko', 'zh-hant'],
         })
       );
     }

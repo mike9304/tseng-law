@@ -29,6 +29,7 @@ export function generateMetadata({ params }: { params: { locale: Locale; slug: s
     images: post.featuredImage,
     type: 'article',
     noindex: locale === 'en',
+    alternateLocales: ['ko', 'zh-hant'],
   });
 }
 

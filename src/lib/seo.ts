@@ -36,7 +36,25 @@ type ArticleJsonLdInput = {
   image?: string;
   dateModified?: string;
   authorName: string;
+  authorUrl?: string;
+  authorSameAs?: string[];
+  authorAlternateNames?: string[];
   articleSection?: string;
+};
+
+type PersonProfileJsonLdInput = {
+  locale: Locale;
+  path: string;
+  name: string;
+  alternateName?: string[];
+  description: string;
+  image?: string;
+  email?: string;
+  jobTitle?: string;
+  sameAs?: string[];
+  knowsLanguage?: string[];
+  knowsAbout?: string[];
+  alumniOf?: string[];
 };
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
@@ -258,6 +276,9 @@ export function buildArticleJsonLd({
   image = DEFAULT_SOCIAL_IMAGE,
   dateModified,
   authorName,
+  authorUrl,
+  authorSameAs,
+  authorAlternateNames,
   articleSection,
 }: ArticleJsonLdInput) {
   return {
@@ -272,6 +293,9 @@ export function buildArticleJsonLd({
     author: {
       '@type': 'Person',
       name: authorName,
+      url: authorUrl ? buildAbsoluteUrl(authorUrl) : undefined,
+      sameAs: authorSameAs,
+      alternateName: authorAlternateNames,
     },
     publisher: {
       '@type': 'Organization',
@@ -282,6 +306,53 @@ export function buildArticleJsonLd({
       },
     },
     inLanguage: getLocaleLanguageTag(locale),
+  };
+}
+
+export function buildProfilePageJsonLd({
+  locale,
+  path,
+  name,
+  alternateName,
+  description,
+  image = LOGO_IMAGE,
+  email,
+  jobTitle,
+  sameAs,
+  knowsLanguage,
+  knowsAbout,
+  alumniOf,
+}: PersonProfileJsonLdInput) {
+  const pageUrl = buildAbsoluteUrl(path);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url: pageUrl,
+    name,
+    inLanguage: getLocaleLanguageTag(locale),
+    mainEntity: {
+      '@type': 'Person',
+      name,
+      alternateName,
+      description,
+      url: pageUrl,
+      image: buildAbsoluteUrl(image),
+      email: email ? `mailto:${email}` : undefined,
+      jobTitle,
+      sameAs,
+      knowsLanguage,
+      knowsAbout,
+      worksFor: {
+        '@type': 'Organization',
+        name: organizationName[locale],
+        url: buildAbsoluteUrl(getLocalizedPath(locale)),
+      },
+      alumniOf: alumniOf?.map((school) => ({
+        '@type': 'CollegeOrUniversity',
+        name: school,
+      })),
+    },
   };
 }
 

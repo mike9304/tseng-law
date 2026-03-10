@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { getColumnPost, getColumnSlugs } from '@/lib/columns';
 import ColumnContent from '@/components/ColumnContent';
 import JsonLd from '@/components/JsonLd';
@@ -40,6 +41,7 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
 
   const backLabel = locale === 'ko' ? '← 칼럼 목록으로' : locale === 'zh-hant' ? '← 返回專欄列表' : '← Back to columns';
   const authorName = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋 律師' : 'Attorney Wei Tseng';
+  const authorProfilePath = getAttorneyProfilePath(locale);
 
   return (
     <>
@@ -59,6 +61,14 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
           image: post.featuredImage,
           dateModified: post.date,
           authorName,
+          authorUrl: authorProfilePath,
+          authorSameAs: [
+            'https://www.hoveringlaw.com.tw/en/wei.html',
+            'https://www.wei-wei-lawyer.com/about-8',
+            'https://www.youtube.com/@weilawyer',
+            'https://blog.naver.com/wei_lawyer/223461663913',
+          ],
+          authorAlternateNames: ['증준외', '曾俊瑋', 'Wei Tseng'],
           articleSection: post.categoryLabel,
         })}
       />
@@ -73,7 +83,9 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
           <span className="blog-category-badge">{post.categoryLabel}</span>
           <h1 className="blog-hero-title">{post.title}</h1>
           <div className="blog-meta">
-            <span>{authorName}</span>
+            <Link href={authorProfilePath} className="link-underline">
+              {authorName}
+            </Link>
             <time>{post.dateDisplay || post.date}</time>
             {post.readTime ? <span>{post.readTime}</span> : null}
           </div>

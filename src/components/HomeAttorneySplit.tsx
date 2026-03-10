@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { Locale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
+import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent } from '@/data/team-members';
 
 const copyByLocale = {
@@ -35,7 +36,7 @@ const copyByLocale = {
 
 export default function HomeAttorneySplit({ locale }: { locale: Locale }) {
   const copy = copyByLocale[locale];
-  const profilePath = `/${locale}/lawyers`;
+  const profilePath = getAttorneyProfilePath(locale);
   const lead = teamContent[locale].members[0];
 
   return (

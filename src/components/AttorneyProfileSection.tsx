@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
+import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent, type TeamMember } from '@/data/team-members';
 
 const labels = {
@@ -9,6 +10,7 @@ const labels = {
     education: '학력',
     experience: '경력',
     source: '원문 페이지',
+    fullProfile: '상세 프로필',
     consult: '상담 문의',
     representative: '대표 변호사',
     teamTitle: '소속 변호사 · 직원',
@@ -19,6 +21,7 @@ const labels = {
     education: '學歷',
     experience: '經歷',
     source: '原始頁面',
+    fullProfile: '完整簡介',
     consult: '聯絡諮詢',
     representative: '代表律師',
     teamTitle: '所屬律師 · 職員',
@@ -29,6 +32,7 @@ const labels = {
     education: 'Education',
     experience: 'Experience',
     source: 'Source page',
+    fullProfile: 'Full profile',
     consult: 'Book consultation',
     representative: 'Managing Attorney',
     teamTitle: 'Lawyers & Staff',
@@ -39,6 +43,7 @@ const labels = {
 function MemberCard({ member, locale, size }: { member: TeamMember; locale: Locale; size: 'large' | 'small' }) {
   const l = labels[locale];
   const isLarge = size === 'large';
+  const profileHref = member.profileSlug ? getAttorneyProfilePath(locale, member.profileSlug) : null;
 
   return (
     <article id={member.id} className={`attorney-card ${isLarge ? 'attorney-card--lead' : 'attorney-card--sub'}`}>
@@ -52,7 +57,15 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Loca
         />
       </div>
       <div className="attorney-card-info">
-        <h3 className={`attorney-card-name ${isLarge ? 'attorney-card-name--lead' : ''}`}>{member.name}</h3>
+        <h3 className={`attorney-card-name ${isLarge ? 'attorney-card-name--lead' : ''}`}>
+          {profileHref ? (
+            <Link href={profileHref} className="attorney-card-name-link">
+              {member.name}
+            </Link>
+          ) : (
+            member.name
+          )}
+        </h3>
         <p className="attorney-card-role">{member.role}</p>
         <a href={`mailto:${member.email}`} className="attorney-card-email">{member.email}</a>
 
@@ -81,7 +94,16 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Loca
           {l.source}:{' '}
           <a href={member.sourceUrl} target="_blank" rel="noreferrer" className="link-underline">{member.sourceUrl}</a>
         </p>
-        <Link href={`/${locale}/contact`} className="button button--outline attorney-card-cta">{l.consult}</Link>
+        <div className="attorney-card-actions">
+          {profileHref ? (
+            <Link href={profileHref} className="button button--outline attorney-card-cta">
+              {l.fullProfile}
+            </Link>
+          ) : null}
+          <Link href={`/${locale}/contact`} className="button button--outline attorney-card-cta">
+            {l.consult}
+          </Link>
+        </div>
       </div>
     </article>
   );

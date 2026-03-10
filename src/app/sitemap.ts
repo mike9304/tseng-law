@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { primaryAttorneySlug } from '@/data/attorney-profiles';
 import { serviceAreas } from '@/data/service-details';
 import { getAllColumnPosts } from '@/lib/columns';
 import { locales } from '@/lib/locales';
@@ -53,6 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
       );
     }
+
+    pages.push(
+      createEntry(locale, `/lawyers/${primaryAttorneySlug}`, {
+        changeFrequency: 'monthly',
+        priority: 0.86,
+      })
+    );
 
     for (const area of serviceAreas) {
       pages.push(

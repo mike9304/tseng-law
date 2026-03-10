@@ -2,6 +2,7 @@ import type { Locale } from '@/lib/locales';
 
 export type TeamMember = {
   id: string;
+  profileSlug?: string;
   name: string;
   role: string;
   email: string;
@@ -33,6 +34,7 @@ export const teamContent: Record<Locale, TeamContent> = {
     members: [
       {
         id: 'tseng-junwei',
+        profileSlug: 'wei-tseng',
         name: '증준외',
         role: '대표 변호사',
         email: 'wei@hoveringlaw.com.tw',
@@ -104,6 +106,7 @@ export const teamContent: Record<Locale, TeamContent> = {
     members: [
       {
         id: 'tseng-junwei',
+        profileSlug: 'wei-tseng',
         name: '曾俊瑋',
         role: '代表律師',
         email: 'wei@hoveringlaw.com.tw',
@@ -175,6 +178,7 @@ export const teamContent: Record<Locale, TeamContent> = {
     members: [
       {
         id: 'tseng-junwei',
+        profileSlug: 'wei-tseng',
         name: 'Wei Tseng',
         role: 'Managing Attorney',
         email: 'wei@hoveringlaw.com.tw',

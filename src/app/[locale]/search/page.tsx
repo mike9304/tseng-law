@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import PageHeader from '@/components/PageHeader';
@@ -5,6 +6,20 @@ import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 import { filterSearchIndex, getSearchIndex, type SearchCategory } from '@/lib/search';
+import { buildSeoMetadata } from '@/lib/seo';
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const copy = pageCopy[locale].search;
+
+  return buildSeoMetadata({
+    locale,
+    title: copy.title,
+    description: copy.description,
+    path: '/search',
+    noindex: true,
+  });
+}
 
 export default function SearchPage({
   params,

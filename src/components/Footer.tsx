@@ -99,7 +99,7 @@ export default function Footer({ locale }: { locale: Locale }) {
                     <polygon points="8,7.5 13,10 8,12.5" fill="currentColor" stroke="none" />
                   </svg>
                 </a>
-                <a className="social-icon" href="https://www.wei-wei-lawyer.com/" aria-label="Website" target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://tseng-law.com/" aria-label="Website" target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <circle cx="10" cy="10" r="8" />
                     <ellipse cx="10" cy="10" rx="3.5" ry="8" />

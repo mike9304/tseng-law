@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { normalizeLocale, type Locale, locales } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
+import JsonLd from '@/components/JsonLd';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LocaleSetter from '@/components/LocaleSetter';
@@ -10,6 +11,7 @@ import ScrollProgressLine from '@/components/ScrollProgressLine';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import SectionDotNav from '@/components/SectionDotNav';
 import YearEndEventPopup from '@/components/YearEndEventPopup';
+import { buildLegalServiceJsonLd, buildWebsiteJsonLd } from '@/lib/seo';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -35,6 +37,8 @@ export default function LocaleLayout({
   return (
     <div className="site" data-locale={locale} data-theme="parity">
       <LocaleSetter locale={locale} />
+      <JsonLd data={buildWebsiteJsonLd(locale)} />
+      <JsonLd data={buildLegalServiceJsonLd(locale)} />
       <Header locale={locale} />
       <ScrollProgressLine />
       <main id="main">{children}</main>

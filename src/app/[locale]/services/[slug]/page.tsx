@@ -1,18 +1,45 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getServiceArea, getServiceSlugs } from '@/data/service-details';
 import { getColumnPost } from '@/lib/columns';
+import JsonLd from '@/components/JsonLd';
+import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export function generateStaticParams() {
   const slugs = getServiceSlugs();
   return ['ko', 'zh-hant', 'en'].flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 
+function summarize(text: string, maxLength = 160) {
+  return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
+}
+
+export function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Metadata {
+  const locale = normalizeLocale(params.locale);
+  const area = getServiceArea(params.slug);
+
+  if (!area) {
+    return {};
+  }
+
+  const description = summarize(area.intro[locale]);
+
+  return buildSeoMetadata({
+    locale,
+    title: area.title[locale],
+    description,
+    path: `/services/${area.slug}`,
+    keywords: [area.title[locale], area.subtitle[locale], locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan lawyer'],
+  });
+}
+
 export default function ServiceDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
   const locale = normalizeLocale(params.locale);
   const area = getServiceArea(params.slug);
   if (!area) return notFound();
+  const description = summarize(area.intro[locale]);
 
   const backLabel = locale === 'ko' ? '← 업무분야 목록으로' : locale === 'zh-hant' ? '← 返回服務領域' : '← Back to services';
   const keyPointsLabel = locale === 'ko' ? '핵심 요약' : locale === 'zh-hant' ? '重點摘要' : 'Key Points';
@@ -39,6 +66,21 @@ export default function ServiceDetailPage({ params }: { params: { locale: Locale
 
   return (
     <>
+      <JsonLd
+        data={buildBreadcrumbJsonLd(locale, [
+          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+          { name: locale === 'ko' ? '업무분야' : locale === 'zh-hant' ? '服務領域' : 'Practice Areas', path: `/${locale}/services` },
+          { name: area.title[locale], path: `/${locale}/services/${area.slug}` },
+        ])}
+      />
+      <JsonLd
+        data={buildLegalServiceJsonLd(locale, {
+          name: area.title[locale],
+          description,
+          path: `/services/${area.slug}`,
+          serviceType: area.title[locale],
+        })}
+      />
       <section className="svc-hero" data-tone="dark">
         <div className="container svc-hero-inner">
           <Link href={`/${locale}/services`} className="svc-back-link">{backLabel}</Link>

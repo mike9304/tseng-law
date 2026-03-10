@@ -56,6 +56,8 @@ export function getSearchIndex(locale: Locale): SearchItem[] {
   const content = siteContent[locale];
   const archive = insightsArchive[locale];
   const items: SearchItem[] = [];
+  const insightPrefix = `/${locale}/insights/`;
+  const canonicalInsightPrefix = `/${locale}/columns/`;
 
   content.services.items.forEach((item, index) => {
     items.push({
@@ -84,7 +86,7 @@ export function getSearchIndex(locale: Locale): SearchItem[] {
       id: `insight-post-${post.id}`,
       title: post.title,
       description: post.summary,
-      href: post.href,
+      href: post.href.replace(insightPrefix, canonicalInsightPrefix),
       category: 'insights',
       tags: [...post.keywords, archive.categories[post.category]]
     });

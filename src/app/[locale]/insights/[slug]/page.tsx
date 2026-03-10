@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getColumnPost, getColumnSlugs, getAliasSlugs, resolveSlug } from '@/lib/columns';
 
@@ -18,5 +18,5 @@ export default function InsightDetailRedirect({
   const post = getColumnPost(params.slug, locale);
   if (!post) return notFound();
   const realSlug = resolveSlug(params.slug);
-  redirect(`/${locale}/columns/${encodeURIComponent(realSlug)}`);
+  permanentRedirect(`/${locale}/columns/${encodeURIComponent(realSlug)}`);
 }

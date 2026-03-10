@@ -1,18 +1,46 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import './globals.css';
+import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { normalizeLocale } from '@/lib/locales';
+import { getSiteUrl } from '@/lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
+  applicationName: 'Tseng Law',
   title: {
-    default: '법무법인 호정 (昊鼎國際法律事務所)',
-    template: '%s | Hovering Law International'
+    default: '법무법인 호정',
+    template: '%s | Tseng Law',
   },
-  description: 'A multilingual law firm site built for editorial clarity and global trust.'
+  description:
+    '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·중문·영문으로 안내하는 법무법인 호정 공식 사이트.',
+  authors: [{ name: '법무법인 호정' }],
+  creator: 'Tseng Law',
+  publisher: 'Tseng Law',
+  category: 'legal services',
+  formatDetection: {
+    telephone: false,
+    address: false,
+    email: false,
+  },
+  icons: {
+    icon: '/images/brand/hovering-logo-ko.png',
+    apple: '/images/brand/hovering-logo-ko.png',
+  },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params?: { locale?: string };
+}) {
+  const locale = normalizeLocale(params?.locale);
+  const htmlLang = locale === 'zh-hant' ? 'zh-Hant' : locale;
+
   return (
-    <html lang="ko">
+    <html lang={htmlLang}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

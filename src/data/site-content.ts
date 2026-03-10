@@ -1876,8 +1876,8 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           label: 'Seminars',
           items: [
             {
-              title: 'Seminar materials in preparation',
-              meta: 'Pending',
+              title: 'Recent seminar themes and speaking inquiries',
+              meta: 'Seminar',
               tag: 'Seminar',
               href: '/en/contact'
             }
@@ -2101,15 +2101,15 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       title: 'Legal Briefings',
       items: [
         {
-          title: 'Taiwan Investment Briefing (Coming Soon)',
-          summary: 'Practical updates for cross-border investment planning.',
-          date: 'Coming Soon',
+          title: 'Taiwan Investment Legal Briefing',
+          summary: 'Key legal updates and structuring points for cross-border investment planning in Taiwan.',
+          date: 'Current Topics',
           href: '/en/columns'
         },
         {
-          title: 'Real Estate & Construction Briefing (Coming Soon)',
-          summary: 'Core legal points from current real estate disputes.',
-          date: 'Coming Soon',
+          title: 'Real Estate & Construction Legal Briefing',
+          summary: 'Practical dispute and compliance issues drawn from current Taiwan real estate matters.',
+          date: 'Current Topics',
           href: '/en/columns'
         }
       ]
@@ -2203,15 +2203,15 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       locations: [
         {
           title: 'Taichung Office',
-          details: ['臺中市北區館前路19號樓之1', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
+          details: ['No. 19, Guanqian Rd., North Dist., Taichung City', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
         },
         {
           title: 'Kaohsiung Office',
-          details: ['高雄市左營區安吉街233號', 'Tel: 07-557-9797']
+          details: ['No. 233, Anji St., Zuoying Dist., Kaohsiung City', 'Tel: 07-557-9797']
         },
         {
           title: 'Taipei Office',
-          details: ['台北市大同區承德路一段35號7樓之2', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
+          details: ['7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City', 'Tel: 04-2326-1862', 'Fax: 04-2326-1863']
         }
       ],
       cta: { label: 'Contact Page', href: '/en/contact' }

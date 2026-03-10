@@ -771,6 +771,17 @@ html.has-cyber-cursor .button {
   transform: scale(1.02);
 }
 
+.split-image--portrait img,
+.authority-card-photo img,
+.media-hub-photo img,
+.profile-hero-photo img,
+.attorney-card-photo--lead img,
+.attorney-card-photo--sub img {
+  object-position: center 12%;
+  filter: saturate(0.93) contrast(1.05) brightness(0.99);
+  transform: scale(1.02);
+}
+
 .split-content {
   display: flex;
   flex-direction: column;

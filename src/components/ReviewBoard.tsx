@@ -14,6 +14,7 @@ type Review = {
 
 const labels: Record<Locale, {
   formTitle: string;
+  moderationNote: string;
   nickname: string;
   nicknamePh: string;
   rating: string;
@@ -26,6 +27,9 @@ const labels: Record<Locale, {
   submitting: string;
   success: string;
   error: string;
+  validationError: string;
+  rateLimitError: string;
+  spamError: string;
   reviewsTitle: string;
   noReviews: string;
   totalReviews: string;
@@ -34,6 +38,7 @@ const labels: Record<Locale, {
 }> = {
   ko: {
     formTitle: '후기 작성',
+    moderationNote: '후기는 검토 후 공개됩니다. 개인정보, 사건번호, 외부 링크는 제외해 주세요.',
     nickname: '닉네임',
     nicknamePh: '이름 또는 닉네임',
     rating: '별점',
@@ -55,8 +60,11 @@ const labels: Record<Locale, {
     contentPh: '서비스 이용 후기를 자유롭게 작성해 주세요.',
     submit: '후기 등록',
     submitting: '등록 중...',
-    success: '후기가 등록되었습니다. 감사합니다!',
+    success: '후기가 접수되었습니다. 검토 후 노출됩니다.',
     error: '등록에 실패했습니다. 다시 시도해 주세요.',
+    validationError: '닉네임과 후기 내용을 다시 확인해 주세요. 후기 내용은 20자 이상이어야 합니다.',
+    rateLimitError: '잠시 후 다시 시도해 주세요. 같은 기기에서 연속 제출은 제한됩니다.',
+    spamError: '링크나 HTML 태그가 포함된 후기는 등록할 수 없습니다.',
     reviewsTitle: '고객 후기',
     noReviews: '아직 등록된 후기가 없습니다. 첫 번째 후기를 남겨 주세요!',
     totalReviews: '건의 후기',
@@ -65,6 +73,7 @@ const labels: Record<Locale, {
   },
   'zh-hant': {
     formTitle: '撰寫評價',
+    moderationNote: '評價送出後會先審核再公開。請勿填寫個資、案件編號或外部連結。',
     nickname: '暱稱',
     nicknamePh: '您的名字或暱稱',
     rating: '評分',
@@ -86,8 +95,11 @@ const labels: Record<Locale, {
     contentPh: '請自由撰寫您的服務體驗。',
     submit: '提交評價',
     submitting: '提交中...',
-    success: '評價已提交，感謝您！',
+    success: '評價已送出，審核後顯示。',
     error: '提交失敗，請再試一次。',
+    validationError: '請再次確認暱稱與內容。評價內容需至少 20 個字元。',
+    rateLimitError: '請稍後再試。同一裝置的連續送出會暫時受限。',
+    spamError: '含有連結或 HTML 標籤的內容無法送出。',
     reviewsTitle: '客戶評價',
     noReviews: '目前尚無評價，歡迎成為第一位！',
     totalReviews: '則評價',
@@ -96,6 +108,7 @@ const labels: Record<Locale, {
   },
   en: {
     formTitle: 'Write a Review',
+    moderationNote: 'Reviews are published after moderation. Please omit private details, case numbers, and external links.',
     nickname: 'Nickname',
     nicknamePh: 'Your name or nickname',
     rating: 'Rating',
@@ -117,8 +130,11 @@ const labels: Record<Locale, {
     contentPh: 'Share your experience with our services.',
     submit: 'Submit Review',
     submitting: 'Submitting...',
-    success: 'Thank you for your review!',
+    success: 'Your review has been submitted and will appear after moderation.',
     error: 'Submission failed. Please try again.',
+    validationError: 'Please review your nickname and message. Reviews must be at least 20 characters long.',
+    rateLimitError: 'Please wait before submitting again. Repeated submissions from the same device are temporarily limited.',
+    spamError: 'Reviews containing links or HTML tags cannot be submitted.',
     reviewsTitle: 'Client Reviews',
     noReviews: 'No reviews yet. Be the first to share your experience!',
     totalReviews: 'reviews',
@@ -177,6 +193,29 @@ function getServiceLabel(value: string, locale: Locale): string {
   return opt?.label || value;
 }
 
+function getErrorMessage(locale: Locale, error?: string): string {
+  const t = labels[locale];
+  if (!error) return t.error;
+  if (
+    error === 'nickname, rating, content are required' ||
+    error === 'nickname too long' ||
+    error === 'nickname too short' ||
+    error === 'content too long (max 2000)' ||
+    error === 'content too short' ||
+    error === 'invalid service type' ||
+    error === 'rating must be between 1 and 5'
+  ) {
+    return t.validationError;
+  }
+  if (error === 'too many submissions') {
+    return t.rateLimitError;
+  }
+  if (error === 'spam-like content is not allowed' || error === 'invalid submission') {
+    return t.spamError;
+  }
+  return t.error;
+}
+
 export default function ReviewBoard({ locale }: { locale: Locale }) {
   const t = labels[locale];
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -185,6 +224,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
   const [rating, setRating] = useState(0);
   const [service, setService] = useState('');
   const [content, setContent] = useState('');
+  const [website, setWebsite] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
@@ -217,7 +257,13 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
       const res = await fetch('/api/reviews', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nickname: nickname.trim(), rating, service, content: content.trim() }),
+        body: JSON.stringify({
+          nickname: nickname.trim(),
+          rating,
+          service,
+          content: content.trim(),
+          website,
+        }),
       });
 
       if (res.ok) {
@@ -226,9 +272,10 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
         setRating(0);
         setService('');
         setContent('');
-        await fetchReviews();
+        setWebsite('');
       } else {
-        setMessage({ type: 'error', text: t.error });
+        const data = await res.json().catch(() => null);
+        setMessage({ type: 'error', text: getErrorMessage(locale, data?.error) });
       }
     } catch {
       setMessage({ type: 'error', text: t.error });
@@ -248,7 +295,22 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
         {/* ── Review Form ── */}
         <div className="review-form-wrap">
           <h2 className="review-form-title">{t.formTitle}</h2>
+          <p className="review-empty">{t.moderationNote}</p>
           <form className="review-form" onSubmit={handleSubmit}>
+            <div
+              aria-hidden="true"
+              style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}
+            >
+              <label htmlFor="rv-website">Website</label>
+              <input
+                id="rv-website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+              />
+            </div>
             <div className="review-form-row">
               <label className="review-label" htmlFor="rv-nick">{t.nickname}</label>
               <input
@@ -291,6 +353,7 @@ export default function ReviewBoard({ locale }: { locale: Locale }) {
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
                 maxLength={2000}
+                minLength={20}
                 rows={5}
                 required
               />

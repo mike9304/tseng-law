@@ -28,6 +28,7 @@ export function generateMetadata({ params }: { params: { locale: Locale; slug: s
     keywords: [post.title, post.categoryLabel, locale === 'ko' ? '대만 법률' : locale === 'zh-hant' ? '台灣法律' : 'Taiwan law'],
     images: post.featuredImage,
     type: 'article',
+    noindex: locale === 'en',
   });
 }
 

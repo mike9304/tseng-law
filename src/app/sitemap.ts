@@ -63,6 +63,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       );
     }
 
+    if (locale === 'en') {
+      continue;
+    }
+
     for (const post of columns) {
       pages.push(
         createEntry(locale, `/columns/${post.slug}`, {

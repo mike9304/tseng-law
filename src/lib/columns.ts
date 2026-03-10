@@ -76,6 +76,10 @@ function stripLeadingDuplicates(content: string): string {
   return result.trimStart();
 }
 
+function stripInlineImages(content: string): string {
+  return content.replace(/\n?\s*!\[[^\]]*\]\([^)]+\)\s*\n?/g, '\n\n').trim();
+}
+
 const SLUG_ALIASES: Record<string, string> = {
   'gym-injury-lawsuit': 'taiwan-gym-injury-lawsuit',
   'cosmetics-market-entry': 'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
@@ -146,7 +150,7 @@ export function getAllColumnPosts(locale: Locale = 'ko'): ColumnPost[] {
     const categories = (data.categories as string[]) || [];
     const cat = categoryFromString(categories[0] || '');
     const fixedContent = fixImagePaths(content);
-    const cleanContent = stripLeadingDuplicates(fixedContent);
+    const cleanContent = stripInlineImages(stripLeadingDuplicates(fixedContent));
     const featuredRaw = (data.featured_image as string) || '';
     const featuredImage = featuredRaw ? featuredRaw.replace(/^\.\.\/images\//, '/images/blog/') : '/images/blog/placeholder.jpg';
     const fallbackTitle = (data.title as string) || '';

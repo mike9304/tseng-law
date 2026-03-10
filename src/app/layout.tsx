@@ -2,7 +2,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { normalizeLocale } from '@/lib/locales';
 import { getSiteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -31,16 +30,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params,
 }: {
   children: ReactNode;
-  params?: { locale?: string };
 }) {
-  const locale = normalizeLocale(params?.locale);
-  const htmlLang = locale === 'zh-hant' ? 'zh-Hant' : locale;
-
   return (
-    <html lang={htmlLang}>
+    <html suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

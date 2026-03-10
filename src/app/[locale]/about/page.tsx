@@ -9,7 +9,7 @@ import { buildSeoMetadata } from '@/lib/seo';
 
 const aboutKeywords: Record<Locale, string[]> = {
   ko: ['법무법인 호정 소개', '증준외 변호사', '대만 변호사 소개', '호정 업무팀'],
-  'zh-hant': ['昊鼎介紹', '曾雋崴 律師', '台灣律師介紹', '昊鼎團隊'],
+  'zh-hant': ['昊鼎介紹', '曾俊瑋 律師', '台灣律師介紹', '昊鼎團隊'],
   en: ['About Hovering', 'Wei Tseng attorney profile', 'Taiwan legal team', 'Hovering law firm'],
 };
 

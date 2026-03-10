@@ -222,6 +222,16 @@ export function buildLegalServiceJsonLd(
     areaServed: ['Taiwan', 'South Korea'],
     availableLanguage,
     sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913'],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: '+82-10-2992-9304',
+        email: 'wei@hoveringlaw.com.tw',
+        availableLanguage,
+        url: buildAbsoluteUrl(getLocalizedPath(locale, '/contact')),
+      },
+    ],
     image: buildAbsoluteUrl(DEFAULT_SOCIAL_IMAGE),
     logo: buildAbsoluteUrl(LOGO_IMAGE),
     address: {

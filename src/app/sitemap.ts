@@ -15,6 +15,9 @@ const STATIC_PATHS = [
   '/videos',
   '/faq',
   '/contact',
+  '/privacy',
+  '/disclaimer',
+  '/accessibility',
 ] as const;
 
 function createEntry(

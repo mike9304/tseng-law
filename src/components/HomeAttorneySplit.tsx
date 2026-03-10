@@ -19,7 +19,7 @@ const copyByLocale = {
     description:
       '曾俊瑋律師具備韓語、日語、中文溝通能力，協助投資、公司設立與訴訟策略整合。',
     summary:
-      '擁有 10+ 年實務經驗，曾參與 SBS 모닝와이드 節目並持續經營 WEI Lawyer 法律內容。',
+      '擁有 10+ 年實務經驗，曾參與韓國 SBS 晨間節目並持續經營 WEI Lawyer 法律內容。',
     cta: '查看律師簡介'
   },
   en: {
@@ -49,6 +49,7 @@ export default function HomeAttorneySplit({ locale }: { locale: Locale }) {
         <div className="split-divider" />
         <p className="split-text">{lead.intro[0]}</p>
         <p className="split-text">{lead.intro[1]}</p>
+        <p className="split-text">{copy.summary}</p>
         <p className="split-text">
           {lead.name} · {lead.role} · {lead.email}
         </p>

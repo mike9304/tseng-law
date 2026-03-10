@@ -4,6 +4,7 @@ import PageHeader from '@/components/PageHeader';
 import ContactBlocks from '@/components/ContactBlocks';
 import MessengerChatSection from '@/components/MessengerChatSection';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
+import ConsultationGuideSection from '@/components/ConsultationGuideSection';
 import { pageCopy } from '@/data/page-copy';
 import { buildSeoMetadata } from '@/lib/seo';
 
@@ -33,6 +34,7 @@ export default function ContactPage({ params }: { params: { locale: Locale } }) 
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       <MessengerChatSection locale={locale} />
+      <ConsultationGuideSection locale={locale} />
       <ContactBlocks locale={locale} showMainHeader={false} />
       <OfficeMapTabs locale={locale} />
     </>

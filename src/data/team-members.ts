@@ -104,7 +104,7 @@ export const teamContent: Record<Locale, TeamContent> = {
     members: [
       {
         id: 'tseng-junwei',
-        name: '曾雋崴',
+        name: '曾俊瑋',
         role: '代表律師',
         email: 'wei@hoveringlaw.com.tw',
         photo: '/images/team/tseng-junwei.png',

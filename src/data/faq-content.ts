@@ -217,7 +217,7 @@ export const faqContent: Record<Locale, FAQItem[]> = {
     {
       question: 'How are consultations conducted?',
       answer:
-        'We offer in-person consultations (Taipei office) or video consultations (Zoom/Google Meet). Both Korean and Chinese are available. Appointments are required and scheduled in one-hour units. Sending relevant documents in advance allows for more detailed advice.'
+        'We offer in-person consultations (Taipei office) or video consultations (Zoom/Google Meet). Consultations are available in Korean, Chinese, and English. Appointments are required and scheduled in one-hour units. Sending relevant documents in advance allows for more detailed advice.'
     },
     {
       question: 'Can you help with company setup for specialized industries like logistics or cosmetics?',

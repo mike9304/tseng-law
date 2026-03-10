@@ -7,7 +7,7 @@ import { buildSeoMetadata } from '@/lib/seo';
 
 const videoKeywords: Record<Locale, string[]> = {
   ko: ['대만 변호사 유튜브', '대만 법률 영상', '호정 미디어센터', '증준외 유튜브'],
-  'zh-hant': ['台灣律師 YouTube', '台灣法律影片', '昊鼎影音', '曾雋崴 頻道'],
+  'zh-hant': ['台灣律師 YouTube', '台灣法律影片', '昊鼎影音', '曾俊瑋 頻道'],
   en: ['Taiwan legal videos', 'Taiwan lawyer YouTube', 'Hovering media', 'Wei Tseng channel'],
 };
 

@@ -403,21 +403,21 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '대만 투자·회사 설립 안내',
           summary: '회사 설립, 비자 신청, 상표·특허, 세무 상담 등 투자 전 과정을 지원합니다.',
           date: '상시',
-          tag: 'Guide',
+          tag: '가이드',
           href: '/ko/services#investment'
         },
         {
           title: '부동산·건설·금융 분쟁 대응',
           summary: '부동산, 건설, 금융·보험 관련 분쟁과 소송 대응을 안내합니다.',
           date: '상시',
-          tag: 'Guide',
+          tag: '가이드',
           href: '/ko/services#real-estate'
         },
         {
           title: '지적재산권·노사·형사/민사/가사',
           summary: '특허·상표·저작권 및 노사·형사·민사·가사 사건을 폭넓게 다룹니다.',
           date: '상시',
-          tag: 'Guide',
+          tag: '가이드',
           href: '/ko/services#ip'
         }
       ]
@@ -433,13 +433,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             {
               title: '대만 투자 상담 가이드 안내',
               meta: '안내',
-              tag: 'Notice',
+              tag: '공지',
               href: '/ko/services#investment'
             },
             {
               title: '법률 자문 프로세스 안내',
               meta: '안내',
-              tag: 'Notice',
+              tag: '공지',
               href: '/ko/faq'
             }
           ]
@@ -469,7 +469,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             {
               title: '세미나 자료 준비 중',
               meta: '준비중',
-              tag: 'Seminar',
+              tag: '세미나',
               href: '/ko/contact'
             }
           ]
@@ -706,19 +706,19 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '대만 투자·회사 설립 체크리스트',
           summary: '설립 전 준비 사항과 주요 절차를 요약합니다.',
-          tag: 'Guide',
+          tag: '가이드',
           href: '/ko/services#investment'
         },
         {
           title: '비자 신청 준비 가이드',
           summary: '필요 서류와 준비 흐름을 정리합니다.',
-          tag: 'Guide',
+          tag: '가이드',
           href: '/ko/services#investment'
         },
         {
           title: '상표·특허 출원 기본',
           summary: '지적재산권 보호를 위한 기본 절차를 안내합니다.',
-          tag: 'Guide',
+          tag: '가이드',
           href: '/ko/services#ip'
         }
       ]
@@ -754,25 +754,25 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       items: [
         {
           title: '네이버 블로그: 대만변호사 증준외',
-          duration: 'Blog',
+          duration: '블로그',
           href: 'https://blog.naver.com/wei_lawyer/223461663913',
           image: '/images/video-1.svg'
         },
         {
           title: '개인 사이트: 대만변호사 증준외',
-          duration: 'Website',
+          duration: '웹사이트',
           href: 'https://www.wei-wei-lawyer.com/',
           image: '/images/video-2.svg'
         },
         {
           title: '법무법인 호정',
-          duration: 'Website',
+          duration: '웹사이트',
           href: 'https://www.hoveringlaw.com.tw/kr/wei.html',
           image: '/images/video-3.svg'
         },
         {
           title: '연락처 안내',
-          duration: 'Contact',
+          duration: '문의',
           href: '/ko/contact',
           image: '/images/video-4.svg'
         }
@@ -1101,21 +1101,21 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           title: '在台投資與公司設立指南',
           summary: '提供公司設立、簽證申請、商標/專利與稅務諮詢等協助。',
           date: '常設',
-          tag: 'Guide',
+          tag: '指南',
           href: '/zh-hant/services#investment'
         },
         {
           title: '不動產/工程/金融爭議處理',
           summary: '不動產、工程與金融保險相關訴訟與爭議應對。',
           date: '常設',
-          tag: 'Guide',
+          tag: '指南',
           href: '/zh-hant/services#real-estate'
         },
         {
           title: '智慧財產與勞資、刑民家事',
           summary: '涵蓋專利、商標、著作權與勞資、刑民家事案件。',
           date: '常設',
-          tag: 'Guide',
+          tag: '指南',
           href: '/zh-hant/services#ip'
         }
       ]
@@ -1131,13 +1131,13 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             {
               title: '在台投資諮詢指南說明',
               meta: '說明',
-              tag: 'Notice',
+              tag: '公告',
               href: '/zh-hant/services#investment'
             },
             {
               title: '法律顧問流程說明',
               meta: '說明',
-              tag: 'Notice',
+              tag: '公告',
               href: '/zh-hant/faq'
             }
           ]
@@ -1147,7 +1147,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           label: '媒體',
           items: [
             {
-              title: 'Naver 部落格：대만변호사 증준외',
+              title: 'Naver 部落格：台灣律師 曾俊瑋',
               meta: '頻道',
               tag: 'Media',
               href: 'https://blog.naver.com/wei_lawyer/223461663913'
@@ -1167,7 +1167,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             {
               title: '研討會資料準備中',
               meta: '準備中',
-              tag: 'Seminar',
+              tag: '研討會',
               href: '/zh-hant/contact'
             }
           ]
@@ -1410,19 +1410,19 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         {
           title: '在台投資與公司設立清單',
           summary: '公司設立前的準備事項與流程重點。',
-          tag: 'Guide',
+          tag: '指南',
           href: '/zh-hant/services#investment'
         },
         {
           title: '簽證申請準備指引',
           summary: '所需文件與申請流程重點。',
-          tag: 'Guide',
+          tag: '指南',
           href: '/zh-hant/services#investment'
         },
         {
           title: '商標/專利申請入門',
           summary: '智慧財產權保護的基本流程。',
-          tag: 'Guide',
+          tag: '指南',
           href: '/zh-hant/services#ip'
         }
       ]
@@ -1457,26 +1457,26 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       },
       items: [
         {
-          title: 'Naver 部落格：대만변호사 증준외',
-          duration: 'Blog',
+          title: 'Naver 部落格：台灣律師 曾俊瑋',
+          duration: '部落格',
           href: 'https://blog.naver.com/wei_lawyer/223461663913',
           image: '/images/video-1.svg'
         },
         {
           title: '個人網頁：台灣律師 曾俊瑋',
-          duration: 'Website',
+          duration: '網站',
           href: 'https://www.wei-wei-lawyer.com/',
           image: '/images/video-2.svg'
         },
         {
           title: '昊鼎國際法律事務所',
-          duration: 'Website',
+          duration: '網站',
           href: 'https://www.hoveringlaw.com.tw/zh/wei.html',
           image: '/images/video-3.svg'
         },
         {
           title: '聯絡我們',
-          duration: 'Contact',
+          duration: '聯絡',
           href: '/zh-hant/contact',
           image: '/images/video-4.svg'
         }
@@ -2135,7 +2135,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         {
           title: 'Hovering International Law Firm',
           duration: 'Website',
-          href: 'https://www.hoveringlaw.com.tw/kr/wei.html',
+          href: 'https://www.hoveringlaw.com.tw/en/wei.html',
           image: '/images/video-3.svg'
         },
         {

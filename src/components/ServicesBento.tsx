@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
@@ -82,10 +82,57 @@ export default function ServicesBento({
   const detailLabel = locale === 'ko' ? '자세히 보기 →' : locale === 'zh-hant' ? '查看詳情 →' : 'View details →';
   const serviceSlugs = getServiceSlugs();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const anchorToIndex = useMemo(() => {
+    const map = new Map<string, number>();
+    services.items.forEach((item, index) => {
+      const anchor = item.href.split('#')[1];
+      if (anchor) {
+        map.set(anchor, index);
+      }
+    });
+    const civilIndex = map.get('civil');
+    if (civilIndex != null) {
+      map.set('real-estate', civilIndex);
+    }
+    const ipIndex = map.get('ip');
+    if (ipIndex != null) {
+      map.set('finance', ipIndex);
+    }
+    return map;
+  }, [services.items]);
+  const aliasAnchors = useMemo(() => {
+    const aliases = new Map<number, string[]>();
+    const civilIndex = anchorToIndex.get('civil');
+    if (civilIndex != null) {
+      aliases.set(civilIndex, ['real-estate']);
+    }
+    const ipIndex = anchorToIndex.get('ip');
+    if (ipIndex != null) {
+      aliases.set(ipIndex, [...(aliases.get(ipIndex) ?? []), 'finance']);
+    }
+    return aliases;
+  }, [anchorToIndex]);
 
   const toggle = (i: number) => {
     setOpenIndex((prev) => (prev === i ? null : i));
   };
+
+  useEffect(() => {
+    const syncFromHash = () => {
+      const hash = decodeURIComponent(window.location.hash.replace(/^#/, ''));
+      if (!hash) return;
+      const index = anchorToIndex.get(hash);
+      if (index != null) {
+        setOpenIndex(index);
+      }
+    };
+
+    syncFromHash();
+    window.addEventListener('hashchange', syncFromHash);
+    return () => {
+      window.removeEventListener('hashchange', syncFromHash);
+    };
+  }, [anchorToIndex]);
 
   return (
     <section className={sectionClass} id={id} data-tone={tone}>
@@ -98,58 +145,63 @@ export default function ServicesBento({
           {services.items.map((item, index) => {
             const anchor = item.href.split('#')[1];
             const isOpen = openIndex === index;
+            const aliases = aliasAnchors.get(index) ?? [];
             return (
-              <article
-                key={item.title}
-                className={`services-detail-card${isOpen ? ' is-open' : ''}`}
-                {...(anchor ? { id: anchor } : {})}
-              >
-                <button
-                  type="button"
-                  className="services-detail-toggle"
-                  onClick={() => toggle(index)}
-                  aria-expanded={isOpen}
+              <div key={item.title}>
+                {aliases.map((alias) => (
+                  <span key={alias} id={alias} className="services-anchor-alias" aria-hidden />
+                ))}
+                <article
+                  className={`services-detail-card${isOpen ? ' is-open' : ''}`}
+                  {...(anchor ? { id: anchor } : {})}
                 >
-                  <div className="services-detail-header">
-                    <span className="service-icon" aria-hidden>
-                      <ServiceIcon index={index} />
-                    </span>
-                    <h3 className="services-detail-title">{item.title}</h3>
-                  </div>
-                  <span className={`services-detail-chevron${isOpen ? ' open' : ''}`} aria-hidden>
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                      <path d="M6 9l6 6 6-6" />
-                    </svg>
-                  </span>
-                </button>
-                <div className={`services-detail-body${isOpen ? ' is-open' : ''}`}>
-                  <p className="services-detail-desc">{item.description}</p>
-                  {item.details && item.details.length > 0 && (
-                    <ul className="services-detail-checklist">
-                      {item.details.map((d) => (
-                        <li key={d}>{d}</li>
-                      ))}
-                    </ul>
-                  )}
-                  {item.relatedColumns && item.relatedColumns.length > 0 && (
-                    <div className="services-detail-columns">
-                      <span className="services-detail-columns-label">{relatedLabel}</span>
-                      <div className="services-detail-columns-list">
-                        {item.relatedColumns.map((col) => (
-                          <Link key={col.slug} href={`/${locale}/columns/${col.slug}`} className="services-column-link">
-                            {col.title}
-                          </Link>
-                        ))}
-                      </div>
+                  <button
+                    type="button"
+                    className="services-detail-toggle"
+                    onClick={() => toggle(index)}
+                    aria-expanded={isOpen}
+                  >
+                    <div className="services-detail-header">
+                      <span className="service-icon" aria-hidden>
+                        <ServiceIcon index={index} />
+                      </span>
+                      <h3 className="services-detail-title">{item.title}</h3>
                     </div>
-                  )}
-                  {serviceSlugs[index] && (
-                    <Link href={`/${locale}/services/${serviceSlugs[index]}`} className="services-detail-more">
-                      {detailLabel}
-                    </Link>
-                  )}
-                </div>
-              </article>
+                    <span className={`services-detail-chevron${isOpen ? ' open' : ''}`} aria-hidden>
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                        <path d="M6 9l6 6 6-6" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div className={`services-detail-body${isOpen ? ' is-open' : ''}`}>
+                    <p className="services-detail-desc">{item.description}</p>
+                    {item.details && item.details.length > 0 && (
+                      <ul className="services-detail-checklist">
+                        {item.details.map((d) => (
+                          <li key={d}>{d}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {item.relatedColumns && item.relatedColumns.length > 0 && (
+                      <div className="services-detail-columns">
+                        <span className="services-detail-columns-label">{relatedLabel}</span>
+                        <div className="services-detail-columns-list">
+                          {item.relatedColumns.map((col) => (
+                            <Link key={col.slug} href={`/${locale}/columns/${col.slug}`} className="services-column-link">
+                              {col.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {serviceSlugs[index] && (
+                      <Link href={`/${locale}/services/${serviceSlugs[index]}`} className="services-detail-more">
+                        {detailLabel}
+                      </Link>
+                    )}
+                  </div>
+                </article>
+              </div>
             );
           })}
         </div>

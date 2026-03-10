@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
+import { siteContent } from '@/data/site-content';
 
 export default function Footer({ locale }: { locale: Locale }) {
+  const footerContent = siteContent[locale].footer;
+  const brandName = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
   const officeLabel = locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : 'Offices';
   const offices =
     locale === 'ko'
@@ -25,22 +28,22 @@ export default function Footer({ locale }: { locale: Locale }) {
   const legalLinks =
     locale === 'ko'
       ? [
-          { label: '개인정보처리방침', href: '/ko/contact' },
-          { label: '면책공고', href: '/ko/faq' },
-          { label: '웹접근성', href: '/ko/services' },
+          { label: '개인정보처리방침', href: '/ko/privacy' },
+          { label: '면책 고지', href: '/ko/disclaimer' },
+          { label: '웹접근성', href: '/ko/accessibility' },
           { label: '사이트맵', href: '/sitemap.xml' }
         ]
       : locale === 'zh-hant'
         ? [
-          { label: '隱私權政策', href: '/zh-hant/contact' },
-          { label: '免責聲明', href: '/zh-hant/faq' },
-          { label: '無障礙聲明', href: '/zh-hant/services' },
+          { label: '隱私權政策', href: '/zh-hant/privacy' },
+          { label: '免責聲明', href: '/zh-hant/disclaimer' },
+          { label: '無障礙聲明', href: '/zh-hant/accessibility' },
           { label: '網站地圖', href: '/sitemap.xml' }
         ]
         : [
-          { label: 'Privacy Policy', href: '/en/contact' },
-          { label: 'Disclaimer', href: '/en/faq' },
-          { label: 'Accessibility', href: '/en/services' },
+          { label: 'Privacy Policy', href: '/en/privacy' },
+          { label: 'Disclaimer', href: '/en/disclaimer' },
+          { label: 'Accessibility', href: '/en/accessibility' },
           { label: 'Sitemap', href: '/sitemap.xml' }
         ];
 
@@ -62,6 +65,26 @@ export default function Footer({ locale }: { locale: Locale }) {
                 </Link>
               ))}
             </nav>
+          </div>
+        </div>
+        <div className="footer-main">
+          <div className="container footer-main-grid">
+            <div className="footer-main-intro">
+              <p className="footer-main-brand">{brandName}</p>
+              <p className="footer-main-note">{footerContent.note}</p>
+            </div>
+            {footerContent.columns.map((column) => (
+              <nav key={column.title} className="footer-link-column" aria-label={column.title}>
+                <p className="footer-link-title">{column.title}</p>
+                <div className="footer-link-list">
+                  {column.links.map((link) => (
+                    <Link key={link.href} href={link.href}>
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </nav>
+            ))}
           </div>
         </div>
         <div className="footer-bottom-bar">
@@ -110,7 +133,7 @@ export default function Footer({ locale }: { locale: Locale }) {
             </div>
           </div>
           <div className="container">
-            <p className="footer-copyright-row">Copyright HOVERING LAW INTERNATIONAL. All rights reserved.</p>
+            <p className="footer-copyright-row">{footerContent.legal}</p>
           </div>
         </div>
       </footer>

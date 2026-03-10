@@ -21,6 +21,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description: copy.description,
     path: '/reviews',
     keywords: reviewKeywords[locale],
+    noindex: true,
   });
 }
 

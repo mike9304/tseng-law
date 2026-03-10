@@ -118,6 +118,7 @@ export default function LawyerProfilePage({ params }: { params: { locale: Locale
                 alt={`${profile.name} ${profile.role}`}
                 fill
                 sizes="(max-width: 900px) 100vw, 360px"
+                className="person-photo"
                 style={{ objectFit: 'cover' }}
               />
             </div>

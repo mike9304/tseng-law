@@ -52,6 +52,7 @@ function MemberCard({ member, locale, size }: { member: TeamMember; locale: Loca
           src={member.photo}
           alt={`${member.name} ${member.role}`}
           fill
+          className="person-photo"
           style={{ objectFit: 'cover' }}
           sizes={isLarge ? '(max-width: 768px) 100vw, 400px' : '(max-width: 768px) 100vw, 200px'}
         />

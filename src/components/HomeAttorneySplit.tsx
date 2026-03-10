@@ -41,8 +41,12 @@ export default function HomeAttorneySplit({ locale }: { locale: Locale }) {
 
   return (
     <section className="section section--gray split-section split--img-left" id="about" data-tone="light">
-      <div className="split-image">
-        <Image src={lead.photo} alt={`${lead.name} ${lead.role}`} width={1200} height={900} />
+      <div className="split-image split-image--portrait">
+        <Image src={lead.photo} alt={`${lead.name} ${lead.role}`} width={1200} height={900} className="person-photo" />
+        <div className="split-portrait-badge">
+          <strong>{lead.name}</strong>
+          <span>{lead.role}</span>
+        </div>
       </div>
       <div className="split-content">
         <div className="section-label">{copy.label}</div>

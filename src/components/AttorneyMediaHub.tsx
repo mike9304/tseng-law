@@ -87,6 +87,7 @@ export default function AttorneyMediaHub({ locale }: { locale: Locale }) {
                 alt={`${profile.name} ${profile.role}`}
                 fill
                 sizes="(max-width: 900px) 100vw, 280px"
+                className="person-photo"
                 style={{ objectFit: 'cover' }}
               />
             </div>

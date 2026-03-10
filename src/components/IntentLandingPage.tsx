@@ -22,6 +22,11 @@ const labels = {
     overview: '이 페이지에서 먼저 확인할 내용',
     fit: '이런 경우 상담이 맞습니다',
     points: '우선 검토 포인트',
+    detailLabel: 'PROCESS',
+    detailTitle: '진행 흐름과 준비 자료',
+    process: '상담 진행 흐름',
+    prepare: '미리 준비하면 좋은 자료',
+    caution: '놓치기 쉬운 포인트',
     servicesLabel: 'RELATED SERVICES',
     servicesTitle: '관련 서비스',
     serviceButton: '서비스 보기',
@@ -34,12 +39,18 @@ const labels = {
     ctaText: '회사설립, 투자, 소송, 가족 분쟁처럼 성격이 다른 사건은 초기에 구조를 잡는 방식이 달라집니다. 자료를 보내주시면 증준외 변호사와 연결되는 상담 흐름을 먼저 안내합니다.',
     contact: '상담 문의',
     profile: '증준외 프로필 보기',
+    pricing: '비용안내 보기',
   },
   'zh-hant': {
     terms: '相關搜尋詞',
     overview: '先從這些重點開始看',
     fit: '這些情況特別適合先諮詢',
     points: '優先檢查重點',
+    detailLabel: 'PROCESS',
+    detailTitle: '流程與準備資料',
+    process: '諮詢流程',
+    prepare: '建議先準備的資料',
+    caution: '容易忽略的重點',
     servicesLabel: 'RELATED SERVICES',
     servicesTitle: '相關服務',
     serviceButton: '查看服務',
@@ -52,12 +63,18 @@ const labels = {
     ctaText: '公司設立、投資、訴訟與家事爭議的初期處理方式都不同。先提供資料後，我們可以先協助安排與曾俊瑋律師相關的諮詢流程。',
     contact: '聯絡諮詢',
     profile: '查看曾俊瑋律師簡介',
+    pricing: '查看收費',
   },
   en: {
     terms: 'Related Searches',
     overview: 'What to review first on this page',
     fit: 'Good fit for consultation when',
     points: 'Priority review points',
+    detailLabel: 'PROCESS',
+    detailTitle: 'Workflow and Preparation',
+    process: 'Consultation flow',
+    prepare: 'Materials to prepare',
+    caution: 'Points that are often missed',
     servicesLabel: 'RELATED SERVICES',
     servicesTitle: 'Related Services',
     serviceButton: 'View Service',
@@ -70,6 +87,7 @@ const labels = {
     ctaText: 'Company setup, investment, litigation, and family disputes all need different early-stage structuring. Send the core materials first and we can route the matter into the right consultation flow.',
     contact: 'Book Consultation',
     profile: 'View Wei Tseng Profile',
+    pricing: 'View Pricing',
   },
 } as const;
 
@@ -213,6 +231,42 @@ export default function IntentLandingPage({
 
       <section className="section section--gray">
         <div className="container">
+          <SectionLabel>{l.detailLabel}</SectionLabel>
+          <h2 className="section-title">{l.detailTitle}</h2>
+          <OrnamentDivider />
+          <div className="intent-triple-grid">
+            <article className="intent-panel">
+              <h3 className="profile-card-title">{l.process}</h3>
+              <ul className="intent-article-list">
+                {page.processFlow.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="intent-panel">
+              <h3 className="profile-card-title">{l.prepare}</h3>
+              <ul className="intent-article-list">
+                {page.prepareChecklist.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="intent-panel">
+              <h3 className="profile-card-title">{l.caution}</h3>
+              <ul className="intent-article-list">
+                {page.cautionPoints.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--gray">
+        <div className="container">
           <SectionLabel>{l.servicesLabel}</SectionLabel>
           <h2 className="section-title">{l.servicesTitle}</h2>
           <OrnamentDivider />
@@ -267,6 +321,9 @@ export default function IntentLandingPage({
             <div className="intent-cta-actions">
               <Link href={`/${locale}/contact`} className="button">
                 {l.contact}
+              </Link>
+              <Link href={`/${locale}/pricing`} className="button button--outline">
+                {l.pricing}
               </Link>
               {profile ? (
                 <Link href={`/${locale}/lawyers/${profile.slug}`} className="button button--outline">

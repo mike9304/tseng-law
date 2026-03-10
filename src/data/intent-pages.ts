@@ -19,6 +19,9 @@ export type IntentPageContent = {
   heroPoints: string[];
   idealFor: string[];
   reviewPoints: string[];
+  processFlow: string[];
+  prepareChecklist: string[];
+  cautionPoints: string[];
   serviceSlugs: string[];
   columnSlugs: string[];
   faq: FAQItem[];
@@ -49,6 +52,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         '한국 본사 구조와 대만 현지 절차를 함께 맞춰야 하는 경우가 많습니다.',
         '외국인 사건은 통역, 위임장, 송달, 출입국 이슈까지 함께 점검해야 합니다.',
         '법률자문과 실제 집행 가능성은 한 번에 같이 봐야 합니다.',
+      ],
+      processFlow: [
+        '사건 또는 사업 목적을 먼저 정리하고, 관련 계약서·증거가 어느 정도 있는지 1차로 확인합니다.',
+        '대만 기준 관할, 절차, 예상 일정, 현지 출석 필요 여부를 구분해 상담 우선순위를 정합니다.',
+        '상담 후 바로 진행 가능한 단계와 추가 확인이 필요한 단계를 나눠 실제 실행 순서를 제안합니다.',
+      ],
+      prepareChecklist: [
+        '계약서, 이메일, 메신저 대화, 견적서, 송금 내역',
+        '상대방 기본 정보와 회사명·주소·대표자 정보',
+        '사건 발생일, 현재 진행 상태, 급한 일정',
+        '사진·영상·진단서·등기부 등 핵심 증빙',
+      ],
+      cautionPoints: [
+        '한국에서 익숙한 방식이 대만 절차와 다를 수 있습니다.',
+        '번역만 맞추고 서류 형식이나 위임장 요건을 놓치기 쉽습니다.',
+        '초기 연락 기록을 정리하지 않으면 이후 입증이 어려워질 수 있습니다.',
+        '비자·체류 상태가 사건 대응 일정에 영향을 주는 경우가 있습니다.',
       ],
       serviceSlugs: ['investment', 'civil', 'family'],
       columnSlugs: ['taiwan-company-establishment-basics', 'taiwan-gym-injury-lawsuit', 'taiwan-divorce-lawsuit-qna'],
@@ -93,6 +113,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         '영업 주소, 업종 코드, 실질 운영 구조가 맞지 않으면 후속 절차가 지연될 수 있습니다.',
         '특수 업종은 회사설립만으로 끝나지 않고 별도 허가가 필요합니다.',
         '회사설립 후 계약·노무·상표 전략까지 같이 설계해야 운영 리스크가 줄어듭니다.',
+      ],
+      processFlow: [
+        '진출 목적과 매출 구조를 기준으로 자회사·지사·연락사무소 중 어떤 형태가 맞는지 먼저 비교합니다.',
+        '투자 승인 필요 여부, 자본금 규모, 주주 구조, 영업 주소를 정리해 설립 전제조건을 확정합니다.',
+        '등기 이후 은행, 세무, 비자, 상표, 고용계약까지 이어지는 일정을 한 번에 설계합니다.',
+      ],
+      prepareChecklist: [
+        '한국 본사 등기서류, 주주구조, 대표자 정보',
+        '예상 업종, 영업모델, 대만 영업주소 후보',
+        '예상 자본금, 송금 계획, 현지 인력 채용 여부',
+        '필요한 인허가 또는 제품·서비스 규제 정보',
+      ],
+      cautionPoints: [
+        '업종 코드와 실제 사업 내용이 다르면 허가 단계에서 지연될 수 있습니다.',
+        '은행 계좌 개설은 설립 완료와 별개로 시간이 더 걸릴 수 있습니다.',
+        '화장품·물류·식품·플랫폼 업종은 추가 규제가 붙을 수 있습니다.',
+        '비자와 노동계약을 나중에 따로 보면 일정이 늘어집니다.',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
       columnSlugs: [
@@ -142,6 +179,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         '형사 절차와 민사 손해배상을 같이 설계하면 전략이 달라질 수 있습니다.',
         '외국인 사건은 언어와 문서 번역보다도 절차 일정 관리가 더 중요할 때가 많습니다.',
         '합의 여부를 판단하기 전 손해 산정과 책임 구조를 먼저 확인해야 합니다.',
+      ],
+      processFlow: [
+        '사실관계, 상대방, 손해 범위를 먼저 시간순으로 정리해 사건 구조를 잡습니다.',
+        '민사·형사·가사 중 어떤 절차를 병행해야 하는지 구분하고 우선순위를 정합니다.',
+        '합의 가능성, 증거 부족 부분, 출석 필요 단계까지 함께 검토해 대응 전략을 나눕니다.',
+      ],
+      prepareChecklist: [
+        '사건 경위서, 계약서, 통화·메신저 기록',
+        '진단서, 사진, 영상, 영수증, 경찰 자료',
+        '상대방 인적사항 또는 회사 정보',
+        '현재 진행 중인 조사·재판·합의 여부',
+      ],
+      cautionPoints: [
+        '초기 진술과 제출 자료가 뒤집히면 신뢰도가 크게 떨어집니다.',
+        '형사 고소만 하고 민사 손해 산정을 늦추는 경우가 많습니다.',
+        '외국인 사건은 송달과 일정 관리가 생각보다 오래 걸릴 수 있습니다.',
+        '감정적으로 대응하면 합의와 소송 전략이 모두 흔들릴 수 있습니다.',
       ],
       serviceSlugs: ['civil', 'criminal', 'family'],
       columnSlugs: [
@@ -194,6 +248,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         '外國人案件除了翻譯之外，送達、委任與出入境也要同時考量。',
         '法律意見與實際執行可行性應一起檢視。',
       ],
+      processFlow: [
+        '先整理案件或商業目的，確認契約與證據目前掌握到什麼程度。',
+        '依台灣法下的管轄、程序、預估時程與是否需親自出席，安排諮詢重點。',
+        '諮詢後把可立即推進的事項與仍需補件確認的部分分開處理。',
+      ],
+      prepareChecklist: [
+        '契約、Email、通訊紀錄、報價單、匯款資料',
+        '對方基本資訊、公司名稱、地址、代表人資訊',
+        '事件發生日期、目前進度、緊急時程',
+        '照片、影片、診斷書、登記資料等核心證據',
+      ],
+      cautionPoints: [
+        '在韓國熟悉的做法，不一定和台灣程序完全相同。',
+        '只做翻譯卻忽略文件格式或委任要求，常導致重工。',
+        '若未先整理初期聯絡紀錄，後續舉證會變得困難。',
+        '簽證與停留身分有時也會影響案件處理節奏。',
+      ],
       serviceSlugs: ['investment', 'civil', 'family'],
       columnSlugs: ['taiwan-company-establishment-basics', 'taiwan-gym-injury-lawsuit', 'taiwan-divorce-lawsuit-qna'],
       faq: [
@@ -237,6 +308,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         '營業地址、行業別與實際營運模式若不一致，後續流程可能受阻。',
         '特殊產業不是完成登記就結束，還有額外許可要同步處理。',
         '若能在設立階段就考慮契約、勞動與商標，營運風險會更低。',
+      ],
+      processFlow: [
+        '先依進入台灣市場的目的與營收結構，比較子公司、分公司與聯絡處。',
+        '確認投資核准、資本額、股東結構與營業地址後，再安排設立順序。',
+        '把登記後的銀行、稅務、簽證、商標與勞動流程一起排進時程表。',
+      ],
+      prepareChecklist: [
+        '韓國母公司的登記文件、股權結構、代表人資訊',
+        '預計經營項目、商業模式、台灣營業地址候選',
+        '預計資本額、匯款安排、是否招募在地人員',
+        '需要的產業許可或產品服務法規資訊',
+      ],
+      cautionPoints: [
+        '若行業別和實際營運內容不一致，後續許可可能被卡住。',
+        '銀行開戶常與公司設立完成時間不同步，需預留時間。',
+        '化妝品、物流、食品、平台等產業常有附加規範。',
+        '若把簽證與勞動安排延後處理，整體上線時間會被拉長。',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
       columnSlugs: [
@@ -286,6 +374,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         '刑事程序與民事損害賠償若併行，整體策略會不同。',
         '外國人案件中，程序時程控管往往比單純翻譯更重要。',
         '在判斷是否和解前，應先確認損害範圍與責任結構。',
+      ],
+      processFlow: [
+        '先按時間順序整理事實、對方資訊與損害範圍，建立案件骨架。',
+        '區分民事、刑事、家事中哪些程序需要同時推進，哪些可分開處理。',
+        '一併評估和解可能性、證據缺口與是否需要到庭出席。',
+      ],
+      prepareChecklist: [
+        '案件經過說明、契約、通話或通訊紀錄',
+        '診斷書、照片、影片、收據、警方資料',
+        '對方個人資料或公司資訊',
+        '目前是否已有調查、訴訟或和解進行中',
+      ],
+      cautionPoints: [
+        '若初期陳述與後續提交資料不一致，可信度會明顯下降。',
+        '很多人只先處理刑事告訴，卻太晚準備民事損害計算。',
+        '外國人案件中，送達與程序時程往往比想像中更久。',
+        '若情緒先行，和解與訴訟策略都容易失衡。',
       ],
       serviceSlugs: ['civil', 'criminal', 'family'],
       columnSlugs: [
@@ -338,6 +443,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         'Foreign-national matters frequently require attention to service, powers of attorney, and immigration issues.',
         'Legal analysis and practical enforceability should be reviewed together.',
       ],
+      processFlow: [
+        'Start by clarifying the business goal or dispute posture and identifying what contracts or evidence already exist.',
+        'Separate jurisdiction, procedure, timing, and appearance requirements under Taiwan practice before the first action is taken.',
+        'After consultation, split the matter into items that can move immediately and items that still require fact or document confirmation.',
+      ],
+      prepareChecklist: [
+        'Contracts, emails, chat records, quotations, and payment records',
+        'Counterparty identity, company name, address, and representative details',
+        'Key dates, current status, and any urgent deadlines',
+        'Photos, videos, medical records, registry documents, or other core evidence',
+      ],
+      cautionPoints: [
+        'A process that feels standard in Korea may work differently in Taiwan.',
+        'Clients often focus on translation but miss format or power-of-attorney requirements.',
+        'If early contact records are not organized, later proof becomes harder.',
+        'Visa or immigration status can sometimes affect litigation or meeting logistics.',
+      ],
       serviceSlugs: ['investment', 'civil', 'family'],
       columnSlugs: ['taiwan-company-establishment-basics', 'taiwan-gym-injury-lawsuit', 'taiwan-divorce-lawsuit-qna'],
       faq: [
@@ -381,6 +503,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         'Business address, industry code, and actual operating model need to match.',
         'Regulated sectors require more than incorporation alone.',
         'Contracts, labor structure, and trademarks should be considered at the setup stage.',
+      ],
+      processFlow: [
+        'Compare subsidiary, branch, and representative-office structures based on the commercial goal and revenue flow.',
+        'Confirm investment review needs, capital amount, shareholder structure, and business address before filing.',
+        'Map the sequence after registration as well, including banking, tax, visas, trademarks, and employment documents.',
+      ],
+      prepareChecklist: [
+        'Korean parent-company registry documents, shareholder structure, and director details',
+        'Planned business scope, operating model, and candidate Taiwan address',
+        'Expected capital amount, remittance plan, and hiring plan in Taiwan',
+        'Any permit, product, or sector-specific regulatory information already identified',
+      ],
+      cautionPoints: [
+        'If the industry code does not match the real business model, permit work may stall later.',
+        'Bank account opening often takes longer than clients expect, even after registration is done.',
+        'Cosmetics, logistics, food, platform, and similar sectors may require additional approvals.',
+        'If visas and labor structuring are treated as an afterthought, the launch timeline usually slips.',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
       columnSlugs: [
@@ -430,6 +569,23 @@ export const intentPages: Record<Locale, Record<IntentPageSlug, IntentPageConten
         'Civil damages and criminal procedure sometimes need to be designed together.',
         'For foreign clients, timeline control is often as important as translation.',
         'Settlement should be evaluated only after liability and damages are analyzed.',
+      ],
+      processFlow: [
+        'First organize the facts, counterpart information, and damage scope in chronological order.',
+        'Then determine which parts belong in civil, criminal, or family procedure and whether any of them should move together.',
+        'Review settlement potential, evidence gaps, and attendance requirements before choosing the first procedural step.',
+      ],
+      prepareChecklist: [
+        'A written timeline, contracts, and call or chat records',
+        'Medical reports, photos, videos, receipts, and police materials',
+        'Counterparty personal or company identification details',
+        'Any existing investigation, court case, or settlement discussion already underway',
+      ],
+      cautionPoints: [
+        'If the first narrative changes later, credibility can drop quickly.',
+        'Clients often focus on the criminal complaint first and delay civil damage calculation.',
+        'For foreign-national matters, service and calendar control can take longer than expected.',
+        'Emotional reactions often distort both settlement judgment and litigation strategy.',
       ],
       serviceSlugs: ['civil', 'criminal', 'family'],
       columnSlugs: [

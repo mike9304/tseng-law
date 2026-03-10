@@ -2219,6 +2219,136 @@ html.has-cyber-cursor .button {
 }
 .svc-related-link:hover { background: var(--accent); color: #fff; }
 
+.svc-review-note {
+  margin: -0.25rem 0 1.25rem;
+  padding: 0.95rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  background: rgba(15, 46, 74, 0.04);
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.svc-sidebar-card--attorney {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.authority-card {
+  padding: 1.35rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.authority-card-eyebrow {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.authority-card-heading {
+  margin-top: 0.45rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.authority-card-top {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.authority-card-photo {
+  position: relative;
+  min-height: 132px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f4f1ea;
+}
+
+.authority-card-copy {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.authority-card-name {
+  color: var(--text-heading);
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.authority-card-name:hover {
+  color: var(--accent);
+}
+
+.authority-card-role {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.authority-card-summary {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.authority-card-block {
+  margin-top: 1rem;
+}
+
+.authority-card-label {
+  margin-bottom: 0.55rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.authority-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.authority-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.36rem 0.7rem;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  background: rgba(15, 46, 74, 0.04);
+  color: var(--text-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.authority-link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.authority-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.1rem;
+}
+
 @media (max-width: 900px) {
   .svc-container { grid-template-columns: 1fr; }
   .svc-sidebar { position: static; }
@@ -2226,6 +2356,8 @@ html.has-cyber-cursor .button {
 @media (max-width: 640px) {
   .svc-hero { padding: 5.5rem 0 2.5rem; }
   .svc-numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .authority-card-top { grid-template-columns: 1fr; }
+  .authority-card-photo { min-height: 220px; }
 }
 
 .service-icon {
@@ -2915,6 +3047,100 @@ html.has-cyber-cursor .button {
   gap: var(--space-3);
 }
 
+.media-hub-section {
+  padding-bottom: 0;
+}
+
+.media-hub-hero {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.media-hub-profile {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(15, 46, 74, 0.03), rgba(181, 140, 66, 0.06));
+}
+
+.media-hub-photo {
+  position: relative;
+  min-height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f4f1ea;
+}
+
+.media-hub-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.media-hub-title {
+  margin-bottom: 0;
+}
+
+.media-hub-role {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.media-hub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.media-hub-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.media-stat-card {
+  padding: 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.media-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1;
+}
+
+.media-stat-label {
+  margin-top: 0.35rem;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.media-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.media-hub-card {
+  padding: 1.35rem;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.media-hub-card--wide {
+  grid-column: 1 / -1;
+}
+
 .video-item {
   position: relative;
   display: grid;
@@ -3232,6 +3458,7 @@ html.has-cyber-cursor .button {
   .attorney-card--lead { grid-template-columns: 260px 1fr; }
   .attorney-staff-grid { grid-template-columns: 1fr; }
   .profile-hero-card { grid-template-columns: 280px minmax(0, 1fr); }
+  .media-hub-profile { grid-template-columns: 220px minmax(0, 1fr); }
 }
 @media (max-width: 640px) {
   .attorney-card--lead { grid-template-columns: 1fr; }
@@ -3241,6 +3468,11 @@ html.has-cyber-cursor .button {
   .profile-hero-card { grid-template-columns: 1fr; padding: 1rem; }
   .profile-hero-photo { min-height: 320px; }
   .profile-card-grid { grid-template-columns: 1fr; }
+  .media-hub-profile { grid-template-columns: 1fr; padding: 1rem; }
+  .media-hub-photo { min-height: 280px; }
+  .media-hub-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .media-hub-grid { grid-template-columns: 1fr; }
+  .media-hub-card--wide { grid-column: auto; }
 }
 
 .guide-meta {

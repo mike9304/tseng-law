@@ -57,6 +57,18 @@ type PersonProfileJsonLdInput = {
   alumniOf?: string[];
 };
 
+type CollectionPageJsonLdInput = {
+  locale: Locale;
+  path: string;
+  name: string;
+  description?: string;
+  items: Array<{
+    name: string;
+    path: string;
+    description?: string;
+  }>;
+};
+
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
 const DEFAULT_SOCIAL_IMAGE = '/images/header-skyline-ratio.webp';
 const LOGO_IMAGE = '/images/brand/hovering-logo-ko.png';
@@ -309,6 +321,51 @@ export function buildArticleJsonLd({
   };
 }
 
+export function buildPersonJsonLd({
+  locale,
+  path,
+  name,
+  alternateName,
+  description,
+  image = LOGO_IMAGE,
+  email,
+  jobTitle,
+  sameAs,
+  knowsLanguage,
+  knowsAbout,
+  alumniOf,
+}: PersonProfileJsonLdInput) {
+  const pageUrl = buildAbsoluteUrl(path);
+
+  const personEntity = {
+    '@type': 'Person',
+    name,
+    alternateName,
+    description,
+    url: pageUrl,
+    image: buildAbsoluteUrl(image),
+    email: email ? `mailto:${email}` : undefined,
+    jobTitle,
+    sameAs,
+    knowsLanguage,
+    knowsAbout,
+    worksFor: {
+      '@type': 'Organization',
+      name: organizationName[locale],
+      url: buildAbsoluteUrl(getLocalizedPath(locale)),
+    },
+    alumniOf: alumniOf?.map((school) => ({
+      '@type': 'CollegeOrUniversity',
+      name: school,
+    })),
+  };
+
+  return {
+    '@context': 'https://schema.org',
+    ...personEntity,
+  };
+}
+
 export function buildProfilePageJsonLd({
   locale,
   path,
@@ -351,6 +408,33 @@ export function buildProfilePageJsonLd({
       alumniOf: alumniOf?.map((school) => ({
         '@type': 'CollegeOrUniversity',
         name: school,
+      })),
+    },
+  };
+}
+
+export function buildCollectionPageJsonLd({
+  locale,
+  path,
+  name,
+  description,
+  items,
+}: CollectionPageJsonLdInput) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    url: buildAbsoluteUrl(path),
+    name,
+    description,
+    inLanguage: getLocaleLanguageTag(locale),
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: buildAbsoluteUrl(item.path),
+        description: item.description,
       })),
     },
   };

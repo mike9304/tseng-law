@@ -743,8 +743,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     videos: {
       label: 'CHANNELS',
-      title: '영상 및 외부 채널',
-      description: '유튜브 채널과 블로그 등 외부 채널을 안내합니다.',
+      title: '증준외 변호사 공개 채널',
+      description: 'YouTube, 블로그, 개인 사이트와 공식 프로필 등 증준외 변호사의 공개 채널을 모았습니다.',
       featured: {
         title: 'WEI Lawyer 유튜브 채널',
         duration: 'YouTube',
@@ -1447,8 +1447,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     videos: {
       label: 'CHANNELS',
-      title: '影音與外部平台',
-      description: '提供 YouTube 與部落格等外部連結。',
+      title: '曾俊瑋律師公開頻道',
+      description: '集中整理曾俊瑋律師的 YouTube、部落格、個人網站與官方簡介。',
       featured: {
         title: 'WEI Lawyer YouTube 頻道',
         duration: 'YouTube',
@@ -2117,8 +2117,8 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     videos: {
       ...base.videos,
       label: 'CHANNELS',
-      title: 'Videos & External Channels',
-      description: 'Explore legal explainers via YouTube, blog, and website channels.',
+      title: 'Attorney Wei Tseng Public Channels',
+      description: 'Explore Wei Tseng’s YouTube, blog, personal website, and official firm profile from one page.',
       items: [
         {
           title: 'Naver Blog: Taiwan Lawyer Wei Tseng',

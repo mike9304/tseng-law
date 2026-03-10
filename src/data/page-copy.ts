@@ -44,8 +44,8 @@ export const pageCopy: Record<Locale, PageCopy> = {
     },
     videos: {
       label: 'VIDEOS',
-      title: '영상/채널',
-      description: 'WEI Lawyer 유튜브 채널 및 외부 링크를 확인하세요.'
+      title: '증준외 변호사 미디어·채널',
+      description: '증준외 변호사의 공식 프로필, YouTube, 블로그와 외부 소개를 한곳에서 확인하세요.'
     },
     faq: {
       label: 'FAQ',
@@ -96,8 +96,8 @@ export const pageCopy: Record<Locale, PageCopy> = {
     },
     videos: {
       label: 'VIDEOS',
-      title: '影音/頻道',
-      description: '查看 WEI Lawyer YouTube 頻道與外部連結。'
+      title: '曾俊瑋律師影音·頻道',
+      description: '集中查看曾俊瑋律師的官方簡介、YouTube、部落格與外部介紹。'
     },
     faq: {
       label: 'FAQ',
@@ -148,8 +148,8 @@ export const pageCopy: Record<Locale, PageCopy> = {
     },
     videos: {
       label: 'VIDEOS',
-      title: 'Videos / Channels',
-      description: 'Watch WEI Lawyer content and related external channels.'
+      title: 'Attorney Wei Tseng Media / Channels',
+      description: 'Review Attorney Wei Tseng’s official profile, YouTube channel, blog, and external references in one place.'
     },
     faq: {
       label: 'FAQ',

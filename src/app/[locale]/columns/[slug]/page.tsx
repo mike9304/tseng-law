@@ -39,6 +39,7 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
   const locale = normalizeLocale(params.locale);
   const post = getColumnPost(params.slug, locale);
   if (!post) return notFound();
+  if (post.slug !== params.slug) return notFound();
 
   const backLabel = locale === 'ko' ? '← 칼럼 목록으로' : locale === 'zh-hant' ? '← 返回專欄列表' : '← Back to columns';
   const authorName = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';

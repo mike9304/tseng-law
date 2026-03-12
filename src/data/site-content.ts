@@ -858,38 +858,38 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       cta: { label: '문의 페이지', href: '/ko/contact' }
     },
     footer: {
-      note: '한국어·일본어 상담 및 대만 전역 사건 지원.',
+      note: '한국어·일본어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
       columns: [
         {
-          title: '법인',
+          title: '사무소',
           links: [
-            { label: '법인소개', href: '/ko/about' },
-            { label: '변호사', href: '/ko/lawyers' },
-            { label: '연락처', href: '/ko/contact' }
+            { label: '사무소 소개', href: '/ko/about' },
+            { label: '변호사 소개', href: '/ko/lawyers' },
+            { label: '상담 문의', href: '/ko/contact' }
           ]
         },
         {
-          title: '업무',
+          title: '주요 업무',
           links: [
-            { label: '대만 투자', href: '/ko/services#investment' },
-            { label: '부동산·건설', href: '/ko/services#real-estate' },
-            { label: '지적재산권', href: '/ko/services#ip' }
+            { label: '대만 투자·법인 설립', href: '/ko/services#investment' },
+            { label: '부동산·건설 분쟁', href: '/ko/services#real-estate' },
+            { label: '상표·지식재산', href: '/ko/services#ip' }
           ]
         },
         {
-          title: '콘텐츠',
+          title: '자료',
           links: [
-            { label: '칼럼', href: '/ko/columns' },
-            { label: '영상', href: '/ko/videos' },
-            { label: 'FAQ', href: '/ko/faq' }
+            { label: '법률 칼럼', href: '/ko/columns' },
+            { label: '영상 자료', href: '/ko/videos' },
+            { label: '자주 묻는 질문', href: '/ko/faq' }
           ]
         },
         {
-          title: '검색 가이드',
+          title: '자주 찾는 주제',
           links: [
-            { label: '대만변호사', href: '/ko/taiwan-lawyer' },
-            { label: '대만 회사설립 변호사', href: '/ko/taiwan-company-setup-lawyer' },
-            { label: '대만 소송 변호사', href: '/ko/taiwan-litigation-lawyer' }
+            { label: '대만 변호사', href: '/ko/taiwan-lawyer' },
+            { label: '대만 회사설립', href: '/ko/taiwan-company-setup-lawyer' },
+            { label: '대만 소송', href: '/ko/taiwan-litigation-lawyer' }
           ]
         }
       ],
@@ -1569,38 +1569,38 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       cta: { label: '聯絡頁', href: '/zh-hant/contact' }
     },
     footer: {
-      note: '提供韓語、日語諮詢，服務台灣全境案件。',
+      note: '以韓語、日語溝通為基礎，承辦台灣各地的法律顧問與爭議案件。',
       columns: [
         {
           title: '事務所',
           links: [
-            { label: '事務所介紹', href: '/zh-hant/about' },
-            { label: '律師', href: '/zh-hant/lawyers' },
-            { label: '聯絡', href: '/zh-hant/contact' }
+            { label: '事務所簡介', href: '/zh-hant/about' },
+            { label: '律師介紹', href: '/zh-hant/lawyers' },
+            { label: '預約諮詢', href: '/zh-hant/contact' }
           ]
         },
         {
-          title: '服務',
+          title: '主要服務',
           links: [
-            { label: '在台投資', href: '/zh-hant/services#investment' },
-            { label: '不動產/工程', href: '/zh-hant/services#real-estate' },
-            { label: '智慧財產權', href: '/zh-hant/services#ip' }
+            { label: '台灣投資與公司設立', href: '/zh-hant/services#investment' },
+            { label: '不動產與工程爭議', href: '/zh-hant/services#real-estate' },
+            { label: '商標與智慧財產', href: '/zh-hant/services#ip' }
           ]
         },
         {
-          title: '內容',
+          title: '資料',
           links: [
-            { label: '洞見', href: '/zh-hant/columns' },
-            { label: '影音', href: '/zh-hant/videos' },
-            { label: 'FAQ', href: '/zh-hant/faq' }
+            { label: '法律專欄', href: '/zh-hant/columns' },
+            { label: '影音內容', href: '/zh-hant/videos' },
+            { label: '常見問題', href: '/zh-hant/faq' }
           ]
         },
         {
-          title: '搜尋指南',
+          title: '常見主題',
           links: [
             { label: '台灣律師', href: '/zh-hant/taiwan-lawyer' },
-            { label: '台灣公司設立律師', href: '/zh-hant/taiwan-company-setup-lawyer' },
-            { label: '台灣訴訟律師', href: '/zh-hant/taiwan-litigation-lawyer' }
+            { label: '台灣公司設立', href: '/zh-hant/taiwan-company-setup-lawyer' },
+            { label: '台灣訴訟', href: '/zh-hant/taiwan-litigation-lawyer' }
           ]
         }
       ],
@@ -2234,38 +2234,38 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     },
     footer: {
       ...base.footer,
-      note: 'Consultation in Korean, Japanese, and English for Taiwan-wide legal matters.',
+      note: 'Taiwan legal support for cross-border advisory work and disputes in Korean, Japanese, and English.',
       columns: [
         {
           title: 'Firm',
           links: [
             { label: 'About', href: '/en/about' },
             { label: 'Lawyers', href: '/en/lawyers' },
-            { label: 'Contact', href: '/en/contact' }
+            { label: 'Consultation', href: '/en/contact' }
           ]
         },
         {
           title: 'Services',
           links: [
-            { label: 'Taiwan Investment', href: '/en/services#investment' },
+            { label: 'Investment & Company Setup', href: '/en/services#investment' },
             { label: 'Real Estate & Construction', href: '/en/services#real-estate' },
-            { label: 'Intellectual Property', href: '/en/services#ip' }
+            { label: 'Trademarks & IP', href: '/en/services#ip' }
           ]
         },
         {
-          title: 'Content',
+          title: 'Resources',
           links: [
             { label: 'Columns', href: '/en/columns' },
             { label: 'Videos', href: '/en/videos' },
-            { label: 'FAQ', href: '/en/faq' }
+            { label: 'Questions', href: '/en/faq' }
           ]
         },
         {
-          title: 'Search Guides',
+          title: 'Popular Topics',
           links: [
             { label: 'Taiwan Lawyer', href: '/en/taiwan-lawyer' },
-            { label: 'Taiwan Company Setup Lawyer', href: '/en/taiwan-company-setup-lawyer' },
-            { label: 'Taiwan Litigation Lawyer', href: '/en/taiwan-litigation-lawyer' }
+            { label: 'Taiwan Company Setup', href: '/en/taiwan-company-setup-lawyer' },
+            { label: 'Taiwan Litigation', href: '/en/taiwan-litigation-lawyer' }
           ]
         }
       ],

@@ -6,7 +6,7 @@ import { getSiteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
-  applicationName: 'Tseng Law',
+  applicationName: '법무법인 호정',
   title: {
     default: '법무법인 호정',
     template: '%s | Tseng Law',
@@ -14,17 +14,23 @@ export const metadata: Metadata = {
   description:
     '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·중문·영문으로 안내하는 법무법인 호정 공식 사이트.',
   authors: [{ name: '법무법인 호정' }],
-  creator: 'Tseng Law',
-  publisher: 'Tseng Law',
+  creator: '법무법인 호정',
+  publisher: '법무법인 호정',
   category: 'legal services',
+  manifest: '/manifest.webmanifest',
   formatDetection: {
     telephone: false,
     address: false,
     email: false,
   },
   icons: {
-    icon: '/images/brand/hovering-logo-ko.png',
-    apple: '/images/brand/hovering-logo-ko.png',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/images/brand/hovering-seal-red-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/images/brand/hovering-seal-red-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
 };
 
@@ -38,17 +44,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Pretendard — Korean body text (modern, clean) */}
         <link
-          rel="stylesheet"
-          as="style"
-          crossOrigin="anonymous"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-        />
-        {/* Nanum Myeongjo — Korean serif headings (authoritative, traditional) */}
-        {/* Cormorant Garamond — English headings | Noto Serif TC + Noto Sans TC — Traditional Chinese */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
       </head>

@@ -72,13 +72,15 @@ type CollectionPageJsonLdInput = {
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
 const DEFAULT_SOCIAL_IMAGE = '/images/header-skyline-ratio.webp';
-const LOGO_IMAGE = '/images/brand/hovering-logo-ko.png';
+const LOGO_IMAGE = '/images/brand/hovering-seal-red-512.png';
 
 const organizationName: Record<Locale, string> = {
   ko: '법무법인 호정',
   'zh-hant': '昊鼎國際法律事務所',
   en: 'Hovering International Law Firm',
 };
+
+const organizationAlternateNames = ['법무법인 호정', '昊鼎國際法律事務所', 'Hovering International Law Firm', 'Tseng Law'];
 
 const openGraphLocale: Record<Locale, string> = {
   ko: 'ko_KR',
@@ -225,12 +227,28 @@ export function buildBreadcrumbJsonLd(locale: Locale, items: BreadcrumbItem[]) {
 }
 
 export function buildWebsiteJsonLd(locale: Locale) {
+  const websiteUrl = buildAbsoluteUrl(getLocalizedPath(locale));
+
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${websiteUrl}#website`,
     name: organizationName[locale],
-    url: buildAbsoluteUrl(getLocalizedPath(locale)),
+    alternateName: organizationAlternateNames.filter((name) => name !== organizationName[locale]),
+    url: websiteUrl,
     inLanguage: getLocaleLanguageTag(locale),
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${buildAbsoluteUrl('/ko')}#organization`,
+      name: organizationName[defaultLocale],
+      alternateName: organizationAlternateNames.filter((name) => name !== organizationName[defaultLocale]),
+      url: buildAbsoluteUrl('/ko'),
+      logo: {
+        '@type': 'ImageObject',
+        url: buildAbsoluteUrl(LOGO_IMAGE),
+      },
+      sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913'],
+    },
     potentialAction: {
       '@type': 'SearchAction',
       target: `${buildAbsoluteUrl(getLocalizedPath(locale, '/search'))}?q={search_term_string}`,

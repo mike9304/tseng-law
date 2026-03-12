@@ -45,21 +45,21 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
   const authorName = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
   const authorProfilePath = getAttorneyProfilePath(locale);
   const attorneyHeading = locale === 'ko' ? '이 글 검토 변호사' : locale === 'zh-hant' ? '審閱本文的律師' : 'Reviewing Attorney';
-  const guideTitle = locale === 'ko' ? '관련 검색 안내' : locale === 'zh-hant' ? '相關搜尋指南' : 'Related Search Guides';
+  const guideTitle = locale === 'ko' ? '함께 보는 주제' : locale === 'zh-hant' ? '延伸主題' : 'Related Topics';
   const guideLinks =
     post.category === 'formation'
       ? [
-          { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립 변호사 안내' : locale === 'zh-hant' ? '台灣公司設立律師指南' : 'Taiwan Company Setup Lawyer Guide' },
-          { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만변호사 안내' : locale === 'zh-hant' ? '台灣律師指南' : 'Taiwan Lawyer Guide' },
+          { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
+          { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
         ]
       : post.category === 'case'
         ? [
-            { href: `/${locale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송 변호사 안내' : locale === 'zh-hant' ? '台灣訴訟律師指南' : 'Taiwan Litigation Lawyer Guide' },
-            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만변호사 안내' : locale === 'zh-hant' ? '台灣律師指南' : 'Taiwan Lawyer Guide' },
+            { href: `/${locale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송' : locale === 'zh-hant' ? '台灣訴訟' : 'Taiwan Litigation' },
+            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
           ]
         : [
-            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만변호사 안내' : locale === 'zh-hant' ? '台灣律師指南' : 'Taiwan Lawyer Guide' },
-            { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립 변호사 안내' : locale === 'zh-hant' ? '台灣公司設立律師指南' : 'Taiwan Company Setup Lawyer Guide' },
+            { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
+            { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
           ];
 
   return (

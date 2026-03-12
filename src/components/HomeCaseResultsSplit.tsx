@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { Locale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
 
@@ -35,10 +34,10 @@ export default function HomeCaseResultsSplit({ locale }: { locale: Locale }) {
   const copy = copyByLocale[locale];
 
   return (
-    <section className="section section--dark split-section split--img-right" id="results" data-tone="dark">
-      <div className="split-content">
-        <div className="section-label">{copy.label}</div>
-        <h2 className="split-title">
+    <section className="section section--dark split-section split--text-only home-results-panel" id="results" data-tone="dark">
+      <div className="split-content home-results-content">
+        <div className="section-label home-results-label">{copy.label}</div>
+        <h2 className="split-title home-results-title">
           {copy.title.split('\n').map((line) => (
             <span key={line}>
               {line}
@@ -47,14 +46,11 @@ export default function HomeCaseResultsSplit({ locale }: { locale: Locale }) {
           ))}
         </h2>
         <div className="split-divider" />
-        <p className="split-text">{copy.description}</p>
-        <p className="split-text">{copy.summary}</p>
-        <SmartLink className="link-underline" href={`/${locale}/columns`}>
+        <p className="split-text home-results-text">{copy.description}</p>
+        <p className="split-text home-results-text">{copy.summary}</p>
+        <SmartLink className="link-underline home-results-link" href={`/${locale}/columns`}>
           {copy.cta} →
         </SmartLink>
-      </div>
-      <div className="split-image">
-        <Image src="/images/feature-1.svg" alt={copy.title.replace('\n', ' ')} width={1200} height={900} />
       </div>
     </section>
   );

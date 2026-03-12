@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   applicationName: '법무법인 호정',
   title: {
     default: '법무법인 호정',
-    template: '%s | Tseng Law',
+    template: '%s | 법무법인 호정',
   },
   description:
     '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·중문·영문으로 안내하는 법무법인 호정 공식 사이트.',

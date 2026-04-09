@@ -140,6 +140,19 @@ export type SiteContent = {
     description: string;
     items: { title: string; description: string; href: string; details?: string[]; relatedColumns?: { title: string; slug: string }[] }[];
   };
+  homeAttorney: {
+    label: string;
+    title: string;
+    summary: string;
+    ctaLabel: string;
+  };
+  homeResults: {
+    label: string;
+    title: string;
+    description: string;
+    summary: string;
+    ctaLabel: string;
+  };
   updates: {
     label: string;
     title: string;
@@ -185,6 +198,10 @@ export type SiteContent = {
     locationsLabel: string;
     locations: { title: string; details: string[] }[];
     cta: NavItem;
+  };
+  homeContactCta: {
+    title: string;
+    description: string;
   };
   footer: {
     note: string;
@@ -608,6 +625,19 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         }
       ]
     },
+    homeAttorney: {
+      label: 'ABOUT',
+      title: '증준외 변호사, 한국 고객을 위한 대만 법률 파트너',
+      summary: '10년 이상 실무 경험, SBS 모닝와이드 출연, WEI Lawyer 채널 운영을 통해 실제 사례 중심의 법률 지원을 이어가고 있습니다.',
+      ctaLabel: '변호사 프로필 보기'
+    },
+    homeResults: {
+      label: 'RESULTS',
+      title: '한국 학생 헬스장 부상 사건,\n157만 TWD 승소',
+      description: '한국 대학생이 대만 헬스장에서 트레이너 지도 중 중상을 입은 사건에서 손해배상 청구를 진행해 1심에서 157만 TWD 판결을 받았습니다.',
+      summary: '사실관계 입증, 손해 산정, 협상·소송 전략을 통합해 결과를 도출한 대표 사례입니다.',
+      ctaLabel: '소송사례 더 보기'
+    },
     updates: {
       label: 'PROFILE',
       title: '증준외 변호사 소개',
@@ -790,12 +820,11 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       buttonLabel: '빠른 상담 열기',
       panelTitle: '빠른 상담',
       actions: [
-        { label: '전화', value: '+82-10-2992-9304', href: 'tel:+821029929304' },
-        { label: '카카오톡', value: '채널 상담', href: 'https://pf.kakao.com/_hojeong/chat' },
-        { label: 'LINE', value: 'LINE 상담', href: 'https://lin.ee/hojeong' },
-        { label: '이메일', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' }
+        { label: 'AI 상담', value: 'AI가 초기 안내를 도와드립니다', href: '#ai-consultation' },
+        { label: '이메일', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
+        { label: '전화 (한국)', value: '010-2992-9304', href: 'tel:+821029929304' },
       ],
-      cta: { label: '상담 예약', href: '/ko/contact' }
+      cta: { label: '상담 페이지', href: '/ko/contact' }
     },
     contact: {
       label: 'CONTACT',
@@ -856,6 +885,10 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         }
       ],
       cta: { label: '문의 페이지', href: '/ko/contact' }
+    },
+    homeContactCta: {
+      title: '대만 법률 이슈, 지금 바로 상담하세요.',
+      description: '사업·소송·법인설립 문의를 유형별로 빠르게 연결해드립니다.'
     },
     footer: {
       note: '한국어·일본어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
@@ -1314,6 +1347,19 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         }
       ]
     },
+    homeAttorney: {
+      label: 'ABOUT',
+      title: '曾俊瑋律師，專注服務韓國客戶的台灣法律夥伴',
+      summary: '具備 10+ 年實務經驗、媒體露出與持續內容輸出，提供以實際案例為核心的法律協助。',
+      ctaLabel: '查看律師簡介'
+    },
+    homeResults: {
+      label: 'RESULTS',
+      title: '韓國學生健身房受傷案件，\n一審獲判 157 萬 TWD',
+      description: '韓國大學生於台灣健身房在教練指導下受傷後提出損害賠償請求，一審取得 157 萬 TWD 判決。',
+      summary: '本案整合事實證明、損害計算與訴訟策略，屬代表性實績案例。',
+      ctaLabel: '查看更多案例'
+    },
     updates: {
       label: 'PROFILE',
       title: '曾俊瑋 律師',
@@ -1501,12 +1547,11 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       buttonLabel: '開啟快速諮詢',
       panelTitle: '快速諮詢',
       actions: [
-        { label: '電話', value: '+82-10-2992-9304', href: 'tel:+821029929304' },
-        { label: 'LINE', value: 'LINE 諮詢', href: 'https://lin.ee/hojeong' },
-        { label: 'KakaoTalk', value: 'KakaoTalk 諮詢', href: 'https://pf.kakao.com/_hojeong/chat' },
-        { label: '電子郵件', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' }
+        { label: 'AI 諮詢', value: 'AI 協助初步引導', href: '#ai-consultation' },
+        { label: '電子郵件', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
+        { label: '電話 (韓國)', value: '010-2992-9304', href: 'tel:+821029929304' },
       ],
-      cta: { label: '預約諮詢', href: '/zh-hant/contact' }
+      cta: { label: '諮詢頁面', href: '/zh-hant/contact' }
     },
     contact: {
       label: 'CONTACT',
@@ -1567,6 +1612,10 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         }
       ],
       cta: { label: '聯絡頁', href: '/zh-hant/contact' }
+    },
+    homeContactCta: {
+      title: '台灣法律議題，立即諮詢。',
+      description: '依案件類型安排投資、訴訟與公司設立諮詢流程。'
     },
     footer: {
       note: '以韓語、日語溝通為基礎，承辦台灣各地的法律顧問與爭議案件。',
@@ -1994,6 +2043,19 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         }
       ]
     },
+    homeAttorney: {
+      label: 'ABOUT',
+      title: 'Attorney Wei Tseng, Taiwan Legal Partner for Korean Clients',
+      summary: 'With 10+ years of practical experience, media appearances, and continuous legal content publishing, we focus on real case-driven support.',
+      ctaLabel: 'View Lawyer Profile'
+    },
+    homeResults: {
+      label: 'RESULTS',
+      title: 'Korean Student Gym Injury Case,\nTWD 1.57M First-Instance Win',
+      description: 'In a case where a Korean university student suffered a serious injury during trainer-guided exercise at a Taiwan gym, we pursued damages and obtained a TWD 1.57M ruling in first instance.',
+      summary: 'This is a representative result built on integrated fact proof, damage calculation, negotiation, and litigation strategy.',
+      ctaLabel: 'View More Case Results'
+    },
     updates: {
       ...base.updates,
       label: 'PROFILE',
@@ -2176,12 +2238,11 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       buttonLabel: 'Open Quick Consult',
       panelTitle: 'Quick Consult',
       actions: [
-        { label: 'Phone (Korea)', value: '+82-10-2992-9304', href: 'tel:+821029929304' },
-        { label: 'KakaoTalk', value: 'Channel Chat', href: 'https://pf.kakao.com/_hojeong/chat' },
-        { label: 'LINE', value: 'LINE Chat', href: 'https://lin.ee/hojeong' },
-        { label: 'Email', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' }
+        { label: 'AI Consult', value: 'AI-assisted initial guidance', href: '#ai-consultation' },
+        { label: 'Email', value: 'wei@hoveringlaw.com.tw', href: 'mailto:wei@hoveringlaw.com.tw' },
+        { label: 'Phone (Korea)', value: '010-2992-9304', href: 'tel:+821029929304' },
       ],
-      cta: { label: 'Book Consultation', href: '/en/contact' }
+      cta: { label: 'Contact Page', href: '/en/contact' }
     },
     contact: {
       ...base.contact,
@@ -2231,6 +2292,10 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         }
       ],
       cta: { label: 'Contact Page', href: '/en/contact' }
+    },
+    homeContactCta: {
+      title: 'Talk to us now about your Taiwan legal issue.',
+      description: 'We quickly route business, litigation, and incorporation inquiries by case type.'
     },
     footer: {
       ...base.footer,

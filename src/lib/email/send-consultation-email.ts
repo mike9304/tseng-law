@@ -53,7 +53,9 @@ function createTransporter() {
       'SMTP is not fully configured. Check SMTP_HOST, SMTP_PORT, SMTP_USER, and SMTP_PASS.',
     );
   }
-  if (!NOTIFY_EMAIL?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(NOTIFY_EMAIL)) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emails = NOTIFY_EMAIL?.split(',').map((e) => e.trim()).filter(Boolean) ?? [];
+  if (!emails.length || emails.some((e) => !emailPattern.test(e))) {
     throw new Error('CONSULTATION_NOTIFY_EMAIL / NOTIFY_EMAIL is missing or invalid.');
   }
 

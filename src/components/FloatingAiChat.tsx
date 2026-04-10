@@ -2,11 +2,75 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
-import { getQuickReplies } from '@/components/floating-ai-quick-replies';
+import { getFollowUpSuggestions, getQuickReplies } from '@/components/floating-ai-quick-replies';
+
+interface FloatingChatReference {
+  slug: string;
+  title: string;
+  summary: string;
+  lastmod: string;
+  freshness: 'fresh' | 'review_needed' | 'unknown';
+}
 
 interface ChatMessage {
+  id: string;
   role: 'user' | 'assistant';
   text: string;
+  references?: FloatingChatReference[];
+}
+
+type FeedbackState = 'pending' | 'helpful' | 'unhelpful';
+
+function makeMessageId(role: 'user' | 'assistant'): string {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return `${role}-${crypto.randomUUID().slice(0, 12)}`;
+  }
+  return `${role}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function feedbackStorageKey(sessionId: string): string {
+  return `hoj-float-feedback-${sessionId}`;
+}
+
+function loadStoredFeedback(sessionId: string): Record<string, 'helpful' | 'unhelpful'> {
+  if (typeof window === 'undefined') return {};
+  try {
+    const raw = window.localStorage.getItem(feedbackStorageKey(sessionId));
+    if (!raw) return {};
+    const parsed = JSON.parse(raw) as unknown;
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+    const out: Record<string, 'helpful' | 'unhelpful'> = {};
+    for (const [k, v] of Object.entries(parsed as Record<string, unknown>)) {
+      if (v === 'helpful' || v === 'unhelpful') out[k] = v;
+    }
+    return out;
+  } catch {
+    return {};
+  }
+}
+
+function persistFeedback(
+  sessionId: string,
+  state: Record<string, FeedbackState>,
+): void {
+  if (typeof window === 'undefined') return;
+  try {
+    const clean: Record<string, 'helpful' | 'unhelpful'> = {};
+    for (const [k, v] of Object.entries(state)) {
+      if (v === 'helpful' || v === 'unhelpful') clean[k] = v;
+    }
+    window.localStorage.setItem(feedbackStorageKey(sessionId), JSON.stringify(clean));
+  } catch {
+    /* Safari private mode or quota — ignore */
+  }
+}
+
+interface ChatApiReferenceRaw {
+  slug?: string;
+  title?: string;
+  summary?: string;
+  lastmod?: string;
+  freshness?: string;
 }
 
 interface ChatApiResponse {
@@ -16,6 +80,65 @@ interface ChatApiResponse {
   shouldEscalate: boolean;
   nextRequiredField: string;
   referencedColumns: string[];
+  references?: ChatApiReferenceRaw[];
+}
+
+function normalizeFreshness(raw: string | undefined): FloatingChatReference['freshness'] {
+  if (raw === 'fresh' || raw === 'review_needed') return raw;
+  return 'unknown';
+}
+
+function normalizeReferences(
+  raw: ChatApiReferenceRaw[] | undefined,
+): FloatingChatReference[] {
+  if (!Array.isArray(raw)) return [];
+  const out: FloatingChatReference[] = [];
+  for (const ref of raw) {
+    if (!ref || typeof ref !== 'object') continue;
+    const slug = typeof ref.slug === 'string' ? ref.slug : '';
+    if (!slug) continue;
+    out.push({
+      slug,
+      title: typeof ref.title === 'string' ? ref.title : slug,
+      summary: typeof ref.summary === 'string' ? ref.summary : '',
+      lastmod: typeof ref.lastmod === 'string' ? ref.lastmod : '',
+      freshness: normalizeFreshness(ref.freshness),
+    });
+    if (out.length >= 3) break;
+  }
+  return out;
+}
+
+function formatReferenceDate(lastmod: string, locale: Locale): string {
+  if (!lastmod) return '';
+  const parsed = new Date(lastmod);
+  if (Number.isNaN(parsed.getTime())) return lastmod;
+  try {
+    const intlLocale = locale === 'zh-hant' ? 'zh-TW' : locale === 'en' ? 'en-US' : 'ko-KR';
+    return new Intl.DateTimeFormat(intlLocale, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }).format(parsed);
+  } catch {
+    return lastmod;
+  }
+}
+
+function freshnessLabel(freshness: FloatingChatReference['freshness'], locale: Locale): string {
+  if (locale === 'ko') {
+    if (freshness === 'fresh') return '최신';
+    if (freshness === 'review_needed') return '재검토 필요';
+    return '확인 전';
+  }
+  if (locale === 'zh-hant') {
+    if (freshness === 'fresh') return '最新';
+    if (freshness === 'review_needed') return '需重新檢閱';
+    return '待確認';
+  }
+  if (freshness === 'fresh') return 'Fresh';
+  if (freshness === 'review_needed') return 'Review needed';
+  return 'Unverified';
 }
 
 const COPY: Record<
@@ -42,6 +165,15 @@ const COPY: Record<
     officesLabel: string;
     requireBoth: string;
     typingHint: string;
+    feedbackHelpful: string;
+    feedbackUnhelpful: string;
+    feedbackPending: string;
+    feedbackThanks: string;
+    feedbackError: string;
+    sourcesTitle: string;
+    sourceLastVerified: (date: string) => string;
+    sourceReadMore: string;
+    disclaimerBar: string;
   }
 > = {
   ko: {
@@ -68,6 +200,15 @@ const COPY: Record<
     officesLabel: '사무소',
     requireBoth: '이름과 연락처를 입력해 주세요',
     typingHint: 'Enter로 전송',
+    feedbackHelpful: '도움이 됐어요',
+    feedbackUnhelpful: '도움이 안 됐어요',
+    feedbackPending: '전송 중...',
+    feedbackThanks: '피드백 감사합니다. 더 나은 응답에 반영하겠습니다.',
+    feedbackError: '피드백 전송 실패. 잠시 후 다시 시도해 주세요.',
+    sourcesTitle: '참고 칼럼',
+    sourceLastVerified: (date) => `최근 갱신: ${date}`,
+    sourceReadMore: '원문 보기',
+    disclaimerBar: 'AI 응답은 참고용입니다. 최종 판단은 대만 변호사 검토가 필요합니다.',
   },
   'zh-hant': {
     title: 'AI 諮詢',
@@ -92,6 +233,15 @@ const COPY: Record<
     officesLabel: '據點',
     requireBoth: '請輸入姓名與聯絡方式',
     typingHint: 'Enter 送出',
+    feedbackHelpful: '有幫助',
+    feedbackUnhelpful: '沒有幫助',
+    feedbackPending: '傳送中...',
+    feedbackThanks: '感謝您的回饋，將協助我們持續改善。',
+    feedbackError: '回饋送出失敗，請稍後再試。',
+    sourcesTitle: '參考文章',
+    sourceLastVerified: (date) => `最近更新: ${date}`,
+    sourceReadMore: '閱讀全文',
+    disclaimerBar: 'AI 回覆僅供參考，最終判斷應由台灣律師確認。',
   },
   en: {
     title: 'AI Consult',
@@ -118,6 +268,15 @@ const COPY: Record<
     officesLabel: 'Offices',
     requireBoth: 'Please enter both name and contact',
     typingHint: 'Press Enter to send',
+    feedbackHelpful: 'This was helpful',
+    feedbackUnhelpful: 'Not helpful',
+    feedbackPending: 'Sending...',
+    feedbackThanks: 'Thank you for the feedback. It will help us improve.',
+    feedbackError: 'Could not send feedback. Please try again later.',
+    sourcesTitle: 'Sources',
+    sourceLastVerified: (date) => `Last verified: ${date}`,
+    sourceReadMore: 'Read full article',
+    disclaimerBar: 'AI responses are for reference only. Final judgment requires a Taiwan lawyer\'s review.',
   },
 };
 
@@ -138,7 +297,7 @@ export default function FloatingAiChat({
 }) {
   const copy = COPY[locale];
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'assistant', text: copy.greeting },
+    { id: 'initial-greeting', role: 'assistant', text: copy.greeting },
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -155,6 +314,10 @@ export default function FloatingAiChat({
   const [sessionId] = useState(
     () => `float-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
   );
+  const [feedbackByMessageId, setFeedbackByMessageId] = useState<
+    Record<string, FeedbackState>
+  >({});
+  const [feedbackNotice, setFeedbackNotice] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -196,20 +359,29 @@ export default function FloatingAiChat({
     return () => window.removeEventListener('keydown', onEscape);
   }, [open, onClose]);
 
+  // Hydrate persisted feedback for this session on first render.
+  useEffect(() => {
+    const stored = loadStoredFeedback(sessionId);
+    if (Object.keys(stored).length > 0) {
+      setFeedbackByMessageId(stored);
+    }
+  }, [sessionId]);
+
   function handleQuickReply(question: string, answer: string) {
     setMessages((prev) => [
       ...prev,
-      { role: 'user', text: question },
-      { role: 'assistant', text: answer },
+      { id: makeMessageId('user'), role: 'user', text: question },
+      { id: makeMessageId('assistant'), role: 'assistant', text: answer },
     ]);
   }
 
-  async function handleSend() {
-    const text = input.trim();
+  async function sendChatMessage(text: string) {
     if (!text || loading) return;
 
-    setInput('');
-    setMessages((prev) => [...prev, { role: 'user', text }]);
+    setMessages((prev) => [
+      ...prev,
+      { id: makeMessageId('user'), role: 'user', text },
+    ]);
     setLoading(true);
 
     try {
@@ -223,17 +395,77 @@ export default function FloatingAiChat({
       const data: ChatApiResponse = await res.json();
       setLastClassification(data.classification);
       setLastRiskLevel(data.riskLevel);
+      const parsedReferences = normalizeReferences(data.references);
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', text: data.assistantMessage },
+        {
+          id: makeMessageId('assistant'),
+          role: 'assistant',
+          text: data.assistantMessage,
+          references: parsedReferences.length > 0 ? parsedReferences : undefined,
+        },
       ]);
       // Note: form is no longer auto-shown on escalation.
       // User explicitly opens it via the "상담 접수하기" button so the
       // assistant response stays visible first.
     } catch {
-      setMessages((prev) => [...prev, { role: 'assistant', text: copy.error }]);
+      setMessages((prev) => [
+        ...prev,
+        { id: makeMessageId('assistant'), role: 'assistant', text: copy.error },
+      ]);
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function handleSend() {
+    const text = input.trim();
+    if (!text || loading) return;
+    setInput('');
+    await sendChatMessage(text);
+  }
+
+  async function handleFollowUp(suggestion: string) {
+    if (loading) return;
+    await sendChatMessage(suggestion);
+  }
+
+  async function submitFeedback(messageId: string, rating: 'helpful' | 'unhelpful') {
+    const current = feedbackByMessageId[messageId];
+    if (current === 'pending' || current === 'helpful' || current === 'unhelpful') return;
+
+    setFeedbackByMessageId((prev) => ({ ...prev, [messageId]: 'pending' }));
+    setFeedbackNotice(null);
+
+    try {
+      const res = await fetch('/api/consultation/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId,
+          messageId,
+          rating,
+          locale,
+          classification: lastClassification,
+          riskLevel: lastRiskLevel,
+        }),
+      });
+      if (!res.ok) throw new Error(`feedback request failed with ${res.status}`);
+
+      setFeedbackByMessageId((prev) => {
+        const next: Record<string, FeedbackState> = { ...prev, [messageId]: rating };
+        persistFeedback(sessionId, next);
+        return next;
+      });
+      setFeedbackNotice(copy.feedbackThanks);
+    } catch (err) {
+      console.error('[floating-ai-chat] feedback failed:', err);
+      setFeedbackByMessageId((prev) => {
+        const next = { ...prev };
+        delete next[messageId];
+        return next;
+      });
+      setFeedbackNotice(copy.feedbackError);
     }
   }
 
@@ -289,7 +521,7 @@ export default function FloatingAiChat({
       setSubmitted(data.intakeId);
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', text: copy.success(data.intakeId) },
+        { id: makeMessageId('assistant'), role: 'assistant', text: copy.success(data.intakeId) },
       ]);
       setShowForm(false);
     } catch {
@@ -391,11 +623,113 @@ export default function FloatingAiChat({
       </div>
 
       <div className="floating-ai-chat-body" ref={scrollRef}>
-        {messages.map((msg, i) => (
-          <div key={i} className={`floating-ai-chat-msg ${msg.role}`}>
-            <div className="floating-ai-chat-bubble">{msg.text}</div>
+        {messages.map((msg, i) => {
+          const showFeedback = msg.role === 'assistant' && i > 0;
+          const feedbackState = feedbackByMessageId[msg.id];
+          const isPending = feedbackState === 'pending';
+          const isHelpful = feedbackState === 'helpful';
+          const isUnhelpful = feedbackState === 'unhelpful';
+          const alreadyRated = isHelpful || isUnhelpful;
+          return (
+            <div key={msg.id} className={`floating-ai-chat-msg ${msg.role}`}>
+              <div className="floating-ai-chat-bubble">{msg.text}</div>
+              {msg.references && msg.references.length > 0 ? (
+                <div
+                  className="floating-ai-chat-sources"
+                  role="region"
+                  aria-label={copy.sourcesTitle}
+                >
+                  <div className="floating-ai-chat-sources-title">{copy.sourcesTitle}</div>
+                  <ul className="floating-ai-chat-sources-list">
+                    {msg.references.map((ref) => {
+                      const formattedDate = formatReferenceDate(ref.lastmod, locale);
+                      const freshClass =
+                        ref.freshness === 'fresh'
+                          ? 'floating-ai-chat-source-fresh'
+                          : ref.freshness === 'review_needed'
+                            ? 'floating-ai-chat-source-stale'
+                            : 'floating-ai-chat-source-unknown';
+                      return (
+                        <li key={ref.slug} className="floating-ai-chat-source">
+                          <a
+                            href={`/${locale}/columns/${ref.slug}`}
+                            className="floating-ai-chat-source-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <div className="floating-ai-chat-source-head">
+                              <span className="floating-ai-chat-source-title">{ref.title}</span>
+                              <span
+                                className={`floating-ai-chat-source-badge ${freshClass}`}
+                                aria-label={freshnessLabel(ref.freshness, locale)}
+                              >
+                                {freshnessLabel(ref.freshness, locale)}
+                              </span>
+                            </div>
+                            {ref.summary ? (
+                              <p className="floating-ai-chat-source-summary">{ref.summary}</p>
+                            ) : null}
+                            <div className="floating-ai-chat-source-meta">
+                              {formattedDate ? (
+                                <span>{copy.sourceLastVerified(formattedDate)}</span>
+                              ) : null}
+                              <span className="floating-ai-chat-source-more">
+                                {copy.sourceReadMore} →
+                              </span>
+                            </div>
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ) : null}
+              {showFeedback ? (
+                <div
+                  className="floating-ai-chat-feedback"
+                  role="group"
+                  aria-label={copy.feedbackHelpful}
+                >
+                  <button
+                    type="button"
+                    className={`floating-ai-chat-feedback-btn${isHelpful ? ' is-active' : ''}`}
+                    onClick={() => {
+                      void submitFeedback(msg.id, 'helpful');
+                    }}
+                    disabled={isPending || alreadyRated}
+                    aria-label={copy.feedbackHelpful}
+                    aria-pressed={isHelpful}
+                  >
+                    <span aria-hidden="true">👍</span>
+                    <span className="floating-ai-chat-feedback-text">
+                      {isPending ? copy.feedbackPending : copy.feedbackHelpful}
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    className={`floating-ai-chat-feedback-btn floating-ai-chat-feedback-btn--down${isUnhelpful ? ' is-active' : ''}`}
+                    onClick={() => {
+                      void submitFeedback(msg.id, 'unhelpful');
+                    }}
+                    disabled={isPending || alreadyRated}
+                    aria-label={copy.feedbackUnhelpful}
+                    aria-pressed={isUnhelpful}
+                  >
+                    <span aria-hidden="true">👎</span>
+                    <span className="floating-ai-chat-feedback-text">
+                      {isPending ? copy.feedbackPending : copy.feedbackUnhelpful}
+                    </span>
+                  </button>
+                </div>
+              ) : null}
+            </div>
+          );
+        })}
+        {feedbackNotice ? (
+          <div className="floating-ai-chat-feedback-notice" role="status" aria-live="polite">
+            {feedbackNotice}
           </div>
-        ))}
+        ) : null}
 
         {messages.length === 1 && !loading && (
           <div className="floating-ai-chat-quick-chips">
@@ -411,6 +745,39 @@ export default function FloatingAiChat({
             ))}
           </div>
         )}
+
+        {/*
+          Context-aware follow-ups: only rendered when the latest assistant
+          message is NOT the initial greeting (i.e. the user has actually
+          received a classified response). Suggestions are keyed off the
+          engine's last classification so they stay relevant to the topic
+          the user is currently exploring.
+        */}
+        {messages.length > 1
+          && messages[messages.length - 1]?.role === 'assistant'
+          && !loading
+          && !showForm
+          && !submitted ? (
+          <div
+            className="floating-ai-chat-follow-ups"
+            role="group"
+            aria-label={locale === 'ko' ? '이어서 질문하기' : locale === 'zh-hant' ? '繼續追問' : 'Follow-up questions'}
+          >
+            {getFollowUpSuggestions(locale, lastClassification).map((suggestion) => (
+              <button
+                key={suggestion.label}
+                type="button"
+                className="floating-ai-chat-follow-up-chip"
+                onClick={() => {
+                  void handleFollowUp(suggestion.message);
+                }}
+                disabled={loading}
+              >
+                {suggestion.label}
+              </button>
+            ))}
+          </div>
+        ) : null}
 
         {loading && (
           <div className="floating-ai-chat-msg assistant">
@@ -488,6 +855,15 @@ export default function FloatingAiChat({
             </button>
           </form>
         )}
+      </div>
+
+      <div
+        className="floating-ai-chat-disclaimer-bar"
+        role="note"
+        aria-live="off"
+      >
+        <span aria-hidden="true" className="floating-ai-chat-disclaimer-icon">⚠</span>
+        <span className="floating-ai-chat-disclaimer-text">{copy.disclaimerBar}</span>
       </div>
 
       {!submitted && (

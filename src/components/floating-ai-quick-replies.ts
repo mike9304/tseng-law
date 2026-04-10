@@ -197,3 +197,210 @@ export function getQuickReplies(locale: Locale): QuickReply[] {
   if (locale === 'zh-hant') return ZH_REPLIES;
   return EN_REPLIES;
 }
+
+/**
+ * A context-aware follow-up suggestion the user can click AFTER receiving
+ * an assistant response. Unlike QuickReply (which carries a pre-baked
+ * answer), the follow-up text is sent to the real chat API so the LLM
+ * can ground the answer in the user's actual conversation context.
+ */
+export interface FollowUpSuggestion {
+  label: string;
+  message: string;
+}
+
+type FollowUpKey =
+  | 'company_setup'
+  | 'traffic_accident'
+  | 'criminal_investigation'
+  | 'labor'
+  | 'divorce_family'
+  | 'inheritance'
+  | 'logistics'
+  | 'cosmetics'
+  | 'general'
+  | 'unknown';
+
+const FOLLOW_UP_MAP_KO: Record<FollowUpKey, FollowUpSuggestion[]> = {
+  company_setup: [
+    { label: '최소 자본금', message: '외국인이 대만에서 회사를 세울 때 최소 자본금 요건이 어떻게 되나요?' },
+    { label: '자회사 vs 지점', message: '대만에서 자회사와 지점의 차이는 무엇이고 어떤 경우에 어느 쪽이 유리한가요?' },
+    { label: '취업허가', message: '법인을 세운 뒤 한국 직원을 채용하려면 취업허가 절차가 어떻게 되나요?' },
+  ],
+  traffic_accident: [
+    { label: '합의 대응', message: '상대방이 합의를 먼저 요청해 왔는데 어떤 기준으로 받아야 하나요?' },
+    { label: '보험 청구', message: '대만에서 교통사고 보험 청구 절차가 어떻게 되나요?' },
+    { label: '과실 비율', message: '과실 비율은 어떻게 정해지며 이의를 제기할 수 있나요?' },
+  ],
+  criminal_investigation: [
+    { label: '묵비권 행사', message: '경찰이나 검찰 조사에서 묵비권은 어떻게 행사하고 어떤 상황에 쓰는 것이 안전한가요?' },
+    { label: '변호사 선임', message: '조사 전에 변호사 선임은 어느 시점이 좋고 비용은 대략 얼마 정도 되나요?' },
+    { label: '구속 vs 불구속', message: '구속과 불구속 조사는 어떻게 결정되며 구속 가능성을 낮추려면 무엇을 해야 하나요?' },
+  ],
+  labor: [
+    { label: '부당해고 구제', message: '부당해고라고 판단되면 어디에 어떻게 구제 신청을 해야 하나요?' },
+    { label: '퇴직금 계산', message: '대만 노동기준법상 퇴직금은 신제도·구제도가 다르다고 들었는데 어떻게 계산하나요?' },
+    { label: '권고사직 거부', message: '회사가 권고사직을 요구하지만 거부하고 싶은데 어떻게 대응해야 하나요?' },
+  ],
+  divorce_family: [
+    { label: '친권·양육권', message: '친권과 양육권이 어떻게 다르고, 외국인 배우자일 때 결정 기준은 무엇인가요?' },
+    { label: '재산분할', message: '혼인 중 취득 재산의 분할 청구는 언제까지 가능하고 한국 재산도 포함되나요?' },
+    { label: '국제 이혼', message: '한국-대만 국제 이혼에서 관할법원과 준거법은 어떻게 정해지나요?' },
+  ],
+  inheritance: [
+    { label: '유류분', message: '대만에도 유류분 제도가 있나요? 한국과 비교해 어떤 차이가 있나요?' },
+    { label: '상속포기', message: '상속포기는 언제까지 어떻게 해야 하고 후순위에도 영향을 주나요?' },
+    { label: '외국인 상속', message: '한국 국적자가 대만에 있는 부동산·예금을 상속받는 절차는 어떻게 되나요?' },
+  ],
+  logistics: [
+    { label: '운송업 허가', message: '대만에서 운송업·물류업을 시작하려면 어떤 허가가 필요하고 자본금은 얼마 이상이어야 하나요?' },
+    { label: '통관·검역', message: '한국에서 상품을 수입할 때 통관 검역은 얼마나 걸리고 비용은 어떻게 발생하나요?' },
+    { label: '창고 임대', message: '대만에서 물류 창고를 임대하려고 하는데 계약 시 주의할 조항이 무엇인가요?' },
+  ],
+  cosmetics: [
+    { label: 'PIF 등록', message: '대만 화장품 PIF 등록 절차와 기간, 필요 서류는 어떻게 되나요?' },
+    { label: '광고 규제', message: '화장품 광고에서 효능·효과 표현은 어디까지 허용되고 금지되는 표현은 무엇인가요?' },
+    { label: '라벨 표기', message: '제품 라벨에 한자·성분표·원산지 표기 요건은 어떻게 되나요?' },
+  ],
+  general: [
+    { label: '상담 가능 분야', message: '호정국제는 어떤 법률 분야를 주로 다루고 있나요?' },
+    { label: '상담 비용', message: '직접 변호사 상담 시 비용은 대략 어떻게 책정되나요?' },
+    { label: '연락 방식', message: '이메일 외에 LINE, 카카오톡, 전화 등 어떤 방식으로 연락할 수 있나요?' },
+  ],
+  unknown: [
+    { label: '질문 예시', message: '어떤 유형의 질문에 AI가 먼저 답해 줄 수 있나요?' },
+    { label: '사람 상담 연결', message: '지금 바로 변호사와 직접 상담하려면 어떻게 해야 하나요?' },
+  ],
+};
+
+const FOLLOW_UP_MAP_ZH: Record<FollowUpKey, FollowUpSuggestion[]> = {
+  company_setup: [
+    { label: '最低資本', message: '外國人在台灣設立公司的最低資本額大約是多少？' },
+    { label: '子公司 vs 分公司', message: '子公司和分公司有什麼差別？哪種情況下比較有利？' },
+    { label: '工作許可', message: '設立公司後要聘僱韓國員工，工作許可申請流程為何？' },
+  ],
+  traffic_accident: [
+    { label: '和解應對', message: '對方主動提出和解要怎麼判斷金額是否合理？' },
+    { label: '保險理賠', message: '台灣車禍保險理賠流程大致如何？' },
+    { label: '過失比例', message: '過失比例如何認定？可以對鑑定結果提出異議嗎？' },
+  ],
+  criminal_investigation: [
+    { label: '緘默權', message: '警詢或偵查時的緘默權該如何行使？什麼情況下適合？' },
+    { label: '委任律師', message: '委任律師的時機與費用大致為何？' },
+    { label: '羈押與交保', message: '羈押與交保如何決定？想降低羈押可能性應做什麼？' },
+  ],
+  labor: [
+    { label: '不當解僱救濟', message: '若懷疑是不當解僱，應向哪個機關申請救濟？' },
+    { label: '資遣費計算', message: '台灣勞基法新制與舊制資遣費如何計算？' },
+    { label: '拒絕合意離職', message: '公司要求合意離職但我不願意，該如何應對？' },
+  ],
+  divorce_family: [
+    { label: '親權與監護', message: '親權與監護權有何不同？外籍配偶情形下如何判斷？' },
+    { label: '剩餘財產分配', message: '婚後取得的財產分配請求權何時可主張？境外財產是否納入？' },
+    { label: '跨國離婚', message: '台韓跨國離婚時的管轄法院與準據法如何決定？' },
+  ],
+  inheritance: [
+    { label: '特留分', message: '台灣是否有特留分制度？與韓國制度相比有何差異？' },
+    { label: '拋棄繼承', message: '拋棄繼承的期限與程序為何？是否會影響次順位繼承人？' },
+    { label: '外國人繼承', message: '韓國國籍人士繼承台灣不動產或存款的程序為何？' },
+  ],
+  logistics: [
+    { label: '運輸業許可', message: '在台灣經營物流或運輸業需要哪些許可、資本額為何？' },
+    { label: '通關檢驗', message: '從韓國進口商品時通關檢驗要多久？有哪些費用？' },
+    { label: '倉儲租賃', message: '在台灣租賃物流倉庫時應注意的合約條款有哪些？' },
+  ],
+  cosmetics: [
+    { label: 'PIF 登錄', message: '台灣化妝品 PIF 登錄流程、期程與必要文件為何？' },
+    { label: '廣告規範', message: '化妝品廣告的功效表現能到哪個界線？哪些用詞禁止？' },
+    { label: '標示要求', message: '產品標示在成分、原產地與中文標示上有何要求？' },
+  ],
+  general: [
+    { label: '服務領域', message: '昊鼎國際法律事務所主要處理哪些法律領域？' },
+    { label: '諮詢費用', message: '直接預約律師諮詢的費用大致如何計算？' },
+    { label: '聯絡方式', message: '除了 Email 之外，還可以透過 LINE、KakaoTalk 或電話聯絡嗎？' },
+  ],
+  unknown: [
+    { label: '可提問的問題', message: 'AI 可以先回答哪些類型的問題？' },
+    { label: '轉人工諮詢', message: '想現在就與律師直接對談應該怎麼做？' },
+  ],
+};
+
+const FOLLOW_UP_MAP_EN: Record<FollowUpKey, FollowUpSuggestion[]> = {
+  company_setup: [
+    { label: 'Minimum capital', message: 'What is the minimum capital requirement for a foreigner to set up a company in Taiwan?' },
+    { label: 'Subsidiary vs branch', message: 'What are the practical differences between setting up a subsidiary and a branch office in Taiwan?' },
+    { label: 'Work permits', message: 'After establishing a company, how do I sponsor Korean employees for work permits?' },
+  ],
+  traffic_accident: [
+    { label: 'Settlement offer', message: 'The other party offered a private settlement — how should I evaluate whether to accept?' },
+    { label: 'Insurance claim', message: 'What does the insurance claim process look like after a traffic accident in Taiwan?' },
+    { label: 'Fault ratio', message: 'How is the fault ratio determined and can I dispute it?' },
+  ],
+  criminal_investigation: [
+    { label: 'Right to silence', message: 'How do I exercise the right to silence during police or prosecutor questioning in Taiwan?' },
+    { label: 'Retaining counsel', message: 'When should I retain a lawyer and what are the typical fees?' },
+    { label: 'Detention vs bail', message: 'How do courts decide between detention and bail, and how can I reduce detention risk?' },
+  ],
+  labor: [
+    { label: 'Wrongful termination', message: 'If I suspect wrongful termination, which agency handles the complaint in Taiwan?' },
+    { label: 'Severance calculation', message: 'How is severance calculated under Taiwan\'s old vs new labor pension systems?' },
+    { label: 'Refusing resignation', message: 'My employer is pressuring me to sign a resignation — how should I respond?' },
+  ],
+  divorce_family: [
+    { label: 'Custody vs guardianship', message: 'What is the difference between parental rights and custody in Taiwan, especially with a foreign spouse?' },
+    { label: 'Asset division', message: 'How and when can I claim division of marital assets, including assets held abroad?' },
+    { label: 'Cross-border divorce', message: 'In a Korea-Taiwan divorce, how are jurisdiction and governing law decided?' },
+  ],
+  inheritance: [
+    { label: 'Forced share', message: 'Does Taiwan have a forced heirship / legitime system? How does it compare to Korea?' },
+    { label: 'Disclaiming inheritance', message: 'What is the deadline and procedure to disclaim an inheritance in Taiwan?' },
+    { label: 'Foreign heirs', message: 'As a Korean citizen, how do I inherit property or bank accounts located in Taiwan?' },
+  ],
+  logistics: [
+    { label: 'Licenses', message: 'What licenses and minimum capital are required to operate a logistics or transport business in Taiwan?' },
+    { label: 'Customs clearance', message: 'How long does customs clearance take for goods imported from Korea and what costs apply?' },
+    { label: 'Warehouse lease', message: 'What clauses should I watch out for when leasing a logistics warehouse in Taiwan?' },
+  ],
+  cosmetics: [
+    { label: 'PIF registration', message: 'What is the PIF registration process for cosmetics in Taiwan, including timeline and required documents?' },
+    { label: 'Advertising rules', message: 'What efficacy claims are allowed in cosmetics advertising, and what language is prohibited?' },
+    { label: 'Labeling', message: 'What are the Chinese labeling, ingredient and origin requirements for imported cosmetics?' },
+  ],
+  general: [
+    { label: 'Practice areas', message: 'What legal areas does Hovering International mainly handle?' },
+    { label: 'Consultation fees', message: 'How are direct lawyer consultation fees typically calculated?' },
+    { label: 'Contact channels', message: 'Besides email, can I reach the firm via LINE, KakaoTalk, or phone?' },
+  ],
+  unknown: [
+    { label: 'Example questions', message: 'What kinds of questions can the AI answer first?' },
+    { label: 'Speak to a lawyer', message: 'How can I speak to a lawyer directly right now?' },
+  ],
+};
+
+function asFollowUpKey(raw: string): FollowUpKey {
+  switch (raw) {
+    case 'company_setup':
+    case 'traffic_accident':
+    case 'criminal_investigation':
+    case 'labor':
+    case 'divorce_family':
+    case 'inheritance':
+    case 'logistics':
+    case 'cosmetics':
+    case 'general':
+    case 'unknown':
+      return raw;
+    default:
+      return 'unknown';
+  }
+}
+
+export function getFollowUpSuggestions(
+  locale: Locale,
+  classification: string,
+): FollowUpSuggestion[] {
+  const key = asFollowUpKey(classification);
+  if (locale === 'ko') return FOLLOW_UP_MAP_KO[key];
+  if (locale === 'zh-hant') return FOLLOW_UP_MAP_ZH[key];
+  return FOLLOW_UP_MAP_EN[key];
+}

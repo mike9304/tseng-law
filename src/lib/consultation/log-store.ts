@@ -9,11 +9,41 @@ import type {
   ConsultationSourceFreshness,
 } from '@/lib/consultation/types';
 
-type ConsultationLogEventType = 'chat' | 'submit_success' | 'submit_failed';
+type ConsultationLogEventType = 'chat' | 'submit_success' | 'submit_failed' | 'funnel';
+
+/**
+ * Ordered funnel stages covering the full consultation journey.
+ * Used for conversion rate measurement across UI + server events.
+ * Keep this list exhaustive and immutable — add new stages by appending,
+ * never by reordering or renaming existing ones.
+ */
+export type ConsultationFunnelStage =
+  // Client-side (UI events, sent via /api/consultation/event)
+  | 'session_started'
+  | 'first_message_sent'
+  | 'escalation_shown'
+  | 'form_opened'
+  | 'form_field_filled'
+  | 'form_submit_attempted'
+  | 'feedback_positive'
+  | 'feedback_negative'
+  // Server-side (captured inline in /api/consultation/chat and /submit)
+  | 'chat_received'
+  | 'chat_answered'
+  | 'chat_rate_limited'
+  | 'chat_failed'
+  | 'submit_received'
+  | 'submit_validated'
+  | 'submit_consent_missing'
+  | 'submit_rate_limited'
+  | 'submit_email_sent'
+  | 'submit_email_failed'
+  | 'submit_duplicate';
 
 type ConsultationLogRecord = {
   timestamp: string;
   eventType: ConsultationLogEventType;
+  funnelStage?: ConsultationFunnelStage;
   sessionId: string;
   locale: Locale;
   classification?: ConsultationCategory;
@@ -35,6 +65,7 @@ type ConsultationLogRecord = {
   failureReason?: string;
   userAgent?: string | null;
   ipAddress?: string | null;
+  metadataRedacted?: string;
 };
 
 function getConsultationLogDir(): string {
@@ -88,12 +119,14 @@ export async function logConsultationChatEvent(input: {
   referencedColumns: string[];
   sourceFreshness: ConsultationSourceFreshness;
   sourceConfidence: ConsultationSourceConfidence;
+  funnelStage?: ConsultationFunnelStage;
   userAgent?: string | null;
   ipAddress?: string | null;
 }): Promise<void> {
   await appendConsultationLog({
     timestamp: new Date().toISOString(),
     eventType: 'chat',
+    funnelStage: input.funnelStage ?? 'chat_answered',
     sessionId: input.sessionId,
     locale: input.locale,
     classification: input.classification,
@@ -125,12 +158,14 @@ export async function logConsultationSubmitEvent(input: {
   intakeId?: string;
   success: boolean;
   failureReason?: string;
+  funnelStage?: ConsultationFunnelStage;
   userAgent?: string | null;
   ipAddress?: string | null;
 }): Promise<void> {
   await appendConsultationLog({
     timestamp: new Date().toISOString(),
     eventType: input.eventType,
+    funnelStage: input.funnelStage ?? (input.eventType === 'submit_success' ? 'submit_email_sent' : 'submit_email_failed'),
     sessionId: input.sessionId,
     locale: input.locale,
     classification: input.classification,
@@ -144,6 +179,48 @@ export async function logConsultationSubmitEvent(input: {
     intakeId: input.intakeId,
     success: input.success,
     failureReason: input.failureReason,
+    userAgent: input.userAgent || null,
+    ipAddress: resolveIpAddress(input.ipAddress || null),
+  });
+}
+
+/**
+ * Lightweight funnel event logging for UI-driven or server-side
+ * lifecycle events that don't fit the chat/submit record shape.
+ * Accepts an optional locale (defaults to 'ko') and an optional
+ * metadata object that will be stringified and redacted.
+ */
+export async function logConsultationFunnelEvent(input: {
+  funnelStage: ConsultationFunnelStage;
+  sessionId: string;
+  locale?: Locale;
+  classification?: ConsultationCategory;
+  riskLevel?: ConsultationRiskLevel;
+  metadata?: Record<string, unknown>;
+  userAgent?: string | null;
+  ipAddress?: string | null;
+}): Promise<void> {
+  let metadataRedacted: string | undefined;
+  if (input.metadata && Object.keys(input.metadata).length > 0) {
+    try {
+      metadataRedacted = clipText(JSON.stringify(input.metadata), 400);
+    } catch {
+      metadataRedacted = '[unserializable-metadata]';
+    }
+  }
+
+  await appendConsultationLog({
+    timestamp: new Date().toISOString(),
+    eventType: 'funnel',
+    funnelStage: input.funnelStage,
+    sessionId: input.sessionId,
+    locale: input.locale ?? 'ko',
+    classification: input.classification,
+    riskLevel: input.riskLevel,
+    topicKey: input.classification
+      ? `${input.locale ?? 'ko'}:${input.classification}:${input.riskLevel ?? 'L1'}`
+      : undefined,
+    metadataRedacted,
     userAgent: input.userAgent || null,
     ipAddress: resolveIpAddress(input.ipAddress || null),
   });

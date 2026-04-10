@@ -1,0 +1,368 @@
+/* =========================================================================
+   Consultation AI — Wave 0 UI styles
+   Scope: FloatingAiChat widget + dead consultation section feedback styles.
+   Kept separate from globals.css so this slice can ship independently of
+   the ongoing builder/admin work that also touches globals.css.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   Floating chat — assistant message feedback (thumbs up/down)
+   ------------------------------------------------------------------------- */
+.floating-ai-chat-feedback {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.45rem 0 0;
+  padding: 0;
+}
+
+.floating-ai-chat-feedback-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 40px;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(22, 56, 45, 0.2);
+  background: #ffffff;
+  color: var(--text-secondary, #475059);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease, transform 120ms ease;
+}
+
+.floating-ai-chat-feedback-btn:hover:not(:disabled) {
+  background: rgba(22, 56, 45, 0.05);
+  border-color: rgba(22, 56, 45, 0.35);
+  transform: translateY(-1px);
+}
+
+.floating-ai-chat-feedback-btn:focus-visible {
+  outline: 2px solid #0b63a8;
+  outline-offset: 2px;
+}
+
+.floating-ai-chat-feedback-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.floating-ai-chat-feedback-btn.is-active {
+  background: rgba(5, 150, 105, 0.12);
+  border-color: #047857;
+  color: #065f46;
+}
+
+.floating-ai-chat-feedback-btn.floating-ai-chat-feedback-btn--down.is-active {
+  background: rgba(190, 24, 93, 0.1);
+  border-color: #be185d;
+  color: #9d174d;
+}
+
+.floating-ai-chat-feedback-text {
+  white-space: nowrap;
+}
+
+.floating-ai-chat-feedback-notice {
+  margin: 0.5rem 0;
+  padding: 0.45rem 0.75rem;
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  border-radius: 10px;
+  color: #065f46;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+/* Stack assistant bubble + feedback/sources vertically */
+.floating-ai-chat-msg.assistant {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* -------------------------------------------------------------------------
+   Floating chat — citation/source cards under assistant bubble
+   ------------------------------------------------------------------------- */
+.floating-ai-chat-sources {
+  margin: 0.55rem 0 0;
+  padding: 0.55rem 0.65rem 0.4rem;
+  background: rgba(22, 56, 45, 0.03);
+  border: 1px solid rgba(22, 56, 45, 0.12);
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+.floating-ai-chat-sources-title {
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary, #475059);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.floating-ai-chat-sources-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.floating-ai-chat-source {
+  margin: 0;
+}
+
+.floating-ai-chat-source-link {
+  display: block;
+  padding: 0.55rem 0.7rem;
+  background: #ffffff;
+  border: 1px solid rgba(22, 56, 45, 0.14);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.floating-ai-chat-source-link:hover {
+  border-color: rgba(22, 56, 45, 0.35);
+  box-shadow: 0 2px 6px rgba(22, 56, 45, 0.08);
+  transform: translateY(-1px);
+}
+
+.floating-ai-chat-source-link:focus-visible {
+  outline: 2px solid #0b63a8;
+  outline-offset: 2px;
+}
+
+.floating-ai-chat-source-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.floating-ai-chat-source-title {
+  color: var(--text-heading, #0d221a);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.4;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.floating-ai-chat-source-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  flex: 0 0 auto;
+}
+
+.floating-ai-chat-source-fresh {
+  background: rgba(5, 150, 105, 0.12);
+  color: #047857;
+  border: 1px solid rgba(5, 150, 105, 0.28);
+}
+
+.floating-ai-chat-source-stale {
+  background: rgba(217, 119, 6, 0.14);
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.32);
+}
+
+.floating-ai-chat-source-unknown {
+  background: rgba(100, 116, 139, 0.12);
+  color: #475569;
+  border: 1px solid rgba(100, 116, 139, 0.26);
+}
+
+.floating-ai-chat-source-summary {
+  margin: 0.3rem 0 0;
+  color: var(--text-secondary, #475059);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.floating-ai-chat-source-meta {
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  color: var(--text-secondary, #6b7280);
+  font-size: 0.7rem;
+}
+
+.floating-ai-chat-source-more {
+  color: #0b63a8;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------
+   Floating chat — context-aware follow-up chips
+   ------------------------------------------------------------------------- */
+.floating-ai-chat-follow-ups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.7rem 0 0.2rem;
+  animation: floatChatMsgIn 260ms ease-out;
+}
+
+.floating-ai-chat-follow-up-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(11, 99, 168, 0.3);
+  color: #0b63a8;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.floating-ai-chat-follow-up-chip:hover:not(:disabled) {
+  background: rgba(11, 99, 168, 0.08);
+  border-color: rgba(11, 99, 168, 0.55);
+  transform: translateY(-1px);
+}
+
+.floating-ai-chat-follow-up-chip:focus-visible {
+  outline: 2px solid #0b63a8;
+  outline-offset: 2px;
+}
+
+.floating-ai-chat-follow-up-chip:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* -------------------------------------------------------------------------
+   Floating chat — persistent disclaimer bar above composer
+   ------------------------------------------------------------------------- */
+.floating-ai-chat-disclaimer-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  background: rgba(217, 119, 6, 0.08);
+  border-top: 1px solid rgba(217, 119, 6, 0.2);
+  color: #92400e;
+  font-size: 0.7rem;
+  line-height: 1.45;
+}
+
+.floating-ai-chat-disclaimer-icon {
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.floating-ai-chat-disclaimer-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* -------------------------------------------------------------------------
+   Floating chat — close button touch target (WCAG 2.2 AA, 44x44)
+   Overrides the 30x30 declaration in globals.css.
+   ------------------------------------------------------------------------- */
+.floating-ai-chat-header > button {
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+}
+
+.floating-ai-chat-header > button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
+}
+
+/* -------------------------------------------------------------------------
+   Mobile bottom-sheet adaptation (< 640px)
+   Pins the widget to the bottom of the viewport, prevents iOS zoom on
+   focus, and bumps touch targets to comfortable sizes.
+   ------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .floating-ai-chat {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: min(88vh, calc(100vh - 48px));
+    border-radius: 18px 18px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: 0 -12px 40px rgba(13, 34, 26, 0.28);
+  }
+
+  .floating-ai-chat-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .floating-ai-chat-bubble {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .floating-ai-chat-input input {
+    font-size: 16px; /* Prevent iOS Safari focus auto-zoom (<16px threshold) */
+    padding: 0.7rem 0.95rem;
+  }
+
+  .floating-ai-chat-input button[type='submit'],
+  .floating-ai-chat-form-toggle {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .floating-ai-chat-follow-up-chip {
+    min-height: 40px;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.82rem;
+  }
+
+  .floating-ai-chat-feedback-btn {
+    min-height: 44px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .floating-ai-chat-disclaimer-bar {
+    padding: 0.55rem 1rem;
+    font-size: 0.72rem;
+  }
+
+  .floating-ai-chat-sources {
+    padding: 0.6rem 0.75rem 0.45rem;
+  }
+
+  .floating-ai-chat-source-title {
+    font-size: 0.86rem;
+  }
+
+  .floating-ai-chat-source-summary {
+    font-size: 0.8rem;
+  }
+}

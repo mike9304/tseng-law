@@ -19,4 +19,5 @@ npm-debug.log*
 
 # data
 data/reviews.json
+runtime-data/
 .vercel

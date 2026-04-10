@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
 import { saveConsultationLead } from '@/lib/consultation/db';
-import { logConsultationSubmitEvent } from '@/lib/consultation/log-store';
+import {
+  logConsultationFunnelEvent,
+  logConsultationSubmitEvent,
+} from '@/lib/consultation/log-store';
 import { getConsultationPublicEmail } from '@/lib/consultation/public-contact';
 import { checkSubmitRateLimit } from '@/lib/consultation/rate-limit';
 import { hasAlreadySubmitted, markSubmitted } from '@/lib/consultation/idempotency';
@@ -28,6 +31,9 @@ function buildSubmitFallbackMessage(locale: ReturnType<typeof normalizeLocale>):
 }
 
 export async function POST(request: NextRequest) {
+  const userAgent = request.headers.get('user-agent');
+  const ipHeader = request.headers.get('x-forwarded-for');
+
   let body: ConsultationSubmitRequestBody;
 
   try {
@@ -45,9 +51,30 @@ export async function POST(request: NextRequest) {
     return badRequest('A valid sessionId is required.');
   }
 
+  // Record every submission attempt at the earliest point we have a valid sessionId.
+  logConsultationFunnelEvent({
+    funnelStage: 'submit_received',
+    sessionId,
+    locale,
+    classification: body.classification ?? fields.category,
+    riskLevel: body.riskLevel,
+    metadata: { transcriptLength: transcript.length },
+    userAgent,
+    ipAddress: ipHeader,
+  }).catch((err) => console.error('[consultation] submit_received log failed:', err));
+
   // --- Rate limit (sessionId-based, max 3 per 5 min) ---
   const submitRateCheck = checkSubmitRateLimit(sessionId);
   if (!submitRateCheck.allowed) {
+    logConsultationFunnelEvent({
+      funnelStage: 'submit_rate_limited',
+      sessionId,
+      locale,
+      metadata: { retryAfterMs: submitRateCheck.retryAfterMs },
+      userAgent,
+      ipAddress: ipHeader,
+    }).catch((err) => console.error('[consultation] submit_rate_limited log failed:', err));
+
     return NextResponse.json(
       { success: false, error: 'Submission limit reached. Please wait before resubmitting.' },
       {
@@ -60,6 +87,15 @@ export async function POST(request: NextRequest) {
   // --- Idempotency: prevent duplicate successful submissions ---
   const existing = hasAlreadySubmitted(sessionId);
   if (existing) {
+    logConsultationFunnelEvent({
+      funnelStage: 'submit_duplicate',
+      sessionId,
+      locale,
+      metadata: { existingIntakeId: existing.intakeId },
+      userAgent,
+      ipAddress: ipHeader,
+    }).catch((err) => console.error('[consultation] submit_duplicate log failed:', err));
+
     return NextResponse.json({
       success: true,
       intakeId: existing.intakeId,
@@ -69,6 +105,14 @@ export async function POST(request: NextRequest) {
   }
 
   if (fields.consent !== true) {
+    logConsultationFunnelEvent({
+      funnelStage: 'submit_consent_missing',
+      sessionId,
+      locale,
+      userAgent,
+      ipAddress: ipHeader,
+    }).catch((err) => console.error('[consultation] submit_consent_missing log failed:', err));
+
     return badRequest('Consent is required before submission.');
   }
   if (!fields.name?.trim()) {
@@ -86,6 +130,17 @@ export async function POST(request: NextRequest) {
   if (transcript.length > 30) {
     return badRequest('Transcript is too long.');
   }
+
+  // All validation passed; mark the funnel stage before expensive I/O (email send).
+  logConsultationFunnelEvent({
+    funnelStage: 'submit_validated',
+    sessionId,
+    locale,
+    classification: body.classification ?? fields.category,
+    riskLevel: body.riskLevel,
+    userAgent,
+    ipAddress: ipHeader,
+  }).catch((err) => console.error('[consultation] submit_validated log failed:', err));
 
   try {
     const { intakeId } = await sendConsultationEmail({

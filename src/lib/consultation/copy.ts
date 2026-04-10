@@ -32,6 +32,11 @@ type ConsultationCopy = {
   submitLabel: string;
   submittingLabel: string;
   humanReviewRecommended: string;
+  feedbackHelpfulLabel: string;
+  feedbackUnhelpfulLabel: string;
+  feedbackThanksMessage: string;
+  feedbackErrorMessage: string;
+  feedbackPendingLabel: string;
   formLabels: {
     name: string;
     email: string;
@@ -106,6 +111,11 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     submitLabel: '상담 신청 보내기',
     submittingLabel: '상담 신청 전송 중...',
     humanReviewRecommended: '이 질문은 사람이 바로 검토하는 편이 안전합니다.',
+    feedbackHelpfulLabel: '도움이 됐어요',
+    feedbackUnhelpfulLabel: '도움이 안 됐어요',
+    feedbackThanksMessage: '피드백 감사합니다. 더 나은 응답에 반영하겠습니다.',
+    feedbackErrorMessage: '피드백을 전송하지 못했습니다. 잠시 후 다시 시도해 주세요.',
+    feedbackPendingLabel: '전송 중...',
     formLabels: {
       name: '이름',
       email: '이메일',
@@ -213,6 +223,11 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     submitLabel: '送出諮詢',
     submittingLabel: '送件中...',
     humanReviewRecommended: '此問題較適合由人工直接確認。',
+    feedbackHelpfulLabel: '有幫助',
+    feedbackUnhelpfulLabel: '沒有幫助',
+    feedbackThanksMessage: '感謝您的回饋，將協助我們持續改善。',
+    feedbackErrorMessage: '回饋送出失敗，請稍後再試。',
+    feedbackPendingLabel: '傳送中...',
     formLabels: {
       name: '姓名',
       email: 'Email',
@@ -320,6 +335,11 @@ const consultationCopy: Record<Locale, ConsultationCopy> = {
     submitLabel: 'Send intake',
     submittingLabel: 'Submitting...',
     humanReviewRecommended: 'This question is better handled by a human reviewer.',
+    feedbackHelpfulLabel: 'This was helpful',
+    feedbackUnhelpfulLabel: 'Not helpful',
+    feedbackThanksMessage: 'Thank you for the feedback. It will help us improve.',
+    feedbackErrorMessage: 'Could not send feedback. Please try again later.',
+    feedbackPendingLabel: 'Sending...',
     formLabels: {
       name: 'Name',
       email: 'Email',

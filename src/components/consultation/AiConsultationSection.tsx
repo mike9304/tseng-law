@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
 import type {
@@ -10,6 +10,45 @@ import type {
   ConsultationSubmitSuccessResponse,
   ConsultationTranscriptMessage,
 } from '@/lib/consultation/types';
+
+type FeedbackState = 'pending' | 'helpful' | 'unhelpful' | 'error';
+
+function feedbackStorageKey(sessionId: string): string {
+  return `hoj-feedback-${sessionId}`;
+}
+
+function loadStoredFeedback(sessionId: string): Record<string, FeedbackState> {
+  if (typeof window === 'undefined') return {};
+  try {
+    const raw = window.localStorage.getItem(feedbackStorageKey(sessionId));
+    if (!raw) return {};
+    const parsed = JSON.parse(raw) as unknown;
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+    const out: Record<string, FeedbackState> = {};
+    for (const [k, v] of Object.entries(parsed as Record<string, unknown>)) {
+      if (v === 'helpful' || v === 'unhelpful') {
+        out[k] = v;
+      }
+    }
+    return out;
+  } catch {
+    return {};
+  }
+}
+
+function persistFeedback(sessionId: string, state: Record<string, FeedbackState>): void {
+  if (typeof window === 'undefined') return;
+  try {
+    // Only persist finalized states, never 'pending' or 'error'.
+    const clean: Record<string, 'helpful' | 'unhelpful'> = {};
+    for (const [k, v] of Object.entries(state)) {
+      if (v === 'helpful' || v === 'unhelpful') clean[k] = v;
+    }
+    window.localStorage.setItem(feedbackStorageKey(sessionId), JSON.stringify(clean));
+  } catch {
+    // Safari private mode or quota exceeded — ignore silently.
+  }
+}
 import {
   getConsultationCategoryLabel,
   getConsultationCopy,
@@ -103,12 +142,65 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
   const [submitState, setSubmitState] = useState<ConsultationSubmitSuccessResponse | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [lastResponse, setLastResponse] = useState<ConsultationChatResponse | null>(null);
+  const [feedbackByMessageId, setFeedbackByMessageId] = useState<Record<string, FeedbackState>>({});
+  const [feedbackNotice, setFeedbackNotice] = useState<string | null>(null);
   const [lead, setLead] = useState<ConsultationCollectedFields>({
     category: 'unknown',
     urgency: 'medium',
     preferredContact: 'email',
     consent: false,
   });
+
+  // Hydrate persisted feedback for this session (localStorage) on mount.
+  useEffect(() => {
+    const stored = loadStoredFeedback(sessionId);
+    if (Object.keys(stored).length > 0) {
+      setFeedbackByMessageId(stored);
+    }
+  }, [sessionId]);
+
+  async function submitFeedback(messageId: string, rating: 'helpful' | 'unhelpful'): Promise<void> {
+    // Prevent double-click + prevent re-rating a final state.
+    const current = feedbackByMessageId[messageId];
+    if (current === 'pending' || current === 'helpful' || current === 'unhelpful') return;
+
+    setFeedbackByMessageId((prev) => ({ ...prev, [messageId]: 'pending' }));
+    setFeedbackNotice(null);
+
+    try {
+      const response = await fetch('/api/consultation/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId,
+          messageId,
+          rating,
+          locale,
+          classification: lastResponse?.classification,
+          riskLevel: lastResponse?.riskLevel,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`feedback request failed with ${response.status}`);
+      }
+
+      setFeedbackByMessageId((prev) => {
+        const next = { ...prev, [messageId]: rating };
+        persistFeedback(sessionId, next);
+        return next;
+      });
+      setFeedbackNotice(copy.feedbackThanksMessage);
+    } catch (error) {
+      console.error('[consultation] feedback submission failed:', error);
+      setFeedbackByMessageId((prev) => {
+        const next = { ...prev };
+        delete next[messageId];
+        return next;
+      });
+      setFeedbackNotice(copy.feedbackErrorMessage);
+    }
+  }
 
   const emailValue = (lead.email || '').trim();
   const emailValid = !emailValue || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
@@ -289,18 +381,67 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
               </div>
 
               <div className="consultation-ai-messages" aria-live="polite">
-                {messages.map((message) => (
-                  <article
-                    key={message.id}
-                    className={`consultation-ai-message consultation-ai-message--${message.role}`}
-                  >
-                    <span className="consultation-ai-message-role">
-                      {message.role === 'assistant' ? 'AI' : userRoleLabel}
-                    </span>
-                    <p>{message.text}</p>
-                  </article>
-                ))}
+                {messages.map((message, index) => {
+                  const showFeedback = message.role === 'assistant' && index > 0;
+                  const feedbackState = feedbackByMessageId[message.id];
+                  const isPending = feedbackState === 'pending';
+                  const isRatedHelpful = feedbackState === 'helpful';
+                  const isRatedUnhelpful = feedbackState === 'unhelpful';
+                  const alreadyRated = isRatedHelpful || isRatedUnhelpful;
+
+                  return (
+                    <article
+                      key={message.id}
+                      className={`consultation-ai-message consultation-ai-message--${message.role}`}
+                    >
+                      <span className="consultation-ai-message-role">
+                        {message.role === 'assistant' ? 'AI' : userRoleLabel}
+                      </span>
+                      <p>{message.text}</p>
+
+                      {showFeedback ? (
+                        <div className="consultation-ai-feedback" role="group" aria-label={copy.feedbackHelpfulLabel}>
+                          <button
+                            type="button"
+                            className={`consultation-ai-feedback-button${isRatedHelpful ? ' consultation-ai-feedback-button--active' : ''}`}
+                            onClick={() => {
+                              void submitFeedback(message.id, 'helpful');
+                            }}
+                            disabled={isPending || alreadyRated}
+                            aria-label={copy.feedbackHelpfulLabel}
+                            aria-pressed={isRatedHelpful}
+                          >
+                            <span aria-hidden="true">👍</span>
+                            <span className="consultation-ai-feedback-text">
+                              {isPending ? copy.feedbackPendingLabel : copy.feedbackHelpfulLabel}
+                            </span>
+                          </button>
+                          <button
+                            type="button"
+                            className={`consultation-ai-feedback-button${isRatedUnhelpful ? ' consultation-ai-feedback-button--active' : ''}`}
+                            onClick={() => {
+                              void submitFeedback(message.id, 'unhelpful');
+                            }}
+                            disabled={isPending || alreadyRated}
+                            aria-label={copy.feedbackUnhelpfulLabel}
+                            aria-pressed={isRatedUnhelpful}
+                          >
+                            <span aria-hidden="true">👎</span>
+                            <span className="consultation-ai-feedback-text">
+                              {isPending ? copy.feedbackPendingLabel : copy.feedbackUnhelpfulLabel}
+                            </span>
+                          </button>
+                        </div>
+                      ) : null}
+                    </article>
+                  );
+                })}
                 {chatPending ? <p className="consultation-ai-pending">{copy.assistantPendingLabel}</p> : null}
+                {feedbackNotice ? (
+                  <p className="consultation-ai-feedback-notice" role="status" aria-live="polite">
+                    {feedbackNotice}
+                  </p>
+                ) : null}
               </div>
 
               {lastResponse ? (

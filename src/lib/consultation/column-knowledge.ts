@@ -75,6 +75,42 @@ function clipSummary(value: string): string {
   return normalized.length > 180 ? `${normalized.slice(0, 177)}...` : normalized;
 }
 
+/** Strip markdown for clean LLM consumption */
+function stripMarkdown(value: string): string {
+  return value
+    .replace(/^---[\s\S]*?---\s*/m, '') // frontmatter
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, '') // images
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // links → text
+    .replace(/[#`*_>~]/g, '') // markdown symbols
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** Returns first 1500 chars of cleaned column body for LLM context */
+function clipBody(value: string): string {
+  const cleaned = stripMarkdown(value);
+  return cleaned.length > 1500 ? `${cleaned.slice(0, 1497)}...` : cleaned;
+}
+
+// Cache full posts to access content (not just summary)
+const fullPostsCache = new Map<
+  string,
+  { post: ReturnType<typeof getAllColumnPosts>[number]; expires: number }
+>();
+
+function getFullPostBySlug(slug: string, locale: Locale) {
+  const key = `${locale}:${slug}`;
+  const now = Date.now();
+  const cached = fullPostsCache.get(key);
+  if (cached && cached.expires > now) return cached.post;
+
+  const post = getCachedPosts(locale).find((p) => p.slug === slug);
+  if (post) {
+    fullPostsCache.set(key, { post, expires: now + CACHE_TTL_MS });
+  }
+  return post;
+}
+
 export function getConsultationColumnReferences(
   category: ConsultationCategory,
   locale: Locale,
@@ -99,12 +135,25 @@ export function getConsultationColumnReferences(
     }));
 }
 
-export function getConsultationColumnContextText(references: ConsultationColumnReference[]): string {
+export function getConsultationColumnContextText(
+  references: ConsultationColumnReference[],
+  locale: Locale = 'ko',
+): string {
   if (!references.length) return 'No approved internal column summary available.';
   return references
     .map((ref) => {
-      const freshness = ref.freshness === 'fresh' ? 'fresh' : ref.freshness === 'review_needed' ? 'review_needed' : 'unknown';
-      return `- ${ref.title} (${ref.slug}) / lastmod=${ref.lastmod || 'unknown'} / freshness=${freshness}\n  ${ref.summary}`;
+      const freshness =
+        ref.freshness === 'fresh'
+          ? 'fresh'
+          : ref.freshness === 'review_needed'
+            ? 'review_needed'
+            : 'unknown';
+      const fullPost = getFullPostBySlug(ref.slug, locale);
+      const body = fullPost?.content ? clipBody(fullPost.content) : ref.summary;
+      return `## ${ref.title} (${ref.slug})
+lastmod: ${ref.lastmod || 'unknown'} | freshness: ${freshness}
+
+${body}`;
     })
-    .join('\n');
+    .join('\n\n---\n\n');
 }

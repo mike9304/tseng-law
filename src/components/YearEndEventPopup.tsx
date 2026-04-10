@@ -100,17 +100,6 @@ export default function YearEndEventPopup({ locale }: { locale: Locale }) {
             ×
           </button>
         </div>
-        <div className="year-end-popup-visual" aria-hidden>
-          <span className="year-end-popup-visual-glow" />
-          <span className="year-end-popup-sparkle year-end-popup-sparkle--1">&#10022;</span>
-          <span className="year-end-popup-sparkle year-end-popup-sparkle--2">&#10022;</span>
-          <span className="year-end-popup-sparkle year-end-popup-sparkle--3">&#10022;</span>
-          <span className="year-end-popup-visual-icon">
-            <svg viewBox="0 0 24 24" fill="none">
-              <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
-            </svg>
-          </span>
-        </div>
         <h2 className="year-end-popup-title">{copy.title}</h2>
         <p className="year-end-popup-body">{copy.body}</p>
         <ul className="year-end-popup-points">

@@ -1,14 +1,33 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
-import { generateConsultationChatResponse } from '@/lib/consultation/engine';
+import {
+  generateConsultationChatResponse,
+  streamConsultationChatResponse,
+} from '@/lib/consultation/engine';
 import { logConsultationChatEvent, logConsultationFunnelEvent } from '@/lib/consultation/log-store';
 import { checkChatRateLimit } from '@/lib/consultation/rate-limit';
-import type { ConsultationChatRequestBody } from '@/lib/consultation/types';
+import type {
+  ConsultationChatRequestBody,
+  ConsultationChatStreamChunk,
+  ConsultationChatStreamMetadata,
+} from '@/lib/consultation/types';
 
 export const runtime = 'nodejs';
+/** Allow the streaming handler to hold the connection open for up to 5 minutes. */
+export const maxDuration = 300;
 
 function badRequest(message: string) {
   return NextResponse.json({ success: false, error: message }, { status: 400 });
+}
+
+/**
+ * Serialize a chunk event as a Server-Sent Events frame:
+ *   `data: {json}\n\n`
+ * The client reads these via fetch + getReader + TextDecoder and
+ * splits on `\n\n` to recover each event boundary.
+ */
+function encodeSseChunk(chunk: ConsultationChatStreamChunk): string {
+  return `data: ${JSON.stringify(chunk)}\n\n`;
 }
 
 export async function POST(request: NextRequest) {
@@ -68,12 +87,90 @@ export async function POST(request: NextRequest) {
       funnelStage: 'chat_received',
       sessionId,
       locale,
-      metadata: { messageLength: message.length },
+      metadata: { messageLength: message.length, streaming: body.stream === true },
       userAgent,
       ipAddress: ipHeader,
     });
   } catch (err) {
     console.error('[consultation] chat_received log failed:', err);
+  }
+
+  // Streaming branch — return an SSE response. The generator does
+  // all the same classify / retrieve / fact-check / staleness work
+  // as the non-streaming path, but yields deltas as the LLM produces
+  // them. Post-hoc log event is emitted from inside the stream after
+  // the first metadata chunk has been captured.
+  if (body.stream === true) {
+    let capturedMetadata: ConsultationChatStreamMetadata | null = null;
+    const encoder = new TextEncoder();
+    const readable = new ReadableStream<Uint8Array>({
+      async start(controller) {
+        try {
+          for await (const chunk of streamConsultationChatResponse(locale, body)) {
+            if (chunk.type === 'metadata') {
+              capturedMetadata = chunk.data;
+            }
+            controller.enqueue(encoder.encode(encodeSseChunk(chunk)));
+          }
+        } catch (error) {
+          console.error('[consultation] stream handler crashed:', error);
+          controller.enqueue(
+            encoder.encode(
+              encodeSseChunk({
+                type: 'error',
+                error: error instanceof Error ? error.message : 'unknown_stream_failure',
+              }),
+            ),
+          );
+          logConsultationFunnelEvent({
+            funnelStage: 'chat_failed',
+            sessionId,
+            locale,
+            metadata: {
+              failureReason: error instanceof Error ? error.message : 'unknown_stream_failure',
+              streaming: true,
+            },
+            userAgent,
+            ipAddress: ipHeader,
+          }).catch((err) => console.error('[consultation] chat_failed log failed:', err));
+        } finally {
+          // Best-effort post-hoc funnel log for the answered stream.
+          // If the stream crashed before metadata was captured, skip
+          // the per-message chat event — we still have the earlier
+          // chat_received funnel log.
+          if (capturedMetadata) {
+            logConsultationChatEvent({
+              sessionId,
+              locale,
+              message,
+              classification: capturedMetadata.classification,
+              riskLevel: capturedMetadata.riskLevel,
+              shouldEscalate: capturedMetadata.shouldEscalate,
+              nextRequiredField: capturedMetadata.nextRequiredField,
+              suggestedHandoffChannel: capturedMetadata.suggestedHandoffChannel,
+              referencedColumns: capturedMetadata.referencedColumns,
+              sourceFreshness: capturedMetadata.sourceFreshness,
+              sourceConfidence: capturedMetadata.sourceConfidence,
+              funnelStage: 'chat_answered',
+              userAgent,
+              ipAddress: ipHeader,
+            }).catch((err) => console.error('[consultation] streaming chat log failed:', err));
+          }
+          controller.close();
+        }
+      },
+    });
+
+    return new Response(readable, {
+      status: 200,
+      headers: {
+        'Content-Type': 'text/event-stream; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+        Connection: 'keep-alive',
+        // Some proxies buffer responses without this header.
+        'X-Accel-Buffering': 'no',
+      },
+    });
   }
 
   try {

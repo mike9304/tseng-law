@@ -73,7 +73,46 @@ export interface ConsultationChatRequestBody {
    * omitting this field keeps the single-turn behaviour intact.
    */
   priorTurns?: ConsultationTranscriptMessage[];
+  /**
+   * When true, the server returns a `text/event-stream` SSE response
+   * instead of a single JSON payload. The client can progressively
+   * render assistant tokens as they arrive. Eval harness and other
+   * internal callers keep `stream: false` to get the flat response.
+   */
+  stream?: boolean;
 }
+
+/**
+ * Metadata payload delivered as the FIRST chunk of a streaming chat
+ * response, before any assistant tokens. Mirrors the non-streaming
+ * ConsultationChatResponse minus the assistantMessage + disclaimer.
+ */
+export interface ConsultationChatStreamMetadata {
+  classification: ConsultationCategory;
+  riskLevel: ConsultationRiskLevel;
+  shouldEscalate: boolean;
+  nextRequiredField: ConsultationNextField;
+  completionReady: boolean;
+  disclaimer: string;
+  referencedColumns: string[];
+  references: ConsultationColumnReference[];
+  sourceFreshness: ConsultationSourceFreshness;
+  sourceConfidence: ConsultationSourceConfidence;
+  suggestedHandoffChannel: 'line' | 'kakao' | 'email' | 'phone' | 'none';
+}
+
+/** Discriminated union of server → client chunks. */
+export type ConsultationChatStreamChunk =
+  | { type: 'metadata'; data: ConsultationChatStreamMetadata }
+  | { type: 'delta'; text: string }
+  | {
+      type: 'warning';
+      variant: 'groundedness' | 'staleness';
+      text: string;
+    }
+  | { type: 'attorney_notice'; text: string }
+  | { type: 'error'; error: string }
+  | { type: 'done' };
 
 export interface ConsultationChatResponse {
   assistantMessage: string;

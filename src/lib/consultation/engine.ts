@@ -17,6 +17,7 @@ import type {
   ConsultationCategory,
   ConsultationChatRequestBody,
   ConsultationChatResponse,
+  ConsultationChatStreamChunk,
   ConsultationCollectedFields,
   ConsultationColumnReference,
   ConsultationNextField,
@@ -1061,6 +1062,102 @@ async function requestOpenAiAssistantMessage(
   return data.choices?.[0]?.message?.content ? trimAssistantMessage(data.choices[0].message.content) : null;
 }
 
+/**
+ * Streaming variant of requestOpenAiAssistantMessage. Opens an SSE
+ * stream against OpenAI's chat completions endpoint and yields each
+ * incremental `delta.content` string as it arrives. The caller is
+ * responsible for accumulating the full response (for post-hoc
+ * fact-check and warning attachment). Any network or parse error
+ * simply ends the generator early — the caller should treat an
+ * empty or partial accumulated response the same way as a failed
+ * non-streaming call.
+ */
+async function* streamOpenAiAssistantDeltas(
+  prompt: string,
+  options: ProviderRequestOptions,
+): AsyncGenerator<string, void, void> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) return;
+  const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
+  const isL4 = options.riskLevel === 'L4';
+
+  let response: Response;
+  try {
+    response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        temperature: isL4 ? 0.05 : 0.2,
+        max_tokens: resolveMaxTokens(options.riskLevel, 700),
+        stream: true,
+        messages: [
+          {
+            role: 'system',
+            content: isL4 ? OPENAI_SYSTEM_PROMPT_L4 : OPENAI_SYSTEM_PROMPT_STANDARD,
+          },
+          { role: 'user', content: prompt },
+        ],
+      }),
+    });
+  } catch (error) {
+    console.error('[consultation] openai stream fetch failed:', error);
+    return;
+  }
+
+  if (!response.ok || !response.body) {
+    console.error(`[consultation] openai stream returned ${response.status}`);
+    return;
+  }
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      // OpenAI SSE: each event is `data: <json>\n\n`. Split on newline,
+      // keep the trailing partial line in `buffer` for the next read.
+      let newlineIdx = buffer.indexOf('\n');
+      while (newlineIdx >= 0) {
+        const rawLine = buffer.slice(0, newlineIdx);
+        buffer = buffer.slice(newlineIdx + 1);
+        newlineIdx = buffer.indexOf('\n');
+
+        const line = rawLine.trim();
+        if (!line || !line.startsWith('data:')) continue;
+        const payload = line.slice(5).trim();
+        if (!payload || payload === '[DONE]') continue;
+        try {
+          const chunk = JSON.parse(payload) as {
+            choices?: Array<{ delta?: { content?: string } }>;
+          };
+          const delta = chunk.choices?.[0]?.delta?.content;
+          if (typeof delta === 'string' && delta.length > 0) {
+            yield delta;
+          }
+        } catch {
+          // Ignore malformed JSON chunks — OpenAI occasionally emits
+          // partial frames under load and the next read completes them.
+        }
+      }
+    }
+  } finally {
+    try {
+      reader.releaseLock();
+    } catch {
+      /* ignore */
+    }
+  }
+}
+
 async function requestAnthropicAssistantMessage(
   prompt: string,
   options: ProviderRequestOptions,
@@ -1743,4 +1840,265 @@ export async function generateConsultationChatResponse(
       baseResponse.shouldEscalate,
     ),
   };
+}
+
+/**
+ * Streaming variant of generateConsultationChatResponse.
+ *
+ * Shares the SAME metadata computation (classify / retrieve /
+ * relevance / fact-check / staleness) as the non-streaming path, but
+ * yields chunk events as an async generator so the Next.js route
+ * handler can pipe them to the client as Server-Sent Events.
+ *
+ * The full assistant message is accumulated server-side for the
+ * post-hoc fact-check and staleness checks, which then ride at the
+ * tail end of the stream as separate `warning` chunks instead of
+ * being merged into a single text blob.
+ *
+ * Non-streaming callers (eval harness, SSR) keep calling the
+ * existing generateConsultationChatResponse. The two paths share
+ * logic through the same helper functions so behaviour stays
+ * identical where it matters (classification, PII, low-confidence,
+ * fact-check, staleness).
+ */
+export async function* streamConsultationChatResponse(
+  locale: Locale,
+  request: ConsultationChatRequestBody,
+): AsyncGenerator<ConsultationChatStreamChunk, void, void> {
+  const message = (request.message || '').trim();
+  const collectedFields = request.collectedFields;
+  const priorTurns = Array.isArray(request.priorTurns) ? request.priorTurns : undefined;
+
+  // Mirror the non-streaming path's metadata computation so chunks
+  // carry the exact same classification / risk / references the user
+  // would have gotten from a flat JSON call.
+  const piiHits = detectSensitivePii(message);
+  const hasSensitivePii = piiHits.length > 0;
+
+  const classification = classifyConsultationCategory(message, collectedFields, priorTurns);
+  const riskLevel: ConsultationRiskLevel = hasSensitivePii
+    ? 'L4'
+    : detectConsultationRisk(message, classification, collectedFields);
+  const deadlineEmergency = isDeadlineEmergency(message, classification);
+  const laborDismissalUrgency = isLaborDismissalUrgency(message, classification);
+  const divorceFamilyConflict = isDivorceFamilyConflict(message, classification);
+
+  const columnLimit = deadlineEmergency
+    ? 0
+    : classification === 'traffic_accident' && riskLevel === 'L4'
+      ? 1
+      : laborDismissalUrgency && riskLevel === 'L3'
+        ? 1
+        : divorceFamilyConflict && riskLevel === 'L3'
+          ? 1
+          : 2;
+
+  let references: ConsultationColumnReference[] = [];
+  if (columnLimit > 0) {
+    try {
+      const retrieval = await getConsultationColumnReferencesForQuery(
+        message,
+        classification,
+        locale,
+        columnLimit,
+      );
+      references = retrieval.references;
+    } catch (error) {
+      console.error('[consultation stream] retrieval failed:', error);
+      references = getConsultationColumnReferences(classification, locale, columnLimit);
+    }
+  }
+
+  const sourceFreshness = resolveSourceFreshness(references);
+  const sourceConfidence = resolveSourceConfidence(references, sourceFreshness);
+
+  // Low-confidence check matches the non-streaming path exactly.
+  let relevanceCorpus = message;
+  if (priorTurns && priorTurns.length > 0) {
+    const priorUserText = priorTurns
+      .filter((t) => t.role === 'user' && typeof t.text === 'string')
+      .slice(-3)
+      .map((t) => t.text)
+      .join(' ');
+    if (priorUserText) relevanceCorpus = `${message} ${priorUserText}`;
+  }
+  const relevance = computeQueryColumnRelevance(relevanceCorpus, references, locale);
+  const isLowConfidence =
+    !hasSensitivePii &&
+    riskLevel !== 'L4' &&
+    references.length > 0 &&
+    relevance.queryWordTotal >= 2 &&
+    (
+      relevance.score < 0.25 ||
+      (relevance.queryWordTotal >= 3 && relevance.queryWordHits <= 1)
+    );
+
+  const shouldEscalate =
+    hasSensitivePii ||
+    isLowConfidence ||
+    needsHumanReview(message, classification, riskLevel);
+  const nextRequiredField = determineNextRequiredField(
+    shouldEscalate,
+    collectedFields,
+    classification,
+    riskLevel,
+    message,
+  );
+  const completionReady =
+    shouldEscalate &&
+    nextRequiredField === 'none' &&
+    Boolean(collectedFields?.summary) &&
+    Boolean(collectedFields?.name) &&
+    Boolean(collectedFields?.consent);
+  const handoffChannel =
+    riskLevel === 'L4' ? 'phone' : riskLevel === 'L3' ? 'line' : shouldEscalate ? 'email' : 'none';
+
+  const baseResponse: Omit<ConsultationChatResponse, 'assistantMessage'> = {
+    classification,
+    riskLevel,
+    shouldEscalate,
+    nextRequiredField,
+    completionReady,
+    disclaimer: getConsultationCopy(locale).disclaimer,
+    referencedColumns: references.map((ref) => ref.slug),
+    references,
+    sourceFreshness,
+    sourceConfidence,
+    suggestedHandoffChannel: handoffChannel,
+  };
+
+  // Chunk 1 — metadata (the client can render citation cards / risk
+  // badges / handoff CTAs BEFORE the first token of the assistant
+  // response has arrived).
+  yield {
+    type: 'metadata',
+    data: {
+      classification,
+      riskLevel,
+      shouldEscalate,
+      nextRequiredField,
+      completionReady,
+      disclaimer: getConsultationCopy(locale).disclaimer,
+      referencedColumns: references.map((ref) => ref.slug),
+      references,
+      sourceFreshness,
+      sourceConfidence,
+      suggestedHandoffChannel: handoffChannel,
+    },
+  };
+
+  // Hard override #1: PII bypass — stream the canned warning in a
+  // single delta chunk and close. The LLM is never invoked.
+  if (hasSensitivePii) {
+    console.warn('[consultation stream] sensitive PII detected; LLM bypassed.', {
+      piiHits,
+      sessionId: request.sessionId,
+    });
+    const msg = buildPiiWarningAssistantMessage(locale);
+    yield { type: 'delta', text: msg };
+    yield {
+      type: 'attorney_notice',
+      text: getAttorneyReviewNotice(locale, { emphasizeImmediate: true }),
+    };
+    yield { type: 'done' };
+    return;
+  }
+
+  // Hard override #2: low-confidence bypass — same flow, different copy.
+  if (isLowConfidence) {
+    console.warn('[consultation stream] low confidence; LLM bypassed.', {
+      sessionId: request.sessionId,
+      relevanceScore: relevance.score,
+      classification,
+    });
+    const msg = buildLowConfidenceAssistantMessage(locale);
+    yield { type: 'delta', text: msg };
+    yield {
+      type: 'attorney_notice',
+      text: getAttorneyReviewNotice(locale, { emphasizeImmediate: shouldEscalate }),
+    };
+    yield { type: 'done' };
+    return;
+  }
+
+  // Normal LLM streaming path.
+  const provider = resolveProvider();
+  let accumulated = '';
+
+  if (provider === 'openai') {
+    const prompt = buildProviderPrompt(locale, message, baseResponse, collectedFields, priorTurns);
+    try {
+      for await (const delta of streamOpenAiAssistantDeltas(prompt, { riskLevel })) {
+        accumulated += delta;
+        yield { type: 'delta', text: delta };
+      }
+    } catch (error) {
+      console.error('[consultation stream] openai stream error:', error);
+    }
+  } else if (provider === 'anthropic') {
+    // Anthropic streaming is not yet implemented in this codebase; fall
+    // back to the non-streaming call and deliver the full body as one
+    // delta so the client UX path still works end-to-end.
+    const prompt = buildProviderPrompt(locale, message, baseResponse, collectedFields, priorTurns);
+    try {
+      const full = await requestAnthropicAssistantMessage(prompt, { riskLevel });
+      if (full) {
+        accumulated = full;
+        yield { type: 'delta', text: full };
+      }
+    } catch (error) {
+      console.error('[consultation stream] anthropic fallback error:', error);
+    }
+  }
+
+  // If the LLM produced nothing (no API key, upstream error, empty
+  // response), fall back to the rule-based fallback message as a
+  // single delta so the user still gets a useful reply.
+  if (!accumulated) {
+    const fallback = buildFallbackAssistantMessage(baseResponse, locale);
+    accumulated = fallback;
+    yield { type: 'delta', text: fallback };
+  }
+
+  // Post-hoc groundedness verification mirrors the non-streaming path.
+  if (riskLevel !== 'L4' && references.length > 0) {
+    const columnContextForVerify = getConsultationColumnContextText(references, locale);
+    try {
+      const verdict = await verifyResponseGroundedness(accumulated, columnContextForVerify);
+      if (verdict.verdict === 'PARTIAL' || verdict.verdict === 'UNGROUNDED') {
+        console.warn('[consultation stream] groundedness flagged:', {
+          sessionId: request.sessionId,
+          verdict: verdict.verdict,
+          reason: verdict.reason,
+        });
+        const suffix = buildGroundednessWarningSuffix(locale, verdict.verdict);
+        if (suffix) {
+          yield { type: 'warning', variant: 'groundedness', text: suffix };
+        }
+      }
+    } catch (error) {
+      console.error('[consultation stream] groundedness check failed:', error);
+    }
+  }
+
+  // Staleness warning mirrors the non-streaming path.
+  if (riskLevel !== 'L4' && references.length > 0) {
+    const timeCheck = checkTimeSensitivity(message, references);
+    if (timeCheck.shouldWarn) {
+      console.warn('[consultation stream] staleness warning attached:', {
+        sessionId: request.sessionId,
+        agedSlugs: timeCheck.agedSlugs,
+      });
+      const suffix = buildStalenessWarningSuffix(locale, timeCheck.agedSlugs);
+      if (suffix) {
+        yield { type: 'warning', variant: 'staleness', text: suffix };
+      }
+    }
+  }
+
+  yield {
+    type: 'attorney_notice',
+    text: getAttorneyReviewNotice(locale, { emphasizeImmediate: shouldEscalate }),
+  };
+  yield { type: 'done' };
 }

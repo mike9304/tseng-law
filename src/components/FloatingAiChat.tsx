@@ -185,16 +185,6 @@ interface ChatApiReferenceRaw {
   freshness?: string;
 }
 
-interface ChatApiResponse {
-  assistantMessage: string;
-  classification: string;
-  riskLevel: string;
-  shouldEscalate: boolean;
-  nextRequiredField: string;
-  referencedColumns: string[];
-  references?: ChatApiReferenceRaw[];
-}
-
 function normalizeFreshness(raw: string | undefined): FloatingChatReference['freshness'] {
   if (raw === 'fresh' || raw === 'review_needed') return raw;
   return 'unknown';
@@ -524,17 +514,16 @@ export default function FloatingAiChat({
   async function sendChatMessage(text: string) {
     if (!text || loading) return;
 
-    // Snapshot the history BEFORE the optimistic user-message append so
-    // the priorTurns forwarded to the server reflect only messages
-    // that completed their full round-trip (i.e., the user's previous
-    // question + the assistant's previous answer). Sending the brand
-    // new user message itself in priorTurns would be duplicative and
-    // waste prompt budget.
+    // Snapshot prior turns before optimistic append.
     const priorTurnsForRequest = buildPriorTurnsForRequest(messages);
 
+    // Append user message immediately, then an empty assistant
+    // placeholder whose text grows as streaming chunks arrive.
+    const pendingAssistantId = makeMessageId('assistant');
     setMessages((prev) => [
       ...prev,
       { id: makeMessageId('user'), role: 'user', text },
+      { id: pendingAssistantId, role: 'assistant', text: '' },
     ]);
     setLoading(true);
 
@@ -547,31 +536,103 @@ export default function FloatingAiChat({
           sessionId,
           message: text,
           priorTurns: priorTurnsForRequest,
+          stream: true,
         }),
       });
 
-      if (!res.ok) throw new Error(`${res.status}`);
-      const data: ChatApiResponse = await res.json();
-      setLastClassification(data.classification);
-      setLastRiskLevel(data.riskLevel);
-      const parsedReferences = normalizeReferences(data.references);
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: makeMessageId('assistant'),
-          role: 'assistant',
-          text: data.assistantMessage,
-          references: parsedReferences.length > 0 ? parsedReferences : undefined,
-        },
-      ]);
-      // Note: form is no longer auto-shown on escalation.
-      // User explicitly opens it via the "상담 접수하기" button so the
-      // assistant response stays visible first.
+      if (!res.ok || !res.body) throw new Error(`${res.status}`);
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      let pendingText = '';
+      let groundednessSuffix = '';
+      let stalenessSuffix = '';
+      let attorneyNotice = '';
+      let streamDone = false;
+
+      const flushMessage = () => {
+        const assembled = [pendingText, groundednessSuffix, stalenessSuffix, attorneyNotice]
+          .filter(Boolean)
+          .join('');
+        setMessages((prev) =>
+          prev.map((m) =>
+            m.id === pendingAssistantId ? { ...m, text: assembled } : m,
+          ),
+        );
+      };
+
+      while (!streamDone) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+
+        // SSE events are separated by `\n\n`. Each event starts with
+        // `data: `. Split on the separator and keep incomplete tails.
+        const parts = buffer.split('\n\n');
+        buffer = parts.pop() || '';
+
+        for (const part of parts) {
+          const line = part.trim();
+          if (!line.startsWith('data:')) continue;
+          const payload = line.slice(5).trim();
+          if (!payload) continue;
+          let chunk: unknown;
+          try {
+            chunk = JSON.parse(payload);
+          } catch {
+            continue;
+          }
+          if (!chunk || typeof chunk !== 'object') continue;
+          const evt = chunk as { type?: string; [k: string]: unknown };
+
+          if (evt.type === 'metadata') {
+            const data = evt.data as Record<string, unknown> | undefined;
+            if (data) {
+              if (typeof data.classification === 'string') {
+                setLastClassification(data.classification);
+              }
+              if (typeof data.riskLevel === 'string') {
+                setLastRiskLevel(data.riskLevel);
+              }
+              const rawRefs = data.references as ChatApiReferenceRaw[] | undefined;
+              const parsed = normalizeReferences(rawRefs);
+              if (parsed.length > 0) {
+                setMessages((prev) =>
+                  prev.map((m) =>
+                    m.id === pendingAssistantId ? { ...m, references: parsed } : m,
+                  ),
+                );
+              }
+            }
+          } else if (evt.type === 'delta' && typeof evt.text === 'string') {
+            pendingText += evt.text;
+            flushMessage();
+          } else if (evt.type === 'warning' && typeof evt.text === 'string') {
+            if (evt.variant === 'groundedness') {
+              groundednessSuffix = evt.text;
+            } else if (evt.variant === 'staleness') {
+              stalenessSuffix = evt.text;
+            }
+            flushMessage();
+          } else if (evt.type === 'attorney_notice' && typeof evt.text === 'string') {
+            attorneyNotice = `\n\n${evt.text}`;
+            flushMessage();
+          } else if (evt.type === 'error') {
+            pendingText = copy.error;
+            flushMessage();
+            streamDone = true;
+          } else if (evt.type === 'done') {
+            streamDone = true;
+          }
+        }
+      }
     } catch {
-      setMessages((prev) => [
-        ...prev,
-        { id: makeMessageId('assistant'), role: 'assistant', text: copy.error },
-      ]);
+      setMessages((prev) =>
+        prev.map((m) =>
+          m.id === pendingAssistantId ? { ...m, text: copy.error } : m,
+        ),
+      );
     } finally {
       setLoading(false);
     }

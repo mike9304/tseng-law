@@ -20,7 +20,12 @@ export const dynamic = 'force-dynamic';
  * on the live server.
  */
 function guardOrNull(request: NextRequest): NextResponse | null {
-  if (process.env.NODE_ENV === 'development') return null;
+  // Dev mode check is robust against .env.local accidentally carrying
+  // VERCEL=1 / VERCEL_ENV=production (which happens when the developer
+  // runs `vercel env pull --environment=production .env.local` for
+  // local testing of production values). We treat "dev" as
+  // `NODE_ENV !== 'production'`, which next dev always sets correctly.
+  if (process.env.NODE_ENV !== 'production') return null;
 
   const expected = process.env.CONSULTATION_EVAL_SECRET;
   if (!expected) {

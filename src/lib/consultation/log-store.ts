@@ -66,6 +66,11 @@ type ConsultationLogRecord = {
   userAgent?: string | null;
   ipAddress?: string | null;
   metadataRedacted?: string;
+  // Wave 9 — SLO metrics persisted per chat event.
+  latencyMs?: number;
+  openAiCalls?: number;
+  promptTokens?: number;
+  completionTokens?: number;
 };
 
 function redactSensitiveText(value: string): string {
@@ -114,6 +119,11 @@ export async function logConsultationChatEvent(input: {
   funnelStage?: ConsultationFunnelStage;
   userAgent?: string | null;
   ipAddress?: string | null;
+  /** Wave 9 SLO metrics. Optional so legacy callers compile cleanly. */
+  latencyMs?: number;
+  openAiCalls?: number;
+  promptTokens?: number;
+  completionTokens?: number;
 }): Promise<void> {
   await appendConsultationLog({
     timestamp: new Date().toISOString(),
@@ -133,6 +143,10 @@ export async function logConsultationChatEvent(input: {
     messageRedacted: clipText(input.message),
     userAgent: input.userAgent || null,
     ipAddress: resolveIpAddress(input.ipAddress || null),
+    latencyMs: input.latencyMs,
+    openAiCalls: input.openAiCalls,
+    promptTokens: input.promptTokens,
+    completionTokens: input.completionTokens,
   });
 }
 

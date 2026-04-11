@@ -320,6 +320,64 @@ export default async function AdminConsultationPage({
           </div>
         </Section>
 
+        <Section
+          title="Performance & cost"
+          description={`최근 ${metrics.timeWindowDays}일 LLM 호출 ${metrics.performance.sampleCount}건 기준. gpt-4o-mini 가격 (입력 $0.15 / 출력 $0.60 per 1M tokens).`}
+        >
+          <table className="admin-console-table">
+            <tbody>
+              <tr>
+                <td>Latency p50</td>
+                <td className="admin-console-num">
+                  {metrics.performance.latencyP50Ms.toLocaleString()} ms
+                </td>
+              </tr>
+              <tr>
+                <td>Latency p95</td>
+                <td className="admin-console-num">
+                  {metrics.performance.latencyP95Ms.toLocaleString()} ms
+                </td>
+              </tr>
+              <tr>
+                <td>Latency p99</td>
+                <td className="admin-console-num">
+                  {metrics.performance.latencyP99Ms.toLocaleString()} ms
+                </td>
+              </tr>
+              <tr>
+                <td>Avg latency</td>
+                <td className="admin-console-num">
+                  {metrics.performance.avgLatencyMs.toLocaleString()} ms
+                </td>
+              </tr>
+              <tr>
+                <td>Total prompt tokens</td>
+                <td className="admin-console-num">
+                  {metrics.performance.totalPromptTokens.toLocaleString()}
+                </td>
+              </tr>
+              <tr>
+                <td>Total completion tokens</td>
+                <td className="admin-console-num">
+                  {metrics.performance.totalCompletionTokens.toLocaleString()}
+                </td>
+              </tr>
+              <tr>
+                <td>Estimated total cost (USD)</td>
+                <td className="admin-console-num">
+                  ${metrics.performance.estimatedCostUsd.toFixed(4)}
+                </td>
+              </tr>
+              <tr>
+                <td>Avg cost per chat (USD)</td>
+                <td className="admin-console-num">
+                  ${metrics.performance.avgCostPerChatUsd.toFixed(4)}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </Section>
+
         <Section title="Safety & rate limits">
           <table className="admin-console-table">
             <tbody>

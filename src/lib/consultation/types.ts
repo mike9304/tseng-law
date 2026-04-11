@@ -134,6 +134,17 @@ export interface ConsultationChatResponse {
    *  to emit a `chat_injection_blocked` funnel event for the operator
    *  dashboard. Never rendered in the UI. */
   promptInjectionDetected?: boolean;
+  /** Wave 9 SLO metrics — wall time and aggregate token usage across
+   *  every OpenAI/Anthropic call this engine pass made (main answer +
+   *  citation retry + groundedness verifier). The chat route persists
+   *  these on each chat event so the admin dashboard can compute
+   *  p50/p95/p99 latency and total token cost over a time window. */
+  perfMetrics?: {
+    latencyMs: number;
+    openAiCalls: number;
+    promptTokens: number;
+    completionTokens: number;
+  };
 }
 
 export interface ConsultationSubmitRequestBody {

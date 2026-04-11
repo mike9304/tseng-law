@@ -102,6 +102,7 @@ export async function POST(request: NextRequest) {
   // the first metadata chunk has been captured.
   if (body.stream === true) {
     let capturedMetadata: ConsultationChatStreamMetadata | null = null;
+    const streamStartedAt = Date.now();
     const encoder = new TextEncoder();
     const readable = new ReadableStream<Uint8Array>({
       async start(controller) {
@@ -167,6 +168,10 @@ export async function POST(request: NextRequest) {
               funnelStage: 'chat_answered',
               userAgent,
               ipAddress: ipHeader,
+              // Streaming path can't (yet) capture per-call token usage
+              // because the OpenAI streaming API does not return a usage
+              // chunk by default. Wall time alone still feeds p50/p95/p99.
+              latencyMs: Date.now() - streamStartedAt,
             }).catch((err) => console.error('[consultation] streaming chat log failed:', err));
           }
           controller.close();
@@ -217,6 +222,10 @@ export async function POST(request: NextRequest) {
         funnelStage: 'chat_answered',
         userAgent,
         ipAddress: ipHeader,
+        latencyMs: response.perfMetrics?.latencyMs,
+        openAiCalls: response.perfMetrics?.openAiCalls,
+        promptTokens: response.perfMetrics?.promptTokens,
+        completionTokens: response.perfMetrics?.completionTokens,
       });
     } catch (error) {
       console.error('[consultation] chat log failed:', error);

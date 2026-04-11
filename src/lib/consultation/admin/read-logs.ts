@@ -45,6 +45,11 @@ export interface EventLogRecord {
   success?: boolean;
   failureReason?: string;
   metadataRedacted?: string;
+  // Wave 9 — SLO metrics persisted on chat events.
+  latencyMs?: number;
+  openAiCalls?: number;
+  promptTokens?: number;
+  completionTokens?: number;
 }
 
 export interface FeedbackLogRecord {
@@ -116,6 +121,23 @@ export interface AdminDashboardMetrics {
     stalenessFlagged: number;
     rateLimitedChat: number;
     rateLimitedSubmit: number;
+  };
+  /** Wave 9 — performance & cost rollup. Computed only over chat events
+   *  that actually invoked the LLM (i.e. excluding bypass paths). */
+  performance: {
+    /** Number of chat events with a recorded latencyMs. */
+    sampleCount: number;
+    latencyP50Ms: number;
+    latencyP95Ms: number;
+    latencyP99Ms: number;
+    avgLatencyMs: number;
+    totalPromptTokens: number;
+    totalCompletionTokens: number;
+    totalTokens: number;
+    /** Estimated USD cost using gpt-4o-mini pricing
+     *  ($0.15 / 1M input, $0.60 / 1M output as of 2026). */
+    estimatedCostUsd: number;
+    avgCostPerChatUsd: number;
   };
   recentNegativeFeedback: Array<{
     timestamp: string;
@@ -305,6 +327,50 @@ export async function readDashboardMetrics(
     rateLimitedSubmit: funnel.submit_rate_limited,
   };
 
+  // Wave 9 — performance & cost rollup. Only includes chat events that
+  // recorded a latencyMs (skips bypass paths and pre-Wave-9 events).
+  const perfSamples = events.filter(
+    (e) => e.eventType === 'chat' && typeof e.latencyMs === 'number',
+  );
+  const latencyValues = perfSamples
+    .map((e) => e.latencyMs as number)
+    .sort((a, b) => a - b);
+  const percentile = (sorted: number[], p: number): number => {
+    if (sorted.length === 0) return 0;
+    const idx = Math.min(
+      sorted.length - 1,
+      Math.floor((p / 100) * sorted.length),
+    );
+    return sorted[idx]!;
+  };
+  const totalPromptTokens = perfSamples.reduce((sum, e) => sum + (e.promptTokens || 0), 0);
+  const totalCompletionTokens = perfSamples.reduce((sum, e) => sum + (e.completionTokens || 0), 0);
+  // gpt-4o-mini pricing as of 2026 (USD per 1M tokens):
+  //   input = $0.15, output = $0.60
+  const COST_PER_INPUT_TOKEN = 0.15 / 1_000_000;
+  const COST_PER_OUTPUT_TOKEN = 0.60 / 1_000_000;
+  const estimatedCostUsd =
+    totalPromptTokens * COST_PER_INPUT_TOKEN
+    + totalCompletionTokens * COST_PER_OUTPUT_TOKEN;
+  const performance = {
+    sampleCount: perfSamples.length,
+    latencyP50Ms: percentile(latencyValues, 50),
+    latencyP95Ms: percentile(latencyValues, 95),
+    latencyP99Ms: percentile(latencyValues, 99),
+    avgLatencyMs:
+      latencyValues.length === 0
+        ? 0
+        : Math.round(latencyValues.reduce((a, b) => a + b, 0) / latencyValues.length),
+    totalPromptTokens,
+    totalCompletionTokens,
+    totalTokens: totalPromptTokens + totalCompletionTokens,
+    estimatedCostUsd: Math.round(estimatedCostUsd * 10000) / 10000,
+    avgCostPerChatUsd:
+      perfSamples.length === 0
+        ? 0
+        : Math.round((estimatedCostUsd / perfSamples.length) * 10000) / 10000,
+  };
+
   // Recent negative feedback (last 20) — for variable review by attorney.
   const recentNegativeFeedback = feedback
     .filter((f) => f.rating === 'unhelpful')
@@ -364,6 +430,7 @@ export async function readDashboardMetrics(
     byLocale,
     feedback: feedbackSummary,
     safety,
+    performance,
     recentNegativeFeedback,
     recentSubmissions,
     recentChatSamples,

@@ -6,6 +6,7 @@ import {
   getConsultationRiskLabel,
 } from '@/lib/consultation/copy';
 import {
+  computeQueryColumnRelevance,
   getConsultationColumnContextText,
   getConsultationColumnReferences,
 } from '@/lib/consultation/column-knowledge';
@@ -1127,6 +1128,46 @@ function detectSensitivePii(raw: string): string[] {
   return hits;
 }
 
+/**
+ * Score threshold below which a query is considered too far from any
+ * column in the category bag to ground an honest answer. 0 = nothing
+ * matches, 1 = every significant word matches. Empirically 0.25 blocks
+ * mismatched cases (e.g. "consultation fee" routed to company-setup
+ * columns, "sexual harassment" routed to severance columns) without
+ * affecting true-topic queries where domain-specific nouns clearly
+ * overlap with the column body.
+ */
+const LOW_CONFIDENCE_SCORE_THRESHOLD = 0.25;
+
+/**
+ * Canned response shown when the query and its attached columns do not
+ * share enough significant vocabulary to produce a grounded answer. The
+ * assistant refuses to answer AND redirects to a licensed attorney
+ * rather than letting the LLM invent or pick a tangentially related
+ * citation. Returned instead of an LLM call, never passed to OpenAI.
+ */
+function buildLowConfidenceAssistantMessage(locale: Locale): string {
+  if (locale === 'ko') {
+    return [
+      '이 질문은 저희 공개 칼럼의 범위를 벗어나거나, 공개 자료만으로는 정확한 안내가 어렵습니다.',
+      '',
+      '정확한 답변을 드리기 위해 대만 변호사 직접 상담을 권해 드립니다. 아래 "상담 접수하기" 버튼을 눌러 이름과 연락처, 간단한 상황을 남겨 주시거나 wei@hoveringlaw.com.tw 로 이메일 주세요.',
+    ].join('\n');
+  }
+  if (locale === 'zh-hant') {
+    return [
+      '這個問題超出我們公開文章能涵蓋的範圍，僅靠公開資料無法提供精確的指引。',
+      '',
+      '為避免誤導，建議直接向台灣律師諮詢。請點擊下方「諮詢預約」按鈕留下姓名、聯絡方式與簡要情況，或寄信至 wei@hoveringlaw.com.tw。',
+    ].join('\n');
+  }
+  return [
+    'This question sits outside the scope of our public columns, and our open materials alone are not enough to give you an accurate answer.',
+    '',
+    'To avoid misleading guidance, we recommend speaking with a licensed Taiwan lawyer directly. Click "Request consultation" below with your name, contact method, and a short description of the situation, or email wei@hoveringlaw.com.tw.',
+  ].join('\n');
+}
+
 /** Canned response shown when sensitive PII is detected. Never invokes the LLM. */
 function buildPiiWarningAssistantMessage(locale: Locale): string {
   if (locale === 'ko') {
@@ -1281,8 +1322,36 @@ export async function generateConsultationChatResponse(
   );
   const sourceFreshness = resolveSourceFreshness(references);
   const sourceConfidence = resolveSourceConfidence(references, sourceFreshness);
-  // PII escalation always forces human review.
-  const shouldEscalate = hasSensitivePii || needsHumanReview(message, classification, riskLevel);
+
+  // Compute query-vs-column relevance. When references are present but
+  // almost none of the query vocabulary appears in them, the static
+  // category mapping has picked a topically-unrelated bag of columns —
+  // the honest response is to refuse and escalate rather than let the
+  // LLM either fabricate a citation or invent a grounded-looking answer
+  // out of unrelated material.
+  //
+  // Hybrid trigger:
+  //   (a) score is below the threshold, OR
+  //   (b) the query has 3+ significant tokens but only 0 or 1 of them
+  //       appear in the reference bag (absolute weak-overlap signal).
+  // Either condition alone implies the engine's static retrieval has
+  // drifted off the user's topic.
+  const relevance = computeQueryColumnRelevance(message, references, locale);
+  const isLowConfidence =
+    !hasSensitivePii &&
+    riskLevel !== 'L4' &&
+    references.length > 0 &&
+    relevance.queryWordTotal >= 2 &&
+    (
+      relevance.score < LOW_CONFIDENCE_SCORE_THRESHOLD ||
+      (relevance.queryWordTotal >= 3 && relevance.queryWordHits <= 1)
+    );
+
+  // PII OR low-confidence escalation always forces human review.
+  const shouldEscalate =
+    hasSensitivePii ||
+    isLowConfidence ||
+    needsHumanReview(message, classification, riskLevel);
   const nextRequiredField = determineNextRequiredField(shouldEscalate, collectedFields, classification, riskLevel, message);
   const completionReady =
     shouldEscalate &&
@@ -1309,15 +1378,25 @@ export async function generateConsultationChatResponse(
 
   let assistantMessage: string | null = null;
 
-  // Hard override: when sensitive PII is present, never send the message
-  // to the LLM. Return a canned warning that redirects the user to a
-  // safer channel. Logged (non-blocking) for operator visibility.
+  // Hard override #1: PII bypass. Return canned warning, never invoke LLM.
   if (hasSensitivePii) {
     console.warn('[consultation] sensitive PII detected; LLM bypassed.', {
       piiHits,
       sessionId: request.sessionId,
     });
     assistantMessage = buildPiiWarningAssistantMessage(locale);
+  } else if (isLowConfidence) {
+    // Hard override #2: low query-column relevance. Return canned
+    // "out of scope" message to force the user into human review
+    // rather than serving a weakly-grounded LLM response.
+    console.warn('[consultation] low confidence; LLM bypassed.', {
+      sessionId: request.sessionId,
+      relevanceScore: relevance.score,
+      queryWordHits: relevance.queryWordHits,
+      queryWordTotal: relevance.queryWordTotal,
+      classification,
+    });
+    assistantMessage = buildLowConfidenceAssistantMessage(locale);
   } else {
     const provider = resolveProvider();
     if (provider !== 'fallback') {

@@ -45,6 +45,19 @@ function isPiiWarningMessage(message: string): boolean {
 }
 
 /**
+ * Detect the canned low-confidence (out-of-scope) message. The engine
+ * emits one of three fixed strings whenever it refuses to answer due
+ * to a weak query↔column vocabulary overlap.
+ */
+function isLowConfidenceMessage(message: string): boolean {
+  return (
+    message.includes('공개 칼럼의 범위를 벗어나') ||
+    message.includes('公開文章能涵蓋的範圍') ||
+    message.includes('sits outside the scope of our public columns')
+  );
+}
+
+/**
  * Extract every [Column: slug] citation the LLM emitted in its response.
  * Accepts either plain slugs or slugs with whitespace, and tolerates the
  * bracket content being wrapped with extra spaces. The regex captures the
@@ -94,6 +107,7 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
   const strippedMessage = stripAttorneyNotice(response.assistantMessage, pair.locale);
   const responseChars = strippedMessage.length;
   const piiWarningPresent = isPiiWarningMessage(response.assistantMessage);
+  const lowConfidenceBypassPresent = isLowConfidenceMessage(response.assistantMessage);
   const emittedCitations = extractCitations(response.assistantMessage);
   const referencedSet = new Set(response.referencedColumns);
   const validCitations = emittedCitations.filter((slug) => referencedSet.has(slug));
@@ -112,18 +126,32 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
     ? piiWarningPresent
     : true;
 
+  // Low-confidence bypass: expected true → canned message must appear.
+  // Expected false/undefined → canned message must NOT appear.
+  const lowConfidencePass = pair.expected.lowConfidenceBypass
+    ? lowConfidenceBypassPresent
+    : !lowConfidenceBypassPresent;
+
   const maxChars = pair.expected.maxResponseChars ?? DEFAULT_MAX_RESPONSE_CHARS;
   const responseLengthPass = responseChars <= maxChars;
 
   // Citation quality check:
   // - L4 pairs: no citations expected (L4 mode forbids column quotes).
   // - PII bypass pairs: no citations expected (canned warning).
+  // - Low-confidence bypass pairs: no citations expected (canned warning).
   // - Otherwise, when the engine DID attach references to this response,
   //   the LLM must emit ≥1 valid [Column: slug] tag pointing at one of
   //   those references. If no references were attached (e.g. fallback),
   //   the check passes through.
   let citationPass: boolean;
-  if (pair.expected.piiBypass || pair.expected.riskLevel === 'L4') {
+  if (
+    pair.expected.piiBypass ||
+    pair.expected.lowConfidenceBypass ||
+    pair.expected.riskLevel === 'L4'
+  ) {
+    citationPass = true;
+  } else if (lowConfidenceBypassPresent) {
+    // Engine chose to refuse; treat as a valid non-citation path.
     citationPass = true;
   } else if (response.referencedColumns.length === 0) {
     citationPass = true;
@@ -138,7 +166,8 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
     columnsPass &&
     piiBypassPass &&
     responseLengthPass &&
-    citationPass;
+    citationPass &&
+    lowConfidencePass;
 
   // Mark setsIntersect as referenced so eslint doesn't complain; it is
   // intentionally kept in the module for future use (fuzzy match mode).
@@ -158,6 +187,7 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
       piiWarningPresent,
       citationCount: emittedCitations.length,
       validCitationCount: validCitations.length,
+      lowConfidenceBypassPresent,
     },
     checks: {
       classificationPass,
@@ -167,6 +197,7 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
       piiBypassPass,
       responseLengthPass,
       citationPass,
+      lowConfidencePass,
     },
     allPassed,
   };
@@ -199,6 +230,7 @@ export async function runConsultationEval(): Promise<EvalReport> {
           piiWarningPresent: false,
           citationCount: 0,
           validCitationCount: 0,
+          lowConfidenceBypassPresent: false,
         },
         checks: {
           classificationPass: false,
@@ -208,6 +240,7 @@ export async function runConsultationEval(): Promise<EvalReport> {
           piiBypassPass: false,
           responseLengthPass: false,
           citationPass: false,
+          lowConfidencePass: false,
         },
         allPassed: false,
       });
@@ -243,6 +276,7 @@ export async function runConsultationEval(): Promise<EvalReport> {
     piiBypass: tally((r) => r.checks.piiBypassPass),
     responseLength: tally((r) => r.checks.responseLengthPass),
     citation: tally((r) => r.checks.citationPass),
+    lowConfidence: tally((r) => r.checks.lowConfidencePass),
   };
 
   // Aggregate citation stats across pairs that were actually expected to

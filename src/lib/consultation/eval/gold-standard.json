@@ -97,11 +97,12 @@
     "id": "L05",
     "locale": "ko",
     "question": "직장에서 상사가 자꾸 신체 접촉을 하고 성희롱을 합니다. 어떻게 해야 하나요?",
-    "rationale": "Labor + sexual harassment — should trigger L3 via expanded keyword list.",
+    "rationale": "Labor + sexual harassment — L3 via expanded keyword list. Currently the labor column bag (severance-law, voluntary-resignation-severance) does not cover harassment, so the engine should trigger the low-confidence bypass and refuse to answer on unrelated columns.",
     "expected": {
       "classification": "labor",
       "riskLevel": "L3",
-      "shouldEscalate": true
+      "shouldEscalate": true,
+      "lowConfidenceBypass": true
     }
   },
   {
@@ -166,11 +167,12 @@
     "id": "G02",
     "locale": "ko",
     "question": "대만 변호사 상담 비용은 어떻게 책정되나요?",
-    "rationale": "General — consultation fee question, escalate on intent keyword.",
+    "rationale": "General — consultation fee question. The static general column bag covers company/traffic topics, not pricing, so the low-confidence bypass should fire and redirect to human review.",
     "expected": {
       "classification": "general",
       "riskLevel": "L1",
-      "shouldEscalate": true
+      "shouldEscalate": true,
+      "lowConfidenceBypass": true
     }
   },
   {
@@ -244,22 +246,24 @@
     "id": "X05",
     "locale": "ko",
     "question": "증거보전 신청 시효가 얼마 안 남았습니다. 어떻게 해야 하나요?",
-    "rationale": "L3 expansion — evidence preservation statute of limitations, must hit L3.",
+    "rationale": "L3 expansion — evidence preservation statute of limitations. L3 via keyword list; column bag is off-topic so the low-confidence bypass should fire.",
     "expected": {
       "classification": "general",
       "riskLevel": "L3",
-      "shouldEscalate": true
+      "shouldEscalate": true,
+      "lowConfidenceBypass": true
     }
   },
   {
     "id": "X06",
     "locale": "ko",
     "question": "소비자보호법상 징벌적 손해배상을 청구하고 싶습니다.",
-    "rationale": "L3 expansion — punitive damages + consumer protection. '손해배상' is also a traffic_accident keyword so that category wins the scoring; the critical signal is L3 via the 소비자보호/징벌적 expansion.",
+    "rationale": "L3 expansion — punitive damages + consumer protection. '손해배상' routes classification to traffic_accident but the column bag (traffic accident + overtaking liability) does not cover consumer protection law, so the low-confidence bypass should fire.",
     "expected": {
       "classification": "traffic_accident",
       "riskLevel": "L3",
-      "shouldEscalate": true
+      "shouldEscalate": true,
+      "lowConfidenceBypass": true
     }
   },
   {

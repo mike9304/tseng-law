@@ -135,6 +135,166 @@ export function getConsultationColumnReferences(
     }));
 }
 
+/** Per-query signal of how well the selected columns actually match the user's question. */
+export interface QueryRelevanceSignal {
+  /** Overlap score in [0, 1]. 1 = every significant query word appears in the columns. */
+  score: number;
+  /** How many distinct significant query words also appear in the reference bag. */
+  queryWordHits: number;
+  /** How many distinct significant query words were extracted from the question. */
+  queryWordTotal: number;
+}
+
+/**
+ * Stopwords that add noise to the keyword overlap score. Korean question
+ * endings and general-purpose verbs/pronouns are removed so that a
+ * relevance score is driven by domain-specific nouns, not boilerplate.
+ */
+const KOREAN_STOPWORDS: ReadonlySet<string> = new Set([
+  // Question endings and sentence-level connectives
+  '어떻게', '해야', '하나요', '있나요', '됩니다', '입니다', '합니다',
+  '했습니다', '했어요', '하고', '하면', '이고', '이에요', '저는', '제가',
+  '당신', '우리', '뭐가', '뭔가요', '정말', '지금', '있어', '있습니다',
+  '주세요', '알려', '어떤', '또한', '그리고', '하지만', '그런데', '따라서',
+  '때문에', '위해', '위한', '대해', '관련', '대한', '처럼', '같은', '만약',
+  '어떻게나', '어떻게요', '되나요', '되는', '되어', '되어도', '되면',
+  '드립니다', '드려요', '드리고', '할게요', '할까요', '해주세요', '인가요',
+  '없나요', '없습니다', '좀', '네요', '요즘', '그냥', '그런', '이런',
+  // Generic legal/geographic vocabulary. These words appear in almost
+  // every legal column body, so matching them inflates the score on
+  // questions that are actually topically off from the column bag.
+  // Removing them forces the score to reflect domain-specific terms.
+  '대만', '한국', '중국', '일본', '한국인', '대만인',
+  '변호사', '법률', '법원', '법조', '법무', '법률사무소',
+  '사건', '문제', '상담', '질문', '답변', '답변하', '답변해',
+  '경우', '상황', '내용', '부분', '정도', '경험', '방법',
+  // Query-framing words (wh-words, quantifiers, process verbs) that
+  // appear in almost every user question regardless of topic. Removing
+  // them keeps the relevance score tied to content nouns only.
+  '신청', '제출', '절차', '문서', '서류', '계약', '계약서',
+  '얼마', '몇', '언제', '어디', '누가', '무엇', '누구',
+  '남았습니다', '남은', '남아', '남아서',
+]);
+
+/**
+ * Korean particle suffix regex. Stripping the suffix exposes the noun
+ * stem so that "손해배상을" (damages + object particle) matches
+ * "손해배상" in the column body text.
+ */
+const KOREAN_PARTICLE_SUFFIX = /^(.+?)(을|를|이|가|은|는|에|와|과|의|으로|로|에서|부터|까지|만|에게|한테|보다|처럼|도|이나|나|라도|조차|마저|같이|라도)$/u;
+
+function extractKoreanStem(token: string): string | null {
+  const match = KOREAN_PARTICLE_SUFFIX.exec(token);
+  if (!match || !match[1]) return null;
+  const stem = match[1];
+  if (stem.length < 2) return null;
+  return stem;
+}
+
+function isPureCjk(token: string): boolean {
+  return /^[\u4E00-\u9FFF]+$/.test(token);
+}
+
+/**
+ * Tokenise a string into a set of "significant" words for keyword overlap
+ * scoring. Handles Korean particles (by also indexing the stem), Chinese
+ * continuous text (via 2-gram and 3-gram character windows), and common
+ * Korean stopwords (filtered out so high-frequency particles don't
+ * inflate the overlap score).
+ */
+function significantTokens(value: string): Set<string> {
+  const normalized = value.toLowerCase();
+  const raw = normalized.split(
+    /[\s\u3000。、，．・！？『』「」（）\[\],.!?;:()\u3002\uFF0C\uFF01\uFF1F]+/u,
+  );
+  const out = new Set<string>();
+
+  for (const rawToken of raw) {
+    const token = rawToken.trim();
+    if (token.length < 2) continue;
+    if (KOREAN_STOPWORDS.has(token)) continue;
+
+    if (isPureCjk(token)) {
+      // Chinese (or zh-hant) continuous script: build 2-gram and 3-gram
+      // windows so meaningful substrings like "設立" or "資本額" get
+      // matched against column bodies even without a tokenizer.
+      if (token.length >= 4) {
+        for (let i = 0; i <= token.length - 2; i += 1) {
+          out.add(token.slice(i, i + 2));
+        }
+        for (let i = 0; i <= token.length - 3; i += 1) {
+          out.add(token.slice(i, i + 3));
+        }
+      } else {
+        out.add(token);
+      }
+      continue;
+    }
+
+    out.add(token);
+    const stem = extractKoreanStem(token);
+    if (stem && !KOREAN_STOPWORDS.has(stem)) {
+      out.add(stem);
+    }
+  }
+
+  return out;
+}
+
+/**
+ * Compute a lightweight relevance score between a user query and the
+ * columns the engine has decided to attach. This is a keyword overlap
+ * proxy only — it does NOT do semantic embedding — and is intentionally
+ * cheap to run synchronously before every LLM call.
+ *
+ * A score well below the refusal threshold indicates the static
+ * category-to-column mapping returned a bag of columns that has nothing
+ * to do with what the user actually asked, at which point it is safer
+ * to refuse and route to a human than to let the LLM either hallucinate
+ * a grounded-looking answer or produce a citation for an irrelevant
+ * source.
+ */
+export function computeQueryColumnRelevance(
+  query: string,
+  references: ConsultationColumnReference[],
+  locale: Locale,
+): QueryRelevanceSignal {
+  if (references.length === 0) {
+    return { score: 0, queryWordHits: 0, queryWordTotal: 0 };
+  }
+
+  const queryWords = significantTokens(query);
+  const queryWordTotal = queryWords.size;
+  if (queryWordTotal === 0) {
+    return { score: 0, queryWordHits: 0, queryWordTotal: 0 };
+  }
+
+  // Build a single search blob from titles + summaries + (clipped) bodies.
+  const blobParts: string[] = [];
+  for (const ref of references) {
+    blobParts.push(ref.title.toLowerCase());
+    if (ref.summary) blobParts.push(ref.summary.toLowerCase());
+    const fullPost = getFullPostBySlug(ref.slug, locale);
+    if (fullPost?.content) {
+      // Clip to first 4000 chars: body may be huge and full scans hurt
+      // latency for no meaningful gain on keyword matching.
+      blobParts.push(stripMarkdown(fullPost.content).slice(0, 4000).toLowerCase());
+    }
+  }
+  const blob = blobParts.join(' ');
+
+  let queryWordHits = 0;
+  for (const word of queryWords) {
+    if (blob.includes(word)) queryWordHits += 1;
+  }
+
+  return {
+    score: queryWordHits / queryWordTotal,
+    queryWordHits,
+    queryWordTotal,
+  };
+}
+
 export function getConsultationColumnContextText(
   references: ConsultationColumnReference[],
   locale: Locale = 'ko',

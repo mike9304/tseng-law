@@ -30,6 +30,13 @@ export interface EvalPair {
      */
     piiBypass?: boolean;
     /**
+     * If true, the query is expected to trigger the low-confidence
+     * bypass (relevance score below threshold) and return the canned
+     * out-of-scope response. The citation check is skipped for these
+     * pairs because the LLM is never invoked.
+     */
+    lowConfidenceBypass?: boolean;
+    /**
      * Maximum character length for the assistant message body (before
      * the appended attorney notice). L4 responses should be short.
      */
@@ -53,6 +60,8 @@ export interface EvalPerPairResult {
     citationCount: number;
     /** Of the citations found, how many point at a slug present in referencedColumns. */
     validCitationCount: number;
+    /** True when the assistant message matches the canned low-confidence bypass template. */
+    lowConfidenceBypassPresent: boolean;
   };
   checks: {
     classificationPass: boolean;
@@ -66,9 +75,15 @@ export interface EvalPerPairResult {
      * - L1/L2/L3 non-PII non-adversarial pairs with references: REQUIRE ≥1 valid citation.
      * - L4 pairs: no citations expected (L4 mode forbids column quotes).
      * - PII bypass pairs: no citations expected.
+     * - Low-confidence bypass pairs: no citations expected.
      * - Fallback-only pairs (no references available): pass through.
      */
     citationPass: boolean;
+    /**
+     * Low-confidence bypass check: pairs with expected.lowConfidenceBypass
+     * must present the canned out-of-scope message. Other pairs must NOT.
+     */
+    lowConfidencePass: boolean;
   };
   allPassed: boolean;
 }
@@ -90,6 +105,7 @@ export interface EvalReport {
     piiBypass: { passed: number; total: number };
     responseLength: { passed: number; total: number };
     citation: { passed: number; total: number };
+    lowConfidence: { passed: number; total: number };
   };
   /** Aggregate citation statistics across non-L4 pairs. */
   citationStats: {

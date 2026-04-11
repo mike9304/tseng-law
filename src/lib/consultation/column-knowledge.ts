@@ -29,12 +29,14 @@ const CATEGORY_SLUG_MAP: Record<ConsultationCategory, string[]> = {
   inheritance: ['taiwan-inheritance-custody-analysis'],
   logistics: ['taiwan-logistics-business-setup'],
   cosmetics: ['taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide'],
-  general: [
-    'taiwan-company-establishment-basics',
-    'taiwan-traffic-accident-procedure',
-    'taiwan-gym-injury-lawsuit',
-    'taiwan-massage-history-law',
-  ],
+  // 'general' classification means "no legal-domain keyword matched". The
+  // engine USED to attach a 4-column fallback bag here so the LLM had
+  // *something* to talk about, but that produced confident-looking
+  // off-topic answers (pizza recipes, weather forecasts, jailbreak prompts)
+  // grounded in unrelated legal columns. We now intentionally return zero
+  // references so the low-confidence bypass fires and the user is routed
+  // to human review instead.
+  general: [],
   unknown: [],
 };
 

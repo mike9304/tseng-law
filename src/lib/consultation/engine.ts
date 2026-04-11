@@ -29,80 +29,128 @@ import type {
 
 type ConsultationProvider = 'openai' | 'anthropic' | 'fallback';
 
+// Order matters: when two categories tie on keyword count, the FIRST
+// match wins. Put narrowly-scoped categories (inheritance, divorce,
+// criminal) BEFORE broad ones (company_setup) so a query like "부동산을
+// 상속받으려면" doesn't get pulled into company_setup just because
+// 부동산 happens to share vocabulary.
 const KEYWORD_GROUPS: Array<{ category: ConsultationCategory; keywords: string[] }> = [
+  {
+    category: 'inheritance',
+    keywords: [
+      '상속',
+      '상속세',
+      '상속 포기',
+      '상속포기',
+      '한정승인',
+      '유언',
+      '유언장',
+      '신탁',
+      '잔여재산',
+      '사망',
+      '돌아가셨',
+      '돌아가신',
+      'inheritance',
+      'inherit',
+      'estate',
+      'probate',
+      'trust',
+      '遺產',
+      '繼承',
+      '遺囑',
+      '信託',
+      '剩餘財產',
+      '拋棄繼承',
+      '限定繼承',
+    ],
+  },
+  {
+    category: 'divorce_family',
+    keywords: [
+      '이혼',
+      '친권',
+      '양육',
+      '양육권',
+      '재산분할',
+      '배우자',
+      '아이 양육',
+      '아이를 데려',
+      '못 보게',
+      '데려갔',
+      '재산 숨기',
+      '빼돌',
+      '가사 조정',
+      '가사조정',
+      '가정폭력',
+      '출국 금지',
+      '출국금지',
+      'divorce',
+      'custody',
+      'child custody',
+      'child support',
+      'spouse',
+      'marital assets',
+      'assets hidden',
+      'hide assets',
+      'domestic violence',
+      'family mediation',
+      '離婚',
+      '親權',
+      '扶養',
+      '婚姻',
+      '配偶',
+      '監護權',
+      '藏匿財產',
+      '家暴',
+      '家事調解',
+    ],
+  },
   {
     category: 'criminal_investigation',
     keywords: [
       '경찰 연락',
       '경찰 조사',
+      '경찰서',
+      '경찰에 신고',
       '검찰',
       '출석 요구',
       '체포',
       '구속',
       '수사',
       '압수수색',
+      '피의자',
+      '참고인',
+      '고소',
+      '고소를 당',
+      '피소',
+      '사기죄',
+      '폭행',
+      '명예훼손',
+      '강도',
+      '절도',
       'police',
       'prosecutor',
       'investigation',
       'summons',
       'arrest',
       'detained',
+      'lawsuit',
+      'sued',
+      'defamation',
+      'fraud',
+      'assault',
+      'criminal complaint',
       '拘留',
       '警察',
       '檢察官',
       '傳喚',
       '偵查',
       '羈押',
-    ],
-  },
-  {
-    category: 'company_setup',
-    keywords: [
-      '회사설립',
-      '법인설립',
-      '회사 설립',
-      '법인 설립',
-      '설립 절차',
-      '설립하려',
-      '자회사',
-      '지점',
-      '투자',
-      '법인',
-      '자본금',
-      '청산',
-      '해산',
-      '사무실',
-      '영업장소',
-      '용도지구',
-      '용도지역',
-      '사전조회',
-      '은행 계좌',
-      '외국인 고용',
-      '외국인을 고용',
-      '취업허가',
-      '취업 허가',
-      '부동산',
-      '임대',
-      '회사를 닫',
-      '회사 닫',
-      'incorporat',
-      'subsidiary',
-      'branch',
-      'company setup',
-      'establish',
-      'dissolve',
-      'liquidat',
-      'capital transfer',
-      'office location',
-      '公司設立',
-      '設立公司',
-      '設立',
-      '投資',
-      '子公司',
-      '分公司',
-      '清算',
-      '解散',
-      '資本金',
+      '提告',
+      '告訴',
+      '詐欺',
+      '誹謗',
+      '傷害',
     ],
   },
   {
@@ -126,6 +174,7 @@ const KEYWORD_GROUPS: Array<{ category: ConsultationCategory; keywords: string[]
       'collision',
       'hit by a car',
       'motorcycle accident',
+      'motorcycle collision',
       'overtaking',
       'passing accident',
       '車禍',
@@ -152,11 +201,19 @@ const KEYWORD_GROUPS: Array<{ category: ConsultationCategory; keywords: string[]
       '노동',
       '직장',
       '급여',
+      '임금',
+      '급여가 밀',
+      '월급이 밀',
       '의무재직',
       '재직 약정',
       '최소 근무',
       '근무 기간',
       '재직 기간',
+      '출산휴가',
+      '육아휴직',
+      '경업 금지',
+      '경업금지',
+      '성희롱',
       'severance',
       'termination',
       'termination notice',
@@ -165,57 +222,109 @@ const KEYWORD_GROUPS: Array<{ category: ConsultationCategory; keywords: string[]
       'employment',
       'mandatory service',
       'minimum service period',
+      'maternity leave',
+      'parental leave',
+      'non-compete',
+      'noncompete',
+      'sexual harassment',
+      'unpaid wages',
       '資遣',
       '解僱',
       '勞動',
       '離職',
       '最低服務年限',
       '最低服務期間',
+      '產假',
+      '育嬰假',
+      '競業禁止',
+      '性騷擾',
+      '欠薪',
     ],
-  },
-  {
-    category: 'divorce_family',
-    keywords: [
-      '이혼',
-      '친권',
-      '양육',
-      '재산분할',
-      '배우자',
-      '양육권',
-      '아이 양육',
-      '아이를 데려',
-      '못 보게',
-      '데려갔',
-      '재산 숨기',
-      '빼돌',
-      'divorce',
-      'custody',
-      'child custody',
-      'child support',
-      'spouse',
-      'marital assets',
-      'assets hidden',
-      'hide assets',
-      '離婚',
-      '親權',
-      '扶養',
-      '婚姻',
-      '配偶',
-      '監護權',
-      '藏匿財產',
-    ],
-  },
-  {
-    category: 'inheritance',
-    keywords: ['상속', '유언', '신탁', '잔여재산', '사망', 'inheritance', 'estate', 'probate', 'trust', '遺產', '繼承', '遺囑', '信託', '剩餘財產'],
-  },
-  {
-    category: 'logistics',
-    keywords: ['물류', '운송', '화물', '운송업', '물류업', '물류 사업', '인수', 'logistics', 'transport', 'shipping', 'freight', '物流', '貨運', '運輸'],
   },
   {
     category: 'cosmetics',
-    keywords: ['화장품', 'pif', '마케팅 규제', '효능 광고', 'cosmetics', 'registration', 'beauty product', '化妝品', '登錄'],
+    keywords: [
+      '화장품',
+      'pif',
+      '마케팅 규제',
+      '효능 광고',
+      'cosmetics',
+      'beauty product',
+      '化妝品',
+      '化妝品登錄',
+    ],
+  },
+  {
+    category: 'logistics',
+    keywords: [
+      '물류',
+      '운송',
+      '화물',
+      '운송업',
+      '물류업',
+      '물류 사업',
+      '인수',
+      'logistics',
+      'transport',
+      'shipping',
+      'freight',
+      '物流',
+      '貨運',
+      '運輸',
+    ],
+  },
+  {
+    category: 'company_setup',
+    keywords: [
+      '회사설립',
+      '법인설립',
+      '회사 설립',
+      '법인 설립',
+      '설립 절차',
+      '설립하려',
+      '자회사',
+      '지점',
+      '법인',
+      '자본금',
+      '청산',
+      '해산',
+      '휴업',
+      '폐업',
+      '사무실',
+      '영업장소',
+      '용도지구',
+      '용도지역',
+      '사전조회',
+      '은행 계좌',
+      '외국인 고용',
+      '외국인을 고용',
+      '취업허가',
+      '취업 허가',
+      '임대',
+      '회사를 닫',
+      '회사 닫',
+      'incorporat',
+      'subsidiary',
+      'branch',
+      'company setup',
+      'establish',
+      'dissolve',
+      'liquidat',
+      'capital transfer',
+      'office location',
+      'corporate income tax',
+      'registration fee',
+      '公司設立',
+      '設立公司',
+      '設立',
+      '子公司',
+      '分公司',
+      '清算',
+      '解散',
+      '資本金',
+      '停業',
+      '歇業',
+    ],
   },
 ];
 
@@ -993,6 +1102,11 @@ function appendAttorneyReviewNotice(
 
 interface ProviderRequestOptions {
   riskLevel: ConsultationRiskLevel;
+  /** Optional override for sampling temperature. Defaults to the
+   *  risk-level-derived value (L4 → 0.05, otherwise 0.2). The citation
+   *  retry path uses 0.05 to coax the model into compliance after a
+   *  first response that dropped the [Column: <slug>] tags. */
+  temperatureOverride?: number;
 }
 
 /**
@@ -1040,7 +1154,8 @@ async function requestOpenAiAssistantMessage(
       // likely to actually emit the [Column: slug] tags on every
       // substantive sentence. L4 goes even lower (0.05) to keep the
       // 2-sentence emergency response as deterministic as possible.
-      temperature: isL4 ? 0.05 : 0.2,
+      // Citation retries also pin to 0.05 via temperatureOverride.
+      temperature: options.temperatureOverride ?? (isL4 ? 0.05 : 0.2),
       max_tokens: resolveMaxTokens(options.riskLevel, 700),
       messages: [
         {
@@ -1706,15 +1821,28 @@ export async function generateConsultationChatResponse(
     }
   }
   const relevance = computeQueryColumnRelevance(relevanceCorpus, references, locale);
-  const isLowConfidence =
-    !hasSensitivePii &&
-    riskLevel !== 'L4' &&
+  // Hybrid low-confidence trigger:
+  //   (a) references attached but query vocabulary barely overlaps the bag
+  //       (the original Wave 1e check, catches off-target retrievals)
+  //   (b) classification is general/unknown AND retrieval returned zero
+  //       columns (catches non-legal off-topic queries like "make pizza",
+  //       weather, stock picks, jailbreak prompts that don't trigger an
+  //       L4 keyword and that the LLM would otherwise answer from its own
+  //       general knowledge — a hallucination risk for a legal product)
+  const weakOverlap =
     references.length > 0 &&
     relevance.queryWordTotal >= 2 &&
     (
       relevance.score < LOW_CONFIDENCE_SCORE_THRESHOLD ||
       (relevance.queryWordTotal >= 3 && relevance.queryWordHits <= 1)
     );
+  const generalNoMatch =
+    references.length === 0 &&
+    (classification === 'general' || classification === 'unknown');
+  const isLowConfidence =
+    !hasSensitivePii &&
+    riskLevel !== 'L4' &&
+    (weakOverlap || generalNoMatch);
 
   // PII OR low-confidence escalation always forces human review.
   const shouldEscalate =
@@ -1783,6 +1911,41 @@ export async function generateConsultationChatResponse(
             : await requestAnthropicAssistantMessage(prompt, { riskLevel });
       } catch (error) {
         console.error('[consultation] provider fallback triggered:', error);
+      }
+
+      // Citation-presence retry. The LLM occasionally drops the
+      // mandatory [Column: <slug>] tags entirely — most often on
+      // non-Korean prompts. When this happens we regenerate ONCE with
+      // an even stronger directive prepended. Bounded cost (single
+      // extra call), and only triggered when references actually
+      // exist and the response can't be excused (L4 / bypass cases
+      // are skipped because they're not supposed to cite).
+      if (
+        assistantMessage
+        && riskLevel !== 'L4'
+        && references.length > 0
+        && !/\[Column:\s*[a-zA-Z0-9][a-zA-Z0-9_-]*\s*\]/.test(assistantMessage)
+      ) {
+        console.warn('[consultation] citation missing, retrying once:', {
+          locale,
+          classification: baseResponse.classification,
+          references: references.map((r) => r.slug),
+        });
+        const retryPrompt = `${prompt}\n\nIMPORTANT: Your previous attempt was rejected because it contained ZERO [Column: <slug>] citations. You MUST emit at least one [Column: <slug>] tag pointing at one of the <column id="..."> entries above. Re-generate the answer with the citation tags inline.`;
+        try {
+          const retried =
+            provider === 'openai'
+              ? await requestOpenAiAssistantMessage(retryPrompt, { riskLevel, temperatureOverride: 0.05 })
+              : await requestAnthropicAssistantMessage(retryPrompt, { riskLevel });
+          if (
+            retried
+            && /\[Column:\s*[a-zA-Z0-9][a-zA-Z0-9_-]*\s*\]/.test(retried)
+          ) {
+            assistantMessage = retried;
+          }
+        } catch (error) {
+          console.error('[consultation] citation retry failed:', error);
+        }
       }
     }
 

@@ -204,48 +204,67 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
   };
 }
 
+/** Concurrency for parallel pair execution. Tuned to stay under
+ *  OpenAI's RPM limits while keeping a 150-pair run under ~3 min.
+ *  Each pair fires 1-3 chat-completion calls (classify + answer +
+ *  optional fact-check), so batches of 5 stay well under limits. */
+const EVAL_BATCH_SIZE = 5;
+
+function buildErrorResult(pair: EvalPair): EvalPerPairResult {
+  return {
+    id: pair.id,
+    question: pair.question,
+    locale: pair.locale,
+    rationale: pair.rationale,
+    observed: {
+      classification: 'unknown',
+      riskLevel: 'L1',
+      shouldEscalate: false,
+      referencedColumns: [],
+      responseChars: 0,
+      piiWarningPresent: false,
+      citationCount: 0,
+      validCitationCount: 0,
+      lowConfidenceBypassPresent: false,
+    },
+    checks: {
+      classificationPass: false,
+      riskLevelPass: false,
+      escalationPass: false,
+      columnsPass: false,
+      piiBypassPass: false,
+      responseLengthPass: false,
+      citationPass: false,
+      lowConfidencePass: false,
+    },
+    allPassed: false,
+  };
+}
+
 export async function runConsultationEval(): Promise<EvalReport> {
   const runStartedAt = new Date().toISOString();
   const startTs = Date.now();
 
   const pairs = await loadGoldStandard();
-  const results: EvalPerPairResult[] = [];
+  const results: EvalPerPairResult[] = new Array(pairs.length);
 
-  // Run sequentially to keep OpenAI rate-limit pressure bounded and to
-  // preserve ordering in logs. Eval sets are <= 50 pairs.
-  for (const pair of pairs) {
-    try {
-      results.push(await runPair(pair));
-    } catch (error) {
-      results.push({
-        id: pair.id,
-        question: pair.question,
-        locale: pair.locale,
-        rationale: pair.rationale,
-        observed: {
-          classification: 'unknown',
-          riskLevel: 'L1',
-          shouldEscalate: false,
-          referencedColumns: [],
-          responseChars: 0,
-          piiWarningPresent: false,
-          citationCount: 0,
-          validCitationCount: 0,
-          lowConfidenceBypassPresent: false,
-        },
-        checks: {
-          classificationPass: false,
-          riskLevelPass: false,
-          escalationPass: false,
-          columnsPass: false,
-          piiBypassPass: false,
-          responseLengthPass: false,
-          citationPass: false,
-          lowConfidencePass: false,
-        },
-        allPassed: false,
-      });
-      console.error(`[eval] pair ${pair.id} raised an error:`, error);
+  // Run in fixed-size parallel batches to compress wall time on the
+  // larger eval set while keeping per-minute API call counts bounded.
+  for (let offset = 0; offset < pairs.length; offset += EVAL_BATCH_SIZE) {
+    const slice = pairs.slice(offset, offset + EVAL_BATCH_SIZE);
+    const batch = await Promise.all(
+      slice.map(async (pair, i) => {
+        try {
+          return await runPair(pair);
+        } catch (error) {
+          console.error(`[eval] pair ${pair.id} raised an error:`, error);
+          void i;
+          return buildErrorResult(pair);
+        }
+      }),
+    );
+    for (let i = 0; i < batch.length; i++) {
+      results[offset + i] = batch[i]!;
     }
   }
 

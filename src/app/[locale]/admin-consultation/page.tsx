@@ -332,6 +332,10 @@ export default async function AdminConsultationPage({
                 <td className="admin-console-num">{metrics.safety.rateLimitedChat}</td>
               </tr>
               <tr>
+                <td>Prompt injection blocked</td>
+                <td className="admin-console-num">{metrics.funnel.chat_injection_blocked}</td>
+              </tr>
+              <tr>
                 <td>Submit rate-limited (session)</td>
                 <td className="admin-console-num">{metrics.safety.rateLimitedSubmit}</td>
               </tr>

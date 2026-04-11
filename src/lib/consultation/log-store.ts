@@ -31,6 +31,7 @@ export type ConsultationFunnelStage =
   | 'chat_answered'
   | 'chat_rate_limited'
   | 'chat_failed'
+  | 'chat_injection_blocked'
   | 'submit_received'
   | 'submit_validated'
   | 'submit_consent_missing'

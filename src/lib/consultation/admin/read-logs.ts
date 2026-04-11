@@ -69,6 +69,7 @@ export interface AdminDashboardMetrics {
     chat_answered: number;
     chat_failed: number;
     chat_rate_limited: number;
+    chat_injection_blocked: number;
     escalation_shown: number;
     form_opened: number;
     form_submit_attempted: number;
@@ -204,6 +205,7 @@ export async function readDashboardMetrics(
     chat_answered: countFunnelStage(events, 'chat_answered'),
     chat_failed: countFunnelStage(events, 'chat_failed'),
     chat_rate_limited: countFunnelStage(events, 'chat_rate_limited'),
+    chat_injection_blocked: countFunnelStage(events, 'chat_injection_blocked'),
     escalation_shown: countFunnelStage(events, 'escalation_shown'),
     form_opened: countFunnelStage(events, 'form_opened'),
     form_submit_attempted: countFunnelStage(events, 'form_submit_attempted'),

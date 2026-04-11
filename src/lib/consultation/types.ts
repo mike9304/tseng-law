@@ -99,6 +99,8 @@ export interface ConsultationChatStreamMetadata {
   sourceFreshness: ConsultationSourceFreshness;
   sourceConfidence: ConsultationSourceConfidence;
   suggestedHandoffChannel: 'line' | 'kakao' | 'email' | 'phone' | 'none';
+  /** Server-side diagnostic; see ConsultationChatResponse. */
+  promptInjectionDetected?: boolean;
 }
 
 /** Discriminated union of server → client chunks. */
@@ -127,6 +129,11 @@ export interface ConsultationChatResponse {
   sourceFreshness: ConsultationSourceFreshness;
   sourceConfidence: ConsultationSourceConfidence;
   suggestedHandoffChannel: 'line' | 'kakao' | 'email' | 'phone' | 'none';
+  /** Server-side diagnostic: true when the engine refused this request
+   *  via the prompt-injection detector. The chat route consumes this
+   *  to emit a `chat_injection_blocked` funnel event for the operator
+   *  dashboard. Never rendered in the UI. */
+  promptInjectionDetected?: boolean;
 }
 
 export interface ConsultationSubmitRequestBody {

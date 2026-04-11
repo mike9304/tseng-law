@@ -109,6 +109,19 @@ export async function POST(request: NextRequest) {
           for await (const chunk of streamConsultationChatResponse(locale, body)) {
             if (chunk.type === 'metadata') {
               capturedMetadata = chunk.data;
+              if (chunk.data.promptInjectionDetected) {
+                logConsultationFunnelEvent({
+                  funnelStage: 'chat_injection_blocked',
+                  sessionId,
+                  locale,
+                  classification: chunk.data.classification,
+                  riskLevel: chunk.data.riskLevel,
+                  userAgent,
+                  ipAddress: ipHeader,
+                }).catch((err) =>
+                  console.error('[consultation] injection log failed:', err),
+                );
+              }
             }
             controller.enqueue(encoder.encode(encodeSseChunk(chunk)));
           }
@@ -175,6 +188,18 @@ export async function POST(request: NextRequest) {
 
   try {
     const response = await generateConsultationChatResponse(locale, body);
+
+    if (response.promptInjectionDetected) {
+      logConsultationFunnelEvent({
+        funnelStage: 'chat_injection_blocked',
+        sessionId,
+        locale,
+        classification: response.classification,
+        riskLevel: response.riskLevel,
+        userAgent,
+        ipAddress: ipHeader,
+      }).catch((err) => console.error('[consultation] injection log failed:', err));
+    }
 
     try {
       await logConsultationChatEvent({

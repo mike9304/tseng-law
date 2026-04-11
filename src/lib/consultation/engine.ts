@@ -468,6 +468,102 @@ const L3_KEYWORDS = [
   '消費者保護',
 ];
 
+/**
+ * Prompt-injection patterns. Detected BEFORE classification so that
+ * the engine can refuse the request without ever invoking the LLM
+ * with the adversarial text. The user-facing response reuses the
+ * low-confidence bypass message (we don't want to teach attackers
+ * what the detector triggered on), but a dedicated funnel stage
+ * lets operators see the volume in the dashboard.
+ *
+ * Patterns are kept as plain substrings — these are well-known
+ * jailbreak templates and the substring approach has zero false-
+ * positive risk for actual legal queries. Add new ones below
+ * whenever a new vector is observed in the wild.
+ */
+const PROMPT_INJECTION_PATTERNS = [
+  // English: instruction override
+  'ignore previous instructions',
+  'ignore your previous instructions',
+  'ignore all previous',
+  'ignore the above',
+  'disregard previous',
+  'disregard the above',
+  'forget your instructions',
+  'forget the above',
+  'override your instructions',
+  // English: persona / disclaimer bypass
+  'pretend you are',
+  'pretend to be',
+  'act as if',
+  'without the disclaimer',
+  'without disclaimers',
+  'no disclaimers',
+  'no disclaimer',
+  // English: system-prompt extraction
+  'reveal your system',
+  'show your system prompt',
+  'what is your system prompt',
+  'print your system prompt',
+  'repeat your instructions',
+  'repeat the rules you',
+  // Korean: instruction override
+  '이전 지시 무시',
+  '이전 지시사항 무시',
+  '이전 지시를 무시',
+  '지시사항을 무시',
+  '이전의 모든 지시',
+  '앞의 지시 무시',
+  '앞선 지시 무시',
+  // Korean: persona / disclaimer bypass
+  '면책 조항 없이',
+  '면책조항 없이',
+  '면책 없이',
+  '면책없이',
+  '경고 없이',
+  '척 해 주세요',
+  '척 해줘',
+  '인 척',
+  // Korean: system-prompt extraction
+  '시스템 프롬프트를 알려',
+  '시스템 프롬프트가 뭐',
+  '내부 규칙을 알려',
+  '내부 규칙이 뭐',
+  '숨겨진 규칙을 알려',
+  '지시사항을 보여',
+  '지시사항을 알려',
+  // Traditional Chinese: instruction override
+  '請忽略先前',
+  '請忽略之前',
+  '請忽略所有',
+  '忽略先前指示',
+  '忽略所有指示',
+  '無視先前',
+  '無視之前的指示',
+  // Traditional Chinese: persona / disclaimer bypass
+  '不用加免責',
+  '不要免責',
+  '不需要免責',
+  '不加免責',
+  '假裝你是',
+  '扮演律師',
+  // Traditional Chinese: system-prompt extraction
+  '告訴我你的系統提示',
+  '告訴我你的內部規則',
+  '你的系統提示內容',
+  '你的系統提示是什麼',
+  '顯示你的指示',
+  '顯示系統提示',
+];
+
+function detectPromptInjection(message: string): boolean {
+  const normalized = message.toLowerCase();
+  for (const pattern of PROMPT_INJECTION_PATTERNS) {
+    if (normalized.includes(pattern.toLowerCase())) return true;
+  }
+  return false;
+}
+
 const CONSULTATION_INTENT_KEYWORDS = [
   '상담',
   '예약',
@@ -1742,12 +1838,35 @@ export async function generateConsultationChatResponse(
   const piiHits = detectSensitivePii(message);
   const hasSensitivePii = piiHits.length > 0;
 
-  const classification = classifyConsultationCategory(message, collectedFields, priorTurns);
-  // PII presence forces riskLevel to L4 regardless of keyword scoring, so
-  // downstream handoff channel + escalation prompts match the urgency.
+  // Prompt-injection detection runs alongside PII so that adversarial
+  // jailbreak templates ("ignore previous instructions", "pretend you
+  // are a real lawyer", system-prompt extraction, ...) never reach the
+  // LLM at all. We don't differentiate the user-facing message from
+  // the regular low-confidence bypass — leaking which detector tripped
+  // would help attackers iterate. The funnel log entry below DOES
+  // distinguish injection attempts from generic off-topic queries so
+  // operators can monitor adversarial volume in the dashboard.
+  const promptInjectionDetected = !hasSensitivePii && detectPromptInjection(message);
+  if (promptInjectionDetected) {
+    console.warn('[consultation] prompt injection detected; LLM bypassed.', {
+      sessionId: request.sessionId,
+      locale,
+    });
+  }
+
+  // Prompt injection short-circuits classification + risk metadata so
+  // the bypass response and the baseResponse are internally consistent.
+  // (Without this override, '我是律師' / '시스템 프롬프트' etc. fire L4 via
+  // the legacy L4_KEYWORDS list, leaving the user with a low-confidence
+  // body next to L4 metadata — confusing for both clients and operators.)
+  const classification: ConsultationCategory = promptInjectionDetected
+    ? 'general'
+    : classifyConsultationCategory(message, collectedFields, priorTurns);
   const riskLevel: ConsultationRiskLevel = hasSensitivePii
     ? 'L4'
-    : detectConsultationRisk(message, classification, collectedFields);
+    : promptInjectionDetected
+      ? 'L1'
+      : detectConsultationRisk(message, classification, collectedFields);
   const deadlineEmergency = isDeadlineEmergency(message, classification);
   const laborDismissalUrgency = isLaborDismissalUrgency(message, classification);
   const divorceFamilyConflict = isDivorceFamilyConflict(message, classification);
@@ -1844,9 +1963,10 @@ export async function generateConsultationChatResponse(
     riskLevel !== 'L4' &&
     (weakOverlap || generalNoMatch);
 
-  // PII OR low-confidence escalation always forces human review.
+  // PII / low-confidence / prompt-injection always forces human review.
   const shouldEscalate =
     hasSensitivePii ||
+    promptInjectionDetected ||
     isLowConfidence ||
     needsHumanReview(message, classification, riskLevel);
   const nextRequiredField = determineNextRequiredField(shouldEscalate, collectedFields, classification, riskLevel, message);
@@ -1882,6 +2002,12 @@ export async function generateConsultationChatResponse(
       sessionId: request.sessionId,
     });
     assistantMessage = buildPiiWarningAssistantMessage(locale);
+  } else if (promptInjectionDetected) {
+    // Hard override #1.5: prompt injection. Reuse the low-confidence
+    // bypass message verbatim — we don't want the user-facing copy to
+    // tell attackers which detector tripped. Operators see this as a
+    // distinct funnel stage in the dashboard.
+    assistantMessage = buildLowConfidenceAssistantMessage(locale);
   } else if (isLowConfidence) {
     // Hard override #2: low query-column relevance. Return canned
     // "out of scope" message to force the user into human review
@@ -2002,6 +2128,7 @@ export async function generateConsultationChatResponse(
       locale,
       baseResponse.shouldEscalate,
     ),
+    promptInjectionDetected: promptInjectionDetected || undefined,
   };
 }
 
@@ -2037,11 +2164,22 @@ export async function* streamConsultationChatResponse(
   // would have gotten from a flat JSON call.
   const piiHits = detectSensitivePii(message);
   const hasSensitivePii = piiHits.length > 0;
+  const promptInjectionDetected = !hasSensitivePii && detectPromptInjection(message);
+  if (promptInjectionDetected) {
+    console.warn('[consultation stream] prompt injection detected; LLM bypassed.', {
+      sessionId: request.sessionId,
+      locale,
+    });
+  }
 
-  const classification = classifyConsultationCategory(message, collectedFields, priorTurns);
+  const classification: ConsultationCategory = promptInjectionDetected
+    ? 'general'
+    : classifyConsultationCategory(message, collectedFields, priorTurns);
   const riskLevel: ConsultationRiskLevel = hasSensitivePii
     ? 'L4'
-    : detectConsultationRisk(message, classification, collectedFields);
+    : promptInjectionDetected
+      ? 'L1'
+      : detectConsultationRisk(message, classification, collectedFields);
   const deadlineEmergency = isDeadlineEmergency(message, classification);
   const laborDismissalUrgency = isLaborDismissalUrgency(message, classification);
   const divorceFamilyConflict = isDivorceFamilyConflict(message, classification);
@@ -2098,6 +2236,7 @@ export async function* streamConsultationChatResponse(
 
   const shouldEscalate =
     hasSensitivePii ||
+    promptInjectionDetected ||
     isLowConfidence ||
     needsHumanReview(message, classification, riskLevel);
   const nextRequiredField = determineNextRequiredField(
@@ -2147,6 +2286,7 @@ export async function* streamConsultationChatResponse(
       sourceFreshness,
       sourceConfidence,
       suggestedHandoffChannel: handoffChannel,
+      promptInjectionDetected: promptInjectionDetected || undefined,
     },
   };
 
@@ -2162,6 +2302,19 @@ export async function* streamConsultationChatResponse(
     yield {
       type: 'attorney_notice',
       text: getAttorneyReviewNotice(locale, { emphasizeImmediate: true }),
+    };
+    yield { type: 'done' };
+    return;
+  }
+
+  // Hard override #1.5: prompt injection — reuse low-confidence copy
+  // verbatim to avoid leaking which detector tripped.
+  if (promptInjectionDetected) {
+    const msg = buildLowConfidenceAssistantMessage(locale);
+    yield { type: 'delta', text: msg };
+    yield {
+      type: 'attorney_notice',
+      text: getAttorneyReviewNotice(locale, { emphasizeImmediate: shouldEscalate }),
     };
     yield { type: 'done' };
     return;

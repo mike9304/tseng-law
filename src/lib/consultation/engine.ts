@@ -1062,6 +1062,125 @@ async function requestAnthropicAssistantMessage(
   return text ? trimAssistantMessage(text) : null;
 }
 
+/**
+ * Groundedness verdicts returned by the post-hoc fact-check LLM pass.
+ * - GROUNDED: every factual claim is supported by the provided columns.
+ * - PARTIAL:  most claims are grounded, 1-2 sentences are not.
+ * - UNGROUNDED: multiple load-bearing claims are not in the columns.
+ * - SKIPPED: verification was not attempted (no columns, L4, PII, ...).
+ */
+type GroundednessVerdict = 'GROUNDED' | 'PARTIAL' | 'UNGROUNDED' | 'SKIPPED';
+
+interface GroundednessResult {
+  verdict: GroundednessVerdict;
+  reason?: string;
+}
+
+const GROUNDEDNESS_SYSTEM_PROMPT =
+  'You are a strict legal-claim verifier. You will be given a block of <column> source tags and a candidate response written by another assistant. Return EXACTLY one JSON object with two fields: "verdict" (one of "GROUNDED", "PARTIAL", "UNGROUNDED") and "reason" (a short one-line explanation in English).\n\nRules:\n- GROUNDED: every factual claim in the candidate response (steps, deadlines, fees, article numbers, requirements, legal thresholds) appears in the column bodies, either verbatim or as a straightforward paraphrase.\n- PARTIAL: most claims are grounded, but 1 or 2 sentences contain facts not in any <column>.\n- UNGROUNDED: the response invents article numbers, filing fees, deadlines, tax rates, or makes multiple load-bearing claims that cannot be traced to any <column>.\n- Ignore sentences that are pure framing ("I will explain...", "This is a general guideline..."), closing invitations ("contact our firm"), and disclaimers.\n- Ignore [Column: slug] citation tags themselves; they are not claims.\n- Return ONLY the JSON object. No prose, no markdown fencing, no additional keys.';
+
+/**
+ * Call OpenAI gpt-4o-mini (temperature 0) as a post-hoc fact-check on
+ * the primary response. Any failure in this path returns SKIPPED so
+ * the user still gets the primary response rather than an error.
+ */
+async function verifyResponseGroundedness(
+  assistantMessage: string,
+  columnContext: string,
+): Promise<GroundednessResult> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) return { verdict: 'SKIPPED', reason: 'no_api_key' };
+  if (!columnContext || columnContext.trim() === '' || columnContext === 'No approved internal column summary available.') {
+    return { verdict: 'SKIPPED', reason: 'no_columns' };
+  }
+
+  const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
+  try {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        temperature: 0,
+        max_tokens: 150,
+        response_format: { type: 'json_object' },
+        messages: [
+          { role: 'system', content: GROUNDEDNESS_SYSTEM_PROMPT },
+          {
+            role: 'user',
+            content: [
+              '[BEGIN COLUMN SOURCES]',
+              columnContext,
+              '[END COLUMN SOURCES]',
+              '',
+              '[BEGIN CANDIDATE RESPONSE]',
+              assistantMessage,
+              '[END CANDIDATE RESPONSE]',
+              '',
+              'Return the JSON verdict only.',
+            ].join('\n'),
+          },
+        ],
+      }),
+    });
+    if (!response.ok) {
+      return { verdict: 'SKIPPED', reason: `fact_check_http_${response.status}` };
+    }
+    const data = (await response.json()) as {
+      choices?: Array<{ message?: { content?: string } }>;
+    };
+    const raw = data.choices?.[0]?.message?.content?.trim();
+    if (!raw) return { verdict: 'SKIPPED', reason: 'empty_response' };
+    try {
+      const parsed = JSON.parse(raw) as { verdict?: string; reason?: string };
+      if (
+        parsed.verdict === 'GROUNDED' ||
+        parsed.verdict === 'PARTIAL' ||
+        parsed.verdict === 'UNGROUNDED'
+      ) {
+        return {
+          verdict: parsed.verdict,
+          reason: typeof parsed.reason === 'string' ? parsed.reason : undefined,
+        };
+      }
+      return { verdict: 'SKIPPED', reason: 'unrecognized_verdict' };
+    } catch {
+      // Lenient fallback: if JSON parse fails, try substring match.
+      const upper = raw.toUpperCase();
+      if (upper.includes('UNGROUNDED')) return { verdict: 'UNGROUNDED', reason: 'substring_fallback' };
+      if (upper.includes('PARTIAL')) return { verdict: 'PARTIAL', reason: 'substring_fallback' };
+      if (upper.includes('GROUNDED')) return { verdict: 'GROUNDED', reason: 'substring_fallback' };
+      return { verdict: 'SKIPPED', reason: 'parse_failed' };
+    }
+  } catch (error) {
+    console.error('[consultation] groundedness verification failed:', error);
+    return { verdict: 'SKIPPED', reason: 'fetch_error' };
+  }
+}
+
+function buildGroundednessWarningSuffix(locale: Locale, verdict: GroundednessVerdict): string {
+  if (verdict !== 'PARTIAL' && verdict !== 'UNGROUNDED') return '';
+  if (locale === 'ko') {
+    if (verdict === 'UNGROUNDED') {
+      return '\n\n⚠️ 위 응답의 일부 주장이 공개 칼럼으로 검증되지 않아 신뢰도가 낮습니다. 구체 사건은 대만 변호사 직접 상담을 권해 드립니다.';
+    }
+    return '\n\n⚠️ 위 응답 일부 내용은 칼럼으로 직접 확인하지 못했습니다. 중요한 결정 전에 반드시 대만 변호사 검토가 필요합니다.';
+  }
+  if (locale === 'zh-hant') {
+    if (verdict === 'UNGROUNDED') {
+      return '\n\n⚠️ 上述回覆的多項主張無法直接以公開文章佐證，可信度較低。具體案件請直接諮詢台灣律師。';
+    }
+    return '\n\n⚠️ 上述回覆的部分內容未能在文章中直接確認。重要決定前請務必由台灣律師檢閱。';
+  }
+  if (verdict === 'UNGROUNDED') {
+    return '\n\n⚠️ Several claims in the response above could not be verified against our public columns, so its reliability is low. For case-specific advice, please consult a Taiwan lawyer directly.';
+  }
+  return '\n\n⚠️ Some of the content above could not be verified directly against the cited columns. A Taiwan lawyer should review this before any important decision.';
+}
+
 /** Strip common prompt-injection patterns from user input. */
 function sanitizeUserMessage(raw: string): string {
   return raw
@@ -1408,6 +1527,34 @@ export async function generateConsultationChatResponse(
             : await requestAnthropicAssistantMessage(prompt, { riskLevel });
       } catch (error) {
         console.error('[consultation] provider fallback triggered:', error);
+      }
+    }
+
+    // Post-hoc groundedness verification. Only runs when:
+    //   - we actually got an LLM response back,
+    //   - there is a non-empty column context to verify against,
+    //   - the risk level is not L4 (L4 responses are short, non-substantive),
+    //   - PII bypass was not triggered.
+    // PARTIAL/UNGROUNDED verdicts append a locale-specific warning suffix
+    // to the response and force shouldEscalate to true so operator triage
+    // flags the session. GROUNDED/SKIPPED leave the response untouched.
+    if (
+      assistantMessage &&
+      riskLevel !== 'L4' &&
+      references.length > 0
+    ) {
+      const columnContextForVerify = getConsultationColumnContextText(references, locale);
+      const verdict = await verifyResponseGroundedness(
+        assistantMessage,
+        columnContextForVerify,
+      );
+      if (verdict.verdict === 'PARTIAL' || verdict.verdict === 'UNGROUNDED') {
+        console.warn('[consultation] groundedness flagged:', {
+          sessionId: request.sessionId,
+          verdict: verdict.verdict,
+          reason: verdict.reason,
+        });
+        assistantMessage = `${assistantMessage}${buildGroundednessWarningSuffix(locale, verdict.verdict)}`;
       }
     }
   }

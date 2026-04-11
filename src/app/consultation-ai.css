@@ -6,6 +6,348 @@
    ========================================================================= */
 
 /* -------------------------------------------------------------------------
+   Wave 5 — Consultation operator dashboard
+   Minimal, typography-first layout. No client components, no frameworks.
+   ------------------------------------------------------------------------- */
+.admin-console {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 4rem;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  color: #1f2937;
+}
+
+.admin-console-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 2rem;
+}
+
+.admin-console-header h1 {
+  margin: 0 0 0.45rem;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #0d221a;
+}
+
+.admin-console-header p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.admin-console-window-nav {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.admin-console-window-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+.admin-console-window-nav a:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.admin-console-window-nav a.is-active {
+  background: #0b3b2e;
+  border-color: #0b3b2e;
+  color: #ffffff;
+}
+
+.admin-console-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.admin-console-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.admin-console-section > header {
+  margin-bottom: 0.85rem;
+}
+
+.admin-console-section h2 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0d221a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-console-section > header > p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+.admin-console-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .admin-console-split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.admin-console-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  color: #1f2937;
+}
+
+.admin-console-table th,
+.admin-console-table td {
+  padding: 0.45rem 0.65rem;
+  border-bottom: 1px solid #f3f4f6;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.admin-console-table th {
+  background: #f9fafb;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-console-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-console-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.admin-console-pos {
+  color: #047857;
+}
+
+.admin-console-neg {
+  color: #b91c1c;
+}
+
+.admin-console-empty,
+.admin-console-empty-note {
+  color: #9ca3af;
+  font-style: italic;
+  text-align: center;
+}
+
+.admin-console-empty-note {
+  padding: 0.5rem 0;
+  font-size: 0.84rem;
+}
+
+.admin-console-pct-cell {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 140px;
+}
+
+.admin-console-pct-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.admin-console-pct-bar {
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: #f3f4f6;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.admin-console-pct-bar > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #0b3b2e 100%);
+}
+
+.admin-console-feedback-bar {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #fee2e2;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.admin-console-feedback-bar-pos {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #047857 100%);
+  transition: width 200ms ease;
+}
+
+.admin-console-feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.admin-console-feedback-list li {
+  border: 1px solid #fee2e2;
+  background: #fef2f2;
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+}
+
+.admin-console-feedback-meta,
+.admin-console-chat-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.admin-console-feedback-time,
+.admin-console-chat-time {
+  font-size: 0.74rem;
+  color: #6b7280;
+  font-variant-numeric: tabular-nums;
+}
+
+.admin-console-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-console-feedback-session {
+  font-size: 0.74rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.admin-console-feedback-session code {
+  font-size: 0.72rem;
+  background: rgba(148, 163, 184, 0.18);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+}
+
+.admin-console-feedback-comment {
+  margin: 0;
+  color: #7f1d1d;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.admin-console-chat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.admin-console-chat-list li {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+}
+
+.admin-console-chat-message {
+  margin: 0;
+  color: #1f2937;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.admin-console-chat-refs {
+  margin: 0.3rem 0 0;
+  color: #9ca3af;
+  font-size: 0.74rem;
+}
+
+.admin-console-status-ok {
+  color: #047857;
+  font-weight: 600;
+}
+
+.admin-console-status-fail {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.admin-console-time {
+  font-size: 0.78rem;
+  color: #6b7280;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.admin-console-table--wide th,
+.admin-console-table--wide td {
+  padding: 0.55rem 0.7rem;
+}
+
+.admin-console-gate {
+  max-width: 640px;
+  margin: 6rem auto;
+  padding: 2rem;
+  font-family: system-ui, sans-serif;
+  color: #374151;
+}
+
+/* -------------------------------------------------------------------------
    Floating chat — assistant message feedback (thumbs up/down)
    ------------------------------------------------------------------------- */
 .floating-ai-chat-feedback {

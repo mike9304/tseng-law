@@ -49,6 +49,10 @@ export interface EvalPerPairResult {
     referencedColumns: string[];
     responseChars: number;
     piiWarningPresent: boolean;
+    /** Number of [Column: slug] citations the LLM emitted in its response. */
+    citationCount: number;
+    /** Of the citations found, how many point at a slug present in referencedColumns. */
+    validCitationCount: number;
   };
   checks: {
     classificationPass: boolean;
@@ -57,6 +61,14 @@ export interface EvalPerPairResult {
     columnsPass: boolean;
     piiBypassPass: boolean;
     responseLengthPass: boolean;
+    /**
+     * Citation-quality check:
+     * - L1/L2/L3 non-PII non-adversarial pairs with references: REQUIRE ≥1 valid citation.
+     * - L4 pairs: no citations expected (L4 mode forbids column quotes).
+     * - PII bypass pairs: no citations expected.
+     * - Fallback-only pairs (no references available): pass through.
+     */
+    citationPass: boolean;
   };
   allPassed: boolean;
 }
@@ -77,6 +89,14 @@ export interface EvalReport {
     columns: { passed: number; total: number };
     piiBypass: { passed: number; total: number };
     responseLength: { passed: number; total: number };
+    citation: { passed: number; total: number };
+  };
+  /** Aggregate citation statistics across non-L4 pairs. */
+  citationStats: {
+    totalCitationsEmitted: number;
+    totalValidCitations: number;
+    averageCitationsPerEligiblePair: number;
+    eligiblePairs: number;
   };
   failures: EvalPerPairResult[];
   results: EvalPerPairResult[];

@@ -44,6 +44,28 @@ function isPiiWarningMessage(message: string): boolean {
   );
 }
 
+/**
+ * Extract every [Column: slug] citation the LLM emitted in its response.
+ * Accepts either plain slugs or slugs with whitespace, and tolerates the
+ * bracket content being wrapped with extra spaces. The regex captures the
+ * slug body up until the closing bracket so we can validate it against
+ * the response.referencedColumns list.
+ */
+const CITATION_PATTERN = /\[Column:\s*([a-zA-Z0-9][a-zA-Z0-9_-]*)\s*\]/g;
+
+function extractCitations(message: string): string[] {
+  const hits: string[] = [];
+  let match: RegExpExecArray | null;
+  // The regex has the 'g' flag, so we re-create a local copy each call
+  // to avoid cross-call lastIndex state leaking between pairs.
+  const rx = new RegExp(CITATION_PATTERN.source, 'g');
+  while ((match = rx.exec(message)) !== null) {
+    const slug = match[1];
+    if (slug) hits.push(slug);
+  }
+  return hits;
+}
+
 async function loadGoldStandard(): Promise<EvalPair[]> {
   const filePath = path.join(
     process.cwd(),
@@ -72,6 +94,9 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
   const strippedMessage = stripAttorneyNotice(response.assistantMessage, pair.locale);
   const responseChars = strippedMessage.length;
   const piiWarningPresent = isPiiWarningMessage(response.assistantMessage);
+  const emittedCitations = extractCitations(response.assistantMessage);
+  const referencedSet = new Set(response.referencedColumns);
+  const validCitations = emittedCitations.filter((slug) => referencedSet.has(slug));
 
   const requiredSlugs = new Set(pair.expected.requiredColumnSlugs ?? []);
   const actualSlugs = new Set(response.referencedColumns);
@@ -90,13 +115,30 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
   const maxChars = pair.expected.maxResponseChars ?? DEFAULT_MAX_RESPONSE_CHARS;
   const responseLengthPass = responseChars <= maxChars;
 
+  // Citation quality check:
+  // - L4 pairs: no citations expected (L4 mode forbids column quotes).
+  // - PII bypass pairs: no citations expected (canned warning).
+  // - Otherwise, when the engine DID attach references to this response,
+  //   the LLM must emit ≥1 valid [Column: slug] tag pointing at one of
+  //   those references. If no references were attached (e.g. fallback),
+  //   the check passes through.
+  let citationPass: boolean;
+  if (pair.expected.piiBypass || pair.expected.riskLevel === 'L4') {
+    citationPass = true;
+  } else if (response.referencedColumns.length === 0) {
+    citationPass = true;
+  } else {
+    citationPass = validCitations.length >= 1;
+  }
+
   const allPassed =
     classificationPass &&
     riskLevelPass &&
     escalationPass &&
     columnsPass &&
     piiBypassPass &&
-    responseLengthPass;
+    responseLengthPass &&
+    citationPass;
 
   // Mark setsIntersect as referenced so eslint doesn't complain; it is
   // intentionally kept in the module for future use (fuzzy match mode).
@@ -114,6 +156,8 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
       referencedColumns: response.referencedColumns,
       responseChars,
       piiWarningPresent,
+      citationCount: emittedCitations.length,
+      validCitationCount: validCitations.length,
     },
     checks: {
       classificationPass,
@@ -122,6 +166,7 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
       columnsPass,
       piiBypassPass,
       responseLengthPass,
+      citationPass,
     },
     allPassed,
   };
@@ -152,6 +197,8 @@ export async function runConsultationEval(): Promise<EvalReport> {
           referencedColumns: [],
           responseChars: 0,
           piiWarningPresent: false,
+          citationCount: 0,
+          validCitationCount: 0,
         },
         checks: {
           classificationPass: false,
@@ -160,6 +207,7 @@ export async function runConsultationEval(): Promise<EvalReport> {
           columnsPass: false,
           piiBypassPass: false,
           responseLengthPass: false,
+          citationPass: false,
         },
         allPassed: false,
       });
@@ -194,6 +242,34 @@ export async function runConsultationEval(): Promise<EvalReport> {
     columns: tally((r) => r.checks.columnsPass),
     piiBypass: tally((r) => r.checks.piiBypassPass),
     responseLength: tally((r) => r.checks.responseLengthPass),
+    citation: tally((r) => r.checks.citationPass),
+  };
+
+  // Aggregate citation stats across pairs that were actually expected to
+  // produce citations (i.e. the citation check was "real", not a pass-through).
+  const eligibleForCitation = results.filter((r) => {
+    const pair = pairs.find((p) => p.id === r.id);
+    if (!pair) return false;
+    if (pair.expected.piiBypass) return false;
+    if (pair.expected.riskLevel === 'L4') return false;
+    return r.observed.referencedColumns.length > 0;
+  });
+  const totalCitationsEmitted = eligibleForCitation.reduce(
+    (sum, r) => sum + r.observed.citationCount,
+    0,
+  );
+  const totalValidCitations = eligibleForCitation.reduce(
+    (sum, r) => sum + r.observed.validCitationCount,
+    0,
+  );
+  const citationStats = {
+    totalCitationsEmitted,
+    totalValidCitations,
+    averageCitationsPerEligiblePair:
+      eligibleForCitation.length === 0
+        ? 0
+        : totalCitationsEmitted / eligibleForCitation.length,
+    eligiblePairs: eligibleForCitation.length,
   };
 
   const finishTs = Date.now();
@@ -208,6 +284,7 @@ export async function runConsultationEval(): Promise<EvalReport> {
     passRate,
     byCategory,
     byMetric,
+    citationStats,
     failures: results.filter((r) => !r.allPassed),
     results,
   };

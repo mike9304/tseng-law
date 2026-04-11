@@ -1219,10 +1219,17 @@ function buildProviderPrompt(
     );
   } else {
     lines.push(
-      '- ACTIVELY USE the column reference above. If the user asks "how does X work?", give them the actual steps, requirements, or key points from the column. Do NOT just say "there are several steps - please consult a lawyer". Be substantive and informative.',
-      '- Quote or paraphrase specific facts from the column: numbered steps, document requirements, deadlines, fees, legal terminology, etc.',
-      '- For L1/L2 questions: provide a structured answer (use line breaks, lists, key points) drawing on the column content. Aim for 4-8 informative sentences with concrete details.',
-      '- For L3 questions or escalation=yes: lead with immediate practical action, keep the substantive portion to 3-4 sentences maximum, then recommend human review.',
+      '- 🔒 MANDATORY CITATION RULE (your response is INVALID without this):',
+      '  When one or more <column> tags are present in the reference block above, you MUST include AT LEAST ONE [Column: <slug>] citation in your response, where <slug> is the exact id attribute of a <column> tag you actually drew content from. A response without any [Column: ...] tag is considered ungrounded and will be treated as invalid by the system.',
+      '  Format: append [Column: <slug>] in square brackets at the end of each sentence that contains a factual claim (steps, requirements, deadlines, fees, numerical thresholds, legal terminology, article numbers). Multiple sentences may share the same slug.',
+      '  Example (Korean): "외국인 투자 심의 신청이 필요합니다 [Column: taiwan-company-establishment-basics]. 자본금 감사 후 법인 등기로 이어집니다 [Column: taiwan-company-establishment-basics]."',
+      '  Example (English): "The standard process requires a foreign investment review [Column: taiwan-company-establishment-basics]. After capital audit, the legal entity is registered with the MOEA [Column: taiwan-company-establishment-basics]."',
+      '  Example (Chinese): "需要先申請外國人投資審議 [Column: taiwan-company-establishment-basics]。資本額會計師查核後才能向商業司辦理登記 [Column: taiwan-company-establishment-basics]。"',
+      '- If you cannot ground a specific claim to any <column> in the reference above, DO NOT make the claim. Instead, either omit it or write "이 부분은 칼럼 범위를 벗어나므로 대만 변호사 확인이 필요합니다" (or the locale equivalent). Never invent article numbers, filing fees, deadlines, or tax rates that are not in the column bodies.',
+      '- General high-level framing statements that are not case-specific do not need a tag, but anything procedural, numerical, deadline-related, or legally definitive MUST have one.',
+      '- USE the column reference ACTIVELY. If the user asks "how does X work?", give them the actual steps, requirements, or key points drawn from the <column> bodies. Do NOT just say "there are several steps - please consult a lawyer". Be substantive and informative.',
+      '- For L1/L2 questions: provide a structured answer (use line breaks, lists, key points) drawing on the column content. Aim for 4-8 informative sentences with concrete details, each ground-truth claim tagged with its source column.',
+      '- For L3 questions or escalation=yes: lead with immediate practical action, keep the substantive portion to 3-4 sentences maximum (still tagged), then recommend human review.',
       '- If labor dismissal: lead with document preservation and caution about signing.',
       '- If custody/asset dispute: lead with evidence preservation and most urgent issue.',
     );

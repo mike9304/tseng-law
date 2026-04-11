@@ -140,6 +140,10 @@ export function getConsultationColumnContextText(
   locale: Locale = 'ko',
 ): string {
   if (!references.length) return 'No approved internal column summary available.';
+  // Each column is wrapped in an XML-like <column> tag so the LLM can be
+  // instructed (in buildProviderPrompt) to cite the slug as [Column: slug]
+  // after every factual claim. Attributes carry slug, title, lastmod and
+  // freshness; the body sits on its own line for clean context windows.
   return references
     .map((ref) => {
       const freshness =
@@ -150,10 +154,13 @@ export function getConsultationColumnContextText(
             : 'unknown';
       const fullPost = getFullPostBySlug(ref.slug, locale);
       const body = fullPost?.content ? clipBody(fullPost.content) : ref.summary;
-      return `## ${ref.title} (${ref.slug})
-lastmod: ${ref.lastmod || 'unknown'} | freshness: ${freshness}
-
-${body}`;
+      const escapedTitle = ref.title.replace(/"/g, '&quot;');
+      const lastmod = ref.lastmod || 'unknown';
+      return [
+        `<column id="${ref.slug}" title="${escapedTitle}" lastmod="${lastmod}" freshness="${freshness}">`,
+        body,
+        '</column>',
+      ].join('\n');
     })
-    .join('\n\n---\n\n');
+    .join('\n\n');
 }

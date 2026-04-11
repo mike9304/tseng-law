@@ -1,10 +1,12 @@
-import { readdir, readFile } from 'fs/promises';
-import path from 'path';
 import type {
   ConsultationCategory,
   ConsultationRiskLevel,
 } from '@/lib/consultation/types';
 import type { ConsultationFunnelStage } from '@/lib/consultation/log-store';
+import {
+  type LogKind,
+  readConsultationLogLines,
+} from '@/lib/consultation/log-storage';
 
 /**
  * Admin dashboard — log reader + aggregator.
@@ -144,13 +146,6 @@ export interface AdminDashboardMetrics {
   }>;
 }
 
-function getLogDir(): string {
-  return (
-    process.env.CONSULTATION_LOG_DIR
-    || path.join(process.cwd(), 'runtime-data', 'consultation-logs')
-  );
-}
-
 function safeParseLine<T>(line: string): T | null {
   if (!line.trim()) return null;
   try {
@@ -160,38 +155,20 @@ function safeParseLine<T>(line: string): T | null {
   }
 }
 
-async function readJsonlFiles<T>(
-  dir: string,
-  prefix: string,
+async function readJsonlRecords<T>(
+  kind: LogKind,
   windowStartTs: number,
 ): Promise<T[]> {
-  let entries: string[];
-  try {
-    entries = await readdir(dir);
-  } catch {
-    return [];
-  }
-  const matching = entries.filter((name) => name.startsWith(prefix) && name.endsWith('.jsonl'));
-  // Sort newest first so we can short-circuit if we collect enough
-  matching.sort().reverse();
+  const lines = await readConsultationLogLines(kind, windowStartTs);
   const out: T[] = [];
-  for (const name of matching) {
-    const full = path.join(dir, name);
-    let content: string;
-    try {
-      content = await readFile(full, 'utf8');
-    } catch {
-      continue;
+  for (const line of lines) {
+    const rec = safeParseLine<T & { timestamp?: string }>(line);
+    if (!rec) continue;
+    if (rec.timestamp) {
+      const ts = Date.parse(rec.timestamp);
+      if (!Number.isNaN(ts) && ts < windowStartTs) continue;
     }
-    for (const line of content.split('\n')) {
-      const rec = safeParseLine<T & { timestamp?: string }>(line);
-      if (!rec) continue;
-      if (rec.timestamp) {
-        const ts = Date.parse(rec.timestamp);
-        if (!Number.isNaN(ts) && ts < windowStartTs) continue;
-      }
-      out.push(rec as T);
-    }
+    out.push(rec as T);
   }
   return out;
 }
@@ -214,18 +191,11 @@ export async function readDashboardMetrics(
 ): Promise<AdminDashboardMetrics> {
   const now = Date.now();
   const windowStartTs = now - windowDays * 24 * 60 * 60 * 1000;
-  const dir = getLogDir();
 
-  const events = await readJsonlFiles<EventLogRecord>(
-    dir,
-    'consultation-events-',
-    windowStartTs,
-  );
-  const feedback = await readJsonlFiles<FeedbackLogRecord>(
-    dir,
-    'consultation-feedback-',
-    windowStartTs,
-  );
+  const [events, feedback] = await Promise.all([
+    readJsonlRecords<EventLogRecord>('events', windowStartTs),
+    readJsonlRecords<FeedbackLogRecord>('feedback', windowStartTs),
+  ]);
 
   // Funnel counts — reuse helper for readability.
   const funnel = {

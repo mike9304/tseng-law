@@ -1,5 +1,3 @@
-import { appendFile, mkdir } from 'fs/promises';
-import path from 'path';
 import type { Locale } from '@/lib/locales';
 import type {
   ConsultationCategory,
@@ -8,6 +6,7 @@ import type {
   ConsultationSourceConfidence,
   ConsultationSourceFreshness,
 } from '@/lib/consultation/types';
+import { appendConsultationLogLine } from '@/lib/consultation/log-storage';
 
 type ConsultationLogEventType = 'chat' | 'submit_success' | 'submit_failed' | 'funnel';
 
@@ -68,10 +67,6 @@ type ConsultationLogRecord = {
   metadataRedacted?: string;
 };
 
-function getConsultationLogDir(): string {
-  return process.env.CONSULTATION_LOG_DIR || path.join(process.cwd(), 'runtime-data', 'consultation-logs');
-}
-
 function redactSensitiveText(value: string): string {
   return value
     .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, '[redacted-email]')
@@ -99,12 +94,8 @@ function resolveIpAddress(rawValue: string | null): string | null {
 }
 
 async function appendConsultationLog(record: ConsultationLogRecord): Promise<void> {
-  const logDir = getConsultationLogDir();
   const dateKey = record.timestamp.slice(0, 10);
-  const filename = `consultation-events-${dateKey}.jsonl`;
-
-  await mkdir(logDir, { recursive: true, mode: 0o700 });
-  await appendFile(path.join(logDir, filename), `${JSON.stringify(record)}\n`, { encoding: 'utf8', mode: 0o600 });
+  await appendConsultationLogLine('events', dateKey, JSON.stringify(record));
 }
 
 export async function logConsultationChatEvent(input: {

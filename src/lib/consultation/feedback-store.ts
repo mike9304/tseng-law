@@ -1,10 +1,9 @@
-import { appendFile, mkdir } from 'fs/promises';
-import path from 'path';
 import type { Locale } from '@/lib/locales';
 import type {
   ConsultationCategory,
   ConsultationRiskLevel,
 } from '@/lib/consultation/types';
+import { appendConsultationLogLine } from '@/lib/consultation/log-storage';
 
 export type ConsultationFeedbackRating = 'helpful' | 'unhelpful';
 
@@ -31,13 +30,6 @@ interface ConsultationFeedbackRecord {
   commentRedacted?: string;
   userAgent?: string | null;
   ipAddress?: string | null;
-}
-
-function getFeedbackLogDir(): string {
-  return (
-    process.env.CONSULTATION_LOG_DIR
-    || path.join(process.cwd(), 'runtime-data', 'consultation-logs')
-  );
 }
 
 function redactSensitiveText(value: string): string {
@@ -109,16 +101,10 @@ export async function recordConsultationFeedback(
     ipAddress: maskIpAddress(input.ipAddress || null),
   };
 
-  const dir = getFeedbackLogDir();
   const dateKey = record.timestamp.slice(0, 10);
-  const file = path.join(dir, `consultation-feedback-${dateKey}.jsonl`);
 
   try {
-    await mkdir(dir, { recursive: true, mode: 0o700 });
-    await appendFile(file, `${JSON.stringify(record)}\n`, {
-      encoding: 'utf8',
-      mode: 0o600,
-    });
+    await appendConsultationLogLine('feedback', dateKey, JSON.stringify(record));
   } catch (error) {
     console.error('[consultation] feedback write failed:', error);
     return { accepted: false, reason: 'write_failed' };

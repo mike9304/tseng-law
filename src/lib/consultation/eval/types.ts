@@ -2,6 +2,7 @@ import type { Locale } from '@/lib/locales';
 import type {
   ConsultationCategory,
   ConsultationRiskLevel,
+  ConsultationTranscriptMessage,
 } from '@/lib/consultation/types';
 
 /**
@@ -14,6 +15,13 @@ export interface EvalPair {
   question: string;
   /** A short description of what this pair is testing (e.g. "L4 police arrest"). */
   rationale: string;
+  /**
+   * Optional prior conversation turns for multi-turn scenarios. When
+   * set, run-eval passes them to generateConsultationChatResponse so
+   * the engine/LLM can resolve context-dependent references like
+   * "that second step you mentioned".
+   */
+  priorTurns?: ConsultationTranscriptMessage[];
   expected: {
     classification: ConsultationCategory;
     riskLevel: ConsultationRiskLevel;

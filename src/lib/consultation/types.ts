@@ -66,6 +66,13 @@ export interface ConsultationChatRequestBody {
   sessionId?: string;
   message?: string;
   collectedFields?: ConsultationCollectedFields;
+  /**
+   * Optional conversation history from prior turns in this session.
+   * The engine will use at most the last 5 turns as structured context
+   * for the LLM. Sent only by clients that support multi-turn memory;
+   * omitting this field keeps the single-turn behaviour intact.
+   */
+  priorTurns?: ConsultationTranscriptMessage[];
 }
 
 export interface ConsultationChatResponse {

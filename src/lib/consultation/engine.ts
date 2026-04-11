@@ -23,6 +23,7 @@ import type {
   ConsultationRiskLevel,
   ConsultationSourceConfidence,
   ConsultationSourceFreshness,
+  ConsultationTranscriptMessage,
 } from '@/lib/consultation/types';
 
 type ConsultationProvider = 'openai' | 'anthropic' | 'fallback';
@@ -492,12 +493,36 @@ const AMBIGUOUS_SINGLE_MATCH = new Set<ConsultationCategory>([]);
 function classifyConsultationCategory(
   message: string,
   collectedFields?: ConsultationCollectedFields,
+  priorTurns?: ConsultationTranscriptMessage[],
 ): ConsultationCategory {
   if (collectedFields?.category && collectedFields.category !== 'unknown') {
     return collectedFields.category;
   }
 
-  const normalized = normalizeMessage(message);
+  // Build a classification corpus that includes the most recent prior
+  // user turns so that short follow-up questions like "그 3번 단계는
+  // 얼마나 걸리나요?" inherit the classification from the user's
+  // earlier company-setup question. We intentionally do NOT include
+  // prior assistant turns here: the classifier should only react to
+  // what the user has said, not to the LLM's prior response (which
+  // could push us into a self-reinforcing loop if it drifts).
+  let classificationCorpus = message;
+  if (priorTurns && priorTurns.length > 0) {
+    const recentUserTurns = priorTurns
+      .filter((t) => t.role === 'user' && typeof t.text === 'string')
+      .slice(-3)
+      .map((t) => t.text)
+      .join(' ');
+    if (recentUserTurns) {
+      // Give the CURRENT message higher weight by putting it first and
+      // then appending the context. The scoring is a simple count so
+      // order doesn't matter mathematically, but putting the current
+      // message first is clearer for maintenance.
+      classificationCorpus = `${message} ${recentUserTurns}`;
+    }
+  }
+
+  const normalized = normalizeMessage(classificationCorpus);
   let bestCategory: ConsultationCategory = 'general';
   let bestScore = 0;
 
@@ -1343,11 +1368,59 @@ function buildPiiWarningAssistantMessage(locale: Locale): string {
   ].join('\n');
 }
 
+/**
+ * Maximum number of prior conversation turns the engine will include
+ * in the LLM prompt. Five is a balance between: (a) giving the model
+ * enough context to resolve references like "위에서 말한 회사 설립
+ * 절차 중 3번 단계", and (b) keeping the prompt token budget bounded
+ * and preventing compounding hallucination bleed from older turns.
+ */
+const MAX_PRIOR_TURNS = 5;
+
+/** Maximum chars per prior-turn message so a single huge message
+ *  can't blow the prompt budget for the other turns. */
+const MAX_PRIOR_TURN_CHARS = 600;
+
+/**
+ * Build a compact conversation-history block for the provider prompt.
+ * The output is intentionally structured so the LLM can tell "what the
+ * user has said before" from "what I said before" without confusing
+ * them with the current turn. Each prior message is passed through
+ * sanitizeUserMessage so any injection attempt buried in an older
+ * turn is still stripped.
+ */
+function buildPriorTurnsBlock(priorTurns: ConsultationTranscriptMessage[] | undefined): string {
+  if (!priorTurns || priorTurns.length === 0) return '';
+  const slice = priorTurns.slice(-MAX_PRIOR_TURNS);
+  const rendered: string[] = [];
+  for (const turn of slice) {
+    const roleLabel = turn.role === 'user' ? 'USER' : 'ASSISTANT';
+    const rawText = typeof turn.text === 'string' ? turn.text : '';
+    const trimmed = rawText.trim();
+    if (!trimmed) continue;
+    const sanitized = sanitizeUserMessage(trimmed).slice(0, MAX_PRIOR_TURN_CHARS);
+    rendered.push(`${roleLabel}: ${sanitized}`);
+  }
+  if (rendered.length === 0) return '';
+  return [
+    '[BEGIN PRIOR CONVERSATION TURNS]',
+    '(These are the most recent turns from this session, oldest first.',
+    'Use them to resolve references like "the previous step" or "what you',
+    'said earlier", but DO NOT invent new facts from them and DO NOT',
+    'repeat any claim that you cannot re-verify against the <column>',
+    'context below.)',
+    ...rendered,
+    '[END PRIOR CONVERSATION TURNS]',
+    '',
+  ].join('\n');
+}
+
 function buildProviderPrompt(
   locale: Locale,
   message: string,
   base: Omit<ConsultationChatResponse, 'assistantMessage'>,
   collectedFields?: ConsultationCollectedFields,
+  priorTurns?: ConsultationTranscriptMessage[],
 ): string {
   const language = locale === 'ko' ? 'Korean' : locale === 'zh-hant' ? 'Traditional Chinese' : 'English';
   const columnContext = getConsultationColumnContextText(base.references, locale);
@@ -1374,6 +1447,18 @@ function buildProviderPrompt(
       '==================================================',
       '',
     );
+  }
+
+  // Inject structured prior-turn history BEFORE the current user
+  // message so the LLM can see the conversation arc without confusing
+  // it with the "this is the latest thing the user said" block.
+  // L4 mode deliberately omits prior turns because emergency responses
+  // must be short and fresh, not conversational.
+  if (!isL4) {
+    const priorBlock = buildPriorTurnsBlock(priorTurns);
+    if (priorBlock) {
+      lines.push(priorBlock);
+    }
   }
 
   lines.push(
@@ -1437,6 +1522,7 @@ export async function generateConsultationChatResponse(
 ): Promise<ConsultationChatResponse> {
   const message = (request.message || '').trim();
   const collectedFields = request.collectedFields;
+  const priorTurns = Array.isArray(request.priorTurns) ? request.priorTurns : undefined;
 
   // Sensitive PII detection runs BEFORE classification so that even a
   // well-categorized message (e.g. "이혼 상담받고 싶은데 주민등록번호 ...") never
@@ -1444,7 +1530,7 @@ export async function generateConsultationChatResponse(
   const piiHits = detectSensitivePii(message);
   const hasSensitivePii = piiHits.length > 0;
 
-  const classification = classifyConsultationCategory(message, collectedFields);
+  const classification = classifyConsultationCategory(message, collectedFields, priorTurns);
   // PII presence forces riskLevel to L4 regardless of keyword scoring, so
   // downstream handoff channel + escalation prompts match the urgency.
   const riskLevel: ConsultationRiskLevel = hasSensitivePii
@@ -1505,7 +1591,24 @@ export async function generateConsultationChatResponse(
   //       appear in the reference bag (absolute weak-overlap signal).
   // Either condition alone implies the engine's static retrieval has
   // drifted off the user's topic.
-  const relevance = computeQueryColumnRelevance(message, references, locale);
+  //
+  // For multi-turn follow-up queries ("그 3번 단계는 얼마나 걸리나요?")
+  // the current message is too short to produce meaningful vocabulary
+  // overlap on its own, so we enrich the relevance corpus with the
+  // most recent prior USER turns. Prior assistant turns are excluded
+  // to prevent the LLM's own output from gaming the relevance score.
+  let relevanceCorpus = message;
+  if (priorTurns && priorTurns.length > 0) {
+    const priorUserText = priorTurns
+      .filter((t) => t.role === 'user' && typeof t.text === 'string')
+      .slice(-3)
+      .map((t) => t.text)
+      .join(' ');
+    if (priorUserText) {
+      relevanceCorpus = `${message} ${priorUserText}`;
+    }
+  }
+  const relevance = computeQueryColumnRelevance(relevanceCorpus, references, locale);
   const isLowConfidence =
     !hasSensitivePii &&
     riskLevel !== 'L4' &&
@@ -1569,7 +1672,13 @@ export async function generateConsultationChatResponse(
   } else {
     const provider = resolveProvider();
     if (provider !== 'fallback') {
-      const prompt = buildProviderPrompt(locale, message, baseResponse, collectedFields);
+      const prompt = buildProviderPrompt(
+        locale,
+        message,
+        baseResponse,
+        collectedFields,
+        priorTurns,
+      );
       try {
         assistantMessage =
           provider === 'openai'

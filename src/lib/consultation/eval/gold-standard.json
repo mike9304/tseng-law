@@ -311,5 +311,20 @@
       "riskLevel": "L1",
       "shouldEscalate": true
     }
+  },
+  {
+    "id": "MT01",
+    "locale": "ko",
+    "question": "3번 단계는 얼마나 걸리나요?",
+    "rationale": "Multi-turn follow-up — the current query is ambiguous on its own. Wave 3 priorTurns injection should give the LLM enough context to interpret 'step 3' as the foreign investment review from the prior assistant message about company setup. Without priorTurns the LLM misclassifies to general and invents a lawsuit-timeline answer.",
+    "expected": {
+      "classification": "company_setup",
+      "riskLevel": "L1",
+      "shouldEscalate": true
+    },
+    "priorTurns": [
+      { "role": "user", "text": "대만에서 회사 설립 절차가 어떻게 되나요?" },
+      { "role": "assistant", "text": "대만 회사설립은 10단계로 진행됩니다. 1. 회사명 검색 및 신청 2. 위임장 인증 3. 외국인 투자심의위원회 신청 4. 자본금 송금 등이 있습니다." }
+    ]
   }
 ]

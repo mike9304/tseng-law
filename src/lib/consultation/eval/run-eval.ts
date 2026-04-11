@@ -102,6 +102,7 @@ async function runPair(pair: EvalPair): Promise<EvalPerPairResult> {
     sessionId: `eval-${pair.id}-${Date.now()}`,
     message: pair.question,
     collectedFields: {},
+    priorTurns: pair.priorTurns,
   });
 
   const strippedMessage = stripAttorneyNotice(response.assistantMessage, pair.locale);

@@ -65,6 +65,118 @@ function persistFeedback(
   }
 }
 
+/**
+ * Session persistence (Wave 3) — allow a visitor to close and reopen
+ * the browser tab without losing their AI consultation conversation.
+ * Stored as one blob per locale; expires after SESSION_TTL_MS so the
+ * store doesn't accumulate forever.
+ */
+const SESSION_STORAGE_KEY_PREFIX = 'hoj-float-session-v1-';
+const SESSION_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+interface PersistedSession {
+  sessionId: string;
+  locale: string;
+  messages: ChatMessage[];
+  savedAt: number;
+}
+
+function sessionStorageKey(locale: string): string {
+  return `${SESSION_STORAGE_KEY_PREFIX}${locale}`;
+}
+
+function loadPersistedSession(locale: string): PersistedSession | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = window.localStorage.getItem(sessionStorageKey(locale));
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as unknown;
+    if (
+      !parsed ||
+      typeof parsed !== 'object' ||
+      Array.isArray(parsed)
+    ) {
+      return null;
+    }
+    const obj = parsed as Record<string, unknown>;
+    if (
+      typeof obj.sessionId !== 'string' ||
+      typeof obj.locale !== 'string' ||
+      typeof obj.savedAt !== 'number' ||
+      !Array.isArray(obj.messages)
+    ) {
+      return null;
+    }
+    if (Date.now() - obj.savedAt > SESSION_TTL_MS) {
+      // Expired — clear and start fresh.
+      window.localStorage.removeItem(sessionStorageKey(locale));
+      return null;
+    }
+    // Shape-check each message to be safe against tampered/garbled
+    // localStorage (e.g. a prior app version wrote a different shape).
+    const messages: ChatMessage[] = [];
+    for (const entry of obj.messages) {
+      if (!entry || typeof entry !== 'object') continue;
+      const m = entry as Record<string, unknown>;
+      if (
+        typeof m.id === 'string' &&
+        (m.role === 'user' || m.role === 'assistant') &&
+        typeof m.text === 'string'
+      ) {
+        const cleanMsg: ChatMessage = {
+          id: m.id,
+          role: m.role,
+          text: m.text,
+        };
+        // Drop the references array on restore — slugs are stable but
+        // stored metadata (title/summary/lastmod) could be outdated
+        // after a content update; the next response will carry fresh
+        // references anyway.
+        messages.push(cleanMsg);
+      }
+    }
+    if (messages.length === 0) return null;
+    return {
+      sessionId: obj.sessionId,
+      locale: obj.locale,
+      messages,
+      savedAt: obj.savedAt,
+    };
+  } catch {
+    return null;
+  }
+}
+
+function persistSession(sessionId: string, locale: string, messages: ChatMessage[]): void {
+  if (typeof window === 'undefined') return;
+  try {
+    const payload: PersistedSession = {
+      sessionId,
+      locale,
+      messages,
+      savedAt: Date.now(),
+    };
+    window.localStorage.setItem(sessionStorageKey(locale), JSON.stringify(payload));
+  } catch {
+    /* Quota or private mode — degrade to session-only state */
+  }
+}
+
+/** Number of most-recent non-greeting turns to forward with each chat request. */
+const PRIOR_TURNS_SENT_TO_SERVER = 5;
+
+function buildPriorTurnsForRequest(messages: ChatMessage[]): Array<{
+  role: 'user' | 'assistant';
+  text: string;
+  timestamp?: string;
+}> {
+  // Drop the initial greeting (id === 'initial-greeting') and take the
+  // last N turns of actual conversation.
+  const history = messages.filter((m) => m.id !== 'initial-greeting');
+  const tail = history.slice(-PRIOR_TURNS_SENT_TO_SERVER);
+  return tail.map((m) => ({ role: m.role, text: m.text }));
+}
+
 interface ChatApiReferenceRaw {
   slug?: string;
   title?: string;
@@ -296,6 +408,10 @@ export default function FloatingAiChat({
   onClose: () => void;
 }) {
   const copy = COPY[locale];
+  // Always start with the server-rendered initial greeting so SSR and
+  // the first client render agree. The localStorage restore runs in a
+  // useEffect below (hydrationRestored flag), avoiding hydration
+  // mismatches when next.js pre-renders the page.
   const [messages, setMessages] = useState<ChatMessage[]>([
     { id: 'initial-greeting', role: 'assistant', text: copy.greeting },
   ]);
@@ -311,9 +427,10 @@ export default function FloatingAiChat({
   const [formError, setFormError] = useState<string | null>(null);
   const [lastClassification, setLastClassification] = useState('unknown');
   const [lastRiskLevel, setLastRiskLevel] = useState('L1');
-  const [sessionId] = useState(
-    () => `float-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
+  const [sessionId, setSessionId] = useState<string>(
+    () => `float-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
   );
+  const [sessionHydrated, setSessionHydrated] = useState(false);
   const [feedbackByMessageId, setFeedbackByMessageId] = useState<
     Record<string, FeedbackState>
   >({});
@@ -367,6 +484,35 @@ export default function FloatingAiChat({
     }
   }, [sessionId]);
 
+  // Hydrate persisted session (messages + sessionId) on first mount.
+  // Runs ONCE, then flips sessionHydrated so the auto-save effect
+  // below won't accidentally overwrite storage with the initial
+  // greeting-only state before the restore had a chance to run.
+  useEffect(() => {
+    const persisted = loadPersistedSession(locale);
+    if (persisted && persisted.messages.length > 0) {
+      setSessionId(persisted.sessionId);
+      setMessages(persisted.messages);
+      const feedbackForRestored = loadStoredFeedback(persisted.sessionId);
+      if (Object.keys(feedbackForRestored).length > 0) {
+        setFeedbackByMessageId(feedbackForRestored);
+      }
+    }
+    setSessionHydrated(true);
+    // locale is intentionally excluded from deps — this effect should
+    // run exactly once on mount to avoid clobbering live state on
+    // subsequent renders caused by locale prop mutation.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Auto-save messages to localStorage whenever they change, but only
+  // after the hydration pass has completed. This gives users a seamless
+  // "come back later and continue" experience across browser restarts.
+  useEffect(() => {
+    if (!sessionHydrated) return;
+    persistSession(sessionId, locale, messages);
+  }, [sessionId, locale, messages, sessionHydrated]);
+
   function handleQuickReply(question: string, answer: string) {
     setMessages((prev) => [
       ...prev,
@@ -378,6 +524,14 @@ export default function FloatingAiChat({
   async function sendChatMessage(text: string) {
     if (!text || loading) return;
 
+    // Snapshot the history BEFORE the optimistic user-message append so
+    // the priorTurns forwarded to the server reflect only messages
+    // that completed their full round-trip (i.e., the user's previous
+    // question + the assistant's previous answer). Sending the brand
+    // new user message itself in priorTurns would be duplicative and
+    // waste prompt budget.
+    const priorTurnsForRequest = buildPriorTurnsForRequest(messages);
+
     setMessages((prev) => [
       ...prev,
       { id: makeMessageId('user'), role: 'user', text },
@@ -388,7 +542,12 @@ export default function FloatingAiChat({
       const res = await fetch('/api/consultation/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ locale, sessionId, message: text }),
+        body: JSON.stringify({
+          locale,
+          sessionId,
+          message: text,
+          priorTurns: priorTurnsForRequest,
+        }),
       });
 
       if (!res.ok) throw new Error(`${res.status}`);

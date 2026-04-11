@@ -6,6 +6,7 @@ import {
   getConsultationRiskLabel,
 } from '@/lib/consultation/copy';
 import {
+  checkTimeSensitivity,
   computeQueryColumnRelevance,
   getConsultationColumnContextText,
   getConsultationColumnReferences,
@@ -1181,6 +1182,24 @@ function buildGroundednessWarningSuffix(locale: Locale, verdict: GroundednessVer
   return '\n\n⚠️ Some of the content above could not be verified directly against the cited columns. A Taiwan lawyer should review this before any important decision.';
 }
 
+/**
+ * Build a locale-specific staleness warning that's appended to the
+ * assistant message when the user asked a time-sensitive question
+ * (tax rate, fee, deadline, etc.) AND at least one of the cited
+ * columns is older than 180 days. Tax rates and filing fees change,
+ * so the user must know to reverify any concrete number with a lawyer.
+ */
+function buildStalenessWarningSuffix(locale: Locale, agedSlugs: string[]): string {
+  const slugList = agedSlugs.join(', ');
+  if (locale === 'ko') {
+    return `\n\n⏳ 이 질문은 세율·수수료·기한 등 시간에 민감한 정보가 포함되어 있습니다. 인용한 칼럼(${slugList})은 180일 이상 경과되어 있어 최신 규정과 다를 수 있으니, 구체 수치는 반드시 대만 변호사와 재확인해 주세요.`;
+  }
+  if (locale === 'zh-hant') {
+    return `\n\n⏳ 此問題涉及稅率、規費或期限等時間敏感資訊。引用的文章（${slugList}）已超過 180 天未更新，現行規範可能有所變動，具體數字請務必與台灣律師再次確認。`;
+  }
+  return `\n\n⏳ This question involves time-sensitive information (tax rates, fees, deadlines). The cited column(s) (${slugList}) are more than 180 days old, so current rules may differ — please re-verify any specific number with a Taiwan lawyer.`;
+}
+
 /** Strip common prompt-injection patterns from user input. */
 function sanitizeUserMessage(raw: string): string {
   return raw
@@ -1555,6 +1574,23 @@ export async function generateConsultationChatResponse(
           reason: verdict.reason,
         });
         assistantMessage = `${assistantMessage}${buildGroundednessWarningSuffix(locale, verdict.verdict)}`;
+      }
+    }
+
+    // Time-sensitivity staleness warning. Appended to the assistant
+    // response when the query asks about tax rates / fees / deadlines
+    // AND at least one cited column is older than 180 days. The warning
+    // does NOT replace the answer; it sits at the end so the user can
+    // still read the substantive guidance but knows to reverify
+    // concrete numbers with a lawyer.
+    if (assistantMessage && riskLevel !== 'L4' && references.length > 0) {
+      const timeCheck = checkTimeSensitivity(message, references);
+      if (timeCheck.shouldWarn) {
+        console.warn('[consultation] staleness warning attached:', {
+          sessionId: request.sessionId,
+          agedSlugs: timeCheck.agedSlugs,
+        });
+        assistantMessage = `${assistantMessage}${buildStalenessWarningSuffix(locale, timeCheck.agedSlugs)}`;
       }
     }
   }

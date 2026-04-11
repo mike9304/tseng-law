@@ -146,6 +146,88 @@ export interface QueryRelevanceSignal {
 }
 
 /**
+ * Keywords that identify a user question as time-sensitive: anything
+ * about tax rates, fees, deadlines, exchange rates, or regulations that
+ * the authorities may have updated since the cited column was written.
+ * When any of these appear in the user query AND at least one cited
+ * column is more than 180 days old, the engine attaches a staleness
+ * warning so the user knows to re-verify the number with a lawyer.
+ */
+const TIME_SENSITIVE_QUERY_KEYWORDS: readonly string[] = [
+  // Korean
+  '세율', '세금', '부가세', '소득세', '법인세', '원천세', '관세',
+  '수수료', '등록료', '인지세',
+  '환율', '금리', '이자율',
+  '기한', '마감', '시효', '공소시효',
+  '최저자본', '최저임금', '상한', '한도',
+  '2024', '2025', '2026',
+  // English
+  'tax rate', 'tax bracket', 'filing fee', 'registration fee', 'stamp duty',
+  'exchange rate', 'interest rate',
+  'deadline', 'statute of limitations',
+  'minimum capital', 'minimum wage', 'cap', 'ceiling',
+  // Traditional Chinese
+  '稅率', '稅金', '營業稅', '所得稅', '法人稅', '關稅',
+  '規費', '登記費',
+  '匯率', '利率',
+  '期限', '時效',
+  '最低資本', '最低工資',
+];
+
+/** Days threshold beyond which a cited column needs the staleness warning. */
+const STALENESS_WARNING_DAYS = 180;
+
+export interface TimeSensitivityCheck {
+  /** True if the user query contains at least one time-sensitive keyword. */
+  isTimeSensitive: boolean;
+  /** True if at least one cited column is older than STALENESS_WARNING_DAYS. */
+  hasAgedColumn: boolean;
+  /** Computed trigger: isTimeSensitive AND hasAgedColumn. */
+  shouldWarn: boolean;
+  /** For logging / debugging: which column slugs were identified as aged. */
+  agedSlugs: string[];
+}
+
+function isColumnAged(lastmod: string): boolean {
+  if (!lastmod) return false;
+  const date = new Date(lastmod);
+  if (Number.isNaN(date.getTime())) return false;
+  const ageMs = Date.now() - date.getTime();
+  const ageDays = ageMs / (1000 * 60 * 60 * 24);
+  return ageDays > STALENESS_WARNING_DAYS;
+}
+
+/**
+ * Check whether the (query, references) pair should trigger a
+ * time-sensitivity warning. Pure function, no side effects.
+ */
+export function checkTimeSensitivity(
+  query: string,
+  references: ConsultationColumnReference[],
+): TimeSensitivityCheck {
+  const normalized = query.toLowerCase();
+  const isTimeSensitive = TIME_SENSITIVE_QUERY_KEYWORDS.some((kw) =>
+    normalized.includes(kw.toLowerCase()),
+  );
+  if (!isTimeSensitive) {
+    return { isTimeSensitive: false, hasAgedColumn: false, shouldWarn: false, agedSlugs: [] };
+  }
+  const agedSlugs: string[] = [];
+  for (const ref of references) {
+    if (isColumnAged(ref.lastmod)) {
+      agedSlugs.push(ref.slug);
+    }
+  }
+  const hasAgedColumn = agedSlugs.length > 0;
+  return {
+    isTimeSensitive,
+    hasAgedColumn,
+    shouldWarn: isTimeSensitive && hasAgedColumn,
+    agedSlugs,
+  };
+}
+
+/**
  * Stopwords that add noise to the keyword overlap score. Korean question
  * endings and general-purpose verbs/pronouns are removed so that a
  * relevance score is driven by domain-specific nouns, not boilerplate.

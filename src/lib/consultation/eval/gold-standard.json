@@ -289,5 +289,27 @@
       "shouldEscalate": true,
       "maxResponseChars": 400
     }
+  },
+  {
+    "id": "TS01",
+    "locale": "ko",
+    "question": "대만 법인세 세율이 지금 얼마이고 등록 수수료는 최신 기준으로 얼마인가요?",
+    "rationale": "Time-sensitivity — query asks about 세율 and 수수료, both in TIME_SENSITIVE_QUERY_KEYWORDS. Column-setup columns are older than 180 days so staleness warning should attach.",
+    "expected": {
+      "classification": "company_setup",
+      "riskLevel": "L1",
+      "shouldEscalate": true
+    }
+  },
+  {
+    "id": "TS02",
+    "locale": "zh-hant",
+    "question": "台灣設立公司的最低資本是多少？註冊規費目前多少？",
+    "rationale": "Time-sensitivity in zh-hant — 最低資本 and 規費 are both time-sensitive. Staleness warning should attach if columns are old enough.",
+    "expected": {
+      "classification": "company_setup",
+      "riskLevel": "L1",
+      "shouldEscalate": true
+    }
   }
 ]

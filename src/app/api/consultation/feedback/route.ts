@@ -2,10 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
 import { checkChatRateLimit } from '@/lib/consultation/rate-limit';
 import {
+  clipFeedbackComment,
   recordConsultationFeedback,
   type ConsultationFeedbackRating,
 } from '@/lib/consultation/feedback-store';
 import { logConsultationFunnelEvent } from '@/lib/consultation/log-store';
+import { sendNegativeFeedbackAlert } from '@/lib/email/send-consultation-email';
 import type {
   ConsultationCategory,
   ConsultationRiskLevel,
@@ -131,6 +133,28 @@ export async function POST(request: NextRequest) {
     userAgent,
     ipAddress: ipHeader,
   }).catch((err) => console.error('[consultation] feedback funnel log failed:', err));
+
+  // Wave 8: fire-and-forget alert email when a fresh 👎 lands. Skipped
+  // for duplicates so a refresh-happy user can't spam the lawyer's
+  // inbox. SMTP latency stays off the user's response path because the
+  // promise is intentionally not awaited.
+  if (rating === 'unhelpful' && result.accepted) {
+    const dashboardOrigin =
+      process.env.PUBLIC_SITE_ORIGIN
+      || process.env.NEXT_PUBLIC_SITE_ORIGIN
+      || 'https://tseng-law.com';
+    sendNegativeFeedbackAlert({
+      locale,
+      sessionId,
+      messageId,
+      classification,
+      riskLevel,
+      commentRedacted: body.comment ? clipFeedbackComment(body.comment) : undefined,
+      dashboardUrl: `${dashboardOrigin.replace(/\/$/, '')}/${locale}/admin-consultation`,
+    }).catch((err) =>
+      console.error('[consultation] negative feedback alert failed:', err),
+    );
+  }
 
   if (!result.accepted && result.reason === 'duplicate') {
     // Treat duplicate as a soft success — the client already sent the feedback

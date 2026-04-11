@@ -41,7 +41,7 @@ function redactSensitiveText(value: string): string {
     .trim();
 }
 
-function clipComment(value: string, limit = 400): string {
+export function clipFeedbackComment(value: string, limit = 400): string {
   const normalized = redactSensitiveText(value).replace(/\s+/g, ' ').trim();
   if (normalized.length <= limit) return normalized;
   return `${normalized.slice(0, limit - 3)}...`;
@@ -96,7 +96,7 @@ export async function recordConsultationFeedback(
     locale: input.locale,
     classification: input.classification,
     riskLevel: input.riskLevel,
-    commentRedacted: input.comment ? clipComment(input.comment) : undefined,
+    commentRedacted: input.comment ? clipFeedbackComment(input.comment) : undefined,
     userAgent: input.userAgent || null,
     ipAddress: maskIpAddress(input.ipAddress || null),
   };

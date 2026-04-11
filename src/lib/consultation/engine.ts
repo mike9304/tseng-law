@@ -272,6 +272,20 @@ const L4_KEYWORDS = [
   'exact article number',
   'exact statute number',
   '確切條文',
+  // 4. Non-English prompt-injection patterns that bypass the English-only
+  //    sanitizer. Catching them at L4 still forces escalation even after
+  //    the provider prompt sees sanitized text.
+  '이전 시스템',
+  '내부 규칙',
+  '시스템 프롬프트',
+  '숨겨진 규칙',
+  'system prompt',
+  'reveal your rules',
+  'show your rules',
+  'internal rules',
+  '內部規則',
+  '系統提示',
+  '隱藏的規則',
 ];
 
 /** L4 compound patterns: only match "오늘/내일" when paired with legal/deadline context */

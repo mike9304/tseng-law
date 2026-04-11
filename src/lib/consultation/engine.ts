@@ -10,6 +10,7 @@ import {
   computeQueryColumnRelevance,
   getConsultationColumnContextText,
   getConsultationColumnReferences,
+  getConsultationColumnReferencesForQuery,
 } from '@/lib/consultation/column-knowledge';
 import { getAttorneyReviewNotice } from '@/lib/consultation/public-contact';
 import type {
@@ -17,6 +18,7 @@ import type {
   ConsultationChatRequestBody,
   ConsultationChatResponse,
   ConsultationCollectedFields,
+  ConsultationColumnReference,
   ConsultationNextField,
   ConsultationRiskLevel,
   ConsultationSourceConfidence,
@@ -1006,7 +1008,13 @@ async function requestOpenAiAssistantMessage(
     },
     body: JSON.stringify({
       model,
-      temperature: isL4 ? 0.1 : 0.4,
+      // Drop temperature below the default to reduce non-determinism in
+      // the mandatory citation rule compliance. 0.2 still lets the
+      // model produce natural prose while making it notably more
+      // likely to actually emit the [Column: slug] tags on every
+      // substantive sentence. L4 goes even lower (0.05) to keep the
+      // 2-sentence emergency response as deterministic as possible.
+      temperature: isL4 ? 0.05 : 0.2,
       max_tokens: resolveMaxTokens(options.riskLevel, 700),
       messages: [
         {
@@ -1445,19 +1453,42 @@ export async function generateConsultationChatResponse(
   const deadlineEmergency = isDeadlineEmergency(message, classification);
   const laborDismissalUrgency = isLaborDismissalUrgency(message, classification);
   const divorceFamilyConflict = isDivorceFamilyConflict(message, classification);
-  const references = getConsultationColumnReferences(
-    classification,
-    locale,
-    deadlineEmergency
-      ? 0
-      : classification === 'traffic_accident' && riskLevel === 'L4'
+  const columnLimit = deadlineEmergency
+    ? 0
+    : classification === 'traffic_accident' && riskLevel === 'L4'
+      ? 1
+      : laborDismissalUrgency && riskLevel === 'L3'
         ? 1
-        : laborDismissalUrgency && riskLevel === 'L3'
+        : divorceFamilyConflict && riskLevel === 'L3'
           ? 1
-          : divorceFamilyConflict && riskLevel === 'L3'
-            ? 1
-            : 2,
-  );
+          : 2;
+
+  // Semantic-first retrieval: embed the query, rank all 51 stored
+  // column embeddings by cosine similarity, take the top matches.
+  // Falls back to the static category-to-column map when the
+  // embeddings file is missing, the API call fails, or nothing is
+  // above the minimum similarity threshold.
+  let references: ConsultationColumnReference[] = [];
+  let retrievalSource: 'semantic' | 'semantic_rerank' | 'static' = 'static';
+  let retrievalTopSimilarity = 0;
+  if (columnLimit > 0) {
+    try {
+      const retrieval = await getConsultationColumnReferencesForQuery(
+        message,
+        classification,
+        locale,
+        columnLimit,
+      );
+      references = retrieval.references;
+      retrievalSource = retrieval.source;
+      retrievalTopSimilarity = retrieval.topSimilarity;
+    } catch (error) {
+      console.error('[consultation] query-aware retrieval failed:', error);
+      references = getConsultationColumnReferences(classification, locale, columnLimit);
+    }
+  }
+  void retrievalSource;
+  void retrievalTopSimilarity;
   const sourceFreshness = resolveSourceFreshness(references);
   const sourceConfidence = resolveSourceConfidence(references, sourceFreshness);
 

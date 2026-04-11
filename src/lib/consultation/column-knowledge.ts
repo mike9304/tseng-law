@@ -135,6 +135,127 @@ export function getConsultationColumnReferences(
     }));
 }
 
+/**
+ * Convert a list of slugs (from semantic search hits) into fully
+ * populated ConsultationColumnReference objects in the requested
+ * locale. Slugs with no matching post in that locale are silently
+ * skipped — the calling code can decide whether to fall back.
+ */
+function materializeSlugs(
+  slugs: string[],
+  locale: Locale,
+  category: ConsultationCategory,
+  limit: number,
+): ConsultationColumnReference[] {
+  const posts = getCachedPosts(locale);
+  const out: ConsultationColumnReference[] = [];
+  const seen = new Set<string>();
+  for (const slug of slugs) {
+    if (seen.has(slug)) continue;
+    const post = posts.find((p) => p.slug === slug);
+    if (!post) continue;
+    out.push({
+      slug: post.slug,
+      title: post.title,
+      summary: clipSummary(post.summary),
+      lastmod: post.date,
+      staleRisk: HIGH_STALENESS_RISK.has(category) ? 'high' : 'medium',
+      freshness: resolveFreshness(post.date),
+      attorneyReviewStatus: 'pending',
+    });
+    seen.add(slug);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
+/**
+ * Semantic re-ranking within a category:
+ * 1. Start from the category's full static slug list (the classifier's
+ *    trusted category filter).
+ * 2. Call the embeddings store to score each candidate against the
+ *    user query via cosine similarity.
+ * 3. Return the top `limit` candidates, re-ordered by similarity.
+ *
+ * This preserves the hard category filter (so a labor query cannot
+ * accidentally be answered with a traffic-accident column because of
+ * multilingual embedding cross-talk) while letting the semantic signal
+ * pick the most relevant column WITHIN the category's bag (so the
+ * "subsidiary vs branch" question surfaces the subsidiary column
+ * instead of the generic basics column that always sat at index 0).
+ *
+ * Falls back to the original static order (old getConsultationColumnReferences
+ * behaviour) when:
+ *   - the embeddings file is missing,
+ *   - the embedding API call fails,
+ *   - the category has no slugs defined,
+ *   - or the slug list has zero or one element (re-ranking is a no-op).
+ */
+export async function getConsultationColumnReferencesForQuery(
+  query: string,
+  category: ConsultationCategory,
+  locale: Locale,
+  limit = 2,
+): Promise<{
+  references: ConsultationColumnReference[];
+  /** Which retrieval path produced the final references, for logging/debug. */
+  source: 'semantic_rerank' | 'static';
+  /** Top similarity score from the re-rank (0 if not attempted). */
+  topSimilarity: number;
+}> {
+  const candidateSlugs = CATEGORY_SLUG_MAP[category];
+  if (!candidateSlugs || candidateSlugs.length === 0) {
+    return { references: [], source: 'static', topSimilarity: 0 };
+  }
+  if (candidateSlugs.length === 1 || limit >= candidateSlugs.length) {
+    // Re-ranking is pointless: the caller wants all (or the only) slug(s).
+    return {
+      references: getConsultationColumnReferences(category, locale, limit),
+      source: 'static',
+      topSimilarity: 0,
+    };
+  }
+  if (limit <= 1) {
+    // With limit = 1, re-ranking risks demoting the canonical "first"
+    // column (e.g. taiwan-labor-severance-law) in favour of a
+    // semantically-similar-but-less-canonical sibling (e.g. the
+    // voluntary resignation column for a dismissal question). The
+    // static ordering has been hand-tuned per category to put the
+    // canonical answer first, so honour it when the caller only wants
+    // a single column.
+    return {
+      references: getConsultationColumnReferences(category, locale, limit),
+      source: 'static',
+      topSimilarity: 0,
+    };
+  }
+
+  try {
+    // Lazy import so tsc --noEmit contexts don't pull the embeddings store.
+    const { reRankSlugsByQuery } = await import('@/lib/consultation/embeddings-store');
+    const ranked = await reRankSlugsByQuery(query, candidateSlugs, locale);
+    if (ranked && ranked.length > 0) {
+      const orderedSlugs = ranked.map((r) => r.slug);
+      const semanticRefs = materializeSlugs(orderedSlugs, locale, category, limit);
+      if (semanticRefs.length > 0) {
+        return {
+          references: semanticRefs,
+          source: 'semantic_rerank',
+          topSimilarity: ranked[0]?.similarity ?? 0,
+        };
+      }
+    }
+  } catch (error) {
+    console.error('[column-knowledge] semantic re-rank failed:', error);
+  }
+
+  return {
+    references: getConsultationColumnReferences(category, locale, limit),
+    source: 'static',
+    topSimilarity: 0,
+  };
+}
+
 /** Per-query signal of how well the selected columns actually match the user's question. */
 export interface QueryRelevanceSignal {
   /** Overlap score in [0, 1]. 1 = every significant query word appears in the columns. */

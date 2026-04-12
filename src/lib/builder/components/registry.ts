@@ -19,7 +19,6 @@ export type {
 import './text';
 import './image';
 import './button';
-// Phase 3 additions (Codex P3-02):
-// import './heading';
-// import './container';
-// import './section';
+import './heading';
+import './container';
+import './section';

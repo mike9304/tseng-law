@@ -91,6 +91,9 @@ export default function PageSwitcher({
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
   const [showGallery, setShowGallery] = useState(false);
+  const [pendingTemplate, setPendingTemplate] = useState<BuilderCanvasDocument | null | undefined>(undefined);
+  const [slugInput, setSlugInput] = useState('');
+  const [showSlugPrompt, setShowSlugPrompt] = useState(false);
 
   const fetchPages = useCallback(async () => {
     try {
@@ -112,11 +115,18 @@ export default function PageSwitcher({
     fetchPages();
   }, [fetchPages]);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleCreatePage = async (templateDocument?: BuilderCanvasDocument | null) => {
-    if (creating) return;
-    setCreating(true);
+  const handleTemplateSelect = (templateDocument: BuilderCanvasDocument | null) => {
+    setPendingTemplate(templateDocument);
+    setSlugInput('');
     setShowGallery(false);
+    setShowSlugPrompt(true);
+  };
+
+  const handleCreatePage = async () => {
+    if (creating) return;
+    const slug = slugInput.trim() || `page-${Date.now().toString(36)}`;
+    setCreating(true);
+    setShowSlugPrompt(false);
     try {
       const response = await fetch('/api/builder/site/pages', {
         method: 'POST',
@@ -124,17 +134,23 @@ export default function PageSwitcher({
         credentials: 'same-origin',
         body: JSON.stringify({
           locale,
-          slug: `page-${Date.now().toString(36)}`,
-          title: 'New Page',
+          slug,
+          title: slug,
+          ...(pendingTemplate ? { document: pendingTemplate } : {}),
         }),
       });
       if (response.ok) {
+        const data = (await response.json()) as { pageId?: string };
         await fetchPages();
+        if (data.pageId) {
+          onSelectPage(data.pageId);
+        }
       }
     } catch {
       // silent fail
     } finally {
       setCreating(false);
+      setPendingTemplate(undefined);
     }
   };
 
@@ -183,9 +199,79 @@ export default function PageSwitcher({
 
       {showGallery ? (
         <TemplateGalleryModal
-          onSelect={(doc) => handleCreatePage(doc)}
+          onSelect={(doc) => handleTemplateSelect(doc)}
           onClose={() => setShowGallery(false)}
         />
+      ) : null}
+
+      {showSlugPrompt ? (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'rgba(15, 23, 42, 0.45)',
+            backdropFilter: 'blur(6px)',
+            WebkitBackdropFilter: 'blur(6px)',
+            zIndex: 10000,
+          }}
+          onClick={(e) => { if (e.target === e.currentTarget) { setShowSlugPrompt(false); setPendingTemplate(undefined); } }}
+        >
+          <div
+            style={{
+              background: '#fff',
+              borderRadius: 16,
+              boxShadow: '0 24px 64px rgba(0,0,0,.18)',
+              padding: 32,
+              maxWidth: 400,
+              width: '90vw',
+            }}
+          >
+            <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>
+              페이지 Slug 입력
+            </div>
+            <div style={{ fontSize: '0.82rem', color: '#64748b', marginBottom: 16 }}>
+              {pendingTemplate ? '선택한 템플릿으로 새 페이지를 생성합니다.' : '빈 페이지를 생성합니다.'}
+            </div>
+            <input
+              type="text"
+              placeholder="예: about, services, contact"
+              value={slugInput}
+              onChange={(e) => setSlugInput(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter') handleCreatePage(); }}
+              autoFocus
+              style={{
+                width: '100%',
+                padding: '8px 12px',
+                border: '1px solid #e2e8f0',
+                borderRadius: 8,
+                fontSize: '0.9rem',
+                marginBottom: 16,
+                outline: 'none',
+                boxSizing: 'border-box',
+              }}
+            />
+            <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+              <button
+                type="button"
+                onClick={() => { setShowSlugPrompt(false); setPendingTemplate(undefined); }}
+                style={{ padding: '6px 16px', background: '#f1f5f9', color: '#334155', border: '1px solid #cbd5e1', borderRadius: 8, fontSize: '0.82rem', cursor: 'pointer' }}
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                onClick={handleCreatePage}
+                disabled={creating}
+                style={{ padding: '6px 16px', background: '#123b63', color: '#fff', border: 'none', borderRadius: 8, fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer' }}
+              >
+                {creating ? '생성 중...' : '생성'}
+              </button>
+            </div>
+          </div>
+        </div>
       ) : null}
     </div>
   );

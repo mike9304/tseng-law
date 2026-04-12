@@ -71,6 +71,13 @@ const baseCanvasNodeSchema = z.object({
   visible: z.boolean().default(true),
 });
 
+const textShadowSchema = z.object({
+  x: z.number().min(-50).max(50),
+  y: z.number().min(-50).max(50),
+  blur: z.number().min(0).max(100),
+  color: z.string().max(64),
+}).optional();
+
 const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('text'),
   content: z.object({
@@ -82,6 +89,10 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
     lineHeight: z.number().min(0.5).max(4).default(1.25),
     letterSpacing: z.number().min(-2).max(10).default(0),
     fontFamily: z.string().max(120).optional(),
+    verticalAlign: z.enum(['top', 'center', 'bottom']).optional(),
+    textShadow: textShadowSchema,
+    backgroundColor: z.string().max(64).optional(),
+    textTransform: z.enum(['none', 'uppercase', 'lowercase', 'capitalize']).optional(),
   }),
 });
 

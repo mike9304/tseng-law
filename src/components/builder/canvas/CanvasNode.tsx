@@ -45,6 +45,7 @@ export default function CanvasNode({
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
   const commitMutationSession = useBuilderCanvasStore((s) => s.commitMutationSession);
+  const selectedNodeIds = useBuilderCanvasStore((s) => s.selectedNodeIds);
 
   const handleRotationPointerDown = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
@@ -126,6 +127,7 @@ export default function CanvasNode({
 
   const hasVisibleBorder = node.style.borderWidth > 0;
   const hasVisibleShadow = node.style.shadowBlur > 0 || node.style.shadowSpread !== 0 || node.style.shadowX !== 0 || node.style.shadowY !== 0;
+  const isContainerWithChildren = node.kind === 'container' && nestedChildren.length > 0;
 
   return (
     <div
@@ -174,7 +176,9 @@ export default function CanvasNode({
           borderRadius: `${node.style.borderRadius}px`,
           border: hasVisibleBorder
             ? `${node.style.borderWidth}px ${node.style.borderStyle} ${node.style.borderColor}`
-            : 'none',
+            : isContainerWithChildren && selected
+              ? '1px dashed #94a3b8'
+              : 'none',
           boxShadow: hasVisibleShadow
             ? `${node.style.shadowX}px ${node.style.shadowY}px ${node.style.shadowBlur}px ${node.style.shadowSpread}px ${node.style.shadowColor}`
             : 'none',
@@ -183,28 +187,23 @@ export default function CanvasNode({
         }}
       >
         {body}
-        {/* Render nested children for containers */}
-        {nestedChildren.map((child) => (
-          <div
-            key={child.id}
-            style={{
-              position: 'absolute',
-              left: `${child.rect.x}px`,
-              top: `${child.rect.y}px`,
-              width: `${child.rect.width}px`,
-              height: `${child.rect.height}px`,
-              pointerEvents: 'auto',
-            }}
-            data-child-node-id={child.id}
-          >
-            {getComponent(child.kind)?.Render
-              ? (() => {
-                  const ChildComponent = getComponent(child.kind)!.Render;
-                  return <ChildComponent node={child} mode="edit" />;
-                })()
-              : null}
-          </div>
-        ))}
+        {/* Render nested children for containers as full CanvasNode instances */}
+        {nestedChildren.map((child) => {
+          const isChildSelected = selectedNodeIds.includes(child.id);
+          return (
+            <CanvasNode
+              key={child.id}
+              node={child}
+              selected={isChildSelected}
+              onSelect={onSelect}
+              onContextMenu={onContextMenu}
+              onOpenAssetLibrary={onOpenAssetLibrary}
+              onMoveStart={onMoveStart}
+              onResizeStart={onResizeStart}
+              onUpdateContent={onUpdateContent}
+            />
+          );
+        })}
       </div>
       {selected && !node.locked ? (
         <>

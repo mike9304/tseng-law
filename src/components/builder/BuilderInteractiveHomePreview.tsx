@@ -668,6 +668,7 @@ export default function BuilderInteractiveHomePreview({
     [pageDocument, posts]
   );
   const pageApiBase = `/api/builder/sites/${DEFAULT_BUILDER_SITE_ID}/pages/home`;
+  const publicPageHref = `/${locale}`;
 
   const activeConflictReviewKey = useMemo(
     () => (serverConflict ? getConflictReviewKey(serverConflict) : null),
@@ -3723,6 +3724,241 @@ export default function BuilderInteractiveHomePreview({
     };
   }, [canvasPanState]);
 
+  const standaloneWorkspaceStatus = (
+    <>
+      <span className="builder-preview-status-chip builder-preview-status-chip--primary">
+        Local recovery {draftHydrated ? (lastDraftSavedAt ? 'saved' : 'empty') : 'loading'}
+      </span>
+      <span className="builder-preview-status-chip">
+        Shared draft {serverDraftMeta.persisted ? `v${serverDraftMeta.revision}` : 'empty'}
+      </span>
+      <span className="builder-preview-status-chip">
+        Shared published {serverPublishedMeta.persisted ? `v${serverPublishedMeta.revision}` : 'empty'}
+      </span>
+      <span className="builder-preview-status-chip">
+        Selection{' '}
+        {selection.surfaceId || selection.contentGroupId
+          ? truncateCopy(selection.targetLabel, 28)
+          : 'section frame'}
+      </span>
+      <span className="builder-preview-status-chip">{selection.sectionKey}</span>
+      {hasMultiSectionSelection ? (
+        <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
+      ) : null}
+      {clipboardPayload ? (
+        <span className="builder-preview-status-chip">
+          Clipboard {formatSectionFrameClipboardSummary(clipboardPayload)}
+        </span>
+      ) : null}
+    </>
+  );
+
+  const standaloneRuntimeStatus = (
+    <>
+      <span className="builder-preview-status-chip">
+        History {historyMeta.length ? `${historyMeta.cursor + 1}/${historyMeta.length}` : '0/0'}
+      </span>
+      <span className="builder-preview-status-chip">
+        Server {serverStorage ? `${serverStorage} store` : 'sync pending'}
+      </span>
+      <span className="builder-preview-status-chip">Viewport {getViewportLabel(viewportMode)}</span>
+      <span
+        className={`builder-preview-status-chip${
+          zoomTooLowForPrecision ? ' builder-preview-status-chip--danger' : ''
+        }`}
+      >
+        Zoom {zoomLevel}%
+      </span>
+      <span className="builder-preview-status-chip">{historyMeta.label ?? 'No workspace changes yet'}</span>
+    </>
+  );
+
+  const embeddedToolbarStatus = (
+    <>
+      <span className="builder-preview-status-chip builder-preview-status-chip--primary">
+        Selection{' '}
+        {selection.surfaceId || selection.contentGroupId
+          ? truncateCopy(selection.targetLabel, 28)
+          : 'section frame'}
+      </span>
+      <span className="builder-preview-status-chip">{selection.sectionKey}</span>
+      {hasMultiSectionSelection ? (
+        <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
+      ) : null}
+      <span className="builder-preview-status-chip">
+        Draft {serverDraftMeta.persisted ? `v${serverDraftMeta.revision}` : 'empty'}
+      </span>
+      <span
+        className={`builder-preview-status-chip${
+          publishingReadiness.status === 'blocked'
+            ? ' builder-preview-status-chip--danger'
+            : publishingReadiness.status === 'ready'
+              ? ' builder-preview-status-chip--success'
+              : ''
+        }`}
+      >
+        {publishingReadiness.status === 'blocked'
+          ? 'Publish blocked'
+          : publishingReadiness.status === 'ready'
+            ? 'Publish ready'
+            : 'Checks needed'}
+      </span>
+      <span className="builder-preview-status-chip">{historyMeta.label ?? 'No workspace changes yet'}</span>
+    </>
+  );
+
+  const embeddedPublishingAction =
+    publishingReadiness.status === 'ready' ? (
+      <button
+        type="button"
+        className="builder-action-btn builder-action-btn--primary"
+        onClick={() => {
+          void publishServerSnapshot();
+        }}
+        disabled={serverPending || !draftHydrated}
+      >
+        Publish
+      </button>
+    ) : publishingReadiness.status === 'needs-review' ? (
+      <button
+        type="button"
+        className="builder-action-btn"
+        onClick={() => {
+          void runPublishChecks();
+        }}
+        disabled={serverPending || !draftHydrated}
+      >
+        Run checks
+      </button>
+    ) : serverConflict ? (
+      <button
+        type="button"
+        className="builder-action-btn"
+        onClick={() => {
+          if (serverConflict.kind === 'draft') {
+            void loadServerDraft();
+            return;
+          }
+          void loadServerPublished();
+        }}
+        disabled={serverPending}
+      >
+        Review shared
+      </button>
+    ) : serverValidationIssues?.length ? (
+      <button
+        type="button"
+        className="builder-action-btn"
+        onClick={() => {
+          if (serverValidationIssues[0]) {
+            focusValidationIssue(serverValidationIssues[0]);
+          }
+        }}
+        disabled={serverPending}
+      >
+        Review blockers
+      </button>
+    ) : (
+      <button
+        type="button"
+        className="builder-action-btn"
+        onClick={() => {
+          void refreshServerState();
+        }}
+        disabled={serverPending}
+      >
+        Refresh shared
+      </button>
+    );
+
+  const sharedRuntimeControls = (
+    <>
+      <div className="builder-preview-viewport-switch" role="group" aria-label="Preview viewport">
+        {VIEWPORT_OPTIONS.map((option) => (
+          <button
+            key={option.value}
+            type="button"
+            className={`builder-preview-viewport-btn${viewportMode === option.value ? ' is-active' : ''}`}
+            onClick={() => setViewportMode(option.value)}
+            aria-pressed={viewportMode === option.value}
+          >
+            <span>{option.label}</span>
+            <small>{option.hint}</small>
+          </button>
+        ))}
+      </div>
+      <div className="builder-preview-zoom-controls" role="group" aria-label="Preview zoom">
+        <button
+          type="button"
+          className="builder-preview-zoom-btn"
+          onClick={() => adjustZoomLevel('out')}
+          disabled={!canZoomOut}
+        >
+          -
+        </button>
+        <div className="builder-preview-zoom-copy">
+          <strong>{zoomLevel}%</strong>
+          <small>Alt+wheel · Space+drag</small>
+        </div>
+        <button
+          type="button"
+          className="builder-preview-zoom-btn"
+          onClick={() => adjustZoomLevel('in')}
+          disabled={!canZoomIn}
+        >
+          +
+        </button>
+        <button
+          type="button"
+          className="builder-action-btn"
+          onClick={resetZoomLevel}
+          disabled={zoomLevel === DEFAULT_ZOOM_LEVEL}
+        >
+          100%
+        </button>
+      </div>
+      <button
+        type="button"
+        className="builder-action-btn"
+        onClick={undoWorkspaceChange}
+        disabled={!historyMeta.canUndo}
+      >
+        Undo
+      </button>
+      <button
+        type="button"
+        className="builder-action-btn"
+        onClick={redoWorkspaceChange}
+        disabled={!historyMeta.canRedo}
+      >
+        Redo
+      </button>
+      <button
+        type="button"
+        className="builder-action-btn builder-action-btn--primary"
+        onClick={() => {
+          void saveServerDraft(
+            rollbackPromotionCandidate ? { allowRollbackPromotion: true } : undefined
+          );
+        }}
+        disabled={
+          !draftHydrated ||
+          serverPending ||
+          serverConflict?.kind === 'draft' ||
+          (Boolean(rollbackPromotionCandidate) &&
+            serverDraftMeta.persisted &&
+            !canPromoteRollbackRecovery)
+        }
+      >
+        {rollbackPromotionCandidate ? 'Promote recovery to shared draft' : 'Save to shared draft'}
+      </button>
+      <Link href={publicPageHref} className="builder-action-btn">
+        Open public page
+      </Link>
+      {embeddedPublishingAction}
+    </>
+  );
+
   return (
     <div
       className={`builder-preview-shell${
@@ -3753,166 +3989,15 @@ export default function BuilderInteractiveHomePreview({
             </div>
           )}
 
-          <div
-            className={`builder-preview-workspace-bar${
-              presentation === 'embedded' ? ' builder-preview-workspace-bar--embedded' : ''
-            }`}
-          >
-            <div className="builder-preview-workspace-bar-group">
-              {presentation === 'embedded' ? (
-                <>
-                  <span className="builder-preview-status-chip builder-preview-status-chip--primary">
-                    Selection{' '}
-                    {selection.surfaceId || selection.contentGroupId
-                      ? truncateCopy(selection.targetLabel, 28)
-                      : 'section frame'}
-                  </span>
-                  <span className="builder-preview-status-chip">{selection.sectionKey}</span>
-                  {hasMultiSectionSelection ? (
-                    <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
-                  ) : null}
-                  <span className="builder-preview-status-chip">
-                    Draft {serverDraftMeta.persisted ? `v${serverDraftMeta.revision}` : 'empty'}
-                  </span>
-                  <span className="builder-preview-status-chip">
-                    {historyMeta.label ?? 'No workspace changes yet'}
-                  </span>
-                </>
-              ) : (
-                <>
-                  <span className="builder-preview-status-chip builder-preview-status-chip--primary">
-                    Local recovery {draftHydrated ? (lastDraftSavedAt ? 'saved' : 'empty') : 'loading'}
-                  </span>
-                  <span className="builder-preview-status-chip">
-                    Shared draft {serverDraftMeta.persisted ? `v${serverDraftMeta.revision}` : 'empty'}
-                  </span>
-                  <span className="builder-preview-status-chip">
-                    Shared published {serverPublishedMeta.persisted ? `v${serverPublishedMeta.revision}` : 'empty'}
-                  </span>
-                  <span className="builder-preview-status-chip">
-                    Selection{' '}
-                    {selection.surfaceId || selection.contentGroupId
-                      ? truncateCopy(selection.targetLabel, 28)
-                      : 'section frame'}
-                  </span>
-                  <span className="builder-preview-status-chip">{selection.sectionKey}</span>
-                  {hasMultiSectionSelection ? (
-                    <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
-                  ) : null}
-                  {clipboardPayload ? (
-                    <span className="builder-preview-status-chip">
-                      Clipboard {formatSectionFrameClipboardSummary(clipboardPayload)}
-                    </span>
-                  ) : null}
-                </>
-              )}
-            </div>
-
-            <div className="builder-preview-workspace-bar-group">
-              {presentation === 'standalone' ? (
-                <>
-                  <span className="builder-preview-status-chip">
-                    History {historyMeta.length ? `${historyMeta.cursor + 1}/${historyMeta.length}` : '0/0'}
-                  </span>
-                  <span className="builder-preview-status-chip">
-                    Server {serverStorage ? `${serverStorage} store` : 'sync pending'}
-                  </span>
-                  <span className="builder-preview-status-chip">
-                    Viewport {getViewportLabel(viewportMode)}
-                  </span>
-                  <span
-                    className={`builder-preview-status-chip${
-                      zoomTooLowForPrecision ? ' builder-preview-status-chip--danger' : ''
-                    }`}
-                  >
-                    Zoom {zoomLevel}%
-                  </span>
-                  <span className="builder-preview-status-chip">
-                    {historyMeta.label ?? 'No workspace changes yet'}
-                  </span>
-                </>
-              ) : null}
-              <div className="builder-preview-viewport-switch" role="group" aria-label="Preview viewport">
-                {VIEWPORT_OPTIONS.map((option) => (
-                  <button
-                    key={option.value}
-                    type="button"
-                    className={`builder-preview-viewport-btn${viewportMode === option.value ? ' is-active' : ''}`}
-                    onClick={() => setViewportMode(option.value)}
-                    aria-pressed={viewportMode === option.value}
-                  >
-                    <span>{option.label}</span>
-                    <small>{option.hint}</small>
-                  </button>
-                ))}
+          {presentation === 'standalone' ? (
+            <div className="builder-preview-workspace-bar">
+              <div className="builder-preview-workspace-bar-group">{standaloneWorkspaceStatus}</div>
+              <div className="builder-preview-workspace-bar-group">
+                {standaloneRuntimeStatus}
+                {sharedRuntimeControls}
               </div>
-              <div className="builder-preview-zoom-controls" role="group" aria-label="Preview zoom">
-                <button
-                  type="button"
-                  className="builder-preview-zoom-btn"
-                  onClick={() => adjustZoomLevel('out')}
-                  disabled={!canZoomOut}
-                >
-                  -
-                </button>
-                <div className="builder-preview-zoom-copy">
-                  <strong>{zoomLevel}%</strong>
-                  <small>Alt+wheel · Space+drag</small>
-                </div>
-                <button
-                  type="button"
-                  className="builder-preview-zoom-btn"
-                  onClick={() => adjustZoomLevel('in')}
-                  disabled={!canZoomIn}
-                >
-                  +
-                </button>
-                <button
-                  type="button"
-                  className="builder-action-btn"
-                  onClick={resetZoomLevel}
-                  disabled={zoomLevel === DEFAULT_ZOOM_LEVEL}
-                >
-                  100%
-                </button>
-              </div>
-              <button
-                type="button"
-                className="builder-action-btn"
-                onClick={undoWorkspaceChange}
-                disabled={!historyMeta.canUndo}
-              >
-                Undo
-              </button>
-              <button
-                type="button"
-                className="builder-action-btn"
-                onClick={redoWorkspaceChange}
-                disabled={!historyMeta.canRedo}
-              >
-                Redo
-              </button>
-              <button
-                type="button"
-                className="builder-action-btn builder-action-btn--primary"
-                onClick={() => {
-                  void saveServerDraft(
-                    rollbackPromotionCandidate ? { allowRollbackPromotion: true } : undefined
-                  );
-                }}
-                disabled={
-                  !draftHydrated ||
-                  serverPending ||
-                  serverConflict?.kind === 'draft' ||
-                  (Boolean(rollbackPromotionCandidate) &&
-                    serverDraftMeta.persisted &&
-                    !canPromoteRollbackRecovery)
-                }
-              >
-                {rollbackPromotionCandidate ? 'Promote recovery to shared draft' : 'Save to shared draft'}
-              </button>
             </div>
-          </div>
+          ) : null}
 
           {presentation === 'embedded' ? (
             <BuilderAdvancedDisclosure
@@ -4150,6 +4235,12 @@ export default function BuilderInteractiveHomePreview({
 
       <div className="builder-preview-workspace">
         <div className="builder-preview-canvas">
+          {presentation === 'embedded' ? (
+            <div className="builder-preview-canvas-toolbar">
+              <div className="builder-preview-canvas-toolbar-group">{embeddedToolbarStatus}</div>
+              <div className="builder-preview-canvas-toolbar-group">{sharedRuntimeControls}</div>
+            </div>
+          ) : null}
           <div className="builder-preview-canvas-note">
             <strong>{zoomLevel}% zoom</strong>
             <span>

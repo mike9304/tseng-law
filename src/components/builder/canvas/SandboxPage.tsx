@@ -132,6 +132,31 @@ export default function SandboxPage({
     previousDraftSaveStateRef.current = draftSaveState;
   }, [draftSaveState]);
 
+  const handleLocaleChange = useCallback(async (newLocale: Locale, linkedPageId: string | null) => {
+    if (linkedPageId) {
+      // Load the linked page's document
+      try {
+        const response = await fetch(
+          `/api/builder/sites/default/pages/${linkedPageId}/draft?locale=${newLocale}`,
+          { credentials: 'same-origin' },
+        );
+        if (response.ok) {
+          const data = (await response.json()) as { snapshot?: { document?: BuilderCanvasDocument }; document?: BuilderCanvasDocument };
+          const doc = data.snapshot?.document || data.document;
+          if (doc) {
+            replaceDocument(doc);
+            setActivePageId(linkedPageId);
+            pushToast(`Switched to ${newLocale}`, 'success');
+          }
+        }
+      } catch {
+        pushToast('Failed to switch locale', 'error');
+      }
+    } else {
+      pushToast(`No linked page for ${newLocale}`, 'error');
+    }
+  }, [replaceDocument]);
+
   const handleSelectPage = useCallback(async (pageId: string) => {
     setActivePageId(pageId);
     try {
@@ -202,6 +227,8 @@ export default function SandboxPage({
         onPublish={() => setPublishOpen(true)}
         onOpenSettings={() => setSettingsOpen(true)}
         onOpenHistory={() => setHistoryOpen(true)}
+        activePageId={activePageId}
+        onLocaleChange={handleLocaleChange}
       />
 
       <section className={styles.metaGrid}>

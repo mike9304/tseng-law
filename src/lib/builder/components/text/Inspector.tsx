@@ -107,6 +107,144 @@ export default function TextInspector({
           onChange={(event) => onUpdate({ letterSpacing: Number(event.target.value) })}
         />
       </label>
+      <label>
+        <span>Vertical align</span>
+        <select
+          value={textNode.content.verticalAlign ?? 'top'}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ verticalAlign: event.target.value })}
+        >
+          <option value="top">Top</option>
+          <option value="center">Center</option>
+          <option value="bottom">Bottom</option>
+        </select>
+      </label>
+      <label>
+        <span>Text transform</span>
+        <select
+          value={textNode.content.textTransform ?? 'none'}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ textTransform: event.target.value })}
+        >
+          <option value="none">None</option>
+          <option value="uppercase">Uppercase</option>
+          <option value="lowercase">Lowercase</option>
+          <option value="capitalize">Capitalize</option>
+        </select>
+      </label>
+      <label>
+        <span>Background color</span>
+        <input
+          type="color"
+          value={normalizeHex(textNode.content.backgroundColor ?? '')}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ backgroundColor: event.target.value })}
+        />
+        {textNode.content.backgroundColor && (
+          <button
+            type="button"
+            disabled={disabled}
+            style={{ fontSize: '0.72rem', marginTop: 2, cursor: 'pointer', background: 'none', border: '1px solid #cbd5e1', borderRadius: 4, padding: '2px 6px', color: '#64748b' }}
+            onClick={() => onUpdate({ backgroundColor: '' })}
+          >
+            Clear
+          </button>
+        )}
+      </label>
+      <fieldset style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '8px 10px', margin: 0 }}>
+        <legend style={{ fontSize: '0.75rem', fontWeight: 600, color: '#334155', padding: '0 4px' }}>Text shadow</legend>
+        <label>
+          <span>X</span>
+          <input
+            type="number"
+            min={-50}
+            max={50}
+            step={1}
+            value={textNode.content.textShadow?.x ?? 0}
+            disabled={disabled}
+            onChange={(event) =>
+              onUpdate({
+                textShadow: {
+                  x: Number(event.target.value),
+                  y: textNode.content.textShadow?.y ?? 0,
+                  blur: textNode.content.textShadow?.blur ?? 0,
+                  color: textNode.content.textShadow?.color ?? 'rgba(0,0,0,0.3)',
+                },
+              })
+            }
+          />
+        </label>
+        <label>
+          <span>Y</span>
+          <input
+            type="number"
+            min={-50}
+            max={50}
+            step={1}
+            value={textNode.content.textShadow?.y ?? 0}
+            disabled={disabled}
+            onChange={(event) =>
+              onUpdate({
+                textShadow: {
+                  x: textNode.content.textShadow?.x ?? 0,
+                  y: Number(event.target.value),
+                  blur: textNode.content.textShadow?.blur ?? 0,
+                  color: textNode.content.textShadow?.color ?? 'rgba(0,0,0,0.3)',
+                },
+              })
+            }
+          />
+        </label>
+        <label>
+          <span>Blur</span>
+          <input
+            type="number"
+            min={0}
+            max={100}
+            step={1}
+            value={textNode.content.textShadow?.blur ?? 0}
+            disabled={disabled}
+            onChange={(event) =>
+              onUpdate({
+                textShadow: {
+                  x: textNode.content.textShadow?.x ?? 0,
+                  y: textNode.content.textShadow?.y ?? 0,
+                  blur: Number(event.target.value),
+                  color: textNode.content.textShadow?.color ?? 'rgba(0,0,0,0.3)',
+                },
+              })
+            }
+          />
+        </label>
+        <label>
+          <span>Color</span>
+          <input
+            type="color"
+            value={normalizeHex(textNode.content.textShadow?.color ?? '#000000')}
+            disabled={disabled}
+            onChange={(event) =>
+              onUpdate({
+                textShadow: {
+                  x: textNode.content.textShadow?.x ?? 0,
+                  y: textNode.content.textShadow?.y ?? 0,
+                  blur: textNode.content.textShadow?.blur ?? 0,
+                  color: event.target.value,
+                },
+              })
+            }
+          />
+        </label>
+        {textNode.content.textShadow && (
+          <button
+            type="button"
+            disabled={disabled}
+            style={{ fontSize: '0.72rem', marginTop: 4, cursor: 'pointer', background: 'none', border: '1px solid #cbd5e1', borderRadius: 4, padding: '2px 6px', color: '#64748b' }}
+            onClick={() => onUpdate({ textShadow: undefined })}
+          >
+            Clear shadow
+          </button>
+        )}
+      </fieldset>
     </>
   );
 }

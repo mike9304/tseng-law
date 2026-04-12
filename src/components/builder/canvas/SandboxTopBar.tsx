@@ -1,5 +1,7 @@
 'use client';
 
+import type { Locale } from '@/lib/locales';
+import LocaleSwitcher from './LocaleSwitcher';
 import styles from './SandboxPage.module.css';
 
 export type ViewportMode = 'desktop' | 'tablet' | 'mobile';
@@ -27,6 +29,8 @@ export default function SandboxTopBar({
   onPublish,
   onOpenSettings,
   onOpenHistory,
+  activePageId,
+  onLocaleChange,
 }: {
   locale: string;
   backend: string;
@@ -39,6 +43,8 @@ export default function SandboxTopBar({
   onPublish: () => void;
   onOpenSettings?: () => void;
   onOpenHistory?: () => void;
+  activePageId?: string | null;
+  onLocaleChange?: (locale: Locale, linkedPageId: string | null) => void;
 }) {
   const saveLabel = draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : '';
   const saveClass = draftSaveState === 'saving' ? styles.statusBadgeSaving : draftSaveState === 'saved' ? styles.statusBadgeSaved : draftSaveState === 'error' ? styles.statusBadgeError : '';
@@ -57,7 +63,15 @@ export default function SandboxTopBar({
       </div>
 
       <div className={styles.topBarMeta} style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
-        <span className={styles.topBarChip}>locale: {locale}</span>
+        {onLocaleChange ? (
+          <LocaleSwitcher
+            currentLocale={locale as Locale}
+            activePageId={activePageId ?? null}
+            onLocaleChange={onLocaleChange}
+          />
+        ) : (
+          <span className={styles.topBarChip}>locale: {locale}</span>
+        )}
         <span className={styles.topBarChip}>backend: {backend}</span>
         <span className={styles.topBarChip}>nodes: {nodeCount}</span>
         <span className={styles.topBarChip}>selected: {selectedSummary}</span>

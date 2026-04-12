@@ -15967,7 +15967,7 @@ html[lang='zh-Hant'] h3 {
 }
 
 .builder-preview-hero--embedded {
-  padding-block: 1rem 2rem;
+  padding-block: 1rem 1.1rem;
 }
 
 .builder-preview-embedded-heading {
@@ -16011,6 +16011,39 @@ html[lang='zh-Hant'] h3 {
 
 .builder-preview-workspace-bar--embedded .builder-preview-workspace-bar-group:last-child {
   flex: 1 1 540px;
+  justify-content: flex-end;
+}
+
+.builder-preview-canvas-toolbar {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.85rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0.9rem 0.95rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 14px 30px rgba(35, 31, 32, 0.08);
+}
+
+.builder-preview-canvas-toolbar-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.builder-preview-canvas-toolbar-group:first-child {
+  flex: 1 1 320px;
+}
+
+.builder-preview-canvas-toolbar-group:last-child {
+  flex: 1 1 560px;
   justify-content: flex-end;
 }
 

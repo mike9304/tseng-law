@@ -1,6 +1,17 @@
 import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
 import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
 
+function verticalAlignToFlexAlign(va?: string): string {
+  if (va === 'center') return 'center';
+  if (va === 'bottom') return 'flex-end';
+  return 'flex-start';
+}
+
+function buildTextShadow(ts?: { x: number; y: number; blur: number; color: string }): string | undefined {
+  if (!ts) return undefined;
+  return `${ts.x}px ${ts.y}px ${ts.blur}px ${ts.color}`;
+}
+
 export default function TextElement({
   node,
 }: {
@@ -28,10 +39,13 @@ export default function TextElement({
         lineHeight: node.content.lineHeight ?? 1.25,
         letterSpacing: `${node.content.letterSpacing ?? 0}px`,
         display: 'flex',
-        alignItems: 'flex-start',
+        alignItems: verticalAlignToFlexAlign(node.content.verticalAlign),
         overflow: 'hidden',
         wordBreak: 'break-word',
         whiteSpace: 'pre-wrap',
+        textShadow: buildTextShadow(node.content.textShadow),
+        backgroundColor: node.content.backgroundColor || undefined,
+        textTransform: (node.content.textTransform as React.CSSProperties['textTransform']) || undefined,
       }}
     >
       {node.content.text}

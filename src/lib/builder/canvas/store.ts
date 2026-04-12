@@ -495,10 +495,12 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (!state.document) return state;
       const existingNode = state.document.nodes.find((node) => node.id === nodeId);
       if (!existingNode) return state;
-      // Only merge keys that already exist in the node's content (guard against unknown keys)
+      // Merge keys that exist in the node's content or the component's default content
+      const componentDef = getComponent(existingNode.kind);
+      const defaultContent = componentDef?.defaultContent ?? {};
       const validContent: Record<string, unknown> = {};
       for (const key of Object.keys(content)) {
-        if (key in existingNode.content) {
+        if (key in existingNode.content || key in defaultContent) {
           validContent[key] = content[key];
         }
       }

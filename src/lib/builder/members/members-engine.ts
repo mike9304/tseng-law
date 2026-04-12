@@ -10,6 +10,7 @@
 
 import { get, put, list } from '@vercel/blob';
 import crypto from 'crypto';
+import bcrypt from 'bcryptjs';
 
 // ─── Member Model ─────────────────────────────────────────────────
 
@@ -41,14 +42,16 @@ export interface MemberSession {
 const MEMBERS_PREFIX = 'builder-members/';
 const SESSIONS_PREFIX = 'builder-members/sessions/';
 
-// ─── Password hashing (simple, use bcrypt in prod) ────────────────
+// ─── Password hashing (bcrypt, production-safe) ──────────────────
 
-function hashPassword(password: string): string {
-  return crypto.createHash('sha256').update(password + 'hojeong-salt-2026').digest('hex');
+const BCRYPT_ROUNDS = 10;
+
+async function hashPassword(password: string): Promise<string> {
+  return bcrypt.hash(password, BCRYPT_ROUNDS);
 }
 
-function verifyPassword(password: string, hash: string): boolean {
-  return hashPassword(password) === hash;
+async function verifyPassword(password: string, hash: string): Promise<boolean> {
+  return bcrypt.compare(password, hash);
 }
 
 // ─── CRUD ─────────────────────────────────────────────────────────
@@ -67,7 +70,7 @@ export async function createMember(data: {
     email: data.email.toLowerCase().trim(),
     name: data.name,
     role: data.role || 'free',
-    passwordHash: hashPassword(data.password),
+    passwordHash: await hashPassword(data.password),
     createdAt: new Date().toISOString(),
     verified: false,
     blocked: false,
@@ -116,7 +119,7 @@ export async function listMembers(): Promise<SiteMember[]> {
 export async function loginMember(email: string, password: string): Promise<MemberSession | null> {
   const member = await getMemberByEmail(email);
   if (!member || member.blocked) return null;
-  if (!verifyPassword(password, member.passwordHash)) return null;
+  if (!(await verifyPassword(password, member.passwordHash))) return null;
 
   const session: MemberSession = {
     sessionId: crypto.randomUUID(),

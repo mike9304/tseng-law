@@ -86,9 +86,14 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Guard the admin dashboard under every supported locale. The `(ko|zh-hant|en)`
-  // group is a Next.js matcher pattern — it's translated into a regex behind
-  // the scenes so other paths like `/ko/contact` or `/en/columns` are NOT
-  // affected by this middleware.
-  matcher: ['/(ko|zh-hant|en)/admin-consultation/:path*'],
+  // Guard the admin dashboard AND the new builder workspace under every
+  // supported locale. The `(ko|zh-hant|en)` group is a Next.js matcher
+  // pattern — it's translated into a regex behind the scenes so other
+  // paths like `/ko/contact` or `/en/columns` are NOT affected by this
+  // middleware. `admin-builder` is the Sprint 0+ entry point for the
+  // column CMS and (later) the freeform site builder workspace.
+  matcher: [
+    '/(ko|zh-hant|en)/admin-consultation/:path*',
+    '/(ko|zh-hant|en)/admin-builder/:path*',
+  ],
 };

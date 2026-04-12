@@ -15,29 +15,49 @@ import { publishPage, readPageCanvas, writePageCanvas, readSiteDocument } from '
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 
-// ─── Preview tokens ───────────────────────────────────────────────
+// ─── Preview tokens (Blob-persisted for serverless) ──────────────
 
-const previewTokens = new Map<string, { pageId: string; locale: Locale; expiresAt: number }>();
 const PREVIEW_TTL_MS = 30 * 60 * 1000; // 30 minutes
+const PREVIEW_BLOB_PREFIX = 'builder-preview-tokens/';
 
-export function createPreviewToken(pageId: string, locale: Locale): string {
+export async function createPreviewToken(pageId: string, locale: Locale): Promise<string> {
   const token = crypto.randomUUID();
-  previewTokens.set(token, {
-    pageId,
-    locale,
-    expiresAt: Date.now() + PREVIEW_TTL_MS,
-  });
+  const entry = { pageId, locale, expiresAt: Date.now() + PREVIEW_TTL_MS };
+  try {
+    const { put } = await import('@vercel/blob');
+    await put(`${PREVIEW_BLOB_PREFIX}${token}.json`, JSON.stringify(entry), {
+      access: 'private',
+      allowOverwrite: true,
+      contentType: 'application/json',
+    });
+  } catch {
+    // Blob unavailable — use URL-encoded fallback (token embeds the data)
+    const encoded = Buffer.from(JSON.stringify(entry)).toString('base64url');
+    return `inline-${encoded}`;
+  }
   return token;
 }
 
-export function resolvePreviewToken(token: string): { pageId: string; locale: Locale } | null {
-  const entry = previewTokens.get(token);
-  if (!entry) return null;
-  if (Date.now() > entry.expiresAt) {
-    previewTokens.delete(token);
+export async function resolvePreviewToken(token: string): Promise<{ pageId: string; locale: Locale } | null> {
+  // Inline token fallback (no Blob needed)
+  if (token.startsWith('inline-')) {
+    try {
+      const decoded = JSON.parse(Buffer.from(token.slice(7), 'base64url').toString('utf8')) as { pageId: string; locale: Locale; expiresAt: number };
+      if (Date.now() > decoded.expiresAt) return null;
+      return { pageId: decoded.pageId, locale: decoded.locale };
+    } catch { return null; }
+  }
+
+  try {
+    const { get } = await import('@vercel/blob');
+    const result = await get(`${PREVIEW_BLOB_PREFIX}${token}.json`, { access: 'private', useCache: false });
+    if (!result?.stream || result.statusCode !== 200) return null;
+    const entry = JSON.parse(await new Response(result.stream).text()) as { pageId: string; locale: Locale; expiresAt: number };
+    if (Date.now() > entry.expiresAt) return null;
+    return { pageId: entry.pageId, locale: entry.locale };
+  } catch {
     return null;
   }
-  return { pageId: entry.pageId, locale: entry.locale };
 }
 
 // ─── Publish checks ──────────────────────────────────────────────
@@ -111,7 +131,7 @@ export async function publishPageWithChecks(
   return { success: true, checks, slug };
 }
 
-// ─── Version history ──────────────────────────────────────────────
+// ─── Version history (Blob-persisted for serverless) ─────────────
 
 export interface PageRevision {
   revisionId: string;
@@ -120,35 +140,58 @@ export interface PageRevision {
   nodeCount: number;
 }
 
-const revisionStore = new Map<string, BuilderCanvasDocument[]>();
+const REVISION_BLOB_PREFIX = 'builder-revisions/';
 const MAX_REVISIONS = 50;
 
-export function recordRevision(pageId: string, doc: BuilderCanvasDocument): void {
-  const key = pageId;
-  const revisions = revisionStore.get(key) || [];
-  revisions.push(structuredClone(doc));
-  if (revisions.length > MAX_REVISIONS) revisions.shift();
-  revisionStore.set(key, revisions);
+export async function recordRevision(pageId: string, doc: BuilderCanvasDocument): Promise<void> {
+  const revisionId = `${pageId}-${Date.now()}`;
+  try {
+    const { put } = await import('@vercel/blob');
+    await put(
+      `${REVISION_BLOB_PREFIX}${pageId}/${revisionId}.json`,
+      JSON.stringify({ ...doc, _revisionId: revisionId }),
+      { access: 'private', allowOverwrite: true, contentType: 'application/json' },
+    );
+  } catch {
+    // Blob unavailable — skip revision recording (dev mode)
+  }
 }
 
-export function listRevisions(pageId: string): PageRevision[] {
-  const revisions = revisionStore.get(pageId) || [];
-  return revisions.map((doc, i) => ({
-    revisionId: `rev-${i}`,
-    pageId,
-    savedAt: doc.updatedAt,
-    nodeCount: doc.nodes.length,
-  }));
+export async function listRevisions(pageId: string): Promise<PageRevision[]> {
+  try {
+    const { list } = await import('@vercel/blob');
+    const result = await list({ prefix: `${REVISION_BLOB_PREFIX}${pageId}/` });
+    const revisions = result.blobs
+      .sort((a, b) => b.uploadedAt.getTime() - a.uploadedAt.getTime())
+      .slice(0, MAX_REVISIONS)
+      .map((blob, i) => ({
+        revisionId: blob.pathname.split('/').pop()?.replace('.json', '') || `rev-${i}`,
+        pageId,
+        savedAt: blob.uploadedAt.toISOString(),
+        nodeCount: 0,
+      }));
+    return revisions;
+  } catch {
+    return [];
+  }
 }
 
 export async function rollbackToRevision(
   siteId: string,
   pageId: string,
-  revisionIndex: number,
+  revisionId: string,
 ): Promise<boolean> {
-  const revisions = revisionStore.get(pageId) || [];
-  const target = revisions[revisionIndex];
-  if (!target) return false;
-  await writePageCanvas(siteId, pageId, 'draft', target);
-  return true;
+  try {
+    const { get } = await import('@vercel/blob');
+    const result = await get(`${REVISION_BLOB_PREFIX}${pageId}/${revisionId}.json`, {
+      access: 'private',
+      useCache: false,
+    });
+    if (!result?.stream || result.statusCode !== 200) return false;
+    const doc = JSON.parse(await new Response(result.stream).text()) as BuilderCanvasDocument;
+    await writePageCanvas(siteId, pageId, 'draft', doc);
+    return true;
+  } catch {
+    return false;
+  }
 }

@@ -1,17 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
 import { listPages, createPage } from '@/lib/builder/site/persistence';
+import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 
 export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
+  const auth = requireBuilderAdminAuth(request);
+  if (auth instanceof NextResponse) return auth;
+
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   const pages = await listPages('default', locale);
   return NextResponse.json({ pages });
 }
 
 export async function POST(request: NextRequest) {
-  const body = (await request.json()) as { slug?: string; title?: string; locale?: string };
+  const auth = requireBuilderAdminAuth(request);
+  if (auth instanceof NextResponse) return auth;
+
+  let body: { slug?: string; title?: string; locale?: string };
+  try {
+    body = (await request.json()) as { slug?: string; title?: string; locale?: string };
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
+  }
+
   const locale = normalizeLocale(body.locale || 'ko');
   const slug = body.slug?.trim() || '';
   const title = body.title?.trim() || 'New Page';

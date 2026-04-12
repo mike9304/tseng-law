@@ -1,18 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
+import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
 
 export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
+  const auth = requireBuilderAdminAuth(request);
+  if (auth instanceof NextResponse) return auth;
+
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   const site = await readSiteDocument('default', locale);
   return NextResponse.json({ navigation: site.navigation });
 }
 
 export async function PUT(request: NextRequest) {
-  const body = (await request.json()) as { navigation?: BuilderNavItem[]; locale?: string };
+  const auth = requireBuilderAdminAuth(request);
+  if (auth instanceof NextResponse) return auth;
+
+  let body: { navigation?: BuilderNavItem[]; locale?: string };
+  try {
+    body = (await request.json()) as { navigation?: BuilderNavItem[]; locale?: string };
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
+  }
+
   const locale = normalizeLocale(body.locale || 'ko');
 
   if (!Array.isArray(body.navigation)) {

@@ -130,7 +130,15 @@ export function getStarterTemplate(templateId: string): Template | undefined {
   return STARTER_TEMPLATES.find((t) => t.templateId === templateId);
 }
 
-// ─── User templates (Blob-persisted) ──────────────────────────────
+// ─── Backend selector (Wave 5b pattern) ───────────────────────────
+
+function isBlobBackend(): boolean {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
+  if (process.env.CONSULTATION_LOG_BACKEND === 'local') return false;
+  return true;
+}
+
+// ─── User templates (Blob with local fallback) ───────────────────
 
 const USER_TEMPLATE_PREFIX = 'builder-templates/';
 
@@ -153,11 +161,19 @@ export async function saveAsTemplate(
     isStarter: false,
   };
   const template: Template = { ...meta, document };
-  await put(
-    `${USER_TEMPLATE_PREFIX}${templateId}.json`,
-    JSON.stringify(template),
-    { access: 'private', allowOverwrite: true, contentType: 'application/json' },
-  );
+  if (isBlobBackend()) {
+    await put(
+      `${USER_TEMPLATE_PREFIX}${templateId}.json`,
+      JSON.stringify(template),
+      { access: 'private', allowOverwrite: true, contentType: 'application/json' },
+    );
+  } else {
+    const fs = await import('fs/promises');
+    const path = await import('path');
+    const dir = path.join(process.cwd(), 'runtime-data', 'builder-templates');
+    await fs.mkdir(dir, { recursive: true });
+    await fs.writeFile(path.join(dir, `${templateId}.json`), JSON.stringify(template), 'utf8');
+  }
   return meta;
 }
 

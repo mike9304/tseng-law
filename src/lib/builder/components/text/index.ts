@@ -15,6 +15,7 @@ export default defineComponent({
     align: 'left' as const,
     lineHeight: 1.25,
     letterSpacing: 0,
+    fontFamily: 'system-ui',
   },
   defaultStyle: {},
   defaultRect: { width: 200, height: 40 },

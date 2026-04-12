@@ -11,6 +11,7 @@ export default defineComponent({
     src: '/images/placeholder-image.svg',
     alt: '',
     fit: 'cover' as const,
+    cropAspect: '',
   },
   defaultStyle: {
     borderRadius: 12,

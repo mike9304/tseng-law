@@ -73,6 +73,7 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
     align: z.enum(['left', 'center', 'right']),
     lineHeight: z.number().min(0.5).max(4).default(1.25),
     letterSpacing: z.number().min(-2).max(10).default(0),
+    fontFamily: z.string().max(120).optional(),
   }),
 });
 
@@ -82,6 +83,7 @@ const imageCanvasNodeSchema = baseCanvasNodeSchema.extend({
     src: z.string().max(2000),
     alt: z.string().max(300),
     fit: z.enum(['cover', 'contain']),
+    cropAspect: z.string().max(20).optional(),
   }),
 });
 
@@ -101,6 +103,7 @@ const headingCanvasNodeSchema = baseCanvasNodeSchema.extend({
     level: z.number().int().min(1).max(6),
     color: z.string().max(32),
     align: z.enum(['left', 'center', 'right']),
+    fontFamily: z.string().max(120).optional(),
   }),
 });
 
@@ -203,6 +206,7 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
           align: 'left',
           lineHeight: 1.25,
           letterSpacing: 0,
+          fontFamily: 'system-ui',
         },
       },
       {
@@ -224,6 +228,7 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
           align: 'left',
           lineHeight: 1.25,
           letterSpacing: 0,
+          fontFamily: 'system-ui',
         },
       },
       {
@@ -281,6 +286,7 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
           src: '/images/header-skyline-ratio.webp',
           alt: locale === 'ko' ? '타이베이 스카이라인' : 'Taipei skyline',
           fit: 'cover',
+          cropAspect: '',
         },
       },
     ],

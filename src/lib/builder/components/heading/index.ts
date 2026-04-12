@@ -12,6 +12,7 @@ export default defineComponent({
     level: 2,
     color: '#0f172a',
     align: 'left' as const,
+    fontFamily: 'system-ui',
   },
   defaultStyle: {},
   defaultRect: { width: 340, height: 76 },

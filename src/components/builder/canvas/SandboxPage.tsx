@@ -1,12 +1,14 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import CanvasContainer from '@/components/builder/canvas/CanvasContainer';
+import PageSwitcher from '@/components/builder/canvas/PageSwitcher';
+import PublishModal from '@/components/builder/canvas/PublishModal';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
-import SandboxTopBar from '@/components/builder/canvas/SandboxTopBar';
+import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { Locale } from '@/lib/locales';
@@ -14,6 +16,12 @@ import styles from './SandboxPage.module.css';
 
 const AUTOSAVE_DEBOUNCE_MS = 1000;
 const TOAST_TTL_MS = 3000;
+
+const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
+  desktop: null,
+  tablet: 768,
+  mobile: 375,
+};
 
 type ToastTone = 'success' | 'error';
 
@@ -46,6 +54,9 @@ export default function SandboxPage({
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
   const [toasts, setToasts] = useState<SandboxToast[]>([]);
   const previousDraftSaveStateRef = useRef(draftSaveState);
+  const [viewport, setViewport] = useState<ViewportMode>('desktop');
+  const [publishOpen, setPublishOpen] = useState(false);
+  const [activePageId, setActivePageId] = useState<string | null>(null);
 
   function pushToast(message: string, tone: ToastTone) {
     const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -115,6 +126,55 @@ export default function SandboxPage({
     previousDraftSaveStateRef.current = draftSaveState;
   }, [draftSaveState]);
 
+  const handleSelectPage = useCallback(async (pageId: string) => {
+    setActivePageId(pageId);
+    try {
+      const response = await fetch(
+        `/api/builder/sites/default/pages/${pageId}/draft?locale=${locale}`,
+        { credentials: 'same-origin' },
+      );
+      if (response.ok) {
+        const data = (await response.json()) as { snapshot?: { document?: BuilderCanvasDocument }; document?: BuilderCanvasDocument };
+        const doc = data.snapshot?.document || data.document;
+        if (doc) {
+          replaceDocument(doc);
+          pushToast(`Loaded page: ${pageId}`, 'success');
+        }
+      }
+    } catch {
+      pushToast('Failed to load page', 'error');
+    }
+  }, [locale, replaceDocument]);
+
+  const viewportWidth = VIEWPORT_WIDTHS[viewport];
+
+  const canvasWrapperStyle: React.CSSProperties = viewportWidth
+    ? {
+        width: viewportWidth,
+        margin: '0 auto',
+        position: 'relative',
+        transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+      }
+    : {
+        width: '100%',
+        position: 'relative',
+        transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+      };
+
+  const canvasOuterStyle: React.CSSProperties = viewportWidth
+    ? {
+        flex: 1,
+        minWidth: 0,
+        background: '#e2e8f0',
+        display: 'flex',
+        justifyContent: 'center',
+        overflow: 'auto',
+      }
+    : {
+        flex: 1,
+        minWidth: 0,
+      };
+
   return (
     <main className={styles.shell}>
       <SandboxTopBar
@@ -130,6 +190,9 @@ export default function SandboxPage({
               : 'none'
         }
         selectionCount={selectedNodeIds.length}
+        viewport={viewport}
+        onViewportChange={setViewport}
+        onPublish={() => setPublishOpen(true)}
       />
 
       <section className={styles.metaGrid}>
@@ -163,10 +226,19 @@ export default function SandboxPage({
 
       <section className={styles.editorShell}>
         <div className={styles.leftColumn}>
+          <PageSwitcher
+            locale={locale}
+            activePageId={activePageId}
+            onSelectPage={handleSelectPage}
+          />
           <SandboxLayersPanel />
           <SandboxCatalogPanel />
         </div>
-        <CanvasContainer onRequestAssetLibrary={setAssetLibraryNodeId} />
+        <div style={canvasOuterStyle}>
+          <div style={canvasWrapperStyle}>
+            <CanvasContainer onRequestAssetLibrary={setAssetLibraryNodeId} />
+          </div>
+        </div>
         <SandboxInspectorPanel
           onRequestAssetLibrary={() => {
             if (selectedNode?.kind === 'image') {
@@ -188,6 +260,13 @@ export default function SandboxPage({
           }}
         />
       ) : null}
+
+      <PublishModal
+        open={publishOpen}
+        document={document}
+        locale={locale}
+        onClose={() => setPublishOpen(false)}
+      />
 
       <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
         {toasts.map((toast) => (

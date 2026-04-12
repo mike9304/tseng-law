@@ -1,10 +1,15 @@
 import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
+import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
 
 export default function TextElement({
   node,
 }: {
   node: BuilderTextCanvasNode;
 }) {
+  const fontFamily = node.content.fontFamily
+    ? fontFamilyCSS(node.content.fontFamily)
+    : 'system-ui, -apple-system, sans-serif';
+
   return (
     <div
       style={{
@@ -12,6 +17,7 @@ export default function TextElement({
         height: '100%',
         color: node.content.color,
         fontSize: `${node.content.fontSize}px`,
+        fontFamily,
         fontWeight:
           node.content.fontWeight === 'bold'
             ? 700

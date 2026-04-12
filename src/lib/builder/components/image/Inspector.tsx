@@ -1,5 +1,9 @@
+'use client';
+
+import { useState } from 'react';
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
+import CropModal from '@/components/builder/canvas/CropModal';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 export default function ImageInspector({
@@ -9,6 +13,7 @@ export default function ImageInspector({
   onRequestAssetLibrary,
 }: BuilderComponentInspectorProps) {
   const imageNode = node as BuilderImageCanvasNode;
+  const [cropOpen, setCropOpen] = useState(false);
 
   return (
     <>
@@ -20,6 +25,15 @@ export default function ImageInspector({
           onClick={() => onRequestAssetLibrary?.()}
         >
           Open asset library
+        </button>
+        <button
+          type="button"
+          className={styles.actionButton}
+          disabled={disabled || !imageNode.content.src}
+          onClick={() => setCropOpen(true)}
+          style={{ marginLeft: 6 }}
+        >
+          Crop
         </button>
       </div>
       <label>
@@ -52,6 +66,21 @@ export default function ImageInspector({
           <option value="contain">Contain</option>
         </select>
       </label>
+      {imageNode.content.cropAspect && imageNode.content.cropAspect !== 'Free' && (
+        <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: 4 }}>
+          Crop: {imageNode.content.cropAspect}
+        </div>
+      )}
+      <CropModal
+        open={cropOpen}
+        imageSrc={imageNode.content.src}
+        currentAspect={imageNode.content.cropAspect || 'Free'}
+        onConfirm={(aspect) => {
+          onUpdate({ cropAspect: aspect });
+          setCropOpen(false);
+        }}
+        onClose={() => setCropOpen(false)}
+      />
     </>
   );
 }

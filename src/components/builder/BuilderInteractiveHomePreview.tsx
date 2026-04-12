@@ -3795,117 +3795,237 @@ export default function BuilderInteractiveHomePreview({
             </div>
           </div>
 
-          <div className="builder-preview-section-grid">
-            {pageDocument.root.children.map((section, index) => {
-              const definition = homeSectionRegistry[section.sectionKey];
-              const stats = statsBySection[section.id];
-              const selected = normalizedSelectedSectionIds.includes(section.id);
-              const active = section.id === selection.sectionId;
-              const hidden = resolveBuilderSectionHidden(section, viewportMode);
-              const visibilityState = describeViewportVisibilityState(section, viewportMode);
-              const locked = Boolean(section.locked);
-              const layout = resolveBuilderSectionLayout(section, viewportMode);
-              const isDragging = sectionDragState?.draggedSectionKey === section.sectionKey;
-              const isDropBefore =
-                sectionDragState?.draggedSectionKey !== section.sectionKey &&
-                sectionDragState?.targetSectionKey === section.sectionKey &&
-                sectionDragState?.placement === 'before';
-              const isDropAfter =
-                sectionDragState?.draggedSectionKey !== section.sectionKey &&
-                sectionDragState?.targetSectionKey === section.sectionKey &&
-                sectionDragState?.placement === 'after';
+          {presentation === 'embedded' ? (
+            <BuilderAdvancedDisclosure
+              className="builder-preview-structure-disclosure"
+              title="Structure controls"
+              summary="Section order, visibility, and lock state stay available here without competing with the stage."
+            >
+              <div className="builder-preview-section-grid">
+                {pageDocument.root.children.map((section, index) => {
+                  const definition = homeSectionRegistry[section.sectionKey];
+                  const stats = statsBySection[section.id];
+                  const selected = normalizedSelectedSectionIds.includes(section.id);
+                  const active = section.id === selection.sectionId;
+                  const hidden = resolveBuilderSectionHidden(section, viewportMode);
+                  const visibilityState = describeViewportVisibilityState(section, viewportMode);
+                  const locked = Boolean(section.locked);
+                  const layout = resolveBuilderSectionLayout(section, viewportMode);
+                  const isDragging = sectionDragState?.draggedSectionKey === section.sectionKey;
+                  const isDropBefore =
+                    sectionDragState?.draggedSectionKey !== section.sectionKey &&
+                    sectionDragState?.targetSectionKey === section.sectionKey &&
+                    sectionDragState?.placement === 'before';
+                  const isDropAfter =
+                    sectionDragState?.draggedSectionKey !== section.sectionKey &&
+                    sectionDragState?.targetSectionKey === section.sectionKey &&
+                    sectionDragState?.placement === 'after';
 
-              return (
-                <article
-                  key={section.id}
-                  className={`builder-preview-section-card${selected ? ' is-selected' : ''}${active ? ' is-active' : ''}${hidden ? ' is-hidden' : ''}${locked ? ' is-locked' : ''}${isDragging ? ' is-dragging' : ''}${isDropBefore ? ' is-drop-before' : ''}${isDropAfter ? ' is-drop-after' : ''}`}
-                  draggable={!locked && !canvasPointerDragState}
-                  onDragStart={() => handleSectionDragStart(section.sectionKey)}
-                  onDragOver={(event) => handleSectionDragOver(event, section.sectionKey)}
-                  onDrop={() => handleSectionDrop(section.sectionKey)}
-                  onDragEnd={clearSectionDragState}
-                >
-                  <button
-                    type="button"
-                    className="builder-preview-section-card-main"
-                    aria-pressed={selected}
-                    onClick={(event) =>
-                      handleSectionSelectionIntent(section.sectionKey, section.id, {
-                        extend: isMultiSelectModifier(event),
-                      })
-                    }
-                  >
-                    <div className="builder-preview-section-card-key">
-                      {String(index + 1).padStart(2, '0')} · {section.sectionKey}
-                    </div>
-                    <div className="builder-preview-section-card-title">
-                      {definition.title}
-                      <div className="builder-preview-section-card-badges">
-                        {locked ? (
-                          <span className="builder-preview-section-card-badge is-locked">locked</span>
-                        ) : null}
-                        <span className={`builder-preview-section-card-badge${hidden ? ' is-hidden' : ''}`}>
-                          {visibilityState.badge}
-                        </span>
-                      </div>
-                    </div>
-                    {selected && hasMultiSectionSelection ? (
-                      <div className="builder-preview-section-card-selection">included in batch selection</div>
-                    ) : null}
-                    <div className="builder-preview-section-card-component">{definition.componentName}</div>
-                    <div className="builder-preview-section-card-targets">
-                      {definition.supportedTargets.join(' / ')}
-                    </div>
-                    <div className="builder-preview-section-card-layout">
-                      {formatSectionLayoutSummary(layout)}
-                    </div>
-                    {stats ? (
-                      <div className="builder-preview-section-card-stats">
-                        {stats.text} text · {stats.button} button · {stats.image} image
-                      </div>
-                    ) : null}
-                  </button>
-
-                  <div className="builder-preview-section-card-actions">
-                    <button
-                      type="button"
-                      className="builder-action-btn"
-                      onClick={() => moveSection(section.sectionKey, -1)}
-                      disabled={index === 0 || Boolean(getSectionMoveLockBlockMessage(section.sectionKey, index - 1))}
+                  return (
+                    <article
+                      key={section.id}
+                      className={`builder-preview-section-card${selected ? ' is-selected' : ''}${active ? ' is-active' : ''}${hidden ? ' is-hidden' : ''}${locked ? ' is-locked' : ''}${isDragging ? ' is-dragging' : ''}${isDropBefore ? ' is-drop-before' : ''}${isDropAfter ? ' is-drop-after' : ''}`}
+                      draggable={!locked && !canvasPointerDragState}
+                      onDragStart={() => handleSectionDragStart(section.sectionKey)}
+                      onDragOver={(event) => handleSectionDragOver(event, section.sectionKey)}
+                      onDrop={() => handleSectionDrop(section.sectionKey)}
+                      onDragEnd={clearSectionDragState}
                     >
-                      Up
-                    </button>
+                      <button
+                        type="button"
+                        className="builder-preview-section-card-main"
+                        aria-pressed={selected}
+                        onClick={(event) =>
+                          handleSectionSelectionIntent(section.sectionKey, section.id, {
+                            extend: isMultiSelectModifier(event),
+                          })
+                        }
+                      >
+                        <div className="builder-preview-section-card-key">
+                          {String(index + 1).padStart(2, '0')} · {section.sectionKey}
+                        </div>
+                        <div className="builder-preview-section-card-title">
+                          {definition.title}
+                          <div className="builder-preview-section-card-badges">
+                            {locked ? (
+                              <span className="builder-preview-section-card-badge is-locked">locked</span>
+                            ) : null}
+                            <span className={`builder-preview-section-card-badge${hidden ? ' is-hidden' : ''}`}>
+                              {visibilityState.badge}
+                            </span>
+                          </div>
+                        </div>
+                        {selected && hasMultiSectionSelection ? (
+                          <div className="builder-preview-section-card-selection">included in batch selection</div>
+                        ) : null}
+                        <div className="builder-preview-section-card-component">{definition.componentName}</div>
+                        <div className="builder-preview-section-card-targets">
+                          {definition.supportedTargets.join(' / ')}
+                        </div>
+                        <div className="builder-preview-section-card-layout">
+                          {formatSectionLayoutSummary(layout)}
+                        </div>
+                        {stats ? (
+                          <div className="builder-preview-section-card-stats">
+                            {stats.text} text · {stats.button} button · {stats.image} image
+                          </div>
+                        ) : null}
+                      </button>
+
+                      <div className="builder-preview-section-card-actions">
+                        <button
+                          type="button"
+                          className="builder-action-btn"
+                          onClick={() => moveSection(section.sectionKey, -1)}
+                          disabled={index === 0 || Boolean(getSectionMoveLockBlockMessage(section.sectionKey, index - 1))}
+                        >
+                          Up
+                        </button>
+                        <button
+                          type="button"
+                          className="builder-action-btn"
+                          onClick={() => moveSection(section.sectionKey, 1)}
+                          disabled={
+                            index === pageDocument.root.children.length - 1 ||
+                            Boolean(getSectionMoveLockBlockMessage(section.sectionKey, index + 1))
+                          }
+                        >
+                          Down
+                        </button>
+                        <button
+                          type="button"
+                          className="builder-action-btn"
+                          onClick={() => toggleSectionVisibility(section.sectionKey)}
+                          disabled={locked}
+                        >
+                          {hidden ? 'Show' : getVisibilityActionVerb(viewportMode, false)}
+                        </button>
+                        <button
+                          type="button"
+                          className="builder-action-btn"
+                          onClick={() => toggleSectionLock(section.sectionKey)}
+                        >
+                          {locked ? 'Unlock' : 'Lock'}
+                        </button>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </BuilderAdvancedDisclosure>
+          ) : (
+            <div className="builder-preview-section-grid">
+              {pageDocument.root.children.map((section, index) => {
+                const definition = homeSectionRegistry[section.sectionKey];
+                const stats = statsBySection[section.id];
+                const selected = normalizedSelectedSectionIds.includes(section.id);
+                const active = section.id === selection.sectionId;
+                const hidden = resolveBuilderSectionHidden(section, viewportMode);
+                const visibilityState = describeViewportVisibilityState(section, viewportMode);
+                const locked = Boolean(section.locked);
+                const layout = resolveBuilderSectionLayout(section, viewportMode);
+                const isDragging = sectionDragState?.draggedSectionKey === section.sectionKey;
+                const isDropBefore =
+                  sectionDragState?.draggedSectionKey !== section.sectionKey &&
+                  sectionDragState?.targetSectionKey === section.sectionKey &&
+                  sectionDragState?.placement === 'before';
+                const isDropAfter =
+                  sectionDragState?.draggedSectionKey !== section.sectionKey &&
+                  sectionDragState?.targetSectionKey === section.sectionKey &&
+                  sectionDragState?.placement === 'after';
+
+                return (
+                  <article
+                    key={section.id}
+                    className={`builder-preview-section-card${selected ? ' is-selected' : ''}${active ? ' is-active' : ''}${hidden ? ' is-hidden' : ''}${locked ? ' is-locked' : ''}${isDragging ? ' is-dragging' : ''}${isDropBefore ? ' is-drop-before' : ''}${isDropAfter ? ' is-drop-after' : ''}`}
+                    draggable={!locked && !canvasPointerDragState}
+                    onDragStart={() => handleSectionDragStart(section.sectionKey)}
+                    onDragOver={(event) => handleSectionDragOver(event, section.sectionKey)}
+                    onDrop={() => handleSectionDrop(section.sectionKey)}
+                    onDragEnd={clearSectionDragState}
+                  >
                     <button
                       type="button"
-                      className="builder-action-btn"
-                      onClick={() => moveSection(section.sectionKey, 1)}
-                      disabled={
-                        index === pageDocument.root.children.length - 1 ||
-                        Boolean(getSectionMoveLockBlockMessage(section.sectionKey, index + 1))
+                      className="builder-preview-section-card-main"
+                      aria-pressed={selected}
+                      onClick={(event) =>
+                        handleSectionSelectionIntent(section.sectionKey, section.id, {
+                          extend: isMultiSelectModifier(event),
+                        })
                       }
                     >
-                      Down
+                      <div className="builder-preview-section-card-key">
+                        {String(index + 1).padStart(2, '0')} · {section.sectionKey}
+                      </div>
+                      <div className="builder-preview-section-card-title">
+                        {definition.title}
+                        <div className="builder-preview-section-card-badges">
+                          {locked ? (
+                            <span className="builder-preview-section-card-badge is-locked">locked</span>
+                          ) : null}
+                          <span className={`builder-preview-section-card-badge${hidden ? ' is-hidden' : ''}`}>
+                            {visibilityState.badge}
+                          </span>
+                        </div>
+                      </div>
+                      {selected && hasMultiSectionSelection ? (
+                        <div className="builder-preview-section-card-selection">included in batch selection</div>
+                      ) : null}
+                      <div className="builder-preview-section-card-component">{definition.componentName}</div>
+                      <div className="builder-preview-section-card-targets">
+                        {definition.supportedTargets.join(' / ')}
+                      </div>
+                      <div className="builder-preview-section-card-layout">
+                        {formatSectionLayoutSummary(layout)}
+                      </div>
+                      {stats ? (
+                        <div className="builder-preview-section-card-stats">
+                          {stats.text} text · {stats.button} button · {stats.image} image
+                        </div>
+                      ) : null}
                     </button>
-                    <button
-                      type="button"
-                      className="builder-action-btn"
-                      onClick={() => toggleSectionVisibility(section.sectionKey)}
-                      disabled={locked}
-                    >
-                      {hidden ? 'Show' : getVisibilityActionVerb(viewportMode, false)}
-                    </button>
-                    <button
-                      type="button"
-                      className="builder-action-btn"
-                      onClick={() => toggleSectionLock(section.sectionKey)}
-                    >
-                      {locked ? 'Unlock' : 'Lock'}
-                    </button>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+
+                    <div className="builder-preview-section-card-actions">
+                      <button
+                        type="button"
+                        className="builder-action-btn"
+                        onClick={() => moveSection(section.sectionKey, -1)}
+                        disabled={index === 0 || Boolean(getSectionMoveLockBlockMessage(section.sectionKey, index - 1))}
+                      >
+                        Up
+                      </button>
+                      <button
+                        type="button"
+                        className="builder-action-btn"
+                        onClick={() => moveSection(section.sectionKey, 1)}
+                        disabled={
+                          index === pageDocument.root.children.length - 1 ||
+                          Boolean(getSectionMoveLockBlockMessage(section.sectionKey, index + 1))
+                        }
+                      >
+                        Down
+                      </button>
+                      <button
+                        type="button"
+                        className="builder-action-btn"
+                        onClick={() => toggleSectionVisibility(section.sectionKey)}
+                        disabled={locked}
+                      >
+                        {hidden ? 'Show' : getVisibilityActionVerb(viewportMode, false)}
+                      </button>
+                      <button
+                        type="button"
+                        className="builder-action-btn"
+                        onClick={() => toggleSectionLock(section.sectionKey)}
+                      >
+                        {locked ? 'Unlock' : 'Lock'}
+                      </button>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 

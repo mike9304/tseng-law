@@ -1,0 +1,450 @@
+.shell {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  color: #0f172a;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+.header p {
+  margin: 0;
+  max-width: 760px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.commandButton {
+  min-height: 34px;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #0f172a;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.commandButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #334155;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.statusBadgeSaving {
+  border-color: #fbbf24;
+  color: #92400e;
+  background: #fffbeb;
+}
+
+.statusBadgeSaved {
+  border-color: #86efac;
+  color: #166534;
+  background: #f0fdf4;
+}
+
+.statusBadgeError {
+  border-color: #fca5a5;
+  color: #991b1b;
+  background: #fef2f2;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.metaCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  padding: 0.9rem 1rem;
+}
+
+.metaCard span {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaCard strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.stageShell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 260px;
+  gap: 1rem;
+  align-items: start;
+}
+
+.catalog {
+  position: sticky;
+  top: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+  padding: 1rem;
+}
+
+.catalog header span {
+  display: block;
+  color: #64748b;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.catalog header strong {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 1rem;
+}
+
+.catalog p {
+  margin: 0.8rem 0 1rem;
+  color: #475569;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.catalogItem {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid #dbe2ea;
+  background: #fff;
+  margin-bottom: 0.6rem;
+  cursor: grab;
+}
+
+.catalogItemRow {
+  display: flex;
+  align-items: stretch;
+  gap: 0.55rem;
+  margin-bottom: 0.6rem;
+}
+
+.catalogQuickAdd {
+  flex: 0 0 auto;
+  min-width: 58px;
+  border-radius: 12px;
+  border: 1px solid #dbe2ea;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.catalogItem span {
+  font-weight: 700;
+  color: #0f172a;
+  text-transform: capitalize;
+}
+
+.catalogItem small {
+  color: #64748b;
+}
+
+.catalogHints {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+  color: #475569;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.stage {
+  position: relative;
+  width: 1280px;
+  height: 880px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid #dbe2ea;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
+}
+
+.topRuler {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.96) 0%, rgba(255, 255, 255, 0.82) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.leftRuler {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 24px;
+  border-right: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(90deg, rgba(248, 250, 252, 0.96) 0%, rgba(255, 255, 255, 0.82) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rulerMark {
+  position: absolute;
+  top: 4px;
+  font-size: 10px;
+  color: #64748b;
+  transform: translateX(-50%);
+}
+
+.rulerMark::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  width: 1px;
+  height: 9px;
+  background: rgba(100, 116, 139, 0.5);
+}
+
+.rulerMarkVertical {
+  left: 4px;
+  top: 0;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left top;
+}
+
+.rulerMarkVertical::before {
+  top: 13px;
+}
+
+.stageGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.emptyCanvas {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #475569;
+}
+
+.canvasToolbar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.toolbarButton {
+  min-height: 34px;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  font-size: 0.76rem;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.toolbarButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  box-shadow: none;
+}
+
+.node {
+  position: absolute;
+  border-radius: 14px;
+  cursor: move;
+  touch-action: none;
+}
+
+.node:hover:not(.nodeSelected) {
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35), 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.nodeSelected {
+  box-shadow: 0 0 0 2px #2563eb, 0 14px 30px rgba(37, 99, 235, 0.18);
+}
+
+.nodeBadge {
+  position: absolute;
+  top: -28px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 22px;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.88);
+  color: #fff;
+  font-size: 0.68rem;
+  pointer-events: none;
+}
+
+.nodeBadge span {
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.nodeBody {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.resizeHandle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+  background: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
+}
+
+.resizeHandleNW { top: -7px; left: -7px; cursor: nwse-resize; }
+.resizeHandleN { top: -7px; left: calc(50% - 7px); cursor: ns-resize; }
+.resizeHandleNE { top: -7px; right: -7px; cursor: nesw-resize; }
+.resizeHandleE { top: calc(50% - 7px); right: -7px; cursor: ew-resize; }
+.resizeHandleS { bottom: -7px; left: calc(50% - 7px); cursor: ns-resize; }
+.resizeHandleSW { bottom: -7px; left: -7px; cursor: nesw-resize; }
+.resizeHandleW { top: calc(50% - 7px); left: -7px; cursor: ew-resize; }
+.resizeHandleSE { bottom: -7px; right: -7px; cursor: nwse-resize; }
+
+.inspectorPlaceholder {
+  position: sticky;
+  top: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+  padding: 1rem;
+}
+
+.inspectorPlaceholder header span {
+  display: block;
+  color: #64748b;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.inspectorPlaceholder header strong {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 1rem;
+}
+
+.inspectorGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+.inspectorGrid div {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.7rem 0.8rem;
+}
+
+.inspectorGrid dt {
+  margin: 0 0 0.15rem;
+  color: #64748b;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.inspectorGrid dd {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.92rem;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+.inspectorEmpty {
+  margin: 1rem 0 0;
+  color: #475569;
+  line-height: 1.6;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 1280px) {
+  .stageShell {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog {
+    position: static;
+  }
+
+  .stage {
+    width: 100%;
+    min-height: 70vh;
+  }
+}

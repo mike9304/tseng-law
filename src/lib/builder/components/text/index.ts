@@ -1,5 +1,6 @@
 import { defineComponent } from '../define';
 import TextElement from '@/components/builder/canvas/elements/TextElement';
+import TextInspector from './Inspector';
 
 export default defineComponent({
   kind: 'text',
@@ -13,6 +14,8 @@ export default defineComponent({
     fontWeight: 'regular' as const,
     align: 'left' as const,
   },
+  defaultStyle: {},
   defaultRect: { width: 200, height: 40 },
   Render: TextElement,
+  Inspector: TextInspector,
 });

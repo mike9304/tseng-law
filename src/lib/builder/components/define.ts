@@ -14,6 +14,7 @@ type AnyComponent = ComponentType<any>;
 export interface BuilderComponentInspectorProps {
   node: BuilderCanvasNode;
   onUpdate: (props: Record<string, unknown>) => void;
+  disabled?: boolean;
 }
 
 export interface BuilderComponentDefinition {
@@ -22,6 +23,7 @@ export interface BuilderComponentDefinition {
   category: BuilderComponentCategory;
   icon: string;
   defaultContent: Record<string, unknown>;
+  defaultStyle: Record<string, unknown>;
   defaultRect: { width: number; height: number };
   Render: AnyComponent;
   Inspector?: AnyComponent;

@@ -1,0 +1,198 @@
+/* =========================================================================
+   Sprint 0 — Column editor styles
+   Kept in a dedicated file to avoid bloating consultation-ai.css.
+   Imported by the (builder) layout that wraps /admin-builder/* routes.
+   ========================================================================= */
+
+.column-editor-container {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #1f2937;
+}
+
+.column-editor-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.column-editor-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.column-editor-slug {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.column-editor-locale {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  background: #123b63;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.column-editor-topbar-right {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.column-editor-btn-save,
+.column-editor-btn-publish {
+  padding: 0.4rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.column-editor-btn-save:hover {
+  background: #f9fafb;
+}
+
+.column-editor-btn-publish {
+  background: #123b63;
+  color: #fff;
+  border-color: #123b63;
+}
+
+.column-editor-btn-publish:hover {
+  background: #0d2d4f;
+}
+
+.column-editor-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.column-editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.column-editor-field > span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.column-editor-field input,
+.column-editor-field textarea {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.column-editor-field input:focus,
+.column-editor-field textarea:focus {
+  outline: none;
+  border-color: #123b63;
+  box-shadow: 0 0 0 2px rgba(18, 59, 99, 0.1);
+}
+
+.column-editor-toolbar {
+  display: flex;
+  gap: 2px;
+  padding: 0.4rem;
+  border: 1px solid #e5e7eb;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  background: #f9fafb;
+}
+
+.column-editor-toolbar button {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.column-editor-toolbar button:hover {
+  background: #e5e7eb;
+}
+
+.column-editor-toolbar button.is-active {
+  background: #123b63;
+  color: #fff;
+}
+
+/* TipTap editor body */
+.column-editor-body {
+  min-height: 400px;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0 0 6px 6px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  outline: none;
+}
+
+.column-editor-body h1,
+.column-editor-body h2,
+.column-editor-body h3 {
+  margin: 1.2em 0 0.4em;
+  font-weight: 700;
+  color: #111827;
+}
+
+.column-editor-body h2 {
+  font-size: 1.3rem;
+}
+
+.column-editor-body h3 {
+  font-size: 1.1rem;
+}
+
+.column-editor-body p {
+  margin: 0.5em 0;
+}
+
+.column-editor-body ul,
+.column-editor-body ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.column-editor-body a {
+  color: #123b63;
+  text-decoration: underline;
+}
+
+.column-editor-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 0.5em 0;
+}
+
+.column-editor-body .is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #9ca3af;
+  pointer-events: none;
+  height: 0;
+}

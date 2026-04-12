@@ -142,14 +142,20 @@ export function getConsultationColumnReferences(
  * populated ConsultationColumnReference objects in the requested
  * locale. Slugs with no matching post in that locale are silently
  * skipped — the calling code can decide whether to fall back.
+ *
+ * Sprint 0: this is the canonical merged-source resolver. It now reads
+ * file columns + Vercel Blob columns (Sprint 0 column CMS) so that
+ * lawyer-authored content surfaces alongside the legacy `src/content/columns`
+ * file set. Sync callers go through `materializeSlugsSync` (file-only).
  */
-function materializeSlugs(
+async function materializeSlugs(
   slugs: string[],
   locale: Locale,
   category: ConsultationCategory,
   limit: number,
-): ConsultationColumnReference[] {
-  const posts = getCachedPosts(locale);
+): Promise<ConsultationColumnReference[]> {
+  const { getAllColumnPostsIncludingBlob } = await import('@/lib/consultation/columns-blob-reader');
+  const posts = await getAllColumnPostsIncludingBlob(locale);
   const out: ConsultationColumnReference[] = [];
   const seen = new Set<string>();
   for (const slug of slugs) {
@@ -238,7 +244,7 @@ export async function getConsultationColumnReferencesForQuery(
     const ranked = await reRankSlugsByQuery(query, candidateSlugs, locale);
     if (ranked && ranked.length > 0) {
       const orderedSlugs = ranked.map((r) => r.slug);
-      const semanticRefs = materializeSlugs(orderedSlugs, locale, category, limit);
+      const semanticRefs = await materializeSlugs(orderedSlugs, locale, category, limit);
       if (semanticRefs.length > 0) {
         return {
           references: semanticRefs,

@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
 import type { Locale } from '@/lib/locales';
-import { getAllColumnPosts } from '@/lib/columns';
+import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 
 /**
  * Embeddings store for semantic column retrieval.
@@ -269,7 +269,10 @@ export async function buildColumnEmbeddingsFile(): Promise<{
   let skipped = 0;
 
   for (const locale of locales) {
-    const posts = getAllColumnPosts(locale);
+    // Sprint 0: include both file-based columns AND lawyer-authored
+    // columns from Vercel Blob (`consultation-columns/{locale}/...`).
+    // The merged reader handles backend selection + slug deduplication.
+    const posts = await getAllColumnPostsIncludingBlob(locale);
     for (const post of posts) {
       total += 1;
       // Compose the embedding input: title + summary + first 2000 chars

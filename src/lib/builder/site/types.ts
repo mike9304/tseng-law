@@ -10,6 +10,17 @@
 import type { Locale } from '@/lib/locales';
 // BuilderCanvasDocument used by persistence.ts, not directly here
 
+export type BuilderPageDocumentFamily =
+  | 'section-snapshot-v1'
+  | 'scene-promotable-v1'
+  | 'canvas-sandbox-v1';
+
+export interface BuilderPageLifecycleMeta {
+  activeDocumentFamily: BuilderPageDocumentFamily;
+  publishBackend: 'builder-snapshot';
+  sceneStatus: 'derived-only' | 'seeded' | 'promoted';
+}
+
 // P4-17: nav label 은 locale 별 다국어 지원
 export interface BuilderNavItem {
   id: string;
@@ -25,6 +36,8 @@ export interface BuilderPageMeta {
   slug: string;
   title: Record<Locale, string>;
   locale: Locale;
+  documentKind?: 'section-snapshot-v1' | 'canvas-scene-vnext';
+  lifecycle?: BuilderPageLifecycleMeta;
   linkedPageIds?: Partial<Record<Locale, string>>;
   seo?: BuilderSeoMetadata;
   createdAt: string;
@@ -136,6 +149,12 @@ export function createDefaultSiteDocument(locale: Locale): BuilderSiteDocument {
         slug: '',
         title: { ko: '홈', 'zh-hant': '首頁', en: 'Home' },
         locale,
+        documentKind: 'section-snapshot-v1',
+        lifecycle: {
+          activeDocumentFamily: 'section-snapshot-v1',
+          publishBackend: 'builder-snapshot',
+          sceneStatus: 'derived-only',
+        },
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
         isHomePage: true,

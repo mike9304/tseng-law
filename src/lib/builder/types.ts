@@ -139,6 +139,36 @@ export interface BuilderSectionScene {
   groups: BuilderSectionContentGroupNode[];
 }
 
+export type BuilderPersistedSceneNodeKind = 'content-group';
+export type BuilderPersistedSceneNodeSource = 'section-scene-bridge' | 'page-scene';
+
+export interface BuilderPersistedSceneNode {
+  version: 1;
+  nodeId: string;
+  nodeKind: BuilderPersistedSceneNodeKind;
+  source: BuilderPersistedSceneNodeSource;
+  parentNodeId: string;
+  sectionFrameNodeId: string;
+  childNodeIds: string[];
+  sectionKey: BuilderSectionKey;
+  groupKey: string;
+  label: string;
+  surfaceIds: string[];
+  datasetTargetIds?: BuilderDatasetTargetId[];
+  bounds?: BuilderSceneNodeBounds;
+  overrides?: BuilderSceneNodeBoundsOverrides;
+  constraints: BuilderSectionContentGroupConstraints;
+  measuredAt?: string;
+}
+
+export interface BuilderPageScene {
+  version: 1;
+  adapterMode: 'section-scene-bridge-v1';
+  sourceDocumentVersion: number;
+  rootNodeId: string;
+  nodes: BuilderPersistedSceneNode[];
+}
+
 export interface BuilderSectionProps {
   layout: BuilderSectionLayout;
   visibility?: BuilderSectionVisibility;
@@ -174,6 +204,7 @@ export interface BuilderPageDocument {
   pageKey: BuilderPageKey;
   locale: Locale;
   datasets: BuilderPageDatasetBinding[];
+  scene?: BuilderPageScene;
   root: BuilderPageNode;
   updatedAt: string;
   updatedBy: string;

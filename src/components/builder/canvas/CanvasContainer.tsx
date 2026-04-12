@@ -125,6 +125,10 @@ export default function CanvasContainer({
   const [guides, setGuides] = useState<AlignmentGuide[]>([]);
   const [zoomState, setZoomState] = useState<ZoomState>(() => createDefaultZoomState());
   const [isSpacePressed, setIsSpacePressed] = useState(false);
+  const [hoveredContainerId, setHoveredContainerId] = useState<string | null>(null);
+  const moveNodeIntoContainer = useBuilderCanvasStore((s) => s.moveNodeIntoContainer);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
 
   const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? []);
   const visibleNodes = useMemo(
@@ -309,6 +313,9 @@ export default function CanvasContainer({
       const deltaX = (event.clientX - activeInteraction.originX) / zoomState.zoom;
       const deltaY = (event.clientY - activeInteraction.originY) / zoomState.zoom;
       if (activeInteraction.type === 'move') {
+        // Detect if the dragged node center is over a container
+        const movingNodeIds = new Set(activeInteraction.nodeIds);
+        const currentNodesForHover = useBuilderCanvasStore.getState().document?.nodes ?? [];
         if (activeInteraction.nodeIds.length === 1) {
           const nodeId = activeInteraction.nodeIds[0];
           const baseRect = activeInteraction.startRects[nodeId];
@@ -319,8 +326,21 @@ export default function CanvasContainer({
               width: baseRect.width,
               height: baseRect.height,
             };
-            const currentNodes = useBuilderCanvasStore.getState().document?.nodes ?? [];
-            const otherRects: Rect[] = currentNodes
+            const centerX = tentative.x + tentative.width / 2;
+            const centerY = tentative.y + tentative.height / 2;
+            const hitContainer = currentNodesForHover.find(
+              (n) =>
+                n.kind === 'container' &&
+                !movingNodeIds.has(n.id) &&
+                n.visible &&
+                centerX >= n.rect.x &&
+                centerX <= n.rect.x + n.rect.width &&
+                centerY >= n.rect.y &&
+                centerY <= n.rect.y + n.rect.height,
+            );
+            setHoveredContainerId(hitContainer?.id ?? null);
+
+            const otherRects: Rect[] = currentNodesForHover
               .filter((node) => node.id !== nodeId && node.visible)
               .map((node) => node.rect);
             const { snappedRect, guides: nextGuides } = computeSnap(tentative, otherRects, 0, {
@@ -335,6 +355,7 @@ export default function CanvasContainer({
             return;
           }
         }
+        setHoveredContainerId(null);
         setGuides([]);
         updateSelectedNodes(activeInteraction.nodeIds, (node) => {
           const baseRect = activeInteraction.startRects[node.id] ?? node.rect;
@@ -412,6 +433,32 @@ export default function CanvasContainer({
 
     function handlePointerUp(event: PointerEvent) {
       if (event.pointerId === activeInteraction.pointerId) {
+        // If dropping on a container, nest the node
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const _hoveredMap = useBuilderCanvasStore.getState().childrenMap;
+        const currentHoveredContainerId = (() => {
+          if (activeInteraction.type !== 'move' || activeInteraction.nodeIds.length !== 1) return null;
+          const nodeId = activeInteraction.nodeIds[0];
+          const allNodes = useBuilderCanvasStore.getState().document?.nodes ?? [];
+          const movedNode = allNodes.find((n) => n.id === nodeId);
+          if (!movedNode) return null;
+          const cx = movedNode.rect.x + movedNode.rect.width / 2;
+          const cy = movedNode.rect.y + movedNode.rect.height / 2;
+          return allNodes.find(
+            (n) =>
+              n.kind === 'container' &&
+              n.id !== nodeId &&
+              n.visible &&
+              cx >= n.rect.x &&
+              cx <= n.rect.x + n.rect.width &&
+              cy >= n.rect.y &&
+              cy <= n.rect.y + n.rect.height,
+          )?.id ?? null;
+        })();
+        if (currentHoveredContainerId && activeInteraction.type === 'move' && activeInteraction.nodeIds.length === 1) {
+          moveNodeIntoContainer(activeInteraction.nodeIds[0], currentHoveredContainerId);
+        }
+        setHoveredContainerId(null);
         setInteraction(null);
         setGuides([]);
         if (activeInteraction.type !== 'pan') {
@@ -426,7 +473,7 @@ export default function CanvasContainer({
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', handlePointerUp);
     };
-  }, [commitMutationSession, interaction, updateNode, updateSelectedNodes, zoomState.zoom]);
+  }, [commitMutationSession, interaction, moveNodeIntoContainer, updateNode, updateSelectedNodes, zoomState.zoom]);
 
   const resolveStagePosition = useCallback((clientX: number, clientY: number): { x: number; y: number } => {
     const rect = viewportRef.current?.getBoundingClientRect();
@@ -631,6 +678,29 @@ export default function CanvasContainer({
                 }}
               />
             ))}
+            {/* Container drop zone highlight */}
+            {hoveredContainerId ? (() => {
+              const hc = visibleNodes.find((n) => n.id === hoveredContainerId);
+              if (!hc) return null;
+              return (
+                <div
+                  key="container-drop-highlight"
+                  style={{
+                    position: 'absolute',
+                    left: `${hc.rect.x}px`,
+                    top: `${hc.rect.y}px`,
+                    width: `${hc.rect.width}px`,
+                    height: `${hc.rect.height}px`,
+                    border: '2px dashed #116dff',
+                    borderRadius: 8,
+                    background: 'rgba(17, 109, 255, 0.08)',
+                    pointerEvents: 'none',
+                    zIndex: 9990,
+                    transition: 'all 120ms ease',
+                  }}
+                />
+              );
+            })() : null}
             {visibleNodes.map((node) => (
               <CanvasNode
                 key={node.id}

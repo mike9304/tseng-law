@@ -25,6 +25,8 @@ export default function SandboxTopBar({
   viewport,
   onViewportChange,
   onPublish,
+  onOpenSettings,
+  onOpenHistory,
 }: {
   locale: string;
   backend: string;
@@ -35,6 +37,8 @@ export default function SandboxTopBar({
   viewport: ViewportMode;
   onViewportChange: (mode: ViewportMode) => void;
   onPublish: () => void;
+  onOpenSettings?: () => void;
+  onOpenHistory?: () => void;
 }) {
   const saveLabel = draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : '';
   const saveClass = draftSaveState === 'saving' ? styles.statusBadgeSaving : draftSaveState === 'saved' ? styles.statusBadgeSaved : draftSaveState === 'error' ? styles.statusBadgeError : '';
@@ -42,7 +46,13 @@ export default function SandboxTopBar({
   return (
     <header className={styles.topBar}>
       <div className={styles.topBarTitle}>
-        <strong style={{ fontSize: '0.95rem', color: '#0f172a' }}>호정국제</strong>
+        <strong
+          style={{ fontSize: '0.95rem', color: '#0f172a', cursor: onOpenSettings ? 'pointer' : 'default' }}
+          title="사이트 설정"
+          onClick={onOpenSettings}
+        >
+          호정국제
+        </strong>
         {selectionCount > 0 && <span className={styles.topBarChip}>{selectionCount}개 선택</span>}
       </div>
 
@@ -84,6 +94,17 @@ export default function SandboxTopBar({
       <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
         {draftSaveState === 'saving' && <span className={styles.savingSpinner} />}
         {saveLabel && <span className={`${styles.topBarChip} ${saveClass}`}>{saveLabel}</span>}
+        {onOpenHistory && (
+          <button
+            type="button"
+            className={styles.topBarChip}
+            title="버전 히스토리"
+            style={{ cursor: 'pointer' }}
+            onClick={onOpenHistory}
+          >
+            히스토리
+          </button>
+        )}
         <button type="button" className={styles.topBarChip} title="미리보기" style={{ cursor: 'pointer' }}>미리보기</button>
         <button
           type="button"

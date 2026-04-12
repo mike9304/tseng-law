@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
+import { filtersToCSS, isDefaultFilters, type ImageFilters } from '@/lib/builder/canvas/filters';
 
 const PLACEHOLDER_SRC = '/images/placeholder-image.svg';
 
@@ -56,6 +57,12 @@ export default function ImageElement({
     );
   }
 
+  const filters = (node.content as { filters?: ImageFilters }).filters;
+  const cssFilter =
+    filters && !isDefaultFilters(filters)
+      ? filtersToCSS(filters)
+      : undefined;
+
   return (
     <div
       style={{
@@ -73,7 +80,7 @@ export default function ImageElement({
         fill
         draggable={false}
         sizes="(max-width: 1280px) 100vw, 360px"
-        style={{ objectFit: node.content.fit }}
+        style={{ objectFit: node.content.fit, filter: cssFilter }}
       />
       <div
         style={{

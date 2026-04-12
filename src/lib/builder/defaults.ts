@@ -8,8 +8,11 @@ import {
 import type {
   BuilderPageDocument,
   BuilderPageKey,
+  BuilderPageScene,
+  BuilderPersistedSceneNode,
   BuilderSectionLayout,
   BuilderSectionKey,
+  BuilderSectionNode,
   BuilderSectionScene,
 } from '@/lib/builder/types';
 
@@ -42,11 +45,25 @@ function createBuilderDocument(
   locale: Locale,
   name: string
 ): BuilderPageDocument {
+  const children = getBuilderSectionDefinitions(pageKey).map((definition) => ({
+    id: definition.sectionKey,
+    type: 'section' as const,
+    name: definition.title,
+    sectionKey: definition.sectionKey,
+    hidden: false,
+    locked: false,
+    props: {
+      layout: { ...DEFAULT_BUILDER_SECTION_LAYOUT },
+      scene: createDefaultSectionScene(definition.sectionKey),
+    },
+  }));
+
   return {
     version: 1,
     pageKey,
     locale,
     datasets: createDefaultBuilderPageDatasets(pageKey),
+    scene: createDefaultBuilderPageScene(pageKey, children),
     updatedAt: DEFAULT_UPDATED_AT,
     updatedBy: DEFAULT_UPDATED_BY,
     root: {
@@ -54,18 +71,7 @@ function createBuilderDocument(
       type: 'page',
       name,
       pageKey,
-      children: getBuilderSectionDefinitions(pageKey).map((definition) => ({
-        id: definition.sectionKey,
-        type: 'section' as const,
-        name: definition.title,
-        sectionKey: definition.sectionKey,
-        hidden: false,
-        locked: false,
-        props: {
-          layout: { ...DEFAULT_BUILDER_SECTION_LAYOUT },
-          scene: createDefaultSectionScene(definition.sectionKey),
-        },
-      })),
+      children,
     },
   };
 }
@@ -90,4 +96,67 @@ function createDefaultSectionScene(sectionKey: BuilderSectionKey): BuilderSectio
         groups,
       }
     : undefined;
+}
+
+function createDefaultBuilderPageScene(
+  pageKey: BuilderPageKey,
+  sections: BuilderSectionNode[]
+): BuilderPageScene | undefined {
+  const nodes = sections.flatMap((section) => {
+    const groups = section.props?.scene?.groups ?? [];
+    const parentNodeId = buildSectionFrameSceneNodeId(pageKey, section.sectionKey);
+
+    return groups.map<BuilderPersistedSceneNode>((group) => ({
+      version: 1,
+      nodeId: group.nodeId,
+      nodeKind: 'content-group',
+      source: 'section-scene-bridge',
+      parentNodeId,
+      sectionFrameNodeId: parentNodeId,
+      childNodeIds: [],
+      sectionKey: section.sectionKey,
+      groupKey: group.groupKey,
+      label: group.label,
+      surfaceIds: [...group.surfaceIds],
+      datasetTargetIds: group.datasetTargetIds ? [...group.datasetTargetIds] : undefined,
+      bounds: group.bounds ? { ...group.bounds } : undefined,
+      overrides: group.overrides
+        ? Object.fromEntries(
+            Object.entries(group.overrides).map(([viewport, bounds]) => [
+              viewport,
+              bounds ? { ...bounds } : bounds,
+            ])
+          )
+        : undefined,
+      constraints: {
+        movement: group.constraints.movement,
+        resize: group.constraints.resize,
+      },
+      measuredAt: group.measuredAt,
+    }));
+  });
+
+  if (!nodes.length) {
+    return undefined;
+  }
+
+  return {
+    version: 1,
+    adapterMode: 'section-scene-bridge-v1',
+    sourceDocumentVersion: 1,
+    rootNodeId: buildPageSceneRootNodeId(pageKey),
+    nodes,
+  };
+}
+
+function buildPageSceneRootNodeId(pageKey: BuilderPageKey) {
+  return `scene:${sanitizeSceneToken(pageKey)}:page`;
+}
+
+function buildSectionFrameSceneNodeId(pageKey: BuilderPageKey, sectionKey: BuilderSectionKey) {
+  return `scene:${sanitizeSceneToken(pageKey)}:${sanitizeSceneToken(sectionKey)}:frame`;
+}
+
+function sanitizeSceneToken(value: string) {
+  return value.replace(/[^a-z0-9-_:.]+/gi, '-');
 }

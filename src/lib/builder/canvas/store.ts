@@ -51,6 +51,8 @@ interface BuilderCanvasStoreState {
   mutationBaseDocument: BuilderCanvasDocument | null;
   canUndo: boolean;
   canRedo: boolean;
+  /** Maps container node IDs to arrays of child node IDs (MVP nesting). */
+  childrenMap: Record<string, string[]>;
   replaceDocument: (document: BuilderCanvasDocument) => void;
   setSelectedNodeId: (nodeId: string | null) => void;
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
@@ -86,6 +88,8 @@ interface BuilderCanvasStoreState {
   bringSelectedNodeToFront: () => void;
   sendSelectedNodeToBack: () => void;
   reorderNodes: (orderedIds: string[]) => void;
+  moveNodeIntoContainer: (nodeId: string, containerId: string) => void;
+  moveNodeOutOfContainer: (nodeId: string) => void;
 }
 
 function sortNodes(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
@@ -223,6 +227,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   mutationBaseDocument: null,
   canUndo: false,
   canRedo: false,
+  childrenMap: {},
   replaceDocument: (document) =>
     set({
       document,
@@ -634,6 +639,77 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         nodes: reordered,
       };
       return applyCommittedDocument(state, nextDocument);
+    }),
+  moveNodeIntoContainer: (nodeId, containerId) =>
+    set((state) => {
+      if (!state.document) return state;
+      // Validate: both nodes exist, target is a container, node isn't the container itself
+      const node = state.document.nodes.find((n) => n.id === nodeId);
+      const container = state.document.nodes.find((n) => n.id === containerId);
+      if (!node || !container || container.kind !== 'container' || nodeId === containerId) return state;
+
+      // Remove nodeId from any existing container
+      const nextMap = { ...state.childrenMap };
+      for (const key of Object.keys(nextMap)) {
+        nextMap[key] = nextMap[key].filter((id) => id !== nodeId);
+        if (nextMap[key].length === 0) delete nextMap[key];
+      }
+      // Add to new container
+      nextMap[containerId] = [...(nextMap[containerId] ?? []), nodeId];
+
+      // Convert node position to container-relative coords
+      const relX = node.rect.x - container.rect.x;
+      const relY = node.rect.y - container.rect.y;
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((n) =>
+          n.id === nodeId
+            ? { ...n, rect: { ...n.rect, x: Math.max(0, relX), y: Math.max(0, relY) } }
+            : n,
+        ),
+      );
+
+      return {
+        ...applyCommittedDocument(state, document),
+        childrenMap: nextMap,
+      };
+    }),
+  moveNodeOutOfContainer: (nodeId) =>
+    set((state) => {
+      if (!state.document) return state;
+      const node = state.document.nodes.find((n) => n.id === nodeId);
+      if (!node) return state;
+
+      // Find which container owns this node
+      let parentContainerId: string | null = null;
+      const nextMap = { ...state.childrenMap };
+      for (const [cid, children] of Object.entries(nextMap)) {
+        if (children.includes(nodeId)) {
+          parentContainerId = cid;
+          nextMap[cid] = children.filter((id) => id !== nodeId);
+          if (nextMap[cid].length === 0) delete nextMap[cid];
+          break;
+        }
+      }
+      if (!parentContainerId) return state;
+
+      const container = state.document.nodes.find((n) => n.id === parentContainerId);
+      if (!container) return { childrenMap: nextMap };
+
+      // Convert back to absolute coords
+      const absX = node.rect.x + container.rect.x;
+      const absY = node.rect.y + container.rect.y;
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((n) =>
+          n.id === nodeId
+            ? { ...n, rect: { ...n.rect, x: Math.max(0, absX), y: Math.max(0, absY) } }
+            : n,
+        ),
+      );
+
+      return {
+        ...applyCommittedDocument(state, document),
+        childrenMap: nextMap,
+      };
     }),
 }));
 

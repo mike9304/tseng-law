@@ -69,6 +69,7 @@ import type {
   BuilderEditableTargetKind,
   BuilderSectionFrameClipboardPayload,
   BuilderHomeDocumentState,
+  BuilderPersistedSceneNodeSource,
   BuilderSceneNodeBounds,
   BuilderPageDocument,
   BuilderPageSnapshot,
@@ -746,12 +747,13 @@ export default function BuilderInteractiveHomePreview({
   const selectedSurfaceContract = useMemo(
     () =>
       resolveSurfaceContractState(
+        pageDocument,
         selection.sectionKey,
         selection.targetKind,
         selection.surfaceId,
         selection.contentGroupId
       ),
-    [selection.contentGroupId, selection.sectionKey, selection.surfaceId, selection.targetKind]
+    [pageDocument, selection.contentGroupId, selection.sectionKey, selection.surfaceId, selection.targetKind]
   );
   const selectedStats = statsBySection[selection.sectionId] ?? EMPTY_STATS;
   const selectedSectionIndex = pageDocument.root.children.findIndex(
@@ -3518,7 +3520,12 @@ export default function BuilderInteractiveHomePreview({
           label: group.label,
         };
 
-        const storedBounds = getStoredContentGroupBounds(section, group.contentGroupId, viewportMode);
+        const storedBounds = getStoredContentGroupBounds(
+          nextDocument,
+          section,
+          group.contentGroupId,
+          viewportMode
+        );
         if (!areSceneBoundsEqual(storedBounds, persistedBounds)) {
           nextDocument = updateBuilderDocumentSectionContentGroupBounds(
             nextDocument,
@@ -7024,11 +7031,19 @@ function roundSceneBoundsValue(value: number) {
 }
 
 function getStoredContentGroupBounds(
+  document: BuilderPageDocument,
   section: BuilderSectionNode,
   contentGroupId: string,
   viewport: BuilderViewportMode
 ) {
-  const group = section.props?.scene?.groups?.find((candidate) => candidate.nodeId === contentGroupId);
+  const group =
+    document.scene?.nodes?.find(
+      (candidate) =>
+        candidate.nodeKind === 'content-group' &&
+        candidate.sectionKey === section.sectionKey &&
+        candidate.nodeId === contentGroupId
+    ) ??
+    section.props?.scene?.groups?.find((candidate) => candidate.nodeId === contentGroupId);
   if (!group) {
     return undefined;
   }
@@ -7057,6 +7072,19 @@ function getStoredContentGroupBounds(
   }
 
   return { x, y, width, height };
+}
+
+function getPersistedContentGroupSource(
+  document: BuilderPageDocument,
+  sectionKey: BuilderSectionKey,
+  contentGroupId: string
+): BuilderPersistedSceneNodeSource | undefined {
+  return document.scene?.nodes?.find(
+    (candidate) =>
+      candidate.nodeKind === 'content-group' &&
+      candidate.sectionKey === sectionKey &&
+      candidate.nodeId === contentGroupId
+  )?.source;
 }
 
 function getEditableValues(
@@ -8637,6 +8665,7 @@ function getSnapshotKindLabel(kind: BuilderSnapshotKind) {
 }
 
 function resolveSurfaceContractState(
+  document: BuilderPageDocument,
   sectionKey: BuilderSectionKey,
   targetKind: BuilderSelectableTargetKind,
   surfaceId?: string,
@@ -8649,10 +8678,18 @@ function resolveSurfaceContractState(
   }
 
   if (targetKind === 'group') {
+    const persistedSource =
+      contentGroupId ? getPersistedContentGroupSource(document, sectionKey, contentGroupId) : undefined;
     return {
       label: 'persisted content group',
-      note: `This group is now stored in the page document as a stable scene node (${contentGroupId ?? 'group'}). Free-position drag and resize are still intentionally deferred.`,
-      managerSignal: 'Scene-backed content group · persisted geometry seed · not yet free-canvas.',
+      note:
+        persistedSource === 'page-scene'
+          ? `This group is now stored in the page document as an authoritative scene node (${contentGroupId ?? 'group'}). Free-position drag and resize are still intentionally deferred.`
+          : `This group is now stored in the page document as a stable scene node (${contentGroupId ?? 'group'}). Free-position drag and resize are still intentionally deferred.`,
+      managerSignal:
+        persistedSource === 'page-scene'
+          ? 'Page.scene authority · persisted content group · not yet free-canvas.'
+          : 'Scene-backed content group · persisted geometry seed · not yet free-canvas.',
     };
   }
 

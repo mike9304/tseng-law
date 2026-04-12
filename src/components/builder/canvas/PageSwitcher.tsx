@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import type { Locale } from '@/lib/locales';
+import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import TemplateGalleryModal from './TemplateGalleryModal';
 
 interface PageMeta {
   pageId: string;
@@ -88,6 +90,7 @@ export default function PageSwitcher({
   const [pages, setPages] = useState<PageMeta[]>([]);
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
+  const [showGallery, setShowGallery] = useState(false);
 
   const fetchPages = useCallback(async () => {
     try {
@@ -109,9 +112,11 @@ export default function PageSwitcher({
     fetchPages();
   }, [fetchPages]);
 
-  const handleCreatePage = async () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleCreatePage = async (templateDocument?: BuilderCanvasDocument | null) => {
     if (creating) return;
     setCreating(true);
+    setShowGallery(false);
     try {
       const response = await fetch('/api/builder/site/pages', {
         method: 'POST',
@@ -141,7 +146,7 @@ export default function PageSwitcher({
           type="button"
           style={addButtonStyle}
           disabled={creating}
-          onClick={handleCreatePage}
+          onClick={() => setShowGallery(true)}
         >
           {creating ? '...' : '+ New'}
         </button>
@@ -175,6 +180,13 @@ export default function PageSwitcher({
           );
         })
       )}
+
+      {showGallery ? (
+        <TemplateGalleryModal
+          onSelect={(doc) => handleCreatePage(doc)}
+          onClose={() => setShowGallery(false)}
+        />
+      ) : null}
     </div>
   );
 }

@@ -116,6 +116,14 @@ export default function CanvasNode({
   ) : component ? (
     <component.Render node={node} mode="edit" />
   ) : null;
+  // Recursive children for containers
+  const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
+  const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
+  const childIds = node.kind === 'container' ? (childrenMap[node.id] ?? []) : [];
+  const nestedChildren = childIds
+    .map((cid) => allNodes.find((n) => n.id === cid))
+    .filter((n): n is BuilderCanvasNode => n != null && n.visible);
+
   const hasVisibleBorder = node.style.borderWidth > 0;
   const hasVisibleShadow = node.style.shadowBlur > 0 || node.style.shadowSpread !== 0 || node.style.shadowX !== 0 || node.style.shadowY !== 0;
 
@@ -161,6 +169,7 @@ export default function CanvasNode({
       <div
         className={styles.nodeBody}
         style={{
+          position: 'relative',
           background: node.style.backgroundColor,
           borderRadius: `${node.style.borderRadius}px`,
           border: hasVisibleBorder
@@ -170,9 +179,32 @@ export default function CanvasNode({
             ? `${node.style.shadowX}px ${node.style.shadowY}px ${node.style.shadowBlur}px ${node.style.shadowSpread}px ${node.style.shadowColor}`
             : 'none',
           opacity: node.style.opacity / 100,
+          overflow: node.kind === 'container' ? 'visible' : undefined,
         }}
       >
         {body}
+        {/* Render nested children for containers */}
+        {nestedChildren.map((child) => (
+          <div
+            key={child.id}
+            style={{
+              position: 'absolute',
+              left: `${child.rect.x}px`,
+              top: `${child.rect.y}px`,
+              width: `${child.rect.width}px`,
+              height: `${child.rect.height}px`,
+              pointerEvents: 'auto',
+            }}
+            data-child-node-id={child.id}
+          >
+            {getComponent(child.kind)?.Render
+              ? (() => {
+                  const ChildComponent = getComponent(child.kind)!.Render;
+                  return <ChildComponent node={child} mode="edit" />;
+                })()
+              : null}
+          </div>
+        ))}
       </div>
       {selected && !node.locked ? (
         <>

@@ -8,6 +8,7 @@ import type {
   BuilderEditableTargetKind,
   BuilderPageDocument,
   BuilderPageKey,
+  BuilderPersistedSceneNode,
   BuilderSectionContentGroupNode,
   BuilderSectionKey,
   BuilderSectionNode,
@@ -110,7 +111,11 @@ export function buildBuilderSceneDocument(document: BuilderPageDocument): Builde
     const frameNodeId = `${sectionNodeId}:frame`;
     const sectionChildNodeIds: string[] = [frameNodeId];
     const frameChildNodeIds: string[] = [];
-    const contentGroups = resolveSectionContentGroups(section);
+    const contentGroups = resolveSectionContentGroups(document, section);
+    const persistedPageSceneNodes = getPersistedPageSceneNodes(document, section.sectionKey);
+    const persistedPageSceneNodeMap = new Map(
+      persistedPageSceneNodes.map((node) => [node.nodeId, node] as const)
+    );
     const groupedSurfaceIds = new Set(contentGroups.flatMap((group) => group.surfaceIds));
 
     registerNode({
@@ -149,6 +154,7 @@ export function buildBuilderSceneDocument(document: BuilderPageDocument): Builde
 
     for (const group of contentGroups) {
       const groupNodeId = buildBuilderContentGroupNodeId(section.sectionKey, group.groupKey);
+      const persistedSceneNode = persistedPageSceneNodeMap.get(groupNodeId);
       frameChildNodeIds.push(groupNodeId);
       registerNode({
         nodeId: groupNodeId,
@@ -168,6 +174,11 @@ export function buildBuilderSceneDocument(document: BuilderPageDocument): Builde
         locked: section.locked ?? false,
         notes: [
           `Persisted content-group node ${group.groupKey}.`,
+          persistedSceneNode?.source === 'page-scene'
+            ? 'Geometry is now authoritative in page.scene and no longer treated as a bridge-only seed.'
+            : group.measuredAt
+            ? 'Geometry now prefers the persisted page.scene bridge before section-scene fallback.'
+            : 'Geometry still falls back to section-scene defaults until the page.scene bridge is measured.',
           group.bounds
             ? `Measured desktop bounds ${formatBounds(group.bounds)}.`
             : 'Desktop bounds are still unresolved on the current document.',
@@ -544,7 +555,16 @@ function appendDeclaredSurfaceNodes(
   }
 }
 
-function resolveSectionContentGroups(section: BuilderSectionNode): BuilderSectionContentGroupNode[] {
+function resolveSectionContentGroups(
+  document: BuilderPageDocument,
+  section: BuilderSectionNode
+): BuilderSectionContentGroupNode[] {
+  const pageSceneGroups = getPersistedPageSceneContentGroups(document, section.sectionKey);
+
+  if (pageSceneGroups?.length) {
+    return pageSceneGroups;
+  }
+
   if (section.props?.scene?.groups?.length) {
     return section.props.scene.groups;
   }
@@ -564,6 +584,47 @@ function resolveSectionContentGroups(section: BuilderSectionNode): BuilderSectio
     },
     measuredAt: undefined,
   }));
+}
+
+function getPersistedPageSceneContentGroups(
+  document: BuilderPageDocument,
+  sectionKey: BuilderSectionKey
+): BuilderSectionContentGroupNode[] {
+  return getPersistedPageSceneNodes(document, sectionKey)
+    .map((node) => ({
+      version: 1 as const,
+      nodeId: node.nodeId,
+      groupKey: node.groupKey,
+      label: node.label,
+      surfaceIds: [...node.surfaceIds],
+      datasetTargetIds: node.datasetTargetIds ? [...node.datasetTargetIds] : undefined,
+      bounds: node.bounds ? { ...node.bounds } : undefined,
+      overrides: node.overrides
+        ? Object.fromEntries(
+            Object.entries(node.overrides).map(([viewport, bounds]) => [
+              viewport,
+              bounds ? { ...bounds } : bounds,
+            ])
+          )
+        : undefined,
+      constraints: {
+        movement: node.constraints.movement,
+        resize: node.constraints.resize,
+      },
+      measuredAt: node.measuredAt,
+    }));
+}
+
+function getPersistedPageSceneNodes(
+  document: BuilderPageDocument,
+  sectionKey: BuilderSectionKey
+): BuilderPersistedSceneNode[] {
+  const sceneNodes = document.scene?.nodes ?? [];
+
+  return sceneNodes.filter(
+    (node): node is BuilderPersistedSceneNode =>
+      node.nodeKind === 'content-group' && node.sectionKey === sectionKey
+  );
 }
 
 function buildSceneNodeId(pageKey: BuilderPageKey, token: string) {

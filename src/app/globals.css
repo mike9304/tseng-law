@@ -11373,8 +11373,8 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .builder-shell-body--canvas-priority {
-  grid-template-columns: 320px minmax(0, 1fr) 320px;
-  gap: 16px;
+  grid-template-columns: 296px minmax(0, 1fr) 292px;
+  gap: 14px;
 }
 
 .builder-workspace-sidebar {
@@ -11387,8 +11387,8 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .builder-workspace-sidebar--canvas-priority {
-  top: 78px;
-  gap: 12px;
+  top: 74px;
+  gap: 10px;
 }
 
 .builder-workspace-sidebar-panel {
@@ -11396,8 +11396,8 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .builder-workspace-sidebar-panel--canvas-priority .builder-preview-inspector-card {
-  border-radius: 20px;
-  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
 }
 
 .builder-app-rail {
@@ -11567,7 +11567,7 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .builder-canvas-stage--canvas-priority {
-  padding: 16px 16px 20px;
+  padding: 14px 14px 18px;
   border-radius: 30px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.84),
@@ -11584,8 +11584,8 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .builder-canvas-stage-head--canvas-priority {
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 10px;
-  padding-bottom: 10px;
+  gap: 8px;
+  padding-bottom: 8px;
 }
 
 .builder-canvas-stage-url {
@@ -11603,9 +11603,9 @@ a.floating-ai-chat-contact-item:hover strong {
 .builder-canvas-stage-url--canvas-priority {
   grid-column: 1 / -1;
   gap: 1px;
-  padding: 10px 14px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.86);
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .builder-canvas-stage-url span:first-child {
@@ -11637,8 +11637,8 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .builder-canvas-stage-meta--canvas-priority {
   gap: 2px;
-  padding: 8px 12px;
-  border-radius: 16px;
+  padding: 7px 10px;
+  border-radius: 14px;
 }
 
 .builder-canvas-stage-meta strong {
@@ -11673,7 +11673,7 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .builder-canvas-stage-toolbar--canvas-priority {
   gap: 6px;
-  padding-bottom: 14px;
+  padding-bottom: 10px;
 }
 
 .builder-dashboard-grid {
@@ -11789,7 +11789,7 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .builder-preview-inspector--canvas-priority {
-  top: 78px;
+  top: 74px;
 }
 
 .builder-stage-pill {
@@ -11810,6 +11810,25 @@ a.floating-ai-chat-contact-item:hover strong {
   min-height: 28px;
   padding: 0 10px;
   font-size: 0.72rem;
+}
+
+.builder-page-shell-diagnostics {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.builder-page-shell-diagnostics-section {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.builder-page-shell-diagnostics-section h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .builder-stage-pill--accent {

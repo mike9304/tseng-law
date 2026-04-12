@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
+import Underline from '@tiptap/extension-underline';
 import Placeholder from '@tiptap/extension-placeholder';
 
 interface InlineTextEditorProps {
@@ -15,6 +16,59 @@ interface InlineTextEditorProps {
   onSave: (html: string, plainText: string) => void;
   onBlur: () => void;
 }
+
+/* ── Toolbar styles ─────────────────────────────────────────────── */
+
+const toolbarStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: -44,
+  left: 0,
+  display: 'flex',
+  alignItems: 'center',
+  gap: 2,
+  padding: '4px 6px',
+  background: '#fff',
+  border: '1px solid #dfe5eb',
+  borderRadius: 8,
+  boxShadow: '0 2px 8px rgba(0,0,0,.12)',
+  zIndex: 9999,
+  whiteSpace: 'nowrap' as const,
+};
+
+const toolbarBtnBase: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minWidth: 28,
+  height: 28,
+  padding: '0 6px',
+  fontSize: '0.75rem',
+  fontWeight: 700,
+  border: '1px solid transparent',
+  borderRadius: 6,
+  background: 'transparent',
+  color: '#334155',
+  cursor: 'pointer',
+  lineHeight: 1,
+};
+
+function toolbarBtnStyle(active: boolean): React.CSSProperties {
+  return {
+    ...toolbarBtnBase,
+    background: active ? '#116dff' : 'transparent',
+    color: active ? '#fff' : '#334155',
+  };
+}
+
+const dividerStyle: React.CSSProperties = {
+  width: 1,
+  height: 20,
+  background: '#dfe5eb',
+  margin: '0 4px',
+  flexShrink: 0,
+};
+
+/* ── Component ──────────────────────────────────────────────────── */
 
 export default function InlineTextEditor({
   initialText,
@@ -31,6 +85,7 @@ export default function InlineTextEditor({
     extensions: [
       StarterKit.configure({ heading: { levels: [1, 2, 3] } }),
       Link.configure({ openOnClick: false }),
+      Underline,
       Placeholder.configure({ placeholder: '텍스트 입력...' }),
     ],
     content: initialText.startsWith('<') ? initialText : `<p>${initialText}</p>`,
@@ -86,10 +141,21 @@ export default function InlineTextEditor({
     return () => document.removeEventListener('keydown', handleEsc);
   }, [handleSave, onBlur]);
 
+  const handleLink = useCallback(() => {
+    if (!editor) return;
+    const url = window.prompt('URL 입력', '');
+    if (url) {
+      editor.chain().focus().setLink({ href: url }).run();
+    } else {
+      editor.chain().focus().unsetLink().run();
+    }
+  }, [editor]);
+
   return (
     <div
       ref={containerRef}
       style={{
+        position: 'relative',
         width: '100%',
         height: '100%',
         cursor: 'text',
@@ -100,6 +166,105 @@ export default function InlineTextEditor({
       onMouseDown={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()}
     >
+      {/* ── Floating Toolbar ─────────────────────────────────────── */}
+      {editor ? (
+        <div style={toolbarStyle}>
+          {/* Bold / Italic / Underline / Strikethrough */}
+          <button
+            type="button"
+            style={toolbarBtnStyle(editor.isActive('bold'))}
+            title="굵게 (Cmd+B)"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleBold().run(); }}
+          >
+            B
+          </button>
+          <button
+            type="button"
+            style={{ ...toolbarBtnStyle(editor.isActive('italic')), fontStyle: 'italic' }}
+            title="기울임 (Cmd+I)"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleItalic().run(); }}
+          >
+            I
+          </button>
+          <button
+            type="button"
+            style={{ ...toolbarBtnStyle(editor.isActive('underline')), textDecoration: 'underline' }}
+            title="밑줄 (Cmd+U)"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleUnderline().run(); }}
+          >
+            U
+          </button>
+          <button
+            type="button"
+            style={{ ...toolbarBtnStyle(editor.isActive('strike')), textDecoration: 'line-through' }}
+            title="취소선"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleStrike().run(); }}
+          >
+            S
+          </button>
+
+          <span style={dividerStyle} />
+
+          {/* Headings */}
+          <button
+            type="button"
+            style={toolbarBtnStyle(editor.isActive('heading', { level: 1 }))}
+            title="제목 1"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleHeading({ level: 1 }).run(); }}
+          >
+            H1
+          </button>
+          <button
+            type="button"
+            style={toolbarBtnStyle(editor.isActive('heading', { level: 2 }))}
+            title="제목 2"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleHeading({ level: 2 }).run(); }}
+          >
+            H2
+          </button>
+          <button
+            type="button"
+            style={toolbarBtnStyle(editor.isActive('heading', { level: 3 }))}
+            title="제목 3"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleHeading({ level: 3 }).run(); }}
+          >
+            H3
+          </button>
+
+          <span style={dividerStyle} />
+
+          {/* Lists */}
+          <button
+            type="button"
+            style={toolbarBtnStyle(editor.isActive('bulletList'))}
+            title="글머리 기호 목록"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleBulletList().run(); }}
+          >
+            &bull;
+          </button>
+          <button
+            type="button"
+            style={toolbarBtnStyle(editor.isActive('orderedList'))}
+            title="번호 매기기 목록"
+            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleOrderedList().run(); }}
+          >
+            1.
+          </button>
+
+          <span style={dividerStyle} />
+
+          {/* Link */}
+          <button
+            type="button"
+            style={toolbarBtnStyle(editor.isActive('link'))}
+            title="링크 삽입"
+            onMouseDown={(e) => { e.preventDefault(); handleLink(); }}
+          >
+            Link
+          </button>
+        </div>
+      ) : null}
+
       <EditorContent editor={editor} />
     </div>
   );

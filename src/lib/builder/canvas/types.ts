@@ -1,5 +1,13 @@
 import { z } from 'zod';
 import { locales, type Locale } from '@/lib/locales';
+const imageFiltersSchema = z.object({
+  brightness: z.number().min(0).max(200),
+  contrast: z.number().min(0).max(200),
+  saturation: z.number().min(0).max(200),
+  blur: z.number().min(0).max(20),
+  grayscale: z.number().min(0).max(100),
+  sepia: z.number().min(0).max(100),
+}).optional();
 
 export const sandboxLocaleSchema = z.enum(locales);
 
@@ -84,6 +92,7 @@ const imageCanvasNodeSchema = baseCanvasNodeSchema.extend({
     alt: z.string().max(300),
     fit: z.enum(['cover', 'contain']),
     cropAspect: z.string().max(20).optional(),
+    filters: imageFiltersSchema,
   }),
 });
 

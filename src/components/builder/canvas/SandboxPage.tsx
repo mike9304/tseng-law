@@ -3,12 +3,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import CanvasContainer from '@/components/builder/canvas/CanvasContainer';
+import NavigationEditor from '@/components/builder/canvas/NavigationEditor';
 import PageSwitcher from '@/components/builder/canvas/PageSwitcher';
 import PublishModal from '@/components/builder/canvas/PublishModal';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
+import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
+import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { Locale } from '@/lib/locales';
@@ -57,6 +60,8 @@ export default function SandboxPage({
   const [viewport, setViewport] = useState<ViewportMode>('desktop');
   const [publishOpen, setPublishOpen] = useState(false);
   const [activePageId, setActivePageId] = useState<string | null>(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [historyOpen, setHistoryOpen] = useState(false);
 
   function pushToast(message: string, tone: ToastTone) {
     const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -193,6 +198,8 @@ export default function SandboxPage({
         viewport={viewport}
         onViewportChange={setViewport}
         onPublish={() => setPublishOpen(true)}
+        onOpenSettings={() => setSettingsOpen(true)}
+        onOpenHistory={() => setHistoryOpen(true)}
       />
 
       <section className={styles.metaGrid}>
@@ -231,6 +238,7 @@ export default function SandboxPage({
             activePageId={activePageId}
             onSelectPage={handleSelectPage}
           />
+          <NavigationEditor locale={locale} />
           <SandboxLayersPanel />
           <SandboxCatalogPanel />
         </div>
@@ -266,6 +274,18 @@ export default function SandboxPage({
         document={document}
         locale={locale}
         onClose={() => setPublishOpen(false)}
+      />
+
+      <SiteSettingsModal
+        open={settingsOpen}
+        onClose={() => setSettingsOpen(false)}
+      />
+
+      <VersionHistoryPanel
+        open={historyOpen}
+        pageId={activePageId ?? ''}
+        siteId="default"
+        onClose={() => setHistoryOpen(false)}
       />
 
       <div className={styles.toastStack} aria-live="polite" aria-atomic="true">

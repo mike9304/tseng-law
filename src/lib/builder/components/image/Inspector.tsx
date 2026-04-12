@@ -1,9 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
+import { DEFAULT_FILTERS, type ImageFilters } from '@/lib/builder/canvas/filters';
 import CropModal from '@/components/builder/canvas/CropModal';
+import FilterPanel from '@/components/builder/canvas/FilterPanel';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 export default function ImageInspector({
@@ -14,6 +16,17 @@ export default function ImageInspector({
 }: BuilderComponentInspectorProps) {
   const imageNode = node as BuilderImageCanvasNode;
   const [cropOpen, setCropOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
+
+  const currentFilters: ImageFilters =
+    (imageNode.content as { filters?: ImageFilters }).filters ?? { ...DEFAULT_FILTERS };
+
+  const handleFilterChange = useCallback(
+    (filters: ImageFilters) => {
+      onUpdate({ filters });
+    },
+    [onUpdate],
+  );
 
   return (
     <>
@@ -35,7 +48,23 @@ export default function ImageInspector({
         >
           Crop
         </button>
+        <button
+          type="button"
+          className={styles.actionButton}
+          disabled={disabled}
+          onClick={() => setFilterOpen((prev) => !prev)}
+          style={{ marginLeft: 6 }}
+        >
+          {filterOpen ? '필터 닫기' : '필터'}
+        </button>
       </div>
+      {filterOpen && (
+        <FilterPanel
+          filters={currentFilters}
+          onChangeFilters={handleFilterChange}
+          onClose={() => setFilterOpen(false)}
+        />
+      )}
       <label>
         <span>Source URL</span>
         <input

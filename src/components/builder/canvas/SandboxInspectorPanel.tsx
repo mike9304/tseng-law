@@ -1,11 +1,119 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import A11yPanel from '@/components/builder/canvas/A11yPanel';
 import ContentTab from '@/components/builder/editor/ContentTab';
 import StyleTab from '@/components/builder/editor/StyleTab';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import styles from './SandboxPage.module.css';
+
+/* ── SEO Inspector inline styles ────────────────────────────── */
+
+const seoFieldStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+};
+
+const seoLabelStyle: React.CSSProperties = {
+  fontSize: '0.75rem',
+  fontWeight: 600,
+  color: '#334155',
+};
+
+const seoInputStyle: React.CSSProperties = {
+  padding: '6px 10px',
+  border: '1px solid #e2e8f0',
+  borderRadius: 8,
+  fontSize: '0.82rem',
+  color: '#0f172a',
+  outline: 'none',
+};
+
+const seoTextareaStyle: React.CSSProperties = {
+  ...seoInputStyle,
+  minHeight: 64,
+  resize: 'vertical' as const,
+  fontFamily: 'inherit',
+};
+
+const seoCheckboxRow: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 6,
+  fontSize: '0.78rem',
+  color: '#334155',
+};
+
+const seoScoreStyle: React.CSSProperties = {
+  marginTop: 8,
+  padding: '8px 10px',
+  borderRadius: 8,
+  background: '#f8fafc',
+  border: '1px solid #e2e8f0',
+  fontSize: '0.75rem',
+  color: '#475569',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+};
+
+const scoreOk: React.CSSProperties = { color: '#16a34a', fontWeight: 600 };
+const scoreWarn: React.CSSProperties = { color: '#d97706', fontWeight: 600 };
+const scoreErr: React.CSSProperties = { color: '#dc2626', fontWeight: 600 };
+
+interface SeoData {
+  title: string;
+  description: string;
+  ogImage: string;
+  noIndex: boolean;
+  canonical: string;
+}
+
+const EMPTY_SEO: SeoData = {
+  title: '',
+  description: '',
+  ogImage: '',
+  noIndex: false,
+  canonical: '',
+};
+
+function SeoScoreWidget({ seo, imageNodesWithoutAlt }: { seo: SeoData; imageNodesWithoutAlt: number }) {
+  const checks: Array<{ label: string; style: React.CSSProperties }> = [];
+  const titleLen = seo.title.length;
+  if (titleLen === 0) {
+    checks.push({ label: 'Title 누락', style: scoreErr });
+  } else if (titleLen < 30 || titleLen > 60) {
+    checks.push({ label: `Title 길이: ${titleLen}자 (권장 30-60)`, style: scoreWarn });
+  } else {
+    checks.push({ label: `Title 길이: ${titleLen}자`, style: scoreOk });
+  }
+
+  const descLen = seo.description.length;
+  if (descLen === 0) {
+    checks.push({ label: 'Description 누락', style: scoreErr });
+  } else if (descLen < 120 || descLen > 160) {
+    checks.push({ label: `Description 길이: ${descLen}자 (권장 120-160)`, style: scoreWarn });
+  } else {
+    checks.push({ label: `Description 길이: ${descLen}자`, style: scoreOk });
+  }
+
+  if (imageNodesWithoutAlt > 0) {
+    checks.push({ label: `Alt 텍스트 누락 이미지: ${imageNodesWithoutAlt}개`, style: scoreWarn });
+  } else {
+    checks.push({ label: '모든 이미지 alt 텍스트 설정됨', style: scoreOk });
+  }
+
+  return (
+    <div style={seoScoreStyle}>
+      <div style={{ fontWeight: 700, color: '#0f172a', marginBottom: 2 }}>SEO 점수</div>
+      {checks.map((c, i) => (
+        <div key={i} style={c.style}>{c.label}</div>
+      ))}
+    </div>
+  );
+}
 
 const MIN_WIDTH = 72;
 const MIN_HEIGHT = 40;
@@ -112,7 +220,23 @@ export default function SandboxInspectorPanel({
     sendSelectedNodeToBack,
   } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content'>('layout');
+  const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content' | 'a11y' | 'seo'>('layout');
+  const [seo, setSeo] = useState<SeoData>(EMPTY_SEO);
+
+  const imageNodesWithoutAlt = useMemo(
+    () =>
+      (document?.nodes ?? []).filter(
+        (n) => n.kind === 'image' && !n.content.alt,
+      ).length,
+    [document?.nodes],
+  );
+
+  const updateSeoField = useCallback(
+    <K extends keyof SeoData>(key: K, value: SeoData[K]) => {
+      setSeo((prev) => ({ ...prev, [key]: value }));
+    },
+    [],
+  );
   const selectedNode = useMemo(
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [document?.nodes, selectedNodeId],
@@ -184,8 +308,8 @@ export default function SandboxInspectorPanel({
         ) : selectedNode ? (
           <>
             <div className={styles.inspectorTabRow}>
-              {(['layout', 'style', 'content'] as const).map((tab) => {
-                const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집' };
+              {(['layout', 'style', 'content', 'a11y', 'seo'] as const).map((tab) => {
+                const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집', a11y: '접근성 검사', seo: 'SEO 메타데이터 설정' };
                 return (
                   <button
                     key={tab}
@@ -326,6 +450,63 @@ export default function SandboxInspectorPanel({
                 />
               ) : null}
 
+              {activeTab === 'a11y' ? (
+                <A11yPanel />
+              ) : null}
+
+              {activeTab === 'seo' ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 8 }}>
+                  <div style={seoFieldStyle}>
+                    <label style={seoLabelStyle}>Title</label>
+                    <input
+                      type="text"
+                      value={seo.title}
+                      placeholder="페이지 제목 (30-60자 권장)"
+                      style={seoInputStyle}
+                      onChange={(e) => updateSeoField('title', e.target.value)}
+                    />
+                  </div>
+                  <div style={seoFieldStyle}>
+                    <label style={seoLabelStyle}>Description</label>
+                    <textarea
+                      value={seo.description}
+                      placeholder="페이지 설명 (120-160자 권장)"
+                      style={seoTextareaStyle}
+                      onChange={(e) => updateSeoField('description', e.target.value)}
+                    />
+                  </div>
+                  <div style={seoFieldStyle}>
+                    <label style={seoLabelStyle}>OG Image URL</label>
+                    <input
+                      type="url"
+                      value={seo.ogImage}
+                      placeholder="https://example.com/og-image.jpg"
+                      style={seoInputStyle}
+                      onChange={(e) => updateSeoField('ogImage', e.target.value)}
+                    />
+                  </div>
+                  <div style={seoFieldStyle}>
+                    <label style={seoLabelStyle}>Canonical URL</label>
+                    <input
+                      type="url"
+                      value={seo.canonical}
+                      placeholder="https://example.com/page"
+                      style={seoInputStyle}
+                      onChange={(e) => updateSeoField('canonical', e.target.value)}
+                    />
+                  </div>
+                  <label style={seoCheckboxRow}>
+                    <input
+                      type="checkbox"
+                      checked={seo.noIndex}
+                      onChange={(e) => updateSeoField('noIndex', e.target.checked)}
+                    />
+                    <span>noIndex (검색엔진 색인 제외)</span>
+                  </label>
+                  <SeoScoreWidget seo={seo} imageNodesWithoutAlt={imageNodesWithoutAlt} />
+                </div>
+              ) : null}
+
               {!selectedNode.visible ? (
                 <p className={styles.inspectorHint}>
                   이 node 는 현재 canvas 에 숨겨져 있습니다. layers 나 inspector 에서 다시 표시할 수 있습니다.
@@ -363,9 +544,25 @@ export default function SandboxInspectorPanel({
             </section>
           </>
         ) : (
-          <p className={styles.inspectorEmpty}>
-            캔버스나 layers 에서 node 를 선택하면 layout 값과 lock/hidden 토글이 여기 표시됩니다.
-          </p>
+          <>
+            <div className={styles.inspectorTabRow}>
+              <button
+                type="button"
+                className={`${styles.inspectorTab} ${activeTab === 'a11y' ? styles.inspectorTabActive : ''}`}
+                title="접근성 검사"
+                onClick={() => setActiveTab('a11y')}
+              >
+                a11y
+              </button>
+            </div>
+            {activeTab === 'a11y' ? (
+              <A11yPanel />
+            ) : (
+              <p className={styles.inspectorEmpty}>
+                캔버스나 layers 에서 node 를 선택하면 layout 값과 lock/hidden 토글이 여기 표시됩니다.
+              </p>
+            )}
+          </>
         )}
       </div>
     </aside>

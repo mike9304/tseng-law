@@ -126,7 +126,7 @@ export default function BuilderWorkspaceFrame({
                   }`}
                 >
                   <span>{stageUrl}</span>
-                  <span>{surfaceTone === 'canvas-priority' ? 'active canvas route' : 'canonical builder route'}</span>
+                  <span>{surfaceTone === 'canvas-priority' ? 'canvas route' : 'canonical builder route'}</span>
                 </div>
                 <div
                   className={`builder-canvas-stage-meta${

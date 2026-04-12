@@ -63,7 +63,7 @@ export default function BuilderPageWorkspaceShell({
 
   return (
     <BuilderWorkspaceFrame
-      title={`${title} ${requestedMode === 'preview' ? 'preview' : 'workspace'}`}
+      title={title}
       description={description}
       activeRail="pages"
       surfaceTone="canvas-priority"
@@ -82,20 +82,26 @@ export default function BuilderPageWorkspaceShell({
           <span className="builder-stage-pill">
             {snapshot.persisted ? `${snapshot.kind} v${snapshot.revision}` : 'default schema'}
           </span>
+          {availableModes.map((mode) => (
+            <Link
+              key={mode}
+              href={buildBuilderPageHref(locale, pageKey, mode)}
+              className={`builder-stage-pill${mode === requestedMode ? ' builder-stage-pill--accent' : ''}`}
+            >
+              {mode === 'edit' ? 'Edit' : 'Preview'}
+            </Link>
+          ))}
         </>
       }
       rightMeta={
         <>
-          <strong>{title}</strong>
-          <span>
-            {site.id} · {pageKey} · locale {locale}
-          </span>
+          <strong>{requestedMode === 'preview' ? 'Preview surface' : 'Canvas route'}</strong>
+          <span>{currentPage.publicPath}</span>
         </>
       }
       leftSidebar={
         <section className="builder-preview-inspector-card builder-dashboard-sidebar">
           <h2>Pages</h2>
-          <p>Switch pages here. Keep the stage as the primary editing surface.</p>
           <div className="builder-dashboard-nav-list">
             {pages.map((page) => (
               <Link
@@ -114,15 +120,14 @@ export default function BuilderPageWorkspaceShell({
       inspector={
         <>
           <section className="builder-preview-inspector-card">
-            <h2>Mode policy</h2>
+            <h2>Canvas focus</h2>
             <ul className="builder-preview-inspector-notes">
-              {policyNotes.map((note) => (
-                <li key={note}>{note}</li>
-              ))}
+              <li>Use the stage as the primary editing surface.</li>
+              <li>Page diagnostics stay reachable below without competing with the canvas.</li>
             </ul>
           </section>
           <section className="builder-preview-inspector-card">
-            <h2>Snapshot</h2>
+            <h2>Mode policy</h2>
             <dl className="builder-preview-inspector-list">
               <div>
                 <dt>Source</dt>
@@ -143,68 +148,68 @@ export default function BuilderPageWorkspaceShell({
             </dl>
           </section>
           <section className="builder-preview-inspector-card">
-            <h2>Dataset seams</h2>
-            {datasetOverviews.length > 0 ? (
-              <div className="builder-preview-inspector-list">
-                {datasetOverviews.map((item) => (
-                  <div key={item.targetId}>
-                    <dt>{item.title}</dt>
-                    <dd>
-                      {item.currentBinding.collectionId} · {item.currentBinding.mode}
-                      {typeof item.currentBinding.limit === 'number'
-                        ? ` · limit ${item.currentBinding.limit}`
-                        : ''}
-                    </dd>
-                    <dd>{item.description}</dd>
-                    <dd>
-                      <Link
-                        href={buildBuilderCollectionHref(locale, item.currentBinding.collectionId)}
-                        className="builder-link-inline"
-                      >
-                        Open collection detail
-                      </Link>
-                    </dd>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <ul className="builder-preview-inspector-notes">
-                <li>No dataset seams are reachable on this page yet.</li>
-              </ul>
-            )}
-          </section>
-          <section className="builder-preview-inspector-card">
             <BuilderAdvancedDisclosure
-              title="Advanced scene diagnostics"
-              summary="Keep the scene graph reachable for structural debugging, not as a primary editing route."
+              title="Page diagnostics"
+              summary="Modes, dataset seams, and scene diagnostics stay reachable here without taking over the main editing route."
             >
-              <ul className="builder-preview-inspector-notes">
-                <li>The canvas-first core will replace the current semantic-section runtime with a real scene graph.</li>
-                <li>
-                  <Link href={buildBuilderPageSceneHref(locale, pageKey)} className="builder-link-inline">
-                    Open advanced scene view
-                  </Link>
-                </li>
-              </ul>
+              <div className="builder-page-shell-diagnostics">
+                <section className="builder-page-shell-diagnostics-section">
+                  <h3>Mode policy</h3>
+                  <ul className="builder-preview-inspector-notes">
+                    {policyNotes.map((note) => (
+                      <li key={note}>{note}</li>
+                    ))}
+                  </ul>
+                </section>
+                <section className="builder-page-shell-diagnostics-section">
+                  <h3>Dataset seams</h3>
+                  {datasetOverviews.length > 0 ? (
+                    <div className="builder-preview-inspector-list">
+                      {datasetOverviews.map((item) => (
+                        <div key={item.targetId}>
+                          <dt>{item.title}</dt>
+                          <dd>
+                            {item.currentBinding.collectionId} · {item.currentBinding.mode}
+                            {typeof item.currentBinding.limit === 'number'
+                              ? ` · limit ${item.currentBinding.limit}`
+                              : ''}
+                          </dd>
+                          <dd>{item.description}</dd>
+                          <dd>
+                            <Link
+                              href={buildBuilderCollectionHref(locale, item.currentBinding.collectionId)}
+                              className="builder-link-inline"
+                            >
+                              Open collection detail
+                            </Link>
+                          </dd>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <ul className="builder-preview-inspector-notes">
+                      <li>No dataset seams are reachable on this page yet.</li>
+                    </ul>
+                  )}
+                </section>
+                <section className="builder-page-shell-diagnostics-section">
+                  <h3>Scene diagnostics</h3>
+                  <ul className="builder-preview-inspector-notes">
+                    <li>The canvas-first core will replace the current semantic-section runtime with a real scene graph.</li>
+                    <li>
+                      <Link href={buildBuilderPageSceneHref(locale, pageKey)} className="builder-link-inline">
+                        Open advanced scene view
+                      </Link>
+                    </li>
+                  </ul>
+                </section>
+              </div>
             </BuilderAdvancedDisclosure>
           </section>
         </>
       }
     >
-      <div className="builder-dashboard-canvas-copy">
-        <div className="builder-dashboard-mode-row">
-          {availableModes.map((mode) => (
-            <Link
-              key={mode}
-              href={buildBuilderPageHref(locale, pageKey, mode)}
-              className={`builder-stage-pill${mode === requestedMode ? ' builder-stage-pill--accent' : ''}`}
-            >
-              {mode === 'edit' ? 'Edit' : 'Preview'}
-            </Link>
-          ))}
-        </div>
-        {children}
-      </div>
+      <div className="builder-dashboard-canvas-copy">{children}</div>
     </BuilderWorkspaceFrame>
   );
 }

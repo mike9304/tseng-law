@@ -17,6 +17,7 @@ import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import {
   type BuilderSiteDocument,
   type BuilderPageMeta,
+  type BuilderPageLifecycleMeta,
   createDefaultSiteDocument,
   generatePageId,
 } from './types';
@@ -42,13 +43,13 @@ export async function readSiteDocument(siteId: string, locale: Locale): Promise<
       const result = await get(pathname, { access: 'private', useCache: false });
       if (result?.statusCode === 200 && result.stream) {
         const text = await new Response(result.stream).text();
-        return JSON.parse(text) as BuilderSiteDocument;
+        return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument);
       }
     } catch { /* fallthrough */ }
   } else {
     try {
       const text = await readFile(path.join(localRoot(), siteId, 'site.json'), 'utf8');
-      return JSON.parse(text) as BuilderSiteDocument;
+      return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument);
     } catch { /* fallthrough */ }
   }
   return createDefaultSiteDocument(locale);
@@ -131,6 +132,8 @@ export async function createPage(
     slug,
     title: { ko: title, 'zh-hant': title, en: title },
     locale,
+    documentKind: 'section-snapshot-v1',
+    lifecycle: createDefaultPageLifecycleMeta('section-snapshot-v1'),
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
@@ -151,6 +154,36 @@ export async function deletePage(siteId: string, pageId: string, locale: Locale)
 export async function listPages(siteId: string, locale: Locale): Promise<BuilderPageMeta[]> {
   const site = await readSiteDocument(siteId, locale);
   return site.pages;
+}
+
+function normalizeSiteDocumentLifecycle(site: BuilderSiteDocument): BuilderSiteDocument {
+  return {
+    ...site,
+    pages: site.pages.map((page) => ({
+      ...page,
+      lifecycle:
+        page.lifecycle ??
+        createDefaultPageLifecycleMeta(page.documentKind ?? 'section-snapshot-v1'),
+    })),
+  };
+}
+
+function createDefaultPageLifecycleMeta(
+  documentKind: BuilderPageMeta['documentKind']
+): BuilderPageLifecycleMeta {
+  if (documentKind === 'canvas-scene-vnext') {
+    return {
+      activeDocumentFamily: 'canvas-sandbox-v1',
+      publishBackend: 'builder-snapshot',
+      sceneStatus: 'seeded',
+    };
+  }
+
+  return {
+    activeDocumentFamily: 'section-snapshot-v1',
+    publishBackend: 'builder-snapshot',
+    sceneStatus: 'derived-only',
+  };
 }
 
 // ─── Publish ──────────────────────────────────────────────────────

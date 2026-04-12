@@ -17,6 +17,8 @@ import type {
   BuilderResponsiveBreakpoint,
   BuilderDraftSnapshot,
   BuilderHomeDocumentState,
+  BuilderPageScene,
+  BuilderPersistedSceneNode,
   BuilderSceneNodeBounds,
   BuilderPageDocument,
   BuilderPageKey,
@@ -66,11 +68,18 @@ export function getDocumentSectionKeys(document: BuilderPageDocument): BuilderSe
 }
 
 export function cloneBuilderDocument(document: BuilderPageDocument): BuilderPageDocument {
+  const clonedChildren = document.root.children.map(cloneBuilderSectionNode);
   return {
     version: document.version,
     pageKey: document.pageKey,
     locale: document.locale,
     datasets: document.datasets.map(cloneBuilderPageDatasetBinding),
+    scene: syncBuilderPageSceneBridge(
+      document.pageKey,
+      cloneBuilderPageScene(document.scene, document.pageKey, document.version),
+      clonedChildren,
+      document.version
+    ),
     updatedAt: document.updatedAt,
     updatedBy: document.updatedBy,
     root: {
@@ -78,7 +87,7 @@ export function cloneBuilderDocument(document: BuilderPageDocument): BuilderPage
       type: document.root.type,
       name: document.root.name,
       pageKey: document.root.pageKey,
-      children: document.root.children.map(cloneBuilderSectionNode),
+      children: clonedChildren,
     },
   };
 }
@@ -91,6 +100,11 @@ export function normalizeBuilderDocument(
     return cloneBuilderDocument(fallbackDocument);
   }
 
+  const normalizedChildren = normalizeBuilderSectionNodes(
+    nextDocument.root.children,
+    fallbackDocument.root.children
+  );
+
   return {
     version: 1,
     pageKey: fallbackDocument.pageKey,
@@ -99,6 +113,12 @@ export function normalizeBuilderDocument(
       fallbackDocument.pageKey,
       nextDocument.datasets,
       fallbackDocument.datasets
+    ),
+    scene: normalizeBuilderPageScene(
+      nextDocument.scene,
+      fallbackDocument.scene,
+      fallbackDocument.pageKey,
+      normalizedChildren
     ),
     updatedAt:
       typeof nextDocument.updatedAt === 'string' && nextDocument.updatedAt
@@ -119,7 +139,7 @@ export function normalizeBuilderDocument(
           ? nextDocument.root.name
           : fallbackDocument.root.name,
       pageKey: fallbackDocument.root.pageKey,
-      children: normalizeBuilderSectionNodes(nextDocument.root.children, fallbackDocument.root.children),
+      children: normalizedChildren,
     },
   };
 }
@@ -530,12 +550,22 @@ export function updateBuilderDocumentSectionContentGroupBounds(
       : cloneBuilderSectionNode(section)
   );
 
-  return touchBuilderDocument({
-    ...cloneBuilderDocument(document),
-    root: {
-      ...document.root,
-      children: nextChildren,
+  const nextDocument = updateBuilderPageSceneContentGroupBounds(
+    {
+      ...cloneBuilderDocument(document),
+      root: {
+        ...document.root,
+        children: nextChildren,
+      },
     },
+    sectionKey,
+    groupId,
+    bounds,
+    viewport
+  );
+
+  return touchBuilderDocument({
+    ...nextDocument,
   });
 }
 
@@ -1031,6 +1061,175 @@ function cloneBuilderSectionContentGroupNode(
   };
 }
 
+function cloneBuilderPageScene(
+  scene: Partial<BuilderPageScene> | BuilderPageScene | null | undefined,
+  pageKey: BuilderPageKey,
+  sourceDocumentVersion = 1
+): BuilderPageScene | undefined {
+  if (!scene || !Array.isArray(scene.nodes)) {
+    return undefined;
+  }
+
+  const nodes = scene.nodes
+    .map((node) => cloneBuilderPersistedSceneNode(node, pageKey))
+    .filter((node): node is BuilderPersistedSceneNode => Boolean(node));
+
+  if (!nodes.length) {
+    return undefined;
+  }
+
+  return {
+    version: 1,
+    adapterMode: 'section-scene-bridge-v1',
+    sourceDocumentVersion:
+      typeof scene.sourceDocumentVersion === 'number' && Number.isFinite(scene.sourceDocumentVersion)
+        ? scene.sourceDocumentVersion
+        : sourceDocumentVersion,
+    rootNodeId:
+      typeof scene.rootNodeId === 'string' && scene.rootNodeId
+        ? scene.rootNodeId
+        : buildBuilderPageSceneRootNodeId(pageKey),
+    nodes,
+  };
+}
+
+function cloneBuilderPersistedSceneNode(
+  node: Partial<BuilderPersistedSceneNode> | null | undefined,
+  pageKey: BuilderPageKey
+): BuilderPersistedSceneNode | undefined {
+  if (
+    !node ||
+    typeof node.nodeId !== 'string' ||
+    !node.nodeId ||
+    node.nodeKind !== 'content-group' ||
+    typeof node.sectionKey !== 'string' ||
+    !node.sectionKey ||
+    typeof node.groupKey !== 'string' ||
+    !node.groupKey ||
+    typeof node.label !== 'string' ||
+    !node.label
+  ) {
+    return undefined;
+  }
+
+  const sectionFrameNodeId =
+    typeof node.sectionFrameNodeId === 'string' && node.sectionFrameNodeId
+      ? node.sectionFrameNodeId
+      : buildBuilderSectionFrameSceneNodeId(pageKey, node.sectionKey);
+
+  return {
+    version: 1,
+    nodeId: node.nodeId,
+    nodeKind: 'content-group',
+    source: node.source === 'section-scene-bridge' ? 'section-scene-bridge' : 'page-scene',
+    parentNodeId:
+      typeof node.parentNodeId === 'string' && node.parentNodeId ? node.parentNodeId : sectionFrameNodeId,
+    sectionFrameNodeId,
+    childNodeIds: Array.isArray(node.childNodeIds)
+      ? node.childNodeIds.filter((childNodeId): childNodeId is string => typeof childNodeId === 'string')
+      : [],
+    sectionKey: node.sectionKey,
+    groupKey: node.groupKey,
+    label: node.label,
+    surfaceIds: Array.isArray(node.surfaceIds)
+      ? node.surfaceIds.filter((surfaceId): surfaceId is string => typeof surfaceId === 'string')
+      : [],
+    datasetTargetIds: Array.isArray(node.datasetTargetIds)
+      ? node.datasetTargetIds.filter(
+          (targetId): targetId is BuilderDatasetTargetId => typeof targetId === 'string'
+        )
+      : undefined,
+    bounds: cloneBuilderSceneNodeBounds(node.bounds),
+    overrides: cloneBuilderSceneNodeBoundsOverrides(node.overrides),
+    constraints: {
+      movement: node.constraints?.movement === 'section-flow' ? 'section-flow' : 'section-flow',
+      resize: node.constraints?.resize === 'none' ? 'none' : 'none',
+    },
+    measuredAt: typeof node.measuredAt === 'string' && node.measuredAt ? node.measuredAt : undefined,
+  };
+}
+
+function normalizeBuilderPageScene(
+  nextScene: Partial<BuilderPageScene> | BuilderPageScene | null | undefined,
+  fallbackScene: BuilderPageScene | null | undefined,
+  pageKey: BuilderPageKey,
+  sections: BuilderSectionNode[]
+): BuilderPageScene | undefined {
+  const baseScene =
+    cloneBuilderPageScene(nextScene, pageKey, 1) ??
+    cloneBuilderPageScene(fallbackScene, pageKey, 1) ??
+    buildBuilderPageSceneFromSections(pageKey, sections, 1);
+
+  return syncBuilderPageSceneBridge(pageKey, baseScene, sections, 1);
+}
+
+function syncBuilderPageSceneBridge(
+  pageKey: BuilderPageKey,
+  pageScene: BuilderPageScene | undefined,
+  sections: BuilderSectionNode[],
+  sourceDocumentVersion: number
+): BuilderPageScene | undefined {
+  const baseScene =
+    cloneBuilderPageScene(pageScene, pageKey, sourceDocumentVersion) ??
+    buildBuilderPageSceneFromSections(pageKey, sections, sourceDocumentVersion);
+
+  if (!baseScene) {
+    return undefined;
+  }
+
+  const bridgeNodes = sections.flatMap((section) => {
+    const groups = normalizeBuilderSectionProps(section.props).scene?.groups ?? [];
+
+    return groups.map<BuilderPersistedSceneNode>((group) => {
+      const sectionFrameNodeId = buildBuilderSectionFrameSceneNodeId(pageKey, section.sectionKey);
+      const existingNode = baseScene.nodes.find((candidate) => candidate.nodeId === group.nodeId);
+      const promotedAuthority = existingNode?.source === 'page-scene';
+
+      return {
+        version: 1,
+        nodeId: group.nodeId,
+        nodeKind: 'content-group',
+        source: promotedAuthority ? 'page-scene' : 'section-scene-bridge',
+        parentNodeId: sectionFrameNodeId,
+        sectionFrameNodeId,
+        childNodeIds: existingNode ? [...existingNode.childNodeIds] : [],
+        sectionKey: section.sectionKey,
+        groupKey: group.groupKey,
+        label: group.label,
+        surfaceIds: [...group.surfaceIds],
+        datasetTargetIds: group.datasetTargetIds ? [...group.datasetTargetIds] : undefined,
+        bounds: promotedAuthority
+          ? cloneBuilderSceneNodeBounds(existingNode.bounds ?? group.bounds)
+          : cloneBuilderSceneNodeBounds(group.bounds),
+        overrides: promotedAuthority
+          ? cloneBuilderSceneNodeBoundsOverrides(existingNode.overrides ?? group.overrides)
+          : cloneBuilderSceneNodeBoundsOverrides(group.overrides),
+        constraints: {
+          movement: group.constraints.movement,
+          resize: group.constraints.resize,
+        },
+        measuredAt: promotedAuthority ? existingNode.measuredAt ?? group.measuredAt : group.measuredAt,
+      };
+    });
+  });
+
+  const bridgeNodeIds = new Set(bridgeNodes.map((node) => node.nodeId));
+  const preservedNodes = baseScene.nodes.filter((node) => !bridgeNodeIds.has(node.nodeId));
+  const nextNodes = [...preservedNodes, ...bridgeNodes];
+
+  if (!nextNodes.length) {
+    return undefined;
+  }
+
+  return {
+    version: 1,
+    adapterMode: 'section-scene-bridge-v1',
+    sourceDocumentVersion,
+    rootNodeId: baseScene.rootNodeId,
+    nodes: nextNodes,
+  };
+}
+
 function normalizeBuilderSectionContentGroupNode(
   nextGroup: Partial<BuilderSectionContentGroupNode>,
   fallbackGroup?: BuilderSectionContentGroupNode
@@ -1190,6 +1389,51 @@ function updateBuilderSectionContentGroupSceneProps(
     scene: {
       version: 1,
       groups: nextGroups,
+    },
+  };
+}
+
+function updateBuilderPageSceneContentGroupBounds(
+  document: BuilderPageDocument,
+  sectionKey: BuilderSectionKey,
+  groupId: string,
+  bounds: BuilderSceneNodeBounds,
+  viewport: BuilderResponsiveBreakpoint | 'desktop'
+): BuilderPageDocument {
+  const baseScene =
+    cloneBuilderPageScene(document.scene, document.pageKey, document.version) ??
+    buildBuilderPageSceneFromSections(document.pageKey, document.root.children, document.version);
+
+  if (!baseScene) {
+    return document;
+  }
+
+  const nextNodes = baseScene.nodes.map((node) => {
+    if (node.nodeId !== groupId || node.sectionKey !== sectionKey) {
+      return cloneBuilderPersistedSceneNode(node, document.pageKey) ?? node;
+    }
+
+    return {
+      ...node,
+      source: 'page-scene' as const,
+      bounds: viewport === 'desktop' ? cloneBuilderSceneNodeBounds(bounds) : node.bounds,
+      overrides:
+        viewport === 'desktop'
+          ? cloneBuilderSceneNodeBoundsOverrides(node.overrides)
+          : {
+              ...cloneBuilderSceneNodeBoundsOverrides(node.overrides),
+              [viewport]: cloneBuilderSceneNodeBounds(bounds),
+            },
+      measuredAt: new Date().toISOString(),
+    };
+  });
+
+  return {
+    ...document,
+    scene: {
+      ...baseScene,
+      sourceDocumentVersion: document.version,
+      nodes: nextNodes,
     },
   };
 }
@@ -1536,16 +1780,83 @@ function applyBuilderSectionLayoutResetForViewport(
 }
 
 function touchBuilderDocument(document: BuilderPageDocument): BuilderPageDocument {
+  const clonedChildren = document.root.children.map(cloneBuilderSectionNode);
   return {
     ...document,
     datasets: document.datasets.map(cloneBuilderPageDatasetBinding),
+    scene: syncBuilderPageSceneBridge(
+      document.pageKey,
+      cloneBuilderPageScene(document.scene, document.pageKey, document.version),
+      clonedChildren,
+      document.version
+    ),
     updatedAt: new Date().toISOString(),
     updatedBy: 'builder-preview-local',
     root: {
       ...document.root,
-      children: document.root.children.map(cloneBuilderSectionNode),
+      children: clonedChildren,
     },
   };
+}
+
+function buildBuilderPageSceneFromSections(
+  pageKey: BuilderPageKey,
+  sections: BuilderSectionNode[],
+  sourceDocumentVersion = 1
+): BuilderPageScene | undefined {
+  const nodes = sections.flatMap((section) => {
+    const groups = normalizeBuilderSectionProps(section.props).scene?.groups ?? [];
+    const parentNodeId = buildBuilderSectionFrameSceneNodeId(pageKey, section.sectionKey);
+
+    return groups.map<BuilderPersistedSceneNode>((group) => ({
+      version: 1,
+      nodeId: group.nodeId,
+      nodeKind: 'content-group',
+      source: 'section-scene-bridge',
+      parentNodeId,
+      sectionFrameNodeId: parentNodeId,
+      childNodeIds: [],
+      sectionKey: section.sectionKey,
+      groupKey: group.groupKey,
+      label: group.label,
+      surfaceIds: [...group.surfaceIds],
+      datasetTargetIds: group.datasetTargetIds ? [...group.datasetTargetIds] : undefined,
+      bounds: cloneBuilderSceneNodeBounds(group.bounds),
+      overrides: cloneBuilderSceneNodeBoundsOverrides(group.overrides),
+      constraints: {
+        movement: group.constraints.movement,
+        resize: group.constraints.resize,
+      },
+      measuredAt: group.measuredAt,
+    }));
+  });
+
+  if (!nodes.length) {
+    return undefined;
+  }
+
+  return {
+    version: 1,
+    adapterMode: 'section-scene-bridge-v1',
+    sourceDocumentVersion,
+    rootNodeId: buildBuilderPageSceneRootNodeId(pageKey),
+    nodes,
+  };
+}
+
+function buildBuilderPageSceneRootNodeId(pageKey: BuilderPageKey) {
+  return `scene:${sanitizeBuilderSceneToken(pageKey)}:page`;
+}
+
+function buildBuilderSectionFrameSceneNodeId(
+  pageKey: BuilderPageKey,
+  sectionKey: BuilderSectionKey
+) {
+  return `scene:${sanitizeBuilderSceneToken(pageKey)}:${sanitizeBuilderSceneToken(sectionKey)}:frame`;
+}
+
+function sanitizeBuilderSceneToken(value: string) {
+  return value.replace(/[^a-z0-9-_:.]+/gi, '-');
 }
 
 function cloneFaqItem(item: FAQItem): FAQItem {

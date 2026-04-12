@@ -143,7 +143,7 @@ export default function SandboxInspectorPanel({
               <strong>Multi-select</strong>
             </header>
             <div className={styles.actionGrid}>
-              <button type="button" className={styles.actionButton} onClick={duplicateSelectedNode}>
+              <button type="button" className={styles.actionButton} title="선택된 노드 모두 복제" onClick={duplicateSelectedNode}>
                 Duplicate selection
               </button>
             </div>
@@ -152,16 +152,20 @@ export default function SandboxInspectorPanel({
       ) : selectedNode ? (
         <>
           <div className={styles.inspectorTabRow}>
-            {(['layout', 'style', 'content'] as const).map((tab) => (
-              <button
-                key={tab}
-                type="button"
-                className={`${styles.inspectorTab} ${activeTab === tab ? styles.inspectorTabActive : ''}`}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab}
-              </button>
-            ))}
+            {(['layout', 'style', 'content'] as const).map((tab) => {
+              const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집' };
+              return (
+                <button
+                  key={tab}
+                  type="button"
+                  className={`${styles.inspectorTab} ${activeTab === tab ? styles.inspectorTabActive : ''}`}
+                  title={tabTitles[tab]}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </button>
+              );
+            })}
           </div>
 
           <section className={styles.panelSection}>
@@ -308,19 +312,19 @@ export default function SandboxInspectorPanel({
               <strong>Stacking actions</strong>
             </header>
             <div className={styles.actionGrid}>
-              <button type="button" className={styles.actionButton} onClick={sendSelectedNodeToBack} disabled={selectedNode.locked}>
+              <button type="button" className={styles.actionButton} title="맨 뒤로 보내기" onClick={sendSelectedNodeToBack} disabled={selectedNode.locked}>
                 Send to back
               </button>
-              <button type="button" className={styles.actionButton} onClick={sendSelectedNodeBackward} disabled={selectedNode.locked}>
+              <button type="button" className={styles.actionButton} title="한 단계 뒤로" onClick={sendSelectedNodeBackward} disabled={selectedNode.locked}>
                 Backward
               </button>
-              <button type="button" className={styles.actionButton} onClick={bringSelectedNodeForward} disabled={selectedNode.locked}>
+              <button type="button" className={styles.actionButton} title="한 단계 앞으로" onClick={bringSelectedNodeForward} disabled={selectedNode.locked}>
                 Forward
               </button>
-              <button type="button" className={styles.actionButton} onClick={bringSelectedNodeToFront} disabled={selectedNode.locked}>
+              <button type="button" className={styles.actionButton} title="맨 앞으로 가져오기" onClick={bringSelectedNodeToFront} disabled={selectedNode.locked}>
                 Bring to front
               </button>
-              <button type="button" className={styles.actionButton} onClick={duplicateSelectedNode} disabled={selectedNode.locked}>
+              <button type="button" className={styles.actionButton} title="선택 노드 복제 (Cmd-D)" onClick={duplicateSelectedNode} disabled={selectedNode.locked}>
                 Duplicate
               </button>
             </div>

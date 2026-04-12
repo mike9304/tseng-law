@@ -27,6 +27,7 @@ export default function SandboxLayersPanel() {
               <button
                 type="button"
                 className={`${styles.layerRow} ${selectedNodeIds.includes(node.id) ? styles.layerRowSelected : ''}`}
+                title={`${node.kind} ${node.id} 선택 (Cmd-click 으로 다중선택)`}
                 onClick={(event) => {
                   if (event.metaKey || event.ctrlKey || event.shiftKey) {
                     toggleNodeSelection(node.id);

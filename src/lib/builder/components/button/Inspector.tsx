@@ -37,6 +37,9 @@ export default function ButtonInspector({
         >
           <option value="primary">Primary</option>
           <option value="secondary">Secondary</option>
+          <option value="outline">Outline</option>
+          <option value="ghost">Ghost</option>
+          <option value="link">Link</option>
         </select>
       </label>
     </>

@@ -13,6 +13,8 @@ export default defineComponent({
     color: '#1f2937',
     fontWeight: 'regular' as const,
     align: 'left' as const,
+    lineHeight: 1.25,
+    letterSpacing: 0,
   },
   defaultStyle: {},
   defaultRect: { width: 200, height: 40 },

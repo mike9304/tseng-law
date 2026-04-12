@@ -19,7 +19,8 @@ export default function TextElement({
               ? 600
               : 400,
         textAlign: node.content.align,
-        lineHeight: 1.25,
+        lineHeight: node.content.lineHeight ?? 1.25,
+        letterSpacing: `${node.content.letterSpacing ?? 0}px`,
         display: 'flex',
         alignItems: 'center',
       }}

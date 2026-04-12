@@ -99,9 +99,12 @@ export default function CanvasNode({
                 event.stopPropagation();
                 onResizeStart(node.id, handle, event);
               }}
-              aria-label={`Resize ${node.kind} node`}
+              aria-label={`Resize ${node.kind} node ${handle}`}
             />
           ))}
+          <div className={styles.nodeSizeLabel} aria-hidden>
+            {Math.round(node.rect.width)} x {Math.round(node.rect.height)}
+          </div>
         </>
       ) : null}
     </div>

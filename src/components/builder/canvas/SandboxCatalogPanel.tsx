@@ -46,6 +46,7 @@ export default function SandboxCatalogPanel() {
           <button
             type="button"
             className={styles.catalogItem}
+            title={`${component.displayName} — 캔버스로 드래그하여 추가`}
             draggable
             onDragStart={(event) => {
               event.dataTransfer.setData('application/x-builder-node-kind', component.kind);
@@ -58,6 +59,7 @@ export default function SandboxCatalogPanel() {
           <button
             type="button"
             className={styles.catalogQuickAdd}
+            title={`${component.displayName} 캔버스 중앙에 추가`}
             onClick={() => {
               addNode(resolveCenteredNode(component.kind as BuilderCanvasNodeKind, nodes.length));
             }}

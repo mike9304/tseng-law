@@ -23,12 +23,13 @@ export default function ImageInspector({
         </button>
       </div>
       <label>
-        <span>Source</span>
+        <span>Source URL</span>
         <input
           type="text"
           value={imageNode.content.src}
           disabled={disabled}
-          readOnly
+          placeholder="https://example.com/image.jpg"
+          onChange={(event) => onUpdate({ src: event.target.value })}
         />
       </label>
       <label>

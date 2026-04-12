@@ -194,35 +194,63 @@ export default function CanvasContainer({
       }
       updateNode(activeInteraction.nodeId, (node) => {
         const { handle } = activeInteraction;
-        const nextRect = { ...activeInteraction.startRect };
-        if (handle === 'e') {
-          nextRect.width = activeInteraction.startRect.width + deltaX;
+        const startRect = activeInteraction.startRect;
+        const nextRect = { ...startRect };
+        const isCorner = handle === 'nw' || handle === 'ne' || handle === 'sw' || handle === 'se';
+
+        if (isCorner) {
+          // Corner handles preserve aspect ratio (P1-03 acceptance)
+          const aspect = startRect.width / startRect.height;
+          // Determine the dominant delta to derive proportional sizing
+          let newWidth: number;
+          let newHeight: number;
+          if (Math.abs(deltaX) * startRect.height >= Math.abs(deltaY) * startRect.width) {
+            // Width-dominant
+            if (handle === 'se' || handle === 'ne') {
+              newWidth = startRect.width + deltaX;
+            } else {
+              newWidth = startRect.width - deltaX;
+            }
+            newHeight = newWidth / aspect;
+          } else {
+            // Height-dominant
+            if (handle === 'se' || handle === 'sw') {
+              newHeight = startRect.height + deltaY;
+            } else {
+              newHeight = startRect.height - deltaY;
+            }
+            newWidth = newHeight * aspect;
+          }
+          nextRect.width = newWidth;
+          nextRect.height = newHeight;
+          // Adjust origin for handles that anchor at right/bottom
+          if (handle === 'nw') {
+            nextRect.x = startRect.x + (startRect.width - newWidth);
+            nextRect.y = startRect.y + (startRect.height - newHeight);
+          } else if (handle === 'ne') {
+            nextRect.y = startRect.y + (startRect.height - newHeight);
+          } else if (handle === 'sw') {
+            nextRect.x = startRect.x + (startRect.width - newWidth);
+          }
+          // 'se' keeps origin unchanged
+        } else {
+          // Edge handles: resize freely along one axis
+          if (handle === 'e') {
+            nextRect.width = startRect.width + deltaX;
+          }
+          if (handle === 'w') {
+            nextRect.x = startRect.x + deltaX;
+            nextRect.width = startRect.width - deltaX;
+          }
+          if (handle === 's') {
+            nextRect.height = startRect.height + deltaY;
+          }
+          if (handle === 'n') {
+            nextRect.y = startRect.y + deltaY;
+            nextRect.height = startRect.height - deltaY;
+          }
         }
-        if (handle === 'w') {
-          nextRect.x = activeInteraction.startRect.x + deltaX;
-          nextRect.width = activeInteraction.startRect.width - deltaX;
-        }
-        if (handle === 's') {
-          nextRect.height = activeInteraction.startRect.height + deltaY;
-        }
-        if (handle === 'n') {
-          nextRect.y = activeInteraction.startRect.y + deltaY;
-          nextRect.height = activeInteraction.startRect.height - deltaY;
-        }
-        if (handle === 'se' || handle === 'ne') {
-          nextRect.width = activeInteraction.startRect.width + deltaX;
-        }
-        if (handle === 'se' || handle === 'sw') {
-          nextRect.height = activeInteraction.startRect.height + deltaY;
-        }
-        if (handle === 'nw' || handle === 'sw') {
-          nextRect.x = activeInteraction.startRect.x + deltaX;
-          nextRect.width = activeInteraction.startRect.width - deltaX;
-        }
-        if (handle === 'nw' || handle === 'ne') {
-          nextRect.y = activeInteraction.startRect.y + deltaY;
-          nextRect.height = activeInteraction.startRect.height - deltaY;
-        }
+
         return {
           ...node,
           rect: clampRect(nextRect),
@@ -326,6 +354,9 @@ export default function CanvasContainer({
       <div
         ref={containerRef}
         className={styles.stage}
+        role="application"
+        aria-label="Canvas editor"
+        aria-roledescription="freeform canvas"
         onPointerDown={(event) => {
           setContextMenu(null);
           if (event.target === event.currentTarget) {
@@ -464,24 +495,28 @@ export default function CanvasContainer({
               {
                 key: 'bring-front',
                 label: 'Bring to front',
+                title: '맨 앞으로 가져오기',
                 disabled: selectedNodeIds.length !== 1 || nodes.find((node) => node.id === contextMenu.nodeId)?.locked,
                 onSelect: bringSelectedNodeToFront,
               },
               {
                 key: 'bring-forward',
                 label: 'Bring forward',
+                title: '한 단계 앞으로',
                 disabled: selectedNodeIds.length !== 1 || nodes.find((node) => node.id === contextMenu.nodeId)?.locked,
                 onSelect: bringSelectedNodeForward,
               },
               {
                 key: 'send-backward',
                 label: 'Send backward',
+                title: '한 단계 뒤로',
                 disabled: selectedNodeIds.length !== 1 || nodes.find((node) => node.id === contextMenu.nodeId)?.locked,
                 onSelect: sendSelectedNodeBackward,
               },
               {
                 key: 'send-back',
                 label: 'Send to back',
+                title: '맨 뒤로 보내기',
                 disabled: selectedNodeIds.length !== 1 || nodes.find((node) => node.id === contextMenu.nodeId)?.locked,
                 onSelect: sendSelectedNodeToBack,
               },
@@ -491,8 +526,8 @@ export default function CanvasContainer({
         ) : null}
         {visibleNodes.length === 0 ? (
           <div className={styles.emptyCanvas}>
-            <strong>Canvas is empty</strong>
-            <span>Drag a text, image, or button node from the catalog to begin.</span>
+            <strong>캔버스가 비어 있습니다</strong>
+            <span>좌측 카탈로그에서 요소를 드래그하여 추가하세요.</span>
           </div>
         ) : null}
 
@@ -500,6 +535,7 @@ export default function CanvasContainer({
           <button
             type="button"
             className={styles.toolbarButton}
+            title="실행 취소 (Cmd-Z)"
             onClick={() => {
               setContextMenu(null);
               undo();
@@ -511,6 +547,7 @@ export default function CanvasContainer({
           <button
             type="button"
             className={styles.toolbarButton}
+            title="다시 실행 (Cmd-Shift-Z)"
             onClick={() => {
               setContextMenu(null);
               redo();

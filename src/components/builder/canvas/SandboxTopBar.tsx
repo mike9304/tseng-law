@@ -39,7 +39,17 @@ export default function SandboxTopBar({
                   ? styles.statusBadgeError
                   : ''
           }`}
+          title={
+            draftSaveState === 'saving'
+              ? '자동 저장 중...'
+              : draftSaveState === 'saved'
+                ? '저장 완료'
+                : draftSaveState === 'error'
+                  ? '저장 실패 — 네트워크를 확인하세요'
+                  : '대기 중'
+          }
         >
+          {draftSaveState === 'saving' ? <span className={styles.savingSpinner} /> : null}
           draft: {draftSaveState}
         </span>
       </div>

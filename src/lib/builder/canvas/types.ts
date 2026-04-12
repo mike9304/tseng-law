@@ -71,6 +71,8 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
     color: z.string().max(32),
     fontWeight: z.enum(['regular', 'medium', 'bold']),
     align: z.enum(['left', 'center', 'right']),
+    lineHeight: z.number().min(0.5).max(4).default(1.25),
+    letterSpacing: z.number().min(-2).max(10).default(0),
   }),
 });
 
@@ -88,7 +90,7 @@ const buttonCanvasNodeSchema = baseCanvasNodeSchema.extend({
   content: z.object({
     label: z.string().max(120),
     href: z.string().max(2000),
-    style: z.enum(['primary', 'secondary']),
+    style: z.enum(['primary', 'secondary', 'outline', 'ghost', 'link']),
   }),
 });
 
@@ -199,6 +201,8 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
           color: '#0f172a',
           fontWeight: 'bold',
           align: 'left',
+          lineHeight: 1.25,
+          letterSpacing: 0,
         },
       },
       {
@@ -218,6 +222,8 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
           color: '#475569',
           fontWeight: 'regular',
           align: 'left',
+          lineHeight: 1.25,
+          letterSpacing: 0,
         },
       },
       {

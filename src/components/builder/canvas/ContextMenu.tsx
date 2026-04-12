@@ -6,6 +6,7 @@ import styles from './SandboxPage.module.css';
 export interface ContextMenuAction {
   key: string;
   label: string;
+  title?: string;
   disabled?: boolean;
   onSelect: () => void;
 }
@@ -63,6 +64,7 @@ export default function ContextMenu({
             type="button"
             role="menuitem"
             className={styles.contextMenuAction}
+            title={action.title}
             disabled={action.disabled}
             onClick={() => {
               if (action.disabled) return;

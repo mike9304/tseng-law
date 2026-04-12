@@ -63,6 +63,31 @@ export default function TextInspector({
           <option value="right">Right</option>
         </select>
       </label>
+      <label>
+        <span>Line height</span>
+        <input
+          type="range"
+          min={0.5}
+          max={4}
+          step={0.05}
+          value={textNode.content.lineHeight ?? 1.25}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ lineHeight: Number(event.target.value) })}
+        />
+        <span>{(textNode.content.lineHeight ?? 1.25).toFixed(2)}</span>
+      </label>
+      <label>
+        <span>Letter spacing</span>
+        <input
+          type="number"
+          min={-2}
+          max={10}
+          step={0.5}
+          value={textNode.content.letterSpacing ?? 0}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ letterSpacing: Number(event.target.value) })}
+        />
+      </label>
     </>
   );
 }

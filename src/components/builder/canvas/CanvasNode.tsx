@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { getComponent } from '@/lib/builder/components/registry';
+import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import InlineTextEditor from './InlineTextEditor';
 import styles from './SandboxPage.module.css';
@@ -39,6 +40,48 @@ export default function CanvasNode({
 }: CanvasNodeProps) {
   const [isEditing, setIsEditing] = useState(false);
   const component = getComponent(node.kind);
+  const nodeRef = useRef<HTMLDivElement>(null);
+  const rotationDrag = useRef<{ startAngle: number; startRotation: number } | null>(null);
+  const updateNode = useBuilderCanvasStore((s) => s.updateNode);
+  const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
+  const commitMutationSession = useBuilderCanvasStore((s) => s.commitMutationSession);
+
+  const handleRotationPointerDown = useCallback(
+    (event: React.PointerEvent<HTMLDivElement>) => {
+      event.stopPropagation();
+      event.preventDefault();
+      const el = nodeRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const startAngle = Math.atan2(event.clientY - centerY, event.clientX - centerX) * (180 / Math.PI);
+      rotationDrag.current = { startAngle, startRotation: node.rotation };
+      el.setPointerCapture(event.pointerId);
+      beginMutationSession();
+
+      const handlePointerMove = (moveEvent: PointerEvent) => {
+        if (!rotationDrag.current) return;
+        const currentAngle = Math.atan2(moveEvent.clientY - centerY, moveEvent.clientX - centerX) * (180 / Math.PI);
+        const rawDegrees = rotationDrag.current.startRotation + (currentAngle - rotationDrag.current.startAngle);
+        const snapped = Math.round(rawDegrees / 15) * 15;
+        const normalized = ((snapped % 360) + 360) % 360;
+        updateNode(node.id, (n) => ({ ...n, rotation: normalized }));
+      };
+
+      const handlePointerUp = (upEvent: PointerEvent) => {
+        rotationDrag.current = null;
+        el.releasePointerCapture(upEvent.pointerId);
+        commitMutationSession();
+        el.removeEventListener('pointermove', handlePointerMove);
+        el.removeEventListener('pointerup', handlePointerUp);
+      };
+
+      el.addEventListener('pointermove', handlePointerMove);
+      el.addEventListener('pointerup', handlePointerUp);
+    },
+    [node.id, node.rotation, beginMutationSession, commitMutationSession, updateNode],
+  );
 
   const handleDoubleClick = useCallback(() => {
     if (node.locked) return;
@@ -78,6 +121,7 @@ export default function CanvasNode({
 
   return (
     <div
+      ref={nodeRef}
       className={`${styles.node} ${selected ? styles.nodeSelected : ''} ${node.locked ? styles.nodeLocked : ''}`}
       style={{
         left: `${node.rect.x}px`,
@@ -132,6 +176,13 @@ export default function CanvasNode({
       </div>
       {selected && !node.locked ? (
         <>
+          <div className={styles.rotationLine} />
+          <div
+            className={styles.rotationHandle}
+            onPointerDown={handleRotationPointerDown}
+            role="button"
+            aria-label={`Rotate ${node.kind} node`}
+          />
           {(['nw', 'n', 'ne', 'e', 'se', 's', 'sw', 'w'] as ResizeHandle[]).map((handle) => (
             <button
               key={handle}

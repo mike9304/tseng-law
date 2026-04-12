@@ -417,6 +417,31 @@
   transform: scale(0.97);
 }
 
+.layerGripHandle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  min-height: 28px;
+  color: #94a3b8;
+  cursor: grab;
+  flex-shrink: 0;
+  touch-action: none;
+  user-select: none;
+}
+
+.layerGripHandle:hover {
+  color: #475569;
+}
+
+.layerDragging {
+  opacity: 0.5;
+}
+
+.layerDragOverlay {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
 .stageSurface {
   min-width: 0;
 }
@@ -764,6 +789,33 @@
 .resizeHandleSW { bottom: -7px; left: -7px; cursor: nesw-resize; }
 .resizeHandleW { top: calc(50% - 7px); left: -7px; cursor: ew-resize; }
 .resizeHandleSE { bottom: -7px; right: -7px; cursor: nwse-resize; }
+
+.rotationHandle {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #116dff;
+  cursor: grab;
+  z-index: 1;
+}
+
+.rotationHandle:active {
+  cursor: grabbing;
+}
+
+.rotationLine {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 1px;
+  height: 20px;
+  background: #116dff;
+  pointer-events: none;
+}
 
 .inspectorPlaceholder {
   top: 1rem;

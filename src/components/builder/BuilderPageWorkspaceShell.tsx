@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import BuilderAdvancedDisclosure from '@/components/builder/BuilderAdvancedDisclosure';
 import BuilderWorkspaceFrame from '@/components/builder/BuilderWorkspaceFrame';
 import { buildBuilderCollectionHref, buildBuilderPageSceneHref } from '@/lib/builder/hrefs';
 import {
@@ -173,15 +174,19 @@ export default function BuilderPageWorkspaceShell({
             )}
           </section>
           <section className="builder-preview-inspector-card">
-            <h2>Scene graph foundation</h2>
-            <ul className="builder-preview-inspector-notes">
-              <li>The canvas-first core will replace the current semantic-section runtime with a real scene graph.</li>
-              <li>
-                <Link href={buildBuilderPageSceneHref(locale, pageKey)} className="builder-link-inline">
-                  Open advanced scene view
-                </Link>
-              </li>
-            </ul>
+            <BuilderAdvancedDisclosure
+              title="Advanced scene diagnostics"
+              summary="Keep the scene graph reachable for structural debugging, not as a primary editing route."
+            >
+              <ul className="builder-preview-inspector-notes">
+                <li>The canvas-first core will replace the current semantic-section runtime with a real scene graph.</li>
+                <li>
+                  <Link href={buildBuilderPageSceneHref(locale, pageKey)} className="builder-link-inline">
+                    Open advanced scene view
+                  </Link>
+                </li>
+              </ul>
+            </BuilderAdvancedDisclosure>
           </section>
         </>
       }

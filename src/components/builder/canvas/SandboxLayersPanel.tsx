@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
+import type { BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
 import styles from './SandboxPage.module.css';
 
 export default function SandboxLayersPanel() {
@@ -58,7 +59,7 @@ export default function SandboxLayersPanel() {
                   <div className={styles.layerRowMain}>
                     <span className={styles.layerRowKind} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
                       <span style={{ width: 14, textAlign: 'center', fontSize: '0.75rem' }}>
-                        {node.kind === 'text' ? 'T' : node.kind === 'heading' ? 'H' : node.kind === 'image' ? '🖼' : node.kind === 'button' ? '▢' : node.kind === 'container' ? '◻' : node.kind === 'section' ? '▬' : node.kind === 'video' ? '▶' : node.kind === 'gallery' ? '⊞' : node.kind === 'icon' ? '★' : node.kind === 'map' ? '📍' : '·'}
+                        {getLayerNodeKindGlyph(node.kind)}
                       </span>
                       {node.kind}
                     </span>
@@ -108,4 +109,23 @@ export default function SandboxLayersPanel() {
       </div>
     </section>
   );
+}
+
+function getLayerNodeKindGlyph(kind: BuilderCanvasNodeKind) {
+  switch (kind) {
+    case 'text':
+      return 'T';
+    case 'heading':
+      return 'H';
+    case 'image':
+      return '🖼';
+    case 'button':
+      return '▢';
+    case 'container':
+      return '◻';
+    case 'section':
+      return '▬';
+    default:
+      return '·';
+  }
 }

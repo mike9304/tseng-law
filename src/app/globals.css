@@ -15971,11 +15971,38 @@ html[lang='zh-Hant'] h3 {
   box-shadow: 0 12px 28px rgba(35, 31, 32, 0.06);
 }
 
+.builder-preview-workspace-bar--embedded {
+  margin-top: 0.9rem;
+  padding: 0.88rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
 .builder-preview-workspace-bar-group {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
+}
+
+.builder-preview-workspace-bar--embedded .builder-preview-workspace-bar-group:first-child {
+  flex: 1 1 320px;
+}
+
+.builder-preview-workspace-bar--embedded .builder-preview-workspace-bar-group:last-child {
+  justify-content: flex-end;
+}
+
+.builder-preview-structure-disclosure {
+  margin-top: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.builder-preview-structure-panel {
+  display: grid;
+  gap: 0.9rem;
 }
 
 .builder-preview-viewport-switch {

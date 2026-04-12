@@ -85,6 +85,7 @@ interface BuilderCanvasStoreState {
   sendSelectedNodeBackward: () => void;
   bringSelectedNodeToFront: () => void;
   sendSelectedNodeToBack: () => void;
+  reorderNodes: (orderedIds: string[]) => void;
 }
 
 function sortNodes(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
@@ -611,6 +612,28 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const document = updateNodes(state.document, (nodes) =>
         reorderNodeSequence(nodes, state.selectedNodeId!, 0));
       return applyCommittedDocument(state, document);
+    }),
+  reorderNodes: (orderedIds) =>
+    set((state) => {
+      if (!state.document) return state;
+      const nodeMap = new Map(state.document.nodes.map((node) => [node.id, node]));
+      const reordered: BuilderCanvasNode[] = [];
+      for (const id of orderedIds) {
+        const node = nodeMap.get(id);
+        if (node) {
+          reordered.push({ ...node, zIndex: reordered.length });
+          nodeMap.delete(id);
+        }
+      }
+      for (const node of nodeMap.values()) {
+        reordered.push({ ...node, zIndex: reordered.length });
+      }
+      const nextDocument: BuilderCanvasDocument = {
+        ...state.document,
+        updatedAt: new Date().toISOString(),
+        nodes: reordered,
+      };
+      return applyCommittedDocument(state, nextDocument);
     }),
 }));
 

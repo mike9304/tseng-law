@@ -3,6 +3,20 @@
 import { create } from 'zustand';
 import { getComponent, listComponents } from '@/lib/builder/components/registry';
 import {
+  alignBottom,
+  alignCenter,
+  alignLeft,
+  alignMiddle,
+  alignRight,
+  alignTop,
+} from '@/lib/builder/canvas/align';
+import {
+  copyNodes,
+  cutNodes,
+  hasClipboard,
+  pasteNodes,
+} from '@/lib/builder/canvas/clipboard';
+import {
   createDefaultCanvasNodeStyle,
   type BuilderCanvasDocument,
   type BuilderCanvasNode,
@@ -19,12 +33,20 @@ import {
 
 type DraftSaveState = 'idle' | 'saving' | 'saved' | 'error';
 type MutationMode = 'commit' | 'transient';
+export type BuilderCanvasAlignmentAction =
+  | 'left'
+  | 'center'
+  | 'right'
+  | 'top'
+  | 'middle'
+  | 'bottom';
 
 interface BuilderCanvasStoreState {
   document: BuilderCanvasDocument | null;
   selectedNodeId: string | null;
   selectedNodeIds: string[];
   draftSaveState: DraftSaveState;
+  clipboardHasContent: boolean;
   history: HistoryState<BuilderCanvasDocument> | null;
   mutationBaseDocument: BuilderCanvasDocument | null;
   canUndo: boolean;
@@ -38,6 +60,11 @@ interface BuilderCanvasStoreState {
   commitMutationSession: () => void;
   undo: () => void;
   redo: () => void;
+  copySelectedNodesToClipboard: () => void;
+  cutSelectedNodesToClipboard: () => void;
+  pasteClipboardNodes: () => void;
+  alignSelectedNodes: (action: BuilderCanvasAlignmentAction) => void;
+  toggleSelectedNodeLock: () => void;
   addNode: (node: BuilderCanvasNode) => void;
   duplicateSelectedNode: () => void;
   updateSelectedNodes: (
@@ -128,6 +155,28 @@ function resolveSelectedNodeIds(
   return [];
 }
 
+function alignNodeRects(
+  action: BuilderCanvasAlignmentAction,
+  nodes: Array<{ id: string; rect: BuilderCanvasNode['rect'] }>,
+) {
+  switch (action) {
+    case 'left':
+      return alignLeft(nodes);
+    case 'center':
+      return alignCenter(nodes);
+    case 'right':
+      return alignRight(nodes);
+    case 'top':
+      return alignTop(nodes);
+    case 'middle':
+      return alignMiddle(nodes);
+    case 'bottom':
+      return alignBottom(nodes);
+    default:
+      return nodes;
+  }
+}
+
 function applyTransientDocument(
   state: BuilderCanvasStoreState,
   document: BuilderCanvasDocument,
@@ -168,6 +217,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   selectedNodeId: null,
   selectedNodeIds: [],
   draftSaveState: 'idle',
+  clipboardHasContent: hasClipboard(),
   history: null,
   mutationBaseDocument: null,
   canUndo: false,
@@ -277,6 +327,109 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         canUndo: result.state.canUndo,
         canRedo: result.state.canRedo,
       };
+    }),
+  copySelectedNodesToClipboard: () =>
+    set((state) => {
+      if (!state.document || state.selectedNodeIds.length === 0) return state;
+      const selectedNodes = state.document.nodes.filter((node) => state.selectedNodeIds.includes(node.id));
+      if (selectedNodes.length === 0) return state;
+      copyNodes(selectedNodes);
+      return {
+        clipboardHasContent: hasClipboard(),
+      };
+    }),
+  cutSelectedNodesToClipboard: () =>
+    set((state) => {
+      if (!state.document || state.selectedNodeIds.length === 0) return state;
+      const selectedNodes = state.document.nodes.filter(
+        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
+      );
+      if (selectedNodes.length === 0) return state;
+      cutNodes(selectedNodes);
+      const selectedNodeIds = new Set(selectedNodes.map((node) => node.id));
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.filter((node) => !selectedNodeIds.has(node.id)));
+      const nextState = applyCommittedDocument(state, document, document.nodes[0]?.id ?? null);
+      if (nextState === state) {
+        return {
+          clipboardHasContent: hasClipboard(),
+        };
+      }
+      return {
+        ...nextState,
+        clipboardHasContent: hasClipboard(),
+      };
+    }),
+  pasteClipboardNodes: () =>
+    set((state) => {
+      if (!state.document) return state;
+      const pastedNodes = pasteNodes(24).map((node, index) => ({
+        ...node,
+        zIndex: state.document!.nodes.length + index,
+      }));
+      if (pastedNodes.length === 0) {
+        return {
+          clipboardHasContent: hasClipboard(),
+        };
+      }
+      const document = updateNodes(state.document, (nodes) => [...nodes, ...pastedNodes]);
+      const nextState = applyCommittedDocument(
+        state,
+        document,
+        pastedNodes[pastedNodes.length - 1]?.id ?? null,
+        pastedNodes.map((node) => node.id),
+      );
+      if (nextState === state) {
+        return {
+          clipboardHasContent: hasClipboard(),
+        };
+      }
+      return {
+        ...nextState,
+        clipboardHasContent: hasClipboard(),
+      };
+    }),
+  alignSelectedNodes: (action) =>
+    set((state) => {
+      if (!state.document || state.selectedNodeIds.length < 2) return state;
+      const targetNodes = state.document.nodes.filter(
+        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
+      );
+      if (targetNodes.length < 2) return state;
+      const nextRects = new Map(
+        alignNodeRects(
+          action,
+          targetNodes.map((node) => ({ id: node.id, rect: node.rect })),
+        ).map((node) => [node.id, node.rect]),
+      );
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => (
+          nextRects.has(node.id)
+            ? {
+                ...node,
+                rect: nextRects.get(node.id)!,
+              }
+            : node
+        )));
+      return applyCommittedDocument(state, document);
+    }),
+  toggleSelectedNodeLock: () =>
+    set((state) => {
+      if (!state.document || state.selectedNodeIds.length === 0) return state;
+      const selectedNodeIds = new Set(state.selectedNodeIds);
+      const selectedNodes = state.document.nodes.filter((node) => selectedNodeIds.has(node.id));
+      if (selectedNodes.length === 0) return state;
+      const shouldLock = selectedNodes.some((node) => !node.locked);
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => (
+          selectedNodeIds.has(node.id)
+            ? {
+                ...node,
+                locked: shouldLock,
+              }
+            : node
+        )));
+      return applyCommittedDocument(state, document);
     }),
   addNode: (node) =>
     set((state) => {

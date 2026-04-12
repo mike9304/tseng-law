@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import CanvasContainer from '@/components/builder/canvas/CanvasContainer';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
@@ -13,6 +13,15 @@ import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
 
 const AUTOSAVE_DEBOUNCE_MS = 1000;
+const TOAST_TTL_MS = 3000;
+
+type ToastTone = 'success' | 'error';
+
+interface SandboxToast {
+  id: string;
+  message: string;
+  tone: ToastTone;
+}
 
 export default function SandboxPage({
   initialDocument,
@@ -35,6 +44,16 @@ export default function SandboxPage({
     updateNodeContent,
   } = useBuilderCanvasStore();
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
+  const [toasts, setToasts] = useState<SandboxToast[]>([]);
+  const previousDraftSaveStateRef = useRef(draftSaveState);
+
+  function pushToast(message: string, tone: ToastTone) {
+    const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    setToasts((currentToasts) => [...currentToasts, { id, message, tone }]);
+    window.setTimeout(() => {
+      setToasts((currentToasts) => currentToasts.filter((toast) => toast.id !== id));
+    }, TOAST_TTL_MS);
+  }
 
   useEffect(() => {
     replaceDocument(initialDocument);
@@ -82,6 +101,19 @@ export default function SandboxPage({
       setAssetLibraryNodeId(null);
     }
   }, [assetLibraryNode?.kind, assetLibraryNodeId]);
+
+  useEffect(() => {
+    const previousState = previousDraftSaveStateRef.current;
+    if (draftSaveState === previousState) return;
+
+    if (draftSaveState === 'saved') {
+      pushToast('Draft saved', 'success');
+    }
+    if (draftSaveState === 'error') {
+      pushToast('Draft save failed', 'error');
+    }
+    previousDraftSaveStateRef.current = draftSaveState;
+  }, [draftSaveState]);
 
   return (
     <main className={styles.shell}>
@@ -156,6 +188,17 @@ export default function SandboxPage({
           }}
         />
       ) : null}
+
+      <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
+        {toasts.map((toast) => (
+          <div
+            key={toast.id}
+            className={`${styles.toast} ${toast.tone === 'error' ? styles.toastError : styles.toastSuccess}`}
+          >
+            {toast.message}
+          </div>
+        ))}
+      </div>
     </main>
   );
 }

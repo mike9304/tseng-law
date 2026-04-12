@@ -104,12 +104,14 @@ export default function SandboxInspectorPanel({
     updateNode,
     updateNodeContent,
     updateNodeStyle,
+    alignSelectedNodes,
     duplicateSelectedNode,
     bringSelectedNodeForward,
     sendSelectedNodeBackward,
     bringSelectedNodeToFront,
     sendSelectedNodeToBack,
   } = useBuilderCanvasStore();
+  const [open, setOpen] = useState(true);
   const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content'>('layout');
   const selectedNode = useMemo(
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
@@ -127,215 +129,245 @@ export default function SandboxInspectorPanel({
   return (
     <aside className={styles.inspectorPlaceholder}>
       <header className={styles.panelSectionHeader}>
-        <span>Inspector</span>
-        <strong>{singleSelection ? `${selectedNode.kind} · inspector` : 'Phase 3 shell'}</strong>
+        <div>
+          <span>Inspector</span>
+          <strong>{singleSelection ? `${selectedNode.kind} · inspector` : 'Phase 3 shell'}</strong>
+        </div>
+        <button
+          type="button"
+          className={styles.panelHeaderButton}
+          title={open ? '인스펙터 접기' : '인스펙터 열기'}
+          onClick={() => setOpen((current) => !current)}
+        >
+          {open ? 'Hide' : 'Show'}
+        </button>
       </header>
 
-      {selectedNodeIds.length > 1 ? (
-        <>
-          <p className={styles.inspectorEmpty}>
-            {selectedNodeIds.length}개 node 가 선택됐습니다. 현재는 batch duplicate, group move,
-            group delete, group nudge 만 지원하고 layout editing/z-order 는 단일 선택에서만 허용합니다.
-          </p>
-          <section className={styles.panelSection}>
-            <header className={styles.panelSectionHeader}>
-              <span>Batch actions</span>
-              <strong>Multi-select</strong>
-            </header>
-            <div className={styles.actionGrid}>
-              <button type="button" className={styles.actionButton} title="선택된 노드 모두 복제" onClick={duplicateSelectedNode}>
-                Duplicate selection
-              </button>
-            </div>
-          </section>
-        </>
-      ) : selectedNode ? (
-        <>
-          <div className={styles.inspectorTabRow}>
-            {(['layout', 'style', 'content'] as const).map((tab) => {
-              const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집' };
-              return (
-                <button
-                  key={tab}
-                  type="button"
-                  className={`${styles.inspectorTab} ${activeTab === tab ? styles.inspectorTabActive : ''}`}
-                  title={tabTitles[tab]}
-                  onClick={() => setActiveTab(tab)}
-                >
-                  {tab}
+      <div className={`${styles.panelBody} ${!open ? styles.panelBodyCollapsed : ''}`}>
+        {selectedNodeIds.length > 1 ? (
+          <>
+            <p className={styles.inspectorEmpty}>
+              {selectedNodeIds.length}개 node 가 선택됐습니다. batch duplicate 와 정렬 툴바를 지원합니다.
+            </p>
+            <section className={styles.panelSection}>
+              <header className={styles.panelSectionHeader}>
+                <span>Batch actions</span>
+                <strong>Multi-select</strong>
+              </header>
+              <div className={styles.actionGrid}>
+                <button type="button" className={styles.actionButton} title="선택된 노드 모두 복제" onClick={duplicateSelectedNode}>
+                  Duplicate selection
                 </button>
-              );
-            })}
-          </div>
+              </div>
+              <div className={styles.alignToolbar}>
+                <button type="button" className={styles.toolbarButton} title="왼쪽 정렬" onClick={() => alignSelectedNodes('left')}>
+                  Left
+                </button>
+                <button type="button" className={styles.toolbarButton} title="가운데 정렬" onClick={() => alignSelectedNodes('center')}>
+                  Center
+                </button>
+                <button type="button" className={styles.toolbarButton} title="오른쪽 정렬" onClick={() => alignSelectedNodes('right')}>
+                  Right
+                </button>
+                <button type="button" className={styles.toolbarButton} title="상단 정렬" onClick={() => alignSelectedNodes('top')}>
+                  Top
+                </button>
+                <button type="button" className={styles.toolbarButton} title="중앙 정렬" onClick={() => alignSelectedNodes('middle')}>
+                  Middle
+                </button>
+                <button type="button" className={styles.toolbarButton} title="하단 정렬" onClick={() => alignSelectedNodes('bottom')}>
+                  Bottom
+                </button>
+              </div>
+            </section>
+          </>
+        ) : selectedNode ? (
+          <>
+            <div className={styles.inspectorTabRow}>
+              {(['layout', 'style', 'content'] as const).map((tab) => {
+                const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집' };
+                return (
+                  <button
+                    key={tab}
+                    type="button"
+                    className={`${styles.inspectorTab} ${activeTab === tab ? styles.inspectorTabActive : ''}`}
+                    title={tabTitles[tab]}
+                    onClick={() => setActiveTab(tab)}
+                  >
+                    {tab}
+                  </button>
+                );
+              })}
+            </div>
 
-          <section className={styles.panelSection}>
-            <header className={styles.panelSectionHeader}>
-              <span>{activeTab}</span>
-              <strong>{selectedNode.kind} · {selectedNode.id}</strong>
-            </header>
-            {activeTab === 'layout' ? (
-              <>
-                <div className={styles.inspectorFieldGrid}>
-                  <LayoutField
-                    label="X"
-                    value={selectedNode.rect.x}
-                    onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'x', nextValue))}
-                    disabled={selectedNode.locked}
-                  />
-                  <LayoutField
-                    label="Y"
-                    value={selectedNode.rect.y}
-                    onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'y', nextValue))}
-                    disabled={selectedNode.locked}
-                  />
-                  <LayoutField
-                    label="Width"
-                    value={selectedNode.rect.width}
-                    min={MIN_WIDTH}
-                    onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'width', nextValue))}
-                    disabled={selectedNode.locked}
-                  />
-                  <LayoutField
-                    label="Height"
-                    value={selectedNode.rect.height}
-                    min={MIN_HEIGHT}
-                    onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'height', nextValue))}
-                    disabled={selectedNode.locked}
-                  />
-                </div>
-
-                <div className={styles.inspectorField}>
-                  <span className={styles.inspectorFieldLabel}>Rotation</span>
-                  <div className={styles.inspectorRangeRow}>
-                    <input
-                      className={styles.inspectorRange}
-                      type="range"
-                      min={0}
-                      max={360}
-                      step={1}
-                      value={selectedNode.rotation}
+            <section className={styles.panelSection}>
+              <header className={styles.panelSectionHeader}>
+                <span>{activeTab}</span>
+                <strong>{selectedNode.kind} · {selectedNode.id}</strong>
+              </header>
+              {activeTab === 'layout' ? (
+                <>
+                  <div className={styles.inspectorFieldGrid}>
+                    <LayoutField
+                      label="X"
+                      value={selectedNode.rect.x}
+                      onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'x', nextValue))}
                       disabled={selectedNode.locked}
-                      onChange={(event) => {
-                        updateNode(selectedNode.id, (node) => ({
-                          ...node,
-                          rotation: clampNumber(Math.round(Number(event.target.value)), 0, 360),
-                        }));
-                      }}
                     />
-                    <input
-                      className={styles.inspectorInput}
-                      type="number"
-                      min={0}
-                      max={360}
-                      step={1}
-                      value={selectedNode.rotation}
+                    <LayoutField
+                      label="Y"
+                      value={selectedNode.rect.y}
+                      onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'y', nextValue))}
                       disabled={selectedNode.locked}
-                      onChange={(event) => {
-                        const parsed = parseNumberInput(event.target.value);
-                        if (parsed === null) return;
-                        updateNode(selectedNode.id, (node) => ({
-                          ...node,
-                          rotation: clampNumber(Math.round(parsed), 0, 360),
-                        }));
-                      }}
+                    />
+                    <LayoutField
+                      label="Width"
+                      value={selectedNode.rect.width}
+                      min={MIN_WIDTH}
+                      onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'width', nextValue))}
+                      disabled={selectedNode.locked}
+                    />
+                    <LayoutField
+                      label="Height"
+                      value={selectedNode.rect.height}
+                      min={MIN_HEIGHT}
+                      onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'height', nextValue))}
+                      disabled={selectedNode.locked}
                     />
                   </div>
-                </div>
 
-                <div className={styles.inspectorToggleList}>
-                  <label className={styles.inspectorToggle}>
-                    <input
-                      type="checkbox"
-                      checked={selectedNode.locked}
-                      onChange={(event) => {
-                        updateNode(selectedNode.id, (node) => ({
-                          ...node,
-                          locked: event.target.checked,
-                        }));
-                      }}
-                    />
-                    <span>Lock node</span>
-                  </label>
-                  <label className={styles.inspectorToggle}>
-                    <input
-                      type="checkbox"
-                      checked={!selectedNode.visible}
-                      onChange={(event) => {
-                        updateNode(selectedNode.id, (node) => ({
-                          ...node,
-                          visible: !event.target.checked,
-                        }));
-                      }}
-                    />
-                    <span>Hide on canvas</span>
-                  </label>
-                </div>
-              </>
-            ) : null}
+                  <div className={styles.inspectorField}>
+                    <span className={styles.inspectorFieldLabel}>Rotation</span>
+                    <div className={styles.inspectorRangeRow}>
+                      <input
+                        className={styles.inspectorRange}
+                        type="range"
+                        min={0}
+                        max={360}
+                        step={1}
+                        value={selectedNode.rotation}
+                        disabled={selectedNode.locked}
+                        onChange={(event) => {
+                          updateNode(selectedNode.id, (node) => ({
+                            ...node,
+                            rotation: clampNumber(Math.round(Number(event.target.value)), 0, 360),
+                          }));
+                        }}
+                      />
+                      <input
+                        className={styles.inspectorInput}
+                        type="number"
+                        min={0}
+                        max={360}
+                        step={1}
+                        value={selectedNode.rotation}
+                        disabled={selectedNode.locked}
+                        onChange={(event) => {
+                          const parsed = parseNumberInput(event.target.value);
+                          if (parsed === null) return;
+                          updateNode(selectedNode.id, (node) => ({
+                            ...node,
+                            rotation: clampNumber(Math.round(parsed), 0, 360),
+                          }));
+                        }}
+                      />
+                    </div>
+                  </div>
 
-            {activeTab === 'style' ? (
-              <StyleTab
-                node={selectedNode}
-                disabled={selectedNode.locked}
-                onUpdateStyle={(style) => updateNodeStyle(selectedNode.id, style)}
-              />
-            ) : null}
+                  <div className={styles.inspectorToggleList}>
+                    <label className={styles.inspectorToggle}>
+                      <input
+                        type="checkbox"
+                        checked={selectedNode.locked}
+                        onChange={(event) => {
+                          updateNode(selectedNode.id, (node) => ({
+                            ...node,
+                            locked: event.target.checked,
+                          }));
+                        }}
+                      />
+                      <span>Lock node</span>
+                    </label>
+                    <label className={styles.inspectorToggle}>
+                      <input
+                        type="checkbox"
+                        checked={!selectedNode.visible}
+                        onChange={(event) => {
+                          updateNode(selectedNode.id, (node) => ({
+                            ...node,
+                            visible: !event.target.checked,
+                          }));
+                        }}
+                      />
+                      <span>Hide on canvas</span>
+                    </label>
+                  </div>
+                </>
+              ) : null}
 
-            {activeTab === 'content' ? (
-              <ContentTab
-                node={selectedNode}
-                disabled={selectedNode.locked}
-                onUpdateContent={(content) => updateNodeContent(selectedNode.id, content)}
-                onRequestAssetLibrary={
-                  selectedNode.kind === 'image'
-                    ? onRequestAssetLibrary
-                    : undefined
-                }
-              />
-            ) : null}
+              {activeTab === 'style' ? (
+                <StyleTab
+                  node={selectedNode}
+                  disabled={selectedNode.locked}
+                  onUpdateStyle={(style) => updateNodeStyle(selectedNode.id, style)}
+                />
+              ) : null}
 
-            {!selectedNode.visible ? (
-              <p className={styles.inspectorHint}>
-                이 node 는 현재 canvas 에 숨겨져 있습니다. layers 나 inspector 에서 다시 표시할 수 있습니다.
-              </p>
-            ) : null}
-            {selectedNode.locked ? (
-              <p className={styles.inspectorHint}>
-                locked 상태에서는 drag, resize, nudge, delete, z-order 가 막힙니다. inspector 에서만 unlock 가능합니다.
-              </p>
-            ) : null}
-          </section>
+              {activeTab === 'content' ? (
+                <ContentTab
+                  node={selectedNode}
+                  disabled={selectedNode.locked}
+                  onUpdateContent={(content) => updateNodeContent(selectedNode.id, content)}
+                  onRequestAssetLibrary={
+                    selectedNode.kind === 'image'
+                      ? onRequestAssetLibrary
+                      : undefined
+                  }
+                />
+              ) : null}
 
-          <section className={styles.panelSection}>
-            <header className={styles.panelSectionHeader}>
-              <span>Z-order</span>
-              <strong>Stacking actions</strong>
-            </header>
-            <div className={styles.actionGrid}>
-              <button type="button" className={styles.actionButton} title="맨 뒤로 보내기" onClick={sendSelectedNodeToBack} disabled={selectedNode.locked}>
-                Send to back
-              </button>
-              <button type="button" className={styles.actionButton} title="한 단계 뒤로" onClick={sendSelectedNodeBackward} disabled={selectedNode.locked}>
-                Backward
-              </button>
-              <button type="button" className={styles.actionButton} title="한 단계 앞으로" onClick={bringSelectedNodeForward} disabled={selectedNode.locked}>
-                Forward
-              </button>
-              <button type="button" className={styles.actionButton} title="맨 앞으로 가져오기" onClick={bringSelectedNodeToFront} disabled={selectedNode.locked}>
-                Bring to front
-              </button>
-              <button type="button" className={styles.actionButton} title="선택 노드 복제 (Cmd-D)" onClick={duplicateSelectedNode} disabled={selectedNode.locked}>
-                Duplicate
-              </button>
-            </div>
-          </section>
-        </>
-      ) : (
-        <p className={styles.inspectorEmpty}>
-          캔버스나 layers 에서 node 를 선택하면 layout 값과 lock/hidden 토글이 여기 표시됩니다.
-        </p>
-      )}
+              {!selectedNode.visible ? (
+                <p className={styles.inspectorHint}>
+                  이 node 는 현재 canvas 에 숨겨져 있습니다. layers 나 inspector 에서 다시 표시할 수 있습니다.
+                </p>
+              ) : null}
+              {selectedNode.locked ? (
+                <p className={styles.inspectorHint}>
+                  locked 상태에서는 drag, resize, nudge, delete, z-order 가 막힙니다. inspector 에서만 unlock 가능합니다.
+                </p>
+              ) : null}
+            </section>
 
+            <section className={styles.panelSection}>
+              <header className={styles.panelSectionHeader}>
+                <span>Z-order</span>
+                <strong>Stacking actions</strong>
+              </header>
+              <div className={styles.actionGrid}>
+                <button type="button" className={styles.actionButton} title="맨 뒤로 보내기" onClick={sendSelectedNodeToBack} disabled={selectedNode.locked}>
+                  Send to back
+                </button>
+                <button type="button" className={styles.actionButton} title="한 단계 뒤로" onClick={sendSelectedNodeBackward} disabled={selectedNode.locked}>
+                  Backward
+                </button>
+                <button type="button" className={styles.actionButton} title="한 단계 앞으로" onClick={bringSelectedNodeForward} disabled={selectedNode.locked}>
+                  Forward
+                </button>
+                <button type="button" className={styles.actionButton} title="맨 앞으로 가져오기" onClick={bringSelectedNodeToFront} disabled={selectedNode.locked}>
+                  Bring to front
+                </button>
+                <button type="button" className={styles.actionButton} title="선택 노드 복제 (Cmd-D)" onClick={duplicateSelectedNode} disabled={selectedNode.locked}>
+                  Duplicate
+                </button>
+              </div>
+            </section>
+          </>
+        ) : (
+          <p className={styles.inspectorEmpty}>
+            캔버스나 layers 에서 node 를 선택하면 layout 값과 lock/hidden 토글이 여기 표시됩니다.
+          </p>
+        )}
+      </div>
     </aside>
   );
 }

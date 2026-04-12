@@ -196,3 +196,34 @@
   pointer-events: none;
   height: 0;
 }
+
+/* Frontmatter panel (right side) */
+.column-frontmatter-panel {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.column-frontmatter-panel h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.column-frontmatter-panel select {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  background: #fff;
+}
+
+.column-frontmatter-panel select:focus {
+  outline: none;
+  border-color: #123b63;
+  box-shadow: 0 0 0 2px rgba(18, 59, 99, 0.1);
+}

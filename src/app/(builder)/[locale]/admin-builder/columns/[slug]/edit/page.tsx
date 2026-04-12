@@ -3,6 +3,8 @@ import type { Locale } from '@/lib/locales';
 import { normalizeLocale } from '@/lib/locales';
 import { readColumnVariant } from '@/lib/builder/columns/storage';
 import ColumnEditor from '@/components/builder/columns/ColumnEditor';
+import ColumnFrontmatterPanel from '@/components/builder/columns/ColumnFrontmatterPanel';
+import ColumnLocaleLinker from '@/components/builder/columns/ColumnLocaleLinker';
 
 export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
@@ -33,17 +35,36 @@ export default async function ColumnEditPage({
   }
 
   return (
-    <main style={{ maxWidth: 900, margin: '0 auto', padding: '1rem' }}>
-      <ColumnEditor
-        slug={slug}
-        locale={locale}
-        initialContent={{
-          title: draft.title,
-          summary: draft.summary,
-          bodyHtml: draft.bodyHtml,
-          bodyMarkdown: draft.bodyMarkdown,
-        }}
-      />
+    <main style={{ display: 'flex', gap: '2rem', maxWidth: 1200, margin: '0 auto', padding: '1rem' }}>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <ColumnEditor
+          slug={slug}
+          locale={locale}
+          initialContent={{
+            title: draft.title,
+            summary: draft.summary,
+            bodyHtml: draft.bodyHtml,
+            bodyMarkdown: draft.bodyMarkdown,
+          }}
+        />
+      </div>
+      <div style={{ width: 280, flexShrink: 0 }}>
+        <ColumnFrontmatterPanel
+          slug={slug}
+          locale={locale}
+          initial={{
+            lastmod: draft.frontmatter.lastmod,
+            attorneyReviewStatus: draft.frontmatter.attorneyReviewStatus,
+            freshness: draft.frontmatter.freshness,
+            category: draft.frontmatter.category || 'legal',
+          }}
+        />
+        <ColumnLocaleLinker
+          slug={slug}
+          locale={locale}
+          linkedSlugs={draft.linkedSlugs || {}}
+        />
+      </div>
     </main>
   );
 }

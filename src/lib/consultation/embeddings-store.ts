@@ -1,5 +1,6 @@
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
+import { get, put } from '@vercel/blob';
 import type { Locale } from '@/lib/locales';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 
@@ -28,13 +29,33 @@ export const EMBEDDING_DIM = 1536;
 /** OpenAI embedding model id. Keep in sync with build-embeddings.ts. */
 export const EMBEDDING_MODEL = 'text-embedding-3-small';
 
-/** Absolute path of the pre-computed embeddings file. */
+/** Absolute path of the pre-computed embeddings file (file backend). */
 const EMBEDDINGS_FILE = path.join(
   process.cwd(),
   'src',
   'content',
   'column-embeddings.json',
 );
+
+/** Vercel Blob path for the same payload (Blob backend, S0-09). */
+const EMBEDDINGS_BLOB_PATHNAME = 'consultation-embeddings/column-embeddings.json';
+
+/**
+ * Backend selector — mirrors the Wave 5b log-storage and the Sprint 0
+ * columns-blob-reader patterns. Blob whenever the token is set, file
+ * otherwise (CI / local without token / `CONSULTATION_LOG_BACKEND=local`).
+ */
+function isBlobBackend(): boolean {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
+  if (process.env.CONSULTATION_LOG_BACKEND === 'local') return false;
+  return true;
+}
+
+function isBlobNotFoundError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  const m = error.message.toLowerCase();
+  return m.includes('not found') || m.includes('404') || m.includes('no such');
+}
 
 export interface StoredColumnEmbedding {
   slug: string;
@@ -57,34 +78,76 @@ export interface ColumnEmbeddingsFile {
 /** In-memory cache of the loaded embeddings. */
 let cachedStore: ColumnEmbeddingsFile | null = null;
 
+function isValidEmbeddingsPayload(parsed: unknown): parsed is ColumnEmbeddingsFile {
+  if (!parsed || typeof parsed !== 'object') return false;
+  const p = parsed as Partial<ColumnEmbeddingsFile>;
+  return (
+    p.version === 1
+    && Array.isArray(p.embeddings)
+    && typeof p.dim === 'number'
+  );
+}
+
+async function loadFromBlob(): Promise<ColumnEmbeddingsFile | null> {
+  try {
+    const result = await get(EMBEDDINGS_BLOB_PATHNAME, {
+      access: 'private',
+      useCache: false,
+    });
+    if (!result || result.statusCode !== 200 || !result.stream) return null;
+    const text = await new Response(result.stream).text();
+    const parsed = JSON.parse(text) as unknown;
+    if (!isValidEmbeddingsPayload(parsed)) {
+      console.error('[embeddings] invalid blob payload shape');
+      return null;
+    }
+    return parsed;
+  } catch (error) {
+    if (isBlobNotFoundError(error)) return null;
+    console.error('[embeddings] blob load failed:', error);
+    return null;
+  }
+}
+
+async function loadFromFile(): Promise<ColumnEmbeddingsFile | null> {
+  try {
+    const raw = await readFile(EMBEDDINGS_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as unknown;
+    if (!isValidEmbeddingsPayload(parsed)) {
+      console.error('[embeddings] invalid file payload shape');
+      return null;
+    }
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
 /**
- * Load the stored embeddings file from disk. Returns null (not throw)
- * when the file does not exist — the calling code should fall back to
- * the static category-to-column mapping instead of crashing.
+ * Load the stored embeddings. Returns null (not throw) when no source
+ * has the file — the calling code should fall back to the static
+ * category-to-column mapping instead of crashing.
+ *
+ * S0-09: when Blob backend is enabled, try Blob first then fall back
+ * to the on-disk copy. The disk copy is committed to git so it acts
+ * as a build-time seed; Blob is the runtime mutable surface.
  */
 export async function loadColumnEmbeddings(): Promise<ColumnEmbeddingsFile | null> {
   if (cachedStore) return cachedStore;
-  try {
-    const raw = await readFile(EMBEDDINGS_FILE, 'utf8');
-    const parsed = JSON.parse(raw) as ColumnEmbeddingsFile;
-    if (
-      parsed &&
-      parsed.version === 1 &&
-      Array.isArray(parsed.embeddings) &&
-      typeof parsed.dim === 'number'
-    ) {
-      cachedStore = parsed;
-      return parsed;
+  if (isBlobBackend()) {
+    const fromBlob = await loadFromBlob();
+    if (fromBlob) {
+      cachedStore = fromBlob;
+      return fromBlob;
     }
-    console.error('[embeddings] invalid embeddings file shape');
-    return null;
-  } catch (error) {
-    const code = (error as NodeJS.ErrnoException)?.code;
-    if (code !== 'ENOENT') {
-      console.error('[embeddings] failed to read embeddings file:', error);
-    }
-    return null;
+    // Blob empty (e.g. fresh deploy, no rebuild yet) → fall through to file seed.
   }
+  const fromFile = await loadFromFile();
+  if (fromFile) {
+    cachedStore = fromFile;
+    return fromFile;
+  }
+  return null;
 }
 
 /** Reset the module-level cache. Useful for tests or re-building at runtime. */
@@ -303,14 +366,43 @@ export async function buildColumnEmbeddingsFile(): Promise<{
     embeddings,
   };
 
-  await mkdir(path.dirname(EMBEDDINGS_FILE), { recursive: true });
-  await writeFile(EMBEDDINGS_FILE, JSON.stringify(payload), { encoding: 'utf8' });
+  // S0-09 — write to whichever backend is active. Blob in production
+  // (Vercel function filesystem is read-only outside /tmp); file in
+  // local dev so the committed seed at src/content/column-embeddings.json
+  // stays in sync with what just got rebuilt.
+  let outputPath = EMBEDDINGS_FILE;
+  if (isBlobBackend()) {
+    try {
+      await put(EMBEDDINGS_BLOB_PATHNAME, JSON.stringify(payload), {
+        access: 'private',
+        allowOverwrite: true,
+        contentType: 'application/json',
+      });
+      outputPath = `blob://${EMBEDDINGS_BLOB_PATHNAME}`;
+    } catch (error) {
+      // Blob write failed (network/auth) — fall through to disk write
+      // so dev workflow still works. Production will surface this in
+      // the function log.
+      console.error('[embeddings] blob write failed, falling back to disk:', error);
+    }
+  }
+  // Always also try the disk write — best-effort, ignore EROFS in prod
+  // because the Blob copy is the canonical one when it succeeded.
+  try {
+    await mkdir(path.dirname(EMBEDDINGS_FILE), { recursive: true });
+    await writeFile(EMBEDDINGS_FILE, JSON.stringify(payload), { encoding: 'utf8' });
+  } catch (error) {
+    const code = (error as NodeJS.ErrnoException)?.code;
+    if (code !== 'EROFS' && code !== 'EACCES') {
+      console.error('[embeddings] disk write failed:', error);
+    }
+  }
   invalidateEmbeddingsCache();
 
   return {
     total,
     written: embeddings.length,
     skipped,
-    outputPath: EMBEDDINGS_FILE,
+    outputPath,
   };
 }

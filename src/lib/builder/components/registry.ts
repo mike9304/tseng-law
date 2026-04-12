@@ -22,3 +22,18 @@ import './button';
 import './heading';
 import './container';
 import './section';
+
+// Phase 7 components
+import './gallery';
+import './video';
+import './map';
+import './customEmbed';
+import './icon';
+import './spacer';
+import './divider';
+import './columnCard';
+import './columnList';
+import './attorneyCard';
+import './faqList';
+import './contactForm';
+import './ctaBanner';

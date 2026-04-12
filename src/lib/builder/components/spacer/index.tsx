@@ -1,18 +1,32 @@
 import { defineComponent } from '../define';
 
+interface SpacerContent {
+  height: number;
+}
+
+function SpacerRender({ node }: { node: { content: SpacerContent } }) {
+  const { height = 40 } = node.content;
+
+  return (
+    <div
+      style={{
+        width: '100%',
+        height,
+        backgroundColor: 'transparent',
+      }}
+    />
+  );
+}
+
 export default defineComponent({
   kind: 'spacer',
   displayName: 'spacer',
   category: 'advanced',
   icon: '◻',
-  defaultContent: {},
+  defaultContent: {
+    height: 40,
+  },
   defaultStyle: {},
   defaultRect: { width: 300, height: 40 },
-  Render: function spacerPlaceholder() {
-    return (
-      <div style={{ border: '2px dashed #d1d5db', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', color: '#9ca3af', fontSize: '0.85rem' }}>
-        spacer (Phase 7)
-      </div>
-    );
-  },
+  Render: SpacerRender,
 });

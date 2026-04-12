@@ -1,18 +1,110 @@
 import { defineComponent } from '../define';
 
+interface CtaBannerContent {
+  title: string;
+  description: string;
+  buttonLabel: string;
+  buttonHref: string;
+  backgroundColor: string;
+}
+
+function CtaBannerRender({ node }: { node: { content: CtaBannerContent } }) {
+  const {
+    title = '',
+    description = '',
+    buttonLabel = '',
+    buttonHref = '#',
+    backgroundColor = '#0b3b2e',
+  } = node.content;
+
+  if (!title && !description && !buttonLabel) {
+    return (
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          background: '#f1f5f9',
+          border: '2px dashed #cbd5e1',
+          borderRadius: 8,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: '#94a3b8',
+          fontSize: 13,
+        }}
+      >
+        CTA Banner
+      </div>
+    );
+  }
+
+  // Determine text color based on background luminance
+  const isLight = backgroundColor.toLowerCase() === '#ffffff' || backgroundColor.toLowerCase() === 'white' || backgroundColor === 'transparent';
+  const textColor = isLight ? '#0f172a' : '#ffffff';
+  const btnBg = isLight ? '#0b3b2e' : '#ffffff';
+  const btnColor = isLight ? '#ffffff' : '#0f172a';
+
+  return (
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        background: backgroundColor,
+        borderRadius: 8,
+        padding: '32px 40px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 16,
+        textAlign: 'center',
+      }}
+    >
+      {title && (
+        <h2 style={{ margin: 0, fontSize: 24, fontWeight: 700, color: textColor, lineHeight: 1.3 }}>
+          {title}
+        </h2>
+      )}
+      {description && (
+        <p style={{ margin: 0, fontSize: 16, color: textColor, opacity: 0.85, lineHeight: 1.5, maxWidth: 540 }}>
+          {description}
+        </p>
+      )}
+      {buttonLabel && (
+        <a
+          href={buttonHref}
+          style={{
+            display: 'inline-block',
+            padding: '12px 28px',
+            fontSize: 15,
+            fontWeight: 600,
+            color: btnColor,
+            background: btnBg,
+            borderRadius: 6,
+            textDecoration: 'none',
+            marginTop: 4,
+          }}
+        >
+          {buttonLabel}
+        </a>
+      )}
+    </div>
+  );
+}
+
 export default defineComponent({
   kind: 'ctaBanner',
   displayName: 'ctaBanner',
   category: 'domain',
   icon: '◻',
-  defaultContent: {},
+  defaultContent: {
+    title: '',
+    description: '',
+    buttonLabel: '',
+    buttonHref: '#',
+    backgroundColor: '#0b3b2e',
+  },
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },
-  Render: function ctaBannerPlaceholder() {
-    return (
-      <div style={{ border: '2px dashed #d1d5db', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', color: '#9ca3af', fontSize: '0.85rem' }}>
-        ctaBanner (Phase 7)
-      </div>
-    );
-  },
+  Render: CtaBannerRender,
 });

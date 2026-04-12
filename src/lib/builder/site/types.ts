@@ -10,24 +10,29 @@
 import type { Locale } from '@/lib/locales';
 // BuilderCanvasDocument used by persistence.ts, not directly here
 
+// P4-17: nav label 은 locale 별 다국어 지원
 export interface BuilderNavItem {
   id: string;
-  label: string;
+  label: string | Record<Locale, string>;
   pageId: string;
   href: string;
   children?: BuilderNavItem[];
 }
 
+// P4-15: linkedPageIds 로 다국어 페이지 연결
 export interface BuilderPageMeta {
   pageId: string;
   slug: string;
   title: Record<Locale, string>;
   locale: Locale;
+  linkedPageIds?: Partial<Record<Locale, string>>;
   seo?: BuilderSeoMetadata;
   createdAt: string;
   updatedAt: string;
   publishedAt?: string;
   isHomePage?: boolean;
+  noIndex?: boolean;
+  password?: string;
 }
 
 export interface BuilderSeoMetadata {
@@ -59,13 +64,34 @@ export interface BuilderTheme {
   };
 }
 
+// P4-18: locale 별 Header/Footer 캔버스 ID
+export interface BuilderHeaderFooterConfig {
+  headerCanvasId?: string | Partial<Record<Locale, string>>;
+  footerCanvasId?: string | Partial<Record<Locale, string>>;
+}
+
+// P4-19: Favicon + 사이트 기본 정보
+export interface BuilderSiteSettings {
+  favicon?: string;
+  logo?: string;
+  firmName?: string;
+  phone?: string;
+  email?: string;
+  address?: string;
+  businessHours?: string;
+  businessRegNumber?: string;
+}
+
 export interface BuilderSiteDocument {
   version: 1;
   siteId: string;
   name: string;
   locale: Locale;
+  locales?: Locale[];
   navigation: BuilderNavItem[];
   theme: BuilderTheme;
+  headerFooter?: BuilderHeaderFooterConfig;
+  settings?: BuilderSiteSettings;
   pages: BuilderPageMeta[];
   createdAt: string;
   updatedAt: string;

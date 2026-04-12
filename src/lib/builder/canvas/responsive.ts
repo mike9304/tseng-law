@@ -19,6 +19,40 @@ import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 
 export type Viewport = 'desktop' | 'tablet' | 'mobile';
 
+// P5-10 (RSP-04): Responsive behavior presets
+export type ResponsiveBehavior = 'fixed' | 'stretch' | 'hug' | 'scale' | 'relative';
+
+export interface ResponsiveBehaviorConfig {
+  horizontal: ResponsiveBehavior;
+  vertical: ResponsiveBehavior;
+}
+
+export const DEFAULT_RESPONSIVE_BEHAVIOR: ResponsiveBehaviorConfig = {
+  horizontal: 'fixed',
+  vertical: 'fixed',
+};
+
+export function behaviorToCSS(
+  behavior: ResponsiveBehaviorConfig,
+  parentWidth: number,
+  /* parentHeight - reserved for vertical behavior */
+): Record<string, string> {
+  const css: Record<string, string> = {};
+  switch (behavior.horizontal) {
+    case 'stretch': css.width = '100%'; break;
+    case 'hug': css.width = 'fit-content'; break;
+    case 'scale': css.width = `${(100 * parentWidth) / 1280}%`; break;
+    case 'relative': css.width = '50%'; break;
+    default: break; // fixed = pixel value from rect
+  }
+  switch (behavior.vertical) {
+    case 'stretch': css.height = '100%'; break;
+    case 'hug': css.height = 'fit-content'; break;
+    default: break;
+  }
+  return css;
+}
+
 export const VIEWPORT_WIDTHS: Record<Viewport, number> = {
   desktop: 1280,
   tablet: 768,

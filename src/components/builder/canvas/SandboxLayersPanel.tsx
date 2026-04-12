@@ -56,7 +56,12 @@ export default function SandboxLayersPanel() {
                   }}
                 >
                   <div className={styles.layerRowMain}>
-                    <span className={styles.layerRowKind}>{node.kind}</span>
+                    <span className={styles.layerRowKind} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                      <span style={{ width: 14, textAlign: 'center', fontSize: '0.75rem' }}>
+                        {node.kind === 'text' ? 'T' : node.kind === 'heading' ? 'H' : node.kind === 'image' ? '🖼' : node.kind === 'button' ? '▢' : node.kind === 'container' ? '◻' : node.kind === 'section' ? '▬' : node.kind === 'video' ? '▶' : node.kind === 'gallery' ? '⊞' : node.kind === 'icon' ? '★' : node.kind === 'map' ? '📍' : '·'}
+                      </span>
+                      {node.kind}
+                    </span>
                     <strong>{node.id}</strong>
                     <small>
                       x {node.rect.x} · y {node.rect.y} · z {node.zIndex}
@@ -78,7 +83,7 @@ export default function SandboxLayersPanel() {
                         }));
                       }}
                     >
-                      {node.visible ? 'Eye' : 'Hide'}
+                      {node.visible ? '👁' : '👁‍🗨'}
                     </button>
                     <button
                       type="button"
@@ -92,7 +97,7 @@ export default function SandboxLayersPanel() {
                         }));
                       }}
                     >
-                      {node.locked ? 'Unlock' : 'Lock'}
+                      {node.locked ? '🔒' : '🔓'}
                     </button>
                   </div>
                 </button>

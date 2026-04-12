@@ -65,7 +65,6 @@ export default function ImageElement({
         borderRadius: 'inherit',
         overflow: 'hidden',
         userSelect: 'none',
-        pointerEvents: 'none',
       }}
     >
       <Image
@@ -74,10 +73,28 @@ export default function ImageElement({
         fill
         draggable={false}
         sizes="(max-width: 1280px) 100vw, 360px"
-        style={{
-          objectFit: node.content.fit,
-        }}
+        style={{ objectFit: node.content.fit }}
       />
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'rgba(0,0,0,0.4)',
+          color: '#fff',
+          fontSize: '0.8rem',
+          fontWeight: 600,
+          opacity: 0,
+          transition: 'opacity 200ms ease',
+          pointerEvents: 'none',
+        }}
+        className="image-hover-overlay"
+      >
+        이미지 변경
+      </div>
+      <style>{`.image-hover-overlay { opacity: 0 !important; } *:hover > .image-hover-overlay { opacity: 1 !important; }`}</style>
     </div>
   );
 }

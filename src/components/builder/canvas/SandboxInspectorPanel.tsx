@@ -200,7 +200,7 @@ export default function SandboxInspectorPanel({
               })}
             </div>
 
-            <section className={styles.panelSection}>
+            <section className={styles.panelSection} key={activeTab} style={{ animation: 'fadeIn 150ms ease' }}>
               <header className={styles.panelSectionHeader}>
                 <span>{activeTab}</span>
                 <strong>{selectedNode.kind} · {selectedNode.id}</strong>

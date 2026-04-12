@@ -39,10 +39,12 @@ export default function SandboxPage({
   initialDocument,
   locale,
   backend,
+  initialPageId,
 }: {
   initialDocument: BuilderCanvasDocument;
   locale: Locale;
   backend: 'blob' | 'file';
+  initialPageId?: string;
 }) {
   const {
     document,
@@ -60,7 +62,7 @@ export default function SandboxPage({
   const previousDraftSaveStateRef = useRef(draftSaveState);
   const [viewport, setViewport] = useState<ViewportMode>('desktop');
   const [publishOpen, setPublishOpen] = useState(false);
-  const [activePageId, setActivePageId] = useState<string | null>(null);
+  const [activePageId, setActivePageId] = useState<string | null>(initialPageId ?? null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
 
@@ -83,7 +85,10 @@ export default function SandboxPage({
     setDraftSaveState('saving');
     const timer = window.setTimeout(async () => {
       try {
-        const response = await fetch(`/api/builder/sandbox/draft?locale=${locale}`, {
+        const saveUrl = activePageId
+          ? `/api/builder/site/pages/${activePageId}/draft?locale=${locale}`
+          : `/api/builder/sandbox/draft?locale=${locale}`;
+        const response = await fetch(saveUrl, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

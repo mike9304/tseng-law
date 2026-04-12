@@ -88,6 +88,7 @@ export default function CanvasContainer({
     sendSelectedNodeToBack,
     updateSelectedNodes,
     updateNode,
+    updateNodeContent,
     deleteSelectedNode,
     nudgeSelectedNode,
   } = useBuilderCanvasStore();
@@ -443,6 +444,9 @@ export default function CanvasContainer({
               });
             }}
             onOpenAssetLibrary={onRequestAssetLibrary}
+            onUpdateContent={(nodeId, content) => {
+              updateNodeContent(nodeId, content, 'commit');
+            }}
             onMoveStart={(nodeId, event) => {
               event.preventDefault();
               event.stopPropagation();

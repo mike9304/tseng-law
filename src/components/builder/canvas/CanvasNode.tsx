@@ -1,7 +1,9 @@
 'use client';
 
+import { useState, useCallback } from 'react';
 import { getComponent } from '@/lib/builder/components/registry';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import InlineTextEditor from './InlineTextEditor';
 import styles from './SandboxPage.module.css';
 
 export type ResizeHandle =
@@ -22,6 +24,7 @@ interface CanvasNodeProps {
   onOpenAssetLibrary?: (nodeId: string) => void;
   onMoveStart: (nodeId: string, event: React.PointerEvent<HTMLDivElement>) => void;
   onResizeStart: (nodeId: string, handle: ResizeHandle, event: React.PointerEvent<HTMLButtonElement>) => void;
+  onUpdateContent?: (nodeId: string, content: Record<string, unknown>) => void;
 }
 
 export default function CanvasNode({
@@ -32,9 +35,44 @@ export default function CanvasNode({
   onOpenAssetLibrary,
   onMoveStart,
   onResizeStart,
+  onUpdateContent,
 }: CanvasNodeProps) {
+  const [isEditing, setIsEditing] = useState(false);
   const component = getComponent(node.kind);
-  const body = component ? <component.Render node={node} mode="edit" /> : null;
+
+  const handleDoubleClick = useCallback(() => {
+    if (node.locked) return;
+    if (node.kind === 'text' || node.kind === 'heading') {
+      setIsEditing(true);
+    }
+  }, [node.kind, node.locked]);
+
+  const handleInlineSave = useCallback(
+    (html: string, plainText: string) => {
+      onUpdateContent?.(node.id, { text: plainText });
+    },
+    [node.id, onUpdateContent],
+  );
+
+  const handleInlineBlur = useCallback(() => {
+    setIsEditing(false);
+  }, []);
+
+  const isTextKind = node.kind === 'text' || node.kind === 'heading';
+  const textContent = node.content as Record<string, unknown>;
+  const body = isEditing && isTextKind ? (
+    <InlineTextEditor
+      initialText={String(textContent.text || '')}
+      fontSize={typeof textContent.fontSize === 'number' ? textContent.fontSize : 16}
+      color={typeof textContent.color === 'string' ? textContent.color : '#1f2937'}
+      fontWeight={typeof textContent.fontWeight === 'string' ? textContent.fontWeight : 'regular'}
+      align={typeof textContent.align === 'string' ? textContent.align : 'left'}
+      onSave={handleInlineSave}
+      onBlur={handleInlineBlur}
+    />
+  ) : component ? (
+    <component.Render node={node} mode="edit" />
+  ) : null;
   const hasVisibleBorder = node.style.borderWidth > 0;
   const hasVisibleShadow = node.style.shadowBlur > 0 || node.style.shadowSpread !== 0 || node.style.shadowX !== 0 || node.style.shadowY !== 0;
 
@@ -61,6 +99,10 @@ export default function CanvasNode({
       onContextMenu={(event) => {
         event.preventDefault();
         onContextMenu(node.id, event);
+      }}
+      onDoubleClick={(event) => {
+        event.stopPropagation();
+        handleDoubleClick();
       }}
       onClick={() => {
         if (node.kind !== 'image' || !selected || node.locked) return;

@@ -5,14 +5,12 @@ import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { getColumnPost, getColumnSlugs } from '@/lib/columns';
+import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
 import JsonLd from '@/components/JsonLd';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildSeoMetadata } from '@/lib/seo';
 
-export function generateStaticParams() {
-  const slugs = getColumnSlugs();
-  return ['ko', 'zh-hant', 'en'].flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
-}
+export const dynamic = 'force-dynamic';
 
 export function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Metadata {
   const locale = normalizeLocale(params.locale);
@@ -35,11 +33,17 @@ export function generateMetadata({ params }: { params: { locale: Locale; slug: s
   });
 }
 
-export default function ColumnDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
+export default async function ColumnDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
   const locale = normalizeLocale(params.locale);
   const post = getColumnPost(params.slug, locale);
   if (!post) return notFound();
   if (post.slug !== params.slug) return notFound();
+
+  // Get all posts including Blob for prev/next navigation
+  const allPosts = await getAllColumnPostsIncludingBlob(locale);
+  const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
+  const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+  const nextPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
   const backLabel = locale === 'ko' ? '← 칼럼 목록으로' : locale === 'zh-hant' ? '← 返回專欄列表' : '← Back to columns';
   const authorName = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
@@ -61,6 +65,9 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
             { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
             { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
           ];
+
+  const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : '← Previous';
+  const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : 'Next →';
 
   return (
     <>
@@ -149,6 +156,62 @@ export default function ColumnDetailPage({ params }: { params: { locale: Locale;
           </aside>
         </div>
       </article>
+
+      {/* Prev / Next Navigation */}
+      {(prevPost || nextPost) && (
+        <nav className="container" style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'stretch',
+          gap: '1rem',
+          padding: '2rem 1rem',
+          maxWidth: 900,
+          margin: '0 auto 2rem',
+        }}>
+          {prevPost ? (
+            <Link
+              href={`/${locale}/columns/${prevPost.slug}`}
+              style={{
+                flex: 1,
+                padding: '1rem 1.25rem',
+                borderRadius: 8,
+                border: '1px solid #e5e7eb',
+                textDecoration: 'none',
+                color: '#1f2937',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.25rem',
+                transition: 'border-color 0.15s',
+              }}
+            >
+              <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>{prevLabel}</span>
+              <span style={{ fontSize: '0.95rem', fontWeight: 600, lineHeight: 1.4 }}>{prevPost.title}</span>
+            </Link>
+          ) : <span style={{ flex: 1 }} />}
+          {nextPost ? (
+            <Link
+              href={`/${locale}/columns/${nextPost.slug}`}
+              style={{
+                flex: 1,
+                padding: '1rem 1.25rem',
+                borderRadius: 8,
+                border: '1px solid #e5e7eb',
+                textDecoration: 'none',
+                color: '#1f2937',
+                textAlign: 'right',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-end',
+                gap: '0.25rem',
+                transition: 'border-color 0.15s',
+              }}
+            >
+              <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>{nextLabel}</span>
+              <span style={{ fontSize: '0.95rem', fontWeight: 600, lineHeight: 1.4 }}>{nextPost.title}</span>
+            </Link>
+          ) : <span style={{ flex: 1 }} />}
+        </nav>
+      )}
     </>
   );
 }

@@ -85,6 +85,7 @@ export default function ButtonElement({
 
   return (
     <div
+      className="builder-button-element"
       style={{
         width: '100%',
         height: '100%',
@@ -102,9 +103,19 @@ export default function ButtonElement({
         opacity: s.opacity < 100 ? s.opacity / 100 : undefined,
         pointerEvents: 'none',
         userSelect: 'none',
+        transition: 'transform 150ms ease, box-shadow 150ms ease, opacity 150ms ease',
       }}
     >
       {node.content.label}
+      <style>{`
+        .builder-button-element:hover {
+          transform: translateY(-1px) !important;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+        }
+        .builder-button-element:active {
+          transform: scale(0.97) !important;
+        }
+      `}</style>
     </div>
   );
 }

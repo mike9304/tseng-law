@@ -157,6 +157,33 @@ export default async function BuilderPublishedPage({
           );
         })}
     </main>
+
+      {/* Site Footer */}
+      <footer style={{
+        maxWidth: 1200,
+        margin: '0 auto',
+        padding: '32px 24px',
+        borderTop: '1px solid #e5e7eb',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        gap: 16,
+        fontSize: '0.85rem',
+        color: '#6b7280',
+      }}>
+        <div>
+          <strong style={{ color: '#374151' }}>{settings?.firmName || site.name}</strong>
+          {settings?.address && <span style={{ marginLeft: 12 }}>{settings.address}</span>}
+        </div>
+        <div style={{ display: 'flex', gap: 16 }}>
+          {settings?.phone && <span>Tel: {settings.phone}</span>}
+          {settings?.email && <a href={`mailto:${settings.email}`} style={{ color: '#116dff', textDecoration: 'none' }}>{settings.email}</a>}
+        </div>
+        <div style={{ width: '100%', textAlign: 'center', marginTop: 8, fontSize: '0.75rem' }}>
+          © {new Date().getFullYear()} {settings?.firmName || site.name}. All rights reserved.
+        </div>
+      </footer>
     </>
   );
 }

@@ -16,6 +16,14 @@ export type CanvasAction =
   | 'duplicate'
   | 'selectAll'
   | 'deselect'
+  | 'copy'
+  | 'paste'
+  | 'cut'
+  | 'group'
+  | 'ungroup'
+  | 'zoomIn'
+  | 'zoomOut'
+  | 'zoomReset'
   | 'bringForward'
   | 'sendBackward'
   | 'bringToFront'
@@ -60,6 +68,20 @@ export function matchShortcut(e: KeyboardEvent): CanvasAction {
   // Select all / Deselect
   if (meta && key === 'a') return 'selectAll';
   if (key === 'Escape') return 'deselect';
+
+  // Clipboard
+  if (meta && !shift && key === 'c') return 'copy';
+  if (meta && !shift && key === 'v') return 'paste';
+  if (meta && !shift && key === 'x') return 'cut';
+
+  // Group
+  if (meta && !shift && key === 'g') return 'group';
+  if (meta && shift && (key === 'g' || key === 'G')) return 'ungroup';
+
+  // Zoom
+  if (meta && (key === '=' || key === '+')) return 'zoomIn';
+  if (meta && key === '-') return 'zoomOut';
+  if (meta && key === '0') return 'zoomReset';
 
   // Z-order
   if (meta && key === ']') return 'bringForward';

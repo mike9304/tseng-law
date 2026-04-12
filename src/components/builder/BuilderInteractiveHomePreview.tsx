@@ -361,6 +361,14 @@ type BuilderCanvasPointerDragState = {
   previewHeight: number;
 };
 
+type BuilderCanvasPanState = {
+  pointerId: number;
+  originClientX: number;
+  originClientY: number;
+  startScrollLeft: number;
+  startScrollTop: number;
+};
+
 type BuilderResizeDirection = 'narrower' | 'wider';
 type BuilderSpacingDirection = 'tighter' | 'looser';
 type BuilderSpacingEdge = 'top' | 'bottom';
@@ -512,6 +520,15 @@ const KIND_LABEL: Record<BuilderSelectableTargetKind, string> = {
   unknown: 'Unsupported surface',
 };
 
+function isTypingTarget(target: EventTarget | null) {
+  return (
+    target instanceof HTMLInputElement ||
+    target instanceof HTMLTextAreaElement ||
+    target instanceof HTMLSelectElement ||
+    (target instanceof HTMLElement && target.isContentEditable)
+  );
+}
+
 export default function BuilderInteractiveHomePreview({
   locale,
   document: initialDocument,
@@ -618,10 +635,13 @@ export default function BuilderInteractiveHomePreview({
   const [contentGroupRects, setContentGroupRects] = useState<Record<string, BuilderCanvasContentGroupRect>>({});
   const [canvasPointerDragState, setCanvasPointerDragState] =
     useState<BuilderCanvasPointerDragState | null>(null);
+  const [canvasPanState, setCanvasPanState] = useState<BuilderCanvasPanState | null>(null);
+  const [isSpacePressed, setIsSpacePressed] = useState(false);
 
   const historyRef = useRef<BuilderWorkspaceSnapshot[]>([]);
   const historyCursorRef = useRef(-1);
   const surfaceRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const canvasViewportRef = useRef<HTMLDivElement | null>(null);
   const canvasZoomFrameRef = useRef<HTMLDivElement | null>(null);
   const descriptorsSignatureRef = useRef('');
   const contentGroupSignatureRef = useRef('');
@@ -806,7 +826,7 @@ export default function BuilderInteractiveHomePreview({
   );
   const zoomStatusCopy = zoomTooLowForPrecision
     ? `Fine canvas controls unlock again at ${MIN_PRECISE_ZOOM_LEVEL}%.`
-    : 'Option/Alt + wheel over the canvas changes zoom without touching layout data.';
+    : 'Option/Alt + wheel zooms the stage. Hold Space and drag to pan without touching layout data.';
   const canvasDragGuideRect =
     sectionDragState?.targetSectionKey && sectionDragState.placement
       ? pageDocument.root.children
@@ -3555,11 +3575,7 @@ export default function BuilderInteractiveHomePreview({
       const modKey = event.metaKey || event.ctrlKey;
       const key = event.key.toLowerCase();
       const target = event.target;
-      const typingContext =
-        target instanceof HTMLInputElement ||
-        target instanceof HTMLTextAreaElement ||
-        target instanceof HTMLSelectElement ||
-        (target instanceof HTMLElement && target.isContentEditable);
+      const typingContext = isTypingTarget(target);
 
       if (modKey && key === 's') {
         event.preventDefault();
@@ -3643,6 +3659,70 @@ export default function BuilderInteractiveHomePreview({
     undoWorkspaceChange,
   ]);
 
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.code !== 'Space' || isTypingTarget(event.target)) {
+        return;
+      }
+      event.preventDefault();
+      setIsSpacePressed(true);
+    };
+
+    const onKeyUp = (event: KeyboardEvent) => {
+      if (event.code !== 'Space') {
+        return;
+      }
+      setIsSpacePressed(false);
+    };
+
+    const onWindowBlur = () => {
+      setIsSpacePressed(false);
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('keyup', onKeyUp);
+    window.addEventListener('blur', onWindowBlur);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener('keyup', onKeyUp);
+      window.removeEventListener('blur', onWindowBlur);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!canvasPanState) {
+      return undefined;
+    }
+
+    const activePanState = canvasPanState;
+
+    const onPointerMove = (event: PointerEvent) => {
+      const viewport = canvasViewportRef.current;
+      if (!viewport) {
+        return;
+      }
+
+      const deltaX = event.clientX - activePanState.originClientX;
+      const deltaY = event.clientY - activePanState.originClientY;
+      viewport.scrollLeft = activePanState.startScrollLeft - deltaX;
+      viewport.scrollTop = activePanState.startScrollTop - deltaY;
+    };
+
+    const onPointerUp = (event: PointerEvent) => {
+      if (event.pointerId !== activePanState.pointerId) {
+        return;
+      }
+      setCanvasPanState(null);
+    };
+
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+    return () => {
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+    };
+  }, [canvasPanState]);
+
   return (
     <div
       className={`builder-preview-shell${
@@ -3673,53 +3753,85 @@ export default function BuilderInteractiveHomePreview({
             </div>
           )}
 
-          <div className="builder-preview-workspace-bar">
+          <div
+            className={`builder-preview-workspace-bar${
+              presentation === 'embedded' ? ' builder-preview-workspace-bar--embedded' : ''
+            }`}
+          >
             <div className="builder-preview-workspace-bar-group">
-              <span className="builder-preview-status-chip builder-preview-status-chip--primary">
-                Local recovery {draftHydrated ? (lastDraftSavedAt ? 'saved' : 'empty') : 'loading'}
-              </span>
-              <span className="builder-preview-status-chip">
-                Shared draft {serverDraftMeta.persisted ? `v${serverDraftMeta.revision}` : 'empty'}
-              </span>
-              <span className="builder-preview-status-chip">
-                Shared published {serverPublishedMeta.persisted ? `v${serverPublishedMeta.revision}` : 'empty'}
-              </span>
-              <span className="builder-preview-status-chip">
-                Selection {selection.surfaceId || selection.contentGroupId ? truncateCopy(selection.targetLabel, 28) : 'section frame'}
-              </span>
-              <span className="builder-preview-status-chip">{selection.sectionKey}</span>
-              {hasMultiSectionSelection ? (
-                <span className="builder-preview-status-chip">
-                  Sections {selectedSections.length}
-                </span>
-              ) : null}
-              {clipboardPayload ? (
-                <span className="builder-preview-status-chip">
-                  Clipboard {formatSectionFrameClipboardSummary(clipboardPayload)}
-                </span>
-              ) : null}
+              {presentation === 'embedded' ? (
+                <>
+                  <span className="builder-preview-status-chip builder-preview-status-chip--primary">
+                    Selection{' '}
+                    {selection.surfaceId || selection.contentGroupId
+                      ? truncateCopy(selection.targetLabel, 28)
+                      : 'section frame'}
+                  </span>
+                  <span className="builder-preview-status-chip">{selection.sectionKey}</span>
+                  {hasMultiSectionSelection ? (
+                    <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
+                  ) : null}
+                  <span className="builder-preview-status-chip">
+                    Draft {serverDraftMeta.persisted ? `v${serverDraftMeta.revision}` : 'empty'}
+                  </span>
+                  <span className="builder-preview-status-chip">
+                    {historyMeta.label ?? 'No workspace changes yet'}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span className="builder-preview-status-chip builder-preview-status-chip--primary">
+                    Local recovery {draftHydrated ? (lastDraftSavedAt ? 'saved' : 'empty') : 'loading'}
+                  </span>
+                  <span className="builder-preview-status-chip">
+                    Shared draft {serverDraftMeta.persisted ? `v${serverDraftMeta.revision}` : 'empty'}
+                  </span>
+                  <span className="builder-preview-status-chip">
+                    Shared published {serverPublishedMeta.persisted ? `v${serverPublishedMeta.revision}` : 'empty'}
+                  </span>
+                  <span className="builder-preview-status-chip">
+                    Selection{' '}
+                    {selection.surfaceId || selection.contentGroupId
+                      ? truncateCopy(selection.targetLabel, 28)
+                      : 'section frame'}
+                  </span>
+                  <span className="builder-preview-status-chip">{selection.sectionKey}</span>
+                  {hasMultiSectionSelection ? (
+                    <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
+                  ) : null}
+                  {clipboardPayload ? (
+                    <span className="builder-preview-status-chip">
+                      Clipboard {formatSectionFrameClipboardSummary(clipboardPayload)}
+                    </span>
+                  ) : null}
+                </>
+              )}
             </div>
 
             <div className="builder-preview-workspace-bar-group">
-              <span className="builder-preview-status-chip">
-                History {historyMeta.length ? `${historyMeta.cursor + 1}/${historyMeta.length}` : '0/0'}
-              </span>
-              <span className="builder-preview-status-chip">
-                Server {serverStorage ? `${serverStorage} store` : 'sync pending'}
-              </span>
-              <span className="builder-preview-status-chip">
-                Viewport {getViewportLabel(viewportMode)}
-              </span>
-              <span
-                className={`builder-preview-status-chip${
-                  zoomTooLowForPrecision ? ' builder-preview-status-chip--danger' : ''
-                }`}
-              >
-                Zoom {zoomLevel}%
-              </span>
-              <span className="builder-preview-status-chip">
-                {historyMeta.label ?? 'No workspace changes yet'}
-              </span>
+              {presentation === 'standalone' ? (
+                <>
+                  <span className="builder-preview-status-chip">
+                    History {historyMeta.length ? `${historyMeta.cursor + 1}/${historyMeta.length}` : '0/0'}
+                  </span>
+                  <span className="builder-preview-status-chip">
+                    Server {serverStorage ? `${serverStorage} store` : 'sync pending'}
+                  </span>
+                  <span className="builder-preview-status-chip">
+                    Viewport {getViewportLabel(viewportMode)}
+                  </span>
+                  <span
+                    className={`builder-preview-status-chip${
+                      zoomTooLowForPrecision ? ' builder-preview-status-chip--danger' : ''
+                    }`}
+                  >
+                    Zoom {zoomLevel}%
+                  </span>
+                  <span className="builder-preview-status-chip">
+                    {historyMeta.label ?? 'No workspace changes yet'}
+                  </span>
+                </>
+              ) : null}
               <div className="builder-preview-viewport-switch" role="group" aria-label="Preview viewport">
                 {VIEWPORT_OPTIONS.map((option) => (
                   <button
@@ -3745,7 +3857,7 @@ export default function BuilderInteractiveHomePreview({
                 </button>
                 <div className="builder-preview-zoom-copy">
                   <strong>{zoomLevel}%</strong>
-                  <small>Option/Alt + wheel</small>
+                  <small>Alt+wheel · Space+drag</small>
                 </div>
                 <button
                   type="button"
@@ -4043,11 +4155,35 @@ export default function BuilderInteractiveHomePreview({
             <span>
               {zoomTooLowForPrecision
                 ? `Direct width, spacing, and inset scaffolds stay hidden below ${MIN_PRECISE_ZOOM_LEVEL}% so the canvas does not fake precise geometry.`
-                : 'Option/Alt + wheel over the canvas or Cmd/Ctrl + +/- adjusts zoom. Cmd/Ctrl + 0 resets to 100%.'}
+                : 'Option/Alt + wheel or Cmd/Ctrl + +/- adjusts zoom. Hold Space and drag to pan. Cmd/Ctrl + 0 resets to 100%.'}
             </span>
           </div>
           <div
-            className="builder-preview-canvas-viewport"
+            ref={canvasViewportRef}
+            className={`builder-preview-canvas-viewport${
+              isSpacePressed && !canvasPointerDragState ? ' is-pannable' : ''
+            }${canvasPanState ? ' is-panning' : ''}`}
+            onPointerDownCapture={(event) => {
+              if (canvasPointerDragState) {
+                return;
+              }
+
+              const shouldPan =
+                event.button === 1 || (event.button === 0 && isSpacePressed && !isTypingTarget(event.target));
+              if (!shouldPan) {
+                return;
+              }
+
+              event.preventDefault();
+              event.stopPropagation();
+              setCanvasPanState({
+                pointerId: event.pointerId,
+                originClientX: event.clientX,
+                originClientY: event.clientY,
+                startScrollLeft: event.currentTarget.scrollLeft,
+                startScrollTop: event.currentTarget.scrollTop,
+              });
+            }}
             onWheel={(event: ReactWheelEvent<HTMLDivElement>) => {
               if (!event.altKey) {
                 return;

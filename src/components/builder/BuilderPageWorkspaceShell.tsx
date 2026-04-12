@@ -22,7 +22,6 @@ export default function BuilderPageWorkspaceShell({
   requestedMode,
   availableModes,
   editable,
-  workspace,
   site,
   pages,
   datasetOverviews,
@@ -74,9 +73,7 @@ export default function BuilderPageWorkspaceShell({
       ]}
       leftMeta={
         <>
-          <span className="builder-stage-pill builder-stage-pill--accent">Workspace {workspace.name}</span>
-          <span className="builder-stage-pill">Site {site.name}</span>
-          <span className="builder-stage-pill">
+          <span className="builder-stage-pill builder-stage-pill--accent">
             {requestedMode === 'preview' ? 'Preview mode' : 'Edit mode'}
           </span>
           <span className="builder-stage-pill">
@@ -94,10 +91,9 @@ export default function BuilderPageWorkspaceShell({
         </>
       }
       rightMeta={
-        <>
-          <strong>{requestedMode === 'preview' ? 'Preview surface' : 'Canvas route'}</strong>
-          <span>{currentPage.publicPath}</span>
-        </>
+        <span>
+          {site.name} · {currentPage.publicPath}
+        </span>
       }
       leftSidebar={
         <section className="builder-preview-inspector-card builder-dashboard-sidebar">

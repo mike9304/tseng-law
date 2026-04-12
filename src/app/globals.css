@@ -16010,6 +16010,7 @@ html[lang='zh-Hant'] h3 {
 }
 
 .builder-preview-workspace-bar--embedded .builder-preview-workspace-bar-group:last-child {
+  flex: 1 1 540px;
   justify-content: flex-end;
 }
 
@@ -16444,6 +16445,15 @@ html[lang='zh-Hant'] h3 {
 .builder-preview-canvas-viewport {
   overflow: auto;
   padding: 0.5rem 0.25rem 1.5rem;
+}
+
+.builder-preview-canvas-viewport.is-pannable {
+  cursor: grab;
+}
+
+.builder-preview-canvas-viewport.is-panning {
+  cursor: grabbing;
+  user-select: none;
 }
 
 .builder-preview-canvas-zoom-stage {

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
-import { getColumnPost, getColumnSlugs } from '@/lib/columns';
+import { getColumnPost } from '@/lib/columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
 import JsonLd from '@/components/JsonLd';
@@ -12,9 +12,15 @@ import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildSeoMetadata } from '@/l
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Metadata {
+export async function generateMetadata({ params }: { params: { locale: Locale; slug: string } }): Promise<Metadata> {
   const locale = normalizeLocale(params.locale);
-  const post = getColumnPost(params.slug, locale);
+
+  // Try file-based first (fast, sync), then fall back to blob-aware reader
+  let post = getColumnPost(params.slug, locale);
+  if (!post) {
+    const allPosts = await getAllColumnPostsIncludingBlob(locale);
+    post = allPosts.find((p) => p.slug === params.slug);
+  }
 
   if (!post) {
     return {};
@@ -35,13 +41,13 @@ export function generateMetadata({ params }: { params: { locale: Locale; slug: s
 
 export default async function ColumnDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
   const locale = normalizeLocale(params.locale);
-  const post = getColumnPost(params.slug, locale);
-  if (!post) return notFound();
-  if (post.slug !== params.slug) return notFound();
 
-  // Get all posts including Blob for prev/next navigation
+  // Get all posts including Blob — single source of truth for content + prev/next
   const allPosts = await getAllColumnPostsIncludingBlob(locale);
-  const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
+  const post = allPosts.find((p) => p.slug === params.slug);
+  if (!post) return notFound();
+
+  const currentIndex = allPosts.indexOf(post);
   const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
   const nextPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 

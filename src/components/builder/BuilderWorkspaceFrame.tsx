@@ -22,6 +22,7 @@ export default function BuilderWorkspaceFrame({
   leftSidebar,
   inspector,
   children,
+  surfaceTone = 'default',
 }: {
   title: string;
   description: string;
@@ -33,12 +34,26 @@ export default function BuilderWorkspaceFrame({
   leftSidebar: ReactNode;
   inspector: ReactNode;
   children: ReactNode;
+  surfaceTone?: 'default' | 'canvas-priority';
 }) {
   return (
-    <div className="builder-route-root">
+    <div
+      className={`builder-route-root${
+        surfaceTone === 'canvas-priority' ? ' builder-route-root--canvas-priority' : ''
+      }`}
+    >
       <div className="builder-shell">
-        <div className="builder-shell-body">
-          <aside className="builder-workspace-sidebar" aria-label="Builder navigation">
+        <div
+          className={`builder-shell-body${
+            surfaceTone === 'canvas-priority' ? ' builder-shell-body--canvas-priority' : ''
+          }`}
+        >
+          <aside
+            className={`builder-workspace-sidebar${
+              surfaceTone === 'canvas-priority' ? ' builder-workspace-sidebar--canvas-priority' : ''
+            }`}
+            aria-label="Builder navigation"
+          >
             <nav className="builder-app-rail">
               <div className="builder-app-rail-brand" aria-hidden>
                 HJ
@@ -77,28 +92,66 @@ export default function BuilderWorkspaceFrame({
                 <span>Real systems only. No fake tabs.</span>
               </div>
             </nav>
-            <div>{leftSidebar}</div>
+            <div
+              className={`builder-workspace-sidebar-panel${
+                surfaceTone === 'canvas-priority' ? ' builder-workspace-sidebar-panel--canvas-priority' : ''
+              }`}
+            >
+              {leftSidebar}
+            </div>
           </aside>
 
           <div className="builder-canvas-wrapper">
-            <div className="builder-canvas-stage">
-              <div className="builder-canvas-stage-head">
-                <div className="builder-canvas-stage-meta">
+            <div
+              className={`builder-canvas-stage${
+                surfaceTone === 'canvas-priority' ? ' builder-canvas-stage--canvas-priority' : ''
+              }`}
+            >
+              <div
+                className={`builder-canvas-stage-head${
+                  surfaceTone === 'canvas-priority' ? ' builder-canvas-stage-head--canvas-priority' : ''
+                }`}
+              >
+                <div
+                  className={`builder-canvas-stage-meta${
+                    surfaceTone === 'canvas-priority' ? ' builder-canvas-stage-meta--canvas-priority' : ''
+                  }`}
+                >
                   <strong>{title}</strong>
                   <span>{description}</span>
                 </div>
-                <div className="builder-canvas-stage-url">
+                <div
+                  className={`builder-canvas-stage-url${
+                    surfaceTone === 'canvas-priority' ? ' builder-canvas-stage-url--canvas-priority' : ''
+                  }`}
+                >
                   <span>{stageUrl}</span>
-                  <span>canonical builder route</span>
+                  <span>{surfaceTone === 'canvas-priority' ? 'active canvas route' : 'canonical builder route'}</span>
                 </div>
-                <div className="builder-canvas-stage-meta">{rightMeta}</div>
+                <div
+                  className={`builder-canvas-stage-meta${
+                    surfaceTone === 'canvas-priority' ? ' builder-canvas-stage-meta--canvas-priority' : ''
+                  }`}
+                >
+                  {rightMeta}
+                </div>
               </div>
-              <div className="builder-canvas-stage-toolbar">{leftMeta}</div>
+              <div
+                className={`builder-canvas-stage-toolbar${
+                  surfaceTone === 'canvas-priority' ? ' builder-canvas-stage-toolbar--canvas-priority' : ''
+                }`}
+              >
+                {leftMeta}
+              </div>
               {children}
             </div>
           </div>
 
-          <aside className="builder-preview-inspector builder-preview-inspector--shell">
+          <aside
+            className={`builder-preview-inspector builder-preview-inspector--shell${
+              surfaceTone === 'canvas-priority' ? ' builder-preview-inspector--canvas-priority' : ''
+            }`}
+          >
             {inspector}
           </aside>
         </div>

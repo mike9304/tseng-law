@@ -43,6 +43,14 @@ type InteractionState =
       originY: number;
       startRect: BuilderCanvasNode['rect'];
     }
+  | {
+      type: 'pan';
+      pointerId: number;
+      originX: number;
+      originY: number;
+      startPanX: number;
+      startPanY: number;
+    }
   | null;
 
 type SelectionBoxState = {
@@ -116,6 +124,7 @@ export default function CanvasContainer({
   const [contextMenu, setContextMenu] = useState<ContextMenuState | null>(null);
   const [guides, setGuides] = useState<AlignmentGuide[]>([]);
   const [zoomState, setZoomState] = useState<ZoomState>(() => createDefaultZoomState());
+  const [isSpacePressed, setIsSpacePressed] = useState(false);
 
   const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? []);
   const visibleNodes = useMemo(
@@ -261,10 +270,42 @@ export default function CanvasContainer({
   ]);
 
   useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.code === 'Space' && !(event.target instanceof HTMLInputElement) && !(event.target instanceof HTMLTextAreaElement) && !(event.target instanceof HTMLSelectElement) && !(event.target instanceof HTMLElement && event.target.isContentEditable)) {
+        setIsSpacePressed(true);
+      }
+    }
+
+    function handleKeyUp(event: KeyboardEvent) {
+      if (event.code === 'Space') {
+        setIsSpacePressed(false);
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!interaction) return undefined;
     const activeInteraction = interaction;
 
     function handlePointerMove(event: PointerEvent) {
+      if (activeInteraction.type === 'pan') {
+        const deltaX = event.clientX - activeInteraction.originX;
+        const deltaY = event.clientY - activeInteraction.originY;
+        setZoomState((currentState) => ({
+          ...currentState,
+          panX: activeInteraction.startPanX + deltaX,
+          panY: activeInteraction.startPanY + deltaY,
+        }));
+        return;
+      }
+
       const deltaX = (event.clientX - activeInteraction.originX) / zoomState.zoom;
       const deltaY = (event.clientY - activeInteraction.originY) / zoomState.zoom;
       if (activeInteraction.type === 'move') {
@@ -373,7 +414,9 @@ export default function CanvasContainer({
       if (event.pointerId === activeInteraction.pointerId) {
         setInteraction(null);
         setGuides([]);
-        commitMutationSession();
+        if (activeInteraction.type !== 'pan') {
+          commitMutationSession();
+        }
       }
     }
 
@@ -464,7 +507,10 @@ export default function CanvasContainer({
     if (interaction.type === 'move') {
       return Object.values(interaction.startRects);
     }
-    return [interaction.startRect];
+    if (interaction.type === 'resize') {
+      return [interaction.startRect];
+    }
+    return [];
   }, [interaction]);
 
   const contextMenuTitle = selectedNodeIds.length > 1
@@ -475,7 +521,7 @@ export default function CanvasContainer({
     <div className={styles.stageSurface}>
       <div
         ref={viewportRef}
-        className={styles.stageViewport}
+        className={`${styles.stageViewport} ${isSpacePressed ? styles.stageViewportPannable : ''} ${interaction?.type === 'pan' ? styles.stageViewportPanning : ''}`}
         onWheel={(event) => {
           if (!event.metaKey && !event.ctrlKey) return;
           event.preventDefault();
@@ -496,6 +542,22 @@ export default function CanvasContainer({
             role="application"
             aria-label="Canvas editor"
             aria-roledescription="freeform canvas"
+            onPointerDownCapture={(event) => {
+              const shouldPan = event.button === 1 || (event.button === 0 && isSpacePressed);
+              if (!shouldPan) return;
+              event.preventDefault();
+              event.stopPropagation();
+              setContextMenu(null);
+              setSelectionBox(null);
+              setInteraction({
+                type: 'pan',
+                pointerId: event.pointerId,
+                originX: event.clientX,
+                originY: event.clientY,
+                startPanX: zoomState.panX,
+                startPanY: zoomState.panY,
+              });
+            }}
             onPointerDown={(event) => {
               setContextMenu(null);
               if (event.target === event.currentTarget) {

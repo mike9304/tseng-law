@@ -428,6 +428,14 @@
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
 }
 
+.stageViewportPannable {
+  cursor: grab;
+}
+
+.stageViewportPanning {
+  cursor: grabbing;
+}
+
 .stageTransform {
   position: relative;
   width: fit-content;

@@ -22,7 +22,10 @@ export default function TextElement({
         lineHeight: node.content.lineHeight ?? 1.25,
         letterSpacing: `${node.content.letterSpacing ?? 0}px`,
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
+        overflow: 'hidden',
+        wordBreak: 'break-word',
+        whiteSpace: 'pre-wrap',
       }}
     >
       {node.content.text}

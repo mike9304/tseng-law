@@ -65,6 +65,7 @@ export default function BuilderPageWorkspaceShell({
       title={`${title} ${requestedMode === 'preview' ? 'preview' : 'workspace'}`}
       description={description}
       activeRail="pages"
+      surfaceTone="canvas-priority"
       stageUrl={buildBuilderPageHref(locale, pageKey, requestedMode)}
       railItems={[
         { key: 'pages', label: 'Pages', description: 'Page entry points', href: `/${locale}/builder`, active: true },
@@ -92,8 +93,8 @@ export default function BuilderPageWorkspaceShell({
       }
       leftSidebar={
         <section className="builder-preview-inspector-card builder-dashboard-sidebar">
-          <h2>Page routes</h2>
-          <p>Only routes backed by the current builder schema appear here.</p>
+          <h2>Pages</h2>
+          <p>Switch pages here. Keep the stage as the primary editing surface.</p>
           <div className="builder-dashboard-nav-list">
             {pages.map((page) => (
               <Link
@@ -177,7 +178,7 @@ export default function BuilderPageWorkspaceShell({
               <li>The canvas-first core will replace the current semantic-section runtime with a real scene graph.</li>
               <li>
                 <Link href={buildBuilderPageSceneHref(locale, pageKey)} className="builder-link-inline">
-                  Open read-only scene graph view
+                  Open advanced scene view
                 </Link>
               </li>
             </ul>
@@ -196,9 +197,6 @@ export default function BuilderPageWorkspaceShell({
               {mode === 'edit' ? 'Edit' : 'Preview'}
             </Link>
           ))}
-          <Link href={buildBuilderPageSceneHref(locale, pageKey)} className="builder-stage-pill">
-            Scene graph
-          </Link>
         </div>
         {children}
       </div>

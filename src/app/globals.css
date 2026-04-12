@@ -11350,6 +11350,12 @@ a.floating-ai-chat-contact-item:hover strong {
   min-height: 100vh;
 }
 
+.builder-route-root--canvas-priority {
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 28%),
+    linear-gradient(180deg, #edf3fa 0%, #f7f9fc 48%, #eef3f8 100%);
+}
+
 .builder-public-page {
   background: transparent;
 }
@@ -11366,6 +11372,11 @@ a.floating-ai-chat-contact-item:hover strong {
   padding: 18px 20px 24px;
 }
 
+.builder-shell-body--canvas-priority {
+  grid-template-columns: 320px minmax(0, 1fr) 320px;
+  gap: 16px;
+}
+
 .builder-workspace-sidebar {
   position: sticky;
   top: 86px;
@@ -11373,6 +11384,20 @@ a.floating-ai-chat-contact-item:hover strong {
   grid-template-columns: 74px minmax(0, 1fr);
   gap: 14px;
   align-self: start;
+}
+
+.builder-workspace-sidebar--canvas-priority {
+  top: 78px;
+  gap: 12px;
+}
+
+.builder-workspace-sidebar-panel {
+  min-width: 0;
+}
+
+.builder-workspace-sidebar-panel--canvas-priority .builder-preview-inspector-card {
+  border-radius: 20px;
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
 }
 
 .builder-app-rail {
@@ -11541,12 +11566,26 @@ a.floating-ai-chat-contact-item:hover strong {
     0 24px 56px rgba(15, 23, 42, 0.08);
 }
 
+.builder-canvas-stage--canvas-priority {
+  padding: 16px 16px 20px;
+  border-radius: 30px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.84),
+    0 28px 64px rgba(15, 23, 42, 0.1);
+}
+
 .builder-canvas-stage-head {
   display: grid;
   grid-template-columns: minmax(132px, 160px) minmax(0, 1fr) minmax(240px, 320px);
   align-items: center;
   gap: 12px;
   padding: 0 0 14px;
+}
+
+.builder-canvas-stage-head--canvas-priority {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  padding-bottom: 10px;
 }
 
 .builder-canvas-stage-url {
@@ -11559,6 +11598,14 @@ a.floating-ai-chat-contact-item:hover strong {
   background: rgba(255, 255, 255, 0.92);
   color: #334155;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.builder-canvas-stage-url--canvas-priority {
+  grid-column: 1 / -1;
+  gap: 1px;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
 }
 
 .builder-canvas-stage-url span:first-child {
@@ -11586,6 +11633,12 @@ a.floating-ai-chat-contact-item:hover strong {
   border-radius: 18px;
   background: rgba(245, 248, 252, 0.82);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+}
+
+.builder-canvas-stage-meta--canvas-priority {
+  gap: 2px;
+  padding: 8px 12px;
+  border-radius: 16px;
 }
 
 .builder-canvas-stage-meta strong {
@@ -11616,6 +11669,11 @@ a.floating-ai-chat-contact-item:hover strong {
   flex-wrap: wrap;
   gap: 8px;
   padding: 0 0 18px;
+}
+
+.builder-canvas-stage-toolbar--canvas-priority {
+  gap: 6px;
+  padding-bottom: 14px;
 }
 
 .builder-dashboard-grid {
@@ -11719,10 +11777,19 @@ a.floating-ai-chat-contact-item:hover strong {
   margin-bottom: 18px;
 }
 
+.builder-shell-body--canvas-priority .builder-dashboard-canvas-copy {
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
 .builder-preview-inspector--shell {
   position: sticky;
   top: 86px;
   align-self: start;
+}
+
+.builder-preview-inspector--canvas-priority {
+  top: 78px;
 }
 
 .builder-stage-pill {
@@ -11737,6 +11804,12 @@ a.floating-ai-chat-contact-item:hover strong {
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.builder-shell-body--canvas-priority .builder-stage-pill {
+  min-height: 28px;
+  padding: 0 10px;
+  font-size: 0.72rem;
 }
 
 .builder-stage-pill--accent {

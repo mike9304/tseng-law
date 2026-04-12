@@ -38,8 +38,9 @@ function CtaBannerRender({ node }: { node: { content: CtaBannerContent } }) {
     );
   }
 
-  // Determine text color based on background luminance
-  const isLight = backgroundColor.toLowerCase() === '#ffffff' || backgroundColor.toLowerCase() === 'white' || backgroundColor === 'transparent';
+  // Support gradient backgrounds (e.g. "linear-gradient(135deg, #123b63, #1e5a96)")
+  const isGradient = backgroundColor.includes('gradient');
+  const isLight = !isGradient && (backgroundColor.toLowerCase() === '#ffffff' || backgroundColor.toLowerCase() === 'white' || backgroundColor === 'transparent');
   const textColor = isLight ? '#0f172a' : '#ffffff';
   const btnBg = isLight ? '#0b3b2e' : '#ffffff';
   const btnColor = isLight ? '#ffffff' : '#0f172a';
@@ -50,7 +51,7 @@ function CtaBannerRender({ node }: { node: { content: CtaBannerContent } }) {
         width: '100%',
         height: '100%',
         background: backgroundColor,
-        borderRadius: 8,
+        borderRadius: 12,
         padding: '32px 40px',
         display: 'flex',
         flexDirection: 'column',

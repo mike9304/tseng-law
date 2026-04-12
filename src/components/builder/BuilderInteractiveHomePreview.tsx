@@ -390,6 +390,9 @@ type BuilderRevisionHistoryItem = {
   overrideCount: number;
   faqCount: number;
   serviceCount: number;
+  sceneNodeCount: number;
+  sceneAuthorityNodeCount: number;
+  sceneSeedNodeCount: number;
 };
 
 type BuilderRevisionHistoryResponse = {
@@ -428,6 +431,12 @@ type BuilderImageWorkflowState = {
   currentGovernanceSummary: string;
   baseGovernanceSummary: string;
   publishGovernanceSummary: string;
+};
+
+type BuilderSceneStatusSummary = {
+  sceneNodeCount: number;
+  sceneAuthorityNodeCount: number;
+  sceneSeedNodeCount: number;
 };
 
 const EMPTY_STATS: SectionStats = {
@@ -706,6 +715,15 @@ export default function BuilderInteractiveHomePreview({
           )
         : false,
     [currentDocumentState, pageDocument, serverDraftSnapshot]
+  );
+  const browserSceneSummary = useMemo(() => summarizeBuilderSceneStatus(pageDocument), [pageDocument]);
+  const serverDraftSceneSummary = useMemo(
+    () => summarizeBuilderSceneStatus(serverDraftSnapshot?.document ?? null),
+    [serverDraftSnapshot]
+  );
+  const serverPublishedSceneSummary = useMemo(
+    () => summarizeBuilderSceneStatus(serverPublishedSnapshot?.document ?? null),
+    [serverPublishedSnapshot]
   );
 
   const sectionIdByKey = useMemo(
@@ -4870,6 +4888,12 @@ export default function BuilderInteractiveHomePreview({
                 <span className="builder-preview-status-chip">
                   History {historyMeta.length ? `${historyMeta.cursor + 1}/${historyMeta.length}` : '0/0'}
                 </span>
+                <span className="builder-preview-status-chip">
+                  Scene {browserSceneSummary.sceneNodeCount}
+                </span>
+                <span className="builder-preview-status-chip">
+                  Authority {browserSceneSummary.sceneAuthorityNodeCount}
+                </span>
                 <span
                   className={`builder-preview-status-chip${
                     publishingReadiness.status === 'blocked'
@@ -5552,6 +5576,12 @@ export default function BuilderInteractiveHomePreview({
                   ? `Shared draft v${serverDraftMeta.revision} saved at ${formatDraftTimestamp(serverDraftMeta.savedAt, locale)} by ${serverDraftMeta.updatedBy ?? 'unknown'}`
                   : 'No shared draft yet. Save when this browser draft should become the team working draft.'}
               </p>
+              <p className="builder-preview-editor-note">
+                {formatSceneSummaryCopy(
+                  serverDraftSceneSummary,
+                  serverDraftMeta.persisted ? 'Shared draft scene' : 'Shared draft scene slot'
+                )}
+              </p>
               <div className="builder-preview-draft-actions">
                 {rollbackPromotionCandidate && serverDraftMeta.persisted ? (
                   <button
@@ -5608,6 +5638,12 @@ export default function BuilderInteractiveHomePreview({
                   : serverPublishedMeta.persisted && serverPublishedMeta.savedAt
                   ? `Live published v${serverPublishedMeta.revision} saved at ${formatDraftTimestamp(serverPublishedMeta.savedAt, locale)} by ${serverPublishedMeta.updatedBy ?? 'unknown'}`
                   : 'No live published version yet. Publishing copies the current shared draft into the public slot.'}
+              </p>
+              <p className="builder-preview-editor-note">
+                {formatSceneSummaryCopy(
+                  serverPublishedSceneSummary,
+                  serverPublishedMeta.persisted ? 'Live published scene' : 'Live published scene slot'
+                )}
               </p>
               <div className="builder-preview-draft-actions">
                 <button
@@ -5667,6 +5703,9 @@ export default function BuilderInteractiveHomePreview({
                       </p>
                       <p className="builder-preview-revision-meta">
                         Sections {record.sectionCount} · Hidden {record.hiddenSectionCount} · Overrides {record.overrideCount} · FAQ {record.faqCount} · Services {record.serviceCount}
+                      </p>
+                      <p className="builder-preview-revision-meta">
+                        Scene {record.sceneNodeCount} · Authority {record.sceneAuthorityNodeCount} · Bridge {record.sceneSeedNodeCount}
                       </p>
                       {pendingRevisionRestore?.record.revisionId === record.revisionId ? (
                         <>
@@ -7312,6 +7351,30 @@ function getPersistedContentGroupSource(
       candidate.sectionKey === sectionKey &&
       candidate.nodeId === contentGroupId
   )?.source;
+}
+
+function summarizeBuilderSceneStatus(
+  document: BuilderPageDocument | null | undefined
+): BuilderSceneStatusSummary {
+  const sceneNodes = Array.isArray(document?.scene?.nodes) ? document?.scene?.nodes ?? [] : [];
+  const sceneAuthorityNodeCount = sceneNodes.filter((node) => node.source === 'page-scene').length;
+
+  return {
+    sceneNodeCount: sceneNodes.length,
+    sceneAuthorityNodeCount,
+    sceneSeedNodeCount: sceneNodes.length - sceneAuthorityNodeCount,
+  };
+}
+
+function formatSceneSummaryCopy(
+  summary: BuilderSceneStatusSummary,
+  label: string
+): string {
+  if (summary.sceneNodeCount === 0) {
+    return `${label} is still empty. The current slot has no promoted page.scene groups yet.`;
+  }
+
+  return `${label}: ${summary.sceneNodeCount} promoted scene nodes · ${summary.sceneAuthorityNodeCount} authoritative · ${summary.sceneSeedNodeCount} bridge-derived.`;
 }
 
 function getEditableValues(

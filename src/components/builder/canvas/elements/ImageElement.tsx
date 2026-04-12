@@ -1,11 +1,55 @@
 import Image from 'next/image';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
 import { filtersToCSS, isDefaultFilters, type ImageFilters } from '@/lib/builder/canvas/filters';
+import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
 
 const PLACEHOLDER_SRC = '/images/placeholder-image.svg';
 
 function isPlaceholderOrEmpty(src: string): boolean {
   return !src || src === PLACEHOLDER_SRC;
+}
+
+/**
+ * Parse a cropAspect string (e.g. "4:3") into a numeric ratio.
+ * Returns null for empty / "Free" / unparseable values.
+ */
+function parseAspectRatio(cropAspect: string | undefined): number | null {
+  if (!cropAspect || cropAspect === 'Free') return null;
+  // Try matching from the known presets first
+  const preset = ASPECT_RATIOS.find((r) => r.label === cropAspect);
+  if (preset && preset.value) return preset.value;
+  // Fallback: parse "W:H" format
+  const parts = cropAspect.split(':');
+  if (parts.length === 2) {
+    const w = parseFloat(parts[0]);
+    const h = parseFloat(parts[1]);
+    if (w > 0 && h > 0) return w / h;
+  }
+  return null;
+}
+
+/**
+ * Build a CSS clip-path inset() that crops the element to the given
+ * aspect ratio, centered within the container rect.
+ */
+function aspectToClipPath(
+  containerWidth: number,
+  containerHeight: number,
+  targetRatio: number,
+): string | undefined {
+  const containerRatio = containerWidth / containerHeight;
+  if (Math.abs(containerRatio - targetRatio) < 0.01) return undefined; // already matches
+
+  if (containerRatio > targetRatio) {
+    // Container is wider than target — clip left/right
+    const visibleFraction = targetRatio / containerRatio;
+    const insetPct = ((1 - visibleFraction) / 2) * 100;
+    return `inset(0% ${insetPct.toFixed(1)}%)`;
+  }
+  // Container is taller than target — clip top/bottom
+  const visibleFraction = containerRatio / targetRatio;
+  const insetPct = ((1 - visibleFraction) / 2) * 100;
+  return `inset(${insetPct.toFixed(1)}% 0%)`;
 }
 
 export default function ImageElement({
@@ -63,6 +107,11 @@ export default function ImageElement({
       ? filtersToCSS(filters)
       : undefined;
 
+  const targetRatio = parseAspectRatio(node.content.cropAspect);
+  const clipPath = targetRatio
+    ? aspectToClipPath(node.rect.width, node.rect.height, targetRatio)
+    : undefined;
+
   return (
     <div
       style={{
@@ -72,6 +121,7 @@ export default function ImageElement({
         borderRadius: 'inherit',
         overflow: 'hidden',
         userSelect: 'none',
+        clipPath: clipPath || undefined,
       }}
     >
       <Image

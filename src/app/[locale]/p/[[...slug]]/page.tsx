@@ -90,6 +90,32 @@ export default async function BuilderPublishedPage({
   return (
     <>
       {fontsUrl && <link rel="stylesheet" href={fontsUrl} />}
+      <style>{`
+        @media (max-width: 768px) {
+          .builder-pub-main {
+            position: static !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: stretch !important;
+            padding: 16px !important;
+            gap: 12px !important;
+            min-height: auto !important;
+          }
+          .builder-pub-node {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: 100% !important;
+            height: auto !important;
+            min-height: 60px;
+          }
+          .builder-pub-node img {
+            position: relative !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+        }
+      `}</style>
       <JsonLd data={legalServiceSchema} />
 
       <SiteHeader
@@ -100,7 +126,7 @@ export default async function BuilderPublishedPage({
         currentSlug={slugPath}
       />
 
-      <main style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', minHeight: '100vh' }}>
+      <main className="builder-pub-main" style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', minHeight: '100vh' }}>
       {canvas.nodes
         .filter((node) => node.visible !== false)
         .sort((a, b) => a.zIndex - b.zIndex)
@@ -109,6 +135,7 @@ export default async function BuilderPublishedPage({
           return (
             <div
               key={node.id}
+              className="builder-pub-node"
               style={{
                 position: 'absolute',
                 left: node.rect.x,

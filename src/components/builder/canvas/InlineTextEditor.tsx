@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
@@ -80,6 +80,14 @@ export default function InlineTextEditor({
   onBlur,
 }: InlineTextEditorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [toolbarBelow, setToolbarBelow] = useState(false);
+
+  // Determine whether toolbar should appear below the element
+  useLayoutEffect(() => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    setToolbarBelow(rect.top < 50);
+  }, []);
 
   const editor = useEditor({
     extensions: [
@@ -168,7 +176,11 @@ export default function InlineTextEditor({
     >
       {/* ── Floating Toolbar ─────────────────────────────────────── */}
       {editor ? (
-        <div style={toolbarStyle}>
+        <div style={{
+          ...toolbarStyle,
+          top: toolbarBelow ? 'auto' : -44,
+          bottom: toolbarBelow ? -44 : 'auto',
+        }}>
           {/* Bold / Italic / Underline / Strikethrough */}
           <button
             type="button"

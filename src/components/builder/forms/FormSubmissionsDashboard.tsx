@@ -1,7 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import type { FormSubmission } from '@/lib/builder/forms/form-engine';
+
+type DateRange = 'all' | '7d' | '30d';
+type ReadFilter = 'all' | 'read' | 'unread';
 
 interface Props {
   initialSubmissions: FormSubmission[];
@@ -12,6 +15,58 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
   const [submissions, setSubmissions] = useState<FormSubmission[]>(initialSubmissions);
   const [selected, setSelected] = useState<FormSubmission | null>(null);
   const [loading, setLoading] = useState(false);
+
+  // Filter state
+  const [searchQuery, setSearchQuery] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('all');
+  const [dateRange, setDateRange] = useState<DateRange>('all');
+  const [readFilter, setReadFilter] = useState<ReadFilter>('all');
+
+  // Unique categories from all submissions
+  const categories = useMemo(() => {
+    const cats = new Set<string>();
+    for (const sub of submissions) {
+      const cat = String(sub.data?.category || '');
+      if (cat && cat !== '-') cats.add(cat);
+    }
+    return Array.from(cats).sort();
+  }, [submissions]);
+
+  // Filtered submissions
+  const filteredSubmissions = useMemo(() => {
+    const now = Date.now();
+    const query = searchQuery.toLowerCase().trim();
+
+    return submissions.filter((sub) => {
+      // Search filter: name, email, message
+      if (query) {
+        const name = String(sub.data?.name || '').toLowerCase();
+        const email = String(sub.data?.email || '').toLowerCase();
+        const message = String(sub.data?.message || '').toLowerCase();
+        if (!name.includes(query) && !email.includes(query) && !message.includes(query)) {
+          return false;
+        }
+      }
+
+      // Category filter
+      if (categoryFilter !== 'all') {
+        if (String(sub.data?.category || '') !== categoryFilter) return false;
+      }
+
+      // Date range filter
+      if (dateRange !== 'all') {
+        const submittedAt = new Date(sub.submittedAt).getTime();
+        const days = dateRange === '7d' ? 7 : 30;
+        if (now - submittedAt > days * 24 * 60 * 60 * 1000) return false;
+      }
+
+      // Read/unread filter
+      if (readFilter === 'read' && !sub.read) return false;
+      if (readFilter === 'unread' && sub.read) return false;
+
+      return true;
+    });
+  }, [submissions, searchQuery, categoryFilter, dateRange, readFilter]);
 
   const unreadCount = submissions.filter((s) => !s.read).length;
 
@@ -100,8 +155,91 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
         </button>
       </div>
 
+      {/* Filter Bar */}
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '0.75rem',
+        alignItems: 'center',
+        marginBottom: '1rem',
+        padding: '0.75rem 1rem',
+        background: '#f9fafb',
+        borderRadius: 8,
+        border: '1px solid #e5e7eb',
+      }}>
+        <input
+          type="text"
+          placeholder="Search name, email, message..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{
+            flex: '1 1 200px',
+            padding: '0.5rem 0.75rem',
+            fontSize: '0.85rem',
+            border: '1px solid #d1d5db',
+            borderRadius: 6,
+            outline: 'none',
+            minWidth: 160,
+          }}
+        />
+        <select
+          value={categoryFilter}
+          onChange={(e) => setCategoryFilter(e.target.value)}
+          style={{
+            padding: '0.5rem 0.75rem',
+            fontSize: '0.85rem',
+            border: '1px solid #d1d5db',
+            borderRadius: 6,
+            background: '#fff',
+            cursor: 'pointer',
+          }}
+        >
+          <option value="all">All categories</option>
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>{cat}</option>
+          ))}
+        </select>
+        <select
+          value={dateRange}
+          onChange={(e) => setDateRange(e.target.value as DateRange)}
+          style={{
+            padding: '0.5rem 0.75rem',
+            fontSize: '0.85rem',
+            border: '1px solid #d1d5db',
+            borderRadius: 6,
+            background: '#fff',
+            cursor: 'pointer',
+          }}
+        >
+          <option value="all">All time</option>
+          <option value="7d">Last 7 days</option>
+          <option value="30d">Last 30 days</option>
+        </select>
+        <select
+          value={readFilter}
+          onChange={(e) => setReadFilter(e.target.value as ReadFilter)}
+          style={{
+            padding: '0.5rem 0.75rem',
+            fontSize: '0.85rem',
+            border: '1px solid #d1d5db',
+            borderRadius: 6,
+            background: '#fff',
+            cursor: 'pointer',
+          }}
+        >
+          <option value="all">All status</option>
+          <option value="unread">Unread only</option>
+          <option value="read">Read only</option>
+        </select>
+        {(searchQuery || categoryFilter !== 'all' || dateRange !== 'all' || readFilter !== 'all') && (
+          <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>
+            {filteredSubmissions.length} of {submissions.length} shown
+          </span>
+        )}
+      </div>
+
       {/* Table */}
-      {submissions.length === 0 ? (
+      {filteredSubmissions.length === 0 ? (
         <div style={{
           textAlign: 'center',
           padding: '3rem 1rem',
@@ -109,7 +247,7 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
           borderRadius: 8,
           color: '#9ca3af',
         }}>
-          No submissions yet.
+          {submissions.length === 0 ? 'No submissions yet.' : 'No matching submissions.'}
         </div>
       ) : (
         <div style={{ overflowX: 'auto' }}>
@@ -133,7 +271,7 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
               </tr>
             </thead>
             <tbody>
-              {submissions.map((sub) => (
+              {filteredSubmissions.map((sub) => (
                 <tr
                   key={sub.submissionId}
                   onClick={() => setSelected(sub)}

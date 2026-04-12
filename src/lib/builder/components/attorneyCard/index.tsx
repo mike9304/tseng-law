@@ -33,19 +33,27 @@ function AttorneyCardRender({ node }: { node: { content: AttorneyCardContent } }
 
   return (
     <div
+      className="attorney-card-hover"
       style={{
         width: '100%',
         height: '100%',
         padding: 24,
-        borderRadius: 8,
+        borderRadius: 12,
         border: '1px solid #e2e8f0',
         background: '#ffffff',
         display: 'flex',
         gap: 20,
         alignItems: 'center',
         overflow: 'hidden',
+        transition: 'box-shadow 200ms ease, transform 200ms ease',
       }}
     >
+      <style>{`
+        .attorney-card-hover:hover {
+          box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+          transform: translateY(-2px) !important;
+        }
+      `}</style>
       <div
         style={{
           width: 80,

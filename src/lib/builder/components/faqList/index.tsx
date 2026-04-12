@@ -81,18 +81,19 @@ function FaqListRender({ node }: { node: { content: FaqListContent } }) {
                 <polyline points="6 9 12 15 18 9" />
               </svg>
             </button>
-            {isOpen && (
-              <div
-                style={{
-                  padding: '0 16px 14px',
-                  fontSize: 14,
-                  color: '#64748b',
-                  lineHeight: 1.6,
-                }}
-              >
-                {item.answer}
-              </div>
-            )}
+            <div
+              style={{
+                maxHeight: isOpen ? 500 : 0,
+                overflow: 'hidden',
+                transition: 'max-height 250ms ease, padding 250ms ease',
+                padding: isOpen ? '0 16px 14px' : '0 16px 0',
+                fontSize: 14,
+                color: '#64748b',
+                lineHeight: 1.6,
+              }}
+            >
+              {item.answer}
+            </div>
           </div>
         );
       })}

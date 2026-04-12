@@ -101,6 +101,14 @@ export default function AssetLibraryModal({
   }, [assets, search]);
 
   async function uploadFile(file: File) {
+    // Upload validation (P3-18 security)
+    const { validateUploadFile } = await import('@/lib/builder/canvas/upload-validation');
+    const validation = validateUploadFile(file);
+    if (!validation.valid) {
+      setError(validation.error || '파일 업로드 실패');
+      return;
+    }
+
     setIsUploading(true);
     setError(null);
     try {

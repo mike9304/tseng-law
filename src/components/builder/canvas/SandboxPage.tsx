@@ -12,6 +12,7 @@ import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
 import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
 import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
+import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { Locale } from '@/lib/locales';
@@ -182,6 +183,7 @@ export default function SandboxPage({
 
   return (
     <main className={styles.shell}>
+      <GoogleFontsLoader />
       <SandboxTopBar
         locale={locale}
         backend={backend}

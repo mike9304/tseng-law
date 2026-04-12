@@ -1,5 +1,5 @@
-import { get, list, put } from '@vercel/blob';
-import { mkdir, readdir, readFile, stat, writeFile } from 'fs/promises';
+import { del, get, list, put } from '@vercel/blob';
+import { mkdir, readdir, readFile, rm, stat, writeFile } from 'fs/promises';
 import path from 'path';
 import { randomUUID } from 'crypto';
 import { normalizeBuilderHomeLocale } from '@/lib/builder/persistence';
@@ -60,6 +60,7 @@ interface BuilderAssetStore {
   read(pathname: string): Promise<Buffer | null>;
   write(pathname: string, content: Buffer, contentType: BuilderImageMimeType): Promise<void>;
   list(locale: Locale, limit: number): Promise<BuilderAssetListItem[]>;
+  delete(pathname: string): Promise<void>;
 }
 
 export async function uploadBuilderImageAsset(input: {
@@ -118,6 +119,21 @@ export async function readBuilderImageAsset(input: {
     content,
     contentType,
   };
+}
+
+export async function deleteBuilderImageAsset(input: {
+  locale: string | null | undefined;
+  filename: string | null | undefined;
+}): Promise<void> {
+  const locale = normalizeBuilderHomeLocale(input.locale);
+  const filename = normalizeAssetPath([input.filename ?? '']);
+  if (!filename) {
+    throw new Error('A valid asset filename is required.');
+  }
+
+  const pathname = `${BUILDER_ASSET_ROOT}/${locale}/${filename}`;
+  const store = resolveBuilderAssetStore();
+  await store.delete(pathname);
 }
 
 export function buildBuilderAssetUrl(locale: Locale, filename: string) {
@@ -221,6 +237,14 @@ function createBlobBuilderAssetStore(): BuilderAssetStore {
         .sort((a, b) => Date.parse(b!.uploadedAt) - Date.parse(a!.uploadedAt))
         .slice(0, limit) as BuilderAssetListItem[];
     },
+    async delete(pathname: string) {
+      try {
+        await del(pathname);
+      } catch (error) {
+        if (isBlobNotFoundError(error)) return;
+        throw error;
+      }
+    },
   };
 }
 
@@ -275,6 +299,14 @@ function createFileBuilderAssetStore(): BuilderAssetStore {
         .filter(Boolean)
         .sort((a, b) => Date.parse(b!.uploadedAt) - Date.parse(a!.uploadedAt))
         .slice(0, limit) as BuilderAssetListItem[];
+    },
+    async delete(pathname: string) {
+      try {
+        await rm(resolveRuntimeAssetPath(pathname), { force: true });
+      } catch (error) {
+        if (isNodeNotFoundError(error)) return;
+        throw error;
+      }
     },
   };
 }

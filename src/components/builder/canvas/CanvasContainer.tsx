@@ -9,6 +9,8 @@ import {
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
 import { builderCanvasNodeKinds, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { createShortcutHandler, NUDGE_PX, NUDGE_LARGE_PX, type CanvasAction } from '@/lib/builder/canvas/shortcuts';
+import { computeSnap, type Rect } from '@/lib/builder/canvas/snap';
 import styles from './SandboxPage.module.css';
 
 type InteractionState =
@@ -60,7 +62,11 @@ function clampRect(rect: BuilderCanvasNode['rect']): BuilderCanvasNode['rect'] {
   return { x, y, width, height };
 }
 
-export default function CanvasContainer() {
+export default function CanvasContainer({
+  onRequestAssetLibrary,
+}: {
+  onRequestAssetLibrary?: (nodeId: string) => void;
+}) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const {
     selectedNodeId,
@@ -107,65 +113,37 @@ export default function CanvasContainer() {
   }, [contextMenu]);
 
   useEffect(() => {
-    function handleKeyDown(event: KeyboardEvent) {
-      const target = event.target as HTMLElement | null;
-      if (target && (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) || target.isContentEditable)) {
-        return;
-      }
-
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'z') {
-        event.preventDefault();
-        if (event.shiftKey) {
-          redo();
-        } else {
-          undo();
+    function dispatch(action: NonNullable<CanvasAction>) {
+      switch (action) {
+        case 'undo': undo(); break;
+        case 'redo': redo(); break;
+        case 'delete': deleteSelectedNode(); break;
+        case 'duplicate': duplicateSelectedNode(); break;
+        case 'selectAll': {
+          const allNodes = useBuilderCanvasStore.getState().document?.nodes.filter((n) => n.visible) ?? [];
+          setSelectedNodeIds(allNodes.map((n) => n.id), allNodes[allNodes.length - 1]?.id ?? null);
+          break;
         }
-        return;
-      }
-
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'y') {
-        event.preventDefault();
-        redo();
-        return;
-      }
-
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'd') {
-        event.preventDefault();
-        duplicateSelectedNode();
-        return;
-      }
-
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'a') {
-        event.preventDefault();
-        setSelectedNodeIds(visibleNodes.map((node) => node.id), visibleNodes[visibleNodes.length - 1]?.id ?? null);
-        return;
-      }
-
-      if (event.key === 'Delete' || event.key === 'Backspace') {
-        event.preventDefault();
-        deleteSelectedNode();
-        return;
-      }
-
-      const step = event.shiftKey ? 10 : 1;
-      if (event.key === 'ArrowLeft') {
-        event.preventDefault();
-        nudgeSelectedNode(-step, 0);
-      } else if (event.key === 'ArrowRight') {
-        event.preventDefault();
-        nudgeSelectedNode(step, 0);
-      } else if (event.key === 'ArrowUp') {
-        event.preventDefault();
-        nudgeSelectedNode(0, -step);
-      } else if (event.key === 'ArrowDown') {
-        event.preventDefault();
-        nudgeSelectedNode(0, step);
+        case 'deselect': setSelectedNodeIds([], null); break;
+        case 'bringForward': bringSelectedNodeForward(); break;
+        case 'sendBackward': sendSelectedNodeBackward(); break;
+        case 'bringToFront': bringSelectedNodeToFront(); break;
+        case 'sendToBack': sendSelectedNodeToBack(); break;
+        case 'nudgeUp': nudgeSelectedNode(0, -NUDGE_PX); break;
+        case 'nudgeDown': nudgeSelectedNode(0, NUDGE_PX); break;
+        case 'nudgeLeft': nudgeSelectedNode(-NUDGE_PX, 0); break;
+        case 'nudgeRight': nudgeSelectedNode(NUDGE_PX, 0); break;
+        case 'nudgeUpLarge': nudgeSelectedNode(0, -NUDGE_LARGE_PX); break;
+        case 'nudgeDownLarge': nudgeSelectedNode(0, NUDGE_LARGE_PX); break;
+        case 'nudgeLeftLarge': nudgeSelectedNode(-NUDGE_LARGE_PX, 0); break;
+        case 'nudgeRightLarge': nudgeSelectedNode(NUDGE_LARGE_PX, 0); break;
       }
     }
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [deleteSelectedNode, duplicateSelectedNode, nudgeSelectedNode, redo, setSelectedNodeIds, undo, visibleNodes]);
+    const handler = createShortcutHandler(dispatch);
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [bringSelectedNodeForward, bringSelectedNodeToFront, deleteSelectedNode, duplicateSelectedNode, nudgeSelectedNode, redo, sendSelectedNodeBackward, sendSelectedNodeToBack, setSelectedNodeIds, undo]);
 
   useEffect(() => {
     if (!interaction) return undefined;
@@ -175,6 +153,32 @@ export default function CanvasContainer() {
       const deltaX = event.clientX - activeInteraction.originX;
       const deltaY = event.clientY - activeInteraction.originY;
       if (activeInteraction.type === 'move') {
+        // Use snap engine for single-node moves
+        if (activeInteraction.nodeIds.length === 1) {
+          const nodeId = activeInteraction.nodeIds[0];
+          const baseRect = activeInteraction.startRects[nodeId];
+          if (baseRect) {
+            const tentative: Rect = {
+              x: baseRect.x + deltaX,
+              y: baseRect.y + deltaY,
+              width: baseRect.width,
+              height: baseRect.height,
+            };
+            const currentNodes = useBuilderCanvasStore.getState().document?.nodes ?? [];
+            const otherRects: Rect[] = currentNodes
+              .filter((n) => n.id !== nodeId && n.visible)
+              .map((n) => n.rect);
+            const { snappedRect } = computeSnap(tentative, otherRects, 0, {
+              width: STAGE_WIDTH,
+              height: STAGE_HEIGHT,
+            });
+            updateSelectedNodes(activeInteraction.nodeIds, (node) => ({
+              ...node,
+              rect: clampRect(snappedRect),
+            }), 'transient');
+            return;
+          }
+        }
         updateSelectedNodes(activeInteraction.nodeIds, (node) => {
           const baseRect = activeInteraction.startRects[node.id] ?? node.rect;
           return {
@@ -407,6 +411,7 @@ export default function CanvasContainer() {
                 y: Math.max(32, Math.min(STAGE_HEIGHT - 240, rawY)),
               });
             }}
+            onOpenAssetLibrary={onRequestAssetLibrary}
             onMoveStart={(nodeId, event) => {
               event.preventDefault();
               event.stopPropagation();

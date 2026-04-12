@@ -19,6 +19,7 @@ interface CanvasNodeProps {
   selected: boolean;
   onSelect: (nodeId: string, additive: boolean) => void;
   onContextMenu: (nodeId: string, event: React.MouseEvent<HTMLDivElement>) => void;
+  onOpenAssetLibrary?: (nodeId: string) => void;
   onMoveStart: (nodeId: string, event: React.PointerEvent<HTMLDivElement>) => void;
   onResizeStart: (nodeId: string, handle: ResizeHandle, event: React.PointerEvent<HTMLButtonElement>) => void;
 }
@@ -28,6 +29,7 @@ export default function CanvasNode({
   selected,
   onSelect,
   onContextMenu,
+  onOpenAssetLibrary,
   onMoveStart,
   onResizeStart,
 }: CanvasNodeProps) {
@@ -59,6 +61,10 @@ export default function CanvasNode({
       onContextMenu={(event) => {
         event.preventDefault();
         onContextMenu(node.id, event);
+      }}
+      onClick={() => {
+        if (node.kind !== 'image' || !selected || node.locked) return;
+        onOpenAssetLibrary?.(node.id);
       }}
     >
       <div className={styles.nodeBadge}>

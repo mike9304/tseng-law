@@ -15,6 +15,7 @@ export interface BuilderComponentInspectorProps {
   node: BuilderCanvasNode;
   onUpdate: (props: Record<string, unknown>) => void;
   disabled?: boolean;
+  onRequestAssetLibrary?: () => void;
 }
 
 export interface BuilderComponentDefinition {

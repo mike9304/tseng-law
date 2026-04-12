@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
+  deleteBuilderImageAsset,
   listBuilderImageAssets,
   uploadBuilderImageAsset,
 } from '@/lib/builder/assets';
@@ -16,7 +17,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       ok: true,
       assets: assets.map((asset) => ({
+        backend: asset.backend,
         locale: asset.locale,
+        pathname: asset.pathname,
         url: asset.url,
         filename: asset.filename,
         contentType: asset.contentType,
@@ -63,6 +66,26 @@ export async function POST(request: NextRequest) {
       {
         ok: false,
         error: error instanceof Error ? error.message : 'Failed to upload image asset.',
+      },
+      { status: 400 }
+    );
+  }
+}
+
+export async function DELETE(request: NextRequest) {
+  try {
+    const payload = await request.json();
+    await deleteBuilderImageAsset({
+      locale: request.nextUrl.searchParams.get('locale') ?? payload?.locale,
+      filename: typeof payload?.filename === 'string' ? payload.filename : null,
+    });
+
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : 'Failed to delete image asset.',
       },
       { status: 400 }
     );

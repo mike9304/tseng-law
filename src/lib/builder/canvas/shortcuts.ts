@@ -49,6 +49,7 @@ export function matchShortcut(e: KeyboardEvent): CanvasAction {
   if (meta && !shift && key === 'z') return 'undo';
   if (meta && shift && key === 'z') return 'redo';
   if (meta && shift && key === 'Z') return 'redo';
+  if (meta && !shift && key === 'y') return 'redo';
 
   // Delete
   if (key === 'Delete' || key === 'Backspace') return 'delete';

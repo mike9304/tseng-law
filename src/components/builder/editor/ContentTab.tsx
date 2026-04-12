@@ -8,10 +8,12 @@ export default function ContentTab({
   node,
   disabled = false,
   onUpdateContent,
+  onRequestAssetLibrary,
 }: {
   node: BuilderCanvasNode;
   disabled?: boolean;
   onUpdateContent: (content: Record<string, unknown>) => void;
+  onRequestAssetLibrary?: () => void;
 }) {
   const component = getComponent(node.kind);
   const Inspector = component?.Inspector;
@@ -26,7 +28,12 @@ export default function ContentTab({
 
   return (
     <div className={styles.inspectorFormStack}>
-      <Inspector node={node} onUpdate={onUpdateContent} disabled={disabled} />
+      <Inspector
+        node={node}
+        onUpdate={onUpdateContent}
+        disabled={disabled}
+        onRequestAssetLibrary={onRequestAssetLibrary}
+      />
     </div>
   );
 }

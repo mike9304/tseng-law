@@ -9,18 +9,23 @@ import {
   type BuilderCanvasNodeKind,
   type BuilderCanvasNodeStyle,
 } from '@/lib/builder/canvas/types';
+import {
+  createHistory,
+  pushHistory,
+  undoHistory,
+  redoHistory,
+  type HistoryState,
+} from '@/lib/builder/canvas/history';
 
 type DraftSaveState = 'idle' | 'saving' | 'saved' | 'error';
 type MutationMode = 'commit' | 'transient';
-const HISTORY_LIMIT = 100;
 
 interface BuilderCanvasStoreState {
   document: BuilderCanvasDocument | null;
   selectedNodeId: string | null;
   selectedNodeIds: string[];
   draftSaveState: DraftSaveState;
-  historyPast: BuilderCanvasDocument[];
-  historyFuture: BuilderCanvasDocument[];
+  history: HistoryState<BuilderCanvasDocument> | null;
   mutationBaseDocument: BuilderCanvasDocument | null;
   canUndo: boolean;
   canRedo: boolean;
@@ -101,10 +106,6 @@ function sameDocumentContent(left: BuilderCanvasDocument, right: BuilderCanvasDo
     && JSON.stringify(left.nodes) === JSON.stringify(right.nodes);
 }
 
-function clampHistory(history: BuilderCanvasDocument[]): BuilderCanvasDocument[] {
-  return history.slice(-HISTORY_LIMIT);
-}
-
 function resolveSelectedNodeId(
   document: BuilderCanvasDocument,
   preferredNodeId: string | null,
@@ -148,18 +149,17 @@ function applyCommittedDocument(
   selectedNodeId = state.selectedNodeId,
   selectedNodeIds = state.selectedNodeIds,
 ): Partial<BuilderCanvasStoreState> | BuilderCanvasStoreState {
-  if (!state.document || sameDocumentContent(document, state.document)) return state;
-  const historyPast = clampHistory([...state.historyPast, state.document]);
+  if (!state.document || !state.history || sameDocumentContent(document, state.document)) return state;
+  const nextHistory = pushHistory(state.history, document);
   const nextSelectedNodeId = resolveSelectedNodeId(document, selectedNodeId);
   return {
     document,
     selectedNodeId: nextSelectedNodeId,
     selectedNodeIds: resolveSelectedNodeIds(document, selectedNodeIds, nextSelectedNodeId),
-    historyPast,
-    historyFuture: [],
+    history: nextHistory,
     mutationBaseDocument: null,
-    canUndo: historyPast.length > 0,
-    canRedo: false,
+    canUndo: nextHistory.canUndo,
+    canRedo: nextHistory.canRedo,
   };
 }
 
@@ -168,8 +168,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   selectedNodeId: null,
   selectedNodeIds: [],
   draftSaveState: 'idle',
-  historyPast: [],
-  historyFuture: [],
+  history: null,
   mutationBaseDocument: null,
   canUndo: false,
   canRedo: false,
@@ -179,8 +178,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       selectedNodeId: document.nodes[0]?.id ?? null,
       selectedNodeIds: document.nodes[0]?.id ? [document.nodes[0].id] : [],
       draftSaveState: 'idle',
-      historyPast: [],
-      historyFuture: [],
+      history: createHistory(document),
       mutationBaseDocument: null,
       canUndo: false,
       canRedo: false,
@@ -232,55 +230,52 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     }),
   commitMutationSession: () =>
     set((state) => {
-      if (!state.document || !state.mutationBaseDocument) return state;
+      if (!state.document || !state.mutationBaseDocument || !state.history) return state;
       if (sameDocumentContent(state.document, state.mutationBaseDocument)) {
         return {
           mutationBaseDocument: null,
         };
       }
-      const historyPast = clampHistory([...state.historyPast, state.mutationBaseDocument]);
+      const nextHistory = pushHistory(state.history, state.document);
       return {
-        historyPast,
-        historyFuture: [],
+        history: nextHistory,
         mutationBaseDocument: null,
-        canUndo: historyPast.length > 0,
-        canRedo: false,
+        canUndo: nextHistory.canUndo,
+        canRedo: nextHistory.canRedo,
       };
     }),
   undo: () =>
     set((state) => {
-      if (!state.document || state.historyPast.length === 0) return state;
-      const previousDocument = state.historyPast[state.historyPast.length - 1];
-      const historyPast = state.historyPast.slice(0, -1);
-      const historyFuture = [state.document, ...state.historyFuture].slice(0, HISTORY_LIMIT);
+      if (!state.document || !state.history) return state;
+      const result = undoHistory(state.history);
+      if (!result) return state;
+      const previousDocument = result.snapshot;
       const nextSelectedNodeId = resolveSelectedNodeId(previousDocument, state.selectedNodeId);
       return {
         document: previousDocument,
         selectedNodeId: nextSelectedNodeId,
         selectedNodeIds: resolveSelectedNodeIds(previousDocument, state.selectedNodeIds, nextSelectedNodeId),
-        historyPast,
-        historyFuture,
+        history: result.state,
         mutationBaseDocument: null,
-        canUndo: historyPast.length > 0,
-        canRedo: historyFuture.length > 0,
+        canUndo: result.state.canUndo,
+        canRedo: result.state.canRedo,
       };
     }),
   redo: () =>
     set((state) => {
-      if (!state.document || state.historyFuture.length === 0) return state;
-      const nextDocument = state.historyFuture[0];
-      const historyFuture = state.historyFuture.slice(1);
-      const historyPast = clampHistory([...state.historyPast, state.document]);
+      if (!state.document || !state.history) return state;
+      const result = redoHistory(state.history);
+      if (!result) return state;
+      const nextDocument = result.snapshot;
       const nextSelectedNodeId = resolveSelectedNodeId(nextDocument, state.selectedNodeId);
       return {
         document: nextDocument,
         selectedNodeId: nextSelectedNodeId,
         selectedNodeIds: resolveSelectedNodeIds(nextDocument, state.selectedNodeIds, nextSelectedNodeId),
-        historyPast,
-        historyFuture,
+        history: result.state,
         mutationBaseDocument: null,
-        canUndo: historyPast.length > 0,
-        canRedo: historyFuture.length > 0,
+        canUndo: result.state.canUndo,
+        canRedo: result.state.canRedo,
       };
     }),
   addNode: (node) =>
@@ -341,6 +336,14 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (!state.document) return state;
       const existingNode = state.document.nodes.find((node) => node.id === nodeId);
       if (!existingNode) return state;
+      // Only merge keys that already exist in the node's content (guard against unknown keys)
+      const validContent: Record<string, unknown> = {};
+      for (const key of Object.keys(content)) {
+        if (key in existingNode.content) {
+          validContent[key] = content[key];
+        }
+      }
+      if (Object.keys(validContent).length === 0) return state;
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((node) => (
           node.id === nodeId
@@ -348,7 +351,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
                 ...node,
                 content: {
                   ...node.content,
-                  ...content,
+                  ...validContent,
                 },
               } as BuilderCanvasNode
             : node

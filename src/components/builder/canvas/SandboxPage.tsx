@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import CanvasContainer from '@/components/builder/canvas/CanvasContainer';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
@@ -31,7 +32,9 @@ export default function SandboxPage({
     canRedo,
     replaceDocument,
     setDraftSaveState,
+    updateNodeContent,
   } = useBuilderCanvasStore();
+  const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
 
   useEffect(() => {
     replaceDocument(initialDocument);
@@ -69,6 +72,16 @@ export default function SandboxPage({
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [document, selectedNodeId],
   );
+  const assetLibraryNode = useMemo(
+    () => document?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
+    [assetLibraryNodeId, document],
+  );
+
+  useEffect(() => {
+    if (assetLibraryNode?.kind !== 'image') {
+      setAssetLibraryNodeId(null);
+    }
+  }, [assetLibraryNode?.kind, assetLibraryNodeId]);
 
   return (
     <main className={styles.shell}>
@@ -112,7 +125,7 @@ export default function SandboxPage({
         </div>
         <div className={styles.metaCard}>
           <span>Out of scope</span>
-          <strong>asset library, nested container semantics, main builder integration</strong>
+          <strong>asset history, nested container semantics, main builder integration</strong>
         </div>
       </section>
 
@@ -121,9 +134,28 @@ export default function SandboxPage({
           <SandboxLayersPanel />
           <SandboxCatalogPanel />
         </div>
-        <CanvasContainer />
-        <SandboxInspectorPanel />
+        <CanvasContainer onRequestAssetLibrary={setAssetLibraryNodeId} />
+        <SandboxInspectorPanel
+          onRequestAssetLibrary={() => {
+            if (selectedNode?.kind === 'image') {
+              setAssetLibraryNodeId(selectedNode.id);
+            }
+          }}
+        />
       </section>
+
+      {assetLibraryNode?.kind === 'image' ? (
+        <AssetLibraryModal
+          open
+          locale={locale}
+          selectedUrl={assetLibraryNode.content.src}
+          onClose={() => setAssetLibraryNodeId(null)}
+          onSelect={(asset) => {
+            updateNodeContent(assetLibraryNode.id, { src: asset.url });
+            setAssetLibraryNodeId(null);
+          }}
+        />
+      ) : null}
     </main>
   );
 }

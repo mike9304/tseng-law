@@ -8,7 +8,7 @@ export default defineComponent({
   category: 'basic',
   icon: '🖼',
   defaultContent: {
-    src: '',
+    src: '/images/placeholder-image.svg',
     alt: '',
     fit: 'cover' as const,
   },

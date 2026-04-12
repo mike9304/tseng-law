@@ -92,7 +92,11 @@ function updateRectField(
   };
 }
 
-export default function SandboxInspectorPanel() {
+export default function SandboxInspectorPanel({
+  onRequestAssetLibrary,
+}: {
+  onRequestAssetLibrary: () => void;
+}) {
   const {
     document,
     selectedNodeId,
@@ -107,7 +111,6 @@ export default function SandboxInspectorPanel() {
     sendSelectedNodeToBack,
   } = useBuilderCanvasStore();
   const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content'>('layout');
-
   const selectedNode = useMemo(
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [document?.nodes, selectedNodeId],
@@ -279,6 +282,11 @@ export default function SandboxInspectorPanel() {
                 node={selectedNode}
                 disabled={selectedNode.locked}
                 onUpdateContent={(content) => updateNodeContent(selectedNode.id, content)}
+                onRequestAssetLibrary={
+                  selectedNode.kind === 'image'
+                    ? onRequestAssetLibrary
+                    : undefined
+                }
               />
             ) : null}
 
@@ -323,6 +331,7 @@ export default function SandboxInspectorPanel() {
           캔버스나 layers 에서 node 를 선택하면 layout 값과 lock/hidden 토글이 여기 표시됩니다.
         </p>
       )}
+
     </aside>
   );
 }

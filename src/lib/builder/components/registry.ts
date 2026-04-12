@@ -1,0 +1,25 @@
+/**
+ * Phase 3 — Component registry.
+ *
+ * Import this file to auto-register all built-in components.
+ * New components: add a folder under src/lib/builder/components/<kind>/
+ * with an index.ts that calls defineComponent(), then import it here.
+ */
+
+// Re-export the registry API
+export { defineComponent, getComponent, listComponents, listComponentsByCategory } from './define';
+export type {
+  BuilderComponentDefinition,
+  BuilderComponentCategory,
+  BuilderComponentRenderProps,
+  BuilderComponentInspectorProps,
+} from './define';
+
+// Auto-register built-in components by importing their side-effectful modules
+import './text';
+import './image';
+import './button';
+// Phase 3 additions (Codex P3-02):
+// import './heading';
+// import './container';
+// import './section';

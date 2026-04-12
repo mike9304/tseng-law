@@ -95,6 +95,9 @@ export interface BuilderSnapshotHistorySummary {
   overrideCount: number;
   faqCount: number;
   serviceCount: number;
+  sceneNodeCount: number;
+  sceneAuthorityNodeCount: number;
+  sceneSeedNodeCount: number;
 }
 
 export interface BuilderSnapshotHistoryListResult {
@@ -781,6 +784,10 @@ function summarizeBuilderSnapshotHistoryRecord(
     state && typeof state === 'object' && Array.isArray((state as BuilderHomeDocumentState).serviceItems)
       ? (state as BuilderHomeDocumentState).serviceItems
       : [];
+  const sceneNodes = Array.isArray(record.snapshot.document.scene?.nodes)
+    ? record.snapshot.document.scene?.nodes ?? []
+    : [];
+  const sceneAuthorityNodeCount = sceneNodes.filter((node) => node.source === 'page-scene').length;
 
   return {
     revisionId: record.revisionId,
@@ -798,6 +805,9 @@ function summarizeBuilderSnapshotHistoryRecord(
     overrideCount: Object.keys(overrides).length,
     faqCount: faqItems.length,
     serviceCount: serviceItems.length,
+    sceneNodeCount: sceneNodes.length,
+    sceneAuthorityNodeCount,
+    sceneSeedNodeCount: sceneNodes.length - sceneAuthorityNodeCount,
   };
 }
 

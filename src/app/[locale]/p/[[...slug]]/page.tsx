@@ -9,6 +9,8 @@ import { buildPageSeo } from '@/lib/builder/seo/seo-model';
 import { generateLegalServiceSchema } from '@/lib/builder/seo/schema-org';
 import { getSiteUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
+import SiteHeader from '@/components/builder/published/SiteHeader';
+import SiteFooter from '@/components/builder/published/SiteFooter';
 import '@/lib/builder/components/registry';
 
 export const dynamic = 'force-dynamic';
@@ -90,33 +92,13 @@ export default async function BuilderPublishedPage({
       {fontsUrl && <link rel="stylesheet" href={fontsUrl} />}
       <JsonLd data={legalServiceSchema} />
 
-      {/* Site Navigation Header */}
-      {navItems.length > 0 && (
-        <header style={{
-          maxWidth: 1200,
-          margin: '0 auto',
-          padding: '16px 24px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          borderBottom: '1px solid #e5e7eb',
-        }}>
-          <strong style={{ fontSize: '1.1rem', color: '#0f172a' }}>
-            {settings?.firmName || site.name}
-          </strong>
-          <nav style={{ display: 'flex', gap: 24 }}>
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={item.href}
-                style={{ color: '#374151', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}
-              >
-                {typeof item.label === 'string' ? item.label : (item.label as Record<string, string>)[locale] || item.label.ko}
-              </a>
-            ))}
-          </nav>
-        </header>
-      )}
+      <SiteHeader
+        siteName={site.name}
+        settings={settings}
+        navItems={navItems}
+        locale={locale}
+        currentSlug={slugPath}
+      />
 
       <main style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', minHeight: '100vh' }}>
       {canvas.nodes
@@ -158,32 +140,12 @@ export default async function BuilderPublishedPage({
         })}
     </main>
 
-      {/* Site Footer */}
-      <footer style={{
-        maxWidth: 1200,
-        margin: '0 auto',
-        padding: '32px 24px',
-        borderTop: '1px solid #e5e7eb',
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: 16,
-        fontSize: '0.85rem',
-        color: '#6b7280',
-      }}>
-        <div>
-          <strong style={{ color: '#374151' }}>{settings?.firmName || site.name}</strong>
-          {settings?.address && <span style={{ marginLeft: 12 }}>{settings.address}</span>}
-        </div>
-        <div style={{ display: 'flex', gap: 16 }}>
-          {settings?.phone && <span>Tel: {settings.phone}</span>}
-          {settings?.email && <a href={`mailto:${settings.email}`} style={{ color: '#116dff', textDecoration: 'none' }}>{settings.email}</a>}
-        </div>
-        <div style={{ width: '100%', textAlign: 'center', marginTop: 8, fontSize: '0.75rem' }}>
-          © {new Date().getFullYear()} {settings?.firmName || site.name}. All rights reserved.
-        </div>
-      </footer>
+      <SiteFooter
+        siteName={site.name}
+        settings={settings}
+        navItems={navItems}
+        locale={locale}
+      />
     </>
   );
 }

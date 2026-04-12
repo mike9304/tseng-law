@@ -6,6 +6,10 @@ import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import SectionLabel from '@/components/SectionLabel';
 import HeroMediaBackground from '@/components/HeroMediaBackground';
+import {
+  homeHeroButtonSurfaceIds,
+  homeHeroTextSurfaceIds,
+} from '@/lib/builder/registry';
 
 const quickMenus = {
   ko: [
@@ -53,12 +57,22 @@ export default function HeroSearch({ locale }: { locale: Locale }) {
     <section className="hero" id="hero" data-tone="dark">
       <HeroMediaBackground />
       <div className="container hero-inner">
-        <div className="hero-copy">
-          <SectionLabel>{hero.label}</SectionLabel>
-          <h1 className="hero-title">{hero.title}</h1>
-          <p className="hero-subtitle">{hero.subtitle}</p>
+        <div className="hero-copy" data-builder-node-key="copy">
+          <SectionLabel data-builder-surface-key={homeHeroTextSurfaceIds[0]}>
+            {hero.label}
+          </SectionLabel>
+          <h1 className="hero-title" data-builder-surface-key={homeHeroTextSurfaceIds[1]}>
+            {hero.title}
+          </h1>
+          <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
+            {hero.subtitle}
+          </p>
           <div className="hero-links-minimal">
-            <Link href={`/${locale}/columns`} className="link-underline">
+            <Link
+              href={`/${locale}/columns`}
+              className="link-underline"
+              data-builder-surface-key={homeHeroButtonSurfaceIds[0]}
+            >
               {locale === 'ko' ? '호정칼럼 보기' : locale === 'zh-hant' ? '查看專欄內容' : 'View Columns'}
             </Link>
           </div>
@@ -67,6 +81,7 @@ export default function HeroSearch({ locale }: { locale: Locale }) {
       <div className="hero-search-wrapper">
         <div className="container">
           <div ref={wrapRef} className="hero-search-dropdown-wrap">
+          <div data-builder-node-key="search" style={{ display: 'contents' }}>
             <form className="hero-search-bar overlap" action={`/${locale}/search`} method="get">
               <input
                 className="search-input hero-search-input"
@@ -95,6 +110,7 @@ export default function HeroSearch({ locale }: { locale: Locale }) {
                 ))}
               </nav>
             )}
+          </div>
           </div>
         </div>
       </div>

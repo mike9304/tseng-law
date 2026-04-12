@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { unstable_noStore as noStore } from 'next/cache';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { getAllColumnPosts } from '@/lib/columns';
 import JsonLd from '@/components/JsonLd';
@@ -12,9 +13,15 @@ import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import Reveal from '@/components/Reveal';
+import type { FAQItem } from '@/data/faq-content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
+import BuilderPublishedHomeRenderer from '@/components/builder/BuilderPublishedHomeRenderer';
+import { resolveInsightsDatasetPosts } from '@/lib/builder/datasets';
+import { readBuilderHomeSnapshot } from '@/lib/builder/persistence';
+
+export const dynamic = 'force-dynamic';
 
 const homeSeoCopy: Record<Locale, { title: string; description: string; keywords: string[] }> = {
   ko: {
@@ -49,11 +56,16 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   });
 }
 
-export default function HomePage({ params }: { params: { locale: Locale } }) {
+export default async function HomePage({ params }: { params: { locale: Locale } }) {
+  noStore();
   const locale = normalizeLocale(params.locale);
   const faqItems = faqContent[locale];
-  const allPosts = getAllColumnPosts(locale);
+  const [publishedSnapshot, allPosts] = await Promise.all([
+    readBuilderHomeSnapshot('published', locale),
+    Promise.resolve(getAllColumnPosts(locale)),
+  ]);
   const profile = getAttorneyProfile(locale, primaryAttorneySlug);
+  const usePublishedBuilderSource = publishedSnapshot.persisted;
 
   return (
     <>
@@ -75,9 +87,36 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
           })}
         />
       ) : null}
+      {usePublishedBuilderSource ? (
+        <BuilderPublishedHomeRenderer
+          locale={locale}
+          document={publishedSnapshot.snapshot.document}
+          posts={resolveInsightsDatasetPosts(publishedSnapshot.snapshot.document, allPosts)}
+          fallbackFaqItems={faqItems}
+          state={publishedSnapshot.snapshot.state}
+          revealSections
+        />
+      ) : (
+        <LegacyHomePage locale={locale} posts={allPosts} faqItems={faqItems} />
+      )}
+    </>
+  );
+}
+
+function LegacyHomePage({
+  locale,
+  posts,
+  faqItems,
+}: {
+  locale: Locale;
+  posts: ReturnType<typeof getAllColumnPosts>;
+  faqItems: FAQItem[];
+}) {
+  return (
+    <>
       <HeroSearch locale={locale} />
       <Reveal>
-        <InsightsArchiveSection locale={locale} posts={allPosts} />
+        <InsightsArchiveSection locale={locale} posts={posts} />
       </Reveal>
       <Reveal>
         <ServicesBento locale={locale} id="practice" variant="default" />

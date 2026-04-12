@@ -2,6 +2,10 @@
 
 import { useEffect, useMemo } from 'react';
 import CanvasContainer from '@/components/builder/canvas/CanvasContainer';
+import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
+import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
+import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
+import SandboxTopBar from '@/components/builder/canvas/SandboxTopBar';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { Locale } from '@/lib/locales';
@@ -21,13 +25,12 @@ export default function SandboxPage({
   const {
     document,
     selectedNodeId,
+    selectedNodeIds,
     draftSaveState,
     canUndo,
     canRedo,
     replaceDocument,
     setDraftSaveState,
-    undo,
-    redo,
   } = useBuilderCanvasStore();
 
   useEffect(() => {
@@ -69,52 +72,31 @@ export default function SandboxPage({
 
   return (
     <main className={styles.shell}>
-      <header className={styles.header}>
-        <div>
-          <h1>Freeform Sandbox</h1>
-          <p>
-            Phase 1 canvas runtime MVP 입니다. 이 화면은 section compatibility layer 와 분리된
-            실험장으로, text/image/button absolute placement 와 draft autosave 만 검증합니다.
-          </p>
-        </div>
-        <div className={styles.status}>
-          <button
-            type="button"
-            className={styles.commandButton}
-            onClick={undo}
-            disabled={!canUndo}
-          >
-            Undo
-          </button>
-          <button
-            type="button"
-            className={styles.commandButton}
-            onClick={redo}
-            disabled={!canRedo}
-          >
-            Redo
-          </button>
-          <span className={`${styles.statusBadge} ${
-            draftSaveState === 'saving'
-              ? styles.statusBadgeSaving
-              : draftSaveState === 'saved'
-                ? styles.statusBadgeSaved
-                : draftSaveState === 'error'
-                  ? styles.statusBadgeError
-                  : ''
-          }`}
-          >
-            draft: {draftSaveState}
-          </span>
-          <span className={styles.statusBadge}>backend: {backend}</span>
-          <span className={styles.statusBadge}>locale: {locale}</span>
-        </div>
-      </header>
+      <SandboxTopBar
+        locale={locale}
+        backend={backend}
+        draftSaveState={draftSaveState}
+        nodeCount={document?.nodes.length ?? 0}
+        selectedSummary={
+          selectedNodeIds.length > 1
+            ? `${selectedNodeIds.length} nodes`
+            : selectedNode
+              ? `${selectedNode.kind} · ${selectedNode.id}`
+              : 'none'
+        }
+        selectionCount={selectedNodeIds.length}
+      />
 
       <section className={styles.metaGrid}>
         <div className={styles.metaCard}>
           <span>Selected node</span>
-          <strong>{selectedNode ? `${selectedNode.kind} · ${selectedNode.id}` : 'none'}</strong>
+          <strong>
+            {selectedNodeIds.length > 1
+              ? `${selectedNodeIds.length} selected`
+              : selectedNode
+                ? `${selectedNode.kind} · ${selectedNode.id}`
+                : 'none'}
+          </strong>
         </div>
         <div className={styles.metaCard}>
           <span>Document nodes</span>
@@ -122,7 +104,7 @@ export default function SandboxPage({
         </div>
         <div className={styles.metaCard}>
           <span>Interaction scope</span>
-          <strong>select · drag · resize · delete · nudge · undo/redo</strong>
+          <strong>select · drag · resize · rotate · lock/hide · delete · nudge · undo/redo</strong>
         </div>
         <div className={styles.metaCard}>
           <span>History</span>
@@ -130,11 +112,18 @@ export default function SandboxPage({
         </div>
         <div className={styles.metaCard}>
           <span>Out of scope</span>
-          <strong>snap, multi-select, real inspector tabs, inline text edit</strong>
+          <strong>asset library, nested container semantics, main builder integration</strong>
         </div>
       </section>
 
-      <CanvasContainer />
+      <section className={styles.editorShell}>
+        <div className={styles.leftColumn}>
+          <SandboxLayersPanel />
+          <SandboxCatalogPanel />
+        </div>
+        <CanvasContainer />
+        <SandboxInspectorPanel />
+      </section>
     </main>
   );
 }

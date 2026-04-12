@@ -7,6 +7,11 @@ import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import SmartLink from '@/components/SmartLink';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
+import {
+  homeInsightsButtonSurfaceIds,
+  homeInsightsImageSurfaceIds,
+  homeInsightsTextSurfaceIds,
+} from '@/lib/builder/registry';
 
 interface ArchivePost {
   slug: string;
@@ -81,14 +86,28 @@ export default function InsightsArchiveSection({
   return (
     <section className="section section--gray" id="insights" data-tone="light">
       <div className="container">
-        <SectionLabel>{copy.label}</SectionLabel>
-        <h2 className="section-title">{copy.title}</h2>
-        <p className="section-lede">{copy.description}</p>
+        <div data-builder-node-key="header">
+          <SectionLabel data-builder-surface-key={homeInsightsTextSurfaceIds[0]}>
+            {copy.label}
+          </SectionLabel>
+          <h2 className="section-title" data-builder-surface-key={homeInsightsTextSurfaceIds[1]}>
+            {copy.title}
+          </h2>
+          <p className="section-lede" data-builder-surface-key={homeInsightsTextSurfaceIds[2]}>
+            {copy.description}
+          </p>
+        </div>
         <OrnamentDivider />
-        <div className="insights-grid reveal-stagger">
+        <div className="insights-grid reveal-stagger" data-builder-node-key="feed">
           <article className="insights-featured">
             <div className="insights-featured-media">
-              <Image src={featured.featuredImage} alt={featured.title} width={920} height={540} />
+              <Image
+                src={featured.featuredImage}
+                alt={featured.title}
+                width={920}
+                height={540}
+                data-builder-surface-key={homeInsightsImageSurfaceIds[0]}
+              />
               <span className="insights-category-badge">{featured.categoryLabel}</span>
             </div>
             <div className="insights-featured-body">
@@ -131,10 +150,16 @@ export default function InsightsArchiveSection({
               </div>
             ) : null}
             <div className="insights-list" key={`page-${page}`}>
-              {visibleItems.map((post) => (
+              {visibleItems.map((post, index) => (
                 <article key={post.slug} className="insights-list-item">
                   <div className="insights-list-thumb">
-                    <Image src={post.featuredImage} alt={post.title} width={240} height={160} />
+                    <Image
+                      src={post.featuredImage}
+                      alt={post.title}
+                      width={240}
+                      height={160}
+                      data-builder-surface-key={homeInsightsImageSurfaceIds[index + 1]}
+                    />
                     <span className="insights-category-badge insights-category-badge--compact">{post.categoryLabel}</span>
                   </div>
                   <div className="insights-list-copy">
@@ -157,8 +182,12 @@ export default function InsightsArchiveSection({
             </div>
           </div>
         </div>
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-          <SmartLink className="button button--outline" href={`/${locale}/columns`}>
+        <div style={{ marginTop: '2rem', textAlign: 'center' }} data-builder-node-key="footer">
+          <SmartLink
+            className="button button--outline"
+            href={`/${locale}/columns`}
+            data-builder-surface-key={homeInsightsButtonSurfaceIds[0]}
+          >
             {copy.viewAll} →
           </SmartLink>
         </div>

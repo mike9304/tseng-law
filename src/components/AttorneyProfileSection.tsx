@@ -121,9 +121,15 @@ export default function AttorneyProfileSection({ locale }: { locale: Locale }) {
   return (
     <section className="section section--light">
       <div className="container">
-        <div className="section-label">{team.label}</div>
-        <h2 className="section-title">{team.title}</h2>
-        <p className="section-lede">{team.description}</p>
+        <div className="section-label" data-builder-surface-key="section-label">
+          {team.label}
+        </div>
+        <h2 className="section-title" data-builder-surface-key="headline">
+          {team.title}
+        </h2>
+        <p className="section-lede" data-builder-surface-key="description">
+          {team.description}
+        </p>
 
         {/* 대표 변호사 */}
         {lead && (

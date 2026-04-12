@@ -12,7 +12,10 @@
  */
 
 import type { Locale } from '@/lib/locales';
-import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import {
+  createDefaultCanvasNodeStyle,
+  type BuilderCanvasDocument,
+} from '@/lib/builder/canvas/types';
 import { get, put, list, del } from '@vercel/blob';
 
 export interface TemplateMetadata {
@@ -29,6 +32,20 @@ export interface TemplateMetadata {
 
 export interface Template extends TemplateMetadata {
   document: BuilderCanvasDocument;
+}
+
+function toTemplateMetadata(template: Template): TemplateMetadata {
+  return {
+    templateId: template.templateId,
+    name: template.name,
+    description: template.description,
+    category: template.category,
+    thumbnail: template.thumbnail,
+    locale: template.locale,
+    nodeCount: template.nodeCount,
+    createdAt: template.createdAt,
+    isStarter: template.isStarter,
+  };
 }
 
 // ─── Starter templates (code-shipped) ─────────────────────────────
@@ -49,11 +66,11 @@ const STARTER_TEMPLATES: Template[] = [
       updatedAt: '2026-04-12T00:00:00Z',
       updatedBy: 'template-system',
       nodes: [
-        { id: 'hero-title', kind: 'text', rect: { x: 80, y: 80, width: 500, height: 80 }, zIndex: 0, locked: false, visible: true, content: { text: '호정국제 법률사무소', fontSize: 42, color: '#0f172a', fontWeight: 'bold', align: 'left' } },
-        { id: 'hero-subtitle', kind: 'text', rect: { x: 80, y: 180, width: 450, height: 60 }, zIndex: 1, locked: false, visible: true, content: { text: '대만 법률 문제, 한국어로 상담받으세요', fontSize: 20, color: '#475569', fontWeight: 'regular', align: 'left' } },
-        { id: 'hero-cta', kind: 'button', rect: { x: 80, y: 270, width: 180, height: 52 }, zIndex: 2, locked: false, visible: true, content: { label: '상담 요청하기', href: '/ko/contact', style: 'primary' } },
-        { id: 'hero-image', kind: 'image', rect: { x: 600, y: 60, width: 400, height: 300 }, zIndex: 3, locked: false, visible: true, content: { src: '/images/header-skyline-ratio.webp', alt: '타이베이 스카이라인', fit: 'cover' } },
-        { id: 'services-title', kind: 'text', rect: { x: 80, y: 420, width: 300, height: 40 }, zIndex: 4, locked: false, visible: true, content: { text: '주요 업무 분야', fontSize: 28, color: '#0f172a', fontWeight: 'bold', align: 'left' } },
+        { id: 'hero-title', kind: 'text', rect: { x: 80, y: 80, width: 500, height: 80 }, style: createDefaultCanvasNodeStyle(), zIndex: 0, rotation: 0, locked: false, visible: true, content: { text: '호정국제 법률사무소', fontSize: 42, color: '#0f172a', fontWeight: 'bold', align: 'left' } },
+        { id: 'hero-subtitle', kind: 'text', rect: { x: 80, y: 180, width: 450, height: 60 }, style: createDefaultCanvasNodeStyle(), zIndex: 1, rotation: 0, locked: false, visible: true, content: { text: '대만 법률 문제, 한국어로 상담받으세요', fontSize: 20, color: '#475569', fontWeight: 'regular', align: 'left' } },
+        { id: 'hero-cta', kind: 'button', rect: { x: 80, y: 270, width: 180, height: 52 }, style: createDefaultCanvasNodeStyle(), zIndex: 2, rotation: 0, locked: false, visible: true, content: { label: '상담 요청하기', href: '/ko/contact', style: 'primary' } },
+        { id: 'hero-image', kind: 'image', rect: { x: 600, y: 60, width: 400, height: 300 }, style: createDefaultCanvasNodeStyle(), zIndex: 3, rotation: 0, locked: false, visible: true, content: { src: '/images/header-skyline-ratio.webp', alt: '타이베이 스카이라인', fit: 'cover' } },
+        { id: 'services-title', kind: 'text', rect: { x: 80, y: 420, width: 300, height: 40 }, style: createDefaultCanvasNodeStyle(), zIndex: 4, rotation: 0, locked: false, visible: true, content: { text: '주요 업무 분야', fontSize: 28, color: '#0f172a', fontWeight: 'bold', align: 'left' } },
       ],
     },
   },
@@ -72,9 +89,9 @@ const STARTER_TEMPLATES: Template[] = [
       updatedAt: '2026-04-12T00:00:00Z',
       updatedBy: 'template-system',
       nodes: [
-        { id: 'contact-title', kind: 'text', rect: { x: 80, y: 60, width: 400, height: 50 }, zIndex: 0, locked: false, visible: true, content: { text: '문의 및 연락처', fontSize: 32, color: '#0f172a', fontWeight: 'bold', align: 'left' } },
-        { id: 'contact-info', kind: 'text', rect: { x: 80, y: 140, width: 400, height: 100 }, zIndex: 1, locked: false, visible: true, content: { text: '이메일: wei@hoveringlaw.com.tw\n전화: +886-2-xxxx-xxxx\n주소: 台北市大安區...', fontSize: 16, color: '#374151', fontWeight: 'regular', align: 'left' } },
-        { id: 'contact-cta', kind: 'button', rect: { x: 80, y: 270, width: 200, height: 48 }, zIndex: 2, locked: false, visible: true, content: { label: '상담 신청하기', href: '/ko/contact', style: 'primary' } },
+        { id: 'contact-title', kind: 'text', rect: { x: 80, y: 60, width: 400, height: 50 }, style: createDefaultCanvasNodeStyle(), zIndex: 0, rotation: 0, locked: false, visible: true, content: { text: '문의 및 연락처', fontSize: 32, color: '#0f172a', fontWeight: 'bold', align: 'left' } },
+        { id: 'contact-info', kind: 'text', rect: { x: 80, y: 140, width: 400, height: 100 }, style: createDefaultCanvasNodeStyle(), zIndex: 1, rotation: 0, locked: false, visible: true, content: { text: '이메일: wei@hoveringlaw.com.tw\n전화: +886-2-xxxx-xxxx\n주소: 台北市大安區...', fontSize: 16, color: '#374151', fontWeight: 'regular', align: 'left' } },
+        { id: 'contact-cta', kind: 'button', rect: { x: 80, y: 270, width: 200, height: 48 }, style: createDefaultCanvasNodeStyle(), zIndex: 2, rotation: 0, locked: false, visible: true, content: { label: '상담 신청하기', href: '/ko/contact', style: 'primary' } },
       ],
     },
   },
@@ -93,9 +110,9 @@ const STARTER_TEMPLATES: Template[] = [
       updatedAt: '2026-04-12T00:00:00Z',
       updatedBy: 'template-system',
       nodes: [
-        { id: 'attorney-photo', kind: 'image', rect: { x: 80, y: 60, width: 280, height: 350 }, zIndex: 0, locked: false, visible: true, content: { src: '', alt: '변호사 프로필', fit: 'cover' } },
-        { id: 'attorney-name', kind: 'text', rect: { x: 400, y: 80, width: 400, height: 50 }, zIndex: 1, locked: false, visible: true, content: { text: '대표 변호사', fontSize: 28, color: '#0f172a', fontWeight: 'bold', align: 'left' } },
-        { id: 'attorney-bio', kind: 'text', rect: { x: 400, y: 150, width: 400, height: 200 }, zIndex: 2, locked: false, visible: true, content: { text: '전문 분야, 학력, 경력 등을 여기에 작성합니다.', fontSize: 16, color: '#374151', fontWeight: 'regular', align: 'left' } },
+        { id: 'attorney-photo', kind: 'image', rect: { x: 80, y: 60, width: 280, height: 350 }, style: createDefaultCanvasNodeStyle(), zIndex: 0, rotation: 0, locked: false, visible: true, content: { src: '', alt: '변호사 프로필', fit: 'cover' } },
+        { id: 'attorney-name', kind: 'text', rect: { x: 400, y: 80, width: 400, height: 50 }, style: createDefaultCanvasNodeStyle(), zIndex: 1, rotation: 0, locked: false, visible: true, content: { text: '대표 변호사', fontSize: 28, color: '#0f172a', fontWeight: 'bold', align: 'left' } },
+        { id: 'attorney-bio', kind: 'text', rect: { x: 400, y: 150, width: 400, height: 200 }, style: createDefaultCanvasNodeStyle(), zIndex: 2, rotation: 0, locked: false, visible: true, content: { text: '전문 분야, 학력, 경력 등을 여기에 작성합니다.', fontSize: 16, color: '#374151', fontWeight: 'regular', align: 'left' } },
       ],
     },
   },
@@ -106,7 +123,7 @@ const STARTER_TEMPLATES: Template[] = [
 export function getStarterTemplates(locale?: Locale): TemplateMetadata[] {
   return STARTER_TEMPLATES
     .filter((t) => !locale || t.locale === locale)
-    .map(({ document: _, ...meta }) => meta);
+    .map(toTemplateMetadata);
 }
 
 export function getStarterTemplate(templateId: string): Template | undefined {
@@ -153,8 +170,7 @@ export async function listUserTemplates(): Promise<TemplateMetadata[]> {
         const res = await get(blob.pathname, { access: 'private', useCache: false });
         if (res?.statusCode === 200 && res.stream) {
           const t = JSON.parse(await new Response(res.stream).text()) as Template;
-          const { document: _, ...meta } = t;
-          templates.push(meta);
+          templates.push(toTemplateMetadata(t));
         }
       } catch { /* skip malformed */ }
     }
@@ -176,7 +192,6 @@ export async function getUserTemplate(templateId: string): Promise<Template | nu
 
 export async function deleteUserTemplate(templateId: string): Promise<void> {
   try {
-    const res = await get(`${USER_TEMPLATE_PREFIX}${templateId}.json`, { access: 'private', useCache: false });
-    if (res?.url) await del(res.url);
+    await del(`${USER_TEMPLATE_PREFIX}${templateId}.json`);
   } catch { /* ignore */ }
 }

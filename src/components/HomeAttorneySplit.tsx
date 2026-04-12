@@ -3,6 +3,11 @@ import type { Locale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { teamContent } from '@/data/team-members';
+import {
+  homeAttorneyButtonSurfaceIds,
+  homeAttorneyImageSurfaceIds,
+  homeAttorneyTextSurfaceIds,
+} from '@/lib/builder/registry';
 
 const copyByLocale = {
   ko: {
@@ -41,24 +46,45 @@ export default function HomeAttorneySplit({ locale }: { locale: Locale }) {
 
   return (
     <section className="section section--gray split-section split--img-left" id="about" data-tone="light">
-      <div className="split-image split-image--portrait">
-        <Image src={lead.photo} alt={`${lead.name} ${lead.role}`} width={1200} height={900} className="person-photo" />
+      <div className="split-image split-image--portrait" data-builder-node-key="media">
+        <Image
+          src={lead.photo}
+          alt={`${lead.name} ${lead.role}`}
+          width={1200}
+          height={900}
+          className="person-photo"
+          data-builder-surface-key={homeAttorneyImageSurfaceIds[0]}
+        />
         <div className="split-portrait-badge">
           <strong>{lead.name}</strong>
           <span>{lead.role}</span>
         </div>
       </div>
-      <div className="split-content">
-        <div className="section-label">{copy.label}</div>
-        <h2 className="split-title">{copy.title}</h2>
+      <div className="split-content" data-builder-node-key="copy">
+        <div className="section-label" data-builder-surface-key={homeAttorneyTextSurfaceIds[0]}>
+          {copy.label}
+        </div>
+        <h2 className="split-title" data-builder-surface-key={homeAttorneyTextSurfaceIds[1]}>
+          {copy.title}
+        </h2>
         <div className="split-divider" />
-        <p className="split-text">{lead.intro[0]}</p>
-        <p className="split-text">{lead.intro[1]}</p>
-        <p className="split-text">{copy.summary}</p>
-        <p className="split-text">
+        <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[2]}>
+          {lead.intro[0]}
+        </p>
+        <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[3]}>
+          {lead.intro[1]}
+        </p>
+        <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[4]}>
+          {copy.summary}
+        </p>
+        <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[5]}>
           {lead.name} · {lead.role} · {lead.email}
         </p>
-        <SmartLink className="link-underline" href={profilePath}>
+        <SmartLink
+          className="link-underline"
+          href={profilePath}
+          data-builder-surface-key={homeAttorneyButtonSurfaceIds[0]}
+        >
           {copy.cta} →
         </SmartLink>
       </div>

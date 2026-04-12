@@ -21,9 +21,15 @@ export default function PageHeader({
     <section className="section page-header">
       <div className="container">
         <Breadcrumbs locale={locale} current={title} />
-        <SectionLabel>{label}</SectionLabel>
-        <h1 className="hero-title page-header-title">{title}</h1>
-        {description ? <p className="section-lede">{description}</p> : null}
+        <SectionLabel data-builder-surface-key="section-label">{label}</SectionLabel>
+        <h1 className="hero-title page-header-title" data-builder-surface-key="headline">
+          {title}
+        </h1>
+        {description ? (
+          <p className="section-lede" data-builder-surface-key="description">
+            {description}
+          </p>
+        ) : null}
         <OrnamentDivider />
         {children}
       </div>

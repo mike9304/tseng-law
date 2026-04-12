@@ -105,12 +105,16 @@ export default function OfficeMapTabs({
   locale,
   id = 'offices',
   sectionClassName,
-  tone = 'light'
+  tone = 'light',
+  labelSurfaceId = 'section-label',
+  titleSurfaceId = 'headline',
 }: {
   locale: Locale;
   id?: string;
   sectionClassName?: string;
   tone?: 'light' | 'dark';
+  labelSurfaceId?: string;
+  titleSurfaceId?: string;
 }) {
   const offices = officeData[locale];
   const [activeId, setActiveId] = useState(offices[0]?.id ?? '');
@@ -129,8 +133,12 @@ export default function OfficeMapTabs({
   return (
     <section className={sectionClass} id={id} data-tone={tone}>
       <div className="container">
-        <SectionLabel>{locale === 'ko' ? 'OFFICES' : 'OFFICES'}</SectionLabel>
-        <h2 className="section-title">{title}</h2>
+        <SectionLabel data-builder-surface-key={labelSurfaceId}>
+          {locale === 'ko' ? 'OFFICES' : 'OFFICES'}
+        </SectionLabel>
+        <h2 className="section-title" data-builder-surface-key={titleSurfaceId}>
+          {title}
+        </h2>
         <div className="office-tabs" role="tablist" aria-label={title}>
           {offices.map((office) => (
             <button
@@ -161,7 +169,8 @@ export default function OfficeMapTabs({
             <h3 className="card-title">{current.title}</h3>
             <p className="card-copy">{current.address}</p>
             <p className="card-copy">
-              {telLabel}: <a className="link-underline phone-number" href={`tel:${current.phone.replace(/-/g, '')}`}>{current.phone}</a>
+              {telLabel}:{' '}
+              <a className="link-underline phone-number" href={`tel:${current.phone.replace(/-/g, '')}`}>{current.phone}</a>
             </p>
             {current.fax && (
               <p className="card-copy">

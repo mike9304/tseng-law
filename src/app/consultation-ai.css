@@ -75,6 +75,72 @@
   color: #ffffff;
 }
 
+.admin-console-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.admin-console-primary-btn,
+.admin-console-ghost-btn,
+.admin-console-danger-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease, color 140ms ease,
+    opacity 140ms ease;
+}
+
+.admin-console-primary-btn {
+  background: #0b3b2e;
+  border-color: #0b3b2e;
+  color: #ffffff;
+}
+
+.admin-console-primary-btn:hover:not(:disabled) {
+  background: #0f4e3d;
+  border-color: #0f4e3d;
+}
+
+.admin-console-ghost-btn {
+  background: #ffffff;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.admin-console-ghost-btn:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.admin-console-danger-btn {
+  background: #ffffff;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.admin-console-danger-btn:hover:not(:disabled) {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.admin-console-primary-btn:disabled,
+.admin-console-ghost-btn:disabled,
+.admin-console-danger-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .admin-console-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -107,6 +173,263 @@
   margin: 0;
   font-size: 0.8rem;
   color: #6b7280;
+  line-height: 1.55;
+}
+
+.admin-console-section-header-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.admin-console-pill-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.admin-console-pill-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.admin-console-pill-nav a:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.admin-console-pill-nav a.is-active {
+  background: #0b3b2e;
+  border-color: #0b3b2e;
+  color: #ffffff;
+}
+
+.admin-console-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.admin-console-search {
+  display: block;
+  flex: 1 1 260px;
+}
+
+.admin-console-search input,
+.admin-console-field input,
+.admin-console-field textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  font: inherit;
+}
+
+.admin-console-search input {
+  min-height: 42px;
+  padding: 0.65rem 0.8rem;
+}
+
+.admin-console-search input:focus,
+.admin-console-field input:focus,
+.admin-console-field textarea:focus {
+  outline: 2px solid rgba(11, 99, 168, 0.22);
+  outline-offset: 2px;
+  border-color: #0b63a8;
+}
+
+.admin-console-toolbar-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.admin-console-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.admin-console-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.admin-console-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0d221a;
+}
+
+.admin-console-card p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.admin-console-card-meta,
+.admin-console-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.admin-console-kv-list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.admin-console-kv-list div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.admin-console-kv-list dt {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.admin-console-kv-list dd {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #1f2937;
+  font-variant-numeric: tabular-nums;
+}
+
+.admin-console-empty-state {
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.admin-console-empty-state h3 {
+  margin: 0 0 0.4rem;
+  color: #0d221a;
+  font-size: 1rem;
+}
+
+.admin-console-empty-state p {
+  margin: 0 0 1rem;
+  color: #4b5563;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.admin-console-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.admin-console-modal {
+  width: min(100%, 560px);
+  max-height: min(100vh - 2.5rem, 760px);
+  overflow: auto;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 1.2rem;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.24);
+}
+
+.admin-console-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.admin-console-modal-header h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: #0d221a;
+}
+
+.admin-console-modal-header p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.admin-console-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.admin-console-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.admin-console-field span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0d221a;
+}
+
+.admin-console-field input,
+.admin-console-field textarea {
+  padding: 0.7rem 0.85rem;
+}
+
+.admin-console-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.admin-console-field small {
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+.admin-console-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.admin-console-form-error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.82rem;
   line-height: 1.55;
 }
 

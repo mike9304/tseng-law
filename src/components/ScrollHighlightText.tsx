@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ComponentPropsWithoutRef } from 'react';
 
 function tokenize(text: string) {
   if (text.includes(' ')) {
@@ -16,12 +16,13 @@ function isPunctuation(token: string) {
 export default function ScrollHighlightText({
   text,
   className,
-  highlightWords = []
+  highlightWords = [],
+  ...rest
 }: {
   text: string;
   className?: string;
   highlightWords?: string[];
-}) {
+} & Omit<ComponentPropsWithoutRef<'p'>, 'children'>) {
   const rootRef = useRef<HTMLParagraphElement | null>(null);
   const [visible, setVisible] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -57,7 +58,7 @@ export default function ScrollHighlightText({
 
   let revealIndex = 0;
   return (
-    <p ref={rootRef} className={`scroll-highlight ${className ?? ''}`.trim()}>
+    <p ref={rootRef} className={`scroll-highlight ${className ?? ''}`.trim()} {...rest}>
       {tokens.map((token, index) => {
         if (!token) return null;
         if (/^\s+$/.test(token)) {

@@ -9,8 +9,8 @@
  * Blob when BLOB_READ_WRITE_TOKEN is set, file otherwise.
  */
 
-import { get, put, list } from '@vercel/blob';
-import { readFile, writeFile, mkdir, readdir } from 'fs/promises';
+import { get, put } from '@vercel/blob';
+import { readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';

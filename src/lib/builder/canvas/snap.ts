@@ -54,7 +54,6 @@ export function computeSnap(
 ): SnapResult {
   let { x, y } = moving;
   const guides: AlignmentGuide[] = [];
-  const me = edges({ ...moving, x, y });
 
   // 1. Grid snap
   if (gridSize > 0) {

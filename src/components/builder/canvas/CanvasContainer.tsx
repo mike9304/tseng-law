@@ -2,21 +2,24 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import CanvasNode, { type ResizeHandle } from '@/components/builder/canvas/CanvasNode';
+import ContextMenu from '@/components/builder/canvas/ContextMenu';
+import SelectionBox from '@/components/builder/canvas/SelectionBox';
 import {
   createCanvasNodeTemplate,
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
-import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { builderCanvasNodeKinds, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import styles from './SandboxPage.module.css';
 
 type InteractionState =
   | {
       type: 'move';
       nodeId: string;
+      nodeIds: string[];
       pointerId: number;
       originX: number;
       originY: number;
-      startRect: BuilderCanvasNode['rect'];
+      startRects: Record<string, BuilderCanvasNode['rect']>;
     }
   | {
       type: 'resize';
@@ -28,6 +31,21 @@ type InteractionState =
       startRect: BuilderCanvasNode['rect'];
     }
   | null;
+
+type SelectionBoxState = {
+  pointerId: number;
+  originX: number;
+  originY: number;
+  currentX: number;
+  currentY: number;
+  additive: boolean;
+};
+
+type ContextMenuState = {
+  nodeId: string;
+  x: number;
+  y: number;
+};
 
 const STAGE_WIDTH = 1280;
 const STAGE_HEIGHT = 880;
@@ -42,42 +60,51 @@ function clampRect(rect: BuilderCanvasNode['rect']): BuilderCanvasNode['rect'] {
   return { x, y, width, height };
 }
 
-function resolveCenteredNode(
-  kind: 'text' | 'image' | 'button',
-  existingCount: number,
-): BuilderCanvasNode {
-  const seed = createCanvasNodeTemplate(kind, 0, 0, existingCount);
-  const cascadeOffset = (existingCount % 6) * 18;
-  return {
-    ...seed,
-    rect: {
-      ...seed.rect,
-      x: Math.round((STAGE_WIDTH - seed.rect.width) / 2 + cascadeOffset),
-      y: Math.round((STAGE_HEIGHT - seed.rect.height) / 2 + cascadeOffset),
-    },
-  };
-}
-
 export default function CanvasContainer() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const {
-    document,
     selectedNodeId,
+    selectedNodeIds,
     canUndo,
     canRedo,
     setSelectedNodeId,
+    setSelectedNodeIds,
+    toggleNodeSelection,
     beginMutationSession,
     commitMutationSession,
     undo,
     redo,
     addNode,
+    duplicateSelectedNode,
+    bringSelectedNodeForward,
+    sendSelectedNodeBackward,
+    bringSelectedNodeToFront,
+    sendSelectedNodeToBack,
+    updateSelectedNodes,
     updateNode,
     deleteSelectedNode,
     nudgeSelectedNode,
   } = useBuilderCanvasStore();
   const [interaction, setInteraction] = useState<InteractionState>(null);
+  const [selectionBox, setSelectionBox] = useState<SelectionBoxState | null>(null);
+  const [contextMenu, setContextMenu] = useState<ContextMenuState | null>(null);
 
-  const nodes = useMemo(() => document?.nodes ?? [], [document]);
+  const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? []);
+  const visibleNodes = useMemo(
+    () => nodes.filter((node) => node.visible),
+    [nodes],
+  );
+
+  useEffect(() => {
+    if (!contextMenu) return undefined;
+
+    function handleWindowScroll() {
+      setContextMenu(null);
+    }
+
+    window.addEventListener('scroll', handleWindowScroll, true);
+    return () => window.removeEventListener('scroll', handleWindowScroll, true);
+  }, [contextMenu]);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -99,6 +126,18 @@ export default function CanvasContainer() {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'y') {
         event.preventDefault();
         redo();
+        return;
+      }
+
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'd') {
+        event.preventDefault();
+        duplicateSelectedNode();
+        return;
+      }
+
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'a') {
+        event.preventDefault();
+        setSelectedNodeIds(visibleNodes.map((node) => node.id), visibleNodes[visibleNodes.length - 1]?.id ?? null);
         return;
       }
 
@@ -126,7 +165,7 @@ export default function CanvasContainer() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [deleteSelectedNode, nudgeSelectedNode, redo, undo]);
+  }, [deleteSelectedNode, duplicateSelectedNode, nudgeSelectedNode, redo, setSelectedNodeIds, undo, visibleNodes]);
 
   useEffect(() => {
     if (!interaction) return undefined;
@@ -135,18 +174,21 @@ export default function CanvasContainer() {
     function handlePointerMove(event: PointerEvent) {
       const deltaX = event.clientX - activeInteraction.originX;
       const deltaY = event.clientY - activeInteraction.originY;
-      updateNode(activeInteraction.nodeId, (node) => {
-        if (activeInteraction.type === 'move') {
+      if (activeInteraction.type === 'move') {
+        updateSelectedNodes(activeInteraction.nodeIds, (node) => {
+          const baseRect = activeInteraction.startRects[node.id] ?? node.rect;
           return {
             ...node,
             rect: clampRect({
               ...node.rect,
-              x: activeInteraction.startRect.x + deltaX,
-              y: activeInteraction.startRect.y + deltaY,
+              x: baseRect.x + deltaX,
+              y: baseRect.y + deltaY,
             }),
           };
-        }
-
+        }, 'transient');
+        return;
+      }
+      updateNode(activeInteraction.nodeId, (node) => {
         const { handle } = activeInteraction;
         const nextRect = { ...activeInteraction.startRect };
         if (handle === 'e') {
@@ -197,7 +239,62 @@ export default function CanvasContainer() {
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', handlePointerUp);
     };
-  }, [commitMutationSession, interaction, updateNode]);
+  }, [commitMutationSession, interaction, updateNode, updateSelectedNodes]);
+
+  useEffect(() => {
+    if (!selectionBox) return undefined;
+    const activeSelectionBox = selectionBox;
+
+    function handlePointerMove(event: PointerEvent) {
+      setSelectionBox((currentSelectionBox) => (
+        currentSelectionBox
+          ? {
+              ...currentSelectionBox,
+              currentX: event.clientX,
+              currentY: event.clientY,
+            }
+          : currentSelectionBox
+      ));
+    }
+
+    function handlePointerUp(event: PointerEvent) {
+      if (event.pointerId !== activeSelectionBox.pointerId) return;
+      const rect = containerRef.current?.getBoundingClientRect();
+      if (!rect) {
+        setSelectionBox(null);
+        return;
+      }
+
+      const left = Math.min(activeSelectionBox.originX, activeSelectionBox.currentX) - rect.left;
+      const top = Math.min(activeSelectionBox.originY, activeSelectionBox.currentY) - rect.top;
+      const right = Math.max(activeSelectionBox.originX, activeSelectionBox.currentX) - rect.left;
+      const bottom = Math.max(activeSelectionBox.originY, activeSelectionBox.currentY) - rect.top;
+
+      const intersectingNodeIds = visibleNodes
+        .filter((node) => (
+          node.rect.x < right
+          && node.rect.x + node.rect.width > left
+          && node.rect.y < bottom
+          && node.rect.y + node.rect.height > top
+        ))
+        .map((node) => node.id);
+      const nextPrimaryNodeId = intersectingNodeIds[intersectingNodeIds.length - 1] ?? null;
+
+      if (activeSelectionBox.additive) {
+        setSelectedNodeIds([...new Set([...selectedNodeIds, ...intersectingNodeIds])], nextPrimaryNodeId ?? selectedNodeId);
+      } else {
+        setSelectedNodeIds(intersectingNodeIds, nextPrimaryNodeId);
+      }
+      setSelectionBox(null);
+    }
+
+    window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('pointerup', handlePointerUp);
+    return () => {
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+    };
+  }, [selectedNodeId, selectedNodeIds, selectionBox, setSelectedNodeIds, visibleNodes]);
 
   function resolveStagePosition(clientX: number, clientY: number): { x: number; y: number } {
     const rect = containerRef.current?.getBoundingClientRect();
@@ -208,56 +305,37 @@ export default function CanvasContainer() {
     };
   }
 
-  return (
-    <div className={styles.stageShell}>
-      <aside className={styles.catalog}>
-        <header>
-          <span>Component catalog</span>
-          <strong>Phase 1 sandbox</strong>
-        </header>
-        <p>Drag a node into the canvas. Scope is intentionally limited to text, image, and button only.</p>
-        {(['text', 'image', 'button'] as const).map((kind) => (
-          <div key={kind} className={styles.catalogItemRow}>
-            <button
-              type="button"
-              className={styles.catalogItem}
-              draggable
-              onDragStart={(event) => {
-                event.dataTransfer.setData('application/x-builder-node-kind', kind);
-                event.dataTransfer.effectAllowed = 'copy';
-              }}
-            >
-              <span>{kind}</span>
-              <small>drag to canvas</small>
-            </button>
-            <button
-              type="button"
-              className={styles.catalogQuickAdd}
-              onClick={() => {
-                addNode(resolveCenteredNode(kind, nodes.length));
-              }}
-            >
-              추가
-            </button>
-          </div>
-        ))}
-        <ul className={styles.catalogHints}>
-          <li>Click to select</li>
-          <li>Drag to move</li>
-          <li>Corner handles resize</li>
-          <li>Arrow keys nudge</li>
-          <li>Cmd/Ctrl+Z undo</li>
-          <li>Shift+Cmd/Ctrl+Z redo</li>
-          <li>Delete removes node</li>
-        </ul>
-      </aside>
+  const selectionBoxRect = useMemo(() => {
+    if (!selectionBox) return null;
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return null;
+    return {
+      left: Math.min(selectionBox.originX, selectionBox.currentX) - rect.left,
+      top: Math.min(selectionBox.originY, selectionBox.currentY) - rect.top,
+      width: Math.abs(selectionBox.currentX - selectionBox.originX),
+      height: Math.abs(selectionBox.currentY - selectionBox.originY),
+    };
+  }, [selectionBox]);
 
+  return (
+    <div className={styles.stageSurface}>
       <div
         ref={containerRef}
         className={styles.stage}
         onPointerDown={(event) => {
+          setContextMenu(null);
           if (event.target === event.currentTarget) {
-            setSelectedNodeId(null);
+            setSelectionBox({
+              pointerId: event.pointerId,
+              originX: event.clientX,
+              originY: event.clientY,
+              currentX: event.clientX,
+              currentY: event.clientY,
+              additive: event.metaKey || event.ctrlKey || event.shiftKey,
+            });
+            if (!event.metaKey && !event.ctrlKey && !event.shiftKey) {
+              setSelectedNodeIds([], null);
+            }
           }
         }}
         onDragOver={(event) => {
@@ -267,11 +345,11 @@ export default function CanvasContainer() {
         onDrop={(event) => {
           event.preventDefault();
           const kind = event.dataTransfer.getData('application/x-builder-node-kind');
-          if (kind !== 'text' && kind !== 'image' && kind !== 'button') return;
+          if (!builderCanvasNodeKinds.includes(kind as (typeof builderCanvasNodeKinds)[number])) return;
           const position = resolveStagePosition(event.clientX, event.clientY);
           addNode(
             createCanvasNodeTemplate(
-              kind,
+              kind as (typeof builderCanvasNodeKinds)[number],
               position.x,
               position.y,
               nodes.length,
@@ -302,24 +380,56 @@ export default function CanvasContainer() {
           ))}
         </div>
         <div className={styles.stageGrid} aria-hidden />
-        {nodes.map((node) => (
+        {visibleNodes.map((node) => (
           <CanvasNode
             key={node.id}
             node={node}
-            selected={selectedNodeId === node.id}
-            onSelect={setSelectedNodeId}
+            selected={selectedNodeIds.includes(node.id)}
+            onSelect={(nodeId, additive) => {
+              if (additive) {
+                toggleNodeSelection(nodeId);
+                return;
+              }
+              setSelectedNodeId(nodeId);
+            }}
+            onContextMenu={(nodeId, event) => {
+              const selectedNode = nodes.find((candidate) => candidate.id === nodeId);
+              if (!selectedNode) return;
+              setSelectedNodeId(nodeId);
+              const rect = containerRef.current?.getBoundingClientRect();
+              const fallbackX = event.clientX;
+              const fallbackY = event.clientY;
+              const rawX = rect ? event.clientX - rect.left : fallbackX;
+              const rawY = rect ? event.clientY - rect.top : fallbackY;
+              setContextMenu({
+                nodeId,
+                x: Math.max(32, Math.min(STAGE_WIDTH - 212, rawX)),
+                y: Math.max(32, Math.min(STAGE_HEIGHT - 240, rawY)),
+              });
+            }}
             onMoveStart={(nodeId, event) => {
               event.preventDefault();
               event.stopPropagation();
-              setSelectedNodeId(nodeId);
+              setContextMenu(null);
+              const nodeIds = selectedNodeIds.includes(nodeId) && selectedNodeIds.length > 0
+                ? selectedNodeIds.filter((selectedId) => !nodes.find((candidate) => candidate.id === selectedId)?.locked)
+                : [nodeId];
+              if (nodeIds.length === 0) return;
+              const startRects = Object.fromEntries(
+                nodes
+                  .filter((node) => nodeIds.includes(node.id))
+                  .map((node) => [node.id, node.rect]),
+              );
+              setSelectedNodeIds(nodeIds, nodeId);
               beginMutationSession();
               setInteraction({
                 type: 'move',
                 nodeId,
+                nodeIds,
                 pointerId: event.pointerId,
                 originX: event.clientX,
                 originY: event.clientY,
-                startRect: node.rect,
+                startRects,
               });
             }}
             onResizeStart={(nodeId, handle, event) => {
@@ -339,7 +449,42 @@ export default function CanvasContainer() {
             }}
           />
         ))}
-        {nodes.length === 0 ? (
+        {selectionBoxRect ? <SelectionBox {...selectionBoxRect} /> : null}
+        {contextMenu ? (
+          <ContextMenu
+            x={contextMenu.x}
+            y={contextMenu.y}
+            title={contextMenu.nodeId}
+            actions={[
+              {
+                key: 'bring-front',
+                label: 'Bring to front',
+                disabled: selectedNodeIds.length !== 1 || nodes.find((node) => node.id === contextMenu.nodeId)?.locked,
+                onSelect: bringSelectedNodeToFront,
+              },
+              {
+                key: 'bring-forward',
+                label: 'Bring forward',
+                disabled: selectedNodeIds.length !== 1 || nodes.find((node) => node.id === contextMenu.nodeId)?.locked,
+                onSelect: bringSelectedNodeForward,
+              },
+              {
+                key: 'send-backward',
+                label: 'Send backward',
+                disabled: selectedNodeIds.length !== 1 || nodes.find((node) => node.id === contextMenu.nodeId)?.locked,
+                onSelect: sendSelectedNodeBackward,
+              },
+              {
+                key: 'send-back',
+                label: 'Send to back',
+                disabled: selectedNodeIds.length !== 1 || nodes.find((node) => node.id === contextMenu.nodeId)?.locked,
+                onSelect: sendSelectedNodeToBack,
+              },
+            ]}
+            onClose={() => setContextMenu(null)}
+          />
+        ) : null}
+        {visibleNodes.length === 0 ? (
           <div className={styles.emptyCanvas}>
             <strong>Canvas is empty</strong>
             <span>Drag a text, image, or button node from the catalog to begin.</span>
@@ -350,7 +495,10 @@ export default function CanvasContainer() {
           <button
             type="button"
             className={styles.toolbarButton}
-            onClick={undo}
+            onClick={() => {
+              setContextMenu(null);
+              undo();
+            }}
             disabled={!canUndo}
           >
             Undo
@@ -358,64 +506,16 @@ export default function CanvasContainer() {
           <button
             type="button"
             className={styles.toolbarButton}
-            onClick={redo}
+            onClick={() => {
+              setContextMenu(null);
+              redo();
+            }}
             disabled={!canRedo}
           >
             Redo
           </button>
         </div>
       </div>
-
-      <aside className={styles.inspectorPlaceholder}>
-        <header>
-          <span>Selection</span>
-          <strong>Phase 2 inspector placeholder</strong>
-        </header>
-        {selectedNodeId ? (
-          (() => {
-            const selectedNode = nodes.find((node) => node.id === selectedNodeId) ?? null;
-            if (!selectedNode) {
-              return <p className={styles.inspectorEmpty}>선택된 노드를 찾을 수 없습니다.</p>;
-            }
-            return (
-              <dl className={styles.inspectorGrid}>
-                <div>
-                  <dt>id</dt>
-                  <dd>{selectedNode.id}</dd>
-                </div>
-                <div>
-                  <dt>kind</dt>
-                  <dd>{selectedNode.kind}</dd>
-                </div>
-                <div>
-                  <dt>x</dt>
-                  <dd>{selectedNode.rect.x}</dd>
-                </div>
-                <div>
-                  <dt>y</dt>
-                  <dd>{selectedNode.rect.y}</dd>
-                </div>
-                <div>
-                  <dt>w</dt>
-                  <dd>{selectedNode.rect.width}</dd>
-                </div>
-                <div>
-                  <dt>h</dt>
-                  <dd>{selectedNode.rect.height}</dd>
-                </div>
-                <div>
-                  <dt>z</dt>
-                  <dd>{selectedNode.zIndex}</dd>
-                </div>
-              </dl>
-            );
-          })()
-        ) : (
-          <p className={styles.inspectorEmpty}>
-            캔버스에서 node 를 선택하면 x/y/w/h 정보가 여기 표시됩니다.
-          </p>
-        )}
-      </aside>
     </div>
   );
 }

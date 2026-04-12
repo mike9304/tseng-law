@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { FAQItem } from '@/data/faq-content';
 import SectionLabel from '@/components/SectionLabel';
+import { homeFaqTextSurfaceIds } from '@/lib/builder/registry';
 
 export default function FAQAccordion({
   locale,
@@ -25,8 +26,10 @@ export default function FAQAccordion({
   return (
     <section className={sectionClass} id={id} data-tone={tone}>
       <div className="container">
-        <SectionLabel>FAQ</SectionLabel>
-        <h2 className="section-title">{sectionTitle}</h2>
+        <SectionLabel data-builder-surface-key={homeFaqTextSurfaceIds[0]}>FAQ</SectionLabel>
+        <h2 className="section-title" data-builder-surface-key={homeFaqTextSurfaceIds[1]}>
+          {sectionTitle}
+        </h2>
         <div className="faq-list">
           {items.map((item, index) => {
             const isOpen = openIndex === index;

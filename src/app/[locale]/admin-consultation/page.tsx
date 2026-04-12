@@ -285,7 +285,76 @@ export default async function AdminConsultationPage({
   const requestedDays = Number.parseInt(searchParams?.days ?? '7', 10);
   const windowDays = Number.isFinite(requestedDays) && requestedDays > 0 && requestedDays <= 90 ? requestedDays : 7;
 
-  const metrics = await readDashboardMetrics(windowDays);
+  let metrics: AdminDashboardMetrics;
+  let loadError: string | null = null;
+
+  try {
+    metrics = await readDashboardMetrics(windowDays);
+  } catch (error) {
+    loadError = error instanceof Error ? error.message : 'Unknown dashboard error';
+    metrics = {
+      generatedAt: new Date().toISOString(),
+      timeWindowDays: windowDays,
+      totalEvents: 0,
+      totalFeedback: 0,
+      funnel: {
+        session_started: 0,
+        chat_received: 0,
+        chat_answered: 0,
+        chat_failed: 0,
+        chat_rate_limited: 0,
+        chat_injection_blocked: 0,
+        escalation_shown: 0,
+        form_opened: 0,
+        form_submit_attempted: 0,
+        submit_received: 0,
+        submit_validated: 0,
+        submit_email_sent: 0,
+        submit_email_failed: 0,
+        submit_rate_limited: 0,
+        submit_consent_missing: 0,
+        submit_duplicate: 0,
+      },
+      conversion: {
+        received_to_answered: 0,
+        received_to_submit_received: 0,
+        submit_received_to_email_sent: 0,
+        full_funnel: 0,
+      },
+      byCategory: [],
+      byRiskLevel: [],
+      byLocale: [],
+      feedback: {
+        total: 0,
+        helpful: 0,
+        unhelpful: 0,
+        helpfulRatio: 0,
+      },
+      safety: {
+        piiBypassTriggered: 0,
+        lowConfidenceBypassTriggered: 0,
+        groundednessFlagged: 0,
+        stalenessFlagged: 0,
+        rateLimitedChat: 0,
+        rateLimitedSubmit: 0,
+      },
+      performance: {
+        sampleCount: 0,
+        latencyP50Ms: 0,
+        latencyP95Ms: 0,
+        latencyP99Ms: 0,
+        avgLatencyMs: 0,
+        totalPromptTokens: 0,
+        totalCompletionTokens: 0,
+        totalTokens: 0,
+        estimatedCostUsd: 0,
+        avgCostPerChatUsd: 0,
+      },
+      recentNegativeFeedback: [],
+      recentSubmissions: [],
+      recentChatSamples: [],
+    };
+  }
 
   return (
     <main className="admin-console">
@@ -311,6 +380,20 @@ export default async function AdminConsultationPage({
           ))}
         </nav>
       </header>
+
+      {loadError ? (
+        <Section
+          title="Dashboard fallback mode"
+          description="메트릭 로딩에 실패했지만 페이지 자체는 열어 둡니다."
+        >
+          <p className="admin-console-empty-note">
+            로그 스토리지 읽기 실패: <code>{loadError}</code>
+          </p>
+          <p className="admin-console-empty-note">
+            현재는 0값 fallback으로 렌더링 중입니다. 로컬 리뷰에서는 파일 로그를 우선 사용하도록 조정했습니다.
+          </p>
+        </Section>
+      ) : null}
 
       <div className="admin-console-grid">
         <Section title="Conversion funnel" description="세션 발생부터 이메일 접수 완료까지 단계별 드롭오프.">

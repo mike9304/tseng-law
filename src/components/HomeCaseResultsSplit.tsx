@@ -1,5 +1,9 @@
 import type { Locale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
+import {
+  homeResultsButtonSurfaceIds,
+  homeResultsTextSurfaceIds,
+} from '@/lib/builder/registry';
 
 const copyByLocale = {
   ko: {
@@ -35,9 +39,14 @@ export default function HomeCaseResultsSplit({ locale }: { locale: Locale }) {
 
   return (
     <section className="section section--dark split-section split--text-only home-results-panel" id="results" data-tone="dark">
-      <div className="split-content home-results-content">
-        <div className="section-label home-results-label">{copy.label}</div>
-        <h2 className="split-title home-results-title">
+      <div className="split-content home-results-content" data-builder-node-key="copy">
+        <div
+          className="section-label home-results-label"
+          data-builder-surface-key={homeResultsTextSurfaceIds[0]}
+        >
+          {copy.label}
+        </div>
+        <h2 className="split-title home-results-title" data-builder-surface-key={homeResultsTextSurfaceIds[1]}>
           {copy.title.split('\n').map((line) => (
             <span key={line}>
               {line}
@@ -46,9 +55,17 @@ export default function HomeCaseResultsSplit({ locale }: { locale: Locale }) {
           ))}
         </h2>
         <div className="split-divider" />
-        <p className="split-text home-results-text">{copy.description}</p>
-        <p className="split-text home-results-text">{copy.summary}</p>
-        <SmartLink className="link-underline home-results-link" href={`/${locale}/columns`}>
+        <p className="split-text home-results-text" data-builder-surface-key={homeResultsTextSurfaceIds[2]}>
+          {copy.description}
+        </p>
+        <p className="split-text home-results-text" data-builder-surface-key={homeResultsTextSurfaceIds[3]}>
+          {copy.summary}
+        </p>
+        <SmartLink
+          className="link-underline home-results-link"
+          href={`/${locale}/columns`}
+          data-builder-surface-key={homeResultsButtonSurfaceIds[0]}
+        >
           {copy.cta} →
         </SmartLink>
       </div>

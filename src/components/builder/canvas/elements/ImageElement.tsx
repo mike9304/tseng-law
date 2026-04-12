@@ -12,7 +12,7 @@ export default function ImageElement({
         position: 'relative',
         width: '100%',
         height: '100%',
-        borderRadius: 12,
+        borderRadius: 'inherit',
         overflow: 'hidden',
         userSelect: 'none',
         pointerEvents: 'none',

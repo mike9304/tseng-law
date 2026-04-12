@@ -17,13 +17,19 @@ export default function ContactBlocks({
       <div className="container">
         {showMainHeader ? (
           <>
-            <SectionLabel>{contact.label}</SectionLabel>
-            <h2 className="section-title">{contact.title}</h2>
-            <p className="section-lede">{contact.description}</p>
+            <SectionLabel data-builder-surface-key="section-label">{contact.label}</SectionLabel>
+            <h2 className="section-title" data-builder-surface-key="headline">
+              {contact.title}
+            </h2>
+            <p className="section-lede" data-builder-surface-key="description">
+              {contact.description}
+            </p>
             <OrnamentDivider />
           </>
         ) : null}
-        <div className="section-label">{contact.inquiriesLabel}</div>
+        <div className="section-label" data-builder-surface-key="inquiries-label">
+          {contact.inquiriesLabel}
+        </div>
         <div className="grid-bento contact-grid reveal-stagger">
           {contact.inquiries.map((block) => (
             <div key={block.title} className="card">
@@ -36,7 +42,7 @@ export default function ContactBlocks({
             </div>
           ))}
         </div>
-        <div className="section-label contact-label-spaced">
+        <div className="section-label contact-label-spaced" data-builder-surface-key="locations-label">
           {contact.locationsLabel}
         </div>
         <div className="grid-bento contact-grid reveal-stagger">
@@ -51,7 +57,7 @@ export default function ContactBlocks({
             </div>
           ))}
         </div>
-        <Link className="button secondary" href={contact.cta.href}>
+        <Link className="button secondary" href={contact.cta.href} data-builder-surface-key="cta-link">
           {contact.cta.label}
         </Link>
       </div>

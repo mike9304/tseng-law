@@ -45,7 +45,23 @@ function getLocalLogDir(): string {
 }
 
 function isBlobBackend(): boolean {
-  return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    return false;
+  }
+
+  if (process.env.CONSULTATION_LOG_BACKEND === 'blob') {
+    return true;
+  }
+
+  if (process.env.CONSULTATION_LOG_BACKEND === 'local') {
+    return false;
+  }
+
+  // Local review/staging runs often inherit Vercel env vars in `.env.local`
+  // without having the same network/runtime guarantees as a deployed Vercel
+  // function. In those cases prefer the local filesystem mirror so the admin
+  // dashboard degrades to real local data instead of erroring on blob access.
+  return Boolean(process.env.VERCEL_URL);
 }
 
 function isBlobNotFoundError(error: unknown): boolean {

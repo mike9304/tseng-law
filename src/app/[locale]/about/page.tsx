@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { unstable_noStore as noStore } from 'next/cache';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import PageHeader from '@/components/PageHeader';
 import { pageCopy } from '@/data/page-copy';
@@ -6,6 +7,8 @@ import ContactBlocks from '@/components/ContactBlocks';
 import AttorneyProfileSection from '@/components/AttorneyProfileSection';
 import FirmIntroductionSection from '@/components/FirmIntroductionSection';
 import { buildSeoMetadata } from '@/lib/seo';
+import BuilderPublishedAboutRenderer from '@/components/builder/BuilderPublishedAboutRenderer';
+import { readBuilderPageSnapshot } from '@/lib/builder/persistence';
 
 const aboutKeywords: Record<Locale, string[]> = {
   ko: ['법무법인 호정 소개', '증준외 변호사', '대만 변호사 소개', '호정 업무팀'],
@@ -26,9 +29,34 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   });
 }
 
-export default function AboutPage({ params }: { params: { locale: Locale } }) {
+export default async function AboutPage({ params }: { params: { locale: Locale } }) {
+  noStore();
   const locale = normalizeLocale(params.locale);
   const copy = pageCopy[locale].about;
+  const publishedSnapshot = await readBuilderPageSnapshot('about', 'published', locale);
+
+  return (
+    publishedSnapshot.persisted ? (
+      <BuilderPublishedAboutRenderer
+        locale={locale}
+        document={publishedSnapshot.snapshot.document}
+        header={{
+          label: copy.label,
+          title: copy.title,
+          description: copy.description,
+        }}
+        state={publishedSnapshot.snapshot.state}
+        revealSections
+      />
+    ) : (
+      <LegacyAboutPage locale={locale} />
+    )
+  );
+}
+
+function LegacyAboutPage({ locale }: { locale: Locale }) {
+  const copy = pageCopy[locale].about;
+
   return (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />

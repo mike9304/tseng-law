@@ -3,7 +3,16 @@ import { locales, type Locale } from '@/lib/locales';
 
 export const sandboxLocaleSchema = z.enum(locales);
 
-export const canvasNodeKindSchema = z.enum(['text', 'image', 'button']);
+export const builderCanvasNodeKinds = [
+  'text',
+  'image',
+  'button',
+  'heading',
+  'container',
+  'section',
+] as const;
+
+export const canvasNodeKindSchema = z.enum(builderCanvasNodeKinds);
 export type BuilderCanvasNodeKind = z.infer<typeof canvasNodeKindSchema>;
 
 export const canvasRectSchema = z.object({
@@ -13,11 +22,43 @@ export const canvasRectSchema = z.object({
   height: z.number().positive(),
 });
 
+const canvasNodeStyleDefaults = {
+  backgroundColor: 'transparent',
+  borderColor: '#cbd5e1',
+  borderStyle: 'solid' as const,
+  borderWidth: 0,
+  borderRadius: 14,
+  shadowX: 0,
+  shadowY: 0,
+  shadowBlur: 0,
+  shadowSpread: 0,
+  shadowColor: 'rgba(15, 23, 42, 0.16)',
+  opacity: 100,
+};
+
+export const builderCanvasNodeStyleSchema = z.object({
+  backgroundColor: z.string().max(64),
+  borderColor: z.string().max(64),
+  borderStyle: z.enum(['solid', 'dashed']),
+  borderWidth: z.number().int().min(0).max(12),
+  borderRadius: z.number().int().min(0).max(64),
+  shadowX: z.number().int().min(-96).max(96),
+  shadowY: z.number().int().min(-96).max(96),
+  shadowBlur: z.number().int().min(0).max(160),
+  shadowSpread: z.number().int().min(-96).max(96),
+  shadowColor: z.string().max(64),
+  opacity: z.number().int().min(0).max(100),
+});
+
+export type BuilderCanvasNodeStyle = z.infer<typeof builderCanvasNodeStyleSchema>;
+
 const baseCanvasNodeSchema = z.object({
   id: z.string().trim().min(1).max(120),
   kind: canvasNodeKindSchema,
   rect: canvasRectSchema,
+  style: builderCanvasNodeStyleSchema.default(canvasNodeStyleDefaults),
   zIndex: z.number().int().nonnegative(),
+  rotation: z.number().min(0).max(360).default(0),
   locked: z.boolean().default(false),
   visible: z.boolean().default(true),
 });
@@ -51,15 +92,57 @@ const buttonCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+const headingCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('heading'),
+  content: z.object({
+    text: z.string().max(300),
+    level: z.number().int().min(1).max(6),
+    color: z.string().max(32),
+    align: z.enum(['left', 'center', 'right']),
+  }),
+});
+
+const containerCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('container'),
+  content: z.object({
+    label: z.string().max(120),
+    background: z.string().max(64),
+    borderColor: z.string().max(64),
+    borderStyle: z.enum(['solid', 'dashed']),
+    borderWidth: z.number().int().min(0).max(12),
+    borderRadius: z.number().int().min(0).max(48),
+    padding: z.number().int().min(0).max(96),
+  }),
+});
+
+const sectionCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('section'),
+  content: z.object({
+    label: z.string().max(120),
+    maxWidth: z.number().int().min(320).max(1440),
+    background: z.string().max(64),
+    borderColor: z.string().max(64),
+    borderWidth: z.number().int().min(0).max(12),
+    borderRadius: z.number().int().min(0).max(48),
+    padding: z.number().int().min(0).max(144),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
   buttonCanvasNodeSchema,
+  headingCanvasNodeSchema,
+  containerCanvasNodeSchema,
+  sectionCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
 export type BuilderImageCanvasNode = z.infer<typeof imageCanvasNodeSchema>;
 export type BuilderButtonCanvasNode = z.infer<typeof buttonCanvasNodeSchema>;
+export type BuilderHeadingCanvasNode = z.infer<typeof headingCanvasNodeSchema>;
+export type BuilderContainerCanvasNode = z.infer<typeof containerCanvasNodeSchema>;
+export type BuilderSectionCanvasNode = z.infer<typeof sectionCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({
@@ -80,6 +163,15 @@ export interface BuilderCanvasDraftEnvelope {
 
 export const CANVAS_SANDBOX_UPDATED_BY = 'sandbox-builder';
 
+export function createDefaultCanvasNodeStyle(
+  overrides: Partial<BuilderCanvasNodeStyle> = {},
+): BuilderCanvasNodeStyle {
+  return {
+    ...canvasNodeStyleDefaults,
+    ...overrides,
+  };
+}
+
 function createNow(): string {
   return new Date().toISOString();
 }
@@ -96,7 +188,9 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
         id: 'headline-1',
         kind: 'text',
         rect: { x: 72, y: 64, width: 360, height: 88 },
+        style: createDefaultCanvasNodeStyle(),
         zIndex: 0,
+        rotation: 0,
         locked: false,
         visible: true,
         content: {
@@ -111,7 +205,9 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
         id: 'support-copy-1',
         kind: 'text',
         rect: { x: 72, y: 170, width: 420, height: 72 },
+        style: createDefaultCanvasNodeStyle(),
         zIndex: 1,
+        rotation: 0,
         locked: false,
         visible: true,
         content: {
@@ -128,7 +224,14 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
         id: 'cta-button-1',
         kind: 'button',
         rect: { x: 72, y: 280, width: 176, height: 52 },
+        style: createDefaultCanvasNodeStyle({
+          borderRadius: 999,
+          shadowY: 14,
+          shadowBlur: 30,
+          shadowColor: 'rgba(11, 59, 46, 0.18)',
+        }),
         zIndex: 2,
+        rotation: 0,
         locked: false,
         visible: true,
         content: {
@@ -141,7 +244,14 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
         id: 'cta-button-2',
         kind: 'button',
         rect: { x: 264, y: 280, width: 160, height: 52 },
+        style: createDefaultCanvasNodeStyle({
+          borderRadius: 999,
+          shadowY: 8,
+          shadowBlur: 18,
+          shadowColor: 'rgba(15, 23, 42, 0.08)',
+        }),
         zIndex: 3,
+        rotation: 0,
         locked: false,
         visible: true,
         content: {
@@ -154,7 +264,11 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
         id: 'hero-image-1',
         kind: 'image',
         rect: { x: 520, y: 72, width: 360, height: 280 },
+        style: createDefaultCanvasNodeStyle({
+          borderRadius: 12,
+        }),
         zIndex: 4,
+        rotation: 0,
         locked: false,
         visible: true,
         content: {
@@ -176,11 +290,11 @@ export function normalizeCanvasDocument(
   if (!parsed.success) return fallback;
 
   const nodes = [...parsed.data.nodes]
-    .filter((node) => node.visible)
     .sort((left, right) => left.zIndex - right.zIndex)
     .map((node, index) => ({
       ...node,
       zIndex: index,
+      rotation: Math.max(0, Math.min(360, Math.round(node.rotation))),
       rect: {
         x: Math.max(0, Math.round(node.rect.x)),
         y: Math.max(0, Math.round(node.rect.y)),
@@ -195,4 +309,3 @@ export function normalizeCanvasDocument(
     nodes,
   };
 }
-

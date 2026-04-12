@@ -1,6 +1,10 @@
 import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import SmartLink from '@/components/SmartLink';
+import {
+  homeContactButtonSurfaceIds,
+  homeContactTextSurfaceIds,
+} from '@/lib/builder/registry';
 
 export default function HomeContactCta({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
@@ -18,14 +22,34 @@ export default function HomeContactCta({ locale }: { locale: Locale }) {
   return (
     <section className="section section--dark home-contact-cta" id="contact" data-tone="dark">
       <div className="container">
-        <div className="section-label">{contact.label}</div>
-        <h2 className="section-title">{title}</h2>
-        <p className="section-lede">{description}</p>
-        <div className="home-contact-actions">
-          <SmartLink className="button ghost" href={`/${locale}/contact`}>
+        <div data-builder-node-key="copy">
+          <div className="section-label" data-builder-surface-key={homeContactTextSurfaceIds[0]}>
+            {contact.label}
+          </div>
+          <h2 className="section-title" data-builder-surface-key={homeContactTextSurfaceIds[1]}>
+            {title}
+          </h2>
+          <p className="section-lede" data-builder-surface-key={homeContactTextSurfaceIds[2]}>
+            {description}
+          </p>
+        </div>
+        <div className="home-contact-actions" data-builder-node-key="actions">
+          <SmartLink
+            className="button ghost"
+            href={`/${locale}/contact`}
+            data-builder-surface-key={homeContactButtonSurfaceIds[0]}
+          >
             {contact.cta.label}
           </SmartLink>
-          {representativeTel ? <a className="button secondary" href={representativeTel.href}>{representativeTel.value}</a> : null}
+          {representativeTel ? (
+            <a
+              className="button secondary"
+              href={representativeTel.href}
+              data-builder-surface-key={homeContactButtonSurfaceIds[1]}
+            >
+              {representativeTel.value}
+            </a>
+          ) : null}
         </div>
       </div>
     </section>

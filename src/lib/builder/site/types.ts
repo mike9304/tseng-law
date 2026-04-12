@@ -8,7 +8,7 @@
  */
 
 import type { Locale } from '@/lib/locales';
-import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+// BuilderCanvasDocument used by persistence.ts, not directly here
 
 export interface BuilderNavItem {
   id: string;

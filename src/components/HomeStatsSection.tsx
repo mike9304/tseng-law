@@ -5,6 +5,7 @@ import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import SectionLabel from '@/components/SectionLabel';
 import ScrollHighlightText from '@/components/ScrollHighlightText';
+import { homeStatsTextSurfaceIds } from '@/lib/builder/registry';
 
 function easeOutCubic(progress: number) {
   return 1 - Math.pow(1 - progress, 3);
@@ -87,12 +88,17 @@ export default function HomeStatsSection({ locale }: { locale: Locale }) {
   return (
     <section className="section section--light stats-section" id="stats" data-tone="light" ref={rootRef}>
       <div className="container">
-        <SectionLabel>{stats.label}</SectionLabel>
-        <h2 className="section-title">{stats.title}</h2>
+        <SectionLabel data-builder-surface-key={homeStatsTextSurfaceIds[0]}>
+          {stats.label}
+        </SectionLabel>
+        <h2 className="section-title" data-builder-surface-key={homeStatsTextSurfaceIds[1]}>
+          {stats.title}
+        </h2>
         <ScrollHighlightText
           className="section-lede"
           text={stats.description}
           highlightWords={stats.highlightWords}
+          data-builder-surface-key={homeStatsTextSurfaceIds[2]}
         />
         <div className="stats-grid reveal-stagger">
           {stats.items.map((item, index) => {

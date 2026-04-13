@@ -19,7 +19,7 @@
 
 ## 현재 상태 (2026-04-13 기준)
 
-- **Wix 체크포인트 점수**: 🟢 **0 / 30**. 과거 "완료" 로 기록된 것 대부분은 WIP 재분류. 이유: 브라우저 검증이 없었음.
+- **Wix 체크포인트 점수**: 🟢 **1 / 30** (W01 Green, 2026-04-13 스크린샷 검증). `/admin-builder` 에서 composite canvas node 로 실제 호정국제 홈(HeroSearch, ServicesBento, HomeContactCta) 렌더 확인.
 - **역할 고정**: Claude Opus = Manager / Architect. Codex = 워커 (자기 주도 작업 중단, Manager 가 제공하는 프롬프트만 실행).
 - **진입점**: `/admin-builder`로 단일화. `/admin-builder/sandbox`는 redirect.
 - **새 페이지 기본 포맷**: `canvas-scene-vnext` (legacy `section-snapshot-v1` 은 home 에만 남아있음).

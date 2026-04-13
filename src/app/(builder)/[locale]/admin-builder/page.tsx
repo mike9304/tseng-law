@@ -42,13 +42,12 @@ export default async function BuilderMainPage({
     const pageCanvas = await readPageCanvas('default', homePage.pageId, 'draft');
     const nodeCount = pageCanvas?.nodes?.length ?? 0;
     const hasComposite = pageCanvas?.nodes?.some((n) => n.kind === 'composite') ?? false;
-    // Preserve user's real work: keep canvas if it has composites OR more than
-    // 5 nodes (treat sparse placeholder/test content as empty and re-seed).
+    // Preserve real work: keep canvas if it has composites OR more than 5 nodes.
+    // Sparse placeholder/test content (<= 5 nodes, no composite) gets re-seeded.
     const hasRealContent = hasComposite || nodeCount > 5;
     if (pageCanvas && hasRealContent) {
       initialDocument = normalizeCanvasDocument(pageCanvas, locale);
     } else {
-      // Seed the home page canvas with the real site composites on first open
       const seeded = createHomePageCanvasDocument(locale);
       initialDocument = seeded;
       try {

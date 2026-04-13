@@ -30,6 +30,8 @@ const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
   mobile: 375,
 };
 
+type SandboxDrawerPanel = 'pages' | 'add' | 'design' | 'layers' | 'nav' | 'history';
+
 type ToastTone = 'success' | 'error';
 
 interface SandboxToast {
@@ -74,6 +76,7 @@ export default function SandboxPage({
   const [activePageId, setActivePageId] = useState<string | null>(initialPageId ?? null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
+  const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
 
   function pushToast(message: string, tone: ToastTone) {
     const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -122,6 +125,7 @@ export default function SandboxPage({
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [document, selectedNodeId],
   );
+  const hasSelection = selectedNodeIds.length > 0;
   const assetLibraryNode = useMemo(
     () => document?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
     [assetLibraryNodeId, document],
@@ -193,6 +197,10 @@ export default function SandboxPage({
 
   const viewportWidth = VIEWPORT_WIDTHS[viewport];
 
+  const toggleDrawer = useCallback((panel: SandboxDrawerPanel) => {
+    setActiveDrawer((current) => (current === panel ? null : panel));
+  }, []);
+
   const canvasWrapperStyle: React.CSSProperties = viewportWidth
     ? {
         width: viewportWidth,
@@ -251,17 +259,149 @@ export default function SandboxPage({
       />
 
       <section className={styles.editorShell}>
-        <div className={styles.leftColumn}>
-          <PageSwitcher
-            locale={locale}
-            activePageId={activePageId}
-            onSelectPage={handleSelectPage}
-          />
-          <NavigationEditor locale={locale} />
-          <SandboxLayersPanel />
-          <SandboxCatalogPanel />
+        <div className={styles.iconRail}>
+          <button
+            type="button"
+            className={`${styles.railButton} ${activeDrawer === 'pages' ? styles.railButtonActive : ''}`}
+            onClick={() => toggleDrawer('pages')}
+            aria-pressed={activeDrawer === 'pages'}
+            title="Pages"
+          >
+            <span className={styles.railButtonIcon} aria-hidden="true">📄</span>
+            <span className={styles.railButtonLabel}>Pages</span>
+          </button>
+          <button
+            type="button"
+            className={`${styles.railButton} ${activeDrawer === 'add' ? styles.railButtonActive : ''}`}
+            onClick={() => toggleDrawer('add')}
+            aria-pressed={activeDrawer === 'add'}
+            title="Add"
+          >
+            <span className={styles.railButtonIcon} aria-hidden="true">➕</span>
+            <span className={styles.railButtonLabel}>Add</span>
+          </button>
+          <button
+            type="button"
+            className={`${styles.railButton} ${activeDrawer === 'design' ? styles.railButtonActive : ''}`}
+            onClick={() => toggleDrawer('design')}
+            aria-pressed={activeDrawer === 'design'}
+            title="Design"
+          >
+            <span className={styles.railButtonIcon} aria-hidden="true">🎨</span>
+            <span className={styles.railButtonLabel}>Design</span>
+          </button>
+          <button
+            type="button"
+            className={`${styles.railButton} ${activeDrawer === 'layers' ? styles.railButtonActive : ''}`}
+            onClick={() => toggleDrawer('layers')}
+            aria-pressed={activeDrawer === 'layers'}
+            title="Layers"
+          >
+            <span className={styles.railButtonIcon} aria-hidden="true">🧩</span>
+            <span className={styles.railButtonLabel}>Layers</span>
+          </button>
+          <button
+            type="button"
+            className={`${styles.railButton} ${activeDrawer === 'nav' ? styles.railButtonActive : ''}`}
+            onClick={() => toggleDrawer('nav')}
+            aria-pressed={activeDrawer === 'nav'}
+            title="Navigation"
+          >
+            <span className={styles.railButtonIcon} aria-hidden="true">🧭</span>
+            <span className={styles.railButtonLabel}>Navigation</span>
+          </button>
+          <button
+            type="button"
+            className={`${styles.railButton} ${activeDrawer === 'history' ? styles.railButtonActive : ''}`}
+            onClick={() => toggleDrawer('history')}
+            aria-pressed={activeDrawer === 'history'}
+            title="History"
+          >
+            <span className={styles.railButtonIcon} aria-hidden="true">🕘</span>
+            <span className={styles.railButtonLabel}>History</span>
+          </button>
         </div>
-        <div style={canvasOuterStyle}>
+
+        <aside
+          className={`${styles.drawer} ${!activeDrawer ? styles.drawerHidden : ''}`}
+          aria-hidden={!activeDrawer}
+        >
+          {activeDrawer === 'pages' ? (
+            <div className={styles.drawerBody}>
+              <PageSwitcher
+                locale={locale}
+                activePageId={activePageId}
+                onSelectPage={handleSelectPage}
+              />
+            </div>
+          ) : null}
+
+          {activeDrawer === 'add' ? (
+            <div className={styles.drawerBody}>
+              <SandboxCatalogPanel />
+            </div>
+          ) : null}
+
+          {activeDrawer === 'design' ? (
+            <div className={styles.drawerBody}>
+              <section className={styles.panelSection}>
+                <header className={styles.panelSectionHeader}>
+                  <div>
+                    <span>Design</span>
+                    <strong>Site settings</strong>
+                  </div>
+                  <button
+                    type="button"
+                    className={styles.panelHeaderButton}
+                    onClick={() => setSettingsOpen(true)}
+                  >
+                    Open
+                  </button>
+                </header>
+                <p className={styles.panelCopy}>
+                  브랜드, 연락처, 로고, 파비콘 같은 site-level design 설정은 modal에서 편집합니다.
+                </p>
+              </section>
+            </div>
+          ) : null}
+
+          {activeDrawer === 'layers' ? (
+            <div className={styles.drawerBody}>
+              <SandboxLayersPanel />
+            </div>
+          ) : null}
+
+          {activeDrawer === 'nav' ? (
+            <div className={styles.drawerBody}>
+              <NavigationEditor locale={locale} />
+            </div>
+          ) : null}
+
+          {activeDrawer === 'history' ? (
+            <div className={styles.drawerBody}>
+              <section className={styles.panelSection}>
+                <header className={styles.panelSectionHeader}>
+                  <div>
+                    <span>History</span>
+                    <strong>Version history</strong>
+                  </div>
+                  <button
+                    type="button"
+                    className={styles.panelHeaderButton}
+                    onClick={() => setHistoryOpen(true)}
+                  >
+                    Open
+                  </button>
+                </header>
+                <p className={styles.panelCopy}>
+                  revision timeline과 restore는 existing history modal에서 확인합니다.
+                </p>
+              </section>
+            </div>
+          ) : null}
+        </aside>
+
+        <div className={styles.canvasColumn} style={canvasOuterStyle}>
           {siteName ? (
             <div style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderBottom: '1px solid #e5e7eb' }}>
               <SiteHeader
@@ -287,13 +427,17 @@ export default function SandboxPage({
             </div>
           ) : null}
         </div>
-        <SandboxInspectorPanel
-          onRequestAssetLibrary={() => {
-            if (selectedNode?.kind === 'image') {
-              setAssetLibraryNodeId(selectedNode.id);
-            }
-          }}
-        />
+        <div className={`${styles.inspectorColumn} ${!hasSelection ? styles.inspectorHidden : ''}`}>
+          {hasSelection ? (
+            <SandboxInspectorPanel
+              onRequestAssetLibrary={() => {
+                if (selectedNode?.kind === 'image') {
+                  setAssetLibraryNodeId(selectedNode.id);
+                }
+              }}
+            />
+          ) : null}
+        </div>
       </section>
 
       {assetLibraryNode?.kind === 'image' ? (

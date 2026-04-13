@@ -107,7 +107,7 @@ export default function SandboxPage({
     }, AUTOSAVE_DEBOUNCE_MS);
 
     return () => window.clearTimeout(timer);
-  }, [document, initialDocument.updatedAt, locale, setDraftSaveState]);
+  }, [document, initialDocument.updatedAt, locale, setDraftSaveState, activePageId]);
 
   const selectedNode = useMemo(
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,

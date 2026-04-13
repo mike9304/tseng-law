@@ -4,6 +4,7 @@ import {
   listBuilderImageAssets,
   uploadBuilderImageAsset,
 } from '@/lib/builder/assets';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
@@ -39,6 +40,9 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   let formData: FormData;
   try {
     formData = await request.formData();
@@ -73,6 +77,9 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   try {
     const payload = await request.json();
     await deleteBuilderImageAsset({

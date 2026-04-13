@@ -7,6 +7,7 @@ import {
 } from '@/lib/builder/validation';
 import type { BuilderPageDocument, BuilderPageSnapshot, BuilderPageState } from '@/lib/builder/types';
 import { normalizeLocale } from '@/lib/locales';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
@@ -61,6 +62,9 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { siteId: string; pageKey: string } }
 ) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
     return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
   }

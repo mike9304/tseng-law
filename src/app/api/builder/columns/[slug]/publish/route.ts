@@ -6,6 +6,7 @@ import {
   writePublishedColumn,
 } from '@/lib/builder/columns/storage';
 import { invalidateBlobColumnsCache } from '@/lib/consultation/columns-blob-reader';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
@@ -31,6 +32,9 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { slug: string } },
 ) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   const slug = params.slug;
   if (!slug || slug.length > 120) {
     return NextResponse.json(

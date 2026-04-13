@@ -6,6 +6,7 @@ import {
 } from '@/lib/builder/persistence';
 import { isBuilderPageKey, isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { normalizeLocale } from '@/lib/locales';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
@@ -17,6 +18,9 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { siteId: string; pageKey: string } }
 ) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
     return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
   }

@@ -8,6 +8,7 @@ import {
   writeBuilderHomeSnapshot,
 } from '@/lib/builder/persistence';
 import type { BuilderHomeDocumentState, BuilderPageDocument } from '@/lib/builder/types';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
@@ -72,6 +73,9 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   const locale = normalizeBuilderHomeLocale(request.nextUrl.searchParams.get('locale'));
   const kind = parseKind(request.nextUrl.searchParams.get('kind'));
 

@@ -89,7 +89,23 @@ export default async function BuilderPublishedPage({
 
   return (
     <>
-      {fontsUrl && <link rel="stylesheet" href={fontsUrl} />}
+      {fontsUrl && (
+        <>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link rel="stylesheet" href={fontsUrl} />
+        </>
+      )}
+      {/* Preload hero image (first image node by z-order) */}
+      {(() => {
+        const heroImage = canvas.nodes
+          .filter((n) => n.kind === 'image' && n.visible !== false)
+          .sort((a, b) => a.zIndex - b.zIndex)[0];
+        const src = heroImage ? (heroImage.content as { src?: string }).src : null;
+        return src && !src.includes('placeholder') ? (
+          <link rel="preload" as="image" href={src} />
+        ) : null;
+      })()}
       <style>{`
         @media (max-width: 768px) {
           .builder-pub-main {

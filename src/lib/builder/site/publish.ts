@@ -125,7 +125,7 @@ export async function publishPageWithChecks(
   const slug = pageMeta?.slug || '';
 
   try {
-    revalidatePath(`/${locale}/${slug || ''}`);
+    revalidatePath(`/${locale}/p/${slug || ''}`);
   } catch { /* dev or non-existent path */ }
 
   return { success: true, checks, slug };

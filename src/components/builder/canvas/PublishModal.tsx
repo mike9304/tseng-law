@@ -163,11 +163,13 @@ export default function PublishModal({
   open,
   document,
   locale,
+  activePageId,
   onClose,
 }: {
   open: boolean;
   document: BuilderCanvasDocument | null;
   locale: string;
+  activePageId?: string | null;
   onClose: () => void;
 }) {
   const [publishState, setPublishState] = useState<PublishState>('checking');
@@ -209,27 +211,71 @@ export default function PublishModal({
     setPublishError(null);
 
     try {
-      const response = await fetch(`/api/builder/sandbox/draft?locale=${locale}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'same-origin',
-        body: JSON.stringify({ document }),
-      });
+      if (activePageId) {
+        // ── Site page publish: save draft then call publish API ──
+        const saveResponse = await fetch(
+          `/api/builder/site/pages/${activePageId}/draft?locale=${locale}`,
+          {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'same-origin',
+            body: JSON.stringify({ document }),
+          },
+        );
+        if (!saveResponse.ok) {
+          setPublishState('error');
+          setPublishError('Failed to save draft before publish.');
+          return;
+        }
 
-      if (!response.ok) {
-        setPublishState('error');
-        setPublishError('Failed to save draft before publish.');
-        return;
+        const publishResponse = await fetch(
+          `/api/builder/site/pages/${activePageId}/publish?locale=${locale}`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'same-origin',
+          },
+        );
+
+        if (!publishResponse.ok) {
+          const errData = (await publishResponse.json().catch(() => ({}))) as {
+            errors?: string[];
+            error?: string;
+          };
+          setPublishState('error');
+          setPublishError(
+            errData.errors?.join(', ') || errData.error || 'Publish failed.',
+          );
+          return;
+        }
+
+        const result = (await publishResponse.json()) as { ok: boolean; slug?: string };
+        setPublishState('success');
+        const slug = result.slug ?? '';
+        setPublishedSlug(`/${locale}/p/${slug}`);
+      } else {
+        // ── Legacy sandbox publish fallback ──
+        const response = await fetch(`/api/builder/sandbox/draft?locale=${locale}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({ document }),
+        });
+
+        if (!response.ok) {
+          setPublishState('error');
+          setPublishError('Failed to save draft before publish.');
+          return;
+        }
+
+        setPublishState('success');
+        setPublishedSlug(`/p/sandbox`);
       }
-
-      // For sandbox, we simulate publish success
-      setPublishState('success');
-      setPublishedSlug(`/p/sandbox`);
     } catch {
       setPublishState('error');
       setPublishError('Network error during publish.');
     }
-  }, [checks, document, locale]);
+  }, [checks, document, locale, activePageId]);
 
   if (!open) return null;
 

@@ -127,6 +127,23 @@ const headingCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+const flexConfigSchema = z.object({
+  direction: z.enum(['row', 'column']).default('row'),
+  wrap: z.boolean().default(true),
+  justifyContent: z.enum(['flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly']).default('flex-start'),
+  alignItems: z.enum(['flex-start', 'center', 'flex-end', 'stretch']).default('flex-start'),
+  gap: z.number().int().min(0).max(200).default(16),
+});
+
+const gridConfigSchema = z.object({
+  columns: z.number().int().min(1).max(12).default(3),
+  rows: z.number().int().min(1).max(12).default(2),
+  columnGap: z.number().int().min(0).max(200).default(16),
+  rowGap: z.number().int().min(0).max(200).default(16),
+  templateColumns: z.string().max(200).optional(),
+  templateRows: z.string().max(200).optional(),
+});
+
 const containerCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('container'),
   content: z.object({
@@ -137,6 +154,9 @@ const containerCanvasNodeSchema = baseCanvasNodeSchema.extend({
     borderWidth: z.number().int().min(0).max(12),
     borderRadius: z.number().int().min(0).max(48),
     padding: z.number().int().min(0).max(96),
+    layoutMode: z.enum(['absolute', 'flex', 'grid']).default('absolute'),
+    flexConfig: flexConfigSchema.optional(),
+    gridConfig: gridConfigSchema.optional(),
   }),
 });
 

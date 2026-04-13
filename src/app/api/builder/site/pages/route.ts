@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
-import { listPages, createPage } from '@/lib/builder/site/persistence';
+import { listPages, createPage, writePageCanvas } from '@/lib/builder/site/persistence';
+import { normalizeCanvasDocument, createDefaultCanvasDocument } from '@/lib/builder/canvas/types';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 
 export const runtime = 'nodejs';
@@ -18,9 +19,9 @@ export async function POST(request: NextRequest) {
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
 
-  let body: { slug?: string; title?: string; locale?: string };
+  let body: { slug?: string; title?: string; locale?: string; document?: unknown };
   try {
-    body = (await request.json()) as { slug?: string; title?: string; locale?: string };
+    body = (await request.json()) as { slug?: string; title?: string; locale?: string; document?: unknown };
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
@@ -34,5 +35,12 @@ export async function POST(request: NextRequest) {
   }
 
   const page = await createPage('default', locale, slug, title);
-  return NextResponse.json({ success: true, page });
+
+  // Save the initial canvas document (template or blank)
+  const canvasDoc = body.document
+    ? normalizeCanvasDocument(body.document, locale)
+    : createDefaultCanvasDocument(locale);
+  await writePageCanvas('default', page.pageId, 'draft', canvasDoc);
+
+  return NextResponse.json({ success: true, pageId: page.pageId, page });
 }

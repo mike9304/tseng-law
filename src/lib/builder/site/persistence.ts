@@ -132,8 +132,8 @@ export async function createPage(
     slug,
     title: { ko: title, 'zh-hant': title, en: title },
     locale,
-    documentKind: 'section-snapshot-v1',
-    lifecycle: createDefaultPageLifecycleMeta('section-snapshot-v1'),
+    documentKind: 'canvas-scene-vnext',
+    lifecycle: createDefaultPageLifecycleMeta('canvas-scene-vnext'),
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };

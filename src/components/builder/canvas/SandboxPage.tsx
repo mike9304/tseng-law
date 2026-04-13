@@ -142,7 +142,7 @@ export default function SandboxPage({
       // Load the linked page's document
       try {
         const response = await fetch(
-          `/api/builder/sites/default/pages/${linkedPageId}/draft?locale=${newLocale}`,
+          `/api/builder/site/pages/${linkedPageId}/draft?locale=${newLocale}`,
           { credentials: 'same-origin' },
         );
         if (response.ok) {
@@ -166,7 +166,7 @@ export default function SandboxPage({
     setActivePageId(pageId);
     try {
       const response = await fetch(
-        `/api/builder/sites/default/pages/${pageId}/draft?locale=${locale}`,
+        `/api/builder/site/pages/${pageId}/draft?locale=${locale}`,
         { credentials: 'same-origin' },
       );
       if (response.ok) {
@@ -307,6 +307,7 @@ export default function SandboxPage({
         open={publishOpen}
         document={document}
         locale={locale}
+        activePageId={activePageId}
         onClose={() => setPublishOpen(false)}
       />
 

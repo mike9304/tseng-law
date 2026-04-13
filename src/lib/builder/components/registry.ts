@@ -37,3 +37,4 @@ import './attorneyCard';
 import './faqList';
 import './contactForm';
 import './ctaBanner';
+import './composite';

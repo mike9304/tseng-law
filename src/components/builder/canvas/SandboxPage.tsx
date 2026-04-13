@@ -13,8 +13,11 @@ import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/Sa
 import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
 import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
 import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
+import SiteHeader from '@/components/builder/published/SiteHeader';
+import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import type { BuilderNavItem, BuilderSiteSettings } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
 
@@ -40,19 +43,25 @@ export default function SandboxPage({
   locale,
   backend,
   initialPageId,
+  siteName,
+  siteSettings,
+  navItems,
+  currentSlug,
 }: {
   initialDocument: BuilderCanvasDocument;
   locale: Locale;
   backend: 'blob' | 'file';
   initialPageId?: string;
+  siteName?: string;
+  siteSettings?: BuilderSiteSettings;
+  navItems?: BuilderNavItem[];
+  currentSlug?: string;
 }) {
   const {
     document,
     selectedNodeId,
     selectedNodeIds,
     draftSaveState,
-    canUndo,
-    canRedo,
     replaceDocument,
     setDraftSaveState,
     updateNodeContent,
@@ -203,12 +212,17 @@ export default function SandboxPage({
         minWidth: 0,
         background: '#e2e8f0',
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
         overflow: 'auto',
       }
     : {
         flex: 1,
         minWidth: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'auto',
+        background: '#f8fafc',
       };
 
   return (
@@ -236,35 +250,6 @@ export default function SandboxPage({
         onLocaleChange={handleLocaleChange}
       />
 
-      <section className={styles.metaGrid}>
-        <div className={styles.metaCard}>
-          <span>Selected node</span>
-          <strong>
-            {selectedNodeIds.length > 1
-              ? `${selectedNodeIds.length} selected`
-              : selectedNode
-                ? `${selectedNode.kind} · ${selectedNode.id}`
-                : 'none'}
-          </strong>
-        </div>
-        <div className={styles.metaCard}>
-          <span>Document nodes</span>
-          <strong>{document?.nodes.length ?? 0}</strong>
-        </div>
-        <div className={styles.metaCard}>
-          <span>Interaction scope</span>
-          <strong>select · drag · resize · rotate · lock/hide · delete · nudge · undo/redo</strong>
-        </div>
-        <div className={styles.metaCard}>
-          <span>History</span>
-          <strong>{canUndo ? 'undo ready' : 'undo empty'} · {canRedo ? 'redo ready' : 'redo empty'}</strong>
-        </div>
-        <div className={styles.metaCard}>
-          <span>Out of scope</span>
-          <strong>asset history, nested container semantics, main builder integration</strong>
-        </div>
-      </section>
-
       <section className={styles.editorShell}>
         <div className={styles.leftColumn}>
           <PageSwitcher
@@ -277,9 +262,30 @@ export default function SandboxPage({
           <SandboxCatalogPanel />
         </div>
         <div style={canvasOuterStyle}>
-          <div style={canvasWrapperStyle}>
+          {siteName ? (
+            <div style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderBottom: '1px solid #e5e7eb' }}>
+              <SiteHeader
+                siteName={siteName}
+                settings={siteSettings}
+                navItems={navItems || []}
+                locale={locale}
+                currentSlug={currentSlug || ''}
+              />
+            </div>
+          ) : null}
+          <div style={{ ...canvasWrapperStyle, flex: '0 0 auto', minHeight: document?.stageHeight ?? 880 }}>
             <CanvasContainer onRequestAssetLibrary={setAssetLibraryNodeId} />
           </div>
+          {siteName ? (
+            <div style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderTop: '1px solid #e5e7eb' }}>
+              <SiteFooter
+                siteName={siteName}
+                settings={siteSettings}
+                navItems={navItems || []}
+                locale={locale}
+              />
+            </div>
+          ) : null}
         </div>
         <SandboxInspectorPanel
           onRequestAssetLibrary={() => {

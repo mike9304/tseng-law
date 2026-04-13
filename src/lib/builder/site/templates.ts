@@ -62,6 +62,8 @@ const STARTER_TEMPLATES: Template[] = [
     isStarter: true,
     document: {
       version: 1,
+      stageWidth: 1280,
+      stageHeight: 880,
       locale: 'ko',
       updatedAt: '2026-04-12T00:00:00Z',
       updatedBy: 'template-system',
@@ -85,6 +87,8 @@ const STARTER_TEMPLATES: Template[] = [
     isStarter: true,
     document: {
       version: 1,
+      stageWidth: 1280,
+      stageHeight: 880,
       locale: 'ko',
       updatedAt: '2026-04-12T00:00:00Z',
       updatedBy: 'template-system',
@@ -106,6 +110,8 @@ const STARTER_TEMPLATES: Template[] = [
     isStarter: true,
     document: {
       version: 1,
+      stageWidth: 1280,
+      stageHeight: 880,
       locale: 'ko',
       updatedAt: '2026-04-12T00:00:00Z',
       updatedBy: 'template-system',

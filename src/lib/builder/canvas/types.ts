@@ -18,7 +18,16 @@ export const builderCanvasNodeKinds = [
   'heading',
   'container',
   'section',
+  'composite',
 ] as const;
+
+export const compositeComponentKeys = [
+  'hero-search',
+  'services-bento',
+  'home-contact-cta',
+] as const;
+
+export type CompositeComponentKey = (typeof compositeComponentKeys)[number];
 
 export const canvasNodeKindSchema = z.enum(builderCanvasNodeKinds);
 export type BuilderCanvasNodeKind = z.infer<typeof canvasNodeKindSchema>;
@@ -173,6 +182,14 @@ const sectionCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+const compositeCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('composite'),
+  content: z.object({
+    componentKey: z.enum(compositeComponentKeys),
+    config: z.record(z.string(), z.unknown()).default({}),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
@@ -180,6 +197,7 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   headingCanvasNodeSchema,
   containerCanvasNodeSchema,
   sectionCanvasNodeSchema,
+  compositeCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -188,6 +206,7 @@ export type BuilderButtonCanvasNode = z.infer<typeof buttonCanvasNodeSchema>;
 export type BuilderHeadingCanvasNode = z.infer<typeof headingCanvasNodeSchema>;
 export type BuilderContainerCanvasNode = z.infer<typeof containerCanvasNodeSchema>;
 export type BuilderSectionCanvasNode = z.infer<typeof sectionCanvasNodeSchema>;
+export type BuilderCompositeCanvasNode = z.infer<typeof compositeCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({
@@ -195,6 +214,8 @@ export const builderCanvasDocumentSchema = z.object({
   locale: sandboxLocaleSchema,
   updatedAt: z.string().datetime({ offset: true }),
   updatedBy: z.string().trim().min(1).max(120),
+  stageWidth: z.number().int().min(320).max(4000).default(1280),
+  stageHeight: z.number().int().min(400).max(20000).default(880),
   nodes: z.array(builderCanvasNodeSchema).max(500),
 });
 
@@ -228,6 +249,8 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
     locale,
     updatedAt,
     updatedBy: CANVAS_SANDBOX_UPDATED_BY,
+    stageWidth: 1280,
+    stageHeight: 880,
     nodes: [
       {
         id: 'headline-1',

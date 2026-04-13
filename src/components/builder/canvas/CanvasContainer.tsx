@@ -68,16 +68,20 @@ type ContextMenuState = {
   y: number;
 };
 
-const STAGE_WIDTH = 1280;
-const STAGE_HEIGHT = 880;
+const DEFAULT_STAGE_WIDTH = 1280;
+const DEFAULT_STAGE_HEIGHT = 880;
 const MIN_WIDTH = 72;
 const MIN_HEIGHT = 40;
 
-function clampRect(rect: BuilderCanvasNode['rect']): BuilderCanvasNode['rect'] {
-  const width = Math.max(MIN_WIDTH, Math.min(STAGE_WIDTH, Math.round(rect.width)));
-  const height = Math.max(MIN_HEIGHT, Math.min(STAGE_HEIGHT, Math.round(rect.height)));
-  const x = Math.max(0, Math.min(STAGE_WIDTH - width, Math.round(rect.x)));
-  const y = Math.max(0, Math.min(STAGE_HEIGHT - height, Math.round(rect.y)));
+function clampRect(
+  rect: BuilderCanvasNode['rect'],
+  stageWidth: number,
+  stageHeight: number,
+): BuilderCanvasNode['rect'] {
+  const width = Math.max(MIN_WIDTH, Math.min(stageWidth, Math.round(rect.width)));
+  const height = Math.max(MIN_HEIGHT, Math.min(stageHeight, Math.round(rect.height)));
+  const x = Math.max(0, Math.min(stageWidth - width, Math.round(rect.x)));
+  const y = Math.max(0, Math.min(stageHeight - height, Math.round(rect.y)));
   return { x, y, width, height };
 }
 
@@ -131,6 +135,12 @@ export default function CanvasContainer({
   const _childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
 
   const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? []);
+  const stageWidth = useBuilderCanvasStore(
+    (state) => state.document?.stageWidth ?? DEFAULT_STAGE_WIDTH,
+  );
+  const stageHeight = useBuilderCanvasStore(
+    (state) => state.document?.stageHeight ?? DEFAULT_STAGE_HEIGHT,
+  );
   const visibleNodes = useMemo(
     () => nodes.filter((node) => node.visible),
     [nodes],
@@ -145,8 +155,8 @@ export default function CanvasContainer({
     const rect = viewportRef.current?.getBoundingClientRect();
     if (!rect) return;
     setZoomState((currentState) =>
-      zoomToFit(currentState, STAGE_WIDTH, STAGE_HEIGHT, rect.width - 24, rect.height - 24));
-  }, []);
+      zoomToFit(currentState, stageWidth, stageHeight, rect.width - 24, rect.height - 24));
+  }, [stageWidth, stageHeight]);
 
   useEffect(() => {
     fitCanvas();
@@ -344,13 +354,13 @@ export default function CanvasContainer({
               .filter((node) => node.id !== nodeId && node.visible)
               .map((node) => node.rect);
             const { snappedRect, guides: nextGuides } = computeSnap(tentative, otherRects, 0, {
-              width: STAGE_WIDTH,
-              height: STAGE_HEIGHT,
+              width: stageWidth,
+              height: stageHeight,
             });
             setGuides(nextGuides);
             updateSelectedNodes(activeInteraction.nodeIds, (node) => ({
               ...node,
-              rect: clampRect(snappedRect),
+              rect: clampRect(snappedRect, stageWidth, stageHeight),
             }), 'transient');
             return;
           }
@@ -365,7 +375,7 @@ export default function CanvasContainer({
               ...node.rect,
               x: baseRect.x + deltaX,
               y: baseRect.y + deltaY,
-            }),
+            }, stageWidth, stageHeight),
           };
         }, 'transient');
         return;
@@ -426,7 +436,7 @@ export default function CanvasContainer({
 
         return {
           ...node,
-          rect: clampRect(nextRect),
+          rect: clampRect(nextRect, stageWidth, stageHeight),
         };
       }, 'transient');
     }
@@ -473,17 +483,17 @@ export default function CanvasContainer({
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', handlePointerUp);
     };
-  }, [commitMutationSession, interaction, moveNodeIntoContainer, updateNode, updateSelectedNodes, zoomState.zoom]);
+  }, [commitMutationSession, interaction, moveNodeIntoContainer, updateNode, updateSelectedNodes, zoomState.zoom, stageWidth, stageHeight]);
 
   const resolveStagePosition = useCallback((clientX: number, clientY: number): { x: number; y: number } => {
     const rect = viewportRef.current?.getBoundingClientRect();
     if (!rect) return { x: 48, y: 48 };
     const nextPoint = screenToCanvas(clientX - rect.left, clientY - rect.top, zoomState);
     return {
-      x: Math.max(0, Math.min(STAGE_WIDTH - 80, Math.round(nextPoint.x))),
-      y: Math.max(0, Math.min(STAGE_HEIGHT - 48, Math.round(nextPoint.y))),
+      x: Math.max(0, Math.min(stageWidth - 80, Math.round(nextPoint.x))),
+      y: Math.max(0, Math.min(stageHeight - 48, Math.round(nextPoint.y))),
     };
-  }, [zoomState]);
+  }, [zoomState, stageWidth, stageHeight]);
 
   useEffect(() => {
     if (!selectionBox) return undefined;
@@ -586,6 +596,7 @@ export default function CanvasContainer({
           <div
             ref={containerRef}
             className={styles.stage}
+            style={{ width: `${stageWidth}px`, height: `${stageHeight}px` }}
             role="application"
             aria-label="Canvas editor"
             aria-roledescription="freeform canvas"
@@ -643,7 +654,7 @@ export default function CanvasContainer({
             }}
           >
             <div className={styles.topRuler} aria-hidden>
-              {Array.from({ length: Math.floor(STAGE_WIDTH / 40) + 1 }).map((_, index) => (
+              {Array.from({ length: Math.floor(stageWidth / 40) + 1 }).map((_, index) => (
                 <span
                   key={`top-${index}`}
                   className={styles.rulerMark}
@@ -654,7 +665,7 @@ export default function CanvasContainer({
               ))}
             </div>
             <div className={styles.leftRuler} aria-hidden>
-              {Array.from({ length: Math.floor(STAGE_HEIGHT / 40) + 1 }).map((_, index) => (
+              {Array.from({ length: Math.floor(stageHeight / 40) + 1 }).map((_, index) => (
                 <span
                   key={`left-${index}`}
                   className={`${styles.rulerMark} ${styles.rulerMarkVertical}`}
@@ -719,8 +730,8 @@ export default function CanvasContainer({
                     setSelectedNodeId(nodeId);
                   }
                   const rect = viewportRef.current?.getBoundingClientRect();
-                  const width = rect?.width ?? STAGE_WIDTH;
-                  const height = rect?.height ?? STAGE_HEIGHT;
+                  const width = rect?.width ?? stageWidth;
+                  const height = rect?.height ?? stageHeight;
                   const rawX = rect ? event.clientX - rect.left : event.clientX;
                   const rawY = rect ? event.clientY - rect.top : event.clientY;
                   setContextMenu({

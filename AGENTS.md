@@ -9,22 +9,21 @@
 
 ## Canonical 계획 (single source of truth)
 
-- **계획서**: `/Users/son7/Desktop/ai memory save 계획/사이트 빌더 계획서.md`
-  - §0A.6 현재 상태 snapshot
-  - §5 Phase 진행 상태
-  - §11 작업 큐 (task board)
-  - §16 Changelog (append 전용)
+- **Wix 체크포인트**: `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` — **100% 카피 목표의 구체 측정표 (W01~W30)**. 세션 목표는 이 중 하나를 green 으로 올리는 것.
+- **계획서**: `/Users/son7/Desktop/ai memory save 계획/사이트 빌더 계획서.md` — Phase 설계 + Changelog
+- **SESSION.md**: `/Users/son7/Projects/tseng-law/SESSION.md` — 현재 세션 일회용 계약서 (매 세션 리셋)
 - **인수인계**: `/Users/son7/Desktop/ai memory save 인수인계/사이트 빌더 인수인계.md`
 - **역할 교차 리뷰**: `/Users/son7/Desktop/ai memory 수정안/`
 
-모든 작업은 계획서 §11에서 task를 집어서 시작하고, 끝나면 §16에 한 줄, §0A.6 snapshot 갱신.
+세션 흐름: 사용자가 target W__ 지정 → Manager(Claude Opus)가 SESSION.md 작성 → 워커 agent 발주 / Codex 프롬프트 제공 → 통합 → 브라우저 검증 → Wix 체크포인트.md 갱신 → 계획서 § 16 Changelog 한 줄 → SESSION.md 리셋.
 
 ## 현재 상태 (2026-04-13 기준)
 
-- **Wix parity**: 직전 Codex 공식 평가 50/100 (A09 후). 이후 통합+보안+publish로 체감 55~58 추정, **객관 측정 없음**.
-- **진입점**: `/admin-builder`로 단일화 완료. `/admin-builder/sandbox`는 redirect.
+- **Wix 체크포인트 점수**: 🟢 **0 / 30**. 과거 "완료" 로 기록된 것 대부분은 WIP 재분류. 이유: 브라우저 검증이 없었음.
+- **역할 고정**: Claude Opus = Manager / Architect. Codex = 워커 (자기 주도 작업 중단, Manager 가 제공하는 프롬프트만 실행).
+- **진입점**: `/admin-builder`로 단일화. `/admin-builder/sandbox`는 redirect.
 - **새 페이지 기본 포맷**: `canvas-scene-vnext` (legacy `section-snapshot-v1` 은 home 에만 남아있음).
-- **Publish 경로**: `PublishModal → /api/builder/site/pages/[pageId]/publish → publishPageWithChecks → /[locale]/p/[slug]` 코드상 연결. **브라우저 E2E 검증 0회**.
+- **다음 필수 결정**: `section-snapshot-v1` vs `canvas-scene-vnext` 중 하나 완전 폐기. 병렬 유지는 드리프트 원인 1순위.
 
 ## 🚨 "껍데기만 완성" 주의 — 진짜 동작하지 않는 것들
 
@@ -42,21 +41,33 @@
 - Auth: 모든 mutation API는 `guardMutation()` (auth + CSRF + rate-limit) 통과 필수.
 - Editor 진입점: `/admin-builder` 하나. 새 entry 만들지 말 것.
 
-## 세션 시작 체크리스트 (모든 에이전트)
+## 세션 시작 체크리스트 (Manager 전용 — 다른 에이전트는 SESSION.md 만 봄)
 
 1. 이 파일(`AGENTS.md`) 읽기
-2. 계획서 §0A.6 snapshot + §5 Phase 진행 상태 확인
+2. `Wix 체크포인트.md` 현재 점수 확인
 3. `git log --oneline -10` 으로 직전 세션 작업 확인
-4. §11 task board 또는 사용자 지시에서 당면 task 픽업
-5. 금지사항 재확인: `git push --force`, 계획 없는 schema 변경, 테스트 없이 mass refactor, `--no-verify`
+4. 사용자가 제시한 target W__ 확인 (한 줄 응답으로 받음)
+5. `SESSION.md` 작성 — 목표, 성공 기준, 금지 범위, 실행 계획, (필요시) Codex 프롬프트
+6. 사용자 승인 → 실행 시작
+7. 금지사항 재확인: `git push --force`, SESSION.md 범위 밖 작업, 브라우저 검증 없이 "done" 선언, `--no-verify`
+
+## 워커 에이전트 발주 원칙
+
+- Manager 는 **task 를 스펙으로 쪼개서** 워커에게 발주. "기능 만들어" 금지.
+- 스펙 포함: input, output, 파일 경로, 패턴 출처, 금지 범위
+- 워커 반환 후 Manager 가 grep/read/typecheck 로 검수 → merge 또는 reject
+- Codex 는 사용자 터미널을 통해 실행되므로, Manager 가 **그대로 복붙 가능한 프롬프트 블록** 을 사용자에게 제공해야 함
 
 ## 세션 종료 체크리스트
 
-1. 변경 파일 typecheck/build 통과 확인
-2. 계획서 §16 Changelog 한 줄 append (날짜, 에이전트, task ID, 요약)
-3. 계획서 §0A.6 snapshot 필요 시 갱신
-4. 큰 결정 있으면 §4 핵심 결정에 추가
-5. 커밋 (push는 사용자 확인 받고)
+1. 변경 파일 typecheck/lint 통과 확인
+2. **브라우저 검증 완료** — 사용자 클릭으로 target 플로우 완주 확인. 검증 없으면 Green 카운트 안 됨.
+3. `Wix 체크포인트.md` 상태 열 + 마지막 검증 열 갱신
+4. 계획서 §16 Changelog 한 줄 append (날짜, 에이전트, W__ 번호, 요약, 검증 여부)
+5. AGENTS.md "현재 상태" 갱신
+6. 큰 결정 있으면 계획서 §4 에 추가
+7. SESSION.md 를 템플릿으로 리셋
+8. 커밋 (push 는 사용자 확인 받고)
 
 ## 다음 큰 블로커 (우선순위)
 

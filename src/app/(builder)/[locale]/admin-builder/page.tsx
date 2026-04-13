@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import SandboxPage from '@/components/builder/canvas/SandboxPage';
-import { readSiteDocument, readPageCanvas } from '@/lib/builder/site/persistence';
+import { readSiteDocument, readPageCanvas, writePageCanvas } from '@/lib/builder/site/persistence';
 import { readCanvasSandboxDraft } from '@/lib/builder/canvas/persistence';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { normalizeCanvasDocument } from '@/lib/builder/canvas/types';
+import { createHomePageCanvasDocument } from '@/lib/builder/canvas/seed-home';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,8 +40,22 @@ export default async function BuilderMainPage({
 
   if (homePage) {
     const pageCanvas = await readPageCanvas('default', homePage.pageId, 'draft');
-    if (pageCanvas) {
+    const nodeCount = pageCanvas?.nodes?.length ?? 0;
+    const hasComposite = pageCanvas?.nodes?.some((n) => n.kind === 'composite') ?? false;
+    // Preserve user's real work: keep canvas if it has composites OR more than
+    // 5 nodes (treat sparse placeholder/test content as empty and re-seed).
+    const hasRealContent = hasComposite || nodeCount > 5;
+    if (pageCanvas && hasRealContent) {
       initialDocument = normalizeCanvasDocument(pageCanvas, locale);
+    } else {
+      // Seed the home page canvas with the real site composites on first open
+      const seeded = createHomePageCanvasDocument(locale);
+      initialDocument = seeded;
+      try {
+        await writePageCanvas('default', homePage.pageId, 'draft', seeded);
+      } catch {
+        // Best-effort seed; editor still loads from in-memory doc if write fails
+      }
     }
   }
 
@@ -57,6 +72,10 @@ export default async function BuilderMainPage({
       backend={backend}
       initialDocument={initialDocument}
       initialPageId={homePage?.pageId}
+      siteName={site.name}
+      siteSettings={site.settings}
+      navItems={site.navigation || []}
+      currentSlug={homePage?.slug || ''}
     />
   );
 }

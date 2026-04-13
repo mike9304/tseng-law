@@ -38,6 +38,8 @@ function buildStarterDocument(templateId: string): BuilderCanvasDocument | null 
   if (templateId === 'starter-landing') {
     return {
       version: 1,
+      stageWidth: 1280,
+      stageHeight: 880,
       locale: 'ko',
       updatedAt: new Date().toISOString(),
       updatedBy: 'template-system',
@@ -53,6 +55,8 @@ function buildStarterDocument(templateId: string): BuilderCanvasDocument | null 
   if (templateId === 'starter-contact') {
     return {
       version: 1,
+      stageWidth: 1280,
+      stageHeight: 880,
       locale: 'ko',
       updatedAt: new Date().toISOString(),
       updatedBy: 'template-system',
@@ -66,6 +70,8 @@ function buildStarterDocument(templateId: string): BuilderCanvasDocument | null 
   if (templateId === 'starter-attorney') {
     return {
       version: 1,
+      stageWidth: 1280,
+      stageHeight: 880,
       locale: 'ko',
       updatedAt: new Date().toISOString(),
       updatedBy: 'template-system',

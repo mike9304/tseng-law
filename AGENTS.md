@@ -5,7 +5,14 @@
 
 ## 목표
 
-호정국제 법률사무소용 **진짜 Wix-class freeform canvas 사이트 빌더**. 픽셀 자유 배치, 임의 페이지, 풀 컴포넌트 라이브러리, 반응형, 템플릿, publish 파이프라인까지 1:1 이상.
+호정국제 법률사무소용 **진짜 Wix-class 사이트 빌더**.
+스코프: **에디터 1:1 패리티 + Motion 풀 세트 + Wix Bookings (상담 예약)**.
+
+- 에디터 1:1: 픽셀 자유 배치, 임의 페이지, 풀 컴포넌트 라이브러리 (~70 위젯), 반응형, 템플릿, publish 파이프라인까지
+- Motion: Entrance/Exit + Scroll effects + Hover + Loop + Timeline 편집기
+- Bookings: 상담 예약 전체 플로우 (Service, Staff, availability, 예약 위젯, 캘린더 싱크, 이메일/Zoom 링크)
+
+진행 측정: `Wix 체크포인트.md` W01~W225 스코어카드. 90% (203/225) = Wix parity 달성.
 
 ## Canonical 계획 (single source of truth)
 
@@ -17,13 +24,16 @@
 
 세션 흐름: 사용자가 target W__ 지정 → Manager(Claude Opus)가 SESSION.md 작성 → 워커 agent 발주 / Codex 프롬프트 제공 → 통합 → 브라우저 검증 → Wix 체크포인트.md 갱신 → 계획서 § 16 Changelog 한 줄 → SESSION.md 리셋.
 
-## 현재 상태 (2026-04-13 기준)
+## 현재 상태 (2026-04-18 기준)
 
-- **Wix 체크포인트 점수**: 🟢 **1 / 30** (W01 Green, 2026-04-13 스크린샷 검증). `/admin-builder` 에서 composite canvas node 로 실제 호정국제 홈(HeroSearch, ServicesBento, HomeContactCta) 렌더 확인.
+- **Wix 체크포인트 점수**: 🟢 **4 / 225** (W01, W05, W13, W16). 스코어카드 W01~W30 에서 W01~W225 로 확장 (A + Motion + Bookings 스코프).
+- **F0 (메인 사이트 → 빌더)**: 코드 완료 + local 좌표 포지셔닝 버그 fix 완료. `/ko` 9 composite 로 home-legacy 동일 컴포넌트 렌더, `/ko/{about,services,contact,lawyers,faq,pricing,reviews,privacy,disclaimer}` 각각 단일 `legacy-page-*` composite 로 원본 1:1 렌더.
+- **슬롯 편집 MVP (S-02, 2026-04-18)**: `BuilderSurfaceProvider` Context override + `SurfaceText` wrapper, Inspector 의 composite surface editor (textarea), 캔버스 인라인 contentEditable (Enter/blur commit, Esc revert). 현재 9 composite 의 섹션 헤더 (label/title/description/상단 버튼) 만 SurfaceText 적용. 동적 리스트 (service cards items, FAQ 문항, insights posts, offices, stats, attorney details) 는 미적용.
+- **SEED_VERSION**: home `home-seed-v4`, 서브페이지 `site-page-seed-v2`. admin-builder `?reseed=1` 강제 force flag 지원.
 - **역할 고정**: Claude Opus = Manager / Architect. Codex = 워커 (자기 주도 작업 중단, Manager 가 제공하는 프롬프트만 실행).
 - **진입점**: `/admin-builder`로 단일화. `/admin-builder/sandbox`는 redirect.
-- **새 페이지 기본 포맷**: `canvas-scene-vnext` (legacy `section-snapshot-v1` 은 home 에만 남아있음).
-- **다음 필수 결정**: `section-snapshot-v1` vs `canvas-scene-vnext` 중 하나 완전 폐기. 병렬 유지는 드리프트 원인 1순위.
+- **새 페이지 기본 포맷**: `canvas-scene-vnext`. 좌표 시스템: `node.rect` 는 **local-to-parent**. 절대 좌표 필요 시 `resolveCanvasNodeAbsoluteRect(node, nodesById)` 경유.
+- **legacy fallback**: `(legacy)` route group 에 10 페이지. 빌더 published 가 있으면 빌더 렌더, 없으면 legacy 렌더. 현재 모든 서브페이지는 composite seed 를 publish 해서 빌더 경로로 감.
 
 ## 🚨 "껍데기만 완성" 주의 — 진짜 동작하지 않는 것들
 
@@ -69,13 +79,29 @@
 7. SESSION.md 를 템플릿으로 리셋
 8. 커밋 (push 는 사용자 확인 받고)
 
+## Phase 로드맵 (마스터 플랜)
+
+| Phase | 범위 | 체크포인트 | 현재 |
+|---|---|---|---|
+| **0** | F0 메인 사이트 → 빌더 전환 | — (전처리) | 🟡 코드 완, 브라우저 검증 대기 |
+| **1** | 에디터 코어 (드래그/편집/publish 등) | W01~W30 | 🟡 3 Green, 나머지 검증 필요 |
+| **2** | 모바일 & 반응형 | W31~W45 | 🔴 미시작 |
+| **3** | 위젯 라이브러리 (~70 위젯, 10 카테고리) | W46~W135 | 🔴 미시작 |
+| **4** | 폼 빌더 | W136~W150 | 🔴 미시작 |
+| **5** | Motion (entrance/scroll/hover/loop/timeline) | W151~W175 | 🔴 미시작 |
+| **6** | 디자인 시스템 (color/font sets, themes) | W176~W185 | 🔴 미시작 |
+| **7** | SEO + Publish maturity | W186~W195 | 🔴 부분 존재 |
+| **8** | **Wix Bookings** (상담 예약 전체) | W196~W215 | 🔴 미시작 |
+| **9** | 에디터 고도화 (rulers/layers/단축키/align) | W216~W225 | 🔴 미시작 |
+
+우선순위 가이드: Phase 1 완주 → Phase 2 (반응형 먼저 맞춰야 위젯 재작업 최소) → Phase 3 위젯 → Phase 4 Forms → Phase 8 Bookings (Forms 인프라 의존). Phase 5 Motion 은 cross-cutting 이라 어느 시점이든 병렬 가능.
+
 ## 다음 큰 블로커 (우선순위)
 
-1. **브라우저 E2E 검증**: 새 페이지 → 편집 → 발행 → /p/slug 에서 렌더 확인 실제로 1회.
-2. **parentId / 부모-자식 데이터 모델**: Container flex/grid가 진짜 의미를 가지려면 필요. 큰 schema 변경이므로 별도 Phase로.
-3. **Text/Image/Button Inspector 심화**: Wix 1:1 옵션 채우기 (그림자 프리셋, 필터, 타이포 디테일, 링크 타겟 등).
-4. **모바일 전용 편집 모드**: viewport 별 오버라이드 저장.
-5. **Rate limit 를 Upstash 로 이관**: 현재 in-memory.
+1. **F0 브라우저 검증**: `/ko`, `/ko/about` 등 실제 렌더 확인 + `/admin-builder` 드래그/스냅/그룹 정상 동작 확인 (포지셔닝 fix 수반 refactor 때문)
+2. **W02~W30 검증 세션**: 코드는 다 있음. 사용자 클릭으로 30/30 Green 확정 후에 Phase 2 로 이동
+3. **Phase 2 모바일 스키마 결정**: `hiddenOnViewports`, viewport-override rect, fontSize 등. 한 번 결정하면 돌리기 어려움
+4. **Rate limit 를 Upstash 로 이관**: 현재 in-memory (Phase 7 편입)
 
 ## 레포 / 운영 환경
 

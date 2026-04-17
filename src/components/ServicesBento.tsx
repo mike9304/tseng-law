@@ -8,6 +8,7 @@ import { getServiceSlugs } from '@/data/service-details';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import { homeServicesTextSurfaceIds } from '@/lib/builder/registry';
+import { SurfaceText } from '@/lib/builder/surface-context';
 
 function ServiceIcon({ index }: { index: number }) {
   const common = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.6, strokeLinecap: 'round' as const };
@@ -139,13 +140,13 @@ export default function ServicesBento({
     <section className={sectionClass} id={id} data-tone={tone}>
       <div className="container">
         <SectionLabel data-builder-surface-key={homeServicesTextSurfaceIds[0]}>
-          {services.label}
+          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[0]}>{services.label}</SurfaceText>
         </SectionLabel>
         <h2 className="section-title" data-builder-surface-key={homeServicesTextSurfaceIds[1]}>
-          {services.title}
+          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[1]}>{services.title}</SurfaceText>
         </h2>
         <p className="section-lede" data-builder-surface-key={homeServicesTextSurfaceIds[2]}>
-          {services.description}
+          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[2]}>{services.description}</SurfaceText>
         </p>
         <OrnamentDivider />
         <div className="services-detail-list">

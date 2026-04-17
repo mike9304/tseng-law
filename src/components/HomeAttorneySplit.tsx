@@ -8,6 +8,7 @@ import {
   homeAttorneyImageSurfaceIds,
   homeAttorneyTextSurfaceIds,
 } from '@/lib/builder/registry';
+import { SurfaceText } from '@/lib/builder/surface-context';
 
 const copyByLocale = {
   ko: {
@@ -62,30 +63,32 @@ export default function HomeAttorneySplit({ locale }: { locale: Locale }) {
       </div>
       <div className="split-content" data-builder-node-key="copy">
         <div className="section-label" data-builder-surface-key={homeAttorneyTextSurfaceIds[0]}>
-          {copy.label}
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[0]}>{copy.label}</SurfaceText>
         </div>
         <h2 className="split-title" data-builder-surface-key={homeAttorneyTextSurfaceIds[1]}>
-          {copy.title}
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[1]}>{copy.title}</SurfaceText>
         </h2>
         <div className="split-divider" />
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[2]}>
-          {lead.intro[0]}
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[2]}>{lead.intro[0]}</SurfaceText>
         </p>
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[3]}>
-          {lead.intro[1]}
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[3]}>{lead.intro[1]}</SurfaceText>
         </p>
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[4]}>
-          {copy.summary}
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[4]}>{copy.summary}</SurfaceText>
         </p>
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[5]}>
-          {lead.name} · {lead.role} · {lead.email}
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[5]}>
+            {lead.name} · {lead.role} · {lead.email}
+          </SurfaceText>
         </p>
         <SmartLink
           className="link-underline"
           href={profilePath}
           data-builder-surface-key={homeAttorneyButtonSurfaceIds[0]}
         >
-          {copy.cta} →
+          <SurfaceText surfaceKey={homeAttorneyButtonSurfaceIds[0]}>{copy.cta} →</SurfaceText>
         </SmartLink>
       </div>
     </section>

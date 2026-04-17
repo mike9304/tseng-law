@@ -12,6 +12,7 @@ import {
   homeInsightsImageSurfaceIds,
   homeInsightsTextSurfaceIds,
 } from '@/lib/builder/registry';
+import { SurfaceText } from '@/lib/builder/surface-context';
 
 interface ArchivePost {
   slug: string;
@@ -88,13 +89,13 @@ export default function InsightsArchiveSection({
       <div className="container">
         <div data-builder-node-key="header">
           <SectionLabel data-builder-surface-key={homeInsightsTextSurfaceIds[0]}>
-            {copy.label}
+            <SurfaceText surfaceKey={homeInsightsTextSurfaceIds[0]}>{copy.label}</SurfaceText>
           </SectionLabel>
           <h2 className="section-title" data-builder-surface-key={homeInsightsTextSurfaceIds[1]}>
-            {copy.title}
+            <SurfaceText surfaceKey={homeInsightsTextSurfaceIds[1]}>{copy.title}</SurfaceText>
           </h2>
           <p className="section-lede" data-builder-surface-key={homeInsightsTextSurfaceIds[2]}>
-            {copy.description}
+            <SurfaceText surfaceKey={homeInsightsTextSurfaceIds[2]}>{copy.description}</SurfaceText>
           </p>
         </div>
         <OrnamentDivider />

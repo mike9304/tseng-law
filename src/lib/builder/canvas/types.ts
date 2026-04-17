@@ -25,6 +25,21 @@ export const compositeComponentKeys = [
   'hero-search',
   'services-bento',
   'home-contact-cta',
+  'insights-archive',
+  'home-attorney',
+  'home-case-results',
+  'home-stats',
+  'faq-accordion',
+  'office-map-tabs',
+  'legacy-page-about',
+  'legacy-page-services',
+  'legacy-page-contact',
+  'legacy-page-lawyers',
+  'legacy-page-faq',
+  'legacy-page-pricing',
+  'legacy-page-reviews',
+  'legacy-page-privacy',
+  'legacy-page-disclaimer',
 ] as const;
 
 export type CompositeComponentKey = (typeof compositeComponentKeys)[number];
@@ -72,6 +87,7 @@ export type BuilderCanvasNodeStyle = z.infer<typeof builderCanvasNodeStyleSchema
 const baseCanvasNodeSchema = z.object({
   id: z.string().trim().min(1).max(120),
   kind: canvasNodeKindSchema,
+  parentId: z.string().max(120).optional(),
   rect: canvasRectSchema,
   style: builderCanvasNodeStyleSchema.default(canvasNodeStyleDefaults),
   zIndex: z.number().int().nonnegative(),
@@ -368,6 +384,7 @@ export function normalizeCanvasDocument(
     .sort((left, right) => left.zIndex - right.zIndex)
     .map((node, index) => ({
       ...node,
+      parentId: node.parentId,
       zIndex: index,
       rotation: Math.max(0, Math.min(360, Math.round(node.rotation))),
       rect: {

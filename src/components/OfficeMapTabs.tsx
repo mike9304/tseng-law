@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
+import { SurfaceText } from '@/lib/builder/surface-context';
 
 type OfficeInfo = {
   id: string;
@@ -134,10 +135,10 @@ export default function OfficeMapTabs({
     <section className={sectionClass} id={id} data-tone={tone}>
       <div className="container">
         <SectionLabel data-builder-surface-key={labelSurfaceId}>
-          {locale === 'ko' ? 'OFFICES' : 'OFFICES'}
+          <SurfaceText surfaceKey={labelSurfaceId}>{locale === 'ko' ? 'OFFICES' : 'OFFICES'}</SurfaceText>
         </SectionLabel>
         <h2 className="section-title" data-builder-surface-key={titleSurfaceId}>
-          {title}
+          <SurfaceText surfaceKey={titleSurfaceId}>{title}</SurfaceText>
         </h2>
         <div className="office-tabs" role="tablist" aria-label={title}>
           {offices.map((office) => (

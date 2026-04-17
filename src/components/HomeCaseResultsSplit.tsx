@@ -4,6 +4,7 @@ import {
   homeResultsButtonSurfaceIds,
   homeResultsTextSurfaceIds,
 } from '@/lib/builder/registry';
+import { SurfaceText } from '@/lib/builder/surface-context';
 
 const copyByLocale = {
   ko: {
@@ -44,29 +45,31 @@ export default function HomeCaseResultsSplit({ locale }: { locale: Locale }) {
           className="section-label home-results-label"
           data-builder-surface-key={homeResultsTextSurfaceIds[0]}
         >
-          {copy.label}
+          <SurfaceText surfaceKey={homeResultsTextSurfaceIds[0]}>{copy.label}</SurfaceText>
         </div>
         <h2 className="split-title home-results-title" data-builder-surface-key={homeResultsTextSurfaceIds[1]}>
-          {copy.title.split('\n').map((line) => (
-            <span key={line}>
-              {line}
-              <br />
-            </span>
-          ))}
+          <SurfaceText surfaceKey={homeResultsTextSurfaceIds[1]}>
+            {copy.title.split('\n').map((line) => (
+              <span key={line}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </SurfaceText>
         </h2>
         <div className="split-divider" />
         <p className="split-text home-results-text" data-builder-surface-key={homeResultsTextSurfaceIds[2]}>
-          {copy.description}
+          <SurfaceText surfaceKey={homeResultsTextSurfaceIds[2]}>{copy.description}</SurfaceText>
         </p>
         <p className="split-text home-results-text" data-builder-surface-key={homeResultsTextSurfaceIds[3]}>
-          {copy.summary}
+          <SurfaceText surfaceKey={homeResultsTextSurfaceIds[3]}>{copy.summary}</SurfaceText>
         </p>
         <SmartLink
           className="link-underline home-results-link"
           href={`/${locale}/columns`}
           data-builder-surface-key={homeResultsButtonSurfaceIds[0]}
         >
-          {copy.cta} →
+          <SurfaceText surfaceKey={homeResultsButtonSurfaceIds[0]}>{copy.cta} →</SurfaceText>
         </SmartLink>
       </div>
     </section>

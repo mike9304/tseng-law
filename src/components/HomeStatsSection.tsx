@@ -6,6 +6,7 @@ import { siteContent } from '@/data/site-content';
 import SectionLabel from '@/components/SectionLabel';
 import ScrollHighlightText from '@/components/ScrollHighlightText';
 import { homeStatsTextSurfaceIds } from '@/lib/builder/registry';
+import { SurfaceText } from '@/lib/builder/surface-context';
 
 function easeOutCubic(progress: number) {
   return 1 - Math.pow(1 - progress, 3);
@@ -89,10 +90,10 @@ export default function HomeStatsSection({ locale }: { locale: Locale }) {
     <section className="section section--light stats-section" id="stats" data-tone="light" ref={rootRef}>
       <div className="container">
         <SectionLabel data-builder-surface-key={homeStatsTextSurfaceIds[0]}>
-          {stats.label}
+          <SurfaceText surfaceKey={homeStatsTextSurfaceIds[0]}>{stats.label}</SurfaceText>
         </SectionLabel>
         <h2 className="section-title" data-builder-surface-key={homeStatsTextSurfaceIds[1]}>
-          {stats.title}
+          <SurfaceText surfaceKey={homeStatsTextSurfaceIds[1]}>{stats.title}</SurfaceText>
         </h2>
         <ScrollHighlightText
           className="section-lede"

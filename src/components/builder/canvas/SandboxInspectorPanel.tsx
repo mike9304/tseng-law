@@ -200,6 +200,82 @@ function updateRectField(
   };
 }
 
+function renderCompositeSurfaceEditor({
+  node,
+  surfaceKey,
+  onUpdate,
+  onClose,
+}: {
+  node: BuilderCanvasNode;
+  surfaceKey: string;
+  onUpdate: (overrides: Record<string, string>) => void;
+  onClose: () => void;
+}): JSX.Element {
+  const config = (node.content as { config?: Record<string, unknown> }).config ?? {};
+  const overrides = (config.overrides as Record<string, string> | undefined) ?? {};
+  const current = overrides[surfaceKey] ?? '';
+  return (
+    <section
+      style={{
+        padding: 12,
+        borderRadius: 10,
+        border: '1px solid #bfdbfe',
+        background: '#eff6ff',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 8,
+        marginBottom: 12,
+      }}
+    >
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <strong style={{ fontSize: '0.78rem', color: '#1e40af' }}>
+          슬롯 편집 · {surfaceKey}
+        </strong>
+        <button
+          type="button"
+          onClick={onClose}
+          style={{
+            padding: '2px 8px',
+            fontSize: '0.72rem',
+            border: '1px solid #bfdbfe',
+            background: 'white',
+            borderRadius: 6,
+            cursor: 'pointer',
+            color: '#1e40af',
+          }}
+        >
+          닫기
+        </button>
+      </div>
+      <textarea
+        value={current}
+        placeholder="비워두면 원본 기본값을 사용합니다"
+        onChange={(e) => {
+          const value = e.target.value;
+          const next = { ...overrides };
+          if (value === '') {
+            delete next[surfaceKey];
+          } else {
+            next[surfaceKey] = value;
+          }
+          onUpdate(next);
+        }}
+        style={{
+          padding: '6px 10px',
+          border: '1px solid #93c5fd',
+          borderRadius: 8,
+          fontSize: '0.82rem',
+          color: '#0f172a',
+          outline: 'none',
+          minHeight: 64,
+          resize: 'vertical',
+          fontFamily: 'inherit',
+        }}
+      />
+    </section>
+  );
+}
+
 export default function SandboxInspectorPanel({
   onRequestAssetLibrary,
 }: {
@@ -209,6 +285,8 @@ export default function SandboxInspectorPanel({
     document,
     selectedNodeId,
     selectedNodeIds,
+    selectedSurfaceKey,
+    setSelectedSurfaceKey,
     updateNode,
     updateNodeContent,
     updateNodeStyle,
@@ -249,6 +327,29 @@ export default function SandboxInspectorPanel({
       setActiveTab('layout');
     }
   }, [singleSelection, selectedNodeId]);
+
+  useEffect(() => {
+    if (selectedSurfaceKey && selectedNode?.kind === 'composite') {
+      setActiveTab('content');
+    }
+  }, [selectedSurfaceKey, selectedNode?.kind]);
+
+  const compositeSurfaceEditor =
+    singleSelection && selectedNode && selectedNode.kind === 'composite' && selectedSurfaceKey
+      ? renderCompositeSurfaceEditor({
+          node: selectedNode,
+          surfaceKey: selectedSurfaceKey,
+          onUpdate: (overrides) =>
+            updateNodeContent(selectedNode.id, {
+              ...(selectedNode.content as Record<string, unknown>),
+              config: {
+                ...((selectedNode.content as { config?: Record<string, unknown> }).config ?? {}),
+                overrides,
+              },
+            }),
+          onClose: () => setSelectedSurfaceKey(null),
+        })
+      : null;
 
   return (
     <aside className={styles.inspectorPlaceholder}>
@@ -307,6 +408,7 @@ export default function SandboxInspectorPanel({
           </>
         ) : selectedNode ? (
           <>
+            {compositeSurfaceEditor}
             <div className={styles.inspectorTabRow}>
               {(['layout', 'style', 'content', 'a11y', 'seo'] as const).map((tab) => {
                 const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집', a11y: '접근성 검사', seo: 'SEO 메타데이터 설정' };

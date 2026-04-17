@@ -23,10 +23,16 @@ export interface ResolvedPublishedSitePage {
 }
 
 function findPageMeta(site: BuilderSiteDocument, slugPath: string): BuilderPageMeta | undefined {
-  if (!slugPath) {
-    return site.pages.find((page) => page.isHomePage) ?? site.pages.find((page) => page.slug === '');
-  }
-  return site.pages.find((page) => page.slug === slugPath);
+  const candidates = !slugPath
+    ? site.pages.filter((page) => page.isHomePage || page.slug === '')
+    : site.pages.filter((page) => page.slug === slugPath);
+
+  return [...candidates].sort((left, right) => {
+    const publishedDelta = Number(Boolean(right.publishedAt)) - Number(Boolean(left.publishedAt));
+    if (publishedDelta !== 0) return publishedDelta;
+
+    return (right.updatedAt || right.createdAt).localeCompare(left.updatedAt || left.createdAt);
+  })[0];
 }
 
 export async function resolvePublishedSitePage(

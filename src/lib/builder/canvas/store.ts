@@ -30,6 +30,13 @@ import {
   redoHistory,
   type HistoryState,
 } from '@/lib/builder/canvas/history';
+import {
+  buildChildrenMap,
+  getCanvasNodeDescendantIds,
+  isCanvasNodeAncestor,
+  resolveCanvasNodeAbsoluteRect,
+  resolveCanvasNodeLocalRect,
+} from '@/lib/builder/canvas/tree';
 
 type DraftSaveState = 'idle' | 'saving' | 'saved' | 'error';
 type MutationMode = 'commit' | 'transient';
@@ -45,6 +52,9 @@ interface BuilderCanvasStoreState {
   document: BuilderCanvasDocument | null;
   selectedNodeId: string | null;
   selectedNodeIds: string[];
+  selectedSurfaceKey: string | null;
+  setSelectedSurfaceKey: (key: string | null) => void;
+  activeGroupId: string | null;
   draftSaveState: DraftSaveState;
   clipboardHasContent: boolean;
   history: HistoryState<BuilderCanvasDocument> | null;
@@ -57,6 +67,8 @@ interface BuilderCanvasStoreState {
   setSelectedNodeId: (nodeId: string | null) => void;
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
   toggleNodeSelection: (nodeId: string) => void;
+  enterGroup: (groupId: string) => void;
+  exitGroup: () => void;
   setDraftSaveState: (state: DraftSaveState) => void;
   beginMutationSession: () => void;
   commitMutationSession: () => void;
@@ -117,6 +129,25 @@ function cloneDefaultContent(content: Record<string, unknown>): Record<string, u
   return JSON.parse(JSON.stringify(content)) as Record<string, unknown>;
 }
 
+function cloneNodeSet(nodes: BuilderCanvasNode[], offset: number): BuilderCanvasNode[] {
+  const idMap = new Map<string, string>();
+
+  for (const node of nodes) {
+    idMap.set(node.id, createNodeId(node.kind));
+  }
+
+  return nodes.map((node) => ({
+    ...node,
+    id: idMap.get(node.id)!,
+    parentId: node.parentId && idMap.has(node.parentId) ? idMap.get(node.parentId)! : node.parentId,
+    rect: {
+      ...node.rect,
+      x: node.rect.x + offset,
+      y: node.rect.y + offset,
+    },
+  }));
+}
+
 function reorderNodeSequence(
   nodes: BuilderCanvasNode[],
   selectedNodeId: string,
@@ -160,6 +191,26 @@ function resolveSelectedNodeIds(
   return [];
 }
 
+function resolveActiveGroupId(
+  document: BuilderCanvasDocument,
+  preferredGroupId: string | null,
+): string | null {
+  if (!preferredGroupId) return null;
+  const node = document.nodes.find((candidate) => candidate.id === preferredGroupId);
+  if (!node) return null;
+  return node.kind === 'container' || node.kind === 'composite' ? node.id : null;
+}
+
+function resolveTreeState(
+  document: BuilderCanvasDocument,
+  preferredGroupId: string | null,
+): Pick<BuilderCanvasStoreState, 'activeGroupId' | 'childrenMap'> {
+  return {
+    activeGroupId: resolveActiveGroupId(document, preferredGroupId),
+    childrenMap: buildChildrenMap(document.nodes),
+  };
+}
+
 function alignNodeRects(
   action: BuilderCanvasAlignmentAction,
   nodes: Array<{ id: string; rect: BuilderCanvasNode['rect'] }>,
@@ -190,10 +241,12 @@ function applyTransientDocument(
 ): Partial<BuilderCanvasStoreState> | BuilderCanvasStoreState {
   if (sameDocumentContent(document, state.document ?? document)) return state;
   const nextSelectedNodeId = resolveSelectedNodeId(document, selectedNodeId);
+  const nextTreeState = resolveTreeState(document, state.activeGroupId);
   return {
     document,
     selectedNodeId: nextSelectedNodeId,
     selectedNodeIds: resolveSelectedNodeIds(document, selectedNodeIds, nextSelectedNodeId),
+    ...nextTreeState,
   };
 }
 
@@ -206,10 +259,12 @@ function applyCommittedDocument(
   if (!state.document || !state.history || sameDocumentContent(document, state.document)) return state;
   const nextHistory = pushHistory(state.history, document);
   const nextSelectedNodeId = resolveSelectedNodeId(document, selectedNodeId);
+  const nextTreeState = resolveTreeState(document, state.activeGroupId);
   return {
     document,
     selectedNodeId: nextSelectedNodeId,
     selectedNodeIds: resolveSelectedNodeIds(document, selectedNodeIds, nextSelectedNodeId),
+    ...nextTreeState,
     history: nextHistory,
     mutationBaseDocument: null,
     canUndo: nextHistory.canUndo,
@@ -221,6 +276,9 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   document: null,
   selectedNodeId: null,
   selectedNodeIds: [],
+  selectedSurfaceKey: null,
+  setSelectedSurfaceKey: (key) => set({ selectedSurfaceKey: key }),
+  activeGroupId: null,
   draftSaveState: 'idle',
   clipboardHasContent: hasClipboard(),
   history: null,
@@ -233,14 +291,20 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       document,
       selectedNodeId: document.nodes[0]?.id ?? null,
       selectedNodeIds: document.nodes[0]?.id ? [document.nodes[0].id] : [],
+      activeGroupId: null,
       draftSaveState: 'idle',
       history: createHistory(document),
       mutationBaseDocument: null,
       canUndo: false,
       canRedo: false,
+      childrenMap: buildChildrenMap(document.nodes),
     }),
   setSelectedNodeId: (selectedNodeId) =>
-    set({ selectedNodeId, selectedNodeIds: selectedNodeId ? [selectedNodeId] : [] }),
+    set({
+      selectedNodeId,
+      selectedNodeIds: selectedNodeId ? [selectedNodeId] : [],
+      selectedSurfaceKey: null,
+    }),
   setSelectedNodeIds: (selectedNodeIds, primaryNodeId = null) =>
     set((state) => {
       if (!state.document) return state;
@@ -276,6 +340,29 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         selectedNodeIds,
       };
     }),
+  enterGroup: (groupId) =>
+    set((state) => {
+      if (!state.document) return state;
+      const groupNode = state.document.nodes.find((node) => node.id === groupId);
+      if (!groupNode || (groupNode.kind !== 'container' && groupNode.kind !== 'composite')) {
+        return state;
+      }
+      return {
+        activeGroupId: groupId,
+        selectedNodeId: null,
+        selectedNodeIds: [],
+      };
+    }),
+  exitGroup: () =>
+    set((state) => {
+      if (!state.document || !state.activeGroupId) return state;
+      const groupNode = state.document.nodes.find((node) => node.id === state.activeGroupId);
+      return {
+        activeGroupId: null,
+        selectedNodeId: groupNode?.id ?? null,
+        selectedNodeIds: groupNode ? [groupNode.id] : [],
+      };
+    }),
   setDraftSaveState: (draftSaveState) => set({ draftSaveState }),
   beginMutationSession: () =>
     set((state) => {
@@ -307,10 +394,12 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (!result) return state;
       const previousDocument = result.snapshot;
       const nextSelectedNodeId = resolveSelectedNodeId(previousDocument, state.selectedNodeId);
+      const nextTreeState = resolveTreeState(previousDocument, state.activeGroupId);
       return {
         document: previousDocument,
         selectedNodeId: nextSelectedNodeId,
         selectedNodeIds: resolveSelectedNodeIds(previousDocument, state.selectedNodeIds, nextSelectedNodeId),
+        ...nextTreeState,
         history: result.state,
         mutationBaseDocument: null,
         canUndo: result.state.canUndo,
@@ -324,10 +413,12 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (!result) return state;
       const nextDocument = result.snapshot;
       const nextSelectedNodeId = resolveSelectedNodeId(nextDocument, state.selectedNodeId);
+      const nextTreeState = resolveTreeState(nextDocument, state.activeGroupId);
       return {
         document: nextDocument,
         selectedNodeId: nextSelectedNodeId,
         selectedNodeIds: resolveSelectedNodeIds(nextDocument, state.selectedNodeIds, nextSelectedNodeId),
+        ...nextTreeState,
         history: result.state,
         mutationBaseDocument: null,
         canUndo: result.state.canUndo,
@@ -337,7 +428,11 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   copySelectedNodesToClipboard: () =>
     set((state) => {
       if (!state.document || state.selectedNodeIds.length === 0) return state;
-      const selectedNodes = state.document.nodes.filter((node) => state.selectedNodeIds.includes(node.id));
+      const selectedNodeIds = new Set([
+        ...state.selectedNodeIds,
+        ...state.selectedNodeIds.flatMap((nodeId) => getCanvasNodeDescendantIds(nodeId, state.childrenMap)),
+      ]);
+      const selectedNodes = state.document.nodes.filter((node) => selectedNodeIds.has(node.id));
       if (selectedNodes.length === 0) return state;
       copyNodes(selectedNodes);
       return {
@@ -347,8 +442,12 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   cutSelectedNodesToClipboard: () =>
     set((state) => {
       if (!state.document || state.selectedNodeIds.length === 0) return state;
+      const unlockedRootIds = state.document.nodes
+        .filter((node) => state.selectedNodeIds.includes(node.id) && !node.locked)
+        .map((node) => node.id);
       const selectedNodes = state.document.nodes.filter(
-        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
+        (node) => unlockedRootIds.includes(node.id)
+          || unlockedRootIds.some((rootId) => getCanvasNodeDescendantIds(rootId, state.childrenMap).includes(node.id)),
       );
       if (selectedNodes.length === 0) return state;
       cutNodes(selectedNodes);
@@ -369,10 +468,27 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   pasteClipboardNodes: () =>
     set((state) => {
       if (!state.document) return state;
-      const pastedNodes = pasteNodes(24).map((node, index) => ({
-        ...node,
-        zIndex: state.document!.nodes.length + index,
-      }));
+      const activeGroupNode = state.activeGroupId
+        ? state.document.nodes.find((node) => node.id === state.activeGroupId) ?? null
+        : null;
+      const nodesById = new Map(state.document.nodes.map((node) => [node.id, node]));
+      const activeGroupRect = activeGroupNode
+        ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
+        : null;
+      const pastedNodes = pasteNodes(24).map((node, index, collection) => {
+        const pastedIds = new Set(collection.map((candidate) => candidate.id));
+        const isPastedRoot = !node.parentId || !pastedIds.has(node.parentId);
+        const shouldReparentToActiveGroup = Boolean(activeGroupNode && isPastedRoot);
+        const nextRect = shouldReparentToActiveGroup
+          ? resolveCanvasNodeLocalRect(node.rect, activeGroupRect)
+          : node.rect;
+        return {
+          ...node,
+          parentId: shouldReparentToActiveGroup ? activeGroupNode!.id : node.parentId,
+          rect: nextRect,
+          zIndex: state.document!.nodes.length + index,
+        };
+      });
       if (pastedNodes.length === 0) {
         return {
           clipboardHasContent: hasClipboard(),
@@ -440,25 +556,36 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   addNode: (node) =>
     set((state) => {
       if (!state.document) return state;
-      const document = updateNodes(state.document, (nodes) => [...nodes, node]);
-      return applyCommittedDocument(state, document, node.id);
+      const activeGroupNode = state.activeGroupId
+        ? state.document.nodes.find((candidate) => candidate.id === state.activeGroupId) ?? null
+        : null;
+      const nodesById = new Map(state.document.nodes.map((candidate) => [candidate.id, candidate]));
+      const activeGroupRect = activeGroupNode
+        ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
+        : null;
+      const nextNode = activeGroupNode
+        ? {
+            ...node,
+            parentId: activeGroupNode.id,
+            rect: resolveCanvasNodeLocalRect(node.rect, activeGroupRect),
+          }
+        : node;
+      const document = updateNodes(state.document, (nodes) => [...nodes, nextNode]);
+      return applyCommittedDocument(state, document, nextNode.id);
     }),
   duplicateSelectedNode: () =>
     set((state) => {
       if (!state.document || state.selectedNodeIds.length === 0) return state;
-      const selectedNodes = state.document.nodes.filter(
-        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
-      );
+      const rootNodeIds = state.document.nodes
+        .filter((node) => state.selectedNodeIds.includes(node.id) && !node.locked)
+        .map((node) => node.id);
+      const selectedNodeIds = new Set([
+        ...rootNodeIds,
+        ...rootNodeIds.flatMap((nodeId) => getCanvasNodeDescendantIds(nodeId, state.childrenMap)),
+      ]);
+      const selectedNodes = state.document.nodes.filter((node) => selectedNodeIds.has(node.id));
       if (selectedNodes.length === 0) return state;
-      const duplicatedNodes = selectedNodes.map((selectedNode) => ({
-        ...selectedNode,
-        id: createNodeId(selectedNode.kind),
-        rect: {
-          ...selectedNode.rect,
-          x: Math.max(0, selectedNode.rect.x + 24),
-          y: Math.max(0, selectedNode.rect.y + 24),
-        },
-      }));
+      const duplicatedNodes = cloneNodeSet(selectedNodes, 24);
       const document = updateNodes(state.document, (nodes) => [...nodes, ...duplicatedNodes]);
       return applyCommittedDocument(
         state,
@@ -545,15 +672,39 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   deleteSelectedNode: () =>
     set((state) => {
       if (!state.document || state.selectedNodeIds.length === 0) return state;
-      const selectedNodeIds = new Set(
-        state.document.nodes
-          .filter((node) => state.selectedNodeIds.includes(node.id) && !node.locked)
-          .map((node) => node.id),
-      );
+      const unlockedRootIds = state.document.nodes
+        .filter((node) => state.selectedNodeIds.includes(node.id) && !node.locked)
+        .map((node) => node.id);
+      const selectedNodeIds = new Set([
+        ...unlockedRootIds,
+        ...unlockedRootIds.flatMap((nodeId) => getCanvasNodeDescendantIds(nodeId, state.childrenMap)),
+      ]);
       if (selectedNodeIds.size === 0) return state;
       const nodes = state.document.nodes.filter((node) => !selectedNodeIds.has(node.id));
       const document = updateNodes(state.document, () => nodes);
-      return applyCommittedDocument(state, document, document.nodes[0]?.id ?? null);
+      const shouldExitGroup = Boolean(
+        state.activeGroupId
+        && !selectedNodeIds.has(state.activeGroupId)
+        && !nodes.some((node) => node.parentId === state.activeGroupId),
+      );
+      const nextSelectedNodeId = shouldExitGroup
+        ? state.activeGroupId
+        : document.nodes[0]?.id ?? null;
+      const nextState = applyCommittedDocument(
+        state,
+        document,
+        nextSelectedNodeId,
+        nextSelectedNodeId ? [nextSelectedNodeId] : [],
+      );
+      if (nextState === state) return state;
+      return shouldExitGroup
+        ? {
+            ...nextState,
+            activeGroupId: null,
+            selectedNodeId: nextSelectedNodeId,
+            selectedNodeIds: nextSelectedNodeId ? [nextSelectedNodeId] : [],
+          }
+        : nextState;
     }),
   nudgeSelectedNode: (deltaX, deltaY) =>
     set((state) => {
@@ -645,73 +796,50 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   moveNodeIntoContainer: (nodeId, containerId) =>
     set((state) => {
       if (!state.document) return state;
-      // Validate: both nodes exist, target is a container, node isn't the container itself
-      const node = state.document.nodes.find((n) => n.id === nodeId);
-      const container = state.document.nodes.find((n) => n.id === containerId);
+      const nodesById = new Map(state.document.nodes.map((node) => [node.id, node]));
+      const node = nodesById.get(nodeId);
+      const container = nodesById.get(containerId);
       if (!node || !container || container.kind !== 'container' || nodeId === containerId) return state;
+      if (isCanvasNodeAncestor(nodeId, containerId, nodesById)) return state;
 
-      // Remove nodeId from any existing container
-      const nextMap = { ...state.childrenMap };
-      for (const key of Object.keys(nextMap)) {
-        nextMap[key] = nextMap[key].filter((id) => id !== nodeId);
-        if (nextMap[key].length === 0) delete nextMap[key];
-      }
-      // Add to new container
-      nextMap[containerId] = [...(nextMap[containerId] ?? []), nodeId];
-
-      // Convert node position to container-relative coords
-      const relX = node.rect.x - container.rect.x;
-      const relY = node.rect.y - container.rect.y;
+      const absoluteNodeRect = resolveCanvasNodeAbsoluteRect(node, nodesById);
+      const absoluteContainerRect = resolveCanvasNodeAbsoluteRect(container, nodesById);
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((n) =>
           n.id === nodeId
-            ? { ...n, rect: { ...n.rect, x: Math.max(0, relX), y: Math.max(0, relY) } }
+            ? {
+                ...n,
+                parentId: containerId,
+                rect: resolveCanvasNodeLocalRect(absoluteNodeRect, absoluteContainerRect),
+              }
             : n,
         ),
       );
-
-      return {
-        ...applyCommittedDocument(state, document),
-        childrenMap: nextMap,
-      };
+      return applyCommittedDocument(state, document);
     }),
   moveNodeOutOfContainer: (nodeId) =>
     set((state) => {
       if (!state.document) return state;
-      const node = state.document.nodes.find((n) => n.id === nodeId);
-      if (!node) return state;
-
-      // Find which container owns this node
-      let parentContainerId: string | null = null;
-      const nextMap = { ...state.childrenMap };
-      for (const [cid, children] of Object.entries(nextMap)) {
-        if (children.includes(nodeId)) {
-          parentContainerId = cid;
-          nextMap[cid] = children.filter((id) => id !== nodeId);
-          if (nextMap[cid].length === 0) delete nextMap[cid];
-          break;
-        }
-      }
-      if (!parentContainerId) return state;
-
-      const container = state.document.nodes.find((n) => n.id === parentContainerId);
-      if (!container) return { childrenMap: nextMap };
-
-      // Convert back to absolute coords
-      const absX = node.rect.x + container.rect.x;
-      const absY = node.rect.y + container.rect.y;
+      const nodesById = new Map(state.document.nodes.map((node) => [node.id, node]));
+      const node = nodesById.get(nodeId);
+      if (!node || !node.parentId) return state;
+      const absoluteNodeRect = resolveCanvasNodeAbsoluteRect(node, nodesById);
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((n) =>
           n.id === nodeId
-            ? { ...n, rect: { ...n.rect, x: Math.max(0, absX), y: Math.max(0, absY) } }
+            ? {
+                ...n,
+                parentId: undefined,
+                rect: {
+                  ...n.rect,
+                  x: Math.max(0, absoluteNodeRect.x),
+                  y: Math.max(0, absoluteNodeRect.y),
+                },
+              }
             : n,
         ),
       );
-
-      return {
-        ...applyCommittedDocument(state, document),
-        childrenMap: nextMap,
-      };
+      return applyCommittedDocument(state, document);
     }),
 }));
 

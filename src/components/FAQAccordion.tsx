@@ -5,6 +5,7 @@ import type { Locale } from '@/lib/locales';
 import type { FAQItem } from '@/data/faq-content';
 import SectionLabel from '@/components/SectionLabel';
 import { homeFaqTextSurfaceIds } from '@/lib/builder/registry';
+import { SurfaceText } from '@/lib/builder/surface-context';
 
 export default function FAQAccordion({
   locale,
@@ -26,9 +27,11 @@ export default function FAQAccordion({
   return (
     <section className={sectionClass} id={id} data-tone={tone}>
       <div className="container">
-        <SectionLabel data-builder-surface-key={homeFaqTextSurfaceIds[0]}>FAQ</SectionLabel>
+        <SectionLabel data-builder-surface-key={homeFaqTextSurfaceIds[0]}>
+          <SurfaceText surfaceKey={homeFaqTextSurfaceIds[0]}>FAQ</SurfaceText>
+        </SectionLabel>
         <h2 className="section-title" data-builder-surface-key={homeFaqTextSurfaceIds[1]}>
-          {sectionTitle}
+          <SurfaceText surfaceKey={homeFaqTextSurfaceIds[1]}>{sectionTitle}</SurfaceText>
         </h2>
         <div className="faq-list">
           {items.map((item, index) => {

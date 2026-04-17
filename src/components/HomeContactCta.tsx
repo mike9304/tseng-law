@@ -5,6 +5,7 @@ import {
   homeContactButtonSurfaceIds,
   homeContactTextSurfaceIds,
 } from '@/lib/builder/registry';
+import { SurfaceText } from '@/lib/builder/surface-context';
 
 export default function HomeContactCta({ locale }: { locale: Locale }) {
   const content = siteContent[locale];
@@ -24,13 +25,13 @@ export default function HomeContactCta({ locale }: { locale: Locale }) {
       <div className="container">
         <div data-builder-node-key="copy">
           <div className="section-label" data-builder-surface-key={homeContactTextSurfaceIds[0]}>
-            {contact.label}
+            <SurfaceText surfaceKey={homeContactTextSurfaceIds[0]}>{contact.label}</SurfaceText>
           </div>
           <h2 className="section-title" data-builder-surface-key={homeContactTextSurfaceIds[1]}>
-            {title}
+            <SurfaceText surfaceKey={homeContactTextSurfaceIds[1]}>{title}</SurfaceText>
           </h2>
           <p className="section-lede" data-builder-surface-key={homeContactTextSurfaceIds[2]}>
-            {description}
+            <SurfaceText surfaceKey={homeContactTextSurfaceIds[2]}>{description}</SurfaceText>
           </p>
         </div>
         <div className="home-contact-actions" data-builder-node-key="actions">
@@ -39,7 +40,7 @@ export default function HomeContactCta({ locale }: { locale: Locale }) {
             href={`/${locale}/contact`}
             data-builder-surface-key={homeContactButtonSurfaceIds[0]}
           >
-            {contact.cta.label}
+            <SurfaceText surfaceKey={homeContactButtonSurfaceIds[0]}>{contact.cta.label}</SurfaceText>
           </SmartLink>
           {representativeTel ? (
             <a
@@ -47,7 +48,7 @@ export default function HomeContactCta({ locale }: { locale: Locale }) {
               href={representativeTel.href}
               data-builder-surface-key={homeContactButtonSurfaceIds[1]}
             >
-              {representativeTel.value}
+              <SurfaceText surfaceKey={homeContactButtonSurfaceIds[1]}>{representativeTel.value}</SurfaceText>
             </a>
           ) : null}
         </div>

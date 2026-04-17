@@ -1,76 +1,68 @@
-import type { BuilderCanvasDocument } from './types';
+import type { BuilderCanvasDocument, BuilderCanvasNode, CompositeComponentKey } from './types';
 import { createDefaultCanvasNodeStyle } from './types';
 import type { Locale } from '@/lib/locales';
 
+export const SEED_VERSION = 'home-seed-v4';
+
 const STAGE_WIDTH = 1280;
 
-const HERO_HEIGHT = 720;
-const SERVICES_HEIGHT = 900;
-const CONTACT_HEIGHT = 520;
+type HomeCompositeSpec = {
+  id: string;
+  componentKey: CompositeComponentKey;
+  height: number;
+};
 
-const SECTION_GAP = 0;
+const homeSections: HomeCompositeSpec[] = [
+  { id: 'home-hero',          componentKey: 'hero-search',       height: 820 },
+  { id: 'home-insights',      componentKey: 'insights-archive',  height: 1200 },
+  { id: 'home-services',      componentKey: 'services-bento',    height: 1400 },
+  { id: 'home-attorney',      componentKey: 'home-attorney',     height: 720 },
+  { id: 'home-case-results',  componentKey: 'home-case-results', height: 600 },
+  { id: 'home-stats',         componentKey: 'home-stats',        height: 640 },
+  { id: 'home-faq',           componentKey: 'faq-accordion',     height: 1280 },
+  { id: 'home-offices',       componentKey: 'office-map-tabs',   height: 820 },
+  { id: 'home-contact',       componentKey: 'home-contact-cta',  height: 640 },
+];
+
+function createCompositeNode(
+  spec: HomeCompositeSpec,
+  y: number,
+  zIndex: number,
+  locale: Locale,
+): BuilderCanvasNode {
+  return {
+    id: spec.id,
+    kind: 'composite',
+    rect: { x: 0, y, width: STAGE_WIDTH, height: spec.height },
+    style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
+    zIndex,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    content: {
+      componentKey: spec.componentKey,
+      config: { locale },
+    },
+  };
+}
 
 export function createHomePageCanvasDocument(locale: Locale): BuilderCanvasDocument {
   const updatedAt = new Date().toISOString();
+  const nodes: BuilderCanvasNode[] = [];
   let y = 0;
 
-  const heroY = y;
-  y += HERO_HEIGHT + SECTION_GAP;
-  const servicesY = y;
-  y += SERVICES_HEIGHT + SECTION_GAP;
-  const contactY = y;
-  y += CONTACT_HEIGHT;
+  homeSections.forEach((spec, index) => {
+    nodes.push(createCompositeNode(spec, y, index, locale));
+    y += spec.height;
+  });
 
   return {
     version: 1,
     locale,
     updatedAt,
-    updatedBy: 'home-seed',
+    updatedBy: SEED_VERSION,
     stageWidth: STAGE_WIDTH,
     stageHeight: y + 40,
-    nodes: [
-      {
-        id: 'home-hero',
-        kind: 'composite',
-        rect: { x: 0, y: heroY, width: STAGE_WIDTH, height: HERO_HEIGHT },
-        style: createDefaultCanvasNodeStyle(),
-        zIndex: 0,
-        rotation: 0,
-        locked: false,
-        visible: true,
-        content: {
-          componentKey: 'hero-search',
-          config: { locale },
-        },
-      },
-      {
-        id: 'home-services',
-        kind: 'composite',
-        rect: { x: 0, y: servicesY, width: STAGE_WIDTH, height: SERVICES_HEIGHT },
-        style: createDefaultCanvasNodeStyle(),
-        zIndex: 1,
-        rotation: 0,
-        locked: false,
-        visible: true,
-        content: {
-          componentKey: 'services-bento',
-          config: { locale },
-        },
-      },
-      {
-        id: 'home-contact',
-        kind: 'composite',
-        rect: { x: 0, y: contactY, width: STAGE_WIDTH, height: CONTACT_HEIGHT },
-        style: createDefaultCanvasNodeStyle(),
-        zIndex: 2,
-        rotation: 0,
-        locked: false,
-        visible: true,
-        content: {
-          componentKey: 'home-contact-cta',
-          config: { locale },
-        },
-      },
-    ],
+    nodes,
   };
 }

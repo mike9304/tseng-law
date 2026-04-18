@@ -1,6 +1,6 @@
 # SESSION.md — 현재 세션 인수인계
 
-## 세션: S-04 (병렬: Claude=버튼/링크 편집 UX, Codex=나머지 8 섹션 decompose)
+## 세션: S-05 (Phase 1 W 녹색 스윕 — Codex 주도)
 ## 마지막 업데이트: 2026-04-18
 
 ---
@@ -9,59 +9,42 @@
 
 1. **이 파일 읽기** (SESSION.md)
 2. **AGENTS.md 읽기**
-3. **Wix 체크포인트.md 점수 확인** — 현재 🟢 **4 / 225** (W06 브라우저 검증 후 5 로)
+3. **Wix 체크포인트.md 점수 확인** — 현재 🟢 **4 / 225**
 4. **dev 서버 띄우기**: `cd /Users/son7/Projects/tseng-law && npm run dev`
-5. **병렬 두 갈래 진행:**
-   - Claude 직접: (나) 버튼/링크 편집 UX
-   - Codex 발주: (가) 나머지 8 홈 섹션 decompose propagate
+5. **S-05 Codex 프롬프트 (§ 하단) 그대로 발주** → 결과 검수 → 사용자 브라우저 검증
 
 ---
 
 ## 목표 & target
 
-### Claude 직접 (S-04-N) — 버튼/링크 편집 UX
+**S-05 target**: Phase 1 W 체크포인트 8개 (W02, W03, W06, W07, W09, W10, W11, W12) 에 대해 코드 감사 + 버그픽스 + 브라우저 테스트 가이드 완성 → 가능한 한 많은 항목 녹색 승격.
 
-**Target W: W12 부분 승격** (Inspector Content 탭) + **W24/W25 향한 진전**.
+**맥락**: S-04 끝에 홈 전체가 384 개 개별 builder 노드로 decompose 됨. 이제 각 노드에 대해:
+- 선택 핸들 (W02)
+- 인라인 편집 (W03)
+- 드래그 이동 + 스냅 (W06)
+- 리사이즈 (W07)
+- 삭제 (W09)
+- Undo/Redo (W10)
+- Autosave 인디케이터 (W11)
+- Inspector 탭 기본 동작 (W12)
 
-1. **Button kind Inspector Content 탭 실제 구현** — 현재 placeholder. 편집 필드:
-   - Label (text)
-   - Href (URL)
-   - Target (_self / _blank)
-   - Style variant (primary/secondary/outline/ghost/link)
-   - className (read-only, 참고용 표시)
-2. **우클릭 컨텍스트 메뉴 확장** — button/link 노드 우클릭 시 "링크 편집" 항목 추가 → Inspector Content 탭 자동 전환 + href 필드 포커스.
-3. **인라인 편집** — 버튼 노드를 composite 에서 SurfaceText 패턴으로 클릭하면 label 인라인 편집 가능하게. 이미 case-results-cta 는 decomposed button 이므로 InlineTextEditor 동작 확인.
+이 모두 이론상 이미 구현돼 있다 (코드 기반 기능). 실제로 각 W 가 **브라우저에서 끝까지 돌고 새로고침 후 상태 유지**되는지 검증·버그픽스가 목표.
 
-성공 기준:
-- `/ko/admin-builder` 에서 case-results CTA (소송사례 더 보기) 클릭 → Inspector Content 탭 → Href 를 `/ko/test` 로 변경 → 공개 페이지 새로고침 → href 반영
-- 버튼 노드 더블클릭 또는 인라인 클릭 → label "소송사례 더 보기" 를 "더보기" 로 수정 → 새로고침 유지
-
-### Codex 발주 (S-04-C) — 나머지 8 홈 섹션 decompose propagate
-
-target W: W01 유지 + **W06 전 홈 섹션 확장 준비**.
-
-8 섹션: hero / insights / services / attorney / stats / faq / offices / contact 를 case-results 와 동일 패턴 (container + text + button + className pass-through) 으로 decompose.
-
-각 섹션마다 `decompose-{section}.ts` 파일, seed-home 의 composite slot 을 decomposed 로 교체. SEED_VERSION home-seed-v6.
-
-동적 리스트 (ServicesBento `services.items.map`, InsightsArchive posts, FAQAccordion items, OfficeMapTabs, HomeStatsSection items) 는 각 item 을 **독립 builder 노드 트리** 로 전개. 큰 loop 반복.
-
-**Codex 프롬프트는 § 하단 "Codex 발주 프롬프트 S-04-C" 참조.**
-
-성공 기준:
-- `npx tsc --noEmit` exit 0
-- `/ko` 시각이 원본 tseng-law.com 과 100% 동일 (회귀 없음)
-- `/ko` 총 builder-pub-node 개수 16 → 150+ (각 섹션 decompose 만큼 증가)
-- 에디터에서 각 섹션 내부 요소 (hero title, services item, faq question 등) 개별 클릭 선택 가능
+**예상 결과**: 녹색 4 → **10+** (최소 6 항목 승격 기대).
 
 ---
 
-## 성공 기준 종합 (S-04 녹색 조건)
+## 성공 기준 (녹색 조건, 각 W 별)
 
-- Claude 파트 검증 완료 (case-results CTA href 편집 + label 인라인 편집)
-- Codex 파트 검증 완료 (/ko 원본 대비 시각 회귀 없음 + 각 요소 개별 편집)
-- `npx tsc --noEmit` exit 0
-- 사용자 브라우저 확인 후 W03 / W12 / W06 적절히 녹색 승격
+- **W02**: 임의 노드 (예: hero-title) 클릭 → 파란 테두리 + 8 corner/edge 핸들 (nw/n/ne/e/se/s/sw/w) 표시됨 + 회전 핸들 별도로 보임
+- **W03**: 텍스트 노드 더블클릭 → 커서 + 키보드 입력 → 블러 or Enter → 내용 변경 저장 → 새로고침 유지
+- **W06**: 노드 드래그 → 이동 + 스냅 가이드 선 표시 → 드롭 → 위치 저장 → 새로고침 유지
+- **W07**: 선택 노드의 SE 코너 드래그 → 크기 조정 + Shift 누르면 비율 유지 → 저장 유지
+- **W09**: 노드 선택 → Delete (또는 Backspace) → 노드 사라짐 → 새로고침 후 사라진 상태 유지
+- **W10**: 편집 몇 번 → Ctrl/Cmd+Z 반복 → 롤백 → Ctrl/Cmd+Y → 복구
+- **W11**: 편집하면 1초 뒤 "Draft saved" 토스트/인디케이터 "saving → saved" 상태 전환
+- **W12**: 노드 선택 → 우측 Inspector 에 Layout / Style / Content 탭 3개 이상 표시, 각 탭 필드 편집 즉시 반영
 
 ---
 
@@ -69,84 +52,115 @@ target W: W01 유지 + **W06 전 홈 섹션 확장 준비**.
 
 - `tree.ts` 건드림
 - `node.rect` 를 절대 좌표로 되돌리기
-- decompose 된 DOM 의 className 변경 (원본 CSS 와 맞춰야 함)
-- composite 아닌 다른 렌더 경로 재도입
+- 새 Phase 2+ 기능 추가 (모바일/위젯/Motion 등)
+- S-04 까지의 decompose 구조 건드림 (seed-home.ts, decompose-*.ts 등)
 - `git push --force`, `--no-verify`
 - 브라우저 검증 없이 "Green" 선언
-- **S-04 범위 밖 작업**: Phase 2 (모바일) / Phase 3 (위젯) / Phase 4 (폼) / Phase 5 (Motion) 등은 이번 세션에 건드리지 말 것. 아이디어가 떠올라도 메모하고 끝.
+- **S-05 범위 밖 작업 금지.** 발견된 버그가 Phase 2+ 요구면 메모만 하고 넘김.
 
 ---
 
-## Codex 발주 프롬프트 (S-04-C)
+## Codex 발주 프롬프트 (S-05)
 
 ````
-## 작업: 나머지 8 홈 섹션 decompose propagate (S-03 case-results 패턴 확장)
+## 작업: Phase 1 W 체크포인트 감사 + 버그픽스 (홈 decompose 기준)
 
 ### 배경
-S-03 에서 home-case-results composite 을 decomposed 노드 트리 (8 노드) 로 전환 완료. 패턴:
-- `src/lib/builder/canvas/decompose-case-results.ts` — `createCaseResultsDecomposedNodes(y, locale, zBase): BuilderCanvasNode[]`
-- root container: `className="section section--dark ... home-results-panel"`, `as: 'section'`, `htmlId: 'results'`, `dataTone: 'dark'`
-- 자식: text/button 노드에 className 직접 지정 (`section-label home-results-label`, `split-title home-results-title` 등)
-- `seed-home.ts` 의 `HomeSectionSpec` 유니언에 `{ kind: 'decomposed', builder, height }` 형태로 슬롯 교체
-- className pass-through 기반: text/button/container Element 가 className 있을 때 원본 CSS 적용
+S-04 끝에 홈 전체가 384개 개별 builder 노드로 decompose 됨 (`src/lib/builder/canvas/decompose-*.ts`, `seed-home.ts` SEED_VERSION `home-seed-v6`).
+이제 Phase 1 에디터 코어 W01~W30 중 아래 8 개 항목이 실제로 브라우저에서 돌아가는지 감사 + 버그픽스 필요.
 
-이번 작업: **남은 8 섹션도 동일 패턴으로 decompose**.
-- hero (HeroSearch)
-- insights (InsightsArchiveSection)
-- services (ServicesBento)
-- attorney (HomeAttorneySplit)
-- stats (HomeStatsSection)
-- faq (FAQAccordion)
-- offices (OfficeMapTabs)
-- contact (HomeContactCta)
+### 검증할 W (Wix 체크포인트.md 기준)
 
-### 원칙
-1. **각 섹션당 `src/lib/builder/canvas/decompose-{section}.ts` 파일 신규.** export: `create{Section}DecomposedNodes(y, locale, zBase): BuilderCanvasNode[]` + `export const {SECTION}_ROOT_HEIGHT`.
-2. **입력**: 대응하는 React 컴포넌트의 JSX 구조를 그대로 따라가면서 node 트리로 변환. 원본 className/id/data-tone 유지.
-3. **동적 리스트는 각 item 을 독립 노드 트리**로 전개. 예: ServicesBento 의 `services.items.map(...)` 6개 서비스 → 각 서비스 카드가 container + title text + description text + link button 등 4~8 노드. 각 item 의 index 를 node id 접미사에 포함 (`services-item-0-title`, `services-item-0-desc`).
-4. **parentId 로 트리 구조** 표현. root 는 parentId 없음, 나머지는 직계 부모 id 지정.
-5. **layoutMode** 는 기본 `absolute` (children 이 rect.x/rect.y 로 배치). 원본 CSS 가 flex/grid 하는 부분은 container 의 className 에 맡기고 layoutMode 는 absolute 로 두기 (layoutMode:'flex' 는 아직 완전 테스트 안됨).
-6. **rect 좌표**: local-to-parent (AGENTS.md lock-in). root 의 rect.y 는 seed-home 에서 주입받고, 자식들은 부모 안에서의 상대 위치.
-7. **DOM 태그**: text 는 `as: 'div'|'span'|'p'|'h1~h6'` 중 선택 (원본 JSX 와 일치). button 은 `as: 'a'|'button'`.
-8. **locale 별 copy** 는 각 React 컴포넌트에서 그대로 복사. keys: ko / zh-hant / en.
+1. **W02 선택 핸들** — 어떤 요소든 클릭 시 8 corner/edge 핸들 + 회전 핸들
+2. **W03 인라인 편집** — 텍스트 더블클릭 → 커서 → 키보드 → 저장
+3. **W06 드래그 + 스냅** — 드래그 이동 + 스냅 가이드 선 + 위치 persist
+4. **W07 리사이즈** — 코너 핸들 드래그 + Shift 비율 유지
+5. **W09 Delete** — 선택 + Delete/Backspace 키 → 삭제
+6. **W10 Undo/Redo** — Cmd/Ctrl+Z / Cmd/Ctrl+Shift+Z
+7. **W11 Autosave** — 편집 후 saving → saved 인디케이터
+8. **W12 Inspector 탭** — Layout/Style/Content 탭별 필드 편집
 
 ### 작업 절차
 
-1. **각 컴포넌트 JSX 구조 파악** — `src/components/HeroSearch.tsx`, `src/components/ServicesBento.tsx`, 등등.
-2. **`decompose-{section}.ts` 파일 9개 생성** (hero, insights, services, attorney, stats, faq, offices, contact, 그리고 home-stats 는 "stats" 단축).
-3. **`seed-home.ts` 수정**: `homeSections` 배열에서 각 composite 슬롯을 decomposed 로 교체. `SEED_VERSION = 'home-seed-v6'`.
-4. **import 정리** — 사용 안 하는 composite componentKey 는 types.ts `compositeComponentKeys` 에서 제거하지 말 것 (서브페이지가 여전히 사용). composite/Render.tsx switch 도 유지.
-5. **타입체크 + curl 검증**.
+#### Phase A — 코드 감사
+각 W 당 관련 코드 파일 열어 현재 구현 상태 확인. 각각 아래 세 가지로 분류:
+- **OK**: 코드 있고 동작할 것으로 판단 → 사용자 브라우저 테스트 가이드에 추가
+- **부분**: 코드 있으나 버그 의심 또는 가장자리 케이스 누락 → 버그픽스
+- **없음**: 코드 부재 → 최소 구현 추가 (단, 범위 폭발 주의)
+
+주요 파일:
+- `src/components/builder/canvas/CanvasContainer.tsx` — 드래그/스냅/리사이즈/선택핸들/우클릭 메뉴/키보드 단축키
+- `src/components/builder/canvas/CanvasNode.tsx` — 노드별 pointer 이벤트/핸들
+- `src/components/builder/canvas/SandboxInspectorPanel.tsx` — Layout/Style/Content/A11y/Seo 탭
+- `src/lib/builder/canvas/store.ts` — undo/redo, autosave 상태
+- `src/components/builder/canvas/SandboxTopBar.tsx` — saving/saved 인디케이터
+- `src/lib/builder/canvas/snap.ts` — 스냅 계산
+- `src/lib/builder/components/text/Inspector.tsx` / `heading/Inspector.tsx` / `button/Inspector.tsx` / `container/Inspector.tsx` — Content 탭
+- `src/components/builder/canvas/InlineTextEditor.tsx` — 인라인 편집기
+- `src/components/builder/editor/StyleTab.tsx` — Style 탭
+
+#### Phase B — 버그픽스
+코드 감사에서 발견된 버그 고치기. 각 수정은 **개별 W 단위로 커밋 메시지 분리**.
+
+가능한 버그 카테고리:
+- W02: decompose 된 container 자식 노드의 선택 핸들이 부모 container 에 가려지는 문제 (z-index, overflow)
+- W03: InlineTextEditor 가 decompose 된 text 노드 (className 있음) 에서 제대로 뜨는지
+- W06: snap guide 가 child-of-container 좌표계 (local-to-parent) 와 stage 좌표계 변환 문제
+- W07: container 의 자식 리사이즈 시 부모 경계 체크
+- W09: parentId 있는 노드 삭제 시 자식까지 cascading 삭제 여부
+- W10: 트랜잭션 단위 (drag 중 간계 mutation vs commit 시점)
+- W11: 자동 저장 debounce 타이밍, 네트워크 에러 처리
+- W12: Content 탭이 각 kind 별 올바른 Inspector 렌더하는지
+
+범위 폭발 방지:
+- W 하나당 **1~3개 파일 수정** 안에서 해결. 구조 리팩터 필요하면 포기하고 "W__ 부분 WIP" 로 리포트.
+- 새 dependency 설치 금지.
+- 실패한 W 는 🔴 로 두고 다른 W 로 넘어가기.
+
+#### Phase C — 사용자 브라우저 테스트 가이드
+각 W 마다 아래 형식으로 간단한 테스트 스크립트 생성:
+
+```
+### W02 테스트
+1. /ko/admin-builder 접속 (admin / local-review-2026!)
+2. 홈 hero 섹션의 "대만 법률을 한국어로 명확하게" 텍스트 클릭
+3. 파란 테두리 + 8 corner/edge 핸들 + 회전 핸들 표시 확인
+4. 결과: OK / 부분 (핸들 일부 누락) / 안 나옴
+```
+
+최종 리포트에 8 W × 테스트 스크립트 포함.
+
+#### Phase D — Wix 체크포인트.md 업데이트
+확정된 녹색만 🟢 로 변경 (사용자 브라우저 검증 대기 항목은 🟡 유지 + 주석 "S-05 코드 감사 OK, 브라우저 검증 대기"). 점수 총합 업데이트.
 
 ### 검증
 
-1. `npx tsc --noEmit` exit 0
-2. dev 서버 띄우고 `/ko/admin-builder?reseed=1` GET 으로 v6 강제 재시딩
-3. `curl -u admin:local-review-2026! http://localhost:3000/ko` → builder-pub-node 개수 크게 증가 (예상 150 이상)
-4. 시각 회귀 없음:
-   - `curl ... /ko | grep -oE '<section[^>]*id="[^"]*"[^>]*>'` — 각 섹션 id 정상
-   - `curl ... /ko | grep -oE 'class="hero"'`, `class="section-title"` 등 원본 CSS 클래스 정상 SSR
-5. 특히 까다로운 부분:
-   - **Hero 의 검색창** (form/input/button + dropdown quick-menu): HeroSearch 는 client 상태 (`useState`, `useEffect`) 를 사용. form 자체는 decompose 해도 기능 유지 어려움. **대안**: hero 상단 영역 (label/title/subtitle/link) 만 decompose, 검색창은 하나의 container "hero-search-widget" 으로 남겨두거나 아예 기능 빼고 정적 UI 만 모방.
-   - **FAQAccordion items**: accordion 열림 상태 (`useState openIndex`). decompose 된 각 FAQ 아이템은 정적으로만 렌더 — 인터랙션 포기. 또는 interactive 만 composite 으로 남기고 static wrapper 만 decompose.
-   - **ScrollHighlightText** (stats description): 특수 컴포넌트. description 은 일반 text 노드로 decompose 하되 highlight word 기능 포기.
-6. 브라우저 육안 — RESULTS 섹션처럼 각 섹션도 원본과 같은 비주얼.
+1. `npx tsc --noEmit -p tsconfig.json` → exit 0
+2. `curl -u admin:local-review-2026! http://localhost:3000/ko/admin-builder` → HTTP 200 (에디터 진입 회귀 없음)
+3. `curl -u admin:local-review-2026! http://localhost:3000/ko` → builder-pub-node 384 (회귀 없음)
+4. 각 W 버그픽스 후 해당 플로우 dev log 에 에러 없음
 
 ### 금지
 
-- `tree.ts` 건드림
-- composite/Render.tsx 의 기존 switch case 제거 (서브페이지가 사용 중)
-- `SEED_VERSION` 을 v4 / v3 등 과거 값으로 변경
+- `src/lib/builder/canvas/tree.ts` 건드림
+- `decompose-*.ts` / `seed-home.ts` 수정 (S-05 범위 밖)
+- Phase 2+ 기능 추가 (W31 이상)
+- 새 npm dependency 설치
 - `git push --force`, `--no-verify`
 
 ### 리턴 포맷
 
-- 변경 파일 목록 + 각 파일 한 줄 요약
-- typecheck 결과
-- curl 검증: builder-pub-node 개수, 주요 섹션 id/class grep 결과
-- 동적 리스트 (services items, insights posts 등) 각각 몇 노드로 decompose 됐는지
-- 기능 포기한 부분 명시 (hero search interactive, faq accordion 등)
-- 사용자 브라우저 확인 필요 항목 체크리스트
+1. W 별 상태 표:
+   ```
+   | W | 코드감사 | 버그픽스 | 예상판정 |
+   | W02 | OK | - | 녹색 가능 |
+   | W06 | 부분 | snap guide fix (line 400 CanvasContainer) | 녹색 가능 |
+   | W10 | 없음 | 전체 구현 필요 | 🟡 유지 |
+   ```
+2. 커밋 목록 (W 별로 분리)
+3. typecheck / curl 검증 결과
+4. 사용자 브라우저 테스트 가이드 (위 Phase C 형식)
+5. Wix 체크포인트.md 변경 diff
 ````
 
 ---
@@ -161,55 +175,37 @@ S-03 에서 home-case-results composite 을 decomposed 노드 트리 (8 노드) 
 
 | Phase | 범위 | W | 상태 |
 |---|---|---|---|
-| 0 | F0 메인 사이트 → 빌더 전환 | — | 🟢 composite + 1 decomposed pilot |
-| 1 | 에디터 코어 + 슬롯 편집 | W01~W30 | 🟡 4/30 green, S-04 에서 W03/W06/W12 확대 목표 |
+| 0 | F0 메인 사이트 → 빌더 전환 | — | 🟢 홈 decompose 완료, 서브페이지는 1 composite 당 1 페이지 |
+| 1 | 에디터 코어 + 슬롯 편집 | W01~W30 | 🟡 4/30 green, S-05 에서 10+ 목표 |
 | 2~9 | 모바일/위젯/폼/Motion/Design/SEO/Bookings/고도화 | W31~W225 | 🔴 |
-
----
-
-## S-02 / S-03 검증 대기 (별도 처리)
-
-- W03 인라인 텍스트 편집: Inspector 경로 OK, 캔버스 contentEditable + decompose 된 text 노드의 InlineTextEditor 모두 녹색 승격 대기
-- W06 드래그: case-results-title 노드 드래그 + snap 가이드 + persist 확인됨 (사용자 "되는거 같아" 보고) → 녹색 승격 대기
-- W12 Inspector: Layout/Style/Content/A11y/Seo 탭 기본 동작 확인 대기
-
----
-
-## 중요 파일 위치
-
-- **AGENTS.md**: `/Users/son7/Projects/tseng-law/AGENTS.md`
-- **Wix 체크포인트**: `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md`
-- **계획서 §16 Changelog**: `/Users/son7/Desktop/ai memory save 계획/사이트 빌더 계획서.md`
 
 ---
 
 ## 핵심 코드 이정표
 
-| 파일 | 역할 | 주의 |
+| 파일 | 역할 | 최근 변경 |
 |---|---|---|
-| `src/lib/builder/canvas/types.ts` | className / as / htmlId / dataTone pass-through 스키마 (S-03) | |
-| `src/lib/builder/canvas/decompose-case-results.ts` | S-03 파일럿 — 8 노드 decompose 패턴 예시 | S-04 propagate 원본 |
-| `src/lib/builder/canvas/decompose-{hero,insights,...}.ts` | S-04 Codex 생성 예정 | |
-| `src/lib/builder/canvas/seed-home.ts` | HomeSectionSpec union (composite | decomposed), SEED_VERSION | S-04 후 v6 |
-| `src/lib/builder/components/container/Element.tsx` | children 렌더 + className/as/htmlId 지원 | S-03 |
-| `src/components/builder/canvas/elements/TextElement.tsx` | className 경로 + as 태그 선택 | S-03 |
-| `src/components/builder/canvas/elements/ButtonElement.tsx` | className 경로 + as=a/button + href | S-03 |
-| `src/lib/builder/components/define.ts` | BuilderComponentRenderProps.children 추가 | S-03 |
-| `src/lib/builder/site/public-page.tsx` | container kind 은 children prop, 그외 sibling | S-03 |
-| `src/components/builder/canvas/CanvasNode.tsx` | container kind 은 children prop, 그외 sibling | S-03 |
-| `src/lib/builder/components/button/Inspector.tsx` | **S-04-N 확장** — label/href/target/style 편집 필드 | |
-| `src/components/builder/canvas/CanvasContainer.tsx` | context menu — S-04-N 에서 "링크 편집" 항목 추가 | |
+| `src/lib/builder/canvas/seed-home.ts` | 홈 9 섹션 decompose seed, `SEED_VERSION='home-seed-v6'` | S-04-C |
+| `src/lib/builder/canvas/decompose-{hero,insights,...,contact}.ts` | 섹션별 노드 트리 생성기 | S-04-C |
+| `src/lib/builder/canvas/decompose-home-shared.ts` | 공통 노드 생성 헬퍼 | S-04-C |
+| `src/lib/builder/canvas/decompose-case-results.ts` | 파일럿 decompose | S-03 |
+| `src/lib/builder/components/container/Element.tsx` | children prop 렌더 | S-03 |
+| `src/components/builder/canvas/elements/{TextElement,ButtonElement}.tsx` | className/as pass-through | S-03/S-04-N |
+| `src/lib/builder/components/button/Inspector.tsx` | Label/Href/Target/Variant/As/className UI | S-04-N |
+| `src/components/builder/canvas/CanvasContainer.tsx` | 드래그/스냅/선택핸들/우클릭, "링크 편집" 액션 | S-04-N |
+| `src/components/builder/canvas/SandboxInspectorPanel.tsx` | 탭 + composite surface editor + focus-href-input listener | S-02/S-04-N |
+| `src/lib/builder/canvas/tree.ts` | **블랙박스** | — |
 
 ---
 
 ## 역할
 
-- **Claude Opus = Manager / Architect**: SESSION 작성 + S-04-N (버튼/링크 편집 UX) 직접 구현 + Codex 산출물 검수
-- **Codex = Worker**: S-04-C (8 섹션 decompose propagate) 실행. 위 Codex 프롬프트 그대로 받아서 수행
-- **User**: 브라우저 검증 + W 녹색 승격 최종 판정
+- **Claude Opus = Manager / Architect**: S-05 Codex 발주 감독, 결과 검수, 사용자 브라우저 테스트 가이드 전달
+- **Codex = Worker**: S-05 W 감사 + 버그픽스 + 체크포인트 초안 (위 프롬프트 수행)
+- **User**: 브라우저 테스트 + W 녹색 최종 승격 판정
 
 ---
 
 ## 한줄 요약
 
-"S-04 병렬: Claude 는 버튼 Inspector/우클릭/href 편집을 완성하고, Codex 는 case-results 패턴을 나머지 8 홈 섹션에 propagate 한다. 끝나면 홈 전체가 decomposed + 링크 편집 가능."
+"홈이 384 노드로 decompose 된 상태에서 Phase 1 에디터 코어 (W02/W03/W06/W07/W09/W10/W11/W12) 가 실제로 돌아가는지 Codex 가 감사·버그픽스, 사용자가 브라우저로 최종 녹색 판정."

@@ -115,6 +115,7 @@ export default function CanvasNode({
   const isRootNode = !node.parentId;
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
   const isInteractive = !isDimmedRoot;
+  const selectionZIndexBoost = selected ? 10000 : 0;
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
   const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
   const childIds = childrenMap[node.id] ?? [];
@@ -174,7 +175,7 @@ export default function CanvasNode({
         top: `${node.rect.y}px`,
         width: `${node.rect.width}px`,
         height: `${node.rect.height}px`,
-        zIndex: node.zIndex + 10,
+        zIndex: node.zIndex + 10 + selectionZIndexBoost,
         transform: `rotate(${node.rotation}deg)`,
         transformOrigin: 'center center',
         opacity: isDimmedRoot ? 0.3 : 1,

@@ -837,6 +837,7 @@
   color: #fff;
   font-size: 0.68rem;
   pointer-events: none;
+  z-index: 3;
 }
 
 .nodeBadge span {
@@ -868,6 +869,7 @@
   background: #116dff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: transform 150ms ease, box-shadow 150ms ease;
+  z-index: 3;
 }
 
 .resizeHandle:hover {
@@ -899,7 +901,7 @@
   border-radius: 50%;
   background: #116dff;
   cursor: grab;
-  z-index: 1;
+  z-index: 3;
 }
 
 .rotationHandle:active {
@@ -1433,6 +1435,7 @@
   font-weight: 700;
   pointer-events: none;
   white-space: nowrap;
+  z-index: 3;
 }
 
 .alignToolbar {

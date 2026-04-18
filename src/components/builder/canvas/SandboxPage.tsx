@@ -9,6 +9,8 @@ import PublishModal from '@/components/builder/canvas/PublishModal';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
+import { BuilderThemeProvider } from '@/components/builder/editor/BuilderThemeContext';
+import SeoPanel from '@/components/builder/canvas/SeoPanel';
 import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
 import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
 import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
@@ -17,12 +19,14 @@ import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
-import type { BuilderNavItem, BuilderSiteSettings } from '@/lib/builder/site/types';
+import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
+import { DEFAULT_THEME, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
 
 const AUTOSAVE_DEBOUNCE_MS = 1000;
 const TOAST_TTL_MS = 3000;
+const SAVE_BADGE_TTL_MS = 1600;
 
 const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
   desktop: null,
@@ -31,6 +35,11 @@ const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
 };
 
 type SandboxDrawerPanel = 'pages' | 'add' | 'design' | 'layers' | 'nav' | 'history';
+type BuilderPageSummary = {
+  pageId: string;
+  slug: string;
+  isHomePage?: boolean;
+};
 
 type ToastTone = 'success' | 'error';
 
@@ -47,8 +56,10 @@ export default function SandboxPage({
   initialPageId,
   siteName,
   siteSettings,
+  siteTheme,
   navItems,
   currentSlug,
+  sitePages,
 }: {
   initialDocument: BuilderCanvasDocument;
   locale: Locale;
@@ -56,8 +67,10 @@ export default function SandboxPage({
   initialPageId?: string;
   siteName?: string;
   siteSettings?: BuilderSiteSettings;
+  siteTheme?: BuilderTheme;
   navItems?: BuilderNavItem[];
   currentSlug?: string;
+  sitePages?: BuilderPageSummary[];
 }) {
   const {
     document,
@@ -71,9 +84,15 @@ export default function SandboxPage({
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
   const [toasts, setToasts] = useState<SandboxToast[]>([]);
   const previousDraftSaveStateRef = useRef(draftSaveState);
+  const saveBadgeTimerRef = useRef<number | null>(null);
   const [viewport, setViewport] = useState<ViewportMode>('desktop');
   const [publishOpen, setPublishOpen] = useState(false);
+  const [seoOpen, setSeoOpen] = useState(false);
   const [activePageId, setActivePageId] = useState<string | null>(initialPageId ?? null);
+  const [siteSettingsState, setSiteSettingsState] = useState<BuilderSiteSettings | undefined>(siteSettings);
+  const [siteThemeState, setSiteThemeState] = useState<BuilderTheme>(siteTheme ?? DEFAULT_THEME);
+  const [sitePagesState, setSitePagesState] = useState<BuilderPageSummary[]>(sitePages ?? []);
+  const [currentSlugState, setCurrentSlugState] = useState(currentSlug ?? '');
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
@@ -91,9 +110,29 @@ export default function SandboxPage({
   }, [initialDocument, replaceDocument]);
 
   useEffect(() => {
+    setSiteSettingsState(siteSettings);
+  }, [siteSettings]);
+
+  useEffect(() => {
+    setSiteThemeState(siteTheme ?? DEFAULT_THEME);
+  }, [siteTheme]);
+
+  useEffect(() => {
+    setSitePagesState(sitePages ?? []);
+  }, [sitePages]);
+
+  useEffect(() => {
+    setCurrentSlugState(currentSlug ?? '');
+  }, [currentSlug]);
+
+  useEffect(() => {
     if (!document) return undefined;
     if (document.updatedAt === initialDocument.updatedAt) return undefined;
 
+    if (saveBadgeTimerRef.current) {
+      window.clearTimeout(saveBadgeTimerRef.current);
+      saveBadgeTimerRef.current = null;
+    }
     setDraftSaveState('saving');
     const timer = window.setTimeout(async () => {
       try {
@@ -141,14 +180,33 @@ export default function SandboxPage({
     const previousState = previousDraftSaveStateRef.current;
     if (draftSaveState === previousState) return;
 
+    if (saveBadgeTimerRef.current) {
+      window.clearTimeout(saveBadgeTimerRef.current);
+      saveBadgeTimerRef.current = null;
+    }
+
     if (draftSaveState === 'saved') {
       pushToast('Draft saved', 'success');
+      saveBadgeTimerRef.current = window.setTimeout(() => {
+        setDraftSaveState('idle');
+        saveBadgeTimerRef.current = null;
+      }, SAVE_BADGE_TTL_MS);
     }
     if (draftSaveState === 'error') {
       pushToast('Draft save failed', 'error');
+      saveBadgeTimerRef.current = window.setTimeout(() => {
+        setDraftSaveState('idle');
+        saveBadgeTimerRef.current = null;
+      }, SAVE_BADGE_TTL_MS);
     }
     previousDraftSaveStateRef.current = draftSaveState;
-  }, [draftSaveState]);
+  }, [draftSaveState, setDraftSaveState]);
+
+  useEffect(() => () => {
+    if (saveBadgeTimerRef.current) {
+      window.clearTimeout(saveBadgeTimerRef.current);
+    }
+  }, []);
 
   const handleLocaleChange = useCallback(async (newLocale: Locale, linkedPageId: string | null) => {
     if (linkedPageId) {
@@ -175,8 +233,16 @@ export default function SandboxPage({
     }
   }, [replaceDocument]);
 
-  const handleSelectPage = useCallback(async (pageId: string) => {
+  const handleSelectPage = useCallback(async (pageId: string, nextSlug?: string) => {
     setActivePageId(pageId);
+    if (typeof nextSlug === 'string') {
+      setCurrentSlugState(nextSlug);
+    } else {
+      const matchingPage = sitePagesState.find((page) => page.pageId === pageId);
+      if (matchingPage) {
+        setCurrentSlugState(matchingPage.slug);
+      }
+    }
     try {
       const response = await fetch(
         `/api/builder/site/pages/${pageId}/draft?locale=${locale}`,
@@ -193,7 +259,23 @@ export default function SandboxPage({
     } catch {
       pushToast('Failed to load page', 'error');
     }
-  }, [locale, replaceDocument]);
+  }, [locale, replaceDocument, sitePagesState]);
+
+  const handleHeaderNavigate = useCallback((href: string) => {
+    const normalizedHref = normalizeSiteHref(href, locale);
+    const targetPath = comparableSitePath(normalizedHref, locale);
+    const targetPage = sitePagesState.find((page) => {
+      const pagePath = buildSitePagePath(locale, page.isHomePage ? '' : page.slug);
+      return comparableSitePath(pagePath, locale) === targetPath;
+    });
+
+    if (targetPage) {
+      void handleSelectPage(targetPage.pageId, targetPage.slug);
+      return;
+    }
+
+    window.location.href = normalizedHref;
+  }, [handleSelectPage, locale, sitePagesState]);
 
   const viewportWidth = VIEWPORT_WIDTHS[viewport];
 
@@ -234,9 +316,10 @@ export default function SandboxPage({
       };
 
   return (
-    <main className={styles.shell}>
-      <GoogleFontsLoader />
-      <SandboxTopBar
+    <BuilderThemeProvider value={siteThemeState}>
+      <main className={styles.shell}>
+        <GoogleFontsLoader extraFamilies={[siteThemeState.fonts.heading, siteThemeState.fonts.body]} />
+        <SandboxTopBar
         locale={locale}
         backend={backend}
         draftSaveState={draftSaveState}
@@ -252,13 +335,14 @@ export default function SandboxPage({
         viewport={viewport}
         onViewportChange={setViewport}
         onPublish={() => setPublishOpen(true)}
+        onOpenSeo={() => setSeoOpen(true)}
         onOpenSettings={() => setSettingsOpen(true)}
         onOpenHistory={() => setHistoryOpen(true)}
         activePageId={activePageId}
         onLocaleChange={handleLocaleChange}
       />
 
-      <section className={styles.editorShell}>
+        <section className={styles.editorShell}>
         <div className={styles.iconRail}>
           <button
             type="button"
@@ -406,10 +490,12 @@ export default function SandboxPage({
             <div style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderBottom: '1px solid #e5e7eb' }}>
               <SiteHeader
                 siteName={siteName}
-                settings={siteSettings}
+                settings={siteSettingsState}
+                theme={siteThemeState}
                 navItems={navItems || []}
                 locale={locale}
-                currentSlug={currentSlug || ''}
+                currentSlug={currentSlugState}
+                onNavigate={handleHeaderNavigate}
               />
             </div>
           ) : null}
@@ -420,7 +506,8 @@ export default function SandboxPage({
             <div style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderTop: '1px solid #e5e7eb' }}>
               <SiteFooter
                 siteName={siteName}
-                settings={siteSettings}
+                settings={siteSettingsState}
+                theme={siteThemeState}
                 navItems={navItems || []}
                 locale={locale}
               />
@@ -438,51 +525,64 @@ export default function SandboxPage({
             />
           ) : null}
         </div>
-      </section>
+        </section>
 
-      {assetLibraryNode?.kind === 'image' ? (
-        <AssetLibraryModal
-          open
+        {assetLibraryNode?.kind === 'image' ? (
+          <AssetLibraryModal
+            open
+            locale={locale}
+            selectedUrl={assetLibraryNode.content.src}
+            onClose={() => setAssetLibraryNodeId(null)}
+            onSelect={(asset) => {
+              updateNodeContent(assetLibraryNode.id, { src: asset.url });
+              setAssetLibraryNodeId(null);
+            }}
+          />
+        ) : null}
+
+        <PublishModal
+          open={publishOpen}
+          document={document}
           locale={locale}
-          selectedUrl={assetLibraryNode.content.src}
-          onClose={() => setAssetLibraryNodeId(null)}
-          onSelect={(asset) => {
-            updateNodeContent(assetLibraryNode.id, { src: asset.url });
-            setAssetLibraryNodeId(null);
-          }}
+          activePageId={activePageId}
+          onClose={() => setPublishOpen(false)}
         />
-      ) : null}
 
-      <PublishModal
-        open={publishOpen}
-        document={document}
-        locale={locale}
-        activePageId={activePageId}
-        onClose={() => setPublishOpen(false)}
-      />
+        <SeoPanel
+          open={seoOpen}
+          pageId={activePageId ?? ''}
+          locale={locale}
+          onClose={() => setSeoOpen(false)}
+        />
 
-      <SiteSettingsModal
-        open={settingsOpen}
-        onClose={() => setSettingsOpen(false)}
-      />
+        <SiteSettingsModal
+          open={settingsOpen}
+          locale={locale}
+          onSaved={({ settings, theme }) => {
+            setSiteSettingsState(settings);
+            setSiteThemeState(theme);
+          }}
+          onClose={() => setSettingsOpen(false)}
+        />
 
-      <VersionHistoryPanel
-        open={historyOpen}
-        pageId={activePageId ?? ''}
-        siteId="default"
-        onClose={() => setHistoryOpen(false)}
-      />
+        <VersionHistoryPanel
+          open={historyOpen}
+          pageId={activePageId ?? ''}
+          siteId="default"
+          onClose={() => setHistoryOpen(false)}
+        />
 
-      <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
-        {toasts.map((toast) => (
-          <div
-            key={toast.id}
-            className={`${styles.toast} ${toast.tone === 'error' ? styles.toastError : styles.toastSuccess}`}
-          >
-            {toast.message}
-          </div>
-        ))}
-      </div>
-    </main>
+        <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
+          {toasts.map((toast) => (
+            <div
+              key={toast.id}
+              className={`${styles.toast} ${toast.tone === 'error' ? styles.toastError : styles.toastSuccess}`}
+            >
+              {toast.message}
+            </div>
+          ))}
+        </div>
+      </main>
+    </BuilderThemeProvider>
   );
 }

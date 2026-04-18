@@ -436,8 +436,9 @@ export default function CanvasContainer({
         const startRect = activeInteraction.startRect;
         const nextRect = { ...startRect };
         const isCorner = handle === 'nw' || handle === 'ne' || handle === 'sw' || handle === 'se';
+        const preserveAspectRatio = isCorner && event.shiftKey;
 
-        if (isCorner) {
+        if (preserveAspectRatio) {
           const aspect = startRect.width / startRect.height;
           let newWidth: number;
           let newHeight: number;
@@ -467,17 +468,17 @@ export default function CanvasContainer({
             nextRect.x = startRect.x + (startRect.width - newWidth);
           }
         } else {
-          if (handle === 'e') {
+          if (handle === 'e' || handle === 'ne' || handle === 'se') {
             nextRect.width = startRect.width + deltaX;
           }
-          if (handle === 'w') {
+          if (handle === 'w' || handle === 'nw' || handle === 'sw') {
             nextRect.x = startRect.x + deltaX;
             nextRect.width = startRect.width - deltaX;
           }
-          if (handle === 's') {
+          if (handle === 's' || handle === 'sw' || handle === 'se') {
             nextRect.height = startRect.height + deltaY;
           }
-          if (handle === 'n') {
+          if (handle === 'n' || handle === 'nw' || handle === 'ne') {
             nextRect.y = startRect.y + deltaY;
             nextRect.height = startRect.height - deltaY;
           }

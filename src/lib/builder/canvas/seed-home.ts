@@ -5,8 +5,40 @@ import {
   createCaseResultsDecomposedNodes,
   CASE_RESULTS_ROOT_HEIGHT,
 } from './decompose-case-results';
+import {
+  createHeroDecomposedNodes,
+  HERO_SECTION_ROOT_HEIGHT,
+} from './decompose-hero';
+import {
+  createInsightsDecomposedNodes,
+  INSIGHTS_SECTION_ROOT_HEIGHT,
+} from './decompose-insights';
+import {
+  createServicesDecomposedNodes,
+  SERVICES_SECTION_ROOT_HEIGHT,
+} from './decompose-services';
+import {
+  createAttorneyDecomposedNodes,
+  ATTORNEY_SECTION_ROOT_HEIGHT,
+} from './decompose-attorney';
+import {
+  createStatsDecomposedNodes,
+  STATS_SECTION_ROOT_HEIGHT,
+} from './decompose-stats';
+import {
+  createFaqDecomposedNodes,
+  FAQ_SECTION_ROOT_HEIGHT,
+} from './decompose-faq';
+import {
+  createOfficesDecomposedNodes,
+  OFFICES_SECTION_ROOT_HEIGHT,
+} from './decompose-offices';
+import {
+  createContactDecomposedNodes,
+  CONTACT_SECTION_ROOT_HEIGHT,
+} from './decompose-contact';
 
-export const SEED_VERSION = 'home-seed-v5';
+export const SEED_VERSION = 'home-seed-v6';
 
 const STAGE_WIDTH = 1280;
 
@@ -26,16 +58,16 @@ type DecomposedSpec = {
 type HomeSectionSpec = CompositeSpec | DecomposedSpec;
 
 const homeSections: HomeSectionSpec[] = [
-  { kind: 'composite', id: 'home-hero',         componentKey: 'hero-search',       height: 820 },
-  { kind: 'composite', id: 'home-insights',     componentKey: 'insights-archive',  height: 1200 },
-  { kind: 'composite', id: 'home-services',     componentKey: 'services-bento',    height: 1400 },
-  { kind: 'composite', id: 'home-attorney',     componentKey: 'home-attorney',     height: 720 },
+  { kind: 'decomposed', builder: createHeroDecomposedNodes,      height: HERO_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', builder: createInsightsDecomposedNodes,  height: INSIGHTS_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', builder: createServicesDecomposedNodes,  height: SERVICES_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', builder: createAttorneyDecomposedNodes,  height: ATTORNEY_SECTION_ROOT_HEIGHT },
   // home-case-results: decomposed pilot (S-03)
   { kind: 'decomposed', builder: createCaseResultsDecomposedNodes, height: CASE_RESULTS_ROOT_HEIGHT },
-  { kind: 'composite', id: 'home-stats',        componentKey: 'home-stats',        height: 640 },
-  { kind: 'composite', id: 'home-faq',          componentKey: 'faq-accordion',     height: 1280 },
-  { kind: 'composite', id: 'home-offices',      componentKey: 'office-map-tabs',   height: 820 },
-  { kind: 'composite', id: 'home-contact',      componentKey: 'home-contact-cta',  height: 640 },
+  { kind: 'decomposed', builder: createStatsDecomposedNodes,     height: STATS_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', builder: createFaqDecomposedNodes,       height: FAQ_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', builder: createOfficesDecomposedNodes,   height: OFFICES_SECTION_ROOT_HEIGHT },
+  { kind: 'decomposed', builder: createContactDecomposedNodes,   height: CONTACT_SECTION_ROOT_HEIGHT },
 ];
 
 function createCompositeNode(

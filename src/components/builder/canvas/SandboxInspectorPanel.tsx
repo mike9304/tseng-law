@@ -334,6 +334,23 @@ export default function SandboxInspectorPanel({
     }
   }, [selectedSurfaceKey, selectedNode?.kind]);
 
+  useEffect(() => {
+    const handler = () => {
+      setActiveTab('content');
+      requestAnimationFrame(() => {
+        const input = window.document.querySelector<HTMLInputElement>(
+          '[data-builder-href-input="true"]',
+        );
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      });
+    };
+    window.document.addEventListener('builder:focus-href-input', handler);
+    return () => window.document.removeEventListener('builder:focus-href-input', handler);
+  }, []);
+
   const compositeSurfaceEditor =
     singleSelection && selectedNode && selectedNode.kind === 'composite' && selectedSurfaceKey
       ? renderCompositeSurfaceEditor({

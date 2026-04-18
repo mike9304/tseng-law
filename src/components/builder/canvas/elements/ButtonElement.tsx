@@ -94,6 +94,8 @@ export default function ButtonElement({
     };
     if (Tag === 'a') {
       props.href = interactive ? href : undefined;
+      if (node.content.target) props.target = node.content.target;
+      if (node.content.rel) props.rel = node.content.rel;
     } else if (Tag === 'button') {
       props.type = 'button';
     }

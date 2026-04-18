@@ -144,6 +144,8 @@ const buttonCanvasNodeSchema = baseCanvasNodeSchema.extend({
     className: z.string().max(256).optional(),
     as: z.enum(['a', 'button']).optional(),
     rawInlineStyle: z.boolean().optional(),
+    target: z.enum(['_self', '_blank', '_parent', '_top']).optional(),
+    rel: z.string().max(120).optional(),
   }),
 });
 

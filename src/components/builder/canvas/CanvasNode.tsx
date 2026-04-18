@@ -45,6 +45,8 @@ export default function CanvasNode({
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
   const commitMutationSession = useBuilderCanvasStore((s) => s.commitMutationSession);
+  const activeGroupId = useBuilderCanvasStore((s) => s.activeGroupId);
+  const enterGroup = useBuilderCanvasStore((s) => s.enterGroup);
   const selectedNodeIds = useBuilderCanvasStore((s) => s.selectedNodeIds);
 
   const handleRotationPointerDown = useCallback(
@@ -86,10 +88,15 @@ export default function CanvasNode({
 
   const handleDoubleClick = useCallback(() => {
     if (node.locked) return;
+    if (node.kind === 'composite') {
+      enterGroup(node.id);
+      setIsEditing(false);
+      return;
+    }
     if (node.kind === 'text' || node.kind === 'heading') {
       setIsEditing(true);
     }
-  }, [node.kind, node.locked]);
+  }, [enterGroup, node.id, node.kind, node.locked]);
 
   const handleInlineSave = useCallback(
     (html: string, plainText: string) => {
@@ -104,6 +111,35 @@ export default function CanvasNode({
 
   const isTextKind = node.kind === 'text' || node.kind === 'heading';
   const textContent = node.content as Record<string, unknown>;
+  const isActiveGroupFrame = activeGroupId === node.id;
+  const isRootNode = !node.parentId;
+  const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
+  const isInteractive = !isDimmedRoot;
+  const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
+  const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
+  const childIds = childrenMap[node.id] ?? [];
+  const nestedChildren = childIds
+    .map((cid) => allNodes.find((n) => n.id === cid))
+    .filter((n): n is BuilderCanvasNode => n != null && n.visible);
+
+  const renderNestedChildNodes = () =>
+    nestedChildren.map((child) => {
+      const isChildSelected = selectedNodeIds.includes(child.id);
+      return (
+        <CanvasNode
+          key={child.id}
+          node={child}
+          selected={isChildSelected}
+          onSelect={onSelect}
+          onContextMenu={onContextMenu}
+          onOpenAssetLibrary={onOpenAssetLibrary}
+          onMoveStart={onMoveStart}
+          onResizeStart={onResizeStart}
+          onUpdateContent={onUpdateContent}
+        />
+      );
+    });
+
   const body = isEditing && isTextKind ? (
     <InlineTextEditor
       initialText={String(textContent.text || '')}
@@ -115,19 +151,19 @@ export default function CanvasNode({
       onBlur={handleInlineBlur}
     />
   ) : component ? (
-    <component.Render node={node} mode="edit" />
+    node.kind === 'container' ? (
+      <component.Render node={node} mode="edit">
+        {renderNestedChildNodes()}
+      </component.Render>
+    ) : (
+      <component.Render node={node} mode="edit" />
+    )
   ) : null;
-  // Recursive children for containers
-  const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
-  const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
-  const childIds = node.kind === 'container' ? (childrenMap[node.id] ?? []) : [];
-  const nestedChildren = childIds
-    .map((cid) => allNodes.find((n) => n.id === cid))
-    .filter((n): n is BuilderCanvasNode => n != null && n.visible);
 
   const hasVisibleBorder = node.style.borderWidth > 0;
   const hasVisibleShadow = node.style.shadowBlur > 0 || node.style.shadowSpread !== 0 || node.style.shadowX !== 0 || node.style.shadowY !== 0;
   const isContainerWithChildren = node.kind === 'container' && nestedChildren.length > 0;
+  const showSelectionHandles = selected && !node.locked && isInteractive;
 
   return (
     <div
@@ -141,9 +177,36 @@ export default function CanvasNode({
         zIndex: node.zIndex + 10,
         transform: `rotate(${node.rotation}deg)`,
         transformOrigin: 'center center',
+        opacity: isDimmedRoot ? 0.3 : 1,
+        pointerEvents: isDimmedRoot || isActiveGroupFrame ? 'none' : undefined,
+        outline: isActiveGroupFrame ? '2px dashed rgba(37, 99, 235, 0.72)' : undefined,
+        outlineOffset: isActiveGroupFrame ? 4 : undefined,
       }}
       data-node-id={node.id}
       onPointerDown={(event) => {
+        event.stopPropagation();
+        if (event.altKey && node.parentId) {
+          const nodesById = new Map(allNodes.map((candidate) => [candidate.id, candidate]));
+          let selectedAncestorId: string | null = selected ? node.id : null;
+
+          if (!selectedAncestorId) {
+            let ancestorId: string | null = node.parentId;
+            while (ancestorId) {
+              if (selectedNodeIds.includes(ancestorId)) {
+                selectedAncestorId = ancestorId;
+                break;
+              }
+              ancestorId = nodesById.get(ancestorId)?.parentId ?? null;
+            }
+          }
+
+          const nextSelectedId = selectedAncestorId
+            ? (nodesById.get(selectedAncestorId)?.parentId ?? selectedAncestorId)
+            : node.parentId;
+          onSelect(nextSelectedId, false);
+          return;
+        }
+        if (!isInteractive) return;
         if (event.button !== 0) return;
         const additive = event.metaKey || event.ctrlKey || event.shiftKey;
         onSelect(node.id, additive);
@@ -151,6 +214,8 @@ export default function CanvasNode({
         onMoveStart(node.id, event);
       }}
       onContextMenu={(event) => {
+        event.stopPropagation();
+        if (!isInteractive) return;
         event.preventDefault();
         onContextMenu(node.id, event);
       }}
@@ -158,8 +223,9 @@ export default function CanvasNode({
         event.stopPropagation();
         handleDoubleClick();
       }}
-      onClick={() => {
-        if (node.kind !== 'image' || !selected || node.locked) return;
+      onClick={(event) => {
+        event.stopPropagation();
+        if (node.kind !== 'image' || !selected || node.locked || !isInteractive) return;
         onOpenAssetLibrary?.(node.id);
       }}
     >
@@ -176,36 +242,24 @@ export default function CanvasNode({
           borderRadius: `${node.style.borderRadius}px`,
           border: hasVisibleBorder
             ? `${node.style.borderWidth}px ${node.style.borderStyle} ${node.style.borderColor}`
-            : isContainerWithChildren && selected
+            : isActiveGroupFrame
+              ? '2px dashed rgba(37, 99, 235, 0.72)'
+              : isContainerWithChildren && selected
               ? '1px dashed #94a3b8'
               : 'none',
           boxShadow: hasVisibleShadow
             ? `${node.style.shadowX}px ${node.style.shadowY}px ${node.style.shadowBlur}px ${node.style.shadowSpread}px ${node.style.shadowColor}`
-            : 'none',
+            : isActiveGroupFrame
+              ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
+              : 'none',
           opacity: node.style.opacity / 100,
           overflow: node.kind === 'container' ? 'visible' : undefined,
         }}
       >
         {body}
-        {/* Render nested children for containers as full CanvasNode instances */}
-        {nestedChildren.map((child) => {
-          const isChildSelected = selectedNodeIds.includes(child.id);
-          return (
-            <CanvasNode
-              key={child.id}
-              node={child}
-              selected={isChildSelected}
-              onSelect={onSelect}
-              onContextMenu={onContextMenu}
-              onOpenAssetLibrary={onOpenAssetLibrary}
-              onMoveStart={onMoveStart}
-              onResizeStart={onResizeStart}
-              onUpdateContent={onUpdateContent}
-            />
-          );
-        })}
+        {node.kind !== 'container' ? renderNestedChildNodes() : null}
       </div>
-      {selected && !node.locked ? (
+      {showSelectionHandles ? (
         <>
           <div className={styles.rotationLine} />
           <div

@@ -176,23 +176,34 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         }}
       >
         {component ? (
-          <component.Render node={node} mode="published" />
+          node.kind === 'container' ? (
+            <component.Render node={node} mode="published">
+              {childNodes.map((child) => renderPublishedNode(child))}
+            </component.Render>
+          ) : (
+            <>
+              <component.Render node={node} mode="published" />
+              {childNodes.map((child) => renderPublishedNode(child))}
+            </>
+          )
         ) : (
-          <div
-            style={{
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#9ca3af',
-              fontSize: '0.85rem',
-            }}
-          >
-            {node.kind}
-          </div>
+          <>
+            <div
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#9ca3af',
+                fontSize: '0.85rem',
+              }}
+            >
+              {node.kind}
+            </div>
+            {childNodes.map((child) => renderPublishedNode(child))}
+          </>
         )}
-        {childNodes.map((child) => renderPublishedNode(child))}
       </div>
     );
   }

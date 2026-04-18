@@ -77,10 +77,36 @@ function resolveVariantStyles(variant: ButtonVariant, s: BuilderButtonCanvasNode
 
 export default function ButtonElement({
   node,
+  mode = 'edit',
 }: {
   node: BuilderButtonCanvasNode;
+  mode?: 'edit' | 'preview' | 'published';
 }) {
   const s = node.style;
+  const { className, as, href, label } = node.content;
+  const interactive = mode === 'published';
+
+  if (className) {
+    const Tag = (as ?? (href ? 'a' : 'button')) as keyof JSX.IntrinsicElements;
+    const props: Record<string, unknown> = {
+      className,
+      style: { display: 'inline-flex', alignItems: 'center', margin: 0 },
+    };
+    if (Tag === 'a') {
+      props.href = interactive ? href : undefined;
+    } else if (Tag === 'button') {
+      props.type = 'button';
+    }
+    if (!interactive) {
+      (props.style as React.CSSProperties).pointerEvents = 'none';
+    }
+    return (
+      <Tag {...(props as Record<string, never>)}>
+        {label}
+      </Tag>
+    );
+  }
+
   const variantStyles = resolveVariantStyles(node.content.style, s);
 
   return (

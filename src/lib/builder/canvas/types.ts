@@ -118,6 +118,9 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
     textShadow: textShadowSchema,
     backgroundColor: z.string().max(64).optional(),
     textTransform: z.enum(['none', 'uppercase', 'lowercase', 'capitalize']).optional(),
+    className: z.string().max(256).optional(),
+    as: z.enum(['div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
+    rawInlineStyle: z.boolean().optional(),
   }),
 });
 
@@ -138,6 +141,9 @@ const buttonCanvasNodeSchema = baseCanvasNodeSchema.extend({
     label: z.string().max(120),
     href: z.string().max(2000),
     style: z.enum(['primary', 'secondary', 'outline', 'ghost', 'link']),
+    className: z.string().max(256).optional(),
+    as: z.enum(['a', 'button']).optional(),
+    rawInlineStyle: z.boolean().optional(),
   }),
 });
 
@@ -149,6 +155,8 @@ const headingCanvasNodeSchema = baseCanvasNodeSchema.extend({
     color: z.string().max(32),
     align: z.enum(['left', 'center', 'right']),
     fontFamily: z.string().max(120).optional(),
+    className: z.string().max(256).optional(),
+    rawInlineStyle: z.boolean().optional(),
   }),
 });
 
@@ -182,6 +190,11 @@ const containerCanvasNodeSchema = baseCanvasNodeSchema.extend({
     layoutMode: z.enum(['absolute', 'flex', 'grid']).default('absolute'),
     flexConfig: flexConfigSchema.optional(),
     gridConfig: gridConfigSchema.optional(),
+    className: z.string().max(256).optional(),
+    as: z.enum(['div', 'section', 'article', 'aside', 'header', 'footer', 'main', 'nav']).optional(),
+    htmlId: z.string().max(120).optional(),
+    dataTone: z.string().max(32).optional(),
+    rawInlineStyle: z.boolean().optional(),
   }),
 });
 

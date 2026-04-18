@@ -1,4 +1,4 @@
-import type { ComponentType } from 'react';
+import type { ComponentType, ReactNode } from 'react';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 
 export type BuilderComponentCategory = 'basic' | 'layout' | 'media' | 'domain' | 'advanced';
@@ -6,6 +6,7 @@ export type BuilderComponentCategory = 'basic' | 'layout' | 'media' | 'domain' |
 export interface BuilderComponentRenderProps {
   node: BuilderCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  children?: ReactNode;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

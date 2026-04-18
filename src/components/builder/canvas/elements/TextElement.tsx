@@ -17,12 +17,30 @@ export default function TextElement({
 }: {
   node: BuilderTextCanvasNode;
 }) {
+  const { className, as } = node.content;
+  const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
+
+  if (className) {
+    return (
+      <Tag
+        className={className}
+        style={{
+          margin: 0,
+          whiteSpace: 'pre-wrap',
+          wordBreak: 'break-word',
+        }}
+      >
+        {node.content.text}
+      </Tag>
+    );
+  }
+
   const fontFamily = node.content.fontFamily
     ? fontFamilyCSS(node.content.fontFamily)
     : 'system-ui, -apple-system, sans-serif';
 
   return (
-    <div
+    <Tag
       style={{
         width: '100%',
         height: '100%',
@@ -46,10 +64,10 @@ export default function TextElement({
         textShadow: buildTextShadow(node.content.textShadow),
         backgroundColor: node.content.backgroundColor || undefined,
         textTransform: (node.content.textTransform as React.CSSProperties['textTransform']) || undefined,
+        margin: 0,
       }}
     >
       {node.content.text}
-    </div>
+    </Tag>
   );
 }
-

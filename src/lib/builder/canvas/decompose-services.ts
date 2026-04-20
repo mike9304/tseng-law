@@ -6,6 +6,7 @@ import {
   HOME_STAGE_WIDTH,
   createHomeButtonNode,
   createHomeContainerNode,
+  createHomeImageNode,
   createHomeTextNode,
 } from './decompose-home-shared';
 
@@ -13,9 +14,9 @@ const SERVICES_ROOT_HEIGHT = 1400;
 
 export const SERVICES_SECTION_ROOT_HEIGHT = SERVICES_ROOT_HEIGHT;
 
-function serviceIconGlyph(index: number): string {
-  const glyphs = ['◫', '▤', '⇄', '⬒', '⬓', '⌂'];
-  return glyphs[index] ?? '•';
+function serviceIconSrc(index: number): string {
+  const clamped = Math.max(0, Math.min(5, index));
+  return `/images/home-services/icon-${clamped}.svg`;
 }
 
 export function createServicesDecomposedNodes(
@@ -168,16 +169,23 @@ export function createServicesDecomposedNodes(
         label: `home services header ${index + 1}`,
         className: 'services-detail-header',
       }),
-      createHomeTextNode({
+      createHomeContainerNode({
         id: `${cardId}-icon`,
         parentId: headerId,
         rect: { x: 0, y: 0, width: 46, height: 46 },
         zIndex: 0,
-        text: serviceIconGlyph(index),
+        label: `home services icon ${index + 1}`,
         className: 'service-icon',
-        as: 'span',
-        color: '#5b496f',
-        fontWeight: 'medium',
+        as: 'div',
+      }),
+      createHomeImageNode({
+        id: `${cardId}-icon-svg`,
+        parentId: `${cardId}-icon`,
+        rect: { x: 11, y: 11, width: 24, height: 24 },
+        zIndex: 0,
+        src: serviceIconSrc(index),
+        alt: item.title,
+        fit: 'contain',
       }),
       createHomeTextNode({
         id: `${cardId}-title`,

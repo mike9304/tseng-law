@@ -48,12 +48,22 @@ export default function LocaleLayout({
       <LocaleSetter locale={locale} />
       <JsonLd data={buildWebsiteJsonLd(locale)} />
       <JsonLd data={buildLegalServiceJsonLd(locale)} />
-      <Header locale={locale} />
+      <div data-legacy-chrome>
+        <Header locale={locale} />
+      </div>
       <main id="main">{children}</main>
-      <Footer locale={locale} />
-      <QuickContactWidget locale={locale} />
-      <ScrollTopButton locale={locale} />
-      <YearEndEventPopup locale={locale} />
+      <div data-legacy-chrome>
+        <Footer locale={locale} />
+      </div>
+      <div data-legacy-chrome>
+        <QuickContactWidget locale={locale} />
+      </div>
+      <div data-legacy-chrome>
+        <ScrollTopButton locale={locale} />
+      </div>
+      <div data-legacy-chrome>
+        <YearEndEventPopup locale={locale} />
+      </div>
     </div>
   );
 }

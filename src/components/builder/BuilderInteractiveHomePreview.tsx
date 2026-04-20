@@ -9,6 +9,7 @@ import {
   type WheelEvent as ReactWheelEvent,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -41,6 +42,7 @@ import {
   setBuilderDocumentDatasetLimit,
   setBuilderDocumentSectionHidden,
   setBuilderDocumentSectionLocked,
+  syncBuilderDocumentSectionContentGroupMeasuredBounds,
   updateBuilderDocumentSectionContentGroupBounds,
   updateBuilderDocumentSectionVisibility,
   updateBuilderDocumentSectionLayout,
@@ -361,6 +363,28 @@ type BuilderCanvasPointerDragState = {
   previewHeight: number;
 };
 
+type BuilderCanvasContentGroupDragState = {
+  sectionId: string;
+  sectionKey: BuilderSectionKey;
+  contentGroupId: string;
+  label: string;
+  originClientX: number;
+  originClientY: number;
+  originBounds: BuilderSceneNodeBounds;
+  previewBounds: BuilderSceneNodeBounds;
+};
+
+type BuilderCanvasContentGroupResizeState = {
+  sectionId: string;
+  sectionKey: BuilderSectionKey;
+  contentGroupId: string;
+  label: string;
+  originClientX: number;
+  originClientY: number;
+  originBounds: BuilderSceneNodeBounds;
+  previewBounds: BuilderSceneNodeBounds;
+};
+
 type BuilderCanvasPanState = {
   pointerId: number;
   originClientX: number;
@@ -644,6 +668,10 @@ export default function BuilderInteractiveHomePreview({
   const [contentGroupRects, setContentGroupRects] = useState<Record<string, BuilderCanvasContentGroupRect>>({});
   const [canvasPointerDragState, setCanvasPointerDragState] =
     useState<BuilderCanvasPointerDragState | null>(null);
+  const [contentGroupDragState, setContentGroupDragState] =
+    useState<BuilderCanvasContentGroupDragState | null>(null);
+  const [contentGroupResizeState, setContentGroupResizeState] =
+    useState<BuilderCanvasContentGroupResizeState | null>(null);
   const [canvasPanState, setCanvasPanState] = useState<BuilderCanvasPanState | null>(null);
   const [isSpacePressed, setIsSpacePressed] = useState(false);
 
@@ -825,6 +853,7 @@ export default function BuilderInteractiveHomePreview({
   const zoomTooLowForPrecision = zoomLevel < MIN_PRECISE_ZOOM_LEVEL;
   const canZoomOut = zoomLevel > ZOOM_OPTIONS[0];
   const canZoomIn = zoomLevel < ZOOM_OPTIONS[ZOOM_OPTIONS.length - 1];
+  const zoomOptionIndex = Math.max(ZOOM_OPTIONS.indexOf(zoomLevel), 0);
   const canShowDirectManipulationScaffolds = !zoomTooLowForPrecision;
   const canvasZoomStageStyle = useMemo<CSSProperties | undefined>(() => {
     if (canvasZoomMetrics.width <= 0 || canvasZoomMetrics.height <= 0) {
@@ -946,6 +975,17 @@ export default function BuilderInteractiveHomePreview({
       serverValidationPassed,
     ]
   );
+  const selectedTargetSummaryLabel =
+    selection.surfaceId || selection.contentGroupId
+      ? truncateCopy(selection.targetLabel, 28)
+      : 'section frame';
+  const selectedSceneEntryLabel =
+    selection.targetKind === 'group' && selection.contentGroupId
+      ? getPersistedContentGroupSource(pageDocument, selection.sectionKey, selection.contentGroupId) ===
+        'page-scene'
+        ? 'Scene authority'
+        : 'Scene bridge'
+      : null;
 
   const selectSingleTarget = useCallback((nextSelection: BuilderSelectionState) => {
     setSelection(nextSelection);
@@ -1008,6 +1048,25 @@ export default function BuilderInteractiveHomePreview({
   const resetZoomLevel = useCallback(() => {
     setZoomLevel(DEFAULT_ZOOM_LEVEL);
   }, []);
+
+  const fitCanvasZoomLevel = useCallback(() => {
+    const viewportNode = canvasViewportRef.current;
+    if (!viewportNode || canvasZoomMetrics.width <= 0 || canvasZoomMetrics.height <= 0) {
+      return;
+    }
+
+    const availableWidth = Math.max(viewportNode.clientWidth - 56, 0);
+    const availableHeight = Math.max(viewportNode.clientHeight - 56, 0);
+    if (!availableWidth || !availableHeight) {
+      return;
+    }
+
+    const targetZoom = Math.min(
+      (availableWidth / canvasZoomMetrics.width) * 100,
+      (availableHeight / canvasZoomMetrics.height) * 100
+    );
+    setZoomLevel(resolveBestFittingZoomLevel(targetZoom));
+  }, [canvasZoomMetrics.height, canvasZoomMetrics.width]);
 
   const handleSectionSelectionIntent = useCallback(
     (
@@ -1233,6 +1292,256 @@ export default function BuilderInteractiveHomePreview({
       syncHistoryMeta(snapshot.label);
     },
     [applyDocumentState, syncHistoryMeta]
+  );
+
+  const commitContentGroupBounds = useCallback(
+    (
+      sectionKey: BuilderSectionKey,
+      contentGroupId: string,
+      nextBounds: BuilderSceneNodeBounds,
+      label: string
+    ) => {
+      if (blockLockedSectionAction([sectionKey], 'moving this content group')) {
+        return false;
+      }
+
+      const nextDocument = updateBuilderDocumentSectionContentGroupBounds(
+        pageDocument,
+        sectionKey,
+        contentGroupId,
+        nextBounds,
+        viewportMode
+      );
+
+      recordWorkspaceSnapshot(
+        buildWorkspaceSnapshot(
+          nextDocument,
+          currentDocumentState,
+          createContentGroupSelection(
+            sectionKey,
+            sectionIdByKey[sectionKey] ?? selection.sectionId,
+            contentGroupId,
+            selection.targetKind === 'group' && selection.contentGroupId === contentGroupId
+              ? selection.targetLabel
+              : selectedContentGroup?.label ?? 'Content group'
+          ),
+          label
+        )
+      );
+      return true;
+    },
+    [
+      blockLockedSectionAction,
+      buildWorkspaceSnapshot,
+      currentDocumentState,
+      pageDocument,
+      recordWorkspaceSnapshot,
+      sectionIdByKey,
+      selectedContentGroup?.label,
+      selection.contentGroupId,
+      selection.sectionId,
+      selection.targetKind,
+      selection.targetLabel,
+      viewportMode,
+    ]
+  );
+
+  const nudgeSelectedContentGroup = useCallback(
+    (deltaX: number, deltaY: number) => {
+      if (selection.targetKind !== 'group' || !selection.contentGroupId) {
+        return;
+      }
+
+      const section = pageDocument.root.children.find(
+        (candidate) => candidate.sectionKey === selection.sectionKey
+      );
+      if (!section) {
+        return;
+      }
+
+      const currentBounds = getDisplayContentGroupBounds(
+        pageDocument,
+        section,
+        selection.contentGroupId,
+        viewportMode
+      );
+      if (!currentBounds) {
+        setEditorGuardNotice('Content-group geometry is still resolving. Try again in a moment.');
+        return;
+      }
+
+      const sectionRect = sectionCanvasRects[selection.sectionId];
+      const sectionWidth = sectionRect ? sectionRect.width / Math.max(zoomScale, 0.0001) : null;
+      const sectionHeight = sectionRect ? sectionRect.height / Math.max(zoomScale, 0.0001) : null;
+      const nextBounds = clampContentGroupBoundsToSection(
+        {
+          ...currentBounds,
+          x: roundSceneBoundsValue(currentBounds.x + deltaX),
+          y: roundSceneBoundsValue(currentBounds.y + deltaY),
+        },
+        sectionWidth,
+        sectionHeight
+      );
+
+      commitContentGroupBounds(
+        selection.sectionKey,
+        selection.contentGroupId,
+        nextBounds,
+        deltaX === 0 ? 'Nudge content group vertically' : 'Nudge content group'
+      );
+    },
+    [
+      commitContentGroupBounds,
+      pageDocument,
+      sectionCanvasRects,
+      selection.contentGroupId,
+      selection.sectionId,
+      selection.sectionKey,
+      selection.targetKind,
+      viewportMode,
+      zoomScale,
+    ]
+  );
+
+  const resizeSelectedContentGroup = useCallback(
+    (deltaWidth: number, deltaHeight: number) => {
+      if (selection.targetKind !== 'group' || !selection.contentGroupId) {
+        return;
+      }
+
+      const section = pageDocument.root.children.find(
+        (candidate) => candidate.sectionKey === selection.sectionKey
+      );
+      if (!section) {
+        return;
+      }
+
+      const currentBounds = getDisplayContentGroupBounds(
+        pageDocument,
+        section,
+        selection.contentGroupId,
+        viewportMode
+      );
+      if (!currentBounds) {
+        setEditorGuardNotice('Content-group geometry is still resolving. Try resizing again in a moment.');
+        return;
+      }
+
+      const sectionRect = sectionCanvasRects[selection.sectionId];
+      const sectionWidth = sectionRect ? sectionRect.width / Math.max(zoomScale, 0.0001) : null;
+      const sectionHeight = sectionRect ? sectionRect.height / Math.max(zoomScale, 0.0001) : null;
+      const nextBounds = clampContentGroupResizeBoundsToSection(
+        {
+          ...currentBounds,
+          width: roundSceneBoundsValue(currentBounds.width + deltaWidth),
+          height: roundSceneBoundsValue(currentBounds.height + deltaHeight),
+        },
+        sectionWidth,
+        sectionHeight
+      );
+
+      commitContentGroupBounds(
+        selection.sectionKey,
+        selection.contentGroupId,
+        nextBounds,
+        deltaWidth === 0 ? 'Resize content group vertically' : 'Resize content group'
+      );
+    },
+    [
+      commitContentGroupBounds,
+      pageDocument,
+      sectionCanvasRects,
+      selection.contentGroupId,
+      selection.sectionId,
+      selection.sectionKey,
+      selection.targetKind,
+      viewportMode,
+      zoomScale,
+    ]
+  );
+
+  const startCanvasContentGroupPointerDrag = useCallback(
+    (event: ReactPointerEvent<HTMLButtonElement>, rect: BuilderCanvasContentGroupRect) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (blockLockedSectionAction([rect.sectionKey], 'moving this content group')) {
+        return;
+      }
+
+      const section = pageDocument.root.children.find(
+        (candidate) => candidate.sectionKey === rect.sectionKey
+      );
+      if (!section) {
+        return;
+      }
+
+      const storedBounds =
+        getDisplayContentGroupBounds(pageDocument, section, rect.contentGroupId, viewportMode) ?? {
+          x: roundSceneBoundsValue(rect.x / Math.max(zoomScale, 0.0001)),
+          y: roundSceneBoundsValue(rect.y / Math.max(zoomScale, 0.0001)),
+          width: roundSceneBoundsValue(rect.width / Math.max(zoomScale, 0.0001)),
+          height: roundSceneBoundsValue(rect.height / Math.max(zoomScale, 0.0001)),
+        };
+
+      selectSingleTarget(
+        createContentGroupSelection(rect.sectionKey, rect.sectionId, rect.contentGroupId, rect.label)
+      );
+      setContentGroupResizeState(null);
+      setContentGroupDragState({
+        sectionId: rect.sectionId,
+        sectionKey: rect.sectionKey,
+        contentGroupId: rect.contentGroupId,
+        label: rect.label,
+        originClientX: event.clientX,
+        originClientY: event.clientY,
+        originBounds: storedBounds,
+        previewBounds: storedBounds,
+      });
+    },
+    [blockLockedSectionAction, pageDocument, selectSingleTarget, viewportMode, zoomScale]
+  );
+
+  const startCanvasContentGroupPointerResize = useCallback(
+    (event: ReactPointerEvent<HTMLButtonElement>, rect: BuilderCanvasContentGroupRect) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (blockLockedSectionAction([rect.sectionKey], 'resizing this content group')) {
+        return;
+      }
+
+      const section = pageDocument.root.children.find(
+        (candidate) => candidate.sectionKey === rect.sectionKey
+      );
+      if (!section) {
+        return;
+      }
+
+      const storedBounds =
+        getDisplayContentGroupBounds(pageDocument, section, rect.contentGroupId, viewportMode) ?? {
+          x: roundSceneBoundsValue(rect.x / Math.max(zoomScale, 0.0001)),
+          y: roundSceneBoundsValue(rect.y / Math.max(zoomScale, 0.0001)),
+          width: roundSceneBoundsValue(rect.width / Math.max(zoomScale, 0.0001)),
+          height: roundSceneBoundsValue(rect.height / Math.max(zoomScale, 0.0001)),
+        };
+
+      selectSingleTarget(
+        createContentGroupSelection(rect.sectionKey, rect.sectionId, rect.contentGroupId, rect.label)
+      );
+      setContentGroupDragState(null);
+      setContentGroupResizeState({
+        sectionId: rect.sectionId,
+        sectionKey: rect.sectionKey,
+        contentGroupId: rect.contentGroupId,
+        label: rect.label,
+        originClientX: event.clientX,
+        originClientY: event.clientY,
+        originBounds: storedBounds,
+        previewBounds: storedBounds,
+      });
+    },
+    [blockLockedSectionAction, pageDocument, selectSingleTarget, viewportMode, zoomScale]
   );
 
   const syncServerSnapshotMeta = useCallback(
@@ -3397,6 +3706,120 @@ export default function BuilderInteractiveHomePreview({
   }, [canvasPointerDragState, moveSectionToIndex, resolveCanvasSectionDropTarget]);
 
   useEffect(() => {
+    if (!contentGroupDragState) {
+      return;
+    }
+
+    const handlePointerMove = (event: PointerEvent) => {
+      const sectionRect = sectionCanvasRects[contentGroupDragState.sectionId];
+      const sectionWidth = sectionRect ? sectionRect.width / Math.max(zoomScale, 0.0001) : null;
+      const sectionHeight = sectionRect ? sectionRect.height / Math.max(zoomScale, 0.0001) : null;
+      const deltaX = (event.clientX - contentGroupDragState.originClientX) / Math.max(zoomScale, 0.0001);
+      const deltaY = (event.clientY - contentGroupDragState.originClientY) / Math.max(zoomScale, 0.0001);
+
+      const nextBounds = clampContentGroupBoundsToSection(
+        {
+          ...contentGroupDragState.originBounds,
+          x: roundSceneBoundsValue(contentGroupDragState.originBounds.x + deltaX),
+          y: roundSceneBoundsValue(contentGroupDragState.originBounds.y + deltaY),
+        },
+        sectionWidth,
+        sectionHeight
+      );
+
+      setContentGroupDragState((current) =>
+        current
+          ? {
+              ...current,
+              previewBounds: nextBounds,
+            }
+          : current
+      );
+    };
+
+    const handlePointerUp = () => {
+      const nextBounds = contentGroupDragState.previewBounds;
+      if (!areSceneBoundsEqual(contentGroupDragState.originBounds, nextBounds)) {
+        commitContentGroupBounds(
+          contentGroupDragState.sectionKey,
+          contentGroupDragState.contentGroupId,
+          nextBounds,
+          'Move content group'
+        );
+      }
+
+      setContentGroupDragState(null);
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+    };
+
+    window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('pointerup', handlePointerUp);
+
+    return () => {
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+    };
+  }, [commitContentGroupBounds, contentGroupDragState, sectionCanvasRects, zoomScale]);
+
+  useEffect(() => {
+    if (!contentGroupResizeState) {
+      return;
+    }
+
+    const handlePointerMove = (event: PointerEvent) => {
+      const sectionRect = sectionCanvasRects[contentGroupResizeState.sectionId];
+      const sectionWidth = sectionRect ? sectionRect.width / Math.max(zoomScale, 0.0001) : null;
+      const sectionHeight = sectionRect ? sectionRect.height / Math.max(zoomScale, 0.0001) : null;
+      const deltaX = (event.clientX - contentGroupResizeState.originClientX) / Math.max(zoomScale, 0.0001);
+      const deltaY = (event.clientY - contentGroupResizeState.originClientY) / Math.max(zoomScale, 0.0001);
+
+      const nextBounds = clampContentGroupResizeBoundsToSection(
+        {
+          ...contentGroupResizeState.originBounds,
+          width: roundSceneBoundsValue(contentGroupResizeState.originBounds.width + deltaX),
+          height: roundSceneBoundsValue(contentGroupResizeState.originBounds.height + deltaY),
+        },
+        sectionWidth,
+        sectionHeight
+      );
+
+      setContentGroupResizeState((current) =>
+        current
+          ? {
+              ...current,
+              previewBounds: nextBounds,
+            }
+          : current
+      );
+    };
+
+    const handlePointerUp = () => {
+      const nextBounds = contentGroupResizeState.previewBounds;
+      if (!areSceneBoundsEqual(contentGroupResizeState.originBounds, nextBounds)) {
+        commitContentGroupBounds(
+          contentGroupResizeState.sectionKey,
+          contentGroupResizeState.contentGroupId,
+          nextBounds,
+          'Resize content group'
+        );
+      }
+
+      setContentGroupResizeState(null);
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+    };
+
+    window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('pointerup', handlePointerUp);
+
+    return () => {
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+    };
+  }, [commitContentGroupBounds, contentGroupResizeState, sectionCanvasRects, zoomScale]);
+
+  useEffect(() => {
     setImageUploadError(null);
     setImageUploadNotice(null);
   }, [selection.sectionId, selection.surfaceId, selection.targetKind]);
@@ -3559,14 +3982,26 @@ export default function BuilderInteractiveHomePreview({
           label: group.label,
         };
 
-        const storedBounds = getStoredContentGroupBounds(
+        const persistedSource = getPersistedContentGroupSource(
+          nextDocument,
+          section.sectionKey,
+          group.contentGroupId
+        );
+        const storedMeasuredBounds = getMeasuredContentGroupBounds(
           nextDocument,
           section,
           group.contentGroupId,
           viewportMode
         );
-        if (!areSceneBoundsEqual(storedBounds, persistedBounds)) {
-          nextDocument = updateBuilderDocumentSectionContentGroupBounds(
+        if (
+          contentGroupDragState?.contentGroupId === group.contentGroupId ||
+          contentGroupResizeState?.contentGroupId === group.contentGroupId ||
+          persistedSource === 'page-scene'
+        ) {
+          continue;
+        }
+        if (!areSceneBoundsEqual(storedMeasuredBounds, persistedBounds)) {
+          nextDocument = syncBuilderDocumentSectionContentGroupMeasuredBounds(
             nextDocument,
             section.sectionKey,
             group.contentGroupId,
@@ -3585,7 +4020,75 @@ export default function BuilderInteractiveHomePreview({
     if (documentChanged) {
       setPageDocument(nextDocument);
     }
-  }, [contentGroupRects, contentGroupsBySection, pageDocument, sectionCanvasRects, viewportMode, zoomScale]);
+  }, [
+    contentGroupDragState?.contentGroupId,
+    contentGroupResizeState?.contentGroupId,
+    contentGroupRects,
+    contentGroupsBySection,
+    pageDocument,
+    sectionCanvasRects,
+    viewportMode,
+    zoomScale,
+  ]);
+
+  useLayoutEffect(() => {
+    for (const section of pageDocument.root.children) {
+      const surface = surfaceRefs.current[section.id];
+      const contentGroups = contentGroupsBySection[section.id] ?? [];
+
+      if (!surface || !contentGroups.length) {
+        continue;
+      }
+
+      for (const group of contentGroups) {
+        const groupElement = surface.querySelector<HTMLElement>(
+          `[data-builder-content-group-id="${group.contentGroupId}"]`
+        );
+        if (!groupElement) {
+          continue;
+        }
+
+        const displayBounds =
+          contentGroupDragState?.contentGroupId === group.contentGroupId
+            ? contentGroupDragState.previewBounds
+            : contentGroupResizeState?.contentGroupId === group.contentGroupId
+              ? contentGroupResizeState.previewBounds
+              : getDisplayContentGroupBounds(pageDocument, section, group.contentGroupId, viewportMode);
+
+        if (!displayBounds) {
+          groupElement.style.translate = '';
+          groupElement.style.width = '';
+          groupElement.style.height = '';
+          delete groupElement.dataset.builderSceneOriginX;
+          delete groupElement.dataset.builderSceneOriginY;
+          continue;
+        }
+
+        const measuredBounds = getMeasuredContentGroupBounds(
+          pageDocument,
+          section,
+          group.contentGroupId,
+          viewportMode
+        );
+        const originBounds =
+          measuredBounds ??
+          (() => {
+            const measuredOrigin = measureContentGroupBounds(surface, groupElement, zoomScale);
+            groupElement.dataset.builderSceneOriginX = String(measuredOrigin.x);
+            groupElement.dataset.builderSceneOriginY = String(measuredOrigin.y);
+            return measuredOrigin;
+          })();
+        const originX = originBounds.x;
+        const originY = originBounds.y;
+
+        const deltaX = roundSceneBoundsValue(displayBounds.x - originX);
+        const deltaY = roundSceneBoundsValue(displayBounds.y - originY);
+        groupElement.style.translate = `${deltaX}px ${deltaY}px`;
+        groupElement.style.width = `${displayBounds.width}px`;
+        groupElement.style.height = `${displayBounds.height}px`;
+      }
+    }
+  }, [contentGroupDragState, contentGroupResizeState, contentGroupsBySection, pageDocument, viewportMode, zoomScale]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -3658,6 +4161,31 @@ export default function BuilderInteractiveHomePreview({
       if (modKey && key === '0') {
         event.preventDefault();
         resetZoomLevel();
+        return;
+      }
+
+      if (selection.targetKind === 'group' && selection.contentGroupId) {
+        const nudgeAmount = event.shiftKey ? 10 : 1;
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          nudgeSelectedContentGroup(-nudgeAmount, 0);
+          return;
+        }
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          nudgeSelectedContentGroup(nudgeAmount, 0);
+          return;
+        }
+        if (event.key === 'ArrowUp') {
+          event.preventDefault();
+          nudgeSelectedContentGroup(0, -nudgeAmount);
+          return;
+        }
+        if (event.key === 'ArrowDown') {
+          event.preventDefault();
+          nudgeSelectedContentGroup(0, nudgeAmount);
+          return;
+        }
       }
     };
 
@@ -3673,8 +4201,11 @@ export default function BuilderInteractiveHomePreview({
     saveServerDraft,
     selectAllSections,
     selectSingleTarget,
+    selection.contentGroupId,
     selection.sectionId,
     selection.sectionKey,
+    selection.targetKind,
+    nudgeSelectedContentGroup,
     undoWorkspaceChange,
   ]);
 
@@ -3754,12 +4285,10 @@ export default function BuilderInteractiveHomePreview({
         Shared published {serverPublishedMeta.persisted ? `v${serverPublishedMeta.revision}` : 'empty'}
       </span>
       <span className="builder-preview-status-chip">
-        Selection{' '}
-        {selection.surfaceId || selection.contentGroupId
-          ? truncateCopy(selection.targetLabel, 28)
-          : 'section frame'}
+        Selection {selectedTargetSummaryLabel}
       </span>
       <span className="builder-preview-status-chip">{selection.sectionKey}</span>
+      <span className="builder-preview-status-chip">{selectedSurfaceContract.label}</span>
       {hasMultiSectionSelection ? (
         <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
       ) : null}
@@ -3793,16 +4322,6 @@ export default function BuilderInteractiveHomePreview({
 
   const embeddedToolbarStatus = (
     <>
-      <span className="builder-preview-status-chip builder-preview-status-chip--primary">
-        Selection{' '}
-        {selection.surfaceId || selection.contentGroupId
-          ? truncateCopy(selection.targetLabel, 28)
-          : 'section frame'}
-      </span>
-      <span className="builder-preview-status-chip">{selection.sectionKey}</span>
-      {hasMultiSectionSelection ? (
-        <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
-      ) : null}
       <span className="builder-preview-status-chip">
         Draft {serverDraftMeta.persisted ? `v${serverDraftMeta.revision}` : 'empty'}
       </span>
@@ -3822,6 +4341,33 @@ export default function BuilderInteractiveHomePreview({
             : 'Checks needed'}
       </span>
       <span className="builder-preview-status-chip">{historyMeta.label ?? 'No workspace changes yet'}</span>
+    </>
+  );
+  const embeddedSelectionStatus = (
+    <>
+      <span className="builder-preview-status-chip builder-preview-status-chip--primary">
+        Selection {selectedTargetSummaryLabel}
+      </span>
+      <span className="builder-preview-status-chip">{selection.sectionKey}</span>
+      <span className="builder-preview-status-chip">{selectedSurfaceContract.label}</span>
+      {selectedSceneEntryLabel ? (
+        <span className="builder-preview-status-chip">{selectedSceneEntryLabel}</span>
+      ) : null}
+      {hasMultiSectionSelection ? (
+        <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
+      ) : null}
+      {selectionIncludesLockedSection ? (
+        <span className="builder-preview-status-chip builder-preview-status-chip--danger">
+          Locked {selectedLockedSectionCount}
+        </span>
+      ) : null}
+      <span className="builder-preview-status-chip">Scene {browserSceneSummary.sceneNodeCount}</span>
+      <span className="builder-preview-status-chip">
+        Authority {browserSceneSummary.sceneAuthorityNodeCount}
+      </span>
+      <span className="builder-preview-status-chip builder-preview-status-chip--warning">
+        Publish truth: section snapshot
+      </span>
     </>
   );
 
@@ -3916,8 +4462,21 @@ export default function BuilderInteractiveHomePreview({
         </button>
         <div className="builder-preview-zoom-copy">
           <strong>{zoomLevel}%</strong>
-          <small>Alt+wheel · Space+drag</small>
+          <small>Alt+wheel · Space+drag · Fit</small>
         </div>
+        <input
+          className="builder-preview-zoom-slider"
+          type="range"
+          min={0}
+          max={ZOOM_OPTIONS.length - 1}
+          step={1}
+          value={zoomOptionIndex}
+          onChange={(event) => {
+            const nextOption = ZOOM_OPTIONS[Number(event.target.value)] ?? DEFAULT_ZOOM_LEVEL;
+            setExactZoomLevel(nextOption);
+          }}
+          aria-label="Canvas zoom preset"
+        />
         <button
           type="button"
           className="builder-preview-zoom-btn"
@@ -3933,6 +4492,9 @@ export default function BuilderInteractiveHomePreview({
           disabled={zoomLevel === DEFAULT_ZOOM_LEVEL}
         >
           100%
+        </button>
+        <button type="button" className="builder-action-btn" onClick={fitCanvasZoomLevel}>
+          Fit
         </button>
       </div>
       <button
@@ -4255,8 +4817,15 @@ export default function BuilderInteractiveHomePreview({
         <div className="builder-preview-canvas">
           {presentation === 'embedded' ? (
             <div className="builder-preview-canvas-toolbar">
-              <div className="builder-preview-canvas-toolbar-group">{embeddedToolbarStatus}</div>
-              <div className="builder-preview-canvas-toolbar-group">{sharedRuntimeControls}</div>
+              <div className="builder-preview-canvas-toolbar-group builder-preview-canvas-toolbar-group--selection">
+                {embeddedSelectionStatus}
+              </div>
+              <div className="builder-preview-canvas-toolbar-group builder-preview-canvas-toolbar-group--status">
+                {embeddedToolbarStatus}
+              </div>
+              <div className="builder-preview-canvas-toolbar-group builder-preview-canvas-toolbar-group--controls">
+                {sharedRuntimeControls}
+              </div>
             </div>
           ) : null}
           <div className="builder-preview-canvas-note">
@@ -4788,6 +5357,24 @@ export default function BuilderInteractiveHomePreview({
                       }
 
                       const isSelectedGroup = selection.contentGroupId === rect.contentGroupId;
+                      const renderedRect =
+                        contentGroupDragState?.contentGroupId === rect.contentGroupId
+                          ? {
+                              ...rect,
+                              x: contentGroupDragState.previewBounds.x * zoomScale,
+                              y: contentGroupDragState.previewBounds.y * zoomScale,
+                              width: contentGroupDragState.previewBounds.width * zoomScale,
+                              height: contentGroupDragState.previewBounds.height * zoomScale,
+                            }
+                          : contentGroupResizeState?.contentGroupId === rect.contentGroupId
+                            ? {
+                                ...rect,
+                                x: contentGroupResizeState.previewBounds.x * zoomScale,
+                                y: contentGroupResizeState.previewBounds.y * zoomScale,
+                                width: contentGroupResizeState.previewBounds.width * zoomScale,
+                                height: contentGroupResizeState.previewBounds.height * zoomScale,
+                              }
+                          : rect;
 
                       return (
                         <div
@@ -4796,31 +5383,118 @@ export default function BuilderInteractiveHomePreview({
                             isSelectedGroup ? ' is-selected' : ''
                           }`}
                           style={{
-                            top: `${parentSectionRect.top + rect.y}px`,
-                            left: `${parentSectionRect.left + rect.x}px`,
-                            width: `${rect.width}px`,
-                            height: `${rect.height}px`,
+                            top: `${parentSectionRect.top + renderedRect.y}px`,
+                            left: `${parentSectionRect.left + renderedRect.x}px`,
+                            width: `${renderedRect.width}px`,
+                            height: `${renderedRect.height}px`,
                           }}
                         >
-                          <button
-                            type="button"
-                            className={`builder-preview-content-group-chip${
-                              isSelectedGroup ? ' is-selected' : ''
-                            }`}
-                            onClick={(event) => {
-                              event.stopPropagation();
-                              selectSingleTarget(
-                                createContentGroupSelection(
-                                  rect.sectionKey,
-                                  rect.sectionId,
-                                  rect.contentGroupId,
-                                  rect.label
-                                )
-                              );
-                            }}
-                          >
-                            {rect.label}
-                          </button>
+                          {isSelectedGroup ? (
+                            <>
+                              <button
+                                type="button"
+                                className={`builder-preview-content-group-surface${
+                                  contentGroupDragState?.contentGroupId === rect.contentGroupId ? ' is-dragging' : ''
+                                }`}
+                                onPointerDown={(event) => startCanvasContentGroupPointerDrag(event, rect)}
+                                aria-label={`Drag ${rect.label} on canvas`}
+                              />
+                              <div className="builder-preview-canvas-selection-bar builder-preview-canvas-selection-bar--group">
+                                <button
+                                  type="button"
+                                  className="builder-preview-canvas-drag-handle"
+                                  onPointerDown={(event) =>
+                                    startCanvasContentGroupPointerDrag(event, rect)
+                                  }
+                                  aria-label={`Drag ${rect.label}`}
+                                >
+                                  Drag
+                                </button>
+                                <div className="builder-preview-canvas-selection-meta">
+                                  <strong>{rect.label}</strong>
+                                  <span>Scene-backed move / size</span>
+                                </div>
+                                <div className="builder-preview-canvas-group-actions">
+                                  <button
+                                    type="button"
+                                    className="builder-preview-canvas-group-action"
+                                    onClick={() => nudgeSelectedContentGroup(-10, 0)}
+                                    aria-label={`Nudge ${rect.label} left`}
+                                  >
+                                    ←
+                                  </button>
+                                  <button
+                                    type="button"
+                                    className="builder-preview-canvas-group-action"
+                                    onClick={() => nudgeSelectedContentGroup(10, 0)}
+                                    aria-label={`Nudge ${rect.label} right`}
+                                  >
+                                    →
+                                  </button>
+                                  <button
+                                    type="button"
+                                    className="builder-preview-canvas-group-action"
+                                    onClick={() => resizeSelectedContentGroup(-24, 0)}
+                                    aria-label={`Make ${rect.label} narrower`}
+                                  >
+                                    W-
+                                  </button>
+                                  <button
+                                    type="button"
+                                    className="builder-preview-canvas-group-action"
+                                    onClick={() => resizeSelectedContentGroup(24, 0)}
+                                    aria-label={`Make ${rect.label} wider`}
+                                  >
+                                    W+
+                                  </button>
+                                  <button
+                                    type="button"
+                                    className="builder-preview-canvas-group-action"
+                                    onClick={() => resizeSelectedContentGroup(0, -24)}
+                                    aria-label={`Make ${rect.label} shorter`}
+                                  >
+                                    H-
+                                  </button>
+                                  <button
+                                    type="button"
+                                    className="builder-preview-canvas-group-action"
+                                    onClick={() => resizeSelectedContentGroup(0, 24)}
+                                    aria-label={`Make ${rect.label} taller`}
+                                  >
+                                    H+
+                                  </button>
+                                </div>
+                              </div>
+                              <button
+                                type="button"
+                                className="builder-preview-canvas-resize-handle"
+                                onPointerDown={(event) =>
+                                  startCanvasContentGroupPointerResize(event, rect)
+                                }
+                                aria-label={`Resize ${rect.label}`}
+                              />
+                            </>
+                          ) : (
+                            <button
+                              type="button"
+                              className={`builder-preview-content-group-chip${
+                                isSelectedGroup ? ' is-selected' : ''
+                              }`}
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                selectSingleTarget(
+                                  createContentGroupSelection(
+                                    rect.sectionKey,
+                                    rect.sectionId,
+                                    rect.contentGroupId,
+                                    rect.label
+                                  )
+                                );
+                              }}
+                            >
+                              {rect.label}
+                            </button>
+                          )}
                         </div>
                       );
                     })}
@@ -4873,18 +5547,7 @@ export default function BuilderInteractiveHomePreview({
                 </span>
               </div>
               <div className="builder-preview-state-summary-row">
-                <span className="builder-preview-status-chip">Selected {selection.sectionKey}</span>
-                <span className="builder-preview-status-chip">
-                  {selection.surfaceId ? truncateCopy(selection.targetLabel, 28) : 'section frame'}
-                </span>
-                {hasMultiSectionSelection ? (
-                  <span className="builder-preview-status-chip">Sections {selectedSections.length}</span>
-                ) : null}
-                {selectionIncludesLockedSection ? (
-                  <span className="builder-preview-status-chip builder-preview-status-chip--danger">
-                    Locked {selectedLockedSectionCount}
-                  </span>
-                ) : null}
+                <span className="builder-preview-status-chip">Viewport {getViewportLabel(viewportMode)}</span>
                 <span className="builder-preview-status-chip">
                   History {historyMeta.length ? `${historyMeta.cursor + 1}/${historyMeta.length}` : '0/0'}
                 </span>
@@ -4893,6 +5556,9 @@ export default function BuilderInteractiveHomePreview({
                 </span>
                 <span className="builder-preview-status-chip">
                   Authority {browserSceneSummary.sceneAuthorityNodeCount}
+                </span>
+                <span className="builder-preview-status-chip builder-preview-status-chip--warning">
+                  Publish truth: section snapshot
                 </span>
                 <span
                   className={`builder-preview-status-chip${
@@ -7296,37 +7962,139 @@ function roundSceneBoundsValue(value: number) {
   return Math.round(value * 100) / 100;
 }
 
-function getStoredContentGroupBounds(
+function clampContentGroupBoundsToSection(
+  bounds: BuilderSceneNodeBounds,
+  sectionWidth: number | null,
+  sectionHeight: number | null
+): BuilderSceneNodeBounds {
+  const maxX =
+    typeof sectionWidth === 'number' ? Math.max(0, sectionWidth - bounds.width) : bounds.x;
+  const maxY =
+    typeof sectionHeight === 'number' ? Math.max(0, sectionHeight - bounds.height) : bounds.y;
+
+  return {
+    ...bounds,
+    x: roundSceneBoundsValue(
+      typeof sectionWidth === 'number' ? Math.min(Math.max(bounds.x, 0), maxX) : bounds.x
+    ),
+    y: roundSceneBoundsValue(
+      typeof sectionHeight === 'number' ? Math.min(Math.max(bounds.y, 0), maxY) : bounds.y
+    ),
+  };
+}
+
+function clampContentGroupResizeBoundsToSection(
+  bounds: BuilderSceneNodeBounds,
+  sectionWidth: number | null,
+  sectionHeight: number | null
+): BuilderSceneNodeBounds {
+  const width = roundSceneBoundsValue(Math.max(48, bounds.width));
+  const height = roundSceneBoundsValue(Math.max(48, bounds.height));
+  const maxWidth =
+    typeof sectionWidth === 'number' ? Math.max(48, sectionWidth - bounds.x) : width;
+  const maxHeight =
+    typeof sectionHeight === 'number' ? Math.max(48, sectionHeight - bounds.y) : height;
+
+  return {
+    ...bounds,
+    width: typeof sectionWidth === 'number' ? Math.min(width, maxWidth) : width,
+    height: typeof sectionHeight === 'number' ? Math.min(height, maxHeight) : height,
+  };
+}
+
+function getDisplayContentGroupBounds(
   document: BuilderPageDocument,
   section: BuilderSectionNode,
   contentGroupId: string,
   viewport: BuilderViewportMode
 ) {
+  const persistedNode = document.scene?.nodes?.find(
+    (candidate) =>
+      candidate.nodeKind === 'content-group' &&
+      candidate.sectionKey === section.sectionKey &&
+      candidate.nodeId === contentGroupId
+  );
+  if (persistedNode) {
+    if (persistedNode.source === 'page-scene') {
+      return (
+        resolveViewportSceneBounds(persistedNode.bounds, persistedNode.overrides, viewport) ??
+        resolveViewportSceneBounds(
+          persistedNode.measuredBounds,
+          persistedNode.measuredOverrides,
+          viewport
+        )
+      );
+    }
+
+    return (
+      resolveViewportSceneBounds(
+        persistedNode.measuredBounds,
+        persistedNode.measuredOverrides,
+        viewport
+      ) ??
+      resolveViewportSceneBounds(persistedNode.bounds, persistedNode.overrides, viewport)
+    );
+  }
+
   const group =
-    document.scene?.nodes?.find(
-      (candidate) =>
-        candidate.nodeKind === 'content-group' &&
-        candidate.sectionKey === section.sectionKey &&
-        candidate.nodeId === contentGroupId
-    ) ??
     section.props?.scene?.groups?.find((candidate) => candidate.nodeId === contentGroupId);
   if (!group) {
     return undefined;
   }
 
+  return resolveViewportSceneBounds(
+    group.bounds ?? group.measuredBounds,
+    group.overrides ?? group.measuredOverrides,
+    viewport
+  );
+}
+
+function getMeasuredContentGroupBounds(
+  document: BuilderPageDocument,
+  section: BuilderSectionNode,
+  contentGroupId: string,
+  viewport: BuilderViewportMode
+) {
+  const persistedNode = document.scene?.nodes?.find(
+    (candidate) =>
+      candidate.nodeKind === 'content-group' &&
+      candidate.sectionKey === section.sectionKey &&
+      candidate.nodeId === contentGroupId
+  );
+  if (persistedNode?.measuredBounds || persistedNode?.measuredOverrides) {
+    return resolveViewportSceneBounds(
+      persistedNode.measuredBounds,
+      persistedNode.measuredOverrides,
+      viewport
+    );
+  }
+
+  const group = section.props?.scene?.groups?.find((candidate) => candidate.nodeId === contentGroupId);
+  if (!group) {
+    return undefined;
+  }
+
+  return resolveViewportSceneBounds(group.measuredBounds ?? group.bounds, group.measuredOverrides, viewport);
+}
+
+function resolveViewportSceneBounds(
+  baseBounds: BuilderSceneNodeBounds | undefined,
+  overrides: Partial<Record<'tablet' | 'mobile', Partial<BuilderSceneNodeBounds>>> | undefined,
+  viewport: BuilderViewportMode
+) {
   if (viewport === 'desktop') {
-    return group.bounds;
+    return baseBounds;
   }
 
-  const override = group.overrides?.[viewport];
-  if (!override && group.bounds) {
-    return group.bounds;
+  const override = overrides?.[viewport];
+  if (!override && baseBounds) {
+    return baseBounds;
   }
 
-  const x = override?.x ?? group.bounds?.x;
-  const y = override?.y ?? group.bounds?.y;
-  const width = override?.width ?? group.bounds?.width;
-  const height = override?.height ?? group.bounds?.height;
+  const x = override?.x ?? baseBounds?.x;
+  const y = override?.y ?? baseBounds?.y;
+  const width = override?.width ?? baseBounds?.width;
+  const height = override?.height ?? baseBounds?.height;
 
   if (
     typeof x !== 'number' ||
@@ -8171,6 +8939,21 @@ function isBuilderZoomLevel(value: unknown): value is BuilderZoomLevel {
   return ZOOM_OPTIONS.some((zoomLevel) => zoomLevel === parsed);
 }
 
+function resolveBestFittingZoomLevel(targetZoom: number): BuilderZoomLevel {
+  const clampedTarget = Math.max(ZOOM_OPTIONS[0], Math.min(targetZoom, ZOOM_OPTIONS[ZOOM_OPTIONS.length - 1]));
+  let bestOption: BuilderZoomLevel = ZOOM_OPTIONS[0];
+
+  ZOOM_OPTIONS.forEach((option) => {
+    const currentDistance = Math.abs(option - clampedTarget);
+    const bestDistance = Math.abs(bestOption - clampedTarget);
+    if (currentDistance < bestDistance) {
+      bestOption = option;
+    }
+  });
+
+  return bestOption;
+}
+
 function getViewportLabel(mode: BuilderViewportMode) {
   switch (mode) {
     case 'desktop':
@@ -8974,12 +9757,12 @@ function resolveSurfaceContractState(
       label: 'persisted content group',
       note:
         persistedSource === 'page-scene'
-          ? `This group is now stored in the page document as an authoritative scene node (${contentGroupId ?? 'group'}). Free-position drag and resize are still intentionally deferred.`
-          : `This group is now stored in the page document as a stable scene node (${contentGroupId ?? 'group'}). Free-position drag and resize are still intentionally deferred.`,
+          ? `This group is now stored in the page document as an authoritative scene node (${contentGroupId ?? 'group'}). Canvas move is scene-backed and stage-local resize now writes authored bounds; generic free-position parity is still deferred.`
+          : `This group is now stored in the page document as a stable scene node (${contentGroupId ?? 'group'}). Canvas move/size now enter through the page.scene bridge, but generic free-position parity is still intentionally deferred.`,
       managerSignal:
         persistedSource === 'page-scene'
-          ? 'Page.scene authority · persisted content group · not yet free-canvas.'
-          : 'Scene-backed content group · persisted geometry seed · not yet free-canvas.',
+          ? 'Page.scene authority · scene-backed group move/size entry · generic freeform still deferred.'
+          : 'Scene-backed content group · bridge-driven move/size entry · generic freeform still deferred.',
     };
   }
 

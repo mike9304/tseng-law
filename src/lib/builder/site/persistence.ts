@@ -52,7 +52,17 @@ export async function readSiteDocument(siteId: string, locale: Locale): Promise<
       return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument);
     } catch { /* fallthrough */ }
   }
-  return createDefaultSiteDocument(locale);
+  // First-time bootstrap: persist the default site doc so future reads get a
+  // stable pageId. Without this, every read creates a new home pageId and
+  // orphans the canvas/publish state.
+  const fresh = createDefaultSiteDocument(locale);
+  try {
+    await writeSiteDocument(fresh);
+  } catch {
+    // Best-effort — if write fails, editor still works with in-memory doc
+    // but publish may 404 until persisted.
+  }
+  return fresh;
 }
 
 export async function writeSiteDocument(doc: BuilderSiteDocument): Promise<void> {
@@ -189,15 +199,32 @@ function createDefaultPageLifecycleMeta(
 // ─── Publish ──────────────────────────────────────────────────────
 
 export async function publishPage(siteId: string, pageId: string, locale: Locale): Promise<boolean> {
+  // eslint-disable-next-line no-console
+  console.log('[publishPage] start siteId=%s pageId=%s locale=%s', siteId, pageId, locale);
   const draft = await readPageCanvas(siteId, pageId, 'draft');
-  if (!draft) return false;
+  if (!draft) {
+    // eslint-disable-next-line no-console
+    console.log('[publishPage] draft not found, abort');
+    return false;
+  }
+  // eslint-disable-next-line no-console
+  console.log('[publishPage] draft found, nodes=%d', draft.nodes?.length ?? 0);
   await writePageCanvas(siteId, pageId, 'published', draft);
+  // eslint-disable-next-line no-console
+  console.log('[publishPage] published canvas written');
   const site = await readSiteDocument(siteId, locale);
   const page = site.pages.find((p) => p.pageId === pageId);
+  // eslint-disable-next-line no-console
+  console.log('[publishPage] site doc pageIds=%s, match=%s', site.pages.map((p) => p.pageId).join(','), page ? 'YES' : 'NO');
   if (page) {
     page.publishedAt = new Date().toISOString();
     page.updatedAt = new Date().toISOString();
     await writeSiteDocument(site);
+    // eslint-disable-next-line no-console
+    console.log('[publishPage] site doc written with publishedAt=%s', page.publishedAt);
+  } else {
+    // eslint-disable-next-line no-console
+    console.log('[publishPage] page NOT found in site doc — publishedAt NOT set');
   }
   return true;
 }

@@ -118,7 +118,7 @@ export type BuilderSceneNodeBoundsOverrides = Partial<
 
 export interface BuilderSectionContentGroupConstraints {
   movement: 'section-flow';
-  resize: 'none';
+  resize: 'none' | 'bounds-box';
 }
 
 export interface BuilderSectionContentGroupNode {
@@ -130,6 +130,8 @@ export interface BuilderSectionContentGroupNode {
   datasetTargetIds?: BuilderDatasetTargetId[];
   bounds?: BuilderSceneNodeBounds;
   overrides?: BuilderSceneNodeBoundsOverrides;
+  measuredBounds?: BuilderSceneNodeBounds;
+  measuredOverrides?: BuilderSceneNodeBoundsOverrides;
   constraints: BuilderSectionContentGroupConstraints;
   measuredAt?: string;
 }
@@ -157,6 +159,8 @@ export interface BuilderPersistedSceneNode {
   datasetTargetIds?: BuilderDatasetTargetId[];
   bounds?: BuilderSceneNodeBounds;
   overrides?: BuilderSceneNodeBoundsOverrides;
+  measuredBounds?: BuilderSceneNodeBounds;
+  measuredOverrides?: BuilderSceneNodeBoundsOverrides;
   constraints: BuilderSectionContentGroupConstraints;
   measuredAt?: string;
 }

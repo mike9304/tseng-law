@@ -8,18 +8,27 @@ import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
  * Dynamically injects Google Fonts <link> tags based on fonts used
  * in the current canvas document. Updates when nodes change.
  */
-export default function GoogleFontsLoader() {
+export default function GoogleFontsLoader({
+  extraFamilies,
+}: {
+  extraFamilies?: string[];
+}) {
   const loadedRef = useRef(new Set<string>());
   const document = useBuilderCanvasStore((s) => s.document);
 
   useEffect(() => {
-    if (!document?.nodes) return;
+    if (!document?.nodes && (!extraFamilies || extraFamilies.length === 0)) return;
 
     const usedFonts = new Set<string>();
-    for (const node of document.nodes) {
+    for (const node of document?.nodes ?? []) {
       const content = node.content as Record<string, unknown>;
       if (typeof content.fontFamily === 'string' && content.fontFamily !== 'system-ui') {
         usedFonts.add(content.fontFamily);
+      }
+    }
+    for (const family of extraFamilies ?? []) {
+      if (typeof family === 'string' && family.trim().length > 0) {
+        usedFonts.add(family);
       }
     }
 
@@ -38,7 +47,7 @@ export default function GoogleFontsLoader() {
     for (const f of newFonts) {
       loadedRef.current.add(f);
     }
-  }, [document?.nodes]);
+  }, [document?.nodes, extraFamilies]);
 
   return null;
 }

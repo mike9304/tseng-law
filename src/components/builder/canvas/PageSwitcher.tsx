@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import TemplateGalleryModal from './TemplateGalleryModal';
@@ -8,6 +8,7 @@ import TemplateGalleryModal from './TemplateGalleryModal';
 interface PageMeta {
   pageId: string;
   slug: string;
+  locale: Locale;
   title: Record<string, string>;
   isHomePage?: boolean;
   publishedAt?: string;
@@ -47,27 +48,135 @@ const addButtonStyle: React.CSSProperties = {
   cursor: 'pointer',
 };
 
-function pageItemStyle(active: boolean): React.CSSProperties {
+function pageRowStyle(active: boolean): React.CSSProperties {
+  return {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 6,
+    padding: '2px 6px',
+    borderRadius: 8,
+    border: active ? '1px solid #123b63' : '1px solid transparent',
+    background: active ? '#eff6ff' : 'transparent',
+    transition: 'background 150ms ease, border-color 150ms ease',
+    position: 'relative',
+  };
+}
+
+function pageButtonStyle(active: boolean): React.CSSProperties {
   return {
     display: 'flex',
     alignItems: 'center',
     gap: 8,
-    padding: '6px 10px',
-    borderRadius: 8,
-    border: active ? '1px solid #123b63' : '1px solid transparent',
-    background: active ? '#eff6ff' : 'transparent',
+    minWidth: 0,
+    flex: 1,
+    padding: '6px 4px',
+    border: 'none',
+    background: 'transparent',
     cursor: 'pointer',
     fontSize: '0.82rem',
     fontWeight: active ? 600 : 400,
     color: active ? '#123b63' : '#334155',
-    transition: 'background 150ms ease, border-color 150ms ease',
+    textAlign: 'left',
   };
 }
+
+const moreButtonBaseStyle: React.CSSProperties = {
+  width: 28,
+  height: 28,
+  borderRadius: 6,
+  border: 'none',
+  background: 'transparent',
+  color: '#64748b',
+  cursor: 'pointer',
+  fontSize: '1rem',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  transition: 'opacity 120ms ease, background 120ms ease',
+};
+
+const menuStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: '100%',
+  right: 0,
+  marginTop: 6,
+  minWidth: 120,
+  background: '#fff',
+  border: '1px solid #e2e8f0',
+  borderRadius: 10,
+  boxShadow: '0 12px 30px rgba(15, 23, 42, 0.16)',
+  padding: 4,
+  zIndex: 30,
+};
+
+function menuItemStyle(destructive = false, disabled = false): React.CSSProperties {
+  return {
+    width: '100%',
+    padding: '8px 10px',
+    border: 'none',
+    borderRadius: 8,
+    background: 'transparent',
+    color: disabled ? '#94a3b8' : destructive ? '#b91c1c' : '#334155',
+    fontSize: '0.8rem',
+    fontWeight: 500,
+    textAlign: 'left',
+    cursor: disabled ? 'not-allowed' : 'pointer',
+  };
+}
+
+const editContainerStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 8,
+  width: '100%',
+  padding: '8px 6px',
+};
+
+const editInputStyle: React.CSSProperties = {
+  width: '100%',
+  padding: '8px 10px',
+  border: '1px solid #cbd5e1',
+  borderRadius: 8,
+  fontSize: '0.82rem',
+  color: '#0f172a',
+  outline: 'none',
+  boxSizing: 'border-box',
+};
+
+const editHintStyle: React.CSSProperties = {
+  fontSize: '0.72rem',
+  color: '#64748b',
+};
+
+const statusMessageStyle: React.CSSProperties = {
+  padding: '0 8px 4px',
+  fontSize: '0.75rem',
+  color: '#b91c1c',
+};
+
+const titleTextStyle: React.CSSProperties = {
+  minWidth: 0,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+};
+
+const homeBadgeStyle: React.CSSProperties = {
+  fontSize: '0.65rem',
+  color: '#123b63',
+  fontWeight: 700,
+};
+
+const actionDotsStyle: React.CSSProperties = {
+  fontSize: '0.9rem',
+  lineHeight: 1,
+};
 
 const slugStyle: React.CSSProperties = {
   fontSize: '0.7rem',
   color: '#94a3b8',
   marginLeft: 'auto',
+  flexShrink: 0,
 };
 
 const statusDotStyle = (published: boolean): React.CSSProperties => ({
@@ -85,7 +194,7 @@ export default function PageSwitcher({
 }: {
   locale: Locale;
   activePageId: string | null;
-  onSelectPage: (pageId: string) => void;
+  onSelectPage: (pageId: string, nextSlug?: string) => void;
 }) {
   const [pages, setPages] = useState<PageMeta[]>([]);
   const [loading, setLoading] = useState(true);
@@ -94,8 +203,16 @@ export default function PageSwitcher({
   const [pendingTemplate, setPendingTemplate] = useState<BuilderCanvasDocument | null | undefined>(undefined);
   const [slugInput, setSlugInput] = useState('');
   const [showSlugPrompt, setShowSlugPrompt] = useState(false);
+  const [hoveredPageId, setHoveredPageId] = useState<string | null>(null);
+  const [openMenuPageId, setOpenMenuPageId] = useState<string | null>(null);
+  const [editingPageId, setEditingPageId] = useState<string | null>(null);
+  const [editingTitle, setEditingTitle] = useState('');
+  const [editingSlug, setEditingSlug] = useState('');
+  const [submittingPageId, setSubmittingPageId] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const titleInputRef = useRef<HTMLInputElement | null>(null);
 
-  const fetchPages = useCallback(async () => {
+  const fetchPages = useCallback(async (): Promise<PageMeta[]> => {
     try {
       const response = await fetch(`/api/builder/site/pages?locale=${locale}`, {
         credentials: 'same-origin',
@@ -103,17 +220,36 @@ export default function PageSwitcher({
       if (response.ok) {
         const data = (await response.json()) as { pages: PageMeta[] };
         setPages(data.pages);
+        return data.pages;
       }
     } catch {
       // silent fail
     } finally {
       setLoading(false);
     }
+    return [];
   }, [locale]);
 
   useEffect(() => {
-    fetchPages();
+    void fetchPages();
   }, [fetchPages]);
+
+  useEffect(() => {
+    if (!editingPageId) return;
+    window.setTimeout(() => titleInputRef.current?.focus(), 0);
+  }, [editingPageId]);
+
+  useEffect(() => {
+    if (!openMenuPageId) return;
+    const handleWindowClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('[data-page-switcher-menu]')) {
+        setOpenMenuPageId(null);
+      }
+    };
+    window.addEventListener('click', handleWindowClick, true);
+    return () => window.removeEventListener('click', handleWindowClick, true);
+  }, [openMenuPageId]);
 
   const handleTemplateSelect = (templateDocument: BuilderCanvasDocument | null) => {
     setPendingTemplate(templateDocument);
@@ -127,6 +263,7 @@ export default function PageSwitcher({
     const slug = slugInput.trim() || `page-${Date.now().toString(36)}`;
     setCreating(true);
     setShowSlugPrompt(false);
+    setErrorMessage(null);
     try {
       const response = await fetch('/api/builder/site/pages', {
         method: 'POST',
@@ -140,17 +277,114 @@ export default function PageSwitcher({
         }),
       });
       if (response.ok) {
-        const data = (await response.json()) as { pageId?: string };
+        const data = (await response.json()) as { pageId?: string; page?: PageMeta };
         await fetchPages();
         if (data.pageId) {
-          onSelectPage(data.pageId);
+          onSelectPage(data.pageId, data.page?.slug);
         }
+      } else {
+        setErrorMessage('페이지를 생성하지 못했습니다.');
       }
     } catch {
-      // silent fail
+      setErrorMessage('페이지를 생성하지 못했습니다.');
     } finally {
       setCreating(false);
       setPendingTemplate(undefined);
+    }
+  };
+
+  const startRename = (page: PageMeta) => {
+    setEditingPageId(page.pageId);
+    setEditingTitle(page.title[page.locale] || page.title[locale] || page.title.ko || page.slug || '');
+    setEditingSlug(page.slug);
+    setOpenMenuPageId(null);
+    setErrorMessage(null);
+  };
+
+  const cancelRename = () => {
+    setEditingPageId(null);
+    setEditingTitle('');
+    setEditingSlug('');
+  };
+
+  const handleRename = async (page: PageMeta) => {
+    const nextTitle = editingTitle.trim();
+    const nextSlug = editingSlug.trim();
+    if (!nextTitle) {
+      setErrorMessage('페이지 이름은 비워둘 수 없습니다.');
+      return;
+    }
+
+    setSubmittingPageId(page.pageId);
+    setErrorMessage(null);
+    try {
+      const response = await fetch(
+        `/api/builder/site/pages/${page.pageId}?locale=${encodeURIComponent(page.locale)}`,
+        {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({ title: nextTitle, slug: nextSlug }),
+        },
+      );
+      if (!response.ok) {
+        setErrorMessage('페이지 이름을 저장하지 못했습니다.');
+        return;
+      }
+
+      await fetchPages();
+      cancelRename();
+    } catch {
+      setErrorMessage('페이지 이름을 저장하지 못했습니다.');
+    } finally {
+      setSubmittingPageId(null);
+    }
+  };
+
+  const handleDelete = async (page: PageMeta) => {
+    if (page.isHomePage) return;
+    const confirmed = window.confirm('정말 삭제하시겠습니까?');
+    if (!confirmed) return;
+
+    setSubmittingPageId(page.pageId);
+    setOpenMenuPageId(null);
+    setErrorMessage(null);
+    try {
+      const response = await fetch(
+        `/api/builder/site/pages/${page.pageId}?locale=${encodeURIComponent(page.locale)}`,
+        {
+          method: 'DELETE',
+          credentials: 'same-origin',
+        },
+      );
+      if (!response.ok) {
+        setErrorMessage('페이지를 삭제하지 못했습니다.');
+        return;
+      }
+
+      const nextPages = await fetchPages();
+      if (page.pageId === activePageId && nextPages.length > 0) {
+        onSelectPage(nextPages[0].pageId, nextPages[0].slug);
+      }
+    } catch {
+      setErrorMessage('페이지를 삭제하지 못했습니다.');
+    } finally {
+      setSubmittingPageId(null);
+    }
+  };
+
+  const handleEditKeyDown = async (
+    event: React.KeyboardEvent<HTMLInputElement>,
+    page: PageMeta,
+  ) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      cancelRename();
+      return;
+    }
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      await handleRename(page);
     }
   };
 
@@ -168,6 +402,8 @@ export default function PageSwitcher({
         </button>
       </div>
 
+      {errorMessage ? <div style={statusMessageStyle}>{errorMessage}</div> : null}
+
       {loading ? (
         <div style={{ padding: '8px 10px', fontSize: '0.8rem', color: '#94a3b8' }}>
           Loading...
@@ -179,20 +415,95 @@ export default function PageSwitcher({
       ) : (
         pages.map((page) => {
           const isActive = page.pageId === activePageId;
+          const isEditing = page.pageId === editingPageId;
+          const menuOpen = page.pageId === openMenuPageId;
+          const showMoreButton = hoveredPageId === page.pageId || menuOpen;
+          const isBusy = submittingPageId === page.pageId;
+
           return (
-            <button
+            <div
               key={page.pageId}
-              type="button"
-              style={pageItemStyle(isActive)}
-              onClick={() => onSelectPage(page.pageId)}
+              style={pageRowStyle(isActive)}
+              onMouseEnter={() => setHoveredPageId(page.pageId)}
+              onMouseLeave={() => setHoveredPageId((current) => (current === page.pageId ? null : current))}
             >
-              <span style={statusDotStyle(!!page.publishedAt)} title={page.publishedAt ? 'Published' : 'Draft'} />
-              <span>{page.title[locale] || page.title.ko || page.slug || 'Untitled'}</span>
-              {page.isHomePage && (
-                <span style={{ fontSize: '0.65rem', color: '#123b63', fontWeight: 700 }}>HOME</span>
+              {isEditing ? (
+                <div style={editContainerStyle}>
+                  <input
+                    ref={titleInputRef}
+                    type="text"
+                    value={editingTitle}
+                    placeholder="페이지 이름"
+                    style={editInputStyle}
+                    onChange={(event) => setEditingTitle(event.target.value)}
+                    onKeyDown={(event) => { void handleEditKeyDown(event, page); }}
+                  />
+                  <input
+                    type="text"
+                    value={editingSlug}
+                    placeholder="slug"
+                    style={editInputStyle}
+                    onChange={(event) => setEditingSlug(event.target.value)}
+                    onKeyDown={(event) => { void handleEditKeyDown(event, page); }}
+                  />
+                  <div style={editHintStyle}>
+                    {isBusy ? '저장 중...' : 'Enter 저장 · Esc 취소'}
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <button
+                    type="button"
+                    style={pageButtonStyle(isActive)}
+                    onClick={() => onSelectPage(page.pageId, page.slug)}
+                  >
+                    <span style={statusDotStyle(!!page.publishedAt)} title={page.publishedAt ? 'Published' : 'Draft'} />
+                    <span style={titleTextStyle}>{page.title[locale] || page.title[page.locale] || page.title.ko || page.slug || 'Untitled'}</span>
+                    {page.isHomePage ? <span style={homeBadgeStyle}>HOME</span> : null}
+                    <span style={slugStyle}>/{page.slug}</span>
+                  </button>
+
+                  <div style={{ position: 'relative' }} data-page-switcher-menu>
+                    <button
+                      type="button"
+                      aria-label="페이지 메뉴"
+                      style={{
+                        ...moreButtonBaseStyle,
+                        opacity: showMoreButton ? 1 : 0,
+                        pointerEvents: showMoreButton ? 'auto' : 'none',
+                        background: menuOpen ? '#e2e8f0' : 'transparent',
+                      }}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setOpenMenuPageId((current) => (current === page.pageId ? null : page.pageId));
+                      }}
+                    >
+                      <span style={actionDotsStyle}>⋯</span>
+                    </button>
+
+                    {menuOpen ? (
+                      <div style={menuStyle}>
+                        <button
+                          type="button"
+                          style={menuItemStyle()}
+                          onClick={() => startRename(page)}
+                        >
+                          이름 변경
+                        </button>
+                        <button
+                          type="button"
+                          style={menuItemStyle(true, Boolean(page.isHomePage))}
+                          disabled={page.isHomePage}
+                          onClick={() => { void handleDelete(page); }}
+                        >
+                          삭제
+                        </button>
+                      </div>
+                    ) : null}
+                  </div>
+                </>
               )}
-              <span style={slugStyle}>/{page.slug}</span>
-            </button>
+            </div>
           );
         })
       )}
@@ -217,7 +528,12 @@ export default function PageSwitcher({
             WebkitBackdropFilter: 'blur(6px)',
             zIndex: 10000,
           }}
-          onClick={(e) => { if (e.target === e.currentTarget) { setShowSlugPrompt(false); setPendingTemplate(undefined); } }}
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              setShowSlugPrompt(false);
+              setPendingTemplate(undefined);
+            }
+          }}
         >
           <div
             style={{
@@ -239,8 +555,8 @@ export default function PageSwitcher({
               type="text"
               placeholder="예: about, services, contact"
               value={slugInput}
-              onChange={(e) => setSlugInput(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter') handleCreatePage(); }}
+              onChange={(event) => setSlugInput(event.target.value)}
+              onKeyDown={(event) => { if (event.key === 'Enter') void handleCreatePage(); }}
               autoFocus
               style={{
                 width: '100%',
@@ -256,14 +572,17 @@ export default function PageSwitcher({
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
               <button
                 type="button"
-                onClick={() => { setShowSlugPrompt(false); setPendingTemplate(undefined); }}
+                onClick={() => {
+                  setShowSlugPrompt(false);
+                  setPendingTemplate(undefined);
+                }}
                 style={{ padding: '6px 16px', background: '#f1f5f9', color: '#334155', border: '1px solid #cbd5e1', borderRadius: 8, fontSize: '0.82rem', cursor: 'pointer' }}
               >
                 취소
               </button>
               <button
                 type="button"
-                onClick={handleCreatePage}
+                onClick={() => { void handleCreatePage(); }}
                 disabled={creating}
                 style={{ padding: '6px 16px', background: '#123b63', color: '#fff', border: 'none', borderRadius: 8, fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer' }}
               >

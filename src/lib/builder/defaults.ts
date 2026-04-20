@@ -84,10 +84,10 @@ function createDefaultSectionScene(sectionKey: BuilderSectionKey): BuilderSectio
     label: group.label,
     surfaceIds: [...(group.surfaceIds ?? [])],
     datasetTargetIds: group.datasetTargetIds ? [...group.datasetTargetIds] : undefined,
-    constraints: {
-      movement: 'section-flow' as const,
-      resize: 'none' as const,
-    },
+      constraints: {
+        movement: 'section-flow' as const,
+        resize: 'bounds-box' as const,
+      },
   }));
 
   return groups.length
@@ -123,6 +123,15 @@ function createDefaultBuilderPageScene(
       overrides: group.overrides
         ? Object.fromEntries(
             Object.entries(group.overrides).map(([viewport, bounds]) => [
+              viewport,
+              bounds ? { ...bounds } : bounds,
+            ])
+          )
+        : undefined,
+      measuredBounds: group.measuredBounds ? { ...group.measuredBounds } : undefined,
+      measuredOverrides: group.measuredOverrides
+        ? Object.fromEntries(
+            Object.entries(group.measuredOverrides).map(([viewport, bounds]) => [
               viewport,
               bounds ? { ...bounds } : bounds,
             ])

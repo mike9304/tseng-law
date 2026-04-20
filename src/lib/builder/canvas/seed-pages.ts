@@ -1,8 +1,7 @@
 import type { Locale } from '@/lib/locales';
 import {
-  createDefaultCanvasNodeStyle,
+  type BuilderCanvasNode,
   type BuilderCanvasDocument,
-  type CompositeComponentKey,
 } from '@/lib/builder/canvas/types';
 import { legalPageContent } from '@/data/legal-pages';
 import { pageCopy } from '@/data/page-copy';
@@ -16,9 +15,45 @@ import {
 } from '@/lib/builder/site/persistence';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { createHomePageCanvasDocument } from './seed-home';
+import {
+  ABOUT_PAGE_ROOT_HEIGHT,
+  createAboutPageDecomposedNodes,
+} from './decompose-page-about';
+import {
+  CONTACT_PAGE_ROOT_HEIGHT,
+  createContactPageDecomposedNodes,
+} from './decompose-page-contact';
+import {
+  DISCLAIMER_PAGE_ROOT_HEIGHT,
+  createDisclaimerPageDecomposedNodes,
+} from './decompose-page-disclaimer';
+import {
+  FAQ_PAGE_ROOT_HEIGHT,
+  createFaqPageDecomposedNodes,
+} from './decompose-page-faq';
+import {
+  LAWYERS_PAGE_ROOT_HEIGHT,
+  createLawyersPageDecomposedNodes,
+} from './decompose-page-lawyers';
+import {
+  PRICING_PAGE_ROOT_HEIGHT,
+  createPricingPageDecomposedNodes,
+} from './decompose-page-pricing';
+import {
+  PRIVACY_PAGE_ROOT_HEIGHT,
+  createPrivacyPageDecomposedNodes,
+} from './decompose-page-privacy';
+import {
+  REVIEWS_PAGE_ROOT_HEIGHT,
+  createReviewsPageDecomposedNodes,
+} from './decompose-page-reviews';
+import {
+  createServicesPageDecomposedNodes,
+  SERVICES_PAGE_ROOT_HEIGHT,
+} from './decompose-page-services';
 
 const STAGE_WIDTH = 1280;
-const SITE_PAGE_SEED_VERSION = 'site-page-seed-v2';
+const SITE_PAGE_SEED_VERSION = 'site-page-seed-v3';
 const seedSitePagesInFlight = new Map<string, Promise<void>>();
 
 type PageSeedDefinition = {
@@ -29,10 +64,9 @@ type PageSeedDefinition = {
   buildDocument: (locale: Locale) => BuilderCanvasDocument;
 };
 
-function createLegacyPageCanvasDocument(
+function createDecomposedPageCanvasDocument(
   locale: Locale,
-  pageId: string,
-  componentKey: CompositeComponentKey,
+  nodes: BuilderCanvasNode[],
   height: number,
 ): BuilderCanvasDocument {
   return {
@@ -42,59 +76,44 @@ function createLegacyPageCanvasDocument(
     updatedBy: SITE_PAGE_SEED_VERSION,
     stageWidth: STAGE_WIDTH,
     stageHeight: height,
-    nodes: [
-      {
-        id: pageId,
-        kind: 'composite',
-        rect: { x: 0, y: 0, width: STAGE_WIDTH, height },
-        style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
-        zIndex: 0,
-        rotation: 0,
-        locked: false,
-        visible: true,
-        content: {
-          componentKey,
-          config: { locale },
-        },
-      },
-    ],
+    nodes,
   };
 }
 
 function buildAboutPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-about-root', 'legacy-page-about', 2400);
+  return createDecomposedPageCanvasDocument(locale, createAboutPageDecomposedNodes(0, locale, 0), ABOUT_PAGE_ROOT_HEIGHT);
 }
 
 function buildServicesPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-services-root', 'legacy-page-services', 3000);
+  return createDecomposedPageCanvasDocument(locale, createServicesPageDecomposedNodes(0, locale, 0), SERVICES_PAGE_ROOT_HEIGHT);
 }
 
 function buildContactPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-contact-root', 'legacy-page-contact', 1800);
+  return createDecomposedPageCanvasDocument(locale, createContactPageDecomposedNodes(0, locale, 0), CONTACT_PAGE_ROOT_HEIGHT);
 }
 
 function buildLawyersPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-lawyers-root', 'legacy-page-lawyers', 2400);
+  return createDecomposedPageCanvasDocument(locale, createLawyersPageDecomposedNodes(0, locale, 0), LAWYERS_PAGE_ROOT_HEIGHT);
 }
 
 function buildFaqPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-faq-root', 'legacy-page-faq', 3200);
+  return createDecomposedPageCanvasDocument(locale, createFaqPageDecomposedNodes(0, locale, 0), FAQ_PAGE_ROOT_HEIGHT);
 }
 
 function buildPricingPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-pricing-root', 'legacy-page-pricing', 2200);
+  return createDecomposedPageCanvasDocument(locale, createPricingPageDecomposedNodes(0, locale, 0), PRICING_PAGE_ROOT_HEIGHT);
 }
 
 function buildReviewsPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-reviews-root', 'legacy-page-reviews', 1800);
+  return createDecomposedPageCanvasDocument(locale, createReviewsPageDecomposedNodes(0, locale, 0), REVIEWS_PAGE_ROOT_HEIGHT);
 }
 
 function buildPrivacyPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-privacy-root', 'legacy-page-privacy', 2000);
+  return createDecomposedPageCanvasDocument(locale, createPrivacyPageDecomposedNodes(0, locale, 0), PRIVACY_PAGE_ROOT_HEIGHT);
 }
 
 function buildDisclaimerPageCanvas(locale: Locale): BuilderCanvasDocument {
-  return createLegacyPageCanvasDocument(locale, 'page-disclaimer-root', 'legacy-page-disclaimer', 1600);
+  return createDecomposedPageCanvasDocument(locale, createDisclaimerPageDecomposedNodes(0, locale, 0), DISCLAIMER_PAGE_ROOT_HEIGHT);
 }
 
 const pageSeeds: PageSeedDefinition[] = [

@@ -27,15 +27,25 @@ export function cutNodes(nodes: BuilderCanvasNode[]): void {
 
 export function pasteNodes(offset = 20): BuilderCanvasNode[] {
   if (clipboardNodes.length === 0) return [];
-  return clipboardNodes.map((n) => ({
-    ...structuredClone(n),
-    id: newId(),
-    rect: {
-      ...n.rect,
-      x: n.rect.x + offset,
-      y: n.rect.y + offset,
-    },
-  }));
+  const idMap = new Map<string, string>();
+
+  for (const node of clipboardNodes) {
+    idMap.set(node.id, newId());
+  }
+
+  return clipboardNodes.map((node) => {
+    const nextId = idMap.get(node.id) ?? newId();
+    return {
+      ...structuredClone(node),
+      id: nextId,
+      parentId: node.parentId && idMap.has(node.parentId) ? idMap.get(node.parentId) : node.parentId,
+      rect: {
+        ...node.rect,
+        x: node.rect.x + offset,
+        y: node.rect.y + offset,
+      },
+    };
+  });
 }
 
 export function hasClipboard(): boolean {

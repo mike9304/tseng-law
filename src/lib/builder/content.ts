@@ -569,6 +569,24 @@ export function updateBuilderDocumentSectionContentGroupBounds(
   });
 }
 
+export function syncBuilderDocumentSectionContentGroupMeasuredBounds(
+  document: BuilderPageDocument,
+  sectionKey: BuilderSectionKey,
+  groupId: string,
+  bounds: BuilderSceneNodeBounds,
+  viewport: BuilderResponsiveBreakpoint | 'desktop' = 'desktop'
+): BuilderPageDocument {
+  return touchBuilderDocument(
+    updateBuilderPageSceneContentGroupMeasuredBounds(
+      cloneBuilderDocument(document),
+      sectionKey,
+      groupId,
+      bounds,
+      viewport
+    )
+  );
+}
+
 export function setBuilderDocumentDatasetLimit(
   document: BuilderPageDocument,
   targetId: BuilderDatasetTargetId,
@@ -1053,6 +1071,8 @@ function cloneBuilderSectionContentGroupNode(
     datasetTargetIds: group.datasetTargetIds ? [...group.datasetTargetIds] : undefined,
     bounds: cloneBuilderSceneNodeBounds(group.bounds),
     overrides: cloneBuilderSceneNodeBoundsOverrides(group.overrides),
+    measuredBounds: cloneBuilderSceneNodeBounds(group.measuredBounds),
+    measuredOverrides: cloneBuilderSceneNodeBoundsOverrides(group.measuredOverrides),
     constraints: {
       movement: group.constraints.movement,
       resize: group.constraints.resize,
@@ -1141,9 +1161,11 @@ function cloneBuilderPersistedSceneNode(
       : undefined,
     bounds: cloneBuilderSceneNodeBounds(node.bounds),
     overrides: cloneBuilderSceneNodeBoundsOverrides(node.overrides),
+    measuredBounds: cloneBuilderSceneNodeBounds(node.measuredBounds),
+    measuredOverrides: cloneBuilderSceneNodeBoundsOverrides(node.measuredOverrides),
     constraints: {
       movement: node.constraints?.movement === 'section-flow' ? 'section-flow' : 'section-flow',
-      resize: node.constraints?.resize === 'none' ? 'none' : 'none',
+      resize: node.constraints?.resize === 'bounds-box' ? 'bounds-box' : 'none',
     },
     measuredAt: typeof node.measuredAt === 'string' && node.measuredAt ? node.measuredAt : undefined,
   };
@@ -1204,6 +1226,12 @@ function syncBuilderPageSceneBridge(
         overrides: promotedAuthority
           ? cloneBuilderSceneNodeBoundsOverrides(existingNode.overrides ?? group.overrides)
           : cloneBuilderSceneNodeBoundsOverrides(group.overrides),
+        measuredBounds: cloneBuilderSceneNodeBounds(
+          existingNode?.measuredBounds ?? group.measuredBounds ?? group.bounds
+        ),
+        measuredOverrides: cloneBuilderSceneNodeBoundsOverrides(
+          existingNode?.measuredOverrides ?? group.measuredOverrides ?? group.overrides
+        ),
         constraints: {
           movement: group.constraints.movement,
           resize: group.constraints.resize,
@@ -1260,9 +1288,17 @@ function normalizeBuilderSectionContentGroupNode(
         : undefined,
     bounds: normalizeBuilderSceneNodeBounds(nextGroup.bounds, fallbackGroup?.bounds),
     overrides: normalizeBuilderSceneNodeBoundsOverrides(nextGroup.overrides, fallbackGroup?.overrides),
+    measuredBounds: normalizeBuilderSceneNodeBounds(
+      nextGroup.measuredBounds,
+      fallbackGroup?.measuredBounds
+    ),
+    measuredOverrides: normalizeBuilderSceneNodeBoundsOverrides(
+      nextGroup.measuredOverrides,
+      fallbackGroup?.measuredOverrides
+    ),
     constraints: {
       movement: 'section-flow',
-      resize: 'none',
+      resize: 'bounds-box',
     },
     measuredAt:
       typeof nextGroup.measuredAt === 'string' && nextGroup.measuredAt
@@ -1422,6 +1458,51 @@ function updateBuilderPageSceneContentGroupBounds(
           ? cloneBuilderSceneNodeBoundsOverrides(node.overrides)
           : {
               ...cloneBuilderSceneNodeBoundsOverrides(node.overrides),
+              [viewport]: cloneBuilderSceneNodeBounds(bounds),
+            },
+      measuredAt: new Date().toISOString(),
+    };
+  });
+
+  return {
+    ...document,
+    scene: {
+      ...baseScene,
+      sourceDocumentVersion: document.version,
+      nodes: nextNodes,
+    },
+  };
+}
+
+function updateBuilderPageSceneContentGroupMeasuredBounds(
+  document: BuilderPageDocument,
+  sectionKey: BuilderSectionKey,
+  groupId: string,
+  bounds: BuilderSceneNodeBounds,
+  viewport: BuilderResponsiveBreakpoint | 'desktop'
+): BuilderPageDocument {
+  const baseScene =
+    cloneBuilderPageScene(document.scene, document.pageKey, document.version) ??
+    buildBuilderPageSceneFromSections(document.pageKey, document.root.children, document.version);
+
+  if (!baseScene) {
+    return document;
+  }
+
+  const nextNodes = baseScene.nodes.map((node) => {
+    if (node.nodeId !== groupId || node.sectionKey !== sectionKey) {
+      return cloneBuilderPersistedSceneNode(node, document.pageKey) ?? node;
+    }
+
+    return {
+      ...node,
+      measuredBounds:
+        viewport === 'desktop' ? cloneBuilderSceneNodeBounds(bounds) : node.measuredBounds,
+      measuredOverrides:
+        viewport === 'desktop'
+          ? cloneBuilderSceneNodeBoundsOverrides(node.measuredOverrides)
+          : {
+              ...cloneBuilderSceneNodeBoundsOverrides(node.measuredOverrides),
               [viewport]: cloneBuilderSceneNodeBounds(bounds),
             },
       measuredAt: new Date().toISOString(),
@@ -1823,6 +1904,8 @@ function buildBuilderPageSceneFromSections(
       datasetTargetIds: group.datasetTargetIds ? [...group.datasetTargetIds] : undefined,
       bounds: cloneBuilderSceneNodeBounds(group.bounds),
       overrides: cloneBuilderSceneNodeBoundsOverrides(group.overrides),
+      measuredBounds: cloneBuilderSceneNodeBounds(group.measuredBounds),
+      measuredOverrides: cloneBuilderSceneNodeBoundsOverrides(group.measuredOverrides),
       constraints: {
         movement: group.constraints.movement,
         resize: group.constraints.resize,

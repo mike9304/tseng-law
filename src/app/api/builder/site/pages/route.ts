@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
 import { listPages, createPage, writePageCanvas } from '@/lib/builder/site/persistence';
 import { normalizeCanvasDocument, createDefaultCanvasDocument } from '@/lib/builder/canvas/types';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   let body: { slug?: string; title?: string; locale?: string; document?: unknown };
@@ -27,11 +27,12 @@ export async function POST(request: NextRequest) {
   }
 
   const locale = normalizeLocale(body.locale || 'ko');
-  const slug = body.slug?.trim() || '';
+  const rawSlug = body.slug?.trim() || '';
+  const slug = rawSlug || `page-${Date.now().toString(36)}`;
   const title = body.title?.trim() || 'New Page';
 
-  if (slug.length > 200) {
-    return NextResponse.json({ error: 'Slug too long' }, { status: 400 });
+  if (slug.length > 200 || (rawSlug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))) {
+    return NextResponse.json({ error: 'Invalid slug: lowercase alphanumeric with hyphens only' }, { status: 400 });
   }
 
   const page = await createPage('default', locale, slug, title);

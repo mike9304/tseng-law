@@ -27,6 +27,7 @@ export default function SandboxTopBar({
   viewport,
   onViewportChange,
   onPublish,
+  onOpenSeo,
   onOpenSettings,
   onOpenHistory,
   activePageId,
@@ -41,6 +42,7 @@ export default function SandboxTopBar({
   viewport: ViewportMode;
   onViewportChange: (mode: ViewportMode) => void;
   onPublish: () => void;
+  onOpenSeo?: () => void;
   onOpenSettings?: () => void;
   onOpenHistory?: () => void;
   activePageId?: string | null;
@@ -48,6 +50,7 @@ export default function SandboxTopBar({
 }) {
   const saveLabel = draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : '';
   const saveClass = draftSaveState === 'saving' ? styles.statusBadgeSaving : draftSaveState === 'saved' ? styles.statusBadgeSaved : draftSaveState === 'error' ? styles.statusBadgeError : '';
+  const canOpenSeo = Boolean(onOpenSeo && activePageId);
 
   return (
     <header className={styles.topBar}>
@@ -120,6 +123,23 @@ export default function SandboxTopBar({
           </button>
         )}
         <button type="button" className={styles.topBarChip} title="미리보기" style={{ cursor: 'pointer' }}>미리보기</button>
+        <button
+          type="button"
+          className={styles.topBarChip}
+          title="현재 페이지 SEO"
+          style={{
+            cursor: canOpenSeo ? 'pointer' : 'not-allowed',
+            opacity: canOpenSeo ? 1 : 0.5,
+            borderColor: '#cbd5e1',
+            background: '#fff',
+            color: '#0f172a',
+            fontWeight: 600,
+          }}
+          disabled={!canOpenSeo}
+          onClick={onOpenSeo}
+        >
+          SEO
+        </button>
         <button
           type="button"
           style={{ padding: '6px 16px', background: '#123b63', color: '#fff', border: 'none', borderRadius: 6, fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer' }}

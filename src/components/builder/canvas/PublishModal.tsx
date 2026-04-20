@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
 
 interface PublishCheckResult {
   passed: boolean;
@@ -252,7 +253,7 @@ export default function PublishModal({
         const result = (await publishResponse.json()) as { ok: boolean; slug?: string };
         setPublishState('success');
         const slug = result.slug ?? '';
-        setPublishedSlug(`/${locale}/p/${slug}`);
+        setPublishedSlug(buildSitePagePath(locale, slug));
       } else {
         // ── Legacy sandbox publish fallback ──
         const response = await fetch(`/api/builder/sandbox/draft?locale=${locale}`, {

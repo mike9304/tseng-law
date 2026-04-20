@@ -1,6 +1,6 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
-import { FONT_CATALOG, fontFamilyCSS } from '@/lib/builder/canvas/fonts';
+import FontPicker from '@/components/builder/editor/FontPicker';
 
 export default function TextInspector({
   node,
@@ -22,21 +22,11 @@ export default function TextInspector({
       </label>
       <label>
         <span>Font</span>
-        <select
+        <FontPicker
           value={textNode.content.fontFamily || 'system-ui'}
           disabled={disabled}
-          onChange={(event) => onUpdate({ fontFamily: event.target.value })}
-        >
-          {FONT_CATALOG.map((font) => (
-            <option
-              key={font.family}
-              value={font.family}
-              style={{ fontFamily: fontFamilyCSS(font.family) }}
-            >
-              {font.family}{font.cjk ? ' (CJK)' : ''}
-            </option>
-          ))}
-        </select>
+          onChange={(fontFamily) => onUpdate({ fontFamily })}
+        />
       </label>
       <label>
         <span>Font size</span>

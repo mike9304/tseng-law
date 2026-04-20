@@ -1,0 +1,292 @@
+import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { createDefaultCanvasNodeStyle } from '@/lib/builder/canvas/types';
+import {
+  createContainerNode,
+  createTextNode,
+  createImageNode,
+  assignCanvasNodeZIndices,
+} from '@/lib/builder/decompose/shared';
+import type { PageTemplate } from '../types';
+
+const W = 1280;
+
+/* ── Section layout ──────────────────────────────────────────── */
+const HERO_H = 400;
+const STORY_Y = HERO_H + 80;
+const STORY_H = 380;
+const TIMELINE_Y = STORY_Y + STORY_H + 80;
+const TIMELINE_H = 300;
+const VALUES_Y = TIMELINE_Y + TIMELINE_H + 80;
+const VALUES_H = 300;
+const STAGE_H = VALUES_Y + VALUES_H + 80;
+
+function heading(
+  id: string,
+  rect: BuilderCanvasNode['rect'],
+  text: string,
+  level: number,
+  color: string,
+  align: 'left' | 'center' | 'right' = 'left',
+  parentId?: string,
+): BuilderCanvasNode {
+  return {
+    id,
+    kind: 'heading',
+    parentId,
+    rect,
+    style: createDefaultCanvasNodeStyle(),
+    zIndex: 0,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    content: { text, level, color, align },
+  };
+}
+
+const nodes: BuilderCanvasNode[] = assignCanvasNodeZIndices([
+  /* ── Hero ────────────────────────────────────────────────── */
+  createContainerNode({
+    id: 'tpl-about-hero',
+    rect: { x: 0, y: 0, width: W, height: HERO_H },
+    background: '#123b63',
+    borderRadius: 0,
+  }),
+  createImageNode({
+    id: 'tpl-about-hero-img',
+    parentId: 'tpl-about-hero',
+    rect: { x: 640, y: 0, width: 640, height: HERO_H },
+    src: '/images/placeholder-office.jpg',
+    alt: '법률사무소 사무실 전경',
+    style: { opacity: 60, borderRadius: 0 },
+  }),
+  heading(
+    'tpl-about-hero-title',
+    { x: 80, y: 140, width: 520, height: 70 },
+    '우리 법률사무소 소개',
+    1,
+    '#ffffff',
+    'left',
+    'tpl-about-hero',
+  ),
+  createTextNode({
+    id: 'tpl-about-hero-sub',
+    parentId: 'tpl-about-hero',
+    rect: { x: 80, y: 230, width: 480, height: 50 },
+    text: '20년 이상의 경험으로 고객의 권리를 보호합니다.',
+    fontSize: 18,
+    color: 'rgba(255,255,255,0.85)',
+    fontWeight: 'regular',
+    lineHeight: 1.5,
+  }),
+
+  /* ── Firm story ──────────────────────────────────────────── */
+  heading(
+    'tpl-about-story-title',
+    { x: 80, y: STORY_Y, width: 400, height: 50 },
+    '사무소 이야기',
+    2,
+    '#123b63',
+  ),
+  createTextNode({
+    id: 'tpl-about-story-p1',
+    rect: { x: 80, y: STORY_Y + 60, width: 1120, height: 80 },
+    text: '저희 법률사무소는 2005년 설립 이래, 대만에 거주하는 한국 교민과 기업들을 위한 전문 법률 서비스를 제공해 왔습니다. 한국어와 중국어에 능통한 변호사진이 언어의 장벽 없이 신속하고 정확한 법률 자문을 드립니다.',
+    fontSize: 16,
+    color: '#1f2937',
+    lineHeight: 1.7,
+  }),
+  createTextNode({
+    id: 'tpl-about-story-p2',
+    rect: { x: 80, y: STORY_Y + 160, width: 1120, height: 80 },
+    text: '기업법, 부동산법, 이민법, 가족법 등 다양한 분야에서 풍부한 경험을 쌓아 왔으며, 각 분야별 전문 변호사가 고객 맞춤형 솔루션을 제공합니다. 고객의 이익을 최우선으로 생각하는 것이 저희의 신조입니다.',
+    fontSize: 16,
+    color: '#1f2937',
+    lineHeight: 1.7,
+  }),
+  createTextNode({
+    id: 'tpl-about-story-p3',
+    rect: { x: 80, y: STORY_Y + 260, width: 1120, height: 80 },
+    text: '타이베이 중심부에 위치한 저희 사무소는 접근성이 뛰어나며, 온라인 상담도 지원합니다. 대만 법률에 대한 궁금한 점이 있으시면 언제든 연락해 주십시오.',
+    fontSize: 16,
+    color: '#1f2937',
+    lineHeight: 1.7,
+  }),
+
+  /* ── Timeline ────────────────────────────────────────────── */
+  createContainerNode({
+    id: 'tpl-about-timeline',
+    rect: { x: 0, y: TIMELINE_Y, width: W, height: TIMELINE_H },
+    background: '#f3f4f6',
+    borderRadius: 0,
+  }),
+  heading(
+    'tpl-about-timeline-title',
+    { x: 80, y: 40, width: 300, height: 50 },
+    '주요 연혁',
+    2,
+    '#123b63',
+    'left',
+    'tpl-about-timeline',
+  ),
+  // Milestone 1
+  createContainerNode({
+    id: 'tpl-about-ms-1',
+    parentId: 'tpl-about-timeline',
+    rect: { x: 80, y: 110, width: 240, height: 140 },
+    background: '#ffffff',
+    borderRadius: 10,
+    padding: 20,
+  }),
+  createTextNode({
+    id: 'tpl-about-ms-1-year',
+    parentId: 'tpl-about-ms-1',
+    rect: { x: 20, y: 20, width: 200, height: 32 },
+    text: '2005',
+    fontSize: 28,
+    color: '#e8a838',
+    fontWeight: 'bold',
+  }),
+  createTextNode({
+    id: 'tpl-about-ms-1-desc',
+    parentId: 'tpl-about-ms-1',
+    rect: { x: 20, y: 60, width: 200, height: 50 },
+    text: '법률사무소 설립, 타이베이 대안구에 첫 사무소 개설',
+    fontSize: 14,
+    color: '#374151',
+    lineHeight: 1.5,
+  }),
+  // Milestone 2
+  createContainerNode({
+    id: 'tpl-about-ms-2',
+    parentId: 'tpl-about-timeline',
+    rect: { x: 350, y: 110, width: 240, height: 140 },
+    background: '#ffffff',
+    borderRadius: 10,
+    padding: 20,
+  }),
+  createTextNode({
+    id: 'tpl-about-ms-2-year',
+    parentId: 'tpl-about-ms-2',
+    rect: { x: 20, y: 20, width: 200, height: 32 },
+    text: '2012',
+    fontSize: 28,
+    color: '#e8a838',
+    fontWeight: 'bold',
+  }),
+  createTextNode({
+    id: 'tpl-about-ms-2-desc',
+    parentId: 'tpl-about-ms-2',
+    rect: { x: 20, y: 60, width: 200, height: 50 },
+    text: '기업법 전문 부서 신설, 50개 이상 기업 자문 달성',
+    fontSize: 14,
+    color: '#374151',
+    lineHeight: 1.5,
+  }),
+  // Milestone 3
+  createContainerNode({
+    id: 'tpl-about-ms-3',
+    parentId: 'tpl-about-timeline',
+    rect: { x: 620, y: 110, width: 240, height: 140 },
+    background: '#ffffff',
+    borderRadius: 10,
+    padding: 20,
+  }),
+  createTextNode({
+    id: 'tpl-about-ms-3-year',
+    parentId: 'tpl-about-ms-3',
+    rect: { x: 20, y: 20, width: 200, height: 32 },
+    text: '2019',
+    fontSize: 28,
+    color: '#e8a838',
+    fontWeight: 'bold',
+  }),
+  createTextNode({
+    id: 'tpl-about-ms-3-desc',
+    parentId: 'tpl-about-ms-3',
+    rect: { x: 20, y: 60, width: 200, height: 50 },
+    text: '온라인 상담 서비스 도입, 전국 고객 서비스 확대',
+    fontSize: 14,
+    color: '#374151',
+    lineHeight: 1.5,
+  }),
+
+  /* ── Values ──────────────────────────────────────────────── */
+  heading(
+    'tpl-about-values-title',
+    { x: 80, y: VALUES_Y, width: 300, height: 50 },
+    '핵심 가치',
+    2,
+    '#123b63',
+  ),
+  // Value 1
+  createContainerNode({
+    id: 'tpl-about-val-1',
+    rect: { x: 80, y: VALUES_Y + 60, width: 350, height: 180 },
+    background: '#f3f4f6',
+    borderRadius: 12,
+    padding: 24,
+  }),
+  heading('tpl-about-val-1-title', { x: 24, y: 24, width: 302, height: 36 }, '신뢰', 3, '#123b63', 'left', 'tpl-about-val-1'),
+  createTextNode({
+    id: 'tpl-about-val-1-desc',
+    parentId: 'tpl-about-val-1',
+    rect: { x: 24, y: 70, width: 302, height: 70 },
+    text: '투명한 소통과 정직한 자문으로 고객과의 신뢰를 최우선으로 합니다.',
+    fontSize: 14,
+    color: '#1f2937',
+    lineHeight: 1.5,
+  }),
+  // Value 2
+  createContainerNode({
+    id: 'tpl-about-val-2',
+    rect: { x: 460, y: VALUES_Y + 60, width: 350, height: 180 },
+    background: '#f3f4f6',
+    borderRadius: 12,
+    padding: 24,
+  }),
+  heading('tpl-about-val-2-title', { x: 24, y: 24, width: 302, height: 36 }, '전문성', 3, '#123b63', 'left', 'tpl-about-val-2'),
+  createTextNode({
+    id: 'tpl-about-val-2-desc',
+    parentId: 'tpl-about-val-2',
+    rect: { x: 24, y: 70, width: 302, height: 70 },
+    text: '각 분야 최고 전문가들이 깊이 있는 법률 지식으로 최적의 해결책을 제시합니다.',
+    fontSize: 14,
+    color: '#1f2937',
+    lineHeight: 1.5,
+  }),
+  // Value 3
+  createContainerNode({
+    id: 'tpl-about-val-3',
+    rect: { x: 840, y: VALUES_Y + 60, width: 350, height: 180 },
+    background: '#f3f4f6',
+    borderRadius: 12,
+    padding: 24,
+  }),
+  heading('tpl-about-val-3-title', { x: 24, y: 24, width: 302, height: 36 }, '고객 중심', 3, '#123b63', 'left', 'tpl-about-val-3'),
+  createTextNode({
+    id: 'tpl-about-val-3-desc',
+    parentId: 'tpl-about-val-3',
+    rect: { x: 24, y: 70, width: 302, height: 70 },
+    text: '고객의 상황을 깊이 이해하고, 맞춤형 법률 전략을 수립하여 최상의 결과를 이끌어냅니다.',
+    fontSize: 14,
+    color: '#1f2937',
+    lineHeight: 1.5,
+  }),
+]);
+
+export const lawAboutTemplate: PageTemplate = {
+  id: 'law-about',
+  name: '사무소 소개',
+  category: 'law',
+  subcategory: 'about',
+  description: '히어로 이미지 + 사무소 이야기(3단락) + 연혁 타임라인 + 핵심 가치',
+  document: {
+    version: 1,
+    locale: 'ko',
+    updatedAt: '2026-04-15T00:00:00+09:00',
+    updatedBy: 'template-system',
+    stageWidth: W,
+    stageHeight: STAGE_H,
+    nodes,
+  },
+};

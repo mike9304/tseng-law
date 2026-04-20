@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import type { BuilderCanvasNode, BuilderCanvasNodeStyle } from '@/lib/builder/canvas/types';
 import { gradientToCSS, type GradientConfig } from '@/lib/builder/canvas/palette';
+import ColorPicker from '@/components/builder/editor/ColorPicker';
+import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 function clampNumber(value: number, min: number, max: number): number {
@@ -145,6 +147,15 @@ export default function StyleTab({
   disabled?: boolean;
   onUpdateStyle: (style: Partial<BuilderCanvasNodeStyle>) => void;
 }) {
+  const theme = useBuilderTheme();
+  const palette = [
+    theme.colors.primary,
+    theme.colors.secondary,
+    theme.colors.accent,
+    theme.colors.text,
+    theme.colors.background,
+    theme.colors.muted,
+  ];
   const currentBg = node.style.backgroundColor;
   const [bgMode, setBgMode] = useState<BgMode>(() => detectBgMode(currentBg));
 
@@ -235,12 +246,11 @@ export default function StyleTab({
         {bgMode === 'solid' ? (
           <label className={styles.inspectorField}>
             <span className={styles.inspectorFieldLabel}>배경색</span>
-            <input
-              className={styles.inspectorColorInput}
-              type="color"
+            <ColorPicker
               value={normalizeHex(currentBg)}
+              palette={palette}
               disabled={disabled}
-              onChange={(e) => onUpdateStyle({ backgroundColor: e.target.value })}
+              onChange={(hex) => onUpdateStyle({ backgroundColor: hex })}
             />
           </label>
         ) : null}
@@ -347,12 +357,11 @@ export default function StyleTab({
       <div className={styles.inspectorFieldGrid}>
         <label className={styles.inspectorField}>
           <span className={styles.inspectorFieldLabel}>Border color</span>
-          <input
-            className={styles.inspectorColorInput}
-            type="color"
+          <ColorPicker
             value={normalizeHex(node.style.borderColor)}
+            palette={palette}
             disabled={disabled}
-            onChange={(event) => onUpdateStyle({ borderColor: event.target.value })}
+            onChange={(hex) => onUpdateStyle({ borderColor: hex })}
           />
         </label>
       </div>
@@ -451,12 +460,11 @@ export default function StyleTab({
 
       <label className={styles.inspectorField}>
         <span className={styles.inspectorFieldLabel}>Shadow color</span>
-        <input
-          className={styles.inspectorColorInput}
-          type="color"
+        <ColorPicker
           value={normalizeHex(node.style.shadowColor)}
+          palette={palette}
           disabled={disabled}
-          onChange={(event) => onUpdateStyle({ shadowColor: event.target.value })}
+          onChange={(hex) => onUpdateStyle({ shadowColor: hex })}
         />
       </label>
     </div>

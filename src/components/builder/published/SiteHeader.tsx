@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import type { Locale } from '@/lib/locales';
-import type { BuilderNavItem, BuilderSiteSettings } from '@/lib/builder/site/types';
+import type { BuilderNavItem, BuilderSiteSettings, BuilderTheme } from '@/lib/builder/site/types';
+import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 
 function getLabel(item: BuilderNavItem, locale: Locale): string {
   if (typeof item.label === 'string') return item.label;
@@ -12,17 +13,34 @@ function getLabel(item: BuilderNavItem, locale: Locale): string {
 export default function SiteHeader({
   siteName,
   settings,
+  theme,
   navItems,
   locale,
   currentSlug,
+  onNavigate,
 }: {
   siteName: string;
   settings?: BuilderSiteSettings;
+  theme?: BuilderTheme;
   navItems: BuilderNavItem[];
   locale: Locale;
   currentSlug: string;
+  onNavigate?: (href: string) => void;
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const primaryColor = theme?.colors.primary || '#116dff';
+  const textColor = theme?.colors.text || '#374151';
+  const borderColor = theme?.colors.muted || '#e5e7eb';
+  const headingFont = theme?.fonts.heading;
+  const bodyFont = theme?.fonts.body;
+  const currentPath = buildSitePagePath(locale, currentSlug);
+
+  const handleNavigate = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!onNavigate || /^(https?:|mailto:|tel:|#)/.test(href)) return;
+    event.preventDefault();
+    setMenuOpen(false);
+    onNavigate(href);
+  };
 
   return (
     <header style={{
@@ -32,31 +50,39 @@ export default function SiteHeader({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      borderBottom: '1px solid #e5e7eb',
+      borderBottom: `1px solid ${borderColor}`,
       position: 'relative',
+      fontFamily: bodyFont,
+      color: textColor,
     }}>
       {/* Logo + Firm Name */}
-      <a href={`/${locale}/p/`} style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+      <a
+        href={buildSitePagePath(locale, '')}
+        onClick={(event) => handleNavigate(event, buildSitePagePath(locale, ''))}
+        style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}
+      >
         {settings?.logo && (
           <img src={settings.logo} alt={siteName} style={{ height: 32, width: 'auto' }} />
         )}
-        <strong style={{ fontSize: '1.1rem', color: '#0f172a' }}>{settings?.firmName || siteName}</strong>
+        <strong style={{ fontSize: '1.1rem', color: '#0f172a', fontFamily: headingFont }}>{settings?.firmName || siteName}</strong>
       </a>
 
       {/* Desktop Nav */}
       <nav style={{ display: 'flex', gap: 24 }} className="site-header-desktop-nav">
         {navItems.map((item) => {
-          const isActive = item.href === `/${locale}/p/${currentSlug}` || (currentSlug === '' && item.href === '/');
+          const href = normalizeSiteHref(item.href, locale);
+          const isActive = comparableSitePath(href, locale) === comparableSitePath(currentPath, locale);
           return (
             <a
               key={item.id}
-              href={item.href}
+              href={href}
+              onClick={(event) => handleNavigate(event, href)}
               style={{
-                color: isActive ? '#116dff' : '#374151',
+                color: isActive ? primaryColor : textColor,
                 textDecoration: 'none',
                 fontSize: '0.9rem',
                 fontWeight: isActive ? 700 : 500,
-                borderBottom: isActive ? '2px solid #116dff' : '2px solid transparent',
+                borderBottom: isActive ? `2px solid ${primaryColor}` : '2px solid transparent',
                 paddingBottom: 4,
                 transition: 'color 150ms ease, border-color 150ms ease',
               }}
@@ -80,7 +106,7 @@ export default function SiteHeader({
           fontSize: '1.5rem',
           cursor: 'pointer',
           padding: 4,
-          color: '#374151',
+          color: textColor,
         }}
       >
         {menuOpen ? '✕' : '☰'}
@@ -96,7 +122,7 @@ export default function SiteHeader({
             left: 0,
             right: 0,
             background: '#fff',
-            borderBottom: '1px solid #e5e7eb',
+            borderBottom: `1px solid ${borderColor}`,
             boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
             padding: '16px 24px',
             display: 'flex',
@@ -104,22 +130,24 @@ export default function SiteHeader({
             gap: 12,
             zIndex: 1000,
             animation: 'fadeIn 150ms ease',
+            fontFamily: bodyFont,
           }}
         >
           {navItems.map((item) => {
-            const isActive = item.href === `/${locale}/p/${currentSlug}` || (currentSlug === '' && item.href === '/');
+            const href = normalizeSiteHref(item.href, locale);
+            const isActive = comparableSitePath(href, locale) === comparableSitePath(currentPath, locale);
             return (
               <a
                 key={item.id}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
+                href={href}
+                onClick={(event) => handleNavigate(event, href)}
                 style={{
-                  color: isActive ? '#116dff' : '#374151',
+                  color: isActive ? primaryColor : textColor,
                   textDecoration: 'none',
                   fontSize: '1rem',
                   fontWeight: isActive ? 700 : 500,
                   padding: '8px 0',
-                  borderBottom: '1px solid #f3f4f6',
+                  borderBottom: `1px solid ${borderColor}`,
                 }}
               >
                 {getLabel(item, locale)}

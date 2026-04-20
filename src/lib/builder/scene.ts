@@ -175,13 +175,15 @@ export function buildBuilderSceneDocument(document: BuilderPageDocument): Builde
         notes: [
           `Persisted content-group node ${group.groupKey}.`,
           persistedSceneNode?.source === 'page-scene'
-            ? 'Geometry is now authoritative in page.scene and no longer treated as a bridge-only seed.'
+            ? 'Geometry is now authoritative in page.scene; measured bridge bounds are retained separately for convergence diagnostics.'
             : group.measuredAt
             ? 'Geometry now prefers the persisted page.scene bridge before section-scene fallback.'
             : 'Geometry still falls back to section-scene defaults until the page.scene bridge is measured.',
           group.bounds
-            ? `Measured desktop bounds ${formatBounds(group.bounds)}.`
-            : 'Desktop bounds are still unresolved on the current document.',
+            ? `Current desktop geometry ${formatBounds(group.bounds)}.`
+            : group.measuredBounds
+              ? `Measured desktop bridge bounds ${formatBounds(group.measuredBounds)}.`
+              : 'Desktop bounds are still unresolved on the current document.',
         ],
       });
     }
@@ -578,9 +580,11 @@ function resolveSectionContentGroups(
     datasetTargetIds: group.datasetTargetIds ? [...group.datasetTargetIds] : undefined,
     bounds: undefined,
     overrides: undefined,
+    measuredBounds: undefined,
+    measuredOverrides: undefined,
     constraints: {
       movement: 'section-flow' as const,
-      resize: 'none' as const,
+      resize: 'bounds-box' as const,
     },
     measuredAt: undefined,
   }));
@@ -598,10 +602,26 @@ function getPersistedPageSceneContentGroups(
       label: node.label,
       surfaceIds: [...node.surfaceIds],
       datasetTargetIds: node.datasetTargetIds ? [...node.datasetTargetIds] : undefined,
-      bounds: node.bounds ? { ...node.bounds } : undefined,
+      bounds: node.bounds ? { ...node.bounds } : node.measuredBounds ? { ...node.measuredBounds } : undefined,
       overrides: node.overrides
         ? Object.fromEntries(
             Object.entries(node.overrides).map(([viewport, bounds]) => [
+              viewport,
+              bounds ? { ...bounds } : bounds,
+            ])
+          )
+        : node.measuredOverrides
+          ? Object.fromEntries(
+              Object.entries(node.measuredOverrides).map(([viewport, bounds]) => [
+                viewport,
+                bounds ? { ...bounds } : bounds,
+              ])
+            )
+        : undefined,
+      measuredBounds: node.measuredBounds ? { ...node.measuredBounds } : undefined,
+      measuredOverrides: node.measuredOverrides
+        ? Object.fromEntries(
+            Object.entries(node.measuredOverrides).map(([viewport, bounds]) => [
               viewport,
               bounds ? { ...bounds } : bounds,
             ])

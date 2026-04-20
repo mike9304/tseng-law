@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
-import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardMutation } from '@/lib/builder/security/guard';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
 
 export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   let body: { navigation?: BuilderNavItem[]; locale?: string };

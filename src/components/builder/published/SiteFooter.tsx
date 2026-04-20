@@ -1,30 +1,40 @@
-import type { BuilderNavItem, BuilderSiteSettings } from '@/lib/builder/site/types';
+import type { BuilderNavItem, BuilderSiteSettings, BuilderTheme } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
+import { normalizeSiteHref } from '@/lib/builder/site/paths';
 
 function getLabel(item: BuilderNavItem, locale: Locale): string {
   if (typeof item.label === 'string') return item.label;
-  return (item.label as Record<string, string>)[locale] || '';
+  return (item.label as Record<string, string>)[locale] || (item.label as Record<string, string>).ko || '';
 }
 
 export default function SiteFooter({
   siteName,
   settings,
+  theme,
   navItems,
   locale,
 }: {
   siteName: string;
   settings?: BuilderSiteSettings;
+  theme?: BuilderTheme;
   navItems: BuilderNavItem[];
   locale: Locale;
 }) {
+  const primaryColor = theme?.colors.primary || '#116dff';
+  const textColor = theme?.colors.text || '#1f2937';
+  const mutedColor = theme?.colors.muted || '#f3f4f6';
+  const bodyFont = theme?.fonts.body;
+  const headingFont = theme?.fonts.heading;
+
   return (
     <footer style={{
       maxWidth: 1200,
       margin: '0 auto',
       padding: '40px 24px 24px',
-      borderTop: '1px solid #e5e7eb',
+      borderTop: `1px solid ${mutedColor}`,
       fontSize: '0.85rem',
       color: '#6b7280',
+      fontFamily: bodyFont,
     }}>
       <div style={{
         display: 'grid',
@@ -34,7 +44,7 @@ export default function SiteFooter({
       }}>
         {/* Column 1: Firm Info */}
         <div>
-          <strong style={{ color: '#1f2937', fontSize: '1rem', display: 'block', marginBottom: 12 }}>
+          <strong style={{ color: textColor, fontSize: '1rem', display: 'block', marginBottom: 12, fontFamily: headingFont }}>
             {settings?.firmName || siteName}
           </strong>
           {settings?.address && <p style={{ margin: '4px 0' }}>{settings.address}</p>}
@@ -45,11 +55,11 @@ export default function SiteFooter({
         {/* Column 2: Quick Links */}
         {navItems.length > 0 && (
           <div>
-            <strong style={{ color: '#1f2937', display: 'block', marginBottom: 12 }}>바로가기</strong>
+            <strong style={{ color: textColor, display: 'block', marginBottom: 12, fontFamily: headingFont }}>바로가기</strong>
             {navItems.map((item) => (
               <a
                 key={item.id}
-                href={item.href}
+                href={normalizeSiteHref(item.href, locale)}
                 style={{ display: 'block', color: '#6b7280', textDecoration: 'none', padding: '3px 0', transition: 'color 150ms' }}
               >
                 {getLabel(item, locale)}
@@ -60,11 +70,11 @@ export default function SiteFooter({
 
         {/* Column 3: Contact */}
         <div>
-          <strong style={{ color: '#1f2937', display: 'block', marginBottom: 12 }}>연락처</strong>
+          <strong style={{ color: textColor, display: 'block', marginBottom: 12, fontFamily: headingFont }}>연락처</strong>
           {settings?.phone && <p style={{ margin: '4px 0' }}>Tel: {settings.phone}</p>}
           {settings?.email && (
             <p style={{ margin: '4px 0' }}>
-              <a href={`mailto:${settings.email}`} style={{ color: '#116dff', textDecoration: 'none' }}>{settings.email}</a>
+              <a href={`mailto:${settings.email}`} style={{ color: primaryColor, textDecoration: 'none' }}>{settings.email}</a>
             </p>
           )}
         </div>
@@ -72,7 +82,7 @@ export default function SiteFooter({
 
       {/* Bottom bar */}
       <div style={{
-        borderTop: '1px solid #f3f4f6',
+        borderTop: `1px solid ${mutedColor}`,
         paddingTop: 16,
         textAlign: 'center',
         fontSize: '0.75rem',

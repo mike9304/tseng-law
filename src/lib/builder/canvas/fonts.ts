@@ -54,7 +54,9 @@ export function getCJKFonts(): FontOption[] {
 }
 
 export function buildGoogleFontsUrl(families: string[]): string {
-  const filtered = families.filter((f) => f !== 'system-ui');
+  const filtered = [...new Set(families
+    .map((family) => family.split(',')[0]?.trim().replace(/^['"]|['"]$/g, '') || family.trim())
+    .filter((family) => family.length > 0 && family !== 'system-ui'))];
   if (filtered.length === 0) return '';
   const params = filtered
     .map((family) => {

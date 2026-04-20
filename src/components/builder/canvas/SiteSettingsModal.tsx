@@ -1,8 +1,9 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import { DEFAULT_THEME, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
 
-interface SiteSettings {
+interface SiteSettingsForm {
   firmName: string;
   phone: string;
   email: string;
@@ -13,7 +14,7 @@ interface SiteSettings {
   favicon: string;
 }
 
-const EMPTY_SETTINGS: SiteSettings = {
+const EMPTY_SETTINGS: SiteSettingsForm = {
   firmName: '',
   phone: '',
   email: '',
@@ -37,7 +38,8 @@ const backdropStyle: React.CSSProperties = {
 };
 
 const panelStyle: React.CSSProperties = {
-  width: 480,
+  width: 560,
+  maxWidth: '92vw',
   maxHeight: '85vh',
   background: '#fff',
   borderRadius: 16,
@@ -80,7 +82,21 @@ const formStyle: React.CSSProperties = {
   padding: '16px 20px',
   display: 'flex',
   flexDirection: 'column',
+  gap: 20,
+};
+
+const sectionStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
   gap: 12,
+};
+
+const sectionHeadingStyle: React.CSSProperties = {
+  fontSize: '0.76rem',
+  fontWeight: 700,
+  letterSpacing: '0.05em',
+  textTransform: 'uppercase',
+  color: '#64748b',
 };
 
 const fieldStyle: React.CSSProperties = {
@@ -103,15 +119,22 @@ const inputStyle: React.CSSProperties = {
   color: '#0f172a',
   outline: 'none',
   transition: 'border-color 150ms ease',
+  boxSizing: 'border-box',
 };
 
 const footerStyle: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'flex-end',
+  justifyContent: 'space-between',
   gap: 8,
   padding: '12px 20px',
   borderTop: '1px solid #e2e8f0',
+};
+
+const statusStyle: React.CSSProperties = {
+  minHeight: 18,
+  fontSize: '0.78rem',
+  color: '#dc2626',
 };
 
 const cancelBtnStyle: React.CSSProperties = {
@@ -138,7 +161,7 @@ const saveBtnStyle: React.CSSProperties = {
 };
 
 interface FieldDef {
-  key: keyof SiteSettings;
+  key: keyof SiteSettingsForm;
   label: string;
   placeholder: string;
   type?: string;
@@ -155,68 +178,161 @@ const FIELDS: FieldDef[] = [
   { key: 'favicon', label: '파비콘 URL', placeholder: 'https://example.com/favicon.ico', type: 'url' },
 ];
 
+function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
+  return {
+    colors: { ...DEFAULT_THEME.colors, ...theme?.colors },
+    fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
+    radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
+  };
+}
+
+function toSettingsForm(settings?: Partial<BuilderSiteSettings>): SiteSettingsForm {
+  return {
+    firmName: settings?.firmName ?? '',
+    phone: settings?.phone ?? '',
+    email: settings?.email ?? '',
+    address: settings?.address ?? '',
+    businessHours: settings?.businessHours ?? '',
+    businessRegNumber: settings?.businessRegNumber ?? '',
+    logo: settings?.logo ?? '',
+    favicon: settings?.favicon ?? '',
+  };
+}
+
+function toSettingsPayload(settings: SiteSettingsForm): BuilderSiteSettings {
+  return {
+    firmName: settings.firmName,
+    phone: settings.phone,
+    email: settings.email,
+    address: settings.address,
+    businessHours: settings.businessHours,
+    businessRegNumber: settings.businessRegNumber,
+    logo: settings.logo,
+    favicon: settings.favicon,
+  };
+}
+
+function isValidHexColor(value: string): boolean {
+  return /^#[0-9a-fA-F]{6}$/.test(value.trim());
+}
+
+interface SiteSettingsResponse {
+  ok?: boolean;
+  settings?: Partial<BuilderSiteSettings>;
+  theme?: BuilderTheme;
+  error?: string;
+}
+
 export default function SiteSettingsModal({
   open,
+  locale,
+  onSaved,
   onClose,
 }: {
   open: boolean;
+  locale: string;
+  onSaved?: (payload: { settings: BuilderSiteSettings; theme: BuilderTheme }) => void;
   onClose: () => void;
 }) {
-  const [settings, setSettings] = useState<SiteSettings>(EMPTY_SETTINGS);
+  const [settings, setSettings] = useState<SiteSettingsForm>(EMPTY_SETTINGS);
+  const [theme, setTheme] = useState<BuilderTheme>(DEFAULT_THEME);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const fetchSettings = useCallback(async () => {
     setLoading(true);
+    setError(null);
     try {
-      const res = await fetch('/api/builder/site/settings', {
+      const response = await fetch(`/api/builder/site/settings?locale=${encodeURIComponent(locale)}`, {
         credentials: 'same-origin',
       });
-      if (res.ok) {
-        const data = (await res.json()) as { settings?: Partial<SiteSettings> };
-        if (data.settings) {
-          setSettings({ ...EMPTY_SETTINGS, ...data.settings });
-        }
+      const data = (await response.json().catch(() => ({}))) as SiteSettingsResponse;
+      if (response.ok) {
+        setSettings(toSettingsForm(data.settings));
+        setTheme(mergeTheme(data.theme));
+      } else {
+        setError(data.error || '사이트 설정을 불러오지 못했습니다.');
       }
     } catch {
-      // silent
+      setError('사이트 설정을 불러오지 못했습니다.');
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [locale]);
 
   useEffect(() => {
-    if (open) fetchSettings();
+    if (open) void fetchSettings();
   }, [open, fetchSettings]);
 
   useEffect(() => {
     if (!open) return undefined;
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, [open, onClose]);
 
   const handleSave = async () => {
+    if (!isValidHexColor(theme.colors.primary)) {
+      setError('Primary color는 #RRGGBB 형식이어야 합니다.');
+      return;
+    }
+
     setSaving(true);
+    setError(null);
     try {
-      await fetch('/api/builder/site/settings', {
+      const payload = {
+        settings: toSettingsPayload(settings),
+        theme,
+      };
+      const response = await fetch(`/api/builder/site/settings?locale=${encodeURIComponent(locale)}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'same-origin',
-        body: JSON.stringify({ settings }),
+        body: JSON.stringify(payload),
+      });
+      const data = (await response.json().catch(() => ({}))) as SiteSettingsResponse;
+      if (!response.ok) {
+        setError(data.error || '사이트 설정을 저장하지 못했습니다.');
+        return;
+      }
+
+      onSaved?.({
+        settings: payload.settings,
+        theme: payload.theme,
       });
       onClose();
     } catch {
-      // silent
+      setError('사이트 설정을 저장하지 못했습니다.');
     } finally {
       setSaving(false);
     }
   };
 
-  const updateField = (key: keyof SiteSettings, value: string) => {
+  const updateField = (key: keyof SiteSettingsForm, value: string) => {
     setSettings((prev) => ({ ...prev, [key]: value }));
+  };
+
+  const updateThemeColor = (value: string) => {
+    setTheme((prev) => ({
+      ...prev,
+      colors: {
+        ...prev.colors,
+        primary: value,
+      },
+    }));
+  };
+
+  const updateThemeFont = (key: 'heading' | 'body', value: string) => {
+    setTheme((prev) => ({
+      ...prev,
+      fonts: {
+        ...prev.fonts,
+        [key]: value,
+      },
+    }));
   };
 
   if (!open) return null;
@@ -224,8 +340,8 @@ export default function SiteSettingsModal({
   return (
     <div
       style={backdropStyle}
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
       }}
     >
       <div style={panelStyle}>
@@ -242,45 +358,116 @@ export default function SiteSettingsModal({
               로딩 중...
             </div>
           ) : (
-            FIELDS.map((f) => (
-              <div key={f.key} style={fieldStyle}>
-                <label style={labelStyle}>{f.label}</label>
-                <input
-                  type={f.type || 'text'}
-                  value={settings[f.key]}
-                  placeholder={f.placeholder}
-                  style={inputStyle}
-                  onChange={(e) => updateField(f.key, e.target.value)}
-                  onFocus={(e) => {
-                    (e.currentTarget as HTMLInputElement).style.borderColor = '#116dff';
-                  }}
-                  onBlur={(e) => {
-                    (e.currentTarget as HTMLInputElement).style.borderColor = '#e2e8f0';
-                  }}
-                />
+            <>
+              <div style={sectionStyle}>
+                <div style={sectionHeadingStyle}>기본 정보</div>
+                {FIELDS.map((field) => (
+                  <div key={field.key} style={fieldStyle}>
+                    <label style={labelStyle}>{field.label}</label>
+                    <input
+                      type={field.type || 'text'}
+                      value={settings[field.key]}
+                      placeholder={field.placeholder}
+                      style={inputStyle}
+                      onChange={(event) => updateField(field.key, event.target.value)}
+                      onFocus={(event) => {
+                        event.currentTarget.style.borderColor = '#116dff';
+                      }}
+                      onBlur={(event) => {
+                        event.currentTarget.style.borderColor = '#e2e8f0';
+                      }}
+                    />
+                  </div>
+                ))}
               </div>
-            ))
+
+              <div style={sectionStyle}>
+                <div style={sectionHeadingStyle}>테마</div>
+
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Primary color</label>
+                  <div style={{ display: 'grid', gridTemplateColumns: '56px 1fr', gap: 8, alignItems: 'center' }}>
+                    <input
+                      type="color"
+                      value={isValidHexColor(theme.colors.primary) ? theme.colors.primary : DEFAULT_THEME.colors.primary}
+                      style={{ width: 56, height: 38, padding: 4, border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff', cursor: 'pointer' }}
+                      onChange={(event) => updateThemeColor(event.target.value)}
+                    />
+                    <input
+                      type="text"
+                      value={theme.colors.primary}
+                      placeholder="#123B63"
+                      style={inputStyle}
+                      onChange={(event) => updateThemeColor(event.target.value)}
+                      onFocus={(event) => {
+                        event.currentTarget.style.borderColor = '#116dff';
+                      }}
+                      onBlur={(event) => {
+                        event.currentTarget.style.borderColor = '#e2e8f0';
+                      }}
+                    />
+                  </div>
+                </div>
+
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Heading font</label>
+                  <input
+                    type="text"
+                    value={theme.fonts.heading}
+                    placeholder="예: Noto Sans KR, sans-serif"
+                    style={inputStyle}
+                    onChange={(event) => updateThemeFont('heading', event.target.value)}
+                    onFocus={(event) => {
+                      event.currentTarget.style.borderColor = '#116dff';
+                    }}
+                    onBlur={(event) => {
+                      event.currentTarget.style.borderColor = '#e2e8f0';
+                    }}
+                  />
+                </div>
+
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Body font</label>
+                  <input
+                    type="text"
+                    value={theme.fonts.body}
+                    placeholder="예: Noto Sans KR, sans-serif"
+                    style={inputStyle}
+                    onChange={(event) => updateThemeFont('body', event.target.value)}
+                    onFocus={(event) => {
+                      event.currentTarget.style.borderColor = '#116dff';
+                    }}
+                    onBlur={(event) => {
+                      event.currentTarget.style.borderColor = '#e2e8f0';
+                    }}
+                  />
+                </div>
+              </div>
+            </>
           )}
         </div>
 
         <div style={footerStyle}>
-          <button type="button" style={cancelBtnStyle} onClick={onClose}>
-            취소
-          </button>
-          <button
-            type="button"
-            style={saveBtnStyle}
-            onClick={handleSave}
-            disabled={saving || loading}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = '#0b5cdb';
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = '#116dff';
-            }}
-          >
-            {saving ? '저장 중...' : '저장'}
-          </button>
+          <span style={statusStyle}>{error ?? ''}</span>
+          <div style={{ display: 'flex', gap: 8 }}>
+            <button type="button" style={cancelBtnStyle} onClick={onClose}>
+              취소
+            </button>
+            <button
+              type="button"
+              style={saveBtnStyle}
+              onClick={handleSave}
+              disabled={saving || loading}
+              onMouseEnter={(event) => {
+                event.currentTarget.style.background = '#0b5cdb';
+              }}
+              onMouseLeave={(event) => {
+                event.currentTarget.style.background = '#116dff';
+              }}
+            >
+              {saving ? '저장 중...' : '저장'}
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -119,7 +119,7 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
     backgroundColor: z.string().max(64).optional(),
     textTransform: z.enum(['none', 'uppercase', 'lowercase', 'capitalize']).optional(),
     className: z.string().max(256).optional(),
-    as: z.enum(['div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
+    as: z.enum(['div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'time']).optional(),
     rawInlineStyle: z.boolean().optional(),
   }),
 });
@@ -393,7 +393,19 @@ export function normalizeCanvasDocument(
 ): BuilderCanvasDocument {
   const fallback = createDefaultCanvasDocument(locale);
   const parsed = builderCanvasDocumentSchema.safeParse(input);
-  if (!parsed.success) return fallback;
+  if (!parsed.success) {
+    const issues = parsed.error.issues.slice(0, 3).map((i) => ({
+      path: i.path.join('.'),
+      code: i.code,
+      message: i.message,
+    }));
+    // eslint-disable-next-line no-console
+    console.warn(
+      '[normalizeCanvasDocument] schema rejected — falling back to sandbox template',
+      { totalIssues: parsed.error.issues.length, sample: issues },
+    );
+    return fallback;
+  }
 
   const nodes = [...parsed.data.nodes]
     .sort((left, right) => left.zIndex - right.zIndex)

@@ -43,7 +43,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         category: 'case',
         date: '2025.09.13',
         readTime: '3분',
-        image: '/images/feature-1.svg',
+        image: '/images/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
         keywords: ['헬스장', '손해배상', '157만 TWD', '소송사례']
       },
       {
@@ -54,7 +54,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         category: 'formation',
         date: '2025.02.04',
         readTime: '3분',
-        image: '/images/feature-2.svg',
+        image: '/images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
         keywords: ['화장품', 'PIF', 'TFDA', '법인설립']
       },
       {
@@ -65,7 +65,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         category: 'formation',
         date: '2025.09.13',
         readTime: '2분',
-        image: '/images/feature-3.svg',
+        image: '/images/005-taiwan-company-establishment-advanced-2/featured-01.jpg',
         keywords: ['자본금', '예비계좌', '외환관리법', '법인설립']
       },
       {
@@ -74,7 +74,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '해산·청산 절차를 통해 잔여재산을 분배받는 자본금 회수 흐름을 설명합니다.',
         href: '/ko/insights/withdraw-capital',
         category: 'formation',
-        image: '/images/feature-1.svg',
+        image: '/images/002-withdraw-capital-taiwan-company/featured-01.png',
         keywords: ['해산', '청산', '자본금 회수']
       },
       {
@@ -83,7 +83,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '대만 물류업 진출 시 검토해야 할 법적 요건과 실무 절차를 정리했습니다.',
         href: '/ko/insights/logistics-business',
         category: 'formation',
-        image: '/images/feature-2.svg',
+        image: '/images/017-taiwan-logistics-business-setup/featured-01.jpg',
         keywords: ['물류업', '사업허가', '대만 진출']
       },
       {
@@ -92,7 +92,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '영업 주소지 선정 시 용도지역 규정과 지방정부 요건을 함께 확인해야 합니다.',
         href: '/ko/insights/company-location',
         category: 'formation',
-        image: '/images/feature-3.svg',
+        image: '/images/015-taiwan-company-setup-pitch-location/featured-01.jpg',
         keywords: ['영업장소', '용도지역', '식당사업']
       },
       {
@@ -101,7 +101,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '회사 설립 이후 취업비자·거류증 관련 실무 질문을 심화 Q&A로 정리했습니다.',
         href: '/ko/insights/company-advanced-1',
         category: 'formation',
-        image: '/images/feature-1.svg',
+        image: '/images/013-taiwan-company-establishment-advanced-1/featured-01.jpg',
         keywords: ['취업비자', '거류증', '법인설립']
       },
       {
@@ -110,7 +110,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '자회사, 지사, 연락사무소의 법인격·세무·영업 범위를 비교합니다.',
         href: '/ko/insights/subsidiary-vs-branch',
         category: 'formation',
-        image: '/images/feature-2.svg',
+        image: '/images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg',
         keywords: ['자회사', '지사', '연락사무소']
       },
       {
@@ -119,7 +119,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '회사 설립 절차와 필요 서류를 기초 단계부터 영상과 함께 안내합니다.',
         href: '/ko/insights/company-basics',
         category: 'formation',
-        image: '/images/feature-3.svg',
+        image: '/images/001-taiwan-company-establishment-basics/featured-01.jpg',
         keywords: ['회사설립', '기초편', '필요서류']
       },
       {
@@ -128,7 +128,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '대만법상 상속·친권 이슈를 국제결혼 사례 관점에서 해석한 분석 글입니다.',
         href: '/ko/insights/inheritance-custody',
         category: 'legal',
-        image: '/images/feature-1.svg',
+        image: '/images/016-taiwan-inheritance-custody-analysis/featured-01.jpg',
         keywords: ['상속', '친권', '국제결혼']
       },
       {
@@ -137,7 +137,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '대만 추월 규칙과 사고 발생 시 과실·책임 판단 기준을 정리했습니다.',
         href: '/ko/insights/overtaking-accident',
         category: 'legal',
-        image: '/images/feature-2.svg',
+        image: '/images/012-taiwan-overtaking-accident-liability/featured-01.jpg',
         keywords: ['교통사고', '추월', '과실책임']
       },
       {
@@ -146,7 +146,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '대만 노동법상 자발적 퇴사 예외 상황에서 퇴직금 가능성을 설명합니다.',
         href: '/ko/insights/severance-exception',
         category: 'legal',
-        image: '/images/feature-3.svg',
+        image: '/images/009-직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외/featured-01.jpeg',
         keywords: ['퇴직금', '노동법', '자발적 퇴사']
       },
       {
@@ -155,7 +155,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '국제결혼 증가 상황에서 대만 이혼 조정·소송 절차를 Q&A로 설명합니다.',
         href: '/ko/insights/divorce-qna',
         category: 'legal',
-        image: '/images/feature-1.svg',
+        image: '/images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg',
         keywords: ['이혼', '조정', '가사소송']
       },
       {
@@ -164,7 +164,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '마사지 산업의 역사와 현행 규제 체계를 함께 정리한 법률정보 글입니다.',
         href: '/ko/insights/massage-law',
         category: 'legal',
-        image: '/images/feature-2.svg',
+        image: '/images/006-taiwan-massage-history-law/featured-01.jpg',
         keywords: ['마사지', '규제', '법률정보']
       },
       {
@@ -173,7 +173,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '최소 근무기간 약정의 유효요건과 위반 시 법적 효과를 설명합니다.',
         href: '/ko/insights/mandatory-employment',
         category: 'legal',
-        image: '/images/feature-3.svg',
+        image: '/images/014-taiwan-mandatory-employment-period/featured-01.jpg',
         keywords: ['의무재직', '근로계약', '노동분쟁']
       },
       {
@@ -182,7 +182,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '한국과 대만의 퇴직금 제도 차이와 해고·퇴직금 관계를 비교합니다.',
         href: '/ko/insights/labor-severance',
         category: 'legal',
-        image: '/images/feature-1.svg',
+        image: '/images/008-대만-노동법-대만에서-퇴직금-받기-어렵다고/featured-01.jpg',
         keywords: ['노동법', '퇴직금', '해고']
       },
       {
@@ -191,7 +191,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '사고 직후 대응, 경찰 신고, 보험 처리, 배상 청구 절차를 안내합니다.',
         href: '/ko/insights/traffic-accident-procedure',
         category: 'legal',
-        image: '/images/feature-2.svg',
+        image: '/images/003-taiwan-traffic-accident-procedure/featured-01.jpg',
         keywords: ['교통사고', '보험', '배상청구']
       }
     ]
@@ -215,7 +215,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         category: 'case',
         date: '2025.09.13',
         readTime: '3分',
-        image: '/images/feature-1.svg',
+        image: '/images/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
         keywords: ['健身房', '損害賠償', '157萬 TWD']
       },
       {
@@ -226,7 +226,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         category: 'formation',
         date: '2025.02.04',
         readTime: '3分',
-        image: '/images/feature-2.svg',
+        image: '/images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg',
         keywords: ['化妝品', 'PIF', 'TFDA', '公司設立']
       },
       {
@@ -237,7 +237,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         category: 'formation',
         date: '2025.09.13',
         readTime: '2分',
-        image: '/images/feature-3.svg',
+        image: '/images/005-taiwan-company-establishment-advanced-2/featured-01.jpg',
         keywords: ['資本額', '籌備帳戶', '公司設立']
       },
       {
@@ -246,7 +246,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '透過解散與清算程序，依法分配剩餘財產。',
         href: '/zh-hant/insights/withdraw-capital',
         category: 'formation',
-        image: '/images/feature-1.svg',
+        image: '/images/002-withdraw-capital-taiwan-company/featured-01.png',
         keywords: ['解散', '清算', '資本回收']
       },
       {
@@ -255,7 +255,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '整理物流業在台落地時需要留意的法律與程序。',
         href: '/zh-hant/insights/logistics-business',
         category: 'formation',
-        image: '/images/feature-2.svg',
+        image: '/images/017-taiwan-logistics-business-setup/featured-01.jpg',
         keywords: ['物流業', '營運許可']
       },
       {
@@ -264,7 +264,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '選址時除了市場因素，也要先確認土地使用分區與地方規範。',
         href: '/zh-hant/insights/company-location',
         category: 'formation',
-        image: '/images/feature-3.svg',
+        image: '/images/015-taiwan-company-setup-pitch-location/featured-01.jpg',
         keywords: ['營業場所', '土地使用分區']
       },
       {
@@ -273,7 +273,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '彙整公司設立後就業簽證與居留證常見問題。',
         href: '/zh-hant/insights/company-advanced-1',
         category: 'formation',
-        image: '/images/feature-1.svg',
+        image: '/images/013-taiwan-company-establishment-advanced-1/featured-01.jpg',
         keywords: ['就業簽證', '居留證']
       },
       {
@@ -282,7 +282,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '比較子公司、分公司與聯絡處在法律地位與稅務上的差異。',
         href: '/zh-hant/insights/subsidiary-vs-branch',
         category: 'formation',
-        image: '/images/feature-2.svg',
+        image: '/images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg',
         keywords: ['子公司', '分公司', '聯絡處']
       },
       {
@@ -291,7 +291,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '從基本流程到所需文件，快速掌握設立重點。',
         href: '/zh-hant/insights/company-basics',
         category: 'formation',
-        image: '/images/feature-3.svg',
+        image: '/images/001-taiwan-company-establishment-basics/featured-01.jpg',
         keywords: ['公司設立', '流程', '文件']
       },
       {
@@ -300,7 +300,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '以跨國婚姻視角解讀台灣法下的繼承與親權問題。',
         href: '/zh-hant/insights/inheritance-custody',
         category: 'legal',
-        image: '/images/feature-1.svg',
+        image: '/images/016-taiwan-inheritance-custody-analysis/featured-01.jpg',
         keywords: ['繼承', '親權', '跨國婚姻']
       },
       {
@@ -309,7 +309,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '整理台灣超車規則與事故責任判斷實務。',
         href: '/zh-hant/insights/overtaking-accident',
         category: 'legal',
-        image: '/images/feature-2.svg',
+        image: '/images/012-taiwan-overtaking-accident-liability/featured-01.jpg',
         keywords: ['交通事故', '超車', '過失責任']
       },
       {
@@ -318,7 +318,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '說明台灣勞動法下自願離職的例外情形。',
         href: '/zh-hant/insights/severance-exception',
         category: 'legal',
-        image: '/images/feature-3.svg',
+        image: '/images/009-직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외/featured-01.jpeg',
         keywords: ['勞動法', '資遣費']
       },
       {
@@ -327,7 +327,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '以實務問答整理離婚調解與訴訟流程。',
         href: '/zh-hant/insights/divorce-qna',
         category: 'legal',
-        image: '/images/feature-1.svg',
+        image: '/images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg',
         keywords: ['離婚', '家事', '調解']
       },
       {
@@ -336,7 +336,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '從產業演變到現行規範，整理核心法律重點。',
         href: '/zh-hant/insights/massage-law',
         category: 'legal',
-        image: '/images/feature-2.svg',
+        image: '/images/006-taiwan-massage-history-law/featured-01.jpg',
         keywords: ['按摩', '產業規範']
       },
       {
@@ -345,7 +345,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '解析最低服務年限約定的有效條件與違反效果。',
         href: '/zh-hant/insights/mandatory-employment',
         category: 'legal',
-        image: '/images/feature-3.svg',
+        image: '/images/014-taiwan-mandatory-employment-period/featured-01.jpg',
         keywords: ['最低服務年限', '勞動契約']
       },
       {
@@ -354,7 +354,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '比較韓國與台灣制度差異，釐清資遣費要件。',
         href: '/zh-hant/insights/labor-severance',
         category: 'legal',
-        image: '/images/feature-1.svg',
+        image: '/images/008-대만-노동법-대만에서-퇴직금-받기-어렵다고/featured-01.jpg',
         keywords: ['勞動法', '資遣費', '解雇']
       },
       {
@@ -363,7 +363,7 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
         summary: '事故後報警、保險與求償流程一次整理。',
         href: '/zh-hant/insights/traffic-accident-procedure',
         category: 'legal',
-        image: '/images/feature-2.svg',
+        image: '/images/003-taiwan-traffic-accident-procedure/featured-01.jpg',
         keywords: ['交通事故', '保險', '求償']
       }
     ]

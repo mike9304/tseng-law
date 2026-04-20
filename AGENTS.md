@@ -39,7 +39,7 @@
 
 ## 🚨 "껍데기만 완성" 주의 — 진짜 동작하지 않는 것들
 
-- **Container flex/grid**: Inspector UI는 있지만 `parentId` 필드 없어서 자식이 실제로 컨테이너 안에 들어가지 않음. 껍데기.
+- **Container flex/grid**: `parentId` 는 schema 에 있고 (`types.ts:90`) Container Element 가 `flexToCSS`/`gridToCSS` 를 자기 style 에 적용함. 하지만 `public-page.tsx:157` 의 `renderPublishedNode` 가 non-top-level child wrapper 를 `position: absolute` + `left/top = rect.x/y` 로 감싸서 자식이 flex/grid flow 를 탈출. 결과: layoutMode='flex'/'grid' 가 시각 효과 0. 컨테이너는 **"시각적 프레임"** 일 뿐 auto-layout 실동작 안 함. Phase 3 widget library 전에 해결 필요 (Codex 후보: public-page.tsx 렌더러가 parent layoutMode 를 전파받아 non-absolute 부모의 자식은 relative flow 로 렌더).
 - **모바일 반응형**: CSS `@media` 덮어쓰기 훅. 진짜 모바일 에디터 아님.
 - **Google Fonts 로더**: 실제로 페이지에 주입되지만 폰트 전체 목록 검증 미진.
 

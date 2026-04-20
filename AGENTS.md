@@ -24,16 +24,18 @@
 
 세션 흐름: 사용자가 target W__ 지정 → Manager(Claude Opus)가 SESSION.md 작성 → 워커 agent 발주 / Codex 프롬프트 제공 → 통합 → 브라우저 검증 → Wix 체크포인트.md 갱신 → 계획서 § 16 Changelog 한 줄 → SESSION.md 리셋.
 
-## 현재 상태 (2026-04-18 기준)
+## 현재 상태 (2026-04-20 기준)
 
-- **Wix 체크포인트 점수**: 🟢 **4 / 225** (W01, W05, W13, W16). 스코어카드 W01~W30 에서 W01~W225 로 확장 (A + Motion + Bookings 스코프).
-- **F0 (메인 사이트 → 빌더)**: 코드 완료 + local 좌표 포지셔닝 버그 fix 완료. `/ko` 9 composite 로 home-legacy 동일 컴포넌트 렌더, `/ko/{about,services,contact,lawyers,faq,pricing,reviews,privacy,disclaimer}` 각각 단일 `legacy-page-*` composite 로 원본 1:1 렌더.
+- **Wix 체크포인트 점수**: 🟢 **4 / 225** (W01, W05, W13, W16). S-05 W02~W12 8건 브라우저 검증 대기 (녹색 시 12/225). 스코어카드 W01~W225.
+- **F0 (메인 사이트 → 빌더)**: 코드 완료 + local 좌표 포지셔닝 버그 fix 완료. `/ko` 384 builder-pub-node 로 홈 decompose (home-seed-v6). `/ko/{about,services,contact,lawyers,faq,pricing,reviews,privacy,disclaimer}` 각각 decompose-page-*.ts 로 30~193 builder-pub-node 렌더 (S-06).
+- **S-06 (2026-04-20)**: 9 서브페이지 decompose propagate 완료. 각 페이지가 `legacy-page-*` 단일 composite → 수십~수백 개별 편집 가능 builder 노드 트리로 전환. 라우트 9 per-page → `[locale]/[[...slug]]` catch-all 로 통합. 시각 1:1 패리티는 사용자 브라우저 대조 대기.
 - **슬롯 편집 MVP (S-02, 2026-04-18)**: `BuilderSurfaceProvider` Context override + `SurfaceText` wrapper, Inspector 의 composite surface editor (textarea), 캔버스 인라인 contentEditable (Enter/blur commit, Esc revert). 현재 9 composite 의 섹션 헤더 (label/title/description/상단 버튼) 만 SurfaceText 적용. 동적 리스트 (service cards items, FAQ 문항, insights posts, offices, stats, attorney details) 는 미적용.
-- **SEED_VERSION**: home `home-seed-v4`, 서브페이지 `site-page-seed-v2`. admin-builder `?reseed=1` 강제 force flag 지원.
+- **SEED_VERSION**: home `home-seed-v6`, 서브페이지 `site-page-seed-v3`. admin-builder `?reseed=1` 강제 force flag 지원.
+- **스키마 safe parse**: `normalizeCanvasDocument` (types.ts) 가 safeParse 실패 시 console.warn 로 첫 3 issue 보고 후 5-node sandbox fallback. 침묵 fallback 으로 에디터가 실제 홈 대신 플레이스홀더 보여주는 버그 반복 방지.
 - **역할 고정**: Claude Opus = Manager / Architect. Codex = 워커 (자기 주도 작업 중단, Manager 가 제공하는 프롬프트만 실행).
 - **진입점**: `/admin-builder`로 단일화. `/admin-builder/sandbox`는 redirect.
 - **새 페이지 기본 포맷**: `canvas-scene-vnext`. 좌표 시스템: `node.rect` 는 **local-to-parent**. 절대 좌표 필요 시 `resolveCanvasNodeAbsoluteRect(node, nodesById)` 경유.
-- **legacy fallback**: `(legacy)` route group 에 10 페이지. 빌더 published 가 있으면 빌더 렌더, 없으면 legacy 렌더. 현재 모든 서브페이지는 composite seed 를 publish 해서 빌더 경로로 감.
+- **legacy fallback**: `(legacy)` route group 에 10 페이지. 빌더 published 가 있으면 빌더 렌더, 없으면 legacy 렌더. 현재 모든 서브페이지는 decompose seed 를 publish 해서 빌더 경로로 감.
 
 ## 🚨 "껍데기만 완성" 주의 — 진짜 동작하지 않는 것들
 

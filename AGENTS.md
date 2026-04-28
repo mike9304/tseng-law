@@ -24,10 +24,11 @@
 
 세션 흐름: 사용자가 target W__ 지정 → Manager(Claude Opus)가 SESSION.md 작성 → 워커 agent 발주 / Codex 프롬프트 제공 → 통합 → 브라우저 검증 → Wix 체크포인트.md 갱신 → 계획서 § 16 Changelog 한 줄 → SESSION.md 리셋.
 
-## 현재 상태 (2026-04-20 기준)
+## 현재 상태 (2026-04-28 기준)
 
-- **Wix 체크포인트 점수**: 🟢 **4 / 225** (W01, W05, W13, W16). S-05 W02~W12 8건 브라우저 검증 대기 (녹색 시 12/225). 스코어카드 W01~W225.
-- **F0 (메인 사이트 → 빌더)**: 코드 완료 + local 좌표 포지셔닝 버그 fix 완료. `/ko` 384 builder-pub-node 로 홈 decompose (home-seed-v6). `/ko/{about,services,contact,lawyers,faq,pricing,reviews,privacy,disclaimer}` 각각 decompose-page-*.ts 로 30~193 builder-pub-node 렌더 (S-06).
+- **Wix 체크포인트 점수**: 🟢 **4 / 225** (W01, W05, W13, W16). S-05 W02~W12 8건 브라우저 검증 대기 (녹색 시 12/225). S-07 은 W 직결 없음 (Phase 3 widget foundation). 스코어카드 W01~W225.
+- **F0 (메인 사이트 → 빌더)**: 코드 완료 + local 좌표 포지셔닝 버그 fix 완료. `/ko` 390 builder-pub-node 로 홈 decompose (home-seed-v6, service icon 노드 +6 포함). `/ko/{about,services,contact,lawyers,faq,pricing,reviews,privacy,disclaimer}` 각각 decompose-page-*.ts 로 30~193 builder-pub-node 렌더 (S-06).
+- **S-07 (2026-04-28)**: Container auto-layout 실동작. `public-page.tsx`/`CanvasNode.tsx` 가 parent layoutMode 전파, flex/grid 부모의 child wrapper 는 relative flow. 기존 decompose 는 absolute 기본 유지 → 회귀 0. fixture: `/ko/admin-builder/_dev/flex` (3 child 가 row/center/gap=24 로 배치, rect.x/y 무시). Phase 3 widget library foundation 준비.
 - **S-06 (2026-04-20)**: 9 서브페이지 decompose propagate 완료. 각 페이지가 `legacy-page-*` 단일 composite → 수십~수백 개별 편집 가능 builder 노드 트리로 전환. 라우트 9 per-page → `[locale]/[[...slug]]` catch-all 로 통합. 시각 1:1 패리티는 사용자 브라우저 대조 대기.
 - **슬롯 편집 MVP (S-02, 2026-04-18)**: `BuilderSurfaceProvider` Context override + `SurfaceText` wrapper, Inspector 의 composite surface editor (textarea), 캔버스 인라인 contentEditable (Enter/blur commit, Esc revert). 현재 9 composite 의 섹션 헤더 (label/title/description/상단 버튼) 만 SurfaceText 적용. 동적 리스트 (service cards items, FAQ 문항, insights posts, offices, stats, attorney details) 는 미적용.
 - **SEED_VERSION**: home `home-seed-v6`, 서브페이지 `site-page-seed-v3`. admin-builder `?reseed=1` 강제 force flag 지원.
@@ -39,7 +40,7 @@
 
 ## 🚨 "껍데기만 완성" 주의 — 진짜 동작하지 않는 것들
 
-- **Container flex/grid**: `parentId` 는 schema 에 있고 (`types.ts:90`) Container Element 가 `flexToCSS`/`gridToCSS` 를 자기 style 에 적용함. 하지만 `public-page.tsx:157` 의 `renderPublishedNode` 가 non-top-level child wrapper 를 `position: absolute` + `left/top = rect.x/y` 로 감싸서 자식이 flex/grid flow 를 탈출. 결과: layoutMode='flex'/'grid' 가 시각 효과 0. 컨테이너는 **"시각적 프레임"** 일 뿐 auto-layout 실동작 안 함. Phase 3 widget library 전에 해결 필요 (Codex 후보: public-page.tsx 렌더러가 parent layoutMode 를 전파받아 non-absolute 부모의 자식은 relative flow 로 렌더).
+- ~~**Container flex/grid**~~: **S-07 (2026-04-28) 해결.** `public-page.tsx` 의 `renderPublishedNode` + `CanvasNode.tsx` 에디터 렌더러 둘 다 parent layoutMode 전파. 부모가 'flex'/'grid' 이면 child wrapper 가 `position: relative` + `left/top/zIndex` 생략 → flex/grid flow 참여. 기존 decompose-*.ts 는 default 'absolute' 유지 → 회귀 0. 검증 fixture: `/ko/admin-builder/_dev/flex`. Phase 3 widget 올릴 foundation 완성.
 - **모바일 반응형**: CSS `@media` 덮어쓰기 훅. 진짜 모바일 에디터 아님.
 - **Google Fonts 로더**: 실제로 페이지에 주입되지만 폰트 전체 목록 검증 미진.
 

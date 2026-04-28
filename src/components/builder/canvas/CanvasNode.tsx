@@ -118,9 +118,15 @@ export default function CanvasNode({
   const selectionZIndexBoost = selected ? 10000 : 0;
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
   const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
+  const nodesById = new Map(allNodes.map((candidate) => [candidate.id, candidate]));
+  const parentNode = node.parentId ? nodesById.get(node.parentId) : undefined;
+  const parentLayoutMode = parentNode?.kind === 'container'
+    ? parentNode.content.layoutMode ?? 'absolute'
+    : undefined;
+  const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
   const childIds = childrenMap[node.id] ?? [];
   const nestedChildren = childIds
-    .map((cid) => allNodes.find((n) => n.id === cid))
+    .map((cid) => nodesById.get(cid))
     .filter((n): n is BuilderCanvasNode => n != null && n.visible);
 
   const renderNestedChildNodes = () =>
@@ -171,11 +177,12 @@ export default function CanvasNode({
       ref={nodeRef}
       className={`${styles.node} ${selected ? styles.nodeSelected : ''} ${node.locked ? styles.nodeLocked : ''}`}
       style={{
-        left: `${node.rect.x}px`,
-        top: `${node.rect.y}px`,
+        position: parentUsesFlowLayout ? 'relative' : 'absolute',
+        left: parentUsesFlowLayout ? undefined : `${node.rect.x}px`,
+        top: parentUsesFlowLayout ? undefined : `${node.rect.y}px`,
         width: `${node.rect.width}px`,
         height: `${node.rect.height}px`,
-        zIndex: node.zIndex + 10 + selectionZIndexBoost,
+        zIndex: parentUsesFlowLayout ? undefined : node.zIndex + 10 + selectionZIndexBoost,
         transform: `rotate(${node.rotation}deg)`,
         transformOrigin: 'center center',
         opacity: isDimmedRoot ? 0.3 : 1,
@@ -187,7 +194,6 @@ export default function CanvasNode({
       onPointerDown={(event) => {
         event.stopPropagation();
         if (event.altKey && node.parentId) {
-          const nodesById = new Map(allNodes.map((candidate) => [candidate.id, candidate]));
           let selectedAncestorId: string | null = selected ? node.id : null;
 
           if (!selectedAncestorId) {

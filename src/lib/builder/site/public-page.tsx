@@ -22,6 +22,8 @@ export interface ResolvedPublishedSitePage {
   canvas: BuilderCanvasDocument;
 }
 
+type ParentLayoutMode = 'absolute' | 'flex' | 'grid';
+
 function findPageMeta(site: BuilderSiteDocument, slugPath: string): BuilderPageMeta | undefined {
   const candidates = !slugPath
     ? site.pages.filter((page) => page.isHomePage || page.slug === '')
@@ -140,12 +142,17 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
   function renderPublishedNode(
     node: BuilderCanvasNode,
     isTopLevel = false,
+    parentLayoutMode?: ParentLayoutMode,
   ): JSX.Element {
     const component = getComponent(node.kind);
     const childNodes = (childrenMap[node.id] ?? [])
       .map((childId) => nodesById.get(childId))
       .filter((child): child is BuilderCanvasNode => Boolean(child && child.visible !== false));
     const flowAsSection = isTopLevel && node.kind === 'composite';
+    const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
+    const useFlowWrapper = flowAsSection || parentUsesFlowLayout;
+    const childParentLayoutMode: ParentLayoutMode | undefined =
+      node.kind === 'container' ? node.content.layoutMode ?? 'absolute' : undefined;
     const flowSectionMetric = flowAsSection ? flowSectionMetrics.get(node.id) : undefined;
 
     return (
@@ -154,14 +161,14 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         className="builder-pub-node"
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
         style={{
-          position: flowAsSection ? 'relative' : 'absolute',
-          left: flowAsSection ? undefined : node.rect.x,
-          top: flowAsSection ? undefined : node.rect.y,
+          position: useFlowWrapper ? 'relative' : 'absolute',
+          left: useFlowWrapper ? undefined : node.rect.x,
+          top: useFlowWrapper ? undefined : node.rect.y,
           width: flowAsSection ? '100%' : node.rect.width,
           height: flowAsSection ? 'auto' : node.rect.height,
           minHeight: flowAsSection ? flowSectionMetric?.minHeight : undefined,
           marginTop: flowAsSection ? flowSectionMetric?.marginTop : undefined,
-          zIndex: flowAsSection ? undefined : node.zIndex,
+          zIndex: useFlowWrapper ? undefined : node.zIndex,
           overflow: flowAsSection ? 'visible' : undefined,
           transform: node.rotation ? `rotate(${node.rotation}deg)` : undefined,
           backgroundColor: node.style?.backgroundColor || undefined,
@@ -178,7 +185,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         {component ? (
           node.kind === 'container' ? (
             <component.Render node={node} mode="published">
-              {childNodes.map((child) => renderPublishedNode(child))}
+              {childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode))}
             </component.Render>
           ) : (
             <>
@@ -201,7 +208,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
             >
               {node.kind}
             </div>
-            {childNodes.map((child) => renderPublishedNode(child))}
+            {childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode))}
           </>
         )}
       </div>

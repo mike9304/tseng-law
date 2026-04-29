@@ -6,6 +6,12 @@ import {
   type BuilderBackgroundValue,
 } from '@/lib/builder/site/theme';
 import { BUTTON_STYLE_KEYS } from '@/lib/builder/site/component-variants';
+import {
+  ANIMATION_EASING_KEYS,
+  ENTRANCE_PRESET_KEYS,
+  HOVER_ANIMATION_PRESET_KEYS,
+  SCROLL_EFFECT_KEYS,
+} from '@/lib/builder/animations/presets';
 const imageFiltersSchema = z.object({
   brightness: z.number().min(0).max(200),
   contrast: z.number().min(0).max(200),
@@ -133,6 +139,26 @@ export const hoverStyleSchema = z.object({
 export type BuilderHoverStyle = z.infer<typeof hoverStyleSchema>;
 export type { BuilderBackgroundValue };
 
+export const animationConfigSchema = z.object({
+  entrance: z.object({
+    preset: z.enum(ENTRANCE_PRESET_KEYS).default('none'),
+    duration: z.number().int().min(100).max(3000).default(600),
+    delay: z.number().int().min(0).max(3000).default(0),
+    easing: z.enum(ANIMATION_EASING_KEYS).default('ease-out'),
+    triggerOnce: z.boolean().default(true),
+  }).optional(),
+  scroll: z.object({
+    effect: z.enum(SCROLL_EFFECT_KEYS).default('none'),
+    intensity: z.number().min(-100).max(100).default(20),
+  }).optional(),
+  hover: z.object({
+    preset: z.enum(HOVER_ANIMATION_PRESET_KEYS).default('none'),
+    transitionMs: z.number().int().min(0).max(2000).default(200),
+  }).optional(),
+}).optional();
+
+export type BuilderAnimationConfig = z.infer<typeof animationConfigSchema>;
+
 export const builderCanvasNodeStyleSchema = z.object({
   backgroundColor: backgroundValueSchema,
   borderColor: builderColorValueSchema,
@@ -160,6 +186,7 @@ const baseCanvasNodeSchema = z.object({
   locked: z.boolean().default(false),
   visible: z.boolean().default(true),
   hoverStyle: hoverStyleSchema,
+  animation: animationConfigSchema,
 });
 
 const textShadowSchema = z.object({

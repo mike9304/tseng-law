@@ -6,6 +6,12 @@ import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import {
+  buildEditorAnimationStyle,
+  getAnimationSummary,
+  mergeCssTransforms,
+  type AnimationPreviewPhase,
+} from '@/lib/builder/animations/animation-render';
+import {
   buildHoverTransform,
   resolveBackgroundStyle,
   resolveThemeColor,
@@ -47,6 +53,7 @@ export default function CanvasNode({
 }: CanvasNodeProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [animationPreviewPhase, setAnimationPreviewPhase] = useState<AnimationPreviewPhase>(null);
   const component = getComponent(node.kind);
   const theme = useBuilderTheme();
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -130,6 +137,50 @@ export default function CanvasNode({
     return () => document.removeEventListener('builder:start-text-edit', handler);
   }, [node.id, node.kind, node.locked]);
 
+  const previewEntrancePreset = node.animation?.entrance?.preset ?? 'none';
+  const previewEntranceDuration = node.animation?.entrance?.duration ?? 600;
+  const previewEntranceDelay = node.animation?.entrance?.delay ?? 0;
+
+  useEffect(() => {
+    let timeoutId: number | undefined;
+    let firstFrameId: number | undefined;
+    let secondFrameId: number | undefined;
+
+    const handler = (event: Event) => {
+      const detail = (event as CustomEvent<{ nodeId?: string }>).detail;
+      if (detail?.nodeId !== node.id || node.locked || previewEntrancePreset === 'none') return;
+
+      if (timeoutId) window.clearTimeout(timeoutId);
+      if (firstFrameId) window.cancelAnimationFrame(firstFrameId);
+      if (secondFrameId) window.cancelAnimationFrame(secondFrameId);
+
+      setAnimationPreviewPhase('initial');
+      firstFrameId = window.requestAnimationFrame(() => {
+        secondFrameId = window.requestAnimationFrame(() => {
+          setAnimationPreviewPhase('visible');
+        });
+      });
+      timeoutId = window.setTimeout(
+        () => setAnimationPreviewPhase(null),
+        previewEntranceDuration + previewEntranceDelay + 180,
+      );
+    };
+
+    document.addEventListener('builder:play-animation-preview', handler);
+    return () => {
+      document.removeEventListener('builder:play-animation-preview', handler);
+      if (timeoutId) window.clearTimeout(timeoutId);
+      if (firstFrameId) window.cancelAnimationFrame(firstFrameId);
+      if (secondFrameId) window.cancelAnimationFrame(secondFrameId);
+    };
+  }, [
+    node.id,
+    node.locked,
+    previewEntranceDelay,
+    previewEntranceDuration,
+    previewEntrancePreset,
+  ]);
+
   const isTextKind = node.kind === 'text' || node.kind === 'heading';
   const textContent = node.content as Record<string, unknown>;
   const typography = isTextKind
@@ -193,6 +244,13 @@ export default function CanvasNode({
 
   const hasVisibleBorder = node.style.borderWidth > 0;
   const activeHoverStyle = node.hoverStyle && isHovered ? node.hoverStyle : null;
+  const animationSummary = getAnimationSummary(node.animation);
+  const editorAnimationStyle = buildEditorAnimationStyle({
+    animation: node.animation,
+    isHovered,
+    previewPhase: animationPreviewPhase,
+    primaryColor: resolveThemeColor({ token: 'primary' }, theme),
+  });
   const backgroundStyle = resolveBackgroundStyle(
     activeHoverStyle?.backgroundColor ?? node.style.backgroundColor,
     theme,
@@ -210,6 +268,14 @@ export default function CanvasNode({
   const hoverTransition = node.hoverStyle
     ? `background ${node.hoverStyle.transitionMs ?? 200}ms ease, border-color ${node.hoverStyle.transitionMs ?? 200}ms ease, box-shadow ${node.hoverStyle.transitionMs ?? 200}ms ease, transform ${node.hoverStyle.transitionMs ?? 200}ms ease`
     : undefined;
+  const bodyTransform = mergeCssTransforms(
+    activeHoverStyle ? buildHoverTransform(activeHoverStyle) : undefined,
+    editorAnimationStyle.transform,
+  );
+  const bodyTransition = [hoverTransition, editorAnimationStyle.transition].filter(Boolean).join(', ') || undefined;
+  const renderedOpacity = typeof editorAnimationStyle.opacity === 'number'
+    ? (node.style.opacity / 100) * editorAnimationStyle.opacity
+    : node.style.opacity / 100;
 
   return (
     <div
@@ -281,6 +347,7 @@ export default function CanvasNode({
         <span>{node.kind}</span>
         <strong>{node.id}</strong>
         {node.locked ? <em>locked</em> : null}
+        {animationSummary ? <em title={animationSummary} style={{ color: '#a78bfa' }}>anim</em> : null}
       </div>
       <div
         className={styles.nodeBody}
@@ -295,16 +362,19 @@ export default function CanvasNode({
               : isContainerWithChildren && selected
               ? '1px dashed #94a3b8'
               : 'none',
-          boxShadow: hasVisibleShadow
-            ? `${node.style.shadowX}px ${node.style.shadowY}px ${renderedShadowBlur}px ${renderedShadowSpread}px ${resolveThemeColor(renderedShadowColor, theme)}`
-            : isActiveGroupFrame
+          boxShadow: editorAnimationStyle.boxShadow
+            ?? (hasVisibleShadow
+              ? `${node.style.shadowX}px ${node.style.shadowY}px ${renderedShadowBlur}px ${renderedShadowSpread}px ${resolveThemeColor(renderedShadowColor, theme)}`
+              : isActiveGroupFrame
               ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
-              : 'none',
-          opacity: node.style.opacity / 100,
+              : 'none'),
+          opacity: renderedOpacity,
           overflow: node.kind === 'container' ? 'visible' : undefined,
-          transform: activeHoverStyle ? buildHoverTransform(activeHoverStyle) : undefined,
-          transformOrigin: activeHoverStyle ? 'center center' : undefined,
-          transition: hoverTransition,
+          transform: bodyTransform,
+          transformOrigin: bodyTransform || editorAnimationStyle.transformOrigin ? 'center center' : undefined,
+          transition: bodyTransition,
+          clipPath: editorAnimationStyle.clipPath,
+          filter: editorAnimationStyle.filter,
         }}
       >
         {body}

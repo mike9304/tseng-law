@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import A11yPanel from '@/components/builder/canvas/A11yPanel';
+import AnimationsTab from '@/components/builder/editor/AnimationsTab';
 import ContentTab from '@/components/builder/editor/ContentTab';
 import StyleTab from '@/components/builder/editor/StyleTab';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
@@ -298,7 +299,7 @@ export default function SandboxInspectorPanel({
     sendSelectedNodeToBack,
   } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content' | 'a11y' | 'seo'>('layout');
+  const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content' | 'animations' | 'a11y' | 'seo'>('layout');
   const [seo, setSeo] = useState<SeoData>(EMPTY_SEO);
 
   const imageNodesWithoutAlt = useMemo(
@@ -427,8 +428,8 @@ export default function SandboxInspectorPanel({
           <>
             {compositeSurfaceEditor}
             <div className={styles.inspectorTabRow}>
-              {(['layout', 'style', 'content', 'a11y', 'seo'] as const).map((tab) => {
-                const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집', a11y: '접근성 검사', seo: 'SEO 메타데이터 설정' };
+              {(['layout', 'style', 'content', 'animations', 'a11y', 'seo'] as const).map((tab) => {
+                const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집', animations: 'Entrance, scroll, hover 애니메이션 설정', a11y: '접근성 검사', seo: 'SEO 메타데이터 설정' };
                 return (
                   <button
                     key={tab}
@@ -579,6 +580,26 @@ export default function SandboxInspectorPanel({
                       ? onRequestAssetLibrary
                       : undefined
                   }
+                />
+              ) : null}
+
+              {activeTab === 'animations' ? (
+                <AnimationsTab
+                  node={selectedNode}
+                  disabled={selectedNode.locked}
+                  onUpdateAnimation={(animation) => {
+                    updateNode(selectedNode.id, (node) => {
+                      if (!animation) {
+                        const next = { ...node };
+                        delete (next as { animation?: unknown }).animation;
+                        return next;
+                      }
+                      return {
+                        ...node,
+                        animation,
+                      };
+                    });
+                  }}
                 />
               ) : null}
 

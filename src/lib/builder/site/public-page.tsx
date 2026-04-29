@@ -20,7 +20,12 @@ import { getSiteUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
+import AnimationsRoot from '@/components/builder/published/AnimationsRoot';
 import DarkModeToggle from '@/components/builder/published/DarkModeToggle';
+import {
+  buildPublishedAnimationStyle,
+  getPublishedAnimationAttributes,
+} from '@/lib/builder/animations/animation-render';
 import '@/lib/builder/components/registry';
 
 export interface ResolvedPublishedSitePage {
@@ -198,6 +203,13 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       : undefined;
     const hoverTransform = buildHoverTransform(hoverStyle, baseTransform ?? '');
     const hoverDuration = `${hoverStyle?.transitionMs ?? 200}ms`;
+    const animationAttributes = getPublishedAnimationAttributes(node.animation);
+    const animationStyle = buildPublishedAnimationStyle({
+      animation: node.animation,
+      baseTransform,
+      baseOpacity: node.style?.opacity != null ? node.style.opacity / 100 : 1,
+      primaryColor: 'var(--builder-color-primary, #3b82f6)',
+    });
 
     return (
       <div
@@ -205,6 +217,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         className="builder-pub-node"
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
         data-builder-hover={hoverStyle ? 'true' : undefined}
+        {...animationAttributes}
         style={{
           position: useFlowWrapper ? 'relative' : 'absolute',
           left: useFlowWrapper ? undefined : node.rect.x,
@@ -234,6 +247,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
             : undefined,
           ['--builder-hover-box-shadow' as string]: hoverBoxShadow,
           ['--builder-hover-transform' as string]: hoverTransform,
+          ...animationStyle,
         }}
       >
         {component ? (
@@ -349,6 +363,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       `}</style>
       <JsonLd data={legalServiceSchema} />
       <DarkModeToggle />
+      <AnimationsRoot />
       <SiteHeader
         siteName={site.name}
         settings={settings}

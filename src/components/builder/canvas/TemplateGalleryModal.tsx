@@ -1,284 +1,466 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
-import { createDefaultCanvasNodeStyle } from '@/lib/builder/canvas/types';
+import { getAllTemplates } from '@/lib/builder/templates/registry';
+import type { PageTemplate } from '@/lib/builder/templates/types';
+import TemplateThumbnailPlaceholder from './TemplateThumbnailPlaceholder';
+import {
+  TEMPLATE_CATEGORIES,
+  TEMPLATE_CATEGORY_LABELS,
+  type TemplateCategoryKey,
+} from './template-categories';
 
-/* ── Starter template metadata (inlined to avoid server imports) ─ */
+const allTemplates = getAllTemplates();
 
-interface TemplateMeta {
-  templateId: string;
-  name: string;
-  description: string;
-  nodeCount: number;
-}
-
-const STARTER_TEMPLATES: TemplateMeta[] = [
-  {
-    templateId: 'starter-landing',
-    name: '법률사무소 랜딩',
-    description: '히어로 + 서비스 소개 + 변호사 + CTA + 연락처',
-    nodeCount: 5,
-  },
-  {
-    templateId: 'starter-contact',
-    name: '연락처 페이지',
-    description: '사무실 정보 + 상담 폼 + 지도',
-    nodeCount: 3,
-  },
-  {
-    templateId: 'starter-attorney',
-    name: '변호사 소개',
-    description: '프로필 사진 + 약력 + 전문 분야',
-    nodeCount: 3,
-  },
-];
-
-function buildStarterDocument(templateId: string): BuilderCanvasDocument | null {
-  if (templateId === 'starter-landing') {
-    return {
-      version: 1,
-      stageWidth: 1280,
-      stageHeight: 880,
-      locale: 'ko',
-      updatedAt: new Date().toISOString(),
-      updatedBy: 'template-system',
-      nodes: [
-        { id: 'hero-title', kind: 'text', rect: { x: 80, y: 80, width: 500, height: 80 }, style: createDefaultCanvasNodeStyle(), zIndex: 0, rotation: 0, locked: false, visible: true, content: { text: '호정국제 법률사무소', fontSize: 42, color: '#0f172a', fontWeight: 'bold', align: 'left', lineHeight: 1.25, letterSpacing: 0 } },
-        { id: 'hero-subtitle', kind: 'text', rect: { x: 80, y: 180, width: 450, height: 60 }, style: createDefaultCanvasNodeStyle(), zIndex: 1, rotation: 0, locked: false, visible: true, content: { text: '대만 법률 문제, 한국어로 상담받으세요', fontSize: 20, color: '#475569', fontWeight: 'regular', align: 'left', lineHeight: 1.25, letterSpacing: 0 } },
-        { id: 'hero-cta', kind: 'button', rect: { x: 80, y: 270, width: 180, height: 52 }, style: createDefaultCanvasNodeStyle(), zIndex: 2, rotation: 0, locked: false, visible: true, content: { label: '상담 요청하기', href: '/ko/contact', style: 'primary' } },
-        { id: 'hero-image', kind: 'image', rect: { x: 600, y: 60, width: 400, height: 300 }, style: createDefaultCanvasNodeStyle(), zIndex: 3, rotation: 0, locked: false, visible: true, content: { src: '/images/header-skyline-ratio.webp', alt: '타이베이 스카이라인', fit: 'cover' } },
-        { id: 'services-title', kind: 'text', rect: { x: 80, y: 420, width: 300, height: 40 }, style: createDefaultCanvasNodeStyle(), zIndex: 4, rotation: 0, locked: false, visible: true, content: { text: '주요 업무 분야', fontSize: 28, color: '#0f172a', fontWeight: 'bold', align: 'left', lineHeight: 1.25, letterSpacing: 0 } },
-      ],
-    };
-  }
-  if (templateId === 'starter-contact') {
-    return {
-      version: 1,
-      stageWidth: 1280,
-      stageHeight: 880,
-      locale: 'ko',
-      updatedAt: new Date().toISOString(),
-      updatedBy: 'template-system',
-      nodes: [
-        { id: 'contact-title', kind: 'text', rect: { x: 80, y: 60, width: 400, height: 50 }, style: createDefaultCanvasNodeStyle(), zIndex: 0, rotation: 0, locked: false, visible: true, content: { text: '문의 및 연락처', fontSize: 32, color: '#0f172a', fontWeight: 'bold', align: 'left', lineHeight: 1.25, letterSpacing: 0 } },
-        { id: 'contact-info', kind: 'text', rect: { x: 80, y: 140, width: 400, height: 100 }, style: createDefaultCanvasNodeStyle(), zIndex: 1, rotation: 0, locked: false, visible: true, content: { text: '이메일: wei@hoveringlaw.com.tw\n전화: +886-2-xxxx-xxxx\n주소: 台北市大安區...', fontSize: 16, color: '#374151', fontWeight: 'regular', align: 'left', lineHeight: 1.25, letterSpacing: 0 } },
-        { id: 'contact-cta', kind: 'button', rect: { x: 80, y: 270, width: 200, height: 48 }, style: createDefaultCanvasNodeStyle(), zIndex: 2, rotation: 0, locked: false, visible: true, content: { label: '상담 신청하기', href: '/ko/contact', style: 'primary' } },
-      ],
-    };
-  }
-  if (templateId === 'starter-attorney') {
-    return {
-      version: 1,
-      stageWidth: 1280,
-      stageHeight: 880,
-      locale: 'ko',
-      updatedAt: new Date().toISOString(),
-      updatedBy: 'template-system',
-      nodes: [
-        { id: 'attorney-photo', kind: 'image', rect: { x: 80, y: 60, width: 280, height: 350 }, style: createDefaultCanvasNodeStyle(), zIndex: 0, rotation: 0, locked: false, visible: true, content: { src: '', alt: '변호사 프로필', fit: 'cover' } },
-        { id: 'attorney-name', kind: 'text', rect: { x: 400, y: 80, width: 400, height: 50 }, style: createDefaultCanvasNodeStyle(), zIndex: 1, rotation: 0, locked: false, visible: true, content: { text: '대표 변호사', fontSize: 28, color: '#0f172a', fontWeight: 'bold', align: 'left', lineHeight: 1.25, letterSpacing: 0 } },
-        { id: 'attorney-bio', kind: 'text', rect: { x: 400, y: 150, width: 400, height: 200 }, style: createDefaultCanvasNodeStyle(), zIndex: 2, rotation: 0, locked: false, visible: true, content: { text: '전문 분야, 학력, 경력 등을 여기에 작성합니다.', fontSize: 16, color: '#374151', fontWeight: 'regular', align: 'left', lineHeight: 1.25, letterSpacing: 0 } },
-      ],
-    };
-  }
-  return null;
-}
-
-/* ── Styles ─────────────────────────────────────────────────────── */
-
-const backdropStyle: React.CSSProperties = {
+const backdropStyle: CSSProperties = {
   position: 'fixed',
   inset: 0,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: 'rgba(15, 23, 42, 0.45)',
+  background: 'rgba(15, 23, 42, 0.46)',
   backdropFilter: 'blur(6px)',
   WebkitBackdropFilter: 'blur(6px)',
   zIndex: 10000,
-  animation: 'fadeIn 180ms ease',
+  animation: 'templateGalleryFadeIn 180ms ease',
 };
 
-const modalStyle: React.CSSProperties = {
+const modalStyle: CSSProperties = {
+  width: '90vw',
+  height: '88vh',
+  maxWidth: 1280,
   background: '#fff',
   borderRadius: 16,
-  boxShadow: '0 24px 64px rgba(0,0,0,.18)',
-  padding: 32,
-  maxWidth: 560,
-  width: '90vw',
-  maxHeight: '80vh',
-  overflow: 'auto',
-  animation: 'scaleIn 200ms ease',
-};
-
-const titleStyle: React.CSSProperties = {
-  fontSize: '1.25rem',
-  fontWeight: 700,
-  color: '#0f172a',
-  marginBottom: 6,
-};
-
-const subtitleStyle: React.CSSProperties = {
-  fontSize: '0.85rem',
-  color: '#64748b',
-  marginBottom: 20,
-};
-
-const gridStyle: React.CSSProperties = {
+  boxShadow: '0 28px 80px rgba(15, 23, 42, 0.26)',
+  overflow: 'hidden',
   display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
-  gap: 12,
+  gridTemplateRows: 'auto minmax(0, 1fr)',
+  animation: 'templateGalleryScaleIn 200ms ease',
 };
 
-const cardBase: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 6,
-  padding: '16px 18px',
-  border: '1px solid #e2e8f0',
-  borderRadius: 12,
-  background: '#f8fafc',
-  cursor: 'pointer',
-  transition: 'border-color 120ms ease, box-shadow 120ms ease',
-  textAlign: 'left',
+const headerStyle: CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'minmax(0, 1fr) auto',
+  gap: 16,
+  alignItems: 'start',
+  padding: '22px 24px 18px',
+  borderBottom: '1px solid #e2e8f0',
 };
 
-const cardNameStyle: React.CSSProperties = {
-  fontSize: '0.92rem',
-  fontWeight: 700,
+const titleStyle: CSSProperties = {
+  margin: 0,
+  fontSize: '1.25rem',
+  fontWeight: 800,
   color: '#0f172a',
 };
 
-const cardDescStyle: React.CSSProperties = {
-  fontSize: '0.78rem',
+const subtitleStyle: CSSProperties = {
+  margin: '5px 0 0',
+  fontSize: '0.82rem',
   color: '#64748b',
-  lineHeight: 1.4,
 };
 
-const cardMetaStyle: React.CSSProperties = {
-  fontSize: '0.7rem',
-  color: '#94a3b8',
-  marginTop: 4,
-};
-
-const emptyCardIcon: React.CSSProperties = {
-  fontSize: '1.6rem',
-  marginBottom: 4,
-};
-
-const closeBtnStyle: React.CSSProperties = {
-  position: 'absolute',
-  top: 16,
-  right: 16,
-  background: 'none',
-  border: 'none',
-  fontSize: '1.2rem',
+const closeButtonStyle: CSSProperties = {
+  width: 34,
+  height: 34,
+  border: '1px solid #e2e8f0',
+  borderRadius: 8,
+  background: '#fff',
+  color: '#475569',
   cursor: 'pointer',
-  color: '#94a3b8',
-  padding: 4,
+  fontSize: '1.15rem',
   lineHeight: 1,
 };
 
-/* ── Global keyframes (injected once) ────────────────────────────── */
+const bodyStyle: CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '214px minmax(0, 1fr)',
+  minHeight: 0,
+};
 
-const keyframesId = 'template-gallery-keyframes';
+const sidebarStyle: CSSProperties = {
+  borderRight: '1px solid #e2e8f0',
+  background: '#f8fafc',
+  padding: '18px 12px',
+  overflowY: 'auto',
+};
 
-function ensureKeyframes() {
-  if (typeof document === 'undefined') return;
-  if (document.getElementById(keyframesId)) return;
-  const style = document.createElement('style');
-  style.id = keyframesId;
-  style.textContent = `
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes scaleIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
-  `;
-  document.head.appendChild(style);
+const categoryButtonBase: CSSProperties = {
+  width: '100%',
+  display: 'grid',
+  gridTemplateColumns: '26px minmax(0, 1fr) auto',
+  alignItems: 'center',
+  gap: 8,
+  border: '1px solid transparent',
+  borderLeft: '4px solid transparent',
+  borderRadius: 8,
+  background: 'transparent',
+  color: '#475569',
+  padding: '8px 9px 8px 7px',
+  cursor: 'pointer',
+  textAlign: 'left',
+  fontSize: '0.82rem',
+  fontWeight: 700,
+};
+
+const categoryCountStyle: CSSProperties = {
+  color: '#94a3b8',
+  fontSize: '0.72rem',
+  fontWeight: 800,
+};
+
+const contentStyle: CSSProperties = {
+  minWidth: 0,
+  minHeight: 0,
+  padding: 22,
+  overflowY: 'auto',
+  background: '#fff',
+};
+
+const searchRowStyle: CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'minmax(0, 1fr) auto',
+  alignItems: 'center',
+  gap: 14,
+  marginBottom: 18,
+};
+
+const searchInputStyle: CSSProperties = {
+  width: '100%',
+  boxSizing: 'border-box',
+  border: '1px solid #cbd5e1',
+  borderRadius: 10,
+  padding: '11px 13px',
+  color: '#0f172a',
+  fontSize: '0.92rem',
+  outline: 'none',
+  background: '#fff',
+};
+
+const resultCountStyle: CSSProperties = {
+  whiteSpace: 'nowrap',
+  fontSize: '0.78rem',
+  color: '#64748b',
+  fontWeight: 700,
+};
+
+const cardStyle: CSSProperties = {
+  position: 'relative',
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: 0,
+  border: '1px solid #e2e8f0',
+  borderRadius: 12,
+  background: '#fff',
+  overflow: 'hidden',
+  cursor: 'pointer',
+  textAlign: 'left',
+  padding: 0,
+  transition: 'transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease',
+};
+
+const cardBodyStyle: CSSProperties = {
+  display: 'grid',
+  gap: 8,
+  padding: '14px 15px 15px',
+};
+
+const cardTitleStyle: CSSProperties = {
+  fontSize: '0.96rem',
+  fontWeight: 800,
+  color: '#0f172a',
+  lineHeight: 1.25,
+};
+
+const chipStyle: CSSProperties = {
+  width: 'fit-content',
+  borderRadius: 999,
+  background: '#eff6ff',
+  color: '#123b63',
+  padding: '3px 8px',
+  fontSize: '0.7rem',
+  fontWeight: 800,
+};
+
+const descriptionStyle: CSSProperties = {
+  color: '#64748b',
+  fontSize: '0.78rem',
+  lineHeight: 1.45,
+  minHeight: 36,
+  display: '-webkit-box',
+  WebkitLineClamp: 2,
+  WebkitBoxOrient: 'vertical',
+  overflow: 'hidden',
+};
+
+const actionPillStyle: CSSProperties = {
+  position: 'absolute',
+  right: 12,
+  top: 112,
+  borderRadius: 999,
+  background: '#123b63',
+  color: '#fff',
+  padding: '7px 11px',
+  fontSize: '0.74rem',
+  fontWeight: 800,
+  boxShadow: '0 12px 24px rgba(18, 59, 99, 0.24)',
+  transition: 'opacity 140ms ease, transform 140ms ease',
+};
+
+const emptyStateStyle: CSSProperties = {
+  padding: 36,
+  border: '1px dashed #cbd5e1',
+  borderRadius: 12,
+  background: '#f8fafc',
+  color: '#64748b',
+  textAlign: 'center',
+  fontSize: '0.9rem',
+};
+
+const blankCardStyle: CSSProperties = {
+  ...cardStyle,
+  minHeight: 286,
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: 12,
+  padding: 22,
+  background: '#f8fafc',
+};
+
+function getCategoryCount(category: TemplateCategoryKey): number {
+  if (category === 'all') return allTemplates.length;
+  return allTemplates.filter((template) => template.category === category).length;
 }
 
-/* ── Component ──────────────────────────────────────────────────── */
+function cloneTemplateDocument(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  return JSON.parse(JSON.stringify(document)) as BuilderCanvasDocument;
+}
+
+function matchesSearch(template: PageTemplate, query: string): boolean {
+  if (!query) return true;
+  const categoryLabel = TEMPLATE_CATEGORY_LABELS[template.category] ?? template.category;
+  const haystack = [
+    template.id,
+    template.name,
+    template.description,
+    template.category,
+    categoryLabel,
+    template.subcategory,
+  ].join(' ').toLowerCase();
+  return haystack.includes(query);
+}
 
 export default function TemplateGalleryModal({
   onSelect,
   onClose,
 }: {
-  /** Called with null for blank page, or a document for a template */
   onSelect: (document: BuilderCanvasDocument | null) => void;
   onClose: () => void;
 }) {
   const modalRef = useRef<HTMLDivElement>(null);
-  const [hovered, setHovered] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<TemplateCategoryKey>('all');
+  const [searchInput, setSearchInput] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   useEffect(() => {
-    ensureKeyframes();
-  }, []);
+    const timeoutId = window.setTimeout(() => {
+      setSearchQuery(searchInput.trim().toLowerCase());
+    }, 200);
+    return () => window.clearTimeout(timeoutId);
+  }, [searchInput]);
 
-  // ESC to close
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+    const handler = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, [onClose]);
 
+  const filteredTemplates = useMemo(() => {
+    return allTemplates.filter((template) => {
+      const categoryMatches = activeCategory === 'all' || template.category === activeCategory;
+      return categoryMatches && matchesSearch(template, searchQuery);
+    });
+  }, [activeCategory, searchQuery]);
+
+  const showBlankCard = activeCategory === 'all' && searchQuery.length === 0;
+
   const handleBackdropClick = useCallback(
-    (e: React.MouseEvent) => {
-      if (e.target === e.currentTarget) onClose();
+    (event: React.MouseEvent<HTMLDivElement>) => {
+      if (event.target === event.currentTarget) onClose();
     },
     [onClose],
   );
 
+  const selectTemplate = (template: PageTemplate) => {
+    onSelect(cloneTemplateDocument(template.document));
+  };
+
   return (
     <div style={backdropStyle} onClick={handleBackdropClick}>
-      <div ref={modalRef} style={{ ...modalStyle, position: 'relative' }}>
-        <button type="button" style={closeBtnStyle} onClick={onClose} title="닫기">
-          &times;
-        </button>
-
-        <div style={titleStyle}>새 페이지 만들기</div>
-        <div style={subtitleStyle}>템플릿을 선택하거나 빈 페이지로 시작하세요.</div>
-
-        <div style={gridStyle}>
-          {/* Blank page card */}
-          <button
-            type="button"
-            style={{
-              ...cardBase,
-              borderColor: hovered === 'blank' ? '#116dff' : '#e2e8f0',
-              boxShadow: hovered === 'blank' ? '0 0 0 2px rgba(17,109,255,.15)' : 'none',
-            }}
-            onMouseEnter={() => setHovered('blank')}
-            onMouseLeave={() => setHovered(null)}
-            onClick={() => onSelect(null)}
-          >
-            <div style={emptyCardIcon}>+</div>
-            <div style={cardNameStyle}>빈 페이지</div>
-            <div style={cardDescStyle}>빈 캔버스에서 자유롭게 시작</div>
+      <style>{`
+        @keyframes templateGalleryFadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes templateGalleryScaleIn {
+          from { opacity: 0; transform: scale(0.96); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .template-gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
+        }
+        @media (min-width: 1320px) {
+          .template-gallery-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+          }
+        }
+        @media (max-width: 1023px) {
+          .template-gallery-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+        @media (max-width: 760px) {
+          .template-gallery-modal-body {
+            grid-template-columns: minmax(0, 1fr) !important;
+          }
+          .template-gallery-sidebar {
+            display: none;
+          }
+          .template-gallery-grid {
+            grid-template-columns: minmax(0, 1fr);
+          }
+          .template-gallery-search-row {
+            grid-template-columns: minmax(0, 1fr) !important;
+          }
+        }
+      `}</style>
+      <div
+        ref={modalRef}
+        style={modalStyle}
+        role="dialog"
+        aria-modal="true"
+        aria-label="템플릿 갤러리"
+      >
+        <header style={headerStyle}>
+          <div>
+            <h2 style={titleStyle}>템플릿 갤러리</h2>
+            <p style={subtitleStyle}>카테고리와 검색으로 페이지 템플릿을 선택하세요.</p>
+          </div>
+          <button type="button" style={closeButtonStyle} onClick={onClose} title="닫기">
+            ×
           </button>
+        </header>
 
-          {/* Starter templates */}
-          {STARTER_TEMPLATES.map((tpl) => (
-            <button
-              key={tpl.templateId}
-              type="button"
-              style={{
-                ...cardBase,
-                borderColor: hovered === tpl.templateId ? '#116dff' : '#e2e8f0',
-                boxShadow: hovered === tpl.templateId ? '0 0 0 2px rgba(17,109,255,.15)' : 'none',
-              }}
-              onMouseEnter={() => setHovered(tpl.templateId)}
-              onMouseLeave={() => setHovered(null)}
-              onClick={() => {
-                const doc = buildStarterDocument(tpl.templateId);
-                onSelect(doc);
-              }}
-            >
-              <div style={cardNameStyle}>{tpl.name}</div>
-              <div style={cardDescStyle}>{tpl.description}</div>
-              <div style={cardMetaStyle}>노드 {tpl.nodeCount}개</div>
-            </button>
-          ))}
+        <div className="template-gallery-modal-body" style={bodyStyle}>
+          <aside className="template-gallery-sidebar" style={sidebarStyle}>
+            {TEMPLATE_CATEGORIES.map((category) => {
+              const active = activeCategory === category.key;
+              const count = getCategoryCount(category.key);
+              return (
+                <button
+                  key={category.key}
+                  type="button"
+                  style={{
+                    ...categoryButtonBase,
+                    borderColor: active ? '#bfdbfe' : 'transparent',
+                    borderLeftColor: active ? '#123b63' : 'transparent',
+                    background: active ? '#eff6ff' : 'transparent',
+                    color: active ? '#123b63' : '#475569',
+                  }}
+                  onClick={() => setActiveCategory(category.key)}
+                >
+                  <span aria-hidden>{category.icon}</span>
+                  <span>{category.label}</span>
+                  <span style={categoryCountStyle}>{count}</span>
+                </button>
+              );
+            })}
+          </aside>
+
+          <main style={contentStyle}>
+            <div className="template-gallery-search-row" style={searchRowStyle}>
+              <input
+                type="search"
+                value={searchInput}
+                placeholder="템플릿 검색..."
+                style={searchInputStyle}
+                onChange={(event) => setSearchInput(event.target.value)}
+                autoFocus
+              />
+              <div style={resultCountStyle}>{filteredTemplates.length}개 템플릿</div>
+            </div>
+
+            {filteredTemplates.length === 0 && !showBlankCard ? (
+              <div style={emptyStateStyle}>조건에 맞는 템플릿이 없습니다</div>
+            ) : (
+              <div className="template-gallery-grid">
+                {showBlankCard ? (
+                  <button
+                    type="button"
+                    style={{
+                      ...blankCardStyle,
+                      borderColor: hoveredId === 'blank' ? '#123b63' : '#e2e8f0',
+                      boxShadow: hoveredId === 'blank' ? '0 18px 38px rgba(15, 23, 42, 0.12)' : 'none',
+                      transform: hoveredId === 'blank' ? 'translateY(-2px) scale(1.01)' : 'none',
+                    }}
+                    onMouseEnter={() => setHoveredId('blank')}
+                    onMouseLeave={() => setHoveredId(null)}
+                    onClick={() => onSelect(null)}
+                  >
+                    <span style={{ fontSize: '2rem', color: '#123b63', lineHeight: 1 }}>+</span>
+                    <span style={cardTitleStyle}>빈 페이지</span>
+                    <span style={{ ...descriptionStyle, textAlign: 'center', minHeight: 0 }}>
+                      자유 캔버스에서 새 페이지를 시작합니다.
+                    </span>
+                  </button>
+                ) : null}
+
+                {filteredTemplates.map((template) => {
+                  const hovered = hoveredId === template.id;
+                  const categoryLabel = TEMPLATE_CATEGORY_LABELS[template.category] ?? template.category;
+                  return (
+                    <button
+                      key={template.id}
+                      type="button"
+                      style={{
+                        ...cardStyle,
+                        borderColor: hovered ? '#123b63' : '#e2e8f0',
+                        boxShadow: hovered ? '0 18px 38px rgba(15, 23, 42, 0.14)' : 'none',
+                        transform: hovered ? 'translateY(-2px) scale(1.02)' : 'none',
+                      }}
+                      onMouseEnter={() => setHoveredId(template.id)}
+                      onMouseLeave={() => setHoveredId(null)}
+                      onClick={() => selectTemplate(template)}
+                    >
+                      <div style={{ height: 160, background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+                        <TemplateThumbnailPlaceholder template={template} width={240} height={160} />
+                      </div>
+                      <span
+                        style={{
+                          ...actionPillStyle,
+                          opacity: hovered ? 1 : 0,
+                          transform: hovered ? 'translateY(0)' : 'translateY(6px)',
+                        }}
+                      >
+                        이 템플릿 사용
+                      </span>
+                      <span style={cardBodyStyle}>
+                        <span style={chipStyle}>{categoryLabel}</span>
+                        <span style={cardTitleStyle}>{template.name}</span>
+                        <span style={descriptionStyle}>{template.description}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </main>
         </div>
       </div>
     </div>

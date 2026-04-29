@@ -8,7 +8,9 @@ import {
   THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
   THEME_TEXT_PRESET_KEYS,
+  SITE_THEME_PRESETS,
   type BuilderColorValue,
+  type SiteThemePreset,
   type ThemeTextPreset,
   type ThemeTextPresetKey,
   normalizeThemeTextPresets,
@@ -175,6 +177,12 @@ const statusStyle: React.CSSProperties = {
   color: '#dc2626',
 };
 
+const noticeStyle: React.CSSProperties = {
+  minHeight: 18,
+  fontSize: '0.78rem',
+  color: '#0f766e',
+};
+
 const cancelBtnStyle: React.CSSProperties = {
   padding: '8px 18px',
   fontSize: '0.82rem',
@@ -196,6 +204,33 @@ const saveBtnStyle: React.CSSProperties = {
   color: '#fff',
   cursor: 'pointer',
   transition: 'background 120ms ease',
+};
+
+const presetGridStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+  gap: 10,
+};
+
+const presetCardStyle: React.CSSProperties = {
+  border: '1px solid #e2e8f0',
+  borderRadius: 10,
+  background: '#fff',
+  padding: 12,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 10,
+};
+
+const presetButtonStyle: React.CSSProperties = {
+  padding: '7px 10px',
+  border: '1px solid #cbd5e1',
+  borderRadius: 7,
+  background: '#f8fafc',
+  color: '#0f172a',
+  fontSize: '0.78rem',
+  fontWeight: 700,
+  cursor: 'pointer',
 };
 
 interface FieldDef {
@@ -222,6 +257,23 @@ function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
     fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
     themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
+  };
+}
+
+function themeFromPreset(preset: SiteThemePreset): BuilderTheme {
+  const radius = Math.max(0, Math.round(preset.radiusScale));
+  return {
+    colors: preset.colors,
+    fonts: {
+      heading: preset.fonts.title,
+      body: preset.fonts.body,
+    },
+    radii: {
+      sm: Math.max(0, Math.round(radius * 0.5)),
+      md: radius,
+      lg: Math.max(radius, Math.round(radius * 1.5)),
+    },
+    themeTextPresets: preset.textPresets,
   };
 }
 
@@ -275,7 +327,9 @@ export default function SiteSettingsModal({
 }) {
   const [settings, setSettings] = useState<SiteSettingsForm>(EMPTY_SETTINGS);
   const [theme, setTheme] = useState<BuilderTheme>(DEFAULT_THEME);
-  const [activeTab, setActiveTab] = useState<'settings' | 'colors' | 'typography'>('settings');
+  const [activeTab, setActiveTab] = useState<'settings' | 'colors' | 'typography' | 'presets'>('settings');
+  const [pendingPreset, setPendingPreset] = useState<SiteThemePreset | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -393,6 +447,12 @@ export default function SiteSettingsModal({
     }));
   };
 
+  const applyPreset = (preset: SiteThemePreset) => {
+    setTheme(themeFromPreset(preset));
+    setPendingPreset(null);
+    setNotice(`${preset.name} preset applied. 저장을 눌러 사이트에 반영하세요.`);
+  };
+
   const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
     token,
     label: THEME_COLOR_LABELS[token],
@@ -422,6 +482,7 @@ export default function SiteSettingsModal({
             ['settings', 'Settings'],
             ['colors', 'Colors'],
             ['typography', 'Typography'],
+            ['presets', 'Presets'],
           ] as const).map(([key, label]) => (
             <button
               key={key}
@@ -512,7 +573,7 @@ export default function SiteSettingsModal({
                 </div>
               </div>
             </div>
-          ) : (
+          ) : activeTab === 'typography' ? (
             <div style={sectionStyle}>
               <div style={sectionHeadingStyle}>Theme text presets</div>
               {THEME_TEXT_PRESET_KEYS.map((key) => {
@@ -614,11 +675,82 @@ export default function SiteSettingsModal({
                 );
               })}
             </div>
+          ) : (
+            <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>Theme presets</div>
+              {pendingPreset ? (
+                <div style={{ border: '1px solid #bfdbfe', borderRadius: 10, padding: 12, background: '#eff6ff', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  <strong style={{ color: '#1e3a8a', fontSize: '0.86rem' }}>
+                    Apply {pendingPreset.name} to the whole site?
+                  </strong>
+                  <span style={{ color: '#334155', fontSize: '0.78rem', lineHeight: 1.45 }}>
+                    Colors, site fonts, radii, and theme text presets will be replaced. Element-level raw overrides stay unchanged.
+                  </span>
+                  <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+                    <button type="button" style={cancelBtnStyle} onClick={() => setPendingPreset(null)}>
+                      Cancel
+                    </button>
+                    <button type="button" style={saveBtnStyle} onClick={() => applyPreset(pendingPreset)}>
+                      Apply preset
+                    </button>
+                  </div>
+                </div>
+              ) : null}
+              <div style={presetGridStyle}>
+                {SITE_THEME_PRESETS.map((preset) => (
+                  <section key={preset.key} style={presetCardStyle}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                      <div>
+                        <strong style={{ display: 'block', fontFamily: preset.fonts.title, color: preset.colors.text, fontSize: '1rem' }}>
+                          {preset.name}
+                        </strong>
+                        <span style={{ color: '#64748b', fontSize: '0.72rem' }}>
+                          {preset.shadowIntensity} shadow · radius {preset.radiusScale}
+                        </span>
+                      </div>
+                      <div style={{ display: 'flex', gap: 3 }}>
+                        {THEME_COLOR_TOKENS.slice(0, 5).map((token) => (
+                          <span
+                            key={token}
+                            aria-hidden
+                            style={{
+                              width: 14,
+                              height: 14,
+                              borderRadius: 999,
+                              border: '1px solid rgba(15,23,42,0.14)',
+                              background: preset.colors[token],
+                            }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <p style={{ margin: 0, color: '#475569', fontSize: '0.76rem', lineHeight: 1.45 }}>
+                      {preset.description}
+                    </p>
+                    <div style={{ borderRadius: 8, background: preset.colors.background, border: `1px solid ${preset.colors.muted}`, padding: 10 }}>
+                      <div style={{ fontFamily: preset.fonts.title, color: preset.colors.text, fontSize: 22, lineHeight: 1 }}>
+                        Aa
+                      </div>
+                      <div style={{ fontFamily: preset.fonts.body, color: preset.colors.secondary, fontSize: 12, marginTop: 5 }}>
+                        안녕하세요 Hello
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      style={presetButtonStyle}
+                      onClick={() => setPendingPreset(preset)}
+                    >
+                      Apply
+                    </button>
+                  </section>
+                ))}
+              </div>
+            </div>
           )}
         </div>
 
         <div style={footerStyle}>
-          <span style={statusStyle}>{error ?? ''}</span>
+          <span style={error ? statusStyle : noticeStyle}>{error ?? notice ?? ''}</span>
           <div style={{ display: 'flex', gap: 8 }}>
             <button type="button" style={cancelBtnStyle} onClick={onClose}>
               취소

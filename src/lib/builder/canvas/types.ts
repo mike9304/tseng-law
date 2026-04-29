@@ -1,6 +1,10 @@
 import { z } from 'zod';
 import { locales, type Locale } from '@/lib/locales';
-import { THEME_COLOR_TOKENS, THEME_TEXT_PRESET_KEYS } from '@/lib/builder/site/theme';
+import {
+  THEME_COLOR_TOKENS,
+  THEME_TEXT_PRESET_KEYS,
+  type BuilderBackgroundValue,
+} from '@/lib/builder/site/theme';
 const imageFiltersSchema = z.object({
   brightness: z.number().min(0).max(200),
   contrast: z.number().min(0).max(200),
@@ -80,8 +84,56 @@ export const builderColorValueSchema = z.union([
   }).strict(),
 ]);
 
+const backgroundImagePositionSchema = z.enum([
+  'center',
+  'top',
+  'bottom',
+  'left',
+  'right',
+  'top-left',
+  'top-right',
+  'bottom-left',
+  'bottom-right',
+]);
+
+export const backgroundValueSchema: z.ZodType<BuilderBackgroundValue> = z.union([
+  builderColorValueSchema,
+  z.object({
+    kind: z.literal('gradient'),
+    type: z.enum(['linear', 'radial']),
+    angle: z.number().min(0).max(360).default(180),
+    stops: z.array(z.object({
+      color: builderColorValueSchema,
+      position: z.number().min(0).max(100),
+    })).min(2).max(5),
+  }).strict(),
+  z.object({
+    kind: z.literal('image'),
+    src: z.string().max(2000),
+    size: z.enum(['cover', 'contain', 'auto']).default('cover'),
+    position: backgroundImagePositionSchema.default('center'),
+    repeat: z.enum(['no-repeat', 'repeat', 'repeat-x', 'repeat-y']).default('no-repeat'),
+    overlayColor: builderColorValueSchema.optional(),
+    overlayOpacity: z.number().min(0).max(100).optional(),
+  }).strict(),
+]);
+
+export const hoverStyleSchema = z.object({
+  backgroundColor: builderColorValueSchema.optional(),
+  borderColor: builderColorValueSchema.optional(),
+  scale: z.number().min(0.5).max(2).optional(),
+  translateY: z.number().min(-100).max(100).optional(),
+  shadowBlur: z.number().int().min(0).max(160).optional(),
+  shadowSpread: z.number().int().min(-96).max(96).optional(),
+  shadowColor: builderColorValueSchema.optional(),
+  transitionMs: z.number().int().min(0).max(2000).default(200),
+}).optional();
+
+export type BuilderHoverStyle = z.infer<typeof hoverStyleSchema>;
+export type { BuilderBackgroundValue };
+
 export const builderCanvasNodeStyleSchema = z.object({
-  backgroundColor: builderColorValueSchema,
+  backgroundColor: backgroundValueSchema,
   borderColor: builderColorValueSchema,
   borderStyle: z.enum(['solid', 'dashed']),
   borderWidth: z.number().int().min(0).max(12),
@@ -106,6 +158,7 @@ const baseCanvasNodeSchema = z.object({
   rotation: z.number().min(0).max(360).default(0),
   locked: z.boolean().default(false),
   visible: z.boolean().default(true),
+  hoverStyle: hoverStyleSchema,
 });
 
 const textShadowSchema = z.object({

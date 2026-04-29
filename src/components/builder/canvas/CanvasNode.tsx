@@ -5,7 +5,12 @@ import { getComponent } from '@/lib/builder/components/registry';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
-import { resolveThemeColor, resolveThemeTextTypography } from '@/lib/builder/site/theme';
+import {
+  buildHoverTransform,
+  resolveBackgroundStyle,
+  resolveThemeColor,
+  resolveThemeTextTypography,
+} from '@/lib/builder/site/theme';
 import InlineTextEditor from './InlineTextEditor';
 import styles from './SandboxPage.module.css';
 
@@ -41,6 +46,7 @@ export default function CanvasNode({
   onUpdateContent,
 }: CanvasNodeProps) {
   const [isEditing, setIsEditing] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const component = getComponent(node.kind);
   const theme = useBuilderTheme();
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -186,9 +192,24 @@ export default function CanvasNode({
   ) : null;
 
   const hasVisibleBorder = node.style.borderWidth > 0;
-  const hasVisibleShadow = node.style.shadowBlur > 0 || node.style.shadowSpread !== 0 || node.style.shadowX !== 0 || node.style.shadowY !== 0;
+  const activeHoverStyle = node.hoverStyle && isHovered ? node.hoverStyle : null;
+  const backgroundStyle = resolveBackgroundStyle(
+    activeHoverStyle?.backgroundColor ?? node.style.backgroundColor,
+    theme,
+  );
+  const renderedBorderColor = activeHoverStyle?.borderColor ?? node.style.borderColor;
+  const renderedShadowBlur = activeHoverStyle?.shadowBlur ?? node.style.shadowBlur;
+  const renderedShadowSpread = activeHoverStyle?.shadowSpread ?? node.style.shadowSpread;
+  const renderedShadowColor = activeHoverStyle?.shadowColor ?? node.style.shadowColor;
+  const hasVisibleShadow = renderedShadowBlur > 0
+    || renderedShadowSpread !== 0
+    || node.style.shadowX !== 0
+    || node.style.shadowY !== 0;
   const isContainerWithChildren = node.kind === 'container' && nestedChildren.length > 0;
   const showSelectionHandles = selected && !node.locked && isInteractive;
+  const hoverTransition = node.hoverStyle
+    ? `background ${node.hoverStyle.transitionMs ?? 200}ms ease, border-color ${node.hoverStyle.transitionMs ?? 200}ms ease, box-shadow ${node.hoverStyle.transitionMs ?? 200}ms ease, transform ${node.hoverStyle.transitionMs ?? 200}ms ease`
+    : undefined;
 
   return (
     <div
@@ -248,6 +269,8 @@ export default function CanvasNode({
         event.stopPropagation();
         handleDoubleClick();
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       onClick={(event) => {
         event.stopPropagation();
         if (node.kind !== 'image' || !selected || node.locked || !isInteractive) return;
@@ -263,22 +286,25 @@ export default function CanvasNode({
         className={styles.nodeBody}
         style={{
           position: 'relative',
-          background: resolveThemeColor(node.style.backgroundColor, theme),
+          ...backgroundStyle,
           borderRadius: `${node.style.borderRadius}px`,
           border: hasVisibleBorder
-            ? `${node.style.borderWidth}px ${node.style.borderStyle} ${resolveThemeColor(node.style.borderColor, theme)}`
+            ? `${node.style.borderWidth}px ${node.style.borderStyle} ${resolveThemeColor(renderedBorderColor, theme)}`
             : isActiveGroupFrame
               ? '2px dashed rgba(37, 99, 235, 0.72)'
               : isContainerWithChildren && selected
               ? '1px dashed #94a3b8'
               : 'none',
           boxShadow: hasVisibleShadow
-            ? `${node.style.shadowX}px ${node.style.shadowY}px ${node.style.shadowBlur}px ${node.style.shadowSpread}px ${resolveThemeColor(node.style.shadowColor, theme)}`
+            ? `${node.style.shadowX}px ${node.style.shadowY}px ${renderedShadowBlur}px ${renderedShadowSpread}px ${resolveThemeColor(renderedShadowColor, theme)}`
             : isActiveGroupFrame
               ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
               : 'none',
           opacity: node.style.opacity / 100,
           overflow: node.kind === 'container' ? 'visible' : undefined,
+          transform: activeHoverStyle ? buildHoverTransform(activeHoverStyle) : undefined,
+          transformOrigin: activeHoverStyle ? 'center center' : undefined,
+          transition: hoverTransition,
         }}
       >
         {body}

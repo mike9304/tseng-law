@@ -6,7 +6,12 @@ import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
 import type { BuilderCanvasNode, BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
-import { collectThemeFontFamilies, resolveThemeColor } from '@/lib/builder/site/theme';
+import {
+  buildHoverTransform,
+  collectThemeFontFamilies,
+  resolveBackgroundStyle,
+  resolveThemeColor,
+} from '@/lib/builder/site/theme';
 import { buildPageSeo } from '@/lib/builder/seo/seo-model';
 import { generateLegalServiceSchema } from '@/lib/builder/seo/schema-org';
 import { getSiteUrl } from '@/lib/seo';
@@ -156,12 +161,27 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     const childParentLayoutMode: ParentLayoutMode | undefined =
       node.kind === 'container' ? node.content.layoutMode ?? 'absolute' : undefined;
     const flowSectionMetric = flowAsSection ? flowSectionMetrics.get(node.id) : undefined;
+    const baseTransform = node.rotation ? `rotate(${node.rotation}deg)` : undefined;
+    const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, theme);
+    const hoverStyle = node.hoverStyle;
+    const hoverBackgroundStyle = hoverStyle?.backgroundColor
+      ? resolveBackgroundStyle(hoverStyle.backgroundColor, theme)
+      : undefined;
+    const hoverShadowBlur = hoverStyle?.shadowBlur ?? node.style?.shadowBlur ?? 0;
+    const hoverShadowSpread = hoverStyle?.shadowSpread ?? node.style?.shadowSpread ?? 0;
+    const hoverShadowColor = hoverStyle?.shadowColor ?? node.style?.shadowColor;
+    const hoverBoxShadow = hoverStyle && (hoverShadowBlur > 0 || hoverShadowSpread !== 0 || node.style?.shadowX || node.style?.shadowY)
+      ? `${node.style?.shadowX || 0}px ${node.style?.shadowY || 0}px ${hoverShadowBlur}px ${hoverShadowSpread}px ${resolveThemeColor(hoverShadowColor, theme)}`
+      : undefined;
+    const hoverTransform = buildHoverTransform(hoverStyle, baseTransform ?? '');
+    const hoverDuration = `${hoverStyle?.transitionMs ?? 200}ms`;
 
     return (
       <div
         key={node.id}
         className="builder-pub-node"
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
+        data-builder-hover={hoverStyle ? 'true' : undefined}
         style={{
           position: useFlowWrapper ? 'relative' : 'absolute',
           left: useFlowWrapper ? undefined : node.rect.x,
@@ -172,8 +192,8 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           marginTop: flowAsSection ? flowSectionMetric?.marginTop : undefined,
           zIndex: useFlowWrapper ? undefined : node.zIndex,
           overflow: flowAsSection ? 'visible' : undefined,
-          transform: node.rotation ? `rotate(${node.rotation}deg)` : undefined,
-          background: node.style?.backgroundColor ? resolveThemeColor(node.style.backgroundColor, theme) : undefined,
+          transform: baseTransform,
+          ...backgroundStyle,
           borderRadius: node.style?.borderRadius ? `${node.style.borderRadius}px` : undefined,
           border: node.style?.borderWidth
             ? `${node.style.borderWidth}px ${node.style.borderStyle || 'solid'} ${resolveThemeColor(node.style.borderColor, theme)}`
@@ -182,6 +202,15 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
             ? `${node.style.shadowX || 0}px ${node.style.shadowY || 0}px ${node.style.shadowBlur}px ${node.style.shadowSpread || 0}px ${resolveThemeColor(node.style.shadowColor, theme)}`
             : undefined,
           opacity: node.style?.opacity != null ? node.style.opacity / 100 : undefined,
+          transition: hoverStyle
+            ? `background ${hoverDuration} ease, border-color ${hoverDuration} ease, box-shadow ${hoverDuration} ease, transform ${hoverDuration} ease`
+            : undefined,
+          ['--builder-hover-background' as string]: hoverBackgroundStyle?.background,
+          ['--builder-hover-border-color' as string]: hoverStyle?.borderColor
+            ? resolveThemeColor(hoverStyle.borderColor, theme)
+            : undefined,
+          ['--builder-hover-box-shadow' as string]: hoverBoxShadow,
+          ['--builder-hover-transform' as string]: hoverTransform,
         }}
       >
         {component ? (
@@ -237,6 +266,12 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         ) : null;
       })()}
       <style>{`
+        .builder-pub-node[data-builder-hover='true']:hover {
+          background: var(--builder-hover-background) !important;
+          border-color: var(--builder-hover-border-color) !important;
+          box-shadow: var(--builder-hover-box-shadow) !important;
+          transform: var(--builder-hover-transform) !important;
+        }
         @media (max-width: 768px) {
           .builder-pub-main {
             position: static !important;

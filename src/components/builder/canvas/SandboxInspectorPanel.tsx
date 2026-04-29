@@ -553,6 +553,19 @@ export default function SandboxInspectorPanel({
                   node={selectedNode}
                   disabled={selectedNode.locked}
                   onUpdateStyle={(style) => updateNodeStyle(selectedNode.id, style)}
+                  onUpdateHoverStyle={(hoverStyle) => {
+                    updateNode(selectedNode.id, (node) => {
+                      if (!hoverStyle) {
+                        const next = { ...node };
+                        delete (next as { hoverStyle?: unknown }).hoverStyle;
+                        return next;
+                      }
+                      return {
+                        ...node,
+                        hoverStyle,
+                      };
+                    });
+                  }}
                 />
               ) : null}
 

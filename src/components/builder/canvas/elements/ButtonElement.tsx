@@ -1,6 +1,11 @@
 import type { BuilderButtonCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderTheme } from '@/lib/builder/site/types';
-import { resolveThemeColor } from '@/lib/builder/site/theme';
+import {
+  isGradientBackgroundValue,
+  isImageBackgroundValue,
+  resolveBackgroundStyle,
+  resolveThemeColor,
+} from '@/lib/builder/site/theme';
 
 type ButtonVariant = BuilderButtonCanvasNode['content']['style'];
 
@@ -9,17 +14,21 @@ function resolveVariantStyles(
   s: BuilderButtonCanvasNode['style'],
   theme?: BuilderTheme,
 ) {
-  const backgroundColor = resolveThemeColor(s.backgroundColor, theme);
+  const backgroundStyle = resolveBackgroundStyle(s.backgroundColor, theme);
+  const backgroundColor =
+    isGradientBackgroundValue(s.backgroundColor) || isImageBackgroundValue(s.backgroundColor)
+      ? 'transparent'
+      : resolveThemeColor(s.backgroundColor, theme);
   const borderColor = resolveThemeColor(s.borderColor, theme);
   const shadowColor = resolveThemeColor(s.shadowColor, theme);
-  const hasCustomBg = backgroundColor !== 'transparent';
+  const hasCustomBg = backgroundColor !== 'transparent' || Boolean(backgroundStyle.backgroundImage);
   const hasCustomBorder =
     s.borderWidth > 0;
   const hasShadow =
     s.shadowX !== 0 || s.shadowY !== 0 || s.shadowBlur !== 0 || s.shadowSpread !== 0;
 
   const base = {
-    background: hasCustomBg ? backgroundColor : 'transparent',
+    backgroundStyle: hasCustomBg ? backgroundStyle : { background: 'transparent' },
     color: '#0f172a',
     border: hasCustomBorder
       ? `${s.borderWidth}px ${s.borderStyle} ${borderColor}`
@@ -34,7 +43,7 @@ function resolveVariantStyles(
     case 'primary':
       return {
         ...base,
-        background: hasCustomBg ? backgroundColor : '#0b3b2e',
+        backgroundStyle: hasCustomBg ? backgroundStyle : { background: '#0b3b2e' },
         color: '#ffffff',
         border: hasCustomBorder
           ? base.border
@@ -46,7 +55,7 @@ function resolveVariantStyles(
     case 'secondary':
       return {
         ...base,
-        background: hasCustomBg ? backgroundColor : '#ffffff',
+        backgroundStyle: hasCustomBg ? backgroundStyle : { background: '#ffffff' },
         color: '#0f172a',
         border: hasCustomBorder
           ? base.border
@@ -58,7 +67,7 @@ function resolveVariantStyles(
     case 'outline':
       return {
         ...base,
-        background: 'transparent',
+        backgroundStyle: { background: 'transparent' },
         color: hasCustomBg ? backgroundColor : '#0b3b2e',
         border: hasCustomBorder
           ? base.border
@@ -67,14 +76,14 @@ function resolveVariantStyles(
     case 'ghost':
       return {
         ...base,
-        background: hasCustomBg ? backgroundColor : 'rgba(11, 59, 46, 0.06)',
+        backgroundStyle: hasCustomBg ? backgroundStyle : { background: 'rgba(11, 59, 46, 0.06)' },
         color: '#0b3b2e',
         border: 'none',
       };
     case 'link':
       return {
         ...base,
-        background: 'transparent',
+        backgroundStyle: { background: 'transparent' },
         color: '#0b3b2e',
         border: 'none',
         textDecoration: 'underline' as const,
@@ -132,7 +141,7 @@ export default function ButtonElement({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: s.borderRadius,
-        background: variantStyles.background,
+        ...variantStyles.backgroundStyle,
         color: variantStyles.color,
         border: variantStyles.border,
         boxShadow: variantStyles.boxShadow,

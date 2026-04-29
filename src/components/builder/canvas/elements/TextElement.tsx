@@ -1,5 +1,7 @@
 import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
 import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
+import type { BuilderTheme } from '@/lib/builder/site/types';
+import { resolveThemeColor, resolveThemeTextTypography } from '@/lib/builder/site/theme';
 
 function verticalAlignToFlexAlign(va?: string): string {
   if (va === 'center') return 'center';
@@ -14,8 +16,10 @@ function buildTextShadow(ts?: { x: number; y: number; blur: number; color: strin
 
 export default function TextElement({
   node,
+  theme,
 }: {
   node: BuilderTextCanvasNode;
+  theme?: BuilderTheme;
 }) {
   const { className, as } = node.content;
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
@@ -35,8 +39,9 @@ export default function TextElement({
     );
   }
 
-  const fontFamily = node.content.fontFamily
-    ? fontFamilyCSS(node.content.fontFamily)
+  const typography = resolveThemeTextTypography(node.content, theme);
+  const fontFamily = typography.fontFamily
+    ? fontFamilyCSS(typography.fontFamily)
     : 'system-ui, -apple-system, sans-serif';
 
   return (
@@ -44,25 +49,25 @@ export default function TextElement({
       style={{
         width: '100%',
         height: '100%',
-        color: node.content.color,
-        fontSize: `${node.content.fontSize}px`,
+        color: resolveThemeColor(typography.color, theme),
+        fontSize: `${typography.fontSize}px`,
         fontFamily,
         fontWeight:
-          node.content.fontWeight === 'bold'
+          typography.fontWeight === 'bold'
             ? 700
-            : node.content.fontWeight === 'medium'
+            : typography.fontWeight === 'medium'
               ? 600
               : 400,
         textAlign: node.content.align,
-        lineHeight: node.content.lineHeight ?? 1.25,
-        letterSpacing: `${node.content.letterSpacing ?? 0}px`,
+        lineHeight: typography.lineHeight,
+        letterSpacing: `${typography.letterSpacing}px`,
         display: 'flex',
         alignItems: verticalAlignToFlexAlign(node.content.verticalAlign),
         overflow: 'hidden',
         wordBreak: 'break-word',
         whiteSpace: 'pre-wrap',
         textShadow: buildTextShadow(node.content.textShadow),
-        backgroundColor: node.content.backgroundColor || undefined,
+        backgroundColor: node.content.backgroundColor ? resolveThemeColor(node.content.backgroundColor, theme) : undefined,
         textTransform: (node.content.textTransform as React.CSSProperties['textTransform']) || undefined,
         margin: 0,
       }}

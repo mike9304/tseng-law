@@ -5,6 +5,12 @@ import type { BuilderCanvasNode, BuilderCanvasNodeStyle } from '@/lib/builder/ca
 import { gradientToCSS, type GradientConfig } from '@/lib/builder/canvas/palette';
 import ColorPicker from '@/components/builder/editor/ColorPicker';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
+import {
+  THEME_COLOR_LABELS,
+  THEME_COLOR_TOKENS,
+  type BuilderColorValue,
+  resolveThemeColor,
+} from '@/lib/builder/site/theme';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 function clampNumber(value: number, min: number, max: number): number {
@@ -148,43 +154,41 @@ export default function StyleTab({
   onUpdateStyle: (style: Partial<BuilderCanvasNodeStyle>) => void;
 }) {
   const theme = useBuilderTheme();
-  const palette = [
-    theme.colors.primary,
-    theme.colors.secondary,
-    theme.colors.accent,
-    theme.colors.text,
-    theme.colors.background,
-    theme.colors.muted,
-  ];
+  const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
+    token,
+    label: THEME_COLOR_LABELS[token],
+    color: theme.colors[token],
+  }));
   const currentBg = node.style.backgroundColor;
-  const [bgMode, setBgMode] = useState<BgMode>(() => detectBgMode(currentBg));
+  const currentBgCss = resolveThemeColor(currentBg, theme);
+  const [bgMode, setBgMode] = useState<BgMode>(() => detectBgMode(currentBgCss));
 
   // Gradient state
-  const initialGrad = bgMode === 'gradient' ? parseGradientFromCSS(currentBg) : null;
+  const initialGrad = bgMode === 'gradient' ? parseGradientFromCSS(currentBgCss) : null;
   const [gradAngle, setGradAngle] = useState(initialGrad?.angle ?? 180);
   const [gradStart, setGradStart] = useState(initialGrad?.startColor ?? '#123b63');
   const [gradEnd, setGradEnd] = useState(initialGrad?.endColor ?? '#1e5a96');
 
   // Image state
-  const initialImg = bgMode === 'image' ? parseImageFromCSS(currentBg) : null;
+  const initialImg = bgMode === 'image' ? parseImageFromCSS(currentBgCss) : null;
   const [imgUrl, setImgUrl] = useState(initialImg?.url ?? '');
   const [imgSizing, setImgSizing] = useState<'cover' | 'contain'>(initialImg?.sizing ?? 'cover');
 
   // Sync when node changes externally
   useEffect(() => {
-    const mode = detectBgMode(currentBg);
+    const mode = detectBgMode(currentBgCss);
     setBgMode(mode);
     if (mode === 'gradient') {
-      const parsed = parseGradientFromCSS(currentBg);
+      const parsed = parseGradientFromCSS(currentBgCss);
       setGradAngle(parsed.angle);
       setGradStart(parsed.startColor);
       setGradEnd(parsed.endColor);
     } else if (mode === 'image') {
-      const parsed = parseImageFromCSS(currentBg);
+      const parsed = parseImageFromCSS(currentBgCss);
       setImgUrl(parsed.url);
       setImgSizing(parsed.sizing);
     }
-  }, [currentBg]);
+  }, [currentBgCss]);
 
   const applyGradient = (angle: number, start: string, end: string) => {
     const config: GradientConfig = {
@@ -218,7 +222,7 @@ export default function StyleTab({
   };
 
   // Compute preview string
-  let bgPreview = currentBg;
+  let bgPreview = currentBgCss;
   if (bgMode === 'gradient') {
     bgPreview = gradientToCSS({ type: 'linear', angle: gradAngle, stops: [{ color: gradStart, position: 0 }, { color: gradEnd, position: 100 }] });
   } else if (bgMode === 'image' && imgUrl) {
@@ -247,10 +251,10 @@ export default function StyleTab({
           <label className={styles.inspectorField}>
             <span className={styles.inspectorFieldLabel}>배경색</span>
             <ColorPicker
-              value={normalizeHex(currentBg)}
-              palette={palette}
+              value={currentBg}
+              paletteTokens={paletteTokens}
               disabled={disabled}
-              onChange={(hex) => onUpdateStyle({ backgroundColor: hex })}
+              onChange={(color: BuilderColorValue) => onUpdateStyle({ backgroundColor: color })}
             />
           </label>
         ) : null}
@@ -358,10 +362,10 @@ export default function StyleTab({
         <label className={styles.inspectorField}>
           <span className={styles.inspectorFieldLabel}>Border color</span>
           <ColorPicker
-            value={normalizeHex(node.style.borderColor)}
-            palette={palette}
+            value={node.style.borderColor}
+            paletteTokens={paletteTokens}
             disabled={disabled}
-            onChange={(hex) => onUpdateStyle({ borderColor: hex })}
+            onChange={(color: BuilderColorValue) => onUpdateStyle({ borderColor: color })}
           />
         </label>
       </div>
@@ -461,10 +465,10 @@ export default function StyleTab({
       <label className={styles.inspectorField}>
         <span className={styles.inspectorFieldLabel}>Shadow color</span>
         <ColorPicker
-          value={normalizeHex(node.style.shadowColor)}
-          palette={palette}
+          value={node.style.shadowColor}
+          paletteTokens={paletteTokens}
           disabled={disabled}
-          onChange={(hex) => onUpdateStyle({ shadowColor: hex })}
+          onChange={(color: BuilderColorValue) => onUpdateStyle({ shadowColor: color })}
         />
       </label>
     </div>

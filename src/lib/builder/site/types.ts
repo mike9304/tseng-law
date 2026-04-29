@@ -8,6 +8,10 @@
  */
 
 import type { Locale } from '@/lib/locales';
+import {
+  DEFAULT_THEME_TEXT_PRESETS,
+  type ThemeTextPresets,
+} from '@/lib/builder/site/theme';
 // BuilderCanvasDocument used by persistence.ts, not directly here
 
 export type BuilderPageDocumentFamily =
@@ -75,6 +79,7 @@ export interface BuilderTheme {
     md: number;
     lg: number;
   };
+  themeTextPresets?: ThemeTextPresets;
 }
 
 // P4-18: locale 별 Header/Footer 캔버스 ID
@@ -124,6 +129,7 @@ export const DEFAULT_THEME: BuilderTheme = {
     body: 'system-ui, sans-serif',
   },
   radii: { sm: 4, md: 8, lg: 16 },
+  themeTextPresets: DEFAULT_THEME_TEXT_PRESETS,
 };
 
 let pageIdCounter = 0;

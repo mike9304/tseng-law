@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { locales, type Locale } from '@/lib/locales';
+import { THEME_COLOR_TOKENS, THEME_TEXT_PRESET_KEYS } from '@/lib/builder/site/theme';
 const imageFiltersSchema = z.object({
   brightness: z.number().min(0).max(200),
   contrast: z.number().min(0).max(200),
@@ -68,9 +69,20 @@ const canvasNodeStyleDefaults = {
   opacity: 100,
 };
 
+export const themeColorTokenSchema = z.enum(THEME_COLOR_TOKENS);
+export const themeTextPresetKeySchema = z.enum(THEME_TEXT_PRESET_KEYS);
+
+export const builderColorValueSchema = z.union([
+  z.string().max(2000),
+  z.object({
+    kind: z.literal('token').optional(),
+    token: themeColorTokenSchema,
+  }).strict(),
+]);
+
 export const builderCanvasNodeStyleSchema = z.object({
-  backgroundColor: z.string().max(64),
-  borderColor: z.string().max(64),
+  backgroundColor: builderColorValueSchema,
+  borderColor: builderColorValueSchema,
   borderStyle: z.enum(['solid', 'dashed']),
   borderWidth: z.number().int().min(0).max(12),
   borderRadius: z.number().int().min(0).max(64),
@@ -78,7 +90,7 @@ export const builderCanvasNodeStyleSchema = z.object({
   shadowY: z.number().int().min(-96).max(96),
   shadowBlur: z.number().int().min(0).max(160),
   shadowSpread: z.number().int().min(-96).max(96),
-  shadowColor: z.string().max(64),
+  shadowColor: builderColorValueSchema,
   opacity: z.number().int().min(0).max(100),
 });
 
@@ -107,16 +119,17 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('text'),
   content: z.object({
     text: z.string().max(1000),
-    fontSize: z.number().int().min(12).max(72),
-    color: z.string().max(32),
+    fontSize: z.number().int().min(12).max(160),
+    color: builderColorValueSchema,
     fontWeight: z.enum(['regular', 'medium', 'bold']),
     align: z.enum(['left', 'center', 'right']),
     lineHeight: z.number().min(0.5).max(4).default(1.25),
     letterSpacing: z.number().min(-2).max(10).default(0),
     fontFamily: z.string().max(120).optional(),
+    themePreset: themeTextPresetKeySchema.optional(),
     verticalAlign: z.enum(['top', 'center', 'bottom']).optional(),
     textShadow: textShadowSchema,
-    backgroundColor: z.string().max(64).optional(),
+    backgroundColor: builderColorValueSchema.optional(),
     textTransform: z.enum(['none', 'uppercase', 'lowercase', 'capitalize']).optional(),
     className: z.string().max(256).optional(),
     as: z.enum(['div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'time']).optional(),
@@ -154,9 +167,14 @@ const headingCanvasNodeSchema = baseCanvasNodeSchema.extend({
   content: z.object({
     text: z.string().max(300),
     level: z.number().int().min(1).max(6),
-    color: z.string().max(32),
+    color: builderColorValueSchema,
     align: z.enum(['left', 'center', 'right']),
     fontFamily: z.string().max(120).optional(),
+    fontSize: z.number().int().min(12).max(160).optional(),
+    fontWeight: z.enum(['regular', 'medium', 'bold']).optional(),
+    lineHeight: z.number().min(0.5).max(4).optional(),
+    letterSpacing: z.number().min(-2).max(10).optional(),
+    themePreset: themeTextPresetKeySchema.optional(),
     className: z.string().max(256).optional(),
     rawInlineStyle: z.boolean().optional(),
   }),

@@ -2,6 +2,18 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { DEFAULT_THEME, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
+import ColorPicker from '@/components/builder/editor/ColorPicker';
+import FontPicker from '@/components/builder/editor/FontPicker';
+import {
+  THEME_COLOR_LABELS,
+  THEME_COLOR_TOKENS,
+  THEME_TEXT_PRESET_KEYS,
+  type BuilderColorValue,
+  type ThemeTextPreset,
+  type ThemeTextPresetKey,
+  normalizeThemeTextPresets,
+  resolveThemeColor,
+} from '@/lib/builder/site/theme';
 
 interface SiteSettingsForm {
   firmName: string;
@@ -131,6 +143,32 @@ const footerStyle: React.CSSProperties = {
   borderTop: '1px solid #e2e8f0',
 };
 
+const tabRowStyle: React.CSSProperties = {
+  display: 'flex',
+  gap: 6,
+  padding: '10px 20px 0',
+  borderBottom: '1px solid #e2e8f0',
+};
+
+function tabButtonStyle(active: boolean): React.CSSProperties {
+  return {
+    padding: '7px 12px',
+    border: '1px solid transparent',
+    borderBottom: active ? '2px solid #116dff' : '2px solid transparent',
+    background: 'transparent',
+    color: active ? '#0f172a' : '#64748b',
+    fontSize: '0.8rem',
+    fontWeight: 700,
+    cursor: 'pointer',
+  };
+}
+
+const twoColumnStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  gap: 12,
+};
+
 const statusStyle: React.CSSProperties = {
   minHeight: 18,
   fontSize: '0.78rem',
@@ -183,6 +221,7 @@ function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
     colors: { ...DEFAULT_THEME.colors, ...theme?.colors },
     fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
+    themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
   };
 }
 
@@ -236,6 +275,7 @@ export default function SiteSettingsModal({
 }) {
   const [settings, setSettings] = useState<SiteSettingsForm>(EMPTY_SETTINGS);
   const [theme, setTheme] = useState<BuilderTheme>(DEFAULT_THEME);
+  const [activeTab, setActiveTab] = useState<'settings' | 'colors' | 'typography'>('settings');
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -275,9 +315,11 @@ export default function SiteSettingsModal({
   }, [open, onClose]);
 
   const handleSave = async () => {
-    if (!isValidHexColor(theme.colors.primary)) {
-      setError('Primary color는 #RRGGBB 형식이어야 합니다.');
-      return;
+    for (const token of THEME_COLOR_TOKENS) {
+      if (!isValidHexColor(theme.colors[token])) {
+        setError(`${THEME_COLOR_LABELS[token]} color는 #RRGGBB 형식이어야 합니다.`);
+        return;
+      }
     }
 
     setSaving(true);
@@ -315,12 +357,12 @@ export default function SiteSettingsModal({
     setSettings((prev) => ({ ...prev, [key]: value }));
   };
 
-  const updateThemeColor = (value: string) => {
+  const updateThemeColor = (key: keyof BuilderTheme['colors'], value: string) => {
     setTheme((prev) => ({
       ...prev,
       colors: {
         ...prev.colors,
-        primary: value,
+        [key]: value,
       },
     }));
   };
@@ -334,6 +376,29 @@ export default function SiteSettingsModal({
       },
     }));
   };
+
+  const updateTextPreset = (
+    key: ThemeTextPresetKey,
+    patch: Partial<ThemeTextPreset>,
+  ) => {
+    setTheme((prev) => ({
+      ...prev,
+      themeTextPresets: {
+        ...normalizeThemeTextPresets(prev.themeTextPresets),
+        [key]: {
+          ...normalizeThemeTextPresets(prev.themeTextPresets)[key],
+          ...patch,
+        },
+      },
+    }));
+  };
+
+  const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
+    token,
+    label: THEME_COLOR_LABELS[token],
+    color: theme.colors[token],
+  }));
+  const textPresets = normalizeThemeTextPresets(theme.themeTextPresets);
 
   if (!open) return null;
 
@@ -352,12 +417,29 @@ export default function SiteSettingsModal({
           </button>
         </div>
 
+        <div style={tabRowStyle}>
+          {([
+            ['settings', 'Settings'],
+            ['colors', 'Colors'],
+            ['typography', 'Typography'],
+          ] as const).map(([key, label]) => (
+            <button
+              key={key}
+              type="button"
+              style={tabButtonStyle(activeTab === key)}
+              onClick={() => setActiveTab(key)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
         <div style={formStyle}>
           {loading ? (
             <div style={{ padding: 16, textAlign: 'center', color: '#94a3b8', fontSize: '0.85rem' }}>
               로딩 중...
             </div>
-          ) : (
+          ) : activeTab === 'settings' ? (
             <>
               <div style={sectionStyle}>
                 <div style={sectionHeadingStyle}>기본 정보</div>
@@ -380,25 +462,26 @@ export default function SiteSettingsModal({
                   </div>
                 ))}
               </div>
-
-              <div style={sectionStyle}>
-                <div style={sectionHeadingStyle}>테마</div>
-
-                <div style={fieldStyle}>
-                  <label style={labelStyle}>Primary color</label>
+            </>
+          ) : activeTab === 'colors' ? (
+            <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>Theme colors</div>
+              {THEME_COLOR_TOKENS.map((token) => (
+                <div key={token} style={fieldStyle}>
+                  <label style={labelStyle}>{THEME_COLOR_LABELS[token]}</label>
                   <div style={{ display: 'grid', gridTemplateColumns: '56px 1fr', gap: 8, alignItems: 'center' }}>
                     <input
                       type="color"
-                      value={isValidHexColor(theme.colors.primary) ? theme.colors.primary : DEFAULT_THEME.colors.primary}
+                      value={isValidHexColor(theme.colors[token]) ? theme.colors[token] : DEFAULT_THEME.colors[token]}
                       style={{ width: 56, height: 38, padding: 4, border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff', cursor: 'pointer' }}
-                      onChange={(event) => updateThemeColor(event.target.value)}
+                      onChange={(event) => updateThemeColor(token, event.target.value)}
                     />
                     <input
                       type="text"
-                      value={theme.colors.primary}
+                      value={theme.colors[token]}
                       placeholder="#123B63"
                       style={inputStyle}
-                      onChange={(event) => updateThemeColor(event.target.value)}
+                      onChange={(event) => updateThemeColor(token, event.target.value)}
                       onFocus={(event) => {
                         event.currentTarget.style.borderColor = '#116dff';
                       }}
@@ -408,42 +491,129 @@ export default function SiteSettingsModal({
                     />
                   </div>
                 </div>
+              ))}
 
+              <div style={sectionStyle}>
+                <div style={sectionHeadingStyle}>Site fonts</div>
                 <div style={fieldStyle}>
                   <label style={labelStyle}>Heading font</label>
-                  <input
-                    type="text"
+                  <FontPicker
                     value={theme.fonts.heading}
-                    placeholder="예: Noto Sans KR, sans-serif"
-                    style={inputStyle}
-                    onChange={(event) => updateThemeFont('heading', event.target.value)}
-                    onFocus={(event) => {
-                      event.currentTarget.style.borderColor = '#116dff';
-                    }}
-                    onBlur={(event) => {
-                      event.currentTarget.style.borderColor = '#e2e8f0';
-                    }}
+                    onChange={(fontFamily) => updateThemeFont('heading', fontFamily)}
                   />
                 </div>
 
                 <div style={fieldStyle}>
                   <label style={labelStyle}>Body font</label>
-                  <input
-                    type="text"
+                  <FontPicker
                     value={theme.fonts.body}
-                    placeholder="예: Noto Sans KR, sans-serif"
-                    style={inputStyle}
-                    onChange={(event) => updateThemeFont('body', event.target.value)}
-                    onFocus={(event) => {
-                      event.currentTarget.style.borderColor = '#116dff';
-                    }}
-                    onBlur={(event) => {
-                      event.currentTarget.style.borderColor = '#e2e8f0';
-                    }}
+                    onChange={(fontFamily) => updateThemeFont('body', fontFamily)}
                   />
                 </div>
               </div>
-            </>
+            </div>
+          ) : (
+            <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>Theme text presets</div>
+              {THEME_TEXT_PRESET_KEYS.map((key) => {
+                const preset = textPresets[key];
+                return (
+                  <section
+                    key={key}
+                    style={{ border: '1px solid #e2e8f0', borderRadius: 10, padding: 12, display: 'flex', flexDirection: 'column', gap: 12 }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12 }}>
+                      <strong
+                        style={{
+                          fontFamily: preset.fontFamily,
+                          fontSize: Math.min(22, Math.max(14, preset.fontSize * 0.48)),
+                          color: resolveThemeColor(preset.color, theme),
+                          lineHeight: 1.1,
+                        }}
+                      >
+                        제목 텍스트
+                      </strong>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#64748b' }}>{preset.label}</span>
+                    </div>
+
+                    <div style={twoColumnStyle}>
+                      <div style={fieldStyle}>
+                        <label style={labelStyle}>Label</label>
+                        <input
+                          type="text"
+                          value={preset.label}
+                          style={inputStyle}
+                          onChange={(event) => updateTextPreset(key, { label: event.target.value })}
+                        />
+                      </div>
+                      <div style={fieldStyle}>
+                        <label style={labelStyle}>Font</label>
+                        <FontPicker
+                          value={preset.fontFamily}
+                          onChange={(fontFamily) => updateTextPreset(key, { fontFamily })}
+                        />
+                      </div>
+                      <div style={fieldStyle}>
+                        <label style={labelStyle}>Size</label>
+                        <input
+                          type="number"
+                          min={12}
+                          max={160}
+                          value={preset.fontSize}
+                          style={inputStyle}
+                          onChange={(event) => updateTextPreset(key, { fontSize: Number(event.target.value) })}
+                        />
+                      </div>
+                      <div style={fieldStyle}>
+                        <label style={labelStyle}>Weight</label>
+                        <select
+                          value={preset.fontWeight}
+                          style={inputStyle}
+                          onChange={(event) => updateTextPreset(key, { fontWeight: event.target.value as ThemeTextPreset['fontWeight'] })}
+                        >
+                          <option value="regular">Regular</option>
+                          <option value="medium">Medium</option>
+                          <option value="bold">Bold</option>
+                        </select>
+                      </div>
+                      <div style={fieldStyle}>
+                        <label style={labelStyle}>Line height</label>
+                        <input
+                          type="number"
+                          min={0.5}
+                          max={4}
+                          step={0.05}
+                          value={preset.lineHeight}
+                          style={inputStyle}
+                          onChange={(event) => updateTextPreset(key, { lineHeight: Number(event.target.value) })}
+                        />
+                      </div>
+                      <div style={fieldStyle}>
+                        <label style={labelStyle}>Letter spacing</label>
+                        <input
+                          type="number"
+                          min={-2}
+                          max={10}
+                          step={0.5}
+                          value={preset.letterSpacing}
+                          style={inputStyle}
+                          onChange={(event) => updateTextPreset(key, { letterSpacing: Number(event.target.value) })}
+                        />
+                      </div>
+                    </div>
+
+                    <div style={fieldStyle}>
+                      <label style={labelStyle}>Color</label>
+                      <ColorPicker
+                        value={preset.color}
+                        paletteTokens={paletteTokens}
+                        onChange={(color: BuilderColorValue) => updateTextPreset(key, { color })}
+                      />
+                    </div>
+                  </section>
+                );
+              })}
+            </div>
           )}
         </div>
 

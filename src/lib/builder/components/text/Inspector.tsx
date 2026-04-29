@@ -1,6 +1,17 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
+import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
+import ThemeTextPresetPicker from '@/components/builder/editor/ThemeTextPresetPicker';
+import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
+import {
+  THEME_COLOR_LABELS,
+  THEME_COLOR_TOKENS,
+  type BuilderColorValue,
+  createThemeTextPresetPatch,
+  resolveThemeColor,
+  resolveThemeTextTypography,
+} from '@/lib/builder/site/theme';
 
 export default function TextInspector({
   node,
@@ -8,9 +19,28 @@ export default function TextInspector({
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const textNode = node as BuilderTextCanvasNode;
+  const theme = useBuilderTheme();
+  const typography = resolveThemeTextTypography(textNode.content, theme);
+  const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
+    token,
+    label: THEME_COLOR_LABELS[token],
+    color: theme.colors[token],
+  }));
+  const updateDetachedTypography = (props: Record<string, unknown>) => {
+    onUpdate({ ...props, themePreset: undefined });
+  };
 
   return (
     <>
+      <label>
+        <span>Theme preset</span>
+        <ThemeTextPresetPicker
+          value={textNode.content.themePreset}
+          disabled={disabled}
+          onChange={(key) => onUpdate(createThemeTextPresetPatch(key, theme))}
+          onClear={() => onUpdate({ themePreset: undefined })}
+        />
+      </label>
       <label>
         <span>Text</span>
         <textarea
@@ -23,9 +53,9 @@ export default function TextInspector({
       <label>
         <span>Font</span>
         <FontPicker
-          value={textNode.content.fontFamily || 'system-ui'}
+          value={typography.fontFamily}
           disabled={disabled}
-          onChange={(fontFamily) => onUpdate({ fontFamily })}
+          onChange={(fontFamily) => updateDetachedTypography({ fontFamily })}
         />
       </label>
       <label>
@@ -33,27 +63,27 @@ export default function TextInspector({
         <input
           type="number"
           min={12}
-          max={72}
-          value={textNode.content.fontSize}
+          max={160}
+          value={typography.fontSize}
           disabled={disabled}
-          onChange={(event) => onUpdate({ fontSize: Number(event.target.value) })}
+          onChange={(event) => updateDetachedTypography({ fontSize: Number(event.target.value) })}
         />
       </label>
       <label>
         <span>Color</span>
-        <input
-          type="color"
-          value={normalizeHex(textNode.content.color)}
+        <ColorPicker
+          value={typography.color}
+          paletteTokens={paletteTokens}
           disabled={disabled}
-          onChange={(event) => onUpdate({ color: event.target.value })}
+          onChange={(color: BuilderColorValue) => updateDetachedTypography({ color })}
         />
       </label>
       <label>
         <span>Weight</span>
         <select
-          value={textNode.content.fontWeight}
+          value={typography.fontWeight}
           disabled={disabled}
-          onChange={(event) => onUpdate({ fontWeight: event.target.value })}
+          onChange={(event) => updateDetachedTypography({ fontWeight: event.target.value })}
         >
           <option value="regular">Regular</option>
           <option value="medium">Medium</option>
@@ -79,11 +109,11 @@ export default function TextInspector({
           min={0.5}
           max={4}
           step={0.05}
-          value={textNode.content.lineHeight ?? 1.25}
+          value={typography.lineHeight}
           disabled={disabled}
-          onChange={(event) => onUpdate({ lineHeight: Number(event.target.value) })}
+          onChange={(event) => updateDetachedTypography({ lineHeight: Number(event.target.value) })}
         />
-        <span>{(textNode.content.lineHeight ?? 1.25).toFixed(2)}</span>
+        <span>{typography.lineHeight.toFixed(2)}</span>
       </label>
       <label>
         <span>Letter spacing</span>
@@ -92,9 +122,9 @@ export default function TextInspector({
           min={-2}
           max={10}
           step={0.5}
-          value={textNode.content.letterSpacing ?? 0}
+          value={typography.letterSpacing}
           disabled={disabled}
-          onChange={(event) => onUpdate({ letterSpacing: Number(event.target.value) })}
+          onChange={(event) => updateDetachedTypography({ letterSpacing: Number(event.target.value) })}
         />
       </label>
       <label>
@@ -124,11 +154,11 @@ export default function TextInspector({
       </label>
       <label>
         <span>Background color</span>
-        <input
-          type="color"
-          value={normalizeHex(textNode.content.backgroundColor ?? '')}
+        <ColorPicker
+          value={textNode.content.backgroundColor}
+          paletteTokens={paletteTokens}
           disabled={disabled}
-          onChange={(event) => onUpdate({ backgroundColor: event.target.value })}
+          onChange={(color: BuilderColorValue) => onUpdate({ backgroundColor: color })}
         />
         {textNode.content.backgroundColor && (
           <button
@@ -210,7 +240,7 @@ export default function TextInspector({
           <span>Color</span>
           <input
             type="color"
-            value={normalizeHex(textNode.content.textShadow?.color ?? '#000000')}
+            value={normalizeHex(resolveThemeColor(textNode.content.textShadow?.color ?? '#000000', theme))}
             disabled={disabled}
             onChange={(event) =>
               onUpdate({

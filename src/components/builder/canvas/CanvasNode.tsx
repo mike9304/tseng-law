@@ -1,9 +1,11 @@
 'use client';
 
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { getComponent } from '@/lib/builder/components/registry';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
+import { resolveThemeColor, resolveThemeTextTypography } from '@/lib/builder/site/theme';
 import InlineTextEditor from './InlineTextEditor';
 import styles from './SandboxPage.module.css';
 
@@ -40,6 +42,7 @@ export default function CanvasNode({
 }: CanvasNodeProps) {
   const [isEditing, setIsEditing] = useState(false);
   const component = getComponent(node.kind);
+  const theme = useBuilderTheme();
   const nodeRef = useRef<HTMLDivElement>(null);
   const rotationDrag = useRef<{ startAngle: number; startRotation: number } | null>(null);
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
@@ -109,8 +112,23 @@ export default function CanvasNode({
     setIsEditing(false);
   }, []);
 
+  useEffect(() => {
+    if (node.kind !== 'text' && node.kind !== 'heading') return;
+    const handler = (event: Event) => {
+      const detail = (event as CustomEvent<{ nodeId?: string }>).detail;
+      if (detail?.nodeId === node.id && !node.locked) {
+        setIsEditing(true);
+      }
+    };
+    document.addEventListener('builder:start-text-edit', handler);
+    return () => document.removeEventListener('builder:start-text-edit', handler);
+  }, [node.id, node.kind, node.locked]);
+
   const isTextKind = node.kind === 'text' || node.kind === 'heading';
   const textContent = node.content as Record<string, unknown>;
+  const typography = isTextKind
+    ? resolveThemeTextTypography(textContent as Parameters<typeof resolveThemeTextTypography>[0], theme)
+    : null;
   const isActiveGroupFrame = activeGroupId === node.id;
   const isRootNode = !node.parentId;
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
@@ -150,20 +168,20 @@ export default function CanvasNode({
   const body = isEditing && isTextKind ? (
     <InlineTextEditor
       initialText={String(textContent.text || '')}
-      fontSize={typeof textContent.fontSize === 'number' ? textContent.fontSize : 16}
-      color={typeof textContent.color === 'string' ? textContent.color : '#1f2937'}
-      fontWeight={typeof textContent.fontWeight === 'string' ? textContent.fontWeight : 'regular'}
+      fontSize={typography?.fontSize ?? 16}
+      color={resolveThemeColor(typography?.color, theme)}
+      fontWeight={typography?.fontWeight ?? 'regular'}
       align={typeof textContent.align === 'string' ? textContent.align : 'left'}
       onSave={handleInlineSave}
       onBlur={handleInlineBlur}
     />
   ) : component ? (
     node.kind === 'container' ? (
-      <component.Render node={node} mode="edit">
+      <component.Render node={node} mode="edit" theme={theme}>
         {renderNestedChildNodes()}
       </component.Render>
     ) : (
-      <component.Render node={node} mode="edit" />
+      <component.Render node={node} mode="edit" theme={theme} />
     )
   ) : null;
 
@@ -245,17 +263,17 @@ export default function CanvasNode({
         className={styles.nodeBody}
         style={{
           position: 'relative',
-          background: node.style.backgroundColor,
+          background: resolveThemeColor(node.style.backgroundColor, theme),
           borderRadius: `${node.style.borderRadius}px`,
           border: hasVisibleBorder
-            ? `${node.style.borderWidth}px ${node.style.borderStyle} ${node.style.borderColor}`
+            ? `${node.style.borderWidth}px ${node.style.borderStyle} ${resolveThemeColor(node.style.borderColor, theme)}`
             : isActiveGroupFrame
               ? '2px dashed rgba(37, 99, 235, 0.72)'
               : isContainerWithChildren && selected
               ? '1px dashed #94a3b8'
               : 'none',
           boxShadow: hasVisibleShadow
-            ? `${node.style.shadowX}px ${node.style.shadowY}px ${node.style.shadowBlur}px ${node.style.shadowSpread}px ${node.style.shadowColor}`
+            ? `${node.style.shadowX}px ${node.style.shadowY}px ${node.style.shadowBlur}px ${node.style.shadowSpread}px ${resolveThemeColor(node.style.shadowColor, theme)}`
             : isActiveGroupFrame
               ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
               : 'none',

@@ -6,6 +6,7 @@ import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
 import type { BuilderCanvasNode, BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
+import { collectThemeFontFamilies, resolveThemeColor } from '@/lib/builder/site/theme';
 import { buildPageSeo } from '@/lib/builder/seo/seo-model';
 import { generateLegalServiceSchema } from '@/lib/builder/seo/schema-org';
 import { getSiteUrl } from '@/lib/seo';
@@ -100,8 +101,9 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     }
   }
 
-  if (site.theme?.fonts.heading) usedFonts.add(site.theme.fonts.heading);
-  if (site.theme?.fonts.body) usedFonts.add(site.theme.fonts.body);
+  for (const family of collectThemeFontFamilies(site.theme)) {
+    usedFonts.add(family);
+  }
 
   const fontsUrl = buildGoogleFontsUrl([...usedFonts]);
   const navItems = site.navigation || [];
@@ -171,25 +173,25 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           zIndex: useFlowWrapper ? undefined : node.zIndex,
           overflow: flowAsSection ? 'visible' : undefined,
           transform: node.rotation ? `rotate(${node.rotation}deg)` : undefined,
-          backgroundColor: node.style?.backgroundColor || undefined,
+          background: node.style?.backgroundColor ? resolveThemeColor(node.style.backgroundColor, theme) : undefined,
           borderRadius: node.style?.borderRadius ? `${node.style.borderRadius}px` : undefined,
           border: node.style?.borderWidth
-            ? `${node.style.borderWidth}px ${node.style.borderStyle || 'solid'} ${node.style.borderColor || '#000'}`
+            ? `${node.style.borderWidth}px ${node.style.borderStyle || 'solid'} ${resolveThemeColor(node.style.borderColor, theme)}`
             : undefined,
           boxShadow: node.style?.shadowBlur
-            ? `${node.style.shadowX || 0}px ${node.style.shadowY || 0}px ${node.style.shadowBlur}px ${node.style.shadowSpread || 0}px ${node.style.shadowColor || 'rgba(0,0,0,0.1)'}`
+            ? `${node.style.shadowX || 0}px ${node.style.shadowY || 0}px ${node.style.shadowBlur}px ${node.style.shadowSpread || 0}px ${resolveThemeColor(node.style.shadowColor, theme)}`
             : undefined,
           opacity: node.style?.opacity != null ? node.style.opacity / 100 : undefined,
         }}
       >
         {component ? (
           node.kind === 'container' ? (
-            <component.Render node={node} mode="published">
+            <component.Render node={node} mode="published" theme={theme}>
               {childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode))}
             </component.Render>
           ) : (
             <>
-              <component.Render node={node} mode="published" />
+              <component.Render node={node} mode="published" theme={theme} />
               {childNodes.map((child) => renderPublishedNode(child))}
             </>
           )

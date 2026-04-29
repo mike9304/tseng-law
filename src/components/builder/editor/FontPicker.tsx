@@ -1,38 +1,25 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { FONT_CATALOG, fontFamilyCSS } from '@/lib/builder/canvas/fonts';
+import { FONT_CATALOG, buildGoogleFontsUrl, fontFamilyCSS } from '@/lib/builder/canvas/fonts';
 import { useBuilderTheme } from './BuilderThemeContext';
 
-const POPULAR_FONT_FAMILIES = [
-  'system-ui',
-  'Noto Sans KR',
-  'Noto Sans TC',
-  'Noto Sans',
-  'Pretendard',
-  'Inter',
-  'Roboto',
-  'Open Sans',
-  'Lato',
-  'Poppins',
-  'Montserrat',
-  'DM Sans',
-  'Noto Serif KR',
-  'Noto Serif TC',
-  'Playfair Display',
-  'Merriweather',
-  'Lora',
-  'PT Serif',
-  'Source Serif 4',
-  'JetBrains Mono',
-] as const;
+const SYSTEM_FONTS: FontItem[] = [
+  { family: 'system-ui', note: 'System' },
+  { family: 'sans-serif', note: 'Generic' },
+  { family: 'serif', note: 'Generic' },
+  { family: 'monospace', note: 'Generic' },
+];
 
 const wrapperStyle: React.CSSProperties = {
   position: 'relative',
+  width: 220,
+  maxWidth: '100%',
 };
 
 const triggerStyle: React.CSSProperties = {
   width: '100%',
+  height: 36,
   padding: '8px 10px',
   border: '1px solid #cbd5e1',
   borderRadius: 8,
@@ -48,6 +35,7 @@ const popoverStyle: React.CSSProperties = {
   top: 'calc(100% + 6px)',
   left: 0,
   right: 0,
+  width: 220,
   zIndex: 40,
   background: '#fff',
   border: '1px solid #e2e8f0',
@@ -82,14 +70,15 @@ const listStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   gap: 4,
-  maxHeight: 280,
+  maxHeight: 320,
   overflowY: 'auto',
 };
 
 function optionStyle(active: boolean): React.CSSProperties {
   return {
     width: '100%',
-    padding: '8px 10px',
+    minHeight: 36,
+    padding: '6px 10px',
     border: active ? '1px solid #123b63' : '1px solid transparent',
     borderRadius: 10,
     background: active ? '#eff6ff' : 'transparent',
@@ -135,24 +124,24 @@ export default function FontPicker({
   }, [theme.fonts.body, theme.fonts.heading]);
 
   const presetFonts = useMemo<FontItem[]>(() => {
-    const presetMap = new Map(FONT_CATALOG.map((font) => [font.family, font]));
-    return POPULAR_FONT_FAMILIES
-      .map((family) => presetMap.get(family))
-      .filter((font): font is (typeof FONT_CATALOG)[number] => Boolean(font))
+    return FONT_CATALOG
+      .filter((font) => font.family !== 'system-ui')
       .map((font) => ({
         family: font.family,
-        note: font.cjk ? 'CJK' : undefined,
+        note: font.cjk ? 'CJK' : font.category,
       }));
   }, []);
 
   const normalizedQuery = query.trim().toLowerCase();
+  const filteredSystemFonts = SYSTEM_FONTS.filter((font) =>
+    font.family.toLowerCase().includes(normalizedQuery));
   const filteredSiteFonts = siteFonts.filter((font) =>
     font.family.toLowerCase().includes(normalizedQuery));
   const filteredPresetFonts = presetFonts.filter((font) =>
     font.family.toLowerCase().includes(normalizedQuery));
 
   const currentFont = value || 'system-ui';
-  const currentShownInLists = [...filteredSiteFonts, ...filteredPresetFonts]
+  const currentShownInLists = [...filteredSystemFonts, ...filteredSiteFonts, ...filteredPresetFonts]
     .some((font) => font.family === currentFont);
   const customCurrent = !currentShownInLists && currentFont.trim().length > 0
     ? [{ family: currentFont, note: 'Current' }]
@@ -174,6 +163,21 @@ export default function FontPicker({
     return () => window.removeEventListener('click', handleWindowClick, true);
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return undefined;
+    const visibleGoogleFonts = filteredPresetFonts.slice(0, 30).map((font) => font.family);
+    const url = buildGoogleFontsUrl(visibleGoogleFonts);
+    if (!url) return undefined;
+    const link = window.document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    link.dataset.builderFontPreview = 'true';
+    window.document.head.appendChild(link);
+    return () => {
+      link.remove();
+    };
+  }, [filteredPresetFonts, open]);
+
   const renderOption = (font: FontItem) => (
     <button
       key={`${font.family}-${font.note ?? 'preset'}`}
@@ -191,6 +195,9 @@ export default function FontPicker({
             {font.note}
           </span>
         ) : null}
+      </div>
+      <div style={{ marginTop: 2, fontSize: '0.78rem', lineHeight: 1.1, color: '#334155' }}>
+        Aa 안녕하세요 你好 Hello
       </div>
     </button>
   );
@@ -216,6 +223,19 @@ export default function FontPicker({
             style={searchInputStyle}
             onChange={(event) => setQuery(event.target.value)}
           />
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <span style={sectionLabelStyle}>System</span>
+            <div style={listStyle}>
+              {filteredSystemFonts.length > 0 ? (
+                filteredSystemFonts.map(renderOption)
+              ) : (
+                <div style={{ padding: '6px 4px', fontSize: '0.78rem', color: '#94a3b8' }}>
+                  검색 결과가 없습니다.
+                </div>
+              )}
+            </div>
+          </div>
 
           {siteFonts.length > 0 ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>

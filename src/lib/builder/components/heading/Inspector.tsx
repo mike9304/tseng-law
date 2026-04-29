@@ -1,6 +1,25 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderHeadingCanvasNode } from '@/lib/builder/canvas/types';
+import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
+import ThemeTextPresetPicker from '@/components/builder/editor/ThemeTextPresetPicker';
+import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
+import {
+  THEME_COLOR_LABELS,
+  THEME_COLOR_TOKENS,
+  type BuilderColorValue,
+  createThemeTextPresetPatch,
+  resolveThemeTextTypography,
+} from '@/lib/builder/site/theme';
+
+const LEVEL_TO_SIZE = {
+  1: 48,
+  2: 40,
+  3: 32,
+  4: 28,
+  5: 24,
+  6: 20,
+} as const;
 
 export default function HeadingInspector({
   node,
@@ -8,9 +27,40 @@ export default function HeadingInspector({
   disabled = false,
 }: BuilderComponentInspectorProps) {
   const headingNode = node as BuilderHeadingCanvasNode;
+  const theme = useBuilderTheme();
+  const level = Math.max(1, Math.min(6, headingNode.content.level)) as keyof typeof LEVEL_TO_SIZE;
+  const typography = resolveThemeTextTypography(
+    {
+      themePreset: headingNode.content.themePreset,
+      fontFamily: headingNode.content.fontFamily,
+      fontSize: headingNode.content.fontSize ?? LEVEL_TO_SIZE[level],
+      fontWeight: headingNode.content.fontWeight ?? 'bold',
+      lineHeight: headingNode.content.lineHeight ?? 1.05,
+      letterSpacing: headingNode.content.letterSpacing ?? 0,
+      color: headingNode.content.color,
+    },
+    theme,
+  );
+  const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
+    token,
+    label: THEME_COLOR_LABELS[token],
+    color: theme.colors[token],
+  }));
+  const updateDetachedTypography = (props: Record<string, unknown>) => {
+    onUpdate({ ...props, themePreset: undefined });
+  };
 
   return (
     <>
+      <label>
+        <span>Theme preset</span>
+        <ThemeTextPresetPicker
+          value={headingNode.content.themePreset}
+          disabled={disabled}
+          onChange={(key) => onUpdate(createThemeTextPresetPatch(key, theme))}
+          onClear={() => onUpdate({ themePreset: undefined })}
+        />
+      </label>
       <label>
         <span>Heading</span>
         <textarea
@@ -23,9 +73,9 @@ export default function HeadingInspector({
       <label>
         <span>Font</span>
         <FontPicker
-          value={headingNode.content.fontFamily || 'system-ui'}
+          value={typography.fontFamily}
           disabled={disabled}
-          onChange={(fontFamily) => onUpdate({ fontFamily })}
+          onChange={(fontFamily) => updateDetachedTypography({ fontFamily })}
         />
       </label>
       <label>
@@ -45,11 +95,59 @@ export default function HeadingInspector({
       </label>
       <label>
         <span>Color</span>
-        <input
-          type="color"
-          value={normalizeHex(headingNode.content.color)}
+        <ColorPicker
+          value={typography.color}
+          paletteTokens={paletteTokens}
           disabled={disabled}
-          onChange={(event) => onUpdate({ color: event.target.value })}
+          onChange={(color: BuilderColorValue) => updateDetachedTypography({ color })}
+        />
+      </label>
+      <label>
+        <span>Font size</span>
+        <input
+          type="number"
+          min={12}
+          max={160}
+          value={typography.fontSize}
+          disabled={disabled}
+          onChange={(event) => updateDetachedTypography({ fontSize: Number(event.target.value) })}
+        />
+      </label>
+      <label>
+        <span>Weight</span>
+        <select
+          value={typography.fontWeight}
+          disabled={disabled}
+          onChange={(event) => updateDetachedTypography({ fontWeight: event.target.value })}
+        >
+          <option value="regular">Regular</option>
+          <option value="medium">Medium</option>
+          <option value="bold">Bold</option>
+        </select>
+      </label>
+      <label>
+        <span>Line height</span>
+        <input
+          type="range"
+          min={0.5}
+          max={4}
+          step={0.05}
+          value={typography.lineHeight}
+          disabled={disabled}
+          onChange={(event) => updateDetachedTypography({ lineHeight: Number(event.target.value) })}
+        />
+        <span>{typography.lineHeight.toFixed(2)}</span>
+      </label>
+      <label>
+        <span>Letter spacing</span>
+        <input
+          type="number"
+          min={-2}
+          max={10}
+          step={0.5}
+          value={typography.letterSpacing}
+          disabled={disabled}
+          onChange={(event) => updateDetachedTypography({ letterSpacing: Number(event.target.value) })}
         />
       </label>
       <label>
@@ -66,9 +164,4 @@ export default function HeadingInspector({
       </label>
     </>
   );
-}
-
-function normalizeHex(value: string): string {
-  if (/^#[0-9a-f]{6}$/i.test(value)) return value;
-  return '#0f172a';
 }

@@ -21,6 +21,7 @@ import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { DEFAULT_THEME, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
+import { collectThemeFontFamilies } from '@/lib/builder/site/theme';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
 
@@ -318,7 +319,7 @@ export default function SandboxPage({
   return (
     <BuilderThemeProvider value={siteThemeState}>
       <main className={styles.shell}>
-        <GoogleFontsLoader extraFamilies={[siteThemeState.fonts.heading, siteThemeState.fonts.body]} />
+        <GoogleFontsLoader extraFamilies={collectThemeFontFamilies(siteThemeState)} />
         <SandboxTopBar
         locale={locale}
         backend={backend}

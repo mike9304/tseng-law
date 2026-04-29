@@ -16,6 +16,7 @@ export default defineComponent({
     lineHeight: 1.25,
     letterSpacing: 0,
     fontFamily: 'system-ui',
+    themePreset: undefined,
     verticalAlign: 'top' as const,
     textShadow: undefined,
     backgroundColor: undefined,

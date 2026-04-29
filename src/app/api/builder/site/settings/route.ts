@@ -3,6 +3,11 @@ import { ZodError, z } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { DEFAULT_THEME, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
+import {
+  THEME_COLOR_TOKENS,
+  THEME_TEXT_PRESET_KEYS,
+  normalizeThemeTextPresets,
+} from '@/lib/builder/site/theme';
 import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
@@ -29,6 +34,24 @@ const siteSettingsSchema = z.object({
   favicon: optionalTrimmedString(2000),
 }).strict();
 
+const themeColorValueSchema = z.union([
+  z.string().trim().min(1).max(2000),
+  z.object({
+    kind: z.literal('token').optional(),
+    token: z.enum(THEME_COLOR_TOKENS),
+  }).strict(),
+]);
+
+const themeTextPresetSchema = z.object({
+  label: z.string().trim().min(1).max(80),
+  fontFamily: z.string().trim().min(1).max(200),
+  fontSize: z.number().int().min(12).max(160),
+  fontWeight: z.enum(['regular', 'medium', 'bold']),
+  lineHeight: z.number().min(0.5).max(4),
+  letterSpacing: z.number().min(-2).max(10),
+  color: themeColorValueSchema,
+}).strict();
+
 const siteThemeSchema = z.object({
   colors: z.object({
     primary: z.string().trim().min(1).max(64),
@@ -47,6 +70,11 @@ const siteThemeSchema = z.object({
     md: z.number().int().min(0).max(64),
     lg: z.number().int().min(0).max(128),
   }).strict(),
+  themeTextPresets: z.object(
+    Object.fromEntries(
+      THEME_TEXT_PRESET_KEYS.map((key) => [key, themeTextPresetSchema]),
+    ) as Record<(typeof THEME_TEXT_PRESET_KEYS)[number], typeof themeTextPresetSchema>,
+  ).strict().optional(),
 }).strict();
 
 const settingsPayloadSchema = z.object({
@@ -80,6 +108,7 @@ function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
     colors: { ...DEFAULT_THEME.colors, ...theme?.colors },
     fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
+    themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
   };
 }
 

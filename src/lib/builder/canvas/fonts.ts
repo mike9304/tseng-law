@@ -28,6 +28,14 @@ export const FONT_CATALOG: FontOption[] = [
   { family: 'Poppins', category: 'sans-serif', weights: [300, 400, 500, 600, 700], cjk: false },
   { family: 'Montserrat', category: 'sans-serif', weights: [300, 400, 500, 600, 700], cjk: false },
   { family: 'DM Sans', category: 'sans-serif', weights: [400, 500, 700], cjk: false },
+  { family: 'Manrope', category: 'sans-serif', weights: [300, 400, 500, 600, 700], cjk: false },
+  { family: 'Nunito Sans', category: 'sans-serif', weights: [300, 400, 600, 700], cjk: false },
+  { family: 'Work Sans', category: 'sans-serif', weights: [300, 400, 500, 600, 700], cjk: false },
+  { family: 'Source Sans 3', category: 'sans-serif', weights: [300, 400, 600, 700], cjk: false },
+  { family: 'Ubuntu', category: 'sans-serif', weights: [300, 400, 500, 700], cjk: false },
+  { family: 'IBM Plex Sans KR', category: 'sans-serif', weights: [300, 400, 500, 600, 700], cjk: true },
+  { family: 'Nanum Gothic', category: 'sans-serif', weights: [400, 700], cjk: true },
+  { family: 'Gowun Dodum', category: 'sans-serif', weights: [400], cjk: true },
   // Serif
   { family: 'Noto Serif KR', category: 'serif', weights: [400, 500, 700], cjk: true },
   { family: 'Noto Serif TC', category: 'serif', weights: [400, 500, 700], cjk: true },
@@ -36,6 +44,8 @@ export const FONT_CATALOG: FontOption[] = [
   { family: 'Lora', category: 'serif', weights: [400, 500, 600, 700], cjk: false },
   { family: 'PT Serif', category: 'serif', weights: [400, 700], cjk: false },
   { family: 'Source Serif 4', category: 'serif', weights: [300, 400, 600, 700], cjk: false },
+  { family: 'Libre Baskerville', category: 'serif', weights: [400, 700], cjk: false },
+  { family: 'Crimson Text', category: 'serif', weights: [400, 600, 700], cjk: false },
   // Display
   { family: 'Oswald', category: 'display', weights: [300, 400, 500, 600, 700], cjk: false },
   { family: 'Raleway', category: 'display', weights: [300, 400, 500, 600, 700], cjk: false },
@@ -54,9 +64,10 @@ export function getCJKFonts(): FontOption[] {
 }
 
 export function buildGoogleFontsUrl(families: string[]): string {
+  const genericFamilies = new Set(['system-ui', 'sans-serif', 'serif', 'monospace', 'cursive', 'fantasy']);
   const filtered = [...new Set(families
     .map((family) => family.split(',')[0]?.trim().replace(/^['"]|['"]$/g, '') || family.trim())
-    .filter((family) => family.length > 0 && family !== 'system-ui'))];
+    .filter((family) => family.length > 0 && !genericFamilies.has(family)))];
   if (filtered.length === 0) return '';
   const params = filtered
     .map((family) => {

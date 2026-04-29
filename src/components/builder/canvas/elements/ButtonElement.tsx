@@ -1,22 +1,31 @@
 import type { BuilderButtonCanvasNode } from '@/lib/builder/canvas/types';
+import type { BuilderTheme } from '@/lib/builder/site/types';
+import { resolveThemeColor } from '@/lib/builder/site/theme';
 
 type ButtonVariant = BuilderButtonCanvasNode['content']['style'];
 
-function resolveVariantStyles(variant: ButtonVariant, s: BuilderButtonCanvasNode['style']) {
-  const hasCustomBg = s.backgroundColor !== 'transparent';
+function resolveVariantStyles(
+  variant: ButtonVariant,
+  s: BuilderButtonCanvasNode['style'],
+  theme?: BuilderTheme,
+) {
+  const backgroundColor = resolveThemeColor(s.backgroundColor, theme);
+  const borderColor = resolveThemeColor(s.borderColor, theme);
+  const shadowColor = resolveThemeColor(s.shadowColor, theme);
+  const hasCustomBg = backgroundColor !== 'transparent';
   const hasCustomBorder =
     s.borderWidth > 0;
   const hasShadow =
     s.shadowX !== 0 || s.shadowY !== 0 || s.shadowBlur !== 0 || s.shadowSpread !== 0;
 
   const base = {
-    background: hasCustomBg ? s.backgroundColor : 'transparent',
+    background: hasCustomBg ? backgroundColor : 'transparent',
     color: '#0f172a',
     border: hasCustomBorder
-      ? `${s.borderWidth}px ${s.borderStyle} ${s.borderColor}`
+      ? `${s.borderWidth}px ${s.borderStyle} ${borderColor}`
       : 'none',
     boxShadow: hasShadow
-      ? `${s.shadowX}px ${s.shadowY}px ${s.shadowBlur}px ${s.shadowSpread}px ${s.shadowColor}`
+      ? `${s.shadowX}px ${s.shadowY}px ${s.shadowBlur}px ${s.shadowSpread}px ${shadowColor}`
       : 'none',
     textDecoration: 'none' as const,
   };
@@ -25,7 +34,7 @@ function resolveVariantStyles(variant: ButtonVariant, s: BuilderButtonCanvasNode
     case 'primary':
       return {
         ...base,
-        background: hasCustomBg ? s.backgroundColor : '#0b3b2e',
+        background: hasCustomBg ? backgroundColor : '#0b3b2e',
         color: '#ffffff',
         border: hasCustomBorder
           ? base.border
@@ -37,7 +46,7 @@ function resolveVariantStyles(variant: ButtonVariant, s: BuilderButtonCanvasNode
     case 'secondary':
       return {
         ...base,
-        background: hasCustomBg ? s.backgroundColor : '#ffffff',
+        background: hasCustomBg ? backgroundColor : '#ffffff',
         color: '#0f172a',
         border: hasCustomBorder
           ? base.border
@@ -50,7 +59,7 @@ function resolveVariantStyles(variant: ButtonVariant, s: BuilderButtonCanvasNode
       return {
         ...base,
         background: 'transparent',
-        color: hasCustomBg ? s.backgroundColor : '#0b3b2e',
+        color: hasCustomBg ? backgroundColor : '#0b3b2e',
         border: hasCustomBorder
           ? base.border
           : '2px solid #0b3b2e',
@@ -58,7 +67,7 @@ function resolveVariantStyles(variant: ButtonVariant, s: BuilderButtonCanvasNode
     case 'ghost':
       return {
         ...base,
-        background: hasCustomBg ? s.backgroundColor : 'rgba(11, 59, 46, 0.06)',
+        background: hasCustomBg ? backgroundColor : 'rgba(11, 59, 46, 0.06)',
         color: '#0b3b2e',
         border: 'none',
       };
@@ -77,9 +86,11 @@ function resolveVariantStyles(variant: ButtonVariant, s: BuilderButtonCanvasNode
 
 export default function ButtonElement({
   node,
+  theme,
   mode = 'edit',
 }: {
   node: BuilderButtonCanvasNode;
+  theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const s = node.style;
@@ -109,7 +120,7 @@ export default function ButtonElement({
     );
   }
 
-  const variantStyles = resolveVariantStyles(node.content.style, s);
+  const variantStyles = resolveVariantStyles(node.content.style, s, theme);
 
   return (
     <div

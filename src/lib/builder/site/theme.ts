@@ -1,4 +1,8 @@
-import type { BuilderTheme } from '@/lib/builder/site/types';
+import type {
+  BuilderSiteSettings,
+  BuilderTheme,
+  BuilderThemeColors,
+} from '@/lib/builder/site/types';
 
 export const THEME_COLOR_TOKENS = [
   'primary',
@@ -80,6 +84,17 @@ const FALLBACK_THEME_COLORS: Record<ThemeColorToken, string> = {
   text: '#1f2937',
   muted: '#f3f4f6',
 };
+
+export const DEFAULT_DARK_THEME_COLORS: BuilderThemeColors = {
+  primary: '#7dd3fc',
+  secondary: '#93c5fd',
+  accent: '#fbbf24',
+  background: '#0f172a',
+  text: '#f8fafc',
+  muted: '#1e293b',
+};
+
+export type ThemeColorMode = 'light' | 'dark' | 'css-var';
 
 export const THEME_TEXT_PRESET_KEYS = [
   'title1',
@@ -308,12 +323,76 @@ export function isImageBackgroundValue(value: unknown): value is BuilderImageBac
   return Boolean(value && typeof value === 'object' && (value as { kind?: unknown }).kind === 'image');
 }
 
+function clampChannel(value: number): number {
+  return Math.max(0, Math.min(255, Math.round(value)));
+}
+
+function parseHexColor(value: string): [number, number, number] | null {
+  const normalized = value.trim().replace(/^#/, '');
+  if (!/^[0-9a-fA-F]{6}$/.test(normalized)) return null;
+  return [
+    Number.parseInt(normalized.slice(0, 2), 16),
+    Number.parseInt(normalized.slice(2, 4), 16),
+    Number.parseInt(normalized.slice(4, 6), 16),
+  ];
+}
+
+function toHexColor(red: number, green: number, blue: number): string {
+  return `#${[red, green, blue]
+    .map((channel) => clampChannel(channel).toString(16).padStart(2, '0'))
+    .join('')}`;
+}
+
+function mixHexColor(left: string, right: string, leftWeight: number): string {
+  const leftRgb = parseHexColor(left);
+  const rightRgb = parseHexColor(right);
+  if (!leftRgb || !rightRgb) return left;
+  const weight = Math.max(0, Math.min(1, leftWeight));
+  return toHexColor(
+    leftRgb[0] * weight + rightRgb[0] * (1 - weight),
+    leftRgb[1] * weight + rightRgb[1] * (1 - weight),
+    leftRgb[2] * weight + rightRgb[2] * (1 - weight),
+  );
+}
+
+export function createDarkColorsFromLight(colors: Partial<BuilderThemeColors> = {}): BuilderThemeColors {
+  const light = { ...FALLBACK_THEME_COLORS, ...colors };
+  return {
+    primary: mixHexColor(light.primary, '#ffffff', 0.38),
+    secondary: mixHexColor(light.secondary, '#ffffff', 0.34),
+    accent: mixHexColor(light.accent, '#ffffff', 0.48),
+    background: mixHexColor(light.text, '#020617', 0.18),
+    text: mixHexColor(light.background, '#ffffff', 0.22),
+    muted: mixHexColor(light.text, '#111827', 0.24),
+  };
+}
+
+export function normalizeDarkColors(
+  colors: BuilderThemeColors,
+  darkColors?: Partial<BuilderThemeColors>,
+): BuilderThemeColors {
+  return {
+    ...createDarkColorsFromLight(colors),
+    ...darkColors,
+  };
+}
+
 export function resolveThemeColor(
   value: BuilderColorValue | undefined,
   theme?: BuilderTheme,
+  mode: ThemeColorMode = 'light',
 ): string {
   if (!value) return 'transparent';
   if (isThemeColorReference(value)) {
+    if (mode === 'css-var') {
+      const fallback = theme?.colors[value.token] ?? FALLBACK_THEME_COLORS[value.token];
+      return `var(--builder-color-${value.token}, ${fallback})`;
+    }
+    if (mode === 'dark') {
+      return theme?.darkColors?.[value.token]
+        ?? createDarkColorsFromLight(theme?.colors)[value.token]
+        ?? DEFAULT_DARK_THEME_COLORS[value.token];
+    }
     return theme?.colors[value.token] ?? FALLBACK_THEME_COLORS[value.token];
   }
   return value;
@@ -334,10 +413,14 @@ function positionToCss(position: BackgroundImagePosition): string {
   }
 }
 
-function gradientToCss(value: BuilderGradientBackground, theme?: BuilderTheme): string {
+function gradientToCss(
+  value: BuilderGradientBackground,
+  theme?: BuilderTheme,
+  mode: ThemeColorMode = 'light',
+): string {
   const stops = [...value.stops]
     .sort((left, right) => left.position - right.position)
-    .map((stop) => `${resolveThemeColor(stop.color, theme)} ${stop.position}%`)
+    .map((stop) => `${resolveThemeColor(stop.color, theme, mode)} ${stop.position}%`)
     .join(', ');
   if (value.type === 'radial') return `radial-gradient(circle, ${stops})`;
   return `linear-gradient(${value.angle}deg, ${stops})`;
@@ -350,10 +433,11 @@ function cssUrl(src: string): string {
 export function resolveBackgroundStyle(
   value: BuilderBackgroundValue | undefined,
   theme?: BuilderTheme,
+  mode: ThemeColorMode = 'light',
 ): ResolvedBackgroundStyle {
   if (!value) return { background: 'transparent' };
   if (isGradientBackgroundValue(value)) {
-    return { background: gradientToCss(value, theme) };
+    return { background: gradientToCss(value, theme, mode) };
   }
   if (isImageBackgroundValue(value)) {
     const image = cssUrl(value.src);
@@ -367,7 +451,7 @@ export function resolveBackgroundStyle(
     }
 
     const overlayOpacity = Math.max(0, Math.min(100, value.overlayOpacity));
-    const overlayColor = resolveThemeColor(value.overlayColor, theme);
+    const overlayColor = resolveThemeColor(value.overlayColor, theme, mode);
     const overlay = `linear-gradient(color-mix(in srgb, ${overlayColor} ${overlayOpacity}%, transparent), color-mix(in srgb, ${overlayColor} ${overlayOpacity}%, transparent))`;
     return {
       backgroundImage: `${overlay}, ${image}`,
@@ -376,7 +460,7 @@ export function resolveBackgroundStyle(
       backgroundRepeat: `no-repeat, ${value.repeat}`,
     };
   }
-  return { background: resolveThemeColor(value, theme) };
+  return { background: resolveThemeColor(value, theme, mode) };
 }
 
 export function buildHoverTransform(
@@ -401,6 +485,136 @@ export function normalizeThemeTextPresets(
     };
   }
   return next;
+}
+
+export interface BrandKit {
+  logoLight?: string;
+  logoDark?: string;
+  colors: {
+    primary: string;
+    secondary: string;
+    accent: string;
+    background: string;
+    text: string;
+  };
+  fonts: { title: string; body: string };
+  radiusScale: number;
+  metadata?: { exportedAt: string; siteName?: string };
+}
+
+function safeString(value: unknown, fallback: string): string {
+  return typeof value === 'string' && value.trim().length > 0 ? value.trim() : fallback;
+}
+
+function optionalString(value: unknown): string | undefined {
+  return typeof value === 'string' && value.trim().length > 0 ? value.trim() : undefined;
+}
+
+function normalizeRadiusScale(value: unknown, fallback: number): number {
+  if (typeof value !== 'number' || !Number.isFinite(value)) return fallback;
+  return Math.max(0, Math.min(64, Math.round(value)));
+}
+
+export function createBrandKitFromTheme(
+  theme?: BuilderTheme,
+  settings?: Partial<BuilderSiteSettings>,
+  siteName?: string,
+): BrandKit {
+  const colors = { ...FALLBACK_THEME_COLORS, ...theme?.colors };
+  const radiusScale = theme?.radii?.md ?? 8;
+  return {
+    logoLight: settings?.logo,
+    logoDark: settings?.logoDark,
+    colors: {
+      primary: colors.primary,
+      secondary: colors.secondary,
+      accent: colors.accent,
+      background: colors.background,
+      text: colors.text,
+    },
+    fonts: {
+      title: theme?.fonts.heading ?? 'system-ui, sans-serif',
+      body: theme?.fonts.body ?? 'system-ui, sans-serif',
+    },
+    radiusScale,
+    metadata: {
+      exportedAt: new Date().toISOString(),
+      siteName,
+    },
+  };
+}
+
+export function normalizeBrandKit(value: unknown, fallback?: BrandKit): BrandKit {
+  const source = value && typeof value === 'object' ? value as Record<string, unknown> : {};
+  const colors = source.colors && typeof source.colors === 'object'
+    ? source.colors as Record<string, unknown>
+    : {};
+  const fonts = source.fonts && typeof source.fonts === 'object'
+    ? source.fonts as Record<string, unknown>
+    : {};
+  const fallbackKit = fallback ?? createBrandKitFromTheme();
+
+  return {
+    logoLight: optionalString(source.logoLight) ?? fallbackKit.logoLight,
+    logoDark: optionalString(source.logoDark) ?? fallbackKit.logoDark,
+    colors: {
+      primary: safeString(colors.primary, fallbackKit.colors.primary),
+      secondary: safeString(colors.secondary, fallbackKit.colors.secondary),
+      accent: safeString(colors.accent, fallbackKit.colors.accent),
+      background: safeString(colors.background, fallbackKit.colors.background),
+      text: safeString(colors.text, fallbackKit.colors.text),
+    },
+    fonts: {
+      title: safeString(fonts.title, fallbackKit.fonts.title),
+      body: safeString(fonts.body, fallbackKit.fonts.body),
+    },
+    radiusScale: normalizeRadiusScale(source.radiusScale, fallbackKit.radiusScale),
+    metadata: {
+      exportedAt: new Date().toISOString(),
+      siteName: typeof (source.metadata as { siteName?: unknown } | undefined)?.siteName === 'string'
+        ? (source.metadata as { siteName: string }).siteName
+        : fallbackKit.metadata?.siteName,
+    },
+  };
+}
+
+export function createThemeFromBrandKit(
+  kit: BrandKit,
+  baseTheme?: BuilderTheme,
+): BuilderTheme {
+  const radius = normalizeRadiusScale(kit.radiusScale, baseTheme?.radii.md ?? 8);
+  const colors: BuilderThemeColors = {
+    primary: kit.colors.primary,
+    secondary: kit.colors.secondary,
+    accent: kit.colors.accent,
+    background: kit.colors.background,
+    text: kit.colors.text,
+    muted: baseTheme?.colors.muted ?? mixHexColor(kit.colors.background, kit.colors.text, 0.92),
+  };
+  const titleFont = kit.fonts.title;
+  const bodyFont = kit.fonts.body;
+
+  return {
+    colors,
+    darkColors: normalizeDarkColors(colors, baseTheme?.darkColors),
+    fonts: {
+      heading: titleFont,
+      body: bodyFont,
+    },
+    radii: {
+      sm: Math.max(0, Math.round(radius * 0.5)),
+      md: radius,
+      lg: Math.max(radius, Math.round(radius * 1.5)),
+    },
+    themeTextPresets: normalizeThemeTextPresets({
+      ...baseTheme?.themeTextPresets,
+      title1: { fontFamily: titleFont, color: { kind: 'token', token: 'text' } },
+      title2: { fontFamily: titleFont, color: { kind: 'token', token: 'text' } },
+      title3: { fontFamily: titleFont, color: { kind: 'token', token: 'text' } },
+      body: { fontFamily: bodyFont, color: { kind: 'token', token: 'text' } },
+      quote: { fontFamily: titleFont, color: { kind: 'token', token: 'secondary' } },
+    }),
+  };
 }
 
 export function getThemeTextPresets(theme?: BuilderTheme): ThemeTextPresets {

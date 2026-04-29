@@ -30,10 +30,12 @@ export default function SiteHeader({
   const [menuOpen, setMenuOpen] = useState(false);
   const primaryColor = theme?.colors.primary || '#116dff';
   const textColor = theme?.colors.text || '#374151';
+  const backgroundColor = theme?.colors.background || '#ffffff';
   const borderColor = theme?.colors.muted || '#e5e7eb';
   const headingFont = theme?.fonts.heading;
   const bodyFont = theme?.fonts.body;
   const currentPath = buildSitePagePath(locale, currentSlug);
+  const hasDarkLogo = Boolean(settings?.logoDark);
 
   const handleNavigate = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!onNavigate || /^(https?:|mailto:|tel:|#)/.test(href)) return;
@@ -54,6 +56,8 @@ export default function SiteHeader({
       position: 'relative',
       fontFamily: bodyFont,
       color: textColor,
+      background: backgroundColor,
+      transition: 'background 200ms ease, color 200ms ease, border-color 200ms ease',
     }}>
       {/* Logo + Firm Name */}
       <a
@@ -62,9 +66,23 @@ export default function SiteHeader({
         style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}
       >
         {settings?.logo && (
-          <img src={settings.logo} alt={siteName} style={{ height: 32, width: 'auto' }} />
+          <img
+            src={settings.logo}
+            alt={siteName}
+            className="site-header-logo-light"
+            data-has-dark-logo={hasDarkLogo ? 'true' : undefined}
+            style={{ height: 32, width: 'auto' }}
+          />
         )}
-        <strong style={{ fontSize: '1.1rem', color: '#0f172a', fontFamily: headingFont }}>{settings?.firmName || siteName}</strong>
+        {settings?.logoDark && (
+          <img
+            src={settings.logoDark}
+            alt={siteName}
+            className="site-header-logo-dark"
+            style={{ height: 32, width: 'auto', display: 'none' }}
+          />
+        )}
+        <strong style={{ fontSize: '1.1rem', color: textColor, fontFamily: headingFont }}>{settings?.firmName || siteName}</strong>
       </a>
 
       {/* Desktop Nav */}
@@ -121,7 +139,7 @@ export default function SiteHeader({
             top: '100%',
             left: 0,
             right: 0,
-            background: '#fff',
+            background: backgroundColor,
             borderBottom: `1px solid ${borderColor}`,
             boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
             padding: '16px 24px',
@@ -162,6 +180,12 @@ export default function SiteHeader({
         @media (max-width: 768px) {
           .site-header-desktop-nav { display: none !important; }
           .site-header-hamburger { display: block !important; }
+        }
+        html[data-theme='dark'] .site-header-logo-light[data-has-dark-logo='true'] {
+          display: none !important;
+        }
+        html[data-theme='dark'] .site-header-logo-dark {
+          display: block !important;
         }
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(-8px); }

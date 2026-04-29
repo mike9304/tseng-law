@@ -5,10 +5,12 @@ import { getComponent } from '@/lib/builder/components/registry';
 import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
 import type { BuilderCanvasNode, BuilderCanvasDocument } from '@/lib/builder/canvas/types';
-import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
+import type { BuilderPageMeta, BuilderSiteDocument, BuilderTheme } from '@/lib/builder/site/types';
 import {
+  THEME_COLOR_TOKENS,
   buildHoverTransform,
   collectThemeFontFamilies,
+  createDarkColorsFromLight,
   resolveBackgroundStyle,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
@@ -18,6 +20,7 @@ import { getSiteUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
+import DarkModeToggle from '@/components/builder/published/DarkModeToggle';
 import '@/lib/builder/components/registry';
 
 export interface ResolvedPublishedSitePage {
@@ -114,6 +117,26 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
   const navItems = site.navigation || [];
   const settings = site.settings;
   const theme = site.theme;
+  const darkColors = theme.darkColors ?? createDarkColorsFromLight(theme.colors);
+  const cssVarColors: BuilderTheme['colors'] = {
+    primary: 'var(--builder-color-primary)',
+    secondary: 'var(--builder-color-secondary)',
+    accent: 'var(--builder-color-accent)',
+    background: 'var(--builder-color-background)',
+    text: 'var(--builder-color-text)',
+    muted: 'var(--builder-color-muted)',
+  };
+  const publishedTheme: BuilderTheme = {
+    ...theme,
+    colors: cssVarColors,
+    darkColors: cssVarColors,
+  };
+  const lightCssVars = THEME_COLOR_TOKENS
+    .map((token) => `--builder-color-${token}: ${theme.colors[token]};`)
+    .join('\n          ');
+  const darkCssVars = THEME_COLOR_TOKENS
+    .map((token) => `--builder-color-${token}: ${darkColors[token]};`)
+    .join('\n          ');
   const visibleNodes = canvas.nodes.filter((node) => node.visible !== false);
   const childrenMap = buildChildrenMap(visibleNodes);
   const nodesById = new Map(canvas.nodes.map((node) => [node.id, node]));
@@ -162,16 +185,16 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       node.kind === 'container' ? node.content.layoutMode ?? 'absolute' : undefined;
     const flowSectionMetric = flowAsSection ? flowSectionMetrics.get(node.id) : undefined;
     const baseTransform = node.rotation ? `rotate(${node.rotation}deg)` : undefined;
-    const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, theme);
+    const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, publishedTheme);
     const hoverStyle = node.hoverStyle;
     const hoverBackgroundStyle = hoverStyle?.backgroundColor
-      ? resolveBackgroundStyle(hoverStyle.backgroundColor, theme)
+      ? resolveBackgroundStyle(hoverStyle.backgroundColor, publishedTheme)
       : undefined;
     const hoverShadowBlur = hoverStyle?.shadowBlur ?? node.style?.shadowBlur ?? 0;
     const hoverShadowSpread = hoverStyle?.shadowSpread ?? node.style?.shadowSpread ?? 0;
     const hoverShadowColor = hoverStyle?.shadowColor ?? node.style?.shadowColor;
     const hoverBoxShadow = hoverStyle && (hoverShadowBlur > 0 || hoverShadowSpread !== 0 || node.style?.shadowX || node.style?.shadowY)
-      ? `${node.style?.shadowX || 0}px ${node.style?.shadowY || 0}px ${hoverShadowBlur}px ${hoverShadowSpread}px ${resolveThemeColor(hoverShadowColor, theme)}`
+      ? `${node.style?.shadowX || 0}px ${node.style?.shadowY || 0}px ${hoverShadowBlur}px ${hoverShadowSpread}px ${resolveThemeColor(hoverShadowColor, publishedTheme)}`
       : undefined;
     const hoverTransform = buildHoverTransform(hoverStyle, baseTransform ?? '');
     const hoverDuration = `${hoverStyle?.transitionMs ?? 200}ms`;
@@ -196,10 +219,10 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           ...backgroundStyle,
           borderRadius: node.style?.borderRadius ? `${node.style.borderRadius}px` : undefined,
           border: node.style?.borderWidth
-            ? `${node.style.borderWidth}px ${node.style.borderStyle || 'solid'} ${resolveThemeColor(node.style.borderColor, theme)}`
+            ? `${node.style.borderWidth}px ${node.style.borderStyle || 'solid'} ${resolveThemeColor(node.style.borderColor, publishedTheme)}`
             : undefined,
           boxShadow: node.style?.shadowBlur
-            ? `${node.style.shadowX || 0}px ${node.style.shadowY || 0}px ${node.style.shadowBlur}px ${node.style.shadowSpread || 0}px ${resolveThemeColor(node.style.shadowColor, theme)}`
+            ? `${node.style.shadowX || 0}px ${node.style.shadowY || 0}px ${node.style.shadowBlur}px ${node.style.shadowSpread || 0}px ${resolveThemeColor(node.style.shadowColor, publishedTheme)}`
             : undefined,
           opacity: node.style?.opacity != null ? node.style.opacity / 100 : undefined,
           transition: hoverStyle
@@ -207,7 +230,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
             : undefined,
           ['--builder-hover-background' as string]: hoverBackgroundStyle?.background,
           ['--builder-hover-border-color' as string]: hoverStyle?.borderColor
-            ? resolveThemeColor(hoverStyle.borderColor, theme)
+            ? resolveThemeColor(hoverStyle.borderColor, publishedTheme)
             : undefined,
           ['--builder-hover-box-shadow' as string]: hoverBoxShadow,
           ['--builder-hover-transform' as string]: hoverTransform,
@@ -215,12 +238,12 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       >
         {component ? (
           node.kind === 'container' ? (
-            <component.Render node={node} mode="published" theme={theme}>
+            <component.Render node={node} mode="published" theme={publishedTheme}>
               {childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode))}
             </component.Render>
           ) : (
             <>
-              <component.Render node={node} mode="published" theme={theme} />
+              <component.Render node={node} mode="published" theme={publishedTheme} />
               {childNodes.map((child) => renderPublishedNode(child))}
             </>
           )
@@ -266,6 +289,29 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         ) : null;
       })()}
       <style>{`
+        html { scroll-behavior: smooth; }
+        :root {
+          color-scheme: light;
+          ${lightCssVars}
+        }
+        :root[data-theme='dark'] {
+          color-scheme: dark;
+          ${darkCssVars}
+        }
+        body {
+          background: var(--builder-color-background);
+          color: var(--builder-color-text);
+          transition: background 200ms ease, color 200ms ease;
+        }
+        :target {
+          scroll-margin-top: 80px;
+        }
+        .builder-pub-main,
+        .builder-pub-node {
+          transition-property: background, background-color, border-color, box-shadow, color, transform;
+          transition-duration: 200ms;
+          transition-timing-function: ease;
+        }
         .builder-pub-node[data-builder-hover='true']:hover {
           background: var(--builder-hover-background) !important;
           border-color: var(--builder-hover-border-color) !important;
@@ -302,10 +348,11 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         }
       `}</style>
       <JsonLd data={legalServiceSchema} />
+      <DarkModeToggle />
       <SiteHeader
         siteName={site.name}
         settings={settings}
-        theme={theme}
+        theme={publishedTheme}
         navItems={navItems}
         locale={locale}
         currentSlug={slugPath}
@@ -318,8 +365,8 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           position: 'relative',
           minHeight: Math.max(publishedContentHeight, 720),
           fontFamily: theme?.fonts.body,
-          color: theme?.colors.text,
-          background: theme?.colors.background,
+          color: 'var(--builder-color-text)',
+          background: 'var(--builder-color-background)',
         }}
       >
         {renderedTopLevelNodes.map((node) => renderPublishedNode(node, true))}
@@ -327,7 +374,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       <SiteFooter
         siteName={site.name}
         settings={settings}
-        theme={theme}
+        theme={publishedTheme}
         navItems={navItems}
         locale={locale}
       />

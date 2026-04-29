@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { DEFAULT_THEME, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
+import BrandKitPanel from '@/components/builder/editor/BrandKitPanel';
 import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
 import {
@@ -13,8 +14,14 @@ import {
   type SiteThemePreset,
   type ThemeTextPreset,
   type ThemeTextPresetKey,
+  createBrandKitFromTheme,
+  createDarkColorsFromLight,
+  createThemeFromBrandKit,
+  normalizeBrandKit,
+  normalizeDarkColors,
   normalizeThemeTextPresets,
   resolveThemeColor,
+  type BrandKit,
 } from '@/lib/builder/site/theme';
 
 interface SiteSettingsForm {
@@ -25,6 +32,7 @@ interface SiteSettingsForm {
   businessHours: string;
   businessRegNumber: string;
   logo: string;
+  logoDark: string;
   favicon: string;
 }
 
@@ -36,6 +44,7 @@ const EMPTY_SETTINGS: SiteSettingsForm = {
   businessHours: '',
   businessRegNumber: '',
   logo: '',
+  logoDark: '',
   favicon: '',
 };
 
@@ -248,12 +257,15 @@ const FIELDS: FieldDef[] = [
   { key: 'businessHours', label: '영업 시간', placeholder: '예: 월~금 09:00-18:00' },
   { key: 'businessRegNumber', label: '사업자 등록번호', placeholder: '사업자 등록번호' },
   { key: 'logo', label: '로고 URL', placeholder: 'https://example.com/logo.png', type: 'url' },
+  { key: 'logoDark', label: '다크 로고 URL', placeholder: 'https://example.com/logo-dark.png', type: 'url' },
   { key: 'favicon', label: '파비콘 URL', placeholder: 'https://example.com/favicon.ico', type: 'url' },
 ];
 
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
+  const colors = { ...DEFAULT_THEME.colors, ...theme?.colors };
   return {
-    colors: { ...DEFAULT_THEME.colors, ...theme?.colors },
+    colors,
+    darkColors: normalizeDarkColors(colors, theme?.darkColors),
     fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
     themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
@@ -268,6 +280,7 @@ function themeFromPreset(preset: SiteThemePreset): BuilderTheme {
       heading: preset.fonts.title,
       body: preset.fonts.body,
     },
+    darkColors: createDarkColorsFromLight(preset.colors),
     radii: {
       sm: Math.max(0, Math.round(radius * 0.5)),
       md: radius,
@@ -286,6 +299,7 @@ function toSettingsForm(settings?: Partial<BuilderSiteSettings>): SiteSettingsFo
     businessHours: settings?.businessHours ?? '',
     businessRegNumber: settings?.businessRegNumber ?? '',
     logo: settings?.logo ?? '',
+    logoDark: settings?.logoDark ?? '',
     favicon: settings?.favicon ?? '',
   };
 }
@@ -299,6 +313,7 @@ function toSettingsPayload(settings: SiteSettingsForm): BuilderSiteSettings {
     businessHours: settings.businessHours,
     businessRegNumber: settings.businessRegNumber,
     logo: settings.logo,
+    logoDark: settings.logoDark,
     favicon: settings.favicon,
   };
 }
@@ -327,7 +342,9 @@ export default function SiteSettingsModal({
 }) {
   const [settings, setSettings] = useState<SiteSettingsForm>(EMPTY_SETTINGS);
   const [theme, setTheme] = useState<BuilderTheme>(DEFAULT_THEME);
-  const [activeTab, setActiveTab] = useState<'settings' | 'colors' | 'typography' | 'presets'>('settings');
+  const [brandKit, setBrandKit] = useState<BrandKit>(() => createBrandKitFromTheme(DEFAULT_THEME, EMPTY_SETTINGS));
+  const [activeTab, setActiveTab] = useState<'settings' | 'brand' | 'colors' | 'dark' | 'typography' | 'presets'>('settings');
+  const [previewDark, setPreviewDark] = useState(false);
   const [pendingPreset, setPendingPreset] = useState<SiteThemePreset | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -343,8 +360,11 @@ export default function SiteSettingsModal({
       });
       const data = (await response.json().catch(() => ({}))) as SiteSettingsResponse;
       if (response.ok) {
-        setSettings(toSettingsForm(data.settings));
-        setTheme(mergeTheme(data.theme));
+        const nextSettings = toSettingsForm(data.settings);
+        const nextTheme = mergeTheme(data.theme);
+        setSettings(nextSettings);
+        setTheme(nextTheme);
+        setBrandKit(createBrandKitFromTheme(nextTheme, nextSettings));
       } else {
         setError(data.error || '사이트 설정을 불러오지 못했습니다.');
       }
@@ -375,13 +395,23 @@ export default function SiteSettingsModal({
         return;
       }
     }
+    const resolvedDarkColors = normalizeDarkColors(theme.colors, theme.darkColors);
+    for (const token of THEME_COLOR_TOKENS) {
+      if (!isValidHexColor(resolvedDarkColors[token])) {
+        setError(`Dark ${THEME_COLOR_LABELS[token]} color는 #RRGGBB 형식이어야 합니다.`);
+        return;
+      }
+    }
 
     setSaving(true);
     setError(null);
     try {
       const payload = {
         settings: toSettingsPayload(settings),
-        theme,
+        theme: {
+          ...theme,
+          darkColors: resolvedDarkColors,
+        },
       };
       const response = await fetch(`/api/builder/site/settings?locale=${encodeURIComponent(locale)}`, {
         method: 'PUT',
@@ -421,6 +451,19 @@ export default function SiteSettingsModal({
     }));
   };
 
+  const updateDarkThemeColor = (key: keyof BuilderTheme['colors'], value: string) => {
+    setTheme((prev) => {
+      const darkColors = normalizeDarkColors(prev.colors, prev.darkColors);
+      return {
+        ...prev,
+        darkColors: {
+          ...darkColors,
+          [key]: value,
+        },
+      };
+    });
+  };
+
   const updateThemeFont = (key: 'heading' | 'body', value: string) => {
     setTheme((prev) => ({
       ...prev,
@@ -448,9 +491,53 @@ export default function SiteSettingsModal({
   };
 
   const applyPreset = (preset: SiteThemePreset) => {
-    setTheme(themeFromPreset(preset));
+    const nextTheme = themeFromPreset(preset);
+    setTheme(nextTheme);
+    setBrandKit(createBrandKitFromTheme(nextTheme, settings));
     setPendingPreset(null);
     setNotice(`${preset.name} preset applied. 저장을 눌러 사이트에 반영하세요.`);
+  };
+
+  const applyBrandKitToState = (kit: BrandKit, message: string) => {
+    const nextTheme = createThemeFromBrandKit(kit, theme);
+    setTheme(nextTheme);
+    setSettings((prev) => ({
+      ...prev,
+      logo: kit.logoLight ?? prev.logo,
+      logoDark: kit.logoDark ?? prev.logoDark,
+    }));
+    setBrandKit(kit);
+    setNotice(message);
+  };
+
+  const exportBrandKit = () => {
+    const payload = {
+      ...brandKit,
+      metadata: {
+        exportedAt: new Date().toISOString(),
+        siteName: settings.firmName || brandKit.metadata?.siteName,
+      },
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'hojeong-brand-kit.json';
+    anchor.click();
+    URL.revokeObjectURL(url);
+    setNotice('Brand kit JSON을 내보냈습니다.');
+  };
+
+  const importBrandKit = async (file: File) => {
+    try {
+      const text = await file.text();
+      const parsed = JSON.parse(text) as unknown;
+      const nextKit = normalizeBrandKit(parsed, brandKit);
+      applyBrandKitToState(nextKit, 'Brand kit JSON을 불러와 적용했습니다. 저장을 눌러 사이트에 반영하세요.');
+      setError(null);
+    } catch {
+      setError('Brand kit JSON을 읽지 못했습니다.');
+    }
   };
 
   const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
@@ -459,6 +546,8 @@ export default function SiteSettingsModal({
     color: theme.colors[token],
   }));
   const textPresets = normalizeThemeTextPresets(theme.themeTextPresets);
+  const darkColors = normalizeDarkColors(theme.colors, theme.darkColors);
+  const previewColors = previewDark ? darkColors : theme.colors;
 
   if (!open) return null;
 
@@ -480,7 +569,9 @@ export default function SiteSettingsModal({
         <div style={tabRowStyle}>
           {([
             ['settings', 'Settings'],
+            ['brand', 'Brand kit'],
             ['colors', 'Colors'],
+            ['dark', 'Dark'],
             ['typography', 'Typography'],
             ['presets', 'Presets'],
           ] as const).map(([key, label]) => (
@@ -524,6 +615,14 @@ export default function SiteSettingsModal({
                 ))}
               </div>
             </>
+          ) : activeTab === 'brand' ? (
+            <BrandKitPanel
+              value={brandKit}
+              onChange={setBrandKit}
+              onApply={() => applyBrandKitToState(brandKit, 'Brand kit을 현재 사이트 테마에 적용했습니다. 저장을 눌러 사이트에 반영하세요.')}
+              onExport={exportBrandKit}
+              onImport={(file) => void importBrandKit(file)}
+            />
           ) : activeTab === 'colors' ? (
             <div style={sectionStyle}>
               <div style={sectionHeadingStyle}>Theme colors</div>
@@ -572,6 +671,79 @@ export default function SiteSettingsModal({
                   />
                 </div>
               </div>
+            </div>
+          ) : activeTab === 'dark' ? (
+            <div style={sectionStyle}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                <div style={sectionHeadingStyle}>Dark mode colors</div>
+                <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.78rem', fontWeight: 700, color: '#334155' }}>
+                  <input
+                    type="checkbox"
+                    checked={previewDark}
+                    onChange={(event) => setPreviewDark(event.target.checked)}
+                  />
+                  Preview dark
+                </label>
+              </div>
+
+              <div
+                style={{
+                  border: `1px solid ${previewDark ? darkColors.muted : '#e2e8f0'}`,
+                  borderRadius: 12,
+                  background: previewColors.background,
+                  color: previewColors.text,
+                  padding: 14,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 10,
+                  transition: 'background 200ms ease, color 200ms ease, border-color 200ms ease',
+                }}
+              >
+                <strong style={{ fontFamily: theme.fonts.heading, color: previewColors.text }}>
+                  Dark preview
+                </strong>
+                <span style={{ color: previewColors.secondary, fontSize: '0.78rem', lineHeight: 1.45 }}>
+                  Published 페이지의 DarkModeToggle이 이 색상 세트로 전환됩니다.
+                </span>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, background: previewColors.primary, color: previewColors.background, fontSize: '0.78rem', fontWeight: 800 }}>
+                    Primary
+                  </span>
+                  <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, border: `1px solid ${previewColors.secondary}`, color: previewColors.secondary, fontSize: '0.78rem', fontWeight: 800 }}>
+                    Secondary
+                  </span>
+                  <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, background: previewColors.muted, color: previewColors.text, fontSize: '0.78rem', fontWeight: 800 }}>
+                    Muted
+                  </span>
+                </div>
+              </div>
+
+              {THEME_COLOR_TOKENS.map((token) => (
+                <div key={token} style={fieldStyle}>
+                  <label style={labelStyle}>Dark {THEME_COLOR_LABELS[token]}</label>
+                  <div style={{ display: 'grid', gridTemplateColumns: '56px 1fr', gap: 8, alignItems: 'center' }}>
+                    <input
+                      type="color"
+                      value={isValidHexColor(darkColors[token]) ? darkColors[token] : createDarkColorsFromLight(theme.colors)[token]}
+                      style={{ width: 56, height: 38, padding: 4, border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff', cursor: 'pointer' }}
+                      onChange={(event) => updateDarkThemeColor(token, event.target.value)}
+                    />
+                    <input
+                      type="text"
+                      value={darkColors[token]}
+                      placeholder="#0f172a"
+                      style={inputStyle}
+                      onChange={(event) => updateDarkThemeColor(token, event.target.value)}
+                      onFocus={(event) => {
+                        event.currentTarget.style.borderColor = '#116dff';
+                      }}
+                      onBlur={(event) => {
+                        event.currentTarget.style.borderColor = '#e2e8f0';
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           ) : activeTab === 'typography' ? (
             <div style={sectionStyle}>

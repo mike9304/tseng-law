@@ -10,7 +10,7 @@ export default defineComponent({
   defaultContent: {
     label: '버튼',
     href: '',
-    style: 'primary' as const,
+    style: 'primary-solid' as const,
   },
   defaultStyle: {
     borderRadius: 999,

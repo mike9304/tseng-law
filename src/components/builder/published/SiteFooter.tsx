@@ -22,6 +22,8 @@ export default function SiteFooter({
 }) {
   const primaryColor = theme?.colors.primary || '#116dff';
   const textColor = theme?.colors.text || '#1f2937';
+  const secondaryColor = theme?.colors.secondary || '#6b7280';
+  const backgroundColor = theme?.colors.background || '#ffffff';
   const mutedColor = theme?.colors.muted || '#f3f4f6';
   const bodyFont = theme?.fonts.body;
   const headingFont = theme?.fonts.heading;
@@ -33,8 +35,10 @@ export default function SiteFooter({
       padding: '40px 24px 24px',
       borderTop: `1px solid ${mutedColor}`,
       fontSize: '0.85rem',
-      color: '#6b7280',
+      color: secondaryColor,
       fontFamily: bodyFont,
+      background: backgroundColor,
+      transition: 'background 200ms ease, color 200ms ease, border-color 200ms ease',
     }}>
       <div style={{
         display: 'grid',
@@ -60,7 +64,7 @@ export default function SiteFooter({
               <a
                 key={item.id}
                 href={normalizeSiteHref(item.href, locale)}
-                style={{ display: 'block', color: '#6b7280', textDecoration: 'none', padding: '3px 0', transition: 'color 150ms' }}
+                style={{ display: 'block', color: secondaryColor, textDecoration: 'none', padding: '3px 0', transition: 'color 150ms' }}
               >
                 {getLabel(item, locale)}
               </a>
@@ -86,7 +90,7 @@ export default function SiteFooter({
         paddingTop: 16,
         textAlign: 'center',
         fontSize: '0.75rem',
-        color: '#9ca3af',
+        color: secondaryColor,
       }}>
         © {new Date().getFullYear()} {settings?.firmName || siteName}. All rights reserved.
       </div>

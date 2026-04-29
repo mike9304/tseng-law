@@ -6,6 +6,7 @@ import { DEFAULT_THEME, type BuilderSiteSettings, type BuilderTheme } from '@/li
 import {
   THEME_COLOR_TOKENS,
   THEME_TEXT_PRESET_KEYS,
+  normalizeDarkColors,
   normalizeThemeTextPresets,
 } from '@/lib/builder/site/theme';
 import { normalizeLocale } from '@/lib/locales';
@@ -31,6 +32,7 @@ const siteSettingsSchema = z.object({
   businessHours: optionalTrimmedString(200),
   businessRegNumber: optionalTrimmedString(120),
   logo: optionalTrimmedString(2000),
+  logoDark: optionalTrimmedString(2000),
   favicon: optionalTrimmedString(2000),
 }).strict();
 
@@ -52,15 +54,18 @@ const themeTextPresetSchema = z.object({
   color: themeColorValueSchema,
 }).strict();
 
+const themeColorsSchema = z.object({
+  primary: z.string().trim().min(1).max(64),
+  secondary: z.string().trim().min(1).max(64),
+  accent: z.string().trim().min(1).max(64),
+  text: z.string().trim().min(1).max(64),
+  background: z.string().trim().min(1).max(64),
+  muted: z.string().trim().min(1).max(64),
+}).strict();
+
 const siteThemeSchema = z.object({
-  colors: z.object({
-    primary: z.string().trim().min(1).max(64),
-    secondary: z.string().trim().min(1).max(64),
-    accent: z.string().trim().min(1).max(64),
-    text: z.string().trim().min(1).max(64),
-    background: z.string().trim().min(1).max(64),
-    muted: z.string().trim().min(1).max(64),
-  }).strict(),
+  colors: themeColorsSchema,
+  darkColors: themeColorsSchema.optional(),
   fonts: z.object({
     heading: z.string().trim().min(1).max(200),
     body: z.string().trim().min(1).max(200),
@@ -104,8 +109,10 @@ function sanitizeSettings(settings?: BuilderSiteSettings): BuilderSiteSettings |
 }
 
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
+  const colors = { ...DEFAULT_THEME.colors, ...theme?.colors };
   return {
-    colors: { ...DEFAULT_THEME.colors, ...theme?.colors },
+    colors,
+    darkColors: normalizeDarkColors(colors, theme?.darkColors),
     fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
     themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),

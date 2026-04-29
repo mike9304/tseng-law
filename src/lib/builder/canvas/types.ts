@@ -5,6 +5,7 @@ import {
   THEME_TEXT_PRESET_KEYS,
   type BuilderBackgroundValue,
 } from '@/lib/builder/site/theme';
+import { BUTTON_STYLE_KEYS } from '@/lib/builder/site/component-variants';
 const imageFiltersSchema = z.object({
   brightness: z.number().min(0).max(200),
   contrast: z.number().min(0).max(200),
@@ -206,7 +207,7 @@ const buttonCanvasNodeSchema = baseCanvasNodeSchema.extend({
   content: z.object({
     label: z.string().max(120),
     href: z.string().max(2000),
-    style: z.enum(['primary', 'secondary', 'outline', 'ghost', 'link']),
+    style: z.enum(BUTTON_STYLE_KEYS),
     className: z.string().max(256).optional(),
     as: z.enum(['a', 'button']).optional(),
     rawInlineStyle: z.boolean().optional(),

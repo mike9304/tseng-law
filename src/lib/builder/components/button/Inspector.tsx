@@ -1,5 +1,9 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderButtonCanvasNode } from '@/lib/builder/canvas/types';
+import {
+  BUTTON_VARIANTS,
+  normalizeButtonVariantKey,
+} from '@/lib/builder/site/component-variants';
 
 const fieldStyle: React.CSSProperties = {
   display: 'flex',
@@ -97,16 +101,16 @@ export default function ButtonInspector({
       <label style={fieldStyle}>
         <span style={labelTextStyle}>Variant (스타일)</span>
         <select
-          value={content.style}
+          value={normalizeButtonVariantKey(content.style)}
           disabled={disabled}
           style={inputStyle}
           onChange={(event) => onUpdate({ style: event.target.value })}
         >
-          <option value="primary">Primary</option>
-          <option value="secondary">Secondary</option>
-          <option value="outline">Outline</option>
-          <option value="ghost">Ghost</option>
-          <option value="link">Link</option>
+          {BUTTON_VARIANTS.map((variant) => (
+            <option key={variant.key} value={variant.key}>
+              {variant.label}
+            </option>
+          ))}
         </select>
       </label>
 

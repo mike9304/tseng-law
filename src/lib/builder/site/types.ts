@@ -9,6 +9,7 @@
 
 import type { Locale } from '@/lib/locales';
 import {
+  DEFAULT_DARK_THEME_COLORS,
   DEFAULT_THEME_TEXT_PRESETS,
   type ThemeTextPresets,
 } from '@/lib/builder/site/theme';
@@ -61,15 +62,18 @@ export interface BuilderSeoMetadata {
   noFollow?: boolean;
 }
 
+export interface BuilderThemeColors {
+  primary: string;
+  secondary: string;
+  accent: string;
+  text: string;
+  background: string;
+  muted: string;
+}
+
 export interface BuilderTheme {
-  colors: {
-    primary: string;
-    secondary: string;
-    accent: string;
-    text: string;
-    background: string;
-    muted: string;
-  };
+  colors: BuilderThemeColors;
+  darkColors?: BuilderThemeColors;
   fonts: {
     heading: string;
     body: string;
@@ -92,6 +96,7 @@ export interface BuilderHeaderFooterConfig {
 export interface BuilderSiteSettings {
   favicon?: string;
   logo?: string;
+  logoDark?: string;
   firmName?: string;
   phone?: string;
   email?: string;
@@ -124,6 +129,7 @@ export const DEFAULT_THEME: BuilderTheme = {
     background: '#ffffff',
     muted: '#f3f4f6',
   },
+  darkColors: DEFAULT_DARK_THEME_COLORS,
   fonts: {
     heading: 'system-ui, sans-serif',
     body: 'system-ui, sans-serif',

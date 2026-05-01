@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { defineComponent } from '../define';
+import ContactFormInspector from './Inspector';
 
 interface ContactFormContent {
   fields: string[];
@@ -163,4 +164,5 @@ export default defineComponent({
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },
   Render: ContactFormRender,
+  Inspector: ContactFormInspector,
 });

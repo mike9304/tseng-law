@@ -1,4 +1,5 @@
 import { defineComponent } from '../define';
+import CtaBannerInspector from './Inspector';
 
 interface CtaBannerContent {
   title: string;
@@ -108,4 +109,5 @@ export default defineComponent({
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },
   Render: CtaBannerRender,
+  Inspector: CtaBannerInspector,
 });

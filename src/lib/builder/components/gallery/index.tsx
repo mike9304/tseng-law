@@ -1,5 +1,6 @@
 import { defineComponent } from '../define';
 import GalleryRender from './GalleryRender';
+import GalleryInspector from './Inspector';
 
 interface GalleryImage {
   src: string;
@@ -19,4 +20,5 @@ export default defineComponent({
   defaultStyle: {},
   defaultRect: { width: 300, height: 200 },
   Render: GalleryRender,
+  Inspector: GalleryInspector,
 });

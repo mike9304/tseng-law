@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { defineComponent } from '../define';
+import FaqListInspector from './Inspector';
 
 interface FaqItem {
   question: string;
@@ -112,4 +113,5 @@ export default defineComponent({
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },
   Render: FaqListRender,
+  Inspector: FaqListInspector,
 });

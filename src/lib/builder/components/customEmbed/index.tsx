@@ -1,4 +1,5 @@
 import { defineComponent } from '../define';
+import CustomEmbedInspector from './Inspector';
 
 interface CustomEmbedContent {
   html: string;
@@ -80,4 +81,5 @@ export default defineComponent({
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },
   Render: CustomEmbedRender,
+  Inspector: CustomEmbedInspector,
 });

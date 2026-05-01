@@ -1,4 +1,5 @@
 import { defineComponent } from '../define';
+import MapInspector from './Inspector';
 
 interface MapContent {
   address: string;
@@ -59,4 +60,5 @@ export default defineComponent({
   defaultStyle: {},
   defaultRect: { width: 300, height: 200 },
   Render: MapRender,
+  Inspector: MapInspector,
 });

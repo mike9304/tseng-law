@@ -26,6 +26,7 @@ import './section';
 // Phase 7 components
 import './gallery';
 import './video';
+import './videoEmbed';
 import './map';
 import './customEmbed';
 import './icon';
@@ -37,4 +38,23 @@ import './attorneyCard';
 import './faqList';
 import './contactForm';
 import './ctaBanner';
+import './bookingWidget';
 import './composite';
+
+// Phase 4 — Forms widgets
+import './form';
+import './formInput';
+import './formTextarea';
+import './formSubmit';
+import './formSelect';
+import './formCheckbox';
+import './formRadio';
+import './formFile';
+import './formDate';
+
+// Phase 14 — Blog widgets
+import './blogFeed';
+import './blogPostCard';
+import './blogCategories';
+import './blogArchive';
+import './featuredPosts';

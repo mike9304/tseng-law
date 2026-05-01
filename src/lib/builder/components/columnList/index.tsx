@@ -1,4 +1,5 @@
 import { defineComponent } from '../define';
+import ColumnListInspector from './Inspector';
 
 interface ColumnItem {
   slug: string;
@@ -115,4 +116,5 @@ export default defineComponent({
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },
   Render: ColumnListRender,
+  Inspector: ColumnListInspector,
 });

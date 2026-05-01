@@ -1,0 +1,492 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.sidebar {
+  border-right: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 24px 16px;
+}
+
+.brand {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.meta {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.categoryList {
+  display: grid;
+  gap: 6px;
+}
+
+.categoryButton {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  width: 100%;
+  border: 0;
+  border-left: 3px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #334155;
+  cursor: pointer;
+  padding: 10px 10px 10px 12px;
+  text-align: left;
+}
+
+.categoryButton:hover {
+  background: #f1f5f9;
+}
+
+.categoryButtonActive {
+  border-left-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.categoryLabel {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.categoryStats {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.main {
+  min-width: 0;
+  padding: 24px;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  gap: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .96);
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, .06);
+  backdrop-filter: blur(10px);
+}
+
+.toolbarRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.toolbarTitle {
+  margin: 0;
+  font-size: 18px;
+}
+
+.toolbarActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.input,
+.select {
+  min-height: 36px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+.input {
+  width: min(320px, 100%);
+}
+
+.button {
+  min-height: 36px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0 12px;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: .55;
+}
+
+.primaryButton {
+  border-color: #1d4ed8;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primaryButton:hover:not(:disabled) {
+  border-color: #1e40af;
+  background: #1d4ed8;
+}
+
+.localeToggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toggle {
+  min-height: 32px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 0 12px;
+}
+
+.toggleActive {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.progressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.progressCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 12px;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.progressTrack {
+  overflow: hidden;
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  transition: width .2s ease;
+}
+
+.progressStats {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.notice {
+  min-height: 22px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.noticeError {
+  color: #b91c1c;
+}
+
+.matrixWrap {
+  overflow: auto;
+  margin-top: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.matrix {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.matrix th {
+  position: sticky;
+  top: 119px;
+  z-index: 2;
+  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  font-size: 12px;
+  letter-spacing: .04em;
+  padding: 10px 12px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.matrix td {
+  border-bottom: 1px solid #f1f5f9;
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+.matrix tr:hover td {
+  background: #f8fafc;
+}
+
+.labelCell {
+  width: 230px;
+}
+
+.rowLabel {
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.rowMeta {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.sourceCell {
+  width: 310px;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.translationCell {
+  min-width: 260px;
+}
+
+.cellDisplay {
+  width: 100%;
+  min-height: 44px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #0f172a;
+  cursor: text;
+  padding: 7px;
+  text-align: left;
+}
+
+.cellDisplay:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.cellText {
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.placeholder {
+  color: #94a3b8;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.statusTranslated {
+  background: #10b981;
+}
+
+.statusOutdated {
+  background: #f59e0b;
+}
+
+.statusMissing {
+  background: #ef4444;
+}
+
+.statusManual {
+  background: #94a3b8;
+}
+
+.editor {
+  display: grid;
+  gap: 8px;
+}
+
+.textarea {
+  min-height: 92px;
+  resize: vertical;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  color: #0f172a;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 8px;
+}
+
+.cellActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.smallButton {
+  min-height: 28px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 8px;
+}
+
+.smallButton:disabled {
+  cursor: wait;
+  opacity: .55;
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .main {
+    padding: 16px;
+  }
+
+  .matrix th {
+    top: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .shell {
+    background: #020617;
+    color: #e2e8f0;
+  }
+
+  .sidebar,
+  .toolbar,
+  .progressCard,
+  .matrixWrap,
+  .matrix th,
+  .button,
+  .input,
+  .select,
+  .toggle,
+  .cellDisplay:hover,
+  .smallButton,
+  .textarea {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .sidebar,
+  .toolbar,
+  .progressCard,
+  .matrixWrap {
+    border-color: #1e293b;
+  }
+
+  .categoryButton,
+  .rowLabel,
+  .sourceCell,
+  .cellDisplay,
+  .smallButton {
+    color: #e2e8f0;
+  }
+
+  .categoryButton:hover,
+  .categoryButtonActive,
+  .matrix tr:hover td {
+    background: #111c31;
+  }
+
+  .meta,
+  .categoryStats,
+  .progressStats,
+  .rowMeta,
+  .notice {
+    color: #94a3b8;
+  }
+
+  .matrix th,
+  .matrix td {
+    border-color: #1e293b;
+  }
+}

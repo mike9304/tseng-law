@@ -9,7 +9,7 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = guardMutation(request);
+  const auth = guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');

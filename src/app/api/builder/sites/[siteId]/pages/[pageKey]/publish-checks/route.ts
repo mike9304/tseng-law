@@ -62,7 +62,7 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { siteId: string; pageKey: string } }
 ) {
-  const auth = guardMutation(request);
+  const auth = guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   if (!isDefaultBuilderSiteId(params.siteId)) {

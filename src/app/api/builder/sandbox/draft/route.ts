@@ -3,6 +3,7 @@ import { ZodError, z } from 'zod';
 import { readCanvasSandboxDraft, writeCanvasSandboxDraft } from '@/lib/builder/canvas/persistence';
 import { builderCanvasDocumentSchema } from '@/lib/builder/canvas/types';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { guardMutation } from '@/lib/builder/security/guard';
 import { normalizeLocale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
@@ -45,7 +46,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
   try {

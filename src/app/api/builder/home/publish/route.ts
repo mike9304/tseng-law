@@ -13,7 +13,7 @@ import { guardMutation } from '@/lib/builder/security/guard';
 export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeBuilderHomeLocale(request.nextUrl.searchParams.get('locale'));

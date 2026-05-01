@@ -6,13 +6,40 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { validateCsrf } from '@/lib/builder/security/csrf';
-import { checkMutationRateLimit } from '@/lib/builder/security/rate-limit';
+import {
+  checkAssetUploadRateLimit,
+  checkMutationRateLimit,
+  checkPublishRateLimit,
+  type RateLimitResult,
+} from '@/lib/builder/security/rate-limit';
 
 export interface GuardResult {
   username: string;
 }
 
-export function guardMutation(request: NextRequest): GuardResult | NextResponse {
+type GuardBucket = 'mutation' | 'publish' | 'asset';
+
+interface GuardOptions {
+  bucket?: GuardBucket;
+  allowReadOnly?: boolean;
+}
+
+function rateLimitForBucket(bucket: GuardBucket, ip: string): RateLimitResult {
+  switch (bucket) {
+    case 'publish':
+      return checkPublishRateLimit(ip);
+    case 'asset':
+      return checkAssetUploadRateLimit(ip);
+    case 'mutation':
+    default:
+      return checkMutationRateLimit(ip);
+  }
+}
+
+export function guardMutation(
+  request: NextRequest,
+  options: GuardOptions = {},
+): GuardResult | NextResponse {
   // 1. Auth
   const auth = requireBuilderAdminAuth(request);
   if (auth instanceof NextResponse) return auth;
@@ -23,7 +50,7 @@ export function guardMutation(request: NextRequest): GuardResult | NextResponse 
 
   // 3. Rate limit
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
-  const rl = checkMutationRateLimit(ip);
+  const rl = rateLimitForBucket(options.bucket ?? 'mutation', ip);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: 'Too many requests' },
@@ -32,4 +59,8 @@ export function guardMutation(request: NextRequest): GuardResult | NextResponse 
   }
 
   return { username: auth.username };
+}
+
+export function guardBuilderRead(request: NextRequest): GuardResult | NextResponse {
+  return requireBuilderAdminAuth(request);
 }

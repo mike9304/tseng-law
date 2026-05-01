@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { listSubmissions, saveSubmission, type FormSubmission } from '@/lib/builder/forms/form-engine';
+import {
+  listSubmissionFormIds,
+  listSubmissions,
+  saveSubmission,
+  type FormSubmission,
+} from '@/lib/builder/forms/form-engine';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { guardMutation } from '@/lib/builder/security/guard';
 
@@ -10,12 +15,16 @@ export async function GET(request: NextRequest) {
   if (auth instanceof NextResponse) return auth;
 
   const { searchParams } = request.nextUrl;
-  const formId = searchParams.get('formId') || 'default-contact';
+  const formId = searchParams.get('formId');
   const limit = Number(searchParams.get('limit') || '50');
 
   try {
+    if (!formId) {
+      const formIds = await listSubmissionFormIds();
+      return NextResponse.json({ formIds });
+    }
     const submissions = await listSubmissions(formId, limit);
-    return NextResponse.json({ submissions });
+    return NextResponse.json({ submissions, formId });
   } catch {
     return NextResponse.json({ submissions: [] });
   }

@@ -5,7 +5,7 @@
  * with Upstash Ratelimit or Vercel Edge Middleware.
  *
  * Limits:
- * - Publish: 10 per minute
+ * - Publish: 6 per minute
  * - Asset upload: 30 per minute
  * - General mutation: 60 per minute
  */
@@ -58,7 +58,7 @@ export function checkRateLimit(
 }
 
 export function checkPublishRateLimit(ip: string): RateLimitResult {
-  return checkRateLimit(`publish:${ip}`, 10, 60_000);
+  return checkRateLimit(`publish:${ip}`, 6, 60_000);
 }
 
 export function checkAssetUploadRateLimit(ip: string): RateLimitResult {

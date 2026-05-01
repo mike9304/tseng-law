@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { listColumns, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
+import { guardMutation } from '@/lib/builder/security/guard';
 import {
   createColumnInputSchema,
   columnLocaleSchema,
@@ -49,7 +50,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = requireBuilderAdminAuth(request);
+  const auth = guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -68,6 +69,7 @@ export async function POST(request: NextRequest) {
     }
 
     const now = new Date().toISOString();
+    const fm = input.frontmatter;
     const document: ColumnDocument = {
       version: 1,
       slug: input.slug,
@@ -78,10 +80,18 @@ export async function POST(request: NextRequest) {
       bodyHtml: input.bodyHtml ?? '',
       linkedSlugs: input.linkedSlugs ?? {},
       frontmatter: {
-        lastmod: input.frontmatter?.lastmod ?? now,
-        attorneyReviewStatus: input.frontmatter?.attorneyReviewStatus ?? 'pending',
-        freshness: input.frontmatter?.freshness ?? 'unknown',
-        ...(input.frontmatter?.category ? { category: input.frontmatter.category } : {}),
+        lastmod: fm?.lastmod ?? now,
+        attorneyReviewStatus: fm?.attorneyReviewStatus ?? 'pending',
+        freshness: fm?.freshness ?? 'unknown',
+        ...(fm?.category ? { category: fm.category } : {}),
+        // Phase 14 blog meta passthrough (null/undefined skipped)
+        ...(typeof fm?.blogCategory === 'string' ? { blogCategory: fm.blogCategory } : {}),
+        ...(Array.isArray(fm?.tags) ? { tags: fm.tags as string[] } : {}),
+        ...(fm?.author ? { author: fm.author } : {}),
+        ...(typeof fm?.featuredImage === 'string' ? { featuredImage: fm.featuredImage } : {}),
+        ...(typeof fm?.featured === 'boolean' ? { featured: fm.featured } : {}),
+        ...(typeof fm?.publishedAt === 'string' ? { publishedAt: fm.publishedAt } : {}),
+        ...(fm?.seo ? { seo: fm.seo } : {}),
       },
       draft: true,
       revision: 1,

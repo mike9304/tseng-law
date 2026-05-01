@@ -4,11 +4,14 @@ import {
   listBuilderImageAssets,
   uploadBuilderImageAsset,
 } from '@/lib/builder/assets';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
+  const blocked = guardBuilderRead(request);
+  if (blocked instanceof NextResponse) return blocked;
+
   try {
     const assets = await listBuilderImageAssets({
       locale: request.nextUrl.searchParams.get('locale'),
@@ -40,7 +43,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = guardMutation(request, { bucket: 'asset' });
   if (auth instanceof NextResponse) return auth;
 
   let formData: FormData;
@@ -77,7 +80,7 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = guardMutation(request, { bucket: 'asset' });
   if (auth instanceof NextResponse) return auth;
 
   try {

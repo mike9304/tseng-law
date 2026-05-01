@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import type { BuilderContainerCanvasNode } from '@/lib/builder/canvas/types';
+import { sanitizeLinkValue } from '@/lib/builder/links';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import {
   legacyCardStyleToVariant,
@@ -27,6 +28,11 @@ export default function ContainerElement({
   const layoutMode = content.layoutMode ?? 'absolute';
   const { className, as, htmlId, dataTone } = content;
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
+  const link = sanitizeLinkValue(content.link);
+  const interactive = mode === 'published';
+  const lightboxSlug = link?.href.startsWith('lightbox:')
+    ? link.href.slice('lightbox:'.length).trim()
+    : '';
   const variantStyle = resolveCardVariantStyle(
     content.variant ?? legacyCardStyleToVariant(content.cardStyle),
     theme,
@@ -37,6 +43,29 @@ export default function ContainerElement({
     layoutCSS = flexToCSS(content.flexConfig ?? DEFAULT_FLEX);
   } else if (layoutMode === 'grid') {
     layoutCSS = gridToCSS(content.gridConfig ?? DEFAULT_GRID);
+  }
+
+  function wrapLinked(element: JSX.Element): JSX.Element {
+    if (!link || !interactive) return element;
+    return (
+      <a
+        href={lightboxSlug ? '#' : link.href}
+        target={lightboxSlug ? undefined : link.target}
+        rel={lightboxSlug ? undefined : link.rel}
+        title={link.title}
+        aria-label={link.ariaLabel}
+        data-lightbox-target={lightboxSlug || undefined}
+        style={{
+          display: 'block',
+          width: '100%',
+          height: '100%',
+          color: 'inherit',
+          textDecoration: 'none',
+        }}
+      >
+        {element}
+      </a>
+    );
   }
 
   if (className) {
@@ -52,13 +81,13 @@ export default function ContainerElement({
         ...(layoutMode !== 'absolute' ? layoutCSS : {}),
       },
     };
-    return <Tag {...(props as Record<string, never>)}>{children}</Tag>;
+    return wrapLinked(<Tag {...(props as Record<string, never>)}>{children}</Tag>);
   }
 
   const childArray = Array.isArray(children) ? children : children ? [children] : [];
   const isEmpty = childArray.length === 0;
 
-  return (
+  return wrapLinked(
     <Tag
       {...(htmlId ? { id: htmlId } : {})}
       {...(dataTone ? { 'data-tone': dataTone } : {})}

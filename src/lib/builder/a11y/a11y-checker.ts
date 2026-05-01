@@ -6,6 +6,7 @@
  */
 
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
 
 export type A11ySeverity = 'error' | 'warning' | 'info';
 
@@ -55,6 +56,29 @@ export function checkAccessibility(doc: BuilderCanvasDocument): A11yIssue[] {
         rule: 'button-no-link',
         message: '버튼에 링크가 설정되지 않았습니다.',
         suggestion: '클릭 시 이동할 URL을 설정하세요.',
+      });
+    }
+
+    const link = getNodeLinkValue(node);
+    if (link?.target === '_blank' && !hasNoopenerRel(link.rel)) {
+      issues.push({
+        nodeId: node.id,
+        nodeKind: node.kind,
+        severity: 'warning',
+        rule: 'link-blank-rel',
+        message: '새 창 링크에 rel="noopener noreferrer"가 없습니다.',
+        suggestion: 'Link 설정에서 rel 값을 noopener noreferrer로 지정하세요.',
+      });
+    }
+
+    if (node.kind === 'image' && link?.href && !link.ariaLabel && !node.content.alt) {
+      issues.push({
+        nodeId: node.id,
+        nodeKind: node.kind,
+        severity: 'warning',
+        rule: 'image-link-label',
+        message: '이미지 링크에 접근 가능한 이름이 없습니다.',
+        suggestion: 'Link의 aria-label 또는 이미지 alt 텍스트를 입력하세요.',
       });
     }
 
@@ -117,6 +141,19 @@ export function checkAccessibility(doc: BuilderCanvasDocument): A11yIssue[] {
   }
 
   return issues;
+}
+
+function getNodeLinkValue(node: BuilderCanvasDocument['nodes'][number]): LinkValue | null {
+  if (node.kind === 'button') return linkValueFromLegacy(node.content);
+  if (node.kind === 'image' || node.kind === 'container') {
+    return (node.content.link ?? null) as LinkValue | null;
+  }
+  return null;
+}
+
+function hasNoopenerRel(rel: string | undefined): boolean {
+  const tokens = new Set((rel ?? '').split(/\s+/).filter(Boolean));
+  return tokens.has('noopener') && tokens.has('noreferrer');
 }
 
 // Simplified contrast estimation (not full WCAG algorithm)

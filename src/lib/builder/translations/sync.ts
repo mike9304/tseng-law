@@ -73,6 +73,7 @@ function labelForPath(path: string): string {
     text: 'Text',
     label: 'Label',
     title: 'Title',
+    ariaLabel: 'Aria label',
     description: 'Description',
     summary: 'Summary',
     placeholder: 'Placeholder',
@@ -192,6 +193,10 @@ function collectNodeStrings(
     default:
       break;
   }
+
+  const link = (node.content as { link?: { title?: string; ariaLabel?: string } }).link;
+  addNodeSource('content.link.title', link?.title, 'node-text');
+  addNodeSource('content.link.ariaLabel', link?.ariaLabel, 'node-text');
 }
 
 function flattenNavItems(items: BuilderNavItem[]): BuilderNavItem[] {

@@ -1,4 +1,5 @@
 import type { BuilderButtonCanvasNode } from '@/lib/builder/canvas/types';
+import { linkValueFromLegacy, sanitizeLinkValue } from '@/lib/builder/links';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import {
   getButtonVariantSuffix,
@@ -15,7 +16,10 @@ export default function ButtonElement({
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const s = node.style;
-  const { className, as, href, label } = node.content;
+  const { className, as, label } = node.content;
+  const link = sanitizeLinkValue(linkValueFromLegacy(node.content));
+  const href = link?.href ?? '';
+  const lightboxSlug = href.startsWith('lightbox:') ? href.slice('lightbox:'.length).trim() : '';
   const interactive = mode === 'published';
 
   if (className) {
@@ -25,9 +29,12 @@ export default function ButtonElement({
       style: { display: 'inline-flex', alignItems: 'center', margin: 0 },
     };
     if (Tag === 'a') {
-      props.href = interactive ? href : undefined;
-      if (node.content.target) props.target = node.content.target;
-      if (node.content.rel) props.rel = node.content.rel;
+      props.href = interactive ? (lightboxSlug ? '#' : href || undefined) : undefined;
+      if (interactive && lightboxSlug) props['data-lightbox-target'] = lightboxSlug;
+      if (link?.target && !lightboxSlug) props.target = link.target;
+      if (link?.rel && !lightboxSlug) props.rel = link.rel;
+      if (link?.title) props.title = link.title;
+      if (link?.ariaLabel) props['aria-label'] = link.ariaLabel;
     } else if (Tag === 'button') {
       props.type = 'button';
     }
@@ -76,9 +83,12 @@ export default function ButtonElement({
   };
 
   if (Tag === 'a') {
-    elementProps.href = interactive ? href : undefined;
-    if (node.content.target) elementProps.target = node.content.target;
-    if (node.content.rel) elementProps.rel = node.content.rel;
+    elementProps.href = interactive ? (lightboxSlug ? '#' : href || undefined) : undefined;
+    if (interactive && lightboxSlug) elementProps['data-lightbox-target'] = lightboxSlug;
+    if (link?.target && !lightboxSlug) elementProps.target = link.target;
+    if (link?.rel && !lightboxSlug) elementProps.rel = link.rel;
+    if (link?.title) elementProps.title = link.title;
+    if (link?.ariaLabel) elementProps['aria-label'] = link.ariaLabel;
   } else if (Tag === 'button') {
     elementProps.type = 'button';
   }

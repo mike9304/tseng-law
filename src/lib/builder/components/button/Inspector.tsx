@@ -1,5 +1,7 @@
 import type { BuilderComponentInspectorProps } from '../define';
+import LinkPicker from '@/components/builder/editor/LinkPicker';
 import type { BuilderButtonCanvasNode } from '@/lib/builder/canvas/types';
+import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
 import {
   BUTTON_VARIANTS,
   normalizeButtonVariantKey,
@@ -40,10 +42,23 @@ export default function ButtonInspector({
   node,
   onUpdate,
   disabled = false,
+  linkPickerContext,
 }: BuilderComponentInspectorProps) {
   const buttonNode = node as BuilderButtonCanvasNode;
   const content = buttonNode.content;
-  const resolvedTag = content.as ?? (content.href ? 'a' : 'button');
+  const linkValue = linkValueFromLegacy(content);
+  const resolvedTag = content.as ?? (linkValue?.href ? 'a' : 'button');
+
+  function handleLinkChange(link: LinkValue | null) {
+    onUpdate({
+      link: link ?? undefined,
+      href: link?.href ?? '',
+      target: link?.target === '_blank' ? '_blank' : undefined,
+      rel: link?.rel,
+      title: link?.title,
+      ariaLabel: link?.ariaLabel,
+    });
+  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -58,45 +73,18 @@ export default function ButtonInspector({
         />
       </label>
 
-      <label style={fieldStyle}>
-        <span style={labelTextStyle}>Href (연결 URL / 페이지 경로)</span>
-        <input
-          type="text"
-          value={content.href}
+      <div style={fieldStyle}>
+        <span style={labelTextStyle}>Link</span>
+        <LinkPicker
+          value={linkValue}
+          onChange={handleLinkChange}
+          context={linkPickerContext}
           disabled={disabled}
-          placeholder="/ko/columns 또는 https://..."
-          style={inputStyle}
-          onChange={(event) => onUpdate({ href: event.target.value })}
-          data-builder-href-input="true"
         />
         <span style={hintStyle}>
-          내부 경로는 `/ko/...` 형식, 외부는 전체 URL. 비워두면 링크 없음.
+          내부 경로, 앵커, lightbox, http(s), mailto, tel 링크만 저장됩니다.
         </span>
-      </label>
-
-      <label style={fieldStyle}>
-        <span style={labelTextStyle}>Target (새 창 여부)</span>
-        <select
-          value={content.target ?? '_self'}
-          disabled={disabled}
-          style={inputStyle}
-          onChange={(event) => {
-            const next = event.target.value as '_self' | '_blank' | '_parent' | '_top';
-            const patch: Record<string, unknown> = { target: next === '_self' ? undefined : next };
-            if (next === '_blank') {
-              patch.rel = 'noopener noreferrer';
-            } else if (content.rel === 'noopener noreferrer') {
-              patch.rel = undefined;
-            }
-            onUpdate(patch);
-          }}
-        >
-          <option value="_self">같은 창</option>
-          <option value="_blank">새 창 (_blank)</option>
-          <option value="_parent">부모 프레임</option>
-          <option value="_top">최상위 프레임</option>
-        </select>
-      </label>
+      </div>
 
       <label style={fieldStyle}>
         <span style={labelTextStyle}>Variant (스타일)</span>

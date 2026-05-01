@@ -14,6 +14,7 @@
  * The runner (`gate-runner.ts`) calls all of these and aggregates results.
  */
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { isLinkSafe, linkValueFromLegacy } from '@/lib/builder/links';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 
 export type CheckSeverity = 'blocker' | 'warning' | 'info';
@@ -93,6 +94,42 @@ function siteSlugSet(site?: BuilderSiteDocument | null): Set<string> {
   return set;
 }
 
+function collectNodeLinks(node: BuilderCanvasNode): Array<{
+  href: string | undefined;
+  nodeLabel: string;
+  required: boolean;
+}> {
+  if (node.kind === 'button') {
+    return [{
+      href: linkValueFromLegacy(node.content)?.href ?? node.content.href,
+      nodeLabel: 'button',
+      required: true,
+    }];
+  }
+  if (node.kind === 'image') {
+    return [{
+      href: node.content.link?.href,
+      nodeLabel: 'image',
+      required: false,
+    }];
+  }
+  if (node.kind === 'container') {
+    return [{
+      href: node.content.link?.href,
+      nodeLabel: 'container',
+      required: false,
+    }];
+  }
+  if (node.kind === 'ctaBanner') {
+    return [{
+      href: node.content.buttonHref,
+      nodeLabel: 'CTA banner',
+      required: true,
+    }];
+  }
+  return [];
+}
+
 // ─── Individual checks ────────────────────────────────────────────
 
 export function checkBrokenLinks(
@@ -103,76 +140,82 @@ export function checkBrokenLinks(
   const slugs = siteSlugSet(site);
 
   for (const node of doc.nodes) {
-    let href: string | undefined;
-    let nodeLabel: string = node.kind;
+    for (const candidate of collectNodeLinks(node)) {
+      const { href, nodeLabel, required } = candidate;
+      if (typeof href !== 'string') continue;
+      const trimmed = href.trim();
 
-    if (node.kind === 'button') {
-      href = node.content.href;
-      nodeLabel = 'button';
-    } else if (node.kind === 'ctaBanner') {
-      href = node.content.buttonHref;
-      nodeLabel = 'CTA banner';
-    }
+      if (!trimmed || trimmed === '#') {
+        if (required) {
+          results.push({
+            id: `broken-link-empty-${node.id}`,
+            severity: 'warning',
+            category: 'links',
+            message: `${nodeLabel} 링크가 비어 있습니다 (${node.id}).`,
+            affectedNodeIds: [node.id],
+            fixHint: 'Inspector 에서 href 또는 링크 대상을 설정하세요.',
+          });
+        }
+        continue;
+      }
 
-    if (typeof href !== 'string') continue;
-    const trimmed = href.trim();
-
-    if (!trimmed || trimmed === '#') {
-      results.push({
-        id: `broken-link-empty-${node.id}`,
-        severity: 'warning',
-        category: 'links',
-        message: `${nodeLabel} 링크가 비어 있습니다 (${node.id}).`,
-        affectedNodeIds: [node.id],
-        fixHint: 'Inspector 에서 href 또는 링크 대상을 설정하세요.',
-      });
-      continue;
-    }
-
-    if (isAnchorLink(trimmed) || isLightboxLink(trimmed)) {
-      // Anchor / lightbox refs not validated here — assume ok.
-      continue;
-    }
-
-    if (isExternalUrl(trimmed)) {
-      if (!isValidExternalUrl(trimmed)) {
+      if (!isLinkSafe(trimmed)) {
         results.push({
-          id: `broken-link-extern-${node.id}`,
+          id: `unsafe-link-${node.id}`,
           severity: 'blocker',
           category: 'links',
-          message: `외부 URL 형식이 잘못되었습니다: ${trimmed}`,
+          message: `노드 ${node.id}의 링크가 차단된 스킴입니다 (${trimmed})`,
           affectedNodeIds: [node.id],
-          fixHint: '유효한 URL (예: https://example.com) 으로 수정하세요.',
+          fixHint: '허용된 링크 형식(/, #, lightbox:, https:, http:, mailto:, tel:)으로 수정하세요.',
         });
+        continue;
       }
-      continue;
-    }
 
-    // Internal path check
-    if (trimmed.startsWith('/')) {
-      const slug = normalizeInternalPath(trimmed);
-      if (slugs.size > 0 && !slugs.has(slug)) {
-        results.push({
-          id: `broken-link-internal-${node.id}`,
-          severity: 'warning',
-          category: 'links',
-          message: `내부 경로 ${trimmed} 에 해당하는 페이지가 사이트에 없습니다.`,
-          affectedNodeIds: [node.id],
-          fixHint: '페이지를 생성하거나 다른 경로로 변경하세요.',
-        });
+      if (isAnchorLink(trimmed) || isLightboxLink(trimmed)) {
+        // Anchor / lightbox refs not validated here — assume ok.
+        continue;
       }
-      continue;
-    }
 
-    // Anything else (relative slug, raw text) → warning
-    results.push({
-      id: `broken-link-unknown-${node.id}`,
-      severity: 'warning',
-      category: 'links',
-      message: `링크가 절대 경로(/...) 또는 외부 URL 이 아닙니다: ${trimmed}`,
-      affectedNodeIds: [node.id],
-      fixHint: '/ko/contact 형태의 경로 또는 https://... 외부 URL을 사용하세요.',
-    });
+      if (isExternalUrl(trimmed)) {
+        if (!isValidExternalUrl(trimmed)) {
+          results.push({
+            id: `broken-link-extern-${node.id}`,
+            severity: 'blocker',
+            category: 'links',
+            message: `외부 URL 형식이 잘못되었습니다: ${trimmed}`,
+            affectedNodeIds: [node.id],
+            fixHint: '유효한 URL (예: https://example.com) 으로 수정하세요.',
+          });
+        }
+        continue;
+      }
+
+      // Internal path check
+      if (trimmed.startsWith('/')) {
+        const slug = normalizeInternalPath(trimmed);
+        if (slugs.size > 0 && !slugs.has(slug)) {
+          results.push({
+            id: `broken-link-internal-${node.id}`,
+            severity: 'warning',
+            category: 'links',
+            message: `내부 경로 ${trimmed} 에 해당하는 페이지가 사이트에 없습니다.`,
+            affectedNodeIds: [node.id],
+            fixHint: '페이지를 생성하거나 다른 경로로 변경하세요.',
+          });
+        }
+        continue;
+      }
+
+      // Anything else (relative slug, raw text) → warning
+      results.push({
+        id: `broken-link-unknown-${node.id}`,
+        severity: 'warning',
+        category: 'links',
+        message: `링크가 절대 경로(/...) 또는 외부 URL 이 아닙니다: ${trimmed}`,
+        affectedNodeIds: [node.id],
+        fixHint: '/ko/contact 형태의 경로 또는 https://... 외부 URL을 사용하세요.',
+      });
+    }
   }
 
   return results;
@@ -207,7 +250,6 @@ export function checkImageAlt(doc: BuilderCanvasDocument): CheckResult[] {
   }
   return results;
 }
-
 export function checkSeoMeta(page?: BuilderPageMeta | null): CheckResult[] {
   if (!page) return [];
   const results: CheckResult[] = [];

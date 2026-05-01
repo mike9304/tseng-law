@@ -5,6 +5,7 @@ import {
   type TipTapMarkJson,
   type TipTapNodeJson,
 } from './types';
+import { isLinkSafe } from '@/lib/builder/links';
 
 export type SafeTipTapNodeType =
   | 'doc'
@@ -82,16 +83,7 @@ function normalizeText(value: unknown): string {
 export function sanitizeRichTextHref(value: unknown): string | undefined {
   if (typeof value !== 'string') return undefined;
   const href = value.trim();
-  if (!href || /[\u0000-\u001f\u007f]/.test(href)) return undefined;
-  if (href.startsWith('//')) return undefined;
-
-  const protocolMatch = href.match(/^([a-z][a-z0-9+.-]*):/i);
-  if (!protocolMatch) return href;
-
-  const protocol = protocolMatch[1].toLowerCase();
-  return protocol === 'http' || protocol === 'https' || protocol === 'mailto' || protocol === 'tel'
-    ? href
-    : undefined;
+  return isLinkSafe(href) ? href : undefined;
 }
 
 function sanitizeMarks(value: unknown): SafeTipTapMark[] | undefined {

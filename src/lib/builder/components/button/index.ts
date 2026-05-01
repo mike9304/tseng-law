@@ -10,6 +10,11 @@ export default defineComponent({
   defaultContent: {
     label: '버튼',
     href: '',
+    target: undefined,
+    rel: undefined,
+    title: undefined,
+    ariaLabel: undefined,
+    link: undefined,
     style: 'primary-solid' as const,
   },
   defaultStyle: {

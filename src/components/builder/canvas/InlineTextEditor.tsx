@@ -7,6 +7,8 @@ import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Underline from '@tiptap/extension-underline';
 import Placeholder from '@tiptap/extension-placeholder';
+import LinkPicker from '@/components/builder/editor/LinkPicker';
+import { sanitizeLinkValue, type LinkValue } from '@/lib/builder/links';
 import {
   BUILDER_RICH_TEXT_FORMAT,
   type BuilderRichText,
@@ -93,6 +95,8 @@ export default function InlineTextEditor({
 }: InlineTextEditorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [toolbarBelow, setToolbarBelow] = useState(false);
+  const [linkPickerOpen, setLinkPickerOpen] = useState(false);
+  const [linkPickerValue, setLinkPickerValue] = useState<LinkValue | null>(null);
   const initialContent = (initialRichText?.doc ?? richTextFromPlainText(initialText).doc) as JSONContent;
 
   // Determine whether toolbar should appear below the element
@@ -175,13 +179,44 @@ export default function InlineTextEditor({
 
   const handleLink = useCallback(() => {
     if (!editor) return;
-    const url = window.prompt('URL 입력', '');
-    if (url) {
-      editor.chain().focus().setLink({ href: url }).run();
-    } else {
-      editor.chain().focus().unsetLink().run();
-    }
+    const attrs = editor.getAttributes('link') as {
+      href?: unknown;
+      target?: unknown;
+      rel?: unknown;
+      title?: unknown;
+    };
+    const current = sanitizeLinkValue({
+      href: typeof attrs.href === 'string' ? attrs.href : '',
+      target: attrs.target === '_blank' ? '_blank' : '_self',
+      rel: typeof attrs.rel === 'string' ? attrs.rel : undefined,
+      title: typeof attrs.title === 'string' ? attrs.title : undefined,
+    });
+    setLinkPickerValue(current ?? { href: '', target: '_self' });
+    setLinkPickerOpen((open) => !open);
   }, [editor]);
+
+  const applyLink = useCallback(
+    (value: LinkValue | null) => {
+      if (!editor) return;
+      setLinkPickerValue(value);
+      if (!value) {
+        editor.chain().focus().extendMarkRange('link').unsetLink().run();
+        return;
+      }
+      editor
+        .chain()
+        .focus()
+        .extendMarkRange('link')
+        .setLink({
+          href: value.href,
+          target: value.target,
+          rel: value.rel,
+          title: value.title,
+        })
+        .run();
+    },
+    [editor],
+  );
 
   return (
     <div
@@ -298,6 +333,29 @@ export default function InlineTextEditor({
           >
             Link
           </button>
+          {linkPickerOpen ? (
+            <div
+              role="dialog"
+              aria-label="텍스트 링크 편집"
+              style={{
+                position: 'absolute',
+                top: toolbarBelow ? 'auto' : 38,
+                bottom: toolbarBelow ? 38 : 'auto',
+                left: 0,
+                width: 300,
+                padding: 12,
+                border: '1px solid #dbe3ec',
+                borderRadius: 10,
+                background: '#fff',
+                boxShadow: '0 14px 34px rgba(15,23,42,0.2)',
+                whiteSpace: 'normal',
+              }}
+              onMouseDown={(event) => event.stopPropagation()}
+              onPointerDown={(event) => event.stopPropagation()}
+            >
+              <LinkPicker value={linkPickerValue} onChange={applyLink} />
+            </div>
+          ) : null}
         </div>
       ) : null}
 

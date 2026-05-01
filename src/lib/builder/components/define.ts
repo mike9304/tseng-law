@@ -1,4 +1,5 @@
 import type { ComponentType, ReactNode } from 'react';
+import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 
 export type BuilderComponentCategory = 'basic' | 'layout' | 'media' | 'domain' | 'advanced';
@@ -17,6 +18,7 @@ export interface BuilderComponentInspectorProps {
   onUpdate: (props: Record<string, unknown>) => void;
   disabled?: boolean;
   onRequestAssetLibrary?: () => void;
+  linkPickerContext?: LinkPickerContext;
 }
 
 export interface BuilderComponentDefinition {

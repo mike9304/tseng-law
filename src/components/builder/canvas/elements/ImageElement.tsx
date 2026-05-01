@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
 import { filtersToCSS, isDefaultFilters, type ImageFilters } from '@/lib/builder/canvas/filters';
 import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
+import { sanitizeLinkValue } from '@/lib/builder/links';
 
 const PLACEHOLDER_SRC = '/images/placeholder-image.svg';
 
@@ -54,8 +55,10 @@ function aspectToClipPath(
 
 export default function ImageElement({
   node,
+  mode = 'edit',
 }: {
   node: BuilderImageCanvasNode;
+  mode?: 'edit' | 'preview' | 'published';
 }) {
   if (isPlaceholderOrEmpty(node.content.src)) {
     return (
@@ -112,7 +115,13 @@ export default function ImageElement({
     ? aspectToClipPath(node.rect.width, node.rect.height, targetRatio)
     : undefined;
 
-  return (
+  const link = sanitizeLinkValue(node.content.link);
+  const interactive = mode === 'published';
+  const lightboxSlug = link?.href.startsWith('lightbox:')
+    ? link.href.slice('lightbox:'.length).trim()
+    : '';
+
+  const imageFrame = (
     <div
       style={{
         position: 'relative',
@@ -153,5 +162,27 @@ export default function ImageElement({
       </div>
       <style>{`.image-hover-overlay { opacity: 0 !important; } *:hover > .image-hover-overlay { opacity: 1 !important; }`}</style>
     </div>
+  );
+
+  if (!link || !interactive) return imageFrame;
+
+  return (
+    <a
+      href={lightboxSlug ? '#' : link.href}
+      target={lightboxSlug ? undefined : link.target}
+      rel={lightboxSlug ? undefined : link.rel}
+      title={link.title}
+      aria-label={link.ariaLabel}
+      data-lightbox-target={lightboxSlug || undefined}
+      style={{
+        display: 'block',
+        width: '100%',
+        height: '100%',
+        color: 'inherit',
+        textDecoration: 'none',
+      }}
+    >
+      {imageFrame}
+    </a>
   );
 }

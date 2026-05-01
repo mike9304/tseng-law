@@ -2,6 +2,7 @@
 
 import { getComponent } from '@/lib/builder/components/registry';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 export default function ContentTab({
@@ -9,11 +10,13 @@ export default function ContentTab({
   disabled = false,
   onUpdateContent,
   onRequestAssetLibrary,
+  linkPickerContext,
 }: {
   node: BuilderCanvasNode;
   disabled?: boolean;
   onUpdateContent: (content: Record<string, unknown>) => void;
   onRequestAssetLibrary?: () => void;
+  linkPickerContext?: LinkPickerContext;
 }) {
   const component = getComponent(node.kind);
   const Inspector = component?.Inspector;
@@ -33,6 +36,7 @@ export default function ContentTab({
         onUpdate={onUpdateContent}
         disabled={disabled}
         onRequestAssetLibrary={onRequestAssetLibrary}
+        linkPickerContext={linkPickerContext}
       />
     </div>
   );

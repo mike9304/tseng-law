@@ -2,8 +2,10 @@
 
 import { useCallback, useState } from 'react';
 import type { BuilderComponentInspectorProps } from '../define';
+import LinkPicker from '@/components/builder/editor/LinkPicker';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
 import { DEFAULT_FILTERS, type ImageFilters } from '@/lib/builder/canvas/filters';
+import type { LinkValue } from '@/lib/builder/links';
 import CropModal from '@/components/builder/canvas/CropModal';
 import FilterPanel from '@/components/builder/canvas/FilterPanel';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
@@ -13,6 +15,7 @@ export default function ImageInspector({
   onUpdate,
   disabled = false,
   onRequestAssetLibrary,
+  linkPickerContext,
 }: BuilderComponentInspectorProps) {
   const imageNode = node as BuilderImageCanvasNode;
   const [cropOpen, setCropOpen] = useState(false);
@@ -95,6 +98,17 @@ export default function ImageInspector({
           <option value="contain">Contain</option>
         </select>
       </label>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 4 }}>
+        <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#475569' }}>
+          Link
+        </span>
+        <LinkPicker
+          value={(imageNode.content.link ?? null) as LinkValue | null}
+          onChange={(link) => onUpdate({ link: link ?? undefined })}
+          context={linkPickerContext}
+          disabled={disabled}
+        />
+      </div>
       {imageNode.content.cropAspect && imageNode.content.cropAspect !== 'Free' && (
         <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: 4 }}>
           Crop: {imageNode.content.cropAspect}

@@ -1,5 +1,7 @@
 import type { BuilderComponentInspectorProps } from '../define';
+import LinkPicker from '@/components/builder/editor/LinkPicker';
 import type { BuilderContainerCanvasNode } from '@/lib/builder/canvas/types';
+import type { LinkValue } from '@/lib/builder/links';
 import {
   CARD_VARIANTS,
   legacyCardStyleToVariant,
@@ -45,6 +47,7 @@ export default function ContainerInspector({
   node,
   onUpdate,
   disabled = false,
+  linkPickerContext,
 }: BuilderComponentInspectorProps) {
   const containerNode = node as BuilderContainerCanvasNode;
   const content = containerNode.content;
@@ -89,6 +92,15 @@ export default function ContainerInspector({
           ))}
         </select>
       </label>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 8 }}>
+        <span style={sectionLabelStyle}>Click Link</span>
+        <LinkPicker
+          value={(content.link ?? null) as LinkValue | null}
+          onChange={(link) => onUpdate({ link: link ?? undefined })}
+          context={linkPickerContext}
+          disabled={disabled}
+        />
+      </div>
 
       {/* ── Layout Mode ────────────────────────────────────── */}
       <span style={sectionLabelStyle}>Layout Mode</span>

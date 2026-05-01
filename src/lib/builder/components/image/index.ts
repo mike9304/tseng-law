@@ -13,6 +13,7 @@ export default defineComponent({
     fit: 'cover' as const,
     cropAspect: '',
     filters: undefined,
+    link: undefined,
   },
   defaultStyle: {
     borderRadius: 12,

@@ -14,9 +14,16 @@ import crypto from 'crypto';
 import { revalidatePath } from 'next/cache';
 import { readFile, writeFile, mkdir, readdir, stat } from 'fs/promises';
 import path from 'path';
-import { publishPage, readPageCanvas, writePageCanvas, readSiteDocument } from './persistence';
+import {
+  ensureSiteDocument,
+  readPageCanvasRecordState,
+  readSiteDocument,
+  writePageCanvas,
+  writeSiteDocument,
+} from './persistence';
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import type { PageCanvasRecord } from './types';
 import { runAllChecks, type PublishCheckSuite } from '@/lib/builder/publish-gate/gate-runner';
 
 // ─── Preview tokens (Blob-persisted for serverless) ──────────────
@@ -107,44 +114,153 @@ export async function runPublishChecks(
 
 // ─── Publish flow ─────────────────────────────────────────────────
 
+export class PublishError extends Error {
+  constructor(
+    public code: string,
+    public status: number,
+    public body: Record<string, unknown> = {},
+  ) {
+    super(code);
+    this.name = 'PublishError';
+  }
+}
+
+export interface PublishResult {
+  ok: true;
+  revisionId: string;
+  revision: number;
+  publishedRevisionId: string;
+  publishedRevision: number;
+  publishedSavedAt: string;
+  slug: string;
+  warnings: string[];
+  checks: PublishCheckResult;
+}
+
+function publishBlockers(checks: PublishCheckResult): unknown[] {
+  return checks.suite?.results.filter((result) => result.severity === 'blocker') ?? checks.errors;
+}
+
+export async function publishPage(
+  siteId: string,
+  pageId: string,
+  options: { expectedDraftRevision?: number } = {},
+): Promise<PublishResult> {
+  const draftState = await readPageCanvasRecordState(siteId, pageId, 'draft');
+  if (!draftState) {
+    throw new PublishError('draft_not_found', 404);
+  }
+
+  if (
+    options.expectedDraftRevision !== undefined &&
+    options.expectedDraftRevision !== draftState.record.revision
+  ) {
+    throw new PublishError('draft_stale', 409, {
+      current: { revision: draftState.record.revision },
+    });
+  }
+
+  const checks = await runPublishChecks(
+    draftState.record.document,
+    pageId,
+    siteId,
+    draftState.record.document.locale,
+  );
+
+  if (!checks.passed) {
+    throw new PublishError('publish_blocked', 422, {
+      blockers: publishBlockers(checks),
+    });
+  }
+
+  let revisionResult: { revisionId: string; revision: number };
+  try {
+    revisionResult = await recordRevision(siteId, pageId, draftState.record, { source: 'publish' });
+  } catch (error) {
+    if (error instanceof PublishError) throw error;
+    throw new PublishError('revision_write_failed', 500);
+  }
+
+  const site = await ensureSiteDocument(siteId, draftState.record.document.locale);
+  const page = site.pages.find((p) => p.pageId === pageId);
+  if (!page) {
+    throw new PublishError('page_not_in_site', 500);
+  }
+
+  const publishedSavedAt = new Date().toISOString();
+  page.publishedAt = publishedSavedAt;
+  page.publishedRevisionId = revisionResult.revisionId;
+  page.publishedRevision = revisionResult.revision;
+  page.publishedSavedAt = publishedSavedAt;
+  page.lastPublishedDraftRevision = draftState.record.revision;
+  page.updatedAt = publishedSavedAt;
+  site.updatedAt = publishedSavedAt;
+
+  try {
+    await writeSiteDocument(site);
+  } catch {
+    throw new PublishError('site_write_failed', 500);
+  }
+
+  try {
+    revalidatePath(`/${draftState.record.document.locale}/p/${page.slug || ''}`);
+  } catch {
+    // dev or non-existent path
+  }
+
+  return {
+    ok: true,
+    revisionId: revisionResult.revisionId,
+    revision: revisionResult.revision,
+    publishedRevisionId: revisionResult.revisionId,
+    publishedRevision: revisionResult.revision,
+    publishedSavedAt,
+    slug: page.slug || '',
+    warnings: checks.warnings,
+    checks,
+  };
+}
+
 export async function publishPageWithChecks(
   siteId: string,
   pageId: string,
   locale: Locale,
   options: { skipChecks?: boolean; ignoreWarnings?: boolean } = {},
 ): Promise<{ success: boolean; checks: PublishCheckResult; slug?: string; revisionId?: string | null }> {
-  const draft = await readPageCanvas(siteId, pageId, 'draft');
-  if (!draft) {
+  void locale;
+  void options;
+
+  try {
+    const result = await publishPage(siteId, pageId);
     return {
-      success: false,
-      checks: { passed: false, warnings: [], errors: ['Draft not found'] },
+      success: true,
+      checks: result.checks,
+      slug: result.slug,
+      revisionId: result.revisionId,
     };
+  } catch (error) {
+    if (error instanceof PublishError && error.code === 'publish_blocked') {
+      const blockers = Array.isArray(error.body.blockers) ? error.body.blockers : [];
+      const errors = blockers
+        .map((blocker) =>
+          blocker && typeof blocker === 'object' && 'message' in blocker
+            ? String((blocker as { message?: unknown }).message)
+            : String(blocker),
+        )
+        .filter(Boolean);
+      return {
+        success: false,
+        checks: { passed: false, warnings: [], errors },
+      };
+    }
+    if (error instanceof PublishError && error.code === 'draft_not_found') {
+      return {
+        success: false,
+        checks: { passed: false, warnings: [], errors: ['Draft not found'] },
+      };
+    }
+    throw error;
   }
-
-  const checks = await runPublishChecks(draft, pageId, siteId, locale);
-  if (!options.skipChecks && !checks.passed) {
-    return { success: false, checks };
-  }
-
-  await publishPage(siteId, pageId, locale);
-
-  // Auto-snapshot the just-published canvas so users can revert later.
-  let revisionId: string | null = null;
-  try {
-    revisionId = await recordRevision(pageId, draft, { source: 'publish' });
-  } catch {
-    revisionId = null;
-  }
-
-  const site = await readSiteDocument(siteId, locale);
-  const pageMeta = site.pages.find((p) => p.pageId === pageId);
-  const slug = pageMeta?.slug || '';
-
-  try {
-    revalidatePath(`/${locale}/p/${slug || ''}`);
-  } catch { /* dev or non-existent path */ }
-
-  return { success: true, checks, slug, revisionId };
 }
 
 // ─── Version history (Blob + filesystem fallback) ───────────────
@@ -184,19 +300,57 @@ interface RevisionEnvelope extends BuilderCanvasDocument {
   _revisionId: string;
   _source?: string;
   _savedAt?: string;
+  _siteId?: string;
+  _recordRevision?: number;
+  _recordSavedAt?: string;
+  _recordUpdatedBy?: string;
+}
+
+type RevisionSourceOptions = { source?: string };
+
+function createRevisionWriteError(): Error {
+  return new Error('revision_write_failed');
 }
 
 export async function recordRevision(
   pageId: string,
   doc: BuilderCanvasDocument,
-  options: { source?: string } = {},
-): Promise<string> {
+  options?: RevisionSourceOptions,
+): Promise<string>;
+export async function recordRevision(
+  siteId: string,
+  pageId: string,
+  record: PageCanvasRecord,
+  options?: RevisionSourceOptions,
+): Promise<{ revisionId: string; revision: number }>;
+export async function recordRevision(
+  first: string,
+  second: string | BuilderCanvasDocument,
+  third?: PageCanvasRecord | RevisionSourceOptions,
+  fourth: RevisionSourceOptions = {},
+): Promise<string | { revisionId: string; revision: number }> {
+  const recordsCanvasEnvelope =
+    typeof second === 'string' &&
+    third &&
+    typeof third === 'object' &&
+    'document' in third &&
+    'revision' in third;
+
+  const siteId = recordsCanvasEnvelope ? first : undefined;
+  const pageId = recordsCanvasEnvelope ? (second as string) : first;
+  const record = recordsCanvasEnvelope ? (third as PageCanvasRecord) : undefined;
+  const doc = record?.document ?? (second as BuilderCanvasDocument);
+  const options = recordsCanvasEnvelope ? fourth : ((third as RevisionSourceOptions | undefined) ?? {});
   const revisionId = `${pageId}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
   const envelope: RevisionEnvelope = {
     ...doc,
     _revisionId: revisionId,
     _source: options.source ?? 'manual',
     _savedAt: new Date().toISOString(),
+    _siteId: siteId,
+    _recordRevision: record?.revision,
+    _recordSavedAt: record?.savedAt,
+    _recordUpdatedBy: record?.updatedBy,
   };
   const json = JSON.stringify(envelope);
 
@@ -208,10 +362,12 @@ export async function recordRevision(
         allowOverwrite: true,
         contentType: 'application/json',
       });
-      return revisionId;
     } catch {
-      // fall through to filesystem
+      throw createRevisionWriteError();
     }
+    return record
+      ? { revisionId, revision: record.revision }
+      : revisionId;
   }
 
   try {
@@ -219,9 +375,11 @@ export async function recordRevision(
     await mkdir(dir, { recursive: true });
     await writeFile(path.join(dir, `${revisionId}.json`), json, 'utf8');
   } catch {
-    // last-ditch: silent no-op (dev with read-only fs)
+    throw createRevisionWriteError();
   }
-  return revisionId;
+  return record
+    ? { revisionId, revision: record.revision }
+    : revisionId;
 }
 
 async function listRevisionsLocal(pageId: string): Promise<PageRevision[]> {
@@ -303,8 +461,17 @@ export async function readRevisionDocument(
       });
       if (result?.stream && result.statusCode === 200) {
         const env = JSON.parse(await new Response(result.stream).text()) as RevisionEnvelope;
-        const { _revisionId: _r, _source: _s, _savedAt: _sa, ...rest } = env;
-        void _r; void _s; void _sa;
+        const {
+          _revisionId: _r,
+          _source: _s,
+          _savedAt: _sa,
+          _siteId: _si,
+          _recordRevision: _rr,
+          _recordSavedAt: _rs,
+          _recordUpdatedBy: _ru,
+          ...rest
+        } = env;
+        void _r; void _s; void _sa; void _si; void _rr; void _rs; void _ru;
         return rest as BuilderCanvasDocument;
       }
     } catch {
@@ -315,8 +482,17 @@ export async function readRevisionDocument(
     const file = path.join(revisionsLocalRoot(pageId), `${revisionId}.json`);
     const text = await readFile(file, 'utf8');
     const env = JSON.parse(text) as RevisionEnvelope;
-    const { _revisionId: _r, _source: _s, _savedAt: _sa, ...rest } = env;
-    void _r; void _s; void _sa;
+    const {
+      _revisionId: _r,
+      _source: _s,
+      _savedAt: _sa,
+      _siteId: _si,
+      _recordRevision: _rr,
+      _recordSavedAt: _rs,
+      _recordUpdatedBy: _ru,
+      ...rest
+    } = env;
+    void _r; void _s; void _sa; void _si; void _rr; void _rs; void _ru;
     return rest as BuilderCanvasDocument;
   } catch {
     return null;

@@ -17,6 +17,26 @@ interface DraftMeta {
   updatedBy?: string;
 }
 
+type ToastTone = 'success' | 'error';
+
+interface PublishErrorBody {
+  error?: string;
+  errors?: string[];
+  blockers?: CheckResult[];
+  current?: { revision?: number };
+}
+
+function blockerSuite(blockers: CheckResult[]): PublishCheckSuite {
+  return {
+    results: blockers,
+    hasBlocker: blockers.some((result) => result.severity === 'blocker'),
+    blockerCount: blockers.filter((result) => result.severity === 'blocker').length,
+    warningCount: blockers.filter((result) => result.severity === 'warning').length,
+    infoCount: blockers.filter((result) => result.severity === 'info').length,
+    checkedAt: new Date().toISOString(),
+  };
+}
+
 const backdropStyle: React.CSSProperties = {
   position: 'fixed',
   inset: 0,
@@ -236,6 +256,7 @@ export default function PublishModal({
   activePageId,
   draftMeta,
   onDraftSaved,
+  onToast,
   onClose,
 }: {
   open: boolean;
@@ -244,6 +265,7 @@ export default function PublishModal({
   activePageId?: string | null;
   draftMeta?: DraftMeta | null;
   onDraftSaved?: (draftMeta: DraftMeta, document?: BuilderCanvasDocument) => void;
+  onToast?: (message: string, tone: ToastTone) => void;
   onClose: () => void;
 }) {
   const setSelectedNodeId = useBuilderCanvasStore((s) => s.setSelectedNodeId);
@@ -367,12 +389,13 @@ export default function PublishModal({
           const errData = (await saveResponse.json().catch(() => ({}))) as {
             error?: string;
           };
-          setPublishState('error');
-          setPublishError(
+          const message =
             errData.error === 'draft_conflict'
-              ? 'Draft conflict detected. Reload the draft before publishing.'
-              : 'Failed to save draft before publish.',
-          );
+              ? 'Draft가 다른 탭에서 변경되었습니다. 새로고침 후 다시 발행하세요.'
+              : '발행 전 draft 저장에 실패했습니다.';
+          setPublishState('error');
+          setPublishError(message);
+          onToast?.(message, 'error');
           return;
         }
         const saveData = (await saveResponse.json()) as {
@@ -382,6 +405,7 @@ export default function PublishModal({
         if (saveData.draft) {
           onDraftSaved?.(saveData.draft, saveData.document);
         }
+        const expectedDraftRevision = saveData.draft?.revision ?? draftMeta?.revision;
 
         const publishResponse = await fetch(
           `/api/builder/site/pages/${activePageId}/publish?locale=${locale}`,
@@ -389,18 +413,28 @@ export default function PublishModal({
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'same-origin',
+            body: JSON.stringify({ expectedDraftRevision }),
           },
         );
 
         if (!publishResponse.ok) {
-          const errData = (await publishResponse.json().catch(() => ({}))) as {
-            errors?: string[];
-            error?: string;
-          };
+          const errData = (await publishResponse.json().catch(() => ({}))) as PublishErrorBody;
+          let message = errData.errors?.join(', ') || errData.error || '발행 실패. 다시 시도해 주세요.';
+          if (publishResponse.status === 422 && Array.isArray(errData.blockers)) {
+            setSuite(blockerSuite(errData.blockers));
+            message = '발행 차단 항목을 수정한 뒤 다시 시도하세요.';
+          } else if (publishResponse.status === 409 || errData.error === 'draft_stale') {
+            const currentRevision =
+              typeof errData.current?.revision === 'number'
+                ? ` 현재 revision: ${errData.current.revision}.`
+                : '';
+            message = `Draft가 다른 탭에서 변경되었습니다. 새로고침 후 다시 발행하세요.${currentRevision}`;
+          } else if (publishResponse.status >= 500) {
+            message = '발행 실패. 다시 시도해 주세요.';
+          }
           setPublishState('error');
-          setPublishError(
-            errData.errors?.join(', ') || errData.error || 'Publish failed.',
-          );
+          setPublishError(message);
+          onToast?.(message, 'error');
           return;
         }
 
@@ -408,6 +442,8 @@ export default function PublishModal({
         setPublishState('success');
         const slug = result.slug ?? '';
         setPublishedSlug(buildSitePagePath(locale, slug));
+        onToast?.('발행 완료', 'success');
+        onClose();
       } else {
         // ── Legacy sandbox publish fallback ──
         const response = await fetch(`/api/builder/sandbox/draft?locale=${locale}`, {
@@ -427,10 +463,11 @@ export default function PublishModal({
         setPublishedSlug(`/p/sandbox`);
       }
     } catch {
+      onToast?.('발행 중 네트워크 오류가 발생했습니다.', 'error');
       setPublishState('error');
-      setPublishError('Network error during publish.');
+      setPublishError('발행 중 네트워크 오류가 발생했습니다.');
     }
-  }, [canPublish, document, locale, activePageId, draftMeta?.revision, onDraftSaved]);
+  }, [canPublish, document, locale, activePageId, draftMeta?.revision, onDraftSaved, onToast, onClose]);
 
   if (!open) return null;
 

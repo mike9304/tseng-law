@@ -39,6 +39,10 @@ import { buildPageSeo } from '@/lib/builder/seo/seo-model';
 import { generateBreadcrumbSchema, generateLegalServiceSchema } from '@/lib/builder/seo/schema-org';
 import { buildStructuredDataPayloads } from '@/lib/builder/seo/structured-data';
 import { linkValueFromLegacy, sanitizeLinkValue } from '@/lib/builder/links';
+import {
+  deriveHeuristicAnimation,
+  deriveHeuristicHoverStyle,
+} from '@/lib/builder/site/heuristic-defaults';
 import { getSiteUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
@@ -381,7 +385,8 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     const useSticky = Boolean(stickyConfig) && !useFlowWrapper;
     const baseTransform = node.rotation ? `rotate(${node.rotation}deg)` : undefined;
     const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, publishedTheme);
-    const hoverStyle = node.hoverStyle;
+    const hoverStyle = deriveHeuristicHoverStyle(node);
+    const effectiveAnimation = deriveHeuristicAnimation(node);
     const hoverBackgroundStyle = hoverStyle?.backgroundColor
       ? resolveBackgroundStyle(hoverStyle.backgroundColor, publishedTheme)
       : undefined;
@@ -393,9 +398,9 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       : undefined;
     const hoverTransform = buildHoverTransform(hoverStyle, baseTransform ?? '');
     const hoverDuration = `${hoverStyle?.transitionMs ?? 200}ms`;
-    const animationAttributes = getPublishedAnimationAttributes(node.animation);
+    const animationAttributes = getPublishedAnimationAttributes(effectiveAnimation);
     const animationStyle = buildPublishedAnimationStyle({
-      animation: node.animation,
+      animation: effectiveAnimation,
       baseTransform,
       baseOpacity: node.style?.opacity != null ? node.style.opacity / 100 : 1,
       primaryColor: 'var(--builder-color-primary, #3b82f6)',

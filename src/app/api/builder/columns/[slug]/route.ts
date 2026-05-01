@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { recordColumnEvent } from '@/lib/builder/audit/record';
 import { deleteDraftColumn, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
 import { columnLocaleSchema, columnSlugSchema, patchColumnInputSchema, type ColumnDocument, type ColumnFrontmatter } from '@/lib/builder/columns/types';
 import { guardMutation } from '@/lib/builder/security/guard';
@@ -152,6 +153,13 @@ export async function PATCH(request: NextRequest, context: ColumnRouteContext) {
     };
 
     const saved = await writeDraftColumn(nextDoc);
+    await recordColumnEvent({
+      request,
+      type: 'update',
+      slug: saved.slug,
+      locale: saved.locale,
+    });
+
     return NextResponse.json({
       ok: true,
       column: saved,
@@ -189,6 +197,13 @@ export async function DELETE(request: NextRequest, context: ColumnRouteContext) 
     }
 
     await deleteDraftColumn(locale, slug);
+    await recordColumnEvent({
+      request,
+      type: 'delete',
+      slug,
+      locale,
+    });
+
     return NextResponse.json({
       ok: true,
       deleted: true,

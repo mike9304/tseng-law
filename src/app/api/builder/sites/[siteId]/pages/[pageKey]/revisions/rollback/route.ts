@@ -4,6 +4,7 @@ import {
   BuilderSnapshotConflictError,
   rollbackBuilderPageDraftToPublishedRevision,
 } from '@/lib/builder/persistence';
+import { recordPageRollback } from '@/lib/builder/audit/record';
 import { isBuilderPageKey, isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
@@ -78,6 +79,13 @@ export async function POST(
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Published revision record not found.' }, { status: 404 });
     }
+
+    await recordPageRollback({
+      request,
+      siteId: params.siteId,
+      pageId: params.pageKey,
+      revisionId,
+    });
 
     return NextResponse.json({
       ...buildBuilderSnapshotResponse(result),

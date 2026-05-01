@@ -4,6 +4,7 @@ import {
   listBuilderImageAssets,
   uploadBuilderImageAsset,
 } from '@/lib/builder/assets';
+import { recordAssetDelete, recordAssetUpload } from '@/lib/builder/audit/record';
 import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
@@ -63,6 +64,12 @@ export async function POST(request: NextRequest) {
       locale: request.nextUrl.searchParams.get('locale'),
       file,
     });
+    await recordAssetUpload({
+      request,
+      assetId: asset.filename,
+      mime: asset.contentType,
+      size: asset.size,
+    });
 
     return NextResponse.json({
       ok: true,
@@ -85,10 +92,17 @@ export async function DELETE(request: NextRequest) {
 
   try {
     const payload = await request.json();
+    const filename = typeof payload?.filename === 'string' ? payload.filename : null;
     await deleteBuilderImageAsset({
       locale: request.nextUrl.searchParams.get('locale') ?? payload?.locale,
-      filename: typeof payload?.filename === 'string' ? payload.filename : null,
+      filename,
     });
+    if (filename) {
+      await recordAssetDelete({
+        request,
+        assetId: filename,
+      });
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {

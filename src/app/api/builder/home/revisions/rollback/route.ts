@@ -5,6 +5,7 @@ import {
   normalizeBuilderHomeLocale,
   rollbackBuilderHomeDraftToPublishedRevision,
 } from '@/lib/builder/persistence';
+import { recordPageRollback } from '@/lib/builder/audit/record';
 import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
@@ -66,6 +67,13 @@ export async function POST(request: NextRequest) {
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Published revision record not found.' }, { status: 404 });
     }
+
+    await recordPageRollback({
+      request,
+      siteId: 'default',
+      pageId: 'home',
+      revisionId,
+    });
 
     return NextResponse.json({
       ...buildBuilderHomeSnapshotResponse(result),

@@ -14,6 +14,7 @@ import {
   rollbackToRevision,
 } from '@/lib/builder/site/publish';
 import { readPageCanvas } from '@/lib/builder/site/persistence';
+import { recordPageRollback } from '@/lib/builder/audit/record';
 import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
@@ -59,6 +60,13 @@ export async function POST(
 
   // Return the restored document for client-side replaceDocument
   const restored = await readRevisionDocument(pageId, revisionId);
+  await recordPageRollback({
+    request,
+    siteId,
+    pageId,
+    revisionId,
+    backupRevisionId,
+  });
 
   return NextResponse.json({
     ok: true,

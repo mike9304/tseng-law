@@ -7,6 +7,11 @@ import {
   publishBuilderHomeSnapshot,
   readBuilderHomeSnapshot,
 } from '@/lib/builder/persistence';
+import {
+  recordPublishBlocked,
+  recordPublishFailure,
+  recordPublishSuccess,
+} from '@/lib/builder/audit/record';
 import { BuilderPublishValidationError } from '@/lib/builder/validation';
 import { guardMutation } from '@/lib/builder/security/guard';
 
@@ -61,6 +66,13 @@ export async function POST(request: NextRequest) {
     const draft = await readBuilderHomeSnapshot('draft', locale);
     const published = await readBuilderHomeSnapshot('published', locale);
     if (!draft.persisted) {
+      await recordPublishFailure({
+        request,
+        siteId: 'default',
+        pageId: 'home',
+        reason: 'draft_not_found',
+      });
+
       return NextResponse.json({ ok: false, error: 'No draft snapshot exists for this locale.' }, { status: 404 });
     }
 
@@ -79,10 +91,24 @@ export async function POST(request: NextRequest) {
       expectedPublished: publishedExpectation,
     });
     if (!result) {
+      await recordPublishFailure({
+        request,
+        siteId: 'default',
+        pageId: 'home',
+        reason: 'draft_not_found',
+      });
+
       return NextResponse.json({ ok: false, error: 'No draft snapshot exists for this locale.' }, { status: 404 });
     }
 
     revalidatePath(`/${locale}`);
+    await recordPublishSuccess({
+      request,
+      siteId: 'default',
+      pageId: 'home',
+      revision: result.snapshot.revision,
+      revisionId: `home:${locale}:published:${result.snapshot.revision}`,
+    });
 
     return NextResponse.json({
       ...buildBuilderHomeSnapshotResponse(result),
@@ -90,6 +116,13 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     if (error instanceof BuilderPublishValidationError) {
+      await recordPublishBlocked({
+        request,
+        siteId: 'default',
+        pageId: 'home',
+        blockerCount: error.issues.length,
+      });
+
       return NextResponse.json(
         {
           ok: false,
@@ -101,6 +134,13 @@ export async function POST(request: NextRequest) {
     }
 
     if (error instanceof BuilderSnapshotConflictError) {
+      await recordPublishFailure({
+        request,
+        siteId: 'default',
+        pageId: 'home',
+        reason: 'snapshot_conflict',
+      });
+
       return NextResponse.json(
         {
           ok: false,
@@ -110,6 +150,13 @@ export async function POST(request: NextRequest) {
         { status: 409 }
       );
     }
+
+    await recordPublishFailure({
+      request,
+      siteId: 'default',
+      pageId: 'home',
+      reason: 'unexpected_error',
+    });
 
     throw error;
   }

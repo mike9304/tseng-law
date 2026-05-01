@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
+import { recordColumnEvent } from '@/lib/builder/audit/record';
 import { listColumns, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
@@ -100,6 +101,13 @@ export async function POST(request: NextRequest) {
     };
 
     const saved = await writeDraftColumn(document);
+    await recordColumnEvent({
+      request,
+      type: 'create',
+      slug: saved.slug,
+      locale: saved.locale,
+    });
+
     return NextResponse.json(
       {
         ok: true,

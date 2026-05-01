@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
 import { revalidatePath } from 'next/cache';
+import { recordColumnEvent } from '@/lib/builder/audit/record';
 import {
   readColumnVariant,
   writePublishedColumn,
@@ -58,6 +59,12 @@ export async function POST(
     ...draft,
     draft: false,
     updatedAt: new Date().toISOString(),
+  });
+  await recordColumnEvent({
+    request,
+    type: 'publish',
+    slug: published.slug,
+    locale: published.locale,
   });
 
   invalidateBlobColumnsCache(locale);

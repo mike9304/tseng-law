@@ -5,12 +5,17 @@ import AlignmentGuides from '@/components/builder/canvas/AlignmentGuides';
 import CanvasNode, { type ResizeHandle } from '@/components/builder/canvas/CanvasNode';
 import ContextMenu from '@/components/builder/canvas/ContextMenu';
 import SelectionBox from '@/components/builder/canvas/SelectionBox';
+import SelectionToolbar from '@/components/builder/canvas/SelectionToolbar';
 import {
   createCanvasNodeTemplate,
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
-import { resolveCanvasNodeAbsoluteRect, resolveCanvasNodeLocalRect } from '@/lib/builder/canvas/tree';
-import { builderCanvasNodeKinds, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import {
+  resolveCanvasNodeAbsoluteRectForViewport,
+  resolveCanvasNodeLocalRect,
+} from '@/lib/builder/canvas/tree';
+import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
+import { builderCanvasNodeKinds, isContainerLikeKind, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { createShortcutHandler, NUDGE_LARGE_PX, NUDGE_PX, type CanvasAction } from '@/lib/builder/canvas/shortcuts';
 import { type AlignmentGuide, computeSnap, type Rect } from '@/lib/builder/canvas/snap';
 import {
@@ -30,9 +35,11 @@ type InteractionState =
       type: 'move';
       nodeId: string;
       nodeIds: string[];
+      viewport: Viewport;
       pointerId: number;
       originX: number;
       originY: number;
+      startParentId: string | null;
       startRects: Record<string, BuilderCanvasNode['rect']>;
       startAbsoluteRects: Record<string, BuilderCanvasNode['rect']>;
     }
@@ -40,6 +47,7 @@ type InteractionState =
       type: 'resize';
       nodeId: string;
       handle: ResizeHandle;
+      viewport: Viewport;
       pointerId: number;
       originX: number;
       originY: number;
@@ -71,6 +79,13 @@ type ContextMenuState = {
   y: number;
 };
 
+type OverlapPickerState = {
+  nodeIds: string[];
+  x: number;
+  y: number;
+  mode: 'hint' | 'list';
+};
+
 const DEFAULT_STAGE_WIDTH = 1280;
 const DEFAULT_STAGE_HEIGHT = 880;
 const MIN_WIDTH = 72;
@@ -88,10 +103,46 @@ function clampRect(
   return { x, y, width, height };
 }
 
+function getCanvasNodeLabel(node: BuilderCanvasNode): string {
+  const content = node.content as Record<string, unknown>;
+  const text = content.text ?? content.label ?? content.alt ?? content.title;
+  if (typeof text === 'string' && text.trim()) {
+    return text.trim().slice(0, 48);
+  }
+  return node.id;
+}
+
+function getCanvasNodeDepth(
+  node: BuilderCanvasNode,
+  nodesById: Map<string, BuilderCanvasNode>,
+): number {
+  let depth = 0;
+  const visited = new Set<string>();
+  let parentId = node.parentId ?? null;
+
+  while (parentId && !visited.has(parentId)) {
+    visited.add(parentId);
+    depth += 1;
+    parentId = nodesById.get(parentId)?.parentId ?? null;
+  }
+
+  return depth;
+}
+
 export default function CanvasContainer({
   onRequestAssetLibrary,
+  onRequestMoveToPage,
+  onRequestSaveAsSection,
+  onRequestInsertSavedSection,
+  onToast,
 }: {
   onRequestAssetLibrary?: (nodeId: string) => void;
+  onRequestMoveToPage?: (nodeIds: string[]) => void;
+  /** Called when user picks "Save as section..." with the root container nodeId. */
+  onRequestSaveAsSection?: (rootNodeId: string) => void;
+  /** Called when user drops a saved-section card onto the canvas. */
+  onRequestInsertSavedSection?: (sectionId: string, position: { x: number; y: number }) => void;
+  onToast?: (message: string, tone: 'success' | 'error') => void;
 }) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -109,12 +160,17 @@ export default function CanvasContainer({
     setDraftSaveState,
     beginMutationSession,
     commitMutationSession,
+    cancelMutationSession,
     undo,
     redo,
     copySelectedNodesToClipboard,
     cutSelectedNodesToClipboard,
     pasteClipboardNodes,
     alignSelectedNodes,
+    distributeSelectedNodes,
+    matchSelectedNodesSize,
+    groupSelectedNodes,
+    ungroupSelectedNode,
     toggleSelectedNodeLock,
     addNode,
     duplicateSelectedNode,
@@ -122,15 +178,18 @@ export default function CanvasContainer({
     sendSelectedNodeBackward,
     bringSelectedNodeToFront,
     sendSelectedNodeToBack,
-    updateSelectedNodes,
-    updateNode,
+    updateNodeRectsForViewport,
     updateNodeContent,
     deleteSelectedNode,
     nudgeSelectedNode,
+    childrenMap,
+    viewport: currentViewport,
   } = useBuilderCanvasStore();
   const [interaction, setInteraction] = useState<InteractionState>(null);
+  const [activeViewport, setActiveViewport] = useState<Viewport | null>(null);
   const [selectionBox, setSelectionBox] = useState<SelectionBoxState | null>(null);
   const [contextMenu, setContextMenu] = useState<ContextMenuState | null>(null);
+  const [overlapPicker, setOverlapPicker] = useState<OverlapPickerState | null>(null);
   const [guides, setGuides] = useState<AlignmentGuide[]>([]);
   const [zoomState, setZoomState] = useState<ZoomState>(() => createDefaultZoomState());
   const [isSpacePressed, setIsSpacePressed] = useState(false);
@@ -152,13 +211,14 @@ export default function CanvasContainer({
     () => new Map(nodes.map((node) => [node.id, node])),
     [nodes],
   );
+  const geometryViewport = activeViewport ?? currentViewport;
   const absoluteRectById = useMemo(() => {
     const nextMap = new Map<string, BuilderCanvasNode['rect']>();
     for (const node of nodes) {
-      nextMap.set(node.id, resolveCanvasNodeAbsoluteRect(node, nodesById));
+      nextMap.set(node.id, resolveCanvasNodeAbsoluteRectForViewport(node, nodesById, geometryViewport));
     }
     return nextMap;
-  }, [nodes, nodesById]);
+  }, [geometryViewport, nodes, nodesById]);
   const rootVisibleNodes = useMemo(
     () => visibleNodes.filter((node) => !node.parentId),
     [visibleNodes],
@@ -176,6 +236,63 @@ export default function CanvasContainer({
     [nodes, selectedNodeIds],
   );
   const hasUnlockedSelection = selectedNodes.some((node) => !node.locked);
+
+  const resolveEditableLinkNode = useCallback(
+    (node: BuilderCanvasNode | undefined): BuilderCanvasNode | null => {
+      if (!node) return null;
+      if (node.kind === 'button') return node;
+
+      const matches: BuilderCanvasNode[] = [];
+      const visit = (nodeId: string) => {
+        for (const childId of childrenMap[nodeId] ?? []) {
+          const child = nodesById.get(childId);
+          if (!child || !child.visible) continue;
+          if (child.kind === 'button') {
+            matches.push(child);
+          }
+          visit(child.id);
+        }
+      };
+
+      visit(node.id);
+      if (matches.length === 0) {
+        const nodeRect = absoluteRectById.get(node.id) ?? resolveViewportRect(node, geometryViewport);
+        for (const candidate of visibleNodes) {
+          if (candidate.id === node.id || candidate.kind !== 'button') continue;
+          const candidateRect = absoluteRectById.get(candidate.id) ?? resolveViewportRect(candidate, geometryViewport);
+          const centerX = candidateRect.x + candidateRect.width / 2;
+          const centerY = candidateRect.y + candidateRect.height / 2;
+          const isInside =
+            centerX >= nodeRect.x &&
+            centerX <= nodeRect.x + nodeRect.width &&
+            centerY >= nodeRect.y &&
+            centerY <= nodeRect.y + nodeRect.height;
+          if (isInside) {
+            matches.push(candidate);
+          }
+        }
+      }
+      return matches.length === 1 ? matches[0] : null;
+    },
+    [absoluteRectById, childrenMap, geometryViewport, nodesById, visibleNodes],
+  );
+
+  const selectedLinkTargetNode = useMemo(
+    () => (selectedNodes.length === 1 ? resolveEditableLinkNode(selectedNodes[0]) : null),
+    [resolveEditableLinkNode, selectedNodes],
+  );
+
+  const focusSelectedLinkInput = useCallback(() => {
+    if (!selectedLinkTargetNode || typeof document === 'undefined') return;
+    if (selectedNodeId !== selectedLinkTargetNode.id) {
+      setSelectedNodeIds([selectedLinkTargetNode.id], selectedLinkTargetNode.id);
+    }
+    document.dispatchEvent(
+      new CustomEvent('builder:focus-href-input', {
+        detail: { nodeId: selectedLinkTargetNode.id },
+      }),
+    );
+  }, [selectedLinkTargetNode, selectedNodeId, setSelectedNodeIds]);
 
   const fitCanvas = useCallback(() => {
     const rect = viewportRef.current?.getBoundingClientRect();
@@ -206,6 +323,30 @@ export default function CanvasContainer({
   }, [contextMenu]);
 
   useEffect(() => {
+    if (!overlapPicker) return undefined;
+
+    function handleWindowScroll() {
+      setOverlapPicker(null);
+    }
+
+    window.addEventListener('scroll', handleWindowScroll, true);
+    window.addEventListener('resize', handleWindowScroll);
+    return () => {
+      window.removeEventListener('scroll', handleWindowScroll, true);
+      window.removeEventListener('resize', handleWindowScroll);
+    };
+  }, [overlapPicker]);
+
+  useEffect(() => {
+    if (!activeViewport || activeViewport === currentViewport) return;
+    cancelMutationSession();
+    setActiveViewport(null);
+    setInteraction(null);
+    setGuides([]);
+    setHoveredContainerId(null);
+  }, [activeViewport, cancelMutationSession, currentViewport]);
+
+  useEffect(() => {
     function dispatch(action: NonNullable<CanvasAction>) {
       switch (action) {
         case 'undo':
@@ -231,6 +372,7 @@ export default function CanvasContainer({
         }
         case 'deselect':
           setContextMenu(null);
+          setOverlapPicker(null);
           if (useBuilderCanvasStore.getState().activeGroupId) {
             exitGroup();
           } else {
@@ -292,7 +434,15 @@ export default function CanvasContainer({
           nudgeSelectedNode(NUDGE_LARGE_PX, 0);
           break;
         case 'group':
+          groupSelectedNodes();
+          break;
         case 'ungroup':
+          ungroupSelectedNode();
+          break;
+        case 'showHelp':
+          if (typeof document !== 'undefined') {
+            document.dispatchEvent(new CustomEvent('builder:show-help'));
+          }
           break;
       }
     }
@@ -308,6 +458,7 @@ export default function CanvasContainer({
     deleteSelectedNode,
     duplicateSelectedNode,
     fitCanvas,
+    groupSelectedNodes,
     nudgeSelectedNode,
     pasteClipboardNodes,
     redo,
@@ -316,6 +467,7 @@ export default function CanvasContainer({
     exitGroup,
     setSelectedNodeIds,
     undo,
+    ungroupSelectedNode,
   ]);
 
   useEffect(() => {
@@ -358,18 +510,26 @@ export default function CanvasContainer({
       const deltaX = (event.clientX - activeInteraction.originX) / zoomState.zoom;
       const deltaY = (event.clientY - activeInteraction.originY) / zoomState.zoom;
       if (activeInteraction.type === 'move') {
+        setOverlapPicker(null);
         const movingNodeIds = new Set(activeInteraction.nodeIds);
         const currentDocument = useBuilderCanvasStore.getState().document;
         const currentNodesForHover = currentDocument?.nodes ?? [];
         const currentNodesById = new Map(currentNodesForHover.map((node) => [node.id, node]));
         const currentAbsoluteRects = new Map(
-          currentNodesForHover.map((node) => [node.id, resolveCanvasNodeAbsoluteRect(node, currentNodesById)]),
+          currentNodesForHover.map((node) => [
+            node.id,
+            resolveCanvasNodeAbsoluteRectForViewport(
+              node,
+              currentNodesById,
+              activeInteraction.viewport,
+            ),
+          ]),
         );
         if (activeInteraction.nodeIds.length === 1) {
           const nodeId = activeInteraction.nodeIds[0];
-          const baseRect = activeInteraction.startRects[nodeId];
           const baseAbsoluteRect = activeInteraction.startAbsoluteRects[nodeId];
-          if (baseRect && baseAbsoluteRect) {
+          const currentNode = currentNodesById.get(nodeId);
+          if (currentNode && baseAbsoluteRect) {
             const tentative: Rect = {
               x: baseAbsoluteRect.x + deltaX,
               y: baseAbsoluteRect.y + deltaY,
@@ -380,13 +540,18 @@ export default function CanvasContainer({
             const centerY = tentative.y + tentative.height / 2;
             const hitContainer = currentNodesForHover.find(
               (n) =>
-                n.kind === 'container' &&
+                isContainerLikeKind(n.kind) &&
                 !movingNodeIds.has(n.id) &&
                 n.visible &&
-                centerX >= (currentAbsoluteRects.get(n.id)?.x ?? n.rect.x) &&
-                centerX <= ((currentAbsoluteRects.get(n.id)?.x ?? n.rect.x) + (currentAbsoluteRects.get(n.id)?.width ?? n.rect.width)) &&
-                centerY >= (currentAbsoluteRects.get(n.id)?.y ?? n.rect.y) &&
-                centerY <= ((currentAbsoluteRects.get(n.id)?.y ?? n.rect.y) + (currentAbsoluteRects.get(n.id)?.height ?? n.rect.height)),
+                (() => {
+                  const rect = currentAbsoluteRects.get(n.id) ?? resolveViewportRect(n, activeInteraction.viewport);
+                  return (
+                    centerX >= rect.x
+                    && centerX <= rect.x + rect.width
+                    && centerY >= rect.y
+                    && centerY <= rect.y + rect.height
+                  );
+                })(),
             );
             setHoveredContainerId(hitContainer?.id ?? null);
 
@@ -396,99 +561,140 @@ export default function CanvasContainer({
                 && node.visible
                 && (activeGroupId ? node.parentId === activeGroupId : !node.parentId)
               ))
-              .map((node) => currentAbsoluteRects.get(node.id) ?? node.rect);
+              .map((node) => currentAbsoluteRects.get(node.id) ?? resolveViewportRect(node, activeInteraction.viewport));
             const { snappedRect, guides: nextGuides } = computeSnap(tentative, otherRects, 0, {
               width: stageWidth,
               height: stageHeight,
             });
             setGuides(nextGuides);
-            updateSelectedNodes(activeInteraction.nodeIds, (node) => {
-              const parentRect = node.parentId
-                ? currentAbsoluteRects.get(node.parentId) ?? null
-                : null;
-              return {
-                ...node,
-                rect: clampRect(resolveCanvasNodeLocalRect(snappedRect, parentRect), stageWidth, stageHeight),
-              };
-            }, 'transient');
+            const parentRect = currentNode.parentId
+              ? currentAbsoluteRects.get(currentNode.parentId) ?? null
+              : null;
+            updateNodeRectsForViewport(
+              new Map([
+                [
+                  nodeId,
+                  clampRect(
+                    resolveCanvasNodeLocalRect(snappedRect, parentRect),
+                    parentRect?.width ?? stageWidth,
+                    parentRect?.height ?? stageHeight,
+                  ),
+                ],
+              ]),
+              activeInteraction.viewport,
+              'transient',
+            );
             return;
           }
         }
         setHoveredContainerId(null);
         setGuides([]);
-        updateSelectedNodes(activeInteraction.nodeIds, (node) => {
-          const baseRect = activeInteraction.startRects[node.id] ?? node.rect;
-          return {
-            ...node,
-            rect: clampRect({
-              ...node.rect,
-              x: baseRect.x + deltaX,
-              y: baseRect.y + deltaY,
-            }, stageWidth, stageHeight),
-          };
-        }, 'transient');
+        const nextRects = new Map<string, BuilderCanvasNode['rect']>();
+        for (const nodeId of activeInteraction.nodeIds) {
+          const currentNode = currentNodesById.get(nodeId);
+          if (!currentNode) continue;
+          const baseRect = activeInteraction.startRects[nodeId] ?? resolveViewportRect(currentNode, activeInteraction.viewport);
+          const parentRect = currentNode.parentId
+            ? currentAbsoluteRects.get(currentNode.parentId) ?? null
+            : null;
+          nextRects.set(
+            nodeId,
+            clampRect(
+              {
+                ...baseRect,
+                x: baseRect.x + deltaX,
+                y: baseRect.y + deltaY,
+              },
+              parentRect?.width ?? stageWidth,
+              parentRect?.height ?? stageHeight,
+            ),
+          );
+        }
+        updateNodeRectsForViewport(nextRects, activeInteraction.viewport, 'transient');
         return;
       }
 
       setGuides([]);
-      updateNode(activeInteraction.nodeId, (node) => {
-        const { handle } = activeInteraction;
-        const startRect = activeInteraction.startRect;
-        const nextRect = { ...startRect };
-        const isCorner = handle === 'nw' || handle === 'ne' || handle === 'sw' || handle === 'se';
-        const preserveAspectRatio = isCorner && event.shiftKey;
+      const currentDocument = useBuilderCanvasStore.getState().document;
+      const currentNodes = currentDocument?.nodes ?? [];
+      const currentNodesById = new Map(currentNodes.map((node) => [node.id, node]));
+      const currentAbsoluteRects = new Map(
+        currentNodes.map((node) => [
+          node.id,
+          resolveCanvasNodeAbsoluteRectForViewport(
+            node,
+            currentNodesById,
+            activeInteraction.viewport,
+          ),
+        ]),
+      );
+      const targetNode = currentNodesById.get(activeInteraction.nodeId);
+      if (!targetNode) return;
+      const { handle } = activeInteraction;
+      const startRect = activeInteraction.startRect;
+      const nextRect = { ...startRect };
+      const isCorner = handle === 'nw' || handle === 'ne' || handle === 'sw' || handle === 'se';
+      const preserveAspectRatio = isCorner && event.shiftKey;
 
-        if (preserveAspectRatio) {
-          const aspect = startRect.width / startRect.height;
-          let newWidth: number;
-          let newHeight: number;
-          if (Math.abs(deltaX) * startRect.height >= Math.abs(deltaY) * startRect.width) {
-            if (handle === 'se' || handle === 'ne') {
-              newWidth = startRect.width + deltaX;
-            } else {
-              newWidth = startRect.width - deltaX;
-            }
-            newHeight = newWidth / aspect;
+      if (preserveAspectRatio) {
+        const aspect = startRect.width / startRect.height;
+        let newWidth: number;
+        let newHeight: number;
+        if (Math.abs(deltaX) * startRect.height >= Math.abs(deltaY) * startRect.width) {
+          if (handle === 'se' || handle === 'ne') {
+            newWidth = startRect.width + deltaX;
           } else {
-            if (handle === 'se' || handle === 'sw') {
-              newHeight = startRect.height + deltaY;
-            } else {
-              newHeight = startRect.height - deltaY;
-            }
-            newWidth = newHeight * aspect;
+            newWidth = startRect.width - deltaX;
           }
-          nextRect.width = newWidth;
-          nextRect.height = newHeight;
-          if (handle === 'nw') {
-            nextRect.x = startRect.x + (startRect.width - newWidth);
-            nextRect.y = startRect.y + (startRect.height - newHeight);
-          } else if (handle === 'ne') {
-            nextRect.y = startRect.y + (startRect.height - newHeight);
-          } else if (handle === 'sw') {
-            nextRect.x = startRect.x + (startRect.width - newWidth);
-          }
+          newHeight = newWidth / aspect;
         } else {
-          if (handle === 'e' || handle === 'ne' || handle === 'se') {
-            nextRect.width = startRect.width + deltaX;
+          if (handle === 'se' || handle === 'sw') {
+            newHeight = startRect.height + deltaY;
+          } else {
+            newHeight = startRect.height - deltaY;
           }
-          if (handle === 'w' || handle === 'nw' || handle === 'sw') {
-            nextRect.x = startRect.x + deltaX;
-            nextRect.width = startRect.width - deltaX;
-          }
-          if (handle === 's' || handle === 'sw' || handle === 'se') {
-            nextRect.height = startRect.height + deltaY;
-          }
-          if (handle === 'n' || handle === 'nw' || handle === 'ne') {
-            nextRect.y = startRect.y + deltaY;
-            nextRect.height = startRect.height - deltaY;
-          }
+          newWidth = newHeight * aspect;
         }
+        nextRect.width = newWidth;
+        nextRect.height = newHeight;
+        if (handle === 'nw') {
+          nextRect.x = startRect.x + (startRect.width - newWidth);
+          nextRect.y = startRect.y + (startRect.height - newHeight);
+        } else if (handle === 'ne') {
+          nextRect.y = startRect.y + (startRect.height - newHeight);
+        } else if (handle === 'sw') {
+          nextRect.x = startRect.x + (startRect.width - newWidth);
+        }
+      } else {
+        if (handle === 'e' || handle === 'ne' || handle === 'se') {
+          nextRect.width = startRect.width + deltaX;
+        }
+        if (handle === 'w' || handle === 'nw' || handle === 'sw') {
+          nextRect.x = startRect.x + deltaX;
+          nextRect.width = startRect.width - deltaX;
+        }
+        if (handle === 's' || handle === 'sw' || handle === 'se') {
+          nextRect.height = startRect.height + deltaY;
+        }
+        if (handle === 'n' || handle === 'nw' || handle === 'ne') {
+          nextRect.y = startRect.y + deltaY;
+          nextRect.height = startRect.height - deltaY;
+        }
+      }
 
-        return {
-          ...node,
-          rect: clampRect(nextRect, stageWidth, stageHeight),
-        };
-      }, 'transient');
+      const parentRect = targetNode.parentId
+        ? currentAbsoluteRects.get(targetNode.parentId) ?? null
+        : null;
+      updateNodeRectsForViewport(
+        new Map([
+          [
+            activeInteraction.nodeId,
+            clampRect(nextRect, parentRect?.width ?? stageWidth, parentRect?.height ?? stageHeight),
+          ],
+        ]),
+        activeInteraction.viewport,
+        'transient',
+      );
     }
 
     function handlePointerUp(event: PointerEvent) {
@@ -501,16 +707,24 @@ export default function CanvasContainer({
           const nodesById = new Map(allNodes.map((node) => [node.id, node]));
           const movedNode = nodesById.get(nodeId);
           if (!movedNode) return null;
-          const movedRect = resolveCanvasNodeAbsoluteRect(movedNode, nodesById);
+          const movedRect = resolveCanvasNodeAbsoluteRectForViewport(
+            movedNode,
+            nodesById,
+            activeInteraction.viewport,
+          );
           const cx = movedRect.x + movedRect.width / 2;
           const cy = movedRect.y + movedRect.height / 2;
           return allNodes.find(
             (n) =>
-              n.kind === 'container' &&
+              isContainerLikeKind(n.kind) &&
               n.id !== nodeId &&
               n.visible &&
               (() => {
-                const rect = resolveCanvasNodeAbsoluteRect(n, nodesById);
+                const rect = resolveCanvasNodeAbsoluteRectForViewport(
+                  n,
+                  nodesById,
+                  activeInteraction.viewport,
+                );
                 return (
                   cx >= rect.x
                   && cx <= rect.x + rect.width
@@ -520,15 +734,32 @@ export default function CanvasContainer({
               })(),
           )?.id ?? null;
         })();
-        if (currentHoveredContainerId && activeInteraction.type === 'move' && activeInteraction.nodeIds.length === 1) {
-          moveNodeIntoContainer(activeInteraction.nodeIds[0], currentHoveredContainerId);
+        const willReparent = Boolean(
+          currentHoveredContainerId
+          && activeInteraction.type === 'move'
+          && activeInteraction.nodeIds.length === 1
+          && currentHoveredContainerId !== activeInteraction.startParentId,
+        );
+        if (willReparent && activeInteraction.type === 'move' && activeInteraction.viewport !== 'desktop') {
+          cancelMutationSession();
+          onToast?.('Reparenting is desktop-only in this build', 'error');
+        } else {
+          if (
+            willReparent
+            && activeInteraction.type === 'move'
+            && activeInteraction.viewport === 'desktop'
+            && currentHoveredContainerId
+          ) {
+            moveNodeIntoContainer(activeInteraction.nodeIds[0], currentHoveredContainerId);
+          }
+          if (activeInteraction.type !== 'pan') {
+            commitMutationSession();
+          }
         }
         setHoveredContainerId(null);
         setInteraction(null);
+        setActiveViewport(null);
         setGuides([]);
-        if (activeInteraction.type !== 'pan') {
-          commitMutationSession();
-        }
       }
     }
 
@@ -538,7 +769,18 @@ export default function CanvasContainer({
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', handlePointerUp);
     };
-  }, [activeGroupId, commitMutationSession, interaction, moveNodeIntoContainer, updateNode, updateSelectedNodes, zoomState.zoom, stageWidth, stageHeight]);
+  }, [
+    activeGroupId,
+    cancelMutationSession,
+    commitMutationSession,
+    interaction,
+    moveNodeIntoContainer,
+    onToast,
+    updateNodeRectsForViewport,
+    zoomState.zoom,
+    stageWidth,
+    stageHeight,
+  ]);
 
   const resolveStagePosition = useCallback((clientX: number, clientY: number): { x: number; y: number } => {
     const rect = viewportRef.current?.getBoundingClientRect();
@@ -549,6 +791,54 @@ export default function CanvasContainer({
       y: Math.max(0, Math.min(stageHeight - 48, Math.round(nextPoint.y))),
     };
   }, [zoomState, stageWidth, stageHeight]);
+
+  const resolveViewportPopupPosition = useCallback((clientX: number, clientY: number) => {
+    const rect = viewportRef.current?.getBoundingClientRect();
+    const width = rect?.width ?? stageWidth;
+    const height = rect?.height ?? stageHeight;
+    const rawX = rect ? clientX - rect.left : clientX;
+    const rawY = rect ? clientY - rect.top : clientY;
+    return {
+      x: Math.max(12, Math.min(width - 244, rawX + 10)),
+      y: Math.max(12, Math.min(height - 280, rawY + 10)),
+    };
+  }, [stageHeight, stageWidth]);
+
+  const resolveOverlapCandidates = useCallback(
+    (clientX: number, clientY: number): BuilderCanvasNode[] => {
+      const point = resolveStagePosition(clientX, clientY);
+      return selectableNodes
+        .filter((node) => {
+          const rect = absoluteRectById.get(node.id) ?? resolveViewportRect(node, geometryViewport);
+          return (
+            point.x >= rect.x
+            && point.x <= rect.x + rect.width
+            && point.y >= rect.y
+            && point.y <= rect.y + rect.height
+          );
+        })
+        .sort((left, right) => {
+          const zDelta = right.zIndex - left.zIndex;
+          if (zDelta !== 0) return zDelta;
+          return getCanvasNodeDepth(right, nodesById) - getCanvasNodeDepth(left, nodesById);
+        })
+        .slice(0, 8);
+    },
+    [absoluteRectById, geometryViewport, nodesById, resolveStagePosition, selectableNodes],
+  );
+
+  const openOverlapPicker = useCallback(
+    (clientX: number, clientY: number, candidates: BuilderCanvasNode[], mode: OverlapPickerState['mode']) => {
+      const position = resolveViewportPopupPosition(clientX, clientY);
+      setOverlapPicker({
+        nodeIds: candidates.map((node) => node.id),
+        x: position.x,
+        y: position.y,
+        mode,
+      });
+    },
+    [resolveViewportPopupPosition],
+  );
 
   useEffect(() => {
     if (!selectionBox) return undefined;
@@ -577,7 +867,7 @@ export default function CanvasContainer({
 
       const intersectingNodeIds = selectableNodes
         .filter((node) => {
-          const rect = absoluteRectById.get(node.id) ?? node.rect;
+          const rect = absoluteRectById.get(node.id) ?? resolveViewportRect(node, geometryViewport);
           return (
             rect.x < right
             && rect.x + rect.width > left
@@ -605,7 +895,7 @@ export default function CanvasContainer({
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', handlePointerUp);
     };
-  }, [absoluteRectById, resolveStagePosition, selectableNodes, selectedNodeId, selectedNodeIds, selectionBox, setSelectedNodeIds]);
+  }, [absoluteRectById, geometryViewport, resolveStagePosition, selectableNodes, selectedNodeId, selectedNodeIds, selectionBox, setSelectedNodeIds]);
 
   const selectionBoxRect = useMemo(() => {
     if (!selectionBox) return null;
@@ -631,6 +921,35 @@ export default function CanvasContainer({
   const contextMenuTitle = selectedNodeIds.length > 1
     ? `${selectedNodeIds.length} selected`
     : contextMenu?.nodeId ?? 'Context menu';
+
+  // Bounding box of selected nodes in stage coordinates (pre-zoom/pan transform)
+  const selectionBboxStage = useMemo(() => {
+    if (selectedNodes.length === 0 || interaction) return null;
+    let minX = Infinity;
+    let minY = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
+    for (const node of selectedNodes) {
+      const rect = absoluteRectById.get(node.id) ?? resolveViewportRect(node, geometryViewport);
+      minX = Math.min(minX, rect.x);
+      minY = Math.min(minY, rect.y);
+      maxX = Math.max(maxX, rect.x + rect.width);
+      maxY = Math.max(maxY, rect.y + rect.height);
+    }
+    if (!Number.isFinite(minX)) return null;
+    return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
+  }, [absoluteRectById, geometryViewport, interaction, selectedNodes]);
+
+  // Convert stage coords → screen coords (relative to stage container)
+  const selectionBboxScreen = useMemo(() => {
+    if (!selectionBboxStage) return null;
+    return {
+      x: selectionBboxStage.x * zoomState.zoom + zoomState.panX,
+      y: selectionBboxStage.y * zoomState.zoom + zoomState.panY,
+      width: selectionBboxStage.width * zoomState.zoom,
+      height: selectionBboxStage.height * zoomState.zoom,
+    };
+  }, [selectionBboxStage, zoomState.panX, zoomState.panY, zoomState.zoom]);
 
   return (
     <div className={styles.stageSurface}>
@@ -660,23 +979,45 @@ export default function CanvasContainer({
             aria-roledescription="freeform canvas"
             onPointerDownCapture={(event) => {
               const shouldPan = event.button === 1 || (event.button === 0 && isSpacePressed);
-              if (!shouldPan) return;
-              event.preventDefault();
-              event.stopPropagation();
-              setContextMenu(null);
-              setSelectionBox(null);
-              setInteraction({
-                type: 'pan',
-                pointerId: event.pointerId,
-                originX: event.clientX,
-                originY: event.clientY,
-                startPanX: zoomState.panX,
-                startPanY: zoomState.panY,
-              });
+              if (shouldPan) {
+                event.preventDefault();
+                event.stopPropagation();
+                setContextMenu(null);
+                setOverlapPicker(null);
+                setSelectionBox(null);
+                setInteraction({
+                  type: 'pan',
+                  pointerId: event.pointerId,
+                  originX: event.clientX,
+                  originY: event.clientY,
+                  startPanX: zoomState.panX,
+                  startPanY: zoomState.panY,
+                });
+                return;
+              }
+
+              if (event.button !== 0 || event.target === event.currentTarget) return;
+              const overlapCandidates = resolveOverlapCandidates(event.clientX, event.clientY);
+              if (overlapCandidates.length <= 1) {
+                setOverlapPicker(null);
+                return;
+              }
+
+              if (event.altKey) {
+                event.preventDefault();
+                event.stopPropagation();
+                setContextMenu(null);
+                setSelectionBox(null);
+                openOverlapPicker(event.clientX, event.clientY, overlapCandidates, 'list');
+                return;
+              }
+
+              openOverlapPicker(event.clientX, event.clientY, overlapCandidates, 'hint');
             }}
             onPointerDown={(event) => {
               setContextMenu(null);
               if (event.target === event.currentTarget) {
+                setOverlapPicker(null);
                 if (activeGroupId) {
                   exitGroup();
                   return;
@@ -701,6 +1042,13 @@ export default function CanvasContainer({
             }}
             onDrop={(event) => {
               event.preventDefault();
+              const savedSectionId = event.dataTransfer.getData('application/x-builder-saved-section-id');
+              if (savedSectionId && onRequestInsertSavedSection) {
+                const position = resolveStagePosition(event.clientX, event.clientY);
+                onRequestInsertSavedSection(savedSectionId, position);
+                setDraftSaveState('saving');
+                return;
+              }
               const kind = event.dataTransfer.getData('application/x-builder-node-kind');
               if (!builderCanvasNodeKinds.includes(kind as (typeof builderCanvasNodeKinds)[number])) return;
               const position = resolveStagePosition(event.clientX, event.clientY);
@@ -754,7 +1102,7 @@ export default function CanvasContainer({
             {/* Container drop zone highlight */}
             {hoveredContainerId ? (() => {
               const hc = visibleNodes.find((n) => n.id === hoveredContainerId);
-              const rect = hc ? absoluteRectById.get(hc.id) ?? hc.rect : null;
+              const rect = hc ? absoluteRectById.get(hc.id) ?? resolveViewportRect(hc, geometryViewport) : null;
               if (!hc || !rect) return null;
               return (
                 <div
@@ -788,6 +1136,7 @@ export default function CanvasContainer({
                   setSelectedNodeId(nodeId);
                 }}
                 onContextMenu={(nodeId, event) => {
+                  setOverlapPicker(null);
                   const keepMultiSelection = selectedNodeIds.length > 1 && selectedNodeIds.includes(nodeId);
                   if (!keepMultiSelection) {
                     setSelectedNodeId(nodeId);
@@ -811,29 +1160,34 @@ export default function CanvasContainer({
                   event.preventDefault();
                   event.stopPropagation();
                   setContextMenu(null);
+                  setOverlapPicker((current) => (current?.mode === 'list' ? null : current));
                   const nodeIds = selectedNodeIds.includes(nodeId) && selectedNodeIds.length > 0
                     ? selectedNodeIds.filter((selectedId) => !nodes.find((candidate) => candidate.id === selectedId)?.locked)
                     : [nodeId];
                   if (nodeIds.length === 0) return;
+                  const interactionViewport = currentViewport;
                   const startRects = Object.fromEntries(
                     nodes
                       .filter((node) => nodeIds.includes(node.id))
-                      .map((node) => [node.id, node.rect]),
+                      .map((node) => [node.id, resolveViewportRect(node, interactionViewport)]),
                   );
                   const startAbsoluteRects = Object.fromEntries(
                     nodes
                       .filter((node) => nodeIds.includes(node.id))
-                      .map((node) => [node.id, absoluteRectById.get(node.id) ?? node.rect]),
+                      .map((node) => [node.id, absoluteRectById.get(node.id) ?? resolveViewportRect(node, interactionViewport)]),
                   );
                   setSelectedNodeIds(nodeIds, nodeId);
+                  setActiveViewport(interactionViewport);
                   beginMutationSession();
                   setInteraction({
                     type: 'move',
                     nodeId,
                     nodeIds,
+                    viewport: interactionViewport,
                     pointerId: event.pointerId,
                     originX: event.clientX,
                     originY: event.clientY,
+                    startParentId: nodesById.get(nodeId)?.parentId ?? null,
                     startRects,
                     startAbsoluteRects,
                   });
@@ -841,19 +1195,23 @@ export default function CanvasContainer({
                 onResizeStart={(nodeId, handle, event) => {
                   event.preventDefault();
                   event.stopPropagation();
+                  setOverlapPicker(null);
                   const targetNode = nodesById.get(nodeId);
                   if (!targetNode) return;
+                  const interactionViewport = currentViewport;
                   setSelectedNodeId(nodeId);
+                  setActiveViewport(interactionViewport);
                   beginMutationSession();
                   setInteraction({
                     type: 'resize',
                     nodeId,
                     handle,
+                    viewport: interactionViewport,
                     pointerId: event.pointerId,
                     originX: event.clientX,
                     originY: event.clientY,
-                    startRect: targetNode.rect,
-                    startAbsoluteRect: absoluteRectById.get(nodeId) ?? targetNode.rect,
+                    startRect: resolveViewportRect(targetNode, interactionViewport),
+                    startAbsoluteRect: absoluteRectById.get(nodeId) ?? resolveViewportRect(targetNode, interactionViewport),
                   });
                 }}
               />
@@ -895,6 +1253,122 @@ export default function CanvasContainer({
           </div>
         </div>
 
+        {selectionBboxScreen && !contextMenu ? (
+          <SelectionToolbar
+            selectedNodes={selectedNodes}
+            bbox={selectionBboxScreen}
+            onEditText={() => {
+              if (typeof document !== 'undefined' && selectedNodes[0]) {
+                document.dispatchEvent(
+                  new CustomEvent('builder:start-text-edit', { detail: { nodeId: selectedNodes[0].id } }),
+                );
+              }
+            }}
+            onReplaceImage={() => {
+              if (selectedNodes[0] && onRequestAssetLibrary) {
+                onRequestAssetLibrary(selectedNodes[0].id);
+              }
+            }}
+            onEditLink={() => {
+              focusSelectedLinkInput();
+            }}
+            showEditLink={Boolean(selectedLinkTargetNode)}
+            onDuplicate={duplicateSelectedNode}
+            onDelete={deleteSelectedNode}
+            onBringForward={bringSelectedNodeForward}
+            onSendBackward={sendSelectedNodeBackward}
+            onOpenMoreMenu={(event) => {
+              if (selectedNodes[0]) {
+                setOverlapPicker(null);
+                const rect = viewportRef.current?.getBoundingClientRect();
+                const width = rect?.width ?? 0;
+                const height = rect?.height ?? 0;
+                const rawX = rect ? event.clientX - rect.left : event.clientX;
+                const rawY = rect ? event.clientY - rect.top : event.clientY;
+                setContextMenu({
+                  nodeId: selectedNodes[0].id,
+                  x: Math.max(32, Math.min(width - 236, rawX)),
+                  y: Math.max(32, Math.min(height - 420, rawY)),
+                });
+              }
+            }}
+          />
+        ) : null}
+
+        {overlapPicker ? (() => {
+          const candidateNodes = overlapPicker.nodeIds
+            .map((nodeId) => nodesById.get(nodeId))
+            .filter((node): node is BuilderCanvasNode => Boolean(node));
+          if (candidateNodes.length < 2) return null;
+
+          if (overlapPicker.mode === 'hint') {
+            return (
+              <button
+                type="button"
+                className={styles.overlapHint}
+                style={{ left: `${overlapPicker.x}px`, top: `${overlapPicker.y}px` }}
+                title="Choose from overlapping layers"
+                onPointerDown={(event) => event.stopPropagation()}
+                onClick={() => {
+                  setOverlapPicker((current) => (current ? { ...current, mode: 'list' } : current));
+                }}
+              >
+                {candidateNodes.length} layers
+              </button>
+            );
+          }
+
+          return (
+            <div
+              className={styles.overlapPicker}
+              style={{ left: `${overlapPicker.x}px`, top: `${overlapPicker.y}px` }}
+              role="dialog"
+              aria-label="Overlapping layers"
+              onPointerDown={(event) => event.stopPropagation()}
+            >
+              <div className={styles.overlapPickerHeader}>
+                <div>
+                  <span>Overlapping</span>
+                  <strong>{candidateNodes.length} layers</strong>
+                </div>
+                <button
+                  type="button"
+                  className={styles.overlapPickerClose}
+                  title="Close"
+                  onClick={() => setOverlapPicker(null)}
+                >
+                  x
+                </button>
+              </div>
+              <div className={styles.overlapPickerList}>
+                {candidateNodes.map((node) => (
+                  <button
+                    key={node.id}
+                    type="button"
+                    className={[
+                      styles.overlapPickerItem,
+                      selectedNodeIds.includes(node.id) ? styles.overlapPickerItemSelected : '',
+                    ].filter(Boolean).join(' ')}
+                    title={node.id}
+                    onClick={(event) => {
+                      if (event.metaKey || event.ctrlKey || event.shiftKey) {
+                        toggleNodeSelection(node.id);
+                      } else {
+                        setSelectedNodeId(node.id);
+                      }
+                      setOverlapPicker(null);
+                    }}
+                  >
+                    <span>{node.kind}</span>
+                    <strong>{getCanvasNodeLabel(node)}</strong>
+                    <small>z {node.zIndex}</small>
+                  </button>
+                ))}
+              </div>
+            </div>
+          );
+        })() : null}
+
         {contextMenu ? (
           <ContextMenu
             x={contextMenu.x}
@@ -902,19 +1376,51 @@ export default function CanvasContainer({
             title={contextMenuTitle}
             actions={[
               {
+                key: 'edit-text',
+                label: '텍스트 편집',
+                title: '인라인 텍스트 편집 (또는 더블클릭)',
+                disabled:
+                  selectedNodeIds.length !== 1 ||
+                  (selectedNodes[0]?.kind !== 'text' && selectedNodes[0]?.kind !== 'heading') ||
+                  Boolean(selectedNodes[0]?.locked),
+                onSelect: () => {
+                  setContextMenu(null);
+                  if (typeof document !== 'undefined' && selectedNodes[0]) {
+                    document.dispatchEvent(
+                      new CustomEvent('builder:start-text-edit', {
+                        detail: { nodeId: selectedNodes[0].id },
+                      }),
+                    );
+                  }
+                },
+              },
+              {
+                key: 'replace-image',
+                label: '이미지 교체',
+                title: '에셋 라이브러리 열기',
+                disabled:
+                  selectedNodeIds.length !== 1 ||
+                  selectedNodes[0]?.kind !== 'image' ||
+                  Boolean(selectedNodes[0]?.locked),
+                onSelect: () => {
+                  setContextMenu(null);
+                  if (selectedNodes[0] && onRequestAssetLibrary) {
+                    onRequestAssetLibrary(selectedNodes[0].id);
+                  }
+                },
+              },
+              {
                 key: 'edit-link',
                 label: '링크 편집',
                 title: '버튼·링크 href 편집 (Content 탭)',
                 disabled:
                   selectedNodeIds.length !== 1 ||
-                  selectedNodes[0]?.kind !== 'button',
+                  !selectedLinkTargetNode ||
+                  Boolean(selectedNodes[0]?.locked) ||
+                  Boolean(selectedLinkTargetNode.locked),
                 onSelect: () => {
                   setContextMenu(null);
-                  if (typeof document !== 'undefined') {
-                    document.dispatchEvent(
-                      new CustomEvent('builder:focus-href-input'),
-                    );
-                  }
+                  focusSelectedLinkInput();
                 },
               },
               {
@@ -1028,6 +1534,83 @@ export default function CanvasContainer({
                 title: '하단 정렬',
                 disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
                 onSelect: () => alignSelectedNodes('bottom'),
+              },
+              { key: 'sep-distribute', label: '', separator: true, onSelect: () => {} },
+              {
+                key: 'distribute-h',
+                label: 'Distribute horizontally',
+                title: '가로 균등 분배 (3개 이상)',
+                disabled: selectedNodeIds.length < 3 || !hasUnlockedSelection,
+                onSelect: () => distributeSelectedNodes('horizontal'),
+              },
+              {
+                key: 'distribute-v',
+                label: 'Distribute vertically',
+                title: '세로 균등 분배 (3개 이상)',
+                disabled: selectedNodeIds.length < 3 || !hasUnlockedSelection,
+                onSelect: () => distributeSelectedNodes('vertical'),
+              },
+              {
+                key: 'match-width',
+                label: 'Match width',
+                title: '선택 요소 너비 동일화',
+                disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
+                onSelect: () => matchSelectedNodesSize('width'),
+              },
+              {
+                key: 'match-height',
+                label: 'Match height',
+                title: '선택 요소 높이 동일화',
+                disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
+                onSelect: () => matchSelectedNodesSize('height'),
+              },
+              { key: 'sep-pages', label: '', separator: true, onSelect: () => {} },
+              {
+                key: 'move-to-page',
+                label: 'Move to page...',
+                title: '다른 페이지로 이동',
+                disabled: selectedNodeIds.length === 0 || !hasUnlockedSelection || !onRequestMoveToPage,
+                onSelect: () => {
+                  if (onRequestMoveToPage) {
+                    onRequestMoveToPage(selectedNodeIds);
+                  }
+                },
+              },
+              {
+                key: 'save-as-section',
+                label: 'Save as section...',
+                title: '컨테이너 + 자식을 라이브러리에 저장 (재사용)',
+                disabled:
+                  selectedNodeIds.length !== 1 ||
+                  !selectedNodes[0] ||
+                  !isContainerLikeKind(selectedNodes[0].kind) ||
+                  !onRequestSaveAsSection,
+                onSelect: () => {
+                  setContextMenu(null);
+                  if (onRequestSaveAsSection && selectedNodes[0]) {
+                    onRequestSaveAsSection(selectedNodes[0].id);
+                  }
+                },
+              },
+              { key: 'sep-group', label: '', separator: true, onSelect: () => {} },
+              {
+                key: 'group',
+                label: 'Group',
+                title: '그룹 만들기 (2개 이상)',
+                shortcut: 'Cmd+G',
+                disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
+                onSelect: groupSelectedNodes,
+              },
+              {
+                key: 'ungroup',
+                label: 'Ungroup',
+                title: '그룹 해제',
+                shortcut: 'Cmd+Shift+G',
+                disabled:
+                  selectedNodeIds.length !== 1 ||
+                  selectedNodes[0]?.kind !== 'container' ||
+                  (selectedNodes[0]?.id ? (childrenMap[selectedNodes[0].id]?.length ?? 0) === 0 : true),
+                onSelect: ungroupSelectedNode,
               },
             ]}
             onClose={() => setContextMenu(null)}

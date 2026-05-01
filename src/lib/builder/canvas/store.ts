@@ -9,6 +9,10 @@ import {
   alignMiddle,
   alignRight,
   alignTop,
+  distributeHorizontal,
+  distributeVertical,
+  matchHeight,
+  matchWidth,
 } from '@/lib/builder/canvas/align';
 import {
   copyNodes,
@@ -18,11 +22,15 @@ import {
 } from '@/lib/builder/canvas/clipboard';
 import {
   createDefaultCanvasNodeStyle,
+  isContainerLikeKind,
   type BuilderCanvasDocument,
   type BuilderCanvasNode,
   type BuilderCanvasNodeKind,
   type BuilderCanvasNodeStyle,
+  type ResponsiveConfig,
+  type ResponsiveOverride,
 } from '@/lib/builder/canvas/types';
+import type { Viewport } from '@/lib/builder/canvas/responsive';
 import {
   createHistory,
   pushHistory,
@@ -37,9 +45,19 @@ import {
   resolveCanvasNodeAbsoluteRect,
   resolveCanvasNodeLocalRect,
 } from '@/lib/builder/canvas/tree';
+import {
+  isBuilderRichText,
+  richTextFromPlainText,
+} from '@/lib/builder/rich-text/sanitize';
 
 type DraftSaveState = 'idle' | 'saving' | 'saved' | 'error';
 type MutationMode = 'commit' | 'transient';
+type CanvasNodeRect = BuilderCanvasNode['rect'];
+type ResponsiveConfigValue = NonNullable<ResponsiveConfig>;
+type ResponsiveOverrideValue = NonNullable<ResponsiveOverride>;
+export type BuilderCanvasNodeRectsById =
+  | ReadonlyMap<string, CanvasNodeRect>
+  | Record<string, CanvasNodeRect>;
 export type BuilderCanvasAlignmentAction =
   | 'left'
   | 'center'
@@ -47,6 +65,8 @@ export type BuilderCanvasAlignmentAction =
   | 'top'
   | 'middle'
   | 'bottom';
+export type BuilderCanvasDistributeAction = 'horizontal' | 'vertical';
+export type BuilderCanvasMatchSizeAction = 'width' | 'height';
 
 interface BuilderCanvasStoreState {
   document: BuilderCanvasDocument | null;
@@ -63,6 +83,9 @@ interface BuilderCanvasStoreState {
   canRedo: boolean;
   /** Maps container node IDs to arrays of child node IDs (MVP nesting). */
   childrenMap: Record<string, string[]>;
+  /** Active editing viewport — determines which `responsive.<vp>` overrides Inspector writes. */
+  viewport: Viewport;
+  setViewport: (viewport: Viewport) => void;
   replaceDocument: (document: BuilderCanvasDocument) => void;
   setSelectedNodeId: (nodeId: string | null) => void;
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
@@ -72,14 +95,26 @@ interface BuilderCanvasStoreState {
   setDraftSaveState: (state: DraftSaveState) => void;
   beginMutationSession: () => void;
   commitMutationSession: () => void;
+  cancelMutationSession: () => void;
   undo: () => void;
   redo: () => void;
   copySelectedNodesToClipboard: () => void;
   cutSelectedNodesToClipboard: () => void;
   pasteClipboardNodes: () => void;
   alignSelectedNodes: (action: BuilderCanvasAlignmentAction) => void;
+  distributeSelectedNodes: (action: BuilderCanvasDistributeAction) => void;
+  matchSelectedNodesSize: (action: BuilderCanvasMatchSizeAction) => void;
+  groupSelectedNodes: () => void;
+  ungroupSelectedNode: () => void;
   toggleSelectedNodeLock: () => void;
   addNode: (node: BuilderCanvasNode) => void;
+  /**
+   * Insert a connected set of nodes (root + descendants) atomically.
+   * Caller is responsible for assigning fresh, unique ids and consistent
+   * `parentId` references inside the set. The store will append them
+   * with rising zIndex values and select the root.
+   */
+  addNodes: (nodes: BuilderCanvasNode[], rootNodeId?: string | null) => void;
   duplicateSelectedNode: () => void;
   updateSelectedNodes: (
     nodeIds: string[],
@@ -89,6 +124,11 @@ interface BuilderCanvasStoreState {
   updateNode: (
     nodeId: string,
     updater: (node: BuilderCanvasNode) => BuilderCanvasNode,
+    mode?: MutationMode,
+  ) => void;
+  updateNodeRectsForViewport: (
+    rectsById: BuilderCanvasNodeRectsById,
+    viewport: Viewport,
     mode?: MutationMode,
   ) => void;
   updateNodeContent: (nodeId: string, content: Record<string, unknown>, mode?: MutationMode) => void;
@@ -102,6 +142,15 @@ interface BuilderCanvasStoreState {
   reorderNodes: (orderedIds: string[]) => void;
   moveNodeIntoContainer: (nodeId: string, containerId: string) => void;
   moveNodeOutOfContainer: (nodeId: string) => void;
+  /** Apply a partial override to the node's responsive override for the active viewport. */
+  updateResponsiveOverride: (
+    nodeId: string,
+    viewport: Viewport,
+    patch: NonNullable<ResponsiveOverride>,
+    mode?: MutationMode,
+  ) => void;
+  /** Clear all responsive overrides for a node at the given viewport. */
+  resetResponsiveOverride: (nodeId: string, viewport: Viewport) => void;
 }
 
 function sortNodes(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
@@ -123,6 +172,27 @@ function updateNodes(
 
 function createNodeId(kind: BuilderCanvasNodeKind): string {
   return `${kind}-${Math.random().toString(36).slice(2, 9)}`;
+}
+
+function normalizeRichTextContentPatch(
+  node: BuilderCanvasNode,
+  content: Record<string, unknown>,
+): Record<string, unknown> {
+  if (node.kind !== 'text' && node.kind !== 'heading') return content;
+
+  const next = { ...content };
+  if (typeof next.text === 'string') {
+    next.richText = isBuilderRichText(next.richText)
+      ? { ...next.richText, plainText: next.text }
+      : richTextFromPlainText(next.text);
+    return next;
+  }
+
+  if (isBuilderRichText(next.richText)) {
+    next.text = next.richText.plainText;
+  }
+
+  return next;
 }
 
 function cloneDefaultContent(content: Record<string, unknown>): Record<string, unknown> {
@@ -169,6 +239,80 @@ function sameDocumentContent(left: BuilderCanvasDocument, right: BuilderCanvasDo
     && JSON.stringify(left.nodes) === JSON.stringify(right.nodes);
 }
 
+function cloneCanvasNodeRect(rect: CanvasNodeRect): CanvasNodeRect {
+  return {
+    x: rect.x,
+    y: rect.y,
+    width: rect.width,
+    height: rect.height,
+  };
+}
+
+function areCanvasNodeRectsEqual(left: CanvasNodeRect, right: CanvasNodeRect): boolean {
+  return left.x === right.x
+    && left.y === right.y
+    && left.width === right.width
+    && left.height === right.height;
+}
+
+function getCanvasNodeRectById(
+  rectsById: BuilderCanvasNodeRectsById,
+  nodeId: string,
+): CanvasNodeRect | undefined {
+  const mapReader = (rectsById as ReadonlyMap<string, CanvasNodeRect>).get;
+  if (typeof mapReader === 'function') {
+    return mapReader.call(rectsById, nodeId);
+  }
+  return (rectsById as Record<string, CanvasNodeRect>)[nodeId];
+}
+
+function applyCanvasNodeRectForViewport(
+  node: BuilderCanvasNode,
+  rect: CanvasNodeRect,
+  viewport: Viewport,
+): BuilderCanvasNode {
+  const nextRect = cloneCanvasNodeRect(rect);
+  if (viewport === 'desktop') {
+    return areCanvasNodeRectsEqual(node.rect, nextRect)
+      ? node
+      : { ...node, rect: nextRect };
+  }
+
+  const responsive = (node.responsive ?? {}) as ResponsiveConfigValue;
+  const previousOverride = (responsive[viewport] ?? {}) as ResponsiveOverrideValue;
+  const previousRect = previousOverride.rect;
+  const previousFullRect = previousRect
+    && previousRect.x !== undefined
+    && previousRect.y !== undefined
+    && previousRect.width !== undefined
+    && previousRect.height !== undefined
+    ? {
+        x: previousRect.x,
+        y: previousRect.y,
+        width: previousRect.width,
+        height: previousRect.height,
+      }
+    : null;
+
+  if (previousFullRect && areCanvasNodeRectsEqual(previousFullRect, nextRect)) {
+    return node;
+  }
+
+  const nextOverride: ResponsiveOverrideValue = {
+    ...previousOverride,
+    rect: nextRect,
+  };
+  const nextResponsive: ResponsiveConfigValue = {
+    ...responsive,
+    [viewport]: nextOverride,
+  };
+
+  return {
+    ...node,
+    responsive: nextResponsive,
+  } as BuilderCanvasNode;
+}
+
 function resolveSelectedNodeId(
   document: BuilderCanvasDocument,
   preferredNodeId: string | null,
@@ -198,7 +342,7 @@ function resolveActiveGroupId(
   if (!preferredGroupId) return null;
   const node = document.nodes.find((candidate) => candidate.id === preferredGroupId);
   if (!node) return null;
-  return node.kind === 'container' || node.kind === 'composite' ? node.id : null;
+  return isContainerLikeKind(node.kind) || node.kind === 'composite' ? node.id : null;
 }
 
 function resolveTreeState(
@@ -286,6 +430,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   canUndo: false,
   canRedo: false,
   childrenMap: {},
+  viewport: 'desktop' as Viewport,
+  setViewport: (viewport) => set({ viewport }),
   replaceDocument: (document) =>
     set({
       document,
@@ -344,7 +490,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document) return state;
       const groupNode = state.document.nodes.find((node) => node.id === groupId);
-      if (!groupNode || (groupNode.kind !== 'container' && groupNode.kind !== 'composite')) {
+      if (!groupNode || (!isContainerLikeKind(groupNode.kind) && groupNode.kind !== 'composite')) {
         return state;
       }
       return {
@@ -385,6 +531,20 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         mutationBaseDocument: null,
         canUndo: nextHistory.canUndo,
         canRedo: nextHistory.canRedo,
+      };
+    }),
+  cancelMutationSession: () =>
+    set((state) => {
+      if (!state.mutationBaseDocument) return state;
+      const document = state.mutationBaseDocument;
+      const nextSelectedNodeId = resolveSelectedNodeId(document, state.selectedNodeId);
+      const nextTreeState = resolveTreeState(document, state.activeGroupId);
+      return {
+        document,
+        selectedNodeId: nextSelectedNodeId,
+        selectedNodeIds: resolveSelectedNodeIds(document, state.selectedNodeIds, nextSelectedNodeId),
+        ...nextTreeState,
+        mutationBaseDocument: null,
       };
     }),
   undo: () =>
@@ -535,6 +695,167 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         )));
       return applyCommittedDocument(state, document);
     }),
+  distributeSelectedNodes: (action) =>
+    set((state) => {
+      if (!state.document || state.selectedNodeIds.length < 3) return state;
+      const targetNodes = state.document.nodes.filter(
+        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
+      );
+      if (targetNodes.length < 3) return state;
+      const distributor = action === 'horizontal' ? distributeHorizontal : distributeVertical;
+      const nextRects = new Map(
+        distributor(targetNodes.map((node) => ({ id: node.id, rect: node.rect }))).map(
+          (node) => [node.id, node.rect],
+        ),
+      );
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => (
+          nextRects.has(node.id)
+            ? { ...node, rect: nextRects.get(node.id)! }
+            : node
+        )));
+      return applyCommittedDocument(state, document);
+    }),
+  matchSelectedNodesSize: (action) =>
+    set((state) => {
+      if (!state.document || state.selectedNodeIds.length < 2) return state;
+      const targetNodes = state.document.nodes.filter(
+        (node) => state.selectedNodeIds.includes(node.id) && !node.locked,
+      );
+      if (targetNodes.length < 2) return state;
+      const matcher = action === 'width' ? matchWidth : matchHeight;
+      const nextRects = new Map(
+        matcher(targetNodes.map((node) => ({ id: node.id, rect: node.rect }))).map(
+          (node) => [node.id, node.rect],
+        ),
+      );
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => (
+          nextRects.has(node.id)
+            ? { ...node, rect: nextRects.get(node.id)! }
+            : node
+        )));
+      return applyCommittedDocument(state, document);
+    }),
+  groupSelectedNodes: () =>
+    set((state) => {
+      if (!state.document || state.selectedNodeIds.length < 2) return state;
+      const selectedSet = new Set(state.selectedNodeIds);
+      const targetNodes = state.document.nodes.filter(
+        (node) => selectedSet.has(node.id) && !node.locked,
+      );
+      if (targetNodes.length < 2) return state;
+      const sharedParentId = targetNodes[0]!.parentId ?? null;
+      const allShareParent = targetNodes.every((node) => (node.parentId ?? null) === sharedParentId);
+      if (!allShareParent) return state;
+      const nodesById = new Map(state.document.nodes.map((node) => [node.id, node]));
+      const absoluteRects = new Map(
+        targetNodes.map((node) => [node.id, resolveCanvasNodeAbsoluteRect(node, nodesById)]),
+      );
+      const minX = Math.min(...targetNodes.map((node) => absoluteRects.get(node.id)!.x));
+      const minY = Math.min(...targetNodes.map((node) => absoluteRects.get(node.id)!.y));
+      const maxX = Math.max(...targetNodes.map((node) => {
+        const rect = absoluteRects.get(node.id)!;
+        return rect.x + rect.width;
+      }));
+      const maxY = Math.max(...targetNodes.map((node) => {
+        const rect = absoluteRects.get(node.id)!;
+        return rect.y + rect.height;
+      }));
+      const maxZ = Math.max(...targetNodes.map((node) => node.zIndex));
+      const groupRect = { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
+      const groupId = `group-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+      const groupParentNode = sharedParentId ? nodesById.get(sharedParentId) ?? null : null;
+      const groupParentAbsoluteRect = groupParentNode
+        ? resolveCanvasNodeAbsoluteRect(groupParentNode, nodesById)
+        : null;
+      const localGroupRect = resolveCanvasNodeLocalRect(groupRect, groupParentAbsoluteRect);
+      const groupNode: BuilderCanvasNode = {
+        id: groupId,
+        kind: 'container',
+        ...(sharedParentId ? { parentId: sharedParentId } : {}),
+        rect: localGroupRect,
+        style: createDefaultCanvasNodeStyle(),
+        zIndex: maxZ,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: 'Group',
+          background: 'transparent',
+          borderColor: 'transparent',
+          borderStyle: 'solid' as const,
+          borderWidth: 0,
+          borderRadius: 0,
+          padding: 0,
+          layoutMode: 'absolute' as const,
+        },
+      };
+      const targetIds = new Set(targetNodes.map((node) => node.id));
+      const document = updateNodes(state.document, (nodes) => [
+        ...nodes.map((node) => {
+          if (!targetIds.has(node.id)) return node;
+          const absRect = absoluteRects.get(node.id)!;
+          return {
+            ...node,
+            parentId: groupId,
+            rect: {
+              x: absRect.x - minX,
+              y: absRect.y - minY,
+              width: absRect.width,
+              height: absRect.height,
+            },
+          };
+        }),
+        groupNode,
+      ]);
+      return applyCommittedDocument(state, document, groupId);
+    }),
+  ungroupSelectedNode: () =>
+    set((state) => {
+      if (!state.document || state.selectedNodeIds.length !== 1) return state;
+      const targetId = state.selectedNodeIds[0]!;
+      const groupNode = state.document.nodes.find((node) => node.id === targetId);
+      if (!groupNode || groupNode.kind !== 'container') return state;
+      const childIds = state.childrenMap[targetId] ?? [];
+      if (childIds.length === 0) return state;
+      const nodesById = new Map(state.document.nodes.map((node) => [node.id, node]));
+      const groupAbsoluteRect = resolveCanvasNodeAbsoluteRect(groupNode, nodesById);
+      const groupParentNode = groupNode.parentId ? nodesById.get(groupNode.parentId) ?? null : null;
+      const groupParentAbsoluteRect = groupParentNode
+        ? resolveCanvasNodeAbsoluteRect(groupParentNode, nodesById)
+        : null;
+      const childIdSet = new Set(childIds);
+      const document = updateNodes(state.document, (nodes) =>
+        nodes
+          .filter((node) => node.id !== targetId)
+          .map((node) => {
+            if (!childIdSet.has(node.id)) return node;
+            const absX = groupAbsoluteRect.x + node.rect.x;
+            const absY = groupAbsoluteRect.y + node.rect.y;
+            const localRect = resolveCanvasNodeLocalRect(
+              { x: absX, y: absY, width: node.rect.width, height: node.rect.height },
+              groupParentAbsoluteRect,
+            );
+            const nextNode: BuilderCanvasNode = {
+              ...node,
+              rect: localRect,
+            };
+            if (groupNode.parentId) {
+              nextNode.parentId = groupNode.parentId;
+            } else {
+              delete (nextNode as { parentId?: string }).parentId;
+            }
+            return nextNode;
+          }),
+      );
+      const next = applyCommittedDocument(state, document);
+      return {
+        ...next,
+        selectedNodeIds: childIds,
+        selectedNodeId: childIds[0] ?? null,
+      };
+    }),
   toggleSelectedNodeLock: () =>
     set((state) => {
       if (!state.document || state.selectedNodeIds.length === 0) return state;
@@ -572,6 +893,55 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         : node;
       const document = updateNodes(state.document, (nodes) => [...nodes, nextNode]);
       return applyCommittedDocument(state, document, nextNode.id);
+    }),
+  addNodes: (incomingNodes, rootNodeId) =>
+    set((state) => {
+      if (!state.document || incomingNodes.length === 0) return state;
+      const incomingIds = new Set(incomingNodes.map((n) => n.id));
+      const activeGroupNode = state.activeGroupId
+        ? state.document.nodes.find((candidate) => candidate.id === state.activeGroupId) ?? null
+        : null;
+      const nodesById = new Map(state.document.nodes.map((candidate) => [candidate.id, candidate]));
+      const activeGroupRect = activeGroupNode
+        ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
+        : null;
+
+      const baseZ = state.document.nodes.length;
+      const adjustedNodes = incomingNodes.map((node, index) => {
+        // Roots — nodes whose parentId points outside the incoming set.
+        const isRoot = !node.parentId || !incomingIds.has(node.parentId);
+        if (isRoot) {
+          // Reparent root to active group if any (and translate rect to group-local).
+          if (activeGroupNode) {
+            return {
+              ...node,
+              parentId: activeGroupNode.id,
+              rect: resolveCanvasNodeLocalRect(node.rect, activeGroupRect),
+              zIndex: baseZ + index,
+            };
+          }
+          return {
+            ...node,
+            parentId: undefined,
+            zIndex: baseZ + index,
+          };
+        }
+        return {
+          ...node,
+          zIndex: baseZ + index,
+        };
+      });
+
+      const document = updateNodes(state.document, (nodes) => [...nodes, ...adjustedNodes]);
+      const primarySelectedId = rootNodeId && incomingIds.has(rootNodeId)
+        ? rootNodeId
+        : adjustedNodes[adjustedNodes.length - 1]?.id ?? null;
+      return applyCommittedDocument(
+        state,
+        document,
+        primarySelectedId,
+        adjustedNodes.map((n) => n.id),
+      );
     }),
   duplicateSelectedNode: () =>
     set((state) => {
@@ -617,6 +987,23 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         ? applyTransientDocument(state, document)
         : applyCommittedDocument(state, document);
     }),
+  updateNodeRectsForViewport: (rectsById, viewport, mode = 'commit') =>
+    set((state) => {
+      if (!state.document) return state;
+      let changed = false;
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => {
+          const rect = getCanvasNodeRectById(rectsById, node.id);
+          if (!rect) return node;
+          const nextNode = applyCanvasNodeRectForViewport(node, rect, viewport);
+          if (nextNode !== node) changed = true;
+          return nextNode;
+        }));
+      if (!changed) return state;
+      return mode === 'transient'
+        ? applyTransientDocument(state, document)
+        : applyCommittedDocument(state, document);
+    }),
   updateNodeContent: (nodeId, content, mode = 'commit') =>
     set((state) => {
       if (!state.document) return state;
@@ -625,10 +1012,11 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       // Merge keys that exist in the node's content or the component's default content
       const componentDef = getComponent(existingNode.kind);
       const defaultContent = componentDef?.defaultContent ?? {};
+      const normalizedContent = normalizeRichTextContentPatch(existingNode, content);
       const validContent: Record<string, unknown> = {};
-      for (const key of Object.keys(content)) {
+      for (const key of Object.keys(normalizedContent)) {
         if (key in existingNode.content || key in defaultContent) {
-          validContent[key] = content[key];
+          validContent[key] = normalizedContent[key];
         }
       }
       if (Object.keys(validContent).length === 0) return state;
@@ -799,7 +1187,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const nodesById = new Map(state.document.nodes.map((node) => [node.id, node]));
       const node = nodesById.get(nodeId);
       const container = nodesById.get(containerId);
-      if (!node || !container || container.kind !== 'container' || nodeId === containerId) return state;
+      if (!node || !container || !isContainerLikeKind(container.kind) || nodeId === containerId) return state;
       if (isCanvasNodeAncestor(nodeId, containerId, nodesById)) return state;
 
       const absoluteNodeRect = resolveCanvasNodeAbsoluteRect(node, nodesById);
@@ -839,6 +1227,71 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
             : n,
         ),
       );
+      return applyCommittedDocument(state, document);
+    }),
+  updateResponsiveOverride: (nodeId, viewport, patch, mode = 'commit') =>
+    set((state) => {
+      if (!state.document) return state;
+      if (viewport === 'desktop') return state; // desktop edits go to node.rect directly
+      const existingNode = state.document.nodes.find((node) => node.id === nodeId);
+      if (!existingNode) return state;
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => {
+          if (node.id !== nodeId) return node;
+          const responsive: ResponsiveConfig = (node.responsive ?? {}) as ResponsiveConfig;
+          const previousOverride = (responsive?.[viewport] ?? {}) as ResponsiveOverride;
+          const nextOverride: ResponsiveOverride = {
+            ...previousOverride,
+            ...patch,
+            rect: patch.rect !== undefined
+              ? { ...(previousOverride?.rect ?? {}), ...patch.rect }
+              : previousOverride?.rect,
+          };
+          // Drop the override entirely if it's now empty
+          const isEmpty = !nextOverride
+            || (
+              !nextOverride.rect
+              && nextOverride.hidden === undefined
+              && nextOverride.fontSize === undefined
+            );
+          const nextResponsive: ResponsiveConfig = {
+            ...responsive,
+            [viewport]: isEmpty ? undefined : nextOverride,
+          };
+          // Drop the responsive field entirely if both buckets are empty
+          const allEmpty = !nextResponsive?.tablet && !nextResponsive?.mobile;
+          const nextNode: BuilderCanvasNode = {
+            ...node,
+            responsive: allEmpty ? undefined : nextResponsive,
+          } as BuilderCanvasNode;
+          return nextNode;
+        }));
+      return mode === 'transient'
+        ? applyTransientDocument(state, document)
+        : applyCommittedDocument(state, document);
+    }),
+  resetResponsiveOverride: (nodeId, viewport) =>
+    set((state) => {
+      if (!state.document) return state;
+      if (viewport === 'desktop') return state;
+      const existingNode = state.document.nodes.find((node) => node.id === nodeId);
+      if (!existingNode || !existingNode.responsive) return state;
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => {
+          if (node.id !== nodeId) return node;
+          const responsive = node.responsive as ResponsiveConfig | undefined;
+          if (!responsive) return node;
+          const nextResponsive: ResponsiveConfig = {
+            ...responsive,
+            [viewport]: undefined,
+          };
+          const allEmpty = !nextResponsive?.tablet && !nextResponsive?.mobile;
+          const nextNode: BuilderCanvasNode = {
+            ...node,
+            responsive: allEmpty ? undefined : nextResponsive,
+          } as BuilderCanvasNode;
+          return nextNode;
+        }));
       return applyCommittedDocument(state, document);
     }),
 }));

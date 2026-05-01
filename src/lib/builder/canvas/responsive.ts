@@ -15,9 +15,14 @@
  * for both models. The actual viewport switcher UI is Codex's task.
  */
 
-import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { BuilderCanvasNode, ResponsiveConfig } from '@/lib/builder/canvas/types';
 
+/**
+ * Three-tier viewport mode used across editor and published runtime.
+ * Aliased as `ViewportMode` for parity with the SandboxTopBar / store.
+ */
 export type Viewport = 'desktop' | 'tablet' | 'mobile';
+export type ViewportMode = Viewport;
 
 // P5-10 (RSP-04): Responsive behavior presets
 export type ResponsiveBehavior = 'fixed' | 'stretch' | 'hug' | 'scale' | 'relative';
@@ -59,6 +64,9 @@ export const VIEWPORT_WIDTHS: Record<Viewport, number> = {
   mobile: 375,
 };
 
+/** Alias kept for spec parity (`VIEWPORT_BREAKPOINTS`). */
+export const VIEWPORT_BREAKPOINTS = VIEWPORT_WIDTHS;
+
 interface Rect {
   x: number;
   y: number;
@@ -68,30 +76,103 @@ interface Rect {
 
 /**
  * Resolve the effective rect for a node at the given viewport.
- * Falls through to desktop rect if no override exists.
+ * Cascades desktop → tablet → mobile so that mobile inherits any
+ * tablet overrides the user set, and only mobile-specific keys win.
  */
 export function resolveRect(node: BuilderCanvasNode, viewport: Viewport): Rect {
+  return resolveViewportRect(node, viewport);
+}
+
+/**
+ * Spec-aligned alias for `resolveRect`. Cascade rules:
+ *   desktop  → node.rect
+ *   tablet   → node.rect ∪ responsive.tablet.rect
+ *   mobile   → node.rect ∪ responsive.tablet.rect ∪ responsive.mobile.rect
+ */
+export function resolveViewportRect(node: BuilderCanvasNode, viewport: Viewport): Rect {
   const base = node.rect;
   if (viewport === 'desktop') return base;
-
-  // Type narrowing: node may have responsive overrides via content or
-  // a dedicated `responsive` field. Since the Phase 1 schema uses
-  // `rect` directly without responsive overrides, this is forward-
-  // compatible — returns the base rect until responsive data exists.
-  const overrides = (node as Record<string, unknown>).responsive as
-    | Record<string, Partial<Rect> | undefined>
-    | undefined;
-  if (!overrides) return base;
-
-  const vp = overrides[viewport];
-  if (!vp) return base;
-
+  const responsive = node.responsive as ResponsiveConfig | undefined;
+  if (!responsive) return base;
+  const tabletRect = responsive.tablet?.rect;
+  if (viewport === 'tablet') {
+    if (!tabletRect) return base;
+    return {
+      x: tabletRect.x ?? base.x,
+      y: tabletRect.y ?? base.y,
+      width: tabletRect.width ?? base.width,
+      height: tabletRect.height ?? base.height,
+    };
+  }
+  const mobileRect = responsive.mobile?.rect;
   return {
-    x: vp.x ?? base.x,
-    y: vp.y ?? base.y,
-    width: vp.width ?? base.width,
-    height: vp.height ?? base.height,
+    x: mobileRect?.x ?? tabletRect?.x ?? base.x,
+    y: mobileRect?.y ?? tabletRect?.y ?? base.y,
+    width: mobileRect?.width ?? tabletRect?.width ?? base.width,
+    height: mobileRect?.height ?? tabletRect?.height ?? base.height,
   };
+}
+
+/**
+ * Resolve effective hidden state for the viewport.
+ * Returns `true` when the node should NOT render at that viewport.
+ */
+export function resolveViewportHidden(
+  node: BuilderCanvasNode,
+  viewport: Viewport,
+): boolean {
+  const baseHidden = !node.visible;
+  const responsive = node.responsive as ResponsiveConfig | undefined;
+  if (viewport === 'desktop' || !responsive) return baseHidden;
+  const tabletHidden = responsive.tablet?.hidden;
+  if (viewport === 'tablet') return tabletHidden ?? baseHidden;
+  const mobileHidden = responsive.mobile?.hidden;
+  return mobileHidden ?? tabletHidden ?? baseHidden;
+}
+
+/**
+ * Resolve effective fontSize for text/heading nodes.
+ * Reads from `responsive.<vp>.fontSize` cascade, falling back to
+ * `node.content.fontSize` (which exists on text + heading kinds).
+ */
+export function resolveViewportFontSize(
+  node: BuilderCanvasNode,
+  viewport: Viewport,
+): number | undefined {
+  const content = node.content as Record<string, unknown>;
+  const baseFontSize = typeof content.fontSize === 'number' ? content.fontSize : undefined;
+  const responsive = node.responsive as ResponsiveConfig | undefined;
+  if (viewport === 'desktop' || !responsive) return baseFontSize;
+  const tabletFontSize = responsive.tablet?.fontSize;
+  if (viewport === 'tablet') return tabletFontSize ?? baseFontSize;
+  const mobileFontSize = responsive.mobile?.fontSize;
+  return mobileFontSize ?? tabletFontSize ?? baseFontSize;
+}
+
+/**
+ * Detect viewport bucket from a window/container width.
+ * Edges follow Wix Studio defaults (375 mobile, 768 tablet, 1280+ desktop).
+ */
+export function detectViewportFromWidth(width: number): Viewport {
+  if (width <= VIEWPORT_BREAKPOINTS.mobile + 50) return 'mobile';
+  if (width <= VIEWPORT_BREAKPOINTS.tablet + 100) return 'tablet';
+  return 'desktop';
+}
+
+/**
+ * Whether this node has any per-viewport override set (used for the
+ * little dot indicator next to Inspector layout fields).
+ */
+export function hasResponsiveOverride(
+  node: BuilderCanvasNode,
+  viewport: Viewport,
+): boolean {
+  if (viewport === 'desktop') return false;
+  const responsive = node.responsive as ResponsiveConfig | undefined;
+  if (!responsive) return false;
+  const override = responsive[viewport];
+  if (!override) return false;
+  return Boolean(override.rect || override.hidden !== undefined || override.fontSize !== undefined);
 }
 
 /**

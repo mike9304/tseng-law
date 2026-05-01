@@ -1,3 +1,4 @@
+import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 
 export function buildChildrenMap(nodes: BuilderCanvasNode[]): Record<string, string[]> {
@@ -37,6 +38,33 @@ export function resolveCanvasNodeAbsoluteRect(
     ...node.rect,
     x: parentRect.x + node.rect.x,
     y: parentRect.y + node.rect.y,
+  };
+}
+
+export function resolveCanvasNodeAbsoluteRectForViewport(
+  node: BuilderCanvasNode,
+  nodesById: Map<string, BuilderCanvasNode>,
+  viewport: Viewport,
+  seen = new Set<string>(),
+): BuilderCanvasNode['rect'] {
+  const nodeRect = resolveViewportRect(node, viewport);
+  if (!node.parentId || seen.has(node.id)) {
+    return { ...nodeRect };
+  }
+
+  const parentNode = nodesById.get(node.parentId);
+  if (!parentNode) {
+    return { ...nodeRect };
+  }
+
+  seen.add(node.id);
+  const parentRect = resolveCanvasNodeAbsoluteRectForViewport(parentNode, nodesById, viewport, seen);
+  seen.delete(node.id);
+
+  return {
+    ...nodeRect,
+    x: parentRect.x + nodeRect.x,
+    y: parentRect.y + nodeRect.y,
   };
 }
 

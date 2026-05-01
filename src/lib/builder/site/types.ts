@@ -8,6 +8,9 @@
  */
 
 import type { Locale } from '@/lib/locales';
+import type { TranslationEntry } from '@/lib/builder/translations/types';
+import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 import {
   DEFAULT_DARK_THEME_COLORS,
   DEFAULT_THEME_TEXT_PRESETS,
@@ -105,6 +108,77 @@ export interface BuilderSiteSettings {
   businessRegNumber?: string;
 }
 
+// Lightbox/Modal builder — separate entity from pages.
+// Each lightbox has its own canvas document. Trigger from a button via
+// `href: lightbox:<slug>` which is intercepted on the published page.
+export interface BuilderLightbox {
+  id: string;
+  name: string;
+  slug: string; // English alphanumeric, used as `lightbox:<slug>` trigger key
+  locale: Locale;
+  sizeMode: 'auto' | 'fixed';
+  width?: number;
+  height?: number;
+  closeOnOutsideClick: boolean;
+  closeOnEsc: boolean;
+  dismissable: boolean; // show close (X) button
+  backdropOpacity: number; // 0~100, default 60
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Saved section library — Wix Studio "Saved Sections" parity.
+// A user designs a container + descendants once and reuses across pages.
+export type SavedSectionCategory =
+  | 'hero'
+  | 'features'
+  | 'testimonials'
+  | 'cta'
+  | 'footer'
+  | 'custom';
+
+export const SAVED_SECTION_CATEGORIES: SavedSectionCategory[] = [
+  'hero',
+  'features',
+  'testimonials',
+  'cta',
+  'footer',
+  'custom',
+];
+
+export interface SavedSection {
+  sectionId: string;
+  name: string;
+  description?: string;
+  category?: SavedSectionCategory;
+  /** Optional inline SVG markup or data URL — clients may render a wireframe instead. */
+  thumbnail?: string;
+  /** Root node id (must exist within `nodes`). Root is typically a container. */
+  rootNodeId: string;
+  /** Snapshot: root + all descendants. */
+  nodes: BuilderCanvasNode[];
+  createdAt: string;
+  updatedAt: string;
+  /** Number of times the section was inserted onto a canvas. */
+  usage: number;
+}
+
+// SEO maturity — site-level redirect rules. Persisted inside the site doc so
+// they ride along with the rest of the site config and can be consumed by the
+// edge middleware on every public request via @vercel/blob.
+export type SiteRedirectStatus = 301 | 302 | 307 | 308;
+
+export interface SiteRedirect {
+  redirectId: string;
+  from: string;          // Source path, must start with `/` (e.g. "/old-services")
+  to: string;            // Destination path or absolute URL
+  type: SiteRedirectStatus;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt?: string;
+  note?: string;
+}
+
 export interface BuilderSiteDocument {
   version: 1;
   siteId: string;
@@ -116,8 +190,18 @@ export interface BuilderSiteDocument {
   headerFooter?: BuilderHeaderFooterConfig;
   settings?: BuilderSiteSettings;
   pages: BuilderPageMeta[];
+  lightboxes?: BuilderLightbox[];
+  translations?: TranslationEntry[];
+  sectionLibrary?: SavedSection[];
+  redirects?: SiteRedirect[];
   createdAt: string;
   updatedAt: string;
+}
+
+let savedSectionIdCounter = 0;
+export function generateSavedSectionId(): string {
+  savedSectionIdCounter += 1;
+  return `section-${Date.now()}-${savedSectionIdCounter}`;
 }
 
 export const DEFAULT_THEME: BuilderTheme = {
@@ -144,11 +228,44 @@ export function generatePageId(): string {
   return `page-${Date.now()}-${pageIdCounter}`;
 }
 
-export function createDefaultSiteDocument(locale: Locale): BuilderSiteDocument {
+let lightboxIdCounter = 0;
+export function generateLightboxId(): string {
+  lightboxIdCounter += 1;
+  return `lightbox-${Date.now()}-${lightboxIdCounter}`;
+}
+
+export function createDefaultLightbox(
+  locale: Locale,
+  slug: string,
+  name: string,
+): BuilderLightbox {
+  const now = new Date().toISOString();
+  return {
+    id: generateLightboxId(),
+    name,
+    slug,
+    locale,
+    sizeMode: 'auto',
+    width: 600,
+    height: 400,
+    closeOnOutsideClick: true,
+    closeOnEsc: true,
+    dismissable: true,
+    backdropOpacity: 60,
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
+export function createDefaultSiteDocument(
+  locale: Locale,
+  siteId: string | null | undefined,
+): BuilderSiteDocument {
   const homePageId = generatePageId();
+  const normalizedSiteId = normalizeBuilderSiteId(siteId);
   return {
     version: 1,
-    siteId: 'default',
+    siteId: normalizedSiteId,
     name: '호정국제',
     locale,
     navigation: [
@@ -175,4 +292,11 @@ export function createDefaultSiteDocument(locale: Locale): BuilderSiteDocument {
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
+}
+
+export interface PageCanvasRecord {
+  revision: number;
+  savedAt: string;
+  updatedBy?: string;
+  document: import('@/lib/builder/canvas/types').BuilderCanvasDocument;
 }

@@ -3,37 +3,18 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
+import type {
+  CheckResult,
+  PublishCheckSuite,
+} from '@/lib/builder/publish-gate/gate-runner';
 
-interface PublishCheckResult {
-  passed: boolean;
-  warnings: string[];
-  errors: string[];
-}
+type PublishState = 'checking' | 'ready' | 'publishing' | 'success' | 'error';
 
-function runPublishChecksClient(doc: BuilderCanvasDocument): PublishCheckResult {
-  const warnings: string[] = [];
-  const errors: string[] = [];
-
-  for (const node of doc.nodes) {
-    if (node.kind === 'text' && (!node.content.text || node.content.text.trim().length === 0)) {
-      warnings.push(`Empty text node: ${node.id}`);
-    }
-    if (node.kind === 'image' && !node.content.src) {
-      errors.push(`Image source missing: ${node.id}`);
-    }
-    if (node.kind === 'image' && !node.content.alt) {
-      warnings.push(`Image alt text missing: ${node.id} (accessibility)`);
-    }
-    if (node.kind === 'button' && !node.content.href) {
-      warnings.push(`Button link missing: ${node.id}`);
-    }
-  }
-
-  if (doc.nodes.length === 0) {
-    errors.push('Page has no elements.');
-  }
-
-  return { passed: errors.length === 0, warnings, errors };
+interface DraftMeta {
+  revision: number;
+  savedAt: string;
+  updatedBy?: string;
 }
 
 const backdropStyle: React.CSSProperties = {
@@ -54,7 +35,7 @@ const modalStyle: React.CSSProperties = {
   borderRadius: 16,
   boxShadow: '0 25px 50px rgba(0,0,0,0.15)',
   width: '100%',
-  maxWidth: 480,
+  maxWidth: 560,
   maxHeight: '85vh',
   overflow: 'auto',
   padding: '28px 28px 24px',
@@ -83,25 +64,62 @@ const listStyle: React.CSSProperties = {
   margin: 0,
   display: 'flex',
   flexDirection: 'column',
-  gap: 4,
+  gap: 6,
 };
 
-const errorItemStyle: React.CSSProperties = {
-  padding: '6px 10px',
-  borderRadius: 6,
-  background: '#fef2f2',
-  color: '#991b1b',
-  fontSize: '0.82rem',
-  border: '1px solid #fca5a5',
-};
+function severityBoxStyle(sev: 'blocker' | 'warning' | 'info'): React.CSSProperties {
+  if (sev === 'blocker') {
+    return {
+      padding: '8px 12px',
+      borderRadius: 8,
+      background: '#fef2f2',
+      color: '#991b1b',
+      fontSize: '0.82rem',
+      border: '1px solid #fca5a5',
+      display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'space-between',
+      gap: 10,
+    };
+  }
+  if (sev === 'warning') {
+    return {
+      padding: '8px 12px',
+      borderRadius: 8,
+      background: '#fffbeb',
+      color: '#92400e',
+      fontSize: '0.82rem',
+      border: '1px solid #fde68a',
+      display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'space-between',
+      gap: 10,
+    };
+  }
+  return {
+    padding: '8px 12px',
+    borderRadius: 8,
+    background: '#eff6ff',
+    color: '#1e40af',
+    fontSize: '0.82rem',
+    border: '1px solid #bfdbfe',
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    gap: 10,
+  };
+}
 
-const warningItemStyle: React.CSSProperties = {
-  padding: '6px 10px',
+const fixButtonStyle: React.CSSProperties = {
+  flexShrink: 0,
+  padding: '4px 10px',
+  fontSize: '0.72rem',
+  fontWeight: 600,
+  border: '1px solid currentColor',
+  background: 'rgba(255,255,255,0.7)',
+  color: 'inherit',
   borderRadius: 6,
-  background: '#fffbeb',
-  color: '#92400e',
-  fontSize: '0.82rem',
-  border: '1px solid #fde68a',
+  cursor: 'pointer',
 };
 
 const successBoxStyle: React.CSSProperties = {
@@ -120,6 +138,7 @@ const buttonRowStyle: React.CSSProperties = {
   gap: 10,
   justifyContent: 'flex-end',
   marginTop: 20,
+  flexWrap: 'wrap',
 };
 
 const cancelButtonStyle: React.CSSProperties = {
@@ -129,6 +148,17 @@ const cancelButtonStyle: React.CSSProperties = {
   background: '#fff',
   color: '#334155',
   fontSize: '0.85rem',
+  fontWeight: 600,
+  cursor: 'pointer',
+};
+
+const publishWarnButtonStyle: React.CSSProperties = {
+  padding: '8px 16px',
+  borderRadius: 8,
+  border: '1px solid #f59e0b',
+  background: '#fff',
+  color: '#92400e',
+  fontSize: '0.82rem',
   fontWeight: 600,
   cursor: 'pointer',
 };
@@ -158,43 +188,133 @@ const keyframesCSS = `
 }
 `;
 
-type PublishState = 'checking' | 'ready' | 'publishing' | 'success' | 'error';
+function severityIcon(sev: 'blocker' | 'warning' | 'info'): string {
+  if (sev === 'blocker') return '✕';
+  if (sev === 'warning') return '!';
+  return 'ℹ';
+}
+
+function CheckListItem({
+  result,
+  onFix,
+}: {
+  result: CheckResult;
+  onFix?: (nodeId: string) => void;
+}): JSX.Element {
+  const firstNode = result.affectedNodeIds?.[0];
+  return (
+    <li style={severityBoxStyle(result.severity)}>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', gap: 6, alignItems: 'baseline' }}>
+          <span style={{ fontWeight: 700 }}>{severityIcon(result.severity)}</span>
+          <span style={{ fontWeight: 600 }}>{result.message}</span>
+        </div>
+        {result.fixHint ? (
+          <div style={{ marginTop: 4, opacity: 0.8, fontSize: '0.74rem' }}>
+            ↳ {result.fixHint}
+          </div>
+        ) : null}
+      </div>
+      {firstNode && onFix ? (
+        <button
+          type="button"
+          style={fixButtonStyle}
+          onClick={() => onFix(firstNode)}
+          aria-label="Fix this issue"
+        >
+          Fix
+        </button>
+      ) : null}
+    </li>
+  );
+}
 
 export default function PublishModal({
   open,
   document,
   locale,
   activePageId,
+  draftMeta,
+  onDraftSaved,
   onClose,
 }: {
   open: boolean;
   document: BuilderCanvasDocument | null;
   locale: string;
   activePageId?: string | null;
+  draftMeta?: DraftMeta | null;
+  onDraftSaved?: (draftMeta: DraftMeta, document?: BuilderCanvasDocument) => void;
   onClose: () => void;
 }) {
+  const setSelectedNodeId = useBuilderCanvasStore((s) => s.setSelectedNodeId);
   const [publishState, setPublishState] = useState<PublishState>('checking');
   const [publishError, setPublishError] = useState<string | null>(null);
   const [publishedSlug, setPublishedSlug] = useState<string | null>(null);
+  const [suite, setSuite] = useState<PublishCheckSuite | null>(null);
+  const [overrideWarnings, setOverrideWarnings] = useState(false);
 
-  const checks = useMemo<PublishCheckResult | null>(() => {
-    if (!document) return null;
-    return runPublishChecksClient(document);
-  }, [document]);
+  const runChecks = useCallback(async () => {
+    if (!document) return;
+    setPublishState('checking');
+    setSuite(null);
+    setOverrideWarnings(false);
+    if (activePageId) {
+      try {
+        const res = await fetch('/api/builder/site/publish-checks', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({
+            siteId: 'default',
+            pageId: activePageId,
+            locale,
+            document,
+          }),
+        });
+        if (res.ok) {
+          const data = (await res.json()) as { ok: boolean; suite?: PublishCheckSuite };
+          if (data.ok && data.suite) {
+            setSuite(data.suite);
+            setPublishState('ready');
+            return;
+          }
+        }
+      } catch {
+        // fall through to client-side fallback
+      }
+    }
+
+    // Fallback — minimal client-side check (no SEO/site-aware bits).
+    const fallbackSuite: PublishCheckSuite = {
+      results: document.nodes.length === 0
+        ? [{
+            id: 'page-empty',
+            severity: 'blocker',
+            category: 'performance',
+            message: '페이지에 요소가 없습니다.',
+          }]
+        : [],
+      hasBlocker: document.nodes.length === 0,
+      blockerCount: document.nodes.length === 0 ? 1 : 0,
+      warningCount: 0,
+      infoCount: 0,
+      checkedAt: new Date().toISOString(),
+    };
+    setSuite(fallbackSuite);
+    setPublishState('ready');
+  }, [document, activePageId, locale]);
 
   useEffect(() => {
     if (!open) {
       setPublishState('checking');
       setPublishError(null);
       setPublishedSlug(null);
+      setSuite(null);
+      setOverrideWarnings(false);
       return;
     }
-    // After checking, set ready
-    const timer = window.setTimeout(() => {
-      setPublishState('ready');
-    }, 400);
-    return () => window.clearTimeout(timer);
-  }, [open]);
+    void runChecks();
+  }, [open, runChecks]);
 
   // ESC key handler
   useEffect(() => {
@@ -206,8 +326,28 @@ export default function PublishModal({
     return () => window.removeEventListener('keydown', handler);
   }, [open, onClose]);
 
+  const grouped = useMemo(() => {
+    if (!suite) return { blockers: [], warnings: [], infos: [] };
+    return {
+      blockers: suite.results.filter((r) => r.severity === 'blocker'),
+      warnings: suite.results.filter((r) => r.severity === 'warning'),
+      infos: suite.results.filter((r) => r.severity === 'info'),
+    };
+  }, [suite]);
+
+  const canPublish = !!suite && !suite.hasBlocker && publishState === 'ready';
+  const hasWarningsOnly = !!suite && !suite.hasBlocker && suite.warningCount > 0;
+
+  const handleFix = useCallback(
+    (nodeId: string) => {
+      setSelectedNodeId(nodeId);
+      onClose();
+    },
+    [setSelectedNodeId, onClose],
+  );
+
   const handlePublish = useCallback(async () => {
-    if (!checks?.passed || !document) return;
+    if (!canPublish || !document) return;
     setPublishState('publishing');
     setPublishError(null);
 
@@ -220,13 +360,27 @@ export default function PublishModal({
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'same-origin',
-            body: JSON.stringify({ document }),
+            body: JSON.stringify({ expectedRevision: draftMeta?.revision, document }),
           },
         );
         if (!saveResponse.ok) {
+          const errData = (await saveResponse.json().catch(() => ({}))) as {
+            error?: string;
+          };
           setPublishState('error');
-          setPublishError('Failed to save draft before publish.');
+          setPublishError(
+            errData.error === 'draft_conflict'
+              ? 'Draft conflict detected. Reload the draft before publishing.'
+              : 'Failed to save draft before publish.',
+          );
           return;
+        }
+        const saveData = (await saveResponse.json()) as {
+          draft?: DraftMeta;
+          document?: BuilderCanvasDocument;
+        };
+        if (saveData.draft) {
+          onDraftSaved?.(saveData.draft, saveData.document);
         }
 
         const publishResponse = await fetch(
@@ -276,7 +430,7 @@ export default function PublishModal({
       setPublishState('error');
       setPublishError('Network error during publish.');
     }
-  }, [checks, document, locale, activePageId]);
+  }, [canPublish, document, locale, activePageId, draftMeta?.revision, onDraftSaved]);
 
   if (!open) return null;
 
@@ -287,76 +441,116 @@ export default function PublishModal({
         <div style={modalStyle} role="dialog" aria-modal="true">
           <h2 style={titleStyle}>Publish Page</h2>
 
+          {activePageId ? (
+            <p style={{ color: '#64748b', fontSize: '0.78rem', margin: '8px 0 0' }}>
+              revision {draftMeta?.revision ?? 0} 기준 발행 예정
+            </p>
+          ) : null}
+
           {publishState === 'checking' && (
             <p style={{ color: '#64748b', fontSize: '0.88rem', marginTop: 12 }}>
-              Checking publish readiness...
+              발행 가능 여부 확인 중...
             </p>
           )}
 
-          {publishState !== 'checking' && checks && (
+          {publishState !== 'checking' && suite && (
             <>
-              {checks.errors.length > 0 && (
+              {grouped.blockers.length > 0 && (
                 <>
-                  <p style={sectionTitleStyle}>Errors ({checks.errors.length})</p>
+                  <p style={{ ...sectionTitleStyle, color: '#991b1b' }}>
+                    Blocker ({grouped.blockers.length}) — 발행 차단
+                  </p>
                   <ul style={listStyle}>
-                    {checks.errors.map((error, i) => (
-                      <li key={i} style={errorItemStyle}>{error}</li>
+                    {grouped.blockers.map((r) => (
+                      <CheckListItem key={r.id} result={r} onFix={handleFix} />
                     ))}
                   </ul>
                 </>
               )}
 
-              {checks.warnings.length > 0 && (
+              {grouped.warnings.length > 0 && (
                 <>
-                  <p style={sectionTitleStyle}>Warnings ({checks.warnings.length})</p>
+                  <p style={{ ...sectionTitleStyle, color: '#92400e' }}>
+                    Warning ({grouped.warnings.length})
+                  </p>
                   <ul style={listStyle}>
-                    {checks.warnings.map((warning, i) => (
-                      <li key={i} style={warningItemStyle}>{warning}</li>
+                    {grouped.warnings.map((r) => (
+                      <CheckListItem key={r.id} result={r} onFix={handleFix} />
                     ))}
                   </ul>
                 </>
               )}
 
-              {checks.errors.length === 0 && checks.warnings.length === 0 && publishState === 'ready' && (
+              {grouped.infos.length > 0 && (
+                <>
+                  <p style={{ ...sectionTitleStyle, color: '#1e40af' }}>
+                    Info ({grouped.infos.length})
+                  </p>
+                  <ul style={listStyle}>
+                    {grouped.infos.map((r) => (
+                      <CheckListItem key={r.id} result={r} onFix={handleFix} />
+                    ))}
+                  </ul>
+                </>
+              )}
+
+              {suite.results.length === 0 && publishState === 'ready' && (
                 <p style={{ ...sectionTitleStyle, color: '#166534' }}>
-                  All checks passed
+                  모든 검사 통과 — 발행 가능
                 </p>
               )}
             </>
           )}
 
           {publishState === 'success' && publishedSlug && (
-            <div style={successBoxStyle}>
-              Published successfully!{' '}
+            <div style={{ ...successBoxStyle, marginTop: 16 }}>
+              발행 완료!{' '}
               <a
                 href={publishedSlug}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: '#123b63', fontWeight: 700, textDecoration: 'underline' }}
               >
-                View at {publishedSlug}
+                {publishedSlug} 에서 보기
               </a>
             </div>
           )}
 
           {publishState === 'error' && publishError && (
-            <div style={{ ...errorItemStyle, marginTop: 12 }}>
+            <div style={{ ...severityBoxStyle('blocker'), marginTop: 12 }}>
               {publishError}
             </div>
           )}
 
           <div style={buttonRowStyle}>
             <button type="button" style={cancelButtonStyle} onClick={onClose}>
-              {publishState === 'success' ? 'Close' : 'Cancel'}
+              {publishState === 'success' ? '닫기' : '취소'}
             </button>
+
+            {publishState !== 'success' && hasWarningsOnly && !overrideWarnings && (
+              <button
+                type="button"
+                style={publishWarnButtonStyle}
+                onClick={() => setOverrideWarnings(true)}
+              >
+                경고 무시하고 발행
+              </button>
+            )}
+
             {publishState !== 'success' && (
               <button
                 type="button"
-                style={publishButtonStyle(!!checks?.passed && publishState === 'ready')}
-                disabled={!checks?.passed || publishState !== 'ready'}
+                style={publishButtonStyle(
+                  canPublish && ((suite?.warningCount ?? 0) === 0 || overrideWarnings),
+                )}
+                disabled={
+                  !canPublish ||
+                  publishState !== 'ready' ||
+                  ((suite?.warningCount ?? 0) > 0 && !overrideWarnings)
+                }
                 onClick={handlePublish}
               >
-                {publishState === 'publishing' ? 'Publishing...' : 'Publish'}
+                {publishState === 'publishing' ? '발행 중...' : '발행'}
               </button>
             )}
           </div>

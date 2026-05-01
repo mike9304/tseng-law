@@ -18,9 +18,17 @@ import {
   type BuilderSiteDocument,
   type BuilderPageMeta,
   type BuilderPageLifecycleMeta,
+  type BuilderLightbox,
+  type PageCanvasRecord,
+  type SavedSection,
+  type SavedSectionCategory,
   createDefaultSiteDocument,
+  createDefaultLightbox,
   generatePageId,
+  generateSavedSectionId,
 } from './types';
+import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 
 const BLOB_PREFIX = 'builder-site';
 
@@ -36,42 +44,61 @@ function localRoot(): string {
 
 // ─── Site document ────────────────────────────────────────────────
 
-export async function readSiteDocument(siteId: string, locale: Locale): Promise<BuilderSiteDocument> {
-  const pathname = `${BLOB_PREFIX}/${siteId}/site.json`;
+function sitePathname(siteId: string): string {
+  return `${BLOB_PREFIX}/${normalizeBuilderSiteId(siteId)}/site.json`;
+}
+
+async function loadSiteDocument(siteId: string): Promise<BuilderSiteDocument | null> {
+  const normalizedSiteId = normalizeBuilderSiteId(siteId);
+  const pathname = sitePathname(normalizedSiteId);
   if (isBlobBackend()) {
     try {
       const result = await get(pathname, { access: 'private', useCache: false });
       if (result?.statusCode === 200 && result.stream) {
         const text = await new Response(result.stream).text();
-        return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument);
+        return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument, normalizedSiteId);
       }
     } catch { /* fallthrough */ }
   } else {
     try {
-      const text = await readFile(path.join(localRoot(), siteId, 'site.json'), 'utf8');
-      return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument);
+      const text = await readFile(path.join(localRoot(), normalizedSiteId, 'site.json'), 'utf8');
+      return normalizeSiteDocumentLifecycle(JSON.parse(text) as BuilderSiteDocument, normalizedSiteId);
     } catch { /* fallthrough */ }
   }
-  // First-time bootstrap: persist the default site doc so future reads get a
-  // stable pageId. Without this, every read creates a new home pageId and
-  // orphans the canvas/publish state.
-  const fresh = createDefaultSiteDocument(locale);
-  try {
-    await writeSiteDocument(fresh);
-  } catch {
-    // Best-effort — if write fails, editor still works with in-memory doc
-    // but publish may 404 until persisted.
-  }
+  return null;
+}
+
+export async function readSiteDocument(siteId: string, locale: Locale): Promise<BuilderSiteDocument> {
+  const normalizedSiteId = normalizeBuilderSiteId(siteId);
+  const existing = await loadSiteDocument(normalizedSiteId);
+  if (existing) return existing;
+  return normalizeSiteDocumentLifecycle(
+    createDefaultSiteDocument(locale, normalizedSiteId),
+    normalizedSiteId,
+  );
+}
+
+export async function ensureSiteDocument(siteId: string, locale: Locale): Promise<BuilderSiteDocument> {
+  const normalizedSiteId = normalizeBuilderSiteId(siteId);
+  const existing = await loadSiteDocument(normalizedSiteId);
+  if (existing) return existing;
+  const fresh = normalizeSiteDocumentLifecycle(
+    createDefaultSiteDocument(locale, normalizedSiteId),
+    normalizedSiteId,
+  );
+  await writeSiteDocument(fresh);
   return fresh;
 }
 
 export async function writeSiteDocument(doc: BuilderSiteDocument): Promise<void> {
-  const pathname = `${BLOB_PREFIX}/${doc.siteId}/site.json`;
-  const json = JSON.stringify(doc);
+  const normalizedSiteId = normalizeBuilderSiteId(doc.siteId);
+  const normalizedDoc = normalizeSiteDocumentLifecycle({ ...doc, siteId: normalizedSiteId }, normalizedSiteId);
+  const pathname = sitePathname(normalizedSiteId);
+  const json = JSON.stringify(normalizedDoc);
   if (isBlobBackend()) {
     await put(pathname, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
   } else {
-    const dir = path.join(localRoot(), doc.siteId);
+    const dir = path.join(localRoot(), normalizedSiteId);
     await mkdir(dir, { recursive: true });
     await writeFile(path.join(dir, 'site.json'), json, 'utf8');
   }
@@ -80,44 +107,73 @@ export async function writeSiteDocument(doc: BuilderSiteDocument): Promise<void>
 // ─── Page canvas documents ────────────────────────────────────────
 
 type PageVariant = 'draft' | 'published';
+type WritePageCanvasOptions = {
+  incrementRevision?: boolean;
+  updatedBy?: string;
+};
+
+export interface PageCanvasRecordState {
+  record: PageCanvasRecord;
+  isEnvelope: boolean;
+}
 
 function pagePathname(siteId: string, pageId: string, variant: PageVariant): string {
   const suffix = variant === 'draft' ? 'draft.json' : 'published.json';
-  return `${BLOB_PREFIX}/${siteId}/pages/${pageId}.${suffix}`;
+  return `${BLOB_PREFIX}/${normalizeBuilderSiteId(siteId)}/pages/${pageId}.${suffix}`;
 }
 
-export async function readPageCanvas(
+function isRecordLike(input: unknown): input is PageCanvasRecord {
+  if (!input || typeof input !== 'object') return false;
+  const value = input as Partial<PageCanvasRecord>;
+  return (
+    typeof value.revision === 'number' &&
+    Number.isFinite(value.revision) &&
+    typeof value.savedAt === 'string' &&
+    !!value.document &&
+    typeof value.document === 'object'
+  );
+}
+
+function legacyRecordFromDocument(document: BuilderCanvasDocument): PageCanvasRecord {
+  return {
+    revision: 0,
+    savedAt: document.updatedAt,
+    document,
+  };
+}
+
+async function readPageCanvasPayload(
   siteId: string,
   pageId: string,
   variant: PageVariant,
-): Promise<BuilderCanvasDocument | null> {
+): Promise<unknown | null> {
   const pn = pagePathname(siteId, pageId, variant);
   if (isBlobBackend()) {
     try {
       const result = await get(pn, { access: 'private', useCache: false });
       if (result?.statusCode === 200 && result.stream) {
         const text = await new Response(result.stream).text();
-        return JSON.parse(text) as BuilderCanvasDocument;
+        return JSON.parse(text) as unknown;
       }
     } catch { /* fallthrough */ }
   } else {
     try {
       const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
       const text = await readFile(filePath, 'utf8');
-      return JSON.parse(text) as BuilderCanvasDocument;
+      return JSON.parse(text) as unknown;
     } catch { /* fallthrough */ }
   }
   return null;
 }
 
-export async function writePageCanvas(
+async function writePageCanvasPayload(
   siteId: string,
   pageId: string,
   variant: PageVariant,
-  doc: BuilderCanvasDocument,
+  payload: unknown,
 ): Promise<void> {
   const pn = pagePathname(siteId, pageId, variant);
-  const json = JSON.stringify(doc);
+  const json = JSON.stringify(payload);
   if (isBlobBackend()) {
     await put(pn, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
   } else {
@@ -125,6 +181,72 @@ export async function writePageCanvas(
     await mkdir(path.dirname(filePath), { recursive: true });
     await writeFile(filePath, json, 'utf8');
   }
+}
+
+export async function readPageCanvasRecordState(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant = 'draft',
+): Promise<PageCanvasRecordState | null> {
+  const payload = await readPageCanvasPayload(siteId, pageId, variant);
+  if (!payload) return null;
+  if (isRecordLike(payload)) {
+    return { record: payload, isEnvelope: true };
+  }
+  return {
+    record: legacyRecordFromDocument(payload as BuilderCanvasDocument),
+    isEnvelope: false,
+  };
+}
+
+export async function readPageCanvasRecord(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant = 'draft',
+): Promise<PageCanvasRecord | null> {
+  const state = await readPageCanvasRecordState(siteId, pageId, variant);
+  return state?.record ?? null;
+}
+
+export async function writePageCanvasRecord(
+  siteId: string,
+  pageId: string,
+  record: PageCanvasRecord,
+  variant: PageVariant = 'draft',
+): Promise<void> {
+  await writePageCanvasPayload(siteId, pageId, variant, record);
+}
+
+export async function readPageCanvas(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant,
+): Promise<BuilderCanvasDocument | null> {
+  const state = await readPageCanvasRecordState(siteId, pageId, variant);
+  return state?.record.document ?? null;
+}
+
+export async function writePageCanvas(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant,
+  doc: BuilderCanvasDocument,
+  options: WritePageCanvasOptions = {},
+): Promise<void> {
+  const state = await readPageCanvasRecordState(siteId, pageId, variant);
+  const incrementRevision = options.incrementRevision ?? true;
+  const revision = state
+    ? incrementRevision
+      ? state.record.revision + 1
+      : state.record.revision
+    : 0;
+  const record: PageCanvasRecord = {
+    revision,
+    savedAt: new Date().toISOString(),
+    updatedBy: options.updatedBy,
+    document: doc,
+  };
+  await writePageCanvasRecord(siteId, pageId, record, variant);
 }
 
 // ─── Page CRUD ────────────────────────────────────────────────────
@@ -135,7 +257,7 @@ export async function createPage(
   slug: string,
   title: string,
 ): Promise<BuilderPageMeta> {
-  const site = await readSiteDocument(siteId, locale);
+  const site = await ensureSiteDocument(siteId, locale);
   const pageId = generatePageId();
   const meta: BuilderPageMeta = {
     pageId,
@@ -154,7 +276,7 @@ export async function createPage(
 }
 
 export async function deletePage(siteId: string, pageId: string, locale: Locale): Promise<void> {
-  const site = await readSiteDocument(siteId, locale);
+  const site = await ensureSiteDocument(siteId, locale);
   site.pages = site.pages.filter((p) => p.pageId !== pageId);
   site.navigation = site.navigation.filter((n) => n.pageId !== pageId);
   site.updatedAt = new Date().toISOString();
@@ -166,15 +288,24 @@ export async function listPages(siteId: string, locale: Locale): Promise<Builder
   return site.pages;
 }
 
-function normalizeSiteDocumentLifecycle(site: BuilderSiteDocument): BuilderSiteDocument {
+function normalizeSiteDocumentLifecycle(
+  site: BuilderSiteDocument,
+  siteId: string | null | undefined = site.siteId,
+): BuilderSiteDocument {
+  const normalizedSiteId = normalizeBuilderSiteId(siteId);
   return {
     ...site,
-    pages: site.pages.map((page) => ({
+    siteId: normalizedSiteId,
+    pages: (site.pages ?? []).map((page) => ({
       ...page,
       lifecycle:
         page.lifecycle ??
         createDefaultPageLifecycleMeta(page.documentKind ?? 'section-snapshot-v1'),
     })),
+    lightboxes: site.lightboxes ?? [],
+    translations: site.translations ?? [],
+    sectionLibrary: site.sectionLibrary ?? [],
+    redirects: site.redirects ?? [],
   };
 }
 
@@ -194,6 +325,345 @@ function createDefaultPageLifecycleMeta(
     publishBackend: 'builder-snapshot',
     sceneStatus: 'derived-only',
   };
+}
+
+// ─── Lightbox CRUD ────────────────────────────────────────────────
+
+export async function listLightboxes(siteId: string, locale: Locale): Promise<BuilderLightbox[]> {
+  const site = await readSiteDocument(siteId, locale);
+  const all = site.lightboxes ?? [];
+  return all.filter((lb) => lb.locale === locale);
+}
+
+export async function findLightboxBySlug(
+  siteId: string,
+  locale: Locale,
+  slug: string,
+): Promise<BuilderLightbox | null> {
+  const list = await listLightboxes(siteId, locale);
+  return list.find((lb) => lb.slug === slug) ?? null;
+}
+
+export async function createLightbox(
+  siteId: string,
+  locale: Locale,
+  slug: string,
+  name: string,
+): Promise<BuilderLightbox> {
+  const site = await readSiteDocument(siteId, locale);
+  if (!site.lightboxes) site.lightboxes = [];
+  const lb = createDefaultLightbox(locale, slug, name);
+  site.lightboxes.push(lb);
+  site.updatedAt = new Date().toISOString();
+  await writeSiteDocument(site);
+  return lb;
+}
+
+export async function updateLightbox(
+  siteId: string,
+  locale: Locale,
+  id: string,
+  patch: Partial<Omit<BuilderLightbox, 'id' | 'createdAt'>>,
+): Promise<BuilderLightbox | null> {
+  const site = await readSiteDocument(siteId, locale);
+  if (!site.lightboxes) site.lightboxes = [];
+  const index = site.lightboxes.findIndex((lb) => lb.id === id);
+  if (index === -1) return null;
+  const next: BuilderLightbox = {
+    ...site.lightboxes[index],
+    ...patch,
+    id: site.lightboxes[index].id,
+    createdAt: site.lightboxes[index].createdAt,
+    updatedAt: new Date().toISOString(),
+  };
+  site.lightboxes[index] = next;
+  site.updatedAt = new Date().toISOString();
+  await writeSiteDocument(site);
+  return next;
+}
+
+export async function deleteLightbox(
+  siteId: string,
+  locale: Locale,
+  id: string,
+): Promise<boolean> {
+  const site = await readSiteDocument(siteId, locale);
+  if (!site.lightboxes) return false;
+  const before = site.lightboxes.length;
+  site.lightboxes = site.lightboxes.filter((lb) => lb.id !== id);
+  if (site.lightboxes.length === before) return false;
+  site.updatedAt = new Date().toISOString();
+  await writeSiteDocument(site);
+  return true;
+}
+
+// ─── Lightbox canvas (single variant — saved = published) ─────────
+
+function lightboxPathname(siteId: string, lightboxId: string): string {
+  return `${BLOB_PREFIX}/${normalizeBuilderSiteId(siteId)}/lightboxes/${lightboxId}.json`;
+}
+
+export async function readLightboxCanvas(
+  siteId: string,
+  lightboxId: string,
+): Promise<BuilderCanvasDocument | null> {
+  const pn = lightboxPathname(siteId, lightboxId);
+  if (isBlobBackend()) {
+    try {
+      const result = await get(pn, { access: 'private', useCache: false });
+      if (result?.statusCode === 200 && result.stream) {
+        const text = await new Response(result.stream).text();
+        return JSON.parse(text) as BuilderCanvasDocument;
+      }
+    } catch { /* fallthrough */ }
+  } else {
+    try {
+      const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
+      const text = await readFile(filePath, 'utf8');
+      return JSON.parse(text) as BuilderCanvasDocument;
+    } catch { /* fallthrough */ }
+  }
+  return null;
+}
+
+export async function writeLightboxCanvas(
+  siteId: string,
+  lightboxId: string,
+  doc: BuilderCanvasDocument,
+): Promise<void> {
+  const pn = lightboxPathname(siteId, lightboxId);
+  const json = JSON.stringify(doc);
+  if (isBlobBackend()) {
+    await put(pn, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
+  } else {
+    const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
+    await mkdir(path.dirname(filePath), { recursive: true });
+    await writeFile(filePath, json, 'utf8');
+  }
+}
+
+// ─── Global header / footer canvas (single variant — saved = published) ───
+//
+// Mirrors the lightbox pattern: site doc holds an ID reference under
+// `headerFooter.headerCanvasId` / `footerCanvasId`, the actual canvas JSON
+// is stored alongside lightboxes/pages under `${BLOB_PREFIX}/${siteId}/global/`.
+//
+// For v1 we use fixed IDs (`global-header` / `global-footer`); the schema
+// already supports per-locale overrides for future expansion.
+
+export const GLOBAL_HEADER_CANVAS_ID = 'global-header';
+export const GLOBAL_FOOTER_CANVAS_ID = 'global-footer';
+
+function globalCanvasPathname(siteId: string, slot: 'header' | 'footer'): string {
+  return `${BLOB_PREFIX}/${normalizeBuilderSiteId(siteId)}/global/${slot}.json`;
+}
+
+async function readGlobalCanvas(
+  siteId: string,
+  slot: 'header' | 'footer',
+): Promise<BuilderCanvasDocument | null> {
+  const pn = globalCanvasPathname(siteId, slot);
+  if (isBlobBackend()) {
+    try {
+      const result = await get(pn, { access: 'private', useCache: false });
+      if (result?.statusCode === 200 && result.stream) {
+        const text = await new Response(result.stream).text();
+        return JSON.parse(text) as BuilderCanvasDocument;
+      }
+    } catch { /* fallthrough */ }
+  } else {
+    try {
+      const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
+      const text = await readFile(filePath, 'utf8');
+      return JSON.parse(text) as BuilderCanvasDocument;
+    } catch { /* fallthrough */ }
+  }
+  return null;
+}
+
+async function writeGlobalCanvas(
+  siteId: string,
+  slot: 'header' | 'footer',
+  doc: BuilderCanvasDocument,
+): Promise<void> {
+  const pn = globalCanvasPathname(siteId, slot);
+  const json = JSON.stringify(doc);
+  if (isBlobBackend()) {
+    await put(pn, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
+  } else {
+    const filePath = path.join(localRoot(), pn.replace(`${BLOB_PREFIX}/`, ''));
+    await mkdir(path.dirname(filePath), { recursive: true });
+    await writeFile(filePath, json, 'utf8');
+  }
+}
+
+export async function readHeaderCanvas(siteId: string): Promise<BuilderCanvasDocument | null> {
+  return readGlobalCanvas(siteId, 'header');
+}
+
+export async function writeHeaderCanvas(siteId: string, doc: BuilderCanvasDocument): Promise<void> {
+  await writeGlobalCanvas(siteId, 'header', doc);
+}
+
+export async function readFooterCanvas(siteId: string): Promise<BuilderCanvasDocument | null> {
+  return readGlobalCanvas(siteId, 'footer');
+}
+
+export async function writeFooterCanvas(siteId: string, doc: BuilderCanvasDocument): Promise<void> {
+  await writeGlobalCanvas(siteId, 'footer', doc);
+}
+
+/**
+ * Ensure `site.headerFooter.headerCanvasId` / `footerCanvasId` reference the
+ * fixed global IDs. Idempotent — only writes the site doc when an ID changes.
+ * Returns `true` if the site doc was modified.
+ */
+export async function ensureGlobalHeaderFooterIds(
+  siteId: string,
+  locale: Locale,
+): Promise<boolean> {
+  const site = await readSiteDocument(siteId, locale);
+  const current = site.headerFooter ?? {};
+  const wantHeader = typeof current.headerCanvasId === 'string'
+    ? current.headerCanvasId
+    : undefined;
+  const wantFooter = typeof current.footerCanvasId === 'string'
+    ? current.footerCanvasId
+    : undefined;
+
+  let changed = false;
+  const next = { ...current };
+
+  if (wantHeader !== GLOBAL_HEADER_CANVAS_ID) {
+    next.headerCanvasId = GLOBAL_HEADER_CANVAS_ID;
+    changed = true;
+  }
+  if (wantFooter !== GLOBAL_FOOTER_CANVAS_ID) {
+    next.footerCanvasId = GLOBAL_FOOTER_CANVAS_ID;
+    changed = true;
+  }
+
+  if (changed) {
+    site.headerFooter = next;
+    site.updatedAt = new Date().toISOString();
+    await writeSiteDocument(site);
+  }
+  return changed;
+}
+
+// ─── Section library CRUD ────────────────────────────────────────
+//
+// Sections are stored inline on the site document under `sectionLibrary`.
+// Wix Studio "Saved Sections" parity — a user designs a container +
+// descendants once and reuses it across pages.
+
+export async function listSections(siteId: string, locale: Locale): Promise<SavedSection[]> {
+  const site = await readSiteDocument(siteId, locale);
+  return site.sectionLibrary ?? [];
+}
+
+export async function findSection(
+  siteId: string,
+  locale: Locale,
+  sectionId: string,
+): Promise<SavedSection | null> {
+  const list = await listSections(siteId, locale);
+  return list.find((s) => s.sectionId === sectionId) ?? null;
+}
+
+export async function createSection(
+  siteId: string,
+  locale: Locale,
+  input: {
+    name: string;
+    description?: string;
+    category?: SavedSectionCategory;
+    thumbnail?: string;
+    rootNodeId: string;
+    nodes: BuilderCanvasNode[];
+  },
+): Promise<SavedSection> {
+  const site = await readSiteDocument(siteId, locale);
+  if (!site.sectionLibrary) site.sectionLibrary = [];
+  const now = new Date().toISOString();
+  const section: SavedSection = {
+    sectionId: generateSavedSectionId(),
+    name: input.name,
+    description: input.description,
+    category: input.category,
+    thumbnail: input.thumbnail,
+    rootNodeId: input.rootNodeId,
+    nodes: input.nodes,
+    createdAt: now,
+    updatedAt: now,
+    usage: 0,
+  };
+  site.sectionLibrary.push(section);
+  site.updatedAt = now;
+  await writeSiteDocument(site);
+  return section;
+}
+
+export async function updateSection(
+  siteId: string,
+  locale: Locale,
+  sectionId: string,
+  patch: Partial<Omit<SavedSection, 'sectionId' | 'createdAt' | 'nodes' | 'rootNodeId'>>,
+): Promise<SavedSection | null> {
+  const site = await readSiteDocument(siteId, locale);
+  if (!site.sectionLibrary) site.sectionLibrary = [];
+  const index = site.sectionLibrary.findIndex((s) => s.sectionId === sectionId);
+  if (index === -1) return null;
+  const existing = site.sectionLibrary[index];
+  const next: SavedSection = {
+    ...existing,
+    ...patch,
+    sectionId: existing.sectionId,
+    createdAt: existing.createdAt,
+    nodes: existing.nodes,
+    rootNodeId: existing.rootNodeId,
+    updatedAt: new Date().toISOString(),
+  };
+  site.sectionLibrary[index] = next;
+  site.updatedAt = new Date().toISOString();
+  await writeSiteDocument(site);
+  return next;
+}
+
+export async function incrementSectionUsage(
+  siteId: string,
+  locale: Locale,
+  sectionId: string,
+): Promise<SavedSection | null> {
+  const site = await readSiteDocument(siteId, locale);
+  if (!site.sectionLibrary) return null;
+  const index = site.sectionLibrary.findIndex((s) => s.sectionId === sectionId);
+  if (index === -1) return null;
+  const existing = site.sectionLibrary[index];
+  const next: SavedSection = {
+    ...existing,
+    usage: (existing.usage ?? 0) + 1,
+    updatedAt: new Date().toISOString(),
+  };
+  site.sectionLibrary[index] = next;
+  site.updatedAt = new Date().toISOString();
+  await writeSiteDocument(site);
+  return next;
+}
+
+export async function deleteSection(
+  siteId: string,
+  locale: Locale,
+  sectionId: string,
+): Promise<boolean> {
+  const site = await readSiteDocument(siteId, locale);
+  if (!site.sectionLibrary) return false;
+  const before = site.sectionLibrary.length;
+  site.sectionLibrary = site.sectionLibrary.filter((s) => s.sectionId !== sectionId);
+  if (site.sectionLibrary.length === before) return false;
+  site.updatedAt = new Date().toISOString();
+  await writeSiteDocument(site);
+  return true;
 }
 
 // ─── Publish ──────────────────────────────────────────────────────

@@ -11,6 +11,11 @@ import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorP
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import { BuilderThemeProvider } from '@/components/builder/editor/BuilderThemeContext';
 import SeoPanel from '@/components/builder/canvas/SeoPanel';
+import ShortcutsHelpModal from '@/components/builder/canvas/ShortcutsHelpModal';
+import MoveToPageModal from '@/components/builder/canvas/MoveToPageModal';
+import SaveSectionModal, { type SaveSectionPayload } from '@/components/builder/sections/SaveSectionModal';
+import { insertSavedSection } from '@/lib/builder/sections/insertSection';
+import { getCanvasNodeDescendantIds } from '@/lib/builder/canvas/tree';
 import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
 import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
 import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
@@ -20,7 +25,7 @@ import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
-import { DEFAULT_THEME, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
+import { DEFAULT_THEME, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
 import { collectThemeFontFamilies } from '@/lib/builder/site/theme';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
@@ -44,10 +49,67 @@ type BuilderPageSummary = {
 
 type ToastTone = 'success' | 'error';
 
+interface DraftMeta {
+  revision: number;
+  savedAt: string;
+  updatedBy?: string;
+}
+
+interface DraftConflict {
+  revision: number;
+  savedAt?: string;
+}
+
 interface SandboxToast {
   id: string;
   message: string;
   tone: ToastTone;
+}
+
+interface DraftResponseBody {
+  draft?: DraftMeta;
+  document?: BuilderCanvasDocument;
+  snapshot?: { document?: BuilderCanvasDocument };
+}
+
+const conflictBannerStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 12,
+  padding: '10px 16px',
+  borderBottom: '1px solid #fecaca',
+  background: '#fef2f2',
+  color: '#991b1b',
+  fontSize: '0.84rem',
+  fontWeight: 600,
+};
+
+const conflictReloadButtonStyle: React.CSSProperties = {
+  flexShrink: 0,
+  border: '1px solid #991b1b',
+  borderRadius: 6,
+  background: '#fff',
+  color: '#991b1b',
+  cursor: 'pointer',
+  fontSize: '0.78rem',
+  fontWeight: 700,
+  padding: '6px 10px',
+};
+
+async function fetchSiteDraft(
+  pageId: string,
+  locale: Locale,
+): Promise<{ draft: DraftMeta | null; document: BuilderCanvasDocument | null } | null> {
+  const response = await fetch(
+    `/api/builder/site/pages/${encodeURIComponent(pageId)}/draft?locale=${locale}`,
+    { credentials: 'same-origin' },
+  );
+  if (!response.ok) return null;
+  const data = (await response.json()) as DraftResponseBody;
+  const document = data.snapshot?.document ?? data.document ?? null;
+  const draft = data.draft ?? (document ? { revision: 0, savedAt: document.updatedAt } : null);
+  return { draft, document };
 }
 
 export default function SandboxPage({
@@ -78,14 +140,20 @@ export default function SandboxPage({
     selectedNodeId,
     selectedNodeIds,
     draftSaveState,
+    mutationBaseDocument,
     replaceDocument,
     setDraftSaveState,
     updateNodeContent,
+    setViewport: setStoreViewport,
   } = useBuilderCanvasStore();
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
   const [toasts, setToasts] = useState<SandboxToast[]>([]);
   const previousDraftSaveStateRef = useRef(draftSaveState);
   const saveBadgeTimerRef = useRef<number | null>(null);
+  const initialDraftLoadedRef = useRef(false);
+  const [syncedUpdatedAt, setSyncedUpdatedAt] = useState(initialDocument.updatedAt);
+  const [draftMeta, setDraftMeta] = useState<DraftMeta | null>(null);
+  const [draftConflict, setDraftConflict] = useState<DraftConflict | null>(null);
   const [viewport, setViewport] = useState<ViewportMode>('desktop');
   const [publishOpen, setPublishOpen] = useState(false);
   const [seoOpen, setSeoOpen] = useState(false);
@@ -97,18 +165,55 @@ export default function SandboxPage({
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
+  const [helpOpen, setHelpOpen] = useState(false);
+  const [movePickerNodeIds, setMovePickerNodeIds] = useState<string[] | null>(null);
+  const [saveSectionPayload, setSaveSectionPayload] = useState<SaveSectionPayload | null>(null);
+  const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
+  const addNodes = useBuilderCanvasStore((state) => state.addNodes);
 
-  function pushToast(message: string, tone: ToastTone) {
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const handler = () => setHelpOpen((prev) => !prev);
+    window.document.addEventListener('builder:show-help', handler);
+    return () => window.document.removeEventListener('builder:show-help', handler);
+  }, []);
+
+  const pushToast = useCallback((message: string, tone: ToastTone) => {
     const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
     setToasts((currentToasts) => [...currentToasts, { id, message, tone }]);
     window.setTimeout(() => {
       setToasts((currentToasts) => currentToasts.filter((toast) => toast.id !== id));
     }, TOAST_TTL_MS);
-  }
+  }, []);
 
   useEffect(() => {
     replaceDocument(initialDocument);
+    setSyncedUpdatedAt(initialDocument.updatedAt);
   }, [initialDocument, replaceDocument]);
+
+  const loadDraft = useCallback(
+    async (pageId: string, nextLocale: Locale): Promise<boolean> => {
+      const payload = await fetchSiteDraft(pageId, nextLocale);
+      if (!payload?.document) return false;
+      replaceDocument(payload.document);
+      setSyncedUpdatedAt(payload.document.updatedAt);
+      setDraftMeta(payload.draft);
+      setDraftConflict(null);
+      setDraftSaveState('idle');
+      return true;
+    },
+    [replaceDocument, setDraftSaveState],
+  );
+
+  useEffect(() => {
+    if (!activePageId || initialDraftLoadedRef.current) return;
+    initialDraftLoadedRef.current = true;
+    void loadDraft(activePageId, locale);
+  }, [activePageId, loadDraft, locale]);
+
+  useEffect(() => {
+    setStoreViewport(viewport);
+  }, [viewport, setStoreViewport]);
 
   useEffect(() => {
     setSiteSettingsState(siteSettings);
@@ -126,9 +231,89 @@ export default function SandboxPage({
     setCurrentSlugState(currentSlug ?? '');
   }, [currentSlug]);
 
+  const saveDraftDocument = useCallback(
+    async (nextDocument: BuilderCanvasDocument): Promise<boolean> => {
+      if (!activePageId) {
+        const response = await fetch(`/api/builder/sandbox/draft?locale=${locale}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'same-origin',
+          body: JSON.stringify({ document: nextDocument }),
+        });
+        if (!response.ok) return false;
+        setSyncedUpdatedAt(nextDocument.updatedAt);
+        setDraftSaveState('saved');
+        return true;
+      }
+
+      const putDraft = (expectedRevision: number | undefined) =>
+        fetch(`/api/builder/site/pages/${activePageId}/draft?locale=${locale}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'same-origin',
+          body: JSON.stringify({
+            expectedRevision,
+            document: nextDocument,
+          }),
+        });
+
+      let response = await putDraft(draftMeta?.revision);
+
+      if (response.status === 428) {
+        const latest = await fetchSiteDraft(activePageId, locale);
+        if (!latest?.draft) return false;
+        setDraftMeta(latest.draft);
+        response = await putDraft(latest.draft.revision);
+      }
+
+      if (response.status === 409) {
+        const data = (await response.json().catch(() => ({}))) as {
+          current?: { revision?: number; savedAt?: string };
+        };
+        const currentRevision = data.current?.revision;
+        if (typeof currentRevision === 'number') {
+          const current = {
+            revision: currentRevision,
+            savedAt: data.current?.savedAt,
+          };
+          setDraftMeta({
+            revision: current.revision,
+            savedAt: current.savedAt ?? draftMeta?.savedAt ?? new Date().toISOString(),
+          });
+          setDraftConflict(current);
+        } else {
+          setDraftConflict({ revision: draftMeta?.revision ?? 0 });
+        }
+        setDraftSaveState('error');
+        pushToast('Draft conflict — 다른 탭에서 저장됨', 'error');
+        return false;
+      }
+
+      if (!response.ok) return false;
+
+      const data = (await response.json()) as DraftResponseBody;
+      if (data.draft) setDraftMeta(data.draft);
+      if (data.document) {
+        setSyncedUpdatedAt(data.document.updatedAt);
+      } else {
+        setSyncedUpdatedAt(nextDocument.updatedAt);
+      }
+      setDraftConflict(null);
+      setDraftSaveState('saved');
+      return true;
+    },
+    [activePageId, draftMeta?.revision, draftMeta?.savedAt, locale, pushToast, setDraftSaveState],
+  );
+
   useEffect(() => {
     if (!document) return undefined;
-    if (document.updatedAt === initialDocument.updatedAt) return undefined;
+    if (mutationBaseDocument) return undefined;
+    if (draftConflict) return undefined;
+    if (document.updatedAt === syncedUpdatedAt) return undefined;
 
     if (saveBadgeTimerRef.current) {
       window.clearTimeout(saveBadgeTimerRef.current);
@@ -137,29 +322,24 @@ export default function SandboxPage({
     setDraftSaveState('saving');
     const timer = window.setTimeout(async () => {
       try {
-        const saveUrl = activePageId
-          ? `/api/builder/site/pages/${activePageId}/draft?locale=${locale}`
-          : `/api/builder/sandbox/draft?locale=${locale}`;
-        const response = await fetch(saveUrl, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          credentials: 'same-origin',
-          body: JSON.stringify({ document }),
-        });
-        if (!response.ok) {
+        const saved = await saveDraftDocument(document);
+        if (!saved) {
           setDraftSaveState('error');
-          return;
         }
-        setDraftSaveState('saved');
       } catch {
         setDraftSaveState('error');
       }
     }, AUTOSAVE_DEBOUNCE_MS);
 
     return () => window.clearTimeout(timer);
-  }, [document, initialDocument.updatedAt, locale, setDraftSaveState, activePageId]);
+  }, [
+    document,
+    draftConflict,
+    mutationBaseDocument,
+    saveDraftDocument,
+    setDraftSaveState,
+    syncedUpdatedAt,
+  ]);
 
   const selectedNode = useMemo(
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
@@ -201,7 +381,7 @@ export default function SandboxPage({
       }, SAVE_BADGE_TTL_MS);
     }
     previousDraftSaveStateRef.current = draftSaveState;
-  }, [draftSaveState, setDraftSaveState]);
+  }, [draftSaveState, pushToast, setDraftSaveState]);
 
   useEffect(() => () => {
     if (saveBadgeTimerRef.current) {
@@ -211,20 +391,11 @@ export default function SandboxPage({
 
   const handleLocaleChange = useCallback(async (newLocale: Locale, linkedPageId: string | null) => {
     if (linkedPageId) {
-      // Load the linked page's document
       try {
-        const response = await fetch(
-          `/api/builder/site/pages/${linkedPageId}/draft?locale=${newLocale}`,
-          { credentials: 'same-origin' },
-        );
-        if (response.ok) {
-          const data = (await response.json()) as { snapshot?: { document?: BuilderCanvasDocument }; document?: BuilderCanvasDocument };
-          const doc = data.snapshot?.document || data.document;
-          if (doc) {
-            replaceDocument(doc);
-            setActivePageId(linkedPageId);
-            pushToast(`Switched to ${newLocale}`, 'success');
-          }
+        const loaded = await loadDraft(linkedPageId, newLocale);
+        if (loaded) {
+          setActivePageId(linkedPageId);
+          pushToast(`Switched to ${newLocale}`, 'success');
         }
       } catch {
         pushToast('Failed to switch locale', 'error');
@@ -232,7 +403,7 @@ export default function SandboxPage({
     } else {
       pushToast(`No linked page for ${newLocale}`, 'error');
     }
-  }, [replaceDocument]);
+  }, [loadDraft, pushToast]);
 
   const handleSelectPage = useCallback(async (pageId: string, nextSlug?: string) => {
     setActivePageId(pageId);
@@ -245,22 +416,14 @@ export default function SandboxPage({
       }
     }
     try {
-      const response = await fetch(
-        `/api/builder/site/pages/${pageId}/draft?locale=${locale}`,
-        { credentials: 'same-origin' },
-      );
-      if (response.ok) {
-        const data = (await response.json()) as { snapshot?: { document?: BuilderCanvasDocument }; document?: BuilderCanvasDocument };
-        const doc = data.snapshot?.document || data.document;
-        if (doc) {
-          replaceDocument(doc);
-          pushToast(`Loaded page: ${pageId}`, 'success');
-        }
+      const loaded = await loadDraft(pageId, locale);
+      if (loaded) {
+        pushToast(`Loaded page: ${pageId}`, 'success');
       }
     } catch {
       pushToast('Failed to load page', 'error');
     }
-  }, [locale, replaceDocument, sitePagesState]);
+  }, [loadDraft, locale, pushToast, sitePagesState]);
 
   const handleHeaderNavigate = useCallback((href: string) => {
     const normalizedHref = normalizeSiteHref(href, locale);
@@ -283,6 +446,67 @@ export default function SandboxPage({
   const toggleDrawer = useCallback((panel: SandboxDrawerPanel) => {
     setActiveDrawer((current) => (current === panel ? null : panel));
   }, []);
+
+  const handleRequestSaveAsSection = useCallback(
+    (rootNodeId: string) => {
+      const allNodes = document?.nodes ?? [];
+      const rootNode = allNodes.find((node) => node.id === rootNodeId);
+      if (!rootNode) {
+        pushToast('선택한 컨테이너를 찾을 수 없습니다.', 'error');
+        return;
+      }
+      const descendantIds = getCanvasNodeDescendantIds(rootNodeId, childrenMap);
+      const collected = [rootNode, ...allNodes.filter((node) => descendantIds.includes(node.id))];
+      const snapshot = collected.map((node) =>
+        node.id === rootNodeId ? { ...node, parentId: undefined } : node,
+      );
+      setSaveSectionPayload({
+        rootNodeId,
+        nodes: snapshot,
+      });
+    },
+    [childrenMap, document?.nodes, pushToast],
+  );
+
+  const handleInsertSavedSection = useCallback(
+    async (sectionId: string, position: { x: number; y: number }) => {
+      try {
+        const response = await fetch(
+          `/api/builder/site/section-library/${sectionId}?locale=${encodeURIComponent(locale)}`,
+          { credentials: 'same-origin' },
+        );
+        if (!response.ok) {
+          pushToast('섹션을 불러오지 못했습니다.', 'error');
+          return;
+        }
+        const data = (await response.json()) as { ok: boolean; section?: SavedSection };
+        if (!data.ok || !data.section) {
+          pushToast('섹션 데이터가 올바르지 않습니다.', 'error');
+          return;
+        }
+        const result = insertSavedSection(data.section, position);
+        if (result.nodes.length === 0) {
+          pushToast('섹션을 삽입할 수 없습니다.', 'error');
+          return;
+        }
+        addNodes(result.nodes, result.rootNodeId);
+        pushToast(`"${data.section.name}" 섹션을 추가했습니다.`, 'success');
+        void fetch(
+          `/api/builder/site/section-library/${sectionId}?locale=${encodeURIComponent(locale)}`,
+          {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'same-origin',
+            body: JSON.stringify({ incrementUsage: true }),
+          },
+        ).catch(() => undefined);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : '섹션 추가 오류';
+        pushToast(message, 'error');
+      }
+    },
+    [addNodes, locale, pushToast],
+  );
 
   const canvasWrapperStyle: React.CSSProperties = viewportWidth
     ? {
@@ -316,6 +540,27 @@ export default function SandboxPage({
         background: '#f8fafc',
       };
 
+  const handleReloadDraftAfterConflict = useCallback(async () => {
+    if (!activePageId) return;
+    const loaded = await loadDraft(activePageId, locale);
+    if (loaded) {
+      pushToast('최신 draft를 불러왔습니다.', 'success');
+    } else {
+      pushToast('최신 draft를 불러오지 못했습니다.', 'error');
+    }
+  }, [activePageId, loadDraft, locale, pushToast]);
+
+  const handlePublishDraftSaved = useCallback(
+    (nextDraftMeta: DraftMeta, savedDocument?: BuilderCanvasDocument) => {
+      setDraftMeta(nextDraftMeta);
+      if (savedDocument) {
+        setSyncedUpdatedAt(savedDocument.updatedAt);
+      }
+      setDraftConflict(null);
+    },
+    [],
+  );
+
   return (
     <BuilderThemeProvider value={siteThemeState}>
       <main className={styles.shell}>
@@ -342,6 +587,21 @@ export default function SandboxPage({
         activePageId={activePageId}
         onLocaleChange={handleLocaleChange}
       />
+
+        {draftConflict ? (
+          <div style={conflictBannerStyle} role="alert">
+            <span>
+              Conflict — 다른 탭에서 저장됨. 새로고침해서 최신본을 가져오거나, 변경사항을 다른 곳에 백업한 뒤 reload 하세요.
+            </span>
+            <button
+              type="button"
+              style={conflictReloadButtonStyle}
+              onClick={handleReloadDraftAfterConflict}
+            >
+              새로고침
+            </button>
+          </div>
+        ) : null}
 
         <section className={styles.editorShell}>
         <div className={styles.iconRail}>
@@ -423,7 +683,7 @@ export default function SandboxPage({
 
           {activeDrawer === 'add' ? (
             <div className={styles.drawerBody}>
-              <SandboxCatalogPanel />
+              <SandboxCatalogPanel locale={locale} />
             </div>
           ) : null}
 
@@ -501,7 +761,15 @@ export default function SandboxPage({
             </div>
           ) : null}
           <div style={{ ...canvasWrapperStyle, flex: '0 0 auto', minHeight: document?.stageHeight ?? 880 }}>
-            <CanvasContainer onRequestAssetLibrary={setAssetLibraryNodeId} />
+            <CanvasContainer
+              onRequestAssetLibrary={setAssetLibraryNodeId}
+              onRequestMoveToPage={(nodeIds) => setMovePickerNodeIds(nodeIds)}
+              onRequestSaveAsSection={handleRequestSaveAsSection}
+              onRequestInsertSavedSection={(sectionId, position) => {
+                void handleInsertSavedSection(sectionId, position);
+              }}
+              onToast={pushToast}
+            />
           </div>
           {siteName ? (
             <div style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderTop: '1px solid #e5e7eb' }}>
@@ -546,6 +814,8 @@ export default function SandboxPage({
           document={document}
           locale={locale}
           activePageId={activePageId}
+          draftMeta={draftMeta}
+          onDraftSaved={handlePublishDraftSaved}
           onClose={() => setPublishOpen(false)}
         />
 
@@ -570,8 +840,63 @@ export default function SandboxPage({
           open={historyOpen}
           pageId={activePageId ?? ''}
           siteId="default"
+          draftMeta={draftMeta}
           onClose={() => setHistoryOpen(false)}
         />
+
+        {helpOpen ? <ShortcutsHelpModal onClose={() => setHelpOpen(false)} /> : null}
+
+        {saveSectionPayload ? (
+          <SaveSectionModal
+            payload={saveSectionPayload}
+            locale={locale}
+            onClose={() => setSaveSectionPayload(null)}
+            onSaved={(section) => {
+              setSaveSectionPayload(null);
+              pushToast(`"${section.name}" 섹션을 저장했습니다.`, 'success');
+              if (typeof window !== 'undefined') {
+                window.dispatchEvent(new CustomEvent('builder:saved-section-changed'));
+              }
+            }}
+          />
+        ) : null}
+
+        {movePickerNodeIds && activePageId ? (
+          <MoveToPageModal
+            pages={sitePagesState.map((page) => ({
+              pageId: page.pageId,
+              slug: page.slug,
+              isHomePage: page.isHomePage,
+            }))}
+            currentPageId={activePageId}
+            sourceNodeIds={movePickerNodeIds}
+            locale={locale}
+            onClose={() => setMovePickerNodeIds(null)}
+            onMoved={async (result) => {
+              setMovePickerNodeIds(null);
+              try {
+                const response = await fetch(
+                  `/api/builder/site/pages/${activePageId}/draft?locale=${locale}`,
+                  { credentials: 'same-origin' },
+                );
+                if (response.ok) {
+                  const data = (await response.json()) as DraftResponseBody;
+                  if (data.draft) setDraftMeta(data.draft);
+                  if (data.document) {
+                    replaceDocument(data.document);
+                    setSyncedUpdatedAt(data.document.updatedAt);
+                  }
+                }
+              } catch {
+                // best effort: server already moved nodes; user can refresh manually
+              }
+              pushToast(
+                `${result.movedCount}개 요소를 /${result.targetSlug}(으)로 이동했습니다`,
+                'success',
+              );
+            }}
+          />
+        ) : null}
 
         <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
           {toasts.map((toast) => (

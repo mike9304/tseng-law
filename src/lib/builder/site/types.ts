@@ -51,6 +51,10 @@ export interface BuilderPageMeta {
   createdAt: string;
   updatedAt: string;
   publishedAt?: string;
+  publishedRevisionId?: string;
+  publishedRevision?: number;
+  publishedSavedAt?: string;
+  lastPublishedDraftRevision?: number;
   isHomePage?: boolean;
   noIndex?: boolean;
   password?: string;
@@ -299,4 +303,27 @@ export interface PageCanvasRecord {
   savedAt: string;
   updatedBy?: string;
   document: import('@/lib/builder/canvas/types').BuilderCanvasDocument;
+}
+
+// Wave 3 / E3 — brand-kit assets and public dark mode runtime.
+// Appended via interface merging to keep existing exported shapes stable.
+export interface BrandKitAssets {
+  logoLightAssetId?: string;
+  logoDarkAssetId?: string;
+  faviconAssetId?: string;
+  ogImageAssetId?: string;
+}
+
+export interface DarkModeConfig {
+  defaultMode?: 'light' | 'dark' | 'auto';
+  allowVisitorToggle?: boolean;
+}
+
+export interface BuilderSiteSettings {
+  ogImage?: string;
+  assets?: BrandKitAssets;
+}
+
+export interface BuilderSiteDocument {
+  darkMode?: DarkModeConfig;
 }

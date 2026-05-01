@@ -2,7 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
-import { DEFAULT_THEME, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
+import {
+  DEFAULT_THEME,
+  type BrandKitAssets,
+  type BuilderSiteSettings,
+  type BuilderTheme,
+  type DarkModeConfig,
+} from '@/lib/builder/site/types';
 import {
   THEME_COLOR_TOKENS,
   THEME_TEXT_PRESET_KEYS,
@@ -24,6 +30,23 @@ const optionalTrimmedString = (max: number) =>
     z.string().max(max).optional(),
   );
 
+const builderAssetIdSchema = z.string()
+  .trim()
+  .regex(/^(?:builder\/assets|\/api\/builder\/assets)\/(?:ko|en|zh-hant)\/[^/?#\\]+$/)
+  .max(2000);
+
+const brandKitAssetsSchema = z.object({
+  logoLightAssetId: builderAssetIdSchema.optional(),
+  logoDarkAssetId: builderAssetIdSchema.optional(),
+  faviconAssetId: builderAssetIdSchema.optional(),
+  ogImageAssetId: builderAssetIdSchema.optional(),
+}).strict();
+
+const darkModeSchema = z.object({
+  defaultMode: z.enum(['light', 'dark', 'auto']).optional(),
+  allowVisitorToggle: z.boolean().optional(),
+}).strict();
+
 const siteSettingsSchema = z.object({
   firmName: optionalTrimmedString(200),
   phone: optionalTrimmedString(80),
@@ -34,6 +57,8 @@ const siteSettingsSchema = z.object({
   logo: optionalTrimmedString(2000),
   logoDark: optionalTrimmedString(2000),
   favicon: optionalTrimmedString(2000),
+  ogImage: optionalTrimmedString(2000),
+  assets: brandKitAssetsSchema.optional(),
 }).strict();
 
 const themeColorValueSchema = z.union([
@@ -85,6 +110,7 @@ const siteThemeSchema = z.object({
 const settingsPayloadSchema = z.object({
   settings: siteSettingsSchema.optional(),
   theme: siteThemeSchema.optional(),
+  darkMode: darkModeSchema.optional(),
 }).strict();
 
 function validationErrorResponse(error: ZodError): NextResponse {
@@ -101,11 +127,55 @@ function validationErrorResponse(error: ZodError): NextResponse {
 function sanitizeSettings(settings?: BuilderSiteSettings): BuilderSiteSettings | undefined {
   if (!settings) return undefined;
 
-  const nextSettings = Object.fromEntries(
-    Object.entries(settings).filter(([, value]) => typeof value === 'string' && value.trim().length > 0),
-  ) as BuilderSiteSettings;
+  const nextSettings: BuilderSiteSettings = {};
+  const stringKeys = [
+    'favicon',
+    'logo',
+    'logoDark',
+    'firmName',
+    'phone',
+    'email',
+    'address',
+    'businessHours',
+    'businessRegNumber',
+    'ogImage',
+  ] as const;
+
+  for (const key of stringKeys) {
+    const value = settings[key];
+    if (typeof value === 'string' && value.trim().length > 0) {
+      nextSettings[key] = value.trim();
+    }
+  }
+
+  const assets = sanitizeBrandKitAssets(settings.assets);
+  if (assets) {
+    nextSettings.assets = assets;
+  }
 
   return Object.keys(nextSettings).length > 0 ? nextSettings : undefined;
+}
+
+function sanitizeBrandKitAssets(assets?: BrandKitAssets): BrandKitAssets | undefined {
+  if (!assets) return undefined;
+  const nextAssets: BrandKitAssets = {};
+  for (const key of ['logoLightAssetId', 'logoDarkAssetId', 'faviconAssetId', 'ogImageAssetId'] as const) {
+    const value = assets[key];
+    if (typeof value === 'string' && value.trim().length > 0) {
+      nextAssets[key] = value.trim();
+    }
+  }
+  return Object.keys(nextAssets).length > 0 ? nextAssets : undefined;
+}
+
+function normalizeDarkModeConfig(value?: DarkModeConfig): Required<DarkModeConfig> {
+  const defaultMode = value?.defaultMode === 'dark' || value?.defaultMode === 'auto'
+    ? value.defaultMode
+    : 'light';
+  return {
+    defaultMode,
+    allowVisitorToggle: value?.allowVisitorToggle !== false,
+  };
 }
 
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
@@ -131,6 +201,7 @@ export async function GET(request: NextRequest) {
       ok: true,
       settings: site.settings ?? {},
       theme: mergeTheme(site.theme),
+      darkMode: normalizeDarkModeConfig(site.darkMode),
     });
   } catch (error) {
     if (error instanceof ZodError) return validationErrorResponse(error);
@@ -151,6 +222,7 @@ export async function PUT(request: NextRequest) {
 
     site.settings = payload.settings ? sanitizeSettings(payload.settings) : site.settings;
     site.theme = mergeTheme(payload.theme ?? site.theme);
+    site.darkMode = payload.darkMode ? normalizeDarkModeConfig(payload.darkMode) : site.darkMode;
     site.updatedAt = now;
 
     await writeSiteDocument(site);
@@ -159,6 +231,7 @@ export async function PUT(request: NextRequest) {
       ok: true,
       settings: site.settings ?? {},
       theme: site.theme,
+      darkMode: normalizeDarkModeConfig(site.darkMode),
     });
   } catch (error) {
     if (error instanceof ZodError) return validationErrorResponse(error);

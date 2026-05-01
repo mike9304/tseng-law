@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { BuilderNavItem, BuilderSiteSettings, BuilderTheme } from '@/lib/builder/site/types';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
+import { resolveBrandLogo } from '@/lib/builder/site/theme';
 
 function getLabel(item: BuilderNavItem, locale: Locale): string {
   if (typeof item.label === 'string') return item.label;
@@ -35,7 +36,17 @@ export default function SiteHeader({
   const headingFont = theme?.fonts.heading;
   const bodyFont = theme?.fonts.body;
   const currentPath = buildSitePagePath(locale, currentSlug);
-  const hasDarkLogo = Boolean(settings?.logoDark);
+  const logoLight = resolveBrandLogo({
+    logoLight: settings?.logo,
+    logoDark: settings?.logoDark,
+    assets: settings?.assets,
+  }, 'light');
+  const logoDark = resolveBrandLogo({
+    logoLight: settings?.logo,
+    logoDark: settings?.logoDark,
+    assets: settings?.assets,
+  }, 'dark');
+  const hasDarkLogo = Boolean(logoDark);
 
   const handleNavigate = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!onNavigate || /^(https?:|mailto:|tel:|#)/.test(href)) return;
@@ -65,18 +76,18 @@ export default function SiteHeader({
         onClick={(event) => handleNavigate(event, buildSitePagePath(locale, ''))}
         style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}
       >
-        {settings?.logo && (
+        {logoLight && (
           <img
-            src={settings.logo}
+            src={logoLight}
             alt={siteName}
             className="site-header-logo-light"
             data-has-dark-logo={hasDarkLogo ? 'true' : undefined}
             style={{ height: 32, width: 'auto' }}
           />
         )}
-        {settings?.logoDark && (
+        {logoDark && (
           <img
-            src={settings.logoDark}
+            src={logoDark}
             alt={siteName}
             className="site-header-logo-dark"
             style={{ height: 32, width: 'auto', display: 'none' }}

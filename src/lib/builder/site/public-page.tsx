@@ -8,6 +8,7 @@ import {
   readPageCanvas,
   readSiteDocument,
 } from '@/lib/builder/site/persistence';
+import { readRevisionDocument } from '@/lib/builder/site/publish';
 import { getComponent } from '@/lib/builder/components/registry';
 import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
@@ -30,12 +31,14 @@ import {
   buildHoverTransform,
   collectThemeFontFamilies,
   createDarkColorsFromLight,
+  resolveBuilderBrandAssetUrl,
   resolveBackgroundStyle,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
 import { buildPageSeo } from '@/lib/builder/seo/seo-model';
 import { generateBreadcrumbSchema, generateLegalServiceSchema } from '@/lib/builder/seo/schema-org';
 import { buildStructuredDataPayloads } from '@/lib/builder/seo/structured-data';
+import { linkValueFromLegacy, sanitizeLinkValue } from '@/lib/builder/links';
 import { getSiteUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
@@ -158,6 +161,25 @@ export interface ResolvedPublishedSitePage {
 }
 
 type ParentLayoutMode = 'absolute' | 'flex' | 'grid';
+type ResolvedDarkModeConfig = Required<NonNullable<BuilderSiteDocument['darkMode']>>;
+
+function resolveDarkModeConfig(config: BuilderSiteDocument['darkMode']): ResolvedDarkModeConfig {
+  const defaultMode = config?.defaultMode === 'dark' || config?.defaultMode === 'auto'
+    ? config.defaultMode
+    : 'light';
+  return {
+    defaultMode,
+    allowVisitorToggle: config?.allowVisitorToggle !== false,
+  };
+}
+
+function buildThemeInitScript(
+  defaultMode: ResolvedDarkModeConfig['defaultMode'],
+  allowVisitorToggle: boolean,
+): string {
+  const safeMode = defaultMode === 'dark' ? 'dark' : 'light';
+  return `(function(){try{var saved=${allowVisitorToggle ? "localStorage.getItem('builder-theme')" : 'null'};if(saved!=='light'&&saved!=='dark'){saved=null;}var defaultMode='${defaultMode}';var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;var theme=saved||(defaultMode==='auto'?(prefersDark?'dark':'light'):defaultMode);document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme='${safeMode}';}})();`;
+}
 
 function findPageMeta(site: BuilderSiteDocument, slugPath: string): BuilderPageMeta | undefined {
   const candidates = !slugPath
@@ -172,6 +194,14 @@ function findPageMeta(site: BuilderSiteDocument, slugPath: string): BuilderPageM
   })[0];
 }
 
+async function readPublishedPageCanvas(pageMeta: BuilderPageMeta): Promise<BuilderCanvasDocument | null> {
+  if (pageMeta.publishedRevisionId) {
+    return readRevisionDocument(pageMeta.pageId, pageMeta.publishedRevisionId);
+  }
+
+  return readPageCanvas(DEFAULT_BUILDER_SITE_ID, pageMeta.pageId, 'published');
+}
+
 export async function resolvePublishedSitePage(
   locale: Locale,
   slugPath: string,
@@ -180,7 +210,7 @@ export async function resolvePublishedSitePage(
   const pageMeta = findPageMeta(site, slugPath);
   if (!pageMeta?.publishedAt) return null;
 
-  const canvas = await readPageCanvas(DEFAULT_BUILDER_SITE_ID, pageMeta.pageId, 'published');
+  const canvas = await readPublishedPageCanvas(pageMeta);
   if (!canvas?.nodes?.length) return null;
 
   const allLightboxes = (site.lightboxes ?? []).filter((lb) => lb.locale === locale);
@@ -220,6 +250,9 @@ export async function buildPublishedSitePageMetadata(
 
   const siteUrl = getSiteUrl();
   const seoData = buildPageSeo(resolved.pageMeta, siteUrl, locale, resolved.site.pages);
+  const settings = resolved.site.settings;
+  const favicon = resolveBuilderBrandAssetUrl(settings?.assets?.faviconAssetId) ?? settings?.favicon;
+  const siteOgImage = resolveBuilderBrandAssetUrl(settings?.assets?.ogImageAssetId) ?? settings?.ogImage;
   const languages: Record<string, string> = {};
 
   for (const alt of seoData.hreflang) {
@@ -232,9 +265,10 @@ export async function buildPublishedSitePageMetadata(
     openGraph: {
       title: seoData.title,
       description: seoData.description,
-      images: seoData.ogImage ? [seoData.ogImage] : [],
+      images: seoData.ogImage ? [seoData.ogImage] : siteOgImage ? [siteOgImage] : [],
       siteName: resolved.site.settings?.firmName || resolved.site.name,
     },
+    icons: favicon ? { icon: [favicon] } : undefined,
     robots: seoData.noIndex ? 'noindex,nofollow' : 'index,follow',
     alternates: {
       canonical: seoData.canonical,
@@ -262,6 +296,8 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
   const navItems = site.navigation || [];
   const settings = site.settings;
   const theme = site.theme;
+  const darkModeConfig = resolveDarkModeConfig(site.darkMode);
+  const themeInitScript = buildThemeInitScript(darkModeConfig.defaultMode, darkModeConfig.allowVisitorToggle);
   const darkColors = theme.darkColors ?? createDarkColorsFromLight(theme.colors);
   const cssVarColors: BuilderTheme['colors'] = {
     primary: 'var(--builder-color-primary)',
@@ -368,9 +404,9 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     // Lightbox trigger detection: button with href starting with `lightbox:`
     let lightboxTarget: string | undefined;
     if (node.kind === 'button') {
-      const href = (node.content as { href?: string }).href;
-      if (typeof href === 'string' && href.startsWith('lightbox:')) {
-        lightboxTarget = href.slice('lightbox:'.length).trim();
+      const link = sanitizeLinkValue(linkValueFromLegacy(node.content));
+      if (link?.href.startsWith('lightbox:')) {
+        lightboxTarget = link.href.slice('lightbox:'.length).trim();
       }
     }
 
@@ -458,6 +494,11 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
 
   return (
     <>
+      <script
+        id="builder-theme-init"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: themeInitScript }}
+      />
       <div data-builder-published-page="true" style={{ display: 'none' }} />
       {fontsUrl && (
         <>
@@ -548,7 +589,12 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       {structuredDataPayloads.map((payload) => (
         <JsonLd key={payload.id} data={payload.data} />
       ))}
-      <DarkModeToggle />
+      {darkModeConfig.allowVisitorToggle ? (
+        <DarkModeToggle
+          defaultMode={darkModeConfig.defaultMode}
+          allowVisitorToggle={darkModeConfig.allowVisitorToggle}
+        />
+      ) : null}
       <AnimationsRoot />
       {resolved.headerCanvas ? (
         <GlobalCanvasSection

@@ -1,27 +1,47 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import type { DarkModeConfig } from '@/lib/builder/site/types';
 
 type ThemeMode = 'light' | 'dark';
+type DefaultThemeMode = NonNullable<DarkModeConfig['defaultMode']>;
 
-const STORAGE_KEY = 'builder-published-theme-mode';
+const STORAGE_KEY = 'builder-theme';
 
-function getPreferredMode(): ThemeMode {
+function resolveDefaultMode(defaultMode: DefaultThemeMode): ThemeMode {
+  if (defaultMode === 'dark') return 'dark';
+  if (defaultMode === 'auto') {
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  return 'light';
+}
+
+function getPreferredMode(defaultMode: DefaultThemeMode): ThemeMode {
   if (typeof window === 'undefined') return 'light';
   const stored = window.localStorage.getItem(STORAGE_KEY);
   if (stored === 'light' || stored === 'dark') return stored;
-  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const activeTheme = document.documentElement.dataset.theme;
+  if (activeTheme === 'light' || activeTheme === 'dark') return activeTheme;
+  return resolveDefaultMode(defaultMode);
 }
 
 function applyMode(mode: ThemeMode) {
   document.documentElement.dataset.theme = mode;
 }
 
-export default function DarkModeToggle() {
+export default function DarkModeToggle({
+  defaultMode = 'light',
+  allowVisitorToggle = true,
+}: {
+  defaultMode?: DarkModeConfig['defaultMode'];
+  allowVisitorToggle?: boolean;
+}) {
   const [mode, setMode] = useState<ThemeMode>('light');
+  const resolvedDefaultMode: DefaultThemeMode = defaultMode === 'dark' || defaultMode === 'auto' ? defaultMode : 'light';
 
   useEffect(() => {
-    const initialMode = getPreferredMode();
+    if (!allowVisitorToggle) return undefined;
+    const initialMode = getPreferredMode(resolvedDefaultMode);
     setMode(initialMode);
     applyMode(initialMode);
 
@@ -31,6 +51,7 @@ export default function DarkModeToggle() {
     const handlePreferenceChange = (event: MediaQueryListEvent) => {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored === 'light' || stored === 'dark') return;
+      if (resolvedDefaultMode !== 'auto') return;
       const nextMode = event.matches ? 'dark' : 'light';
       setMode(nextMode);
       applyMode(nextMode);
@@ -38,7 +59,9 @@ export default function DarkModeToggle() {
 
     media.addEventListener('change', handlePreferenceChange);
     return () => media.removeEventListener('change', handlePreferenceChange);
-  }, []);
+  }, [allowVisitorToggle, resolvedDefaultMode]);
+
+  if (!allowVisitorToggle) return null;
 
   const nextMode = mode === 'dark' ? 'light' : 'dark';
 

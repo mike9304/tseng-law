@@ -1,4 +1,5 @@
 import type {
+  BrandKitAssets,
   BuilderSiteSettings,
   BuilderTheme,
   BuilderThemeColors,
@@ -490,6 +491,9 @@ export function normalizeThemeTextPresets(
 export interface BrandKit {
   logoLight?: string;
   logoDark?: string;
+  favicon?: string;
+  ogImage?: string;
+  assets?: BrandKitAssets;
   colors: {
     primary: string;
     secondary: string;
@@ -510,6 +514,18 @@ function optionalString(value: unknown): string | undefined {
   return typeof value === 'string' && value.trim().length > 0 ? value.trim() : undefined;
 }
 
+function normalizeBrandKitAssets(value: unknown, fallback?: BrandKitAssets): BrandKitAssets | undefined {
+  if (!value || typeof value !== 'object') return fallback;
+  const source = value as Record<string, unknown>;
+  const assets: BrandKitAssets = {
+    logoLightAssetId: optionalString(source.logoLightAssetId),
+    logoDarkAssetId: optionalString(source.logoDarkAssetId),
+    faviconAssetId: optionalString(source.faviconAssetId),
+    ogImageAssetId: optionalString(source.ogImageAssetId),
+  };
+  return Object.values(assets).some(Boolean) ? assets : undefined;
+}
+
 function normalizeRadiusScale(value: unknown, fallback: number): number {
   if (typeof value !== 'number' || !Number.isFinite(value)) return fallback;
   return Math.max(0, Math.min(64, Math.round(value)));
@@ -525,6 +541,9 @@ export function createBrandKitFromTheme(
   return {
     logoLight: settings?.logo,
     logoDark: settings?.logoDark,
+    favicon: settings?.favicon,
+    ogImage: settings?.ogImage,
+    assets: settings?.assets,
     colors: {
       primary: colors.primary,
       secondary: colors.secondary,
@@ -557,6 +576,9 @@ export function normalizeBrandKit(value: unknown, fallback?: BrandKit): BrandKit
   return {
     logoLight: optionalString(source.logoLight) ?? fallbackKit.logoLight,
     logoDark: optionalString(source.logoDark) ?? fallbackKit.logoDark,
+    favicon: optionalString(source.favicon) ?? fallbackKit.favicon,
+    ogImage: optionalString(source.ogImage) ?? fallbackKit.ogImage,
+    assets: normalizeBrandKitAssets(source.assets, fallbackKit.assets),
     colors: {
       primary: safeString(colors.primary, fallbackKit.colors.primary),
       secondary: safeString(colors.secondary, fallbackKit.colors.secondary),
@@ -576,6 +598,34 @@ export function normalizeBrandKit(value: unknown, fallback?: BrandKit): BrandKit
         : fallbackKit.metadata?.siteName,
     },
   };
+}
+
+export function resolveBuilderBrandAssetUrl(assetId: string | null | undefined): string | null {
+  if (!assetId) return null;
+  const trimmed = assetId.trim();
+  if (!trimmed) return null;
+  if (/^\/api\/builder\/assets\/(?:ko|en|zh-hant)\/[^/?#\\]+$/i.test(trimmed)) {
+    return trimmed;
+  }
+  const match = /^builder\/assets\/(ko|en|zh-hant)\/([^/?#\\]+)$/i.exec(trimmed);
+  if (match) {
+    return `/api/builder/assets/${match[1]}/${match[2]}`;
+  }
+  return null;
+}
+
+export function resolveBrandLogo(
+  brand: Pick<BrandKit, 'logoLight' | 'logoDark' | 'assets'> | null | undefined,
+  mode: 'light' | 'dark',
+  getAssetUrl: (id: string) => string | null = resolveBuilderBrandAssetUrl,
+): string | null {
+  if (!brand) return null;
+  const id = mode === 'dark' ? brand.assets?.logoDarkAssetId : brand.assets?.logoLightAssetId;
+  if (id) {
+    const url = getAssetUrl(id);
+    if (url) return url;
+  }
+  return mode === 'dark' ? (brand.logoDark ?? null) : (brand.logoLight ?? null);
 }
 
 export function createThemeFromBrandKit(

@@ -25,7 +25,7 @@ import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
-import { DEFAULT_THEME, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
+import { DEFAULT_THEME, type BuilderLightbox, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
 import { collectThemeFontFamilies } from '@/lib/builder/site/theme';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
@@ -123,6 +123,7 @@ export default function SandboxPage({
   navItems,
   currentSlug,
   sitePages,
+  siteLightboxes = [],
 }: {
   initialDocument: BuilderCanvasDocument;
   locale: Locale;
@@ -134,6 +135,7 @@ export default function SandboxPage({
   navItems?: BuilderNavItem[];
   currentSlug?: string;
   sitePages?: BuilderPageSummary[];
+  siteLightboxes?: BuilderLightbox[];
 }) {
   const {
     document,
@@ -344,6 +346,17 @@ export default function SandboxPage({
   const selectedNode = useMemo(
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [document, selectedNodeId],
+  );
+  const linkPickerLightboxes = useMemo(
+    () =>
+      siteLightboxes
+        .filter((lightbox) => lightbox.locale === locale)
+        .map((lightbox) => ({
+          id: lightbox.id,
+          slug: lightbox.slug,
+          name: lightbox.name,
+        })),
+    [locale, siteLightboxes],
   );
   const hasSelection = selectedNodeIds.length > 0;
   const assetLibraryNode = useMemo(
@@ -769,6 +782,7 @@ export default function SandboxPage({
                 void handleInsertSavedSection(sectionId, position);
               }}
               onToast={pushToast}
+              siteLightboxes={linkPickerLightboxes}
             />
           </div>
           {siteName ? (
@@ -791,6 +805,7 @@ export default function SandboxPage({
                   setAssetLibraryNodeId(selectedNode.id);
                 }
               }}
+              siteLightboxes={linkPickerLightboxes}
             />
           ) : null}
         </div>
@@ -816,6 +831,7 @@ export default function SandboxPage({
           activePageId={activePageId}
           draftMeta={draftMeta}
           onDraftSaved={handlePublishDraftSaved}
+          onToast={pushToast}
           onClose={() => setPublishOpen(false)}
         />
 

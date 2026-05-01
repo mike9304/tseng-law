@@ -16,6 +16,7 @@ import {
   HOVER_ANIMATION_PRESET_KEYS,
   SCROLL_EFFECT_KEYS,
 } from '@/lib/builder/animations/presets';
+import { linkValueSchema } from '@/lib/builder/links';
 import { createBuilderRichTextSchema } from '@/lib/builder/rich-text/types';
 const imageFiltersSchema = z.object({
   brightness: z.number().min(0).max(200),
@@ -210,7 +211,7 @@ export const builderCanvasNodeStyleSchema = z.object({
   borderColor: builderColorValueSchema,
   borderStyle: z.enum(['solid', 'dashed']),
   borderWidth: z.number().int().min(0).max(12),
-  borderRadius: z.number().int().min(0).max(64),
+  borderRadius: z.number().int().min(0).max(9999),
   shadowX: z.number().int().min(-96).max(96),
   shadowY: z.number().int().min(-96).max(96),
   shadowBlur: z.number().int().min(0).max(160),
@@ -336,6 +337,7 @@ const imageCanvasNodeSchema = baseCanvasNodeSchema.extend({
     fit: z.enum(['cover', 'contain']),
     cropAspect: z.string().max(20).optional(),
     filters: imageFiltersSchema,
+    link: linkValueSchema.nullish(),
   }),
 });
 
@@ -350,6 +352,9 @@ const buttonCanvasNodeSchema = baseCanvasNodeSchema.extend({
     rawInlineStyle: z.boolean().optional(),
     target: z.enum(['_self', '_blank', '_parent', '_top']).optional(),
     rel: z.string().max(120).optional(),
+    title: z.string().max(200).optional(),
+    ariaLabel: z.string().max(200).optional(),
+    link: linkValueSchema.nullish(),
   }),
 });
 
@@ -417,6 +422,7 @@ const containerCanvasNodeSchema = baseCanvasNodeSchema.extend({
     rawInlineStyle: z.boolean().optional(),
     cardStyle: z.string().max(64).optional(),
     variant: cardVariantKeySchema.optional(),
+    link: linkValueSchema.nullish(),
   }),
 });
 

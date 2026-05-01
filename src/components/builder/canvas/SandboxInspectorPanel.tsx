@@ -5,6 +5,7 @@ import A11yPanel from '@/components/builder/canvas/A11yPanel';
 import AnimationsTab from '@/components/builder/editor/AnimationsTab';
 import BreakpointBadge from '@/components/builder/editor/BreakpointBadge';
 import ContentTab from '@/components/builder/editor/ContentTab';
+import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
 import StyleTab from '@/components/builder/editor/StyleTab';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
@@ -298,8 +299,10 @@ function renderCompositeSurfaceEditor({
 
 export default function SandboxInspectorPanel({
   onRequestAssetLibrary,
+  siteLightboxes = [],
 }: {
   onRequestAssetLibrary: () => void;
+  siteLightboxes?: LinkPickerContext['siteLightboxes'];
 }) {
   const {
     document,
@@ -330,6 +333,15 @@ export default function SandboxInspectorPanel({
         (n) => n.kind === 'image' && !n.content.alt,
       ).length,
     [document?.nodes],
+  );
+  const linkPickerContext = useMemo<LinkPickerContext>(
+    () => ({
+      siteAnchors: (document?.nodes ?? [])
+        .map((node) => node.anchorName)
+        .filter((anchorName): anchorName is string => Boolean(anchorName)),
+      siteLightboxes,
+    }),
+    [document?.nodes, siteLightboxes],
   );
 
   const updateSeoField = useCallback(
@@ -803,6 +815,7 @@ export default function SandboxInspectorPanel({
                       ? onRequestAssetLibrary
                       : undefined
                   }
+                  linkPickerContext={linkPickerContext}
                 />
               ) : null}
 

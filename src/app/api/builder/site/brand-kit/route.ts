@@ -23,6 +23,32 @@ function validationErrorResponse(error: ZodError): NextResponse {
   );
 }
 
+const BRAND_ASSET_ID_KEYS = [
+  'logoLightAssetId',
+  'logoDarkAssetId',
+  'faviconAssetId',
+  'ogImageAssetId',
+] as const;
+
+function validateBrandAssetIds(source: unknown): string[] {
+  if (!source || typeof source !== 'object') return [];
+  const assets = (source as { assets?: unknown }).assets;
+  if (!assets || typeof assets !== 'object') return [];
+
+  const issues: string[] = [];
+  for (const key of BRAND_ASSET_ID_KEYS) {
+    const value = (assets as Record<string, unknown>)[key];
+    if (value === undefined || value === null || value === '') continue;
+    if (
+      typeof value !== 'string'
+      || !/^(?:builder\/assets|\/api\/builder\/assets)\/(?:ko|en|zh-hant)\/[^/?#\\]+$/i.test(value.trim())
+    ) {
+      issues.push(`assets.${key}`);
+    }
+  }
+  return issues;
+}
+
 export async function GET(request: NextRequest) {
   const auth = guardMutation(request);
   if (auth instanceof NextResponse) return auth;
@@ -53,6 +79,14 @@ export async function POST(request: NextRequest) {
     const source = body && typeof body === 'object' && 'brandKit' in body
       ? (body as { brandKit?: unknown }).brandKit
       : body;
+    const assetIssues = validateBrandAssetIds(source);
+    if (assetIssues.length > 0) {
+      return NextResponse.json({
+        ok: false,
+        error: 'invalid_brand_asset_id',
+        issues: assetIssues,
+      }, { status: 400 });
+    }
     const fallback = createBrandKitFromTheme(site.theme, site.settings, site.settings?.firmName || site.name);
     const brandKit = normalizeBrandKit(source, fallback);
 
@@ -61,6 +95,9 @@ export async function POST(request: NextRequest) {
       ...(site.settings ?? {}),
       logo: brandKit.logoLight,
       logoDark: brandKit.logoDark,
+      favicon: brandKit.favicon,
+      ogImage: brandKit.ogImage,
+      assets: brandKit.assets,
     };
     site.updatedAt = new Date().toISOString();
 

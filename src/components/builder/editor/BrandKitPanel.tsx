@@ -1,9 +1,13 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import type { BuilderAssetListItem } from '@/lib/builder/assets';
+import type { Locale } from '@/lib/locales';
+import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import FontPicker from '@/components/builder/editor/FontPicker';
 import {
   THEME_COLOR_LABELS,
+  resolveBuilderBrandAssetUrl,
   type BrandKit,
 } from '@/lib/builder/site/theme';
 
@@ -56,6 +60,8 @@ const primaryButtonStyle: React.CSSProperties = {
 };
 
 type BrandColorKey = keyof BrandKit['colors'];
+type BrandAssetKey = 'logoLightAssetId' | 'logoDarkAssetId' | 'faviconAssetId' | 'ogImageAssetId';
+type BrandUrlKey = 'logoLight' | 'logoDark' | 'favicon' | 'ogImage';
 
 const BRAND_COLOR_KEYS: BrandColorKey[] = [
   'primary',
@@ -75,20 +81,85 @@ function updateBrandColor(kit: BrandKit, key: BrandColorKey, value: string): Bra
   };
 }
 
+const BRAND_ASSET_FIELDS: Array<{
+  label: string;
+  urlKey: BrandUrlKey;
+  assetKey: BrandAssetKey;
+  placeholder: string;
+}> = [
+  {
+    label: 'Light logo',
+    urlKey: 'logoLight',
+    assetKey: 'logoLightAssetId',
+    placeholder: 'https://example.com/logo.png',
+  },
+  {
+    label: 'Dark logo',
+    urlKey: 'logoDark',
+    assetKey: 'logoDarkAssetId',
+    placeholder: 'https://example.com/logo-dark.png',
+  },
+  {
+    label: 'Favicon',
+    urlKey: 'favicon',
+    assetKey: 'faviconAssetId',
+    placeholder: 'https://example.com/favicon.ico',
+  },
+  {
+    label: 'OG image',
+    urlKey: 'ogImage',
+    assetKey: 'ogImageAssetId',
+    placeholder: 'https://example.com/social-card.png',
+  },
+];
+
+function resolveBrandAssetPreview(value: BrandKit, urlKey: BrandUrlKey, assetKey: BrandAssetKey): string | null {
+  const assetUrl = resolveBuilderBrandAssetUrl(value.assets?.[assetKey]);
+  return assetUrl ?? value[urlKey] ?? null;
+}
+
+function assetIdFromLibraryItem(asset: BuilderAssetListItem): string {
+  return asset.pathname || asset.url;
+}
+
+function updateBrandAsset(value: BrandKit, assetKey: BrandAssetKey, asset: BuilderAssetListItem): BrandKit {
+  return {
+    ...value,
+    assets: {
+      ...(value.assets ?? {}),
+      [assetKey]: assetIdFromLibraryItem(asset),
+    },
+  };
+}
+
+function clearBrandAsset(value: BrandKit, assetKey: BrandAssetKey): BrandKit {
+  const nextAssets = { ...(value.assets ?? {}) };
+  delete nextAssets[assetKey];
+  return {
+    ...value,
+    assets: nextAssets,
+  };
+}
+
 export default function BrandKitPanel({
   value,
+  locale,
   onChange,
   onApply,
   onExport,
   onImport,
 }: {
   value: BrandKit;
+  locale: Locale;
   onChange: (value: BrandKit) => void;
   onApply: () => void;
   onExport: () => void;
   onImport: (file: File) => void;
 }) {
   const importInputRef = useRef<HTMLInputElement | null>(null);
+  const [assetPickerKey, setAssetPickerKey] = useState<BrandAssetKey | null>(null);
+  const logoPreview = resolveBrandAssetPreview(value, 'logoLight', 'logoLightAssetId');
+  const activePickerField = BRAND_ASSET_FIELDS.find((field) => field.assetKey === assetPickerKey);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
@@ -118,8 +189,8 @@ export default function BrandKitPanel({
               overflow: 'hidden',
             }}
           >
-            {value.logoLight ? (
-              <img src={value.logoLight} alt="" style={{ maxWidth: '100%', maxHeight: 76, objectFit: 'contain' }} />
+            {logoPreview ? (
+              <img src={logoPreview} alt="" style={{ maxWidth: '100%', maxHeight: 76, objectFit: 'contain' }} />
             ) : (
               <span style={{ color: '#94a3b8', fontSize: '0.76rem', fontWeight: 700 }}>Logo preview</span>
             )}
@@ -131,26 +202,54 @@ export default function BrandKitPanel({
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <div style={fieldStyle}>
-            <label style={labelStyle}>Light logo URL</label>
-            <input
-              type="url"
-              value={value.logoLight ?? ''}
-              placeholder="https://example.com/logo.png"
-              style={inputStyle}
-              onChange={(event) => onChange({ ...value, logoLight: event.target.value })}
-            />
-          </div>
-          <div style={fieldStyle}>
-            <label style={labelStyle}>Dark logo URL</label>
-            <input
-              type="url"
-              value={value.logoDark ?? ''}
-              placeholder="https://example.com/logo-dark.png"
-              style={inputStyle}
-              onChange={(event) => onChange({ ...value, logoDark: event.target.value })}
-            />
-          </div>
+          {BRAND_ASSET_FIELDS.map((field) => {
+            const previewUrl = resolveBrandAssetPreview(value, field.urlKey, field.assetKey);
+            const hasAsset = Boolean(value.assets?.[field.assetKey]);
+            return (
+              <div key={field.assetKey} style={fieldStyle}>
+                <label style={labelStyle}>{field.label} URL</label>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 8, alignItems: 'center' }}>
+                  <input
+                    type="url"
+                    value={value[field.urlKey] ?? ''}
+                    placeholder={field.placeholder}
+                    style={inputStyle}
+                    onChange={(event) => onChange({ ...value, [field.urlKey]: event.target.value })}
+                  />
+                  <button type="button" style={actionButtonStyle} onClick={() => setAssetPickerKey(field.assetKey)}>
+                    Select from assets
+                  </button>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, minHeight: 28 }}>
+                  {previewUrl ? (
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        width: 34,
+                        height: 24,
+                        border: '1px solid #e2e8f0',
+                        borderRadius: 6,
+                        background: `#f8fafc url("${previewUrl.replace(/"/g, '%22')}") center/contain no-repeat`,
+                        flex: '0 0 auto',
+                      }}
+                    />
+                  ) : null}
+                  <span style={{ color: hasAsset ? '#0f766e' : '#94a3b8', fontSize: '0.74rem', fontWeight: 700 }}>
+                    {hasAsset ? 'Asset selected' : 'Raw URL fallback'}
+                  </span>
+                  {hasAsset ? (
+                    <button
+                      type="button"
+                      style={{ ...actionButtonStyle, padding: '5px 8px', fontSize: '0.72rem' }}
+                      onClick={() => onChange(clearBrandAsset(value, field.assetKey))}
+                    >
+                      Clear asset
+                    </button>
+                  ) : null}
+                </div>
+              </div>
+            );
+          })}
           <div style={fieldStyle}>
             <label style={labelStyle}>Radius scale</label>
             <input
@@ -230,6 +329,18 @@ export default function BrandKitPanel({
           Apply brand kit
         </button>
       </div>
+      {activePickerField ? (
+        <AssetLibraryModal
+          open
+          locale={locale}
+          selectedUrl={resolveBuilderBrandAssetUrl(value.assets?.[activePickerField.assetKey])}
+          onClose={() => setAssetPickerKey(null)}
+          onSelect={(asset) => {
+            onChange(updateBrandAsset(value, activePickerField.assetKey, asset));
+            setAssetPickerKey(null);
+          }}
+        />
+      ) : null}
     </div>
   );
 }

@@ -87,6 +87,7 @@ export default async function BuilderMainPage({
       navItems={site.navigation || []}
       currentSlug={homePage?.slug || ''}
       sitePages={site.pages}
+      siteLightboxes={site.lightboxes ?? []}
     />
   );
 }

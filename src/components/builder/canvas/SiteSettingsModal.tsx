@@ -1,7 +1,14 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import { DEFAULT_THEME, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
+import {
+  DEFAULT_THEME,
+  type BrandKitAssets,
+  type BuilderSiteSettings,
+  type BuilderTheme,
+  type DarkModeConfig,
+} from '@/lib/builder/site/types';
+import { normalizeLocale } from '@/lib/locales';
 import BrandKitPanel from '@/components/builder/editor/BrandKitPanel';
 import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
@@ -34,7 +41,11 @@ interface SiteSettingsForm {
   logo: string;
   logoDark: string;
   favicon: string;
+  ogImage: string;
+  assets?: BrandKitAssets;
 }
+
+type SiteSettingsFieldKey = Exclude<keyof SiteSettingsForm, 'assets'>;
 
 const EMPTY_SETTINGS: SiteSettingsForm = {
   firmName: '',
@@ -46,6 +57,7 @@ const EMPTY_SETTINGS: SiteSettingsForm = {
   logo: '',
   logoDark: '',
   favicon: '',
+  ogImage: '',
 };
 
 const backdropStyle: React.CSSProperties = {
@@ -243,7 +255,7 @@ const presetButtonStyle: React.CSSProperties = {
 };
 
 interface FieldDef {
-  key: keyof SiteSettingsForm;
+  key: SiteSettingsFieldKey;
   label: string;
   placeholder: string;
   type?: string;
@@ -259,6 +271,7 @@ const FIELDS: FieldDef[] = [
   { key: 'logo', label: '로고 URL', placeholder: 'https://example.com/logo.png', type: 'url' },
   { key: 'logoDark', label: '다크 로고 URL', placeholder: 'https://example.com/logo-dark.png', type: 'url' },
   { key: 'favicon', label: '파비콘 URL', placeholder: 'https://example.com/favicon.ico', type: 'url' },
+  { key: 'ogImage', label: 'OG 이미지 URL', placeholder: 'https://example.com/social-card.png', type: 'url' },
 ];
 
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
@@ -301,6 +314,8 @@ function toSettingsForm(settings?: Partial<BuilderSiteSettings>): SiteSettingsFo
     logo: settings?.logo ?? '',
     logoDark: settings?.logoDark ?? '',
     favicon: settings?.favicon ?? '',
+    ogImage: settings?.ogImage ?? '',
+    assets: settings?.assets,
   };
 }
 
@@ -315,6 +330,18 @@ function toSettingsPayload(settings: SiteSettingsForm): BuilderSiteSettings {
     logo: settings.logo,
     logoDark: settings.logoDark,
     favicon: settings.favicon,
+    ogImage: settings.ogImage,
+    assets: settings.assets,
+  };
+}
+
+function normalizeDarkModeConfig(value?: Partial<DarkModeConfig>): Required<DarkModeConfig> {
+  const defaultMode = value?.defaultMode === 'dark' || value?.defaultMode === 'auto'
+    ? value.defaultMode
+    : 'light';
+  return {
+    defaultMode,
+    allowVisitorToggle: value?.allowVisitorToggle !== false,
   };
 }
 
@@ -326,6 +353,7 @@ interface SiteSettingsResponse {
   ok?: boolean;
   settings?: Partial<BuilderSiteSettings>;
   theme?: BuilderTheme;
+  darkMode?: DarkModeConfig;
   error?: string;
 }
 
@@ -337,12 +365,13 @@ export default function SiteSettingsModal({
 }: {
   open: boolean;
   locale: string;
-  onSaved?: (payload: { settings: BuilderSiteSettings; theme: BuilderTheme }) => void;
+  onSaved?: (payload: { settings: BuilderSiteSettings; theme: BuilderTheme; darkMode: Required<DarkModeConfig> }) => void;
   onClose: () => void;
 }) {
   const [settings, setSettings] = useState<SiteSettingsForm>(EMPTY_SETTINGS);
   const [theme, setTheme] = useState<BuilderTheme>(DEFAULT_THEME);
   const [brandKit, setBrandKit] = useState<BrandKit>(() => createBrandKitFromTheme(DEFAULT_THEME, EMPTY_SETTINGS));
+  const [darkMode, setDarkMode] = useState<Required<DarkModeConfig>>(() => normalizeDarkModeConfig());
   const [activeTab, setActiveTab] = useState<'settings' | 'brand' | 'colors' | 'dark' | 'typography' | 'presets'>('settings');
   const [previewDark, setPreviewDark] = useState(false);
   const [pendingPreset, setPendingPreset] = useState<SiteThemePreset | null>(null);
@@ -364,6 +393,7 @@ export default function SiteSettingsModal({
         const nextTheme = mergeTheme(data.theme);
         setSettings(nextSettings);
         setTheme(nextTheme);
+        setDarkMode(normalizeDarkModeConfig(data.darkMode));
         setBrandKit(createBrandKitFromTheme(nextTheme, nextSettings));
       } else {
         setError(data.error || '사이트 설정을 불러오지 못했습니다.');
@@ -412,6 +442,7 @@ export default function SiteSettingsModal({
           ...theme,
           darkColors: resolvedDarkColors,
         },
+        darkMode,
       };
       const response = await fetch(`/api/builder/site/settings?locale=${encodeURIComponent(locale)}`, {
         method: 'PUT',
@@ -428,6 +459,7 @@ export default function SiteSettingsModal({
       onSaved?.({
         settings: payload.settings,
         theme: payload.theme,
+        darkMode: payload.darkMode,
       });
       onClose();
     } catch {
@@ -505,6 +537,9 @@ export default function SiteSettingsModal({
       ...prev,
       logo: kit.logoLight ?? prev.logo,
       logoDark: kit.logoDark ?? prev.logoDark,
+      favicon: kit.favicon ?? prev.favicon,
+      ogImage: kit.ogImage ?? prev.ogImage,
+      assets: kit.assets,
     }));
     setBrandKit(kit);
     setNotice(message);
@@ -618,6 +653,7 @@ export default function SiteSettingsModal({
           ) : activeTab === 'brand' ? (
             <BrandKitPanel
               value={brandKit}
+              locale={normalizeLocale(locale)}
               onChange={setBrandKit}
               onApply={() => applyBrandKitToState(brandKit, 'Brand kit을 현재 사이트 테마에 적용했습니다. 저장을 눌러 사이트에 반영하세요.')}
               onExport={exportBrandKit}
@@ -674,6 +710,41 @@ export default function SiteSettingsModal({
             </div>
           ) : activeTab === 'dark' ? (
             <div style={sectionStyle}>
+              <div style={sectionStyle}>
+                <div style={sectionHeadingStyle}>Dark mode runtime</div>
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Default mode</label>
+                  <select
+                    value={darkMode.defaultMode}
+                    style={inputStyle}
+                    onChange={(event) => {
+                      const value = event.target.value;
+                      setDarkMode((prev) => ({
+                        ...prev,
+                        defaultMode: value === 'dark' || value === 'auto' ? value : 'light',
+                      }));
+                    }}
+                  >
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="auto">Auto</option>
+                  </select>
+                </div>
+                <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.78rem', fontWeight: 700, color: '#334155' }}>
+                  <input
+                    type="checkbox"
+                    checked={darkMode.allowVisitorToggle}
+                    onChange={(event) => {
+                      setDarkMode((prev) => ({
+                        ...prev,
+                        allowVisitorToggle: event.target.checked,
+                      }));
+                    }}
+                  />
+                  Allow visitor toggle
+                </label>
+              </div>
+
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
                 <div style={sectionHeadingStyle}>Dark mode colors</div>
                 <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.78rem', fontWeight: 700, color: '#334155' }}>

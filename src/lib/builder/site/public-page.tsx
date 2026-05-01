@@ -43,6 +43,7 @@ import {
   deriveHeuristicAnimation,
   deriveHeuristicHoverStyle,
 } from '@/lib/builder/site/heuristic-defaults';
+import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-frame';
 import { getSiteUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
@@ -708,20 +709,23 @@ function LightboxCanvas({
       }
     }
 
+    const frame = buildPublishedSurfaceFrame(node);
     return (
       <div
         key={node.id}
+        className={frame.className}
+        {...frame.attrs}
         data-lightbox-target={lightboxTarget || undefined}
         role={lightboxTarget ? 'button' : undefined}
         tabIndex={lightboxTarget ? 0 : undefined}
         style={{
+          ...frame.style,
           position: 'absolute',
           left: node.rect.x,
           top: node.rect.y,
           width: node.rect.width,
           height: node.rect.height,
           zIndex: node.zIndex,
-          transform: node.rotation ? `rotate(${node.rotation}deg)` : undefined,
           ...backgroundStyle,
           borderRadius: node.style?.borderRadius ? `${node.style.borderRadius}px` : undefined,
           border: node.style?.borderWidth
@@ -796,18 +800,21 @@ function GlobalCanvasSection({
       .filter((child): child is BuilderCanvasNode => Boolean(child && child.visible !== false));
     const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, theme);
 
+    const frame = buildPublishedSurfaceFrame(node);
     return (
       <div
         key={node.id}
         id={node.anchorName ? node.anchorName : undefined}
+        className={frame.className}
+        {...frame.attrs}
         style={{
+          ...frame.style,
           position: 'absolute',
           left: node.rect.x,
           top: node.rect.y,
           width: node.rect.width,
           height: node.rect.height,
           zIndex: node.zIndex,
-          transform: node.rotation ? `rotate(${node.rotation}deg)` : undefined,
           ...backgroundStyle,
           borderRadius: node.style?.borderRadius ? `${node.style.borderRadius}px` : undefined,
           border: node.style?.borderWidth

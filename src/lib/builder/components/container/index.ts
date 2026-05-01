@@ -16,6 +16,7 @@ export default defineComponent({
     borderRadius: 20,
     padding: 20,
     layoutMode: 'absolute' as const,
+    variant: 'flat' as const,
   },
   defaultStyle: {},
   defaultRect: { width: 360, height: 240 },

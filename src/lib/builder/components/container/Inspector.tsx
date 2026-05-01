@@ -1,6 +1,11 @@
 import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderContainerCanvasNode } from '@/lib/builder/canvas/types';
 import {
+  CARD_VARIANTS,
+  legacyCardStyleToVariant,
+  normalizeCardVariantKey,
+} from '@/lib/builder/site/component-variants';
+import {
   DEFAULT_FLEX,
   DEFAULT_GRID,
   type ContainerLayoutMode,
@@ -68,6 +73,21 @@ export default function ContainerInspector({
           disabled={disabled}
           onChange={(event) => onUpdate({ padding: Number(event.target.value) })}
         />
+      </label>
+      <label>
+        <span>Card variant</span>
+        <select
+          style={selectStyle}
+          value={normalizeCardVariantKey(content.variant ?? legacyCardStyleToVariant(content.cardStyle))}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ variant: event.target.value })}
+        >
+          {CARD_VARIANTS.map((variant) => (
+            <option key={variant.key} value={variant.key}>
+              {variant.label}
+            </option>
+          ))}
+        </select>
       </label>
 
       {/* ── Layout Mode ────────────────────────────────────── */}

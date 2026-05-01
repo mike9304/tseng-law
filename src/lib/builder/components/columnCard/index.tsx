@@ -1,4 +1,10 @@
 import { defineComponent } from '../define';
+import ColumnCardInspector from './Inspector';
+import type { BuilderTheme } from '@/lib/builder/site/types';
+import {
+  legacyCardStyleToVariant,
+  resolveCardVariantStyle,
+} from '@/lib/builder/site/component-variants';
 
 interface ColumnCardContent {
   slug: string;
@@ -6,10 +12,22 @@ interface ColumnCardContent {
   title?: string;
   date?: string;
   summary?: string;
+  cardStyle?: string;
+  variant?: string;
 }
 
-function ColumnCardRender({ node }: { node: { content: ColumnCardContent } }) {
+function ColumnCardRender({
+  node,
+  theme,
+}: {
+  node: { content: ColumnCardContent };
+  theme?: BuilderTheme;
+}) {
   const { title = '', date = '', summary = '', slug = '' } = node.content;
+  const variantStyle = resolveCardVariantStyle(
+    node.content.variant ?? legacyCardStyleToVariant(node.content.cardStyle),
+    theme,
+  );
 
   if (!title && !slug) {
     return (
@@ -17,9 +35,12 @@ function ColumnCardRender({ node }: { node: { content: ColumnCardContent } }) {
         style={{
           width: '100%',
           height: '100%',
-          background: '#f1f5f9',
-          border: '2px dashed #cbd5e1',
-          borderRadius: 8,
+          background: variantStyle.background,
+          border: variantStyle.border,
+          borderRadius: variantStyle.borderRadius,
+          boxShadow: variantStyle.boxShadow,
+          backdropFilter: variantStyle.backdropFilter,
+          WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -38,9 +59,12 @@ function ColumnCardRender({ node }: { node: { content: ColumnCardContent } }) {
         width: '100%',
         height: '100%',
         padding: 20,
-        borderRadius: 8,
-        border: '1px solid #e2e8f0',
-        background: '#ffffff',
+        borderRadius: variantStyle.borderRadius,
+        border: variantStyle.border,
+        background: variantStyle.background,
+        boxShadow: variantStyle.boxShadow,
+        backdropFilter: variantStyle.backdropFilter,
+        WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
         display: 'flex',
         flexDirection: 'column',
         gap: 8,
@@ -84,8 +108,10 @@ export default defineComponent({
     title: '',
     date: '',
     summary: '',
+    variant: 'flat' as const,
   },
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },
   Render: ColumnCardRender,
+  Inspector: ColumnCardInspector,
 });

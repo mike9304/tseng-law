@@ -41,6 +41,39 @@ export interface ComponentVariantOption<T extends string = string> {
   description: string;
 }
 
+export const CARD_VARIANT_KEYS = ['flat', 'elevated', 'floating', 'glass'] as const;
+export type CardVariantKey = (typeof CARD_VARIANT_KEYS)[number];
+
+export const FORM_INPUT_VARIANT_KEYS = ['default', 'underline', 'filled'] as const;
+export type FormInputVariantKey = (typeof FORM_INPUT_VARIANT_KEYS)[number];
+
+type VariantColorValue = string | { kind?: 'token'; token: ThemeColorToken };
+
+interface CardVariantTokens {
+  background: VariantColorValue;
+  borderColor: VariantColorValue;
+  borderWidth: number;
+  borderRadius: number;
+  shadow: string;
+  backdropFilter: string;
+}
+
+interface FormInputVariantTokens {
+  background: VariantColorValue;
+  borderColor: VariantColorValue;
+  borderWidth: number;
+  borderBottomWidth?: number;
+  borderRadius: number | keyof BuilderTheme['radii'];
+}
+
+interface CardVariantDefinition extends ComponentVariantOption<CardVariantKey> {
+  tokens: CardVariantTokens;
+}
+
+interface FormInputVariantDefinition extends ComponentVariantOption<FormInputVariantKey> {
+  tokens: FormInputVariantTokens;
+}
+
 export const BUTTON_VARIANTS: Array<ComponentVariantOption<ButtonVariantKey>> = [
   {
     key: 'primary-solid',
@@ -93,6 +126,7 @@ export const CARD_VARIANTS = [
       background: { kind: 'token', token: 'background' },
       borderColor: { kind: 'token', token: 'muted' },
       borderWidth: 1,
+      borderRadius: 8,
       shadow: 'none',
       backdropFilter: 'none',
     },
@@ -105,6 +139,7 @@ export const CARD_VARIANTS = [
       background: { kind: 'token', token: 'background' },
       borderColor: { kind: 'token', token: 'muted' },
       borderWidth: 1,
+      borderRadius: 10,
       shadow: '0 10px 24px rgba(15, 23, 42, 0.08)',
       backdropFilter: 'none',
     },
@@ -117,6 +152,7 @@ export const CARD_VARIANTS = [
       background: { kind: 'token', token: 'background' },
       borderColor: 'transparent',
       borderWidth: 0,
+      borderRadius: 14,
       shadow: '0 24px 64px rgba(15, 23, 42, 0.16)',
       backdropFilter: 'none',
     },
@@ -129,11 +165,12 @@ export const CARD_VARIANTS = [
       background: 'rgba(255, 255, 255, 0.72)',
       borderColor: 'rgba(255, 255, 255, 0.38)',
       borderWidth: 1,
+      borderRadius: 12,
       shadow: '0 18px 44px rgba(15, 23, 42, 0.14)',
       backdropFilter: 'blur(18px)',
     },
   },
-] as const;
+] as const satisfies readonly CardVariantDefinition[];
 
 export const FORM_INPUT_VARIANTS = [
   {
@@ -170,7 +207,7 @@ export const FORM_INPUT_VARIANTS = [
       borderRadius: 'md',
     },
   },
-] as const;
+] as const satisfies readonly FormInputVariantDefinition[];
 
 interface ButtonNodeStyleLike {
   backgroundColor: unknown;
@@ -263,6 +300,164 @@ function resolveCustomState(s: ButtonNodeStyleLike, theme?: BuilderTheme) {
 
 function colorMix(color: string, amount: number, mixedWith = '#ffffff'): string {
   return `color-mix(in srgb, ${color} ${amount}%, ${mixedWith})`;
+}
+
+function resolveVariantColor(value: VariantColorValue, theme?: BuilderTheme): string {
+  return typeof value === 'string' ? value : resolveThemeColor(value, theme);
+}
+
+function resolveVariantRadius(value: FormInputVariantTokens['borderRadius'], theme?: BuilderTheme): number {
+  if (typeof value === 'number') return value;
+  return theme?.radii?.[value] ?? (value === 'sm' ? 4 : value === 'lg' ? 12 : 8);
+}
+
+const cardVariantByKey = Object.fromEntries(
+  CARD_VARIANTS.map((variant) => [variant.key, variant]),
+) as Record<CardVariantKey, (typeof CARD_VARIANTS)[number]>;
+
+const formInputVariantByKey = Object.fromEntries(
+  FORM_INPUT_VARIANTS.map((variant) => [variant.key, variant]),
+) as Record<FormInputVariantKey, FormInputVariantDefinition>;
+
+export interface ResolvedCardVariantStyle {
+  background: string;
+  border: string;
+  borderColor: string;
+  borderRadius: number;
+  boxShadow: string;
+  backdropFilter?: string;
+  WebkitBackdropFilter?: string;
+}
+
+export interface FormInputVariantState {
+  focused?: boolean;
+  disabled?: boolean;
+  error?: boolean;
+}
+
+export interface ResolvedFormInputVariantStyle {
+  background: string;
+  border: string;
+  borderBottom?: string;
+  borderColor: string;
+  borderRadius: number;
+  boxShadow: string;
+  cursor?: string;
+  opacity?: number;
+  outline: 'none';
+  transition: string;
+}
+
+export function normalizeCardVariantKey(input: unknown): CardVariantKey {
+  return CARD_VARIANT_KEYS.includes(input as CardVariantKey) ? (input as CardVariantKey) : 'flat';
+}
+
+export function legacyCardStyleToVariant(legacy: string | undefined): CardVariantKey {
+  switch (legacy) {
+    case 'elevated':
+    case 'raised':
+      return 'elevated';
+    case 'floating':
+    case 'shadow':
+    case 'prominent':
+      return 'floating';
+    case 'glass':
+      return 'glass';
+    case 'flat':
+    case 'outlined':
+    case 'outline':
+    case 'subtle':
+    case 'default':
+    default:
+      return 'flat';
+  }
+}
+
+export function resolveCardVariantStyle(
+  input: unknown,
+  theme?: BuilderTheme,
+): ResolvedCardVariantStyle {
+  const variant = cardVariantByKey[normalizeCardVariantKey(input)];
+  const borderColor = resolveVariantColor(variant.tokens.borderColor, theme);
+  const backdropFilter =
+    variant.tokens.backdropFilter === 'none' ? undefined : variant.tokens.backdropFilter;
+
+  return {
+    background: resolveVariantColor(variant.tokens.background, theme),
+    border: variant.tokens.borderWidth > 0
+      ? `${variant.tokens.borderWidth}px solid ${borderColor}`
+      : 'none',
+    borderColor,
+    borderRadius: variant.tokens.borderRadius,
+    boxShadow: variant.tokens.shadow,
+    backdropFilter,
+    WebkitBackdropFilter: backdropFilter,
+  };
+}
+
+export function normalizeFormInputVariantKey(input: unknown): FormInputVariantKey {
+  return FORM_INPUT_VARIANT_KEYS.includes(input as FormInputVariantKey)
+    ? (input as FormInputVariantKey)
+    : 'default';
+}
+
+export function resolveFormInputVariantStyle(
+  input: unknown,
+  theme?: BuilderTheme,
+  state: FormInputVariantState = {},
+): ResolvedFormInputVariantStyle {
+  const variantKey = normalizeFormInputVariantKey(input);
+  const variant = formInputVariantByKey[variantKey];
+  const primary = tokenColor('primary', theme);
+  const background = tokenColor('background', theme);
+  const muted = tokenColor('muted', theme);
+  const danger = '#dc2626';
+  const neutralBorder = resolveVariantColor(variant.tokens.borderColor, theme);
+  const activeBorder = state.error ? danger : state.focused ? primary : neutralBorder;
+  const radius = resolveVariantRadius(variant.tokens.borderRadius, theme);
+  const disabledBackground = colorMix(muted, 76, background);
+  const baseBackground = resolveVariantColor(variant.tokens.background, theme);
+  const fieldBackground = state.disabled
+    ? disabledBackground
+    : variantKey === 'filled'
+      ? colorMix(muted, 74, background)
+      : baseBackground;
+  const focusRing = state.error
+    ? `0 0 0 3px ${colorMix(danger, 16, 'transparent')}`
+    : state.focused
+      ? `0 0 0 3px ${colorMix(primary, 16, 'transparent')}`
+      : 'none';
+
+  if (variantKey === 'underline') {
+    return {
+      background: fieldBackground,
+      border: '0 solid transparent',
+      borderBottom: `${variant.tokens.borderBottomWidth ?? 1}px solid ${activeBorder}`,
+      borderColor: activeBorder,
+      borderRadius: radius,
+      boxShadow: state.focused || state.error ? `0 2px 0 ${activeBorder}` : 'none',
+      cursor: state.disabled ? 'not-allowed' : undefined,
+      opacity: state.disabled ? 0.62 : undefined,
+      outline: 'none',
+      transition: 'background 160ms ease, border-color 160ms ease, box-shadow 160ms ease',
+    };
+  }
+
+  const borderColor = variantKey === 'filled' && !state.error && !state.focused
+    ? 'transparent'
+    : activeBorder;
+
+  return {
+    background: fieldBackground,
+    border: `${variant.tokens.borderWidth}px solid ${borderColor}`,
+    borderColor,
+    borderRadius: radius,
+    boxShadow: focusRing,
+    cursor: state.disabled ? 'not-allowed' : undefined,
+    opacity: state.disabled ? 0.62 : undefined,
+    outline: 'none',
+    transition: 'background 160ms ease, border-color 160ms ease, box-shadow 160ms ease',
+  };
 }
 
 export function resolveButtonVariantStyles(

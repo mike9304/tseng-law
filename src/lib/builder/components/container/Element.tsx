@@ -1,5 +1,10 @@
 import type { ReactNode } from 'react';
 import type { BuilderContainerCanvasNode } from '@/lib/builder/canvas/types';
+import type { BuilderTheme } from '@/lib/builder/site/types';
+import {
+  legacyCardStyleToVariant,
+  resolveCardVariantStyle,
+} from '@/lib/builder/site/component-variants';
 import {
   flexToCSS,
   gridToCSS,
@@ -9,10 +14,12 @@ import {
 
 export default function ContainerElement({
   node,
+  theme,
   mode = 'edit',
   children,
 }: {
   node: BuilderContainerCanvasNode;
+  theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
   children?: ReactNode;
 }) {
@@ -20,6 +27,10 @@ export default function ContainerElement({
   const layoutMode = content.layoutMode ?? 'absolute';
   const { className, as, htmlId, dataTone } = content;
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
+  const variantStyle = resolveCardVariantStyle(
+    content.variant ?? legacyCardStyleToVariant(content.cardStyle),
+    theme,
+  );
 
   let layoutCSS: Record<string, string> = {};
   if (layoutMode === 'flex') {
@@ -55,9 +66,12 @@ export default function ContainerElement({
         width: '100%',
         height: '100%',
         padding: `${content.padding}px`,
-        borderRadius: `${content.borderRadius}px`,
-        border: `${content.borderWidth}px ${content.borderStyle} ${content.borderColor}`,
-        background: content.background,
+        borderRadius: `${variantStyle.borderRadius}px`,
+        border: variantStyle.border,
+        background: variantStyle.background,
+        boxShadow: variantStyle.boxShadow,
+        backdropFilter: variantStyle.backdropFilter,
+        WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
         boxSizing: 'border-box',
         position: 'relative',
         ...layoutCSS,

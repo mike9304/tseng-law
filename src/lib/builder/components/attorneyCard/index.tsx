@@ -1,14 +1,32 @@
 import { defineComponent } from '../define';
+import AttorneyCardInspector from './Inspector';
+import type { BuilderTheme } from '@/lib/builder/site/types';
+import {
+  legacyCardStyleToVariant,
+  resolveCardVariantStyle,
+} from '@/lib/builder/site/component-variants';
 
 interface AttorneyCardContent {
   name: string;
   title: string;
   photo: string;
   specialties: string[];
+  cardStyle?: string;
+  variant?: string;
 }
 
-function AttorneyCardRender({ node }: { node: { content: AttorneyCardContent } }) {
+function AttorneyCardRender({
+  node,
+  theme,
+}: {
+  node: { content: AttorneyCardContent };
+  theme?: BuilderTheme;
+}) {
   const { name = '', title = '', photo = '', specialties = [] } = node.content;
+  const variantStyle = resolveCardVariantStyle(
+    node.content.variant ?? legacyCardStyleToVariant(node.content.cardStyle),
+    theme,
+  );
 
   if (!name) {
     return (
@@ -16,9 +34,12 @@ function AttorneyCardRender({ node }: { node: { content: AttorneyCardContent } }
         style={{
           width: '100%',
           height: '100%',
-          background: '#f1f5f9',
-          border: '2px dashed #cbd5e1',
-          borderRadius: 8,
+          background: variantStyle.background,
+          border: variantStyle.border,
+          borderRadius: variantStyle.borderRadius,
+          boxShadow: variantStyle.boxShadow,
+          backdropFilter: variantStyle.backdropFilter,
+          WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -38,9 +59,12 @@ function AttorneyCardRender({ node }: { node: { content: AttorneyCardContent } }
         width: '100%',
         height: '100%',
         padding: 24,
-        borderRadius: 12,
-        border: '1px solid #e2e8f0',
-        background: '#ffffff',
+        borderRadius: variantStyle.borderRadius,
+        border: variantStyle.border,
+        background: variantStyle.background,
+        boxShadow: variantStyle.boxShadow,
+        backdropFilter: variantStyle.backdropFilter,
+        WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
         display: 'flex',
         gap: 20,
         alignItems: 'center',
@@ -126,8 +150,10 @@ export default defineComponent({
     title: '',
     photo: '',
     specialties: [] as string[],
+    variant: 'flat' as const,
   },
   defaultStyle: {},
   defaultRect: { width: 400, height: 250 },
   Render: AttorneyCardRender,
+  Inspector: AttorneyCardInspector,
 });

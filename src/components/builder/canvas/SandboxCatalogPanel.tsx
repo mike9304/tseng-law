@@ -8,6 +8,9 @@ import {
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
+import { insertSectionSnapshot } from '@/lib/builder/sections/insertSection';
+import type { BuiltInSectionTemplate } from '@/lib/builder/sections/templates';
+import { BuiltInSectionsPanel } from '@/components/builder/sections/BuiltInSectionsPanel';
 import SavedSectionsPanel from '@/components/builder/sections/SavedSectionsPanel';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
@@ -219,9 +222,10 @@ function compareByCategoryPriority(
 }
 
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
-  const { document, addNode } = useBuilderCanvasStore();
+  const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
   const [categoryOpen, setCategoryOpen] = useState<Record<string, boolean>>({
+    'built-in-sections': true,
     'saved-sections': true,
   });
   const nodes = document?.nodes ?? [];
@@ -251,6 +255,14 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
       }));
   }, [components]);
 
+  function handleInsertBuiltInSection(template: BuiltInSectionTemplate) {
+    if (!document) return;
+    const result = insertSectionSnapshot(template.nodes, template.rootNodeId);
+    if (result.nodes.length === 0) return;
+    addNodes(result.nodes, result.rootNodeId);
+    setDraftSaveState('saving');
+  }
+
   return (
     <section className={styles.panelSection}>
       <header className={styles.panelSectionHeader}>
@@ -271,6 +283,37 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         <p className={styles.panelCopy}>
           registry 컴포넌트를 카테고리별로 묶었습니다. drag 로 캔버스에 추가하거나 quick-add 로 중앙에 바로 생성합니다.
         </p>
+
+        {/* Built-in section templates — normalized section snapshots. */}
+        <div style={categorySectionStyle}>
+          <button
+            type="button"
+            style={categoryButtonStyle(categoryOpen['built-in-sections'] ?? true)}
+            onClick={() => {
+              setCategoryOpen((current) => ({
+                ...current,
+                'built-in-sections': !(current['built-in-sections'] ?? true),
+              }));
+            }}
+          >
+            <span style={categoryMetaStyle}>
+              <span style={categoryIconStyle}>▤</span>
+              <span style={categoryTitleStyle}>
+                <span style={categoryNameStyle}>Section templates</span>
+                <span style={categoryHintStyle}>
+                  바로 삽입 가능한 기본 섹션
+                </span>
+              </span>
+            </span>
+            <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
+              {(categoryOpen['built-in-sections'] ?? true) ? '−' : '+'}
+            </span>
+          </button>
+
+          {(categoryOpen['built-in-sections'] ?? true) ? (
+            <BuiltInSectionsPanel onInsert={handleInsertBuiltInSection} />
+          ) : null}
+        </div>
 
         {/* Saved sections — Wix Studio "Saved Sections" parity. */}
         <div style={categorySectionStyle}>

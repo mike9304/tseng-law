@@ -10,10 +10,7 @@ import {
   getTemplateCategories,
 } from '@/lib/builder/templates/registry';
 
-const XFAIL_TEMPLATES = new Map<string, string>([
-  ['blog-about', 'nodes[1].style.borderRadius exceeds schema max 64'],
-  ['blog-authors', 'author photo nodes style.borderRadius exceeds schema max 64'],
-]);
+const XFAIL_TEMPLATES = new Map<string, string>();
 
 describe('template registry', () => {
   const all = getAllTemplates();

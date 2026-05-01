@@ -31,7 +31,15 @@ export function insertSavedSection(
   section: SavedSection,
   dropOffset?: { x: number; y: number },
 ): SavedSectionInsertResult {
-  const normalizedNodes = normalizeSavedSectionSnapshot(section.nodes, section.rootNodeId);
+  return insertSectionSnapshot(section.nodes, section.rootNodeId, dropOffset);
+}
+
+export function insertSectionSnapshot(
+  nodes: BuilderCanvasNode[],
+  rootNodeId: string,
+  dropOffset?: { x: number; y: number },
+): SavedSectionInsertResult {
+  const normalizedNodes = normalizeSavedSectionSnapshot(nodes, rootNodeId);
   if (normalizedNodes.length === 0) {
     return { rootNodeId: '', nodes: [] };
   }
@@ -41,7 +49,7 @@ export function insertSavedSection(
     idMap.set(node.id, newSectionNodeId(String(node.kind)));
   }
 
-  const newRootId = idMap.get(section.rootNodeId);
+  const newRootId = idMap.get(rootNodeId);
   if (!newRootId) {
     return { rootNodeId: '', nodes: [] };
   }
@@ -53,7 +61,7 @@ export function insertSavedSection(
 
   const cloned: BuilderCanvasNode[] = normalizedNodes.map((node) => {
     const nextId = idMap.get(node.id)!;
-    const isRoot = node.id === section.rootNodeId;
+    const isRoot = node.id === rootNodeId;
     const remappedParent = node.parentId && idMap.has(node.parentId)
       ? idMap.get(node.parentId)!
       : undefined;

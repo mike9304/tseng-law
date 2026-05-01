@@ -329,3 +329,10 @@
 - D2 guard coverage 완료. 4 auth-only → 0. asset list admin-only. publish/asset bucket 분리.
 - 2026-05-01 Wave2 E2 card/form variants 완료: card/form variant schema+render+inspector wiring 및 legacy cardStyle adapter 적용; typecheck/lint/build/smoke(3003) 통과.
 - 2026-05-01 Wave2 A2 draft CAS 완료: PageCanvasRecord envelope, draft GET/PUT 409/428, client conflict pause/reload 적용; typecheck/lint/security/dev smoke/curl CAS 통과, clean build는 기존 Next _document/_not-found trace 누락으로 차단.
+- 2026-05-01 Wave3 E3 Brand Kit + Dark Mode 완료: brand asset ids/favicon/OG, darkMode default/toggle, early theme script, asset logo fallback 적용; E3 수정 후 typecheck 1회 통과/lint 통과, 최신 typecheck는 sections/templates.ts 외부 오류, build는 Next _document trace, smoke는 sandbox local fetch 제한으로 차단.
+- 2026-05-01 Wave3 F3 built-in sections 완료: 12개 기본 섹션 템플릿/패널/카탈로그 삽입 및 F1 XFAIL 제거; typecheck/lint/test:unit/security/diff-check 통과, build는 기존 Next `_document` chunk 누락, smoke는 localhost dev 연결 불가로 차단.
+- 2026-05-01 Wave3 A3 publish transaction 완료: publish CAS/PublishError/status 계약, immutable revision pointer public read, UI 409/422/500 분기 적용; typecheck/lint/test:unit/security/build 통과, smoke는 dev server 포트 접근 문제로 실패.
+- 2026-05-01 Wave3 C3 LinkPicker 완료: 공용 LinkValue/LinkPicker, button/image/container/SelectionToolbar/inline rich-text/publish-gate/a11y/translations link safety 적용; typecheck/test:unit/lint/security/build 통과, smoke는 dev 서버 접근 불가로 실패.
+- 2026-05-01 Wave3 B3 Esc cancel 완료: drag/resize Esc capture cancel 및 rotate transient/cancel 적용; lint/diff-check 통과, typecheck/build는 동시 작업 타입 오류, smoke는 admin-builder timeout/columns 500로 차단.
+- 2026-05-01 Wave3 D3 audit log 완료: JSONL audit store/record/test, asset/publish/rollback/column route audit 기록, admin audit API 적용; 통합 typecheck/lint/test:unit/security/build/smoke 통과.
+- 2026-05-01 Wave3 통합 검증 완료: git diff --check, typecheck, lint, test:unit(364), security:builder-routes, build, warmed smoke 6/6 통과.

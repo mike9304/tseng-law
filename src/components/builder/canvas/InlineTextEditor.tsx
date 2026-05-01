@@ -2,18 +2,29 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
+import type { JSONContent } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Underline from '@tiptap/extension-underline';
 import Placeholder from '@tiptap/extension-placeholder';
+import {
+  BUILDER_RICH_TEXT_FORMAT,
+  type BuilderRichText,
+} from '@/lib/builder/rich-text/types';
+import {
+  extractPlainTextFromTipTapDoc,
+  richTextFromPlainText,
+  sanitizeTipTapDoc,
+} from '@/lib/builder/rich-text/sanitize';
 
 interface InlineTextEditorProps {
   initialText: string;
+  initialRichText?: BuilderRichText;
   fontSize?: number;
   color?: string;
   fontWeight?: string;
   align?: string;
-  onSave: (html: string, plainText: string) => void;
+  onSave: (payload: { richText: BuilderRichText; plainText: string }) => void;
   onBlur: () => void;
 }
 
@@ -72,6 +83,7 @@ const dividerStyle: React.CSSProperties = {
 
 export default function InlineTextEditor({
   initialText,
+  initialRichText,
   fontSize = 16,
   color = '#1f2937',
   fontWeight = 'regular',
@@ -81,6 +93,7 @@ export default function InlineTextEditor({
 }: InlineTextEditorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [toolbarBelow, setToolbarBelow] = useState(false);
+  const initialContent = (initialRichText?.doc ?? richTextFromPlainText(initialText).doc) as JSONContent;
 
   // Determine whether toolbar should appear below the element
   useLayoutEffect(() => {
@@ -96,8 +109,9 @@ export default function InlineTextEditor({
       Underline,
       Placeholder.configure({ placeholder: '텍스트 입력...' }),
     ],
-    content: initialText.startsWith('<') ? initialText : `<p>${initialText}</p>`,
+    content: initialContent,
     autofocus: 'end',
+    immediatelyRender: false,
     editorProps: {
       attributes: {
         style: [
@@ -115,7 +129,17 @@ export default function InlineTextEditor({
 
   const handleSave = useCallback(() => {
     if (!editor) return;
-    onSave(editor.getHTML(), editor.getText());
+    const doc = sanitizeTipTapDoc(editor.getJSON()) ?? richTextFromPlainText(editor.getText()).doc;
+    const plainText = extractPlainTextFromTipTapDoc(doc);
+    onSave({
+      richText: {
+        format: BUILDER_RICH_TEXT_FORMAT,
+        doc,
+        plainText,
+        html: editor.getHTML(),
+      },
+      plainText,
+    });
   }, [editor, onSave]);
 
   useEffect(() => {

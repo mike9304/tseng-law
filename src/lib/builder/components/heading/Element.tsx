@@ -1,5 +1,6 @@
 import type { BuilderHeadingCanvasNode } from '@/lib/builder/canvas/types';
 import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
+import { RichTextRenderer } from '@/lib/builder/rich-text/render';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor, resolveThemeTextTypography } from '@/lib/builder/site/theme';
 
@@ -59,7 +60,15 @@ export default function HeadingElement({
         alignItems: 'center',
       }}
     >
-      {node.content.text}
+      {node.content.richText ? (
+        <RichTextRenderer
+          richText={node.content.richText}
+          fallbackText={node.content.text}
+          mode="heading"
+        />
+      ) : (
+        node.content.text
+      )}
     </Tag>
   );
 }

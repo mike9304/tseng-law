@@ -4,6 +4,14 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 import { getComponent } from '@/lib/builder/components/registry';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { isContainerLikeKind } from '@/lib/builder/canvas/types';
+import type { BuilderRichText } from '@/lib/builder/rich-text/types';
+import { isBuilderRichText, richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
+import {
+  resolveViewportFontSize,
+  resolveViewportHidden,
+  resolveViewportRect,
+} from '@/lib/builder/canvas/responsive';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import {
   buildEditorAnimationStyle,
@@ -64,6 +72,10 @@ export default function CanvasNode({
   const activeGroupId = useBuilderCanvasStore((s) => s.activeGroupId);
   const enterGroup = useBuilderCanvasStore((s) => s.enterGroup);
   const selectedNodeIds = useBuilderCanvasStore((s) => s.selectedNodeIds);
+  const viewport = useBuilderCanvasStore((s) => s.viewport);
+  const effectiveRect = resolveViewportRect(node, viewport);
+  const isHiddenAtViewport = viewport !== 'desktop' && resolveViewportHidden(node, viewport);
+  const effectiveFontSize = resolveViewportFontSize(node, viewport);
 
   const handleRotationPointerDown = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
@@ -115,8 +127,11 @@ export default function CanvasNode({
   }, [enterGroup, node.id, node.kind, node.locked]);
 
   const handleInlineSave = useCallback(
-    (html: string, plainText: string) => {
-      onUpdateContent?.(node.id, { text: plainText });
+    (payload: { richText: BuilderRichText; plainText: string }) => {
+      onUpdateContent?.(node.id, {
+        text: payload.plainText,
+        richText: payload.richText,
+      });
     },
     [node.id, onUpdateContent],
   );
@@ -183,6 +198,11 @@ export default function CanvasNode({
 
   const isTextKind = node.kind === 'text' || node.kind === 'heading';
   const textContent = node.content as Record<string, unknown>;
+  const initialRichText = isTextKind
+    ? isBuilderRichText(textContent.richText)
+      ? textContent.richText
+      : richTextFromPlainText(typeof textContent.text === 'string' ? textContent.text : '')
+    : undefined;
   const typography = isTextKind
     ? resolveThemeTextTypography(textContent as Parameters<typeof resolveThemeTextTypography>[0], theme)
     : null;
@@ -195,8 +215,8 @@ export default function CanvasNode({
   const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
   const nodesById = new Map(allNodes.map((candidate) => [candidate.id, candidate]));
   const parentNode = node.parentId ? nodesById.get(node.parentId) : undefined;
-  const parentLayoutMode = parentNode?.kind === 'container'
-    ? parentNode.content.layoutMode ?? 'absolute'
+  const parentLayoutMode = parentNode && isContainerLikeKind(parentNode.kind)
+    ? (parentNode.content as { layoutMode?: 'absolute' | 'flex' | 'grid' }).layoutMode ?? 'absolute'
     : undefined;
   const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
   const childIds = childrenMap[node.id] ?? [];
@@ -225,6 +245,7 @@ export default function CanvasNode({
   const body = isEditing && isTextKind ? (
     <InlineTextEditor
       initialText={String(textContent.text || '')}
+      initialRichText={initialRichText}
       fontSize={typography?.fontSize ?? 16}
       color={resolveThemeColor(typography?.color, theme)}
       fontWeight={typography?.fontWeight ?? 'regular'}
@@ -233,7 +254,7 @@ export default function CanvasNode({
       onBlur={handleInlineBlur}
     />
   ) : component ? (
-    node.kind === 'container' ? (
+    isContainerLikeKind(node.kind) ? (
       <component.Render node={node} mode="edit" theme={theme}>
         {renderNestedChildNodes()}
       </component.Render>
@@ -263,7 +284,7 @@ export default function CanvasNode({
     || renderedShadowSpread !== 0
     || node.style.shadowX !== 0
     || node.style.shadowY !== 0;
-  const isContainerWithChildren = node.kind === 'container' && nestedChildren.length > 0;
+  const isContainerWithChildren = isContainerLikeKind(node.kind) && nestedChildren.length > 0;
   const showSelectionHandles = selected && !node.locked && isInteractive;
   const hoverTransition = node.hoverStyle
     ? `background ${node.hoverStyle.transitionMs ?? 200}ms ease, border-color ${node.hoverStyle.transitionMs ?? 200}ms ease, box-shadow ${node.hoverStyle.transitionMs ?? 200}ms ease, transform ${node.hoverStyle.transitionMs ?? 200}ms ease`
@@ -277,16 +298,20 @@ export default function CanvasNode({
     ? (node.style.opacity / 100) * editorAnimationStyle.opacity
     : node.style.opacity / 100;
 
+  if (isHiddenAtViewport) {
+    return null;
+  }
+
   return (
     <div
       ref={nodeRef}
       className={`${styles.node} ${selected ? styles.nodeSelected : ''} ${node.locked ? styles.nodeLocked : ''}`}
       style={{
         position: parentUsesFlowLayout ? 'relative' : 'absolute',
-        left: parentUsesFlowLayout ? undefined : `${node.rect.x}px`,
-        top: parentUsesFlowLayout ? undefined : `${node.rect.y}px`,
-        width: `${node.rect.width}px`,
-        height: `${node.rect.height}px`,
+        left: parentUsesFlowLayout ? undefined : `${effectiveRect.x}px`,
+        top: parentUsesFlowLayout ? undefined : `${effectiveRect.y}px`,
+        width: `${effectiveRect.width}px`,
+        height: `${effectiveRect.height}px`,
         zIndex: parentUsesFlowLayout ? undefined : node.zIndex + 10 + selectionZIndexBoost,
         transform: `rotate(${node.rotation}deg)`,
         transformOrigin: 'center center',
@@ -294,8 +319,10 @@ export default function CanvasNode({
         pointerEvents: isDimmedRoot || isActiveGroupFrame ? 'none' : undefined,
         outline: isActiveGroupFrame ? '2px dashed rgba(37, 99, 235, 0.72)' : undefined,
         outlineOffset: isActiveGroupFrame ? 4 : undefined,
+        fontSize: effectiveFontSize ? `${effectiveFontSize}px` : undefined,
       }}
       data-node-id={node.id}
+      data-viewport={viewport}
       onPointerDown={(event) => {
         event.stopPropagation();
         if (event.altKey && node.parentId) {
@@ -347,6 +374,8 @@ export default function CanvasNode({
         <span>{node.kind}</span>
         <strong>{node.id}</strong>
         {node.locked ? <em>locked</em> : null}
+        {node.sticky ? <em title={`Pinned ${node.sticky.from === 'bottom' ? 'bottom' : 'top'} +${node.sticky.offset}px`} style={{ color: '#60a5fa' }}>📌</em> : null}
+        {node.anchorName ? <em title={`Anchor: #${node.anchorName}`} style={{ color: '#34d399' }}>⚓ {node.anchorName}</em> : null}
         {animationSummary ? <em title={animationSummary} style={{ color: '#a78bfa' }}>anim</em> : null}
       </div>
       <div
@@ -369,7 +398,7 @@ export default function CanvasNode({
               ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
               : 'none'),
           opacity: renderedOpacity,
-          overflow: node.kind === 'container' ? 'visible' : undefined,
+          overflow: isContainerLikeKind(node.kind) ? 'visible' : undefined,
           transform: bodyTransform,
           transformOrigin: bodyTransform || editorAnimationStyle.transformOrigin ? 'center center' : undefined,
           transition: bodyTransition,
@@ -378,7 +407,7 @@ export default function CanvasNode({
         }}
       >
         {body}
-        {node.kind !== 'container' ? renderNestedChildNodes() : null}
+        {!isContainerLikeKind(node.kind) ? renderNestedChildNodes() : null}
       </div>
       {showSelectionHandles ? (
         <>
@@ -402,7 +431,7 @@ export default function CanvasNode({
             />
           ))}
           <div className={styles.nodeSizeLabel} aria-hidden>
-            {Math.round(node.rect.width)} x {Math.round(node.rect.height)}
+            {Math.round(effectiveRect.width)} x {Math.round(effectiveRect.height)}
           </div>
         </>
       ) : null}

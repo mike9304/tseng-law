@@ -1,6 +1,9 @@
 import { defineComponent } from '../define';
 import TextElement from '@/components/builder/canvas/elements/TextElement';
+import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import TextInspector from './Inspector';
+
+const defaultText = '텍스트를 입력하세요';
 
 export default defineComponent({
   kind: 'text',
@@ -8,7 +11,8 @@ export default defineComponent({
   category: 'basic',
   icon: 'T',
   defaultContent: {
-    text: '텍스트를 입력하세요',
+    text: defaultText,
+    richText: richTextFromPlainText(defaultText),
     fontSize: 16,
     color: '#1f2937',
     fontWeight: 'regular' as const,

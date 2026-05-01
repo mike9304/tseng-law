@@ -1,6 +1,9 @@
 import { defineComponent } from '../define';
+import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import HeadingElement from './Element';
 import HeadingInspector from './Inspector';
+
+const defaultHeadingText = '헤딩을 입력하세요';
 
 export default defineComponent({
   kind: 'heading',
@@ -8,7 +11,8 @@ export default defineComponent({
   category: 'basic',
   icon: 'H',
   defaultContent: {
-    text: '헤딩을 입력하세요',
+    text: defaultHeadingText,
+    richText: richTextFromPlainText(defaultHeadingText),
     level: 2,
     color: '#0f172a',
     align: 'left' as const,

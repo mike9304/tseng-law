@@ -1,5 +1,6 @@
 import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
 import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
+import { RichTextRenderer } from '@/lib/builder/rich-text/render';
 import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor, resolveThemeTextTypography } from '@/lib/builder/site/theme';
 
@@ -34,7 +35,15 @@ export default function TextElement({
           wordBreak: 'break-word',
         }}
       >
-        {node.content.text}
+        {node.content.richText ? (
+          <RichTextRenderer
+            richText={node.content.richText}
+            fallbackText={node.content.text}
+            mode="block"
+          />
+        ) : (
+          node.content.text
+        )}
       </Tag>
     );
   }
@@ -72,7 +81,15 @@ export default function TextElement({
         margin: 0,
       }}
     >
-      {node.content.text}
+      {node.content.richText ? (
+        <RichTextRenderer
+          richText={node.content.richText}
+          fallbackText={node.content.text}
+          mode="block"
+        />
+      ) : (
+        node.content.text
+      )}
     </Tag>
   );
 }

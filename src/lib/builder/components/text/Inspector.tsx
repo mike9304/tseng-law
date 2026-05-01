@@ -4,6 +4,7 @@ import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
 import ThemeTextPresetPicker from '@/components/builder/editor/ThemeTextPresetPicker';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
+import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import {
   THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
@@ -47,8 +48,14 @@ export default function TextInspector({
           value={textNode.content.text}
           rows={4}
           disabled={disabled}
-          onChange={(event) => onUpdate({ text: event.target.value })}
+          onChange={(event) => {
+            const text = event.target.value;
+            onUpdate({ text, richText: richTextFromPlainText(text) });
+          }}
         />
+        <small style={{ color: '#b45309', fontSize: '0.72rem', lineHeight: 1.35 }}>
+          ⚠ 텍스트만 편집하면 서식이 사라집니다. 캔버스에서 직접 편집하세요.
+        </small>
       </label>
       <label>
         <span>Font</span>

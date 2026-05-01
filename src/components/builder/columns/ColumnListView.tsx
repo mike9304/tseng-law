@@ -1,10 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type CSSProperties } from 'react';
 import NewColumnModal from '@/components/builder/columns/NewColumnModal';
+import {
+  BLOG_ADMIN_CATEGORIES,
+  estimateReadingTime,
+  getCategoryLabel,
+  getColumnBlogCategory,
+} from '@/components/builder/columns/blogAdminMeta';
 import { locales, type Locale } from '@/lib/locales';
-import type { ColumnListItem } from '@/lib/builder/columns/types';
+import type { ColumnFrontmatter, ColumnListItem } from '@/lib/builder/columns/types';
 
 interface ColumnListViewProps {
   routeLocale: Locale;
@@ -30,18 +36,15 @@ const reviewLabels: Record<ColumnListItem['frontmatter']['attorneyReviewStatus']
   'needs-revision': 'needs revision',
 };
 
-function formatDate(value: string | null): string {
+function formatDate(value: string | null | undefined): string {
   if (!value) return '-';
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return value;
   return date
-    .toLocaleString('ko-KR', {
+    .toLocaleDateString('ko-KR', {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: false,
     })
     .replace(/\s+/g, ' ');
 }
@@ -51,29 +54,73 @@ function buildColumnsApiUrl(slug: string | null, contentLocale: Locale): string 
   return `/api/builder/columns/${encodeURIComponent(slug)}?locale=${contentLocale}`;
 }
 
+function stripHtml(value: string): string {
+  return value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function getPreviewInitials(title: string): string {
+  const compact = title.replace(/\s+/g, '').trim();
+  return compact.slice(0, 2).toUpperCase() || 'HJ';
+}
+
+function getCardSearchText(column: ColumnListItem): string {
+  const category = getColumnBlogCategory(column.frontmatter);
+  return [
+    column.title,
+    column.slug,
+    column.summary,
+    category.label.ko,
+    category.label.en,
+    column.frontmatter.author?.name,
+    column.frontmatter.tags?.join(' '),
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+}
+
 export default function ColumnListView({
   routeLocale,
   contentLocale,
   initialColumns,
 }: ColumnListViewProps) {
   const [query, setQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
   const [columns, setColumns] = useState(initialColumns);
   const [modalOpen, setModalOpen] = useState(false);
   const [createError, setCreateError] = useState<string | null>(null);
   const [createPending, setCreatePending] = useState(false);
-  const [deleteError, setDeleteError] = useState<string | null>(null);
-  const [deleteTarget, setDeleteTarget] = useState<string | null>(null);
+  const [actionError, setActionError] = useState<string | null>(null);
+  const [busySlug, setBusySlug] = useState<string | null>(null);
+
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const column of columns) {
+      const category = getColumnBlogCategory(column.frontmatter);
+      counts.set(category.slug, (counts.get(category.slug) ?? 0) + 1);
+    }
+    return counts;
+  }, [columns]);
 
   const filteredColumns = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    if (!normalized) return columns;
-    return columns.filter((column) =>
-      [column.title, column.slug, column.summary]
-        .filter(Boolean)
-        .some((value) => value.toLowerCase().includes(normalized)));
-  }, [columns, query]);
+    return columns.filter((column) => {
+      const category = getColumnBlogCategory(column.frontmatter);
+      const categoryMatches = activeCategory === 'all' || category.slug === activeCategory;
+      if (!categoryMatches) return false;
+      if (!normalized) return true;
+      return getCardSearchText(column).includes(normalized);
+    });
+  }, [columns, query, activeCategory]);
 
-  async function handleCreate(value: { slug: string; title: string; summary: string }) {
+  async function handleCreate(value: {
+    slug: string;
+    title: string;
+    summary: string;
+    bodyHtml?: string;
+    bodyMarkdown?: string;
+    frontmatter?: Partial<ColumnFrontmatter>;
+  }) {
     setCreateError(null);
     setCreatePending(true);
     try {
@@ -88,6 +135,9 @@ export default function ColumnListView({
           slug: value.slug,
           title: value.title,
           summary: value.summary,
+          bodyHtml: value.bodyHtml,
+          bodyMarkdown: value.bodyMarkdown,
+          frontmatter: value.frontmatter,
         }),
       });
 
@@ -113,6 +163,7 @@ export default function ColumnListView({
       };
 
       setColumns((current) => [nextItem, ...current.filter((item) => item.slug !== nextItem.slug)]);
+      setActiveCategory(nextItem.frontmatter.blogCategory ?? activeCategory);
       setModalOpen(false);
     } catch (error) {
       setCreateError(error instanceof Error ? error.message : '새 칼럼 생성에 실패했습니다.');
@@ -121,9 +172,75 @@ export default function ColumnListView({
     }
   }
 
+  async function patchFrontmatter(slug: string, frontmatter: Partial<ColumnFrontmatter>) {
+    setActionError(null);
+    setBusySlug(slug);
+    try {
+      const response = await fetch(buildColumnsApiUrl(slug, contentLocale), {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ frontmatter }),
+      });
+      const payload = await response.json().catch(() => null);
+      if (!response.ok || !payload?.ok || !payload?.column) {
+        throw new Error(payload?.error || '업데이트에 실패했습니다.');
+      }
+      setColumns((current) =>
+        current.map((item) =>
+          item.slug === slug
+            ? {
+                ...item,
+                frontmatter: payload.column.frontmatter,
+                draftRevision: payload.column.revision,
+                hasDraft: true,
+                updatedAt: payload.column.updatedAt,
+                preferredSource: 'draft',
+              }
+            : item,
+        ),
+      );
+    } catch (error) {
+      setActionError(error instanceof Error ? error.message : '업데이트에 실패했습니다.');
+    } finally {
+      setBusySlug(null);
+    }
+  }
+
+  async function handlePublish(slug: string) {
+    setActionError(null);
+    setBusySlug(slug);
+    try {
+      const response = await fetch(
+        `/api/builder/columns/${encodeURIComponent(slug)}/publish?locale=${encodeURIComponent(contentLocale)}`,
+        { method: 'POST', credentials: 'same-origin' },
+      );
+      const payload = await response.json().catch(() => null);
+      if (!response.ok || (!payload?.ok && !payload?.success)) {
+        throw new Error(payload?.error || '발행에 실패했습니다.');
+      }
+      setColumns((current) =>
+        current.map((item) =>
+          item.slug === slug
+            ? {
+                ...item,
+                hasPublished: true,
+                publishedRevision: item.draftRevision,
+                publishedUpdatedAt: new Date().toISOString(),
+              }
+            : item,
+        ),
+      );
+    } catch (error) {
+      setActionError(error instanceof Error ? error.message : '발행에 실패했습니다.');
+    } finally {
+      setBusySlug(null);
+    }
+  }
+
   async function handleDelete(slug: string) {
-    setDeleteError(null);
-    setDeleteTarget(slug);
+    setActionError(null);
+    setBusySlug(slug);
     try {
       const response = await fetch(buildColumnsApiUrl(slug, contentLocale), {
         method: 'DELETE',
@@ -135,164 +252,223 @@ export default function ColumnListView({
       }
       setColumns((current) => current.filter((item) => item.slug !== slug));
     } catch (error) {
-      setDeleteError(error instanceof Error ? error.message : '삭제에 실패했습니다.');
+      setActionError(error instanceof Error ? error.message : '삭제에 실패했습니다.');
     } finally {
-      setDeleteTarget(null);
+      setBusySlug(null);
     }
   }
 
   return (
-    <main className="admin-console">
-      <header className="admin-console-header">
+    <main className="admin-console column-manager">
+      <header className="column-manager-hero">
         <div>
-          <h1>칼럼 빌더 목록</h1>
-          <p>
-            현재 활성 기능만 노출합니다. 이 배치에서는 <strong>목록, 검색, locale 전환, 생성,
-            삭제</strong>가 중심이고, 기본 TipTap 편집 화면은 기존 route 로 연결됩니다. 복제,
-            frontmatter, locale linker 는 아직 다음 단계입니다.
-          </p>
+          <span className="column-manager-eyebrow">Blog manager</span>
+          <h1>칼럼 관리</h1>
+          <p>카테고리별 칼럼을 검색하고, 초안 작성부터 발행까지 한 화면에서 관리합니다.</p>
         </div>
-        <div className="admin-console-actions">
-          <button
-            type="button"
-            className="admin-console-primary-btn"
-            onClick={() => setModalOpen(true)}
-          >
-            새 칼럼
-          </button>
-        </div>
-      </header>
-
-      <section className="admin-console-section">
-        <header className="admin-console-section-header-row">
-          <div>
-            <h2>Locale</h2>
-            <p>builder UI locale 는 <strong>{routeLocale}</strong>, column content locale 은 아래 탭에서 전환합니다.</p>
-          </div>
+        <div className="column-manager-hero-actions">
           <nav className="admin-console-pill-nav" aria-label="Column locale tabs">
             {locales.map((locale) => {
               const href = `/${routeLocale}/admin-builder/columns?contentLocale=${locale}`;
               const active = locale === contentLocale;
               return (
-                <Link
-                  key={locale}
-                  href={href}
-                  className={active ? 'is-active' : undefined}
-                >
+                <Link key={locale} href={href} className={active ? 'is-active' : undefined}>
                   {localeLabels[locale]}
                 </Link>
               );
             })}
           </nav>
-        </header>
-
-        <div className="admin-console-toolbar">
-          <label className="admin-console-search">
-            <input
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="제목, slug, 요약 검색"
-              aria-label="칼럼 검색"
-            />
-          </label>
-          <div className="admin-console-toolbar-meta">
-            <span className="admin-console-tag">{contentLocale}</span>
-            <span>{filteredColumns.length} items</span>
-          </div>
+          <button
+            type="button"
+            className="admin-console-primary-btn column-manager-new-btn"
+            onClick={() => setModalOpen(true)}
+          >
+            + 새 칼럼
+          </button>
         </div>
+      </header>
 
-        {deleteError ? <p className="admin-console-form-error">{deleteError}</p> : null}
-
-        {filteredColumns.length === 0 ? (
-          <div className="admin-console-empty-state">
-            <h3>아직 칼럼이 없습니다.</h3>
-            <p>이 locale 에는 draft/published 칼럼이 없습니다. 새 칼럼을 만들어 첫 초안을 시작하세요.</p>
+      <div className="column-manager-shell">
+        <aside className="column-manager-sidebar" aria-label="Column categories">
+          <button
+            type="button"
+            className={activeCategory === 'all' ? 'is-active' : undefined}
+            onClick={() => setActiveCategory('all')}
+          >
+            <span>전체</span>
+            <strong>{columns.length}</strong>
+          </button>
+          {BLOG_ADMIN_CATEGORIES.map((category) => (
             <button
+              key={category.slug}
               type="button"
-              className="admin-console-primary-btn"
-              onClick={() => setModalOpen(true)}
+              className={activeCategory === category.slug ? 'is-active' : undefined}
+              onClick={() => setActiveCategory(category.slug)}
             >
-              첫 칼럼 만들기
+              <i style={{ background: category.color }} aria-hidden="true" />
+              <span>{getCategoryLabel(category, contentLocale)}</span>
+              <strong>{categoryCounts.get(category.slug) ?? 0}</strong>
             </button>
-          </div>
-        ) : (
-          <div className="admin-console-card-grid">
-            {filteredColumns.map((column) => {
-              const deleteBusy = deleteTarget === column.slug;
-              return (
-                <article key={`${column.locale}-${column.slug}`} className="admin-console-card">
-                  <div className="admin-console-card-meta">
-                    <span className="admin-console-tag">{column.slug}</span>
-                    <span className="admin-console-tag">{freshnessLabels[column.frontmatter.freshness]}</span>
-                    <span className="admin-console-tag">
-                      {reviewLabels[column.frontmatter.attorneyReviewStatus]}
-                    </span>
-                  </div>
-                  <h3>{column.title}</h3>
-                  <p>{column.summary || '요약 없음'}</p>
+          ))}
+          <button type="button" className="column-manager-add-category" disabled>
+            + 새 카테고리
+          </button>
+        </aside>
 
-                  <dl className="admin-console-kv-list">
-                    <div>
-                      <dt>Last modified</dt>
-                      <dd>{formatDate(column.frontmatter.lastmod)}</dd>
-                    </div>
-                    <div>
-                      <dt>Preferred source</dt>
-                      <dd>{column.preferredSource}</dd>
-                    </div>
-                    <div>
-                      <dt>Draft</dt>
-                      <dd>{column.hasDraft ? `yes · r${column.draftRevision}` : 'no'}</dd>
-                    </div>
-                    <div>
-                      <dt>Published</dt>
-                      <dd>
-                        {column.hasPublished
-                          ? `yes · r${column.publishedRevision} · ${formatDate(column.publishedUpdatedAt)}`
-                          : 'no'}
-                      </dd>
-                    </div>
-                  </dl>
-
-                  <div className="admin-console-card-actions">
-                    <Link
-                      href={`/${routeLocale}/admin-builder/columns/${encodeURIComponent(column.slug)}/edit`}
-                      className="admin-console-primary-btn"
-                    >
-                      편집
-                    </Link>
-                    <a
-                      href={buildColumnsApiUrl(column.slug, contentLocale)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="admin-console-ghost-btn"
-                    >
-                      API detail
-                    </a>
-                    <button
-                      type="button"
-                      className="admin-console-danger-btn"
-                      disabled={!column.hasDraft || deleteBusy}
-                      onClick={() => {
-                        if (!column.hasDraft) return;
-                        const accepted = window.confirm(
-                          `Delete draft column "${column.title}" (${column.slug})? Published copy, if any, will remain.`,
-                        );
-                        if (accepted) {
-                          void handleDelete(column.slug);
-                        }
-                      }}
-                    >
-                      {deleteBusy ? '삭제 중…' : 'Draft 삭제'}
-                    </button>
-                  </div>
-                </article>
-              );
-            })}
+        <section className="column-manager-main">
+          <div className="column-manager-toolbar">
+            <label className="column-manager-search">
+              <span>검색</span>
+              <input
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="제목, slug, 태그, 저자 검색"
+                aria-label="칼럼 검색"
+              />
+            </label>
+            <div className="column-manager-count">
+              <strong>{filteredColumns.length}</strong>
+              <span>posts</span>
+            </div>
           </div>
-        )}
-      </section>
+
+          {actionError ? <p className="admin-console-form-error">{actionError}</p> : null}
+
+          {filteredColumns.length === 0 ? (
+            <div className="admin-console-empty-state column-manager-empty">
+              <h3>아직 칼럼이 없습니다.</h3>
+              <p>+ 새 칼럼을 눌러 첫 초안을 만들고 카테고리, 저자, SEO 정보를 함께 설정하세요.</p>
+              <button
+                type="button"
+                className="admin-console-primary-btn"
+                onClick={() => setModalOpen(true)}
+              >
+                첫 칼럼 만들기
+              </button>
+            </div>
+          ) : (
+            <div className="column-post-grid">
+              {filteredColumns.map((column) => {
+                const category = getColumnBlogCategory(column.frontmatter);
+                const deleteBusy = busySlug === column.slug;
+                const featured = Boolean(column.frontmatter.featured);
+                const readingTime = estimateReadingTime(`${column.summary} ${stripHtml(column.summary)}`);
+                const authorName = column.frontmatter.author?.name ?? '호정국제 법률사무소';
+                const imageUrl = column.frontmatter.featuredImage;
+                return (
+                  <article
+                    key={`${column.locale}-${column.slug}`}
+                    className="column-post-card"
+                    style={{ '--column-category-color': category.color } as CSSProperties}
+                  >
+                    <div className="column-post-card-media">
+                      {imageUrl ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={imageUrl} alt="" />
+                      ) : (
+                        <div className="column-post-card-placeholder">
+                          {getPreviewInitials(column.title)}
+                        </div>
+                      )}
+                      <button
+                        type="button"
+                        className={featured ? 'column-feature-toggle is-active' : 'column-feature-toggle'}
+                        aria-pressed={featured}
+                        aria-label={featured ? 'featured 해제' : 'featured 설정'}
+                        disabled={deleteBusy}
+                        onClick={() => void patchFrontmatter(column.slug, { featured: !featured })}
+                      >
+                        ★
+                      </button>
+                    </div>
+
+                    <div className="column-post-card-content">
+                      <div className="column-post-card-row">
+                        <span className="column-category-chip">
+                          {getCategoryLabel(category, contentLocale)}
+                        </span>
+                        {featured ? <span className="column-featured-label">Featured</span> : null}
+                      </div>
+                      <h3>
+                        <Link href={`/${routeLocale}/admin-builder/columns/${encodeURIComponent(column.slug)}/edit`}>
+                          {column.title}
+                        </Link>
+                      </h3>
+                      <p>{column.summary || '요약 없음'}</p>
+                      <div className="column-post-card-tags">
+                        {(column.frontmatter.tags ?? []).slice(0, 3).map((tag) => (
+                          <span key={tag}>#{tag}</span>
+                        ))}
+                      </div>
+                      <div className="column-post-card-footer">
+                        <div className="column-author-mini">
+                          <span>{authorName.slice(0, 1)}</span>
+                          <div>
+                            <strong>{authorName}</strong>
+                            <em>{formatDate(column.frontmatter.publishedAt ?? column.frontmatter.lastmod)}</em>
+                          </div>
+                        </div>
+                        <span className="column-reading-time">{readingTime}분 읽기</span>
+                      </div>
+                      <div className="column-post-card-status">
+                        <span>{freshnessLabels[column.frontmatter.freshness]}</span>
+                        <span>{reviewLabels[column.frontmatter.attorneyReviewStatus]}</span>
+                        <span>{column.hasPublished ? 'published' : 'draft'}</span>
+                      </div>
+                    </div>
+
+                    <details className="column-card-menu">
+                      <summary aria-label="칼럼 메뉴">⋯</summary>
+                      <div>
+                        <Link href={`/${routeLocale}/admin-builder/columns/${encodeURIComponent(column.slug)}/edit`}>
+                          편집
+                        </Link>
+                        <a
+                          href={`/${routeLocale}/columns/${encodeURIComponent(column.slug)}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          공개 페이지
+                        </a>
+                        <button
+                          type="button"
+                          disabled={deleteBusy || !column.hasDraft}
+                          onClick={() => void handlePublish(column.slug)}
+                        >
+                          발행
+                        </button>
+                        <a
+                          href={buildColumnsApiUrl(column.slug, contentLocale)}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          API detail
+                        </a>
+                        <button
+                          type="button"
+                          disabled={!column.hasDraft || deleteBusy}
+                          onClick={() => {
+                            if (!column.hasDraft) return;
+                            const accepted = window.confirm(
+                              `Delete draft column "${column.title}" (${column.slug})? Published copy, if any, will remain.`,
+                            );
+                            if (accepted) {
+                              void handleDelete(column.slug);
+                            }
+                          }}
+                        >
+                          {deleteBusy ? '처리 중' : 'Draft 삭제'}
+                        </button>
+                      </div>
+                    </details>
+                  </article>
+                );
+              })}
+            </div>
+          )}
+        </section>
+      </div>
 
       <NewColumnModal
         contentLocale={contentLocale}

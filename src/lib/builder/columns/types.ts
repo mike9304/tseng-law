@@ -38,11 +38,42 @@ export const columnLinkedSlugsSchema = z.object({
   en: columnSlugSchema.optional(),
 });
 
+// Phase 14 — Blog metadata (additive, optional). Keeps legacy `category` enum intact.
+export const blogAuthorSchema = z.object({
+  name: z.string().trim().min(1).max(120),
+  photo: z.string().max(2000).optional(),
+  title: z.string().max(120).optional(),
+  bio: z.string().max(2000).optional(),
+});
+
+export const blogSeoSchema = z.object({
+  title: z.string().max(200).optional(),
+  description: z.string().max(500).optional(),
+  ogImage: z.string().max(2000).optional(),
+  noIndex: z.boolean().optional(),
+});
+
+export const blogCategorySlugSchema = z
+  .string()
+  .trim()
+  .max(80)
+  .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'category slug must be kebab-case ascii');
+
+export const blogTagSchema = z.string().trim().min(1).max(80);
+
 export const columnFrontmatterSchema = z.object({
   lastmod: z.string().datetime({ offset: true }),
   attorneyReviewStatus: attorneyReviewStatusSchema,
   freshness: freshnessSchema,
   category: columnCategorySchema.optional(),
+  // Phase 14 blog meta (optional, additive)
+  blogCategory: blogCategorySlugSchema.optional(),
+  tags: z.array(blogTagSchema).max(20).optional(),
+  author: blogAuthorSchema.optional(),
+  featuredImage: z.string().max(2000).optional(),
+  featured: z.boolean().optional(),
+  publishedAt: z.string().datetime({ offset: true }).optional(),
+  seo: blogSeoSchema.optional(),
 });
 
 export const columnDocumentSchema = z.object({
@@ -61,6 +92,20 @@ export const columnDocumentSchema = z.object({
   updatedBy: z.string().trim().min(1).max(120),
 });
 
+const frontmatterInputBase = {
+  lastmod: z.string().datetime({ offset: true }).optional(),
+  attorneyReviewStatus: attorneyReviewStatusSchema.optional(),
+  freshness: freshnessSchema.optional(),
+  // Phase 14 blog meta (additive)
+  blogCategory: blogCategorySlugSchema.nullable().optional(),
+  tags: z.array(blogTagSchema).max(20).nullable().optional(),
+  author: blogAuthorSchema.nullable().optional(),
+  featuredImage: z.string().max(2000).nullable().optional(),
+  featured: z.boolean().nullable().optional(),
+  publishedAt: z.string().datetime({ offset: true }).nullable().optional(),
+  seo: blogSeoSchema.nullable().optional(),
+};
+
 export const createColumnInputSchema = z.object({
   slug: columnSlugSchema,
   locale: columnLocaleSchema,
@@ -70,9 +115,7 @@ export const createColumnInputSchema = z.object({
   bodyHtml: columnBodyHtmlSchema.optional(),
   linkedSlugs: columnLinkedSlugsSchema.optional(),
   frontmatter: z.object({
-    lastmod: z.string().datetime({ offset: true }).optional(),
-    attorneyReviewStatus: attorneyReviewStatusSchema.optional(),
-    freshness: freshnessSchema.optional(),
+    ...frontmatterInputBase,
     category: columnCategorySchema.optional(),
   }).optional(),
 });
@@ -84,9 +127,7 @@ export const patchColumnInputSchema = z.object({
   bodyHtml: columnBodyHtmlSchema.optional(),
   linkedSlugs: columnLinkedSlugsSchema.partial().optional(),
   frontmatter: z.object({
-    lastmod: z.string().datetime({ offset: true }).optional(),
-    attorneyReviewStatus: attorneyReviewStatusSchema.optional(),
-    freshness: freshnessSchema.optional(),
+    ...frontmatterInputBase,
     category: columnCategorySchema.nullable().optional(),
   }).optional(),
 }).refine((value) => Object.keys(value).length > 0, {

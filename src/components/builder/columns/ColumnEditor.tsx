@@ -6,6 +6,8 @@ import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
 import Placeholder from '@tiptap/extension-placeholder';
+import Underline from '@tiptap/extension-underline';
+import ColumnTranslationStatusAlert from '@/components/builder/translations/ColumnTranslationStatusAlert';
 
 interface ColumnEditorProps {
   slug: string;
@@ -29,6 +31,7 @@ export default function ColumnEditor({
 }: ColumnEditorProps) {
   const [title, setTitle] = useState(initialContent.title);
   const [summary, setSummary] = useState(initialContent.summary);
+  const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error'>('saved');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedRef = useRef<string>('');
 
@@ -39,6 +42,7 @@ export default function ColumnEditor({
       }),
       Link.configure({ openOnClick: false, HTMLAttributes: { rel: 'noopener noreferrer nofollow' } }),
       Image,
+      Underline,
       Placeholder.configure({ placeholder: '칼럼 본문을 여기에 작성하세요...' }),
     ],
     content: initialContent.bodyHtml || '<p></p>',
@@ -57,6 +61,7 @@ export default function ColumnEditor({
     const payload = JSON.stringify({ title, summary, bodyHtml, bodyMarkdown });
     if (payload === lastSavedRef.current) return;
 
+    setSaveStatus('saving');
     onSaveStatus?.('saving');
     try {
       const res = await fetch(
@@ -69,11 +74,14 @@ export default function ColumnEditor({
       );
       if (res.ok) {
         lastSavedRef.current = payload;
+        setSaveStatus('saved');
         onSaveStatus?.('saved');
       } else {
+        setSaveStatus('error');
         onSaveStatus?.('error');
       }
     } catch {
+      setSaveStatus('error');
       onSaveStatus?.('error');
     }
   }, [editor, slug, locale, title, summary, onSaveStatus]);
@@ -100,6 +108,7 @@ export default function ColumnEditor({
 
   const handlePublish = useCallback(async () => {
     await save();
+    setSaveStatus('saving');
     onSaveStatus?.('saving');
     try {
       const res = await fetch(
@@ -107,15 +116,18 @@ export default function ColumnEditor({
         { method: 'POST' },
       );
       if (res.ok) {
+        setSaveStatus('saved');
         onSaveStatus?.('saved');
         alert('발행 완료! AI 상담사 인덱싱이 백그라운드에서 진행됩니다.');
       } else {
         const data = await res.json().catch(() => ({}));
         alert(`발행 실패: ${(data as { error?: string }).error || res.status}`);
+        setSaveStatus('error');
         onSaveStatus?.('error');
       }
     } catch {
       alert('발행 중 네트워크 오류가 발생했습니다.');
+      setSaveStatus('error');
       onSaveStatus?.('error');
     }
   }, [save, slug, locale, onSaveStatus]);
@@ -126,8 +138,20 @@ export default function ColumnEditor({
         <div className="column-editor-topbar-left">
           <span className="column-editor-slug">/{slug}</span>
           <span className="column-editor-locale">{locale}</span>
+          <span className={`column-editor-save-state is-${saveStatus}`}>
+            {saveStatus === 'saving' ? 'Saving' : saveStatus === 'error' ? 'Save failed' : 'Saved'}
+          </span>
         </div>
         <div className="column-editor-topbar-right">
+          <ColumnTranslationStatusAlert slug={slug} routeLocale={locale} />
+          <a
+            className="column-editor-btn-save"
+            href={`/${locale}/columns/${encodeURIComponent(slug)}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            공개 페이지
+          </a>
           <button type="button" className="column-editor-btn-save" onClick={() => save()}>
             저장
           </button>
@@ -139,8 +163,8 @@ export default function ColumnEditor({
 
       <div className="column-editor-fields">
         <label className="column-editor-field">
-          <span>제목</span>
           <input
+            className="column-editor-title-input"
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -148,8 +172,8 @@ export default function ColumnEditor({
           />
         </label>
         <label className="column-editor-field">
-          <span>요약</span>
           <textarea
+            className="column-editor-summary-input"
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
             placeholder="검색 결과 / AI 상담사 참조 시 노출되는 요약"
@@ -159,6 +183,20 @@ export default function ColumnEditor({
       </div>
 
       <div className="column-editor-toolbar">
+        <button
+          type="button"
+          onClick={() => editor?.chain().focus().setParagraph().run()}
+          className={editor?.isActive('paragraph') ? 'is-active' : ''}
+        >
+          P
+        </button>
+        <button
+          type="button"
+          onClick={() => editor?.chain().focus().toggleHeading({ level: 1 }).run()}
+          className={editor?.isActive('heading', { level: 1 }) ? 'is-active' : ''}
+        >
+          H1
+        </button>
         <button
           type="button"
           onClick={() => editor?.chain().focus().toggleBold().run()}
@@ -172,6 +210,13 @@ export default function ColumnEditor({
           className={editor?.isActive('italic') ? 'is-active' : ''}
         >
           I
+        </button>
+        <button
+          type="button"
+          onClick={() => editor?.chain().focus().toggleUnderline().run()}
+          className={editor?.isActive('underline') ? 'is-active' : ''}
+        >
+          U
         </button>
         <button
           type="button"
@@ -203,6 +248,23 @@ export default function ColumnEditor({
         </button>
         <button
           type="button"
+          onClick={() => editor?.chain().focus().toggleBlockquote().run()}
+          className={editor?.isActive('blockquote') ? 'is-active' : ''}
+        >
+          Quote
+        </button>
+        <button
+          type="button"
+          onClick={() => editor?.chain().focus().toggleCodeBlock().run()}
+          className={editor?.isActive('codeBlock') ? 'is-active' : ''}
+        >
+          Code
+        </button>
+        <button type="button" onClick={() => editor?.chain().focus().setHorizontalRule().run()}>
+          Line
+        </button>
+        <button
+          type="button"
           onClick={() => {
             const url = prompt('링크 URL:');
             if (url) editor?.chain().focus().setLink({ href: url }).run();
@@ -219,6 +281,15 @@ export default function ColumnEditor({
           }}
         >
           Img
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            const html = prompt('HTML snippet:');
+            if (html) editor?.chain().focus().insertContent(html).run();
+          }}
+        >
+          HTML
         </button>
       </div>
 

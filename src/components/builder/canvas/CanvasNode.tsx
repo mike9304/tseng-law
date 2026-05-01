@@ -26,7 +26,15 @@ import {
   resolveThemeTextTypography,
 } from '@/lib/builder/site/theme';
 import InlineTextEditor from './InlineTextEditor';
+import { linkValueFromLegacy } from '@/lib/builder/links';
 import styles from './SandboxPage.module.css';
+
+function nodeLinkPreviewHref(node: BuilderCanvasNode): string | null {
+  const link = linkValueFromLegacy(
+    (node.content as Parameters<typeof linkValueFromLegacy>[0]) || {},
+  );
+  return link?.href?.trim() ? link.href.trim() : null;
+}
 
 export type ResizeHandle =
   | 'nw'
@@ -407,6 +415,42 @@ export default function CanvasNode({
         {node.sticky ? <em title={`Pinned ${node.sticky.from === 'bottom' ? 'bottom' : 'top'} +${node.sticky.offset}px`} style={{ color: '#60a5fa' }}>📌</em> : null}
         {node.anchorName ? <em title={`Anchor: #${node.anchorName}`} style={{ color: '#34d399' }}>⚓ {node.anchorName}</em> : null}
         {animationSummary ? <em title={animationSummary} style={{ color: '#a78bfa' }}>anim</em> : null}
+        {(() => {
+          const linkHref = nodeLinkPreviewHref(node);
+          if (!linkHref) return null;
+          const preview = linkHref.length > 16 ? `${linkHref.slice(0, 14)}…` : linkHref;
+          return (
+            <em
+              title={`Link: ${linkHref}\n클릭하거나 Cmd+K로 편집`}
+              style={{
+                color: '#fbbf24',
+                cursor: 'pointer',
+                pointerEvents: 'auto',
+                userSelect: 'none',
+              }}
+              onClick={(event) => {
+                event.stopPropagation();
+                event.preventDefault();
+                onSelect(node.id, false);
+                if (typeof document !== 'undefined') {
+                  document.dispatchEvent(
+                    new CustomEvent('builder:focus-href-input', {
+                      detail: { nodeId: node.id },
+                    }),
+                  );
+                }
+              }}
+              onMouseDown={(event) => {
+                event.stopPropagation();
+              }}
+              onPointerDown={(event) => {
+                event.stopPropagation();
+              }}
+            >
+              🔗 {preview}
+            </em>
+          );
+        })()}
       </div>
       <div
         className={styles.nodeBody}

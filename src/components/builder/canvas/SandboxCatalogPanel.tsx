@@ -8,6 +8,8 @@ import {
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
+import SavedSectionsPanel from '@/components/builder/sections/SavedSectionsPanel';
+import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
 
 const STAGE_WIDTH = 1280;
@@ -40,7 +42,18 @@ const KIND_PRIORITY: Partial<Record<BuilderComponentCategory, string[]>> = {
   basic: ['text', 'button', 'heading'],
   media: ['image'],
   layout: ['container', 'section'],
-  domain: ['composite'],
+  domain: [
+    'composite',
+    'form',
+    'form-input',
+    'form-textarea',
+    'form-select',
+    'form-radio',
+    'form-checkbox',
+    'form-date',
+    'form-file',
+    'form-submit',
+  ],
 };
 
 const sectionGridStyle: React.CSSProperties = {
@@ -205,12 +218,15 @@ function compareByCategoryPriority(
   return left.displayName.localeCompare(right.displayName, 'ko');
 }
 
-export default function SandboxCatalogPanel() {
+export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
-  const [categoryOpen, setCategoryOpen] = useState<Record<string, boolean>>({});
+  const [categoryOpen, setCategoryOpen] = useState<Record<string, boolean>>({
+    'saved-sections': true,
+  });
   const nodes = document?.nodes ?? [];
   const components = listComponents();
+  const effectiveLocale: Locale = locale ?? (document?.locale as Locale) ?? 'ko';
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -255,6 +271,37 @@ export default function SandboxCatalogPanel() {
         <p className={styles.panelCopy}>
           registry 컴포넌트를 카테고리별로 묶었습니다. drag 로 캔버스에 추가하거나 quick-add 로 중앙에 바로 생성합니다.
         </p>
+
+        {/* Saved sections — Wix Studio "Saved Sections" parity. */}
+        <div style={categorySectionStyle}>
+          <button
+            type="button"
+            style={categoryButtonStyle(categoryOpen['saved-sections'] ?? true)}
+            onClick={() => {
+              setCategoryOpen((current) => ({
+                ...current,
+                'saved-sections': !(current['saved-sections'] ?? true),
+              }));
+            }}
+          >
+            <span style={categoryMetaStyle}>
+              <span style={categoryIconStyle}>★</span>
+              <span style={categoryTitleStyle}>
+                <span style={categoryNameStyle}>Saved sections</span>
+                <span style={categoryHintStyle}>
+                  내가 저장한 섹션 라이브러리
+                </span>
+              </span>
+            </span>
+            <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
+              {(categoryOpen['saved-sections'] ?? true) ? '−' : '+'}
+            </span>
+          </button>
+
+          {(categoryOpen['saved-sections'] ?? true) ? (
+            <SavedSectionsPanel locale={effectiveLocale} />
+          ) : null}
+        </div>
 
         {groupedCategories.map(({ category, components: categoryComponents }) => {
           const isOpen = categoryOpen[category] ?? true;

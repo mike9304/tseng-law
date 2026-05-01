@@ -1,21 +1,22 @@
 'use client';
 
 import type { Locale } from '@/lib/locales';
+import BreakpointBadge from '@/components/builder/editor/BreakpointBadge';
+import {
+  hasResponsiveOverride,
+  VIEWPORT_WIDTHS,
+} from '@/lib/builder/canvas/responsive';
+import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import LocaleSwitcher from './LocaleSwitcher';
 import styles from './SandboxPage.module.css';
 
 export type ViewportMode = 'desktop' | 'tablet' | 'mobile';
 
-function viewportButtonStyle(active: boolean): React.CSSProperties {
-  return {
-    fontWeight: active ? 'bold' : 'normal',
-    opacity: active ? 1 : 0.5,
-    cursor: 'pointer',
-    background: active ? '#eff6ff' : undefined,
-    borderColor: active ? '#123b63' : undefined,
-    color: active ? '#123b63' : undefined,
-  };
-}
+const VIEWPORT_OPTIONS: Array<{ mode: ViewportMode; label: string; icon: string }> = [
+  { mode: 'desktop', label: 'Desktop', icon: 'D' },
+  { mode: 'tablet', label: 'Tablet', icon: 'T' },
+  { mode: 'mobile', label: 'Mobile', icon: 'M' },
+];
 
 export default function SandboxTopBar({
   locale,
@@ -48,9 +49,13 @@ export default function SandboxTopBar({
   activePageId?: string | null;
   onLocaleChange?: (locale: Locale, linkedPageId: string | null) => void;
 }) {
+  const { document, selectedNodeId, resetResponsiveOverride } = useBuilderCanvasStore();
   const saveLabel = draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : '';
   const saveClass = draftSaveState === 'saving' ? styles.statusBadgeSaving : draftSaveState === 'saved' ? styles.statusBadgeSaved : draftSaveState === 'error' ? styles.statusBadgeError : '';
   const canOpenSeo = Boolean(onOpenSeo && activePageId);
+  const selectedNode = document?.nodes.find((node) => node.id === selectedNodeId) ?? null;
+  const hasSelectedOverride = Boolean(selectedNode && hasResponsiveOverride(selectedNode, viewport));
+  const canResetViewport = viewport !== 'desktop' && Boolean(selectedNode) && hasSelectedOverride;
 
   return (
     <header className={styles.topBar}>
@@ -79,33 +84,40 @@ export default function SandboxTopBar({
         <span className={styles.topBarChip}>nodes: {nodeCount}</span>
         <span className={styles.topBarChip}>selected: {selectedSummary}</span>
         <span className={styles.topBarChip}>Space + drag: pan</span>
-        <button
-          type="button"
-          className={styles.topBarChip}
-          title="Desktop"
-          style={viewportButtonStyle(viewport === 'desktop')}
-          onClick={() => onViewportChange('desktop')}
-        >
-          Desktop
-        </button>
-        <button
-          type="button"
-          className={styles.topBarChip}
-          title="Tablet (768px)"
-          style={viewportButtonStyle(viewport === 'tablet')}
-          onClick={() => onViewportChange('tablet')}
-        >
-          Tablet
-        </button>
-        <button
-          type="button"
-          className={styles.topBarChip}
-          title="Mobile (375px)"
-          style={viewportButtonStyle(viewport === 'mobile')}
-          onClick={() => onViewportChange('mobile')}
-        >
-          Mobile
-        </button>
+        <div className={styles.breakpointSwitcher} aria-label="Viewport breakpoint switcher">
+          {VIEWPORT_OPTIONS.map((option) => {
+            const active = viewport === option.mode;
+            return (
+              <button
+                key={option.mode}
+                type="button"
+                className={`${styles.breakpointButton} ${active ? styles.breakpointButtonActive : ''}`}
+                title={`${option.label} (${VIEWPORT_WIDTHS[option.mode]}px)`}
+                aria-pressed={active}
+                onClick={() => onViewportChange(option.mode)}
+              >
+                <span className={styles.breakpointIcon}>{option.icon}</span>
+                <span>{option.label}</span>
+                <small>{VIEWPORT_WIDTHS[option.mode]}px</small>
+              </button>
+            );
+          })}
+          <button
+            type="button"
+            className={styles.breakpointResetButton}
+            disabled={!canResetViewport}
+            title={selectedNode && viewport !== 'desktop'
+              ? `Reset ${viewport} overrides for ${selectedNode.id}`
+              : 'Select a node on tablet/mobile to reset overrides'}
+            onClick={() => {
+              if (!selectedNode || viewport === 'desktop') return;
+              resetResponsiveOverride(selectedNode.id, viewport);
+            }}
+          >
+            <BreakpointBadge viewport={viewport} active={hasSelectedOverride} label="override" />
+            <span>Reset to desktop</span>
+          </button>
+        </div>
       </div>
 
       <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>

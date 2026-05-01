@@ -4,6 +4,9 @@ import { serviceAreas } from '@/data/service-details';
 import { getAllColumnPosts } from '@/lib/columns';
 import { locales } from '@/lib/locales';
 import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath } from '@/lib/seo';
+import { collectAllBuilderSitemapEntries } from '@/lib/builder/seo/sitemap-builder';
+
+export const dynamic = 'force-dynamic';
 
 const STATIC_PATHS = [
   '',
@@ -44,7 +47,7 @@ function createEntry(
   };
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages: MetadataRoute.Sitemap = [];
   const columns = getAllColumnPosts('ko');
 
@@ -88,6 +91,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
       );
     }
+  }
+
+  // SEO maturity — append builder-published pages. Failures here must
+  // never block the rest of the sitemap from rendering, so swallow + log
+  // any unexpected error.
+  try {
+    const builderEntries = await collectAllBuilderSitemapEntries();
+    for (const entry of builderEntries) {
+      pages.push({
+        url: entry.url,
+        lastModified: entry.lastModified,
+        changeFrequency: entry.changeFrequency,
+        priority: entry.priority,
+        alternates: entry.alternates,
+      });
+    }
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.warn('[sitemap] builder pages collection failed:', error);
   }
 
   return pages;

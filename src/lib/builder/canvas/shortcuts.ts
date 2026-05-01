@@ -36,6 +36,7 @@ export type CanvasAction =
   | 'nudgeDownLarge'
   | 'nudgeLeftLarge'
   | 'nudgeRightLarge'
+  | 'showHelp'
   | null;
 
 function isTextInput(target: EventTarget | null): boolean {
@@ -77,6 +78,10 @@ export function matchShortcut(e: KeyboardEvent): CanvasAction {
   // Group
   if (meta && !shift && key === 'g') return 'group';
   if (meta && shift && (key === 'g' || key === 'G')) return 'ungroup';
+
+  // Help (Cmd+/ or ?)
+  if (meta && key === '/') return 'showHelp';
+  if (!meta && shift && key === '?') return 'showHelp';
 
   // Zoom
   if (meta && (key === '=' || key === '+')) return 'zoomIn';

@@ -1,4 +1,5 @@
-import type { PageTemplate } from './types';
+import type { PageTemplate, TemplateCatalogItem } from './types';
+import { createTemplateCatalogItem, enrichTemplate } from './metadata';
 
 import { lawAboutTemplate } from './law/law-about';
 import { lawAttorneysTemplate } from './law/law-attorneys';
@@ -186,6 +187,11 @@ import { travelGuidesTemplate } from './travel/travel-guides';
 import { travelHomeTemplate } from './travel/travel-home';
 import { travelPackagesTemplate } from './travel/travel-packages';
 import { travelReviewsTemplate } from './travel/travel-reviews';
+
+export interface TemplateCategory {
+  id: PageTemplate['category'];
+  count: number;
+}
 
 const allTemplates: PageTemplate[] = [
   // Law (10)
@@ -395,15 +401,28 @@ const allTemplates: PageTemplate[] = [
 ];
 
 export function getAllTemplates(): PageTemplate[] {
-  return allTemplates;
+  return allTemplates.map(enrichTemplate);
+}
+
+export function getTemplateCategories(): TemplateCategory[] {
+  const counts = new Map<PageTemplate['category'], number>();
+  for (const template of allTemplates) {
+    counts.set(template.category, (counts.get(template.category) ?? 0) + 1);
+  }
+  return Array.from(counts, ([id, count]) => ({ id, count }));
 }
 
 export function getTemplatesByCategory(
   category: PageTemplate['category'],
 ): PageTemplate[] {
-  return allTemplates.filter((t) => t.category === category);
+  return getAllTemplates().filter((t) => t.category === category);
 }
 
 export function getTemplateById(id: string): PageTemplate | undefined {
-  return allTemplates.find((t) => t.id === id);
+  const template = allTemplates.find((t) => t.id === id);
+  return template ? enrichTemplate(template) : undefined;
+}
+
+export function getTemplateCatalog(): TemplateCatalogItem[] {
+  return allTemplates.map(createTemplateCatalogItem);
 }

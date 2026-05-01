@@ -50,6 +50,9 @@ export default function BuilderFlexDevPage({
       publishedAt: now,
       noIndex: true,
     },
+    lightboxes: [],
+    headerCanvas: null,
+    footerCanvas: null,
   };
 
   return <PublishedSitePageView resolved={resolved} />;

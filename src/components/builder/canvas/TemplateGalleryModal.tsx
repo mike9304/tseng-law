@@ -1,9 +1,33 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useState, type CSSProperties, type MouseEvent } from 'react';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { getAllTemplates } from '@/lib/builder/templates/registry';
-import type { PageTemplate } from '@/lib/builder/templates/types';
+import type {
+  PageTemplate,
+  TemplateDensity,
+  TemplatePageType,
+  TemplateQualityTier,
+  TemplateVisualStyle,
+} from '@/lib/builder/templates/types';
+import {
+  DEFAULT_TEMPLATE_FILTERS,
+  TEMPLATE_DENSITY_FILTERS,
+  TEMPLATE_PAGE_TYPE_FILTERS,
+  TEMPLATE_QUALITY_FILTERS,
+  TEMPLATE_STYLE_FILTERS,
+  buildTemplateSearchText,
+  hasActiveTemplateFilters,
+  matchesTemplateFilters,
+  type TemplateFilterState,
+} from '@/lib/builder/templates/filters';
+import {
+  TEMPLATE_DENSITY_LABELS,
+  TEMPLATE_PAGE_TYPE_LABELS,
+  TEMPLATE_QUALITY_LABELS,
+  TEMPLATE_STYLE_LABELS,
+  getTemplatePalette,
+} from '@/lib/builder/templates/design-system';
 import TemplateThumbnailPlaceholder from './TemplateThumbnailPlaceholder';
 import {
   TEMPLATE_CATEGORIES,
@@ -19,20 +43,20 @@ const backdropStyle: CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: 'rgba(15, 23, 42, 0.46)',
-  backdropFilter: 'blur(6px)',
-  WebkitBackdropFilter: 'blur(6px)',
+  background: 'rgba(15, 23, 42, 0.58)',
+  backdropFilter: 'blur(8px)',
+  WebkitBackdropFilter: 'blur(8px)',
   zIndex: 10000,
   animation: 'templateGalleryFadeIn 180ms ease',
 };
 
 const modalStyle: CSSProperties = {
-  width: '90vw',
-  height: '88vh',
-  maxWidth: 1280,
-  background: '#fff',
-  borderRadius: 16,
-  boxShadow: '0 28px 80px rgba(15, 23, 42, 0.26)',
+  width: '94vw',
+  height: '90vh',
+  maxWidth: 1380,
+  background: '#f8fafc',
+  borderRadius: 18,
+  boxShadow: '0 32px 90px rgba(15, 23, 42, 0.34)',
   overflow: 'hidden',
   display: 'grid',
   gridTemplateRows: 'auto minmax(0, 1fr)',
@@ -45,26 +69,28 @@ const headerStyle: CSSProperties = {
   gap: 16,
   alignItems: 'start',
   padding: '22px 24px 18px',
-  borderBottom: '1px solid #e2e8f0',
+  borderBottom: '1px solid #dbe3ef',
+  background: '#ffffff',
 };
 
 const titleStyle: CSSProperties = {
   margin: 0,
-  fontSize: '1.25rem',
-  fontWeight: 800,
+  fontSize: '1.32rem',
+  fontWeight: 850,
   color: '#0f172a',
 };
 
 const subtitleStyle: CSSProperties = {
-  margin: '5px 0 0',
-  fontSize: '0.82rem',
+  margin: '6px 0 0',
+  fontSize: '0.86rem',
   color: '#64748b',
+  lineHeight: 1.45,
 };
 
 const closeButtonStyle: CSSProperties = {
-  width: 34,
-  height: 34,
-  border: '1px solid #e2e8f0',
+  width: 36,
+  height: 36,
+  border: '1px solid #dbe3ef',
   borderRadius: 8,
   background: '#fff',
   color: '#475569',
@@ -75,14 +101,14 @@ const closeButtonStyle: CSSProperties = {
 
 const bodyStyle: CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: '214px minmax(0, 1fr)',
+  gridTemplateColumns: '230px minmax(0, 1fr)',
   minHeight: 0,
 };
 
 const sidebarStyle: CSSProperties = {
-  borderRight: '1px solid #e2e8f0',
-  background: '#f8fafc',
-  padding: '18px 12px',
+  borderRight: '1px solid #dbe3ef',
+  background: '#ffffff',
+  padding: '16px 12px',
   overflowY: 'auto',
 };
 
@@ -101,13 +127,13 @@ const categoryButtonBase: CSSProperties = {
   cursor: 'pointer',
   textAlign: 'left',
   fontSize: '0.82rem',
-  fontWeight: 700,
+  fontWeight: 750,
 };
 
 const categoryCountStyle: CSSProperties = {
   color: '#94a3b8',
   fontSize: '0.72rem',
-  fontWeight: 800,
+  fontWeight: 850,
 };
 
 const contentStyle: CSSProperties = {
@@ -115,7 +141,12 @@ const contentStyle: CSSProperties = {
   minHeight: 0,
   padding: 22,
   overflowY: 'auto',
-  background: '#fff',
+};
+
+const toolbarStyle: CSSProperties = {
+  display: 'grid',
+  gap: 12,
+  marginBottom: 18,
 };
 
 const searchRowStyle: CSSProperties = {
@@ -123,7 +154,6 @@ const searchRowStyle: CSSProperties = {
   gridTemplateColumns: 'minmax(0, 1fr) auto',
   alignItems: 'center',
   gap: 14,
-  marginBottom: 18,
 };
 
 const searchInputStyle: CSSProperties = {
@@ -142,7 +172,53 @@ const resultCountStyle: CSSProperties = {
   whiteSpace: 'nowrap',
   fontSize: '0.78rem',
   color: '#64748b',
-  fontWeight: 700,
+  fontWeight: 750,
+};
+
+const filterRowStyle: CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 8,
+  alignItems: 'center',
+};
+
+const selectStyle: CSSProperties = {
+  minWidth: 132,
+  height: 36,
+  border: '1px solid #cbd5e1',
+  borderRadius: 9,
+  background: '#ffffff',
+  color: '#172033',
+  fontSize: '0.78rem',
+  fontWeight: 750,
+  padding: '0 10px',
+};
+
+const resetButtonStyle: CSSProperties = {
+  height: 36,
+  border: '1px solid #dbe3ef',
+  borderRadius: 9,
+  background: '#ffffff',
+  color: '#475569',
+  cursor: 'pointer',
+  fontSize: '0.78rem',
+  fontWeight: 800,
+  padding: '0 12px',
+};
+
+const sectionHeaderStyle: CSSProperties = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: 16,
+  margin: '0 0 12px',
+};
+
+const sectionTitleStyle: CSSProperties = {
+  margin: 0,
+  color: '#0f172a',
+  fontSize: '0.98rem',
+  fontWeight: 850,
 };
 
 const cardStyle: CSSProperties = {
@@ -150,37 +226,28 @@ const cardStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   minHeight: 0,
-  border: '1px solid #e2e8f0',
+  border: '1px solid #dbe3ef',
   borderRadius: 12,
   background: '#fff',
   overflow: 'hidden',
-  cursor: 'pointer',
   textAlign: 'left',
-  padding: 0,
   transition: 'transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease',
 };
 
 const cardBodyStyle: CSSProperties = {
   display: 'grid',
   gap: 8,
-  padding: '14px 15px 15px',
+  padding: '13px 14px 14px',
 };
 
 const cardTitleStyle: CSSProperties = {
   fontSize: '0.96rem',
-  fontWeight: 800,
+  fontWeight: 850,
   color: '#0f172a',
   lineHeight: 1.25,
-};
-
-const chipStyle: CSSProperties = {
-  width: 'fit-content',
-  borderRadius: 999,
-  background: '#eff6ff',
-  color: '#123b63',
-  padding: '3px 8px',
-  fontSize: '0.7rem',
-  fontWeight: 800,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
 };
 
 const descriptionStyle: CSSProperties = {
@@ -194,25 +261,52 @@ const descriptionStyle: CSSProperties = {
   overflow: 'hidden',
 };
 
-const actionPillStyle: CSSProperties = {
-  position: 'absolute',
-  right: 12,
-  top: 112,
+const badgeRowStyle: CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 5,
+  alignItems: 'center',
+};
+
+const chipStyle: CSSProperties = {
+  width: 'fit-content',
   borderRadius: 999,
-  background: '#123b63',
-  color: '#fff',
-  padding: '7px 11px',
-  fontSize: '0.74rem',
-  fontWeight: 800,
-  boxShadow: '0 12px 24px rgba(18, 59, 99, 0.24)',
-  transition: 'opacity 140ms ease, transform 140ms ease',
+  background: '#eff6ff',
+  color: '#123b63',
+  padding: '3px 8px',
+  fontSize: '0.68rem',
+  fontWeight: 850,
+};
+
+const metaStyle: CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 8,
+  color: '#64748b',
+  fontSize: '0.7rem',
+  fontWeight: 750,
+};
+
+const actionRowStyle: CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  gap: 8,
+  padding: '0 14px 14px',
+};
+
+const actionButtonBase: CSSProperties = {
+  minHeight: 36,
+  borderRadius: 9,
+  cursor: 'pointer',
+  fontSize: '0.75rem',
+  fontWeight: 850,
 };
 
 const emptyStateStyle: CSSProperties = {
   padding: 36,
   border: '1px dashed #cbd5e1',
   borderRadius: 12,
-  background: '#f8fafc',
+  background: '#fff',
   color: '#64748b',
   textAlign: 'center',
   fontSize: '0.9rem',
@@ -220,12 +314,12 @@ const emptyStateStyle: CSSProperties = {
 
 const blankCardStyle: CSSProperties = {
   ...cardStyle,
-  minHeight: 286,
+  minHeight: 304,
   justifyContent: 'center',
   alignItems: 'center',
   gap: 12,
   padding: 22,
-  background: '#f8fafc',
+  background: '#ffffff',
 };
 
 function getCategoryCount(category: TemplateCategoryKey): number {
@@ -240,15 +334,258 @@ function cloneTemplateDocument(document: BuilderCanvasDocument): BuilderCanvasDo
 function matchesSearch(template: PageTemplate, query: string): boolean {
   if (!query) return true;
   const categoryLabel = TEMPLATE_CATEGORY_LABELS[template.category] ?? template.category;
-  const haystack = [
-    template.id,
-    template.name,
-    template.description,
-    template.category,
-    categoryLabel,
-    template.subcategory,
-  ].join(' ').toLowerCase();
-  return haystack.includes(query);
+  return buildTemplateSearchText(template, categoryLabel).includes(query);
+}
+
+function formatTemplateMeta(template: PageTemplate): string {
+  const style = template.visualStyle ? TEMPLATE_STYLE_LABELS[template.visualStyle] : null;
+  const pageType = template.pageType ? TEMPLATE_PAGE_TYPE_LABELS[template.pageType] : null;
+  return [style, pageType].filter(Boolean).join(' / ');
+}
+
+function getQualityBadgeStyle(template: PageTemplate): CSSProperties {
+  if (template.qualityTier === 'premium') {
+    const palette = getTemplatePalette(template.paletteKey);
+    return { ...chipStyle, background: palette.ink, color: palette.inverse };
+  }
+  if (template.qualityTier === 'under-review') return { ...chipStyle, background: '#fff7ed', color: '#9a3412' };
+  if (template.qualityTier === 'draft') return { ...chipStyle, background: '#f1f5f9', color: '#64748b' };
+  return { ...chipStyle, background: '#f8fafc', color: '#475569' };
+}
+
+function getTemplateQualityLabel(template: PageTemplate): string {
+  if (!template.qualityTier) return 'Standard';
+  const score = template.qaScore ? ` ${template.qaScore}` : '';
+  return `${TEMPLATE_QUALITY_LABELS[template.qualityTier]}${score}`;
+}
+
+function TemplateCard({
+  template,
+  hovered,
+  onHover,
+  onPreview,
+  onSelect,
+}: {
+  template: PageTemplate;
+  hovered: boolean;
+  onHover: (id: string | null) => void;
+  onPreview: (template: PageTemplate) => void;
+  onSelect: (template: PageTemplate) => void;
+}) {
+  const palette = getTemplatePalette(template.paletteKey);
+  const styleLabel = template.visualStyle ? TEMPLATE_STYLE_LABELS[template.visualStyle] : null;
+  const densityLabel = template.density ? TEMPLATE_DENSITY_LABELS[template.density] : null;
+  const categoryLabel = TEMPLATE_CATEGORY_LABELS[template.category] ?? template.category;
+  const primaryTag = template.tags?.[0] ?? categoryLabel;
+
+  return (
+    <article
+      style={{
+        ...cardStyle,
+        borderColor: hovered ? palette.accent : '#dbe3ef',
+        boxShadow: hovered ? `0 18px 40px ${palette.ink}22` : '0 1px 2px rgba(15, 23, 42, 0.04)',
+        transform: hovered ? 'translateY(-2px)' : 'none',
+      }}
+      onMouseEnter={() => onHover(template.id)}
+      onMouseLeave={() => onHover(null)}
+    >
+      <button
+        type="button"
+        style={{
+          display: 'block',
+          width: '100%',
+          height: 168,
+          border: 0,
+          padding: 0,
+          background: palette.canvas,
+          cursor: 'pointer',
+          borderBottom: '1px solid #dbe3ef',
+        }}
+        onClick={() => onPreview(template)}
+        aria-label={`${template.name} 미리보기`}
+      >
+        <TemplateThumbnailPlaceholder template={template} width={320} height={190} />
+      </button>
+      <div style={cardBodyStyle}>
+        <div style={badgeRowStyle}>
+          <span style={getQualityBadgeStyle(template)}>{getTemplateQualityLabel(template)}</span>
+          <span style={{ ...chipStyle, background: palette.accentSoft, color: palette.ink }}>{categoryLabel}</span>
+          {template.featured ? <span style={{ ...chipStyle, background: '#ecfeff', color: '#0e7490' }}>Featured</span> : null}
+        </div>
+        <div style={cardTitleStyle}>{template.name}</div>
+        <div style={descriptionStyle}>{template.description}</div>
+        <div style={metaStyle}>
+          {styleLabel ? <span>{styleLabel}</span> : null}
+          {densityLabel ? <span>{densityLabel}</span> : null}
+          {template.ctaGoal ? <span>{template.ctaGoal}</span> : null}
+        </div>
+        <div style={badgeRowStyle}>
+          <span style={{ ...chipStyle, background: '#f8fafc', color: '#475569' }}>{primaryTag}</span>
+          {formatTemplateMeta(template) ? (
+            <span style={{ ...chipStyle, background: '#f8fafc', color: '#475569' }}>{formatTemplateMeta(template)}</span>
+          ) : null}
+        </div>
+      </div>
+      <div style={actionRowStyle}>
+        <button
+          type="button"
+          style={{
+            ...actionButtonBase,
+            border: '1px solid #dbe3ef',
+            background: '#ffffff',
+            color: '#334155',
+          }}
+          onClick={() => onPreview(template)}
+        >
+          미리보기
+        </button>
+        <button
+          type="button"
+          style={{
+            ...actionButtonBase,
+            border: `1px solid ${palette.ink}`,
+            background: palette.ink,
+            color: palette.inverse,
+          }}
+          onClick={() => onSelect(template)}
+        >
+          사용
+        </button>
+      </div>
+    </article>
+  );
+}
+
+function PreviewPanel({
+  template,
+  onClose,
+  onSelect,
+}: {
+  template: PageTemplate;
+  onClose: () => void;
+  onSelect: (template: PageTemplate) => void;
+}) {
+  const [viewport, setViewport] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
+  const palette = getTemplatePalette(template.paletteKey);
+  const previewSize = viewport === 'desktop'
+    ? { width: 720, height: 450 }
+    : viewport === 'tablet'
+      ? { width: 420, height: 560 }
+      : { width: 260, height: 560 };
+
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'rgba(15, 23, 42, 0.58)',
+        zIndex: 10001,
+        padding: 20,
+      }}
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+    >
+      <section
+        role="dialog"
+        aria-modal="true"
+        aria-label={`${template.name} 미리보기`}
+        style={{
+          width: 'min(1120px, 96vw)',
+          maxHeight: '90vh',
+          display: 'grid',
+          gridTemplateColumns: 'minmax(0, 1fr) 300px',
+          background: '#ffffff',
+          borderRadius: 16,
+          overflow: 'hidden',
+          boxShadow: '0 28px 80px rgba(15, 23, 42, 0.35)',
+        }}
+      >
+        <div style={{ minWidth: 0, padding: 24, background: '#eef2f7', overflow: 'auto' }}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div
+              style={{
+                width: previewSize.width,
+                maxWidth: '100%',
+                height: previewSize.height,
+                background: '#ffffff',
+                border: '1px solid #cbd5e1',
+                borderRadius: 12,
+                overflow: 'hidden',
+                boxShadow: '0 18px 40px rgba(15, 23, 42, 0.14)',
+              }}
+            >
+              <TemplateThumbnailPlaceholder template={template} width={previewSize.width} height={previewSize.height} />
+            </div>
+          </div>
+        </div>
+        <aside style={{ padding: 20, display: 'grid', alignContent: 'start', gap: 14 }}>
+          <button type="button" style={{ ...closeButtonStyle, justifySelf: 'end' }} onClick={onClose} title="닫기">
+            ×
+          </button>
+          <div>
+            <div style={{ ...chipStyle, background: palette.accentSoft, color: palette.ink, marginBottom: 8 }}>
+              {getTemplateQualityLabel(template)}
+            </div>
+            <h3 style={{ margin: 0, fontSize: '1.1rem', color: '#0f172a', lineHeight: 1.25 }}>{template.name}</h3>
+            <p style={{ margin: '8px 0 0', color: '#64748b', fontSize: '0.82rem', lineHeight: 1.5 }}>
+              {template.description}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6 }}>
+            {(['desktop', 'tablet', 'mobile'] as const).map((item) => (
+              <button
+                key={item}
+                type="button"
+                style={{
+                  minHeight: 34,
+                  border: `1px solid ${viewport === item ? palette.ink : '#dbe3ef'}`,
+                  borderRadius: 8,
+                  background: viewport === item ? palette.ink : '#ffffff',
+                  color: viewport === item ? palette.inverse : '#475569',
+                  cursor: 'pointer',
+                  fontSize: '0.72rem',
+                  fontWeight: 850,
+                }}
+                onClick={() => setViewport(item)}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+          <dl style={{ display: 'grid', gap: 8, margin: 0, color: '#475569', fontSize: '0.78rem' }}>
+            <div><dt style={{ fontWeight: 850 }}>스타일</dt><dd style={{ margin: 0 }}>{formatTemplateMeta(template) || 'Standard'}</dd></div>
+            <div><dt style={{ fontWeight: 850 }}>CTA 목적</dt><dd style={{ margin: 0 }}>{template.ctaGoal ?? '문의 전환'}</dd></div>
+            <div><dt style={{ fontWeight: 850 }}>섹션</dt><dd style={{ margin: 0 }}>{template.sections?.join(', ') ?? '템플릿 섹션'}</dd></div>
+          </dl>
+          <div style={badgeRowStyle}>
+            {(template.tags ?? []).slice(0, 5).map((tag) => (
+              <span key={tag} style={{ ...chipStyle, background: '#f8fafc', color: '#475569' }}>{tag}</span>
+            ))}
+          </div>
+          <button
+            type="button"
+            style={{
+              minHeight: 44,
+              border: `1px solid ${palette.ink}`,
+              borderRadius: 10,
+              background: palette.ink,
+              color: palette.inverse,
+              cursor: 'pointer',
+              fontSize: '0.84rem',
+              fontWeight: 900,
+            }}
+            onClick={() => onSelect(template)}
+          >
+            이 템플릿 사용
+          </button>
+        </aside>
+      </section>
+    </div>
+  );
 }
 
 export default function TemplateGalleryModal({
@@ -258,11 +595,12 @@ export default function TemplateGalleryModal({
   onSelect: (document: BuilderCanvasDocument | null) => void;
   onClose: () => void;
 }) {
-  const modalRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState<TemplateCategoryKey>('all');
   const [searchInput, setSearchInput] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [filters, setFilters] = useState<TemplateFilterState>(DEFAULT_TEMPLATE_FILTERS);
+  const [previewTemplate, setPreviewTemplate] = useState<PageTemplate | null>(null);
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
@@ -273,23 +611,32 @@ export default function TemplateGalleryModal({
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
+      if (event.key === 'Escape') {
+        if (previewTemplate) setPreviewTemplate(null);
+        else onClose();
+      }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [onClose]);
+  }, [onClose, previewTemplate]);
 
   const filteredTemplates = useMemo(() => {
     return allTemplates.filter((template) => {
       const categoryMatches = activeCategory === 'all' || template.category === activeCategory;
-      return categoryMatches && matchesSearch(template, searchQuery);
+      return categoryMatches && matchesSearch(template, searchQuery) && matchesTemplateFilters(template, filters);
     });
-  }, [activeCategory, searchQuery]);
+  }, [activeCategory, filters, searchQuery]);
 
-  const showBlankCard = activeCategory === 'all' && searchQuery.length === 0;
+  const featuredTemplates = useMemo(() => {
+    return allTemplates.filter((template) => template.featured || template.qualityTier === 'premium').slice(0, 5);
+  }, []);
+
+  const hasFilters = hasActiveTemplateFilters(filters);
+  const showBlankCard = activeCategory === 'all' && searchQuery.length === 0 && !hasFilters;
+  const showFeatured = activeCategory === 'all' && searchQuery.length === 0 && !hasFilters;
 
   const handleBackdropClick = useCallback(
-    (event: React.MouseEvent<HTMLDivElement>) => {
+    (event: MouseEvent<HTMLDivElement>) => {
       if (event.target === event.currentTarget) onClose();
     },
     [onClose],
@@ -297,6 +644,10 @@ export default function TemplateGalleryModal({
 
   const selectTemplate = (template: PageTemplate) => {
     onSelect(cloneTemplateDocument(template.document));
+  };
+
+  const updateFilter = <K extends keyof TemplateFilterState>(key: K, value: TemplateFilterState[K]) => {
+    setFilters((current) => ({ ...current, [key]: value }));
   };
 
   return (
@@ -315,13 +666,22 @@ export default function TemplateGalleryModal({
           grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 16px;
         }
-        @media (min-width: 1320px) {
+        .template-gallery-featured {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(180px, 1fr));
+          gap: 12px;
+          margin-bottom: 22px;
+        }
+        @media (min-width: 1380px) {
           .template-gallery-grid {
             grid-template-columns: repeat(4, minmax(0, 1fr));
           }
         }
-        @media (max-width: 1023px) {
+        @media (max-width: 1120px) {
           .template-gallery-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+          .template-gallery-featured {
             grid-template-columns: repeat(2, minmax(0, 1fr));
           }
         }
@@ -332,7 +692,8 @@ export default function TemplateGalleryModal({
           .template-gallery-sidebar {
             display: none;
           }
-          .template-gallery-grid {
+          .template-gallery-grid,
+          .template-gallery-featured {
             grid-template-columns: minmax(0, 1fr);
           }
           .template-gallery-search-row {
@@ -340,17 +701,13 @@ export default function TemplateGalleryModal({
           }
         }
       `}</style>
-      <div
-        ref={modalRef}
-        style={modalStyle}
-        role="dialog"
-        aria-modal="true"
-        aria-label="템플릿 갤러리"
-      >
+      <div style={modalStyle} role="dialog" aria-modal="true" aria-label="템플릿 갤러리">
         <header style={headerStyle}>
           <div>
-            <h2 style={titleStyle}>템플릿 갤러리</h2>
-            <p style={subtitleStyle}>카테고리와 검색으로 페이지 템플릿을 선택하세요.</p>
+            <h2 style={titleStyle}>프리미엄 템플릿 쇼룸</h2>
+            <p style={subtitleStyle}>
+              업종, 스타일, 밀도, 페이지 타입으로 고르고 desktop/tablet/mobile 첫인상을 확인하세요.
+            </p>
           </div>
           <button type="button" style={closeButtonStyle} onClick={onClose} title="닫기">
             ×
@@ -384,85 +741,144 @@ export default function TemplateGalleryModal({
           </aside>
 
           <main style={contentStyle}>
-            <div className="template-gallery-search-row" style={searchRowStyle}>
-              <input
-                type="search"
-                value={searchInput}
-                placeholder="템플릿 검색..."
-                style={searchInputStyle}
-                onChange={(event) => setSearchInput(event.target.value)}
-                autoFocus
-              />
-              <div style={resultCountStyle}>{filteredTemplates.length}개 템플릿</div>
-            </div>
-
-            {filteredTemplates.length === 0 && !showBlankCard ? (
-              <div style={emptyStateStyle}>조건에 맞는 템플릿이 없습니다</div>
-            ) : (
-              <div className="template-gallery-grid">
-                {showBlankCard ? (
-                  <button
-                    type="button"
-                    style={{
-                      ...blankCardStyle,
-                      borderColor: hoveredId === 'blank' ? '#123b63' : '#e2e8f0',
-                      boxShadow: hoveredId === 'blank' ? '0 18px 38px rgba(15, 23, 42, 0.12)' : 'none',
-                      transform: hoveredId === 'blank' ? 'translateY(-2px) scale(1.01)' : 'none',
-                    }}
-                    onMouseEnter={() => setHoveredId('blank')}
-                    onMouseLeave={() => setHoveredId(null)}
-                    onClick={() => onSelect(null)}
-                  >
-                    <span style={{ fontSize: '2rem', color: '#123b63', lineHeight: 1 }}>+</span>
-                    <span style={cardTitleStyle}>빈 페이지</span>
-                    <span style={{ ...descriptionStyle, textAlign: 'center', minHeight: 0 }}>
-                      자유 캔버스에서 새 페이지를 시작합니다.
-                    </span>
+            <div style={toolbarStyle}>
+              <div className="template-gallery-search-row" style={searchRowStyle}>
+                <input
+                  type="search"
+                  value={searchInput}
+                  placeholder="템플릿, 업종, CTA, 스타일 검색..."
+                  style={searchInputStyle}
+                  onChange={(event) => setSearchInput(event.target.value)}
+                  autoFocus
+                />
+                <div style={resultCountStyle}>{filteredTemplates.length}개 템플릿</div>
+              </div>
+              <div style={filterRowStyle}>
+                <select
+                  value={filters.style}
+                  style={selectStyle}
+                  onChange={(event) => updateFilter('style', event.target.value as TemplateVisualStyle | 'all')}
+                  aria-label="스타일 필터"
+                >
+                  <option value="all">모든 스타일</option>
+                  {TEMPLATE_STYLE_FILTERS.map((filter) => (
+                    <option key={filter.key} value={filter.key}>{filter.label}</option>
+                  ))}
+                </select>
+                <select
+                  value={filters.density}
+                  style={selectStyle}
+                  onChange={(event) => updateFilter('density', event.target.value as TemplateDensity | 'all')}
+                  aria-label="밀도 필터"
+                >
+                  <option value="all">모든 밀도</option>
+                  {TEMPLATE_DENSITY_FILTERS.map((filter) => (
+                    <option key={filter.key} value={filter.key}>{filter.label}</option>
+                  ))}
+                </select>
+                <select
+                  value={filters.pageType}
+                  style={selectStyle}
+                  onChange={(event) => updateFilter('pageType', event.target.value as TemplatePageType | 'all')}
+                  aria-label="페이지 타입 필터"
+                >
+                  <option value="all">모든 페이지</option>
+                  {TEMPLATE_PAGE_TYPE_FILTERS.map((filter) => (
+                    <option key={filter.key} value={filter.key}>{filter.label}</option>
+                  ))}
+                </select>
+                <select
+                  value={filters.quality}
+                  style={selectStyle}
+                  onChange={(event) => updateFilter('quality', event.target.value as TemplateQualityTier | 'all')}
+                  aria-label="품질 필터"
+                >
+                  <option value="all">모든 품질</option>
+                  {TEMPLATE_QUALITY_FILTERS.map((filter) => (
+                    <option key={filter.key} value={filter.key}>{filter.label}</option>
+                  ))}
+                </select>
+                {hasFilters ? (
+                  <button type="button" style={resetButtonStyle} onClick={() => setFilters(DEFAULT_TEMPLATE_FILTERS)}>
+                    필터 초기화
                   </button>
                 ) : null}
+              </div>
+            </div>
 
-                {filteredTemplates.map((template) => {
-                  const hovered = hoveredId === template.id;
-                  const categoryLabel = TEMPLATE_CATEGORY_LABELS[template.category] ?? template.category;
-                  return (
+            {showFeatured ? (
+              <section aria-label="추천 프리미엄 템플릿">
+                <div style={sectionHeaderStyle}>
+                  <h3 style={sectionTitleStyle}>추천 프리미엄 쇼케이스</h3>
+                  <span style={resultCountStyle}>Wix급 첫인상 기준으로 우선 개선할 5개</span>
+                </div>
+                <div className="template-gallery-featured">
+                  {featuredTemplates.map((template) => (
+                    <TemplateCard
+                      key={`featured-${template.id}`}
+                      template={template}
+                      hovered={hoveredId === `featured-${template.id}`}
+                      onHover={(id) => setHoveredId(id ? `featured-${id}` : null)}
+                      onPreview={setPreviewTemplate}
+                      onSelect={selectTemplate}
+                    />
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
+            {filteredTemplates.length === 0 && !showBlankCard ? (
+              <div style={emptyStateStyle}>조건에 맞는 템플릿이 없습니다. 필터를 줄이거나 전체 템플릿을 확인하세요.</div>
+            ) : (
+              <>
+                <div style={sectionHeaderStyle}>
+                  <h3 style={sectionTitleStyle}>전체 템플릿</h3>
+                </div>
+                <div className="template-gallery-grid">
+                  {showBlankCard ? (
                     <button
-                      key={template.id}
                       type="button"
                       style={{
-                        ...cardStyle,
-                        borderColor: hovered ? '#123b63' : '#e2e8f0',
-                        boxShadow: hovered ? '0 18px 38px rgba(15, 23, 42, 0.14)' : 'none',
-                        transform: hovered ? 'translateY(-2px) scale(1.02)' : 'none',
+                        ...blankCardStyle,
+                        borderColor: hoveredId === 'blank' ? '#123b63' : '#dbe3ef',
+                        boxShadow: hoveredId === 'blank' ? '0 18px 38px rgba(15, 23, 42, 0.12)' : 'none',
+                        transform: hoveredId === 'blank' ? 'translateY(-2px)' : 'none',
                       }}
-                      onMouseEnter={() => setHoveredId(template.id)}
+                      onMouseEnter={() => setHoveredId('blank')}
                       onMouseLeave={() => setHoveredId(null)}
-                      onClick={() => selectTemplate(template)}
+                      onClick={() => onSelect(null)}
                     >
-                      <div style={{ height: 160, background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
-                        <TemplateThumbnailPlaceholder template={template} width={240} height={160} />
-                      </div>
-                      <span
-                        style={{
-                          ...actionPillStyle,
-                          opacity: hovered ? 1 : 0,
-                          transform: hovered ? 'translateY(0)' : 'translateY(6px)',
-                        }}
-                      >
-                        이 템플릿 사용
-                      </span>
-                      <span style={cardBodyStyle}>
-                        <span style={chipStyle}>{categoryLabel}</span>
-                        <span style={cardTitleStyle}>{template.name}</span>
-                        <span style={descriptionStyle}>{template.description}</span>
+                      <span style={{ fontSize: '2rem', color: '#123b63', lineHeight: 1 }}>+</span>
+                      <span style={cardTitleStyle}>빈 페이지</span>
+                      <span style={{ ...descriptionStyle, textAlign: 'center', minHeight: 0 }}>
+                        자유 캔버스에서 새 페이지를 시작합니다.
                       </span>
                     </button>
-                  );
-                })}
-              </div>
+                  ) : null}
+
+                  {filteredTemplates.map((template) => (
+                    <TemplateCard
+                      key={template.id}
+                      template={template}
+                      hovered={hoveredId === template.id}
+                      onHover={setHoveredId}
+                      onPreview={setPreviewTemplate}
+                      onSelect={selectTemplate}
+                    />
+                  ))}
+                </div>
+              </>
             )}
           </main>
         </div>
       </div>
+      {previewTemplate ? (
+        <PreviewPanel
+          template={previewTemplate}
+          onClose={() => setPreviewTemplate(null)}
+          onSelect={selectTemplate}
+        />
+      ) : null}
     </div>
   );
 }

@@ -10,6 +10,13 @@ interface LinkedPageInfo {
   title: string;
 }
 
+interface TranslationProgressInfo {
+  locale: Locale;
+  percent: number;
+  missing: number;
+  outdated: number;
+}
+
 const LOCALE_LABELS: Record<Locale, string> = {
   ko: '한국어',
   'zh-hant': '繁體中文',
@@ -82,6 +89,7 @@ export default function LocaleSwitcher({
 }) {
   const [open, setOpen] = useState(false);
   const [linkedPages, setLinkedPages] = useState<Record<string, LinkedPageInfo | null>>({});
+  const [translationProgress, setTranslationProgress] = useState<Record<string, TranslationProgressInfo>>({});
   const [showCreatePrompt, setShowCreatePrompt] = useState<Locale | null>(null);
 
   // Fetch linked pages for current page
@@ -107,6 +115,28 @@ export default function LocaleSwitcher({
     fetchLinked();
     return () => { cancelled = true; };
   }, [activePageId]);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function fetchProgress() {
+      try {
+        const response = await fetch('/api/builder/translations?sourceLocale=ko', {
+          credentials: 'same-origin',
+        });
+        if (!response.ok || cancelled) return;
+        const data = (await response.json()) as { progress?: TranslationProgressInfo[] };
+        const next: Record<string, TranslationProgressInfo> = {};
+        for (const item of data.progress ?? []) {
+          next[item.locale] = item;
+        }
+        setTranslationProgress(next);
+      } catch {
+        // Translation Manager may not be available in older deployments.
+      }
+    }
+    void fetchProgress();
+    return () => { cancelled = true; };
+  }, []);
 
   const handleLocaleClick = useCallback(
     (locale: Locale) => {
@@ -210,6 +240,11 @@ export default function LocaleSwitcher({
                   {!isActive && hasLinked && (
                     <span style={{ fontSize: '0.68rem', color: '#22c55e' }}>
                       linked
+                    </span>
+                  )}
+                  {!isActive && translationProgress[loc] && (
+                    <span style={{ fontSize: '0.68rem', color: '#64748b' }}>
+                      {translationProgress[loc].percent}%
                     </span>
                   )}
                 </button>

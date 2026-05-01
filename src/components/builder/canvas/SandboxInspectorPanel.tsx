@@ -3,10 +3,16 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import A11yPanel from '@/components/builder/canvas/A11yPanel';
 import AnimationsTab from '@/components/builder/editor/AnimationsTab';
+import BreakpointBadge from '@/components/builder/editor/BreakpointBadge';
 import ContentTab from '@/components/builder/editor/ContentTab';
 import StyleTab from '@/components/builder/editor/StyleTab';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import {
+  hasResponsiveOverride,
+  resolveViewportHidden,
+  resolveViewportRect,
+} from '@/lib/builder/canvas/responsive';
 import styles from './SandboxPage.module.css';
 
 /* ── SEO Inspector inline styles ────────────────────────────── */
@@ -131,24 +137,37 @@ function parseNumberInput(rawValue: string): number | null {
 
 function LayoutField({
   label,
+  viewport,
   value,
   onCommit,
   min,
   max,
   step = 1,
   disabled = false,
+  hasOverride = false,
 }: {
   label: string;
+  viewport: 'desktop' | 'tablet' | 'mobile';
   value: number;
   onCommit: (nextValue: number) => void;
   min?: number;
   max?: number;
   step?: number;
   disabled?: boolean;
+  /**
+   * When true, indicates that the field's value differs from desktop because
+   * the active viewport has a per-viewport override applied. The visual
+   * treatment of this dot is controlled by Codex F1 via CSS — we forward
+   * the boolean state as a data attribute and a small inline marker.
+   */
+  hasOverride?: boolean;
 }) {
   return (
-    <label className={styles.inspectorField}>
-      <span className={styles.inspectorFieldLabel}>{label}</span>
+    <label className={styles.inspectorField} data-has-override={hasOverride ? 'true' : undefined}>
+      <span className={styles.inspectorFieldLabel}>
+        {label}
+        <BreakpointBadge viewport={viewport} active={hasOverride} label="" />
+      </span>
       <input
         className={styles.inspectorInput}
         type="number"
@@ -297,6 +316,9 @@ export default function SandboxInspectorPanel({
     sendSelectedNodeBackward,
     bringSelectedNodeToFront,
     sendSelectedNodeToBack,
+    viewport,
+    updateResponsiveOverride,
+    resetResponsiveOverride,
   } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
   const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content' | 'animations' | 'a11y' | 'seo'>('layout');
@@ -337,16 +359,27 @@ export default function SandboxInspectorPanel({
 
   useEffect(() => {
     const handler = () => {
+      setOpen(true);
       setActiveTab('content');
-      requestAnimationFrame(() => {
+
+      let attempts = 0;
+      const focusHrefInput = () => {
         const input = window.document.querySelector<HTMLInputElement>(
           '[data-builder-href-input="true"]',
         );
         if (input) {
+          input.scrollIntoView({ block: 'center', inline: 'nearest' });
           input.focus();
           input.select();
+          return;
         }
-      });
+        attempts += 1;
+        if (attempts < 12) {
+          window.requestAnimationFrame(focusHrefInput);
+        }
+      };
+
+      window.requestAnimationFrame(focusHrefInput);
     };
     window.document.addEventListener('builder:focus-href-input', handler);
     return () => window.document.removeEventListener('builder:focus-href-input', handler);
@@ -451,34 +484,127 @@ export default function SandboxInspectorPanel({
               </header>
               {activeTab === 'layout' ? (
                 <>
-                  <div className={styles.inspectorFieldGrid}>
-                    <LayoutField
-                      label="X"
-                      value={selectedNode.rect.x}
-                      onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'x', nextValue))}
-                      disabled={selectedNode.locked}
-                    />
-                    <LayoutField
-                      label="Y"
-                      value={selectedNode.rect.y}
-                      onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'y', nextValue))}
-                      disabled={selectedNode.locked}
-                    />
-                    <LayoutField
-                      label="Width"
-                      value={selectedNode.rect.width}
-                      min={MIN_WIDTH}
-                      onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'width', nextValue))}
-                      disabled={selectedNode.locked}
-                    />
-                    <LayoutField
-                      label="Height"
-                      value={selectedNode.rect.height}
-                      min={MIN_HEIGHT}
-                      onCommit={(nextValue) => updateNode(selectedNode.id, (node) => updateRectField(node, 'height', nextValue))}
-                      disabled={selectedNode.locked}
-                    />
-                  </div>
+                  {(() => {
+                    const isViewportOverride = viewport !== 'desktop';
+                    const effectiveRect = resolveViewportRect(selectedNode, viewport);
+                    const fieldHasOverride = isViewportOverride
+                      && hasResponsiveOverride(selectedNode, viewport);
+                    const isHiddenAtVp = resolveViewportHidden(selectedNode, viewport);
+                    const commitRect = (field: 'x' | 'y' | 'width' | 'height', nextValue: number) => {
+                      if (!isViewportOverride) {
+                        updateNode(selectedNode.id, (node) => updateRectField(node, field, nextValue));
+                        return;
+                      }
+                      const clamped = field === 'width'
+                        ? clampNumber(Math.round(nextValue), MIN_WIDTH, 4000)
+                        : field === 'height'
+                          ? clampNumber(Math.round(nextValue), MIN_HEIGHT, 20000)
+                          : Math.max(0, Math.round(nextValue));
+                      updateResponsiveOverride(selectedNode.id, viewport, {
+                        rect: { [field]: clamped },
+                      });
+                    };
+                    return (
+                      <>
+                        {isViewportOverride ? (
+                          <div
+                            style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
+                              gap: 8,
+                              padding: '6px 10px',
+                              borderRadius: 8,
+                              border: '1px solid #bfdbfe',
+                              background: '#eff6ff',
+                              fontSize: '0.74rem',
+                              color: '#1e40af',
+                              marginBottom: 8,
+                            }}
+                          >
+                            <span>
+                              <strong style={{ marginRight: 6 }}>{viewport}</strong>
+                              viewport override 편집 중
+                              {fieldHasOverride ? null : (
+                                <span style={{ color: '#475569', marginLeft: 6 }}>
+                                  (override 미설정 — desktop 값 표시)
+                                </span>
+                              )}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => resetResponsiveOverride(selectedNode.id, viewport)}
+                              disabled={selectedNode.locked || !fieldHasOverride}
+                              style={{
+                                padding: '2px 8px',
+                                fontSize: '0.72rem',
+                                border: '1px solid #bfdbfe',
+                                background: '#fff',
+                                borderRadius: 6,
+                                cursor: fieldHasOverride && !selectedNode.locked ? 'pointer' : 'not-allowed',
+                                opacity: fieldHasOverride && !selectedNode.locked ? 1 : 0.5,
+                                color: '#1e40af',
+                              }}
+                              title={`${viewport} viewport 의 override 를 모두 제거합니다`}
+                            >
+                              Reset {viewport}
+                            </button>
+                          </div>
+                        ) : null}
+                        <div className={styles.inspectorFieldGrid}>
+                          <LayoutField
+                            label="X"
+                            viewport={viewport}
+                            value={effectiveRect.x}
+                            onCommit={(nextValue) => commitRect('x', nextValue)}
+                            disabled={selectedNode.locked}
+                            hasOverride={fieldHasOverride}
+                          />
+                          <LayoutField
+                            label="Y"
+                            viewport={viewport}
+                            value={effectiveRect.y}
+                            onCommit={(nextValue) => commitRect('y', nextValue)}
+                            disabled={selectedNode.locked}
+                            hasOverride={fieldHasOverride}
+                          />
+                          <LayoutField
+                            label="Width"
+                            viewport={viewport}
+                            value={effectiveRect.width}
+                            min={MIN_WIDTH}
+                            onCommit={(nextValue) => commitRect('width', nextValue)}
+                            disabled={selectedNode.locked}
+                            hasOverride={fieldHasOverride}
+                          />
+                          <LayoutField
+                            label="Height"
+                            viewport={viewport}
+                            value={effectiveRect.height}
+                            min={MIN_HEIGHT}
+                            onCommit={(nextValue) => commitRect('height', nextValue)}
+                            disabled={selectedNode.locked}
+                            hasOverride={fieldHasOverride}
+                          />
+                        </div>
+                        {isViewportOverride ? (
+                          <label className={styles.inspectorToggle} style={{ marginTop: 8 }}>
+                            <input
+                              type="checkbox"
+                              checked={isHiddenAtVp}
+                              disabled={selectedNode.locked}
+                              onChange={(event) => {
+                                updateResponsiveOverride(selectedNode.id, viewport, {
+                                  hidden: event.target.checked || undefined,
+                                });
+                              }}
+                            />
+                            <span>Hide on {viewport}</span>
+                          </label>
+                        ) : null}
+                      </>
+                    );
+                  })()}
 
                   <div className={styles.inspectorField}>
                     <span className={styles.inspectorFieldLabel}>Rotation</span>
@@ -545,6 +671,103 @@ export default function SandboxInspectorPanel({
                       />
                       <span>Hide on canvas</span>
                     </label>
+                    <label className={styles.inspectorToggle}>
+                      <input
+                        type="checkbox"
+                        checked={Boolean(selectedNode.sticky)}
+                        disabled={selectedNode.locked}
+                        onChange={(event) => {
+                          updateNode(selectedNode.id, (node) => {
+                            if (!event.target.checked) {
+                              const next = { ...node };
+                              delete (next as { sticky?: unknown }).sticky;
+                              return next;
+                            }
+                            return {
+                              ...node,
+                              sticky: { offset: 0, from: 'top' as const },
+                            };
+                          });
+                        }}
+                      />
+                      <span>📌 Pin to screen (sticky)</span>
+                    </label>
+                  </div>
+
+                  {selectedNode.sticky ? (
+                    <div className={styles.inspectorFieldGrid}>
+                      <LayoutField
+                        label="Sticky offset (px)"
+                        viewport={viewport}
+                        value={selectedNode.sticky.offset}
+                        min={0}
+                        onCommit={(nextValue) => updateNode(selectedNode.id, (node) => ({
+                          ...node,
+                          sticky: {
+                            offset: Math.max(0, Math.round(nextValue)),
+                            from: node.sticky?.from ?? 'top',
+                          },
+                        }))}
+                        disabled={selectedNode.locked}
+                      />
+                      <div className={styles.inspectorField}>
+                        <span className={styles.inspectorFieldLabel}>Pin from</span>
+                        <select
+                          className={styles.inspectorInput}
+                          value={selectedNode.sticky.from ?? 'top'}
+                          disabled={selectedNode.locked}
+                          onChange={(event) => {
+                            const nextFrom = event.target.value === 'bottom' ? 'bottom' : 'top';
+                            updateNode(selectedNode.id, (node) => ({
+                              ...node,
+                              sticky: {
+                                offset: node.sticky?.offset ?? 0,
+                                from: nextFrom,
+                              },
+                            }));
+                          }}
+                        >
+                          <option value="top">Top</option>
+                          <option value="bottom">Bottom</option>
+                        </select>
+                      </div>
+                    </div>
+                  ) : null}
+
+                  <div className={styles.inspectorField}>
+                    <span className={styles.inspectorFieldLabel}>⚓ Anchor name</span>
+                    <input
+                      className={styles.inspectorInput}
+                      type="text"
+                      placeholder="e.g. about, services"
+                      value={selectedNode.anchorName ?? ''}
+                      disabled={selectedNode.locked}
+                      onChange={(event) => {
+                        const raw = event.target.value
+                          .toLowerCase()
+                          .replace(/[^a-z0-9-]/g, '-')
+                          .replace(/-+/g, '-')
+                          .replace(/^-+|-+$/g, '')
+                          .slice(0, 64);
+                        updateNode(selectedNode.id, (node) => {
+                          if (!raw) {
+                            const next = { ...node };
+                            delete (next as { anchorName?: string }).anchorName;
+                            return next;
+                          }
+                          return { ...node, anchorName: raw };
+                        });
+                      }}
+                    />
+                    {selectedNode.anchorName ? (
+                      <span style={{ fontSize: '0.7rem', color: '#94a3b8', marginTop: 4, display: 'block' }}>
+                        링크: <code style={{ color: '#0f172a' }}>#{selectedNode.anchorName}</code>
+                      </span>
+                    ) : (
+                      <span style={{ fontSize: '0.7rem', color: '#94a3b8', marginTop: 4, display: 'block' }}>
+                        영문 소문자, 숫자, 하이픈만. 버튼 href에 <code>#name</code>으로 연결.
+                      </span>
+                    )}
                   </div>
                 </>
               ) : null}

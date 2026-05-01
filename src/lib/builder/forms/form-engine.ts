@@ -125,6 +125,21 @@ export async function listSubmissions(formId: string, limit = 50): Promise<FormS
   } catch { return []; }
 }
 
+export async function listSubmissionFormIds(): Promise<string[]> {
+  try {
+    const result = await list({ prefix: SUBMISSIONS_PREFIX });
+    const ids = new Set<string>();
+    for (const blob of result.blobs) {
+      const rest = blob.pathname.slice(SUBMISSIONS_PREFIX.length);
+      const formId = rest.split('/')[0];
+      if (formId) ids.add(formId);
+    }
+    return Array.from(ids).sort();
+  } catch {
+    return [];
+  }
+}
+
 // ─── Validation ───────────────────────────────────────────────────
 
 export function validateSubmission(

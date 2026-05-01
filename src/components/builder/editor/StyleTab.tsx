@@ -17,6 +17,11 @@ import {
   isGradientBackgroundValue,
   isImageBackgroundValue,
 } from '@/lib/builder/site/theme';
+import {
+  getButtonVariantBindingIndicator,
+  getThemeBindingBadgeStyle,
+  type ThemeBindingIndicator,
+} from '@/lib/builder/site/theme-bindings';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 function clampNumber(value: number, min: number, max: number): number {
@@ -108,6 +113,25 @@ const collapseButtonStyle: React.CSSProperties = {
   cursor: 'pointer',
 };
 
+const bindingSummaryStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 8,
+  padding: '8px 10px',
+  border: '1px solid #e2e8f0',
+  borderRadius: 8,
+  background: '#f8fafc',
+};
+
+function ThemeBindingBadge({ indicator }: { indicator: ThemeBindingIndicator }) {
+  return (
+    <span title={indicator.title} style={getThemeBindingBadgeStyle(indicator.tone)}>
+      {indicator.label}
+    </span>
+  );
+}
+
 export default function StyleTab({
   node,
   disabled = false,
@@ -128,6 +152,7 @@ export default function StyleTab({
   }));
   const hoverStyle = node.hoverStyle ?? { transitionMs: 200 };
   const hoverEnabled = Boolean(node.hoverStyle);
+  const buttonVariantBinding = getButtonVariantBindingIndicator(node);
 
   useEffect(() => {
     setHoverOpen(Boolean(node.hoverStyle));
@@ -143,6 +168,13 @@ export default function StyleTab({
 
   return (
     <div className={styles.inspectorFormStack}>
+      {buttonVariantBinding ? (
+        <div style={bindingSummaryStyle}>
+          <span style={sectionTitleStyle}>Button variant</span>
+          <ThemeBindingBadge indicator={buttonVariantBinding} />
+        </div>
+      ) : null}
+
       <div style={sectionDividerStyle}>
         <span style={sectionTitleStyle}>Background</span>
         <BackgroundEditor

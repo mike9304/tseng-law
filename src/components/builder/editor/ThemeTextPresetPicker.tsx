@@ -8,6 +8,11 @@ import {
   getThemeTextPresets,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
+import {
+  getThemeBindingBadgeStyle,
+  getTypographyBindingIndicator,
+  type ThemeBindingIndicator,
+} from '@/lib/builder/site/theme-bindings';
 import { useBuilderTheme } from './BuilderThemeContext';
 
 const wrapperStyle: React.CSSProperties = {
@@ -17,6 +22,10 @@ const wrapperStyle: React.CSSProperties = {
 };
 
 const triggerStyle: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 8,
   width: '100%',
   height: 36,
   padding: '0 10px',
@@ -27,6 +36,18 @@ const triggerStyle: React.CSSProperties = {
   fontSize: '0.82rem',
   textAlign: 'left',
   cursor: 'pointer',
+};
+
+const triggerLabelStyle: React.CSSProperties = {
+  minWidth: 0,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  color: '#0f172a',
+  fontSize: '0.82rem',
+  fontWeight: 600,
+  letterSpacing: 0,
+  textTransform: 'none',
+  whiteSpace: 'nowrap',
 };
 
 const popoverStyle: React.CSSProperties = {
@@ -58,6 +79,14 @@ function optionStyle(active: boolean): React.CSSProperties {
   };
 }
 
+function ThemeBindingBadge({ indicator }: { indicator: ThemeBindingIndicator }) {
+  return (
+    <span title={indicator.title} style={getThemeBindingBadgeStyle(indicator.tone)}>
+      {indicator.label}
+    </span>
+  );
+}
+
 export default function ThemeTextPresetPicker({
   value,
   disabled = false,
@@ -73,6 +102,7 @@ export default function ThemeTextPresetPicker({
   const presets = getThemeTextPresets(theme);
   const [open, setOpen] = useState(false);
   const currentLabel = value ? presets[value].label : 'No preset';
+  const bindingIndicator = getTypographyBindingIndicator(value);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -94,7 +124,8 @@ export default function ThemeTextPresetPicker({
         style={{ ...triggerStyle, opacity: disabled ? 0.6 : 1 }}
         onClick={() => setOpen((current) => !current)}
       >
-        {currentLabel}
+        <span style={triggerLabelStyle}>{currentLabel}</span>
+        <ThemeBindingBadge indicator={bindingIndicator} />
       </button>
 
       {open ? (

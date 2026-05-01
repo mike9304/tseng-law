@@ -6,6 +6,11 @@ import {
   THEME_COLOR_LABELS,
   isThemeColorReference,
 } from '@/lib/builder/site/theme';
+import {
+  getColorBindingIndicator,
+  getThemeBindingBadgeStyle,
+  type ThemeBindingIndicator,
+} from '@/lib/builder/site/theme-bindings';
 
 const RECENT_COLORS_KEY = 'builder-color-picker-recent-v1';
 
@@ -54,6 +59,11 @@ const containerStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   gap: 10,
+};
+
+const bindingRowStyle: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'flex-end',
 };
 
 const rowStyle: React.CSSProperties = {
@@ -119,6 +129,14 @@ function swatchStyle(color: string, active: boolean): React.CSSProperties {
   };
 }
 
+function ThemeBindingBadge({ indicator }: { indicator: ThemeBindingIndicator }) {
+  return (
+    <span title={indicator.title} style={getThemeBindingBadgeStyle(indicator.tone)}>
+      {indicator.label}
+    </span>
+  );
+}
+
 export default function ColorPicker({
   value,
   onChange,
@@ -143,6 +161,7 @@ export default function ColorPicker({
   const currentColor = resolveCurrentColor(value, normalizedTokens);
   const currentHex = normalizeHex(currentColor);
   const activeToken = isThemeColorReference(value) ? value.token : null;
+  const bindingIndicator = getColorBindingIndicator(value);
   const [textValue, setTextValue] = useState(colorToText(value));
   const [recentColors, setRecentColors] = useState<string[]>([]);
 
@@ -193,6 +212,10 @@ export default function ColorPicker({
 
   return (
     <div style={containerStyle}>
+      <div style={bindingRowStyle}>
+        <ThemeBindingBadge indicator={bindingIndicator} />
+      </div>
+
       {normalizedTokens.length > 0 ? (
         <div style={sectionStyle}>
           <span style={sectionLabelStyle}>Theme palette</span>

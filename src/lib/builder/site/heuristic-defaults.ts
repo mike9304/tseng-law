@@ -21,6 +21,18 @@ const HERO_CLASS_HINTS = [
   'hero-cta',
 ];
 
+// 카드/섹션류 컨테이너 — entrance 자동 적용 후보
+const CARD_LIKE_HINTS = [
+  'office-card',
+  'services-detail-card',
+  'stat-card',
+  'split-text',
+  'split-image',
+  'split-portrait-badge',
+  'card-copy',
+  'card-title',
+];
+
 const FEATURE_IMAGE_KIND = new Set(['image']);
 
 function readClassName(node: BuilderCanvasNode): string {
@@ -35,6 +47,12 @@ function isHeroLikeText(node: BuilderCanvasNode): boolean {
   return HERO_CLASS_HINTS.some((hint) => className.includes(hint));
 }
 
+function isCardLikeContainer(node: BuilderCanvasNode): boolean {
+  if (node.kind !== 'container') return false;
+  const className = readClassName(node);
+  return CARD_LIKE_HINTS.some((hint) => className.includes(hint));
+}
+
 export function deriveHeuristicAnimation(
   node: BuilderCanvasNode,
 ): DefaultAnimation | undefined {
@@ -43,6 +61,12 @@ export function deriveHeuristicAnimation(
   if (isHeroLikeText(node)) {
     return {
       entrance: { preset: 'slide-up', duration: 520, delay: 80, easing: 'ease-out', triggerOnce: true },
+    };
+  }
+
+  if (isCardLikeContainer(node)) {
+    return {
+      entrance: { preset: 'slide-up', duration: 480, delay: 0, easing: 'ease-out', triggerOnce: true },
     };
   }
 

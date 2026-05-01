@@ -37,6 +37,7 @@ export type CanvasAction =
   | 'nudgeLeftLarge'
   | 'nudgeRightLarge'
   | 'showHelp'
+  | 'editLink'
   | null;
 
 function isTextInput(target: EventTarget | null): boolean {
@@ -82,6 +83,9 @@ export function matchShortcut(e: KeyboardEvent): CanvasAction {
   // Help (Cmd+/ or ?)
   if (meta && key === '/') return 'showHelp';
   if (!meta && shift && key === '?') return 'showHelp';
+
+  // Edit link (Cmd+K)
+  if (meta && !shift && key === 'k') return 'editLink';
 
   // Zoom
   if (meta && (key === '=' || key === '+')) return 'zoomIn';

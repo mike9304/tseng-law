@@ -5,6 +5,13 @@ import LinkPicker, { type LinkPickerContext } from '@/components/builder/editor/
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
 
+function previewLinkHref(href: string | undefined): string {
+  if (!href) return '';
+  const trimmed = href.trim();
+  if (trimmed.length <= 24) return trimmed;
+  return `${trimmed.slice(0, 22)}…`;
+}
+
 interface ToolbarAction {
   key: string;
   label: string;
@@ -71,6 +78,25 @@ export default function SelectionToolbar({
 
   const actions: ToolbarAction[] = [];
 
+  // Link 액션을 첫 자리로 — 가장 자주 쓰는 편집. 현재 href 미리보기 또는 "링크 추가".
+  if (canEditLink) {
+    const currentLink = linkTargetNode ? getNodeLinkValue(linkTargetNode) : null;
+    const hasActiveLink = Boolean(currentLink?.href);
+    actions.push({
+      key: 'edit-link',
+      label: hasActiveLink ? previewLinkHref(currentLink?.href) : '링크 추가',
+      icon: '🔗',
+      title: hasActiveLink ? `현재: ${currentLink?.href}\n클릭해서 편집 (Cmd+K)` : '링크 추가 (Cmd+K)',
+      onClick: () => {
+        if (linkTargetNode && onChangeLink) {
+          setLinkPopoverOpen((current) => !current);
+          return;
+        }
+        onEditLink();
+      },
+      disabled: anyLocked,
+    });
+  }
   if (isText) {
     actions.push({
       key: 'edit-text',
@@ -88,22 +114,6 @@ export default function SelectionToolbar({
       icon: '🖼',
       title: '이미지 교체',
       onClick: onReplaceImage,
-      disabled: anyLocked,
-    });
-  }
-  if (canEditLink) {
-    actions.push({
-      key: 'edit-link',
-      label: '링크',
-      icon: '🔗',
-      title: '링크 편집',
-      onClick: () => {
-        if (linkTargetNode && onChangeLink) {
-          setLinkPopoverOpen((current) => !current);
-          return;
-        }
-        onEditLink();
-      },
       disabled: anyLocked,
     });
   }

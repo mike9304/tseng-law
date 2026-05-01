@@ -11,7 +11,7 @@ import {
   createCanvasNodeTemplate,
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
-import type { LinkValue } from '@/lib/builder/links';
+import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
 import {
   resolveCanvasNodeAbsoluteRectForViewport,
   resolveCanvasNodeLocalRect,
@@ -502,6 +502,11 @@ export default function CanvasContainer({
             document.dispatchEvent(new CustomEvent('builder:show-help'));
           }
           break;
+        case 'editLink':
+          if (selectedLinkTargetNode) {
+            focusSelectedLinkInput();
+          }
+          break;
       }
     }
 
@@ -516,10 +521,12 @@ export default function CanvasContainer({
     deleteSelectedNode,
     duplicateSelectedNode,
     fitCanvas,
+    focusSelectedLinkInput,
     groupSelectedNodes,
     nudgeSelectedNode,
     pasteClipboardNodes,
     redo,
+    selectedLinkTargetNode,
     sendSelectedNodeBackward,
     sendSelectedNodeToBack,
     exitGroup,
@@ -1477,8 +1484,19 @@ export default function CanvasContainer({
               },
               {
                 key: 'edit-link',
-                label: '링크 편집',
-                title: '버튼·링크 href 편집 (Content 탭)',
+                label: (() => {
+                  const value = selectedLinkTargetNode
+                    ? linkValueFromLegacy((selectedLinkTargetNode.content as Parameters<typeof linkValueFromLegacy>[0]) || {})
+                    : null;
+                  if (value?.href) {
+                    const trimmed = value.href.trim();
+                    const preview = trimmed.length > 20 ? `${trimmed.slice(0, 18)}…` : trimmed;
+                    return `링크 편집 — ${preview}`;
+                  }
+                  return '링크 편집';
+                })(),
+                title: '링크 편집 (Cmd+K)',
+                shortcut: '⌘K',
                 disabled:
                   selectedNodeIds.length !== 1 ||
                   !selectedLinkTargetNode ||
@@ -1487,6 +1505,24 @@ export default function CanvasContainer({
                 onSelect: () => {
                   setContextMenu(null);
                   focusSelectedLinkInput();
+                },
+              },
+              {
+                key: 'remove-link',
+                label: '링크 제거',
+                title: '현재 링크 제거',
+                disabled: (() => {
+                  if (!selectedLinkTargetNode || selectedLinkTargetNode.locked) return true;
+                  const value = linkValueFromLegacy(
+                    (selectedLinkTargetNode.content as Parameters<typeof linkValueFromLegacy>[0]) || {},
+                  );
+                  return !value?.href;
+                })(),
+                onSelect: () => {
+                  setContextMenu(null);
+                  if (selectedLinkTargetNode) {
+                    updateSelectedLink(selectedLinkTargetNode.id, null);
+                  }
                 },
               },
               {

@@ -6,10 +6,12 @@ import CanvasNode, { type ResizeHandle } from '@/components/builder/canvas/Canva
 import ContextMenu from '@/components/builder/canvas/ContextMenu';
 import SelectionBox from '@/components/builder/canvas/SelectionBox';
 import SelectionToolbar from '@/components/builder/canvas/SelectionToolbar';
+import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
 import {
   createCanvasNodeTemplate,
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
+import type { LinkValue } from '@/lib/builder/links';
 import {
   resolveCanvasNodeAbsoluteRectForViewport,
   resolveCanvasNodeLocalRect,
@@ -135,6 +137,7 @@ export default function CanvasContainer({
   onRequestSaveAsSection,
   onRequestInsertSavedSection,
   onToast,
+  siteLightboxes = [],
 }: {
   onRequestAssetLibrary?: (nodeId: string) => void;
   onRequestMoveToPage?: (nodeIds: string[]) => void;
@@ -143,6 +146,7 @@ export default function CanvasContainer({
   /** Called when user drops a saved-section card onto the canvas. */
   onRequestInsertSavedSection?: (sectionId: string, position: { x: number; y: number }) => void;
   onToast?: (message: string, tone: 'success' | 'error') => void;
+  siteLightboxes?: LinkPickerContext['siteLightboxes'];
 }) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -194,6 +198,7 @@ export default function CanvasContainer({
   const [zoomState, setZoomState] = useState<ZoomState>(() => createDefaultZoomState());
   const [isSpacePressed, setIsSpacePressed] = useState(false);
   const [hoveredContainerId, setHoveredContainerId] = useState<string | null>(null);
+  const canceledInteractionPointerIdsRef = useRef<Set<number>>(new Set());
   const moveNodeIntoContainer = useBuilderCanvasStore((s) => s.moveNodeIntoContainer);
 
   const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? []);
@@ -210,6 +215,15 @@ export default function CanvasContainer({
   const nodesById = useMemo(
     () => new Map(nodes.map((node) => [node.id, node])),
     [nodes],
+  );
+  const linkPickerContext = useMemo<LinkPickerContext>(
+    () => ({
+      siteAnchors: nodes
+        .map((node) => node.anchorName)
+        .filter((anchorName): anchorName is string => Boolean(anchorName)),
+      siteLightboxes,
+    }),
+    [nodes, siteLightboxes],
   );
   const geometryViewport = activeViewport ?? currentViewport;
   const absoluteRectById = useMemo(() => {
@@ -240,7 +254,7 @@ export default function CanvasContainer({
   const resolveEditableLinkNode = useCallback(
     (node: BuilderCanvasNode | undefined): BuilderCanvasNode | null => {
       if (!node) return null;
-      if (node.kind === 'button') return node;
+      if (node.kind === 'button' || node.kind === 'image' || node.kind === 'container') return node;
 
       const matches: BuilderCanvasNode[] = [];
       const visit = (nodeId: string) => {
@@ -294,6 +308,28 @@ export default function CanvasContainer({
     );
   }, [selectedLinkTargetNode, selectedNodeId, setSelectedNodeIds]);
 
+  const updateSelectedLink = useCallback(
+    (nodeId: string, link: LinkValue | null) => {
+      const node = nodesById.get(nodeId);
+      if (!node) return;
+      if (node.kind === 'button') {
+        updateNodeContent(nodeId, {
+          link: link ?? undefined,
+          href: link?.href ?? '',
+          target: link?.target === '_blank' ? '_blank' : undefined,
+          rel: link?.rel,
+          title: link?.title,
+          ariaLabel: link?.ariaLabel,
+        });
+        return;
+      }
+      if (node.kind === 'image' || node.kind === 'container') {
+        updateNodeContent(nodeId, { link: link ?? undefined });
+      }
+    },
+    [nodesById, updateNodeContent],
+  );
+
   const fitCanvas = useCallback(() => {
     const rect = viewportRef.current?.getBoundingClientRect();
     if (!rect) return;
@@ -345,6 +381,28 @@ export default function CanvasContainer({
     setGuides([]);
     setHoveredContainerId(null);
   }, [activeViewport, cancelMutationSession, currentViewport]);
+
+  useEffect(() => {
+    if (!interaction) return undefined;
+    const activeInteraction = interaction;
+
+    function handleInteractionEscape(event: KeyboardEvent) {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      event.stopPropagation();
+      canceledInteractionPointerIdsRef.current.add(activeInteraction.pointerId);
+      cancelMutationSession();
+      setInteraction(null);
+      setActiveViewport(null);
+      setGuides([]);
+      setHoveredContainerId(null);
+      setContextMenu(null);
+      setOverlapPicker(null);
+    }
+
+    window.addEventListener('keydown', handleInteractionEscape, true);
+    return () => window.removeEventListener('keydown', handleInteractionEscape, true);
+  }, [cancelMutationSession, interaction]);
 
   useEffect(() => {
     function dispatch(action: NonNullable<CanvasAction>) {
@@ -494,8 +552,10 @@ export default function CanvasContainer({
   useEffect(() => {
     if (!interaction) return undefined;
     const activeInteraction = interaction;
+    canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId);
 
     function handlePointerMove(event: PointerEvent) {
+      if (canceledInteractionPointerIdsRef.current.has(activeInteraction.pointerId)) return;
       if (activeInteraction.type === 'pan') {
         const deltaX = event.clientX - activeInteraction.originX;
         const deltaY = event.clientY - activeInteraction.originY;
@@ -699,6 +759,9 @@ export default function CanvasContainer({
 
     function handlePointerUp(event: PointerEvent) {
       if (event.pointerId === activeInteraction.pointerId) {
+        if (canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId)) {
+          return;
+        }
         const currentHoveredContainerId = (() => {
           if (activeInteraction.type !== 'move' || activeInteraction.nodeIds.length !== 1) return null;
           const nodeId = activeInteraction.nodeIds[0];
@@ -1273,6 +1336,9 @@ export default function CanvasContainer({
               focusSelectedLinkInput();
             }}
             showEditLink={Boolean(selectedLinkTargetNode)}
+            linkTargetNode={selectedLinkTargetNode}
+            onChangeLink={updateSelectedLink}
+            linkPickerContext={linkPickerContext}
             onDuplicate={duplicateSelectedNode}
             onDelete={deleteSelectedNode}
             onBringForward={bringSelectedNodeForward}

@@ -69,6 +69,7 @@ export default function CanvasNode({
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
   const commitMutationSession = useBuilderCanvasStore((s) => s.commitMutationSession);
+  const cancelMutationSession = useBuilderCanvasStore((s) => s.cancelMutationSession);
   const activeGroupId = useBuilderCanvasStore((s) => s.activeGroupId);
   const enterGroup = useBuilderCanvasStore((s) => s.enterGroup);
   const selectedNodeIds = useBuilderCanvasStore((s) => s.selectedNodeIds);
@@ -81,37 +82,66 @@ export default function CanvasNode({
     (event: React.PointerEvent<HTMLDivElement>) => {
       event.stopPropagation();
       event.preventDefault();
-      const el = nodeRef.current;
-      if (!el) return;
-      const rect = el.getBoundingClientRect();
+      const targetEl = nodeRef.current;
+      if (!targetEl) return;
+      const activeEl = targetEl;
+      const rect = activeEl.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
       const startAngle = Math.atan2(event.clientY - centerY, event.clientX - centerX) * (180 / Math.PI);
       rotationDrag.current = { startAngle, startRotation: node.rotation };
-      el.setPointerCapture(event.pointerId);
+      activeEl.setPointerCapture(event.pointerId);
       beginMutationSession();
+      let didCleanup = false;
 
-      const handlePointerMove = (moveEvent: PointerEvent) => {
+      function handlePointerMove(moveEvent: PointerEvent) {
         if (!rotationDrag.current) return;
         const currentAngle = Math.atan2(moveEvent.clientY - centerY, moveEvent.clientX - centerX) * (180 / Math.PI);
         const rawDegrees = rotationDrag.current.startRotation + (currentAngle - rotationDrag.current.startAngle);
         const snapped = Math.round(rawDegrees / 15) * 15;
         const normalized = ((snapped % 360) + 360) % 360;
-        updateNode(node.id, (n) => ({ ...n, rotation: normalized }));
-      };
+        updateNode(node.id, (n) => ({ ...n, rotation: normalized }), 'transient');
+      }
 
-      const handlePointerUp = (upEvent: PointerEvent) => {
+      function cleanupRotationDrag(mode: 'commit' | 'cancel', pointerId = event.pointerId) {
+        if (didCleanup) return;
+        didCleanup = true;
         rotationDrag.current = null;
-        el.releasePointerCapture(upEvent.pointerId);
-        commitMutationSession();
-        el.removeEventListener('pointermove', handlePointerMove);
-        el.removeEventListener('pointerup', handlePointerUp);
-      };
+        if (activeEl.hasPointerCapture(pointerId)) {
+          activeEl.releasePointerCapture(pointerId);
+        }
+        activeEl.removeEventListener('pointermove', handlePointerMove);
+        activeEl.removeEventListener('pointerup', handlePointerUp);
+        activeEl.removeEventListener('pointercancel', handlePointerCancel);
+        window.removeEventListener('keydown', handleKeyDown, true);
+        if (mode === 'commit') {
+          commitMutationSession();
+        } else {
+          cancelMutationSession();
+        }
+      }
 
-      el.addEventListener('pointermove', handlePointerMove);
-      el.addEventListener('pointerup', handlePointerUp);
+      function handlePointerUp(upEvent: PointerEvent) {
+        cleanupRotationDrag('commit', upEvent.pointerId);
+      }
+
+      function handlePointerCancel(cancelEvent: PointerEvent) {
+        cleanupRotationDrag('cancel', cancelEvent.pointerId);
+      }
+
+      function handleKeyDown(keyEvent: KeyboardEvent) {
+        if (keyEvent.key !== 'Escape') return;
+        keyEvent.preventDefault();
+        keyEvent.stopPropagation();
+        cleanupRotationDrag('cancel');
+      }
+
+      activeEl.addEventListener('pointermove', handlePointerMove);
+      activeEl.addEventListener('pointerup', handlePointerUp);
+      activeEl.addEventListener('pointercancel', handlePointerCancel);
+      window.addEventListener('keydown', handleKeyDown, true);
     },
-    [node.id, node.rotation, beginMutationSession, commitMutationSession, updateNode],
+    [node.id, node.rotation, beginMutationSession, cancelMutationSession, commitMutationSession, updateNode],
   );
 
   const handleDoubleClick = useCallback(() => {

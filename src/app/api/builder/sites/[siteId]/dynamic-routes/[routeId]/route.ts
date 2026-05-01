@@ -1,17 +1,21 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import {
   decodeBuilderDynamicRouteParam,
   readBuilderDynamicRouteDetail,
 } from '@/lib/builder/dynamic-routes';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { normalizeLocale } from '@/lib/locales';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
 export async function GET(
-  request: Request,
+  request: NextRequest,
   { params }: { params: { siteId: string; routeId: string } }
 ) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
     return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
   }

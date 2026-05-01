@@ -1,11 +1,30 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/locales';
-import { readPageCanvas, readSiteDocument } from '@/lib/builder/site/persistence';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import {
+  readFooterCanvas,
+  readHeaderCanvas,
+  readLightboxCanvas,
+  readPageCanvas,
+  readSiteDocument,
+} from '@/lib/builder/site/persistence';
 import { getComponent } from '@/lib/builder/components/registry';
 import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
 import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/canvas/tree';
-import type { BuilderCanvasNode, BuilderCanvasDocument } from '@/lib/builder/canvas/types';
-import type { BuilderPageMeta, BuilderSiteDocument, BuilderTheme } from '@/lib/builder/site/types';
+import type {
+  BuilderCanvasNode,
+  BuilderCanvasDocument,
+  ResponsiveConfig,
+  ResponsiveOverride,
+} from '@/lib/builder/canvas/types';
+import { isContainerLikeKind } from '@/lib/builder/canvas/types';
+import { VIEWPORT_BREAKPOINTS } from '@/lib/builder/canvas/responsive';
+import type {
+  BuilderLightbox,
+  BuilderPageMeta,
+  BuilderSiteDocument,
+  BuilderTheme,
+} from '@/lib/builder/site/types';
 import {
   THEME_COLOR_TOKENS,
   buildHoverTransform,
@@ -15,18 +34,117 @@ import {
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
 import { buildPageSeo } from '@/lib/builder/seo/seo-model';
-import { generateLegalServiceSchema } from '@/lib/builder/seo/schema-org';
+import { generateBreadcrumbSchema, generateLegalServiceSchema } from '@/lib/builder/seo/schema-org';
+import { buildStructuredDataPayloads } from '@/lib/builder/seo/structured-data';
 import { getSiteUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
 import AnimationsRoot from '@/components/builder/published/AnimationsRoot';
 import DarkModeToggle from '@/components/builder/published/DarkModeToggle';
+import LightboxMount from '@/components/builder/published/LightboxMount';
+import LightboxOverlay from '@/components/builder/published/LightboxOverlay';
 import {
   buildPublishedAnimationStyle,
   getPublishedAnimationAttributes,
 } from '@/lib/builder/animations/animation-render';
 import '@/lib/builder/components/registry';
+
+interface ResolvedLightbox {
+  meta: BuilderLightbox;
+  canvas: BuilderCanvasDocument;
+}
+
+/**
+ * Tablet breakpoint: applies between mobile (<= 767) and desktop (>= 1024).
+ * Mobile breakpoint: applies <= 767px.
+ * Tablet rules use a min/max range so they don't bleed into mobile.
+ */
+const TABLET_MAX = VIEWPORT_BREAKPOINTS.tablet + 255; // 768 + 255 = 1023
+const MOBILE_MAX = VIEWPORT_BREAKPOINTS.tablet - 1;   // 767
+
+function escapeCssId(id: string): string {
+  // Wrap in [data-node-id="..."]; only need to escape backslashes and quotes.
+  return id.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
+function buildResponsiveOverrideRule(
+  node: BuilderCanvasNode,
+  override: ResponsiveOverride,
+): string {
+  if (!override) return '';
+  const declarations: string[] = [];
+  if (override.rect) {
+    const r = override.rect;
+    if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
+    if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
+    if (r.width !== undefined) declarations.push(`width: ${r.width}px`);
+    if (r.height !== undefined) declarations.push(`height: ${r.height}px`);
+  }
+  if (override.hidden) {
+    declarations.push('display: none');
+  }
+  if (override.fontSize !== undefined) {
+    declarations.push(`font-size: ${override.fontSize}px`);
+  }
+  if (declarations.length === 0) return '';
+  const selector = `[data-node-id="${escapeCssId(node.id)}"]`;
+  // External CSS always loses to inline styles (the wrapper writes
+  // left/top/width/height inline from desktop rect), so `!important`
+  // is required for both tablet and mobile rules. The mobile @media
+  // also has to beat the existing 768px fallback that resets nodes
+  // to position:relative — same `!important` carries that too.
+  return `${selector} { ${declarations.map((d) => `${d} !important`).join('; ')}; }`;
+}
+
+/**
+ * Build a stylesheet that, for each node with `responsive` overrides,
+ * emits @media blocks. The cascade in resolver is desktop → tablet → mobile.
+ * In CSS we replicate it by emitting tablet rules (min:768 max:1023) and
+ * mobile rules (max:767). Mobile rules also include any tablet override
+ * that mobile doesn't itself override — so the cascade works in both
+ * directions whether the user sets one or both buckets.
+ */
+function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
+  const tabletRules: string[] = [];
+  const mobileRules: string[] = [];
+  for (const node of nodes) {
+    const responsive = node.responsive as ResponsiveConfig | undefined;
+    if (!responsive) continue;
+    if (responsive.tablet) {
+      const rule = buildResponsiveOverrideRule(node, responsive.tablet);
+      if (rule) tabletRules.push(rule);
+    }
+    if (responsive.mobile || responsive.tablet) {
+      // Mobile inherits tablet, then mobile keys win.
+      const merged: ResponsiveOverride = {
+        ...(responsive.tablet ?? {}),
+        ...(responsive.mobile ?? {}),
+        rect: {
+          ...(responsive.tablet?.rect ?? {}),
+          ...(responsive.mobile?.rect ?? {}),
+        },
+      };
+      // If both are present but neither defines the field, keep undefined.
+      if (
+        merged.rect
+        && Object.keys(merged.rect).length === 0
+      ) {
+        merged.rect = undefined;
+      }
+      const rule = buildResponsiveOverrideRule(node, merged);
+      if (rule) mobileRules.push(rule);
+    }
+  }
+  let css = '';
+  if (tabletRules.length > 0) {
+    css += `@media (min-width: ${VIEWPORT_BREAKPOINTS.tablet}px) and (max-width: ${TABLET_MAX}px) {\n  ${tabletRules.join('\n  ')}\n}\n`;
+  }
+  if (mobileRules.length > 0) {
+    css += `@media (max-width: ${MOBILE_MAX}px) {\n  ${mobileRules.join('\n  ')}\n}\n`;
+  }
+  return css;
+}
 
 export interface ResolvedPublishedSitePage {
   locale: Locale;
@@ -34,6 +152,9 @@ export interface ResolvedPublishedSitePage {
   site: BuilderSiteDocument;
   pageMeta: BuilderPageMeta;
   canvas: BuilderCanvasDocument;
+  lightboxes: ResolvedLightbox[];
+  headerCanvas: BuilderCanvasDocument | null;
+  footerCanvas: BuilderCanvasDocument | null;
 }
 
 type ParentLayoutMode = 'absolute' | 'flex' | 'grid';
@@ -55,12 +176,28 @@ export async function resolvePublishedSitePage(
   locale: Locale,
   slugPath: string,
 ): Promise<ResolvedPublishedSitePage | null> {
-  const site = await readSiteDocument('default', locale);
+  const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
   const pageMeta = findPageMeta(site, slugPath);
   if (!pageMeta?.publishedAt) return null;
 
-  const canvas = await readPageCanvas('default', pageMeta.pageId, 'published');
+  const canvas = await readPageCanvas(DEFAULT_BUILDER_SITE_ID, pageMeta.pageId, 'published');
   if (!canvas?.nodes?.length) return null;
+
+  const allLightboxes = (site.lightboxes ?? []).filter((lb) => lb.locale === locale);
+  const lightboxes: ResolvedLightbox[] = [];
+  for (const meta of allLightboxes) {
+    const lbCanvas = await readLightboxCanvas(DEFAULT_BUILDER_SITE_ID, meta.id);
+    if (lbCanvas) {
+      lightboxes.push({ meta, canvas: lbCanvas });
+    }
+  }
+
+  // Global header/footer canvases — only render when present and non-empty.
+  // Otherwise the legacy SiteHeader/SiteFooter components are used as fallback.
+  const [headerCanvas, footerCanvas] = await Promise.all([
+    readHeaderCanvas(DEFAULT_BUILDER_SITE_ID),
+    readFooterCanvas(DEFAULT_BUILDER_SITE_ID),
+  ]);
 
   return {
     locale,
@@ -68,6 +205,9 @@ export async function resolvePublishedSitePage(
     site,
     pageMeta,
     canvas,
+    lightboxes,
+    headerCanvas: headerCanvas && headerCanvas.nodes.length > 0 ? headerCanvas : null,
+    footerCanvas: footerCanvas && footerCanvas.nodes.length > 0 ? footerCanvas : null,
   };
 }
 
@@ -82,8 +222,8 @@ export async function buildPublishedSitePageMetadata(
   const seoData = buildPageSeo(resolved.pageMeta, siteUrl, locale, resolved.site.pages);
   const languages: Record<string, string> = {};
 
-  for (const hreflang of seoData.hreflang) {
-    languages[hreflang.locale === 'zh-hant' ? 'zh-Hant' : hreflang.locale] = hreflang.url;
+  for (const alt of seoData.hreflang) {
+    languages[alt.hreflang] = alt.href;
   }
 
   return {
@@ -143,9 +283,19 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     .map((token) => `--builder-color-${token}: ${darkColors[token]};`)
     .join('\n          ');
   const visibleNodes = canvas.nodes.filter((node) => node.visible !== false);
+  const responsiveStylesheet = buildResponsiveStylesheet(canvas.nodes);
   const childrenMap = buildChildrenMap(visibleNodes);
   const nodesById = new Map(canvas.nodes.map((node) => [node.id, node]));
   const legalServiceSchema = generateLegalServiceSchema(site.settings || {});
+  const pagePath = `/${locale}/p/${slugPath}`.replace(/\/+$/, '') || `/${locale}`;
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: site.name || 'Home', url: `${getSiteUrl()}/${locale}` },
+    {
+      name: resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page',
+      url: `${getSiteUrl()}${pagePath}`,
+    },
+  ]);
+  const structuredDataPayloads = buildStructuredDataPayloads(canvas);
   const topLevelNodes = visibleNodes.filter((node) => !node.parentId);
   const hasTopLevelComposite = topLevelNodes.some((node) => node.kind === 'composite');
   const flowTopLevelCompositeNodes = topLevelNodes
@@ -187,8 +337,12 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
     const useFlowWrapper = flowAsSection || parentUsesFlowLayout;
     const childParentLayoutMode: ParentLayoutMode | undefined =
-      node.kind === 'container' ? node.content.layoutMode ?? 'absolute' : undefined;
+      isContainerLikeKind(node.kind)
+        ? ((node.content as { layoutMode?: ParentLayoutMode }).layoutMode ?? 'absolute')
+        : undefined;
     const flowSectionMetric = flowAsSection ? flowSectionMetrics.get(node.id) : undefined;
+    const stickyConfig = node.sticky;
+    const useSticky = Boolean(stickyConfig) && !useFlowWrapper;
     const baseTransform = node.rotation ? `rotate(${node.rotation}deg)` : undefined;
     const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, publishedTheme);
     const hoverStyle = node.hoverStyle;
@@ -211,22 +365,41 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       primaryColor: 'var(--builder-color-primary, #3b82f6)',
     });
 
+    // Lightbox trigger detection: button with href starting with `lightbox:`
+    let lightboxTarget: string | undefined;
+    if (node.kind === 'button') {
+      const href = (node.content as { href?: string }).href;
+      if (typeof href === 'string' && href.startsWith('lightbox:')) {
+        lightboxTarget = href.slice('lightbox:'.length).trim();
+      }
+    }
+
     return (
       <div
         key={node.id}
+        id={node.anchorName ? node.anchorName : undefined}
         className="builder-pub-node"
+        data-node-id={node.id}
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
+        data-builder-sticky={useSticky ? 'true' : undefined}
+        data-anchor={node.anchorName ? node.anchorName : undefined}
         data-builder-hover={hoverStyle ? 'true' : undefined}
+        data-lightbox-target={lightboxTarget || undefined}
         {...animationAttributes}
+        role={lightboxTarget ? 'button' : undefined}
+        tabIndex={lightboxTarget ? 0 : undefined}
         style={{
-          position: useFlowWrapper ? 'relative' : 'absolute',
-          left: useFlowWrapper ? undefined : node.rect.x,
-          top: useFlowWrapper ? undefined : node.rect.y,
+          position: useSticky ? 'sticky' : useFlowWrapper ? 'relative' : 'absolute',
+          left: useSticky || useFlowWrapper ? undefined : node.rect.x,
+          top: useSticky
+            ? (stickyConfig?.from !== 'bottom' ? (stickyConfig?.offset ?? 0) : undefined)
+            : useFlowWrapper ? undefined : node.rect.y,
+          bottom: useSticky && stickyConfig?.from === 'bottom' ? (stickyConfig?.offset ?? 0) : undefined,
           width: flowAsSection ? '100%' : node.rect.width,
           height: flowAsSection ? 'auto' : node.rect.height,
           minHeight: flowAsSection ? flowSectionMetric?.minHeight : undefined,
           marginTop: flowAsSection ? flowSectionMetric?.marginTop : undefined,
-          zIndex: useFlowWrapper ? undefined : node.zIndex,
+          zIndex: useSticky ? Math.max(node.zIndex, 100) : useFlowWrapper ? undefined : node.zIndex,
           overflow: flowAsSection ? 'visible' : undefined,
           transform: baseTransform,
           ...backgroundStyle,
@@ -251,7 +424,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         }}
       >
         {component ? (
-          node.kind === 'container' ? (
+          isContainerLikeKind(node.kind) ? (
             <component.Render node={node} mode="published" theme={publishedTheme}>
               {childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode))}
             </component.Render>
@@ -326,6 +499,9 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           transition-duration: 200ms;
           transition-timing-function: ease;
         }
+        .builder-pub-node[data-lightbox-target] {
+          cursor: pointer;
+        }
         .builder-pub-node[data-builder-hover='true']:hover {
           background: var(--builder-hover-background) !important;
           border-color: var(--builder-hover-border-color) !important;
@@ -361,17 +537,35 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           }
         }
       `}</style>
+      {responsiveStylesheet ? (
+        // Per-node viewport overrides — emitted last so they win over the
+        // generic mobile fallback above. Each node's tablet/mobile rect or
+        // hidden flag becomes a `[data-node-id="..."]` rule inside @media.
+        <style data-builder-responsive="true">{responsiveStylesheet}</style>
+      ) : null}
       <JsonLd data={legalServiceSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      {structuredDataPayloads.map((payload) => (
+        <JsonLd key={payload.id} data={payload.data} />
+      ))}
       <DarkModeToggle />
       <AnimationsRoot />
-      <SiteHeader
-        siteName={site.name}
-        settings={settings}
-        theme={publishedTheme}
-        navItems={navItems}
-        locale={locale}
-        currentSlug={slugPath}
-      />
+      {resolved.headerCanvas ? (
+        <GlobalCanvasSection
+          canvas={resolved.headerCanvas}
+          theme={publishedTheme}
+          tag="header"
+        />
+      ) : (
+        <SiteHeader
+          siteName={site.name}
+          settings={settings}
+          theme={publishedTheme}
+          navItems={navItems}
+          locale={locale}
+          currentSlug={slugPath}
+        />
+      )}
       <main
         className="builder-pub-main"
         style={{
@@ -386,13 +580,232 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       >
         {renderedTopLevelNodes.map((node) => renderPublishedNode(node, true))}
       </main>
-      <SiteFooter
-        siteName={site.name}
-        settings={settings}
-        theme={publishedTheme}
-        navItems={navItems}
-        locale={locale}
-      />
+      {resolved.footerCanvas ? (
+        <GlobalCanvasSection
+          canvas={resolved.footerCanvas}
+          theme={publishedTheme}
+          tag="footer"
+        />
+      ) : (
+        <SiteFooter
+          siteName={site.name}
+          settings={settings}
+          theme={publishedTheme}
+          navItems={navItems}
+          locale={locale}
+        />
+      )}
+      {resolved.lightboxes.length > 0 && (
+        <>
+          <LightboxMount slugs={resolved.lightboxes.map((lb) => lb.meta.slug)} />
+          {resolved.lightboxes.map((lb) => (
+            <LightboxOverlay
+              key={lb.meta.id}
+              config={{
+                id: lb.meta.id,
+                slug: lb.meta.slug,
+                sizeMode: lb.meta.sizeMode,
+                width: lb.meta.width,
+                height: lb.meta.height,
+                closeOnOutsideClick: lb.meta.closeOnOutsideClick,
+                closeOnEsc: lb.meta.closeOnEsc,
+                dismissable: lb.meta.dismissable,
+                backdropOpacity: lb.meta.backdropOpacity,
+              }}
+            >
+              <LightboxCanvas canvas={lb.canvas} theme={publishedTheme} />
+            </LightboxOverlay>
+          ))}
+        </>
+      )}
     </>
+  );
+}
+
+/**
+ * Stripped-down renderer for lightbox content — supports the core node kinds
+ * (text, image, button, heading, container, section) without the flow/sticky
+ * complexity of the page-level renderer. Composite nodes and child trees work
+ * via the standard component registry.
+ */
+function LightboxCanvas({
+  canvas,
+  theme,
+}: {
+  canvas: BuilderCanvasDocument;
+  theme: BuilderSiteDocument['theme'];
+}) {
+  const visibleNodes = canvas.nodes.filter((node) => node.visible !== false);
+  const childrenMap = buildChildrenMap(visibleNodes);
+  const nodesById = new Map(canvas.nodes.map((node) => [node.id, node]));
+  const topLevelNodes = visibleNodes
+    .filter((node) => !node.parentId)
+    .sort((left, right) => left.zIndex - right.zIndex);
+
+  function renderLightboxNode(node: BuilderCanvasNode): JSX.Element {
+    const component = getComponent(node.kind);
+    const childNodes = (childrenMap[node.id] ?? [])
+      .map((childId) => nodesById.get(childId))
+      .filter((child): child is BuilderCanvasNode => Boolean(child && child.visible !== false));
+    const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, theme);
+
+    let lightboxTarget: string | undefined;
+    if (node.kind === 'button') {
+      const href = (node.content as { href?: string }).href;
+      if (typeof href === 'string' && href.startsWith('lightbox:')) {
+        lightboxTarget = href.slice('lightbox:'.length).trim();
+      }
+    }
+
+    return (
+      <div
+        key={node.id}
+        data-lightbox-target={lightboxTarget || undefined}
+        role={lightboxTarget ? 'button' : undefined}
+        tabIndex={lightboxTarget ? 0 : undefined}
+        style={{
+          position: 'absolute',
+          left: node.rect.x,
+          top: node.rect.y,
+          width: node.rect.width,
+          height: node.rect.height,
+          zIndex: node.zIndex,
+          transform: node.rotation ? `rotate(${node.rotation}deg)` : undefined,
+          ...backgroundStyle,
+          borderRadius: node.style?.borderRadius ? `${node.style.borderRadius}px` : undefined,
+          border: node.style?.borderWidth
+            ? `${node.style.borderWidth}px ${node.style.borderStyle || 'solid'} ${resolveThemeColor(node.style.borderColor, theme)}`
+            : undefined,
+          boxShadow: node.style?.shadowBlur
+            ? `${node.style.shadowX || 0}px ${node.style.shadowY || 0}px ${node.style.shadowBlur}px ${node.style.shadowSpread || 0}px ${resolveThemeColor(node.style.shadowColor, theme)}`
+            : undefined,
+          opacity: node.style?.opacity != null ? node.style.opacity / 100 : undefined,
+          cursor: lightboxTarget ? 'pointer' : undefined,
+        }}
+      >
+        {component ? (
+          isContainerLikeKind(node.kind) ? (
+            <component.Render node={node} mode="published" theme={theme}>
+              {childNodes.map((child) => renderLightboxNode(child))}
+            </component.Render>
+          ) : (
+            <>
+              <component.Render node={node} mode="published" theme={theme} />
+              {childNodes.map((child) => renderLightboxNode(child))}
+            </>
+          )
+        ) : (
+          <div style={{ color: '#9ca3af', fontSize: '0.85rem' }}>{node.kind}</div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      style={{
+        position: 'relative',
+        width: canvas.stageWidth,
+        height: canvas.stageHeight,
+      }}
+    >
+      {topLevelNodes.map((node) => renderLightboxNode(node))}
+    </div>
+  );
+}
+
+/**
+ * Render a global header/footer canvas. Mirrors the lightbox canvas renderer
+ * (no sticky/flow-section/anchor logic — those are page-scoped concerns), but
+ * wraps the stage in a semantic `<header>` or `<footer>` element so the
+ * surrounding page layout and screen readers see it correctly.
+ *
+ * The wrapper is full-width; the stage itself is centered at `stageWidth`.
+ */
+function GlobalCanvasSection({
+  canvas,
+  theme,
+  tag,
+}: {
+  canvas: BuilderCanvasDocument;
+  theme: BuilderSiteDocument['theme'];
+  tag: 'header' | 'footer';
+}) {
+  const visibleNodes = canvas.nodes.filter((node) => node.visible !== false);
+  const childrenMap = buildChildrenMap(visibleNodes);
+  const nodesById = new Map(canvas.nodes.map((node) => [node.id, node]));
+  const topLevelNodes = visibleNodes
+    .filter((node) => !node.parentId)
+    .sort((left, right) => left.zIndex - right.zIndex);
+
+  function renderGlobalNode(node: BuilderCanvasNode): JSX.Element {
+    const component = getComponent(node.kind);
+    const childNodes = (childrenMap[node.id] ?? [])
+      .map((childId) => nodesById.get(childId))
+      .filter((child): child is BuilderCanvasNode => Boolean(child && child.visible !== false));
+    const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, theme);
+
+    return (
+      <div
+        key={node.id}
+        id={node.anchorName ? node.anchorName : undefined}
+        style={{
+          position: 'absolute',
+          left: node.rect.x,
+          top: node.rect.y,
+          width: node.rect.width,
+          height: node.rect.height,
+          zIndex: node.zIndex,
+          transform: node.rotation ? `rotate(${node.rotation}deg)` : undefined,
+          ...backgroundStyle,
+          borderRadius: node.style?.borderRadius ? `${node.style.borderRadius}px` : undefined,
+          border: node.style?.borderWidth
+            ? `${node.style.borderWidth}px ${node.style.borderStyle || 'solid'} ${resolveThemeColor(node.style.borderColor, theme)}`
+            : undefined,
+          boxShadow: node.style?.shadowBlur
+            ? `${node.style.shadowX || 0}px ${node.style.shadowY || 0}px ${node.style.shadowBlur}px ${node.style.shadowSpread || 0}px ${resolveThemeColor(node.style.shadowColor, theme)}`
+            : undefined,
+          opacity: node.style?.opacity != null ? node.style.opacity / 100 : undefined,
+        }}
+      >
+        {component ? (
+          node.kind === 'container' ? (
+            <component.Render node={node} mode="published" theme={theme}>
+              {childNodes.map((child) => renderGlobalNode(child))}
+            </component.Render>
+          ) : (
+            <>
+              <component.Render node={node} mode="published" theme={theme} />
+              {childNodes.map((child) => renderGlobalNode(child))}
+            </>
+          )
+        ) : (
+          <div style={{ color: '#9ca3af', fontSize: '0.85rem' }}>{node.kind}</div>
+        )}
+      </div>
+    );
+  }
+
+  const Tag = tag;
+  return (
+    <Tag
+      data-builder-global-section={tag}
+      style={{
+        width: '100%',
+        background: 'var(--builder-color-background)',
+        color: 'var(--builder-color-text)',
+      }}
+    >
+      <div
+        style={{
+          position: 'relative',
+          maxWidth: canvas.stageWidth,
+          height: canvas.stageHeight,
+          margin: '0 auto',
+        }}
+      >
+        {topLevelNodes.map((node) => renderGlobalNode(node))}
+      </div>
+    </Tag>
   );
 }

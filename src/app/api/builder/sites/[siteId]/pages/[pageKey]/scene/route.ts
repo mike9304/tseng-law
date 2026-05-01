@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { buildBuilderSceneDocument, summarizeBuilderSceneDocument } from '@/lib/builder/scene';
 import {
   isBuilderPageKey,
@@ -6,6 +6,7 @@ import {
   readBuilderPageSnapshotOverview,
 } from '@/lib/builder/site';
 import { normalizeLocale } from '@/lib/locales';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 type BuilderPageSceneRouteContext = {
   params: Promise<{
@@ -14,7 +15,10 @@ type BuilderPageSceneRouteContext = {
   }>;
 };
 
-export async function GET(request: Request, context: BuilderPageSceneRouteContext) {
+export async function GET(request: NextRequest, context: BuilderPageSceneRouteContext) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   const { siteId, pageKey } = await context.params;
   const locale = normalizeLocale(new URL(request.url).searchParams.get('locale') ?? undefined);
 

@@ -3,17 +3,21 @@
  *
  * Handles the draft → preview → publish lifecycle:
  * - Preview: generates a time-limited token URL for stakeholder review
- * - Publish: copies draft canvas to published + ISR revalidate
+ * - Publish: copies draft canvas to published + ISR revalidate +
+ *            auto-snapshot to revisions store
  * - Rollback: restores a previous revision as the current draft
- * - Publish checks: validates the page before allowing publish
- *   (missing alt, empty text, broken links, missing title)
+ * - Publish checks: validates the page before allowing publish via the
+ *            shared `publish-gate` runner (`runAllChecks`).
  */
 
 import crypto from 'crypto';
 import { revalidatePath } from 'next/cache';
+import { readFile, writeFile, mkdir, readdir, stat } from 'fs/promises';
+import path from 'path';
 import { publishPage, readPageCanvas, writePageCanvas, readSiteDocument } from './persistence';
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import { runAllChecks, type PublishCheckSuite } from '@/lib/builder/publish-gate/gate-runner';
 
 // ─── Preview tokens (Blob-persisted for serverless) ──────────────
 
@@ -60,41 +64,44 @@ export async function resolvePreviewToken(token: string): Promise<{ pageId: stri
   }
 }
 
-// ─── Publish checks ──────────────────────────────────────────────
+// ─── Publish checks (delegated to publish-gate runner) ───────────
 
 export interface PublishCheckResult {
   passed: boolean;
   warnings: string[];
   errors: string[];
+  /** Full structured suite from the publish-gate (preferred for new UIs). */
+  suite?: PublishCheckSuite;
 }
 
-export function runPublishChecks(doc: BuilderCanvasDocument): PublishCheckResult {
-  const warnings: string[] = [];
-  const errors: string[] = [];
-
-  for (const node of doc.nodes) {
-    if (node.kind === 'text' && (!node.content.text || node.content.text.trim().length === 0)) {
-      warnings.push(`빈 텍스트 노드: ${node.id}`);
-    }
-    if (node.kind === 'image' && !node.content.src) {
-      errors.push(`이미지 소스 없음: ${node.id}`);
-    }
-    if (node.kind === 'image' && !node.content.alt) {
-      warnings.push(`이미지 alt 텍스트 없음: ${node.id} (접근성)`);
-    }
-    if (node.kind === 'button' && !node.content.href) {
-      warnings.push(`버튼 링크 없음: ${node.id}`);
+/**
+ * Lightweight string-only result form for legacy callers
+ * (existing publish endpoint returns these). New surfaces should
+ * call `runAllChecks` directly from `publish-gate/gate-runner`.
+ */
+export async function runPublishChecks(
+  doc: BuilderCanvasDocument,
+  pageId?: string,
+  siteId: string = 'default',
+  locale?: Locale,
+): Promise<PublishCheckResult> {
+  let page = null;
+  let site = null;
+  if (pageId && locale) {
+    try {
+      site = await readSiteDocument(siteId, locale);
+      page = site.pages.find((p) => p.pageId === pageId) ?? null;
+    } catch {
+      site = null;
+      page = null;
     }
   }
-
-  if (doc.nodes.length === 0) {
-    errors.push('페이지에 요소가 없습니다.');
-  }
-
+  const suite = await runAllChecks(doc, page, site);
   return {
-    passed: errors.length === 0,
-    warnings,
-    errors,
+    passed: !suite.hasBlocker,
+    errors: suite.results.filter((r) => r.severity === 'blocker').map((r) => r.message),
+    warnings: suite.results.filter((r) => r.severity === 'warning').map((r) => r.message),
+    suite,
   };
 }
 
@@ -104,7 +111,8 @@ export async function publishPageWithChecks(
   siteId: string,
   pageId: string,
   locale: Locale,
-): Promise<{ success: boolean; checks: PublishCheckResult; slug?: string }> {
+  options: { skipChecks?: boolean; ignoreWarnings?: boolean } = {},
+): Promise<{ success: boolean; checks: PublishCheckResult; slug?: string; revisionId?: string | null }> {
   const draft = await readPageCanvas(siteId, pageId, 'draft');
   if (!draft) {
     return {
@@ -113,12 +121,20 @@ export async function publishPageWithChecks(
     };
   }
 
-  const checks = runPublishChecks(draft);
-  if (!checks.passed) {
+  const checks = await runPublishChecks(draft, pageId, siteId, locale);
+  if (!options.skipChecks && !checks.passed) {
     return { success: false, checks };
   }
 
   await publishPage(siteId, pageId, locale);
+
+  // Auto-snapshot the just-published canvas so users can revert later.
+  let revisionId: string | null = null;
+  try {
+    revisionId = await recordRevision(pageId, draft, { source: 'publish' });
+  } catch {
+    revisionId = null;
+  }
 
   const site = await readSiteDocument(siteId, locale);
   const pageMeta = site.pages.find((p) => p.pageId === pageId);
@@ -128,51 +144,182 @@ export async function publishPageWithChecks(
     revalidatePath(`/${locale}/p/${slug || ''}`);
   } catch { /* dev or non-existent path */ }
 
-  return { success: true, checks, slug };
+  return { success: true, checks, slug, revisionId };
 }
 
-// ─── Version history (Blob-persisted for serverless) ─────────────
+// ─── Version history (Blob + filesystem fallback) ───────────────
+//
+// Each revision stores the full BuilderCanvasDocument plus a small wrapper:
+//   { _revisionId, _source, _savedAt, ...document }
+//
+// Blob backend: `builder-revisions/<pageId>/<revisionId>.json`
+// File backend: `runtime-data/builder-revisions/<pageId>/<revisionId>.json`
+//
+// Filesystem fallback exists so revisions still work in local `npm run dev`
+// without BLOB_READ_WRITE_TOKEN — same selector as `site/persistence.ts`.
 
 export interface PageRevision {
   revisionId: string;
   pageId: string;
   savedAt: string;
   nodeCount: number;
+  /** Origin of the snapshot — 'publish' | 'manual' | 'rollback-backup' etc. */
+  source?: string;
 }
 
 const REVISION_BLOB_PREFIX = 'builder-revisions/';
 const MAX_REVISIONS = 50;
 
-export async function recordRevision(pageId: string, doc: BuilderCanvasDocument): Promise<void> {
-  const revisionId = `${pageId}-${Date.now()}`;
+function isBlobBackend(): boolean {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
+  if (process.env.CONSULTATION_LOG_BACKEND === 'local') return false;
+  return true;
+}
+
+function revisionsLocalRoot(pageId: string): string {
+  return path.join(process.cwd(), 'runtime-data', 'builder-revisions', pageId);
+}
+
+interface RevisionEnvelope extends BuilderCanvasDocument {
+  _revisionId: string;
+  _source?: string;
+  _savedAt?: string;
+}
+
+export async function recordRevision(
+  pageId: string,
+  doc: BuilderCanvasDocument,
+  options: { source?: string } = {},
+): Promise<string> {
+  const revisionId = `${pageId}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  const envelope: RevisionEnvelope = {
+    ...doc,
+    _revisionId: revisionId,
+    _source: options.source ?? 'manual',
+    _savedAt: new Date().toISOString(),
+  };
+  const json = JSON.stringify(envelope);
+
+  if (isBlobBackend()) {
+    try {
+      const { put } = await import('@vercel/blob');
+      await put(`${REVISION_BLOB_PREFIX}${pageId}/${revisionId}.json`, json, {
+        access: 'private',
+        allowOverwrite: true,
+        contentType: 'application/json',
+      });
+      return revisionId;
+    } catch {
+      // fall through to filesystem
+    }
+  }
+
   try {
-    const { put } = await import('@vercel/blob');
-    await put(
-      `${REVISION_BLOB_PREFIX}${pageId}/${revisionId}.json`,
-      JSON.stringify({ ...doc, _revisionId: revisionId }),
-      { access: 'private', allowOverwrite: true, contentType: 'application/json' },
-    );
+    const dir = revisionsLocalRoot(pageId);
+    await mkdir(dir, { recursive: true });
+    await writeFile(path.join(dir, `${revisionId}.json`), json, 'utf8');
   } catch {
-    // Blob unavailable — skip revision recording (dev mode)
+    // last-ditch: silent no-op (dev with read-only fs)
+  }
+  return revisionId;
+}
+
+async function listRevisionsLocal(pageId: string): Promise<PageRevision[]> {
+  try {
+    const dir = revisionsLocalRoot(pageId);
+    const files = await readdir(dir);
+    const items: PageRevision[] = [];
+    for (const file of files) {
+      if (!file.endsWith('.json')) continue;
+      const full = path.join(dir, file);
+      try {
+        const [text, stats] = await Promise.all([readFile(full, 'utf8'), stat(full)]);
+        const env = JSON.parse(text) as RevisionEnvelope;
+        items.push({
+          revisionId: env._revisionId || file.replace('.json', ''),
+          pageId,
+          savedAt: env._savedAt ?? stats.mtime.toISOString(),
+          nodeCount: Array.isArray(env.nodes) ? env.nodes.length : 0,
+          source: env._source,
+        });
+      } catch {
+        // skip corrupt file
+      }
+    }
+    items.sort((a, b) => (a.savedAt < b.savedAt ? 1 : -1));
+    return items.slice(0, MAX_REVISIONS);
+  } catch {
+    return [];
   }
 }
 
 export async function listRevisions(pageId: string): Promise<PageRevision[]> {
+  if (isBlobBackend()) {
+    try {
+      const { list, get } = await import('@vercel/blob');
+      const result = await list({ prefix: `${REVISION_BLOB_PREFIX}${pageId}/` });
+      const sorted = result.blobs
+        .sort((a, b) => b.uploadedAt.getTime() - a.uploadedAt.getTime())
+        .slice(0, MAX_REVISIONS);
+      // Read each blob to extract nodeCount + source. Limit parallelism a bit.
+      const revisions = await Promise.all(
+        sorted.map(async (blob, i) => {
+          const revisionId = blob.pathname.split('/').pop()?.replace('.json', '') || `rev-${i}`;
+          let nodeCount = 0;
+          let source: string | undefined;
+          let savedAt = blob.uploadedAt.toISOString();
+          try {
+            const detail = await get(blob.pathname, { access: 'private', useCache: false });
+            if (detail?.stream && detail.statusCode === 200) {
+              const env = JSON.parse(await new Response(detail.stream).text()) as RevisionEnvelope;
+              nodeCount = Array.isArray(env.nodes) ? env.nodes.length : 0;
+              source = env._source;
+              savedAt = env._savedAt ?? savedAt;
+            }
+          } catch {
+            // ignore — fall back to defaults
+          }
+          return { revisionId, pageId, savedAt, nodeCount, source } satisfies PageRevision;
+        }),
+      );
+      return revisions;
+    } catch {
+      // fall through
+    }
+  }
+  return listRevisionsLocal(pageId);
+}
+
+export async function readRevisionDocument(
+  pageId: string,
+  revisionId: string,
+): Promise<BuilderCanvasDocument | null> {
+  if (isBlobBackend()) {
+    try {
+      const { get } = await import('@vercel/blob');
+      const result = await get(`${REVISION_BLOB_PREFIX}${pageId}/${revisionId}.json`, {
+        access: 'private',
+        useCache: false,
+      });
+      if (result?.stream && result.statusCode === 200) {
+        const env = JSON.parse(await new Response(result.stream).text()) as RevisionEnvelope;
+        const { _revisionId: _r, _source: _s, _savedAt: _sa, ...rest } = env;
+        void _r; void _s; void _sa;
+        return rest as BuilderCanvasDocument;
+      }
+    } catch {
+      // fall through
+    }
+  }
   try {
-    const { list } = await import('@vercel/blob');
-    const result = await list({ prefix: `${REVISION_BLOB_PREFIX}${pageId}/` });
-    const revisions = result.blobs
-      .sort((a, b) => b.uploadedAt.getTime() - a.uploadedAt.getTime())
-      .slice(0, MAX_REVISIONS)
-      .map((blob, i) => ({
-        revisionId: blob.pathname.split('/').pop()?.replace('.json', '') || `rev-${i}`,
-        pageId,
-        savedAt: blob.uploadedAt.toISOString(),
-        nodeCount: 0,
-      }));
-    return revisions;
+    const file = path.join(revisionsLocalRoot(pageId), `${revisionId}.json`);
+    const text = await readFile(file, 'utf8');
+    const env = JSON.parse(text) as RevisionEnvelope;
+    const { _revisionId: _r, _source: _s, _savedAt: _sa, ...rest } = env;
+    void _r; void _s; void _sa;
+    return rest as BuilderCanvasDocument;
   } catch {
-    return [];
+    return null;
   }
 }
 
@@ -181,17 +328,8 @@ export async function rollbackToRevision(
   pageId: string,
   revisionId: string,
 ): Promise<boolean> {
-  try {
-    const { get } = await import('@vercel/blob');
-    const result = await get(`${REVISION_BLOB_PREFIX}${pageId}/${revisionId}.json`, {
-      access: 'private',
-      useCache: false,
-    });
-    if (!result?.stream || result.statusCode !== 200) return false;
-    const doc = JSON.parse(await new Response(result.stream).text()) as BuilderCanvasDocument;
-    await writePageCanvas(siteId, pageId, 'draft', doc);
-    return true;
-  } catch {
-    return false;
-  }
+  const doc = await readRevisionDocument(pageId, revisionId);
+  if (!doc) return false;
+  await writePageCanvas(siteId, pageId, 'draft', doc);
+  return true;
 }

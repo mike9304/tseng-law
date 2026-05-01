@@ -1,14 +1,18 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import {
   isBuilderCollectionId,
   readBuilderCollectionDetail,
 } from '@/lib/builder/cms';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export async function GET(
-  request: Request,
+  request: NextRequest,
   { params }: { params: { siteId: string; collectionId: string } }
 ) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   if (!isDefaultBuilderSiteId(params.siteId)) {
     return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
   }

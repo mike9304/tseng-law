@@ -7,6 +7,7 @@ import {
   normalizeBuilderHomeLocale,
   readBuilderHomeSnapshotHistoryDetail,
 } from '@/lib/builder/persistence';
+import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
@@ -15,6 +16,9 @@ function badRequest(message: string) {
 }
 
 export async function GET(request: NextRequest) {
+  const auth = guardMutation(request);
+  if (auth instanceof NextResponse) return auth;
+
   const locale = normalizeBuilderHomeLocale(request.nextUrl.searchParams.get('locale'));
   const kindParam = request.nextUrl.searchParams.get('kind');
   const revisionId = request.nextUrl.searchParams.get('revisionId');

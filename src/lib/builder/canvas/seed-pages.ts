@@ -7,12 +7,14 @@ import { legalPageContent } from '@/data/legal-pages';
 import { pageCopy } from '@/data/page-copy';
 import {
   createPage,
+  ensureSiteDocument,
   publishPage,
   readPageCanvas,
   readSiteDocument,
   writePageCanvas,
   writeSiteDocument,
 } from '@/lib/builder/site/persistence';
+import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { createHomePageCanvasDocument } from './seed-home';
 import {
@@ -373,6 +375,8 @@ async function ensureStandardNavigation(siteId: string, locale: Locale) {
 }
 
 async function seedSitePagesInternal(siteId: string, locale: Locale): Promise<void> {
+  await ensureSiteDocument(siteId, locale);
+
   for (const seed of pageSeeds) {
     const site = await readSiteDocument(siteId, locale);
     const existing = findSeedPage(site, seed);
@@ -399,14 +403,15 @@ async function seedSitePagesInternal(siteId: string, locale: Locale): Promise<vo
 }
 
 export async function seedSitePages(siteId: string, locale: Locale): Promise<void> {
-  const key = `${siteId}:${locale}`;
+  const normalizedSiteId = normalizeBuilderSiteId(siteId);
+  const key = `${normalizedSiteId}:${locale}`;
   const existingTask = seedSitePagesInFlight.get(key);
   if (existingTask) {
     await existingTask;
     return;
   }
 
-  const task = seedSitePagesInternal(siteId, locale).finally(() => {
+  const task = seedSitePagesInternal(normalizedSiteId, locale).finally(() => {
     seedSitePagesInFlight.delete(key);
   });
   seedSitePagesInFlight.set(key, task);

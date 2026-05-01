@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
-import { listPages, createPage, writePageCanvas } from '@/lib/builder/site/persistence';
+import { listPages, createPage, readPageCanvas, readSiteDocument, writePageCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { normalizeCanvasDocument, createDefaultCanvasDocument } from '@/lib/builder/canvas/types';
 import { guardMutation } from '@/lib/builder/security/guard';
 
@@ -19,9 +19,9 @@ export async function POST(request: NextRequest) {
   const auth = guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
-  let body: { slug?: string; title?: string; locale?: string; document?: unknown };
+  let body: { slug?: string; title?: string; locale?: string; document?: unknown; linkedFromPageId?: string };
   try {
-    body = (await request.json()) as { slug?: string; title?: string; locale?: string; document?: unknown };
+    body = (await request.json()) as { slug?: string; title?: string; locale?: string; document?: unknown; linkedFromPageId?: string };
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
@@ -37,10 +37,31 @@ export async function POST(request: NextRequest) {
 
   const page = await createPage('default', locale, slug, title);
 
+  if (body.linkedFromPageId) {
+    const site = await readSiteDocument('default', locale);
+    const sourcePage = site.pages.find((entry) => entry.pageId === body.linkedFromPageId);
+    const createdPage = site.pages.find((entry) => entry.pageId === page.pageId);
+    if (sourcePage && createdPage) {
+      sourcePage.linkedPageIds = { ...(sourcePage.linkedPageIds ?? {}), [locale]: page.pageId };
+      createdPage.linkedPageIds = {
+        ...(createdPage.linkedPageIds ?? {}),
+        [sourcePage.locale]: sourcePage.pageId,
+      };
+      createdPage.title = { ...sourcePage.title, [locale]: title };
+      site.updatedAt = new Date().toISOString();
+      await writeSiteDocument(site);
+    }
+  }
+
   // Save the initial canvas document (template or blank)
+  const sourceCanvas = body.linkedFromPageId
+    ? await readPageCanvas('default', body.linkedFromPageId, 'draft')
+    : null;
   const canvasDoc = body.document
     ? normalizeCanvasDocument(body.document, locale)
-    : createDefaultCanvasDocument(locale);
+    : sourceCanvas
+      ? normalizeCanvasDocument({ ...sourceCanvas, locale }, locale)
+      : createDefaultCanvasDocument(locale);
   await writePageCanvas('default', page.pageId, 'draft', canvasDoc);
 
   return NextResponse.json({ success: true, pageId: page.pageId, page });

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
 import {
   buildPublishedSitePageMetadata,
   PublishedSitePageView,
@@ -23,8 +22,6 @@ export async function generateMetadata({
   const locale: Locale = normalizeLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 
-  await seedSitePages('default', locale);
-
   const publishedMetadata = await buildPublishedSitePageMetadata(locale, slugPath);
   if (publishedMetadata) return publishedMetadata;
 
@@ -38,8 +35,6 @@ export default async function MainSiteCatchAllPage({
 }) {
   const locale: Locale = normalizeLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
-
-  await seedSitePages('default', locale);
 
   const publishedPage = await resolvePublishedSitePage(locale, slugPath);
   if (publishedPage) {

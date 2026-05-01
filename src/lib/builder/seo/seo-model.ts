@@ -7,6 +7,10 @@
 
 import type { Locale } from '@/lib/locales';
 import type { BuilderPageMeta } from '@/lib/builder/site/types';
+import {
+  buildHreflangAlternates,
+  type HreflangAlternate,
+} from '@/lib/builder/seo/hreflang';
 
 export interface PageSeoData {
   title: string;
@@ -15,8 +19,26 @@ export interface PageSeoData {
   canonical: string;
   noIndex: boolean;
   noFollow: boolean;
-  hreflang: Array<{ locale: Locale; url: string }>;
+  hreflang: HreflangAlternate[];
   structuredData?: Record<string, unknown>;
+}
+
+/**
+ * Normalize a canonical URL: strip query string, strip trailing slash
+ * (except for the bare origin), preserve hash if present.
+ */
+export function normalizeCanonicalUrl(input: string): string {
+  if (!input) return input;
+  try {
+    const u = new URL(input);
+    u.search = '';
+    let pathname = u.pathname.replace(/\/+$/, '');
+    if (!pathname) pathname = '/';
+    u.pathname = pathname;
+    return u.toString().replace(/\/$/, '');
+  } catch {
+    return input.split('?')[0]?.replace(/\/+$/, '') || input;
+  }
 }
 
 export function buildPageSeo(
@@ -29,26 +51,15 @@ export function buildPageSeo(
   const slug = page.slug || '';
   const url = `${siteUrl}/${locale}/p/${slug}`.replace(/\/+$/, '');
 
-  const hreflang: Array<{ locale: Locale; url: string }> = [];
-  if (page.linkedPageIds) {
-    for (const [loc, linkedPageId] of Object.entries(page.linkedPageIds)) {
-      if (!linkedPageId) continue;
-      const linked = allPages.find((p) => p.pageId === linkedPageId);
-      if (linked) {
-        hreflang.push({
-          locale: loc as Locale,
-          url: `${siteUrl}/${loc}/p/${linked.slug}`.replace(/\/+$/, ''),
-        });
-      }
-    }
-  }
-  hreflang.push({ locale, url });
+  // Centralised hreflang generation — includes x-default + every linked
+  // sibling reachable via `linkedPageIds`.
+  const hreflang = buildHreflangAlternates(page, siteUrl, allPages);
 
   return {
     title: seo.title || page.title[locale] || page.title.ko || '',
     description: seo.description || '',
     ogImage: seo.ogImage,
-    canonical: seo.canonical || url,
+    canonical: normalizeCanonicalUrl(seo.canonical || url),
     noIndex: page.noIndex || seo.noIndex || false,
     noFollow: seo.noFollow || false,
     hreflang,

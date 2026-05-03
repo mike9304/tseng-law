@@ -520,3 +520,13 @@
   - `data-legacy-chrome="true"` true
   - `builder-pub-node` count 0
   - `class="main-nav"` true
+
+## 2026-05-03 Codex /goal G-Editor map/content 검증 보강
+
+범위:
+- 사용자가 지적한 "지도도 주소 설정처럼 편집 가능해야 한다" 항목을 Playwright에서 직접 검증하도록 보강.
+- `home-offices-layout-0-map` 선택 → Content tab → 주소 textarea 변경 → Google Maps iframe `q` 파라미터 반영 → 원래 주소 원복.
+- 이전 실패 테스트가 남긴 로컬 builder navigation label `업무분야 Test`를 guardMutation API(`/api/builder/site/navigation`)로 `업무분야` 복구.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, map address edit + restore 포함)

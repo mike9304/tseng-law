@@ -174,6 +174,21 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await officeMap.click({ position: { x: 24, y: 24 } });
     await page.getByRole('button', { name: 'content' }).click();
     await expect(page.getByText('사무소 프리셋')).toBeVisible();
-    await expect(page.locator('textarea').first()).toHaveValue(/臺中市北區館前路19號樓之1/);
+    const mapAddressInput = page.locator('textarea').first();
+    await expect(mapAddressInput).toHaveValue(/臺中市北區館前路19號樓之1/);
+    const originalMapAddress = await mapAddressInput.inputValue();
+    const temporaryMapAddress = '台北市大同區承德路一段35號7樓之2';
+    const mapFrame = officeMap.locator('iframe[title="Google Maps"]').first();
+    try {
+      await mapAddressInput.fill(temporaryMapAddress);
+      await expect(mapAddressInput).toHaveValue(temporaryMapAddress);
+      await expect.poll(async () => {
+        const src = await mapFrame.getAttribute('src');
+        return src ? new URL(src).searchParams.get('q') : '';
+      }).toBe(temporaryMapAddress);
+    } finally {
+      await mapAddressInput.fill(originalMapAddress);
+      await expect(mapAddressInput).toHaveValue(originalMapAddress);
+    }
   });
 });

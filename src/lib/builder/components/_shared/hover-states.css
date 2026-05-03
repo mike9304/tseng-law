@@ -1,0 +1,38 @@
+.builder-button-element:hover {
+  background: var(--builder-button-hover-background) !important;
+  color: var(--builder-button-hover-color) !important;
+  border-color: var(--builder-button-hover-border-color) !important;
+  transform: var(--builder-button-hover-transform) !important;
+  box-shadow: var(--builder-button-hover-box-shadow) !important;
+}
+
+.builder-button-element:active {
+  transform: var(--builder-button-active-transform) !important;
+}
+
+.builder-button-element:focus-visible,
+.builder-widget-focusable:focus-visible {
+  outline: none;
+  box-shadow: var(--builder-widget-focus-ring), var(--builder-button-hover-box-shadow, none) !important;
+}
+
+.builder-button-element:disabled,
+.builder-button-element[aria-disabled='true'] {
+  cursor: not-allowed !important;
+  opacity: var(--builder-button-disabled-opacity) !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .builder-button-element,
+  .builder-widget-focusable {
+    transition-duration: 1ms !important;
+  }
+
+  .builder-button-element:hover,
+  .builder-button-element:active,
+  .builder-widget-focusable:hover,
+  .builder-widget-focusable:active {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  padding: 20px;
+  font-family: var(--builder-widget-font);
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+}
+
+.date {
+  color: var(--builder-widget-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0;
+  color: var(--builder-widget-text);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.summary {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: var(--builder-widget-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}

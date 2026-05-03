@@ -226,6 +226,39 @@ export default function CanvasContainer({
     onActivity?.(`Redid: move ${describeHistorySelection()}`);
   }, [describeHistorySelection, onActivity, redo]);
 
+  const describeClipboardCount = useCallback((count: number) => (
+    `${count} item${count === 1 ? '' : 's'}`
+  ), []);
+
+  const handleCopy = useCallback(() => {
+    const count = useBuilderCanvasStore.getState().selectedNodeIds.length;
+    if (count === 0) return;
+    copySelectedNodesToClipboard();
+    onActivity?.(`${describeClipboardCount(count)} copied`);
+  }, [copySelectedNodesToClipboard, describeClipboardCount, onActivity]);
+
+  const handleCut = useCallback(() => {
+    const count = useBuilderCanvasStore.getState().selectedNodeIds.length;
+    if (count === 0) return;
+    cutSelectedNodesToClipboard();
+    onActivity?.(`${describeClipboardCount(count)} cut`);
+  }, [cutSelectedNodesToClipboard, describeClipboardCount, onActivity]);
+
+  const handlePaste = useCallback(() => {
+    const state = useBuilderCanvasStore.getState();
+    if (!state.clipboardHasContent) return;
+    pasteClipboardNodes();
+    const pastedCount = useBuilderCanvasStore.getState().selectedNodeIds.length || state.clipboardCount;
+    onActivity?.(`Pasted ${describeClipboardCount(pastedCount)}`);
+  }, [describeClipboardCount, onActivity, pasteClipboardNodes]);
+
+  const handleDuplicate = useCallback(() => {
+    const count = useBuilderCanvasStore.getState().selectedNodeIds.length;
+    if (count === 0) return;
+    duplicateSelectedNode();
+    onToast?.('Duplicated', 'success');
+  }, [duplicateSelectedNode, onToast]);
+
   const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? []);
   const stageWidth = useBuilderCanvasStore(
     (state) => state.document?.stageWidth ?? DEFAULT_STAGE_WIDTH,
@@ -460,7 +493,7 @@ export default function CanvasContainer({
           deleteSelectedNode();
           break;
         case 'duplicate':
-          duplicateSelectedNode();
+          handleDuplicate();
           break;
         case 'selectAll': {
           const storeState = useBuilderCanvasStore.getState();
@@ -481,13 +514,13 @@ export default function CanvasContainer({
           }
           break;
         case 'copy':
-          copySelectedNodesToClipboard();
+          handleCopy();
           break;
         case 'paste':
-          pasteClipboardNodes();
+          handlePaste();
           break;
         case 'cut':
-          cutSelectedNodesToClipboard();
+          handleCut();
           break;
         case 'zoomIn':
           setZoomState((currentState) => stepZoomIn(currentState));
@@ -559,15 +592,15 @@ export default function CanvasContainer({
   }, [
     bringSelectedNodeForward,
     bringSelectedNodeToFront,
-    copySelectedNodesToClipboard,
-    cutSelectedNodesToClipboard,
     deleteSelectedNode,
-    duplicateSelectedNode,
     fitCanvas,
     focusSelectedLinkInput,
     groupSelectedNodes,
+    handleCopy,
+    handleCut,
+    handleDuplicate,
+    handlePaste,
     nudgeSelectedNode,
-    pasteClipboardNodes,
     handleRedo,
     handleUndo,
     selectedLinkTargetNode,
@@ -1460,7 +1493,7 @@ export default function CanvasContainer({
             linkPickerContext={linkPickerContext}
             linkPopoverOpen={selectionLinkPopoverOpen}
             onLinkPopoverChange={setSelectionLinkPopoverOpen}
-            onDuplicate={duplicateSelectedNode}
+            onDuplicate={handleDuplicate}
             onDelete={deleteSelectedNode}
             onBringForward={bringSelectedNodeForward}
             onSendBackward={sendSelectedNodeBackward}
@@ -1658,28 +1691,28 @@ export default function CanvasContainer({
                 label: 'Copy',
                 title: '복사 (Cmd-C)',
                 disabled: selectedNodeIds.length === 0,
-                onSelect: copySelectedNodesToClipboard,
+                onSelect: handleCopy,
               },
               {
                 key: 'cut',
                 label: 'Cut',
                 title: '잘라내기 (Cmd-X)',
                 disabled: !hasUnlockedSelection,
-                onSelect: cutSelectedNodesToClipboard,
+                onSelect: handleCut,
               },
               {
                 key: 'paste',
                 label: 'Paste',
                 title: '붙여넣기 (Cmd-V)',
                 disabled: !clipboardHasContent,
-                onSelect: pasteClipboardNodes,
+                onSelect: handlePaste,
               },
               {
                 key: 'duplicate',
                 label: 'Duplicate',
                 title: '복제 (Cmd-D)',
                 disabled: !hasUnlockedSelection,
-                onSelect: duplicateSelectedNode,
+                onSelect: handleDuplicate,
               },
               {
                 key: 'delete',

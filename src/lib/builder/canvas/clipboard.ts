@@ -51,3 +51,7 @@ export function pasteNodes(offset = 20): BuilderCanvasNode[] {
 export function hasClipboard(): boolean {
   return clipboardNodes.length > 0;
 }
+
+export function getClipboardCount(): number {
+  return clipboardNodes.filter((node) => !node.parentId || !clipboardNodes.some((candidate) => candidate.id === node.parentId)).length;
+}

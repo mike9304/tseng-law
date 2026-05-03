@@ -147,6 +147,7 @@ export default function SandboxPage({
     selectedNodeId,
     selectedNodeIds,
     draftSaveState,
+    clipboardCount,
     mutationBaseDocument,
     replaceDocument,
     setDraftSaveState,
@@ -713,6 +714,7 @@ export default function SandboxPage({
               <PageSwitcher
                 locale={locale}
                 activePageId={activePageId}
+                clipboardCount={clipboardCount}
                 onSelectPage={handleSelectPage}
               />
             </div>

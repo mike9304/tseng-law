@@ -187,13 +187,31 @@ const statusDotStyle = (published: boolean): React.CSSProperties => ({
   flexShrink: 0,
 });
 
+const clipboardPillStyle: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  alignSelf: 'flex-start',
+  gap: 6,
+  minHeight: 24,
+  margin: '0 8px 8px',
+  padding: '0 9px',
+  border: '1px solid #bfdbfe',
+  borderRadius: 999,
+  background: '#eff6ff',
+  color: '#1d4ed8',
+  fontSize: '0.72rem',
+  fontWeight: 800,
+};
+
 export default function PageSwitcher({
   locale,
   activePageId,
+  clipboardCount = 0,
   onSelectPage,
 }: {
   locale: Locale;
   activePageId: string | null;
+  clipboardCount?: number;
   onSelectPage: (pageId: string, nextSlug?: string) => void;
 }) {
   const [pages, setPages] = useState<PageMeta[]>([]);
@@ -401,6 +419,12 @@ export default function PageSwitcher({
           {creating ? '...' : '+ New'}
         </button>
       </div>
+      {clipboardCount > 0 ? (
+        <span style={clipboardPillStyle}>
+          <span aria-hidden="true">⌘V</span>
+          <span>{clipboardCount}개 요소 클립보드</span>
+        </span>
+      ) : null}
 
       {errorMessage ? <div style={statusMessageStyle}>{errorMessage}</div> : null}
 

@@ -17,6 +17,7 @@ import {
 import {
   copyNodes,
   cutNodes,
+  getClipboardCount,
   hasClipboard,
   pasteNodes,
 } from '@/lib/builder/canvas/clipboard';
@@ -77,6 +78,7 @@ interface BuilderCanvasStoreState {
   activeGroupId: string | null;
   draftSaveState: DraftSaveState;
   clipboardHasContent: boolean;
+  clipboardCount: number;
   history: HistoryState<BuilderCanvasDocument> | null;
   mutationBaseDocument: BuilderCanvasDocument | null;
   canUndo: boolean;
@@ -425,6 +427,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   activeGroupId: null,
   draftSaveState: 'idle',
   clipboardHasContent: hasClipboard(),
+  clipboardCount: getClipboardCount(),
   history: null,
   mutationBaseDocument: null,
   canUndo: false,
@@ -597,6 +600,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       copyNodes(selectedNodes);
       return {
         clipboardHasContent: hasClipboard(),
+        clipboardCount: getClipboardCount(),
       };
     }),
   cutSelectedNodesToClipboard: () =>
@@ -618,11 +622,13 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (nextState === state) {
         return {
           clipboardHasContent: hasClipboard(),
+          clipboardCount: getClipboardCount(),
         };
       }
       return {
         ...nextState,
         clipboardHasContent: hasClipboard(),
+        clipboardCount: getClipboardCount(),
       };
     }),
   pasteClipboardNodes: () =>
@@ -635,7 +641,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const activeGroupRect = activeGroupNode
         ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
         : null;
-      const pastedNodes = pasteNodes(24).map((node, index, collection) => {
+      const pastedNodes = pasteNodes(20).map((node, index, collection) => {
         const pastedIds = new Set(collection.map((candidate) => candidate.id));
         const isPastedRoot = !node.parentId || !pastedIds.has(node.parentId);
         const shouldReparentToActiveGroup = Boolean(activeGroupNode && isPastedRoot);
@@ -652,6 +658,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (pastedNodes.length === 0) {
         return {
           clipboardHasContent: hasClipboard(),
+          clipboardCount: getClipboardCount(),
         };
       }
       const document = updateNodes(state.document, (nodes) => [...nodes, ...pastedNodes]);
@@ -664,11 +671,13 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (nextState === state) {
         return {
           clipboardHasContent: hasClipboard(),
+          clipboardCount: getClipboardCount(),
         };
       }
       return {
         ...nextState,
         clipboardHasContent: hasClipboard(),
+        clipboardCount: getClipboardCount(),
       };
     }),
   alignSelectedNodes: (action) =>
@@ -955,7 +964,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       ]);
       const selectedNodes = state.document.nodes.filter((node) => selectedNodeIds.has(node.id));
       if (selectedNodes.length === 0) return state;
-      const duplicatedNodes = cloneNodeSet(selectedNodes, 24);
+      const duplicatedNodes = cloneNodeSet(selectedNodes, 20);
       const document = updateNodes(state.document, (nodes) => [...nodes, ...duplicatedNodes]);
       return applyCommittedDocument(
         state,

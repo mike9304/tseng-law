@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { defineComponent } from '../define';
 import FaqListInspector from './Inspector';
+import styles from './FaqList.module.css';
 
 interface FaqItem {
   question: string;
@@ -19,48 +20,22 @@ function FaqListRender({ node }: { node: { content: FaqListContent } }) {
 
   if (!items.length) {
     return (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          background: '#f1f5f9',
-          border: '2px dashed #cbd5e1',
-          borderRadius: 8,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#94a3b8',
-          fontSize: 13,
-        }}
-      >
+      <div className="builder-widget-empty">
         FAQ List
       </div>
     );
   }
 
   return (
-    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 0 }}>
+    <div className={styles.list}>
       {items.map((item, i) => {
         const isOpen = openIndex === i;
         return (
-          <div key={i} style={{ borderBottom: '1px solid #e2e8f0' }}>
+          <div key={i} className={styles.item}>
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : i)}
-              style={{
-                width: '100%',
-                padding: '14px 16px',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                fontSize: 15,
-                fontWeight: 600,
-                color: '#0f172a',
-                textAlign: 'left',
-              }}
+              className={`${styles.question} builder-widget-focusable`}
             >
               <span>{item.question}</span>
               <svg
@@ -72,26 +47,13 @@ function FaqListRender({ node }: { node: { content: FaqListContent } }) {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                style={{
-                  transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                  transition: 'transform 0.2s ease',
-                  flexShrink: 0,
-                  marginLeft: 8,
-                }}
+                className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ''}`}
               >
                 <polyline points="6 9 12 15 18 9" />
               </svg>
             </button>
             <div
-              style={{
-                maxHeight: isOpen ? 500 : 0,
-                overflow: 'hidden',
-                transition: 'max-height 250ms ease, padding 250ms ease',
-                padding: isOpen ? '0 16px 14px' : '0 16px 0',
-                fontSize: 14,
-                color: '#64748b',
-                lineHeight: 1.6,
-              }}
+              className={`${styles.answer} ${isOpen ? styles.answerOpen : ''}`}
             >
               {item.answer}
             </div>

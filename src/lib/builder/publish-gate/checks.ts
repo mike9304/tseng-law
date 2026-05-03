@@ -16,6 +16,7 @@
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { isLinkSafe, linkValueFromLegacy } from '@/lib/builder/links';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
+import { validateBuilderPageSeo } from '@/lib/builder/seo/validation';
 
 export type CheckSeverity = 'blocker' | 'warning' | 'info';
 
@@ -250,50 +251,18 @@ export function checkImageAlt(doc: BuilderCanvasDocument): CheckResult[] {
   }
   return results;
 }
-export function checkSeoMeta(page?: BuilderPageMeta | null): CheckResult[] {
+export function checkSeoMeta(
+  page?: BuilderPageMeta | null,
+  site?: BuilderSiteDocument | null,
+): CheckResult[] {
   if (!page) return [];
-  const results: CheckResult[] = [];
-  const seo = page.seo ?? {};
-  const title = (seo.title ?? '').trim();
-  const description = (seo.description ?? '').trim();
-
-  if (!title) {
-    results.push({
-      id: 'seo-title-missing',
-      severity: 'warning',
-      category: 'seo',
-      message: 'SEO title 이 비어 있습니다.',
-      fixHint: 'SEO 패널에서 30~60자 사이의 제목을 입력하세요.',
-    });
-  } else if (title.length < 30 || title.length > 60) {
-    results.push({
-      id: 'seo-title-length',
-      severity: 'warning',
-      category: 'seo',
-      message: `SEO title 길이 권장 범위 (30~60자)를 벗어났습니다. 현재 ${title.length}자.`,
-      fixHint: '검색 결과 노출 최적화를 위해 30~60자로 조정하세요.',
-    });
-  }
-
-  if (!description) {
-    results.push({
-      id: 'seo-description-missing',
-      severity: 'warning',
-      category: 'seo',
-      message: 'SEO description 이 비어 있습니다.',
-      fixHint: 'SEO 패널에서 120~160자 사이의 설명을 입력하세요.',
-    });
-  } else if (description.length < 120 || description.length > 160) {
-    results.push({
-      id: 'seo-description-length',
-      severity: 'info',
-      category: 'seo',
-      message: `SEO description 길이 권장 범위 (120~160자)를 벗어났습니다. 현재 ${description.length}자.`,
-      fixHint: '검색 결과 스니펫 최적화를 위해 120~160자로 조정하세요.',
-    });
-  }
-
-  return results;
+  return validateBuilderPageSeo({ page, site, seo: page.seo }).map((issue) => ({
+    id: issue.id,
+    severity: issue.severity,
+    category: 'seo',
+    message: issue.message,
+    fixHint: issue.fixHint,
+  }));
 }
 
 export function checkFormTarget(doc: BuilderCanvasDocument): CheckResult[] {

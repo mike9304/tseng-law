@@ -14,7 +14,7 @@ import {
 const fieldStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  gap: 4,
+  gap: 6,
 };
 
 const labelStyle: React.CSSProperties = {
@@ -24,11 +24,13 @@ const labelStyle: React.CSSProperties = {
 };
 
 const inputStyle: React.CSSProperties = {
+  minHeight: 36,
   padding: '8px 12px',
-  border: '1px solid #e2e8f0',
-  borderRadius: 8,
+  border: '1px solid #dbe3ef',
+  borderRadius: 10,
   fontSize: '0.85rem',
   color: '#0f172a',
+  background: '#fff',
   outline: 'none',
   boxSizing: 'border-box',
 };
@@ -44,7 +46,7 @@ const sectionHeadingStyle: React.CSSProperties = {
 const actionButtonStyle: React.CSSProperties = {
   padding: '8px 12px',
   border: '1px solid #cbd5e1',
-  borderRadius: 8,
+  borderRadius: 10,
   background: '#fff',
   color: '#334155',
   fontSize: '0.8rem',
@@ -57,6 +59,65 @@ const primaryButtonStyle: React.CSSProperties = {
   border: 'none',
   background: '#116dff',
   color: '#fff',
+};
+
+const panelShellStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 18,
+  padding: 18,
+  borderRadius: 18,
+  border: '1px solid #dde7f3',
+  background: 'linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.96))',
+  boxShadow: '0 18px 44px rgba(15, 23, 42, 0.08)',
+};
+
+const siteWideWarningStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'auto 1fr',
+  gap: 10,
+  padding: '10px 12px',
+  borderRadius: 12,
+  border: '1px solid #fde68a',
+  background: '#fffbeb',
+  color: '#92400e',
+  fontSize: '0.78rem',
+  fontWeight: 700,
+  lineHeight: 1.45,
+};
+
+const logoCardStyle: React.CSSProperties = {
+  border: '1px solid #dbe3ef',
+  borderRadius: 16,
+  padding: 14,
+  background: '#ffffff',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  gap: 12,
+  boxShadow: '0 12px 30px rgba(15, 23, 42, 0.06)',
+};
+
+const assetRowStyle: React.CSSProperties = {
+  ...fieldStyle,
+  padding: 12,
+  border: '1px solid #e2e8f0',
+  borderRadius: 14,
+  background: '#fff',
+};
+
+const colorGridStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+  gap: 12,
+};
+
+const footerActionsStyle: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: 8,
+  paddingTop: 4,
 };
 
 type BrandColorKey = keyof BrandKit['colors'];
@@ -162,20 +223,14 @@ export default function BrandKitPanel({
   const activePickerField = BRAND_ASSET_FIELDS.find((field) => field.assetKey === assetPickerKey);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+    <div style={panelShellStyle}>
+      <div style={siteWideWarningStyle}>
+        <span aria-hidden="true">!</span>
+        <span>Brand kit changes are site-wide. Apply updates here, then save Site Settings to publish the new visual system.</span>
+      </div>
+
       <div style={{ display: 'grid', gridTemplateColumns: '170px 1fr', gap: 14, alignItems: 'stretch' }}>
-        <div
-          style={{
-            border: '1px solid #e2e8f0',
-            borderRadius: 12,
-            padding: 12,
-            background: '#f8fafc',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            gap: 12,
-          }}
-        >
+        <div style={logoCardStyle}>
           <div style={sectionHeadingStyle}>Logo</div>
           <div
             style={{
@@ -190,7 +245,15 @@ export default function BrandKitPanel({
             }}
           >
             {logoPreview ? (
-              <img src={logoPreview} alt="" style={{ maxWidth: '100%', maxHeight: 76, objectFit: 'contain' }} />
+              <span
+                aria-label="Logo preview"
+                role="img"
+                style={{
+                  width: '100%',
+                  height: 76,
+                  background: `url("${logoPreview.replace(/"/g, '%22')}") center/contain no-repeat`,
+                }}
+              />
             ) : (
               <span style={{ color: '#94a3b8', fontSize: '0.76rem', fontWeight: 700 }}>Logo preview</span>
             )}
@@ -206,7 +269,7 @@ export default function BrandKitPanel({
             const previewUrl = resolveBrandAssetPreview(value, field.urlKey, field.assetKey);
             const hasAsset = Boolean(value.assets?.[field.assetKey]);
             return (
-              <div key={field.assetKey} style={fieldStyle}>
+              <div key={field.assetKey} style={assetRowStyle}>
                 <label style={labelStyle}>{field.label} URL</label>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 8, alignItems: 'center' }}>
                   <input
@@ -264,7 +327,7 @@ export default function BrandKitPanel({
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12 }}>
+      <div style={colorGridStyle}>
         {BRAND_COLOR_KEYS.map((key) => (
           <div key={key} style={fieldStyle}>
             <label style={labelStyle}>{THEME_COLOR_LABELS[key]}</label>
@@ -287,7 +350,7 @@ export default function BrandKitPanel({
         ))}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+      <div style={colorGridStyle}>
         <div style={fieldStyle}>
           <label style={labelStyle}>Title font</label>
           <FontPicker
@@ -316,7 +379,7 @@ export default function BrandKitPanel({
         }}
       />
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
+      <div style={footerActionsStyle}>
         <div style={{ display: 'flex', gap: 8 }}>
           <button type="button" style={actionButtonStyle} onClick={onExport}>
             Export JSON

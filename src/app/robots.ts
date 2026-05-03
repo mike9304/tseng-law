@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 import { locales } from '@/lib/locales';
 import { getSiteUrl } from '@/lib/seo';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,8 +33,7 @@ async function collectNoIndexPaths(): Promise<string[]> {
         if (page.locale !== locale) continue;
         if (!(page.noIndex || page.seo?.noIndex || page.password)) continue;
         const slug = page.slug || '';
-        const path = `/${locale}/p/${slug}`.replace(/\/+$/, '') || `/${locale}`;
-        out.push(path);
+        out.push(buildSitePagePath(locale, slug));
       }
     } catch {
       // Best-effort: if blob is unavailable we still emit a working robots.txt.

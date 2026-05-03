@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { isLocale, type Locale, locales } from '@/lib/locales';
 import LocaleSetter from '@/components/LocaleSetter';
 import '@/app/column-editor.css';
+import '@/components/builder/canvas/tokens/editorChrome.css';
+import '@/components/builder/canvas/inspector-tokens.css';
 
 export const dynamicParams = false;
 

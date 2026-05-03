@@ -2,49 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
-
-const CROP_KEYFRAMES = `
-@keyframes cropBackdropIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes cropModalIn {
-  from { opacity: 0; transform: scale(0.92); }
-  to { opacity: 1; transform: scale(1); }
-}
-`;
-
-const backdropStyle: React.CSSProperties = {
-  position: 'fixed',
-  inset: 0,
-  zIndex: 9999,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: 'rgba(15, 23, 42, 0.5)',
-  backdropFilter: 'blur(6px)',
-  WebkitBackdropFilter: 'blur(6px)',
-  animation: 'cropBackdropIn 200ms ease',
-};
-
-const modalStyle: React.CSSProperties = {
-  background: '#fff',
-  borderRadius: 16,
-  boxShadow: '0 25px 50px rgba(0,0,0,0.18)',
-  width: '100%',
-  maxWidth: 560,
-  maxHeight: '85vh',
-  overflow: 'auto',
-  padding: '28px 28px 24px',
-  animation: 'cropModalIn 250ms cubic-bezier(0.16, 1, 0.3, 1)',
-};
-
-const titleStyle: React.CSSProperties = {
-  margin: 0,
-  fontSize: '1.1rem',
-  fontWeight: 700,
-  color: '#0f172a',
-};
+import ModalShell from './ModalShell';
 
 const imageContainerStyle: React.CSSProperties = {
   position: 'relative',
@@ -86,13 +44,6 @@ function ratioButtonStyle(active: boolean): React.CSSProperties {
     transition: 'all 150ms ease',
   };
 }
-
-const buttonRowStyle: React.CSSProperties = {
-  display: 'flex',
-  gap: 10,
-  justifyContent: 'flex-end',
-  marginTop: 20,
-};
 
 const cancelButtonStyle: React.CSSProperties = {
   padding: '8px 18px',
@@ -137,16 +88,6 @@ export default function CropModal({
     }
   }, [open, currentAspect]);
 
-  // ESC key handler
-  useEffect(() => {
-    if (!open) return undefined;
-    const handler = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [open, onClose]);
-
   if (!open) return null;
 
   // Compute aspect ratio for preview overlay
@@ -154,12 +95,27 @@ export default function CropModal({
   const ratioValue = selectedRatio?.value ?? null;
 
   return (
-    <>
-      <style>{CROP_KEYFRAMES}</style>
-      <div style={backdropStyle} onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
-        <div style={modalStyle} role="dialog" aria-modal="true">
-          <h2 style={titleStyle}>Crop Image</h2>
-
+    <ModalShell
+      title="Crop Image"
+      description="Choose a preview aspect ratio for this image."
+      ariaLabel="Crop Image"
+      size="sm"
+      onClose={onClose}
+      footer={(
+        <>
+          <button type="button" style={cancelButtonStyle} onClick={onClose}>
+            Cancel
+          </button>
+          <button
+            type="button"
+            style={confirmButtonStyle}
+            onClick={() => onConfirm(selectedAspect)}
+          >
+            Apply
+          </button>
+        </>
+      )}
+    >
           <div style={imageContainerStyle}>
             {imageSrc ? (
               <div style={{ position: 'relative' }}>
@@ -211,21 +167,6 @@ export default function CropModal({
               </button>
             ))}
           </div>
-
-          <div style={buttonRowStyle}>
-            <button type="button" style={cancelButtonStyle} onClick={onClose}>
-              Cancel
-            </button>
-            <button
-              type="button"
-              style={confirmButtonStyle}
-              onClick={() => onConfirm(selectedAspect)}
-            >
-              Apply
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
+    </ModalShell>
   );
 }

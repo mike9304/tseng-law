@@ -59,6 +59,11 @@ const siteSettingsSchema = z.object({
   favicon: optionalTrimmedString(2000),
   ogImage: optionalTrimmedString(2000),
   assets: brandKitAssetsSchema.optional(),
+  seoChecklist: z.object({
+    businessName: optionalTrimmedString(200),
+    keywords: z.array(z.string().trim().min(1).max(80)).max(5).optional(),
+    serviceMode: z.enum(['physical', 'online', 'both']).optional(),
+  }).strict().optional(),
 }).strict();
 
 const themeColorValueSchema = z.union([
@@ -152,6 +157,21 @@ function sanitizeSettings(settings?: BuilderSiteSettings): BuilderSiteSettings |
   if (assets) {
     nextSettings.assets = assets;
   }
+  if (settings.seoChecklist) {
+    const seoKeywords = (settings.seoChecklist.keywords ?? [])
+      .map((keyword) => keyword.trim())
+      .filter(Boolean)
+      .slice(0, 5);
+    nextSettings.seoChecklist = {
+      ...(settings.seoChecklist.businessName?.trim()
+        ? { businessName: settings.seoChecklist.businessName.trim() }
+        : {}),
+      ...(seoKeywords.length > 0
+        ? { keywords: seoKeywords }
+        : {}),
+      ...(settings.seoChecklist.serviceMode ? { serviceMode: settings.seoChecklist.serviceMode } : {}),
+    };
+  }
 
   return Object.keys(nextSettings).length > 0 ? nextSettings : undefined;
 }
@@ -220,7 +240,9 @@ export async function PUT(request: NextRequest) {
     const site = await readSiteDocument('default', locale);
     const now = new Date().toISOString();
 
-    site.settings = payload.settings ? sanitizeSettings(payload.settings) : site.settings;
+    site.settings = payload.settings
+      ? { ...(site.settings ?? {}), ...(sanitizeSettings(payload.settings) ?? {}) }
+      : site.settings;
     site.theme = mergeTheme(payload.theme ?? site.theme);
     site.darkMode = payload.darkMode ? normalizeDarkModeConfig(payload.darkMode) : site.darkMode;
     site.updatedAt = now;

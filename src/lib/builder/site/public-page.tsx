@@ -36,8 +36,18 @@ import {
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
 import { buildPageSeo } from '@/lib/builder/seo/seo-model';
-import { generateBreadcrumbSchema, generateLegalServiceSchema } from '@/lib/builder/seo/schema-org';
-import { buildStructuredDataPayloads } from '@/lib/builder/seo/structured-data';
+import {
+  generateBreadcrumbSchema,
+  generateLegalServiceSchema,
+  generateLocalBusinessSchema,
+  generateOrganizationSchema,
+} from '@/lib/builder/seo/schema-org';
+import {
+  buildCustomStructuredDataPayloads,
+  buildStructuredDataPayloads,
+} from '@/lib/builder/seo/structured-data';
+import { mergeSeoWithDefaults, mergeStructuredDataSettings } from '@/lib/builder/seo/defaults';
+import { normalizeStructuredDataSettings } from '@/lib/builder/seo/validation';
 import { linkValueFromLegacy, sanitizeLinkValue } from '@/lib/builder/links';
 import {
   deriveHeuristicAnimation,
@@ -45,6 +55,7 @@ import {
 } from '@/lib/builder/site/heuristic-defaults';
 import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-frame';
 import { getSiteUrl } from '@/lib/seo';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
 import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
@@ -254,31 +265,51 @@ export async function buildPublishedSitePageMetadata(
   if (!resolved) return null;
 
   const siteUrl = getSiteUrl();
-  const seoData = buildPageSeo(resolved.pageMeta, siteUrl, locale, resolved.site.pages);
+  const seoData = buildPageSeo(resolved.pageMeta, siteUrl, locale, resolved.site.pages, resolved.site);
   const settings = resolved.site.settings;
   const favicon = resolveBuilderBrandAssetUrl(settings?.assets?.faviconAssetId) ?? settings?.favicon;
   const siteOgImage = resolveBuilderBrandAssetUrl(settings?.assets?.ogImageAssetId) ?? settings?.ogImage;
+  const ogImage = seoData.ogImage ? (resolveBuilderBrandAssetUrl(seoData.ogImage) ?? seoData.ogImage) : siteOgImage;
+  const twitterImage = seoData.twitterImage
+    ? (resolveBuilderBrandAssetUrl(seoData.twitterImage) ?? seoData.twitterImage)
+    : ogImage;
   const languages: Record<string, string> = {};
 
   for (const alt of seoData.hreflang) {
     languages[alt.hreflang] = alt.href;
+  }
+  const otherMeta: Record<string, string> = {};
+  for (const tag of seoData.additionalMetaTags) {
+    const name = tag.name.trim();
+    const content = tag.content.trim();
+    if (name && content) otherMeta[name] = content;
   }
 
   return {
     title: seoData.title,
     description: seoData.description,
     openGraph: {
-      title: seoData.title,
-      description: seoData.description,
-      images: seoData.ogImage ? [seoData.ogImage] : siteOgImage ? [siteOgImage] : [],
+      title: seoData.ogTitle,
+      description: seoData.ogDescription,
+      images: ogImage ? [ogImage] : [],
       siteName: resolved.site.settings?.firmName || resolved.site.name,
     },
+    twitter: {
+      card: seoData.twitterCard,
+      title: seoData.twitterTitle,
+      description: seoData.twitterDescription,
+      images: twitterImage ? [twitterImage] : undefined,
+    },
     icons: favicon ? { icon: [favicon] } : undefined,
-    robots: seoData.noIndex ? 'noindex,nofollow' : 'index,follow',
+    robots: {
+      index: !seoData.noIndex,
+      follow: !seoData.noFollow,
+    },
     alternates: {
       canonical: seoData.canonical,
       languages,
     },
+    other: Object.keys(otherMeta).length > 0 ? otherMeta : undefined,
   };
 }
 
@@ -327,16 +358,37 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
   const responsiveStylesheet = buildResponsiveStylesheet(canvas.nodes);
   const childrenMap = buildChildrenMap(visibleNodes);
   const nodesById = new Map(canvas.nodes.map((node) => [node.id, node]));
-  const legalServiceSchema = generateLegalServiceSchema(site.settings || {});
-  const pagePath = `/${locale}/p/${slugPath}`.replace(/\/+$/, '') || `/${locale}`;
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: site.name || 'Home', url: `${getSiteUrl()}/${locale}` },
-    {
-      name: resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page',
-      url: `${getSiteUrl()}${pagePath}`,
-    },
-  ]);
-  const structuredDataPayloads = buildStructuredDataPayloads(canvas);
+  const siteUrl = getSiteUrl();
+  const mergedSeo = mergeSeoWithDefaults({
+    page: resolved.pageMeta,
+    site,
+    siteUrl,
+    locale,
+  });
+  const structuredSettings = normalizeStructuredDataSettings(mergeStructuredDataSettings(resolved.pageMeta, site));
+  const legalServiceSchema = structuredSettings.legalService
+    ? generateLegalServiceSchema(site.settings || {}, siteUrl)
+    : null;
+  const organizationSchema = structuredSettings.organization
+    ? generateOrganizationSchema(site.settings || {}, siteUrl)
+    : null;
+  const localBusinessSchema = structuredSettings.localBusiness
+    ? generateLocalBusinessSchema(site.settings || {}, siteUrl)
+    : null;
+  const pagePath = buildSitePagePath(locale, slugPath);
+  const breadcrumbSchema = structuredSettings.breadcrumbList
+    ? generateBreadcrumbSchema([
+        { name: site.name || 'Home', url: `${siteUrl}/${locale}` },
+        {
+          name: resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page',
+          url: `${siteUrl}${pagePath}`,
+        },
+      ])
+    : null;
+  const structuredDataPayloads = buildStructuredDataPayloads(canvas, {
+    includeFaqPage: structuredSettings.faqPage !== 'off',
+  });
+  const customStructuredDataPayloads = buildCustomStructuredDataPayloads(mergedSeo.structuredDataBlocks);
   const topLevelNodes = visibleNodes.filter((node) => !node.parentId);
   const hasTopLevelComposite = topLevelNodes.some((node) => node.kind === 'composite');
   const flowTopLevelCompositeNodes = topLevelNodes
@@ -590,9 +642,14 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         // hidden flag becomes a `[data-node-id="..."]` rule inside @media.
         <style data-builder-responsive="true">{responsiveStylesheet}</style>
       ) : null}
-      <JsonLd data={legalServiceSchema} />
-      <JsonLd data={breadcrumbSchema} />
+      {legalServiceSchema ? <JsonLd data={legalServiceSchema} /> : null}
+      {organizationSchema ? <JsonLd data={organizationSchema} /> : null}
+      {localBusinessSchema ? <JsonLd data={localBusinessSchema} /> : null}
+      {breadcrumbSchema ? <JsonLd data={breadcrumbSchema} /> : null}
       {structuredDataPayloads.map((payload) => (
+        <JsonLd key={payload.id} data={payload.data} />
+      ))}
+      {customStructuredDataPayloads.map((payload) => (
         <JsonLd key={payload.id} data={payload.data} />
       ))}
       {darkModeConfig.allowVisitorToggle ? (

@@ -438,8 +438,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   replaceDocument: (document) =>
     set({
       document,
-      selectedNodeId: document.nodes[0]?.id ?? null,
-      selectedNodeIds: document.nodes[0]?.id ? [document.nodes[0].id] : [],
+      selectedNodeId: null,
+      selectedNodeIds: [],
       activeGroupId: null,
       draftSaveState: 'idle',
       history: createHistory(document),

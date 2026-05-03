@@ -211,18 +211,25 @@ export default function SiteHeader({
             flexDirection: 'column',
             gap: 12,
             zIndex: 1000,
-            animation: 'fadeIn 150ms ease',
+            animation: 'siteHeaderFadeIn 150ms ease',
             fontFamily: bodyFont,
           }}
         >
           {navItems.map((item) => {
             const href = normalizeSiteHref(item.href, locale);
             const isActive = comparableSitePath(href, locale) === comparableSitePath(currentPath, locale);
+            const isBuilderActive = builderEditable && activeBuilderNavItemId === item.id;
             return (
               <a
                 key={item.id}
                 href={href}
-                onClick={(event) => handleNavigate(event, href)}
+                data-builder-nav-item-id={builderEditable ? item.id : undefined}
+                data-builder-nav-item-label={builderEditable ? getLabel(item, locale) : undefined}
+                title={builderEditable ? `Edit menu item: ${getLabel(item, locale)}` : undefined}
+                onClick={(event) => {
+                  if (handleBuilderNavClick(event, item.id)) return;
+                  handleNavigate(event, href);
+                }}
                 style={{
                   color: isActive ? primaryColor : textColor,
                   textDecoration: 'none',
@@ -230,6 +237,8 @@ export default function SiteHeader({
                   fontWeight: isActive ? 700 : 500,
                   padding: '8px 0',
                   borderBottom: `1px solid ${borderColor}`,
+                  outline: isBuilderActive ? `2px solid ${primaryColor}` : undefined,
+                  outlineOffset: isBuilderActive ? 2 : undefined,
                 }}
               >
                 {getLabel(item, locale)}
@@ -238,24 +247,6 @@ export default function SiteHeader({
           })}
         </div>
       )}
-
-      {/* Responsive CSS */}
-      <style>{`
-        @media (max-width: 768px) {
-          .site-header-desktop-nav { display: none !important; }
-          .site-header-hamburger { display: block !important; }
-        }
-        html[data-theme='dark'] .site-header-logo-light[data-has-dark-logo='true'] {
-          display: none !important;
-        }
-        html[data-theme='dark'] .site-header-logo-dark {
-          display: block !important;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(-8px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
     </header>
   );
 }

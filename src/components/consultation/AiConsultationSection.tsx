@@ -60,7 +60,14 @@ import { contactPageContent } from '@/data/contact-page-content';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 
-type ChatUiMessage = ConsultationTranscriptMessage & { id: string };
+type ChatUiMessage = ConsultationTranscriptMessage & {
+  id: string;
+  classification?: ConsultationChatResponse['classification'];
+  riskLevel?: ConsultationChatResponse['riskLevel'];
+  referencedColumns?: string[];
+};
+
+const PRIOR_TURNS_SENT_TO_SERVER = 5;
 
 function createSessionId(): string {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
@@ -76,6 +83,16 @@ function createMessage(role: 'user' | 'assistant', text: string): ChatUiMessage 
     text,
     timestamp: new Date().toISOString(),
   };
+}
+
+function buildPriorTurnsForRequest(messages: ChatUiMessage[]): ConsultationTranscriptMessage[] {
+  return messages
+    .slice(-PRIOR_TURNS_SENT_TO_SERVER)
+    .map((message) => ({
+      role: message.role,
+      text: message.text,
+      timestamp: message.timestamp,
+    }));
 }
 
 function shouldUseFallbackErrorMessage(error: unknown): boolean {
@@ -159,7 +176,8 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
     }
   }, [sessionId]);
 
-  async function submitFeedback(messageId: string, rating: 'helpful' | 'unhelpful'): Promise<void> {
+  async function submitFeedback(message: ChatUiMessage, rating: 'helpful' | 'unhelpful'): Promise<void> {
+    const messageId = message.id;
     // Prevent double-click + prevent re-rating a final state.
     const current = feedbackByMessageId[messageId];
     if (current === 'pending' || current === 'helpful' || current === 'unhelpful') return;
@@ -176,8 +194,8 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
           messageId,
           rating,
           locale,
-          classification: lastResponse?.classification,
-          riskLevel: lastResponse?.riskLevel,
+          classification: message.classification ?? lastResponse?.classification,
+          riskLevel: message.riskLevel ?? lastResponse?.riskLevel,
         }),
       });
 
@@ -256,6 +274,7 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
           sessionId,
           message: text,
           collectedFields: lead,
+          priorTurns: buildPriorTurnsForRequest(messages),
         }),
       });
 
@@ -267,7 +286,15 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
       const payload = (await response.json()) as ConsultationChatResponse;
       setLastResponse(payload);
       applyAssistantHints(payload, text);
-      setMessages((current) => [...current, createMessage('assistant', payload.assistantMessage)]);
+      setMessages((current) => [
+        ...current,
+        {
+          ...createMessage('assistant', payload.assistantMessage),
+          classification: payload.classification,
+          riskLevel: payload.riskLevel,
+          referencedColumns: payload.referencedColumns,
+        },
+      ]);
     } catch (error) {
       const message = shouldUseFallbackErrorMessage(error)
         ? copy.assistantFallbackError
@@ -405,7 +432,7 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                             type="button"
                             className={`consultation-ai-feedback-button${isRatedHelpful ? ' consultation-ai-feedback-button--active' : ''}`}
                             onClick={() => {
-                              void submitFeedback(message.id, 'helpful');
+                              void submitFeedback(message, 'helpful');
                             }}
                             disabled={isPending || alreadyRated}
                             aria-label={copy.feedbackHelpfulLabel}
@@ -420,7 +447,7 @@ export default function AiConsultationSection({ locale }: { locale: Locale }) {
                             type="button"
                             className={`consultation-ai-feedback-button${isRatedUnhelpful ? ' consultation-ai-feedback-button--active' : ''}`}
                             onClick={() => {
-                              void submitFeedback(message.id, 'unhelpful');
+                              void submitFeedback(message, 'unhelpful');
                             }}
                             disabled={isPending || alreadyRated}
                             aria-label={copy.feedbackUnhelpfulLabel}

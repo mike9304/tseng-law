@@ -475,7 +475,17 @@ export default function CanvasContainer({
   useEffect(() => {
     fitCanvas();
     window.addEventListener('resize', fitCanvas);
-    return () => window.removeEventListener('resize', fitCanvas);
+    const observed = viewportRef.current;
+    const resizeObserver = typeof ResizeObserver !== 'undefined' && observed
+      ? new ResizeObserver(() => fitCanvas())
+      : null;
+    if (observed && resizeObserver) {
+      resizeObserver.observe(observed);
+    }
+    return () => {
+      window.removeEventListener('resize', fitCanvas);
+      resizeObserver?.disconnect();
+    };
   }, [fitCanvas]);
 
   useEffect(() => {

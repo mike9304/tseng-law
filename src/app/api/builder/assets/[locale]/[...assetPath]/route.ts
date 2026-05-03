@@ -6,6 +6,22 @@ import {
 
 export const runtime = 'nodejs';
 
+const MISSING_ASSET_PLACEHOLDER_PNG = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=',
+  'base64',
+);
+
+function missingAssetImageResponse(): NextResponse {
+  return new NextResponse(MISSING_ASSET_PLACEHOLDER_PNG, {
+    status: 200,
+    headers: {
+      'Content-Type': 'image/png',
+      'Cache-Control': 'private, max-age=60',
+      'X-Builder-Asset-Missing': '1',
+    },
+  });
+}
+
 export async function GET(
   _request: NextRequest,
   context: { params: { locale: string; assetPath: string[] } }
@@ -21,7 +37,7 @@ export async function GET(
   });
 
   if (!asset) {
-    return NextResponse.json({ ok: false, error: 'Asset not found.' }, { status: 404 });
+    return missingAssetImageResponse();
   }
 
   const body = new Uint8Array(asset.content);

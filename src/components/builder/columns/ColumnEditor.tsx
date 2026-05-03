@@ -34,6 +34,7 @@ export default function ColumnEditor({
   const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error'>('saved');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedRef = useRef<string>('');
+  const hydratedRef = useRef(false);
 
   const editor = useEditor({
     extensions: [
@@ -53,12 +54,23 @@ export default function ColumnEditor({
     },
   });
 
-  const save = useCallback(async () => {
+  const buildPayload = useCallback(() => {
     if (!editor) return;
     const bodyHtml = editor.getHTML();
     const bodyMarkdown = editor.getText();
-
     const payload = JSON.stringify({ title, summary, bodyHtml, bodyMarkdown });
+    return { payload, bodyHtml, bodyMarkdown };
+  }, [editor, title, summary]);
+
+  const save = useCallback(async () => {
+    const nextPayload = buildPayload();
+    if (!nextPayload) return;
+    const { payload, bodyHtml, bodyMarkdown } = nextPayload;
+    if (!hydratedRef.current) {
+      lastSavedRef.current = payload;
+      hydratedRef.current = true;
+      return;
+    }
     if (payload === lastSavedRef.current) return;
 
     setSaveStatus('saving');
@@ -84,7 +96,7 @@ export default function ColumnEditor({
       setSaveStatus('error');
       onSaveStatus?.('error');
     }
-  }, [editor, slug, locale, title, summary, onSaveStatus]);
+  }, [buildPayload, slug, locale, title, summary, onSaveStatus]);
 
   const scheduleSave = useCallback(() => {
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
@@ -95,14 +107,20 @@ export default function ColumnEditor({
 
   useEffect(() => {
     if (!editor) return;
+    const nextPayload = buildPayload();
+    if (nextPayload && !hydratedRef.current) {
+      lastSavedRef.current = nextPayload.payload;
+      hydratedRef.current = true;
+    }
     const handler = () => scheduleSave();
     editor.on('update', handler);
     return () => {
       editor.off('update', handler);
     };
-  }, [editor, scheduleSave]);
+  }, [editor, buildPayload, scheduleSave]);
 
   useEffect(() => {
+    if (!hydratedRef.current) return;
     scheduleSave();
   }, [title, summary, scheduleSave]);
 

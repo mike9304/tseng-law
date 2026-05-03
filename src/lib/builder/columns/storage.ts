@@ -1,6 +1,7 @@
 import { mkdir, readdir, readFile, rm, writeFile } from 'fs/promises';
 import path from 'path';
 import { del, get, list, put } from '@vercel/blob';
+import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
 import type { Locale } from '@/lib/locales';
 import {
   columnDocumentSchema,
@@ -77,6 +78,123 @@ function normalizeColumnDocument(input: unknown, variant: ColumnVariant): Column
   if (!parsed.success) return null;
   if (parsed.data.draft !== (variant === 'draft')) return null;
   return parsed.data;
+}
+
+function unique(values: string[]): string[] {
+  return [...new Set(values)];
+}
+
+function normalizeIsoDate(value: string | undefined, fallback: string): string {
+  if (!value) return fallback;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? fallback : date.toISOString();
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function markdownToBasicHtml(markdown: string): string {
+  const lines = markdown.split(/\r?\n/);
+  const out: string[] = [];
+  let paragraph: string[] = [];
+  let list: string[] = [];
+
+  const flushParagraph = () => {
+    if (paragraph.length === 0) return;
+    out.push(`<p>${escapeHtml(paragraph.join(' '))}</p>`);
+    paragraph = [];
+  };
+  const flushList = () => {
+    if (list.length === 0) return;
+    out.push(`<ul>${list.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`);
+    list = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line) {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+    if (line.startsWith('### ')) {
+      flushParagraph();
+      flushList();
+      out.push(`<h3>${escapeHtml(line.slice(4).trim())}</h3>`);
+      continue;
+    }
+    if (line.startsWith('## ')) {
+      flushParagraph();
+      flushList();
+      out.push(`<h2>${escapeHtml(line.slice(3).trim())}</h2>`);
+      continue;
+    }
+    if (line.startsWith('- ') || line.startsWith('* ')) {
+      flushParagraph();
+      list.push(line.slice(2).trim());
+      continue;
+    }
+    flushList();
+    paragraph.push(line.replace(/\*\*/g, ''));
+  }
+
+  flushParagraph();
+  flushList();
+  return out.join('\n') || '<p></p>';
+}
+
+function legacyPostToColumnDocument(post: ColumnPost & { locale: Locale }): ColumnDocument {
+  const now = new Date().toISOString();
+  const lastmod = normalizeIsoDate(post.date, now);
+  return {
+    version: 1,
+    slug: post.slug,
+    locale: post.locale,
+    title: post.title,
+    summary: post.summary,
+    bodyMarkdown: post.content,
+    bodyHtml: markdownToBasicHtml(post.content),
+    linkedSlugs: {},
+    frontmatter: {
+      lastmod,
+      attorneyReviewStatus: 'reviewed',
+      freshness: 'fresh',
+      category: post.category,
+      blogCategory: post.category,
+      tags: [post.categoryLabel].filter(Boolean),
+      author: {
+        name: post.locale === 'zh-hant' ? '曾俊瑋律師' : post.locale === 'en' ? 'Attorney Wei Tseng' : '증준외 변호사',
+        title: post.locale === 'zh-hant' ? '台灣律師' : post.locale === 'en' ? 'Taiwan Attorney' : '대만 변호사',
+      },
+      featuredImage: post.featuredImage,
+      featured: false,
+      publishedAt: lastmod,
+      seo: {
+        title: post.title,
+        description: post.summary,
+        ogImage: post.featuredImage,
+      },
+    },
+    draft: false,
+    revision: 1,
+    updatedAt: lastmod,
+    updatedBy: 'legacy-column-import',
+  };
+}
+
+function readLegacyColumnDocument(locale: Locale, slug: string): ColumnDocument | null {
+  const legacy = getAllColumnPosts(locale).find((post) => post.slug === slug);
+  return legacy ? legacyPostToColumnDocument({ ...legacy, locale }) : null;
+}
+
+function listLegacyColumnSlugs(locale: Locale): string[] {
+  return getAllColumnPosts(locale).map((post) => post.slug);
 }
 
 async function readBlobColumn(locale: Locale, slug: string, variant: ColumnVariant): Promise<ColumnDocument | null> {
@@ -199,9 +317,12 @@ export async function readColumnVariant(
   slug: string,
   variant: ColumnVariant,
 ): Promise<ColumnDocument | null> {
-  return getColumnBackend() === 'blob'
+  const stored = getColumnBackend() === 'blob'
     ? readBlobColumn(locale, slug, variant)
     : readLocalColumn(locale, slug, variant);
+  const document = await stored;
+  if (document || variant === 'draft') return document;
+  return readLegacyColumnDocument(locale, slug);
 }
 
 export async function readColumnBundle(locale: Locale, slug: string): Promise<ColumnDocumentBundle> {
@@ -214,15 +335,16 @@ export async function readColumnBundle(locale: Locale, slug: string): Promise<Co
     slug,
     locale,
     draft,
-    published,
-    preferred: draft ?? published ?? null,
+    published: published ?? readLegacyColumnDocument(locale, slug),
+    preferred: draft ?? published ?? readLegacyColumnDocument(locale, slug),
     backend,
   };
 }
 
 export async function listColumnBundles(locale: Locale): Promise<ColumnDocumentBundle[]> {
   const backend = getColumnBackend();
-  const slugs = backend === 'blob' ? await listBlobSlugs(locale) : await listLocalSlugs(locale);
+  const storedSlugs = backend === 'blob' ? await listBlobSlugs(locale) : await listLocalSlugs(locale);
+  const slugs = unique([...storedSlugs, ...listLegacyColumnSlugs(locale)]);
   const bundles = await Promise.all(slugs.map((slug) => readColumnBundle(locale, slug)));
   return bundles
     .filter((bundle) => bundle.preferred)

@@ -5,7 +5,11 @@ export interface QuickReply {
   label: string;
   /** Full message inserted as user bubble */
   question: string;
-  /** Pre-written assistant response, served instantly without API call */
+  /**
+   * Legacy canned text retained only for older persisted clients.
+   * The live FloatingAiChat sends `question` to /api/consultation/chat
+   * so classification, logging, citations, and safety checks still run.
+   */
   answer: string;
 }
 
@@ -26,7 +30,7 @@ const KO_REPLIES: QuickReply[] = [
       '9. 임시계좌 → 정식계좌 전환\n' +
       '10. 수출입 등기 (필요 시)\n\n' +
       '평균 처리기간은 6~10주 정도입니다. 업종, 자본금 규모, 외국인 고용 여부에 따라 추가 허가가 필요할 수 있습니다.\n\n' +
-      '구체적인 사례 검토는 상담 접수하기 버튼을 눌러주시거나 wei@hoveringlaw.com.tw 로 문의해 주세요.',
+      '구체적인 사례 검토는 상담 접수하기 버튼을 눌러주시거나 이메일로 문의해 주세요.',
   },
   {
     label: '🚗 교통사고 대응',
@@ -90,8 +94,8 @@ const KO_REPLIES: QuickReply[] = [
     question: '상담 비용과 일정이 어떻게 되나요?',
     answer:
       '호정국제법률사무소의 상담 안내입니다.\n\n' +
-      '📞 한국 직통: 010-2992-9304\n' +
-      '📧 이메일: wei@hoveringlaw.com.tw\n\n' +
+      '📞 전화 상담 가능\n' +
+      '📧 이메일 문의 가능\n\n' +
       '🏢 대만 사무소:\n' +
       '- 타이베이: 承德路 35號 7樓之2\n' +
       '- 타이중: 04-2326-1862\n' +
@@ -120,7 +124,7 @@ const ZH_REPLIES: QuickReply[] = [
       '8. 稅籍登記\n' +
       '9. 預備帳戶轉正式帳戶\n' +
       '10. 進出口廠商登記 (如需要)\n\n' +
-      '平均處理時間約 6 至 10 週。具體案例請透過「諮詢預約」按鈕或 wei@hoveringlaw.com.tw 聯繫。',
+      '平均處理時間約 6 至 10 週。具體案例請透過「諮詢預約」按鈕或 Email 聯繫。',
   },
   {
     label: '🚗 車禍處理',
@@ -164,7 +168,7 @@ const EN_REPLIES: QuickReply[] = [
       '8. Tax registration\n' +
       '9. Convert preparatory account to formal account\n' +
       '10. Import/export registration (if needed)\n\n' +
-      'The process usually takes 6-10 weeks. For your specific case, click "Request consultation" or email wei@hoveringlaw.com.tw.',
+      'The process usually takes 6-10 weeks. For your specific case, click "Request consultation" or email the firm.',
   },
   {
     label: '🚗 Traffic accident',

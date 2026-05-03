@@ -48,6 +48,7 @@ export function createContainerNode({
   borderWidth = 0,
   borderRadius = 0,
   padding = 0,
+  className,
   style = {},
 }: {
   id: string;
@@ -59,6 +60,7 @@ export function createContainerNode({
   borderWidth?: number;
   borderRadius?: number;
   padding?: number;
+  className?: string;
   style?: Partial<BuilderCanvasNodeStyle>;
 }): BuilderCanvasNode {
   return {
@@ -72,6 +74,7 @@ export function createContainerNode({
       borderRadius,
       padding,
       layoutMode: 'absolute',
+      className,
     },
   };
 }
@@ -91,6 +94,7 @@ export function createTextNode({
   verticalAlign,
   backgroundColor,
   textTransform,
+  className,
   parentId,
   style = {},
 }: {
@@ -108,6 +112,7 @@ export function createTextNode({
   verticalAlign?: 'top' | 'center' | 'bottom';
   backgroundColor?: string;
   textTransform?: 'none' | 'uppercase' | 'lowercase' | 'capitalize';
+  className?: string;
   parentId?: string;
   style?: Partial<BuilderCanvasNodeStyle>;
 }): BuilderCanvasNode {
@@ -126,6 +131,7 @@ export function createTextNode({
       verticalAlign,
       backgroundColor,
       textTransform,
+      className,
     },
   };
 }
@@ -136,6 +142,7 @@ export function createButtonNode({
   label,
   href,
   variant = 'primary',
+  className,
   parentId,
   style = {},
 }: {
@@ -144,6 +151,7 @@ export function createButtonNode({
   label: string;
   href: string;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'link';
+  className?: string;
   parentId?: string;
   style?: Partial<BuilderCanvasNodeStyle>;
 }): BuilderCanvasNode {
@@ -153,6 +161,7 @@ export function createButtonNode({
       label,
       href,
       style: variant,
+      className,
     },
   };
 }

@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import type { Locale } from '@/lib/locales';
+import ModalShell from './ModalShell';
 
 interface PageOption {
   pageId: string;
@@ -32,14 +33,6 @@ export default function MoveToPageModal({
 }) {
   const [submitting, setSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    function handleKey(event: KeyboardEvent) {
-      if (event.key === 'Escape') onClose();
-    }
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [onClose]);
 
   const targets = pages.filter((page) => page.pageId !== currentPageId);
 
@@ -85,69 +78,13 @@ export default function MoveToPageModal({
   }
 
   return (
-    <div
-      role="dialog"
-      aria-label="페이지로 이동"
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 10100,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'rgba(15, 23, 42, 0.5)',
-        backdropFilter: 'blur(6px)',
-        WebkitBackdropFilter: 'blur(6px)',
-      }}
-      onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
+    <ModalShell
+      title="페이지로 이동"
+      description={`선택된 ${sourceNodeIds.length}개 요소를 다른 페이지로 옮깁니다.`}
+      ariaLabel="페이지로 이동"
+      size="sm"
+      onClose={onClose}
     >
-      <div
-        style={{
-          background: '#fff',
-          borderRadius: 16,
-          boxShadow: '0 32px 80px rgba(0, 0, 0, 0.25)',
-          padding: 24,
-          maxWidth: 480,
-          width: '92vw',
-          maxHeight: '80vh',
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginBottom: 6,
-          }}
-        >
-          <h2 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 700, color: '#0f172a' }}>
-            페이지로 이동
-          </h2>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="닫기"
-            style={{
-              border: 'none',
-              background: 'transparent',
-              fontSize: '1.3rem',
-              color: '#64748b',
-              cursor: 'pointer',
-              padding: '2px 8px',
-              borderRadius: 8,
-            }}
-          >
-            ×
-          </button>
-        </div>
-        <div style={{ fontSize: '0.78rem', color: '#64748b', marginBottom: 16 }}>
-          선택된 {sourceNodeIds.length}개 요소를 다른 페이지로 옮깁니다.
-        </div>
-
         {errorMessage ? (
           <div
             style={{
@@ -245,7 +182,6 @@ export default function MoveToPageModal({
             Esc 또는 화면 바깥 클릭으로 닫기
           </div>
         )}
-      </div>
-    </div>
+    </ModalShell>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import type { BuilderVideoEmbedCanvasNode } from '@/lib/builder/canvas/types';
+import styles from './VideoEmbed.module.css';
 
 interface VideoEmbedFlags {
   autoplay: boolean;
@@ -89,22 +90,7 @@ export default function VideoEmbedRender({
   if (!embedUrl) {
     return (
       <div
-        style={{
-          width: '100%',
-          height: '100%',
-          background: '#f1f5f9',
-          border: '2px dashed #cbd5e1',
-          borderRadius: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#94a3b8',
-          fontSize: 13,
-          gap: 8,
-          padding: 12,
-          textAlign: 'center',
-        }}
+        className={`builder-widget-empty ${styles.empty}`}
       >
         <svg
           width="32"
@@ -125,19 +111,12 @@ export default function VideoEmbedRender({
 
   return (
     <div
-      style={{
-        width: '100%',
-        height: '100%',
-        borderRadius: 8,
-        overflow: 'hidden',
-        background: '#000',
-        position: 'relative',
-      }}
+      className={styles.frame}
     >
       <iframe
         src={embedUrl}
         title="Video embed"
-        style={{ width: '100%', height: '100%', border: 'none' }}
+        className={styles.iframe}
         allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
         allowFullScreen
         {...(posterImage ? { poster: posterImage } : {})}

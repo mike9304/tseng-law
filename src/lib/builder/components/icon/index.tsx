@@ -9,6 +9,7 @@ import {
   type BuilderColorValue,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
+import styles from './Icon.module.css';
 
 function IconRender({
   node,
@@ -23,21 +24,13 @@ function IconRender({
 
   return (
     <div
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
+      className={styles.frame}
     >
       <span
+        className={styles.glyph}
         style={{
           fontSize: size,
           color,
-          display: 'inline-block',
-          lineHeight: 1,
-          fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", system-ui, sans-serif',
         }}
       >
         {name}

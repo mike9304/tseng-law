@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState, type CSSProperties, type MouseEvent } from 'react';
+import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { getAllTemplates } from '@/lib/builder/templates/registry';
 import type {
@@ -28,7 +28,8 @@ import {
   TEMPLATE_STYLE_LABELS,
   getTemplatePalette,
 } from '@/lib/builder/templates/design-system';
-import TemplateThumbnailPlaceholder from './TemplateThumbnailPlaceholder';
+import TemplateThumbnailRenderer from './TemplateThumbnailRenderer';
+import ModalShell from './ModalShell';
 import {
   TEMPLATE_CATEGORIES,
   TEMPLATE_CATEGORY_LABELS,
@@ -37,71 +38,10 @@ import {
 
 const allTemplates = getAllTemplates();
 
-const backdropStyle: CSSProperties = {
-  position: 'fixed',
-  inset: 0,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: 'rgba(15, 23, 42, 0.58)',
-  backdropFilter: 'blur(8px)',
-  WebkitBackdropFilter: 'blur(8px)',
-  zIndex: 10000,
-  animation: 'templateGalleryFadeIn 180ms ease',
-};
-
-const modalStyle: CSSProperties = {
-  width: '94vw',
-  height: '90vh',
-  maxWidth: 1380,
-  background: '#f8fafc',
-  borderRadius: 18,
-  boxShadow: '0 32px 90px rgba(15, 23, 42, 0.34)',
-  overflow: 'hidden',
-  display: 'grid',
-  gridTemplateRows: 'auto minmax(0, 1fr)',
-  animation: 'templateGalleryScaleIn 200ms ease',
-};
-
-const headerStyle: CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'minmax(0, 1fr) auto',
-  gap: 16,
-  alignItems: 'start',
-  padding: '22px 24px 18px',
-  borderBottom: '1px solid #dbe3ef',
-  background: '#ffffff',
-};
-
-const titleStyle: CSSProperties = {
-  margin: 0,
-  fontSize: '1.32rem',
-  fontWeight: 850,
-  color: '#0f172a',
-};
-
-const subtitleStyle: CSSProperties = {
-  margin: '6px 0 0',
-  fontSize: '0.86rem',
-  color: '#64748b',
-  lineHeight: 1.45,
-};
-
-const closeButtonStyle: CSSProperties = {
-  width: 36,
-  height: 36,
-  border: '1px solid #dbe3ef',
-  borderRadius: 8,
-  background: '#fff',
-  color: '#475569',
-  cursor: 'pointer',
-  fontSize: '1.15rem',
-  lineHeight: 1,
-};
-
 const bodyStyle: CSSProperties = {
   display: 'grid',
   gridTemplateColumns: '230px minmax(0, 1fr)',
+  flex: 1,
   minHeight: 0,
 };
 
@@ -404,7 +344,7 @@ function TemplateCard({
         onClick={() => onPreview(template)}
         aria-label={`${template.name} 미리보기`}
       >
-        <TemplateThumbnailPlaceholder template={template} width={320} height={190} />
+        <TemplateThumbnailRenderer template={template} width={320} height={190} />
       </button>
       <div style={cardBodyStyle}>
         <div style={badgeRowStyle}>
@@ -474,34 +414,49 @@ function PreviewPanel({
       : { width: 260, height: 560 };
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        inset: 0,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'rgba(15, 23, 42, 0.58)',
-        zIndex: 10001,
-        padding: 20,
-      }}
-      onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
+    <ModalShell
+      open
+      nested
+      bodyFlush
+      size="xl"
+      onClose={onClose}
+      title={template.name}
+      subtitle={getTemplateQualityLabel(template)}
+      toolbar={(
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 6, padding: 12 }}>
+          {(['desktop', 'tablet', 'mobile'] as const).map((item) => (
+            <button
+              key={item}
+              type="button"
+              style={{
+                minHeight: 34,
+                border: `1px solid ${viewport === item ? palette.ink : '#dbe3ef'}`,
+                borderRadius: 8,
+                background: viewport === item ? palette.ink : '#ffffff',
+                color: viewport === item ? palette.inverse : '#475569',
+                cursor: 'pointer',
+                fontSize: '0.72rem',
+                fontWeight: 850,
+                padding: '0 12px',
+              }}
+              onClick={() => setViewport(item)}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      )}
+      actions={[
+        { label: '닫기', variant: 'secondary', onClick: onClose },
+        { label: '이 템플릿 사용', variant: 'primary', onClick: () => onSelect(template) },
+      ]}
     >
-      <section
-        role="dialog"
-        aria-modal="true"
-        aria-label={`${template.name} 미리보기`}
+      <div
         style={{
-          width: 'min(1120px, 96vw)',
-          maxHeight: '90vh',
           display: 'grid',
           gridTemplateColumns: 'minmax(0, 1fr) 300px',
-          background: '#ffffff',
-          borderRadius: 16,
+          minHeight: 0,
           overflow: 'hidden',
-          boxShadow: '0 28px 80px rgba(15, 23, 42, 0.35)',
         }}
       >
         <div style={{ minWidth: 0, padding: 24, background: '#eef2f7', overflow: 'auto' }}>
@@ -518,14 +473,11 @@ function PreviewPanel({
                 boxShadow: '0 18px 40px rgba(15, 23, 42, 0.14)',
               }}
             >
-              <TemplateThumbnailPlaceholder template={template} width={previewSize.width} height={previewSize.height} />
+              <TemplateThumbnailRenderer template={template} width={previewSize.width} height={previewSize.height} />
             </div>
           </div>
         </div>
         <aside style={{ padding: 20, display: 'grid', alignContent: 'start', gap: 14 }}>
-          <button type="button" style={{ ...closeButtonStyle, justifySelf: 'end' }} onClick={onClose} title="닫기">
-            ×
-          </button>
           <div>
             <div style={{ ...chipStyle, background: palette.accentSoft, color: palette.ink, marginBottom: 8 }}>
               {getTemplateQualityLabel(template)}
@@ -534,27 +486,6 @@ function PreviewPanel({
             <p style={{ margin: '8px 0 0', color: '#64748b', fontSize: '0.82rem', lineHeight: 1.5 }}>
               {template.description}
             </p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6 }}>
-            {(['desktop', 'tablet', 'mobile'] as const).map((item) => (
-              <button
-                key={item}
-                type="button"
-                style={{
-                  minHeight: 34,
-                  border: `1px solid ${viewport === item ? palette.ink : '#dbe3ef'}`,
-                  borderRadius: 8,
-                  background: viewport === item ? palette.ink : '#ffffff',
-                  color: viewport === item ? palette.inverse : '#475569',
-                  cursor: 'pointer',
-                  fontSize: '0.72rem',
-                  fontWeight: 850,
-                }}
-                onClick={() => setViewport(item)}
-              >
-                {item}
-              </button>
-            ))}
           </div>
           <dl style={{ display: 'grid', gap: 8, margin: 0, color: '#475569', fontSize: '0.78rem' }}>
             <div><dt style={{ fontWeight: 850 }}>스타일</dt><dd style={{ margin: 0 }}>{formatTemplateMeta(template) || 'Standard'}</dd></div>
@@ -566,25 +497,9 @@ function PreviewPanel({
               <span key={tag} style={{ ...chipStyle, background: '#f8fafc', color: '#475569' }}>{tag}</span>
             ))}
           </div>
-          <button
-            type="button"
-            style={{
-              minHeight: 44,
-              border: `1px solid ${palette.ink}`,
-              borderRadius: 10,
-              background: palette.ink,
-              color: palette.inverse,
-              cursor: 'pointer',
-              fontSize: '0.84rem',
-              fontWeight: 900,
-            }}
-            onClick={() => onSelect(template)}
-          >
-            이 템플릿 사용
-          </button>
         </aside>
-      </section>
-    </div>
+      </div>
+    </ModalShell>
   );
 }
 
@@ -612,8 +527,11 @@ export default function TemplateGalleryModal({
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        if (previewTemplate) setPreviewTemplate(null);
-        else onClose();
+        const modalShells = Array.from(document.querySelectorAll('[data-modal-shell="true"]'));
+        const topmostShell = modalShells[modalShells.length - 1] ?? null;
+        if (topmostShell?.getAttribute('data-modal-nested') === 'true') return;
+        if (previewTemplate) return;
+        onClose();
       }
     };
     window.addEventListener('keydown', handler);
@@ -635,13 +553,6 @@ export default function TemplateGalleryModal({
   const showBlankCard = activeCategory === 'all' && searchQuery.length === 0 && !hasFilters;
   const showFeatured = activeCategory === 'all' && searchQuery.length === 0 && !hasFilters;
 
-  const handleBackdropClick = useCallback(
-    (event: MouseEvent<HTMLDivElement>) => {
-      if (event.target === event.currentTarget) onClose();
-    },
-    [onClose],
-  );
-
   const selectTemplate = (template: PageTemplate) => {
     onSelect(cloneTemplateDocument(template.document));
   };
@@ -651,16 +562,18 @@ export default function TemplateGalleryModal({
   };
 
   return (
-    <div style={backdropStyle} onClick={handleBackdropClick}>
+    <>
+      <ModalShell
+        open
+        onClose={onClose}
+        title="프리미엄 템플릿 쇼룸"
+        subtitle="업종, 스타일, 밀도, 페이지 타입으로 고르고 desktop/tablet/mobile 첫인상을 확인하세요."
+        fullViewport
+        bodyFlush
+        tone="neutral"
+        dismissable={!previewTemplate}
+      >
       <style>{`
-        @keyframes templateGalleryFadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes templateGalleryScaleIn {
-          from { opacity: 0; transform: scale(0.96); }
-          to { opacity: 1; transform: scale(1); }
-        }
         .template-gallery-grid {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -701,19 +614,6 @@ export default function TemplateGalleryModal({
           }
         }
       `}</style>
-      <div style={modalStyle} role="dialog" aria-modal="true" aria-label="템플릿 갤러리">
-        <header style={headerStyle}>
-          <div>
-            <h2 style={titleStyle}>프리미엄 템플릿 쇼룸</h2>
-            <p style={subtitleStyle}>
-              업종, 스타일, 밀도, 페이지 타입으로 고르고 desktop/tablet/mobile 첫인상을 확인하세요.
-            </p>
-          </div>
-          <button type="button" style={closeButtonStyle} onClick={onClose} title="닫기">
-            ×
-          </button>
-        </header>
-
         <div className="template-gallery-modal-body" style={bodyStyle}>
           <aside className="template-gallery-sidebar" style={sidebarStyle}>
             {TEMPLATE_CATEGORIES.map((category) => {
@@ -871,7 +771,7 @@ export default function TemplateGalleryModal({
             )}
           </main>
         </div>
-      </div>
+      </ModalShell>
       {previewTemplate ? (
         <PreviewPanel
           template={previewTemplate}
@@ -879,6 +779,6 @@ export default function TemplateGalleryModal({
           onSelect={selectTemplate}
         />
       ) : null}
-    </div>
+    </>
   );
 }

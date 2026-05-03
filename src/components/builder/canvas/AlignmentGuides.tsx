@@ -52,7 +52,9 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
                   position: 'absolute',
                   left: g.position,
                   top: g.from,
-                  width: g.tone === 'spacing' ? 2 : 1,
+                  width: g.tone === 'spacing'
+                    ? 'calc(2px / var(--canvas-zoom, 1))'
+                    : 'calc(1px / var(--canvas-zoom, 1))',
                   height: Math.max(1, g.to - g.from),
                   backgroundColor: color,
                   boxShadow: glow,
@@ -72,7 +74,9 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
                 left: g.from,
                 top: g.position,
                 width: Math.max(1, g.to - g.from),
-                height: g.tone === 'spacing' ? 2 : 1,
+                height: g.tone === 'spacing'
+                  ? 'calc(2px / var(--canvas-zoom, 1))'
+                  : 'calc(1px / var(--canvas-zoom, 1))',
                 backgroundColor: color,
                 boxShadow: glow,
                 pointerEvents: 'none',

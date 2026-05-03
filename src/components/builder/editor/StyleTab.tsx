@@ -22,6 +22,13 @@ import {
   getThemeBindingBadgeStyle,
   type ThemeBindingIndicator,
 } from '@/lib/builder/site/theme-bindings';
+import {
+  AdvancedDisclosure,
+  LabeledRow,
+  NumberStepper,
+  SliderRow,
+  ToggleRow,
+} from '@/components/builder/canvas/InspectorControls';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 function clampNumber(value: number, min: number, max: number): number {
@@ -46,19 +53,17 @@ function NumberField({
   disabled?: boolean;
 }) {
   return (
-    <label className={styles.inspectorField}>
-      <span className={styles.inspectorFieldLabel}>{label}</span>
-      <input
-        className={styles.inspectorInput}
-        type="number"
+    <LabeledRow label={label}>
+      <NumberStepper
+        value={value}
         min={min}
         max={max}
         step={step}
-        value={value}
         disabled={disabled}
-        onChange={(event) => onCommit(clampNumber(Number(event.target.value), min, max))}
+        ariaLabel={`${label} value`}
+        onChange={(nextValue) => onCommit(clampNumber(nextValue, min, max))}
       />
-    </label>
+    </LabeledRow>
   );
 }
 
@@ -78,39 +83,12 @@ const sectionDividerStyle: React.CSSProperties = {
   borderTop: '1px solid #e2e8f0',
 };
 
-const sectionHeadingStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 8,
-};
-
 const sectionTitleStyle: React.CSSProperties = {
   fontSize: '0.72rem',
   fontWeight: 800,
   textTransform: 'uppercase',
   letterSpacing: '0.05em',
   color: '#64748b',
-};
-
-const toggleStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 6,
-  fontSize: '0.76rem',
-  fontWeight: 700,
-  color: '#334155',
-};
-
-const collapseButtonStyle: React.CSSProperties = {
-  border: '1px solid #cbd5e1',
-  borderRadius: 6,
-  background: '#fff',
-  color: '#475569',
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  padding: '3px 8px',
-  cursor: 'pointer',
 };
 
 const bindingSummaryStyle: React.CSSProperties = {
@@ -187,15 +165,14 @@ export default function StyleTab({
 
       <div style={sectionDividerStyle}>
         <span style={sectionTitleStyle}>Border</span>
-        <label className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>Border color</span>
+        <LabeledRow label="Border color">
           <ColorPicker
             value={node.style.borderColor}
             paletteTokens={paletteTokens}
             disabled={disabled}
             onChange={(color: BuilderColorValue) => onUpdateStyle({ borderColor: color })}
           />
-        </label>
+        </LabeledRow>
 
         <div className={styles.inspectorFieldGrid}>
           <NumberField
@@ -206,8 +183,7 @@ export default function StyleTab({
             disabled={disabled}
             onCommit={(value) => onUpdateStyle({ borderWidth: Math.round(value) })}
           />
-          <label className={styles.inspectorField}>
-            <span className={styles.inspectorFieldLabel}>Border style</span>
+          <LabeledRow label="Border style">
             <select
               className={styles.inspectorSelect}
               value={node.style.borderStyle}
@@ -217,7 +193,7 @@ export default function StyleTab({
               <option value="solid">Solid</option>
               <option value="dashed">Dashed</option>
             </select>
-          </label>
+          </LabeledRow>
         </div>
 
         <div className={styles.inspectorFieldGrid}>
@@ -229,29 +205,16 @@ export default function StyleTab({
             disabled={disabled}
             onCommit={(value) => onUpdateStyle({ borderRadius: Math.round(value) })}
           />
-          <label className={styles.inspectorField}>
-            <span className={styles.inspectorFieldLabel}>Opacity</span>
-            <div className={styles.inspectorRangeRow}>
-              <input
-                className={styles.inspectorRange}
-                type="range"
-                min={0}
-                max={100}
-                value={node.style.opacity}
-                disabled={disabled}
-                onChange={(event) => onUpdateStyle({ opacity: Math.round(clampNumber(Number(event.target.value), 0, 100)) })}
-              />
-              <input
-                className={styles.inspectorInput}
-                type="number"
-                min={0}
-                max={100}
-                value={node.style.opacity}
-                disabled={disabled}
-                onChange={(event) => onUpdateStyle({ opacity: Math.round(clampNumber(Number(event.target.value), 0, 100)) })}
-              />
-            </div>
-          </label>
+          <LabeledRow label="Opacity" hint="%">
+            <SliderRow
+              value={node.style.opacity}
+              min={0}
+              max={100}
+              suffix="%"
+              disabled={disabled}
+              onChange={(value) => onUpdateStyle({ opacity: Math.round(clampNumber(value, 0, 100)) })}
+            />
+          </LabeledRow>
         </div>
       </div>
 
@@ -292,66 +255,52 @@ export default function StyleTab({
           />
         </div>
 
-        <label className={styles.inspectorField}>
-          <span className={styles.inspectorFieldLabel}>Shadow color</span>
+        <LabeledRow label="Shadow color">
           <ColorPicker
             value={node.style.shadowColor}
             paletteTokens={paletteTokens}
             disabled={disabled}
             onChange={(color: BuilderColorValue) => onUpdateStyle({ shadowColor: color })}
           />
-        </label>
+        </LabeledRow>
       </div>
 
       <div style={sectionDividerStyle}>
-        <div style={sectionHeadingStyle}>
-          <label style={toggleStyle}>
-            <input
-              type="checkbox"
-              checked={hoverEnabled}
-              disabled={disabled}
-              onChange={(event) => {
-                if (event.target.checked) {
-                  onUpdateHoverStyle({ transitionMs: 200 });
-                  setHoverOpen(true);
-                } else {
-                  onUpdateHoverStyle(undefined);
-                }
-              }}
-            />
-            <span>Hover state</span>
-          </label>
-          <button
-            type="button"
-            style={collapseButtonStyle}
-            disabled={!hoverEnabled}
-            onClick={() => setHoverOpen((open) => !open)}
-          >
-            {hoverOpen ? 'Hide' : 'Show'}
-          </button>
-        </div>
+        <LabeledRow label="Hover state">
+          <ToggleRow
+            checked={hoverEnabled}
+            disabled={disabled}
+            ariaLabel="Hover state"
+            onChange={(checked) => {
+              if (checked) {
+                onUpdateHoverStyle({ transitionMs: 200 });
+                setHoverOpen(true);
+              } else {
+                onUpdateHoverStyle(undefined);
+              }
+            }}
+          />
+        </LabeledRow>
 
         {hoverEnabled && hoverOpen ? (
-          <>
-            <label className={styles.inspectorField}>
-              <span className={styles.inspectorFieldLabel}>Hover background</span>
+          <AdvancedDisclosure label="Hover adjustments" open={hoverOpen} onOpenChange={setHoverOpen}>
+            <LabeledRow label="Hover background">
               <ColorPicker
                 value={colorValueOrFallback(hoverStyle.backgroundColor, colorValueOrFallback(node.style.backgroundColor, 'transparent'))}
                 paletteTokens={paletteTokens}
                 disabled={disabled}
                 onChange={(color: BuilderColorValue) => updateHover({ backgroundColor: color })}
               />
-            </label>
+            </LabeledRow>
 
-            <label className={styles.inspectorField}>
-              <span className={styles.inspectorFieldLabel}>Hover border color</span>
+            <LabeledRow label="Hover border color">
               <ColorPicker
                 value={hoverStyle.borderColor ?? node.style.borderColor}
                 paletteTokens={paletteTokens}
                 disabled={disabled}
                 onChange={(color: BuilderColorValue) => updateHover({ borderColor: color })}
               />
-            </label>
+            </LabeledRow>
 
             <div className={styles.inspectorFieldGrid}>
               <NumberField
@@ -389,15 +338,14 @@ export default function StyleTab({
               />
             </div>
 
-            <label className={styles.inspectorField}>
-              <span className={styles.inspectorFieldLabel}>Hover shadow color</span>
+            <LabeledRow label="Hover shadow color">
               <ColorPicker
                 value={hoverStyle.shadowColor ?? node.style.shadowColor}
                 paletteTokens={paletteTokens}
                 disabled={disabled}
                 onChange={(color: BuilderColorValue) => updateHover({ shadowColor: color })}
               />
-            </label>
+            </LabeledRow>
 
             <NumberField
               label="Transition ms"
@@ -407,7 +355,7 @@ export default function StyleTab({
               disabled={disabled}
               onCommit={(value) => updateHover({ transitionMs: Math.round(value) })}
             />
-          </>
+          </AdvancedDisclosure>
         ) : null}
       </div>
     </div>

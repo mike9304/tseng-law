@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import ModalShell from './ModalShell';
 
 interface ShortcutGroup {
   title: string;
@@ -69,74 +69,14 @@ const groups: ShortcutGroup[] = [
 ];
 
 export default function ShortcutsHelpModal({ onClose }: { onClose: () => void }) {
-  useEffect(() => {
-    function handleKey(event: KeyboardEvent) {
-      if (event.key === 'Escape') onClose();
-    }
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [onClose]);
-
   return (
-    <div
-      role="dialog"
-      aria-label="키보드 단축키"
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 10100,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'rgba(15, 23, 42, 0.5)',
-        backdropFilter: 'blur(6px)',
-        WebkitBackdropFilter: 'blur(6px)',
-      }}
-      onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
+    <ModalShell
+      title="키보드 단축키"
+      description="에디터에서 바로 사용할 수 있는 편집, 그룹, z-order, 이동 단축키입니다."
+      ariaLabel="키보드 단축키"
+      size="lg"
+      onClose={onClose}
     >
-      <div
-        style={{
-          background: '#fff',
-          borderRadius: 16,
-          boxShadow: '0 32px 80px rgba(0, 0, 0, 0.25)',
-          padding: 28,
-          maxWidth: 720,
-          width: '92vw',
-          maxHeight: '86vh',
-          overflowY: 'auto',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginBottom: 20,
-          }}
-        >
-          <h2 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 700, color: '#0f172a' }}>
-            키보드 단축키
-          </h2>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="닫기"
-            style={{
-              border: 'none',
-              background: 'transparent',
-              fontSize: '1.4rem',
-              color: '#64748b',
-              cursor: 'pointer',
-              padding: '4px 10px',
-              borderRadius: 8,
-            }}
-          >
-            ×
-          </button>
-        </div>
-
         <div
           style={{
             display: 'grid',
@@ -195,7 +135,6 @@ export default function ShortcutsHelpModal({ onClose }: { onClose: () => void })
         <div style={{ marginTop: 20, fontSize: '0.75rem', color: '#94a3b8', textAlign: 'center' }}>
           Esc 또는 화면 바깥 클릭으로 닫기
         </div>
-      </div>
-    </div>
+    </ModalShell>
   );
 }

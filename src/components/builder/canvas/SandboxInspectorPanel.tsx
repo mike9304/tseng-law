@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import A11yPanel from '@/components/builder/canvas/A11yPanel';
 import AnimationsTab from '@/components/builder/editor/AnimationsTab';
 import BreakpointBadge from '@/components/builder/editor/BreakpointBadge';
@@ -14,126 +14,23 @@ import {
   resolveViewportHidden,
   resolveViewportRect,
 } from '@/lib/builder/canvas/responsive';
+import {
+  InspectorNotice,
+  InspectorSection,
+  LabeledRow,
+  MixedValueBadge,
+  NumberStepper,
+  SegmentedControl,
+  SliderRow,
+  ToggleRow,
+} from './InspectorControls';
 import styles from './SandboxPage.module.css';
-
-/* ── SEO Inspector inline styles ────────────────────────────── */
-
-const seoFieldStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-};
-
-const seoLabelStyle: React.CSSProperties = {
-  fontSize: '0.75rem',
-  fontWeight: 600,
-  color: '#334155',
-};
-
-const seoInputStyle: React.CSSProperties = {
-  padding: '6px 10px',
-  border: '1px solid #e2e8f0',
-  borderRadius: 8,
-  fontSize: '0.82rem',
-  color: '#0f172a',
-  outline: 'none',
-};
-
-const seoTextareaStyle: React.CSSProperties = {
-  ...seoInputStyle,
-  minHeight: 64,
-  resize: 'vertical' as const,
-  fontFamily: 'inherit',
-};
-
-const seoCheckboxRow: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 6,
-  fontSize: '0.78rem',
-  color: '#334155',
-};
-
-const seoScoreStyle: React.CSSProperties = {
-  marginTop: 8,
-  padding: '8px 10px',
-  borderRadius: 8,
-  background: '#f8fafc',
-  border: '1px solid #e2e8f0',
-  fontSize: '0.75rem',
-  color: '#475569',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-};
-
-const scoreOk: React.CSSProperties = { color: '#16a34a', fontWeight: 600 };
-const scoreWarn: React.CSSProperties = { color: '#d97706', fontWeight: 600 };
-const scoreErr: React.CSSProperties = { color: '#dc2626', fontWeight: 600 };
-
-interface SeoData {
-  title: string;
-  description: string;
-  ogImage: string;
-  noIndex: boolean;
-  canonical: string;
-}
-
-const EMPTY_SEO: SeoData = {
-  title: '',
-  description: '',
-  ogImage: '',
-  noIndex: false,
-  canonical: '',
-};
-
-function SeoScoreWidget({ seo, imageNodesWithoutAlt }: { seo: SeoData; imageNodesWithoutAlt: number }) {
-  const checks: Array<{ label: string; style: React.CSSProperties }> = [];
-  const titleLen = seo.title.length;
-  if (titleLen === 0) {
-    checks.push({ label: 'Title 누락', style: scoreErr });
-  } else if (titleLen < 30 || titleLen > 60) {
-    checks.push({ label: `Title 길이: ${titleLen}자 (권장 30-60)`, style: scoreWarn });
-  } else {
-    checks.push({ label: `Title 길이: ${titleLen}자`, style: scoreOk });
-  }
-
-  const descLen = seo.description.length;
-  if (descLen === 0) {
-    checks.push({ label: 'Description 누락', style: scoreErr });
-  } else if (descLen < 120 || descLen > 160) {
-    checks.push({ label: `Description 길이: ${descLen}자 (권장 120-160)`, style: scoreWarn });
-  } else {
-    checks.push({ label: `Description 길이: ${descLen}자`, style: scoreOk });
-  }
-
-  if (imageNodesWithoutAlt > 0) {
-    checks.push({ label: `Alt 텍스트 누락 이미지: ${imageNodesWithoutAlt}개`, style: scoreWarn });
-  } else {
-    checks.push({ label: '모든 이미지 alt 텍스트 설정됨', style: scoreOk });
-  }
-
-  return (
-    <div style={seoScoreStyle}>
-      <div style={{ fontWeight: 700, color: '#0f172a', marginBottom: 2 }}>SEO 점수</div>
-      {checks.map((c, i) => (
-        <div key={i} style={c.style}>{c.label}</div>
-      ))}
-    </div>
-  );
-}
 
 const MIN_WIDTH = 72;
 const MIN_HEIGHT = 40;
 
 function clampNumber(value: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, value));
-}
-
-function parseNumberInput(rawValue: string): number | null {
-  if (rawValue.trim().length === 0) return null;
-  const parsed = Number(rawValue);
-  return Number.isFinite(parsed) ? parsed : null;
 }
 
 function LayoutField({
@@ -164,26 +61,24 @@ function LayoutField({
   hasOverride?: boolean;
 }) {
   return (
-    <label className={styles.inspectorField} data-has-override={hasOverride ? 'true' : undefined}>
-      <span className={styles.inspectorFieldLabel}>
-        {label}
-        <BreakpointBadge viewport={viewport} active={hasOverride} label="" />
-      </span>
-      <input
-        className={styles.inspectorInput}
-        type="number"
+    <LabeledRow
+      label={label}
+      hint={viewport === 'desktop' ? undefined : viewport}
+      hasOverride={hasOverride}
+      title={`${label} (${viewport})`}
+    >
+      <NumberStepper
         value={value}
         min={min}
         max={max}
         step={step}
+        suffix="px"
         disabled={disabled}
-        onChange={(event) => {
-          const parsed = parseNumberInput(event.target.value);
-          if (parsed === null) return;
-          onCommit(parsed);
-        }}
+        ariaLabel={`${label} value`}
+        onChange={onCommit}
       />
-    </label>
+      <BreakpointBadge viewport={viewport} active={hasOverride} label="" />
+    </LabeledRow>
   );
 }
 
@@ -310,6 +205,31 @@ function ShowOnDeviceToggles({
           );
         })}
       </div>
+    </div>
+  );
+}
+
+function InspectorEmptyState() {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 8,
+        padding: '36px 24px',
+        textAlign: 'center',
+      }}
+    >
+      <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden>
+        <rect x="6" y="6" width="44" height="44" rx="8" fill="none" stroke="#cbd5e1" strokeDasharray="4 4" />
+        <circle cx="28" cy="28" r="3" fill="#94a3b8" />
+      </svg>
+      <p style={{ margin: 0, color: '#0f172a', fontSize: 13, fontWeight: 700 }}>Select an element to edit</p>
+      <p style={{ margin: 0, color: '#64748b', fontSize: 11, lineHeight: 1.5 }}>
+        Click any element on the canvas, or use the Layers panel.<br />
+        Press <kbd>Esc</kbd> to deselect.
+      </p>
     </div>
   );
 }
@@ -456,15 +376,7 @@ export default function SandboxInspectorPanel({
   } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
   const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content' | 'animations' | 'a11y' | 'seo'>('layout');
-  const [seo, setSeo] = useState<SeoData>(EMPTY_SEO);
 
-  const imageNodesWithoutAlt = useMemo(
-    () =>
-      (document?.nodes ?? []).filter(
-        (n) => n.kind === 'image' && !n.content.alt,
-      ).length,
-    [document?.nodes],
-  );
   const linkPickerContext = useMemo<LinkPickerContext>(
     () => ({
       siteAnchors: (document?.nodes ?? [])
@@ -476,12 +388,6 @@ export default function SandboxInspectorPanel({
     [document?.nodes, siteLightboxes, sitePages],
   );
 
-  const updateSeoField = useCallback(
-    <K extends keyof SeoData>(key: K, value: SeoData[K]) => {
-      setSeo((prev) => ({ ...prev, [key]: value }));
-    },
-    [],
-  );
   const selectedNode = useMemo(
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [document?.nodes, selectedNodeId],
@@ -566,14 +472,22 @@ export default function SandboxInspectorPanel({
       <div className={`${styles.panelBody} ${!open ? styles.panelBodyCollapsed : ''}`}>
         {selectedNodeIds.length > 1 ? (
           <>
-            <p className={styles.inspectorEmpty}>
+            <InspectorNotice tone="mixed">
               {selectedNodeIds.length}개 node 가 선택됐습니다. batch duplicate 와 정렬 툴바를 지원합니다.
-            </p>
-            <section className={styles.panelSection}>
-              <header className={styles.panelSectionHeader}>
-                <span>Batch actions</span>
-                <strong>Multi-select</strong>
-              </header>
+              <MixedValueBadge />
+            </InspectorNotice>
+            <InspectorSection label="Common" title="Mixed properties">
+              <LabeledRow label="Width" hint="px">
+                <MixedValueBadge />
+              </LabeledRow>
+              <LabeledRow label="Height" hint="px">
+                <MixedValueBadge />
+              </LabeledRow>
+              <LabeledRow label="Opacity" hint="%">
+                <MixedValueBadge />
+              </LabeledRow>
+            </InspectorSection>
+            <InspectorSection label="Batch actions" title="Multi-select">
               <div className={styles.actionGrid}>
                 <button type="button" className={styles.actionButton} title="선택된 노드 모두 복제" onClick={duplicateSelectedNode}>
                   Duplicate selection
@@ -599,27 +513,42 @@ export default function SandboxInspectorPanel({
                   Bottom
                 </button>
               </div>
-            </section>
+            </InspectorSection>
           </>
         ) : selectedNode ? (
           <>
             {compositeSurfaceEditor}
-            <div className={styles.inspectorTabRow}>
-              {(['layout', 'style', 'content', 'animations', 'a11y', 'seo'] as const).map((tab) => {
-                const tabTitles = { layout: 'x/y/w/h, 회전, lock/hidden 설정', style: '배경, 테두리, 그림자, 투명도 설정', content: '텍스트, 이미지 등 콘텐츠 편집', animations: 'Entrance, scroll, hover 애니메이션 설정', a11y: '접근성 검사', seo: 'SEO 메타데이터 설정' };
-                return (
-                  <button
-                    key={tab}
-                    type="button"
-                    className={`${styles.inspectorTab} ${activeTab === tab ? styles.inspectorTabActive : ''}`}
-                    title={tabTitles[tab]}
-                    onClick={() => setActiveTab(tab)}
-                  >
-                    {tab}
-                  </button>
-                );
-              })}
-            </div>
+            {(() => {
+              const tabTitles = {
+                layout: 'x/y/w/h, 회전, lock/hidden 설정',
+                style: '배경, 테두리, 그림자, 투명도 설정',
+                content: '텍스트, 이미지 등 콘텐츠 편집',
+                animations: 'Entrance, scroll, hover 애니메이션 설정',
+                a11y: '접근성 검사',
+                seo: '페이지 SEO 패널 안내',
+              } as const;
+              const renderTab = (tab: typeof activeTab) => (
+                <button
+                  key={tab}
+                  type="button"
+                  className={`${styles.inspectorTab} ${activeTab === tab ? styles.inspectorTabActive : ''}`}
+                  title={tabTitles[tab]}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </button>
+              );
+              return (
+                <>
+                  <div className={styles.inspectorTabRow}>
+                    {(['layout', 'style', 'content'] as const).map(renderTab)}
+                  </div>
+                  <div className={styles.inspectorTabRow} data-secondary="true">
+                    {(['animations', 'a11y', 'seo'] as const).map(renderTab)}
+                  </div>
+                </>
+              );
+            })()}
 
             <section className={styles.panelSection} key={activeTab} style={{ animation: 'fadeIn 150ms ease' }}>
               <header className={styles.panelSectionHeader}>
@@ -753,79 +682,52 @@ export default function SandboxInspectorPanel({
                     );
                   })()}
 
-                  <div className={styles.inspectorField}>
-                    <span className={styles.inspectorFieldLabel}>Rotation</span>
-                    <div className={styles.inspectorRangeRow}>
-                      <input
-                        className={styles.inspectorRange}
-                        type="range"
-                        min={0}
-                        max={360}
-                        step={1}
-                        value={selectedNode.rotation}
-                        disabled={selectedNode.locked}
-                        onChange={(event) => {
-                          updateNode(selectedNode.id, (node) => ({
-                            ...node,
-                            rotation: clampNumber(Math.round(Number(event.target.value)), 0, 360),
-                          }));
-                        }}
-                      />
-                      <input
-                        className={styles.inspectorInput}
-                        type="number"
-                        min={0}
-                        max={360}
-                        step={1}
-                        value={selectedNode.rotation}
-                        disabled={selectedNode.locked}
-                        onChange={(event) => {
-                          const parsed = parseNumberInput(event.target.value);
-                          if (parsed === null) return;
-                          updateNode(selectedNode.id, (node) => ({
-                            ...node,
-                            rotation: clampNumber(Math.round(parsed), 0, 360),
-                          }));
-                        }}
-                      />
-                    </div>
-                  </div>
+                  <LabeledRow label="Rotation" hint="deg">
+                    <SliderRow
+                      value={selectedNode.rotation}
+                      min={0}
+                      max={360}
+                      suffix="deg"
+                      disabled={selectedNode.locked}
+                      onChange={(nextValue) => {
+                        updateNode(selectedNode.id, (node) => ({
+                          ...node,
+                          rotation: clampNumber(Math.round(nextValue), 0, 360),
+                        }));
+                      }}
+                    />
+                  </LabeledRow>
 
-                  <div className={styles.inspectorToggleList}>
-                    <label className={styles.inspectorToggle}>
-                      <input
-                        type="checkbox"
+                  <InspectorSection label="State" title="Visibility & lock">
+                    <LabeledRow label="Lock">
+                      <ToggleRow
                         checked={selectedNode.locked}
-                        onChange={(event) => {
+                        onChange={(checked) => {
                           updateNode(selectedNode.id, (node) => ({
                             ...node,
-                            locked: event.target.checked,
+                            locked: checked,
                           }));
                         }}
                       />
-                      <span>Lock node</span>
-                    </label>
-                    <label className={styles.inspectorToggle}>
-                      <input
-                        type="checkbox"
-                        checked={!selectedNode.visible}
-                        onChange={(event) => {
+                    </LabeledRow>
+                    <LabeledRow label="Visible">
+                      <ToggleRow
+                        checked={selectedNode.visible}
+                        onChange={(checked) => {
                           updateNode(selectedNode.id, (node) => ({
                             ...node,
-                            visible: !event.target.checked,
+                            visible: checked,
                           }));
                         }}
                       />
-                      <span>Hide on canvas</span>
-                    </label>
-                    <label className={styles.inspectorToggle}>
-                      <input
-                        type="checkbox"
+                    </LabeledRow>
+                    <LabeledRow label="Pin">
+                      <ToggleRow
                         checked={Boolean(selectedNode.sticky)}
                         disabled={selectedNode.locked}
-                        onChange={(event) => {
+                        onChange={(checked) => {
                           updateNode(selectedNode.id, (node) => {
-                            if (!event.target.checked) {
+                            if (!checked) {
                               const next = { ...node };
                               delete (next as { sticky?: unknown }).sticky;
                               return next;
@@ -837,9 +739,8 @@ export default function SandboxInspectorPanel({
                           });
                         }}
                       />
-                      <span>📌 Pin to screen (sticky)</span>
-                    </label>
-                  </div>
+                    </LabeledRow>
+                  </InspectorSection>
 
                   {selectedNode.sticky ? (
                     <div className={styles.inspectorFieldGrid}>
@@ -857,14 +758,16 @@ export default function SandboxInspectorPanel({
                         }))}
                         disabled={selectedNode.locked}
                       />
-                      <div className={styles.inspectorField}>
-                        <span className={styles.inspectorFieldLabel}>Pin from</span>
-                        <select
-                          className={styles.inspectorInput}
+                      <LabeledRow label="Pin from">
+                        <SegmentedControl
                           value={selectedNode.sticky.from ?? 'top'}
                           disabled={selectedNode.locked}
-                          onChange={(event) => {
-                            const nextFrom = event.target.value === 'bottom' ? 'bottom' : 'top';
+                          ariaLabel="Pin from"
+                          options={[
+                            { value: 'top', label: 'Top' },
+                            { value: 'bottom', label: 'Bottom' },
+                          ]}
+                          onChange={(nextFrom) => {
                             updateNode(selectedNode.id, (node) => ({
                               ...node,
                               sticky: {
@@ -873,11 +776,8 @@ export default function SandboxInspectorPanel({
                               },
                             }));
                           }}
-                        >
-                          <option value="top">Top</option>
-                          <option value="bottom">Bottom</option>
-                        </select>
-                      </div>
+                        />
+                      </LabeledRow>
                     </div>
                   ) : null}
 
@@ -984,56 +884,9 @@ export default function SandboxInspectorPanel({
               ) : null}
 
               {activeTab === 'seo' ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 8 }}>
-                  <div style={seoFieldStyle}>
-                    <label style={seoLabelStyle}>Title</label>
-                    <input
-                      type="text"
-                      value={seo.title}
-                      placeholder="페이지 제목 (30-60자 권장)"
-                      style={seoInputStyle}
-                      onChange={(e) => updateSeoField('title', e.target.value)}
-                    />
-                  </div>
-                  <div style={seoFieldStyle}>
-                    <label style={seoLabelStyle}>Description</label>
-                    <textarea
-                      value={seo.description}
-                      placeholder="페이지 설명 (120-160자 권장)"
-                      style={seoTextareaStyle}
-                      onChange={(e) => updateSeoField('description', e.target.value)}
-                    />
-                  </div>
-                  <div style={seoFieldStyle}>
-                    <label style={seoLabelStyle}>OG Image URL</label>
-                    <input
-                      type="url"
-                      value={seo.ogImage}
-                      placeholder="https://example.com/og-image.jpg"
-                      style={seoInputStyle}
-                      onChange={(e) => updateSeoField('ogImage', e.target.value)}
-                    />
-                  </div>
-                  <div style={seoFieldStyle}>
-                    <label style={seoLabelStyle}>Canonical URL</label>
-                    <input
-                      type="url"
-                      value={seo.canonical}
-                      placeholder="https://example.com/page"
-                      style={seoInputStyle}
-                      onChange={(e) => updateSeoField('canonical', e.target.value)}
-                    />
-                  </div>
-                  <label style={seoCheckboxRow}>
-                    <input
-                      type="checkbox"
-                      checked={seo.noIndex}
-                      onChange={(e) => updateSeoField('noIndex', e.target.checked)}
-                    />
-                    <span>noIndex (검색엔진 색인 제외)</span>
-                  </label>
-                  <SeoScoreWidget seo={seo} imageNodesWithoutAlt={imageNodesWithoutAlt} />
-                </div>
+                <InspectorNotice tone="neutral">
+                  Page-level SEO lives in the dedicated SEO modal from the top bar. Element-level SEO fields will attach here when per-node metadata lands.
+                </InspectorNotice>
               ) : null}
 
               {!selectedNode.visible ? (
@@ -1074,23 +927,7 @@ export default function SandboxInspectorPanel({
           </>
         ) : (
           <>
-            <div className={styles.inspectorTabRow}>
-              <button
-                type="button"
-                className={`${styles.inspectorTab} ${activeTab === 'a11y' ? styles.inspectorTabActive : ''}`}
-                title="접근성 검사"
-                onClick={() => setActiveTab('a11y')}
-              >
-                a11y
-              </button>
-            </div>
-            {activeTab === 'a11y' ? (
-              <A11yPanel />
-            ) : (
-              <p className={styles.inspectorEmpty}>
-                캔버스나 layers 에서 node 를 선택하면 layout 값과 lock/hidden 토글이 여기 표시됩니다.
-              </p>
-            )}
+            <InspectorEmptyState />
           </>
         )}
       </div>

@@ -15,6 +15,7 @@ import {
   checkH1Count,
   checkImageAlt,
 } from '@/lib/builder/publish-gate/checks';
+import ModalShell from './ModalShell';
 
 type PublishState = 'checking' | 'ready' | 'publishing' | 'success' | 'error';
 
@@ -54,38 +55,6 @@ function blockerSuite(blockers: CheckResult[]): PublishCheckSuite {
     checkedAt: new Date().toISOString(),
   };
 }
-
-const backdropStyle: React.CSSProperties = {
-  position: 'fixed',
-  inset: 0,
-  zIndex: 9999,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: 'rgba(15, 23, 42, 0.4)',
-  backdropFilter: 'blur(6px)',
-  WebkitBackdropFilter: 'blur(6px)',
-  animation: 'publishBackdropIn 200ms ease',
-};
-
-const modalStyle: React.CSSProperties = {
-  background: '#fff',
-  borderRadius: 16,
-  boxShadow: '0 25px 50px rgba(0,0,0,0.15)',
-  width: '100%',
-  maxWidth: 560,
-  maxHeight: '85vh',
-  overflow: 'auto',
-  padding: '28px 28px 24px',
-  animation: 'publishModalIn 250ms cubic-bezier(0.16, 1, 0.3, 1)',
-};
-
-const titleStyle: React.CSSProperties = {
-  margin: 0,
-  fontSize: '1.15rem',
-  fontWeight: 700,
-  color: '#0f172a',
-};
 
 const sectionTitleStyle: React.CSSProperties = {
   fontSize: '0.78rem',
@@ -262,17 +231,6 @@ function publishButtonStyle(enabled: boolean): React.CSSProperties {
     opacity: enabled ? 1 : 0.6,
   };
 }
-
-const keyframesCSS = `
-@keyframes publishBackdropIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes publishModalIn {
-  from { opacity: 0; transform: scale(0.92); }
-  to { opacity: 1; transform: scale(1); }
-}
-`;
 
 function severityIcon(sev: 'blocker' | 'warning' | 'info'): string {
   if (sev === 'blocker') return '✕';
@@ -472,16 +430,6 @@ export default function PublishModal({
     void runChecks();
   }, [open, runChecks]);
 
-  // ESC key handler
-  useEffect(() => {
-    if (!open) return undefined;
-    const handler = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [open, onClose]);
-
   const grouped = useMemo(() => {
     if (!suite) return { blockers: [], warnings: [], infos: [] };
     return {
@@ -607,17 +555,13 @@ export default function PublishModal({
   if (!open) return null;
 
   return (
-    <>
-      <style>{keyframesCSS}</style>
-      <div style={backdropStyle} onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
-        <div style={modalStyle} role="dialog" aria-modal="true">
-          <h2 style={titleStyle}>Publish Page</h2>
-
-          {activePageId ? (
-            <p style={{ color: '#64748b', fontSize: '0.78rem', margin: '8px 0 0' }}>
-              revision {draftMeta?.revision ?? 0} 기준 발행 예정
-            </p>
-          ) : null}
+    <ModalShell
+      open={open}
+      onClose={onClose}
+      title="Publish Page"
+      subtitle={activePageId ? `revision ${draftMeta?.revision ?? 0} 기준 발행 예정` : undefined}
+      size="md"
+    >
 
           {publishState === 'checking' && (
             <p style={{ color: '#64748b', fontSize: '0.88rem', marginTop: 12 }}>
@@ -709,40 +653,38 @@ export default function PublishModal({
             </div>
           )}
 
-          <div style={buttonRowStyle}>
-            <button type="button" style={cancelButtonStyle} onClick={onClose}>
-              {publishState === 'success' ? '닫기' : '취소'}
-            </button>
+      <div style={buttonRowStyle}>
+        <button type="button" style={cancelButtonStyle} onClick={onClose}>
+          {publishState === 'success' ? '닫기' : '취소'}
+        </button>
 
-            {publishState !== 'success' && hasWarningsOnly && !overrideWarnings && (
-              <button
-                type="button"
-                style={publishWarnButtonStyle}
-                onClick={() => setOverrideWarnings(true)}
-              >
-                경고 무시하고 발행
-              </button>
-            )}
+        {publishState !== 'success' && hasWarningsOnly && !overrideWarnings && (
+          <button
+            type="button"
+            style={publishWarnButtonStyle}
+            onClick={() => setOverrideWarnings(true)}
+          >
+            경고 무시하고 발행
+          </button>
+        )}
 
-            {publishState !== 'success' && (
-              <button
-                type="button"
-                style={publishButtonStyle(
-                  canPublish && ((suite?.warningCount ?? 0) === 0 || overrideWarnings),
-                )}
-                disabled={
-                  !canPublish ||
-                  publishState !== 'ready' ||
-                  ((suite?.warningCount ?? 0) > 0 && !overrideWarnings)
-                }
-                onClick={handlePublish}
-              >
-                {publishState === 'publishing' ? '발행 중...' : '발행'}
-              </button>
+        {publishState !== 'success' && (
+          <button
+            type="button"
+            style={publishButtonStyle(
+              canPublish && ((suite?.warningCount ?? 0) === 0 || overrideWarnings),
             )}
-          </div>
-        </div>
+            disabled={
+              !canPublish ||
+              publishState !== 'ready' ||
+              ((suite?.warningCount ?? 0) > 0 && !overrideWarnings)
+            }
+            onClick={handlePublish}
+          >
+            {publishState === 'publishing' ? '발행 중...' : '발행'}
+          </button>
+        )}
       </div>
-    </>
+    </ModalShell>
   );
 }

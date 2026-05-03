@@ -1,5 +1,6 @@
 import { defineComponent } from '../define';
 import ColumnListInspector from './Inspector';
+import styles from './ColumnList.module.css';
 
 interface ColumnItem {
   slug: string;
@@ -22,31 +23,9 @@ function ColumnListRender({ node }: { node: { content: ColumnListContent } }) {
 
   if (!displayed.length) {
     return (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 16,
-        }}
-      >
+      <div className={styles.grid}>
         {Array.from({ length: Math.min(limit, 3) }).map((_, i) => (
-          <div
-            key={i}
-            style={{
-              background: '#f1f5f9',
-              border: '2px dashed #cbd5e1',
-              borderRadius: 8,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#94a3b8',
-              fontSize: 13,
-              minHeight: 120,
-              padding: 16,
-            }}
-          >
+          <div key={i} className="builder-widget-empty">
             Column
           </div>
         ))}
@@ -55,45 +34,14 @@ function ColumnListRender({ node }: { node: { content: ColumnListContent } }) {
   }
 
   return (
-    <div
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: 16,
-        overflow: 'auto',
-      }}
-    >
+    <div className={styles.grid}>
       {displayed.map((item, i) => (
-        <div
-          key={i}
-          style={{
-            padding: 16,
-            borderRadius: 8,
-            border: '1px solid #e2e8f0',
-            background: '#ffffff',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 6,
-          }}
-        >
-          <span style={{ fontSize: 12, color: '#94a3b8' }}>{item.date}</span>
-          <h4 style={{ margin: 0, fontSize: 15, fontWeight: 600, color: '#0f172a', lineHeight: 1.3 }}>
+        <div key={i} className={styles.card}>
+          <span className={styles.date}>{item.date}</span>
+          <h4 className={styles.title}>
             {item.title}
           </h4>
-          <p
-            style={{
-              margin: 0,
-              fontSize: 13,
-              color: '#64748b',
-              lineHeight: 1.4,
-              overflow: 'hidden',
-              display: '-webkit-box',
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical',
-            }}
-          >
+          <p className={styles.summary}>
             {item.summary}
           </p>
         </div>

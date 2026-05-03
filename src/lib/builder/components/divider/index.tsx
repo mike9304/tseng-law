@@ -9,6 +9,7 @@ import {
   type BuilderColorValue,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
+import styles from './Divider.module.css';
 
 function DividerRender({
   node,
@@ -25,14 +26,10 @@ function DividerRender({
   if (orientation === 'vertical') {
     return (
       <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-        }}
+        className={`${styles.frame} ${styles.vertical}`}
       >
         <div
+          className={styles.line}
           style={{
             width: thickness,
             height: '100%',
@@ -45,14 +42,10 @@ function DividerRender({
 
   return (
     <div
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        alignItems: 'center',
-      }}
+      className={`${styles.frame} ${styles.horizontal}`}
     >
       <hr
+        className={styles.line}
         style={{
           width: '100%',
           border: 'none',

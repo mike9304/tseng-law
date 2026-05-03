@@ -493,7 +493,7 @@
 .globalRegionBadge {
   position: absolute;
   left: 10px;
-  top: calc(100% + 6px);
+  top: 8px;
   z-index: 60;
   display: inline-flex;
   align-items: center;
@@ -515,6 +515,7 @@
 
 .globalHeaderRegion:hover .globalRegionBadge,
 .globalHeaderRegion:focus-visible .globalRegionBadge,
+.globalHeaderRegion:focus-within .globalRegionBadge,
 .globalRegionBadge:focus-within {
   opacity: 1;
   pointer-events: auto;
@@ -1232,11 +1233,13 @@
 }
 
 .stageSurface {
+  width: 100%;
   min-width: 0;
 }
 
 .stageViewport {
   position: relative;
+  width: 100%;
   min-height: 70vh;
   overflow: hidden;
   border-radius: 22px;

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/locales';
 import { normalizeLocale } from '@/lib/locales';
-import { readColumnVariant } from '@/lib/builder/columns/storage';
+import { readColumnBundle } from '@/lib/builder/columns/storage';
 import ColumnEditor from '@/components/builder/columns/ColumnEditor';
 import ColumnFrontmatterPanel from '@/components/builder/columns/ColumnFrontmatterPanel';
 import ColumnLocaleLinker from '@/components/builder/columns/ColumnLocaleLinker';
@@ -25,9 +25,10 @@ export default async function ColumnEditPage({
   const locale: Locale = normalizeLocale(params.locale);
   const slug = params.slug;
 
-  const draft = await readColumnVariant(locale, slug, 'draft');
+  const bundle = await readColumnBundle(locale, slug);
+  const column = bundle.draft ?? bundle.published;
 
-  if (!draft) {
+  if (!column) {
     return (
       <main style={{ padding: '2rem', fontFamily: 'system-ui' }}>
         <h1>칼럼을 찾을 수 없습니다</h1>
@@ -39,16 +40,16 @@ export default async function ColumnEditPage({
     );
   }
 
-  const category = getColumnBlogCategory(draft.frontmatter);
-  const authorName = draft.frontmatter.author?.name ?? '호정국제 법률사무소';
-  const readingTime = estimateReadingTime(`${draft.summary} ${draft.bodyMarkdown} ${draft.bodyHtml}`);
+  const category = getColumnBlogCategory(column.frontmatter);
+  const authorName = column.frontmatter.author?.name ?? '호정국제 법률사무소';
+  const readingTime = estimateReadingTime(`${column.summary} ${column.bodyMarkdown} ${column.bodyHtml}`);
 
   return (
     <main className="column-editor-page">
       <header className="column-editor-page-header">
         <div>
           <a href={`/${locale}/admin-builder/columns`}>← 칼럼 목록</a>
-          <h1>{draft.title || 'Untitled column'}</h1>
+          <h1>{column.title || 'Untitled column'}</h1>
         </div>
         <a
           className="admin-console-ghost-btn"
@@ -65,12 +66,12 @@ export default async function ColumnEditPage({
           <ColumnFrontmatterPanel
             slug={slug}
             locale={locale}
-            initial={draft.frontmatter}
+            initial={column.frontmatter}
           />
           <ColumnLocaleLinker
             slug={slug}
             locale={locale}
-            linkedSlugs={draft.linkedSlugs || {}}
+            linkedSlugs={column.linkedSlugs || {}}
           />
         </div>
         <div className="column-editor-main-rail">
@@ -78,10 +79,10 @@ export default async function ColumnEditPage({
             slug={slug}
             locale={locale}
             initialContent={{
-              title: draft.title,
-              summary: draft.summary,
-              bodyHtml: draft.bodyHtml,
-              bodyMarkdown: draft.bodyMarkdown,
+              title: column.title,
+              summary: column.summary,
+              bodyHtml: column.bodyHtml,
+              bodyMarkdown: column.bodyMarkdown,
             }}
           />
         </div>
@@ -91,31 +92,31 @@ export default async function ColumnEditPage({
               <span>Preview</span>
               <strong>{readingTime}분 읽기</strong>
             </div>
-            {draft.frontmatter.featuredImage ? (
+            {column.frontmatter.featuredImage ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img className="column-preview-image" src={draft.frontmatter.featuredImage} alt="" />
+              <img className="column-preview-image" src={column.frontmatter.featuredImage} alt="" />
             ) : (
               <div className="column-preview-image column-preview-image-placeholder">
-                {draft.title.slice(0, 2).toUpperCase() || 'HJ'}
+                {column.title.slice(0, 2).toUpperCase() || 'HJ'}
               </div>
             )}
             <div className="column-preview-body">
               <span className="column-category-chip" style={{ background: category.color }}>
                 {getCategoryLabel(category, locale)}
               </span>
-              <h2>{draft.title}</h2>
-              <p className="column-preview-summary">{draft.summary}</p>
+              <h2>{column.title}</h2>
+              <p className="column-preview-summary">{column.summary}</p>
               <div className="column-preview-meta">
                 <span>{authorName}</span>
                 <span>
-                  {draft.frontmatter.publishedAt
-                    ? new Date(draft.frontmatter.publishedAt).toLocaleDateString('ko-KR')
+                  {column.frontmatter.publishedAt
+                    ? new Date(column.frontmatter.publishedAt).toLocaleDateString('ko-KR')
                     : 'Draft'}
                 </span>
               </div>
               <article
                 className="column-preview-article"
-                dangerouslySetInnerHTML={{ __html: draft.bodyHtml || '<p>본문 미리보기</p>' }}
+                dangerouslySetInnerHTML={{ __html: column.bodyHtml || '<p>본문 미리보기</p>' }}
               />
             </div>
           </div>

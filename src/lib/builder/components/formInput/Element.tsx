@@ -6,6 +6,7 @@ import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor } from '@/lib/builder/site/theme';
 import { resolveFormInputVariantStyle } from '@/lib/builder/site/component-variants';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
+import styles from './FormInput.module.css';
 
 export default function FormInputElement({
   node,
@@ -29,27 +30,16 @@ export default function FormInputElement({
   return (
     <div
       ref={field.rootRef}
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 6,
-        boxSizing: 'border-box',
-        opacity: mode !== 'published' && c.showIf ? 0.72 : 1,
-      }}
+      className={`${styles.field} ${mode !== 'published' && c.showIf ? styles.conditional : ''}`}
     >
       {c.label ? (
         <label
-          style={{
-            fontSize: 13,
-            fontWeight: 500,
-            color: labelColor,
-          }}
+          className={styles.label}
+          style={{ color: labelColor }}
           htmlFor={`field-${node.id}`}
         >
           {c.label}
-          {c.required ? <span style={{ color: '#dc2626', marginLeft: 4 }}>*</span> : null}
+          {c.required ? <span className={styles.required}>*</span> : null}
         </label>
       ) : null}
       <input
@@ -69,27 +59,17 @@ export default function FormInputElement({
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
         onChange={(event) => field.onValueChange(event.target.value)}
+        className={styles.input}
         style={{
-          width: '100%',
-          flex: 1,
-          padding: '10px 12px',
-          fontSize: 14,
           color: textColor,
           ...inputVariantStyle,
-          boxSizing: 'border-box',
         }}
       />
       {field.error ? (
-        <span id={`field-${node.id}-error`} style={errorStyle} role="alert">
+        <span id={`field-${node.id}-error`} className={styles.error} role="alert">
           {field.error}
         </span>
       ) : null}
     </div>
   );
 }
-
-const errorStyle: React.CSSProperties = {
-  color: '#dc2626',
-  fontSize: 12,
-  lineHeight: 1.25,
-};

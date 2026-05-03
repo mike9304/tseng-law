@@ -12,6 +12,7 @@ import { normalizeLocale } from '@/lib/locales';
 import BrandKitPanel from '@/components/builder/editor/BrandKitPanel';
 import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
+import ModalShell from './ModalShell';
 import {
   THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
@@ -46,6 +47,7 @@ interface SiteSettingsForm {
 }
 
 type SiteSettingsFieldKey = Exclude<keyof SiteSettingsForm, 'assets'>;
+type SiteSettingsTab = 'general' | 'brand' | 'typography' | 'presets' | 'dark' | 'advanced';
 
 const EMPTY_SETTINGS: SiteSettingsForm = {
   firmName: '',
@@ -58,57 +60,6 @@ const EMPTY_SETTINGS: SiteSettingsForm = {
   logoDark: '',
   favicon: '',
   ogImage: '',
-};
-
-const backdropStyle: React.CSSProperties = {
-  position: 'fixed',
-  inset: 0,
-  zIndex: 9000,
-  background: 'rgba(15, 23, 42, 0.45)',
-  backdropFilter: 'blur(6px)',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  animation: 'fadeIn 150ms ease',
-};
-
-const panelStyle: React.CSSProperties = {
-  width: 560,
-  maxWidth: '92vw',
-  maxHeight: '85vh',
-  background: '#fff',
-  borderRadius: 16,
-  boxShadow: '0 24px 64px rgba(15, 23, 42, 0.18)',
-  display: 'flex',
-  flexDirection: 'column',
-  overflow: 'hidden',
-  animation: 'fadeIn 180ms ease',
-  transform: 'scale(1)',
-};
-
-const headerStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: '16px 20px',
-  borderBottom: '1px solid #e2e8f0',
-};
-
-const titleStyle: React.CSSProperties = {
-  fontSize: '1rem',
-  fontWeight: 700,
-  color: '#0f172a',
-};
-
-const closeBtnStyle: React.CSSProperties = {
-  padding: '4px 12px',
-  fontSize: '0.78rem',
-  fontWeight: 600,
-  border: '1px solid #cbd5e1',
-  borderRadius: 8,
-  background: '#fff',
-  color: '#64748b',
-  cursor: 'pointer',
 };
 
 const formStyle: React.CSSProperties = {
@@ -157,51 +108,10 @@ const inputStyle: React.CSSProperties = {
   boxSizing: 'border-box',
 };
 
-const footerStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 8,
-  padding: '12px 20px',
-  borderTop: '1px solid #e2e8f0',
-};
-
-const tabRowStyle: React.CSSProperties = {
-  display: 'flex',
-  gap: 6,
-  padding: '10px 20px 0',
-  borderBottom: '1px solid #e2e8f0',
-};
-
-function tabButtonStyle(active: boolean): React.CSSProperties {
-  return {
-    padding: '7px 12px',
-    border: '1px solid transparent',
-    borderBottom: active ? '2px solid #116dff' : '2px solid transparent',
-    background: 'transparent',
-    color: active ? '#0f172a' : '#64748b',
-    fontSize: '0.8rem',
-    fontWeight: 700,
-    cursor: 'pointer',
-  };
-}
-
 const twoColumnStyle: React.CSSProperties = {
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   gap: 12,
-};
-
-const statusStyle: React.CSSProperties = {
-  minHeight: 18,
-  fontSize: '0.78rem',
-  color: '#dc2626',
-};
-
-const noticeStyle: React.CSSProperties = {
-  minHeight: 18,
-  fontSize: '0.78rem',
-  color: '#0f766e',
 };
 
 const cancelBtnStyle: React.CSSProperties = {
@@ -272,6 +182,15 @@ const FIELDS: FieldDef[] = [
   { key: 'logoDark', label: '다크 로고 URL', placeholder: 'https://example.com/logo-dark.png', type: 'url' },
   { key: 'favicon', label: '파비콘 URL', placeholder: 'https://example.com/favicon.ico', type: 'url' },
   { key: 'ogImage', label: 'OG 이미지 URL', placeholder: 'https://example.com/social-card.png', type: 'url' },
+];
+
+const SETTINGS_TABS: Array<{ key: SiteSettingsTab; label: string; icon: string }> = [
+  { key: 'general', label: 'General', icon: 'G' },
+  { key: 'brand', label: 'Brand kit', icon: 'B' },
+  { key: 'typography', label: 'Typography', icon: 'A' },
+  { key: 'presets', label: 'Presets', icon: 'P' },
+  { key: 'dark', label: 'Dark mode', icon: 'D' },
+  { key: 'advanced', label: 'Advanced', icon: '#' },
 ];
 
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
@@ -372,8 +291,7 @@ export default function SiteSettingsModal({
   const [theme, setTheme] = useState<BuilderTheme>(DEFAULT_THEME);
   const [brandKit, setBrandKit] = useState<BrandKit>(() => createBrandKitFromTheme(DEFAULT_THEME, EMPTY_SETTINGS));
   const [darkMode, setDarkMode] = useState<Required<DarkModeConfig>>(() => normalizeDarkModeConfig());
-  const [activeTab, setActiveTab] = useState<'settings' | 'brand' | 'colors' | 'dark' | 'typography' | 'presets'>('settings');
-  const [previewDark, setPreviewDark] = useState(false);
+  const [activeTab, setActiveTab] = useState<SiteSettingsTab>('general');
   const [pendingPreset, setPendingPreset] = useState<SiteThemePreset | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -408,15 +326,6 @@ export default function SiteSettingsModal({
   useEffect(() => {
     if (open) void fetchSettings();
   }, [open, fetchSettings]);
-
-  useEffect(() => {
-    if (!open) return undefined;
-    const handleEsc = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [open, onClose]);
 
   const handleSave = async () => {
     for (const token of THEME_COLOR_TOKENS) {
@@ -582,51 +491,122 @@ export default function SiteSettingsModal({
   }));
   const textPresets = normalizeThemeTextPresets(theme.themeTextPresets);
   const darkColors = normalizeDarkColors(theme.colors, theme.darkColors);
-  const previewColors = previewDark ? darkColors : theme.colors;
+  const footerHint = error ? (
+    <span style={{ color: '#dc2626' }}>{error}</span>
+  ) : notice ? (
+    <span style={{ color: '#0f766e' }}>{notice}</span>
+  ) : null;
+  const modalActions = [
+    { label: '취소', variant: 'secondary' as const, onClick: onClose },
+    {
+      label: saving ? '저장 중...' : '저장',
+      variant: 'primary' as const,
+      loading: saving,
+      disabled: saving || loading,
+      onClick: handleSave,
+    },
+  ];
+  const renderThemePreview = (
+    label: string,
+    colors: BuilderTheme['colors'],
+  ) => (
+    <div
+      style={{
+        border: `1px solid ${colors.muted}`,
+        borderRadius: 12,
+        background: colors.background,
+        color: colors.text,
+        padding: 14,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 10,
+        minHeight: 144,
+      }}
+    >
+      <strong style={{ fontFamily: theme.fonts.heading, color: colors.text }}>
+        {label}
+      </strong>
+      <span style={{ color: colors.secondary, fontSize: '0.78rem', lineHeight: 1.45 }}>
+        Published 페이지의 DarkModeToggle이 이 색상 세트 사이를 전환합니다.
+      </span>
+      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+        <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, background: colors.primary, color: colors.background, fontSize: '0.78rem', fontWeight: 800 }}>
+          Primary
+        </span>
+        <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, border: `1px solid ${colors.secondary}`, color: colors.secondary, fontSize: '0.78rem', fontWeight: 800 }}>
+          Secondary
+        </span>
+        <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, background: colors.muted, color: colors.text, fontSize: '0.78rem', fontWeight: 800 }}>
+          Muted
+        </span>
+      </div>
+    </div>
+  );
 
   if (!open) return null;
 
   return (
-    <div
-      style={backdropStyle}
-      onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
+    <ModalShell
+      open={open}
+      onClose={onClose}
+      title="사이트 설정"
+      subtitle="Brand kit, Typography, Dark, Presets로 사이트 전체 디자인을 한 화면에서 통제합니다."
+      size="xl"
+      bodyFlush
+      footerHint={footerHint}
+      actions={modalActions}
     >
-      <div style={panelStyle}>
-        <div style={headerStyle}>
-          <span style={titleStyle}>사이트 설정</span>
-          <button type="button" style={closeBtnStyle} onClick={onClose}>
-            닫기
-          </button>
-        </div>
-
-        <div style={tabRowStyle}>
-          {([
-            ['settings', 'Settings'],
-            ['brand', 'Brand kit'],
-            ['colors', 'Colors'],
-            ['dark', 'Dark'],
-            ['typography', 'Typography'],
-            ['presets', 'Presets'],
-          ] as const).map(([key, label]) => (
+      <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
+        <nav
+          aria-label="설정 탭"
+          style={{
+            width: 220,
+            flex: '0 0 220px',
+            borderRight: '1px solid #e2e8f0',
+            background: '#ffffff',
+            padding: '16px 10px',
+            overflowY: 'auto',
+          }}
+        >
+          {SETTINGS_TABS.map((tab) => {
+            const active = activeTab === tab.key;
+            return (
             <button
-              key={key}
+              key={tab.key}
               type="button"
-              style={tabButtonStyle(activeTab === key)}
-              onClick={() => setActiveTab(key)}
+              style={{
+                width: '100%',
+                display: 'grid',
+                gridTemplateColumns: '4px 32px minmax(0, 1fr)',
+                alignItems: 'center',
+                gap: 9,
+                minHeight: 40,
+                marginBottom: 4,
+                border: `1px solid ${active ? '#bfdbfe' : 'transparent'}`,
+                borderRadius: 9,
+                background: active ? '#eff6ff' : 'transparent',
+                color: active ? '#123b63' : '#475569',
+                cursor: 'pointer',
+                fontSize: '0.8rem',
+                fontWeight: 800,
+                textAlign: 'left',
+              }}
+              onClick={() => setActiveTab(tab.key)}
             >
-              {label}
+              <span aria-hidden style={{ width: 4, height: 22, borderRadius: 2, background: active ? '#116dff' : 'transparent' }} />
+              <span aria-hidden style={{ textAlign: 'center' }}>{tab.icon}</span>
+              <span>{tab.label}</span>
             </button>
-          ))}
-        </div>
+            );
+          })}
+        </nav>
 
-        <div style={formStyle}>
+        <div style={{ ...formStyle, padding: 24 }}>
           {loading ? (
             <div style={{ padding: 16, textAlign: 'center', color: '#94a3b8', fontSize: '0.85rem' }}>
               로딩 중...
             </div>
-          ) : activeTab === 'settings' ? (
+          ) : activeTab === 'general' ? (
             <>
               <div style={sectionStyle}>
                 <div style={sectionHeadingStyle}>기본 정보</div>
@@ -659,7 +639,7 @@ export default function SiteSettingsModal({
               onExport={exportBrandKit}
               onImport={(file) => void importBrandKit(file)}
             />
-          ) : activeTab === 'colors' ? (
+          ) : activeTab === 'advanced' ? (
             <div style={sectionStyle}>
               <div style={sectionHeadingStyle}>Theme colors</div>
               {THEME_COLOR_TOKENS.map((token) => (
@@ -688,25 +668,6 @@ export default function SiteSettingsModal({
                   </div>
                 </div>
               ))}
-
-              <div style={sectionStyle}>
-                <div style={sectionHeadingStyle}>Site fonts</div>
-                <div style={fieldStyle}>
-                  <label style={labelStyle}>Heading font</label>
-                  <FontPicker
-                    value={theme.fonts.heading}
-                    onChange={(fontFamily) => updateThemeFont('heading', fontFamily)}
-                  />
-                </div>
-
-                <div style={fieldStyle}>
-                  <label style={labelStyle}>Body font</label>
-                  <FontPicker
-                    value={theme.fonts.body}
-                    onChange={(fontFamily) => updateThemeFont('body', fontFamily)}
-                  />
-                </div>
-              </div>
             </div>
           ) : activeTab === 'dark' ? (
             <div style={sectionStyle}>
@@ -745,48 +706,10 @@ export default function SiteSettingsModal({
                 </label>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
-                <div style={sectionHeadingStyle}>Dark mode colors</div>
-                <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.78rem', fontWeight: 700, color: '#334155' }}>
-                  <input
-                    type="checkbox"
-                    checked={previewDark}
-                    onChange={(event) => setPreviewDark(event.target.checked)}
-                  />
-                  Preview dark
-                </label>
-              </div>
-
-              <div
-                style={{
-                  border: `1px solid ${previewDark ? darkColors.muted : '#e2e8f0'}`,
-                  borderRadius: 12,
-                  background: previewColors.background,
-                  color: previewColors.text,
-                  padding: 14,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                  transition: 'background 200ms ease, color 200ms ease, border-color 200ms ease',
-                }}
-              >
-                <strong style={{ fontFamily: theme.fonts.heading, color: previewColors.text }}>
-                  Dark preview
-                </strong>
-                <span style={{ color: previewColors.secondary, fontSize: '0.78rem', lineHeight: 1.45 }}>
-                  Published 페이지의 DarkModeToggle이 이 색상 세트로 전환됩니다.
-                </span>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                  <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, background: previewColors.primary, color: previewColors.background, fontSize: '0.78rem', fontWeight: 800 }}>
-                    Primary
-                  </span>
-                  <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, border: `1px solid ${previewColors.secondary}`, color: previewColors.secondary, fontSize: '0.78rem', fontWeight: 800 }}>
-                    Secondary
-                  </span>
-                  <span style={{ padding: '7px 10px', borderRadius: theme.radii.md, background: previewColors.muted, color: previewColors.text, fontSize: '0.78rem', fontWeight: 800 }}>
-                    Muted
-                  </span>
-                </div>
+              <div style={sectionHeadingStyle}>Light / Dark simultaneous preview</div>
+              <div style={twoColumnStyle}>
+                {renderThemePreview('Light preview', theme.colors)}
+                {renderThemePreview('Dark preview', darkColors)}
               </div>
 
               {THEME_COLOR_TOKENS.map((token) => (
@@ -818,6 +741,24 @@ export default function SiteSettingsModal({
             </div>
           ) : activeTab === 'typography' ? (
             <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>Site fonts</div>
+              <div style={twoColumnStyle}>
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Heading font</label>
+                  <FontPicker
+                    value={theme.fonts.heading}
+                    onChange={(fontFamily) => updateThemeFont('heading', fontFamily)}
+                  />
+                </div>
+
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Body font</label>
+                  <FontPicker
+                    value={theme.fonts.body}
+                    onChange={(fontFamily) => updateThemeFont('body', fontFamily)}
+                  />
+                </div>
+              </div>
               <div style={sectionHeadingStyle}>Theme text presets</div>
               {THEME_TEXT_PRESET_KEYS.map((key) => {
                 const preset = textPresets[key];
@@ -991,30 +932,7 @@ export default function SiteSettingsModal({
             </div>
           )}
         </div>
-
-        <div style={footerStyle}>
-          <span style={error ? statusStyle : noticeStyle}>{error ?? notice ?? ''}</span>
-          <div style={{ display: 'flex', gap: 8 }}>
-            <button type="button" style={cancelBtnStyle} onClick={onClose}>
-              취소
-            </button>
-            <button
-              type="button"
-              style={saveBtnStyle}
-              onClick={handleSave}
-              disabled={saving || loading}
-              onMouseEnter={(event) => {
-                event.currentTarget.style.background = '#0b5cdb';
-              }}
-              onMouseLeave={(event) => {
-                event.currentTarget.style.background = '#116dff';
-              }}
-            >
-              {saving ? '저장 중...' : '저장'}
-            </button>
-          </div>
-        </div>
       </div>
-    </div>
+    </ModalShell>
   );
 }

@@ -32,7 +32,7 @@ export default function ContentTab({
   }
 
   return (
-    <div className={styles.inspectorFormStack}>
+    <div className={styles.inspectorFormStack} data-inspector-content-adapter="true">
       <Inspector
         node={node}
         onUpdate={onUpdateContent}

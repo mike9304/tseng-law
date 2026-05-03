@@ -30,7 +30,7 @@ export async function runAllChecks(
     ...checkEmptyContent(canvas),
     ...checkBrokenLinks(canvas, site),
     ...checkImageAlt(canvas),
-    ...checkSeoMeta(page),
+    ...checkSeoMeta(page, site),
     ...checkFormTarget(canvas),
     ...checkResponsiveOverflow(canvas),
     ...checkH1Count(canvas),

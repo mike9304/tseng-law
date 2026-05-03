@@ -98,6 +98,17 @@ export interface PageTemplate {
     | 'cafe'
     | 'pet'
     | 'startup'
+    | 'agency'
+    | 'saas'
+    | 'conference'
+    | 'podcast'
+    | 'magazine'
+    | 'dental'
+    | 'yoga'
+    | 'freelancer'
+    | 'wedding'
+    | 'carrental'
+    | 'eventplanner'
     | 'fashion';
   subcategory: string;
   description: string;

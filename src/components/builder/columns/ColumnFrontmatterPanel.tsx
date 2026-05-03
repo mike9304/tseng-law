@@ -69,13 +69,14 @@ export default function ColumnFrontmatterPanel({
   const [seoNoIndex, setSeoNoIndex] = useState(Boolean(initial.seo?.noIndex));
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedRef = useRef('');
+  const hydratedRef = useRef(false);
 
   const selectedCategory = useMemo(
     () => BLOG_ADMIN_CATEGORIES.find((category) => category.slug === blogCategory) ?? BLOG_ADMIN_CATEGORIES[6],
     [blogCategory],
   );
 
-  const save = useCallback(async () => {
+  const buildPayload = useCallback(() => {
     const isoLastmod = lastmod
       ? new Date(`${lastmod}T00:00:00+09:00`).toISOString()
       : new Date().toISOString();
@@ -104,6 +105,33 @@ export default function ColumnFrontmatterPanel({
       },
     };
     const serialized = JSON.stringify(payload);
+    return { payload, serialized };
+  }, [
+    lastmod,
+    reviewStatus,
+    freshness,
+    selectedCategory,
+    blogCategory,
+    tags,
+    authorName,
+    authorTitle,
+    authorPhoto,
+    featured,
+    featuredImage,
+    publishedAt,
+    seoTitle,
+    seoDescription,
+    seoOgImage,
+    seoNoIndex,
+  ]);
+
+  const save = useCallback(async () => {
+    const { serialized } = buildPayload();
+    if (!hydratedRef.current) {
+      lastSavedRef.current = serialized;
+      hydratedRef.current = true;
+      return;
+    }
     if (serialized === lastSavedRef.current) return;
 
     onSaveStatus?.('saving');
@@ -129,22 +157,7 @@ export default function ColumnFrontmatterPanel({
   }, [
     slug,
     locale,
-    lastmod,
-    reviewStatus,
-    freshness,
-    selectedCategory,
-    blogCategory,
-    tags,
-    authorName,
-    authorTitle,
-    authorPhoto,
-    featured,
-    featuredImage,
-    publishedAt,
-    seoTitle,
-    seoDescription,
-    seoOgImage,
-    seoNoIndex,
+    buildPayload,
     onSaveStatus,
   ]);
 
@@ -154,11 +167,16 @@ export default function ColumnFrontmatterPanel({
   }, [save]);
 
   useEffect(() => {
+    if (!hydratedRef.current) {
+      lastSavedRef.current = buildPayload().serialized;
+      hydratedRef.current = true;
+      return undefined;
+    }
     scheduleSave();
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [scheduleSave]);
+  }, [buildPayload, scheduleSave]);
 
   function addTag(value: string) {
     const next = value.trim().replace(/^#/, '');

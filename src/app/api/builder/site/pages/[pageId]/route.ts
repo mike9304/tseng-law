@@ -4,13 +4,18 @@ import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { deletePage, readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
+import {
+  normalizeSeoSlugInput,
+  validateBuilderPageSeo,
+} from '@/lib/builder/seo/validation';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 const updatePageSchema = z.object({
   title: z.string().trim().min(1).max(200),
-  slug: z.string().trim().max(200).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'Slug must be lowercase alphanumeric with hyphens').optional(),
+  slug: z.string().trim().max(200).optional(),
 }).strict();
 
 function validationErrorResponse(error: ZodError): NextResponse {
@@ -25,8 +30,7 @@ function validationErrorResponse(error: ZodError): NextResponse {
 }
 
 function pageHref(locale: string, slug: string, isHomePage?: boolean): string {
-  if (isHomePage) return '/';
-  return `/${locale}/p/${slug}`.replace(/\/+$/, '');
+  return buildSitePagePath(locale, isHomePage ? '' : slug);
 }
 
 function updateNavigationHref(
@@ -59,7 +63,20 @@ export async function PATCH(
     }
 
     const now = new Date().toISOString();
-    const nextSlug = payload.slug ?? page.slug;
+    const nextSlug = payload.slug !== undefined ? normalizeSeoSlugInput(payload.slug) : page.slug;
+    const validation = validateBuilderPageSeo({
+      page: { ...page, slug: nextSlug },
+      site,
+      slug: nextSlug,
+    });
+    const blockers = validation.filter((issue) => issue.severity === 'blocker');
+
+    if (blockers.length > 0) {
+      return NextResponse.json(
+        { ok: false, error: 'validation_error', issues: blockers, validation },
+        { status: 400 },
+      );
+    }
 
     page.title[locale] = payload.title;
     page.slug = nextSlug;

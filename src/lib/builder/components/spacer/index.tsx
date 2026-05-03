@@ -1,5 +1,6 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderSpacerCanvasNode } from '@/lib/builder/canvas/types';
+import styles from './Spacer.module.css';
 
 function SpacerRender({
   node,
@@ -15,20 +16,9 @@ function SpacerRender({
     return (
       <div
         aria-hidden="true"
+        className={styles.edit}
         style={{
-          width: '100%',
-          height: '100%',
           minHeight: size,
-          outline: '1px dashed #cbd5e1',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#94a3b8',
-          fontSize: 11,
-          fontFamily: 'system-ui, sans-serif',
-          letterSpacing: 0.4,
-          textTransform: 'uppercase',
-          background: 'rgba(248, 250, 252, 0.4)',
         }}
       >
         Spacer {size}px
@@ -39,8 +29,8 @@ function SpacerRender({
   return (
     <div
       aria-hidden="true"
+      className={styles.spacer}
       style={{
-        width: '100%',
         height: size,
       }}
     />

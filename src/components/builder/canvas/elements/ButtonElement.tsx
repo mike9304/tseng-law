@@ -52,7 +52,7 @@ export default function ButtonElement({
   const suffix = getButtonVariantSuffix(node.content.style);
   const Tag = (as ?? (href ? 'a' : 'button')) as keyof JSX.IntrinsicElements;
   const elementProps: Record<string, unknown> = {
-    className: 'builder-button-element',
+    className: 'builder-button-element builder-widget-focusable',
     style: {
       width: '100%',
       height: '100%',
@@ -97,24 +97,6 @@ export default function ButtonElement({
     <Tag {...(elementProps as Record<string, never>)}>
       <span>{node.content.label}</span>
       {suffix ? <span aria-hidden>{suffix}</span> : null}
-      <style>{`
-        .builder-button-element:hover {
-          background: var(--builder-button-hover-background) !important;
-          color: var(--builder-button-hover-color) !important;
-          border-color: var(--builder-button-hover-border-color) !important;
-          transform: var(--builder-button-hover-transform) !important;
-          box-shadow: var(--builder-button-hover-box-shadow) !important;
-        }
-        .builder-button-element:active {
-          transform: var(--builder-button-active-transform) !important;
-        }
-        .builder-button-element:disabled,
-        .builder-button-element[aria-disabled='true'] {
-          cursor: not-allowed !important;
-          opacity: var(--builder-button-disabled-opacity) !important;
-          transform: none !important;
-        }
-      `}</style>
     </Tag>
   );
 }

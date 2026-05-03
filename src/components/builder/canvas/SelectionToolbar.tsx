@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import LinkPicker, { type LinkPickerContext } from '@/components/builder/editor/LinkPicker';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
+import styles from './SandboxPage.module.css';
 
 function previewLinkHref(href: string | undefined): string {
   if (!href) return '';
@@ -183,58 +184,34 @@ export default function SelectionToolbar({
       <div
         role="toolbar"
         aria-label="요소 빠른 작업"
+        className={styles.selectionToolbar}
         style={{
-          position: 'absolute',
           top: `${top}px`,
           left: `${left}px`,
           transform: 'translateX(-50%)',
-          height: TOOLBAR_HEIGHT,
-          zIndex: 9999,
-          background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.94))',
-          color: '#fff',
-          border: '1px solid rgba(191, 219, 254, 0.18)',
-          borderRadius: 12,
-          boxShadow: '0 18px 44px rgba(15, 23, 42, 0.32), inset 0 1px 0 rgba(255,255,255,0.08)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 3,
-          padding: '2px 5px',
-          pointerEvents: 'auto',
-          animation: 'fadeIn 120ms ease',
-          backdropFilter: 'blur(12px)',
         }}
         onPointerDown={(event) => event.stopPropagation()}
         onMouseDown={(event) => event.stopPropagation()}
       >
         <span
           title={selectionSummary}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            maxWidth: 104,
-            height: 28,
-            padding: '0 9px',
-            overflow: 'hidden',
-            borderRight: '1px solid rgba(255, 255, 255, 0.12)',
-            color: '#bfdbfe',
-            fontSize: '0.68rem',
-            fontWeight: 800,
-            letterSpacing: '0.02em',
-            textOverflow: 'ellipsis',
-            textTransform: 'uppercase',
-            whiteSpace: 'nowrap',
-          }}
+          className={styles.selectionToolbarSummary}
         >
           {selectionSummary}
         </span>
         {actions.map((action, index) => {
           const isMore = action.key === 'more';
+          const separated = index > 0 && (action.key === 'duplicate' || action.key === 'more');
           return (
             <button
               key={action.key}
               type="button"
               title={action.title}
               disabled={action.disabled}
+              className={[
+                styles.selectionToolbarButton,
+                separated ? styles.selectionToolbarButtonSeparated : '',
+              ].filter(Boolean).join(' ')}
               onClick={(event) => {
                 event.stopPropagation();
                 if (isMore) {
@@ -243,36 +220,13 @@ export default function SelectionToolbar({
                   action.onClick();
                 }
               }}
-              style={{
-                minWidth: 30,
-                height: 30,
-                padding: '0 8px',
-                border: 'none',
-                background: 'transparent',
-                color: action.disabled ? '#475569' : '#f8fafc',
-                cursor: action.disabled ? 'not-allowed' : 'pointer',
-                borderRadius: 8,
-                fontSize: '0.85rem',
-                fontWeight: 800,
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                transition: 'background 100ms ease, color 100ms ease, transform 100ms ease',
-                borderLeft: index > 0 && (action.key === 'duplicate' || action.key === 'more') ? '1px solid rgba(255, 255, 255, 0.12)' : undefined,
-                marginLeft: index > 0 && (action.key === 'duplicate' || action.key === 'more') ? 4 : 0,
-                paddingLeft: index > 0 && (action.key === 'duplicate' || action.key === 'more') ? 12 : 8,
-              }}
-              onMouseEnter={(event) => {
-                if (action.disabled) return;
-                event.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
-                event.currentTarget.style.transform = 'translateY(-1px)';
-              }}
-              onMouseLeave={(event) => {
-                event.currentTarget.style.background = 'transparent';
-                event.currentTarget.style.transform = 'translateY(0)';
-              }}
             >
-              <span style={{ fontSize: action.icon.length === 1 ? '0.95rem' : '0.85rem' }}>{action.icon}</span>
+              <span
+                className={styles.selectionToolbarIcon}
+                data-wide-icon={action.icon.length === 1 ? undefined : 'true'}
+              >
+                {action.icon}
+              </span>
             </button>
           );
         })}
@@ -281,19 +235,11 @@ export default function SelectionToolbar({
         <div
           role="dialog"
           aria-label="링크 편집"
+          className={styles.selectionToolbarPopover}
           style={{
-            position: 'absolute',
             top: `${popoverTop}px`,
             left: `${left}px`,
             transform: 'translateX(-50%)',
-            zIndex: 10000,
-            width: 300,
-            padding: 12,
-            borderRadius: 10,
-            border: '1px solid #dbe3ec',
-            background: '#fff',
-            boxShadow: '0 14px 36px rgba(15, 23, 42, 0.22)',
-            pointerEvents: 'auto',
           }}
           onPointerDown={(event) => event.stopPropagation()}
           onMouseDown={(event) => event.stopPropagation()}

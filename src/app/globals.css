@@ -18952,3 +18952,33 @@ body:has([data-builder-published-page='true']) {
     cursor: pointer;
   }
 }
+
+@media (max-width: 768px) {
+  .site-header-desktop-nav {
+    display: none !important;
+  }
+
+  .site-header-hamburger {
+    display: block !important;
+  }
+}
+
+html[data-theme='dark'] .site-header-logo-light[data-has-dark-logo='true'] {
+  display: none !important;
+}
+
+html[data-theme='dark'] .site-header-logo-dark {
+  display: block !important;
+}
+
+@keyframes siteHeaderFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

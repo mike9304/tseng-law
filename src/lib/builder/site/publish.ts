@@ -25,6 +25,7 @@ import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { PageCanvasRecord } from './types';
 import { runAllChecks, type PublishCheckSuite } from '@/lib/builder/publish-gate/gate-runner';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
 
 // ─── Preview tokens (Blob-persisted for serverless) ──────────────
 
@@ -203,7 +204,7 @@ export async function publishPage(
   }
 
   try {
-    revalidatePath(`/${draftState.record.document.locale}/p/${page.slug || ''}`);
+    revalidatePath(buildSitePagePath(draftState.record.document.locale, page.slug || ''));
   } catch {
     // dev or non-existent path
   }

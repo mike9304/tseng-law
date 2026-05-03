@@ -5,7 +5,7 @@ import type { BookingService, Staff } from '@/lib/builder/bookings/types';
 import type { Slot } from '@/lib/builder/bookings/availability';
 import { textForLocale } from '@/lib/builder/bookings/types';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import styles from './BookingsAdmin.module.css';
+import styles from './BookingFlowSteps.module.css';
 
 type FlowStep = 0 | 1 | 2 | 3;
 

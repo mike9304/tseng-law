@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import './globals.css';
 import './consultation-ai.css';
+import '@/lib/builder/components/_shared/widget-tokens.css';
+import '@/lib/builder/components/_shared/hover-states.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { getSiteUrl } from '@/lib/seo';

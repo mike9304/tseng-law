@@ -43,6 +43,95 @@ async function selectFirstNode(page: Page): Promise<Locator> {
   return expectSelectedNodeHandles(page);
 }
 
+async function startPointerDrag(
+  page: Page,
+  locator: Locator,
+  options: { pointerId?: number; shiftKey?: boolean } = {},
+): Promise<{ pointerId: number; x: number; y: number; shiftKey: boolean }> {
+  const box = await locator.boundingBox();
+  expect(box).toBeTruthy();
+  if (!box) throw new Error('Cannot drag an element without a bounding box');
+  const x = box.x + box.width / 2;
+  const y = box.y + box.height / 2;
+  const pointerId = options.pointerId ?? 7001;
+  const shiftKey = options.shiftKey ?? false;
+  await locator.evaluate((element, init) => {
+    element.dispatchEvent(new PointerEvent('pointerdown', {
+      bubbles: true,
+      cancelable: true,
+      composed: true,
+      isPrimary: true,
+      pointerType: 'mouse',
+      button: 0,
+      buttons: 1,
+      ...init,
+    }));
+  }, { pointerId, clientX: x, clientY: y, shiftKey });
+  return { pointerId, x, y, shiftKey };
+}
+
+async function movePointerDrag(
+  page: Page,
+  drag: { pointerId: number; x: number; y: number; shiftKey: boolean },
+  deltaX: number,
+  deltaY: number,
+): Promise<void> {
+  await page.evaluate((init) => {
+    window.dispatchEvent(new PointerEvent('pointermove', {
+      bubbles: true,
+      cancelable: true,
+      composed: true,
+      isPrimary: true,
+      pointerType: 'mouse',
+      button: 0,
+      buttons: 1,
+      pointerId: init.pointerId,
+      clientX: init.x + init.deltaX,
+      clientY: init.y + init.deltaY,
+      shiftKey: init.shiftKey,
+    }));
+  }, { ...drag, deltaX, deltaY });
+}
+
+async function finishPointerDrag(
+  page: Page,
+  drag: { pointerId: number; x: number; y: number; shiftKey: boolean },
+  deltaX: number,
+  deltaY: number,
+): Promise<void> {
+  await page.evaluate((init) => {
+    window.dispatchEvent(new PointerEvent('pointerup', {
+      bubbles: true,
+      cancelable: true,
+      composed: true,
+      isPrimary: true,
+      pointerType: 'mouse',
+      button: 0,
+      buttons: 0,
+      pointerId: init.pointerId,
+      clientX: init.x + init.deltaX,
+      clientY: init.y + init.deltaY,
+      shiftKey: init.shiftKey,
+    }));
+  }, { ...drag, deltaX, deltaY });
+}
+
+async function navLabelFromApi(page: Page, itemId: string): Promise<string | null> {
+  const response = await page.request.get('/api/builder/site/navigation?locale=ko');
+  if (!response.ok()) return null;
+  const payload = (await response.json()) as {
+    navigation?: Array<{ id: string; label: string | Record<string, string> }>;
+  };
+  const item = payload.navigation?.find((candidate) => candidate.id === itemId);
+  if (!item) return null;
+  if (typeof item.label === 'string') return item.label;
+  return item.label.ko ?? item.label.en ?? item.label['zh-hant'] ?? null;
+}
+
+async function expectUndoChip(page: Page): Promise<void> {
+  await expect(page.getByText(/Undid:/).first()).toBeVisible();
+}
+
 async function closeModalOverlayIfPresent(page: Page): Promise<void> {
   const closeButton = page.getByRole('button', { name: /Close|닫기|취소|Cancel/ }).first();
   if ((await closeButton.count()) === 0 || !(await closeButton.isVisible())) return;
@@ -62,6 +151,13 @@ async function waitForEditorCss(page: Page): Promise<void> {
     await page.reload({ waitUntil: 'domcontentloaded' });
     await expect.poll(isStyled, { timeout: 15_000 }).toBe(true);
   }
+}
+
+async function recoverFromDevChunkOverlay(page: Page): Promise<void> {
+  const overlay = page.getByText(/Unhandled Runtime Error|ChunkLoadError/).first();
+  if (!(await overlay.isVisible().catch(() => false))) return;
+  await page.reload({ waitUntil: 'domcontentloaded' });
+  await waitForEditorCss(page);
 }
 
 test.describe('/ko/admin-builder desktop editor parity smoke', () => {
@@ -105,6 +201,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(topBar).toBeVisible();
     await expect(topBar).toContainText('Publish');
     await waitForEditorCss(page);
+    await recoverFromDevChunkOverlay(page);
     await expect.poll(async () => (await topBar.boundingBox())?.height ?? 999).toBeLessThanOrEqual(36);
     const topBarBox = await topBar.boundingBox();
     expect(topBarBox?.height).toBeGreaterThanOrEqual(30);
@@ -141,12 +238,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     try {
       await navLabelInput.fill(temporaryNavLabel);
       await navDrawer.getByRole('button', { name: '저장' }).click();
-      await expect(editableMenuItemById).toContainText(temporaryNavLabel);
+      await expect.poll(() => navLabelFromApi(page, menuItemId || '')).toBe(temporaryNavLabel);
+      await expect(editableMenuItemById).toHaveText(temporaryNavLabel);
     } finally {
       await editableMenuItemById.click();
       await navDrawer.locator('input').first().fill(originalNavLabel);
       await navDrawer.getByRole('button', { name: '저장' }).click();
-      await expect(editableMenuItemById).toContainText(originalNavLabel);
+      await expect.poll(() => navLabelFromApi(page, menuItemId || '')).toBe(originalNavLabel);
+      await expect(editableMenuItemById).toHaveText(originalNavLabel);
     }
 
     await page.getByTitle('Add').click();
@@ -181,7 +280,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await page.keyboard.press(`${shortcutModifier}+D`);
     await expect(page.getByText('Duplicated')).toBeVisible();
     await page.keyboard.press(`${shortcutModifier}+Z`);
-    await expect(page.getByText(/Undid:/)).toBeVisible();
+    await expectUndoChip(page);
 
     await page.keyboard.press(`${shortcutModifier}+C`);
     await rail.getByRole('button', { name: 'Pages', exact: true }).click();
@@ -193,16 +292,61 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByText(/Pasted 1 item/)).toBeVisible();
     await expectSelectedNodeHandles(page);
     await page.keyboard.press(`${shortcutModifier}+Z`);
-    await expect(page.getByText(/Undid:/)).toBeVisible();
+    await expectUndoChip(page);
     await pagesDrawerForPaste.getByRole('button', { name: /홈|Home/ }).first().click();
     await expect(page.getByText(/Loaded page:/)).toBeVisible();
     await rail.getByRole('button', { name: 'Pages', exact: true }).click();
     await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
 
-    await selectFirstNode(page);
     await closeModalOverlayIfPresent(page);
-    const resizeHandle = page.locator('[class*="resizeHandleE"]:visible').first();
+    const cursorNode = await selectFirstNode(page);
+    const resizeHandle = cursorNode.locator('[class*="resizeHandleE"]:visible').first();
     await expect(resizeHandle).toHaveCSS('cursor', 'ew-resize');
+
+    const resizeNode = cursorNode;
+    const resizeBefore = await resizeNode.boundingBox();
+    const resizeCorner = resizeNode.locator('[class*="resizeHandleSE"]:visible').first();
+    await expect(resizeCorner).toHaveCSS('cursor', 'nwse-resize');
+    const resizeDrag = await startPointerDrag(page, resizeCorner, { shiftKey: true });
+    await expect(page.locator('[data-canvas-interaction="resize"]')).toBeVisible();
+    await movePointerDrag(page, resizeDrag, 82, 36);
+    await expect(page.locator('[class*="canvasOverlayResizeReadout"]').first()).toContainText(/\d+\s*x\s*\d+/);
+    await finishPointerDrag(page, resizeDrag, 82, 36);
+    const resizedNode = await expectSelectedNodeHandles(page);
+    const resizeAfter = await resizedNode.boundingBox();
+    expect(resizeBefore).toBeTruthy();
+    expect(resizeAfter).toBeTruthy();
+    if (resizeBefore && resizeAfter) {
+      expect(resizeAfter.width).toBeGreaterThan(resizeBefore.width);
+      const beforeRatio = resizeBefore.width / resizeBefore.height;
+      const afterRatio = resizeAfter.width / resizeAfter.height;
+      expect(Math.abs(afterRatio - beforeRatio)).toBeLessThan(0.25);
+    }
+    await expect(page.getByText(/Saving|Saved/).first()).toBeVisible({ timeout: 5_000 });
+    await page.keyboard.press(`${shortcutModifier}+Z`);
+    await expectUndoChip(page);
+
+    const rotateNode = await selectFirstNode(page);
+    const rotationHandle = rotateNode.locator('[class*="rotationHandle"]').first();
+    const rotateBox = await rotateNode.boundingBox();
+    const rotationHandleBox = await rotationHandle.boundingBox();
+    expect(rotateBox).toBeTruthy();
+    expect(rotationHandleBox).toBeTruthy();
+    if (rotateBox && rotationHandleBox) {
+      const rotationDrag = await startPointerDrag(page, rotationHandle, { pointerId: 7002, shiftKey: true });
+      const targetX = rotateBox.x + rotateBox.width + 96;
+      const targetY = rotateBox.y + 12;
+      await movePointerDrag(page, rotationDrag, targetX - rotationDrag.x, targetY - rotationDrag.y);
+      const rotationReadout = page.locator('[class*="rotationReadout"]').first();
+      await expect(rotationReadout).toBeVisible();
+      const readoutText = await rotationReadout.textContent();
+      const degrees = Number((readoutText ?? '').replace(/[^0-9.-]/g, ''));
+      expect(Number.isFinite(degrees)).toBe(true);
+      expect(Math.abs(degrees % 15)).toBe(0);
+      await finishPointerDrag(page, rotationDrag, targetX - rotationDrag.x, targetY - rotationDrag.y);
+      await page.keyboard.press(`${shortcutModifier}+Z`);
+      await expectUndoChip(page);
+    }
 
     await page.getByTitle('현재 페이지 SEO').click();
     await expect(page.getByText('Google preview')).toBeVisible();

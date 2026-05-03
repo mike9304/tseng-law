@@ -104,7 +104,11 @@ export default function CanvasNode({
         x: event.clientX - rect.left + 14,
         y: event.clientY - rect.top - 30,
       });
-      activeEl.setPointerCapture(event.pointerId);
+      try {
+        activeEl.setPointerCapture(event.pointerId);
+      } catch {
+        // Pointer capture is best effort; window-level listeners keep rotation dragging stable.
+      }
       beginMutationSession();
       let didCleanup = false;
 
@@ -127,12 +131,16 @@ export default function CanvasNode({
         didCleanup = true;
         rotationDrag.current = null;
         setRotationReadout(null);
-        if (activeEl.hasPointerCapture(pointerId)) {
-          activeEl.releasePointerCapture(pointerId);
+        try {
+          if (activeEl.hasPointerCapture(pointerId)) {
+            activeEl.releasePointerCapture(pointerId);
+          }
+        } catch {
+          // Ignore capture cleanup races when the browser has already released it.
         }
-        activeEl.removeEventListener('pointermove', handlePointerMove);
-        activeEl.removeEventListener('pointerup', handlePointerUp);
-        activeEl.removeEventListener('pointercancel', handlePointerCancel);
+        window.removeEventListener('pointermove', handlePointerMove);
+        window.removeEventListener('pointerup', handlePointerUp);
+        window.removeEventListener('pointercancel', handlePointerCancel);
         window.removeEventListener('keydown', handleKeyDown, true);
         if (mode === 'commit') {
           commitMutationSession();
@@ -156,9 +164,9 @@ export default function CanvasNode({
         cleanupRotationDrag('cancel');
       }
 
-      activeEl.addEventListener('pointermove', handlePointerMove);
-      activeEl.addEventListener('pointerup', handlePointerUp);
-      activeEl.addEventListener('pointercancel', handlePointerCancel);
+      window.addEventListener('pointermove', handlePointerMove);
+      window.addEventListener('pointerup', handlePointerUp);
+      window.addEventListener('pointercancel', handlePointerCancel);
       window.addEventListener('keydown', handleKeyDown, true);
     },
     [node.id, node.rotation, beginMutationSession, cancelMutationSession, commitMutationSession, updateNode],

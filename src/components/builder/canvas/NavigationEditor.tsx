@@ -178,6 +178,11 @@ export default function NavigationEditor({
           }),
         });
         if (!response.ok) throw new Error('Navigation save failed');
+        const payload = (await response.json().catch(() => null)) as { navigation?: BuilderNavItem[] } | null;
+        if (Array.isArray(payload?.navigation)) {
+          setItems(payload.navigation);
+          onNavigationChange?.(payload.navigation);
+        }
       } catch {
         setSaveError('메뉴 저장에 실패했습니다.');
       } finally {

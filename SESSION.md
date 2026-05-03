@@ -611,3 +611,24 @@
 - `/api/builder/site/navigation?locale=ko` ✅: `nav-columns.pageId`가 실제 columns pageId로 연결됨
 - `/api/builder/columns?locale=ko` ✅: 기존 KO 칼럼 17개 반환
 - `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, Columns admin/edit route 200 + Pages에서 칼럼 페이지 열기 + `columns-feed` 렌더)
+
+## 2026-05-03 Codex /goal G-Editor interaction verification 보강
+
+범위:
+- W06 snap engine에 6px tolerance / out-of-range no snap / `24px` spacing guide 단위 테스트를 추가.
+- Alignment guide line/chip에 `data-alignment-guide-*` 속성을 추가해 Playwright가 분홍 alignment/주황 spacing guide를 안정적으로 검증할 수 있게 함.
+- W07 resize smoke를 실제 SE handle pointer drag로 확장하고, `320 x 200` 형식 floating readout + Shift aspect-ratio 유지 + cursor를 검증.
+- W08 rotation drag가 pointer capture에만 의존하지 않도록 window-level move/up listener로 보강하고, Shift 15도 snap degree readout을 Playwright에서 검증.
+- Navigation editor 저장 후 PUT 응답을 source of truth로 반영해 header preview가 stale GET에 되돌아가는 race를 방지.
+- 메뉴 라벨 편집 smoke가 `업무분야 Test`를 정확히 원복했는지 API와 header text를 모두 검증하도록 강화.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 61 guarded mutation handlers)
+- `npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` warnings only)
+- `npx vitest run src/lib/builder/canvas/__tests__/snap.test.ts` ✅ (3/3)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, resize tooltip/Shift ratio + rotate 15도 snap + navigation 정확 원복 포함)
+- `/api/builder/site/navigation?locale=ko` ✅: `업무분야` 원복 확인
+- 빌드 후 `.next` dev cache를 비우고 `npm run dev` 재시작 ✅: 3000번 `/ko/admin-builder` authenticated 200

@@ -19,6 +19,8 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
           : '0 0 0 1px rgba(190, 24, 93, 0.2), 0 0 14px rgba(190, 24, 93, 0.3)';
         const chip = g.label ? (
           <span
+            data-alignment-guide-chip
+            data-alignment-guide-tone={g.tone ?? 'alignment'}
             style={{
               position: 'absolute',
               left: g.axis === 'vertical' ? g.position + 7 : (g.from + g.to) / 2,
@@ -48,6 +50,8 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
           return (
             <div key={key}>
               <div
+                data-alignment-guide-line
+                data-alignment-guide-tone={g.tone ?? 'alignment'}
                 style={{
                   position: 'absolute',
                   left: g.position,
@@ -69,6 +73,8 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
         return (
           <div key={key}>
             <div
+              data-alignment-guide-line
+              data-alignment-guide-tone={g.tone ?? 'alignment'}
               style={{
                 position: 'absolute',
                 left: g.from,

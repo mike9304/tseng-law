@@ -116,7 +116,6 @@ async function fetchSiteDraft(
 export default function SandboxPage({
   initialDocument,
   locale,
-  backend,
   initialPageId,
   siteName,
   siteSettings,
@@ -591,9 +590,7 @@ export default function SandboxPage({
         <GoogleFontsLoader extraFamilies={collectThemeFontFamilies(siteThemeState)} />
         <SandboxTopBar
         locale={locale}
-        backend={backend}
         draftSaveState={draftSaveState}
-        nodeCount={document?.nodes.length ?? 0}
         selectedSummary={
           selectedNodeIds.length > 1
             ? `${selectedNodeIds.length} nodes`
@@ -609,8 +606,11 @@ export default function SandboxPage({
         onOpenSettings={() => setSettingsOpen(true)}
         onOpenHistory={() => setHistoryOpen(true)}
         onOpenPreview={() => setPreviewOpen(true)}
+        onOpenPages={() => setActiveDrawer('pages')}
         activePageId={activePageId}
         onLocaleChange={handleLocaleChange}
+        siteName={siteName}
+        currentSlug={currentSlugState}
       />
 
         {draftConflict ? (
@@ -637,7 +637,7 @@ export default function SandboxPage({
             aria-pressed={activeDrawer === 'pages'}
             title="Pages"
           >
-            <span className={styles.railButtonIcon} aria-hidden="true">📄</span>
+            <span className={styles.railButtonIcon} aria-hidden="true">▤</span>
             <span className={styles.railButtonLabel}>Pages</span>
           </button>
           <button
@@ -647,7 +647,7 @@ export default function SandboxPage({
             aria-pressed={activeDrawer === 'add'}
             title="Add"
           >
-            <span className={styles.railButtonIcon} aria-hidden="true">➕</span>
+            <span className={styles.railButtonIcon} aria-hidden="true">+</span>
             <span className={styles.railButtonLabel}>Add</span>
           </button>
           <button
@@ -657,7 +657,7 @@ export default function SandboxPage({
             aria-pressed={activeDrawer === 'design'}
             title="Design"
           >
-            <span className={styles.railButtonIcon} aria-hidden="true">🎨</span>
+            <span className={styles.railButtonIcon} aria-hidden="true">◇</span>
             <span className={styles.railButtonLabel}>Design</span>
           </button>
           <button
@@ -667,7 +667,7 @@ export default function SandboxPage({
             aria-pressed={activeDrawer === 'layers'}
             title="Layers"
           >
-            <span className={styles.railButtonIcon} aria-hidden="true">🧩</span>
+            <span className={styles.railButtonIcon} aria-hidden="true">☰</span>
             <span className={styles.railButtonLabel}>Layers</span>
           </button>
           <button
@@ -677,7 +677,7 @@ export default function SandboxPage({
             aria-pressed={activeDrawer === 'nav'}
             title="Navigation"
           >
-            <span className={styles.railButtonIcon} aria-hidden="true">🧭</span>
+            <span className={styles.railButtonIcon} aria-hidden="true">↗</span>
             <span className={styles.railButtonLabel}>Navigation</span>
           </button>
           <button
@@ -687,7 +687,7 @@ export default function SandboxPage({
             aria-pressed={activeDrawer === 'history'}
             title="History"
           >
-            <span className={styles.railButtonIcon} aria-hidden="true">🕘</span>
+            <span className={styles.railButtonIcon} aria-hidden="true">↺</span>
             <span className={styles.railButtonLabel}>History</span>
           </button>
         </div>

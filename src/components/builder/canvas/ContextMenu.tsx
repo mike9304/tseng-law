@@ -63,7 +63,7 @@ export default function ContextMenu({
       <div className={styles.contextMenuActions}>
         {actions.map((action) => (
           action.separator ? (
-            <hr key={action.key} style={{ border: 'none', borderTop: '1px solid #e5e7eb', margin: '4px 0' }} />
+            <hr key={action.key} className={styles.contextMenuDivider} />
           ) : (
             <button
               key={action.key}
@@ -78,11 +78,11 @@ export default function ContextMenu({
                 onClose();
               }}
             >
-              <span style={{ display: 'flex', alignItems: 'center', gap: 8, flex: 1 }}>
-                {action.icon && <span style={{ width: 16, textAlign: 'center', fontSize: '0.8rem' }}>{action.icon}</span>}
+              <span className={styles.contextMenuActionLabel}>
+                {action.icon && <span className={styles.contextMenuActionIcon}>{action.icon}</span>}
                 {action.label}
               </span>
-              {action.shortcut && <kbd style={{ fontSize: '0.7rem', color: '#9ca3af', marginLeft: 'auto', fontFamily: 'system-ui' }}>{action.shortcut}</kbd>}
+              {action.shortcut && <kbd className={styles.contextMenuShortcut}>{action.shortcut}</kbd>}
             </button>
           )
         ))}

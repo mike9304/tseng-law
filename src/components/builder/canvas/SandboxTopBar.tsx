@@ -20,9 +20,7 @@ const VIEWPORT_OPTIONS: Array<{ mode: ViewportMode; label: string; icon: string 
 
 export default function SandboxTopBar({
   locale,
-  backend,
   draftSaveState,
-  nodeCount,
   selectedSummary,
   selectionCount,
   viewport,
@@ -32,13 +30,14 @@ export default function SandboxTopBar({
   onOpenSettings,
   onOpenHistory,
   onOpenPreview,
+  onOpenPages,
   activePageId,
   onLocaleChange,
+  siteName,
+  currentSlug,
 }: {
   locale: string;
-  backend: string;
   draftSaveState: 'idle' | 'saving' | 'saved' | 'error';
-  nodeCount: number;
   selectedSummary: string;
   selectionCount: number;
   viewport: ViewportMode;
@@ -48,31 +47,45 @@ export default function SandboxTopBar({
   onOpenSettings?: () => void;
   onOpenHistory?: () => void;
   onOpenPreview?: () => void;
+  onOpenPages?: () => void;
   activePageId?: string | null;
   onLocaleChange?: (locale: Locale, linkedPageId: string | null) => void;
+  siteName?: string;
+  currentSlug?: string;
 }) {
   const { document, selectedNodeId, resetResponsiveOverride } = useBuilderCanvasStore();
-  const saveLabel = draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : '';
+  const saveLabel = draftSaveState === 'saving' ? 'Saving...' : draftSaveState === 'saved' ? 'Saved' : draftSaveState === 'error' ? 'Save failed' : '';
   const saveClass = draftSaveState === 'saving' ? styles.statusBadgeSaving : draftSaveState === 'saved' ? styles.statusBadgeSaved : draftSaveState === 'error' ? styles.statusBadgeError : '';
   const canOpenSeo = Boolean(onOpenSeo && activePageId);
   const selectedNode = document?.nodes.find((node) => node.id === selectedNodeId) ?? null;
   const hasSelectedOverride = Boolean(selectedNode && hasResponsiveOverride(selectedNode, viewport));
   const canResetViewport = viewport !== 'desktop' && Boolean(selectedNode) && hasSelectedOverride;
+  const pageLabel = currentSlug?.trim() ? `/${currentSlug.trim()}` : 'Home';
 
   return (
     <header className={styles.topBar}>
       <div className={styles.topBarTitle}>
-        <strong
-          style={{ fontSize: '0.95rem', color: '#0f172a', cursor: onOpenSettings ? 'pointer' : 'default' }}
+        <button
+          type="button"
+          className={styles.siteNameButton}
           title="사이트 설정"
           onClick={onOpenSettings}
         >
-          호정국제
-        </strong>
-        {selectionCount > 0 && <span className={styles.topBarChip}>{selectionCount}개 선택</span>}
+          <span className={styles.siteMark} aria-hidden="true" />
+          <span>{siteName || '호정국제'}</span>
+        </button>
+        <button
+          type="button"
+          className={styles.pageDropdownButton}
+          title="Pages"
+          onClick={onOpenPages}
+        >
+          <span>{pageLabel}</span>
+          <span aria-hidden="true">⌄</span>
+        </button>
       </div>
 
-      <div className={styles.topBarMeta} style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+      <div className={styles.topBarMeta}>
         {onLocaleChange ? (
           <LocaleSwitcher
             currentLocale={locale as Locale}
@@ -82,10 +95,6 @@ export default function SandboxTopBar({
         ) : (
           <span className={styles.topBarChip}>locale: {locale}</span>
         )}
-        <span className={styles.topBarChip}>backend: {backend}</span>
-        <span className={styles.topBarChip}>nodes: {nodeCount}</span>
-        <span className={styles.topBarChip}>selected: {selectedSummary}</span>
-        <span className={styles.topBarChip}>Space + drag: pan</span>
         <div className={styles.breakpointSwitcher} aria-label="Viewport breakpoint switcher">
           {VIEWPORT_OPTIONS.map((option) => {
             const active = viewport === option.mode;
@@ -106,8 +115,8 @@ export default function SandboxTopBar({
           })}
           <button
             type="button"
-            className={styles.breakpointResetButton}
-            disabled={!canResetViewport}
+              className={styles.breakpointResetButton}
+              disabled={!canResetViewport}
             title={selectedNode && viewport !== 'desktop'
               ? `Reset ${viewport} overrides for ${selectedNode.id}`
               : 'Select a node on tablet/mobile to reset overrides'}
@@ -117,12 +126,17 @@ export default function SandboxTopBar({
             }}
           >
             <BreakpointBadge viewport={viewport} active={hasSelectedOverride} label="override" />
-            <span>Reset to desktop</span>
+            <span>Reset</span>
           </button>
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+      <div className={styles.topBarActions}>
+        {selectionCount > 0 ? (
+          <span className={styles.selectionPill} title={selectedSummary}>
+            {selectionCount} selected
+          </span>
+        ) : null}
         {draftSaveState === 'saving' && <span className={styles.savingSpinner} />}
         {saveLabel && <span className={`${styles.topBarChip} ${saveClass}`}>{saveLabel}</span>}
         {onOpenHistory && (
@@ -139,32 +153,16 @@ export default function SandboxTopBar({
         <button
           type="button"
           className={styles.topBarChip}
-          title="미리보기 (디바이스 프레임)"
-          style={{
-            cursor: onOpenPreview ? 'pointer' : 'not-allowed',
-            opacity: onOpenPreview ? 1 : 0.5,
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 4,
-          }}
+          title="Preview"
           disabled={!onOpenPreview}
           onClick={onOpenPreview}
         >
-          <span aria-hidden style={{ fontSize: '0.85rem' }}>👁</span>
-          <span>미리보기</span>
+          Preview
         </button>
         <button
           type="button"
           className={styles.topBarChip}
           title="현재 페이지 SEO"
-          style={{
-            cursor: canOpenSeo ? 'pointer' : 'not-allowed',
-            opacity: canOpenSeo ? 1 : 0.5,
-            borderColor: '#cbd5e1',
-            background: '#fff',
-            color: '#0f172a',
-            fontWeight: 600,
-          }}
           disabled={!canOpenSeo}
           onClick={onOpenSeo}
         >
@@ -172,11 +170,11 @@ export default function SandboxTopBar({
         </button>
         <button
           type="button"
-          style={{ padding: '6px 16px', background: '#123b63', color: '#fff', border: 'none', borderRadius: 6, fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer' }}
+          className={styles.publishButton}
           title="사이트 발행"
           onClick={onPublish}
         >
-          발행
+          Publish
         </button>
       </div>
     </header>

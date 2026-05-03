@@ -222,6 +222,23 @@ export function checkBrokenLinks(
   return results;
 }
 
+// 허용 image extension. upload-validation.ts와 동기화 (E4).
+const PUBLISH_GATE_ALLOWED_IMAGE_EXTENSIONS = new Set([
+  '.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.avif',
+]);
+
+function imageSrcExtension(src: string): string | null {
+  try {
+    const path = src.startsWith('http') ? new URL(src).pathname : src;
+    const lastDot = path.lastIndexOf('.');
+    if (lastDot < 0) return null;
+    const ext = path.slice(lastDot).toLowerCase().split('?')[0].split('#')[0];
+    return ext;
+  } catch {
+    return null;
+  }
+}
+
 export function checkImageAlt(doc: BuilderCanvasDocument): CheckResult[] {
   const results: CheckResult[] = [];
   for (const node of doc.nodes) {
@@ -246,6 +263,20 @@ export function checkImageAlt(doc: BuilderCanvasDocument): CheckResult[] {
         message: `이미지 alt 텍스트가 없습니다 (${node.id}).`,
         affectedNodeIds: [node.id],
         fixHint: 'Inspector 에서 alt 텍스트를 입력하세요. 장식용이면 빈 문자열도 명시적으로 입력하세요.',
+      });
+    }
+
+    // E4: extension 기반 MIME 검증. 허용 외(예: .bmp, .tiff, .ico) 시 blocker.
+    // 상대 경로 / hash-based 파일명은 extension 추출 불가 → skip.
+    const ext = imageSrcExtension(node.content.src);
+    if (ext && !PUBLISH_GATE_ALLOWED_IMAGE_EXTENSIONS.has(ext)) {
+      results.push({
+        id: `image-unsupported-mime-${node.id}`,
+        severity: 'blocker',
+        category: 'images',
+        message: `이미지 형식이 지원되지 않습니다 (${node.id}, ${ext}). 허용: jpg/jpeg/png/gif/webp/svg/avif.`,
+        affectedNodeIds: [node.id],
+        fixHint: 'JPG/PNG/WebP/SVG/AVIF/GIF 형식의 이미지를 사용하세요.',
       });
     }
   }

@@ -30,6 +30,7 @@ export default function ContainerElement({
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
   const link = sanitizeLinkValue(content.link);
   const interactive = mode === 'published';
+  const hasChildren = Boolean(children);
   const lightboxSlug = link?.href.startsWith('lightbox:')
     ? link.href.slice('lightbox:'.length).trim()
     : '';
@@ -78,6 +79,7 @@ export default function ContainerElement({
         height: '100%',
         boxSizing: 'border-box' as const,
         position: 'relative' as const,
+        pointerEvents: mode === 'edit' && hasChildren ? 'none' as const : undefined,
         ...(layoutMode !== 'absolute' ? layoutCSS : {}),
       },
     };
@@ -103,6 +105,7 @@ export default function ContainerElement({
         WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
         boxSizing: 'border-box',
         position: 'relative',
+        pointerEvents: mode === 'edit' && hasChildren ? 'none' : undefined,
         ...layoutCSS,
       }}
     >

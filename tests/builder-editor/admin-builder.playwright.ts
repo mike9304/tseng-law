@@ -24,16 +24,31 @@ async function closeModalOverlayIfPresent(page: Page): Promise<void> {
   await page.waitForTimeout(150);
 }
 
+async function waitForEditorCss(page: Page): Promise<void> {
+  const isStyled = async () => page.locator('header[class*="topBar"]').first().evaluate((element) => {
+    const style = window.getComputedStyle(element);
+    return style.display === 'grid' && Number.parseFloat(style.height) <= 36;
+  }).catch(() => false);
+
+  try {
+    await expect.poll(isStyled, { timeout: 15_000 }).toBe(true);
+  } catch {
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await expect.poll(isStyled, { timeout: 15_000 }).toBe(true);
+  }
+}
+
 test.describe('/ko/admin-builder desktop editor parity smoke', () => {
   test('covers Wix-like editor chrome, selection, shortcuts, panels, and publish gates', async ({ page }) => {
     await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
 
-    const topBar = page.locator('[class*="topBar"]').first();
+    const topBar = page.locator('header[class*="topBar"]').first();
     await expect(topBar).toBeVisible();
     await expect(topBar).toContainText('Publish');
+    await waitForEditorCss(page);
+    await expect.poll(async () => (await topBar.boundingBox())?.height ?? 999).toBeLessThanOrEqual(36);
     const topBarBox = await topBar.boundingBox();
     expect(topBarBox?.height).toBeGreaterThanOrEqual(30);
-    expect(topBarBox?.height).toBeLessThanOrEqual(36);
 
     const rail = page.locator('[class*="iconRail"]').first();
     await expect(rail).toBeVisible();
@@ -43,10 +58,20 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
 
     await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
     await expect(page.getByTitle('사이트 발행')).toBeVisible();
+    const stageBox = await page.getByRole('application', { name: 'Canvas editor' }).boundingBox();
+    expect(stageBox?.y ?? 9999).toBeLessThan(130);
+    await expect(page.getByRole('navigation').getByRole('link', { name: '칼럼' })).toBeVisible();
 
     await page.getByTitle('Add').click();
     await expect(page.getByText('Catalog')).toBeVisible();
     await expect(page.getByText('Basic')).toBeVisible();
+
+    await rail.getByRole('button', { name: 'Columns', exact: true }).click();
+    await expect(page.getByText('Open columns admin')).toBeVisible();
+    await expect(page.getByText('View public columns')).toBeVisible();
+
+    await page.locator('[class*="globalHeaderRegion"]').click({ position: { x: 360, y: 16 }, force: true });
+    await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();
 
     const selectedNode = await selectFirstNode(page);
     await closeModalOverlayIfPresent(page);
@@ -74,6 +99,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
 
     await page.getByTitle('현재 페이지 SEO').click();
     await expect(page.getByText('Google preview')).toBeVisible();
+    await page.getByRole('button', { name: 'Social share' }).click();
     await expect(page.getByText('OG image preview')).toBeVisible();
     await closeModalOverlayIfPresent(page);
 
@@ -89,6 +115,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await page.getByTitle('버전 히스토리').click();
     await expect(page.getByText('버전 히스토리')).toBeVisible();
     await expect(page.getByText('현재 Draft').first()).toBeVisible();
-    await page.keyboard.press('Escape');
+    await closeModalOverlayIfPresent(page);
+
+    const officeMap = page.locator('[data-node-id="home-offices-layout-0-map"]').first();
+    await expect(officeMap).toBeVisible();
+    await officeMap.scrollIntoViewIfNeeded();
+    await officeMap.click({ position: { x: 24, y: 24 } });
+    await page.getByRole('button', { name: 'content' }).click();
+    await expect(page.getByText('사무소 프리셋')).toBeVisible();
+    await expect(page.locator('textarea').first()).toHaveValue(/臺中市北區館前路19號樓之1/);
   });
 });

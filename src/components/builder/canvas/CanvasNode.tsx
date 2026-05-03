@@ -260,7 +260,8 @@ export default function CanvasNode({
   const isRootNode = !node.parentId;
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
   const isInteractive = !isDimmedRoot;
-  const selectionZIndexBoost = selected ? 10000 : 0;
+  const preservesHitTestLayer = node.kind === 'image' || node.kind === 'video-embed' || isContainerLikeKind(node.kind);
+  const selectionZIndexBoost = selected && !preservesHitTestLayer ? 10000 : 0;
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
   const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
   const nodesById = new Map(allNodes.map((candidate) => [candidate.id, candidate]));
@@ -366,7 +367,7 @@ export default function CanvasNode({
         transform: `rotate(${node.rotation}deg)`,
         transformOrigin: 'center center',
         opacity: isDimmedRoot ? 0.3 : 1,
-        pointerEvents: isDimmedRoot || isActiveGroupFrame ? 'none' : undefined,
+        pointerEvents: isDimmedRoot || isActiveGroupFrame || (isContainerWithChildren && !isEditing) ? 'none' : undefined,
         outline: isActiveGroupFrame ? '2px dashed rgba(37, 99, 235, 0.72)' : undefined,
         outlineOffset: isActiveGroupFrame ? 4 : undefined,
         fontSize: effectiveFontSize ? `${effectiveFontSize}px` : undefined,
@@ -488,6 +489,7 @@ export default function CanvasNode({
               : 'none'),
           opacity: renderedOpacity,
           overflow: isContainerLikeKind(node.kind) ? 'visible' : undefined,
+          pointerEvents: isEditing ? 'auto' : 'none',
           transform: bodyTransform,
           transformOrigin: bodyTransform || editorAnimationStyle.transformOrigin ? 'center center' : undefined,
           transition: bodyTransition,

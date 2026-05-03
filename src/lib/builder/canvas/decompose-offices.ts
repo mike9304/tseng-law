@@ -1,4 +1,5 @@
 import type { BuilderCanvasNode } from './types';
+import { createDefaultCanvasNodeStyle } from './types';
 import type { Locale } from '@/lib/locales';
 import {
   HOME_STAGE_WIDTH,
@@ -198,31 +199,21 @@ export function createOfficesDecomposedNodes(
         label: `home offices layout ${index + 1}`,
         className: 'office-layout',
       }),
-      createHomeContainerNode({
+      {
         id: mapId,
+        kind: 'map',
         parentId: layoutId,
         rect: { x: 0, y: 0, width: 660, height: 360 },
+        style: createDefaultCanvasNodeStyle({ borderRadius: 12 }),
         zIndex: 0,
-        label: `home offices map ${index + 1}`,
-        className: 'office-map-wrap',
-      }),
-      createHomeTextNode({
-        id: `${mapId}-label`,
-        parentId: mapId,
-        rect: { x: 28, y: 28, width: 240, height: 24 },
-        zIndex: 0,
-        text: `${office.title} Map`,
-        as: 'div',
-        fontWeight: 'medium',
-      }),
-      createHomeTextNode({
-        id: `${mapId}-address`,
-        parentId: mapId,
-        rect: { x: 28, y: 64, width: 560, height: 44 },
-        zIndex: 1,
-        text: office.address,
-        as: 'p',
-      }),
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          address: office.address,
+          zoom: 16,
+        },
+      },
       createHomeContainerNode({
         id: cardId,
         parentId: layoutId,

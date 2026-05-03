@@ -212,6 +212,20 @@ const pageSeeds: PageSeedDefinition[] = [
   },
 ];
 
+const extraNavigationItems: Array<{
+  id: string;
+  pageId: string;
+  href: string;
+  label: Record<Locale, string>;
+}> = [
+  {
+    id: 'nav-columns',
+    pageId: 'external-columns',
+    href: '/columns',
+    label: { ko: '칼럼', 'zh-hant': '專欄', en: 'Columns' },
+  },
+];
+
 function findSeedPage(site: BuilderSiteDocument, seed: PageSeedDefinition): BuilderPageMeta | undefined {
   const candidates = seed.isHomePage
     ? site.pages.filter((page) => page.isHomePage || page.slug === '')
@@ -366,6 +380,17 @@ async function ensureStandardNavigation(siteId: string, locale: Locale) {
       pageId: page.pageId,
       href,
     });
+    changed = true;
+  }
+
+  for (const item of extraNavigationItems) {
+    const existing = site.navigation.find((candidate) => (
+      candidate.id === item.id ||
+      candidate.pageId === item.pageId ||
+      candidate.href === item.href
+    ));
+    if (existing) continue;
+    site.navigation.push(item);
     changed = true;
   }
 

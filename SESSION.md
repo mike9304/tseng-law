@@ -384,6 +384,15 @@
   - D-POOL-6 Public Widget Visual Polish (BlogPostCard·BlogFeed 4 layout · Button 8 variants · BookingFlowSteps · Forms · FAQ · Columns + widget-tokens)
   - 산출 파일: `CODEX-PROMPT-DESIGN-POOL-{1~6}-*.md` 6개. 사용자가 Codex로 순차/병렬 dispatch 가능.
 - 2026-05-01 D-POOL completed prompt follow-up: 완료 보고된 D-POOL 인덱스 기준으로 Canvas direct manipulation/selection UI 디자인 직접 반영. Multi-selection bbox, move/resize readout, selection toolbar visual refresh, context menu density polish 적용; typecheck/lint 통과.
+- 2026-05-03 D-POOL Wave 산출 완료: 6 design specialist agent 인라인 회수 패턴(sub-agent Write/Bash 권한 거부 우회)으로 모든 Codex 프롬프트 마크다운 산출 + 메인이 Write 후 python html.unescape 일괄 디코드:
+  - `CODEX-PROMPT-DESIGN-POOL-INDEX.md` (251줄) — 디스패치 순서 / 충돌 매트릭스 / 공통 토큰 / 통합 검증
+  - `CODEX-PROMPT-DESIGN-POOL-1-EDITOR-SHELL.md` (1151줄) — Editor chrome / TopBar 56px / Rail+Drawer / Rulers·Grid·Zoom Dock / StatusBar 28px / density·theme 토큰 / 7-step commit 분할
+  - `CODEX-PROMPT-DESIGN-POOL-2-CANVAS-INTERACTION.md` (1058줄) — DragGhost / ResizeReadout / MultiSelectionBoundingBox / SnapDistanceLabel / CanvasFeedbackOverlay 5 신규 컴포넌트 + Screen-coord overlay + `--canvas-zoom` 1px-stable
+  - `CODEX-PROMPT-DESIGN-POOL-3-INSPECTOR-SELECTION.md` (734줄) — InspectorControls primitives 7종 + Inspector 3탭 + SelectionToolbar 다크/blur + ContextMenu macOS-style 33 actions + 6 separators
+  - `CODEX-PROMPT-DESIGN-POOL-4-MODAL-SYSTEM.md` (1047줄) — ModalShell 통일 (focus trap / esc / portal / scroll lock) + SiteSettingsModal 6탭 재구성 (general/brand/typography/presets/dark/advanced) + TemplateThumbnailRenderer (HTML scaled mock, WeakMap+Map 캐시, IntersectionObserver lazy)
+  - `CODEX-PROMPT-DESIGN-POOL-5-PICKERS-ADVANCED.md` (580줄) — ColorPickerAdvanced (HEX/RGB/HSL + EyeDropper + WCAG contrast + Brand/Theme/Recent grid) + FontPickerAdvanced (검색·6 카테고리·Google Fonts·preview text 커스터마이즈) + 11 importer 무수정 thin wrapper 전략
+  - `CODEX-PROMPT-DESIGN-POOL-6-PUBLIC-WIDGETS.md` (1475줄) — widget-tokens.css + hover-states.css + BlogPostCard/BlogFeed 4 layout + Button 8 variants + BookingFlowSteps (counter step + progress bar) + ContactForm floating label + FaqList +↔✕ rotate + Columns + Divider/Spacer/Icon/VideoEmbed
+  - 총 6296줄. 사용자가 Codex로 권장 순서 (Wave A: D1·D2·D6 병렬 → Wave B: D5 → D3 → D4 순차) dispatch 가능. 각 트랙 검증·금지범위 명시.
 
 ## 2026-05-03 Codex /goal G-Editor 결과
 
@@ -412,3 +421,25 @@
 메모:
 - 최종 dev 서버는 3000 점유 때문에 `http://localhost:3001`로 재기동해 검증.
 - `Wix 체크포인트.md`는 W02/W04/W06/W07/W08/W10/W11/W18~W23/W26~W30 최신 상태를 업데이트. Green 판정은 문서 규칙상 사용자 직접 클릭 검증 후로 남김.
+
+## 2026-05-03 Codex /goal G-Editor 결과 보강
+
+사용자 검증 피드백 대응:
+- `/ko/admin-builder` 첫 진입 시 캔버스가 아래로 밀려 스크롤해야 보이던 문제를 width-fit/panY 보정으로 수정.
+- 공개 header/menu 영역 클릭이 페이지 이동하지 않고 Navigation 편집 drawer를 열도록 처리하고, `칼럼` 링크 및 Columns rail/drawer 진입점을 추가.
+- `tseng-law.com` 테스트성을 위해 홈 에디터에 칼럼/블로그 진입점을 노출하고 `/ko/admin-builder/columns`, `/ko/columns` 접근을 확인.
+- 오피스 Google Map placeholder를 실제 `map` 노드로 승격하고, Content 인스펙터에서 사무소 프리셋/주소/줌을 바로 편집하도록 추가.
+- 에디터 hit-test 보강: selected image/container가 앞쪽 텍스트·지도 선택을 가로막지 않도록 selection z-index, node body pointer-events, container child click-through, ContextMenu submenu portal을 정리.
+
+검증:
+- `npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` lint warning만)
+- `BASE_URL=http://localhost:3000 ... playwright.config.ts` ✅ (builder-editor 5/5)
+- `npm run qa` ✅
+  - typecheck ✅
+  - lint ✅ (기존 `<img>` warning만)
+  - unit ✅ (18 files / 496 tests)
+  - security:builder-routes ✅ (71 route files / 61 mutation handlers covered)
+
+운영 메모:
+- 사용자 확인용 서버는 최신 build 기반 `next start`로 `http://localhost:3000/ko/admin-builder`에 유지. 현재 로컬 `next dev`는 Next dev vendor chunk/cache 오류가 있어 사용자 검증에는 production server를 사용.
+- `Wix 체크포인트.md`는 W01/W02/W18/W21/W27~W30/W114를 최신 검증 결과로 업데이트. Green 승격은 문서 규칙대로 사용자 직접 클릭·저장·새로고침 검증 후 처리.

@@ -9,6 +9,10 @@ import PreviewModal from '@/components/builder/canvas/PreviewModal';
 import PublishModal from '@/components/builder/canvas/PublishModal';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
+import SandboxStatusBar, {
+  type EditorDensity,
+  type EditorThemeMode,
+} from '@/components/builder/canvas/SandboxStatusBar';
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import { BuilderThemeProvider } from '@/components/builder/editor/BuilderThemeContext';
 import SeoPanel from '@/components/builder/canvas/SeoPanel';
@@ -42,7 +46,7 @@ const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
   mobile: 375,
 };
 
-type SandboxDrawerPanel = 'pages' | 'add' | 'design' | 'layers' | 'nav' | 'history';
+type SandboxDrawerPanel = 'pages' | 'add' | 'design' | 'layers' | 'nav' | 'columns' | 'history';
 type BuilderPageSummary = {
   pageId: string;
   slug: string;
@@ -144,7 +148,7 @@ export default function SandboxPage({
   siteLightboxes?: BuilderLightbox[];
 }) {
   const {
-    document,
+    document: canvasDocument,
     selectedNodeId,
     selectedNodeIds,
     draftSaveState,
@@ -178,10 +182,59 @@ export default function SandboxPage({
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
   const [helpOpen, setHelpOpen] = useState(false);
   const [previewOpen, setPreviewOpen] = useState(false);
+  const [editorDensity, setEditorDensity] = useState<EditorDensity>('cozy');
+  const [editorThemeMode, setEditorThemeMode] = useState<EditorThemeMode>('light');
   const [movePickerNodeIds, setMovePickerNodeIds] = useState<string[] | null>(null);
   const [saveSectionPayload, setSaveSectionPayload] = useState<SaveSectionPayload | null>(null);
   const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
+
+  useEffect(() => {
+    const pageDocument = window.document;
+    const previousBodyOverflow = pageDocument.body.style.overflow;
+    const previousHtmlOverflow = pageDocument.documentElement.style.overflow;
+    window.scrollTo({ top: 0, left: 0 });
+    pageDocument.body.style.overflow = 'hidden';
+    pageDocument.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      pageDocument.body.style.overflow = previousBodyOverflow;
+      pageDocument.documentElement.style.overflow = previousHtmlOverflow;
+    };
+  }, []);
+
+  useEffect(() => {
+    try {
+      const savedDensity = window.localStorage.getItem('builder:editor-density') as EditorDensity | null;
+      const savedTheme = window.localStorage.getItem('builder:editor-theme') as EditorThemeMode | null;
+      if (savedDensity === 'compact' || savedDensity === 'cozy' || savedDensity === 'comfortable') {
+        setEditorDensity(savedDensity);
+      }
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        setEditorThemeMode(savedTheme);
+      }
+    } catch {
+      // localStorage is optional in private or restricted browser contexts.
+    }
+  }, []);
+
+  const updateEditorDensity = useCallback((density: EditorDensity) => {
+    setEditorDensity(density);
+    try {
+      window.localStorage.setItem('builder:editor-density', density);
+    } catch {
+      // best effort
+    }
+  }, []);
+
+  const updateEditorThemeMode = useCallback((mode: EditorThemeMode) => {
+    setEditorThemeMode(mode);
+    try {
+      window.localStorage.setItem('builder:editor-theme', mode);
+    } catch {
+      // best effort
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -330,10 +383,10 @@ export default function SandboxPage({
   );
 
   useEffect(() => {
-    if (!document) return undefined;
+    if (!canvasDocument) return undefined;
     if (mutationBaseDocument) return undefined;
     if (draftConflict) return undefined;
-    if (document.updatedAt === syncedUpdatedAt) return undefined;
+    if (canvasDocument.updatedAt === syncedUpdatedAt) return undefined;
 
     if (saveBadgeTimerRef.current) {
       window.clearTimeout(saveBadgeTimerRef.current);
@@ -342,7 +395,7 @@ export default function SandboxPage({
     setDraftSaveState('saving');
     const timer = window.setTimeout(async () => {
       try {
-        const saved = await saveDraftDocument(document);
+        const saved = await saveDraftDocument(canvasDocument);
         if (!saved) {
           setDraftSaveState('error');
         }
@@ -353,7 +406,7 @@ export default function SandboxPage({
 
     return () => window.clearTimeout(timer);
   }, [
-    document,
+    canvasDocument,
     draftConflict,
     mutationBaseDocument,
     saveDraftDocument,
@@ -362,8 +415,8 @@ export default function SandboxPage({
   ]);
 
   const selectedNode = useMemo(
-    () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
-    [document, selectedNodeId],
+    () => canvasDocument?.nodes.find((node) => node.id === selectedNodeId) ?? null,
+    [canvasDocument, selectedNodeId],
   );
   const linkPickerLightboxes = useMemo(
     () =>
@@ -378,21 +431,38 @@ export default function SandboxPage({
   );
   const linkPickerSitePages = useMemo(
     () =>
-      sitePagesState.map((page) => ({
-        path: page.isHomePage ? `/${locale}` : `/${locale}/${page.slug}`,
-        title: page.isHomePage ? 'Home' : page.slug,
-        slug: page.slug,
-      })),
+      [
+        ...sitePagesState.map((page) => ({
+          path: page.isHomePage ? `/${locale}` : `/${locale}/${page.slug}`,
+          title: page.isHomePage ? 'Home' : page.slug,
+          slug: page.slug,
+        })),
+        { path: `/${locale}/columns`, title: 'Columns', slug: 'columns' },
+      ],
     [sitePagesState, locale],
   );
+  const headerNavItems = useMemo<BuilderNavItem[]>(() => {
+    const items = navItems ?? [];
+    const hasColumns = items.some((item) => comparableSitePath(normalizeSiteHref(item.href, locale), locale) === comparableSitePath(`/${locale}/columns`, locale));
+    if (hasColumns) return items;
+    return [
+      ...items,
+      {
+        id: 'nav-columns',
+        pageId: 'external-columns',
+        href: '/columns',
+        label: { ko: '칼럼', 'zh-hant': '專欄', en: 'Columns' },
+      },
+    ];
+  }, [locale, navItems]);
   const hasSelection = selectedNodeIds.length > 0;
   const assetLibraryNode = useMemo(
-    () => document?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
-    [assetLibraryNodeId, document],
+    () => canvasDocument?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
+    [assetLibraryNodeId, canvasDocument],
   );
   const imageEditorNode = useMemo(
-    () => document?.nodes.find((node) => node.id === imageEditorNodeId) ?? null,
-    [imageEditorNodeId, document],
+    () => canvasDocument?.nodes.find((node) => node.id === imageEditorNodeId) ?? null,
+    [imageEditorNodeId, canvasDocument],
   );
 
   useEffect(() => {
@@ -491,7 +561,7 @@ export default function SandboxPage({
 
   const handleRequestSaveAsSection = useCallback(
     (rootNodeId: string) => {
-      const allNodes = document?.nodes ?? [];
+      const allNodes = canvasDocument?.nodes ?? [];
       const rootNode = allNodes.find((node) => node.id === rootNodeId);
       if (!rootNode) {
         pushToast('선택한 컨테이너를 찾을 수 없습니다.', 'error');
@@ -507,7 +577,7 @@ export default function SandboxPage({
         nodes: snapshot,
       });
     },
-    [childrenMap, document?.nodes, pushToast],
+    [childrenMap, canvasDocument?.nodes, pushToast],
   );
 
   const handleInsertSavedSection = useCallback(
@@ -605,7 +675,12 @@ export default function SandboxPage({
 
   return (
     <BuilderThemeProvider value={siteThemeState}>
-      <main className={styles.shell}>
+      <main
+        className={styles.shell}
+        data-editor-shell
+        data-editor-density={editorDensity}
+        data-editor-theme={editorThemeMode}
+      >
         <GoogleFontsLoader extraFamilies={collectThemeFontFamilies(siteThemeState)} />
         <SandboxTopBar
         locale={locale}
@@ -701,6 +776,16 @@ export default function SandboxPage({
           </button>
           <button
             type="button"
+            className={`${styles.railButton} ${activeDrawer === 'columns' ? styles.railButtonActive : ''}`}
+            onClick={() => toggleDrawer('columns')}
+            aria-pressed={activeDrawer === 'columns'}
+            title="Columns"
+          >
+            <span className={styles.railButtonIcon} aria-hidden="true">B</span>
+            <span className={styles.railButtonLabel}>Columns</span>
+          </button>
+          <button
+            type="button"
             className={`${styles.railButton} ${activeDrawer === 'history' ? styles.railButtonActive : ''}`}
             onClick={() => toggleDrawer('history')}
             aria-pressed={activeDrawer === 'history'}
@@ -767,6 +852,30 @@ export default function SandboxPage({
             </div>
           ) : null}
 
+          {activeDrawer === 'columns' ? (
+            <div className={styles.drawerBody}>
+              <section className={styles.panelSection}>
+                <header className={styles.panelSectionHeader}>
+                  <div>
+                    <span>Blog</span>
+                    <strong>Columns</strong>
+                  </div>
+                </header>
+                <p className={styles.panelCopy}>
+                  공개 칼럼 목록과 칼럼 관리자까지 에디터 안에서 바로 확인합니다.
+                </p>
+                <div className={styles.actionGrid}>
+                  <a className={styles.actionButton} href={`/${locale}/admin-builder/columns`}>
+                    Open columns admin
+                  </a>
+                  <a className={styles.actionButton} href={`/${locale}/columns`} target="_blank" rel="noreferrer">
+                    View public columns
+                  </a>
+                </div>
+              </section>
+            </div>
+          ) : null}
+
           {activeDrawer === 'history' ? (
             <div className={styles.drawerBody}>
               <section className={styles.panelSection}>
@@ -793,19 +902,61 @@ export default function SandboxPage({
 
         <div className={styles.canvasColumn} style={canvasOuterStyle}>
           {siteName ? (
-            <div style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderBottom: '1px solid #e5e7eb' }}>
+            <div
+              className={styles.globalHeaderRegion}
+              style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderBottom: '1px solid #e5e7eb' }}
+              role="button"
+              tabIndex={0}
+              title="Edit header navigation"
+              onClickCapture={(event) => {
+                const target = event.target as HTMLElement;
+                if (target.closest(`.${styles.globalRegionBadge}`)) return;
+                event.preventDefault();
+                event.stopPropagation();
+                setActiveDrawer('nav');
+              }}
+              onClick={() => setActiveDrawer('nav')}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  setActiveDrawer('nav');
+                }
+              }}
+            >
+              <div className={styles.globalRegionBadge}>
+                <span>Header</span>
+                <strong>Menu editable</strong>
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setActiveDrawer('nav');
+                  }}
+                >
+                  Edit menu
+                </button>
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setSettingsOpen(true);
+                  }}
+                >
+                  Site settings
+                </button>
+              </div>
               <SiteHeader
                 siteName={siteName}
                 settings={siteSettingsState}
                 theme={siteThemeState}
-                navItems={navItems || []}
+                navItems={headerNavItems}
                 locale={locale}
                 currentSlug={currentSlugState}
                 onNavigate={handleHeaderNavigate}
               />
             </div>
           ) : null}
-          <div style={{ ...canvasWrapperStyle, flex: '0 0 auto', minHeight: document?.stageHeight ?? 880 }}>
+          <div style={{ ...canvasWrapperStyle, flex: '0 0 auto', minHeight: canvasDocument?.stageHeight ?? 880 }}>
             <CanvasContainer
               onRequestAssetLibrary={setAssetLibraryNodeId}
               onRequestImageEditor={setImageEditorNodeId}
@@ -826,7 +977,7 @@ export default function SandboxPage({
                 siteName={siteName}
                 settings={siteSettingsState}
                 theme={siteThemeState}
-                navItems={navItems || []}
+                navItems={headerNavItems}
                 locale={locale}
               />
             </div>
@@ -882,7 +1033,7 @@ export default function SandboxPage({
 
         <PublishModal
           open={publishOpen}
-          document={document}
+          document={canvasDocument}
           locale={locale}
           activePageId={activePageId}
           draftMeta={draftMeta}
@@ -895,6 +1046,14 @@ export default function SandboxPage({
           open={seoOpen}
           pageId={activePageId ?? ''}
           locale={locale}
+          document={canvasDocument ?? undefined}
+          siteName={siteName}
+          onSaved={(page) => {
+            setCurrentSlugState(page.slug);
+            setSitePagesState((pages) => pages.map((entry) => (
+              entry.pageId === page.pageId ? { ...entry, slug: page.slug } : entry
+            )));
+          }}
           onClose={() => setSeoOpen(false)}
         />
 
@@ -997,7 +1156,7 @@ export default function SandboxPage({
           ))}
         </div>
 
-        <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
+	        <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
           {toasts.map((toast) => (
             <div
               key={toast.id}
@@ -1006,7 +1165,16 @@ export default function SandboxPage({
               {toast.message}
             </div>
           ))}
-        </div>
+	        </div>
+        <SandboxStatusBar
+          viewport={viewport}
+          draftSaveState={draftSaveState}
+          selectionCount={selectedNodeIds.length}
+          density={editorDensity}
+          themeMode={editorThemeMode}
+          onDensityChange={updateEditorDensity}
+          onThemeModeChange={updateEditorThemeMode}
+        />
       </main>
     </BuilderThemeProvider>
   );

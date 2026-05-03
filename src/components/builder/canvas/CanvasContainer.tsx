@@ -1,7 +1,8 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import AlignmentGuides from '@/components/builder/canvas/AlignmentGuides';
+import CanvasFeedbackOverlay from '@/components/builder/canvas/CanvasFeedbackOverlay';
 import CanvasNode, { type ResizeHandle } from '@/components/builder/canvas/CanvasNode';
 import ContextMenu from '@/components/builder/canvas/ContextMenu';
 import SelectionBox from '@/components/builder/canvas/SelectionBox';
@@ -22,12 +23,13 @@ import { createShortcutHandler, NUDGE_LARGE_PX, NUDGE_PX, type CanvasAction } fr
 import { type AlignmentGuide, computeSnap, type Rect } from '@/lib/builder/canvas/snap';
 import {
   createDefaultZoomState,
+  MAX_ZOOM,
+  MIN_ZOOM,
   screenToCanvas,
   zoomIn as stepZoomIn,
   zoomLabel,
   zoomOut as stepZoomOut,
   zoomTo,
-  zoomToFit,
   type ZoomState,
 } from '@/lib/builder/canvas/zoom';
 import styles from './SandboxPage.module.css';
@@ -92,6 +94,55 @@ const DEFAULT_STAGE_WIDTH = 1280;
 const DEFAULT_STAGE_HEIGHT = 880;
 const MIN_WIDTH = 72;
 const MIN_HEIGHT = 40;
+const POPUP_EDGE_MARGIN = 12;
+const CONTEXT_MENU_WIDTH = 276;
+const CONTEXT_MENU_MAX_HEIGHT = 520;
+const EMPTY_CANVAS_NODES: BuilderCanvasNode[] = [];
+
+function clampPopupAxis(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), Math.max(min, max));
+}
+
+function clampViewportPopupPosition(
+  rawX: number,
+  rawY: number,
+  viewportWidth: number,
+  viewportHeight: number,
+  popupWidth: number,
+  popupHeight: number,
+  margin = POPUP_EDGE_MARGIN,
+): { x: number; y: number } {
+  return {
+    x: clampPopupAxis(rawX, margin, viewportWidth - popupWidth - margin),
+    y: clampPopupAxis(rawY, margin, viewportHeight - popupHeight - margin),
+  };
+}
+
+function clampVisibleViewportPopupPosition(
+  rawX: number,
+  rawY: number,
+  viewportRect: DOMRect,
+  popupWidth: number,
+  popupHeight: number,
+  margin = POPUP_EDGE_MARGIN,
+): { x: number; y: number } {
+  const visibleLeft = Math.max(viewportRect.left, 0);
+  const visibleTop = Math.max(viewportRect.top, 0);
+  const visibleRight = Math.min(viewportRect.right, window.innerWidth);
+  const visibleBottom = Math.min(viewportRect.bottom, window.innerHeight);
+  return {
+    x: clampPopupAxis(
+      rawX,
+      visibleLeft - viewportRect.left + margin,
+      visibleRight - viewportRect.left - popupWidth - margin,
+    ),
+    y: clampPopupAxis(
+      rawY,
+      visibleTop - viewportRect.top + margin,
+      visibleBottom - viewportRect.top - popupHeight - margin,
+    ),
+  };
+}
 
 function clampRect(
   rect: BuilderCanvasNode['rect'],
@@ -183,12 +234,14 @@ export default function CanvasContainer({
     ungroupSelectedNode,
     toggleSelectedNodeLock,
     addNode,
+    updateNode,
     duplicateSelectedNode,
     bringSelectedNodeForward,
     sendSelectedNodeBackward,
     bringSelectedNodeToFront,
     sendSelectedNodeToBack,
     updateNodeRectsForViewport,
+    updateResponsiveOverride,
     updateNodeContent,
     deleteSelectedNode,
     nudgeSelectedNode,
@@ -261,7 +314,7 @@ export default function CanvasContainer({
     onToast?.('Duplicated', 'success');
   }, [duplicateSelectedNode, onToast]);
 
-  const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? []);
+  const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? EMPTY_CANVAS_NODES);
   const stageWidth = useBuilderCanvasStore(
     (state) => state.document?.stageWidth ?? DEFAULT_STAGE_WIDTH,
   );
@@ -409,9 +462,15 @@ export default function CanvasContainer({
   const fitCanvas = useCallback(() => {
     const rect = viewportRef.current?.getBoundingClientRect();
     if (!rect) return;
-    setZoomState((currentState) =>
-      zoomToFit(currentState, stageWidth, stageHeight, rect.width - 24, rect.height - 24));
-  }, [stageWidth, stageHeight]);
+    const availableWidth = Math.max(1, rect.width - 24);
+    const nextZoom = Math.max(
+      MIN_ZOOM,
+      Math.min(MAX_ZOOM, availableWidth / stageWidth),
+    );
+    const roundedZoom = Math.round(nextZoom * 100) / 100;
+    const panX = Math.max(0, Math.round((rect.width - stageWidth * roundedZoom) / 2));
+    setZoomState({ zoom: roundedZoom, panX, panY: 0 });
+  }, [stageWidth]);
 
   useEffect(() => {
     fitCanvas();
@@ -959,6 +1018,31 @@ export default function CanvasContainer({
     };
   }, [stageHeight, stageWidth]);
 
+  const resolveContextMenuPosition = useCallback((clientX: number, clientY: number) => {
+    const rect = viewportRef.current?.getBoundingClientRect();
+    const width = rect?.width ?? stageWidth;
+    const height = rect?.height ?? stageHeight;
+    const rawX = rect ? clientX - rect.left : clientX;
+    const rawY = rect ? clientY - rect.top : clientY;
+    if (rect && typeof window !== 'undefined') {
+      return clampVisibleViewportPopupPosition(
+        rawX,
+        rawY,
+        rect,
+        CONTEXT_MENU_WIDTH,
+        CONTEXT_MENU_MAX_HEIGHT,
+      );
+    }
+    return clampViewportPopupPosition(
+      rawX,
+      rawY,
+      width,
+      height,
+      CONTEXT_MENU_WIDTH,
+      CONTEXT_MENU_MAX_HEIGHT,
+    );
+  }, [stageHeight, stageWidth]);
+
   const resolveOverlapCandidates = useCallback(
     (clientX: number, clientY: number): BuilderCanvasNode[] => {
       const point = resolveStagePosition(clientX, clientY);
@@ -1062,8 +1146,19 @@ export default function CanvasContainer({
     };
   }, [selectionBox]);
 
-  const dragGhostRects = useMemo(() => {
-    if (!interaction) return [];
+  const interactionMode = interaction?.type === 'move' || interaction?.type === 'resize'
+    ? interaction.type
+    : null;
+
+  const interactionNodeIds = useMemo(() => {
+    if (!interaction) return selectedNodeIds;
+    if (interaction.type === 'move') return interaction.nodeIds;
+    if (interaction.type === 'resize') return [interaction.nodeId];
+    return selectedNodeIds;
+  }, [interaction, selectedNodeIds]);
+
+  const dragGhostStartRects = useMemo(() => {
+    if (!interactionMode || !interaction) return [];
     if (interaction.type === 'move') {
       return Object.values(interaction.startAbsoluteRects);
     }
@@ -1071,7 +1166,34 @@ export default function CanvasContainer({
       return [interaction.startAbsoluteRect];
     }
     return [];
-  }, [interaction]);
+  }, [interaction, interactionMode]);
+
+  const dragGhostCurrentRects = useMemo(() => (
+    interactionNodeIds
+      .map((nodeId) => absoluteRectById.get(nodeId))
+      .filter((rect): rect is BuilderCanvasNode['rect'] => Boolean(rect))
+  ), [absoluteRectById, interactionNodeIds]);
+
+  const resizeCurrentRect = useMemo(() => {
+    if (!interaction || interaction.type !== 'resize') return null;
+    return absoluteRectById.get(interaction.nodeId) ?? null;
+  }, [absoluteRectById, interaction]);
+
+  const interactionActiveRect = useMemo(() => {
+    if (!interactionMode || dragGhostCurrentRects.length === 0) return null;
+    const minX = Math.min(...dragGhostCurrentRects.map((rect) => rect.x));
+    const minY = Math.min(...dragGhostCurrentRects.map((rect) => rect.y));
+    const maxX = Math.max(...dragGhostCurrentRects.map((rect) => rect.x + rect.width));
+    const maxY = Math.max(...dragGhostCurrentRects.map((rect) => rect.y + rect.height));
+    return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
+  }, [dragGhostCurrentRects, interactionMode]);
+
+  const snapOtherRects = useMemo(() => {
+    const activeIds = new Set(interactionNodeIds);
+    return visibleNodes
+      .filter((node) => !activeIds.has(node.id))
+      .map((node) => absoluteRectById.get(node.id) ?? resolveViewportRect(node, geometryViewport));
+  }, [absoluteRectById, geometryViewport, interactionNodeIds, visibleNodes]);
 
   const contextMenuTitle = selectedNodeIds.length > 1
     ? `${selectedNodeIds.length} selected`
@@ -1106,44 +1228,6 @@ export default function CanvasContainer({
     };
   }, [selectionBboxStage, zoomState.panX, zoomState.panY, zoomState.zoom]);
 
-  const interactionReadout = useMemo(() => {
-    if (!interaction || interaction.type === 'pan') return null;
-    const ids = interaction.type === 'move' ? interaction.nodeIds : [interaction.nodeId];
-    const rects = ids
-      .map((nodeId) => absoluteRectById.get(nodeId))
-      .filter((rect): rect is BuilderCanvasNode['rect'] => Boolean(rect));
-    if (rects.length === 0) return null;
-
-    const minX = Math.min(...rects.map((rect) => rect.x));
-    const minY = Math.min(...rects.map((rect) => rect.y));
-    const maxX = Math.max(...rects.map((rect) => rect.x + rect.width));
-    const maxY = Math.max(...rects.map((rect) => rect.y + rect.height));
-    const width = Math.round(maxX - minX);
-    const height = Math.round(maxY - minY);
-
-    if (interaction.type === 'resize') {
-      return {
-        left: (interactionPointer?.x ?? maxX * zoomState.zoom + zoomState.panX) + 14,
-        top: (interactionPointer?.y ?? maxY * zoomState.zoom + zoomState.panY) + 14,
-        title: `${width} × ${height}`,
-        detail: null,
-      };
-    }
-
-    const startRects = Object.values(interaction.startAbsoluteRects);
-    if (startRects.length === 0) return null;
-    const startMinX = Math.min(...startRects.map((rect) => rect.x));
-    const startMinY = Math.min(...startRects.map((rect) => rect.y));
-    const dx = Math.round(minX - startMinX);
-    const dy = Math.round(minY - startMinY);
-    return {
-      left: minX * zoomState.zoom + zoomState.panX,
-      top: minY * zoomState.zoom + zoomState.panY - 42,
-      title: `${Math.round(minX)}, ${Math.round(minY)}`,
-      detail: `delta ${dx >= 0 ? '+' : ''}${dx}, ${dy >= 0 ? '+' : ''}${dy}`,
-    };
-  }, [absoluteRectById, interaction, interactionPointer, zoomState.panX, zoomState.panY, zoomState.zoom]);
-
   return (
     <div className={styles.stageSurface}>
       <div
@@ -1161,12 +1245,14 @@ export default function CanvasContainer({
           className={styles.stageTransform}
           style={{
             transform: `translate(${zoomState.panX}px, ${zoomState.panY}px) scale(${zoomState.zoom})`,
-          }}
+            '--canvas-zoom': zoomState.zoom,
+          } as CSSProperties}
         >
-          <div
-            ref={containerRef}
-            className={styles.stage}
-            style={{ width: `${stageWidth}px`, height: `${stageHeight}px` }}
+            <div
+              ref={containerRef}
+              className={styles.stage}
+              data-canvas-interaction={interaction?.type ?? 'idle'}
+              style={{ width: `${stageWidth}px`, height: `${stageHeight}px` }}
             role="application"
             aria-label="Canvas editor"
             aria-roledescription="freeform canvas"
@@ -1280,18 +1366,6 @@ export default function CanvasContainer({
             </div>
             <div className={styles.stageGrid} aria-hidden />
             <AlignmentGuides guides={guides} />
-            {dragGhostRects.map((rect, index) => (
-              <div
-                key={`ghost-${index}`}
-                className={styles.dragGhost}
-                style={{
-                  left: `${rect.x}px`,
-                  top: `${rect.y}px`,
-                  width: `${rect.width}px`,
-                  height: `${rect.height}px`,
-                }}
-              />
-            ))}
             {/* Container drop zone highlight */}
             {hoveredContainerId ? (() => {
               const hc = visibleNodes.find((n) => n.id === hoveredContainerId);
@@ -1334,15 +1408,11 @@ export default function CanvasContainer({
                   if (!keepMultiSelection) {
                     setSelectedNodeId(nodeId);
                   }
-                  const rect = viewportRef.current?.getBoundingClientRect();
-                  const width = rect?.width ?? stageWidth;
-                  const height = rect?.height ?? stageHeight;
-                  const rawX = rect ? event.clientX - rect.left : event.clientX;
-                  const rawY = rect ? event.clientY - rect.top : event.clientY;
+                  const position = resolveContextMenuPosition(event.clientX, event.clientY);
                   setContextMenu({
                     nodeId,
-                    x: Math.max(32, Math.min(width - 236, rawX)),
-                    y: Math.max(32, Math.min(height - 420, rawY)),
+                    x: position.x,
+                    y: position.y,
                   });
                 }}
                 onOpenAssetLibrary={onRequestAssetLibrary}
@@ -1417,22 +1487,6 @@ export default function CanvasContainer({
                 }}
               />
             ))}
-            {selectionBboxStage && selectedNodes.length > 1 && !interaction ? (
-              <div
-                className={styles.multiSelectionBox}
-                style={{
-                  left: `${selectionBboxStage.x}px`,
-                  top: `${selectionBboxStage.y}px`,
-                  width: `${selectionBboxStage.width}px`,
-                  height: `${selectionBboxStage.height}px`,
-                }}
-                aria-hidden
-              >
-                <span className={styles.multiSelectionBadge}>
-                  {selectedNodes.length} selected · {Math.round(selectionBboxStage.width)} x {Math.round(selectionBboxStage.height)}
-                </span>
-              </div>
-            ) : null}
             {selectionBoxRect ? <SelectionBox {...selectionBoxRect} /> : null}
             {rootVisibleNodes.length === 0 ? (
               <div className={styles.emptyCanvas}>
@@ -1470,6 +1524,19 @@ export default function CanvasContainer({
           </div>
         </div>
 
+        <CanvasFeedbackOverlay
+          interactionMode={interactionMode}
+          startRects={dragGhostStartRects}
+          currentRects={dragGhostCurrentRects}
+          resizeRect={resizeCurrentRect}
+          resizePointer={interactionPointer}
+          multiSelectionBbox={selectionBboxScreen}
+          selectedCount={selectedNodes.length}
+          snapActiveRect={interactionActiveRect}
+          snapOtherRects={snapOtherRects}
+          zoomState={zoomState}
+        />
+
         {selectionBboxScreen && !contextMenu ? (
           <SelectionToolbar
             selectedNodes={selectedNodes}
@@ -1502,33 +1569,15 @@ export default function CanvasContainer({
             onOpenMoreMenu={(event) => {
               if (selectedNodes[0]) {
                 setOverlapPicker(null);
-                const rect = viewportRef.current?.getBoundingClientRect();
-                const width = rect?.width ?? 0;
-                const height = rect?.height ?? 0;
-                const rawX = rect ? event.clientX - rect.left : event.clientX;
-                const rawY = rect ? event.clientY - rect.top : event.clientY;
+                const position = resolveContextMenuPosition(event.clientX, event.clientY);
                 setContextMenu({
                   nodeId: selectedNodes[0].id,
-                  x: Math.max(32, Math.min(width - 236, rawX)),
-                  y: Math.max(32, Math.min(height - 420, rawY)),
+                  x: position.x,
+                  y: position.y,
                 });
               }
             }}
           />
-        ) : null}
-
-        {interactionReadout ? (
-          <div
-            className={styles.canvasInteractionReadout}
-            style={{
-              left: `${interactionReadout.left}px`,
-              top: `${interactionReadout.top}px`,
-            }}
-            aria-live="polite"
-          >
-            <strong>{interactionReadout.title}</strong>
-            {interactionReadout.detail ? <span>{interactionReadout.detail}</span> : null}
-          </div>
         ) : null}
 
         {overlapPicker ? (() => {
@@ -1662,6 +1711,22 @@ export default function CanvasContainer({
                 },
               },
               {
+                key: 'edit-alt',
+                label: 'Alt 텍스트 편집',
+                title: '이미지 alt 텍스트 편집',
+                disabled:
+                  selectedNodeIds.length !== 1 ||
+                  selectedNodes[0]?.kind !== 'image' ||
+                  Boolean(selectedNodes[0]?.locked) ||
+                  !onRequestImageEditor,
+                onSelect: () => {
+                  setContextMenu(null);
+                  if (selectedNodes[0] && onRequestImageEditor) {
+                    onRequestImageEditor(selectedNodes[0].id);
+                  }
+                },
+              },
+              {
                 key: 'edit-link',
                 label: (() => {
                   const value = selectedLinkTargetNode
@@ -1704,9 +1769,11 @@ export default function CanvasContainer({
                   }
                 },
               },
+              { key: 'sep-clipboard', label: '', separator: true },
               {
                 key: 'copy',
                 label: 'Copy',
+                shortcut: '⌘C',
                 title: '복사 (Cmd-C)',
                 disabled: selectedNodeIds.length === 0,
                 onSelect: handleCopy,
@@ -1714,6 +1781,7 @@ export default function CanvasContainer({
               {
                 key: 'cut',
                 label: 'Cut',
+                shortcut: '⌘X',
                 title: '잘라내기 (Cmd-X)',
                 disabled: !hasUnlockedSelection,
                 onSelect: handleCut,
@@ -1721,6 +1789,7 @@ export default function CanvasContainer({
               {
                 key: 'paste',
                 label: 'Paste',
+                shortcut: '⌘V',
                 title: '붙여넣기 (Cmd-V)',
                 disabled: !clipboardHasContent,
                 onSelect: handlePaste,
@@ -1728,27 +1797,30 @@ export default function CanvasContainer({
               {
                 key: 'duplicate',
                 label: 'Duplicate',
+                shortcut: '⌘D',
                 title: '복제 (Cmd-D)',
                 disabled: !hasUnlockedSelection,
                 onSelect: handleDuplicate,
               },
               {
-                key: 'delete',
-                label: 'Delete',
-                title: '삭제 (Delete)',
-                disabled: !hasUnlockedSelection,
-                onSelect: deleteSelectedNode,
+                key: 'paste-style',
+                label: 'Paste style',
+                shortcut: '⌥⇧⌘V',
+                title: 'Coming soon — Codex F-track',
+                disabled: true,
               },
               {
-                key: 'lock',
-                label: selectedNodes.every((node) => node.locked) ? 'Unlock selection' : 'Lock selection',
-                title: '선택 잠금 토글',
-                disabled: selectedNodeIds.length === 0,
-                onSelect: toggleSelectedNodeLock,
+                key: 'copy-style',
+                label: 'Copy style',
+                shortcut: '⌥⌘C',
+                title: 'Coming soon — Codex F-track',
+                disabled: true,
               },
+              { key: 'sep-arrange', label: '', separator: true },
               {
                 key: 'bring-front',
                 label: 'Bring to front',
+                shortcut: '⇧⌘]',
                 title: '맨 앞으로 가져오기',
                 disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
                 onSelect: bringSelectedNodeToFront,
@@ -1756,6 +1828,7 @@ export default function CanvasContainer({
               {
                 key: 'bring-forward',
                 label: 'Bring forward',
+                shortcut: '⌘]',
                 title: '한 단계 앞으로',
                 disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
                 onSelect: bringSelectedNodeForward,
@@ -1763,6 +1836,7 @@ export default function CanvasContainer({
               {
                 key: 'send-backward',
                 label: 'Send backward',
+                shortcut: '⌘[',
                 title: '한 단계 뒤로',
                 disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
                 onSelect: sendSelectedNodeBackward,
@@ -1770,10 +1844,20 @@ export default function CanvasContainer({
               {
                 key: 'send-back',
                 label: 'Send to back',
+                shortcut: '⇧⌘[',
                 title: '맨 뒤로 보내기',
                 disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
                 onSelect: sendSelectedNodeToBack,
               },
+              {
+                key: 'lock',
+                label: selectedNodes.every((node) => node.locked) ? 'Unlock selection' : 'Lock selection',
+                title: '선택 잠금 토글',
+                shortcut: '⌘L',
+                disabled: selectedNodeIds.length === 0,
+                onSelect: toggleSelectedNodeLock,
+              },
+              { key: 'sep-align', label: '', separator: true },
               {
                 key: 'align-left',
                 label: 'Align left',
@@ -1818,14 +1902,14 @@ export default function CanvasContainer({
               },
               { key: 'sep-distribute', label: '', separator: true, onSelect: () => {} },
               {
-                key: 'distribute-h',
+                key: 'distribute-horizontal',
                 label: 'Distribute horizontally',
                 title: '가로 균등 분배 (3개 이상)',
                 disabled: selectedNodeIds.length < 3 || !hasUnlockedSelection,
                 onSelect: () => distributeSelectedNodes('horizontal'),
               },
               {
-                key: 'distribute-v',
+                key: 'distribute-vertical',
                 label: 'Distribute vertically',
                 title: '세로 균등 분배 (3개 이상)',
                 disabled: selectedNodeIds.length < 3 || !hasUnlockedSelection,
@@ -1844,6 +1928,63 @@ export default function CanvasContainer({
                 title: '선택 요소 높이 동일화',
                 disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
                 onSelect: () => matchSelectedNodesSize('height'),
+              },
+              { key: 'sep-state', label: '', separator: true },
+              {
+                key: 'hide-on-viewport',
+                label: 'Hide on viewport',
+                title: '현재 선택을 특정 viewport에서 숨깁니다',
+                disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
+                children: [
+                  {
+                    key: 'hide-desktop',
+                    label: 'Hide on desktop',
+                    onSelect: () => {
+                      if (!selectedNodes[0]) return;
+                      updateNode(selectedNodes[0].id, (node) => ({ ...node, visible: false }));
+                    },
+                  },
+                  {
+                    key: 'hide-tablet',
+                    label: 'Hide on tablet',
+                    onSelect: () => {
+                      if (!selectedNodes[0]) return;
+                      updateResponsiveOverride(selectedNodes[0].id, 'tablet', { hidden: true });
+                    },
+                  },
+                  {
+                    key: 'hide-mobile',
+                    label: 'Hide on mobile',
+                    onSelect: () => {
+                      if (!selectedNodes[0]) return;
+                      updateResponsiveOverride(selectedNodes[0].id, 'mobile', { hidden: true });
+                    },
+                  },
+                ],
+              },
+              {
+                key: 'pin-to-screen',
+                label: 'Pin to screen',
+                title: 'Coming soon — Codex F-track',
+                disabled: true,
+              },
+              {
+                key: 'anchor-link',
+                label: 'Anchor link...',
+                title: 'Use the Layout tab to edit anchor name',
+                disabled: true,
+              },
+              {
+                key: 'animations',
+                label: 'Animations...',
+                title: 'Open the Animations tab in the inspector',
+                disabled: true,
+              },
+              {
+                key: 'effects',
+                label: 'Effects...',
+                title: 'Coming soon — Codex F-track',
+                disabled: true,
               },
               { key: 'sep-pages', label: '', separator: true, onSelect: () => {} },
               {
@@ -1873,6 +2014,35 @@ export default function CanvasContainer({
                   }
                 },
               },
+              {
+                key: 'add-to-library',
+                label: 'Add to library',
+                title: 'Coming soon — Codex F-track',
+                disabled: true,
+              },
+              {
+                key: 'convert-to-component',
+                label: 'Convert to component',
+                title: 'Coming soon — Codex F-track',
+                disabled: true,
+              },
+              {
+                key: 'style-override',
+                label: 'Style override',
+                title: 'Coming soon — Codex F-track',
+                disabled: true,
+                children: [
+                  { key: 'override-fill', label: 'Fill override', disabled: true, title: 'Coming soon — Codex F-track' },
+                  { key: 'override-typography', label: 'Typography override', disabled: true, title: 'Coming soon — Codex F-track' },
+                  { key: 'override-effects', label: 'Effects override', disabled: true, title: 'Coming soon — Codex F-track' },
+                ],
+              },
+              {
+                key: 'reset-style',
+                label: 'Reset style',
+                title: 'Coming soon — Codex F-track',
+                disabled: true,
+              },
               { key: 'sep-group', label: '', separator: true, onSelect: () => {} },
               {
                 key: 'group',
@@ -1892,6 +2062,16 @@ export default function CanvasContainer({
                   selectedNodes[0]?.kind !== 'container' ||
                   (selectedNodes[0]?.id ? (childrenMap[selectedNodes[0].id]?.length ?? 0) === 0 : true),
                 onSelect: ungroupSelectedNode,
+              },
+              { key: 'sep-danger', label: '', separator: true },
+              {
+                key: 'delete',
+                label: 'Delete',
+                shortcut: '⌫',
+                title: '삭제 (Delete)',
+                tone: 'danger',
+                disabled: !hasUnlockedSelection,
+                onSelect: deleteSelectedNode,
               },
             ]}
             onClose={() => setContextMenu(null)}

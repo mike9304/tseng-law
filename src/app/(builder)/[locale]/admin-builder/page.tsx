@@ -3,7 +3,7 @@ import SandboxPage from '@/components/builder/canvas/SandboxPage';
 import { readSiteDocument, readPageCanvas, writePageCanvas, publishPage } from '@/lib/builder/site/persistence';
 import { readCanvasSandboxDraft } from '@/lib/builder/canvas/persistence';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import { normalizeCanvasDocument } from '@/lib/builder/canvas/types';
+import { normalizeCanvasDocument, type BuilderCanvasDocument, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { createHomePageCanvasDocument, SEED_VERSION } from '@/lib/builder/canvas/seed-home';
 import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
 
@@ -13,6 +13,48 @@ export const metadata: Metadata = {
   title: '호정국제 사이트 에디터',
   robots: { index: false, follow: false },
 };
+
+function upgradeOfficeMapPlaceholders(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
+  let changed = false;
+  const nextNodes: BuilderCanvasNode[] = [];
+
+  for (const node of document.nodes) {
+    if (/^home-offices-layout-\d+-map-(label|address)$/.test(node.id)) {
+      changed = true;
+      continue;
+    }
+
+    if (/^home-offices-layout-\d+-map$/.test(node.id) && node.kind === 'container') {
+      const addressNode = nodesById.get(`${node.id}-address`);
+      const rawAddress = addressNode?.content && 'text' in addressNode.content
+        ? addressNode.content.text
+        : '';
+      const address = typeof rawAddress === 'string' ? rawAddress : '';
+      nextNodes.push({
+        ...node,
+        kind: 'map',
+        style: { ...node.style, borderRadius: Math.max(node.style.borderRadius, 12) },
+        content: {
+          address,
+          zoom: 16,
+        },
+      } as BuilderCanvasNode);
+      changed = true;
+      continue;
+    }
+
+    nextNodes.push(node);
+  }
+
+  if (!changed) return document;
+  return {
+    ...document,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `${document.updatedBy || 'builder'}+editor-parity`,
+    nodes: nextNodes,
+  };
+}
 
 /**
  * Unified builder entry point.
@@ -73,6 +115,18 @@ export default async function BuilderMainPage({
     const draft = await readCanvasSandboxDraft(locale);
     initialDocument = draft.document;
     backend = draft.backend;
+  }
+
+  const upgradedInitialDocument = upgradeOfficeMapPlaceholders(initialDocument);
+  if (upgradedInitialDocument !== initialDocument && homePage) {
+    initialDocument = upgradedInitialDocument;
+    try {
+      await writePageCanvas('default', homePage.pageId, 'draft', initialDocument);
+    } catch {
+      // Best-effort upgrade; the in-memory editor still receives the map nodes.
+    }
+  } else {
+    initialDocument = upgradedInitialDocument;
   }
 
   return (

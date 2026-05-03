@@ -1,4 +1,5 @@
 import { defineComponent } from '../define';
+import type { BuilderComponentRenderProps } from '../define';
 import MapInspector from './Inspector';
 
 interface MapContent {
@@ -6,8 +7,9 @@ interface MapContent {
   zoom: number;
 }
 
-function MapRender({ node }: { node: { content: MapContent } }) {
-  const { address = '', zoom = 15 } = node.content;
+function MapRender({ node, mode = 'preview' }: BuilderComponentRenderProps) {
+  const { address = '', zoom = 15 } = node.content as unknown as MapContent;
+  const isEditMode = mode === 'edit';
 
   if (!address) {
     return (
@@ -36,14 +38,42 @@ function MapRender({ node }: { node: { content: MapContent } }) {
   const src = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&z=${zoom}&output=embed`;
 
   return (
-    <div style={{ width: '100%', height: '100%', borderRadius: 8, overflow: 'hidden' }}>
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        borderRadius: 8,
+        overflow: 'hidden',
+        position: 'relative',
+        pointerEvents: isEditMode ? 'none' : 'auto',
+      }}
+    >
       <iframe
         src={src}
-        style={{ width: '100%', height: '100%', border: 'none' }}
+        style={{ width: '100%', height: '100%', border: 'none', pointerEvents: isEditMode ? 'none' : 'auto' }}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         title="Google Maps"
       />
+      {isEditMode ? (
+        <div
+          aria-hidden
+          style={{
+            position: 'absolute',
+            left: 10,
+            top: 10,
+            padding: '5px 8px',
+            borderRadius: 6,
+            background: 'rgba(15, 23, 42, 0.78)',
+            color: '#fff',
+            fontSize: 11,
+            fontWeight: 700,
+            pointerEvents: 'none',
+          }}
+        >
+          Map · edit address in Content
+        </div>
+      ) : null}
     </div>
   );
 }

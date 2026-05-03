@@ -336,6 +336,17 @@ const imageCanvasNodeSchema = baseCanvasNodeSchema.extend({
     alt: z.string().max(300),
     fit: z.enum(['cover', 'contain']),
     cropAspect: z.string().max(20).optional(),
+    /**
+     * Focal point for `object-position` when fit='cover'. 0~100 (% from
+     * top-left). Default center (50,50). 예: portrait를 container ratio가
+     * 자를 때 얼굴이 잘리지 않게 조정.
+     */
+    focalPoint: z
+      .object({
+        x: z.number().min(0).max(100),
+        y: z.number().min(0).max(100),
+      })
+      .optional(),
     filters: imageFiltersSchema,
     link: linkValueSchema.nullish(),
   }),

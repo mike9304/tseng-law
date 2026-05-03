@@ -139,7 +139,13 @@ export default function ImageElement({
         fill
         draggable={false}
         sizes="(max-width: 1280px) 100vw, 360px"
-        style={{ objectFit: node.content.fit, filter: cssFilter }}
+        style={{
+          objectFit: node.content.fit,
+          objectPosition: node.content.focalPoint
+            ? `${node.content.focalPoint.x}% ${node.content.focalPoint.y}%`
+            : undefined,
+          filter: cssFilter,
+        }}
       />
       <div
         style={{

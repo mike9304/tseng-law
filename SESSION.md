@@ -526,7 +526,9 @@
 범위:
 - 사용자가 지적한 "지도도 주소 설정처럼 편집 가능해야 한다" 항목을 Playwright에서 직접 검증하도록 보강.
 - `home-offices-layout-0-map` 선택 → Content tab → 주소 textarea 변경 → Google Maps iframe `q` 파라미터 반영 → 원래 주소 원복.
+- 사용자가 지적한 "칼럼 콘텐츠가 에디터에 로드되어야 한다" 항목을 Playwright에서 직접 검증하도록 보강.
+- 홈 캔버스의 `home-insights-title`, `home-insights-featured-title`, `home-insights-featured-link` 실제 노드가 렌더되는지 확인.
 - 이전 실패 테스트가 남긴 로컬 builder navigation label `업무분야 Test`를 guardMutation API(`/api/builder/site/navigation`)로 `업무분야` 복구.
 
 검증:
-- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, map address edit + restore 포함)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, map address edit + restore, columns content nodes 포함)

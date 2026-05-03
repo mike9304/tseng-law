@@ -81,6 +81,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByTitle('사이트 발행')).toBeVisible();
     const stageBox = await page.getByRole('application', { name: 'Canvas editor' }).boundingBox();
     expect(stageBox?.y ?? 9999).toBeLessThan(130);
+    await expect(page.locator('[data-node-id="home-insights-title"]').first()).toContainText('칼럼 아카이브');
+    await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
+    await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);
     await expect(page.getByRole('navigation').getByRole('link', { name: '칼럼' })).toBeVisible();
     const headerRegion = page.locator('[class*="globalHeaderRegion"]').first();
     const editableMenuItem = headerRegion.locator('[data-builder-nav-item-id]').filter({ hasText: /업무분야|호정소개|칼럼|Home|About|Services/ }).first();

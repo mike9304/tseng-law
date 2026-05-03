@@ -67,6 +67,11 @@ interface SandboxToast {
   tone: ToastTone;
 }
 
+interface ActivityChip {
+  id: string;
+  message: string;
+}
+
 interface DraftResponseBody {
   draft?: DraftMeta;
   document?: BuilderCanvasDocument;
@@ -150,6 +155,7 @@ export default function SandboxPage({
   } = useBuilderCanvasStore();
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
   const [toasts, setToasts] = useState<SandboxToast[]>([]);
+  const [activityChips, setActivityChips] = useState<ActivityChip[]>([]);
   const previousDraftSaveStateRef = useRef(draftSaveState);
   const saveBadgeTimerRef = useRef<number | null>(null);
   const initialDraftLoadedRef = useRef(false);
@@ -187,6 +193,14 @@ export default function SandboxPage({
     window.setTimeout(() => {
       setToasts((currentToasts) => currentToasts.filter((toast) => toast.id !== id));
     }, TOAST_TTL_MS);
+  }, []);
+
+  const pushActivityChip = useCallback((message: string) => {
+    const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    setActivityChips((currentChips) => [...currentChips, { id, message }].slice(-3));
+    window.setTimeout(() => {
+      setActivityChips((currentChips) => currentChips.filter((chip) => chip.id !== id));
+    }, 1800);
   }, []);
 
   useEffect(() => {
@@ -390,21 +404,19 @@ export default function SandboxPage({
     }
 
     if (draftSaveState === 'saved') {
-      pushToast('Draft saved', 'success');
       saveBadgeTimerRef.current = window.setTimeout(() => {
         setDraftSaveState('idle');
         saveBadgeTimerRef.current = null;
       }, SAVE_BADGE_TTL_MS);
     }
     if (draftSaveState === 'error') {
-      pushToast('Draft save failed', 'error');
       saveBadgeTimerRef.current = window.setTimeout(() => {
         setDraftSaveState('idle');
         saveBadgeTimerRef.current = null;
       }, SAVE_BADGE_TTL_MS);
     }
     previousDraftSaveStateRef.current = draftSaveState;
-  }, [draftSaveState, pushToast, setDraftSaveState]);
+  }, [draftSaveState, setDraftSaveState]);
 
   useEffect(() => () => {
     if (saveBadgeTimerRef.current) {
@@ -794,6 +806,7 @@ export default function SandboxPage({
                 void handleInsertSavedSection(sectionId, position);
               }}
               onToast={pushToast}
+              onActivity={pushActivityChip}
               siteLightboxes={linkPickerLightboxes}
               sitePages={linkPickerSitePages}
             />
@@ -934,6 +947,26 @@ export default function SandboxPage({
             }}
           />
         ) : null}
+
+        <div className={styles.lowerLeftChipStack} aria-live="polite" aria-atomic="false">
+          {draftSaveState !== 'idle' ? (
+            <div className={`${styles.saveStatusChip} ${styles[`saveStatusChip${draftSaveState[0].toUpperCase()}${draftSaveState.slice(1)}` as keyof typeof styles]}`}>
+              <span className={styles.saveStatusGlyph} aria-hidden="true" />
+              <strong>
+                {draftSaveState === 'saving'
+                  ? 'Saving…'
+                  : draftSaveState === 'saved'
+                    ? 'Saved'
+                    : 'Save failed'}
+              </strong>
+            </div>
+          ) : null}
+          {activityChips.map((chip) => (
+            <div key={chip.id} className={styles.activityChip}>
+              {chip.message}
+            </div>
+          ))}
+        </div>
 
         <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
           {toasts.map((toast) => (

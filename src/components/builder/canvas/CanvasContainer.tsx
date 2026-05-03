@@ -137,6 +137,7 @@ export default function CanvasContainer({
   onRequestSaveAsSection,
   onRequestInsertSavedSection,
   onToast,
+  onActivity,
   siteLightboxes = [],
   sitePages = [],
 }: {
@@ -147,6 +148,7 @@ export default function CanvasContainer({
   /** Called when user drops a saved-section card onto the canvas. */
   onRequestInsertSavedSection?: (sectionId: string, position: { x: number; y: number }) => void;
   onToast?: (message: string, tone: 'success' | 'error') => void;
+  onActivity?: (message: string) => void;
   siteLightboxes?: LinkPickerContext['siteLightboxes'];
   sitePages?: LinkPickerContext['sitePages'];
 }) {
@@ -204,6 +206,25 @@ export default function CanvasContainer({
   const [hoveredContainerId, setHoveredContainerId] = useState<string | null>(null);
   const canceledInteractionPointerIdsRef = useRef<Set<number>>(new Set());
   const moveNodeIntoContainer = useBuilderCanvasStore((s) => s.moveNodeIntoContainer);
+
+  const describeHistorySelection = useCallback(() => {
+    const count = useBuilderCanvasStore.getState().selectedNodeIds.length;
+    if (count > 1) return `${count} nodes`;
+    if (count === 1) return '1 node';
+    return 'canvas';
+  }, []);
+
+  const handleUndo = useCallback(() => {
+    if (!useBuilderCanvasStore.getState().canUndo) return;
+    undo();
+    onActivity?.(`Undid: move ${describeHistorySelection()}`);
+  }, [describeHistorySelection, onActivity, undo]);
+
+  const handleRedo = useCallback(() => {
+    if (!useBuilderCanvasStore.getState().canRedo) return;
+    redo();
+    onActivity?.(`Redid: move ${describeHistorySelection()}`);
+  }, [describeHistorySelection, onActivity, redo]);
 
   const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? []);
   const stageWidth = useBuilderCanvasStore(
@@ -430,10 +451,10 @@ export default function CanvasContainer({
     function dispatch(action: NonNullable<CanvasAction>) {
       switch (action) {
         case 'undo':
-          undo();
+          handleUndo();
           break;
         case 'redo':
-          redo();
+          handleRedo();
           break;
         case 'delete':
           deleteSelectedNode();
@@ -547,7 +568,8 @@ export default function CanvasContainer({
     groupSelectedNodes,
     nudgeSelectedNode,
     pasteClipboardNodes,
-    redo,
+    handleRedo,
+    handleUndo,
     selectedLinkTargetNode,
     sendSelectedNodeBackward,
     sendSelectedNodeToBack,
@@ -1391,7 +1413,7 @@ export default function CanvasContainer({
                 title="실행 취소 (Cmd-Z)"
                 onClick={() => {
                   setContextMenu(null);
-                  undo();
+                  handleUndo();
                 }}
                 disabled={!canUndo}
               >
@@ -1403,7 +1425,7 @@ export default function CanvasContainer({
                 title="다시 실행 (Cmd-Shift-Z)"
                 onClick={() => {
                   setContextMenu(null);
-                  redo();
+                  handleRedo();
                 }}
                 disabled={!canRedo}
               >

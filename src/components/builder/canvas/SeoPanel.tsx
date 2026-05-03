@@ -96,6 +96,17 @@ const helpTextStyle: React.CSSProperties = {
   lineHeight: 1.5,
 };
 
+const counterRowStyle: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  gap: 12,
+  fontSize: '0.72rem',
+};
+
+const counterStyle: React.CSSProperties = {
+  fontWeight: 800,
+};
+
 const inputStyle: React.CSSProperties = {
   padding: '8px 12px',
   border: '1px solid #e2e8f0',
@@ -121,6 +132,76 @@ const checkboxRowStyle: React.CSSProperties = {
   border: '1px solid #e2e8f0',
   borderRadius: 10,
   background: '#f8fafc',
+};
+
+const previewCardStyle: React.CSSProperties = {
+  display: 'grid',
+  gap: 8,
+  padding: '12px',
+  border: '1px solid #e2e8f0',
+  borderRadius: 10,
+  background: '#f8fafc',
+};
+
+const previewTitleStyle: React.CSSProperties = {
+  fontSize: '0.78rem',
+  fontWeight: 800,
+  color: '#334155',
+};
+
+const googlePreviewStyle: React.CSSProperties = {
+  padding: '12px',
+  borderRadius: 8,
+  border: '1px solid #dbe2ea',
+  background: '#fff',
+};
+
+const googleUrlStyle: React.CSSProperties = {
+  color: '#202124',
+  fontSize: '0.74rem',
+  lineHeight: 1.4,
+  wordBreak: 'break-all',
+};
+
+const googleTitleStyle: React.CSSProperties = {
+  marginTop: 3,
+  color: '#1a0dab',
+  fontSize: '1rem',
+  lineHeight: 1.3,
+  fontWeight: 500,
+};
+
+const googleDescriptionStyle: React.CSSProperties = {
+  marginTop: 4,
+  color: '#4d5156',
+  fontSize: '0.8rem',
+  lineHeight: 1.45,
+};
+
+const ogPreviewStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '120px minmax(0, 1fr)',
+  gap: 10,
+  alignItems: 'center',
+  minHeight: 78,
+  padding: 10,
+  border: '1px solid #dbe2ea',
+  borderRadius: 8,
+  background: '#fff',
+};
+
+const ogImageFrameStyle: React.CSSProperties = {
+  width: 120,
+  height: 63,
+  borderRadius: 6,
+  overflow: 'hidden',
+  background: '#e2e8f0',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: '#64748b',
+  fontSize: '0.7rem',
+  fontWeight: 800,
 };
 
 const footerStyle: React.CSSProperties = {
@@ -171,6 +252,17 @@ interface SeoResponse {
     noIndex?: boolean;
   };
   error?: string;
+}
+
+function counterColor(length: number, min: number, max: number): string {
+  if (length === 0) return '#dc2626';
+  if (length < min || length > max) return '#d97706';
+  return '#16a34a';
+}
+
+function truncatePreview(value: string, max: number): string {
+  if (value.length <= max) return value;
+  return `${value.slice(0, Math.max(0, max - 1)).trimEnd()}…`;
 }
 
 export default function SeoPanel({
@@ -284,6 +376,15 @@ export default function SeoPanel({
 
   if (!open) return null;
 
+  const titleLength = form.title.trim().length;
+  const descriptionLength = form.description.trim().length;
+  const canonicalPreview = form.canonical.trim() || `https://hojunglaw.com/${locale}`;
+  const previewTitle = truncatePreview(form.title.trim() || '페이지 제목을 입력하세요', 62);
+  const previewDescription = truncatePreview(
+    form.description.trim() || '검색 결과에 표시될 페이지 설명을 입력하세요.',
+    160,
+  );
+
   return (
     <div
       style={backdropStyle}
@@ -325,6 +426,12 @@ export default function SeoPanel({
                     event.currentTarget.style.borderColor = '#e2e8f0';
                   }}
                 />
+                <div style={counterRowStyle}>
+                  <span style={helpTextStyle}>권장 30-60자</span>
+                  <strong style={{ ...counterStyle, color: counterColor(titleLength, 30, 60) }}>
+                    {titleLength}/60
+                  </strong>
+                </div>
               </div>
 
               <div style={fieldStyle}>
@@ -342,6 +449,12 @@ export default function SeoPanel({
                     event.currentTarget.style.borderColor = '#e2e8f0';
                   }}
                 />
+                <div style={counterRowStyle}>
+                  <span style={helpTextStyle}>권장 120-160자</span>
+                  <strong style={{ ...counterStyle, color: counterColor(descriptionLength, 120, 160) }}>
+                    {descriptionLength}/160
+                  </strong>
+                </div>
               </div>
 
               <div style={fieldStyle}>
@@ -378,7 +491,41 @@ export default function SeoPanel({
                     event.currentTarget.style.borderColor = '#e2e8f0';
                   }}
                 />
+                <span style={helpTextStyle}>대표 URL입니다. 비워두면 현재 locale 기본 URL을 미리보기로 사용합니다.</span>
               </div>
+
+              <section style={previewCardStyle} aria-label="Google search preview">
+                <span style={previewTitleStyle}>Google preview</span>
+                <div style={googlePreviewStyle}>
+                  <div style={googleUrlStyle}>{canonicalPreview}</div>
+                  <div style={googleTitleStyle}>{previewTitle}</div>
+                  <div style={googleDescriptionStyle}>{previewDescription}</div>
+                </div>
+              </section>
+
+              <section style={previewCardStyle} aria-label="Open Graph image preview">
+                <span style={previewTitleStyle}>OG image preview</span>
+                <div style={ogPreviewStyle}>
+                  <div style={ogImageFrameStyle}>
+                    {form.ogImage.trim() ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={form.ogImage.trim()}
+                        alt=""
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      />
+                    ) : (
+                      <span>No image</span>
+                    )}
+                  </div>
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ ...labelStyle, color: '#0f172a' }}>{form.title.trim() || 'Untitled page'}</div>
+                    <div style={{ ...helpTextStyle, marginTop: 4 }}>
+                      {form.ogImage.trim() || 'OG image URL을 입력하면 소셜 공유 썸네일을 확인할 수 있습니다.'}
+                    </div>
+                  </div>
+                </div>
+              </section>
 
               <label style={checkboxRowStyle} htmlFor="builder-seo-noindex">
                 <input

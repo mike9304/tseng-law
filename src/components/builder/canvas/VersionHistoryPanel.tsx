@@ -24,6 +24,12 @@ interface RevisionDiff {
   modified: { id: string; kind: string }[];
 }
 
+interface RevisionDiffSummary {
+  added: number;
+  removed: number;
+  modified: number;
+}
+
 const backdropStyle: React.CSSProperties = {
   position: 'fixed',
   inset: 0,
@@ -82,13 +88,25 @@ const bodyStyle: React.CSSProperties = {
 };
 
 const timelineStyle: React.CSSProperties = {
+  position: 'relative',
   borderRight: '1px solid #e2e8f0',
   overflowY: 'auto',
-  padding: '12px',
+  overflowX: 'hidden',
+  padding: '16px 14px 16px 28px',
   display: 'flex',
   flexDirection: 'column',
-  gap: 6,
+  gap: 10,
   background: '#f8fafc',
+};
+
+const timelineRailStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: 22,
+  bottom: 22,
+  left: 16,
+  width: 2,
+  borderRadius: 999,
+  background: '#dbe2ea',
 };
 
 const previewStyle: React.CSSProperties = {
@@ -101,12 +119,28 @@ const previewStyle: React.CSSProperties = {
 
 function timelineItemStyle(active: boolean): React.CSSProperties {
   return {
-    padding: '10px 12px',
+    position: 'relative',
+    padding: '12px 12px',
     borderRadius: 10,
     border: active ? '1px solid #116dff' : '1px solid #e2e8f0',
     background: active ? '#eff6ff' : '#fff',
     cursor: 'pointer',
     transition: 'background 120ms ease, border-color 120ms ease',
+    boxShadow: active ? '0 8px 22px rgba(17, 109, 255, 0.12)' : '0 1px 2px rgba(15, 23, 42, 0.04)',
+  };
+}
+
+function timelineDotStyle(active: boolean): React.CSSProperties {
+  return {
+    position: 'absolute',
+    top: 17,
+    left: -19,
+    width: 10,
+    height: 10,
+    borderRadius: 999,
+    border: active ? '2px solid #116dff' : '2px solid #94a3b8',
+    background: active ? '#fff' : '#f8fafc',
+    boxShadow: '0 0 0 3px #f8fafc',
   };
 }
 
@@ -120,6 +154,46 @@ const metaStyle: React.CSSProperties = {
   fontSize: '0.72rem',
   color: '#64748b',
   marginTop: 2,
+};
+
+const summaryStyle: React.CSSProperties = {
+  marginTop: 7,
+  color: '#334155',
+  fontSize: '0.75rem',
+  fontWeight: 650,
+};
+
+const revisionCardFooterStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 8,
+  marginTop: 10,
+};
+
+const inlineRestoreButtonStyle: React.CSSProperties = {
+  padding: '4px 10px',
+  border: '1px solid #c7d2fe',
+  borderRadius: 7,
+  background: '#fff',
+  color: '#1d4ed8',
+  fontSize: '0.72rem',
+  fontWeight: 750,
+  cursor: 'pointer',
+};
+
+const diffPreviewChipStyle: React.CSSProperties = {
+  position: 'absolute',
+  right: 10,
+  top: 10,
+  padding: '4px 8px',
+  borderRadius: 999,
+  background: '#0f172a',
+  color: '#fff',
+  fontSize: '0.68rem',
+  fontWeight: 750,
+  boxShadow: '0 10px 22px rgba(15, 23, 42, 0.2)',
+  pointerEvents: 'none',
 };
 
 const sourceBadgeStyle = (source?: string): React.CSSProperties => {
@@ -274,6 +348,28 @@ function computeDiff(
   return { added, removed, modified };
 }
 
+function summarizeDiff(diff: RevisionDiff): RevisionDiffSummary {
+  return {
+    added: diff.added.length,
+    removed: diff.removed.length,
+    modified: diff.modified.length,
+  };
+}
+
+function formatSourceLabel(source?: string): string {
+  if (source === 'publish') return 'published snapshot';
+  if (source === 'rollback-backup') return 'rollback backup';
+  if (source === 'manual') return 'manual save';
+  return 'saved revision';
+}
+
+function formatDiffSummary(summary?: RevisionDiffSummary): string {
+  if (!summary) return 'Diff preview 준비 중';
+  const changed = summary.added + summary.removed + summary.modified;
+  if (changed === 0) return '현재 draft 와 동일';
+  return `+${summary.added} / -${summary.removed} / ~${summary.modified}`;
+}
+
 export default function VersionHistoryPanel({
   open,
   pageId,
@@ -298,6 +394,8 @@ export default function VersionHistoryPanel({
   const [selectedDoc, setSelectedDoc] = useState<BuilderCanvasDocument | null>(null);
   const [loadingDoc, setLoadingDoc] = useState(false);
   const [currentDraftMeta, setCurrentDraftMeta] = useState<DraftMeta | null>(draftMeta ?? null);
+  const [hoveringId, setHoveringId] = useState<string | null>(null);
+  const [hoverSummaries, setHoverSummaries] = useState<Record<string, RevisionDiffSummary>>({});
 
   const fetchRevisions = useCallback(async () => {
     if (!pageId) return;
@@ -364,12 +462,34 @@ export default function VersionHistoryPanel({
     [pageId],
   );
 
+  const loadHoverSummary = useCallback(
+    async (revisionId: string) => {
+      if (!currentDocument || hoverSummaries[revisionId]) return;
+      try {
+        const res = await fetch(
+          `/api/builder/site/pages/${encodeURIComponent(pageId)}/revisions?revisionId=${encodeURIComponent(revisionId)}`,
+          { credentials: 'same-origin' },
+        );
+        if (!res.ok) return;
+        const data = (await res.json()) as { document?: BuilderCanvasDocument };
+        if (!data.document) return;
+        const summary = summarizeDiff(computeDiff(currentDocument, data.document));
+        setHoverSummaries((current) => ({ ...current, [revisionId]: summary }));
+      } catch {
+        // silent
+      }
+    },
+    [currentDocument, hoverSummaries, pageId],
+  );
+
   useEffect(() => {
     if (open) {
       void fetchRevisions();
       void fetchCurrentDraftMeta();
       setSelectedId(null);
       setSelectedDoc(null);
+      setHoveringId(null);
+      setHoverSummaries({});
     }
   }, [open, fetchCurrentDraftMeta, fetchRevisions]);
 
@@ -465,6 +585,7 @@ export default function VersionHistoryPanel({
         <div style={bodyStyle}>
           {/* ── Timeline ── */}
           <div style={timelineStyle}>
+            <span style={timelineRailStyle} aria-hidden="true" />
             <div
               style={{
                 ...timelineItemStyle(false),
@@ -472,6 +593,7 @@ export default function VersionHistoryPanel({
                 borderColor: '#116dff',
               }}
             >
+              <span style={timelineDotStyle(true)} aria-hidden="true" />
               <div style={dateStyle}>현재 Draft</div>
               <div style={metaStyle}>
                 revision {currentDraftMeta?.revision ?? 0}
@@ -479,6 +601,7 @@ export default function VersionHistoryPanel({
                 {' — '}
                 노드 {currentDocument?.nodes.length ?? 0}개 — 편집 중
               </div>
+              <div style={summaryStyle}>Live draft · 마지막 저장본 기준</div>
             </div>
 
             {loading ? (
@@ -496,17 +619,43 @@ export default function VersionHistoryPanel({
                   key={rev.revisionId}
                   style={timelineItemStyle(rev.revisionId === selectedId)}
                   onClick={() => loadRevisionDoc(rev.revisionId)}
+                  onMouseEnter={() => {
+                    setHoveringId(rev.revisionId);
+                    void loadHoverSummary(rev.revisionId);
+                  }}
+                  onMouseLeave={() => setHoveringId((current) => (current === rev.revisionId ? null : current))}
                   role="button"
                   tabIndex={0}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') void loadRevisionDoc(rev.revisionId);
                   }}
                 >
+                  <span style={timelineDotStyle(rev.revisionId === selectedId)} aria-hidden="true" />
+                  {hoveringId === rev.revisionId ? (
+                    <span style={diffPreviewChipStyle}>{formatDiffSummary(hoverSummaries[rev.revisionId])}</span>
+                  ) : null}
                   <div style={dateStyle}>
                     {formatDate(rev.savedAt)}
                     {rev.source ? <span style={sourceBadgeStyle(rev.source)}>{rev.source}</span> : null}
                   </div>
                   <div style={metaStyle}>노드 {rev.nodeCount}개</div>
+                  <div style={summaryStyle}>
+                    변경 요약 · {formatSourceLabel(rev.source)}
+                  </div>
+                  <div style={revisionCardFooterStyle}>
+                    <span style={metaStyle}>hover 시 diff preview</span>
+                    <button
+                      type="button"
+                      style={inlineRestoreButtonStyle}
+                      disabled={restoring}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setConfirmId(rev.revisionId);
+                      }}
+                    >
+                      복원
+                    </button>
+                  </div>
                 </div>
               ))
             )}

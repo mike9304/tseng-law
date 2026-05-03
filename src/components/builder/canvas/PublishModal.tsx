@@ -8,6 +8,13 @@ import type {
   CheckResult,
   PublishCheckSuite,
 } from '@/lib/builder/publish-gate/gate-runner';
+import {
+  checkBrokenLinks,
+  checkEmptyContent,
+  checkFormTarget,
+  checkH1Count,
+  checkImageAlt,
+} from '@/lib/builder/publish-gate/checks';
 
 type PublishState = 'checking' | 'ready' | 'publishing' | 'success' | 'error';
 
@@ -18,6 +25,17 @@ interface DraftMeta {
 }
 
 type ToastTone = 'success' | 'error';
+
+type PreflightTone = 'ok' | 'warning' | 'blocker';
+
+interface PreflightItem {
+  key: string;
+  label: string;
+  detail: string;
+  tone: PreflightTone;
+  blockerCount: number;
+  warningCount: number;
+}
 
 interface PublishErrorBody {
   error?: string;
@@ -76,6 +94,54 @@ const sectionTitleStyle: React.CSSProperties = {
   letterSpacing: '0.05em',
   color: '#64748b',
   margin: '16px 0 6px',
+};
+
+const checklistGridStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+  gap: 8,
+  marginTop: 12,
+};
+
+function checklistCardStyle(tone: PreflightTone): React.CSSProperties {
+  const palette = tone === 'blocker'
+    ? { background: '#fef2f2', border: '#fca5a5', color: '#991b1b' }
+    : tone === 'warning'
+      ? { background: '#fffbeb', border: '#fde68a', color: '#92400e' }
+      : { background: '#f0fdf4', border: '#86efac', color: '#166534' };
+  return {
+    minHeight: 78,
+    padding: '10px 12px',
+    borderRadius: 10,
+    border: `1px solid ${palette.border}`,
+    background: palette.background,
+    color: palette.color,
+  };
+}
+
+const checklistLabelStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 8,
+  fontSize: '0.8rem',
+  fontWeight: 800,
+};
+
+const checklistDetailStyle: React.CSSProperties = {
+  marginTop: 6,
+  fontSize: '0.72rem',
+  lineHeight: 1.35,
+  opacity: 0.82,
+};
+
+const checklistStatusStyle: React.CSSProperties = {
+  flexShrink: 0,
+  padding: '2px 7px',
+  borderRadius: 999,
+  background: 'rgba(255,255,255,0.68)',
+  fontSize: '0.66rem',
+  fontWeight: 850,
 };
 
 const listStyle: React.CSSProperties = {
@@ -214,6 +280,64 @@ function severityIcon(sev: 'blocker' | 'warning' | 'info'): string {
   return 'ℹ';
 }
 
+function itemTone(results: CheckResult[]): PreflightTone {
+  if (results.some((result) => result.severity === 'blocker')) return 'blocker';
+  if (results.some((result) => result.severity === 'warning')) return 'warning';
+  return 'ok';
+}
+
+function itemStatus(item: PreflightItem): string {
+  if (item.tone === 'blocker') return `${item.blockerCount} blocker`;
+  if (item.tone === 'warning') return `${item.warningCount} warning`;
+  return 'Passed';
+}
+
+function buildPreflightItems(suite: PublishCheckSuite | null): PreflightItem[] {
+  const results = suite?.results ?? [];
+  const imageResults = results.filter((result) =>
+    result.category === 'images'
+    || (result.category === 'accessibility' && result.id.startsWith('image-')),
+  );
+  const linkResults = results.filter((result) => result.category === 'links');
+  const seoResults = results.filter((result) => result.category === 'seo');
+  const formResults = results.filter((result) => result.category === 'forms');
+
+  return [
+    {
+      key: 'images',
+      label: 'Images',
+      detail: '빈 alt 이미지 / 비어 있는 이미지 소스',
+      tone: itemTone(imageResults),
+      blockerCount: imageResults.filter((result) => result.severity === 'blocker').length,
+      warningCount: imageResults.filter((result) => result.severity === 'warning').length,
+    },
+    {
+      key: 'links',
+      label: 'Links',
+      detail: '빈 링크 / 잘못된 URL / 없는 내부 경로',
+      tone: itemTone(linkResults),
+      blockerCount: linkResults.filter((result) => result.severity === 'blocker').length,
+      warningCount: linkResults.filter((result) => result.severity === 'warning').length,
+    },
+    {
+      key: 'seo',
+      label: 'SEO',
+      detail: 'title / description 누락 및 권장 길이',
+      tone: itemTone(seoResults),
+      blockerCount: seoResults.filter((result) => result.severity === 'blocker').length,
+      warningCount: seoResults.filter((result) => result.severity === 'warning').length,
+    },
+    {
+      key: 'forms',
+      label: 'Forms',
+      detail: 'form action / email / webhook 대상',
+      tone: itemTone(formResults),
+      blockerCount: formResults.filter((result) => result.severity === 'blocker').length,
+      warningCount: formResults.filter((result) => result.severity === 'warning').length,
+    },
+  ];
+}
+
 function CheckListItem({
   result,
   onFix,
@@ -306,20 +430,30 @@ export default function PublishModal({
       }
     }
 
-    // Fallback — minimal client-side check (no SEO/site-aware bits).
+    // Fallback — client-side checks still cover the visible preflight categories
+    // when the server-side SEO/site-aware gate is temporarily unavailable.
+    const fallbackResults: CheckResult[] = [
+      ...checkEmptyContent(document),
+      ...checkBrokenLinks(document),
+      ...checkImageAlt(document),
+      ...checkFormTarget(document),
+      ...checkH1Count(document),
+    ];
+    if (activePageId) {
+      fallbackResults.push({
+        id: 'seo-server-check-unavailable',
+        severity: 'warning',
+        category: 'seo',
+        message: 'SEO title/description 서버 체크를 완료하지 못했습니다.',
+        fixHint: 'SEO 패널에서 title, description, canonical, OG image 를 확인하세요.',
+      });
+    }
     const fallbackSuite: PublishCheckSuite = {
-      results: document.nodes.length === 0
-        ? [{
-            id: 'page-empty',
-            severity: 'blocker',
-            category: 'performance',
-            message: '페이지에 요소가 없습니다.',
-          }]
-        : [],
-      hasBlocker: document.nodes.length === 0,
-      blockerCount: document.nodes.length === 0 ? 1 : 0,
-      warningCount: 0,
-      infoCount: 0,
+      results: fallbackResults,
+      hasBlocker: fallbackResults.some((result) => result.severity === 'blocker'),
+      blockerCount: fallbackResults.filter((result) => result.severity === 'blocker').length,
+      warningCount: fallbackResults.filter((result) => result.severity === 'warning').length,
+      infoCount: fallbackResults.filter((result) => result.severity === 'info').length,
       checkedAt: new Date().toISOString(),
     };
     setSuite(fallbackSuite);
@@ -356,6 +490,7 @@ export default function PublishModal({
       infos: suite.results.filter((r) => r.severity === 'info'),
     };
   }, [suite]);
+  const preflightItems = useMemo(() => buildPreflightItems(suite), [suite]);
 
   const canPublish = !!suite && !suite.hasBlocker && publishState === 'ready';
   const hasWarningsOnly = !!suite && !suite.hasBlocker && suite.warningCount > 0;
@@ -492,6 +627,21 @@ export default function PublishModal({
 
           {publishState !== 'checking' && suite && (
             <>
+              <p style={sectionTitleStyle}>
+                Automatic preflight checklist
+              </p>
+              <div style={checklistGridStyle}>
+                {preflightItems.map((item) => (
+                  <div key={item.key} style={checklistCardStyle(item.tone)}>
+                    <div style={checklistLabelStyle}>
+                      <span>{item.label}</span>
+                      <span style={checklistStatusStyle}>{itemStatus(item)}</span>
+                    </div>
+                    <div style={checklistDetailStyle}>{item.detail}</div>
+                  </div>
+                ))}
+              </div>
+
               {grouped.blockers.length > 0 && (
                 <>
                   <p style={{ ...sectionTitleStyle, color: '#991b1b' }}>

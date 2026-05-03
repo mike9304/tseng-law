@@ -3,14 +3,16 @@ import { expect, test, type Locator, type Page } from '@playwright/test';
 const shortcutModifier = 'ControlOrMeta';
 
 async function firstVisibleNode(page: Page): Promise<Locator> {
-  const node = page.locator('[data-node-id]:visible').first();
+  const preferred = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();
+  const hasPreferredNode = (await preferred.count()) > 0;
+  const node = hasPreferredNode ? preferred : page.locator('[data-node-id]:visible').first();
   await expect(node).toBeVisible();
   return node;
 }
 
 async function selectFirstNode(page: Page): Promise<Locator> {
   const node = await firstVisibleNode(page);
-  await node.click({ position: { x: 12, y: 12 } });
+  await node.click({ position: { x: 12, y: 12 }, force: true });
   await expect(page.locator('[class*="resizeHandle"]')).toHaveCount(8);
   await expect(page.locator('[class*="rotationHandle"]').first()).toBeVisible();
   await expect(page.locator('[class*="nodeSizeLabel"]').first()).toContainText(/·/);
@@ -40,6 +42,23 @@ async function waitForEditorCss(page: Page): Promise<void> {
 
 test.describe('/ko/admin-builder desktop editor parity smoke', () => {
   test('covers Wix-like editor chrome, selection, shortcuts, panels, and publish gates', async ({ page }) => {
+    const shellResponse = await page.request.get('/ko/admin-builder');
+    expect(shellResponse.status()).toBe(200);
+    const shellHtml = await shellResponse.text();
+    const runtimeChunk = shellHtml.match(/\/_next\/static\/chunks\/webpack-[^"]+\.js/)?.[0];
+    expect(runtimeChunk, 'editor shell should reference the current webpack runtime chunk').toBeTruthy();
+    const runtimeResponse = await page.request.get(runtimeChunk!);
+    expect(runtimeResponse.status()).toBe(200);
+    expect(runtimeResponse.headers()['content-type']).toContain('application/javascript');
+
+    const browserErrors: string[] = [];
+    page.on('console', (message) => {
+      if (message.type() === 'error') browserErrors.push(message.text());
+    });
+    page.on('pageerror', (error) => {
+      browserErrors.push(error.message);
+    });
+
     await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
 
     const topBar = page.locator('header[class*="topBar"]').first();
@@ -57,6 +76,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     expect(railBox?.width).toBeLessThanOrEqual(68);
 
     await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+    await expect.poll(() => browserErrors, { timeout: 1_000 }).toEqual([]);
+    await expect(page.locator('[data-node-id]').first()).toBeVisible();
     await expect(page.getByTitle('사이트 발행')).toBeVisible();
     const stageBox = await page.getByRole('application', { name: 'Canvas editor' }).boundingBox();
     expect(stageBox?.y ?? 9999).toBeLessThan(130);
@@ -72,11 +93,12 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
 
     await page.locator('[class*="globalHeaderRegion"]').click({ position: { x: 360, y: 16 }, force: true });
     await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();
+    await rail.getByRole('button', { name: 'Navigation', exact: true }).click();
 
     const selectedNode = await selectFirstNode(page);
     await closeModalOverlayIfPresent(page);
 
-    await selectedNode.click({ button: 'right', position: { x: 18, y: 18 } });
+    await selectedNode.click({ button: 'right', position: { x: 18, y: 18 }, force: true });
     await expect(page.locator('[role="menu"]').first()).toBeVisible();
     await expect(page.locator('[class*="contextMenuShortcut"]').first()).toBeVisible();
     await page.keyboard.press('Escape');

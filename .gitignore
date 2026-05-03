@@ -3,6 +3,7 @@ node_modules/
 
 # next.js
 .next/
+.next-g-editor/
 out/
 
 # env files (민감정보)

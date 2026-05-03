@@ -444,3 +444,19 @@
 - 사용자 확인용 서버는 최신 build 기반 `next start`로 `http://localhost:3000/ko/admin-builder`에 유지. 현재 로컬 `next dev`는 Next dev vendor chunk/cache 오류가 있어 사용자 검증에는 production server를 사용.
 - `/ko/admin-builder`는 기존 사이트 메타가 이미 있으면 매 요청 seed 검사를 건너뛰도록 보강. 최신 `next start`에서 200 응답 약 1.0초 확인.
 - `Wix 체크포인트.md`는 W01/W02/W18/W21/W27~W30/W114를 최신 검증 결과로 업데이트. Green 승격은 문서 규칙대로 사용자 직접 클릭·저장·새로고침 검증 후 처리.
+
+## 2026-05-03 Codex /goal G-Editor 검증 안정화
+
+감사 결과:
+- 다른 Codex/Claude 세션의 `next dev`/`next build`가 기본 `.next`를 동시에 갱신해, `/ko/admin-builder` HTML은 200이지만 `/_next/static/chunks/webpack-*.js`가 400/text-html로 내려와 hydration 이 깨지는 상태를 확인.
+- `next.config.mjs`에 `NEXT_DIST_DIR` 기반 distDir override를 추가하고, 검증 서버는 `.next-g-editor` 격리 build로 실행하도록 보강.
+- Playwright admin-builder smoke가 HTML의 webpack runtime chunk를 직접 요청해 `200` + `application/javascript`를 확인하고, browser console/pageerror가 없는지 검사하도록 강화.
+
+검증:
+- `NEXT_DIST_DIR=.next-g-editor npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` lint warning만)
+- `NEXT_DIST_DIR=.next-g-editor npm run start`로 `http://localhost:3000` 실행 ✅
+- `curl /_next/static/chunks/webpack-*.js` ✅ (`200`, `application/javascript`)
+- `curl /ko/admin-builder` ✅ (`200`, 약 2.7초)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, hydration + chunk MIME + editor smoke)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warning만)

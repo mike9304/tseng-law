@@ -1,4 +1,5 @@
 const locales = ['ko', 'zh-hant', 'en'];
+const distDir = process.env.NEXT_DIST_DIR;
 
 const legacyColumnAliases = {
   'gym-injury-lawsuit': 'taiwan-gym-injury-lawsuit',
@@ -22,6 +23,7 @@ const legacyColumnAliases = {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  ...(distDir ? { distDir } : {}),
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp']

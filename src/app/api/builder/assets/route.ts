@@ -6,6 +6,10 @@ import {
 } from '@/lib/builder/assets';
 import { recordAssetDelete, recordAssetUpload } from '@/lib/builder/audit/record';
 import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import {
+  validateUploadFile,
+  validateImageBytes,
+} from '@/lib/builder/canvas/upload-validation';
 
 export const runtime = 'nodejs';
 
@@ -57,6 +61,21 @@ export async function POST(request: NextRequest) {
   const file = formData.get('file');
   if (!(file instanceof File)) {
     return NextResponse.json({ ok: false, error: 'Image file is required.' }, { status: 400 });
+  }
+
+  // Server-side validation: client validation은 위조 가능, 여기서 진짜 검증.
+  const policyCheck = validateUploadFile(file);
+  if (!policyCheck.valid) {
+    return NextResponse.json({ ok: false, error: policyCheck.error }, { status: 400 });
+  }
+
+  // Magic-byte sniffing — claimed MIME과 실제 시그니처 일치 강제.
+  const byteCheck = await validateImageBytes(file);
+  if (!byteCheck.valid) {
+    return NextResponse.json(
+      { ok: false, error: byteCheck.error, sniffed: byteCheck.sniffed },
+      { status: 400 },
+    );
   }
 
   try {

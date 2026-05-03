@@ -1,7 +1,16 @@
 import { describe, expect, it } from 'vitest';
+import {
+  builderCanvasNodeKinds,
+  createDefaultCanvasNodeStyle,
+  type BuilderCanvasNode,
+} from '@/lib/builder/canvas/types';
 import { normalizeSavedSectionSnapshot } from '@/lib/builder/sections/normalize';
-import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
-import { createDefaultCanvasNodeStyle } from '@/lib/builder/canvas/types';
+import {
+  BUILT_IN_SECTION_CATEGORIES,
+  BUILT_IN_SECTIONS,
+  getBuiltInSectionsByCategory,
+  type BuiltInSectionCategory,
+} from '@/lib/builder/sections/templates';
 
 function mk(overrides: Record<string, unknown>): BuilderCanvasNode {
   return {
@@ -132,5 +141,97 @@ describe('normalizeSavedSectionSnapshot', () => {
     const r = result[0] as BuilderCanvasNode;
     expect(r.responsive?.tablet?.rect?.width).toBe(612);
     expect(r.responsive?.tablet?.rect?.height).toBe(345);
+  });
+});
+
+describe('BUILT_IN_SECTIONS', () => {
+  const legacyTemplateIds = new Set([
+    'hero-centered-cta',
+    'hero-split-image',
+    'features-3-column',
+    'features-icon-grid',
+    'testimonials-cards',
+    'testimonials-quote-grid',
+    'cta-banner-centered',
+    'cta-split-with-image',
+    'footer-3-column',
+    'footer-minimal',
+    'legal-disclaimer',
+    'legal-privacy-summary',
+  ]);
+
+  const expectedCounts = {
+    hero: 5,
+    features: 5,
+    testimonials: 5,
+    cta: 5,
+    footer: 4,
+    legal: 3,
+    stats: 4,
+    pricing: 4,
+    team: 4,
+    gallery: 4,
+    faq: 3,
+    services: 4,
+    contact: 3,
+  } satisfies Record<BuiltInSectionCategory, number>;
+
+  it('keeps the template catalog at the Wix-grade Track B minimum', () => {
+    expect(BUILT_IN_SECTION_CATEGORIES).toHaveLength(13);
+    expect(BUILT_IN_SECTIONS).toHaveLength(53);
+  });
+
+  it('has the expected category coverage', () => {
+    const buckets = getBuiltInSectionsByCategory();
+
+    for (const category of BUILT_IN_SECTION_CATEGORIES) {
+      expect(buckets[category], category).toHaveLength(expectedCounts[category]);
+    }
+  });
+
+  it('uses unique template ids and valid existing canvas node kinds', () => {
+    const templateIds = new Set(BUILT_IN_SECTIONS.map((template) => template.id));
+    const kindSet = new Set(builderCanvasNodeKinds);
+
+    expect(templateIds.size).toBe(BUILT_IN_SECTIONS.length);
+
+    for (const template of BUILT_IN_SECTIONS) {
+      for (const node of template.nodes) {
+        expect(kindSet.has(node.kind), `${template.id}:${node.id}`).toBe(true);
+      }
+    }
+  });
+
+  it('stores every template as a normalized, self-contained section tree', () => {
+    for (const template of BUILT_IN_SECTIONS) {
+      const root = template.nodes.find((node) => node.id === template.rootNodeId);
+      const nodeIds = new Set(template.nodes.map((node) => node.id));
+      const normalizedIds = normalizeSavedSectionSnapshot(template.nodes, template.rootNodeId)
+        .map((node) => node.id);
+
+      expect(root, template.id).toBeDefined();
+      expect(root?.parentId, template.id).toBeUndefined();
+      expect(root?.rect.x, template.id).toBe(0);
+      expect(root?.rect.y, template.id).toBe(0);
+      expect(nodeIds.size, template.id).toBe(template.nodes.length);
+      expect(normalizedIds, template.id).toEqual(template.nodes.map((node) => node.id));
+
+      for (const node of template.nodes) {
+        if (node.parentId) {
+          expect(nodeIds.has(node.parentId), `${template.id}:${node.id}`).toBe(true);
+        }
+      }
+    }
+  });
+
+  it('keeps newly generated section templates in the target 12-25 node range', () => {
+    for (const template of BUILT_IN_SECTIONS) {
+      if (legacyTemplateIds.has(template.id)) {
+        continue;
+      }
+
+      expect(template.nodes.length, template.id).toBeGreaterThanOrEqual(12);
+      expect(template.nodes.length, template.id).toBeLessThanOrEqual(25);
+    }
   });
 });

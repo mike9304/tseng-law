@@ -10,6 +10,7 @@
 
 import { defaultLocale, locales, type Locale } from '@/lib/locales';
 import type { BuilderPageMeta } from '@/lib/builder/site/types';
+import { buildSitePageAbsoluteUrl } from '@/lib/builder/site/paths';
 
 export interface HreflangAlternate {
   /** Locale tag in the IETF form expected by Google (e.g. zh-Hant). */
@@ -31,7 +32,7 @@ export function localeToHreflangTag(locale: Locale): string {
 }
 
 function pageUrl(siteUrl: string, locale: Locale, slug: string): string {
-  return `${siteUrl}/${locale}/p/${slug}`.replace(/\/+$/, '');
+  return buildSitePageAbsoluteUrl(siteUrl, locale, slug);
 }
 
 /**

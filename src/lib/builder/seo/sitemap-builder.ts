@@ -21,6 +21,7 @@ import { readSiteDocument } from '@/lib/builder/site/persistence';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { defaultLocale, locales, type Locale } from '@/lib/locales';
 import { buildAbsoluteUrl, getSiteUrl } from '@/lib/seo';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
 
 export interface BuilderSitemapEntry {
   url: string;
@@ -61,7 +62,7 @@ export async function collectBuilderSitemapEntriesForLocale(
 
     const alternates = buildHreflangAlternates(page, siteUrl, site.pages);
     const slug = page.slug || '';
-    const path = `/${locale}/p/${slug}`.replace(/\/+$/, '') || `/${locale}`;
+    const path = buildSitePagePath(locale, slug);
 
     out.push({
       url: buildAbsoluteUrl(path),

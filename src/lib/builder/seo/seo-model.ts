@@ -6,21 +6,38 @@
  */
 
 import type { Locale } from '@/lib/locales';
-import type { BuilderPageMeta } from '@/lib/builder/site/types';
+import type { BuilderPageMeta, BuilderSeoAdditionalMetaTag, BuilderSiteDocument } from '@/lib/builder/site/types';
 import {
   buildHreflangAlternates,
   type HreflangAlternate,
 } from '@/lib/builder/seo/hreflang';
+import { buildSitePageAbsoluteUrl } from '@/lib/builder/site/paths';
+import { mergeSeoWithDefaults } from '@/lib/builder/seo/defaults';
 
 export interface PageSeoData {
   title: string;
   description: string;
+  ogTitle: string;
+  ogDescription: string;
   ogImage?: string;
+  twitterCard: 'summary' | 'summary_large_image';
+  twitterTitle: string;
+  twitterDescription: string;
+  twitterImage?: string;
   canonical: string;
   noIndex: boolean;
   noFollow: boolean;
+  additionalMetaTags: BuilderSeoAdditionalMetaTag[];
   hreflang: HreflangAlternate[];
   structuredData?: Record<string, unknown>;
+}
+
+export function buildBuilderPageAbsoluteUrl(
+  siteUrl: string,
+  locale: Locale,
+  slug: string,
+): string {
+  return buildSitePageAbsoluteUrl(siteUrl, locale, slug);
 }
 
 /**
@@ -46,22 +63,42 @@ export function buildPageSeo(
   siteUrl: string,
   locale: Locale,
   allPages: BuilderPageMeta[],
+  site?: BuilderSiteDocument | null,
 ): PageSeoData {
-  const seo = page.seo || {};
+  const seo = mergeSeoWithDefaults({ page, site, siteUrl, locale });
   const slug = page.slug || '';
-  const url = `${siteUrl}/${locale}/p/${slug}`.replace(/\/+$/, '');
+  const url = buildBuilderPageAbsoluteUrl(siteUrl, locale, slug);
+  const title = seo.title || page.title[locale] || page.title.ko || '';
+  const description = seo.description || '';
+  const ogImage = seo.ogImage;
+  const pageSeo = page.seo ?? {};
+  const hasExplicitTitle = Boolean(pageSeo.title?.trim());
+  const hasExplicitDescription = Boolean(pageSeo.description?.trim());
+  const ogTitle = pageSeo.ogTitle || (hasExplicitTitle ? title : seo.ogTitle) || title;
+  const ogDescription =
+    pageSeo.ogDescription || (hasExplicitDescription ? description : seo.ogDescription) || description;
 
   // Centralised hreflang generation — includes x-default + every linked
   // sibling reachable via `linkedPageIds`.
   const hreflang = buildHreflangAlternates(page, siteUrl, allPages);
 
   return {
-    title: seo.title || page.title[locale] || page.title.ko || '',
-    description: seo.description || '',
-    ogImage: seo.ogImage,
+    title,
+    description,
+    ogTitle,
+    ogDescription,
+    ogImage,
+    twitterCard: seo.twitterCard || (seo.twitterImage || ogImage ? 'summary_large_image' : 'summary'),
+    twitterTitle: pageSeo.twitterTitle || (hasExplicitTitle ? ogTitle : seo.twitterTitle) || ogTitle,
+    twitterDescription:
+      pageSeo.twitterDescription ||
+      (hasExplicitDescription ? ogDescription : seo.twitterDescription) ||
+      ogDescription,
+    twitterImage: seo.twitterImage || ogImage,
     canonical: normalizeCanonicalUrl(seo.canonical || url),
     noIndex: page.noIndex || seo.noIndex || false,
     noFollow: seo.noFollow || false,
+    additionalMetaTags: seo.additionalMetaTags ?? [],
     hreflang,
   };
 }
@@ -79,9 +116,9 @@ export function buildSitemapEntries(
   siteUrl: string,
 ): SitemapEntry[] {
   return pages
-    .filter((p) => p.publishedAt && !p.noIndex)
+    .filter((p) => p.publishedAt && !p.noIndex && !p.seo?.noIndex)
     .map((page) => {
-      const loc = `${siteUrl}/${page.locale}/p/${page.slug}`.replace(/\/+$/, '');
+      const loc = buildBuilderPageAbsoluteUrl(siteUrl, page.locale, page.slug);
       const hreflang: Array<{ locale: string; href: string }> = [];
       if (page.linkedPageIds) {
         for (const [loc2, linkedId] of Object.entries(page.linkedPageIds)) {
@@ -90,7 +127,7 @@ export function buildSitemapEntries(
           if (linked) {
             hreflang.push({
               locale: loc2,
-              href: `${siteUrl}/${loc2}/p/${linked.slug}`.replace(/\/+$/, ''),
+              href: buildBuilderPageAbsoluteUrl(siteUrl, loc2 as Locale, linked.slug),
             });
           }
         }

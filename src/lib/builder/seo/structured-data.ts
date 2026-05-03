@@ -20,6 +20,7 @@
  */
 
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { BuilderStructuredDataBlock } from '@/lib/builder/site/types';
 import {
   generateAttorneySchema,
   generateFAQSchema,
@@ -94,9 +95,31 @@ function collectAttorneyPayloads(canvas: BuilderCanvasDocument): StructuredDataP
  */
 export function buildStructuredDataPayloads(
   canvas: BuilderCanvasDocument,
+  options: { includeFaqPage?: boolean } = {},
 ): StructuredDataPayload[] {
   return [
-    ...collectFaqPayloads(canvas),
+    ...(options.includeFaqPage === false ? [] : collectFaqPayloads(canvas)),
     ...collectAttorneyPayloads(canvas),
   ];
+}
+
+export function buildCustomStructuredDataPayloads(
+  blocks: BuilderStructuredDataBlock[] | undefined,
+): StructuredDataPayload[] {
+  const out: StructuredDataPayload[] = [];
+  for (const block of blocks ?? []) {
+    if (!block.enabled || !block.json?.trim()) continue;
+    try {
+      const parsed = JSON.parse(block.json) as unknown;
+      if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+        out.push({
+          id: `custom-${block.id}`,
+          data: parsed as Record<string, unknown>,
+        });
+      }
+    } catch {
+      // Invalid custom JSON-LD is reported in the builder validation layer.
+    }
+  }
+  return out;
 }

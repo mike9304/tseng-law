@@ -16,7 +16,10 @@ export interface SchemaOrgConfig {
   data: Record<string, unknown>;
 }
 
-export function generateLegalServiceSchema(settings: BuilderSiteSettings): Record<string, unknown> {
+export function generateLegalServiceSchema(
+  settings: BuilderSiteSettings,
+  siteUrl = 'https://tseng-law.com',
+): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
@@ -29,8 +32,45 @@ export function generateLegalServiceSchema(settings: BuilderSiteSettings): Recor
           streetAddress: settings.address,
         }
       : undefined,
-    url: 'https://tseng-law.com',
+    url: siteUrl,
     logo: settings.logo,
+    openingHours: settings.businessHours,
+  };
+}
+
+export function generateOrganizationSchema(
+  settings: BuilderSiteSettings,
+  siteUrl = 'https://tseng-law.com',
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: settings.firmName || '호정국제 법률사무소',
+    url: siteUrl,
+    logo: settings.logo,
+    telephone: settings.phone,
+    email: settings.email,
+  };
+}
+
+export function generateLocalBusinessSchema(
+  settings: BuilderSiteSettings,
+  siteUrl = 'https://tseng-law.com',
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: settings.firmName || '호정국제 법률사무소',
+    url: siteUrl,
+    telephone: settings.phone,
+    email: settings.email,
+    image: settings.logo,
+    address: settings.address
+      ? {
+          '@type': 'PostalAddress',
+          streetAddress: settings.address,
+        }
+      : undefined,
     openingHours: settings.businessHours,
   };
 }

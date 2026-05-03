@@ -488,3 +488,35 @@
 - `NEXT_DIST_DIR=.next-g-editor npm run start`로 `http://localhost:3000` 재기동 ✅
 - `npm run typecheck` ✅
 - `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, header nav item click → label edit → live preview update → restore)
+
+## 2026-05-03 Codex /goal G-Editor context menu portal 보강
+
+범위:
+- 우클릭 ContextMenu를 viewport 기준 fixed portal로 렌더하도록 정리해 canvas clipping/parent overflow에 메뉴가 잘리는 문제를 줄임.
+- hover/focus/ArrowRight/Enter/Space에서 submenu 위치를 trigger rect 기준으로 계산하고, submenu도 portal로 유지.
+- Playwright의 focus/hover 스크롤 보정에서 context menu가 닫히지 않도록 canvas scroll close 정책을 제거하고 resize close만 유지.
+- admin-builder Playwright smoke에 `Hide on viewport` → ArrowRight → `Hide on mobile` submenu 검증을 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `NEXT_DIST_DIR=.next-g-editor npm run build` ✅
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, context submenu portal 포함)
+
+## 2026-05-03 Codex production legacy restore 배포 메모
+
+상황:
+- 운영 `https://tseng-law.com/ko`가 legacy header는 나오지만 main 본문은 builder published snapshot으로 렌더되어 일반 사이트와 빌더 UI가 섞여 보였음.
+- 원인은 `/[locale]/[[...slug]]` production 배포가 아직 builder published 우선 렌더 버전이었고, 로컬 hotfix가 운영에 반영되지 않았기 때문.
+
+조치:
+- `112cbe9 G-Editor: restore legacy public pages` 포함 커밋을 기준으로 clean production build가 가능한 누락 파일을 보강:
+  - `f3dce66 G-Editor: include deploy dependency files`
+  - `93b4d3a G-Editor: commit SEO builder type support`
+- Vercel CLI production deploy 완료: `dpl_J2rZEb68EUyQHD9dN6oNvciNaec7`, alias `https://tseng-law.com`.
+
+검증:
+- `https://tseng-law.com/ko` HTML 확인 ✅
+  - status 200
+  - `data-legacy-chrome="true"` true
+  - `builder-pub-node` count 0
+  - `class="main-nav"` true

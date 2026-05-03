@@ -122,8 +122,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await closeModalOverlayIfPresent(page);
 
     await selectedNode.click({ button: 'right', position: { x: 18, y: 18 }, force: true });
-    await expect(page.locator('[role="menu"]').first()).toBeVisible();
+    const contextMenu = page.locator('[role="menu"]').first();
+    await expect(contextMenu).toBeVisible();
     await expect(page.locator('[class*="contextMenuShortcut"]').first()).toBeVisible();
+    await contextMenu.getByRole('menuitem', { name: /Hide on viewport/ }).focus();
+    await page.keyboard.press('ArrowRight');
+    const contextSubmenu = page.locator('[class*="contextSubmenu"]').last();
+    await expect(contextSubmenu).toBeVisible();
+    await expect(contextSubmenu).toContainText('Hide on mobile');
     await page.keyboard.press('Escape');
 
     await selectFirstNode(page);

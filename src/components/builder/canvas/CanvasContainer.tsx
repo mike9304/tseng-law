@@ -481,15 +481,13 @@ export default function CanvasContainer({
   useEffect(() => {
     if (!contextMenu) return undefined;
 
-    function handleWindowScroll() {
+    function handleWindowResize() {
       setContextMenu(null);
     }
 
-    window.addEventListener('scroll', handleWindowScroll, true);
-    window.addEventListener('resize', handleWindowScroll);
+    window.addEventListener('resize', handleWindowResize);
     return () => {
-      window.removeEventListener('scroll', handleWindowScroll, true);
-      window.removeEventListener('resize', handleWindowScroll);
+      window.removeEventListener('resize', handleWindowResize);
     };
   }, [contextMenu]);
 

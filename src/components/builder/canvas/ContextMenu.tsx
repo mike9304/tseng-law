@@ -72,38 +72,29 @@ export default function ContextMenu({
 
   useLayoutEffect(() => {
     const menu = menuRef.current;
-    const bounds = menu?.parentElement;
-    if (!menu || !bounds) return;
+    if (!menu) return;
 
-    const boundsRect = bounds.getBoundingClientRect();
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    const visibleLeft = Math.max(boundsRect.left, 0);
-    const visibleTop = Math.max(boundsRect.top, 0);
-    const visibleRight = Math.min(boundsRect.right, viewportWidth);
-    const visibleBottom = Math.min(boundsRect.bottom, viewportHeight);
-    const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-    const maxHeight = Math.max(
-      0,
-      Math.min(MENU_MAX_HEIGHT, Math.floor(visibleHeight - MENU_EDGE_MARGIN * 2)),
-    );
-    const menuWidth = menu.offsetWidth;
-    const menuHeight = Math.min(menu.scrollHeight, maxHeight);
-    const nextLayout = {
-      sourceX: x,
-      sourceY: y,
-      left: clampAxis(
-        x,
-        visibleLeft - boundsRect.left + MENU_EDGE_MARGIN,
-        visibleRight - boundsRect.left - menuWidth - MENU_EDGE_MARGIN,
-      ),
-      top: clampAxis(
-        y,
-        visibleTop - boundsRect.top + MENU_EDGE_MARGIN,
-        visibleBottom - boundsRect.top - menuHeight - MENU_EDGE_MARGIN,
-      ),
-      maxHeight,
-    };
+    const menuWidth = menu.offsetWidth || 280;
+    const rawHeight = menu.scrollHeight || 0;
+    const availableHeight = Math.max(0, viewportHeight - MENU_EDGE_MARGIN * 2);
+    const maxHeight = Math.min(MENU_MAX_HEIGHT, availableHeight);
+    const menuHeight = Math.min(rawHeight, maxHeight);
+
+    let left = x;
+    if (left + menuWidth + MENU_EDGE_MARGIN > viewportWidth) {
+      left = x - menuWidth;
+    }
+    left = clampAxis(left, MENU_EDGE_MARGIN, Math.max(MENU_EDGE_MARGIN, viewportWidth - menuWidth - MENU_EDGE_MARGIN));
+
+    let top = y;
+    if (top + menuHeight + MENU_EDGE_MARGIN > viewportHeight) {
+      top = y - menuHeight;
+    }
+    top = clampAxis(top, MENU_EDGE_MARGIN, Math.max(MENU_EDGE_MARGIN, viewportHeight - menuHeight - MENU_EDGE_MARGIN));
+
+    const nextLayout = { sourceX: x, sourceY: y, left, top, maxHeight };
 
     setLayout((current) => {
       if (
@@ -168,6 +159,14 @@ export default function ContextMenu({
       });
     }
 
+    function getKeyboardActionIndex() {
+      const focused = document.activeElement;
+      const focusedIndex = actions.findIndex((action) => (
+        !action.separator && actionRefs.current.get(action.key) === focused
+      ));
+      return focusedIndex >= 0 ? focusedIndex : activeActionIndex;
+    }
+
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
         if (openSubmenuKey) {
@@ -177,11 +176,13 @@ export default function ContextMenu({
         }
         return;
       }
-      if (event.key === 'ArrowRight' && activeActionIndex != null) {
-        const action = actions[activeActionIndex];
+      if (event.key === 'ArrowRight') {
+        const actionIndex = getKeyboardActionIndex();
+        if (actionIndex == null) return;
+        const action = actions[actionIndex];
         if (action?.children?.length) {
           event.preventDefault();
-          setOpenSubmenuKey(action.key);
+          openSubmenuForAction(action, actionIndex);
         }
         return;
       }
@@ -210,12 +211,14 @@ export default function ContextMenu({
         setActiveActionIndex(enabledActionIndexes[enabledActionIndexes.length - 1] ?? null);
         return;
       }
-      if ((event.key === 'Enter' || event.key === ' ') && activeActionIndex != null) {
-        const action = actions[activeActionIndex];
+      if (event.key === 'Enter' || event.key === ' ') {
+        const actionIndex = getKeyboardActionIndex();
+        if (actionIndex == null) return;
+        const action = actions[actionIndex];
         if (!action || action.separator || action.disabled) return;
         event.preventDefault();
         if (action.children?.length) {
-          setOpenSubmenuKey(action.key);
+          openSubmenuForAction(action, actionIndex);
           return;
         }
         action.onSelect?.();
@@ -231,10 +234,26 @@ export default function ContextMenu({
     };
   }, [actions, activeActionIndex, enabledActionIndexes, onClose, openSubmenuKey]);
 
-  function selectAction(action: ContextMenuAction) {
+  function openSubmenuForAction(action: ContextMenuAction, index?: number) {
+    if (action.disabled || !action.children?.length) return;
+    if (index != null) setActiveActionIndex(index);
+
+    const trigger = actionRefs.current.get(action.key);
+    if (trigger && typeof window !== 'undefined') {
+      const rect = trigger.getBoundingClientRect();
+      const estimatedHeight = Math.min(260, 12 + action.children.filter((child) => !child.separator).length * 34);
+      setSubmenuLayout({
+        left: clampAxis(rect.right + 8, MENU_EDGE_MARGIN, window.innerWidth - 232),
+        top: clampAxis(rect.top - 6, MENU_EDGE_MARGIN, window.innerHeight - estimatedHeight - MENU_EDGE_MARGIN),
+      });
+    }
+    setOpenSubmenuKey(action.key);
+  }
+
+  function selectAction(action: ContextMenuAction, index?: number) {
     if (action.disabled) return;
     if (action.children?.length) {
-      setOpenSubmenuKey(action.key);
+      openSubmenuForAction(action, index);
       return;
     }
     action.onSelect?.();
@@ -280,19 +299,24 @@ export default function ContextMenu({
     )
     : null;
 
-  return (
-    <>
-      <div
-        ref={menuRef}
-        className={styles.contextMenu}
-        style={{
-          left: `${layout?.sourceX === x && layout.sourceY === y ? layout.left : x}px`,
-          top: `${layout?.sourceX === x && layout.sourceY === y ? layout.top : y}px`,
-          maxHeight: layout?.maxHeight != null ? `${layout.maxHeight}px` : undefined,
-        }}
-        role="menu"
-        aria-label={title}
-      >
+  if (typeof document === 'undefined') return null;
+
+  const menuNode = (
+    <div
+      ref={menuRef}
+      className={styles.contextMenu}
+      style={{
+        position: 'fixed',
+        left: `${layout?.sourceX === x && layout.sourceY === y ? layout.left : x}px`,
+        top: `${layout?.sourceX === x && layout.sourceY === y ? layout.top : y}px`,
+        width: 280,
+        maxHeight: layout?.maxHeight != null ? `${layout.maxHeight}px` : undefined,
+        overflowY: 'auto',
+        zIndex: 10120,
+      }}
+      role="menu"
+      aria-label={title}
+    >
         <header className={styles.contextMenuHeader}>
           <span>Context menu</span>
           <strong>{title}</strong>
@@ -315,12 +339,22 @@ export default function ContextMenu({
                   data-has-submenu={action.children?.length ? 'true' : undefined}
                   title={action.title}
                   disabled={action.disabled}
+                  onFocus={() => {
+                    setActiveActionIndex(index);
+                  }}
                   onMouseEnter={() => {
                     setActiveActionIndex(index);
-                    if (action.children?.length) setOpenSubmenuKey(action.key);
+                    if (action.children?.length) openSubmenuForAction(action, index);
+                  }}
+                  onKeyDown={(event) => {
+                    if (!action.children?.length) return;
+                    if (event.key !== 'ArrowRight' && event.key !== 'Enter' && event.key !== ' ') return;
+                    event.preventDefault();
+                    event.stopPropagation();
+                    openSubmenuForAction(action, index);
                   }}
                   onClick={() => {
-                    selectAction(action);
+                    selectAction(action, index);
                   }}
                 >
                   <span className={styles.contextMenuActionLabel}>
@@ -335,6 +369,11 @@ export default function ContextMenu({
           ))}
         </div>
       </div>
+  );
+
+  return (
+    <>
+      {createPortal(menuNode, document.body)}
       {submenu}
     </>
   );

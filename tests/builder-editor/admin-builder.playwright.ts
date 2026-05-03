@@ -82,6 +82,29 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const stageBox = await page.getByRole('application', { name: 'Canvas editor' }).boundingBox();
     expect(stageBox?.y ?? 9999).toBeLessThan(130);
     await expect(page.getByRole('navigation').getByRole('link', { name: '칼럼' })).toBeVisible();
+    const headerRegion = page.locator('[class*="globalHeaderRegion"]').first();
+    const editableMenuItem = headerRegion.locator('[data-builder-nav-item-id]').filter({ hasText: /업무분야|호정소개|칼럼|Home|About|Services/ }).first();
+    await expect(editableMenuItem).toBeVisible();
+    await editableMenuItem.click();
+    const navDrawer = page.locator('[aria-hidden="false"]').first();
+    await expect(navDrawer.getByText('Navigation').first()).toBeVisible();
+    const menuItemId = await editableMenuItem.getAttribute('data-builder-nav-item-id');
+    expect(menuItemId).toBeTruthy();
+    const navLabelInput = navDrawer.locator('input').first();
+    await expect(navLabelInput).toHaveValue(/\S+/);
+    const originalNavLabel = await navLabelInput.inputValue();
+    const temporaryNavLabel = `${originalNavLabel} Test`;
+    const editableMenuItemById = headerRegion.locator(`[data-builder-nav-item-id="${menuItemId}"]`).first();
+    try {
+      await navLabelInput.fill(temporaryNavLabel);
+      await navDrawer.getByRole('button', { name: '저장' }).click();
+      await expect(editableMenuItemById).toContainText(temporaryNavLabel);
+    } finally {
+      await editableMenuItemById.click();
+      await navDrawer.locator('input').first().fill(originalNavLabel);
+      await navDrawer.getByRole('button', { name: '저장' }).click();
+      await expect(editableMenuItemById).toContainText(originalNavLabel);
+    }
 
     await page.getByTitle('Add').click();
     await expect(page.getByText('Catalog')).toBeVisible();
@@ -91,7 +114,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByText('Open columns admin')).toBeVisible();
     await expect(page.getByText('View public columns')).toBeVisible();
 
-    await page.locator('[class*="globalHeaderRegion"]').click({ position: { x: 360, y: 16 }, force: true });
+    await headerRegion.click({ position: { x: 360, y: 16 }, force: true });
     await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();
     await rail.getByRole('button', { name: 'Navigation', exact: true }).click();
 

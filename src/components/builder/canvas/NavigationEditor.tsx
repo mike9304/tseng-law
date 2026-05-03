@@ -1,12 +1,8 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-
-interface NavItem {
-  id: string;
-  label: string;
-  href: string;
-}
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+import type { BuilderNavItem } from '@/lib/builder/site/types';
 
 const containerStyle: React.CSSProperties = {
   display: 'flex',
@@ -107,14 +103,40 @@ const editLabelStyle: React.CSSProperties = {
   minWidth: 36,
 };
 
+function labelForLocale(item: BuilderNavItem, locale: Locale): string {
+  if (typeof item.label === 'string') return item.label;
+  return item.label[locale] || item.label.ko || item.label.en || item.label['zh-hant'] || '';
+}
+
+function localizedLabel(
+  currentLabel: BuilderNavItem['label'],
+  locale: Locale,
+  nextLabel: string,
+): BuilderNavItem['label'] {
+  if (typeof currentLabel === 'string') return nextLabel;
+  return {
+    ...currentLabel,
+    [locale]: nextLabel,
+  };
+}
+
 export default function NavigationEditor({
   locale,
+  focusItemId,
+  onFocusHandled,
+  onNavigationChange,
 }: {
   locale: string;
+  focusItemId?: string | null;
+  onFocusHandled?: () => void;
+  onNavigationChange?: (items: BuilderNavItem[]) => void;
 }) {
-  const [items, setItems] = useState<NavItem[]>([]);
+  const editorLocale = normalizeLocale(locale);
+  const labelInputRef = useRef<HTMLInputElement | null>(null);
+  const [items, setItems] = useState<BuilderNavItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editLabel, setEditLabel] = useState('');
   const [editHref, setEditHref] = useState('');
@@ -125,56 +147,57 @@ export default function NavigationEditor({
         credentials: 'same-origin',
       });
       if (res.ok) {
-        const data = (await res.json()) as { navigation: NavItem[] };
-        setItems(
-          data.navigation.map((n) => ({
-            id: n.id,
-            label: typeof n.label === 'string' ? n.label : (n.label as Record<string, string>)[locale] || '',
-            href: n.href,
-          })),
-        );
+        const data = (await res.json()) as { navigation: BuilderNavItem[] };
+        setItems(data.navigation);
+        onNavigationChange?.(data.navigation);
       }
     } catch {
       // silent
     } finally {
       setLoading(false);
     }
-  }, [locale]);
+  }, [locale, onNavigationChange]);
 
   useEffect(() => {
     fetchNav();
   }, [fetchNav]);
 
   const saveNav = useCallback(
-    async (nextItems: NavItem[]) => {
+    async (nextItems: BuilderNavItem[]) => {
       setSaving(true);
+      setSaveError(null);
+      onNavigationChange?.(nextItems);
       try {
-        await fetch('/api/builder/site/navigation', {
+        const response = await fetch('/api/builder/site/navigation', {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'same-origin',
           body: JSON.stringify({
             locale,
-            navigation: nextItems.map((item) => ({
-              id: item.id,
-              label: item.label,
-              href: item.href,
-              pageId: '',
-            })),
+            navigation: nextItems,
           }),
         });
+        if (!response.ok) throw new Error('Navigation save failed');
       } catch {
-        // silent
+        setSaveError('메뉴 저장에 실패했습니다.');
       } finally {
         setSaving(false);
       }
     },
-    [locale],
+    [locale, onNavigationChange],
   );
 
   const handleAdd = () => {
     const id = `nav-${Date.now().toString(36)}`;
-    const next = [...items, { id, label: '새 항목', href: '/' }];
+    const next = [
+      ...items,
+      {
+        id,
+        label: { ko: '새 항목', 'zh-hant': '新項目', en: 'New item' },
+        href: '/',
+        pageId: `external-${id}`,
+      },
+    ];
     setItems(next);
     saveNav(next);
   };
@@ -201,16 +224,36 @@ export default function NavigationEditor({
     saveNav(next);
   };
 
-  const startEdit = (item: NavItem) => {
+  const startEdit = useCallback((item: BuilderNavItem) => {
     setEditingId(item.id);
-    setEditLabel(item.label);
+    setEditLabel(labelForLocale(item, editorLocale));
     setEditHref(item.href);
-  };
+    window.setTimeout(() => labelInputRef.current?.focus(), 0);
+  }, [editorLocale]);
+
+  useEffect(() => {
+    if (!focusItemId || loading) return;
+    const item = items.find((candidate) => candidate.id === focusItemId);
+    if (!item) {
+      onFocusHandled?.();
+      return;
+    }
+    startEdit(item);
+    onFocusHandled?.();
+  }, [focusItemId, items, loading, onFocusHandled, startEdit]);
 
   const commitEdit = () => {
     if (!editingId) return;
+    const nextLabel = editLabel.trim() || 'Untitled';
+    const nextHref = editHref.trim() || '/';
     const next = items.map((item) =>
-      item.id === editingId ? { ...item, label: editLabel, href: editHref } : item,
+      item.id === editingId
+        ? {
+            ...item,
+            label: localizedLabel(item.label, editorLocale, nextLabel),
+            href: nextHref,
+          }
+        : item,
     );
     setItems(next);
     saveNav(next);
@@ -249,6 +292,7 @@ export default function NavigationEditor({
                   type="text"
                   value={editLabel}
                   style={inputStyle}
+                  ref={labelInputRef}
                   onChange={(e) => setEditLabel(e.target.value)}
                 />
               </div>
@@ -281,7 +325,7 @@ export default function NavigationEditor({
           ) : (
             <div key={item.id} style={itemStyle}>
               <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                {item.label}
+                {labelForLocale(item, editorLocale)}
               </span>
               <span style={{ fontSize: '0.68rem', color: '#94a3b8', flexShrink: 0 }}>
                 {item.href}
@@ -308,6 +352,11 @@ export default function NavigationEditor({
           저장 중...
         </div>
       )}
+      {saveError ? (
+        <div role="alert" style={{ padding: '4px 8px', fontSize: '0.72rem', color: '#dc2626', fontWeight: 700 }}>
+          {saveError}
+        </div>
+      ) : null}
     </div>
   );
 }

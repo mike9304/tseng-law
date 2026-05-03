@@ -474,3 +474,17 @@
 검증 메모:
 - 실제 `https://tseng-law.com/ko`는 production API 인증이 로컬과 달라 Blob 직접 복구가 적용되지 않았고, 배포 HTML에서 legacy header + builder body 혼합 상태를 확인.
 - 이 hotfix가 배포되어야 production에서 기본 public page가 즉시 legacy 원본으로 돌아감.
+
+## 2026-05-03 Codex /goal G-Editor header nav edit 보강
+
+사용자 검증 피드백 대응:
+- 상단 public header 메뉴(`홈`, `호정소개`, `업무분야`, `칼럼` 등)가 단순 preview처럼 보이고 직접 편집 대상으로 느껴지지 않는 문제를 보강.
+- `SiteHeader`에 builder-editable mode를 추가해 메뉴 링크 클릭 시 페이지 이동 대신 Navigation drawer의 해당 항목 편집 폼으로 바로 포커스.
+- NavigationEditor가 기존 `pageId`/다국어 label 구조를 보존하도록 수정하고, 저장 결과가 editor header preview에 즉시 반영되도록 `SandboxPage` nav 상태와 연결.
+- header 메뉴 항목 hover/active outline을 추가해 Wix처럼 global header 안의 메뉴 텍스트도 편집 가능한 요소로 인식되게 처리.
+
+검증:
+- `NEXT_DIST_DIR=.next-g-editor npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` lint warning만)
+- `NEXT_DIST_DIR=.next-g-editor npm run start`로 `http://localhost:3000` 재기동 ✅
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, header nav item click → label edit → live preview update → restore)

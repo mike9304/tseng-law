@@ -175,11 +175,14 @@ export default function SandboxPage({
   const [activePageId, setActivePageId] = useState<string | null>(initialPageId ?? null);
   const [siteSettingsState, setSiteSettingsState] = useState<BuilderSiteSettings | undefined>(siteSettings);
   const [siteThemeState, setSiteThemeState] = useState<BuilderTheme>(siteTheme ?? DEFAULT_THEME);
+  const [navItemsState, setNavItemsState] = useState<BuilderNavItem[]>(navItems ?? []);
   const [sitePagesState, setSitePagesState] = useState<BuilderPageSummary[]>(sitePages ?? []);
   const [currentSlugState, setCurrentSlugState] = useState(currentSlug ?? '');
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
+  const [activeNavItemId, setActiveNavItemId] = useState<string | null>(null);
+  const [focusedNavItemId, setFocusedNavItemId] = useState<string | null>(null);
   const [helpOpen, setHelpOpen] = useState(false);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [editorDensity, setEditorDensity] = useState<EditorDensity>('cozy');
@@ -295,6 +298,10 @@ export default function SandboxPage({
   useEffect(() => {
     setSiteThemeState(siteTheme ?? DEFAULT_THEME);
   }, [siteTheme]);
+
+  useEffect(() => {
+    setNavItemsState(navItems ?? []);
+  }, [navItems]);
 
   useEffect(() => {
     setSitePagesState(sitePages ?? []);
@@ -442,7 +449,7 @@ export default function SandboxPage({
     [sitePagesState, locale],
   );
   const headerNavItems = useMemo<BuilderNavItem[]>(() => {
-    const items = navItems ?? [];
+    const items = navItemsState;
     const hasColumns = items.some((item) => comparableSitePath(normalizeSiteHref(item.href, locale), locale) === comparableSitePath(`/${locale}/columns`, locale));
     if (hasColumns) return items;
     return [
@@ -454,7 +461,7 @@ export default function SandboxPage({
         label: { ko: '칼럼', 'zh-hant': '專欄', en: 'Columns' },
       },
     ];
-  }, [locale, navItems]);
+  }, [locale, navItemsState]);
   const hasSelection = selectedNodeIds.length > 0;
   const assetLibraryNode = useMemo(
     () => canvasDocument?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
@@ -557,6 +564,12 @@ export default function SandboxPage({
 
   const toggleDrawer = useCallback((panel: SandboxDrawerPanel) => {
     setActiveDrawer((current) => (current === panel ? null : panel));
+  }, []);
+
+  const handleRequestEditNavItem = useCallback((itemId: string) => {
+    setActiveDrawer('nav');
+    setActiveNavItemId(itemId);
+    setFocusedNavItemId(itemId);
   }, []);
 
   const handleRequestSaveAsSection = useCallback(
@@ -848,7 +861,12 @@ export default function SandboxPage({
 
           {activeDrawer === 'nav' ? (
             <div className={styles.drawerBody}>
-              <NavigationEditor locale={locale} />
+              <NavigationEditor
+                locale={locale}
+                focusItemId={focusedNavItemId}
+                onFocusHandled={() => setFocusedNavItemId(null)}
+                onNavigationChange={setNavItemsState}
+              />
             </div>
           ) : null}
 
@@ -911,6 +929,13 @@ export default function SandboxPage({
               onClickCapture={(event) => {
                 const target = event.target as HTMLElement;
                 if (target.closest(`.${styles.globalRegionBadge}`)) return;
+                const navTarget = target.closest<HTMLElement>('[data-builder-nav-item-id]');
+                if (navTarget?.dataset.builderNavItemId) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  handleRequestEditNavItem(navTarget.dataset.builderNavItemId);
+                  return;
+                }
                 event.preventDefault();
                 event.stopPropagation();
                 setActiveDrawer('nav');
@@ -953,6 +978,10 @@ export default function SandboxPage({
                 locale={locale}
                 currentSlug={currentSlugState}
                 onNavigate={handleHeaderNavigate}
+                builderEditable
+                activeBuilderNavItemId={activeNavItemId}
+                onRequestEditNavItem={handleRequestEditNavItem}
+                onRequestEditSiteBrand={() => setSettingsOpen(true)}
               />
             </div>
           ) : null}

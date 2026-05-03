@@ -19,6 +19,10 @@ export default function SiteHeader({
   locale,
   currentSlug,
   onNavigate,
+  builderEditable = false,
+  activeBuilderNavItemId,
+  onRequestEditNavItem,
+  onRequestEditSiteBrand,
 }: {
   siteName: string;
   settings?: BuilderSiteSettings;
@@ -27,6 +31,10 @@ export default function SiteHeader({
   locale: Locale;
   currentSlug: string;
   onNavigate?: (href: string) => void;
+  builderEditable?: boolean;
+  activeBuilderNavItemId?: string | null;
+  onRequestEditNavItem?: (itemId: string) => void;
+  onRequestEditSiteBrand?: () => void;
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const primaryColor = theme?.colors.primary || '#116dff';
@@ -55,6 +63,26 @@ export default function SiteHeader({
     onNavigate(href);
   };
 
+  const handleBuilderBrandClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!builderEditable) return false;
+    event.preventDefault();
+    event.stopPropagation();
+    onRequestEditSiteBrand?.();
+    return true;
+  };
+
+  const handleBuilderNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    itemId: string,
+  ) => {
+    if (!builderEditable) return false;
+    event.preventDefault();
+    event.stopPropagation();
+    setMenuOpen(false);
+    onRequestEditNavItem?.(itemId);
+    return true;
+  };
+
   return (
     <header style={{
       maxWidth: 1200,
@@ -73,8 +101,21 @@ export default function SiteHeader({
       {/* Logo + Firm Name */}
       <a
         href={buildSitePagePath(locale, '')}
-        onClick={(event) => handleNavigate(event, buildSitePagePath(locale, ''))}
-        style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}
+        data-builder-site-brand={builderEditable ? 'true' : undefined}
+        onClick={(event) => {
+          if (handleBuilderBrandClick(event)) return;
+          handleNavigate(event, buildSitePagePath(locale, ''));
+        }}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 10,
+          textDecoration: 'none',
+          cursor: builderEditable ? 'pointer' : undefined,
+          outline: builderEditable ? '1px solid transparent' : undefined,
+          outlineOffset: builderEditable ? 5 : undefined,
+          borderRadius: builderEditable ? 6 : undefined,
+        }}
       >
         {logoLight && (
           <img
@@ -101,19 +142,31 @@ export default function SiteHeader({
         {navItems.map((item) => {
           const href = normalizeSiteHref(item.href, locale);
           const isActive = comparableSitePath(href, locale) === comparableSitePath(currentPath, locale);
+          const isBuilderActive = builderEditable && activeBuilderNavItemId === item.id;
           return (
             <a
               key={item.id}
               href={href}
-              onClick={(event) => handleNavigate(event, href)}
+              data-builder-nav-item-id={builderEditable ? item.id : undefined}
+              data-builder-nav-item-label={builderEditable ? getLabel(item, locale) : undefined}
+              title={builderEditable ? `Edit menu item: ${getLabel(item, locale)}` : undefined}
+              onClick={(event) => {
+                if (handleBuilderNavClick(event, item.id)) return;
+                handleNavigate(event, href);
+              }}
               style={{
                 color: isActive ? primaryColor : textColor,
                 textDecoration: 'none',
                 fontSize: '0.9rem',
                 fontWeight: isActive ? 700 : 500,
                 borderBottom: isActive ? `2px solid ${primaryColor}` : '2px solid transparent',
-                paddingBottom: 4,
-                transition: 'color 150ms ease, border-color 150ms ease',
+                padding: builderEditable ? '3px 4px 4px' : undefined,
+                paddingBottom: builderEditable ? undefined : 4,
+                borderRadius: builderEditable ? 5 : undefined,
+                outline: isBuilderActive ? `2px solid ${primaryColor}` : builderEditable ? '1px solid transparent' : undefined,
+                outlineOffset: builderEditable ? 3 : undefined,
+                cursor: builderEditable ? 'text' : undefined,
+                transition: 'color 150ms ease, border-color 150ms ease, outline-color 150ms ease, background 150ms ease',
               }}
             >
               {getLabel(item, locale)}

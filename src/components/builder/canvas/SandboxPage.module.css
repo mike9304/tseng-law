@@ -482,6 +482,14 @@
   box-shadow: inset 0 0 0 1px rgba(17, 109, 255, 0.22);
 }
 
+.globalHeaderRegion [data-builder-nav-item-id]:hover,
+.globalHeaderRegion [data-builder-nav-item-id]:focus-visible,
+.globalHeaderRegion [data-builder-site-brand]:hover,
+.globalHeaderRegion [data-builder-site-brand]:focus-visible {
+  background: var(--editor-accent-soft, #eff6ff);
+  outline-color: var(--editor-accent, #116dff) !important;
+}
+
 .globalRegionBadge {
   position: absolute;
   left: 10px;

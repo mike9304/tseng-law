@@ -460,3 +460,17 @@
 - `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, hydration + chunk MIME + editor smoke)
 - `npm run typecheck` ✅
 - `npm run lint` ✅ (기존 `<img>` warning만)
+
+## 2026-05-03 Codex public site restore hotfix
+
+사용자 신고:
+- `tseng-law.com/ko` 일반 사이트 본문에 builder published renderer가 끼어들어 이미지 업로드/빌더 UI 흔적처럼 보이고, 원래 public 디자인이 사라진 상태를 확인.
+
+조치:
+- 원인: `[locale]/[[...slug]]` catch-all이 legacy 원본 페이지보다 builder published snapshot을 먼저 렌더해, 기본 페이지(`/`, `about`, `services`, `contact`, `lawyers`, `faq`, `pricing`, `reviews`, `privacy`, `disclaimer`)가 builder snapshot에 가로채임.
+- 코드 hotfix: legacy에 존재하는 기본 public page는 metadata/body 모두 legacy 렌더를 우선하고, builder published page는 legacy에 없는 커스텀 slug에서만 fallback으로 렌더하도록 변경.
+- 로컬 Blob에서는 기본 10개 페이지의 builder `publishedAt` 계열 메타를 백업 후 해제. 백업 key: `builder-site/default/backups/site-before-legacy-unpublish-2026-05-03T0908Z.json`.
+
+검증 메모:
+- 실제 `https://tseng-law.com/ko`는 production API 인증이 로컬과 달라 Blob 직접 복구가 적용되지 않았고, 배포 HTML에서 legacy header + builder body 혼합 상태를 확인.
+- 이 hotfix가 배포되어야 production에서 기본 public page가 즉시 legacy 원본으로 돌아감.

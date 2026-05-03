@@ -22,10 +22,13 @@ export async function generateMetadata({
   const locale: Locale = normalizeLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 
+  const legacyMetadata = getLegacyPageMetadata(slugPath, locale);
+  if (legacyMetadata) return legacyMetadata;
+
   const publishedMetadata = await buildPublishedSitePageMetadata(locale, slugPath);
   if (publishedMetadata) return publishedMetadata;
 
-  return getLegacyPageMetadata(slugPath, locale) ?? { title: 'Page not found' };
+  return { title: 'Page not found' };
 }
 
 export default async function MainSiteCatchAllPage({
@@ -36,13 +39,13 @@ export default async function MainSiteCatchAllPage({
   const locale: Locale = normalizeLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 
+  const legacyPage = renderLegacyPage(slugPath, locale);
+  if (legacyPage) return legacyPage;
+
   const publishedPage = await resolvePublishedSitePage(locale, slugPath);
   if (publishedPage) {
     return <PublishedSitePageView resolved={publishedPage} />;
   }
-
-  const legacyPage = renderLegacyPage(slugPath, locale);
-  if (legacyPage) return legacyPage;
 
   notFound();
 }

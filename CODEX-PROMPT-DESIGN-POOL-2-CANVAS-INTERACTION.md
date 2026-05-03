@@ -1,9 +1,9 @@
 # CODEX PROMPT — D-POOL-2: Canvas Direct-Manipulation Polish
 
-&gt; **Track**: D-POOL-2 (Canvas Direct-Manipulation)
-&gt; **Repo**: `/Users/son7/Projects/tseng-law`
-&gt; **Goal**: Wix 본가 1:1 패리티 수준의 캔버스 직접조작 micro-interaction. Drag ghost, resize readout, multi-selection bbox, snap distance label을 **screen-coord 오버레이** 패턴으로 통일하고, in-stage 잔여물은 `--canvas-zoom` 1px-stable로 정리한다.
-&gt; **Top-level constraints**: Zustand store는 손대지 않는다 (구독만). `snap.ts`는 변경 금지. SandboxPage 쉘 / Inspector / Picker / Modal / Public 위젯은 다른 트랙 소유 — 절대 건드리지 않는다.
+> **Track**: D-POOL-2 (Canvas Direct-Manipulation)
+> **Repo**: `/Users/son7/Projects/tseng-law`
+> **Goal**: Wix 본가 1:1 패리티 수준의 캔버스 직접조작 micro-interaction. Drag ghost, resize readout, multi-selection bbox, snap distance label을 **screen-coord 오버레이** 패턴으로 통일하고, in-stage 잔여물은 `--canvas-zoom` 1px-stable로 정리한다.
+> **Top-level constraints**: Zustand store는 손대지 않는다 (구독만). `snap.ts`는 변경 금지. SandboxPage 쉘 / Inspector / Picker / Modal / Public 위젯은 다른 트랙 소유 — 절대 건드리지 않는다.
 
 ---
 
@@ -34,9 +34,9 @@
   - `--canvas-zoom` CSS variable을 `.stageTransform` 인라인 스타일에 추가 (≈ line 1094).
   - 기존 in-stage `dragGhost` 렌더 블록 제거 (≈ lines 1214–1225).
   - 기존 in-stage `multiSelectionBox` 렌더 블록 제거 (≈ lines 1343–1358).
-  - 기존 `canvasInteractionReadout` JSX 제거 (≈ lines 1443–1455). `interactionReadout` useMemo 자체는 남겨두고, `&lt;CanvasFeedbackOverlay&gt;`가 동일 정보를 ResizeReadout으로 재구성.
-  - `&lt;CanvasFeedbackOverlay&gt;`를 `&lt;SelectionToolbar&gt;` 직전에 마운트.
-  - `.stage` 루트 `&lt;div&gt;`에 `data-canvas-interaction={interaction?.type ?? 'idle'}` 추가 (≈ line 1097).
+  - 기존 `canvasInteractionReadout` JSX 제거 (≈ lines 1443–1455). `interactionReadout` useMemo 자체는 남겨두고, `<CanvasFeedbackOverlay>`가 동일 정보를 ResizeReadout으로 재구성.
+  - `<CanvasFeedbackOverlay>`를 `<SelectionToolbar>` 직전에 마운트.
+  - `.stage` 루트 `<div>`에 `data-canvas-interaction={interaction?.type ?? 'idle'}` 추가 (≈ line 1097).
 - `src/components/builder/canvas/CanvasNode.tsx`
   - hover outline 트랜지션 강화 (200ms ease).
   - 기존 `nodeSizeLabel`은 코드 그대로 두되, CSS 측 `data-canvas-interaction="resizing"` rule로 숨김 처리.
@@ -68,13 +68,13 @@
 CanvasContainer는 두 좌표계를 가진다.
 
 1. **Stage-coord**: `.stageTransform` 내부. `transform: translate(panX, panY) scale(zoom)`이 적용됨. `AlignmentGuides`, `SelectionBox`, 노드 본체는 여기 산다.
-2. **Screen-coord**: `.stageTransform` **밖** (= `.stageViewport` 직속 자식). 줌/팬 변환의 영향을 받지 않는다. `&lt;SelectionToolbar&gt;`(line 1396), 기존 `canvasInteractionReadout`(line 1443)이 이미 이 패턴이다.
+2. **Screen-coord**: `.stageTransform` **밖** (= `.stageViewport` 직속 자식). 줌/팬 변환의 영향을 받지 않는다. `<SelectionToolbar>`(line 1396), 기존 `canvasInteractionReadout`(line 1443)이 이미 이 패턴이다.
 
 본 트랙에서 도입하는 4개 오버레이(DragGhost / ResizeReadout / MultiSelectionBoundingBox / SnapDistanceLabel)는 **모두 Screen-coord**로 산다. Stage rect → Screen rect 변환은 line 1030의 `selectionBboxScreen` 패턴 그대로 사용한다.
 
 ~~~ts
 // 기존 패턴 (CanvasContainer.tsx:1030)
-const selectionBboxScreen = useMemo(() =&gt; {
+const selectionBboxScreen = useMemo(() => {
   if (!selectionBboxStage) return null;
   return {
     x: selectionBboxStage.x * zoomState.zoom + zoomState.panX,
@@ -89,7 +89,7 @@ const selectionBboxScreen = useMemo(() =&gt; {
 
 ### 2-2. interaction은 CanvasContainer 로컬 state
 
-`useState&lt;InteractionState&gt;(null)` (line 192) 그대로 사용. Zustand에 추가하지 않는다. `CanvasFeedbackOverlay`는 `interaction` 객체와 `absoluteRectById`, `zoomState` 등 props로 모두 주입받는다.
+`useState<InteractionState>(null)` (line 192) 그대로 사용. Zustand에 추가하지 않는다. `CanvasFeedbackOverlay`는 `interaction` 객체와 `absoluteRectById`, `zoomState` 등 props로 모두 주입받는다.
 
 ### 2-3. "원본 outline + 현재 위치 ghost" 두 단계 구성
 
@@ -98,7 +98,7 @@ const selectionBboxScreen = useMemo(() =&gt; {
 - **원본 outline rect**: `interaction.startAbsoluteRects` (move) / `interaction.startAbsoluteRect` (resize) — 이미 line 996–1005 `dragGhostRects` 메모가 사용한다. Codex는 동일 소스를 사용한다.
 - **현재 위치 ghost rect**: `absoluteRectById.get(nodeId)`. 스토어가 드래그 세션 중에 rect를 mutate하기 때문에 라이브 값이다. 추가 state 트래킹 불필요.
 
-따라서 `&lt;DragGhost&gt;`는 `startRects`(원본 outline용)와 `currentRects`(ghost용) 두 셋을 받는다.
+따라서 `<DragGhost>`는 `startRects`(원본 outline용)와 `currentRects`(ghost용) 두 셋을 받는다.
 
 ### 2-4. nodeSizeLabel 숨김
 
@@ -154,11 +154,11 @@ export default function DragGhost({
   if (startRects.length === 0) return null;
 
   return (
-    &lt;&gt;
-      {startRects.map((rect, index) =&gt; {
+    <>
+      {startRects.map((rect, index) => {
         const s = toScreen(rect, zoom, panX, panY);
         return (
-          &lt;div
+          <div
             key={`origin-${index}`}
             className={styles.canvasOverlayDragOrigin}
             style={{
@@ -168,15 +168,15 @@ export default function DragGhost({
               height: `${s.height}px`,
             }}
             aria-hidden
-          /&gt;
+          />
         );
       })}
 
-      {mode === 'move' &amp;&amp;
-        currentRects.map((rect, index) =&gt; {
+      {mode === 'move' &&
+        currentRects.map((rect, index) => {
           const s = toScreen(rect, zoom, panX, panY);
           return (
-            &lt;div
+            <div
               key={`ghost-${index}`}
               className={styles.canvasOverlayDragGhost}
               style={{
@@ -186,10 +186,10 @@ export default function DragGhost({
                 height: `${s.height}px`,
               }}
               aria-hidden
-            /&gt;
+            />
           );
         })}
-    &lt;/&gt;
+    </>
   );
 }
 ~~~
@@ -227,13 +227,13 @@ export default function ResizeReadout({
   const h = Math.round(currentRect.height);
 
   return (
-    &lt;div
+    <div
       className={styles.canvasOverlayResizeReadout}
       style={{ left: `${left}px`, top: `${top}px` }}
       aria-live="polite"
-    &gt;
-      {w} &lt;span className={styles.canvasOverlayResizeReadoutTimes}&gt;×&lt;/span&gt; {h}
-    &lt;/div&gt;
+    >
+      {w} <span className={styles.canvasOverlayResizeReadoutTimes}>×</span> {h}
+    </div>
   );
 }
 ~~~
@@ -256,10 +256,10 @@ export default function MultiSelectionBoundingBox({
   bbox,
   selectedCount,
 }: MultiSelectionBoundingBoxProps) {
-  if (!bbox || selectedCount &lt; 2) return null;
+  if (!bbox || selectedCount < 2) return null;
 
   return (
-    &lt;div
+    <div
       className={styles.canvasOverlayMultiBbox}
       style={{
         left: `${bbox.x}px`,
@@ -268,20 +268,20 @@ export default function MultiSelectionBoundingBox({
         height: `${bbox.height}px`,
       }}
       aria-hidden
-    &gt;
-      &lt;span className={styles.canvasOverlayMultiBboxBadge}&gt;
+    >
+      <span className={styles.canvasOverlayMultiBboxBadge}>
         {selectedCount} selected · {Math.round(bbox.width)} × {Math.round(bbox.height)}
-      &lt;/span&gt;
-      {HANDLES.map((h) =&gt; (
-        &lt;span
+      </span>
+      {HANDLES.map((h) => (
+        <span
           key={h}
           className={`${styles.canvasOverlayMultiBboxHandle} ${
             styles[`canvasOverlayMultiBboxHandle_${h}`]
           }`}
           aria-hidden
-        /&gt;
+        />
       ))}
-    &lt;/div&gt;
+    </div>
   );
 }
 ~~~
@@ -328,12 +328,12 @@ function computeDistances(active: Rect, others: Rect[]): DistanceMeasurement[] {
     const oLeft = o.x;
     const oTop = o.y;
     const oBottom = o.y + o.height;
-    const verticalOverlap = oBottom &gt; aTop &amp;&amp; oTop &lt; aBottom;
+    const verticalOverlap = oBottom > aTop && oTop < aBottom;
     if (!verticalOverlap) continue;
-    if (oLeft &lt; aRight) continue;
+    if (oLeft < aRight) continue;
     const gap = oLeft - aRight;
-    if (gap &lt;= 0 || gap &gt; SHOW_THRESHOLD_PX) continue;
-    if (!rightBest || gap &lt; rightBest.gap) rightBest = { rect: o, gap };
+    if (gap <= 0 || gap > SHOW_THRESHOLD_PX) continue;
+    if (!rightBest || gap < rightBest.gap) rightBest = { rect: o, gap };
   }
   if (rightBest) {
     result.push({
@@ -349,12 +349,12 @@ function computeDistances(active: Rect, others: Rect[]): DistanceMeasurement[] {
     const oRight = o.x + o.width;
     const oTop = o.y;
     const oBottom = o.y + o.height;
-    const verticalOverlap = oBottom &gt; aTop &amp;&amp; oTop &lt; aBottom;
+    const verticalOverlap = oBottom > aTop && oTop < aBottom;
     if (!verticalOverlap) continue;
-    if (oRight &gt; aLeft) continue;
+    if (oRight > aLeft) continue;
     const gap = aLeft - oRight;
-    if (gap &lt;= 0 || gap &gt; SHOW_THRESHOLD_PX) continue;
-    if (!leftBest || gap &lt; leftBest.gap) leftBest = { rect: o, gap };
+    if (gap <= 0 || gap > SHOW_THRESHOLD_PX) continue;
+    if (!leftBest || gap < leftBest.gap) leftBest = { rect: o, gap };
   }
   if (leftBest) {
     result.push({
@@ -370,12 +370,12 @@ function computeDistances(active: Rect, others: Rect[]): DistanceMeasurement[] {
     const oTop = o.y;
     const oLeft = o.x;
     const oRight = o.x + o.width;
-    const horizontalOverlap = oRight &gt; aLeft &amp;&amp; oLeft &lt; aRight;
+    const horizontalOverlap = oRight > aLeft && oLeft < aRight;
     if (!horizontalOverlap) continue;
-    if (oTop &lt; aBottom) continue;
+    if (oTop < aBottom) continue;
     const gap = oTop - aBottom;
-    if (gap &lt;= 0 || gap &gt; SHOW_THRESHOLD_PX) continue;
-    if (!bottomBest || gap &lt; bottomBest.gap) bottomBest = { rect: o, gap };
+    if (gap <= 0 || gap > SHOW_THRESHOLD_PX) continue;
+    if (!bottomBest || gap < bottomBest.gap) bottomBest = { rect: o, gap };
   }
   if (bottomBest) {
     result.push({
@@ -391,12 +391,12 @@ function computeDistances(active: Rect, others: Rect[]): DistanceMeasurement[] {
     const oBottom = o.y + o.height;
     const oLeft = o.x;
     const oRight = o.x + o.width;
-    const horizontalOverlap = oRight &gt; aLeft &amp;&amp; oLeft &lt; aRight;
+    const horizontalOverlap = oRight > aLeft && oLeft < aRight;
     if (!horizontalOverlap) continue;
-    if (oBottom &gt; aTop) continue;
+    if (oBottom > aTop) continue;
     const gap = aTop - oBottom;
-    if (gap &lt;= 0 || gap &gt; SHOW_THRESHOLD_PX) continue;
-    if (!topBest || gap &lt; topBest.gap) topBest = { rect: o, gap };
+    if (gap <= 0 || gap > SHOW_THRESHOLD_PX) continue;
+    if (!topBest || gap < topBest.gap) topBest = { rect: o, gap };
   }
   if (topBest) {
     result.push({
@@ -418,7 +418,7 @@ export default function SnapDistanceLabel({
   panY,
   enabled,
 }: SnapDistanceLabelProps) {
-  const measurements = useMemo(() =&gt; {
+  const measurements = useMemo(() => {
     if (!enabled || !activeRect) return [];
     return computeDistances(activeRect, otherRects);
   }, [enabled, activeRect, otherRects]);
@@ -426,8 +426,8 @@ export default function SnapDistanceLabel({
   if (measurements.length === 0) return null;
 
   return (
-    &lt;&gt;
-      {measurements.map((m, i) =&gt; {
+    <>
+      {measurements.map((m, i) => {
         const fromScreen = {
           x: m.from.x * zoom + panX,
           y: m.from.y * zoom + panY,
@@ -445,7 +445,7 @@ export default function SnapDistanceLabel({
           : toScreen.y - fromScreen.y;
 
         return (
-          &lt;div
+          <div
             key={`snap-dist-${i}`}
             className={styles.canvasOverlaySnapDistanceWrapper}
             style={{
@@ -455,8 +455,8 @@ export default function SnapDistanceLabel({
               height: m.axis === 'vertical' ? `${length}px` : '1px',
             }}
             aria-hidden
-          &gt;
-            &lt;svg
+          >
+            <svg
               className={styles.canvasOverlaySnapDistanceLine}
               width={m.axis === 'horizontal' ? length : 1}
               height={m.axis === 'vertical' ? length : 1}
@@ -466,14 +466,14 @@ export default function SnapDistanceLabel({
                   : `0 0 1 ${Math.max(length, 1)}`
               }
               preserveAspectRatio="none"
-            &gt;
+            >
               {m.axis === 'horizontal' ? (
-                &lt;line x1="0" y1="0.5" x2={length} y2="0.5" /&gt;
+                <line x1="0" y1="0.5" x2={length} y2="0.5" />
               ) : (
-                &lt;line x1="0.5" y1="0" x2="0.5" y2={length} /&gt;
+                <line x1="0.5" y1="0" x2="0.5" y2={length} />
               )}
-            &lt;/svg&gt;
-            &lt;span
+            </svg>
+            <span
               className={styles.canvasOverlaySnapDistanceLabel}
               style={{
                 left: m.axis === 'horizontal'
@@ -483,13 +483,13 @@ export default function SnapDistanceLabel({
                   ? `${midScreen.y - fromScreen.y}px`
                   : '50%',
               }}
-            &gt;
+            >
               {Math.round(m.distance)}px
-            &lt;/span&gt;
-          &lt;/div&gt;
+            </span>
+          </div>
         );
       })}
-    &lt;/&gt;
+    </>
   );
 }
 ~~~
@@ -512,7 +512,7 @@ interface CanvasFeedbackOverlayProps {
   interactionType: CanvasInteractionType;
   activeNodeIds: string[];
   startAbsoluteRects: Rect[];
-  absoluteRectById: Map&lt;string, Rect&gt;;
+  absoluteRectById: Map<string, Rect>;
   allVisibleNodes: BuilderCanvasNode[];
   multiSelectionBboxScreen:
     | { x: number; y: number; width: number; height: number }
@@ -547,10 +547,10 @@ export default function CanvasFeedbackOverlay({
       : null;
 
   const resizePrimaryRect =
-    interactionType === 'resize' &amp;&amp; currentRects[0] ? currentRects[0] : null;
+    interactionType === 'resize' && currentRects[0] ? currentRects[0] : null;
 
   const snapActiveRect =
-    (interactionType === 'move' || interactionType === 'resize') &amp;&amp;
+    (interactionType === 'move' || interactionType === 'resize') &&
     currentRects[0]
       ? currentRects[0]
       : null;
@@ -566,36 +566,36 @@ export default function CanvasFeedbackOverlay({
   }
 
   return (
-    &lt;&gt;
-      &lt;DragGhost
+    <>
+      <DragGhost
         startRects={startAbsoluteRects}
         currentRects={currentRects}
         zoom={zoom}
         panX={panX}
         panY={panY}
         mode={dragMode}
-      /&gt;
-      &lt;ResizeReadout
+      />
+      <ResizeReadout
         currentRect={resizePrimaryRect}
         zoom={zoom}
         panX={panX}
         panY={panY}
-      /&gt;
-      &lt;SnapDistanceLabel
+      />
+      <SnapDistanceLabel
         activeRect={snapActiveRect}
         otherRects={snapOtherRects}
         zoom={zoom}
         panX={panX}
         panY={panY}
         enabled={dragMode !== null}
-      /&gt;
-      {!dragMode &amp;&amp; (
-        &lt;MultiSelectionBoundingBox
+      />
+      {!dragMode && (
+        <MultiSelectionBoundingBox
           bbox={multiSelectionBboxScreen}
           selectedCount={selectedCount}
-        /&gt;
+        />
       )}
-    &lt;/&gt;
+    </>
   );
 }
 ~~~
@@ -616,29 +616,29 @@ import CanvasFeedbackOverlay from '@/components/builder/canvas/CanvasFeedbackOve
 
 **Before**:
 ~~~tsx
-&lt;div
+<div
   className={styles.stageTransform}
   style={{
     transform: `translate(${zoomState.panX}px, ${zoomState.panY}px) scale(${zoomState.zoom})`,
   }}
-&gt;
+>
 ~~~
 
 **After**:
 ~~~tsx
-&lt;div
+<div
   className={styles.stageTransform}
   style={{
     transform: `translate(${zoomState.panX}px, ${zoomState.panY}px) scale(${zoomState.zoom})`,
     ['--canvas-zoom' as string]: String(zoomState.zoom),
   } as React.CSSProperties}
-&gt;
+>
 ~~~
 
 #### (c) `.stage` 루트 div에 `data-canvas-interaction` 추가 (≈ line 1097-1103)
 
 ~~~tsx
-&lt;div
+<div
   ref={containerRef}
   className={styles.stage}
   data-canvas-interaction={interaction?.type ?? 'idle'}
@@ -660,10 +660,10 @@ import CanvasFeedbackOverlay from '@/components/builder/canvas/CanvasFeedbackOve
 
 `ResizeReadout`이 동일 책임을 더 정확한 사양으로 대체.
 
-#### (g) `&lt;CanvasFeedbackOverlay&gt;` 마운트 — `&lt;SelectionToolbar&gt;` **직전**에 추가 (≈ line 1396)
+#### (g) `<CanvasFeedbackOverlay>` 마운트 — `<SelectionToolbar>` **직전**에 추가 (≈ line 1396)
 
 ~~~tsx
-&lt;CanvasFeedbackOverlay
+<CanvasFeedbackOverlay
   interactionType={interaction?.type === 'pan' ? null : (interaction?.type ?? null)}
   activeNodeIds={
     interaction?.type === 'move'
@@ -686,7 +686,7 @@ import CanvasFeedbackOverlay from '@/components/builder/canvas/CanvasFeedbackOve
   zoom={zoomState.zoom}
   panX={zoomState.panX}
   panY={zoomState.panY}
-/&gt;
+/>
 ~~~
 
 ### 4-2. `CanvasNode.tsx`
@@ -710,12 +710,12 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
   if (guides.length === 0) return null;
 
   return (
-    &lt;&gt;
-      {guides.map((g, i) =&gt; {
+    <>
+      {guides.map((g, i) => {
         const key = `${g.axis}-${g.position}-${i}`;
         if (g.axis === 'vertical') {
           return (
-            &lt;div
+            <div
               key={key}
               style={{
                 position: 'absolute',
@@ -727,11 +727,11 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
                 pointerEvents: 'none',
                 zIndex: 9999,
               }}
-            /&gt;
+            />
           );
         }
         return (
-          &lt;div
+          <div
             key={key}
             style={{
               position: 'absolute',
@@ -743,10 +743,10 @@ export default function AlignmentGuides({ guides }: AlignmentGuidesProps) {
               pointerEvents: 'none',
               zIndex: 9999,
             }}
-          /&gt;
+          />
         );
       })}
-    &lt;/&gt;
+    </>
   );
 }
 ~~~
@@ -770,7 +770,7 @@ export default function SelectionBox({
   height: number;
 }) {
   return (
-    &lt;div
+    <div
       className={styles.selectionBox}
       style={{
         left: `${left}px`,
@@ -779,7 +779,7 @@ export default function SelectionBox({
         height: `${height}px`,
         ['borderWidth' as string]: 'calc(1px / var(--canvas-zoom, 1))',
       } as React.CSSProperties}
-    /&gt;
+    />
   );
 }
 ~~~
@@ -1050,7 +1050,7 @@ export default function SelectionBox({
 2. `SandboxPage.module.css` 신규 클래스 추가, 기존 클래스 삭제, `.selectionBox` border-width 분리, nodeSizeLabel 숨김 룰 추가.
 3. `AlignmentGuides.tsx` / `SelectionBox.tsx` 1px-stable 패치.
 4. `CanvasContainer.tsx` 패치.
-5. `pnpm tsc --noEmit &amp;&amp; pnpm lint` 통과 확인.
+5. `pnpm tsc --noEmit && pnpm lint` 통과 확인.
 6. `pnpm dev`로 zoom 50/100/200% 수동 검증.
 
 ---

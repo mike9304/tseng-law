@@ -56,6 +56,18 @@ function upgradeOfficeMapPlaceholders(document: BuilderCanvasDocument): BuilderC
   };
 }
 
+const REQUIRED_SEED_SLUGS = ['', 'about', 'services', 'contact', 'lawyers', 'faq', 'pricing', 'reviews', 'privacy', 'disclaimer'];
+
+function needsStandardPageSeed(sitePages: Array<{ slug: string; isHomePage?: boolean }>): boolean {
+  if (sitePages.length === 0) return true;
+  return REQUIRED_SEED_SLUGS.some((slug) => {
+    if (slug === '') {
+      return !sitePages.some((page) => page.isHomePage || page.slug === '');
+    }
+    return !sitePages.some((page) => page.slug === slug);
+  });
+}
+
 /**
  * Unified builder entry point.
  *
@@ -77,10 +89,13 @@ export default async function BuilderMainPage({
   const locale: Locale = normalizeLocale(params.locale);
   const force = searchParams?.reseed === '1';
 
-  await seedSitePages('default', locale);
-
-  // Try to load from site document (multi-page model)
-  const site = await readSiteDocument('default', locale);
+  // Try to load from site document (multi-page model). Seeding every request is
+  // expensive because it checks each page canvas; only do it when metadata is missing.
+  let site = await readSiteDocument('default', locale);
+  if (force || needsStandardPageSeed(site.pages)) {
+    await seedSitePages('default', locale);
+    site = await readSiteDocument('default', locale);
+  }
   const homePage = site.pages.find((p) => p.isHomePage) || site.pages[0];
 
   let initialDocument;

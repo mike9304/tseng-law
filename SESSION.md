@@ -442,4 +442,5 @@
 
 운영 메모:
 - 사용자 확인용 서버는 최신 build 기반 `next start`로 `http://localhost:3000/ko/admin-builder`에 유지. 현재 로컬 `next dev`는 Next dev vendor chunk/cache 오류가 있어 사용자 검증에는 production server를 사용.
+- `/ko/admin-builder`는 기존 사이트 메타가 이미 있으면 매 요청 seed 검사를 건너뛰도록 보강. 최신 `next start`에서 200 응답 약 1.0초 확인.
 - `Wix 체크포인트.md`는 W01/W02/W18/W21/W27~W30/W114를 최신 검증 결과로 업데이트. Green 승격은 문서 규칙대로 사용자 직접 클릭·저장·새로고침 검증 후 처리.

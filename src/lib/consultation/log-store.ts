@@ -32,6 +32,10 @@ export type ConsultationFunnelStage =
   | 'chat_rate_limited'
   | 'chat_failed'
   | 'chat_injection_blocked'
+  | 'chat_pii_blocked'
+  | 'chat_low_confidence_bypassed'
+  | 'chat_groundedness_flagged'
+  | 'chat_staleness_flagged'
   | 'submit_received'
   | 'submit_validated'
   | 'submit_consent_missing'
@@ -54,6 +58,7 @@ type ConsultationLogRecord = {
   sourceFreshness?: ConsultationSourceFreshness;
   sourceConfidence?: ConsultationSourceConfidence;
   referencedColumns?: string[];
+  referencedKnowledgeIds?: string[];
   topicKey?: string;
   messageRedacted?: string;
   summaryRedacted?: string;
@@ -114,6 +119,7 @@ export async function logConsultationChatEvent(input: {
   nextRequiredField: ConsultationNextField;
   suggestedHandoffChannel: 'line' | 'kakao' | 'email' | 'phone' | 'none';
   referencedColumns: string[];
+  referencedKnowledgeIds?: string[];
   sourceFreshness: ConsultationSourceFreshness;
   sourceConfidence: ConsultationSourceConfidence;
   funnelStage?: ConsultationFunnelStage;
@@ -137,6 +143,7 @@ export async function logConsultationChatEvent(input: {
     nextRequiredField: input.nextRequiredField,
     suggestedHandoffChannel: input.suggestedHandoffChannel,
     referencedColumns: input.referencedColumns,
+    referencedKnowledgeIds: input.referencedKnowledgeIds,
     sourceFreshness: input.sourceFreshness,
     sourceConfidence: input.sourceConfidence,
     topicKey: `${input.locale}:${input.classification}:${input.riskLevel}`,
@@ -157,6 +164,7 @@ export async function logConsultationSubmitEvent(input: {
   classification: ConsultationCategory;
   riskLevel: ConsultationRiskLevel;
   referencedColumns: string[];
+  referencedKnowledgeIds?: string[];
   summary?: string;
   preferredContact?: string;
   urgency?: string;
@@ -177,6 +185,7 @@ export async function logConsultationSubmitEvent(input: {
     classification: input.classification,
     riskLevel: input.riskLevel,
     referencedColumns: input.referencedColumns,
+    referencedKnowledgeIds: input.referencedKnowledgeIds,
     topicKey: `${input.locale}:${input.classification}:${input.riskLevel}`,
     summaryRedacted: clipText(input.summary || ''),
     preferredContact: input.preferredContact,

@@ -2,6 +2,8 @@ import { get, list } from '@vercel/blob';
 import type { Locale } from '@/lib/locales';
 import type { ColumnPost, ColumnCategory } from '@/lib/columns';
 import { getAllColumnPosts } from '@/lib/columns';
+import { listColumnBundles } from '@/lib/builder/columns/storage';
+import type { ColumnDocument } from '@/lib/builder/columns/types';
 
 /**
  * Blob-aware column reader that merges file-based legal columns
@@ -55,6 +57,8 @@ interface ColumnDocumentFromBlob {
     attorneyReviewStatus?: 'pending' | 'reviewed' | 'needs-revision';
     freshness?: 'fresh' | 'review_needed' | 'unknown';
     category?: string;
+    featuredImage?: string;
+    publishedAt?: string;
   };
   linkedSlugs?: { ko?: string; 'zh-hant'?: string; en?: string };
   draft?: boolean;
@@ -82,7 +86,28 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
     readTime: estimateReadTime(content),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
-    featuredImage: '',
+    featuredImage: doc.frontmatter?.featuredImage || '',
+    content,
+    summary: doc.summary || '',
+  };
+}
+
+function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
+  const category: ColumnCategory =
+    doc.frontmatter.category === 'formation' || doc.frontmatter.category === 'legal' || doc.frontmatter.category === 'case'
+      ? doc.frontmatter.category
+      : 'legal';
+  const content = doc.bodyMarkdown || stripHtml(doc.bodyHtml || '') || doc.summary || '';
+  const dateIso = doc.frontmatter.publishedAt || doc.frontmatter.lastmod || doc.updatedAt;
+  return {
+    slug: doc.slug,
+    title: doc.title || doc.slug,
+    date: dateIso,
+    dateDisplay: dateIso.slice(0, 10),
+    readTime: estimateReadTime(content),
+    category,
+    categoryLabel: categoryLabel(category, doc.locale),
+    featuredImage: doc.frontmatter.featuredImage || '',
     content,
     summary: doc.summary || '',
   };
@@ -154,6 +179,21 @@ async function listBlobPostsForLocale(locale: Locale): Promise<ColumnPost[]> {
   return out;
 }
 
+async function listBuilderStoragePostsForLocale(locale: Locale): Promise<ColumnPost[]> {
+  try {
+    const bundles = await listColumnBundles(locale);
+    return bundles
+      .map((bundle) => bundle.published)
+      .filter((doc): doc is ColumnDocument => Boolean(doc))
+      .map(builderDocToColumnPost);
+  } catch (error) {
+    if (process.env.NODE_ENV !== 'test') {
+      console.warn('[columns-blob-reader] builder storage list failed:', error);
+    }
+    return [];
+  }
+}
+
 /** For testing/admin endpoints — drop the Blob cache so the next read goes to network. */
 export function invalidateBlobColumnsCache(locale?: Locale): void {
   if (locale) {
@@ -174,14 +214,15 @@ export function invalidateBlobColumnsCache(locale?: Locale): void {
  */
 export async function getAllColumnPostsIncludingBlob(locale: Locale): Promise<ColumnPost[]> {
   const filePosts = getAllColumnPosts(locale);
-  if (!isBlobBackend()) return filePosts;
+  const builderPosts = await listBuilderStoragePostsForLocale(locale);
+  const blobPosts = isBlobBackend() ? await listBlobPostsForLocale(locale) : [];
 
-  const blobPosts = await listBlobPostsForLocale(locale);
-  if (blobPosts.length === 0) return filePosts;
+  if (builderPosts.length === 0 && blobPosts.length === 0) return filePosts;
 
-  // Merge: Blob first (priority), then file entries whose slug isn't already covered.
-  const merged: ColumnPost[] = [...blobPosts];
-  const seen = new Set(blobPosts.map((p) => p.slug));
+  // Merge: builder storage first (local/blob published overlays), then direct
+  // Blob fallback, then file entries whose slug isn't already covered.
+  const merged: ColumnPost[] = [...builderPosts, ...blobPosts];
+  const seen = new Set(merged.map((p) => p.slug));
   for (const fp of filePosts) {
     if (seen.has(fp.slug)) continue;
     merged.push(fp);

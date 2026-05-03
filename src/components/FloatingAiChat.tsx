@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
+import { getConsultationPublicEmail, getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { contactPageContent } from '@/data/contact-page-content';
 import { getFollowUpSuggestions, getQuickReplies } from '@/components/floating-ai-quick-replies';
 
 interface FloatingChatReference {
@@ -12,11 +14,22 @@ interface FloatingChatReference {
   freshness: 'fresh' | 'review_needed' | 'unknown';
 }
 
+interface FloatingKnowledgeReference {
+  id: string;
+  category: string;
+  question: string;
+  reviewedAt: string;
+}
+
 interface ChatMessage {
   id: string;
   role: 'user' | 'assistant';
   text: string;
   references?: FloatingChatReference[];
+  knowledge?: FloatingKnowledgeReference[];
+  classification?: string;
+  riskLevel?: string;
+  referencedColumns?: string[];
 }
 
 type FeedbackState = 'pending' | 'helpful' | 'unhelpful';
@@ -26,6 +39,10 @@ function makeMessageId(role: 'user' | 'assistant'): string {
     return `${role}-${crypto.randomUUID().slice(0, 12)}`;
   }
   return `${role}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function makeSessionId(): string {
+  return `float-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
 function feedbackStorageKey(sessionId: string): string {
@@ -65,6 +82,15 @@ function persistFeedback(
   }
 }
 
+function clearStoredFeedback(sessionId: string): void {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.removeItem(feedbackStorageKey(sessionId));
+  } catch {
+    /* ignore */
+  }
+}
+
 /**
  * Session persistence (Wave 3) — allow a visitor to close and reopen
  * the browser tab without losing their AI consultation conversation.
@@ -83,6 +109,15 @@ interface PersistedSession {
 
 function sessionStorageKey(locale: string): string {
   return `${SESSION_STORAGE_KEY_PREFIX}${locale}`;
+}
+
+function clearPersistedSession(locale: string): void {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.removeItem(sessionStorageKey(locale));
+  } catch {
+    /* ignore */
+  }
 }
 
 function loadPersistedSession(locale: string): PersistedSession | null {
@@ -128,6 +163,11 @@ function loadPersistedSession(locale: string): PersistedSession | null {
           role: m.role,
           text: m.text,
         };
+        if (typeof m.classification === 'string') cleanMsg.classification = m.classification;
+        if (typeof m.riskLevel === 'string') cleanMsg.riskLevel = m.riskLevel;
+        if (Array.isArray(m.referencedColumns)) {
+          cleanMsg.referencedColumns = m.referencedColumns.filter((slug): slug is string => typeof slug === 'string');
+        }
         // Drop the references array on restore — slugs are stable but
         // stored metadata (title/summary/lastmod) could be outdated
         // after a content update; the next response will carry fresh
@@ -185,6 +225,13 @@ interface ChatApiReferenceRaw {
   freshness?: string;
 }
 
+interface ChatApiKnowledgeRaw {
+  id?: string;
+  category?: string;
+  question?: string;
+  reviewedAt?: string;
+}
+
 function normalizeFreshness(raw: string | undefined): FloatingChatReference['freshness'] {
   if (raw === 'fresh' || raw === 'review_needed') return raw;
   return 'unknown';
@@ -207,6 +254,27 @@ function normalizeReferences(
       freshness: normalizeFreshness(ref.freshness),
     });
     if (out.length >= 3) break;
+  }
+  return out;
+}
+
+function normalizeKnowledgeReferences(
+  raw: ChatApiKnowledgeRaw[] | undefined,
+): FloatingKnowledgeReference[] {
+  if (!Array.isArray(raw)) return [];
+  const out: FloatingKnowledgeReference[] = [];
+  for (const ref of raw) {
+    if (!ref || typeof ref !== 'object') continue;
+    const id = typeof ref.id === 'string' ? ref.id : '';
+    const question = typeof ref.question === 'string' ? ref.question : '';
+    if (!id || !question) continue;
+    out.push({
+      id,
+      category: typeof ref.category === 'string' ? ref.category : 'general',
+      question,
+      reviewedAt: typeof ref.reviewedAt === 'string' ? ref.reviewedAt : '',
+    });
+    if (out.length >= 2) break;
   }
   return out;
 }
@@ -275,7 +343,11 @@ const COPY: Record<
     sourcesTitle: string;
     sourceLastVerified: (date: string) => string;
     sourceReadMore: string;
+    knowledgeTitle: string;
+    knowledgeReviewed: (date: string) => string;
     disclaimerBar: string;
+    resetLabel: string;
+    resetTitle: string;
   }
 > = {
   ko: {
@@ -294,7 +366,7 @@ const COPY: Record<
     submitting: '접수 중...',
     success: (id) =>
       `접수가 완료되었습니다. 변호사가 검토 후 빠르게 회신드리겠습니다. 접수번호: ${id}`,
-    error: '일시적 오류가 발생했습니다. 직접 wei@hoveringlaw.com.tw 로 문의해 주세요.',
+    error: '일시적 오류가 발생했습니다. 직접 이메일로 문의해 주세요.',
     closeLabel: '닫기',
     contactsTitle: '직접 연락',
     emailLabel: '이메일',
@@ -310,7 +382,11 @@ const COPY: Record<
     sourcesTitle: '참고 칼럼',
     sourceLastVerified: (date) => `최근 갱신: ${date}`,
     sourceReadMore: '원문 보기',
+    knowledgeTitle: '변호사 검토 Q&A',
+    knowledgeReviewed: (date) => `검토일: ${date}`,
     disclaimerBar: 'AI 응답은 참고용입니다. 최종 판단은 대만 변호사 검토가 필요합니다.',
+    resetLabel: '처음 메뉴',
+    resetTitle: '현재 대화를 지우고 처음 메뉴로 돌아가기',
   },
   'zh-hant': {
     title: 'AI 諮詢',
@@ -327,7 +403,7 @@ const COPY: Record<
     submit: '送出',
     submitting: '送出中...',
     success: (id) => `預約已完成。律師檢閱後將盡快回覆。預約編號: ${id}`,
-    error: '發生暫時性錯誤，請直接寄信至 wei@hoveringlaw.com.tw。',
+    error: '發生暫時性錯誤，請直接寄信聯繫。',
     closeLabel: '關閉',
     contactsTitle: '直接聯繫',
     emailLabel: '電子郵件',
@@ -343,7 +419,11 @@ const COPY: Record<
     sourcesTitle: '參考文章',
     sourceLastVerified: (date) => `最近更新: ${date}`,
     sourceReadMore: '閱讀全文',
+    knowledgeTitle: '律師檢閱 Q&A',
+    knowledgeReviewed: (date) => `檢閱日: ${date}`,
     disclaimerBar: 'AI 回覆僅供參考，最終判斷應由台灣律師確認。',
+    resetLabel: '回到選單',
+    resetTitle: '清除目前對話並回到初始選單',
   },
   en: {
     title: 'AI Consult',
@@ -362,7 +442,7 @@ const COPY: Record<
     success: (id) =>
       `Submitted. An attorney will review and respond shortly. Reference: ${id}`,
     error:
-      'A temporary error occurred. Please email wei@hoveringlaw.com.tw directly.',
+      'A temporary error occurred. Please email the firm directly.',
     closeLabel: 'Close',
     contactsTitle: 'Direct contact',
     emailLabel: 'Email',
@@ -378,9 +458,17 @@ const COPY: Record<
     sourcesTitle: 'Sources',
     sourceLastVerified: (date) => `Last verified: ${date}`,
     sourceReadMore: 'Read full article',
+    knowledgeTitle: 'Attorney-reviewed Q&A',
+    knowledgeReviewed: (date) => `Reviewed: ${date}`,
     disclaimerBar: 'AI responses are for reference only. Final judgment requires a Taiwan lawyer\'s review.',
+    resetLabel: 'Menu',
+    resetTitle: 'Clear this chat and return to the starting menu',
   },
 };
+
+function createInitialMessages(copy: { greeting: string }): ChatMessage[] {
+  return [{ id: 'initial-greeting', role: 'assistant', text: copy.greeting }];
+}
 
 const OFFICES_TEXT: Record<Locale, string> = {
   ko: '타이베이 · 타이중 · 가오슝',
@@ -398,13 +486,15 @@ export default function FloatingAiChat({
   onClose: () => void;
 }) {
   const copy = COPY[locale];
+  const publicEmail = getConsultationPublicEmail();
+  const publicMailto = getConsultationPublicMailto();
+  const primaryOffice = contactPageContent[locale].offices.offices[0];
+  const phoneHref = `tel:${primaryOffice.phone.replace(/[^0-9+]/g, '')}`;
   // Always start with the server-rendered initial greeting so SSR and
   // the first client render agree. The localStorage restore runs in a
   // useEffect below (hydrationRestored flag), avoiding hydration
   // mismatches when next.js pre-renders the page.
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    { id: 'initial-greeting', role: 'assistant', text: copy.greeting },
-  ]);
+  const [messages, setMessages] = useState<ChatMessage[]>(() => createInitialMessages(copy));
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -417,9 +507,7 @@ export default function FloatingAiChat({
   const [formError, setFormError] = useState<string | null>(null);
   const [lastClassification, setLastClassification] = useState('unknown');
   const [lastRiskLevel, setLastRiskLevel] = useState('L1');
-  const [sessionId, setSessionId] = useState<string>(
-    () => `float-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-  );
+  const [sessionId, setSessionId] = useState<string>(() => makeSessionId());
   const [sessionHydrated, setSessionHydrated] = useState(false);
   const [feedbackByMessageId, setFeedbackByMessageId] = useState<
     Record<string, FeedbackState>
@@ -483,6 +571,11 @@ export default function FloatingAiChat({
     if (persisted && persisted.messages.length > 0) {
       setSessionId(persisted.sessionId);
       setMessages(persisted.messages);
+      const lastMetadata = [...persisted.messages]
+        .reverse()
+        .find((m) => m.role === 'assistant' && (m.classification || m.riskLevel));
+      if (lastMetadata?.classification) setLastClassification(lastMetadata.classification);
+      if (lastMetadata?.riskLevel) setLastRiskLevel(lastMetadata.riskLevel);
       const feedbackForRestored = loadStoredFeedback(persisted.sessionId);
       if (Object.keys(feedbackForRestored).length > 0) {
         setFeedbackByMessageId(feedbackForRestored);
@@ -503,12 +596,8 @@ export default function FloatingAiChat({
     persistSession(sessionId, locale, messages);
   }, [sessionId, locale, messages, sessionHydrated]);
 
-  function handleQuickReply(question: string, answer: string) {
-    setMessages((prev) => [
-      ...prev,
-      { id: makeMessageId('user'), role: 'user', text: question },
-      { id: makeMessageId('assistant'), role: 'assistant', text: answer },
-    ]);
+  async function handleQuickReply(question: string) {
+    await sendChatMessage(question);
   }
 
   async function sendChatMessage(text: string) {
@@ -589,21 +678,39 @@ export default function FloatingAiChat({
           if (evt.type === 'metadata') {
             const data = evt.data as Record<string, unknown> | undefined;
             if (data) {
+              const nextClassification = typeof data.classification === 'string'
+                ? data.classification
+                : undefined;
+              const nextRiskLevel = typeof data.riskLevel === 'string'
+                ? data.riskLevel
+                : undefined;
               if (typeof data.classification === 'string') {
                 setLastClassification(data.classification);
               }
               if (typeof data.riskLevel === 'string') {
                 setLastRiskLevel(data.riskLevel);
               }
+              const nextReferencedColumns = Array.isArray(data.referencedColumns)
+                ? data.referencedColumns.filter((slug): slug is string => typeof slug === 'string')
+                : undefined;
               const rawRefs = data.references as ChatApiReferenceRaw[] | undefined;
               const parsed = normalizeReferences(rawRefs);
-              if (parsed.length > 0) {
-                setMessages((prev) =>
-                  prev.map((m) =>
-                    m.id === pendingAssistantId ? { ...m, references: parsed } : m,
-                  ),
-                );
-              }
+              const rawKnowledge = data.referencedKnowledge as ChatApiKnowledgeRaw[] | undefined;
+              const parsedKnowledge = normalizeKnowledgeReferences(rawKnowledge);
+              setMessages((prev) =>
+                prev.map((m) =>
+                  m.id === pendingAssistantId
+                    ? {
+                        ...m,
+                        classification: nextClassification ?? m.classification,
+                        riskLevel: nextRiskLevel ?? m.riskLevel,
+                        referencedColumns: nextReferencedColumns ?? m.referencedColumns,
+                        references: parsed.length > 0 ? parsed : m.references,
+                        knowledge: parsedKnowledge.length > 0 ? parsedKnowledge : m.knowledge,
+                      }
+                    : m,
+                ),
+              );
             }
           } else if (evt.type === 'delta' && typeof evt.text === 'string') {
             pendingText += evt.text;
@@ -650,9 +757,31 @@ export default function FloatingAiChat({
     await sendChatMessage(suggestion);
   }
 
+  function handleResetToMenu() {
+    if (loading) return;
+    clearPersistedSession(locale);
+    clearStoredFeedback(sessionId);
+    setSessionId(makeSessionId());
+    setMessages(createInitialMessages(copy));
+    setInput('');
+    setShowForm(false);
+    setFormName('');
+    setFormContact('');
+    setFormSummary('');
+    setFormConsent(false);
+    setSubmitting(false);
+    setSubmitted(null);
+    setFormError(null);
+    setLastClassification('unknown');
+    setLastRiskLevel('L1');
+    setFeedbackByMessageId({});
+    setFeedbackNotice(null);
+  }
+
   async function submitFeedback(messageId: string, rating: 'helpful' | 'unhelpful') {
     const current = feedbackByMessageId[messageId];
     if (current === 'pending' || current === 'helpful' || current === 'unhelpful') return;
+    const targetMessage = messages.find((m) => m.id === messageId);
 
     setFeedbackByMessageId((prev) => ({ ...prev, [messageId]: 'pending' }));
     setFeedbackNotice(null);
@@ -666,8 +795,8 @@ export default function FloatingAiChat({
           messageId,
           rating,
           locale,
-          classification: lastClassification,
-          riskLevel: lastRiskLevel,
+          classification: targetMessage?.classification ?? lastClassification,
+          riskLevel: targetMessage?.riskLevel ?? lastRiskLevel,
         }),
       });
       if (!res.ok) throw new Error(`feedback request failed with ${res.status}`);
@@ -704,6 +833,9 @@ export default function FloatingAiChat({
     setFormError(null);
 
     const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formContact.trim());
+    const lastAssistantWithMetadata = [...messages]
+      .reverse()
+      .find((m) => m.role === 'assistant' && (m.classification || m.riskLevel || m.referencedColumns));
     const collectedFields = {
       name: formName.trim(),
       email: isEmail ? formContact.trim() : '',
@@ -713,8 +845,8 @@ export default function FloatingAiChat({
         messages
           .filter((m) => m.role === 'user')
           .map((m) => m.text)
-          .join('\n'),
-      category: lastClassification,
+        .join('\n'),
+      category: lastAssistantWithMetadata?.classification ?? lastClassification,
       consent: true,
     };
 
@@ -727,9 +859,9 @@ export default function FloatingAiChat({
           sessionId,
           collectedFields,
           transcript: messages.map((m) => ({ role: m.role, text: m.text })),
-          classification: lastClassification,
-          riskLevel: lastRiskLevel,
-          referencedColumns: [],
+          classification: lastAssistantWithMetadata?.classification ?? lastClassification,
+          riskLevel: lastAssistantWithMetadata?.riskLevel ?? lastRiskLevel,
+          referencedColumns: lastAssistantWithMetadata?.referencedColumns ?? [],
         }),
       });
 
@@ -745,7 +877,7 @@ export default function FloatingAiChat({
       ]);
       setShowForm(false);
     } catch {
-      setFormError(copy.error);
+      setFormError(`${copy.error} ${publicEmail}`);
     } finally {
       setSubmitting(false);
     }
@@ -789,13 +921,45 @@ export default function FloatingAiChat({
           <strong>{copy.title}</strong>
           <span>{copy.subtitle}</span>
         </div>
-        <button type="button" onClick={onClose} aria-label={copy.closeLabel}>
-          ×
-        </button>
+        <div className="floating-ai-chat-header-actions">
+          {(messages.length > 1 || showForm || submitted) && (
+            <button
+              type="button"
+              className="floating-ai-chat-reset"
+              onClick={handleResetToMenu}
+              disabled={loading}
+              aria-label={copy.resetTitle}
+              title={copy.resetTitle}
+            >
+              <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden>
+                <path
+                  d="M4 7h10a6 6 0 1 1-5.2 9"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M4 7l4-4M4 7l4 4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span>{copy.resetLabel}</span>
+            </button>
+          )}
+          <button type="button" className="floating-ai-chat-close" onClick={onClose} aria-label={copy.closeLabel}>
+            ×
+          </button>
+        </div>
       </div>
 
       <div className="floating-ai-chat-contacts">
-        <a href="mailto:wei@hoveringlaw.com.tw" className="floating-ai-chat-contact-item">
+        <a href={publicMailto} className="floating-ai-chat-contact-item">
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden>
             <path
               d="M3 6h18v12H3z M3 6l9 7 9-7"
@@ -807,10 +971,10 @@ export default function FloatingAiChat({
           </svg>
           <div>
             <span>{copy.emailLabel}</span>
-            <strong>wei@hoveringlaw.com.tw</strong>
+            <strong>{publicEmail}</strong>
           </div>
         </a>
-        <a href="tel:+821029929304" className="floating-ai-chat-contact-item">
+        <a href={phoneHref} className="floating-ai-chat-contact-item">
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden>
             <path
               d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
@@ -822,7 +986,7 @@ export default function FloatingAiChat({
           </svg>
           <div>
             <span>{copy.phoneLabel}</span>
-            <strong>010-2992-9304</strong>
+            <strong>{primaryOffice.phone}</strong>
           </div>
         </a>
         <div className="floating-ai-chat-contact-item floating-ai-chat-contact-offices">
@@ -904,6 +1068,37 @@ export default function FloatingAiChat({
                   </ul>
                 </div>
               ) : null}
+              {msg.knowledge && msg.knowledge.length > 0 ? (
+                <div
+                  className="floating-ai-chat-sources floating-ai-chat-knowledge"
+                  role="region"
+                  aria-label={copy.knowledgeTitle}
+                >
+                  <div className="floating-ai-chat-sources-title">{copy.knowledgeTitle}</div>
+                  <ul className="floating-ai-chat-sources-list">
+                    {msg.knowledge.map((ref) => {
+                      const formattedDate = formatReferenceDate(ref.reviewedAt, locale);
+                      return (
+                        <li key={ref.id} className="floating-ai-chat-source">
+                          <div className="floating-ai-chat-knowledge-card">
+                            <div className="floating-ai-chat-source-head">
+                              <span className="floating-ai-chat-source-title">{ref.question}</span>
+                              <span className="floating-ai-chat-source-badge floating-ai-chat-source-fresh">
+                                {ref.category}
+                              </span>
+                            </div>
+                            {formattedDate ? (
+                              <div className="floating-ai-chat-source-meta">
+                                <span>{copy.knowledgeReviewed(formattedDate)}</span>
+                              </div>
+                            ) : null}
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ) : null}
               {showFeedback ? (
                 <div
                   className="floating-ai-chat-feedback"
@@ -958,7 +1153,10 @@ export default function FloatingAiChat({
                 key={reply.label}
                 type="button"
                 className="floating-ai-chat-chip"
-                onClick={() => handleQuickReply(reply.question, reply.answer)}
+                onClick={() => {
+                  void handleQuickReply(reply.question);
+                }}
+                disabled={loading}
               >
                 {reply.label}
               </button>

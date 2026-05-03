@@ -231,7 +231,8 @@
 
 .admin-console-search input,
 .admin-console-field input,
-.admin-console-field textarea {
+.admin-console-field textarea,
+.admin-console-field select {
   width: 100%;
   border: 1px solid #d1d5db;
   border-radius: 10px;
@@ -247,7 +248,8 @@
 
 .admin-console-search input:focus,
 .admin-console-field input:focus,
-.admin-console-field textarea:focus {
+.admin-console-field textarea:focus,
+.admin-console-field select:focus {
   outline: 2px solid rgba(11, 99, 168, 0.22);
   outline-offset: 2px;
   border-color: #0b63a8;
@@ -405,7 +407,8 @@
 }
 
 .admin-console-field input,
-.admin-console-field textarea {
+.admin-console-field textarea,
+.admin-console-field select {
   padding: 0.7rem 0.85rem;
 }
 
@@ -431,6 +434,93 @@
   color: #b91c1c;
   font-size: 0.82rem;
   line-height: 1.55;
+}
+
+.admin-console-subtitle {
+  margin: 0 0 0.65rem;
+  color: #0d221a;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.admin-console-knowledge-status {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.admin-console-knowledge-status--missing,
+.admin-console-knowledge-status--error {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.admin-console-knowledge-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.1rem;
+}
+
+@media (min-width: 960px) {
+  .admin-console-knowledge-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.admin-console-knowledge-form {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.admin-console-knowledge-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.admin-console-knowledge-card,
+.admin-console-knowledge-candidate {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.admin-console-knowledge-card-head,
+.admin-console-knowledge-candidate-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.admin-console-knowledge-card h3,
+.admin-console-knowledge-candidate strong {
+  margin: 0;
+  color: #0d221a;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.admin-console-knowledge-card-head p,
+.admin-console-knowledge-candidate-head span {
+  display: block;
+  margin: 0.25rem 0 0;
+  color: #6b7280;
+  font-size: 0.76rem;
+  line-height: 1.5;
 }
 
 .admin-console-split {
@@ -794,6 +884,15 @@
   transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
 }
 
+.floating-ai-chat-knowledge-card {
+  display: block;
+  padding: 0.55rem 0.7rem;
+  background: #ffffff;
+  border: 1px solid rgba(5, 150, 105, 0.18);
+  border-radius: 10px;
+  color: inherit;
+}
+
 .floating-ai-chat-source-link:hover {
   border-color: rgba(22, 56, 45, 0.35);
   box-shadow: 0 2px 6px rgba(22, 56, 45, 0.08);
@@ -948,16 +1047,98 @@
 }
 
 /* -------------------------------------------------------------------------
-   Floating chat — close button touch target (WCAG 2.2 AA, 44x44)
+   Floating chat — header actions (reset + close)
    Overrides the 30x30 declaration in globals.css.
    ------------------------------------------------------------------------- */
+.floating-ai-chat-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 0 0 auto;
+}
+
+.floating-ai-chat-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  min-height: 36px;
+  max-width: 104px;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.1;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.floating-ai-chat-reset svg {
+  flex: 0 0 auto;
+}
+
+.floating-ai-chat-reset span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.floating-ai-chat-reset:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.36);
+  color: #ffffff;
+}
+
+.floating-ai-chat-reset:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.floating-ai-chat-reset:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
+}
+
 .floating-ai-chat-header > button {
   width: 44px;
   height: 44px;
   font-size: 1.4rem;
 }
 
-.floating-ai-chat-header > button:focus-visible {
+.floating-ai-chat-header > .floating-ai-chat-header-actions > button {
+  flex-shrink: 0;
+}
+
+.floating-ai-chat-header > .floating-ai-chat-header-actions > .floating-ai-chat-close {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.floating-ai-chat-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.floating-ai-chat-header > button:focus-visible,
+.floating-ai-chat-close:focus-visible {
   outline: 2px solid rgba(255, 255, 255, 0.9);
   outline-offset: 2px;
 }
@@ -984,6 +1165,13 @@
 
   .floating-ai-chat-header {
     padding: 0.85rem 1rem;
+  }
+
+  .floating-ai-chat-reset {
+    min-height: 40px;
+    max-width: 92px;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
   }
 
   .floating-ai-chat-bubble {

@@ -14,6 +14,21 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+const KNOWLEDGE_ACTION_PATH = '/api/consultation/knowledge';
+
+const CATEGORY_OPTIONS = [
+  'general',
+  'company_setup',
+  'traffic_accident',
+  'criminal_investigation',
+  'labor',
+  'divorce_family',
+  'inheritance',
+  'logistics',
+  'cosmetics',
+  'unknown',
+] as const;
+
 function formatTimestamp(iso: string): string {
   try {
     const d = new Date(iso);
@@ -263,9 +278,254 @@ function RecentChatSamples({
               refs: {e.referencedColumns.join(', ')}
             </p>
           ) : null}
+          {e.referencedKnowledgeIds && e.referencedKnowledgeIds.length > 0 ? (
+            <p className="admin-console-chat-refs">
+              attorney Q&A: {e.referencedKnowledgeIds.join(', ')}
+            </p>
+          ) : null}
         </li>
       ))}
     </ul>
+  );
+}
+
+function KnowledgeStatusNotice({
+  status,
+}: {
+  status?: string;
+}): React.ReactElement | null {
+  if (!status) return null;
+  const labels: Record<string, string> = {
+    saved: '변호사 검토 Q&A가 저장되었습니다.',
+    archived: '선택한 Q&A가 보관 처리되었습니다.',
+    missing: '질문과 변호사 답변을 모두 입력해야 저장됩니다.',
+    error: 'Q&A 저장 중 오류가 발생했습니다.',
+  };
+  const message = labels[status];
+  if (!message) return null;
+  return (
+    <p className={`admin-console-knowledge-status admin-console-knowledge-status--${status}`}>
+      {message}
+    </p>
+  );
+}
+
+function KnowledgeCategorySelect({
+  defaultValue,
+}: {
+  defaultValue?: string;
+}): React.ReactElement {
+  return (
+    <label className="admin-console-field">
+      <span>분류</span>
+      <select name="category" defaultValue={defaultValue || 'general'}>
+        {CATEGORY_OPTIONS.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+function AttorneyKnowledgeCreateForm({
+  locale,
+  defaultQuestion,
+  defaultCategory,
+  defaultKeywords,
+  sourceNote,
+  submitLabel = '답변 저장',
+}: {
+  locale: Locale;
+  defaultQuestion?: string;
+  defaultCategory?: string;
+  defaultKeywords?: string[];
+  sourceNote?: string;
+  submitLabel?: string;
+}): React.ReactElement {
+  return (
+    <form className="admin-console-knowledge-form" method="post" action={KNOWLEDGE_ACTION_PATH}>
+      <input type="hidden" name="locale" value={locale} />
+      {sourceNote ? <input type="hidden" name="sourceNote" value={sourceNote} /> : null}
+      <label className="admin-console-field">
+        <span>질문</span>
+        <textarea
+          name="question"
+          defaultValue={defaultQuestion || ''}
+          rows={2}
+          placeholder="사용자가 자주 물어보는 질문을 그대로 적습니다."
+          required
+        />
+      </label>
+      <KnowledgeCategorySelect defaultValue={defaultCategory} />
+      <label className="admin-console-field">
+        <span>변호사 답변</span>
+        <textarea
+          name="answer"
+          rows={5}
+          placeholder="AI가 그대로 인용할 수 있는 안전한 범위의 답변을 작성합니다."
+          required
+        />
+        <small>최신 법률 판단이 필요하면 “구체 사안은 상담 필요”처럼 경계를 포함해 주세요.</small>
+      </label>
+      <label className="admin-console-field">
+        <span>검색 키워드</span>
+        <input
+          name="keywords"
+          defaultValue={(defaultKeywords || []).join(', ')}
+          placeholder="상담료, 예약, 비용"
+        />
+      </label>
+      <label className="admin-console-field">
+        <span>검토자</span>
+        <input name="reviewedBy" placeholder="담당 변호사 또는 운영자" />
+      </label>
+      <div className="admin-console-form-actions">
+        <button type="submit" className="admin-console-primary-btn">
+          {submitLabel}
+        </button>
+      </div>
+    </form>
+  );
+}
+
+function ApprovedAttorneyKnowledge({
+  entries,
+}: {
+  entries: AdminDashboardMetrics['attorneyKnowledge']['approved'];
+}): React.ReactElement {
+  if (entries.length === 0) {
+    return (
+      <p className="admin-console-empty-note">
+        아직 승인된 변호사 Q&A가 없습니다. 아래 후보 질문부터 답변을 채워 주세요.
+      </p>
+    );
+  }
+
+  return (
+    <div className="admin-console-knowledge-list">
+      {entries.map((entry) => (
+        <article key={entry.id} className="admin-console-knowledge-card">
+          <div className="admin-console-knowledge-card-head">
+            <div>
+              <h3>{entry.question}</h3>
+              <p>
+                {entry.category} · {entry.locale} · 최근 검토 {formatTimestamp(entry.reviewedAt)}
+              </p>
+            </div>
+            <form method="post" action={KNOWLEDGE_ACTION_PATH}>
+              <input type="hidden" name="action" value="archive" />
+              <input type="hidden" name="id" value={entry.id} />
+              <button type="submit" className="admin-console-danger-btn">
+                보관
+              </button>
+            </form>
+          </div>
+          <form className="admin-console-knowledge-form" method="post" action={KNOWLEDGE_ACTION_PATH}>
+            <input type="hidden" name="id" value={entry.id} />
+            <input type="hidden" name="locale" value={entry.locale} />
+            <input type="hidden" name="sourceNote" value={entry.sourceNote || 'approved attorney knowledge update'} />
+            <label className="admin-console-field">
+              <span>질문</span>
+              <textarea name="question" defaultValue={entry.question} rows={2} required />
+            </label>
+            <KnowledgeCategorySelect defaultValue={entry.category} />
+            <label className="admin-console-field">
+              <span>변호사 답변</span>
+              <textarea name="answer" defaultValue={entry.answer} rows={5} required />
+            </label>
+            <label className="admin-console-field">
+              <span>검색 키워드</span>
+              <input name="keywords" defaultValue={entry.keywords.join(', ')} />
+            </label>
+            <label className="admin-console-field">
+              <span>검토자</span>
+              <input name="reviewedBy" defaultValue={entry.reviewedBy || ''} />
+            </label>
+            <div className="admin-console-form-actions">
+              <button type="submit" className="admin-console-ghost-btn">
+                수정 저장
+              </button>
+            </div>
+          </form>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function KnowledgeGapCandidates({
+  locale,
+  items,
+}: {
+  locale: Locale;
+  items: AdminDashboardMetrics['attorneyKnowledge']['gapCandidates'];
+}): React.ReactElement {
+  if (items.length === 0) {
+    return (
+      <p className="admin-console-empty-note">
+        최근 로그에서 반복 답변 공백 후보가 아직 발견되지 않았습니다.
+      </p>
+    );
+  }
+
+  return (
+    <div className="admin-console-knowledge-list">
+      {items.slice(0, 8).map((item) => (
+        <article
+          key={`${item.locale || locale}-${item.classification || 'general'}-${item.question}-${item.reason}`}
+          className="admin-console-knowledge-candidate"
+        >
+          <div className="admin-console-knowledge-candidate-head">
+            <strong>{item.question}</strong>
+            <span>{item.count}회 · {item.reason}</span>
+          </div>
+          <AttorneyKnowledgeCreateForm
+            locale={normalizeLocale(item.locale || locale)}
+            defaultQuestion={item.question}
+            defaultCategory={item.classification || 'general'}
+            defaultKeywords={item.keywords}
+            sourceNote={`dashboard gap candidate: ${item.reason}`}
+            submitLabel="후보 답변 저장"
+          />
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function SuggestedAttorneyQuestions({
+  locale,
+  items,
+}: {
+  locale: Locale;
+  items: AdminDashboardMetrics['attorneyKnowledge']['suggestedQuestions'];
+}): React.ReactElement {
+  const visibleItems = items.filter((item) => item.locale === locale).slice(0, 8);
+  if (visibleItems.length === 0) {
+    return <p className="admin-console-empty-note">현재 언어의 예상 질문 후보가 없습니다.</p>;
+  }
+
+  return (
+    <div className="admin-console-knowledge-list">
+      {visibleItems.map((item) => (
+        <article key={item.id} className="admin-console-knowledge-candidate">
+          <div className="admin-console-knowledge-candidate-head">
+            <strong>{item.question}</strong>
+            <span>{item.priority} · {item.why}</span>
+          </div>
+          <AttorneyKnowledgeCreateForm
+            locale={item.locale}
+            defaultQuestion={item.question}
+            defaultCategory={item.category}
+            defaultKeywords={item.keywords}
+            sourceNote={`expected attorney question: ${item.id}`}
+            submitLabel="예상 질문 답변 저장"
+          />
+        </article>
+      ))}
+    </div>
   );
 }
 
@@ -274,13 +534,12 @@ export default async function AdminConsultationPage({
   searchParams,
 }: {
   params: { locale: string };
-  searchParams?: { days?: string };
+  searchParams?: { days?: string; knowledge?: string };
 }): Promise<React.ReactElement> {
   // Authentication happens in src/middleware.ts before this Server
   // Component even runs. If the request reached here, the caller has
   // already satisfied the Basic Auth challenge.
   const locale: Locale = normalizeLocale(params.locale);
-  void locale; // currently unused at the UI level but kept for future i18n
 
   const requestedDays = Number.parseInt(searchParams?.days ?? '7', 10);
   const windowDays = Number.isFinite(requestedDays) && requestedDays > 0 && requestedDays <= 90 ? requestedDays : 7;
@@ -353,6 +612,12 @@ export default async function AdminConsultationPage({
       recentNegativeFeedback: [],
       recentSubmissions: [],
       recentChatSamples: [],
+      attorneyKnowledge: {
+        approvedCount: 0,
+        approved: [],
+        suggestedQuestions: [],
+        gapCandidates: [],
+      },
     };
   }
 
@@ -477,6 +742,22 @@ export default async function AdminConsultationPage({
                 <td className="admin-console-num">{metrics.funnel.chat_injection_blocked}</td>
               </tr>
               <tr>
+                <td>PII bypass triggered</td>
+                <td className="admin-console-num">{metrics.safety.piiBypassTriggered}</td>
+              </tr>
+              <tr>
+                <td>Low-confidence bypass</td>
+                <td className="admin-console-num">{metrics.safety.lowConfidenceBypassTriggered}</td>
+              </tr>
+              <tr>
+                <td>Groundedness flagged</td>
+                <td className="admin-console-num">{metrics.safety.groundednessFlagged}</td>
+              </tr>
+              <tr>
+                <td>Staleness warning shown</td>
+                <td className="admin-console-num">{metrics.safety.stalenessFlagged}</td>
+              </tr>
+              <tr>
                 <td>Submit rate-limited (session)</td>
                 <td className="admin-console-num">{metrics.safety.rateLimitedSubmit}</td>
               </tr>
@@ -566,6 +847,42 @@ export default async function AdminConsultationPage({
 
       <Section title="Recent submissions" description="최근 10건의 상담 접수 (실제 수신 이메일 내용은 본 문서에 노출되지 않습니다).">
         <RecentSubmissions items={metrics.recentSubmissions} />
+      </Section>
+
+      <Section
+        title="변호사 검토 Q&A 학습"
+        description={`승인된 답변 ${metrics.attorneyKnowledge.approvedCount}개. AI는 공개 칼럼 근거가 약해도 이 답변과 질문이 맞으면 변호사 검토 Q&A를 우선 사용합니다.`}
+      >
+        <KnowledgeStatusNotice status={searchParams?.knowledge} />
+        <div className="admin-console-knowledge-grid">
+          <div>
+            <h3 className="admin-console-subtitle">직접 추가</h3>
+            <AttorneyKnowledgeCreateForm
+              locale={locale}
+              sourceNote="manual attorney knowledge entry"
+            />
+          </div>
+          <div>
+            <h3 className="admin-console-subtitle">승인된 Q&A</h3>
+            <ApprovedAttorneyKnowledge entries={metrics.attorneyKnowledge.approved} />
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title="변호사 답변 요청 큐"
+        description="AI가 자주 모르는 질문과 운영상 미리 채워야 할 예상 질문입니다. 답변을 저장하면 다음 사용자부터 해당 답변을 근거로 사용합니다."
+      >
+        <div className="admin-console-knowledge-grid">
+          <div>
+            <h3 className="admin-console-subtitle">로그 기반 공백 후보</h3>
+            <KnowledgeGapCandidates locale={locale} items={metrics.attorneyKnowledge.gapCandidates} />
+          </div>
+          <div>
+            <h3 className="admin-console-subtitle">미리 준비할 예상 질문</h3>
+            <SuggestedAttorneyQuestions locale={locale} items={metrics.attorneyKnowledge.suggestedQuestions} />
+          </div>
+        </div>
       </Section>
 
       <Section title="Recent chat samples" description="최근 15개 채팅 이벤트. 메시지는 이메일/전화번호/RRN이 서버 저장 시점에 redact된 상태입니다.">

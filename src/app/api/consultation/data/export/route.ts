@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { requireConsultationAdminAuth } from '@/lib/consultation/admin/auth';
 import { readConsultationLogLines, type LogKind } from '@/lib/consultation/log-storage';
 
 export const runtime = 'nodejs';
@@ -11,11 +12,14 @@ export const runtime = 'nodejs';
  * records so the data subject (or the operator on their behalf) can
  * verify what data is held.
  *
- * Protected by the same middleware Basic Auth as /admin-consultation.
- * The route sits under /api/ so middleware doesn't auto-match — the
- * caller must provide credentials via Authorization header.
+ * Protected by route-level Basic Auth because middleware excludes
+ * /api paths. The caller must provide credentials via Authorization
+ * header.
  */
 export async function GET(request: NextRequest) {
+  const auth = requireConsultationAdminAuth(request);
+  if (auth instanceof NextResponse) return auth;
+
   const sessionId = request.nextUrl.searchParams.get('sessionId');
   if (!sessionId || sessionId.length > 200) {
     return NextResponse.json({ error: 'sessionId query param required' }, { status: 400 });

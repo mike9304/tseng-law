@@ -2,6 +2,11 @@
  * In-memory idempotency guard for consultation submissions.
  * Prevents the same sessionId from completing more than one successful submission.
  * Successful intakeIds are remembered for 24 hours.
+ *
+ * Production caveat: this is process-local, so duplicate submissions
+ * can still cross two warm serverless instances. It reduces accidental
+ * double-clicks, but a durable unique key on sessionToken/intake should
+ * be used if duplicate prevention becomes business-critical.
  */
 
 interface SubmitRecord {

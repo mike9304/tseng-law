@@ -1,6 +1,6 @@
-import { appendFile, mkdir, readdir, readFile } from 'fs/promises';
+import { appendFile, mkdir, readdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
-import { get, put } from '@vercel/blob';
+import { get, list, put } from '@vercel/blob';
 
 /**
  * Durable storage for consultation operator logs (events + feedback).
@@ -25,16 +25,23 @@ import { get, put } from '@vercel/blob';
  * deliberate trade-off, not an oversight.
  */
 
-export type LogKind = 'events' | 'feedback';
+export type LogKind = 'events' | 'feedback' | 'knowledge';
+
+export interface ConsultationLogLineEntry {
+  dateKey: string;
+  line: string;
+}
 
 const FILE_PREFIX: Record<LogKind, string> = {
   events: 'consultation-events-',
   feedback: 'consultation-feedback-',
+  knowledge: 'consultation-knowledge-',
 };
 
 const BLOB_PREFIX: Record<LogKind, string> = {
   events: 'consultation-logs/events/',
   feedback: 'consultation-logs/feedback/',
+  knowledge: 'consultation-logs/knowledge/',
 };
 
 function getLocalLogDir(): string {
@@ -78,6 +85,11 @@ function localFilename(kind: LogKind, dateKey: string): string {
   return `${FILE_PREFIX[kind]}${dateKey}.jsonl`;
 }
 
+function extractDateKey(value: string): string | null {
+  const match = value.match(/(\d{4}-\d{2}-\d{2})\.jsonl$/);
+  return match?.[1] ?? null;
+}
+
 async function readBlobBody(kind: LogKind, dateKey: string): Promise<string> {
   const pathname = blobPathname(kind, dateKey);
   try {
@@ -118,6 +130,33 @@ async function appendLocalLine(
   });
 }
 
+async function replaceBlobLines(
+  kind: LogKind,
+  dateKey: string,
+  lines: string[],
+): Promise<void> {
+  const body = lines.length === 0 ? '' : `${lines.join('\n')}\n`;
+  await put(blobPathname(kind, dateKey), body, {
+    access: 'private',
+    allowOverwrite: true,
+    contentType: 'application/x-ndjson',
+  });
+}
+
+async function replaceLocalLines(
+  kind: LogKind,
+  dateKey: string,
+  lines: string[],
+): Promise<void> {
+  const dir = getLocalLogDir();
+  await mkdir(dir, { recursive: true, mode: 0o700 });
+  const body = lines.length === 0 ? '' : `${lines.join('\n')}\n`;
+  await writeFile(path.join(dir, localFilename(kind, dateKey)), body, {
+    encoding: 'utf8',
+    mode: 0o600,
+  });
+}
+
 /**
  * Append one JSONL record to the day's log of the given kind.
  * Backend chosen via BLOB_READ_WRITE_TOKEN.
@@ -134,19 +173,61 @@ export async function appendConsultationLogLine(
   }
 }
 
-/** Walk back from today, in UTC, until before windowStart. */
-function enumerateDateKeys(windowStartTs: number): string[] {
-  const out: string[] = [];
-  const cursor = new Date();
-  cursor.setUTCHours(0, 0, 0, 0);
-  while (cursor.getTime() + 24 * 60 * 60 * 1000 - 1 >= windowStartTs) {
-    out.push(cursor.toISOString().slice(0, 10));
-    cursor.setUTCDate(cursor.getUTCDate() - 1);
+/** Replace all JSONL records for one day. Used by data-erasure routes. */
+export async function replaceConsultationLogLines(
+  kind: LogKind,
+  dateKey: string,
+  lines: string[],
+): Promise<void> {
+  if (isBlobBackend()) {
+    await replaceBlobLines(kind, dateKey, lines);
+  } else {
+    await replaceLocalLines(kind, dateKey, lines);
   }
-  return out;
 }
 
-async function readLocalLogLines(kind: LogKind): Promise<string[]> {
+async function listBlobDateKeys(kind: LogKind, windowStartTs: number): Promise<string[]> {
+  const dateKeys: string[] = [];
+  let cursor: string | undefined;
+  do {
+    const result = await list({
+      prefix: BLOB_PREFIX[kind],
+      cursor,
+    });
+    for (const blob of result.blobs) {
+      const dateKey = extractDateKey(blob.pathname);
+      if (!dateKey) continue;
+      const dateTs = Date.parse(`${dateKey}T23:59:59.999Z`);
+      if (!Number.isNaN(dateTs) && dateTs < windowStartTs) continue;
+      dateKeys.push(dateKey);
+    }
+    cursor = result.cursor;
+  } while (cursor);
+  return Array.from(new Set(dateKeys)).sort().reverse();
+}
+
+async function readBlobLogLineEntries(
+  kind: LogKind,
+  windowStartTs: number,
+): Promise<ConsultationLogLineEntry[]> {
+  const dateKeys = await listBlobDateKeys(kind, windowStartTs);
+  const days = await Promise.all(
+    dateKeys.map(async (dateKey) => {
+      try {
+        const body = await readBlobBody(kind, dateKey);
+        return body
+          .split('\n')
+          .filter((line) => line.trim().length > 0)
+          .map((line) => ({ dateKey, line }));
+      } catch {
+        return [];
+      }
+    }),
+  );
+  return days.flat();
+}
+
+async function readLocalLogLineEntries(kind: LogKind): Promise<ConsultationLogLineEntry[]> {
   const dir = getLocalLogDir();
   let names: string[];
   try {
@@ -158,11 +239,15 @@ async function readLocalLogLines(kind: LogKind): Promise<string[]> {
     .filter((n) => n.startsWith(FILE_PREFIX[kind]) && n.endsWith('.jsonl'))
     .sort()
     .reverse();
-  const out: string[] = [];
+  const out: ConsultationLogLineEntry[] = [];
   for (const name of matching) {
+    const dateKey = extractDateKey(name);
+    if (!dateKey) continue;
     try {
       const text = await readFile(path.join(dir, name), 'utf8');
-      for (const line of text.split('\n')) out.push(line);
+      for (const line of text.split('\n')) {
+        if (line.trim()) out.push({ dateKey, line });
+      }
     } catch {
       // skip unreadable file
     }
@@ -183,19 +268,85 @@ export async function readConsultationLogLines(
   kind: LogKind,
   windowStartTs: number,
 ): Promise<string[]> {
+  const entries = await readConsultationLogLineEntries(kind, windowStartTs);
+  return entries.map((entry) => entry.line);
+}
+
+/**
+ * Read JSONL lines with their backing day key. This is required for
+ * erasure: after filtering records we need to rewrite the same day
+ * blob/file, not merely return a flattened list.
+ */
+export async function readConsultationLogLineEntries(
+  kind: LogKind,
+  windowStartTs: number,
+): Promise<ConsultationLogLineEntry[]> {
   if (isBlobBackend()) {
-    const dateKeys = enumerateDateKeys(windowStartTs);
-    const days = await Promise.all(
-      dateKeys.map(async (d) => {
-        try {
-          const body = await readBlobBody(kind, d);
-          return body.split('\n');
-        } catch {
-          return [];
-        }
-      }),
-    );
-    return days.flat();
+    return readBlobLogLineEntries(kind, windowStartTs);
   }
-  return readLocalLogLines(kind);
+  const entries = await readLocalLogLineEntries(kind);
+  return entries.filter((entry) => {
+    const ts = Date.parse(`${entry.dateKey}T23:59:59.999Z`);
+    return Number.isNaN(ts) || ts >= windowStartTs;
+  });
+}
+
+export interface ConsultationLogDeletionResult {
+  totalScanned: number;
+  totalRemoved: number;
+  rewrittenDays: Array<{
+    kind: LogKind;
+    dateKey: string;
+    kept: number;
+    removed: number;
+  }>;
+}
+
+/**
+ * Permanently remove all event/feedback log records for a sessionId
+ * from the backing JSONL files/blobs by rewriting affected days.
+ */
+export async function deleteConsultationLogRecordsBySession(
+  sessionId: string,
+): Promise<ConsultationLogDeletionResult> {
+  const kinds: LogKind[] = ['events', 'feedback'];
+  let totalScanned = 0;
+  let totalRemoved = 0;
+  const rewrittenDays: ConsultationLogDeletionResult['rewrittenDays'] = [];
+
+  for (const kind of kinds) {
+    const entries = await readConsultationLogLineEntries(kind, 0);
+    totalScanned += entries.length;
+    const byDate = new Map<string, { kept: string[]; removed: number }>();
+
+    for (const entry of entries) {
+      const bucket = byDate.get(entry.dateKey) ?? { kept: [], removed: 0 };
+      try {
+        const parsed = JSON.parse(entry.line) as { sessionId?: string };
+        if (parsed.sessionId === sessionId) {
+          bucket.removed += 1;
+          totalRemoved += 1;
+        } else {
+          bucket.kept.push(entry.line);
+        }
+      } catch {
+        // Preserve malformed lines; erasure should never lose unrelated data.
+        bucket.kept.push(entry.line);
+      }
+      byDate.set(entry.dateKey, bucket);
+    }
+
+    for (const [dateKey, bucket] of byDate.entries()) {
+      if (bucket.removed === 0) continue;
+      await replaceConsultationLogLines(kind, dateKey, bucket.kept);
+      rewrittenDays.push({
+        kind,
+        dateKey,
+        kept: bucket.kept.length,
+        removed: bucket.removed,
+      });
+    }
+  }
+
+  return { totalScanned, totalRemoved, rewrittenDays };
 }

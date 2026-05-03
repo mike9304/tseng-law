@@ -105,6 +105,7 @@ export interface EvalReport {
   failed: number;
   passRate: number;
   byCategory: Record<string, { total: number; passed: number; passRate: number }>;
+  byScenario: Record<string, { total: number; passed: number; passRate: number }>;
   byMetric: {
     classification: { passed: number; total: number };
     riskLevel: { passed: number; total: number };

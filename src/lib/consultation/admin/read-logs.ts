@@ -7,6 +7,12 @@ import {
   type LogKind,
   readConsultationLogLines,
 } from '@/lib/consultation/log-storage';
+import {
+  ATTORNEY_QUESTION_SUGGESTIONS,
+  readAttorneyKnowledgeEntries,
+  type AttorneyQuestionSuggestion,
+  type ConsultationAttorneyKnowledgeReference,
+} from '@/lib/consultation/attorney-knowledge';
 
 /**
  * Admin dashboard — log reader + aggregator.
@@ -35,6 +41,9 @@ export interface EventLogRecord {
   shouldEscalate?: boolean;
   suggestedHandoffChannel?: string;
   referencedColumns?: string[];
+  referencedKnowledgeIds?: string[];
+  sourceFreshness?: string;
+  sourceConfidence?: string;
   topicKey?: string;
   messageRedacted?: string;
   summaryRedacted?: string;
@@ -165,8 +174,23 @@ export interface AdminDashboardMetrics {
     classification?: ConsultationCategory;
     riskLevel?: ConsultationRiskLevel;
     referencedColumns?: string[];
+    referencedKnowledgeIds?: string[];
     messageRedacted?: string;
   }>;
+  attorneyKnowledge: {
+    approvedCount: number;
+    approved: ConsultationAttorneyKnowledgeReference[];
+    suggestedQuestions: AttorneyQuestionSuggestion[];
+    gapCandidates: Array<{
+      question: string;
+      locale?: string;
+      classification?: ConsultationCategory;
+      riskLevel?: ConsultationRiskLevel;
+      count: number;
+      reason: string;
+      keywords: string[];
+    }>;
+  };
 }
 
 function safeParseLine<T>(line: string): T | null {
@@ -204,6 +228,59 @@ function countFunnelStage(
   return events.filter((e) => e.funnelStage === stage).length;
 }
 
+function keywordsFromQuestion(question: string): string[] {
+  return question
+    .split(/[\s,.;:!?()[\]「」『』。、，]+/u)
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 2)
+    .slice(0, 8);
+}
+
+function buildKnowledgeGapCandidates(
+  events: EventLogRecord[],
+): AdminDashboardMetrics['attorneyKnowledge']['gapCandidates'] {
+  const buckets = new Map<string, AdminDashboardMetrics['attorneyKnowledge']['gapCandidates'][number]>();
+
+  for (const event of events) {
+    if (event.eventType !== 'chat' || !event.messageRedacted) continue;
+    const noColumns = !event.referencedColumns || event.referencedColumns.length === 0;
+    const noKnowledge = !event.referencedKnowledgeIds || event.referencedKnowledgeIds.length === 0;
+    const weakSource = event.sourceConfidence === 'low';
+    const lowRiskEscalated = event.shouldEscalate && (event.riskLevel === 'L1' || event.riskLevel === 'L2');
+    if (!noColumns && !weakSource && !lowRiskEscalated) continue;
+
+    const reason = noColumns && noKnowledge
+      ? 'no approved source matched'
+      : weakSource
+        ? 'low source confidence'
+        : 'low-risk question still escalated';
+    const key = [
+      event.locale ?? '',
+      event.classification ?? '',
+      event.messageRedacted.toLowerCase(),
+      reason,
+    ].join('|');
+    const existing = buckets.get(key);
+    if (existing) {
+      existing.count += 1;
+      continue;
+    }
+    buckets.set(key, {
+      question: event.messageRedacted,
+      locale: event.locale,
+      classification: event.classification,
+      riskLevel: event.riskLevel,
+      count: 1,
+      reason,
+      keywords: keywordsFromQuestion(event.messageRedacted),
+    });
+  }
+
+  return Array.from(buckets.values())
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 20);
+}
+
 /**
  * Build the full dashboard metrics payload for the given time window.
  * @param windowDays How many days back from "now" to consider. 7 is
@@ -215,9 +292,10 @@ export async function readDashboardMetrics(
   const now = Date.now();
   const windowStartTs = now - windowDays * 24 * 60 * 60 * 1000;
 
-  const [events, feedback] = await Promise.all([
+  const [events, feedback, attorneyKnowledgeEntries] = await Promise.all([
     readJsonlRecords<EventLogRecord>('events', windowStartTs),
     readJsonlRecords<FeedbackLogRecord>('feedback', windowStartTs),
+    readAttorneyKnowledgeEntries(),
   ]);
 
   // Funnel counts — reuse helper for readability.
@@ -312,17 +390,14 @@ export async function readDashboardMetrics(
       feedback.length === 0 ? 0 : Math.round((feedbackHelpful / feedback.length) * 1000) / 10,
   };
 
-  // Safety metrics — infer from funnel counts + special log markers.
-  // piiBypass and lowConfidence events don't currently land in the
-  // log store, so we read them from console warnings if recorded. For
-  // now, we count chat events where shouldEscalate became true on a
-  // category that was NOT already classified as criminal/emergency as
-  // a rough proxy. We also count rate-limited events directly.
+  // Safety metrics — direct structured funnel stages emitted by
+  // /api/consultation/chat. These replace the old console.warn-only
+  // path so the dashboard reflects real production events.
   const safety = {
-    piiBypassTriggered: events.filter((e) => e.classification === 'divorce_family' && e.riskLevel === 'L4' && typeof e.messageRedacted === 'string' && e.messageRedacted.includes('[redacted-number]')).length,
-    lowConfidenceBypassTriggered: 0, // Reserved: emits as console.warn today, not log-store
-    groundednessFlagged: 0, // Reserved: same
-    stalenessFlagged: 0, // Reserved: same
+    piiBypassTriggered: countFunnelStage(events, 'chat_pii_blocked'),
+    lowConfidenceBypassTriggered: countFunnelStage(events, 'chat_low_confidence_bypassed'),
+    groundednessFlagged: countFunnelStage(events, 'chat_groundedness_flagged'),
+    stalenessFlagged: countFunnelStage(events, 'chat_staleness_flagged'),
     rateLimitedChat: funnel.chat_rate_limited,
     rateLimitedSubmit: funnel.submit_rate_limited,
   };
@@ -415,6 +490,7 @@ export async function readDashboardMetrics(
       classification: e.classification,
       riskLevel: e.riskLevel,
       referencedColumns: e.referencedColumns,
+      referencedKnowledgeIds: e.referencedKnowledgeIds,
       messageRedacted: e.messageRedacted,
     }));
 
@@ -434,5 +510,11 @@ export async function readDashboardMetrics(
     recentNegativeFeedback,
     recentSubmissions,
     recentChatSamples,
+    attorneyKnowledge: {
+      approvedCount: attorneyKnowledgeEntries.length,
+      approved: attorneyKnowledgeEntries.slice(0, 20),
+      suggestedQuestions: ATTORNEY_QUESTION_SUGGESTIONS,
+      gapCandidates: buildKnowledgeGapCandidates(events),
+    },
   };
 }

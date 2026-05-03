@@ -10,6 +10,7 @@ import type {
   ConsultationChatRequestBody,
   ConsultationChatStreamChunk,
   ConsultationChatStreamMetadata,
+  ConsultationSafetySignals,
 } from '@/lib/consultation/types';
 
 export const runtime = 'nodejs';
@@ -28,6 +29,69 @@ function badRequest(message: string) {
  */
 function encodeSseChunk(chunk: ConsultationChatStreamChunk): string {
   return `data: ${JSON.stringify(chunk)}\n\n`;
+}
+
+function logConsultationSafetySignals(input: {
+  sessionId: string;
+  locale: ReturnType<typeof normalizeLocale>;
+  classification?: ConsultationChatStreamMetadata['classification'];
+  riskLevel?: ConsultationChatStreamMetadata['riskLevel'];
+  signals?: ConsultationSafetySignals;
+  userAgent: string | null;
+  ipAddress: string | null;
+}): void {
+  const signals = input.signals;
+  if (!signals) return;
+
+  if (signals.piiBypass) {
+    logConsultationFunnelEvent({
+      funnelStage: 'chat_pii_blocked',
+      sessionId: input.sessionId,
+      locale: input.locale,
+      classification: input.classification,
+      riskLevel: input.riskLevel,
+      userAgent: input.userAgent,
+      ipAddress: input.ipAddress,
+    }).catch((err) => console.error('[consultation] pii bypass log failed:', err));
+  }
+
+  if (signals.lowConfidenceBypass) {
+    logConsultationFunnelEvent({
+      funnelStage: 'chat_low_confidence_bypassed',
+      sessionId: input.sessionId,
+      locale: input.locale,
+      classification: input.classification,
+      riskLevel: input.riskLevel,
+      userAgent: input.userAgent,
+      ipAddress: input.ipAddress,
+    }).catch((err) => console.error('[consultation] low-confidence log failed:', err));
+  }
+
+  if (signals.groundednessFlagged) {
+    logConsultationFunnelEvent({
+      funnelStage: 'chat_groundedness_flagged',
+      sessionId: input.sessionId,
+      locale: input.locale,
+      classification: input.classification,
+      riskLevel: input.riskLevel,
+      metadata: { verdict: signals.groundednessFlagged },
+      userAgent: input.userAgent,
+      ipAddress: input.ipAddress,
+    }).catch((err) => console.error('[consultation] groundedness log failed:', err));
+  }
+
+  if (signals.stalenessFlagged && signals.stalenessFlagged.length > 0) {
+    logConsultationFunnelEvent({
+      funnelStage: 'chat_staleness_flagged',
+      sessionId: input.sessionId,
+      locale: input.locale,
+      classification: input.classification,
+      riskLevel: input.riskLevel,
+      metadata: { agedSlugs: signals.stalenessFlagged.join(',') },
+      userAgent: input.userAgent,
+      ipAddress: input.ipAddress,
+    }).catch((err) => console.error('[consultation] staleness log failed:', err));
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -102,6 +166,7 @@ export async function POST(request: NextRequest) {
   // the first metadata chunk has been captured.
   if (body.stream === true) {
     let capturedMetadata: ConsultationChatStreamMetadata | null = null;
+    const capturedSafetySignals: ConsultationSafetySignals = {};
     const streamStartedAt = Date.now();
     const encoder = new TextEncoder();
     const readable = new ReadableStream<Uint8Array>({
@@ -110,6 +175,7 @@ export async function POST(request: NextRequest) {
           for await (const chunk of streamConsultationChatResponse(locale, body)) {
             if (chunk.type === 'metadata') {
               capturedMetadata = chunk.data;
+              Object.assign(capturedSafetySignals, chunk.data.safetySignals ?? {});
               if (chunk.data.promptInjectionDetected) {
                 logConsultationFunnelEvent({
                   funnelStage: 'chat_injection_blocked',
@@ -122,6 +188,12 @@ export async function POST(request: NextRequest) {
                 }).catch((err) =>
                   console.error('[consultation] injection log failed:', err),
                 );
+              }
+            } else if (chunk.type === 'warning') {
+              if (chunk.variant === 'groundedness') {
+                capturedSafetySignals.groundednessFlagged = chunk.verdict ?? 'PARTIAL';
+              } else if (chunk.variant === 'staleness') {
+                capturedSafetySignals.stalenessFlagged = chunk.agedSlugs ?? ['stream_warning'];
               }
             }
             controller.enqueue(encoder.encode(encodeSseChunk(chunk)));
@@ -163,6 +235,7 @@ export async function POST(request: NextRequest) {
               nextRequiredField: capturedMetadata.nextRequiredField,
               suggestedHandoffChannel: capturedMetadata.suggestedHandoffChannel,
               referencedColumns: capturedMetadata.referencedColumns,
+              referencedKnowledgeIds: capturedMetadata.referencedKnowledgeIds,
               sourceFreshness: capturedMetadata.sourceFreshness,
               sourceConfidence: capturedMetadata.sourceConfidence,
               funnelStage: 'chat_answered',
@@ -173,6 +246,15 @@ export async function POST(request: NextRequest) {
               // chunk by default. Wall time alone still feeds p50/p95/p99.
               latencyMs: Date.now() - streamStartedAt,
             }).catch((err) => console.error('[consultation] streaming chat log failed:', err));
+            logConsultationSafetySignals({
+              sessionId,
+              locale,
+              classification: capturedMetadata.classification,
+              riskLevel: capturedMetadata.riskLevel,
+              signals: capturedSafetySignals,
+              userAgent,
+              ipAddress: ipHeader,
+            });
           }
           controller.close();
         }
@@ -217,6 +299,7 @@ export async function POST(request: NextRequest) {
         nextRequiredField: response.nextRequiredField,
         suggestedHandoffChannel: response.suggestedHandoffChannel,
         referencedColumns: response.referencedColumns,
+        referencedKnowledgeIds: response.referencedKnowledgeIds,
         sourceFreshness: response.sourceFreshness,
         sourceConfidence: response.sourceConfidence,
         funnelStage: 'chat_answered',
@@ -230,6 +313,16 @@ export async function POST(request: NextRequest) {
     } catch (error) {
       console.error('[consultation] chat log failed:', error);
     }
+
+    logConsultationSafetySignals({
+      sessionId,
+      locale,
+      classification: response.classification,
+      riskLevel: response.riskLevel,
+      signals: response.safetySignals,
+      userAgent,
+      ipAddress: ipHeader,
+    });
 
     return NextResponse.json(response);
   } catch (error) {

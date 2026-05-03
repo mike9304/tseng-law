@@ -241,6 +241,29 @@ function buildErrorResult(pair: EvalPair): EvalPerPairResult {
   };
 }
 
+function scenarioKeysForPair(pair: EvalPair): string[] {
+  const keys = new Set<string>();
+  const rationale = pair.rationale.toLowerCase();
+  if (pair.expected.riskLevel === 'L4') keys.add('l4_emergency');
+  if (pair.expected.piiBypass) keys.add('pii_bypass');
+  if (
+    pair.id.startsWith('PI') ||
+    rationale.includes('prompt injection') ||
+    rationale.includes('jailbreak') ||
+    rationale.includes('system prompt') ||
+    rationale.includes('internal') ||
+    rationale.includes('免責')
+  ) {
+    keys.add('prompt_injection');
+  }
+  if (pair.expected.lowConfidenceBypass) {
+    keys.add(rationale.includes('off-topic') ? 'off_topic' : 'coverage_gap_or_low_confidence');
+  }
+  if (pair.priorTurns && pair.priorTurns.length > 0) keys.add('multi_turn_follow_up');
+  if (keys.size === 0) keys.add('standard_grounded_answer');
+  return Array.from(keys);
+}
+
 export async function runConsultationEval(): Promise<EvalReport> {
   const runStartedAt = new Date().toISOString();
   const startTs = Date.now();
@@ -274,6 +297,7 @@ export async function runConsultationEval(): Promise<EvalReport> {
   const passRate = total === 0 ? 0 : passed / total;
 
   const byCategory: Record<string, { total: number; passed: number; passRate: number }> = {};
+  const byScenario: Record<string, { total: number; passed: number; passRate: number }> = {};
   for (let i = 0; i < pairs.length; i++) {
     const cat = pairs[i]!.expected.classification;
     const existing = byCategory[cat] ?? { total: 0, passed: 0, passRate: 0 };
@@ -281,6 +305,14 @@ export async function runConsultationEval(): Promise<EvalReport> {
     if (results[i]!.allPassed) existing.passed += 1;
     existing.passRate = existing.total === 0 ? 0 : existing.passed / existing.total;
     byCategory[cat] = existing;
+
+    for (const key of scenarioKeysForPair(pairs[i]!)) {
+      const scenario = byScenario[key] ?? { total: 0, passed: 0, passRate: 0 };
+      scenario.total += 1;
+      if (results[i]!.allPassed) scenario.passed += 1;
+      scenario.passRate = scenario.total === 0 ? 0 : scenario.passed / scenario.total;
+      byScenario[key] = scenario;
+    }
   }
 
   const tally = (pick: (r: EvalPerPairResult) => boolean) => ({
@@ -337,6 +369,7 @@ export async function runConsultationEval(): Promise<EvalReport> {
     failed,
     passRate,
     byCategory,
+    byScenario,
     byMetric,
     citationStats,
     failures: results.filter((r) => !r.allPassed),

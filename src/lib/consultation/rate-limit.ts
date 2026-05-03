@@ -2,6 +2,11 @@
  * In-memory sliding-window rate limiter for consultation APIs.
  * Limits by IP and sessionId independently.
  *
+ * Production caveat: this is process-local. In a horizontally scaled
+ * or serverless deployment it limits each warm instance independently.
+ * Keep it as a low-cost abuse brake, but use a durable/shared store
+ * (Redis/KV/database) if consultation traffic or abuse volume grows.
+ *
  * - Chat API: max 15 requests per 60 seconds per IP
  * - Submit API: max 3 requests per 300 seconds per sessionId
  */

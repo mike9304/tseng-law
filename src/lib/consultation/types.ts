@@ -61,6 +61,19 @@ export interface ConsultationColumnReference {
   attorneyReviewNote?: string;
 }
 
+export interface ConsultationAttorneyKnowledgeReference {
+  id: string;
+  locale: Locale;
+  category: ConsultationCategory;
+  question: string;
+  answer: string;
+  keywords: string[];
+  reviewedBy?: string;
+  reviewedAt: string;
+  updatedAt: string;
+  sourceNote?: string;
+}
+
 export interface ConsultationChatRequestBody {
   locale?: Locale;
   sessionId?: string;
@@ -96,11 +109,21 @@ export interface ConsultationChatStreamMetadata {
   disclaimer: string;
   referencedColumns: string[];
   references: ConsultationColumnReference[];
+  referencedKnowledgeIds: string[];
+  referencedKnowledge: ConsultationAttorneyKnowledgeReference[];
   sourceFreshness: ConsultationSourceFreshness;
   sourceConfidence: ConsultationSourceConfidence;
   suggestedHandoffChannel: 'line' | 'kakao' | 'email' | 'phone' | 'none';
   /** Server-side diagnostic; see ConsultationChatResponse. */
   promptInjectionDetected?: boolean;
+  safetySignals?: ConsultationSafetySignals;
+}
+
+export interface ConsultationSafetySignals {
+  piiBypass?: boolean;
+  lowConfidenceBypass?: boolean;
+  groundednessFlagged?: 'PARTIAL' | 'UNGROUNDED';
+  stalenessFlagged?: string[];
 }
 
 /** Discriminated union of server → client chunks. */
@@ -111,6 +134,8 @@ export type ConsultationChatStreamChunk =
       type: 'warning';
       variant: 'groundedness' | 'staleness';
       text: string;
+      verdict?: 'PARTIAL' | 'UNGROUNDED';
+      agedSlugs?: string[];
     }
   | { type: 'attorney_notice'; text: string }
   | { type: 'error'; error: string }
@@ -126,6 +151,8 @@ export interface ConsultationChatResponse {
   disclaimer: string;
   referencedColumns: string[];
   references: ConsultationColumnReference[];
+  referencedKnowledgeIds: string[];
+  referencedKnowledge: ConsultationAttorneyKnowledgeReference[];
   sourceFreshness: ConsultationSourceFreshness;
   sourceConfidence: ConsultationSourceConfidence;
   suggestedHandoffChannel: 'line' | 'kakao' | 'email' | 'phone' | 'none';
@@ -134,6 +161,7 @@ export interface ConsultationChatResponse {
    *  to emit a `chat_injection_blocked` funnel event for the operator
    *  dashboard. Never rendered in the UI. */
   promptInjectionDetected?: boolean;
+  safetySignals?: ConsultationSafetySignals;
   /** Wave 9 SLO metrics — wall time and aggregate token usage across
    *  every OpenAI/Anthropic call this engine pass made (main answer +
    *  citation retry + groundedness verifier). The chat route persists

@@ -1,8 +1,9 @@
+import crypto from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
+import { requireConsultationAdminAuth } from '@/lib/consultation/admin/auth';
 import {
-  readConsultationLogLines,
   appendConsultationLogLine,
-  type LogKind,
+  deleteConsultationLogRecordsBySession,
 } from '@/lib/consultation/log-storage';
 
 export const runtime = 'nodejs';
@@ -21,6 +22,9 @@ export const runtime = 'nodejs';
  * operator dashboard can track deletion requests.
  */
 export async function POST(request: NextRequest) {
+  const auth = requireConsultationAdminAuth(request);
+  if (auth instanceof NextResponse) return auth;
+
   let body: { sessionId?: string };
   try {
     body = (await request.json()) as { sessionId?: string };
@@ -33,39 +37,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'sessionId required' }, { status: 400 });
   }
 
-  const windowStartTs = 0;
-  const kinds: LogKind[] = ['events', 'feedback'];
-  let totalRemoved = 0;
-
-  for (const kind of kinds) {
-    const lines = await readConsultationLogLines(kind, windowStartTs);
-    const kept: Array<{ dateKey: string; line: string }> = [];
-    let removed = 0;
-
-    for (const line of lines) {
-      if (!line.trim()) continue;
-      try {
-        const parsed = JSON.parse(line) as { sessionId?: string; timestamp?: string };
-        if (parsed.sessionId === sessionId) {
-          removed += 1;
-          continue;
-        }
-        const dateKey = parsed.timestamp?.slice(0, 10) || new Date().toISOString().slice(0, 10);
-        kept.push({ dateKey, line });
-      } catch {
-        // keep malformed lines as-is (don't lose data on parse error)
-        kept.push({ dateKey: new Date().toISOString().slice(0, 10), line });
-      }
-    }
-
-    if (removed > 0) {
-      // Rewrite: we can't selectively delete from a blob, so we'd need
-      // to rebuild each day file. For the MVP, we log the deletion event
-      // and note that the records will naturally age out via purge (90 days).
-      // Full rewrite is deferred to a background job if needed.
-      totalRemoved += removed;
-    }
-  }
+  const deletion = await deleteConsultationLogRecordsBySession(sessionId);
+  const sessionHash = crypto.createHash('sha256').update(sessionId).digest('hex').slice(0, 16);
 
   // Audit trail: log that a deletion was requested
   try {
@@ -74,9 +47,12 @@ export async function POST(request: NextRequest) {
       new Date().toISOString().slice(0, 10),
       JSON.stringify({
         timestamp: new Date().toISOString(),
-        eventType: 'data_deletion_requested',
-        sessionId,
-        recordsMarkedForDeletion: totalRemoved,
+        eventType: 'data_deleted',
+        sessionId: `deleted:${sessionHash}`,
+        targetSessionHash: sessionHash,
+        recordsDeleted: deletion.totalRemoved,
+        rewrittenDays: deletion.rewrittenDays,
+        deletedBy: auth.username,
       }),
     );
   } catch (error) {
@@ -86,9 +62,10 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({
     success: true,
     sessionId,
-    recordsMarkedForDeletion: totalRemoved,
-    note: totalRemoved > 0
-      ? 'Records will be excluded from dashboard queries and purged at next retention cycle.'
+    recordsDeleted: deletion.totalRemoved,
+    rewrittenDays: deletion.rewrittenDays,
+    note: deletion.totalRemoved > 0
+      ? 'Matching consultation event and feedback records were deleted from the log backend.'
       : 'No records found for this session.',
     deletedAt: new Date().toISOString(),
   });

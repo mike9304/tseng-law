@@ -21,6 +21,7 @@ import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/Sa
 import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
 import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
 import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
+import ImageEditDialog from '@/components/builder/canvas/ImageEditDialog';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
@@ -155,6 +156,7 @@ export default function SandboxPage({
     setViewport: setStoreViewport,
   } = useBuilderCanvasStore();
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
+  const [imageEditorNodeId, setImageEditorNodeId] = useState<string | null>(null);
   const [toasts, setToasts] = useState<SandboxToast[]>([]);
   const [activityChips, setActivityChips] = useState<ActivityChip[]>([]);
   const previousDraftSaveStateRef = useRef(draftSaveState);
@@ -387,6 +389,10 @@ export default function SandboxPage({
   const assetLibraryNode = useMemo(
     () => document?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
     [assetLibraryNodeId, document],
+  );
+  const imageEditorNode = useMemo(
+    () => document?.nodes.find((node) => node.id === imageEditorNodeId) ?? null,
+    [imageEditorNodeId, document],
   );
 
   useEffect(() => {
@@ -802,6 +808,7 @@ export default function SandboxPage({
           <div style={{ ...canvasWrapperStyle, flex: '0 0 auto', minHeight: document?.stageHeight ?? 880 }}>
             <CanvasContainer
               onRequestAssetLibrary={setAssetLibraryNodeId}
+              onRequestImageEditor={setImageEditorNodeId}
               onRequestMoveToPage={(nodeIds) => setMovePickerNodeIds(nodeIds)}
               onRequestSaveAsSection={handleRequestSaveAsSection}
               onRequestInsertSavedSection={(sectionId, position) => {
@@ -833,6 +840,11 @@ export default function SandboxPage({
                   setAssetLibraryNodeId(selectedNode.id);
                 }
               }}
+              onRequestImageEditor={() => {
+                if (selectedNode?.kind === 'image') {
+                  setImageEditorNodeId(selectedNode.id);
+                }
+              }}
               siteLightboxes={linkPickerLightboxes}
               sitePages={linkPickerSitePages}
             />
@@ -849,6 +861,21 @@ export default function SandboxPage({
             onSelect={(asset) => {
               updateNodeContent(assetLibraryNode.id, { src: asset.url });
               setAssetLibraryNodeId(null);
+            }}
+          />
+        ) : null}
+
+        {imageEditorNode?.kind === 'image' ? (
+          <ImageEditDialog
+            open
+            imageSrc={String(imageEditorNode.content.src || '')}
+            alt={String(imageEditorNode.content.alt || '')}
+            cropAspect={typeof imageEditorNode.content.cropAspect === 'string' ? imageEditorNode.content.cropAspect : 'Free'}
+            filters={imageEditorNode.content.filters}
+            onClose={() => setImageEditorNodeId(null)}
+            onApply={(content) => {
+              updateNodeContent(imageEditorNode.id, content);
+              setImageEditorNodeId(null);
             }}
           />
         ) : null}

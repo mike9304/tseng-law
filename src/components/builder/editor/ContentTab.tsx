@@ -10,12 +10,14 @@ export default function ContentTab({
   disabled = false,
   onUpdateContent,
   onRequestAssetLibrary,
+  onRequestImageEditor,
   linkPickerContext,
 }: {
   node: BuilderCanvasNode;
   disabled?: boolean;
   onUpdateContent: (content: Record<string, unknown>) => void;
   onRequestAssetLibrary?: () => void;
+  onRequestImageEditor?: () => void;
   linkPickerContext?: LinkPickerContext;
 }) {
   const component = getComponent(node.kind);
@@ -36,6 +38,7 @@ export default function ContentTab({
         onUpdate={onUpdateContent}
         disabled={disabled}
         onRequestAssetLibrary={onRequestAssetLibrary}
+        onRequestImageEditor={onRequestImageEditor}
         linkPickerContext={linkPickerContext}
       />
     </div>

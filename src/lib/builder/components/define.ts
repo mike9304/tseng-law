@@ -18,6 +18,7 @@ export interface BuilderComponentInspectorProps {
   onUpdate: (props: Record<string, unknown>) => void;
   disabled?: boolean;
   onRequestAssetLibrary?: () => void;
+  onRequestImageEditor?: () => void;
   linkPickerContext?: LinkPickerContext;
 }
 

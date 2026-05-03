@@ -133,6 +133,7 @@ function getCanvasNodeDepth(
 
 export default function CanvasContainer({
   onRequestAssetLibrary,
+  onRequestImageEditor,
   onRequestMoveToPage,
   onRequestSaveAsSection,
   onRequestInsertSavedSection,
@@ -142,6 +143,7 @@ export default function CanvasContainer({
   sitePages = [],
 }: {
   onRequestAssetLibrary?: (nodeId: string) => void;
+  onRequestImageEditor?: (nodeId: string) => void;
   onRequestMoveToPage?: (nodeIds: string[]) => void;
   /** Called when user picks "Save as section..." with the root container nodeId. */
   onRequestSaveAsSection?: (rootNodeId: string) => void;
@@ -1625,6 +1627,22 @@ export default function CanvasContainer({
                         detail: { nodeId: selectedNodes[0].id },
                       }),
                     );
+                  }
+                },
+              },
+              {
+                key: 'image-edit',
+                label: 'Crop / Filter / Alt...',
+                title: '이미지 자르기, 필터, alt 텍스트 편집',
+                disabled:
+                  selectedNodeIds.length !== 1 ||
+                  selectedNodes[0]?.kind !== 'image' ||
+                  Boolean(selectedNodes[0]?.locked) ||
+                  !onRequestImageEditor,
+                onSelect: () => {
+                  setContextMenu(null);
+                  if (selectedNodes[0] && onRequestImageEditor) {
+                    onRequestImageEditor(selectedNodes[0].id);
                   }
                 },
               },

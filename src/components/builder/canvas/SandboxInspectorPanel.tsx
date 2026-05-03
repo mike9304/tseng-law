@@ -426,10 +426,12 @@ function renderCompositeSurfaceEditor({
 
 export default function SandboxInspectorPanel({
   onRequestAssetLibrary,
+  onRequestImageEditor,
   siteLightboxes = [],
   sitePages = [],
 }: {
   onRequestAssetLibrary: () => void;
+  onRequestImageEditor?: () => void;
   siteLightboxes?: LinkPickerContext['siteLightboxes'];
   sitePages?: LinkPickerContext['sitePages'];
 }) {
@@ -946,6 +948,11 @@ export default function SandboxInspectorPanel({
                   onRequestAssetLibrary={
                     selectedNode.kind === 'image'
                       ? onRequestAssetLibrary
+                      : undefined
+                  }
+                  onRequestImageEditor={
+                    selectedNode.kind === 'image'
+                      ? onRequestImageEditor
                       : undefined
                   }
                   linkPickerContext={linkPickerContext}

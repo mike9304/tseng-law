@@ -18,6 +18,13 @@ interface AssetUploadResponse {
   error?: string;
 }
 
+type AssetSortMode = 'date-desc' | 'date-asc' | 'name-asc' | 'name-desc';
+
+interface AssetFolder {
+  id: string;
+  name: string;
+}
+
 function formatBytes(value: number) {
   if (value >= 1024 * 1024) return `${(value / (1024 * 1024)).toFixed(1)} MB`;
   if (value >= 1024) return `${Math.round(value / 1024)} KB`;
@@ -51,6 +58,18 @@ export default function AssetLibraryModal({
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [assets, setAssets] = useState<BuilderAssetListItem[]>([]);
   const [search, setSearch] = useState('');
+  const [sortMode, setSortMode] = useState<AssetSortMode>('date-desc');
+  const [folders, setFolders] = useState<AssetFolder[]>([
+    { id: 'uploads', name: 'Uploads' },
+    { id: 'brand', name: 'Brand' },
+  ]);
+  const [activeFolder, setActiveFolder] = useState('all');
+  const [newFolderName, setNewFolderName] = useState('');
+  const [tags, setTags] = useState<string[]>(['hero', 'office', 'people']);
+  const [activeTag, setActiveTag] = useState('all');
+  const [newTagName, setNewTagName] = useState('');
+  const [assetFolderByFilename, setAssetFolderByFilename] = useState<Record<string, string>>({});
+  const [assetTagsByFilename, setAssetTagsByFilename] = useState<Record<string, string[]>>({});
   const [isLoading, setIsLoading] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [deleteFilename, setDeleteFilename] = useState<string | null>(null);
@@ -96,9 +115,71 @@ export default function AssetLibraryModal({
 
   const filteredAssets = useMemo(() => {
     const query = search.trim().toLowerCase();
-    if (!query) return assets;
-    return assets.filter((asset) => asset.filename.toLowerCase().includes(query));
-  }, [assets, search]);
+    const filtered = assets.filter((asset) => {
+      const filename = asset.filename.toLowerCase();
+      const uploadedAt = Date.parse(asset.uploadedAt);
+      const folderId = assetFolderByFilename[asset.filename] ?? 'uploads';
+      const tagList = assetTagsByFilename[asset.filename] ?? [];
+      const matchesQuery = !query || filename.includes(query);
+      const matchesFolder =
+        activeFolder === 'all'
+        || folderId === activeFolder
+        || (activeFolder === 'recent' && !Number.isNaN(uploadedAt) && Date.now() - uploadedAt < 1000 * 60 * 60 * 24 * 7)
+        || (activeFolder === 'selected' && asset.url === selectedUrl);
+      const matchesTag = activeTag === 'all' || tagList.includes(activeTag);
+      return matchesQuery && matchesFolder && matchesTag;
+    });
+    return filtered.sort((left, right) => {
+      if (sortMode === 'name-asc') return left.filename.localeCompare(right.filename);
+      if (sortMode === 'name-desc') return right.filename.localeCompare(left.filename);
+      const leftTime = Date.parse(left.uploadedAt) || 0;
+      const rightTime = Date.parse(right.uploadedAt) || 0;
+      return sortMode === 'date-asc' ? leftTime - rightTime : rightTime - leftTime;
+    });
+  }, [activeFolder, activeTag, assetFolderByFilename, assetTagsByFilename, assets, search, selectedUrl, sortMode]);
+
+  const folderTree = useMemo(
+    () => [
+      { id: 'all', name: 'All assets', count: assets.length },
+      { id: 'recent', name: 'Recent', count: assets.filter((asset) => {
+        const uploadedAt = Date.parse(asset.uploadedAt);
+        return !Number.isNaN(uploadedAt) && Date.now() - uploadedAt < 1000 * 60 * 60 * 24 * 7;
+      }).length },
+      { id: 'selected', name: 'Selected', count: selectedUrl ? assets.filter((asset) => asset.url === selectedUrl).length : 0 },
+      ...folders.map((folder) => ({
+        ...folder,
+        count: assets.filter((asset) => (assetFolderByFilename[asset.filename] ?? 'uploads') === folder.id).length,
+      })),
+    ],
+    [assetFolderByFilename, assets, folders, selectedUrl],
+  );
+
+  function createFolder() {
+    const name = newFolderName.trim();
+    if (!name) return;
+    const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || `folder-${Date.now()}`;
+    setFolders((current) => current.some((folder) => folder.id === id) ? current : [...current, { id, name }]);
+    setActiveFolder(id);
+    setNewFolderName('');
+  }
+
+  function createTag() {
+    const name = newTagName.trim().toLowerCase();
+    if (!name) return;
+    setTags((current) => current.includes(name) ? current : [...current, name]);
+    setActiveTag(name);
+    setNewTagName('');
+  }
+
+  function toggleAssetTag(filename: string, tag: string) {
+    setAssetTagsByFilename((current) => {
+      const existing = current[filename] ?? [];
+      const next = existing.includes(tag)
+        ? existing.filter((candidate) => candidate !== tag)
+        : [...existing, tag];
+      return { ...current, [filename]: next };
+    });
+  }
 
   async function uploadFile(file: File) {
     // Upload validation (P3-18 security)
@@ -184,84 +265,158 @@ export default function AssetLibraryModal({
           </button>
         </header>
 
-        <div className={styles.modalToolbar}>
-          <label className={styles.modalSearchField}>
-            <span>Search</span>
-            <input
-              className={styles.inspectorInput}
-              type="search"
-              value={search}
-              placeholder="filename"
-              onChange={(event) => setSearch(event.target.value)}
-            />
-          </label>
-          <div className={styles.modalToolbarActions}>
+        <div className={styles.assetLibraryShell}>
+          <aside className={styles.assetFolderTree}>
+            <span className={styles.modalEyebrow}>Folders</span>
+            {folderTree.map((folder) => (
+              <button
+                key={folder.id}
+                type="button"
+                className={`${styles.assetFolderButton} ${activeFolder === folder.id ? styles.assetFolderButtonActive : ''}`}
+                onClick={() => setActiveFolder(folder.id)}
+              >
+                <span>{folder.name}</span>
+                <strong>{folder.count}</strong>
+              </button>
+            ))}
+            <div className={styles.assetCreateRow}>
+              <input
+                className={styles.inspectorInput}
+                value={newFolderName}
+                placeholder="New folder"
+                onChange={(event) => setNewFolderName(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter') createFolder();
+                }}
+              />
+              <button type="button" className={styles.actionButton} onClick={createFolder}>Add</button>
+            </div>
+          </aside>
+
+          <section className={styles.assetLibraryMain}>
+            <div className={styles.modalToolbar}>
+              <label className={styles.modalSearchField}>
+                <span>Search</span>
+                <input
+                  className={styles.inspectorInput}
+                  type="search"
+                  value={search}
+                  placeholder="filename"
+                  onChange={(event) => setSearch(event.target.value)}
+                />
+              </label>
+              <label className={styles.modalSearchField}>
+                <span>Sort</span>
+                <select
+                  className={styles.inspectorInput}
+                  value={sortMode}
+                  onChange={(event) => setSortMode(event.target.value as AssetSortMode)}
+                >
+                  <option value="date-desc">Newest first</option>
+                  <option value="date-asc">Oldest first</option>
+                  <option value="name-asc">Name A-Z</option>
+                  <option value="name-desc">Name Z-A</option>
+                </select>
+              </label>
+              <div className={styles.modalToolbarActions}>
+                <button
+                  type="button"
+                  className={styles.actionButton}
+                  disabled={isLoading}
+                  onClick={() => void loadAssets()}
+                >
+                  Refresh
+                </button>
+                <button
+                  type="button"
+                  className={styles.actionButton}
+                  disabled={isUploading}
+                  onClick={() => inputRef.current?.click()}
+                >
+                  {isUploading ? 'Uploading…' : 'Upload image'}
+                </button>
+                <input
+                  ref={inputRef}
+                  hidden
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+                  onChange={(event) => {
+                    const file = event.target.files?.[0];
+                    event.currentTarget.value = '';
+                    if (file) {
+                      void uploadFile(file);
+                    }
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className={styles.assetTagBar}>
+              <button
+                type="button"
+                className={`${styles.assetTagChip} ${activeTag === 'all' ? styles.assetTagChipActive : ''}`}
+                onClick={() => setActiveTag('all')}
+              >
+                All tags
+              </button>
+              {tags.map((tag) => (
+                <button
+                  key={tag}
+                  type="button"
+                  className={`${styles.assetTagChip} ${activeTag === tag ? styles.assetTagChipActive : ''}`}
+                  onClick={() => setActiveTag(tag)}
+                >
+                  {tag}
+                </button>
+              ))}
+              <input
+                className={styles.assetTagInput}
+                value={newTagName}
+                placeholder="New tag"
+                onChange={(event) => setNewTagName(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter') createTag();
+                }}
+              />
+              <button type="button" className={styles.assetTagChip} onClick={createTag}>Create</button>
+            </div>
+
             <button
               type="button"
-              className={styles.actionButton}
-              disabled={isLoading}
-              onClick={() => void loadAssets()}
-            >
-              Refresh
-            </button>
-            <button
-              type="button"
-              className={styles.actionButton}
+              className={styles.uploadDropZone}
               disabled={isUploading}
               onClick={() => inputRef.current?.click()}
-            >
-              {isUploading ? 'Uploading…' : 'Upload image'}
-            </button>
-            <input
-              ref={inputRef}
-              hidden
-              type="file"
-              accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
-              onChange={(event) => {
-                const file = event.target.files?.[0];
-                event.currentTarget.value = '';
+              onDragOver={(event) => {
+                event.preventDefault();
+                event.dataTransfer.dropEffect = 'copy';
+              }}
+              onDrop={(event) => {
+                event.preventDefault();
+                const file = event.dataTransfer.files?.[0];
                 if (file) {
                   void uploadFile(file);
                 }
               }}
-            />
-          </div>
-        </div>
+            >
+              <strong>{isUploading ? 'Uploading image…' : 'Drop image here or click to upload'}</strong>
+              <span>JPG, PNG, WEBP, GIF, AVIF · max 8 MB</span>
+            </button>
 
-        <button
-          type="button"
-          className={styles.uploadDropZone}
-          disabled={isUploading}
-          onClick={() => inputRef.current?.click()}
-          onDragOver={(event) => {
-            event.preventDefault();
-            event.dataTransfer.dropEffect = 'copy';
-          }}
-          onDrop={(event) => {
-            event.preventDefault();
-            const file = event.dataTransfer.files?.[0];
-            if (file) {
-              void uploadFile(file);
-            }
-          }}
-        >
-          <strong>{isUploading ? 'Uploading image…' : 'Drop image here or click to upload'}</strong>
-          <span>JPG, PNG, WEBP, GIF, AVIF · max 8 MB</span>
-        </button>
+            {error ? <p className={styles.modalError}>{error}</p> : null}
+            {isLoading ? <p className={styles.modalHint}>Loading assets…</p> : null}
+            {!isLoading && filteredAssets.length === 0 ? (
+              <p className={styles.modalHint}>
+                {assets.length === 0
+                  ? 'No builder images uploaded yet.'
+                  : 'No assets match the current filters.'}
+              </p>
+            ) : null}
 
-        {error ? <p className={styles.modalError}>{error}</p> : null}
-        {isLoading ? <p className={styles.modalHint}>Loading assets…</p> : null}
-        {!isLoading && filteredAssets.length === 0 ? (
-          <p className={styles.modalHint}>
-            {assets.length === 0
-              ? 'No builder images uploaded yet.'
-              : 'No assets match the current search.'}
-          </p>
-        ) : null}
-
-        <div className={styles.assetGrid}>
-          {filteredAssets.map((asset) => {
+            <div className={styles.assetGrid}>
+              {filteredAssets.map((asset) => {
             const active = selectedUrl === asset.url;
+            const assetFolder = assetFolderByFilename[asset.filename] ?? 'uploads';
+            const assetTags = assetTagsByFilename[asset.filename] ?? [];
             return (
               <article
                 key={asset.filename}
@@ -280,6 +435,31 @@ export default function AssetLibraryModal({
                 <div className={styles.assetMeta}>
                   <strong>{asset.filename}</strong>
                   <span>{formatBytes(asset.size)} · {formatUploadedAt(asset.uploadedAt)}</span>
+                </div>
+                <div className={styles.assetOrganizeRow}>
+                  <select
+                    value={assetFolder}
+                    onChange={(event) => {
+                      setAssetFolderByFilename((current) => ({
+                        ...current,
+                        [asset.filename]: event.target.value,
+                      }));
+                    }}
+                  >
+                    {folders.map((folder) => <option key={folder.id} value={folder.id}>{folder.name}</option>)}
+                  </select>
+                  <div className={styles.assetMiniTags}>
+                    {tags.map((tag) => (
+                      <button
+                        key={tag}
+                        type="button"
+                        className={`${styles.assetMiniTag} ${assetTags.includes(tag) ? styles.assetMiniTagActive : ''}`}
+                        onClick={() => toggleAssetTag(asset.filename, tag)}
+                      >
+                        {tag}
+                      </button>
+                    ))}
+                  </div>
                 </div>
                 <div className={styles.assetActions}>
                   <button
@@ -303,7 +483,9 @@ export default function AssetLibraryModal({
                 </div>
               </article>
             );
-          })}
+              })}
+            </div>
+          </section>
         </div>
       </div>
     </div>

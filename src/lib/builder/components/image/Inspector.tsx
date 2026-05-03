@@ -1,13 +1,9 @@
 'use client';
 
-import { useCallback, useState } from 'react';
 import type { BuilderComponentInspectorProps } from '../define';
 import LinkPicker from '@/components/builder/editor/LinkPicker';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
-import { DEFAULT_FILTERS, type ImageFilters } from '@/lib/builder/canvas/filters';
 import type { LinkValue } from '@/lib/builder/links';
-import CropModal from '@/components/builder/canvas/CropModal';
-import FilterPanel from '@/components/builder/canvas/FilterPanel';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 export default function ImageInspector({
@@ -15,21 +11,10 @@ export default function ImageInspector({
   onUpdate,
   disabled = false,
   onRequestAssetLibrary,
+  onRequestImageEditor,
   linkPickerContext,
 }: BuilderComponentInspectorProps) {
   const imageNode = node as BuilderImageCanvasNode;
-  const [cropOpen, setCropOpen] = useState(false);
-  const [filterOpen, setFilterOpen] = useState(false);
-
-  const currentFilters: ImageFilters =
-    (imageNode.content as { filters?: ImageFilters }).filters ?? { ...DEFAULT_FILTERS };
-
-  const handleFilterChange = useCallback(
-    (filters: ImageFilters) => {
-      onUpdate({ filters });
-    },
-    [onUpdate],
-  );
 
   return (
     <>
@@ -46,28 +31,12 @@ export default function ImageInspector({
           type="button"
           className={styles.actionButton}
           disabled={disabled || !imageNode.content.src}
-          onClick={() => setCropOpen(true)}
+          onClick={() => onRequestImageEditor?.()}
           style={{ marginLeft: 6 }}
         >
-          Crop
-        </button>
-        <button
-          type="button"
-          className={styles.actionButton}
-          disabled={disabled}
-          onClick={() => setFilterOpen((prev) => !prev)}
-          style={{ marginLeft: 6 }}
-        >
-          {filterOpen ? '필터 닫기' : '필터'}
+          Crop / Filter / Alt
         </button>
       </div>
-      {filterOpen && (
-        <FilterPanel
-          filters={currentFilters}
-          onChangeFilters={handleFilterChange}
-          onClose={() => setFilterOpen(false)}
-        />
-      )}
       <label>
         <span>Source URL</span>
         <input
@@ -114,16 +83,6 @@ export default function ImageInspector({
           Crop: {imageNode.content.cropAspect}
         </div>
       )}
-      <CropModal
-        open={cropOpen}
-        imageSrc={imageNode.content.src}
-        currentAspect={imageNode.content.cropAspect || 'Free'}
-        onConfirm={(aspect) => {
-          onUpdate({ cropAspect: aspect });
-          setCropOpen(false);
-        }}
-        onClose={() => setCropOpen(false)}
-      />
     </>
   );
 }

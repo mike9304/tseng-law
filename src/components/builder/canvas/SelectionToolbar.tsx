@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import LinkPicker, { type LinkPickerContext } from '@/components/builder/editor/LinkPicker';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
@@ -31,6 +31,8 @@ export default function SelectionToolbar({
   linkTargetNode = null,
   onChangeLink,
   linkPickerContext,
+  linkPopoverOpen: linkPopoverOpenProp,
+  onLinkPopoverChange,
   onDuplicate,
   onDelete,
   onBringForward,
@@ -47,13 +49,24 @@ export default function SelectionToolbar({
   linkTargetNode?: BuilderCanvasNode | null;
   onChangeLink?: (nodeId: string, value: LinkValue | null) => void;
   linkPickerContext?: LinkPickerContext;
+  /** Optional: lift popover open state to a parent (e.g. so a click on a node-level
+   *  link badge can request the popover to open on the toolbar). When provided,
+   *  internal toggle still works but mirrors via `onLinkPopoverChange`. */
+  linkPopoverOpen?: boolean;
+  onLinkPopoverChange?: (open: boolean) => void;
   onDuplicate: () => void;
   onDelete: () => void;
   onBringForward: () => void;
   onSendBackward: () => void;
   onOpenMoreMenu: (event: React.MouseEvent) => void;
 }) {
-  const [linkPopoverOpen, setLinkPopoverOpen] = useState(false);
+  const [internalLinkPopoverOpen, setInternalLinkPopoverOpen] = useState(false);
+  const linkPopoverOpen = linkPopoverOpenProp ?? internalLinkPopoverOpen;
+  const setLinkPopoverOpen = useCallback((next: boolean | ((current: boolean) => boolean)) => {
+    const resolved = typeof next === 'function' ? next(linkPopoverOpen) : next;
+    setInternalLinkPopoverOpen(resolved);
+    onLinkPopoverChange?.(resolved);
+  }, [linkPopoverOpen, onLinkPopoverChange]);
 
   const single = selectedNodes.length === 1 ? selectedNodes[0] : null;
   const isText = single?.kind === 'text' || single?.kind === 'heading';
@@ -64,7 +77,7 @@ export default function SelectionToolbar({
 
   useEffect(() => {
     if (!canEditLink) setLinkPopoverOpen(false);
-  }, [canEditLink]);
+  }, [canEditLink, setLinkPopoverOpen]);
 
   if (selectedNodes.length === 0) return null;
 
@@ -161,6 +174,9 @@ export default function SelectionToolbar({
 
   const linkValue = linkTargetNode ? getNodeLinkValue(linkTargetNode) : null;
   const popoverTop = top + TOOLBAR_HEIGHT + GAP;
+  const selectionSummary = selectedNodes.length === 1
+    ? selectedNodes[0].kind
+    : `${selectedNodes.length} items`;
 
   return (
     <>
@@ -174,20 +190,43 @@ export default function SelectionToolbar({
           transform: 'translateX(-50%)',
           height: TOOLBAR_HEIGHT,
           zIndex: 9999,
-          background: '#0f172a',
+          background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.94))',
           color: '#fff',
-          borderRadius: 10,
-          boxShadow: '0 6px 18px rgba(0, 0, 0, 0.25)',
+          border: '1px solid rgba(191, 219, 254, 0.18)',
+          borderRadius: 12,
+          boxShadow: '0 18px 44px rgba(15, 23, 42, 0.32), inset 0 1px 0 rgba(255,255,255,0.08)',
           display: 'flex',
           alignItems: 'center',
-          gap: 2,
-          padding: '2px 4px',
+          gap: 3,
+          padding: '2px 5px',
           pointerEvents: 'auto',
           animation: 'fadeIn 120ms ease',
+          backdropFilter: 'blur(12px)',
         }}
         onPointerDown={(event) => event.stopPropagation()}
         onMouseDown={(event) => event.stopPropagation()}
       >
+        <span
+          title={selectionSummary}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            maxWidth: 104,
+            height: 28,
+            padding: '0 9px',
+            overflow: 'hidden',
+            borderRight: '1px solid rgba(255, 255, 255, 0.12)',
+            color: '#bfdbfe',
+            fontSize: '0.68rem',
+            fontWeight: 800,
+            letterSpacing: '0.02em',
+            textOverflow: 'ellipsis',
+            textTransform: 'uppercase',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {selectionSummary}
+        </span>
         {actions.map((action, index) => {
           const isMore = action.key === 'more';
           return (
@@ -210,25 +249,27 @@ export default function SelectionToolbar({
                 padding: '0 8px',
                 border: 'none',
                 background: 'transparent',
-                color: action.disabled ? '#475569' : '#e2e8f0',
+                color: action.disabled ? '#475569' : '#f8fafc',
                 cursor: action.disabled ? 'not-allowed' : 'pointer',
-                borderRadius: 6,
+                borderRadius: 8,
                 fontSize: '0.85rem',
-                fontWeight: 500,
+                fontWeight: 800,
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                transition: 'background 100ms ease',
+                transition: 'background 100ms ease, color 100ms ease, transform 100ms ease',
                 borderLeft: index > 0 && (action.key === 'duplicate' || action.key === 'more') ? '1px solid rgba(255, 255, 255, 0.12)' : undefined,
                 marginLeft: index > 0 && (action.key === 'duplicate' || action.key === 'more') ? 4 : 0,
                 paddingLeft: index > 0 && (action.key === 'duplicate' || action.key === 'more') ? 12 : 8,
               }}
               onMouseEnter={(event) => {
                 if (action.disabled) return;
-                event.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                event.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
+                event.currentTarget.style.transform = 'translateY(-1px)';
               }}
               onMouseLeave={(event) => {
                 event.currentTarget.style.background = 'transparent';
+                event.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <span style={{ fontSize: action.icon.length === 1 ? '0.95rem' : '0.85rem' }}>{action.icon}</span>

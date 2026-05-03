@@ -11,6 +11,11 @@ import {
 export interface LinkPickerContext {
   siteAnchors?: string[];
   siteLightboxes?: { id: string; slug: string; name: string }[];
+  /**
+   * 현재 사이트의 페이지 path 자동완성. `/`로 시작하는 href 입력 시 datalist로 노출.
+   * 형식: { path: '/about', title: 'About', slug?: 'about' }.
+   */
+  sitePages?: { path: string; title?: string; slug?: string }[];
 }
 
 interface LinkPickerProps {
@@ -91,6 +96,7 @@ export default function LinkPicker({
   disabled = false,
 }: LinkPickerProps) {
   const anchorListId = useId();
+  const pageListId = useId();
   const [draft, setDraft] = useState<LinkValue>(() => value ?? { href: '', target: '_self' });
   const [advancedOpen, setAdvancedOpen] = useState(false);
 
@@ -105,7 +111,9 @@ export default function LinkPicker({
   const scheme = hasHref ? describeLinkScheme(trimmedHref) : 'invalid';
   const lightboxes = context?.siteLightboxes ?? [];
   const anchors = context?.siteAnchors ?? [];
+  const sitePages = context?.sitePages ?? [];
   const showLightboxSelect = trimmedHref.startsWith('lightbox:') && lightboxes.length > 0;
+  const showPageList = trimmedHref.startsWith('/') && sitePages.length > 0;
 
   const lightboxSlug = useMemo(() => {
     return trimmedHref.startsWith('lightbox:')
@@ -151,7 +159,13 @@ export default function LinkPicker({
             ...inputStyle,
             borderColor: !isSafe ? '#ef4444' : '#dbe3ec',
           }}
-          list={trimmedHref.startsWith('#') && anchors.length > 0 ? anchorListId : undefined}
+          list={
+            showPageList
+              ? pageListId
+              : trimmedHref.startsWith('#') && anchors.length > 0
+                ? anchorListId
+                : undefined
+          }
           data-builder-href-input="true"
           onChange={(event) => patch({ href: event.target.value })}
         />
@@ -159,6 +173,13 @@ export default function LinkPicker({
           <datalist id={anchorListId}>
             {anchors.map((anchor) => (
               <option key={anchor} value={`#${anchor}`} />
+            ))}
+          </datalist>
+        ) : null}
+        {sitePages.length > 0 ? (
+          <datalist id={pageListId}>
+            {sitePages.map((page) => (
+              <option key={page.path} value={page.path} label={page.title || page.slug} />
             ))}
           </datalist>
         ) : null}

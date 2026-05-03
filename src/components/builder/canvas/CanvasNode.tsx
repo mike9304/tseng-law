@@ -69,6 +69,7 @@ export default function CanvasNode({
 }: CanvasNodeProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [rotationReadout, setRotationReadout] = useState<{ degrees: number; x: number; y: number } | null>(null);
   const [animationPreviewPhase, setAnimationPreviewPhase] = useState<AnimationPreviewPhase>(null);
   const component = getComponent(node.kind);
   const theme = useBuilderTheme();
@@ -98,6 +99,11 @@ export default function CanvasNode({
       const centerY = rect.top + rect.height / 2;
       const startAngle = Math.atan2(event.clientY - centerY, event.clientX - centerX) * (180 / Math.PI);
       rotationDrag.current = { startAngle, startRotation: node.rotation };
+      setRotationReadout({
+        degrees: Math.round(((node.rotation % 360) + 360) % 360),
+        x: event.clientX - rect.left + 14,
+        y: event.clientY - rect.top - 30,
+      });
       activeEl.setPointerCapture(event.pointerId);
       beginMutationSession();
       let didCleanup = false;
@@ -106,8 +112,13 @@ export default function CanvasNode({
         if (!rotationDrag.current) return;
         const currentAngle = Math.atan2(moveEvent.clientY - centerY, moveEvent.clientX - centerX) * (180 / Math.PI);
         const rawDegrees = rotationDrag.current.startRotation + (currentAngle - rotationDrag.current.startAngle);
-        const snapped = Math.round(rawDegrees / 15) * 15;
-        const normalized = ((snapped % 360) + 360) % 360;
+        const nextDegrees = moveEvent.shiftKey ? Math.round(rawDegrees / 15) * 15 : Math.round(rawDegrees);
+        const normalized = ((nextDegrees % 360) + 360) % 360;
+        setRotationReadout({
+          degrees: normalized,
+          x: moveEvent.clientX - rect.left + 14,
+          y: moveEvent.clientY - rect.top - 30,
+        });
         updateNode(node.id, (n) => ({ ...n, rotation: normalized }), 'transient');
       }
 
@@ -115,6 +126,7 @@ export default function CanvasNode({
         if (didCleanup) return;
         didCleanup = true;
         rotationDrag.current = null;
+        setRotationReadout(null);
         if (activeEl.hasPointerCapture(pointerId)) {
           activeEl.releasePointerCapture(pointerId);
         }
@@ -410,7 +422,7 @@ export default function CanvasNode({
     >
       <div className={styles.nodeBadge}>
         <span>{node.kind}</span>
-        <strong>{node.id}</strong>
+        <strong>· {Math.round(effectiveRect.width)}×{Math.round(effectiveRect.height)}</strong>
         {node.locked ? <em>locked</em> : null}
         {node.sticky ? <em title={`Pinned ${node.sticky.from === 'bottom' ? 'bottom' : 'top'} +${node.sticky.offset}px`} style={{ color: '#60a5fa' }}>📌</em> : null}
         {node.anchorName ? <em title={`Anchor: #${node.anchorName}`} style={{ color: '#34d399' }}>⚓ {node.anchorName}</em> : null}
@@ -433,8 +445,11 @@ export default function CanvasNode({
                 event.preventDefault();
                 onSelect(node.id, false);
                 if (typeof document !== 'undefined') {
+                  // Prefer inline popover via SelectionToolbar; CanvasContainer
+                  // listens and opens its lifted popover state. Falls back to
+                  // inspector focus when no listener intercepts.
                   document.dispatchEvent(
-                    new CustomEvent('builder:focus-href-input', {
+                    new CustomEvent('builder:open-link-popover', {
                       detail: { nodeId: node.id },
                     }),
                   );
@@ -505,8 +520,20 @@ export default function CanvasNode({
             />
           ))}
           <div className={styles.nodeSizeLabel} aria-hidden>
-            {Math.round(effectiveRect.width)} x {Math.round(effectiveRect.height)}
+            {node.kind} · {Math.round(effectiveRect.width)}×{Math.round(effectiveRect.height)}
           </div>
+          {rotationReadout ? (
+            <div
+              className={styles.rotationReadout}
+              style={{
+                left: `${rotationReadout.x}px`,
+                top: `${rotationReadout.y}px`,
+              }}
+              aria-live="polite"
+            >
+              {rotationReadout.degrees}°
+            </div>
+          ) : null}
         </>
       ) : null}
     </div>

@@ -138,6 +138,7 @@ export default function CanvasContainer({
   onRequestInsertSavedSection,
   onToast,
   siteLightboxes = [],
+  sitePages = [],
 }: {
   onRequestAssetLibrary?: (nodeId: string) => void;
   onRequestMoveToPage?: (nodeIds: string[]) => void;
@@ -147,6 +148,7 @@ export default function CanvasContainer({
   onRequestInsertSavedSection?: (sectionId: string, position: { x: number; y: number }) => void;
   onToast?: (message: string, tone: 'success' | 'error') => void;
   siteLightboxes?: LinkPickerContext['siteLightboxes'];
+  sitePages?: LinkPickerContext['sitePages'];
 }) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -193,8 +195,10 @@ export default function CanvasContainer({
   const [activeViewport, setActiveViewport] = useState<Viewport | null>(null);
   const [selectionBox, setSelectionBox] = useState<SelectionBoxState | null>(null);
   const [contextMenu, setContextMenu] = useState<ContextMenuState | null>(null);
+  const [selectionLinkPopoverOpen, setSelectionLinkPopoverOpen] = useState(false);
   const [overlapPicker, setOverlapPicker] = useState<OverlapPickerState | null>(null);
   const [guides, setGuides] = useState<AlignmentGuide[]>([]);
+  const [interactionPointer, setInteractionPointer] = useState<{ x: number; y: number } | null>(null);
   const [zoomState, setZoomState] = useState<ZoomState>(() => createDefaultZoomState());
   const [isSpacePressed, setIsSpacePressed] = useState(false);
   const [hoveredContainerId, setHoveredContainerId] = useState<string | null>(null);
@@ -222,8 +226,9 @@ export default function CanvasContainer({
         .map((node) => node.anchorName)
         .filter((anchorName): anchorName is string => Boolean(anchorName)),
       siteLightboxes,
+      sitePages,
     }),
-    [nodes, siteLightboxes],
+    [nodes, siteLightboxes, sitePages],
   );
   const geometryViewport = activeViewport ?? currentViewport;
   const absoluteRectById = useMemo(() => {
@@ -308,6 +313,21 @@ export default function CanvasContainer({
     );
   }, [selectedLinkTargetNode, selectedNodeId, setSelectedNodeIds]);
 
+  // nodeBadge link click → inline popover via SelectionToolbar (canvas-side, no inspector jump)
+  useEffect(() => {
+    if (typeof document === 'undefined') return undefined;
+    const handler = (event: Event) => {
+      const detail = (event as CustomEvent<{ nodeId?: string }>).detail;
+      if (!detail?.nodeId) return;
+      if (selectedNodeId !== detail.nodeId) {
+        setSelectedNodeIds([detail.nodeId], detail.nodeId);
+      }
+      setSelectionLinkPopoverOpen(true);
+    };
+    document.addEventListener('builder:open-link-popover', handler);
+    return () => document.removeEventListener('builder:open-link-popover', handler);
+  }, [selectedNodeId, setSelectedNodeIds]);
+
   const updateSelectedLink = useCallback(
     (nodeId: string, link: LinkValue | null) => {
       const node = nodesById.get(nodeId);
@@ -375,11 +395,12 @@ export default function CanvasContainer({
 
   useEffect(() => {
     if (!activeViewport || activeViewport === currentViewport) return;
-    cancelMutationSession();
-    setActiveViewport(null);
-    setInteraction(null);
-    setGuides([]);
-    setHoveredContainerId(null);
+      cancelMutationSession();
+      setActiveViewport(null);
+      setInteraction(null);
+      setInteractionPointer(null);
+      setGuides([]);
+      setHoveredContainerId(null);
   }, [activeViewport, cancelMutationSession, currentViewport]);
 
   useEffect(() => {
@@ -394,6 +415,7 @@ export default function CanvasContainer({
       cancelMutationSession();
       setInteraction(null);
       setActiveViewport(null);
+      setInteractionPointer(null);
       setGuides([]);
       setHoveredContainerId(null);
       setContextMenu(null);
@@ -576,6 +598,11 @@ export default function CanvasContainer({
 
       const deltaX = (event.clientX - activeInteraction.originX) / zoomState.zoom;
       const deltaY = (event.clientY - activeInteraction.originY) / zoomState.zoom;
+      const viewportRect = viewportRef.current?.getBoundingClientRect();
+      setInteractionPointer({
+        x: viewportRect ? event.clientX - viewportRect.left : event.clientX,
+        y: viewportRect ? event.clientY - viewportRect.top : event.clientY,
+      });
       if (activeInteraction.type === 'move') {
         setOverlapPicker(null);
         const movingNodeIds = new Set(activeInteraction.nodeIds);
@@ -829,6 +856,7 @@ export default function CanvasContainer({
         setHoveredContainerId(null);
         setInteraction(null);
         setActiveViewport(null);
+        setInteractionPointer(null);
         setGuides([]);
       }
     }
@@ -1020,6 +1048,44 @@ export default function CanvasContainer({
       height: selectionBboxStage.height * zoomState.zoom,
     };
   }, [selectionBboxStage, zoomState.panX, zoomState.panY, zoomState.zoom]);
+
+  const interactionReadout = useMemo(() => {
+    if (!interaction || interaction.type === 'pan') return null;
+    const ids = interaction.type === 'move' ? interaction.nodeIds : [interaction.nodeId];
+    const rects = ids
+      .map((nodeId) => absoluteRectById.get(nodeId))
+      .filter((rect): rect is BuilderCanvasNode['rect'] => Boolean(rect));
+    if (rects.length === 0) return null;
+
+    const minX = Math.min(...rects.map((rect) => rect.x));
+    const minY = Math.min(...rects.map((rect) => rect.y));
+    const maxX = Math.max(...rects.map((rect) => rect.x + rect.width));
+    const maxY = Math.max(...rects.map((rect) => rect.y + rect.height));
+    const width = Math.round(maxX - minX);
+    const height = Math.round(maxY - minY);
+
+    if (interaction.type === 'resize') {
+      return {
+        left: (interactionPointer?.x ?? maxX * zoomState.zoom + zoomState.panX) + 14,
+        top: (interactionPointer?.y ?? maxY * zoomState.zoom + zoomState.panY) + 14,
+        title: `${width} × ${height}`,
+        detail: null,
+      };
+    }
+
+    const startRects = Object.values(interaction.startAbsoluteRects);
+    if (startRects.length === 0) return null;
+    const startMinX = Math.min(...startRects.map((rect) => rect.x));
+    const startMinY = Math.min(...startRects.map((rect) => rect.y));
+    const dx = Math.round(minX - startMinX);
+    const dy = Math.round(minY - startMinY);
+    return {
+      left: minX * zoomState.zoom + zoomState.panX,
+      top: minY * zoomState.zoom + zoomState.panY - 42,
+      title: `${Math.round(minX)}, ${Math.round(minY)}`,
+      detail: `delta ${dx >= 0 ? '+' : ''}${dx}, ${dy >= 0 ? '+' : ''}${dy}`,
+    };
+  }, [absoluteRectById, interaction, interactionPointer, zoomState.panX, zoomState.panY, zoomState.zoom]);
 
   return (
     <div className={styles.stageSurface}>
@@ -1249,6 +1315,10 @@ export default function CanvasContainer({
                   setSelectedNodeIds(nodeIds, nodeId);
                   setActiveViewport(interactionViewport);
                   beginMutationSession();
+                  setInteractionPointer({
+                    x: event.clientX - (viewportRef.current?.getBoundingClientRect().left ?? 0),
+                    y: event.clientY - (viewportRef.current?.getBoundingClientRect().top ?? 0),
+                  });
                   setInteraction({
                     type: 'move',
                     nodeId,
@@ -1272,6 +1342,10 @@ export default function CanvasContainer({
                   setSelectedNodeId(nodeId);
                   setActiveViewport(interactionViewport);
                   beginMutationSession();
+                  setInteractionPointer({
+                    x: event.clientX - (viewportRef.current?.getBoundingClientRect().left ?? 0),
+                    y: event.clientY - (viewportRef.current?.getBoundingClientRect().top ?? 0),
+                  });
                   setInteraction({
                     type: 'resize',
                     nodeId,
@@ -1286,6 +1360,22 @@ export default function CanvasContainer({
                 }}
               />
             ))}
+            {selectionBboxStage && selectedNodes.length > 1 && !interaction ? (
+              <div
+                className={styles.multiSelectionBox}
+                style={{
+                  left: `${selectionBboxStage.x}px`,
+                  top: `${selectionBboxStage.y}px`,
+                  width: `${selectionBboxStage.width}px`,
+                  height: `${selectionBboxStage.height}px`,
+                }}
+                aria-hidden
+              >
+                <span className={styles.multiSelectionBadge}>
+                  {selectedNodes.length} selected · {Math.round(selectionBboxStage.width)} x {Math.round(selectionBboxStage.height)}
+                </span>
+              </div>
+            ) : null}
             {selectionBoxRect ? <SelectionBox {...selectionBoxRect} /> : null}
             {rootVisibleNodes.length === 0 ? (
               <div className={styles.emptyCanvas}>
@@ -1346,6 +1436,8 @@ export default function CanvasContainer({
             linkTargetNode={selectedLinkTargetNode}
             onChangeLink={updateSelectedLink}
             linkPickerContext={linkPickerContext}
+            linkPopoverOpen={selectionLinkPopoverOpen}
+            onLinkPopoverChange={setSelectionLinkPopoverOpen}
             onDuplicate={duplicateSelectedNode}
             onDelete={deleteSelectedNode}
             onBringForward={bringSelectedNodeForward}
@@ -1366,6 +1458,20 @@ export default function CanvasContainer({
               }
             }}
           />
+        ) : null}
+
+        {interactionReadout ? (
+          <div
+            className={styles.canvasInteractionReadout}
+            style={{
+              left: `${interactionReadout.left}px`,
+              top: `${interactionReadout.top}px`,
+            }}
+            aria-live="polite"
+          >
+            <strong>{interactionReadout.title}</strong>
+            {interactionReadout.detail ? <span>{interactionReadout.detail}</span> : null}
+          </div>
         ) : null}
 
         {overlapPicker ? (() => {

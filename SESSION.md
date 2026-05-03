@@ -546,3 +546,28 @@
 검증:
 - `npm run typecheck` ✅
 - `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, Pages panel page switch → Cmd+V → `Pasted 1 item` → undo → home restore 포함)
+
+## 2026-05-03 Codex /goal Template Design Expansion 결과
+
+범위:
+- Track A: 기존 17개 active page-template 카테고리 170개 파일에 Wix-grade proof/showcase/CTA 확장 섹션을 추가.
+- Track B: `BUILT_IN_SECTIONS` 12 → 53, `BUILT_IN_SECTION_CATEGORIES` 6 → 13으로 확장.
+- Track C: 신규 active 카테고리 13개 추가(`agency`, `saas`, `nonprofit`, `conference`, `podcast`, `magazine`, `dental`, `yoga`, `portfolio`, `freelancer`, `wedding`, `carrental`, `eventplanner`), 91개 신규 페이지 추가.
+
+결과:
+- Page templates: 170 → 261.
+- Active categories: 17 → 30.
+- Page template nodeCount 실제 registry 기준: min 55 / max 70 / avg 65.1.
+- Section templates: 12 → 53.
+- Section categories: 6 → 13.
+- Registry test에 40~70 node range 및 motion className hint 회귀 테스트 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warning만)
+- `npm run test:unit` ✅ (18 files / 685 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 61 guarded mutation handlers)
+- `npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` warning만)
+
+주의:
+- 현재 worktree는 `main...origin/main [ahead 27]` 및 다른 트랙 변경이 많이 섞인 dirty 상태라, 이 결과는 별도 clean branch에서 분리 커밋하기 전까지 바로 main commit 대상으로 취급하면 안 됨.

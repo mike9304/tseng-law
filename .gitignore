@@ -18,6 +18,10 @@ npm-debug.log*
 .DS_Store
 *.tgz
 
+# test artifacts
+test-results/
+playwright-report/
+
 # data
 data/reviews.json
 data/audit/

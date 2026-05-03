@@ -63,10 +63,86 @@ export interface BuilderPageMeta {
 export interface BuilderSeoMetadata {
   title?: string;
   description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
+  twitterCard?: 'summary' | 'summary_large_image';
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
   canonical?: string;
   noIndex?: boolean;
   noFollow?: boolean;
+  additionalMetaTags?: BuilderSeoAdditionalMetaTag[];
+  structuredData?: BuilderSeoStructuredDataSettings;
+  overrideState?: BuilderSeoOverrideState;
+  focusKeyword?: string;
+  structuredDataBlocks?: BuilderStructuredDataBlock[];
+}
+
+export interface BuilderSeoAdditionalMetaTag {
+  id: string;
+  name: string;
+  content: string;
+}
+
+export type BuilderSeoOverrideField =
+  | 'title'
+  | 'description'
+  | 'ogTitle'
+  | 'ogDescription'
+  | 'ogImage'
+  | 'twitterTitle'
+  | 'twitterDescription'
+  | 'twitterImage'
+  | 'canonical'
+  | 'robots'
+  | 'structuredData'
+  | 'additionalMetaTags';
+
+export type BuilderSeoOverrideState = Partial<Record<BuilderSeoOverrideField, boolean>>;
+
+export interface BuilderSeoStructuredDataSettings {
+  legalService?: boolean;
+  organization?: boolean;
+  localBusiness?: boolean;
+  faqPage?: 'auto' | 'off';
+  breadcrumbList?: boolean;
+}
+
+export type BuilderStructuredDataBlockType =
+  | 'LegalService'
+  | 'Organization'
+  | 'LocalBusiness'
+  | 'FAQPage'
+  | 'BreadcrumbList'
+  | 'Custom';
+
+export interface BuilderStructuredDataBlock {
+  id: string;
+  type: BuilderStructuredDataBlockType;
+  label?: string;
+  enabled: boolean;
+  json?: string;
+}
+
+export interface BuilderSeoPatternSettings {
+  titleTemplate?: string;
+  descriptionTemplate?: string;
+  ogTitleTemplate?: string;
+  ogDescriptionTemplate?: string;
+  twitterTitleTemplate?: string;
+  twitterDescriptionTemplate?: string;
+}
+
+export interface BuilderSeoDefaults {
+  patterns?: BuilderSeoPatternSettings;
+  twitterCard?: 'summary' | 'summary_large_image';
+  noIndex?: boolean;
+  noFollow?: boolean;
+  additionalMetaTags?: BuilderSeoAdditionalMetaTag[];
+  structuredData?: BuilderSeoStructuredDataSettings;
+  structuredDataBlocks?: BuilderStructuredDataBlock[];
 }
 
 export interface BuilderThemeColors {
@@ -110,6 +186,14 @@ export interface BuilderSiteSettings {
   address?: string;
   businessHours?: string;
   businessRegNumber?: string;
+  seoChecklist?: BuilderSeoChecklistSettings;
+  seoDefaults?: BuilderSeoDefaults;
+}
+
+export interface BuilderSeoChecklistSettings {
+  businessName?: string;
+  keywords?: string[];
+  serviceMode?: 'physical' | 'online' | 'both';
 }
 
 // Lightbox/Modal builder — separate entity from pages.

@@ -9,6 +9,10 @@ export function buildSitePagePath(locale: Locale | string, slug: string): string
   return normalizedSlug ? `/${locale}/${normalizedSlug}` : `/${locale}`;
 }
 
+export function buildSitePageAbsoluteUrl(siteUrl: string, locale: Locale | string, slug: string): string {
+  return `${siteUrl.replace(/\/+$/, '')}${buildSitePagePath(locale, slug)}`;
+}
+
 export function normalizeSiteHref(href: string, locale: Locale | string): string {
   if (!href) return buildSitePagePath(locale, '');
   if (/^(https?:|mailto:|tel:|#)/.test(href)) return href;

@@ -9,6 +9,7 @@
     "lint": "next lint",
     "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
     "test:unit": "vitest run",
+    "test:builder-editor": "playwright test --config=playwright.config.ts",
     "security:builder-routes": "node scripts/assert-builder-route-guards.mjs",
     "smoke:builder": "node scripts/smoke-builder-api.mjs",
     "qa": "npm run typecheck && npm run lint && npm run test:unit && npm run security:builder-routes"
@@ -37,6 +38,7 @@
     "zustand": "^5.0.12"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@types/node": "^20.11.0",
     "@types/nodemailer": "^7.0.11",
     "@types/react": "^18.2.0",

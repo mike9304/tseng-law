@@ -384,3 +384,31 @@
   - D-POOL-6 Public Widget Visual Polish (BlogPostCard·BlogFeed 4 layout · Button 8 variants · BookingFlowSteps · Forms · FAQ · Columns + widget-tokens)
   - 산출 파일: `CODEX-PROMPT-DESIGN-POOL-{1~6}-*.md` 6개. 사용자가 Codex로 순차/병렬 dispatch 가능.
 - 2026-05-01 D-POOL completed prompt follow-up: 완료 보고된 D-POOL 인덱스 기준으로 Canvas direct manipulation/selection UI 디자인 직접 반영. Multi-selection bbox, move/resize readout, selection toolbar visual refresh, context menu density polish 적용; typecheck/lint 통과.
+
+## 2026-05-03 Codex /goal G-Editor 결과
+
+범위:
+- M1~M7 완료 커밋: selection/resize/rotate, snap guides, top bar/left rail/context menu, save/undo chips, duplicate/cross-page clipboard, asset library/image edit dialog, version history/publish/SEO.
+- M8 추가: `@playwright/test` 도입, `npm run test:builder-editor` 스크립트와 `/ko/admin-builder` Playwright scenario 추가. 단축키 매퍼는 `KeyboardEvent.key` 소문자 정규화로 Cmd/Ctrl+D 같은 modifier 조합을 더 견고하게 처리.
+
+커밋:
+- `af65dac` G-Editor: M1 selection resize rotate polish
+- `1a608ef` G-Editor: M2 snap guides and spacing chips
+- `75fbc4b` G-Editor: M3 Wix editor shell chrome
+- `c28e3fc` G-Editor: M4 save and history chips
+- `81ac130` G-Editor: M5 duplicate and page clipboard flow
+- `6f6b81c` G-Editor: M6 asset library and image edit dialog
+- `7fceb40` G-Editor: M7 publish history seo policy
+
+최종 검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warning만)
+- `npm run test:unit` ✅ (8 files / 445 tests)
+- `npm run security:builder-routes` ✅ (65 files / 56 mutation handlers covered)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warning만)
+- `BASE_URL=http://127.0.0.1:3001 BUILDER_SMOKE_TIMEOUT_MS=60000 npm run smoke:builder` ✅ (6/6)
+- `BASE_URL=http://127.0.0.1:3001 npm run test:builder-editor` ✅ (1/1)
+
+메모:
+- 최종 dev 서버는 3000 점유 때문에 `http://localhost:3001`로 재기동해 검증.
+- `Wix 체크포인트.md`는 W02/W04/W06/W07/W08/W10/W11/W18~W23/W26~W30 최신 상태를 업데이트. Green 판정은 문서 규칙상 사용자 직접 클릭 검증 후로 남김.

@@ -53,12 +53,11 @@ export function matchShortcut(e: KeyboardEvent): CanvasAction {
 
   const meta = e.metaKey || e.ctrlKey;
   const shift = e.shiftKey;
-  const key = e.key;
+  const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
 
   // Undo / Redo
   if (meta && !shift && key === 'z') return 'undo';
   if (meta && shift && key === 'z') return 'redo';
-  if (meta && shift && key === 'Z') return 'redo';
   if (meta && !shift && key === 'y') return 'redo';
 
   // Delete
@@ -78,7 +77,7 @@ export function matchShortcut(e: KeyboardEvent): CanvasAction {
 
   // Group
   if (meta && !shift && key === 'g') return 'group';
-  if (meta && shift && (key === 'g' || key === 'G')) return 'ungroup';
+  if (meta && shift && key === 'g') return 'ungroup';
 
   // Help (Cmd+/ or ?)
   if (meta && key === '/') return 'showHelp';

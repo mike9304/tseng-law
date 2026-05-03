@@ -1,0 +1,20 @@
+[data-editor-shell] {
+  --inspector-bg: var(--editor-panel, #ffffff);
+  --inspector-surface: var(--editor-panel-elevated, #ffffff);
+  --inspector-muted: var(--editor-fg-muted, #6b7280);
+  --inspector-text: var(--editor-fg-primary, #0f1115);
+  --inspector-border: var(--editor-border-hairline, rgba(15, 17, 21, 0.08));
+  --inspector-ring: var(--editor-accent, #6366f1);
+  --inspector-radius: 8px;
+  --selection-toolbar-bg: rgba(15, 17, 21, 0.96);
+  --selection-toolbar-border: rgba(255, 255, 255, 0.12);
+  --selection-toolbar-fg: #f8fafc;
+  --selection-toolbar-muted: #bfdbfe;
+}
+
+[data-editor-shell][data-editor-theme='dark'] {
+  --selection-toolbar-bg: rgba(248, 250, 252, 0.96);
+  --selection-toolbar-border: rgba(15, 17, 21, 0.12);
+  --selection-toolbar-fg: #0f1115;
+  --selection-toolbar-muted: #1d4ed8;
+}

@@ -11,24 +11,76 @@ import {
 } from '@/lib/builder/templates/registry';
 
 const XFAIL_TEMPLATES = new Map<string, string>();
+const TRACK_C_CATEGORIES = new Set([
+  'agency',
+  'saas',
+  'nonprofit',
+  'conference',
+  'podcast',
+  'magazine',
+  'dental',
+  'yoga',
+  'portfolio',
+  'freelancer',
+  'wedding',
+  'carrental',
+  'eventplanner',
+]);
 
 describe('template registry', () => {
   const all = getAllTemplates();
 
-  it('returns 170 active templates', () => {
-    expect(all).toHaveLength(170);
+  it('returns 261 active templates', () => {
+    expect(all).toHaveLength(261);
   });
 
-  it('has 17 active categories', () => {
+  it('has 30 active categories', () => {
     const cats = getTemplateCategories();
-    expect(cats).toHaveLength(17);
+    expect(cats).toHaveLength(30);
   });
 
-  it('has 10 templates per category', () => {
+  it('has the expected template count per category', () => {
     const byCat = new Map<string, number>();
     for (const t of all) byCat.set(t.category, (byCat.get(t.category) ?? 0) + 1);
     for (const [cat, count] of byCat) {
-      expect(count, `category ${cat}`).toBe(10);
+      expect(count, `category ${cat}`).toBe(TRACK_C_CATEGORIES.has(cat) ? 7 : 10);
+    }
+    expect([...byCat.keys()].filter((cat) => TRACK_C_CATEGORIES.has(cat))).toHaveLength(13);
+  });
+
+  it('keeps every active template in the Wix-grade 40-70 node range', () => {
+    for (const t of all) {
+      const nodeCount = t.document.nodes.length;
+      expect(nodeCount, `${t.id} node count`).toBeGreaterThanOrEqual(40);
+      expect(nodeCount, `${t.id} node count`).toBeLessThanOrEqual(70);
+    }
+  });
+
+  it('uses motion className hints in every active template', () => {
+    const motionHints = new Set([
+      'hero-title',
+      'hero-subtitle',
+      'hero-eyebrow',
+      'section-label',
+      'hero-cta',
+      'office-card',
+      'services-detail-card',
+      'stat-card',
+      'split-text',
+      'split-image',
+      'card-copy',
+      'card-title',
+    ]);
+
+    for (const t of all) {
+      const hints = t.document.nodes
+        .map((node) => {
+          if (!('content' in node) || !('className' in node.content)) return undefined;
+          return node.content.className;
+        })
+        .filter((className): className is string => typeof className === 'string');
+
+      expect(hints.some((className) => motionHints.has(className)), `${t.id} className hints`).toBe(true);
     }
   });
 
@@ -49,7 +101,7 @@ describe('template registry', () => {
     const registryIds = all.map((t) => t.id).sort();
     const catalogIds = getTemplateCatalog().map((t) => t.id).sort();
 
-    expect(diskIds).toHaveLength(170);
+    expect(diskIds).toHaveLength(all.length);
     expect(registryIds).toEqual(diskIds);
     expect(catalogIds).toEqual(registryIds);
   });

@@ -188,6 +188,99 @@ import { travelHomeTemplate } from './travel/travel-home';
 import { travelPackagesTemplate } from './travel/travel-packages';
 import { travelReviewsTemplate } from './travel/travel-reviews';
 
+// Track C — New category templates
+import { agencyHomeTemplate } from './agency/agency-home';
+import { agencyAboutTemplate } from './agency/agency-about';
+import { agencyServicesTemplate } from './agency/agency-services';
+import { agencyWorkTemplate } from './agency/agency-work';
+import { agencyCaseStudyTemplate } from './agency/agency-case-study';
+import { agencyTeamTemplate } from './agency/agency-team';
+import { agencyContactTemplate } from './agency/agency-contact';
+import { saasHomeTemplate } from './saas/saas-home';
+import { saasFeaturesTemplate } from './saas/saas-features';
+import { saasPricingTemplate } from './saas/saas-pricing';
+import { saasIntegrationsTemplate } from './saas/saas-integrations';
+import { saasChangelogTemplate } from './saas/saas-changelog';
+import { saasCustomersTemplate } from './saas/saas-customers';
+import { saasContactTemplate } from './saas/saas-contact';
+import { nonprofitHomeTemplate } from './nonprofit/nonprofit-home';
+import { nonprofitMissionTemplate } from './nonprofit/nonprofit-mission';
+import { nonprofitProgramsTemplate } from './nonprofit/nonprofit-programs';
+import { nonprofitDonateTemplate } from './nonprofit/nonprofit-donate';
+import { nonprofitVolunteerTemplate } from './nonprofit/nonprofit-volunteer';
+import { nonprofitEventsTemplate } from './nonprofit/nonprofit-events';
+import { nonprofitContactTemplate } from './nonprofit/nonprofit-contact';
+import { conferenceHomeTemplate } from './conference/conference-home';
+import { conferenceAgendaTemplate } from './conference/conference-agenda';
+import { conferenceSpeakersTemplate } from './conference/conference-speakers';
+import { conferenceSponsorsTemplate } from './conference/conference-sponsors';
+import { conferenceVenueTemplate } from './conference/conference-venue';
+import { conferenceRegisterTemplate } from './conference/conference-register';
+import { conferenceFaqTemplate } from './conference/conference-faq';
+import { podcastHomeTemplate } from './podcast/podcast-home';
+import { podcastEpisodesTemplate } from './podcast/podcast-episodes';
+import { podcastAboutTemplate } from './podcast/podcast-about';
+import { podcastHostsTemplate } from './podcast/podcast-hosts';
+import { podcastSubscribeTemplate } from './podcast/podcast-subscribe';
+import { podcastContactTemplate } from './podcast/podcast-contact';
+import { podcastSponsorsTemplate } from './podcast/podcast-sponsors';
+import { magazineHomeTemplate } from './magazine/magazine-home';
+import { magazineIssueTemplate } from './magazine/magazine-issue';
+import { magazineArticlesTemplate } from './magazine/magazine-articles';
+import { magazineAuthorsTemplate } from './magazine/magazine-authors';
+import { magazineAboutTemplate } from './magazine/magazine-about';
+import { magazineSubscribeTemplate } from './magazine/magazine-subscribe';
+import { magazineContactTemplate } from './magazine/magazine-contact';
+import { dentalHomeTemplate } from './dental/dental-home';
+import { dentalAboutTemplate } from './dental/dental-about';
+import { dentalServicesTemplate } from './dental/dental-services';
+import { dentalTeamTemplate } from './dental/dental-team';
+import { dentalBookingTemplate } from './dental/dental-booking';
+import { dentalInsuranceTemplate } from './dental/dental-insurance';
+import { dentalContactTemplate } from './dental/dental-contact';
+import { yogaHomeTemplate } from './yoga/yoga-home';
+import { yogaClassesTemplate } from './yoga/yoga-classes';
+import { yogaInstructorsTemplate } from './yoga/yoga-instructors';
+import { yogaScheduleTemplate } from './yoga/yoga-schedule';
+import { yogaPricingTemplate } from './yoga/yoga-pricing';
+import { yogaAboutTemplate } from './yoga/yoga-about';
+import { yogaContactTemplate } from './yoga/yoga-contact';
+import { portfolioHomeTemplate } from './portfolio/portfolio-home';
+import { portfolioAboutTemplate } from './portfolio/portfolio-about';
+import { portfolioWorkTemplate } from './portfolio/portfolio-work';
+import { portfolioCaseStudyTemplate } from './portfolio/portfolio-case-study';
+import { portfolioProcessTemplate } from './portfolio/portfolio-process';
+import { portfolioContactTemplate } from './portfolio/portfolio-contact';
+import { portfolioCvTemplate } from './portfolio/portfolio-cv';
+import { freelancerHomeTemplate } from './freelancer/freelancer-home';
+import { freelancerServicesTemplate } from './freelancer/freelancer-services';
+import { freelancerPortfolioTemplate } from './freelancer/freelancer-portfolio';
+import { freelancerPricingTemplate } from './freelancer/freelancer-pricing';
+import { freelancerTestimonialsTemplate } from './freelancer/freelancer-testimonials';
+import { freelancerAboutTemplate } from './freelancer/freelancer-about';
+import { freelancerContactTemplate } from './freelancer/freelancer-contact';
+import { weddingHomeTemplate } from './wedding/wedding-home';
+import { weddingServicesTemplate } from './wedding/wedding-services';
+import { weddingPortfolioTemplate } from './wedding/wedding-portfolio';
+import { weddingPricingTemplate } from './wedding/wedding-pricing';
+import { weddingAboutTemplate } from './wedding/wedding-about';
+import { weddingContactTemplate } from './wedding/wedding-contact';
+import { weddingTestimonialsTemplate } from './wedding/wedding-testimonials';
+import { carrentalHomeTemplate } from './carrental/carrental-home';
+import { carrentalFleetTemplate } from './carrental/carrental-fleet';
+import { carrentalLocationsTemplate } from './carrental/carrental-locations';
+import { carrentalPricingTemplate } from './carrental/carrental-pricing';
+import { carrentalAboutTemplate } from './carrental/carrental-about';
+import { carrentalContactTemplate } from './carrental/carrental-contact';
+import { carrentalInsuranceTemplate } from './carrental/carrental-insurance';
+import { eventplannerHomeTemplate } from './eventplanner/eventplanner-home';
+import { eventplannerServicesTemplate } from './eventplanner/eventplanner-services';
+import { eventplannerPortfolioTemplate } from './eventplanner/eventplanner-portfolio';
+import { eventplannerVenuesTemplate } from './eventplanner/eventplanner-venues';
+import { eventplannerAboutTemplate } from './eventplanner/eventplanner-about';
+import { eventplannerContactTemplate } from './eventplanner/eventplanner-contact';
+import { eventplannerPackagesTemplate } from './eventplanner/eventplanner-packages';
+
 export interface TemplateCategory {
   id: PageTemplate['category'];
   count: number;
@@ -397,6 +490,122 @@ const allTemplates: PageTemplate[] = [
   travelHomeTemplate,
   travelPackagesTemplate,
   travelReviewsTemplate,
+  // Track C — Agency (7)
+  agencyHomeTemplate,
+  agencyAboutTemplate,
+  agencyServicesTemplate,
+  agencyWorkTemplate,
+  agencyCaseStudyTemplate,
+  agencyTeamTemplate,
+  agencyContactTemplate,
+
+  // Track C — Saas (7)
+  saasHomeTemplate,
+  saasFeaturesTemplate,
+  saasPricingTemplate,
+  saasIntegrationsTemplate,
+  saasChangelogTemplate,
+  saasCustomersTemplate,
+  saasContactTemplate,
+
+  // Track C — Nonprofit (7)
+  nonprofitHomeTemplate,
+  nonprofitMissionTemplate,
+  nonprofitProgramsTemplate,
+  nonprofitDonateTemplate,
+  nonprofitVolunteerTemplate,
+  nonprofitEventsTemplate,
+  nonprofitContactTemplate,
+
+  // Track C — Conference (7)
+  conferenceHomeTemplate,
+  conferenceAgendaTemplate,
+  conferenceSpeakersTemplate,
+  conferenceSponsorsTemplate,
+  conferenceVenueTemplate,
+  conferenceRegisterTemplate,
+  conferenceFaqTemplate,
+
+  // Track C — Podcast (7)
+  podcastHomeTemplate,
+  podcastEpisodesTemplate,
+  podcastAboutTemplate,
+  podcastHostsTemplate,
+  podcastSubscribeTemplate,
+  podcastContactTemplate,
+  podcastSponsorsTemplate,
+
+  // Track C — Magazine (7)
+  magazineHomeTemplate,
+  magazineIssueTemplate,
+  magazineArticlesTemplate,
+  magazineAuthorsTemplate,
+  magazineAboutTemplate,
+  magazineSubscribeTemplate,
+  magazineContactTemplate,
+
+  // Track C — Dental (7)
+  dentalHomeTemplate,
+  dentalAboutTemplate,
+  dentalServicesTemplate,
+  dentalTeamTemplate,
+  dentalBookingTemplate,
+  dentalInsuranceTemplate,
+  dentalContactTemplate,
+
+  // Track C — Yoga (7)
+  yogaHomeTemplate,
+  yogaClassesTemplate,
+  yogaInstructorsTemplate,
+  yogaScheduleTemplate,
+  yogaPricingTemplate,
+  yogaAboutTemplate,
+  yogaContactTemplate,
+
+  // Track C — Portfolio (7)
+  portfolioHomeTemplate,
+  portfolioAboutTemplate,
+  portfolioWorkTemplate,
+  portfolioCaseStudyTemplate,
+  portfolioProcessTemplate,
+  portfolioContactTemplate,
+  portfolioCvTemplate,
+
+  // Track C — Freelancer (7)
+  freelancerHomeTemplate,
+  freelancerServicesTemplate,
+  freelancerPortfolioTemplate,
+  freelancerPricingTemplate,
+  freelancerTestimonialsTemplate,
+  freelancerAboutTemplate,
+  freelancerContactTemplate,
+
+  // Track C — Wedding (7)
+  weddingHomeTemplate,
+  weddingServicesTemplate,
+  weddingPortfolioTemplate,
+  weddingPricingTemplate,
+  weddingAboutTemplate,
+  weddingContactTemplate,
+  weddingTestimonialsTemplate,
+
+  // Track C — Carrental (7)
+  carrentalHomeTemplate,
+  carrentalFleetTemplate,
+  carrentalLocationsTemplate,
+  carrentalPricingTemplate,
+  carrentalAboutTemplate,
+  carrentalContactTemplate,
+  carrentalInsuranceTemplate,
+
+  // Track C — Eventplanner (7)
+  eventplannerHomeTemplate,
+  eventplannerServicesTemplate,
+  eventplannerPortfolioTemplate,
+  eventplannerVenuesTemplate,
+  eventplannerAboutTemplate,
+  eventplannerContactTemplate,
+  eventplannerPackagesTemplate,
 
 ];
 

@@ -1,7 +1,9 @@
 # SESSION.md — 현재 세션 인수인계
 
-## 세션: S-08 진행 중 (Codex=B3 디자인 / Claude=B2 기능)
-## 마지막 업데이트: 2026-04-29
+## 세션: Wave3 통합 완료 → 다음 target 대기
+## 마지막 업데이트: 2026-05-01
+
+> **상태 한 줄**: typecheck/lint/build/test:unit(364)/security(56 guarded) 전부 통과. Wave1+2+3 합쳐 코드는 건강. 다음 target W__ 또는 트랙 코드 지정 대기.
 
 ---
 
@@ -27,9 +29,9 @@
 | **D1 템플릿 갤러리 통합** | **Codex (사용자가 별도 실행)** | 디스크 170개 템플릿 → registry 17 카테고리 import 완료 + TemplateGalleryModal 전면 재작성 (사이드바/검색/그리드) + SVG wireframe 썸네일 자동 생성 + 카테고리 메타. 프롬프트: `/Users/son7/Projects/tseng-law/CODEX-PROMPT-TEMPLATES-D1.md`. ✅ 완료 (`0658fb2`) |
 | **E1 블로그 디자인** | **Codex (사용자가 별도 실행)** | Blog Manager admin 재디자인 (사이드바/카드 그리드/3컬럼 에디터 레이아웃 메타+에디터+미리보기), Frontmatter 패널 (카테고리/태그/저자/featured/SEO), blog-feed 4 layout (grid/list/masonry/featured-hero) CSS, post card chip/저자/reading time 디자인. 프롬프트: `/Users/son7/Projects/tseng-law/CODEX-PROMPT-BLOG-DESIGN-E1.md`. ⏳ 발주 대기 |
 | **E2 블로그 위젯/어댑터** | **Claude 에이전트** | blog-feed/blog-post-card/blog-categories/blog-archive/featured-posts 5종 신규 kinds + Column → BlogPost adapter + frontmatter schema 확장 (category/tags/author/featured/publishedAt) + columns API GET 메타 포함. ⏳ 진행 중 |
-| **C2 Forms 빌더 (Phase 4)** | **Claude 에이전트** | ✅ 완료 — 4 신규 kinds (form/form-input/form-textarea/form-submit), `isContainerLikeKind()` helper 신규, `/api/forms/submit` (public, rate-limit, honeypot, 시간 trap, Resend optional), Catalog/Layers 패널 통합. 미완: select/checkbox/radio variants, SMTP, hCaptcha. |
+| **C2 Forms 빌더 (Phase 4)** | **Claude 에이전트** | ✅ 완료 — 4 신규 kinds (form/form-input/form-textarea/form-submit), `isContainerLikeKind()` helper 신규, `/api/forms/submit` (public, rate-limit, honeypot, 시간 trap, Resend optional), Catalog/Layers 패널 통합. **2026-04-30 F5 후속**: form-select/form-checkbox/form-radio/form-file/form-date 5종 추가 + conditional runtime + multi-step + submissions manager 완료. 미완: hCaptcha/Turnstile, SMTP. |
 | **C3 Header/Footer 글로벌** | **Claude 에이전트** | ✅ 완료 — `BuilderSiteDocument.headerCanvas/footerCanvas` (lazy seed), 신규 API `/api/builder/site/{header,footer}/draft`, 신규 admin URL `/admin-builder/{header,footer}` (`GlobalCanvasEditor`), public-page에서 `GlobalCanvasSection` 렌더 (없으면 legacy SiteHeader/Footer fallback). 미완: 모바일 반응형 + lightbox 트리거 in 글로벌 캔버스. |
-| **B8 Phase 3 위젯 팩** | **Claude 에이전트** | Divider / Spacer / Icon / VideoEmbed 4종 신규 kind. ✅ 완료. tsc 통과. 부수 발견: registry에 이미 gallery/map/customEmbed/columnCard/columnList/attorneyCard/faqList/contactForm/ctaBanner 9개가 import됐으나 `builderCanvasNodeKinds`/schema에 미등록 (pre-existing gap, 별도 작업 필요). 기존 `video` stub은 보존됨. |
+| **B8 Phase 3 위젯 팩** | **Claude 에이전트** | Divider / Spacer / Icon / VideoEmbed 4종 신규 kind. ✅ 완료. tsc 통과. (이전 부수 발견: registry import 9개 vs schema 미등록 → **2026-05-01 검증 결과 이미 해결됨**, builderCanvasNodeKinds + 전용 schema 모두 등록 완료.) 기존 `video` stub은 보존됨. |
 | **B9 Lightbox/Modal builder** | **Claude 에이전트 (background)** | Site에 lightbox entity 추가, 별도 admin URL, published click trigger (`href=lightbox:slug`). 파일: `site/types.ts` lightboxes, `persistence.ts`, 새 API routes, `LightboxOverlay/Mount`, `public-page.tsx` mount 추가. ⏳ 진행 중 |
 
 **충돌 회피**: 두 트랙이 건드리는 파일 분리됨. Claude는 메뉴/store/group, Codex는 인스펙터/팔레트/폰트.
@@ -102,37 +104,39 @@
 
 ---
 
-## 현재 갭 진단 (2026-04-29 — 사용자 스크린샷 기반)
+## 현재 갭 진단 (2026-05-01 — Wave3 통합 후 재검증)
 
-> **이전 갭 분석(2026-04-28)은 STALE.** 코드 직접 검증 후 재작성된 결론:
+> **이전 갭 분석(2026-04-29)은 부분 STALE.** 코드 직접 검증 후 갱신:
 
-**전체 패리티: ~25~28%** (자유 편집 토대 거의 완성, 디자인/모션/반응형/위젯/vertical apps 큰 비중 미완)
-**"Wix처럼 사용 체감": ~35/100**
+**전체 패리티: ~35~40%** (Wave1+2+3 통합 후. 데이터 모델/Wire는 거의 완성, 사용자 검증/모바일 UI 큰 비중 미완)
+**Wix 체크포인트 점수: 4/225 🟢** (W01, W05, W13, W16). W02–W12, W18–W30 다수가 🟡 WIP — 코드는 있고 사용자 브라우저 클릭 검증 필요.
 
-### 영역별 점수
+### 영역별 점수 (재산정)
 | 영역 | 비율 | 비고 |
 |---|---|---|
-| 자유 캔버스 편집 (drag/resize/select/zoom/pan) | 75% | 거의 완성 |
-| 우클릭 메뉴 | 40% | 17개 액션 있으나 Wix는 30+ |
-| Inspector 3탭 | 70% | Layout/Style/Content + A11y/SEO |
-| Add 패널 | 30% | UI 있으나 위젯 7/70+ |
-| Pages CRUD | 30% | 목록만, 추가/삭제 미구현 |
-| Asset Library | 80% | 모달 완성 |
-| **디자인 시스템** | 70% | 🟡 B3+B6+B7로 ColorPicker/FontPicker/Theme text presets/Hover/Gradient+Image background/Site presets/Button variants/Brand kit/Dark mode 연결 완료. Advanced typography와 Card/Form widget 적용은 남음 |
-| **반응형** | 0% | 🔴 Phase 2 스키마 결정 대기 |
-| **모션** | 35% | 🟡 C1로 entrance/scroll/hover preset + published runtime 시작. Timeline/page transition/loop/Lottie는 미완 |
-| **위젯 라이브러리** | 10% | 🔴 7/70+ |
-| **Vertical Apps** | 0% | 🔴 Bookings/Stores/Blog/Members/etc |
-| **헤더/푸터 편집** | 0% | 🔴 hardcoded TSX |
+| 자유 캔버스 편집 (drag/resize/select/zoom/pan) | 80% | viewport-aware drag/resize (Wave2 B2) + Esc cancel (Wave3 B3). 사용자 검증 대기 |
+| 우클릭 메뉴 | 50% | 17+α 액션. SelectionToolbar(Wave1 B2-6) + LinkPicker(Wave3 C3) 통합 |
+| Inspector 3탭 | 75% | Layout/Style/Content + A11y/SEO + Animations + Theme indicator(Wave1 E1) |
+| Add 패널 | 50% | 위젯 26+종 (form/blog/booking 포함) + Built-in sections 12종 (Wave3 F3) |
+| Pages CRUD | 60% | 목록/추가/삭제/이름변경/템플릿 전부 wired. 사용자 클릭 검증 대기 |
+| Asset Library | 80% | 모달 완성. 폴더/태그/AI 생성은 미완 (G4) |
+| **디자인 시스템** | 75% | 🟡 ColorPicker/FontPicker/Theme presets/Hover/Background/Button variants/Brand kit/Dark mode/Theme indicators(E1) 완료. Advanced typography는 남음 |
+| **반응형** | 35% | 🟡 Wave1 B1 foundation + Wave2 B2 viewport-aware drag/resize + BreakpointSwitcher 동작. **인스펙터 per-viewport override UI / Hide on viewport / fontSize override 미완** (Phase 2 큰 블로커) |
+| **모션** | 35% | 🟡 C1 entrance/scroll/hover preset + IntersectionObserver runtime. Timeline/page transition/loop/Lottie는 미완 |
+| **위젯 라이브러리** | 35% | 🟡 26+종 (B8 4 + 9 pre-existing + Forms 9 + Blog 5 + Booking 1 + Sections 12 등). 70+ 목표 대비 절반 |
+| **Vertical Apps** | 15% | 🟡 Bookings (services/staff/calendar/availability) admin foundation 완료. Stores/Members/Events/Plans 미시작 |
+| **헤더/푸터 편집** | 50% | 🟡 GlobalCanvasEditor route 동작. **모바일 반응형 + lightbox trigger 미완** |
+| **퍼블리시 인프라** | 70% | 🟢 Publish CAS / immutable revision pointer / 409/422/500 분기 (Wave3 A3) + Audit log (D3) |
+| **다국어** | 60% | 🟡 ko/zh-hant/en + Translation Manager + AI translate API (F4) |
 
-### Wix에 있고 우리에게 없는 것 (사용자가 못 봤던 것들)
-- 디자인 시스템: advanced typography, card/form variant widget 적용, style override visualizer
-- 우클릭: Animations/Effects/Hide on viewport/Pin to screen/Move to page/Save section/Group/Match size/Distribute
-- 모션: entrance/scroll/hover/page transition/Lottie
-- 반응형: per-viewport rect, hide on device
-- 위젯: Strip/Slider/Gallery/Form/Lightbox/Video/Audio/Anchor menu/Vector
-- Vertical: Bookings/Stores/Blog/Members/Events/Plans/Groups/Portfolio/Forms
-- 운영: 글로벌 헤더/푸터, Pages CRUD, Site search, Multilingual content sync, Velo, App Market
+### Wix에 있고 우리에게 (아직) 없는 것 — 2026-05-01 재정리
+- **반응형 인스펙터 UI**: Hide on viewport / per-viewport fontSize override / mobile-only padding 등 (Phase 2 블로커, 6–8h)
+- **헤더/푸터 글로벌**: 모바일 햄버거 자동 변환 + 모바일 sticky + lightbox trigger
+- **모션 고도화**: timeline editor, exit animation, loop, Lottie, page transition (H1)
+- **위젯 missing 30+**: Strip/Slider/Audio/Anchor menu/Vector/Repeater/Pricing table 등
+- **Vertical Apps 미시작**: Stores/Members/Events/Plans/Groups/Portfolio (G2~)
+- **운영 인프라**: Site Search(H5), Live Chat(H2), CRM(H3), Email Marketing(H4), Analytics(H7), Publish gate(H8)
+- **Velo / App Market**: 장기 (P3)
 
 ---
 
@@ -336,3 +340,47 @@
 - 2026-05-01 Wave3 B3 Esc cancel 완료: drag/resize Esc capture cancel 및 rotate transient/cancel 적용; lint/diff-check 통과, typecheck/build는 동시 작업 타입 오류, smoke는 admin-builder timeout/columns 500로 차단.
 - 2026-05-01 Wave3 D3 audit log 완료: JSONL audit store/record/test, asset/publish/rollback/column route audit 기록, admin audit API 적용; 통합 typecheck/lint/test:unit/security/build/smoke 통과.
 - 2026-05-01 Wave3 통합 검증 완료: git diff --check, typecheck, lint, test:unit(364), security:builder-routes, build, warmed smoke 6/6 통과.
+
+---
+
+## 2026-05-01 Claude 디자인 트랙 (사용자 지시: "다른 AI 디자인팀 + 너는 경쟁팀 디자인 팀장")
+
+> Codex가 만진 영역(F1 BreakpointSwitcher, B3/B6/B7, D1, E1) 충돌 회피하고 빈 영역 직접 디자인.
+
+### W40 Mobile Preview Modal 신규 — 디자인+기능 직접 작성
+- **신규 파일**: `src/components/builder/canvas/PreviewModal.tsx`
+  - `DEVICES` 스펙: desktop 1280×800, tablet 768×1024 (베젤 14, 라디우스 28), mobile 390×780 (베젤 12, 라디우스 44, notch + home indicator)
+  - **DeviceFrame 컴포넌트**: desktop은 traffic lights (red/amber/green dot) + browser chrome, tablet/mobile은 검은 베젤 + 둥근 모서리 + (mobile) iPhone notch + home indicator
+  - 자동 stage scale 계산 (window 86%/70% 기준), 새로고침/새 탭/Esc 닫기, ⌘R 단축키
+  - inline style 기반(다른 모달 패턴 일관), `<style>` 블록으로 `previewBackdropIn`/`previewShellIn` keyframe + device button hover/pressed
+- **wiring**:
+  - `SandboxTopBar.tsx` 미리보기 버튼 stub → `onOpenPreview` prop, 👁 아이콘 추가
+  - `SandboxPage.tsx` `previewOpen` state + `<PreviewModal>` mount, `previewUrl=buildSitePagePath(locale, currentSlug)`, `initialDevice=viewport`
+- 결과: TopBar 미리보기 클릭 → 디바이스 프레임 모달 → desktop/tablet/mobile 토글 + 실제 published page iframe. **W40 검증 대기** (Wix 체크포인트 5/225 가능).
+
+### W38 Show on Desktop/Tablet/Mobile 3 토글 묶음 — 인스펙터 UI 직접 디자인
+- **변경 파일**: `src/components/builder/canvas/SandboxInspectorPanel.tsx`
+  - 신규 `ShowOnDeviceToggles` 컴포넌트: 디바이스 아이콘+단축자 칩 3개. 클릭 토글:
+    - desktop → `node.visible` (base)
+    - tablet/mobile → `responsive.<vp>.hidden` override
+  - 시각: 활성 viewport는 파란 그라데이션 + 진한 보더로 강조, hidden 상태는 회색 + 대각선 strikethrough 오버레이
+  - 기존 `Hide on {viewport}` 단일 토글 제거, 대신 **항상 3 토글 표시 + 현재 viewport에서 hidden일 때 ⚠ 경고 라인**
+- 결과: 데스크톱 모드에서도 모바일 hidden 상태를 한눈에 보고 토글. **W38 검증 대기** (W17/W33도 같이 green 가능).
+
+### 검증
+- typecheck ✅, lint ✅(기존 `<img>` warning만, 신규 깨끗), test:unit ✅(364), security ✅(56), build ✅
+- dev 서버 3001 reload — admin-builder 200 + Compiled in 60-180ms (823~1906 modules)
+
+### 충돌 회피 노트
+- Codex F1 BreakpointSwitcher 그대로 유지 (TopBar의 viewport 토글은 캔버스 모드 전환용, 미리보기는 별도 모달)
+- B3/B6/B7 디자인 시스템 토큰(#0f172a/#f1f5f9/#e2e8f0/#cbd5e1) 그대로 따름
+- 신규 모달 z-index 10100 (기존 ShortcutsHelpModal과 동일 레이어)
+- 2026-05-01 D-POOL Wave (디자인 6트랙 병렬 발주, in-progress): Claude 메인이 사용자 "디자인 팀 총괄" 지시 받아 6개 design specialist agent 병렬 발주. 각자 영역 충돌 없이 자기 슬라이스의 Codex 프롬프트 마크다운 산출:
+  - D-POOL-1 Editor Shell Visual System (SandboxPage chrome / TopBar / Catalog·Layers / density 토큰)
+  - D-POOL-2 Canvas Direct-Manipulation Polish (Drag ghost / Resize px readout / Multi-select bbox / Snap distance label / Zoom-invariant overlay)
+  - D-POOL-3 Inspector + SelectionToolbar + ContextMenu Cluster (3탭 + InspectorControls primitives + 30+ 액션 메뉴)
+  - D-POOL-4 Modal·Gallery·Settings System (ModalShell 통일 + SiteSettings 6탭 + 실제 템플릿 썸네일 렌더러)
+  - D-POOL-5 ColorPicker·FontPicker Advanced (EyeDropper / WCAG / Recent / Google Fonts 검색)
+  - D-POOL-6 Public Widget Visual Polish (BlogPostCard·BlogFeed 4 layout · Button 8 variants · BookingFlowSteps · Forms · FAQ · Columns + widget-tokens)
+  - 산출 파일: `CODEX-PROMPT-DESIGN-POOL-{1~6}-*.md` 6개. 사용자가 Codex로 순차/병렬 dispatch 가능.
+- 2026-05-01 D-POOL completed prompt follow-up: 완료 보고된 D-POOL 인덱스 기준으로 Canvas direct manipulation/selection UI 디자인 직접 반영. Multi-selection bbox, move/resize readout, selection toolbar visual refresh, context menu density polish 적용; typecheck/lint 통과.

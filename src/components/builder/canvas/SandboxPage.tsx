@@ -5,6 +5,7 @@ import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import CanvasContainer from '@/components/builder/canvas/CanvasContainer';
 import NavigationEditor from '@/components/builder/canvas/NavigationEditor';
 import PageSwitcher from '@/components/builder/canvas/PageSwitcher';
+import PreviewModal from '@/components/builder/canvas/PreviewModal';
 import PublishModal from '@/components/builder/canvas/PublishModal';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
@@ -168,6 +169,7 @@ export default function SandboxPage({
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
   const [helpOpen, setHelpOpen] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
   const [movePickerNodeIds, setMovePickerNodeIds] = useState<string[] | null>(null);
   const [saveSectionPayload, setSaveSectionPayload] = useState<SaveSectionPayload | null>(null);
   const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
@@ -357,6 +359,15 @@ export default function SandboxPage({
           name: lightbox.name,
         })),
     [locale, siteLightboxes],
+  );
+  const linkPickerSitePages = useMemo(
+    () =>
+      sitePagesState.map((page) => ({
+        path: page.isHomePage ? `/${locale}` : `/${locale}/${page.slug}`,
+        title: page.isHomePage ? 'Home' : page.slug,
+        slug: page.slug,
+      })),
+    [sitePagesState, locale],
   );
   const hasSelection = selectedNodeIds.length > 0;
   const assetLibraryNode = useMemo(
@@ -597,6 +608,7 @@ export default function SandboxPage({
         onOpenSeo={() => setSeoOpen(true)}
         onOpenSettings={() => setSettingsOpen(true)}
         onOpenHistory={() => setHistoryOpen(true)}
+        onOpenPreview={() => setPreviewOpen(true)}
         activePageId={activePageId}
         onLocaleChange={handleLocaleChange}
       />
@@ -783,6 +795,7 @@ export default function SandboxPage({
               }}
               onToast={pushToast}
               siteLightboxes={linkPickerLightboxes}
+              sitePages={linkPickerSitePages}
             />
           </div>
           {siteName ? (
@@ -806,6 +819,7 @@ export default function SandboxPage({
                 }
               }}
               siteLightboxes={linkPickerLightboxes}
+              sitePages={linkPickerSitePages}
             />
           ) : null}
         </div>
@@ -861,6 +875,13 @@ export default function SandboxPage({
         />
 
         {helpOpen ? <ShortcutsHelpModal onClose={() => setHelpOpen(false)} /> : null}
+
+        <PreviewModal
+          open={previewOpen}
+          onClose={() => setPreviewOpen(false)}
+          previewUrl={previewOpen ? buildSitePagePath(locale, currentSlugState ?? '') : null}
+          initialDevice={viewport === 'mobile' ? 'mobile' : viewport === 'tablet' ? 'tablet' : 'desktop'}
+        />
 
         {saveSectionPayload ? (
           <SaveSectionModal

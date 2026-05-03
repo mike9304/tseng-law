@@ -187,6 +187,133 @@ function LayoutField({
   );
 }
 
+type ViewportLite = 'desktop' | 'tablet' | 'mobile';
+
+const DEVICE_META: Array<{ vp: ViewportLite; icon: string; short: string; label: string }> = [
+  { vp: 'desktop', icon: '🖥', short: 'D', label: 'Desktop' },
+  { vp: 'tablet', icon: '⬜', short: 'T', label: 'Tablet' },
+  { vp: 'mobile', icon: '▯', short: 'M', label: 'Mobile' },
+];
+
+function ShowOnDeviceToggles({
+  node,
+  updateNode,
+  updateResponsiveOverride,
+  activeViewport,
+}: {
+  node: BuilderCanvasNode;
+  updateNode: (id: string, updater: (node: BuilderCanvasNode) => BuilderCanvasNode) => void;
+  updateResponsiveOverride: (
+    id: string,
+    viewport: 'tablet' | 'mobile',
+    patch: { hidden?: boolean | undefined },
+  ) => void;
+  activeViewport: ViewportLite;
+}) {
+  const disabled = node.locked;
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 10,
+        marginTop: 12,
+        padding: '8px 10px',
+        borderRadius: 10,
+        background: 'linear-gradient(180deg, #f8fafc, #f1f5f9)',
+        border: '1px solid #e2e8f0',
+      }}
+    >
+      <span
+        style={{
+          fontSize: '0.72rem',
+          fontWeight: 700,
+          color: '#475569',
+          letterSpacing: '0.04em',
+          textTransform: 'uppercase',
+        }}
+      >
+        Show on
+      </span>
+      <div style={{ display: 'flex', gap: 4, marginLeft: 'auto' }}>
+        {DEVICE_META.map(({ vp, icon, short, label }) => {
+          const visible = vp === 'desktop'
+            ? Boolean(node.visible)
+            : !resolveViewportHidden(node, vp);
+          const isActiveVp = activeViewport === vp;
+          return (
+            <button
+              key={vp}
+              type="button"
+              aria-pressed={visible}
+              aria-label={`${label}에서 ${visible ? '보임' : '숨김'} (클릭하여 토글)`}
+              title={`${label} · ${visible ? '보임' : '숨김'}\n클릭하여 토글${isActiveVp ? ' (현재 편집 중)' : ''}`}
+              disabled={disabled}
+              onClick={() => {
+                if (vp === 'desktop') {
+                  updateNode(node.id, (n) => ({ ...n, visible: !visible }));
+                  return;
+                }
+                updateResponsiveOverride(node.id, vp, {
+                  hidden: visible ? true : undefined,
+                });
+              }}
+              style={{
+                position: 'relative',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 4,
+                padding: '5px 9px',
+                borderRadius: 8,
+                border: visible
+                  ? `1px solid ${isActiveVp ? '#1d4ed8' : '#cbd5e1'}`
+                  : '1px solid #e2e8f0',
+                background: visible
+                  ? (isActiveVp ? 'linear-gradient(180deg, #dbeafe, #bfdbfe)' : '#fff')
+                  : '#f1f5f9',
+                color: visible ? (isActiveVp ? '#1e3a8a' : '#0f172a') : '#94a3b8',
+                cursor: disabled ? 'not-allowed' : 'pointer',
+                opacity: disabled ? 0.55 : 1,
+                fontSize: '0.74rem',
+                fontWeight: 600,
+                lineHeight: 1,
+                transition: 'all 120ms ease',
+                boxShadow: visible && isActiveVp ? '0 1px 0 rgba(29,78,216,0.18)' : 'none',
+              }}
+            >
+              <span aria-hidden style={{ fontSize: '0.85rem' }}>{icon}</span>
+              <span>{short}</span>
+              {!visible ? (
+                <span
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    pointerEvents: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <span
+                    style={{
+                      width: '85%',
+                      height: 1,
+                      background: '#94a3b8',
+                      transform: 'rotate(-12deg)',
+                      transformOrigin: 'center',
+                    }}
+                  />
+                </span>
+              ) : null}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function updateRectField(
   node: BuilderCanvasNode,
   field: 'x' | 'y' | 'width' | 'height',
@@ -300,9 +427,11 @@ function renderCompositeSurfaceEditor({
 export default function SandboxInspectorPanel({
   onRequestAssetLibrary,
   siteLightboxes = [],
+  sitePages = [],
 }: {
   onRequestAssetLibrary: () => void;
   siteLightboxes?: LinkPickerContext['siteLightboxes'];
+  sitePages?: LinkPickerContext['sitePages'];
 }) {
   const {
     document,
@@ -340,8 +469,9 @@ export default function SandboxInspectorPanel({
         .map((node) => node.anchorName)
         .filter((anchorName): anchorName is string => Boolean(anchorName)),
       siteLightboxes,
+      sitePages,
     }),
-    [document?.nodes, siteLightboxes],
+    [document?.nodes, siteLightboxes, sitePages],
   );
 
   const updateSeoField = useCallback(
@@ -599,20 +729,23 @@ export default function SandboxInspectorPanel({
                             hasOverride={fieldHasOverride}
                           />
                         </div>
-                        {isViewportOverride ? (
-                          <label className={styles.inspectorToggle} style={{ marginTop: 8 }}>
-                            <input
-                              type="checkbox"
-                              checked={isHiddenAtVp}
-                              disabled={selectedNode.locked}
-                              onChange={(event) => {
-                                updateResponsiveOverride(selectedNode.id, viewport, {
-                                  hidden: event.target.checked || undefined,
-                                });
-                              }}
-                            />
-                            <span>Hide on {viewport}</span>
-                          </label>
+                        <ShowOnDeviceToggles
+                          node={selectedNode}
+                          updateNode={updateNode}
+                          updateResponsiveOverride={updateResponsiveOverride}
+                          activeViewport={viewport}
+                        />
+                        {isViewportOverride && isHiddenAtVp ? (
+                          <p
+                            style={{
+                              margin: '6px 2px 0',
+                              fontSize: '0.72rem',
+                              color: '#b45309',
+                              fontWeight: 500,
+                            }}
+                          >
+                            ⚠ {viewport}에서 숨김 처리되어 캔버스/미리보기에서 보이지 않습니다.
+                          </p>
                         ) : null}
                       </>
                     );

@@ -31,6 +31,7 @@ export default function SandboxTopBar({
   onOpenSeo,
   onOpenSettings,
   onOpenHistory,
+  onOpenPreview,
   activePageId,
   onLocaleChange,
 }: {
@@ -46,6 +47,7 @@ export default function SandboxTopBar({
   onOpenSeo?: () => void;
   onOpenSettings?: () => void;
   onOpenHistory?: () => void;
+  onOpenPreview?: () => void;
   activePageId?: string | null;
   onLocaleChange?: (locale: Locale, linkedPageId: string | null) => void;
 }) {
@@ -134,7 +136,23 @@ export default function SandboxTopBar({
             히스토리
           </button>
         )}
-        <button type="button" className={styles.topBarChip} title="미리보기" style={{ cursor: 'pointer' }}>미리보기</button>
+        <button
+          type="button"
+          className={styles.topBarChip}
+          title="미리보기 (디바이스 프레임)"
+          style={{
+            cursor: onOpenPreview ? 'pointer' : 'not-allowed',
+            opacity: onOpenPreview ? 1 : 0.5,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 4,
+          }}
+          disabled={!onOpenPreview}
+          onClick={onOpenPreview}
+        >
+          <span aria-hidden style={{ fontSize: '0.85rem' }}>👁</span>
+          <span>미리보기</span>
+        </button>
         <button
           type="button"
           className={styles.topBarChip}

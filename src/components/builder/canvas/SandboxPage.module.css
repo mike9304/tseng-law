@@ -988,6 +988,73 @@
   z-index: 2;
 }
 
+.multiSelectionBox {
+  position: absolute;
+  border: 1px solid rgba(17, 109, 255, 0.86);
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(17, 109, 255, 0.08), rgba(17, 109, 255, 0.02)),
+    repeating-linear-gradient(45deg, rgba(17, 109, 255, 0.08) 0 1px, transparent 1px 8px);
+  box-shadow:
+    0 0 0 1px rgba(191, 219, 254, 0.9),
+    0 18px 40px rgba(15, 23, 42, 0.12);
+  pointer-events: none;
+  z-index: 6;
+}
+
+.multiSelectionBadge {
+  position: absolute;
+  top: -32px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  max-width: min(360px, 80vw);
+  padding: 0 0.65rem;
+  overflow: hidden;
+  border: 1px solid rgba(191, 219, 254, 0.6);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.2);
+  color: #eff6ff;
+  font-size: 0.68rem;
+  font-weight: 850;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.canvasInteractionReadout {
+  position: absolute;
+  z-index: 9998;
+  display: grid;
+  min-width: 92px;
+  gap: 2px;
+  padding: 0.34rem 0.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.92);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.24);
+  color: #f8fafc;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.canvasInteractionReadout strong {
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.canvasInteractionReadout span {
+  color: #bfdbfe;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
 .canvasToolbar {
   position: absolute;
   top: 1rem;
@@ -1048,15 +1115,21 @@
 
 .contextMenu {
   position: absolute;
-  min-width: 220px;
-  border-radius: 16px;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18);
-  padding: 0.8rem;
+  width: 268px;
+  max-height: min(520px, calc(100vh - 40px));
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  padding: 0.55rem;
   z-index: 20;
   animation: modalScaleIn 180ms ease;
+}
+
+.contextMenuHeader {
+  padding: 0.3rem 0.35rem 0.45rem;
 }
 
 .contextMenuHeader span {
@@ -1079,27 +1152,34 @@
 
 .contextMenuActions {
   display: grid;
-  gap: 0.45rem;
-  margin-top: 0.75rem;
+  gap: 0.18rem;
+  max-height: 430px;
+  margin-top: 0.2rem;
+  overflow: auto;
+  padding-right: 0.1rem;
 }
 
 .contextMenuAction {
-  min-height: 40px;
-  border-radius: 12px;
-  border: 1px solid #dbe2ea;
-  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 34px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  background: transparent;
   color: #0f172a;
-  font-size: 0.84rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-align: left;
-  padding: 0.55rem 0.75rem;
+  padding: 0.38rem 0.48rem;
   transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
   cursor: pointer;
 }
 
 .contextMenuAction:hover:not(:disabled) {
-  background: #f1f5f9;
-  border-color: #93c5fd;
+  background: #eff6ff;
+  border-color: rgba(147, 197, 253, 0.74);
+  color: #1d4ed8;
 }
 
 .contextMenuAction:active:not(:disabled) {
@@ -1242,20 +1322,21 @@
 
 .node {
   position: absolute;
-  border-radius: 14px;
   cursor: move;
   touch-action: none;
   transition: box-shadow 150ms ease, transform 150ms ease, opacity 150ms ease;
 }
 
 .node:hover:not(.nodeSelected) {
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35), 0 12px 28px rgba(15, 23, 42, 0.08);
+  outline: 1px solid rgba(17, 109, 255, 0.72);
+  outline-offset: 0;
+  box-shadow: 0 0 0 1px rgba(191, 219, 254, 0.28);
 }
 
 .nodeSelected {
-  outline: 1px solid #116dff;
-  outline-offset: 2px;
-  box-shadow: 0 0 0 1px #116dff, 0 8px 24px rgba(17, 109, 255, 0.12);
+  outline: 2px solid #116dff;
+  outline-offset: 0;
+  box-shadow: 0 0 0 1px rgba(17, 109, 255, 0.22);
 }
 
 .dragGhost {
@@ -1279,20 +1360,26 @@
 
 .nodeBadge {
   position: absolute;
-  top: -28px;
+  top: -25px;
   left: 0;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  min-height: 22px;
-  padding: 0.15rem 0.55rem;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.88);
+  gap: 0.22rem;
+  min-height: 20px;
+  max-width: min(320px, calc(100vw - 80px));
+  padding: 0.1rem 0.45rem;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #116dff;
   color: #fff;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
   pointer-events: none;
-  z-index: 3;
+  z-index: 5;
   opacity: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   transition: opacity 120ms ease;
 }
 
@@ -1302,19 +1389,15 @@
 }
 
 .nodeBadge span {
-  text-transform: uppercase;
-  opacity: 0.72;
+  text-transform: lowercase;
+  opacity: 0.95;
 }
 
 .nodeBadge strong {
-  display: none;
-  font-weight: 600;
-  font-size: 0.62rem;
-  opacity: 0.85;
-}
-
-.nodeSelected > .nodeBadge strong {
   display: inline;
+  font-weight: 700;
+  font-size: 0.66rem;
+  opacity: 0.95;
 }
 
 .nodeBadge em {
@@ -1334,46 +1417,67 @@
 
 .resizeHandle {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 2px;
-  border: 1.5px solid #ffffff;
-  background: #116dff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #0f172a;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #116dff, 0 1px 3px rgba(15, 23, 42, 0.18);
   transition: transform 150ms ease, box-shadow 150ms ease;
-  z-index: 3;
+  z-index: 5;
 }
 
 .resizeHandle:hover {
-  transform: scale(1.3);
-  box-shadow: 0 2px 6px rgba(17, 109, 255, 0.3);
+  transform: scale(1.12);
+  box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.22), 0 2px 6px rgba(15, 23, 42, 0.18);
 }
 
-.resizeHandle:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.22);
-}
-
-.resizeHandleNW { top: -7px; left: -7px; cursor: nwse-resize; }
-.resizeHandleN { top: -7px; left: calc(50% - 7px); cursor: ns-resize; }
-.resizeHandleNE { top: -7px; right: -7px; cursor: nesw-resize; }
-.resizeHandleE { top: calc(50% - 7px); right: -7px; cursor: ew-resize; }
-.resizeHandleS { bottom: -7px; left: calc(50% - 7px); cursor: ns-resize; }
-.resizeHandleSW { bottom: -7px; left: -7px; cursor: nesw-resize; }
-.resizeHandleW { top: calc(50% - 7px); left: -7px; cursor: ew-resize; }
-.resizeHandleSE { bottom: -7px; right: -7px; cursor: nwse-resize; }
+.resizeHandleNW { top: -5px; left: -5px; cursor: nwse-resize; }
+.resizeHandleN { top: -5px; left: calc(50% - 4.5px); cursor: ns-resize; }
+.resizeHandleNE { top: -5px; right: -5px; cursor: nesw-resize; }
+.resizeHandleE { top: calc(50% - 4.5px); right: -5px; cursor: ew-resize; }
+.resizeHandleS { bottom: -5px; left: calc(50% - 4.5px); cursor: ns-resize; }
+.resizeHandleSW { bottom: -5px; left: -5px; cursor: nesw-resize; }
+.resizeHandleW { top: calc(50% - 4.5px); left: -5px; cursor: ew-resize; }
+.resizeHandleSE { bottom: -5px; right: -5px; cursor: nwse-resize; }
 
 .rotationHandle {
   position: absolute;
-  top: -28px;
+  top: -39px;
   left: 50%;
   transform: translateX(-50%);
-  width: 8px;
-  height: 8px;
+  width: 17px;
+  height: 23px;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  z-index: 5;
+}
+
+.rotationHandle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #0f172a;
+  border-radius: 50% 50% 50% 0;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #116dff, 0 2px 5px rgba(15, 23, 42, 0.18);
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.rotationHandle::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
   background: #116dff;
-  cursor: grab;
-  z-index: 3;
+  transform: translateX(-50%);
 }
 
 .rotationHandle:active {
@@ -1382,12 +1486,13 @@
 
 .rotationLine {
   position: absolute;
-  top: -20px;
+  top: -28px;
   left: 50%;
   width: 1px;
-  height: 20px;
+  height: 28px;
   background: #116dff;
   pointer-events: none;
+  z-index: 4;
 }
 
 .inspectorPlaceholder {
@@ -1894,20 +1999,42 @@
 /* D-04: Size label on selected node */
 .nodeSizeLabel {
   position: absolute;
-  bottom: -24px;
-  right: 0;
+  bottom: -26px;
+  left: 0;
   display: inline-flex;
   align-items: center;
-  min-height: 20px;
-  padding: 0.1rem 0.45rem;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.88);
+  min-height: 21px;
+  max-width: min(320px, calc(100vw - 80px));
+  padding: 0.1rem 0.5rem;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #116dff;
   color: #fff;
-  font-size: 0.64rem;
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
   font-weight: 700;
   pointer-events: none;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  z-index: 3;
+  z-index: 5;
+}
+
+.rotationReadout {
+  position: absolute;
+  z-index: 6;
+  min-width: 46px;
+  padding: 0.28rem 0.44rem;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.92);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.24);
+  color: #f8fafc;
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 850;
+  line-height: 1;
+  pointer-events: none;
+  text-align: center;
 }
 
 .alignToolbar {

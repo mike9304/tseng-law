@@ -292,6 +292,64 @@ const nodes: BuilderCanvasNode[] = assignCanvasNodeZIndices([
     color: '#374151',
     lineHeight: 1.5,
   }),
+  /* ── Wix-grade expansion scaffold ───────────────────────────────────── */
+  createContainerNode({
+    id: 'tpl-travelhome-wix-proof', rect: { x: 64, y: STAGE_H + 40, width: 1152, height: 520 }, background: '#f8fafc', borderColor: '#dbe4ee', borderWidth: 1, borderRadius: 22, padding: 0, className: 'split-text',
+  }),
+  createContainerNode({
+    id: 'tpl-travelhome-wix-showcase', rect: { x: 64, y: STAGE_H + 620, width: 1152, height: 560 }, background: '#ffffff', borderColor: '#dbe4ee', borderWidth: 1, borderRadius: 22, padding: 0, className: 'office-card',
+  }),
+  createContainerNode({
+    id: 'tpl-travelhome-wix-cta', rect: { x: 64, y: STAGE_H + 1240, width: 1152, height: 600 }, background: '#123b63', borderColor: '#123b63', borderWidth: 1, borderRadius: 22, padding: 0, className: 'services-detail-card',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-proof-label', parentId: 'tpl-travelhome-wix-proof', rect: { x: 56, y: 48, width: 260, height: 28 }, text: 'Wix-grade proof system', fontSize: 13, color: '#1e5a96', fontWeight: 'bold', textTransform: 'uppercase', className: 'section-label',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-proof-title', parentId: 'tpl-travelhome-wix-proof', rect: { x: 56, y: 92, width: 560, height: 82 }, text: 'travel home 페이지의 핵심 신뢰 요소를 한눈에 보여줍니다', fontSize: 36, color: '#123b63', fontWeight: 'bold', lineHeight: 1.16, className: 'hero-title',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-proof-copy', parentId: 'tpl-travelhome-wix-proof', rect: { x: 56, y: 190, width: 540, height: 64 }, text: '서비스 가치, 성과 지표, 다음 행동을 분리해 방문자가 빠르게 판단할 수 있는 풍부한 페이지 흐름을 만듭니다.', fontSize: 17, color: '#475569', lineHeight: 1.55, className: 'hero-subtitle',
+  }),
+  createContainerNode({
+    id: 'tpl-travelhome-wix-metric-1', parentId: 'tpl-travelhome-wix-proof', rect: { x: 56, y: 310, width: 230, height: 130 }, background: '#ffffff', borderColor: '#dbe4ee', borderWidth: 1, borderRadius: 22, padding: 0, className: 'stat-card',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-metric-1-value', parentId: 'tpl-travelhome-wix-metric-1', rect: { x: 22, y: 22, width: 140, height: 42 }, text: '4.9', fontSize: 34, color: '#123b63', fontWeight: 'bold', className: 'card-title',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-metric-1-label', parentId: 'tpl-travelhome-wix-metric-1', rect: { x: 22, y: 76, width: 168, height: 42 }, text: '고객 평가와 재방문 신뢰 지표', fontSize: 14, color: '#64748b', lineHeight: 1.35, className: 'card-copy',
+  }),
+  createContainerNode({
+    id: 'tpl-travelhome-wix-metric-2', parentId: 'tpl-travelhome-wix-proof', rect: { x: 310, y: 310, width: 230, height: 130 }, background: '#ffffff', borderColor: '#dbe4ee', borderWidth: 1, borderRadius: 22, padding: 0, className: 'stat-card',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-metric-2-value', parentId: 'tpl-travelhome-wix-metric-2', rect: { x: 22, y: 22, width: 140, height: 42 }, text: '24h', fontSize: 34, color: '#1e5a96', fontWeight: 'bold', className: 'card-title',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-metric-2-label', parentId: 'tpl-travelhome-wix-metric-2', rect: { x: 22, y: 76, width: 168, height: 42 }, text: '초기 문의와 예약 흐름을 빠르게 연결', fontSize: 14, color: '#64748b', lineHeight: 1.35, className: 'card-copy',
+  }),
+  createContainerNode({
+    id: 'tpl-travelhome-wix-metric-3', parentId: 'tpl-travelhome-wix-proof', rect: { x: 650, y: 70, width: 210, height: 150 }, background: '#eff6ff', borderColor: '#dbe4ee', borderWidth: 1, borderRadius: 22, padding: 0, className: 'stat-card',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-metric-3-value', parentId: 'tpl-travelhome-wix-metric-3', rect: { x: 22, y: 22, width: 140, height: 42 }, text: '6+', fontSize: 34, color: '#123b63', fontWeight: 'bold', className: 'card-title',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-metric-3-label', parentId: 'tpl-travelhome-wix-metric-3', rect: { x: 22, y: 76, width: 168, height: 42 }, text: '섹션 단위 정보 구조로 풍부도 강화', fontSize: 14, color: '#64748b', lineHeight: 1.35, className: 'card-copy',
+  }),
+  createContainerNode({
+    id: 'tpl-travelhome-wix-metric-4', parentId: 'tpl-travelhome-wix-proof', rect: { x: 884, y: 70, width: 210, height: 150 }, background: '#fff7ed', borderColor: '#dbe4ee', borderWidth: 1, borderRadius: 22, padding: 0, className: 'stat-card',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-metric-4-value', parentId: 'tpl-travelhome-wix-metric-4', rect: { x: 22, y: 22, width: 140, height: 42 }, text: '3x', fontSize: 34, color: '#e8a838', fontWeight: 'bold', className: 'card-title',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-metric-4-label', parentId: 'tpl-travelhome-wix-metric-4', rect: { x: 22, y: 76, width: 168, height: 42 }, text: 'CTA, proof, showcase 접점을 반복 배치', fontSize: 14, color: '#64748b', lineHeight: 1.35, className: 'card-copy',
+  }),
+  createTextNode({
+    id: 'tpl-travelhome-wix-showcase-label', parentId: 'tpl-travelhome-wix-showcase', rect: { x: 56, y: 48, width: 240, height: 28 }, text: 'Showcase module', fontSize: 13, color: '#1e5a96', fontWeight: 'bold', textTransform: 'uppercase', className: 'section-label',
+  }),
 ]);
 
 export const travelHomeTemplate: PageTemplate = {
@@ -306,7 +364,7 @@ export const travelHomeTemplate: PageTemplate = {
     updatedAt: '2026-04-15T00:00:00+09:00',
     updatedBy: 'template-system',
     stageWidth: W,
-    stageHeight: STAGE_H,
+    stageHeight: STAGE_H + 1960,
     nodes,
   },
 };

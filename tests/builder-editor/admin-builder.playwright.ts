@@ -7,20 +7,40 @@ function isIgnoredBrowserError(message: string): boolean {
 }
 
 async function firstVisibleNode(page: Page): Promise<Locator> {
-  const preferred = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();
-  const hasPreferredNode = (await preferred.count()) > 0;
-  const node = hasPreferredNode ? preferred : page.locator('[data-node-id]:visible').first();
-  await expect(node).toBeVisible();
-  return node;
+  const candidates = [
+    page.locator('[data-node-id="home-hero-subtitle"]:visible').first(),
+    page.locator('[data-node-id*="subtitle"]:visible').first(),
+    page.locator('[data-node-id*="title"]:visible').first(),
+    page.locator('[data-node-id*="copy"]:visible').first(),
+    page.locator('[data-node-id]:visible').first(),
+  ];
+  for (const candidate of candidates) {
+    if ((await candidate.count()) > 0) {
+      await expect(candidate).toBeVisible();
+      return candidate;
+    }
+  }
+  const fallback = page.locator('[data-node-id]:visible').first();
+  await expect(fallback).toBeVisible();
+  return fallback;
+}
+
+async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Locator> {
+  const selectedNode = node ?? page
+    .locator('[class*="nodeSelected"][data-node-id]:visible')
+    .filter({ has: page.locator('[class*="rotationHandle"]') })
+    .last();
+  await expect(selectedNode).toBeVisible();
+  await expect(selectedNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
+  await expect(selectedNode.locator('[class*="rotationHandle"]').first()).toBeVisible();
+  await expect(selectedNode.locator('[class*="nodeSizeLabel"]').first()).toContainText(/·/);
+  return selectedNode;
 }
 
 async function selectFirstNode(page: Page): Promise<Locator> {
   const node = await firstVisibleNode(page);
   await node.click({ position: { x: 12, y: 12 }, force: true });
-  await expect(page.locator('[class*="resizeHandle"]')).toHaveCount(8);
-  await expect(page.locator('[class*="rotationHandle"]').first()).toBeVisible();
-  await expect(page.locator('[class*="nodeSizeLabel"]').first()).toContainText(/·/);
-  return node;
+  return expectSelectedNodeHandles(page);
 }
 
 async function closeModalOverlayIfPresent(page: Page): Promise<void> {
@@ -57,6 +77,18 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     } else {
       expect(shellHtml, 'dev editor shell should still include Next app chunks').toContain('/_next/static/chunks/');
     }
+    const columnsResponse = await page.request.get('/api/builder/columns?locale=ko');
+    expect(columnsResponse.status()).toBe(200);
+    const columnsPayload = (await columnsResponse.json()) as {
+      columns?: Array<{ slug: string }>;
+    };
+    expect(columnsPayload.columns?.length ?? 0).toBeGreaterThan(0);
+    const firstColumnSlug = columnsPayload.columns?.[0]?.slug;
+    expect(firstColumnSlug).toBeTruthy();
+    const firstColumnEditorResponse = await page.request.get(
+      `/ko/admin-builder/columns/${encodeURIComponent(firstColumnSlug || '')}/edit`,
+    );
+    expect(firstColumnEditorResponse.status()).toBe(200);
 
     const browserErrors: string[] = [];
     page.on('console', (message) => {
@@ -122,6 +154,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByText('Basic')).toBeVisible();
 
     await rail.getByRole('button', { name: 'Columns', exact: true }).click();
+    await expect(page.getByText('Open columns page')).toBeVisible();
     await expect(page.getByText('Open columns admin')).toBeVisible();
     await expect(page.getByText('View public columns')).toBeVisible();
 
@@ -151,18 +184,20 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByText(/Undid:/)).toBeVisible();
 
     await page.keyboard.press(`${shortcutModifier}+C`);
-    await page.getByTitle('Pages').first().click();
+    await rail.getByRole('button', { name: 'Pages', exact: true }).click();
     await expect(page.getByText('1개 요소 클립보드')).toBeVisible();
     const pagesDrawerForPaste = page.locator('[aria-hidden="false"]').first();
     await pagesDrawerForPaste.getByRole('button', { name: /호정 소개|About Hovering/ }).first().click();
     await expect(page.getByText(/Loaded page:/)).toBeVisible();
     await page.keyboard.press(`${shortcutModifier}+V`);
     await expect(page.getByText(/Pasted 1 item/)).toBeVisible();
-    await expect(page.locator('[class*="resizeHandle"]')).toHaveCount(8);
+    await expectSelectedNodeHandles(page);
     await page.keyboard.press(`${shortcutModifier}+Z`);
     await expect(page.getByText(/Undid:/)).toBeVisible();
     await pagesDrawerForPaste.getByRole('button', { name: /홈|Home/ }).first().click();
     await expect(page.getByText(/Loaded page:/)).toBeVisible();
+    await rail.getByRole('button', { name: 'Pages', exact: true }).click();
+    await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
 
     await selectFirstNode(page);
     await closeModalOverlayIfPresent(page);
@@ -211,5 +246,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       await mapAddressInput.fill(originalMapAddress);
       await expect(mapAddressInput).toHaveValue(originalMapAddress);
     }
+
+    await rail.getByRole('button', { name: 'Pages', exact: true }).click();
+    const pagesDrawerForColumns = page.locator('[aria-hidden="false"]').first();
+    const columnsPageButton = pagesDrawerForColumns.getByRole('button', { name: /칼럼|Columns/ }).first();
+    await expect(columnsPageButton).toBeVisible();
+    await columnsPageButton.click();
+    await expect(page.getByText(/Loaded page:/)).toBeVisible();
+    await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
+    await expect(page.locator('[data-node-id="columns-feed"]').first()).toBeVisible();
   });
 });

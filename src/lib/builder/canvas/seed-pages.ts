@@ -2,6 +2,7 @@ import type { Locale } from '@/lib/locales';
 import {
   type BuilderCanvasNode,
   type BuilderCanvasDocument,
+  createDefaultCanvasNodeStyle,
 } from '@/lib/builder/canvas/types';
 import { legalPageContent } from '@/data/legal-pages';
 import { pageCopy } from '@/data/page-copy';
@@ -53,9 +54,15 @@ import {
   createServicesPageDecomposedNodes,
   SERVICES_PAGE_ROOT_HEIGHT,
 } from './decompose-page-services';
+import {
+  createHomeButtonNode,
+  createHomeContainerNode,
+  createHomeTextNode,
+} from './decompose-home-shared';
 
 const STAGE_WIDTH = 1280;
 const SITE_PAGE_SEED_VERSION = 'site-page-seed-v3';
+const COLUMNS_PAGE_ROOT_HEIGHT = 2660;
 const seedSitePagesInFlight = new Map<string, Promise<void>>();
 
 type PageSeedDefinition = {
@@ -116,6 +123,160 @@ function buildPrivacyPageCanvas(locale: Locale): BuilderCanvasDocument {
 
 function buildDisclaimerPageCanvas(locale: Locale): BuilderCanvasDocument {
   return createDecomposedPageCanvasDocument(locale, createDisclaimerPageDecomposedNodes(0, locale, 0), DISCLAIMER_PAGE_ROOT_HEIGHT);
+}
+
+function buildColumnsPageCanvas(locale: Locale): BuilderCanvasDocument {
+  const copy = pageCopy[locale].insights;
+  const adminLabel = locale === 'ko' ? '글 추가/수정' : locale === 'zh-hant' ? '新增/編輯文章' : 'Add / edit posts';
+  const publicLabel = locale === 'ko' ? '공개 칼럼 보기' : locale === 'zh-hant' ? '查看公開專欄' : 'View public columns';
+  const helperText = locale === 'ko'
+    ? '아래 피드는 기존 tseng-law.com 칼럼과 빌더에서 작성한 글을 같은 소스로 불러옵니다.'
+    : locale === 'zh-hant'
+      ? '下方動態會載入現有 tseng-law.com 專欄與編輯器建立的文章。'
+      : 'The feed below loads the existing tseng-law.com columns and posts created in the builder.';
+
+  const nodes: BuilderCanvasNode[] = [
+    createHomeContainerNode({
+      id: 'columns-page-root',
+      rect: { x: 0, y: 0, width: STAGE_WIDTH, height: COLUMNS_PAGE_ROOT_HEIGHT },
+      zIndex: 0,
+      label: 'columns page root',
+      as: 'main',
+      background: '#f8fafc',
+      borderColor: 'transparent',
+    }),
+    createHomeContainerNode({
+      id: 'columns-hero',
+      parentId: 'columns-page-root',
+      rect: { x: 0, y: 0, width: STAGE_WIDTH, height: 330 },
+      zIndex: 1,
+      label: 'columns hero',
+      as: 'section',
+      background: '#0f172a',
+      borderColor: 'transparent',
+    }),
+    createHomeTextNode({
+      id: 'columns-page-eyebrow',
+      parentId: 'columns-hero',
+      rect: { x: 80, y: 72, width: 260, height: 24 },
+      zIndex: 2,
+      text: copy.label,
+      as: 'p',
+      fontSize: 14,
+      color: '#bfdbfe',
+      fontWeight: 'bold',
+    }),
+    createHomeTextNode({
+      id: 'columns-page-title',
+      parentId: 'columns-hero',
+      rect: { x: 80, y: 112, width: 700, height: 78 },
+      zIndex: 3,
+      text: copy.title,
+      as: 'h1',
+      fontSize: 58,
+      color: '#ffffff',
+      fontWeight: 'bold',
+    }),
+    createHomeTextNode({
+      id: 'columns-page-description',
+      parentId: 'columns-hero',
+      rect: { x: 80, y: 206, width: 620, height: 62 },
+      zIndex: 4,
+      text: copy.description,
+      as: 'p',
+      fontSize: 18,
+      color: '#cbd5e1',
+      fontWeight: 'regular',
+    }),
+    createHomeButtonNode({
+      id: 'columns-admin-link',
+      parentId: 'columns-hero',
+      rect: { x: 820, y: 116, width: 170, height: 46 },
+      zIndex: 5,
+      label: adminLabel,
+      href: `/${locale}/admin-builder/columns`,
+      style: 'primary',
+    }),
+    createHomeButtonNode({
+      id: 'columns-public-link',
+      parentId: 'columns-hero',
+      rect: { x: 1004, y: 116, width: 176, height: 46 },
+      zIndex: 6,
+      label: publicLabel,
+      href: `/${locale}/columns`,
+      style: 'outline',
+    }),
+    createHomeTextNode({
+      id: 'columns-page-helper',
+      parentId: 'columns-hero',
+      rect: { x: 820, y: 184, width: 360, height: 82 },
+      zIndex: 7,
+      text: helperText,
+      as: 'p',
+      fontSize: 15,
+      color: '#e2e8f0',
+      fontWeight: 'regular',
+    }),
+    createHomeContainerNode({
+      id: 'columns-feed-section',
+      parentId: 'columns-page-root',
+      rect: { x: 0, y: 330, width: STAGE_WIDTH, height: 2330 },
+      zIndex: 8,
+      label: 'columns feed section',
+      as: 'section',
+      background: '#ffffff',
+      borderColor: 'transparent',
+    }),
+    createHomeTextNode({
+      id: 'columns-feed-title',
+      parentId: 'columns-feed-section',
+      rect: { x: 80, y: 64, width: 420, height: 46 },
+      zIndex: 9,
+      text: locale === 'ko' ? '칼럼 목록' : locale === 'zh-hant' ? '專欄列表' : 'Column list',
+      as: 'h2',
+      fontSize: 34,
+      color: '#0f172a',
+      fontWeight: 'bold',
+    }),
+    createHomeTextNode({
+      id: 'columns-feed-copy',
+      parentId: 'columns-feed-section',
+      rect: { x: 80, y: 120, width: 720, height: 44 },
+      zIndex: 10,
+      text: helperText,
+      as: 'p',
+      fontSize: 16,
+      color: '#475569',
+      fontWeight: 'regular',
+    }),
+    {
+      id: 'columns-feed',
+      kind: 'blog-feed',
+      parentId: 'columns-feed-section',
+      rect: { x: 80, y: 198, width: 1120, height: 2020 },
+      style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
+      zIndex: 11,
+      rotation: 0,
+      locked: false,
+      visible: true,
+      content: {
+        layout: 'grid',
+        postsPerPage: 50,
+        showExcerpt: true,
+        showAuthor: true,
+        showDate: true,
+        showReadingTime: true,
+        showCategory: true,
+        showTags: false,
+        showFeaturedImage: true,
+        sortBy: 'newest',
+        columns: 3,
+        gap: 24,
+      },
+    } as BuilderCanvasNode,
+  ];
+
+  return createDecomposedPageCanvasDocument(locale, nodes, COLUMNS_PAGE_ROOT_HEIGHT);
 }
 
 const pageSeeds: PageSeedDefinition[] = [
@@ -191,6 +352,15 @@ const pageSeeds: PageSeedDefinition[] = [
     buildDocument: buildReviewsPageCanvas,
   },
   {
+    slug: 'columns',
+    titles: {
+      ko: pageCopy.ko.insights.title,
+      'zh-hant': pageCopy['zh-hant'].insights.title,
+      en: pageCopy.en.insights.title,
+    },
+    buildDocument: buildColumnsPageCanvas,
+  },
+  {
     slug: 'privacy',
     includeInNavigation: false,
     titles: {
@@ -217,14 +387,7 @@ const extraNavigationItems: Array<{
   pageId: string;
   href: string;
   label: Record<Locale, string>;
-}> = [
-  {
-    id: 'nav-columns',
-    pageId: 'external-columns',
-    href: '/columns',
-    label: { ko: '칼럼', 'zh-hant': '專欄', en: 'Columns' },
-  },
-];
+}> = [];
 
 function findSeedPage(site: BuilderSiteDocument, seed: PageSeedDefinition): BuilderPageMeta | undefined {
   const candidates = seed.isHomePage
@@ -372,7 +535,15 @@ async function ensureStandardNavigation(siteId: string, locale: Locale) {
 
     const href = seed.slug ? `/${seed.slug}` : '/';
     const existing = site.navigation.find((item) => item.pageId === page.pageId || item.href === href);
-    if (existing) continue;
+    if (existing) {
+      if (existing.pageId !== page.pageId || existing.href !== href) {
+        existing.pageId = page.pageId;
+        existing.href = href;
+        existing.label = seed.titles;
+        changed = true;
+      }
+      continue;
+    }
 
     site.navigation.push({
       id: `nav-${page.pageId}`,

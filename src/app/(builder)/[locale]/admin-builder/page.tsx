@@ -56,7 +56,7 @@ function upgradeOfficeMapPlaceholders(document: BuilderCanvasDocument): BuilderC
   };
 }
 
-const REQUIRED_SEED_SLUGS = ['', 'about', 'services', 'contact', 'lawyers', 'faq', 'pricing', 'reviews', 'privacy', 'disclaimer'];
+const REQUIRED_SEED_SLUGS = ['', 'about', 'services', 'contact', 'lawyers', 'faq', 'pricing', 'reviews', 'columns', 'privacy', 'disclaimer'];
 
 function needsStandardPageSeed(sitePages: Array<{ slug: string; isHomePage?: boolean }>): boolean {
   if (sitePages.length === 0) return true;

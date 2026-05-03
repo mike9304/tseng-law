@@ -571,3 +571,43 @@
 
 주의:
 - 현재 worktree는 `main...origin/main [ahead 27]` 및 다른 트랙 변경이 많이 섞인 dirty 상태라, 이 결과는 별도 clean branch에서 분리 커밋하기 전까지 바로 main commit 대상으로 취급하면 안 됨.
+
+## 2026-05-03 Codex /goal G-Editor viewport/content follow-up
+
+범위:
+- 사용자가 지적한 `/ko/admin-builder` 첫 화면 오른쪽 잘림을 Playwright screenshot/bounding box로 재현.
+- 첫 진입 시 자동 선택을 제거해 Inspector가 처음부터 열리지 않게 하고, 캔버스 폭을 899px → 1219px로 회복한 상태를 확인.
+- 캔버스 내부 폭 변화(drawer/inspector open-close)에 맞춰 `ResizeObserver`로 fit zoom을 다시 계산하도록 보강.
+- Header `Edit menu` floating badge가 헤더 아래 gap 때문에 사라지는 문제를 헤더 내부 배치 + `focus-within` 유지로 수정.
+- 기존 `src/content/columns*` markdown 17개가 builder columns/blog storage에 published fallback으로 보이도록 반영된 상태 확인.
+- 기존 markdown 칼럼 edit page 진입 시 Tiptap SSR 500을 `immediatelyRender: false`로 수정하고, 열기만 해도 draft가 생성되지 않는지 확인.
+- 실패한 smoke가 남긴 `업무분야 Test` navigation label을 `업무분야`로 원복.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1)
+- Playwright layout probe ✅: 1280x800에서 `selected=false`, `canvasColumn.width=1219`, `htmlScrollWidth=1280`
+- `/api/builder/columns?locale=ko` ✅: 기존 KO 칼럼 17개 반환
+- `/api/builder/columns/{slug}?locale=ko` ✅: `draft=false`, `published=true`
+
+## 2026-05-03 Codex /goal G-Editor columns page 연결
+
+범위:
+- 사용자가 지적한 "Pages에 칼럼이 안 떠서 거기로 이동해 글 추가/수정이 안 된다" 문제를 수정.
+- `/columns`를 외부 nav 링크가 아니라 실제 builder page seed로 추가해 Pages 패널에서 `칼럼` 페이지가 보이도록 연결.
+- 기존 `nav-columns` 항목이 `external-columns`를 가리키던 상태를 실제 columns pageId로 승격하도록 navigation seeding 보강.
+- Columns rail에 `Open columns page` 액션을 추가해 에디터 안에서 바로 칼럼 페이지로 이동 가능하게 함.
+- 칼럼 페이지 canvas에는 hero + `blog-feed` 노드를 배치해 기존 tseng-law.com 칼럼 17개와 builder 작성 글을 같은 소스로 로드.
+- 기존 markdown-backed column edit page의 Tiptap SSR 안정화를 위해 `immediatelyRender: false` 유지.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (19 files / 708 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 61 guarded mutation handlers)
+- `npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` warnings only)
+- `/ko/admin-builder` authenticated 200 ✅
+- `/api/builder/site/pages?locale=ko` ✅: `slug:"columns"` pageId 생성 확인
+- `/api/builder/site/navigation?locale=ko` ✅: `nav-columns.pageId`가 실제 columns pageId로 연결됨
+- `/api/builder/columns?locale=ko` ✅: 기존 KO 칼럼 17개 반환
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, Columns admin/edit route 200 + Pages에서 칼럼 페이지 열기 + `columns-feed` 렌더)

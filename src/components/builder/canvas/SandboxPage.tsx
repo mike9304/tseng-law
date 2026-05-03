@@ -470,15 +470,17 @@ export default function SandboxPage({
     [locale, siteLightboxes],
   );
   const linkPickerSitePages = useMemo(
-    () =>
-      [
-        ...sitePagesState.map((page) => ({
+    () => {
+      const pages = sitePagesState.map((page) => ({
           path: page.isHomePage ? `/${locale}` : `/${locale}/${page.slug}`,
           title: page.isHomePage ? 'Home' : page.slug,
           slug: page.slug,
-        })),
-        { path: `/${locale}/columns`, title: 'Columns', slug: 'columns' },
-      ],
+        }));
+      if (!pages.some((page) => page.slug === 'columns')) {
+        pages.push({ path: `/${locale}/columns`, title: 'Columns', slug: 'columns' });
+      }
+      return pages;
+    },
     [sitePagesState, locale],
   );
   const headerNavItems = useMemo<BuilderNavItem[]>(() => {
@@ -698,6 +700,8 @@ export default function SandboxPage({
         background: '#f8fafc',
       };
 
+  const columnsPage = sitePagesState.find((page) => page.slug === 'columns') ?? null;
+
   const handleReloadDraftAfterConflict = useCallback(async () => {
     if (!activePageId) return;
     const loaded = await loadDraft(activePageId, locale);
@@ -916,6 +920,17 @@ export default function SandboxPage({
                   공개 칼럼 목록과 칼럼 관리자까지 에디터 안에서 바로 확인합니다.
                 </p>
                 <div className={styles.actionGrid}>
+                  <button
+                    type="button"
+                    className={styles.actionButton}
+                    disabled={!columnsPage}
+                    onClick={() => {
+                      if (!columnsPage) return;
+                      void handleSelectPage(columnsPage.pageId, columnsPage.slug);
+                    }}
+                  >
+                    Open columns page
+                  </button>
                   <a className={styles.actionButton} href={`/${locale}/admin-builder/columns`}>
                     Open columns admin
                   </a>

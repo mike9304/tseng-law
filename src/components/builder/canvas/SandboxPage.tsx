@@ -155,6 +155,7 @@ export default function SandboxPage({
     clipboardCount,
     mutationBaseDocument,
     replaceDocument,
+    pasteClipboardNodes,
     setDraftSaveState,
     updateNodeContent,
     setViewport: setStoreViewport,
@@ -261,6 +262,38 @@ export default function SandboxPage({
       setActivityChips((currentChips) => currentChips.filter((chip) => chip.id !== id));
     }, 1800);
   }, []);
+
+  const handlePagesPanelPaste = useCallback(() => {
+    const state = useBuilderCanvasStore.getState();
+    if (state.clipboardCount <= 0) return;
+    pasteClipboardNodes();
+    const pastedCount = state.clipboardCount;
+    pushActivityChip(`Pasted ${pastedCount} item${pastedCount === 1 ? '' : 's'}`);
+  }, [pasteClipboardNodes, pushActivityChip]);
+
+  useEffect(() => {
+    if (activeDrawer !== 'pages') return undefined;
+
+    function handlePagesPasteShortcut(event: KeyboardEvent) {
+      const target = event.target;
+      const isTypingTarget = target instanceof HTMLElement
+        && (
+          target.tagName === 'INPUT'
+          || target.tagName === 'TEXTAREA'
+          || target.tagName === 'SELECT'
+          || target.isContentEditable
+        );
+      const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+      if (isTypingTarget || !(event.metaKey || event.ctrlKey) || event.shiftKey || key !== 'v') return;
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      handlePagesPanelPaste();
+    }
+
+    window.addEventListener('keydown', handlePagesPasteShortcut, true);
+    return () => window.removeEventListener('keydown', handlePagesPasteShortcut, true);
+  }, [activeDrawer, handlePagesPanelPaste]);
 
   useEffect(() => {
     replaceDocument(initialDocument);

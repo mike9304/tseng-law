@@ -532,3 +532,17 @@
 
 검증:
 - `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, map address edit + restore, columns content nodes 포함)
+
+## 2026-05-03 Codex /goal G-Editor W30 cross-page paste 보강
+
+범위:
+- Pages drawer에서 `1개 요소 클립보드` pill이 보이는 상태로 다른 페이지(`/about`) 이동 후 Cmd+V를 눌러 현재 페이지에 붙여넣는 W30 경로를 Playwright에 추가.
+- 원인 분석: Cmd+V 자체는 실행됐지만, 복사한 루트 1개 section의 descendants까지 모두 선택되어 activity chip이 `Pasted 17 items`로 계산되고 top bar도 `17 selected`가 되어 Wix식 `Pasted 1 item` UX와 어긋남.
+- `pasteClipboardNodes()`가 pasted root ids만 선택하도록 수정하고, paste activity chip은 clipboard root count 기준으로 표시.
+- Pages drawer 포커스가 남아 있어도 Cmd+V가 동작하도록 drawer-open 상태의 native capture shortcut을 추가.
+- cross-page child paste 안전성을 위해 clipboard 내부에 없는 parent reference는 paste 시 끊도록 정리.
+- Add/Built-in Sections 패널의 확장 카테고리 label/빈 배열 방어 및 cafe gallery template missing helper import를 보강해 admin-builder 초기 렌더 crash를 제거.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, Pages panel page switch → Cmd+V → `Pasted 1 item` → undo → home restore 포함)

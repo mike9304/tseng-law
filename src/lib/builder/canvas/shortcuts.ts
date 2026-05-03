@@ -48,12 +48,19 @@ function isTextInput(target: EventTarget | null): boolean {
   return false;
 }
 
+function isMenuNavigationTarget(target: EventTarget | null, key: string): boolean {
+  if (!target || !(target instanceof HTMLElement)) return false;
+  if (!target.closest('[role="menu"]')) return false;
+  return key.startsWith('Arrow') || key === 'Escape' || key === 'Enter' || key === ' ';
+}
+
 export function matchShortcut(e: KeyboardEvent): CanvasAction {
   if (isTextInput(e.target)) return null;
 
   const meta = e.metaKey || e.ctrlKey;
   const shift = e.shiftKey;
   const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  if (!meta && isMenuNavigationTarget(e.target, key)) return null;
 
   // Undo / Redo
   if (meta && !shift && key === 'z') return 'undo';

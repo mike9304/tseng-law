@@ -301,9 +301,9 @@ export default function CanvasContainer({
 
   const handlePaste = useCallback(() => {
     const state = useBuilderCanvasStore.getState();
-    if (!state.clipboardHasContent) return;
+    if (state.clipboardCount <= 0) return;
     pasteClipboardNodes();
-    const pastedCount = useBuilderCanvasStore.getState().selectedNodeIds.length || state.clipboardCount;
+    const pastedCount = state.clipboardCount;
     onActivity?.(`Pasted ${describeClipboardCount(pastedCount)}`);
   }, [describeClipboardCount, onActivity, pasteClipboardNodes]);
 
@@ -646,8 +646,8 @@ export default function CanvasContainer({
     }
 
     const handler = createShortcutHandler(dispatch);
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    window.addEventListener('keydown', handler, true);
+    return () => window.removeEventListener('keydown', handler, true);
   }, [
     bringSelectedNodeForward,
     bringSelectedNodeToFront,

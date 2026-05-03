@@ -38,7 +38,7 @@ export function pasteNodes(offset = 20): BuilderCanvasNode[] {
     return {
       ...structuredClone(node),
       id: nextId,
-      parentId: node.parentId && idMap.has(node.parentId) ? idMap.get(node.parentId) : node.parentId,
+      parentId: node.parentId && idMap.has(node.parentId) ? idMap.get(node.parentId) : undefined,
       rect: {
         ...node.rect,
         x: node.rect.x + offset,

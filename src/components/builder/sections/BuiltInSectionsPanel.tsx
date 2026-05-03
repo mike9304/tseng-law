@@ -9,7 +9,7 @@ import {
   type BuiltInSectionTemplate,
 } from '@/lib/builder/sections/templates';
 
-const CATEGORY_LABELS: Record<BuiltInSectionCategory, string> = {
+const CATEGORY_LABELS: Partial<Record<BuiltInSectionCategory, string>> = {
   hero: 'Hero',
   features: 'Features',
   testimonials: 'Testimonials',
@@ -68,13 +68,13 @@ export function BuiltInSectionsPanel({
   return (
     <div style={rootStyle}>
       {BUILT_IN_SECTION_CATEGORIES.map((category) => {
-        const items = byCategory[category];
+        const items = byCategory[category] ?? [];
         if (items.length === 0) return null;
 
         return (
           <section key={category} style={categoryStyle}>
             <div style={categoryHeaderStyle}>
-              <h4 style={categoryLabelStyle}>{CATEGORY_LABELS[category]}</h4>
+              <h4 style={categoryLabelStyle}>{CATEGORY_LABELS[category] ?? category}</h4>
               <span style={categoryCountStyle}>{items.length}</span>
             </div>
             <div style={gridStyle}>

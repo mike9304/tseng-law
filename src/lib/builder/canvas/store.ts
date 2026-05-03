@@ -661,12 +661,16 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
           clipboardCount: getClipboardCount(),
         };
       }
+      const pastedNodeIds = new Set(pastedNodes.map((node) => node.id));
+      const pastedRootIds = pastedNodes
+        .filter((node) => !node.parentId || !pastedNodeIds.has(node.parentId))
+        .map((node) => node.id);
       const document = updateNodes(state.document, (nodes) => [...nodes, ...pastedNodes]);
       const nextState = applyCommittedDocument(
         state,
         document,
-        pastedNodes[pastedNodes.length - 1]?.id ?? null,
-        pastedNodes.map((node) => node.id),
+        pastedRootIds[pastedRootIds.length - 1] ?? pastedNodes[pastedNodes.length - 1]?.id ?? null,
+        pastedRootIds.length > 0 ? pastedRootIds : pastedNodes.map((node) => node.id),
       );
       if (nextState === state) {
         return {

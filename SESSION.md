@@ -809,3 +809,21 @@
 
 남은 gap:
 - 칼럼 글쓰기 UX는 이미지 삽입까지 좋아졌지만, 태그 자동완성/예약 발행/글별 slug 재설정/드래그앤드롭 블록 편집은 후속 polish로 남음.
+
+## 2026-05-04 Codex /goal G-Editor asset library persistence follow-up
+
+범위:
+- W22 남은 약점이던 Asset Library 폴더/태그/asset 분류 local-only 상태를 locale별 `localStorage` persistence로 보강.
+- 모달을 닫았다 다시 열어도 사용자가 만든 폴더, 태그, asset별 폴더/태그 분류가 유지되도록 함.
+- asset 삭제 시 해당 filename의 persisted folder/tag mapping도 함께 제거.
+- `asset-image-workflow.playwright.ts`가 새 폴더/태그 생성 → modal close → image context menu 재오픈 → 폴더/태그 유지 확인까지 검증하도록 확장.
+- context menu 재오픈 전 이미지 노드를 명시 클릭해 selection/menu enabled 상태를 안정화.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `BASE_URL=http://localhost:3000 ... asset-image-workflow.playwright.ts --workers=1` ✅ (1/1)
+
+남은 gap:
+- 현재 persistence는 브라우저 localStorage 기준이다. 팀 공유/서버 동기화형 asset taxonomy는 별도 storage schema가 필요하므로 후속으로 남김.

@@ -46,6 +46,7 @@ async function imageNode(page: Page) {
 
 async function openImageContextMenu(page: Page) {
   const node = await imageNode(page);
+  await node.click({ position: { x: 24, y: 24 }, force: true });
   await node.evaluate((element) => {
     const rect = element.getBoundingClientRect();
     element.dispatchEvent(new MouseEvent('contextmenu', {
@@ -86,7 +87,7 @@ test.describe('/ko/admin-builder image asset workflow', () => {
 
       const replaceMenu = await openImageContextMenu(page);
       await replaceMenu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();
-      const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+      let assetDialog = page.getByRole('dialog', { name: 'Asset library' });
       await expect(assetDialog).toBeVisible();
       await expect(assetDialog.getByText('Folders')).toBeVisible();
       await expect(assetDialog.getByText('All assets')).toBeVisible();
@@ -98,6 +99,14 @@ test.describe('/ko/admin-builder image asset workflow', () => {
 
       await assetDialog.locator('input[placeholder="New tag"]').fill(token);
       await assetDialog.getByRole('button', { name: 'Create' }).click();
+      await expect(assetDialog.getByRole('button', { name: token, exact: true })).toBeVisible();
+      await assetDialog.getByRole('button', { name: 'Close' }).click();
+      await expect(assetDialog).not.toBeVisible();
+
+      const persistedMenu = await openImageContextMenu(page);
+      await persistedMenu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();
+      assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+      await expect(assetDialog.getByRole('button', { name: new RegExp(`Case ${token}`) })).toBeVisible();
       await expect(assetDialog.getByRole('button', { name: token, exact: true })).toBeVisible();
       await assetDialog.getByRole('button', { name: /All assets/ }).click();
       await assetDialog.getByRole('button', { name: 'All tags' }).click();

@@ -25,6 +25,21 @@ interface AssetFolder {
   name: string;
 }
 
+interface AssetLibraryPersistedState {
+  folders?: AssetFolder[];
+  tags?: string[];
+  assetFolderByFilename?: Record<string, string>;
+  assetTagsByFilename?: Record<string, string[]>;
+}
+
+const DEFAULT_FOLDERS: AssetFolder[] = [
+  { id: 'uploads', name: 'Uploads' },
+  { id: 'brand', name: 'Brand' },
+];
+
+const DEFAULT_TAGS = ['hero', 'office', 'people'];
+const ASSET_LIBRARY_STORAGE_VERSION = 1;
+
 function formatBytes(value: number) {
   if (value >= 1024 * 1024) return `${(value / (1024 * 1024)).toFixed(1)} MB`;
   if (value >= 1024) return `${Math.round(value / 1024)} KB`;
@@ -40,6 +55,32 @@ function formatUploadedAt(value: string) {
     hour: '2-digit',
     minute: '2-digit',
   }).format(new Date(timestamp));
+}
+
+function assetLibraryStorageKey(locale: Locale) {
+  return `builder:asset-library:${locale}:v${ASSET_LIBRARY_STORAGE_VERSION}`;
+}
+
+function readPersistedAssetLibraryState(locale: Locale): AssetLibraryPersistedState | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = window.localStorage.getItem(assetLibraryStorageKey(locale));
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as AssetLibraryPersistedState;
+    if (!parsed || typeof parsed !== 'object') return null;
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function writePersistedAssetLibraryState(locale: Locale, state: AssetLibraryPersistedState): void {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.setItem(assetLibraryStorageKey(locale), JSON.stringify(state));
+  } catch {
+    // localStorage can be unavailable in private browsing; the library still works in-memory.
+  }
 }
 
 export default function AssetLibraryModal({
@@ -59,17 +100,15 @@ export default function AssetLibraryModal({
   const [assets, setAssets] = useState<BuilderAssetListItem[]>([]);
   const [search, setSearch] = useState('');
   const [sortMode, setSortMode] = useState<AssetSortMode>('date-desc');
-  const [folders, setFolders] = useState<AssetFolder[]>([
-    { id: 'uploads', name: 'Uploads' },
-    { id: 'brand', name: 'Brand' },
-  ]);
+  const [folders, setFolders] = useState<AssetFolder[]>(DEFAULT_FOLDERS);
   const [activeFolder, setActiveFolder] = useState('all');
   const [newFolderName, setNewFolderName] = useState('');
-  const [tags, setTags] = useState<string[]>(['hero', 'office', 'people']);
+  const [tags, setTags] = useState<string[]>(DEFAULT_TAGS);
   const [activeTag, setActiveTag] = useState('all');
   const [newTagName, setNewTagName] = useState('');
   const [assetFolderByFilename, setAssetFolderByFilename] = useState<Record<string, string>>({});
   const [assetTagsByFilename, setAssetTagsByFilename] = useState<Record<string, string[]>>({});
+  const [storageReady, setStorageReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [deleteFilename, setDeleteFilename] = useState<string | null>(null);
@@ -99,6 +138,29 @@ export default function AssetLibraryModal({
     if (!open) return;
     void loadAssets();
   }, [loadAssets, open]);
+
+  useEffect(() => {
+    if (!open) {
+      setStorageReady(false);
+      return;
+    }
+    const persisted = readPersistedAssetLibraryState(locale);
+    setFolders(persisted?.folders?.length ? persisted.folders : DEFAULT_FOLDERS);
+    setTags(persisted?.tags?.length ? persisted.tags : DEFAULT_TAGS);
+    setAssetFolderByFilename(persisted?.assetFolderByFilename ?? {});
+    setAssetTagsByFilename(persisted?.assetTagsByFilename ?? {});
+    setStorageReady(true);
+  }, [locale, open]);
+
+  useEffect(() => {
+    if (!open || !storageReady) return;
+    writePersistedAssetLibraryState(locale, {
+      folders,
+      tags,
+      assetFolderByFilename,
+      assetTagsByFilename,
+    });
+  }, [assetFolderByFilename, assetTagsByFilename, folders, locale, open, storageReady, tags]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -237,6 +299,16 @@ export default function AssetLibraryModal({
         return;
       }
       setAssets((currentAssets) => currentAssets.filter((entry) => entry.filename !== asset.filename));
+      setAssetFolderByFilename((current) => {
+        const next = { ...current };
+        delete next[asset.filename];
+        return next;
+      });
+      setAssetTagsByFilename((current) => {
+        const next = { ...current };
+        delete next[asset.filename];
+        return next;
+      });
     } catch {
       setError('Failed to delete asset.');
     } finally {

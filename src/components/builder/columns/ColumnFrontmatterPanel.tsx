@@ -189,11 +189,11 @@ export default function ColumnFrontmatterPanel({
     <aside className="column-frontmatter-panel">
       <div className="column-panel-heading">
         <span>Settings</span>
-        <h3>게시 메타</h3>
+        <h3>글 설정</h3>
       </div>
 
-      <section className="column-panel-section">
-        <h4>발행 상태</h4>
+      <details className="column-panel-section column-panel-details" open>
+        <summary>발행</summary>
         <label className="column-toggle-row">
           <span>
             <strong>Featured</strong>
@@ -219,10 +219,10 @@ export default function ColumnFrontmatterPanel({
           <span>최종 수정일</span>
           <input type="date" value={lastmod} onChange={(event) => setLastmod(event.target.value)} />
         </label>
-      </section>
+      </details>
 
-      <section className="column-panel-section">
-        <h4>분류</h4>
+      <details className="column-panel-section column-panel-details" open>
+        <summary>분류</summary>
         <label className="column-editor-field">
           <span>카테고리</span>
           <select value={blogCategory} onChange={(event) => setBlogCategory(event.target.value)}>
@@ -264,10 +264,10 @@ export default function ColumnFrontmatterPanel({
             />
           </div>
         </label>
-      </section>
+      </details>
 
-      <section className="column-panel-section">
-        <h4>저자</h4>
+      <details className="column-panel-section column-panel-details">
+        <summary>저자</summary>
         <label className="column-editor-field">
           <span>프리셋</span>
           <select
@@ -300,10 +300,10 @@ export default function ColumnFrontmatterPanel({
           <span>사진 URL</span>
           <input value={authorPhoto} onChange={(event) => setAuthorPhoto(event.target.value)} />
         </label>
-      </section>
+      </details>
 
-      <section className="column-panel-section">
-        <h4>이미지</h4>
+      <details className="column-panel-section column-panel-details">
+        <summary>대표 이미지</summary>
         <label className="column-editor-field">
           <span>Featured image URL</span>
           <input
@@ -312,10 +312,10 @@ export default function ColumnFrontmatterPanel({
             placeholder="https://..."
           />
         </label>
-      </section>
+      </details>
 
-      <section className="column-panel-section">
-        <h4>SEO</h4>
+      <details className="column-panel-section column-panel-details">
+        <summary>SEO</summary>
         <label className="column-editor-field">
           <span>SEO title</span>
           <input value={seoTitle} onChange={(event) => setSeoTitle(event.target.value)} maxLength={200} />
@@ -344,10 +344,10 @@ export default function ColumnFrontmatterPanel({
             onChange={(event) => setSeoNoIndex(event.target.checked)}
           />
         </label>
-      </section>
+      </details>
 
-      <section className="column-panel-section">
-        <h4>리뷰</h4>
+      <details className="column-panel-section column-panel-details">
+        <summary>검토</summary>
         <label className="column-editor-field">
           <span>변호사 검토</span>
           <select
@@ -371,7 +371,7 @@ export default function ColumnFrontmatterPanel({
             <option value="unknown">불명</option>
           </select>
         </label>
-      </section>
+      </details>
     </aside>
   );
 }

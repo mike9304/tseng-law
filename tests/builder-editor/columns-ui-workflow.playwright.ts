@@ -37,7 +37,6 @@ async function deleteAsset(page: Page, filename: string): Promise<void> {
 test.describe('/ko/admin-builder columns UI workflow', () => {
   test('creates, edits, inserts media, publishes, verifies, and cleans up a column through the UI', async ({ page }) => {
     const token = Date.now().toString(36);
-    const initialTitle = `G-Editor UI 칼럼 ${token}`;
     const editedTitle = `G-Editor UI 칼럼 수정 ${token}`;
     const editedBody = `G-Editor UI 본문 검증 ${token}`;
     let slug: string | null = null;
@@ -47,11 +46,6 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
       uploadedAsset = await uploadAsset(page, `column-${token}.png`);
 
       await page.goto('/ko/admin-builder/columns?new=1', { waitUntil: 'domcontentloaded' });
-      const dialog = page.getByRole('dialog', { name: '새 글 쓰기' });
-      await expect(dialog).toBeVisible();
-      await dialog.getByRole('textbox', { name: '제목' }).fill(initialTitle);
-      await dialog.getByRole('button', { name: '글쓰기 시작' }).click();
-
       await expect(page).toHaveURL(/\/ko\/admin-builder\/columns\/[^/]+\/edit$/);
       const match = page.url().match(/\/columns\/([^/]+)\/edit$/);
       slug = match?.[1] ? decodeURIComponent(match[1]) : null;
@@ -59,7 +53,7 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
 
       const titleInput = page.locator('input.column-editor-title-input');
       const bodyEditor = page.locator('.column-editor-body');
-      await expect(titleInput).toHaveValue(initialTitle);
+      await expect(titleInput).toHaveValue('제목 없는 글');
       await titleInput.fill(editedTitle);
       await bodyEditor.fill(editedBody);
       await page.getByRole('button', { name: 'Image' }).click();
@@ -74,7 +68,7 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
       await expect(bodyEditor.locator('img')).toHaveAttribute('src', new RegExp(uploadedAsset.filename));
 
       await page.getByRole('button', { name: '저장' }).click();
-      await expect(page.locator('.column-editor-save-state')).toContainText('Saved', { timeout: 10_000 });
+      await expect(page.locator('.column-editor-save-state')).toContainText('저장됨', { timeout: 10_000 });
       await expect.poll(async () => {
         const response = await page.request.get(`/api/builder/columns/${slug ?? ''}?locale=ko`);
         const payload = await response.json();

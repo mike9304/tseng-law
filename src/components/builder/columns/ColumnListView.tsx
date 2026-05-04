@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useMemo, useState, type CSSProperties } from 'react';
-import NewColumnModal from '@/components/builder/columns/NewColumnModal';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import {
+  BLOG_ADMIN_AUTHORS,
   BLOG_ADMIN_CATEGORIES,
   estimateReadingTime,
   getCategoryLabel,
@@ -55,6 +55,21 @@ function buildColumnsApiUrl(slug: string | null, contentLocale: Locale): string 
   return `/api/builder/columns/${encodeURIComponent(slug)}?locale=${contentLocale}`;
 }
 
+function slugify(input: string): string {
+  return input
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+function buildDraftSlug(title: string): string {
+  const base = slugify(title) || 'post';
+  return `${base}-${Date.now().toString(36)}`;
+}
+
 function stripHtml(value: string): string {
   return value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 }
@@ -89,18 +104,11 @@ export default function ColumnListView({
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [columns, setColumns] = useState(initialColumns);
-  const [modalOpen, setModalOpen] = useState(false);
   const [createError, setCreateError] = useState<string | null>(null);
   const [createPending, setCreatePending] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
   const [busySlug, setBusySlug] = useState<string | null>(null);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('new') === '1') {
-      setModalOpen(true);
-    }
-  }, []);
+  const quickCreateStartedRef = useRef(false);
 
   const categoryCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -173,7 +181,6 @@ export default function ColumnListView({
 
       setColumns((current) => [nextItem, ...current.filter((item) => item.slug !== nextItem.slug)]);
       setActiveCategory(nextItem.frontmatter.blogCategory ?? activeCategory);
-      setModalOpen(false);
       router.push(`/${routeLocale}/admin-builder/columns/${encodeURIComponent(nextItem.slug)}/edit`);
     } catch (error) {
       setCreateError(error instanceof Error ? error.message : '새 글 생성에 실패했습니다.');
@@ -181,6 +188,37 @@ export default function ColumnListView({
       setCreatePending(false);
     }
   }
+
+  function handleQuickCreate() {
+    if (createPending) return;
+    const category = BLOG_ADMIN_CATEGORIES[0];
+    const author = BLOG_ADMIN_AUTHORS[0];
+    void handleCreate({
+      slug: buildDraftSlug('post'),
+      title: '제목 없는 글',
+      summary: '',
+      bodyHtml: '<p></p>',
+      bodyMarkdown: '',
+      frontmatter: {
+        category: category.legacyCategory ?? 'legal',
+        blogCategory: category.slug,
+        author: {
+          name: author.name,
+          title: author.title,
+          ...(author.photo ? { photo: author.photo } : {}),
+        },
+        tags: [],
+        featured: false,
+      },
+    });
+  }
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('new') !== '1' || quickCreateStartedRef.current) return;
+    quickCreateStartedRef.current = true;
+    handleQuickCreate();
+  });
 
   async function patchFrontmatter(slug: string, frontmatter: Partial<ColumnFrontmatter>) {
     setActionError(null);
@@ -291,9 +329,10 @@ export default function ColumnListView({
           <button
             type="button"
             className="admin-console-primary-btn column-manager-new-btn"
-            onClick={() => setModalOpen(true)}
+            onClick={handleQuickCreate}
+            disabled={createPending}
           >
-            + 새 글 쓰기
+            {createPending ? '새 글 여는 중...' : '+ 새 글 쓰기'}
           </button>
         </div>
       </header>
@@ -344,17 +383,19 @@ export default function ColumnListView({
           </div>
 
           {actionError ? <p className="admin-console-form-error">{actionError}</p> : null}
+          {createError ? <p className="admin-console-form-error">{createError}</p> : null}
 
           {filteredColumns.length === 0 ? (
             <div className="admin-console-empty-state column-manager-empty">
               <h3>아직 칼럼이 없습니다.</h3>
-              <p>새 글 쓰기를 누르면 제목만 정하고 바로 본문 작성 화면으로 이동합니다.</p>
+              <p>새 글 쓰기를 누르면 바로 본문 작성 화면으로 이동합니다.</p>
               <button
                 type="button"
                 className="admin-console-primary-btn"
-                onClick={() => setModalOpen(true)}
+                onClick={handleQuickCreate}
+                disabled={createPending}
               >
-                첫 글 쓰기
+                {createPending ? '새 글 여는 중...' : '첫 글 쓰기'}
               </button>
             </div>
           ) : (
@@ -479,19 +520,6 @@ export default function ColumnListView({
           )}
         </section>
       </div>
-
-      <NewColumnModal
-        contentLocale={contentLocale}
-        open={modalOpen}
-        pending={createPending}
-        error={createError}
-        onClose={() => {
-          if (createPending) return;
-          setModalOpen(false);
-          setCreateError(null);
-        }}
-        onSubmit={handleCreate}
-      />
     </main>
   );
 }

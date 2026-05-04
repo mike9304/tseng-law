@@ -122,7 +122,7 @@ export default function ColumnEditor({
 }: ColumnEditorProps) {
   const [title, setTitle] = useState(initialContent.title);
   const [summary, setSummary] = useState(initialContent.summary);
-  const [summaryOpen, setSummaryOpen] = useState(Boolean(initialContent.summary.trim()));
+  const [summaryOpen, setSummaryOpen] = useState(false);
   const [assetLibraryOpen, setAssetLibraryOpen] = useState(false);
   const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error'>('saved');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -261,7 +261,7 @@ export default function ColumnEditor({
           <span className="column-editor-slug">/{slug}</span>
           <span className="column-editor-locale">{locale}</span>
           <span className={`column-editor-save-state is-${saveStatus}`}>
-            {saveStatus === 'saving' ? 'Saving' : saveStatus === 'error' ? 'Save failed' : 'Saved'}
+            {saveStatus === 'saving' ? '저장 중' : saveStatus === 'error' ? '저장 실패' : '저장됨'}
           </span>
         </div>
         <div className="column-editor-topbar-right">
@@ -307,6 +307,7 @@ export default function ColumnEditor({
               placeholder="비워두면 본문 앞부분으로 자동 생성됩니다."
               rows={2}
             />
+            <small>비워두면 본문 앞부분이 칼럼 목록과 검색 설명으로 자동 저장됩니다.</small>
           </label>
         </details>
       </div>
@@ -380,17 +381,17 @@ export default function ColumnEditor({
           onClick={() => editor?.chain().focus().toggleBlockquote().run()}
           className={editor?.isActive('blockquote') ? 'is-active' : ''}
         >
-          Quote
+          인용
         </button>
         <button
           type="button"
           onClick={() => editor?.chain().focus().toggleCodeBlock().run()}
           className={editor?.isActive('codeBlock') ? 'is-active' : ''}
         >
-          Code
+          코드
         </button>
         <button type="button" onClick={() => editor?.chain().focus().setHorizontalRule().run()}>
-          Line
+          구분선
         </button>
         <button
           type="button"
@@ -400,22 +401,14 @@ export default function ColumnEditor({
           }}
           className={editor?.isActive('link') ? 'is-active' : ''}
         >
-          Link
+          링크
         </button>
         <button
           type="button"
+          aria-label="Image"
           onClick={() => setAssetLibraryOpen(true)}
         >
-          Image
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            const html = prompt('HTML snippet:');
-            if (html) editor?.chain().focus().insertContent(html).run();
-          }}
-        >
-          HTML
+          사진
         </button>
       </div>
 

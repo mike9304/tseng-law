@@ -379,7 +379,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
 
     await closeModalOverlayIfPresent(page);
-    const resizeTarget = page.locator('[data-node-id="home-hero-label"]:visible').first();
+    const resizeTarget = page.locator('[data-node-id="home-hero-title"]:visible').first();
     await expect(resizeTarget).toBeVisible();
     await resizeTarget.scrollIntoViewIfNeeded();
     await resizeTarget.click({ position: { x: 12, y: 12 }, force: true });
@@ -415,7 +415,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const beforeRatio = resizeBefore.width / resizeBefore.height;
     const afterRatio = resizeAfter.width / resizeAfter.height;
     expect(Math.abs(afterRatio - beforeRatio)).toBeLessThan(0.25);
-    await expect(page.getByText(/Saving|Saved/).first()).toBeVisible({ timeout: 5_000 });
+    await expect(page.getByText(/Saving|Saved|저장 중|저장됨/).first()).toBeVisible({ timeout: 5_000 });
 
     const rotateNode = resizedNode;
     const rotationHandle = rotateNode.locator('[class*="rotationHandle"]').first();
@@ -498,7 +498,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(pagesDrawerForColumns.getByLabel('칼럼 빠른 이동')).toBeVisible();
     await expect(pagesDrawerForColumns.getByText(/posts|칼럼 연결/).first()).toBeVisible();
     await expect(pagesDrawerForColumns.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
-    await expect(pagesDrawerForColumns.getByRole('link', { name: '새 글 쓰기' })).toBeVisible();
+    await expect(pagesDrawerForColumns.getByRole('link', { name: '새 글 쓰기' })).toHaveAttribute(
+      'href',
+      '/ko/admin-builder/columns?new=1',
+    );
     const columnsPageButton = pagesDrawerForColumns.getByRole('button', { name: /칼럼|Columns/ }).first();
     await expect(columnsPageButton).toBeVisible();
     await columnsPageButton.click();
@@ -513,8 +516,5 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await selectedColumnsFeed.getByRole('button', { name: '글 추가/수정' }).click();
     await expect(page).toHaveURL(/\/ko\/admin-builder\/columns$/);
     await expect(page.getByText(/대만 회사설립|대만 화장품 시장 진출/).first()).toBeVisible();
-    await page.goto('/ko/admin-builder/columns?new=1', { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('dialog', { name: '새 글 쓰기' })).toBeVisible();
-    await expect(page.getByPlaceholder('제목을 입력하세요')).toBeVisible();
   });
 });

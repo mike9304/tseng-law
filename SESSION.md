@@ -827,3 +827,23 @@
 
 남은 gap:
 - 현재 persistence는 브라우저 localStorage 기준이다. 팀 공유/서버 동기화형 asset taxonomy는 별도 storage schema가 필요하므로 후속으로 남김.
+
+## 2026-05-04 Codex /goal G-Editor columns Tistory-style quick writing follow-up
+
+범위:
+- 사용자가 다시 지적한 "칼럼 새로 쓰는 게 아직 복잡하다 / 티스토리처럼 바로 글 쓰는 플랫폼이 좋다" 피드백을 반영.
+- `/ko/admin-builder/columns?new=1`과 `새 글 쓰기` 버튼이 modal을 열지 않고 즉시 `제목 없는 글` draft를 생성해 editor route로 이동하도록 변경.
+- 요약은 계속 본문 앞부분으로 자동 생성하되, 직접 입력 UI는 항상 접힌 `목록/검색 설명 직접 입력`으로 숨김.
+- 칼럼 editor toolbar의 개발자식 `HTML` 버튼을 제거하고, `인용/코드/구분선/링크/사진` 중심으로 정리.
+- 오른쪽 글 설정 패널은 발행/분류만 기본 노출하고 저자/대표 이미지/SEO/검토는 접힌 패널로 정리.
+- admin-builder smoke의 W07 resize 검증 대상도 실제 resize가 안정적으로 일어나는 `home-hero-title`로 보강.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `BASE_URL=http://localhost:3000 ... columns-ui-workflow.playwright.ts --workers=1` ✅ (1/1, `?new=1` direct create → editor → 본문/이미지/발행/public 확인/cleanup)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, Columns quick links + resize smoke)
+
+남은 gap:
+- 사용자가 직접 5분 동안 칼럼 글 작성/이미지 삽입/발행을 만져보고 "블로그 글쓰기처럼 쉽다" 기준을 확인해야 최종 green 처리 가능.

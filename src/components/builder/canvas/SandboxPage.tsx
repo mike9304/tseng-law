@@ -829,10 +829,11 @@ export default function SandboxPage({
             className={`${styles.railButton} ${activeDrawer === 'columns' ? styles.railButtonActive : ''}`}
             onClick={() => toggleDrawer('columns')}
             aria-pressed={activeDrawer === 'columns'}
-            title="Columns"
+            aria-label="Columns"
+            title="칼럼"
           >
-            <span className={styles.railButtonIcon} aria-hidden="true">B</span>
-            <span className={styles.railButtonLabel}>Columns</span>
+            <span className={styles.railButtonIcon} aria-hidden="true">▦</span>
+            <span className={styles.railButtonLabel}>칼럼</span>
           </button>
           <button
             type="button"

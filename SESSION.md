@@ -658,3 +658,21 @@
 남은 gap:
 - AssetLibrary folder/tag 분류는 현재 modal local state라 새로고침 후 조직 정보 지속성은 아직 WIP.
 - W26~W28은 UI smoke는 있으나 restore/head/publish blocker end-to-end green은 별도 보강 필요.
+
+## 2026-05-04 Codex /goal G-Editor columns canvas manage action 보강
+
+범위:
+- 사용자가 지적한 "페이지에 칼럼이 안 떠서 거기로 이동해 글 추가/수정이 어렵다" 문제를 에디터 캔버스에서 다시 보강.
+- 칼럼 데이터 자체는 `/api/builder/columns?locale=ko`에서 기존 KO 칼럼 17개가 반환되고 `/ko/columns` 공개 페이지도 렌더됨을 확인.
+- 좌측 rail의 Columns 버튼은 접근성 이름은 유지하면서 visual tooltip을 `칼럼`으로 한국어화.
+- `columns-feed` 같은 blog-feed 노드 또는 `/admin-builder/columns`로 연결된 칼럼 관리 버튼을 선택하면 Wix식 floating quick action `글 추가/수정` / `공개 보기`가 노드 위에 뜨도록 추가.
+- `글 추가/수정` 퀵 액션 클릭 시 실제 `/ko/admin-builder/columns`로 이동하고 기존 칼럼 제목이 보이는지 Playwright에 포함.
+- admin-builder smoke의 resize 선택 재시도 로직을 보강해 드래그 후 선택 state race에 덜 흔들리게 함.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 61 guarded mutation handlers)
+- `npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, columns-feed 선택 → `글 추가/수정` → columns admin list)

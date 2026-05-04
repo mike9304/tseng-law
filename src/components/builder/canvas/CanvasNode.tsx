@@ -36,6 +36,18 @@ function nodeLinkPreviewHref(node: BuilderCanvasNode): string | null {
   return link?.href?.trim() ? link.href.trim() : null;
 }
 
+function currentBuilderLocale(): string {
+  if (typeof window === 'undefined') return 'ko';
+  const firstSegment = window.location.pathname.split('/').filter(Boolean)[0];
+  return firstSegment || 'ko';
+}
+
+function isColumnManagerTarget(node: BuilderCanvasNode): boolean {
+  if (node.kind === 'blog-feed') return true;
+  const href = nodeLinkPreviewHref(node);
+  return Boolean(href && /\/admin-builder\/columns(?:\/|$)/.test(href));
+}
+
 export type ResizeHandle =
   | 'nw'
   | 'n'
@@ -268,6 +280,7 @@ export default function CanvasNode({
   const isRootNode = !node.parentId;
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
   const isInteractive = !isDimmedRoot;
+  const showColumnQuickActions = selected && isInteractive && isColumnManagerTarget(node);
   const preservesHitTestLayer = node.kind === 'image' || node.kind === 'video-embed' || isContainerLikeKind(node.kind);
   const selectionZIndexBoost = selected && !preservesHitTestLayer ? 10000 : 0;
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
@@ -476,6 +489,43 @@ export default function CanvasNode({
           );
         })()}
       </div>
+      {showColumnQuickActions ? (
+        <div
+          className={styles.nodeQuickActions}
+          onPointerDown={(event) => {
+            event.stopPropagation();
+          }}
+          onMouseDown={(event) => {
+            event.stopPropagation();
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+          }}
+        >
+          <button
+            type="button"
+            className={styles.nodeQuickActionPrimary}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              window.location.href = `/${currentBuilderLocale()}/admin-builder/columns`;
+            }}
+          >
+            글 추가/수정
+          </button>
+          <button
+            type="button"
+            className={styles.nodeQuickAction}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              window.open(`/${currentBuilderLocale()}/columns`, '_blank', 'noopener,noreferrer');
+            }}
+          >
+            공개 보기
+          </button>
+        </div>
+      ) : null}
       <div
         className={styles.nodeBody}
         style={{

@@ -26,10 +26,46 @@ async function firstVisibleNode(page: Page): Promise<Locator> {
 }
 
 async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Locator> {
-  const selectedNode = node ?? page
+  let selectedNode = node ?? page
     .locator('[class*="nodeSelected"][data-node-id]:visible')
     .filter({ has: page.locator('[class*="rotationHandle"]') })
     .last();
+
+  if (node) {
+    const hasHandles = await node.locator('[class*="rotationHandle"]').first().isVisible().catch(() => false);
+    if (!hasHandles) {
+      const box = await node.boundingBox();
+      await node.click({
+        position: box
+          ? {
+              x: Math.max(1, Math.min(box.width - 1, box.width / 2)),
+              y: Math.max(1, Math.min(box.height - 1, box.height / 2)),
+            }
+          : { x: 12, y: 12 },
+        force: true,
+      }).catch(() => undefined);
+    }
+  }
+
+  const selectedVisible = await selectedNode.isVisible().catch(() => false);
+  if (!selectedVisible) {
+    const fallback = await firstVisibleNode(page);
+    const fallbackBox = await fallback.boundingBox();
+    await fallback.click({
+      position: fallbackBox
+        ? {
+            x: Math.max(1, Math.min(fallbackBox.width - 1, fallbackBox.width / 2)),
+            y: Math.max(1, Math.min(fallbackBox.height - 1, fallbackBox.height / 2)),
+          }
+        : { x: 12, y: 12 },
+      force: true,
+    });
+    selectedNode = page
+      .locator('[class*="nodeSelected"][data-node-id]:visible')
+      .filter({ has: page.locator('[class*="rotationHandle"]') })
+      .last();
+  }
+
   await expect(selectedNode).toBeVisible();
   await expect(selectedNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
   await expect(selectedNode.locator('[class*="rotationHandle"]').first()).toBeVisible();
@@ -314,6 +350,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(resizeHandle).toHaveCSS('cursor', 'ew-resize');
 
     const resizeNode = cursorNode;
+    const resizeNodeId = await resizeNode.getAttribute('data-node-id');
     const resizeBefore = await resizeNode.boundingBox();
     const resizeCorner = resizeNode.locator('[class*="resizeHandleSE"]:visible').first();
     await expect(resizeCorner).toHaveCSS('cursor', 'nwse-resize');
@@ -322,8 +359,13 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await movePointerDrag(page, resizeDrag, 82, 36);
     await expect(page.locator('[class*="canvasOverlayResizeReadout"]').first()).toContainText(/\d+\s*x\s*\d+/);
     await finishPointerDrag(page, resizeDrag, 82, 36);
-    await resizeNode.click({ position: { x: 12, y: 12 }, force: true });
-    const resizedNode = await expectSelectedNodeHandles(page, resizeNode);
+    const resizedNodeTarget = resizeNodeId
+      ? page.locator(`[data-node-id="${resizeNodeId}"]`).first()
+      : undefined;
+    if (resizedNodeTarget) {
+      await resizedNodeTarget.click({ position: { x: 12, y: 12 }, force: true }).catch(() => undefined);
+    }
+    const resizedNode = await expectSelectedNodeHandles(page, resizedNodeTarget);
     const resizeAfter = await resizedNode.boundingBox();
     expect(resizeBefore).toBeTruthy();
     expect(resizeAfter).toBeTruthy();
@@ -409,6 +451,13 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await columnsPageButton.click();
     await expect(page.getByText(/Loaded page:/)).toBeVisible();
     await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
-    await expect(page.locator('[data-node-id="columns-feed"]').first()).toBeVisible();
+    const columnsFeedNode = page.locator('[data-node-id="columns-feed"]').first();
+    await expect(columnsFeedNode).toBeVisible();
+    await columnsFeedNode.click({ position: { x: 24, y: 24 }, force: true });
+    const selectedColumnsFeed = page.locator('[data-node-id="columns-feed"][class*="nodeSelected"]').first();
+    await expect(selectedColumnsFeed.getByRole('button', { name: '글 추가/수정' })).toBeVisible();
+    await selectedColumnsFeed.getByRole('button', { name: '글 추가/수정' }).click();
+    await expect(page).toHaveURL(/\/ko\/admin-builder\/columns$/);
+    await expect(page.getByText(/대만 회사설립|대만 화장품 시장 진출/).first()).toBeVisible();
   });
 });

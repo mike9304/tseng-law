@@ -735,3 +735,20 @@
 남은 gap:
 - `/ko/columns` 공개 라우트는 concrete route가 우선이라 builder-published `/columns` canvas가 public route를 대체하지는 않음. 현재 목표는 공개 칼럼 route 유지 + builder에서 관리/미리보기 연결.
 - builder CMS collection summary 일부는 아직 sync file-reader 기반이라, collection inventory까지 blob-aware로 완전 통합하는 작업은 후속으로 남김.
+
+## 2026-05-04 Codex /goal G-Editor columns discoverability follow-up
+
+범위:
+- 사용자가 지적한 "페이지에 칼럼이 안 떠서 이동/글 추가 수정이 어렵다" 흐름을 UX 레벨에서 재보강.
+- 좌측 rail의 Columns 버튼을 누르면 drawer만 여는 것이 아니라 실제 `columns` builder page로 즉시 이동하도록 변경.
+- Columns drawer와 Pages quick card에 `새 글 쓰기` 진입점을 추가하고, `/ko/admin-builder/columns?new=1` 접근 시 새 칼럼 modal이 바로 열리도록 연결.
+- Drawer action link가 버튼처럼 보이도록 `.actionButton` anchor display/padding을 정리.
+- admin-builder Playwright에 Columns rail click → `columns-page-title` 로드, `새 글 쓰기` 링크 노출, `?new=1` modal auto-open 검증을 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1)
+
+남은 gap:
+- 실제 칼럼 생성/본문 수정/발행은 관리 화면에서 가능하지만, 사용자가 직접 새 글을 만들어 발행해 보는 수동 green 검증은 남아 있음.

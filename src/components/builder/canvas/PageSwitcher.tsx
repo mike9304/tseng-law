@@ -239,7 +239,7 @@ const columnsQuickMetaStyle: React.CSSProperties = {
 
 const columnsQuickActionsStyle: React.CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
+  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
   gap: 6,
 };
 
@@ -524,6 +524,12 @@ export default function PageSwitcher({
               style={columnsQuickButtonStyle}
             >
               글 추가/수정
+            </a>
+            <a
+              href={`/${locale}/admin-builder/columns?new=1`}
+              style={{ ...columnsQuickButtonStyle, gridColumn: '1 / -1' }}
+            >
+              새 글 쓰기
             </a>
           </div>
         </section>

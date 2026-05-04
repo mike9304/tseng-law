@@ -770,6 +770,13 @@ export default function SandboxPage({
 
   const columnsPage = sitePagesState.find((page) => page.slug === 'columns') ?? null;
 
+  const handleOpenColumnsPanel = useCallback(() => {
+    setActiveDrawer((current) => (current === 'columns' ? null : 'columns'));
+    if (columnsPage && currentSlugState !== 'columns') {
+      void handleSelectPage(columnsPage.pageId, columnsPage.slug);
+    }
+  }, [columnsPage, currentSlugState, handleSelectPage]);
+
   const handleReloadDraftAfterConflict = useCallback(async () => {
     if (!activePageId) return;
     const loaded = await loadDraft(activePageId, locale);
@@ -895,10 +902,10 @@ export default function SandboxPage({
           <button
             type="button"
             className={`${styles.railButton} ${activeDrawer === 'columns' ? styles.railButtonActive : ''}`}
-            onClick={() => toggleDrawer('columns')}
+            onClick={handleOpenColumnsPanel}
             aria-pressed={activeDrawer === 'columns'}
             aria-label="Columns"
-            title="칼럼"
+            title="칼럼 페이지로 이동 / 글 관리"
           >
             <span className={styles.railButtonIcon} aria-hidden="true">▦</span>
             <span className={styles.railButtonLabel}>칼럼</span>
@@ -1030,6 +1037,9 @@ export default function SandboxPage({
                   </button>
                   <a className={styles.actionButton} href={`/${locale}/admin-builder/columns`}>
                     글 추가/수정
+                  </a>
+                  <a className={styles.actionButton} href={`/${locale}/admin-builder/columns?new=1`}>
+                    새 글 쓰기
                   </a>
                   <a className={styles.actionButton} href={`/${locale}/columns`} target="_blank" rel="noreferrer">
                     공개 칼럼 보기

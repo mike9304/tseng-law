@@ -2490,7 +2490,13 @@
 }
 
 .actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
   min-height: 40px;
+  padding: 0.35rem 0.75rem;
   border-radius: 12px;
   border: 1px solid #dbe2ea;
   background: #fff;

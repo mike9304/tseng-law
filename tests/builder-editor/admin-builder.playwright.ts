@@ -315,9 +315,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const columnsDrawer = page.locator('[aria-hidden="false"]').first();
     await expect(columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' })).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
+    await expect(columnsDrawer.getByRole('link', { name: '새 글 쓰기' })).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: '공개 칼럼 보기' })).toBeVisible();
     await expect(columnsDrawer.getByText(/개 칼럼 연결됨/)).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: /대만 화장품 시장 진출|대만 회사설립/ }).first()).toBeVisible();
+    await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
 
     await headerRegion.click({ position: { x: 360, y: 16 }, force: true });
     await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();
@@ -351,7 +353,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await pagesDrawerForPaste.getByRole('button', { name: /호정 소개|About Hovering/ }).first().click();
     await expect(page.getByText(/Loaded page:/)).toBeVisible();
     await page.keyboard.press(`${shortcutModifier}+V`);
-    await expect(page.getByText(/Pasted 1 item/)).toBeVisible();
+    await expect(page.getByText(/Pasted 1 item/).first()).toBeVisible();
     await expectSelectedNodeHandles(page);
     await page.keyboard.press(`${shortcutModifier}+Z`);
     await expectUndoChip(page);
@@ -481,6 +483,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(pagesDrawerForColumns.getByLabel('칼럼 빠른 이동')).toBeVisible();
     await expect(pagesDrawerForColumns.getByText(/posts|칼럼 연결/).first()).toBeVisible();
     await expect(pagesDrawerForColumns.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
+    await expect(pagesDrawerForColumns.getByRole('link', { name: '새 글 쓰기' })).toBeVisible();
     const columnsPageButton = pagesDrawerForColumns.getByRole('button', { name: /칼럼|Columns/ }).first();
     await expect(columnsPageButton).toBeVisible();
     await columnsPageButton.click();
@@ -495,5 +498,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await selectedColumnsFeed.getByRole('button', { name: '글 추가/수정' }).click();
     await expect(page).toHaveURL(/\/ko\/admin-builder\/columns$/);
     await expect(page.getByText(/대만 회사설립|대만 화장품 시장 진출/).first()).toBeVisible();
+    await page.goto('/ko/admin-builder/columns?new=1', { waitUntil: 'domcontentloaded' });
+    await expect(page.getByRole('dialog', { name: '새 칼럼 만들기' })).toBeVisible();
+    await expect(page.getByPlaceholder('예: 대만 투자 계약 분쟁 대응')).toBeVisible();
   });
 });

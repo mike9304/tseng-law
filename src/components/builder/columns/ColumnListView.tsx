@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import NewColumnModal from '@/components/builder/columns/NewColumnModal';
 import {
   BLOG_ADMIN_CATEGORIES,
@@ -92,6 +92,13 @@ export default function ColumnListView({
   const [createPending, setCreatePending] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
   const [busySlug, setBusySlug] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('new') === '1') {
+      setModalOpen(true);
+    }
+  }, []);
 
   const categoryCounts = useMemo(() => {
     const counts = new Map<string, number>();

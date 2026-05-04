@@ -676,3 +676,24 @@
 - `npm run security:builder-routes` ✅ (71 route files / 61 guarded mutation handlers)
 - `npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` warnings only)
 - `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, columns-feed 선택 → `글 추가/수정` → columns admin list)
+
+## 2026-05-04 Codex /goal G-Editor SEO publish history E2E 보강
+
+범위:
+- W26~W28의 "UI는 보이지만 실제 저장/복원/발행이 끝까지 검증되지 않는다" gap을 별도 Playwright E2E로 보강.
+- 임시 builder page 생성 → manual revision snapshot → draft 변경 → rollback API → 원본 문서 복원과 backup revision 생성을 검증.
+- 빈 alt 이미지 + `javascript:` 링크 draft로 publish preflight를 실행해 warning/blocker 분류와 `publish_blocked` 422 응답을 검증.
+- clean draft로 되돌린 뒤 SEO title/description/canonical/OG image PATCH → publish → 공개 `/ko/{slug}` head에 title, meta description, canonical, OG image가 반영되는지 검증.
+- 테스트 종료 시 임시 페이지를 삭제하고 leftover `g-editor-w26w28` 페이지가 남지 않는지 확인.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... seo-publish-history.playwright.ts --workers=1` ✅ (1/1, W26 rollback + W27 public head + W28 blocker publish gate)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 61 guarded mutation handlers)
+- `npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` warnings only)
+- `/api/builder/site/pages?locale=ko` cleanup check ✅: leftover `g-editor-w26w28` pages 0
+
+남은 gap:
+- W26~W28은 API/public-head E2E green까지 올라왔지만, 사용자가 실제 UI에서 복원/SEO 저장/PublishModal 흐름을 클릭해 green 판정하는 단계는 남아 있음.

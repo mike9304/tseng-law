@@ -884,3 +884,13 @@
 
 남은 gap:
 - 실제 사용자가 여러 섹션/parent 경계에서 자유 드래그해 snap UX가 Wix처럼 편하다고 확인해야 W06 green 처리 가능.
+
+## 2026-05-04 Codex /goal G-Editor verification sweep
+
+검증:
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+
+메모:
+- 이번 sweep은 W26~W28 UI-click 보강과 W06 nested snap 보강 이후 넓은 회귀 확인용.
+- full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증, green 승격 기준, 그리고 남은 WIP 항목 audit가 필요.

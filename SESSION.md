@@ -714,3 +714,24 @@
 
 남은 gap:
 - Header/menu 자체는 Navigation drawer에서 편집 가능하지만, public legacy header와 builder header 모델의 완전한 1:1 동기화는 별도 publish-gated 트랙으로 남김.
+
+## 2026-05-04 Codex /goal G-Editor columns + office sync follow-up
+
+범위:
+- 사용자가 지적한 "칼럼이 안 뜨고, 거기로 이동해 글 추가/수정하기 어렵다" 흐름을 다시 검증하고 보강.
+- `/api/builder/blog/posts?locale=ko&scope=all` 및 `/ko/columns`에서 기존 KO 칼럼 17개가 정상 반환/렌더됨을 확인.
+- Columns rail drawer와 Pages 패널 quick card가 실제 칼럼 API를 읽어 `17개 칼럼 연결됨`, 최근 글 링크, `칼럼 페이지로 이동`, `글 추가/수정`, `공개 칼럼 보기`를 즉시 노출하도록 보강.
+- `columns-feed` 캔버스가 실제 칼럼 제목을 포함하는지 Playwright에 추가하고, 선택 후 `글 추가/수정` quick action으로 `/ko/admin-builder/columns` 관리자 목록까지 이동 검증.
+- 구글 지도 편집 요구 보강: office map 선택 시 `Office sync` 섹션에서 주소/줌/길찾기 URL/전화/팩스/사무소명을 한 번에 수정하고, 주소 변경이 map iframe과 adjacent office card 주소에 동기화되도록 함.
+- builder legacy preview/dataset route가 정적 markdown만 읽던 경로를 `getAllColumnPostsIncludingBlob()`로 교체해 builder published/storage 칼럼도 dataset preview에 반영되게 함.
+- 칼럼 publish 후 `/ko/columns` 목록 경로도 revalidate하도록 추가.
+- RichTextRenderer가 `p/span/h1~h6` 내부에 중첩 `<p>`를 만들던 hydration warning을 `heading` mode로 정리.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, Columns drawer count/recent links + columns page feed + admin edit route + Office sync)
+
+남은 gap:
+- `/ko/columns` 공개 라우트는 concrete route가 우선이라 builder-published `/columns` canvas가 public route를 대체하지는 않음. 현재 목표는 공개 칼럼 route 유지 + builder에서 관리/미리보기 연결.
+- builder CMS collection summary 일부는 아직 sync file-reader 기반이라, collection inventory까지 blob-aware로 완전 통합하는 작업은 후속으로 남김.

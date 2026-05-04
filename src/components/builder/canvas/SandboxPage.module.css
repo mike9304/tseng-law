@@ -810,6 +810,50 @@
   line-height: 1.55;
 }
 
+.columnsStatusCard {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.2rem 0 0.9rem;
+  padding: 0.8rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #0f172a;
+}
+
+.columnsStatusCard strong {
+  color: #1d4ed8;
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
+.columnsStatusCard span {
+  color: #475569;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.columnsRecentList {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.25rem;
+}
+
+.columnsRecentList a {
+  overflow: hidden;
+  color: #123b63;
+  font-size: 0.76rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.columnsRecentList a:hover {
+  color: #116dff;
+}
+
 .catalogItem {
   flex: 1 1 auto;
   display: flex;

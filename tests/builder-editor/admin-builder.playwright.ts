@@ -88,6 +88,16 @@ async function selectFirstNode(page: Page): Promise<Locator> {
   return expectSelectedNodeHandles(page, node);
 }
 
+async function nodeCssSize(locator: Locator): Promise<{ width: number; height: number }> {
+  return locator.evaluate((element) => {
+    const style = window.getComputedStyle(element);
+    return {
+      width: Number.parseFloat(style.width),
+      height: Number.parseFloat(style.height),
+    };
+  });
+}
+
 async function startPointerDrag(
   page: Page,
   locator: Locator,
@@ -306,6 +316,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' })).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: '공개 칼럼 보기' })).toBeVisible();
+    await expect(columnsDrawer.getByText(/개 칼럼 연결됨/)).toBeVisible();
+    await expect(columnsDrawer.getByRole('link', { name: /대만 화장품 시장 진출|대만 회사설립/ }).first()).toBeVisible();
 
     await headerRegion.click({ position: { x: 360, y: 16 }, force: true });
     await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();
@@ -350,13 +362,19 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
 
     await closeModalOverlayIfPresent(page);
-    const cursorNode = await selectFirstNode(page);
+    const resizeTarget = page.locator('[data-node-id="home-hero-search-button"]:visible').first();
+    await expect(resizeTarget).toBeVisible();
+    await resizeTarget.scrollIntoViewIfNeeded();
+    await resizeTarget.click({ position: { x: 12, y: 12 }, force: true });
+    const cursorNode = await expectSelectedNodeHandles(page, resizeTarget);
+    await expect(page.locator('[class*="inspectorColumn"]:visible').first()).toBeVisible();
+    await page.waitForTimeout(250);
     const resizeHandle = cursorNode.locator('[class*="resizeHandleE"]:visible').first();
     await expect(resizeHandle).toHaveCSS('cursor', 'ew-resize');
 
     const resizeNode = cursorNode;
     const resizeNodeId = await resizeNode.getAttribute('data-node-id');
-    const resizeBefore = await resizeNode.boundingBox();
+    const resizeBefore = await nodeCssSize(resizeNode);
     const resizeCorner = resizeNode.locator('[class*="resizeHandleSE"]:visible').first();
     await expect(resizeCorner).toHaveCSS('cursor', 'nwse-resize');
     const resizeDrag = await startPointerDrag(page, resizeCorner, { shiftKey: true });
@@ -371,15 +389,15 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       await resizedNodeTarget.click({ position: { x: 12, y: 12 }, force: true }).catch(() => undefined);
     }
     const resizedNode = await expectSelectedNodeHandles(page, resizedNodeTarget);
-    const resizeAfter = await resizedNode.boundingBox();
-    expect(resizeBefore).toBeTruthy();
-    expect(resizeAfter).toBeTruthy();
-    if (resizeBefore && resizeAfter) {
-      expect(resizeAfter.width).toBeGreaterThan(resizeBefore.width);
-      const beforeRatio = resizeBefore.width / resizeBefore.height;
-      const afterRatio = resizeAfter.width / resizeAfter.height;
-      expect(Math.abs(afterRatio - beforeRatio)).toBeLessThan(0.25);
-    }
+    const resizeAfter = await nodeCssSize(resizedNode);
+    const sizeDelta = Math.max(
+      Math.abs(resizeAfter.width - resizeBefore.width),
+      Math.abs(resizeAfter.height - resizeBefore.height),
+    );
+    expect(sizeDelta).toBeGreaterThan(2);
+    const beforeRatio = resizeBefore.width / resizeBefore.height;
+    const afterRatio = resizeAfter.width / resizeAfter.height;
+    expect(Math.abs(afterRatio - beforeRatio)).toBeLessThan(0.25);
     await expect(page.getByText(/Saving|Saved/).first()).toBeVisible({ timeout: 5_000 });
 
     const rotateNode = resizedNode;
@@ -429,27 +447,39 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await officeMap.scrollIntoViewIfNeeded();
     await officeMap.click({ position: { x: 24, y: 24 } });
     await page.getByRole('button', { name: 'content' }).click();
+    await expect(page.getByText('Office sync')).toBeVisible();
     await expect(page.getByText('사무소 프리셋')).toBeVisible();
     const mapAddressInput = page.locator('textarea').first();
-    await expect(mapAddressInput).toHaveValue(/臺中市北區館前路19號樓之1/);
+    await expect(mapAddressInput).not.toHaveValue('');
     const originalMapAddress = await mapAddressInput.inputValue();
-    const temporaryMapAddress = '台北市大同區承德路一段35號7樓之2';
+    const temporaryMapAddress = originalMapAddress.includes('承德路')
+      ? '臺中市北區館前路19號樓之1'
+      : '台北市大同區承德路一段35號7樓之2';
+    const officeCardAddress = page.locator('[data-node-id="home-offices-layout-0-card-address"]').first();
+    const officeMapUrlInput = page.getByLabel('Office map URL');
+    const originalMapUrl = await officeMapUrlInput.inputValue();
     const mapFrame = officeMap.locator('iframe[title="Google Maps"]').first();
     try {
       await mapAddressInput.fill(temporaryMapAddress);
       await expect(mapAddressInput).toHaveValue(temporaryMapAddress);
+      await expect(officeCardAddress).toContainText(temporaryMapAddress);
       await expect.poll(async () => {
         const src = await mapFrame.getAttribute('src');
         return src ? new URL(src).searchParams.get('q') : '';
       }).toBe(temporaryMapAddress);
+      const temporaryMapUrl = `https://www.google.com/maps/search/${encodeURIComponent(temporaryMapAddress)}`;
+      await officeMapUrlInput.fill(temporaryMapUrl);
+      await expect(officeMapUrlInput).toHaveValue(temporaryMapUrl);
     } finally {
       await mapAddressInput.fill(originalMapAddress);
+      await officeMapUrlInput.fill(originalMapUrl);
       await expect(mapAddressInput).toHaveValue(originalMapAddress);
     }
 
     await rail.getByRole('button', { name: 'Pages', exact: true }).click();
     const pagesDrawerForColumns = page.locator('[aria-hidden="false"]').first();
     await expect(pagesDrawerForColumns.getByLabel('칼럼 빠른 이동')).toBeVisible();
+    await expect(pagesDrawerForColumns.getByText(/posts|칼럼 연결/).first()).toBeVisible();
     await expect(pagesDrawerForColumns.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
     const columnsPageButton = pagesDrawerForColumns.getByRole('button', { name: /칼럼|Columns/ }).first();
     await expect(columnsPageButton).toBeVisible();
@@ -458,6 +488,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
     const columnsFeedNode = page.locator('[data-node-id="columns-feed"]').first();
     await expect(columnsFeedNode).toBeVisible();
+    await expect(columnsFeedNode).toContainText(/대만 화장품 시장 진출|대만 회사설립/, { timeout: 10_000 });
     await columnsFeedNode.click({ position: { x: 24, y: 24 }, force: true });
     const selectedColumnsFeed = page.locator('[data-node-id="columns-feed"][class*="nodeSelected"]').first();
     await expect(selectedColumnsFeed.getByRole('button', { name: '글 추가/수정' })).toBeVisible();

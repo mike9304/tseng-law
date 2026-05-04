@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAllColumnPosts } from '@/lib/columns';
+import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import {
   getBuilderBindableTargets,
   isBuilderDatasetTargetId,
@@ -36,7 +36,7 @@ export async function GET(
   try {
     const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') ?? undefined);
     const snapshot = await readBuilderPageSnapshot(params.pageKey, 'draft', locale);
-    const posts = params.pageKey === 'home' ? getAllColumnPosts(locale) : [];
+    const posts = params.pageKey === 'home' ? await getAllColumnPostsIncludingBlob(locale) : [];
 
     return NextResponse.json({
       ok: true,
@@ -135,7 +135,7 @@ export async function PUT(
       expectedSavedAt: draft.persisted ? draft.snapshot.savedAt : undefined,
     });
 
-    const posts = params.pageKey === 'home' ? getAllColumnPosts(locale) : [];
+    const posts = params.pageKey === 'home' ? await getAllColumnPostsIncludingBlob(locale) : [];
 
     return NextResponse.json({
       ok: true,

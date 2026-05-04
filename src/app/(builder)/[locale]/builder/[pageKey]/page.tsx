@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound, redirect } from 'next/navigation';
-import { getAllColumnPosts } from '@/lib/columns';
+import type { ColumnPost } from '@/lib/columns';
+import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import { faqContent } from '@/data/faq-content';
 import { pageCopy } from '@/data/page-copy';
 import BuilderInteractiveHomePreview from '@/components/builder/BuilderInteractiveHomePreview';
@@ -70,7 +71,7 @@ export default async function BuilderPageRoute({ params, searchParams }: Builder
 
   const overview = await readBuilderSiteOverview(locale);
   const snapshot = await readPreferredBuilderPreviewSnapshot(pageKey, locale);
-  const allPosts = pageKey === 'home' ? getAllColumnPosts(locale) : [];
+  const allPosts = pageKey === 'home' ? await getAllColumnPostsIncludingBlob(locale) : [];
   const resolvedPosts =
     pageKey === 'home' ? resolveInsightsDatasetPosts(snapshot.snapshot.document, allPosts) : [];
   const faqItems = pageKey === 'home' ? faqContent[locale] : null;
@@ -117,6 +118,7 @@ export default async function BuilderPageRoute({ params, searchParams }: Builder
           pageKey,
           snapshotDocument: snapshot.snapshot.document,
           snapshotState: snapshot.snapshot.state,
+          allPosts,
         })
       )}
     </BuilderPageWorkspaceShell>
@@ -128,22 +130,23 @@ function renderReadonlyPage({
   pageKey,
   snapshotDocument,
   snapshotState,
+  allPosts,
 }: {
   locale: Locale;
   pageKey: 'home' | 'about' | 'contact';
   snapshotDocument: BuilderPageDocument;
   snapshotState: BuilderPageState;
+  allPosts: ColumnPost[];
 }) {
   switch (pageKey) {
     case 'home': {
-      const posts = getAllColumnPosts(locale);
       const faqItems = faqContent[locale];
 
       return (
         <BuilderReadonlyHomePreview
           locale={locale}
           document={snapshotDocument}
-          posts={resolveInsightsDatasetPosts(snapshotDocument, posts)}
+          posts={resolveInsightsDatasetPosts(snapshotDocument, allPosts)}
           faqItems={faqItems}
           state={snapshotState as BuilderHomeDocumentState}
         />

@@ -234,6 +234,81 @@ function InspectorEmptyState() {
   );
 }
 
+type OfficeQuickEditModel = {
+  layoutId: string;
+  cardId: string;
+  mapNode: BuilderCanvasNode;
+  titleNode: BuilderCanvasNode | null;
+  addressNode: BuilderCanvasNode | null;
+  phoneNode: BuilderCanvasNode | null;
+  faxNode: BuilderCanvasNode | null;
+  mapLinkNode: BuilderCanvasNode | null;
+};
+
+function textContentValue(node: BuilderCanvasNode | null): string {
+  const value = node?.content && 'text' in node.content ? node.content.text : '';
+  return typeof value === 'string' ? value : '';
+}
+
+function buttonLabelValue(node: BuilderCanvasNode | null): string {
+  const value = node?.content && 'label' in node.content ? node.content.label : '';
+  return typeof value === 'string' ? value : '';
+}
+
+function buttonHrefValue(node: BuilderCanvasNode | null): string {
+  const value = node?.content && 'href' in node.content ? node.content.href : '';
+  return typeof value === 'string' ? value : '';
+}
+
+function mapAddressValue(node: BuilderCanvasNode): string {
+  const value = node.content && 'address' in node.content ? node.content.address : '';
+  return typeof value === 'string' ? value : '';
+}
+
+function mapZoomValue(node: BuilderCanvasNode): number {
+  const value = node.content && 'zoom' in node.content ? node.content.zoom : 15;
+  return typeof value === 'number' ? value : 15;
+}
+
+function labelPrefix(label: string, fallback: string): string {
+  const separatorIndex = label.indexOf(':');
+  return separatorIndex > 0 ? label.slice(0, separatorIndex).trim() : fallback;
+}
+
+function labelValueAfterColon(label: string): string {
+  const separatorIndex = label.indexOf(':');
+  return separatorIndex >= 0 ? label.slice(separatorIndex + 1).trim() : label.trim();
+}
+
+function telHrefFromPhone(phone: string): string {
+  const normalized = phone.replace(/[^+\d]/g, '');
+  return normalized ? `tel:${normalized}` : '';
+}
+
+function googleMapsSearchUrl(address: string): string {
+  return address.trim()
+    ? `https://www.google.com/maps/search/${encodeURIComponent(address.trim())}`
+    : '';
+}
+
+function resolveOfficeQuickEdit(nodes: BuilderCanvasNode[], selectedNode: BuilderCanvasNode | null): OfficeQuickEditModel | null {
+  if (!selectedNode || selectedNode.kind !== 'map') return null;
+  if (!/^home-offices-layout-\d+-map$/.test(selectedNode.id)) return null;
+  const layoutId = selectedNode.id.replace(/-map$/, '');
+  const cardId = `${layoutId}-card`;
+  const byId = new Map(nodes.map((node) => [node.id, node]));
+  return {
+    layoutId,
+    cardId,
+    mapNode: selectedNode,
+    titleNode: byId.get(`${cardId}-title`) ?? null,
+    addressNode: byId.get(`${cardId}-address`) ?? null,
+    phoneNode: byId.get(`${cardId}-phone`) ?? null,
+    faxNode: byId.get(`${cardId}-fax`) ?? null,
+    mapLinkNode: byId.get(`${cardId}-map-link`) ?? null,
+  };
+}
+
 function updateRectField(
   node: BuilderCanvasNode,
   field: 'x' | 'y' | 'width' | 'height',
@@ -451,6 +526,11 @@ export default function SandboxInspectorPanel({
           onClose: () => setSelectedSurfaceKey(null),
         })
       : null;
+
+  const officeQuickEdit = useMemo(
+    () => resolveOfficeQuickEdit(document?.nodes ?? [], singleSelection ? selectedNode : null),
+    [document?.nodes, selectedNode, singleSelection],
+  );
 
   return (
     <aside className={styles.inspectorPlaceholder}>
@@ -841,22 +921,148 @@ export default function SandboxInspectorPanel({
               ) : null}
 
               {activeTab === 'content' ? (
-                <ContentTab
-                  node={selectedNode}
-                  disabled={selectedNode.locked}
-                  onUpdateContent={(content) => updateNodeContent(selectedNode.id, content)}
-                  onRequestAssetLibrary={
-                    selectedNode.kind === 'image'
-                      ? onRequestAssetLibrary
-                      : undefined
-                  }
-                  onRequestImageEditor={
-                    selectedNode.kind === 'image'
-                      ? onRequestImageEditor
-                      : undefined
-                  }
-                  linkPickerContext={linkPickerContext}
-                />
+                <>
+                  {officeQuickEdit ? (() => {
+                    const address = mapAddressValue(officeQuickEdit.mapNode);
+                    const phoneLabel = buttonLabelValue(officeQuickEdit.phoneNode);
+                    const phonePrefix = labelPrefix(phoneLabel, 'TEL');
+                    const faxLabel = textContentValue(officeQuickEdit.faxNode);
+                    const faxPrefix = labelPrefix(faxLabel, 'FAX');
+                    const generatedMapUrl = googleMapsSearchUrl(address);
+                    return (
+                      <InspectorSection label="Office sync" title="Wix-style location settings">
+                        <div className={styles.inspectorField}>
+                          <span className={styles.inspectorFieldLabel}>사무소명</span>
+                          <input
+                            className={styles.inspectorInput}
+                            type="text"
+                            aria-label="Office title synced value"
+                            value={textContentValue(officeQuickEdit.titleNode)}
+                            disabled={selectedNode.locked || !officeQuickEdit.titleNode}
+                            onChange={(event) => {
+                              if (!officeQuickEdit.titleNode) return;
+                              updateNodeContent(officeQuickEdit.titleNode.id, { text: event.target.value });
+                            }}
+                          />
+                        </div>
+                        <div className={styles.inspectorField}>
+                          <span className={styles.inspectorFieldLabel}>주소</span>
+                          <textarea
+                            className={styles.inspectorTextarea}
+                            rows={2}
+                            aria-label="Office address synced value"
+                            value={address}
+                            disabled={selectedNode.locked}
+                            onChange={(event) => {
+                              const nextAddress = event.target.value;
+                              updateNodeContent(officeQuickEdit.mapNode.id, { address: nextAddress });
+                              if (officeQuickEdit.addressNode) {
+                                updateNodeContent(officeQuickEdit.addressNode.id, { text: nextAddress });
+                              }
+                            }}
+                          />
+                        </div>
+                        <div className={styles.inspectorFieldGrid}>
+                          <LabeledRow label="Zoom">
+                            <NumberStepper
+                              value={mapZoomValue(officeQuickEdit.mapNode)}
+                              min={1}
+                              max={20}
+                              step={1}
+                              disabled={selectedNode.locked}
+                              ariaLabel="Office map zoom"
+                              onChange={(nextValue) => {
+                                updateNodeContent(officeQuickEdit.mapNode.id, {
+                                  zoom: clampNumber(Math.round(nextValue), 1, 20),
+                                });
+                              }}
+                            />
+                          </LabeledRow>
+                          <LabeledRow label="전화">
+                            <input
+                              className={styles.inspectorInput}
+                              type="text"
+                              aria-label="Office phone synced value"
+                              value={labelValueAfterColon(phoneLabel)}
+                              disabled={selectedNode.locked || !officeQuickEdit.phoneNode}
+                              onChange={(event) => {
+                                if (!officeQuickEdit.phoneNode) return;
+                                const nextPhone = event.target.value;
+                                updateNodeContent(officeQuickEdit.phoneNode.id, {
+                                  label: `${phonePrefix}: ${nextPhone}`,
+                                  href: telHrefFromPhone(nextPhone),
+                                });
+                              }}
+                            />
+                          </LabeledRow>
+                        </div>
+                        {officeQuickEdit.faxNode ? (
+                          <div className={styles.inspectorField}>
+                            <span className={styles.inspectorFieldLabel}>팩스</span>
+                            <input
+                              className={styles.inspectorInput}
+                              type="text"
+                              aria-label="Office fax synced value"
+                              value={labelValueAfterColon(faxLabel)}
+                              disabled={selectedNode.locked}
+                              onChange={(event) => {
+                                if (!officeQuickEdit.faxNode) return;
+                                updateNodeContent(officeQuickEdit.faxNode.id, {
+                                  text: `${faxPrefix}: ${event.target.value}`,
+                                });
+                              }}
+                            />
+                          </div>
+                        ) : null}
+                        {officeQuickEdit.mapLinkNode ? (
+                          <div className={styles.inspectorField}>
+                            <span className={styles.inspectorFieldLabel}>길찾기 URL</span>
+                            <div style={{ display: 'flex', gap: 6 }}>
+                              <input
+                                className={styles.inspectorInput}
+                                type="url"
+                                aria-label="Office map URL"
+                                value={buttonHrefValue(officeQuickEdit.mapLinkNode)}
+                                disabled={selectedNode.locked}
+                                onChange={(event) => {
+                                  if (!officeQuickEdit.mapLinkNode) return;
+                                  updateNodeContent(officeQuickEdit.mapLinkNode.id, { href: event.target.value });
+                                }}
+                              />
+                              <button
+                                type="button"
+                                className={styles.panelHeaderButton}
+                                disabled={selectedNode.locked || !generatedMapUrl}
+                                onClick={() => {
+                                  if (!officeQuickEdit.mapLinkNode || !generatedMapUrl) return;
+                                  updateNodeContent(officeQuickEdit.mapLinkNode.id, { href: generatedMapUrl });
+                                }}
+                              >
+                                주소로 생성
+                              </button>
+                            </div>
+                          </div>
+                        ) : null}
+                      </InspectorSection>
+                    );
+                  })() : null}
+                  <ContentTab
+                    node={selectedNode}
+                    disabled={selectedNode.locked}
+                    onUpdateContent={(content) => updateNodeContent(selectedNode.id, content)}
+                    onRequestAssetLibrary={
+                      selectedNode.kind === 'image'
+                        ? onRequestAssetLibrary
+                        : undefined
+                    }
+                    onRequestImageEditor={
+                      selectedNode.kind === 'image'
+                        ? onRequestImageEditor
+                        : undefined
+                    }
+                    linkPickerContext={linkPickerContext}
+                  />
+                </>
               ) : null}
 
               {activeTab === 'animations' ? (

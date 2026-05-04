@@ -14,6 +14,13 @@ interface PageMeta {
   publishedAt?: string;
 }
 
+interface ColumnQuickSummary {
+  loading: boolean;
+  total: number | null;
+  posts: Array<{ slug: string; title: string }>;
+  error: string | null;
+}
+
 const containerStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
@@ -256,11 +263,13 @@ export default function PageSwitcher({
   locale,
   activePageId,
   clipboardCount = 0,
+  columnPostsSummary,
   onSelectPage,
 }: {
   locale: Locale;
   activePageId: string | null;
   clipboardCount?: number;
+  columnPostsSummary?: ColumnQuickSummary;
   onSelectPage: (pageId: string, nextSlug?: string) => void;
 }) {
   const [pages, setPages] = useState<PageMeta[]>([]);
@@ -480,8 +489,28 @@ export default function PageSwitcher({
         <section style={columnsQuickCardStyle} aria-label="칼럼 빠른 이동">
           <div style={columnsQuickTitleStyle}>
             <span>칼럼</span>
-            <span style={columnsQuickMetaStyle}>/{columnsPage.slug}</span>
+            <span style={columnsQuickMetaStyle}>
+              {columnPostsSummary?.loading
+                ? 'loading'
+                : columnPostsSummary?.error
+                  ? `/${columnsPage.slug}`
+                  : `${columnPostsSummary?.total ?? columnPostsSummary?.posts.length ?? 0} posts`}
+            </span>
           </div>
+          {columnPostsSummary?.posts.length ? (
+            <div style={{ display: 'grid', gap: 4 }}>
+              {columnPostsSummary.posts.slice(0, 2).map((post) => (
+                <a
+                  key={post.slug}
+                  href={`/${locale}/admin-builder/columns/${encodeURIComponent(post.slug)}/edit`}
+                  style={{ ...columnsQuickMetaStyle, color: '#1d4ed8', textDecoration: 'none' }}
+                  title={post.title}
+                >
+                  {post.title}
+                </a>
+              ))}
+            </div>
+          ) : null}
           <div style={columnsQuickActionsStyle}>
             <button
               type="button"

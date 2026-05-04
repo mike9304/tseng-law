@@ -15,6 +15,13 @@ function buildTextShadow(ts?: { x: number; y: number; blur: number; color: strin
   return `${ts.x}px ${ts.y}px ${ts.blur}px ${ts.color}`;
 }
 
+function richTextModeForTag(tag: keyof JSX.IntrinsicElements): 'block' | 'heading' {
+  const tagName = String(tag).toLowerCase();
+  return tagName === 'p' || tagName === 'span' || /^h[1-6]$/.test(tagName)
+    ? 'heading'
+    : 'block';
+}
+
 export default function TextElement({
   node,
   theme,
@@ -24,6 +31,7 @@ export default function TextElement({
 }) {
   const { className, as } = node.content;
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
+  const richTextMode = richTextModeForTag(Tag);
 
   if (className) {
     return (
@@ -39,7 +47,7 @@ export default function TextElement({
           <RichTextRenderer
             richText={node.content.richText}
             fallbackText={node.content.text}
-            mode="block"
+            mode={richTextMode}
           />
         ) : (
           node.content.text
@@ -85,7 +93,7 @@ export default function TextElement({
         <RichTextRenderer
           richText={node.content.richText}
           fallbackText={node.content.text}
-          mode="block"
+          mode={richTextMode}
         />
       ) : (
         node.content.text

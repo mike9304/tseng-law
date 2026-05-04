@@ -87,6 +87,7 @@ export async function POST(
 
   // Best-effort ISR revalidation for the column's public page.
   try {
+    revalidatePath(`/${locale}/columns`);
     revalidatePath(`/${locale}/columns/${slug}`);
   } catch {
     // revalidatePath can throw during dev or when the path doesn't

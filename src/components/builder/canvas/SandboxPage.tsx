@@ -53,6 +53,18 @@ type BuilderPageSummary = {
   isHomePage?: boolean;
 };
 
+type ColumnPostSummary = {
+  slug: string;
+  title: string;
+};
+
+type ColumnPostsSummary = {
+  loading: boolean;
+  total: number | null;
+  posts: ColumnPostSummary[];
+  error: string | null;
+};
+
 type ToastTone = 'success' | 'error';
 
 interface DraftMeta {
@@ -178,6 +190,12 @@ export default function SandboxPage({
   const [siteThemeState, setSiteThemeState] = useState<BuilderTheme>(siteTheme ?? DEFAULT_THEME);
   const [navItemsState, setNavItemsState] = useState<BuilderNavItem[]>(navItems ?? []);
   const [sitePagesState, setSitePagesState] = useState<BuilderPageSummary[]>(sitePages ?? []);
+  const [columnPostsSummary, setColumnPostsSummary] = useState<ColumnPostsSummary>({
+    loading: true,
+    total: null,
+    posts: [],
+    error: null,
+  });
   const [currentSlugState, setCurrentSlugState] = useState(currentSlug ?? '');
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
@@ -339,6 +357,56 @@ export default function SandboxPage({
   useEffect(() => {
     setSitePagesState(sitePages ?? []);
   }, [sitePages]);
+
+  useEffect(() => {
+    let cancelled = false;
+    setColumnPostsSummary((current) => ({ ...current, loading: true, error: null }));
+    const params = new URLSearchParams({
+      locale,
+      scope: 'all',
+      limit: '5',
+    });
+
+    fetch(`/api/builder/blog/posts?${params.toString()}`, { credentials: 'same-origin' })
+      .then((response) => response.json())
+      .then((payload: unknown) => {
+        if (cancelled) return;
+        if (!payload || typeof payload !== 'object') {
+          throw new Error('invalid_response');
+        }
+        const result = payload as {
+          ok?: boolean;
+          total?: number;
+          error?: string;
+          posts?: Array<{ slug?: string; title?: string }>;
+        };
+        if (!result.ok || !Array.isArray(result.posts)) {
+          throw new Error(result.error || 'columns_unavailable');
+        }
+
+        setColumnPostsSummary({
+          loading: false,
+          total: typeof result.total === 'number' ? result.total : result.posts.length,
+          posts: result.posts
+            .filter((post): post is { slug: string; title: string } => Boolean(post.slug && post.title))
+            .map((post) => ({ slug: post.slug, title: post.title })),
+          error: null,
+        });
+      })
+      .catch((error: unknown) => {
+        if (cancelled) return;
+        setColumnPostsSummary({
+          loading: false,
+          total: null,
+          posts: [],
+          error: error instanceof Error ? error.message : 'columns_unavailable',
+        });
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [locale]);
 
   useEffect(() => {
     setCurrentSlugState(currentSlug ?? '');
@@ -857,6 +925,7 @@ export default function SandboxPage({
                 locale={locale}
                 activePageId={activePageId}
                 clipboardCount={clipboardCount}
+                columnPostsSummary={columnPostsSummary}
                 onSelectPage={handleSelectPage}
               />
             </div>
@@ -918,8 +987,35 @@ export default function SandboxPage({
                   </div>
                 </header>
                 <p className={styles.panelCopy}>
-                  칼럼 페이지로 이동하거나 기존 글 17개와 새 초안을 바로 추가/수정합니다.
+                  칼럼 페이지로 이동하거나 기존 글과 새 초안을 바로 추가/수정합니다.
                 </p>
+                <div className={styles.columnsStatusCard}>
+                  <strong>
+                    {columnPostsSummary.loading
+                      ? '칼럼 불러오는 중'
+                      : columnPostsSummary.error
+                        ? '칼럼 연결 확인 필요'
+                        : `${columnPostsSummary.total ?? columnPostsSummary.posts.length}개 칼럼 연결됨`}
+                  </strong>
+                  {columnPostsSummary.error ? (
+                    <span>목록을 다시 열거나 새로고침 후 확인하세요.</span>
+                  ) : (
+                    <span>공개 글과 빌더 초안이 같은 관리 화면에 표시됩니다.</span>
+                  )}
+                  {columnPostsSummary.posts.length > 0 ? (
+                    <div className={styles.columnsRecentList} aria-label="최근 칼럼">
+                      {columnPostsSummary.posts.slice(0, 4).map((post) => (
+                        <a
+                          key={post.slug}
+                          href={`/${locale}/admin-builder/columns/${encodeURIComponent(post.slug)}/edit`}
+                          title={post.title}
+                        >
+                          {post.title}
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
                 <div className={styles.actionGrid}>
                   <button
                     type="button"

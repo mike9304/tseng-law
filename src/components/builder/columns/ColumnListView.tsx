@@ -315,6 +315,12 @@ export default function ColumnListView({
           <p>카테고리별 칼럼을 검색하고, 초안 작성부터 발행까지 한 화면에서 관리합니다.</p>
         </div>
         <div className="column-manager-hero-actions">
+          <Link
+            href={`/${routeLocale}/admin-builder`}
+            className="admin-console-ghost-btn column-manager-back-btn"
+          >
+            ← 편집 홈
+          </Link>
           <nav className="admin-console-pill-nav" aria-label="Column locale tabs">
             {locales.map((locale) => {
               const href = `/${routeLocale}/admin-builder/columns?contentLocale=${locale}`;

@@ -323,8 +323,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByText('Basic')).toBeVisible();
 
     const canvasColumn = page.locator('[class*="canvasColumn"]').first();
-    await canvasColumn.evaluate((element) => { element.scrollTop = 500; });
-    await expect.poll(() => canvasColumn.evaluate((element) => element.scrollTop)).toBeGreaterThan(100);
+    const stageViewport = page.locator('[class*="stageViewport"]').first();
+    const stageTransform = page.locator('[class*="stageTransform"]').first();
+    await expect.poll(() => canvasColumn.evaluate((element) => element.scrollHeight - element.clientHeight)).toBeLessThanOrEqual(4);
+    await stageViewport.hover();
+    await page.mouse.wheel(0, 520);
+    await expect.poll(() => stageTransform.evaluate((element) => (
+      new DOMMatrixReadOnly(window.getComputedStyle(element).transform).m42
+    ))).toBeLessThan(-100);
     await rail.getByRole('button', { name: 'Columns', exact: true }).click();
     const columnsDrawer = page.locator('[aria-hidden="false"]').first();
     await expect(columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' })).toBeVisible();
@@ -334,7 +340,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(columnsDrawer.getByText(/개 칼럼 연결됨/)).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: /대만 화장품 시장 진출|대만 회사설립/ }).first()).toBeVisible();
     await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
-    await expect.poll(() => canvasColumn.evaluate((element) => element.scrollTop)).toBe(0);
+    await expect.poll(() => stageTransform.evaluate((element) => (
+      new DOMMatrixReadOnly(window.getComputedStyle(element).transform).m42
+    ))).toBeGreaterThanOrEqual(-2);
 
     await headerRegion.click({ position: { x: 360, y: 16 }, force: true });
     await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();
@@ -394,7 +402,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     ).toContainText(/\d+px/);
     await finishPointerDrag(page, snapDrag, -5, 0);
 
-    const resizeTarget = page.locator('[data-node-id="home-hero-title"]:visible').first();
+    const resizeTarget = page.locator('[data-node-id="home-hero-search-placeholder"]:visible').first();
     await expect(resizeTarget).toBeVisible();
     await resizeTarget.scrollIntoViewIfNeeded();
     await resizeTarget.click({ position: { x: 12, y: 12 }, force: true });
@@ -411,9 +419,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(resizeCorner).toHaveCSS('cursor', 'nwse-resize');
     const resizeDrag = await startPointerDrag(page, resizeCorner, { shiftKey: true });
     await expect(page.locator('[data-canvas-interaction="resize"]')).toBeVisible();
-    await movePointerDrag(page, resizeDrag, 82, 36);
+    await movePointerDrag(page, resizeDrag, 64, 16);
     await expect(page.locator('[class*="canvasOverlayResizeReadout"]').first()).toContainText(/\d+\s*x\s*\d+/);
-    await finishPointerDrag(page, resizeDrag, 82, 36);
+    await finishPointerDrag(page, resizeDrag, 64, 16);
     const resizedNodeTarget = resizeNodeId
       ? page.locator(`[data-node-id="${resizeNodeId}"]`).first()
       : undefined;

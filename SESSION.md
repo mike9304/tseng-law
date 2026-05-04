@@ -894,3 +894,28 @@
 메모:
 - 이번 sweep은 W26~W28 UI-click 보강과 W06 nested snap 보강 이후 넓은 회귀 확인용.
 - full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증, green 승격 기준, 그리고 남은 WIP 항목 audit가 필요.
+
+## 2026-05-04 Codex /goal G-Editor layout, columns return path, W29-W30 persistence follow-up
+
+범위:
+- 사용자가 지적한 "에디터 첫 화면이 아래로 스크롤해야 나온다 / 사이트 열면 옆쪽이 짤린다" 문제를 반영해 canvas column이 stage 전체 높이만큼 커지는 구조를 수정.
+- `.canvasColumn`/`.stageSurface`/`.stageViewport`를 bounded flex layout으로 바꾸고, stage 이동은 바깥 column scroll이 아니라 stage viewport 내부 wheel pan으로 처리.
+- page 전환 시 `CanvasContainer`의 viewport pan/zoom을 `activePageId` 기준으로 다시 fit 하도록 `viewportResetKey`를 연결.
+- admin-builder smoke가 바깥 canvas column scroll이 생기지 않는지, wheel pan이 stage transform 안에서 일어나는지 검증하도록 갱신.
+- 사용자가 지적한 "칼럼 갔다가 편집 홈 메뉴로 돌아가는 장치가 없다" 문제를 반영해 칼럼 목록과 칼럼 작성 화면 상단에 `← 편집 홈` 링크를 추가.
+- 칼럼 작성 화면 상단에는 `칼럼 목록` breadcrumb도 함께 노출해 `편집 홈 ↔ 칼럼 목록 ↔ 글 작성` 흐름을 명확히 함.
+- W29/W30 persistence 전용 Playwright를 추가해 임시 source/target page 생성 → Cmd+D duplicate +20/+20 저장 → reload 유지 → Cmd+C → target page Cmd+V → +20/+20 저장 → reload 유지를 검증.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, bounded first viewport + internal wheel pan + 기존 editor smoke)
+- `BASE_URL=http://localhost:3000 ... columns-ui-workflow.playwright.ts --workers=1` ✅ (1/1, `← 편집 홈`/`칼럼 목록` 링크 + direct create/edit/media/publish/public/cleanup)
+- `BASE_URL=http://localhost:3000 ... clipboard-persistence.playwright.ts --workers=1` ✅ (1/1, W29/W30 저장/reload persistence)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+
+메모:
+- `npm run build` 후 dev chunk 불일치를 피하려고 기존 3000 dev 서버를 종료하고 build 통과 후 `npm run dev`를 다시 실행함. 현재 `http://localhost:3000/ko/admin-builder`는 local auth 후 200 OK.
+- full goal 완료 판정은 아직 아님. 사용자의 실제 5분 자유 검증과 남은 Wix parity audit가 계속 필요.

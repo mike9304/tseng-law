@@ -748,11 +748,19 @@ export default function SandboxPage({
         width: viewportWidth,
         margin: '0 auto',
         position: 'relative',
+        display: 'flex',
+        flex: '1 1 auto',
+        flexDirection: 'column',
+        minHeight: 0,
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       }
     : {
         width: '100%',
         position: 'relative',
+        display: 'flex',
+        flex: '1 1 auto',
+        flexDirection: 'column',
+        minHeight: 0,
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       };
 
@@ -764,14 +772,14 @@ export default function SandboxPage({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        overflow: 'auto',
+        overflow: 'hidden',
       }
     : {
         flex: 1,
         minWidth: 0,
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'auto',
+        overflow: 'hidden',
         background: '#f8fafc',
       };
 
@@ -1148,7 +1156,7 @@ export default function SandboxPage({
               />
             </div>
           ) : null}
-          <div style={{ ...canvasWrapperStyle, flex: '0 0 auto', minHeight: canvasDocument?.stageHeight ?? 880 }}>
+          <div style={canvasWrapperStyle}>
             <CanvasContainer
               onRequestAssetLibrary={setAssetLibraryNodeId}
               onRequestImageEditor={(nodeId, initialTab) => setImageEditorRequest({ nodeId, initialTab })}
@@ -1161,6 +1169,7 @@ export default function SandboxPage({
               onActivity={pushActivityChip}
               siteLightboxes={linkPickerLightboxes}
               sitePages={linkPickerSitePages}
+              viewportResetKey={activePageId}
             />
           </div>
           {siteName ? (

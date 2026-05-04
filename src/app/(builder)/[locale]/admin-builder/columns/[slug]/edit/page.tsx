@@ -48,7 +48,10 @@ export default async function ColumnEditPage({
     <main className="column-editor-page">
       <header className="column-editor-page-header">
         <div>
-          <a href={`/${locale}/admin-builder/columns`}>← 칼럼 목록</a>
+          <nav className="column-editor-breadcrumb" aria-label="Column editor navigation">
+            <a href={`/${locale}/admin-builder`}>← 편집 홈</a>
+            <a href={`/${locale}/admin-builder/columns`}>칼럼 목록</a>
+          </nav>
           <h1>{column.title || 'Untitled column'}</h1>
         </div>
         <a

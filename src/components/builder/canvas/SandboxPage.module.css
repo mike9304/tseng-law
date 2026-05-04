@@ -459,10 +459,13 @@
 }
 
 .canvasColumn {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   min-height: 0;
   height: 100%;
   flex: 1 1 auto;
+  overflow: hidden;
   border: 0;
   border-radius: 0;
   background: var(--editor-canvas-bg, #f1f5f9);
@@ -1283,14 +1286,21 @@
 }
 
 .stageSurface {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
   width: 100%;
   min-width: 0;
+  min-height: 0;
 }
 
 .stageViewport {
+  flex: 1 1 auto;
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  min-height: 0;
+  height: 100%;
   overflow: hidden;
   border-radius: 22px;
   border: 1px solid var(--editor-border-hairline, #dbe2ea);

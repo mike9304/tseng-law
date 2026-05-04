@@ -104,6 +104,10 @@ function clampPopupAxis(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), Math.max(min, max));
 }
 
+function clampPanAxis(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), max);
+}
+
 function clampViewportPopupPosition(
   rawX: number,
   rawY: number,
@@ -221,6 +225,7 @@ export default function CanvasContainer({
   onActivity,
   siteLightboxes = [],
   sitePages = [],
+  viewportResetKey,
 }: {
   onRequestAssetLibrary?: (nodeId: string) => void;
   onRequestImageEditor?: (nodeId: string, initialTab?: ImageEditTab) => void;
@@ -233,6 +238,7 @@ export default function CanvasContainer({
   onActivity?: (message: string) => void;
   siteLightboxes?: LinkPickerContext['siteLightboxes'];
   sitePages?: LinkPickerContext['sitePages'];
+  viewportResetKey?: string | null;
 }) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -515,7 +521,7 @@ export default function CanvasContainer({
       window.removeEventListener('resize', fitCanvas);
       resizeObserver?.disconnect();
     };
-  }, [fitCanvas]);
+  }, [fitCanvas, viewportResetKey]);
 
   useEffect(() => {
     if (!contextMenu) return undefined;
@@ -1280,11 +1286,34 @@ export default function CanvasContainer({
         ref={viewportRef}
         className={`${styles.stageViewport} ${isSpacePressed ? styles.stageViewportPannable : ''} ${interaction?.type === 'pan' ? styles.stageViewportPanning : ''}`}
         onWheel={(event) => {
-          if (!event.metaKey && !event.ctrlKey) return;
+          const rect = viewportRef.current?.getBoundingClientRect();
+          if (!rect) return;
           event.preventDefault();
-          setZoomState((currentState) => (
-            event.deltaY < 0 ? stepZoomIn(currentState) : stepZoomOut(currentState)
-          ));
+          if (event.metaKey || event.ctrlKey) {
+            setZoomState((currentState) => (
+              event.deltaY < 0 ? stepZoomIn(currentState) : stepZoomOut(currentState)
+            ));
+            return;
+          }
+          setZoomState((currentState) => {
+            const scaledWidth = stageWidth * currentState.zoom;
+            const scaledHeight = stageHeight * currentState.zoom;
+            const centeredPanX = Math.max(0, Math.round((rect.width - scaledWidth) / 2));
+            const minPanX = Math.min(0, Math.round(rect.width - scaledWidth - 24));
+            const maxPanX = scaledWidth > rect.width ? 12 : centeredPanX;
+            const minPanY = Math.min(0, Math.round(rect.height - scaledHeight - 24));
+            const nextPanX = scaledWidth > rect.width
+              ? clampPanAxis(currentState.panX - event.deltaX, minPanX, maxPanX)
+              : centeredPanX;
+            const nextPanY = scaledHeight > rect.height
+              ? clampPanAxis(currentState.panY - event.deltaY, minPanY, 0)
+              : 0;
+            return {
+              ...currentState,
+              panX: nextPanX,
+              panY: nextPanY,
+            };
+          });
         }}
       >
         <div

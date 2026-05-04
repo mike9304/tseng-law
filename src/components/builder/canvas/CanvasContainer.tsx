@@ -466,7 +466,7 @@ export default function CanvasContainer({
     const availableWidth = Math.max(1, rect.width - 24);
     const nextZoom = Math.max(
       MIN_ZOOM,
-      Math.min(MAX_ZOOM, availableWidth / stageWidth),
+      Math.min(1, MAX_ZOOM, availableWidth / stageWidth),
     );
     const roundedZoom = Math.round(nextZoom * 100) / 100;
     const panX = Math.max(0, Math.round((rect.width - stageWidth * roundedZoom) / 2));

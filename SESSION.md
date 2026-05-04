@@ -752,3 +752,20 @@
 
 남은 gap:
 - 실제 칼럼 생성/본문 수정/발행은 관리 화면에서 가능하지만, 사용자가 직접 새 글을 만들어 발행해 보는 수동 green 검증은 남아 있음.
+
+## 2026-05-04 Codex /goal G-Editor initial viewport follow-up
+
+범위:
+- 사용자가 지적한 "처음 들어가면 아래로 스크롤해야 보인다 / 옆쪽이 짤린다" 문제를 실제 3000번 geometry로 재측정하고 보강.
+- `CanvasContainer`의 initial Fit 계산이 넓은 화면에서 100%를 초과해 확대하지 않도록 상한을 추가.
+- `SandboxPage`의 canvas column ref를 추가해 active page/slug 전환 시 내부 scrollTop/scrollLeft를 0으로 리셋.
+- admin-builder Playwright에 초기 zoom 100% 검증과, canvasColumn을 강제로 아래로 내린 뒤 Columns rail로 페이지 전환하면 scrollTop이 0으로 복귀하는 검증을 추가.
+- 1440x900 실측: `window.scrollY=0`, `canvasScrollTop=0`, `zoom=100%`, stage right 1392px < viewport 1440px.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1)
+
+남은 gap:
+- 캔버스는 여전히 긴 페이지를 내부 scroll로 탐색하는 구조다. Wix식 bounded viewport + wheel pan 전환은 resize handle 접근성 영향이 커서 별도 설계/검증 후 진행.

@@ -179,6 +179,7 @@ export default function SandboxPage({
   const previousDraftSaveStateRef = useRef(draftSaveState);
   const saveBadgeTimerRef = useRef<number | null>(null);
   const initialDraftLoadedRef = useRef(false);
+  const canvasColumnRef = useRef<HTMLDivElement | null>(null);
   const [syncedUpdatedAt, setSyncedUpdatedAt] = useState(initialDocument.updatedAt);
   const [draftMeta, setDraftMeta] = useState<DraftMeta | null>(null);
   const [draftConflict, setDraftConflict] = useState<DraftConflict | null>(null);
@@ -411,6 +412,12 @@ export default function SandboxPage({
   useEffect(() => {
     setCurrentSlugState(currentSlug ?? '');
   }, [currentSlug]);
+
+  useEffect(() => {
+    const column = canvasColumnRef.current;
+    if (!column) return;
+    column.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [activePageId, currentSlugState]);
 
   const saveDraftDocument = useCallback(
     async (nextDocument: BuilderCanvasDocument): Promise<boolean> => {
@@ -1073,7 +1080,7 @@ export default function SandboxPage({
           ) : null}
         </aside>
 
-        <div className={styles.canvasColumn} style={canvasOuterStyle}>
+        <div ref={canvasColumnRef} className={styles.canvasColumn} style={canvasOuterStyle}>
           {siteName ? (
             <div
               className={styles.globalHeaderRegion}

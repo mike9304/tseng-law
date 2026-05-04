@@ -260,6 +260,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect.poll(async () => (await topBar.boundingBox())?.height ?? 999).toBeLessThanOrEqual(36);
     const topBarBox = await topBar.boundingBox();
     expect(topBarBox?.height).toBeGreaterThanOrEqual(30);
+    await expect(page.locator('[class*="zoomLabel"]').first()).toContainText('100%');
 
     const rail = page.locator('[class*="iconRail"]').first();
     await expect(rail).toBeVisible();
@@ -311,6 +312,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByText('Catalog')).toBeVisible();
     await expect(page.getByText('Basic')).toBeVisible();
 
+    const canvasColumn = page.locator('[class*="canvasColumn"]').first();
+    await canvasColumn.evaluate((element) => { element.scrollTop = 500; });
+    await expect.poll(() => canvasColumn.evaluate((element) => element.scrollTop)).toBeGreaterThan(100);
     await rail.getByRole('button', { name: 'Columns', exact: true }).click();
     const columnsDrawer = page.locator('[aria-hidden="false"]').first();
     await expect(columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' })).toBeVisible();
@@ -320,6 +324,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(columnsDrawer.getByText(/개 칼럼 연결됨/)).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: /대만 화장품 시장 진출|대만 회사설립/ }).first()).toBeVisible();
     await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
+    await expect.poll(() => canvasColumn.evaluate((element) => element.scrollTop)).toBe(0);
 
     await headerRegion.click({ position: { x: 360, y: 16 }, force: true });
     await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();

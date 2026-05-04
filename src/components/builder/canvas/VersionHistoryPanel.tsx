@@ -33,7 +33,7 @@ interface RevisionDiffSummary {
 const backdropStyle: React.CSSProperties = {
   position: 'fixed',
   inset: 0,
-  zIndex: 9000,
+  zIndex: 21000,
   background: 'rgba(15, 23, 42, 0.45)',
   backdropFilter: 'blur(6px)',
   display: 'flex',

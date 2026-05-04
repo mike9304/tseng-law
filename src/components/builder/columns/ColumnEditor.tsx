@@ -7,11 +7,14 @@ import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
 import Placeholder from '@tiptap/extension-placeholder';
 import Underline from '@tiptap/extension-underline';
+import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import ColumnTranslationStatusAlert from '@/components/builder/translations/ColumnTranslationStatusAlert';
+import type { BuilderAssetListItem } from '@/lib/builder/assets';
+import type { Locale } from '@/lib/locales';
 
 interface ColumnEditorProps {
   slug: string;
-  locale: string;
+  locale: Locale;
   initialContent: {
     title: string;
     summary: string;
@@ -23,6 +26,14 @@ interface ColumnEditorProps {
 
 const AUTOSAVE_DEBOUNCE_MS = 1000;
 
+type RichTextJson = {
+  type?: string;
+  text?: string;
+  attrs?: Record<string, unknown>;
+  marks?: Array<{ type?: string; attrs?: Record<string, unknown> }>;
+  content?: RichTextJson[];
+};
+
 function stripHtml(value: string): string {
   return value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 }
@@ -31,6 +42,76 @@ function buildAutoSummary(title: string, bodyMarkdown: string, bodyHtml: string)
   const plainBody = (bodyMarkdown || stripHtml(bodyHtml)).replace(/\s+/g, ' ').trim();
   const source = plainBody || title.trim();
   return source.slice(0, 180);
+}
+
+function attrString(node: RichTextJson, key: string): string {
+  const value = node.attrs?.[key];
+  return typeof value === 'string' ? value : '';
+}
+
+function serializeInline(nodes: RichTextJson[] | undefined): string {
+  return (nodes ?? []).map(serializeMarkdownNode).join('');
+}
+
+function applyMarkdownMarks(text: string, marks: RichTextJson['marks']): string {
+  return (marks ?? []).reduce((current, mark) => {
+    if (mark.type === 'bold') return `**${current}**`;
+    if (mark.type === 'italic') return `*${current}*`;
+    if (mark.type === 'code') return `\`${current}\``;
+    if (mark.type === 'link') {
+      const href = typeof mark.attrs?.href === 'string' ? mark.attrs.href : '';
+      return href ? `[${current}](${href})` : current;
+    }
+    return current;
+  }, text);
+}
+
+function serializeListItem(node: RichTextJson, index?: number): string {
+  const marker = typeof index === 'number' ? `${index + 1}. ` : '- ';
+  const body = (node.content ?? [])
+    .map(serializeMarkdownNode)
+    .filter(Boolean)
+    .join('\n')
+    .replace(/\n/g, '\n  ');
+  return `${marker}${body}`;
+}
+
+function serializeMarkdownNode(node: RichTextJson): string {
+  if (node.type === 'text') return applyMarkdownMarks(node.text ?? '', node.marks);
+  if (node.type === 'paragraph') return serializeInline(node.content);
+  if (node.type === 'heading') {
+    const level = typeof node.attrs?.level === 'number' ? node.attrs.level : 2;
+    return `${'#'.repeat(Math.max(1, Math.min(6, level)))} ${serializeInline(node.content)}`.trim();
+  }
+  if (node.type === 'image') {
+    const src = attrString(node, 'src');
+    if (!src) return '';
+    const alt = attrString(node, 'alt') || attrString(node, 'title');
+    return `![${alt}](${src})`;
+  }
+  if (node.type === 'bulletList') {
+    return (node.content ?? []).map((item) => serializeListItem(item)).join('\n');
+  }
+  if (node.type === 'orderedList') {
+    return (node.content ?? []).map((item, index) => serializeListItem(item, index)).join('\n');
+  }
+  if (node.type === 'listItem') return serializeListItem(node);
+  if (node.type === 'blockquote') {
+    return (node.content ?? [])
+      .map(serializeMarkdownNode)
+      .join('\n')
+      .split('\n')
+      .map((line) => `> ${line}`)
+      .join('\n');
+  }
+  if (node.type === 'codeBlock') return `\`\`\`\n${serializeInline(node.content)}\n\`\`\``;
+  if (node.type === 'horizontalRule') return '---';
+  if (node.type === 'hardBreak') return '\n';
+  return (node.content ?? []).map(serializeMarkdownNode).filter(Boolean).join('\n\n');
+}
+
+function serializeEditorMarkdown(doc: RichTextJson): string {
+  return (doc.content ?? []).map(serializeMarkdownNode).filter(Boolean).join('\n\n').trim();
 }
 
 export default function ColumnEditor({
@@ -42,6 +123,7 @@ export default function ColumnEditor({
   const [title, setTitle] = useState(initialContent.title);
   const [summary, setSummary] = useState(initialContent.summary);
   const [summaryOpen, setSummaryOpen] = useState(Boolean(initialContent.summary.trim()));
+  const [assetLibraryOpen, setAssetLibraryOpen] = useState(false);
   const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error'>('saved');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedRef = useRef<string>('');
@@ -69,8 +151,9 @@ export default function ColumnEditor({
   const buildPayload = useCallback(() => {
     if (!editor) return;
     const bodyHtml = editor.getHTML();
-    const bodyMarkdown = editor.getText();
-    const nextSummary = summary.trim() || buildAutoSummary(title, bodyMarkdown, bodyHtml);
+    const bodyPlainText = editor.getText();
+    const bodyMarkdown = serializeEditorMarkdown(editor.getJSON() as RichTextJson);
+    const nextSummary = summary.trim() || buildAutoSummary(title, bodyPlainText, bodyHtml);
     const payload = JSON.stringify({ title, summary: nextSummary, bodyHtml, bodyMarkdown });
     return { payload, summary: nextSummary, bodyHtml, bodyMarkdown };
   }, [editor, title, summary]);
@@ -162,6 +245,14 @@ export default function ColumnEditor({
       onSaveStatus?.('error');
     }
   }, [save, slug, locale, onSaveStatus]);
+
+  const insertAssetImage = useCallback((asset: BuilderAssetListItem) => {
+    editor
+      ?.chain()
+      .focus()
+      .setImage({ src: asset.url, alt: asset.filename, title: asset.filename })
+      .run();
+  }, [editor]);
 
   return (
     <div className="column-editor-container">
@@ -313,12 +404,9 @@ export default function ColumnEditor({
         </button>
         <button
           type="button"
-          onClick={() => {
-            const url = prompt('이미지 URL:');
-            if (url) editor?.chain().focus().setImage({ src: url }).run();
-          }}
+          onClick={() => setAssetLibraryOpen(true)}
         >
-          Img
+          Image
         </button>
         <button
           type="button"
@@ -332,6 +420,13 @@ export default function ColumnEditor({
       </div>
 
       <EditorContent editor={editor} />
+      <AssetLibraryModal
+        open={assetLibraryOpen}
+        locale={locale}
+        selectedUrl={null}
+        onClose={() => setAssetLibraryOpen(false)}
+        onSelect={insertAssetImage}
+      />
     </div>
   );
 }

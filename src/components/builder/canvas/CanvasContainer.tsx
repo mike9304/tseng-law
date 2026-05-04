@@ -157,6 +157,34 @@ function clampRect(
   return { x, y, width, height };
 }
 
+function clampAspectRect(
+  rect: BuilderCanvasNode['rect'],
+  startRect: BuilderCanvasNode['rect'],
+  handle: ResizeHandle,
+  stageWidth: number,
+  stageHeight: number,
+): BuilderCanvasNode['rect'] {
+  const aspect = startRect.width / startRect.height;
+  const growsRight = handle === 'ne' || handle === 'e' || handle === 'se';
+  const growsDown = handle === 'sw' || handle === 's' || handle === 'se';
+  const anchorX = growsRight ? startRect.x : startRect.x + startRect.width;
+  const anchorY = growsDown ? startRect.y : startRect.y + startRect.height;
+  const maxWidthFromAnchor = growsRight ? stageWidth - anchorX : anchorX;
+  const maxHeightFromAnchor = growsDown ? stageHeight - anchorY : anchorY;
+  const minWidth = Math.max(MIN_WIDTH, MIN_HEIGHT * aspect);
+  const maxWidth = Math.max(minWidth, Math.min(maxWidthFromAnchor, maxHeightFromAnchor * aspect));
+  const width = Math.round(Math.max(minWidth, Math.min(maxWidth, rect.width)));
+  const height = Math.round(width / aspect);
+  const x = growsRight ? anchorX : anchorX - width;
+  const y = growsDown ? anchorY : anchorY - height;
+  return {
+    x: Math.max(0, Math.min(stageWidth - width, Math.round(x))),
+    y: Math.max(0, Math.min(stageHeight - height, Math.round(y))),
+    width,
+    height,
+  };
+}
+
 function getCanvasNodeLabel(node: BuilderCanvasNode): string {
   const content = node.content as Record<string, unknown>;
   const text = content.text ?? content.label ?? content.alt ?? content.title;
@@ -904,11 +932,15 @@ export default function CanvasContainer({
       const parentRect = targetNode.parentId
         ? currentAbsoluteRects.get(targetNode.parentId) ?? null
         : null;
+      const boundsWidth = parentRect?.width ?? stageWidth;
+      const boundsHeight = parentRect?.height ?? stageHeight;
       updateNodeRectsForViewport(
         new Map([
           [
             activeInteraction.nodeId,
-            clampRect(nextRect, parentRect?.width ?? stageWidth, parentRect?.height ?? stageHeight),
+            preserveAspectRatio
+              ? clampAspectRect(nextRect, startRect, handle, boundsWidth, boundsHeight)
+              : clampRect(nextRect, boundsWidth, boundsHeight),
           ],
         ]),
         activeInteraction.viewport,

@@ -789,3 +789,23 @@
 
 남은 gap:
 - 티스토리 수준의 이미지 업로드/미디어 삽입, 예약 발행, 태그 자동완성, 글별 slug 재설정 UX는 아직 보조 기능이며 후속 polish 필요.
+
+## 2026-05-04 Codex /goal G-Editor columns media + resize hardening follow-up
+
+범위:
+- 칼럼 에디터의 `Image` 버튼을 URL prompt 대신 기존 builder Asset Library에 연결해, 업로드/검색/선택한 이미지를 본문 Tiptap 에디터에 바로 삽입하도록 보강.
+- Tiptap `getText()` 저장이 이미지 노드를 버리던 문제를 해결하기 위해 editor JSON을 Markdown으로 직렬화하고, 이미지가 `![alt](builder-asset-url)`로 public column 상세에 렌더되도록 수정.
+- `columns-ui-workflow.playwright.ts`가 임시 asset 업로드 → 새 글 작성 → 이미지 삽입 → 저장/발행 → public 상세의 본문 이미지 렌더 → cleanup까지 검증하도록 확장.
+- W07 Shift-resize 보강: aspect-ratio resize 중 경계 clamp가 width/height를 따로 잘라 비율을 깨지 않도록 anchor 기반 aspect clamp를 추가.
+- SEO/Version history overlay가 선택 toolbar 아래에 깔려 클릭을 빼앗기는 z-index 문제를 보강.
+- admin-builder smoke의 selection helper가 selected+handle 노드를 더 안정적으로 잡도록 보강하고, resize 검증 대상은 오른쪽 경계에 붙은 search button 대신 여유 공간이 있는 hero label로 조정.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `BASE_URL=http://localhost:3000 ... columns-ui-workflow.playwright.ts --workers=1` ✅ (1/1, media insert/public render 포함)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, Shift aspect resize + SEO/History modal click regression 포함)
+
+남은 gap:
+- 칼럼 글쓰기 UX는 이미지 삽입까지 좋아졌지만, 태그 자동완성/예약 발행/글별 slug 재설정/드래그앤드롭 블록 편집은 후속 polish로 남음.

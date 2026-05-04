@@ -1,14 +1,51 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
+
+const tinyPng = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=',
+  'base64',
+);
+
+interface UploadedAsset {
+  filename: string;
+  url: string;
+}
+
+async function uploadAsset(page: Page, filename: string): Promise<UploadedAsset> {
+  const response = await page.request.post('/api/builder/assets?locale=ko', {
+    timeout: 60_000,
+    multipart: {
+      file: {
+        name: filename,
+        mimeType: 'image/png',
+        buffer: tinyPng,
+      },
+    },
+  });
+  expect(response.status()).toBe(200);
+  const payload = (await response.json()) as { ok?: boolean; asset?: UploadedAsset; error?: string };
+  expect(payload.ok, payload.error).toBe(true);
+  return payload.asset!;
+}
+
+async function deleteAsset(page: Page, filename: string): Promise<void> {
+  await page.request.delete('/api/builder/assets?locale=ko', {
+    timeout: 30_000,
+    data: { locale: 'ko', filename },
+  }).catch(() => undefined);
+}
 
 test.describe('/ko/admin-builder columns UI workflow', () => {
-  test('creates, edits, publishes, verifies, and cleans up a column through the UI', async ({ page }) => {
+  test('creates, edits, inserts media, publishes, verifies, and cleans up a column through the UI', async ({ page }) => {
     const token = Date.now().toString(36);
     const initialTitle = `G-Editor UI 칼럼 ${token}`;
     const editedTitle = `G-Editor UI 칼럼 수정 ${token}`;
     const editedBody = `G-Editor UI 본문 검증 ${token}`;
     let slug: string | null = null;
+    let uploadedAsset: UploadedAsset | null = null;
 
     try {
+      uploadedAsset = await uploadAsset(page, `column-${token}.png`);
+
       await page.goto('/ko/admin-builder/columns?new=1', { waitUntil: 'domcontentloaded' });
       const dialog = page.getByRole('dialog', { name: '새 글 쓰기' });
       await expect(dialog).toBeVisible();
@@ -25,6 +62,16 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
       await expect(titleInput).toHaveValue(initialTitle);
       await titleInput.fill(editedTitle);
       await bodyEditor.fill(editedBody);
+      await page.getByRole('button', { name: 'Image' }).click();
+      const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+      await expect(assetDialog).toBeVisible();
+      await assetDialog.getByRole('searchbox').fill(token);
+      await assetDialog
+        .locator('article')
+        .filter({ hasText: uploadedAsset.filename })
+        .getByRole('button', { name: 'Use image' })
+        .click();
+      await expect(bodyEditor.locator('img')).toHaveAttribute('src', new RegExp(uploadedAsset.filename));
 
       await page.getByRole('button', { name: '저장' }).click();
       await expect(page.locator('.column-editor-save-state')).toContainText('Saved', { timeout: 10_000 });
@@ -62,6 +109,7 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
       await page.goto(`/ko/columns/${slug ?? ''}`, { waitUntil: 'domcontentloaded' });
       await expect(page.getByRole('heading', { name: editedTitle })).toBeVisible();
       await expect(page.getByText(editedBody)).toBeVisible();
+      await expect(page.locator(`img[src*="${uploadedAsset.filename}"]`).first()).toBeVisible();
 
       await page.goto('/ko/columns', { waitUntil: 'domcontentloaded' });
       await expect(page.getByRole('link', { name: editedTitle }).first()).toBeVisible();
@@ -71,6 +119,9 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
     } finally {
       if (slug) {
         await page.request.delete(`/api/builder/columns/${slug}?locale=ko&includePublished=1`).catch(() => undefined);
+      }
+      if (uploadedAsset) {
+        await deleteAsset(page, uploadedAsset.filename);
       }
     }
   });

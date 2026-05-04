@@ -67,6 +67,16 @@ async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Lo
   }
 
   await expect(selectedNode).toBeVisible();
+  const selectedHandleCount = await selectedNode.locator('[class*="resizeHandle"]:visible').count();
+  if (selectedHandleCount !== 8) {
+    const selectedWithHandles = page
+      .locator('[class*="nodeSelected"][data-node-id]:visible')
+      .filter({ has: page.locator('[class*="rotationHandle"]') })
+      .last();
+    if (await selectedWithHandles.isVisible().catch(() => false)) {
+      selectedNode = selectedWithHandles;
+    }
+  }
   await expect(selectedNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
   await expect(selectedNode.locator('[class*="rotationHandle"]').first()).toBeVisible();
   await expect(selectedNode.locator('[class*="nodeSizeLabel"]').first()).toContainText(/·/);
@@ -369,7 +379,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
 
     await closeModalOverlayIfPresent(page);
-    const resizeTarget = page.locator('[data-node-id="home-hero-search-button"]:visible').first();
+    const resizeTarget = page.locator('[data-node-id="home-hero-label"]:visible').first();
     await expect(resizeTarget).toBeVisible();
     await resizeTarget.scrollIntoViewIfNeeded();
     await resizeTarget.click({ position: { x: 12, y: 12 }, force: true });

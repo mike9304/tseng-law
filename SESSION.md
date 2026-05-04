@@ -866,3 +866,21 @@
 
 남은 gap:
 - W26~W28은 AI Playwright 클릭으로 강해졌지만 체크포인트 Green 승격은 사용자가 실제 브라우저에서 History/SEO/Publish 플로우를 직접 확인한 뒤 처리.
+
+## 2026-05-04 Codex /goal G-Editor W06 nested snap guide follow-up
+
+범위:
+- W06 실제 UI-click smoke를 보강하려다 nested canvas node drag에서 alignment guide가 뜨지 않는 결함을 확인.
+- 기존 move snap 계산이 active group이 없을 때 root-level node만 비교해, Hero 내부 title/subtitle처럼 같은 parent 안의 sibling과 parent edge를 snap 대상으로 보지 못하던 문제를 수정.
+- 단일 nested node 이동 시 같은 parent의 sibling rect와 parent rect를 `computeSnap()` 대상에 포함하도록 `CanvasContainer` drag 계산을 보강.
+- admin-builder smoke에 `home-hero-subtitle` 실제 drag → `data-alignment-guide-line` alignment line → spacing px chip 검증을 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `npx vitest run src/lib/builder/canvas/__tests__/snap.test.ts` ✅ (3/3)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, nested drag alignment guide + spacing chip 포함)
+
+남은 gap:
+- 실제 사용자가 여러 섹션/parent 경계에서 자유 드래그해 snap UX가 Wix처럼 편하다고 확인해야 W06 green 처리 가능.

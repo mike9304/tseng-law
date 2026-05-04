@@ -802,21 +802,26 @@ export default function CanvasContainer({
             );
             setHoveredContainerId(hitContainer?.id ?? null);
 
+            const parentRect = currentNode.parentId
+              ? currentAbsoluteRects.get(currentNode.parentId) ?? null
+              : null;
             const otherRects: Rect[] = currentNodesForHover
               .filter((node) => (
                 node.id !== nodeId
                 && node.visible
-                && (activeGroupId ? node.parentId === activeGroupId : !node.parentId)
+                && (activeGroupId
+                  ? node.parentId === activeGroupId
+                  : currentNode.parentId
+                    ? node.parentId === currentNode.parentId
+                    : !node.parentId)
               ))
               .map((node) => currentAbsoluteRects.get(node.id) ?? resolveViewportRect(node, activeInteraction.viewport));
+            if (parentRect) otherRects.push(parentRect);
             const { snappedRect, guides: nextGuides } = computeSnap(tentative, otherRects, 0, {
               width: stageWidth,
               height: stageHeight,
             });
             setGuides(nextGuides);
-            const parentRect = currentNode.parentId
-              ? currentAbsoluteRects.get(currentNode.parentId) ?? null
-              : null;
             updateNodeRectsForViewport(
               new Map([
                 [

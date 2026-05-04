@@ -379,6 +379,21 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
 
     await closeModalOverlayIfPresent(page);
+    const snapTarget = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();
+    await expect(snapTarget).toBeVisible();
+    await snapTarget.click({ position: { x: 18, y: 18 }, force: true });
+    const snapNode = await expectSelectedNodeHandles(page, snapTarget);
+    const snapDrag = await startPointerDrag(page, snapNode, { pointerId: 7003 });
+    await movePointerDrag(page, snapDrag, -5, 0);
+    await expect(page.locator('[data-canvas-interaction="move"]')).toBeVisible();
+    await expect(
+      page.locator('[data-alignment-guide-line][data-alignment-guide-tone="alignment"]').first(),
+    ).toBeVisible();
+    await expect(
+      page.locator('[data-alignment-guide-chip][data-alignment-guide-tone="spacing"]').first(),
+    ).toContainText(/\d+px/);
+    await finishPointerDrag(page, snapDrag, -5, 0);
+
     const resizeTarget = page.locator('[data-node-id="home-hero-title"]:visible').first();
     await expect(resizeTarget).toBeVisible();
     await resizeTarget.scrollIntoViewIfNeeded();

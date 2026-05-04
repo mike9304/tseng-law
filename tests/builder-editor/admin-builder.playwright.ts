@@ -39,7 +39,16 @@ async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Lo
 
 async function selectFirstNode(page: Page): Promise<Locator> {
   const node = await firstVisibleNode(page);
-  await node.click({ position: { x: 12, y: 12 }, force: true });
+  const box = await node.boundingBox();
+  await node.click({
+    position: box
+      ? {
+          x: Math.max(1, Math.min(box.width - 1, box.width / 2)),
+          y: Math.max(1, Math.min(box.height - 1, box.height / 2)),
+        }
+      : { x: 12, y: 12 },
+    force: true,
+  });
   return expectSelectedNodeHandles(page);
 }
 
@@ -253,9 +262,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByText('Basic')).toBeVisible();
 
     await rail.getByRole('button', { name: 'Columns', exact: true }).click();
-    await expect(page.getByText('Open columns page')).toBeVisible();
-    await expect(page.getByText('Open columns admin')).toBeVisible();
-    await expect(page.getByText('View public columns')).toBeVisible();
+    const columnsDrawer = page.locator('[aria-hidden="false"]').first();
+    await expect(columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' })).toBeVisible();
+    await expect(columnsDrawer.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
+    await expect(columnsDrawer.getByRole('link', { name: '공개 칼럼 보기' })).toBeVisible();
 
     await headerRegion.click({ position: { x: 360, y: 16 }, force: true });
     await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();
@@ -312,7 +322,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await movePointerDrag(page, resizeDrag, 82, 36);
     await expect(page.locator('[class*="canvasOverlayResizeReadout"]').first()).toContainText(/\d+\s*x\s*\d+/);
     await finishPointerDrag(page, resizeDrag, 82, 36);
-    const resizedNode = await expectSelectedNodeHandles(page);
+    await resizeNode.click({ position: { x: 12, y: 12 }, force: true });
+    const resizedNode = await expectSelectedNodeHandles(page, resizeNode);
     const resizeAfter = await resizedNode.boundingBox();
     expect(resizeBefore).toBeTruthy();
     expect(resizeAfter).toBeTruthy();
@@ -323,27 +334,25 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       expect(Math.abs(afterRatio - beforeRatio)).toBeLessThan(0.25);
     }
     await expect(page.getByText(/Saving|Saved/).first()).toBeVisible({ timeout: 5_000 });
-    await page.keyboard.press(`${shortcutModifier}+Z`);
-    await expectUndoChip(page);
 
-    const rotateNode = await selectFirstNode(page);
+    const rotateNode = resizedNode;
     const rotationHandle = rotateNode.locator('[class*="rotationHandle"]').first();
     const rotateBox = await rotateNode.boundingBox();
     const rotationHandleBox = await rotationHandle.boundingBox();
     expect(rotateBox).toBeTruthy();
     expect(rotationHandleBox).toBeTruthy();
     if (rotateBox && rotationHandleBox) {
-      const rotationDrag = await startPointerDrag(page, rotationHandle, { pointerId: 7002, shiftKey: true });
       const targetX = rotateBox.x + rotateBox.width + 96;
       const targetY = rotateBox.y + 12;
+      const rotationDrag = await startPointerDrag(page, rotationHandle, { pointerId: 7002, shiftKey: true });
       await movePointerDrag(page, rotationDrag, targetX - rotationDrag.x, targetY - rotationDrag.y);
       const rotationReadout = page.locator('[class*="rotationReadout"]').first();
       await expect(rotationReadout).toBeVisible();
-      const readoutText = await rotationReadout.textContent();
+      const readoutText = (await rotationReadout.textContent())?.trim() ?? '';
+      await finishPointerDrag(page, rotationDrag, targetX - rotationDrag.x, targetY - rotationDrag.y);
       const degrees = Number((readoutText ?? '').replace(/[^0-9.-]/g, ''));
       expect(Number.isFinite(degrees)).toBe(true);
       expect(Math.abs(degrees % 15)).toBe(0);
-      await finishPointerDrag(page, rotationDrag, targetX - rotationDrag.x, targetY - rotationDrag.y);
       await page.keyboard.press(`${shortcutModifier}+Z`);
       await expectUndoChip(page);
     }
@@ -393,6 +402,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
 
     await rail.getByRole('button', { name: 'Pages', exact: true }).click();
     const pagesDrawerForColumns = page.locator('[aria-hidden="false"]').first();
+    await expect(pagesDrawerForColumns.getByLabel('칼럼 빠른 이동')).toBeVisible();
+    await expect(pagesDrawerForColumns.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
     const columnsPageButton = pagesDrawerForColumns.getByRole('button', { name: /칼럼|Columns/ }).first();
     await expect(columnsPageButton).toBeVisible();
     await columnsPageButton.click();

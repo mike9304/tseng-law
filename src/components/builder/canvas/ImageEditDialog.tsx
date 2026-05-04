@@ -5,6 +5,8 @@ import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
 import {
   DEFAULT_FILTERS,
   FILTER_PRESETS,
+  filtersToCSS,
+  isDefaultFilters,
   type ImageFilters,
 } from '@/lib/builder/canvas/filters';
 import styles from './SandboxPage.module.css';
@@ -18,7 +20,7 @@ const FILTER_SLIDERS: Array<{ key: keyof ImageFilters; label: string; min: numbe
   { key: 'sepia', label: 'Sepia', min: 0, max: 100, unit: '%' },
 ];
 
-type ImageEditTab = 'crop' | 'filter' | 'alt';
+export type ImageEditTab = 'crop' | 'filter' | 'alt';
 
 export default function ImageEditDialog({
   open,
@@ -26,6 +28,7 @@ export default function ImageEditDialog({
   alt,
   cropAspect,
   filters,
+  initialTab = 'crop',
   onApply,
   onClose,
 }: {
@@ -34,6 +37,7 @@ export default function ImageEditDialog({
   alt: string;
   cropAspect?: string;
   filters?: ImageFilters;
+  initialTab?: ImageEditTab;
   onApply: (content: { alt: string; cropAspect: string; filters: ImageFilters }) => void;
   onClose: () => void;
 }) {
@@ -44,11 +48,11 @@ export default function ImageEditDialog({
 
   useEffect(() => {
     if (!open) return;
-    setActiveTab('crop');
+    setActiveTab(initialTab);
     setDraftAlt(alt);
     setDraftAspect(cropAspect || 'Free');
     setDraftFilters(filters ?? DEFAULT_FILTERS);
-  }, [alt, cropAspect, filters, open]);
+  }, [alt, cropAspect, filters, initialTab, open]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -63,6 +67,7 @@ export default function ImageEditDialog({
     () => ASPECT_RATIOS.find((ratio) => ratio.label === draftAspect)?.value ?? null,
     [draftAspect],
   );
+  const previewFilter = !isDefaultFilters(draftFilters) ? filtersToCSS(draftFilters) : undefined;
 
   if (!open) return null;
 
@@ -90,7 +95,11 @@ export default function ImageEditDialog({
             {imageSrc ? (
               <div className={styles.imageEditPreviewFrame}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={imageSrc} alt={draftAlt || 'Image preview'} />
+                <img
+                  src={imageSrc}
+                  alt={draftAlt || 'Image preview'}
+                  style={{ filter: previewFilter }}
+                />
                 {selectedRatio ? (
                   <span
                     className={styles.imageEditCropOverlay}

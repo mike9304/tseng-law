@@ -632,3 +632,29 @@
 - `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts` ✅ (1/1, resize tooltip/Shift ratio + rotate 15도 snap + navigation 정확 원복 포함)
 - `/api/builder/site/navigation?locale=ko` ✅: `업무분야` 원복 확인
 - 빌드 후 `.next` dev cache를 비우고 `npm run dev` 재시작 ✅: 3000번 `/ko/admin-builder` authenticated 200
+
+## 2026-05-04 Codex /goal G-Editor columns quick access + image workflow 보강
+
+범위:
+- 사용자가 지적한 "Pages에 칼럼이 안 떠서 글 추가/수정 위치를 찾기 어렵다" 문제를 다시 보강.
+- Pages 패널 상단에 `칼럼` 빠른 이동 카드를 고정 노출하고, `칼럼 페이지로 이동` / `글 추가/수정` 액션을 즉시 보이게 함.
+- Columns rail 액션을 한국어(`칼럼 페이지로 이동`, `글 추가/수정`, `공개 칼럼 보기`)로 정리.
+- W22 AssetLibrary smoke 추가: 임시 이미지 2개 업로드, 신규 폴더/태그 생성, 검색, 이름 sort, 이미지 노드 교체, undo 원복 검증.
+- W23 ImageEditDialog 보강: 우클릭 `Alt 텍스트 편집`은 Alt tab으로 바로 열고, Filter tab preview가 Apply 전에도 실제 필터 CSS를 반영.
+- admin-builder smoke의 node 선택/rotate 검증을 좌상단 링크 배지 클릭 충돌 없이 안정화.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 61 guarded mutation handlers)
+- `npm run build` ✅ (Google Fonts fetch warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, Pages `칼럼 빠른 이동` + Columns rail + columns page load)
+- `BASE_URL=http://localhost:3000 ... asset-image-workflow.playwright.ts --workers=1` ✅ (1/1)
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (5/5)
+- 빌드 후 `npm run dev` 재시작 ✅: 3000번 `/ko/admin-builder` authenticated 200
+- `/api/builder/site/pages?locale=ko` ✅: `slug:"columns"` 유지 확인
+
+남은 gap:
+- AssetLibrary folder/tag 분류는 현재 modal local state라 새로고침 후 조직 정보 지속성은 아직 WIP.
+- W26~W28은 UI smoke는 있으나 restore/head/publish blocker end-to-end green은 별도 보강 필요.

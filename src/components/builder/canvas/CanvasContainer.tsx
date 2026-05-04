@@ -5,6 +5,7 @@ import AlignmentGuides from '@/components/builder/canvas/AlignmentGuides';
 import CanvasFeedbackOverlay from '@/components/builder/canvas/CanvasFeedbackOverlay';
 import CanvasNode, { type ResizeHandle } from '@/components/builder/canvas/CanvasNode';
 import ContextMenu from '@/components/builder/canvas/ContextMenu';
+import type { ImageEditTab } from '@/components/builder/canvas/ImageEditDialog';
 import SelectionBox from '@/components/builder/canvas/SelectionBox';
 import SelectionToolbar from '@/components/builder/canvas/SelectionToolbar';
 import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
@@ -194,7 +195,7 @@ export default function CanvasContainer({
   sitePages = [],
 }: {
   onRequestAssetLibrary?: (nodeId: string) => void;
-  onRequestImageEditor?: (nodeId: string) => void;
+  onRequestImageEditor?: (nodeId: string, initialTab?: ImageEditTab) => void;
   onRequestMoveToPage?: (nodeIds: string[]) => void;
   /** Called when user picks "Save as section..." with the root container nodeId. */
   onRequestSaveAsSection?: (rootNodeId: string) => void;
@@ -1699,7 +1700,7 @@ export default function CanvasContainer({
                 onSelect: () => {
                   setContextMenu(null);
                   if (selectedNodes[0] && onRequestImageEditor) {
-                    onRequestImageEditor(selectedNodes[0].id);
+                    onRequestImageEditor(selectedNodes[0].id, 'crop');
                   }
                 },
               },
@@ -1730,7 +1731,7 @@ export default function CanvasContainer({
                 onSelect: () => {
                   setContextMenu(null);
                   if (selectedNodes[0] && onRequestImageEditor) {
-                    onRequestImageEditor(selectedNodes[0].id);
+                    onRequestImageEditor(selectedNodes[0].id, 'alt');
                   }
                 },
               },

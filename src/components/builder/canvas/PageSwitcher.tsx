@@ -203,6 +203,55 @@ const clipboardPillStyle: React.CSSProperties = {
   fontWeight: 800,
 };
 
+const columnsQuickCardStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  gap: 8,
+  margin: '0 8px 10px',
+  padding: 10,
+  border: '1px solid #bfdbfe',
+  borderRadius: 10,
+  background: '#eff6ff',
+  color: '#0f172a',
+};
+
+const columnsQuickTitleStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 8,
+  fontSize: '0.8rem',
+  fontWeight: 800,
+};
+
+const columnsQuickMetaStyle: React.CSSProperties = {
+  color: '#475569',
+  fontSize: '0.72rem',
+  fontWeight: 600,
+};
+
+const columnsQuickActionsStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  gap: 6,
+};
+
+const columnsQuickButtonStyle: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: 30,
+  padding: '0 8px',
+  border: '1px solid #93c5fd',
+  borderRadius: 8,
+  background: '#fff',
+  color: '#1d4ed8',
+  fontSize: '0.73rem',
+  fontWeight: 800,
+  textDecoration: 'none',
+  cursor: 'pointer',
+};
+
 export default function PageSwitcher({
   locale,
   activePageId,
@@ -229,6 +278,7 @@ export default function PageSwitcher({
   const [submittingPageId, setSubmittingPageId] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const titleInputRef = useRef<HTMLInputElement | null>(null);
+  const columnsPage = pages.find((page) => page.slug === 'columns') ?? null;
 
   const fetchPages = useCallback(async (): Promise<PageMeta[]> => {
     try {
@@ -424,6 +474,30 @@ export default function PageSwitcher({
           <span aria-hidden="true">⌘V</span>
           <span>{clipboardCount}개 요소 클립보드</span>
         </span>
+      ) : null}
+
+      {!loading && columnsPage ? (
+        <section style={columnsQuickCardStyle} aria-label="칼럼 빠른 이동">
+          <div style={columnsQuickTitleStyle}>
+            <span>칼럼</span>
+            <span style={columnsQuickMetaStyle}>/{columnsPage.slug}</span>
+          </div>
+          <div style={columnsQuickActionsStyle}>
+            <button
+              type="button"
+              style={columnsQuickButtonStyle}
+              onClick={() => onSelectPage(columnsPage.pageId, columnsPage.slug)}
+            >
+              칼럼 페이지로 이동
+            </button>
+            <a
+              href={`/${locale}/admin-builder/columns`}
+              style={columnsQuickButtonStyle}
+            >
+              글 추가/수정
+            </a>
+          </div>
+        </section>
       ) : null}
 
       {errorMessage ? <div style={statusMessageStyle}>{errorMessage}</div> : null}

@@ -25,7 +25,7 @@ import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/Sa
 import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
 import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
 import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
-import ImageEditDialog from '@/components/builder/canvas/ImageEditDialog';
+import ImageEditDialog, { type ImageEditTab } from '@/components/builder/canvas/ImageEditDialog';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
@@ -161,7 +161,7 @@ export default function SandboxPage({
     setViewport: setStoreViewport,
   } = useBuilderCanvasStore();
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
-  const [imageEditorNodeId, setImageEditorNodeId] = useState<string | null>(null);
+  const [imageEditorRequest, setImageEditorRequest] = useState<{ nodeId: string; initialTab?: ImageEditTab } | null>(null);
   const [toasts, setToasts] = useState<SandboxToast[]>([]);
   const [activityChips, setActivityChips] = useState<ActivityChip[]>([]);
   const previousDraftSaveStateRef = useRef(draftSaveState);
@@ -503,8 +503,8 @@ export default function SandboxPage({
     [assetLibraryNodeId, canvasDocument],
   );
   const imageEditorNode = useMemo(
-    () => canvasDocument?.nodes.find((node) => node.id === imageEditorNodeId) ?? null,
-    [imageEditorNodeId, canvasDocument],
+    () => canvasDocument?.nodes.find((node) => node.id === imageEditorRequest?.nodeId) ?? null,
+    [imageEditorRequest?.nodeId, canvasDocument],
   );
 
   useEffect(() => {
@@ -913,11 +913,11 @@ export default function SandboxPage({
                 <header className={styles.panelSectionHeader}>
                   <div>
                     <span>Blog</span>
-                    <strong>Columns</strong>
+                    <strong>칼럼</strong>
                   </div>
                 </header>
                 <p className={styles.panelCopy}>
-                  공개 칼럼 목록과 칼럼 관리자까지 에디터 안에서 바로 확인합니다.
+                  칼럼 페이지로 이동하거나 기존 글 17개와 새 초안을 바로 추가/수정합니다.
                 </p>
                 <div className={styles.actionGrid}>
                   <button
@@ -929,13 +929,13 @@ export default function SandboxPage({
                       void handleSelectPage(columnsPage.pageId, columnsPage.slug);
                     }}
                   >
-                    Open columns page
+                    칼럼 페이지로 이동
                   </button>
                   <a className={styles.actionButton} href={`/${locale}/admin-builder/columns`}>
-                    Open columns admin
+                    글 추가/수정
                   </a>
                   <a className={styles.actionButton} href={`/${locale}/columns`} target="_blank" rel="noreferrer">
-                    View public columns
+                    공개 칼럼 보기
                   </a>
                 </div>
               </section>
@@ -1036,7 +1036,7 @@ export default function SandboxPage({
           <div style={{ ...canvasWrapperStyle, flex: '0 0 auto', minHeight: canvasDocument?.stageHeight ?? 880 }}>
             <CanvasContainer
               onRequestAssetLibrary={setAssetLibraryNodeId}
-              onRequestImageEditor={setImageEditorNodeId}
+              onRequestImageEditor={(nodeId, initialTab) => setImageEditorRequest({ nodeId, initialTab })}
               onRequestMoveToPage={(nodeIds) => setMovePickerNodeIds(nodeIds)}
               onRequestSaveAsSection={handleRequestSaveAsSection}
               onRequestInsertSavedSection={(sectionId, position) => {
@@ -1070,7 +1070,7 @@ export default function SandboxPage({
               }}
               onRequestImageEditor={() => {
                 if (selectedNode?.kind === 'image') {
-                  setImageEditorNodeId(selectedNode.id);
+                  setImageEditorRequest({ nodeId: selectedNode.id });
                 }
               }}
               siteLightboxes={linkPickerLightboxes}
@@ -1100,10 +1100,11 @@ export default function SandboxPage({
             alt={String(imageEditorNode.content.alt || '')}
             cropAspect={typeof imageEditorNode.content.cropAspect === 'string' ? imageEditorNode.content.cropAspect : 'Free'}
             filters={imageEditorNode.content.filters}
-            onClose={() => setImageEditorNodeId(null)}
+            initialTab={imageEditorRequest?.initialTab}
+            onClose={() => setImageEditorRequest(null)}
             onApply={(content) => {
               updateNodeContent(imageEditorNode.id, content);
-              setImageEditorNodeId(null);
+              setImageEditorRequest(null);
             }}
           />
         ) : null}

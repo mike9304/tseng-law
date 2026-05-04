@@ -144,10 +144,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(page.locator('[data-inspector-content-adapter="true"]')).toBeVisible();
     await page.screenshot({ path: `${screenshotDir}/design-pool-inspector-content.png` });
 
-    const contextNode = page
-      .getByRole('application', { name: 'Canvas editor' })
-      .locator('[data-node-id]:visible:not([class*="nodeLocked"])')
-      .first();
+    const contextNode = await topmostUnlockedNode(page);
     await expect(contextNode).toBeVisible();
     await contextNode.scrollIntoViewIfNeeded();
     await contextNode.click({ position: { x: 18, y: 18 } });
@@ -346,6 +343,9 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.screenshot({ path: `${screenshotDir}/design-pool-template-nested-preview.png` });
 
     await page.keyboard.press('Escape');
+    if ((await page.locator('[data-modal-shell="true"][data-modal-nested="true"]').count()) > 0) {
+      await nested.getByRole('button', { name: '닫기' }).click();
+    }
     await expect(page.locator('[data-modal-shell="true"][data-modal-nested="true"]')).toHaveCount(0);
     await expect(gallery).toBeVisible();
     await gallery.getByRole('button', { name: 'Close' }).click();

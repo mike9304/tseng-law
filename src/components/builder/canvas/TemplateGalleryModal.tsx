@@ -413,6 +413,18 @@ function PreviewPanel({
       ? { width: 420, height: 560 }
       : { width: 260, height: 560 };
 
+  useEffect(() => {
+    const handler = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      onClose();
+    };
+    window.addEventListener('keydown', handler, true);
+    return () => window.removeEventListener('keydown', handler, true);
+  }, [onClose]);
+
   return (
     <ModalShell
       open

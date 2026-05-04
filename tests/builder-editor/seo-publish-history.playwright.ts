@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext } from '@playwright/test';
+import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
 
 type TestDocument = {
   version: 1;
@@ -145,6 +145,23 @@ async function putDraft(
   return payload.draft!.revision!;
 }
 
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string): Promise<void> {
+  await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+  await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+  await page.getByRole('button', { name: 'Pages', exact: true }).click();
+  const pagesDrawer = page.locator('[aria-hidden="false"]').first();
+  const pageButton = pagesDrawer
+    .getByRole('button', { name: new RegExp(escapeRegex(pageTitle)) })
+    .first();
+  await expect(pageButton).toBeVisible();
+  await pageButton.click();
+  await expect(page.getByText(/Loaded page:/)).toBeVisible();
+}
+
 test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
   test('covers W26 rollback, W27 public head, and W28 publish blockers', async ({ page }) => {
     test.setTimeout(120_000);
@@ -283,6 +300,124 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
         /property="og:image" content="https?:\/\/[^"]+\/images\/header-skyline-ratio\.webp"/,
       );
       expect(publicHtml).toContain(publishedTitle);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
+  test('covers W26-W28 through actual editor UI clicks', async ({ page }) => {
+    test.setTimeout(120_000);
+
+    const token = `w26w28ui-${Date.now().toString(36)}`;
+    const slug = `g-editor-${token}`;
+    const pageTitle = `G Editor UI ${token}`;
+    const originalTitle = `UI original revision ${token}`;
+    const changedTitle = `UI changed draft ${token}`;
+    const cleanDoc = makeDocument({ token, titleText: originalTitle });
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: pageTitle,
+          document: cleanDoc,
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      const snapshotResponse = await page.request.post(`/api/builder/site/pages/${pageId}/revisions`, {
+        data: { source: 'manual', document: cleanDoc },
+      });
+      expect(snapshotResponse.status()).toBe(200);
+      const snapshot = (await snapshotResponse.json()) as { ok?: boolean; revisionId?: string };
+      expect(snapshot.ok).toBe(true);
+      expect(snapshot.revisionId).toBeTruthy();
+
+      let revision = await currentDraftRevision(page.request, pageId!);
+      revision = await putDraft(
+        page.request,
+        pageId!,
+        revision,
+        makeDocument({ token, titleText: changedTitle }),
+      );
+      expect(revision).toBeGreaterThan(0);
+
+      await openBuilderPageFromPagesPanel(page, pageTitle);
+      const titleNode = page.locator(`[data-node-id="title-${token}"]`).first();
+      await expect(titleNode).toContainText(changedTitle);
+
+      await page.getByTitle('버전 히스토리').click();
+      await expect(page.getByText('버전 히스토리')).toBeVisible();
+      const manualRevisionCard = page.getByRole('button', { name: /manual/ }).first();
+      await expect(manualRevisionCard).toBeVisible();
+      await manualRevisionCard.hover();
+      await expect(page.getByText(/\+\d+ \/ -\d+ \/ ~\d+|현재 draft 와 동일|Diff preview/).first()).toBeVisible();
+      await manualRevisionCard.click();
+      await page.getByRole('button', { name: '이 버전으로 복원' }).click();
+      await page.getByRole('button', { name: '복원', exact: true }).first().click();
+      await expect(page.getByText('버전 히스토리')).not.toBeVisible();
+      await expect(titleNode).toContainText(originalTitle);
+      await expect.poll(async () => {
+        const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
+        const payload = (await response.json()) as { document?: TestDocument };
+        return JSON.stringify(payload.document ?? {});
+      }).toContain(originalTitle);
+
+      const seoTitle = `W27 UI SEO ${token}`;
+      const seoDescription = `W27 UI SEO description ${token} saved through the editor panel.`;
+      const canonical = `https://tseng-law.com/ko/${slug}`;
+      await page.getByTitle('현재 페이지 SEO').click();
+      const seoDialog = page.getByRole('dialog', { name: '페이지 SEO' });
+      await expect(seoDialog).toBeVisible();
+      await seoDialog.getByLabel('SEO title').fill(seoTitle);
+      await seoDialog.getByLabel('Meta description').fill(seoDescription);
+      await seoDialog.getByLabel('Canonical URL').fill(canonical);
+      await expect(seoDialog.getByText('Google preview')).toBeVisible();
+      await seoDialog.getByRole('button', { name: 'Social share' }).click();
+      await seoDialog.getByLabel('OG image URL').fill('/images/header-skyline-ratio.webp');
+      await expect(seoDialog.getByText('OG image preview')).toBeVisible();
+      await seoDialog.getByRole('button', { name: '저장' }).click();
+      await expect(seoDialog).not.toBeVisible();
+      await expect.poll(async () => {
+        const response = await page.request.get(`/api/builder/site/pages/${pageId}/seo?locale=ko`);
+        const payload = (await response.json()) as { seo?: { title?: string; canonical?: string } };
+        return `${payload.seo?.title ?? ''}|${payload.seo?.canonical ?? ''}`;
+      }).toBe(`${seoTitle}|${canonical}`);
+
+      await page.getByTitle('사이트 발행').click();
+      const publishDialog = page.getByRole('dialog', { name: 'Publish Page' });
+      await expect(publishDialog).toBeVisible();
+      await expect(publishDialog.getByText('Automatic preflight checklist')).toBeVisible();
+      await expect(publishDialog.getByText('Images', { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText('Links', { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText('SEO', { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText('Forms', { exact: true })).toBeVisible();
+      const warningOverrideButton = publishDialog.getByRole('button', { name: '경고 무시하고 발행' });
+      if (await warningOverrideButton.isVisible().catch(() => false)) {
+        await warningOverrideButton.click();
+      }
+      const modalPublishButton = publishDialog.getByRole('button', { name: '발행' }).last();
+      await expect(modalPublishButton).toBeEnabled();
+      await modalPublishButton.click();
+      await expect(page.getByText('발행 완료').first()).toBeVisible({ timeout: 15_000 });
+
+      const publicResponse = await page.request.get(`/ko/${slug}`);
+      expect(publicResponse.status()).toBe(200);
+      const publicHtml = await publicResponse.text();
+      expect(publicHtml).toContain(`<title>${seoTitle}</title>`);
+      expect(publicHtml).toContain(`content="${seoDescription}"`);
+      expect(publicHtml).toContain(`rel="canonical" href="${canonical}"`);
+      expect(publicHtml).toContain(originalTitle);
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {

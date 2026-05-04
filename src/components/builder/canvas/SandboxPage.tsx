@@ -1265,6 +1265,7 @@ export default function SandboxPage({
           pageId={activePageId ?? ''}
           siteId="default"
           draftMeta={draftMeta}
+          onRestored={handlePublishDraftSaved}
           onClose={() => setHistoryOpen(false)}
         />
 

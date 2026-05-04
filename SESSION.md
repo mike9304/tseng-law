@@ -847,3 +847,22 @@
 
 남은 gap:
 - 사용자가 직접 5분 동안 칼럼 글 작성/이미지 삽입/발행을 만져보고 "블로그 글쓰기처럼 쉽다" 기준을 확인해야 최종 green 처리 가능.
+
+## 2026-05-04 Codex /goal G-Editor W26-W28 UI-click E2E follow-up
+
+범위:
+- W26~W28이 API/public-head E2E에 치우쳐 있던 gap을 실제 editor UI 클릭 시나리오로 보강.
+- 임시 페이지 생성 후 History 패널을 열고 manual revision 카드 hover diff chip → `이 버전으로 복원` → confirm `복원`까지 실제 클릭으로 검증.
+- UI 복원 후 서버 draft revision은 바뀌는데 `SandboxPage`의 `draftMeta`가 갱신되지 않아 바로 발행하면 stale revision 충돌이 날 수 있던 버그를 수정.
+- rollback route가 restored `draft` meta를 반환하고 `VersionHistoryPanel`이 `onRestored`로 부모 draft meta/synced timestamp를 갱신하도록 연결.
+- SEO 패널에서 title/description/canonical/OG image를 실제 입력/저장하고 API 반영을 확인.
+- PublishModal에서 Automatic preflight checklist의 Images/Links/SEO/Forms 카드를 실제 확인하고, warning override가 필요한 경우 클릭 후 발행해 public head/body 반영을 검증.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `BASE_URL=http://localhost:3000 ... seo-publish-history.playwright.ts --workers=1` ✅ (2/2, API E2E + UI-click E2E)
+
+남은 gap:
+- W26~W28은 AI Playwright 클릭으로 강해졌지만 체크포인트 Green 승격은 사용자가 실제 브라우저에서 History/SEO/Publish 플로우를 직접 확인한 뒤 처리.

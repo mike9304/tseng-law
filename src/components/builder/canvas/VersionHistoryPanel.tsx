@@ -376,12 +376,14 @@ export default function VersionHistoryPanel({
   siteId,
   draftMeta,
   onClose,
+  onRestored,
 }: {
   open: boolean;
   pageId: string;
   siteId: string;
   draftMeta?: DraftMeta | null;
   onClose: () => void;
+  onRestored?: (draftMeta: DraftMeta, document?: BuilderCanvasDocument) => void;
 }) {
   const replaceDocument = useBuilderCanvasStore((s) => s.replaceDocument);
   const currentDocument = useBuilderCanvasStore((s) => s.document);
@@ -524,9 +526,13 @@ export default function VersionHistoryPanel({
         },
       );
       if (res.ok) {
-        const data = (await res.json()) as { document?: BuilderCanvasDocument };
+        const data = (await res.json()) as { document?: BuilderCanvasDocument; draft?: DraftMeta | null };
         if (data.document) {
           replaceDocument(data.document);
+        }
+        if (data.draft) {
+          setCurrentDraftMeta(data.draft);
+          onRestored?.(data.draft, data.document);
         }
         onClose();
       }

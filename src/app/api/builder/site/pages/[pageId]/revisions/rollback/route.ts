@@ -5,7 +5,7 @@
  * Restores the supplied revision into the draft. Auto-snapshots the
  * current draft first so rollback itself is reversible.
  *
- * Returns: { ok: true, document: BuilderCanvasDocument, backupRevisionId }
+ * Returns: { ok: true, document: BuilderCanvasDocument, draft, backupRevisionId }
  */
 import { NextRequest, NextResponse } from 'next/server';
 import {
@@ -13,7 +13,7 @@ import {
   recordRevision,
   rollbackToRevision,
 } from '@/lib/builder/site/publish';
-import { readPageCanvas } from '@/lib/builder/site/persistence';
+import { readPageCanvas, readPageCanvasRecordState } from '@/lib/builder/site/persistence';
 import { recordPageRollback } from '@/lib/builder/audit/record';
 import { guardMutation } from '@/lib/builder/security/guard';
 
@@ -58,8 +58,10 @@ export async function POST(
     return NextResponse.json({ ok: false, error: 'Rollback failed.' }, { status: 404 });
   }
 
-  // Return the restored document for client-side replaceDocument
+  // Return the restored document and draft meta for client-side replaceDocument
+  // plus revision-aware follow-up actions such as publish.
   const restored = await readRevisionDocument(pageId, revisionId);
+  const restoredState = await readPageCanvasRecordState(siteId, pageId, 'draft');
   await recordPageRollback({
     request,
     siteId,
@@ -71,6 +73,13 @@ export async function POST(
   return NextResponse.json({
     ok: true,
     document: restored,
+    draft: restoredState
+      ? {
+          revision: restoredState.record.revision,
+          savedAt: restoredState.record.savedAt,
+          updatedBy: restoredState.record.updatedBy,
+        }
+      : null,
     backupRevisionId,
   });
 }

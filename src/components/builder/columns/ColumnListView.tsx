@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import NewColumnModal from '@/components/builder/columns/NewColumnModal';
 import {
@@ -84,6 +85,7 @@ export default function ColumnListView({
   contentLocale,
   initialColumns,
 }: ColumnListViewProps) {
+  const router = useRouter();
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [columns, setColumns] = useState(initialColumns);
@@ -150,7 +152,7 @@ export default function ColumnListView({
 
       const payload = await response.json().catch(() => null);
       if (!response.ok || !payload?.ok || !payload?.column) {
-        throw new Error(payload?.error || '새 칼럼 생성에 실패했습니다.');
+        throw new Error(payload?.error || '새 글 생성에 실패했습니다.');
       }
 
       const nextItem: ColumnListItem = {
@@ -172,8 +174,9 @@ export default function ColumnListView({
       setColumns((current) => [nextItem, ...current.filter((item) => item.slug !== nextItem.slug)]);
       setActiveCategory(nextItem.frontmatter.blogCategory ?? activeCategory);
       setModalOpen(false);
+      router.push(`/${routeLocale}/admin-builder/columns/${encodeURIComponent(nextItem.slug)}/edit`);
     } catch (error) {
-      setCreateError(error instanceof Error ? error.message : '새 칼럼 생성에 실패했습니다.');
+      setCreateError(error instanceof Error ? error.message : '새 글 생성에 실패했습니다.');
     } finally {
       setCreatePending(false);
     }
@@ -290,7 +293,7 @@ export default function ColumnListView({
             className="admin-console-primary-btn column-manager-new-btn"
             onClick={() => setModalOpen(true)}
           >
-            + 새 칼럼
+            + 새 글 쓰기
           </button>
         </div>
       </header>
@@ -345,13 +348,13 @@ export default function ColumnListView({
           {filteredColumns.length === 0 ? (
             <div className="admin-console-empty-state column-manager-empty">
               <h3>아직 칼럼이 없습니다.</h3>
-              <p>+ 새 칼럼을 눌러 첫 초안을 만들고 카테고리, 저자, SEO 정보를 함께 설정하세요.</p>
+              <p>새 글 쓰기를 누르면 제목만 정하고 바로 본문 작성 화면으로 이동합니다.</p>
               <button
                 type="button"
                 className="admin-console-primary-btn"
                 onClick={() => setModalOpen(true)}
               >
-                첫 칼럼 만들기
+                첫 글 쓰기
               </button>
             </div>
           ) : (

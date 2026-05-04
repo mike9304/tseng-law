@@ -46,6 +46,7 @@ export async function POST(
 
   const localeRaw = request.nextUrl.searchParams.get('locale') || 'ko';
   const locale = normalizeLocale(localeRaw);
+  const skipEmbeddings = request.nextUrl.searchParams.get('skipEmbeddings') === '1';
 
   const draft = await readColumnVariant(locale, slug, 'draft');
   if (!draft) {
@@ -77,13 +78,15 @@ export async function POST(
     || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null)
     || `http://localhost:${process.env.PORT || 3000}`;
 
-  fetch(`${origin}/api/consultation/build-embeddings`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ trigger: 'column-publish', slug, locale }),
-  }).catch((err) =>
-    console.error('[columns] embeddings rebuild trigger failed:', err),
-  );
+  if (!skipEmbeddings) {
+    fetch(`${origin}/api/consultation/build-embeddings`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ trigger: 'column-publish', slug, locale }),
+    }).catch((err) =>
+      console.error('[columns] embeddings rebuild trigger failed:', err),
+    );
+  }
 
   // Best-effort ISR revalidation for the column's public page.
   try {

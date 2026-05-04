@@ -23,6 +23,16 @@ interface ColumnEditorProps {
 
 const AUTOSAVE_DEBOUNCE_MS = 1000;
 
+function stripHtml(value: string): string {
+  return value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function buildAutoSummary(title: string, bodyMarkdown: string, bodyHtml: string): string {
+  const plainBody = (bodyMarkdown || stripHtml(bodyHtml)).replace(/\s+/g, ' ').trim();
+  const source = plainBody || title.trim();
+  return source.slice(0, 180);
+}
+
 export default function ColumnEditor({
   slug,
   locale,
@@ -31,6 +41,7 @@ export default function ColumnEditor({
 }: ColumnEditorProps) {
   const [title, setTitle] = useState(initialContent.title);
   const [summary, setSummary] = useState(initialContent.summary);
+  const [summaryOpen, setSummaryOpen] = useState(Boolean(initialContent.summary.trim()));
   const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error'>('saved');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedRef = useRef<string>('');
@@ -59,14 +70,15 @@ export default function ColumnEditor({
     if (!editor) return;
     const bodyHtml = editor.getHTML();
     const bodyMarkdown = editor.getText();
-    const payload = JSON.stringify({ title, summary, bodyHtml, bodyMarkdown });
-    return { payload, bodyHtml, bodyMarkdown };
+    const nextSummary = summary.trim() || buildAutoSummary(title, bodyMarkdown, bodyHtml);
+    const payload = JSON.stringify({ title, summary: nextSummary, bodyHtml, bodyMarkdown });
+    return { payload, summary: nextSummary, bodyHtml, bodyMarkdown };
   }, [editor, title, summary]);
 
   const save = useCallback(async () => {
     const nextPayload = buildPayload();
     if (!nextPayload) return;
-    const { payload, bodyHtml, bodyMarkdown } = nextPayload;
+    const { payload, summary: nextSummary, bodyHtml, bodyMarkdown } = nextPayload;
     if (!hydratedRef.current) {
       lastSavedRef.current = payload;
       hydratedRef.current = true;
@@ -82,7 +94,7 @@ export default function ColumnEditor({
         {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ title, summary, bodyHtml, bodyMarkdown }),
+          body: JSON.stringify({ title, summary: nextSummary, bodyHtml, bodyMarkdown }),
         },
       );
       if (res.ok) {
@@ -97,7 +109,7 @@ export default function ColumnEditor({
       setSaveStatus('error');
       onSaveStatus?.('error');
     }
-  }, [buildPayload, slug, locale, title, summary, onSaveStatus]);
+  }, [buildPayload, slug, locale, title, onSaveStatus]);
 
   const scheduleSave = useCallback(() => {
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
@@ -190,15 +202,22 @@ export default function ColumnEditor({
             placeholder="칼럼 제목"
           />
         </label>
-        <label className="column-editor-field">
-          <textarea
-            className="column-editor-summary-input"
-            value={summary}
-            onChange={(e) => setSummary(e.target.value)}
-            placeholder="검색 결과 / AI 상담사 참조 시 노출되는 요약"
-            rows={2}
-          />
-        </label>
+        <details
+          className="column-editor-summary-details"
+          open={summaryOpen}
+          onToggle={(event) => setSummaryOpen(event.currentTarget.open)}
+        >
+          <summary>목록/검색 설명 직접 입력</summary>
+          <label className="column-editor-field">
+            <textarea
+              className="column-editor-summary-input"
+              value={summary}
+              onChange={(e) => setSummary(e.target.value)}
+              placeholder="비워두면 본문 앞부분으로 자동 생성됩니다."
+              rows={2}
+            />
+          </label>
+        </details>
       </div>
 
       <div className="column-editor-toolbar">

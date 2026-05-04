@@ -504,7 +504,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page).toHaveURL(/\/ko\/admin-builder\/columns$/);
     await expect(page.getByText(/대만 회사설립|대만 화장품 시장 진출/).first()).toBeVisible();
     await page.goto('/ko/admin-builder/columns?new=1', { waitUntil: 'domcontentloaded' });
-    await expect(page.getByRole('dialog', { name: '새 칼럼 만들기' })).toBeVisible();
-    await expect(page.getByPlaceholder('예: 대만 투자 계약 분쟁 대응')).toBeVisible();
+    await expect(page.getByRole('dialog', { name: '새 글 쓰기' })).toBeVisible();
+    await expect(page.getByPlaceholder('제목을 입력하세요')).toBeVisible();
   });
 });

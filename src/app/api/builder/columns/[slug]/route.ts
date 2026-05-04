@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { ZodError } from 'zod';
 import { requireBuilderAdminAuth } from '@/lib/builder/columns/auth';
 import { recordColumnEvent } from '@/lib/builder/audit/record';
-import { deleteDraftColumn, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
+import { deleteDraftColumn, deletePublishedColumn, readColumnBundle, writeDraftColumn } from '@/lib/builder/columns/storage';
 import { columnLocaleSchema, columnSlugSchema, patchColumnInputSchema, type ColumnDocument, type ColumnFrontmatter } from '@/lib/builder/columns/types';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { invalidateBlobColumnsCache } from '@/lib/consultation/columns-blob-reader';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -184,8 +186,9 @@ export async function DELETE(request: NextRequest, context: ColumnRouteContext) 
   try {
     const locale = columnLocaleSchema.parse(request.nextUrl.searchParams.get('locale') ?? 'ko');
     const slug = columnSlugSchema.parse(context.params.slug);
+    const includePublished = request.nextUrl.searchParams.get('includePublished') === '1';
     const bundle = await readColumnBundle(locale, slug);
-    if (!bundle.draft) {
+    if (!bundle.draft && (!includePublished || !bundle.published)) {
       return NextResponse.json(
         {
           ok: false,
@@ -195,8 +198,30 @@ export async function DELETE(request: NextRequest, context: ColumnRouteContext) 
         { status: 404 },
       );
     }
+    if (includePublished && bundle.published?.updatedBy === 'legacy-column-import') {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'Legacy published columns cannot be deleted by the builder cleanup route.',
+          publishedStillExists: true,
+        },
+        { status: 409 },
+      );
+    }
 
-    await deleteDraftColumn(locale, slug);
+    if (bundle.draft) {
+      await deleteDraftColumn(locale, slug);
+    }
+    if (includePublished && bundle.published) {
+      await deletePublishedColumn(locale, slug);
+      invalidateBlobColumnsCache(locale);
+      try {
+        revalidatePath(`/${locale}/columns`);
+        revalidatePath(`/${locale}/columns/${slug}`);
+      } catch {
+        // Best effort only during dev/ISR.
+      }
+    }
     await recordColumnEvent({
       request,
       type: 'delete',
@@ -209,7 +234,7 @@ export async function DELETE(request: NextRequest, context: ColumnRouteContext) 
       deleted: true,
       slug,
       locale,
-      publishedStillExists: Boolean(bundle.published),
+      publishedStillExists: Boolean(bundle.published && !includePublished),
     });
   } catch (error) {
     if (error instanceof ZodError) {

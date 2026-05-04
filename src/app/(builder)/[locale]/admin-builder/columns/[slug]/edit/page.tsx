@@ -62,18 +62,6 @@ export default async function ColumnEditPage({
       </header>
 
       <div className="column-editor-grid">
-        <div className="column-editor-meta-rail">
-          <ColumnFrontmatterPanel
-            slug={slug}
-            locale={locale}
-            initial={column.frontmatter}
-          />
-          <ColumnLocaleLinker
-            slug={slug}
-            locale={locale}
-            linkedSlugs={column.linkedSlugs || {}}
-          />
-        </div>
         <div className="column-editor-main-rail">
           <ColumnEditor
             slug={slug}
@@ -84,6 +72,18 @@ export default async function ColumnEditPage({
               bodyHtml: column.bodyHtml,
               bodyMarkdown: column.bodyMarkdown,
             }}
+          />
+        </div>
+        <div className="column-editor-meta-rail">
+          <ColumnFrontmatterPanel
+            slug={slug}
+            locale={locale}
+            initial={column.frontmatter}
+          />
+          <ColumnLocaleLinker
+            slug={slug}
+            locale={locale}
+            linkedSlugs={column.linkedSlugs || {}}
           />
         </div>
         <aside className="column-editor-preview-rail">

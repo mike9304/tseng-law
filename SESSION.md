@@ -769,3 +769,23 @@
 
 남은 gap:
 - 캔버스는 여전히 긴 페이지를 내부 scroll로 탐색하는 구조다. Wix식 bounded viewport + wheel pan 전환은 resize handle 접근성 영향이 커서 별도 설계/검증 후 진행.
+
+## 2026-05-04 Codex /goal G-Editor columns writing UX follow-up
+
+범위:
+- 사용자가 지적한 "칼럼 새로 쓰는 게 너무 복잡하다 / 티스토리처럼 글 쓰는 플랫폼이 좋다" 피드백을 반영.
+- `새 글 쓰기` modal을 제목 중심 quick start로 단순화: slug/요약/템플릿 선입력 요구 제거, 제목만 입력하면 draft를 만들고 곧바로 editor route로 이동.
+- 한국어 제목처럼 ASCII slug를 만들 수 없는 경우도 `post-{timestamp}` slug로 자동 생성.
+- 편집 화면을 본문 editor 우선 레이아웃으로 재배치하고, category/author/SEO성 frontmatter는 오른쪽 보조 rail로 이동.
+- 목록/검색 요약은 기본적으로 본문 앞부분에서 자동 생성하고, 직접 입력은 접힌 `목록/검색 설명 직접 입력` 설정으로 이동.
+- 칼럼 publish 테스트가 public column 발행은 검증하되 테스트 중 `src/content/column-embeddings.json`을 변경하지 않도록 publish route에 `skipEmbeddings=1` 테스트 옵션 추가.
+- E2E cleanup을 위해 builder column DELETE가 `includePublished=1`일 때 테스트가 만든 published variant까지 제거하도록 보강. legacy import published column은 삭제 차단 유지.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... columns-ui-workflow.playwright.ts --workers=1` ✅ (1/1, 제목만으로 글 생성 → editor 이동 → 본문 작성 → 자동 요약 저장 → 발행 → public 상세/목록 노출 → cleanup)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, Columns 진입/새 글 modal 회귀)
+
+남은 gap:
+- 티스토리 수준의 이미지 업로드/미디어 삽입, 예약 발행, 태그 자동완성, 글별 slug 재설정 UX는 아직 보조 기능이며 후속 polish 필요.

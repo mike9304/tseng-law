@@ -385,3 +385,11 @@ export async function deleteDraftColumn(locale: Locale, slug: string): Promise<v
     await deleteLocalColumn(locale, slug, 'draft');
   }
 }
+
+export async function deletePublishedColumn(locale: Locale, slug: string): Promise<void> {
+  if (getColumnBackend() === 'blob') {
+    await deleteBlobColumn(locale, slug, 'published');
+  } else {
+    await deleteLocalColumn(locale, slug, 'published');
+  }
+}

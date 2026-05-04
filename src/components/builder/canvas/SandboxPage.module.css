@@ -516,10 +516,16 @@
 .globalHeaderRegion:hover .globalRegionBadge,
 .globalHeaderRegion:focus-visible .globalRegionBadge,
 .globalHeaderRegion:focus-within .globalRegionBadge,
+.globalHeaderRegion[data-editing='true'] .globalRegionBadge,
 .globalRegionBadge:focus-within {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.globalHeaderRegion[data-editing='true'] {
+  outline-color: var(--editor-accent, #116dff);
+  box-shadow: inset 0 0 0 1px rgba(17, 109, 255, 0.22);
 }
 
 .globalRegionBadge span {

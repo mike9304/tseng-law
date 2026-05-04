@@ -85,7 +85,7 @@ async function selectFirstNode(page: Page): Promise<Locator> {
       : { x: 12, y: 12 },
     force: true,
   });
-  return expectSelectedNodeHandles(page);
+  return expectSelectedNodeHandles(page, node);
 }
 
 async function startPointerDrag(
@@ -273,6 +273,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await editableMenuItem.click();
     const navDrawer = page.locator('[aria-hidden="false"]').first();
     await expect(navDrawer.getByText('Navigation').first()).toBeVisible();
+    const headerEditMenuButton = headerRegion.getByRole('button', { name: 'Edit menu' });
+    await expect(headerEditMenuButton).toBeVisible();
+    await page.mouse.move(28, 220);
+    await expect(headerEditMenuButton).toBeVisible();
     const menuItemId = await editableMenuItem.getAttribute('data-builder-nav-item-id');
     expect(menuItemId).toBeTruthy();
     const navLabelInput = navDrawer.locator('input').first();
@@ -341,6 +345,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expectUndoChip(page);
     await pagesDrawerForPaste.getByRole('button', { name: /홈|Home/ }).first().click();
     await expect(page.getByText(/Loaded page:/)).toBeVisible();
+    await expect(page.locator('[data-node-id="home-hero-subtitle"]').first()).toBeVisible();
     await rail.getByRole('button', { name: 'Pages', exact: true }).click();
     await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
 

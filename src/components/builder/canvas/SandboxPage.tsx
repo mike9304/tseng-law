@@ -971,6 +971,7 @@ export default function SandboxPage({
           {siteName ? (
             <div
               className={styles.globalHeaderRegion}
+              data-editing={activeDrawer === 'nav' ? 'true' : undefined}
               style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderBottom: '1px solid #e5e7eb' }}
               role="button"
               tabIndex={0}

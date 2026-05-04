@@ -697,3 +697,20 @@
 
 남은 gap:
 - W26~W28은 API/public-head E2E green까지 올라왔지만, 사용자가 실제 UI에서 복원/SEO 저장/PublishModal 흐름을 클릭해 green 판정하는 단계는 남아 있음.
+
+## 2026-05-04 Codex /goal G-Editor header edit badge persistence 보강
+
+범위:
+- 사용자가 지적한 "상단 메뉴 편집 버튼을 누르러 가면 사라진다" UX를 보강.
+- Header navigation drawer가 열린 동안 global header region에 `data-editing` 상태를 부여해 `Edit menu` / `Site settings` badge가 hover와 무관하게 계속 보이도록 함.
+- admin-builder smoke에서 메뉴 항목 클릭 → Navigation drawer open → 마우스를 헤더 밖으로 이동한 뒤에도 `Edit menu` 버튼이 보이는지 검증.
+- Home 복귀 후 다음 selection/resize smoke가 stale `Loaded page` toast에 의존하지 않도록 `home-hero-subtitle` 실제 렌더 대기를 추가.
+- selection smoke helper가 방금 클릭한 노드를 기준으로 핸들을 검증하도록 좁혀 이전 selected node race를 제거.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, header edit badge persistence + 기존 editor parity smoke)
+
+남은 gap:
+- Header/menu 자체는 Navigation drawer에서 편집 가능하지만, public legacy header와 builder header 모델의 완전한 1:1 동기화는 별도 publish-gated 트랙으로 남김.

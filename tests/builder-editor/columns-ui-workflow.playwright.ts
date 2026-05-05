@@ -48,7 +48,10 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
       await page.goto('/ko/admin-builder/columns?new=1', { waitUntil: 'domcontentloaded' });
       await expect(page).toHaveURL(/\/ko\/admin-builder\/columns\/[^/]+\/edit$/);
       await expect(page.getByRole('link', { name: '← 편집 홈' })).toHaveAttribute('href', '/ko/admin-builder');
-      await expect(page.getByRole('link', { name: '칼럼 목록' })).toHaveAttribute('href', '/ko/admin-builder/columns');
+      await expect(page.getByRole('link', { name: '칼럼 목록', exact: true })).toHaveAttribute('href', '/ko/admin-builder/columns');
+      const editorReturnDock = page.getByRole('link', { name: '편집 홈 메뉴로 돌아가기' });
+      await expect(editorReturnDock).toBeVisible();
+      await expect(editorReturnDock).toHaveAttribute('href', '/ko/admin-builder');
       const match = page.url().match(/\/columns\/([^/]+)\/edit$/);
       slug = match?.[1] ? decodeURIComponent(match[1]) : null;
       expect(slug).toBeTruthy();
@@ -119,7 +122,12 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
 
       await page.goto('/ko/admin-builder/columns', { waitUntil: 'domcontentloaded' });
       await expect(page.getByRole('link', { name: '← 편집 홈' })).toHaveAttribute('href', '/ko/admin-builder');
+      const managerReturnDock = page.getByRole('link', { name: '편집 홈 메뉴로 돌아가기' });
+      await expect(managerReturnDock).toBeVisible();
+      await expect(managerReturnDock).toHaveAttribute('href', '/ko/admin-builder');
       await expect(page.locator('.column-post-grid h3 a').filter({ hasText: editedTitle }).first()).toBeVisible();
+      await managerReturnDock.click();
+      await expect(page).toHaveURL(/\/ko\/admin-builder$/);
     } finally {
       if (slug) {
         await page.request.delete(`/api/builder/columns/${slug}?locale=ko&includePublished=1`).catch(() => undefined);

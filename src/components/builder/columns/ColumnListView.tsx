@@ -308,6 +308,19 @@ export default function ColumnListView({
 
   return (
     <main className="admin-console column-manager">
+      <div className="column-builder-return-dock" aria-label="Column manager quick navigation">
+        <Link
+          className="column-builder-return-primary"
+          href={`/${routeLocale}/admin-builder`}
+          aria-label="편집 홈 메뉴로 돌아가기"
+        >
+          <span>←</span>
+          <strong>편집 홈 메뉴</strong>
+        </Link>
+        <Link className="column-builder-return-secondary" href={`/${routeLocale}/columns`}>
+          공개 칼럼
+        </Link>
+      </div>
       <header className="column-manager-hero">
         <div>
           <span className="column-manager-eyebrow">Blog manager</span>

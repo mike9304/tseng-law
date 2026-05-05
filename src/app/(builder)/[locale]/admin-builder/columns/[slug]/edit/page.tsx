@@ -30,12 +30,20 @@ export default async function ColumnEditPage({
 
   if (!column) {
     return (
-      <main style={{ padding: '2rem', fontFamily: 'system-ui' }}>
+      <main className="column-editor-page" style={{ padding: '2rem', fontFamily: 'system-ui' }}>
         <h1>칼럼을 찾을 수 없습니다</h1>
         <p>
           <code>{slug}</code> (locale: {locale}) 에 해당하는 draft 가 없습니다.
         </p>
         <a href={`/${locale}/admin-builder/columns`}>← 목록으로</a>
+        <a
+          className="column-builder-return-dock column-builder-return-dock--single"
+          href={`/${locale}/admin-builder`}
+          aria-label="편집 홈 메뉴로 돌아가기"
+        >
+          <span>←</span>
+          <strong>편집 홈 메뉴</strong>
+        </a>
       </main>
     );
   }
@@ -46,6 +54,23 @@ export default async function ColumnEditPage({
 
   return (
     <main className="column-editor-page">
+      <div className="column-builder-return-dock" aria-label="Column editor quick navigation">
+        <a
+          className="column-builder-return-primary"
+          href={`/${locale}/admin-builder`}
+          aria-label="편집 홈 메뉴로 돌아가기"
+        >
+          <span>←</span>
+          <strong>편집 홈 메뉴</strong>
+        </a>
+        <a
+          className="column-builder-return-secondary"
+          href={`/${locale}/admin-builder/columns`}
+          aria-label="칼럼 목록으로 돌아가기"
+        >
+          칼럼 목록
+        </a>
+      </div>
       <header className="column-editor-page-header">
         <div>
           <nav className="column-editor-breadcrumb" aria-label="Column editor navigation">

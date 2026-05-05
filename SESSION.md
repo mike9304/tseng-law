@@ -985,3 +985,21 @@
 
 메모:
 - full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 남은 parity audit가 필요.
+
+## 2026-05-05 Codex /goal G-Editor column return dock follow-up
+
+범위:
+- 사용자가 지적한 "칼럼 간 뒤에 다시 편집 홈 메뉴로 가는 장치가 없다" 문제를 반영.
+- 칼럼 목록과 글쓰기 화면 좌하단에 고정 `편집 홈 메뉴` return dock을 추가해 스크롤 위치와 상관없이 `/ko/admin-builder`로 복귀 가능하게 함.
+- 글쓰기 화면 dock에는 `칼럼 목록`, 목록 화면 dock에는 `공개 칼럼` 보조 링크를 함께 노출.
+- `columns-ui-workflow.playwright.ts`가 글쓰기/목록 양쪽에서 return dock visible/href를 확인하고, 목록 화면에서 실제 클릭 후 `/ko/admin-builder`로 돌아오는지 검증.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... columns-ui-workflow.playwright.ts --workers=1` ✅ (1/1, fixed return dock + direct create/edit/media/publish/public/cleanup)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W18/W30에 fixed return dock 검증 메모를 반영.
+- full goal 완료 판정은 아직 아님. 사용자가 실제 브라우저에서 칼럼 작성 후 편집 홈 복귀를 직접 확인해야 green 승격 가능.

@@ -919,3 +919,22 @@
 메모:
 - `npm run build` 후 dev chunk 불일치를 피하려고 기존 3000 dev 서버를 종료하고 build 통과 후 `npm run dev`를 다시 실행함. 현재 `http://localhost:3000/ko/admin-builder`는 local auth 후 200 OK.
 - full goal 완료 판정은 아직 아님. 사용자의 실제 5분 자유 검증과 남은 Wix parity audit가 계속 필요.
+
+## 2026-05-05 Codex /goal G-Editor W114 public office map follow-up
+
+범위:
+- 사용자가 지적한 "구글 지도도 Wix처럼 주소 설정이 간편하게 편집되고 공개 사이트에 반영돼야 한다" gap을 W114 공개 반영 E2E로 보강.
+- 임시 office map 페이지를 생성하고 `home-offices-layout-0-map` 선택 → Content → `Office sync`에서 사무소명/주소/전화/팩스/Google 지도 URL을 직접 입력.
+- 편집기 안에서 지도 iframe `q` 파라미터와 adjacent office card 주소가 즉시 동기화되는지 검증.
+- draft API에서 map/card/phone/fax/map-link 콘텐츠가 저장됐는지 확인한 뒤 publish route로 발행.
+- 공개 `/ko/{slug}`에서 지도 iframe, 사무소 카드 제목/주소/전화/팩스/지도 링크 href까지 발행본에 반영되는지 확인하고 임시 페이지 cleanup.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... office-map-public.playwright.ts --workers=1` ✅ (1/1, editor sync + draft persistence + publish + public page reflection)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+
+메모:
+- 테스트 문서가 컨테이너 필수 content 필드를 빠뜨리면 `normalizeCanvasDocument()`가 sandbox template으로 fallback되는 점을 확인하고, 테스트 fixture를 실제 canvas schema에 맞춰 보정함.
+- W114는 public reflection E2E가 추가됐지만, 3개 실제 사무소 탭 전체를 사용자가 직접 저장/publish로 확인하기 전까지 최종 green 승격은 보류.

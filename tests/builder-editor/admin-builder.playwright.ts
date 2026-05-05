@@ -356,7 +356,18 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await selectedNode.click({ button: 'right', position: { x: 18, y: 18 }, force: true });
     const contextMenu = page.locator('[role="menu"]').first();
     await expect(contextMenu).toBeVisible();
+    await expect(contextMenu).toHaveCSS('background-color', /rgba?\(255,\s*255,\s*255/);
+    await expect(contextMenu).toHaveCSS('border-radius', '8px');
     await expect(page.locator('[class*="contextMenuShortcut"]').first()).toBeVisible();
+    await expect(contextMenu.locator('[class*="contextMenuDivider"]').first()).toBeVisible();
+    const firstContextAction = contextMenu.getByRole('menuitem').first();
+    await firstContextAction.hover();
+    await expect.poll(async () => firstContextAction.evaluate((element) => (
+      window.getComputedStyle(element).backgroundColor
+    ))).toMatch(/190,\s*24,\s*93/);
+    await expect.poll(async () => firstContextAction.evaluate((element) => (
+      window.getComputedStyle(element).color
+    ))).toMatch(/190,\s*24,\s*93/);
     await contextMenu.getByRole('menuitem', { name: /Hide on viewport/ }).focus();
     await page.keyboard.press('ArrowRight');
     const contextSubmenu = page.locator('[class*="contextSubmenu"]').last();
@@ -425,9 +436,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(resizeCorner).toHaveCSS('cursor', 'nwse-resize');
     const resizeDrag = await startPointerDrag(page, resizeCorner, { shiftKey: true });
     await expect(page.locator('[data-canvas-interaction="resize"]')).toBeVisible();
-    await movePointerDrag(page, resizeDrag, 64, 16);
+    const resizeDeltaX = resizeBefore.width > 540 ? -64 : 64;
+    const resizeDeltaY = resizeBefore.width > 540 ? -16 : 16;
+    await movePointerDrag(page, resizeDrag, resizeDeltaX, resizeDeltaY);
     await expect(page.locator('[class*="canvasOverlayResizeReadout"]').first()).toContainText(/\d+\s*x\s*\d+/);
-    await finishPointerDrag(page, resizeDrag, 64, 16);
+    await finishPointerDrag(page, resizeDrag, resizeDeltaX, resizeDeltaY);
     const resizedNodeTarget = resizeNodeId
       ? page.locator(`[data-node-id="${resizeNodeId}"]`).first()
       : undefined;
@@ -467,6 +480,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       await page.keyboard.press(`${shortcutModifier}+Z`);
       await expectUndoChip(page);
     }
+    await page.keyboard.press(`${shortcutModifier}+Z`);
+    await expectUndoChip(page);
 
     await page.getByTitle('현재 페이지 SEO').click();
     await expect(page.getByText('Google preview')).toBeVisible();

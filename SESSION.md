@@ -1003,3 +1003,21 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W18/W30에 fixed return dock 검증 메모를 반영.
 - full goal 완료 판정은 아직 아님. 사용자가 실제 브라우저에서 칼럼 작성 후 편집 홈 복귀를 직접 확인해야 green 승격 가능.
+
+## 2026-05-05 Codex /goal G-Editor context menu visual audit follow-up
+
+범위:
+- Done when 8 audit에서 ContextMenu의 존재/shortcut/submenu는 검증됐지만, Wix식 `white card + pink hover + shortcut chip + divider` 시각 디테일 검증이 약한 점을 확인.
+- ContextMenu active/hover token을 파란 accent에서 기존 pink 계열(`rgba(190, 24, 93, ...)`, `#be185d`)로 맞추고, menu/submenu radius를 editor 8px token에 맞춤.
+- admin-builder smoke가 ContextMenu 흰 카드, 8px radius, shortcut chip, divider, pink hover background/text를 직접 검증하도록 보강.
+- 반복 실행으로 resize 대상이 부모 폭 한계에 도달하면 W07 smoke가 `sizeDelta=0`으로 실패하던 문제를 확인하고, 현재 크기에 따라 grow/shrink를 선택하며 resize 후 undo까지 수행하도록 보강.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, ContextMenu visual assertions + repeatable resize)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W07/W23에 이번 보강 메모를 반영.
+- full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 전체 HEAD full verification sweep이 남아 있음.

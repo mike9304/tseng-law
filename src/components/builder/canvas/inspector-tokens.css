@@ -22,8 +22,8 @@
   --ctx-border: rgba(15, 23, 42, 0.08);
   --ctx-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
   --ctx-item-fg: #1f2937;
-  --ctx-item-active-bg: var(--insp-accent);
-  --ctx-item-active-fg: #ffffff;
+  --ctx-item-active-bg: rgba(190, 24, 93, 0.10);
+  --ctx-item-active-fg: #be185d;
   --tb-bg: rgba(24, 24, 27, 0.92);
   --tb-border: rgba(255, 255, 255, 0.10);
   --tb-fg: #f8fafc;

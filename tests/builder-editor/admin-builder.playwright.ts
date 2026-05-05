@@ -197,6 +197,10 @@ async function expectUndoChip(page: Page): Promise<void> {
   await expect(page.getByText(/Undid:/).first()).toBeVisible();
 }
 
+async function expectRedoChip(page: Page): Promise<void> {
+  await expect(page.getByText(/Redid:/).first()).toBeVisible();
+}
+
 async function closeModalOverlayIfPresent(page: Page): Promise<void> {
   const closeButton = page.getByRole('button', { name: /Close|닫기|취소|Cancel/ }).first();
   if ((await closeButton.count()) === 0 || !(await closeButton.isVisible())) return;
@@ -364,6 +368,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await closeModalOverlayIfPresent(page);
     await page.keyboard.press(`${shortcutModifier}+D`);
     await expect(page.getByText('Duplicated')).toBeVisible();
+    await page.keyboard.press(`${shortcutModifier}+Z`);
+    await expectUndoChip(page);
+    await page.keyboard.press(`${shortcutModifier}+Shift+Z`);
+    await expectRedoChip(page);
     await page.keyboard.press(`${shortcutModifier}+Z`);
     await expectUndoChip(page);
 

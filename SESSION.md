@@ -970,3 +970,18 @@
 메모:
 - 이 sweep은 `G-Editor: simplify header and column editing` 이후 전체 unit/build 회귀 확인용.
 - full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 남은 parity audit가 필요.
+
+## 2026-05-05 Codex /goal G-Editor W10 redo activity chip follow-up
+
+범위:
+- Done when 11의 Undo/Redo toast 중 Playwright가 `Undid:`만 확인하고 `Redid:` chip을 덮지 못하던 검증 gap을 확인.
+- admin-builder smoke에서 Cmd/Ctrl+D → Cmd/Ctrl+Z `Undid:` → Cmd/Ctrl+Shift+Z `Redid:` → 다시 Cmd/Ctrl+Z restore 순서로 보강.
+- redo로 생성된 duplicate는 즉시 다시 undo해 이후 copy/paste smoke가 기존 상태에서 이어지도록 유지.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, `Redid:` activity chip 포함)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 남은 parity audit가 필요.

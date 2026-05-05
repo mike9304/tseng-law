@@ -959,3 +959,14 @@
 메모:
 - `admin-builder.playwright.ts`를 columns workflow와 동시에 돌렸을 때 dev hot compile 중 transient 500/invalid hook call이 한 번 발생했으나, 단독 재실행은 200 + smoke 통과.
 - full goal 완료 판정은 아직 아님. 사용자가 실제 5분 동안 header/nav/칼럼 작성 흐름을 직접 검증해야 green 승격 가능.
+
+## 2026-05-05 Codex /goal G-Editor post-UX verification sweep
+
+검증:
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` chunk mismatch를 피하려고 `npm run dev`를 다시 시작했고, `http://localhost:3000/ko/admin-builder`는 local auth 후 200 OK.
+
+메모:
+- 이 sweep은 `G-Editor: simplify header and column editing` 이후 전체 unit/build 회귀 확인용.
+- full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 남은 parity audit가 필요.

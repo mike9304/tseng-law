@@ -1036,3 +1036,19 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W02에 hover indicator 검증 메모를 반영.
 - full goal 완료 판정은 아직 아님. 사용자 직접 hover/selection green 검증과 전체 HEAD full verification sweep이 남아 있음.
+
+## 2026-05-05 Codex /goal G-Editor left rail visual coverage follow-up
+
+범위:
+- Done when 7 audit에서 64px dark rail과 주요 click flow는 검증되지만, hover label tooltip과 drawer slide/open width 검증이 약한 점을 확인.
+- admin-builder smoke가 `Design` rail button hover 시 label text/opacity `1`을 확인하고, click 후 drawer가 `aria-hidden=false`, 300px 이상 폭, `Site settings` 콘텐츠를 갖는지 직접 검증하도록 보강.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, rail hover label + drawer open width + existing editor smoke)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W04에 rail hover/drawer visual coverage 메모를 반영.
+- full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 전체 HEAD full verification sweep이 남아 있음.

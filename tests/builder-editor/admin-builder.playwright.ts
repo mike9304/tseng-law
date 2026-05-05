@@ -281,6 +281,16 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const railBox = await rail.boundingBox();
     expect(railBox?.width).toBeGreaterThanOrEqual(60);
     expect(railBox?.width).toBeLessThanOrEqual(68);
+    const designRailButton = rail.getByTitle('Design');
+    const designRailLabel = designRailButton.locator('[class*="railButtonLabel"]').first();
+    await designRailButton.hover();
+    await expect(designRailLabel).toContainText('Design');
+    await expect(designRailLabel).toHaveCSS('opacity', '1');
+    await designRailButton.click();
+    const designDrawer = page.locator('aside[aria-hidden="false"]').first();
+    await expect(designDrawer).toBeVisible();
+    await expect.poll(async () => (await designDrawer.boundingBox())?.width ?? 0).toBeGreaterThanOrEqual(300);
+    await expect(designDrawer).toContainText('Site settings');
 
     await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
     await expect.poll(() => browserErrors, { timeout: 1_000 }).toEqual([]);

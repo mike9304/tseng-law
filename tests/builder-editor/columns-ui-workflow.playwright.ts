@@ -55,7 +55,14 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
 
       const titleInput = page.locator('input.column-editor-title-input');
       const bodyEditor = page.locator('.column-editor-body');
+      const advancedSettings = page.locator('.column-editor-advanced-shell');
+      const frontmatterPanel = page.locator('.column-frontmatter-panel').first();
       await expect(titleInput).toHaveValue('제목 없는 글');
+      await expect(advancedSettings).toBeVisible();
+      await expect(advancedSettings).not.toHaveAttribute('open', '');
+      await expect(frontmatterPanel).not.toBeVisible();
+      await advancedSettings.locator('> summary').click();
+      await expect(frontmatterPanel).toBeVisible();
       await titleInput.fill(editedTitle);
       await bodyEditor.fill(editedBody);
       await page.getByRole('button', { name: 'Image' }).click();

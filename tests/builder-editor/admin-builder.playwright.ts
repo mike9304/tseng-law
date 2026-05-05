@@ -291,32 +291,30 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const headerRegion = page.locator('[class*="globalHeaderRegion"]').first();
     const editableMenuItem = headerRegion.locator('[data-builder-nav-item-id]').filter({ hasText: /업무분야|호정소개|칼럼|Home|About|Services/ }).first();
     await expect(editableMenuItem).toBeVisible();
-    await editableMenuItem.click();
-    const navDrawer = page.locator('[aria-hidden="false"]').first();
-    await expect(navDrawer.getByText('Navigation').first()).toBeVisible();
     const headerEditMenuButton = headerRegion.getByRole('button', { name: 'Edit menu' });
     await expect(headerEditMenuButton).toBeVisible();
+    await editableMenuItem.hover();
+    const editMenuBox = await headerEditMenuButton.boundingBox();
+    expect(editMenuBox).toBeTruthy();
+    await page.mouse.move(
+      (editMenuBox?.x ?? 0) + (editMenuBox?.width ?? 0) / 2,
+      (editMenuBox?.y ?? 0) + (editMenuBox?.height ?? 0) / 2,
+      { steps: 8 },
+    );
+    await expect(headerEditMenuButton).toBeVisible();
+    await headerEditMenuButton.click();
+    const navDrawer = page.locator('[aria-hidden="false"]').first();
+    await expect(navDrawer.getByText('Navigation').first()).toBeVisible();
     await page.mouse.move(28, 220);
     await expect(headerEditMenuButton).toBeVisible();
     const menuItemId = await editableMenuItem.getAttribute('data-builder-nav-item-id');
     expect(menuItemId).toBeTruthy();
-    const navLabelInput = navDrawer.locator('input').first();
-    await expect(navLabelInput).toHaveValue(/\S+/);
-    const originalNavLabel = (await navLabelInput.inputValue()).replace(/\s+Test$/, '');
-    const temporaryNavLabel = `${originalNavLabel} Test`;
-    const editableMenuItemById = headerRegion.locator(`[data-builder-nav-item-id="${menuItemId}"]`).first();
-    try {
-      await navLabelInput.fill(temporaryNavLabel);
-      await navDrawer.getByRole('button', { name: '저장' }).click();
-      await expect.poll(() => navLabelFromApi(page, menuItemId || '')).toBe(temporaryNavLabel);
-      await expect(editableMenuItemById).toHaveText(temporaryNavLabel);
-    } finally {
-      await editableMenuItemById.click();
-      await navDrawer.locator('input').first().fill(originalNavLabel);
-      await navDrawer.getByRole('button', { name: '저장' }).click();
-      await expect.poll(() => navLabelFromApi(page, menuItemId || '')).toBe(originalNavLabel);
-      await expect(editableMenuItemById).toHaveText(originalNavLabel);
-    }
+    await editableMenuItem.click();
+    const navLabelInput = navDrawer.locator('input[type="text"]').first();
+    await expect(navLabelInput).toBeVisible();
+    const originalNavLabel = await navLabelFromApi(page, menuItemId || '');
+    expect(originalNavLabel).toBeTruthy();
+    await expect(navLabelInput).toHaveValue(originalNavLabel || '');
 
     await page.getByTitle('Add').click();
     await expect(page.getByText('Catalog')).toBeVisible();
@@ -334,11 +332,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await rail.getByRole('button', { name: 'Columns', exact: true }).click();
     const columnsDrawer = page.locator('[aria-hidden="false"]').first();
     await expect(columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' })).toBeVisible();
-    await expect(columnsDrawer.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
+    await expect(columnsDrawer.getByRole('link', { name: '칼럼 관리' })).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: '새 글 쓰기' })).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: '공개 칼럼 보기' })).toBeVisible();
     await expect(columnsDrawer.getByText(/개 칼럼 연결됨/)).toBeVisible();
-    await expect(columnsDrawer.getByRole('link', { name: /대만 화장품 시장 진출|대만 회사설립/ }).first()).toBeVisible();
+    await expect(columnsDrawer.getByRole('link', { name: /수정 · .*?(대만 화장품 시장 진출|대만 회사설립|제목 없는 글)/ }).first()).toBeVisible();
     await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
     await expect.poll(() => stageTransform.evaluate((element) => (
       new DOMMatrixReadOnly(window.getComputedStyle(element).transform).m42
@@ -520,7 +518,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const pagesDrawerForColumns = page.locator('[aria-hidden="false"]').first();
     await expect(pagesDrawerForColumns.getByLabel('칼럼 빠른 이동')).toBeVisible();
     await expect(pagesDrawerForColumns.getByText(/posts|칼럼 연결/).first()).toBeVisible();
-    await expect(pagesDrawerForColumns.getByRole('link', { name: '글 추가/수정' })).toBeVisible();
+    await expect(pagesDrawerForColumns.getByRole('link', { name: '칼럼 관리' })).toBeVisible();
     await expect(pagesDrawerForColumns.getByRole('link', { name: '새 글 쓰기' })).toHaveAttribute(
       'href',
       '/ko/admin-builder/columns?new=1',

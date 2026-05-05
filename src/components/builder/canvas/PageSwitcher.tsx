@@ -506,7 +506,7 @@ export default function PageSwitcher({
                   style={{ ...columnsQuickMetaStyle, color: '#1d4ed8', textDecoration: 'none' }}
                   title={post.title}
                 >
-                  {post.title}
+                  수정 · {post.title}
                 </a>
               ))}
             </div>
@@ -523,11 +523,17 @@ export default function PageSwitcher({
               href={`/${locale}/admin-builder/columns`}
               style={columnsQuickButtonStyle}
             >
-              글 추가/수정
+              칼럼 관리
             </a>
             <a
               href={`/${locale}/admin-builder/columns?new=1`}
-              style={{ ...columnsQuickButtonStyle, gridColumn: '1 / -1' }}
+              style={{
+                ...columnsQuickButtonStyle,
+                gridColumn: '1 / -1',
+                background: '#116dff',
+                borderColor: '#116dff',
+                color: '#fff',
+              }}
             >
               새 글 쓰기
             </a>

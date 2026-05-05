@@ -938,3 +938,24 @@
 메모:
 - 테스트 문서가 컨테이너 필수 content 필드를 빠뜨리면 `normalizeCanvasDocument()`가 sandbox template으로 fallback되는 점을 확인하고, 테스트 fixture를 실제 canvas schema에 맞춰 보정함.
 - W114는 public reflection E2E가 추가됐지만, 3개 실제 사무소 탭 전체를 사용자가 직접 저장/publish로 확인하기 전까지 최종 green 승격은 보류.
+
+## 2026-05-05 Codex /goal G-Editor header menu + columns writer UX follow-up
+
+범위:
+- 사용자가 지적한 "맨 위 메뉴를 편집하려고 하면 Edit 버튼이 사라진다" 문제를 반영해 Header `Edit menu` badge를 hover-only가 아닌 editor-mode 고정 컨트롤로 변경.
+- admin-builder smoke를 보강해 header nav item에서 `Edit menu` 버튼으로 마우스를 이동해도 버튼이 visible 상태로 유지되고, 클릭 시 Navigation drawer가 열리는지 검증.
+- header nav item 자체 클릭 시 해당 Navigation edit input이 바로 열리는지도 검증해 메뉴 항목이 편집 불가처럼 보이는 문제를 회귀 방지.
+- 사용자가 지적한 "칼럼 새로 쓰기가 복잡하다" 문제를 반영해 칼럼 작성 화면을 writer-first 레이아웃으로 단순화.
+- title/body/save/publish는 첫 화면에 남기고, 카테고리/대표 이미지/번역/미리보기는 접힌 `고급 설정` details 안으로 이동.
+- editor home Columns drawer와 Pages quick card에서 `새 글 쓰기`를 primary action으로 올리고, 기존 `글 추가/수정` 라벨은 `칼럼 관리`, 최근 글 링크는 `수정 · 제목`으로 명확화.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, header edit badge persistence + nav item edit input + columns label smoke)
+- `BASE_URL=http://localhost:3000 ... columns-ui-workflow.playwright.ts --workers=1` ✅ (1/1, direct new post + writer-first collapsed advanced settings + image/publish/public/cleanup)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+
+메모:
+- `admin-builder.playwright.ts`를 columns workflow와 동시에 돌렸을 때 dev hot compile 중 transient 500/invalid hook call이 한 번 발생했으나, 단독 재실행은 200 + smoke 통과.
+- full goal 완료 판정은 아직 아님. 사용자가 실제 5분 동안 header/nav/칼럼 작성 흐름을 직접 검증해야 green 승격 가능.

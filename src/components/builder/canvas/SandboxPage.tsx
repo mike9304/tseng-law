@@ -1009,7 +1009,7 @@ export default function SandboxPage({
                   </div>
                 </header>
                 <p className={styles.panelCopy}>
-                  칼럼 페이지로 이동하거나 기존 글과 새 초안을 바로 추가/수정합니다.
+                  새 글은 바로 쓰기 화면으로 열고, 기존 칼럼은 수정 링크로 이어집니다.
                 </p>
                 <div className={styles.columnsStatusCard}>
                   <strong>
@@ -1032,13 +1032,16 @@ export default function SandboxPage({
                           href={`/${locale}/admin-builder/columns/${encodeURIComponent(post.slug)}/edit`}
                           title={post.title}
                         >
-                          {post.title}
+                          수정 · {post.title}
                         </a>
                       ))}
                     </div>
                   ) : null}
                 </div>
                 <div className={styles.actionGrid}>
+                  <a className={`${styles.actionButton} ${styles.actionButtonPrimary}`} href={`/${locale}/admin-builder/columns?new=1`}>
+                    새 글 쓰기
+                  </a>
                   <button
                     type="button"
                     className={styles.actionButton}
@@ -1051,10 +1054,7 @@ export default function SandboxPage({
                     칼럼 페이지로 이동
                   </button>
                   <a className={styles.actionButton} href={`/${locale}/admin-builder/columns`}>
-                    글 추가/수정
-                  </a>
-                  <a className={styles.actionButton} href={`/${locale}/admin-builder/columns?new=1`}>
-                    새 글 쓰기
+                    칼럼 관리
                   </a>
                   <a className={styles.actionButton} href={`/${locale}/columns`} target="_blank" rel="noreferrer">
                     공개 칼럼 보기

@@ -64,7 +64,7 @@ export default async function ColumnEditPage({
         </a>
       </header>
 
-      <div className="column-editor-grid">
+      <div className="column-editor-grid column-editor-grid--writer">
         <div className="column-editor-main-rail">
           <ColumnEditor
             slug={slug}
@@ -76,54 +76,62 @@ export default async function ColumnEditPage({
               bodyMarkdown: column.bodyMarkdown,
             }}
           />
-        </div>
-        <div className="column-editor-meta-rail">
-          <ColumnFrontmatterPanel
-            slug={slug}
-            locale={locale}
-            initial={column.frontmatter}
-          />
-          <ColumnLocaleLinker
-            slug={slug}
-            locale={locale}
-            linkedSlugs={column.linkedSlugs || {}}
-          />
-        </div>
-        <aside className="column-editor-preview-rail">
-          <div className="column-preview-card">
-            <div className="column-preview-toolbar">
-              <span>Preview</span>
-              <strong>{readingTime}분 읽기</strong>
-            </div>
-            {column.frontmatter.featuredImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img className="column-preview-image" src={column.frontmatter.featuredImage} alt="" />
-            ) : (
-              <div className="column-preview-image column-preview-image-placeholder">
-                {column.title.slice(0, 2).toUpperCase() || 'HJ'}
+          <details className="column-editor-advanced-shell">
+            <summary>
+              <span>고급 설정</span>
+              <strong>카테고리, 대표 이미지, 번역, 미리보기</strong>
+            </summary>
+            <div className="column-editor-advanced-grid">
+              <div className="column-editor-meta-rail">
+                <ColumnFrontmatterPanel
+                  slug={slug}
+                  locale={locale}
+                  initial={column.frontmatter}
+                />
+                <ColumnLocaleLinker
+                  slug={slug}
+                  locale={locale}
+                  linkedSlugs={column.linkedSlugs || {}}
+                />
               </div>
-            )}
-            <div className="column-preview-body">
-              <span className="column-category-chip" style={{ background: category.color }}>
-                {getCategoryLabel(category, locale)}
-              </span>
-              <h2>{column.title}</h2>
-              <p className="column-preview-summary">{column.summary}</p>
-              <div className="column-preview-meta">
-                <span>{authorName}</span>
-                <span>
-                  {column.frontmatter.publishedAt
-                    ? new Date(column.frontmatter.publishedAt).toLocaleDateString('ko-KR')
-                    : 'Draft'}
-                </span>
-              </div>
-              <article
-                className="column-preview-article"
-                dangerouslySetInnerHTML={{ __html: column.bodyHtml || '<p>본문 미리보기</p>' }}
-              />
+              <aside className="column-editor-preview-rail">
+                <div className="column-preview-card">
+                  <div className="column-preview-toolbar">
+                    <span>Preview</span>
+                    <strong>{readingTime}분 읽기</strong>
+                  </div>
+                  {column.frontmatter.featuredImage ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img className="column-preview-image" src={column.frontmatter.featuredImage} alt="" />
+                  ) : (
+                    <div className="column-preview-image column-preview-image-placeholder">
+                      {column.title.slice(0, 2).toUpperCase() || 'HJ'}
+                    </div>
+                  )}
+                  <div className="column-preview-body">
+                    <span className="column-category-chip" style={{ background: category.color }}>
+                      {getCategoryLabel(category, locale)}
+                    </span>
+                    <h2>{column.title}</h2>
+                    <p className="column-preview-summary">{column.summary}</p>
+                    <div className="column-preview-meta">
+                      <span>{authorName}</span>
+                      <span>
+                        {column.frontmatter.publishedAt
+                          ? new Date(column.frontmatter.publishedAt).toLocaleDateString('ko-KR')
+                          : 'Draft'}
+                      </span>
+                    </div>
+                    <article
+                      className="column-preview-article"
+                      dangerouslySetInnerHTML={{ __html: column.bodyHtml || '<p>본문 미리보기</p>' }}
+                    />
+                  </div>
+                </div>
+              </aside>
             </div>
-          </div>
-        </aside>
+          </details>
+        </div>
       </div>
     </main>
   );

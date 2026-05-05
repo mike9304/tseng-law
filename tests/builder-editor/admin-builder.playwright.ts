@@ -291,6 +291,17 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="home-insights-title"]').first()).toContainText('칼럼 아카이브');
     await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);
+    const hoverIndicatorNode = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();
+    await hoverIndicatorNode.hover();
+    await expect.poll(async () => hoverIndicatorNode.evaluate((element) => (
+      window.getComputedStyle(element).outlineWidth
+    ))).toBe('1px');
+    await expect.poll(async () => hoverIndicatorNode.evaluate((element) => (
+      window.getComputedStyle(element).outlineColor
+    ))).toMatch(/17,\s*109,\s*255/);
+    const hoverNodeBadge = hoverIndicatorNode.locator('[class*="nodeBadge"]').first();
+    await expect(hoverNodeBadge).toHaveCSS('opacity', '1');
+    await expect(hoverNodeBadge).toContainText(/\d+×\d+/);
     await expect(page.getByRole('navigation').getByRole('link', { name: '칼럼' })).toBeVisible();
     const headerRegion = page.locator('[class*="globalHeaderRegion"]').first();
     const editableMenuItem = headerRegion.locator('[data-builder-nav-item-id]').filter({ hasText: /업무분야|호정소개|칼럼|Home|About|Services/ }).first();

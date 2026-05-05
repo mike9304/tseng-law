@@ -1021,3 +1021,18 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W07/W23에 이번 보강 메모를 반영.
 - full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 전체 HEAD full verification sweep이 남아 있음.
+
+## 2026-05-05 Codex /goal G-Editor W02 hover indicator follow-up
+
+범위:
+- Done when 1/W02 audit에서 selected 8 handles는 검증되지만, unselected hover의 얇은 border indicator와 size label 노출 검증이 약한 점을 확인.
+- admin-builder smoke에서 `home-hero-subtitle` hover 시 `outline-width: 1px`, Wix blue outline color, node badge opacity `1`, `000×000` size label 형식을 직접 검증하도록 추가.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, hover indicator + existing editor smoke)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W02에 hover indicator 검증 메모를 반영.
+- full goal 완료 판정은 아직 아님. 사용자 직접 hover/selection green 검증과 전체 HEAD full verification sweep이 남아 있음.

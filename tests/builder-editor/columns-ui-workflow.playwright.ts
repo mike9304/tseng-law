@@ -47,8 +47,9 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
 
       await page.goto('/ko/admin-builder/columns?new=1', { waitUntil: 'domcontentloaded' });
       await expect(page).toHaveURL(/\/ko\/admin-builder\/columns\/[^/]+\/edit$/);
-      await expect(page.getByRole('link', { name: '← 편집 홈' })).toHaveAttribute('href', '/ko/admin-builder');
+      await expect(page.getByRole('link', { name: '← 편집기 홈으로 돌아가기' })).toHaveAttribute('href', '/ko/admin-builder');
       await expect(page.getByRole('link', { name: '칼럼 목록', exact: true })).toHaveAttribute('href', '/ko/admin-builder/columns');
+      await expect(page.getByText('편집기 홈으로 돌아가기').first()).toBeVisible();
       const editorReturnDock = page.getByRole('link', { name: '편집 홈 메뉴로 돌아가기' });
       await expect(editorReturnDock).toBeVisible();
       await expect(editorReturnDock).toHaveAttribute('href', '/ko/admin-builder');
@@ -121,7 +122,8 @@ test.describe('/ko/admin-builder columns UI workflow', () => {
       await expect(page.getByRole('link', { name: editedTitle }).first()).toBeVisible();
 
       await page.goto('/ko/admin-builder/columns', { waitUntil: 'domcontentloaded' });
-      await expect(page.getByRole('link', { name: '← 편집 홈' })).toHaveAttribute('href', '/ko/admin-builder');
+      await expect(page.getByRole('link', { name: '← 편집기 홈으로 돌아가기' })).toHaveAttribute('href', '/ko/admin-builder');
+      await expect(page.getByText('편집기 홈으로 돌아가기').first()).toBeVisible();
       const managerReturnDock = page.getByRole('link', { name: '편집 홈 메뉴로 돌아가기' });
       await expect(managerReturnDock).toBeVisible();
       await expect(managerReturnDock).toHaveAttribute('href', '/ko/admin-builder');

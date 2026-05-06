@@ -42,7 +42,7 @@ export default async function ColumnEditPage({
           aria-label="편집 홈 메뉴로 돌아가기"
         >
           <span>←</span>
-          <strong>편집 홈 메뉴</strong>
+          <strong>편집기 홈으로 돌아가기</strong>
         </a>
       </main>
     );
@@ -74,7 +74,7 @@ export default async function ColumnEditPage({
       <header className="column-editor-page-header">
         <div>
           <nav className="column-editor-breadcrumb" aria-label="Column editor navigation">
-            <a href={`/${locale}/admin-builder`}>← 편집 홈</a>
+            <a href={`/${locale}/admin-builder`}>← 편집기 홈으로 돌아가기</a>
             <a href={`/${locale}/admin-builder/columns`}>칼럼 목록</a>
           </nav>
           <h1>{column.title || 'Untitled column'}</h1>

@@ -749,18 +749,20 @@ export default function SandboxPage({
         margin: '0 auto',
         position: 'relative',
         display: 'flex',
-        flex: '1 1 auto',
+        flex: '0 0 auto',
         flexDirection: 'column',
-        minHeight: 0,
+        height: 'calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px)',
+        minHeight: 640,
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       }
     : {
         width: '100%',
         position: 'relative',
         display: 'flex',
-        flex: '1 1 auto',
+        flex: '0 0 auto',
         flexDirection: 'column',
-        minHeight: 0,
+        height: 'calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px)',
+        minHeight: 640,
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       };
 
@@ -772,14 +774,18 @@ export default function SandboxPage({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        overflow: 'hidden',
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        overscrollBehavior: 'contain',
       }
     : {
         flex: 1,
         minWidth: 0,
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden',
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        overscrollBehavior: 'contain',
         background: '#f8fafc',
       };
 

@@ -275,6 +275,26 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const topBarBox = await topBar.boundingBox();
     expect(topBarBox?.height).toBeGreaterThanOrEqual(30);
     await expect(page.locator('[class*="zoomLabel"]').first()).toContainText('100%');
+    const editorLayout = await page.evaluate(() => {
+      const rectFor = (selector: string) => document.querySelector(selector)?.getBoundingClientRect() ?? null;
+      const styleFor = (selector: string) => {
+        const element = document.querySelector(selector);
+        return element ? window.getComputedStyle(element) : null;
+      };
+      const siteFooterRect = rectFor('footer:not([aria-label="Editor status"])');
+      const statusRect = rectFor('footer[aria-label="Editor status"]');
+      return {
+        canvasOverflowY: styleFor('div[class*="canvasColumn"]')?.overflowY ?? '',
+        stageViewportHeight: rectFor('div[class*="stageViewport"]')?.height ?? 0,
+        stageTransformTransition: styleFor('div[class*="stageTransform"]')?.transitionProperty ?? '',
+        siteFooterTop: siteFooterRect?.top ?? 0,
+        statusTop: statusRect?.top ?? 0,
+      };
+    });
+    expect(editorLayout.canvasOverflowY).toBe('auto');
+    expect(editorLayout.stageViewportHeight).toBeGreaterThan(720);
+    expect(editorLayout.stageTransformTransition).toBe('none');
+    expect(editorLayout.siteFooterTop).toBeGreaterThanOrEqual(editorLayout.statusTop - 4);
 
     const rail = page.locator('[class*="iconRail"]').first();
     await expect(rail).toBeVisible();
@@ -348,7 +368,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const canvasColumn = page.locator('[class*="canvasColumn"]').first();
     const stageViewport = page.locator('[class*="stageViewport"]').first();
     const stageTransform = page.locator('[class*="stageTransform"]').first();
-    await expect.poll(() => canvasColumn.evaluate((element) => element.scrollHeight - element.clientHeight)).toBeLessThanOrEqual(4);
+    await expect.poll(() => canvasColumn.evaluate((element) => element.scrollHeight - element.clientHeight)).toBeGreaterThan(300);
     await stageViewport.hover();
     await page.mouse.wheel(0, 520);
     await expect.poll(() => stageTransform.evaluate((element) => (
@@ -374,7 +394,16 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const selectedNode = await selectFirstNode(page);
     await closeModalOverlayIfPresent(page);
 
-    await selectedNode.click({ button: 'right', position: { x: 18, y: 18 }, force: true });
+    await selectedNode.evaluate((element) => {
+      const rect = element.getBoundingClientRect();
+      element.dispatchEvent(new MouseEvent('contextmenu', {
+        bubbles: true,
+        cancelable: true,
+        button: 2,
+        clientX: rect.left + Math.min(30, Math.max(10, rect.width / 2)),
+        clientY: rect.top + Math.min(30, Math.max(10, rect.height / 2)),
+      }));
+    });
     const contextMenu = page.locator('[role="menu"]').first();
     await expect(contextMenu).toBeVisible();
     await expect(contextMenu).toHaveCSS('background-color', /rgba?\(255,\s*255,\s*255/);

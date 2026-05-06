@@ -1052,3 +1052,33 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W04에 rail hover/drawer visual coverage 메모를 반영.
 - full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 전체 HEAD full verification sweep이 남아 있음.
+
+## 2026-05-06 Codex /goal G-Editor scroll/footer stability follow-up
+
+범위:
+- 사용자가 지적한 "편집기 내릴 때 렉걸리듯 흔들림"과 "밑에 바닥/footer가 고정되어 많이 올라와 있음" 문제를 재현.
+- 1440x1000 실측에서 사이트 footer가 y=606부터 보이며 stage viewport가 439px로 줄어드는 flex shrink 문제를 확인.
+- `canvasWrapperStyle`을 고정 높이 flex item으로 바꾸고 `canvasColumn`을 자체 y-scroll 컨테이너로 전환해 footer가 첫 화면 중간에 고정처럼 올라오지 않게 수정.
+- wheel pan 중 `stageTransform`의 180ms transition이 입력을 뒤따라오며 흔들리는 문제를 제거하고 `will-change: transform`을 적용.
+- 칼럼 목록/글쓰기 복귀 CTA 문구를 `편집기 홈으로 돌아가기`로 명확화해 사용자가 복귀 경로를 더 쉽게 찾도록 보강.
+- `design-pool.playwright.ts`의 캔버스 노드 선택 helper를 실제 클릭 가능한 unlocked node 위주로 안정화.
+
+검증:
+- 1440x1000 브라우저 실측 ✅: stageViewport 약 805px, site footer top 약 972px, stageTransform transition `none`, canvasColumn overflow-y `auto`
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (1/1, footer/status/layout regression 포함)
+- `BASE_URL=http://localhost:3000 ... columns-ui-workflow.playwright.ts --workers=1` ✅ (1/1, 명확화된 복귀 CTA 포함)
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (5/5)
+- `BASE_URL=http://localhost:3000 ... asset-image-workflow.playwright.ts --workers=1` ✅ (1/1)
+- `BASE_URL=http://localhost:3000 ... office-map-public.playwright.ts --workers=1` ✅ (1/1)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run security:builder-routes` ✅
+- `BASE_URL=http://localhost:3000 npm run smoke:builder` ✅
+- `npm run build` ✅ (Google Fonts stylesheet download warning only)
+
+메모:
+- build 후 dev cache가 500을 반환해 기존 dev PID를 종료하고 `npm run dev`를 3000에서 재시작, `/ko/admin-builder` 200 확인.
+- tracked builder-editor 전체 파일 묶음은 9/12 통과, `asset-image-workflow`, `design-pool` drag overlay, `office-map-public` published map이 묶음 실행에서만 흔들렸고 각 파일 단독 재실행은 통과. 다음 sweep에서 상태 격리/순서 의존성을 추가 정리 필요.
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01/W20에 footer/scroll stability 검증 메모를 반영.
+- full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 tracked builder-editor full sweep 안정화가 남아 있음.

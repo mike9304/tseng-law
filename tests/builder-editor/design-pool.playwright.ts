@@ -1,6 +1,13 @@
 import { expect, test, type Locator, type Page } from '@playwright/test';
 
 const screenshotDir = '/tmp';
+const preferredCanvasNodeIds = [
+  'home-hero-subtitle',
+  'home-hero-title',
+  'home-hero-search-placeholder',
+  'home-insights-title',
+  'home-insights-featured-title',
+];
 
 async function waitForEditorCss(page: Page): Promise<void> {
   const isStyled = async () => page.locator('header[class*="topBar"]').first().evaluate((element) => {
@@ -24,11 +31,12 @@ async function openBuilder(page: Page): Promise<void> {
 }
 
 async function selectFirstNode(page: Page): Promise<Locator> {
-  const node = page.getByRole('application', { name: 'Canvas editor' }).locator('[data-node-id]:visible').first();
+  const node = await topmostUnlockedNode(page);
   await expect(node).toBeVisible();
-  await node.click({ position: { x: 12, y: 12 } });
-  await expect(page.locator('[class*="resizeHandle"]')).toHaveCount(8);
-  return node;
+  await clickCanvasNode(node);
+  const selectedNode = page.locator('[class*="nodeSelected"][data-node-id]:visible').last();
+  await expect(selectedNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
+  return selectedNode;
 }
 
 async function closeEditorOverlayIfPresent(page: Page): Promise<void> {
@@ -42,28 +50,132 @@ async function closeEditorOverlayIfPresent(page: Page): Promise<void> {
 async function visibleUnlockedNodes(page: Page): Promise<Locator> {
   const nodes = page
     .getByRole('application', { name: 'Canvas editor' })
-    .locator('[data-node-id]:visible:not([class*="nodeLocked"])');
+    .locator('[data-node-id]:visible:not([class*="nodeLocked"]):not([data-node-id$="-root"]):not([data-node-id="html"])');
   await expect.poll(async () => nodes.count()).toBeGreaterThan(1);
   return nodes;
+}
+
+async function canvasNodeClickPosition(locator: Locator): Promise<{ x: number; y: number } | null> {
+  return locator.evaluate((element) => {
+    const rect = element.getBoundingClientRect();
+    const overlaySelector = [
+      '[class*="globalRegionBadge"]',
+      '[class*="canvasOverlay"]',
+      '[class*="overlapPicker"]',
+      '[data-modal-shell="true"]',
+      'header[class*="topBar"]',
+      '[role="menu"]',
+    ].join(',');
+    const points = [
+      { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 },
+      { x: rect.left + Math.min(Math.max(rect.width * 0.25, 16), rect.width - 8), y: rect.top + rect.height / 2 },
+      { x: rect.left + Math.min(Math.max(rect.width * 0.75, 16), rect.width - 8), y: rect.top + rect.height / 2 },
+      { x: rect.left + rect.width / 2, y: rect.top + Math.min(Math.max(rect.height * 0.35, 12), rect.height - 6) },
+      { x: rect.left + rect.width / 2, y: rect.top + Math.min(Math.max(rect.height * 0.65, 12), rect.height - 6) },
+    ];
+
+    for (const point of points) {
+      if (point.x < 0 || point.y < 96 || point.x > window.innerWidth || point.y > window.innerHeight) continue;
+      const hit = document.elementFromPoint(point.x, point.y);
+      if (!hit || hit.closest(overlaySelector)) continue;
+      const hitNode = hit.closest('[data-node-id]');
+      if (hit === element || element.contains(hit) || (hitNode && (hitNode === element || element.contains(hitNode)))) {
+        return {
+          x: Math.max(1, Math.min(rect.width - 1, point.x - rect.left)),
+          y: Math.max(1, Math.min(rect.height - 1, point.y - rect.top)),
+        };
+      }
+    }
+
+    return null;
+  });
+}
+
+async function clickCanvasNode(locator: Locator, options: { button?: 'left' | 'right' } = {}): Promise<void> {
+  await locator.scrollIntoViewIfNeeded();
+  const box = await locator.boundingBox();
+  const position = await canvasNodeClickPosition(locator) ?? (box
+    ? {
+        x: Math.max(1, Math.min(box.width - 1, box.width / 2)),
+        y: Math.max(1, Math.min(box.height - 1, box.height / 2)),
+      }
+    : { x: 12, y: 12 });
+  await locator.click({
+    button: options.button,
+    position,
+    force: true,
+  });
 }
 
 async function topmostUnlockedNode(page: Page): Promise<Locator> {
   const canvas = page.getByRole('application', { name: 'Canvas editor' });
   const nodeId = await canvas
     .locator('[data-node-id]:visible:not([class*="nodeLocked"])')
-    .evaluateAll((elements) => {
-      for (const element of elements) {
+    .evaluateAll((elements, preferredIds) => {
+      const preferredRank = (element: Element) => {
+        const id = element.getAttribute('data-node-id') ?? '';
+        const index = preferredIds.indexOf(id);
+        return index === -1 ? Number.MAX_SAFE_INTEGER : index;
+      };
+      const nodeKind = (element: Element) => (
+        element.querySelector('[class*="nodeBadge"] span')?.textContent
+          ?? element.textContent
+          ?? ''
+      ).trim().toLowerCase();
+      const isUsableNode = (element: Element) => {
+        const id = element.getAttribute('data-node-id') ?? '';
+        const kind = nodeKind(element);
+        const rect = element.getBoundingClientRect();
+        if (!id || id === 'html' || id.endsWith('-root')) return false;
+        if (element.className.toString().includes('nodeLocked')) return false;
+        if (kind === 'image' || kind.startsWith('image')) return false;
+        if (rect.width < 24 || rect.height < 24 || rect.width > 900 || rect.height > 360) return false;
+        return true;
+      };
+      const overlaySelector = [
+        '[class*="globalRegionBadge"]',
+        '[class*="canvasOverlay"]',
+        '[class*="overlapPicker"]',
+        '[data-modal-shell="true"]',
+        'header[class*="topBar"]',
+        '[role="menu"]',
+      ].join(',');
+      const candidates = [...elements]
+        .filter(isUsableNode)
+        .sort((a, b) => {
+          const rankDelta = preferredRank(a) - preferredRank(b);
+          if (rankDelta !== 0) return rankDelta;
+          const aRect = a.getBoundingClientRect();
+          const bRect = b.getBoundingClientRect();
+          return (aRect.top - bRect.top) || (aRect.left - bRect.left);
+        });
+      const preferred = candidates.find((element) => preferredRank(element) !== Number.MAX_SAFE_INTEGER);
+      if (preferred) return preferred.getAttribute('data-node-id');
+
+      for (const element of candidates) {
         const text = element.textContent ?? '';
         if (text.startsWith('image')) continue;
         const rect = element.getBoundingClientRect();
-        if (rect.width < 24 || rect.height < 24 || rect.width > 900 || rect.height > 360) continue;
-        const x = rect.left + Math.min(Math.max(rect.width / 2, 16), rect.width - 8);
-        const y = rect.top + Math.min(Math.max(rect.height / 2, 16), rect.height - 8);
-        const hit = document.elementFromPoint(x, y)?.closest('[data-node-id]');
-        if (hit === element) return element.getAttribute('data-node-id');
+        const points = [
+          { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 },
+          { x: rect.left + Math.min(Math.max(rect.width * 0.25, 16), rect.width - 8), y: rect.top + rect.height / 2 },
+          { x: rect.left + Math.min(Math.max(rect.width * 0.75, 16), rect.width - 8), y: rect.top + rect.height / 2 },
+          { x: rect.left + rect.width / 2, y: rect.top + Math.min(Math.max(rect.height * 0.35, 12), rect.height - 6) },
+          { x: rect.left + rect.width / 2, y: rect.top + Math.min(Math.max(rect.height * 0.65, 12), rect.height - 6) },
+        ];
+
+        for (const point of points) {
+          if (point.x < 0 || point.y < 96 || point.x > window.innerWidth || point.y > window.innerHeight) continue;
+          const hit = document.elementFromPoint(point.x, point.y);
+          if (!hit || hit.closest(overlaySelector)) continue;
+          const hitNode = hit.closest('[data-node-id]');
+          if (hit === element || element.contains(hit) || (hitNode && (hitNode === element || element.contains(hitNode)))) {
+            return element.getAttribute('data-node-id');
+          }
+        }
       }
       return null;
-    });
+    }, preferredCanvasNodeIds);
   expect(nodeId).toBeTruthy();
   return canvas.locator(`[data-node-id="${nodeId}"]`).first();
 }
@@ -146,9 +258,8 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
 
     const contextNode = await topmostUnlockedNode(page);
     await expect(contextNode).toBeVisible();
-    await contextNode.scrollIntoViewIfNeeded();
-    await contextNode.click({ position: { x: 18, y: 18 } });
-    await contextNode.click({ button: 'right', position: { x: 18, y: 18 } });
+    await clickCanvasNode(contextNode);
+    await clickCanvasNode(contextNode, { button: 'right' });
     const contextMenu = page.locator('[role="menu"]').first();
     await expect(contextMenu).toBeVisible();
     await expect(contextMenu).toContainText('Hide on viewport');
@@ -177,7 +288,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.keyboard.press('Escape');
     await expect(page.locator('[class*="canvasOverlayMultiBbox"]')).toHaveCount(0);
 
-    await primaryNode.click({ position: { x: 18, y: 18 } });
+    await clickCanvasNode(primaryNode);
     const dragBox = await locatorBox(primaryNode);
     await page.mouse.move(dragBox.x + 24, dragBox.y + 24);
     await page.mouse.down();
@@ -187,7 +298,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.screenshot({ path: `${screenshotDir}/design-pool-canvas-drag-ghost.png` });
     await page.mouse.up();
 
-    await primaryNode.click({ position: { x: 18, y: 18 } });
+    await clickCanvasNode(primaryNode);
     const resizeHandle = page.getByLabel(/Resize .* node se/).first();
     await expect(resizeHandle).toBeVisible();
     const resizeBox = await locatorBox(resizeHandle);
@@ -237,7 +348,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     expect(snapPlan).toBeTruthy();
 
     const snapNode = canvas.locator(`[data-node-id="${primaryNodeId}"]`).first();
-    await snapNode.click({ position: { x: 18, y: 18 } });
+    await clickCanvasNode(snapNode);
     await page.mouse.move(snapPlan!.startX, snapPlan!.startY);
     await page.mouse.down();
     await page.mouse.move(snapPlan!.endX, snapPlan!.endY, { steps: 10 });

@@ -465,7 +465,10 @@
   min-height: 0;
   height: 100%;
   flex: 1 1 auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
   border: 0;
   border-radius: 0;
   background: var(--editor-canvas-bg, #f1f5f9);
@@ -1320,7 +1323,8 @@
   position: relative;
   width: fit-content;
   transform-origin: top left;
-  transition: transform 180ms ease;
+  transition: none;
+  will-change: transform;
 }
 
 .stage {

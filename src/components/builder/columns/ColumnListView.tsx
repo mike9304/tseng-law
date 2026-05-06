@@ -315,7 +315,7 @@ export default function ColumnListView({
           aria-label="편집 홈 메뉴로 돌아가기"
         >
           <span>←</span>
-          <strong>편집 홈 메뉴</strong>
+          <strong>편집기 홈으로 돌아가기</strong>
         </Link>
         <Link className="column-builder-return-secondary" href={`/${routeLocale}/columns`}>
           공개 칼럼
@@ -332,7 +332,7 @@ export default function ColumnListView({
             href={`/${routeLocale}/admin-builder`}
             className="admin-console-ghost-btn column-manager-back-btn"
           >
-            ← 편집 홈
+            ← 편집기 홈으로 돌아가기
           </Link>
           <nav className="admin-console-pill-nav" aria-label="Column locale tabs">
             {locales.map((locale) => {

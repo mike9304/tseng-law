@@ -31,6 +31,7 @@ import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 
 const BLOB_PREFIX = 'builder-site';
+let siteWriteQueue: Promise<void> = Promise.resolve();
 
 function isBlobBackend(): boolean {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
@@ -90,17 +91,55 @@ export async function ensureSiteDocument(siteId: string, locale: Locale): Promis
   return fresh;
 }
 
+function mergeUntouchedPageSeo(
+  nextDoc: BuilderSiteDocument,
+  latestDoc: BuilderSiteDocument | null,
+): BuilderSiteDocument {
+  if (!latestDoc?.pages?.length || !nextDoc.pages?.length) return nextDoc;
+
+  const latestPageById = new Map(latestDoc.pages.map((page) => [page.pageId, page] as const));
+
+  return {
+    ...nextDoc,
+    pages: nextDoc.pages.map((page) => {
+      const latestPage = latestPageById.get(page.pageId);
+      const hasLatestSeo = Boolean(latestPage?.seo && Object.keys(latestPage.seo).length > 0);
+      const hasNextSeo = Boolean(page.seo && Object.keys(page.seo).length > 0);
+      if (!hasLatestSeo || hasNextSeo) return page;
+      const nextUpdatedAt = Date.parse(page.updatedAt || page.createdAt || '');
+      const latestUpdatedAt = Date.parse(latestPage!.updatedAt || latestPage!.createdAt || '');
+      if (Number.isFinite(nextUpdatedAt) && Number.isFinite(latestUpdatedAt) && nextUpdatedAt >= latestUpdatedAt) {
+        return page;
+      }
+      return { ...page, seo: latestPage!.seo };
+    }),
+  };
+}
+
 export async function writeSiteDocument(doc: BuilderSiteDocument): Promise<void> {
-  const normalizedSiteId = normalizeBuilderSiteId(doc.siteId);
-  const normalizedDoc = normalizeSiteDocumentLifecycle({ ...doc, siteId: normalizedSiteId }, normalizedSiteId);
-  const pathname = sitePathname(normalizedSiteId);
-  const json = JSON.stringify(normalizedDoc);
-  if (isBlobBackend()) {
-    await put(pathname, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
-  } else {
-    const dir = path.join(localRoot(), normalizedSiteId);
-    await mkdir(dir, { recursive: true });
-    await writeFile(path.join(dir, 'site.json'), json, 'utf8');
+  const previousWrite = siteWriteQueue;
+  let releaseWrite!: () => void;
+  siteWriteQueue = new Promise<void>((resolve) => {
+    releaseWrite = resolve;
+  });
+
+  await previousWrite;
+  try {
+    const normalizedSiteId = normalizeBuilderSiteId(doc.siteId);
+    const latestDoc = await loadSiteDocument(normalizedSiteId);
+    const mergedDoc = mergeUntouchedPageSeo({ ...doc, siteId: normalizedSiteId }, latestDoc);
+    const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
+    const pathname = sitePathname(normalizedSiteId);
+    const json = JSON.stringify(normalizedDoc);
+    if (isBlobBackend()) {
+      await put(pathname, json, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
+    } else {
+      const dir = path.join(localRoot(), normalizedSiteId);
+      await mkdir(dir, { recursive: true });
+      await writeFile(path.join(dir, 'site.json'), json, 'utf8');
+    }
+  } finally {
+    releaseWrite();
   }
 }
 

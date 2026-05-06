@@ -230,6 +230,10 @@ async function recoverFromDevChunkOverlay(page: Page): Promise<void> {
 }
 
 test.describe('/ko/admin-builder desktop editor parity smoke', () => {
+  test.afterEach(async ({ page }) => {
+    await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 });
+  });
+
   test('covers Wix-like editor chrome, selection, shortcuts, panels, and publish gates', async ({ page }) => {
     const shellResponse = await page.request.get('/ko/admin-builder');
     expect(shellResponse.status()).toBe(200);
@@ -459,7 +463,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await snapTarget.click({ position: { x: 18, y: 18 }, force: true });
     const snapNode = await expectSelectedNodeHandles(page, snapTarget);
     const snapDrag = await startPointerDrag(page, snapNode, { pointerId: 7003 });
-    await movePointerDrag(page, snapDrag, -5, 0);
+    await movePointerDrag(page, snapDrag, 5, 0);
     await expect(page.locator('[data-canvas-interaction="move"]')).toBeVisible();
     await expect(
       page.locator('[data-alignment-guide-line][data-alignment-guide-tone="alignment"]').first(),
@@ -467,7 +471,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(
       page.locator('[data-alignment-guide-chip][data-alignment-guide-tone="spacing"]').first(),
     ).toContainText(/\d+px/);
-    await finishPointerDrag(page, snapDrag, -5, 0);
+    await finishPointerDrag(page, snapDrag, 5, 0);
 
     const resizeTarget = page.locator('[data-node-id="home-hero-search-placeholder"]:visible').first();
     await expect(resizeTarget).toBeVisible();

@@ -1104,3 +1104,25 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W22/W23에 이미지 context menu race 및 tracked full sweep green 메모를 반영.
 - full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 최종 Wix 1:1 체감 검증이 남아 있음.
+
+## 2026-05-06 Codex /goal G-Editor clipping and persistence follow-up
+
+범위:
+- 사용자가 지적한 에디터 우측 잘림을 재현하고, home services 관련 칼럼 링크가 1280 stage 밖으로 배치되는 seed 문제와 node badge overflow를 수정.
+- seed home visible nodes가 desktop stage width를 넘지 않는 단위 테스트를 추가.
+- SEO 패널 저장 후 오래 걸리는 translations GET/write가 최신 page SEO를 되돌리는 race를 확인하고, site document write를 프로세스 내 직렬화 + 최신 SEO 병합으로 보강.
+- `/ko/admin-builder` 진입 직후 홈 draft load가 늦게 끝나면 이미 이동한 페이지 캔버스를 홈으로 덮는 page-switch race를 `activePageId`/locale ref guard로 차단.
+- Playwright afterEach reseed가 조용히 timeout되어 뒤늦게 site.json을 덮지 않도록 60초 timeout을 명시하고 실패를 숨기지 않게 조정.
+
+검증:
+- tracked builder-editor 전체 묶음 12/12 ✅ (`admin-builder`, `asset-image-workflow`, `clipboard-persistence`, `columns-ui-workflow`, `design-pool`, `office-map-public`, `seo-publish-history`)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run security:builder-routes` ✅
+- `npm run build` ✅ (Google Fonts stylesheet download warning only)
+- build 후 `.next` dev chunk mismatch로 dev 500 재현 → dev 종료, `.next` 삭제, `npm run dev` 3000 재시작, 인증 포함 `/ko/admin-builder` 200 확인.
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01/W14/W27/W28/W114에 클리핑·페이지 전환·SEO 보존·publish/map full sweep 검증 메모를 반영.
+- full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 최종 Wix 1:1 체감 검증이 남아 있음.

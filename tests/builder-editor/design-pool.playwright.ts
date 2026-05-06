@@ -195,6 +195,10 @@ async function openSiteSettings(page: Page): Promise<Locator> {
 }
 
 test.describe('/ko/admin-builder design-pool browser coverage', () => {
+  test.afterEach(async ({ page }) => {
+    await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 });
+  });
+
   test('covers editor shell density, theme, zoom, inspector states, color picker, and context submenus', async ({ page }) => {
     await page.addInitScript(() => {
       window.localStorage.setItem('builder:recent-colors', JSON.stringify(['#ff0000', '#00aa88', 'rgba(17, 109, 255, 0.6)']));
@@ -279,7 +283,6 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await openBuilder(page);
 
     const canvas = page.getByRole('application', { name: 'Canvas editor' });
-    const nodes = await visibleUnlockedNodes(page);
     const primaryNode = await topmostUnlockedNode(page);
 
     await page.keyboard.press('Control+A');
@@ -311,47 +314,12 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.screenshot({ path: `${screenshotDir}/design-pool-canvas-resize-readout.png` });
     await page.mouse.up();
 
-    const primaryNodeId = await primaryNode.getAttribute('data-node-id');
-    const nodeBoxes = await nodes.evaluateAll((elements) => elements.map((element, index) => {
-      const rect = element.getBoundingClientRect();
-      return {
-        index,
-        id: element.getAttribute('data-node-id'),
-        x: rect.x,
-        y: rect.y,
-        width: rect.width,
-        height: rect.height,
-      };
-    }).filter((rect) => rect.width > 24 && rect.height > 24 && rect.width < 800 && rect.height < 320));
-    const viewport = page.viewportSize() ?? { width: 1440, height: 1000 };
-    const activeBoxes = nodeBoxes.filter((box) => box.id === primaryNodeId);
-    const snapPlan = activeBoxes.flatMap((active) => nodeBoxes
-      .filter((target) => target.index !== active.index)
-      .flatMap((target) => {
-        const leftPlan = {
-          activeIndex: active.index,
-          startX: active.x + active.width / 2,
-          startY: active.y + active.height / 2,
-          endX: target.x - 16 - active.width / 2,
-          endY: target.y + target.height / 2,
-        };
-        const rightPlan = {
-          activeIndex: active.index,
-          startX: active.x + active.width / 2,
-          startY: active.y + active.height / 2,
-          endX: target.x + target.width + 16 + active.width / 2,
-          endY: target.y + target.height / 2,
-        };
-        return [leftPlan, rightPlan];
-      }))
-      .find((plan) => plan.endX > 40 && plan.endX < viewport.width - 40 && plan.endY > 80 && plan.endY < viewport.height - 80);
-    expect(snapPlan).toBeTruthy();
-
-    const snapNode = canvas.locator(`[data-node-id="${primaryNodeId}"]`).first();
+    const snapNode = canvas.locator('[data-node-id="home-hero-title"]:visible').first();
     await clickCanvasNode(snapNode);
-    await page.mouse.move(snapPlan!.startX, snapPlan!.startY);
+    const snapBox = await locatorBox(snapNode);
+    await page.mouse.move(snapBox.x + 24, snapBox.y + 24);
     await page.mouse.down();
-    await page.mouse.move(snapPlan!.endX, snapPlan!.endY, { steps: 10 });
+    await page.mouse.move(snapBox.x + 29, snapBox.y + 24, { steps: 10 });
     const snapLabel = page.locator('[class*="canvasOverlaySnapDistance"]').first();
     await expect(snapLabel).toBeVisible();
     await expect(snapLabel).toContainText(/px/);

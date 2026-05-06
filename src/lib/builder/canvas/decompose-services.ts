@@ -11,6 +11,10 @@ import {
 } from './decompose-home-shared';
 
 const SERVICES_ROOT_HEIGHT = 1400;
+const RELATED_COLUMN_LINK_WIDTH = 220;
+const RELATED_COLUMN_LINK_GAP_X = 24;
+const RELATED_COLUMN_LINK_ROW_HEIGHT = 34;
+const RELATED_COLUMN_LINKS_PER_ROW = 4;
 
 export const SERVICES_SECTION_ROOT_HEIGHT = SERVICES_ROOT_HEIGHT;
 
@@ -283,11 +287,15 @@ export function createServicesDecomposedNodes(
         }),
       );
       item.relatedColumns.forEach((column, columnIndex) => {
+        const columnX = (columnIndex % RELATED_COLUMN_LINKS_PER_ROW) *
+          (RELATED_COLUMN_LINK_WIDTH + RELATED_COLUMN_LINK_GAP_X);
+        const columnY = Math.floor(columnIndex / RELATED_COLUMN_LINKS_PER_ROW) *
+          RELATED_COLUMN_LINK_ROW_HEIGHT;
         nodes.push(
           createHomeButtonNode({
             id: `${cardId}-column-${columnIndex}`,
             parentId: columnsListId,
-            rect: { x: columnIndex * 212, y: 0, width: 196, height: 28 },
+            rect: { x: columnX, y: columnY, width: RELATED_COLUMN_LINK_WIDTH, height: 28 },
             zIndex: columnIndex,
             label: column.title,
             href: `/${locale}/columns/${column.slug}`,

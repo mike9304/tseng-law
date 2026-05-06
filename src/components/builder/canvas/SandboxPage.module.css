@@ -2039,7 +2039,7 @@
   align-items: center;
   gap: 0.22rem;
   min-height: 20px;
-  max-width: min(320px, calc(100vw - 80px));
+  max-width: min(320px, calc(100vw - 80px), 100%);
   padding: 0.1rem 0.45rem;
   overflow: hidden;
   border-radius: 3px;
@@ -2062,21 +2062,31 @@
 }
 
 .nodeBadge span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-transform: lowercase;
   opacity: 0.95;
 }
 
 .nodeBadge strong {
   display: inline;
+  min-width: 0;
+  overflow: hidden;
   font-weight: 700;
   font-size: 0.66rem;
   opacity: 0.95;
+  text-overflow: ellipsis;
 }
 
 .nodeBadge em {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
   font-style: normal;
   color: #fbbf24;
   font-weight: 700;
+  text-overflow: ellipsis;
 }
 
 .nodeQuickActions {

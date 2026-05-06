@@ -1,5 +1,9 @@
 import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
 
+const builderAuthHeader = `Basic ${Buffer.from(
+  `${process.env.BUILDER_SMOKE_USERNAME ?? process.env.CMS_ADMIN_USERNAME ?? 'admin'}:${process.env.BUILDER_SMOKE_PASSWORD ?? process.env.CMS_ADMIN_PASSWORD ?? 'local-review-2026!'}`,
+).toString('base64')}`;
+
 type TestDocument = {
   version: 1;
   locale: 'ko';
@@ -386,10 +390,21 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await seoDialog.getByRole('button', { name: 'Social share' }).click();
       await seoDialog.getByLabel('OG image URL').fill('/images/header-skyline-ratio.webp');
       await expect(seoDialog.getByText('OG image preview')).toBeVisible();
+      const seoSaveResponsePromise = page.waitForResponse((response) => (
+        response.request().method() === 'PATCH' &&
+        response.url().includes(`/api/builder/site/pages/${pageId}/seo`)
+      ));
       await seoDialog.getByRole('button', { name: '저장' }).click();
+      const seoSaveResponse = await seoSaveResponsePromise;
+      expect(seoSaveResponse.status()).toBe(200);
+      const seoSavePayload = (await seoSaveResponse.json()) as { seo?: { title?: string; canonical?: string } };
+      expect(`${seoSavePayload.seo?.title ?? ''}|${seoSavePayload.seo?.canonical ?? ''}`).toBe(`${seoTitle}|${canonical}`);
       await expect(seoDialog).not.toBeVisible();
       await expect.poll(async () => {
-        const response = await page.request.get(`/api/builder/site/pages/${pageId}/seo?locale=ko`);
+        const response = await page.request.get(`/api/builder/site/pages/${pageId}/seo?locale=ko`, {
+          headers: { Authorization: builderAuthHeader },
+        });
+        if (!response.ok()) return `status:${response.status()}`;
         const payload = (await response.json()) as { seo?: { title?: string; canonical?: string } };
         return `${payload.seo?.title ?? ''}|${payload.seo?.canonical ?? ''}`;
       }).toBe(`${seoTitle}|${canonical}`);
@@ -410,6 +425,14 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(modalPublishButton).toBeEnabled();
       await modalPublishButton.click();
       await expect(page.getByText('발행 완료').first()).toBeVisible({ timeout: 15_000 });
+      await expect.poll(async () => {
+        const response = await page.request.get(`/api/builder/site/pages/${pageId}/seo?locale=ko`, {
+          headers: { Authorization: builderAuthHeader },
+        });
+        if (!response.ok()) return `status:${response.status()}`;
+        const payload = (await response.json()) as { seo?: { title?: string; canonical?: string } };
+        return `${payload.seo?.title ?? ''}|${payload.seo?.canonical ?? ''}`;
+      }).toBe(`${seoTitle}|${canonical}`);
 
       const publicResponse = await page.request.get(`/ko/${slug}`);
       expect(publicResponse.status()).toBe(200);

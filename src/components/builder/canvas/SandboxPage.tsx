@@ -211,6 +211,16 @@ export default function SandboxPage({
   const [saveSectionPayload, setSaveSectionPayload] = useState<SaveSectionPayload | null>(null);
   const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
+  const activePageIdRef = useRef(activePageId);
+  const localeRef = useRef(locale);
+
+  useEffect(() => {
+    activePageIdRef.current = activePageId;
+  }, [activePageId]);
+
+  useEffect(() => {
+    localeRef.current = locale;
+  }, [locale]);
 
   useEffect(() => {
     const pageDocument = window.document;
@@ -323,6 +333,7 @@ export default function SandboxPage({
     async (pageId: string, nextLocale: Locale): Promise<boolean> => {
       const payload = await fetchSiteDraft(pageId, nextLocale);
       if (!payload?.document) return false;
+      if (activePageIdRef.current !== pageId || localeRef.current !== nextLocale) return false;
       replaceDocument(payload.document);
       setSyncedUpdatedAt(payload.document.updatedAt);
       setDraftMeta(payload.draft);

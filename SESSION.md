@@ -1126,3 +1126,34 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01/W14/W27/W28/W114에 클리핑·페이지 전환·SEO 보존·publish/map full sweep 검증 메모를 반영.
 - full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 최종 Wix 1:1 체감 검증이 남아 있음.
+
+## 2026-05-06 Codex /goal G-Editor completion audit
+
+목표를 완료로 볼 수 있는 구체 기준:
+- `/ko/admin-builder` 데스크톱 에디터가 Wix Editor처럼 즉시 보이고, top bar/left rail/canvas/status가 첫 viewport 안에 안정적으로 들어온다.
+- W02/W06/W07/W08/W10/W11/W18~W23/W26~W30의 핵심 UI/UX가 실제 클릭/드래그/키보드/발행 경로로 검증된다.
+- 사용자가 지적한 회귀: 실제 사이트와 builder publish 혼선, 첫 화면 스크롤, 우측 clipping, header menu edit disappearing, columns 진입/작성/복귀, map/address 편집, SEO/publish race가 재현되지 않는다.
+- 검증 명령 `typecheck`, `lint`, `test:unit`, `security:builder-routes`, `build`, tracked builder-editor Playwright bundle이 통과한다.
+- 사용자가 직접 5분 자유 사용 후 "Wix처럼 쓸 수 있다"는 체감 검증을 끝낸다.
+
+증거 매핑:
+- W02/W06/W07/W08: `tests/builder-editor/admin-builder.playwright.ts`, `tests/builder-editor/design-pool.playwright.ts`, `src/lib/builder/canvas/__tests__/snap.test.ts`가 selection handles, hover indicator, snap guides/chip, resize tooltip/cursor/Shift aspect, rotate chip/Shift snap을 검증.
+- W10/W11/W29/W30: `admin-builder.playwright.ts`와 `clipboard-persistence.playwright.ts`가 duplicate, undo/redo chip, cross-page clipboard pill, paste offset, draft persistence를 검증.
+- W18/W19: header/nav click capture, pinned `Edit menu`, Columns rail/Pages quick card, nav label edit preview를 `admin-builder.playwright.ts`가 검증.
+- W22/W23: `asset-image-workflow.playwright.ts`와 `columns-ui-workflow.playwright.ts`가 Asset Library 검색/정렬/folder/tag 유지, image replace, Crop/Filter/Alt dialog, column body image insertion/public render를 검증.
+- W26/W27/W28: `seo-publish-history.playwright.ts`가 version restore UI click, SEO form save/readback, publish preflight, public head/body reflection, stale site write race 방지를 검증.
+- 지도/주소: `office-map-public.playwright.ts`가 Office sync 입력, map iframe query, adjacent office card, publish/public reflection을 검증.
+- 칼럼: `columns-ui-workflow.playwright.ts`가 `?new=1` direct draft create, writer-first editor, media insert, save, publish, `/ko/columns` list/detail, editor-home return dock을 검증.
+- 레이아웃: `admin-builder.playwright.ts`가 top bar 32px policy, rail width/hover label, canvas scroll, footer/status 위치, stage transform transition 제거를 검증. 1440x900 수동 Playwright 치수도 `bodyScroll: 0`, editor shell `900px`, stage viewport visible로 확인.
+- 전체 sweep: tracked builder-editor bundle 12/12, `npm run typecheck`, `npm run lint`, `npm run test:unit`, `npm run security:builder-routes`, `npm run build` 모두 최근 green.
+
+아직 완료 선언 불가:
+- Done When 17의 사용자 직접 5분 자유 사용 검증은 Codex가 대신 완료할 수 없음.
+- Wix 1:1 체감은 screenshot/CSS assertion만으로 green 처리할 수 없어서 W02/W06/W07/W08/W10/W11/W18~W23/W26~W30은 체크포인트에서 사용자 직접 green 대기 상태 유지.
+- W19/W20/W21은 editor/public reflection의 핵심 경로는 있으나, 모든 legacy core page를 builder publish로 바꾸는 것은 의도적으로 막아둔 상태다. 실제 `tseng-law.com` 보호를 위해 legacy-first route guard를 유지한다.
+- Phase 2+ widget/mobile/bookings는 현재 goal 제외 범위라 green 대상이 아니다.
+
+다음 작업:
+- 사용자가 `http://localhost:3000/ko/admin-builder`에서 5분 검증하며 발견한 불일치를 즉시 issue 단위로 재현/수정한다.
+- 체크포인트 green 승격은 사용자 검증 문구가 온 뒤 W02/W06/W07/W08/W10/W11/W18~W23/W26~W30부터 순차 반영한다.
+- production 반영이 필요한 경우에는 로컬 검증과 별개로 배포/환경 변수/Blob 상태를 별도 확인한다.

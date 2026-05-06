@@ -1082,3 +1082,25 @@
 - tracked builder-editor 전체 파일 묶음은 9/12 통과, `asset-image-workflow`, `design-pool` drag overlay, `office-map-public` published map이 묶음 실행에서만 흔들렸고 각 파일 단독 재실행은 통과. 다음 sweep에서 상태 격리/순서 의존성을 추가 정리 필요.
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01/W20에 footer/scroll stability 검증 메모를 반영.
 - full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 tracked builder-editor full sweep 안정화가 남아 있음.
+
+## 2026-05-06 Codex /goal G-Editor tracked sweep stabilization follow-up
+
+범위:
+- 묶음 실행에서만 흔들리던 `asset-image-workflow`의 이미지 우클릭 메뉴를 재점검.
+- 우클릭 직후 store selection 갱신보다 ContextMenu 렌더가 먼저 일어나면 이미지 전용 액션이 disabled로 뜰 수 있는 race를 확인.
+- ContextMenu 액션 판단을 `selectedNodes[0]` 대신 실제 우클릭된 `contextMenu.nodeId` 노드 기준으로 바꿔 `Crop / Filter / Alt`, `이미지 교체`, `Alt 텍스트 편집`이 항상 대상 이미지에 붙도록 수정.
+- 공개 지도 반영 검증은 request HTML polling 대신 브라우저 페이지에서 published node가 보일 때까지 재접속하도록 바꿔 dev server/cache 순서 의존성을 줄임.
+- build 검증 뒤 dev cache가 다시 500을 반환해 기존 dev PID를 종료하고 `npm run dev`를 3000에서 재시작, `/ko/admin-builder` 200 확인.
+
+검증:
+- tracked builder-editor 전체 묶음 12/12 ✅ (`admin-builder`, `asset-image-workflow`, `clipboard-persistence`, `columns-ui-workflow`, `design-pool`, `office-map-public`, `seo-publish-history`)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (20 files / 711 tests)
+- `npm run security:builder-routes` ✅
+- `npm run build` ✅ (Google Fonts stylesheet download warning only)
+- `HEAD /ko/admin-builder` on port 3000 ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W22/W23에 이미지 context menu race 및 tracked full sweep green 메모를 반영.
+- full goal 완료 판정은 아직 아님. 사용자 5분 직접 검증과 최종 Wix 1:1 체감 검증이 남아 있음.

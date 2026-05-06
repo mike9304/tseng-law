@@ -1250,6 +1250,15 @@ export default function CanvasContainer({
   const contextMenuTitle = selectedNodeIds.length > 1
     ? `${selectedNodeIds.length} selected`
     : contextMenu?.nodeId ?? 'Context menu';
+  const contextMenuNode = useMemo(
+    () => (contextMenu ? nodes.find((node) => node.id === contextMenu.nodeId) ?? null : null),
+    [contextMenu, nodes],
+  );
+  const contextPrimaryNode = contextMenuNode ?? selectedNodes[0] ?? null;
+  const contextSelectionCount =
+    contextMenuNode && !(selectedNodeIds.length > 1 && selectedNodeIds.includes(contextMenuNode.id))
+      ? 1
+      : selectedNodeIds.length;
 
   // Bounding box of selected nodes in stage coordinates (pre-zoom/pan transform)
   const selectionBboxStage = useMemo(() => {
@@ -1740,15 +1749,15 @@ export default function CanvasContainer({
                 label: '텍스트 편집',
                 title: '인라인 텍스트 편집 (또는 더블클릭)',
                 disabled:
-                  selectedNodeIds.length !== 1 ||
-                  (selectedNodes[0]?.kind !== 'text' && selectedNodes[0]?.kind !== 'heading') ||
-                  Boolean(selectedNodes[0]?.locked),
+                  contextSelectionCount !== 1 ||
+                  (contextPrimaryNode?.kind !== 'text' && contextPrimaryNode?.kind !== 'heading') ||
+                  Boolean(contextPrimaryNode?.locked),
                 onSelect: () => {
                   setContextMenu(null);
-                  if (typeof document !== 'undefined' && selectedNodes[0]) {
+                  if (typeof document !== 'undefined' && contextPrimaryNode) {
                     document.dispatchEvent(
                       new CustomEvent('builder:start-text-edit', {
-                        detail: { nodeId: selectedNodes[0].id },
+                        detail: { nodeId: contextPrimaryNode.id },
                       }),
                     );
                   }
@@ -1759,14 +1768,14 @@ export default function CanvasContainer({
                 label: 'Crop / Filter / Alt...',
                 title: '이미지 자르기, 필터, alt 텍스트 편집',
                 disabled:
-                  selectedNodeIds.length !== 1 ||
-                  selectedNodes[0]?.kind !== 'image' ||
-                  Boolean(selectedNodes[0]?.locked) ||
+                  contextSelectionCount !== 1 ||
+                  contextPrimaryNode?.kind !== 'image' ||
+                  Boolean(contextPrimaryNode?.locked) ||
                   !onRequestImageEditor,
                 onSelect: () => {
                   setContextMenu(null);
-                  if (selectedNodes[0] && onRequestImageEditor) {
-                    onRequestImageEditor(selectedNodes[0].id, 'crop');
+                  if (contextPrimaryNode && onRequestImageEditor) {
+                    onRequestImageEditor(contextPrimaryNode.id, 'crop');
                   }
                 },
               },
@@ -1775,13 +1784,13 @@ export default function CanvasContainer({
                 label: '이미지 교체',
                 title: '에셋 라이브러리 열기',
                 disabled:
-                  selectedNodeIds.length !== 1 ||
-                  selectedNodes[0]?.kind !== 'image' ||
-                  Boolean(selectedNodes[0]?.locked),
+                  contextSelectionCount !== 1 ||
+                  contextPrimaryNode?.kind !== 'image' ||
+                  Boolean(contextPrimaryNode?.locked),
                 onSelect: () => {
                   setContextMenu(null);
-                  if (selectedNodes[0] && onRequestAssetLibrary) {
-                    onRequestAssetLibrary(selectedNodes[0].id);
+                  if (contextPrimaryNode && onRequestAssetLibrary) {
+                    onRequestAssetLibrary(contextPrimaryNode.id);
                   }
                 },
               },
@@ -1790,14 +1799,14 @@ export default function CanvasContainer({
                 label: 'Alt 텍스트 편집',
                 title: '이미지 alt 텍스트 편집',
                 disabled:
-                  selectedNodeIds.length !== 1 ||
-                  selectedNodes[0]?.kind !== 'image' ||
-                  Boolean(selectedNodes[0]?.locked) ||
+                  contextSelectionCount !== 1 ||
+                  contextPrimaryNode?.kind !== 'image' ||
+                  Boolean(contextPrimaryNode?.locked) ||
                   !onRequestImageEditor,
                 onSelect: () => {
                   setContextMenu(null);
-                  if (selectedNodes[0] && onRequestImageEditor) {
-                    onRequestImageEditor(selectedNodes[0].id, 'alt');
+                  if (contextPrimaryNode && onRequestImageEditor) {
+                    onRequestImageEditor(contextPrimaryNode.id, 'alt');
                   }
                 },
               },

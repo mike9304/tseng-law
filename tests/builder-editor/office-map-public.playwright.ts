@@ -271,6 +271,13 @@ function nodeContent(nodes: Array<Record<string, unknown>>, id: string): Record<
   return content && typeof content === 'object' ? content as Record<string, unknown> : {};
 }
 
+async function waitForPublishedNode(page: Page, slug: string, nodeId: string): Promise<void> {
+  await expect.poll(async () => {
+    await page.goto(`/ko/${slug}?publishedCheck=${Date.now()}`, { waitUntil: 'domcontentloaded' });
+    return page.locator(`[data-node-id="${nodeId}"]`).count();
+  }, { timeout: 30_000 }).toBeGreaterThan(0);
+}
+
 test.describe('/ko/admin-builder office map public reflection', () => {
   test('syncs edited map address to office card and published page', async ({ page }) => {
     test.setTimeout(120_000);
@@ -338,7 +345,7 @@ test.describe('/ko/admin-builder office map public reflection', () => {
       expect(published.ok, published.error).toBe(true);
       expect(published.slug).toBe(slug);
 
-      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      await waitForPublishedNode(page, slug, 'home-offices-layout-0-map');
       const publishedMap = page.locator('[data-node-id="home-offices-layout-0-map"]').first();
       await expect(publishedMap).toBeVisible();
       await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText(nextOfficeTitle);

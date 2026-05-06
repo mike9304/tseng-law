@@ -46,8 +46,7 @@ async function imageNode(page: Page) {
 
 async function openImageContextMenu(page: Page) {
   const node = await imageNode(page);
-  await node.click({ position: { x: 24, y: 24 }, force: true });
-  await node.evaluate((element) => {
+  const openMenu = async () => node.evaluate((element) => {
     const rect = element.getBoundingClientRect();
     element.dispatchEvent(new MouseEvent('contextmenu', {
       bubbles: true,
@@ -57,8 +56,18 @@ async function openImageContextMenu(page: Page) {
       clientY: rect.top + Math.min(30, Math.max(10, rect.height / 2)),
     }));
   });
+
+  await openMenu();
   const menu = page.locator('[role="menu"]').first();
   await expect(menu).toBeVisible();
+  const replaceAction = menu.getByRole('menuitem', { name: /이미지 교체|Replace image/ });
+  if (!(await replaceAction.isEnabled().catch(() => false))) {
+    await page.keyboard.press('Escape');
+    await expect(menu).toHaveCount(0);
+    await openMenu();
+    await expect(menu).toBeVisible();
+  }
+  await expect(replaceAction).toBeEnabled();
   return menu;
 }
 

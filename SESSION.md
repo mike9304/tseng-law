@@ -1204,3 +1204,17 @@
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W18/W19에 실제 UI 저장 + 공개 header 반영 E2E와 dev Blob 차단 메모를 반영.
 - 이번 변경은 로컬 검증/개발이 실제 `tseng-law.com` 저장소를 건드리지 않게 하는 안전장치다. production 반영은 별도 배포/환경 검증이 필요.
 - W18/W19도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor tracked Playwright stabilization
+
+범위:
+- build 후 `.next` 산출물과 dev 서버 chunk가 섞이면 editor shell이 안 뜨는 기존 실패 패턴을 다시 확인. `kill 24940` → `.next` 삭제 → `npm run dev` 3000 재시작 → `/ko/admin-builder` 200 확인.
+- local backend가 빨라지면서 Pages 전환 `Loaded page:` toast가 2개 동시에 남을 수 있어 `admin-builder.playwright.ts`의 strict locator를 최신 toast `.last()` 기준으로 안정화.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- tracked builder-editor Playwright bundle ✅ 14/14:
+  `admin-builder`, `asset-image-workflow`, `clipboard-persistence`, `columns-ui-workflow`, `design-pool`, `office-map-public`, `seo-publish-history`
+
+메모:
+- build 직후에는 dev 서버를 재시작해야 한다. 최종 현재 상태는 3000번 dev 서버 실행 중이며 `/ko/admin-builder` 200.

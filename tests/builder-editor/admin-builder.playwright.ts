@@ -445,14 +445,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByText('1개 요소 클립보드')).toBeVisible();
     const pagesDrawerForPaste = page.locator('[aria-hidden="false"]').first();
     await pagesDrawerForPaste.getByRole('button', { name: /호정 소개|About Hovering/ }).first().click();
-    await expect(page.getByText(/Loaded page:/)).toBeVisible();
+    await expect(page.getByText(/Loaded page:/).last()).toBeVisible();
     await page.keyboard.press(`${shortcutModifier}+V`);
     await expect(page.getByText(/Pasted 1 item/).first()).toBeVisible();
     await expectSelectedNodeHandles(page);
     await page.keyboard.press(`${shortcutModifier}+Z`);
     await expectUndoChip(page);
     await pagesDrawerForPaste.getByRole('button', { name: /홈|Home/ }).first().click();
-    await expect(page.getByText(/Loaded page:/)).toBeVisible();
+    await expect(page.getByText(/Loaded page:/).last()).toBeVisible();
     await expect(page.locator('[data-node-id="home-hero-subtitle"]').first()).toBeVisible();
     await rail.getByRole('button', { name: 'Pages', exact: true }).click();
     await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);

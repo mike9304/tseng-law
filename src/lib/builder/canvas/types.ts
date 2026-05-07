@@ -956,7 +956,7 @@ export const builderCanvasDocumentSchema = z.object({
   updatedBy: z.string().trim().min(1).max(120),
   stageWidth: z.number().int().min(320).max(4000).default(1280),
   stageHeight: z.number().int().min(64).max(20000).default(880),
-  nodes: z.array(builderCanvasNodeSchema).max(500),
+  nodes: z.array(builderCanvasNodeSchema).max(1000),
 });
 
 export type BuilderCanvasDocument = z.infer<typeof builderCanvasDocumentSchema>;

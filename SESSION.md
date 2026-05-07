@@ -1452,3 +1452,24 @@
 - `/ko/admin-builder` 3000번 dev 서버 기준 Header y=32/h=90, canvas first y=124로 첫 화면 밀림은 재발하지 않음.
 - admin-builder smoke가 header search overlay, hero search bottom-overlap geometry, quick menu, services detail, FAQ answer, header Edit menu hover/click persistence를 직접 검증.
 - 남은 parity gap은 원본의 stateful carousel/office tabs/메가 메뉴 편집 표면을 “항상 보이는 편집 surface”와 “방문자 동작 preview”로 분리하는 작업.
+
+## 2026-05-07 Codex /goal G-Editor W01 homepage full-draft restore
+
+범위:
+- `/ko/admin-builder` home page draft가 예전 Phase 1 sandbox 샘플(`headline-1`, `support-copy-1`, `cta-button-1`, `hero-image-1`)로 남아 있으면 실제 home seed로 자동 복구하도록 reseed 조건 보강.
+- 칼럼/인사이트 섹션이 첫 3개만 보이는 정적 상태에 머물지 않도록, pagination 뒤쪽 칼럼들도 `home-insights-item-*` 캔버스 노드로 전부 생성하고 섹션 높이를 늘림.
+- 기존 저장된 home draft도 insights height 증가에 맞춰 뒤 섹션 root y와 stageHeight를 자동 보정해 섹션 겹침 없이 마이그레이션.
+- full homepage seed가 534개 노드가 되면서 기존 `nodes <= 500` validation에 걸려 sandbox fallback 되던 문제를 해결하기 위해 canvas document node 한도만 1000으로 상향.
+- admin-builder smoke에 늦은 칼럼 노드(`home-insights-item-5-title`)와 insights/services section flow geometry assertion 추가.
+
+검증:
+- 3000 dev server 재시작 ✅
+- Playwright 실측: `[data-node-id]` 534개, first node `home-hero-root`, `home-insights-item-5-title` 존재, services top >= insights bottom ✅
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (10/10)
+
+메모:
+- 사용자가 본 “원래 홈페이지가 아니라 테스트용 캔버스처럼 뜸”의 직접 원인은 home draft가 legacy sandbox sample로 저장돼 있었고, 큰 home seed가 500 node schema limit 때문에 normalize fallback으로 다시 sandbox가 됐던 조합.
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01에 full homepage draft restore, 534 node seed, late insights node, schema node limit 상향 메모를 반영.

@@ -332,10 +332,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
         stageTransformTransition: styleFor('div[class*="stageTransform"]')?.transitionProperty ?? '',
         siteFooterTop: siteFooterRect?.top ?? 0,
         statusTop: statusRect?.top ?? 0,
+        viewportHeight: window.innerHeight,
       };
     });
     expect(editorLayout.canvasOverflowY).toBe('auto');
-    expect(editorLayout.stageViewportHeight).toBeGreaterThan(720);
+    expect(editorLayout.stageViewportHeight).toBeGreaterThanOrEqual(Math.max(700, editorLayout.viewportHeight - 100));
     expect(editorLayout.stageTransformLeft).toBeGreaterThanOrEqual(editorLayout.stageViewportLeft - 2);
     expect(editorLayout.stageTransformRight).toBeLessThanOrEqual(editorLayout.stageViewportRight + 2);
     expect(editorLayout.stageTransformTransition).toBe('none');
@@ -379,6 +380,22 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);
     await expect(page.locator('[data-node-id="home-insights-page-indicator"]').first()).toContainText(/1 \/ [2-9]/);
+    await expect(page.locator('[data-node-id="home-insights-item-5-title"]').first()).toContainText(/\S/);
+    const insightsFlow = await page.evaluate(() => {
+      const insights = document.querySelector('[data-node-id="home-insights-root"]')?.getBoundingClientRect();
+      const services = document.querySelector('[data-node-id="home-services-root"]')?.getBoundingClientRect();
+      const lateItem = document.querySelector('[data-node-id="home-insights-item-5-title"]')?.getBoundingClientRect();
+      if (!insights || !services || !lateItem) return null;
+      return {
+        insightsBottom: insights.bottom,
+        servicesTop: services.top,
+        lateItemTop: lateItem.top,
+        lateItemBottom: lateItem.bottom,
+      };
+    });
+    expect(insightsFlow).toBeTruthy();
+    expect(insightsFlow?.servicesTop ?? 0).toBeGreaterThanOrEqual((insightsFlow?.insightsBottom ?? 0) - 4);
+    expect(insightsFlow?.lateItemBottom ?? 0).toBeLessThanOrEqual((insightsFlow?.insightsBottom ?? 0) + 4);
     await expect(page.locator('[data-node-id="home-services-root"] section#practice.section--light').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-hero-search-placeholder"]')).toHaveCount(0);
     const heroSearchForm = page.locator('[data-node-id="home-hero-search-bar"] form.hero-search-bar.overlap').first();

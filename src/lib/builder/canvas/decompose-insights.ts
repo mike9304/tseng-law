@@ -43,7 +43,10 @@ const copyByLocale = {
   },
 } as const;
 
-const INSIGHTS_ROOT_HEIGHT = 1200;
+const INSIGHTS_ROOT_HEIGHT = 3700;
+const INSIGHTS_LIST_ITEM_HEIGHT = 176;
+const INSIGHTS_LIST_ITEM_PITCH = 196;
+const INSIGHTS_LIST_MIN_HEIGHT = 620;
 
 type HomeInsightPost = {
   slug: string;
@@ -79,8 +82,16 @@ export function createInsightsDecomposedNodes(
   if (posts.length === 0) return [];
 
   const [featured, ...rest] = posts;
-  const listItems = rest.slice(0, 3);
+  const listItems = rest;
   const pageCount = Math.max(1, Math.ceil(rest.length / 3));
+  const listHeight = Math.max(
+    INSIGHTS_LIST_MIN_HEIGHT,
+    listItems.length > 0
+      ? ((listItems.length - 1) * INSIGHTS_LIST_ITEM_PITCH) + INSIGHTS_LIST_ITEM_HEIGHT
+      : INSIGHTS_LIST_MIN_HEIGHT,
+  );
+  const listWrapHeight = 72 + listHeight + 28;
+  const gridHeight = Math.max(740, listWrapHeight);
   const authorLabel =
     locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
   const authorHref = getAttorneyProfilePath(locale);
@@ -106,7 +117,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: containerId,
       parentId: rootId,
-      rect: { x: 72, y: 88, width: 1136, height: 1040 },
+      rect: { x: 72, y: 88, width: 1136, height: INSIGHTS_ROOT_HEIGHT - 160 },
       zIndex: 0,
       label: 'home insights container',
       className: 'container',
@@ -158,7 +169,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: gridId,
       parentId: containerId,
-      rect: { x: 0, y: 238, width: 1136, height: 740 },
+      rect: { x: 0, y: 238, width: 1136, height: gridHeight },
       zIndex: 4,
       label: 'home insights grid',
       className: 'insights-grid reveal-stagger',
@@ -276,7 +287,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: listWrapId,
       parentId: gridId,
-      rect: { x: 650, y: 0, width: 486, height: 720 },
+      rect: { x: 650, y: 0, width: 486, height: listWrapHeight },
       zIndex: 1,
       label: 'home insights list wrap',
       className: 'insights-list-wrap',
@@ -323,7 +334,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: listId,
       parentId: listWrapId,
-      rect: { x: 20, y: 72, width: 446, height: 620 },
+      rect: { x: 20, y: 72, width: 446, height: listHeight },
       zIndex: 1,
       label: 'home insights list',
       className: 'insights-list',
@@ -335,7 +346,7 @@ export function createInsightsDecomposedNodes(
     const thumbId = `${itemId}-thumb`;
     const copyId = `${itemId}-copy`;
     const metaId = `${itemId}-meta`;
-    const itemY = index * 196;
+    const itemY = index * INSIGHTS_LIST_ITEM_PITCH;
 
     nodes.push(
       createHomeContainerNode({
@@ -443,7 +454,7 @@ export function createInsightsDecomposedNodes(
     createHomeButtonNode({
       id: 'home-insights-view-all',
       parentId: containerId,
-      rect: { x: 458, y: 1008, width: 220, height: 38 },
+      rect: { x: 458, y: 238 + gridHeight + 30, width: 220, height: 38 },
       zIndex: 5,
       label: `${copy.viewAll} →`,
       href: `/${locale}/columns`,

@@ -212,40 +212,61 @@ function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Loca
       .filter((node) => node.id.startsWith('home-insights-'))
       .map((node) => [node.id, node]),
   );
+  const existingIds = new Set(document.nodes.map((node) => node.id));
+  const missingInsightsNodes = seeded.nodes.filter((node) => (
+    node.id.startsWith('home-insights-') && !existingIds.has(node.id)
+  ));
+  const currentRoot = document.nodes.find((node) => node.id === 'home-insights-root');
+  const seededRoot = seededById.get('home-insights-root');
+  const currentRootY = currentRoot?.rect.y ?? 0;
+  const oldInsightsBottom = currentRoot ? currentRoot.rect.y + currentRoot.rect.height : 0;
+  const insightsHeightDelta = currentRoot && seededRoot
+    ? Math.max(0, seededRoot.rect.height - currentRoot.rect.height)
+    : 0;
   let changed = false;
   const nextNodes = document.nodes.map((node) => {
     const seededNode = seededById.get(node.id);
-    if (!seededNode) return node;
-
-    const patch: Partial<Omit<BuilderCanvasNode, 'content'>> & { content?: Record<string, unknown> } = {};
-    if (node.kind === 'text' && seededNode.kind === 'text') {
-      patch.content = {
-        text: seededNode.content.text,
-        richText: seededNode.content.richText,
-      };
-    } else if (node.kind === 'image' && seededNode.kind === 'image') {
-      patch.content = {
-        src: seededNode.content.src,
-        alt: seededNode.content.alt,
-      };
-    } else if (node.kind === 'button' && seededNode.kind === 'button') {
-      patch.content = {
-        label: seededNode.content.label,
-        href: seededNode.content.href,
-        link: seededNode.content.link,
-      };
-    } else {
+    if (!seededNode) {
+      if (insightsHeightDelta > 0 && !node.parentId && node.rect.y >= oldInsightsBottom - 1) {
+        changed = true;
+        return {
+          ...node,
+          rect: {
+            ...node.rect,
+            y: node.rect.y + insightsHeightDelta,
+          },
+        };
+      }
       return node;
     }
 
-    const result = withNodePatch(node, patch);
+    if (node.kind !== seededNode.kind) {
+      return node;
+    }
+
+    const result = withNodePatch(node, {
+      rect: seededNode.rect,
+      zIndex: seededNode.zIndex,
+      style: seededNode.style,
+      content: seededNode.content as Record<string, unknown>,
+    });
     changed = changed || result.changed;
     return result.node;
   });
 
+  if (missingInsightsNodes.length > 0) {
+    changed = true;
+    nextNodes.push(...missingInsightsNodes);
+  }
+
+  const nextStageHeight = insightsHeightDelta > 0
+    ? Math.max(document.stageHeight + insightsHeightDelta, currentRootY + (seededRoot?.rect.height ?? 0) + 40)
+    : document.stageHeight;
+
   if (!changed) return document;
   return {
     ...document,
+    stageHeight: nextStageHeight,
     updatedAt: new Date().toISOString(),
     updatedBy: `${document.updatedBy || 'builder'}+insights-source`,
     nodes: nextNodes,
@@ -396,9 +417,23 @@ export default async function BuilderMainPage({
       updatedBy.startsWith('home-seed-v') || updatedBy === 'site-page-seed';
     const isCurrentSeed = updatedBy === SEED_VERSION;
     const isInitialHomePage = initialPage.pageId === homePage?.pageId || Boolean(initialPage.isHomePage);
+    const homeDraftHasHero = Boolean(pageCanvas?.nodes?.some((node) => node.id === 'home-hero-root'));
+    const isLegacySandboxDraft = Boolean(pageCanvas?.nodes?.some((node) => (
+      node.id === 'headline-1'
+      || node.id === 'support-copy-1'
+      || node.id === 'cta-button-1'
+      || node.id === 'hero-image-1'
+    )));
     const needsReseed =
       isInitialHomePage
-        && (force || !pageCanvas || nodeCount === 0 || (isLegacySeed && !isCurrentSeed));
+        && (
+          force
+          || !pageCanvas
+          || nodeCount === 0
+          || (isLegacySeed && !isCurrentSeed)
+          || !homeDraftHasHero
+          || isLegacySandboxDraft
+        );
 
     if (pageCanvas && !needsReseed) {
       initialDocument = normalizeCanvasDocument(pageCanvas, locale);

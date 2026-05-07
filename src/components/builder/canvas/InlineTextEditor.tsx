@@ -94,6 +94,7 @@ export default function InlineTextEditor({
   onBlur,
 }: InlineTextEditorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const lastSavedSignatureRef = useRef<string | null>(null);
   const [toolbarBelow, setToolbarBelow] = useState(false);
   const [linkPickerOpen, setLinkPickerOpen] = useState(false);
   const [linkPickerValue, setLinkPickerValue] = useState<LinkValue | null>(null);
@@ -135,6 +136,9 @@ export default function InlineTextEditor({
     if (!editor) return;
     const doc = sanitizeTipTapDoc(editor.getJSON()) ?? richTextFromPlainText(editor.getText()).doc;
     const plainText = extractPlainTextFromTipTapDoc(doc);
+    const signature = JSON.stringify({ doc, plainText });
+    if (signature === lastSavedSignatureRef.current) return;
+    lastSavedSignatureRef.current = signature;
     onSave({
       richText: {
         format: BUILDER_RICH_TEXT_FORMAT,
@@ -145,6 +149,13 @@ export default function InlineTextEditor({
       plainText,
     });
   }, [editor, onSave]);
+
+  useEffect(() => {
+    if (!editor || lastSavedSignatureRef.current) return;
+    const doc = sanitizeTipTapDoc(editor.getJSON()) ?? richTextFromPlainText(editor.getText()).doc;
+    const plainText = extractPlainTextFromTipTapDoc(doc);
+    lastSavedSignatureRef.current = JSON.stringify({ doc, plainText });
+  }, [editor]);
 
   useEffect(() => {
     if (!editor) return;
@@ -165,6 +176,10 @@ export default function InlineTextEditor({
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [handleSave, onBlur]);
+
+  useEffect(() => () => {
+    handleSave();
+  }, [handleSave]);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -221,6 +236,7 @@ export default function InlineTextEditor({
   return (
     <div
       ref={containerRef}
+      data-builder-inline-text-editor="true"
       style={{
         position: 'relative',
         width: '100%',
@@ -235,11 +251,16 @@ export default function InlineTextEditor({
     >
       {/* ── Floating Toolbar ─────────────────────────────────────── */}
       {editor ? (
-        <div style={{
-          ...toolbarStyle,
-          top: toolbarBelow ? 'auto' : -44,
-          bottom: toolbarBelow ? -44 : 'auto',
-        }}>
+        <div
+          data-builder-inline-text-toolbar="true"
+          role="toolbar"
+          aria-label="Inline text formatting"
+          style={{
+            ...toolbarStyle,
+            top: toolbarBelow ? 'auto' : -44,
+            bottom: toolbarBelow ? -44 : 'auto',
+          }}
+        >
           {/* Bold / Italic / Underline / Strikethrough */}
           <button
             type="button"
@@ -359,7 +380,7 @@ export default function InlineTextEditor({
         </div>
       ) : null}
 
-      <EditorContent editor={editor} />
+      <EditorContent editor={editor} data-builder-inline-text-content="true" />
     </div>
   );
 }

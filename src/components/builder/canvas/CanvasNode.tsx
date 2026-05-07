@@ -67,6 +67,7 @@ interface CanvasNodeProps {
   onMoveStart: (nodeId: string, event: React.PointerEvent<HTMLDivElement>) => void;
   onResizeStart: (nodeId: string, handle: ResizeHandle, event: React.PointerEvent<HTMLButtonElement>) => void;
   onUpdateContent?: (nodeId: string, content: Record<string, unknown>) => void;
+  onInlineEditingChange?: (nodeId: string, editing: boolean) => void;
 }
 
 export default function CanvasNode({
@@ -78,6 +79,7 @@ export default function CanvasNode({
   onMoveStart,
   onResizeStart,
   onUpdateContent,
+  onInlineEditingChange,
 }: CanvasNodeProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -222,6 +224,14 @@ export default function CanvasNode({
     return () => document.removeEventListener('builder:start-text-edit', handler);
   }, [node.id, node.kind, node.locked]);
 
+  useEffect(() => {
+    if (node.kind !== 'text' && node.kind !== 'heading') return undefined;
+    onInlineEditingChange?.(node.id, isEditing);
+    return () => {
+      if (isEditing) onInlineEditingChange?.(node.id, false);
+    };
+  }, [isEditing, node.id, node.kind, onInlineEditingChange]);
+
   const previewEntrancePreset = node.animation?.entrance?.preset ?? 'none';
   const previewEntranceDuration = node.animation?.entrance?.duration ?? 600;
   const previewEntranceDelay = node.animation?.entrance?.delay ?? 0;
@@ -310,6 +320,7 @@ export default function CanvasNode({
           onMoveStart={onMoveStart}
           onResizeStart={onResizeStart}
           onUpdateContent={onUpdateContent}
+          onInlineEditingChange={onInlineEditingChange}
         />
       );
     });
@@ -357,7 +368,7 @@ export default function CanvasNode({
     || node.style.shadowX !== 0
     || node.style.shadowY !== 0;
   const isContainerWithChildren = isContainerLikeKind(node.kind) && nestedChildren.length > 0;
-  const showSelectionHandles = selected && !node.locked && isInteractive;
+  const showSelectionHandles = selected && !node.locked && isInteractive && !isEditing;
   const hoverTransition = node.hoverStyle
     ? `background ${node.hoverStyle.transitionMs ?? 200}ms ease, border-color ${node.hoverStyle.transitionMs ?? 200}ms ease, box-shadow ${node.hoverStyle.transitionMs ?? 200}ms ease, transform ${node.hoverStyle.transitionMs ?? 200}ms ease`
     : undefined;
@@ -546,7 +557,7 @@ export default function CanvasNode({
               ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
               : 'none'),
           opacity: renderedOpacity,
-          overflow: isContainerLikeKind(node.kind) ? 'visible' : undefined,
+          overflow: isEditing || isContainerLikeKind(node.kind) ? 'visible' : undefined,
           pointerEvents: isEditing ? 'auto' : 'none',
           transform: bodyTransform,
           transformOrigin: bodyTransform || editorAnimationStyle.transformOrigin ? 'center center' : undefined,

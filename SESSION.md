@@ -1312,3 +1312,28 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W15에 실제 blank create + draft empty 검증 메모를 반영.
 - W15도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor W03 inline text editing
+
+범위:
+- 텍스트/heading 노드 더블클릭 시 TipTap inline editor가 Wix처럼 캔버스 위에서 바로 열리도록 기존 경로를 안정화.
+- `.nodeBody` overflow 때문에 floating format toolbar가 잘리던 문제를 수정해 편집 중 toolbar가 노드 밖으로 떠서 보이게 함.
+- 인라인 편집 중에는 8 resize handle과 SelectionToolbar가 숨겨지고, inline text toolbar만 보이도록 `CanvasNode` → `CanvasContainer` 편집 상태 전파를 추가.
+- `InlineTextEditor`에 안정적인 `data-builder-inline-text-*` hook을 추가하고, 동일 content blur/unmount 중복 저장을 signature 기반으로 막아 undo history churn을 줄임.
+- `inline-text-editor.playwright.ts` 추가: 임시 page 생성 → text node 선택/8 handles 확인 → 더블클릭 inline editor/toolbar 표시 → 편집 중 handles/SelectionToolbar 숨김 → 텍스트 입력/Escape 저장 → draft API `text` + `richText.plainText` 저장 확인 → undo/redo → reload 후 유지.
+- `office-map-public.playwright.ts`는 전체 회귀 중 임시 page가 Pages 패널에 늦게 반영되는 flake가 확인되어, 다른 테스트들과 동일하게 mutation header/rate-limit retry/page drawer reload retry를 적용.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... inline-text-editor.playwright.ts --workers=1` ✅ (1/1)
+- `BASE_URL=http://localhost:3000 ... office-map-public.playwright.ts --workers=1` ✅ (1/1)
+- tracked builder-editor Playwright bundle ✅ 19/19
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 files / 61 mutation handlers)
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W03에 inline editor/toolbar/handles hidden/save/undo/redo/reload E2E 메모를 반영.
+- W03도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

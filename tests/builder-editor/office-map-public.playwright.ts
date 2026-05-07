@@ -38,6 +38,19 @@ function escapeRegex(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+function mutationHeaders(scope: string): Record<string, string> {
+  const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'office-map';
+  return { 'x-forwarded-for': `pw-${safeScope}` };
+}
+
+async function waitForRateLimit(response: Awaited<ReturnType<APIRequestContext['post']>>): Promise<boolean> {
+  if (response.status() !== 429) return false;
+  const retryAfter = Number(response.headers()['retry-after'] || '1');
+  const waitMs = Math.max(1000, Math.min(65_000, Number.isFinite(retryAfter) ? retryAfter * 1000 : 1000));
+  await new Promise((resolve) => setTimeout(resolve, waitMs));
+  return true;
+}
+
 function makeOfficeDocument(token: string): TestDocument {
   const now = new Date().toISOString();
   return {
@@ -219,9 +232,16 @@ async function createBuilderPage(
   title: string,
   document: TestDocument,
 ): Promise<string> {
-  const response = await request.post('/api/builder/site/pages', {
-    data: { locale: 'ko', slug, title, document },
-  });
+  let response: Awaited<ReturnType<APIRequestContext['post']>> | null = null;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    response = await request.post('/api/builder/site/pages', {
+      data: { locale: 'ko', slug, title, document },
+      headers: mutationHeaders(slug),
+    });
+    if (!(await waitForRateLimit(response))) break;
+  }
+  expect(response).toBeTruthy();
+  response = response!;
   expect(response.status()).toBe(200);
   const payload = (await response.json()) as { success?: boolean; pageId?: string; error?: string };
   expect(payload.success, payload.error).toBe(true);
@@ -244,10 +264,22 @@ async function openPagesDrawer(page: Page): Promise<Locator> {
 }
 
 async function openBuilderPage(page: Page, pageTitle: string): Promise<void> {
-  await page.goto(`/ko/admin-builder?officeMapTest=${Date.now().toString(36)}`, { waitUntil: 'domcontentloaded' });
-  await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
-  const drawer = await openPagesDrawer(page);
-  const pageButton = drawer.getByRole('button', { name: new RegExp(escapeRegex(pageTitle)) }).first();
+  let pageButton: Locator | null = null;
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    await page.goto(`/ko/admin-builder?officeMapTest=${Date.now().toString(36)}-${attempt}`, {
+      waitUntil: 'domcontentloaded',
+    });
+    await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+    const drawer = await openPagesDrawer(page);
+    pageButton = drawer.getByRole('button', { name: new RegExp(escapeRegex(pageTitle)) }).first();
+    if ((await pageButton.count()) > 0) break;
+    await page.waitForTimeout(750);
+  }
+  pageButton ??= page
+    .locator('aside[aria-hidden="false"]')
+    .first()
+    .getByRole('button', { name: new RegExp(escapeRegex(pageTitle)) })
+    .first();
   await expect(pageButton).toBeVisible({ timeout: 15_000 });
   await pageButton.click();
   await expect(page.getByText(/Loaded page:/)).toBeVisible();
@@ -291,6 +323,7 @@ test.describe('/ko/admin-builder office map public reflection', () => {
     const nextFax = '04-2326-1863';
     const nextMapUrl = `https://www.google.com/maps/search/${encodeURIComponent(nextAddress)}`;
     let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(token));
 
     try {
       pageId = await createBuilderPage(page.request, slug, title, makeOfficeDocument(token));
@@ -339,6 +372,7 @@ test.describe('/ko/admin-builder office map public reflection', () => {
       const draft = await draftPayload(page, pageId);
       const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
         data: { expectedDraftRevision: draft.draft?.revision },
+        headers: mutationHeaders(slug),
       });
       expect(publishResponse.status()).toBe(200);
       const published = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
@@ -361,6 +395,7 @@ test.describe('/ko/admin-builder office map public reflection', () => {
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
           failOnStatusCode: false,
         });
       }

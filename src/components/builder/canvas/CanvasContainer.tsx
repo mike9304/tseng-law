@@ -288,6 +288,7 @@ export default function CanvasContainer({
   const [selectionBox, setSelectionBox] = useState<SelectionBoxState | null>(null);
   const [contextMenu, setContextMenu] = useState<ContextMenuState | null>(null);
   const [selectionLinkPopoverOpen, setSelectionLinkPopoverOpen] = useState(false);
+  const [inlineEditingNodeId, setInlineEditingNodeId] = useState<string | null>(null);
   const [overlapPicker, setOverlapPicker] = useState<OverlapPickerState | null>(null);
   const [guides, setGuides] = useState<AlignmentGuide[]>([]);
   const [interactionPointer, setInteractionPointer] = useState<{ x: number; y: number } | null>(null);
@@ -399,6 +400,20 @@ export default function CanvasContainer({
     [nodes, selectedNodeIds],
   );
   const hasUnlockedSelection = selectedNodes.some((node) => !node.locked);
+
+  const handleInlineEditingChange = useCallback((nodeId: string, editing: boolean) => {
+    setInlineEditingNodeId((current) => {
+      if (editing) return nodeId;
+      return current === nodeId ? null : current;
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!inlineEditingNodeId) return;
+    if (!nodes.some((node) => node.id === inlineEditingNodeId)) {
+      setInlineEditingNodeId(null);
+    }
+  }, [inlineEditingNodeId, nodes]);
 
   const resolveEditableLinkNode = useCallback(
     (node: BuilderCanvasNode | undefined): BuilderCanvasNode | null => {
@@ -1503,6 +1518,7 @@ export default function CanvasContainer({
                 onUpdateContent={(nodeId, content) => {
                   updateNodeContent(nodeId, content, 'commit');
                 }}
+                onInlineEditingChange={handleInlineEditingChange}
                 onMoveStart={(nodeId, event) => {
                   event.preventDefault();
                   event.stopPropagation();
@@ -1621,7 +1637,7 @@ export default function CanvasContainer({
           zoomState={zoomState}
         />
 
-        {selectionBboxScreen && !contextMenu ? (
+        {selectionBboxScreen && !contextMenu && !inlineEditingNodeId ? (
           <SelectionToolbar
             selectedNodes={selectedNodes}
             bbox={selectionBboxScreen}

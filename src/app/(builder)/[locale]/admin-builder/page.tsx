@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import SandboxPage from '@/components/builder/canvas/SandboxPage';
-import { readSiteDocument, readPageCanvas, writePageCanvas, publishPage } from '@/lib/builder/site/persistence';
+import { readSiteDocument, readPageCanvas, writePageCanvas, publishPage, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { readCanvasSandboxDraft } from '@/lib/builder/canvas/persistence';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
@@ -11,6 +11,7 @@ import {
 } from '@/lib/builder/canvas/types';
 import { createHomePageCanvasDocument, SEED_VERSION } from '@/lib/builder/canvas/seed-home';
 import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
+import type { BuilderNavItem, BuilderSiteDocument } from '@/lib/builder/site/types';
 
 export const dynamic = 'force-dynamic';
 
@@ -176,6 +177,33 @@ function upgradeHeroSearchForm(document: BuilderCanvasDocument, locale: Locale):
   };
 }
 
+function upgradeHeroQuickMenu(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {
+  if (!document.nodes.some((node) => node.id === 'home-hero-root')) return document;
+  if (document.nodes.some((node) => node.id === 'home-hero-quick-menu')) return document;
+
+  const seeded = createHomePageCanvasDocument(locale);
+  const quickMenuNodes = seeded.nodes.filter((node) => node.id.startsWith('home-hero-quick-menu'));
+  if (quickMenuNodes.length === 0) return document;
+
+  const nextNodes: BuilderCanvasNode[] = [];
+  let inserted = false;
+  for (const node of document.nodes) {
+    nextNodes.push(node);
+    if (!inserted && node.id === 'home-hero-search-button') {
+      nextNodes.push(...quickMenuNodes);
+      inserted = true;
+    }
+  }
+
+  if (!inserted) nextNodes.push(...quickMenuNodes);
+  return {
+    ...document,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `${document.updatedBy || 'builder'}+hero-quick-menu`,
+    nodes: nextNodes,
+  };
+}
+
 function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {
   if (!document.nodes.some((node) => node.id === 'home-insights-root')) return document;
   const seeded = createHomePageCanvasDocument(locale);
@@ -248,6 +276,60 @@ function upgradeHomeServicesSection(document: BuilderCanvasDocument): BuilderCan
   };
 }
 
+const PUBLIC_HEADER_NAV_ITEMS: Array<{
+  key: string;
+  slug: string;
+  labels: Record<Locale, string>;
+}> = [
+  { key: 'services', slug: 'services', labels: { ko: '업무분야', 'zh-hant': '服務領域', en: 'Services' } },
+  { key: 'lawyers', slug: 'lawyers', labels: { ko: '변호사소개', 'zh-hant': '律師介紹', en: 'Lawyers' } },
+  { key: 'pricing', slug: 'pricing', labels: { ko: '비용안내', 'zh-hant': '收費標準', en: 'Pricing' } },
+  { key: 'columns', slug: 'columns', labels: { ko: '호정칼럼', 'zh-hant': '昊鼎專欄', en: 'Columns' } },
+  { key: 'videos', slug: 'videos', labels: { ko: '미디어센터', 'zh-hant': '媒體中心', en: 'Media Center' } },
+  { key: 'reviews', slug: 'reviews', labels: { ko: '고객후기', 'zh-hant': '客戶評價', en: 'Reviews' } },
+];
+
+function navHrefForSlug(slug: string): string {
+  return slug ? `/${slug}` : '/';
+}
+
+function upgradePublicHeaderNavigation(site: BuilderSiteDocument): BuilderSiteDocument {
+  let changed = false;
+  const nextNavigation: BuilderNavItem[] = [...site.navigation];
+
+  for (const item of PUBLIC_HEADER_NAV_ITEMS) {
+    const href = navHrefForSlug(item.slug);
+    const existing = nextNavigation.find((candidate) => candidate.href === href || candidate.id === `nav-${item.key}`);
+    const page = site.pages.find((candidate) => candidate.slug === item.slug);
+    if (existing) {
+      const labelChanged = JSON.stringify(existing.label) !== JSON.stringify(item.labels);
+      const nextPageId = page?.pageId ?? existing.pageId;
+      if (labelChanged || existing.href !== href || existing.pageId !== nextPageId) {
+        existing.label = item.labels;
+        existing.href = href;
+        existing.pageId = nextPageId;
+        changed = true;
+      }
+      continue;
+    }
+
+    nextNavigation.push({
+      id: `nav-${item.key}`,
+      pageId: page?.pageId ?? `external-${item.key}`,
+      href,
+      label: item.labels,
+    });
+    changed = true;
+  }
+
+  if (!changed) return site;
+  return {
+    ...site,
+    updatedAt: new Date().toISOString(),
+    navigation: nextNavigation,
+  };
+}
+
 const REQUIRED_SEED_SLUGS = ['', 'about', 'services', 'contact', 'lawyers', 'faq', 'pricing', 'reviews', 'columns', 'privacy', 'disclaimer'];
 
 function needsStandardPageSeed(sitePages: Array<{ slug: string; isHomePage?: boolean }>): boolean {
@@ -287,6 +369,15 @@ export default async function BuilderMainPage({
   if (force || needsStandardPageSeed(site.pages)) {
     await seedSitePages('default', locale);
     site = await readSiteDocument('default', locale);
+  }
+  const upgradedSite = upgradePublicHeaderNavigation(site);
+  if (upgradedSite !== site) {
+    site = upgradedSite;
+    try {
+      await writeSiteDocument(site);
+    } catch {
+      // Best-effort header parity upgrade; the in-memory editor still receives the nav items.
+    }
   }
   const homePage = site.pages.find((p) => p.isHomePage) || site.pages[0];
   const requestedPage = searchParams?.pageId
@@ -339,8 +430,11 @@ export default async function BuilderMainPage({
   }
 
   const upgradedInitialDocument = upgradeHeroSearchForm(
-    upgradeHomeServicesSection(
-      upgradeHomeInsightsSource(upgradeOfficeMapPlaceholders(initialDocument), locale),
+    upgradeHeroQuickMenu(
+      upgradeHomeServicesSection(
+        upgradeHomeInsightsSource(upgradeOfficeMapPlaceholders(initialDocument), locale),
+      ),
+      locale,
     ),
     locale,
   );

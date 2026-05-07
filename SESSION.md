@@ -1432,3 +1432,23 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01에 hero search form/input/submit, search bottom-overlap geometry, public legacy home guard, insights column source, services `#practice` 보정 메모를 반영.
 - 남은 gap: hero quick menu focus state, header search overlay, insights carousel/FAQ/office tabs 같은 stateful legacy behavior는 아직 static decomposition에 가까움. 다음 패스에서 component-backed 또는 explicit state 편집 surface로 전환 필요.
+
+## 2026-05-07 Codex /goal G-Editor W01/W19 homepage function parity follow-up
+
+범위:
+- 에디터 공유 Header를 원본 공개 사이트에 가까운 구조로 재작성: utility row, 로고, public nav labels/order, header search button, CTA, 업무분야/미디어 mega menu를 `SiteHeader` 안에서 렌더.
+- 기존 저장 site document에 공개 Header nav 항목(업무분야/변호사소개/비용안내/호정칼럼/미디어센터/고객후기)이 빠져 있으면 로드 시 자동 보정하도록 `upgradePublicHeaderNavigation` 추가.
+- Hero search 아래 원본 quick menu를 별도 편집 노드로 seed/upgrade해 업무분야/칼럼/연락처 등 빠른 진입 기능이 canvas에서 보이고 선택 가능하게 함.
+- 에디터 stage 안에서는 방문자용 아코디언 CSS에 의해 숨겨지던 서비스 상세/FAQ 답변을 펼쳐 보여 원본 기능 텍스트가 편집 가능한 노드로 노출되게 함.
+- Header brand/search action 클릭은 global header selection capture가 가로채지 않도록 예외 처리해, 검색 오버레이와 메뉴 편집 진입이 동시에 동작하게 조정.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (10/10)
+
+메모:
+- `/ko/admin-builder` 3000번 dev 서버 기준 Header y=32/h=90, canvas first y=124로 첫 화면 밀림은 재발하지 않음.
+- admin-builder smoke가 header search overlay, hero search bottom-overlap geometry, quick menu, services detail, FAQ answer, header Edit menu hover/click persistence를 직접 검증.
+- 남은 parity gap은 원본의 stateful carousel/office tabs/메가 메뉴 편집 표면을 “항상 보이는 편집 surface”와 “방문자 동작 preview”로 분리하는 작업.

@@ -1114,6 +1114,8 @@ export default function SandboxPage({
               onClickCapture={(event) => {
                 const target = event.target as HTMLElement;
                 if (target.closest(`.${styles.globalRegionBadge}`)) return;
+                if (target.closest('[data-builder-site-brand]')) return;
+                if (target.closest('[data-builder-header-action]')) return;
                 const navTarget = target.closest<HTMLElement>('[data-builder-nav-item-id]');
                 if (navTarget?.dataset.builderNavItemId) {
                   event.preventDefault();

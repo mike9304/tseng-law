@@ -482,6 +482,83 @@
   transition: outline-color 150ms ease, box-shadow 150ms ease;
 }
 
+.globalHeaderRegion :global(.header) {
+  position: relative !important;
+  top: auto;
+  left: auto;
+  z-index: 1;
+}
+
+.globalHeaderRegion :global(.builder-site-header) {
+  width: 100%;
+}
+
+.globalHeaderRegion :global(.builder-site-header .utility-nav) {
+  min-height: 22px;
+  padding: 2px 0;
+}
+
+.globalHeaderRegion :global(.builder-site-header .utility-nav > a),
+.globalHeaderRegion :global(.builder-site-header .utility-lang > a) {
+  min-height: 22px;
+  padding: 0 8px;
+  font-size: 0.68rem;
+}
+
+.globalHeaderRegion :global(.builder-site-header .utility-lang) {
+  padding: 1px;
+}
+
+.globalHeaderRegion :global(.builder-site-header .header-main-inner) {
+  grid-template-columns: minmax(190px, 240px) minmax(0, 1fr) auto;
+  gap: 8px;
+  min-height: 54px;
+}
+
+.globalHeaderRegion :global(.builder-site-header .header-logo) {
+  width: min(100%, 240px);
+  gap: 8px;
+}
+
+.globalHeaderRegion :global(.builder-site-header .logo-mark) {
+  width: 32px;
+  height: 32px;
+}
+
+.globalHeaderRegion :global(.builder-site-header .logo-kr) {
+  max-width: 190px;
+  font-size: 1.02rem;
+}
+
+.globalHeaderRegion :global(.builder-site-header .nav-list) {
+  justify-content: flex-end;
+  gap: 0;
+}
+
+.globalHeaderRegion :global(.builder-site-header .nav-link) {
+  min-height: 36px;
+  padding: 0 7px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+}
+
+.globalHeaderRegion :global(.builder-site-header .header-actions) {
+  gap: 5px;
+}
+
+.globalHeaderRegion :global(.builder-site-header .header-search-btn) {
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+  border-radius: 13px;
+}
+
+.globalHeaderRegion :global(.builder-site-header .nav-cta.button) {
+  min-height: 32px;
+  padding: 0 9px;
+  font-size: 0.76rem;
+}
+
 .globalHeaderRegion:hover,
 .globalHeaderRegion:focus-visible {
   outline-color: var(--editor-accent, #116dff);
@@ -1337,6 +1414,49 @@
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.stage :global(.builder-hero-quick-menu) {
+  position: relative;
+  inset: auto;
+  max-height: none;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.stage :global(.builder-hero-quick-menu-item) {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.stage :global(.builder-hero-quick-menu-item)::before {
+  content: '›';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1;
+  opacity: 0.68;
+}
+
+.stage :global(.services-detail-card) {
+  overflow: visible;
+}
+
+.stage :global(.services-detail-body) {
+  max-height: 820px;
+  overflow: visible;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.stage :global(.faq-answer-wrap) {
+  max-height: 420px;
+  overflow: visible;
+  padding: 0 1rem 1rem;
 }
 
 .topRuler {

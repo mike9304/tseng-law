@@ -363,6 +363,18 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByTitle('사이트 발행')).toBeVisible();
     const stageBox = await page.getByRole('application', { name: 'Canvas editor' }).boundingBox();
     expect(stageBox?.y ?? 9999).toBeLessThan(130);
+    const builderHeader = page.locator('.builder-site-header').first();
+    await expect(builderHeader).toBeVisible();
+    await expect(builderHeader.locator('.utility-nav')).toContainText('연락처');
+    await expect(builderHeader.locator('.nav-list')).toContainText('업무분야');
+    await expect(builderHeader.locator('.nav-list')).toContainText('변호사소개');
+    await expect(builderHeader.locator('.nav-list')).toContainText('호정칼럼');
+    await expect(builderHeader.locator('.header-search-btn')).toBeVisible();
+    await builderHeader.locator('[data-builder-header-action="search"]').click();
+    const headerSearchDialog = page.getByRole('dialog', { name: /검색|Search|搜尋/ });
+    await expect(headerSearchDialog).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(headerSearchDialog).toBeHidden();
     await expect(page.locator('[data-node-id="home-insights-title"]').first()).toContainText('칼럼 아카이브');
     await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);
@@ -390,6 +402,13 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     expect(Math.abs((heroSearchGeometry?.formCenterY ?? 0) - (heroSearchGeometry?.heroBottom ?? 9999))).toBeLessThanOrEqual(48);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeGreaterThanOrEqual(24);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeLessThanOrEqual(72);
+    const heroQuickMenu = page.locator('[data-node-id="home-hero-quick-menu"] nav.hero-quick-menu').first();
+    await expect(heroQuickMenu).toBeVisible();
+    await expect(heroQuickMenu).toContainText('업무분야');
+    await expect(heroQuickMenu).toContainText('칼럼');
+    await expect(heroQuickMenu).toContainText('연락처');
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-faq-item-0-answer"]').first()).toBeVisible();
     const hoverIndicatorNode = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();
     await hoverIndicatorNode.hover();
     await expect.poll(async () => hoverIndicatorNode.evaluate((element) => (

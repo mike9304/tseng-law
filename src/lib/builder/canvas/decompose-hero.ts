@@ -13,6 +13,33 @@ const HERO_ROOT_HEIGHT = 820;
 
 export const HERO_SECTION_ROOT_HEIGHT = HERO_ROOT_HEIGHT;
 
+const quickMenus = {
+  ko: [
+    { label: '업무분야', href: '/ko/services' },
+    { label: '칼럼', href: '/ko/columns' },
+    { label: '변호사', href: '/ko/lawyers' },
+    { label: 'FAQ', href: '/ko/faq' },
+    { label: '영상/채널', href: '/ko/videos' },
+    { label: '연락처', href: '/ko/contact' },
+  ],
+  'zh-hant': [
+    { label: '服務領域', href: '/zh-hant/services' },
+    { label: '專欄', href: '/zh-hant/columns' },
+    { label: '律師', href: '/zh-hant/lawyers' },
+    { label: 'FAQ', href: '/zh-hant/faq' },
+    { label: '影音/頻道', href: '/zh-hant/videos' },
+    { label: '聯絡', href: '/zh-hant/contact' },
+  ],
+  en: [
+    { label: 'Services', href: '/en/services' },
+    { label: 'Columns', href: '/en/columns' },
+    { label: 'Lawyers', href: '/en/lawyers' },
+    { label: 'FAQ', href: '/en/faq' },
+    { label: 'Videos / Channel', href: '/en/videos' },
+    { label: 'Contact', href: '/en/contact' },
+  ],
+} as const;
+
 export function createHeroDecomposedNodes(
   rootY: number,
   locale: Locale,
@@ -28,6 +55,7 @@ export function createHeroDecomposedNodes(
   const searchContainerId = 'home-hero-search-container';
   const searchWrapId = 'home-hero-search-wrap';
   const searchBarId = 'home-hero-search-bar';
+  const quickMenuId = 'home-hero-quick-menu';
 
   const nodes: BuilderCanvasNode[] = [
     createHomeContainerNode({
@@ -192,6 +220,28 @@ export function createHeroDecomposedNodes(
       buttonType: 'submit',
       ariaLabel: hero.searchButton,
     }),
+    createHomeContainerNode({
+      id: quickMenuId,
+      parentId: searchWrapId,
+      rect: { x: 0, y: 70, width: 620, height: 318 },
+      zIndex: 2,
+      label: 'hero quick menu focused state',
+      className: 'hero-quick-menu builder-hero-quick-menu',
+      as: 'nav',
+    }),
+    ...quickMenus[locale].map((item, index) =>
+      createHomeButtonNode({
+        id: `home-hero-quick-menu-item-${index}`,
+        parentId: quickMenuId,
+        rect: { x: 0, y: index * 53, width: 620, height: 53 },
+        zIndex: index,
+        label: item.label,
+        href: item.href,
+        style: 'link',
+        className: 'hero-quick-menu-item builder-hero-quick-menu-item',
+        as: 'a',
+      }),
+    ),
     createHomeButtonNode({
       id: 'home-hero-scroll-arrow',
       parentId: rootId,

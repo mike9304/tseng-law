@@ -226,6 +226,56 @@ function makeOfficeDocument(token: string): TestDocument {
   };
 }
 
+function makeGenericMapDocument(options: {
+  token: string;
+  rootId: string;
+  mapId: string;
+  address: string;
+  zoom: number;
+}): TestDocument {
+  const now = new Date().toISOString();
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `generic-map-${options.token}`,
+    stageWidth: 1280,
+    stageHeight: 760,
+    nodes: [
+      {
+        id: options.rootId,
+        kind: 'container',
+        rect: { x: 0, y: 0, width: 1280, height: 760 },
+        style: { ...baseStyle, backgroundColor: '#ffffff' },
+        zIndex: 0,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          ...baseContainerContent,
+          label: 'Generic map root',
+          as: 'main',
+        },
+      },
+      {
+        id: options.mapId,
+        kind: 'map',
+        parentId: options.rootId,
+        rect: { x: 96, y: 96, width: 680, height: 360 },
+        style: { ...baseStyle, borderRadius: 12 },
+        zIndex: 1,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          address: options.address,
+          zoom: options.zoom,
+        },
+      },
+    ],
+  };
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -263,7 +313,16 @@ async function openPagesDrawer(page: Page): Promise<Locator> {
   return drawer;
 }
 
-async function openBuilderPage(page: Page, pageTitle: string): Promise<void> {
+async function openBuilderPage(page: Page, pageTitle: string, pageId?: string): Promise<void> {
+  if (pageId) {
+    await page.goto(
+      `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&officeMapTest=${Date.now().toString(36)}`,
+      { waitUntil: 'domcontentloaded' },
+    );
+    await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+    return;
+  }
+
   let pageButton: Locator | null = null;
   for (let attempt = 0; attempt < 4; attempt += 1) {
     await page.goto(`/ko/admin-builder?officeMapTest=${Date.now().toString(36)}-${attempt}`, {
@@ -283,6 +342,22 @@ async function openBuilderPage(page: Page, pageTitle: string): Promise<void> {
   await expect(pageButton).toBeVisible({ timeout: 15_000 });
   await pageButton.click();
   await expect(page.getByText(/Loaded page:/)).toBeVisible();
+}
+
+async function selectLayerNode(page: Page, nodeId: string, kind: string): Promise<void> {
+  await page.getByRole('button', { name: 'Layers', exact: true }).click({ force: true });
+  const drawer = page.locator('aside[aria-hidden="false"]').first();
+  await expect(drawer.getByText('Layers').first()).toBeVisible();
+  const row = drawer.locator(`[title="${kind} ${nodeId}"]`).first();
+  await expect(row).toBeVisible({ timeout: 10_000 });
+  await row.focus();
+  await page.keyboard.press('Enter');
+  if (!(await page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first().isVisible().catch(() => false))) {
+    await row.click();
+  }
+  await expect(page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first()).toBeVisible({
+    timeout: 10_000,
+  });
 }
 
 async function draftPayload(page: Page, pageId: string): Promise<{
@@ -311,6 +386,94 @@ async function waitForPublishedNode(page: Page, slug: string, nodeId: string): P
 }
 
 test.describe('/ko/admin-builder office map public reflection', () => {
+  test('edits a generic Google map address and zoom through the Content inspector', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = `generic-map-${Date.now().toString(36)}`;
+    const slug = `g-editor-${token}`;
+    const title = `Generic Map ${token}`;
+    const mapId = `generic-map-node-${token}`;
+    const originalAddress = `台北市大安區復興南路一段 ${token}`;
+    const nextAddress = `高雄市左營區安吉街233號 ${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(token));
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        title,
+        makeGenericMapDocument({
+          token,
+          rootId: `generic-map-root-${token}`,
+          mapId,
+          address: originalAddress,
+          zoom: 12,
+        }),
+      );
+      await openBuilderPage(page, title, pageId);
+
+      const mapNode = page.locator(`[data-node-id="${mapId}"]`).first();
+      await expect(mapNode).toBeVisible();
+      await selectLayerNode(page, mapId, 'map');
+      await page.getByRole('button', { name: 'content' }).click({ force: true });
+      await expect(page.locator('[data-builder-map-inspector="true"]')).toBeVisible();
+
+      await page.getByLabel('Map address').fill(nextAddress);
+      await page.getByRole('slider', { name: 'Map zoom' }).fill('18');
+
+      const mapFrame = mapNode.locator('iframe[title="Google Maps"]').first();
+      await expect(mapFrame).toBeVisible();
+      await expect.poll(async () => {
+        const src = await mapFrame.getAttribute('src');
+        if (!src) return null;
+        const url = new URL(src);
+        return {
+          address: url.searchParams.get('q'),
+          zoom: url.searchParams.get('z'),
+        };
+      }, { timeout: 10_000 }).toEqual({
+        address: nextAddress,
+        zoom: '18',
+      });
+
+      await expect.poll(async () => {
+        const payload = await draftPayload(page, pageId!);
+        const content = nodeContent(payload.document?.nodes ?? [], mapId);
+        return {
+          address: content.address ?? null,
+          zoom: content.zoom ?? null,
+        };
+      }, { timeout: 15_000 }).toEqual({
+        address: nextAddress,
+        zoom: 18,
+      });
+
+      await openBuilderPage(page, title);
+      const reloadedFrame = page.locator(`[data-node-id="${mapId}"] iframe[title="Google Maps"]`).first();
+      await expect(reloadedFrame).toBeVisible({ timeout: 15_000 });
+      await expect.poll(async () => {
+        const src = await reloadedFrame.getAttribute('src');
+        if (!src) return null;
+        const url = new URL(src);
+        return {
+          address: url.searchParams.get('q'),
+          zoom: url.searchParams.get('z'),
+        };
+      }, { timeout: 10_000 }).toEqual({
+        address: nextAddress,
+        zoom: '18',
+      });
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('syncs edited map address to office card and published page', async ({ page }) => {
     test.setTimeout(120_000);
 
@@ -327,12 +490,12 @@ test.describe('/ko/admin-builder office map public reflection', () => {
 
     try {
       pageId = await createBuilderPage(page.request, slug, title, makeOfficeDocument(token));
-      await openBuilderPage(page, title);
+      await openBuilderPage(page, title, pageId);
 
       const officeMap = page.locator('[data-node-id="home-offices-layout-0-map"]').first();
       await expect(officeMap).toBeVisible();
-      await officeMap.click({ position: { x: 24, y: 24 }, force: true });
-      await page.getByRole('button', { name: 'content' }).click();
+      await selectLayerNode(page, 'home-offices-layout-0-map', 'map');
+      await page.getByRole('button', { name: 'content' }).click({ force: true });
       await expect(page.getByText('Office sync')).toBeVisible();
 
       await page.getByLabel('Office title synced value').fill(nextOfficeTitle);

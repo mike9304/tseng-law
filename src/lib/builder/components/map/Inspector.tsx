@@ -17,7 +17,7 @@ const OFFICE_PRESETS = [
 export default function MapInspector({ node, onUpdate, disabled = false }: BuilderComponentInspectorProps) {
   const mapNode = node as BuilderMapCanvasNode;
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }} data-builder-map-inspector="true">
       <div style={fieldStyle}>
         <span style={labelStyle}>사무소 프리셋</span>
         <div style={presetGridStyle}>
@@ -27,6 +27,7 @@ export default function MapInspector({ node, onUpdate, disabled = false }: Build
               type="button"
               disabled={disabled}
               style={{ ...presetButtonStyle, opacity: disabled ? 0.5 : 1 }}
+              aria-label={`${preset.label} office map preset`}
               onClick={() => onUpdate({ address: preset.address })}
             >
               {preset.label}
@@ -37,6 +38,7 @@ export default function MapInspector({ node, onUpdate, disabled = false }: Build
       <label style={fieldStyle}>
         <span style={labelStyle}>주소</span>
         <textarea rows={2} value={mapNode.content.address} disabled={disabled} style={{ ...inputStyle, resize: 'vertical', fontFamily: 'inherit' }}
+          aria-label="Map address"
           placeholder="台北市大安區..." onChange={(e) => onUpdate({ address: e.target.value })} />
       </label>
       <label style={fieldStyle}>
@@ -46,16 +48,19 @@ export default function MapInspector({ node, onUpdate, disabled = false }: Build
             type="button"
             disabled={disabled || mapNode.content.zoom <= 1}
             style={presetButtonStyle}
+            aria-label="Decrease map zoom"
             onClick={() => onUpdate({ zoom: Math.max(1, mapNode.content.zoom - 1) })}
           >
             -
           </button>
           <input type="range" min={1} max={20} step={1} value={mapNode.content.zoom} disabled={disabled}
+            aria-label="Map zoom"
             onChange={(e) => onUpdate({ zoom: Number(e.target.value) })} />
           <button
             type="button"
             disabled={disabled || mapNode.content.zoom >= 20}
             style={presetButtonStyle}
+            aria-label="Increase map zoom"
             onClick={() => onUpdate({ zoom: Math.min(20, mapNode.content.zoom + 1) })}
           >
             +

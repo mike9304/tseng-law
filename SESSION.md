@@ -1337,3 +1337,27 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W03에 inline editor/toolbar/handles hidden/save/undo/redo/reload E2E 메모를 반영.
 - W03도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor W12 map inspector editing
+
+범위:
+- generic `map` component Inspector에 `data-builder-map-inspector` hook과 `Map address`/`Map zoom` 접근성 label을 추가해 Playwright와 실제 사용자가 주소/줌 입력을 명확히 잡을 수 있게 함.
+- `/ko/admin-builder?pageId=...` direct-load를 지원해 칼럼/폼/테스트 등 다른 admin 화면에서 특정 page 편집기로 복귀할 때 홈 page가 아니라 해당 page draft를 바로 열게 함.
+- direct-load에서 non-home blank page를 home seed로 덮지 않도록 home page에만 reseed 조건을 적용하고, canvas가 없는 non-home page는 blank document로 초기화.
+- `office-map-public.playwright.ts` 보강:
+  - generic map 임시 page 생성 → `pageId` direct-load → Layers에서 map 선택 → Content inspector → 주소/줌 수정 → iframe query 반영 → draft API 저장 → reload 유지.
+  - office map sync 테스트는 Pages panel 전환 경로를 유지해 publish metadata race를 피하면서, Layers 선택으로 nested map을 안정적으로 선택.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... office-map-public.playwright.ts --workers=1` ✅ (2/2)
+- tracked builder-editor Playwright bundle ✅ 20/20
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 files / 61 mutation handlers)
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W12에 generic Google map Content inspector 주소/줌 저장/리로드 검증 메모를 반영.
+- W12도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

@@ -3,7 +3,12 @@ import SandboxPage from '@/components/builder/canvas/SandboxPage';
 import { readSiteDocument, readPageCanvas, writePageCanvas, publishPage } from '@/lib/builder/site/persistence';
 import { readCanvasSandboxDraft } from '@/lib/builder/canvas/persistence';
 import { normalizeLocale, type Locale } from '@/lib/locales';
-import { normalizeCanvasDocument, type BuilderCanvasDocument, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import {
+  createBlankCanvasDocument,
+  normalizeCanvasDocument,
+  type BuilderCanvasDocument,
+  type BuilderCanvasNode,
+} from '@/lib/builder/canvas/types';
 import { createHomePageCanvasDocument, SEED_VERSION } from '@/lib/builder/canvas/seed-home';
 import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
 
@@ -84,7 +89,7 @@ export default async function BuilderMainPage({
   searchParams,
 }: {
   params: { locale: string };
-  searchParams?: { reseed?: string };
+  searchParams?: { pageId?: string; reseed?: string };
 }) {
   const locale: Locale = normalizeLocale(params.locale);
   const force = searchParams?.reseed === '1';
@@ -97,30 +102,44 @@ export default async function BuilderMainPage({
     site = await readSiteDocument('default', locale);
   }
   const homePage = site.pages.find((p) => p.isHomePage) || site.pages[0];
+  const requestedPage = searchParams?.pageId
+    ? site.pages.find((page) => page.pageId === searchParams.pageId)
+    : null;
+  const initialPage = requestedPage ?? homePage;
 
   let initialDocument;
   let backend: 'blob' | 'file' = 'blob';
 
-  if (homePage) {
-    const pageCanvas = await readPageCanvas('default', homePage.pageId, 'draft');
+  if (initialPage) {
+    const pageCanvas = await readPageCanvas('default', initialPage.pageId, 'draft');
     const nodeCount = pageCanvas?.nodes?.length ?? 0;
     const updatedBy = pageCanvas?.updatedBy ?? '';
     const isLegacySeed =
       updatedBy.startsWith('home-seed-v') || updatedBy === 'site-page-seed';
     const isCurrentSeed = updatedBy === SEED_VERSION;
+    const isInitialHomePage = initialPage.pageId === homePage?.pageId || Boolean(initialPage.isHomePage);
     const needsReseed =
-      force || !pageCanvas || nodeCount === 0 || (isLegacySeed && !isCurrentSeed);
+      isInitialHomePage
+        && (force || !pageCanvas || nodeCount === 0 || (isLegacySeed && !isCurrentSeed));
 
     if (pageCanvas && !needsReseed) {
       initialDocument = normalizeCanvasDocument(pageCanvas, locale);
-    } else {
+    } else if (needsReseed) {
       const seeded = createHomePageCanvasDocument(locale);
       initialDocument = seeded;
       try {
-        await writePageCanvas('default', homePage.pageId, 'draft', seeded);
-        await publishPage('default', homePage.pageId, locale);
+        await writePageCanvas('default', initialPage.pageId, 'draft', seeded);
+        await publishPage('default', initialPage.pageId, locale);
       } catch {
         // Best-effort seed; editor still loads from in-memory doc if write fails
+      }
+    } else {
+      const blank = createBlankCanvasDocument(locale);
+      initialDocument = blank;
+      try {
+        await writePageCanvas('default', initialPage.pageId, 'draft', blank);
+      } catch {
+        // Best-effort initial draft; editor still loads from in-memory doc if write fails
       }
     }
   }
@@ -133,10 +152,10 @@ export default async function BuilderMainPage({
   }
 
   const upgradedInitialDocument = upgradeOfficeMapPlaceholders(initialDocument);
-  if (upgradedInitialDocument !== initialDocument && homePage) {
+  if (upgradedInitialDocument !== initialDocument && initialPage) {
     initialDocument = upgradedInitialDocument;
     try {
-      await writePageCanvas('default', homePage.pageId, 'draft', initialDocument);
+      await writePageCanvas('default', initialPage.pageId, 'draft', initialDocument);
     } catch {
       // Best-effort upgrade; the in-memory editor still receives the map nodes.
     }
@@ -149,12 +168,12 @@ export default async function BuilderMainPage({
       locale={locale}
       backend={backend}
       initialDocument={initialDocument}
-      initialPageId={homePage?.pageId}
+      initialPageId={initialPage?.pageId}
       siteName={site.name}
       siteSettings={site.settings}
       siteTheme={site.theme}
       navItems={site.navigation || []}
-      currentSlug={homePage?.slug || ''}
+      currentSlug={initialPage?.slug || ''}
       sitePages={site.pages}
       siteLightboxes={site.lightboxes ?? []}
     />

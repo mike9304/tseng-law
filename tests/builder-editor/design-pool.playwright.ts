@@ -23,6 +23,23 @@ const baseNodeStyle = {
   opacity: 100,
 };
 
+function mutationHeaders(scope: string): Record<string, string> {
+  const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'design-pool';
+  return { 'x-forwarded-for': `pw-${safeScope}` };
+}
+
+async function findPageIdBySlug(page: Page, slug: string): Promise<string | null> {
+  const response = await page.request.get('/api/builder/site/pages?locale=ko', {
+    headers: mutationHeaders(slug),
+    failOnStatusCode: false,
+  });
+  if (response.status() !== 200) return null;
+  const payload = (await response.json()) as {
+    pages?: Array<{ pageId?: string; slug?: string }>;
+  };
+  return payload.pages?.find((entry) => entry.slug === slug)?.pageId ?? null;
+}
+
 function makeSettingsReflectionDocument(token: string) {
   const now = new Date().toISOString();
   return {
@@ -884,6 +901,52 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       });
       for (const pageId of pageIds) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
+    }
+  });
+
+  test('creates a real blank page from the Pages template gallery', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-blank-${token}`;
+    let pageId: string | null = null;
+
+    await page.setExtraHTTPHeaders(mutationHeaders(slug));
+
+    try {
+      await openBuilder(page);
+      await page.locator('[class*="iconRail"]').getByRole('button', { name: 'Pages' }).click();
+      await page.getByRole('button', { name: '+ New' }).click();
+
+      const gallery = page.locator('[data-modal-shell="true"][data-modal-nested="false"]').last();
+      await expect(gallery).toBeVisible();
+      await gallery.getByRole('button', { name: /빈 페이지/ }).click();
+
+      await page.getByPlaceholder('예: about, services, contact').fill(slug);
+      await page.getByRole('button', { name: '생성' }).click();
+      await expect(page.getByText(/Loaded page:/).last()).toBeVisible({ timeout: 20_000 });
+
+      const canvas = page.getByRole('application', { name: 'Canvas editor' });
+      await expect(canvas.getByText('요소를 드래그해서 추가하세요')).toBeVisible();
+      await expect(canvas.locator('[data-node-id]:visible')).toHaveCount(0);
+
+      pageId = await findPageIdBySlug(page, slug);
+      expect(pageId).toBeTruthy();
+      const draftResponse = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+        headers: mutationHeaders(slug),
+      });
+      expect(draftResponse.status()).toBe(200);
+      const draftPayload = (await draftResponse.json()) as { document?: { nodes?: unknown[] } };
+      expect(draftPayload.document?.nodes ?? null).toEqual([]);
+    } finally {
+      pageId ??= await findPageIdBySlug(page, slug);
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
           failOnStatusCode: false,
         });
       }

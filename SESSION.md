@@ -1289,3 +1289,26 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W09에 Delete/Backspace/descendant cascade/undo/reload 검증 메모를 반영.
 - W09도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor W15 real blank page
+
+범위:
+- Pages → + New → `빈 페이지`가 실제로는 API fallback 때문에 `createDefaultCanvasDocument()`의 기본 샌드박스 텍스트/버튼/이미지로 시작하던 문제를 수정.
+- `createBlankCanvasDocument(locale)`를 추가하고 `/api/builder/site/pages` POST가 `blank: true`를 받으면 `nodes: []` draft를 저장하게 함.
+- `PageSwitcher`의 blank card 생성 경로가 `document` 없이 fallback에 맡기는 대신 `blank: true`를 전송하도록 수정.
+- `design-pool.playwright.ts`에 실제 UI E2E 추가: Pages rail → + New → 빈 페이지 → slug 입력 → 생성 → empty canvas 안내 표시 → canvas `[data-node-id]` 0개 → draft API `nodes: []` 확인 → cleanup.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "real blank page" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (9/9)
+- tracked builder-editor Playwright bundle ✅ 18/18
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 files / 61 mutation handlers)
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W15에 실제 blank create + draft empty 검증 메모를 반영.
+- W15도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

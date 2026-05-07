@@ -1089,6 +1089,18 @@ export function createDefaultCanvasDocument(locale: Locale): BuilderCanvasDocume
   };
 }
 
+export function createBlankCanvasDocument(locale: Locale): BuilderCanvasDocument {
+  return {
+    version: 1,
+    locale,
+    updatedAt: createNow(),
+    updatedBy: CANVAS_SANDBOX_UPDATED_BY,
+    stageWidth: 1280,
+    stageHeight: 880,
+    nodes: [],
+  };
+}
+
 export function normalizeCanvasDocument(
   input: unknown,
   locale: Locale,

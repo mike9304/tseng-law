@@ -350,7 +350,7 @@ export default function PageSwitcher({
           locale,
           slug,
           title: slug,
-          ...(pendingTemplate ? { document: pendingTemplate } : {}),
+          ...(pendingTemplate ? { document: pendingTemplate } : { blank: true }),
         }),
       });
       if (response.ok) {

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale } from '@/lib/locales';
 import { listPages, createPage, readPageCanvas, readSiteDocument, writePageCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
-import { normalizeCanvasDocument, createDefaultCanvasDocument } from '@/lib/builder/canvas/types';
+import { normalizeCanvasDocument, createDefaultCanvasDocument, createBlankCanvasDocument } from '@/lib/builder/canvas/types';
 import { guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
@@ -19,9 +19,23 @@ export async function POST(request: NextRequest) {
   const auth = guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
-  let body: { slug?: string; title?: string; locale?: string; document?: unknown; linkedFromPageId?: string };
+  let body: {
+    slug?: string;
+    title?: string;
+    locale?: string;
+    document?: unknown;
+    linkedFromPageId?: string;
+    blank?: boolean;
+  };
   try {
-    body = (await request.json()) as { slug?: string; title?: string; locale?: string; document?: unknown; linkedFromPageId?: string };
+    body = (await request.json()) as {
+      slug?: string;
+      title?: string;
+      locale?: string;
+      document?: unknown;
+      linkedFromPageId?: string;
+      blank?: boolean;
+    };
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
@@ -59,6 +73,8 @@ export async function POST(request: NextRequest) {
     : null;
   const canvasDoc = body.document
     ? normalizeCanvasDocument(body.document, locale)
+    : body.blank
+      ? createBlankCanvasDocument(locale)
     : sourceCanvas
       ? normalizeCanvasDocument({ ...sourceCanvas, locale }, locale)
       : createDefaultCanvasDocument(locale);

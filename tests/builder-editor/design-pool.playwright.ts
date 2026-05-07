@@ -9,6 +9,79 @@ const preferredCanvasNodeIds = [
   'home-insights-featured-title',
 ];
 
+const baseNodeStyle = {
+  backgroundColor: 'transparent',
+  borderColor: '#cbd5e1',
+  borderStyle: 'solid',
+  borderWidth: 0,
+  borderRadius: 0,
+  shadowX: 0,
+  shadowY: 0,
+  shadowBlur: 0,
+  shadowSpread: 0,
+  shadowColor: 'rgba(15, 23, 42, 0.16)',
+  opacity: 100,
+};
+
+function makeSettingsReflectionDocument(token: string) {
+  const now = new Date().toISOString();
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `site-settings-${token}`,
+    stageWidth: 1280,
+    stageHeight: 520,
+    nodes: [
+      {
+        id: `settings-root-${token}`,
+        kind: 'container',
+        rect: { x: 0, y: 0, width: 1280, height: 520 },
+        style: baseNodeStyle,
+        zIndex: 0,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: 'Site settings reflection root',
+          background: '#ffffff',
+          borderColor: 'transparent',
+          borderStyle: 'solid',
+          borderWidth: 0,
+          borderRadius: 0,
+          padding: 0,
+          layoutMode: 'absolute',
+          as: 'main',
+        },
+      },
+      {
+        id: `settings-title-${token}`,
+        kind: 'text',
+        parentId: `settings-root-${token}`,
+        rect: { x: 84, y: 88, width: 740, height: 86 },
+        style: { ...baseNodeStyle, borderRadius: 12 },
+        zIndex: 1,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          text: `Site settings reflection ${token}`,
+          fontSize: 38,
+          color: '#0f172a',
+          fontWeight: 'bold',
+          align: 'left',
+          lineHeight: 1.2,
+          letterSpacing: 0,
+          fontFamily: 'system-ui',
+          verticalAlign: 'top',
+          textTransform: 'none',
+          as: 'h1',
+        },
+      },
+    ],
+  };
+}
+
 async function waitForEditorCss(page: Page): Promise<void> {
   const isStyled = async () => page.locator('header[class*="topBar"]').first().evaluate((element) => {
     const style = window.getComputedStyle(element);
@@ -395,6 +468,160 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(modal).toContainText('#RRGGBB');
     await modal.getByRole('button', { name: 'Close' }).click();
     await expect(page.locator('[data-modal-shell="true"]')).toHaveCount(0);
+  });
+
+  test('persists Site Settings through the real API and reflects them in editor and published pages', async ({ page }) => {
+    test.setTimeout(120_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-settings-${token}`;
+    const firmName = `호정 설정 검증 ${token}`;
+    const phone = `+886-2-${token.slice(-4).padStart(4, '0')}-0000`;
+    const email = `settings-${token}@example.com`;
+    const address = `서울 설정 검증로 ${token}`;
+    const logoUrl = `https://example.com/g-editor-logo-${token}.png`;
+    const faviconUrl = `https://example.com/g-editor-favicon-${token}.ico`;
+    const primaryColor = '#0a7f5a';
+    let pageId: string | null = null;
+    let originalSettingsPayload: {
+      settings?: Record<string, unknown>;
+      theme?: Record<string, unknown>;
+      darkMode?: Record<string, unknown>;
+    } | null = null;
+
+    try {
+      const originalSettingsResponse = await page.request.get('/api/builder/site/settings?locale=ko');
+      expect(originalSettingsResponse.status()).toBe(200);
+      originalSettingsPayload = await originalSettingsResponse.json();
+
+      await openBuilder(page);
+
+      let modal = await openSiteSettings(page);
+      await modal.getByPlaceholder('예: 호정국제법률사무소').fill(firmName);
+      await modal.getByPlaceholder('예: +886-2-1234-5678').fill(phone);
+      await modal.getByPlaceholder('예: contact@example.com').fill(email);
+      await modal.getByPlaceholder('사무소 주소').fill(address);
+      await modal.getByPlaceholder('https://example.com/logo.png').fill(logoUrl);
+      await modal.getByPlaceholder('https://example.com/favicon.ico').fill(faviconUrl);
+
+      await modal.getByRole('button', { name: /Typography/ }).click();
+      await modal.locator('[data-font-picker]').nth(1).getByRole('button').click();
+      const fontDialog = page.getByRole('dialog', { name: 'Advanced font picker' });
+      await expect(fontDialog).toBeVisible();
+      await fontDialog.getByPlaceholder('Search fonts').fill('monospace');
+      await fontDialog.getByRole('button', { name: /monospace/i }).first().click();
+      await expect(fontDialog).toHaveCount(0);
+
+      await modal.getByRole('button', { name: /Advanced/ }).click();
+      await modal.locator('input[type="text"]').first().fill(primaryColor);
+
+      const saveResponsePromise = page.waitForResponse((response) => (
+        response.url().includes('/api/builder/site/settings')
+        && response.request().method() === 'PUT'
+      ));
+      await modal.getByRole('button', { name: '저장' }).click();
+      const saveResponse = await saveResponsePromise;
+      expect(saveResponse.status()).toBe(200);
+      await expect(page.locator('[data-modal-shell="true"]')).toHaveCount(0);
+
+      const editorBrand = page.locator('[data-builder-site-brand="true"]').first();
+      await expect(editorBrand.locator('strong')).toHaveText(firmName);
+      await expect(editorBrand.locator('.site-header-logo-light')).toHaveAttribute('src', logoUrl);
+
+      const settingsResponse = await page.request.get('/api/builder/site/settings?locale=ko');
+      expect(settingsResponse.status()).toBe(200);
+      const settingsPayload = (await settingsResponse.json()) as {
+        ok?: boolean;
+        settings?: Record<string, unknown>;
+        theme?: {
+          colors?: Record<string, string>;
+          fonts?: Record<string, string>;
+        };
+      };
+      expect(settingsPayload.ok).toBe(true);
+      expect(settingsPayload.settings).toMatchObject({
+        firmName,
+        phone,
+        email,
+        address,
+        logo: logoUrl,
+        favicon: faviconUrl,
+      });
+      expect(settingsPayload.theme?.colors?.primary).toBe(primaryColor);
+      expect(settingsPayload.theme?.fonts?.body).toBe('monospace');
+
+      modal = await openSiteSettings(page);
+      await modal.getByRole('button', { name: /General/ }).click();
+      await expect(modal.getByPlaceholder('예: 호정국제법률사무소')).toHaveValue(firmName);
+      await expect(modal.getByPlaceholder('https://example.com/logo.png')).toHaveValue(logoUrl);
+      await modal.getByRole('button', { name: 'Close' }).click();
+      await expect(page.locator('[data-modal-shell="true"]')).toHaveCount(0);
+
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: `G Editor Settings ${token}`,
+          document: makeSettingsReflectionDocument(token),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      expect(created.pageId).toBeTruthy();
+      pageId = created.pageId!;
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        data: {},
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      const publicHtmlResponse = await page.request.get(`/ko/${slug}`);
+      expect(publicHtmlResponse.status()).toBe(200);
+      const publicHtml = await publicHtmlResponse.text();
+      expect(publicHtml).toContain(firmName);
+      expect(publicHtml).toContain(logoUrl);
+      expect(publicHtml).toContain(faviconUrl);
+
+      const publicHeader = page.locator('header').filter({ has: page.locator('.site-header-logo-light') }).last();
+      await expect(publicHeader.locator('strong').filter({ hasText: firmName }).first()).toBeVisible();
+      await expect(publicHeader.locator('.site-header-logo-light')).toHaveAttribute('src', logoUrl);
+      await expect(page.locator(`link[rel="icon"][href="${faviconUrl}"]`)).toHaveCount(1);
+      const publicFooter = page.locator('footer').filter({ hasText: address }).first();
+      await expect(publicFooter).toContainText(phone);
+      await expect(publicFooter.locator('a[href^="mailto:"]').first()).toHaveCSS('color', 'rgb(10, 127, 90)');
+      await expect(page.locator('.builder-pub-main')).toHaveCSS('font-family', /monospace/);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          failOnStatusCode: false,
+        });
+      }
+      if (originalSettingsPayload) {
+        await page.request.put('/api/builder/site/settings?locale=ko', {
+          data: {
+            settings: {
+              firmName: '',
+              phone: '',
+              email: '',
+              address: '',
+              businessHours: '',
+              businessRegNumber: '',
+              logo: '',
+              logoDark: '',
+              favicon: '',
+              ogImage: '',
+              ...(originalSettingsPayload.settings ?? {}),
+            },
+            theme: originalSettingsPayload.theme,
+            darkMode: originalSettingsPayload.darkMode,
+          },
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
+    }
   });
 
   test('covers template gallery viewport, thumbnail renderer, hover card, and nested preview behavior', async ({ page }) => {

@@ -1157,3 +1157,25 @@
 - 사용자가 `http://localhost:3000/ko/admin-builder`에서 5분 검증하며 발견한 불일치를 즉시 issue 단위로 재현/수정한다.
 - 체크포인트 green 승격은 사용자 검증 문구가 온 뒤 W02/W06/W07/W08/W10/W11/W18~W23/W26~W30부터 순차 반영한다.
 - production 반영이 필요한 경우에는 로컬 검증과 별개로 배포/환경 변수/Blob 상태를 별도 확인한다.
+
+## 2026-05-07 Codex /goal G-Editor Site Settings reflection follow-up
+
+범위:
+- W21의 약한 근거였던 Site Settings 실제 persistence/public reflection 경로를 보강.
+- `/api/builder/site/settings` PUT이 빈 문자열 payload로 기존 firmName/logo/favicon/email/address 등을 지우지 못하던 문제를 수정. Wix처럼 설정 필드를 비우면 실제 저장값에서도 삭제되도록 `mergeSettings`를 추가.
+- `design-pool.playwright.ts`에 실제 UI 기반 E2E를 추가: Site Settings modal에서 firm name/phone/email/address/logo/favicon/primary color/body font 변경 → 실제 PUT 200 → editor header preview 반영 → modal 재오픈 readback → 임시 page publish → public HTML/head/header/footer/main style 반영 확인 → 원복/cleanup.
+- 이전 실패 테스트가 남긴 로컬 Site Settings 값을 새 clear 동작으로 정리해 dev 데이터 오염을 제거.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "persists Site Settings" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (6/6)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning only)
+- build 후 인증 포함 `HEAD /ko/admin-builder` on port 3000 ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W21에 실제 API 저장/공개 반영 E2E와 clear semantics 보강 메모를 반영.
+- W21도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

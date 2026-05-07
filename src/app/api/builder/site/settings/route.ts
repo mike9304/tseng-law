@@ -176,6 +176,55 @@ function sanitizeSettings(settings?: BuilderSiteSettings): BuilderSiteSettings |
   return Object.keys(nextSettings).length > 0 ? nextSettings : undefined;
 }
 
+function mergeSettings(
+  current: BuilderSiteSettings | undefined,
+  patch: BuilderSiteSettings,
+): BuilderSiteSettings | undefined {
+  const nextSettings: BuilderSiteSettings = { ...(current ?? {}) };
+  const stringKeys = [
+    'favicon',
+    'logo',
+    'logoDark',
+    'firmName',
+    'phone',
+    'email',
+    'address',
+    'businessHours',
+    'businessRegNumber',
+    'ogImage',
+  ] as const;
+
+  for (const key of stringKeys) {
+    if (!Object.prototype.hasOwnProperty.call(patch, key)) continue;
+    const value = patch[key];
+    if (typeof value === 'string' && value.trim().length > 0) {
+      nextSettings[key] = value.trim();
+    } else {
+      delete nextSettings[key];
+    }
+  }
+
+  if (Object.prototype.hasOwnProperty.call(patch, 'assets')) {
+    const assets = sanitizeBrandKitAssets(patch.assets);
+    if (assets) {
+      nextSettings.assets = assets;
+    } else {
+      delete nextSettings.assets;
+    }
+  }
+
+  if (Object.prototype.hasOwnProperty.call(patch, 'seoChecklist')) {
+    const sanitized = sanitizeSettings({ seoChecklist: patch.seoChecklist });
+    if (sanitized?.seoChecklist && Object.keys(sanitized.seoChecklist).length > 0) {
+      nextSettings.seoChecklist = sanitized.seoChecklist;
+    } else {
+      delete nextSettings.seoChecklist;
+    }
+  }
+
+  return Object.keys(nextSettings).length > 0 ? nextSettings : undefined;
+}
+
 function sanitizeBrandKitAssets(assets?: BrandKitAssets): BrandKitAssets | undefined {
   if (!assets) return undefined;
   const nextAssets: BrandKitAssets = {};
@@ -240,9 +289,7 @@ export async function PUT(request: NextRequest) {
     const site = await readSiteDocument('default', locale);
     const now = new Date().toISOString();
 
-    site.settings = payload.settings
-      ? { ...(site.settings ?? {}), ...(sanitizeSettings(payload.settings) ?? {}) }
-      : site.settings;
+    site.settings = payload.settings ? mergeSettings(site.settings, payload.settings) : site.settings;
     site.theme = mergeTheme(payload.theme ?? site.theme);
     site.darkMode = payload.darkMode ? normalizeDarkModeConfig(payload.darkMode) : site.darkMode;
     site.updatedAt = now;

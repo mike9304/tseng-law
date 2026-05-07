@@ -380,11 +380,12 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);
     await expect(page.locator('[data-node-id="home-insights-page-indicator"]').first()).toContainText(/1 \/ [2-9]/);
-    await expect(page.locator('[data-node-id="home-insights-item-5-title"]').first()).toContainText(/\S/);
+    await expect(page.locator('[data-node-id="home-insights-item-2-title"]').first()).toContainText(/\S/);
+    await expect(page.locator('[data-node-id="home-insights-item-3-title"]')).toHaveCount(0);
     const insightsFlow = await page.evaluate(() => {
       const insights = document.querySelector('[data-node-id="home-insights-root"]')?.getBoundingClientRect();
       const services = document.querySelector('[data-node-id="home-services-root"]')?.getBoundingClientRect();
-      const lateItem = document.querySelector('[data-node-id="home-insights-item-5-title"]')?.getBoundingClientRect();
+      const lateItem = document.querySelector('[data-node-id="home-insights-item-2-title"]')?.getBoundingClientRect();
       if (!insights || !services || !lateItem) return null;
       return {
         insightsBottom: insights.bottom,
@@ -681,6 +682,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(officeMap).toBeVisible();
     await officeMap.scrollIntoViewIfNeeded();
     await officeMap.click({ position: { x: 24, y: 24 } });
+    const mapQuickEdit = officeMap.locator('[class*="nodeMapQuickEdit"]').first();
+    await expect(mapQuickEdit).toBeVisible();
+    await expect(mapQuickEdit).toContainText('위치 편집');
+    await mapQuickEdit.getByRole('button', { name: '타이베이' }).click();
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이베이');
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-address"]').first()).toContainText('承德路');
+    await mapQuickEdit.getByRole('button', { name: '타이중' }).click();
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이중');
     await page.getByRole('button', { name: 'content' }).click();
     await expect(page.getByText('Office sync')).toBeVisible();
     await expect(page.getByText('사무소 프리셋')).toBeVisible();

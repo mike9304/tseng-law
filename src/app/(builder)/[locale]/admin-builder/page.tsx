@@ -222,27 +222,31 @@ function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Loca
   const currentRootY = currentRoot?.rect.y ?? 0;
   const oldInsightsBottom = currentRoot ? currentRoot.rect.y + currentRoot.rect.height : 0;
   const insightsHeightDelta = currentRoot && seededRoot
-    ? Math.max(0, seededRoot.rect.height - currentRoot.rect.height)
+    ? seededRoot.rect.height - currentRoot.rect.height
     : 0;
   let changed = false;
-  const nextNodes = document.nodes.map((node) => {
+  const nextNodes = document.nodes.flatMap((node) => {
     const seededNode = seededById.get(node.id);
     if (!seededNode) {
-      if (insightsHeightDelta > 0 && !node.parentId && node.rect.y >= oldInsightsBottom - 1) {
+      if (node.id.startsWith('home-insights-')) {
         changed = true;
-        return {
+        return [];
+      }
+      if (insightsHeightDelta !== 0 && !node.parentId && node.rect.y >= oldInsightsBottom - 1) {
+        changed = true;
+        return [{
           ...node,
           rect: {
             ...node.rect,
             y: node.rect.y + insightsHeightDelta,
           },
-        };
+        }];
       }
-      return node;
+      return [node];
     }
 
     if (node.kind !== seededNode.kind) {
-      return node;
+      return [node];
     }
 
     const result = withNodePatch(node, {
@@ -252,7 +256,7 @@ function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Loca
       content: seededNode.content as Record<string, unknown>,
     });
     changed = changed || result.changed;
-    return result.node;
+    return [result.node];
   });
 
   if (missingInsightsNodes.length > 0) {
@@ -260,8 +264,8 @@ function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Loca
     nextNodes.push(...missingInsightsNodes);
   }
 
-  const nextStageHeight = insightsHeightDelta > 0
-    ? Math.max(document.stageHeight + insightsHeightDelta, currentRootY + (seededRoot?.rect.height ?? 0) + 40)
+  const nextStageHeight = insightsHeightDelta !== 0
+    ? Math.max(880, document.stageHeight + insightsHeightDelta, currentRootY + (seededRoot?.rect.height ?? 0) + 40)
     : document.stageHeight;
 
   if (!changed) return document;
@@ -270,6 +274,73 @@ function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Loca
     stageHeight: nextStageHeight,
     updatedAt: new Date().toISOString(),
     updatedBy: `${document.updatedBy || 'builder'}+insights-source`,
+    nodes: nextNodes,
+  };
+}
+
+function upgradeHomeOfficesTabbedLayout(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {
+  if (!document.nodes.some((node) => node.id === 'home-offices-root')) return document;
+  const seeded = createHomePageCanvasDocument(locale);
+  const seededById = new Map(
+    seeded.nodes
+      .filter((node) => node.id.startsWith('home-offices-'))
+      .map((node) => [node.id, node]),
+  );
+  const existingIds = new Set(document.nodes.map((node) => node.id));
+  const missingOfficeNodes = seeded.nodes.filter((node) => (
+    node.id.startsWith('home-offices-') && !existingIds.has(node.id)
+  ));
+  const currentRoot = document.nodes.find((node) => node.id === 'home-offices-root');
+  const seededRoot = seededById.get('home-offices-root');
+  const currentRootY = currentRoot?.rect.y ?? 0;
+  const oldOfficesBottom = currentRoot ? currentRoot.rect.y + currentRoot.rect.height : 0;
+  const officesHeightDelta = currentRoot && seededRoot
+    ? seededRoot.rect.height - currentRoot.rect.height
+    : 0;
+  let changed = false;
+
+  const nextNodes = document.nodes.map((node) => {
+    const seededNode = seededById.get(node.id);
+    if (!seededNode) {
+      if (officesHeightDelta !== 0 && !node.parentId && node.rect.y >= oldOfficesBottom - 1) {
+        changed = true;
+        return {
+          ...node,
+          rect: {
+            ...node.rect,
+            y: node.rect.y + officesHeightDelta,
+          },
+        };
+      }
+      return node;
+    }
+
+    if (node.kind !== seededNode.kind) return node;
+
+    const result = withNodePatch(node, {
+      rect: seededNode.rect,
+      zIndex: seededNode.zIndex,
+      style: seededNode.style,
+    });
+    changed = changed || result.changed;
+    return result.node;
+  });
+
+  if (missingOfficeNodes.length > 0) {
+    changed = true;
+    nextNodes.push(...missingOfficeNodes);
+  }
+
+  const nextStageHeight = officesHeightDelta !== 0
+    ? Math.max(880, document.stageHeight + officesHeightDelta, currentRootY + (seededRoot?.rect.height ?? 0) + 40)
+    : document.stageHeight;
+
+  if (!changed) return document;
+  return {
+    ...document,
+    stageHeight: nextStageHeight,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `${document.updatedBy || 'builder'}+offices-tabs`,
     nodes: nextNodes,
   };
 }
@@ -475,7 +546,10 @@ export default async function BuilderMainPage({
   const upgradedInitialDocument = upgradeHeroSearchForm(
     upgradeHeroQuickMenu(
       upgradeHomeServicesSection(
-        upgradeHomeInsightsSource(upgradeOfficeMapPlaceholders(initialDocument), locale),
+        upgradeHomeOfficesTabbedLayout(
+          upgradeHomeInsightsSource(upgradeOfficeMapPlaceholders(initialDocument), locale),
+          locale,
+        ),
       ),
       locale,
     ),

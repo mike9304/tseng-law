@@ -43,10 +43,11 @@ const copyByLocale = {
   },
 } as const;
 
-const INSIGHTS_ROOT_HEIGHT = 3700;
+const INSIGHTS_ROOT_HEIGHT = 1120;
 const INSIGHTS_LIST_ITEM_HEIGHT = 176;
 const INSIGHTS_LIST_ITEM_PITCH = 196;
 const INSIGHTS_LIST_MIN_HEIGHT = 620;
+const INSIGHTS_PAGE_SIZE = 3;
 
 type HomeInsightPost = {
   slug: string;
@@ -82,7 +83,7 @@ export function createInsightsDecomposedNodes(
   if (posts.length === 0) return [];
 
   const [featured, ...rest] = posts;
-  const listItems = rest;
+  const listItems = rest.slice(0, INSIGHTS_PAGE_SIZE);
   const pageCount = Math.max(1, Math.ceil(rest.length / 3));
   const listHeight = Math.max(
     INSIGHTS_LIST_MIN_HEIGHT,

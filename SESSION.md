@@ -1495,3 +1495,21 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01/W18/W19에 2026-05-08 follow-up 메모를 추가.
 - 남은 원본 홈페이지 parity gap은 stateful behavior의 편집/방문자-preview 분리: insights pagination 실제 조작, office tabs active state, service/FAQ accordion state를 원본 component-backed preview와 editable node surface 사이에서 일관되게 연결해야 함.
+
+## 2026-05-08 Codex /goal G-Editor W01 office map + home stateful parity follow-up
+
+범위:
+- 홈 insights 섹션을 원본 `InsightsArchiveSection` 초기 상태에 맞춰 대표 글 1개 + 우측 목록 3개 + `1 / n` indicator 구조로 축약하고, 기존 draft의 오래된 `home-insights-item-3+` 노드는 로드 시 제거하도록 보정.
+- 오시는길 seed를 원본 `OfficeMapTabs`처럼 한 사무소 레이아웃만 보이는 탭형 높이로 재구성. 타이중/가오슝/타이베이 layout은 같은 위치에 겹쳐 두고, 선택된 탭/지도 descendant 기준으로 해당 레이아웃만 노출.
+- 지도 노드 선택 시 캔버스 위에 `Google Map · 위치 편집` 퀵 패널을 띄워 타이중/가오슝/타이베이 프리셋 전환 및 주소 직접 입력을 지원. 변경 시 map address, 사무소명, 카드 주소, 전화 href, 길찾기 URL을 같이 동기화.
+- admin-builder smoke에 insights 3-item 상태, stale item 제거, 지도 quick edit 지역 전환, 기존 inspector Office sync 경로를 회귀 검증으로 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/seed-home-layout.test.ts` ✅
+
+메모:
+- 사용자가 지적한 "지도 눌러서 다른 지역으로 바꾸는 게 간편하지 않음"은 inspector-only 흐름이 원인이었고, 이번 패스에서 캔버스 직접 quick edit로 보강.
+- 남은 원본 홈페이지 parity gap은 services/FAQ accordion의 방문자 상태 preview와 builder edit surface 분리, 칼럼 목록 페이지/글쓰기 화면의 티스토리식 작성 UX 추가 개선.

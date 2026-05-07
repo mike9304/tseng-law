@@ -1455,6 +1455,43 @@
   opacity: 0.68;
 }
 
+.stage :global([data-node-id='home-offices-layout-1']),
+.stage :global([data-node-id='home-offices-layout-2']) {
+  display: none;
+}
+
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-selected='true']) [data-node-id='home-offices-layout-0']),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-2'][data-selected='true']) [data-node-id='home-offices-layout-0']),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-1'] [data-selected='true']) [data-node-id='home-offices-layout-0']),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-2'] [data-selected='true']) [data-node-id='home-offices-layout-0']) {
+  display: none;
+}
+
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-selected='true']) [data-node-id='home-offices-layout-1']),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-1'] [data-selected='true']) [data-node-id='home-offices-layout-1']),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-2'][data-selected='true']) [data-node-id='home-offices-layout-2']),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-2'] [data-selected='true']) [data-node-id='home-offices-layout-2']) {
+  display: block;
+}
+
+.stage :global([data-node-id='home-offices-tab-1'][data-selected='true'] .tab-button),
+.stage :global([data-node-id='home-offices-tab-2'][data-selected='true'] .tab-button),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-1'] [data-selected='true']) [data-node-id='home-offices-tab-1'] .tab-button),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-2'] [data-selected='true']) [data-node-id='home-offices-tab-2'] .tab-button) {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-2'][data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-1'] [data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-2'] [data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button) {
+  background: var(--bg-white);
+  color: var(--text-secondary);
+  border-color: var(--border-medium);
+}
+
 .stage :global(.services-detail-card) {
   overflow: visible;
 }
@@ -2268,6 +2305,100 @@
 .nodeQuickActionPrimary:hover {
   background: #116dff;
   box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.16);
+}
+
+.nodeMapQuickEdit {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 13;
+  display: grid;
+  width: min(320px, calc(100% - 24px));
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 8px;
+  background: var(--editor-panel-elevated, #fff);
+  box-shadow: var(--editor-shadow-popover, 0 16px 36px rgba(15, 23, 42, 0.18));
+  color: var(--editor-fg-primary, #0f172a);
+  pointer-events: auto;
+}
+
+.nodeMapQuickEditHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.nodeMapQuickEditHeader span {
+  color: var(--editor-accent, #116dff);
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.nodeMapQuickEditHeader strong {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nodeMapPresetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.nodeMapPresetButton {
+  min-height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 6px;
+  background: var(--editor-bg, #f8fafc);
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 11px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.nodeMapPresetButton:hover {
+  border-color: var(--editor-accent, #116dff);
+  background: var(--editor-accent-soft, #eff6ff);
+}
+
+.nodeMapAddressField {
+  display: grid;
+  gap: 4px;
+}
+
+.nodeMapAddressField span {
+  color: var(--editor-fg-muted, #64748b);
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.nodeMapAddressField textarea {
+  width: 100%;
+  min-height: 54px;
+  resize: vertical;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 7px;
+  background: var(--editor-panel, #fff);
+  color: var(--editor-fg-primary, #0f172a);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  outline: none;
+  padding: 7px 8px;
+}
+
+.nodeMapAddressField textarea:focus {
+  border-color: var(--editor-accent, #116dff);
+  box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.12);
 }
 
 .nodeBody {

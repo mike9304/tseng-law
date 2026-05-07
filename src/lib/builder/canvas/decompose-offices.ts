@@ -95,7 +95,7 @@ const officeData: Record<Locale, OfficeInfo[]> = {
   ],
 };
 
-const OFFICES_ROOT_HEIGHT = 1680;
+const OFFICES_ROOT_HEIGHT = 760;
 
 export const OFFICES_SECTION_ROOT_HEIGHT = OFFICES_ROOT_HEIGHT;
 
@@ -134,7 +134,7 @@ export function createOfficesDecomposedNodes(
     createHomeContainerNode({
       id: containerId,
       parentId: rootId,
-      rect: { x: 72, y: 88, width: 1136, height: 1540 },
+      rect: { x: 72, y: 88, width: 1136, height: 600 },
       zIndex: 0,
       label: 'home offices container',
       className: 'container',
@@ -188,22 +188,22 @@ export function createOfficesDecomposedNodes(
     const layoutId = `home-offices-layout-${index}`;
     const mapId = `${layoutId}-map`;
     const cardId = `${layoutId}-card`;
-    const baseY = 184 + index * 430;
+    const baseY = 184;
 
     nodes.push(
       createHomeContainerNode({
         id: layoutId,
         parentId: containerId,
-        rect: { x: 0, y: baseY, width: 1136, height: 360 },
+        rect: { x: 0, y: baseY, width: 1136, height: 420 },
         zIndex: 3 + index,
         label: `home offices layout ${index + 1}`,
-        className: 'office-layout',
+        className: `office-layout builder-office-layout-${index}`,
       }),
       {
         id: mapId,
         kind: 'map',
         parentId: layoutId,
-        rect: { x: 0, y: 0, width: 660, height: 360 },
+        rect: { x: 0, y: 0, width: 660, height: 420 },
         style: createDefaultCanvasNodeStyle({ borderRadius: 12 }),
         zIndex: 0,
         rotation: 0,
@@ -217,7 +217,7 @@ export function createOfficesDecomposedNodes(
       createHomeContainerNode({
         id: cardId,
         parentId: layoutId,
-        rect: { x: 700, y: 0, width: 436, height: 360 },
+        rect: { x: 700, y: 0, width: 436, height: 420 },
         zIndex: 1,
         label: `home offices card ${index + 1}`,
         className: 'card office-card',
@@ -282,7 +282,7 @@ export function createOfficesDecomposedNodes(
       createHomeButtonNode({
         id: `${cardId}-map-link`,
         parentId: cardId,
-        rect: { x: 0, y: 262, width: 280, height: 40 },
+        rect: { x: 0, y: 302, width: 280, height: 40 },
         zIndex: 5,
         label: viewMapLabel,
         href: office.mapsUrl,

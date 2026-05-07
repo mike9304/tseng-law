@@ -73,8 +73,28 @@ async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Lo
       .locator('[class*="nodeSelected"][data-node-id]:visible')
       .filter({ has: page.locator('[class*="rotationHandle"]') })
       .last();
-    if (await selectedWithHandles.isVisible().catch(() => false)) {
+    const fallbackHandleCount = await selectedWithHandles
+      .locator('[class*="resizeHandle"]:visible')
+      .count()
+      .catch(() => 0);
+    if (fallbackHandleCount === 8) {
       selectedNode = selectedWithHandles;
+    } else {
+      const fallback = await firstVisibleNode(page);
+      const fallbackBox = await fallback.boundingBox();
+      await fallback.click({
+        position: fallbackBox
+          ? {
+              x: Math.max(1, Math.min(fallbackBox.width - 1, fallbackBox.width / 2)),
+              y: Math.max(1, Math.min(fallbackBox.height - 1, fallbackBox.height / 2)),
+            }
+          : { x: 12, y: 12 },
+        force: true,
+      });
+      selectedNode = page
+        .locator('[class*="nodeSelected"][data-node-id]:visible')
+        .filter({ has: page.locator('[class*="rotationHandle"]') })
+        .last();
     }
   }
   await expect(selectedNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
@@ -495,6 +515,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await movePointerDrag(page, resizeDrag, resizeDeltaX, resizeDeltaY);
     await expect(page.locator('[class*="canvasOverlayResizeReadout"]').first()).toContainText(/\d+\s*x\s*\d+/);
     await finishPointerDrag(page, resizeDrag, resizeDeltaX, resizeDeltaY);
+    const savingChip = page.locator('[data-save-status-chip="saving"]').first();
+    await expect(savingChip).toBeVisible({ timeout: 2_000 });
+    await expect(savingChip).toContainText('Saving…');
+    await expect(savingChip.locator('[data-save-status-glyph]')).toHaveCSS('background-color', 'rgb(148, 163, 184)');
     const resizedNodeTarget = resizeNodeId
       ? page.locator(`[data-node-id="${resizeNodeId}"]`).first()
       : undefined;
@@ -511,7 +535,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const beforeRatio = resizeBefore.width / resizeBefore.height;
     const afterRatio = resizeAfter.width / resizeAfter.height;
     expect(Math.abs(afterRatio - beforeRatio)).toBeLessThan(0.25);
-    await expect(page.getByText(/Saving|Saved|저장 중|저장됨/).first()).toBeVisible({ timeout: 5_000 });
+    const savedChip = page.locator('[data-save-status-chip="saved"]').first();
+    await expect(savedChip).toBeVisible({ timeout: 5_000 });
+    await expect(savedChip).toContainText('Saved');
+    await expect(savedChip.locator('[data-save-status-glyph]')).toHaveCSS('background-color', 'rgb(34, 197, 94)');
 
     const rotateNode = resizedNode;
     const rotationHandle = rotateNode.locator('[class*="rotationHandle"]').first();

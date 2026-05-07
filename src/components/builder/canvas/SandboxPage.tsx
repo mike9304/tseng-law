@@ -1358,8 +1358,11 @@ export default function SandboxPage({
 
         <div className={styles.lowerLeftChipStack} aria-live="polite" aria-atomic="false">
           {draftSaveState !== 'idle' ? (
-            <div className={`${styles.saveStatusChip} ${styles[`saveStatusChip${draftSaveState[0].toUpperCase()}${draftSaveState.slice(1)}` as keyof typeof styles]}`}>
-              <span className={styles.saveStatusGlyph} aria-hidden="true" />
+            <div
+              className={`${styles.saveStatusChip} ${styles[`saveStatusChip${draftSaveState[0].toUpperCase()}${draftSaveState.slice(1)}` as keyof typeof styles]}`}
+              data-save-status-chip={draftSaveState}
+            >
+              <span className={styles.saveStatusGlyph} data-save-status-glyph aria-hidden="true" />
               <strong>
                 {draftSaveState === 'saving'
                   ? 'Saving…'

@@ -1218,3 +1218,25 @@
 
 메모:
 - build 직후에는 dev 서버를 재시작해야 한다. 최종 현재 상태는 3000번 dev 서버 실행 중이며 `/ko/admin-builder` 200.
+
+## 2026-05-07 Codex /goal G-Editor W11 save chip evidence follow-up
+
+범위:
+- W11 자동 저장 상태 표시의 검증 근거가 약해 `Saving|Saved` 텍스트 proxy 대신 좌하단 floating chip 자체를 검증하도록 보강.
+- `SandboxPage` save status chip에 `data-save-status-chip` / `data-save-status-glyph`를 추가.
+- `admin-builder.playwright.ts`에서 resize 편집 직후 좌하단 `Saving…` chip, 회색 glyph(`rgb(148, 163, 184)`), 저장 완료 후 `Saved` chip, 녹색 체크 glyph(`rgb(34, 197, 94)`)를 직접 확인.
+- local backend가 빨라질 때 stale selected node가 handle 없는 상태로 남는 smoke race를 줄이도록 `expectSelectedNodeHandles` helper를 보강.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- tracked builder-editor Playwright bundle ✅ 14/14
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W11에 좌하단 chip/glyph 직접 검증 메모를 반영.
+- W11도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

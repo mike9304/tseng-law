@@ -376,20 +376,17 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(headerSearchDialog).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(headerSearchDialog).toBeHidden();
-    const publicChrome = page.locator('[data-builder-public-chrome="true"]').first();
-    await expect(publicChrome).toBeVisible();
-    await expect(publicChrome.getByRole('button', { name: /AI 상담|AI Chat|AI 諮詢/ })).toBeVisible();
-    await expect(publicChrome.getByRole('button', { name: /상단|Back to top|回到頂部/ })).toBeVisible();
-    await publicChrome.getByRole('button', { name: /2026 EVENT/ }).click();
-    await expect(publicChrome).toContainText('2026년 기념 리뷰 이벤트');
-    await publicChrome.getByRole('button', { name: /AI 상담|AI Chat|AI 諮詢/ }).click();
-    await expect(publicChrome).toContainText('AI 상담');
     await expect(page.locator('[data-node-id="home-insights-title"]').first()).toContainText('칼럼 아카이브');
     await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);
     await expect(page.locator('[data-node-id="home-insights-page-indicator"]').first()).toContainText(/1 \/ [2-9]/);
     await expect(page.locator('[data-node-id="home-insights-item-2-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-item-3-title"]')).toHaveCount(0);
+    await page.locator('[data-node-id="home-insights-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    const selectedHomeInsightsTitle = page.locator('[data-node-id="home-insights-title"][class*="nodeSelected"]').first();
+    await expect(selectedHomeInsightsTitle.getByRole('button', { name: '글 추가/수정' })).toBeVisible();
+    await expect(selectedHomeInsightsTitle.getByRole('button', { name: '새 글' })).toBeVisible();
+    await expect(selectedHomeInsightsTitle.getByRole('button', { name: '공개 보기' })).toBeVisible();
     const insightsFlow = await page.evaluate(() => {
       const insights = document.querySelector('[data-node-id="home-insights-root"]')?.getBoundingClientRect();
       const services = document.querySelector('[data-node-id="home-services-root"]')?.getBoundingClientRect();
@@ -428,6 +425,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     expect(Math.abs((heroSearchGeometry?.formCenterY ?? 0) - (heroSearchGeometry?.heroBottom ?? 9999))).toBeLessThanOrEqual(48);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeGreaterThanOrEqual(24);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeLessThanOrEqual(72);
+    await page.keyboard.press('Escape');
+    await page.evaluate(() => {
+      if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+    });
+    await page.mouse.move(12, 120);
     const heroQuickMenu = page.locator('[data-node-id="home-hero-quick-menu"] nav.hero-quick-menu').first();
     await expect(heroQuickMenu).toBeHidden();
     await page.locator('[data-node-id="home-hero-search-wrap"]').first().hover();
@@ -435,6 +437,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(heroQuickMenu).toContainText('업무분야');
     await expect(heroQuickMenu).toContainText('칼럼');
     await expect(heroQuickMenu).toContainText('연락처');
+    const publicChrome = page.locator('[data-builder-public-chrome="true"]').first();
+    await expect(publicChrome).toBeVisible();
+    await expect(publicChrome.getByRole('button', { name: /AI 상담|AI Chat|AI 諮詢/ })).toBeVisible();
+    await expect(publicChrome.getByRole('button', { name: /상단|Back to top|回到頂部/ })).toBeVisible();
+    await publicChrome.getByRole('button', { name: /2026 EVENT/ }).click();
+    await expect(publicChrome).toContainText('2026년 기념 리뷰 이벤트');
+    await publicChrome.getByRole('button', { name: /AI 상담|AI Chat|AI 諮詢/ }).click();
+    await expect(publicChrome).toContainText('AI 상담');
     await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-faq-item-0-answer"]').first()).toBeVisible();
     const hoverIndicatorNode = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();

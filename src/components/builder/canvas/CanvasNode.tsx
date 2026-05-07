@@ -126,6 +126,7 @@ function currentOfficeQuickPresets(): OfficeQuickPreset[] {
 
 function isColumnManagerTarget(node: BuilderCanvasNode): boolean {
   if (node.kind === 'blog-feed') return true;
+  if (node.id === 'home-insights-root' || node.id.startsWith('home-insights-')) return true;
   const href = nodeLinkPreviewHref(node);
   return Boolean(href && /\/admin-builder\/columns(?:\/|$)/.test(href));
 }
@@ -749,6 +750,17 @@ export default function CanvasNode({
             }}
           >
             글 추가/수정
+          </button>
+          <button
+            type="button"
+            className={styles.nodeQuickAction}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              window.location.href = `/${currentBuilderLocale()}/admin-builder/columns?new=1`;
+            }}
+          >
+            새 글
           </button>
           <button
             type="button"

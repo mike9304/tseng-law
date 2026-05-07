@@ -1565,3 +1565,18 @@
 메모:
 - 지도는 이전 follow-up의 quick panel 경로를 그대로 재검증했고, generic map 주소/줌 변경과 사무소 지도 공개 반영 시나리오가 모두 통과.
 - 남은 원본 홈페이지 parity gap은 services/FAQ accordion visitor preview, office tab active preview, insights pagination 실제 조작, header/nav의 edit/preview mode 분리.
+
+## 2026-05-08 Codex /goal G-Editor home insights quick actions follow-up
+
+범위:
+- 홈 `칼럼 아카이브` 섹션의 하위 노드를 선택하면 즉시 `글 추가/수정`, `새 글`, `공개 보기` quick actions가 뜨도록 확장.
+- 기존 `blog-feed`/columns link 전용 quick action을 정적 home insights 노드 전체에도 적용해, 사용자가 홈 화면에서 칼럼 영역을 눌렀을 때 바로 글 작성·수정 경로를 찾을 수 있게 함.
+- admin-builder smoke에 홈 칼럼 아카이브 선택 → quick actions 노출 검증 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- hero quick menu 검증 전에 선택/focus/hover 상태를 명시적으로 정리해, 의도된 selected/focused state 노출과 기본 hidden state 검증이 섞이지 않게 테스트 안정화.

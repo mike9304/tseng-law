@@ -1596,3 +1596,18 @@
 
 메모:
 - 이 단계는 방문자 PreviewModal을 건드리지 않고 에디터 캔버스의 선택 상태만 preview state로 쓰는 보강이다. 완전한 visitor interaction mode는 별도 후속으로 남음.
+
+## 2026-05-08 Codex /goal G-Editor verification sweep
+
+검증:
+- `BASE_URL=http://localhost:3000 ... asset-image-workflow.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... clipboard-persistence.playwright.ts --workers=1` ✅ (3/3)
+- `BASE_URL=http://localhost:3000 ... seo-publish-history.playwright.ts --workers=1` ✅ (2/2)
+- `npm run test:unit` ✅ (21 files, 712 tests)
+- `npm run security:builder-routes` ✅ (71 builder route files, 61 mutation handlers covered)
+- `npm run build` ✅
+
+메모:
+- W22/W23, W26~W30의 전용 Playwright 회귀 검증과 full unit/security/build gate를 한 번 더 통과시킴.
+- build 중 Google Fonts stylesheet 최적화 다운로드 warning이 있었지만 production build 자체는 성공.
+- 아직 goal complete 아님: 사용자의 5분 직접 검증, M8 최종 Playwright 전체 묶음 정리, 체크포인트 green 승격 기준 확인이 남아 있음.

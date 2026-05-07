@@ -1179,3 +1179,28 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W21에 실제 API 저장/공개 반영 E2E와 clear semantics 보강 메모를 반영.
 - W21도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor Navigation reflection + local backend guard
+
+범위:
+- 사용자가 지적한 "상단 메뉴가 편집되지 않음/실제 사이트가 섞여 바뀐 것 같음" 문제를 다시 추적.
+- `npm run dev`가 `.env.local`의 `BLOB_READ_WRITE_TOKEN` 때문에 local runtime-data가 아니라 Vercel Blob을 쓰고 있음을 확인. 이 상태에서는 로컬 검증이 원격 저장소 지연에 흔들리고, 실제 사이트 데이터 오염 위험이 있음.
+- `src/lib/builder/site/persistence.ts`에서 dev/test는 기본적으로 local backend를 쓰게 차단. production에서만 Blob을 쓰며, dev에서 꼭 Blob을 쓰려면 `BUILDER_USE_BLOB_IN_DEV=1`을 명시해야 함. `BUILDER_SITE_BACKEND=local` override도 추가.
+- `src/app/api/builder/site/navigation/route.ts`에서 Navigation PUT 후 site page 경로와 내부 nav href를 `revalidatePath`로 정리해 공개 header가 저장 직후 최신 navigation을 보도록 보강.
+- `design-pool.playwright.ts`에 실제 UI 기반 E2E 추가: 기존 Navigation item 편집 → PUT 200 → API readback → editor header 반영 → 임시 published page public HTML/header 반영 → 원복/cleanup.
+- `http://localhost:3000/ko/admin-builder?reseed=1`로 local runtime-data를 재시드해 홈/소개/업무분야/문의/팀/FAQ/칼럼 메뉴를 로컬에 복구.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "persists Navigation" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (7/7, local backend)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (기존 `<img>` warnings only)
+- build 후 인증 포함 `HEAD /ko/admin-builder` on port 3000 ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W18/W19에 실제 UI 저장 + 공개 header 반영 E2E와 dev Blob 차단 메모를 반영.
+- 이번 변경은 로컬 검증/개발이 실제 `tseng-law.com` 저장소를 건드리지 않게 하는 안전장치다. production 반영은 별도 배포/환경 검증이 필요.
+- W18/W19도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

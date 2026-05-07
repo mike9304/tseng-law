@@ -624,6 +624,122 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     }
   });
 
+  test('persists Navigation edits through the real UI and reflects them in published headers', async ({ page }) => {
+    test.setTimeout(120_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-nav-${token}`;
+    const navLabel = `검증 메뉴 ${token}`;
+    const navHref = `/ko/${slug}`;
+    let pageId: string | null = null;
+    let originalNavigation: Array<{
+      id: string;
+      label: string | Record<string, string>;
+      href: string;
+      pageId?: string;
+    }> | null = null;
+
+    try {
+      const originalNavResponse = await page.request.get('/api/builder/site/navigation?locale=ko');
+      expect(originalNavResponse.status()).toBe(200);
+      const originalNavPayload = (await originalNavResponse.json()) as {
+        navigation?: Array<{
+          id: string;
+          label: string | Record<string, string>;
+          href: string;
+          pageId?: string;
+        }>;
+      };
+      originalNavigation = Array.isArray(originalNavPayload.navigation) ? originalNavPayload.navigation : [];
+      expect(originalNavigation.length).toBeGreaterThan(0);
+      const targetIndex = originalNavigation.findIndex((item) => item.id === 'nav-columns');
+      const resolvedTargetIndex = targetIndex >= 0 ? targetIndex : Math.max(0, originalNavigation.length - 1);
+      const targetItem = originalNavigation[resolvedTargetIndex];
+      expect(targetItem?.id).toBeTruthy();
+
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: `G Editor Navigation ${token}`,
+          document: makeSettingsReflectionDocument(token),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      expect(created.pageId).toBeTruthy();
+      pageId = created.pageId!;
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        data: {},
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      await openBuilder(page);
+      await page.locator('[class*="iconRail"]').getByRole('button', { name: 'Navigation', exact: true }).click();
+      const navDrawer = page.locator('[aria-hidden="false"]').first();
+      await expect(navDrawer.getByText('Navigation').first()).toBeVisible();
+
+      await navDrawer.getByTitle('편집').nth(resolvedTargetIndex).click();
+      const labelInput = navDrawer.locator('input[type="text"]').nth(0);
+      const hrefInput = navDrawer.locator('input[type="text"]').nth(1);
+      await expect(labelInput).toBeVisible();
+      await labelInput.fill(navLabel);
+      await hrefInput.fill(navHref);
+
+      const saveResponsePromise = page.waitForResponse((response) => (
+        response.url().includes('/api/builder/site/navigation')
+        && response.request().method() === 'PUT'
+      ));
+      await navDrawer.getByRole('button', { name: '저장' }).click();
+      const saveResponse = await saveResponsePromise;
+      expect(saveResponse.status()).toBe(200);
+      await expect(navDrawer.getByText('저장 중...')).toHaveCount(0);
+
+      const navResponse = await page.request.get('/api/builder/site/navigation?locale=ko');
+      expect(navResponse.status()).toBe(200);
+      const navPayload = (await navResponse.json()) as {
+        navigation?: Array<{ id: string; label: string | Record<string, string>; href: string }>;
+      };
+      const persisted = navPayload.navigation?.find((item) => item.id === targetItem!.id);
+      expect(persisted?.href).toBe(navHref);
+      expect(typeof persisted?.label === 'string' ? persisted.label : persisted?.label.ko).toBe(navLabel);
+
+      const editorHeaderLink = page.locator(`[data-builder-nav-item-id="${targetItem!.id}"]`).first();
+      await expect(editorHeaderLink).toHaveText(navLabel);
+      await expect(editorHeaderLink).toHaveAttribute('href', navHref);
+
+      await expect.poll(async () => {
+        const publicHtmlResponse = await page.request.get(`/ko/${slug}`);
+        if (publicHtmlResponse.status() !== 200) return 'not-ready';
+        const publicHtml = await publicHtmlResponse.text();
+        return `${publicHtml.includes(navLabel)}:${publicHtml.includes(`href="${navHref}"`)}`;
+      }, { timeout: 30_000 }).toBe('true:true');
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      const publicHeaderLink = page.locator('header a').filter({ hasText: navLabel }).first();
+      await expect(publicHeaderLink).toBeVisible();
+      await expect(publicHeaderLink).toHaveAttribute('href', navHref);
+    } finally {
+      if (originalNavigation) {
+        await page.request.put('/api/builder/site/navigation', {
+          data: {
+            locale: 'ko',
+            navigation: originalNavigation,
+          },
+          failOnStatusCode: false,
+        });
+      }
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
+    }
+  });
+
   test('covers template gallery viewport, thumbnail renderer, hover card, and nested preview behavior', async ({ page }) => {
     await openBuilder(page);
 

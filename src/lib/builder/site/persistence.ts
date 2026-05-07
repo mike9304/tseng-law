@@ -36,6 +36,8 @@ let siteWriteQueue: Promise<void> = Promise.resolve();
 function isBlobBackend(): boolean {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
   if (process.env.CONSULTATION_LOG_BACKEND === 'local') return false;
+  if (process.env.BUILDER_SITE_BACKEND === 'local') return false;
+  if (process.env.NODE_ENV !== 'production' && process.env.BUILDER_USE_BLOB_IN_DEV !== '1') return false;
   return true;
 }
 

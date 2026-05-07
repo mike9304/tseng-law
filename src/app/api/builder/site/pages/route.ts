@@ -49,12 +49,26 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid slug: lowercase alphanumeric with hyphens only' }, { status: 400 });
   }
 
+  const site = await readSiteDocument('default', locale);
+  const duplicate = site.pages.find((entry) => entry.locale === locale && entry.slug === slug);
+  if (duplicate) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'duplicate_slug',
+        message: 'A page with this slug already exists.',
+        pageId: duplicate.pageId,
+      },
+      { status: 409 },
+    );
+  }
+
   const page = await createPage('default', locale, slug, title);
 
   if (body.linkedFromPageId) {
-    const site = await readSiteDocument('default', locale);
-    const sourcePage = site.pages.find((entry) => entry.pageId === body.linkedFromPageId);
-    const createdPage = site.pages.find((entry) => entry.pageId === page.pageId);
+    const nextSite = await readSiteDocument('default', locale);
+    const sourcePage = nextSite.pages.find((entry) => entry.pageId === body.linkedFromPageId);
+    const createdPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
     if (sourcePage && createdPage) {
       sourcePage.linkedPageIds = { ...(sourcePage.linkedPageIds ?? {}), [locale]: page.pageId };
       createdPage.linkedPageIds = {
@@ -62,8 +76,8 @@ export async function POST(request: NextRequest) {
         [sourcePage.locale]: sourcePage.pageId,
       };
       createdPage.title = { ...sourcePage.title, [locale]: title };
-      site.updatedAt = new Date().toISOString();
-      await writeSiteDocument(site);
+      nextSite.updatedAt = new Date().toISOString();
+      await writeSiteDocument(nextSite);
     }
   }
 

@@ -1361,3 +1361,26 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W12에 generic Google map Content inspector 주소/줌 저장/리로드 검증 메모를 반영.
 - W12도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor W14 duplicate page slug guard
+
+범위:
+- Pages 새 페이지 생성 API가 같은 locale/slug로 중복 page를 만들 수 있던 문제를 차단.
+- `/api/builder/site/pages` POST에서 기존 site document의 같은 locale/slug를 먼저 검사하고, 중복이면 기존 `pageId`와 함께 `409 duplicate_slug`를 반환하게 함.
+- `linkedFromPageId` 생성 경로의 local 변수 충돌을 정리해 site document readback과 linked page 생성이 같은 route 안에서 안전하게 공존하도록 함.
+- `design-pool.playwright.ts`에 API 회귀 테스트 추가: blank page 생성 → 같은 slug 재요청 → 409 확인 → pages 목록에 하나만 존재 → 기존 blank draft `nodes: []` 보존 → cleanup.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "duplicate page slugs" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (10/10)
+- tracked builder-editor Playwright bundle ✅ 21/21
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 files / 61 mutation handlers)
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W14에 duplicate slug 409 방어와 기존 draft 보존 검증 메모를 반영.
+- W14도 이름 변경/삭제 전체 CRUD와 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

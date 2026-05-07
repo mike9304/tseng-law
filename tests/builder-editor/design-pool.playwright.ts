@@ -954,6 +954,80 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     }
   });
 
+  test('rejects duplicate page slugs without replacing the existing draft', async ({ page }) => {
+    test.setTimeout(60_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-duplicate-${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(slug));
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: `Duplicate source ${token}`,
+          blank: true,
+        },
+        headers: mutationHeaders(slug),
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { pageId?: string; success?: boolean; error?: string };
+      expect(created.success, created.error).toBe(true);
+      expect(created.pageId).toBeTruthy();
+      pageId = created.pageId!;
+
+      const duplicateResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: `Duplicate rejected ${token}`,
+          blank: true,
+        },
+        headers: mutationHeaders(`${slug}-dupe`),
+        failOnStatusCode: false,
+      });
+      expect(duplicateResponse.status()).toBe(409);
+      const duplicatePayload = (await duplicateResponse.json()) as {
+        error?: string;
+        pageId?: string;
+        success?: boolean;
+      };
+      expect(duplicatePayload).toMatchObject({
+        success: false,
+        error: 'duplicate_slug',
+        pageId,
+      });
+
+      const pagesResponse = await page.request.get('/api/builder/site/pages?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(pagesResponse.status()).toBe(200);
+      const pagesPayload = (await pagesResponse.json()) as {
+        pages?: Array<{ pageId?: string; slug?: string; title?: Record<string, string> }>;
+      };
+      const matchingPages = pagesPayload.pages?.filter((entry) => entry.slug === slug) ?? [];
+      expect(matchingPages).toHaveLength(1);
+      expect(matchingPages[0]?.pageId).toBe(pageId);
+
+      const draftResponse = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+        headers: mutationHeaders(slug),
+      });
+      expect(draftResponse.status()).toBe(200);
+      const draftPayload = (await draftResponse.json()) as { document?: { nodes?: unknown[] } };
+      expect(draftPayload.document?.nodes ?? null).toEqual([]);
+    } finally {
+      pageId ??= await findPageIdBySlug(page, slug);
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('covers template gallery viewport, thumbnail renderer, hover card, and nested preview behavior', async ({ page }) => {
     await openBuilder(page);
 

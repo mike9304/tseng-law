@@ -293,23 +293,6 @@ export default function ColumnEditor({
             placeholder="칼럼 제목"
           />
         </label>
-        <details
-          className="column-editor-summary-details"
-          open={summaryOpen}
-          onToggle={(event) => setSummaryOpen(event.currentTarget.open)}
-        >
-          <summary>목록/검색 설명 직접 입력</summary>
-          <label className="column-editor-field">
-            <textarea
-              className="column-editor-summary-input"
-              value={summary}
-              onChange={(e) => setSummary(e.target.value)}
-              placeholder="비워두면 본문 앞부분으로 자동 생성됩니다."
-              rows={2}
-            />
-            <small>비워두면 본문 앞부분이 칼럼 목록과 검색 설명으로 자동 저장됩니다.</small>
-          </label>
-        </details>
       </div>
 
       <div className="column-editor-toolbar">
@@ -413,6 +396,26 @@ export default function ColumnEditor({
       </div>
 
       <EditorContent editor={editor} />
+      <details
+        className="column-editor-summary-details column-editor-summary-details--after"
+        open={summaryOpen}
+        onToggle={(event) => setSummaryOpen(event.currentTarget.open)}
+      >
+        <summary>
+          <span>목록 설명</span>
+          <strong>{summary.trim() ? '직접 입력 사용 중' : '본문 앞부분으로 자동 생성'}</strong>
+        </summary>
+        <label className="column-editor-field">
+          <textarea
+            className="column-editor-summary-input"
+            value={summary}
+            onChange={(e) => setSummary(e.target.value)}
+            placeholder="비워두면 본문 앞부분으로 자동 생성됩니다."
+            rows={2}
+          />
+          <small>티스토리처럼 제목과 본문만 쓰면 자동으로 목록 설명이 저장됩니다. 필요한 경우에만 직접 입력하세요.</small>
+        </label>
+      </details>
       <AssetLibraryModal
         open={assetLibraryOpen}
         locale={locale}

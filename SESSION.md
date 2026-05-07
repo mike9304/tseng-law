@@ -1531,3 +1531,19 @@
 메모:
 - controlled textarea가 quick panel 안에서 React rerender와 충돌해 입력값이 되돌아가는 케이스가 있어, 주소 필드는 비제어 입력 + `주소 적용`/blur commit 구조로 바꿈.
 - 컨테이너 pointer-event를 전역으로 풀면 아래 섹션이 위 섹션 hover를 가로채는 회귀가 생겨, 기존 hit-test 정책은 유지하고 지도 자체 quick panel을 상시 노출하는 방식으로 해결.
+
+## 2026-05-08 Codex /goal G-Editor columns writer simplification follow-up
+
+범위:
+- 칼럼 새 글 화면의 첫 작성면을 티스토리식으로 단순화: 제목 입력 → 툴바 → 본문 에디터가 바로 이어지게 하고, 목록/검색 요약 입력은 본문 아래 선택 설정으로 이동.
+- 요약 설정 summary에는 `본문 앞부분으로 자동 생성` 상태를 보여 사용자가 요약을 반드시 써야 하는 화면처럼 보이지 않게 조정.
+- 기존 자동 요약 저장 로직은 유지해 제목/본문만 작성해도 칼럼 목록 summary가 본문 앞부분으로 저장됨.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 ... columns-ui-workflow.playwright.ts --workers=1` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 칼럼 목록/글쓰기의 편집 홈 복귀 dock과 `?new=1` quick start는 기존 구현/테스트가 유지됨.

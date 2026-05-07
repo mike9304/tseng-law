@@ -82,6 +82,56 @@ function makeSettingsReflectionDocument(token: string) {
   };
 }
 
+function makeGlobalFooterDocument(token: string, text: string) {
+  const now = new Date().toISOString();
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `global-footer-${token}`,
+    stageWidth: 1280,
+    stageHeight: 132,
+    nodes: [
+      {
+        id: `global-footer-text-${token}`,
+        kind: 'text',
+        rect: { x: 84, y: 44, width: 760, height: 36 },
+        style: { ...baseNodeStyle, borderRadius: 8 },
+        zIndex: 1,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          text,
+          fontSize: 18,
+          color: '#0f172a',
+          fontWeight: 'bold',
+          align: 'left',
+          lineHeight: 1.2,
+          letterSpacing: 0,
+          fontFamily: 'system-ui',
+          verticalAlign: 'top',
+          textTransform: 'none',
+          as: 'p',
+        },
+      },
+    ],
+  };
+}
+
+function makeEmptyGlobalFooterDocument() {
+  const now = new Date().toISOString();
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: 'global-footer-test-cleanup',
+    stageWidth: 1280,
+    stageHeight: 240,
+    nodes: [],
+  };
+}
+
 async function waitForEditorCss(page: Page): Promise<void> {
   const isStyled = async () => page.locator('header[class*="topBar"]').first().evaluate((element) => {
     const style = window.getComputedStyle(element);
@@ -488,11 +538,24 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       theme?: Record<string, unknown>;
       darkMode?: Record<string, unknown>;
     } | null = null;
+    let originalFooterDocument: unknown | null = null;
 
     try {
       const originalSettingsResponse = await page.request.get('/api/builder/site/settings?locale=ko');
       expect(originalSettingsResponse.status()).toBe(200);
       originalSettingsPayload = await originalSettingsResponse.json();
+      const originalFooterResponse = await page.request.get('/api/builder/site/footer/draft?locale=ko', {
+        failOnStatusCode: false,
+      });
+      if (originalFooterResponse.status() === 200) {
+        const payload = (await originalFooterResponse.json()) as { document?: unknown };
+        originalFooterDocument = payload.document ?? null;
+      }
+      await page.request.put('/api/builder/site/footer/draft?locale=ko', {
+        data: {
+          document: makeEmptyGlobalFooterDocument(),
+        },
+      });
 
       await openBuilder(page);
 
@@ -620,6 +683,12 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
           failOnStatusCode: false,
         });
       }
+      await page.request.put('/api/builder/site/footer/draft?locale=ko', {
+        data: {
+          document: originalFooterDocument ?? makeEmptyGlobalFooterDocument(),
+        },
+        failOnStatusCode: false,
+      });
       await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
     }
   });
@@ -732,6 +801,88 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
         });
       }
       if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
+    }
+  });
+
+  test('reflects a saved Global Footer canvas across published pages', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const footerText = `공유 푸터 검증 ${token}`;
+    const slugs = [`g-editor-footer-a-${token}`, `g-editor-footer-b-${token}`];
+    const pageIds: string[] = [];
+    let originalFooterDocument: unknown | null = null;
+
+    try {
+      const originalFooterResponse = await page.request.get('/api/builder/site/footer/draft?locale=ko', {
+        failOnStatusCode: false,
+      });
+      if (originalFooterResponse.status() === 200) {
+        const payload = (await originalFooterResponse.json()) as { document?: unknown };
+        originalFooterDocument = payload.document ?? null;
+      }
+
+      for (const slug of slugs) {
+        const createResponse = await page.request.post('/api/builder/site/pages', {
+          data: {
+            locale: 'ko',
+            slug,
+            title: `G Editor Footer ${token}`,
+            document: makeSettingsReflectionDocument(`${token}-${slug}`),
+          },
+        });
+        expect(createResponse.status()).toBe(200);
+        const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+        expect(created.success, created.error).toBe(true);
+        expect(created.pageId).toBeTruthy();
+        pageIds.push(created.pageId!);
+
+        const publishResponse = await page.request.post(`/api/builder/site/pages/${created.pageId}/publish`, {
+          data: {},
+        });
+        expect(publishResponse.status()).toBe(200);
+      }
+
+      const footerResponse = await page.request.put('/api/builder/site/footer/draft?locale=ko', {
+        data: {
+          document: makeGlobalFooterDocument(token, footerText),
+        },
+      });
+      expect(footerResponse.status()).toBe(200);
+      const savedFooter = (await footerResponse.json()) as {
+        ok?: boolean;
+        document?: { stageHeight?: number; nodes?: Array<{ content?: { text?: string } }> };
+      };
+      expect(savedFooter.ok).toBe(true);
+      expect(savedFooter.document?.stageHeight).toBe(132);
+      expect(savedFooter.document?.nodes?.some((node) => node.content?.text === footerText)).toBe(true);
+
+      for (const slug of slugs) {
+        await expect.poll(async () => {
+          const response = await page.request.get(`/ko/${slug}`);
+          if (response.status() !== 200) return 'not-ready';
+          const html = await response.text();
+          return String(html.includes(footerText));
+        }, { timeout: 20_000 }).toBe('true');
+
+        await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+        const globalFooter = page.locator('footer[data-builder-global-section="footer"]').first();
+        await expect(globalFooter).toBeVisible();
+        await expect(globalFooter).toContainText(footerText);
+      }
+    } finally {
+      await page.request.put('/api/builder/site/footer/draft?locale=ko', {
+        data: {
+          document: originalFooterDocument ?? makeEmptyGlobalFooterDocument(),
+        },
+        failOnStatusCode: false,
+      });
+      for (const pageId of pageIds) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
           failOnStatusCode: false,
         });

@@ -6,13 +6,19 @@ function isIgnoredBrowserError(message: string): boolean {
   return message === 'Invalid or unexpected token';
 }
 
+function canvasEditor(page: Page): Locator {
+  return page.getByRole('application', { name: 'Canvas editor' });
+}
+
 async function firstVisibleNode(page: Page): Promise<Locator> {
+  const canvas = canvasEditor(page);
+  await expect(canvas).toBeVisible();
   const candidates = [
-    page.locator('[data-node-id="home-hero-subtitle"]:visible').first(),
-    page.locator('[data-node-id*="subtitle"]:visible').first(),
-    page.locator('[data-node-id*="title"]:visible').first(),
-    page.locator('[data-node-id*="copy"]:visible').first(),
-    page.locator('[data-node-id]:visible').first(),
+    canvas.locator('[data-node-id="home-hero-subtitle"]:visible').first(),
+    canvas.locator('[data-node-id*="subtitle"]:visible').first(),
+    canvas.locator('[data-node-id*="title"]:visible').first(),
+    canvas.locator('[data-node-id*="copy"]:visible').first(),
+    canvas.locator('[data-node-id]:visible').first(),
   ];
   for (const candidate of candidates) {
     if ((await candidate.count()) > 0) {
@@ -20,14 +26,15 @@ async function firstVisibleNode(page: Page): Promise<Locator> {
       return candidate;
     }
   }
-  const fallback = page.locator('[data-node-id]:visible').first();
+  const fallback = canvas.locator('[data-node-id]:visible').first();
   await expect(fallback).toBeVisible();
   return fallback;
 }
 
 async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Locator> {
+  const canvas = canvasEditor(page);
   let selectedNode = node ?? page
-    .locator('[class*="nodeSelected"][data-node-id]:visible')
+    .locator('[role="application"][aria-label="Canvas editor"] [class*="nodeSelected"][data-node-id]:visible')
     .filter({ has: page.locator('[class*="rotationHandle"]') })
     .last();
 
@@ -61,7 +68,7 @@ async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Lo
       force: true,
     });
     selectedNode = page
-      .locator('[class*="nodeSelected"][data-node-id]:visible')
+      .locator('[role="application"][aria-label="Canvas editor"] [class*="nodeSelected"][data-node-id]:visible')
       .filter({ has: page.locator('[class*="rotationHandle"]') })
       .last();
   }
@@ -69,7 +76,7 @@ async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Lo
   await expect(selectedNode).toBeVisible();
   const selectedHandleCount = await selectedNode.locator('[class*="resizeHandle"]:visible').count();
   if (selectedHandleCount !== 8) {
-    const selectedWithHandles = page
+    const selectedWithHandles = canvas
       .locator('[class*="nodeSelected"][data-node-id]:visible')
       .filter({ has: page.locator('[class*="rotationHandle"]') })
       .last();
@@ -91,7 +98,7 @@ async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Lo
           : { x: 12, y: 12 },
         force: true,
       });
-      selectedNode = page
+      selectedNode = canvas
         .locator('[class*="nodeSelected"][data-node-id]:visible')
         .filter({ has: page.locator('[class*="rotationHandle"]') })
         .last();

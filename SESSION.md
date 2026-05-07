@@ -1240,3 +1240,28 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W11에 좌하단 chip/glyph 직접 검증 메모를 반영.
 - W11도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor W20 global footer reflection
+
+범위:
+- Global Header/Footer editor가 120px/240px급 짧은 shared canvas를 써야 하는데 공용 canvas schema가 `stageHeight < 400`을 reject해 저장 시 기본 sandbox canvas로 fallback할 수 있던 문제를 수정.
+- `builderCanvasDocumentSchema.stageHeight` 최소값을 64로 낮춰 header/footer draft가 실제 높이 그대로 normalize/save되게 함.
+- `/api/builder/site/header/draft`, `/api/builder/site/footer/draft` PUT 후 site pages/internal nav href를 `revalidatePath` 처리해 public 페이지가 저장 직후 shared header/footer 변경을 보게 보강.
+- `design-pool.playwright.ts`에 Global Footer 실제 저장/공개 반영 E2E 추가: 132px footer canvas PUT → API response가 같은 text/stageHeight 저장 확인 → 임시 published page 2개에서 `footer[data-builder-global-section="footer"]`에 같은 text 렌더 확인 → 원복/cleanup.
+- Site Settings public footer 테스트는 Global Footer가 있으면 legacy footer가 대체되는 정상 동작과 충돌하므로, 테스트 동안 Global Footer를 비우고 끝나면 원복하도록 격리.
+- `admin-builder.playwright.ts` 선택 핸들 helper가 전역 `[data-node-id]` 대신 `Canvas editor` role 내부 node만 잡도록 범위를 좁혀 Pages drawer/public node와 섞이는 flake를 제거.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "Global Footer" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (8/8)
+- tracked builder-editor Playwright bundle ✅ 15/15
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 files / 61 mutation handlers)
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W20에 짧은 global footer 저장/두 published page 반영 E2E와 header/footer revalidate 보강 메모를 반영.
+- W20도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

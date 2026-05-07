@@ -386,7 +386,7 @@ async function waitForPublishedNode(page: Page, slug: string, nodeId: string): P
 }
 
 test.describe('/ko/admin-builder office map public reflection', () => {
-  test('edits a generic Google map address and zoom through the Content inspector', async ({ page }) => {
+  test('edits a generic Google map address and zoom through the quick panel and Content inspector', async ({ page }) => {
     test.setTimeout(90_000);
 
     const token = `generic-map-${Date.now().toString(36)}`;
@@ -394,6 +394,7 @@ test.describe('/ko/admin-builder office map public reflection', () => {
     const title = `Generic Map ${token}`;
     const mapId = `generic-map-node-${token}`;
     const originalAddress = `台北市大安區復興南路一段 ${token}`;
+    const quickAddress = `台中市西區公益路 ${token}`;
     const nextAddress = `高雄市左營區安吉街233號 ${token}`;
     let pageId: string | null = null;
     await page.setExtraHTTPHeaders(mutationHeaders(token));
@@ -415,15 +416,39 @@ test.describe('/ko/admin-builder office map public reflection', () => {
 
       const mapNode = page.locator(`[data-node-id="${mapId}"]`).first();
       await expect(mapNode).toBeVisible();
+
+      const quickEdit = mapNode.locator('[data-builder-map-quick-edit="true"]').first();
+      await expect(quickEdit).toBeVisible();
+      await quickEdit.getByLabel('Map quick address').fill(quickAddress);
+      await quickEdit.getByRole('button', { name: '주소 적용' }).click();
+      for (let i = 0; i < 5; i += 1) {
+        await quickEdit.getByRole('button', { name: 'Increase quick map zoom' }).click();
+      }
+
+      const mapFrame = mapNode.locator('iframe[title="Google Maps"]').first();
+      await expect(mapFrame).toBeVisible();
+      await expect.poll(async () => {
+        const src = await mapFrame.getAttribute('src');
+        if (!src) return null;
+        const url = new URL(src);
+        return {
+          address: url.searchParams.get('q'),
+          zoom: url.searchParams.get('z'),
+        };
+      }, { timeout: 10_000 }).toEqual({
+        address: quickAddress,
+        zoom: '17',
+      });
+
       await selectLayerNode(page, mapId, 'map');
       await page.getByRole('button', { name: 'content' }).click({ force: true });
       await expect(page.locator('[data-builder-map-inspector="true"]')).toBeVisible();
+      await expect(page.getByLabel('Map address')).toHaveValue(quickAddress);
+      await expect(page.getByRole('slider', { name: 'Map zoom' })).toHaveValue('17');
 
       await page.getByLabel('Map address').fill(nextAddress);
       await page.getByRole('slider', { name: 'Map zoom' }).fill('18');
 
-      const mapFrame = mapNode.locator('iframe[title="Google Maps"]').first();
-      await expect(mapFrame).toBeVisible();
       await expect.poll(async () => {
         const src = await mapFrame.getAttribute('src');
         if (!src) return null;

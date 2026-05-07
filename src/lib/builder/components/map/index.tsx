@@ -71,7 +71,7 @@ function MapRender({ node, mode = 'preview' }: BuilderComponentRenderProps) {
             pointerEvents: 'none',
           }}
         >
-          Map · edit address in Content
+          Map · 위치 변경
         </div>
       ) : null}
     </div>

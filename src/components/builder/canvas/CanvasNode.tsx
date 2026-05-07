@@ -161,6 +161,13 @@ function mapAddressValue(node: BuilderCanvasNode): string {
   return typeof value === 'string' ? value : '';
 }
 
+function mapZoomValue(node: BuilderCanvasNode): number {
+  const value = node.content && 'zoom' in node.content ? node.content.zoom : 15;
+  return typeof value === 'number' && Number.isFinite(value)
+    ? Math.max(1, Math.min(20, Math.round(value)))
+    : 15;
+}
+
 function isOfficeMapTarget(node: BuilderCanvasNode): boolean {
   return node.kind === 'map' && /^home-offices-layout-\d+-map$/.test(node.id);
 }
@@ -205,6 +212,7 @@ export default function CanvasNode({
   const component = getComponent(node.kind);
   const theme = useBuilderTheme();
   const nodeRef = useRef<HTMLDivElement>(null);
+  const mapQuickAddressRef = useRef<HTMLTextAreaElement>(null);
   const rotationDrag = useRef<{ startAngle: number; startRotation: number } | null>(null);
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
@@ -414,12 +422,18 @@ export default function CanvasNode({
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
   const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
   const nodesById = new Map(allNodes.map((candidate) => [candidate.id, candidate]));
-  const officeQuickEdit = selected && isOfficeMapTarget(node)
+  const showMapQuickEdit = node.kind === 'map' && isInteractive && !node.locked;
+  const mapQuickEdit = showMapQuickEdit
     ? {
-        layoutId: node.id.replace(/-map$/, ''),
-        cardId: `${node.id.replace(/-map$/, '')}-card`,
+        office: isOfficeMapTarget(node)
+          ? {
+              layoutId: node.id.replace(/-map$/, ''),
+              cardId: `${node.id.replace(/-map$/, '')}-card`,
+            }
+          : null,
       }
     : null;
+  const officeQuickEdit = mapQuickEdit?.office ?? null;
   const officeTitleNode = officeQuickEdit
     ? nodesById.get(`${officeQuickEdit.cardId}-title`)
     : undefined;
@@ -445,9 +459,9 @@ export default function CanvasNode({
     .map((cid) => nodesById.get(cid))
     .filter((n): n is BuilderCanvasNode => n != null && n.visible);
 
-  const updateOfficeAddress = useCallback(
+  const updateMapAddress = useCallback(
     (nextAddress: string, nextMapsUrl = googleMapsSearchUrl(nextAddress)) => {
-      updateNodeContentInStore(node.id, { address: nextAddress, zoom: 16 });
+      updateNodeContentInStore(node.id, { address: nextAddress });
       if (officeAddressNode) {
         updateNodeContentInStore(officeAddressNode.id, { text: nextAddress });
       }
@@ -456,6 +470,23 @@ export default function CanvasNode({
       }
     },
     [node.id, officeAddressNode, officeMapLinkNode, updateNodeContentInStore],
+  );
+
+  const updateMapZoom = useCallback(
+    (nextZoom: number) => {
+      updateNodeContentInStore(node.id, {
+        zoom: Math.max(1, Math.min(20, Math.round(nextZoom))),
+      });
+    },
+    [node.id, updateNodeContentInStore],
+  );
+
+  const updateOfficeAddress = useCallback(
+    (nextAddress: string, nextMapsUrl = googleMapsSearchUrl(nextAddress)) => {
+      updateMapAddress(nextAddress, nextMapsUrl);
+      updateMapZoom(16);
+    },
+    [updateMapAddress, updateMapZoom],
   );
 
   const applyOfficePreset = useCallback(
@@ -483,6 +514,18 @@ export default function CanvasNode({
       updateNodeContentInStore,
       updateOfficeAddress,
     ],
+  );
+
+  const applyMapPreset = useCallback(
+    (preset: OfficeQuickPreset) => {
+      if (officeQuickEdit) {
+        applyOfficePreset(preset);
+        return;
+      }
+      updateMapAddress(preset.address, preset.mapsUrl);
+      updateMapZoom(16);
+    },
+    [applyOfficePreset, officeQuickEdit, updateMapAddress, updateMapZoom],
   );
 
   const renderNestedChildNodes = () =>
@@ -559,6 +602,9 @@ export default function CanvasNode({
   const renderedOpacity = typeof editorAnimationStyle.opacity === 'number'
     ? (node.style.opacity / 100) * editorAnimationStyle.opacity
     : node.style.opacity / 100;
+  const nodePointerEvents = isDimmedRoot || isActiveGroupFrame || (isContainerWithChildren && !isEditing)
+    ? 'none'
+    : 'auto';
 
   if (isHiddenAtViewport) {
     return null;
@@ -578,7 +624,7 @@ export default function CanvasNode({
         transform: `rotate(${node.rotation}deg)`,
         transformOrigin: 'center center',
         opacity: isDimmedRoot ? 0.3 : 1,
-        pointerEvents: isDimmedRoot || isActiveGroupFrame || (isContainerWithChildren && !isEditing) ? 'none' : undefined,
+        pointerEvents: nodePointerEvents,
         outline: isActiveGroupFrame ? '2px dashed rgba(37, 99, 235, 0.72)' : undefined,
         outlineOffset: isActiveGroupFrame ? 4 : undefined,
         fontSize: effectiveFontSize ? `${effectiveFontSize}px` : undefined,
@@ -717,9 +763,10 @@ export default function CanvasNode({
           </button>
         </div>
       ) : null}
-      {officeQuickEdit ? (
+      {mapQuickEdit ? (
         <div
-          className={styles.nodeMapQuickEdit}
+          className={`${styles.nodeMapQuickEdit} ${officeQuickEdit ? styles.nodeMapQuickEditSynced : ''}`}
+          data-builder-map-quick-edit="true"
           onPointerDown={(event) => {
             event.stopPropagation();
           }}
@@ -735,15 +782,21 @@ export default function CanvasNode({
         >
           <div className={styles.nodeMapQuickEditHeader}>
             <span>Google Map</span>
-            <strong>위치 편집</strong>
+            <strong>{officeQuickEdit ? '사무소 위치 편집' : '위치 편집'}</strong>
           </div>
           <div className={styles.nodeMapPresetGrid}>
             {currentOfficeQuickPresets().map((preset) => (
               <button
                 key={preset.title}
                 type="button"
-                className={styles.nodeMapPresetButton}
-                onClick={() => applyOfficePreset(preset)}
+                className={`${styles.nodeMapPresetButton} ${
+                  mapAddressValue(node) === preset.address ? styles.nodeMapPresetButtonActive : ''
+                }`}
+                aria-pressed={mapAddressValue(node) === preset.address}
+                onClick={() => {
+                  if (!selected) onSelect(node.id, false);
+                  applyMapPreset(preset);
+                }}
               >
                 {preset.title}
               </button>
@@ -752,11 +805,55 @@ export default function CanvasNode({
           <label className={styles.nodeMapAddressField}>
             <span>주소</span>
             <textarea
+              key={`${node.id}-${mapAddressValue(node)}`}
+              ref={mapQuickAddressRef}
+              aria-label="Map quick address"
               rows={2}
-              value={mapAddressValue(node)}
-              onChange={(event) => updateOfficeAddress(event.target.value)}
+              defaultValue={mapAddressValue(node)}
+              onBlur={(event) => updateMapAddress(event.currentTarget.value)}
             />
           </label>
+          <button
+            type="button"
+            className={styles.nodeMapApplyButton}
+            onClick={() => updateMapAddress(mapQuickAddressRef.current?.value ?? mapAddressValue(node))}
+          >
+            주소 적용
+          </button>
+          <label className={styles.nodeMapZoomField}>
+            <span>줌 {mapZoomValue(node)}</span>
+            <div className={styles.nodeMapZoomRow}>
+              <button
+                type="button"
+                aria-label="Decrease quick map zoom"
+                disabled={mapZoomValue(node) <= 1}
+                onClick={() => updateMapZoom(mapZoomValue(node) - 1)}
+              >
+                -
+              </button>
+              <input
+                type="range"
+                min={1}
+                max={20}
+                step={1}
+                aria-label="Map quick zoom"
+                value={mapZoomValue(node)}
+                onInput={(event) => updateMapZoom(Number(event.currentTarget.value))}
+                onChange={(event) => updateMapZoom(Number(event.target.value))}
+              />
+              <button
+                type="button"
+                aria-label="Increase quick map zoom"
+                disabled={mapZoomValue(node) >= 20}
+                onClick={() => updateMapZoom(mapZoomValue(node) + 1)}
+              >
+                +
+              </button>
+            </div>
+          </label>
+          {officeQuickEdit ? (
+            <div className={styles.nodeMapSyncNote}>지도, 주소 카드, 길찾기 링크 동시 변경</div>
+          ) : null}
         </div>
       ) : null}
       <div
@@ -791,6 +888,25 @@ export default function CanvasNode({
         {body}
         {!isContainerLikeKind(node.kind) ? renderNestedChildNodes() : null}
       </div>
+      {node.kind === 'map' && !node.locked && isInteractive ? (
+        <div
+          className={styles.nodeMapHitArea}
+          data-builder-map-hit-area="true"
+          aria-hidden
+          onPointerDown={(event) => {
+            event.stopPropagation();
+            if (event.button !== 0) return;
+            const additive = event.metaKey || event.ctrlKey || event.shiftKey;
+            onSelect(node.id, additive);
+            if (additive) return;
+            onMoveStart(node.id, event);
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+            if (!selected) onSelect(node.id, false);
+          }}
+        />
+      ) : null}
       {showSelectionHandles ? (
         <>
           <div className={styles.rotationLine} />

@@ -1513,3 +1513,21 @@
 메모:
 - 사용자가 지적한 "지도 눌러서 다른 지역으로 바꾸는 게 간편하지 않음"은 inspector-only 흐름이 원인이었고, 이번 패스에서 캔버스 직접 quick edit로 보강.
 - 남은 원본 홈페이지 parity gap은 services/FAQ accordion의 방문자 상태 preview와 builder edit surface 분리, 칼럼 목록 페이지/글쓰기 화면의 티스토리식 작성 UX 추가 개선.
+
+## 2026-05-08 Codex /goal G-Editor map quick edit usability follow-up
+
+범위:
+- 모든 `map` 노드에 캔버스 상시 quick edit 패널을 노출해 지도 노드를 정확히 선택하지 않아도 타이중/가오슝/타이베이 프리셋, 주소 적용, 줌 +/-를 바로 조작 가능하게 함.
+- 사무소 지도 프리셋은 기존처럼 지도 주소, 사무소명, 카드 주소, 전화 href, 길찾기 URL을 함께 동기화하고, 프리셋 버튼 조작 시 지도 노드 선택 상태도 같이 맞춤.
+- 일반 map 노드도 quick panel에서 주소 입력 후 `주소 적용`, 줌 버튼 변경 → iframe query/draft 저장/reload 유지까지 검증.
+- 지도 edit-mode overlay 문구를 `Map · 위치 변경`으로 바꿔 inspector-only 흐름처럼 보이지 않게 조정.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... office-map-public.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- controlled textarea가 quick panel 안에서 React rerender와 충돌해 입력값이 되돌아가는 케이스가 있어, 주소 필드는 비제어 입력 + `주소 적용`/blur commit 구조로 바꿈.
+- 컨테이너 pointer-event를 전역으로 풀면 아래 섹션이 위 섹션 hover를 가로채는 회귀가 생겨, 기존 hit-test 정책은 유지하고 지도 자체 quick panel을 상시 노출하는 방식으로 해결.

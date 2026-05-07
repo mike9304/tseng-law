@@ -2309,19 +2309,24 @@
 
 .nodeMapQuickEdit {
   position: absolute;
-  left: 12px;
-  top: 12px;
+  left: 14px;
+  top: 14px;
   z-index: 13;
   display: grid;
-  width: min(320px, calc(100% - 24px));
+  width: clamp(286px, 58%, 380px);
+  max-width: calc(100% - 28px);
   gap: 8px;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid var(--editor-border-hairline, #dbe2ea);
   border-radius: 8px;
   background: var(--editor-panel-elevated, #fff);
   box-shadow: var(--editor-shadow-popover, 0 16px 36px rgba(15, 23, 42, 0.18));
   color: var(--editor-fg-primary, #0f172a);
   pointer-events: auto;
+}
+
+.nodeMapQuickEditSynced {
+  border-color: color-mix(in srgb, var(--editor-accent, #116dff) 34%, var(--editor-border-hairline, #dbe2ea));
 }
 
 .nodeMapQuickEditHeader {
@@ -2370,12 +2375,20 @@
   background: var(--editor-accent-soft, #eff6ff);
 }
 
+.nodeMapPresetButtonActive {
+  border-color: var(--editor-accent, #116dff);
+  background: var(--editor-accent-soft, #eff6ff);
+  color: var(--editor-accent, #116dff);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--editor-accent, #116dff) 16%, transparent);
+}
+
 .nodeMapAddressField {
   display: grid;
   gap: 4px;
 }
 
-.nodeMapAddressField span {
+.nodeMapAddressField span,
+.nodeMapZoomField span {
   color: var(--editor-fg-muted, #64748b);
   font-size: 10px;
   font-weight: 850;
@@ -2399,6 +2412,81 @@
 .nodeMapAddressField textarea:focus {
   border-color: var(--editor-accent, #116dff);
   box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.12);
+}
+
+.nodeMapApplyButton {
+  min-height: 28px;
+  border: 1px solid var(--editor-accent, #116dff);
+  border-radius: 6px;
+  background: var(--editor-accent, #116dff);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.nodeMapApplyButton:hover {
+  box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.16);
+}
+
+.nodeMapZoomField {
+  display: grid;
+  gap: 5px;
+}
+
+.nodeMapZoomRow {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) 30px;
+  align-items: center;
+  gap: 7px;
+}
+
+.nodeMapZoomRow button {
+  width: 30px;
+  height: 28px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 6px;
+  background: var(--editor-panel, #fff);
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.nodeMapZoomRow button:hover:not(:disabled) {
+  border-color: var(--editor-accent, #116dff);
+  background: var(--editor-accent-soft, #eff6ff);
+}
+
+.nodeMapZoomRow button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.nodeMapZoomRow input {
+  width: 100%;
+  accent-color: var(--editor-accent, #116dff);
+}
+
+.nodeMapSyncNote {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--editor-accent-soft, #eff6ff);
+  color: var(--editor-accent, #116dff);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.nodeMapHitArea {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  background: transparent;
+  pointer-events: auto;
 }
 
 .nodeBody {

@@ -682,12 +682,18 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(officeMap).toBeVisible();
     await officeMap.scrollIntoViewIfNeeded();
     await officeMap.click({ position: { x: 24, y: 24 } });
-    const mapQuickEdit = officeMap.locator('[class*="nodeMapQuickEdit"]').first();
+    const mapQuickEdit = officeMap.locator('[data-builder-map-quick-edit="true"]').first();
     await expect(mapQuickEdit).toBeVisible();
-    await expect(mapQuickEdit).toContainText('위치 편집');
+    await expect(mapQuickEdit).toContainText('사무소 위치 편집');
     await mapQuickEdit.getByRole('button', { name: '타이베이' }).click();
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이베이');
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-address"]').first()).toContainText('承德路');
+    await expect(mapQuickEdit.getByLabel('Map quick address')).toHaveValue(/承德路/);
+    await mapQuickEdit.getByRole('slider', { name: 'Map quick zoom' }).fill('17');
+    await expect.poll(async () => {
+      const src = await officeMap.locator('iframe[title="Google Maps"]').first().getAttribute('src');
+      return src ? new URL(src).searchParams.get('z') : '';
+    }).toBe('17');
     await mapQuickEdit.getByRole('button', { name: '타이중' }).click();
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이중');
     await page.getByRole('button', { name: 'content' }).click();

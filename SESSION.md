@@ -1265,3 +1265,27 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W20에 짧은 global footer 저장/두 published page 반영 E2E와 header/footer revalidate 보강 메모를 반영.
 - W20도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor W09 delete persistence evidence
+
+범위:
+- W09 Delete/Backspace 동작은 기존 store/shortcut 경로가 있었지만 브라우저 검증 근거가 약해 실제 UI E2E를 추가.
+- `clipboard-persistence.playwright.ts`에 leaf node 삭제 검증 추가: 임시 page 생성 → canvas node 선택 → Delete로 삭제 → draft API에서 제거 확인 → Cmd/Ctrl+Z 복원 → Backspace 삭제 → reload 후 DOM에서 삭제 유지.
+- 같은 파일에 container cascade 검증 추가: Layers 패널에서 parent container 선택 → Delete → parent와 child는 draft/DOM에서 제거되고 sibling은 유지 → undo 후 parent/child/sibling 복원 → reload 후 유지 확인.
+- 테스트 mutation helper가 local guard rate-limit에 흔들리지 않도록 test별 `x-forwarded-for` header와 429 Retry-After 재시도를 추가. 같은 active page를 다시 선택할 때 `Loaded page:` toast가 생략되는 정상 케이스도 허용.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... clipboard-persistence.playwright.ts --grep "Delete and Backspace" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... clipboard-persistence.playwright.ts --grep "selected containers" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... clipboard-persistence.playwright.ts --workers=1` ✅ (3/3)
+- tracked builder-editor Playwright bundle ✅ 17/17
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 files / 61 mutation handlers)
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W09에 Delete/Backspace/descendant cascade/undo/reload 검증 메모를 반영.
+- W09도 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.

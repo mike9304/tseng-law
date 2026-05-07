@@ -212,6 +212,7 @@ function ShowOnDeviceToggles({
 function InspectorEmptyState() {
   return (
     <div
+      data-builder-inspector-empty="true"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -533,7 +534,7 @@ export default function SandboxInspectorPanel({
   );
 
   return (
-    <aside className={styles.inspectorPlaceholder}>
+    <aside className={styles.inspectorPlaceholder} data-builder-inspector-panel="true" aria-label="Inspector panel">
       <header className={styles.panelSectionHeader}>
         <div>
           <span>Inspector</span>

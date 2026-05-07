@@ -373,6 +373,11 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.getByTitle('100%').click();
     await expect(page.locator('[class*="zoomLabel"]').first()).toContainText('100%');
 
+    const inspectorColumn = page.locator('[class*="inspectorColumn"]').first();
+    await page.keyboard.press('Escape');
+    await expect(inspectorColumn).toBeVisible();
+    await expect(page.locator('[data-builder-inspector-empty="true"]')).toBeVisible();
+    await expect(inspectorColumn).toContainText('Select an element to edit');
     await page.screenshot({ path: `${screenshotDir}/design-pool-inspector-empty-or-initial.png` });
     await selectFirstNode(page);
     await closeEditorOverlayIfPresent(page);
@@ -380,7 +385,22 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.getByRole('button', { name: /^layout$/i }).click();
     await expect(page.locator('.insp-row').first()).toBeVisible();
     await expect.poll(async () => page.locator('.insp-row').count()).toBeGreaterThan(4);
+    const selectedForLayout = page.locator('[class*="nodeSelected"][data-node-id]:visible').last();
+    const beforeWidth = (await locatorBox(selectedForLayout)).width;
+    const widthInput = inspectorColumn.getByLabel('Width value').first();
+    const widthValue = Number(await widthInput.inputValue());
+    expect(Number.isFinite(widthValue)).toBe(true);
+    const nextWidth = Math.round(widthValue + 24);
+    await widthInput.fill(String(nextWidth));
+    await widthInput.press('Enter');
+    await expect(widthInput).toHaveValue(String(nextWidth));
+    await expect.poll(async () => Math.round((await locatorBox(selectedForLayout)).width)).toBeGreaterThan(Math.round(beforeWidth) + 10);
+    await page.keyboard.press('Escape');
+    await expect(inspectorColumn).toBeVisible();
+    await expect(page.locator('[data-builder-inspector-empty="true"]')).toBeVisible();
     await page.screenshot({ path: `${screenshotDir}/design-pool-inspector-layout.png` });
+    await selectFirstNode(page);
+    await closeEditorOverlayIfPresent(page);
 
     await page.getByRole('button', { name: /^style$/i }).click();
     await expect(page.locator('.insp-row').first()).toBeVisible();

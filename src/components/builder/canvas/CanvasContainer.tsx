@@ -104,10 +104,6 @@ function clampPopupAxis(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), Math.max(min, max));
 }
 
-function clampPanAxis(value: number, min: number, max: number): number {
-  return Math.min(Math.max(value, min), max);
-}
-
 function clampViewportPopupPosition(
   rawX: number,
   rawY: number,
@@ -242,6 +238,7 @@ export default function CanvasContainer({
 }) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const lastFitViewportWidthRef = useRef<number | null>(null);
   const {
     selectedNodeId,
     selectedNodeIds,
@@ -519,6 +516,7 @@ export default function CanvasContainer({
     );
     const roundedZoom = Math.round(nextZoom * 100) / 100;
     const panX = Math.max(0, Math.round((rect.width - stageWidth * roundedZoom) / 2));
+    lastFitViewportWidthRef.current = rect.width;
     setZoomState({ zoom: roundedZoom, panX, panY: 0 });
   }, [stageWidth]);
 
@@ -527,7 +525,13 @@ export default function CanvasContainer({
     window.addEventListener('resize', fitCanvas);
     const observed = viewportRef.current;
     const resizeObserver = typeof ResizeObserver !== 'undefined' && observed
-      ? new ResizeObserver(() => fitCanvas())
+      ? new ResizeObserver(() => {
+        const nextWidth = observed.getBoundingClientRect().width;
+        const previousWidth = lastFitViewportWidthRef.current;
+        if (previousWidth === null || Math.abs(nextWidth - previousWidth) > 1) {
+          fitCanvas();
+        }
+      })
       : null;
     if (observed && resizeObserver) {
       resizeObserver.observe(observed);
@@ -761,11 +765,10 @@ export default function CanvasContainer({
       if (canceledInteractionPointerIdsRef.current.has(activeInteraction.pointerId)) return;
       if (activeInteraction.type === 'pan') {
         const deltaX = event.clientX - activeInteraction.originX;
-        const deltaY = event.clientY - activeInteraction.originY;
         setZoomState((currentState) => ({
           ...currentState,
           panX: activeInteraction.startPanX + deltaX,
-          panY: activeInteraction.startPanY + deltaY,
+          panY: 0,
         }));
         return;
       }
@@ -1309,35 +1312,18 @@ export default function CanvasContainer({
       <div
         ref={viewportRef}
         className={`${styles.stageViewport} ${isSpacePressed ? styles.stageViewportPannable : ''} ${interaction?.type === 'pan' ? styles.stageViewportPanning : ''}`}
+        style={{
+          flex: '0 0 auto',
+          height: Math.max(240, Math.ceil(stageHeight * zoomState.zoom) + 2),
+        }}
         onWheel={(event) => {
-          const rect = viewportRef.current?.getBoundingClientRect();
-          if (!rect) return;
-          event.preventDefault();
           if (event.metaKey || event.ctrlKey) {
+            event.preventDefault();
             setZoomState((currentState) => (
               event.deltaY < 0 ? stepZoomIn(currentState) : stepZoomOut(currentState)
             ));
             return;
           }
-          setZoomState((currentState) => {
-            const scaledWidth = stageWidth * currentState.zoom;
-            const scaledHeight = stageHeight * currentState.zoom;
-            const centeredPanX = Math.max(0, Math.round((rect.width - scaledWidth) / 2));
-            const minPanX = Math.min(0, Math.round(rect.width - scaledWidth - 24));
-            const maxPanX = scaledWidth > rect.width ? 12 : centeredPanX;
-            const minPanY = Math.min(0, Math.round(rect.height - scaledHeight - 24));
-            const nextPanX = scaledWidth > rect.width
-              ? clampPanAxis(currentState.panX - event.deltaX, minPanX, maxPanX)
-              : centeredPanX;
-            const nextPanY = scaledHeight > rect.height
-              ? clampPanAxis(currentState.panY - event.deltaY, minPanY, 0)
-              : 0;
-            return {
-              ...currentState,
-              panX: nextPanX,
-              panY: nextPanY,
-            };
-          });
         }}
       >
         <div

@@ -572,10 +572,6 @@
   overflow: auto;
 }
 
-.inspectorHidden {
-  display: none;
-}
-
 .statusBar {
   flex: 0 0 var(--editor-statusbar-h, 28px);
   display: flex;

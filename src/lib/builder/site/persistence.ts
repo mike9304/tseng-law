@@ -33,6 +33,10 @@ import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 const BLOB_PREFIX = 'builder-site';
 let siteWriteQueue: Promise<void> = Promise.resolve();
 
+type WriteSiteDocumentOptions = {
+  preserveMissingPages?: boolean;
+};
+
 function isBlobBackend(): boolean {
   if (!process.env.BLOB_READ_WRITE_TOKEN) return false;
   if (process.env.CONSULTATION_LOG_BACKEND === 'local') return false;
@@ -118,7 +122,24 @@ function mergeUntouchedPageSeo(
   };
 }
 
-export async function writeSiteDocument(doc: BuilderSiteDocument): Promise<void> {
+function mergeMissingPages(
+  nextDoc: BuilderSiteDocument,
+  latestDoc: BuilderSiteDocument | null,
+): BuilderSiteDocument {
+  if (!latestDoc?.pages?.length) return nextDoc;
+  const nextPageIds = new Set(nextDoc.pages.map((page) => page.pageId));
+  const missingPages = latestDoc.pages.filter((page) => !nextPageIds.has(page.pageId));
+  if (missingPages.length === 0) return nextDoc;
+  return {
+    ...nextDoc,
+    pages: [...nextDoc.pages, ...missingPages],
+  };
+}
+
+export async function writeSiteDocument(
+  doc: BuilderSiteDocument,
+  options: WriteSiteDocumentOptions = {},
+): Promise<void> {
   const previousWrite = siteWriteQueue;
   let releaseWrite!: () => void;
   siteWriteQueue = new Promise<void>((resolve) => {
@@ -129,7 +150,10 @@ export async function writeSiteDocument(doc: BuilderSiteDocument): Promise<void>
   try {
     const normalizedSiteId = normalizeBuilderSiteId(doc.siteId);
     const latestDoc = await loadSiteDocument(normalizedSiteId);
-    const mergedDoc = mergeUntouchedPageSeo({ ...doc, siteId: normalizedSiteId }, latestDoc);
+    const seoMergedDoc = mergeUntouchedPageSeo({ ...doc, siteId: normalizedSiteId }, latestDoc);
+    const mergedDoc = options.preserveMissingPages === false
+      ? seoMergedDoc
+      : mergeMissingPages(seoMergedDoc, latestDoc);
     const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
     const pathname = sitePathname(normalizedSiteId);
     const json = JSON.stringify(normalizedDoc);
@@ -321,7 +345,7 @@ export async function deletePage(siteId: string, pageId: string, locale: Locale)
   site.pages = site.pages.filter((p) => p.pageId !== pageId);
   site.navigation = site.navigation.filter((n) => n.pageId !== pageId);
   site.updatedAt = new Date().toISOString();
-  await writeSiteDocument(site);
+  await writeSiteDocument(site, { preserveMissingPages: false });
 }
 
 export async function listPages(siteId: string, locale: Locale): Promise<BuilderPageMeta[]> {

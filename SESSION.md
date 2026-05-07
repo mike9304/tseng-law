@@ -1384,3 +1384,26 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W14에 duplicate slug 409 방어와 기존 draft 보존 검증 메모를 반영.
 - W14도 이름 변경/삭제 전체 CRUD와 사용자 직접 green 검증 전까지 체크포인트 상태는 🟡 WIP 유지.
+
+## 2026-05-07 Codex /goal G-Editor W12 inspector and canvas scroll stabilization
+
+범위:
+- 우측 Inspector를 selection이 없을 때도 Wix처럼 고정 column으로 유지하고, empty state를 명확히 표시하도록 변경.
+- Layout Width 입력을 실제 캔버스 node width에 반영하는 회귀 테스트를 추가해 “선택해야만 패널이 생김/사라짐” UX를 막음.
+- 캔버스 세로 wheel을 transform pan으로 처리하던 경로를 제거하고 실제 scroll container가 움직이게 변경해, 스크롤 중 화면이 흔들리거나 하단 footer가 고정 바닥처럼 올라오는 현상을 수정.
+- stage viewport 높이를 zoom된 page height에 맞춰 확장하고, ResizeObserver는 width 변화 때만 fit을 재계산하도록 제한해 scroll/fit feedback loop를 차단.
+- site document write 경합에서 stale writer가 최신 page를 누락시키지 않도록 기본 write에 missing page merge를 추가하고, 실제 delete 경로만 merge를 끄도록 분리.
+- Playwright 회귀를 최신 UX에 맞게 갱신: inspector empty state, Layout Width 편집, real scroll, cross-page clipboard persistence, office/generic map direct-load 안정화.
+
+검증:
+- tracked builder-editor Playwright bundle ✅ 21/21
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 files / 61 mutation handlers)
+- `npm run test:unit` ✅ (21 files / 712 tests / 712 passed)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01/W12/W20에 inspector 고정, Layout 편집, 실제 세로 스크롤/하단 footer 고정감 제거 검증 메모를 반영.
+- 다음 작업은 사용자가 지적한 원본 홈페이지 재현도 gap: 검색창 위치, 원래 홈 섹션/기능 누락, 공개 사이트와 빌더 seed/decomposition 불일치 비교 감사.

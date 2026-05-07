@@ -449,7 +449,7 @@ test.describe('/ko/admin-builder office map public reflection', () => {
         zoom: 18,
       });
 
-      await openBuilderPage(page, title);
+      await openBuilderPage(page, title, pageId);
       const reloadedFrame = page.locator(`[data-node-id="${mapId}"] iframe[title="Google Maps"]`).first();
       await expect(reloadedFrame).toBeVisible({ timeout: 15_000 });
       await expect.poll(async () => {

@@ -583,7 +583,6 @@ export default function SandboxPage({
       },
     ];
   }, [locale, navItemsState]);
-  const hasSelection = selectedNodeIds.length > 0;
   const assetLibraryNode = useMemo(
     () => canvasDocument?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
     [assetLibraryNodeId, canvasDocument],
@@ -762,8 +761,7 @@ export default function SandboxPage({
         display: 'flex',
         flex: '0 0 auto',
         flexDirection: 'column',
-        height: 'calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px)',
-        minHeight: 640,
+        minHeight: 'calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px)',
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       }
     : {
@@ -772,8 +770,7 @@ export default function SandboxPage({
         display: 'flex',
         flex: '0 0 auto',
         flexDirection: 'column',
-        height: 'calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px)',
-        minHeight: 640,
+        minHeight: 'calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px)',
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       };
 
@@ -1201,23 +1198,21 @@ export default function SandboxPage({
             </div>
           ) : null}
         </div>
-        <div className={`${styles.inspectorColumn} ${!hasSelection ? styles.inspectorHidden : ''}`}>
-          {hasSelection ? (
-            <SandboxInspectorPanel
-              onRequestAssetLibrary={() => {
-                if (selectedNode?.kind === 'image') {
-                  setAssetLibraryNodeId(selectedNode.id);
-                }
-              }}
-              onRequestImageEditor={() => {
-                if (selectedNode?.kind === 'image') {
-                  setImageEditorRequest({ nodeId: selectedNode.id });
-                }
-              }}
-              siteLightboxes={linkPickerLightboxes}
-              sitePages={linkPickerSitePages}
-            />
-          ) : null}
+        <div className={styles.inspectorColumn}>
+          <SandboxInspectorPanel
+            onRequestAssetLibrary={() => {
+              if (selectedNode?.kind === 'image') {
+                setAssetLibraryNodeId(selectedNode.id);
+              }
+            }}
+            onRequestImageEditor={() => {
+              if (selectedNode?.kind === 'image') {
+                setImageEditorRequest({ nodeId: selectedNode.id });
+              }
+            }}
+            siteLightboxes={linkPickerLightboxes}
+            sitePages={linkPickerSitePages}
+          />
         </div>
         </section>
 

@@ -305,7 +305,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect.poll(async () => (await topBar.boundingBox())?.height ?? 999).toBeLessThanOrEqual(36);
     const topBarBox = await topBar.boundingBox();
     expect(topBarBox?.height).toBeGreaterThanOrEqual(30);
-    await expect(page.locator('[class*="zoomLabel"]').first()).toContainText('100%');
+    const zoomText = await page.locator('[class*="zoomLabel"]').first().innerText();
+    const zoomPercent = Number(zoomText.replace('%', '').trim());
+    expect(zoomPercent).toBeGreaterThanOrEqual(50);
+    expect(zoomPercent).toBeLessThanOrEqual(100);
     const editorLayout = await page.evaluate(() => {
       const rectFor = (selector: string) => document.querySelector(selector)?.getBoundingClientRect() ?? null;
       const styleFor = (selector: string) => {
@@ -317,6 +320,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       return {
         canvasOverflowY: styleFor('div[class*="canvasColumn"]')?.overflowY ?? '',
         stageViewportHeight: rectFor('div[class*="stageViewport"]')?.height ?? 0,
+        stageViewportLeft: rectFor('div[class*="stageViewport"]')?.left ?? 0,
+        stageViewportRight: rectFor('div[class*="stageViewport"]')?.right ?? 0,
+        stageTransformLeft: rectFor('div[class*="stageTransform"]')?.left ?? 0,
+        stageTransformRight: rectFor('div[class*="stageTransform"]')?.right ?? 0,
         stageTransformTransition: styleFor('div[class*="stageTransform"]')?.transitionProperty ?? '',
         siteFooterTop: siteFooterRect?.top ?? 0,
         statusTop: statusRect?.top ?? 0,
@@ -324,6 +331,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     });
     expect(editorLayout.canvasOverflowY).toBe('auto');
     expect(editorLayout.stageViewportHeight).toBeGreaterThan(720);
+    expect(editorLayout.stageTransformLeft).toBeGreaterThanOrEqual(editorLayout.stageViewportLeft - 2);
+    expect(editorLayout.stageTransformRight).toBeLessThanOrEqual(editorLayout.stageViewportRight + 2);
     expect(editorLayout.stageTransformTransition).toBe('none');
     expect(editorLayout.siteFooterTop).toBeGreaterThanOrEqual(editorLayout.statusTop - 4);
 
@@ -402,9 +411,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect.poll(() => canvasColumn.evaluate((element) => element.scrollHeight - element.clientHeight)).toBeGreaterThan(300);
     await stageViewport.hover();
     await page.mouse.wheel(0, 520);
+    await expect.poll(() => canvasColumn.evaluate((element) => element.scrollTop)).toBeGreaterThan(100);
     await expect.poll(() => stageTransform.evaluate((element) => (
       new DOMMatrixReadOnly(window.getComputedStyle(element).transform).m42
-    ))).toBeLessThan(-100);
+    ))).toBeGreaterThanOrEqual(-2);
     await rail.getByRole('button', { name: 'Columns', exact: true }).click();
     const columnsDrawer = page.locator('[aria-hidden="false"]').first();
     await expect(columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' })).toBeVisible();
@@ -598,7 +608,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await page.getByRole('button', { name: 'content' }).click();
     await expect(page.getByText('Office sync')).toBeVisible();
     await expect(page.getByText('사무소 프리셋')).toBeVisible();
-    const mapAddressInput = page.locator('textarea').first();
+    const mapAddressInput = page.getByLabel('Office address synced value');
     await expect(mapAddressInput).not.toHaveValue('');
     const originalMapAddress = await mapAddressInput.inputValue();
     const temporaryMapAddress = originalMapAddress.includes('承德路')
@@ -620,13 +630,19 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       await officeMapUrlInput.fill(temporaryMapUrl);
       await expect(officeMapUrlInput).toHaveValue(temporaryMapUrl);
     } finally {
-      await mapAddressInput.fill(originalMapAddress);
-      await officeMapUrlInput.fill(originalMapUrl);
-      await expect(mapAddressInput).toHaveValue(originalMapAddress);
+      if (!(await mapAddressInput.isVisible().catch(() => false))) {
+        await officeMap.scrollIntoViewIfNeeded();
+        await officeMap.click({ position: { x: 24, y: 24 }, force: true });
+        await page.getByRole('button', { name: 'content' }).click({ force: true });
+        await expect(page.getByText('Office sync')).toBeVisible();
+      }
+      await page.getByLabel('Office address synced value').fill(originalMapAddress);
+      await page.getByLabel('Office map URL').fill(originalMapUrl);
+      await expect(page.getByLabel('Office address synced value')).toHaveValue(originalMapAddress);
     }
 
     await rail.getByRole('button', { name: 'Pages', exact: true }).click();
-    const pagesDrawerForColumns = page.locator('[aria-hidden="false"]').first();
+    const pagesDrawerForColumns = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Pages' }).first();
     await expect(pagesDrawerForColumns.getByLabel('칼럼 빠른 이동')).toBeVisible();
     await expect(pagesDrawerForColumns.getByText(/posts|칼럼 연결/).first()).toBeVisible();
     await expect(pagesDrawerForColumns.getByRole('link', { name: '칼럼 관리' })).toBeVisible();

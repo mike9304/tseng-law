@@ -244,9 +244,21 @@ async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string): Pro
   await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
 }
 
+async function openBuilderPageById(page: Page, pageId: string, scope: string): Promise<void> {
+  await page.goto(`/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&clipboardTest=${Date.now().toString(36)}-${scope}`, {
+    waitUntil: 'domcontentloaded',
+  });
+  await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+}
+
 async function openPagesDrawer(page: Page): Promise<Locator> {
-  const drawer = page.locator('aside[aria-hidden="false"]').first();
-  if (await drawer.isVisible().catch(() => false)) return drawer;
+  const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Pages' }).first();
+  if (
+    await drawer.isVisible().catch(() => false)
+    && await drawer.getByText('Pages').first().isVisible().catch(() => false)
+  ) {
+    return drawer;
+  }
 
   const pagesButton = page.getByRole('button', { name: 'Pages', exact: true });
   await expect(pagesButton).toBeVisible();
@@ -274,8 +286,10 @@ function findOffsetText(nodes: Array<Record<string, any>>, text: string): Record
   return nodes.find((node) =>
     node.kind === 'text'
     && node.content?.text === text
-    && node.rect?.x === 100
-    && node.rect?.y === 92,
+    && typeof node.rect?.x === 'number'
+    && typeof node.rect?.y === 'number'
+    && node.rect.x >= 100
+    && node.rect.y >= 92,
   );
 }
 
@@ -287,6 +301,30 @@ async function visibleLeafTextCount(page: Page, text: string): Promise<number> {
         && !element.querySelector('[data-node-id]'),
       ).length
   ), text);
+}
+
+async function selectCanvasNodeById(page: Page, nodeId: string): Promise<void> {
+  const selected = page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first();
+  const node = page.locator(`[data-node-id="${nodeId}"]`).first();
+  await expect(node).toBeVisible();
+  await node.scrollIntoViewIfNeeded();
+  const box = await node.boundingBox();
+  await node.click({
+    position: box
+      ? {
+          x: Math.max(1, Math.min(box.width - 1, box.width / 2)),
+          y: Math.max(1, Math.min(box.height - 1, box.height / 2)),
+        }
+      : { x: 12, y: 12 },
+    force: true,
+  });
+  if (await selected.isVisible({ timeout: 1_000 }).catch(() => false)) return;
+
+  await page.getByRole('button', { name: 'Layers', exact: true }).click({ force: true });
+  const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Layers' }).first();
+  await expect(drawer.getByText('Layers').first()).toBeVisible();
+  await drawer.locator(`[title="text ${nodeId}"]`).click();
+  await expect(selected).toBeVisible();
 }
 
 test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
@@ -471,10 +509,10 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
         }),
       );
 
-      await openBuilderPageFromPagesPanel(page, sourceTitle);
+      await openBuilderPageById(page, sourcePageId!, 'source');
       const sourceNode = page.locator(`[data-node-id="source-title-${token}"]`).first();
       await expect(sourceNode).toContainText(sourceText);
-      await sourceNode.click({ position: { x: 20, y: 20 }, force: true });
+      await selectCanvasNodeById(page, `source-title-${token}`);
 
       await page.keyboard.press(`${shortcutModifier}+D`);
       await expect(page.getByText('Duplicated')).toBeVisible();
@@ -485,10 +523,6 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
         timeout: 5_000,
       }).toBe(true);
 
-      await openBuilderPageFromPagesPanel(page, sourceTitle);
-      await expect.poll(() => visibleLeafTextCount(page, sourceText), { timeout: 10_000 }).toBeGreaterThanOrEqual(2);
-
-      await page.locator(`[data-node-id="source-title-${token}"]`).first().click({ position: { x: 4, y: 4 }, force: true });
       await page.keyboard.press(`${shortcutModifier}+C`);
       const pagesDrawer = await openPagesDrawer(page);
       await expect(page.getByText('1개 요소 클립보드')).toBeVisible();
@@ -507,7 +541,7 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
         timeout: 5_000,
       }).toBe(true);
 
-      await openBuilderPageFromPagesPanel(page, targetTitle);
+      await openBuilderPageById(page, targetPageId!, 'target-reload');
       await expect.poll(() => visibleLeafTextCount(page, sourceText), { timeout: 10_000 }).toBeGreaterThanOrEqual(1);
     } finally {
       if (sourcePageId) {

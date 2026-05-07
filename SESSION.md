@@ -1580,3 +1580,19 @@
 
 메모:
 - hero quick menu 검증 전에 선택/focus/hover 상태를 명시적으로 정리해, 의도된 selected/focused state 노출과 기본 hidden state 검증이 섞이지 않게 테스트 안정화.
+
+## 2026-05-08 Codex /goal G-Editor services FAQ preview state follow-up
+
+범위:
+- 홈 업무분야/FAQ 섹션을 에디터에서 전부 펼친 정적 상태로 두지 않고, 원본 아코디언처럼 preview-open 상태를 갖도록 보강.
+- 기본 상태는 첫 업무/첫 FAQ가 열리고, 다른 업무/FAQ 항목을 선택하면 해당 항목의 상세/답변만 열리도록 `data-builder-preview-open` 상태를 CanvasNode에서 계산.
+- 오래된 draft에서 parent chain이 약한 하위 노드도 card/item prefix로 open state를 따라가도록 처리해, title/question 등 하위 텍스트 선택 시 상세 영역이 안정적으로 열림.
+- admin-builder smoke에 두 번째 업무/FAQ 선택 → 상세/답변 열림, 첫 항목 닫힘 검증 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 이 단계는 방문자 PreviewModal을 건드리지 않고 에디터 캔버스의 선택 상태만 preview state로 쓰는 보강이다. 완전한 visitor interaction mode는 별도 후속으로 남음.

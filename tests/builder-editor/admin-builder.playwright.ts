@@ -445,8 +445,18 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(publicChrome).toContainText('2026년 기념 리뷰 이벤트');
     await publicChrome.getByRole('button', { name: /AI 상담|AI Chat|AI 諮詢/ }).click();
     await expect(publicChrome).toContainText('AI 상담');
+    await page.keyboard.press('Escape');
+    await page.mouse.move(12, 120);
     await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeHidden();
+    await page.locator('[data-node-id="home-services-card-1-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeHidden();
     await expect(page.locator('[data-node-id="home-faq-item-0-answer"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-faq-item-1-answer"]').first()).toBeHidden();
+    await page.locator('[data-node-id="home-faq-item-1-question-text"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await expect(page.locator('[data-node-id="home-faq-item-1-answer"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-faq-item-0-answer"]').first()).toBeHidden();
     const hoverIndicatorNode = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();
     await hoverIndicatorNode.hover();
     await expect.poll(async () => hoverIndicatorNode.evaluate((element) => (

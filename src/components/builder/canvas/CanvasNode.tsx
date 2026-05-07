@@ -459,6 +459,41 @@ export default function CanvasNode({
   const nestedChildren = childIds
     .map((cid) => nodesById.get(cid))
     .filter((n): n is BuilderCanvasNode => n != null && n.visible);
+  const selectionIsInside = (targetId: string) => selectedNodeIds.some((selectedId) => {
+    let cursor: string | null = selectedId;
+    while (cursor) {
+      if (cursor === targetId) return true;
+      cursor = nodesById.get(cursor)?.parentId ?? null;
+    }
+    return false;
+  });
+  const findSelfOrAncestor = (pattern: RegExp) => {
+    let cursor: string | null = node.id;
+    while (cursor) {
+      if (pattern.test(cursor)) return cursor;
+      cursor = nodesById.get(cursor)?.parentId ?? null;
+    }
+    return null;
+  };
+  const serviceCardAncestorId = findSelfOrAncestor(/^home-services-card-\d+$/);
+  const serviceCardMatch = /^home-services-card-(\d+)/.exec(serviceCardAncestorId ?? node.id);
+  const selectedServiceCards = new Set(
+    selectedNodeIds
+      .map((selectedId) => /^home-services-card-(\d+)/.exec(selectedId)?.[1])
+      .filter((value): value is string => Boolean(value)),
+  );
+  const faqItemAncestorId = findSelfOrAncestor(/^home-faq-item-\d+$/);
+  const faqItemMatch = /^home-faq-item-(\d+)/.exec(faqItemAncestorId ?? node.id);
+  const selectedFaqItems = new Set(
+    selectedNodeIds
+      .map((selectedId) => /^home-faq-item-(\d+)/.exec(selectedId)?.[1])
+      .filter((value): value is string => Boolean(value)),
+  );
+  const builderPreviewOpen = serviceCardMatch
+    ? selectedServiceCards.has(serviceCardMatch[1]) || (serviceCardMatch[1] === '0' && selectedServiceCards.size === 0 && !selectionIsInside('home-services-list'))
+    : faqItemMatch
+      ? selectedFaqItems.has(faqItemMatch[1]) || (faqItemMatch[1] === '0' && selectedFaqItems.size === 0 && !selectionIsInside('home-faq-list'))
+      : false;
 
   const updateMapAddress = useCallback(
     (nextAddress: string, nextMapsUrl = googleMapsSearchUrl(nextAddress)) => {
@@ -632,6 +667,7 @@ export default function CanvasNode({
       }}
       data-node-id={node.id}
       data-selected={selected ? 'true' : undefined}
+      data-builder-preview-open={builderPreviewOpen ? 'true' : undefined}
       data-viewport={viewport}
       onPointerDown={(event) => {
         event.stopPropagation();

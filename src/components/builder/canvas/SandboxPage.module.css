@@ -1587,15 +1587,65 @@
 }
 
 .stage :global(.services-detail-body) {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+}
+
+.stage :global([data-node-id^='home-services-card-'][data-node-id*='-detail-']),
+.stage :global([data-node-id^='home-services-card-'][data-node-id$='-checklist']),
+.stage :global([data-node-id^='home-services-card-'][data-node-id$='-columns']),
+.stage :global([data-node-id^='home-services-card-'][data-node-id$='-more']) {
+  display: none;
+}
+
+.stage :global([data-node-id^='home-services-card-'][data-builder-preview-open='true'] .services-detail-card) {
+  border-color: var(--accent);
+  background: var(--off-white);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+}
+
+.stage :global([data-node-id^='home-services-card-'][data-builder-preview-open='true'] .services-detail-body) {
   max-height: 820px;
   overflow: visible;
   padding: 0 1.5rem 1.5rem;
 }
 
+.stage :global([data-node-id^='home-services-card-'][data-node-id*='-detail-'][data-builder-preview-open='true']),
+.stage :global([data-node-id^='home-services-card-'][data-node-id$='-checklist'][data-builder-preview-open='true']),
+.stage :global([data-node-id^='home-services-card-'][data-node-id$='-columns'][data-builder-preview-open='true']),
+.stage :global([data-node-id^='home-services-card-'][data-node-id$='-more'][data-builder-preview-open='true']) {
+  display: block;
+}
+
 .stage :global(.faq-answer-wrap) {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.stage :global([data-node-id^='home-faq-item-'][data-node-id$='-answer']) {
+  display: none;
+}
+
+.stage :global([data-node-id^='home-faq-item-'][data-builder-preview-open='true'] .faq-item) {
+  border-color: rgba(45, 92, 72, 0.22);
+  background: rgba(237, 245, 239, 0.92);
+  box-shadow: inset 3px 0 0 var(--accent-purple);
+}
+
+.stage :global([data-node-id^='home-faq-item-'][data-builder-preview-open='true'] .faq-answer-wrap) {
   max-height: 420px;
   overflow: visible;
   padding: 0 1rem 1rem;
+}
+
+.stage :global([data-node-id^='home-faq-item-'][data-builder-preview-open='true'] .faq-arrow) {
+  transform: rotate(90deg);
+}
+
+.stage :global([data-node-id^='home-faq-item-'][data-node-id$='-answer'][data-builder-preview-open='true']) {
+  display: block;
 }
 
 .topRuler {

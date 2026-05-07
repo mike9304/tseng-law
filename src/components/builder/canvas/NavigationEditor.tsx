@@ -51,6 +51,23 @@ const itemStyle: React.CSSProperties = {
   transition: 'background 120ms ease',
 };
 
+const childItemStyle: React.CSSProperties = {
+  ...itemStyle,
+  marginLeft: 18,
+  borderStyle: 'dashed',
+  background: '#fbfdff',
+};
+
+const childBadgeStyle: React.CSSProperties = {
+  flexShrink: 0,
+  borderRadius: 999,
+  background: '#eff6ff',
+  color: '#116dff',
+  padding: '1px 6px',
+  fontSize: '0.62rem',
+  fontWeight: 800,
+};
+
 const inputStyle: React.CSSProperties = {
   flex: 1,
   minWidth: 0,
@@ -118,6 +135,30 @@ function localizedLabel(
     ...currentLabel,
     [locale]: nextLabel,
   };
+}
+
+function updateNavigationItem(
+  items: BuilderNavItem[],
+  itemId: string,
+  updater: (item: BuilderNavItem) => BuilderNavItem,
+): BuilderNavItem[] {
+  return items.map((item) => {
+    if (item.id === itemId) return updater(item);
+    if (!item.children?.length) return item;
+    return {
+      ...item,
+      children: updateNavigationItem(item.children, itemId, updater),
+    };
+  });
+}
+
+function findNavigationItem(items: BuilderNavItem[], itemId: string): BuilderNavItem | undefined {
+  for (const item of items) {
+    if (item.id === itemId) return item;
+    const child = item.children?.length ? findNavigationItem(item.children, itemId) : undefined;
+    if (child) return child;
+  }
+  return undefined;
 }
 
 export default function NavigationEditor({
@@ -238,7 +279,7 @@ export default function NavigationEditor({
 
   useEffect(() => {
     if (!focusItemId || loading) return;
-    const item = items.find((candidate) => candidate.id === focusItemId);
+    const item = findNavigationItem(items, focusItemId);
     if (!item) {
       onFocusHandled?.();
       return;
@@ -251,19 +292,59 @@ export default function NavigationEditor({
     if (!editingId) return;
     const nextLabel = editLabel.trim() || 'Untitled';
     const nextHref = editHref.trim() || '/';
-    const next = items.map((item) =>
-      item.id === editingId
-        ? {
-            ...item,
-            label: localizedLabel(item.label, editorLocale, nextLabel),
-            href: nextHref,
-          }
-        : item,
+    const next = updateNavigationItem(
+      items,
+      editingId,
+      (item) => ({
+        ...item,
+        label: localizedLabel(item.label, editorLocale, nextLabel),
+        href: nextHref,
+      }),
     );
     setItems(next);
     saveNav(next);
     setEditingId(null);
   };
+
+  const renderEditForm = (itemId: string) => (
+    <div key={itemId} style={editFormStyle}>
+      <div style={editRowStyle}>
+        <span style={editLabelStyle}>라벨</span>
+        <input
+          type="text"
+          value={editLabel}
+          style={inputStyle}
+          ref={labelInputRef}
+          onChange={(e) => setEditLabel(e.target.value)}
+        />
+      </div>
+      <div style={editRowStyle}>
+        <span style={editLabelStyle}>경로</span>
+        <input
+          type="text"
+          value={editHref}
+          style={inputStyle}
+          onChange={(e) => setEditHref(e.target.value)}
+        />
+      </div>
+      <div style={{ display: 'flex', gap: 4, justifyContent: 'flex-end' }}>
+        <button
+          type="button"
+          style={smallBtnStyle}
+          onClick={() => setEditingId(null)}
+        >
+          취소
+        </button>
+        <button
+          type="button"
+          style={{ ...smallBtnStyle, color: '#116dff', borderColor: '#116dff' }}
+          onClick={commitEdit}
+        >
+          저장
+        </button>
+      </div>
+    </div>
+  );
 
   return (
     <div style={containerStyle}>
@@ -290,63 +371,51 @@ export default function NavigationEditor({
       ) : (
         items.map((item, index) =>
           editingId === item.id ? (
-            <div key={item.id} style={editFormStyle}>
-              <div style={editRowStyle}>
-                <span style={editLabelStyle}>라벨</span>
-                <input
-                  type="text"
-                  value={editLabel}
-                  style={inputStyle}
-                  ref={labelInputRef}
-                  onChange={(e) => setEditLabel(e.target.value)}
-                />
-              </div>
-              <div style={editRowStyle}>
-                <span style={editLabelStyle}>경로</span>
-                <input
-                  type="text"
-                  value={editHref}
-                  style={inputStyle}
-                  onChange={(e) => setEditHref(e.target.value)}
-                />
-              </div>
-              <div style={{ display: 'flex', gap: 4, justifyContent: 'flex-end' }}>
-                <button
-                  type="button"
-                  style={smallBtnStyle}
-                  onClick={() => setEditingId(null)}
-                >
-                  취소
-                </button>
-                <button
-                  type="button"
-                  style={{ ...smallBtnStyle, color: '#116dff', borderColor: '#116dff' }}
-                  onClick={commitEdit}
-                >
-                  저장
-                </button>
-              </div>
-            </div>
+            renderEditForm(item.id)
           ) : (
-            <div key={item.id} style={itemStyle}>
-              <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                {labelForLocale(item, editorLocale)}
-              </span>
-              <span style={{ fontSize: '0.68rem', color: '#94a3b8', flexShrink: 0 }}>
-                {item.href}
-              </span>
-              <button type="button" style={smallBtnStyle} onClick={() => handleMoveUp(index)} title="위로">
-                ↑
-              </button>
-              <button type="button" style={smallBtnStyle} onClick={() => handleMoveDown(index)} title="아래로">
-                ↓
-              </button>
-              <button type="button" style={smallBtnStyle} onClick={() => startEdit(item)} title="편집">
-                ✎
-              </button>
-              <button type="button" style={dangerBtnStyle} onClick={() => handleDelete(item.id)} title="삭제">
-                ✕
-              </button>
+            <div key={item.id}>
+              <div style={itemStyle}>
+                <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {labelForLocale(item, editorLocale)}
+                </span>
+                <span style={{ fontSize: '0.68rem', color: '#94a3b8', flexShrink: 0 }}>
+                  {item.href}
+                </span>
+                <button type="button" style={smallBtnStyle} onClick={() => handleMoveUp(index)} title="위로">
+                  ↑
+                </button>
+                <button type="button" style={smallBtnStyle} onClick={() => handleMoveDown(index)} title="아래로">
+                  ↓
+                </button>
+                <button type="button" style={smallBtnStyle} onClick={() => startEdit(item)} title="편집">
+                  ✎
+                </button>
+                <button type="button" style={dangerBtnStyle} onClick={() => handleDelete(item.id)} title="삭제">
+                  ✕
+                </button>
+              </div>
+              {item.children?.length ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4, marginBottom: 4 }}>
+                  {item.children.map((child) => (
+                    editingId === child.id ? (
+                      renderEditForm(child.id)
+                    ) : (
+                      <div key={child.id} style={childItemStyle}>
+                        <span style={childBadgeStyle}>Mega</span>
+                        <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                          {labelForLocale(child, editorLocale)}
+                        </span>
+                        <span style={{ fontSize: '0.68rem', color: '#94a3b8', flexShrink: 0 }}>
+                          {child.href}
+                        </span>
+                        <button type="button" style={smallBtnStyle} onClick={() => startEdit(child)} title="Mega item">
+                          ✎
+                        </button>
+                      </div>
+                    )
+                  ))}
+                </div>
+              ) : null}
             </div>
           ),
         )

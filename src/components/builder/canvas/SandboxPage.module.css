@@ -1424,6 +1424,18 @@
   overflow: hidden;
 }
 
+.stage :global([data-node-id='home-hero-quick-menu']) {
+  display: none;
+}
+
+.stage :global([data-node-id='home-hero-search-wrap']:hover [data-node-id='home-hero-quick-menu']),
+.stage :global([data-node-id='home-hero-search-wrap']:focus-within [data-node-id='home-hero-quick-menu']),
+.stage :global([data-node-id='home-hero-search-wrap']:has([data-selected='true']) [data-node-id='home-hero-quick-menu']),
+.stage :global([data-node-id='home-hero-quick-menu'][data-selected='true']),
+.stage :global([data-node-id='home-hero-quick-menu']:has([data-selected='true'])) {
+  display: block;
+}
+
 .stage :global(.builder-hero-quick-menu-item) {
   width: 100%;
   height: 100%;

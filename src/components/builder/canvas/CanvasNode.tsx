@@ -405,6 +405,7 @@ export default function CanvasNode({
         fontSize: effectiveFontSize ? `${effectiveFontSize}px` : undefined,
       }}
       data-node-id={node.id}
+      data-selected={selected ? 'true' : undefined}
       data-viewport={viewport}
       onPointerDown={(event) => {
         event.stopPropagation();

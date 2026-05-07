@@ -420,6 +420,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeGreaterThanOrEqual(24);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeLessThanOrEqual(72);
     const heroQuickMenu = page.locator('[data-node-id="home-hero-quick-menu"] nav.hero-quick-menu').first();
+    await expect(heroQuickMenu).toBeHidden();
+    await page.locator('[data-node-id="home-hero-search-wrap"]').first().hover();
     await expect(heroQuickMenu).toBeVisible();
     await expect(heroQuickMenu).toContainText('업무분야');
     await expect(heroQuickMenu).toContainText('칼럼');
@@ -455,6 +457,12 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await headerEditMenuButton.click();
     const navDrawer = page.locator('[aria-hidden="false"]').first();
     await expect(navDrawer.getByText('Navigation').first()).toBeVisible();
+    await editableMenuItem.hover();
+    const servicesMegaPanel = builderHeader.locator('.mega-panel.active').first();
+    await expect(servicesMegaPanel).toContainText('투자·법인설립');
+    await expect(builderHeader.locator('[data-builder-nav-item-id="nav-services-investment"]').first()).toBeVisible();
+    await expect(navDrawer.getByText('Mega').first()).toBeVisible();
+    await expect(navDrawer.getByText('투자·법인설립')).toBeVisible();
     await page.mouse.move(28, 220);
     await expect(headerEditMenuButton).toBeVisible();
     const menuItemId = await editableMenuItem.getAttribute('data-builder-nav-item-id');
@@ -465,6 +473,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const originalNavLabel = await navLabelFromApi(page, menuItemId || '');
     expect(originalNavLabel).toBeTruthy();
     await expect(navLabelInput).toHaveValue(originalNavLabel || '');
+    await editableMenuItem.hover();
+    await builderHeader.locator('[data-builder-nav-item-id="nav-services-investment"]').first().click();
+    await expect(navLabelInput).toHaveValue('투자·법인설립');
 
     await page.getByTitle('Add').click();
     await expect(page.getByText('Catalog')).toBeVisible();

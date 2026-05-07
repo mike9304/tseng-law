@@ -10,12 +10,15 @@ export const runtime = 'nodejs';
 
 function revalidateNavigationSurfaces(site: Awaited<ReturnType<typeof readSiteDocument>>, locale: ReturnType<typeof normalizeLocale>) {
   const paths = new Set<string>();
+  const collectNavItems = (items: BuilderNavItem[]): BuilderNavItem[] => (
+    items.flatMap((item) => [item, ...(item.children?.length ? collectNavItems(item.children) : [])])
+  );
 
   for (const page of site.pages ?? []) {
     paths.add(buildSitePagePath(locale, page.slug || ''));
   }
 
-  for (const item of site.navigation ?? []) {
+  for (const item of collectNavItems(site.navigation ?? [])) {
     const href = normalizeSiteHref(item.href, locale).split('#')[0]?.split('?')[0] ?? '';
     if (href.startsWith(`/${locale}`)) {
       paths.add(href || buildSitePagePath(locale, ''));

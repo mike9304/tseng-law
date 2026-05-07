@@ -8,7 +8,7 @@ import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/
 import { resolveBrandLogo } from '@/lib/builder/site/theme';
 import { siteContent } from '@/data/site-content';
 import SearchOverlay from '@/components/SearchOverlay';
-import SmartLink from '@/components/SmartLink';
+import { buildHeaderMegaPanels, type HeaderMegaPanel } from '@/lib/builder/site/header-mega';
 
 type HeaderNavSpec = {
   key: string;
@@ -19,12 +19,6 @@ type HeaderNavSpec = {
 type HeaderNavItem = HeaderNavSpec & {
   href: string;
   source?: BuilderNavItem;
-};
-
-type MegaPanel = {
-  key: string;
-  title: string;
-  links: Array<{ label: string; href: string }>;
 };
 
 const HEADER_NAV_SPECS: HeaderNavSpec[] = [
@@ -63,87 +57,6 @@ function buildHeaderNavItems(navItems: BuilderNavItem[], locale: Locale): Header
       href: source ? normalizeSiteHref(source.href, locale) : path,
     };
   });
-}
-
-function buildMegaPanels(locale: Locale): MegaPanel[] {
-  if (locale === 'ko') {
-    return [
-      {
-        key: 'services',
-        title: '업무분야',
-        links: [
-          { label: '투자·법인설립', href: '/ko/services/investment' },
-          { label: '민사소송·손해배상', href: '/ko/services/civil' },
-          { label: '가사소송', href: '/ko/services/family' },
-          { label: '노동법·고용분쟁', href: '/ko/services/labor' },
-          { label: '형사소송', href: '/ko/services/criminal' },
-          { label: '지적재산·금융분쟁', href: '/ko/services/ip' },
-          { label: '전체 보기', href: '/ko/services' },
-        ],
-      },
-      {
-        key: 'videos',
-        title: '미디어센터',
-        links: [
-          { label: 'YouTube @weilawyer', href: 'https://www.youtube.com/@weilawyer' },
-          { label: '네이버 블로그', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
-          { label: '영상/채널 페이지', href: '/ko/videos' },
-        ],
-      },
-    ];
-  }
-
-  if (locale === 'zh-hant') {
-    return [
-      {
-        key: 'services',
-        title: '服務領域',
-        links: [
-          { label: '投資·公司設立', href: '/zh-hant/services/investment' },
-          { label: '民事訴訟·損害賠償', href: '/zh-hant/services/civil' },
-          { label: '家事訴訟', href: '/zh-hant/services/family' },
-          { label: '勞動法·僱傭爭議', href: '/zh-hant/services/labor' },
-          { label: '刑事訴訟', href: '/zh-hant/services/criminal' },
-          { label: '智慧財產·金融爭議', href: '/zh-hant/services/ip' },
-          { label: '查看全部', href: '/zh-hant/services' },
-        ],
-      },
-      {
-        key: 'videos',
-        title: '媒體中心',
-        links: [
-          { label: 'YouTube @weilawyer', href: 'https://www.youtube.com/@weilawyer' },
-          { label: 'Naver 部落格', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
-          { label: '影音頁面', href: '/zh-hant/videos' },
-        ],
-      },
-    ];
-  }
-
-  return [
-    {
-      key: 'services',
-      title: 'Services',
-      links: [
-        { label: 'Investment & Company Setup', href: '/en/services/investment' },
-        { label: 'Civil Litigation & Damages', href: '/en/services/civil' },
-        { label: 'Family Litigation', href: '/en/services/family' },
-        { label: 'Labor & Employment', href: '/en/services/labor' },
-        { label: 'Criminal Litigation', href: '/en/services/criminal' },
-        { label: 'IP & Financial Disputes', href: '/en/services/ip' },
-        { label: 'View All', href: '/en/services' },
-      ],
-    },
-    {
-      key: 'videos',
-      title: 'Media Center',
-      links: [
-        { label: 'YouTube @weilawyer', href: 'https://www.youtube.com/@weilawyer' },
-        { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
-        { label: 'Videos / Channels', href: '/en/videos' },
-      ],
-    },
-  ];
 }
 
 export default function SiteHeader({
@@ -190,8 +103,8 @@ export default function SiteHeader({
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const closeTimeoutRef = useRef<number | null>(null);
   const displayNavItems = useMemo(() => buildHeaderNavItems(navItems, locale), [locale, navItems]);
-  const megaPanels = useMemo(() => buildMegaPanels(locale), [locale]);
-  const megaPanelKeys = useMemo(() => new Set(megaPanels.map((panel) => panel.key)), [megaPanels]);
+  const megaPanels = useMemo<HeaderMegaPanel[]>(() => buildHeaderMegaPanels(locale, displayNavItems), [displayNavItems, locale]);
+  const megaPanelKeys = useMemo(() => new Set<string>(megaPanels.map((panel) => panel.key)), [megaPanels]);
   const currentPath = buildSitePagePath(locale, currentSlug);
   const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : 'Open search';
   const utilityLinks = locale === 'ko'
@@ -287,6 +200,15 @@ export default function SiteHeader({
   }
 
   function handleBuilderNavClick(event: React.MouseEvent<HTMLAnchorElement>, item: HeaderNavItem) {
+    if (!builderEditable || !item.source) return false;
+    event.preventDefault();
+    event.stopPropagation();
+    closeMegaMenuNow();
+    onRequestEditNavItem?.(item.source.id);
+    return true;
+  }
+
+  function handleBuilderMegaClick(event: React.MouseEvent<HTMLAnchorElement>, item: HeaderMegaPanel['links'][number]) {
     if (!builderEditable || !item.source) return false;
     event.preventDefault();
     event.stopPropagation();
@@ -443,10 +365,21 @@ export default function SiteHeader({
                   <ul className="mega-links" onClick={closeMegaMenuNow}>
                     {panel.links.map((link) => (
                       <li key={`${panel.key}-${link.href}`}>
-                        <SmartLink href={link.href}>
+                        <a
+                          href={link.href}
+                          target={link.href.startsWith('http') ? '_blank' : undefined}
+                          rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                          data-builder-nav-item-id={builderEditable && link.source ? link.source.id : undefined}
+                          data-builder-nav-item-label={builderEditable && link.source ? link.label : undefined}
+                          title={builderEditable && link.source ? `Edit menu item: ${link.label}` : undefined}
+                          onClick={(event) => {
+                            if (handleBuilderMegaClick(event, link)) return;
+                            navigate(event, link.href);
+                          }}
+                        >
                           <span>{link.label}</span>
                           <span className="mega-chevron">›</span>
-                        </SmartLink>
+                        </a>
                       </li>
                     ))}
                   </ul>

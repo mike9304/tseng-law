@@ -12,6 +12,7 @@ import {
 import { createHomePageCanvasDocument, SEED_VERSION } from '@/lib/builder/canvas/seed-home';
 import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
 import type { BuilderNavItem, BuilderSiteDocument } from '@/lib/builder/site/types';
+import { mergeHeaderMegaChildren, type HeaderMegaKey } from '@/lib/builder/site/header-mega';
 
 export const dynamic = 'force-dynamic';
 
@@ -301,12 +302,13 @@ const PUBLIC_HEADER_NAV_ITEMS: Array<{
   key: string;
   slug: string;
   labels: Record<Locale, string>;
+  megaKey?: HeaderMegaKey;
 }> = [
-  { key: 'services', slug: 'services', labels: { ko: '업무분야', 'zh-hant': '服務領域', en: 'Services' } },
+  { key: 'services', slug: 'services', labels: { ko: '업무분야', 'zh-hant': '服務領域', en: 'Services' }, megaKey: 'services' },
   { key: 'lawyers', slug: 'lawyers', labels: { ko: '변호사소개', 'zh-hant': '律師介紹', en: 'Lawyers' } },
   { key: 'pricing', slug: 'pricing', labels: { ko: '비용안내', 'zh-hant': '收費標準', en: 'Pricing' } },
   { key: 'columns', slug: 'columns', labels: { ko: '호정칼럼', 'zh-hant': '昊鼎專欄', en: 'Columns' } },
-  { key: 'videos', slug: 'videos', labels: { ko: '미디어센터', 'zh-hant': '媒體中心', en: 'Media Center' } },
+  { key: 'videos', slug: 'videos', labels: { ko: '미디어센터', 'zh-hant': '媒體中心', en: 'Media Center' }, megaKey: 'videos' },
   { key: 'reviews', slug: 'reviews', labels: { ko: '고객후기', 'zh-hant': '客戶評價', en: 'Reviews' } },
 ];
 
@@ -325,21 +327,27 @@ function upgradePublicHeaderNavigation(site: BuilderSiteDocument): BuilderSiteDo
     if (existing) {
       const labelChanged = JSON.stringify(existing.label) !== JSON.stringify(item.labels);
       const nextPageId = page?.pageId ?? existing.pageId;
+      const megaResult = item.megaKey ? mergeHeaderMegaChildren(existing, item.megaKey) : { item: existing, changed: false };
       if (labelChanged || existing.href !== href || existing.pageId !== nextPageId) {
         existing.label = item.labels;
         existing.href = href;
         existing.pageId = nextPageId;
         changed = true;
       }
+      if (megaResult.changed) {
+        existing.children = megaResult.item.children;
+        changed = true;
+      }
       continue;
     }
 
-    nextNavigation.push({
+    const nextItem: BuilderNavItem = {
       id: `nav-${item.key}`,
       pageId: page?.pageId ?? `external-${item.key}`,
       href,
       label: item.labels,
-    });
+    };
+    nextNavigation.push(item.megaKey ? mergeHeaderMegaChildren(nextItem, item.megaKey).item : nextItem);
     changed = true;
   }
 

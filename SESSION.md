@@ -1373,6 +1373,7 @@
 검증:
 - `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "duplicate page slugs" --workers=1` ✅
 - `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (10/10)
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts -g "persists Navigation edits" --workers=1` ✅ (locale-prefixed mega href guard 후 재검증)
 - tracked builder-editor Playwright bundle ✅ 21/21
 - `npm run typecheck` ✅
 - `npm run lint` ✅ (기존 `<img>` warnings only)
@@ -1473,3 +1474,24 @@
 메모:
 - 사용자가 본 “원래 홈페이지가 아니라 테스트용 캔버스처럼 뜸”의 직접 원인은 home draft가 legacy sandbox sample로 저장돼 있었고, 큰 home seed가 500 node schema limit 때문에 normalize fallback으로 다시 sandbox가 됐던 조합.
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01에 full homepage draft restore, 534 node seed, late insights node, schema node limit 상향 메모를 반영.
+
+## 2026-05-08 Codex /goal G-Editor W01/W18/W19 header mega + search state follow-up
+
+범위:
+- Header mega menu 링크를 hardcoded render 전용 데이터가 아니라 `BuilderNavItem.children` 기반 편집 대상으로 승격.
+- 저장된 site document의 업무분야/미디어센터 nav item에 누락된 mega child 항목을 자동 병합하고, Navigation drawer에서 `Mega` child row를 직접 수정할 수 있게 함.
+- Header mega child 클릭 시 해당 child nav item의 label/href edit form으로 포커스되게 연결하고, nested nav href도 navigation 저장 후 revalidate 대상에 포함.
+- 원본 `HeroSearch`와 맞지 않게 첫 화면부터 항상 펼쳐져 있던 hero quick menu를 기본 숨김으로 바꾸고, 검색 영역 hover/focus 또는 해당 노드 선택 시에만 보이게 조정.
+- Canvas node wrapper에 `data-selected` hook을 추가해 선택된 child/dropdown state를 CSS에서 안정적으로 노출 가능하게 함.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (10/10)
+- Playwright 실측: `/ko/admin-builder` 첫 화면에서 `home-hero-quick-menu` display `none`, `home-hero-search-wrap` hover 후 display `block` ✅
+- Playwright 실측: 공개 `/ko`는 `scrollWidth=1440`, `hero-search-bar overlap`/legacy header 렌더 유지, horizontal overflow 없음 ✅
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01/W18/W19에 2026-05-08 follow-up 메모를 추가.
+- 남은 원본 홈페이지 parity gap은 stateful behavior의 편집/방문자-preview 분리: insights pagination 실제 조작, office tabs active state, service/FAQ accordion state를 원본 component-backed preview와 editable node surface 사이에서 일관되게 연결해야 함.

@@ -273,6 +273,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     } else {
       expect(shellHtml, 'dev editor shell should still include Next app chunks').toContain('/_next/static/chunks/');
     }
+    const publicHomeResponse = await page.request.get('/ko');
+    expect(publicHomeResponse.status()).toBe(200);
+    const publicHomeHtml = await publicHomeResponse.text();
+    expect(publicHomeHtml).toContain('hero-search-bar overlap');
+    expect(publicHomeHtml).not.toContain('builder-pub-node');
     const columnsResponse = await page.request.get('/api/builder/columns?locale=ko');
     expect(columnsResponse.status()).toBe(200);
     const columnsPayload = (await columnsResponse.json()) as {
@@ -361,6 +366,30 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="home-insights-title"]').first()).toContainText('칼럼 아카이브');
     await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);
+    await expect(page.locator('[data-node-id="home-insights-page-indicator"]').first()).toContainText(/1 \/ [2-9]/);
+    await expect(page.locator('[data-node-id="home-services-root"] section#practice.section--light').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-hero-search-placeholder"]')).toHaveCount(0);
+    const heroSearchForm = page.locator('[data-node-id="home-hero-search-bar"] form.hero-search-bar.overlap').first();
+    await expect(heroSearchForm).toBeVisible();
+    await expect(heroSearchForm).toHaveAttribute('method', 'get');
+    await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search$/);
+    await expect(page.locator('[data-node-id="home-hero-search-input"] input.hero-search-input[type="search"][name="q"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-hero-search-button"] button.hero-search-btn[type="submit"]').first()).toBeVisible();
+    const heroSearchGeometry = await page.evaluate(() => {
+      const hero = document.querySelector('[data-node-id="home-hero-root"]')?.getBoundingClientRect();
+      const form = document.querySelector('[data-node-id="home-hero-search-bar"] form')?.getBoundingClientRect();
+      if (!hero || !form) return null;
+      return {
+        heroBottom: hero.bottom,
+        formCenterY: form.top + form.height / 2,
+        formLeft: form.left,
+        heroLeft: hero.left,
+      };
+    });
+    expect(heroSearchGeometry).toBeTruthy();
+    expect(Math.abs((heroSearchGeometry?.formCenterY ?? 0) - (heroSearchGeometry?.heroBottom ?? 9999))).toBeLessThanOrEqual(48);
+    expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeGreaterThanOrEqual(24);
+    expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeLessThanOrEqual(72);
     const hoverIndicatorNode = page.locator('[data-node-id="home-hero-subtitle"]:visible').first();
     await hoverIndicatorNode.hover();
     await expect.poll(async () => hoverIndicatorNode.evaluate((element) => (
@@ -510,7 +539,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     ).toContainText(/\d+px/);
     await finishPointerDrag(page, snapDrag, 5, 0);
 
-    const resizeTarget = page.locator('[data-node-id="home-hero-search-placeholder"]:visible').first();
+    const resizeTarget = page.locator('[data-node-id="home-hero-search-input"]:visible').first();
     await expect(resizeTarget).toBeVisible();
     await resizeTarget.scrollIntoViewIfNeeded();
     await resizeTarget.click({ position: { x: 12, y: 12 }, force: true });

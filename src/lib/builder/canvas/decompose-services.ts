@@ -54,8 +54,9 @@ export function createServicesDecomposedNodes(
       rect: { x: 0, y: rootY, width: HOME_STAGE_WIDTH, height: SERVICES_ROOT_HEIGHT },
       zIndex: zBase,
       label: 'home services root',
-      className: 'section section--gray alt',
+      className: 'section section--light',
       as: 'section',
+      htmlId: 'practice',
       dataTone: 'light',
     }),
     createHomeContainerNode({

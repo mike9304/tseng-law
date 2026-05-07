@@ -36,7 +36,7 @@ export default function ButtonElement({
       if (link?.title) props.title = link.title;
       if (link?.ariaLabel) props['aria-label'] = link.ariaLabel;
     } else if (Tag === 'button') {
-      props.type = 'button';
+      props.type = node.content.buttonType ?? 'button';
     }
     if (!interactive) {
       (props.style as React.CSSProperties).pointerEvents = 'none';
@@ -90,7 +90,7 @@ export default function ButtonElement({
     if (link?.title) elementProps.title = link.title;
     if (link?.ariaLabel) elementProps['aria-label'] = link.ariaLabel;
   } else if (Tag === 'button') {
-    elementProps.type = 'button';
+    elementProps.type = node.content.buttonType ?? 'button';
   }
 
   return (

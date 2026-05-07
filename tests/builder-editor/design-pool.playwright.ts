@@ -4,7 +4,7 @@ const screenshotDir = '/tmp';
 const preferredCanvasNodeIds = [
   'home-hero-subtitle',
   'home-hero-title',
-  'home-hero-search-placeholder',
+  'home-hero-search-input',
   'home-insights-title',
   'home-insights-featured-title',
 ];

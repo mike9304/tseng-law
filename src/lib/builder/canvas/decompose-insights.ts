@@ -1,7 +1,7 @@
 import type { BuilderCanvasNode } from './types';
 import type { Locale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
-import { insightsArchive } from '@/data/insights-archive';
+import { getAllColumnPosts } from '@/lib/columns';
 import {
   HOME_STAGE_WIDTH,
   createHomeButtonNode,
@@ -58,15 +58,13 @@ type HomeInsightPost = {
 export const INSIGHTS_SECTION_ROOT_HEIGHT = INSIGHTS_ROOT_HEIGHT;
 
 function resolveInsightsPosts(locale: Locale): HomeInsightPost[] {
-  const archive = insightsArchive[locale === 'en' ? 'ko' : locale];
-  if (!archive) return [];
-  return archive.posts.map((post) => ({
-    slug: post.id,
+  return getAllColumnPosts(locale).map((post) => ({
+    slug: post.slug,
     title: post.title,
-    dateDisplay: post.date ?? '',
-    readTime: post.readTime ?? '',
-    categoryLabel: archive.categories[post.category] ?? '',
-    featuredImage: post.image,
+    dateDisplay: post.dateDisplay || post.date || '',
+    readTime: post.readTime || '',
+    categoryLabel: post.categoryLabel,
+    featuredImage: post.featuredImage,
     summary: post.summary,
   }));
 }
@@ -82,6 +80,7 @@ export function createInsightsDecomposedNodes(
 
   const [featured, ...rest] = posts;
   const listItems = rest.slice(0, 3);
+  const pageCount = Math.max(1, Math.ceil(rest.length / 3));
   const authorLabel =
     locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
   const authorHref = getAttorneyProfilePath(locale);
@@ -306,7 +305,7 @@ export function createInsightsDecomposedNodes(
       parentId: 'home-insights-controls',
       rect: { x: 156, y: 6, width: 134, height: 20 },
       zIndex: 1,
-      text: '1 / 1',
+      text: `1 / ${pageCount}`,
       className: 'insights-page-indicator',
       as: 'span',
     }),

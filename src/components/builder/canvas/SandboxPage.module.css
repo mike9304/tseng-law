@@ -1332,6 +1332,13 @@
   background: #ffffff;
 }
 
+.stage :global(.hero) {
+  min-height: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .topRuler {
   position: absolute;
   inset: 0 0 auto 0;

@@ -1407,3 +1407,28 @@
 메모:
 - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01/W12/W20에 inspector 고정, Layout 편집, 실제 세로 스크롤/하단 footer 고정감 제거 검증 메모를 반영.
 - 다음 작업은 사용자가 지적한 원본 홈페이지 재현도 gap: 검색창 위치, 원래 홈 섹션/기능 누락, 공개 사이트와 빌더 seed/decomposition 불일치 비교 감사.
+
+## 2026-05-07 Codex /goal G-Editor W01 homepage parity follow-up
+
+범위:
+- 사용자가 지적한 원본 홈 불일치 1차 수정: hero 검색창을 static `div` placeholder가 아니라 실제 `form[action="/ko/search"][method="get"]` + `input[type="search"][name="q"]` + `button[type="submit"]` 구조로 변경.
+- `home-hero-search-placeholder`를 `home-hero-search-input`으로 승격하고, 기존 저장된 home draft도 로드 시 자동 마이그레이션하도록 `upgradeHeroSearchForm` 추가.
+- 에디터 stage 안에서 public `.hero`의 negative margin/header padding이 canvas 좌표를 밀어 올리던 문제를 stage-local CSS로 차단해 검색창이 hero bottom을 정확히 걸치게 조정.
+- 홈 insights seed가 `insightsArchive` 대신 legacy 홈과 같은 `getAllColumnPosts(locale)` 소스를 쓰도록 변경하고, page indicator를 실제 `1 / 6` 형태로 반영.
+- 기존 저장 문서도 `home-insights-*` 텍스트/이미지/링크를 현재 칼럼 source로 보정하도록 `upgradeHomeInsightsSource` 추가.
+- services 섹션을 legacy 홈과 맞춰 `section--light` + `id="practice"`로 보정하고, 기존 저장 문서도 자동 마이그레이션.
+- 공개 `/ko`가 builder snapshot으로 섞이지 않고 legacy home chrome/search를 유지하는 회귀 assertion 추가.
+
+검증:
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- tracked builder-editor Playwright bundle ✅ 21/21
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 files / 61 mutation handlers)
+- `npm run test:unit` ✅ (21 files / 712 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` 삭제 + `npm run dev` 3000 재시작, 인증 포함 `HEAD /ko/admin-builder` ✅ 200
+
+메모:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` W01에 hero search form/input/submit, search bottom-overlap geometry, public legacy home guard, insights column source, services `#practice` 보정 메모를 반영.
+- 남은 gap: hero quick menu focus state, header search overlay, insights carousel/FAQ/office tabs 같은 stateful legacy behavior는 아직 static decomposition에 가까움. 다음 패스에서 component-backed 또는 explicit state 편집 surface로 전환 필요.

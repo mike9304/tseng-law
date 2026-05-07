@@ -61,6 +61,193 @@ function upgradeOfficeMapPlaceholders(document: BuilderCanvasDocument): BuilderC
   };
 }
 
+function withNodePatch(
+  node: BuilderCanvasNode,
+  patch: Partial<Omit<BuilderCanvasNode, 'content'>> & { content?: Record<string, unknown> },
+): { node: BuilderCanvasNode; changed: boolean } {
+  const nextNode = {
+    ...node,
+    ...patch,
+    rect: patch.rect ? { ...node.rect, ...patch.rect } : node.rect,
+    content: patch.content ? { ...node.content, ...patch.content } : node.content,
+  } as BuilderCanvasNode;
+  return {
+    node: nextNode,
+    changed: JSON.stringify(nextNode) !== JSON.stringify(node),
+  };
+}
+
+function upgradeHeroSearchForm(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {
+  let changed = false;
+  const searchButtonLabel = locale === 'ko' ? '검색' : locale === 'zh-hant' ? '搜尋' : 'Search';
+  const nextNodes: BuilderCanvasNode[] = [];
+  let hasInputNode = document.nodes.some((node) => node.id === 'home-hero-search-input');
+
+  for (const node of document.nodes) {
+    let result: { node: BuilderCanvasNode; changed: boolean } | null = null;
+
+    if (node.id === 'home-hero-search-wrapper') {
+      result = withNodePatch(node, {
+        rect: { x: 0, y: 758, width: 1280, height: 62 },
+      });
+    } else if (node.id === 'home-hero-search-container') {
+      result = withNodePatch(node, {
+        rect: { x: 0, y: 0, width: 1280, height: 62 },
+      });
+    } else if (node.id === 'home-hero-search-wrap') {
+      result = withNodePatch(node, {
+        rect: { x: 0, y: 0, width: 620, height: 62 },
+      });
+    } else if (node.id === 'home-hero-search-bar') {
+      result = withNodePatch(node, {
+        rect: { x: 0, y: 0, width: 620, height: 62 },
+        content: {
+          as: 'form',
+          action: `/${locale}/search`,
+          method: 'get',
+          layoutMode: 'flex',
+          flexConfig: {
+            direction: 'row',
+            wrap: false,
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: 0,
+          },
+        },
+      });
+    } else if (node.id === 'home-hero-search-placeholder' && !hasInputNode) {
+      const placeholder = node.content && 'text' in node.content && typeof node.content.text === 'string'
+        ? node.content.text
+        : '';
+      result = withNodePatch(node, {
+        id: 'home-hero-search-input',
+        rect: { x: 0, y: 0, width: 558, height: 62 },
+        content: {
+          as: 'input',
+          inputType: 'search',
+          name: 'q',
+          placeholder,
+          ariaLabel: placeholder,
+        },
+      });
+      hasInputNode = true;
+    } else if (node.id === 'home-hero-search-placeholder') {
+      changed = true;
+      continue;
+    } else if (node.id === 'home-hero-search-input') {
+      const placeholder = node.content && 'text' in node.content && typeof node.content.text === 'string'
+        ? node.content.text
+        : '';
+      result = withNodePatch(node, {
+        rect: { x: 0, y: 0, width: 558, height: 62 },
+        content: {
+          as: 'input',
+          inputType: 'search',
+          name: 'q',
+          placeholder,
+          ariaLabel: placeholder,
+        },
+      });
+    } else if (node.id === 'home-hero-search-button') {
+      result = withNodePatch(node, {
+        rect: { x: 558, y: 0, width: 62, height: 62 },
+        content: {
+          as: 'button',
+          buttonType: 'submit',
+          ariaLabel: searchButtonLabel,
+        },
+      });
+    }
+
+    if (result) {
+      changed = changed || result.changed;
+      nextNodes.push(result.node);
+    } else {
+      nextNodes.push(node);
+    }
+  }
+
+  if (!changed) return document;
+  return {
+    ...document,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `${document.updatedBy || 'builder'}+hero-search-parity`,
+    nodes: nextNodes,
+  };
+}
+
+function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {
+  if (!document.nodes.some((node) => node.id === 'home-insights-root')) return document;
+  const seeded = createHomePageCanvasDocument(locale);
+  const seededById = new Map(
+    seeded.nodes
+      .filter((node) => node.id.startsWith('home-insights-'))
+      .map((node) => [node.id, node]),
+  );
+  let changed = false;
+  const nextNodes = document.nodes.map((node) => {
+    const seededNode = seededById.get(node.id);
+    if (!seededNode) return node;
+
+    const patch: Partial<Omit<BuilderCanvasNode, 'content'>> & { content?: Record<string, unknown> } = {};
+    if (node.kind === 'text' && seededNode.kind === 'text') {
+      patch.content = {
+        text: seededNode.content.text,
+        richText: seededNode.content.richText,
+      };
+    } else if (node.kind === 'image' && seededNode.kind === 'image') {
+      patch.content = {
+        src: seededNode.content.src,
+        alt: seededNode.content.alt,
+      };
+    } else if (node.kind === 'button' && seededNode.kind === 'button') {
+      patch.content = {
+        label: seededNode.content.label,
+        href: seededNode.content.href,
+        link: seededNode.content.link,
+      };
+    } else {
+      return node;
+    }
+
+    const result = withNodePatch(node, patch);
+    changed = changed || result.changed;
+    return result.node;
+  });
+
+  if (!changed) return document;
+  return {
+    ...document,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `${document.updatedBy || 'builder'}+insights-source`,
+    nodes: nextNodes,
+  };
+}
+
+function upgradeHomeServicesSection(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  let changed = false;
+  const nextNodes = document.nodes.map((node) => {
+    if (node.id !== 'home-services-root') return node;
+    const result = withNodePatch(node, {
+      content: {
+        className: 'section section--light',
+        htmlId: 'practice',
+        dataTone: 'light',
+      },
+    });
+    changed = changed || result.changed;
+    return result.node;
+  });
+
+  if (!changed) return document;
+  return {
+    ...document,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `${document.updatedBy || 'builder'}+services-parity`,
+    nodes: nextNodes,
+  };
+}
+
 const REQUIRED_SEED_SLUGS = ['', 'about', 'services', 'contact', 'lawyers', 'faq', 'pricing', 'reviews', 'columns', 'privacy', 'disclaimer'];
 
 function needsStandardPageSeed(sitePages: Array<{ slug: string; isHomePage?: boolean }>): boolean {
@@ -151,7 +338,12 @@ export default async function BuilderMainPage({
     backend = draft.backend;
   }
 
-  const upgradedInitialDocument = upgradeOfficeMapPlaceholders(initialDocument);
+  const upgradedInitialDocument = upgradeHeroSearchForm(
+    upgradeHomeServicesSection(
+      upgradeHomeInsightsSource(upgradeOfficeMapPlaceholders(initialDocument), locale),
+    ),
+    locale,
+  );
   if (upgradedInitialDocument !== initialDocument && initialPage) {
     initialDocument = upgradedInitialDocument;
     try {

@@ -10,8 +10,8 @@ type Rect = {
   height: number;
 };
 
-type ContainerTag = 'div' | 'section' | 'article' | 'aside' | 'header' | 'footer' | 'main' | 'nav';
-type TextTag = 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type ContainerTag = 'div' | 'section' | 'article' | 'aside' | 'header' | 'footer' | 'main' | 'nav' | 'form';
+type TextTag = 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'input';
 type ButtonTag = 'a' | 'button';
 
 const baseTextContent = {
@@ -36,6 +36,8 @@ export function createHomeContainerNode({
   as = 'div',
   htmlId,
   dataTone,
+  action,
+  method,
   background = 'transparent',
   borderColor = '#cbd5e1',
   borderStyle = 'solid',
@@ -55,6 +57,8 @@ export function createHomeContainerNode({
   as?: ContainerTag;
   htmlId?: string;
   dataTone?: string;
+  action?: string;
+  method?: 'get' | 'post';
   background?: string;
   borderColor?: string;
   borderStyle?: 'solid' | 'dashed';
@@ -124,6 +128,8 @@ export function createHomeContainerNode({
       ...(as ? { as } : {}),
       ...(htmlId ? { htmlId } : {}),
       ...(dataTone ? { dataTone } : {}),
+      ...(action ? { action } : {}),
+      ...(method ? { method } : {}),
     },
   };
 }
@@ -139,6 +145,10 @@ export function createHomeTextNode({
   fontSize = 16,
   color = '#0f172a',
   fontWeight = 'regular',
+  inputType,
+  name,
+  placeholder,
+  ariaLabel,
 }: {
   id: string;
   rect: Rect;
@@ -150,6 +160,10 @@ export function createHomeTextNode({
   fontSize?: number;
   color?: string;
   fontWeight?: 'regular' | 'medium' | 'bold';
+  inputType?: 'text' | 'search' | 'email' | 'url' | 'tel';
+  name?: string;
+  placeholder?: string;
+  ariaLabel?: string;
 }): BuilderCanvasNode {
   return {
     id,
@@ -169,6 +183,10 @@ export function createHomeTextNode({
       fontWeight,
       ...(className ? { className } : {}),
       ...(as ? { as } : {}),
+      ...(inputType ? { inputType } : {}),
+      ...(name ? { name } : {}),
+      ...(placeholder ? { placeholder } : {}),
+      ...(ariaLabel ? { ariaLabel } : {}),
     },
   };
 }
@@ -185,6 +203,8 @@ export function createHomeButtonNode({
   as = 'a',
   target,
   rel,
+  buttonType,
+  ariaLabel,
 }: {
   id: string;
   rect: Rect;
@@ -197,6 +217,8 @@ export function createHomeButtonNode({
   as?: ButtonTag;
   target?: '_self' | '_blank' | '_parent' | '_top';
   rel?: string;
+  buttonType?: 'button' | 'submit';
+  ariaLabel?: string;
 }): BuilderCanvasNode {
   return {
     id,
@@ -216,6 +238,8 @@ export function createHomeButtonNode({
       ...(as ? { as } : {}),
       ...(target ? { target } : {}),
       ...(rel ? { rel } : {}),
+      ...(buttonType ? { buttonType } : {}),
+      ...(ariaLabel ? { ariaLabel } : {}),
     },
   };
 }

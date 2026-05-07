@@ -25,13 +25,36 @@ function richTextModeForTag(tag: keyof JSX.IntrinsicElements): 'block' | 'headin
 export default function TextElement({
   node,
   theme,
+  mode = 'edit',
 }: {
   node: BuilderTextCanvasNode;
   theme?: BuilderTheme;
+  mode?: 'edit' | 'preview' | 'published';
 }) {
   const { className, as } = node.content;
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
   const richTextMode = richTextModeForTag(Tag);
+
+  if (as === 'input') {
+    return (
+      <input
+        className={className}
+        type={node.content.inputType ?? 'text'}
+        name={node.content.name}
+        placeholder={node.content.text}
+        aria-label={node.content.ariaLabel ?? node.content.text}
+        readOnly={mode === 'edit'}
+        defaultValue=""
+        style={{
+          width: '100%',
+          height: '100%',
+          margin: 0,
+          boxSizing: 'border-box',
+          pointerEvents: mode === 'edit' ? 'none' : undefined,
+        }}
+      />
+    );
+  }
 
   if (className) {
     return (

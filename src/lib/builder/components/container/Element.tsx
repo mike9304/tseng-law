@@ -83,6 +83,15 @@ export default function ContainerElement({
         ...(layoutMode !== 'absolute' ? layoutCSS : {}),
       },
     };
+    if (Tag === 'form') {
+      props.action = content.action;
+      props.method = content.method ?? 'get';
+      if (mode === 'edit') {
+        props.onSubmit = (event: { preventDefault: () => void }) => {
+          event.preventDefault();
+        };
+      }
+    }
     return wrapLinked(<Tag {...(props as Record<string, never>)}>{children}</Tag>);
   }
 

@@ -376,6 +376,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(headerSearchDialog).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(headerSearchDialog).toBeHidden();
+    const publicChrome = page.locator('[data-builder-public-chrome="true"]').first();
+    await expect(publicChrome).toBeVisible();
+    await expect(publicChrome.getByRole('button', { name: /AI 상담|AI Chat|AI 諮詢/ })).toBeVisible();
+    await expect(publicChrome.getByRole('button', { name: /상단|Back to top|回到頂部/ })).toBeVisible();
+    await publicChrome.getByRole('button', { name: /2026 EVENT/ }).click();
+    await expect(publicChrome).toContainText('2026년 기념 리뷰 이벤트');
+    await publicChrome.getByRole('button', { name: /AI 상담|AI Chat|AI 諮詢/ }).click();
+    await expect(publicChrome).toContainText('AI 상담');
     await expect(page.locator('[data-node-id="home-insights-title"]').first()).toContainText('칼럼 아카이브');
     await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);

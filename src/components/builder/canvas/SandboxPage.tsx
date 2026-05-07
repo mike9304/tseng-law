@@ -47,6 +47,7 @@ const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
 };
 
 type SandboxDrawerPanel = 'pages' | 'add' | 'design' | 'layers' | 'nav' | 'columns' | 'history';
+type PublicChromePanel = 'chat' | 'event' | null;
 type BuilderPageSummary = {
   pageId: string;
   slug: string;
@@ -93,6 +94,51 @@ interface DraftResponseBody {
   draft?: DraftMeta;
   document?: BuilderCanvasDocument;
   snapshot?: { document?: BuilderCanvasDocument };
+}
+
+function getPublicChromeCopy(locale: Locale) {
+  if (locale === 'zh-hant') {
+    return {
+      label: '公共浮動工具',
+      chat: 'AI 諮詢',
+      event: '2026 EVENT',
+      top: '回到頂部',
+      chatTitle: 'AI 諮詢',
+      chatBody: '此浮動入口會在正式網站右下角顯示，連接公開 AI 諮詢視窗。',
+      eventTitle: '2026年紀念評論活動',
+      eventBody: '正式網站首次造訪時顯示的評論活動彈窗。',
+      editSettings: '網站設定',
+      editColumns: '專欄管理',
+    };
+  }
+
+  if (locale === 'en') {
+    return {
+      label: 'Public floating tools',
+      chat: 'AI Chat',
+      event: '2026 EVENT',
+      top: 'Back to top',
+      chatTitle: 'AI Chat',
+      chatBody: 'This floating entry appears on the public site and opens the AI consultation chat.',
+      eventTitle: '2026 Commemorative Review Event',
+      eventBody: 'The public event popup shown to first-time visitors before they dismiss it.',
+      editSettings: 'Site settings',
+      editColumns: 'Columns',
+    };
+  }
+
+  return {
+    label: '공개 사이트 플로팅 도구',
+    chat: 'AI 상담',
+    event: '2026 EVENT',
+    top: '상단',
+    chatTitle: 'AI 상담',
+    chatBody: '실제 사이트 우측 하단에 뜨는 공개 AI 상담 진입 버튼입니다.',
+    eventTitle: '2026년 기념 리뷰 이벤트',
+    eventBody: '방문자에게 표시되는 리뷰 이벤트 팝업입니다.',
+    editSettings: '사이트 설정',
+    editColumns: '칼럼 관리',
+  };
 }
 
 const conflictBannerStyle: React.CSSProperties = {
@@ -201,6 +247,7 @@ export default function SandboxPage({
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
+  const [publicChromePanel, setPublicChromePanel] = useState<PublicChromePanel>(null);
   const [activeNavItemId, setActiveNavItemId] = useState<string | null>(null);
   const [focusedNavItemId, setFocusedNavItemId] = useState<string | null>(null);
   const [helpOpen, setHelpOpen] = useState(false);
@@ -213,6 +260,7 @@ export default function SandboxPage({
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
   const activePageIdRef = useRef(activePageId);
   const localeRef = useRef(locale);
+  const publicChromeCopy = useMemo(() => getPublicChromeCopy(locale), [locale]);
 
   useEffect(() => {
     activePageIdRef.current = activePageId;
@@ -1199,6 +1247,68 @@ export default function SandboxPage({
               />
             </div>
           ) : null}
+          <div
+            className={styles.publicChromePreview}
+            data-builder-public-chrome="true"
+            aria-label={publicChromeCopy.label}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className={styles.publicChromeAction}
+              aria-pressed={publicChromePanel === 'chat'}
+              onClick={() => setPublicChromePanel((current) => (current === 'chat' ? null : 'chat'))}
+            >
+              {publicChromeCopy.chat}
+            </button>
+            <button
+              type="button"
+              className={styles.publicChromeAction}
+              onClick={() => {
+                canvasColumnRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
+              ↑ {publicChromeCopy.top}
+            </button>
+            <button
+              type="button"
+              className={styles.publicChromeAction}
+              aria-pressed={publicChromePanel === 'event'}
+              onClick={() => setPublicChromePanel((current) => (current === 'event' ? null : 'event'))}
+            >
+              {publicChromeCopy.event}
+            </button>
+            {publicChromePanel ? (
+              <div className={styles.publicChromePopover} role="status">
+                <strong>
+                  {publicChromePanel === 'chat' ? publicChromeCopy.chatTitle : publicChromeCopy.eventTitle}
+                </strong>
+                <p>
+                  {publicChromePanel === 'chat' ? publicChromeCopy.chatBody : publicChromeCopy.eventBody}
+                </p>
+                <div className={styles.publicChromePopoverActions}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPublicChromePanel(null);
+                      setSettingsOpen(true);
+                    }}
+                  >
+                    {publicChromeCopy.editSettings}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPublicChromePanel(null);
+                      setActiveDrawer('columns');
+                    }}
+                  >
+                    {publicChromeCopy.editColumns}
+                  </button>
+                </div>
+              </div>
+            ) : null}
+          </div>
         </div>
         <div className={styles.inspectorColumn}>
           <SandboxInspectorPanel

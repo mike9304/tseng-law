@@ -1547,3 +1547,21 @@
 
 메모:
 - 칼럼 목록/글쓰기의 편집 홈 복귀 dock과 `?new=1` quick start는 기존 구현/테스트가 유지됨.
+
+## 2026-05-08 Codex /goal G-Editor public floating chrome follow-up
+
+범위:
+- 공개 사이트에 있던 우측 플로팅 기능이 에디터에서 빠져 보이는 문제를 줄이기 위해 admin-builder 캔버스 하단에 공개 플로팅 도구 preview/edit dock을 추가.
+- dock에는 `AI 상담`, `상단`, `2026 EVENT`가 표시되고, 이벤트/AI 버튼은 해당 공개 기능 설명 popover를 열며 `사이트 설정`, `칼럼 관리`로 바로 이동 가능.
+- 실제 public layout 컴포넌트를 admin-builder에 직접 섞지 않아 공개 `/ko` 레이아웃과 builder editor 레이아웃이 서로 오염되는 회귀를 피함.
+- admin-builder smoke에 공개 플로팅 도구 노출, 이벤트 popover, AI popover 검증을 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... office-map-public.playwright.ts --workers=1` ✅
+
+메모:
+- 지도는 이전 follow-up의 quick panel 경로를 그대로 재검증했고, generic map 주소/줌 변경과 사무소 지도 공개 반영 시나리오가 모두 통과.
+- 남은 원본 홈페이지 parity gap은 services/FAQ accordion visitor preview, office tab active preview, insights pagination 실제 조작, header/nav의 edit/preview mode 분리.

@@ -640,6 +640,96 @@
   background: var(--editor-accent-soft, #eff6ff);
 }
 
+.publicChromePreview {
+  position: fixed;
+  right: 336px;
+  bottom: 44px;
+  z-index: 95;
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 6px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--editor-panel-elevated, #fff) 96%, transparent);
+  box-shadow: var(--editor-shadow-popover, 0 14px 32px rgba(15, 23, 42, 0.16));
+  backdrop-filter: blur(14px);
+}
+
+.publicChromeAction {
+  min-width: 40px;
+  height: 34px;
+  padding: 0 11px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--editor-bg, #f8fafc);
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 11px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: border-color 140ms ease, background 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.publicChromeAction:hover,
+.publicChromeAction:focus-visible,
+.publicChromeAction[aria-pressed='true'] {
+  border-color: var(--editor-accent, #116dff);
+  background: var(--editor-accent, #116dff);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.publicChromePopover {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  width: min(320px, calc(100vw - 380px));
+  padding: 12px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 8px;
+  background: var(--editor-panel-elevated, #fff);
+  color: var(--editor-fg-primary, #0f172a);
+  box-shadow: var(--editor-shadow-popover, 0 14px 32px rgba(15, 23, 42, 0.16));
+}
+
+.publicChromePopover strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.publicChromePopover p {
+  margin: 0;
+  color: var(--editor-fg-secondary, #334155);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.publicChromePopoverActions {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.publicChromePopoverActions button {
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 7px;
+  background: var(--editor-bg, #f8fafc);
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 11px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.publicChromePopoverActions button:hover,
+.publicChromePopoverActions button:focus-visible {
+  border-color: var(--editor-accent, #116dff);
+  background: var(--editor-accent-soft, #eff6ff);
+}
+
 .inspectorColumn {
   flex: 0 0 320px;
   width: 320px;
@@ -3696,6 +3786,19 @@
 
   .stageViewport {
     min-height: 60vh;
+  }
+
+  .publicChromePreview {
+    right: 14px;
+    bottom: 42px;
+    max-width: calc(100vw - 28px);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border-radius: 14px;
+  }
+
+  .publicChromePopover {
+    width: min(320px, calc(100vw - 28px));
   }
 
   .zoomDock {

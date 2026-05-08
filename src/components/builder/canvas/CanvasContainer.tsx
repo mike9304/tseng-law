@@ -13,6 +13,7 @@ import {
   createCanvasNodeTemplate,
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
+import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
 import {
   resolveCanvasNodeAbsoluteRectForViewport,
@@ -358,10 +359,7 @@ export default function CanvasContainer({
     () => nodes.filter((node) => node.visible),
     [nodes],
   );
-  const nodesById = useMemo(
-    () => new Map(nodes.map((node) => [node.id, node])),
-    [nodes],
-  );
+  const nodesById = useMemo(() => getCanvasNodesById(nodes), [nodes]);
   const linkPickerContext = useMemo<LinkPickerContext>(
     () => ({
       siteAnchors: nodes
@@ -987,7 +985,7 @@ export default function CanvasContainer({
           const nodeId = activeInteraction.nodeIds[0];
           const currentDocument = useBuilderCanvasStore.getState().document;
           const allNodes = currentDocument?.nodes ?? [];
-          const nodesById = new Map(allNodes.map((node) => [node.id, node]));
+          const nodesById = getCanvasNodesById(allNodes);
           const movedNode = nodesById.get(nodeId);
           if (!movedNode) return null;
           const movedRect = resolveCanvasNodeAbsoluteRectForViewport(

@@ -13,6 +13,7 @@ import {
   resolveViewportHidden,
   resolveViewportRect,
 } from '@/lib/builder/canvas/responsive';
+import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import {
   HOME_SECTION_TEMPLATE_VARIANTS,
   getHomeSectionTemplateVariantOptions,
@@ -682,10 +683,7 @@ export default function CanvasNode({
   const selectionZIndexBoost = selected && !preservesHitTestLayer ? 10000 : 0;
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
   const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
-  const nodesById = useMemo(
-    () => new Map(allNodes.map((candidate) => [candidate.id, candidate])),
-    [allNodes],
-  );
+  const nodesById = useMemo(() => getCanvasNodesById(allNodes), [allNodes]);
   const heroSearchInputNode = nodesById.get('home-hero-search-input');
   const heroSearchBarNode = nodesById.get('home-hero-search-bar');
   const heroSearchButtonNode = nodesById.get('home-hero-search-button');

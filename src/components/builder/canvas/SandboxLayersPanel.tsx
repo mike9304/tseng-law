@@ -17,6 +17,7 @@ import {
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
+import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind } from '@/lib/builder/canvas/types';
 import LayerSearchInput from './LayerSearchInput';
@@ -131,7 +132,7 @@ export default function SandboxLayersPanel() {
   const [dropIntent, setDropIntent] = useState<LayerDropIntent | null>(null);
 
   const nodes = useMemo(() => document?.nodes ?? [], [document?.nodes]);
-  const nodesById = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes]);
+  const nodesById = useMemo(() => getCanvasNodesById(nodes), [nodes]);
   const normalizedQuery = query.trim().toLowerCase();
 
   const childrenByParent = useMemo(() => {

@@ -1886,3 +1886,20 @@
 
 메모:
 - 사용자가 요청한 "칼럼 아카이브/주요 서비스 같은 기능 섹션을 템플릿 디자인 형식으로 바꾸기 쉽게" 중 칼럼 전용 feed layout 조작을 닫은 단위. 다음은 공개 칼럼 목록 페이지의 category/filter/search UI를 빌더에서 더 직접 조작 가능하게 만드는 쪽이 남아 있다.
+
+## 2026-05-09 Codex /goal G-Editor canvas nodesById cache
+
+범위:
+- `getCanvasNodesById()` WeakMap cache helper를 추가해 같은 nodes array reference에서 `id -> node` Map을 한 번만 생성.
+- CanvasNode, CanvasContainer, SandboxLayersPanel, SandboxPage selected section walk, canvas store group/paste/reparent 경로가 shared cache를 사용하도록 연결.
+- `reorderNodes`는 순서 조작 때문에 cache Map을 복사해서 사용하도록 처리.
+- 감사 문서의 Critical #1/#12 계열 중 반복 Map 생성 비용을 낮춰 큰 홈 페이지에서 drag/scroll/selection 렌더 비용을 줄임.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/indexes.test.ts` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- store-level derived index를 완전히 도입한 것은 아니지만, 현재 hot render path에서 동일 배열 기준 Map 재생성을 공유 cache로 흡수한다. 다음 성능 축은 transient move 중 full sort/JSON stringify/absolute rect recalculation이다.

@@ -30,6 +30,7 @@ import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import {
   HOME_SECTION_TEMPLATE_VARIANTS,
   getHomeSectionTemplateVariantOptions,
@@ -600,7 +601,7 @@ export default function SandboxPage({
   );
   const selectedSectionTemplateNode = useMemo(() => {
     if (!selectedNode || !canvasDocument) return null;
-    const nodesById = new Map(canvasDocument.nodes.map((node) => [node.id, node]));
+    const nodesById = getCanvasNodesById(canvasDocument.nodes);
     let current = selectedNode;
 
     while (current) {

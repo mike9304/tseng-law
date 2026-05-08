@@ -1746,3 +1746,20 @@
 
 메모:
 - 현재 자동 검증 기준 editor core는 통과 상태지만, 사용자가 지적한 원본 tseng-law.com의 상태형 섹션 parity는 별도 후속으로 계속 진행. Green 승격과 goal complete는 사용자 직접 5분 검증 전까지 대기.
+
+## 2026-05-09 Codex /goal G-Editor pages navigation sync
+
+범위:
+- PageSwitcher가 페이지 생성/이름 변경/삭제 후 서버 목록을 부모 SandboxPage에 즉시 전달하도록 `onPagesChange`를 추가.
+- active page rename 뒤 top bar page dropdown/current slug/link picker가 오래된 slug를 들고 있는 문제를 차단.
+- page 삭제 시 top-level navigation뿐 아니라 nested mega child navigation도 재귀적으로 제거.
+- Playwright에 active page rename → top bar slug 반영 → nested nav href 업데이트 → delete → nested nav cleanup 시나리오 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1 --grep "keeps active page slug"` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (11/11)
+
+메모:
+- 사용자가 말한 섹션 템플릿 교체성은 다음 구현 축으로 분리. 칼럼/주요 서비스/FAQ/오시는길은 앞으로 데이터와 동작 계약을 유지하고 디자인 variant만 갈아끼우는 구조로 확장한다.

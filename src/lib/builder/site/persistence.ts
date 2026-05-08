@@ -18,6 +18,7 @@ import {
   type BuilderSiteDocument,
   type BuilderPageMeta,
   type BuilderPageLifecycleMeta,
+  type BuilderNavItem,
   type BuilderLightbox,
   type PageCanvasRecord,
   type SavedSection,
@@ -389,10 +390,23 @@ export async function createPage(
   return meta;
 }
 
+function removeNavigationItemsForPage(items: BuilderNavItem[], pageId: string): BuilderNavItem[] {
+  return items
+    .filter((item) => item.pageId !== pageId)
+    .map((item) => {
+      if (!item.children?.length) return item;
+      const children = removeNavigationItemsForPage(item.children, pageId);
+      if (children.length > 0) return { ...item, children };
+      const itemWithoutChildren = { ...item };
+      delete itemWithoutChildren.children;
+      return itemWithoutChildren;
+    });
+}
+
 export async function deletePage(siteId: string, pageId: string, locale: Locale): Promise<void> {
   const site = await ensureSiteDocument(siteId, locale);
   site.pages = site.pages.filter((p) => p.pageId !== pageId);
-  site.navigation = site.navigation.filter((n) => n.pageId !== pageId);
+  site.navigation = removeNavigationItemsForPage(site.navigation, pageId);
   site.updatedAt = new Date().toISOString();
   await writeSiteDocument(site, { preserveMissingPages: false });
 }

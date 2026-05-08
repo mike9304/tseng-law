@@ -23,9 +23,35 @@ const baseNodeStyle = {
   opacity: 100,
 };
 
+type TestNavigationItem = {
+  id: string;
+  label: string | Record<string, string>;
+  href: string;
+  pageId?: string;
+  children?: TestNavigationItem[];
+};
+
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'design-pool';
   return { 'x-forwarded-for': `pw-${safeScope}` };
+}
+
+function navigationHasPageId(items: TestNavigationItem[], pageId: string): boolean {
+  return items.some((item) => (
+    item.pageId === pageId ||
+    (item.children ? navigationHasPageId(item.children, pageId) : false)
+  ));
+}
+
+function findNavigationItemByPageId(items: TestNavigationItem[], pageId: string): TestNavigationItem | null {
+  for (const item of items) {
+    if (item.pageId === pageId) return item;
+    if (item.children) {
+      const nested = findNavigationItemByPageId(item.children, pageId);
+      if (nested) return nested;
+    }
+  }
+  return null;
 }
 
 async function findPageIdBySlug(page: Page, slug: string): Promise<string | null> {
@@ -1108,6 +1134,157 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
           failOnStatusCode: false,
         });
       }
+    }
+  });
+
+  test('keeps active page slug and nested navigation in sync after rename and delete', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-page-sync-${token}`;
+    const renamedSlug = `${slug}-renamed`;
+    const title = `Page sync ${token}`;
+    const renamedTitle = `Page sync renamed ${token}`;
+    let pageId: string | null = null;
+    let originalNavigation: TestNavigationItem[] | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(slug));
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title,
+          blank: true,
+        },
+        headers: mutationHeaders(slug),
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { pageId?: string; success?: boolean; error?: string };
+      expect(created.success, created.error).toBe(true);
+      expect(created.pageId).toBeTruthy();
+      pageId = created.pageId!;
+
+      const originalNavResponse = await page.request.get('/api/builder/site/navigation?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(originalNavResponse.status()).toBe(200);
+      const originalNavPayload = (await originalNavResponse.json()) as { navigation?: TestNavigationItem[] };
+      originalNavigation = originalNavPayload.navigation ?? [];
+      expect(originalNavigation.length).toBeGreaterThan(0);
+
+      const parentId = originalNavigation.find((item) => item.id === 'nav-services')?.id ?? originalNavigation[0]!.id;
+      const nestedChild: TestNavigationItem = {
+        id: `nav-page-sync-child-${token}`,
+        pageId,
+        href: `/ko/${slug}`,
+        label: {
+          ko: `페이지 sync child ${token}`,
+          'zh-hant': `頁面 sync child ${token}`,
+          en: `Page sync child ${token}`,
+        },
+      };
+      const navWithNestedPage = originalNavigation.map((item) => (
+        item.id === parentId
+          ? { ...item, children: [...(item.children ?? []), nestedChild] }
+          : item
+      ));
+      const seedNavResponse = await page.request.put('/api/builder/site/navigation', {
+        data: {
+          locale: 'ko',
+          navigation: navWithNestedPage,
+        },
+        headers: mutationHeaders(slug),
+      });
+      expect(seedNavResponse.status()).toBe(200);
+
+      await openBuilder(page);
+      await page.locator('[class*="iconRail"]').getByRole('button', { name: 'Pages', exact: true }).click();
+      const pagesDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Pages' }).first();
+      await expect(pagesDrawer.getByText('Pages').first()).toBeVisible();
+
+      const initialRow = pagesDrawer.locator(`[data-builder-page-row="${pageId}"]`).first();
+      await expect(initialRow).toBeVisible();
+      await initialRow.getByRole('button').filter({ hasText: title }).click();
+      const pageDropdown = page.locator('[class*="pageDropdownButton"]').first();
+      await expect(pageDropdown).toContainText(`/${slug}`);
+
+      await initialRow.hover();
+      await initialRow.getByRole('button', { name: '페이지 메뉴' }).click();
+      await pagesDrawer.getByRole('button', { name: '이름 변경' }).click();
+      await initialRow.locator('input[type="text"]').nth(0).fill(renamedTitle);
+      await initialRow.locator('input[type="text"]').nth(1).fill(renamedSlug);
+      const renameResponsePromise = page.waitForResponse((response) => (
+        response.url().includes(`/api/builder/site/pages/${pageId}`)
+        && response.request().method() === 'PATCH'
+      ));
+      await initialRow.locator('input[type="text"]').nth(1).press('Enter');
+      expect((await renameResponsePromise).status()).toBe(200);
+
+      await expect(pageDropdown).toContainText(`/${renamedSlug}`);
+      const renamedRow = pagesDrawer.locator(`[data-builder-page-row="${pageId}"]`).first();
+      await expect(renamedRow).toHaveAttribute('data-builder-page-slug', renamedSlug);
+
+      const pagesAfterRenameResponse = await page.request.get('/api/builder/site/pages?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(pagesAfterRenameResponse.status()).toBe(200);
+      const pagesAfterRename = (await pagesAfterRenameResponse.json()) as {
+        pages?: Array<{ pageId?: string; slug?: string; title?: Record<string, string> }>;
+      };
+      const renamedPage = pagesAfterRename.pages?.find((entry) => entry.pageId === pageId);
+      expect(renamedPage?.slug).toBe(renamedSlug);
+      expect(renamedPage?.title?.ko).toBe(renamedTitle);
+
+      const navAfterRenameResponse = await page.request.get('/api/builder/site/navigation?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(navAfterRenameResponse.status()).toBe(200);
+      const navAfterRenamePayload = (await navAfterRenameResponse.json()) as { navigation?: TestNavigationItem[] };
+      const renamedNavItem = findNavigationItemByPageId(navAfterRenamePayload.navigation ?? [], pageId);
+      expect(renamedNavItem?.href).toBe(`/ko/${renamedSlug}`);
+
+      await renamedRow.hover();
+      await renamedRow.getByRole('button', { name: '페이지 메뉴' }).click();
+      page.once('dialog', (dialog) => {
+        void dialog.accept();
+      });
+      const deleteResponsePromise = page.waitForResponse((response) => (
+        response.url().includes(`/api/builder/site/pages/${pageId}`)
+        && response.request().method() === 'DELETE'
+      ));
+      await pagesDrawer.getByRole('button', { name: '삭제' }).click();
+      expect((await deleteResponsePromise).status()).toBe(200);
+
+      await expect(pageDropdown).not.toContainText(`/${renamedSlug}`);
+      await expect.poll(async () => findPageIdBySlug(page, renamedSlug), { timeout: 20_000 }).toBeNull();
+
+      const navAfterDeleteResponse = await page.request.get('/api/builder/site/navigation?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(navAfterDeleteResponse.status()).toBe(200);
+      const navAfterDeletePayload = (await navAfterDeleteResponse.json()) as { navigation?: TestNavigationItem[] };
+      expect(navigationHasPageId(navAfterDeletePayload.navigation ?? [], pageId)).toBe(false);
+    } finally {
+      if (originalNavigation) {
+        await page.request.put('/api/builder/site/navigation', {
+          data: {
+            locale: 'ko',
+            navigation: originalNavigation,
+          },
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      pageId ??= await findPageIdBySlug(page, slug);
+      pageId ??= await findPageIdBySlug(page, renamedSlug);
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
     }
   });
 

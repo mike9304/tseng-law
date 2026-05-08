@@ -265,12 +265,14 @@ export default function PageSwitcher({
   clipboardCount = 0,
   columnPostsSummary,
   onSelectPage,
+  onPagesChange,
 }: {
   locale: Locale;
   activePageId: string | null;
   clipboardCount?: number;
   columnPostsSummary?: ColumnQuickSummary;
   onSelectPage: (pageId: string, nextSlug?: string) => void;
+  onPagesChange?: (pages: PageMeta[]) => void;
 }) {
   const [pages, setPages] = useState<PageMeta[]>([]);
   const [loading, setLoading] = useState(true);
@@ -297,6 +299,7 @@ export default function PageSwitcher({
       if (response.ok) {
         const data = (await response.json()) as { pages: PageMeta[] };
         setPages(data.pages);
+        onPagesChange?.(data.pages);
         return data.pages;
       }
     } catch {
@@ -305,7 +308,7 @@ export default function PageSwitcher({
       setLoading(false);
     }
     return [];
-  }, [locale]);
+  }, [locale, onPagesChange]);
 
   useEffect(() => {
     void fetchPages();
@@ -562,6 +565,8 @@ export default function PageSwitcher({
           return (
             <div
               key={page.pageId}
+              data-builder-page-row={page.pageId}
+              data-builder-page-slug={page.slug}
               style={pageRowStyle(isActive)}
               onMouseEnter={() => setHoveredPageId(page.pageId)}
               onMouseLeave={() => setHoveredPageId((current) => (current === page.pageId ? null : current))}

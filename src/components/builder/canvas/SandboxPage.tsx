@@ -712,6 +712,19 @@ export default function SandboxPage({
     }
   }, [loadDraft, locale, pushToast, sitePagesState]);
 
+  const handlePagesChange = useCallback((pages: Array<{ pageId: string; slug: string; isHomePage?: boolean }>) => {
+    setSitePagesState(pages.map((page) => ({
+      pageId: page.pageId,
+      slug: page.slug,
+      isHomePage: page.isHomePage,
+    })));
+
+    const active = pages.find((page) => page.pageId === activePageIdRef.current);
+    if (active) {
+      setCurrentSlugState(active.slug);
+    }
+  }, []);
+
   const handleHeaderNavigate = useCallback((href: string) => {
     const normalizedHref = normalizeSiteHref(href, locale);
     const targetPath = comparableSitePath(normalizedHref, locale);
@@ -1011,6 +1024,7 @@ export default function SandboxPage({
                 clipboardCount={clipboardCount}
                 columnPostsSummary={columnPostsSummary}
                 onSelectPage={handleSelectPage}
+                onPagesChange={handlePagesChange}
               />
             </div>
           ) : null}

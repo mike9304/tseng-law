@@ -7,93 +7,7 @@ import {
   createHomeContainerNode,
   createHomeTextNode,
 } from './decompose-home-shared';
-
-type OfficeInfo = {
-  id: string;
-  title: string;
-  address: string;
-  phone: string;
-  fax?: string;
-  mapsUrl: string;
-};
-
-const officeData: Record<Locale, OfficeInfo[]> = {
-  ko: [
-    {
-      id: 'taichung',
-      title: '타이중',
-      address: '臺中市北區館前路19號樓之1',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
-    },
-    {
-      id: 'kaohsiung',
-      title: '가오슝',
-      address: '高雄市左營區安吉街233號',
-      phone: '07-557-9797',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
-    },
-    {
-      id: 'taipei',
-      title: '타이베이',
-      address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
-    },
-  ],
-  'zh-hant': [
-    {
-      id: 'taichung',
-      title: '台中',
-      address: '臺中市北區館前路19號樓之1',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
-    },
-    {
-      id: 'kaohsiung',
-      title: '高雄',
-      address: '高雄市左營區安吉街233號',
-      phone: '07-557-9797',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
-    },
-    {
-      id: 'taipei',
-      title: '台北',
-      address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
-    },
-  ],
-  en: [
-    {
-      id: 'taichung',
-      title: 'Taichung',
-      address: 'No. 19, Guanqian Rd., North Dist., Taichung City',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
-    },
-    {
-      id: 'kaohsiung',
-      title: 'Kaohsiung',
-      address: 'No. 233, Anji St., Zuoying Dist., Kaohsiung City',
-      phone: '07-557-9797',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
-    },
-    {
-      id: 'taipei',
-      title: 'Taipei',
-      address: '7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
-    },
-  ],
-};
+import { getOfficeLocationPresets, telHrefFromPhone } from './office-locations';
 
 const OFFICES_ROOT_HEIGHT = 760;
 
@@ -104,7 +18,7 @@ export function createOfficesDecomposedNodes(
   locale: Locale,
   zBase: number,
 ): BuilderCanvasNode[] {
-  const offices = officeData[locale];
+  const offices = getOfficeLocationPresets(locale);
   const title = locale === 'ko' ? '오시는길' : locale === 'zh-hant' ? '事務所據點' : 'Office Locations';
   const officeLabel = locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : 'Office';
   const telLabel = locale === 'ko' ? '전화' : locale === 'zh-hant' ? '電話' : 'Phone';
@@ -258,7 +172,7 @@ export function createOfficesDecomposedNodes(
         rect: { x: 0, y: 164, width: 220, height: 24 },
         zIndex: 3,
         label: `${telLabel}: ${office.phone}`,
-        href: `tel:${office.phone.replace(/-/g, '')}`,
+        href: telHrefFromPhone(office.phone),
         style: 'link',
         className: 'link-underline phone-number',
         as: 'a',

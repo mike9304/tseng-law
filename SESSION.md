@@ -1991,3 +1991,20 @@
 
 메모:
 - 이 수정은 사용자가 말한 "실제 사이트가 꼬여서 원래 페이지/메뉴가 사라지거나 섞이는" 계열의 저장 레이어 방어다. 서버리스 cross-instance race는 아직 revision/etag가 필요하므로 다음 감사 항목으로 남는다.
+
+## 2026-05-09 Codex /goal G-Editor office location helper consolidation
+
+범위:
+- 사무소 preset/title/address/phone/fax/maps URL 계약을 `src/lib/builder/canvas/office-locations.ts`로 분리.
+- `decompose-offices`, canvas quick edit, inspector Office sync가 같은 preset/helper를 사용하게 정리.
+- 사무소 map quick edit에 `팩스` 필드를 추가해 title/address/phone/fax/maps URL을 한 패널에서 바로 수정 가능하게 함.
+- office tab/layout preview는 stale multi-selection에 밀리지 않도록 primary selected node를 우선해 active office index를 계산.
+- admin-builder smoke에 quick edit fax 노출/수정 검증 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- map widget 본문(`src/lib/builder/components/map/*`)은 goal 제약 때문에 건드리지 않았다. 다음 지도 단계는 add/remove/reorder office group과 지도 URL auto/manual override 상태를 분리하는 일이다.

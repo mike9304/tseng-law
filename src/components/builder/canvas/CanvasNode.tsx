@@ -20,6 +20,21 @@ import {
   getHomeSectionTemplateTarget,
   getHomeSectionTemplateVariant,
 } from '@/lib/builder/canvas/section-templates';
+import {
+  getOfficeLocationPresets,
+  googleMapsSearchUrl,
+  isOfficeMapNodeId,
+  labelPrefix,
+  labelValueAfterColon,
+  readButtonHref,
+  readButtonLabel,
+  readMapAddress,
+  readMapZoom,
+  readNodeText,
+  resolveOfficeNodeGroup,
+  telHrefFromPhone,
+  type OfficeLocationPreset,
+} from '@/lib/builder/canvas/office-locations';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import {
   buildEditorAnimationStyle,
@@ -50,129 +65,11 @@ function currentBuilderLocale(): string {
   return firstSegment || 'ko';
 }
 
-type OfficeQuickPreset = {
-  title: string;
-  address: string;
-  phone: string;
-  fax?: string;
-  mapsUrl: string;
-};
-
-const OFFICE_QUICK_PRESETS: Record<string, OfficeQuickPreset[]> = {
-  ko: [
-    {
-      title: '타이중',
-      address: '臺中市北區館前路19號樓之1',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
-    },
-    {
-      title: '가오슝',
-      address: '高雄市左營區安吉街233號',
-      phone: '07-557-9797',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
-    },
-    {
-      title: '타이베이',
-      address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
-    },
-  ],
-  'zh-hant': [
-    {
-      title: '台中',
-      address: '臺中市北區館前路19號樓之1',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
-    },
-    {
-      title: '高雄',
-      address: '高雄市左營區安吉街233號',
-      phone: '07-557-9797',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
-    },
-    {
-      title: '台北',
-      address: '台北市大同區承德路一段35號7樓之2',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
-    },
-  ],
-  en: [
-    {
-      title: 'Taichung',
-      address: 'No. 19, Guanqian Rd., North Dist., Taichung City',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E5%8F%B0%E4%B8%AD%E6%89%80',
-    },
-    {
-      title: 'Kaohsiung',
-      address: 'No. 233, Anji St., Zuoying Dist., Kaohsiung City',
-      phone: '07-557-9797',
-      mapsUrl: 'https://www.google.com/maps/search/%E6%98%8A%E9%BC%8E%E5%9C%8B%E9%9A%9B%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80+%E9%AB%98%E9%9B%84%E6%89%80',
-    },
-    {
-      title: 'Taipei',
-      address: '7F-2, No. 35, Sec. 1, Chengde Rd., Datong Dist., Taipei City',
-      phone: '04-2326-1862',
-      fax: '04-2326-1863',
-      mapsUrl: 'https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%89%BF%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B535%E8%99%9F7%E6%A8%93%E4%B9%8B2',
-    },
-  ],
-};
-
-function currentOfficeQuickPresets(): OfficeQuickPreset[] {
-  const locale = currentBuilderLocale();
-  return OFFICE_QUICK_PRESETS[locale] ?? OFFICE_QUICK_PRESETS.ko;
-}
-
 function isColumnManagerTarget(node: BuilderCanvasNode): boolean {
   if (node.kind === 'blog-feed') return true;
   if (node.id === 'home-insights-root' || node.id.startsWith('home-insights-')) return true;
   const href = nodeLinkPreviewHref(node);
   return Boolean(href && /\/admin-builder\/columns(?:\/|$)/.test(href));
-}
-
-function textContentValue(node: BuilderCanvasNode | undefined): string {
-  const value = node?.content && 'text' in node.content ? node.content.text : '';
-  return typeof value === 'string' ? value : '';
-}
-
-function buttonLabelValue(node: BuilderCanvasNode | undefined): string {
-  const value = node?.content && 'label' in node.content ? node.content.label : '';
-  return typeof value === 'string' ? value : '';
-}
-
-function buttonHrefValue(node: BuilderCanvasNode | undefined): string {
-  const value = node?.content && 'href' in node.content ? node.content.href : '';
-  return typeof value === 'string' ? value : '';
-}
-
-function labelPrefix(label: string, fallback: string): string {
-  const separatorIndex = label.indexOf(':');
-  return separatorIndex > 0 ? label.slice(0, separatorIndex).trim() : fallback;
-}
-
-function labelValueAfterColon(label: string): string {
-  const separatorIndex = label.indexOf(':');
-  return separatorIndex >= 0 ? label.slice(separatorIndex + 1).trim() : label.trim();
-}
-
-function telHrefFromPhone(phone: string): string {
-  const normalized = phone.replace(/[^+\d]/g, '');
-  return normalized ? `tel:${normalized}` : '';
-}
-
-function googleMapsSearchUrl(address: string): string {
-  return address.trim()
-    ? `https://www.google.com/maps/search/${encodeURIComponent(address.trim())}`
-    : '';
 }
 
 function isHeroSearchTarget(nodeId: string): boolean {
@@ -408,22 +305,6 @@ function InsightsArchiveListPreview({ locale }: { locale: string }) {
   );
 }
 
-function mapAddressValue(node: BuilderCanvasNode): string {
-  const value = node.content && 'address' in node.content ? node.content.address : '';
-  return typeof value === 'string' ? value : '';
-}
-
-function mapZoomValue(node: BuilderCanvasNode): number {
-  const value = node.content && 'zoom' in node.content ? node.content.zoom : 15;
-  return typeof value === 'number' && Number.isFinite(value)
-    ? Math.max(1, Math.min(20, Math.round(value)))
-    : 15;
-}
-
-function isOfficeMapTarget(node: BuilderCanvasNode): boolean {
-  return node.kind === 'map' && /^home-offices-layout-\d+-map$/.test(node.id);
-}
-
 function officeIndexFromNodeId(nodeId: string): number | null {
   const tabMatch = /^home-offices-tab-(\d+)$/.exec(nodeId);
   if (tabMatch) return Number(tabMatch[1]);
@@ -483,13 +364,14 @@ export default function CanvasNode({
   const activeGroupId = useBuilderCanvasStore((s) => s.activeGroupId);
   const enterGroup = useBuilderCanvasStore((s) => s.enterGroup);
   const updateNodeContentInStore = useBuilderCanvasStore((s) => s.updateNodeContent);
+  const primarySelectedNodeId = useBuilderCanvasStore((s) => s.selectedNodeId);
   const selectedNodeIds = useBuilderCanvasStore((s) => s.selectedNodeIds);
   const viewport = useBuilderCanvasStore((s) => s.viewport);
   const effectiveRect = resolveViewportRect(node, viewport);
   const isHiddenAtViewport = viewport !== 'desktop' && resolveViewportHidden(node, viewport);
   const effectiveFontSize = resolveViewportFontSize(node, viewport);
-  const currentMapAddress = node.kind === 'map' ? mapAddressValue(node) : '';
-  const currentMapZoom = node.kind === 'map' ? mapZoomValue(node) : 15;
+  const currentMapAddress = node.kind === 'map' ? readMapAddress(node) : '';
+  const currentMapZoom = node.kind === 'map' ? readMapZoom(node) : 15;
 
   const handleRotationPointerDown = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
@@ -708,35 +590,19 @@ export default function CanvasNode({
   const heroSearchDestinationOptions = heroSearchDestinations(builderLocale);
   const showMapQuickEdit = selected && node.kind === 'map' && isInteractive && !node.locked;
   const showMapEditHint = !selected && isHovered && node.kind === 'map' && isInteractive && !node.locked;
-  const mapQuickEdit = showMapQuickEdit
-    ? {
-        office: isOfficeMapTarget(node)
-          ? {
-              layoutId: node.id.replace(/-map$/, ''),
-              cardId: `${node.id.replace(/-map$/, '')}-card`,
-            }
-          : null,
-      }
+  const officeQuickEdit = showMapQuickEdit && isOfficeMapNodeId(node.id)
+    ? resolveOfficeNodeGroup(nodesById, node)
     : null;
-  const officeQuickEdit = mapQuickEdit?.office ?? null;
-  const officeTitleNode = officeQuickEdit
-    ? nodesById.get(`${officeQuickEdit.cardId}-title`)
-    : undefined;
-  const officeAddressNode = officeQuickEdit
-    ? nodesById.get(`${officeQuickEdit.cardId}-address`)
-    : undefined;
-  const officePhoneNode = officeQuickEdit
-    ? nodesById.get(`${officeQuickEdit.cardId}-phone`)
-    : undefined;
-  const officeFaxNode = officeQuickEdit
-    ? nodesById.get(`${officeQuickEdit.cardId}-fax`)
-    : undefined;
-  const officeMapLinkNode = officeQuickEdit
-    ? nodesById.get(`${officeQuickEdit.cardId}-map-link`)
-    : undefined;
-  const officePhoneLabel = buttonLabelValue(officePhoneNode);
+  const officeTitleNode = officeQuickEdit?.titleNode ?? undefined;
+  const officeAddressNode = officeQuickEdit?.addressNode ?? undefined;
+  const officePhoneNode = officeQuickEdit?.phoneNode ?? undefined;
+  const officeFaxNode = officeQuickEdit?.faxNode ?? undefined;
+  const officeMapLinkNode = officeQuickEdit?.mapLinkNode ?? undefined;
+  const officePhoneLabel = readButtonLabel(officePhoneNode);
+  const officeFaxLabel = readNodeText(officeFaxNode);
   const officePhonePrefix = labelPrefix(officePhoneLabel, 'TEL');
-  const officeMapUrl = buttonHrefValue(officeMapLinkNode);
+  const officeFaxPrefix = labelPrefix(officeFaxLabel, 'FAX');
+  const officeMapUrl = readButtonHref(officeMapLinkNode);
   const parentNode = node.parentId ? nodesById.get(node.parentId) : undefined;
   const parentLayoutMode = parentNode && isContainerLikeKind(parentNode.kind)
     ? (parentNode.content as { layoutMode?: 'absolute' | 'flex' | 'grid' }).layoutMode ?? 'absolute'
@@ -776,7 +642,7 @@ export default function CanvasNode({
       .map((selectedId) => /^home-faq-item-(\d+)/.exec(selectedId)?.[1])
       .filter((value): value is string => Boolean(value)),
   );
-  const activeOfficeIndex = selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => {
+  const activeOfficeIndex = officeIndexFromNodeId(primarySelectedNodeId ?? '') ?? selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => {
     const nextIndex = officeIndexFromNodeId(selectedId);
     return nextIndex ?? activeIndex;
   }, null) ?? 0;
@@ -848,6 +714,14 @@ export default function CanvasNode({
     [officePhoneNode, officePhonePrefix, updateNodeContentInStore],
   );
 
+  const updateOfficeFax = useCallback(
+    (nextFax: string) => {
+      if (!officeFaxNode) return;
+      updateNodeContentInStore(officeFaxNode.id, { text: `${officeFaxPrefix}: ${nextFax}` });
+    },
+    [officeFaxNode, officeFaxPrefix, updateNodeContentInStore],
+  );
+
   const updateOfficeMapUrl = useCallback(
     (nextUrl: string) => {
       if (!officeMapLinkNode) return;
@@ -865,8 +739,7 @@ export default function CanvasNode({
   );
 
   const applyOfficePreset = useCallback(
-    (preset: OfficeQuickPreset) => {
-      const faxPrefix = labelPrefix(textContentValue(officeFaxNode), 'FAX');
+    (preset: OfficeLocationPreset) => {
       updateOfficeAddress(preset.address, preset.mapsUrl);
       if (officeTitleNode) {
         updateNodeContentInStore(officeTitleNode.id, { text: preset.title });
@@ -878,10 +751,11 @@ export default function CanvasNode({
         });
       }
       if (officeFaxNode && preset.fax) {
-        updateNodeContentInStore(officeFaxNode.id, { text: `${faxPrefix}: ${preset.fax}` });
+        updateNodeContentInStore(officeFaxNode.id, { text: `${officeFaxPrefix}: ${preset.fax}` });
       }
     },
     [
+      officeFaxPrefix,
       officeFaxNode,
       officePhoneNode,
       officePhonePrefix,
@@ -892,7 +766,7 @@ export default function CanvasNode({
   );
 
   const applyMapPreset = useCallback(
-    (preset: OfficeQuickPreset) => {
+    (preset: OfficeLocationPreset) => {
       if (officeQuickEdit) {
         applyOfficePreset(preset);
         return;
@@ -1365,7 +1239,7 @@ export default function CanvasNode({
           <strong>위치 변경</strong>
         </div>
       ) : null}
-      {mapQuickEdit ? (
+      {showMapQuickEdit ? (
         <div
           className={`${styles.nodeMapQuickEdit} ${officeQuickEdit ? styles.nodeMapQuickEditSynced : ''}`}
           data-builder-map-quick-edit="true"
@@ -1400,7 +1274,7 @@ export default function CanvasNode({
             </button>
           </div>
           <div className={styles.nodeMapPresetGrid}>
-            {currentOfficeQuickPresets().map((preset) => (
+            {getOfficeLocationPresets(builderLocale).map((preset) => (
               <button
                 key={preset.title}
                 type="button"
@@ -1425,7 +1299,7 @@ export default function CanvasNode({
               <input
                 type="text"
                 aria-label="Map quick location title"
-                value={textContentValue(officeTitleNode)}
+                value={readNodeText(officeTitleNode)}
                 disabled={!officeTitleNode}
                 onChange={(event) => updateOfficeTitle(event.currentTarget.value)}
               />
@@ -1465,6 +1339,17 @@ export default function CanvasNode({
                   onChange={(event) => updateOfficePhone(event.currentTarget.value)}
                 />
               </label>
+              {officeFaxNode ? (
+                <label className={styles.nodeMapAddressField}>
+                  <span>팩스</span>
+                  <input
+                    type="text"
+                    aria-label="Map quick office fax"
+                    value={labelValueAfterColon(officeFaxLabel)}
+                    onChange={(event) => updateOfficeFax(event.currentTarget.value)}
+                  />
+                </label>
+              ) : null}
               <label className={styles.nodeMapAddressField}>
                 <span>Google 지도 링크</span>
                 <input

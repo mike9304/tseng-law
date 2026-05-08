@@ -15,6 +15,19 @@ import {
   resolveViewportRect,
 } from '@/lib/builder/canvas/responsive';
 import {
+  googleMapsSearchUrl,
+  labelPrefix,
+  labelValueAfterColon,
+  readButtonHref,
+  readButtonLabel,
+  readMapAddress,
+  readMapZoom,
+  readNodeText,
+  resolveOfficeNodeGroup,
+  telHrefFromPhone,
+  type OfficeNodeGroup,
+} from '@/lib/builder/canvas/office-locations';
+import {
   InspectorNotice,
   InspectorSection,
   LabeledRow,
@@ -235,79 +248,10 @@ function InspectorEmptyState() {
   );
 }
 
-type OfficeQuickEditModel = {
-  layoutId: string;
-  cardId: string;
-  mapNode: BuilderCanvasNode;
-  titleNode: BuilderCanvasNode | null;
-  addressNode: BuilderCanvasNode | null;
-  phoneNode: BuilderCanvasNode | null;
-  faxNode: BuilderCanvasNode | null;
-  mapLinkNode: BuilderCanvasNode | null;
-};
-
-function textContentValue(node: BuilderCanvasNode | null): string {
-  const value = node?.content && 'text' in node.content ? node.content.text : '';
-  return typeof value === 'string' ? value : '';
-}
-
-function buttonLabelValue(node: BuilderCanvasNode | null): string {
-  const value = node?.content && 'label' in node.content ? node.content.label : '';
-  return typeof value === 'string' ? value : '';
-}
-
-function buttonHrefValue(node: BuilderCanvasNode | null): string {
-  const value = node?.content && 'href' in node.content ? node.content.href : '';
-  return typeof value === 'string' ? value : '';
-}
-
-function mapAddressValue(node: BuilderCanvasNode): string {
-  const value = node.content && 'address' in node.content ? node.content.address : '';
-  return typeof value === 'string' ? value : '';
-}
-
-function mapZoomValue(node: BuilderCanvasNode): number {
-  const value = node.content && 'zoom' in node.content ? node.content.zoom : 15;
-  return typeof value === 'number' ? value : 15;
-}
-
-function labelPrefix(label: string, fallback: string): string {
-  const separatorIndex = label.indexOf(':');
-  return separatorIndex > 0 ? label.slice(0, separatorIndex).trim() : fallback;
-}
-
-function labelValueAfterColon(label: string): string {
-  const separatorIndex = label.indexOf(':');
-  return separatorIndex >= 0 ? label.slice(separatorIndex + 1).trim() : label.trim();
-}
-
-function telHrefFromPhone(phone: string): string {
-  const normalized = phone.replace(/[^+\d]/g, '');
-  return normalized ? `tel:${normalized}` : '';
-}
-
-function googleMapsSearchUrl(address: string): string {
-  return address.trim()
-    ? `https://www.google.com/maps/search/${encodeURIComponent(address.trim())}`
-    : '';
-}
-
-function resolveOfficeQuickEdit(nodes: BuilderCanvasNode[], selectedNode: BuilderCanvasNode | null): OfficeQuickEditModel | null {
+function resolveOfficeQuickEdit(nodes: BuilderCanvasNode[], selectedNode: BuilderCanvasNode | null): OfficeNodeGroup | null {
   if (!selectedNode || selectedNode.kind !== 'map') return null;
-  if (!/^home-offices-layout-\d+-map$/.test(selectedNode.id)) return null;
-  const layoutId = selectedNode.id.replace(/-map$/, '');
-  const cardId = `${layoutId}-card`;
   const byId = new Map(nodes.map((node) => [node.id, node]));
-  return {
-    layoutId,
-    cardId,
-    mapNode: selectedNode,
-    titleNode: byId.get(`${cardId}-title`) ?? null,
-    addressNode: byId.get(`${cardId}-address`) ?? null,
-    phoneNode: byId.get(`${cardId}-phone`) ?? null,
-    faxNode: byId.get(`${cardId}-fax`) ?? null,
-    mapLinkNode: byId.get(`${cardId}-map-link`) ?? null,
-  };
+  return resolveOfficeNodeGroup(byId, selectedNode);
 }
 
 function updateRectField(
@@ -924,10 +868,10 @@ export default function SandboxInspectorPanel({
               {activeTab === 'content' ? (
                 <>
                   {officeQuickEdit ? (() => {
-                    const address = mapAddressValue(officeQuickEdit.mapNode);
-                    const phoneLabel = buttonLabelValue(officeQuickEdit.phoneNode);
+                    const address = readMapAddress(officeQuickEdit.mapNode);
+                    const phoneLabel = readButtonLabel(officeQuickEdit.phoneNode);
                     const phonePrefix = labelPrefix(phoneLabel, 'TEL');
-                    const faxLabel = textContentValue(officeQuickEdit.faxNode);
+                    const faxLabel = readNodeText(officeQuickEdit.faxNode);
                     const faxPrefix = labelPrefix(faxLabel, 'FAX');
                     const generatedMapUrl = googleMapsSearchUrl(address);
                     return (
@@ -938,7 +882,7 @@ export default function SandboxInspectorPanel({
                             className={styles.inspectorInput}
                             type="text"
                             aria-label="Office title synced value"
-                            value={textContentValue(officeQuickEdit.titleNode)}
+                            value={readNodeText(officeQuickEdit.titleNode)}
                             disabled={selectedNode.locked || !officeQuickEdit.titleNode}
                             onChange={(event) => {
                               if (!officeQuickEdit.titleNode) return;
@@ -971,7 +915,7 @@ export default function SandboxInspectorPanel({
                         <div className={styles.inspectorFieldGrid}>
                           <LabeledRow label="Zoom">
                             <NumberStepper
-                              value={mapZoomValue(officeQuickEdit.mapNode)}
+                              value={readMapZoom(officeQuickEdit.mapNode)}
                               min={1}
                               max={20}
                               step={1}
@@ -1028,7 +972,7 @@ export default function SandboxInspectorPanel({
                                 className={styles.inspectorInput}
                                 type="url"
                                 aria-label="Office map URL"
-                                value={buttonHrefValue(officeQuickEdit.mapLinkNode)}
+                                value={readButtonHref(officeQuickEdit.mapLinkNode)}
                                 disabled={selectedNode.locked}
                                 onChange={(event) => {
                                   if (!officeQuickEdit.mapLinkNode) return;

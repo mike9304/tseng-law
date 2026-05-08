@@ -765,6 +765,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(mapQuickEdit).toContainText('사무소 위치 편집');
     await expect(mapQuickEdit.getByLabel('Map quick location title')).toBeVisible();
     await expect(mapQuickEdit.getByLabel('Map quick office phone')).toBeVisible();
+    await expect(mapQuickEdit.getByLabel('Map quick office fax')).toBeVisible();
     await expect(mapQuickEdit.getByLabel('Map quick Google Maps URL')).toBeVisible();
     await mapQuickEdit.getByRole('button', { name: '타이베이' }).click();
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이베이');
@@ -772,13 +773,17 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(mapQuickEdit.getByLabel('Map quick address')).toHaveValue(/承德路/);
     await expect(mapQuickEdit.getByLabel('Map quick location title')).toHaveValue('타이베이');
     await expect(mapQuickEdit.getByLabel('Map quick office phone')).toHaveValue('04-2326-1862');
+    await expect(mapQuickEdit.getByLabel('Map quick office fax')).toHaveValue('04-2326-1863');
     const temporaryOfficeTitle = `타이베이 테스트 ${Date.now().toString(36)}`;
     const temporaryOfficePhone = '02-0000-0000';
+    const temporaryOfficeFax = '02-1111-1111';
     const temporaryOfficeUrl = 'https://www.google.com/maps/search/test-office';
     await mapQuickEdit.getByLabel('Map quick location title').fill(temporaryOfficeTitle);
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText(temporaryOfficeTitle);
     await mapQuickEdit.getByLabel('Map quick office phone').fill(temporaryOfficePhone);
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-phone"]').first()).toContainText(temporaryOfficePhone);
+    await mapQuickEdit.getByLabel('Map quick office fax').fill(temporaryOfficeFax);
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-fax"]').first()).toContainText(temporaryOfficeFax);
     await mapQuickEdit.getByLabel('Map quick Google Maps URL').fill(temporaryOfficeUrl);
     await expect(mapQuickEdit.getByLabel('Map quick Google Maps URL')).toHaveValue(temporaryOfficeUrl);
     await mapQuickEdit.getByRole('slider', { name: 'Map quick zoom' }).fill('17');

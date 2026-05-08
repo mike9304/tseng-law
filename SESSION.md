@@ -1852,3 +1852,20 @@
 
 메모:
 - 사용자가 요청한 "섹션 기능들이 전체가 템플릿 디자인 형식이고 나중에 템플릿 변경이 쉬운 방식"에 대한 UX 표면을 보강. 아직 full gallery에서 구조 재생성까지 하는 단계는 아니며, 다음은 칼럼 grid/timeline/magazine처럼 실제 구조 variant 폭을 늘리는 것이 맞다.
+
+## 2026-05-09 Codex /goal G-Editor hero search destinations
+
+범위:
+- 공개 검색 페이지가 `tab=columns`를 사용자 친화 alias로 받아 `insights` 칼럼 탭으로 매핑하게 수정.
+- hero 검색창 quick edit에 업무/칼럼/영상/FAQ 목적지 preset 버튼을 추가.
+- 칼럼 preset은 내부 canonical action을 `/${locale}/search?tab=insights`로 저장하고, 사용자가 raw URL에 `tab=columns`를 입력해도 `tab=insights`로 정규화.
+- 검색창 action, 검색 버튼 href, 공개 검색 탭 동작이 서로 어긋나지 않도록 admin-builder smoke와 public search alias 테스트를 보강.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/columns-ui-workflow.playwright.ts -g "accepts columns as a public search tab alias" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 사용자가 말한 "검색창도 이상한 곳에 있고 기능도 안 보임" 중 목적지 설정과 칼럼 검색 진입을 닫은 단위. 다음은 검색 결과 페이지 자체의 편집 가능 노드화 또는 칼럼 feed template 구조 확장이 남아 있다.

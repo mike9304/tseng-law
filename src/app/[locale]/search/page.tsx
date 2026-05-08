@@ -33,7 +33,8 @@ export default function SearchPage({
   const content = siteContent[locale];
   const query = searchParams.q ?? '';
   const validTabs = content.search.tabs.map((tab) => tab.id);
-  const activeTab = validTabs.includes(searchParams.tab ?? '') ? (searchParams.tab as string) : content.search.tabs[0].id;
+  const requestedTab = searchParams.tab === 'columns' ? 'insights' : searchParams.tab;
+  const activeTab = validTabs.includes(requestedTab ?? '') ? (requestedTab as string) : content.search.tabs[0].id;
   const activeCategory = activeTab as SearchCategory;
   const activeTabLabel =
     content.search.tabs.find((tab) => tab.id === activeTab)?.label ?? content.search.tabs[0].label;

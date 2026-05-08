@@ -2760,6 +2760,12 @@
   gap: 6px;
 }
 
+.nodeHeroSearchDestinationRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
 .nodeHeroSearchPresetRow button {
   min-height: 28px;
   border: 1px solid var(--editor-border-hairline, #dbe2ea);
@@ -2771,7 +2777,19 @@
   cursor: pointer;
 }
 
-.nodeHeroSearchPresetRow button:hover {
+.nodeHeroSearchDestinationRow button {
+  min-height: 30px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 6px;
+  background: var(--editor-bg, #f8fafc);
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 11px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.nodeHeroSearchPresetRow button:hover,
+.nodeHeroSearchDestinationRow button:hover {
   border-color: var(--editor-accent, #116dff);
   background: var(--editor-accent-soft, #eff6ff);
 }

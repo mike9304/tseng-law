@@ -432,8 +432,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const temporarySearchPlaceholder = `검색어 입력 ${Date.now().toString(36)}`;
     await heroSearchQuickEdit.getByLabel('Hero search placeholder').fill(temporarySearchPlaceholder);
     await expect(page.locator('[data-node-id="home-hero-search-input"] input.hero-search-input').first()).toHaveAttribute('placeholder', temporarySearchPlaceholder);
+    await heroSearchQuickEdit.getByRole('button', { name: '칼럼' }).click();
+    await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search\?tab=insights$/);
     await heroSearchQuickEdit.getByLabel('Hero search action').fill('/ko/search?tab=columns');
-    await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search\?tab=columns$/);
+    await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search\?tab=insights$/);
     await heroSearchQuickEdit.getByLabel('Hero search action').fill('/ko/search');
     await heroSearchQuickEdit.getByLabel('Hero search placeholder').fill('어떻게 도와드릴까요?');
     const heroSearchGeometry = await page.evaluate(() => {

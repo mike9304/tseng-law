@@ -187,6 +187,34 @@ function containerActionValue(node: BuilderCanvasNode | undefined): string {
   return typeof value === 'string' ? value : '';
 }
 
+type HeroSearchDestination = {
+  key: string;
+  label: string;
+  action: string;
+};
+
+function normalizeHeroSearchAction(action: string, locale: string): string {
+  const fallback = `/${locale}/search`;
+  const trimmed = action.trim();
+  if (!trimmed) return fallback;
+  return trimmed.replace(/([?&]tab=)columns\b/, '$1insights');
+}
+
+function heroSearchDestinations(locale: string): HeroSearchDestination[] {
+  const labels = locale === 'zh-hant'
+    ? { services: '服務', insights: '專欄', videos: '影片', faq: 'FAQ' }
+    : locale === 'en'
+      ? { services: 'Services', insights: 'Columns', videos: 'Videos', faq: 'FAQ' }
+      : { services: '업무', insights: '칼럼', videos: '영상', faq: 'FAQ' };
+
+  return [
+    { key: 'services', label: labels.services, action: `/${locale}/search?tab=services` },
+    { key: 'insights', label: labels.insights, action: `/${locale}/search?tab=insights` },
+    { key: 'videos', label: labels.videos, action: `/${locale}/search?tab=videos` },
+    { key: 'faq', label: labels.faq, action: `/${locale}/search?tab=faq` },
+  ];
+}
+
 const INSIGHTS_PAGE_SIZE = 3;
 
 const insightsCopyByLocale = {
@@ -641,9 +669,14 @@ export default function CanvasNode({
   const heroSearchBarNode = nodesById.get('home-hero-search-bar');
   const heroSearchButtonNode = nodesById.get('home-hero-search-button');
   const heroSearchWrapNode = nodesById.get('home-hero-search-wrap');
+  const builderLocale = currentBuilderLocale();
   const heroSearchPlaceholder = textInputValue(heroSearchInputNode, 'placeholder')
     || textInputValue(heroSearchInputNode, 'text');
-  const heroSearchAction = containerActionValue(heroSearchBarNode) || `/${currentBuilderLocale()}/search`;
+  const heroSearchAction = normalizeHeroSearchAction(
+    containerActionValue(heroSearchBarNode),
+    builderLocale,
+  );
+  const heroSearchDestinationOptions = heroSearchDestinations(builderLocale);
   const showMapQuickEdit = selected && node.kind === 'map' && isInteractive && !node.locked;
   const showMapEditHint = !selected && isHovered && node.kind === 'map' && isInteractive && !node.locked;
   const mapQuickEdit = showMapQuickEdit
@@ -827,13 +860,13 @@ export default function CanvasNode({
   const updateHeroSearchAction = useCallback(
     (nextAction: string) => {
       if (!heroSearchBarNode) return;
-      const normalizedAction = nextAction.trim() || `/${currentBuilderLocale()}/search`;
+      const normalizedAction = normalizeHeroSearchAction(nextAction, builderLocale);
       updateNodeContentInStore(heroSearchBarNode.id, { action: normalizedAction });
       if (heroSearchButtonNode) {
         updateNodeContentInStore(heroSearchButtonNode.id, { href: normalizedAction });
       }
     },
-    [heroSearchBarNode, heroSearchButtonNode, updateNodeContentInStore],
+    [builderLocale, heroSearchBarNode, heroSearchButtonNode, updateNodeContentInStore],
   );
 
   const updateHeroSearchLayout = useCallback(
@@ -1208,6 +1241,19 @@ export default function CanvasNode({
               onChange={(event) => updateHeroSearchAction(event.currentTarget.value)}
             />
           </label>
+          <div className={styles.nodeHeroSearchDestinationRow} aria-label="Hero search destination presets">
+            {heroSearchDestinationOptions.map((destination) => (
+              <button
+                key={destination.key}
+                type="button"
+                aria-pressed={heroSearchAction === destination.action}
+                className={heroSearchAction === destination.action ? styles.nodeHeroSearchPresetActive : undefined}
+                onClick={() => updateHeroSearchAction(destination.action)}
+              >
+                {destination.label}
+              </button>
+            ))}
+          </div>
           <div className={styles.nodeHeroSearchNote}>검색창, 버튼, 펼침 메뉴 폭을 함께 조정합니다.</div>
         </div>
       ) : null}

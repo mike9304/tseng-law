@@ -35,6 +35,13 @@ async function deleteAsset(page: Page, filename: string): Promise<void> {
 }
 
 test.describe('/ko/admin-builder columns UI workflow', () => {
+  test('accepts columns as a public search tab alias', async ({ page }) => {
+    await page.goto('/ko/search?q=%ED%9A%8C%EC%82%AC&tab=columns', { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('.tab-button.active')).toContainText('칼럼');
+    await expect(page.locator('.search-results-total')).not.toContainText('총 0건');
+    await expect(page.locator('.list-row').first()).toContainText('칼럼');
+  });
+
   test('creates, edits, inserts media, publishes, verifies, and cleans up a column through the UI', async ({ page }) => {
     const token = Date.now().toString(36);
     const editedTitle = `G-Editor UI 칼럼 수정 ${token}`;

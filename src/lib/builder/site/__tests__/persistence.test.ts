@@ -36,24 +36,24 @@ function site(pages: BuilderPageMeta[], updatedAt: string): BuilderSiteDocument 
 }
 
 describe('reconcileSiteDocumentPagesForWrite', () => {
-  it('does not preserve latest-only pages by default', () => {
-    const home = page('home', '2026-01-01T00:00:00.000Z');
-    const duplicate = page('duplicate', '2026-01-01T00:00:00.000Z');
-    const latest = site([home, duplicate], '2026-01-02T00:00:00.000Z');
-    const next = site([home], '2026-01-03T00:00:00.000Z');
-
-    expect(reconcileSiteDocumentPagesForWrite(next, latest).pages.map((entry) => entry.pageId))
-      .toEqual(['home']);
-  });
-
-  it('preserves latest-only pages when explicitly requested', () => {
+  it('preserves latest-only pages by default', () => {
     const home = page('home', '2026-01-01T00:00:00.000Z');
     const concurrent = page('concurrent', '2026-01-02T00:00:00.000Z');
     const latest = site([home, concurrent], '2026-01-02T00:00:01.000Z');
     const next = site([home], '2026-01-03T00:00:00.000Z');
 
-    expect(reconcileSiteDocumentPagesForWrite(next, latest, { preserveMissingPages: true }).pages.map((entry) => entry.pageId))
+    expect(reconcileSiteDocumentPagesForWrite(next, latest).pages.map((entry) => entry.pageId))
       .toEqual(['home', 'concurrent']);
+  });
+
+  it('drops latest-only pages when explicitly requested', () => {
+    const home = page('home', '2026-01-01T00:00:00.000Z');
+    const duplicate = page('duplicate', '2026-01-01T00:00:00.000Z');
+    const latest = site([home, duplicate], '2026-01-02T00:00:00.000Z');
+    const next = site([home], '2026-01-03T00:00:00.000Z');
+
+    expect(reconcileSiteDocumentPagesForWrite(next, latest, { preserveMissingPages: false }).pages.map((entry) => entry.pageId))
+      .toEqual(['home']);
   });
 
   it('drops stale next-only pages that the latest site no longer has', () => {

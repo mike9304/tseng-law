@@ -648,6 +648,7 @@ export default function CanvasNode({
   }, null) ?? 0;
   const officeLayoutIndex = /^home-offices-layout-(\d+)$/.exec(node.id)?.[1];
   const officeTabIndex = /^home-offices-tab-(\d+)$/.exec(node.id)?.[1];
+  const officeActiveIndex = officeLayoutIndex ?? officeTabIndex;
   const officeLayoutDisplay = officeLayoutIndex
     ? Number(officeLayoutIndex) === activeOfficeIndex
       ? 'block'
@@ -672,6 +673,15 @@ export default function CanvasNode({
     if (node.kind !== 'map') return;
     setMapQuickAddressDraft(currentMapAddress);
   }, [currentMapAddress, node.id, node.kind]);
+
+  useEffect(() => {
+    if (!showMapQuickEdit) return;
+    const frameId = window.requestAnimationFrame(() => {
+      mapQuickAddressRef.current?.focus();
+      mapQuickAddressRef.current?.select();
+    });
+    return () => window.cancelAnimationFrame(frameId);
+  }, [node.id, showMapQuickEdit]);
 
   const updateMapAddress = useCallback(
     (nextAddress: string, nextMapsUrl = googleMapsSearchUrl(nextAddress)) => {
@@ -947,7 +957,7 @@ export default function CanvasNode({
       data-builder-section-template={sectionTemplate?.id}
       data-section-variant={sectionTemplate ? currentSectionTemplateVariant : undefined}
       data-builder-hero-search-active={node.id === 'home-hero-quick-menu' && heroSearchActive ? 'true' : undefined}
-      data-office-active={officeTabIndex && Number(officeTabIndex) === activeOfficeIndex ? 'true' : undefined}
+      data-office-active={officeActiveIndex != null ? (Number(officeActiveIndex) === activeOfficeIndex ? 'true' : 'false') : undefined}
       data-builder-preview-open={builderPreviewOpen ? 'true' : undefined}
       data-viewport={viewport}
       onPointerDown={(event) => {
@@ -1314,11 +1324,14 @@ export default function CanvasNode({
               value={mapQuickAddressDraft}
               placeholder="주소 또는 지역명"
               onChange={(event) => {
-                const nextAddress = event.currentTarget.value;
-                setMapQuickAddressDraft(nextAddress);
-                updateMapAddress(nextAddress);
+                setMapQuickAddressDraft(event.currentTarget.value);
               }}
-              onBlur={(event) => updateMapAddress(event.currentTarget.value)}
+              onBlur={(event) => {
+                const nextTarget = event.relatedTarget;
+                const quickEditRoot = event.currentTarget.closest('[data-builder-map-quick-edit="true"]');
+                if (nextTarget instanceof Node && quickEditRoot?.contains(nextTarget)) return;
+                updateMapAddress(event.currentTarget.value);
+              }}
               onKeyDown={(event) => {
                 if (event.key !== 'Enter' || event.shiftKey) return;
                 event.preventDefault();
@@ -1370,10 +1383,9 @@ export default function CanvasNode({
               setMapQuickAddressDraft(nextAddress);
               updateMapAddress(nextAddress);
               if (officeMapLinkNode) updateOfficeMapUrl(googleMapsSearchUrl(nextAddress));
-              mapQuickAddressRef.current?.focus();
             }}
           >
-            {officeQuickEdit ? '주소로 지도 링크 생성' : '위치 적용'}
+            {officeQuickEdit ? '주소로 지도 업데이트' : '위치 적용'}
           </button>
           <label className={styles.nodeMapZoomField}>
             <span>줌 {currentMapZoom}</span>

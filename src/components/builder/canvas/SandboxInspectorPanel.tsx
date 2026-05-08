@@ -16,6 +16,7 @@ import {
 } from '@/lib/builder/canvas/responsive';
 import {
   googleMapsSearchUrl,
+  getOfficeLocationPresets,
   labelPrefix,
   labelValueAfterColon,
   readButtonHref,
@@ -414,6 +415,7 @@ export default function SandboxInspectorPanel({
   );
 
   const singleSelection = selectedNodeIds.length === 1 && selectedNode;
+  const builderLocale = document?.locale ?? 'ko';
 
   useEffect(() => {
     if (!singleSelection) {
@@ -874,8 +876,54 @@ export default function SandboxInspectorPanel({
                     const faxLabel = readNodeText(officeQuickEdit.faxNode);
                     const faxPrefix = labelPrefix(faxLabel, 'FAX');
                     const generatedMapUrl = googleMapsSearchUrl(address);
+                    const officePresets = getOfficeLocationPresets(builderLocale);
                     return (
                       <InspectorSection label="Office sync" title="Wix-style location settings">
+                        <div className={styles.inspectorField}>
+                          <span className={styles.inspectorFieldLabel}>사무소 프리셋</span>
+                          <div className={styles.nodeMapPresetGrid}>
+                            {officePresets.map((preset) => (
+                              <button
+                                key={preset.title}
+                                type="button"
+                                className={`${styles.nodeMapPresetButton} ${
+                                  address === preset.address ? styles.nodeMapPresetButtonActive : ''
+                                }`}
+                                aria-pressed={address === preset.address}
+                                aria-label={`${preset.title} office map preset`}
+                                disabled={selectedNode.locked}
+                                onClick={() => {
+                                  updateNodeContent(officeQuickEdit.mapNode.id, {
+                                    address: preset.address,
+                                    zoom: 16,
+                                  });
+                                  if (officeQuickEdit.addressNode) {
+                                    updateNodeContent(officeQuickEdit.addressNode.id, { text: preset.address });
+                                  }
+                                  if (officeQuickEdit.mapLinkNode) {
+                                    updateNodeContent(officeQuickEdit.mapLinkNode.id, { href: preset.mapsUrl });
+                                  }
+                                  if (officeQuickEdit.titleNode) {
+                                    updateNodeContent(officeQuickEdit.titleNode.id, { text: preset.title });
+                                  }
+                                  if (officeQuickEdit.phoneNode) {
+                                    updateNodeContent(officeQuickEdit.phoneNode.id, {
+                                      label: `${phonePrefix}: ${preset.phone}`,
+                                      href: telHrefFromPhone(preset.phone),
+                                    });
+                                  }
+                                  if (officeQuickEdit.faxNode && preset.fax) {
+                                    updateNodeContent(officeQuickEdit.faxNode.id, {
+                                      text: `${faxPrefix}: ${preset.fax}`,
+                                    });
+                                  }
+                                }}
+                              >
+                                {preset.title}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
                         <div className={styles.inspectorField}>
                           <span className={styles.inspectorFieldLabel}>사무소명</span>
                           <input
@@ -996,22 +1044,24 @@ export default function SandboxInspectorPanel({
                       </InspectorSection>
                     );
                   })() : null}
-                  <ContentTab
-                    node={selectedNode}
-                    disabled={selectedNode.locked}
-                    onUpdateContent={(content) => updateNodeContent(selectedNode.id, content)}
-                    onRequestAssetLibrary={
-                      selectedNode.kind === 'image'
-                        ? onRequestAssetLibrary
-                        : undefined
-                    }
-                    onRequestImageEditor={
-                      selectedNode.kind === 'image'
-                        ? onRequestImageEditor
-                        : undefined
-                    }
-                    linkPickerContext={linkPickerContext}
-                  />
+                  {!officeQuickEdit ? (
+                    <ContentTab
+                      node={selectedNode}
+                      disabled={selectedNode.locked}
+                      onUpdateContent={(content) => updateNodeContent(selectedNode.id, content)}
+                      onRequestAssetLibrary={
+                        selectedNode.kind === 'image'
+                          ? onRequestAssetLibrary
+                          : undefined
+                      }
+                      onRequestImageEditor={
+                        selectedNode.kind === 'image'
+                          ? onRequestImageEditor
+                          : undefined
+                      }
+                      linkPickerContext={linkPickerContext}
+                    />
+                  ) : null}
                 </>
               ) : null}
 

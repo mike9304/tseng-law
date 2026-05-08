@@ -36,6 +36,11 @@ let siteWriteQueue: Promise<void> = Promise.resolve();
 const pageCanvasWriteQueues = new Map<string, Promise<void>>();
 
 type WriteSiteDocumentOptions = {
+  /**
+   * Site-wide writes often originate from panels that loaded an older site
+   * snapshot. Preserve concurrently-created pages unless a destructive page
+   * cleanup path explicitly opts out.
+   */
   preserveMissingPages?: boolean;
 };
 
@@ -156,7 +161,7 @@ export function reconcileSiteDocumentPagesForWrite(
     latestPageIds.has(page.pageId) || shouldKeepNextOnlyPage(page, latestDoc)
   ));
   const filteredNextPageIds = new Set(filteredNextPages.map((page) => page.pageId));
-  const missingPages = options.preserveMissingPages === true
+  const missingPages = options.preserveMissingPages !== false
     ? latestDoc.pages.filter((page) => !filteredNextPageIds.has(page.pageId))
     : [];
   const nextPages = missingPages.length > 0

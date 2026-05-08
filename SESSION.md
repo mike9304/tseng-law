@@ -2057,3 +2057,25 @@
 
 메모:
 - 이 수정은 저장 레이어 방어 보강이며, public route의 legacy/builder 전환 정책과는 별개다. 실제 사이트가 원래 디자인을 유지해야 하는 기본 정책은 계속 legacy-first로 둔다.
+
+## 2026-05-09 Codex /goal G-Editor published interactions + map editor parity
+
+범위:
+- 공개 builder 페이지에서 서비스 상세 카드와 FAQ accordion이 정적 HTML로만 남던 문제를 `PublishedInteractions` client component로 복구. 발행 후에도 click/Enter/Space로 접힘/펼침이 동작한다.
+- hero search input은 `placeholder` 우선 렌더링으로 수정해 편집기에서 검색창 문구 변경이 실제 표시와 일치하게 했다.
+- map quick edit은 입력 중 draft만 보관하고 `위치 적용`/Enter/외부 blur에서 반영하도록 바꿔, Google Maps iframe 재렌더가 줌 버튼 클릭을 끊지 않게 했다.
+- 사무소 map inspector에 공유 사무소 preset grid를 추가하고, office sync가 generic Content tab과 중복 표시되지 않게 정리했다.
+- office tab/layout 표시 상태를 `data-office-active` 기반으로 보강해 선택한 지역 레이아웃만 안정적으로 보이게 했다.
+- site persistence 기본 write는 최신 문서에만 있는 page를 보존하게 되돌려, 페이지 생성 직후 오래된 site write가 새 page meta를 지워 publish가 `page_not_in_site`로 실패하는 레이스를 차단했다. 명시 삭제 경로는 계속 `preserveMissingPages: false`를 사용한다.
+
+검증:
+- `npm run test:unit -- src/lib/builder/site/__tests__/persistence.test.ts` ✅
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/office-map-public.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 공개 페이지의 “원래 사이트 기능이 살아있는지” 검증 범위를 서비스/FAQ/map publish path까지 넓힌 단위다.
+- `CODEX-AUDIT-FINDINGS-2026-05-09.md`, `CODEX-GOAL-WIX-PARITY-COMPLETE.md`는 기존 untracked 문서라 이번 커밋에 포함하지 않는다.

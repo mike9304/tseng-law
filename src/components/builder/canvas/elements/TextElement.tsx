@@ -36,13 +36,14 @@ export default function TextElement({
   const richTextMode = richTextModeForTag(Tag);
 
   if (as === 'input') {
+    const placeholder = node.content.placeholder ?? node.content.text;
     return (
       <input
         className={className}
         type={node.content.inputType ?? 'text'}
         name={node.content.name}
-        placeholder={node.content.text}
-        aria-label={node.content.ariaLabel ?? node.content.text}
+        placeholder={placeholder}
+        aria-label={node.content.ariaLabel ?? placeholder}
         readOnly={mode === 'edit'}
         defaultValue=""
         style={{

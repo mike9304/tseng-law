@@ -61,6 +61,7 @@ import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
 import AnimationsRoot from '@/components/builder/published/AnimationsRoot';
+import PublishedInteractions from '@/components/builder/published/PublishedInteractions';
 import DarkModeToggle from '@/components/builder/published/DarkModeToggle';
 import LightboxMount from '@/components/builder/published/LightboxMount';
 import LightboxOverlay from '@/components/builder/published/LightboxOverlay';
@@ -611,6 +612,13 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           box-shadow: var(--builder-hover-box-shadow) !important;
           transform: var(--builder-hover-transform) !important;
         }
+        .builder-pub-node[data-node-id='home-hero-quick-menu'] {
+          display: none;
+        }
+        .builder-pub-node[data-node-id='home-hero-search-wrap']:hover [data-node-id='home-hero-quick-menu'],
+        .builder-pub-node[data-node-id='home-hero-search-wrap']:focus-within [data-node-id='home-hero-quick-menu'] {
+          display: block;
+        }
         .builder-pub-node[data-builder-section-template='services'][data-section-variant='elevated'] .services-detail-card,
         .builder-pub-node[data-builder-section-template='faq'][data-section-variant='elevated'] .faq-item,
         .builder-pub-node[data-builder-section-template='insights'][data-section-variant='elevated'] .insights-featured,
@@ -744,6 +752,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         />
       ) : null}
       <AnimationsRoot />
+      <PublishedInteractions />
       {resolved.headerCanvas ? (
         <GlobalCanvasSection
           canvas={resolved.headerCanvas}

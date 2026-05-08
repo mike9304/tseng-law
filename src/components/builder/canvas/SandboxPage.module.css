@@ -1678,21 +1678,29 @@
 
 .stage :global([data-node-id='home-offices-layout-1']),
 .stage :global([data-node-id='home-offices-layout-2']) {
-  display: none;
+  display: none !important;
 }
 
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-selected='true']) [data-node-id='home-offices-layout-0']),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-2'][data-selected='true']) [data-node-id='home-offices-layout-0']),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-1'] [data-selected='true']) [data-node-id='home-offices-layout-0']),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-2'] [data-selected='true']) [data-node-id='home-offices-layout-0']) {
-  display: none;
+  display: none !important;
 }
 
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-selected='true']) [data-node-id='home-offices-layout-1']),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-1'] [data-selected='true']) [data-node-id='home-offices-layout-1']),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-2'][data-selected='true']) [data-node-id='home-offices-layout-2']),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-2'] [data-selected='true']) [data-node-id='home-offices-layout-2']) {
-  display: block;
+  display: block !important;
+}
+
+.stage :global([data-node-id^='home-offices-layout-'][data-office-active='false']) {
+  display: none !important;
+}
+
+.stage :global([data-node-id^='home-offices-layout-'][data-office-active='true']) {
+  display: block !important;
 }
 
 .stage :global([data-node-id='home-offices-tab-1'][data-selected='true'] .tab-button),
@@ -2939,8 +2947,8 @@
   z-index: 13;
   display: grid;
   width: clamp(320px, 62%, 420px);
-  max-width: calc(100% - 28px);
-  max-height: calc(100% - 28px);
+  max-width: min(420px, calc(100vw - 360px));
+  max-height: min(520px, calc(100dvh - 180px));
   gap: 8px;
   overflow: auto;
   padding: 12px;

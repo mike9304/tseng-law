@@ -23,6 +23,89 @@ const baseNodeStyle = {
   opacity: 100,
 };
 
+function makePublicSectionTemplateDocument(token: string) {
+  const now = new Date().toISOString();
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `section-template-${token}`,
+    stageWidth: 1280,
+    stageHeight: 860,
+    nodes: [
+      {
+        id: 'home-faq-root',
+        kind: 'container',
+        rect: { x: 72, y: 96, width: 1136, height: 220 },
+        style: baseNodeStyle,
+        zIndex: 0,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: 'home faq root',
+          background: 'transparent',
+          borderColor: 'transparent',
+          borderStyle: 'solid',
+          borderWidth: 0,
+          borderRadius: 0,
+          padding: 0,
+          layoutMode: 'absolute',
+          className: 'section section--gray',
+          as: 'section',
+          variant: 'glass',
+        },
+      },
+      {
+        id: `section-template-faq-item-${token}`,
+        kind: 'container',
+        parentId: 'home-faq-root',
+        rect: { x: 0, y: 0, width: 1136, height: 96 },
+        style: baseNodeStyle,
+        zIndex: 1,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: 'public faq item',
+          background: '#ffffff',
+          borderColor: '#cbd5e1',
+          borderStyle: 'solid',
+          borderWidth: 1,
+          borderRadius: 12,
+          padding: 18,
+          layoutMode: 'absolute',
+          className: 'faq-item',
+          as: 'article',
+        },
+      },
+      {
+        id: `section-template-faq-text-${token}`,
+        kind: 'text',
+        parentId: `section-template-faq-item-${token}`,
+        rect: { x: 24, y: 24, width: 640, height: 32 },
+        style: baseNodeStyle,
+        zIndex: 2,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          text: `Section template keeps content ${token}`,
+          fontSize: 18,
+          color: '#1f2937',
+          fontWeight: 'medium',
+          align: 'left',
+          lineHeight: 1.2,
+          letterSpacing: 0,
+          fontFamily: 'system-ui',
+          verticalAlign: 'top',
+          textTransform: 'none',
+        },
+      },
+    ],
+  };
+}
+
 type TestNavigationItem = {
   id: string;
   label: string | Record<string, string>;
@@ -538,6 +621,57 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       const faqVariant = draftPayload.document?.nodes?.find((node) => node.id === 'home-faq-root')?.content?.variant;
       return `${servicesVariant}:${faqVariant}`;
     }, { timeout: 20_000 }).toBe('glass:elevated');
+  });
+
+  test('publishes stateful section template variants to public pages', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-section-template-${token}`;
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers: mutationHeaders(`section-template-${token}`),
+        data: {
+          locale: 'ko',
+          slug,
+          title: `G Editor Section Template ${token}`,
+          document: makePublicSectionTemplateDocument(token),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      expect(created.pageId).toBeTruthy();
+      pageId = created.pageId!;
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(`section-template-${token}`),
+        data: {},
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      const publicHtmlResponse = await page.request.get(`/ko/${slug}`);
+      expect(publicHtmlResponse.status()).toBe(200);
+      const publicHtml = await publicHtmlResponse.text();
+      expect(publicHtml).toContain('data-builder-section-template="faq"');
+      expect(publicHtml).toContain('data-section-variant="glass"');
+      expect(publicHtml).toContain("data-builder-section-template='faq'][data-section-variant='glass']");
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      const sectionRoot = page.locator('[data-node-id="home-faq-root"]').first();
+      await expect(sectionRoot).toHaveAttribute('data-builder-section-template', 'faq');
+      await expect(sectionRoot).toHaveAttribute('data-section-variant', 'glass');
+      const faqItem = sectionRoot.locator('.faq-item').first();
+      await expect(faqItem).toBeVisible();
+      await expect(faqItem).toHaveCSS('backdrop-filter', /blur\(14px\)/);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(`section-template-${token}`),
+          failOnStatusCode: false,
+        });
+      }
+    }
   });
 
   test('covers canvas direct-manipulation overlays for drag, resize, multi-select, and snap distance', async ({ page }) => {

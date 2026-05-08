@@ -16,6 +16,11 @@ export type HomeSectionTemplateVariantOption = {
   description: string;
 };
 
+export type HomeSectionTemplateMetadata = {
+  id: HomeSectionTemplateId;
+  variant: HomeSectionTemplateVariant;
+};
+
 export const HOME_SECTION_TEMPLATE_TARGETS: HomeSectionTemplateTarget[] = [
   {
     id: 'services',
@@ -77,3 +82,11 @@ export function getHomeSectionTemplateVariant(node: BuilderCanvasNode): HomeSect
   return value === 'elevated' || value === 'floating' || value === 'glass' ? value : 'flat';
 }
 
+export function getHomeSectionTemplateMetadata(node: BuilderCanvasNode): HomeSectionTemplateMetadata | null {
+  const target = getHomeSectionTemplateTarget(node.id);
+  if (!target) return null;
+  return {
+    id: target.id,
+    variant: getHomeSectionTemplateVariant(node),
+  };
+}

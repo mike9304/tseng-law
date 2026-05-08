@@ -1782,3 +1782,21 @@
 
 메모:
 - 아직 완전한 섹션 재생성/template gallery는 아님. 다음 단계는 variant 선택을 Inspector/Design panel에도 연결하고, 칼럼 아카이브 grid/timeline/magazine, 서비스 accordion/card/list 같은 구조 variant로 확장하는 것.
+
+## 2026-05-09 Codex /goal G-Editor section template public render
+
+범위:
+- stateful 홈 섹션 template registry에 published metadata helper를 추가.
+- public page renderer와 global/header/footer/lightbox shared frame이 `data-builder-section-template` / `data-section-variant`를 출력하도록 연결.
+- 공개 페이지 inline CSS에도 editor와 같은 `Classic / Elevated / Floating / Glass` surface variant 규칙을 추가해, publish 후에도 FAQ/주요 서비스/칼럼 아카이브/오시는길 카드 표면이 같은 디자인으로 렌더되게 함.
+- `design-pool.playwright.ts`에 임시 공개 페이지 생성 → publish → `/ko/{slug}` HTML/DOM/CSS 확인 → cleanup 시나리오를 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit -- src/lib/builder/site/__tests__/published-node-frame.test.ts` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "publishes stateful section template variants"` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (13/13)
+
+메모:
+- 사용자가 요청한 "템플릿 변경해도 데이터는 유지하고 디자인만 교체" 흐름의 1차 범위를 공개 렌더까지 닫음. 아직 grid/timeline/magazine 같은 구조 variant template gallery는 후속 확장으로 남음.

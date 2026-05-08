@@ -66,6 +66,18 @@ describe('buildPublishedSurfaceFrame', () => {
     expect(frame.attrs['data-anchor']).toBe('contact-section');
   });
 
+  it('stateful home section roots expose template and variant attrs', () => {
+    const frame = buildPublishedSurfaceFrame(
+      mk({
+        id: 'home-faq-root',
+        kind: 'container',
+        content: { variant: 'glass' },
+      }),
+    );
+    expect(frame.attrs['data-builder-section-template']).toBe('faq');
+    expect(frame.attrs['data-section-variant']).toBe('glass');
+  });
+
   it('no anchor name → no data-anchor', () => {
     const frame = buildPublishedSurfaceFrame(mk({ anchorName: undefined }));
     expect(frame.attrs['data-anchor']).toBeUndefined();

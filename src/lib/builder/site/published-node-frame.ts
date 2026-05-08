@@ -9,6 +9,7 @@ import {
   deriveHeuristicAnimation,
   deriveHeuristicHoverStyle,
 } from '@/lib/builder/site/heuristic-defaults';
+import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
 
 /**
  * Shared frame attrs for any published surface (page body, global header/footer,
@@ -50,6 +51,11 @@ export function buildPublishedSurfaceFrame(
     'data-node-id': node.id,
     ...animationAttributes,
   };
+  const sectionTemplate = getHomeSectionTemplateMetadata(node);
+  if (sectionTemplate) {
+    attrs['data-builder-section-template'] = sectionTemplate.id;
+    attrs['data-section-variant'] = sectionTemplate.variant;
+  }
   if (hoverStyle) {
     attrs['data-builder-hover'] = 'true';
   }

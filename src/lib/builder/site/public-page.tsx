@@ -54,6 +54,7 @@ import {
   deriveHeuristicHoverStyle,
 } from '@/lib/builder/site/heuristic-defaults';
 import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-frame';
+import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import JsonLd from '@/components/JsonLd';
@@ -458,6 +459,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       baseOpacity: node.style?.opacity != null ? node.style.opacity / 100 : 1,
       primaryColor: 'var(--builder-color-primary, #3b82f6)',
     });
+    const sectionTemplate = getHomeSectionTemplateMetadata(node);
 
     // Lightbox trigger detection: button with href starting with `lightbox:`
     let lightboxTarget: string | undefined;
@@ -476,6 +478,8 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         data-node-id={node.id}
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
         data-builder-sticky={useSticky ? 'true' : undefined}
+        data-builder-section-template={sectionTemplate?.id}
+        data-section-variant={sectionTemplate?.variant}
         data-anchor={node.anchorName ? node.anchorName : undefined}
         data-builder-hover={hoverStyle ? 'true' : undefined}
         data-lightbox-target={lightboxTarget || undefined}
@@ -606,6 +610,41 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           border-color: var(--builder-hover-border-color) !important;
           box-shadow: var(--builder-hover-box-shadow) !important;
           transform: var(--builder-hover-transform) !important;
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='elevated'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='elevated'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='elevated'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='elevated'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='elevated'] .office-card {
+          border-color: var(--border-medium);
+          background: var(--bg-white);
+          box-shadow: 0 18px 48px color-mix(in srgb, var(--primary) 14%, transparent);
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='floating'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='floating'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='floating'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='floating'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='floating'] .office-card {
+          border-color: var(--accent-purple-border);
+          border-radius: 20px;
+          background: var(--bg-white);
+          box-shadow: 0 24px 64px color-mix(in srgb, var(--accent-purple) 16%, transparent);
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='glass'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='glass'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='glass'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='glass'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='glass'] .office-card {
+          border-color: color-mix(in srgb, var(--bg-white) 72%, transparent);
+          background: color-mix(in srgb, var(--bg-white) 82%, transparent);
+          box-shadow: 0 24px 80px color-mix(in srgb, var(--primary) 14%, transparent);
+          backdrop-filter: blur(14px);
+        }
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='floating'] .tab-button,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='glass'] .tab-button,
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='floating'] .service-icon,
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='glass'] .service-icon {
+          border-radius: 999px;
         }
         @media (max-width: 768px) {
           .builder-pub-main {

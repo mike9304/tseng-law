@@ -2003,6 +2003,7 @@
 
 검증:
 - `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/office-locations.test.ts` ✅
 - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
 - `npm run lint` ✅ (기존 `<img>` warnings only)
 

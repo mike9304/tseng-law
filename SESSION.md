@@ -1956,3 +1956,21 @@
 메모:
 - 사용자가 지적한 "사이트 열면 옆쪽이 짤림", "맨위 메뉴 Edit 누르러 가면 사라짐", "칼럼 새로 쓰기가 너무 복잡함" 중 즉시 막히는 표면을 닫은 단위.
 - 지도 편집은 현재 map quick edit/inspector가 주소/zoom/office sync를 지원하지만, 다음은 중복 preset을 shared `OfficeLocationEditor`/helper로 묶어 Wix식 위치 편집 패널처럼 한 화면으로 정리한다.
+
+## 2026-05-09 Codex /goal G-Editor office map quick edit fields
+
+범위:
+- 사무소 map quick edit 패널에 `사무소명`, `전화`, `Google 지도 링크` 필드를 추가.
+- 기존 inspector-only office sync를 캔버스 위 quick edit에서도 바로 조작 가능하게 연결.
+- 사무소명은 title text node, 전화는 phone button label/href, 지도 링크는 map-link button href와 동기화.
+- `주소로 지도 링크 생성` 버튼은 현재 주소 기준 Google Maps search URL을 만들어 map-link button href에 반영.
+- quick edit 패널에 `max-height`/내부 scroll을 추가해 필드가 늘어나도 map node 밖으로 과도하게 튀지 않도록 처리.
+- admin-builder smoke가 preset → 제목/전화/지도 URL 직접 편집 → preset 복원 → inspector Office sync 진입까지 검증.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 사용자가 지적한 "지도 눌러서 다른 지역으로 바꾸거나 주소 설정이 간편하지 않음"에 대한 quick edit 표면 보강. 아직 Google Places autocomplete/drag pin은 없음. 다음 단계는 duplicated office presets/URL helpers를 공통 모듈로 정리하고 add/remove/reorder office node group을 붙이는 것.

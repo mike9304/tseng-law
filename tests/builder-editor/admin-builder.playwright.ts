@@ -763,10 +763,24 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const mapQuickEdit = officeMap.locator('[data-builder-map-quick-edit="true"]').first();
     await expect(mapQuickEdit).toBeVisible();
     await expect(mapQuickEdit).toContainText('사무소 위치 편집');
+    await expect(mapQuickEdit.getByLabel('Map quick location title')).toBeVisible();
+    await expect(mapQuickEdit.getByLabel('Map quick office phone')).toBeVisible();
+    await expect(mapQuickEdit.getByLabel('Map quick Google Maps URL')).toBeVisible();
     await mapQuickEdit.getByRole('button', { name: '타이베이' }).click();
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이베이');
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-address"]').first()).toContainText('承德路');
     await expect(mapQuickEdit.getByLabel('Map quick address')).toHaveValue(/承德路/);
+    await expect(mapQuickEdit.getByLabel('Map quick location title')).toHaveValue('타이베이');
+    await expect(mapQuickEdit.getByLabel('Map quick office phone')).toHaveValue('04-2326-1862');
+    const temporaryOfficeTitle = `타이베이 테스트 ${Date.now().toString(36)}`;
+    const temporaryOfficePhone = '02-0000-0000';
+    const temporaryOfficeUrl = 'https://www.google.com/maps/search/test-office';
+    await mapQuickEdit.getByLabel('Map quick location title').fill(temporaryOfficeTitle);
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText(temporaryOfficeTitle);
+    await mapQuickEdit.getByLabel('Map quick office phone').fill(temporaryOfficePhone);
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-phone"]').first()).toContainText(temporaryOfficePhone);
+    await mapQuickEdit.getByLabel('Map quick Google Maps URL').fill(temporaryOfficeUrl);
+    await expect(mapQuickEdit.getByLabel('Map quick Google Maps URL')).toHaveValue(temporaryOfficeUrl);
     await mapQuickEdit.getByRole('slider', { name: 'Map quick zoom' }).fill('17');
     await expect.poll(async () => {
       const src = await officeMap.locator('iframe[title="Google Maps"]').first().getAttribute('src');
@@ -774,6 +788,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     }).toBe('17');
     await mapQuickEdit.getByRole('button', { name: '타이중' }).click();
     await expect(page.locator('[data-node-id="home-offices-layout-0-card-title"]').first()).toContainText('타이중');
+    await expect(page.locator('[data-node-id="home-offices-layout-0-card-phone"]').first()).toContainText('04-2326-1862');
     await page.getByRole('button', { name: 'content' }).click();
     await expect(page.getByText('Office sync')).toBeVisible();
     await expect(page.getByText('사무소 프리셋')).toBeVisible();

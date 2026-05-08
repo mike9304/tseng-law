@@ -149,9 +149,19 @@ function buttonLabelValue(node: BuilderCanvasNode | undefined): string {
   return typeof value === 'string' ? value : '';
 }
 
+function buttonHrefValue(node: BuilderCanvasNode | undefined): string {
+  const value = node?.content && 'href' in node.content ? node.content.href : '';
+  return typeof value === 'string' ? value : '';
+}
+
 function labelPrefix(label: string, fallback: string): string {
   const separatorIndex = label.indexOf(':');
   return separatorIndex > 0 ? label.slice(0, separatorIndex).trim() : fallback;
+}
+
+function labelValueAfterColon(label: string): string {
+  const separatorIndex = label.indexOf(':');
+  return separatorIndex >= 0 ? label.slice(separatorIndex + 1).trim() : label.trim();
 }
 
 function telHrefFromPhone(phone: string): string {
@@ -724,6 +734,9 @@ export default function CanvasNode({
   const officeMapLinkNode = officeQuickEdit
     ? nodesById.get(`${officeQuickEdit.cardId}-map-link`)
     : undefined;
+  const officePhoneLabel = buttonLabelValue(officePhoneNode);
+  const officePhonePrefix = labelPrefix(officePhoneLabel, 'TEL');
+  const officeMapUrl = buttonHrefValue(officeMapLinkNode);
   const parentNode = node.parentId ? nodesById.get(node.parentId) : undefined;
   const parentLayoutMode = parentNode && isContainerLikeKind(parentNode.kind)
     ? (parentNode.content as { layoutMode?: 'absolute' | 'flex' | 'grid' }).layoutMode ?? 'absolute'
@@ -816,6 +829,33 @@ export default function CanvasNode({
     [node.id, updateNodeContentInStore],
   );
 
+  const updateOfficeTitle = useCallback(
+    (nextTitle: string) => {
+      if (!officeTitleNode) return;
+      updateNodeContentInStore(officeTitleNode.id, { text: nextTitle });
+    },
+    [officeTitleNode, updateNodeContentInStore],
+  );
+
+  const updateOfficePhone = useCallback(
+    (nextPhone: string) => {
+      if (!officePhoneNode) return;
+      updateNodeContentInStore(officePhoneNode.id, {
+        label: `${officePhonePrefix}: ${nextPhone}`,
+        href: telHrefFromPhone(nextPhone),
+      });
+    },
+    [officePhoneNode, officePhonePrefix, updateNodeContentInStore],
+  );
+
+  const updateOfficeMapUrl = useCallback(
+    (nextUrl: string) => {
+      if (!officeMapLinkNode) return;
+      updateNodeContentInStore(officeMapLinkNode.id, { href: nextUrl });
+    },
+    [officeMapLinkNode, updateNodeContentInStore],
+  );
+
   const updateOfficeAddress = useCallback(
     (nextAddress: string, nextMapsUrl = googleMapsSearchUrl(nextAddress)) => {
       updateMapAddress(nextAddress, nextMapsUrl);
@@ -826,7 +866,6 @@ export default function CanvasNode({
 
   const applyOfficePreset = useCallback(
     (preset: OfficeQuickPreset) => {
-      const phonePrefix = labelPrefix(buttonLabelValue(officePhoneNode), 'TEL');
       const faxPrefix = labelPrefix(textContentValue(officeFaxNode), 'FAX');
       updateOfficeAddress(preset.address, preset.mapsUrl);
       if (officeTitleNode) {
@@ -834,7 +873,7 @@ export default function CanvasNode({
       }
       if (officePhoneNode) {
         updateNodeContentInStore(officePhoneNode.id, {
-          label: `${phonePrefix}: ${preset.phone}`,
+          label: `${officePhonePrefix}: ${preset.phone}`,
           href: telHrefFromPhone(preset.phone),
         });
       }
@@ -845,6 +884,7 @@ export default function CanvasNode({
     [
       officeFaxNode,
       officePhoneNode,
+      officePhonePrefix,
       officeTitleNode,
       updateNodeContentInStore,
       updateOfficeAddress,
@@ -1379,6 +1419,18 @@ export default function CanvasNode({
               </button>
             ))}
           </div>
+          {officeQuickEdit ? (
+            <label className={styles.nodeMapAddressField}>
+              <span>사무소명</span>
+              <input
+                type="text"
+                aria-label="Map quick location title"
+                value={textContentValue(officeTitleNode)}
+                disabled={!officeTitleNode}
+                onChange={(event) => updateOfficeTitle(event.currentTarget.value)}
+              />
+            </label>
+          ) : null}
           <label className={styles.nodeMapAddressField}>
             <span>주소</span>
             <textarea
@@ -1401,6 +1453,30 @@ export default function CanvasNode({
               }}
             />
           </label>
+          {officeQuickEdit ? (
+            <>
+              <label className={styles.nodeMapAddressField}>
+                <span>전화</span>
+                <input
+                  type="text"
+                  aria-label="Map quick office phone"
+                  value={labelValueAfterColon(officePhoneLabel)}
+                  disabled={!officePhoneNode}
+                  onChange={(event) => updateOfficePhone(event.currentTarget.value)}
+                />
+              </label>
+              <label className={styles.nodeMapAddressField}>
+                <span>Google 지도 링크</span>
+                <input
+                  type="url"
+                  aria-label="Map quick Google Maps URL"
+                  value={officeMapUrl}
+                  disabled={!officeMapLinkNode}
+                  onChange={(event) => updateOfficeMapUrl(event.currentTarget.value)}
+                />
+              </label>
+            </>
+          ) : null}
           <button
             type="button"
             className={styles.nodeMapApplyButton}
@@ -1408,10 +1484,11 @@ export default function CanvasNode({
               const nextAddress = mapQuickAddressRef.current?.value ?? mapQuickAddressDraft;
               setMapQuickAddressDraft(nextAddress);
               updateMapAddress(nextAddress);
+              if (officeMapLinkNode) updateOfficeMapUrl(googleMapsSearchUrl(nextAddress));
               mapQuickAddressRef.current?.focus();
             }}
           >
-            위치 적용
+            {officeQuickEdit ? '주소로 지도 링크 생성' : '위치 적용'}
           </button>
           <label className={styles.nodeMapZoomField}>
             <span>줌 {currentMapZoom}</span>

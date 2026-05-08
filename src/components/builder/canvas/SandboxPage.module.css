@@ -2935,7 +2935,9 @@
   display: grid;
   width: clamp(320px, 62%, 420px);
   max-width: calc(100% - 28px);
+  max-height: calc(100% - 28px);
   gap: 8px;
+  overflow: auto;
   padding: 12px;
   border: 1px solid var(--editor-border-hairline, #dbe2ea);
   border-radius: 8px;
@@ -3037,10 +3039,9 @@
   font-weight: 850;
 }
 
+.nodeMapAddressField input,
 .nodeMapAddressField textarea {
   width: 100%;
-  min-height: 54px;
-  resize: vertical;
   border: 1px solid var(--editor-border-hairline, #dbe2ea);
   border-radius: 7px;
   background: var(--editor-panel, #fff);
@@ -3052,6 +3053,16 @@
   padding: 7px 8px;
 }
 
+.nodeMapAddressField input {
+  height: 32px;
+}
+
+.nodeMapAddressField textarea {
+  min-height: 54px;
+  resize: vertical;
+}
+
+.nodeMapAddressField input:focus,
 .nodeMapAddressField textarea:focus {
   border-color: var(--editor-accent, #116dff);
   box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.12);

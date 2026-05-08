@@ -1649,3 +1649,18 @@
 메모:
 - 사용자가 지적한 "원래 홈페이지 기능이 편집기 안에 다 안 들어온다" 문제 중 홈 칼럼/인사이트 페이지 이동 동작을 보강.
 - 다음 우선순위는 `CODEX-GOAL-WIX-PARITY-COMPLETE.md` 기준으로 editor-only polish와 장기 PR #0~#20 범위를 분리해, 먼저 실제 사이트 기능 누락/편집 가능성 갭을 감사하는 것.
+
+## 2026-05-08 Codex /goal G-Editor offices tab preview evidence follow-up
+
+범위:
+- 홈 `오시는길` 섹션이 공개 `OfficeMapTabs`처럼 사무소 탭을 누르면 해당 사무소 레이아웃만 보이는지 자동 검증을 보강.
+- admin-builder smoke에 타이중 기본 layout visible, 가오슝 탭 클릭 후 layout-1/card title visible + layout-0 hidden, 다시 타이중 탭 복귀 검증을 추가.
+- 기존 지도 quick panel/Office sync 검증 전 단계에 탭 전환 검증을 배치해, 사무소 위치 편집 전에 visitor-style tab preview가 살아 있음을 확인.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅ (sandbox Chromium launch issue 때문에 외부 실행으로 검증)
+
+메모:
+- 코드 변경 없이 검증 근거를 강화한 마일스톤. `CODEX-GOAL-WIX-PARITY-COMPLETE.md` 기준 전체 complete는 여전히 아님.

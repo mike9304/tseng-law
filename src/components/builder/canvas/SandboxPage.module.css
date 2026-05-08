@@ -1566,6 +1566,8 @@
 
 .stage :global([data-node-id='home-offices-tab-1'][data-selected='true'] .tab-button),
 .stage :global([data-node-id='home-offices-tab-2'][data-selected='true'] .tab-button),
+.stage :global([data-node-id='home-offices-tab-1'][data-office-active='true'] .tab-button),
+.stage :global([data-node-id='home-offices-tab-2'][data-office-active='true'] .tab-button),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-1'] [data-selected='true']) [data-node-id='home-offices-tab-1'] .tab-button),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-2'] [data-selected='true']) [data-node-id='home-offices-tab-2'] .tab-button) {
   background: var(--primary);
@@ -1575,6 +1577,8 @@
 
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-2'][data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-1'][data-office-active='true']) [data-node-id='home-offices-tab-0'] .tab-button),
+.stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-tab-2'][data-office-active='true']) [data-node-id='home-offices-tab-0'] .tab-button),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-1'] [data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button),
 .stage :global([data-node-id='home-offices-container']:has([data-node-id='home-offices-layout-2'] [data-selected='true']) [data-node-id='home-offices-tab-0'] .tab-button) {
   background: var(--bg-white);

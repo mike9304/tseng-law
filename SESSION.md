@@ -1664,3 +1664,24 @@
 
 메모:
 - 코드 변경 없이 검증 근거를 강화한 마일스톤. `CODEX-GOAL-WIX-PARITY-COMPLETE.md` 기준 전체 complete는 여전히 아님.
+
+## 2026-05-08 Codex /goal G-Editor draft save race + office tabs follow-up
+
+범위:
+- page draft 저장을 pageId+variant 단위로 직렬화하고, `/api/builder/site/pages/[pageId]/draft`의 revision compare/write를 같은 lock 안에서 실행하도록 변경.
+- 빠른 Delete autosave와 Undo autosave가 동시에 들어올 때 둘 다 같은 revision을 통과해 마지막 write가 복원된 child node를 덮는 race를 차단.
+- 홈 `오시는길` 탭 preview를 CSS `:has([data-selected])`에만 기대지 않고 CanvasNode가 active office index를 계산해 inactive layout을 직접 숨기도록 보강.
+- `CODEX-GOAL-WIX-PARITY-COMPLETE.md`는 현재 editor-only goal보다 큰 PR #0~#20 장기 work-order 문서로 재확인. 현재 goal complete 선언 기준은 아직 사용자 5분 직접 검증이 남아 있음.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... clipboard-persistence.playwright.ts --workers=1 --grep "deletes selected containers"` ✅
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... tests/builder-editor --workers=1` ✅ (21/21, sandbox Chromium launch issue 때문에 외부 실행으로 검증)
+- `npm run test:unit` ✅ (21 files, 712 tests)
+- `npm run security:builder-routes` ✅ (71 builder route files, 61 mutation handlers covered)
+- `npm run build` ✅ (Google Fonts stylesheet 최적화 download warning only)
+
+메모:
+- `npm run build` 후 production `.next`가 dev server를 흔들 수 있어 `.next` 삭제 후 `npm run dev`를 다시 3000에 띄움. `/ko`는 200, `/ko/admin-builder`는 Basic Auth 401 정상 응답 확인.

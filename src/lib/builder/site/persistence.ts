@@ -32,6 +32,7 @@ import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 
 const BLOB_PREFIX = 'builder-site';
 let siteWriteQueue: Promise<void> = Promise.resolve();
+const pageCanvasWriteQueues = new Map<string, Promise<void>>();
 
 type WriteSiteDocumentOptions = {
   preserveMissingPages?: boolean;
@@ -176,6 +177,9 @@ type WritePageCanvasOptions = {
   incrementRevision?: boolean;
   updatedBy?: string;
 };
+type PageCanvasRecordUpdater = (
+  state: PageCanvasRecordState | null,
+) => PageCanvasRecord | Promise<PageCanvasRecord>;
 
 export interface PageCanvasRecordState {
   record: PageCanvasRecord;
@@ -185,6 +189,36 @@ export interface PageCanvasRecordState {
 function pagePathname(siteId: string, pageId: string, variant: PageVariant): string {
   const suffix = variant === 'draft' ? 'draft.json' : 'published.json';
   return `${BLOB_PREFIX}/${normalizeBuilderSiteId(siteId)}/pages/${pageId}.${suffix}`;
+}
+
+function pageCanvasQueueKey(siteId: string, pageId: string, variant: PageVariant): string {
+  return `${normalizeBuilderSiteId(siteId)}:${pageId}:${variant}`;
+}
+
+async function withPageCanvasWriteLock<T>(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant,
+  task: () => Promise<T>,
+): Promise<T> {
+  const key = pageCanvasQueueKey(siteId, pageId, variant);
+  const previousWrite = pageCanvasWriteQueues.get(key) ?? Promise.resolve();
+  let releaseWrite!: () => void;
+  const currentWrite = new Promise<void>((resolve) => {
+    releaseWrite = resolve;
+  });
+  const queuedWrite = previousWrite.catch(() => undefined).then(() => currentWrite);
+  pageCanvasWriteQueues.set(key, queuedWrite);
+
+  await previousWrite.catch(() => undefined);
+  try {
+    return await task();
+  } finally {
+    releaseWrite();
+    if (pageCanvasWriteQueues.get(key) === queuedWrite) {
+      pageCanvasWriteQueues.delete(key);
+    }
+  }
 }
 
 function isRecordLike(input: unknown): input is PageCanvasRecord {
@@ -279,7 +313,22 @@ export async function writePageCanvasRecord(
   record: PageCanvasRecord,
   variant: PageVariant = 'draft',
 ): Promise<void> {
-  await writePageCanvasPayload(siteId, pageId, variant, record);
+  await withPageCanvasWriteLock(siteId, pageId, variant, () =>
+    writePageCanvasPayload(siteId, pageId, variant, record));
+}
+
+export async function updatePageCanvasRecord(
+  siteId: string,
+  pageId: string,
+  variant: PageVariant,
+  updater: PageCanvasRecordUpdater,
+): Promise<PageCanvasRecord> {
+  return withPageCanvasWriteLock(siteId, pageId, variant, async () => {
+    const state = await readPageCanvasRecordState(siteId, pageId, variant);
+    const record = await updater(state);
+    await writePageCanvasPayload(siteId, pageId, variant, record);
+    return record;
+  });
 }
 
 export async function readPageCanvas(
@@ -298,20 +347,20 @@ export async function writePageCanvas(
   doc: BuilderCanvasDocument,
   options: WritePageCanvasOptions = {},
 ): Promise<void> {
-  const state = await readPageCanvasRecordState(siteId, pageId, variant);
-  const incrementRevision = options.incrementRevision ?? true;
-  const revision = state
-    ? incrementRevision
-      ? state.record.revision + 1
-      : state.record.revision
-    : 0;
-  const record: PageCanvasRecord = {
-    revision,
-    savedAt: new Date().toISOString(),
-    updatedBy: options.updatedBy,
-    document: doc,
-  };
-  await writePageCanvasRecord(siteId, pageId, record, variant);
+  await updatePageCanvasRecord(siteId, pageId, variant, (state) => {
+    const incrementRevision = options.incrementRevision ?? true;
+    const revision = state
+      ? incrementRevision
+        ? state.record.revision + 1
+        : state.record.revision
+      : 0;
+    return {
+      revision,
+      savedAt: new Date().toISOString(),
+      updatedBy: options.updatedBy,
+      document: doc,
+    };
+  });
 }
 
 // ─── Page CRUD ────────────────────────────────────────────────────

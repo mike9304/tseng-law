@@ -337,6 +337,14 @@ function isOfficeMapTarget(node: BuilderCanvasNode): boolean {
   return node.kind === 'map' && /^home-offices-layout-\d+-map$/.test(node.id);
 }
 
+function officeIndexFromNodeId(nodeId: string): number | null {
+  const tabMatch = /^home-offices-tab-(\d+)$/.exec(nodeId);
+  if (tabMatch) return Number(tabMatch[1]);
+  const layoutMatch = /^home-offices-layout-(\d+)(?:$|-)/.exec(nodeId);
+  if (layoutMatch) return Number(layoutMatch[1]);
+  return null;
+}
+
 export type ResizeHandle =
   | 'nw'
   | 'n'
@@ -657,6 +665,16 @@ export default function CanvasNode({
       .map((selectedId) => /^home-faq-item-(\d+)/.exec(selectedId)?.[1])
       .filter((value): value is string => Boolean(value)),
   );
+  const activeOfficeIndex = selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => (
+    activeIndex ?? officeIndexFromNodeId(selectedId)
+  ), null) ?? 0;
+  const officeLayoutIndex = /^home-offices-layout-(\d+)$/.exec(node.id)?.[1];
+  const officeTabIndex = /^home-offices-tab-(\d+)$/.exec(node.id)?.[1];
+  const officeLayoutDisplay = officeLayoutIndex
+    ? Number(officeLayoutIndex) === activeOfficeIndex
+      ? 'block'
+      : 'none'
+    : undefined;
   const builderPreviewOpen = serviceCardMatch
     ? selectedServiceCards.has(serviceCardMatch[1]) || (serviceCardMatch[1] === '0' && selectedServiceCards.size === 0 && !selectionIsInside('home-services-list'))
     : faqItemMatch
@@ -835,12 +853,14 @@ export default function CanvasNode({
         transformOrigin: 'center center',
         opacity: isDimmedRoot ? 0.3 : 1,
         pointerEvents: nodePointerEvents,
+        display: officeLayoutDisplay,
         outline: isActiveGroupFrame ? '2px dashed rgba(37, 99, 235, 0.72)' : undefined,
         outlineOffset: isActiveGroupFrame ? 4 : undefined,
         fontSize: effectiveFontSize ? `${effectiveFontSize}px` : undefined,
       }}
       data-node-id={node.id}
       data-selected={selected ? 'true' : undefined}
+      data-office-active={officeTabIndex && Number(officeTabIndex) === activeOfficeIndex ? 'true' : undefined}
       data-builder-preview-open={builderPreviewOpen ? 'true' : undefined}
       data-viewport={viewport}
       onPointerDown={(event) => {

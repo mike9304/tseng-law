@@ -1685,3 +1685,12 @@
 
 메모:
 - `npm run build` 후 production `.next`가 dev server를 흔들 수 있어 `.next` 삭제 후 `npm run dev`를 다시 3000에 띄움. `/ko`는 200, `/ko/admin-builder`는 Basic Auth 401 정상 응답 확인.
+
+## 2026-05-08 Codex /goal G-Editor manual QA handoff
+
+범위:
+- 체크포인트 Green 판정에 필요한 사용자 직접 5분 검증을 수행할 수 있도록 `G-EDITOR-MANUAL-QA.md`를 추가.
+- 첫 화면, selection/hover/drag/resize/rotate/save/undo, top bar/rail/header edit, columns, map/offices, asset/image, copy-paste, SEO/History/Publish, reload persistence를 한 표로 정리.
+
+메모:
+- 자동 검증은 이미 통과했지만, 이 문서의 결과가 채워지기 전에는 goal complete/Green 승격 불가.

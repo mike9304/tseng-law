@@ -1921,3 +1921,19 @@
 
 메모:
 - 감사 문서 Critical #2/#3 계열 중 transient full sort/JSON stringify 비용을 줄인 단위. 다음 성능 축은 pointermove에서 absolute rect map을 매번 전량 재계산하는 CanvasContainer 경로다.
+
+## 2026-05-09 Codex /goal G-Editor pointermove geometry snapshot
+
+범위:
+- CanvasContainer move/resize 시작 시 visible nodes, `nodesById`, absolute rect map을 interaction snapshot으로 한 번 캡처.
+- pointermove hot path가 store document를 다시 읽고 전체 absolute rect map을 재계산하던 경로를 snapshot 참조로 교체.
+- viewport 변경, Escape 취소, pointerup, pan 시작 시 snapshot을 명시적으로 비워 stale geometry가 다음 interaction으로 넘어가지 않게 처리.
+- drag/resize 중 snap guide, container hover, resize bounds는 시작 geometry 기준으로 유지하고 pointerup reparent 판정은 최신 document 기준으로 재확인.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 사용자가 지적한 "편집기 내릴 때 렉걸리듯이 흔들림"에 대한 세 번째 성능 축. 이제 동일 drag frame에서 Map 생성, sort, JSON stringify, absolute rect 전량 재계산을 모두 줄였다. 다음은 실제 사용자 검증에서 남는 흔들림이 있으면 scroll container/fixed bottom chrome 레이아웃을 별도 계측한다.

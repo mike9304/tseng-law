@@ -92,6 +92,12 @@ type OverlapPickerState = {
   mode: 'hint' | 'list';
 };
 
+type InteractionGeometrySnapshot = {
+  nodes: BuilderCanvasNode[];
+  nodesById: Map<string, BuilderCanvasNode>;
+  absoluteRectById: Map<string, BuilderCanvasNode['rect']>;
+};
+
 const DEFAULT_STAGE_WIDTH = 1280;
 const DEFAULT_STAGE_HEIGHT = 880;
 const MIN_WIDTH = 72;
@@ -294,6 +300,7 @@ export default function CanvasContainer({
   const [isSpacePressed, setIsSpacePressed] = useState(false);
   const [hoveredContainerId, setHoveredContainerId] = useState<string | null>(null);
   const canceledInteractionPointerIdsRef = useRef<Set<number>>(new Set());
+  const interactionGeometrySnapshotRef = useRef<InteractionGeometrySnapshot | null>(null);
   const moveNodeIntoContainer = useBuilderCanvasStore((s) => s.moveNodeIntoContainer);
 
   const describeHistorySelection = useCallback(() => {
@@ -395,6 +402,11 @@ export default function CanvasContainer({
     [nodes, selectedNodeIds],
   );
   const hasUnlockedSelection = selectedNodes.some((node) => !node.locked);
+  const captureInteractionGeometry = useCallback((): InteractionGeometrySnapshot => ({
+    nodes: visibleNodes,
+    nodesById,
+    absoluteRectById,
+  }), [absoluteRectById, nodesById, visibleNodes]);
 
   const handleInlineEditingChange = useCallback((nodeId: string, editing: boolean) => {
     setInlineEditingNodeId((current) => {
@@ -570,12 +582,13 @@ export default function CanvasContainer({
 
   useEffect(() => {
     if (!activeViewport || activeViewport === currentViewport) return;
-      cancelMutationSession();
-      setActiveViewport(null);
-      setInteraction(null);
-      setInteractionPointer(null);
-      setGuides([]);
-      setHoveredContainerId(null);
+    cancelMutationSession();
+    interactionGeometrySnapshotRef.current = null;
+    setActiveViewport(null);
+    setInteraction(null);
+    setInteractionPointer(null);
+    setGuides([]);
+    setHoveredContainerId(null);
   }, [activeViewport, cancelMutationSession, currentViewport]);
 
   useEffect(() => {
@@ -588,6 +601,7 @@ export default function CanvasContainer({
       event.stopPropagation();
       canceledInteractionPointerIdsRef.current.add(activeInteraction.pointerId);
       cancelMutationSession();
+      interactionGeometrySnapshotRef.current = null;
       setInteraction(null);
       setActiveViewport(null);
       setInteractionPointer(null);
@@ -781,19 +795,11 @@ export default function CanvasContainer({
       if (activeInteraction.type === 'move') {
         setOverlapPicker(null);
         const movingNodeIds = new Set(activeInteraction.nodeIds);
-        const currentDocument = useBuilderCanvasStore.getState().document;
-        const currentNodesForHover = currentDocument?.nodes ?? [];
-        const currentNodesById = new Map(currentNodesForHover.map((node) => [node.id, node]));
-        const currentAbsoluteRects = new Map(
-          currentNodesForHover.map((node) => [
-            node.id,
-            resolveCanvasNodeAbsoluteRectForViewport(
-              node,
-              currentNodesById,
-              activeInteraction.viewport,
-            ),
-          ]),
-        );
+        const geometry = interactionGeometrySnapshotRef.current;
+        if (!geometry) return;
+        const currentNodesForHover = geometry.nodes;
+        const currentNodesById = geometry.nodesById;
+        const currentAbsoluteRects = geometry.absoluteRectById;
         if (activeInteraction.nodeIds.length === 1) {
           const nodeId = activeInteraction.nodeIds[0];
           const baseAbsoluteRect = activeInteraction.startAbsoluteRects[nodeId];
@@ -889,19 +895,10 @@ export default function CanvasContainer({
       }
 
       setGuides([]);
-      const currentDocument = useBuilderCanvasStore.getState().document;
-      const currentNodes = currentDocument?.nodes ?? [];
-      const currentNodesById = new Map(currentNodes.map((node) => [node.id, node]));
-      const currentAbsoluteRects = new Map(
-        currentNodes.map((node) => [
-          node.id,
-          resolveCanvasNodeAbsoluteRectForViewport(
-            node,
-            currentNodesById,
-            activeInteraction.viewport,
-          ),
-        ]),
-      );
+      const geometry = interactionGeometrySnapshotRef.current;
+      if (!geometry) return;
+      const currentNodesById = geometry.nodesById;
+      const currentAbsoluteRects = geometry.absoluteRectById;
       const targetNode = currentNodesById.get(activeInteraction.nodeId);
       if (!targetNode) return;
       const { handle } = activeInteraction;
@@ -978,6 +975,7 @@ export default function CanvasContainer({
     function handlePointerUp(event: PointerEvent) {
       if (event.pointerId === activeInteraction.pointerId) {
         if (canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId)) {
+          interactionGeometrySnapshotRef.current = null;
           return;
         }
         const currentHoveredContainerId = (() => {
@@ -1038,6 +1036,7 @@ export default function CanvasContainer({
           }
         }
         setHoveredContainerId(null);
+        interactionGeometrySnapshotRef.current = null;
         setInteraction(null);
         setActiveViewport(null);
         setInteractionPointer(null);
@@ -1347,6 +1346,7 @@ export default function CanvasContainer({
                 setContextMenu(null);
                 setOverlapPicker(null);
                 setSelectionBox(null);
+                interactionGeometrySnapshotRef.current = null;
                 setInteraction({
                   type: 'pan',
                   pointerId: event.pointerId,
@@ -1525,6 +1525,7 @@ export default function CanvasContainer({
                   );
                   setSelectedNodeIds(nodeIds, nodeId);
                   setActiveViewport(interactionViewport);
+                  interactionGeometrySnapshotRef.current = captureInteractionGeometry();
                   beginMutationSession();
                   setInteractionPointer({
                     x: event.clientX - (viewportRef.current?.getBoundingClientRect().left ?? 0),
@@ -1552,6 +1553,7 @@ export default function CanvasContainer({
                   const interactionViewport = currentViewport;
                   setSelectedNodeId(nodeId);
                   setActiveViewport(interactionViewport);
+                  interactionGeometrySnapshotRef.current = captureInteractionGeometry();
                   beginMutationSession();
                   setInteractionPointer({
                     x: event.clientX - (viewportRef.current?.getBoundingClientRect().left ?? 0),

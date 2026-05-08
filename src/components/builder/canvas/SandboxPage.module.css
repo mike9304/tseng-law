@@ -3,6 +3,7 @@
 .shell {
   display: flex;
   height: 100vh;
+  height: 100dvh;
   flex-direction: column;
   width: 100%;
   max-width: none;
@@ -459,6 +460,7 @@
 }
 
 .canvasColumn {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -468,6 +470,7 @@
   overflow-x: auto;
   overflow-y: auto;
   overscroll-behavior: contain;
+  overflow-anchor: none;
   scrollbar-gutter: stable;
   border: 0;
   border-radius: 0;
@@ -1590,6 +1593,7 @@
   min-height: 0;
   height: 100%;
   overflow: hidden;
+  overflow-anchor: none;
   border-radius: 22px;
   border: 1px solid var(--editor-border-hairline, #dbe2ea);
   background: linear-gradient(180deg, var(--editor-canvas-bg, #eff6ff) 0%, #f8fafc 100%);

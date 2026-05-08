@@ -400,6 +400,24 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.getByTitle('사이트 발행')).toBeVisible();
     const stageBox = await page.getByRole('application', { name: 'Canvas editor' }).boundingBox();
     expect(stageBox?.y ?? 9999).toBeLessThan(130);
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
+    await expect.poll(() => page.evaluate(() => window.getComputedStyle(document.body).overflow)).toBe('hidden');
+    const editorShellTop = await page.locator('[class*="editorShell"]').first().evaluate((element) => (
+      Math.round(element.getBoundingClientRect().top)
+    ));
+    const initialCanvasColumn = page.locator('[class*="canvasColumn"]').first();
+    await initialCanvasColumn.evaluate((element) => {
+      element.scrollTo({ top: 420, left: 0, behavior: 'auto' });
+    });
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
+    await expect.poll(() => initialCanvasColumn.evaluate((element) => element.scrollTop)).toBeGreaterThan(300);
+    await expect.poll(() => page.locator('[class*="editorShell"]').first().evaluate((element) => (
+      Math.round(element.getBoundingClientRect().top)
+    ))).toBe(editorShellTop);
+    await initialCanvasColumn.evaluate((element) => {
+      element.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
+    await expect.poll(() => initialCanvasColumn.evaluate((element) => element.scrollTop)).toBe(0);
     const builderHeader = page.locator('.builder-site-header').first();
     await expect(builderHeader).toBeVisible();
     await expect(builderHeader.locator('.utility-nav')).toContainText('연락처');

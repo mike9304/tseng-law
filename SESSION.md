@@ -2026,3 +2026,19 @@
 
 메모:
 - 사용자가 물은 "맨위 메뉴 눌렀을 때 다른 메뉴 나오는 칸은 어떻게 편집할 거냐"에 대한 첫 구현 단위. 현재는 mega dropdown 하위 링크 label/href 추가·수정·삭제·순서 변경을 Navigation drawer 계약으로 처리한다.
+
+## 2026-05-09 Codex /goal G-Editor viewport scroll lock
+
+범위:
+- `SandboxPage` mount 시 브라우저 scroll restoration을 `manual`로 바꾸고 window scroll을 즉시 top으로 reset.
+- editor가 떠 있는 동안 `body`/`html` document scroll을 lock해 바깥 문서가 같이 내려가거나 재진입 시 아래 위치가 복원되는 문제를 차단.
+- editor shell 높이를 `100dvh`로 보강하고, canvas column/stage viewport에 `overflow-anchor: none`을 적용해 async preview 로딩 중 scroll anchoring 흔들림을 줄임.
+- admin-builder Playwright에 `window.scrollY === 0`, body overflow hidden, canvasColumn만 scroll되고 editorShell top이 고정되는 회귀 검증 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- 사용자가 지적한 "첫화면이 아래로 스크롤 해야 나옴", "밑으로 스크롤 된 상태에서 밑에는 고정되어 위 화면이 얼마 안 보임", "편집기 내릴 때 렉걸리듯 흔들림" 중 document-level scroll 문제를 우선 차단한 단위.

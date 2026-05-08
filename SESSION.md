@@ -1903,3 +1903,21 @@
 
 메모:
 - store-level derived index를 완전히 도입한 것은 아니지만, 현재 hot render path에서 동일 배열 기준 Map 재생성을 공유 cache로 흡수한다. 다음 성능 축은 transient move 중 full sort/JSON stringify/absolute rect recalculation이다.
+
+## 2026-05-09 Codex /goal G-Editor transient update performance
+
+범위:
+- transient move/resize/update 경로에서 `updateNodes()`가 매 프레임 전체 zIndex sort와 `updatedAt` 갱신을 하지 않도록 분기.
+- transient document 비교는 JSON stringify 대신 document/nodes identity 비교로 처리.
+- mutation session commit 시점에만 `updatedAt`을 갱신하고 history에 push하도록 보정.
+- updateNode/updateSelectedNodes/updateNodeRectsForViewport/updateNodeContent/updateNodeStyle/updateResponsiveOverride transient 경로에 동일 옵션 적용.
+- `store-transient.test.ts`로 transient 중 updatedAt/order 유지, commit 후 updatedAt/history 갱신을 검증.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 감사 문서 Critical #2/#3 계열 중 transient full sort/JSON stringify 비용을 줄인 단위. 다음 성능 축은 pointermove에서 absolute rect map을 매번 전량 재계산하는 CanvasContainer 경로다.

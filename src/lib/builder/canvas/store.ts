@@ -57,6 +57,10 @@ type MutationMode = 'commit' | 'transient';
 type CanvasNodeRect = BuilderCanvasNode['rect'];
 type ResponsiveConfigValue = NonNullable<ResponsiveConfig>;
 type ResponsiveOverrideValue = NonNullable<ResponsiveOverride>;
+type UpdateNodesOptions = {
+  normalize?: boolean;
+  touchUpdatedAt?: boolean;
+};
 export type BuilderCanvasNodeRectsById =
   | ReadonlyMap<string, CanvasNodeRect>
   | Record<string, CanvasNodeRect>;
@@ -162,14 +166,28 @@ function sortNodes(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
     .map((node, index) => ({ ...node, zIndex: index }));
 }
 
+const TRANSIENT_UPDATE_NODES_OPTIONS: UpdateNodesOptions = {
+  normalize: false,
+  touchUpdatedAt: false,
+};
+
+function updateNodesOptionsForMode(mode: MutationMode): UpdateNodesOptions | undefined {
+  return mode === 'transient' ? TRANSIENT_UPDATE_NODES_OPTIONS : undefined;
+}
+
 function updateNodes(
   document: BuilderCanvasDocument,
   updater: (nodes: BuilderCanvasNode[]) => BuilderCanvasNode[],
+  options: UpdateNodesOptions = {},
 ): BuilderCanvasDocument {
+  const nextNodes = updater(document.nodes);
+  const normalize = options.normalize ?? true;
+  const touchUpdatedAt = options.touchUpdatedAt ?? true;
+
   return {
     ...document,
-    updatedAt: new Date().toISOString(),
-    nodes: sortNodes(updater(document.nodes)),
+    updatedAt: touchUpdatedAt ? new Date().toISOString() : document.updatedAt,
+    nodes: normalize ? sortNodes(nextNodes) : nextNodes,
   };
 }
 
@@ -237,9 +255,16 @@ function reorderNodeSequence(
 }
 
 function sameDocumentContent(left: BuilderCanvasDocument, right: BuilderCanvasDocument): boolean {
+  if (left === right) return true;
+  if (left.nodes === right.nodes && left.locale === right.locale && left.version === right.version) return true;
   return left.locale === right.locale
     && left.version === right.version
     && JSON.stringify(left.nodes) === JSON.stringify(right.nodes);
+}
+
+function sameDocumentIdentity(left: BuilderCanvasDocument, right: BuilderCanvasDocument): boolean {
+  return left === right
+    || (left.nodes === right.nodes && left.locale === right.locale && left.version === right.version);
 }
 
 function cloneCanvasNodeRect(rect: CanvasNodeRect): CanvasNodeRect {
@@ -386,7 +411,7 @@ function applyTransientDocument(
   selectedNodeId = state.selectedNodeId,
   selectedNodeIds = state.selectedNodeIds,
 ): Partial<BuilderCanvasStoreState> | BuilderCanvasStoreState {
-  if (sameDocumentContent(document, state.document ?? document)) return state;
+  if (state.document && sameDocumentIdentity(document, state.document)) return state;
   const nextSelectedNodeId = resolveSelectedNodeId(document, selectedNodeId);
   const nextTreeState = resolveTreeState(document, state.activeGroupId);
   return {
@@ -529,8 +554,13 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
           mutationBaseDocument: null,
         };
       }
-      const nextHistory = pushHistory(state.history, state.document);
+      const document: BuilderCanvasDocument = {
+        ...state.document,
+        updatedAt: new Date().toISOString(),
+      };
+      const nextHistory = pushHistory(state.history, document);
       return {
+        document,
         history: nextHistory,
         mutationBaseDocument: null,
         canUndo: nextHistory.canUndo,
@@ -985,7 +1015,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const hasMatch = state.document.nodes.some((node) => targetNodeIds.has(node.id));
       if (!hasMatch) return state;
       const document = updateNodes(state.document, (nodes) =>
-        nodes.map((node) => (targetNodeIds.has(node.id) ? updater(node) : node)));
+        nodes.map((node) => (targetNodeIds.has(node.id) ? updater(node) : node)),
+        updateNodesOptionsForMode(mode));
       return mode === 'transient'
         ? applyTransientDocument(state, document)
         : applyCommittedDocument(state, document);
@@ -996,7 +1027,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const existingNode = state.document.nodes.find((node) => node.id === nodeId);
       if (!existingNode) return state;
       const document = updateNodes(state.document, (nodes) =>
-        nodes.map((node) => (node.id === nodeId ? updater(node) : node)));
+        nodes.map((node) => (node.id === nodeId ? updater(node) : node)),
+        updateNodesOptionsForMode(mode));
       return mode === 'transient'
         ? applyTransientDocument(state, document)
         : applyCommittedDocument(state, document);
@@ -1012,7 +1044,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
           const nextNode = applyCanvasNodeRectForViewport(node, rect, viewport);
           if (nextNode !== node) changed = true;
           return nextNode;
-        }));
+        }),
+        updateNodesOptionsForMode(mode));
       if (!changed) return state;
       return mode === 'transient'
         ? applyTransientDocument(state, document)
@@ -1045,7 +1078,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
                 },
               } as BuilderCanvasNode
             : node
-        )));
+        )),
+        updateNodesOptionsForMode(mode));
       return mode === 'transient'
         ? applyTransientDocument(state, document)
         : applyCommittedDocument(state, document);
@@ -1066,7 +1100,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
                 },
               } as BuilderCanvasNode
             : node
-        )));
+        )),
+        updateNodesOptionsForMode(mode));
       return mode === 'transient'
         ? applyTransientDocument(state, document)
         : applyCommittedDocument(state, document);
@@ -1279,7 +1314,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
             responsive: allEmpty ? undefined : nextResponsive,
           } as BuilderCanvasNode;
           return nextNode;
-        }));
+        }),
+        updateNodesOptionsForMode(mode));
       return mode === 'transient'
         ? applyTransientDocument(state, document)
         : applyCommittedDocument(state, document);

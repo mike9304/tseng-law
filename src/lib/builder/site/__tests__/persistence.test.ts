@@ -13,6 +13,14 @@ function page(pageId: string, updatedAt: string): BuilderPageMeta {
   };
 }
 
+function pageWithTimestamps(pageId: string, createdAt: string, updatedAt: string): BuilderPageMeta {
+  return {
+    ...page(pageId, updatedAt),
+    createdAt,
+    updatedAt,
+  };
+}
+
 function site(pages: BuilderPageMeta[], updatedAt: string): BuilderSiteDocument {
   return {
     version: 1,
@@ -66,5 +74,33 @@ describe('reconcileSiteDocumentPagesForWrite', () => {
 
     expect(reconcileSiteDocumentPagesForWrite(next, latest).pages.map((entry) => entry.pageId))
       .toEqual(['home', 'created']);
+  });
+
+  it('drops old next-only pages even when their updatedAt is newer', () => {
+    const home = page('home', '2026-01-01T00:00:00.000Z');
+    const deleted = pageWithTimestamps(
+      'deleted',
+      '2026-01-01T00:00:00.000Z',
+      '2026-01-03T00:00:00.000Z',
+    );
+    const latest = site([home], '2026-01-02T00:00:00.000Z');
+    const staleNext = site([home, deleted], '2026-01-03T00:00:00.000Z');
+
+    expect(reconcileSiteDocumentPagesForWrite(staleNext, latest).pages.map((entry) => entry.pageId))
+      .toEqual(['home']);
+  });
+
+  it('drops next-only pages without a reliable createdAt timestamp', () => {
+    const home = page('home', '2026-01-01T00:00:00.000Z');
+    const missingCreatedAt = pageWithTimestamps(
+      'unknown',
+      '',
+      '2026-01-03T00:00:00.000Z',
+    );
+    const latest = site([home], '2026-01-02T00:00:00.000Z');
+    const staleNext = site([home, missingCreatedAt], '2026-01-03T00:00:00.000Z');
+
+    expect(reconcileSiteDocumentPagesForWrite(staleNext, latest).pages.map((entry) => entry.pageId))
+      .toEqual(['home']);
   });
 });

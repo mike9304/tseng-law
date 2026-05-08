@@ -2042,3 +2042,18 @@
 
 메모:
 - 사용자가 지적한 "첫화면이 아래로 스크롤 해야 나옴", "밑으로 스크롤 된 상태에서 밑에는 고정되어 위 화면이 얼마 안 보임", "편집기 내릴 때 렉걸리듯 흔들림" 중 document-level scroll 문제를 우선 차단한 단위.
+
+## 2026-05-09 Codex /goal G-Editor next-only page reconciliation hardening
+
+범위:
+- Claude 감사 지적 `src/lib/builder/site/persistence.ts:127-139` 후속 보강. latest site 문서에 없는 next-only page를 유지할지 판단할 때 `updatedAt`을 더 이상 신뢰하지 않고 `createdAt`만 사용.
+- 오래전에 생성됐지만 stale client에서 나중에 `updatedAt`만 갱신된 삭제 page가 다시 살아나는 경로를 차단.
+- `createdAt`이 비어 있거나 파싱 불가한 next-only page는 최신 site snapshot 이후 새로 생성됐다고 증명할 수 없으므로 drop.
+- persistence 단위 테스트에 "old next-only with newer updatedAt drop", "missing createdAt drop" 회귀 케이스 추가.
+
+검증:
+- `npm run test:unit -- src/lib/builder/site/__tests__/persistence.test.ts` ✅
+- `npm run typecheck` ✅
+
+메모:
+- 이 수정은 저장 레이어 방어 보강이며, public route의 legacy/builder 전환 정책과는 별개다. 실제 사이트가 원래 디자인을 유지해야 하는 기본 정책은 계속 legacy-first로 둔다.

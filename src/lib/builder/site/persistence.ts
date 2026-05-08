@@ -137,9 +137,11 @@ function timestampMs(...values: Array<string | undefined>): number | null {
 
 function shouldKeepNextOnlyPage(page: BuilderPageMeta, latestDoc: BuilderSiteDocument): boolean {
   const latestSiteTimestamp = timestampMs(latestDoc.updatedAt, latestDoc.createdAt);
-  const pageTimestamp = timestampMs(page.updatedAt, page.createdAt);
-  if (latestSiteTimestamp === null || pageTimestamp === null) return true;
-  return pageTimestamp >= latestSiteTimestamp;
+  if (latestSiteTimestamp === null) return true;
+
+  const pageCreatedAt = timestampMs(page.createdAt);
+  if (pageCreatedAt === null) return false;
+  return pageCreatedAt >= latestSiteTimestamp;
 }
 
 export function reconcileSiteDocumentPagesForWrite(

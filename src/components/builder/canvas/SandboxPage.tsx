@@ -778,6 +778,12 @@ export default function SandboxPage({
     setActiveDrawer((current) => (current === panel ? null : panel));
   }, []);
 
+  useEffect(() => {
+    if (activeDrawer === 'nav') return;
+    setActiveNavItemId(null);
+    setFocusedNavItemId(null);
+  }, [activeDrawer]);
+
   const handleRequestEditNavItem = useCallback((itemId: string) => {
     setActiveDrawer('nav');
     setActiveNavItemId(itemId);
@@ -853,16 +859,17 @@ export default function SandboxPage({
         display: 'flex',
         flex: '0 0 auto',
         flexDirection: 'column',
-        minHeight: 'calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px)',
+        minHeight: 'max(640px, calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px))',
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       }
     : {
-        width: '100%',
+        width: 'min(100%, 1280px)',
+        margin: '0 auto',
         position: 'relative',
         display: 'flex',
         flex: '0 0 auto',
         flexDirection: 'column',
-        minHeight: 'calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px)',
+        minHeight: 'max(640px, calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px))',
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       };
 
@@ -874,7 +881,7 @@ export default function SandboxPage({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        overflowX: 'hidden',
+        overflowX: 'auto',
         overflowY: 'auto',
         overscrollBehavior: 'contain',
       }
@@ -883,7 +890,7 @@ export default function SandboxPage({
         minWidth: 0,
         display: 'flex',
         flexDirection: 'column',
-        overflowX: 'hidden',
+        overflowX: 'auto',
         overflowY: 'auto',
         overscrollBehavior: 'contain',
         background: '#f8fafc',
@@ -893,10 +900,7 @@ export default function SandboxPage({
 
   const handleOpenColumnsPanel = useCallback(() => {
     setActiveDrawer((current) => (current === 'columns' ? null : 'columns'));
-    if (columnsPage && currentSlugState !== 'columns') {
-      void handleSelectPage(columnsPage.pageId, columnsPage.slug);
-    }
-  }, [columnsPage, currentSlugState, handleSelectPage]);
+  }, []);
 
   const handleReloadDraftAfterConflict = useCallback(async () => {
     if (!activePageId) return;
@@ -1165,11 +1169,11 @@ export default function SandboxPage({
                 <header className={styles.panelSectionHeader}>
                   <div>
                     <span>Blog</span>
-                    <strong>칼럼</strong>
+                    <strong>글쓰기</strong>
                   </div>
                 </header>
                 <p className={styles.panelCopy}>
-                  새 글은 바로 쓰기 화면으로 열고, 기존 칼럼은 수정 링크로 이어집니다.
+                  제목과 본문만 쓰면 요약은 자동으로 채웁니다. 페이지 편집은 별도 버튼으로 이동합니다.
                 </p>
                 <div className={styles.columnsStatusCard}>
                   <strong>
@@ -1202,6 +1206,9 @@ export default function SandboxPage({
                   <a className={`${styles.actionButton} ${styles.actionButtonPrimary}`} href={`/${locale}/admin-builder/columns?new=1`}>
                     새 글 쓰기
                   </a>
+                  <a className={styles.actionButton} href={`/${locale}/admin-builder/columns`}>
+                    글 목록
+                  </a>
                   <button
                     type="button"
                     className={styles.actionButton}
@@ -1213,9 +1220,6 @@ export default function SandboxPage({
                   >
                     칼럼 페이지로 이동
                   </button>
-                  <a className={styles.actionButton} href={`/${locale}/admin-builder/columns`}>
-                    칼럼 관리
-                  </a>
                   <a className={styles.actionButton} href={`/${locale}/columns`} target="_blank" rel="noreferrer">
                     공개 칼럼 보기
                   </a>

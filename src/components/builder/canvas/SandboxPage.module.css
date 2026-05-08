@@ -465,7 +465,7 @@
   min-height: 0;
   height: 100%;
   flex: 1 1 auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
@@ -478,6 +478,8 @@
 .globalHeaderRegion {
   position: relative;
   cursor: pointer;
+  min-width: 0;
+  box-sizing: border-box;
   outline: 1px solid transparent;
   transition: outline-color 150ms ease, box-shadow 150ms ease;
 }
@@ -491,6 +493,12 @@
 
 .globalHeaderRegion :global(.builder-site-header) {
   width: 100%;
+  min-width: 0;
+}
+
+.globalHeaderRegion :global(.builder-site-header .container) {
+  width: calc(100% - 24px);
+  max-width: 100%;
 }
 
 .globalHeaderRegion :global(.builder-site-header .utility-nav) {
@@ -510,13 +518,13 @@
 }
 
 .globalHeaderRegion :global(.builder-site-header .header-main-inner) {
-  grid-template-columns: minmax(190px, 240px) minmax(0, 1fr) auto;
+  grid-template-columns: minmax(160px, 210px) minmax(0, 1fr) auto;
   gap: 8px;
   min-height: 54px;
 }
 
 .globalHeaderRegion :global(.builder-site-header .header-logo) {
-  width: min(100%, 240px);
+  width: min(100%, 210px);
   gap: 8px;
 }
 
@@ -526,8 +534,8 @@
 }
 
 .globalHeaderRegion :global(.builder-site-header .logo-kr) {
-  max-width: 190px;
-  font-size: 1.02rem;
+  max-width: 160px;
+  font-size: 0.92rem;
 }
 
 .globalHeaderRegion :global(.builder-site-header .nav-list) {
@@ -537,9 +545,9 @@
 
 .globalHeaderRegion :global(.builder-site-header .nav-link) {
   min-height: 36px;
-  padding: 0 7px;
+  padding: 0 5px;
   border-radius: 12px;
-  font-size: 0.82rem;
+  font-size: 0.76rem;
 }
 
 .globalHeaderRegion :global(.builder-site-header .header-actions) {
@@ -642,8 +650,8 @@
 
 .publicChromePreview {
   position: fixed;
-  right: 336px;
-  bottom: 44px;
+  right: calc(var(--editor-inspector-w, 320px) + 14px);
+  bottom: 36px;
   z-index: 95;
   display: inline-flex;
   align-items: flex-end;

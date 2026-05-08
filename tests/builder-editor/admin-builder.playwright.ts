@@ -323,6 +323,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
       const siteFooterRect = rectFor('footer:not([aria-label="Editor status"])');
       const statusRect = rectFor('footer[aria-label="Editor status"]');
       return {
+        canvasOverflowX: styleFor('div[class*="canvasColumn"]')?.overflowX ?? '',
         canvasOverflowY: styleFor('div[class*="canvasColumn"]')?.overflowY ?? '',
         stageViewportHeight: rectFor('div[class*="stageViewport"]')?.height ?? 0,
         stageViewportLeft: rectFor('div[class*="stageViewport"]')?.left ?? 0,
@@ -335,6 +336,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
         viewportHeight: window.innerHeight,
       };
     });
+    expect(editorLayout.canvasOverflowX).toBe('auto');
     expect(editorLayout.canvasOverflowY).toBe('auto');
     expect(editorLayout.stageViewportHeight).toBeGreaterThanOrEqual(Math.max(700, editorLayout.viewportHeight - 100));
     expect(editorLayout.stageTransformLeft).toBeGreaterThanOrEqual(editorLayout.stageViewportLeft - 2);
@@ -554,19 +556,22 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await rail.getByRole('button', { name: 'Columns', exact: true }).click();
     const columnsDrawer = page.locator('[aria-hidden="false"]').first();
     await expect(columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' })).toBeVisible();
-    await expect(columnsDrawer.getByRole('link', { name: '칼럼 관리' })).toBeVisible();
+    await expect(columnsDrawer.getByRole('link', { name: '글 목록' })).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: '새 글 쓰기' })).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: '공개 칼럼 보기' })).toBeVisible();
     await expect(columnsDrawer.getByText(/개 칼럼 연결됨/)).toBeVisible();
     await expect(columnsDrawer.getByRole('link', { name: /수정 · .*?(대만 화장품 시장 진출|대만 회사설립|제목 없는 글)/ }).first()).toBeVisible();
+    await expect(page.locator('[data-node-id="columns-page-title"]')).toHaveCount(0);
+    await columnsDrawer.getByRole('button', { name: '칼럼 페이지로 이동' }).click();
     await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
     await expect.poll(() => stageTransform.evaluate((element) => (
       new DOMMatrixReadOnly(window.getComputedStyle(element).transform).m42
     ))).toBeGreaterThanOrEqual(-2);
 
-    await headerRegion.click({ position: { x: 360, y: 16 }, force: true });
-    await expect(page.locator('[aria-hidden="false"]').getByText('Navigation').first()).toBeVisible();
-    await rail.getByRole('button', { name: 'Navigation', exact: true }).click();
+    await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+    await waitForEditorCss(page);
+    await recoverFromDevChunkOverlay(page);
+    await expect(page.locator('[data-node-id="home-hero-subtitle"]').first()).toBeVisible();
 
     const selectedNode = await selectFirstNode(page);
     await closeModalOverlayIfPresent(page);

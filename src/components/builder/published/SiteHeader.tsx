@@ -99,6 +99,7 @@ export default function SiteHeader({
   const [searchOpen, setSearchOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [pinnedMenu, setPinnedMenu] = useState<string | null>(null);
+  const [builderEditingMenu, setBuilderEditingMenu] = useState<string | null>(null);
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, visible: false });
   const mainNavRef = useRef<HTMLElement | null>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
@@ -133,17 +134,18 @@ export default function SiteHeader({
   const closeMegaMenuNow = useCallback(() => {
     clearCloseTimeout();
     setPinnedMenu(null);
+    setBuilderEditingMenu(null);
     setOpenMenu(null);
   }, [clearCloseTimeout]);
 
   const scheduleCloseMegaMenu = useCallback(() => {
     clearCloseTimeout();
-    if (builderEditable && pinnedMenu) return;
+    if (builderEditable && (pinnedMenu || builderEditingMenu)) return;
     closeTimeoutRef.current = window.setTimeout(() => {
       setOpenMenu(null);
       closeTimeoutRef.current = null;
     }, 300);
-  }, [builderEditable, clearCloseTimeout, pinnedMenu]);
+  }, [builderEditable, builderEditingMenu, clearCloseTimeout, pinnedMenu]);
 
   const moveIndicator = useCallback((key: string | null, visible = true) => {
     if (!key) {
@@ -185,6 +187,11 @@ export default function SiteHeader({
     if (searchOpen) closeMegaMenuNow();
   }, [closeMegaMenuNow, searchOpen]);
 
+  useEffect(() => {
+    if (builderEditable) return;
+    setBuilderEditingMenu(null);
+  }, [builderEditable]);
+
   useEffect(() => () => clearCloseTimeout(), [clearCloseTimeout]);
 
   function navigate(event: React.MouseEvent<HTMLElement>, href: string) {
@@ -209,6 +216,7 @@ export default function SiteHeader({
     if (megaPanelKeys.has(item.key)) {
       clearCloseTimeout();
       setPinnedMenu(item.key);
+      setBuilderEditingMenu(item.key);
       setOpenMenu(item.key);
       moveIndicator(item.key, true);
       onRequestEditNavItem?.(item.source.id);
@@ -219,11 +227,15 @@ export default function SiteHeader({
     return true;
   }
 
-  function handleBuilderMegaClick(event: React.MouseEvent<HTMLAnchorElement>, item: HeaderMegaPanel['links'][number]) {
+  function handleBuilderMegaClick(event: React.MouseEvent<HTMLAnchorElement>, item: HeaderMegaPanel['links'][number], panelKey: string) {
     if (!builderEditable || !item.source) return false;
     event.preventDefault();
     event.stopPropagation();
-    closeMegaMenuNow();
+    clearCloseTimeout();
+    setPinnedMenu(panelKey);
+    setBuilderEditingMenu(panelKey);
+    setOpenMenu(panelKey);
+    moveIndicator(panelKey, true);
     onRequestEditNavItem?.(item.source.id);
     return true;
   }
@@ -385,6 +397,7 @@ export default function SiteHeader({
                           event.stopPropagation();
                           clearCloseTimeout();
                           setPinnedMenu(panel.key);
+                          setBuilderEditingMenu(panel.key);
                           setOpenMenu(panel.key);
                           onRequestEditNavItem?.(panelSource.id);
                         }}
@@ -416,7 +429,7 @@ export default function SiteHeader({
                           data-builder-nav-item-label={builderEditable && link.source ? link.label : undefined}
                           title={builderEditable && link.source ? `Edit menu item: ${link.label}` : undefined}
                           onClick={(event) => {
-                            if (handleBuilderMegaClick(event, link)) return;
+                            if (handleBuilderMegaClick(event, link, panel.key)) return;
                             navigate(event, link.href);
                           }}
                         >

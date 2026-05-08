@@ -1937,3 +1937,22 @@
 
 메모:
 - 사용자가 지적한 "편집기 내릴 때 렉걸리듯이 흔들림"에 대한 세 번째 성능 축. 이제 동일 drag frame에서 Map 생성, sort, JSON stringify, absolute rect 전량 재계산을 모두 줄였다. 다음은 실제 사용자 검증에서 남는 흔들림이 있으면 scroll container/fixed bottom chrome 레이아웃을 별도 계측한다.
+
+## 2026-05-09 Codex /goal G-Editor chrome navigation and columns friction
+
+범위:
+- 빌더 모드 `SiteHeader`에서 메가 메뉴를 편집 대상으로 클릭하면 hover-close 타이머가 닫지 않도록 `builderEditingMenu` pin 상태를 추가.
+- 메가 메뉴 child 클릭 시 메뉴를 닫지 않고 Navigation drawer의 해당 child row 편집으로 포커스되게 유지.
+- Columns rail 클릭은 더 이상 캔버스를 칼럼 페이지로 강제 이동하지 않고, writer-first drawer만 연다. 사용자가 원할 때 `칼럼 페이지로 이동` 버튼으로 이동.
+- 칼럼 drawer primary action을 `새 글 쓰기`, secondary를 `글 목록`으로 정리하고 "제목+본문만 쓰면 요약 자동" copy로 단순 글쓰기 흐름을 드러냄.
+- 중앙 캔버스 컬럼의 `overflow-x`를 `auto`로 바꾸고 desktop wrapper를 `min(100%, 1280px)`로 제한해 3000번 로컬에서 우측이 잘리는 문제를 줄임.
+- header preview 내부 container/nav/logo 폭을 빌더 영역에 맞게 축소해 상단 메뉴가 캔버스에서 잘려 보이지 않도록 보정.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 사용자가 지적한 "사이트 열면 옆쪽이 짤림", "맨위 메뉴 Edit 누르러 가면 사라짐", "칼럼 새로 쓰기가 너무 복잡함" 중 즉시 막히는 표면을 닫은 단위.
+- 지도 편집은 현재 map quick edit/inspector가 주소/zoom/office sync를 지원하지만, 다음은 중복 preset을 shared `OfficeLocationEditor`/helper로 묶어 Wix식 위치 편집 패널처럼 한 화면으로 정리한다.

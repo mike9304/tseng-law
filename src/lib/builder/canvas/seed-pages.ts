@@ -422,7 +422,7 @@ async function removeDuplicateSeedPages(
   site.pages = site.pages.filter((page) => !duplicateIds.includes(page.pageId));
   site.navigation = site.navigation.filter((item) => !duplicateIds.includes(item.pageId));
   site.updatedAt = new Date().toISOString();
-  await writeSiteDocument(site);
+  await writeSiteDocument(site, { preserveMissingPages: false });
 }
 
 async function persistSeededPage(

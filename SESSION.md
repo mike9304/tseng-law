@@ -1974,3 +1974,20 @@
 
 메모:
 - 사용자가 지적한 "지도 눌러서 다른 지역으로 바꾸거나 주소 설정이 간편하지 않음"에 대한 quick edit 표면 보강. 아직 Google Places autocomplete/drag pin은 없음. 다음 단계는 duplicated office presets/URL helpers를 공통 모듈로 정리하고 add/remove/reorder office node group을 붙이는 것.
+
+## 2026-05-09 Codex /goal G-Editor site persistence audit fix
+
+범위:
+- Claude 감사 지적 `src/lib/builder/site/persistence.ts:127-139`를 반영해 stale writer가 삭제된 page를 조용히 부활시키는 경로를 차단.
+- `mergeMissingPages`를 `reconcileSiteDocumentPagesForWrite`로 교체해 기본값에서는 latest-only page를 자동 병합하지 않음.
+- 명시적으로 `preserveMissingPages: true`를 넘긴 호출만 최신 저장본의 missing page를 보존하고, stale next-only page는 timestamp 기준으로 drop.
+- seed duplicate 제거 경로는 삭제 의도가 명확하므로 `preserveMissingPages: false`를 명시.
+- persistence 단위 테스트 4개 추가: 기본 no-resurrect, explicit preserve, stale next-only drop, new next-only keep.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/site/__tests__/persistence.test.ts` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- 이 수정은 사용자가 말한 "실제 사이트가 꼬여서 원래 페이지/메뉴가 사라지거나 섞이는" 계열의 저장 레이어 방어다. 서버리스 cross-instance race는 아직 revision/etag가 필요하므로 다음 감사 항목으로 남는다.

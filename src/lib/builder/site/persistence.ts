@@ -124,17 +124,52 @@ function mergeUntouchedPageSeo(
   };
 }
 
-function mergeMissingPages(
+function timestampMs(...values: Array<string | undefined>): number | null {
+  let newest: number | null = null;
+  for (const value of values) {
+    if (!value) continue;
+    const parsed = Date.parse(value);
+    if (!Number.isFinite(parsed)) continue;
+    newest = newest === null ? parsed : Math.max(newest, parsed);
+  }
+  return newest;
+}
+
+function shouldKeepNextOnlyPage(page: BuilderPageMeta, latestDoc: BuilderSiteDocument): boolean {
+  const latestSiteTimestamp = timestampMs(latestDoc.updatedAt, latestDoc.createdAt);
+  const pageTimestamp = timestampMs(page.updatedAt, page.createdAt);
+  if (latestSiteTimestamp === null || pageTimestamp === null) return true;
+  return pageTimestamp >= latestSiteTimestamp;
+}
+
+export function reconcileSiteDocumentPagesForWrite(
   nextDoc: BuilderSiteDocument,
   latestDoc: BuilderSiteDocument | null,
+  options: WriteSiteDocumentOptions = {},
 ): BuilderSiteDocument {
   if (!latestDoc?.pages?.length) return nextDoc;
-  const nextPageIds = new Set(nextDoc.pages.map((page) => page.pageId));
-  const missingPages = latestDoc.pages.filter((page) => !nextPageIds.has(page.pageId));
-  if (missingPages.length === 0) return nextDoc;
+
+  const latestPageIds = new Set(latestDoc.pages.map((page) => page.pageId));
+  const filteredNextPages = nextDoc.pages.filter((page) => (
+    latestPageIds.has(page.pageId) || shouldKeepNextOnlyPage(page, latestDoc)
+  ));
+  const filteredNextPageIds = new Set(filteredNextPages.map((page) => page.pageId));
+  const missingPages = options.preserveMissingPages === true
+    ? latestDoc.pages.filter((page) => !filteredNextPageIds.has(page.pageId))
+    : [];
+  const nextPages = missingPages.length > 0
+    ? [...filteredNextPages, ...missingPages]
+    : filteredNextPages;
+
+  if (
+    nextPages.length === nextDoc.pages.length &&
+    nextPages.every((page, index) => page === nextDoc.pages[index])
+  ) {
+    return nextDoc;
+  }
   return {
     ...nextDoc,
-    pages: [...nextDoc.pages, ...missingPages],
+    pages: nextPages,
   };
 }
 
@@ -153,9 +188,7 @@ export async function writeSiteDocument(
     const normalizedSiteId = normalizeBuilderSiteId(doc.siteId);
     const latestDoc = await loadSiteDocument(normalizedSiteId);
     const seoMergedDoc = mergeUntouchedPageSeo({ ...doc, siteId: normalizedSiteId }, latestDoc);
-    const mergedDoc = options.preserveMissingPages === false
-      ? seoMergedDoc
-      : mergeMissingPages(seoMergedDoc, latestDoc);
+    const mergedDoc = reconcileSiteDocumentPagesForWrite(seoMergedDoc, latestDoc, options);
     const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
     const pathname = sitePathname(normalizedSiteId);
     const json = JSON.stringify(normalizedDoc);

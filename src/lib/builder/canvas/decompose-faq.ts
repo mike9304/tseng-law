@@ -33,6 +33,7 @@ export function createFaqDecomposedNodes(
       as: 'section',
       htmlId: 'faq',
       dataTone: 'light',
+      variant: 'flat',
     }),
     createHomeContainerNode({
       id: containerId,

@@ -196,6 +196,25 @@ async function openBuilder(page: Page): Promise<void> {
   await page.waitForTimeout(5_000);
 }
 
+async function selectLayerNode(page: Page, nodeId: string, kind: string): Promise<void> {
+  let drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Layers' }).first();
+  if (!(await drawer.getByText('Layers').first().isVisible().catch(() => false))) {
+    await page.getByRole('button', { name: 'Layers', exact: true }).click({ force: true });
+    drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Layers' }).first();
+  }
+  await expect(drawer.getByText('Layers').first()).toBeVisible();
+  const row = drawer.locator(`[title="${kind} ${nodeId}"]`).first();
+  await expect(row).toBeVisible({ timeout: 10_000 });
+  await row.focus();
+  await page.keyboard.press('Enter');
+  if (!(await page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first().isVisible().catch(() => false))) {
+    await row.click();
+  }
+  await expect(page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first()).toBeVisible({
+    timeout: 10_000,
+  });
+}
+
 async function selectFirstNode(page: Page): Promise<Locator> {
   const node = await topmostUnlockedNode(page);
   await expect(node).toBeVisible();
@@ -463,6 +482,55 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(submenu).toContainText('Hide on mobile');
     await page.screenshot({ path: `${screenshotDir}/design-pool-context-submenu.png` });
     await page.keyboard.press('Escape');
+  });
+
+  test('switches stateful home section template variants without replacing content', async ({ page }) => {
+    await openBuilder(page);
+
+    const pagesResponse = await page.request.get('/api/builder/site/pages?locale=ko');
+    expect(pagesResponse.status()).toBe(200);
+    const pagesPayload = (await pagesResponse.json()) as {
+      pages?: Array<{ pageId?: string; isHomePage?: boolean }>;
+    };
+    const homePageId = pagesPayload.pages?.find((entry) => entry.isHomePage)?.pageId ?? null;
+    expect(homePageId).toBeTruthy();
+
+    await selectLayerNode(page, 'home-services-root', 'container');
+    const servicesRoot = page.locator('[data-node-id="home-services-root"]').first();
+    await servicesRoot.scrollIntoViewIfNeeded();
+    await expect(servicesRoot).toHaveAttribute('data-builder-section-template', 'services');
+    await expect(servicesRoot).toHaveAttribute('data-section-variant', 'flat');
+    const servicesPanel = page.locator('[data-builder-section-template-panel="services"]').first();
+    await expect(servicesPanel).toBeVisible();
+    await expect(servicesPanel).toContainText('주요 서비스 template');
+    await servicesPanel.getByRole('button', { name: 'Glass' }).click();
+    await expect(servicesRoot).toHaveAttribute('data-section-variant', 'glass');
+    await expect(servicesRoot).toContainText('주요 서비스');
+    await expect(servicesRoot.locator('.services-detail-card').first()).toBeVisible();
+
+    await selectLayerNode(page, 'home-faq-root', 'container');
+    const faqRoot = page.locator('[data-node-id="home-faq-root"]').first();
+    await faqRoot.scrollIntoViewIfNeeded();
+    await expect(faqRoot).toHaveAttribute('data-builder-section-template', 'faq');
+    const faqPanel = page.locator('[data-builder-section-template-panel="faq"]').first();
+    await expect(faqPanel).toBeVisible();
+    await faqPanel.getByRole('button', { name: 'Floating' }).click();
+    await expect(faqRoot).toHaveAttribute('data-section-variant', 'floating');
+    await expect(faqRoot).toContainText('FAQ');
+    await expect(faqRoot.locator('.faq-item').first()).toBeVisible();
+
+    await expect.poll(async () => {
+      const draftResponse = await page.request.get(`/api/builder/site/pages/${homePageId}/draft?locale=ko`);
+      if (draftResponse.status() !== 200) return 'missing';
+      const draftPayload = (await draftResponse.json()) as {
+        document?: {
+          nodes?: Array<{ id?: string; content?: { variant?: string } }>;
+        };
+      };
+      const servicesVariant = draftPayload.document?.nodes?.find((node) => node.id === 'home-services-root')?.content?.variant;
+      const faqVariant = draftPayload.document?.nodes?.find((node) => node.id === 'home-faq-root')?.content?.variant;
+      return `${servicesVariant}:${faqVariant}`;
+    }, { timeout: 20_000 }).toBe('glass:floating');
   });
 
   test('covers canvas direct-manipulation overlays for drag, resize, multi-select, and snap distance', async ({ page }) => {

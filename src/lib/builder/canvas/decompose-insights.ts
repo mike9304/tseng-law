@@ -114,6 +114,7 @@ export function createInsightsDecomposedNodes(
       as: 'section',
       htmlId: 'insights',
       dataTone: 'light',
+      variant: 'flat',
     }),
     createHomeContainerNode({
       id: containerId,

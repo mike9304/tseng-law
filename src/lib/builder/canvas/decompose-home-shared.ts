@@ -13,6 +13,7 @@ type Rect = {
 type ContainerTag = 'div' | 'section' | 'article' | 'aside' | 'header' | 'footer' | 'main' | 'nav' | 'form';
 type TextTag = 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'input';
 type ButtonTag = 'a' | 'button';
+type ContainerVariant = 'flat' | 'elevated' | 'floating' | 'glass';
 
 const baseTextContent = {
   fontSize: 16,
@@ -47,6 +48,7 @@ export function createHomeContainerNode({
   layoutMode = 'absolute',
   flexConfig,
   gridConfig,
+  variant,
 }: {
   id: string;
   rect: Rect;
@@ -81,6 +83,7 @@ export function createHomeContainerNode({
     templateColumns?: string;
     templateRows?: string;
   };
+  variant?: ContainerVariant;
 }): BuilderCanvasNode {
   return {
     id,
@@ -130,6 +133,7 @@ export function createHomeContainerNode({
       ...(dataTone ? { dataTone } : {}),
       ...(action ? { action } : {}),
       ...(method ? { method } : {}),
+      ...(variant ? { variant } : {}),
     },
   };
 }

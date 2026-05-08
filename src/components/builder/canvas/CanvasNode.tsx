@@ -132,6 +132,32 @@ function isColumnManagerTarget(node: BuilderCanvasNode): boolean {
   return Boolean(href && /\/admin-builder\/columns(?:\/|$)/.test(href));
 }
 
+type SectionTemplateId = 'services' | 'insights' | 'faq' | 'offices';
+type SectionTemplateVariant = 'flat' | 'elevated' | 'floating' | 'glass';
+
+const SECTION_TEMPLATE_TARGETS: Record<string, { id: SectionTemplateId; label: string }> = {
+  'home-services-root': { id: 'services', label: '주요 서비스' },
+  'home-insights-root': { id: 'insights', label: '칼럼 아카이브' },
+  'home-faq-root': { id: 'faq', label: 'FAQ' },
+  'home-offices-root': { id: 'offices', label: '오시는길' },
+};
+
+const SECTION_TEMPLATE_VARIANTS: Array<{ key: SectionTemplateVariant; label: string }> = [
+  { key: 'flat', label: 'Classic' },
+  { key: 'elevated', label: 'Elevated' },
+  { key: 'floating', label: 'Floating' },
+  { key: 'glass', label: 'Glass' },
+];
+
+function sectionTemplateTarget(node: BuilderCanvasNode) {
+  return SECTION_TEMPLATE_TARGETS[node.id] ?? null;
+}
+
+function sectionTemplateVariant(node: BuilderCanvasNode): SectionTemplateVariant {
+  const value = node.content && 'variant' in node.content ? node.content.variant : null;
+  return value === 'elevated' || value === 'floating' || value === 'glass' ? value : 'flat';
+}
+
 function textContentValue(node: BuilderCanvasNode | undefined): string {
   const value = node?.content && 'text' in node.content ? node.content.text : '';
   return typeof value === 'string' ? value : '';
@@ -593,6 +619,9 @@ export default function CanvasNode({
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
   const isInteractive = !isDimmedRoot;
   const showColumnQuickActions = selected && isInteractive && isColumnManagerTarget(node);
+  const sectionTemplate = sectionTemplateTarget(node);
+  const currentSectionTemplateVariant = sectionTemplateVariant(node);
+  const showSectionTemplateActions = selected && isInteractive && Boolean(sectionTemplate);
   const preservesHitTestLayer = node.kind === 'image' || node.kind === 'video-embed' || isContainerLikeKind(node.kind);
   const selectionZIndexBoost = selected && !preservesHitTestLayer ? 10000 : 0;
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
@@ -860,6 +889,8 @@ export default function CanvasNode({
       }}
       data-node-id={node.id}
       data-selected={selected ? 'true' : undefined}
+      data-builder-section-template={sectionTemplate?.id}
+      data-section-variant={sectionTemplate ? currentSectionTemplateVariant : undefined}
       data-office-active={officeTabIndex && Number(officeTabIndex) === activeOfficeIndex ? 'true' : undefined}
       data-builder-preview-open={builderPreviewOpen ? 'true' : undefined}
       data-viewport={viewport}
@@ -957,6 +988,40 @@ export default function CanvasNode({
           );
         })()}
       </div>
+      {showSectionTemplateActions && sectionTemplate ? (
+        <div
+          className={styles.nodeSectionTemplates}
+          data-builder-section-template-panel={sectionTemplate.id}
+          onPointerDown={(event) => {
+            event.stopPropagation();
+          }}
+          onMouseDown={(event) => {
+            event.stopPropagation();
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+          }}
+        >
+          <span className={styles.nodeSectionTemplateLabel}>{sectionTemplate.label} template</span>
+          {SECTION_TEMPLATE_VARIANTS.map((variant) => (
+            <button
+              key={variant.key}
+              type="button"
+              className={`${styles.nodeSectionTemplateButton} ${
+                currentSectionTemplateVariant === variant.key ? styles.nodeSectionTemplateButtonActive : ''
+              }`}
+              aria-pressed={currentSectionTemplateVariant === variant.key}
+              onClick={(event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                updateNodeContentInStore(node.id, { variant: variant.key });
+              }}
+            >
+              {variant.label}
+            </button>
+          ))}
+        </div>
+      ) : null}
       {showColumnQuickActions ? (
         <div
           className={styles.nodeQuickActions}

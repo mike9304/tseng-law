@@ -130,6 +130,7 @@ export function createOfficesDecomposedNodes(
       as: 'section',
       htmlId: 'offices',
       dataTone: 'light',
+      variant: 'flat',
     }),
     createHomeContainerNode({
       id: containerId,

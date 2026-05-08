@@ -1763,3 +1763,21 @@
 
 메모:
 - 사용자가 말한 섹션 템플릿 교체성은 다음 구현 축으로 분리. 칼럼/주요 서비스/FAQ/오시는길은 앞으로 데이터와 동작 계약을 유지하고 디자인 variant만 갈아끼우는 구조로 확장한다.
+
+## 2026-05-09 Codex /goal G-Editor section template variants
+
+범위:
+- 홈의 stateful 섹션 root(`home-services-root`, `home-insights-root`, `home-faq-root`, `home-offices-root`)에 template target/variant metadata를 부여.
+- 선택한 섹션 root 위에 `Classic / Elevated / Floating / Glass` quick template switcher를 노출.
+- variant 변경은 섹션 내부 글/링크/주소/map 데이터는 유지하고 root content.variant만 저장하도록 구성.
+- editor CSS에서 services/FAQ/insights/offices의 카드·아코디언·탭 표면이 variant에 따라 다른 디자인으로 보이게 함.
+- Playwright가 주요 서비스와 FAQ variant를 바꾼 뒤 기존 섹션 카피/카드가 유지되고 draft에 `glass:floating`으로 저장되는지 검증.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1 --grep "stateful home section template"` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1` ✅ (12/12)
+
+메모:
+- 아직 완전한 섹션 재생성/template gallery는 아님. 다음 단계는 variant 선택을 Inspector/Design panel에도 연결하고, 칼럼 아카이브 grid/timeline/magazine, 서비스 accordion/card/list 같은 구조 variant로 확장하는 것.

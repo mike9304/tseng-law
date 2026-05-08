@@ -58,6 +58,7 @@ export function createServicesDecomposedNodes(
       as: 'section',
       htmlId: 'practice',
       dataTone: 'light',
+      variant: 'flat',
     }),
     createHomeContainerNode({
       id: containerId,

@@ -15,6 +15,7 @@ import {
 } from '@/lib/builder/canvas/responsive';
 import {
   HOME_SECTION_TEMPLATE_VARIANTS,
+  getHomeSectionTemplateVariantOptions,
   getHomeSectionTemplateTarget,
   getHomeSectionTemplateVariant,
 } from '@/lib/builder/canvas/section-templates';
@@ -624,6 +625,9 @@ export default function CanvasNode({
   const showColumnQuickActions = selected && isInteractive && isColumnManagerTarget(node);
   const sectionTemplate = getHomeSectionTemplateTarget(node.id);
   const currentSectionTemplateVariant = getHomeSectionTemplateVariant(node);
+  const sectionTemplateVariants = sectionTemplate
+    ? getHomeSectionTemplateVariantOptions(sectionTemplate.id)
+    : HOME_SECTION_TEMPLATE_VARIANTS;
   const showSectionTemplateActions = selected && isInteractive && Boolean(sectionTemplate);
   const preservesHitTestLayer = node.kind === 'image' || node.kind === 'video-embed' || isContainerLikeKind(node.kind);
   const selectionZIndexBoost = selected && !preservesHitTestLayer ? 10000 : 0;
@@ -1078,10 +1082,11 @@ export default function CanvasNode({
           }}
         >
           <span className={styles.nodeSectionTemplateLabel}>{sectionTemplate.label} template</span>
-          {HOME_SECTION_TEMPLATE_VARIANTS.map((variant) => (
+          {sectionTemplateVariants.map((variant) => (
             <button
               key={variant.key}
               type="button"
+              title={variant.description}
               className={`${styles.nodeSectionTemplateButton} ${
                 currentSectionTemplateVariant === variant.key ? styles.nodeSectionTemplateButtonActive : ''
               }`}

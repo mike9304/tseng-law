@@ -986,7 +986,8 @@
 
 .sectionTemplateVariantCard {
   display: grid;
-  gap: 0.22rem;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 0.22rem 0.65rem;
   width: 100%;
   padding: 0.72rem;
   border: 1px solid #dbe2ea;
@@ -996,6 +997,58 @@
   text-align: left;
   cursor: pointer;
   transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.sectionTemplateVariantPreview {
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 4px;
+  height: 42px;
+  padding: 7px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.sectionTemplateVariantPreview i {
+  display: block;
+  min-width: 0;
+  border-radius: 4px;
+  background: #116dff;
+}
+
+.sectionTemplateVariantPreview i:nth-child(1) {
+  height: 18px;
+}
+
+.sectionTemplateVariantPreview i:nth-child(2) {
+  height: 28px;
+}
+
+.sectionTemplateVariantPreview i:nth-child(3) {
+  height: 22px;
+}
+
+.sectionTemplateVariantPreview[data-section-template-preview='elevated'] {
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #eff6ff;
+}
+
+.sectionTemplateVariantPreview[data-section-template-preview='floating'] i:nth-child(1),
+.sectionTemplateVariantPreview[data-section-template-preview='floating'] i:nth-child(3) {
+  transform: translateY(-5px);
+}
+
+.sectionTemplateVariantPreview[data-section-template-preview='glass'] {
+  background: rgba(239, 246, 255, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.sectionTemplateVariantPreview[data-section-template-preview='glass'] i {
+  opacity: 0.72;
 }
 
 .sectionTemplateVariantCard strong {

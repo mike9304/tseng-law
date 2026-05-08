@@ -586,7 +586,8 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     const servicesPanel = page.locator('[data-builder-section-template-panel="services"]').first();
     await expect(servicesPanel).toBeVisible();
     await expect(servicesPanel).toContainText('주요 서비스 template');
-    await servicesPanel.getByRole('button', { name: 'Glass' }).click();
+    await expect(servicesPanel).toContainText('Icon glass rows');
+    await servicesPanel.getByRole('button', { name: /glass/i }).click();
     await expect(servicesRoot).toHaveAttribute('data-section-variant', 'glass');
     await expect(servicesRoot).toContainText('주요 서비스');
     await expect(servicesRoot.locator('.services-detail-card').first()).toBeVisible();
@@ -598,7 +599,8 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(faqRoot).toHaveAttribute('data-builder-section-template', 'faq');
     const faqPanel = page.locator('[data-builder-section-template-panel="faq"]').first();
     await expect(faqPanel).toBeVisible();
-    await faqPanel.getByRole('button', { name: 'Floating' }).click();
+    await expect(faqPanel).toContainText('Split rows');
+    await faqPanel.getByRole('button', { name: 'Split rows' }).click();
     await expect(faqRoot).toHaveAttribute('data-section-variant', 'floating');
     await expect(faqRoot).toContainText('FAQ');
     await expect(faqRoot.locator('.faq-item').first()).toBeVisible();
@@ -607,7 +609,8 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     const designDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Section design' }).first();
     await expect(designDrawer).toBeVisible();
     await expect(designDrawer).toContainText('FAQ의 글, 주소, 링크 데이터는 그대로');
-    await designDrawer.getByRole('button', { name: /Elevated/ }).click();
+    await expect(designDrawer.locator('[data-builder-section-template-option="faq:elevated"]')).toContainText('Boxed answers');
+    await designDrawer.getByRole('button', { name: 'Boxed answers' }).click();
     await expect(faqRoot).toHaveAttribute('data-section-variant', 'elevated');
     await expect(faqRoot.locator('[data-node-id="home-faq-item-1"]').first()).toHaveCSS('left', '36px');
 

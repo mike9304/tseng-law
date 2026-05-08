@@ -1836,3 +1836,19 @@
 
 메모:
 - 사용자가 지적한 검색창 위치/기능 누락에 대한 1차 보강. 다음 단계는 hero search 목적지 설정을 Navigation/Search 설정 panel과 연결하고, 검색 결과 페이지/칼럼 필터 UX까지 이어서 실제 공개 흐름과 더 가깝게 맞춘다.
+
+## 2026-05-09 Codex /goal G-Editor section template labels
+
+범위:
+- 섹션 template variant를 공통 `Classic/Elevated/Floating/Glass` 버튼으로만 보이던 상태에서 섹션별 이름/설명으로 분리.
+- 주요 서비스는 `Classic accordion / Card accordion / Split service deck / Icon glass rows`, 칼럼은 `Featured list / Editorial cards / Magazine split / Floating feed`, FAQ는 `Simple accordion / Boxed answers / Split rows / Frosted FAQ`, 오시는길은 `Tabs + map / Address cards / Address first / Map overlay`로 표시.
+- Design rail variant card에 작은 구조 preview를 추가해 사용자가 템플릿 변경 전 배치 차이를 읽을 수 있게 함.
+- Canvas quick template bar도 섹션별 variant label을 사용하되, 기존 `content.variant` 값은 유지해서 editor/public renderer와 기존 draft 계약을 깨지 않음.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "switches stateful home section template variants" --workers=1` ✅
+
+메모:
+- 사용자가 요청한 "섹션 기능들이 전체가 템플릿 디자인 형식이고 나중에 템플릿 변경이 쉬운 방식"에 대한 UX 표면을 보강. 아직 full gallery에서 구조 재생성까지 하는 단계는 아니며, 다음은 칼럼 grid/timeline/magazine처럼 실제 구조 variant 폭을 늘리는 것이 맞다.

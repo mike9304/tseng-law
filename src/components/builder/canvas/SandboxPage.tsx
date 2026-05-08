@@ -32,6 +32,7 @@ import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import {
   HOME_SECTION_TEMPLATE_VARIANTS,
+  getHomeSectionTemplateVariantOptions,
   getHomeSectionTemplateTarget,
   getHomeSectionTemplateVariant,
 } from '@/lib/builder/canvas/section-templates';
@@ -618,6 +619,9 @@ export default function SandboxPage({
   const selectedSectionTemplateVariant = selectedSectionTemplateNode
     ? getHomeSectionTemplateVariant(selectedSectionTemplateNode)
     : null;
+  const selectedSectionTemplateVariants = selectedSectionTemplate
+    ? getHomeSectionTemplateVariantOptions(selectedSectionTemplate.id)
+    : HOME_SECTION_TEMPLATE_VARIANTS;
   const linkPickerLightboxes = useMemo(
     () =>
       siteLightboxes
@@ -1076,16 +1080,26 @@ export default function SandboxPage({
                       {selectedSectionTemplate.label}의 글, 주소, 링크 데이터는 그대로 두고 디자인 템플릿만 바꿉니다.
                     </p>
                     <div className={styles.sectionTemplateVariantGrid}>
-                      {HOME_SECTION_TEMPLATE_VARIANTS.map((variant) => (
+                      {selectedSectionTemplateVariants.map((variant) => (
                         <button
                           key={variant.key}
                           type="button"
+                          data-builder-section-template-option={`${selectedSectionTemplate.id}:${variant.key}`}
                           className={`${styles.sectionTemplateVariantCard} ${
                             selectedSectionTemplateVariant === variant.key ? styles.sectionTemplateVariantCardActive : ''
                           }`}
                           aria-pressed={selectedSectionTemplateVariant === variant.key}
                           onClick={() => updateNodeContent(selectedSectionTemplateNode.id, { variant: variant.key })}
                         >
+                          <em
+                            className={styles.sectionTemplateVariantPreview}
+                            data-section-template-preview={variant.key}
+                            aria-hidden="true"
+                          >
+                            <i />
+                            <i />
+                            <i />
+                          </em>
                           <strong>{variant.label}</strong>
                           <span>{variant.description}</span>
                         </button>

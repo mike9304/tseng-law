@@ -98,6 +98,7 @@ export default function SiteHeader({
   }, 'light') || defaultLogo;
   const [searchOpen, setSearchOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [pinnedMenu, setPinnedMenu] = useState<string | null>(null);
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, visible: false });
   const mainNavRef = useRef<HTMLElement | null>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
@@ -131,16 +132,18 @@ export default function SiteHeader({
 
   const closeMegaMenuNow = useCallback(() => {
     clearCloseTimeout();
+    setPinnedMenu(null);
     setOpenMenu(null);
   }, [clearCloseTimeout]);
 
   const scheduleCloseMegaMenu = useCallback(() => {
     clearCloseTimeout();
+    if (builderEditable && pinnedMenu) return;
     closeTimeoutRef.current = window.setTimeout(() => {
       setOpenMenu(null);
       closeTimeoutRef.current = null;
     }, 300);
-  }, [clearCloseTimeout]);
+  }, [builderEditable, clearCloseTimeout, pinnedMenu]);
 
   const moveIndicator = useCallback((key: string | null, visible = true) => {
     if (!key) {
@@ -203,6 +206,14 @@ export default function SiteHeader({
     if (!builderEditable || !item.source) return false;
     event.preventDefault();
     event.stopPropagation();
+    if (megaPanelKeys.has(item.key)) {
+      clearCloseTimeout();
+      setPinnedMenu(item.key);
+      setOpenMenu(item.key);
+      moveIndicator(item.key, true);
+      onRequestEditNavItem?.(item.source.id);
+      return true;
+    }
     closeMegaMenuNow();
     onRequestEditNavItem?.(item.source.id);
     return true;
@@ -281,6 +292,7 @@ export default function SiteHeader({
                       className={`nav-item${openMenu === item.key || isActive ? ' active' : ''}`}
                       onMouseEnter={() => {
                         if (!hasMegaPanel) return;
+                        if (pinnedMenu !== item.key) setPinnedMenu(null);
                         clearCloseTimeout();
                         moveIndicator(item.key, true);
                         setOpenMenu(item.key);
@@ -361,6 +373,37 @@ export default function SiteHeader({
             <div key={panel.key} className={`mega-panel${openMenu === panel.key ? ' active' : ''}`} data-panel={panel.key}>
               <div className="container">
                 <div className="mega-layout">
+                  {builderEditable ? (() => {
+                    const panelSource = displayNavItems.find((item) => item.key === panel.key)?.source;
+                    if (!panelSource) return null;
+                    return (
+                      <button
+                        type="button"
+                        data-builder-header-action="mega-edit"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          clearCloseTimeout();
+                          setPinnedMenu(panel.key);
+                          setOpenMenu(panel.key);
+                          onRequestEditNavItem?.(panelSource.id);
+                        }}
+                        style={{
+                          alignSelf: 'flex-start',
+                          border: '1px solid rgba(17, 109, 255, 0.32)',
+                          borderRadius: 999,
+                          background: '#fff',
+                          color: '#116dff',
+                          fontSize: 12,
+                          fontWeight: 700,
+                          padding: '6px 10px',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        Edit dropdown
+                      </button>
+                    );
+                  })() : null}
                   <h2 className="mega-title">{panel.title}</h2>
                   <ul className="mega-links" onClick={closeMegaMenuNow}>
                     {panel.links.map((link) => (

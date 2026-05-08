@@ -1166,9 +1166,6 @@ export default function SandboxPage({
                 if (target.closest('[data-builder-header-action]')) return;
                 const navTarget = target.closest<HTMLElement>('[data-builder-nav-item-id]');
                 if (navTarget?.dataset.builderNavItemId) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  handleRequestEditNavItem(navTarget.dataset.builderNavItemId);
                   return;
                 }
                 event.preventDefault();

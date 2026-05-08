@@ -1694,3 +1694,19 @@
 
 메모:
 - 자동 검증은 이미 통과했지만, 이 문서의 결과가 채워지기 전에는 goal complete/Green 승격 불가.
+
+## 2026-05-08 Codex /goal G-Editor mega menu edit behavior
+
+범위:
+- 상단 메뉴의 dropdown/mega menu는 별도 떠다니는 canvas node가 아니라 `BuilderNavItem.children` 데이터로 관리한다는 원칙을 유지.
+- 에디터에서 상위 메뉴를 클릭하면 wrapper capture가 먼저 가로채지 않도록 조정해 `SiteHeader`가 직접 click을 처리하게 함.
+- 업무분야/미디어센터 같은 mega menu 항목 클릭 시 페이지 이동 대신 dropdown을 pin/open하고 Navigation drawer를 해당 parent item에 포커스.
+- 열린 mega panel 안에 `Edit dropdown` affordance를 추가하고, 하위 메뉴 링크 클릭 시 해당 child item 편집 폼으로 바로 이동.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 사용자가 지적한 "맨위 메뉴 눌렀을 때 다른 메뉴 나오는 칸"은 이제 클릭으로 열어 둔 채 parent/child 메뉴 데이터를 편집하는 흐름으로 처리한다.

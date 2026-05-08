@@ -1869,3 +1869,20 @@
 
 메모:
 - 사용자가 말한 "검색창도 이상한 곳에 있고 기능도 안 보임" 중 목적지 설정과 칼럼 검색 진입을 닫은 단위. 다음은 검색 결과 페이지 자체의 편집 가능 노드화 또는 칼럼 feed template 구조 확장이 남아 있다.
+
+## 2026-05-09 Codex /goal G-Editor columns feed quick layout
+
+범위:
+- 칼럼 페이지의 `columns-feed` blog-feed 노드 선택 시 캔버스 위에 `Feed layout` quick edit bar를 표시.
+- Grid / List / Masonry / Hero preset 버튼으로 기존 blog-feed content의 `layout`, `columns`, `gap` 값을 즉시 변경.
+- 글 추가/수정, 새 글, 공개 보기 quick actions는 유지하면서 feed 디자인 변경 진입을 같은 선택 상태에서 처리.
+- 위젯 라이브러리 파일(`src/lib/builder/components/blogFeed/*`)은 수정하지 않고 CanvasNode에서 기존 content 계약만 사용.
+- admin-builder smoke가 칼럼 페이지 이동 → feed 선택 → List/Grid preset active 상태 → 글 관리 이동까지 실제 클릭으로 검증.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 사용자가 요청한 "칼럼 아카이브/주요 서비스 같은 기능 섹션을 템플릿 디자인 형식으로 바꾸기 쉽게" 중 칼럼 전용 feed layout 조작을 닫은 단위. 다음은 공개 칼럼 목록 페이지의 category/filter/search UI를 빌더에서 더 직접 조작 가능하게 만드는 쪽이 남아 있다.

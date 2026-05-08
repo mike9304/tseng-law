@@ -193,6 +193,20 @@ type HeroSearchDestination = {
   action: string;
 };
 
+type BlogFeedLayoutPreset = {
+  key: 'grid' | 'list' | 'masonry' | 'featured-hero';
+  label: string;
+  columns: number;
+  gap: number;
+};
+
+const BLOG_FEED_LAYOUT_PRESETS: BlogFeedLayoutPreset[] = [
+  { key: 'grid', label: 'Grid', columns: 3, gap: 24 },
+  { key: 'list', label: 'List', columns: 1, gap: 16 },
+  { key: 'masonry', label: 'Masonry', columns: 3, gap: 24 },
+  { key: 'featured-hero', label: 'Hero', columns: 3, gap: 24 },
+];
+
 function normalizeHeroSearchAction(action: string, locale: string): string {
   const fallback = `/${locale}/search`;
   const trimmed = action.trim();
@@ -213,6 +227,11 @@ function heroSearchDestinations(locale: string): HeroSearchDestination[] {
     { key: 'videos', label: labels.videos, action: `/${locale}/search?tab=videos` },
     { key: 'faq', label: labels.faq, action: `/${locale}/search?tab=faq` },
   ];
+}
+
+function blogFeedLayoutValue(node: BuilderCanvasNode): BlogFeedLayoutPreset['key'] {
+  const value = node.content && 'layout' in node.content ? node.content.layout : null;
+  return value === 'list' || value === 'masonry' || value === 'featured-hero' ? value : 'grid';
 }
 
 const INSIGHTS_PAGE_SIZE = 3;
@@ -651,6 +670,8 @@ export default function CanvasNode({
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
   const isInteractive = !isDimmedRoot;
   const showColumnQuickActions = selected && isInteractive && isColumnManagerTarget(node);
+  const showBlogFeedQuickEdit = selected && isInteractive && node.kind === 'blog-feed';
+  const blogFeedLayout = blogFeedLayoutValue(node);
   const sectionTemplate = getHomeSectionTemplateTarget(node.id);
   const currentSectionTemplateVariant = getHomeSectionTemplateVariant(node);
   const sectionTemplateVariants = sectionTemplate
@@ -895,6 +916,17 @@ export default function CanvasNode({
     [nodesById, updateNodeRectsForViewport, viewport],
   );
 
+  const updateBlogFeedLayout = useCallback(
+    (preset: BlogFeedLayoutPreset) => {
+      updateNodeContentInStore(node.id, {
+        layout: preset.key,
+        columns: preset.columns,
+        gap: preset.gap,
+      });
+    },
+    [node.id, updateNodeContentInStore],
+  );
+
   const renderNestedChildNodes = () =>
     nestedChildren.map((child) => {
       const isChildSelected = selectedNodeIds.includes(child.id);
@@ -1131,6 +1163,34 @@ export default function CanvasNode({
               }}
             >
               {variant.label}
+            </button>
+          ))}
+        </div>
+      ) : null}
+      {showBlogFeedQuickEdit ? (
+        <div
+          className={styles.nodeBlogFeedQuickEdit}
+          data-builder-blog-feed-quick-edit="true"
+          onPointerDown={(event) => {
+            event.stopPropagation();
+          }}
+          onMouseDown={(event) => {
+            event.stopPropagation();
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+          }}
+        >
+          <span className={styles.nodeBlogFeedQuickLabel}>Feed layout</span>
+          {BLOG_FEED_LAYOUT_PRESETS.map((preset) => (
+            <button
+              key={preset.key}
+              type="button"
+              aria-pressed={blogFeedLayout === preset.key}
+              className={blogFeedLayout === preset.key ? styles.nodeBlogFeedQuickActive : undefined}
+              onClick={() => updateBlogFeedLayout(preset)}
+            >
+              {preset.label}
             </button>
           ))}
         </div>

@@ -824,6 +824,12 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(columnsFeedNode).toContainText(/대만 화장품 시장 진출|대만 회사설립/, { timeout: 10_000 });
     await columnsFeedNode.click({ position: { x: 24, y: 24 }, force: true });
     const selectedColumnsFeed = page.locator('[data-node-id="columns-feed"][class*="nodeSelected"]').first();
+    const feedQuickEdit = selectedColumnsFeed.locator('[data-builder-blog-feed-quick-edit="true"]').first();
+    await expect(feedQuickEdit).toBeVisible();
+    await feedQuickEdit.getByRole('button', { name: 'List' }).click();
+    await expect(feedQuickEdit.getByRole('button', { name: 'List' })).toHaveAttribute('aria-pressed', 'true');
+    await feedQuickEdit.getByRole('button', { name: 'Grid' }).click();
+    await expect(feedQuickEdit.getByRole('button', { name: 'Grid' })).toHaveAttribute('aria-pressed', 'true');
     await expect(selectedColumnsFeed.getByRole('button', { name: '글 추가/수정' })).toBeVisible();
     await selectedColumnsFeed.getByRole('button', { name: '글 추가/수정' }).click();
     await expect(page).toHaveURL(/\/ko\/admin-builder\/columns$/);

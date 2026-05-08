@@ -2664,6 +2664,54 @@
   box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.16);
 }
 
+.nodeBlogFeedQuickEdit {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  z-index: 13;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.18);
+  pointer-events: auto;
+}
+
+.nodeBlogFeedQuickLabel {
+  padding: 0 8px;
+  color: #475569;
+  font-size: 0.7rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.nodeBlogFeedQuickEdit button {
+  min-height: 28px;
+  padding: 0 9px;
+  border: 1px solid #dbe2ea;
+  border-radius: 6px;
+  background: #fff;
+  color: #0f172a;
+  font-size: 0.71rem;
+  font-weight: 850;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nodeBlogFeedQuickEdit button:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.nodeBlogFeedQuickActive {
+  border-color: #116dff !important;
+  background: #116dff !important;
+  color: #fff !important;
+}
+
 .nodeSectionTemplates {
   position: absolute;
   top: -100px;

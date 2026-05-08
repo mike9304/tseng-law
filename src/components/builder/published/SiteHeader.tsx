@@ -68,6 +68,7 @@ export default function SiteHeader({
   builderEditable = false,
   activeBuilderNavItemId,
   onRequestEditNavItem,
+  onRequestAddNavChild,
   onRequestEditSiteBrand,
 }: {
   siteName: string;
@@ -80,6 +81,7 @@ export default function SiteHeader({
   builderEditable?: boolean;
   activeBuilderNavItemId?: string | null;
   onRequestEditNavItem?: (itemId: string) => void;
+  onRequestAddNavChild?: (parentItemId: string) => void;
   onRequestEditSiteBrand?: () => void;
 }) {
   const content = siteContent[locale];
@@ -227,7 +229,7 @@ export default function SiteHeader({
     return true;
   }
 
-  function handleBuilderMegaClick(event: React.MouseEvent<HTMLAnchorElement>, item: HeaderMegaPanel['links'][number], panelKey: string) {
+  function handleBuilderMegaClick(event: React.MouseEvent<HTMLElement>, item: HeaderMegaPanel['links'][number], panelKey: string) {
     if (!builderEditable || !item.source) return false;
     event.preventDefault();
     event.stopPropagation();
@@ -389,6 +391,7 @@ export default function SiteHeader({
                     const panelSource = displayNavItems.find((item) => item.key === panel.key)?.source;
                     if (!panelSource) return null;
                     return (
+                      <>
                       <button
                         type="button"
                         data-builder-header-action="mega-edit"
@@ -415,27 +418,81 @@ export default function SiteHeader({
                       >
                         Edit dropdown
                       </button>
+                      <button
+                        type="button"
+                        data-builder-header-action="mega-add"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          clearCloseTimeout();
+                          setPinnedMenu(panel.key);
+                          setBuilderEditingMenu(panel.key);
+                          setOpenMenu(panel.key);
+                          onRequestAddNavChild?.(panelSource.id);
+                        }}
+                        style={{
+                          alignSelf: 'flex-start',
+                          border: '1px solid rgba(15, 23, 42, 0.16)',
+                          borderRadius: 999,
+                          background: '#f8fafc',
+                          color: '#0f172a',
+                          fontSize: 12,
+                          fontWeight: 700,
+                          padding: '6px 10px',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        Add menu item
+                      </button>
+                      </>
                     );
                   })() : null}
                   <h2 className="mega-title">{panel.title}</h2>
                   <ul className="mega-links" onClick={closeMegaMenuNow}>
                     {panel.links.map((link) => (
                       <li key={`${panel.key}-${link.href}`}>
-                        <a
-                          href={link.href}
-                          target={link.href.startsWith('http') ? '_blank' : undefined}
-                          rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          data-builder-nav-item-id={builderEditable && link.source ? link.source.id : undefined}
-                          data-builder-nav-item-label={builderEditable && link.source ? link.label : undefined}
-                          title={builderEditable && link.source ? `Edit menu item: ${link.label}` : undefined}
-                          onClick={(event) => {
-                            if (handleBuilderMegaClick(event, link, panel.key)) return;
-                            navigate(event, link.href);
-                          }}
-                        >
-                          <span>{link.label}</span>
-                          <span className="mega-chevron">›</span>
-                        </a>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: builderEditable ? 8 : 0 }}>
+                          <a
+                            href={link.href}
+                            target={link.href.startsWith('http') ? '_blank' : undefined}
+                            rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            data-builder-nav-item-id={builderEditable && link.source ? link.source.id : undefined}
+                            data-builder-nav-item-label={builderEditable && link.source ? link.label : undefined}
+                            title={builderEditable && link.source ? `Edit menu item: ${link.label}` : undefined}
+                            style={{ flex: '1 1 auto', minWidth: 0 }}
+                            onClick={(event) => {
+                              if (handleBuilderMegaClick(event, link, panel.key)) return;
+                              navigate(event, link.href);
+                            }}
+                          >
+                            <span>{link.label}</span>
+                            <span className="mega-chevron">›</span>
+                          </a>
+                          {builderEditable && link.source ? (
+                            <button
+                              type="button"
+                              data-builder-header-action="mega-link-edit"
+                              onClick={(event) => {
+                                event.preventDefault();
+                                event.stopPropagation();
+                                handleBuilderMegaClick(event, link, panel.key);
+                              }}
+                              style={{
+                                flex: '0 0 auto',
+                                border: '1px solid rgba(17, 109, 255, 0.24)',
+                                borderRadius: 999,
+                                background: '#fff',
+                                color: '#116dff',
+                                fontSize: 11,
+                                fontWeight: 800,
+                                padding: '4px 8px',
+                                cursor: 'pointer',
+                              }}
+                            >
+                              Edit
+                            </button>
+                          ) : null}
+                        </div>
                       </li>
                     ))}
                   </ul>

@@ -2009,3 +2009,20 @@
 
 메모:
 - map widget 본문(`src/lib/builder/components/map/*`)은 goal 제약 때문에 건드리지 않았다. 다음 지도 단계는 add/remove/reorder office group과 지도 URL auto/manual override 상태를 분리하는 일이다.
+
+## 2026-05-09 Codex /goal G-Editor header mega menu direct editing
+
+범위:
+- 빌더 header mega dropdown에 `Add menu item` 직접 액션 추가. 드롭다운을 연 상태에서 새 하위 메뉴 row를 Navigation drawer에 바로 생성하고 입력폼으로 포커스한다.
+- 각 mega link 옆에 `Edit` chip을 추가해 드롭다운 내부 항목을 직접 선택/편집할 수 있게 했다.
+- NavigationEditor가 외부 add-child 요청을 한 번만 처리하도록 request ref를 두고, Playwright 검증은 생성한 임시 navigation을 `finally`에서 복구하게 변경.
+- header `Edit menu` chip을 header와 붙여 hover 이동 중 사라지는 느낌을 줄이고, chip hover 자체도 유지 조건에 포함.
+- office-location 테스트 helper의 union cast를 `unknown` 경유로 정리해 전체 typecheck에서 깨지지 않게 함.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅ (1회 insights preview timing flake 후 재실행 통과)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- 사용자가 물은 "맨위 메뉴 눌렀을 때 다른 메뉴 나오는 칸은 어떻게 편집할 거냐"에 대한 첫 구현 단위. 현재는 mega dropdown 하위 링크 label/href 추가·수정·삭제·순서 변경을 Navigation drawer 계약으로 처리한다.

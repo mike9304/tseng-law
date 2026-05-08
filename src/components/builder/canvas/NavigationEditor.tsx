@@ -195,16 +195,21 @@ function moveNavigationItem(
 export default function NavigationEditor({
   locale,
   focusItemId,
+  addChildParentId,
   onFocusHandled,
+  onAddChildHandled,
   onNavigationChange,
 }: {
   locale: string;
   focusItemId?: string | null;
+  addChildParentId?: string | null;
   onFocusHandled?: () => void;
+  onAddChildHandled?: () => void;
   onNavigationChange?: (items: BuilderNavItem[]) => void;
 }) {
   const editorLocale = normalizeLocale(locale);
   const labelInputRef = useRef<HTMLInputElement | null>(null);
+  const addChildRequestRef = useRef<string | null>(null);
   const [items, setItems] = useState<BuilderNavItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -279,7 +284,7 @@ export default function NavigationEditor({
     saveNav(next);
   };
 
-  const handleAddChild = (parentId: string) => {
+  const handleAddChild = useCallback((parentId: string) => {
     const id = `${parentId}-child-${Date.now().toString(36)}`;
     const child: BuilderNavItem = {
       id,
@@ -297,7 +302,7 @@ export default function NavigationEditor({
     setEditHref(child.href);
     saveNav(next);
     window.setTimeout(() => labelInputRef.current?.focus(), 0);
-  };
+  }, [editorLocale, items, saveNav]);
 
   const handleDelete = (id: string) => {
     const next = removeNavigationItem(items, id);
@@ -329,6 +334,20 @@ export default function NavigationEditor({
     startEdit(item);
     onFocusHandled?.();
   }, [focusItemId, items, loading, onFocusHandled, startEdit]);
+
+  useEffect(() => {
+    if (!addChildParentId) {
+      addChildRequestRef.current = null;
+      return;
+    }
+    if (loading || addChildRequestRef.current === addChildParentId) return;
+    addChildRequestRef.current = addChildParentId;
+    const parent = findNavigationItem(items, addChildParentId);
+    if (parent) {
+      handleAddChild(addChildParentId);
+    }
+    onAddChildHandled?.();
+  }, [addChildParentId, handleAddChild, items, loading, onAddChildHandled]);
 
   const commitEdit = () => {
     if (!editingId) return;

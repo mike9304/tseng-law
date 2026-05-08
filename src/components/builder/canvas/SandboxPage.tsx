@@ -257,6 +257,7 @@ export default function SandboxPage({
   const [publicChromePanel, setPublicChromePanel] = useState<PublicChromePanel>(null);
   const [activeNavItemId, setActiveNavItemId] = useState<string | null>(null);
   const [focusedNavItemId, setFocusedNavItemId] = useState<string | null>(null);
+  const [addNavChildParentId, setAddNavChildParentId] = useState<string | null>(null);
   const [helpOpen, setHelpOpen] = useState(false);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [editorDensity, setEditorDensity] = useState<EditorDensity>('cozy');
@@ -782,12 +783,20 @@ export default function SandboxPage({
     if (activeDrawer === 'nav') return;
     setActiveNavItemId(null);
     setFocusedNavItemId(null);
+    setAddNavChildParentId(null);
   }, [activeDrawer]);
 
   const handleRequestEditNavItem = useCallback((itemId: string) => {
     setActiveDrawer('nav');
     setActiveNavItemId(itemId);
     setFocusedNavItemId(itemId);
+  }, []);
+
+  const handleRequestAddNavChild = useCallback((parentItemId: string) => {
+    setActiveDrawer('nav');
+    setActiveNavItemId(parentItemId);
+    setFocusedNavItemId(parentItemId);
+    setAddNavChildParentId(parentItemId);
   }, []);
 
   const handleRequestSaveAsSection = useCallback(
@@ -1157,7 +1166,9 @@ export default function SandboxPage({
               <NavigationEditor
                 locale={locale}
                 focusItemId={focusedNavItemId}
+                addChildParentId={addNavChildParentId}
                 onFocusHandled={() => setFocusedNavItemId(null)}
+                onAddChildHandled={() => setAddNavChildParentId(null)}
                 onNavigationChange={setNavItemsState}
               />
             </div>
@@ -1315,6 +1326,7 @@ export default function SandboxPage({
                 builderEditable
                 activeBuilderNavItemId={activeNavItemId}
                 onRequestEditNavItem={handleRequestEditNavItem}
+                onRequestAddNavChild={handleRequestAddNavChild}
                 onRequestEditSiteBrand={() => setSettingsOpen(true)}
               />
             </div>

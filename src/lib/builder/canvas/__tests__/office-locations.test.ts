@@ -31,7 +31,7 @@ function node(
     locked: false,
     rotation: 0,
     zIndex: 0,
-  } as BuilderCanvasNode;
+  } as unknown as BuilderCanvasNode;
 }
 
 describe('office location helpers', () => {

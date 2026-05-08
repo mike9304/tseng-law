@@ -2,6 +2,14 @@ import { expect, test, type Locator, type Page } from '@playwright/test';
 
 const shortcutModifier = 'ControlOrMeta';
 
+type TestNavigationItem = {
+  id: string;
+  label: string | Record<string, string>;
+  href: string;
+  pageId?: string;
+  children?: TestNavigationItem[];
+};
+
 function isIgnoredBrowserError(message: string): boolean {
   return message === 'Invalid or unexpected token';
 }
@@ -212,12 +220,38 @@ async function navLabelFromApi(page: Page, itemId: string): Promise<string | nul
   const response = await page.request.get('/api/builder/site/navigation?locale=ko');
   if (!response.ok()) return null;
   const payload = (await response.json()) as {
-    navigation?: Array<{ id: string; label: string | Record<string, string> }>;
+    navigation?: TestNavigationItem[];
   };
-  const item = payload.navigation?.find((candidate) => candidate.id === itemId);
+  const findItem = (items: TestNavigationItem[]): TestNavigationItem | null => {
+    for (const candidate of items) {
+      if (candidate.id === itemId) return candidate;
+      const child = candidate.children ? findItem(candidate.children) : null;
+      if (child) return child;
+    }
+    return null;
+  };
+  const item = payload.navigation ? findItem(payload.navigation) : null;
   if (!item) return null;
   if (typeof item.label === 'string') return item.label;
   return item.label.ko ?? item.label.en ?? item.label['zh-hant'] ?? null;
+}
+
+async function navigationFromApi(page: Page): Promise<TestNavigationItem[]> {
+  const response = await page.request.get('/api/builder/site/navigation?locale=ko');
+  expect(response.ok()).toBeTruthy();
+  const payload = (await response.json()) as { navigation?: TestNavigationItem[] };
+  return payload.navigation ?? [];
+}
+
+async function restoreNavigation(page: Page, navigation: TestNavigationItem[]): Promise<void> {
+  const response = await page.request.put('/api/builder/site/navigation', {
+    data: {
+      locale: 'ko',
+      navigation,
+    },
+    failOnStatusCode: false,
+  });
+  expect(response.ok()).toBeTruthy();
 }
 
 async function expectUndoChip(page: Page): Promise<void> {
@@ -530,6 +564,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await editableMenuItem.click();
     await expect(servicesMegaPanel).toContainText('투자·법인설립');
     await expect(servicesMegaPanel.getByRole('button', { name: 'Edit dropdown' })).toBeVisible();
+    await expect(servicesMegaPanel.getByRole('button', { name: 'Add menu item' })).toBeVisible();
     const navLabelInput = navDrawer.locator('input[type="text"]').first();
     await expect(navLabelInput).toBeVisible();
     const originalNavLabel = await navLabelFromApi(page, menuItemId || '');
@@ -538,6 +573,13 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await editableMenuItem.hover();
     await builderHeader.locator('[data-builder-nav-item-id="nav-services-investment"]').first().click();
     await expect(navLabelInput).toHaveValue('투자·법인설립');
+    const originalNavigation = await navigationFromApi(page);
+    try {
+      await servicesMegaPanel.getByRole('button', { name: 'Add menu item' }).click();
+      await expect(navDrawer.locator('[data-builder-nav-edit-id^="nav-services-child-"]').first()).toBeVisible();
+    } finally {
+      await restoreNavigation(page, originalNavigation);
+    }
 
     await page.getByTitle('Add').click();
     await expect(page.getByText('Catalog')).toBeVisible();

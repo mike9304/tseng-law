@@ -422,6 +422,20 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search$/);
     await expect(page.locator('[data-node-id="home-hero-search-input"] input.hero-search-input[type="search"][name="q"]').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-hero-search-button"] button.hero-search-btn[type="submit"]').first()).toBeVisible();
+    await page.locator('[data-node-id="home-hero-search-bar"]').first().click({ position: { x: 24, y: 20 }, force: true });
+    const heroSearchQuickEdit = page.locator('[data-builder-hero-search-quick-edit="true"]').first();
+    await expect(heroSearchQuickEdit).toBeVisible();
+    await heroSearchQuickEdit.getByRole('button', { name: 'Center' }).click();
+    await expect(page.locator('[data-node-id="home-hero-search-wrap"]').first()).toHaveCSS('left', '258px');
+    await heroSearchQuickEdit.getByRole('button', { name: 'Left' }).click();
+    await expect(page.locator('[data-node-id="home-hero-search-wrap"]').first()).toHaveCSS('left', '0px');
+    const temporarySearchPlaceholder = `검색어 입력 ${Date.now().toString(36)}`;
+    await heroSearchQuickEdit.getByLabel('Hero search placeholder').fill(temporarySearchPlaceholder);
+    await expect(page.locator('[data-node-id="home-hero-search-input"] input.hero-search-input').first()).toHaveAttribute('placeholder', temporarySearchPlaceholder);
+    await heroSearchQuickEdit.getByLabel('Hero search action').fill('/ko/search?tab=columns');
+    await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search\?tab=columns$/);
+    await heroSearchQuickEdit.getByLabel('Hero search action').fill('/ko/search');
+    await heroSearchQuickEdit.getByLabel('Hero search placeholder').fill('어떻게 도와드릴까요?');
     const heroSearchGeometry = await page.evaluate(() => {
       const hero = document.querySelector('[data-node-id="home-hero-root"]')?.getBoundingClientRect();
       const form = document.querySelector('[data-node-id="home-hero-search-bar"] form')?.getBoundingClientRect();
@@ -443,8 +457,6 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     });
     await page.mouse.move(12, 120);
     const heroQuickMenu = page.locator('[data-node-id="home-hero-quick-menu"] nav.hero-quick-menu').first();
-    await expect(heroQuickMenu).toBeHidden();
-    await page.locator('[data-node-id="home-hero-search-wrap"]').first().hover();
     await expect(heroQuickMenu).toBeVisible();
     await expect(heroQuickMenu).toContainText('업무분야');
     await expect(heroQuickMenu).toContainText('칼럼');

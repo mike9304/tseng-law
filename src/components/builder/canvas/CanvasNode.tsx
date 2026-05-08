@@ -163,6 +163,29 @@ function googleMapsSearchUrl(address: string): string {
     : '';
 }
 
+function isHeroSearchTarget(nodeId: string): boolean {
+  return nodeId === 'home-hero-search-wrapper'
+    || nodeId === 'home-hero-search-container'
+    || nodeId === 'home-hero-search-wrap'
+    || nodeId === 'home-hero-search-bar'
+    || nodeId === 'home-hero-search-input'
+    || nodeId === 'home-hero-search-button'
+    || nodeId === 'home-hero-quick-menu'
+    || /^home-hero-quick-menu-item-\d+$/.test(nodeId);
+}
+
+function textInputValue(node: BuilderCanvasNode | undefined, key: 'text' | 'placeholder' | 'ariaLabel'): string {
+  const content = (node?.content ?? {}) as Record<string, unknown>;
+  const value = content[key];
+  return typeof value === 'string' ? value : '';
+}
+
+function containerActionValue(node: BuilderCanvasNode | undefined): string {
+  const content = (node?.content ?? {}) as Record<string, unknown>;
+  const value = content.action;
+  return typeof value === 'string' ? value : '';
+}
+
 const INSIGHTS_PAGE_SIZE = 3;
 
 const insightsCopyByLocale = {
@@ -394,6 +417,7 @@ export default function CanvasNode({
   const mapQuickAddressRef = useRef<HTMLTextAreaElement>(null);
   const rotationDrag = useRef<{ startAngle: number; startRotation: number } | null>(null);
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
+  const updateNodeRectsForViewport = useBuilderCanvasStore((s) => s.updateNodeRectsForViewport);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
   const commitMutationSession = useBuilderCanvasStore((s) => s.commitMutationSession);
   const cancelMutationSession = useBuilderCanvasStore((s) => s.cancelMutationSession);
@@ -605,7 +629,17 @@ export default function CanvasNode({
   const selectionZIndexBoost = selected && !preservesHitTestLayer ? 10000 : 0;
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
   const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
-  const nodesById = new Map(allNodes.map((candidate) => [candidate.id, candidate]));
+  const nodesById = useMemo(
+    () => new Map(allNodes.map((candidate) => [candidate.id, candidate])),
+    [allNodes],
+  );
+  const heroSearchInputNode = nodesById.get('home-hero-search-input');
+  const heroSearchBarNode = nodesById.get('home-hero-search-bar');
+  const heroSearchButtonNode = nodesById.get('home-hero-search-button');
+  const heroSearchWrapNode = nodesById.get('home-hero-search-wrap');
+  const heroSearchPlaceholder = textInputValue(heroSearchInputNode, 'placeholder')
+    || textInputValue(heroSearchInputNode, 'text');
+  const heroSearchAction = containerActionValue(heroSearchBarNode) || `/${currentBuilderLocale()}/search`;
   const showMapQuickEdit = selected && node.kind === 'map' && isInteractive && !node.locked;
   const showMapEditHint = !selected && isHovered && node.kind === 'map' && isInteractive && !node.locked;
   const mapQuickEdit = showMapQuickEdit
@@ -673,9 +707,10 @@ export default function CanvasNode({
       .map((selectedId) => /^home-faq-item-(\d+)/.exec(selectedId)?.[1])
       .filter((value): value is string => Boolean(value)),
   );
-  const activeOfficeIndex = selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => (
-    activeIndex ?? officeIndexFromNodeId(selectedId)
-  ), null) ?? 0;
+  const activeOfficeIndex = selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => {
+    const nextIndex = officeIndexFromNodeId(selectedId);
+    return nextIndex ?? activeIndex;
+  }, null) ?? 0;
   const officeLayoutIndex = /^home-offices-layout-(\d+)$/.exec(node.id)?.[1];
   const officeTabIndex = /^home-offices-tab-(\d+)$/.exec(node.id)?.[1];
   const officeLayoutDisplay = officeLayoutIndex
@@ -688,6 +723,15 @@ export default function CanvasNode({
     : faqItemMatch
       ? selectedFaqItems.has(faqItemMatch[1]) || (faqItemMatch[1] === '0' && selectedFaqItems.size === 0 && !selectionIsInside('home-faq-list'))
       : false;
+  const heroSearchActive = selectedNodeIds.some(isHeroSearchTarget);
+  const showHeroSearchQuickEdit = selected && isInteractive && !node.locked && isHeroSearchTarget(node.id);
+  const heroSearchLayout = (() => {
+    const wrapRect = heroSearchWrapNode?.rect;
+    if (!wrapRect) return 'left';
+    if (wrapRect.width >= 720) return 'wide';
+    if (wrapRect.x >= 180) return 'center';
+    return 'left';
+  })();
 
   useEffect(() => {
     if (node.kind !== 'map') return;
@@ -761,6 +805,57 @@ export default function CanvasNode({
       updateMapZoom(16);
     },
     [applyOfficePreset, officeQuickEdit, updateMapAddress, updateMapZoom],
+  );
+
+  const updateHeroSearchPlaceholder = useCallback(
+    (nextPlaceholder: string) => {
+      const nextText = nextPlaceholder.trim() || nextPlaceholder;
+      if (!heroSearchInputNode) return;
+      updateNodeContentInStore(heroSearchInputNode.id, {
+        text: nextText,
+        placeholder: nextPlaceholder,
+        ariaLabel: nextPlaceholder,
+      });
+    },
+    [heroSearchInputNode, updateNodeContentInStore],
+  );
+
+  const updateHeroSearchAction = useCallback(
+    (nextAction: string) => {
+      if (!heroSearchBarNode) return;
+      const normalizedAction = nextAction.trim() || `/${currentBuilderLocale()}/search`;
+      updateNodeContentInStore(heroSearchBarNode.id, { action: normalizedAction });
+      if (heroSearchButtonNode) {
+        updateNodeContentInStore(heroSearchButtonNode.id, { href: normalizedAction });
+      }
+    },
+    [heroSearchBarNode, heroSearchButtonNode, updateNodeContentInStore],
+  );
+
+  const updateHeroSearchLayout = useCallback(
+    (layout: 'left' | 'center' | 'wide') => {
+      const width = layout === 'wide' ? 760 : 620;
+      const x = layout === 'center' ? 258 : 0;
+      const buttonWidth = 62;
+      const inputWidth = width - buttonWidth;
+      const rects = new Map<string, BuilderCanvasNode['rect']>();
+      const pushRect = (nodeId: string, patch: Partial<BuilderCanvasNode['rect']>) => {
+        const target = nodesById.get(nodeId);
+        if (!target) return;
+        rects.set(nodeId, { ...target.rect, ...patch });
+      };
+
+      pushRect('home-hero-search-wrap', { x, width });
+      pushRect('home-hero-search-bar', { width });
+      pushRect('home-hero-search-input', { width: inputWidth });
+      pushRect('home-hero-search-button', { x: inputWidth, width: buttonWidth });
+      pushRect('home-hero-quick-menu', { width });
+      for (let index = 0; index < 6; index += 1) {
+        pushRect(`home-hero-quick-menu-item-${index}`, { width });
+      }
+      if (rects.size > 0) updateNodeRectsForViewport(rects, viewport);
+    },
+    [nodesById, updateNodeRectsForViewport, viewport],
   );
 
   const renderNestedChildNodes = () =>
@@ -870,6 +965,7 @@ export default function CanvasNode({
       data-selected={selected ? 'true' : undefined}
       data-builder-section-template={sectionTemplate?.id}
       data-section-variant={sectionTemplate ? currentSectionTemplateVariant : undefined}
+      data-builder-hero-search-active={node.id === 'home-hero-quick-menu' && heroSearchActive ? 'true' : undefined}
       data-office-active={officeTabIndex && Number(officeTabIndex) === activeOfficeIndex ? 'true' : undefined}
       data-builder-preview-open={builderPreviewOpen ? 'true' : undefined}
       data-viewport={viewport}
@@ -1047,6 +1143,67 @@ export default function CanvasNode({
           >
             공개 보기
           </button>
+        </div>
+      ) : null}
+      {showHeroSearchQuickEdit ? (
+        <div
+          className={styles.nodeHeroSearchQuickEdit}
+          data-builder-hero-search-quick-edit="true"
+          onPointerDown={(event) => {
+            event.stopPropagation();
+          }}
+          onMouseDown={(event) => {
+            event.stopPropagation();
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+          }}
+          onKeyDown={(event) => {
+            event.stopPropagation();
+          }}
+        >
+          <div className={styles.nodeHeroSearchHeader}>
+            <div>
+              <span>Hero search</span>
+              <strong>검색창 편집</strong>
+            </div>
+          </div>
+          <div className={styles.nodeHeroSearchPresetRow}>
+            {([
+              ['left', 'Left'],
+              ['center', 'Center'],
+              ['wide', 'Wide'],
+            ] as const).map(([layout, label]) => (
+              <button
+                key={layout}
+                type="button"
+                aria-pressed={heroSearchLayout === layout}
+                className={heroSearchLayout === layout ? styles.nodeHeroSearchPresetActive : undefined}
+                onClick={() => updateHeroSearchLayout(layout)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <label className={styles.nodeHeroSearchField}>
+            <span>Placeholder</span>
+            <input
+              type="text"
+              aria-label="Hero search placeholder"
+              value={heroSearchPlaceholder}
+              onChange={(event) => updateHeroSearchPlaceholder(event.currentTarget.value)}
+            />
+          </label>
+          <label className={styles.nodeHeroSearchField}>
+            <span>Search URL</span>
+            <input
+              type="text"
+              aria-label="Hero search action"
+              value={heroSearchAction}
+              onChange={(event) => updateHeroSearchAction(event.currentTarget.value)}
+            />
+          </label>
+          <div className={styles.nodeHeroSearchNote}>검색창, 버튼, 펼침 메뉴 폭을 함께 조정합니다.</div>
         </div>
       ) : null}
       {showMapEditHint ? (

@@ -1818,3 +1818,21 @@
 
 메모:
 - 여전히 full template gallery/구조 재생성은 아님. 다만 사용자가 말한 "누르면 아래로 글 내려오는 것 같은 섹션도 디자인 템플릿으로 쉽게 바꾸기"의 동작은 editor/public 양쪽에서 데이터 보존 + 표면/배치 변경까지 가능해짐.
+
+## 2026-05-09 Codex /goal G-Editor hero search quick edit
+
+범위:
+- 홈 hero 검색창/검색 버튼/quick menu 선택 시 캔버스 위에 `Hero search / 검색창 편집` quick panel을 표시.
+- Left / Center / Wide 프리셋으로 검색창 wrapper, form, input, button, quick menu 폭과 위치를 함께 조정.
+- Placeholder와 Search URL을 quick panel에서 직접 수정하고, input placeholder/aria label, form action, button href가 즉시 동기화되게 함.
+- 검색창 선택 상태에서는 hover 이동 중 quick menu가 사라지지 않도록 selected-state 표시를 추가.
+- 오시는길 사무소 탭 preview는 여러 office 노드가 선택 목록에 남아도 마지막 선택 tab/layout을 active로 처리하도록 보정.
+- admin-builder smoke가 hero 검색창 layout/placeholder/action 편집, quick menu 유지, 사무소 탭 전환을 실제 클릭으로 검증.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+메모:
+- 사용자가 지적한 검색창 위치/기능 누락에 대한 1차 보강. 다음 단계는 hero search 목적지 설정을 Navigation/Search 설정 panel과 연결하고, 검색 결과 페이지/칼럼 필터 UX까지 이어서 실제 공개 흐름과 더 가깝게 맞춘다.

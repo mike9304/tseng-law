@@ -1769,9 +1769,10 @@
 범위:
 - 홈의 stateful 섹션 root(`home-services-root`, `home-insights-root`, `home-faq-root`, `home-offices-root`)에 template target/variant metadata를 부여.
 - 선택한 섹션 root 위에 `Classic / Elevated / Floating / Glass` quick template switcher를 노출.
+- 섹션 template target/variant 정의를 `section-templates.ts` registry로 분리하고, 왼쪽 Design rail에서도 선택한 stateful 섹션의 template variant를 변경할 수 있게 연결.
 - variant 변경은 섹션 내부 글/링크/주소/map 데이터는 유지하고 root content.variant만 저장하도록 구성.
 - editor CSS에서 services/FAQ/insights/offices의 카드·아코디언·탭 표면이 variant에 따라 다른 디자인으로 보이게 함.
-- Playwright가 주요 서비스와 FAQ variant를 바꾼 뒤 기존 섹션 카피/카드가 유지되고 draft에 `glass:floating`으로 저장되는지 검증.
+- Playwright가 주요 서비스 quick switcher와 FAQ Design rail variant를 바꾼 뒤 기존 섹션 카피/카드가 유지되고 draft에 `glass:elevated`로 저장되는지 검증.
 
 검증:
 - `npm run typecheck` ✅

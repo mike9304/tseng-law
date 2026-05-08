@@ -13,6 +13,11 @@ import {
   resolveViewportHidden,
   resolveViewportRect,
 } from '@/lib/builder/canvas/responsive';
+import {
+  HOME_SECTION_TEMPLATE_VARIANTS,
+  getHomeSectionTemplateTarget,
+  getHomeSectionTemplateVariant,
+} from '@/lib/builder/canvas/section-templates';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import {
   buildEditorAnimationStyle,
@@ -130,32 +135,6 @@ function isColumnManagerTarget(node: BuilderCanvasNode): boolean {
   if (node.id === 'home-insights-root' || node.id.startsWith('home-insights-')) return true;
   const href = nodeLinkPreviewHref(node);
   return Boolean(href && /\/admin-builder\/columns(?:\/|$)/.test(href));
-}
-
-type SectionTemplateId = 'services' | 'insights' | 'faq' | 'offices';
-type SectionTemplateVariant = 'flat' | 'elevated' | 'floating' | 'glass';
-
-const SECTION_TEMPLATE_TARGETS: Record<string, { id: SectionTemplateId; label: string }> = {
-  'home-services-root': { id: 'services', label: '주요 서비스' },
-  'home-insights-root': { id: 'insights', label: '칼럼 아카이브' },
-  'home-faq-root': { id: 'faq', label: 'FAQ' },
-  'home-offices-root': { id: 'offices', label: '오시는길' },
-};
-
-const SECTION_TEMPLATE_VARIANTS: Array<{ key: SectionTemplateVariant; label: string }> = [
-  { key: 'flat', label: 'Classic' },
-  { key: 'elevated', label: 'Elevated' },
-  { key: 'floating', label: 'Floating' },
-  { key: 'glass', label: 'Glass' },
-];
-
-function sectionTemplateTarget(node: BuilderCanvasNode) {
-  return SECTION_TEMPLATE_TARGETS[node.id] ?? null;
-}
-
-function sectionTemplateVariant(node: BuilderCanvasNode): SectionTemplateVariant {
-  const value = node.content && 'variant' in node.content ? node.content.variant : null;
-  return value === 'elevated' || value === 'floating' || value === 'glass' ? value : 'flat';
 }
 
 function textContentValue(node: BuilderCanvasNode | undefined): string {
@@ -619,8 +598,8 @@ export default function CanvasNode({
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
   const isInteractive = !isDimmedRoot;
   const showColumnQuickActions = selected && isInteractive && isColumnManagerTarget(node);
-  const sectionTemplate = sectionTemplateTarget(node);
-  const currentSectionTemplateVariant = sectionTemplateVariant(node);
+  const sectionTemplate = getHomeSectionTemplateTarget(node.id);
+  const currentSectionTemplateVariant = getHomeSectionTemplateVariant(node);
   const showSectionTemplateActions = selected && isInteractive && Boolean(sectionTemplate);
   const preservesHitTestLayer = node.kind === 'image' || node.kind === 'video-embed' || isContainerLikeKind(node.kind);
   const selectionZIndexBoost = selected && !preservesHitTestLayer ? 10000 : 0;
@@ -1003,7 +982,7 @@ export default function CanvasNode({
           }}
         >
           <span className={styles.nodeSectionTemplateLabel}>{sectionTemplate.label} template</span>
-          {SECTION_TEMPLATE_VARIANTS.map((variant) => (
+          {HOME_SECTION_TEMPLATE_VARIANTS.map((variant) => (
             <button
               key={variant.key}
               type="button"

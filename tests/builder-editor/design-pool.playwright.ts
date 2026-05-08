@@ -519,6 +519,13 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(faqRoot).toContainText('FAQ');
     await expect(faqRoot.locator('.faq-item').first()).toBeVisible();
 
+    await page.getByRole('button', { name: 'Design', exact: true }).click();
+    const designDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Section design' }).first();
+    await expect(designDrawer).toBeVisible();
+    await expect(designDrawer).toContainText('FAQ의 글, 주소, 링크 데이터는 그대로');
+    await designDrawer.getByRole('button', { name: /Elevated/ }).click();
+    await expect(faqRoot).toHaveAttribute('data-section-variant', 'elevated');
+
     await expect.poll(async () => {
       const draftResponse = await page.request.get(`/api/builder/site/pages/${homePageId}/draft?locale=ko`);
       if (draftResponse.status() !== 200) return 'missing';
@@ -530,7 +537,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       const servicesVariant = draftPayload.document?.nodes?.find((node) => node.id === 'home-services-root')?.content?.variant;
       const faqVariant = draftPayload.document?.nodes?.find((node) => node.id === 'home-faq-root')?.content?.variant;
       return `${servicesVariant}:${faqVariant}`;
-    }, { timeout: 20_000 }).toBe('glass:floating');
+    }, { timeout: 20_000 }).toBe('glass:elevated');
   });
 
   test('covers canvas direct-manipulation overlays for drag, resize, multi-select, and snap distance', async ({ page }) => {

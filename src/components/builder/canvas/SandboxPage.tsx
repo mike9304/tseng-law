@@ -30,6 +30,11 @@ import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import {
+  HOME_SECTION_TEMPLATE_VARIANTS,
+  getHomeSectionTemplateTarget,
+  getHomeSectionTemplateVariant,
+} from '@/lib/builder/canvas/section-templates';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { DEFAULT_THEME, type BuilderLightbox, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
 import { collectThemeFontFamilies } from '@/lib/builder/site/theme';
@@ -592,6 +597,27 @@ export default function SandboxPage({
     () => canvasDocument?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [canvasDocument, selectedNodeId],
   );
+  const selectedSectionTemplateNode = useMemo(() => {
+    if (!selectedNode || !canvasDocument) return null;
+    const nodesById = new Map(canvasDocument.nodes.map((node) => [node.id, node]));
+    let current = selectedNode;
+
+    while (current) {
+      if (getHomeSectionTemplateTarget(current.id)) return current;
+      if (!current.parentId) return null;
+      const parent = nodesById.get(current.parentId);
+      if (!parent) return null;
+      current = parent;
+    }
+
+    return null;
+  }, [canvasDocument, selectedNode]);
+  const selectedSectionTemplate = selectedSectionTemplateNode
+    ? getHomeSectionTemplateTarget(selectedSectionTemplateNode.id)
+    : null;
+  const selectedSectionTemplateVariant = selectedSectionTemplateNode
+    ? getHomeSectionTemplateVariant(selectedSectionTemplateNode)
+    : null;
   const linkPickerLightboxes = useMemo(
     () =>
       siteLightboxes
@@ -1037,6 +1063,49 @@ export default function SandboxPage({
 
           {activeDrawer === 'design' ? (
             <div className={styles.drawerBody}>
+              <section className={styles.panelSection} data-builder-design-section-templates="true">
+                <header className={styles.panelSectionHeader}>
+                  <div>
+                    <span>Templates</span>
+                    <strong>Section design</strong>
+                  </div>
+                </header>
+                {selectedSectionTemplate && selectedSectionTemplateNode && selectedSectionTemplateVariant ? (
+                  <>
+                    <p className={styles.panelCopy}>
+                      {selectedSectionTemplate.label}의 글, 주소, 링크 데이터는 그대로 두고 디자인 템플릿만 바꿉니다.
+                    </p>
+                    <div className={styles.sectionTemplateVariantGrid}>
+                      {HOME_SECTION_TEMPLATE_VARIANTS.map((variant) => (
+                        <button
+                          key={variant.key}
+                          type="button"
+                          className={`${styles.sectionTemplateVariantCard} ${
+                            selectedSectionTemplateVariant === variant.key ? styles.sectionTemplateVariantCardActive : ''
+                          }`}
+                          aria-pressed={selectedSectionTemplateVariant === variant.key}
+                          onClick={() => updateNodeContent(selectedSectionTemplateNode.id, { variant: variant.key })}
+                        >
+                          <strong>{variant.label}</strong>
+                          <span>{variant.description}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <p className={styles.panelCopy}>
+                      주요 서비스, 칼럼 아카이브, FAQ, 오시는길 섹션을 선택하면 디자인 템플릿을 바꿀 수 있습니다.
+                    </p>
+                    <div className={styles.sectionTemplateHintList}>
+                      <span>주요 서비스</span>
+                      <span>칼럼 아카이브</span>
+                      <span>FAQ</span>
+                      <span>오시는길</span>
+                    </div>
+                  </>
+                )}
+              </section>
               <section className={styles.panelSection}>
                 <header className={styles.panelSectionHeader}>
                   <div>

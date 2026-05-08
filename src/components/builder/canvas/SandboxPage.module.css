@@ -979,6 +979,66 @@
   line-height: 1.55;
 }
 
+.sectionTemplateVariantGrid {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.sectionTemplateVariantCard {
+  display: grid;
+  gap: 0.22rem;
+  width: 100%;
+  padding: 0.72rem;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  background: #fff;
+  color: #0f172a;
+  text-align: left;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.sectionTemplateVariantCard strong {
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.sectionTemplateVariantCard span {
+  color: #64748b;
+  font-size: 0.73rem;
+  line-height: 1.35;
+}
+
+.sectionTemplateVariantCard:hover {
+  border-color: #93c5fd;
+  background: #f8fbff;
+}
+
+.sectionTemplateVariantCardActive {
+  border-color: #116dff;
+  background: #eff6ff;
+  box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.12);
+}
+
+.sectionTemplateHintList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.sectionTemplateHintList span {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  padding: 0 0.55rem;
+  border: 1px solid #dbe2ea;
+  border-radius: 999px;
+  background: #fff;
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
 .columnsStatusCard {
   display: grid;
   gap: 0.45rem;

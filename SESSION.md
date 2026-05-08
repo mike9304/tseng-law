@@ -1631,3 +1631,21 @@
 메모:
 - 일반 map은 hover hint → 첫 클릭 quick panel → 주소 즉시 반영 → Content inspector/reload 유지 경로까지 검증.
 - 사무소 map은 quick panel/Inspector에서 주소 변경 시 지도, 주소 카드, 길찾기 링크가 함께 맞춰짐.
+
+## 2026-05-08 Codex /goal G-Editor insights pagination preview follow-up
+
+범위:
+- `CODEX-GOAL-WIX-PARITY-COMPLETE.md` 전체 1035줄을 읽고, 현재 editor parity 작업은 전체 Wix-class 완료 계획의 하위 마일스톤으로 정리. 이 문서 기준 전체 완료는 PR #0~#20, 운영 배포, CRM/Member/Analytics/Search/Sentry까지 남아 있어 아직 complete 선언 불가.
+- 홈 `칼럼 아카이브` 목록 영역에 실제 blog API 기반 preview overlay를 추가해, 에디터 안에서도 공개 사이트처럼 3개씩 이전/다음 페이지를 넘기며 칼럼 글 목록을 확인 가능하게 함.
+- overlay는 `home-insights-list-wrap` 위에만 표시되고, 하위 정적 노드/텍스트 편집 데이터는 그대로 유지해 저장 데이터와 visitor preview를 섞지 않음.
+- admin-builder smoke에 인사이트 preview 표시, `다음` 클릭 시 `2 / N` 전환과 첫 글 제목 변경, `이전` 복귀 검증을 추가.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... tests/builder-editor --workers=1` ✅ (21/21, sandbox Chromium launch issue 때문에 외부 실행으로 검증)
+
+메모:
+- 사용자가 지적한 "원래 홈페이지 기능이 편집기 안에 다 안 들어온다" 문제 중 홈 칼럼/인사이트 페이지 이동 동작을 보강.
+- 다음 우선순위는 `CODEX-GOAL-WIX-PARITY-COMPLETE.md` 기준으로 editor-only polish와 장기 PR #0~#20 범위를 분리해, 먼저 실제 사이트 기능 누락/편집 가능성 갭을 감사하는 것.

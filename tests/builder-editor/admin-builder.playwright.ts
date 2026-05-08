@@ -382,6 +382,18 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(page.locator('[data-node-id="home-insights-page-indicator"]').first()).toContainText(/1 \/ [2-9]/);
     await expect(page.locator('[data-node-id="home-insights-item-2-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-item-3-title"]')).toHaveCount(0);
+    const insightsPreview = page.locator('[data-builder-insights-preview="true"]').first();
+    await expect(insightsPreview).toBeVisible();
+    await expect(insightsPreview.locator('.insights-page-indicator').first()).toContainText(/1 \/ [2-9]/);
+    const firstPreviewTitle = (await insightsPreview.locator('.insights-list-title').first().innerText()).trim();
+    expect(firstPreviewTitle.length).toBeGreaterThan(0);
+    await insightsPreview.getByRole('button', { name: '다음' }).click();
+    await expect(insightsPreview.locator('.insights-page-indicator').first()).toContainText(/2 \/ [2-9]/);
+    await expect.poll(async () => (
+      (await insightsPreview.locator('.insights-list-title').first().innerText()).trim()
+    )).not.toBe(firstPreviewTitle);
+    await insightsPreview.getByRole('button', { name: '이전' }).click();
+    await expect(insightsPreview.locator('.insights-page-indicator').first()).toContainText(/1 \/ [2-9]/);
     await page.locator('[data-node-id="home-insights-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
     const selectedHomeInsightsTitle = page.locator('[data-node-id="home-insights-title"][class*="nodeSelected"]').first();
     await expect(selectedHomeInsightsTitle.getByRole('button', { name: '글 추가/수정' })).toBeVisible();

@@ -161,6 +161,37 @@ function findNavigationItem(items: BuilderNavItem[], itemId: string): BuilderNav
   return undefined;
 }
 
+function removeNavigationItem(items: BuilderNavItem[], itemId: string): BuilderNavItem[] {
+  return items
+    .filter((item) => item.id !== itemId)
+    .map((item) => (
+      item.children?.length
+        ? { ...item, children: removeNavigationItem(item.children, itemId) }
+        : item
+    ));
+}
+
+function moveNavigationItem(
+  items: BuilderNavItem[],
+  itemId: string,
+  direction: 'up' | 'down',
+): BuilderNavItem[] {
+  const index = items.findIndex((item) => item.id === itemId);
+  if (index >= 0) {
+    const targetIndex = direction === 'up' ? index - 1 : index + 1;
+    if (targetIndex < 0 || targetIndex >= items.length) return items;
+    const next = [...items];
+    [next[index], next[targetIndex]] = [next[targetIndex], next[index]];
+    return next;
+  }
+
+  return items.map((item) => (
+    item.children?.length
+      ? { ...item, children: moveNavigationItem(item.children, itemId, direction) }
+      : item
+  ));
+}
+
 export default function NavigationEditor({
   locale,
   focusItemId,
@@ -248,24 +279,35 @@ export default function NavigationEditor({
     saveNav(next);
   };
 
+  const handleAddChild = (parentId: string) => {
+    const id = `${parentId}-child-${Date.now().toString(36)}`;
+    const child: BuilderNavItem = {
+      id,
+      label: { ko: '새 하위 메뉴', 'zh-hant': '新子選單', en: 'New submenu item' },
+      href: '/',
+      pageId: `external-${id}`,
+    };
+    const next = updateNavigationItem(items, parentId, (item) => ({
+      ...item,
+      children: [...(item.children ?? []), child],
+    }));
+    setItems(next);
+    setEditingId(id);
+    setEditLabel(labelForLocale(child, editorLocale));
+    setEditHref(child.href);
+    saveNav(next);
+    window.setTimeout(() => labelInputRef.current?.focus(), 0);
+  };
+
   const handleDelete = (id: string) => {
-    const next = items.filter((item) => item.id !== id);
+    const next = removeNavigationItem(items, id);
     setItems(next);
     saveNav(next);
   };
 
-  const handleMoveUp = (index: number) => {
-    if (index === 0) return;
-    const next = [...items];
-    [next[index - 1], next[index]] = [next[index], next[index - 1]];
-    setItems(next);
-    saveNav(next);
-  };
-
-  const handleMoveDown = (index: number) => {
-    if (index >= items.length - 1) return;
-    const next = [...items];
-    [next[index], next[index + 1]] = [next[index + 1], next[index]];
+  const handleMove = (id: string, direction: 'up' | 'down') => {
+    const next = moveNavigationItem(items, id, direction);
+    if (next === items) return;
     setItems(next);
     saveNav(next);
   };
@@ -307,7 +349,7 @@ export default function NavigationEditor({
   };
 
   const renderEditForm = (itemId: string) => (
-    <div key={itemId} style={editFormStyle}>
+    <div key={itemId} style={editFormStyle} data-builder-nav-edit-id={itemId}>
       <div style={editRowStyle}>
         <span style={editLabelStyle}>라벨</span>
         <input
@@ -369,23 +411,26 @@ export default function NavigationEditor({
           항목 없음
         </div>
       ) : (
-        items.map((item, index) =>
+        items.map((item) =>
           editingId === item.id ? (
             renderEditForm(item.id)
           ) : (
             <div key={item.id}>
-              <div style={itemStyle}>
+              <div style={itemStyle} data-builder-nav-item-row={item.id}>
                 <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                   {labelForLocale(item, editorLocale)}
                 </span>
                 <span style={{ fontSize: '0.68rem', color: '#94a3b8', flexShrink: 0 }}>
                   {item.href}
                 </span>
-                <button type="button" style={smallBtnStyle} onClick={() => handleMoveUp(index)} title="위로">
+                <button type="button" style={smallBtnStyle} onClick={() => handleMove(item.id, 'up')} title="위로">
                   ↑
                 </button>
-                <button type="button" style={smallBtnStyle} onClick={() => handleMoveDown(index)} title="아래로">
+                <button type="button" style={smallBtnStyle} onClick={() => handleMove(item.id, 'down')} title="아래로">
                   ↓
+                </button>
+                <button type="button" style={smallBtnStyle} onClick={() => handleAddChild(item.id)} title="하위 메뉴 추가">
+                  + Mega
                 </button>
                 <button type="button" style={smallBtnStyle} onClick={() => startEdit(item)} title="편집">
                   ✎
@@ -400,7 +445,7 @@ export default function NavigationEditor({
                     editingId === child.id ? (
                       renderEditForm(child.id)
                     ) : (
-                      <div key={child.id} style={childItemStyle}>
+                      <div key={child.id} style={childItemStyle} data-builder-nav-item-row={child.id}>
                         <span style={childBadgeStyle}>Mega</span>
                         <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                           {labelForLocale(child, editorLocale)}
@@ -408,8 +453,17 @@ export default function NavigationEditor({
                         <span style={{ fontSize: '0.68rem', color: '#94a3b8', flexShrink: 0 }}>
                           {child.href}
                         </span>
+                        <button type="button" style={smallBtnStyle} onClick={() => handleMove(child.id, 'up')} title="Mega 위로">
+                          ↑
+                        </button>
+                        <button type="button" style={smallBtnStyle} onClick={() => handleMove(child.id, 'down')} title="Mega 아래로">
+                          ↓
+                        </button>
                         <button type="button" style={smallBtnStyle} onClick={() => startEdit(child)} title="Mega item">
                           ✎
+                        </button>
+                        <button type="button" style={dangerBtnStyle} onClick={() => handleDelete(child.id)} title="Mega 삭제">
+                          ✕
                         </button>
                       </div>
                     )

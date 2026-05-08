@@ -1716,3 +1716,18 @@
 - 사용자가 지적한 "맨위 메뉴 눌렀을 때 다른 메뉴 나오는 칸"은 이제 클릭으로 열어 둔 채 parent/child 메뉴 데이터를 편집하는 흐름으로 처리한다.
 - full builder-editor에서 cascade delete/undo final reload는 Pages drawer 선택 helper 대신 pageId direct-load로 검증해, 페이지 선택 UI 타이밍과 저장 persistence 검증을 분리.
 - `npm run build` 후 `.next` 삭제 및 `npm run dev` 재시작. `/ko` 200, `/ko/admin-builder` Basic Auth 401 정상 확인.
+
+## 2026-05-08 Codex /goal G-Editor mega child CRUD follow-up
+
+범위:
+- Navigation drawer에서 parent 메뉴마다 `+ Mega` 액션을 추가해 dropdown child 항목을 직접 만들 수 있게 함.
+- Mega child row에도 위/아래 이동, 편집, 삭제 컨트롤을 붙여 Wix식으로 dropdown 안의 항목을 정리할 수 있게 함.
+- child row에 `data-builder-nav-item-row` hook을 추가해 자동 검증과 편집 포커스를 안정화.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --workers=1 --grep "persists Navigation edits"` ✅
+
+메모:
+- `design-pool.playwright.ts`가 실제 Navigation UI에서 `nav-services`에 child 추가 → label/href 저장 → editor mega panel 반영 → API children 확인 → child 삭제 → API 제거까지 검증.

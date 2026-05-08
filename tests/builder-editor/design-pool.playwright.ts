@@ -762,6 +762,9 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       const resolvedTargetIndex = targetIndex >= 0 ? targetIndex : Math.max(0, originalNavigation.length - 1);
       const targetItem = originalNavigation[resolvedTargetIndex];
       expect(targetItem?.id).toBeTruthy();
+      const servicesIndex = originalNavigation.findIndex((item) => item.id === 'nav-services');
+      const childLabel = `드롭다운 검증 ${token}`;
+      const childHref = `/ko/${slug}#dropdown`;
 
       const createResponse = await page.request.post('/api/builder/site/pages', {
         data: {
@@ -815,6 +818,66 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       const editorHeaderLink = page.locator(`[data-builder-nav-item-id="${targetItem!.id}"]`).first();
       await expect(editorHeaderLink).toHaveText(navLabel);
       await expect(editorHeaderLink).toHaveAttribute('href', navHref);
+
+      if (servicesIndex >= 0) {
+        const addChildResponsePromise = page.waitForResponse((response) => (
+          response.url().includes('/api/builder/site/navigation')
+          && response.request().method() === 'PUT'
+        ));
+        await navDrawer.getByTitle('하위 메뉴 추가').nth(servicesIndex).click();
+        expect((await addChildResponsePromise).status()).toBe(200);
+        await expect(labelInput).toBeVisible();
+        await labelInput.fill(childLabel);
+        await hrefInput.fill(childHref);
+        const saveChildResponsePromise = page.waitForResponse((response) => (
+          response.url().includes('/api/builder/site/navigation')
+          && response.request().method() === 'PUT'
+        ));
+        await navDrawer.getByRole('button', { name: '저장' }).click();
+        expect((await saveChildResponsePromise).status()).toBe(200);
+        await expect(navDrawer.getByText('저장 중...')).toHaveCount(0);
+
+        const servicesLink = page.locator('[data-builder-nav-item-id="nav-services"]').first();
+        await servicesLink.hover();
+        await expect(page.locator('.builder-site-header .mega-panel.active').first()).toContainText(childLabel);
+
+        const navWithChildResponse = await page.request.get('/api/builder/site/navigation?locale=ko');
+        expect(navWithChildResponse.status()).toBe(200);
+        const navWithChildPayload = (await navWithChildResponse.json()) as {
+          navigation?: Array<{
+            id: string;
+            children?: Array<{ label: string | Record<string, string>; href: string }>;
+          }>;
+        };
+        const servicesWithChild = navWithChildPayload.navigation?.find((item) => item.id === 'nav-services');
+        expect(servicesWithChild?.children?.some((child) => (
+          child.href === childHref
+          && (typeof child.label === 'string' ? child.label : child.label.ko) === childLabel
+        ))).toBe(true);
+
+        const childRow = navDrawer
+          .locator('[data-builder-nav-item-row^="nav-services-child-"]')
+          .filter({ hasText: childLabel })
+          .first();
+        const deleteChildResponsePromise = page.waitForResponse((response) => (
+          response.url().includes('/api/builder/site/navigation')
+          && response.request().method() === 'PUT'
+        ));
+        await childRow.getByTitle('Mega 삭제').click();
+        expect((await deleteChildResponsePromise).status()).toBe(200);
+        await expect(navDrawer.getByText('저장 중...')).toHaveCount(0);
+
+        const navAfterDeleteResponse = await page.request.get('/api/builder/site/navigation?locale=ko');
+        expect(navAfterDeleteResponse.status()).toBe(200);
+        const navAfterDeletePayload = (await navAfterDeleteResponse.json()) as {
+          navigation?: Array<{
+            id: string;
+            children?: Array<{ href: string }>;
+          }>;
+        };
+        const servicesAfterDelete = navAfterDeletePayload.navigation?.find((item) => item.id === 'nav-services');
+        expect(servicesAfterDelete?.children?.some((child) => child.href === childHref)).toBe(false);
+      }
 
       await expect.poll(async () => {
         const publicHtmlResponse = await page.request.get(`/ko/${slug}`);

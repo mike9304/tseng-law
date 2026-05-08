@@ -1731,3 +1731,18 @@
 
 메모:
 - `design-pool.playwright.ts`가 실제 Navigation UI에서 `nav-services`에 child 추가 → label/href 저장 → editor mega panel 반영 → API children 확인 → child 삭제 → API 제거까지 검증.
+
+## 2026-05-09 Codex /goal G-Editor mega child smoke stabilization
+
+범위:
+- admin-builder smoke의 mega child 확인을 일반 텍스트 locator가 아니라 `data-builder-nav-item-row="nav-services-investment"` row 기준으로 좁힘.
+- 숨겨진 중복 텍스트가 먼저 잡혀 실패하던 회귀를 제거하고, Navigation drawer의 실제 child row가 `Mega` chip과 `투자·법인설립` label을 포함하는지 검증.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... tests/builder-editor --workers=1` ✅ (21/21)
+
+메모:
+- 현재 자동 검증 기준 editor core는 통과 상태지만, 사용자가 지적한 원본 tseng-law.com의 상태형 섹션 parity는 별도 후속으로 계속 진행. Green 승격과 goal complete는 사용자 직접 5분 검증 전까지 대기.

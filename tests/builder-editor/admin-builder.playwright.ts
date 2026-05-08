@@ -503,8 +503,10 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(servicesMegaPanel).toContainText('투자·법인설립');
     await expect(servicesMegaPanel.getByRole('button', { name: 'Edit dropdown' })).toBeVisible();
     await expect(builderHeader.locator('[data-builder-nav-item-id="nav-services-investment"]').first()).toBeVisible();
-    await expect(navDrawer.getByText('Mega').first()).toBeVisible();
-    await expect(navDrawer.getByText('투자·법인설립')).toBeVisible();
+    const servicesInvestmentRow = navDrawer.locator('[data-builder-nav-item-row="nav-services-investment"]').first();
+    await expect(servicesInvestmentRow).toBeVisible();
+    await expect(servicesInvestmentRow).toContainText('Mega');
+    await expect(servicesInvestmentRow).toContainText('투자·법인설립');
     await page.mouse.move(28, 220);
     await expect(headerEditMenuButton).toBeVisible();
     const menuItemId = await editableMenuItem.getAttribute('data-builder-nav-item-id');

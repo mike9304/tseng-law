@@ -1751,6 +1751,62 @@
   border-radius: 999px;
 }
 
+.stage :global([data-builder-section-template='services'][data-section-variant='glass'] [data-node-id='home-services-card-1']),
+.stage :global([data-builder-section-template='services'][data-section-variant='glass'] [data-node-id='home-services-card-3']),
+.stage :global([data-builder-section-template='services'][data-section-variant='glass'] [data-node-id='home-services-card-5']) {
+  left: 28px !important;
+  width: 1108px !important;
+}
+
+.stage :global([data-builder-section-template='services'][data-section-variant='floating'] [data-node-id='home-services-card-0']),
+.stage :global([data-builder-section-template='services'][data-section-variant='floating'] [data-node-id='home-services-card-2']),
+.stage :global([data-builder-section-template='services'][data-section-variant='floating'] [data-node-id='home-services-card-4']) {
+  left: 18px !important;
+  width: 1094px !important;
+}
+
+.stage :global([data-builder-section-template='faq'][data-section-variant='elevated'] [data-node-id='home-faq-item-1']),
+.stage :global([data-builder-section-template='faq'][data-section-variant='elevated'] [data-node-id='home-faq-item-3']),
+.stage :global([data-builder-section-template='faq'][data-section-variant='elevated'] [data-node-id='home-faq-item-5']),
+.stage :global([data-builder-section-template='faq'][data-section-variant='glass'] [data-node-id='home-faq-item-1']),
+.stage :global([data-builder-section-template='faq'][data-section-variant='glass'] [data-node-id='home-faq-item-3']),
+.stage :global([data-builder-section-template='faq'][data-section-variant='glass'] [data-node-id='home-faq-item-5']) {
+  left: 36px !important;
+  width: 1100px !important;
+}
+
+.stage :global([data-builder-section-template='insights'][data-section-variant='floating'] [data-node-id='home-insights-featured']) {
+  left: 516px !important;
+}
+
+.stage :global([data-builder-section-template='insights'][data-section-variant='floating'] [data-node-id='home-insights-list-wrap']) {
+  left: 0 !important;
+}
+
+.stage :global([data-builder-section-template='insights'][data-section-variant='glass'] [data-node-id='home-insights-list-wrap']) {
+  left: 578px !important;
+  top: 46px !important;
+}
+
+.stage :global([data-builder-section-template='offices'][data-section-variant='floating'] [data-node-id^='home-offices-layout-'][data-node-id$='-map']) {
+  left: 476px !important;
+}
+
+.stage :global([data-builder-section-template='offices'][data-section-variant='floating'] [data-node-id^='home-offices-layout-'][data-node-id$='-card']) {
+  left: 0 !important;
+}
+
+.stage :global([data-builder-section-template='offices'][data-section-variant='glass'] [data-node-id^='home-offices-layout-'][data-node-id$='-map']) {
+  width: 1136px !important;
+}
+
+.stage :global([data-builder-section-template='offices'][data-section-variant='glass'] [data-node-id^='home-offices-layout-'][data-node-id$='-card']) {
+  left: 48px !important;
+  top: 48px !important;
+  width: 420px !important;
+  height: 324px !important;
+}
+
 .topRuler {
   position: absolute;
   inset: 0 0 auto 0;

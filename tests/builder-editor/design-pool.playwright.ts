@@ -57,7 +57,7 @@ function makePublicSectionTemplateDocument(token: string) {
         },
       },
       {
-        id: `section-template-faq-item-${token}`,
+        id: 'home-faq-item-1',
         kind: 'container',
         parentId: 'home-faq-root',
         rect: { x: 0, y: 0, width: 1136, height: 96 },
@@ -82,7 +82,7 @@ function makePublicSectionTemplateDocument(token: string) {
       {
         id: `section-template-faq-text-${token}`,
         kind: 'text',
-        parentId: `section-template-faq-item-${token}`,
+        parentId: 'home-faq-item-1',
         rect: { x: 24, y: 24, width: 640, height: 32 },
         style: baseNodeStyle,
         zIndex: 2,
@@ -590,6 +590,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(servicesRoot).toHaveAttribute('data-section-variant', 'glass');
     await expect(servicesRoot).toContainText('주요 서비스');
     await expect(servicesRoot.locator('.services-detail-card').first()).toBeVisible();
+    await expect(servicesRoot.locator('[data-node-id="home-services-card-1"]').first()).toHaveCSS('left', '28px');
 
     await selectLayerNode(page, 'home-faq-root', 'container');
     const faqRoot = page.locator('[data-node-id="home-faq-root"]').first();
@@ -608,6 +609,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(designDrawer).toContainText('FAQ의 글, 주소, 링크 데이터는 그대로');
     await designDrawer.getByRole('button', { name: /Elevated/ }).click();
     await expect(faqRoot).toHaveAttribute('data-section-variant', 'elevated');
+    await expect(faqRoot.locator('[data-node-id="home-faq-item-1"]').first()).toHaveCSS('left', '36px');
 
     await expect.poll(async () => {
       const draftResponse = await page.request.get(`/api/builder/site/pages/${homePageId}/draft?locale=ko`);
@@ -664,6 +666,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       const faqItem = sectionRoot.locator('.faq-item').first();
       await expect(faqItem).toBeVisible();
       await expect(faqItem).toHaveCSS('backdrop-filter', /blur\(14px\)/);
+      await expect(sectionRoot.locator('[data-node-id="home-faq-item-1"]').first()).toHaveCSS('left', '36px');
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {

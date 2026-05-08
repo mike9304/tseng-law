@@ -1800,3 +1800,21 @@
 
 메모:
 - 사용자가 요청한 "템플릿 변경해도 데이터는 유지하고 디자인만 교체" 흐름의 1차 범위를 공개 렌더까지 닫음. 아직 grid/timeline/magazine 같은 구조 variant template gallery는 후속 확장으로 남음.
+
+## 2026-05-09 Codex /goal G-Editor structural section variants
+
+범위:
+- 기존 `content.variant` 계약은 유지하면서 `services / insights / FAQ / offices` 섹션에 배치형 variant CSS를 추가.
+- services glass/floating은 카드 좌우 rhythm을 바꾸고, FAQ elevated/glass는 교차 indent를 적용.
+- insights floating/glass는 featured/list 위치를 바꿔 magazine-like 배치 차이를 만들고, offices floating/glass는 지도/주소 카드 위치를 바꿔 overlay/side-card 느낌을 제공.
+- 공개 renderer inline CSS에도 같은 구조 variant 규칙을 추가해 editor와 published page가 같은 템플릿 결과를 보여주게 함.
+- Playwright가 editor quick switcher와 public page에서 variant attr뿐 아니라 실제 좌표 CSS까지 확인하도록 보강.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "switches stateful home section template variants"` ✅
+- `BASE_URL=http://localhost:3000 ... design-pool.playwright.ts --grep "publishes stateful section template variants"` ✅
+
+메모:
+- 여전히 full template gallery/구조 재생성은 아님. 다만 사용자가 말한 "누르면 아래로 글 내려오는 것 같은 섹션도 디자인 템플릿으로 쉽게 바꾸기"의 동작은 editor/public 양쪽에서 데이터 보존 + 표면/배치 변경까지 가능해짐.

@@ -398,7 +398,7 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
         hasSibling: true,
       });
 
-      await openBuilderPageFromPagesPanel(page, title);
+      await openBuilderPageById(page, pageId!, 'cascade-reload');
       await expect(page.locator(`[data-node-id="${childId}"]`).first()).toContainText(childText);
       await expect(page.locator(`[data-node-id="${siblingId}"]`).first()).toContainText(siblingText);
     } finally {

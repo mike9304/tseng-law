@@ -1707,6 +1707,12 @@
 - `npm run typecheck` ✅
 - `npm run lint` ✅ (기존 `<img>` warnings only)
 - `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... tests/builder-editor --workers=1` ✅ (21/21)
+- `npm run test:unit` ✅ (21 files, 712 tests)
+- `npm run security:builder-routes` ✅ (71 builder route files, 61 mutation handlers covered)
+- `npm run build` ✅ (Google Fonts stylesheet 최적화 download warning only)
 
 메모:
 - 사용자가 지적한 "맨위 메뉴 눌렀을 때 다른 메뉴 나오는 칸"은 이제 클릭으로 열어 둔 채 parent/child 메뉴 데이터를 편집하는 흐름으로 처리한다.
+- full builder-editor에서 cascade delete/undo final reload는 Pages drawer 선택 helper 대신 pageId direct-load로 검증해, 페이지 선택 UI 타이밍과 저장 persistence 검증을 분리.
+- `npm run build` 후 `.next` 삭제 및 `npm run dev` 재시작. `/ko` 200, `/ko/admin-builder` Basic Auth 401 정상 확인.

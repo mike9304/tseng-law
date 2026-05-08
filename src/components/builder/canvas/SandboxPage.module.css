@@ -2447,13 +2447,43 @@
   box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.16);
 }
 
+.nodeMapEditHint {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 11;
+  display: inline-grid;
+  gap: 1px;
+  min-width: 118px;
+  padding: 7px 10px;
+  border: 1px solid color-mix(in srgb, var(--editor-accent, #116dff) 28%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--editor-panel-elevated, #fff) 92%, transparent);
+  box-shadow: var(--editor-shadow-popover, 0 16px 36px rgba(15, 23, 42, 0.18));
+  color: var(--editor-fg-primary, #0f172a);
+  pointer-events: none;
+}
+
+.nodeMapEditHint span {
+  color: var(--editor-accent, #116dff);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.nodeMapEditHint strong {
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
 .nodeMapQuickEdit {
   position: absolute;
   left: 14px;
   top: 14px;
   z-index: 13;
   display: grid;
-  width: clamp(286px, 58%, 380px);
+  width: clamp(320px, 62%, 420px);
   max-width: calc(100% - 28px);
   gap: 8px;
   padding: 12px;
@@ -2477,6 +2507,12 @@
   font-size: 11px;
 }
 
+.nodeMapQuickEditHeader div {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
 .nodeMapQuickEditHeader span {
   color: var(--editor-accent, #116dff);
   font-weight: 850;
@@ -2490,6 +2526,23 @@
   font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.nodeMapHeaderAction {
+  min-height: 28px;
+  flex: 0 0 auto;
+  padding: 0 10px;
+  border: 1px solid var(--editor-accent, #116dff);
+  border-radius: 999px;
+  background: var(--editor-accent, #116dff);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.nodeMapHeaderAction:hover {
+  box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.16);
 }
 
 .nodeMapPresetGrid {

@@ -208,6 +208,7 @@ export default function CanvasNode({
 }: CanvasNodeProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [mapQuickAddressDraft, setMapQuickAddressDraft] = useState('');
   const [rotationReadout, setRotationReadout] = useState<{ degrees: number; x: number; y: number } | null>(null);
   const [animationPreviewPhase, setAnimationPreviewPhase] = useState<AnimationPreviewPhase>(null);
   const component = getComponent(node.kind);
@@ -227,6 +228,8 @@ export default function CanvasNode({
   const effectiveRect = resolveViewportRect(node, viewport);
   const isHiddenAtViewport = viewport !== 'desktop' && resolveViewportHidden(node, viewport);
   const effectiveFontSize = resolveViewportFontSize(node, viewport);
+  const currentMapAddress = node.kind === 'map' ? mapAddressValue(node) : '';
+  const currentMapZoom = node.kind === 'map' ? mapZoomValue(node) : 15;
 
   const handleRotationPointerDown = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
@@ -423,7 +426,8 @@ export default function CanvasNode({
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
   const allNodes = useBuilderCanvasStore((s) => s.document?.nodes ?? []);
   const nodesById = new Map(allNodes.map((candidate) => [candidate.id, candidate]));
-  const showMapQuickEdit = node.kind === 'map' && isInteractive && !node.locked;
+  const showMapQuickEdit = selected && node.kind === 'map' && isInteractive && !node.locked;
+  const showMapEditHint = !selected && isHovered && node.kind === 'map' && isInteractive && !node.locked;
   const mapQuickEdit = showMapQuickEdit
     ? {
         office: isOfficeMapTarget(node)
@@ -494,6 +498,11 @@ export default function CanvasNode({
     : faqItemMatch
       ? selectedFaqItems.has(faqItemMatch[1]) || (faqItemMatch[1] === '0' && selectedFaqItems.size === 0 && !selectionIsInside('home-faq-list'))
       : false;
+
+  useEffect(() => {
+    if (node.kind !== 'map') return;
+    setMapQuickAddressDraft(currentMapAddress);
+  }, [currentMapAddress, node.id, node.kind]);
 
   const updateMapAddress = useCallback(
     (nextAddress: string, nextMapsUrl = googleMapsSearchUrl(nextAddress)) => {
@@ -811,6 +820,16 @@ export default function CanvasNode({
           </button>
         </div>
       ) : null}
+      {showMapEditHint ? (
+        <div
+          className={styles.nodeMapEditHint}
+          data-builder-map-edit-hint="true"
+          aria-hidden
+        >
+          <span>Google Map</span>
+          <strong>위치 변경</strong>
+        </div>
+      ) : null}
       {mapQuickEdit ? (
         <div
           className={`${styles.nodeMapQuickEdit} ${officeQuickEdit ? styles.nodeMapQuickEditSynced : ''}`}
@@ -829,8 +848,21 @@ export default function CanvasNode({
           }}
         >
           <div className={styles.nodeMapQuickEditHeader}>
-            <span>Google Map</span>
-            <strong>{officeQuickEdit ? '사무소 위치 편집' : '위치 편집'}</strong>
+            <div>
+              <span>Google Map</span>
+              <strong>{officeQuickEdit ? '사무소 위치 편집' : '위치 편집'}</strong>
+            </div>
+            <button
+              type="button"
+              className={styles.nodeMapHeaderAction}
+              aria-label="Focus quick location field"
+              onClick={() => {
+                mapQuickAddressRef.current?.focus();
+                mapQuickAddressRef.current?.select();
+              }}
+            >
+              위치 변경
+            </button>
           </div>
           <div className={styles.nodeMapPresetGrid}>
             {currentOfficeQuickPresets().map((preset) => (
@@ -838,12 +870,14 @@ export default function CanvasNode({
                 key={preset.title}
                 type="button"
                 className={`${styles.nodeMapPresetButton} ${
-                  mapAddressValue(node) === preset.address ? styles.nodeMapPresetButtonActive : ''
+                  currentMapAddress === preset.address ? styles.nodeMapPresetButtonActive : ''
                 }`}
-                aria-pressed={mapAddressValue(node) === preset.address}
+                aria-pressed={currentMapAddress === preset.address}
                 onClick={() => {
                   if (!selected) onSelect(node.id, false);
+                  setMapQuickAddressDraft(preset.address);
                   applyMapPreset(preset);
+                  window.requestAnimationFrame(() => mapQuickAddressRef.current?.focus());
                 }}
               >
                 {preset.title}
@@ -853,29 +887,45 @@ export default function CanvasNode({
           <label className={styles.nodeMapAddressField}>
             <span>주소</span>
             <textarea
-              key={`${node.id}-${mapAddressValue(node)}`}
               ref={mapQuickAddressRef}
               aria-label="Map quick address"
               rows={2}
-              defaultValue={mapAddressValue(node)}
+              value={mapQuickAddressDraft}
+              placeholder="주소 또는 지역명"
+              onChange={(event) => {
+                const nextAddress = event.currentTarget.value;
+                setMapQuickAddressDraft(nextAddress);
+                updateMapAddress(nextAddress);
+              }}
               onBlur={(event) => updateMapAddress(event.currentTarget.value)}
+              onKeyDown={(event) => {
+                if (event.key !== 'Enter' || event.shiftKey) return;
+                event.preventDefault();
+                updateMapAddress(event.currentTarget.value);
+                event.currentTarget.blur();
+              }}
             />
           </label>
           <button
             type="button"
             className={styles.nodeMapApplyButton}
-            onClick={() => updateMapAddress(mapQuickAddressRef.current?.value ?? mapAddressValue(node))}
+            onClick={() => {
+              const nextAddress = mapQuickAddressRef.current?.value ?? mapQuickAddressDraft;
+              setMapQuickAddressDraft(nextAddress);
+              updateMapAddress(nextAddress);
+              mapQuickAddressRef.current?.focus();
+            }}
           >
-            주소 적용
+            위치 적용
           </button>
           <label className={styles.nodeMapZoomField}>
-            <span>줌 {mapZoomValue(node)}</span>
+            <span>줌 {currentMapZoom}</span>
             <div className={styles.nodeMapZoomRow}>
               <button
                 type="button"
                 aria-label="Decrease quick map zoom"
-                disabled={mapZoomValue(node) <= 1}
-                onClick={() => updateMapZoom(mapZoomValue(node) - 1)}
+                disabled={currentMapZoom <= 1}
+                onClick={() => updateMapZoom(currentMapZoom - 1)}
               >
                 -
               </button>
@@ -885,15 +935,15 @@ export default function CanvasNode({
                 max={20}
                 step={1}
                 aria-label="Map quick zoom"
-                value={mapZoomValue(node)}
+                value={currentMapZoom}
                 onInput={(event) => updateMapZoom(Number(event.currentTarget.value))}
                 onChange={(event) => updateMapZoom(Number(event.target.value))}
               />
               <button
                 type="button"
                 aria-label="Increase quick map zoom"
-                disabled={mapZoomValue(node) >= 20}
-                onClick={() => updateMapZoom(mapZoomValue(node) + 1)}
+                disabled={currentMapZoom >= 20}
+                onClick={() => updateMapZoom(currentMapZoom + 1)}
               >
                 +
               </button>
@@ -945,8 +995,9 @@ export default function CanvasNode({
             event.stopPropagation();
             if (event.button !== 0) return;
             const additive = event.metaKey || event.ctrlKey || event.shiftKey;
+            const wasSelected = selected;
             onSelect(node.id, additive);
-            if (additive) return;
+            if (additive || !wasSelected) return;
             onMoveStart(node.id, event);
           }}
           onClick={(event) => {

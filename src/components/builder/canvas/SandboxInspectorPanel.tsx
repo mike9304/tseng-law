@@ -960,6 +960,11 @@ export default function SandboxInspectorPanel({
                               if (officeQuickEdit.addressNode) {
                                 updateNodeContent(officeQuickEdit.addressNode.id, { text: nextAddress });
                               }
+                              if (officeQuickEdit.mapLinkNode) {
+                                updateNodeContent(officeQuickEdit.mapLinkNode.id, {
+                                  href: googleMapsSearchUrl(nextAddress),
+                                });
+                              }
                             }}
                           />
                         </div>

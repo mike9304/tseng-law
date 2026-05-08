@@ -1611,3 +1611,23 @@
 - W22/W23, W26~W30의 전용 Playwright 회귀 검증과 full unit/security/build gate를 한 번 더 통과시킴.
 - build 중 Google Fonts stylesheet 최적화 다운로드 warning이 있었지만 production build 자체는 성공.
 - 아직 goal complete 아님: 사용자의 5분 직접 검증, M8 최종 Playwright 전체 묶음 정리, 체크포인트 green 승격 기준 확인이 남아 있음.
+
+## 2026-05-08 Codex /goal G-Editor map location UX follow-up
+
+범위:
+- 지도 노드 첫 클릭이 곧바로 drag처럼 느껴지지 않게, 미선택 지도는 hover 시 `Google Map / 위치 변경` 힌트를 보이고 첫 클릭은 선택 + 위치 패널 열기로만 처리.
+- 선택된 지도 quick panel은 Wix식 `위치 변경` 액션, 사무소 프리셋, 주소/지역명 입력, 줌 조절을 한곳에 모아 표시.
+- 주소 입력은 더 이상 blur/적용 버튼을 기다리지 않고 typing 즉시 Google Map iframe, 사무소 주소 카드, 길찾기 URL에 동기화.
+- Inspector의 Office sync 주소 변경도 길찾기 URL을 자동 재생성해, 지도와 카드만 바뀌고 버튼 링크가 남는 불일치를 제거.
+- 깨진 `.next` dev cache로 `/ko`와 `/ko/admin-builder`가 500을 내던 상태를 정리하고 3000 dev server를 재시작.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 ... admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... office-map-public.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 ... tests/builder-editor --workers=1` ✅ (21/21, sandbox Chromium launch issue 때문에 외부 실행으로 검증)
+
+메모:
+- 일반 map은 hover hint → 첫 클릭 quick panel → 주소 즉시 반영 → Content inspector/reload 유지 경로까지 검증.
+- 사무소 map은 quick panel/Inspector에서 주소 변경 시 지도, 주소 카드, 길찾기 링크가 함께 맞춰짐.

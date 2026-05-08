@@ -416,11 +416,14 @@ test.describe('/ko/admin-builder office map public reflection', () => {
 
       const mapNode = page.locator(`[data-node-id="${mapId}"]`).first();
       await expect(mapNode).toBeVisible();
+      await mapNode.hover();
+      await expect(mapNode.locator('[data-builder-map-edit-hint="true"]').first()).toBeVisible();
+      await mapNode.click({ position: { x: 24, y: 24 } });
 
       const quickEdit = mapNode.locator('[data-builder-map-quick-edit="true"]').first();
       await expect(quickEdit).toBeVisible();
       await quickEdit.getByLabel('Map quick address').fill(quickAddress);
-      await quickEdit.getByRole('button', { name: '주소 적용' }).click();
+      await quickEdit.getByRole('button', { name: '위치 적용' }).click();
       for (let i = 0; i < 5; i += 1) {
         await quickEdit.getByRole('button', { name: 'Increase quick map zoom' }).click();
       }

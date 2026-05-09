@@ -80,3 +80,69 @@ Created: 2026-05-09T12:52:13.760Z
 - 사용자 피드백 흡수:
   - "렉걸리듯이 흔들림", "사진/칼럼 클릭하면 백지"류 피드백에 직접 연결되는 hot path와 test polling 안정성을 먼저 닫았다.
 - 다음 마일스톤: M02
+
+## M02 — Hot files split
+
+- 시작/종료: 2026-05-09T22:34:00+09:00 / 2026-05-09T23:24:00+09:00
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxPage.tsx` — shell orchestration을 유지하고 rail/workspace/modals/site-state hook을 분리해 774 LOC로 축소
+  - `src/components/builder/canvas/CanvasContainer.tsx` — context menu, stage nodes, rulers, toolbar, zoom dock, interaction hooks를 분리해 779 LOC로 축소
+  - `src/components/builder/canvas/CanvasNode.tsx` — badge, quick panels, insights preview, selection overlay, rotation hook, node util을 분리해 794 LOC로 축소
+  - `src/components/builder/canvas/SandboxPage.module.css` — node badge/quick panels/selection overlay/insights preview CSS를 component CSS module로 분리해 4189 LOC로 축소
+  - `src/components/builder/canvas/__tests__/design-pool-shells.test.ts` — context menu action contract가 `CanvasContextMenuLayer.tsx` split 구조도 검사하도록 갱신
+- 추가 파일:
+  - `src/components/builder/canvas/SandboxEditorRail.tsx`
+  - `src/components/builder/canvas/SandboxEditorWorkspace.tsx`
+  - `src/components/builder/canvas/SandboxModalsRoot.tsx`
+  - `src/components/builder/canvas/hooks/useSandboxSiteState.ts`
+  - `src/components/builder/canvas/CanvasContextMenuLayer.tsx`
+  - `src/components/builder/canvas/CanvasDropHighlight.tsx`
+  - `src/components/builder/canvas/CanvasOverlapPickerLayer.tsx`
+  - `src/components/builder/canvas/CanvasRulers.tsx`
+  - `src/components/builder/canvas/CanvasSelectionToolbarLayer.tsx`
+  - `src/components/builder/canvas/CanvasStageNodes.tsx`
+  - `src/components/builder/canvas/CanvasStageToolbar.tsx`
+  - `src/components/builder/canvas/CanvasZoomDock.tsx`
+  - `src/components/builder/canvas/canvasInteraction.ts`
+  - `src/components/builder/canvas/hooks/useCanvasInteractions.ts`
+  - `src/components/builder/canvas/hooks/useCanvasKeyboard.ts`
+  - `src/components/builder/canvas/hooks/useCanvasLinkEditing.ts`
+  - `src/components/builder/canvas/hooks/useCanvasSelectionBox.ts`
+  - `src/components/builder/canvas/CanvasInsightsPreview.tsx`
+  - `src/components/builder/canvas/CanvasNodeBadge.tsx`
+  - `src/components/builder/canvas/CanvasNodeQuickPanels.tsx`
+  - `src/components/builder/canvas/CanvasNodeSelectionOverlay.tsx`
+  - `src/components/builder/canvas/canvasNodeTypes.ts`
+  - `src/components/builder/canvas/canvasNodeUtils.ts`
+  - `src/components/builder/canvas/hooks/useCanvasNodeRotation.ts`
+  - `src/components/builder/canvas/CanvasInsightsPreview.module.css`
+  - `src/components/builder/canvas/CanvasNodeBadge.module.css`
+  - `src/components/builder/canvas/CanvasNodeQuickPanels.module.css`
+  - `src/components/builder/canvas/CanvasNodeSelectionOverlay.module.css`
+- 커밋:
+  - `101ca20 G-Editor: split sandbox page shell`
+  - `2217e9c G-Editor: split canvas container interactions`
+  - `9bf1338 G-Editor: split canvas node chrome`
+  - `f6d9cd5 G-Editor: split canvas node styles`
+- 의사결정:
+  - M02는 기능 변경 0 원칙을 지키기 위해 기존 동작을 보존하는 extraction만 수행했다.
+  - `CanvasNode.tsx`는 kind별 렌더 switch가 없고 registry render 구조라, 실제 소유권 기준으로 badge/quick panels/insights/selection/rotation/util을 분리했다.
+  - CSS는 전체 8+ module 목표 중 우선 hot node 영역 4개 module을 분리했다. 남은 shell/panel/modal CSS는 후속 M04/M05에서 visual baseline 도입 후 더 잘게 쪼갠다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (27 files / 740 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `NEXT_DIST_DIR=.next-m02 npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+  - `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (28 passed / 3.7m)
+  - `git diff --check` ✅
+- 리스크 / 알려진 문제:
+  - `NEXT_DIST_DIR=.next-m02 npm run build`가 Next의 tsconfig include 자동 수정을 시도했으나 검증 부산물이라 되돌렸다.
+  - M02 종료 시점의 CSS module 수는 hot node 영역 4개 추가다. 전체 goal Done when의 "CSS 컴포넌트별 8+ module"은 아직 미완이며 후속 Pre 마일스톤에서 계속 분리한다.
+  - self-check subagent는 계정 사용량 제한으로 실행 실패했다. 대신 typecheck/lint/unit/security/build/full Playwright로 로컬 검증을 대체했다.
+- 보류된 W (있을 경우):
+  - 없음
+- 사용자 피드백 흡수:
+  - "사진/칼럼 클릭하면 백지"와 지도 quick edit 관련 회귀를 막기 위해 `asset-image-workflow`, `columns-ui-workflow`, `office-map-public`, `published-interactions`를 포함한 전체 builder-editor bundle로 확인했다.
+- 다음 마일스톤: M03

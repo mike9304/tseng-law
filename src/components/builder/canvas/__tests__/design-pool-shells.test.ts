@@ -42,7 +42,10 @@ describe('D-POOL inspector and modal design contracts', () => {
 
   test('keeps expanded context menu actions and submenu support', () => {
     const menu = read('src/components/builder/canvas/ContextMenu.tsx');
-    const canvas = read('src/components/builder/canvas/CanvasContainer.tsx');
+    const canvasMenu = [
+      read('src/components/builder/canvas/CanvasContainer.tsx'),
+      read('src/components/builder/canvas/CanvasContextMenuLayer.tsx'),
+    ].join('\n');
     const css = read('src/components/builder/canvas/SandboxPage.module.css');
 
     expect(menu).toContain('children?: ContextMenuAction[]');
@@ -95,7 +98,7 @@ describe('D-POOL inspector and modal design contracts', () => {
     ];
 
     for (const key of requiredActionKeys) {
-      expect(canvas, key).toContain(`key: '${key}'`);
+      expect(canvasMenu, key).toContain(`key: '${key}'`);
     }
   });
 

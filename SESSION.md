@@ -2761,3 +2761,34 @@ Prompt-to-artifact 체크:
 - 3000번 dev server는 다시 실행 중이다.
 - M01은 W 범위 없는 선행 성능/안정성 마일스톤이라 `Wix 체크포인트.md` 변경 없음.
 - 다음 마일스톤은 M02 Hot files split. 사용자 제보의 "사진/칼럼 클릭 시 백지", "첫 화면 위치/짤림", "편집 메뉴 사라짐" 같은 런타임 결함을 M02 진입 조사에 포함한다.
+
+## 2026-05-09 Codex /goal Wix full builder M02 hot files split
+
+범위:
+- M02 Hot files split을 완료했다. 기능 추가 없이 hot file 책임을 분리했다.
+- `SandboxPage.tsx`는 rail/workspace/modals/site-state hook으로 분리해 774 LOC가 됐다.
+- `CanvasContainer.tsx`는 context menu, stage nodes, rulers, toolbar, zoom dock, interaction/keyboard/link/selection hooks로 분리해 779 LOC가 됐다.
+- `CanvasNode.tsx`는 badge, quick panels, insights preview, selection overlay, rotation hook, node utils로 분리해 794 LOC가 됐다.
+- `SandboxPage.module.css`는 node badge/quick panels/selection overlay/insights preview CSS modules로 분리해 4189 LOC가 됐다.
+- context menu action contract test가 split 후 `CanvasContextMenuLayer.tsx`를 검사하도록 갱신했다.
+
+커밋:
+- `101ca20 G-Editor: split sandbox page shell`
+- `2217e9c G-Editor: split canvas container interactions`
+- `9bf1338 G-Editor: split canvas node chrome`
+- `f6d9cd5 G-Editor: split canvas node styles`
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (27 files / 740 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `NEXT_DIST_DIR=.next-m02 npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (28 passed / 3.7m)
+- `git diff --check` ✅
+
+메모:
+- M02 종료로 M28 에디터 고도화 의존성은 해제됐다.
+- 전체 goal Done when의 "CSS 컴포넌트별 8+ module"은 아직 완전 충족이 아니므로 후속 Pre 마일스톤에서 shell/panel/modal CSS도 계속 분리한다.
+- 다음 마일스톤은 M03 보안 3건(CSRF Origin, Upstash rate limit, Asset upload validation).

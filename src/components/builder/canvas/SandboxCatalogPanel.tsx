@@ -61,129 +61,6 @@ const KIND_PRIORITY: Partial<Record<BuilderComponentCategory, string[]>> = {
 
 const FEATURED_KINDS: BuilderCanvasNodeKind[] = ['text', 'button', 'image', 'container', 'form'];
 
-const sectionGridStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-  gap: 10,
-};
-
-const categorySectionStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 10,
-  padding: '10px 0 4px',
-  borderTop: '1px solid #e2e8f0',
-};
-
-const categoryButtonStyle = (open: boolean): React.CSSProperties => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  width: '100%',
-  padding: '8px 10px',
-  border: '1px solid #dbe4ee',
-  borderRadius: 10,
-  background: open ? '#f8fbff' : '#fff',
-  color: '#0f172a',
-  cursor: 'pointer',
-  textAlign: 'left',
-});
-
-const categoryMetaStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 10,
-};
-
-const categoryIconStyle: React.CSSProperties = {
-  width: 30,
-  height: 30,
-  borderRadius: 10,
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: '#e2e8f0',
-  color: '#0f172a',
-  fontSize: '0.82rem',
-  fontWeight: 700,
-};
-
-const categoryTitleStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 2,
-};
-
-const categoryNameStyle: React.CSSProperties = {
-  fontSize: '0.83rem',
-  fontWeight: 700,
-  color: '#0f172a',
-};
-
-const categoryHintStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  color: '#64748b',
-};
-
-const cardStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 8,
-  padding: 10,
-  border: '1px solid #dbe4ee',
-  borderRadius: 12,
-  background: '#fff',
-  boxShadow: '0 6px 18px rgba(15, 23, 42, 0.05)',
-};
-
-const dragButtonStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'flex-start',
-  gap: 8,
-  width: '100%',
-  padding: 0,
-  border: 'none',
-  background: 'transparent',
-  cursor: 'grab',
-  textAlign: 'left',
-};
-
-const cardIconStyle: React.CSSProperties = {
-  width: 32,
-  height: 32,
-  borderRadius: 10,
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: '#eff6ff',
-  color: '#123b63',
-  fontSize: '1rem',
-  fontWeight: 700,
-};
-
-const cardNameStyle: React.CSSProperties = {
-  fontSize: '0.82rem',
-  fontWeight: 700,
-  color: '#0f172a',
-};
-
-const cardMetaStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  color: '#64748b',
-};
-
-const quickAddButtonStyle: React.CSSProperties = {
-  padding: '6px 10px',
-  border: '1px solid #cbd5e1',
-  borderRadius: 8,
-  background: '#fff',
-  color: '#334155',
-  fontSize: '0.76rem',
-  fontWeight: 600,
-  cursor: 'pointer',
-};
-
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -361,10 +238,12 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
 
         {/* Built-in section templates — normalized section snapshots. */}
         {!normalizedQuery ? (
-          <div style={categorySectionStyle}>
+          <div className={styles.catalogCategorySection}>
             <button
               type="button"
-              style={categoryButtonStyle(categoryOpen['built-in-sections'] ?? true)}
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['built-in-sections'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
               onClick={() => {
                 setCategoryOpen((current) => ({
                   ...current,
@@ -372,16 +251,16 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                 }));
               }}
             >
-              <span style={categoryMetaStyle}>
-                <span style={categoryIconStyle}>▤</span>
-                <span style={categoryTitleStyle}>
-                  <span style={categoryNameStyle}>Section templates</span>
-                  <span style={categoryHintStyle}>
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>▤</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Section templates</span>
+                  <span className={styles.catalogCategoryHint}>
                     바로 삽입 가능한 기본 섹션
                   </span>
                 </span>
               </span>
-              <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
+              <span className={styles.catalogCategoryToggle}>
                 {(categoryOpen['built-in-sections'] ?? true) ? '−' : '+'}
               </span>
             </button>
@@ -394,10 +273,12 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
 
         {/* Saved sections — Wix Studio "Saved Sections" parity. */}
         {!normalizedQuery ? (
-          <div style={categorySectionStyle}>
+          <div className={styles.catalogCategorySection}>
             <button
               type="button"
-              style={categoryButtonStyle(categoryOpen['saved-sections'] ?? true)}
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['saved-sections'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
               onClick={() => {
                 setCategoryOpen((current) => ({
                   ...current,
@@ -405,16 +286,16 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                 }));
               }}
             >
-              <span style={categoryMetaStyle}>
-                <span style={categoryIconStyle}>★</span>
-                <span style={categoryTitleStyle}>
-                  <span style={categoryNameStyle}>Saved sections</span>
-                  <span style={categoryHintStyle}>
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>★</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Saved sections</span>
+                  <span className={styles.catalogCategoryHint}>
                     내가 저장한 섹션 라이브러리
                   </span>
                 </span>
               </span>
-              <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
+              <span className={styles.catalogCategoryToggle}>
                 {(categoryOpen['saved-sections'] ?? true) ? '−' : '+'}
               </span>
             </button>
@@ -428,10 +309,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         {groupedCategories.map(({ category, components: categoryComponents }) => {
           const isOpen = categoryOpen[category] ?? true;
           return (
-            <div key={category} style={categorySectionStyle}>
+            <div key={category} className={styles.catalogCategorySection}>
               <button
                 type="button"
-                style={categoryButtonStyle(isOpen)}
+                className={`${styles.catalogCategoryButton} ${isOpen ? styles.catalogCategoryButtonOpen : ''}`}
                 onClick={() => {
                   setCategoryOpen((current) => ({
                     ...current,
@@ -439,27 +320,27 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                   }));
                 }}
               >
-                <span style={categoryMetaStyle}>
-                  <span style={categoryIconStyle}>{CATEGORY_ICONS[category]}</span>
-                  <span style={categoryTitleStyle}>
-                    <span style={categoryNameStyle}>{CATEGORY_LABELS[category]}</span>
-                    <span style={categoryHintStyle}>
+                <span className={styles.catalogCategoryMeta}>
+                  <span className={styles.catalogCategoryIcon}>{CATEGORY_ICONS[category]}</span>
+                  <span className={styles.catalogCategoryTitle}>
+                    <span className={styles.catalogCategoryName}>{CATEGORY_LABELS[category]}</span>
+                    <span className={styles.catalogCategoryHint}>
                       {CATEGORY_SUBLABELS[category]} · {categoryComponents.length}
                     </span>
                   </span>
                 </span>
-                <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
+                <span className={styles.catalogCategoryToggle}>
                   {isOpen ? '−' : '+'}
                 </span>
               </button>
 
               {isOpen ? (
-                <div style={sectionGridStyle}>
+                <div className={styles.catalogSectionGrid}>
                   {categoryComponents.map((component) => (
-                    <div key={component.kind} style={cardStyle} data-builder-add-card={component.kind}>
+                    <div key={component.kind} className={styles.catalogCard} data-builder-add-card={component.kind}>
                       <button
                         type="button"
-                        style={dragButtonStyle}
+                        className={styles.catalogDragButton}
                         data-builder-add-card-kind={component.kind}
                         title={`${component.displayName} — 캔버스로 드래그하여 추가`}
                         draggable
@@ -468,14 +349,14 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                           event.dataTransfer.effectAllowed = 'copy';
                         }}
                       >
-                        <span style={cardIconStyle}>{component.icon}</span>
-                        <span style={cardNameStyle}>{component.displayName}</span>
-                        <span style={cardMetaStyle}>{component.kind} · drag to canvas</span>
+                        <span className={styles.catalogCardIcon}>{component.icon}</span>
+                        <span className={styles.catalogCardName}>{component.displayName}</span>
+                        <span className={styles.catalogCardMeta}>{component.kind} · drag to canvas</span>
                       </button>
 
                       <button
                         type="button"
-                        style={quickAddButtonStyle}
+                        className={styles.catalogQuickAddButton}
                         title={`${component.displayName} 캔버스 중앙에 추가`}
                         onClick={() => handleQuickAdd(component.kind as BuilderCanvasNodeKind)}
                       >

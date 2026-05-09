@@ -1089,6 +1089,158 @@
   font-weight: 800;
 }
 
+.catalogCategorySection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0 4px;
+  border-top: 1px solid var(--editor-border-hairline, #dbe2ea);
+}
+
+.catalogCategoryButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 8px;
+  background: var(--editor-panel-elevated, #fff);
+  color: var(--editor-fg-primary, #0f172a);
+  padding: 8px 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.catalogCategoryButton:hover,
+.catalogCategoryButtonOpen {
+  border-color: color-mix(in srgb, var(--editor-accent, #116dff) 28%, var(--editor-border-hairline, #dbe2ea));
+  background: var(--editor-accent-soft, #eff6ff);
+}
+
+.catalogCategoryMeta {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 10px;
+}
+
+.catalogCategoryIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--editor-bg, #f4f5f7);
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.catalogCategoryTitle {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+}
+
+.catalogCategoryName {
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 0.83rem;
+  font-weight: 800;
+}
+
+.catalogCategoryHint {
+  color: var(--editor-fg-muted, #64748b);
+  font-size: 0.72rem;
+}
+
+.catalogCategoryToggle {
+  color: var(--editor-fg-muted, #64748b);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.catalogSectionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.catalogCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 8px;
+  background: var(--editor-panel-elevated, #fff);
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.catalogCard:hover {
+  border-color: color-mix(in srgb, var(--editor-accent, #116dff) 28%, var(--editor-border-hairline, #dbe2ea));
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.catalogDragButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  gap: 8px;
+  text-align: left;
+  cursor: grab;
+}
+
+.catalogCardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--editor-accent-soft, #eff6ff);
+  color: var(--editor-accent, #116dff);
+  font-size: 1rem;
+  font-weight: 850;
+}
+
+.catalogCardName {
+  color: var(--editor-fg-primary, #0f172a);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.catalogCardMeta {
+  color: var(--editor-fg-muted, #64748b);
+  font-size: 0.72rem;
+}
+
+.catalogQuickAddButton {
+  border: 1px solid var(--editor-border-hairline, #cbd5e1);
+  border-radius: 8px;
+  background: var(--editor-panel-elevated, #fff);
+  color: var(--editor-fg-secondary, #334155);
+  padding: 6px 10px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.catalogQuickAddButton:hover {
+  border-color: var(--editor-accent, #116dff);
+  background: var(--editor-accent-soft, #eff6ff);
+  color: var(--editor-accent, #116dff);
+}
+
 .catalogEmptyState {
   display: grid;
   gap: 0.18rem;

@@ -2382,3 +2382,18 @@ Prompt-to-artifact 체크:
 
 메모:
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단은 계속 마지막 gate로 남긴다.
+
+## 2026-05-09 Codex /goal G-Editor Add panel token cleanup
+
+범위:
+- W04 Add 패널 보강 후 남아 있던 inline style object와 hardcoded hex를 제거했다.
+- 카테고리 accordion, component card, drag target, quick-add button을 `SandboxPage.module.css` 클래스와 editor chrome token 기반 스타일로 옮겼다.
+- `SandboxCatalogPanel.tsx`에는 `style={...}`와 hex/rgba 값이 남지 않도록 정리했다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅ (1 passed)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- W04의 자동 검증은 더 강해졌지만, 사용자 직접 green 검증은 계속 대기한다.

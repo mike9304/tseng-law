@@ -165,7 +165,7 @@ interface BuilderCanvasStoreState {
 function sortNodes(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
   return [...nodes]
     .sort((left, right) => left.zIndex - right.zIndex)
-    .map((node, index) => ({ ...node, zIndex: index }));
+    .map((node, index) => (node.zIndex === index ? node : { ...node, zIndex: index }));
 }
 
 const TRANSIENT_UPDATE_NODES_OPTIONS: UpdateNodesOptions = {
@@ -260,9 +260,19 @@ function reorderNodeSequence(
 function sameDocumentContent(left: BuilderCanvasDocument, right: BuilderCanvasDocument): boolean {
   if (left === right) return true;
   if (left.nodes === right.nodes && left.locale === right.locale && left.version === right.version) return true;
-  return left.locale === right.locale
-    && left.version === right.version
-    && JSON.stringify(left.nodes) === JSON.stringify(right.nodes);
+  if (left.locale !== right.locale || left.version !== right.version) return false;
+  if (left.nodes.length !== right.nodes.length) return false;
+
+  for (let index = 0; index < left.nodes.length; index += 1) {
+    const leftNode = left.nodes[index];
+    const rightNode = right.nodes[index];
+    if (!leftNode || !rightNode) return false;
+    if (leftNode === rightNode) continue;
+    if (leftNode.id !== rightNode.id) return false;
+    if (JSON.stringify(leftNode) !== JSON.stringify(rightNode)) return false;
+  }
+
+  return true;
 }
 
 function sameDocumentIdentity(left: BuilderCanvasDocument, right: BuilderCanvasDocument): boolean {

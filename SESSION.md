@@ -2212,3 +2212,19 @@
 메모:
 - W02/W06/W07 직접 조작 체감 렉을 줄이기 위한 hot path 보강이다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor reduce canvas commit churn
+
+범위:
+- 감사 문서 Critical #2/#3 후속으로 `sortNodes`가 이미 올바른 zIndex의 노드를 불필요하게 복제하지 않도록 조정했다.
+- `sameDocumentContent`는 전체 nodes 배열을 즉시 2회 직렬화하지 않고, identity/길이/id를 먼저 비교한 뒤 변경된 node만 구조 비교한다.
+- structurally identical committed update가 undo history를 만들지 않는 회귀 테스트를 추가했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npx vitest run src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (3 passed)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers canvas direct-manipulation overlays" --workers=1` ✅ (1 passed, sandbox 승격 실행)
+
+메모:
+- drag/resize transient 경로는 기존 normalize/touchUpdatedAt off 정책을 유지한다. 이번 변경은 commit/no-op churn과 zIndex 복제 비용을 줄이는 보강이다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

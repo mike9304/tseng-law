@@ -37,7 +37,26 @@ function documentFixture(): BuilderCanvasDocument {
   };
 }
 
+function sortedDocumentFixture(): BuilderCanvasDocument {
+  return {
+    ...documentFixture(),
+    nodes: [textNode('first', 0), textNode('second', 1)],
+  };
+}
+
 describe('canvas store transient updates', () => {
+  it('does not create a history entry for structurally identical committed node updates', () => {
+    useBuilderCanvasStore.getState().replaceDocument(sortedDocumentFixture());
+    useBuilderCanvasStore.getState().updateNode('first', (node) => ({
+      ...node,
+      rect: { ...node.rect },
+    }));
+
+    const state = useBuilderCanvasStore.getState();
+    expect(state.canUndo).toBe(false);
+    expect(state.document?.updatedAt).toBe('2026-01-01T00:00:00.000Z');
+  });
+
   it('keeps a shared nodesById index in sync with document replacement and transient edits', () => {
     useBuilderCanvasStore.getState().replaceDocument(documentFixture());
 

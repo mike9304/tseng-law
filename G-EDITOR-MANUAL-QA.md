@@ -9,10 +9,13 @@
 - 자동 검증은 통과했지만, 체크포인트 Green 판정은 사용자 직접 클릭 검증 후에만 가능
 
 현재 자동 증거:
-- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` 통과: 26/26
+- 최신 기록 커밋: `6b72b1b G-Editor: record perf follow-up gate`
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` 통과: 27/27
 - `npm run test:unit` 통과: 735/735
 - `npm run security:builder-routes` 통과: 71 route files / 62 mutation handlers
-- `npm run build` 통과
+- `npm run typecheck` 통과
+- `npm run lint` 통과 (기존 `<img>` warnings only)
+- `npm run build` 통과 (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
 - `/ko` 200, `/ko/admin-builder` 200
 - `Wix 체크포인트.md` 상태: W02/W04/W06/W07/W08/W10/W11/W18~W23/W26~W30 = `자동검증 통과 / 사용자 QA 대기`
 

@@ -77,6 +77,8 @@ export default function SiteHeader({
   currentSlug,
   onNavigate,
   mobileMode = false,
+  mobileSticky = false,
+  mobileHamburger = 'auto',
   builderEditable = false,
   activeBuilderNavItemId,
   onRequestEditNavItem,
@@ -91,6 +93,8 @@ export default function SiteHeader({
   currentSlug: string;
   onNavigate?: (href: string) => void;
   mobileMode?: boolean;
+  mobileSticky?: boolean;
+  mobileHamburger?: 'auto' | 'off' | 'force';
   builderEditable?: boolean;
   activeBuilderNavItemId?: string | null;
   onRequestEditNavItem?: (itemId: string) => void;
@@ -138,7 +142,9 @@ export default function SiteHeader({
       : [
           { label: 'Contact', href: '/en/contact' },
           { label: 'Offices', href: '/en/contact#offices' },
-        ];
+      ];
+  const forceMobileNavigation = mobileMode || mobileHamburger === 'force';
+  const suppressMobileNavigation = mobileHamburger === 'off';
 
   const clearCloseTimeout = useCallback(() => {
     if (closeTimeoutRef.current) {
@@ -278,8 +284,10 @@ export default function SiteHeader({
   return (
     <>
       <header
-        className={`header scrolled${openMenu ? ' mega-open' : ''}${mobileMode ? ' mobile-nav-forced' : ''}${mobileMenuOpen ? ' mobile-drawer-open' : ''} builder-site-header`}
-        data-builder-mobile-header={mobileMode ? 'true' : undefined}
+        className={`header scrolled${openMenu ? ' mega-open' : ''}${forceMobileNavigation ? ' mobile-nav-forced' : ''}${suppressMobileNavigation ? ' mobile-hamburger-off' : ''}${mobileSticky ? ' mobile-sticky-enabled' : ''}${mobileMenuOpen ? ' mobile-drawer-open' : ''} builder-site-header`}
+        data-builder-mobile-header={forceMobileNavigation ? 'true' : undefined}
+        data-builder-mobile-sticky={mobileSticky ? 'true' : undefined}
+        data-builder-mobile-hamburger-mode={mobileHamburger}
       >
         <div className="header-utility">
           <div className="container">

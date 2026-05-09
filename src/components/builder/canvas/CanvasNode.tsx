@@ -98,6 +98,12 @@ export default function CanvasNode({
   const theme = useBuilderTheme();
   const nodeRef = useRef<HTMLDivElement>(null);
   const mapQuickAddressRef = useRef<HTMLTextAreaElement>(null);
+  const touchContextMenuRef = useRef<{
+    timerId: number;
+    pointerId: number;
+    clientX: number;
+    clientY: number;
+  } | null>(null);
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
   const updateNodeRectsForViewport = useBuilderCanvasStore((s) => s.updateNodeRectsForViewport);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
@@ -136,6 +142,25 @@ export default function CanvasNode({
       setIsEditing(true);
     }
   }, [enterGroup, node.id, node.kind, node.locked]);
+
+  const clearTouchContextMenu = useCallback(() => {
+    const pending = touchContextMenuRef.current;
+    if (!pending) return;
+    window.clearTimeout(pending.timerId);
+    touchContextMenuRef.current = null;
+  }, []);
+
+  const cancelTouchContextMenuOnMove = useCallback(
+    (event: React.PointerEvent<HTMLDivElement>) => {
+      const pending = touchContextMenuRef.current;
+      if (!pending || pending.pointerId !== event.pointerId) return;
+      const distance = Math.hypot(event.clientX - pending.clientX, event.clientY - pending.clientY);
+      if (distance > 8) clearTouchContextMenu();
+    },
+    [clearTouchContextMenu],
+  );
+
+  useEffect(() => () => clearTouchContextMenu(), [clearTouchContextMenu]);
 
   const handleInlineSave = useCallback(
     (payload: { richText: BuilderRichText; plainText: string }) => {
@@ -229,6 +254,26 @@ export default function CanvasNode({
   const isRootNode = !node.parentId;
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
   const isInteractive = !isDimmedRoot;
+  const scheduleTouchContextMenu = useCallback(
+    (event: React.PointerEvent<HTMLDivElement>) => {
+      if (event.pointerType !== 'touch' || node.locked || !isInteractive) return;
+      clearTouchContextMenu();
+      const target = event.currentTarget;
+      const { pointerId, clientX, clientY } = event;
+      const timerId = window.setTimeout(() => {
+        target.dispatchEvent(new MouseEvent('contextmenu', {
+          bubbles: true,
+          cancelable: true,
+          button: 2,
+          clientX,
+          clientY,
+        }));
+        touchContextMenuRef.current = null;
+      }, 560);
+      touchContextMenuRef.current = { timerId, pointerId, clientX, clientY };
+    },
+    [clearTouchContextMenu, isInteractive, node.locked],
+  );
   const showColumnQuickActions = selected && isInteractive && isColumnManagerTarget(node);
   const showBlogFeedQuickEdit = selected && isInteractive && node.kind === 'blog-feed';
   const blogFeedLayout = blogFeedLayoutValue(node);
@@ -667,9 +712,15 @@ export default function CanvasNode({
         const additive = event.metaKey || event.ctrlKey || event.shiftKey;
         onSelect(node.id, additive);
         if (additive || node.locked) return;
+        scheduleTouchContextMenu(event);
         onMoveStart(node.id, event);
       }}
+      onPointerMove={cancelTouchContextMenuOnMove}
+      onPointerUp={clearTouchContextMenu}
+      onPointerCancel={clearTouchContextMenu}
+      onPointerLeave={clearTouchContextMenu}
       onContextMenu={(event) => {
+        clearTouchContextMenu();
         event.stopPropagation();
         if (!isInteractive) return;
         event.preventDefault();
@@ -784,8 +835,13 @@ export default function CanvasNode({
             const wasSelected = selected;
             onSelect(node.id, additive);
             if (additive || !wasSelected) return;
+            scheduleTouchContextMenu(event);
             onMoveStart(node.id, event);
           }}
+          onPointerMove={cancelTouchContextMenuOnMove}
+          onPointerUp={clearTouchContextMenu}
+          onPointerCancel={clearTouchContextMenu}
+          onPointerLeave={clearTouchContextMenu}
           onClick={(event) => {
             event.stopPropagation();
             if (!selected) onSelect(node.id, false);

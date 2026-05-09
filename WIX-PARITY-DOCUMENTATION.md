@@ -499,3 +499,37 @@ Created: 2026-05-09T12:52:13.760Z
   - 2026-05-10 "편집기 로컬에서 뜬거 3000번 봤는데 사이트 열면 옆쪽이 짤려" → 모바일 viewport auto-fit을 적용해 375px canvas에서 root section 전폭/단열 배치를 생성.
   - 2026-05-10 "맨위 메뉴 눌렀을때 다른 메뉴 나오는 칸은 어떻게 편집 처리" → desktop mega edit flow는 유지하고, mobile viewport에서는 hamburger drawer 안의 메뉴 항목도 같은 `data-builder-nav-item-id` 편집 대상으로 노출.
 - 다음 마일스톤: M10
+
+## M10 — mobile sticky, preview iframe, bottom CTA, touch context menu
+
+- 시작/종료: 2026-05-10T03:41:00+09:00 / 2026-05-10T03:55:00+09:00
+- 변경 파일:
+  - `src/app/api/builder/site/settings/route.ts` — `headerFooter.mobileSticky/mobileHamburger`, `mobileBottomBar`를 Site Settings GET/PUT payload로 노출. mutation은 기존 `guardMutation()` 유지.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Mobile 탭 추가. sticky header, hamburger mode, bottom CTA enabled/actions를 UI에서 편집/저장.
+  - `src/components/builder/published/SiteHeader.tsx` — `mobileSticky`, `mobileHamburger` prop과 runtime data attributes 추가. `force/off/auto` mode 지원.
+  - `src/components/builder/published/MobileBottomBar.tsx` — published mobile fixed CTA bar 추가.
+  - `src/lib/builder/site/public-page.tsx` — published fallback header와 global header canvas 모두 mobile sticky를 반영하고, bottom CTA를 렌더.
+  - `src/app/globals.css` — sticky global header, hamburger off mode, mobile bottom CTA styles 추가.
+  - `src/components/builder/canvas/CanvasNode.tsx` — touch pointer long-press가 contextmenu MouseEvent를 발화하도록 helper 추가.
+  - `tests/builder-editor/mobile-runtime.playwright.ts` — M10 end-to-end 시나리오 추가.
+- 구현:
+  - PreviewModal은 기존 iframe + device frame 구현을 그대로 사용하고, M10 테스트에서 실제 발행 URL이 mobile iframe `src`로 들어가는지 검증했다.
+  - 모바일 공개 페이지에서 site-level bottom CTA bar가 fixed로 표시된다.
+  - fallback SiteHeader와 global header canvas 모두 `site.headerFooter.mobileSticky`를 runtime에 반영한다.
+  - settings modal Mobile 탭에서 sticky/header mode/bottom CTA를 저장할 수 있다.
+  - viewport 전환 후 undo stack이 유지되는지 `Cmd/Ctrl+D → Mobile 전환 → Cmd/Ctrl+Z`로 검증했다.
+  - touch long-press는 560ms hold, 8px 이상 이동 시 취소로 구현했다.
+  - M08의 W33 잔여 evidence도 같이 닫았다. `responsive.mobile.hidden` 노드가 public mobile viewport에서 숨겨지는지 확인했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (33 files / 766 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-runtime.playwright.ts --workers=1` ✅
+- W 판정:
+  - W33/W40/W41/W42/W43/W44/W45 green evidence 확보.
+- 리스크 / 알려진 문제:
+  - 공개 루트 `/ko`는 legacy home이 우선 렌더된다. builder published runtime 검증은 생성/발행한 builder page slug로 수행했다.
+  - Playwright Chromium은 macOS sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
+- 다음 마일스톤: M11

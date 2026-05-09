@@ -5,10 +5,17 @@ import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persiste
 import {
   DEFAULT_THEME,
   type BrandKitAssets,
+  type BuilderHeaderFooterConfig,
+  type BuilderMobileBottomBar,
   type BuilderSiteSettings,
   type BuilderTheme,
   type DarkModeConfig,
 } from '@/lib/builder/site/types';
+import {
+  MOBILE_HAMBURGER_MODES,
+  normalizeHeaderFooterMobileConfig,
+  normalizeMobileBottomBar,
+} from '@/lib/builder/site/mobile-schema';
 import {
   THEME_COLOR_TOKENS,
   THEME_TEXT_PRESET_KEYS,
@@ -45,6 +52,23 @@ const brandKitAssetsSchema = z.object({
 const darkModeSchema = z.object({
   defaultMode: z.enum(['light', 'dark', 'auto']).optional(),
   allowVisitorToggle: z.boolean().optional(),
+}).strict();
+
+const headerFooterMobileSchema = z.object({
+  mobileSticky: z.boolean().optional(),
+  mobileHamburger: z.enum(MOBILE_HAMBURGER_MODES).optional(),
+}).strict();
+
+const mobileBottomBarActionSchema = z.object({
+  id: z.string().trim().min(1).max(80),
+  label: z.string().trim().min(1).max(40),
+  href: z.string().trim().min(1).max(500),
+  kind: z.enum(['phone', 'booking', 'custom']),
+}).strict();
+
+const mobileBottomBarSchema = z.object({
+  enabled: z.boolean().optional(),
+  actions: z.array(mobileBottomBarActionSchema).max(3).optional(),
 }).strict();
 
 const siteSettingsSchema = z.object({
@@ -116,6 +140,8 @@ const settingsPayloadSchema = z.object({
   settings: siteSettingsSchema.optional(),
   theme: siteThemeSchema.optional(),
   darkMode: darkModeSchema.optional(),
+  headerFooter: headerFooterMobileSchema.optional(),
+  mobileBottomBar: mobileBottomBarSchema.optional(),
 }).strict();
 
 function validationErrorResponse(error: ZodError): NextResponse {
@@ -247,6 +273,28 @@ function normalizeDarkModeConfig(value?: DarkModeConfig): Required<DarkModeConfi
   };
 }
 
+function mergeHeaderFooterMobileConfig(
+  current: BuilderHeaderFooterConfig | undefined,
+  patch: Partial<BuilderHeaderFooterConfig> | undefined,
+): BuilderHeaderFooterConfig {
+  return normalizeHeaderFooterMobileConfig({
+    ...(current ?? {}),
+    ...(patch ?? {}),
+  });
+}
+
+function mergeMobileBottomBarConfig(
+  current: BuilderMobileBottomBar | undefined,
+  patch: Partial<BuilderMobileBottomBar> | undefined,
+  settings?: BuilderSiteSettings,
+): BuilderMobileBottomBar {
+  return normalizeMobileBottomBar({
+    ...(current ?? {}),
+    ...(patch ?? {}),
+    actions: patch?.actions ?? current?.actions,
+  } as BuilderMobileBottomBar, settings);
+}
+
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
   const colors = { ...DEFAULT_THEME.colors, ...theme?.colors };
   return {
@@ -271,6 +319,8 @@ export async function GET(request: NextRequest) {
       settings: site.settings ?? {},
       theme: mergeTheme(site.theme),
       darkMode: normalizeDarkModeConfig(site.darkMode),
+      headerFooter: normalizeHeaderFooterMobileConfig(site.headerFooter),
+      mobileBottomBar: normalizeMobileBottomBar(site.mobileBottomBar, site.settings),
     });
   } catch (error) {
     if (error instanceof ZodError) return validationErrorResponse(error);
@@ -292,6 +342,12 @@ export async function PUT(request: NextRequest) {
     site.settings = payload.settings ? mergeSettings(site.settings, payload.settings) : site.settings;
     site.theme = mergeTheme(payload.theme ?? site.theme);
     site.darkMode = payload.darkMode ? normalizeDarkModeConfig(payload.darkMode) : site.darkMode;
+    site.headerFooter = payload.headerFooter
+      ? mergeHeaderFooterMobileConfig(site.headerFooter, payload.headerFooter)
+      : normalizeHeaderFooterMobileConfig(site.headerFooter);
+    site.mobileBottomBar = payload.mobileBottomBar
+      ? mergeMobileBottomBarConfig(site.mobileBottomBar, payload.mobileBottomBar, site.settings)
+      : normalizeMobileBottomBar(site.mobileBottomBar, site.settings);
     site.updatedAt = now;
 
     await writeSiteDocument(site);
@@ -301,6 +357,8 @@ export async function PUT(request: NextRequest) {
       settings: site.settings ?? {},
       theme: site.theme,
       darkMode: normalizeDarkModeConfig(site.darkMode),
+      headerFooter: normalizeHeaderFooterMobileConfig(site.headerFooter),
+      mobileBottomBar: normalizeMobileBottomBar(site.mobileBottomBar, site.settings),
     });
   } catch (error) {
     if (error instanceof ZodError) return validationErrorResponse(error);

@@ -3048,3 +3048,28 @@ Prompt-to-artifact 체크:
 메모:
 - W31/W37/W39는 M09 evidence 확보로 green 처리했다.
 - 다음 마일스톤은 M10 `Mobile sticky / preview iframe`이며 W40~W45를 닫는다.
+
+## 2026-05-10 Codex /goal Wix full builder M10 mobile runtime
+
+범위:
+- M10 `Mobile sticky / preview iframe`을 완료했다.
+- Site Settings API와 modal에 `headerFooter.mobileSticky/mobileHamburger`, `mobileBottomBar` 편집/저장을 연결했다.
+- published fallback SiteHeader는 mobile sticky/hamburger mode를 data attribute와 class로 반영한다.
+- global header canvas를 쓰는 공개 페이지도 `mobileSticky`가 적용되도록 `GlobalCanvasSection`에 sticky hook을 추가했다.
+- `MobileBottomBar` published component를 추가해 모바일 하단 고정 전화/예약 CTA를 렌더한다.
+- CanvasNode touch pointer long-press가 contextmenu를 발화하도록 연결했다. 560ms hold, 8px 이상 이동 시 취소한다.
+- PreviewModal은 기존 iframe/device frame 구현을 유지하고, 실제 발행 URL이 mobile iframe으로 들어가는지 Playwright에서 검증했다.
+- W33 잔여 검증도 함께 닫았다. `responsive.mobile.hidden` 노드가 공개 모바일 viewport에서 숨겨진다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (33 files / 766 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-runtime.playwright.ts --workers=1` ✅
+
+메모:
+- W33/W40/W41/W42/W43/W44/W45는 M10 evidence 확보로 green 처리했다.
+- 공개 루트 `/ko`는 legacy home이 우선 렌더된다. builder published runtime 검증은 생성/발행한 builder page slug로 수행했다.
+- Playwright Chromium은 macOS sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.

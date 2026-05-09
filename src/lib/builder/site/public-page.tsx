@@ -57,9 +57,14 @@ import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-fr
 import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import {
+  normalizeHeaderFooterMobileConfig,
+  normalizeMobileBottomBar,
+} from '@/lib/builder/site/mobile-schema';
 import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import SiteFooter from '@/components/builder/published/SiteFooter';
+import MobileBottomBar from '@/components/builder/published/MobileBottomBar';
 import AnimationsRoot from '@/components/builder/published/AnimationsRoot';
 import PublishedInteractions from '@/components/builder/published/PublishedInteractions';
 import DarkModeToggle from '@/components/builder/published/DarkModeToggle';
@@ -334,6 +339,8 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
   const navItems = site.navigation || [];
   const settings = site.settings;
   const theme = site.theme;
+  const headerFooterConfig = normalizeHeaderFooterMobileConfig(site.headerFooter);
+  const mobileBottomBar = normalizeMobileBottomBar(site.mobileBottomBar, settings);
   const darkModeConfig = resolveDarkModeConfig(site.darkMode);
   const themeInitScript = buildThemeInitScript(darkModeConfig.defaultMode, darkModeConfig.allowVisitorToggle);
   const darkColors = theme.darkColors ?? createDarkColorsFromLight(theme.colors);
@@ -847,6 +854,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           canvas={resolved.headerCanvas}
           theme={publishedTheme}
           tag="header"
+          mobileSticky={headerFooterConfig.mobileSticky}
         />
       ) : (
         <SiteHeader
@@ -856,6 +864,8 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           navItems={navItems}
           locale={locale}
           currentSlug={slugPath}
+          mobileSticky={headerFooterConfig.mobileSticky}
+          mobileHamburger={headerFooterConfig.mobileHamburger}
         />
       )}
       <main
@@ -887,6 +897,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           locale={locale}
         />
       )}
+      <MobileBottomBar config={mobileBottomBar} theme={publishedTheme} />
       {resolved.lightboxes.length > 0 && (
         <>
           <LightboxMount slugs={resolved.lightboxes.map((lb) => lb.meta.slug)} />
@@ -1021,10 +1032,12 @@ function GlobalCanvasSection({
   canvas,
   theme,
   tag,
+  mobileSticky = false,
 }: {
   canvas: BuilderCanvasDocument;
   theme: BuilderSiteDocument['theme'];
   tag: 'header' | 'footer';
+  mobileSticky?: boolean;
 }) {
   const visibleNodes = canvas.nodes.filter((node) => node.visible !== false);
   const childrenMap = buildChildrenMap(visibleNodes);
@@ -1088,6 +1101,8 @@ function GlobalCanvasSection({
   return (
     <Tag
       data-builder-global-section={tag}
+      data-builder-mobile-sticky={tag === 'header' && mobileSticky ? 'true' : undefined}
+      className={tag === 'header' && mobileSticky ? 'builder-global-header-mobile-sticky' : undefined}
       style={{
         width: '100%',
         background: 'var(--builder-color-background)',

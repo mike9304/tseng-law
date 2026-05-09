@@ -5021,6 +5021,97 @@ html.has-cyber-cursor .button {
   align-items: center;
 }
 
+.header.mobile-sticky-enabled {
+  position: fixed;
+  top: 0;
+}
+
+.builder-global-header-mobile-sticky {
+  position: relative;
+  z-index: 80;
+}
+
+@media (max-width: 768px) {
+  .builder-global-header-mobile-sticky {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  }
+}
+
+.header.mobile-hamburger-off .site-mobile-nav-drawer,
+.header.mobile-hamburger-off .mobile-toggle {
+  display: none;
+}
+
+.builder-mobile-bottom-bar,
+.builder-mobile-bottom-bar-spacer {
+  display: none;
+}
+
+.builder-mobile-bottom-bar {
+  position: fixed;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  left: max(12px, env(safe-area-inset-left));
+  z-index: 86;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid color-mix(in srgb, var(--builder-mobile-bar-primary) 16%, transparent);
+  border-radius: calc(var(--builder-mobile-bar-radius) + 10px);
+  background: color-mix(in srgb, var(--builder-mobile-bar-bg) 94%, transparent);
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.builder-mobile-bottom-bar a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 12px;
+  border-radius: var(--builder-mobile-bar-radius);
+  background: var(--builder-mobile-bar-primary);
+  color: var(--builder-mobile-bar-bg);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+}
+
+.builder-mobile-bottom-bar a[data-builder-mobile-bottom-action='custom'] {
+  background: var(--builder-mobile-bar-muted);
+  color: var(--builder-mobile-bar-text);
+}
+
+@media (max-width: 768px) {
+  .builder-mobile-bottom-bar {
+    display: grid;
+  }
+
+  .builder-mobile-bottom-bar-spacer {
+    display: block;
+    height: 82px;
+  }
+
+  .header.mobile-hamburger-off .main-nav {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .header.mobile-hamburger-off .nav-list {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .header.mobile-hamburger-off .nav-list::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .icon-button {
   min-width: 38px;
   min-height: 38px;

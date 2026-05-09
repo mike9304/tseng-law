@@ -11,7 +11,7 @@
 | M07 | P2     | 모바일 스키마 결정 + 잠금         | —         | 4h   | M00  | 🟢   |
 | M08 | P2     | Mobile inspector per-viewport UI  | W31~W38   | 12h  | M07  | 🟢   |
 | M09 | P2     | Mobile auto-fit + 자동 변환       | W37,W39   | 8h   | M07  | 🟢   |
-| M10 | P2     | Mobile sticky / preview iframe    | W40~W45   | 10h  | M07  | 🔴   |
+| M10 | P2     | Mobile sticky / preview iframe    | W40~W45   | 10h  | M07  | 🟢   |
 | M11 | P3a    | Text 위젯 팩                      | W46~W55   | 18h  | M07  | 🔴   |
 | M12 | P3b    | Media 위젯 팩                     | W56~W70   | 24h  | M07  | 🔴   |
 | M13 | P3c    | Gallery 위젯 팩                   | W71~W78   | 18h  | M11  | 🔴   |

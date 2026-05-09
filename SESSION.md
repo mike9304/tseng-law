@@ -2228,3 +2228,19 @@
 메모:
 - drag/resize transient 경로는 기존 normalize/touchUpdatedAt off 정책을 유지한다. 이번 변경은 commit/no-op churn과 zIndex 복제 비용을 줄이는 보강이다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor cache drag snap candidates
+
+범위:
+- 감사 문서 Critical #4/#6 후속으로 단일 노드 drag 중 매 pointermove마다 snap 후보를 filter/map으로 재생성하던 경로를 줄였다.
+- pointerdown 시 container hit rects와 snap rects를 interaction state에 저장하고, pointermove에서는 그 배열만 사용한다.
+- snap engine 내부에서도 edge pair 배열과 alignment guide 배열 할당을 제거해 per-frame allocation을 낮췄다.
+
+검증:
+- `npm run typecheck` ✅
+- `npx vitest run src/lib/builder/canvas/__tests__/snap.test.ts src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (6 passed)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers canvas direct-manipulation overlays" --workers=1` ✅ (1 passed, sandbox 승격 실행)
+
+메모:
+- W06 snap guide/dimension chip 동작은 유지하면서 drag hot path allocation을 줄인 보강이다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

@@ -48,6 +48,8 @@ type InteractionState =
       startParentId: string | null;
       startRects: Record<string, BuilderCanvasNode['rect']>;
       startAbsoluteRects: Record<string, BuilderCanvasNode['rect']>;
+      snapRects: Rect[];
+      containerHitRects: Array<{ id: string; rect: Rect }>;
     }
   | {
       type: 'resize';
@@ -97,6 +99,8 @@ type InteractionGeometrySnapshot = {
   nodesById: Map<string, BuilderCanvasNode>;
   absoluteRectById: Map<string, BuilderCanvasNode['rect']>;
 };
+
+type MoveInteractionCandidates = Pick<Extract<NonNullable<InteractionState>, { type: 'move' }>, 'snapRects' | 'containerHitRects'>;
 
 const DEFAULT_STAGE_WIDTH = 1280;
 const DEFAULT_STAGE_HEIGHT = 880;
@@ -150,6 +154,45 @@ function clampVisibleViewportPopupPosition(
       visibleBottom - viewportRect.top - popupHeight - margin,
     ),
   };
+}
+
+function createMoveInteractionCandidates({
+  activeGroupId,
+  absoluteRectById,
+  movingNode,
+  movingNodeIds,
+  nodes,
+  viewport,
+}: {
+  activeGroupId: string | null;
+  absoluteRectById: Map<string, BuilderCanvasNode['rect']>;
+  movingNode: BuilderCanvasNode;
+  movingNodeIds: Set<string>;
+  nodes: BuilderCanvasNode[];
+  viewport: Viewport;
+}): MoveInteractionCandidates {
+  const snapRects: Rect[] = [];
+  const containerHitRects: Array<{ id: string; rect: Rect }> = [];
+  const movingParentId = movingNode.parentId ?? null;
+
+  for (const node of nodes) {
+    if (movingNodeIds.has(node.id) || !node.visible) continue;
+    const rect = absoluteRectById.get(node.id) ?? resolveViewportRect(node, viewport);
+    if (isContainerLikeKind(node.kind)) {
+      containerHitRects.push({ id: node.id, rect });
+    }
+    const sameSnapScope = activeGroupId
+      ? node.parentId === activeGroupId
+      : movingParentId
+        ? node.parentId === movingParentId
+        : !node.parentId;
+    if (sameSnapScope) snapRects.push(rect);
+  }
+
+  const parentRect = movingParentId ? absoluteRectById.get(movingParentId) ?? null : null;
+  if (parentRect) snapRects.push(parentRect);
+
+  return { snapRects, containerHitRects };
 }
 
 function clampRect(
@@ -810,10 +853,8 @@ export default function CanvasContainer({
       });
       if (activeInteraction.type === 'move') {
         setOverlapPicker(null);
-        const movingNodeIds = new Set(activeInteraction.nodeIds);
         const geometry = interactionGeometrySnapshotRef.current;
         if (!geometry) return;
-        const currentNodesForHover = geometry.nodes;
         const currentNodesById = geometry.nodesById;
         const currentAbsoluteRects = geometry.absoluteRectById;
         if (activeInteraction.nodeIds.length === 1) {
@@ -829,39 +870,25 @@ export default function CanvasContainer({
             };
             const centerX = tentative.x + tentative.width / 2;
             const centerY = tentative.y + tentative.height / 2;
-            const hitContainer = currentNodesForHover.find(
-              (n) =>
-                isContainerLikeKind(n.kind) &&
-                !movingNodeIds.has(n.id) &&
-                n.visible &&
-                (() => {
-                  const rect = currentAbsoluteRects.get(n.id) ?? resolveViewportRect(n, activeInteraction.viewport);
-                  return (
-                    centerX >= rect.x
-                    && centerX <= rect.x + rect.width
-                    && centerY >= rect.y
-                    && centerY <= rect.y + rect.height
-                  );
-                })(),
-            );
-            setHoveredContainerId(hitContainer?.id ?? null);
+            let hitContainerId: string | null = null;
+            for (const candidate of activeInteraction.containerHitRects) {
+              const rect = candidate.rect;
+              if (
+                centerX >= rect.x
+                && centerX <= rect.x + rect.width
+                && centerY >= rect.y
+                && centerY <= rect.y + rect.height
+              ) {
+                hitContainerId = candidate.id;
+                break;
+              }
+            }
+            setHoveredContainerId(hitContainerId);
 
             const parentRect = currentNode.parentId
               ? currentAbsoluteRects.get(currentNode.parentId) ?? null
               : null;
-            const otherRects: Rect[] = currentNodesForHover
-              .filter((node) => (
-                node.id !== nodeId
-                && node.visible
-                && (activeGroupId
-                  ? node.parentId === activeGroupId
-                  : currentNode.parentId
-                    ? node.parentId === currentNode.parentId
-                    : !node.parentId)
-              ))
-              .map((node) => currentAbsoluteRects.get(node.id) ?? resolveViewportRect(node, activeInteraction.viewport));
-            if (parentRect) otherRects.push(parentRect);
-            const { snappedRect, guides: nextGuides } = computeSnap(tentative, otherRects, 0, {
+            const { snappedRect, guides: nextGuides } = computeSnap(tentative, activeInteraction.snapRects, 0, {
               width: stageWidth,
               height: stageHeight,
             });
@@ -1535,6 +1562,17 @@ export default function CanvasContainer({
                       .filter((node) => nodeIds.includes(node.id))
                       .map((node) => [node.id, absoluteRectById.get(node.id) ?? resolveViewportRect(node, interactionViewport)]),
                   );
+                  const movingNode = nodesById.get(nodeId);
+                  const moveCandidates = nodeIds.length === 1 && movingNode
+                    ? createMoveInteractionCandidates({
+                        activeGroupId,
+                        absoluteRectById,
+                        movingNode,
+                        movingNodeIds: new Set(nodeIds),
+                        nodes: visibleNodes,
+                        viewport: interactionViewport,
+                      })
+                    : { snapRects: [], containerHitRects: [] };
                   setSelectedNodeIds(nodeIds, nodeId);
                   setActiveViewport(interactionViewport);
                   interactionGeometrySnapshotRef.current = captureInteractionGeometry();
@@ -1554,6 +1592,8 @@ export default function CanvasContainer({
                     startParentId: nodesById.get(nodeId)?.parentId ?? null,
                     startRects,
                     startAbsoluteRects,
+                    snapRects: moveCandidates.snapRects,
+                    containerHitRects: moveCandidates.containerHitRects,
                   });
                 }}
                 onResizeStart={(nodeId, handle, event) => {

@@ -41,6 +41,8 @@ function edges(r: Rect) {
   };
 }
 
+type RectEdges = ReturnType<typeof edges>;
+
 function rangesOverlap(aStart: number, aEnd: number, bStart: number, bEnd: number) {
   return Math.min(aEnd, bEnd) > Math.max(aStart, bStart);
 }
@@ -63,6 +65,40 @@ function removeGuideGap(guide: AlignmentGuide & { gap: number }): AlignmentGuide
     tone: guide.tone,
     label: guide.label,
   };
+}
+
+function addVerticalAlignmentGuide(
+  guides: AlignmentGuide[],
+  finalEdges: RectEdges,
+  otherEdges: RectEdges,
+  meVal: number,
+  otherVal: number,
+) {
+  if (Math.abs(meVal - otherVal) >= 1) return;
+  guides.push({
+    axis: 'vertical',
+    position: otherVal,
+    from: Math.min(finalEdges.top, otherEdges.top),
+    to: Math.max(finalEdges.bottom, otherEdges.bottom),
+    tone: 'alignment',
+  });
+}
+
+function addHorizontalAlignmentGuide(
+  guides: AlignmentGuide[],
+  finalEdges: RectEdges,
+  otherEdges: RectEdges,
+  meVal: number,
+  otherVal: number,
+) {
+  if (Math.abs(meVal - otherVal) >= 1) return;
+  guides.push({
+    axis: 'horizontal',
+    position: otherVal,
+    from: Math.min(finalEdges.left, otherEdges.left),
+    to: Math.max(finalEdges.right, otherEdges.right),
+    tone: 'alignment',
+  });
 }
 
 /**
@@ -95,45 +131,41 @@ export function computeSnap(
   let snapY = y;
 
   const meEdges = edges({ ...moving, x, y });
+  const considerX = (meVal: number, otherVal: number) => {
+    const d = Math.abs(meVal - otherVal);
+    if (d < bestDx) {
+      bestDx = d;
+      snapX = x + (otherVal - meVal);
+    }
+  };
+  const considerY = (meVal: number, otherVal: number) => {
+    const d = Math.abs(meVal - otherVal);
+    if (d < bestDy) {
+      bestDy = d;
+      snapY = y + (otherVal - meVal);
+    }
+  };
 
   for (const other of others) {
     const oe = edges(other);
 
     // Vertical guides (snap x-axis)
-    const xPairs: Array<[number, number]> = [
-      [meEdges.left, oe.left],
-      [meEdges.left, oe.right],
-      [meEdges.right, oe.left],
-      [meEdges.right, oe.right],
-      [meEdges.centerX, oe.centerX],
-      [meEdges.left, oe.centerX],
-      [meEdges.right, oe.centerX],
-    ];
-    for (const [meVal, otherVal] of xPairs) {
-      const d = Math.abs(meVal - otherVal);
-      if (d < bestDx) {
-        bestDx = d;
-        snapX = x + (otherVal - meVal);
-      }
-    }
+    considerX(meEdges.left, oe.left);
+    considerX(meEdges.left, oe.right);
+    considerX(meEdges.right, oe.left);
+    considerX(meEdges.right, oe.right);
+    considerX(meEdges.centerX, oe.centerX);
+    considerX(meEdges.left, oe.centerX);
+    considerX(meEdges.right, oe.centerX);
 
     // Horizontal guides (snap y-axis)
-    const yPairs: Array<[number, number]> = [
-      [meEdges.top, oe.top],
-      [meEdges.top, oe.bottom],
-      [meEdges.bottom, oe.top],
-      [meEdges.bottom, oe.bottom],
-      [meEdges.centerY, oe.centerY],
-      [meEdges.top, oe.centerY],
-      [meEdges.bottom, oe.centerY],
-    ];
-    for (const [meVal, otherVal] of yPairs) {
-      const d = Math.abs(meVal - otherVal);
-      if (d < bestDy) {
-        bestDy = d;
-        snapY = y + (otherVal - meVal);
-      }
-    }
+    considerY(meEdges.top, oe.top);
+    considerY(meEdges.top, oe.bottom);
+    considerY(meEdges.bottom, oe.top);
+    considerY(meEdges.bottom, oe.bottom);
+    considerY(meEdges.centerY, oe.centerY);
+    considerY(meEdges.top, oe.centerY);
+    considerY(meEdges.bottom, oe.centerY);
   }
 
   // 3. Canvas center snap
@@ -161,33 +193,26 @@ export function computeSnap(
   for (const other of others) {
     const oe = edges(other);
     // Vertical guides
-    for (const val of [oe.left, oe.right, oe.centerX]) {
-      for (const meVal of [finalEdges.left, finalEdges.right, finalEdges.centerX]) {
-        if (Math.abs(meVal - val) < 1) {
-          guides.push({
-            axis: 'vertical',
-            position: val,
-            from: Math.min(finalEdges.top, oe.top),
-            to: Math.max(finalEdges.bottom, oe.bottom),
-            tone: 'alignment',
-          });
-        }
-      }
-    }
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.left, oe.left);
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.right, oe.left);
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerX, oe.left);
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.left, oe.right);
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.right, oe.right);
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerX, oe.right);
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.left, oe.centerX);
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.right, oe.centerX);
+    addVerticalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerX, oe.centerX);
+
     // Horizontal guides
-    for (const val of [oe.top, oe.bottom, oe.centerY]) {
-      for (const meVal of [finalEdges.top, finalEdges.bottom, finalEdges.centerY]) {
-        if (Math.abs(meVal - val) < 1) {
-          guides.push({
-            axis: 'horizontal',
-            position: val,
-            from: Math.min(finalEdges.left, oe.left),
-            to: Math.max(finalEdges.right, oe.right),
-            tone: 'alignment',
-          });
-        }
-      }
-    }
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.top, oe.top);
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.bottom, oe.top);
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerY, oe.top);
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.top, oe.bottom);
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.bottom, oe.bottom);
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerY, oe.bottom);
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.top, oe.centerY);
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.bottom, oe.centerY);
+    addHorizontalAlignmentGuide(guides, finalEdges, oe, finalEdges.centerY, oe.centerY);
 
     if (rangesOverlap(finalEdges.top, finalEdges.bottom, oe.top, oe.bottom)) {
       const yPosition = (Math.max(finalEdges.top, oe.top) + Math.min(finalEdges.bottom, oe.bottom)) / 2;

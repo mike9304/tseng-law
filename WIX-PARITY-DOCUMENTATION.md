@@ -428,3 +428,37 @@ Created: 2026-05-09T12:52:13.760Z
 - 사용자 피드백 흡수:
   - "이 작업이 끝난뒤에도 7번 시작하고 다음 계속 작업 진행" → section template blocker 커밋 직후 M07을 시작하고 lock까지 완료.
 - 다음 마일스톤: M08
+
+## M08 — mobile inspector per-viewport UI
+
+- 시작/종료: 2026-05-10T03:08:00+09:00 / 2026-05-10T03:21:00+09:00
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxInspectorPanel.tsx` — Layout 탭 안에 Desktop/Tablet/Mobile viewport segmented control 추가, rect/fontSize/hidden override 상태 표시, `Override created` banner, viewport reset 연결.
+  - `src/components/builder/canvas/SandboxTopBar.tsx` — top bar viewport button에 테스트/동기화용 data attribute 추가.
+  - `src/components/builder/canvas/SandboxPage.tsx` — inspector에서 store viewport를 바꿔도 top bar/canvas width가 따라오도록 양방향 동기화.
+  - `src/lib/builder/canvas/store.ts` — 에디터 미리보기용 services/FAQ open index 상태 추가.
+  - `src/components/builder/canvas/CanvasNode.tsx` — services/FAQ 아코디언 open 상태를 선택 상태와 분리. 업무 글을 열어둔 뒤 다른 노드를 선택해도 상세 글이 사라지지 않게 수정.
+  - `src/components/builder/canvas/SandboxEditorRail.tsx` — 디자인 패널에서 섹션 선택을 local focus 상태로도 유지해 `주요 서비스` chip 클릭 즉시 템플릿 목록이 열리도록 보강.
+  - `tests/builder-editor/mobile-inspector.playwright.ts` — M08 브라우저 시나리오 추가.
+  - `tests/builder-editor/section-template-click.playwright.ts` — 섹션 템플릿 선택 후 업무 글 유지 회귀 추가.
+- 구현:
+  - Inspector Layout 탭에서 Desktop/Tablet/Mobile을 직접 전환한다.
+  - inspector viewport 전환은 top bar BreakpointSwitcher와 같은 store 상태를 사용한다.
+  - tablet/mobile에서 X/Y/Width/Height 입력 시 `responsive.<viewport>.rect` partial override가 생긴다.
+  - text/heading 계열에서 Font size 입력 시 `responsive.<viewport>.fontSize` override가 생긴다.
+  - Show on D/T/M 토글은 `responsive.<viewport>.hidden` override를 만들고, active viewport 숨김 상태를 명확히 경고한다.
+  - override가 생기면 `Override created`; 없으면 desktop inherit 상태를 보여주고 Reset으로 해당 viewport override를 제거한다.
+  - 사용자가 보고한 "주요업무 노드 선택 후 다른 노드 선택하면 글이 없어짐"은 에디터 preview open state를 selection에서 분리해 수정했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (33 files / 765 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-inspector.playwright.ts --workers=1` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts tests/builder-editor/mobile-inspector.playwright.ts --workers=1` ✅ (2 passed)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- W 판정:
+  - W32/W34/W35/W38 green evidence 확보.
+  - W31/W37 auto-fit 및 W39+ hamburger/preview runtime은 M09/M10 범위로 유지.
+  - W33은 editor hidden override UI는 구현됐고 public mobile 미렌더 최종 증거는 M10 runtime 검증에서 닫는다.
+- 다음 마일스톤: M09

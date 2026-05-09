@@ -73,6 +73,12 @@ export type BuilderCanvasAlignmentAction =
   | 'bottom';
 export type BuilderCanvasDistributeAction = 'horizontal' | 'vertical';
 export type BuilderCanvasMatchSizeAction = 'width' | 'height';
+export type BuilderCanvasPreviewSection = 'services' | 'faq';
+
+interface BuilderCanvasInteractivePreviewState {
+  servicesOpenIndex: number;
+  faqOpenIndex: number;
+}
 
 interface BuilderCanvasStoreState {
   document: BuilderCanvasDocument | null;
@@ -95,6 +101,8 @@ interface BuilderCanvasStoreState {
   /** Active editing viewport — determines which `responsive.<vp>` overrides Inspector writes. */
   viewport: Viewport;
   setViewport: (viewport: Viewport) => void;
+  interactivePreview: BuilderCanvasInteractivePreviewState;
+  setInteractivePreviewIndex: (section: BuilderCanvasPreviewSection, index: number) => void;
   replaceDocument: (document: BuilderCanvasDocument) => void;
   setSelectedNodeId: (nodeId: string | null) => void;
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
@@ -504,6 +512,31 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   nodesById: EMPTY_NODES_BY_ID,
   viewport: 'desktop' as Viewport,
   setViewport: (viewport) => set({ viewport }),
+  interactivePreview: {
+    servicesOpenIndex: 0,
+    faqOpenIndex: 0,
+  },
+  setInteractivePreviewIndex: (section, index) =>
+    set((state) => {
+      const clampedIndex = Math.max(0, Math.round(index));
+      if (section === 'services' && state.interactivePreview.servicesOpenIndex !== clampedIndex) {
+        return {
+          interactivePreview: {
+            ...state.interactivePreview,
+            servicesOpenIndex: clampedIndex,
+          },
+        };
+      }
+      if (section === 'faq' && state.interactivePreview.faqOpenIndex !== clampedIndex) {
+        return {
+          interactivePreview: {
+            ...state.interactivePreview,
+            faqOpenIndex: clampedIndex,
+          },
+        };
+      }
+      return state;
+    }),
   replaceDocument: (document) =>
     set({
       document,

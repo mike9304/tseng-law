@@ -242,6 +242,8 @@ export default function CanvasNode({
   const selectionZIndexBoost = selected && !preservesHitTestLayer ? 10000 : 0;
   const childrenMap = useBuilderCanvasStore((s) => s.childrenMap);
   const nodesById = useBuilderCanvasStore((s) => s.nodesById);
+  const interactivePreview = useBuilderCanvasStore((s) => s.interactivePreview);
+  const setInteractivePreviewIndex = useBuilderCanvasStore((s) => s.setInteractivePreviewIndex);
   const heroSearchInputNode = nodesById.get('home-hero-search-input');
   const heroSearchBarNode = nodesById.get('home-hero-search-bar');
   const heroSearchButtonNode = nodesById.get('home-hero-search-button');
@@ -279,14 +281,6 @@ export default function CanvasNode({
   const nestedChildren = childIds
     .map((cid) => nodesById.get(cid))
     .filter((n): n is BuilderCanvasNode => n != null && n.visible);
-  const selectionIsInside = (targetId: string) => selectedNodeIds.some((selectedId) => {
-    let cursor: string | null = selectedId;
-    while (cursor) {
-      if (cursor === targetId) return true;
-      cursor = nodesById.get(cursor)?.parentId ?? null;
-    }
-    return false;
-  });
   const findSelfOrAncestor = (pattern: RegExp) => {
     let cursor: string | null = node.id;
     while (cursor) {
@@ -309,6 +303,14 @@ export default function CanvasNode({
       .map((selectedId) => /^home-faq-item-(\d+)/.exec(selectedId)?.[1])
       .filter((value): value is string => Boolean(value)),
   );
+  const serviceCardIndex = serviceCardMatch?.[1] != null ? Number(serviceCardMatch[1]) : null;
+  const faqItemIndex = faqItemMatch?.[1] != null ? Number(faqItemMatch[1]) : null;
+  const selectedServiceIndex = selectedServiceCards.size > 0
+    ? Number([...selectedServiceCards][0])
+    : interactivePreview.servicesOpenIndex;
+  const selectedFaqIndex = selectedFaqItems.size > 0
+    ? Number([...selectedFaqItems][0])
+    : interactivePreview.faqOpenIndex;
   const activeOfficeIndex = officeIndexFromNodeId(primarySelectedNodeId ?? '') ?? selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => {
     const nextIndex = officeIndexFromNodeId(selectedId);
     return nextIndex ?? activeIndex;
@@ -322,12 +324,23 @@ export default function CanvasNode({
       : 'none'
     : undefined;
   const builderPreviewOpen = serviceCardMatch
-    ? selectedServiceCards.has(serviceCardMatch[1]) || (serviceCardMatch[1] === '0' && selectedServiceCards.size === 0 && !selectionIsInside('home-services-list'))
+    ? serviceCardIndex === selectedServiceIndex
     : faqItemMatch
-      ? selectedFaqItems.has(faqItemMatch[1]) || (faqItemMatch[1] === '0' && selectedFaqItems.size === 0 && !selectionIsInside('home-faq-list'))
+      ? faqItemIndex === selectedFaqIndex
       : false;
   const heroSearchActive = selectedNodeIds.some(isHeroSearchTarget);
   const showHeroSearchQuickEdit = selected && isInteractive && !node.locked && isHeroSearchTarget(node.id);
+
+  useEffect(() => {
+    if (!selected) return;
+    if (serviceCardIndex != null) {
+      setInteractivePreviewIndex('services', serviceCardIndex);
+      return;
+    }
+    if (faqItemIndex != null) {
+      setInteractivePreviewIndex('faq', faqItemIndex);
+    }
+  }, [faqItemIndex, selected, serviceCardIndex, setInteractivePreviewIndex]);
   const heroSearchLayout = (() => {
     const wrapRect = heroSearchWrapNode?.rect;
     if (!wrapRect) return 'left';

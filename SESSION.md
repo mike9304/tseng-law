@@ -3002,3 +3002,26 @@ Prompt-to-artifact 체크:
 메모:
 - M07은 schema/runtime lock이며, 모바일 inspector UI는 M08에서 시작한다.
 - M09/M10에서 이 lock 위에 auto-fit, hamburger runtime, mobile sticky, bottom CTA, mobile preview iframe을 구현한다.
+
+## 2026-05-10 Codex /goal Wix full builder M08 mobile inspector
+
+범위:
+- M08 `Mobile inspector per-viewport UI`를 완료했다.
+- Inspector Layout 탭에 Desktop/Tablet/Mobile viewport control을 추가하고, top bar BreakpointSwitcher와 같은 store viewport를 쓰도록 동기화했다.
+- tablet/mobile에서 X/Y/Width/Height override는 `responsive.<vp>.rect`, Font size override는 `responsive.<vp>.fontSize`, hidden override는 `responsive.<vp>.hidden`으로 기록된다.
+- override 생성 시 `Override created` 상태와 reset 버튼을 보여준다. override가 없으면 desktop inherit 상태를 보여준다.
+- 사용자 피드백 "주요 업무 노드 선택한 뒤 다른 노드 선택하면 글이 없어진다"를 함께 수정했다. services/FAQ editor preview open state를 selection state에서 분리해, 열어둔 업무 글이 다른 노드 선택 후에도 유지된다.
+- Design rail의 섹션 선택도 local focus 상태를 추가해 `주요 서비스` chip 클릭 즉시 템플릿 목록으로 진입하게 보강했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (33 files / 765 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-inspector.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts tests/builder-editor/mobile-inspector.playwright.ts --workers=1` ✅ (2 passed)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+
+메모:
+- W32/W34/W35/W38은 M08 evidence 확보.
+- W31/W37 auto-fit과 W39~W45 mobile runtime/preview는 M09/M10으로 이어간다.

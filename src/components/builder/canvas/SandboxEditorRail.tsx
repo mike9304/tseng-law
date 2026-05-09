@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import NavigationEditor from '@/components/builder/canvas/NavigationEditor';
 import PageSwitcher from '@/components/builder/canvas/PageSwitcher';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
@@ -13,6 +13,7 @@ import {
   getHomeSectionTemplateVariantOptions,
   getHomeSectionTemplateTarget,
   getHomeSectionTemplateVariant,
+  type HomeSectionTemplateId,
 } from '@/lib/builder/canvas/section-templates';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
@@ -89,6 +90,7 @@ export default function SandboxEditorRail({
   onUpdateNodeContent,
   onToast,
 }: SandboxEditorRailProps) {
+  const [focusedSectionTemplateId, setFocusedSectionTemplateId] = useState<HomeSectionTemplateId | null>(null);
   const availableSectionTemplates = useMemo(() => {
     const nodeIds = new Set(document?.nodes.map((node) => node.id) ?? []);
     return HOME_SECTION_TEMPLATE_TARGETS.filter((target) => nodeIds.has(target.nodeId));
@@ -106,11 +108,18 @@ export default function SandboxEditorRail({
 
     return null;
   }, [document, selectedNode]);
-  const selectedSectionTemplate = selectedSectionTemplateNode
-    ? getHomeSectionTemplateTarget(selectedSectionTemplateNode.id)
+  const focusedSectionTemplateNode = useMemo(() => {
+    if (!focusedSectionTemplateId || !document) return null;
+    const target = HOME_SECTION_TEMPLATE_TARGETS.find((candidate) => candidate.id === focusedSectionTemplateId);
+    if (!target) return null;
+    return document.nodes.find((node) => node.id === target.nodeId) ?? null;
+  }, [document, focusedSectionTemplateId]);
+  const activeSectionTemplateNode = selectedSectionTemplateNode ?? focusedSectionTemplateNode;
+  const selectedSectionTemplate = activeSectionTemplateNode
+    ? getHomeSectionTemplateTarget(activeSectionTemplateNode.id)
     : null;
-  const selectedSectionTemplateVariant = selectedSectionTemplateNode
-    ? getHomeSectionTemplateVariant(selectedSectionTemplateNode)
+  const selectedSectionTemplateVariant = activeSectionTemplateNode
+    ? getHomeSectionTemplateVariant(activeSectionTemplateNode)
     : null;
   const selectedSectionTemplateVariants = selectedSectionTemplate
     ? getHomeSectionTemplateVariantOptions(selectedSectionTemplate.id)
@@ -228,13 +237,16 @@ export default function SandboxEditorRail({
                   <button
                     type="button"
                     className={styles.panelHeaderButton}
-                    onClick={() => onSelectNode(null)}
+                    onClick={() => {
+                      setFocusedSectionTemplateId(null);
+                      onSelectNode(null);
+                    }}
                   >
                     ← 섹션 목록
                   </button>
                 ) : null}
               </header>
-              {selectedSectionTemplate && selectedSectionTemplateNode && selectedSectionTemplateVariant ? (
+              {selectedSectionTemplate && activeSectionTemplateNode && selectedSectionTemplateVariant ? (
                 <>
                   <p className={styles.panelCopy}>
                     {selectedSectionTemplate.label}의 글, 주소, 링크 데이터는 그대로 두고 디자인 템플릿만 바꿉니다.
@@ -249,7 +261,7 @@ export default function SandboxEditorRail({
                           selectedSectionTemplateVariant === variant.key ? styles.sectionTemplateVariantCardActive : ''
                         }`}
                         aria-pressed={selectedSectionTemplateVariant === variant.key}
-                        onClick={() => onUpdateNodeContent(selectedSectionTemplateNode.id, { variant: variant.key })}
+                        onClick={() => onUpdateNodeContent(activeSectionTemplateNode.id, { variant: variant.key })}
                       >
                         <em
                           className={styles.sectionTemplateVariantPreview}
@@ -278,7 +290,10 @@ export default function SandboxEditorRail({
                         type="button"
                         className={styles.sectionTemplateHintButton}
                         disabled={!availableSectionTemplates.some((available) => available.id === target.id)}
-                        onClick={() => onSelectNode(target.nodeId)}
+                        onClick={() => {
+                          setFocusedSectionTemplateId(target.id);
+                          onSelectNode(target.nodeId);
+                        }}
                       >
                         {target.label}
                       </button>

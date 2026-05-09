@@ -192,6 +192,7 @@ export default function SandboxPage({
   const [saveSectionPayload, setSaveSectionPayload] = useState<SaveSectionPayload | null>(null);
   const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
+  const storeViewport = useBuilderCanvasStore((state) => state.viewport);
   const publicChromeCopy = useMemo(() => getPublicChromeCopy(locale), [locale]);
 
   useEffect(() => {
@@ -362,6 +363,10 @@ export default function SandboxPage({
   useEffect(() => {
     setStoreViewport(viewport);
   }, [viewport, setStoreViewport]);
+
+  useEffect(() => {
+    if (storeViewport !== viewport) setViewport(storeViewport);
+  }, [storeViewport, viewport]);
 
   useEffect(() => {
     const column = canvasColumnRef.current;

@@ -107,6 +107,7 @@ export default function SandboxTopBar({
                 className={`${styles.breakpointButton} ${active ? styles.breakpointButtonActive : ''}`}
                 title={`${option.label} (${VIEWPORT_WIDTHS[option.mode]}px)`}
                 aria-pressed={active}
+                data-builder-topbar-viewport={option.mode}
                 onClick={() => onViewportChange(option.mode)}
               >
                 <span className={styles.breakpointIcon}>{option.icon}</span>

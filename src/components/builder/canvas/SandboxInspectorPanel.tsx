@@ -12,7 +12,9 @@ import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
   hasResponsiveOverride,
   resolveViewportHidden,
+  resolveViewportFontSize,
   resolveViewportRect,
+  VIEWPORT_WIDTHS,
 } from '@/lib/builder/canvas/responsive';
 import {
   googleMapsSearchUrl,
@@ -95,6 +97,11 @@ function LayoutField({
       <BreakpointBadge viewport={viewport} active={hasOverride} label="" />
     </LabeledRow>
   );
+}
+
+function contentFontSize(node: BuilderCanvasNode): number | null {
+  const content = node.content as Record<string, unknown>;
+  return typeof content.fontSize === 'number' ? content.fontSize : null;
 }
 
 type ViewportLite = 'desktop' | 'tablet' | 'mobile';
@@ -393,6 +400,7 @@ export default function SandboxInspectorPanel({
     bringSelectedNodeToFront,
     sendSelectedNodeToBack,
     viewport,
+    setViewport,
     updateResponsiveOverride,
     resetResponsiveOverride,
   } = useBuilderCanvasStore();
@@ -587,9 +595,22 @@ export default function SandboxInspectorPanel({
                 <>
                   {(() => {
                     const isViewportOverride = viewport !== 'desktop';
+                    const responsiveViewport = isViewportOverride ? viewport : null;
+                    const activeOverride = responsiveViewport
+                      ? selectedNode.responsive?.[responsiveViewport]
+                      : undefined;
                     const effectiveRect = resolveViewportRect(selectedNode, viewport);
-                    const fieldHasOverride = isViewportOverride
+                    const hasActiveOverride = isViewportOverride
                       && hasResponsiveOverride(selectedNode, viewport);
+                    const baseFontSize = contentFontSize(selectedNode);
+                    const effectiveFontSize = resolveViewportFontSize(selectedNode, viewport);
+                    const hasFontSizeOverride = isViewportOverride
+                      && activeOverride?.fontSize !== undefined;
+                    const hasHiddenOverride = isViewportOverride
+                      && activeOverride?.hidden !== undefined;
+                    const fieldHasOverride = (field: 'x' | 'y' | 'width' | 'height') => (
+                      isViewportOverride && activeOverride?.rect?.[field] !== undefined
+                    );
                     const isHiddenAtVp = resolveViewportHidden(selectedNode, viewport);
                     const commitRect = (field: 'x' | 'y' | 'width' | 'height', nextValue: number) => {
                       if (!isViewportOverride) {
@@ -605,10 +626,74 @@ export default function SandboxInspectorPanel({
                         rect: { [field]: clamped },
                       });
                     };
+                    const commitFontSize = (nextValue: number) => {
+                      const clamped = clampNumber(Math.round(nextValue), 8, 160);
+                      if (!isViewportOverride) {
+                        updateNodeContent(selectedNode.id, { fontSize: clamped });
+                        return;
+                      }
+                      updateResponsiveOverride(selectedNode.id, viewport, { fontSize: clamped });
+                    };
                     return (
                       <>
+                        <LabeledRow
+                          label="Viewport"
+                          helper={
+                            isViewportOverride
+                              ? hasActiveOverride
+                                ? 'Override created for this viewport.'
+                                : 'Inherits desktop until you edit a value.'
+                              : 'Desktop is the source layout.'
+                          }
+                        >
+                          <div
+                            data-builder-mobile-inspector-viewport="true"
+                            data-builder-viewport-override-state={isViewportOverride && hasActiveOverride ? 'created' : 'inherited'}
+                            role="group"
+                            aria-label="Inspector viewport"
+                            style={{
+                              display: 'grid',
+                              gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+                              gap: 6,
+                              width: '100%',
+                            }}
+                          >
+                            {DEVICE_META.map((device) => {
+                              const active = viewport === device.vp;
+                              const hasOverride = device.vp !== 'desktop' && hasResponsiveOverride(selectedNode, device.vp);
+                              return (
+                                <button
+                                  key={device.vp}
+                                  type="button"
+                                  data-builder-inspector-viewport-option={device.vp}
+                                  aria-pressed={active}
+                                  onClick={() => setViewport(device.vp)}
+                                  style={{
+                                    minWidth: 0,
+                                    padding: '7px 6px',
+                                    borderRadius: 8,
+                                    border: active ? '1px solid #116dff' : '1px solid #dbe3ee',
+                                    background: active ? '#eaf3ff' : '#fff',
+                                    color: active ? '#0f4ec4' : '#334155',
+                                    fontSize: '0.72rem',
+                                    fontWeight: 850,
+                                    cursor: 'pointer',
+                                  }}
+                                  title={`${device.label} ${VIEWPORT_WIDTHS[device.vp]}px`}
+                                >
+                                  <span aria-hidden style={{ display: 'block', fontSize: '0.8rem' }}>{device.short}</span>
+                                  <span style={{ display: 'block' }}>{device.label}</span>
+                                  <small style={{ display: 'block', color: active ? '#1d4ed8' : '#64748b' }}>
+                                    {VIEWPORT_WIDTHS[device.vp]}px{hasOverride ? ' · override' : ''}
+                                  </small>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </LabeledRow>
                         {isViewportOverride ? (
                           <div
+                            data-builder-viewport-override-banner={hasActiveOverride ? 'created' : 'inherited'}
                             style={{
                               display: 'flex',
                               alignItems: 'center',
@@ -625,8 +710,8 @@ export default function SandboxInspectorPanel({
                           >
                             <span>
                               <strong style={{ marginRight: 6 }}>{viewport}</strong>
-                              viewport override 편집 중
-                              {fieldHasOverride ? null : (
+                              {hasActiveOverride ? 'Override created' : 'viewport override 편집 중'}
+                              {hasActiveOverride ? null : (
                                 <span style={{ color: '#475569', marginLeft: 6 }}>
                                   (override 미설정 — desktop 값 표시)
                                 </span>
@@ -635,15 +720,15 @@ export default function SandboxInspectorPanel({
                             <button
                               type="button"
                               onClick={() => resetResponsiveOverride(selectedNode.id, viewport)}
-                              disabled={selectedNode.locked || !fieldHasOverride}
+                              disabled={selectedNode.locked || !hasActiveOverride}
                               style={{
                                 padding: '2px 8px',
                                 fontSize: '0.72rem',
                                 border: '1px solid #bfdbfe',
                                 background: '#fff',
                                 borderRadius: 6,
-                                cursor: fieldHasOverride && !selectedNode.locked ? 'pointer' : 'not-allowed',
-                                opacity: fieldHasOverride && !selectedNode.locked ? 1 : 0.5,
+                                cursor: hasActiveOverride && !selectedNode.locked ? 'pointer' : 'not-allowed',
+                                opacity: hasActiveOverride && !selectedNode.locked ? 1 : 0.5,
                                 color: '#1e40af',
                               }}
                               title={`${viewport} viewport 의 override 를 모두 제거합니다`}
@@ -659,7 +744,7 @@ export default function SandboxInspectorPanel({
                             value={effectiveRect.x}
                             onCommit={(nextValue) => commitRect('x', nextValue)}
                             disabled={selectedNode.locked}
-                            hasOverride={fieldHasOverride}
+                            hasOverride={fieldHasOverride('x')}
                           />
                           <LayoutField
                             label="Y"
@@ -667,7 +752,7 @@ export default function SandboxInspectorPanel({
                             value={effectiveRect.y}
                             onCommit={(nextValue) => commitRect('y', nextValue)}
                             disabled={selectedNode.locked}
-                            hasOverride={fieldHasOverride}
+                            hasOverride={fieldHasOverride('y')}
                           />
                           <LayoutField
                             label="Width"
@@ -676,7 +761,7 @@ export default function SandboxInspectorPanel({
                             min={MIN_WIDTH}
                             onCommit={(nextValue) => commitRect('width', nextValue)}
                             disabled={selectedNode.locked}
-                            hasOverride={fieldHasOverride}
+                            hasOverride={fieldHasOverride('width')}
                           />
                           <LayoutField
                             label="Height"
@@ -685,8 +770,20 @@ export default function SandboxInspectorPanel({
                             min={MIN_HEIGHT}
                             onCommit={(nextValue) => commitRect('height', nextValue)}
                             disabled={selectedNode.locked}
-                            hasOverride={fieldHasOverride}
+                            hasOverride={fieldHasOverride('height')}
                           />
+                          {baseFontSize != null && effectiveFontSize != null ? (
+                            <LayoutField
+                              label="Font size"
+                              viewport={viewport}
+                              value={effectiveFontSize}
+                              min={8}
+                              max={160}
+                              onCommit={commitFontSize}
+                              disabled={selectedNode.locked}
+                              hasOverride={hasFontSizeOverride}
+                            />
+                          ) : null}
                         </div>
                         <ShowOnDeviceToggles
                           node={selectedNode}
@@ -694,6 +791,19 @@ export default function SandboxInspectorPanel({
                           updateResponsiveOverride={updateResponsiveOverride}
                           activeViewport={viewport}
                         />
+                        {hasHiddenOverride ? (
+                          <p
+                            data-builder-viewport-hidden-override="true"
+                            style={{
+                              margin: '6px 2px 0',
+                              fontSize: '0.72rem',
+                              color: '#475569',
+                              fontWeight: 600,
+                            }}
+                          >
+                            Hidden override exists for {viewport}.
+                          </p>
+                        ) : null}
                         {isViewportOverride && isHiddenAtVp ? (
                           <p
                             style={{

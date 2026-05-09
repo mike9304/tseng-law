@@ -21,5 +21,15 @@ test.describe('/ko/admin-builder section design templates', () => {
     const servicesRoot = page.locator('[data-node-id="home-services-root"]').first();
     await expect(servicesRoot).toHaveAttribute('data-builder-section-template', 'services');
     await expect(servicesRoot).toHaveAttribute('data-section-variant', 'split');
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
+
+    await page.locator('[data-node-id="home-services-list"]').first().click({ position: { x: 8, y: 8 }, force: true });
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
+    await expect(servicesRoot).toContainText('투자·법인설립');
+
+    await page.locator('[data-node-id="home-services-card-1-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
+    await page.locator('[data-node-id="home-services-description"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
   });
 });

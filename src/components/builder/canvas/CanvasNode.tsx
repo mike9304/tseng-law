@@ -49,6 +49,7 @@ import {
 } from '@/lib/builder/site/theme';
 import InlineTextEditor from './InlineTextEditor';
 import { linkValueFromLegacy } from '@/lib/builder/links';
+import { loadInsightsPreviewPosts } from './insights-preview-cache';
 import styles from './SandboxPage.module.css';
 
 function nodeLinkPreviewHref(node: BuilderCanvasNode): string | null {
@@ -215,20 +216,10 @@ function InsightsArchiveListPreview({ locale }: { locale: string }) {
     let cancelled = false;
     setLoaded(false);
     setPage(0);
-    const params = new URLSearchParams({
-      locale: resolvedLocale,
-      sort: 'newest',
-      limit: '100',
-      scope: 'all',
-    });
-    fetch(`/api/builder/blog/posts?${params.toString()}`)
-      .then((response) => response.json())
-      .then((payload: { ok?: boolean; posts?: BlogPost[] }) => {
+    loadInsightsPreviewPosts(resolvedLocale)
+      .then((nextPosts) => {
         if (cancelled) return;
-        setPosts(payload.ok && Array.isArray(payload.posts) ? payload.posts : []);
-      })
-      .catch(() => {
-        if (!cancelled) setPosts([]);
+        setPosts(nextPosts);
       })
       .finally(() => {
         if (!cancelled) setLoaded(true);

@@ -2668,3 +2668,24 @@ Prompt-to-artifact 체크:
 메모:
 - 검증 중 `.next` dev cache가 `vendor-chunks/zod.js` missing 상태가 되어 3000번 dev server를 재시작하고 `.next`를 재생성했다. 이후 `/ko`와 `/ko/admin-builder` 모두 200 확인.
 - goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.
+
+## 2026-05-09 Codex /goal G-Editor latest full gate after perf follow-ups
+
+범위:
+- `f01140a G-Editor: throttle canvas pointer movement` 기준으로 최신 자동 gate를 다시 실행했다.
+- 첫 전체 builder-editor run은 Cmd+D/Cmd+C/V persistence 케이스가 1회 flaky 실패했으나, 동일 케이스 단독 재실행 통과 후 전체 27개 재실행에서 green을 확인했다.
+- `npm run build` 이후 production build 산출물 충돌을 피하려고 dev server를 재시작했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (27 passed / 3.8m, macOS Chromium 권한 때문에 승격 실행)
+- `npm run test:unit` ✅ (26 files / 735 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `curl -I http://localhost:3000/ko` ✅ 200
+- `curl -I -u 'admin:local-review-2026!' http://localhost:3000/ko/admin-builder` ✅ 200
+
+메모:
+- 3000번 dev server는 다시 실행 중이다.
+- goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.

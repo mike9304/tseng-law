@@ -530,6 +530,14 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(headerSearchDialog).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(headerSearchDialog).toBeHidden();
+    const editorUrlBeforeHeaderUtility = page.url();
+    await builderHeader.locator('.utility-nav').getByRole('link', { name: '오시는 길' }).click();
+    await expect.poll(() => page.url()).toBe(editorUrlBeforeHeaderUtility);
+    await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+    await rail.getByRole('button', { name: 'Pages', exact: true }).click();
+    const pagesDrawerAfterHeaderNavigate = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Pages' }).first();
+    await pagesDrawerAfterHeaderNavigate.getByRole('button', { name: /홈|Home/ }).first().click();
+    await expect(page.locator('[data-node-id="home-hero-subtitle"]').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-insights-title"]').first()).toContainText('칼럼 아카이브');
     await expect(page.locator('[data-node-id="home-insights-featured-title"]').first()).toContainText(/\S/);
     await expect(page.locator('[data-node-id="home-insights-featured-link"]').first()).toContainText(/자세히|Read|閱讀/);

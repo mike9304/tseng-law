@@ -791,8 +791,9 @@ export default function SandboxPage({
       return;
     }
 
-    window.location.href = normalizedHref;
-  }, [handleSelectPage, locale, sitePagesState]);
+    setActiveDrawer('pages');
+    pushToast(`No builder page for ${normalizedHref}`, 'error');
+  }, [handleSelectPage, locale, pushToast, sitePagesState]);
 
   const viewportWidth = VIEWPORT_WIDTHS[viewport];
 

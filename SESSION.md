@@ -2576,3 +2576,15 @@ Prompt-to-artifact 체크:
 
 메모:
 - 사용자 직접 QA 전이므로 관련 W 상태는 계속 `🟡 자동검증 통과 / 사용자 QA 대기`로 둔다.
+
+## 2026-05-09 Codex /goal G-Editor header navigation guard
+
+범위:
+- 에디터 헤더 안에서 빌더 page 목록에 매칭되지 않는 내부 링크를 클릭할 때 `window.location.href`로 shell을 이탈하던 fallback을 제거했다.
+- 매칭되지 않는 헤더 링크는 Pages drawer를 열고 toast로 알려주며, `/ko/admin-builder`와 Canvas editor를 유지한다.
+- admin-builder smoke에 헤더 utility link 클릭 후 URL/canvas 유지와 Pages drawer 복귀 검증을 추가했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅

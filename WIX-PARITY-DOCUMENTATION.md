@@ -146,3 +146,46 @@ Created: 2026-05-09T12:52:13.760Z
 - 사용자 피드백 흡수:
   - "사진/칼럼 클릭하면 백지"와 지도 quick edit 관련 회귀를 막기 위해 `asset-image-workflow`, `columns-ui-workflow`, `office-map-public`, `published-interactions`를 포함한 전체 builder-editor bundle로 확인했다.
 - 다음 마일스톤: M03
+
+## M03 — 보안 3건
+
+- 시작/종료: 2026-05-09T23:28:00+09:00 / 2026-05-09T23:44:00+09:00
+- 변경 파일:
+  - `src/lib/builder/security/csrf.ts` — `BUILDER_ALLOWED_ORIGINS`, current host, `VERCEL_URL` 기반 Origin/Referer 검증을 추가하고 mismatch 응답을 `csrf_origin_mismatch`로 통일
+  - `src/lib/builder/security/rate-limit.ts` — `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`이 있으면 Redis REST pipeline을 사용하고 실패/미설정 시 in-memory fallback 유지
+  - `src/lib/builder/security/guard.ts` 및 builder mutation routes — rate-limit 비동기화를 위해 `await guardMutation()`으로 전환
+  - `src/lib/builder/canvas/upload-validation.ts` — `BUILDER_ASSET_MAX_BYTES`, `BUILDER_ASSET_ALLOWED_MIME`, 1KB magic-byte sniffing, SVG sanitize 정책 추가
+  - `src/lib/builder/assets.ts` / `src/app/api/builder/assets/route.ts` — SVG 저장 지원, sanitize 후 저장, 415/413 validation status 정책 적용
+  - `src/app/api/booking/book/route.ts` — shared async rate-limit helper에 맞춰 public booking limiter도 `await` 처리
+- 추가 파일:
+  - `src/lib/builder/security/__tests__/csrf.test.ts`
+  - `src/lib/builder/security/__tests__/rate-limit.test.ts`
+  - `tests/builder-editor/asset-upload-security.playwright.ts`
+- 커밋:
+  - `b709f99 G-Editor: enforce builder csrf origin guard`
+  - `27c27ea G-Editor: add builder rate limit fallback`
+  - `deaeac7 G-Editor: harden builder asset uploads`
+- 의사결정:
+  - Upstash SDK 설치 대신 REST pipeline을 직접 사용했다. 네트워크 의존성을 늘리지 않으면서 M03 env contract를 만족하고, 실패 시 기존 local fallback을 보존한다.
+  - Playwright/API helper 호환을 위해 localhost current host는 Origin/Referer가 없어도 허용하되, production-like host는 missing/mismatch 모두 403으로 막는다.
+  - SVG는 무조건 차단하지 않고 script/event handler는 제거 후 저장, 외부 href와 data/javascript/vbscript protocol은 차단한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/security/__tests__/csrf.test.ts src/lib/builder/security/__tests__/rate-limit.test.ts src/lib/builder/canvas/__tests__/upload-validation.test.ts` ✅ (38 tests)
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (29 files / 755 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `NEXT_DIST_DIR=.next-m03 npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - localhost API upload check ✅ (`m03-valid.png` 200, spoofed PNG 415, 11MB PNG 413)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-upload-security.playwright.ts --workers=1` ✅
+  - `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (29 passed / 3.7m)
+  - `git diff --check` ✅
+- 리스크 / 알려진 문제:
+  - Chromium launch와 localhost fetch는 local sandbox에서 `EPERM`/Mach port permission 문제가 있어 sandbox 밖에서 검증했다.
+  - `NEXT_DIST_DIR=.next-m03` build가 Next의 tsconfig include 자동 수정을 시도했으나 검증 부산물이라 되돌렸다.
+  - `.next-m02/`, `.next-m03/`는 untracked build artifact로 남아 있다.
+- 보류된 W (있을 경우):
+  - 없음
+- 사용자 피드백 흡수:
+  - "계속 yes 묻는 것" 관련해 dependency install 없이 REST 구현으로 승인 프롬프트를 줄였다. 단, sandbox가 localhost/Chromium을 막는 경우만 필수 승인으로 실행했다.
+- 다음 마일스톤: M04

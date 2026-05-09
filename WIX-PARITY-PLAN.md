@@ -4,7 +4,7 @@
 | M00 | Pre    | mergeMissingPages fix             | —         | 1h   | —    | 🟢   |
 | M01 | Pre    | Performance 잔여 fix              | —         | 10h  | M00  | 🟢   |
 | M02 | Pre    | Hot files split (4파일)           | —         | 14h  | M00  | 🟢   |
-| M03 | Pre    | 보안 3건                          | —         | 4h   | M00  | 🔴   |
+| M03 | Pre    | 보안 3건                          | —         | 4h   | M00  | 🟢   |
 | M04 | Pre    | AI 검증 인프라 7종                | —         | 6h   | M02  | 🔴   |
 | M05 | Pre    | Empty/error state sweep           | —         | 6h   | M02  | 🔴   |
 | M06 | Pre    | .next/dev 재시작 의존성 fix       | —         | 3h   | —    | 🔴   |

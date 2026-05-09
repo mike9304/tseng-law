@@ -2792,3 +2792,36 @@ Prompt-to-artifact 체크:
 - M02 종료로 M28 에디터 고도화 의존성은 해제됐다.
 - 전체 goal Done when의 "CSS 컴포넌트별 8+ module"은 아직 완전 충족이 아니므로 후속 Pre 마일스톤에서 shell/panel/modal CSS도 계속 분리한다.
 - 다음 마일스톤은 M03 보안 3건(CSRF Origin, Upstash rate limit, Asset upload validation).
+
+## 2026-05-09 Codex /goal Wix full builder M03 security
+
+범위:
+- M03 보안 3건을 완료했다.
+- builder mutation guard에 Origin/Referer CSRF 검증을 적용하고 `BUILDER_ALLOWED_ORIGINS`, `VERCEL_URL`, current host allowlist를 지원했다.
+- `guardMutation`을 async로 전환해 Upstash Redis REST rate-limit를 사용할 수 있게 했고, env 미설정/실패 시 기존 in-memory fallback을 유지했다.
+- publish limiter를 10/min으로 조정하고 mutation 60/min, asset 30/min 정책을 유지했다.
+- asset upload는 10MB env override, MIME allowlist env override, 1KB magic-byte sniffing, SVG sanitize, 415/413 응답 정책을 적용했다.
+- shared rate-limit helper 변경에 맞춰 public booking submit route도 `await checkRateLimit`로 보정했다.
+
+커밋:
+- `b709f99 G-Editor: enforce builder csrf origin guard`
+- `27c27ea G-Editor: add builder rate limit fallback`
+- `deaeac7 G-Editor: harden builder asset uploads`
+
+검증:
+- `npm run test:unit -- src/lib/builder/security/__tests__/csrf.test.ts src/lib/builder/security/__tests__/rate-limit.test.ts src/lib/builder/canvas/__tests__/upload-validation.test.ts` ✅ (38 tests)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (29 files / 755 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `NEXT_DIST_DIR=.next-m03 npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- localhost API upload check ✅ (`m03-valid.png` 200, spoofed PNG 415, 11MB PNG 413)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-upload-security.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (29 passed / 3.7m)
+- `git diff --check` ✅
+
+메모:
+- Chromium launch와 localhost fetch는 local sandbox에서 권한 문제(`EPERM`, Mach port permission)로 실패해 sandbox 밖에서 검증했다.
+- `NEXT_DIST_DIR=.next-m03` build가 Next의 tsconfig include 자동 수정을 시도했으나 검증 부산물이라 되돌렸다.
+- M03은 W 범위 없는 선행 보안 마일스톤이라 `Wix 체크포인트.md` 변경 없음.
+- 다음 마일스톤은 M04 AI 검증 인프라 7종.

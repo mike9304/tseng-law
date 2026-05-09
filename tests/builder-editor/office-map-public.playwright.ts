@@ -365,10 +365,17 @@ async function draftPayload(page: Page, pageId: string): Promise<{
   document?: { nodes?: Array<Record<string, unknown>> };
 }> {
   let response: APIResponse | null = null;
-  for (let attempt = 0; attempt < 4; attempt += 1) {
-    response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
-    if (!(await waitForRateLimit(response))) break;
+  let lastError: unknown = null;
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    try {
+      response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
+      if (!(await waitForRateLimit(response))) break;
+    } catch (error) {
+      lastError = error;
+      await page.waitForTimeout(500 * (attempt + 1));
+    }
   }
+  if (!response && lastError) throw lastError;
   expect(response).toBeTruthy();
   response = response!;
   expect(response.status()).toBe(200);

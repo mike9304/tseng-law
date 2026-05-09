@@ -2458,3 +2458,24 @@ Prompt-to-artifact 체크:
 
 메모:
 - W23은 우클릭 경로뿐 아니라 inspector 경로와 적용 후 반영까지 자동 검증된다. 사용자 직접 green 검증은 계속 대기한다.
+
+## 2026-05-09 Codex /goal G-Editor full gate replay after W03/W18/W23
+
+범위:
+- W03 inline text toolbar, W18 dropdown editing pin, W23 image editor apply path 이후 full gate를 다시 돌렸다.
+- office-map public Playwright suite의 draft polling이 full suite 요청 밀도에서 429를 만나던 flake를 GET retry로 보강했다.
+- 제품 코드는 건드리지 않고 자동 검증 안정성만 올렸다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run test:unit` ✅ (26 files / 735 tests)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (26 passed)
+- `curl -I http://localhost:3000/ko` ✅ 200
+- `curl -I -u 'admin:local-review-2026!' http://localhost:3000/ko/admin-builder` ✅ 200
+
+메모:
+- build 이후 dev `.next` runtime/cache mismatch가 재현되어 stale dev server를 종료하고 `.next`를 지운 뒤 `npm run dev`를 3000번에서 재시작했다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단은 마지막 gate로 남긴다.

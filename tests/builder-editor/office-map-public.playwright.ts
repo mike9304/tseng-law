@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext, type Locator, type Page } from '@playwright/test';
+import { expect, test, type APIRequestContext, type APIResponse, type Locator, type Page } from '@playwright/test';
 
 type TestDocument = {
   version: 1;
@@ -43,7 +43,7 @@ function mutationHeaders(scope: string): Record<string, string> {
   return { 'x-forwarded-for': `pw-${safeScope}` };
 }
 
-async function waitForRateLimit(response: Awaited<ReturnType<APIRequestContext['post']>>): Promise<boolean> {
+async function waitForRateLimit(response: APIResponse): Promise<boolean> {
   if (response.status() !== 429) return false;
   const retryAfter = Number(response.headers()['retry-after'] || '1');
   const waitMs = Math.max(1000, Math.min(65_000, Number.isFinite(retryAfter) ? retryAfter * 1000 : 1000));
@@ -364,7 +364,13 @@ async function draftPayload(page: Page, pageId: string): Promise<{
   draft?: { revision?: number };
   document?: { nodes?: Array<Record<string, unknown>> };
 }> {
-  const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
+  let response: APIResponse | null = null;
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
+    if (!(await waitForRateLimit(response))) break;
+  }
+  expect(response).toBeTruthy();
+  response = response!;
   expect(response.status()).toBe(200);
   return response.json() as Promise<{
     draft?: { revision?: number };

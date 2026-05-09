@@ -2881,3 +2881,32 @@ Prompt-to-artifact 체크:
 - Playwright는 local sandbox에서 Chromium Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
 - `NEXT_DIST_DIR=.next-m05` build가 Next의 tsconfig include 자동 수정을 시도했으나 검증 부산물이라 되돌렸다.
 - 다음 마일스톤은 M06 .next/dev 재시작 의존성 fix.
+
+## 2026-05-10 Codex /goal Wix full builder M06 next dist isolation
+
+범위:
+- M06 `.next/dev 재시작 의존성 fix`를 완료했다.
+- `next.config.mjs` 기본 distDir를 `.next-build`로 두고, `NEXT_DEV=1` dev 실행은 `.next-dev`를 쓰도록 분리했다.
+- `NEXT_DIST_DIR` override는 유지해 `.next-mXX` 검증 빌드와 `.next-g-editor` 격리 서버 패턴이 계속 동작한다.
+- `npm run dev`는 시작 전 `.next-build`만 정리한 뒤 `NEXT_DEV=1 next dev`를 실행한다.
+- `.next-dev/types`와 `.next-build/types`를 tsconfig include에 넣어 Next가 build 때마다 tsconfig를 고치는 churn을 줄였다.
+
+커밋:
+- `1d8cd84 G-Editor: isolate next dev and build outputs`
+
+검증:
+- 기본 distDir `.next-build` 확인 ✅
+- `NEXT_DEV=1` distDir `.next-dev` 확인 ✅
+- `NEXT_DIST_DIR=.next-m06` override 확인 ✅
+- `node scripts/clean-next-build.mjs` ✅
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (29 files / 755 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅
+- `npm run dev -- --port 3010` ✅ (`.next-dev` 생성, `.next-build` 미존재 확인 후 종료)
+- `git diff --check` ✅
+
+메모:
+- sandbox 내부 curl은 3010 dev server에 연결하지 못했지만, Next dev 로그와 산출물 분리는 확인했다.
+- 다음 마일스톤은 M07 모바일 스키마 결정 + 잠금이다. 여기서 responsive 필드 정책을 확정한 뒤 P2로 넘어가야 한다.

@@ -264,3 +264,37 @@ Created: 2026-05-09T12:52:13.760Z
 - 사용자 피드백 흡수:
   - "칼럼아카이브 같은거나 사진들 클릭하면 백지가 되는 에러" 계열에 대응해 칼럼 0건, 자산 0건, 페이지 0건, 네트워크 오류, 저장 권한/서버 오류를 실제 Playwright로 고정했다.
 - 다음 마일스톤: M06
+
+## M06 — .next/dev 재시작 의존성 fix
+
+- 시작/종료: 2026-05-10T01:03:00+09:00 / 2026-05-10T01:06:00+09:00
+- 변경 파일:
+  - `next.config.mjs` — 기본 build 산출물은 `.next-build`, dev 산출물은 `NEXT_DEV=1`일 때 `.next-dev`, 명시 검증은 `NEXT_DIST_DIR` override 우선으로 분리
+  - `package.json` / `scripts/clean-next-build.mjs` — `npm run dev` 시작 전 `.next-build`만 정리하고 `NEXT_DEV=1 next dev`로 실행
+  - `.gitignore` — `.next-dev/`, `.next-build/` 추가
+  - `tsconfig.json` — `.next-dev/types/**/*.ts`, `.next-build/types/**/*.ts`를 include에 추가해 Next 자동 tsconfig 수정 churn 제거
+- 커밋:
+  - `1d8cd84 G-Editor: isolate next dev and build outputs`
+- 의사결정:
+  - `rimraf` 의존성은 추가하지 않고 Node `rmSync` 스크립트로 `.next-build`만 삭제한다. 승인 프롬프트와 dependency surface를 늘리지 않기 위한 선택이다.
+  - `NEXT_DIST_DIR`는 기존 검증 격리 방식과 호환되도록 최우선으로 유지한다.
+  - dev script는 `.next-dev`를 쓰므로 build 후 기본 `.next`/`.next-build` 충돌 때문에 dev server를 매번 지우고 재시작하던 패턴을 끊는다.
+- 검증:
+  - `node -e "import('./next.config.mjs').then((m)=>console.log(m.default.distDir))"` ✅ `.next-build`
+  - `NEXT_DEV=1 node -e "import('./next.config.mjs').then((m)=>console.log(m.default.distDir))"` ✅ `.next-dev`
+  - `NEXT_DIST_DIR=.next-m06 node -e "import('./next.config.mjs').then((m)=>console.log(m.default.distDir))"` ✅ `.next-m06`
+  - `node scripts/clean-next-build.mjs` ✅
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (29 files / 755 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `npm run dev -- --port 3010` ✅ (`.next-dev` 생성, `.next-build` 정리 확인 후 종료)
+  - `git diff --check` ✅
+- 리스크 / 알려진 문제:
+  - sandbox 내부 curl은 3010 dev server에 연결하지 못했지만, dev process 로그와 산출물 분리는 확인했다.
+- 보류된 W (있을 경우):
+  - 없음
+- 사용자 피드백 흡수:
+  - 반복되던 “build 후 `.next` 삭제 + dev 재시작” 운영 부담을 줄였다. 이후 검증은 build와 dev가 서로 산출물을 덮어쓰지 않는 전제로 진행한다.
+- 다음 마일스톤: M07

@@ -101,12 +101,14 @@ export default function AssetLibraryModal({
   selectedUrl = null,
   onClose,
   onSelect,
+  onToast,
 }: {
   open: boolean;
   locale: Locale;
   selectedUrl?: string | null;
   onClose: () => void;
   onSelect: (asset: BuilderAssetListItem) => void;
+  onToast?: (message: string, tone: 'success' | 'error') => void;
 }) {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const lastSyncedLibraryJsonRef = useRef<string>('');
@@ -139,7 +141,9 @@ export default function AssetLibraryModal({
       });
       const payload = await response.json() as AssetListResponse;
       if (!response.ok || !payload.ok) {
-        setError(payload.error ?? 'Failed to load assets.');
+        const message = payload.error ?? '이미지를 불러오지 못했습니다.';
+        setError(message);
+        onToast?.('네트워크 오류, 다시 시도해주세요', 'error');
         return;
       }
       setAssets(payload.assets ?? []);
@@ -152,7 +156,8 @@ export default function AssetLibraryModal({
       lastSyncedLibraryJsonRef.current = JSON.stringify(library);
       setStorageReady(true);
     } catch {
-      setError('Failed to load assets.');
+      setError('이미지를 불러오지 못했습니다.');
+      onToast?.('네트워크 오류, 다시 시도해주세요', 'error');
       const library = mergeAssetLibraryState(null, readPersistedAssetLibraryState(locale));
       setFolders(library.folders);
       setTags(library.tags);
@@ -164,7 +169,7 @@ export default function AssetLibraryModal({
     } finally {
       setIsLoading(false);
     }
-  }, [locale]);
+  }, [locale, onToast]);
 
   useEffect(() => {
     if (!open) return;
@@ -564,11 +569,36 @@ export default function AssetLibraryModal({
             {error ? <p className={styles.modalError}>{error}</p> : null}
             {isLoading ? <p className={styles.modalHint}>Loading assets…</p> : null}
             {!isLoading && filteredAssets.length === 0 ? (
-              <p className={styles.modalHint}>
-                {assets.length === 0
-                  ? 'No builder images uploaded yet.'
-                  : 'No assets match the current filters.'}
-              </p>
+              <div className={styles.assetEmptyState}>
+                <strong>
+                  {assets.length === 0
+                    ? '아직 업로드된 이미지가 없습니다.'
+                    : '현재 필터와 맞는 이미지가 없습니다.'}
+                </strong>
+                <span>
+                  {assets.length === 0
+                    ? '이미지를 드래그하거나 업로드 버튼을 눌러 바로 추가하세요.'
+                    : '검색어, 폴더, 태그 필터를 지우거나 다시 불러오세요.'}
+                </span>
+                <div className={styles.assetEmptyActions}>
+                  <button
+                    type="button"
+                    className={styles.actionButton}
+                    disabled={isUploading}
+                    onClick={() => inputRef.current?.click()}
+                  >
+                    Upload image
+                  </button>
+                  <button
+                    type="button"
+                    className={styles.actionButton}
+                    disabled={isLoading}
+                    onClick={() => void loadAssets()}
+                  >
+                    Retry
+                  </button>
+                </div>
+              </div>
             ) : null}
 
             <div className={styles.assetGrid}>

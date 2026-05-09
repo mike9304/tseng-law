@@ -53,6 +53,8 @@ export default function InlineTextEditor({
 }: InlineTextEditorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const lastSavedSignatureRef = useRef<string | null>(null);
+  const isComposingRef = useRef(false);
+  const pendingBlurAfterCompositionRef = useRef(false);
   const [toolbarBelow, setToolbarBelow] = useState(false);
   const [linkPickerOpen, setLinkPickerOpen] = useState(false);
   const [linkPickerValue, setLinkPickerValue] = useState<LinkValue | null>(null);
@@ -108,6 +110,26 @@ export default function InlineTextEditor({
     });
   }, [editor, onSave]);
 
+  const commitAndBlur = useCallback(() => {
+    if (isComposingRef.current) {
+      pendingBlurAfterCompositionRef.current = true;
+      editor?.view.dom.dispatchEvent(new CompositionEvent('compositionend', {
+        bubbles: true,
+        data: '',
+      }));
+      window.setTimeout(() => {
+        if (!pendingBlurAfterCompositionRef.current) return;
+        pendingBlurAfterCompositionRef.current = false;
+        isComposingRef.current = false;
+        handleSave();
+        onBlur();
+      }, 0);
+      return;
+    }
+    handleSave();
+    onBlur();
+  }, [editor, handleSave, onBlur]);
+
   useEffect(() => {
     if (!editor || lastSavedSignatureRef.current) return;
     const doc = sanitizeTipTapDoc(editor.getJSON()) ?? richTextFromPlainText(editor.getText()).doc;
@@ -127,13 +149,12 @@ export default function InlineTextEditor({
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-        handleSave();
-        onBlur();
+        commitAndBlur();
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [handleSave, onBlur]);
+  }, [commitAndBlur]);
 
   useEffect(() => () => {
     handleSave();
@@ -142,13 +163,12 @@ export default function InlineTextEditor({
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        handleSave();
-        onBlur();
+        commitAndBlur();
       }
     };
     document.addEventListener('keydown', handleEsc);
     return () => document.removeEventListener('keydown', handleEsc);
-  }, [handleSave, onBlur]);
+  }, [commitAndBlur]);
 
   const handleLink = useCallback(() => {
     if (!editor) return;
@@ -198,6 +218,18 @@ export default function InlineTextEditor({
       ref={containerRef}
       data-builder-inline-text-editor="true"
       className={styles.inlineTextEditorShell}
+      onCompositionStart={() => {
+        isComposingRef.current = true;
+      }}
+      onCompositionEnd={() => {
+        isComposingRef.current = false;
+        if (!pendingBlurAfterCompositionRef.current) return;
+        pendingBlurAfterCompositionRef.current = false;
+        window.setTimeout(() => {
+          handleSave();
+          onBlur();
+        }, 0);
+      }}
       onMouseDown={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()}
     >

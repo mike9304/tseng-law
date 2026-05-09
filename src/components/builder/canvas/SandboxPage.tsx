@@ -38,11 +38,18 @@ const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
 
 type PublicChromePanel = 'chat' | 'event' | null;
 type ToastTone = 'success' | 'error';
+type ToastOptions = {
+  actionLabel?: string;
+  onAction?: () => void;
+  ttlMs?: number;
+};
 
 interface SandboxToast {
   id: string;
   message: string;
   tone: ToastTone;
+  actionLabel?: string;
+  onAction?: () => void;
 }
 
 interface ActivityChip {
@@ -245,12 +252,21 @@ export default function SandboxPage({
     return () => window.document.removeEventListener('builder:show-help', handler);
   }, []);
 
-  const pushToast = useCallback((message: string, tone: ToastTone) => {
+  const pushToast = useCallback((message: string, tone: ToastTone, options: ToastOptions = {}) => {
     const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-    setToasts((currentToasts) => [...currentToasts, { id, message, tone }]);
+    setToasts((currentToasts) => [
+      ...currentToasts,
+      {
+        id,
+        message,
+        tone,
+        actionLabel: options.actionLabel,
+        onAction: options.onAction,
+      },
+    ]);
     window.setTimeout(() => {
       setToasts((currentToasts) => currentToasts.filter((toast) => toast.id !== id));
-    }, TOAST_TTL_MS);
+    }, options.ttlMs ?? TOAST_TTL_MS);
   }, []);
 
   const pushActivityChip = useCallback((message: string) => {
@@ -270,6 +286,7 @@ export default function SandboxPage({
     draftMeta,
     headerNavItems,
     linkPickerSitePages,
+    saveBlockReason,
     setCurrentSlugState,
     setNavItemsState,
     setSitePagesState,
@@ -591,6 +608,7 @@ export default function SandboxPage({
         onLocaleChange={handleLocaleChange}
         siteName={siteName}
         currentSlug={currentSlugState}
+        saveBlockReason={saveBlockReason}
       />
 
         {draftConflict ? (
@@ -752,10 +770,22 @@ export default function SandboxPage({
 	        <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
           {toasts.map((toast) => (
             <div
-              key={toast.id}
-              className={`${styles.toast} ${toast.tone === 'error' ? styles.toastError : styles.toastSuccess}`}
-            >
-              {toast.message}
+            key={toast.id}
+            className={`${styles.toast} ${toast.tone === 'error' ? styles.toastError : styles.toastSuccess}`}
+          >
+              <span className={styles.toastMessage}>{toast.message}</span>
+              {toast.actionLabel && toast.onAction ? (
+                <button
+                  type="button"
+                  className={styles.toastAction}
+                  onClick={() => {
+                    toast.onAction?.();
+                    setToasts((currentToasts) => currentToasts.filter((candidate) => candidate.id !== toast.id));
+                  }}
+                >
+                  {toast.actionLabel}
+                </button>
+              ) : null}
             </div>
           ))}
 	        </div>

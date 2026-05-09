@@ -9,6 +9,7 @@ import { DEFAULT_THEME, type BuilderNavItem, type BuilderSiteSettings, type Buil
 import type { Locale } from '@/lib/locales';
 
 const AUTOSAVE_DEBOUNCE_MS = 1000;
+const NETWORK_ERROR_MESSAGE = '네트워크 오류, 다시 시도해주세요';
 
 export interface DraftMeta {
   revision: number;
@@ -26,6 +27,12 @@ interface DraftResponseBody {
   document?: BuilderCanvasDocument;
   snapshot?: { document?: BuilderCanvasDocument };
 }
+
+type ToastOptions = {
+  actionLabel?: string;
+  onAction?: () => void;
+  ttlMs?: number;
+};
 
 async function fetchSiteDraft(
   pageId: string,
@@ -70,7 +77,7 @@ export function useSandboxSiteState({
   mutationBaseDocument: BuilderCanvasDocument | null;
   replaceDocument: (document: BuilderCanvasDocument) => void;
   setDraftSaveState: (state: 'idle' | 'saving' | 'saved' | 'error') => void;
-  pushToast: (message: string, tone: 'success' | 'error') => void;
+  pushToast: (message: string, tone: 'success' | 'error', options?: ToastOptions) => void;
   onMissingHeaderPage?: () => void;
 }) {
   const initialDraftLoadedRef = useRef(false);
@@ -92,6 +99,7 @@ export function useSandboxSiteState({
   });
   const [columnsPageLookupPending, setColumnsPageLookupPending] = useState(false);
   const [currentSlugState, setCurrentSlugState] = useState(currentSlug ?? '');
+  const [saveBlockReason, setSaveBlockReason] = useState<string | null>(null);
 
   useEffect(() => {
     activePageIdRef.current = activePageId;
@@ -116,6 +124,7 @@ export function useSandboxSiteState({
       setDraftMeta(payload.draft);
       setDraftConflict(null);
       setDraftSaveState('idle');
+      setSaveBlockReason(null);
       return true;
     },
     [replaceDocument, setDraftSaveState],
@@ -207,6 +216,7 @@ export function useSandboxSiteState({
         if (!response.ok) return false;
         setSyncedUpdatedAt(nextDocument.updatedAt);
         setDraftSaveState('saved');
+        setSaveBlockReason(null);
         return true;
       }
 
@@ -250,6 +260,22 @@ export function useSandboxSiteState({
         return false;
       }
 
+      if (response.status === 401 || response.status === 403) {
+        const reason = '로그인이 만료되어 저장할 수 없습니다. 다시 로그인한 뒤 시도해주세요.';
+        setSaveBlockReason(reason);
+        setDraftSaveState('error');
+        pushToast(reason, 'error', { ttlMs: 7000 });
+        return false;
+      }
+
+      if (response.status >= 500) {
+        const reason = '서버 오류로 저장을 멈췄습니다. 잠시 후 다시 시도해주세요.';
+        setSaveBlockReason(reason);
+        setDraftSaveState('error');
+        pushToast(reason, 'error', { ttlMs: 8000 });
+        return false;
+      }
+
       if (!response.ok) return false;
 
       const data = (await response.json()) as DraftResponseBody;
@@ -257,6 +283,7 @@ export function useSandboxSiteState({
       setSyncedUpdatedAt(data.document?.updatedAt ?? nextDocument.updatedAt);
       setDraftConflict(null);
       setDraftSaveState('saved');
+      setSaveBlockReason(null);
       return true;
     },
     [activePageId, draftMeta?.revision, draftMeta?.savedAt, locale, pushToast, setDraftSaveState],
@@ -266,6 +293,7 @@ export function useSandboxSiteState({
     if (!canvasDocument) return undefined;
     if (mutationBaseDocument) return undefined;
     if (draftConflict) return undefined;
+    if (saveBlockReason) return undefined;
     if (canvasDocument.updatedAt === syncedUpdatedAt) return undefined;
 
     setDraftSaveState('saving');
@@ -275,6 +303,17 @@ export function useSandboxSiteState({
         if (!saved) setDraftSaveState('error');
       } catch {
         setDraftSaveState('error');
+        pushToast(NETWORK_ERROR_MESSAGE, 'error', {
+          actionLabel: '다시 시도',
+          ttlMs: 8000,
+          onAction: () => {
+            setDraftSaveState('saving');
+            void saveDraftDocument(canvasDocument).catch(() => {
+              setDraftSaveState('error');
+              pushToast(NETWORK_ERROR_MESSAGE, 'error', { ttlMs: 6000 });
+            });
+          },
+        });
       }
     }, AUTOSAVE_DEBOUNCE_MS);
 
@@ -284,7 +323,9 @@ export function useSandboxSiteState({
     draftConflict,
     mutationBaseDocument,
     saveDraftDocument,
+    saveBlockReason,
     setDraftSaveState,
+    pushToast,
     syncedUpdatedAt,
   ]);
 
@@ -297,7 +338,9 @@ export function useSandboxSiteState({
           pushToast(`Switched to ${newLocale}`, 'success');
         }
       } catch {
-        pushToast('Failed to switch locale', 'error');
+        pushToast(NETWORK_ERROR_MESSAGE, 'error', {
+          ttlMs: 8000,
+        });
       }
     } else {
       pushToast(`No linked page for ${newLocale}`, 'error');
@@ -316,7 +359,9 @@ export function useSandboxSiteState({
       const loaded = await loadDraft(pageId, locale);
       if (loaded) pushToast(`Loaded page: ${pageId}`, 'success');
     } catch {
-      pushToast('Failed to load page', 'error');
+      pushToast(NETWORK_ERROR_MESSAGE, 'error', {
+        ttlMs: 8000,
+      });
     }
   }, [loadDraft, locale, pushToast, sitePagesState]);
 
@@ -391,7 +436,9 @@ export function useSandboxSiteState({
     if (columnsPage || columnsPageLookupPending) return;
     setColumnsPageLookupPending(true);
     refreshSitePages()
-      .catch(() => pushToast('Failed to refresh page list', 'error'))
+      .catch(() => pushToast(NETWORK_ERROR_MESSAGE, 'error', {
+        ttlMs: 8000,
+      }))
       .finally(() => setColumnsPageLookupPending(false));
   }, [columnsPage, columnsPageLookupPending, pushToast, refreshSitePages]);
 
@@ -403,7 +450,9 @@ export function useSandboxSiteState({
         const pages = await refreshSitePages();
         targetPage = pages.find((page) => page.slug === 'columns') ?? null;
       } catch {
-        pushToast('Failed to refresh page list', 'error');
+        pushToast(NETWORK_ERROR_MESSAGE, 'error', {
+          ttlMs: 8000,
+        });
       } finally {
         setColumnsPageLookupPending(false);
       }
@@ -467,6 +516,7 @@ export function useSandboxSiteState({
     headerNavItems,
     linkPickerSitePages,
     navItemsState,
+    saveBlockReason,
     setCurrentSlugState,
     setNavItemsState,
     setSitePagesState,

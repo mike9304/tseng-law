@@ -83,8 +83,8 @@ export default function CanvasStageNodes({
       {selectionBoxRect ? <SelectionBox {...selectionBoxRect} /> : null}
       {rootVisibleNodes.length === 0 ? (
         <div className={styles.emptyCanvas}>
-          <strong>요소를 드래그해서 추가하세요</strong>
-          <span>Text, image, button, heading, container, section 을 자유 캔버스에 바로 배치할 수 있습니다.</span>
+          <strong>페이지가 비어있습니다.</strong>
+          <span>좌측 + 패널에서 텍스트, 이미지, 섹션을 추가하세요.</span>
         </div>
       ) : null}
     </>

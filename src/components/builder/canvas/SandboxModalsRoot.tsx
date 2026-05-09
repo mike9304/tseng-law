@@ -124,6 +124,7 @@ export default function SandboxModalsRoot({
             onSelectAsset(assetLibraryNode.id, asset.url);
             onCloseAssetLibrary();
           }}
+          onToast={onToast}
         />
       ) : null}
 

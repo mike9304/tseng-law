@@ -161,6 +161,29 @@ const statusMessageStyle: React.CSSProperties = {
   color: '#b91c1c',
 };
 
+const emptyStateStyle: React.CSSProperties = {
+  display: 'grid',
+  gap: 8,
+  margin: '4px 8px',
+  padding: 12,
+  border: '1px dashed #cbd5e1',
+  borderRadius: 10,
+  background: '#f8fafc',
+  color: '#334155',
+};
+
+const emptyStateTitleStyle: React.CSSProperties = {
+  fontSize: '0.82rem',
+  fontWeight: 800,
+  color: '#0f172a',
+};
+
+const emptyStateCopyStyle: React.CSSProperties = {
+  fontSize: '0.73rem',
+  lineHeight: 1.45,
+  color: '#64748b',
+};
+
 const titleTextStyle: React.CSSProperties = {
   minWidth: 0,
   overflow: 'hidden',
@@ -266,6 +289,7 @@ export default function PageSwitcher({
   columnPostsSummary,
   onSelectPage,
   onPagesChange,
+  onToast,
 }: {
   locale: Locale;
   activePageId: string | null;
@@ -273,6 +297,7 @@ export default function PageSwitcher({
   columnPostsSummary?: ColumnQuickSummary;
   onSelectPage: (pageId: string, nextSlug?: string) => void;
   onPagesChange?: (pages: PageMeta[]) => void;
+  onToast?: (message: string, tone: 'success' | 'error') => void;
 }) {
   const [pages, setPages] = useState<PageMeta[]>([]);
   const [loading, setLoading] = useState(true);
@@ -302,13 +327,16 @@ export default function PageSwitcher({
         onPagesChange?.(data.pages);
         return data.pages;
       }
+      setErrorMessage('페이지 목록을 불러오지 못했습니다.');
+      onToast?.('네트워크 오류, 다시 시도해주세요', 'error');
     } catch {
-      // silent fail
+      setErrorMessage('페이지 목록을 불러오지 못했습니다.');
+      onToast?.('네트워크 오류, 다시 시도해주세요', 'error');
     } finally {
       setLoading(false);
     }
     return [];
-  }, [locale, onPagesChange]);
+  }, [locale, onPagesChange, onToast]);
 
   useEffect(() => {
     void fetchPages();
@@ -551,8 +579,17 @@ export default function PageSwitcher({
           Loading...
         </div>
       ) : pages.length === 0 ? (
-        <div style={{ padding: '8px 10px', fontSize: '0.8rem', color: '#94a3b8' }}>
-          No pages found
+        <div style={emptyStateStyle}>
+          <strong style={emptyStateTitleStyle}>페이지가 없습니다.</strong>
+          <span style={emptyStateCopyStyle}>새 페이지를 만들거나 템플릿으로 시작하세요.</span>
+          <button
+            type="button"
+            style={{ ...addButtonStyle, width: 'fit-content', minHeight: 28 }}
+            disabled={creating}
+            onClick={() => setShowGallery(true)}
+          >
+            첫 페이지 만들기
+          </button>
         </div>
       ) : (
         pages.map((page) => {

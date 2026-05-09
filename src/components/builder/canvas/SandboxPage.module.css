@@ -165,6 +165,18 @@
   transform: translateY(1px);
 }
 
+.publishButton:disabled {
+  background: #94a3b8;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.82;
+}
+
+.publishButton:hover:disabled {
+  background: #94a3b8;
+  box-shadow: none;
+}
+
 .breakpointSwitcher {
   display: inline-flex;
   align-items: center;
@@ -2302,6 +2314,21 @@
   justify-content: center;
   gap: 0.5rem;
   color: #475569;
+  padding: 2rem;
+  text-align: center;
+}
+
+.emptyCanvas strong {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 850;
+}
+
+.emptyCanvas span {
+  max-width: 360px;
+  color: #64748b;
+  font-size: 0.8rem;
+  line-height: 1.45;
 }
 
 .selectionBox {
@@ -2577,6 +2604,24 @@
   border: 2px solid var(--editor-accent, #116dff);
   border-radius: var(--editor-radius-xs, 2px);
   cursor: text;
+}
+
+.inlineTextEditorShell :global(.ProseMirror) {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.inlineTextEditorShell :global(.ProseMirror p),
+.inlineTextEditorShell :global(.ProseMirror h1),
+.inlineTextEditorShell :global(.ProseMirror h2),
+.inlineTextEditorShell :global(.ProseMirror h3) {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .inlineTextToolbar {
@@ -3537,6 +3582,34 @@
   font-size: 0.88rem;
 }
 
+.assetEmptyState {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0 0 0.9rem;
+  padding: 1rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.assetEmptyState strong {
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.assetEmptyState span {
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.assetEmptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
 .assetGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -4014,6 +4087,8 @@
 }
 
 .toast {
+  display: grid;
+  gap: 0.55rem;
   min-width: 240px;
   max-width: 320px;
   padding: 0.85rem 1rem;
@@ -4026,6 +4101,23 @@
   font-size: 0.86rem;
   font-weight: 700;
   animation: toastIn 220ms ease, toastOut 300ms ease 2.7s forwards;
+}
+
+.toastMessage {
+  min-width: 0;
+}
+
+.toastAction {
+  width: fit-content;
+  min-height: 26px;
+  padding: 0 0.65rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: #fff;
+  color: inherit;
+  font-size: 0.72rem;
+  font-weight: 850;
+  cursor: pointer;
 }
 
 .toastSuccess {

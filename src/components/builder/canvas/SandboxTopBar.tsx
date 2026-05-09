@@ -35,6 +35,7 @@ export default function SandboxTopBar({
   onLocaleChange,
   siteName,
   currentSlug,
+  saveBlockReason,
 }: {
   locale: string;
   draftSaveState: 'idle' | 'saving' | 'saved' | 'error';
@@ -52,6 +53,7 @@ export default function SandboxTopBar({
   onLocaleChange?: (locale: Locale, linkedPageId: string | null) => void;
   siteName?: string;
   currentSlug?: string;
+  saveBlockReason?: string | null;
 }) {
   const { document, selectedNodeId, resetResponsiveOverride } = useBuilderCanvasStore();
   const saveLabel = draftSaveState === 'saving' ? 'Saving...' : draftSaveState === 'saved' ? 'Saved' : draftSaveState === 'error' ? 'Save failed' : '';
@@ -139,6 +141,11 @@ export default function SandboxTopBar({
         ) : null}
         {draftSaveState === 'saving' && <span className={styles.savingSpinner} />}
         {saveLabel && <span className={`${styles.topBarChip} ${saveClass}`}>{saveLabel}</span>}
+        {saveBlockReason ? (
+          <span className={`${styles.topBarChip} ${styles.statusBadgeError}`} title={saveBlockReason}>
+            저장 차단
+          </span>
+        ) : null}
         {onOpenHistory && (
           <button
             type="button"
@@ -172,6 +179,7 @@ export default function SandboxTopBar({
           type="button"
           className={styles.publishButton}
           title="사이트 발행"
+          disabled={Boolean(saveBlockReason)}
           onClick={onPublish}
         >
           Publish

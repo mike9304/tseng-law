@@ -158,6 +158,7 @@ export default function SandboxEditorWorkspace({
         onNavFocusHandled={onNavFocusHandled}
         onNavAddChildHandled={onNavAddChildHandled}
         onUpdateNodeContent={onUpdateNodeContent}
+        onToast={onToast}
       />
 
       <div ref={canvasColumnRef} className={styles.canvasColumn} style={canvasOuterStyle}>

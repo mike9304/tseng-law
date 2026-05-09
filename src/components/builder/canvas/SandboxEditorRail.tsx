@@ -59,6 +59,7 @@ type SandboxEditorRailProps = {
   onNavFocusHandled: () => void;
   onNavAddChildHandled: () => void;
   onUpdateNodeContent: (nodeId: string, content: Record<string, unknown>) => void;
+  onToast: (message: string, tone: 'success' | 'error') => void;
 };
 
 export default function SandboxEditorRail({
@@ -83,6 +84,7 @@ export default function SandboxEditorRail({
   onNavFocusHandled,
   onNavAddChildHandled,
   onUpdateNodeContent,
+  onToast,
 }: SandboxEditorRailProps) {
   const selectedSectionTemplateNode = useMemo(() => {
     if (!selectedNode || !document) return null;
@@ -196,6 +198,7 @@ export default function SandboxEditorRail({
               columnPostsSummary={columnPostsSummary}
               onSelectPage={onSelectPage}
               onPagesChange={onPagesChange}
+              onToast={onToast}
             />
           </div>
         ) : null}

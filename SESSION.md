@@ -2365,3 +2365,20 @@ Prompt-to-artifact 체크:
 메모:
 - 자동 검증 기준으로 W02/W06/W07/W08/W10/W11/W18~W23/W26~W30은 최신 pass evidence가 있다.
 - 체크포인트 green 승격과 goal complete는 아직 보류한다. Done when 17의 사용자 직접 5분 자유 사용 검증과 Wix 체감 판정이 남아 있다.
+
+## 2026-05-09 Codex /goal G-Editor Add panel search
+
+범위:
+- W04 Add 패널을 Wix식 요소 추가 경험에 더 가깝게 보강했다.
+- 기존 Section templates / Saved sections / category accordion 구조는 유지하면서, 상단 검색 input, 인기 요소 quick strip, 검색 결과 count, empty state를 추가했다.
+- quick add는 추가 직후 draft save state를 `saving`으로 올려 좌하단 저장 chip 흐름과 맞췄다.
+- admin-builder smoke가 Add drawer에서 검색, Button 결과 필터링, 이미지 결과 숨김, Quick add, undo 원복, empty state를 실제 클릭으로 검증하도록 보강했다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅ (1 passed)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit -- src/components/builder/canvas/__tests__/design-pool-shells.test.ts` ✅ (4 passed)
+
+메모:
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단은 계속 마지막 gate로 남긴다.

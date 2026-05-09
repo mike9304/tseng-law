@@ -59,6 +59,8 @@ const KIND_PRIORITY: Partial<Record<BuilderComponentCategory, string[]>> = {
   ],
 };
 
+const FEATURED_KINDS: BuilderCanvasNodeKind[] = ['text', 'button', 'image', 'container', 'form'];
+
 const sectionGridStyle: React.CSSProperties = {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
@@ -221,9 +223,24 @@ function compareByCategoryPriority(
   return left.displayName.localeCompare(right.displayName, 'ko');
 }
 
+function normalizeSearchTerm(value: string): string {
+  return value.trim().toLocaleLowerCase('ko-KR');
+}
+
+function componentMatchesSearch(component: BuilderComponentDefinition, query: string): boolean {
+  if (!query) return true;
+  return [
+    component.displayName,
+    component.kind,
+    component.category,
+    getDisplayCategory(component),
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
+  const [query, setQuery] = useState('');
   const [categoryOpen, setCategoryOpen] = useState<Record<string, boolean>>({
     'built-in-sections': true,
     'saved-sections': true,
@@ -231,6 +248,13 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const nodes = document?.nodes ?? [];
   const components = listComponents();
   const effectiveLocale: Locale = locale ?? (document?.locale as Locale) ?? 'ko';
+  const normalizedQuery = normalizeSearchTerm(query);
+
+  const featuredComponents = useMemo(() => (
+    FEATURED_KINDS
+      .map((kind) => components.find((component) => component.kind === kind))
+      .filter((component): component is BuilderComponentDefinition => Boolean(component))
+  ), [components]);
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -248,12 +272,28 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
 
     return [...CATEGORY_ORDER, ...remainingCategories]
       .filter((category) => (buckets.get(category) ?? []).length > 0)
-      .map((category) => ({
-        category,
-        components: [...(buckets.get(category) ?? [])].sort((left, right) =>
-          compareByCategoryPriority(category, left, right)),
-      }));
-  }, [components]);
+      .map((category) => {
+        const filteredComponents = [...(buckets.get(category) ?? [])]
+          .filter((component) => componentMatchesSearch(component, normalizedQuery))
+          .sort((left, right) => compareByCategoryPriority(category, left, right));
+
+        return {
+          category,
+          components: filteredComponents,
+        };
+      })
+      .filter(({ components: categoryComponents }) => categoryComponents.length > 0);
+  }, [components, normalizedQuery]);
+
+  const visibleComponentCount = groupedCategories.reduce(
+    (count, group) => count + group.components.length,
+    0,
+  );
+
+  function handleQuickAdd(kind: BuilderCanvasNodeKind) {
+    addNode(resolveCenteredNode(kind, nodes.length));
+    setDraftSaveState('saving');
+  }
 
   function handleInsertBuiltInSection(template: BuiltInSectionTemplate) {
     if (!document) return;
@@ -268,7 +308,9 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
       <header className={styles.panelSectionHeader}>
         <div>
           <span>Catalog</span>
-          <strong>{components.length} components</strong>
+          <strong>
+            {normalizedQuery ? `${visibleComponentCount}/${components.length}` : components.length} components
+          </strong>
         </div>
         <button
           type="button"
@@ -284,67 +326,104 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
           registry 컴포넌트를 카테고리별로 묶었습니다. drag 로 캔버스에 추가하거나 quick-add 로 중앙에 바로 생성합니다.
         </p>
 
+        <label className={styles.catalogSearchLabel}>
+          <span>Search elements</span>
+          <input
+            type="search"
+            aria-label="Search add elements"
+            className={styles.catalogSearchInput}
+            placeholder="Text, button, image..."
+            value={query}
+            onChange={(event) => setQuery(event.currentTarget.value)}
+          />
+        </label>
+
+        <div className={styles.catalogQuickStrip} aria-label="Popular add elements">
+          {featuredComponents.map((component) => (
+            <button
+              key={component.kind}
+              type="button"
+              className={styles.catalogQuickButton}
+              data-builder-add-quick-kind={component.kind}
+              onClick={() => handleQuickAdd(component.kind as BuilderCanvasNodeKind)}
+            >
+              <span>{component.icon}</span>
+              <strong>{component.displayName}</strong>
+            </button>
+          ))}
+        </div>
+
+        {normalizedQuery ? (
+          <div className={styles.catalogResultMeta} aria-live="polite">
+            Showing {visibleComponentCount} result{visibleComponentCount === 1 ? '' : 's'} for “{query.trim()}”
+          </div>
+        ) : null}
+
         {/* Built-in section templates — normalized section snapshots. */}
-        <div style={categorySectionStyle}>
-          <button
-            type="button"
-            style={categoryButtonStyle(categoryOpen['built-in-sections'] ?? true)}
-            onClick={() => {
-              setCategoryOpen((current) => ({
-                ...current,
-                'built-in-sections': !(current['built-in-sections'] ?? true),
-              }));
-            }}
-          >
-            <span style={categoryMetaStyle}>
-              <span style={categoryIconStyle}>▤</span>
-              <span style={categoryTitleStyle}>
-                <span style={categoryNameStyle}>Section templates</span>
-                <span style={categoryHintStyle}>
-                  바로 삽입 가능한 기본 섹션
+        {!normalizedQuery ? (
+          <div style={categorySectionStyle}>
+            <button
+              type="button"
+              style={categoryButtonStyle(categoryOpen['built-in-sections'] ?? true)}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'built-in-sections': !(current['built-in-sections'] ?? true),
+                }));
+              }}
+            >
+              <span style={categoryMetaStyle}>
+                <span style={categoryIconStyle}>▤</span>
+                <span style={categoryTitleStyle}>
+                  <span style={categoryNameStyle}>Section templates</span>
+                  <span style={categoryHintStyle}>
+                    바로 삽입 가능한 기본 섹션
+                  </span>
                 </span>
               </span>
-            </span>
-            <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
-              {(categoryOpen['built-in-sections'] ?? true) ? '−' : '+'}
-            </span>
-          </button>
+              <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
+                {(categoryOpen['built-in-sections'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
 
-          {(categoryOpen['built-in-sections'] ?? true) ? (
-            <BuiltInSectionsPanel onInsert={handleInsertBuiltInSection} />
-          ) : null}
-        </div>
+            {(categoryOpen['built-in-sections'] ?? true) ? (
+              <BuiltInSectionsPanel onInsert={handleInsertBuiltInSection} />
+            ) : null}
+          </div>
+        ) : null}
 
         {/* Saved sections — Wix Studio "Saved Sections" parity. */}
-        <div style={categorySectionStyle}>
-          <button
-            type="button"
-            style={categoryButtonStyle(categoryOpen['saved-sections'] ?? true)}
-            onClick={() => {
-              setCategoryOpen((current) => ({
-                ...current,
-                'saved-sections': !(current['saved-sections'] ?? true),
-              }));
-            }}
-          >
-            <span style={categoryMetaStyle}>
-              <span style={categoryIconStyle}>★</span>
-              <span style={categoryTitleStyle}>
-                <span style={categoryNameStyle}>Saved sections</span>
-                <span style={categoryHintStyle}>
-                  내가 저장한 섹션 라이브러리
+        {!normalizedQuery ? (
+          <div style={categorySectionStyle}>
+            <button
+              type="button"
+              style={categoryButtonStyle(categoryOpen['saved-sections'] ?? true)}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'saved-sections': !(current['saved-sections'] ?? true),
+                }));
+              }}
+            >
+              <span style={categoryMetaStyle}>
+                <span style={categoryIconStyle}>★</span>
+                <span style={categoryTitleStyle}>
+                  <span style={categoryNameStyle}>Saved sections</span>
+                  <span style={categoryHintStyle}>
+                    내가 저장한 섹션 라이브러리
+                  </span>
                 </span>
               </span>
-            </span>
-            <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
-              {(categoryOpen['saved-sections'] ?? true) ? '−' : '+'}
-            </span>
-          </button>
+              <span style={{ color: '#64748b', fontSize: '0.82rem', fontWeight: 700 }}>
+                {(categoryOpen['saved-sections'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
 
-          {(categoryOpen['saved-sections'] ?? true) ? (
-            <SavedSectionsPanel locale={effectiveLocale} />
-          ) : null}
-        </div>
+            {(categoryOpen['saved-sections'] ?? true) ? (
+              <SavedSectionsPanel locale={effectiveLocale} />
+            ) : null}
+          </div>
+        ) : null}
 
         {groupedCategories.map(({ category, components: categoryComponents }) => {
           const isOpen = categoryOpen[category] ?? true;
@@ -377,10 +456,11 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
               {isOpen ? (
                 <div style={sectionGridStyle}>
                   {categoryComponents.map((component) => (
-                    <div key={component.kind} style={cardStyle}>
+                    <div key={component.kind} style={cardStyle} data-builder-add-card={component.kind}>
                       <button
                         type="button"
                         style={dragButtonStyle}
+                        data-builder-add-card-kind={component.kind}
                         title={`${component.displayName} — 캔버스로 드래그하여 추가`}
                         draggable
                         onDragStart={(event) => {
@@ -397,9 +477,7 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                         type="button"
                         style={quickAddButtonStyle}
                         title={`${component.displayName} 캔버스 중앙에 추가`}
-                        onClick={() => {
-                          addNode(resolveCenteredNode(component.kind as BuilderCanvasNodeKind, nodes.length));
-                        }}
+                        onClick={() => handleQuickAdd(component.kind as BuilderCanvasNodeKind)}
                       >
                         Quick add
                       </button>
@@ -410,6 +488,13 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
             </div>
           );
         })}
+
+        {normalizedQuery && visibleComponentCount === 0 ? (
+          <div className={styles.catalogEmptyState}>
+            <strong>No matching elements</strong>
+            <span>Try text, image, button, form, section.</span>
+          </div>
+        ) : null}
       </div>
     </section>
   );

@@ -700,8 +700,25 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     }
 
     await page.getByTitle('Add').click();
-    await expect(page.getByText('Catalog')).toBeVisible();
-    await expect(page.getByText('Basic')).toBeVisible();
+    const addDrawer = page.locator('aside[aria-hidden="false"]').first();
+    await expect(addDrawer.getByText('Catalog')).toBeVisible();
+    await expect(addDrawer.getByText('Basic')).toBeVisible();
+    await expect(addDrawer.getByLabel('Search add elements')).toBeVisible();
+    await expect(addDrawer.locator('[data-builder-add-quick-kind="text"]')).toBeVisible();
+    await expect(addDrawer.locator('[data-builder-add-quick-kind="button"]')).toBeVisible();
+    const addNodeCountBefore = await canvasEditor(page).locator('[data-node-id]').count();
+    await addDrawer.getByLabel('Search add elements').fill('button');
+    await expect(addDrawer.getByText(/Showing \d+ results? for/)).toBeVisible();
+    const buttonAddCard = addDrawer.locator('[data-builder-add-card="button"]').first();
+    await expect(buttonAddCard).toBeVisible();
+    await expect(addDrawer.locator('[data-builder-add-card-kind="image"]')).toHaveCount(0);
+    await buttonAddCard.getByRole('button', { name: 'Quick add' }).click();
+    await expect.poll(() => canvasEditor(page).locator('[data-node-id]').count()).toBeGreaterThan(addNodeCountBefore);
+    await page.keyboard.press(`${shortcutModifier}+Z`);
+    await expect.poll(() => canvasEditor(page).locator('[data-node-id]').count()).toBe(addNodeCountBefore);
+    await addDrawer.getByLabel('Search add elements').fill('not-a-real-widget');
+    await expect(addDrawer.getByText('No matching elements')).toBeVisible();
+    await addDrawer.getByLabel('Search add elements').fill('');
 
     const canvasColumn = page.locator('[class*="canvasColumn"]').first();
     const stageViewport = page.locator('[class*="stageViewport"]').first();

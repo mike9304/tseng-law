@@ -2411,3 +2411,18 @@ Prompt-to-artifact 체크:
 
 메모:
 - W11 자동 검증은 idle 미표시와 fade-out까지 더 강해졌다. 사용자 직접 green 검증은 계속 대기한다.
+
+## 2026-05-09 Codex /goal G-Editor inline text toolbar assertion
+
+범위:
+- W03 인라인 텍스트 편집 toolbar를 CSS module/editor token 기반 스타일로 옮겼다.
+- toolbar 버튼에 명시적 `aria-label`/`aria-pressed`를 붙이고, 활성 상태가 Wix식 파란 active chip으로 보이도록 정리했다.
+- W03 Playwright가 floating toolbar의 absolute/flex/border/shadow/z-index, 선택 핸들 숨김, Bold active 시각 상태, rich text bold mark 저장, undo/redo 두 단계 복원을 실제 브라우저에서 검증하도록 보강했다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/inline-text-editor.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 이슈로 승격 실행)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- W03 자동 검증은 inline text toolbar 시각/서식 저장/undo-redo까지 더 강해졌다. 사용자 직접 green 검증은 계속 대기한다.

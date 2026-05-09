@@ -107,6 +107,26 @@ function makeInlineTextDocument(options: {
   };
 }
 
+function collectTipTapMarkTypes(doc: unknown): string[] {
+  const marks = new Set<string>();
+  const visit = (node: unknown) => {
+    if (!node || typeof node !== 'object') return;
+    const candidate = node as { marks?: unknown; content?: unknown };
+    if (Array.isArray(candidate.marks)) {
+      candidate.marks.forEach((mark) => {
+        if (mark && typeof mark === 'object' && typeof (mark as { type?: unknown }).type === 'string') {
+          marks.add((mark as { type: string }).type);
+        }
+      });
+    }
+    if (Array.isArray(candidate.content)) {
+      candidate.content.forEach(visit);
+    }
+  };
+  visit(doc);
+  return [...marks].sort();
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -212,11 +232,43 @@ test.describe('/ko/admin-builder inline text editing', () => {
       const toolbar = page.locator('[data-builder-inline-text-toolbar="true"]').first();
       await expect(editorShell).toBeVisible();
       await expect(toolbar).toBeVisible();
+      await expect(toolbar).toHaveAttribute('data-placement', /above|below/);
+      const toolbarVisual = await toolbar.evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        return {
+          position: style.position,
+          display: style.display,
+          borderStyle: style.borderStyle,
+          borderRadius: Number.parseFloat(style.borderRadius),
+          boxShadow: style.boxShadow,
+          zIndex: Number.parseInt(style.zIndex, 10),
+        };
+      });
+      expect(toolbarVisual.position).toBe('absolute');
+      expect(toolbarVisual.display).toBe('flex');
+      expect(toolbarVisual.borderStyle).toBe('solid');
+      expect(toolbarVisual.borderRadius).toBeGreaterThanOrEqual(6);
+      expect(toolbarVisual.boxShadow).not.toBe('none');
+      expect(toolbarVisual.zIndex).toBeGreaterThanOrEqual(9999);
       await expect(textNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(0);
       await expect(page.locator('[class*="selectionToolbar"]:visible')).toHaveCount(0);
 
       const editable = editorShell.locator('.ProseMirror').first();
+      const boldButton = toolbar.getByRole('button', { name: 'Bold' });
+      await expect(boldButton).toHaveAttribute('aria-pressed', 'false');
       await editable.fill(editedText);
+      await editable.press(`${shortcutModifier}+A`);
+      await boldButton.click();
+      await expect(boldButton).toHaveAttribute('aria-pressed', 'true');
+      const activeButtonVisual = await boldButton.evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        return {
+          backgroundColor: style.backgroundColor,
+          color: style.color,
+        };
+      });
+      expect(activeButtonVisual.backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
+      expect(activeButtonVisual.color).toBe('rgb(255, 255, 255)');
       await page.keyboard.press('Escape');
       await expect(editorShell).toBeHidden();
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText);
@@ -231,20 +283,50 @@ test.describe('/ko/admin-builder inline text editing', () => {
         text: editedText,
         richPlainText: editedText,
       });
+      await expect.poll(async () => {
+        const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+        return collectTipTapMarkTypes(node?.content?.richText?.doc).includes('bold');
+      }, { timeout: 15_000 }).toBe(true);
 
       await page.keyboard.press(`${shortcutModifier}+Z`);
       await expect(page.getByText(/Undid:/).first()).toBeVisible();
       await expect.poll(async () => {
         const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
-        return node?.content?.text ?? null;
-      }, { timeout: 15_000 }).toBe(originalText);
+        return {
+          text: node?.content?.text ?? null,
+          bold: collectTipTapMarkTypes(node?.content?.richText?.doc).includes('bold'),
+        };
+      }, { timeout: 15_000 }).toEqual({ text: editedText, bold: false });
+
+      await page.keyboard.press(`${shortcutModifier}+Z`);
+      await expect(page.getByText(/Undid:/).first()).toBeVisible();
+      await expect.poll(async () => {
+        const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+        return {
+          text: node?.content?.text ?? null,
+          bold: collectTipTapMarkTypes(node?.content?.richText?.doc).includes('bold'),
+        };
+      }, { timeout: 15_000 }).toEqual({ text: originalText, bold: false });
 
       await page.keyboard.press(`${shortcutModifier}+Y`);
       await expect(page.getByText(/Redid:/).first()).toBeVisible();
       await expect.poll(async () => {
         const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
-        return node?.content?.text ?? null;
-      }, { timeout: 15_000 }).toBe(editedText);
+        return {
+          text: node?.content?.text ?? null,
+          bold: collectTipTapMarkTypes(node?.content?.richText?.doc).includes('bold'),
+        };
+      }, { timeout: 15_000 }).toEqual({ text: editedText, bold: false });
+
+      await page.keyboard.press(`${shortcutModifier}+Y`);
+      await expect(page.getByText(/Redid:/).first()).toBeVisible();
+      await expect.poll(async () => {
+        const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+        return {
+          text: node?.content?.text ?? null,
+          bold: collectTipTapMarkTypes(node?.content?.richText?.doc).includes('bold'),
+        };
+      }, { timeout: 15_000 }).toEqual({ text: editedText, bold: true });
 
       await openBuilderPageFromPagesPanel(page, title);
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText, {

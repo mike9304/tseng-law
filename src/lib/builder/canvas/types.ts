@@ -236,6 +236,11 @@ export type StickyConfig = z.infer<typeof stickyConfigSchema>;
  * and `fontSize`. Only the fields the user explicitly changed at
  * tablet/mobile are stored; resolvers cascade desktop → tablet → mobile.
  *
+ * M07 Phase 2 lock:
+ * - font size override path is `responsive.<viewport>.fontSize`
+ * - visibility override path is `responsive.<viewport>.hidden`
+ * - no `hiddenOnViewports[]` compatibility field is persisted
+ *
  * `rect` is partial — a node may override just `x` and inherit width.
  */
 export const responsiveOverrideSchema = z.object({

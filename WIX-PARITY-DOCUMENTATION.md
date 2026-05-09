@@ -392,3 +392,39 @@ Created: 2026-05-09T12:52:13.760Z
   - 2026-05-10 "주요업무 눌러서 사용하려는데 겨우 네개 템플릿만 있네" → 12개 로컬 섹션 variant로 확장.
   - 2026-05-10 "템플릿 적용하려고 한뒤 다시 뒤로 가고 싶으면 그런 버튼도 없어" → `← 섹션 목록` 추가.
 - 다음 마일스톤: M07
+
+## M07 — mobile schema decision and lock
+
+- 시작/종료: 2026-05-10T03:00:00+09:00 / 2026-05-10T03:06:00+09:00
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — responsive schema lock 주석 명시: `responsive.<vp>.fontSize`, `responsive.<vp>.hidden`
+  - `src/lib/builder/site/types.ts` — `headerFooter.mobileSticky`, `headerFooter.mobileHamburger`, `mobileBottomBar` site-level schema 추가
+  - `src/lib/builder/site/mobile-schema.ts` — site-level mobile schema default normalizer 추가
+  - `src/lib/builder/site/persistence.ts` — site document lifecycle normalization에서 M07 default fill 연결
+  - `scripts/migrate-builder-mobile-schema.mjs` — dry-run/apply migration, `before-M07-<timestamp>` backup, rollback-ready summary
+  - `src/lib/builder/site/__tests__/mobile-schema.test.ts` — site default/explicit mobile schema unit coverage
+  - `src/lib/builder/site/__tests__/mobile-schema-migration.test.ts` — temp fixture dry-run/apply/backup coverage
+  - `src/lib/builder/canvas/__tests__/responsive-schema-lock.test.ts` — responsive fontSize/hidden cascade와 `hiddenOnViewports[]` 미채택 coverage
+  - `Phase 2 모바일 스키마 초안.md` — M07 결정 lock과 rollback 문서
+  - `WIX-PARITY-PLAN.md` — M07 🟢
+  - `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` — Phase 2 schema lock 기록
+- 의사결정:
+  - per-viewport typography는 별도 typography scale token이 아니라 기존 resolver 방향인 `responsive.<vp>.fontSize`로 잠근다.
+  - viewport visibility는 `hiddenOnViewports[]`가 아니라 `responsive.<vp>.hidden` boolean으로 잠근다.
+  - mobile sticky와 hamburger는 개별 menu widget variant가 아니라 global header schema에서 처리한다.
+  - mobile bottom CTA는 header/footer 하위가 아니라 site-level entity `mobileBottomBar`로 처리한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `node scripts/migrate-builder-mobile-schema.mjs --site tseng-law-main-site --dry-run` ✅ (`changed:false`)
+  - `npm run test:unit -- src/lib/builder/site/__tests__/mobile-schema.test.ts src/lib/builder/site/__tests__/mobile-schema-migration.test.ts src/lib/builder/canvas/__tests__/responsive-schema-lock.test.ts` ✅ (8 tests)
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (33 files / 765 tests)
+- 리스크 / 알려진 문제:
+  - M07은 schema lock이다. W31~W45의 사용자-facing 모바일 UI/preview/runtime은 M08~M10에서 구현해야 green 판정 가능하다.
+- 보류된 W (있을 경우):
+  - W31~W45 전부 M08~M10 구현 대기.
+- 사용자 피드백 흡수:
+  - "이 작업이 끝난뒤에도 7번 시작하고 다음 계속 작업 진행" → section template blocker 커밋 직후 M07을 시작하고 lock까지 완료.
+- 다음 마일스톤: M08

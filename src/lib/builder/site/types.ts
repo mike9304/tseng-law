@@ -173,6 +173,13 @@ export interface BuilderTheme {
 export interface BuilderHeaderFooterConfig {
   headerCanvasId?: string | Partial<Record<Locale, string>>;
   footerCanvasId?: string | Partial<Record<Locale, string>>;
+  /**
+   * M07 Phase 2 lock:
+   * mobile header behavior belongs to the global header schema, not to each
+   * menu widget. Runtime/UI support lands in M09/M10.
+   */
+  mobileSticky?: boolean;
+  mobileHamburger?: 'auto' | 'off' | 'force';
 }
 
 // P4-19: Favicon + 사이트 기본 정보
@@ -194,6 +201,20 @@ export interface BuilderSeoChecklistSettings {
   businessName?: string;
   keywords?: string[];
   serviceMode?: 'physical' | 'online' | 'both';
+}
+
+export type BuilderMobileBottomBarActionKind = 'phone' | 'booking' | 'custom';
+
+export interface BuilderMobileBottomBarAction {
+  id: string;
+  label: string;
+  href: string;
+  kind: BuilderMobileBottomBarActionKind;
+}
+
+export interface BuilderMobileBottomBar {
+  enabled: boolean;
+  actions: BuilderMobileBottomBarAction[];
 }
 
 // Lightbox/Modal builder — separate entity from pages.
@@ -277,6 +298,7 @@ export interface BuilderSiteDocument {
   theme: BuilderTheme;
   headerFooter?: BuilderHeaderFooterConfig;
   settings?: BuilderSiteSettings;
+  mobileBottomBar?: BuilderMobileBottomBar;
   pages: BuilderPageMeta[];
   lightboxes?: BuilderLightbox[];
   translations?: TranslationEntry[];

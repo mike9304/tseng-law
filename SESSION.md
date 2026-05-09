@@ -2977,3 +2977,28 @@ Prompt-to-artifact 체크:
 메모:
 - Playwright Chromium은 local sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 재실행했다.
 - 다음 작업은 요청대로 M07 모바일 스키마 결정 + 잠금부터 이어간다.
+
+## 2026-05-10 Codex /goal Wix full builder M07 mobile schema lock
+
+범위:
+- M07 `모바일 스키마 결정 + 잠금`을 완료했다.
+- 사용자 추가 확인 없이 기존 코드 방향과 full-builder master prompt의 P2 요구를 보수적으로 확정했다.
+- per-viewport font size는 `responsive.<viewport>.fontSize`, visibility는 `responsive.<viewport>.hidden`으로 잠갔다. `hiddenOnViewports[]`는 채택하지 않는다.
+- 글로벌 헤더 모바일 동작은 site-level header schema에 둔다: `site.headerFooter.mobileSticky`, `site.headerFooter.mobileHamburger`.
+- 모바일 하단 CTA는 site-level entity로 둔다: `site.mobileBottomBar`.
+- `normalizeSiteDocumentLifecycle()`가 legacy site document에 M07 default를 자동 보강하도록 연결했다.
+- `scripts/migrate-builder-mobile-schema.mjs`를 추가해 production/local `site.json` dry-run/apply, `before-M07-<timestamp>.json` 백업, rollback 문서화를 제공했다.
+- `Phase 2 모바일 스키마 초안.md`, `WIX-PARITY-PLAN.md`, `Wix 체크포인트.md`에 lock 결정을 기록했다.
+
+검증:
+- `npm run typecheck` ✅
+- `node scripts/migrate-builder-mobile-schema.mjs --site tseng-law-main-site --dry-run` ✅ (`changed:false`, 현재 local site는 이미 default shape)
+- `npm run test:unit -- src/lib/builder/site/__tests__/mobile-schema.test.ts src/lib/builder/site/__tests__/mobile-schema-migration.test.ts src/lib/builder/canvas/__tests__/responsive-schema-lock.test.ts` ✅ (8 tests)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (33 files / 765 tests)
+
+메모:
+- M07은 schema/runtime lock이며, 모바일 inspector UI는 M08에서 시작한다.
+- M09/M10에서 이 lock 위에 auto-fit, hamburger runtime, mobile sticky, bottom CTA, mobile preview iframe을 구현한다.

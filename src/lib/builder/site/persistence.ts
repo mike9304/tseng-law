@@ -30,6 +30,7 @@ import {
 } from './types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
+import { normalizeMobileSchemaForSiteDocument } from '@/lib/builder/site/mobile-schema';
 
 const BLOB_PREFIX = 'builder-site';
 let siteWriteQueue: Promise<void> = Promise.resolve();
@@ -458,7 +459,7 @@ function normalizeSiteDocumentLifecycle(
   siteId: string | null | undefined = site.siteId,
 ): BuilderSiteDocument {
   const normalizedSiteId = normalizeBuilderSiteId(siteId);
-  return {
+  return normalizeMobileSchemaForSiteDocument({
     ...site,
     siteId: normalizedSiteId,
     pages: (site.pages ?? []).map((page) => ({
@@ -471,7 +472,7 @@ function normalizeSiteDocumentLifecycle(
     translations: site.translations ?? [],
     sectionLibrary: site.sectionLibrary ?? [],
     redirects: site.redirects ?? [],
-  };
+  });
 }
 
 function createDefaultPageLifecycleMeta(

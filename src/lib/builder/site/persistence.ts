@@ -105,7 +105,7 @@ export async function ensureSiteDocument(siteId: string, locale: Locale): Promis
   return fresh;
 }
 
-function mergeUntouchedPageSeo(
+export function mergeUntouchedPageSeoForWrite(
   nextDoc: BuilderSiteDocument,
   latestDoc: BuilderSiteDocument | null,
 ): BuilderSiteDocument {
@@ -117,15 +117,11 @@ function mergeUntouchedPageSeo(
     ...nextDoc,
     pages: nextDoc.pages.map((page) => {
       const latestPage = latestPageById.get(page.pageId);
-      const hasLatestSeo = Boolean(latestPage?.seo && Object.keys(latestPage.seo).length > 0);
-      const hasNextSeo = Boolean(page.seo && Object.keys(page.seo).length > 0);
-      if (!hasLatestSeo || hasNextSeo) return page;
-      const nextUpdatedAt = Date.parse(page.updatedAt || page.createdAt || '');
-      const latestUpdatedAt = Date.parse(latestPage!.updatedAt || latestPage!.createdAt || '');
-      if (Number.isFinite(nextUpdatedAt) && Number.isFinite(latestUpdatedAt) && nextUpdatedAt >= latestUpdatedAt) {
-        return page;
-      }
-      return { ...page, seo: latestPage!.seo };
+      if (!latestPage) return page;
+      const hasLatestSeo = Boolean(latestPage.seo && Object.keys(latestPage.seo).length > 0);
+      const hasIncomingSeoField = Object.prototype.hasOwnProperty.call(page, 'seo');
+      if (!hasLatestSeo || hasIncomingSeoField) return page;
+      return { ...page, seo: latestPage.seo };
     }),
   };
 }
@@ -195,7 +191,7 @@ export async function writeSiteDocument(
   try {
     const normalizedSiteId = normalizeBuilderSiteId(doc.siteId);
     const latestDoc = await loadSiteDocument(normalizedSiteId);
-    const seoMergedDoc = mergeUntouchedPageSeo({ ...doc, siteId: normalizedSiteId }, latestDoc);
+    const seoMergedDoc = mergeUntouchedPageSeoForWrite({ ...doc, siteId: normalizedSiteId }, latestDoc);
     const mergedDoc = reconcileSiteDocumentPagesForWrite(seoMergedDoc, latestDoc, options);
     const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
     const pathname = sitePathname(normalizedSiteId);

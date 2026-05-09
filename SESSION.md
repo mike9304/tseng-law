@@ -2297,3 +2297,18 @@ Prompt-to-artifact 체크:
 메모:
 - 3000 dev 서버는 계속 실행 중이며 `/ko/admin-builder`는 Basic Auth 포함 200 상태다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor SEO persistence audit
+
+범위:
+- Claude 감사 지점 `src/lib/builder/site/persistence.ts:127-139`를 재검토했다.
+- stale site writer가 page title/navigation 같은 비-SEO 변경을 저장하면서 최신 SEO metadata를 빠뜨린 경우, 최신 SEO를 보존하도록 병합 정책을 좁게 보강했다.
+- 단, SEO API가 `seo: undefined`를 명시해 SEO 설정을 비우는 경우는 그대로 허용하도록 `seo` 필드 존재 여부로 구분한다.
+
+검증:
+- `npm run test:unit -- src/lib/builder/site/__tests__/persistence.test.ts` ✅ (10 passed)
+- `npm run typecheck` ✅
+
+메모:
+- 이 변경은 W27 SEO panel / W28 publish gate의 저장 신뢰성 보강이다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { reconcileSiteDocumentPagesForWrite } from '@/lib/builder/site/persistence';
+import {
+  mergeUntouchedPageSeoForWrite,
+  reconcileSiteDocumentPagesForWrite,
+} from '@/lib/builder/site/persistence';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 
 function page(pageId: string, updatedAt: string): BuilderPageMeta {
@@ -117,5 +120,62 @@ describe('reconcileSiteDocumentPagesForWrite', () => {
 
     expect(reconcileSiteDocumentPagesForWrite(staleNext, latest).pages.map((entry) => entry.pageId))
       .toEqual(['home']);
+  });
+});
+
+describe('mergeUntouchedPageSeoForWrite', () => {
+  it('preserves latest page SEO when a newer stale writer omits SEO metadata', () => {
+    const latestHome = {
+      ...page('home', '2026-01-02T00:00:00.000Z'),
+      seo: {
+        title: 'Latest SEO title',
+        description: 'Search result description',
+        canonical: 'https://example.com/ko',
+      },
+    };
+    const nextHome = {
+      ...page('home', '2026-01-03T00:00:00.000Z'),
+      title: { ko: 'Edited title', 'zh-hant': 'Edited title', en: 'Edited title' },
+    };
+    const latest = site([latestHome], '2026-01-02T00:00:01.000Z');
+    const staleNext = site([nextHome], '2026-01-03T00:00:01.000Z');
+
+    const merged = mergeUntouchedPageSeoForWrite(staleNext, latest);
+
+    expect(merged.pages[0]?.seo).toEqual(latestHome.seo);
+    expect(merged.pages[0]?.title.ko).toBe('Edited title');
+  });
+
+  it('keeps incoming SEO when the writer explicitly supplies SEO metadata', () => {
+    const latestHome = {
+      ...page('home', '2026-01-02T00:00:00.000Z'),
+      seo: { title: 'Latest SEO title' },
+    };
+    const nextHome = {
+      ...page('home', '2026-01-03T00:00:00.000Z'),
+      seo: { title: 'Incoming SEO title' },
+    };
+    const latest = site([latestHome], '2026-01-02T00:00:01.000Z');
+    const next = site([nextHome], '2026-01-03T00:00:01.000Z');
+
+    expect(mergeUntouchedPageSeoForWrite(next, latest).pages[0]?.seo)
+      .toEqual(nextHome.seo);
+  });
+
+  it('keeps an explicit empty SEO field so SEO settings can be cleared', () => {
+    const latestHome = {
+      ...page('home', '2026-01-02T00:00:00.000Z'),
+      seo: { title: 'Latest SEO title' },
+    };
+    const nextHome = {
+      ...page('home', '2026-01-03T00:00:00.000Z'),
+      seo: undefined,
+    };
+    const latest = site([latestHome], '2026-01-02T00:00:01.000Z');
+    const next = site([nextHome], '2026-01-03T00:00:01.000Z');
+
+    expect(Object.prototype.hasOwnProperty.call(nextHome, 'seo')).toBe(true);
+    expect(mergeUntouchedPageSeoForWrite(next, latest).pages[0]?.seo)
+      .toBeUndefined();
   });
 });

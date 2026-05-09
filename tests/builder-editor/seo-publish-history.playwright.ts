@@ -367,6 +367,8 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await manualRevisionCard.hover();
       await expect(page.getByText(/\+\d+ \/ -\d+ \/ ~\d+|현재 draft 와 동일|Diff preview/).first()).toBeVisible();
       await manualRevisionCard.click();
+      await expect(page.getByText(new RegExp(`title-${token}`))).toBeVisible();
+      await expect(page.getByText(/text .*UI original revision.*UI changed draft/)).toBeVisible();
       await page.getByRole('button', { name: '이 버전으로 복원' }).click();
       await page.getByRole('button', { name: '복원', exact: true }).first().click();
       await expect(page.getByText('버전 히스토리')).not.toBeVisible();

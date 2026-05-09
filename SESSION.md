@@ -2150,3 +2150,17 @@
 메모:
 - 동작 변경 없이 W02/W06/W07 overlay 계산 비용만 줄인 보강이다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor version history diff detail
+
+범위:
+- W26 VersionHistoryPanel의 diff preview를 보강. 기존에는 modified node가 id/kind만 표시되어 실제 변경 사유를 알기 어려웠다.
+- text/label/placeholder/alt/title/image/link/action/address/embed, position, size, rotation, layer, visibility, lock, style/responsive 변경을 한 줄 요약으로 표시한다.
+- W26-W28 UI Playwright에 revision 선택 후 node id와 text old/new diff가 보이는 검증을 추가했다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28" --workers=1` ✅ (1 passed, sandbox 승격 실행)
+
+메모:
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

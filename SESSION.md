@@ -2538,3 +2538,15 @@ Prompt-to-artifact 체크:
 - `npm run typecheck`와 `npm run lint`는 W27 counter assertion 직후 current code 기준 통과했다.
 - 3000번 dev server는 user QA용으로 다시 실행 중이다.
 - goal complete는 여전히 보류한다. 사용자 직접 QA와 외부 체크포인트 파일 업데이트가 남아 있다.
+
+## 2026-05-09 Codex /goal G-Editor checkpoint status update
+
+범위:
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` 업데이트 권한을 재확인했고, 이전 `Operation not permitted` 상태가 풀린 것을 확인했다.
+- W02/W04/W06/W07/W08/W10/W11/W18~W23/W26~W30 상태를 `🟡 자동검증 통과 / 사용자 QA 대기`로 갱신했다.
+- 해당 파일의 판정 규칙상 사용자 직접 브라우저 클릭 검증 전에는 🟢 Green으로 카운트하지 않는다.
+- 체크포인트 메모 56을 append해 current HEAD 자동 gate 26/26, unit 735, route guard, build, 3000 dev 200 상태를 기록했다.
+
+메모:
+- Done when 20의 문서 업데이트는 이제 `SESSION.md`와 외부 Wix 체크포인트 모두 반영됐다.
+- 남은 complete blocker는 Done when 17의 사용자 직접 5분 자유 사용/Wix 체감 판정이다.

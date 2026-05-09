@@ -2689,3 +2689,16 @@ Prompt-to-artifact 체크:
 메모:
 - 3000번 dev server는 다시 실행 중이다.
 - goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.
+
+## 2026-05-09 Codex /goal G-Editor completion audit artifact
+
+범위:
+- active goal 완료 판정 전에 prompt-to-artifact 감사 문서를 추가했다.
+- `G-EDITOR-COMPLETION-AUDIT.md`가 Done when 1~21, named files, forbidden areas, guard/security gate, commit/document requirements를 실제 증거에 매핑한다.
+- 감사 결론은 자동 구현/검증/문서/커밋은 완료됐지만 Done when 17 사용자 5분 QA가 남아 있어 goal complete 불가로 기록했다.
+
+검증:
+- `git diff --check` ✅
+
+메모:
+- goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.

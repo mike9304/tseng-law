@@ -45,18 +45,29 @@ function localeSwitchPath(targetLocale: Locale, currentSlug: string): string {
 }
 
 function buildHeaderNavItems(navItems: BuilderNavItem[], locale: Locale): HeaderNavItem[] {
-  return HEADER_NAV_SPECS.map((spec) => {
+  const indexedItems = HEADER_NAV_SPECS.map((spec, specIndex) => {
     const path = localizedPath(locale, spec.slug);
     const source = navItems.find((item) => (
       comparableSitePath(normalizeSiteHref(item.href, locale), locale) === comparableSitePath(path, locale) ||
       item.id === `nav-${spec.key}`
     ));
     return {
-      ...spec,
-      source,
-      href: source ? normalizeSiteHref(source.href, locale) : path,
+      item: {
+        ...spec,
+        source,
+        href: source ? normalizeSiteHref(source.href, locale) : path,
+      },
+      sourceIndex: source ? navItems.findIndex((item) => item.id === source.id) : -1,
+      specIndex,
     };
   });
+  return indexedItems
+    .sort((left, right) => {
+      const leftIndex = left.sourceIndex >= 0 ? left.sourceIndex : Number.MAX_SAFE_INTEGER + left.specIndex;
+      const rightIndex = right.sourceIndex >= 0 ? right.sourceIndex : Number.MAX_SAFE_INTEGER + right.specIndex;
+      return leftIndex - rightIndex;
+    })
+    .map(({ item }) => item);
 }
 
 export default function SiteHeader({

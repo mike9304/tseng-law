@@ -1003,6 +1003,13 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       const resolvedTargetIndex = targetIndex >= 0 ? targetIndex : Math.max(0, originalNavigation.length - 1);
       const targetItem = originalNavigation[resolvedTargetIndex];
       expect(targetItem?.id).toBeTruthy();
+      const moveDirection = resolvedTargetIndex > 0 ? 'up' : 'down';
+      const expectedMovedIndex = moveDirection === 'up' ? resolvedTargetIndex - 1 : resolvedTargetIndex + 1;
+      const neighborItem = originalNavigation[expectedMovedIndex];
+      expect(neighborItem?.id).toBeTruthy();
+      const neighborLabel = typeof neighborItem!.label === 'string'
+        ? neighborItem!.label
+        : neighborItem!.label.ko || neighborItem!.label.en || neighborItem!.label['zh-hant'] || '';
       const servicesIndex = originalNavigation.findIndex((item) => item.id === 'nav-services');
       const childLabel = `드롭다운 검증 ${token}`;
       const childHref = `/ko/${slug}#dropdown`;
@@ -1059,6 +1066,40 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       const editorHeaderLink = page.locator(`[data-builder-nav-item-id="${targetItem!.id}"]`).first();
       await expect(editorHeaderLink).toHaveText(navLabel);
       await expect(editorHeaderLink).toHaveAttribute('href', navHref);
+
+      const moveResponsePromise = page.waitForResponse((response) => (
+        response.url().includes('/api/builder/site/navigation')
+        && response.request().method() === 'PUT'
+      ));
+      await navDrawer
+        .locator(`[data-builder-nav-item-row="${targetItem!.id}"]`)
+        .getByTitle(moveDirection === 'up' ? '위로' : '아래로')
+        .click();
+      expect((await moveResponsePromise).status()).toBe(200);
+      await expect(navDrawer.getByText('저장 중...')).toHaveCount(0);
+
+      const navAfterMoveResponse = await page.request.get('/api/builder/site/navigation?locale=ko');
+      expect(navAfterMoveResponse.status()).toBe(200);
+      const navAfterMovePayload = (await navAfterMoveResponse.json()) as {
+        navigation?: Array<{ id: string }>;
+      };
+      const movedIds = navAfterMovePayload.navigation?.map((item) => item.id) ?? [];
+      expect(movedIds.indexOf(targetItem!.id)).toBe(expectedMovedIndex);
+      expect(movedIds.indexOf(neighborItem!.id)).toBe(resolvedTargetIndex);
+      const editorHeaderIds = await page.locator('.builder-site-header .nav-list [data-builder-nav-item-id]').evaluateAll((elements) => (
+        elements
+          .map((element) => element.getAttribute('data-builder-nav-item-id'))
+          .filter((id): id is string => Boolean(id))
+      ));
+      const targetHeaderIndex = editorHeaderIds.indexOf(targetItem!.id);
+      const neighborHeaderIndex = editorHeaderIds.indexOf(neighborItem!.id);
+      expect(targetHeaderIndex).toBeGreaterThanOrEqual(0);
+      expect(neighborHeaderIndex).toBeGreaterThanOrEqual(0);
+      if (moveDirection === 'up') {
+        expect(targetHeaderIndex).toBeLessThan(neighborHeaderIndex);
+      } else {
+        expect(targetHeaderIndex).toBeGreaterThan(neighborHeaderIndex);
+      }
 
       if (servicesIndex >= 0) {
         const addChildResponsePromise = page.waitForResponse((response) => (
@@ -1128,9 +1169,22 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       }, { timeout: 30_000 }).toBe('true:true');
 
       await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
-      const publicHeaderLink = page.locator('header a').filter({ hasText: navLabel }).first();
+      const publicHeader = page.locator('header.builder-site-header').first();
+      const publicHeaderLink = publicHeader.locator('a').filter({ hasText: navLabel }).first();
       await expect(publicHeaderLink).toBeVisible();
       await expect(publicHeaderLink).toHaveAttribute('href', navHref);
+      const publicHeaderLabels = await publicHeader.locator('.nav-list a').evaluateAll((elements) => (
+        elements.map((element) => (element.textContent ?? '').trim()).filter(Boolean)
+      ));
+      const publicTargetIndex = publicHeaderLabels.indexOf(navLabel);
+      const publicNeighborIndex = publicHeaderLabels.indexOf(neighborLabel);
+      expect(publicTargetIndex).toBeGreaterThanOrEqual(0);
+      expect(publicNeighborIndex).toBeGreaterThanOrEqual(0);
+      if (moveDirection === 'up') {
+        expect(publicTargetIndex).toBeLessThan(publicNeighborIndex);
+      } else {
+        expect(publicTargetIndex).toBeGreaterThan(publicNeighborIndex);
+      }
     } finally {
       if (originalNavigation) {
         await page.request.put('/api/builder/site/navigation', {

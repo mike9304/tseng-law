@@ -2100,3 +2100,25 @@
 
 메모:
 - 이 변경은 W02/W08/W10 계열 keyboard/selection 안정화 보강이다. 체크포인트 green 승격은 사용자의 직접 5분 검증 대기라 goal은 아직 active 상태로 유지한다.
+
+## 2026-05-09 Codex /goal G-Editor completion audit + navigation order hardening
+
+범위:
+- active goal 완료 전 prompt-to-artifact 감사 수행. 두 read-only explorer 감사와 직접 파일/테스트 대조 결과, M1~M8 자동 증거는 강하지만 체크포인트 판정 규칙상 사용자 5분 직접 검증은 여전히 미완으로 확인했다.
+- 감사 중 W18 Navigation 순서 변경 E2E가 약한 것을 발견. Navigation drawer `위로/아래로` 클릭 → API 저장 → editor header 순서 → published builder header 순서까지 검증을 추가했다.
+- 실제 버그 수정: `SiteHeader`가 저장된 navigation 순서를 무시하고 `HEADER_NAV_SPECS` 고정 순서로 header를 재정렬하던 문제를 고쳤다. known header item은 저장된 navigation 배열 순서를 따르고, 누락된 spec만 기본 순서 뒤에 붙는다.
+
+검증:
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "persists Navigation edits" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts --workers=1` ✅ (13 passed)
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (26 passed)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (727 passed)
+- `npm run security:builder-routes` ✅ (71 route files / 61 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning only)
+- build 후 `.next` dev cache 충돌 예방을 위해 3000 dev를 재시작했고 `/ko`, `/ko/admin-builder` 모두 200 확인.
+
+메모:
+- goal은 아직 complete 아님. 남은 조건은 사용자 직접 5분 브라우저 검증과 Wix 체감 green 승격 판단이다.
+- 추가 자동 gap으로는 screenshot-diff 기반 Wix shell visual regression, semantic diff preview, full draggable crop/focal editor, AssetLibrary taxonomy 서버 공유가 남아 있다.

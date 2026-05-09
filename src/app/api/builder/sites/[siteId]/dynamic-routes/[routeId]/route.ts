@@ -13,7 +13,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { siteId: string; routeId: string } }
 ) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   if (!isDefaultBuilderSiteId(params.siteId)) {

@@ -124,7 +124,7 @@ export async function GET(request: NextRequest, context: ColumnRouteContext) {
 }
 
 export async function PATCH(request: NextRequest, context: ColumnRouteContext) {
-  const auth = guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -180,7 +180,7 @@ export async function PATCH(request: NextRequest, context: ColumnRouteContext) {
 }
 
 export async function DELETE(request: NextRequest, context: ColumnRouteContext) {
-  const auth = guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
   try {

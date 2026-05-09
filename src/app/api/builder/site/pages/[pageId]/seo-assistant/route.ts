@@ -38,7 +38,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -68,7 +68,7 @@ export async function PATCH(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   try {

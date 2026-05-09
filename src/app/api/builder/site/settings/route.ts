@@ -259,7 +259,7 @@ function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -280,7 +280,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   try {

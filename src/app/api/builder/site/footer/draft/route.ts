@@ -41,7 +41,7 @@ function revalidateGlobalFooterSurfaces(
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   const draft = await readFooterCanvas('default');
@@ -52,7 +52,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   let body: { document?: unknown };

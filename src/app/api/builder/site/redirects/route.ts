@@ -40,7 +40,7 @@ function validationErrorResponse(error: ZodError): NextResponse {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
@@ -49,7 +49,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   let raw: unknown;

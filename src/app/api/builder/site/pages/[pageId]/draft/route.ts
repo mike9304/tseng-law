@@ -32,7 +32,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   const state = await readPageCanvasRecordState('default', params.pageId, 'draft');
@@ -52,7 +52,7 @@ export async function PUT(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   let body: { expectedRevision?: unknown; document?: unknown };

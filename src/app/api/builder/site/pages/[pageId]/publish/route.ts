@@ -14,7 +14,7 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = guardMutation(request, { bucket: 'publish' });
+  const auth = await guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   const body = (await request.json().catch(() => ({}))) as Record<string, unknown>;

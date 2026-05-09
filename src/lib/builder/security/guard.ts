@@ -24,7 +24,7 @@ interface GuardOptions {
   allowReadOnly?: boolean;
 }
 
-function rateLimitForBucket(bucket: GuardBucket, ip: string): RateLimitResult {
+function rateLimitForBucket(bucket: GuardBucket, ip: string): Promise<RateLimitResult> {
   switch (bucket) {
     case 'publish':
       return checkPublishRateLimit(ip);
@@ -39,26 +39,27 @@ function rateLimitForBucket(bucket: GuardBucket, ip: string): RateLimitResult {
 export function guardMutation(
   request: NextRequest,
   options: GuardOptions = {},
-): GuardResult | NextResponse {
+): Promise<GuardResult | NextResponse> {
   // 1. Auth
   const auth = requireBuilderAdminAuth(request);
-  if (auth instanceof NextResponse) return auth;
+  if (auth instanceof NextResponse) return Promise.resolve(auth);
 
   // 2. CSRF
   const csrf = validateCsrf(request);
-  if (csrf) return csrf;
+  if (csrf) return Promise.resolve(csrf);
 
   // 3. Rate limit
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
-  const rl = rateLimitForBucket(options.bucket ?? 'mutation', ip);
-  if (!rl.allowed) {
-    return NextResponse.json(
-      { error: 'Too many requests' },
-      { status: 429, headers: { 'Retry-After': String(Math.ceil(rl.retryAfterMs / 1000)) } },
-    );
-  }
+  return rateLimitForBucket(options.bucket ?? 'mutation', ip).then((rl) => {
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: 'Too many requests' },
+        { status: 429, headers: { 'Retry-After': String(Math.ceil(rl.retryAfterMs / 1000)) } },
+      );
+    }
 
-  return { username: auth.username };
+    return { username: auth.username };
+  });
 }
 
 export function guardBuilderRead(request: NextRequest): GuardResult | NextResponse {

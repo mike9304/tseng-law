@@ -16,7 +16,7 @@ function badRequest(message: string) {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeBuilderHomeLocale(request.nextUrl.searchParams.get('locale'));

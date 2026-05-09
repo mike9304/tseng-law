@@ -49,7 +49,7 @@ export async function PUT(
   request: NextRequest,
   { params }: { params: { siteId: string; pageKey: string } }
 ) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   if (!isDefaultBuilderSiteId(params.siteId)) {

@@ -16,7 +16,7 @@ function getClientIp(request: NextRequest): string {
 
 export async function POST(request: NextRequest) {
   const ip = getClientIp(request);
-  const rate = checkRateLimit(`booking:${ip}`, 8, 60_000);
+  const rate = await checkRateLimit(`booking:${ip}`, 8, 60_000);
   if (!rate.allowed) {
     return NextResponse.json(
       { error: 'Too many booking attempts. Please try again shortly.' },

@@ -31,7 +31,7 @@ function badRequest(message: string) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = guardMutation(request, { bucket: 'publish' });
+  const auth = await guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   let body: Record<string, unknown> = {};

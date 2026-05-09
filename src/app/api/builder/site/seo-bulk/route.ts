@@ -57,7 +57,7 @@ function resetSeoFields(seo: BuilderSeoMetadata | undefined, fields: z.infer<typ
 }
 
 export async function PATCH(request: NextRequest) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   try {

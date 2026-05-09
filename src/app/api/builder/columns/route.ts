@@ -51,7 +51,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
   try {

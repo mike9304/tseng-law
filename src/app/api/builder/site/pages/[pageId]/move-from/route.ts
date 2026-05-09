@@ -31,7 +31,7 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = guardMutation(request);
+  const auth = await guardMutation(request);
   if (auth instanceof NextResponse) return auth;
 
   let body: { sourcePageId?: string; nodeIds?: string[] };

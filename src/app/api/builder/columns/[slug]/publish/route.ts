@@ -33,7 +33,7 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { slug: string } },
 ) {
-  const auth = guardMutation(request, { bucket: 'publish' });
+  const auth = await guardMutation(request, { bucket: 'publish' });
   if (auth instanceof NextResponse) return auth;
 
   const slug = params.slug;

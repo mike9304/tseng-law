@@ -604,3 +604,32 @@ Created: 2026-05-09T12:52:13.760Z
   - 실제 파일 업로드, Giphy 검색 API, Lottie JSON 파싱은 별도 asset pipeline 확장 트랙이다. M12는 Wix식 Add/Inspector/runtime surface를 먼저 완성했다.
   - Playwright helper가 시각 안정화를 위해 iframe을 숨기므로 YouTube/Vimeo는 visibility가 아니라 iframe src 존재로 검증한다.
 - 다음 마일스톤: M13
+
+## M13 — gallery widget pack
+
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — gallery image에 `caption`, `tags`를 추가하고 gallery content에 `layout`, `showCaptions`, `captionMode`, `activeFilter`, `autoplay`, `interval`, `thumbnailPosition`, `proStyle`을 추가했다.
+  - `src/lib/builder/components/gallery/index.tsx` — gallery defaultContent를 grid layout 기반으로 확장했다.
+  - `src/lib/builder/components/gallery/GalleryRender.tsx` — grid, masonry, slider, slideshow, thumbnail, pro gallery, caption overlay/below, tag filter bar, published lightbox를 렌더한다.
+  - `src/lib/builder/components/gallery/Inspector.tsx` — layout dropdown, captions, filters, autoplay, thumbnail position, pro style, image caption/tag editor를 추가했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Gallery widget pack` 섹션과 W71~W78 프리셋 8종 quick-add를 추가했다.
+  - `src/app/globals.css` — gallery layout/filter/caption/slider/thumbnail/lightbox runtime style을 추가했다.
+  - `src/lib/builder/canvas/__tests__/gallery-widgets.test.ts` — gallery schema normalization unit을 추가했다.
+  - `tests/builder-editor/gallery-widgets.playwright.ts` — 격리 page 생성 → + 패널 Gallery widget pack 8종 클릭 → canvas DOM evidence 확인 → cleanup 시나리오를 추가했다.
+- 구현:
+  - W71은 `layout='grid'`와 columns/gap controls로 처리한다.
+  - W72는 CSS columns 기반 masonry layout으로 처리한다.
+  - W73/W74는 slider/slideshow layout, arrow buttons, dots, autoplay interval로 처리한다.
+  - W75는 thumbnail navigation layout으로 처리한다.
+  - W76은 `layout='pro'` + `proStyle='clean|mosaic|editorial'`로 Wix pro-like variant를 제공한다.
+  - W77은 이미지별 caption과 `captionMode='below|overlay'`로 처리한다.
+  - W78은 이미지별 tags와 `activeFilter` filter bar로 처리한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/gallery-widgets.test.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/gallery-widgets.playwright.ts --workers=1` ✅
+- W 판정:
+  - W71/W72/W73/W74/W75/W76/W77/W78 green evidence 확보.
+- 리스크 / 알려진 문제:
+  - 필터 pill은 현재 프리셋/Inspector 상태 반영 중심이다. 공개 페이지에서 사용자가 pill을 눌러 activeFilter를 바꾸는 상호작용은 M15 interactive track에서 더 고도화할 수 있다.
+- 다음 마일스톤: M14

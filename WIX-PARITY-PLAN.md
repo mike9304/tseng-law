@@ -14,7 +14,7 @@
 | M10 | P2     | Mobile sticky / preview iframe    | W40~W45   | 10h  | M07  | 🟢   |
 | M11 | P3a    | Text 위젯 팩                      | W46~W55   | 18h  | M07  | 🟢   |
 | M12 | P3b    | Media 위젯 팩                     | W56~W70   | 24h  | M07  | 🟢   |
-| M13 | P3c    | Gallery 위젯 팩                   | W71~W78   | 18h  | M11  | 🔴   |
+| M13 | P3c    | Gallery 위젯 팩                   | W71~W78   | 18h  | M11  | 🟢   |
 | M14 | P3d    | Layout 위젯 팩                    | W79~W88   | 20h  | M11  | 🔴   |
 | M15 | P3e    | Interactive 위젯 팩               | W89~W98   | 18h  | M14  | 🔴   |
 | M16 | P3f    | Navigation 위젯 팩                | W99~W105  | 14h  | M11  | 🔴   |

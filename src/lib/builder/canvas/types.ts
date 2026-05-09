@@ -837,12 +837,22 @@ const galleryCanvasNodeSchema = baseCanvasNodeSchema.extend({
         z.object({
           src: z.string().max(2000),
           alt: z.string().max(300).default(''),
+          caption: z.string().max(300).optional(),
+          tags: z.array(z.string().max(40)).max(8).optional(),
         }),
       )
       .max(50)
       .default([]),
+    layout: z.enum(['grid', 'masonry', 'slider', 'slideshow', 'thumbnail', 'pro']).default('grid'),
     columns: z.number().int().min(1).max(6).default(3),
     gap: z.number().int().min(0).max(64).default(8),
+    showCaptions: z.boolean().default(false),
+    captionMode: z.enum(['below', 'overlay']).default('below'),
+    activeFilter: z.string().max(40).default('all'),
+    autoplay: z.boolean().default(false),
+    interval: z.number().int().min(1200).max(12000).default(4000),
+    thumbnailPosition: z.enum(['bottom', 'right']).default('bottom'),
+    proStyle: z.enum(['clean', 'mosaic', 'editorial']).default('clean'),
   }),
 });
 

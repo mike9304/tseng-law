@@ -3112,3 +3112,21 @@ Prompt-to-artifact 체크:
 - W56/W57/W58/W59/W60/W61/W62/W63/W64/W65/W66/W67/W68/W69/W70는 M12 evidence 확보로 green 처리했다.
 - 실제 파일 업로드, Giphy 검색 API, Lottie JSON 파싱은 asset pipeline 확장 트랙으로 남긴다. 이번 M12는 Wix식 Add/Inspector/runtime surface를 먼저 닫았다.
 - Playwright Chromium은 macOS sandbox Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
+
+## 2026-05-10 Codex /goal Wix full builder M13 gallery widget pack
+
+범위:
+- M13 `Gallery 위젯 팩`을 완료했다.
+- + 패널 Catalog에 `Gallery widget pack` 섹션을 추가하고 W71~W78 프리셋 8종을 제공한다.
+- Gallery schema/defaultContent에 layout, caption, tags, filter, autoplay, thumbnail, pro style controls를 추가했다.
+- Gallery renderer에 grid, masonry, slider, slideshow, thumbnail, pro gallery, caption overlay/below, filter bar, published lightbox를 추가했다.
+- Gallery Inspector에 layout dropdown, caption mode, tag filter, autoplay interval, thumbnail position, pro style, image caption/tag editor를 연결했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/gallery-widgets.test.ts` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/gallery-widgets.playwright.ts --workers=1` ✅
+
+메모:
+- W71/W72/W73/W74/W75/W76/W77/W78는 M13 evidence 확보로 green 처리했다.
+- 필터 pill click으로 runtime activeFilter를 바꾸는 수준의 interactive behavior는 M15 Interactive track에서 더 다듬을 수 있다.

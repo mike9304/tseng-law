@@ -69,6 +69,7 @@ const FEATURED_KINDS: BuilderCanvasNodeKind[] = ['text', 'button', 'image', 'con
 
 type TextWidgetKind = Extract<BuilderCanvasNodeKind, 'text' | 'heading'>;
 type MediaWidgetKind = Extract<BuilderCanvasNodeKind, 'image' | 'video' | 'video-embed' | 'audio' | 'lottie' | 'icon'>;
+type GalleryWidgetKind = Extract<BuilderCanvasNodeKind, 'gallery'>;
 
 interface TextWidgetPreset {
   id: string;
@@ -88,6 +89,18 @@ interface MediaWidgetPreset {
   description: string;
   icon: string;
   kind: MediaWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+interface GalleryWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: GalleryWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -573,6 +586,187 @@ const MEDIA_WIDGET_PRESETS: MediaWidgetPreset[] = [
   },
 ];
 
+const GALLERY_SAMPLE_IMAGES = [
+  {
+    src: MEDIA_IMAGE_A,
+    alt: 'Office skyline',
+    caption: '호정국제 상담 공간',
+    tags: ['office', 'featured'],
+  },
+  {
+    src: MEDIA_BLOG_IMAGE,
+    alt: 'Company law article',
+    caption: '기업 법무 자료',
+    tags: ['service'],
+  },
+  {
+    src: '/images/blog/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
+    alt: 'Litigation article',
+    caption: '분쟁 해결 케이스',
+    tags: ['case', 'featured'],
+  },
+  {
+    src: '/images/team/son-jungmin.jpg',
+    alt: 'Korean attorney',
+    caption: '한국어 상담',
+    tags: ['team'],
+  },
+  {
+    src: '/images/blog/016-taiwan-inheritance-custody-analysis/featured-01.jpg',
+    alt: 'Family law article',
+    caption: '가사/상속 분석',
+    tags: ['service'],
+  },
+  {
+    src: '/images/blog/017-taiwan-logistics-business-setup/featured-01.jpg',
+    alt: 'Business setup article',
+    caption: '대만 사업 설립',
+    tags: ['business'],
+  },
+];
+
+const GALLERY_WIDGET_PRESETS: GalleryWidgetPreset[] = [
+  {
+    id: 'gallery-grid',
+    label: 'Grid gallery',
+    description: '균일 이미지 격자',
+    icon: 'GR',
+    kind: 'gallery',
+    width: 620,
+    height: 360,
+    content: {
+      images: GALLERY_SAMPLE_IMAGES,
+      layout: 'grid',
+      columns: 3,
+      gap: 10,
+      showCaptions: false,
+    },
+  },
+  {
+    id: 'gallery-masonry',
+    label: 'Masonry gallery',
+    description: '높이가 다른 자연 배치',
+    icon: 'MS',
+    kind: 'gallery',
+    width: 620,
+    height: 420,
+    content: {
+      images: GALLERY_SAMPLE_IMAGES,
+      layout: 'masonry',
+      columns: 3,
+      gap: 12,
+      showCaptions: true,
+      captionMode: 'overlay',
+    },
+  },
+  {
+    id: 'gallery-slider',
+    label: 'Slider gallery',
+    description: '화살표와 페이지네이션',
+    icon: 'SL',
+    kind: 'gallery',
+    width: 560,
+    height: 315,
+    content: {
+      images: GALLERY_SAMPLE_IMAGES,
+      layout: 'slider',
+      columns: 1,
+      gap: 8,
+      autoplay: false,
+    },
+  },
+  {
+    id: 'gallery-slideshow',
+    label: 'Slideshow',
+    description: '풀블리드 자동 슬라이드',
+    icon: 'SS',
+    kind: 'gallery',
+    width: 720,
+    height: 380,
+    content: {
+      images: GALLERY_SAMPLE_IMAGES,
+      layout: 'slideshow',
+      columns: 1,
+      gap: 0,
+      autoplay: true,
+      interval: 3500,
+      showCaptions: true,
+      captionMode: 'overlay',
+    },
+  },
+  {
+    id: 'gallery-thumbnail',
+    label: 'Thumbnail gallery',
+    description: '썸네일 네비 + 큰 이미지',
+    icon: 'TN',
+    kind: 'gallery',
+    width: 620,
+    height: 390,
+    content: {
+      images: GALLERY_SAMPLE_IMAGES,
+      layout: 'thumbnail',
+      columns: 1,
+      gap: 10,
+      thumbnailPosition: 'bottom',
+      showCaptions: true,
+      captionMode: 'overlay',
+    },
+  },
+  {
+    id: 'gallery-pro',
+    label: 'Pro gallery',
+    description: 'Wix pro-like 모자이크',
+    icon: 'PG',
+    kind: 'gallery',
+    width: 700,
+    height: 420,
+    content: {
+      images: GALLERY_SAMPLE_IMAGES,
+      layout: 'pro',
+      columns: 4,
+      gap: 10,
+      proStyle: 'mosaic',
+      showCaptions: true,
+      captionMode: 'overlay',
+    },
+  },
+  {
+    id: 'gallery-caption-overlay',
+    label: 'Caption overlay',
+    description: '이미지별 캡션 오버레이',
+    icon: 'CO',
+    kind: 'gallery',
+    width: 560,
+    height: 340,
+    content: {
+      images: GALLERY_SAMPLE_IMAGES,
+      layout: 'grid',
+      columns: 2,
+      gap: 12,
+      showCaptions: true,
+      captionMode: 'overlay',
+    },
+  },
+  {
+    id: 'gallery-filter',
+    label: 'Filtered gallery',
+    description: '태그 필터 pill 표시',
+    icon: 'FT',
+    kind: 'gallery',
+    width: 620,
+    height: 380,
+    content: {
+      images: GALLERY_SAMPLE_IMAGES,
+      layout: 'grid',
+      columns: 3,
+      gap: 10,
+      activeFilter: 'featured',
+      showCaptions: true,
+      captionMode: 'below',
+    },
+  },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -649,6 +843,17 @@ function mediaWidgetMatchesSearch(preset: MediaWidgetPreset, query: string): boo
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function galleryWidgetMatchesSearch(preset: GalleryWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'gallery widget',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
@@ -675,6 +880,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   );
   const visibleMediaWidgetPresets = useMemo(
     () => MEDIA_WIDGET_PRESETS.filter((preset) => mediaWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
+  const visibleGalleryWidgetPresets = useMemo(
+    () => GALLERY_WIDGET_PRESETS.filter((preset) => galleryWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
 
@@ -711,8 +920,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -747,6 +956,31 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   }
 
   function handleAddMediaWidgetPreset(preset: MediaWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddGalleryWidgetPreset(preset: GalleryWidgetPreset) {
     const sequence = addSequenceRef.current;
     addSequenceRef.current += 1;
     const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
@@ -922,6 +1156,56 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                     className={styles.mediaWidgetPresetButton}
                     data-builder-media-widget-preset={preset.id}
                     onClick={() => handleAddMediaWidgetPreset(preset)}
+                  >
+                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.mediaWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleGalleryWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['gallery-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'gallery-widgets': !(current['gallery-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>▧</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Gallery widget pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    grid, masonry, slider, slideshow, thumbnail, pro, caption, filter · {visibleGalleryWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['gallery-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['gallery-widgets'] ?? true) ? (
+              <div className={styles.mediaWidgetGrid}>
+                {visibleGalleryWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.mediaWidgetPresetButton}
+                    data-builder-gallery-widget-preset={preset.id}
+                    onClick={() => handleAddGalleryWidgetPreset(preset)}
                   >
                     <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
                     <span className={styles.mediaWidgetPresetCopy}>

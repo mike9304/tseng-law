@@ -2825,3 +2825,33 @@ Prompt-to-artifact 체크:
 - `NEXT_DIST_DIR=.next-m03` build가 Next의 tsconfig include 자동 수정을 시도했으나 검증 부산물이라 되돌렸다.
 - M03은 W 범위 없는 선행 보안 마일스톤이라 `Wix 체크포인트.md` 변경 없음.
 - 다음 마일스톤은 M04 AI 검증 인프라 7종.
+
+## 2026-05-10 Codex /goal Wix full builder M04 quality gates
+
+범위:
+- M04 AI 검증 인프라 7종을 완료했다.
+- Visual regression 6상태 baseline을 추가했다: 첫 화면, catalog drawer, text inspector, preview mobile, site settings, asset library.
+- axe-core WCAG 2.1 AA smoke, Korean/Hanja IME persistence, zh-hant smoke, Chromium/WebKit/Firefox admin smoke, LHCI, Sentry no-op config, GitHub Actions quality workflow를 추가했다.
+- `ContainerElement`가 decomposed page `content.background`/border를 무시하던 렌더링 버그를 수정했다.
+- 칼럼/인사이트 quick action은 semantic link로 바꿔 WebKit/Firefox에서도 안정적으로 이동하게 했다.
+
+커밋:
+- `d4fdd5a G-Editor: add builder quality gates`
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (29 files / 755 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/a11y-smoke.playwright.ts tests/builder-editor/inline-text-ime.playwright.ts tests/builder-editor/visual-regression.playwright.ts tests/builder-editor/zh-hant-smoke.playwright.ts --project=chromium-builder --workers=1` ✅ (4 passed)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --project=chromium-builder --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --project=webkit-builder --project=firefox-builder --workers=1` ✅ (2 passed)
+- `NEXT_DIST_DIR=.next-m04 npm run build` ✅
+- `NEXT_DIST_DIR=.next-m04 npm run lhci` ✅ (exit 0)
+- `git diff --check` ✅
+
+메모:
+- LHCI는 warning 기준이라 `/ko/admin-builder` performance 0.76~0.78, SEO 0.42 경고가 남아도 exit 0이다. M05 이후 noindex/metadata 정책과 editor bundle 분리를 따로 봐야 한다.
+- Playwright/LHCI는 local sandbox에서 Chromium launch 권한 문제로 sandbox 밖 실행이 필요했다.
+- self-check subagent는 계정 사용량 제한으로 실패해 로컬 gate로 대체했다.
+- 다음 마일스톤은 M05 Empty/error state sweep.

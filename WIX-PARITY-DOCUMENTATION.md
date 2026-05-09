@@ -189,3 +189,45 @@ Created: 2026-05-09T12:52:13.760Z
 - 사용자 피드백 흡수:
   - "계속 yes 묻는 것" 관련해 dependency install 없이 REST 구현으로 승인 프롬프트를 줄였다. 단, sandbox가 localhost/Chromium을 막는 경우만 필수 승인으로 실행했다.
 - 다음 마일스톤: M04
+
+## M04 — AI 검증 인프라 7종
+
+- 시작/종료: 2026-05-09T23:45:00+09:00 / 2026-05-10T00:46:00+09:00
+- 변경 파일:
+  - `playwright.config.ts` — Chromium/WebKit/Firefox projects, screenshot baseline path, `toHaveScreenshot` tolerance 추가
+  - `tests/builder-editor/visual-regression.playwright.ts` + `tests/visual/baseline/...` — first screen, catalog drawer, text inspector, preview mobile, site settings, asset library 6개 baseline 고정
+  - `tests/builder-editor/a11y-smoke.playwright.ts` / `tests/builder-editor/helpers/a11y.ts` — axe-core WCAG 2.1 AA gate 추가
+  - `tests/builder-editor/inline-text-ime.playwright.ts` — 임시 페이지 기반 Korean/Hanja composition 저장·reload 회귀 테스트 추가
+  - `tests/builder-editor/zh-hant-smoke.playwright.ts` — Traditional Chinese editor/columns surface smoke 추가
+  - `lighthouserc.json`, `scripts/run-lhci.mjs`, `.github/workflows/builder-quality.yml` — LHCI/CI quality gate 추가
+  - `sentry.client.config.ts`, `sentry.server.config.ts`, `sentry.edge.config.ts`, `next.config.mjs`, `.env.example` — Sentry DSN no-op 기본값, tracing/replay 5% env contract 추가
+  - `src/components/builder/canvas/*`, `src/lib/builder/components/container/Element.tsx`, `src/app/globals.css` — axe 대비/semantic fix와 decomposed container background 렌더링 보정
+- 커밋:
+  - `d4fdd5a G-Editor: add builder quality gates`
+- 의사결정:
+  - Sentry는 `NEXT_PUBLIC_SENTRY_DSN`이 있을 때만 `withSentryConfig`를 적용한다. 로컬/CI no-op을 기본으로 두어 DSN 미설정 환경에서 빌드 동작을 바꾸지 않는다.
+  - Visual regression은 Chromium baseline만 고정하고, WebKit/Firefox는 long smoke로 동작 호환을 검증한다. 브라우저별 픽셀 차이를 baseline 3종으로 늘리기보다 M04에서는 핵심 6상태의 안정 baseline을 우선했다.
+  - LHCI는 `@lhci/cli`가 로컬 Chrome을 못 찾는 경우가 있어 `scripts/run-lhci.mjs`에서 Playwright Chromium 경로를 자동 주입한다.
+  - 칼럼/인사이트 quick action은 페이지 이동 동작이므로 `button + window.location` 대신 semantic `a` 링크로 바꿨다.
+  - `ContainerElement`가 `content.background`/border 대신 기본 card variant 흰 배경을 렌더하던 버그를 수정했다. 이 문제는 칼럼 페이지 히어로 대비와 실제 visual parity 모두에 영향을 줬다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (29 files / 755 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/a11y-smoke.playwright.ts tests/builder-editor/inline-text-ime.playwright.ts tests/builder-editor/visual-regression.playwright.ts tests/builder-editor/zh-hant-smoke.playwright.ts --project=chromium-builder --workers=1` ✅ (4 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --project=chromium-builder --workers=1` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --project=webkit-builder --project=firefox-builder --workers=1` ✅ (2 passed)
+  - `NEXT_DIST_DIR=.next-m04 npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `NEXT_DIST_DIR=.next-m04 npm run lhci` ✅ (exit 0)
+  - `git diff --check` ✅
+- 리스크 / 알려진 문제:
+  - LHCI는 exit 0이지만 현재 warning 기준에서 `/ko/admin-builder` performance 0.76~0.78, SEO 0.42 경고가 남는다. M04 요구의 CI gate는 warning으로 동작하지만, M05 이후에는 admin-builder SEO noindex/metadata 정책과 heavy bundle 성능 분리를 별도 개선해야 한다.
+  - Playwright/LHCI는 macOS local sandbox에서 브라우저 launch 권한 문제가 있어 sandbox 밖에서 실행했다.
+  - self-check subagent는 계정 사용량 제한으로 실패했다. 대신 로컬 diff inspection, typecheck/lint/unit/security/build/LHCI/Playwright 7종으로 대체했다.
+- 보류된 W (있을 경우):
+  - 없음
+- 사용자 피드백 흡수:
+  - "칼럼아카이브/사진 클릭하면 백지" 계열 회귀를 잡기 위해 admin smoke에 칼럼 quick action 링크와 axe gate를 포함했다.
+  - "검색 창 위치/기존 홈페이지 전체 불러오기" 피드백과 연결된 decomposed container 배경 렌더링 버그를 M04 a11y 검증 중 발견해 수정했다.
+- 다음 마일스톤: M05

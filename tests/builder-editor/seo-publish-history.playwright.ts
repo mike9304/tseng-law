@@ -388,6 +388,10 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await seoDialog.getByLabel('SEO title').fill(seoTitle);
       await seoDialog.getByLabel('Meta description').fill(seoDescription);
       await seoDialog.getByLabel('Canonical URL').fill(canonical);
+      await expect(seoDialog.getByText('권장 30-60자')).toBeVisible();
+      await expect(seoDialog.getByText(`${seoTitle.length}/60`)).toBeVisible();
+      await expect(seoDialog.getByText('권장 120-160자')).toBeVisible();
+      await expect(seoDialog.getByText(`${seoDescription.length}/160`)).toBeVisible();
       await expect(seoDialog.getByText('Google preview')).toBeVisible();
       await seoDialog.getByRole('button', { name: 'Social share' }).click();
       await seoDialog.getByLabel('OG image URL').fill('/images/header-skyline-ratio.webp');

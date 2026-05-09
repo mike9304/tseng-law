@@ -2479,3 +2479,18 @@ Prompt-to-artifact 체크:
 메모:
 - build 이후 dev `.next` runtime/cache mismatch가 재현되어 stale dev server를 종료하고 `.next`를 지운 뒤 `npm run dev`를 3000번에서 재시작했다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단은 마지막 gate로 남긴다.
+
+## 2026-05-09 Codex /goal G-Editor SEO counter assertion
+
+범위:
+- W27 SEO 패널 검증을 보강했다.
+- 기존 UI test가 SEO title/description 저장, canonical, Google preview, OG image preview, public head 반영을 확인하던 것에 더해 title/description char counter를 직접 확인한다.
+- `권장 30-60자`, `${title.length}/60`, `권장 120-160자`, `${description.length}/160`가 실제 dialog에 표시되는지 Playwright로 검증한다.
+
+검증:
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts --workers=1` ✅ (2 passed)
+- `npm run typecheck` ✅
+
+메모:
+- W27은 title/description char counter + Google preview + OG image preview + canonical 입력/저장 + public head 반영까지 자동 증거가 생겼다.
+- 외부 `Wix 체크포인트.md`는 현재 macOS 권한이 `Operation not permitted`로 막혀 아직 반영하지 못했다.

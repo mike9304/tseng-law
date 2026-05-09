@@ -2284,3 +2284,16 @@ Prompt-to-artifact 체크:
 남은 blocker:
 - Done when 17: 사용자 직접 5분 자유 사용 검증과 "Wix를 그대로 쓰는 느낌" 체감 판정이 아직 없다.
 - 따라서 active goal은 완료 처리하지 않는다. `update_goal(status: complete)` 호출 금지.
+
+## 2026-05-09 Codex /goal G-Editor viewport regression assertion
+
+범위:
+- 사용자가 지적했던 첫 화면 아래 스크롤 시작, 우측 잘림, 하단 고정 바 과점유 회귀를 자동으로 잡도록 admin-builder smoke를 보강했다.
+- editor shell 초기 화면에서 document/body horizontal overflow가 viewport를 넘지 않는지, status footer가 32px 이하로 viewport bottom에 붙어 있는지 검증한다.
+
+검증:
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅ (1 passed, sandbox 승격 실행)
+
+메모:
+- 3000 dev 서버는 계속 실행 중이며 `/ko/admin-builder`는 Basic Auth 포함 200 상태다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

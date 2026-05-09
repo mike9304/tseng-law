@@ -365,17 +365,26 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
         stageTransformLeft: rectFor('div[class*="stageTransform"]')?.left ?? 0,
         stageTransformRight: rectFor('div[class*="stageTransform"]')?.right ?? 0,
         stageTransformTransition: styleFor('div[class*="stageTransform"]')?.transitionProperty ?? '',
+        documentScrollWidth: document.documentElement.scrollWidth,
+        bodyScrollWidth: document.body.scrollWidth,
+        viewportWidth: window.innerWidth,
         siteFooterTop: siteFooterRect?.top ?? 0,
         statusTop: statusRect?.top ?? 0,
+        statusBottom: statusRect?.bottom ?? 0,
+        statusHeight: statusRect?.height ?? 0,
         viewportHeight: window.innerHeight,
       };
     });
     expect(editorLayout.canvasOverflowX).toBe('auto');
     expect(editorLayout.canvasOverflowY).toBe('auto');
+    expect(editorLayout.documentScrollWidth).toBeLessThanOrEqual(editorLayout.viewportWidth + 1);
+    expect(editorLayout.bodyScrollWidth).toBeLessThanOrEqual(editorLayout.viewportWidth + 1);
     expect(editorLayout.stageViewportHeight).toBeGreaterThanOrEqual(Math.max(700, editorLayout.viewportHeight - 100));
     expect(editorLayout.stageTransformLeft).toBeGreaterThanOrEqual(editorLayout.stageViewportLeft - 2);
     expect(editorLayout.stageTransformRight).toBeLessThanOrEqual(editorLayout.stageViewportRight + 2);
     expect(editorLayout.stageTransformTransition).toBe('none');
+    expect(editorLayout.statusHeight).toBeLessThanOrEqual(32);
+    expect(Math.abs(editorLayout.viewportHeight - editorLayout.statusBottom)).toBeLessThanOrEqual(4);
     expect(editorLayout.siteFooterTop).toBeGreaterThanOrEqual(editorLayout.statusTop - 4);
 
     const rail = page.locator('[class*="iconRail"]').first();

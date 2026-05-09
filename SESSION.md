@@ -2650,3 +2650,21 @@ Prompt-to-artifact 체크:
 메모:
 - 3000번 dev server는 유지 중이다.
 - goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.
+
+## 2026-05-09 Codex /goal G-Editor pointermove perf follow-up
+
+범위:
+- 사용자 QA에서 보고된 에디터 스크롤/편집 중 흔들림·렉 체감 가능 지점을 추가로 점검했다.
+- `CanvasContainer`의 global pointermove가 모든 이벤트마다 transient store update와 React overlay state update를 발생시키던 흐름을 `requestAnimationFrame` 단위로 합쳤다.
+- pointerup 직전에 마지막 pending pointer 위치를 flush해서 드래그/리사이즈 최종 좌표가 유실되지 않도록 했다.
+- cleanup에서 pending animation frame을 취소해 interaction 종료 후 stale move가 들어가지 않게 했다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts tests/builder-editor/design-pool.playwright.ts -g "direct-manipulation|Wix-like editor chrome" --workers=1` ✅ (2 passed, macOS Chromium 권한 때문에 승격 실행)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `git diff --check` ✅
+
+메모:
+- 검증 중 `.next` dev cache가 `vendor-chunks/zod.js` missing 상태가 되어 3000번 dev server를 재시작하고 `.next`를 재생성했다. 이후 `/ko`와 `/ko/admin-builder` 모두 200 확인.
+- goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.

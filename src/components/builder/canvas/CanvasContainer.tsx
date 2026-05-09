@@ -72,6 +72,13 @@ type InteractionState =
     }
   | null;
 
+type PointerMoveSnapshot = {
+  pointerId: number;
+  clientX: number;
+  clientY: number;
+  shiftKey: boolean;
+};
+
 type SelectionBoxState = {
   pointerId: number;
   originX: number;
@@ -360,6 +367,8 @@ export default function CanvasContainer({
   const [hoveredContainerId, setHoveredContainerId] = useState<string | null>(null);
   const canceledInteractionPointerIdsRef = useRef<Set<number>>(new Set());
   const interactionGeometrySnapshotRef = useRef<InteractionGeometrySnapshot | null>(null);
+  const pendingPointerMoveRef = useRef<PointerMoveSnapshot | null>(null);
+  const pointerMoveFrameRef = useRef<number | null>(null);
   const moveNodeIntoContainer = useBuilderCanvasStore((s) => s.moveNodeIntoContainer);
 
   const describeHistorySelection = useCallback(() => {
@@ -832,10 +841,11 @@ export default function CanvasContainer({
     const activeInteraction = interaction;
     canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId);
 
-    function handlePointerMove(event: PointerEvent) {
+    function processPointerMove(pointer: PointerMoveSnapshot) {
+      if (pointer.pointerId !== activeInteraction.pointerId) return;
       if (canceledInteractionPointerIdsRef.current.has(activeInteraction.pointerId)) return;
       if (activeInteraction.type === 'pan') {
-        const deltaX = event.clientX - activeInteraction.originX;
+        const deltaX = pointer.clientX - activeInteraction.originX;
         setZoomState((currentState) => ({
           ...currentState,
           panX: activeInteraction.startPanX + deltaX,
@@ -844,12 +854,12 @@ export default function CanvasContainer({
         return;
       }
 
-      const deltaX = (event.clientX - activeInteraction.originX) / zoomState.zoom;
-      const deltaY = (event.clientY - activeInteraction.originY) / zoomState.zoom;
+      const deltaX = (pointer.clientX - activeInteraction.originX) / zoomState.zoom;
+      const deltaY = (pointer.clientY - activeInteraction.originY) / zoomState.zoom;
       const viewportRect = viewportRef.current?.getBoundingClientRect();
       setInteractionPointer({
-        x: viewportRect ? event.clientX - viewportRect.left : event.clientX,
-        y: viewportRect ? event.clientY - viewportRect.top : event.clientY,
+        x: viewportRect ? pointer.clientX - viewportRect.left : pointer.clientX,
+        y: viewportRect ? pointer.clientY - viewportRect.top : pointer.clientY,
       });
       if (activeInteraction.type === 'move') {
         setOverlapPicker(null);
@@ -948,7 +958,7 @@ export default function CanvasContainer({
       const startRect = activeInteraction.startRect;
       const nextRect = { ...startRect };
       const isCorner = handle === 'nw' || handle === 'ne' || handle === 'sw' || handle === 'se';
-      const preserveAspectRatio = isCorner && event.shiftKey;
+      const preserveAspectRatio = isCorner && pointer.shiftKey;
 
       if (preserveAspectRatio) {
         const aspect = startRect.width / startRect.height;
@@ -1015,8 +1025,43 @@ export default function CanvasContainer({
       );
     }
 
+    function flushPendingPointerMove() {
+      if (pointerMoveFrameRef.current !== null) {
+        window.cancelAnimationFrame(pointerMoveFrameRef.current);
+        pointerMoveFrameRef.current = null;
+      }
+      const pendingPointerMove = pendingPointerMoveRef.current;
+      pendingPointerMoveRef.current = null;
+      if (pendingPointerMove) {
+        processPointerMove(pendingPointerMove);
+      }
+    }
+
+    function handlePointerMove(event: PointerEvent) {
+      if (event.pointerId !== activeInteraction.pointerId) return;
+      if (canceledInteractionPointerIdsRef.current.has(activeInteraction.pointerId)) return;
+
+      pendingPointerMoveRef.current = {
+        pointerId: event.pointerId,
+        clientX: event.clientX,
+        clientY: event.clientY,
+        shiftKey: event.shiftKey,
+      };
+
+      if (pointerMoveFrameRef.current !== null) return;
+      pointerMoveFrameRef.current = window.requestAnimationFrame(() => {
+        pointerMoveFrameRef.current = null;
+        const pendingPointerMove = pendingPointerMoveRef.current;
+        pendingPointerMoveRef.current = null;
+        if (pendingPointerMove) {
+          processPointerMove(pendingPointerMove);
+        }
+      });
+    }
+
     function handlePointerUp(event: PointerEvent) {
       if (event.pointerId === activeInteraction.pointerId) {
+        flushPendingPointerMove();
         if (canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId)) {
           interactionGeometrySnapshotRef.current = null;
           return;
@@ -1092,6 +1137,11 @@ export default function CanvasContainer({
     return () => {
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', handlePointerUp);
+      if (pointerMoveFrameRef.current !== null) {
+        window.cancelAnimationFrame(pointerMoveFrameRef.current);
+        pointerMoveFrameRef.current = null;
+      }
+      pendingPointerMoveRef.current = null;
     };
   }, [
     activeGroupId,

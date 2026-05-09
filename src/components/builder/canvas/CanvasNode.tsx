@@ -373,6 +373,8 @@ export default function CanvasNode({
     : faqItemMatch
       ? faqItemIndex === selectedFaqIndex
       : false;
+  const servicesOpenIndex = Math.max(0, Math.round(selectedServiceIndex));
+  const faqOpenIndex = Math.max(0, Math.round(selectedFaqIndex));
   const heroSearchActive = selectedNodeIds.some(isHeroSearchTarget);
   const showHeroSearchQuickEdit = selected && isInteractive && !node.locked && isHeroSearchTarget(node.id);
 
@@ -684,6 +686,8 @@ export default function CanvasNode({
       data-builder-hero-search-active={node.id === 'home-hero-quick-menu' && heroSearchActive ? 'true' : undefined}
       data-office-active={officeActiveIndex != null ? (Number(officeActiveIndex) === activeOfficeIndex ? 'true' : 'false') : undefined}
       data-builder-preview-open={builderPreviewOpen ? 'true' : undefined}
+      data-builder-services-open-index={node.id === 'home-services-root' ? String(servicesOpenIndex) : undefined}
+      data-builder-faq-open-index={node.id === 'home-faq-root' ? String(faqOpenIndex) : undefined}
       data-viewport={viewport}
       onPointerDown={(event) => {
         event.stopPropagation();

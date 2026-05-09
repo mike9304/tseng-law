@@ -31,5 +31,7 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
     await page.locator('[data-node-id="home-services-description"]').first().click({ position: { x: 12, y: 12 }, force: true });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
+    await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
   });
 });

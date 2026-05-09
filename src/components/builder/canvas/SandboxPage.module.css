@@ -2184,7 +2184,33 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
 }
 
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='0'] [data-node-id='home-services-card-0'] .services-detail-card),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='1'] [data-node-id='home-services-card-1'] .services-detail-card),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='2'] [data-node-id='home-services-card-2'] .services-detail-card),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='3'] [data-node-id='home-services-card-3'] .services-detail-card),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='4'] [data-node-id='home-services-card-4'] .services-detail-card),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='5'] [data-node-id='home-services-card-5'] .services-detail-card),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='6'] [data-node-id='home-services-card-6'] .services-detail-card),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='7'] [data-node-id='home-services-card-7'] .services-detail-card) {
+  border-color: var(--accent);
+  background: var(--off-white);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+}
+
 .stage :global([data-node-id^='home-services-card-'][data-builder-preview-open='true'] .services-detail-body) {
+  max-height: 820px;
+  overflow: visible;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='0'] [data-node-id='home-services-card-0'] .services-detail-body),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='1'] [data-node-id='home-services-card-1'] .services-detail-body),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='2'] [data-node-id='home-services-card-2'] .services-detail-body),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='3'] [data-node-id='home-services-card-3'] .services-detail-body),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='4'] [data-node-id='home-services-card-4'] .services-detail-body),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='5'] [data-node-id='home-services-card-5'] .services-detail-body),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='6'] [data-node-id='home-services-card-6'] .services-detail-body),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='7'] [data-node-id='home-services-card-7'] .services-detail-body) {
   max-height: 820px;
   overflow: visible;
   padding: 0 1.5rem 1.5rem;
@@ -2194,6 +2220,41 @@
 .stage :global([data-node-id^='home-services-card-'][data-node-id$='-checklist'][data-builder-preview-open='true']),
 .stage :global([data-node-id^='home-services-card-'][data-node-id$='-columns'][data-builder-preview-open='true']),
 .stage :global([data-node-id^='home-services-card-'][data-node-id$='-more'][data-builder-preview-open='true']) {
+  display: block;
+}
+
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='0'] [data-node-id='home-services-card-0'] [data-node-id^='home-services-card-0-'][data-node-id*='-detail-']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='0'] [data-node-id='home-services-card-0'] [data-node-id='home-services-card-0-checklist']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='0'] [data-node-id='home-services-card-0'] [data-node-id='home-services-card-0-columns']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='0'] [data-node-id='home-services-card-0'] [data-node-id='home-services-card-0-more']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='1'] [data-node-id='home-services-card-1'] [data-node-id^='home-services-card-1-'][data-node-id*='-detail-']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='1'] [data-node-id='home-services-card-1'] [data-node-id='home-services-card-1-checklist']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='1'] [data-node-id='home-services-card-1'] [data-node-id='home-services-card-1-columns']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='1'] [data-node-id='home-services-card-1'] [data-node-id='home-services-card-1-more']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='2'] [data-node-id='home-services-card-2'] [data-node-id^='home-services-card-2-'][data-node-id*='-detail-']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='2'] [data-node-id='home-services-card-2'] [data-node-id='home-services-card-2-checklist']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='2'] [data-node-id='home-services-card-2'] [data-node-id='home-services-card-2-columns']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='2'] [data-node-id='home-services-card-2'] [data-node-id='home-services-card-2-more']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='3'] [data-node-id='home-services-card-3'] [data-node-id^='home-services-card-3-'][data-node-id*='-detail-']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='3'] [data-node-id='home-services-card-3'] [data-node-id='home-services-card-3-checklist']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='3'] [data-node-id='home-services-card-3'] [data-node-id='home-services-card-3-columns']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='3'] [data-node-id='home-services-card-3'] [data-node-id='home-services-card-3-more']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='4'] [data-node-id='home-services-card-4'] [data-node-id^='home-services-card-4-'][data-node-id*='-detail-']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='4'] [data-node-id='home-services-card-4'] [data-node-id='home-services-card-4-checklist']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='4'] [data-node-id='home-services-card-4'] [data-node-id='home-services-card-4-columns']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='4'] [data-node-id='home-services-card-4'] [data-node-id='home-services-card-4-more']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='5'] [data-node-id='home-services-card-5'] [data-node-id^='home-services-card-5-'][data-node-id*='-detail-']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='5'] [data-node-id='home-services-card-5'] [data-node-id='home-services-card-5-checklist']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='5'] [data-node-id='home-services-card-5'] [data-node-id='home-services-card-5-columns']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='5'] [data-node-id='home-services-card-5'] [data-node-id='home-services-card-5-more']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='6'] [data-node-id='home-services-card-6'] [data-node-id^='home-services-card-6-'][data-node-id*='-detail-']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='6'] [data-node-id='home-services-card-6'] [data-node-id='home-services-card-6-checklist']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='6'] [data-node-id='home-services-card-6'] [data-node-id='home-services-card-6-columns']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='6'] [data-node-id='home-services-card-6'] [data-node-id='home-services-card-6-more']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='7'] [data-node-id='home-services-card-7'] [data-node-id^='home-services-card-7-'][data-node-id*='-detail-']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='7'] [data-node-id='home-services-card-7'] [data-node-id='home-services-card-7-checklist']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='7'] [data-node-id='home-services-card-7'] [data-node-id='home-services-card-7-columns']),
+.stage :global([data-node-id='home-services-root'][data-builder-services-open-index='7'] [data-node-id='home-services-card-7'] [data-node-id='home-services-card-7-more']) {
   display: block;
 }
 

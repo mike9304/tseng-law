@@ -27,6 +27,8 @@ export interface SnapResult {
   guides: AlignmentGuide[];
 }
 
+export type SnapCandidateBounds = Rect;
+
 const SNAP_THRESHOLD = 6;
 const MAX_SPACING_GUIDE_PX = 96;
 
@@ -65,6 +67,23 @@ function removeGuideGap(guide: AlignmentGuide & { gap: number }): AlignmentGuide
     tone: guide.tone,
     label: guide.label,
   };
+}
+
+function rectIntersects(a: Rect, b: Rect): boolean {
+  return (
+    a.x < b.x + b.width
+    && a.x + a.width > b.x
+    && a.y < b.y + b.height
+    && a.y + a.height > b.y
+  );
+}
+
+export function filterSnapCandidatesByBounds(
+  candidates: Rect[],
+  bounds: SnapCandidateBounds | null | undefined,
+): Rect[] {
+  if (!bounds) return candidates;
+  return candidates.filter((candidate) => rectIntersects(candidate, bounds));
 }
 
 function addVerticalAlignmentGuide(

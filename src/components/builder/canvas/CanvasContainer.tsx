@@ -22,7 +22,12 @@ import {
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import { builderCanvasNodeKinds, isContainerLikeKind, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { createShortcutHandler, NUDGE_LARGE_PX, NUDGE_PX, type CanvasAction } from '@/lib/builder/canvas/shortcuts';
-import { type AlignmentGuide, computeSnap, type Rect } from '@/lib/builder/canvas/snap';
+import {
+  type AlignmentGuide,
+  computeSnap,
+  filterSnapCandidatesByBounds,
+  type Rect,
+} from '@/lib/builder/canvas/snap';
 import {
   createDefaultZoomState,
   MAX_ZOOM,
@@ -181,6 +186,7 @@ function createMoveInteractionCandidates({
   movingNode,
   movingNodeIds,
   nodes,
+  snapBounds,
   viewport,
 }: {
   activeGroupId: string | null;
@@ -188,6 +194,7 @@ function createMoveInteractionCandidates({
   movingNode: BuilderCanvasNode;
   movingNodeIds: Set<string>;
   nodes: BuilderCanvasNode[];
+  snapBounds?: Rect | null;
   viewport: Viewport;
 }): MoveInteractionCandidates {
   const snapRects: Rect[] = [];
@@ -211,7 +218,10 @@ function createMoveInteractionCandidates({
   const parentRect = movingParentId ? absoluteRectById.get(movingParentId) ?? null : null;
   if (parentRect) snapRects.push(parentRect);
 
-  return { snapRects, containerHitRects };
+  return {
+    snapRects: filterSnapCandidatesByBounds(snapRects, snapBounds),
+    containerHitRects,
+  };
 }
 
 function clampRect(
@@ -1630,6 +1640,12 @@ export default function CanvasContainer({
                         movingNode,
                         movingNodeIds: new Set(nodeIds),
                         nodes: visibleNodes,
+                        snapBounds: {
+                          x: 0,
+                          y: 0,
+                          width: stageWidth,
+                          height: stageHeight,
+                        },
                         viewport: interactionViewport,
                       })
                     : { snapRects: [], containerHitRects: [] };

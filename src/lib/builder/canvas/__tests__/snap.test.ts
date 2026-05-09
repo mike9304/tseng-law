@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { computeSnap, type Rect } from '../snap';
+import { computeSnap, filterSnapCandidatesByBounds, type Rect } from '../snap';
 
 const canvas = { width: 1280, height: 1200 };
 
@@ -35,5 +35,16 @@ describe('builder canvas snap engine', () => {
         label: '24px',
       }),
     );
+  });
+
+  it('prunes snap candidates outside the active viewport bounds', () => {
+    const visiblePeer: Rect = { x: 80, y: 120, width: 160, height: 80 };
+    const partiallyVisiblePeer: Rect = { x: 1240, y: 80, width: 120, height: 80 };
+    const offscreenPeer: Rect = { x: 2000, y: 80, width: 200, height: 100 };
+
+    expect(filterSnapCandidatesByBounds(
+      [visiblePeer, partiallyVisiblePeer, offscreenPeer],
+      { x: 0, y: 0, width: 1280, height: 720 },
+    )).toEqual([visiblePeer, partiallyVisiblePeer]);
   });
 });

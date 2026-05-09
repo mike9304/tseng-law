@@ -90,6 +90,8 @@ interface BuilderCanvasStoreState {
   canRedo: boolean;
   /** Maps container node IDs to arrays of child node IDs (MVP nesting). */
   childrenMap: Record<string, string[]>;
+  /** Reference-stable node lookup for the current document node array. */
+  nodesById: Map<string, BuilderCanvasNode>;
   /** Active editing viewport — determines which `responsive.<vp>` overrides Inspector writes. */
   viewport: Viewport;
   setViewport: (viewport: Viewport) => void;
@@ -170,6 +172,7 @@ const TRANSIENT_UPDATE_NODES_OPTIONS: UpdateNodesOptions = {
   normalize: false,
   touchUpdatedAt: false,
 };
+const EMPTY_NODES_BY_ID = new Map<string, BuilderCanvasNode>();
 
 function updateNodesOptionsForMode(mode: MutationMode): UpdateNodesOptions | undefined {
   return mode === 'transient' ? TRANSIENT_UPDATE_NODES_OPTIONS : undefined;
@@ -376,10 +379,11 @@ function resolveActiveGroupId(
 function resolveTreeState(
   document: BuilderCanvasDocument,
   preferredGroupId: string | null,
-): Pick<BuilderCanvasStoreState, 'activeGroupId' | 'childrenMap'> {
+): Pick<BuilderCanvasStoreState, 'activeGroupId' | 'childrenMap' | 'nodesById'> {
   return {
     activeGroupId: resolveActiveGroupId(document, preferredGroupId),
     childrenMap: buildChildrenMap(document.nodes),
+    nodesById: getCanvasNodesById(document.nodes),
   };
 }
 
@@ -459,6 +463,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   canUndo: false,
   canRedo: false,
   childrenMap: {},
+  nodesById: EMPTY_NODES_BY_ID,
   viewport: 'desktop' as Viewport,
   setViewport: (viewport) => set({ viewport }),
   replaceDocument: (document) =>
@@ -473,6 +478,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       canUndo: false,
       canRedo: false,
       childrenMap: buildChildrenMap(document.nodes),
+      nodesById: getCanvasNodesById(document.nodes),
     }),
   setSelectedNodeId: (selectedNodeId) =>
     set({

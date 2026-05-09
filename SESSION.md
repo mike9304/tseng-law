@@ -2196,3 +2196,19 @@
 메모:
 - W22는 이제 같은 브라우저 localStorage에만 묶이지 않고 서버 library 문서로 공유된다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor shared canvas node index
+
+범위:
+- 감사 문서 Critical #1 후속으로 `nodesById`를 CanvasNode 인스턴스별 계산/구독 대신 canvas store의 shared derived index로 승격했다.
+- document node array 변경 시 store가 `childrenMap`과 함께 reference-stable `nodesById`를 갱신하고, CanvasNode/CanvasContainer는 이를 직접 구독한다.
+- transient drag/resize edits에서도 index가 최신 node rect를 가리키는지 단위 테스트로 고정했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npx vitest run src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (2 passed)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers canvas direct-manipulation overlays" --workers=1` ✅ (1 passed, sandbox 승격 실행)
+
+메모:
+- W02/W06/W07 직접 조작 체감 렉을 줄이기 위한 hot path 보강이다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

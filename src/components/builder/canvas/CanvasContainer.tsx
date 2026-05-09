@@ -382,7 +382,7 @@ export default function CanvasContainer({
     () => nodes.filter((node) => node.visible),
     [nodes],
   );
-  const nodesById = useMemo(() => getCanvasNodesById(nodes), [nodes]);
+  const nodesById = useBuilderCanvasStore((state) => state.nodesById);
   const linkPickerContext = useMemo<LinkPickerContext>(
     () => ({
       siteAnchors: nodes

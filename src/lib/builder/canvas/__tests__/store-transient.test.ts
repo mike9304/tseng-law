@@ -38,6 +38,28 @@ function documentFixture(): BuilderCanvasDocument {
 }
 
 describe('canvas store transient updates', () => {
+  it('keeps a shared nodesById index in sync with document replacement and transient edits', () => {
+    useBuilderCanvasStore.getState().replaceDocument(documentFixture());
+
+    const initialState = useBuilderCanvasStore.getState();
+    expect(initialState.nodesById.get('first')?.rect.x).toBe(10);
+    expect(initialState.nodesById.get('second')?.zIndex).toBe(1);
+
+    initialState.beginMutationSession();
+    useBuilderCanvasStore.getState().updateNode('first', (node) => ({
+      ...node,
+      rect: { ...node.rect, x: 123 },
+    }), 'transient');
+
+    const transientState = useBuilderCanvasStore.getState();
+    expect(transientState.nodesById).not.toBe(initialState.nodesById);
+    expect(transientState.nodesById.get('first')?.rect.x).toBe(123);
+    expect(transientState.childrenMap).toEqual({});
+
+    transientState.cancelMutationSession();
+    expect(useBuilderCanvasStore.getState().nodesById.get('first')?.rect.x).toBe(10);
+  });
+
   it('does not normalize order or touch updatedAt until mutation commit', () => {
     const store = useBuilderCanvasStore.getState();
     store.replaceDocument(documentFixture());

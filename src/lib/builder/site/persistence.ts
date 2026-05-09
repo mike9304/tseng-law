@@ -39,7 +39,8 @@ type WriteSiteDocumentOptions = {
   /**
    * Site-wide writes often originate from panels that loaded an older site
    * snapshot. Preserve concurrently-created pages unless a destructive page
-   * cleanup path explicitly opts out.
+   * cleanup path explicitly opts out. Deleted pages that only exist in a stale
+   * next document are filtered separately by createdAt.
    */
   preserveMissingPages?: boolean;
 };

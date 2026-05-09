@@ -2122,3 +2122,17 @@
 메모:
 - goal은 아직 complete 아님. 남은 조건은 사용자 직접 5분 브라우저 검증과 Wix 체감 green 승격 판단이다.
 - 추가 자동 gap으로는 screenshot-diff 기반 Wix shell visual regression, semantic diff preview, full draggable crop/focal editor, AssetLibrary taxonomy 서버 공유가 남아 있다.
+
+## 2026-05-09 Codex /goal G-Editor persistence audit follow-up
+
+범위:
+- Claude 감사 문서의 `src/lib/builder/site/persistence.ts:127-139` 지적을 다시 실제 코드 기준으로 확인했다.
+- 현재 저장 정책은 latest-only page를 기본 보존해 동시 page 생성 손실을 막고, latest에 없는 next-only page는 `createdAt` 기준으로 stale 삭제 부활을 차단한다.
+- 이 의도를 코드 주석에 명시하고, "다른 탭에서 삭제된 page가 stale writer 저장으로 부활하지 않는다" 회귀 테스트를 추가했다.
+
+검증:
+- `npx vitest run src/lib/builder/site/__tests__/persistence.test.ts` ✅ (7 passed)
+
+메모:
+- 감사 문서가 제안한 단순 default false는 최근 `page_not_in_site`/페이지 누락 레이스를 되살릴 수 있어 적용하지 않았다. 현재 정책은 동시 생성 보존과 삭제 부활 차단을 둘 다 만족한다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

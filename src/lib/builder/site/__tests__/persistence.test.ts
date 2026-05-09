@@ -90,6 +90,21 @@ describe('reconcileSiteDocumentPagesForWrite', () => {
       .toEqual(['home']);
   });
 
+  it('does not resurrect a page deleted in another tab when a stale writer saves later', () => {
+    const home = page('home', '2026-01-01T00:00:00.000Z');
+    const deletedInLatest = pageWithTimestamps(
+      'deleted-in-latest',
+      '2026-01-01T00:00:00.000Z',
+      '2026-01-03T00:00:00.000Z',
+    );
+    const latestAfterDelete = site([home], '2026-01-02T00:00:00.000Z');
+    const staleWriter = site([home, deletedInLatest], '2026-01-03T00:00:00.000Z');
+
+    const reconciled = reconcileSiteDocumentPagesForWrite(staleWriter, latestAfterDelete);
+
+    expect(reconciled.pages.map((entry) => entry.pageId)).toEqual(['home']);
+  });
+
   it('drops next-only pages without a reliable createdAt timestamp', () => {
     const home = page('home', '2026-01-01T00:00:00.000Z');
     const missingCreatedAt = pageWithTimestamps(

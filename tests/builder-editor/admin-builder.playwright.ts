@@ -875,6 +875,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(savedChip).toBeVisible({ timeout: 5_000 });
     await expect(savedChip).toContainText('Saved');
     await expect(savedChip.locator('[data-save-status-glyph]')).toHaveCSS('background-color', 'rgb(34, 197, 94)');
+    await expect(savedChip).toHaveCSS('animation-duration', '0.2s, 0.2s');
+    await expect(savedChip).toHaveCSS('animation-delay', '0s, 1.42s');
+    await expect(page.locator('[data-save-status-chip]')).toBeHidden({ timeout: 3_000 });
 
     const rotateNode = resizedNode;
     const rotationHandle = rotateNode.locator('[class*="rotationHandle"]').first();

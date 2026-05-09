@@ -2397,3 +2397,17 @@ Prompt-to-artifact 체크:
 
 메모:
 - W04의 자동 검증은 더 강해졌지만, 사용자 직접 green 검증은 계속 대기한다.
+
+## 2026-05-09 Codex /goal G-Editor save chip fade assertion
+
+범위:
+- W11 save chip의 `Saving…` → `Saved` 검증에 fade timing과 idle 복귀 검증을 추가했다.
+- admin-builder smoke가 `Saved` chip의 200ms in/out animation duration, 1.42s out delay, 3초 내 hidden 상태 복귀를 직접 확인한다.
+- 별도 점검 에이전트는 사용량 제한으로 시작 직후 실패해, 같은 약검증 항목 탐색을 메인 세션에서 계속 진행한다.
+
+검증:
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅ (1 passed)
+- `npm run typecheck` ✅
+
+메모:
+- W11 자동 검증은 idle 미표시와 fade-out까지 더 강해졌다. 사용자 직접 green 검증은 계속 대기한다.

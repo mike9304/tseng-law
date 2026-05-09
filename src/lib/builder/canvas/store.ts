@@ -837,20 +837,23 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const allShareParent = targetNodes.every((node) => (node.parentId ?? null) === sharedParentId);
       if (!allShareParent) return state;
       const nodesById = getCanvasNodesById(state.document.nodes);
-      const absoluteRects = new Map(
-        targetNodes.map((node) => [node.id, resolveCanvasNodeAbsoluteRect(node, nodesById)]),
-      );
-      const minX = Math.min(...targetNodes.map((node) => absoluteRects.get(node.id)!.x));
-      const minY = Math.min(...targetNodes.map((node) => absoluteRects.get(node.id)!.y));
-      const maxX = Math.max(...targetNodes.map((node) => {
-        const rect = absoluteRects.get(node.id)!;
-        return rect.x + rect.width;
-      }));
-      const maxY = Math.max(...targetNodes.map((node) => {
-        const rect = absoluteRects.get(node.id)!;
-        return rect.y + rect.height;
-      }));
-      const maxZ = Math.max(...targetNodes.map((node) => node.zIndex));
+      const absoluteRects = new Map<string, CanvasNodeRect>();
+      let minX = Number.POSITIVE_INFINITY;
+      let minY = Number.POSITIVE_INFINITY;
+      let maxX = Number.NEGATIVE_INFINITY;
+      let maxY = Number.NEGATIVE_INFINITY;
+      let maxZ = Number.NEGATIVE_INFINITY;
+
+      for (const node of targetNodes) {
+        const rect = resolveCanvasNodeAbsoluteRect(node, nodesById);
+        absoluteRects.set(node.id, rect);
+        minX = Math.min(minX, rect.x);
+        minY = Math.min(minY, rect.y);
+        maxX = Math.max(maxX, rect.x + rect.width);
+        maxY = Math.max(maxY, rect.y + rect.height);
+        maxZ = Math.max(maxZ, node.zIndex);
+      }
+
       const groupRect = { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
       const groupId = `group-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
       const groupParentNode = sharedParentId ? nodesById.get(sharedParentId) ?? null : null;

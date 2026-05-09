@@ -44,6 +44,26 @@ function sortedDocumentFixture(): BuilderCanvasDocument {
   };
 }
 
+function manyNodeDocumentFixture(count: number): BuilderCanvasDocument {
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: '2026-01-01T00:00:00.000Z',
+    updatedBy: 'store-transient-test',
+    stageWidth: 1280,
+    stageHeight: Math.ceil(count / 10) * 48,
+    nodes: Array.from({ length: count }, (_, index) => ({
+      ...textNode(`node-${index}`, index),
+      rect: {
+        x: (index % 10) * 120,
+        y: Math.floor(index / 10) * 48,
+        width: 96,
+        height: 28,
+      },
+    })),
+  };
+}
+
 describe('canvas store transient updates', () => {
   it('does not create a history entry for structurally identical committed node updates', () => {
     useBuilderCanvasStore.getState().replaceDocument(sortedDocumentFixture());
@@ -102,5 +122,28 @@ describe('canvas store transient updates', () => {
     expect(committedDocument?.updatedAt).not.toBe('2026-01-01T00:00:00.000Z');
     expect(committedDocument?.nodes.find((node) => node.id === 'first')?.rect.x).toBe(80);
     expect(useBuilderCanvasStore.getState().canUndo).toBe(true);
+  });
+
+  it('groups large selections without argument-spread bounds calculations', () => {
+    const count = 1_500;
+    useBuilderCanvasStore.getState().replaceDocument(manyNodeDocumentFixture(count));
+    useBuilderCanvasStore.getState().setSelectedNodeIds(
+      Array.from({ length: count }, (_, index) => `node-${index}`),
+      'node-0',
+    );
+
+    useBuilderCanvasStore.getState().groupSelectedNodes();
+
+    const state = useBuilderCanvasStore.getState();
+    const groupNode = state.document?.nodes.find((node) => node.id === state.selectedNodeId);
+    expect(groupNode?.kind).toBe('container');
+    expect(groupNode?.rect).toEqual({
+      x: 0,
+      y: 0,
+      width: 1176,
+      height: 7_180,
+    });
+    expect(state.document?.nodes.filter((node) => node.parentId === groupNode?.id)).toHaveLength(count);
+    expect(state.canUndo).toBe(true);
   });
 });

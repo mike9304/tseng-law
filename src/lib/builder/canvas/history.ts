@@ -1,9 +1,9 @@
 /**
  * Phase 2 — Undo/redo history for the canvas store.
  *
- * Stores full snapshots of the nodes array (not patches — simpler and
- * more reliable for a flat node list that's typically < 100 entries).
- * Ring buffer capped at MAX_HISTORY so memory stays bounded.
+ * Stores immutable document snapshots. The canvas store updates documents
+ * with structural sharing, so history can keep references instead of deep
+ * cloning every node on each commit.
  *
  * Usage: wrap the store's mutating actions with `history.push(nodes)`
  * before mutation, then the user can call `undo()` / `redo()` to
@@ -22,11 +22,9 @@ export interface HistoryState<T> {
   canRedo: boolean;
 }
 
-const MAX_HISTORY = 100;
-
 export function createHistory<T>(initial: T): HistoryState<T> {
   return {
-    entries: [{ snapshot: structuredClone(initial), timestamp: Date.now() }],
+    entries: [{ snapshot: initial, timestamp: Date.now() }],
     cursor: 0,
     canUndo: false,
     canRedo: false,
@@ -34,22 +32,10 @@ export function createHistory<T>(initial: T): HistoryState<T> {
 }
 
 export function pushHistory<T>(state: HistoryState<T>, snapshot: T): HistoryState<T> {
-  const cloned = structuredClone(snapshot);
   const newCursor = state.cursor + 1;
   // Drop anything after current cursor (discard redo stack on new action)
   const entries = state.entries.slice(0, newCursor);
-  entries.push({ snapshot: cloned, timestamp: Date.now() });
-
-  // Enforce ring buffer cap
-  if (entries.length > MAX_HISTORY) {
-    entries.shift();
-    return {
-      entries,
-      cursor: entries.length - 1,
-      canUndo: entries.length > 1,
-      canRedo: false,
-    };
-  }
+  entries.push({ snapshot, timestamp: Date.now() });
 
   return {
     entries,
@@ -71,7 +57,7 @@ export function undoHistory<T>(state: HistoryState<T>): { state: HistoryState<T>
       canUndo: newCursor > 0,
       canRedo: true,
     },
-    snapshot: structuredClone(entry.snapshot),
+    snapshot: entry.snapshot,
   };
 }
 
@@ -87,6 +73,6 @@ export function redoHistory<T>(state: HistoryState<T>): { state: HistoryState<T>
       canUndo: true,
       canRedo: newCursor < state.entries.length - 1,
     },
-    snapshot: structuredClone(entry.snapshot),
+    snapshot: entry.snapshot,
   };
 }

@@ -2328,3 +2328,19 @@ Prompt-to-artifact 체크:
 메모:
 - 직접 브라우저 inspection은 macOS sandbox에서 Chromium launch가 막혀 sandbox 승격으로 실행했다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor unlimited history
+
+범위:
+- W10 요구사항의 "무제한" undo/redo에 맞춰 canvas history의 기존 100-entry ring buffer cap을 제거했다.
+- 감사 문서 High #7 지적도 함께 반영해, 매 commit/undo/redo마다 전체 canvas document를 `structuredClone`하지 않고 store의 immutable structural sharing snapshot을 보관하도록 변경했다.
+- redo branch discard와 125회 이상 undo 가능한 단위 테스트를 추가했다.
+
+검증:
+- `npx vitest run src/lib/builder/canvas/__tests__/history.test.ts src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (5 passed)
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/clipboard-persistence.playwright.ts --workers=1` ✅ (3 passed, sandbox 승격)
+
+메모:
+- sandbox 내부 Playwright는 macOS Chromium `bootstrap_check_in Permission denied`로 0초 실패해, 같은 명령을 sandbox 밖에서 재실행했다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

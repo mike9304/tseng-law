@@ -6,6 +6,7 @@ import {
 } from '@/lib/builder/site/persistence';
 import { normalizeLocale } from '@/lib/locales';
 import { normalizeCanvasDocument } from '@/lib/builder/canvas/types';
+import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair';
 import type { PageCanvasRecord } from '@/lib/builder/site/types';
 
 export const runtime = 'nodejs';
@@ -41,10 +42,16 @@ export async function GET(
     return NextResponse.json({ ok: false, error: 'Draft not found' }, { status: 404 });
   }
 
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const document = repairHomeCanvasLocale(
+    normalizeCanvasDocument(state.record.document, locale),
+    locale,
+  );
+
   return NextResponse.json({
     ok: true,
     draft: draftMeta(state.record),
-    document: state.record.document,
+    document,
   });
 }
 

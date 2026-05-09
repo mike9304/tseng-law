@@ -331,3 +331,31 @@ Created: 2026-05-09T12:52:13.760Z
 - 사용자 피드백 흡수:
   - “백지”, “검증 자체 안 됨”, “계속해야지” 피드백을 반영해 hydration readiness와 full suite 안정성을 먼저 닫았다.
 - 다음 마일스톤: M07
+
+## M06 follow-up — locale projection repair
+
+- 시작/종료: 2026-05-10T02:38:00+09:00 / 2026-05-10T02:45:00+09:00
+- 변경 파일:
+  - `src/lib/builder/canvas/home-locale-repair.ts` — 홈 seed sentinel mismatch를 감지해 요청 locale의 localized content만 projection하는 helper 추가
+  - `src/app/(builder)/[locale]/admin-builder/page.tsx` — 초기 홈 draft 로드 시 locale repair 적용, 요청 locale과 page locale이 다르면 공유 draft persistence 생략
+  - `src/app/api/builder/site/pages/[pageId]/draft/route.ts` — 페이지 전환/초기 client refresh draft 응답도 요청 locale로 normalize+repair
+  - `src/lib/builder/canvas/__tests__/home-locale-repair.test.ts` — zh-hant 홈 draft를 ko로 projection하면서 layout/style은 보존하는 unit test 추가
+  - `tests/builder-editor/locale-projection.playwright.ts` — zh-hant editor view 이후 ko editor가 중국어 홈 문구로 오염되지 않는 Playwright 회귀 추가
+- 의사결정:
+  - runtime-data JSON은 직접 수정하지 않았다. `/ko/admin-builder` 로드 경로가 기존 zh-hant draft를 ko로 repair했고, 정상 save path를 통해 draft가 한국어로 회복됐다.
+  - 같은 home pageId를 locale별로 공유하는 현재 모델에서는 다른 locale editor view가 원본 draft를 덮어쓰면 안 된다. 따라서 `initialPage.locale !== request locale`이면 서버 side upgrade/write를 생략한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (30 files / 757 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --project=chromium-builder --workers=1` ✅
+- 리스크 / 알려진 문제:
+  - sandbox 내부 `curl`은 localhost 3000 연결을 간헐적으로 실패시켰지만, Next dev 로그와 Playwright browser 검증은 통과했다.
+  - Playwright Chromium launch는 macOS local sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
+- 보류된 W (있을 경우):
+  - 없음
+- 사용자 피드백 흡수:
+  - 2026-05-10 "편집기에 한국언데 왜 중국어로 사이트가 뜨지?" → M07 진행 전 locale projection blocker로 처리.
+- 다음 마일스톤: M07

@@ -10,6 +10,7 @@ import {
   type BuilderCanvasNode,
 } from '@/lib/builder/canvas/types';
 import { createHomePageCanvasDocument, SEED_VERSION } from '@/lib/builder/canvas/seed-home';
+import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair';
 import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
 import type { BuilderNavItem, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { mergeHeaderMegaChildren, type HeaderMegaKey } from '@/lib/builder/site/header-mega';
@@ -484,6 +485,7 @@ export default async function BuilderMainPage({
     ? site.pages.find((page) => page.pageId === searchParams.pageId)
     : null;
   const initialPage = requestedPage ?? homePage;
+  const canPersistInitialPageDraft = Boolean(initialPage && initialPage.locale === locale);
 
   let initialDocument;
   let backend: 'blob' | 'file' = 'blob';
@@ -515,23 +517,28 @@ export default async function BuilderMainPage({
         );
 
     if (pageCanvas && !needsReseed) {
-      initialDocument = normalizeCanvasDocument(pageCanvas, locale);
+      const normalized = normalizeCanvasDocument(pageCanvas, locale);
+      initialDocument = isInitialHomePage ? repairHomeCanvasLocale(normalized, locale) : normalized;
     } else if (needsReseed) {
       const seeded = createHomePageCanvasDocument(locale);
       initialDocument = seeded;
-      try {
-        await writePageCanvas('default', initialPage.pageId, 'draft', seeded);
-        await publishPage('default', initialPage.pageId, locale);
-      } catch {
-        // Best-effort seed; editor still loads from in-memory doc if write fails
+      if (canPersistInitialPageDraft) {
+        try {
+          await writePageCanvas('default', initialPage.pageId, 'draft', seeded);
+          await publishPage('default', initialPage.pageId, locale);
+        } catch {
+          // Best-effort seed; editor still loads from in-memory doc if write fails
+        }
       }
     } else {
       const blank = createBlankCanvasDocument(locale);
       initialDocument = blank;
-      try {
-        await writePageCanvas('default', initialPage.pageId, 'draft', blank);
-      } catch {
-        // Best-effort initial draft; editor still loads from in-memory doc if write fails
+      if (canPersistInitialPageDraft) {
+        try {
+          await writePageCanvas('default', initialPage.pageId, 'draft', blank);
+        } catch {
+          // Best-effort initial draft; editor still loads from in-memory doc if write fails
+        }
       }
     }
   }
@@ -555,7 +562,7 @@ export default async function BuilderMainPage({
     ),
     locale,
   );
-  if (upgradedInitialDocument !== initialDocument && initialPage) {
+  if (upgradedInitialDocument !== initialDocument && initialPage && canPersistInitialPageDraft) {
     initialDocument = upgradedInitialDocument;
     try {
       await writePageCanvas('default', initialPage.pageId, 'draft', initialDocument);

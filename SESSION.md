@@ -2933,3 +2933,23 @@ Prompt-to-artifact 체크:
 메모:
 - 새 self-check subagent는 현재 thread agent limit 때문에 생성하지 못했다. 동일 범위는 메인 세션에서 full builder Chromium suite와 전체 gate로 대체 검증했다.
 - 체크포인트 판정 규칙상 W02/W03/W04/W06/W07/W08/W10/W11/W18~W23/W26~W30은 자동 검증 증거가 최신화됐지만 사용자 직접 5분 QA 전까지 green 승격하지 않는다.
+
+## 2026-05-10 Codex /goal Wix full builder locale repair
+
+범위:
+- 사용자 피드백 "편집기에 한국어인데 왜 중국어로 사이트가 뜨지?"를 M07 진입 전 blocker로 처리했다.
+- 홈 draft가 `zh-hant` seed로 저장된 상태를 확인하고, `/ko/admin-builder`와 draft API가 요청 locale에 맞는 홈 seed content를 projection/repair하도록 추가했다.
+- `/zh-hant/admin-builder`가 같은 한국어 홈 draft를 다시 중국어로 오염시키지 않도록, page locale과 요청 locale이 다를 때는 서버 로드 upgrade 결과를 공유 draft에 되저장하지 않게 막았다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (30 files / 757 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --project=chromium-builder --workers=1` ✅
+
+메모:
+- Playwright Chromium은 local sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 재실행했다.
+- 3000 dev server는 재시작했고 현재 `http://localhost:3000`에서 계속 실행 중이다.
+- 다음 마일스톤은 M07 모바일 스키마 결정 + 잠금이다.

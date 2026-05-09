@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { DEFAULT_BLOG_CATEGORIES, type BlogPost } from '@/lib/builder/blog/blog-engine';
 import { loadInsightsPreviewPosts } from './insights-preview-cache';
 import { stopEditorPreviewNavigation } from './canvasNodeUtils';
-import styles from './SandboxPage.module.css';
+import styles from './CanvasInsightsPreview.module.css';
 
 const INSIGHTS_PAGE_SIZE = 3;
 

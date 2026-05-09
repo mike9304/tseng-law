@@ -2,7 +2,7 @@
 
 import type { PointerEvent as ReactPointerEvent } from 'react';
 import { RESIZE_HANDLES, type ResizeHandle } from './canvasNodeTypes';
-import styles from './SandboxPage.module.css';
+import styles from './CanvasNodeSelectionOverlay.module.css';
 
 type RotationReadout = { degrees: number; x: number; y: number } | null;
 

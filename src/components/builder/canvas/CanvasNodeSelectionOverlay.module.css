@@ -1,0 +1,136 @@
+:global([data-canvas-interaction='resize']) .nodeSizeLabel,
+:global([data-canvas-interaction='move']) .nodeSizeLabel {
+  display: none;
+}
+
+.resizeHandle {
+  position: absolute;
+  width: calc(9px / var(--canvas-zoom, 1));
+  height: calc(9px / var(--canvas-zoom, 1));
+  box-sizing: border-box;
+  pointer-events: auto;
+  border-radius: calc(2px / var(--canvas-zoom, 1));
+  border: calc(1px / var(--canvas-zoom, 1)) solid #0f172a;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 calc(1px / var(--canvas-zoom, 1)) #116dff,
+    0 calc(1px / var(--canvas-zoom, 1)) calc(3px / var(--canvas-zoom, 1)) rgba(15, 23, 42, 0.18);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  z-index: 5;
+}
+
+.resizeHandle:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.22), 0 2px 6px rgba(15, 23, 42, 0.18);
+}
+
+.resizeHandle:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+.resizeHandleNW { top: calc(-4.5px / var(--canvas-zoom, 1)); left: calc(-4.5px / var(--canvas-zoom, 1)); cursor: nwse-resize; }
+.resizeHandleN { top: calc(-4.5px / var(--canvas-zoom, 1)); left: calc(50% - 4.5px / var(--canvas-zoom, 1)); cursor: ns-resize; }
+.resizeHandleNE { top: calc(-4.5px / var(--canvas-zoom, 1)); right: calc(-4.5px / var(--canvas-zoom, 1)); cursor: nesw-resize; }
+.resizeHandleE { top: calc(50% - 4.5px / var(--canvas-zoom, 1)); right: calc(-4.5px / var(--canvas-zoom, 1)); cursor: ew-resize; }
+.resizeHandleS { bottom: calc(-4.5px / var(--canvas-zoom, 1)); left: calc(50% - 4.5px / var(--canvas-zoom, 1)); cursor: ns-resize; }
+.resizeHandleSW { bottom: calc(-4.5px / var(--canvas-zoom, 1)); left: calc(-4.5px / var(--canvas-zoom, 1)); cursor: nesw-resize; }
+.resizeHandleW { top: calc(50% - 4.5px / var(--canvas-zoom, 1)); left: calc(-4.5px / var(--canvas-zoom, 1)); cursor: ew-resize; }
+.resizeHandleSE { bottom: calc(-4.5px / var(--canvas-zoom, 1)); right: calc(-4.5px / var(--canvas-zoom, 1)); cursor: nwse-resize; }
+
+.rotationHandle {
+  position: absolute;
+  top: calc(-39px / var(--canvas-zoom, 1));
+  left: 50%;
+  pointer-events: auto;
+  transform: translateX(-50%);
+  width: calc(17px / var(--canvas-zoom, 1));
+  height: calc(23px / var(--canvas-zoom, 1));
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  z-index: 5;
+}
+
+.rotationHandle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(13px / var(--canvas-zoom, 1));
+  height: calc(13px / var(--canvas-zoom, 1));
+  border: calc(1px / var(--canvas-zoom, 1)) solid #0f172a;
+  border-radius: 50% 50% 50% 0;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 calc(1px / var(--canvas-zoom, 1)) #116dff,
+    0 calc(2px / var(--canvas-zoom, 1)) calc(5px / var(--canvas-zoom, 1)) rgba(15, 23, 42, 0.18);
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.rotationHandle::after {
+  content: '';
+  position: absolute;
+  top: calc(5px / var(--canvas-zoom, 1));
+  left: 50%;
+  width: calc(3px / var(--canvas-zoom, 1));
+  height: calc(3px / var(--canvas-zoom, 1));
+  border-radius: 50%;
+  background: #116dff;
+  transform: translateX(-50%);
+}
+
+.rotationHandle:active {
+  cursor: grabbing;
+}
+
+.rotationLine {
+  position: absolute;
+  top: calc(-28px / var(--canvas-zoom, 1));
+  left: 50%;
+  width: calc(1px / var(--canvas-zoom, 1));
+  height: calc(28px / var(--canvas-zoom, 1));
+  background: #116dff;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.nodeSizeLabel {
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 21px;
+  max-width: min(320px, calc(100vw - 80px));
+  padding: 0.1rem 0.5rem;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #116dff;
+  color: #fff;
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.rotationReadout {
+  position: absolute;
+  z-index: 6;
+  min-width: 46px;
+  padding: 0.28rem 0.44rem;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.92);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.24);
+  color: #f8fafc;
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 850;
+  line-height: 1;
+  pointer-events: none;
+  text-align: center;
+}

@@ -38,6 +38,7 @@ import {
   SliderRow,
   ToggleRow,
 } from './InspectorControls';
+import nodeQuickStyles from './CanvasNodeQuickPanels.module.css';
 import styles from './SandboxPage.module.css';
 
 const MIN_WIDTH = 72;
@@ -881,13 +882,13 @@ export default function SandboxInspectorPanel({
                       <InspectorSection label="Office sync" title="Wix-style location settings">
                         <div className={styles.inspectorField}>
                           <span className={styles.inspectorFieldLabel}>사무소 프리셋</span>
-                          <div className={styles.nodeMapPresetGrid}>
+                          <div className={nodeQuickStyles.nodeMapPresetGrid}>
                             {officePresets.map((preset) => (
                               <button
                                 key={preset.title}
                                 type="button"
-                                className={`${styles.nodeMapPresetButton} ${
-                                  address === preset.address ? styles.nodeMapPresetButtonActive : ''
+                                className={`${nodeQuickStyles.nodeMapPresetButton} ${
+                                  address === preset.address ? nodeQuickStyles.nodeMapPresetButtonActive : ''
                                 }`}
                                 aria-pressed={address === preset.address}
                                 aria-label={`${preset.title} office map preset`}

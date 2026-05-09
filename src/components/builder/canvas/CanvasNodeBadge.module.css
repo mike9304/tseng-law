@@ -1,0 +1,57 @@
+.nodeBadge {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.22rem;
+  min-height: 20px;
+  max-width: min(320px, calc(100vw - 80px), 100%);
+  padding: 0.1rem 0.45rem;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #116dff;
+  color: #fff;
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: opacity 120ms ease;
+}
+
+:global([data-node-id]):hover > .nodeBadge,
+:global([data-selected='true']) > .nodeBadge {
+  opacity: 1;
+}
+
+.nodeBadge span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: lowercase;
+  opacity: 0.95;
+}
+
+.nodeBadge strong {
+  display: inline;
+  min-width: 0;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 0.66rem;
+  opacity: 0.95;
+  text-overflow: ellipsis;
+}
+
+.nodeBadge em {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  font-style: normal;
+  color: #fbbf24;
+  font-weight: 700;
+  text-overflow: ellipsis;
+}

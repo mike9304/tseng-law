@@ -15,7 +15,7 @@ import {
   type BlogFeedLayoutPreset,
   type HeroSearchDestination,
 } from './canvasNodeUtils';
-import styles from './SandboxPage.module.css';
+import styles from './CanvasNodeQuickPanels.module.css';
 
 type SectionTemplateTarget = {
   id: string;

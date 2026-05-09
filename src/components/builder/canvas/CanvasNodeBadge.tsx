@@ -2,7 +2,7 @@
 
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { nodeLinkPreviewHref } from './canvasNodeUtils';
-import styles from './SandboxPage.module.css';
+import styles from './CanvasNodeBadge.module.css';
 
 type CanvasNodeBadgeProps = {
   node: BuilderCanvasNode;

@@ -2344,3 +2344,24 @@ Prompt-to-artifact 체크:
 메모:
 - sandbox 내부 Playwright는 macOS Chromium `bootstrap_check_in Permission denied`로 0초 실패해, 같은 명령을 sandbox 밖에서 재실행했다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor full gate replay
+
+범위:
+- 최근 W02 selection visual 보강, W10 unlimited history, SEO persistence audit 이후 전체 게이트를 다시 실행했다.
+- 먼저 오래 떠 있던 Playwright Chrome 프로세스를 종료해 exec 경고 원인을 줄였고, 3000 dev 서버는 유지했다.
+- `npm run build` 직후 기존 `next dev` 런타임이 `.next` 변경과 충돌해 builder/public 요청이 500을 반환했다. dev 서버를 재시작한 뒤 `/ko`와 Basic Auth 포함 `/ko/admin-builder`가 200으로 복구된 상태에서 Playwright 전체 묶음을 재실행했다.
+
+검증:
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (26 files / 735 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (26 passed, clean dev server)
+- `curl -I http://localhost:3000/ko` ✅ 200
+- `curl -I -u 'admin:local-review-2026!' http://localhost:3000/ko/admin-builder` ✅ 200
+
+메모:
+- 자동 검증 기준으로 W02/W06/W07/W08/W10/W11/W18~W23/W26~W30은 최신 pass evidence가 있다.
+- 체크포인트 green 승격과 goal complete는 아직 보류한다. Done when 17의 사용자 직접 5분 자유 사용 검증과 Wix 체감 판정이 남아 있다.

@@ -251,6 +251,7 @@ export default function SandboxPage({
     posts: [],
     error: null,
   });
+  const [columnsPageLookupPending, setColumnsPageLookupPending] = useState(false);
   const [currentSlugState, setCurrentSlugState] = useState(currentSlug ?? '');
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
@@ -778,6 +779,17 @@ export default function SandboxPage({
     }
   }, []);
 
+  const refreshSitePages = useCallback(async () => {
+    const response = await fetch(`/api/builder/site/pages?locale=${locale}`, { credentials: 'same-origin' });
+    if (!response.ok) throw new Error(`Failed to load pages: ${response.status}`);
+    const payload = (await response.json()) as {
+      pages?: Array<{ pageId: string; slug: string; isHomePage?: boolean }>;
+    };
+    const pages = Array.isArray(payload.pages) ? payload.pages : [];
+    handlePagesChange(pages);
+    return pages;
+  }, [handlePagesChange, locale]);
+
   const handleHeaderNavigate = useCallback((href: string) => {
     const normalizedHref = normalizeSiteHref(href, locale);
     const targetPath = comparableSitePath(normalizedHref, locale);
@@ -945,6 +957,39 @@ export default function SandboxPage({
   const handleOpenColumnsPanel = useCallback(() => {
     setActiveDrawer((current) => (current === 'columns' ? null : 'columns'));
   }, []);
+
+  useEffect(() => {
+    if (activeDrawer !== 'columns' || columnsPage || columnsPageLookupPending) return;
+    setColumnsPageLookupPending(true);
+    refreshSitePages()
+      .catch(() => {
+        pushToast('Failed to refresh page list', 'error');
+      })
+      .finally(() => setColumnsPageLookupPending(false));
+  }, [activeDrawer, columnsPage, columnsPageLookupPending, pushToast, refreshSitePages]);
+
+  const handleOpenColumnsPage = useCallback(async () => {
+    let targetPage = columnsPage;
+    if (!targetPage) {
+      setColumnsPageLookupPending(true);
+      try {
+        const pages = await refreshSitePages();
+        targetPage = pages.find((page) => page.slug === 'columns') ?? null;
+      } catch {
+        pushToast('Failed to refresh page list', 'error');
+      } finally {
+        setColumnsPageLookupPending(false);
+      }
+    }
+
+    if (targetPage) {
+      await handleSelectPage(targetPage.pageId, targetPage.slug);
+      return;
+    }
+
+    setActiveDrawer('pages');
+    pushToast('Columns page not found. Open Pages to create or restore it.', 'error');
+  }, [columnsPage, handleSelectPage, pushToast, refreshSitePages]);
 
   const handleReloadDraftAfterConflict = useCallback(async () => {
     if (!activePageId) return;
@@ -1258,13 +1303,10 @@ export default function SandboxPage({
                   <button
                     type="button"
                     className={styles.actionButton}
-                    disabled={!columnsPage}
-                    onClick={() => {
-                      if (!columnsPage) return;
-                      void handleSelectPage(columnsPage.pageId, columnsPage.slug);
-                    }}
+                    disabled={columnsPageLookupPending}
+                    onClick={() => { void handleOpenColumnsPage(); }}
                   >
-                    칼럼 페이지로 이동
+                    {columnsPageLookupPending ? '페이지 확인 중...' : '칼럼 페이지로 이동'}
                   </button>
                   <a className={styles.actionButton} href={`/${locale}/columns`} target="_blank" rel="noreferrer">
                     공개 칼럼 보기

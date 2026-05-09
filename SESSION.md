@@ -2601,3 +2601,16 @@ Prompt-to-artifact 체크:
 - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/chrome-click-safety.playwright.ts --workers=1` ✅
 - `npm run lint` ✅ (기존 `<img>` warnings only)
 - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+## 2026-05-09 Codex /goal G-Editor columns page lookup hardening
+
+범위:
+- 전체 builder-editor replay 중 Columns drawer의 `칼럼 페이지로 이동` 버튼이 초기 page cache race로 disabled 상태에 남는 실패를 발견했다.
+- Columns drawer가 열렸을 때 `columns` page가 local state에 없으면 `/api/builder/site/pages`를 다시 조회하고, 버튼 클릭 시에도 최신 목록을 조회해 columns page로 이동하도록 보강했다.
+- 버튼은 조회 중에만 `페이지 확인 중...`으로 잠깐 disabled 처리하고, page cache가 비어 있다는 이유만으로 이동 기능을 막지 않는다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (27 passed / 3.7m)

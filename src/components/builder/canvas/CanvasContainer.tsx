@@ -118,6 +118,18 @@ const CONTEXT_MENU_WIDTH = 276;
 const CONTEXT_MENU_MAX_HEIGHT = 520;
 const EMPTY_CANVAS_NODES: BuilderCanvasNode[] = [];
 
+function isKeyboardTextInputTarget(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false;
+  if (
+    target instanceof HTMLInputElement
+    || target instanceof HTMLTextAreaElement
+    || target instanceof HTMLSelectElement
+  ) {
+    return true;
+  }
+  return target.isContentEditable;
+}
+
 function clampPopupAxis(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), Math.max(min, max));
 }
@@ -817,15 +829,13 @@ export default function CanvasContainer({
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.code === 'Space' && !(event.target instanceof HTMLInputElement) && !(event.target instanceof HTMLTextAreaElement) && !(event.target instanceof HTMLSelectElement) && !(event.target instanceof HTMLElement && event.target.isContentEditable)) {
-        setIsSpacePressed(true);
-      }
+      if (event.code !== 'Space' || isKeyboardTextInputTarget(event.target)) return;
+      setIsSpacePressed(true);
     }
 
     function handleKeyUp(event: KeyboardEvent) {
-      if (event.code === 'Space') {
-        setIsSpacePressed(false);
-      }
+      if (event.code !== 'Space' || isKeyboardTextInputTarget(event.target)) return;
+      setIsSpacePressed(false);
     }
 
     window.addEventListener('keydown', handleKeyDown);

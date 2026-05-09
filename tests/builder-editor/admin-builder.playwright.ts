@@ -855,7 +855,23 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await resizeTarget.scrollIntoViewIfNeeded();
     await resizeTarget.click({ position: { x: 12, y: 12 }, force: true });
     const cursorNode = await expectSelectedNodeHandles(page, resizeTarget);
-    await expect(page.locator('[class*="inspectorColumn"]:visible').first()).toBeVisible();
+    const inspectorColumn = page.locator('[class*="inspectorColumn"]:visible').first();
+    await expect(inspectorColumn).toBeVisible();
+    const widthInput = inspectorColumn.getByLabel('Width value').first();
+    await expect(widthInput).toBeVisible();
+    await widthInput.focus();
+    await page.keyboard.down('Space');
+    await expect.poll(async () => page.evaluate(() => (
+      Array.from(document.querySelectorAll('div')).some((element) => {
+        const className = String(element.className);
+        return className.includes('stageViewportPannable') || className.includes('stageViewportPanning');
+      })
+    ))).toBe(false);
+    await page.keyboard.up('Space');
+    await page.evaluate(() => {
+      if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+    });
+    await resizeTarget.click({ position: { x: 12, y: 12 }, force: true });
     await page.waitForTimeout(250);
     const resizeHandle = cursorNode.locator('[class*="resizeHandleE"]:visible').first();
     await expect(resizeHandle).toHaveCSS('cursor', 'ew-resize');

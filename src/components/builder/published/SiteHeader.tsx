@@ -332,14 +332,11 @@ export default function SiteHeader({
                         aria-current={isActive ? 'page' : undefined}
                         data-builder-nav-item-id={builderEditable && item.source ? item.source.id : undefined}
                         data-builder-nav-item-label={builderEditable && item.source ? getLabel(item.source, item.labels, locale) : undefined}
+                        data-builder-nav-active={isBuilderActive ? 'true' : undefined}
                         ref={(element) => {
                           linkRefs.current[item.key] = element;
                         }}
                         title={builderEditable && item.source ? `Edit menu item: ${getLabel(item.source, item.labels, locale)}` : undefined}
-                        style={{
-                          outline: isBuilderActive ? '2px solid #116dff' : undefined,
-                          outlineOffset: isBuilderActive ? 3 : undefined,
-                        }}
                         onFocus={() => {
                           if (!hasMegaPanel) return;
                           clearCloseTimeout();
@@ -398,79 +395,65 @@ export default function SiteHeader({
             <div key={panel.key} className={`mega-panel${openMenu === panel.key ? ' active' : ''}`} data-panel={panel.key}>
               <div className="container">
                 <div className="mega-layout">
+                  {builderEditable && builderEditingMenu === panel.key ? (
+                    <div className="builder-mega-editing-chip" data-builder-mega-editing-chip="true">
+                      <span>Dropdown editing</span>
+                      <strong>{panel.title}</strong>
+                    </div>
+                  ) : null}
                   {builderEditable ? (() => {
                     const panelSource = displayNavItems.find((item) => item.key === panel.key)?.source;
                     if (!panelSource) return null;
                     return (
-                      <>
-                      <button
-                        type="button"
-                        data-builder-header-action="mega-edit"
-                        onClick={(event) => {
-                          event.preventDefault();
-                          event.stopPropagation();
-                          clearCloseTimeout();
-                          setPinnedMenu(panel.key);
-                          setBuilderEditingMenu(panel.key);
-                          setOpenMenu(panel.key);
-                          onRequestEditNavItem?.(panelSource.id);
-                        }}
-                        style={{
-                          alignSelf: 'flex-start',
-                          border: '1px solid rgba(17, 109, 255, 0.32)',
-                          borderRadius: 999,
-                          background: '#fff',
-                          color: '#116dff',
-                          fontSize: 12,
-                          fontWeight: 700,
-                          padding: '6px 10px',
-                          cursor: 'pointer',
-                        }}
-                      >
-                        Edit dropdown
-                      </button>
-                      <button
-                        type="button"
-                        data-builder-header-action="mega-add"
-                        onClick={(event) => {
-                          event.preventDefault();
-                          event.stopPropagation();
-                          clearCloseTimeout();
-                          setPinnedMenu(panel.key);
-                          setBuilderEditingMenu(panel.key);
-                          setOpenMenu(panel.key);
-                          onRequestAddNavChild?.(panelSource.id);
-                        }}
-                        style={{
-                          alignSelf: 'flex-start',
-                          border: '1px solid rgba(15, 23, 42, 0.16)',
-                          borderRadius: 999,
-                          background: '#f8fafc',
-                          color: '#0f172a',
-                          fontSize: 12,
-                          fontWeight: 700,
-                          padding: '6px 10px',
-                          cursor: 'pointer',
-                        }}
-                      >
-                        Add menu item
-                      </button>
-                      </>
+                      <div className="builder-mega-actions" data-builder-mega-actions="true">
+                        <button
+                          type="button"
+                          className="builder-mega-action builder-mega-action-primary"
+                          data-builder-header-action="mega-edit"
+                          onClick={(event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            clearCloseTimeout();
+                            setPinnedMenu(panel.key);
+                            setBuilderEditingMenu(panel.key);
+                            setOpenMenu(panel.key);
+                            onRequestEditNavItem?.(panelSource.id);
+                          }}
+                        >
+                          Edit dropdown
+                        </button>
+                        <button
+                          type="button"
+                          className="builder-mega-action"
+                          data-builder-header-action="mega-add"
+                          onClick={(event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            clearCloseTimeout();
+                            setPinnedMenu(panel.key);
+                            setBuilderEditingMenu(panel.key);
+                            setOpenMenu(panel.key);
+                            onRequestAddNavChild?.(panelSource.id);
+                          }}
+                        >
+                          Add menu item
+                        </button>
+                      </div>
                     );
                   })() : null}
                   <h2 className="mega-title">{panel.title}</h2>
                   <ul className="mega-links" onClick={closeMegaMenuNow}>
                     {panel.links.map((link) => (
                       <li key={`${panel.key}-${link.href}`}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: builderEditable ? 8 : 0 }}>
+                        <div className={builderEditable ? 'builder-mega-link-row' : undefined}>
                           <a
                             href={link.href}
                             target={link.href.startsWith('http') ? '_blank' : undefined}
                             rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                             data-builder-nav-item-id={builderEditable && link.source ? link.source.id : undefined}
                             data-builder-nav-item-label={builderEditable && link.source ? link.label : undefined}
+                            data-builder-nav-active={builderEditable && link.source?.id === activeBuilderNavItemId ? 'true' : undefined}
                             title={builderEditable && link.source ? `Edit menu item: ${link.label}` : undefined}
-                            style={{ flex: '1 1 auto', minWidth: 0 }}
                             onClick={(event) => {
                               if (handleBuilderMegaClick(event, link, panel.key)) return;
                               navigate(event, link.href);
@@ -482,22 +465,12 @@ export default function SiteHeader({
                           {builderEditable && link.source ? (
                             <button
                               type="button"
+                              className="builder-mega-link-edit"
                               data-builder-header-action="mega-link-edit"
                               onClick={(event) => {
                                 event.preventDefault();
                                 event.stopPropagation();
                                 handleBuilderMegaClick(event, link, panel.key);
-                              }}
-                              style={{
-                                flex: '0 0 auto',
-                                border: '1px solid rgba(17, 109, 255, 0.24)',
-                                borderRadius: 999,
-                                background: '#fff',
-                                color: '#116dff',
-                                fontSize: 11,
-                                fontWeight: 800,
-                                padding: '4px 8px',
-                                cursor: 'pointer',
                               }}
                             >
                               Edit

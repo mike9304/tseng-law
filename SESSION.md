@@ -2426,3 +2426,19 @@ Prompt-to-artifact 체크:
 
 메모:
 - W03 자동 검증은 inline text toolbar 시각/서식 저장/undo-redo까지 더 강해졌다. 사용자 직접 green 검증은 계속 대기한다.
+
+## 2026-05-09 Codex /goal G-Editor dropdown editing pin
+
+범위:
+- W18 상단 메뉴/드롭다운 편집 흐름을 보강했다.
+- 메뉴 드롭다운의 `Edit dropdown`/`Add menu item`/child `Edit` 컨트롤을 CSS/token 기반 클래스로 옮기고, active nav item은 `data-builder-nav-active`로 표시한다.
+- 드롭다운 편집 모드 진입 시 패널 안에 `Dropdown editing` chip을 표시하고, 마우스가 메뉴 밖으로 이동해도 편집 중인 mega panel이 유지되도록 기존 pinned menu 상태를 시각적으로 드러냈다.
+- admin-builder smoke가 `Edit dropdown` 클릭 → Navigation drawer의 `nav-services` edit form focus → active mega panel 유지 → editing chip 표시를 실제 브라우저에서 검증하도록 보강했다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 이슈로 승격 실행)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- 사용자가 지적한 “상단 메뉴/드롭다운 편집하려고 이동하면 사라짐”류 회귀를 자동 검증으로 더 직접 잡는다. 사용자 직접 green 검증은 계속 대기한다.

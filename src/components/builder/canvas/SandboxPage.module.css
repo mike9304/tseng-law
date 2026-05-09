@@ -578,10 +578,90 @@
 
 .globalHeaderRegion [data-builder-nav-item-id]:hover,
 .globalHeaderRegion [data-builder-nav-item-id]:focus-visible,
+.globalHeaderRegion [data-builder-nav-active='true'],
 .globalHeaderRegion [data-builder-site-brand]:hover,
 .globalHeaderRegion [data-builder-site-brand]:focus-visible {
   background: var(--editor-accent-soft, #eff6ff);
   outline-color: var(--editor-accent, #116dff) !important;
+}
+
+.globalHeaderRegion [data-builder-nav-active='true'] {
+  outline: 2px solid var(--editor-accent, #116dff) !important;
+  outline-offset: 3px;
+}
+
+.globalHeaderRegion :global(.builder-mega-editing-chip) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  max-width: 100%;
+  padding: 5px 9px;
+  border: 1px solid color-mix(in srgb, var(--editor-accent, #116dff) 32%, var(--editor-border-hairline, #dbe2ea));
+  border-radius: var(--editor-radius-md, 8px);
+  background: var(--editor-accent-soft, #eff6ff);
+  color: var(--editor-accent, #116dff);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 10px 24px rgba(17, 109, 255, 0.12);
+}
+
+.globalHeaderRegion :global(.builder-mega-editing-chip strong) {
+  max-width: 220px;
+  overflow: hidden;
+  color: var(--editor-fg-primary, #0f172a);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.globalHeaderRegion :global(.builder-mega-actions) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
+
+.globalHeaderRegion :global(.builder-mega-action),
+.globalHeaderRegion :global(.builder-mega-link-edit) {
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 999px;
+  background: var(--editor-panel-elevated, #fff);
+  color: var(--editor-fg-primary, #0f172a);
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.globalHeaderRegion :global(.builder-mega-action) {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.globalHeaderRegion :global(.builder-mega-action-primary),
+.globalHeaderRegion :global(.builder-mega-action:hover),
+.globalHeaderRegion :global(.builder-mega-link-edit:hover) {
+  border-color: color-mix(in srgb, var(--editor-accent, #116dff) 32%, var(--editor-border-hairline, #dbe2ea));
+  background: var(--editor-accent-soft, #eff6ff);
+  color: var(--editor-accent, #116dff);
+}
+
+.globalHeaderRegion :global(.builder-mega-link-row) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.globalHeaderRegion :global(.builder-mega-link-row > a) {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.globalHeaderRegion :global(.builder-mega-link-edit) {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  font-size: 11px;
 }
 
 .globalRegionBadge {

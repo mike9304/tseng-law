@@ -548,6 +548,13 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     )).not.toBe(firstPreviewTitle);
     await insightsPreview.getByRole('button', { name: '이전' }).click();
     await expect(insightsPreview.locator('.insights-page-indicator').first()).toContainText(/1 \/ [2-9]/);
+    const editorUrlBeforeInsightsLink = page.url();
+    const insightsPreviewLink = insightsPreview.locator('a[href*="/columns/"]').first();
+    await expect(insightsPreviewLink).toBeVisible();
+    await insightsPreviewLink.click({ force: true });
+    await expect.poll(() => page.url()).toBe(editorUrlBeforeInsightsLink);
+    await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+    await expect(insightsPreview).toBeVisible();
     await page.locator('[data-node-id="home-insights-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
     const selectedHomeInsightsTitle = page.locator('[data-node-id="home-insights-title"][class*="nodeSelected"]').first();
     await expect(selectedHomeInsightsTitle.getByRole('button', { name: '글 추가/수정' })).toBeVisible();

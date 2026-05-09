@@ -131,6 +131,9 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       const node = await imageNode(page);
       const renderedImage = node.locator('img').first();
       originalAlt = (await renderedImage.getAttribute('alt')) ?? '';
+      await node.click({ position: { x: 24, y: 24 }, force: true });
+      await expect(page).toHaveURL(/\/ko\/admin-builder/);
+      await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
 
       const replaceMenu = await openImageContextMenu(page);
       await replaceMenu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();

@@ -114,6 +114,18 @@ const BLOG_FEED_LAYOUT_PRESETS: BlogFeedLayoutPreset[] = [
   { key: 'featured-hero', label: 'Hero', columns: 3, gap: 24 },
 ];
 
+function stopEditorPreviewNavigation(event: {
+  target: EventTarget | null;
+  preventDefault: () => void;
+  stopPropagation: () => void;
+}) {
+  const target = event.target;
+  if (target instanceof Element && target.closest('a[href]')) {
+    event.preventDefault();
+  }
+  event.stopPropagation();
+}
+
 function normalizeHeroSearchAction(action: string, locale: string): string {
   const fallback = `/${locale}/search`;
   const trimmed = action.trim();
@@ -242,7 +254,13 @@ function InsightsArchiveListPreview({ locale }: { locale: string }) {
       data-builder-insights-page={`${page + 1} / ${pageCount}`}
       onPointerDown={(event) => event.stopPropagation()}
       onMouseDown={(event) => event.stopPropagation()}
-      onClick={(event) => event.stopPropagation()}
+      onClick={stopEditorPreviewNavigation}
+      onAuxClick={stopEditorPreviewNavigation}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          stopEditorPreviewNavigation(event);
+        }
+      }}
     >
       {pageCount > 1 ? (
         <div className="insights-controls">
@@ -287,12 +305,24 @@ function InsightsArchiveListPreview({ locale }: { locale: string }) {
                   <span className="insights-readtime">{insightReadTimeLabel(post, resolvedLocale)}</span>
                 </div>
                 <h4 className="insights-list-title">
-                  <a className="link-underline" href={`/${resolvedLocale}/columns/${post.slug}`}>
+                  <a
+                    className="link-underline"
+                    href={`/${resolvedLocale}/columns/${post.slug}`}
+                    aria-disabled="true"
+                    draggable={false}
+                    tabIndex={-1}
+                  >
                     {post.title}
                   </a>
                 </h4>
                 <p className="insights-list-summary">{post.excerpt}</p>
-                <a className={styles.nodeInsightsReadMore} href={`/${resolvedLocale}/columns/${post.slug}`}>
+                <a
+                  className={styles.nodeInsightsReadMore}
+                  href={`/${resolvedLocale}/columns/${post.slug}`}
+                  aria-disabled="true"
+                  draggable={false}
+                  tabIndex={-1}
+                >
                   {copy.readMore}
                 </a>
               </div>

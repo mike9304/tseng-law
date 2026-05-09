@@ -2560,3 +2560,19 @@ Prompt-to-artifact 체크:
 
 검증:
 - `git diff --check` ✅
+
+## 2026-05-09 Codex /goal G-Editor QA click-blank regression
+
+범위:
+- 사용자 QA에서 칼럼 아카이브/사진 클릭 시 에디터가 백지처럼 사라지는 이슈를 접수했다.
+- 원인 후보 중 하나로 캔버스 내부 칼럼 아카이브 미리보기의 실제 `/ko/columns/...` 링크가 editor shell을 이탈시키는 동작을 확인하고, 에디터 preview 내부 링크 기본 이동을 차단했다.
+- 공개 사이트 링크 동작은 변경하지 않고 `CanvasNode`의 editor-only insights preview에만 적용했다.
+- 이미지 노드 단순 클릭이 `/ko/admin-builder`를 유지하는 회귀 검증을 `asset-image-workflow`에 추가했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (2 passed, macOS browser launch sandbox 때문에 승격 실행)
+
+메모:
+- 사용자 직접 QA 전이므로 관련 W 상태는 계속 `🟡 자동검증 통과 / 사용자 QA 대기`로 둔다.

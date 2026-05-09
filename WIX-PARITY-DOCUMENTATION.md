@@ -359,3 +359,36 @@ Created: 2026-05-09T12:52:13.760Z
 - 사용자 피드백 흡수:
   - 2026-05-10 "편집기에 한국언데 왜 중국어로 사이트가 뜨지?" → M07 진행 전 locale projection blocker로 처리.
 - 다음 마일스톤: M07
+
+## M06 follow-up — section template pool and back navigation
+
+- 시작/종료: 2026-05-10T02:52:00+09:00 / 2026-05-10T03:00:00+09:00
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxEditorRail.tsx` — no-selection 섹션 chip을 실제 선택 버튼으로 변경, 섹션 상세에서 `← 섹션 목록` 복귀 버튼 추가
+  - `src/components/builder/canvas/SandboxEditorWorkspace.tsx` / `src/components/builder/canvas/SandboxPage.tsx` — rail에서 selection clear/select가 가능하도록 연결
+  - `src/lib/builder/canvas/section-templates.ts` — 섹션 variant pool을 12개로 확장하고 섹션별 label/description 추가
+  - `src/lib/builder/site/component-variants.ts` / `src/lib/builder/canvas/decompose-home-shared.ts` — 카드 variant key schema를 확장된 섹션 variant와 공유
+  - `src/components/builder/canvas/SandboxPage.module.css` — editor canvas의 12개 섹션 variant visual 적용
+  - `src/lib/builder/site/public-page.tsx` — 공개 페이지에서도 같은 12개 섹션 variant visual 적용
+  - `tests/builder-editor/section-template-click.playwright.ts` — chip 클릭, 12개 옵션 노출, 뒤로가기, 신규 variant 적용 회귀 추가
+- 의사결정:
+  - 기존 데이터와 layout node를 갈아엎지 않고 `content.variant`만 바꾸는 정책을 유지했다. 템플릿 선택은 Wix처럼 빠르게 preview/apply되지만 원문, 링크, 주소 데이터는 그대로 보존한다.
+  - 외부 AI 디자인 사이트에서 템플릿을 가져오는 기능은 source ingestion, license/asset sanitization, section schema mapping이 필요하므로 별도 M-track으로 남긴다. 이번 수정은 사용자가 즉시 막힌 "네 개뿐"과 "뒤로 없음" UX를 먼저 닫는다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "switches stateful home section template variants|publishes stateful section template variants" --project=chromium-builder --workers=1` ✅ (2 passed)
+  - `npm run test:unit` ✅ (30 files / 757 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `git diff --check` ✅
+- 리스크 / 알려진 문제:
+  - Chromium launch는 macOS local sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
+  - AI template site import는 아직 구현하지 않았다. Canva/Relume/Uizard류 외부 소스 import는 fetch/import pipeline과 디자인 토큰 mapping을 먼저 설계해야 한다.
+- 보류된 W (있을 경우):
+  - 없음
+- 사용자 피드백 흡수:
+  - 2026-05-10 "주요업무 눌러서 사용하려는데 겨우 네개 템플릿만 있네" → 12개 로컬 섹션 variant로 확장.
+  - 2026-05-10 "템플릿 적용하려고 한뒤 다시 뒤로 가고 싶으면 그런 버튼도 없어" → `← 섹션 목록` 추가.
+- 다음 마일스톤: M07

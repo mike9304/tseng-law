@@ -160,6 +160,7 @@ export default function SandboxPage({
     mutationBaseDocument,
     replaceDocument,
     pasteClipboardNodes,
+    setSelectedNodeId,
     setDraftSaveState,
     updateNode,
     updateNodeContent,
@@ -668,6 +669,7 @@ export default function SandboxPage({
           onNavigationChange={setNavItemsState}
           onNavFocusHandled={() => setFocusedNavItemId(null)}
           onNavAddChildHandled={() => setAddNavChildParentId(null)}
+          onSelectNode={setSelectedNodeId}
           onUpdateNodeContent={updateNodeContent}
           onHeaderNavigate={handleHeaderNavigate}
           onRequestEditNavItem={handleRequestEditNavItem}

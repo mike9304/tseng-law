@@ -65,6 +65,7 @@ type SandboxEditorWorkspaceProps = {
   onNavigationChange: (items: BuilderNavItem[]) => void;
   onNavFocusHandled: () => void;
   onNavAddChildHandled: () => void;
+  onSelectNode: (nodeId: string | null) => void;
   onUpdateNodeContent: (nodeId: string, content: Record<string, unknown>) => void;
   onHeaderNavigate: (href: string) => void;
   onRequestEditNavItem: (itemId: string) => void;
@@ -120,6 +121,7 @@ export default function SandboxEditorWorkspace({
   onNavigationChange,
   onNavFocusHandled,
   onNavAddChildHandled,
+  onSelectNode,
   onUpdateNodeContent,
   onHeaderNavigate,
   onRequestEditNavItem,
@@ -157,6 +159,7 @@ export default function SandboxEditorWorkspace({
         onNavigationChange={onNavigationChange}
         onNavFocusHandled={onNavFocusHandled}
         onNavAddChildHandled={onNavAddChildHandled}
+        onSelectNode={onSelectNode}
         onUpdateNodeContent={onUpdateNodeContent}
         onToast={onToast}
       />

@@ -41,7 +41,20 @@ export interface ComponentVariantOption<T extends string = string> {
   description: string;
 }
 
-export const CARD_VARIANT_KEYS = ['flat', 'elevated', 'floating', 'glass'] as const;
+export const CARD_VARIANT_KEYS = [
+  'flat',
+  'elevated',
+  'floating',
+  'glass',
+  'split',
+  'editorial',
+  'compact',
+  'spotlight',
+  'outline',
+  'timeline',
+  'soft',
+  'contrast',
+] as const;
 export type CardVariantKey = (typeof CARD_VARIANT_KEYS)[number];
 
 export const FORM_INPUT_VARIANT_KEYS = ['default', 'underline', 'filled'] as const;
@@ -168,6 +181,110 @@ export const CARD_VARIANTS = [
       borderRadius: 12,
       shadow: '0 18px 44px rgba(15, 23, 42, 0.14)',
       backdropFilter: 'blur(18px)',
+    },
+  },
+  {
+    key: 'split',
+    label: 'Split',
+    description: 'Two-zone card rhythm for service or article lists.',
+    tokens: {
+      background: { kind: 'token', token: 'background' },
+      borderColor: { kind: 'token', token: 'muted' },
+      borderWidth: 1,
+      borderRadius: 8,
+      shadow: '0 12px 30px rgba(15, 23, 42, 0.08)',
+      backdropFilter: 'none',
+    },
+  },
+  {
+    key: 'editorial',
+    label: 'Editorial',
+    description: 'Magazine-style cards with stronger typographic spacing.',
+    tokens: {
+      background: { kind: 'token', token: 'background' },
+      borderColor: { kind: 'token', token: 'secondary' },
+      borderWidth: 1,
+      borderRadius: 6,
+      shadow: '0 8px 22px rgba(15, 23, 42, 0.06)',
+      backdropFilter: 'none',
+    },
+  },
+  {
+    key: 'compact',
+    label: 'Compact',
+    description: 'Dense rows for information-heavy professional pages.',
+    tokens: {
+      background: { kind: 'token', token: 'muted' },
+      borderColor: { kind: 'token', token: 'muted' },
+      borderWidth: 1,
+      borderRadius: 6,
+      shadow: 'none',
+      backdropFilter: 'none',
+    },
+  },
+  {
+    key: 'spotlight',
+    label: 'Spotlight',
+    description: 'One feature card with quieter supporting rows.',
+    tokens: {
+      background: { kind: 'token', token: 'background' },
+      borderColor: { kind: 'token', token: 'primary' },
+      borderWidth: 1,
+      borderRadius: 12,
+      shadow: '0 20px 52px rgba(15, 23, 42, 0.12)',
+      backdropFilter: 'none',
+    },
+  },
+  {
+    key: 'outline',
+    label: 'Outline',
+    description: 'Thin framed surfaces with minimal visual weight.',
+    tokens: {
+      background: 'transparent',
+      borderColor: { kind: 'token', token: 'secondary' },
+      borderWidth: 1,
+      borderRadius: 4,
+      shadow: 'none',
+      backdropFilter: 'none',
+    },
+  },
+  {
+    key: 'timeline',
+    label: 'Timeline',
+    description: 'Stepped cards that read like a guided sequence.',
+    tokens: {
+      background: { kind: 'token', token: 'background' },
+      borderColor: { kind: 'token', token: 'muted' },
+      borderWidth: 1,
+      borderRadius: 10,
+      shadow: '0 14px 36px rgba(15, 23, 42, 0.08)',
+      backdropFilter: 'none',
+    },
+  },
+  {
+    key: 'soft',
+    label: 'Soft',
+    description: 'Muted filled blocks for a calm service directory.',
+    tokens: {
+      background: { kind: 'token', token: 'muted' },
+      borderColor: 'transparent',
+      borderWidth: 0,
+      borderRadius: 12,
+      shadow: '0 10px 26px rgba(15, 23, 42, 0.05)',
+      backdropFilter: 'none',
+    },
+  },
+  {
+    key: 'contrast',
+    label: 'Contrast',
+    description: 'High-contrast cards for strong section emphasis.',
+    tokens: {
+      background: { kind: 'token', token: 'primary' },
+      borderColor: { kind: 'token', token: 'primary' },
+      borderWidth: 1,
+      borderRadius: 8,
+      shadow: '0 18px 46px rgba(15, 23, 42, 0.16)',
+      backdropFilter: 'none',
     },
   },
 ] as const satisfies readonly CardVariantDefinition[];
@@ -363,9 +480,24 @@ export function legacyCardStyleToVariant(legacy: string | undefined): CardVarian
       return 'floating';
     case 'glass':
       return 'glass';
+    case 'split':
+      return 'split';
+    case 'editorial':
+      return 'editorial';
+    case 'compact':
+      return 'compact';
+    case 'spotlight':
+      return 'spotlight';
+    case 'timeline':
+      return 'timeline';
+    case 'soft':
+      return 'soft';
+    case 'contrast':
+      return 'contrast';
     case 'flat':
     case 'outlined':
     case 'outline':
+      return 'outline';
     case 'subtle':
     case 'default':
     default:

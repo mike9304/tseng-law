@@ -2953,3 +2953,27 @@ Prompt-to-artifact 체크:
 - Playwright Chromium은 local sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 재실행했다.
 - 3000 dev server는 재시작했고 현재 `http://localhost:3000`에서 계속 실행 중이다.
 - 다음 마일스톤은 M07 모바일 스키마 결정 + 잠금이다.
+
+## 2026-05-10 Codex /goal Wix full builder section template pool
+
+범위:
+- 사용자 피드백 "주요업무 템플릿이 네 개뿐이고, 적용 화면에서 뒤로 갈 수 없다"를 M07 진입 전 blocker로 처리했다.
+- Design rail의 섹션 chip을 실제 선택 버튼으로 만들고, 선택된 섹션 상세 화면 상단에 `← 섹션 목록` 복귀 버튼을 추가했다.
+- 섹션 디자인 variant를 4개에서 12개로 확장했다: `flat`, `elevated`, `floating`, `glass`, `split`, `editorial`, `compact`, `spotlight`, `outline`, `timeline`, `soft`, `contrast`.
+- 주요 서비스, 칼럼 아카이브, FAQ, 오시는길 각각에 섹션별 label/description을 붙여 템플릿 picker가 실제 선택 풀처럼 보이게 했다.
+- editor canvas CSS와 public page renderer CSS를 함께 확장해 선택한 템플릿이 편집기와 공개 페이지에서 같은 `data-section-variant`로 렌더링되게 했다.
+- "AI 디자인 전문 사이트 템플릿 가져오기"는 외부 template ingestion 트랙으로 분리 필요. 이번 blocker는 로컬 빌더의 즉시 사용 가능한 템플릿 풀과 복귀 UX를 먼저 닫았다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "switches stateful home section template variants|publishes stateful section template variants" --project=chromium-builder --workers=1` ✅ (2 passed)
+- `npm run test:unit` ✅ (30 files / 757 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `git diff --check` ✅
+
+메모:
+- Playwright Chromium은 local sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 재실행했다.
+- 다음 작업은 요청대로 M07 모바일 스키마 결정 + 잠금부터 이어간다.

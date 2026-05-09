@@ -8,6 +8,7 @@ import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import {
+  HOME_SECTION_TEMPLATE_TARGETS,
   HOME_SECTION_TEMPLATE_VARIANTS,
   getHomeSectionTemplateVariantOptions,
   getHomeSectionTemplateTarget,
@@ -58,6 +59,7 @@ type SandboxEditorRailProps = {
   onNavigationChange: (items: BuilderNavItem[]) => void;
   onNavFocusHandled: () => void;
   onNavAddChildHandled: () => void;
+  onSelectNode: (nodeId: string | null) => void;
   onUpdateNodeContent: (nodeId: string, content: Record<string, unknown>) => void;
   onToast: (message: string, tone: 'success' | 'error') => void;
 };
@@ -83,9 +85,14 @@ export default function SandboxEditorRail({
   onNavigationChange,
   onNavFocusHandled,
   onNavAddChildHandled,
+  onSelectNode,
   onUpdateNodeContent,
   onToast,
 }: SandboxEditorRailProps) {
+  const availableSectionTemplates = useMemo(() => {
+    const nodeIds = new Set(document?.nodes.map((node) => node.id) ?? []);
+    return HOME_SECTION_TEMPLATE_TARGETS.filter((target) => nodeIds.has(target.nodeId));
+  }, [document]);
   const selectedSectionTemplateNode = useMemo(() => {
     if (!selectedNode || !document) return null;
     const nodesById = getCanvasNodesById(document.nodes);
@@ -217,6 +224,15 @@ export default function SandboxEditorRail({
                   <span>Templates</span>
                   <strong>Section design</strong>
                 </div>
+                {selectedSectionTemplate ? (
+                  <button
+                    type="button"
+                    className={styles.panelHeaderButton}
+                    onClick={() => onSelectNode(null)}
+                  >
+                    ← 섹션 목록
+                  </button>
+                ) : null}
               </header>
               {selectedSectionTemplate && selectedSectionTemplateNode && selectedSectionTemplateVariant ? (
                 <>
@@ -256,10 +272,17 @@ export default function SandboxEditorRail({
                     주요 서비스, 칼럼 아카이브, FAQ, 오시는길 섹션을 선택하면 디자인 템플릿을 바꿀 수 있습니다.
                   </p>
                   <div className={styles.sectionTemplateHintList}>
-                    <span>주요 서비스</span>
-                    <span>칼럼 아카이브</span>
-                    <span>FAQ</span>
-                    <span>오시는길</span>
+                    {(availableSectionTemplates.length > 0 ? availableSectionTemplates : HOME_SECTION_TEMPLATE_TARGETS).map((target) => (
+                      <button
+                        key={target.id}
+                        type="button"
+                        className={styles.sectionTemplateHintButton}
+                        disabled={!availableSectionTemplates.some((available) => available.id === target.id)}
+                        onClick={() => onSelectNode(target.nodeId)}
+                      >
+                        {target.label}
+                      </button>
+                    ))}
                   </div>
                 </>
               )}

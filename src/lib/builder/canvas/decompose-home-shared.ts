@@ -1,5 +1,6 @@
 import type { BuilderCanvasNode } from './types';
 import { createDefaultCanvasNodeStyle } from './types';
+import type { CardVariantKey } from '@/lib/builder/site/component-variants';
 
 export const HOME_STAGE_WIDTH = 1280;
 
@@ -13,8 +14,6 @@ type Rect = {
 type ContainerTag = 'div' | 'section' | 'article' | 'aside' | 'header' | 'footer' | 'main' | 'nav' | 'form';
 type TextTag = 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'input';
 type ButtonTag = 'a' | 'button';
-type ContainerVariant = 'flat' | 'elevated' | 'floating' | 'glass';
-
 const baseTextContent = {
   fontSize: 16,
   color: '#0f172a',
@@ -83,7 +82,7 @@ export function createHomeContainerNode({
     templateColumns?: string;
     templateRows?: string;
   };
-  variant?: ContainerVariant;
+  variant?: CardVariantKey;
 }): BuilderCanvasNode {
   return {
     id,

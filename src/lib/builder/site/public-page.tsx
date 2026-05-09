@@ -648,6 +648,95 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           box-shadow: 0 24px 80px color-mix(in srgb, var(--primary) 14%, transparent);
           backdrop-filter: blur(14px);
         }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='split'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='split'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='split'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='split'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='split'] .office-card {
+          border-left: 4px solid var(--primary);
+          background: linear-gradient(90deg, color-mix(in srgb, var(--primary) 7%, var(--bg-white)) 0%, var(--bg-white) 48%);
+          box-shadow: 0 16px 42px color-mix(in srgb, var(--primary) 10%, transparent);
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='editorial'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='editorial'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='editorial'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='editorial'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='editorial'] .office-card {
+          border-color: transparent transparent var(--border-medium);
+          border-radius: 0;
+          background: var(--bg-white);
+          box-shadow: none;
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='compact'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='compact'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='compact'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='compact'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='compact'] .office-card {
+          border-color: var(--border-light);
+          border-radius: 8px;
+          background: color-mix(in srgb, var(--bg-off-white) 72%, var(--bg-white));
+          box-shadow: none;
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='spotlight'] [data-node-id='home-services-card-0'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='spotlight'] [data-node-id='home-faq-item-0'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='spotlight'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='spotlight'] .office-card {
+          border-color: var(--primary);
+          background: color-mix(in srgb, var(--primary) 9%, var(--bg-white));
+          box-shadow: 0 22px 58px color-mix(in srgb, var(--primary) 16%, transparent);
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='outline'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='outline'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='outline'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='outline'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='outline'] .office-card {
+          border-color: var(--border-medium);
+          border-style: dashed;
+          border-radius: 6px;
+          background: transparent;
+          box-shadow: none;
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='timeline'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='timeline'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='timeline'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='timeline'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='timeline'] .office-card {
+          border-color: var(--border-medium);
+          border-radius: 14px;
+          background: var(--bg-white);
+          box-shadow: 0 12px 34px color-mix(in srgb, var(--primary) 10%, transparent);
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='timeline'] .service-icon,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='timeline'] .faq-question {
+          box-shadow: -16px 0 0 color-mix(in srgb, var(--primary) 28%, transparent);
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='soft'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='soft'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='soft'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='soft'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='soft'] .office-card {
+          border-color: transparent;
+          border-radius: 16px;
+          background: color-mix(in srgb, var(--bg-off-white) 84%, var(--bg-white));
+          box-shadow: 0 10px 30px color-mix(in srgb, var(--primary) 6%, transparent);
+        }
+        .builder-pub-node[data-builder-section-template='services'][data-section-variant='contrast'] .services-detail-card,
+        .builder-pub-node[data-builder-section-template='faq'][data-section-variant='contrast'] .faq-item,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='contrast'] .insights-featured,
+        .builder-pub-node[data-builder-section-template='insights'][data-section-variant='contrast'] .insights-list-wrap,
+        .builder-pub-node[data-builder-section-template='offices'][data-section-variant='contrast'] .office-card {
+          border-color: color-mix(in srgb, var(--primary) 75%, var(--bg-dark));
+          background: var(--primary);
+          color: var(--bg-white);
+          box-shadow: 0 22px 58px color-mix(in srgb, var(--bg-dark) 20%, transparent);
+        }
+        .builder-pub-node[data-section-variant='contrast'] .services-detail-card *,
+        .builder-pub-node[data-section-variant='contrast'] .faq-item *,
+        .builder-pub-node[data-section-variant='contrast'] .insights-featured *,
+        .builder-pub-node[data-section-variant='contrast'] .insights-list-wrap *,
+        .builder-pub-node[data-section-variant='contrast'] .office-card * {
+          color: var(--bg-white) !important;
+        }
         .builder-pub-node[data-builder-section-template='offices'][data-section-variant='floating'] .tab-button,
         .builder-pub-node[data-builder-section-template='offices'][data-section-variant='glass'] .tab-button,
         .builder-pub-node[data-builder-section-template='services'][data-section-variant='floating'] .service-icon,

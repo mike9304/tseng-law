@@ -2244,3 +2244,43 @@
 메모:
 - W06 snap guide/dimension chip 동작은 유지하면서 drag hot path allocation을 줄인 보강이다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor current completion audit
+
+목표 재정의:
+- `/ko/admin-builder` 데스크톱 editor chrome, selection/resize/rotate/snap/save/undo/clipboard/assets/image edit/history/publish/SEO/navigation/page/blog/map 흐름이 Wix-like로 동작해야 한다.
+- M1~M8 범위의 자동 검증과 문서 업데이트, 마일스톤 commit이 남아 있으면 미완이다.
+- Done when 17은 사용자가 직접 5분 자유 사용 검증을 해야 하므로 AI 자동 테스트만으로 complete 처리하지 않는다.
+
+Prompt-to-artifact 체크:
+- W02 selection handles/hover/label: `admin-builder.playwright.ts`, `design-pool.playwright.ts` direct manipulation overlay 시나리오 통과.
+- W06 snap guide/dimension chip: `snap.test.ts`, direct manipulation overlay 시나리오, `28e3a54` snap candidate cache commit.
+- W07 resize tooltip/shift/cursors: direct manipulation overlay 시나리오 통과.
+- W08 rotation handle/chip/shift snap: `admin-builder.playwright.ts` smoke coverage 통과.
+- W10 undo/redo/clipboard: `clipboard-persistence.playwright.ts`, full builder editor 26 passed.
+- W11 save state: editor smoke and full builder editor 26 passed.
+- W18~W21 top bar/rail/navigation/page switching: `admin-builder.playwright.ts`, `design-pool.playwright.ts` navigation/page tests 통과.
+- W22 AssetLibrary folder/tag/search/sort/server persist: `asset-image-workflow.playwright.ts`, `3b08107` commit.
+- W23 Crop/Filter/Alt/map quick edit: `asset-image-workflow.playwright.ts`, `office-map-public.playwright.ts`, `459af09` commit.
+- W26 VersionHistory timeline/diff: `seo-publish-history.playwright.ts`, `9cdfe46` commit.
+- W27 SEO panel: `seo-publish-history.playwright.ts` public head/editor UI coverage 통과.
+- W28 Publish gate: `seo-publish-history.playwright.ts`, full builder editor 26 passed.
+- W29/W30 duplicate/cross-page copy-paste: `clipboard-persistence.playwright.ts`, full builder editor 26 passed.
+- Required commands: latest run of `typecheck`, `lint`, `test:builder-editor`, `test:unit`, `security:builder-routes`, `build` all passed.
+- Docs/checkpoint: SESSION and external Wix checkpoint updated through memo 43 before this audit.
+- Commits: recent G-Editor commits include persistence audit, overlay perf, version diff, image focal crop, asset taxonomy, shared node index, commit churn, snap candidate cache.
+
+최신 검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (26 passed)
+- `npm run test:unit` ✅ (730 passed)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- build 후 `.next` dev cache 충돌로 `/ko/admin-builder`가 500이 되어 dev process를 재시작하고 `.next`를 비운 뒤 `npm run dev`를 다시 띄웠다.
+- `curl -I http://localhost:3000/ko` ✅ 200
+- `curl -I -u 'admin:local-review-2026!' http://localhost:3000/ko/admin-builder` ✅ 200
+
+남은 blocker:
+- Done when 17: 사용자 직접 5분 자유 사용 검증과 "Wix를 그대로 쓰는 느낌" 체감 판정이 아직 없다.
+- 따라서 active goal은 완료 처리하지 않는다. `update_goal(status: complete)` 호출 금지.

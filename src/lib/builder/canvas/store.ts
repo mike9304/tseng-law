@@ -269,10 +269,38 @@ function sameDocumentContent(left: BuilderCanvasDocument, right: BuilderCanvasDo
     if (!leftNode || !rightNode) return false;
     if (leftNode === rightNode) continue;
     if (leftNode.id !== rightNode.id) return false;
-    if (JSON.stringify(leftNode) !== JSON.stringify(rightNode)) return false;
+    if (!sameCanvasNodeContent(leftNode, rightNode)) return false;
   }
 
   return true;
+}
+
+function sameJsonContent(left: unknown, right: unknown): boolean {
+  return left === right || JSON.stringify(left) === JSON.stringify(right);
+}
+
+function sameCanvasNodeContent(left: BuilderCanvasNode, right: BuilderCanvasNode): boolean {
+  if (left === right) return true;
+  if (
+    left.id !== right.id
+    || left.kind !== right.kind
+    || left.parentId !== right.parentId
+    || left.zIndex !== right.zIndex
+    || left.rotation !== right.rotation
+    || left.locked !== right.locked
+    || left.visible !== right.visible
+    || left.anchorName !== right.anchorName
+    || !areCanvasNodeRectsEqual(left.rect, right.rect)
+  ) {
+    return false;
+  }
+
+  return sameJsonContent(left.style, right.style)
+    && sameJsonContent(left.sticky, right.sticky)
+    && sameJsonContent(left.hoverStyle, right.hoverStyle)
+    && sameJsonContent(left.animation, right.animation)
+    && sameJsonContent(left.responsive, right.responsive)
+    && sameJsonContent(left.content, right.content);
 }
 
 function sameDocumentIdentity(left: BuilderCanvasDocument, right: BuilderCanvasDocument): boolean {

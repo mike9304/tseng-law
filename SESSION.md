@@ -2633,3 +2633,20 @@ Prompt-to-artifact 체크:
 
 메모:
 - goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.
+
+## 2026-05-09 Codex /goal G-Editor audit perf follow-up
+
+범위:
+- 클로드 감사 메모 `src/lib/builder/site/persistence.ts:127-139` 및 performance 지적을 이어서 확인했다.
+- 현재 HEAD 기준 `CanvasNode`의 per-node `nodesById` Map 재생성 지적과 transient update normalization 지적은 이미 반영되어 있음을 확인했다.
+- 남은 hot path 중 history commit 비교가 노드 전체 `JSON.stringify`에 의존하던 부분을 공통 필드 fast compare + nested object fallback으로 줄였다.
+- 드래그/리사이즈처럼 rect만 바뀌는 작업은 큰 `content`/`style` 객체 문자열화를 피하고 즉시 차이를 판정한다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (3 passed)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- 3000번 dev server는 유지 중이다.
+- goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.

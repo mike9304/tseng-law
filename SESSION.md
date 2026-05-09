@@ -2180,3 +2180,19 @@
 메모:
 - W23은 여전히 완전한 자유형 crop box 드래그보다는 focal point + ratio crop이다. 사용자 직접 검증에서 Wix 대비 더 부족하다고 판단되면 다음 단계는 draggable crop box다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor asset library server taxonomy
+
+범위:
+- W22 AssetLibraryModal의 폴더/태그/asset 배정 상태를 localStorage-only에서 서버 persisted library로 확장했다.
+- `GET /api/builder/assets`는 assets와 함께 library taxonomy를 반환하고, `PATCH /api/builder/assets`는 `guardMutation()` 통과 후 정규화된 폴더/태그/배정 상태를 저장한다.
+- UI는 서버 상태와 local fallback을 merge하고, 폴더 생성/태그 생성/asset tag/folder 변경/삭제 정리 시 debounced PATCH로 서버에 반영한다.
+- Playwright는 생성한 폴더/태그가 API에 저장되는지 poll하고, modal 재오픈 뒤에도 동일 taxonomy가 보이는지 검증한다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (1 passed, sandbox 승격 실행)
+
+메모:
+- W22는 이제 같은 브라우저 localStorage에만 묶이지 않고 서버 library 문서로 공유된다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

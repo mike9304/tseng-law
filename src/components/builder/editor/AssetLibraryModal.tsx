@@ -2,13 +2,14 @@
 
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { BuilderAssetListItem } from '@/lib/builder/assets';
+import type { BuilderAssetFolder, BuilderAssetLibraryState, BuilderAssetListItem } from '@/lib/builder/assets';
 import type { Locale } from '@/lib/locales';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 interface AssetListResponse {
   ok: boolean;
   assets?: BuilderAssetListItem[];
+  library?: BuilderAssetLibraryState;
   error?: string;
 }
 
@@ -20,19 +21,7 @@ interface AssetUploadResponse {
 
 type AssetSortMode = 'date-desc' | 'date-asc' | 'name-asc' | 'name-desc';
 
-interface AssetFolder {
-  id: string;
-  name: string;
-}
-
-interface AssetLibraryPersistedState {
-  folders?: AssetFolder[];
-  tags?: string[];
-  assetFolderByFilename?: Record<string, string>;
-  assetTagsByFilename?: Record<string, string[]>;
-}
-
-const DEFAULT_FOLDERS: AssetFolder[] = [
+const DEFAULT_FOLDERS: BuilderAssetFolder[] = [
   { id: 'uploads', name: 'Uploads' },
   { id: 'brand', name: 'Brand' },
 ];
@@ -61,12 +50,12 @@ function assetLibraryStorageKey(locale: Locale) {
   return `builder:asset-library:${locale}:v${ASSET_LIBRARY_STORAGE_VERSION}`;
 }
 
-function readPersistedAssetLibraryState(locale: Locale): AssetLibraryPersistedState | null {
+function readPersistedAssetLibraryState(locale: Locale): BuilderAssetLibraryState | null {
   if (typeof window === 'undefined') return null;
   try {
     const raw = window.localStorage.getItem(assetLibraryStorageKey(locale));
     if (!raw) return null;
-    const parsed = JSON.parse(raw) as AssetLibraryPersistedState;
+    const parsed = JSON.parse(raw) as BuilderAssetLibraryState;
     if (!parsed || typeof parsed !== 'object') return null;
     return parsed;
   } catch {
@@ -74,13 +63,36 @@ function readPersistedAssetLibraryState(locale: Locale): AssetLibraryPersistedSt
   }
 }
 
-function writePersistedAssetLibraryState(locale: Locale, state: AssetLibraryPersistedState): void {
+function writePersistedAssetLibraryState(locale: Locale, state: BuilderAssetLibraryState): void {
   if (typeof window === 'undefined') return;
   try {
     window.localStorage.setItem(assetLibraryStorageKey(locale), JSON.stringify(state));
   } catch {
     // localStorage can be unavailable in private browsing; the library still works in-memory.
   }
+}
+
+function mergeAssetLibraryState(
+  serverState: BuilderAssetLibraryState | null | undefined,
+  localState: BuilderAssetLibraryState | null,
+): BuilderAssetLibraryState {
+  const folders = new Map<string, BuilderAssetFolder>();
+  for (const folder of DEFAULT_FOLDERS) folders.set(folder.id, folder);
+  for (const folder of serverState?.folders ?? []) folders.set(folder.id, folder);
+  for (const folder of localState?.folders ?? []) folders.set(folder.id, folder);
+  const tags = new Set([...DEFAULT_TAGS, ...(serverState?.tags ?? []), ...(localState?.tags ?? [])]);
+  return {
+    folders: Array.from(folders.values()),
+    tags: Array.from(tags),
+    assetFolderByFilename: {
+      ...(serverState?.assetFolderByFilename ?? {}),
+      ...(localState?.assetFolderByFilename ?? {}),
+    },
+    assetTagsByFilename: {
+      ...(serverState?.assetTagsByFilename ?? {}),
+      ...(localState?.assetTagsByFilename ?? {}),
+    },
+  };
 }
 
 export default function AssetLibraryModal({
@@ -97,10 +109,14 @@ export default function AssetLibraryModal({
   onSelect: (asset: BuilderAssetListItem) => void;
 }) {
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const lastSyncedLibraryJsonRef = useRef<string>('');
+  const libraryStateRef = useRef<BuilderAssetLibraryState | null>(null);
+  const pendingLibraryStateRef = useRef<BuilderAssetLibraryState | null>(null);
+  const librarySaveTimerRef = useRef<number | null>(null);
   const [assets, setAssets] = useState<BuilderAssetListItem[]>([]);
   const [search, setSearch] = useState('');
   const [sortMode, setSortMode] = useState<AssetSortMode>('date-desc');
-  const [folders, setFolders] = useState<AssetFolder[]>(DEFAULT_FOLDERS);
+  const [folders, setFolders] = useState<BuilderAssetFolder[]>(DEFAULT_FOLDERS);
   const [activeFolder, setActiveFolder] = useState('all');
   const [newFolderName, setNewFolderName] = useState('');
   const [tags, setTags] = useState<string[]>(DEFAULT_TAGS);
@@ -127,8 +143,24 @@ export default function AssetLibraryModal({
         return;
       }
       setAssets(payload.assets ?? []);
+      const library = mergeAssetLibraryState(payload.library, readPersistedAssetLibraryState(locale));
+      setFolders(library.folders);
+      setTags(library.tags);
+      setAssetFolderByFilename(library.assetFolderByFilename);
+      setAssetTagsByFilename(library.assetTagsByFilename);
+      libraryStateRef.current = library;
+      lastSyncedLibraryJsonRef.current = JSON.stringify(library);
+      setStorageReady(true);
     } catch {
       setError('Failed to load assets.');
+      const library = mergeAssetLibraryState(null, readPersistedAssetLibraryState(locale));
+      setFolders(library.folders);
+      setTags(library.tags);
+      setAssetFolderByFilename(library.assetFolderByFilename);
+      setAssetTagsByFilename(library.assetTagsByFilename);
+      libraryStateRef.current = library;
+      lastSyncedLibraryJsonRef.current = JSON.stringify(library);
+      setStorageReady(true);
     } finally {
       setIsLoading(false);
     }
@@ -141,26 +173,70 @@ export default function AssetLibraryModal({
 
   useEffect(() => {
     if (!open) {
+      if (librarySaveTimerRef.current) {
+        window.clearTimeout(librarySaveTimerRef.current);
+        librarySaveTimerRef.current = null;
+      }
       setStorageReady(false);
       return;
     }
-    const persisted = readPersistedAssetLibraryState(locale);
-    setFolders(persisted?.folders?.length ? persisted.folders : DEFAULT_FOLDERS);
-    setTags(persisted?.tags?.length ? persisted.tags : DEFAULT_TAGS);
-    setAssetFolderByFilename(persisted?.assetFolderByFilename ?? {});
-    setAssetTagsByFilename(persisted?.assetTagsByFilename ?? {});
-    setStorageReady(true);
+    if (librarySaveTimerRef.current) {
+      window.clearTimeout(librarySaveTimerRef.current);
+      librarySaveTimerRef.current = null;
+    }
   }, [locale, open]);
+
+  const libraryState = useMemo<BuilderAssetLibraryState>(() => ({
+    folders,
+    tags,
+    assetFolderByFilename,
+    assetTagsByFilename,
+  }), [assetFolderByFilename, assetTagsByFilename, folders, tags]);
+
+  const scheduleLibraryStateSave = useCallback((nextState: BuilderAssetLibraryState) => {
+    const nextJson = JSON.stringify(nextState);
+    libraryStateRef.current = nextState;
+    pendingLibraryStateRef.current = nextState;
+    writePersistedAssetLibraryState(locale, nextState);
+    if (nextJson === lastSyncedLibraryJsonRef.current) return;
+    if (librarySaveTimerRef.current) window.clearTimeout(librarySaveTimerRef.current);
+    librarySaveTimerRef.current = window.setTimeout(() => {
+      const stateToSave = pendingLibraryStateRef.current ?? nextState;
+      void fetch(`/api/builder/assets?locale=${locale}`, {
+        method: 'PATCH',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ locale, library: stateToSave }),
+      })
+        .then(async (response) => {
+          const payload = await response.json() as { ok?: boolean; library?: BuilderAssetLibraryState };
+          if (response.ok && payload.ok && payload.library) {
+            lastSyncedLibraryJsonRef.current = JSON.stringify(payload.library);
+            libraryStateRef.current = payload.library;
+            pendingLibraryStateRef.current = null;
+          }
+        })
+        .catch(() => undefined);
+    }, 200);
+  }, [locale]);
+
+  useEffect(() => {
+    libraryStateRef.current = libraryState;
+  }, [libraryState]);
 
   useEffect(() => {
     if (!open || !storageReady) return;
-    writePersistedAssetLibraryState(locale, {
-      folders,
-      tags,
-      assetFolderByFilename,
-      assetTagsByFilename,
-    });
-  }, [assetFolderByFilename, assetTagsByFilename, folders, locale, open, storageReady, tags]);
+    scheduleLibraryStateSave(libraryState);
+  }, [libraryState, open, scheduleLibraryStateSave, storageReady]);
+
+  useEffect(() => {
+    return () => {
+      if (librarySaveTimerRef.current) {
+        window.clearTimeout(librarySaveTimerRef.current);
+        librarySaveTimerRef.current = null;
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -220,7 +296,12 @@ export default function AssetLibraryModal({
     const name = newFolderName.trim();
     if (!name) return;
     const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || `folder-${Date.now()}`;
-    setFolders((current) => current.some((folder) => folder.id === id) ? current : [...current, { id, name }]);
+    const currentLibrary = libraryStateRef.current ?? libraryState;
+    const nextFolders = currentLibrary.folders.some((folder) => folder.id === id)
+      ? currentLibrary.folders
+      : [...currentLibrary.folders, { id, name }];
+    setFolders(nextFolders);
+    scheduleLibraryStateSave({ ...currentLibrary, folders: nextFolders });
     setActiveFolder(id);
     setNewFolderName('');
   }
@@ -228,19 +309,23 @@ export default function AssetLibraryModal({
   function createTag() {
     const name = newTagName.trim().toLowerCase();
     if (!name) return;
-    setTags((current) => current.includes(name) ? current : [...current, name]);
+    const currentLibrary = libraryStateRef.current ?? libraryState;
+    const nextTags = currentLibrary.tags.includes(name) ? currentLibrary.tags : [...currentLibrary.tags, name];
+    setTags(nextTags);
+    scheduleLibraryStateSave({ ...currentLibrary, tags: nextTags });
     setActiveTag(name);
     setNewTagName('');
   }
 
   function toggleAssetTag(filename: string, tag: string) {
-    setAssetTagsByFilename((current) => {
-      const existing = current[filename] ?? [];
-      const next = existing.includes(tag)
-        ? existing.filter((candidate) => candidate !== tag)
-        : [...existing, tag];
-      return { ...current, [filename]: next };
-    });
+    const currentLibrary = libraryStateRef.current ?? libraryState;
+    const existing = currentLibrary.assetTagsByFilename[filename] ?? [];
+    const nextTags = existing.includes(tag)
+      ? existing.filter((candidate) => candidate !== tag)
+      : [...existing, tag];
+    const nextMap = { ...currentLibrary.assetTagsByFilename, [filename]: nextTags };
+    setAssetTagsByFilename(nextMap);
+    scheduleLibraryStateSave({ ...currentLibrary, assetTagsByFilename: nextMap });
   }
 
   async function uploadFile(file: File) {
@@ -299,15 +384,17 @@ export default function AssetLibraryModal({
         return;
       }
       setAssets((currentAssets) => currentAssets.filter((entry) => entry.filename !== asset.filename));
-      setAssetFolderByFilename((current) => {
-        const next = { ...current };
-        delete next[asset.filename];
-        return next;
-      });
-      setAssetTagsByFilename((current) => {
-        const next = { ...current };
-        delete next[asset.filename];
-        return next;
+      const currentLibrary = libraryStateRef.current ?? libraryState;
+      const nextFolderMap = { ...currentLibrary.assetFolderByFilename };
+      const nextTagMap = { ...currentLibrary.assetTagsByFilename };
+      delete nextFolderMap[asset.filename];
+      delete nextTagMap[asset.filename];
+      setAssetFolderByFilename(nextFolderMap);
+      setAssetTagsByFilename(nextTagMap);
+      scheduleLibraryStateSave({
+        ...currentLibrary,
+        assetFolderByFilename: nextFolderMap,
+        assetTagsByFilename: nextTagMap,
       });
     } catch {
       setError('Failed to delete asset.');
@@ -512,10 +599,13 @@ export default function AssetLibraryModal({
                   <select
                     value={assetFolder}
                     onChange={(event) => {
-                      setAssetFolderByFilename((current) => ({
-                        ...current,
+                      const currentLibrary = libraryStateRef.current ?? libraryState;
+                      const nextFolderMap = {
+                        ...currentLibrary.assetFolderByFilename,
                         [asset.filename]: event.target.value,
-                      }));
+                      };
+                      setAssetFolderByFilename(nextFolderMap);
+                      scheduleLibraryStateSave({ ...currentLibrary, assetFolderByFilename: nextFolderMap });
                     }}
                   >
                     {folders.map((folder) => <option key={folder.id} value={folder.id}>{folder.name}</option>)}

@@ -12,6 +12,16 @@ interface UploadedAsset {
   url: string;
 }
 
+interface AssetLibraryPayload {
+  ok?: boolean;
+  library?: {
+    folders?: Array<{ id: string; name: string }>;
+    tags?: string[];
+    assetFolderByFilename?: Record<string, string>;
+    assetTagsByFilename?: Record<string, string[]>;
+  };
+}
+
 async function uploadAsset(page: Page, filename: string): Promise<UploadedAsset> {
   const response = await page.request.post('/api/builder/assets?locale=ko', {
     timeout: 60_000,
@@ -79,6 +89,34 @@ async function openImageEditDialog(page: Page, actionName: RegExp) {
   return dialog;
 }
 
+async function readAssetLibraryPayload(page: Page): Promise<AssetLibraryPayload> {
+  const response = await page.request.get('/api/builder/assets?locale=ko&limit=24');
+  expect(response.status()).toBe(200);
+  return response.json() as Promise<AssetLibraryPayload>;
+}
+
+async function cleanupAssetLibraryToken(page: Page, token: string): Promise<void> {
+  const payload = await readAssetLibraryPayload(page);
+  const library = payload.library;
+  if (!library) return;
+  await page.request.patch('/api/builder/assets?locale=ko', {
+    data: {
+      locale: 'ko',
+      library: {
+        folders: (library.folders ?? []).filter((folder) => !folder.id.includes(token) && !folder.name.includes(token)),
+        tags: (library.tags ?? []).filter((tag) => tag !== token),
+        assetFolderByFilename: library.assetFolderByFilename ?? {},
+        assetTagsByFilename: Object.fromEntries(
+          Object.entries(library.assetTagsByFilename ?? {}).map(([filename, tags]) => [
+            filename,
+            tags.filter((tag) => tag !== token),
+          ]),
+        ),
+      },
+    },
+  });
+}
+
 test.describe('/ko/admin-builder image asset workflow', () => {
   test('covers W22 asset organization/replacement and W23 Crop/Filter/Alt paths', async ({ page }) => {
     const token = `w22-${Date.now().toString(36)}`;
@@ -108,7 +146,14 @@ test.describe('/ko/admin-builder image asset workflow', () => {
 
       await assetDialog.locator('input[placeholder="New tag"]').fill(token);
       await assetDialog.getByRole('button', { name: 'Create' }).click();
-      await expect(assetDialog.getByRole('button', { name: token, exact: true })).toBeVisible();
+      await expect(assetDialog.locator('[class*="assetTagBar"]').getByRole('button', { name: token, exact: true })).toBeVisible();
+      await expect.poll(async () => {
+        const payload = await readAssetLibraryPayload(page);
+        return {
+          hasFolder: payload.library?.folders?.some((folder) => folder.name === `Case ${token}`) ?? false,
+          hasTag: payload.library?.tags?.includes(token) ?? false,
+        };
+      }).toEqual({ hasFolder: true, hasTag: true });
       await assetDialog.getByRole('button', { name: 'Close' }).click();
       await expect(assetDialog).not.toBeVisible();
 
@@ -116,7 +161,7 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       await persistedMenu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();
       assetDialog = page.getByRole('dialog', { name: 'Asset library' });
       await expect(assetDialog.getByRole('button', { name: new RegExp(`Case ${token}`) })).toBeVisible();
-      await expect(assetDialog.getByRole('button', { name: token, exact: true })).toBeVisible();
+      await expect(assetDialog.locator('[class*="assetTagBar"]').getByRole('button', { name: token, exact: true })).toBeVisible();
       await assetDialog.getByRole('button', { name: /All assets/ }).click();
       await assetDialog.getByRole('button', { name: 'All tags' }).click();
 
@@ -171,6 +216,7 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       for (const asset of uploaded) {
         await deleteAsset(page, asset.filename);
       }
+      await cleanupAssetLibraryToken(page, token);
     }
   });
 });

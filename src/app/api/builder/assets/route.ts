@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import {
   deleteBuilderImageAsset,
   listBuilderImageAssets,
+  readBuilderAssetLibraryState,
   uploadBuilderImageAsset,
+  writeBuilderAssetLibraryState,
 } from '@/lib/builder/assets';
 import { recordAssetDelete, recordAssetUpload } from '@/lib/builder/audit/record';
 import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
@@ -18,13 +20,18 @@ export async function GET(request: NextRequest) {
   if (blocked instanceof NextResponse) return blocked;
 
   try {
-    const assets = await listBuilderImageAssets({
-      locale: request.nextUrl.searchParams.get('locale'),
-      limit: parseLimit(request.nextUrl.searchParams.get('limit')),
-    });
+    const locale = request.nextUrl.searchParams.get('locale');
+    const [assets, library] = await Promise.all([
+      listBuilderImageAssets({
+        locale,
+        limit: parseLimit(request.nextUrl.searchParams.get('limit')),
+      }),
+      readBuilderAssetLibraryState({ locale }),
+    ]);
 
     return NextResponse.json({
       ok: true,
+      library,
       assets: assets.map((asset) => ({
         backend: asset.backend,
         locale: asset.locale,
@@ -43,6 +50,29 @@ export async function GET(request: NextRequest) {
         error: error instanceof Error ? error.message : 'Failed to load builder assets.',
       },
       { status: 400 }
+    );
+  }
+}
+
+export async function PATCH(request: NextRequest) {
+  const auth = guardMutation(request, { bucket: 'mutation' });
+  if (auth instanceof NextResponse) return auth;
+
+  try {
+    const payload = await request.json();
+    const library = await writeBuilderAssetLibraryState({
+      locale: request.nextUrl.searchParams.get('locale') ?? payload?.locale,
+      library: payload?.library,
+    });
+
+    return NextResponse.json({ ok: true, library });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : 'Failed to save asset library.',
+      },
+      { status: 400 },
     );
   }
 }

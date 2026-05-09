@@ -9,6 +9,8 @@ const BUILDER_ASSET_ROOT = 'builder/assets';
 const BUILDER_ASSET_RUNTIME_ROOT = path.join(process.cwd(), 'runtime-data', 'builder-assets');
 const MAX_BUILDER_ASSET_BYTES = 8 * 1024 * 1024;
 const BUILDER_ASSET_URL_PREFIX = '/api/builder/assets/';
+const BUILDER_ASSET_LIBRARY_FILENAME = '__library.json';
+const RESERVED_ASSET_FOLDER_IDS = new Set(['all', 'recent', 'selected']);
 const BUILDER_IMAGE_TYPE_MAP = {
   'image/jpeg': 'jpg',
   'image/png': 'png',
@@ -48,6 +50,28 @@ export interface BuilderAssetListItem {
   size: number;
   uploadedAt: string;
 }
+
+export interface BuilderAssetFolder {
+  id: string;
+  name: string;
+}
+
+export interface BuilderAssetLibraryState {
+  folders: BuilderAssetFolder[];
+  tags: string[];
+  assetFolderByFilename: Record<string, string>;
+  assetTagsByFilename: Record<string, string[]>;
+}
+
+const DEFAULT_ASSET_LIBRARY_STATE: BuilderAssetLibraryState = {
+  folders: [
+    { id: 'uploads', name: 'Uploads' },
+    { id: 'brand', name: 'Brand' },
+  ],
+  tags: ['hero', 'office', 'people'],
+  assetFolderByFilename: {},
+  assetTagsByFilename: {},
+};
 
 export interface BuilderAssetReadResult {
   backend: BuilderAssetBackend;
@@ -97,6 +121,31 @@ export async function listBuilderImageAssets(input: {
   const limit = normalizeListLimit(input.limit);
   const store = resolveBuilderAssetStore();
   return store.list(locale, limit);
+}
+
+export async function readBuilderAssetLibraryState(input: {
+  locale: string | null | undefined;
+}): Promise<BuilderAssetLibraryState> {
+  const locale = normalizeBuilderHomeLocale(input.locale);
+  const pathname = `${BUILDER_ASSET_ROOT}/${locale}/${BUILDER_ASSET_LIBRARY_FILENAME}`;
+  try {
+    const raw = await readAssetLibraryJson(pathname);
+    if (!raw) return defaultAssetLibraryState();
+    return normalizeAssetLibraryState(JSON.parse(raw));
+  } catch {
+    return defaultAssetLibraryState();
+  }
+}
+
+export async function writeBuilderAssetLibraryState(input: {
+  locale: string | null | undefined;
+  library: unknown;
+}): Promise<BuilderAssetLibraryState> {
+  const locale = normalizeBuilderHomeLocale(input.locale);
+  const pathname = `${BUILDER_ASSET_ROOT}/${locale}/${BUILDER_ASSET_LIBRARY_FILENAME}`;
+  const library = normalizeAssetLibraryState(input.library);
+  await writeAssetLibraryJson(pathname, JSON.stringify(library));
+  return library;
 }
 
 export async function readBuilderImageAsset(input: {
@@ -182,6 +231,44 @@ function resolveBuilderAssetStore(): BuilderAssetStore {
   }
 
   return createFileBuilderAssetStore();
+}
+
+async function readAssetLibraryJson(pathname: string): Promise<string | null> {
+  if (process.env.BLOB_READ_WRITE_TOKEN?.trim()) {
+    try {
+      const result = await get(pathname, {
+        access: 'private',
+        useCache: false,
+      });
+      if (!result || result.statusCode !== 200 || !result.stream) return null;
+      return new Response(result.stream).text();
+    } catch (error) {
+      if (isBlobNotFoundError(error)) return null;
+      throw error;
+    }
+  }
+
+  try {
+    return await readFile(resolveRuntimeAssetPath(pathname), 'utf8');
+  } catch (error) {
+    if (isNodeNotFoundError(error)) return null;
+    throw error;
+  }
+}
+
+async function writeAssetLibraryJson(pathname: string, json: string): Promise<void> {
+  if (process.env.BLOB_READ_WRITE_TOKEN?.trim()) {
+    await put(pathname, json, {
+      access: 'private',
+      allowOverwrite: true,
+      contentType: 'application/json',
+    });
+    return;
+  }
+
+  const resolvedPath = resolveRuntimeAssetPath(pathname);
+  await mkdir(path.dirname(resolvedPath), { recursive: true, mode: 0o700 });
+  await writeFile(resolvedPath, json, { mode: 0o600 });
 }
 
 function createBlobBuilderAssetStore(): BuilderAssetStore {
@@ -334,6 +421,117 @@ async function validateImageFile(file: File): Promise<{
     contentType,
     name: file.name || 'builder-image',
   };
+}
+
+function defaultAssetLibraryState(): BuilderAssetLibraryState {
+  return {
+    folders: DEFAULT_ASSET_LIBRARY_STATE.folders.map((folder) => ({ ...folder })),
+    tags: [...DEFAULT_ASSET_LIBRARY_STATE.tags],
+    assetFolderByFilename: {},
+    assetTagsByFilename: {},
+  };
+}
+
+function normalizeAssetLibraryState(input: unknown): BuilderAssetLibraryState {
+  const candidate = input && typeof input === 'object'
+    ? input as Partial<BuilderAssetLibraryState>
+    : {};
+  const folders = normalizeAssetFolders(candidate.folders);
+  const folderIds = new Set(folders.map((folder) => folder.id));
+  const tags = normalizeAssetTags(candidate.tags);
+  const tagIds = new Set(tags);
+  return {
+    folders,
+    tags,
+    assetFolderByFilename: normalizeAssetFolderAssignments(candidate.assetFolderByFilename, folderIds),
+    assetTagsByFilename: normalizeAssetTagAssignments(candidate.assetTagsByFilename, tagIds),
+  };
+}
+
+function normalizeAssetFolders(input: unknown): BuilderAssetFolder[] {
+  const folders = new Map<string, BuilderAssetFolder>();
+  for (const folder of DEFAULT_ASSET_LIBRARY_STATE.folders) {
+    folders.set(folder.id, { ...folder });
+  }
+  if (!Array.isArray(input)) return Array.from(folders.values());
+
+  for (const item of input.slice(0, 32)) {
+    if (!item || typeof item !== 'object') continue;
+    const record = item as { id?: unknown; name?: unknown };
+    const name = normalizeAssetLabel(record.name, 48);
+    const fallbackId = typeof record.id === 'string' ? record.id : name;
+    const id = normalizeAssetFolderId(fallbackId);
+    if (!id || !name || RESERVED_ASSET_FOLDER_IDS.has(id)) continue;
+    folders.set(id, { id, name });
+  }
+  return Array.from(folders.values());
+}
+
+function normalizeAssetTags(input: unknown): string[] {
+  const tags = new Set(DEFAULT_ASSET_LIBRARY_STATE.tags);
+  if (!Array.isArray(input)) return Array.from(tags);
+  for (const tag of input.slice(0, 64)) {
+    if (typeof tag !== 'string') continue;
+    const normalized = normalizeAssetTag(tag);
+    if (normalized) tags.add(normalized);
+  }
+  return Array.from(tags);
+}
+
+function normalizeAssetFolderAssignments(
+  input: unknown,
+  folderIds: Set<string>,
+): Record<string, string> {
+  if (!input || typeof input !== 'object') return {};
+  const next: Record<string, string> = {};
+  for (const [filename, folderId] of Object.entries(input as Record<string, unknown>)) {
+    const safeFilename = normalizeAssetPath([filename]);
+    if (!safeFilename || typeof folderId !== 'string' || !folderIds.has(folderId)) continue;
+    next[safeFilename] = folderId;
+  }
+  return next;
+}
+
+function normalizeAssetTagAssignments(
+  input: unknown,
+  tagIds: Set<string>,
+): Record<string, string[]> {
+  if (!input || typeof input !== 'object') return {};
+  const next: Record<string, string[]> = {};
+  for (const [filename, tags] of Object.entries(input as Record<string, unknown>)) {
+    const safeFilename = normalizeAssetPath([filename]);
+    if (!safeFilename || !Array.isArray(tags)) continue;
+    const safeTags = Array.from(new Set(tags.filter((tag): tag is string => (
+      typeof tag === 'string' && tagIds.has(tag)
+    ))));
+    if (safeTags.length > 0) next[safeFilename] = safeTags;
+  }
+  return next;
+}
+
+function normalizeAssetLabel(input: unknown, maxLength: number): string {
+  return typeof input === 'string'
+    ? input.trim().replace(/\s+/g, ' ').slice(0, maxLength)
+    : '';
+}
+
+function normalizeAssetFolderId(input: string): string {
+  return input
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 48);
+}
+
+function normalizeAssetTag(input: string): string {
+  return input
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]+/g, '')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 32);
 }
 
 function createAssetSlug(filename: string) {

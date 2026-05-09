@@ -2,9 +2,16 @@ import type { BuilderComponentInspectorProps } from '../define';
 import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
 import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
+import LinkPicker from '@/components/builder/editor/LinkPicker';
 import ThemeTextPresetPicker from '@/components/builder/editor/ThemeTextPresetPicker';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
+import {
+  BUILDER_RICH_TEXT_FORMAT,
+  type BuilderRichText,
+  type TipTapDocJson,
+} from '@/lib/builder/rich-text/types';
+import type { LinkValue } from '@/lib/builder/links';
 import {
   THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
@@ -13,11 +20,63 @@ import {
   resolveThemeColor,
   resolveThemeTextTypography,
 } from '@/lib/builder/site/theme';
+import styles from '@/components/builder/canvas/SandboxPage.module.css';
+
+function richTextFromDoc(plainText: string, doc: TipTapDocJson): BuilderRichText {
+  return {
+    format: BUILDER_RICH_TEXT_FORMAT,
+    doc,
+    plainText,
+  };
+}
+
+function quoteRichText(text: string): BuilderRichText {
+  return richTextFromDoc(text, {
+    type: 'doc',
+    content: [
+      {
+        type: 'blockquote',
+        content: [
+          {
+            type: 'paragraph',
+            content: text ? [{ type: 'text', text }] : undefined,
+          },
+        ],
+      },
+    ],
+  });
+}
+
+function bulletListRichText(text: string): BuilderRichText {
+  const lines = text
+    .split(/\r\n?|\n/g)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const items = lines.length > 0 ? lines : ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
+  return richTextFromDoc(items.join('\n'), {
+    type: 'doc',
+    content: [
+      {
+        type: 'bulletList',
+        content: items.map((item) => ({
+          type: 'listItem',
+          content: [
+            {
+              type: 'paragraph',
+              content: [{ type: 'text', text: item }],
+            },
+          ],
+        })),
+      },
+    ],
+  });
+}
 
 export default function TextInspector({
   node,
   onUpdate,
   disabled = false,
+  linkPickerContext,
 }: BuilderComponentInspectorProps) {
   const textNode = node as BuilderTextCanvasNode;
   const theme = useBuilderTheme();
@@ -57,6 +116,41 @@ export default function TextInspector({
           ⚠ 텍스트만 편집하면 서식이 사라집니다. 캔버스에서 직접 편집하세요.
         </small>
       </label>
+      <fieldset style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '8px 10px', margin: 0 }}>
+        <legend style={{ fontSize: '0.75rem', fontWeight: 600, color: '#334155', padding: '0 4px' }}>Rich text shortcuts</legend>
+        <div className={styles.inspectorActionRow}>
+          <button
+            type="button"
+            className={styles.actionButton}
+            disabled={disabled}
+            onClick={() => {
+              const richText = quoteRichText(textNode.content.text);
+              onUpdate({ richText, text: richText.plainText, quoteStyle: 'classic', themePreset: 'quote' });
+            }}
+          >
+            Quote
+          </button>
+          <button
+            type="button"
+            className={styles.actionButton}
+            disabled={disabled}
+            onClick={() => {
+              const richText = bulletListRichText(textNode.content.text);
+              onUpdate({ richText, text: richText.plainText, quoteStyle: 'none', columns: 1 });
+            }}
+          >
+            Bullet list
+          </button>
+          <button
+            type="button"
+            className={styles.actionButton}
+            disabled={disabled}
+            onClick={() => onUpdate({ richText: richTextFromPlainText(textNode.content.text) })}
+          >
+            Plain block
+          </button>
+        </div>
+      </fieldset>
       <label>
         <span>Font</span>
         <FontPicker
@@ -159,6 +253,166 @@ export default function TextInspector({
           <option value="capitalize">Capitalize</option>
         </select>
       </label>
+      <fieldset style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '8px 10px', margin: 0 }}>
+        <legend style={{ fontSize: '0.75rem', fontWeight: 600, color: '#334155', padding: '0 4px' }}>Text effects</legend>
+        <label>
+          <span>Columns</span>
+          <input
+            type="number"
+            min={1}
+            max={4}
+            value={textNode.content.columns ?? 1}
+            disabled={disabled}
+            onChange={(event) => onUpdate({ columns: Number(event.target.value) })}
+          />
+        </label>
+        <label>
+          <span>Column gap</span>
+          <input
+            type="number"
+            min={0}
+            max={96}
+            value={textNode.content.columnGap ?? 24}
+            disabled={disabled || (textNode.content.columns ?? 1) <= 1}
+            onChange={(event) => onUpdate({ columnGap: Number(event.target.value) })}
+          />
+        </label>
+        <label>
+          <span>Quote style</span>
+          <select
+            value={textNode.content.quoteStyle ?? 'none'}
+            disabled={disabled}
+            onChange={(event) => onUpdate({ quoteStyle: event.target.value })}
+          >
+            <option value="none">None</option>
+            <option value="classic">Classic rule</option>
+            <option value="pull">Pull quote</option>
+          </select>
+        </label>
+        <label>
+          <span>Marquee</span>
+          <input
+            type="checkbox"
+            checked={Boolean(textNode.content.marquee?.enabled)}
+            disabled={disabled}
+            onChange={(event) =>
+              onUpdate({
+                marquee: event.target.checked
+                  ? {
+                      enabled: true,
+                      speed: textNode.content.marquee?.speed ?? 22,
+                      direction: textNode.content.marquee?.direction ?? 'left',
+                    }
+                  : undefined,
+              })
+            }
+          />
+        </label>
+        {textNode.content.marquee?.enabled ? (
+          <>
+            <label>
+              <span>Marquee speed</span>
+              <input
+                type="number"
+                min={5}
+                max={120}
+                value={textNode.content.marquee.speed ?? 22}
+                disabled={disabled}
+                onChange={(event) =>
+                  onUpdate({
+                    marquee: {
+                      enabled: true,
+                      speed: Number(event.target.value),
+                      direction: textNode.content.marquee?.direction ?? 'left',
+                    },
+                  })
+                }
+              />
+            </label>
+            <label>
+              <span>Direction</span>
+              <select
+                value={textNode.content.marquee.direction ?? 'left'}
+                disabled={disabled}
+                onChange={(event) =>
+                  onUpdate({
+                    marquee: {
+                      enabled: true,
+                      speed: textNode.content.marquee?.speed ?? 22,
+                      direction: event.target.value,
+                    },
+                  })
+                }
+              >
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+              </select>
+            </label>
+          </>
+        ) : null}
+        <label>
+          <span>Text on path</span>
+          <input
+            type="checkbox"
+            checked={Boolean(textNode.content.textPath?.enabled)}
+            disabled={disabled}
+            onChange={(event) =>
+              onUpdate({
+                textPath: event.target.checked
+                  ? {
+                      enabled: true,
+                      curve: textNode.content.textPath?.curve ?? 'arc',
+                      baseline: textNode.content.textPath?.baseline ?? 62,
+                    }
+                  : undefined,
+              })
+            }
+          />
+        </label>
+        {textNode.content.textPath?.enabled ? (
+          <>
+            <label>
+              <span>Path curve</span>
+              <select
+                value={textNode.content.textPath.curve ?? 'arc'}
+                disabled={disabled}
+                onChange={(event) =>
+                  onUpdate({
+                    textPath: {
+                      enabled: true,
+                      curve: event.target.value,
+                      baseline: textNode.content.textPath?.baseline ?? 62,
+                    },
+                  })
+                }
+              >
+                <option value="arc">Arc</option>
+                <option value="wave">Wave</option>
+              </select>
+            </label>
+            <label>
+              <span>Path baseline</span>
+              <input
+                type="range"
+                min={20}
+                max={90}
+                value={textNode.content.textPath.baseline ?? 62}
+                disabled={disabled}
+                onChange={(event) =>
+                  onUpdate({
+                    textPath: {
+                      enabled: true,
+                      curve: textNode.content.textPath?.curve ?? 'arc',
+                      baseline: Number(event.target.value),
+                    },
+                  })
+                }
+              />
+              <span>{textNode.content.textPath.baseline ?? 62}</span>
+            </label>
+          </>
+        ) : null}
+      </fieldset>
       <label>
         <span>Background color</span>
         <ColorPicker
@@ -178,6 +432,17 @@ export default function TextInspector({
           </button>
         )}
       </label>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 4 }}>
+        <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#475569' }}>
+          Link
+        </span>
+        <LinkPicker
+          value={(textNode.content.link ?? null) as LinkValue | null}
+          onChange={(link) => onUpdate({ link: link ?? undefined })}
+          context={linkPickerContext}
+          disabled={disabled}
+        />
+      </div>
       <fieldset style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '8px 10px', margin: 0 }}>
         <legend style={{ fontSize: '0.75rem', fontWeight: 600, color: '#334155', padding: '0 4px' }}>Text shadow</legend>
         <label>

@@ -533,3 +533,35 @@ Created: 2026-05-09T12:52:13.760Z
   - 공개 루트 `/ko`는 legacy home이 우선 렌더된다. builder published runtime 검증은 생성/발행한 builder page slug로 수행했다.
   - Playwright Chromium은 macOS sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
 - 다음 마일스톤: M11
+
+## M11 — text widget pack
+
+- 시작/종료: 2026-05-10T03:58:00+09:00 / 2026-05-10T04:21:00+09:00
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — text node schema에 `columns`, `columnGap`, `quoteStyle`, `marquee`, `textPath`, `link`를 추가했다.
+  - `src/components/builder/canvas/elements/TextElement.tsx` — multi-column, quote/pullquote, marquee, SVG text-path, full-text link 렌더를 추가했다.
+  - `src/lib/builder/components/text/Inspector.tsx` — Rich text shortcut, column/quote/marquee/text-path controls, `LinkPicker` 연결을 추가했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Text widget pack` 섹션과 W46~W55 프리셋 10종 quick-add를 추가했다. 연속 quick-add는 겹치지 않도록 cascade offset을 적용한다.
+  - `src/components/builder/canvas/SandboxPage.module.css` — text widget preset 카드 UI를 editor token 기반으로 추가했다.
+  - `src/app/globals.css` — marquee animation runtime style을 추가했다.
+  - `src/lib/builder/canvas/__tests__/text-widgets.test.ts` — text widget schema normalization unit을 추가했다.
+  - `tests/builder-editor/text-widgets.playwright.ts` — 격리 page 생성 → + 패널 Text widget pack 10종 클릭 → canvas 렌더 → Inspector link 확인 → cleanup 시나리오를 추가했다.
+- 구현:
+  - W46 Heading은 기존 `heading` registry node를 재사용하고 H1 level + theme preset으로 생성한다.
+  - W47/W48은 기존 TipTap rich text document와 Inspector shortcut을 사용한다.
+  - W49는 SVG `<textPath>` 렌더로 arc/wave curve를 지원한다.
+  - W50은 `column-count`/gap 기반 multi-column text로 렌더한다.
+  - W51/W52는 blockquote/list rich text document와 quote style을 프리셋으로 생성한다.
+  - W53은 CSS animation 기반 marquee로 속도/방향을 Inspector에서 편집한다.
+  - W54는 SiteSettings theme text preset을 그대로 사용한다.
+  - W55는 shared `LinkPicker`와 `linkValueSchema`를 사용해 internal/anchor/external/mailto/tel 링크 정책을 따른다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/text-widgets.test.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/text-widgets.playwright.ts --workers=1` ✅
+- W 판정:
+  - W46/W47/W48/W49/W50/W51/W52/W53/W54/W55 green evidence 확보.
+- 리스크 / 알려진 문제:
+  - M11은 repo의 실제 component registry 구조를 따랐다. goal 문서의 canonical 예시(`site/types.ts`, `published-node-frame.ts`, `components/widgets/...`)와 파일명이 다르지만, canvas/published 렌더는 현재 registry-driven 구조에서 동일 노드로 동작한다.
+  - visual baseline 10개는 별도 screenshot 파일을 추가하지 않고, Playwright DOM/runtime evidence로 고정했다. M04 visual baseline suite에는 기존 editor states가 유지된다.
+- 다음 마일스톤: M12

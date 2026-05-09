@@ -1,13 +1,19 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { listComponents } from '@/lib/builder/components/registry';
 import type { BuilderComponentCategory, BuilderComponentDefinition } from '@/lib/builder/components/define';
 import {
   createCanvasNodeTemplate,
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
-import type { BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
+import type { BuilderCanvasNode, BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
+import {
+  BUILDER_RICH_TEXT_FORMAT,
+  type BuilderRichText,
+  type TipTapDocJson,
+} from '@/lib/builder/rich-text/types';
+import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import { insertSectionSnapshot } from '@/lib/builder/sections/insertSection';
 import type { BuiltInSectionTemplate } from '@/lib/builder/sections/templates';
 import { BuiltInSectionsPanel } from '@/components/builder/sections/BuiltInSectionsPanel';
@@ -61,12 +67,265 @@ const KIND_PRIORITY: Partial<Record<BuilderComponentCategory, string[]>> = {
 
 const FEATURED_KINDS: BuilderCanvasNodeKind[] = ['text', 'button', 'image', 'container', 'form'];
 
+type TextWidgetKind = Extract<BuilderCanvasNodeKind, 'text' | 'heading'>;
+
+interface TextWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: TextWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+function richTextFromDoc(plainText: string, doc: TipTapDocJson): BuilderRichText {
+  return {
+    format: BUILDER_RICH_TEXT_FORMAT,
+    doc,
+    plainText,
+  };
+}
+
+function inlineMarksRichText(): BuilderRichText {
+  const plainText = '굵게, 기울임, 밑줄, 링크가 섞인 텍스트';
+  return richTextFromDoc(plainText, {
+    type: 'doc',
+    content: [
+      {
+        type: 'paragraph',
+        content: [
+          { type: 'text', text: '굵게', marks: [{ type: 'bold' }] },
+          { type: 'text', text: ', ' },
+          { type: 'text', text: '기울임', marks: [{ type: 'italic' }] },
+          { type: 'text', text: ', ' },
+          { type: 'text', text: '밑줄', marks: [{ type: 'underline' }] },
+          { type: 'text', text: ', ' },
+          {
+            type: 'text',
+            text: '링크',
+            marks: [{ type: 'link', attrs: { href: '/ko/contact', target: '_self' } }],
+          },
+          { type: 'text', text: '가 섞인 텍스트' },
+        ],
+      },
+    ],
+  });
+}
+
+function quoteRichText(): BuilderRichText {
+  const plainText = '복잡한 사건일수록 전략은 더 단순하고 선명해야 합니다.';
+  return richTextFromDoc(plainText, {
+    type: 'doc',
+    content: [
+      {
+        type: 'blockquote',
+        content: [
+          {
+            type: 'paragraph',
+            content: [{ type: 'text', text: plainText }],
+          },
+        ],
+      },
+    ],
+  });
+}
+
+function listRichText(): BuilderRichText {
+  const items = ['상담 예약', '사건 검토', '전략 수립', '진행 상황 공유'];
+  return richTextFromDoc(items.join('\n'), {
+    type: 'doc',
+    content: [
+      {
+        type: 'bulletList',
+        content: items.map((item) => ({
+          type: 'listItem',
+          content: [
+            {
+              type: 'paragraph',
+              content: [{ type: 'text', text: item }],
+            },
+          ],
+        })),
+      },
+    ],
+  });
+}
+
+const TEXT_WIDGET_PRESETS: TextWidgetPreset[] = [
+  {
+    id: 'heading-h1-h6',
+    label: 'Heading H1-H6',
+    description: '레벨 전환 가능한 대제목',
+    icon: 'H1',
+    kind: 'heading',
+    width: 520,
+    height: 96,
+    content: {
+      text: '승소 전략을 설계하는 법률 파트너',
+      richText: richTextFromPlainText('승소 전략을 설계하는 법률 파트너'),
+      level: 1,
+      themePreset: 'title1',
+    },
+  },
+  {
+    id: 'rich-text',
+    label: 'Rich text',
+    description: '인라인 서식과 링크 포함',
+    icon: 'RT',
+    kind: 'text',
+    width: 420,
+    height: 96,
+    content: {
+      ...(() => {
+        const richText = inlineMarksRichText();
+        return { text: richText.plainText, richText };
+      })(),
+      fontSize: 18,
+      lineHeight: 1.55,
+    },
+  },
+  {
+    id: 'inspector-rte',
+    label: 'Inspector RTE',
+    description: '사이드 패널에서 서식 전환',
+    icon: '¶',
+    kind: 'text',
+    width: 360,
+    height: 120,
+    content: {
+      text: '본문을 선택하고 Inspector에서 컬럼, 인용, 링크, 마키를 조정하세요.',
+      richText: richTextFromPlainText('본문을 선택하고 Inspector에서 컬럼, 인용, 링크, 마키를 조정하세요.'),
+      themePreset: 'body',
+      lineHeight: 1.6,
+    },
+  },
+  {
+    id: 'text-on-path',
+    label: 'Text on path',
+    description: '아치/웨이브 곡선 텍스트',
+    icon: '⌒',
+    kind: 'text',
+    width: 520,
+    height: 120,
+    content: {
+      text: 'Hojung Law Group',
+      richText: richTextFromPlainText('Hojung Law Group'),
+      fontSize: 28,
+      fontWeight: 'bold',
+      align: 'center',
+      textPath: { enabled: true, curve: 'arc', baseline: 62 },
+    },
+  },
+  {
+    id: 'multi-column',
+    label: 'Multi-column',
+    description: '2~4단 긴 본문',
+    icon: '2C',
+    kind: 'text',
+    width: 520,
+    height: 180,
+    content: {
+      text: '칼럼 아카이브와 주요 서비스 설명처럼 긴 본문을 여러 단으로 나누어 읽기 쉽게 배치합니다. 사용자는 컬럼 수와 간격을 Inspector에서 바로 바꿀 수 있습니다.',
+      richText: richTextFromPlainText('칼럼 아카이브와 주요 서비스 설명처럼 긴 본문을 여러 단으로 나누어 읽기 쉽게 배치합니다. 사용자는 컬럼 수와 간격을 Inspector에서 바로 바꿀 수 있습니다.'),
+      columns: 2,
+      columnGap: 28,
+      fontSize: 16,
+      lineHeight: 1.65,
+    },
+  },
+  {
+    id: 'quote',
+    label: 'Quote',
+    description: '인용문 블록',
+    icon: '“”',
+    kind: 'text',
+    width: 460,
+    height: 132,
+    content: {
+      ...(() => {
+        const richText = quoteRichText();
+        return { text: richText.plainText, richText };
+      })(),
+      themePreset: 'quote',
+      quoteStyle: 'classic',
+    },
+  },
+  {
+    id: 'list',
+    label: 'List',
+    description: '불릿/단계형 목록',
+    icon: '•',
+    kind: 'text',
+    width: 360,
+    height: 150,
+    content: {
+      ...(() => {
+        const richText = listRichText();
+        return { text: richText.plainText, richText };
+      })(),
+      fontSize: 17,
+      lineHeight: 1.6,
+    },
+  },
+  {
+    id: 'marquee',
+    label: 'Marquee',
+    description: '움직이는 공지 텍스트',
+    icon: '↔',
+    kind: 'text',
+    width: 520,
+    height: 48,
+    content: {
+      text: '무료 상담 예약 가능 · 한국어/영어 상담 · 긴급 사건 대응',
+      richText: richTextFromPlainText('무료 상담 예약 가능 · 한국어/영어 상담 · 긴급 사건 대응'),
+      fontSize: 18,
+      fontWeight: 'medium',
+      marquee: { enabled: true, speed: 18, direction: 'left' },
+    },
+  },
+  {
+    id: 'typography-preset',
+    label: 'Typography preset',
+    description: '테마 프리셋 연결',
+    icon: 'Aa',
+    kind: 'text',
+    width: 420,
+    height: 86,
+    content: {
+      text: 'Theme preset text',
+      richText: richTextFromPlainText('Theme preset text'),
+      themePreset: 'title2',
+    },
+  },
+  {
+    id: 'link-text',
+    label: 'Link text',
+    description: '페이지/앵커/외부 링크',
+    icon: '🔗',
+    kind: 'text',
+    width: 280,
+    height: 52,
+    content: {
+      text: '상담 예약으로 이동',
+      richText: richTextFromPlainText('상담 예약으로 이동'),
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: { kind: 'token', token: 'primary' },
+      link: { href: '/ko/contact', target: '_self' },
+    },
+  },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
+  cascadeSeed = existingCount,
 ) {
   const seed = createCanvasNodeTemplate(kind, 0, 0, existingCount);
-  const cascadeOffset = (existingCount % 6) * 18;
+  const cascadeOffset = (cascadeSeed % 12) * 22;
   return {
     ...seed,
     rect: {
@@ -114,10 +373,22 @@ function componentMatchesSearch(component: BuilderComponentDefinition, query: st
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function textWidgetMatchesSearch(preset: TextWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'text widget',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
+  const addSequenceRef = useRef(0);
   const [categoryOpen, setCategoryOpen] = useState<Record<string, boolean>>({
     'built-in-sections': true,
     'saved-sections': true,
@@ -132,6 +403,11 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
       .map((kind) => components.find((component) => component.kind === kind))
       .filter((component): component is BuilderComponentDefinition => Boolean(component))
   ), [components]);
+
+  const visibleTextWidgetPresets = useMemo(
+    () => TEXT_WIDGET_PRESETS.filter((preset) => textWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -166,9 +442,38 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
-    addNode(resolveCenteredNode(kind, nodes.length));
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    addNode(resolveCenteredNode(kind, nodes.length + sequence, sequence));
+    setDraftSaveState('saving');
+  }
+
+  function handleAddTextWidgetPreset(preset: TextWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
+    } as BuilderCanvasNode;
+
+    addNode(node);
     setDraftSaveState('saving');
   }
 
@@ -186,7 +491,7 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         <div>
           <span>Catalog</span>
           <strong>
-            {normalizedQuery ? `${visibleComponentCount}/${components.length}` : components.length} components
+            {normalizedQuery ? `${visibleCatalogCount}/${totalCatalogCount}` : totalCatalogCount} items
           </strong>
         </div>
         <button
@@ -232,7 +537,57 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
 
         {normalizedQuery ? (
           <div className={styles.catalogResultMeta} aria-live="polite">
-            Showing {visibleComponentCount} result{visibleComponentCount === 1 ? '' : 's'} for “{query.trim()}”
+            Showing {visibleCatalogCount} result{visibleCatalogCount === 1 ? '' : 's'} for “{query.trim()}”
+          </div>
+        ) : null}
+
+        {visibleTextWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['text-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'text-widgets': !(current['text-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>T</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Text widget pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    H1-H6, rich text, path, columns, quote, list, marquee · {visibleTextWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['text-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['text-widgets'] ?? true) ? (
+              <div className={styles.textWidgetGrid}>
+                {visibleTextWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.textWidgetPresetButton}
+                    data-builder-text-widget-preset={preset.id}
+                    onClick={() => handleAddTextWidgetPreset(preset)}
+                  >
+                    <span className={styles.textWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.textWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
           </div>
         ) : null}
 
@@ -370,7 +725,7 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
           );
         })}
 
-        {normalizedQuery && visibleComponentCount === 0 ? (
+        {normalizedQuery && visibleCatalogCount === 0 ? (
           <div className={styles.catalogEmptyState}>
             <strong>No matching elements</strong>
             <span>Try text, image, button, form, section.</span>

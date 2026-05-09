@@ -3073,3 +3073,21 @@ Prompt-to-artifact 체크:
 - W33/W40/W41/W42/W43/W44/W45는 M10 evidence 확보로 green 처리했다.
 - 공개 루트 `/ko`는 legacy home이 우선 렌더된다. builder published runtime 검증은 생성/발행한 builder page slug로 수행했다.
 - Playwright Chromium은 macOS sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
+
+## 2026-05-10 Codex /goal Wix full builder M11 text widget pack
+
+범위:
+- M11 `Text 위젯 팩`을 완료했다.
+- + 패널 Catalog에 `Text widget pack` 섹션을 추가하고 W46~W55 프리셋 10종을 제공한다.
+- Text schema와 renderer에 column, quote, marquee, SVG text-path, full-text link를 추가했다.
+- Text Inspector에 rich text shortcut, columns, quote style, marquee speed/direction, text-path curve/baseline, `LinkPicker`를 연결했다.
+- 연속 quick-add 시 새 노드가 같은 중앙 좌표에 겹치지 않도록 cascade offset을 적용했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/text-widgets.test.ts` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/text-widgets.playwright.ts --workers=1` ✅
+
+메모:
+- W46/W47/W48/W49/W50/W51/W52/W53/W54/W55는 M11 evidence 확보로 green 처리했다.
+- 구현은 현재 repo의 registry-driven 구조를 따른다. 별도 kind 10개를 늘리기보다 기존 `text`/`heading` 노드에 Wix식 text-family controls/presets을 추가했다.

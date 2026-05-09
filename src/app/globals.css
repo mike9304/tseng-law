@@ -19240,6 +19240,24 @@ body:has([data-builder-published-page='true']) {
   margin-block-start: clamp(56px, 7vw, 96px);
 }
 
+.builder-text-marquee {
+  display: inline-block;
+  min-width: max-content;
+  padding-inline-start: 100%;
+  animation: builderTextMarquee var(--builder-marquee-duration, 22s) linear infinite;
+  will-change: transform;
+}
+
+@keyframes builderTextMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 @media (hover: hover) {
   .builder-pub-node[data-builder-hover='true'] {
     cursor: pointer;

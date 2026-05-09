@@ -2550,3 +2550,13 @@ Prompt-to-artifact 체크:
 메모:
 - Done when 20의 문서 업데이트는 이제 `SESSION.md`와 외부 Wix 체크포인트 모두 반영됐다.
 - 남은 complete blocker는 Done when 17의 사용자 직접 5분 자유 사용/Wix 체감 판정이다.
+
+## 2026-05-09 Codex /goal G-Editor manual QA checklist refresh
+
+범위:
+- `G-EDITOR-MANUAL-QA.md`를 최신 current HEAD 자동 gate와 체크포인트 상태에 맞춰 갱신했다.
+- Basic Auth, 자동 증거, W-code별 5분 자유 검증 항목, 사용자 판정 기록란을 추가했다.
+- goal complete blocker가 사용자 직접 QA임을 문서에서 바로 확인할 수 있게 했다.
+
+검증:
+- `git diff --check` ✅

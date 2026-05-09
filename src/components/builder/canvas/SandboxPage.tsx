@@ -795,6 +795,19 @@ export default function SandboxPage({
     pushToast(`No builder page for ${normalizedHref}`, 'error');
   }, [handleSelectPage, locale, pushToast, sitePagesState]);
 
+  const handleEditorFooterLinkActivation = useCallback((event: {
+    target: EventTarget | null;
+    preventDefault: () => void;
+    stopPropagation: () => void;
+  }) => {
+    const target = event.target;
+    if (!(target instanceof Element) || !target.closest('a[href]')) return;
+    event.preventDefault();
+    event.stopPropagation();
+    setActiveDrawer('nav');
+    pushToast('Footer links stay in the editor. Use Navigation to edit them.', 'error');
+  }, [pushToast]);
+
   const viewportWidth = VIEWPORT_WIDTHS[viewport];
 
   const toggleDrawer = useCallback((panel: SandboxDrawerPanel) => {
@@ -1370,7 +1383,16 @@ export default function SandboxPage({
             />
           </div>
           {siteName ? (
-            <div style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderTop: '1px solid #e5e7eb' }}>
+            <div
+              style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderTop: '1px solid #e5e7eb' }}
+              onClick={handleEditorFooterLinkActivation}
+              onAuxClick={handleEditorFooterLinkActivation}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  handleEditorFooterLinkActivation(event);
+                }
+              }}
+            >
               <SiteFooter
                 siteName={siteName}
                 settings={siteSettingsState}

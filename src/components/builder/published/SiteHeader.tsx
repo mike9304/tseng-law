@@ -222,6 +222,13 @@ export default function SiteHeader({
     return true;
   }
 
+  function handleBuilderLocaleClick(event: React.MouseEvent<HTMLAnchorElement>) {
+    if (!builderEditable) return;
+    event.preventDefault();
+    event.stopPropagation();
+    closeMegaMenuNow();
+  }
+
   function handleBuilderNavClick(event: React.MouseEvent<HTMLAnchorElement>, item: HeaderNavItem) {
     if (!builderEditable || !item.source) return false;
     event.preventDefault();
@@ -265,9 +272,30 @@ export default function SiteHeader({
                 </a>
               ))}
               <div className="utility-lang">
-                <Link href={localeSwitchPath('ko', currentSlug)} aria-current={locale === 'ko' ? 'page' : undefined}>KO</Link>
-                <Link href={localeSwitchPath('zh-hant', currentSlug)} aria-current={locale === 'zh-hant' ? 'page' : undefined}>中文</Link>
-                <Link href={localeSwitchPath('en', currentSlug)} aria-current={locale === 'en' ? 'page' : undefined}>EN</Link>
+                <Link
+                  href={localeSwitchPath('ko', currentSlug)}
+                  aria-current={locale === 'ko' ? 'page' : undefined}
+                  onClick={handleBuilderLocaleClick}
+                  onAuxClick={handleBuilderLocaleClick}
+                >
+                  KO
+                </Link>
+                <Link
+                  href={localeSwitchPath('zh-hant', currentSlug)}
+                  aria-current={locale === 'zh-hant' ? 'page' : undefined}
+                  onClick={handleBuilderLocaleClick}
+                  onAuxClick={handleBuilderLocaleClick}
+                >
+                  中文
+                </Link>
+                <Link
+                  href={localeSwitchPath('en', currentSlug)}
+                  aria-current={locale === 'en' ? 'page' : undefined}
+                  onClick={handleBuilderLocaleClick}
+                  onAuxClick={handleBuilderLocaleClick}
+                >
+                  EN
+                </Link>
               </div>
             </nav>
           </div>

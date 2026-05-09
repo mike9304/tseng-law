@@ -2588,3 +2588,16 @@ Prompt-to-artifact 체크:
 - `npm run typecheck` ✅
 - `npm run lint` ✅ (기존 `<img>` warnings only)
 - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅
+
+## 2026-05-09 Codex /goal G-Editor public chrome click safety
+
+범위:
+- editor preview 안의 public header 언어 링크(KO/中文/EN)가 Next route로 `/ko/admin-builder`를 이탈하지 않도록 `builderEditable` 모드에서 기본 이동을 차단했다.
+- editor preview footer 링크도 shell 이탈을 막고 Navigation drawer + toast로 안내하도록 처리했다.
+- `chrome-click-safety.playwright.ts`를 추가해 header locale link와 footer link 클릭 후 URL/canvas 유지 여부를 검증한다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/chrome-click-safety.playwright.ts --workers=1` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅

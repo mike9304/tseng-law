@@ -323,7 +323,7 @@ export function SliderRow({
     <div className="insp-slider-row">
       <input
         type="range"
-        aria-label={ariaLabel}
+        aria-label={ariaLabel ?? 'Adjust value'}
         disabled={disabled}
         min={min}
         max={max}
@@ -354,7 +354,8 @@ export function ToggleRow({ checked, onChange, mixed, disabled, ariaLabel }: Tog
       className="insp-toggle-row"
       role="switch"
       aria-checked={checked}
-      aria-label={ariaLabel}
+      aria-label={ariaLabel ?? (checked ? 'Disable setting' : 'Enable setting')}
+      title={ariaLabel ?? (checked ? 'Disable setting' : 'Enable setting')}
       disabled={disabled}
       data-checked={checked ? 'true' : undefined}
       onClick={() => onChange(!checked)}

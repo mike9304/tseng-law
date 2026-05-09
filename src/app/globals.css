@@ -3017,7 +3017,7 @@ html.has-cyber-cursor .button {
 .insights-readtime {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--text-caption);
+  color: var(--text-secondary);
 }
 
 .insights-featured-title {
@@ -3084,7 +3084,7 @@ html.has-cyber-cursor .button {
 .insights-page-indicator {
   flex: 1;
   text-align: center;
-  color: var(--text-caption);
+  color: var(--text-secondary);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
 }

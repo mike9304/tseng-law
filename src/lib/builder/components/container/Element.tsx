@@ -13,6 +13,24 @@ import {
   DEFAULT_GRID,
 } from '@/lib/builder/canvas/layout-modes';
 
+function isDarkSolidColor(value: string): boolean {
+  const hex = value.trim().match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i)?.[1];
+  if (!hex) return false;
+  const expanded = hex.length === 3
+    ? hex.split('').map((char) => `${char}${char}`).join('')
+    : hex;
+  const channel = (index: number) => Number.parseInt(expanded.slice(index, index + 2), 16) / 255;
+  const linearize = (channelValue: number) => (
+    channelValue <= 0.03928
+      ? channelValue / 12.92
+      : ((channelValue + 0.055) / 1.055) ** 2.4
+  );
+  const luminance = 0.2126 * linearize(channel(0))
+    + 0.7152 * linearize(channel(2))
+    + 0.0722 * linearize(channel(4));
+  return luminance < 0.22;
+}
+
 export default function ContainerElement({
   node,
   theme,
@@ -34,10 +52,24 @@ export default function ContainerElement({
   const lightboxSlug = link?.href.startsWith('lightbox:')
     ? link.href.slice('lightbox:'.length).trim()
     : '';
+  const usesCardVariant = Boolean(content.variant || content.cardStyle);
   const variantStyle = resolveCardVariantStyle(
     content.variant ?? legacyCardStyleToVariant(content.cardStyle),
     theme,
   );
+  const resolvedBackground = usesCardVariant ? variantStyle.background : content.background;
+  const resolvedBorder = usesCardVariant
+    ? variantStyle.border
+    : content.borderWidth > 0
+      ? `${content.borderWidth}px ${content.borderStyle} ${content.borderColor}`
+      : 'none';
+  const resolvedBorderRadius = usesCardVariant ? variantStyle.borderRadius : content.borderRadius;
+  const darkSurfaceVars = isDarkSolidColor(content.background)
+    ? {
+        '--builder-button-outline-color': '#f8fafc',
+        '--builder-button-outline-border-color': 'rgba(248, 250, 252, 0.86)',
+      } as React.CSSProperties
+    : {};
 
   let layoutCSS: Record<string, string> = {};
   if (layoutMode === 'flex') {
@@ -81,6 +113,7 @@ export default function ContainerElement({
         position: 'relative' as const,
         pointerEvents: mode === 'edit' && hasChildren ? 'none' as const : undefined,
         ...(layoutMode !== 'absolute' ? layoutCSS : {}),
+        ...darkSurfaceVars,
       },
     };
     if (Tag === 'form') {
@@ -106,16 +139,17 @@ export default function ContainerElement({
         width: '100%',
         height: '100%',
         padding: `${content.padding}px`,
-        borderRadius: `${variantStyle.borderRadius}px`,
-        border: variantStyle.border,
-        background: variantStyle.background,
-        boxShadow: variantStyle.boxShadow,
-        backdropFilter: variantStyle.backdropFilter,
-        WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
+        borderRadius: `${resolvedBorderRadius}px`,
+        border: resolvedBorder,
+        background: resolvedBackground,
+        boxShadow: usesCardVariant ? variantStyle.boxShadow : undefined,
+        backdropFilter: usesCardVariant ? variantStyle.backdropFilter : undefined,
+        WebkitBackdropFilter: usesCardVariant ? variantStyle.WebkitBackdropFilter : undefined,
         boxSizing: 'border-box',
         position: 'relative',
         pointerEvents: mode === 'edit' && hasChildren ? 'none' : undefined,
         ...layoutCSS,
+        ...darkSurfaceVars,
       }}
     >
       {children}

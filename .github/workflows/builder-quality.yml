@@ -1,0 +1,44 @@
+name: Builder Quality
+
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'package*.json'
+      - 'playwright.config.ts'
+      - 'lighthouserc.json'
+  workflow_dispatch:
+
+jobs:
+  builder-quality:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SENTRY_DSN: ''
+      BUILDER_ALLOWED_ORIGINS: 'http://localhost:3000,https://tseng-law.com'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run test:unit
+      - run: npm run security:builder-routes
+      - run: npm run build
+      - name: Builder editor smoke across browsers
+        run: |
+          npm run start -- -p 3000 > /tmp/builder-quality-next.log 2>&1 &
+          for i in {1..60}; do
+            if curl -fsS -u admin:local-review-2026! http://localhost:3000/ko/admin-builder > /dev/null; then
+              break
+            fi
+            sleep 2
+          done
+          curl -fsS -u admin:local-review-2026! http://localhost:3000/ko/admin-builder > /dev/null
+          BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --project=chromium-builder --project=webkit-builder --project=firefox-builder --workers=1
+      - run: npm run lhci

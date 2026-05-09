@@ -35,6 +35,7 @@ export default function CanvasZoomDock({
       <input
         className={styles.zoomSlider}
         type="range"
+        aria-label="Canvas zoom"
         min={25}
         max={400}
         step={5}

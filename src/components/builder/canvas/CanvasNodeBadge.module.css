@@ -33,7 +33,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: lowercase;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 .nodeBadge strong {
@@ -42,7 +42,7 @@
   overflow: hidden;
   font-weight: 700;
   font-size: 0.66rem;
-  opacity: 0.95;
+  opacity: 1;
   text-overflow: ellipsis;
 }
 

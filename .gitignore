@@ -4,6 +4,7 @@ node_modules/
 # next.js
 .next/
 .next-g-editor/
+.next-m*/
 out/
 
 # env files (민감정보)
@@ -21,6 +22,7 @@ npm-debug.log*
 # test artifacts
 test-results/
 playwright-report/
+.lighthouseci/
 
 # data
 data/reviews.json

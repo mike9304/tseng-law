@@ -181,7 +181,7 @@ const actionDotsStyle: React.CSSProperties = {
 
 const slugStyle: React.CSSProperties = {
   fontSize: '0.7rem',
-  color: '#94a3b8',
+  color: '#475569',
   marginLeft: 'auto',
   flexShrink: 0,
 };

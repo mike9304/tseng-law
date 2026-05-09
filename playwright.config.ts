@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests/builder-editor',
@@ -6,7 +6,12 @@ export default defineConfig({
   timeout: 60_000,
   expect: {
     timeout: 10_000,
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.005,
+      threshold: 0.2,
+    },
   },
+  snapshotPathTemplate: 'tests/visual/baseline{/projectName}/{testFilePath}/{arg}{ext}',
   use: {
     baseURL: process.env.BASE_URL ?? 'http://127.0.0.1:3000',
     httpCredentials: {
@@ -17,4 +22,20 @@ export default defineConfig({
     actionTimeout: 15_000,
     trace: 'retain-on-failure',
   },
+  projects: [
+    {
+      name: 'chromium-builder',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'webkit-builder',
+      testMatch: '**/admin-builder.playwright.ts',
+      use: { ...devices['Desktop Safari'] },
+    },
+    {
+      name: 'firefox-builder',
+      testMatch: '**/admin-builder.playwright.ts',
+      use: { ...devices['Desktop Firefox'] },
+    },
+  ],
 });

@@ -153,8 +153,9 @@
   align-items: center;
   padding: 0 6px;
   border-left: 1px solid var(--insp-input-border);
-  color: #94a3b8;
+  color: var(--insp-label);
   font-size: 10px;
+  font-weight: 700;
 }
 
 .insp-segmented-control {

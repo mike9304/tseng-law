@@ -242,9 +242,9 @@ function InspectorEmptyState() {
         <circle cx="28" cy="28" r="3" fill="#94a3b8" />
       </svg>
       <p style={{ margin: 0, color: '#0f172a', fontSize: 13, fontWeight: 700 }}>Select an element to edit</p>
-      <p style={{ margin: 0, color: '#64748b', fontSize: 11, lineHeight: 1.5 }}>
+      <p style={{ margin: 0, color: '#475569', fontSize: 11, lineHeight: 1.5 }}>
         Click any element on the canvas, or use the Layers panel.<br />
-        Press <kbd>Esc</kbd> to deselect.
+        Press <kbd style={{ color: '#0f172a', fontWeight: 800 }}>Esc</kbd> to deselect.
       </p>
     </div>
   );

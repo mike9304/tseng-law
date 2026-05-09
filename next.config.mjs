@@ -1,3 +1,5 @@
+import { withSentryConfig } from '@sentry/nextjs';
+
 const locales = ['ko', 'zh-hant', 'en'];
 const distDir = process.env.NEXT_DIST_DIR;
 
@@ -110,4 +112,12 @@ const nextConfig = {
   }
 };
 
-export default nextConfig;
+const sentryOptions = {
+  silent: !process.env.CI,
+  disableLogger: true,
+  widenClientFileUpload: false,
+};
+
+export default process.env.NEXT_PUBLIC_SENTRY_DSN
+  ? withSentryConfig(nextConfig, sentryOptions)
+  : nextConfig;

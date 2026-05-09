@@ -603,7 +603,7 @@ export default function SiteSettingsModal({
 
         <div style={{ ...formStyle, padding: 24 }}>
           {loading ? (
-            <div style={{ padding: 16, textAlign: 'center', color: '#94a3b8', fontSize: '0.85rem' }}>
+            <div style={{ padding: 16, textAlign: 'center', color: '#475569', fontSize: '0.85rem' }}>
               로딩 중...
             </div>
           ) : activeTab === 'general' ? (

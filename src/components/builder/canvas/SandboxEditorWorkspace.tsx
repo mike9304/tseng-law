@@ -166,8 +166,8 @@ export default function SandboxEditorWorkspace({
             className={styles.globalHeaderRegion}
             data-editing={activeDrawer === 'nav' ? 'true' : undefined}
             style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderBottom: '1px solid #e5e7eb' }}
-            role="button"
-            tabIndex={0}
+            role="group"
+            aria-label="Editable site header"
             title="Edit header navigation"
             onClickCapture={(event) => {
               const target = event.target as HTMLElement;
@@ -179,13 +179,6 @@ export default function SandboxEditorWorkspace({
               event.preventDefault();
               event.stopPropagation();
               onSetActiveDrawer('nav');
-            }}
-            onClick={() => onSetActiveDrawer('nav')}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                onSetActiveDrawer('nav');
-              }
             }}
           >
             <div className={styles.globalRegionBadge}>

@@ -201,39 +201,35 @@ export function CanvasNodeQuickPanels({
             event.stopPropagation();
           }}
         >
-          <button
-            type="button"
+          <a
+            href={`/${currentBuilderLocale()}/admin-builder/columns`}
             className={styles.nodeQuickActionPrimary}
             onClick={(event) => {
-              event.preventDefault();
               event.stopPropagation();
-              window.location.href = `/${currentBuilderLocale()}/admin-builder/columns`;
             }}
           >
             글 추가/수정
-          </button>
-          <button
-            type="button"
+          </a>
+          <a
+            href={`/${currentBuilderLocale()}/admin-builder/columns?new=1`}
             className={styles.nodeQuickAction}
             onClick={(event) => {
-              event.preventDefault();
               event.stopPropagation();
-              window.location.href = `/${currentBuilderLocale()}/admin-builder/columns?new=1`;
             }}
           >
             새 글
-          </button>
-          <button
-            type="button"
+          </a>
+          <a
+            href={`/${currentBuilderLocale()}/columns`}
+            target="_blank"
+            rel="noreferrer"
             className={styles.nodeQuickAction}
             onClick={(event) => {
-              event.preventDefault();
               event.stopPropagation();
-              window.open(`/${currentBuilderLocale()}/columns`, '_blank', 'noopener,noreferrer');
             }}
           >
             공개 보기
-          </button>
+          </a>
         </div>
       ) : null}
 

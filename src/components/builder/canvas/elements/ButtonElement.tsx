@@ -50,6 +50,16 @@ export default function ButtonElement({
 
   const variantStyles = resolveButtonVariantStyles(node.content.style, s, theme);
   const suffix = getButtonVariantSuffix(node.content.style);
+  const styleKey = String(node.content.style ?? '');
+  const isOutlineVariant = styleKey === 'outline'
+    || styleKey === 'primary-outline'
+    || styleKey === 'secondary-outline';
+  const resolvedButtonColor = isOutlineVariant
+    ? `var(--builder-button-outline-color, ${variantStyles.color})`
+    : variantStyles.color;
+  const resolvedButtonBorderColor = isOutlineVariant
+    ? `var(--builder-button-outline-border-color, ${variantStyles.borderColor})`
+    : variantStyles.borderColor;
   const Tag = (as ?? (href ? 'a' : 'button')) as keyof JSX.IntrinsicElements;
   const elementProps: Record<string, unknown> = {
     className: 'builder-button-element builder-widget-focusable',
@@ -64,9 +74,9 @@ export default function ButtonElement({
       boxSizing: 'border-box',
       borderRadius: s.borderRadius,
       ...variantStyles.backgroundStyle,
-      color: variantStyles.color,
+      color: resolvedButtonColor,
       border: variantStyles.border,
-      borderColor: variantStyles.borderColor,
+      borderColor: resolvedButtonBorderColor,
       boxShadow: variantStyles.boxShadow,
       textDecoration: variantStyles.textDecoration,
       fontWeight: variantStyles.fontWeight,

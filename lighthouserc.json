@@ -1,0 +1,51 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "http://localhost:3002/ko/admin-builder",
+        "http://localhost:3002/ko"
+      ],
+      "startServerCommand": "npm run start -- -p 3002",
+      "startServerReadyPattern": "Ready",
+      "numberOfRuns": 1,
+      "settings": {
+        "preset": "desktop",
+        "extraHeaders": {
+          "Authorization": "Basic YWRtaW46bG9jYWwtcmV2aWV3LTIwMjYh"
+        }
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": [
+          "warn",
+          {
+            "minScore": 0.8
+          }
+        ],
+        "categories:accessibility": [
+          "error",
+          {
+            "minScore": 0.95
+          }
+        ],
+        "categories:best-practices": [
+          "warn",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:seo": [
+          "warn",
+          {
+            "minScore": 0.9
+          }
+        ]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./.lighthouseci"
+    }
+  }
+}

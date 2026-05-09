@@ -4,7 +4,9 @@ export async function openBuilder(page: Page, path = '/ko/admin-builder'): Promi
   await page.goto(path, { waitUntil: 'domcontentloaded' });
   await stabilizeEditorVisuals(page);
   await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible({ timeout: 30_000 });
-  await expect(page.locator('[data-editor-shell]')).toBeVisible();
+  const shell = page.locator('[data-editor-shell]').first();
+  await expect(shell).toBeVisible();
+  await expect(shell).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
 }
 
 export async function stabilizeEditorVisuals(page: Page): Promise<void> {

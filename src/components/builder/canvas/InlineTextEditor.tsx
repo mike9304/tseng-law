@@ -191,6 +191,7 @@ export default function InlineTextEditor({
   const applyLink = useCallback(
     (value: LinkValue | null) => {
       if (!editor) return;
+      handleSave();
       setLinkPickerValue(value);
       if (!value) {
         editor.chain().focus().extendMarkRange('link').unsetLink().run();
@@ -208,7 +209,15 @@ export default function InlineTextEditor({
         })
         .run();
     },
-    [editor],
+    [editor, handleSave],
+  );
+
+  const runToolbarCommand = useCallback(
+    (command: () => void) => {
+      handleSave();
+      command();
+    },
+    [handleSave],
   );
 
   const toolbarPlacement = toolbarBelow ? 'below' : 'above';
@@ -249,7 +258,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('bold')}
             className={toolbarButtonClassName(editor.isActive('bold'))}
             title="굵게 (Cmd+B)"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleBold().run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleBold().run()); }}
           >
             B
           </button>
@@ -259,7 +268,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('italic')}
             className={toolbarButtonClassName(editor.isActive('italic'), styles.inlineTextToolbarButtonItalic)}
             title="기울임 (Cmd+I)"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleItalic().run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleItalic().run()); }}
           >
             I
           </button>
@@ -269,7 +278,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('underline')}
             className={toolbarButtonClassName(editor.isActive('underline'), styles.inlineTextToolbarButtonUnderline)}
             title="밑줄 (Cmd+U)"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleUnderline().run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleUnderline().run()); }}
           >
             U
           </button>
@@ -279,7 +288,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('strike')}
             className={toolbarButtonClassName(editor.isActive('strike'), styles.inlineTextToolbarButtonStrike)}
             title="취소선"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleStrike().run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleStrike().run()); }}
           >
             S
           </button>
@@ -293,7 +302,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('heading', { level: 1 })}
             className={toolbarButtonClassName(editor.isActive('heading', { level: 1 }))}
             title="제목 1"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleHeading({ level: 1 }).run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleHeading({ level: 1 }).run()); }}
           >
             H1
           </button>
@@ -303,7 +312,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('heading', { level: 2 })}
             className={toolbarButtonClassName(editor.isActive('heading', { level: 2 }))}
             title="제목 2"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleHeading({ level: 2 }).run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleHeading({ level: 2 }).run()); }}
           >
             H2
           </button>
@@ -313,7 +322,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('heading', { level: 3 })}
             className={toolbarButtonClassName(editor.isActive('heading', { level: 3 }))}
             title="제목 3"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleHeading({ level: 3 }).run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleHeading({ level: 3 }).run()); }}
           >
             H3
           </button>
@@ -327,7 +336,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('bulletList')}
             className={toolbarButtonClassName(editor.isActive('bulletList'))}
             title="글머리 기호 목록"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleBulletList().run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleBulletList().run()); }}
           >
             &bull;
           </button>
@@ -337,7 +346,7 @@ export default function InlineTextEditor({
             aria-pressed={editor.isActive('orderedList')}
             className={toolbarButtonClassName(editor.isActive('orderedList'))}
             title="번호 매기기 목록"
-            onMouseDown={(e) => { e.preventDefault(); editor.chain().focus().toggleOrderedList().run(); }}
+            onMouseDown={(e) => { e.preventDefault(); runToolbarCommand(() => editor.chain().focus().toggleOrderedList().run()); }}
           >
             1.
           </button>

@@ -1309,7 +1309,8 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
       await expect(page.getByText(/Loaded page:/).last()).toBeVisible({ timeout: 20_000 });
 
       const canvas = page.getByRole('application', { name: 'Canvas editor' });
-      await expect(canvas.getByText('요소를 드래그해서 추가하세요')).toBeVisible();
+      await expect(canvas.getByText('페이지가 비어있습니다.')).toBeVisible();
+      await expect(canvas.getByText('좌측 + 패널에서 텍스트, 이미지, 섹션을 추가하세요.')).toBeVisible();
       await expect(canvas.locator('[data-node-id]:visible')).toHaveCount(0);
 
       pageId = await findPageIdBySlug(page, slug);

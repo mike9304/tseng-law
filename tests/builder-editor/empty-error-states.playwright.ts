@@ -149,6 +149,7 @@ async function deleteBuilderPage(page: Page, pageId: string, slug: string): Prom
 
 async function triggerDraftAutosave(page: Page, textId: string): Promise<void> {
   const { editorShell, editable } = await openInlineEditor(page, textId);
+  await editable.press('ControlOrMeta+A');
   await editable.fill(`M05 autosave ${Date.now().toString(36)}`);
   await page.keyboard.press('Escape');
   await expect(editorShell).toBeHidden();
@@ -322,6 +323,7 @@ test.describe('/ko/admin-builder M05 empty and error states', () => {
       await page.setExtraHTTPHeaders(mutationHeaders(slug));
       await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&m05=${token}`);
       const { editorShell, editable } = await openInlineEditor(page, textId);
+      await editable.press('ControlOrMeta+A');
       await editable.fill(nextText);
       await editable.evaluate((element) => {
         element.dispatchEvent(new CompositionEvent('compositionstart', { bubbles: true, data: '외부' }));

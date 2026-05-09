@@ -178,6 +178,7 @@ export default function SandboxPage({
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
+  const [clientReady, setClientReady] = useState(false);
   const [publicChromePanel, setPublicChromePanel] = useState<PublicChromePanel>(null);
   const [activeNavItemId, setActiveNavItemId] = useState<string | null>(null);
   const [focusedNavItemId, setFocusedNavItemId] = useState<string | null>(null);
@@ -191,6 +192,10 @@ export default function SandboxPage({
   const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
   const publicChromeCopy = useMemo(() => getPublicChromeCopy(locale), [locale]);
+
+  useEffect(() => {
+    setClientReady(true);
+  }, []);
 
   useEffect(() => {
     const pageDocument = window.document;
@@ -581,6 +586,7 @@ export default function SandboxPage({
       <main
         className={styles.shell}
         data-editor-shell
+        data-editor-ready={clientReady ? 'true' : 'false'}
         data-editor-density={editorDensity}
         data-editor-theme={editorThemeMode}
       >

@@ -2910,3 +2910,26 @@ Prompt-to-artifact 체크:
 메모:
 - sandbox 내부 curl은 3010 dev server에 연결하지 못했지만, Next dev 로그와 산출물 분리는 확인했다.
 - 다음 마일스톤은 M07 모바일 스키마 결정 + 잠금이다. 여기서 responsive 필드 정책을 확정한 뒤 P2로 넘어가야 한다.
+
+## 2026-05-10 Codex /goal G-Editor post-M06 gate stabilization
+
+범위:
+- post-M06 자동 gate 재실행 중 발견된 editor hydration/test race와 inline text undo grouping을 안정화했다.
+- `SandboxPage`에 `data-editor-ready` hydration flag를 추가하고 Playwright helper가 client-ready 이후 클릭을 시작하게 했다.
+- blank page empty canvas 문구 검증을 실제 M05 empty state와 맞췄다.
+- IME/inline autosave 테스트가 기존 ProseMirror 내용을 append하지 않도록 전체 선택 후 입력하게 보강했다.
+- inline text toolbar 명령은 서식 적용 직전에 현재 텍스트를 먼저 저장해, 텍스트 변경과 Bold/Italic/Underline/Strike/Heading/List/Link 변경이 undo stack에서 별도 단계로 남게 했다.
+
+검증:
+- `npm run typecheck` ✅
+- `git diff --check` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/inline-text-editor.playwright.ts --workers=1` ✅ (1 passed)
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --project=chromium-builder --workers=1` ✅ (42 passed / 4.3m)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (29 files / 755 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning only)
+
+메모:
+- 새 self-check subagent는 현재 thread agent limit 때문에 생성하지 못했다. 동일 범위는 메인 세션에서 full builder Chromium suite와 전체 gate로 대체 검증했다.
+- 체크포인트 판정 규칙상 W02/W03/W04/W06/W07/W08/W10/W11/W18~W23/W26~W30은 자동 검증 증거가 최신화됐지만 사용자 직접 5분 QA 전까지 green 승격하지 않는다.

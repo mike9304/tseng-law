@@ -51,7 +51,7 @@ function isTextInput(target: EventTarget | null): boolean {
 function isMenuNavigationTarget(target: EventTarget | null, key: string): boolean {
   if (!target || !(target instanceof HTMLElement)) return false;
   if (!target.closest('[role="menu"]')) return false;
-  return key.startsWith('Arrow') || key === 'Escape' || key === 'Enter' || key === ' ';
+  return key.startsWith('Arrow') || key === 'Enter' || key === ' ';
 }
 
 export function matchShortcut(e: KeyboardEvent): CanvasAction {

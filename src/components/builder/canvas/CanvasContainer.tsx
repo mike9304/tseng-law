@@ -642,10 +642,10 @@ export default function CanvasContainer({
         case 'deselect':
           setContextMenu(null);
           setOverlapPicker(null);
-          if (useBuilderCanvasStore.getState().activeGroupId) {
-            exitGroup();
-          } else {
+          if (useBuilderCanvasStore.getState().selectedNodeIds.length > 0) {
             setSelectedNodeIds([], null);
+          } else if (useBuilderCanvasStore.getState().activeGroupId) {
+            exitGroup();
           }
           break;
         case 'copy':

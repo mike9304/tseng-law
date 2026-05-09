@@ -2079,3 +2079,24 @@
 메모:
 - 공개 페이지의 “원래 사이트 기능이 살아있는지” 검증 범위를 서비스/FAQ/map publish path까지 넓힌 단위다.
 - `CODEX-AUDIT-FINDINGS-2026-05-09.md`, `CODEX-GOAL-WIX-PARITY-COMPLETE.md`는 기존 untracked 문서라 이번 커밋에 포함하지 않는다.
+
+## 2026-05-09 Codex /goal G-Editor escape + map quick edit focus regression
+
+범위:
+- full builder-editor Playwright에서 발견된 다중 선택 `Escape` 해제 실패를 수정. 지도 quick edit textarea가 `Ctrl+A` 다중 선택 중에도 자동 focus를 잡아 전역 shortcut이 입력 모드로 오판하던 문제였다.
+- map quick edit은 단일 map 노드 선택일 때만 열리도록 좁혀, 전체 선택/다중 선택 상태에서 주소 입력창이 떠서 shortcut을 가로막지 않게 했다.
+- `Escape`는 `[role="menu"]` 포커스에서도 전역 deselect로 통과시키고, menu navigation 차단은 Arrow/Enter/Space로 한정했다.
+- `deselect` 액션은 active group보다 실제 selection clear를 우선해, 그룹 내부 다중 선택에서도 첫 Escape가 선택을 먼저 해제한다.
+
+검증:
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers canvas direct-manipulation overlays" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (26 passed)
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (727 passed)
+- `npm run security:builder-routes` ✅ (71 route files / 61 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning only)
+- build 후 `.next` dev cache 충돌로 3000 dev를 재시작했고 `/ko`, `/ko/admin-builder` 모두 200 확인.
+
+메모:
+- 이 변경은 W02/W08/W10 계열 keyboard/selection 안정화 보강이다. 체크포인트 green 승격은 사용자의 직접 5분 검증 대기라 goal은 아직 active 상태로 유지한다.

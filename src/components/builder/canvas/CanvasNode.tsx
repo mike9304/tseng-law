@@ -588,7 +588,8 @@ export default function CanvasNode({
     builderLocale,
   );
   const heroSearchDestinationOptions = heroSearchDestinations(builderLocale);
-  const showMapQuickEdit = selected && node.kind === 'map' && isInteractive && !node.locked;
+  const isSingleSelectedNode = selected && selectedNodeIds.length === 1 && primarySelectedNodeId === node.id;
+  const showMapQuickEdit = isSingleSelectedNode && node.kind === 'map' && isInteractive && !node.locked;
   const showMapEditHint = !selected && isHovered && node.kind === 'map' && isInteractive && !node.locked;
   const officeQuickEdit = showMapQuickEdit && isOfficeMapNodeId(node.id)
     ? resolveOfficeNodeGroup(nodesById, node)

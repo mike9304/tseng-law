@@ -1,49 +1,32 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
-import CanvasContainer from '@/components/builder/canvas/CanvasContainer';
-import NavigationEditor from '@/components/builder/canvas/NavigationEditor';
-import PageSwitcher from '@/components/builder/canvas/PageSwitcher';
-import PreviewModal from '@/components/builder/canvas/PreviewModal';
-import PublishModal from '@/components/builder/canvas/PublishModal';
-import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
-import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
+import {
+  type BuilderPageSummary,
+  type SandboxDrawerPanel,
+} from '@/components/builder/canvas/SandboxEditorRail';
+import SandboxEditorWorkspace from '@/components/builder/canvas/SandboxEditorWorkspace';
 import SandboxStatusBar, {
   type EditorDensity,
   type EditorThemeMode,
 } from '@/components/builder/canvas/SandboxStatusBar';
-import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import { BuilderThemeProvider } from '@/components/builder/editor/BuilderThemeContext';
-import SeoPanel from '@/components/builder/canvas/SeoPanel';
-import ShortcutsHelpModal from '@/components/builder/canvas/ShortcutsHelpModal';
-import MoveToPageModal from '@/components/builder/canvas/MoveToPageModal';
-import SaveSectionModal, { type SaveSectionPayload } from '@/components/builder/sections/SaveSectionModal';
+import SandboxModalsRoot, {
+  type ImageEditorRequest,
+} from '@/components/builder/canvas/SandboxModalsRoot';
+import type { SaveSectionPayload } from '@/components/builder/sections/SaveSectionModal';
 import { insertSavedSection } from '@/lib/builder/sections/insertSection';
 import { getCanvasNodeDescendantIds } from '@/lib/builder/canvas/tree';
 import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
-import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
-import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
 import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
-import ImageEditDialog, { type ImageEditTab } from '@/components/builder/canvas/ImageEditDialog';
-import SiteHeader from '@/components/builder/published/SiteHeader';
-import SiteFooter from '@/components/builder/published/SiteFooter';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
-import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
-import {
-  HOME_SECTION_TEMPLATE_VARIANTS,
-  getHomeSectionTemplateVariantOptions,
-  getHomeSectionTemplateTarget,
-  getHomeSectionTemplateVariant,
-} from '@/lib/builder/canvas/section-templates';
-import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
-import { DEFAULT_THEME, type BuilderLightbox, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
+import { type BuilderLightbox, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
 import { collectThemeFontFamilies } from '@/lib/builder/site/theme';
 import type { Locale } from '@/lib/locales';
+import { useSandboxSiteState } from './hooks/useSandboxSiteState';
 import styles from './SandboxPage.module.css';
 
-const AUTOSAVE_DEBOUNCE_MS = 1000;
 const TOAST_TTL_MS = 3000;
 const SAVE_BADGE_TTL_MS = 1600;
 
@@ -53,38 +36,8 @@ const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
   mobile: 375,
 };
 
-type SandboxDrawerPanel = 'pages' | 'add' | 'design' | 'layers' | 'nav' | 'columns' | 'history';
 type PublicChromePanel = 'chat' | 'event' | null;
-type BuilderPageSummary = {
-  pageId: string;
-  slug: string;
-  isHomePage?: boolean;
-};
-
-type ColumnPostSummary = {
-  slug: string;
-  title: string;
-};
-
-type ColumnPostsSummary = {
-  loading: boolean;
-  total: number | null;
-  posts: ColumnPostSummary[];
-  error: string | null;
-};
-
 type ToastTone = 'success' | 'error';
-
-interface DraftMeta {
-  revision: number;
-  savedAt: string;
-  updatedBy?: string;
-}
-
-interface DraftConflict {
-  revision: number;
-  savedAt?: string;
-}
 
 interface SandboxToast {
   id: string;
@@ -95,12 +48,6 @@ interface SandboxToast {
 interface ActivityChip {
   id: string;
   message: string;
-}
-
-interface DraftResponseBody {
-  draft?: DraftMeta;
-  document?: BuilderCanvasDocument;
-  snapshot?: { document?: BuilderCanvasDocument };
 }
 
 function getPublicChromeCopy(locale: Locale) {
@@ -173,21 +120,6 @@ const conflictReloadButtonStyle: React.CSSProperties = {
   padding: '6px 10px',
 };
 
-async function fetchSiteDraft(
-  pageId: string,
-  locale: Locale,
-): Promise<{ draft: DraftMeta | null; document: BuilderCanvasDocument | null } | null> {
-  const response = await fetch(
-    `/api/builder/site/pages/${encodeURIComponent(pageId)}/draft?locale=${locale}`,
-    { credentials: 'same-origin' },
-  );
-  if (!response.ok) return null;
-  const data = (await response.json()) as DraftResponseBody;
-  const document = data.snapshot?.document ?? data.document ?? null;
-  const draft = data.draft ?? (document ? { revision: 0, savedAt: document.updatedAt } : null);
-  return { draft, document };
-}
-
 export default function SandboxPage({
   initialDocument,
   locale,
@@ -227,32 +159,15 @@ export default function SandboxPage({
     setViewport: setStoreViewport,
   } = useBuilderCanvasStore();
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
-  const [imageEditorRequest, setImageEditorRequest] = useState<{ nodeId: string; initialTab?: ImageEditTab } | null>(null);
+  const [imageEditorRequest, setImageEditorRequest] = useState<ImageEditorRequest>(null);
   const [toasts, setToasts] = useState<SandboxToast[]>([]);
   const [activityChips, setActivityChips] = useState<ActivityChip[]>([]);
   const previousDraftSaveStateRef = useRef(draftSaveState);
   const saveBadgeTimerRef = useRef<number | null>(null);
-  const initialDraftLoadedRef = useRef(false);
-  const canvasColumnRef = useRef<HTMLDivElement | null>(null);
-  const [syncedUpdatedAt, setSyncedUpdatedAt] = useState(initialDocument.updatedAt);
-  const [draftMeta, setDraftMeta] = useState<DraftMeta | null>(null);
-  const [draftConflict, setDraftConflict] = useState<DraftConflict | null>(null);
+  const canvasColumnRef = useRef<HTMLDivElement>(null);
   const [viewport, setViewport] = useState<ViewportMode>('desktop');
   const [publishOpen, setPublishOpen] = useState(false);
   const [seoOpen, setSeoOpen] = useState(false);
-  const [activePageId, setActivePageId] = useState<string | null>(initialPageId ?? null);
-  const [siteSettingsState, setSiteSettingsState] = useState<BuilderSiteSettings | undefined>(siteSettings);
-  const [siteThemeState, setSiteThemeState] = useState<BuilderTheme>(siteTheme ?? DEFAULT_THEME);
-  const [navItemsState, setNavItemsState] = useState<BuilderNavItem[]>(navItems ?? []);
-  const [sitePagesState, setSitePagesState] = useState<BuilderPageSummary[]>(sitePages ?? []);
-  const [columnPostsSummary, setColumnPostsSummary] = useState<ColumnPostsSummary>({
-    loading: true,
-    total: null,
-    posts: [],
-    error: null,
-  });
-  const [columnsPageLookupPending, setColumnsPageLookupPending] = useState(false);
-  const [currentSlugState, setCurrentSlugState] = useState(currentSlug ?? '');
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
   const [activeDrawer, setActiveDrawer] = useState<SandboxDrawerPanel | null>(null);
@@ -268,29 +183,25 @@ export default function SandboxPage({
   const [saveSectionPayload, setSaveSectionPayload] = useState<SaveSectionPayload | null>(null);
   const childrenMap = useBuilderCanvasStore((state) => state.childrenMap);
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
-  const activePageIdRef = useRef(activePageId);
-  const localeRef = useRef(locale);
   const publicChromeCopy = useMemo(() => getPublicChromeCopy(locale), [locale]);
-
-  useEffect(() => {
-    activePageIdRef.current = activePageId;
-  }, [activePageId]);
-
-  useEffect(() => {
-    localeRef.current = locale;
-  }, [locale]);
 
   useEffect(() => {
     const pageDocument = window.document;
     const previousBodyOverflow = pageDocument.body.style.overflow;
+    const previousBodyOverscroll = pageDocument.body.style.overscrollBehavior;
     const previousHtmlOverflow = pageDocument.documentElement.style.overflow;
+    const previousScrollRestoration = window.history.scrollRestoration;
     window.scrollTo({ top: 0, left: 0 });
     pageDocument.body.style.overflow = 'hidden';
+    pageDocument.body.style.overscrollBehavior = 'none';
     pageDocument.documentElement.style.overflow = 'hidden';
+    window.history.scrollRestoration = 'manual';
 
     return () => {
       pageDocument.body.style.overflow = previousBodyOverflow;
+      pageDocument.body.style.overscrollBehavior = previousBodyOverscroll;
       pageDocument.documentElement.style.overflow = previousHtmlOverflow;
+      window.history.scrollRestoration = previousScrollRestoration;
     };
   }, []);
 
@@ -350,6 +261,49 @@ export default function SandboxPage({
     }, 1800);
   }, []);
 
+  const {
+    activePageId,
+    columnPostsSummary,
+    columnsPageLookupPending,
+    currentSlugState,
+    draftConflict,
+    draftMeta,
+    headerNavItems,
+    linkPickerSitePages,
+    setCurrentSlugState,
+    setNavItemsState,
+    setSitePagesState,
+    setSiteSettingsState,
+    setSiteThemeState,
+    sitePagesState,
+    siteSettingsState,
+    siteThemeState,
+    handleHeaderNavigate,
+    handleLocaleChange,
+    handleMoveCompleted,
+    handleOpenColumnsPage,
+    handlePagesChange,
+    handlePublishDraftSaved,
+    handleReloadDraftAfterConflict,
+    handleSelectPage,
+    refreshColumnsPageIfNeeded,
+  } = useSandboxSiteState({
+    initialDocument,
+    locale,
+    initialPageId,
+    siteSettings,
+    siteTheme,
+    navItems,
+    currentSlug,
+    sitePages,
+    canvasDocument,
+    mutationBaseDocument,
+    replaceDocument,
+    setDraftSaveState,
+    pushToast,
+    onMissingHeaderPage: () => setActiveDrawer('pages'),
+  });
+
   const handlePagesPanelPaste = useCallback(() => {
     const state = useBuilderCanvasStore.getState();
     if (state.clipboardCount <= 0) return;
@@ -383,124 +337,8 @@ export default function SandboxPage({
   }, [activeDrawer, handlePagesPanelPaste]);
 
   useEffect(() => {
-    replaceDocument(initialDocument);
-    setSyncedUpdatedAt(initialDocument.updatedAt);
-  }, [initialDocument, replaceDocument]);
-
-  const loadDraft = useCallback(
-    async (pageId: string, nextLocale: Locale): Promise<boolean> => {
-      const payload = await fetchSiteDraft(pageId, nextLocale);
-      if (!payload?.document) return false;
-      if (activePageIdRef.current !== pageId || localeRef.current !== nextLocale) return false;
-      replaceDocument(payload.document);
-      setSyncedUpdatedAt(payload.document.updatedAt);
-      setDraftMeta(payload.draft);
-      setDraftConflict(null);
-      setDraftSaveState('idle');
-      return true;
-    },
-    [replaceDocument, setDraftSaveState],
-  );
-
-  useEffect(() => {
-    if (!activePageId || initialDraftLoadedRef.current) return;
-    initialDraftLoadedRef.current = true;
-    void loadDraft(activePageId, locale);
-  }, [activePageId, loadDraft, locale]);
-
-  useEffect(() => {
-    const previousBodyOverflow = document.body.style.overflow;
-    const previousBodyOverscroll = document.body.style.overscrollBehavior;
-    const previousHtmlOverflow = document.documentElement.style.overflow;
-    const previousScrollRestoration = window.history.scrollRestoration;
-
-    document.body.style.overflow = 'hidden';
-    document.body.style.overscrollBehavior = 'none';
-    document.documentElement.style.overflow = 'hidden';
-    window.history.scrollRestoration = 'manual';
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-
-    return () => {
-      document.body.style.overflow = previousBodyOverflow;
-      document.body.style.overscrollBehavior = previousBodyOverscroll;
-      document.documentElement.style.overflow = previousHtmlOverflow;
-      window.history.scrollRestoration = previousScrollRestoration;
-    };
-  }, []);
-
-  useEffect(() => {
     setStoreViewport(viewport);
   }, [viewport, setStoreViewport]);
-
-  useEffect(() => {
-    setSiteSettingsState(siteSettings);
-  }, [siteSettings]);
-
-  useEffect(() => {
-    setSiteThemeState(siteTheme ?? DEFAULT_THEME);
-  }, [siteTheme]);
-
-  useEffect(() => {
-    setNavItemsState(navItems ?? []);
-  }, [navItems]);
-
-  useEffect(() => {
-    setSitePagesState(sitePages ?? []);
-  }, [sitePages]);
-
-  useEffect(() => {
-    let cancelled = false;
-    setColumnPostsSummary((current) => ({ ...current, loading: true, error: null }));
-    const params = new URLSearchParams({
-      locale,
-      scope: 'all',
-      limit: '5',
-    });
-
-    fetch(`/api/builder/blog/posts?${params.toString()}`, { credentials: 'same-origin' })
-      .then((response) => response.json())
-      .then((payload: unknown) => {
-        if (cancelled) return;
-        if (!payload || typeof payload !== 'object') {
-          throw new Error('invalid_response');
-        }
-        const result = payload as {
-          ok?: boolean;
-          total?: number;
-          error?: string;
-          posts?: Array<{ slug?: string; title?: string }>;
-        };
-        if (!result.ok || !Array.isArray(result.posts)) {
-          throw new Error(result.error || 'columns_unavailable');
-        }
-
-        setColumnPostsSummary({
-          loading: false,
-          total: typeof result.total === 'number' ? result.total : result.posts.length,
-          posts: result.posts
-            .filter((post): post is { slug: string; title: string } => Boolean(post.slug && post.title))
-            .map((post) => ({ slug: post.slug, title: post.title })),
-          error: null,
-        });
-      })
-      .catch((error: unknown) => {
-        if (cancelled) return;
-        setColumnPostsSummary({
-          loading: false,
-          total: null,
-          posts: [],
-          error: error instanceof Error ? error.message : 'columns_unavailable',
-        });
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [locale]);
-
-  useEffect(() => {
-    setCurrentSlugState(currentSlug ?? '');
-  }, [currentSlug]);
 
   useEffect(() => {
     const column = canvasColumnRef.current;
@@ -508,144 +346,10 @@ export default function SandboxPage({
     column.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [activePageId, currentSlugState]);
 
-  const saveDraftDocument = useCallback(
-    async (nextDocument: BuilderCanvasDocument): Promise<boolean> => {
-      if (!activePageId) {
-        const response = await fetch(`/api/builder/sandbox/draft?locale=${locale}`, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          credentials: 'same-origin',
-          body: JSON.stringify({ document: nextDocument }),
-        });
-        if (!response.ok) return false;
-        setSyncedUpdatedAt(nextDocument.updatedAt);
-        setDraftSaveState('saved');
-        return true;
-      }
-
-      const putDraft = (expectedRevision: number | undefined) =>
-        fetch(`/api/builder/site/pages/${activePageId}/draft?locale=${locale}`, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          credentials: 'same-origin',
-          body: JSON.stringify({
-            expectedRevision,
-            document: nextDocument,
-          }),
-        });
-
-      let response = await putDraft(draftMeta?.revision);
-
-      if (response.status === 428) {
-        const latest = await fetchSiteDraft(activePageId, locale);
-        if (!latest?.draft) return false;
-        setDraftMeta(latest.draft);
-        response = await putDraft(latest.draft.revision);
-      }
-
-      if (response.status === 409) {
-        const data = (await response.json().catch(() => ({}))) as {
-          current?: { revision?: number; savedAt?: string };
-        };
-        const currentRevision = data.current?.revision;
-        if (typeof currentRevision === 'number') {
-          const current = {
-            revision: currentRevision,
-            savedAt: data.current?.savedAt,
-          };
-          setDraftMeta({
-            revision: current.revision,
-            savedAt: current.savedAt ?? draftMeta?.savedAt ?? new Date().toISOString(),
-          });
-          setDraftConflict(current);
-        } else {
-          setDraftConflict({ revision: draftMeta?.revision ?? 0 });
-        }
-        setDraftSaveState('error');
-        pushToast('Draft conflict — 다른 탭에서 저장됨', 'error');
-        return false;
-      }
-
-      if (!response.ok) return false;
-
-      const data = (await response.json()) as DraftResponseBody;
-      if (data.draft) setDraftMeta(data.draft);
-      if (data.document) {
-        setSyncedUpdatedAt(data.document.updatedAt);
-      } else {
-        setSyncedUpdatedAt(nextDocument.updatedAt);
-      }
-      setDraftConflict(null);
-      setDraftSaveState('saved');
-      return true;
-    },
-    [activePageId, draftMeta?.revision, draftMeta?.savedAt, locale, pushToast, setDraftSaveState],
-  );
-
-  useEffect(() => {
-    if (!canvasDocument) return undefined;
-    if (mutationBaseDocument) return undefined;
-    if (draftConflict) return undefined;
-    if (canvasDocument.updatedAt === syncedUpdatedAt) return undefined;
-
-    if (saveBadgeTimerRef.current) {
-      window.clearTimeout(saveBadgeTimerRef.current);
-      saveBadgeTimerRef.current = null;
-    }
-    setDraftSaveState('saving');
-    const timer = window.setTimeout(async () => {
-      try {
-        const saved = await saveDraftDocument(canvasDocument);
-        if (!saved) {
-          setDraftSaveState('error');
-        }
-      } catch {
-        setDraftSaveState('error');
-      }
-    }, AUTOSAVE_DEBOUNCE_MS);
-
-    return () => window.clearTimeout(timer);
-  }, [
-    canvasDocument,
-    draftConflict,
-    mutationBaseDocument,
-    saveDraftDocument,
-    setDraftSaveState,
-    syncedUpdatedAt,
-  ]);
-
   const selectedNode = useMemo(
     () => canvasDocument?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [canvasDocument, selectedNodeId],
   );
-  const selectedSectionTemplateNode = useMemo(() => {
-    if (!selectedNode || !canvasDocument) return null;
-    const nodesById = getCanvasNodesById(canvasDocument.nodes);
-    let current = selectedNode;
-
-    while (current) {
-      if (getHomeSectionTemplateTarget(current.id)) return current;
-      if (!current.parentId) return null;
-      const parent = nodesById.get(current.parentId);
-      if (!parent) return null;
-      current = parent;
-    }
-
-    return null;
-  }, [canvasDocument, selectedNode]);
-  const selectedSectionTemplate = selectedSectionTemplateNode
-    ? getHomeSectionTemplateTarget(selectedSectionTemplateNode.id)
-    : null;
-  const selectedSectionTemplateVariant = selectedSectionTemplateNode
-    ? getHomeSectionTemplateVariant(selectedSectionTemplateNode)
-    : null;
-  const selectedSectionTemplateVariants = selectedSectionTemplate
-    ? getHomeSectionTemplateVariantOptions(selectedSectionTemplate.id)
-    : HOME_SECTION_TEMPLATE_VARIANTS;
   const linkPickerLightboxes = useMemo(
     () =>
       siteLightboxes
@@ -657,34 +361,6 @@ export default function SandboxPage({
         })),
     [locale, siteLightboxes],
   );
-  const linkPickerSitePages = useMemo(
-    () => {
-      const pages = sitePagesState.map((page) => ({
-          path: page.isHomePage ? `/${locale}` : `/${locale}/${page.slug}`,
-          title: page.isHomePage ? 'Home' : page.slug,
-          slug: page.slug,
-        }));
-      if (!pages.some((page) => page.slug === 'columns')) {
-        pages.push({ path: `/${locale}/columns`, title: 'Columns', slug: 'columns' });
-      }
-      return pages;
-    },
-    [sitePagesState, locale],
-  );
-  const headerNavItems = useMemo<BuilderNavItem[]>(() => {
-    const items = navItemsState;
-    const hasColumns = items.some((item) => comparableSitePath(normalizeSiteHref(item.href, locale), locale) === comparableSitePath(`/${locale}/columns`, locale));
-    if (hasColumns) return items;
-    return [
-      ...items,
-      {
-        id: 'nav-columns',
-        pageId: 'external-columns',
-        href: '/columns',
-        label: { ko: '칼럼', 'zh-hant': '專欄', en: 'Columns' },
-      },
-    ];
-  }, [locale, navItemsState]);
   const assetLibraryNode = useMemo(
     () => canvasDocument?.nodes.find((node) => node.id === assetLibraryNodeId) ?? null,
     [assetLibraryNodeId, canvasDocument],
@@ -729,83 +405,6 @@ export default function SandboxPage({
       window.clearTimeout(saveBadgeTimerRef.current);
     }
   }, []);
-
-  const handleLocaleChange = useCallback(async (newLocale: Locale, linkedPageId: string | null) => {
-    if (linkedPageId) {
-      try {
-        const loaded = await loadDraft(linkedPageId, newLocale);
-        if (loaded) {
-          setActivePageId(linkedPageId);
-          pushToast(`Switched to ${newLocale}`, 'success');
-        }
-      } catch {
-        pushToast('Failed to switch locale', 'error');
-      }
-    } else {
-      pushToast(`No linked page for ${newLocale}`, 'error');
-    }
-  }, [loadDraft, pushToast]);
-
-  const handleSelectPage = useCallback(async (pageId: string, nextSlug?: string) => {
-    setActivePageId(pageId);
-    if (typeof nextSlug === 'string') {
-      setCurrentSlugState(nextSlug);
-    } else {
-      const matchingPage = sitePagesState.find((page) => page.pageId === pageId);
-      if (matchingPage) {
-        setCurrentSlugState(matchingPage.slug);
-      }
-    }
-    try {
-      const loaded = await loadDraft(pageId, locale);
-      if (loaded) {
-        pushToast(`Loaded page: ${pageId}`, 'success');
-      }
-    } catch {
-      pushToast('Failed to load page', 'error');
-    }
-  }, [loadDraft, locale, pushToast, sitePagesState]);
-
-  const handlePagesChange = useCallback((pages: Array<{ pageId: string; slug: string; isHomePage?: boolean }>) => {
-    setSitePagesState(pages.map((page) => ({
-      pageId: page.pageId,
-      slug: page.slug,
-      isHomePage: page.isHomePage,
-    })));
-
-    const active = pages.find((page) => page.pageId === activePageIdRef.current);
-    if (active) {
-      setCurrentSlugState(active.slug);
-    }
-  }, []);
-
-  const refreshSitePages = useCallback(async () => {
-    const response = await fetch(`/api/builder/site/pages?locale=${locale}`, { credentials: 'same-origin' });
-    if (!response.ok) throw new Error(`Failed to load pages: ${response.status}`);
-    const payload = (await response.json()) as {
-      pages?: Array<{ pageId: string; slug: string; isHomePage?: boolean }>;
-    };
-    const pages = Array.isArray(payload.pages) ? payload.pages : [];
-    handlePagesChange(pages);
-    return pages;
-  }, [handlePagesChange, locale]);
-
-  const handleHeaderNavigate = useCallback((href: string) => {
-    const normalizedHref = normalizeSiteHref(href, locale);
-    const targetPath = comparableSitePath(normalizedHref, locale);
-    const targetPage = sitePagesState.find((page) => {
-      const pagePath = buildSitePagePath(locale, page.isHomePage ? '' : page.slug);
-      return comparableSitePath(pagePath, locale) === targetPath;
-    });
-
-    if (targetPage) {
-      void handleSelectPage(targetPage.pageId, targetPage.slug);
-      return;
-    }
-
-    setActiveDrawer('pages');
-    pushToast(`No builder page for ${normalizedHref}`, 'error');
-  }, [handleSelectPage, locale, pushToast, sitePagesState]);
 
   const handleEditorFooterLinkActivation = useCallback((event: {
     target: EventTarget | null;
@@ -952,65 +551,13 @@ export default function SandboxPage({
         background: '#f8fafc',
       };
 
-  const columnsPage = sitePagesState.find((page) => page.slug === 'columns') ?? null;
-
   const handleOpenColumnsPanel = useCallback(() => {
     setActiveDrawer((current) => (current === 'columns' ? null : 'columns'));
   }, []);
 
   useEffect(() => {
-    if (activeDrawer !== 'columns' || columnsPage || columnsPageLookupPending) return;
-    setColumnsPageLookupPending(true);
-    refreshSitePages()
-      .catch(() => {
-        pushToast('Failed to refresh page list', 'error');
-      })
-      .finally(() => setColumnsPageLookupPending(false));
-  }, [activeDrawer, columnsPage, columnsPageLookupPending, pushToast, refreshSitePages]);
-
-  const handleOpenColumnsPage = useCallback(async () => {
-    let targetPage = columnsPage;
-    if (!targetPage) {
-      setColumnsPageLookupPending(true);
-      try {
-        const pages = await refreshSitePages();
-        targetPage = pages.find((page) => page.slug === 'columns') ?? null;
-      } catch {
-        pushToast('Failed to refresh page list', 'error');
-      } finally {
-        setColumnsPageLookupPending(false);
-      }
-    }
-
-    if (targetPage) {
-      await handleSelectPage(targetPage.pageId, targetPage.slug);
-      return;
-    }
-
-    setActiveDrawer('pages');
-    pushToast('Columns page not found. Open Pages to create or restore it.', 'error');
-  }, [columnsPage, handleSelectPage, pushToast, refreshSitePages]);
-
-  const handleReloadDraftAfterConflict = useCallback(async () => {
-    if (!activePageId) return;
-    const loaded = await loadDraft(activePageId, locale);
-    if (loaded) {
-      pushToast('최신 draft를 불러왔습니다.', 'success');
-    } else {
-      pushToast('최신 draft를 불러오지 못했습니다.', 'error');
-    }
-  }, [activePageId, loadDraft, locale, pushToast]);
-
-  const handlePublishDraftSaved = useCallback(
-    (nextDraftMeta: DraftMeta, savedDocument?: BuilderCanvasDocument) => {
-      setDraftMeta(nextDraftMeta);
-      if (savedDocument) {
-        setSyncedUpdatedAt(savedDocument.updatedAt);
-      }
-      setDraftConflict(null);
-    },
-    [],
-  );
+    if (activeDrawer === 'columns') refreshColumnsPageIfNeeded();
+  }, [activeDrawer, refreshColumnsPageIfNeeded]);
 
   return (
     <BuilderThemeProvider value={siteThemeState}>
@@ -1061,611 +608,123 @@ export default function SandboxPage({
           </div>
         ) : null}
 
-        <section className={styles.editorShell}>
-        <div className={styles.iconRail}>
-          <button
-            type="button"
-            className={`${styles.railButton} ${activeDrawer === 'pages' ? styles.railButtonActive : ''}`}
-            onClick={() => toggleDrawer('pages')}
-            aria-pressed={activeDrawer === 'pages'}
-            title="Pages"
-          >
-            <span className={styles.railButtonIcon} aria-hidden="true">▤</span>
-            <span className={styles.railButtonLabel}>Pages</span>
-          </button>
-          <button
-            type="button"
-            className={`${styles.railButton} ${activeDrawer === 'add' ? styles.railButtonActive : ''}`}
-            onClick={() => toggleDrawer('add')}
-            aria-pressed={activeDrawer === 'add'}
-            title="Add"
-          >
-            <span className={styles.railButtonIcon} aria-hidden="true">+</span>
-            <span className={styles.railButtonLabel}>Add</span>
-          </button>
-          <button
-            type="button"
-            className={`${styles.railButton} ${activeDrawer === 'design' ? styles.railButtonActive : ''}`}
-            onClick={() => toggleDrawer('design')}
-            aria-pressed={activeDrawer === 'design'}
-            title="Design"
-          >
-            <span className={styles.railButtonIcon} aria-hidden="true">◇</span>
-            <span className={styles.railButtonLabel}>Design</span>
-          </button>
-          <button
-            type="button"
-            className={`${styles.railButton} ${activeDrawer === 'layers' ? styles.railButtonActive : ''}`}
-            onClick={() => toggleDrawer('layers')}
-            aria-pressed={activeDrawer === 'layers'}
-            title="Layers"
-          >
-            <span className={styles.railButtonIcon} aria-hidden="true">☰</span>
-            <span className={styles.railButtonLabel}>Layers</span>
-          </button>
-          <button
-            type="button"
-            className={`${styles.railButton} ${activeDrawer === 'nav' ? styles.railButtonActive : ''}`}
-            onClick={() => toggleDrawer('nav')}
-            aria-pressed={activeDrawer === 'nav'}
-            title="Navigation"
-          >
-            <span className={styles.railButtonIcon} aria-hidden="true">↗</span>
-            <span className={styles.railButtonLabel}>Navigation</span>
-          </button>
-          <button
-            type="button"
-            className={`${styles.railButton} ${activeDrawer === 'columns' ? styles.railButtonActive : ''}`}
-            onClick={handleOpenColumnsPanel}
-            aria-pressed={activeDrawer === 'columns'}
-            aria-label="Columns"
-            title="칼럼 페이지로 이동 / 글 관리"
-          >
-            <span className={styles.railButtonIcon} aria-hidden="true">▦</span>
-            <span className={styles.railButtonLabel}>칼럼</span>
-          </button>
-          <button
-            type="button"
-            className={`${styles.railButton} ${activeDrawer === 'history' ? styles.railButtonActive : ''}`}
-            onClick={() => toggleDrawer('history')}
-            aria-pressed={activeDrawer === 'history'}
-            title="History"
-          >
-            <span className={styles.railButtonIcon} aria-hidden="true">↺</span>
-            <span className={styles.railButtonLabel}>History</span>
-          </button>
-        </div>
-
-        <aside
-          className={`${styles.drawer} ${!activeDrawer ? styles.drawerHidden : ''}`}
-          aria-hidden={!activeDrawer}
-        >
-          {activeDrawer === 'pages' ? (
-            <div className={styles.drawerBody}>
-              <PageSwitcher
-                locale={locale}
-                activePageId={activePageId}
-                clipboardCount={clipboardCount}
-                columnPostsSummary={columnPostsSummary}
-                onSelectPage={handleSelectPage}
-                onPagesChange={handlePagesChange}
-              />
-            </div>
-          ) : null}
-
-          {activeDrawer === 'add' ? (
-            <div className={styles.drawerBody}>
-              <SandboxCatalogPanel locale={locale} />
-            </div>
-          ) : null}
-
-          {activeDrawer === 'design' ? (
-            <div className={styles.drawerBody}>
-              <section className={styles.panelSection} data-builder-design-section-templates="true">
-                <header className={styles.panelSectionHeader}>
-                  <div>
-                    <span>Templates</span>
-                    <strong>Section design</strong>
-                  </div>
-                </header>
-                {selectedSectionTemplate && selectedSectionTemplateNode && selectedSectionTemplateVariant ? (
-                  <>
-                    <p className={styles.panelCopy}>
-                      {selectedSectionTemplate.label}의 글, 주소, 링크 데이터는 그대로 두고 디자인 템플릿만 바꿉니다.
-                    </p>
-                    <div className={styles.sectionTemplateVariantGrid}>
-                      {selectedSectionTemplateVariants.map((variant) => (
-                        <button
-                          key={variant.key}
-                          type="button"
-                          data-builder-section-template-option={`${selectedSectionTemplate.id}:${variant.key}`}
-                          className={`${styles.sectionTemplateVariantCard} ${
-                            selectedSectionTemplateVariant === variant.key ? styles.sectionTemplateVariantCardActive : ''
-                          }`}
-                          aria-pressed={selectedSectionTemplateVariant === variant.key}
-                          onClick={() => updateNodeContent(selectedSectionTemplateNode.id, { variant: variant.key })}
-                        >
-                          <em
-                            className={styles.sectionTemplateVariantPreview}
-                            data-section-template-preview={variant.key}
-                            aria-hidden="true"
-                          >
-                            <i />
-                            <i />
-                            <i />
-                          </em>
-                          <strong>{variant.label}</strong>
-                          <span>{variant.description}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <p className={styles.panelCopy}>
-                      주요 서비스, 칼럼 아카이브, FAQ, 오시는길 섹션을 선택하면 디자인 템플릿을 바꿀 수 있습니다.
-                    </p>
-                    <div className={styles.sectionTemplateHintList}>
-                      <span>주요 서비스</span>
-                      <span>칼럼 아카이브</span>
-                      <span>FAQ</span>
-                      <span>오시는길</span>
-                    </div>
-                  </>
-                )}
-              </section>
-              <section className={styles.panelSection}>
-                <header className={styles.panelSectionHeader}>
-                  <div>
-                    <span>Design</span>
-                    <strong>Site settings</strong>
-                  </div>
-                  <button
-                    type="button"
-                    className={styles.panelHeaderButton}
-                    onClick={() => setSettingsOpen(true)}
-                  >
-                    Open
-                  </button>
-                </header>
-                <p className={styles.panelCopy}>
-                  브랜드, 연락처, 로고, 파비콘 같은 site-level design 설정은 modal에서 편집합니다.
-                </p>
-              </section>
-            </div>
-          ) : null}
-
-          {activeDrawer === 'layers' ? (
-            <div className={styles.drawerBody}>
-              <SandboxLayersPanel />
-            </div>
-          ) : null}
-
-          {activeDrawer === 'nav' ? (
-            <div className={styles.drawerBody}>
-              <NavigationEditor
-                locale={locale}
-                focusItemId={focusedNavItemId}
-                addChildParentId={addNavChildParentId}
-                onFocusHandled={() => setFocusedNavItemId(null)}
-                onAddChildHandled={() => setAddNavChildParentId(null)}
-                onNavigationChange={setNavItemsState}
-              />
-            </div>
-          ) : null}
-
-          {activeDrawer === 'columns' ? (
-            <div className={styles.drawerBody}>
-              <section className={styles.panelSection}>
-                <header className={styles.panelSectionHeader}>
-                  <div>
-                    <span>Blog</span>
-                    <strong>글쓰기</strong>
-                  </div>
-                </header>
-                <p className={styles.panelCopy}>
-                  제목과 본문만 쓰면 요약은 자동으로 채웁니다. 페이지 편집은 별도 버튼으로 이동합니다.
-                </p>
-                <div className={styles.columnsStatusCard}>
-                  <strong>
-                    {columnPostsSummary.loading
-                      ? '칼럼 불러오는 중'
-                      : columnPostsSummary.error
-                        ? '칼럼 연결 확인 필요'
-                        : `${columnPostsSummary.total ?? columnPostsSummary.posts.length}개 칼럼 연결됨`}
-                  </strong>
-                  {columnPostsSummary.error ? (
-                    <span>목록을 다시 열거나 새로고침 후 확인하세요.</span>
-                  ) : (
-                    <span>공개 글과 빌더 초안이 같은 관리 화면에 표시됩니다.</span>
-                  )}
-                  {columnPostsSummary.posts.length > 0 ? (
-                    <div className={styles.columnsRecentList} aria-label="최근 칼럼">
-                      {columnPostsSummary.posts.slice(0, 4).map((post) => (
-                        <a
-                          key={post.slug}
-                          href={`/${locale}/admin-builder/columns/${encodeURIComponent(post.slug)}/edit`}
-                          title={post.title}
-                        >
-                          수정 · {post.title}
-                        </a>
-                      ))}
-                    </div>
-                  ) : null}
-                </div>
-                <div className={styles.actionGrid}>
-                  <a className={`${styles.actionButton} ${styles.actionButtonPrimary}`} href={`/${locale}/admin-builder/columns?new=1`}>
-                    새 글 쓰기
-                  </a>
-                  <a className={styles.actionButton} href={`/${locale}/admin-builder/columns`}>
-                    글 목록
-                  </a>
-                  <button
-                    type="button"
-                    className={styles.actionButton}
-                    disabled={columnsPageLookupPending}
-                    onClick={() => { void handleOpenColumnsPage(); }}
-                  >
-                    {columnsPageLookupPending ? '페이지 확인 중...' : '칼럼 페이지로 이동'}
-                  </button>
-                  <a className={styles.actionButton} href={`/${locale}/columns`} target="_blank" rel="noreferrer">
-                    공개 칼럼 보기
-                  </a>
-                </div>
-              </section>
-            </div>
-          ) : null}
-
-          {activeDrawer === 'history' ? (
-            <div className={styles.drawerBody}>
-              <section className={styles.panelSection}>
-                <header className={styles.panelSectionHeader}>
-                  <div>
-                    <span>History</span>
-                    <strong>Version history</strong>
-                  </div>
-                  <button
-                    type="button"
-                    className={styles.panelHeaderButton}
-                    onClick={() => setHistoryOpen(true)}
-                  >
-                    Open
-                  </button>
-                </header>
-                <p className={styles.panelCopy}>
-                  revision timeline과 restore는 existing history modal에서 확인합니다.
-                </p>
-              </section>
-            </div>
-          ) : null}
-        </aside>
-
-        <div ref={canvasColumnRef} className={styles.canvasColumn} style={canvasOuterStyle}>
-          {siteName ? (
-            <div
-              className={styles.globalHeaderRegion}
-              data-editing={activeDrawer === 'nav' ? 'true' : undefined}
-              style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderBottom: '1px solid #e5e7eb' }}
-              role="button"
-              tabIndex={0}
-              title="Edit header navigation"
-              onClickCapture={(event) => {
-                const target = event.target as HTMLElement;
-                if (target.closest(`.${styles.globalRegionBadge}`)) return;
-                if (target.closest('[data-builder-site-brand]')) return;
-                if (target.closest('[data-builder-header-action]')) return;
-                const navTarget = target.closest<HTMLElement>('[data-builder-nav-item-id]');
-                if (navTarget?.dataset.builderNavItemId) {
-                  return;
-                }
-                event.preventDefault();
-                event.stopPropagation();
-                setActiveDrawer('nav');
-              }}
-              onClick={() => setActiveDrawer('nav')}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault();
-                  setActiveDrawer('nav');
-                }
-              }}
-            >
-              <div className={styles.globalRegionBadge}>
-                <span>Header</span>
-                <strong>Menu editable</strong>
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    setActiveDrawer('nav');
-                  }}
-                >
-                  Edit menu
-                </button>
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    setSettingsOpen(true);
-                  }}
-                >
-                  Site settings
-                </button>
-              </div>
-              <SiteHeader
-                siteName={siteName}
-                settings={siteSettingsState}
-                theme={siteThemeState}
-                navItems={headerNavItems}
-                locale={locale}
-                currentSlug={currentSlugState}
-                onNavigate={handleHeaderNavigate}
-                builderEditable
-                activeBuilderNavItemId={activeNavItemId}
-                onRequestEditNavItem={handleRequestEditNavItem}
-                onRequestAddNavChild={handleRequestAddNavChild}
-                onRequestEditSiteBrand={() => setSettingsOpen(true)}
-              />
-            </div>
-          ) : null}
-          <div style={canvasWrapperStyle}>
-            <CanvasContainer
-              onRequestAssetLibrary={setAssetLibraryNodeId}
-              onRequestImageEditor={(nodeId, initialTab) => setImageEditorRequest({ nodeId, initialTab })}
-              onRequestMoveToPage={(nodeIds) => setMovePickerNodeIds(nodeIds)}
-              onRequestSaveAsSection={handleRequestSaveAsSection}
-              onRequestInsertSavedSection={(sectionId, position) => {
-                void handleInsertSavedSection(sectionId, position);
-              }}
-              onToast={pushToast}
-              onActivity={pushActivityChip}
-              siteLightboxes={linkPickerLightboxes}
-              sitePages={linkPickerSitePages}
-              viewportResetKey={activePageId}
-            />
-          </div>
-          {siteName ? (
-            <div
-              style={{ width: viewportWidth ?? '100%', maxWidth: 1280, background: '#fff', borderTop: '1px solid #e5e7eb' }}
-              onClick={handleEditorFooterLinkActivation}
-              onAuxClick={handleEditorFooterLinkActivation}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  handleEditorFooterLinkActivation(event);
-                }
-              }}
-            >
-              <SiteFooter
-                siteName={siteName}
-                settings={siteSettingsState}
-                theme={siteThemeState}
-                navItems={headerNavItems}
-                locale={locale}
-              />
-            </div>
-          ) : null}
-          <div
-            className={styles.publicChromePreview}
-            data-builder-public-chrome="true"
-            aria-label={publicChromeCopy.label}
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className={styles.publicChromeAction}
-              aria-pressed={publicChromePanel === 'chat'}
-              onClick={() => setPublicChromePanel((current) => (current === 'chat' ? null : 'chat'))}
-            >
-              {publicChromeCopy.chat}
-            </button>
-            <button
-              type="button"
-              className={styles.publicChromeAction}
-              onClick={() => {
-                canvasColumnRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              ↑ {publicChromeCopy.top}
-            </button>
-            <button
-              type="button"
-              className={styles.publicChromeAction}
-              aria-pressed={publicChromePanel === 'event'}
-              onClick={() => setPublicChromePanel((current) => (current === 'event' ? null : 'event'))}
-            >
-              {publicChromeCopy.event}
-            </button>
-            {publicChromePanel ? (
-              <div className={styles.publicChromePopover} role="status">
-                <strong>
-                  {publicChromePanel === 'chat' ? publicChromeCopy.chatTitle : publicChromeCopy.eventTitle}
-                </strong>
-                <p>
-                  {publicChromePanel === 'chat' ? publicChromeCopy.chatBody : publicChromeCopy.eventBody}
-                </p>
-                <div className={styles.publicChromePopoverActions}>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setPublicChromePanel(null);
-                      setSettingsOpen(true);
-                    }}
-                  >
-                    {publicChromeCopy.editSettings}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setPublicChromePanel(null);
-                      setActiveDrawer('columns');
-                    }}
-                  >
-                    {publicChromeCopy.editColumns}
-                  </button>
-                </div>
-              </div>
-            ) : null}
-          </div>
-        </div>
-        <div className={styles.inspectorColumn}>
-          <SandboxInspectorPanel
-            onRequestAssetLibrary={() => {
-              if (selectedNode?.kind === 'image') {
-                setAssetLibraryNodeId(selectedNode.id);
-              }
-            }}
-            onRequestImageEditor={() => {
-              if (selectedNode?.kind === 'image') {
-                setImageEditorRequest({ nodeId: selectedNode.id });
-              }
-            }}
-            siteLightboxes={linkPickerLightboxes}
-            sitePages={linkPickerSitePages}
-          />
-        </div>
-        </section>
-
-        {assetLibraryNode?.kind === 'image' ? (
-          <AssetLibraryModal
-            open
-            locale={locale}
-            selectedUrl={assetLibraryNode.content.src}
-            onClose={() => setAssetLibraryNodeId(null)}
-            onSelect={(asset) => {
-              updateNodeContent(assetLibraryNode.id, { src: asset.url });
-              setAssetLibraryNodeId(null);
-            }}
-          />
-        ) : null}
-
-        {imageEditorNode?.kind === 'image' ? (
-          <ImageEditDialog
-            open
-            imageSrc={String(imageEditorNode.content.src || '')}
-            alt={String(imageEditorNode.content.alt || '')}
-            cropAspect={typeof imageEditorNode.content.cropAspect === 'string' ? imageEditorNode.content.cropAspect : 'Free'}
-            focalPoint={imageEditorNode.content.focalPoint}
-            filters={imageEditorNode.content.filters}
-            initialTab={imageEditorRequest?.initialTab}
-            onClose={() => setImageEditorRequest(null)}
-            onApply={(content) => {
-              updateNode(imageEditorNode.id, (node) => ({
-                ...node,
-                content: {
-                  ...node.content,
-                  ...content,
-                },
-              } as typeof node));
-              setImageEditorRequest(null);
-            }}
-          />
-        ) : null}
-
-        <PublishModal
-          open={publishOpen}
-          document={canvasDocument}
+        <SandboxEditorWorkspace
           locale={locale}
+          activeDrawer={activeDrawer}
           activePageId={activePageId}
-          draftMeta={draftMeta}
-          onDraftSaved={handlePublishDraftSaved}
+          clipboardCount={clipboardCount}
+          columnPostsSummary={columnPostsSummary}
+          columnsPageLookupPending={columnsPageLookupPending}
+          document={canvasDocument}
+          selectedNode={selectedNode}
+          focusedNavItemId={focusedNavItemId}
+          addNavChildParentId={addNavChildParentId}
+          siteName={siteName}
+          siteSettings={siteSettingsState}
+          siteTheme={siteThemeState}
+          headerNavItems={headerNavItems}
+          currentSlug={currentSlugState}
+          activeNavItemId={activeNavItemId}
+          viewportWidth={viewportWidth}
+          canvasOuterStyle={canvasOuterStyle}
+          canvasWrapperStyle={canvasWrapperStyle}
+          canvasColumnRef={canvasColumnRef}
+          publicChromeCopy={publicChromeCopy}
+          publicChromePanel={publicChromePanel}
+          linkPickerLightboxes={linkPickerLightboxes}
+          linkPickerSitePages={linkPickerSitePages}
+          onToggleDrawer={toggleDrawer}
+          onOpenColumnsPanel={handleOpenColumnsPanel}
+          onOpenColumnsPage={() => { void handleOpenColumnsPage(() => setActiveDrawer('pages')); }}
+          onOpenSettings={() => setSettingsOpen(true)}
+          onOpenHistory={() => setHistoryOpen(true)}
+          onSetActiveDrawer={setActiveDrawer}
+          onSelectPage={handleSelectPage}
+          onPagesChange={handlePagesChange}
+          onNavigationChange={setNavItemsState}
+          onNavFocusHandled={() => setFocusedNavItemId(null)}
+          onNavAddChildHandled={() => setAddNavChildParentId(null)}
+          onUpdateNodeContent={updateNodeContent}
+          onHeaderNavigate={handleHeaderNavigate}
+          onRequestEditNavItem={handleRequestEditNavItem}
+          onRequestAddNavChild={handleRequestAddNavChild}
+          onFooterLinkActivation={handleEditorFooterLinkActivation}
+          onSetPublicChromePanel={setPublicChromePanel}
+          onRequestAssetLibrary={setAssetLibraryNodeId}
+          onRequestImageEditor={setImageEditorRequest}
+          onRequestMoveToPage={setMovePickerNodeIds}
+          onRequestSaveAsSection={handleRequestSaveAsSection}
+          onRequestInsertSavedSection={(sectionId, position) => {
+            void handleInsertSavedSection(sectionId, position);
+          }}
           onToast={pushToast}
-          onClose={() => setPublishOpen(false)}
+          onActivity={pushActivityChip}
         />
 
-        <SeoPanel
-          open={seoOpen}
-          pageId={activePageId ?? ''}
+        <SandboxModalsRoot
           locale={locale}
-          document={canvasDocument ?? undefined}
+          document={canvasDocument}
           siteName={siteName}
-          onSaved={(page) => {
+          currentSlug={currentSlugState}
+          viewport={viewport}
+          activePageId={activePageId}
+          draftMeta={draftMeta}
+          sitePages={sitePagesState.map((page) => ({
+            pageId: page.pageId,
+            slug: page.slug,
+            isHomePage: page.isHomePage,
+          }))}
+          assetLibraryNode={assetLibraryNode}
+          imageEditorNode={imageEditorNode}
+          imageEditorRequest={imageEditorRequest}
+          publishOpen={publishOpen}
+          seoOpen={seoOpen}
+          settingsOpen={settingsOpen}
+          historyOpen={historyOpen}
+          helpOpen={helpOpen}
+          previewOpen={previewOpen}
+          saveSectionPayload={saveSectionPayload}
+          movePickerNodeIds={movePickerNodeIds}
+          onCloseAssetLibrary={() => setAssetLibraryNodeId(null)}
+          onSelectAsset={(nodeId, url) => updateNodeContent(nodeId, { src: url })}
+          onCloseImageEditor={() => setImageEditorRequest(null)}
+          onApplyImageEdit={(nodeId, content) => {
+            updateNode(nodeId, (node) => ({
+              ...node,
+              content: {
+                ...node.content,
+                ...content,
+              },
+            } as typeof node));
+          }}
+          onClosePublish={() => setPublishOpen(false)}
+          onDraftSaved={handlePublishDraftSaved}
+          onCloseSeo={() => setSeoOpen(false)}
+          onSeoSaved={(page) => {
             setCurrentSlugState(page.slug);
             setSitePagesState((pages) => pages.map((entry) => (
               entry.pageId === page.pageId ? { ...entry, slug: page.slug } : entry
             )));
           }}
-          onClose={() => setSeoOpen(false)}
-        />
-
-        <SiteSettingsModal
-          open={settingsOpen}
-          locale={locale}
-          onSaved={({ settings, theme }) => {
+          onCloseSettings={() => setSettingsOpen(false)}
+          onSettingsSaved={({ settings, theme }) => {
             setSiteSettingsState(settings);
             setSiteThemeState(theme);
           }}
-          onClose={() => setSettingsOpen(false)}
+          onCloseHistory={() => setHistoryOpen(false)}
+          onCloseHelp={() => setHelpOpen(false)}
+          onClosePreview={() => setPreviewOpen(false)}
+          onCloseSaveSection={() => setSaveSectionPayload(null)}
+          onSectionSaved={(section) => {
+            pushToast(`"${section.name}" 섹션을 저장했습니다.`, 'success');
+            if (typeof window !== 'undefined') {
+              window.dispatchEvent(new CustomEvent('builder:saved-section-changed'));
+            }
+          }}
+          onCloseMovePicker={() => setMovePickerNodeIds(null)}
+          onMoveCompleted={handleMoveCompleted}
+          onToast={pushToast}
         />
-
-        <VersionHistoryPanel
-          open={historyOpen}
-          pageId={activePageId ?? ''}
-          siteId="default"
-          draftMeta={draftMeta}
-          onRestored={handlePublishDraftSaved}
-          onClose={() => setHistoryOpen(false)}
-        />
-
-        {helpOpen ? <ShortcutsHelpModal onClose={() => setHelpOpen(false)} /> : null}
-
-        <PreviewModal
-          open={previewOpen}
-          onClose={() => setPreviewOpen(false)}
-          previewUrl={previewOpen ? buildSitePagePath(locale, currentSlugState ?? '') : null}
-          initialDevice={viewport === 'mobile' ? 'mobile' : viewport === 'tablet' ? 'tablet' : 'desktop'}
-        />
-
-        {saveSectionPayload ? (
-          <SaveSectionModal
-            payload={saveSectionPayload}
-            locale={locale}
-            onClose={() => setSaveSectionPayload(null)}
-            onSaved={(section) => {
-              setSaveSectionPayload(null);
-              pushToast(`"${section.name}" 섹션을 저장했습니다.`, 'success');
-              if (typeof window !== 'undefined') {
-                window.dispatchEvent(new CustomEvent('builder:saved-section-changed'));
-              }
-            }}
-          />
-        ) : null}
-
-        {movePickerNodeIds && activePageId ? (
-          <MoveToPageModal
-            pages={sitePagesState.map((page) => ({
-              pageId: page.pageId,
-              slug: page.slug,
-              isHomePage: page.isHomePage,
-            }))}
-            currentPageId={activePageId}
-            sourceNodeIds={movePickerNodeIds}
-            locale={locale}
-            onClose={() => setMovePickerNodeIds(null)}
-            onMoved={async (result) => {
-              setMovePickerNodeIds(null);
-              try {
-                const response = await fetch(
-                  `/api/builder/site/pages/${activePageId}/draft?locale=${locale}`,
-                  { credentials: 'same-origin' },
-                );
-                if (response.ok) {
-                  const data = (await response.json()) as DraftResponseBody;
-                  if (data.draft) setDraftMeta(data.draft);
-                  if (data.document) {
-                    replaceDocument(data.document);
-                    setSyncedUpdatedAt(data.document.updatedAt);
-                  }
-                }
-              } catch {
-                // best effort: server already moved nodes; user can refresh manually
-              }
-              pushToast(
-                `${result.movedCount}개 요소를 /${result.targetSlug}(으)로 이동했습니다`,
-                'success',
-              );
-            }}
-          />
-        ) : null}
 
         <div className={styles.lowerLeftChipStack} aria-live="polite" aria-atomic="false">
           {draftSaveState !== 'idle' ? (

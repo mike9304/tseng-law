@@ -2494,3 +2494,28 @@ Prompt-to-artifact 체크:
 메모:
 - W27은 title/description char counter + Google preview + OG image preview + canonical 입력/저장 + public head 반영까지 자동 증거가 생겼다.
 - 외부 `Wix 체크포인트.md`는 현재 macOS 권한이 `Operation not permitted`로 막혀 아직 반영하지 못했다.
+
+## 2026-05-09 Codex /goal G-Editor completion audit
+
+목표 재정의:
+- `/ko/admin-builder` 데스크톱 에디터가 Wix Editor처럼 보이고 작동하도록 W02/W04/W06/W07/W08/W10/W11/W18~W23/W26~W30을 실제 UI 기준으로 구현/검증한다.
+- 검증 gate는 `typecheck`, `lint`, `test:unit`, `security:builder-routes`, `build`, builder Playwright, dev 3000 live check, 문서 업데이트, milestone commit이다.
+- 마지막 완료 판정은 사용자 5분 직접 QA와 Wix 체감 승인까지 포함한다.
+
+요구사항별 실제 증거:
+- W02/W06/W07/W08/W10/W11/W18/W19~W21/W29/W30: `tests/builder-editor/admin-builder.playwright.ts`가 선택 핸들/hover label, snap guide/chip, resize/rotation readout, topbar/rail/context menu, save chip fade, undo/redo chip, duplicate/copy/paste, first-screen/scroll/layout regression, header menu/dropdown edit pin, map quick edit, columns navigation을 실제 클릭으로 검증한다.
+- W03: `tests/builder-editor/inline-text-editor.playwright.ts`가 inline text toolbar visual, active state, rich-text save, undo/redo를 검증한다.
+- W04: `SandboxCatalogPanel.tsx` + `admin-builder.playwright.ts`가 Add drawer search, quick add, empty state, token cleanup을 검증한다.
+- W22/W23: `tests/builder-editor/asset-image-workflow.playwright.ts`가 AssetLibrary folder/tag/search/sort/new folder/new tag/image replacement와 Crop/Filter/Alt dialog 적용을 검증한다.
+- W26/W27/W28: `tests/builder-editor/seo-publish-history.playwright.ts`가 VersionHistory timeline hover diff/restore, SEO title/description counters, Google preview, OG image, canonical 저장/public head 반영, publish blocker/warning gate를 검증한다.
+- mutation guard: `npm run security:builder-routes` 최신 pass에서 71 route files / 62 mutation handlers guard coverage 확인.
+- 전체 gate: 최신 full gate에서 `typecheck`, `lint`, `test:unit`, `security:builder-routes`, `build`, `test:builder-editor -- --workers=1`, `/ko`, `/ko/admin-builder` 200 확인.
+- commits: 최근 milestone commits `G-Editor: strengthen inline text toolbar`, `G-Editor: pin dropdown editing controls`, `G-Editor: assert image editor apply flow`, `G-Editor: harden office map draft polling`, `G-Editor: assert SEO character counters`.
+
+미충족 / 약점:
+- Done when 17은 사용자 직접 5분 자유 사용 검증이 필요하다. AI 자동 Playwright만으로 complete 처리 불가.
+- Done when 20 중 외부 `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md` 업데이트는 macOS 권한 `Operation not permitted`로 현재 미완료다. `SESSION.md`는 계속 업데이트 중.
+- `CODEX-AUDIT-FINDINGS-2026-05-09.md`, `CODEX-GOAL-WIX-PARITY-COMPLETE.md`는 untracked 문서로 남아 있으며, goal 산출물로 staging하지 않았다.
+
+결론:
+- 자동 구현/검증 기준은 대부분 충족했지만, 사용자 직접 QA와 외부 체크포인트 권한 문제가 남아 있으므로 goal은 아직 complete 아님.

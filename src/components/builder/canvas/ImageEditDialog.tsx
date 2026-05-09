@@ -21,12 +21,26 @@ const FILTER_SLIDERS: Array<{ key: keyof ImageFilters; label: string; min: numbe
 ];
 
 export type ImageEditTab = 'crop' | 'filter' | 'alt';
+type ImageFocalPoint = { x: number; y: number };
+
+function clampFocal(value: number): number {
+  if (!Number.isFinite(value)) return 50;
+  return Math.max(0, Math.min(100, Math.round(value)));
+}
+
+function normalizeFocalPoint(focalPoint: ImageFocalPoint | undefined): ImageFocalPoint {
+  return {
+    x: clampFocal(focalPoint?.x ?? 50),
+    y: clampFocal(focalPoint?.y ?? 50),
+  };
+}
 
 export default function ImageEditDialog({
   open,
   imageSrc,
   alt,
   cropAspect,
+  focalPoint,
   filters,
   initialTab = 'crop',
   onApply,
@@ -36,14 +50,16 @@ export default function ImageEditDialog({
   imageSrc: string;
   alt: string;
   cropAspect?: string;
+  focalPoint?: ImageFocalPoint;
   filters?: ImageFilters;
   initialTab?: ImageEditTab;
-  onApply: (content: { alt: string; cropAspect: string; filters: ImageFilters }) => void;
+  onApply: (content: { alt: string; cropAspect: string; focalPoint: ImageFocalPoint; filters: ImageFilters }) => void;
   onClose: () => void;
 }) {
   const [activeTab, setActiveTab] = useState<ImageEditTab>('crop');
   const [draftAlt, setDraftAlt] = useState(alt);
   const [draftAspect, setDraftAspect] = useState(cropAspect || 'Free');
+  const [draftFocalPoint, setDraftFocalPoint] = useState<ImageFocalPoint>(() => normalizeFocalPoint(focalPoint));
   const [draftFilters, setDraftFilters] = useState<ImageFilters>(filters ?? DEFAULT_FILTERS);
 
   useEffect(() => {
@@ -51,8 +67,9 @@ export default function ImageEditDialog({
     setActiveTab(initialTab);
     setDraftAlt(alt);
     setDraftAspect(cropAspect || 'Free');
+    setDraftFocalPoint(normalizeFocalPoint(focalPoint));
     setDraftFilters(filters ?? DEFAULT_FILTERS);
-  }, [alt, cropAspect, filters, initialTab, open]);
+  }, [alt, cropAspect, filters, focalPoint, initialTab, open]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -68,6 +85,12 @@ export default function ImageEditDialog({
     [draftAspect],
   );
   const previewFilter = !isDefaultFilters(draftFilters) ? filtersToCSS(draftFilters) : undefined;
+  const updateFocalPoint = (partial: Partial<ImageFocalPoint>) => {
+    setDraftFocalPoint((current) => ({
+      x: clampFocal(partial.x ?? current.x),
+      y: clampFocal(partial.y ?? current.y),
+    }));
+  };
 
   if (!open) return null;
 
@@ -98,7 +121,25 @@ export default function ImageEditDialog({
                 <img
                   src={imageSrc}
                   alt={draftAlt || 'Image preview'}
-                  style={{ filter: previewFilter }}
+                  style={{
+                    filter: previewFilter,
+                    objectPosition: `${draftFocalPoint.x}% ${draftFocalPoint.y}%`,
+                  }}
+                  onClick={(event) => {
+                    const rect = event.currentTarget.getBoundingClientRect();
+                    updateFocalPoint({
+                      x: ((event.clientX - rect.left) / rect.width) * 100,
+                      y: ((event.clientY - rect.top) / rect.height) * 100,
+                    });
+                  }}
+                />
+                <span
+                  className={styles.imageEditFocalPoint}
+                  style={{
+                    left: `${draftFocalPoint.x}%`,
+                    top: `${draftFocalPoint.y}%`,
+                  }}
+                  aria-hidden="true"
                 />
                 {selectedRatio ? (
                   <span
@@ -141,6 +182,54 @@ export default function ImageEditDialog({
                       {ratio.label}
                     </button>
                   ))}
+                </div>
+                <div className={styles.imageEditFocalControls}>
+                  <span className={styles.inspectorFieldLabel}>Focal point</span>
+                  <div className={styles.imageEditFocalGrid} aria-label="Focal point presets">
+                    {[
+                      ['top-left', 20, 20],
+                      ['top', 50, 20],
+                      ['top-right', 80, 20],
+                      ['left', 20, 50],
+                      ['center', 50, 50],
+                      ['right', 80, 50],
+                      ['bottom-left', 20, 80],
+                      ['bottom', 50, 80],
+                      ['bottom-right', 80, 80],
+                    ].map(([label, x, y]) => (
+                      <button
+                        key={label}
+                        type="button"
+                        aria-label={`Focal ${label}`}
+                        className={styles.imageEditFocalPreset}
+                        onClick={() => updateFocalPoint({ x: Number(x), y: Number(y) })}
+                      />
+                    ))}
+                  </div>
+                  <label className={styles.imageEditSlider}>
+                    <span>X</span>
+                    <input
+                      type="range"
+                      min={0}
+                      max={100}
+                      value={draftFocalPoint.x}
+                      aria-label="Focal point X"
+                      onChange={(event) => updateFocalPoint({ x: Number(event.target.value) })}
+                    />
+                    <strong>{draftFocalPoint.x}%</strong>
+                  </label>
+                  <label className={styles.imageEditSlider}>
+                    <span>Y</span>
+                    <input
+                      type="range"
+                      min={0}
+                      max={100}
+                      value={draftFocalPoint.y}
+                      aria-label="Focal point Y"
+                      onChange={(event) => updateFocalPoint({ y: Number(event.target.value) })}
+                    />
+                    <strong>{draftFocalPoint.y}%</strong>
+                  </label>
                 </div>
               </div>
             ) : null}
@@ -205,7 +294,12 @@ export default function ImageEditDialog({
           <button
             type="button"
             className={styles.publishButton}
-            onClick={() => onApply({ alt: draftAlt, cropAspect: draftAspect, filters: draftFilters })}
+            onClick={() => onApply({
+              alt: draftAlt,
+              cropAspect: draftAspect,
+              focalPoint: draftFocalPoint,
+              filters: draftFilters,
+            })}
           >
             Apply
           </button>

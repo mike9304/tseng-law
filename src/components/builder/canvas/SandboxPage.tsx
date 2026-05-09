@@ -222,6 +222,7 @@ export default function SandboxPage({
     replaceDocument,
     pasteClipboardNodes,
     setDraftSaveState,
+    updateNode,
     updateNodeContent,
     setViewport: setStoreViewport,
   } = useBuilderCanvasStore();
@@ -1478,11 +1479,18 @@ export default function SandboxPage({
             imageSrc={String(imageEditorNode.content.src || '')}
             alt={String(imageEditorNode.content.alt || '')}
             cropAspect={typeof imageEditorNode.content.cropAspect === 'string' ? imageEditorNode.content.cropAspect : 'Free'}
+            focalPoint={imageEditorNode.content.focalPoint}
             filters={imageEditorNode.content.filters}
             initialTab={imageEditorRequest?.initialTab}
             onClose={() => setImageEditorRequest(null)}
             onApply={(content) => {
-              updateNodeContent(imageEditorNode.id, content);
+              updateNode(imageEditorNode.id, (node) => ({
+                ...node,
+                content: {
+                  ...node.content,
+                  ...content,
+                },
+              } as typeof node));
               setImageEditorRequest(null);
             }}
           />

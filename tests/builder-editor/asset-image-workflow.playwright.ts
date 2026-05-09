@@ -136,8 +136,20 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       await page.keyboard.press(`${shortcutModifier}+Z`);
       await expect(renderedImage).not.toHaveAttribute('src', new RegExp(selectedAsset.filename));
 
+      const cropDialog = await openImageEditDialog(page, /Crop \/ Filter \/ Alt/);
+      await expect(cropDialog.getByText('Aspect ratio')).toBeVisible();
+      await cropDialog.getByRole('button', { name: '16:9' }).click();
+      await cropDialog.getByRole('button', { name: 'Focal bottom-left' }).click();
+      await cropDialog.getByRole('button', { name: 'Apply' }).click();
+      await expect(renderedImage).toHaveAttribute('style', /object-position:\s*20%\s+80%/);
+
+      const filterDialogAfterCrop = await openImageEditDialog(page, /Crop \/ Filter \/ Alt/);
+      await expect(filterDialogAfterCrop.getByText('Aspect ratio')).toBeVisible();
+      await expect(filterDialogAfterCrop.getByLabel('Focal point X')).toHaveValue('20');
+      await expect(filterDialogAfterCrop.getByLabel('Focal point Y')).toHaveValue('80');
+      await filterDialogAfterCrop.getByRole('button', { name: 'Close' }).click();
+
       const filterDialog = await openImageEditDialog(page, /Crop \/ Filter \/ Alt/);
-      await expect(filterDialog.getByText('Aspect ratio')).toBeVisible();
       await filterDialog.getByRole('button', { name: 'filter' }).click();
       await filterDialog.getByRole('button', { name: 'B&W' }).click();
       await expect(filterDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('style', /grayscale\(100%\)/);

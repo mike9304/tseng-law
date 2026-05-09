@@ -2164,3 +2164,19 @@
 
 메모:
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor image focal crop control
+
+범위:
+- W23 Crop / Filter / Alt 통합 dialog의 crop 탭에 focal point 컨트롤을 추가했다.
+- preview 이미지를 클릭하거나 3x3 preset/slider로 초점 위치를 조절하고, Apply 시 이미지 노드 `content.focalPoint`로 저장한다.
+- 기존 `ImageElement`의 object-position 렌더링과 연결해 편집 캔버스에서 crop focus가 즉시 반영된다.
+- 기존 content whitelist 때문에 오래된 이미지 노드의 `focalPoint`가 저장되지 않던 경로를 image editor 적용 시 `updateNode` 직접 병합으로 우회했다. 위젯 라이브러리 defaultContent는 건드리지 않았다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (1 passed, sandbox 승격 실행)
+
+메모:
+- W23은 여전히 완전한 자유형 crop box 드래그보다는 focal point + ratio crop이다. 사용자 직접 검증에서 Wix 대비 더 부족하다고 판단되면 다음 단계는 draggable crop box다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

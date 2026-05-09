@@ -4028,6 +4028,7 @@
   max-height: 360px;
   object-fit: contain;
   display: block;
+  cursor: crosshair;
 }
 
 .imageEditCropOverlay {
@@ -4038,6 +4039,18 @@
   border: 2px dashed #116dff;
   border-radius: 4px;
   background: rgba(17, 109, 255, 0.08);
+  pointer-events: none;
+}
+
+.imageEditFocalPoint {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #116dff;
+  box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.34), 0 8px 18px rgba(15, 23, 42, 0.22);
+  transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
@@ -4086,6 +4099,36 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
+}
+
+.imageEditFocalControls {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.imageEditFocalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 28px);
+  gap: 0.35rem;
+}
+
+.imageEditFocalPreset {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at center, #116dff 0 3px, transparent 4px),
+    #fff;
+  cursor: pointer;
+}
+
+.imageEditFocalPreset:hover,
+.imageEditFocalPreset:focus-visible {
+  border-color: #116dff;
+  background:
+    radial-gradient(circle at center, #116dff 0 4px, transparent 5px),
+    #eff6ff;
 }
 
 .imageEditSlider {

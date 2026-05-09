@@ -164,6 +164,22 @@ function clampRect(
   return { x, y, width, height };
 }
 
+function unionRects(rects: readonly BuilderCanvasNode['rect'][]): BuilderCanvasNode['rect'] | null {
+  if (rects.length === 0) return null;
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+  for (const rect of rects) {
+    minX = Math.min(minX, rect.x);
+    minY = Math.min(minY, rect.y);
+    maxX = Math.max(maxX, rect.x + rect.width);
+    maxY = Math.max(maxY, rect.y + rect.height);
+  }
+  if (!Number.isFinite(minX)) return null;
+  return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
+}
+
 function clampAspectRect(
   rect: BuilderCanvasNode['rect'],
   startRect: BuilderCanvasNode['rect'],
@@ -1247,12 +1263,8 @@ export default function CanvasContainer({
   }, [absoluteRectById, interaction]);
 
   const interactionActiveRect = useMemo(() => {
-    if (!interactionMode || dragGhostCurrentRects.length === 0) return null;
-    const minX = Math.min(...dragGhostCurrentRects.map((rect) => rect.x));
-    const minY = Math.min(...dragGhostCurrentRects.map((rect) => rect.y));
-    const maxX = Math.max(...dragGhostCurrentRects.map((rect) => rect.x + rect.width));
-    const maxY = Math.max(...dragGhostCurrentRects.map((rect) => rect.y + rect.height));
-    return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
+    if (!interactionMode) return null;
+    return unionRects(dragGhostCurrentRects);
   }, [dragGhostCurrentRects, interactionMode]);
 
   const snapOtherRects = useMemo(() => {

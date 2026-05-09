@@ -2136,3 +2136,17 @@
 메모:
 - 감사 문서가 제안한 단순 default false는 최근 `page_not_in_site`/페이지 누락 레이스를 되살릴 수 있어 적용하지 않았다. 현재 정책은 동시 생성 보존과 삭제 부활 차단을 둘 다 만족한다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor canvas overlay perf follow-up
+
+범위:
+- 감사 문서의 drag/scroll 렉 계열 지적 중 현재 코드에 남은 작은 hot path를 줄였다.
+- drag feedback overlay의 active rect 계산에서 매 렌더 `map()` 배열 4개와 spread `Math.min/Math.max`를 만들던 경로를 `unionRects` 단일 루프로 교체했다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers canvas direct-manipulation overlays" --workers=1` ✅ (1 passed, sandbox 승격 실행)
+
+메모:
+- 동작 변경 없이 W02/W06/W07 overlay 계산 비용만 줄인 보강이다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

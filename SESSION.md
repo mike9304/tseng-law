@@ -2726,3 +2726,38 @@ Prompt-to-artifact 체크:
 - W 범위 없는 선행 안전 마일스톤이라 `Wix 체크포인트.md` 변경은 없다.
 - 첫 build/full Playwright 병렬 실행은 dev server와 `.next` 산출물 충돌로 실패했다. dev server 정지 → `.next` 삭제 → build 단독 실행 → dev server 재시작 후 전체 green 확인.
 - 다음 마일스톤은 M01 Performance 잔여 fix. 감사 Critical #1~#4와 High #6/#7/#9/#10/#11을 작은 커밋으로 닫는다.
+
+## 2026-05-09 Codex /goal Wix full builder M01 performance residuals
+
+범위:
+- M01 Performance 잔여 fix를 완료했다.
+- 큰 selection group bounds 계산에서 argument spread를 제거해 대량 선택 시 call stack/argument overflow 위험을 없앴다.
+- inspector input에서 Space keyup이 canvas pan 상태를 건드리지 않도록 keydown/keyup 모두 text-input target guard를 적용했다.
+- drag snap 후보를 active viewport bounds 기준으로 prune해 offscreen node까지 매 move마다 snap 계산하지 않게 했다.
+- `InsightsArchiveListPreview` fetch를 locale별 promise/data cache로 분리해 same-locale remount 중복 fetch를 제거했다.
+- office map Playwright의 draft polling이 dev server 부하 중 `429` 또는 일시 `ECONNRESET`을 만났을 때 재시도하도록 보강했다.
+- 감사 #7 history full structuredClone 지적은 현재 HEAD의 `history.ts` structural-sharing snapshot 구현과 맞지 않아 재작성하지 않았다.
+
+커밋:
+- `a950f84 G-Editor: avoid spread overflow in group bounds`
+- `21d64b2 G-Editor: guard space-keyup in text inputs`
+- `4751ff8 G-Editor: prune snap candidates by viewport`
+- `613bf94 G-Editor: cache insights archive preview by locale`
+- `9b96359 G-Editor: harden office map draft polling`
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/snap.test.ts` ✅
+- `npm run test:unit -- src/components/builder/canvas/__tests__/insights-preview-cache.test.ts` ✅
+- `npm run test:unit` ✅ (27 files / 740 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/office-map-public.playwright.ts -g "edits a generic Google map address" --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (28 passed / 3.7m)
+
+메모:
+- 3000번 dev server는 다시 실행 중이다.
+- M01은 W 범위 없는 선행 성능/안정성 마일스톤이라 `Wix 체크포인트.md` 변경 없음.
+- 다음 마일스톤은 M02 Hot files split. 사용자 제보의 "사진/칼럼 클릭 시 백지", "첫 화면 위치/짤림", "편집 메뉴 사라짐" 같은 런타임 결함을 M02 진입 조사에 포함한다.

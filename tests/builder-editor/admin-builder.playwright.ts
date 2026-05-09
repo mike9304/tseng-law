@@ -113,9 +113,100 @@ async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Lo
     }
   }
   await expect(selectedNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
-  await expect(selectedNode.locator('[class*="rotationHandle"]').first()).toBeVisible();
-  await expect(selectedNode.locator('[class*="nodeSizeLabel"]').first()).toContainText(/·/);
+  await expect.poll(() => selectedNode.evaluate((element) => {
+    const style = window.getComputedStyle(element);
+    return {
+      outlineColor: style.outlineColor,
+      outlineStyle: style.outlineStyle,
+      outlineWidth: style.outlineWidth,
+    };
+  })).toEqual({
+    outlineColor: 'rgb(17, 109, 255)',
+    outlineStyle: 'solid',
+    outlineWidth: '2px',
+  });
+
+  const firstHandle = selectedNode.locator('[class*="resizeHandle"]:visible').first();
+  const handleStyle = await firstHandle.evaluate((element) => {
+    const style = window.getComputedStyle(element);
+    const rect = element.getBoundingClientRect();
+    const localWidth = Number.parseFloat(style.width) || rect.width;
+    const screenScale = rect.width / localWidth;
+    return {
+      backgroundColor: style.backgroundColor,
+      borderColor: style.borderColor,
+      borderRadius: Number.parseFloat(style.borderRadius) * screenScale,
+      boxShadow: style.boxShadow,
+      height: Math.round(rect.height),
+      width: Math.round(rect.width),
+    };
+  });
+  expect(handleStyle.backgroundColor).toBe('rgb(255, 255, 255)');
+  expect(handleStyle.borderColor).toBe('rgb(15, 23, 42)');
+  expect(handleStyle.borderRadius).toBeCloseTo(2, 1);
+  expect(handleStyle.boxShadow).toContain('rgb(17, 109, 255)');
+  expect(handleStyle.width).toBeGreaterThanOrEqual(8);
+  expect(handleStyle.width).toBeLessThanOrEqual(11);
+  expect(handleStyle.height).toBeGreaterThanOrEqual(8);
+  expect(handleStyle.height).toBeLessThanOrEqual(11);
+
+  const rotationHandle = selectedNode.locator('[class*="rotationHandle"]').first();
+  await expect(rotationHandle).toBeVisible();
+  const rotationHandleStyle = await rotationHandle.evaluate((element) => {
+    const style = window.getComputedStyle(element);
+    const rect = element.getBoundingClientRect();
+    return {
+      cursor: style.cursor,
+      height: Math.round(rect.height),
+      width: Math.round(rect.width),
+    };
+  });
+  expect(rotationHandleStyle.cursor).toBe('grab');
+  expect(rotationHandleStyle.width).toBeGreaterThanOrEqual(16);
+  expect(rotationHandleStyle.width).toBeLessThanOrEqual(22);
+  expect(rotationHandleStyle.height).toBeGreaterThanOrEqual(22);
+  expect(rotationHandleStyle.height).toBeLessThanOrEqual(29);
+
+  const sizeLabel = selectedNode.locator('[class*="nodeSizeLabel"]').first();
+  await expect(sizeLabel).toContainText(/^[a-z-]+ · \d+×\d+$/);
+  const sizeLabelStyle = await sizeLabel.evaluate((element) => {
+    const style = window.getComputedStyle(element);
+    return {
+      backgroundColor: style.backgroundColor,
+      borderRadius: style.borderRadius,
+      color: style.color,
+    };
+  });
+  expect(sizeLabelStyle).toEqual({
+    backgroundColor: 'rgb(17, 109, 255)',
+    borderRadius: '3px',
+    color: 'rgb(255, 255, 255)',
+  });
+
   return selectedNode;
+}
+
+async function expectHoverIndicator(page: Page): Promise<void> {
+  const hoverTarget = canvasEditor(page)
+    .locator('[class*="node"][data-node-id="home-hero-title"]:visible')
+    .filter({ has: page.locator('[class*="nodeBody"]') })
+    .first();
+  await expect(hoverTarget).toBeVisible();
+  await hoverTarget.hover({ force: true });
+  await expect.poll(() => hoverTarget.evaluate((element) => {
+    const style = window.getComputedStyle(element);
+    return {
+      outlineColor: style.outlineColor,
+      outlineStyle: style.outlineStyle,
+      outlineWidth: Number.parseFloat(style.outlineWidth),
+    };
+  })).toMatchObject({
+    outlineColor: 'rgba(17, 109, 255, 0.72)',
+    outlineStyle: 'solid',
+  });
+  const hoverWidth = await hoverTarget.evaluate((element) => Number.parseFloat(window.getComputedStyle(element).outlineWidth));
+  expect(hoverWidth).toBeGreaterThanOrEqual(0.85);
+  expect(hoverWidth).toBeLessThanOrEqual(1.15);
 }
 
 async function selectFirstNode(page: Page): Promise<Locator> {
@@ -641,6 +732,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await waitForEditorCss(page);
     await recoverFromDevChunkOverlay(page);
     await expect(page.locator('[data-node-id="home-hero-subtitle"]').first()).toBeVisible();
+    await expectHoverIndicator(page);
 
     const selectedNode = await selectFirstNode(page);
     await closeModalOverlayIfPresent(page);

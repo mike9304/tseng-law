@@ -2541,6 +2541,12 @@
   box-shadow: 0 0 0 1px rgba(191, 219, 254, 0.28);
 }
 
+.stage .node[data-node-id]:hover:not(.nodeSelected) {
+  outline: calc(1px / var(--canvas-zoom, 1)) solid rgba(17, 109, 255, 0.72) !important;
+  outline-offset: 0 !important;
+  box-shadow: 0 0 0 calc(1px / var(--canvas-zoom, 1)) rgba(191, 219, 254, 0.28) !important;
+}
+
 .nodeSelected {
   outline: 2px solid #116dff;
   outline-offset: 0;
@@ -3220,13 +3226,16 @@
 
 .resizeHandle {
   position: absolute;
-  width: 9px;
-  height: 9px;
+  width: calc(9px / var(--canvas-zoom, 1));
+  height: calc(9px / var(--canvas-zoom, 1));
+  box-sizing: border-box;
   pointer-events: auto;
-  border-radius: 2px;
-  border: 1px solid #0f172a;
+  border-radius: calc(2px / var(--canvas-zoom, 1));
+  border: calc(1px / var(--canvas-zoom, 1)) solid #0f172a;
   background: #ffffff;
-  box-shadow: 0 0 0 1px #116dff, 0 1px 3px rgba(15, 23, 42, 0.18);
+  box-shadow:
+    0 0 0 calc(1px / var(--canvas-zoom, 1)) #116dff,
+    0 calc(1px / var(--canvas-zoom, 1)) calc(3px / var(--canvas-zoom, 1)) rgba(15, 23, 42, 0.18);
   transition: transform 150ms ease, box-shadow 150ms ease;
   z-index: 5;
 }
@@ -3236,23 +3245,23 @@
   box-shadow: 0 0 0 2px rgba(17, 109, 255, 0.22), 0 2px 6px rgba(15, 23, 42, 0.18);
 }
 
-.resizeHandleNW { top: -5px; left: -5px; cursor: nwse-resize; }
-.resizeHandleN { top: -5px; left: calc(50% - 4.5px); cursor: ns-resize; }
-.resizeHandleNE { top: -5px; right: -5px; cursor: nesw-resize; }
-.resizeHandleE { top: calc(50% - 4.5px); right: -5px; cursor: ew-resize; }
-.resizeHandleS { bottom: -5px; left: calc(50% - 4.5px); cursor: ns-resize; }
-.resizeHandleSW { bottom: -5px; left: -5px; cursor: nesw-resize; }
-.resizeHandleW { top: calc(50% - 4.5px); left: -5px; cursor: ew-resize; }
-.resizeHandleSE { bottom: -5px; right: -5px; cursor: nwse-resize; }
+.resizeHandleNW { top: calc(-4.5px / var(--canvas-zoom, 1)); left: calc(-4.5px / var(--canvas-zoom, 1)); cursor: nwse-resize; }
+.resizeHandleN { top: calc(-4.5px / var(--canvas-zoom, 1)); left: calc(50% - 4.5px / var(--canvas-zoom, 1)); cursor: ns-resize; }
+.resizeHandleNE { top: calc(-4.5px / var(--canvas-zoom, 1)); right: calc(-4.5px / var(--canvas-zoom, 1)); cursor: nesw-resize; }
+.resizeHandleE { top: calc(50% - 4.5px / var(--canvas-zoom, 1)); right: calc(-4.5px / var(--canvas-zoom, 1)); cursor: ew-resize; }
+.resizeHandleS { bottom: calc(-4.5px / var(--canvas-zoom, 1)); left: calc(50% - 4.5px / var(--canvas-zoom, 1)); cursor: ns-resize; }
+.resizeHandleSW { bottom: calc(-4.5px / var(--canvas-zoom, 1)); left: calc(-4.5px / var(--canvas-zoom, 1)); cursor: nesw-resize; }
+.resizeHandleW { top: calc(50% - 4.5px / var(--canvas-zoom, 1)); left: calc(-4.5px / var(--canvas-zoom, 1)); cursor: ew-resize; }
+.resizeHandleSE { bottom: calc(-4.5px / var(--canvas-zoom, 1)); right: calc(-4.5px / var(--canvas-zoom, 1)); cursor: nwse-resize; }
 
 .rotationHandle {
   position: absolute;
-  top: -39px;
+  top: calc(-39px / var(--canvas-zoom, 1));
   left: 50%;
   pointer-events: auto;
   transform: translateX(-50%);
-  width: 17px;
-  height: 23px;
+  width: calc(17px / var(--canvas-zoom, 1));
+  height: calc(23px / var(--canvas-zoom, 1));
   border: 0;
   background: transparent;
   cursor: grab;
@@ -3264,22 +3273,24 @@
   position: absolute;
   top: 0;
   left: 50%;
-  width: 13px;
-  height: 13px;
-  border: 1px solid #0f172a;
+  width: calc(13px / var(--canvas-zoom, 1));
+  height: calc(13px / var(--canvas-zoom, 1));
+  border: calc(1px / var(--canvas-zoom, 1)) solid #0f172a;
   border-radius: 50% 50% 50% 0;
   background: #ffffff;
-  box-shadow: 0 0 0 1px #116dff, 0 2px 5px rgba(15, 23, 42, 0.18);
+  box-shadow:
+    0 0 0 calc(1px / var(--canvas-zoom, 1)) #116dff,
+    0 calc(2px / var(--canvas-zoom, 1)) calc(5px / var(--canvas-zoom, 1)) rgba(15, 23, 42, 0.18);
   transform: translateX(-50%) rotate(-45deg);
 }
 
 .rotationHandle::after {
   content: '';
   position: absolute;
-  top: 5px;
+  top: calc(5px / var(--canvas-zoom, 1));
   left: 50%;
-  width: 3px;
-  height: 3px;
+  width: calc(3px / var(--canvas-zoom, 1));
+  height: calc(3px / var(--canvas-zoom, 1));
   border-radius: 50%;
   background: #116dff;
   transform: translateX(-50%);
@@ -3291,10 +3302,10 @@
 
 .rotationLine {
   position: absolute;
-  top: -28px;
+  top: calc(-28px / var(--canvas-zoom, 1));
   left: 50%;
-  width: 1px;
-  height: 28px;
+  width: calc(1px / var(--canvas-zoom, 1));
+  height: calc(28px / var(--canvas-zoom, 1));
   background: #116dff;
   pointer-events: none;
   z-index: 4;

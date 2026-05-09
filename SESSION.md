@@ -2312,3 +2312,19 @@ Prompt-to-artifact 체크:
 메모:
 - 이 변경은 W27 SEO panel / W28 publish gate의 저장 신뢰성 보강이다.
 - goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.
+
+## 2026-05-09 Codex /goal G-Editor selection visual assertion
+
+범위:
+- W02/W07/W08 시각 회귀를 더 강하게 잡도록 admin-builder smoke에 선택 보더, 8개 흰 사각 핸들, dark-blue border/blue shadow, `kind · width×height` 라벨, 회전 핀 cursor/크기, hover indicator 최종 색 검증을 추가했다.
+- canvas zoom이 자동 적용된 상태에서도 resize handle, rotation handle, rotation line이 화면상 과하게 커지지 않도록 `--canvas-zoom` 역보정을 추가했다.
+- hover indicator는 위젯 내부 outline보다 editor root indicator가 우선 보이도록 root node selector를 보강했다.
+
+검증:
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/admin-builder.playwright.ts --workers=1` ✅ (1 passed)
+- `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/site/__tests__/persistence.test.ts` ✅ (10 passed)
+
+메모:
+- 직접 브라우저 inspection은 macOS sandbox에서 Chromium launch가 막혀 sandbox 승격으로 실행했다.
+- goal은 아직 complete 아님. 사용자 직접 5분 검증과 Wix 체감 green 승격 판단이 계속 필요하다.

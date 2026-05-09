@@ -2702,3 +2702,27 @@ Prompt-to-artifact 체크:
 
 메모:
 - goal complete는 사용자 직접 5분 QA/Wix 체감 승인 전까지 보류한다.
+
+## 2026-05-09 Codex /goal Wix full builder M00 bootstrap
+
+범위:
+- 사용자가 지정한 `CODEX-GOAL-WIX-FULL-BUILDER.md`를 장기 goal의 master prompt로 읽고, 4개 신뢰출처 파일을 생성했다: `WIX-PARITY-PROMPT.md`, `WIX-PARITY-PLAN.md`, `WIX-PARITY-IMPLEMENT.md`, `WIX-PARITY-DOCUMENTATION.md`.
+- M00의 `mergeMissingPages` 지시는 현재 코드명 `preserveMissingPages` / `reconcileSiteDocumentPagesForWrite()`와 매핑된다.
+- 감사 문서가 이미 확인한 대로 기본값 false 전환은 삭제 부활을 고치는 대신 동시 생성 페이지 보존을 깨므로 적용하지 않았다.
+- 대신 `tests/builder-editor/cross-tab-delete-race.playwright.ts`를 추가해 두 admin-builder 탭, stale site snapshot, Tab A delete, concurrent page addition, stale write 이후 삭제 페이지 미부활과 concurrent page 유지까지 검증한다.
+- `WIX-PARITY-PLAN.md` M00을 🟢로 갱신했고, `WIX-PARITY-DOCUMENTATION.md`에 deviation/검증/리스크를 기록했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit -- src/lib/builder/site/__tests__/persistence.test.ts` ✅ (10 tests)
+- `npm run test:unit` ✅ (26 files / 735 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/cross-tab-delete-race.playwright.ts --workers=1` ✅ (sandbox 밖 실행, macOS Chromium Mach port 권한 이슈 때문)
+- `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --workers=1` ✅ (28 passed)
+
+메모:
+- W 범위 없는 선행 안전 마일스톤이라 `Wix 체크포인트.md` 변경은 없다.
+- 첫 build/full Playwright 병렬 실행은 dev server와 `.next` 산출물 충돌로 실패했다. dev server 정지 → `.next` 삭제 → build 단독 실행 → dev server 재시작 후 전체 green 확인.
+- 다음 마일스톤은 M01 Performance 잔여 fix. 감사 Critical #1~#4와 High #6/#7/#9/#10/#11을 작은 커밋으로 닫는다.

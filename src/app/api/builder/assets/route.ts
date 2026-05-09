@@ -15,6 +15,12 @@ import {
 
 export const runtime = 'nodejs';
 
+function uploadValidationStatus(code?: string): 400 | 413 | 415 {
+  if (code === 'payload_too_large') return 413;
+  if (code === 'unsupported_media') return 415;
+  return 400;
+}
+
 export async function GET(request: NextRequest) {
   const blocked = guardBuilderRead(request);
   if (blocked instanceof NextResponse) return blocked;
@@ -55,7 +61,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PATCH(request: NextRequest) {
-  const auth = guardMutation(request, { bucket: 'mutation' });
+  const auth = await guardMutation(request, { bucket: 'mutation' });
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -78,7 +84,7 @@ export async function PATCH(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = guardMutation(request, { bucket: 'asset' });
+  const auth = await guardMutation(request, { bucket: 'asset' });
   if (auth instanceof NextResponse) return auth;
 
   let formData: FormData;
@@ -96,15 +102,18 @@ export async function POST(request: NextRequest) {
   // Server-side validation: client validation은 위조 가능, 여기서 진짜 검증.
   const policyCheck = validateUploadFile(file);
   if (!policyCheck.valid) {
-    return NextResponse.json({ ok: false, error: policyCheck.error }, { status: 400 });
+    return NextResponse.json(
+      { ok: false, error: policyCheck.error, code: policyCheck.code },
+      { status: uploadValidationStatus(policyCheck.code) },
+    );
   }
 
   // Magic-byte sniffing — claimed MIME과 실제 시그니처 일치 강제.
   const byteCheck = await validateImageBytes(file);
   if (!byteCheck.valid) {
     return NextResponse.json(
-      { ok: false, error: byteCheck.error, sniffed: byteCheck.sniffed },
-      { status: 400 },
+      { ok: false, error: byteCheck.error, code: byteCheck.code, sniffed: byteCheck.sniffed },
+      { status: uploadValidationStatus(byteCheck.code) },
     );
   }
 
@@ -136,7 +145,7 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
-  const auth = guardMutation(request, { bucket: 'asset' });
+  const auth = await guardMutation(request, { bucket: 'asset' });
   if (auth instanceof NextResponse) return auth;
 
   try {

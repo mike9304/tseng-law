@@ -21,20 +21,53 @@ export const ALLOWED_EXTENSIONS = new Set([
 export const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024; // 10MB
 export const MAX_FILE_SIZE_LABEL = '10MB';
 
+const UNSAFE_SVG_SCRIPT_RE = /<\s*script\b[\s\S]*?<\s*\/\s*script\s*>/gi;
+const UNSAFE_SVG_EVENT_ATTR_RE = /\s+on[a-z][\w:-]*\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi;
+const UNSAFE_SVG_HREF_RE = /\b(?:href|xlink:href)\s*=\s*(?:"(?!#)[^"]*"|'(?!#)[^']*'|(?!#)[^\s>]+)/i;
+const UNSAFE_SVG_PROTOCOL_RE = /\b(?:javascript|vbscript|data)\s*:/i;
+
 export interface UploadValidationResult {
   valid: boolean;
   error?: string;
+  code?: 'unsupported_media' | 'payload_too_large' | 'invalid_upload';
+}
+
+export function getAllowedImageTypes(): Set<string> {
+  const configured = process.env.BUILDER_ASSET_ALLOWED_MIME?.trim();
+  if (!configured) return ALLOWED_IMAGE_TYPES;
+  const allowed = new Set(
+    configured
+      .split(',')
+      .map((value) => value.trim().toLowerCase())
+      .filter(Boolean),
+  );
+  return allowed.size > 0 ? allowed : ALLOWED_IMAGE_TYPES;
+}
+
+export function getMaxUploadBytes(): number {
+  const configured = Number(process.env.BUILDER_ASSET_MAX_BYTES);
+  if (Number.isFinite(configured) && configured > 0) {
+    return Math.min(50 * 1024 * 1024, Math.trunc(configured));
+  }
+  return MAX_FILE_SIZE_BYTES;
+}
+
+function formatBytes(bytes: number): string {
+  const mb = bytes / (1024 * 1024);
+  return mb >= 1 ? `${mb.toFixed(mb >= 10 ? 0 : 1)}MB` : `${Math.round(bytes / 1024)}KB`;
 }
 
 export function validateUploadFile(file: File): UploadValidationResult {
   if (!file) {
-    return { valid: false, error: '파일이 선택되지 않았습니다.' };
+    return { valid: false, error: '파일이 선택되지 않았습니다.', code: 'invalid_upload' };
   }
 
-  if (!ALLOWED_IMAGE_TYPES.has(file.type)) {
+  const allowedTypes = getAllowedImageTypes();
+  if (!allowedTypes.has(file.type)) {
     return {
       valid: false,
       error: `허용되지 않는 파일 형식입니다: ${file.type}. 이미지 파일만 업로드 가능합니다 (JPEG, PNG, GIF, WebP, SVG, AVIF).`,
+      code: 'unsupported_media',
     };
   }
 
@@ -43,19 +76,22 @@ export function validateUploadFile(file: File): UploadValidationResult {
     return {
       valid: false,
       error: `허용되지 않는 확장자입니다: ${ext}`,
+      code: 'unsupported_media',
     };
   }
 
-  if (file.size > MAX_FILE_SIZE_BYTES) {
+  const maxBytes = getMaxUploadBytes();
+  if (file.size > maxBytes) {
     const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
     return {
       valid: false,
-      error: `파일이 너무 큽니다 (${sizeMB}MB). 최대 ${MAX_FILE_SIZE_LABEL}까지 허용됩니다.`,
+      error: `파일이 너무 큽니다 (${sizeMB}MB). 최대 ${formatBytes(maxBytes)}까지 허용됩니다.`,
+      code: 'payload_too_large',
     };
   }
 
   if (file.name.length > 200) {
-    return { valid: false, error: '파일명이 너무 깁니다 (최대 200자).' };
+    return { valid: false, error: '파일명이 너무 깁니다 (최대 200자).', code: 'invalid_upload' };
   }
 
   return { valid: true };
@@ -131,6 +167,21 @@ export function sniffImageMagicBytes(buffer: Uint8Array): SniffedFormat {
   return 'unknown';
 }
 
+export function sanitizeSvgUploadText(svg: string): string | null {
+  const trimmed = svg.trim();
+  if (!/^<svg(?:\s|>)/i.test(trimmed) && !/^<\?xml[\s\S]*?<svg(?:\s|>)/i.test(trimmed)) {
+    return null;
+  }
+  if (!/<\/svg>\s*$/i.test(trimmed)) return null;
+
+  const withoutScripts = trimmed.replace(UNSAFE_SVG_SCRIPT_RE, '');
+  const withoutEvents = withoutScripts.replace(UNSAFE_SVG_EVENT_ATTR_RE, '');
+  if (UNSAFE_SVG_HREF_RE.test(withoutEvents)) return null;
+  if (UNSAFE_SVG_PROTOCOL_RE.test(withoutEvents)) return null;
+  if (!/<svg(?:\s|>)/i.test(withoutEvents) || !/<\/svg>\s*$/i.test(withoutEvents)) return null;
+  return withoutEvents;
+}
+
 const MIME_TO_SNIFFED: Record<string, SniffedFormat> = {
   'image/jpeg': 'jpeg',
   'image/jpg': 'jpeg',
@@ -150,13 +201,14 @@ const MIME_TO_SNIFFED: Record<string, SniffedFormat> = {
 export async function validateImageBytes(
   file: File,
 ): Promise<UploadValidationResult & { sniffed?: SniffedFormat }> {
-  const buffer = new Uint8Array(await file.slice(0, 16).arrayBuffer());
+  const buffer = new Uint8Array(await file.slice(0, 1024).arrayBuffer());
   const sniffed = sniffImageMagicBytes(buffer);
 
   if (sniffed === 'unknown') {
     return {
       valid: false,
       error: '파일 시그니처가 인식되지 않습니다. 손상된 파일이거나 허용된 이미지 형식이 아닙니다.',
+      code: 'unsupported_media',
       sniffed,
     };
   }
@@ -166,6 +218,7 @@ export async function validateImageBytes(
     return {
       valid: false,
       error: `허용되지 않는 MIME: ${file.type}`,
+      code: 'unsupported_media',
       sniffed,
     };
   }
@@ -174,8 +227,21 @@ export async function validateImageBytes(
     return {
       valid: false,
       error: `MIME(${file.type})과 실제 파일 형식(${sniffed})이 일치하지 않습니다.`,
+      code: 'unsupported_media',
       sniffed,
     };
+  }
+
+  if (sniffed === 'svg') {
+    const safeSvg = sanitizeSvgUploadText(await file.text());
+    if (!safeSvg) {
+      return {
+        valid: false,
+        error: '안전하지 않은 SVG입니다. script, 외부 href, data/javascript URL은 업로드할 수 없습니다.',
+        code: 'unsupported_media',
+        sniffed,
+      };
+    }
   }
 
   return { valid: true, sniffed };

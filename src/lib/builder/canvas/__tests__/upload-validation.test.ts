@@ -1,11 +1,14 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import {
   validateUploadFile,
   validateUploadUrl,
   sniffImageMagicBytes,
   validateImageBytes,
   ALLOWED_IMAGE_TYPES,
+  sanitizeSvgUploadText,
 } from '@/lib/builder/canvas/upload-validation';
+
+const ORIGINAL_MAX_BYTES = process.env.BUILDER_ASSET_MAX_BYTES;
 
 function makeFile(bytes: number[], name: string, type: string): File {
   const u8 = new Uint8Array(bytes);
@@ -13,9 +16,17 @@ function makeFile(bytes: number[], name: string, type: string): File {
 }
 
 describe('validateUploadFile', () => {
+  afterEach(() => {
+    if (ORIGINAL_MAX_BYTES) process.env.BUILDER_ASSET_MAX_BYTES = ORIGINAL_MAX_BYTES;
+    else delete process.env.BUILDER_ASSET_MAX_BYTES;
+  });
+
   it('rejects unknown MIME', () => {
     const file = new File(['x'], 'evil.exe', { type: 'application/x-msdownload' });
-    expect(validateUploadFile(file).valid).toBe(false);
+    expect(validateUploadFile(file)).toMatchObject({
+      valid: false,
+      code: 'unsupported_media',
+    });
   });
 
   it('accepts allowed image MIME + extension', () => {
@@ -25,7 +36,19 @@ describe('validateUploadFile', () => {
 
   it('rejects oversized file (>10MB)', () => {
     const big = new File([new Uint8Array(11 * 1024 * 1024)], 'big.png', { type: 'image/png' });
-    expect(validateUploadFile(big).valid).toBe(false);
+    expect(validateUploadFile(big)).toMatchObject({
+      valid: false,
+      code: 'payload_too_large',
+    });
+  });
+
+  it('honors BUILDER_ASSET_MAX_BYTES override', () => {
+    process.env.BUILDER_ASSET_MAX_BYTES = String(1024);
+    const tooLarge = new File([new Uint8Array(2048)], 'big.png', { type: 'image/png' });
+    expect(validateUploadFile(tooLarge)).toMatchObject({
+      valid: false,
+      code: 'payload_too_large',
+    });
   });
 
   it('rejects unreasonably long filename', () => {
@@ -131,6 +154,45 @@ describe('validateImageBytes', () => {
     const result = await validateImageBytes(file);
     expect(result.valid).toBe(false);
     expect(result.error).toMatch(/허용되지 않/);
+  });
+
+  it('accepts SVGs that can be sanitized after magic-byte sniffing', async () => {
+    const file = makeFile(
+      Array.from(new TextEncoder().encode('<svg><script>alert(1)</script></svg>')),
+      'sanitize.svg',
+      'image/svg+xml',
+    );
+    const result = await validateImageBytes(file);
+    expect(result).toMatchObject({
+      valid: true,
+      sniffed: 'svg',
+    });
+  });
+
+  it('rejects SVGs with external hrefs after magic-byte sniffing', async () => {
+    const file = makeFile(
+      Array.from(new TextEncoder().encode('<svg><a href="https://evil.example">x</a></svg>')),
+      'external.svg',
+      'image/svg+xml',
+    );
+    const result = await validateImageBytes(file);
+    expect(result).toMatchObject({
+      valid: false,
+      code: 'unsupported_media',
+      sniffed: 'svg',
+    });
+  });
+});
+
+describe('sanitizeSvgUploadText', () => {
+  it('strips script blocks and event handlers from SVG uploads', () => {
+    const result = sanitizeSvgUploadText('<svg onload="x"><script>alert(1)</script><rect onclick="x"/></svg>');
+    expect(result).toBe('<svg><rect/></svg>');
+  });
+
+  it('rejects external href and unsafe protocols', () => {
+    expect(sanitizeSvgUploadText('<svg><a href="https://evil.example">x</a></svg>')).toBeNull();
+    expect(sanitizeSvgUploadText('<svg><a href="javascript:alert(1)">x</a></svg>')).toBeNull();
   });
 });
 

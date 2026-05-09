@@ -3,11 +3,11 @@ import { mkdir, readdir, readFile, rm, stat, writeFile } from 'fs/promises';
 import path from 'path';
 import { randomUUID } from 'crypto';
 import { normalizeBuilderHomeLocale } from '@/lib/builder/persistence';
+import { getMaxUploadBytes, sanitizeSvgUploadText } from '@/lib/builder/canvas/upload-validation';
 import { isLocale, type Locale } from '@/lib/locales';
 
 const BUILDER_ASSET_ROOT = 'builder/assets';
 const BUILDER_ASSET_RUNTIME_ROOT = path.join(process.cwd(), 'runtime-data', 'builder-assets');
-const MAX_BUILDER_ASSET_BYTES = 8 * 1024 * 1024;
 const BUILDER_ASSET_URL_PREFIX = '/api/builder/assets/';
 const BUILDER_ASSET_LIBRARY_FILENAME = '__library.json';
 const RESERVED_ASSET_FOLDER_IDS = new Set(['all', 'recent', 'selected']);
@@ -17,6 +17,7 @@ const BUILDER_IMAGE_TYPE_MAP = {
   'image/webp': 'webp',
   'image/gif': 'gif',
   'image/avif': 'avif',
+  'image/svg+xml': 'svg',
 } as const;
 
 export type BuilderAssetBackend = 'blob' | 'file';
@@ -412,15 +413,33 @@ async function validateImageFile(file: File): Promise<{
     throw new Error('The selected file is empty.');
   }
 
-  if (file.size > MAX_BUILDER_ASSET_BYTES) {
-    throw new Error('Image upload is limited to 8 MB.');
+  const maxBytes = getMaxUploadBytes();
+  if (file.size > maxBytes) {
+    throw new Error(`Image upload is limited to ${Math.round(maxBytes / (1024 * 1024))} MB.`);
+  }
+
+  const rawContent = Buffer.from(await file.arrayBuffer());
+  const content = contentType === 'image/svg+xml'
+    ? sanitizeSvgContent(rawContent)
+    : rawContent;
+
+  if (content.byteLength > maxBytes) {
+    throw new Error(`Image upload is limited to ${Math.round(maxBytes / (1024 * 1024))} MB.`);
   }
 
   return {
-    content: Buffer.from(await file.arrayBuffer()),
+    content,
     contentType,
     name: file.name || 'builder-image',
   };
+}
+
+function sanitizeSvgContent(content: Buffer): Buffer {
+  const sanitized = sanitizeSvgUploadText(content.toString('utf8'));
+  if (!sanitized) {
+    throw new Error('Unsafe SVG upload.');
+  }
+  return Buffer.from(sanitized, 'utf8');
 }
 
 function defaultAssetLibraryState(): BuilderAssetLibraryState {
@@ -597,6 +616,8 @@ function inferImageContentType(filename: string): BuilderImageMimeType | null {
       return 'image/gif';
     case '.avif':
       return 'image/avif';
+    case '.svg':
+      return 'image/svg+xml';
     default:
       return null;
   }

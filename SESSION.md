@@ -2442,3 +2442,19 @@ Prompt-to-artifact 체크:
 
 메모:
 - 사용자가 지적한 “상단 메뉴/드롭다운 편집하려고 이동하면 사라짐”류 회귀를 자동 검증으로 더 직접 잡는다. 사용자 직접 green 검증은 계속 대기한다.
+
+## 2026-05-09 Codex /goal G-Editor image editor apply assertion
+
+범위:
+- W23 Crop / Filter / Alt 통합 dialog 자동 검증을 강화했다.
+- 기존에는 filter preview 확인 뒤 닫기만 했던 경로를, B&W filter Apply 후 실제 이미지 노드 style에 `grayscale(100%)`가 반영되는지 확인하도록 바꿨다.
+- 이미지 노드 선택 → inspector Content tab → `Crop / Filter / Alt` 버튼으로 dialog를 여는 경로도 검증에 추가했다.
+- inspector에서 연 dialog가 기존 filter 상태를 그대로 보여주는지 확인한다.
+
+검증:
+- `npm run typecheck` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 이슈로 승격 실행)
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+
+메모:
+- W23은 우클릭 경로뿐 아니라 inspector 경로와 적용 후 반영까지 자동 검증된다. 사용자 직접 green 검증은 계속 대기한다.

@@ -198,7 +198,19 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       await filterDialog.getByRole('button', { name: 'filter' }).click();
       await filterDialog.getByRole('button', { name: 'B&W' }).click();
       await expect(filterDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('style', /grayscale\(100%\)/);
-      await filterDialog.getByRole('button', { name: 'Close' }).click();
+      await filterDialog.getByRole('button', { name: 'Apply' }).click();
+      await expect(renderedImage).toHaveAttribute('style', /grayscale\(100%\)/);
+
+      await node.click({ position: { x: 18, y: 18 }, force: true });
+      const inspector = page.locator('[class*="inspectorColumn"]').first();
+      await expect(inspector).toBeVisible();
+      await inspector.getByRole('button', { name: 'content' }).click();
+      await inspector.getByRole('button', { name: 'Crop / Filter / Alt' }).click();
+      const inspectorDialog = page.getByRole('dialog', { name: 'Crop, filter, and alt text' });
+      await expect(inspectorDialog).toBeVisible();
+      await inspectorDialog.getByRole('button', { name: 'filter' }).click();
+      await expect(inspectorDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('style', /grayscale\(100%\)/);
+      await inspectorDialog.getByRole('button', { name: 'Close' }).click();
 
       const altDialog = await openImageEditDialog(page, /Alt 텍스트 편집/);
       const altTextarea = altDialog.getByPlaceholder('Describe the image for accessibility and SEO');

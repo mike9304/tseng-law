@@ -231,3 +231,36 @@ Created: 2026-05-09T12:52:13.760Z
   - "칼럼아카이브/사진 클릭하면 백지" 계열 회귀를 잡기 위해 admin smoke에 칼럼 quick action 링크와 axe gate를 포함했다.
   - "검색 창 위치/기존 홈페이지 전체 불러오기" 피드백과 연결된 decomposed container 배경 렌더링 버그를 M04 a11y 검증 중 발견해 수정했다.
 - 다음 마일스톤: M05
+
+## M05 — Empty/error state sweep
+
+- 시작/종료: 2026-05-10T00:49:00+09:00 / 2026-05-10T01:03:00+09:00
+- 변경 파일:
+  - `src/components/builder/canvas/CanvasStageNodes.tsx` — zero-node canvas를 "페이지가 비어있습니다. 좌측 + 패널..." empty state로 명확화
+  - `src/components/builder/canvas/PageSwitcher.tsx` / `SandboxEditorRail.tsx` / `SandboxEditorWorkspace.tsx` — 페이지 목록 0건 empty state, 첫 페이지 만들기 CTA, page list load error toast 연결
+  - `src/components/builder/editor/AssetLibraryModal.tsx` / `SandboxModalsRoot.tsx` — asset 0건 empty state, upload/retry CTA, asset API error toast 연결
+  - `src/components/builder/canvas/hooks/useSandboxSiteState.ts` / `SandboxPage.tsx` / `SandboxTopBar.tsx` — network save retry toast, 401/403/500 save blocker reason, Publish disabled 상태 추가
+  - `src/components/builder/canvas/InlineTextEditor.tsx` / `SandboxPage.module.css` — IME composition 중 외부 click blur 저장, 긴 한글 overflow-wrap 보강
+  - `tests/builder-editor/empty-error-states.playwright.ts` — M05 9개 UI/API 실패·빈 상태 시나리오 추가
+- 커밋:
+  - `e14b5f7 G-Editor: add empty and error state gates`
+- 의사결정:
+  - 저장 실패는 네트워크 fetch 실패와 권한/서버 응답을 분리했다. 네트워크 실패는 retry action이 있는 toast, 401/403/500은 상단 "저장 차단" chip과 Publish disabled로 사용자가 계속 발행하지 못하게 막는다.
+  - 자산/페이지 empty state는 모달/패널 안에서 바로 다음 행동을 제시한다. 별도 새 스키마나 데이터 파일 수정 없이 UI 상태만 보강했다.
+  - IME는 조합 중 외부 클릭이 들어오면 compositionend를 먼저 flush하고 저장/blur를 실행하도록 했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (29 files / 755 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/empty-error-states.playwright.ts --project=chromium-builder --workers=1` ✅ (9 passed)
+  - `NEXT_DIST_DIR=.next-m05 npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `git diff --check` ✅
+- 리스크 / 알려진 문제:
+  - Playwright Chromium launch는 macOS local sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
+  - `NEXT_DIST_DIR=.next-m05` build가 Next의 tsconfig include 자동 수정을 시도했으나 검증 부산물이라 되돌렸다.
+- 보류된 W (있을 경우):
+  - 없음
+- 사용자 피드백 흡수:
+  - "칼럼아카이브 같은거나 사진들 클릭하면 백지가 되는 에러" 계열에 대응해 칼럼 0건, 자산 0건, 페이지 0건, 네트워크 오류, 저장 권한/서버 오류를 실제 Playwright로 고정했다.
+- 다음 마일스톤: M06

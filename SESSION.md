@@ -2855,3 +2855,29 @@ Prompt-to-artifact 체크:
 - Playwright/LHCI는 local sandbox에서 Chromium launch 권한 문제로 sandbox 밖 실행이 필요했다.
 - self-check subagent는 계정 사용량 제한으로 실패해 로컬 gate로 대체했다.
 - 다음 마일스톤은 M05 Empty/error state sweep.
+
+## 2026-05-10 Codex /goal Wix full builder M05 empty/error states
+
+범위:
+- M05 Empty/error state sweep을 완료했다.
+- zero-node canvas, Pages 0건, Asset 0건, Blog feed 0건 empty state를 추가/정리했다.
+- 저장 fetch 실패는 `네트워크 오류, 다시 시도해주세요` toast + retry action으로 표시한다.
+- 401/403/500 save 응답은 상단 "저장 차단" chip과 Publish disabled 상태로 이어지게 했다.
+- IME composition 중 외부 클릭 blur 저장과 긴 한글 overflow wrapping을 보강했다.
+
+커밋:
+- `e14b5f7 G-Editor: add empty and error state gates`
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (29 files / 755 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/empty-error-states.playwright.ts --project=chromium-builder --workers=1` ✅ (9 passed)
+- `NEXT_DIST_DIR=.next-m05 npm run build` ✅
+- `git diff --check` ✅
+
+메모:
+- Playwright는 local sandbox에서 Chromium Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
+- `NEXT_DIST_DIR=.next-m05` build가 Next의 tsconfig include 자동 수정을 시도했으나 검증 부산물이라 되돌렸다.
+- 다음 마일스톤은 M06 .next/dev 재시작 의존성 fix.

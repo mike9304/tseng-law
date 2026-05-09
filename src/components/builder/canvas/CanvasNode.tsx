@@ -1,13 +1,12 @@
 'use client';
 
-import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { getComponent } from '@/lib/builder/components/registry';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind } from '@/lib/builder/canvas/types';
 import type { BuilderRichText } from '@/lib/builder/rich-text/types';
 import { isBuilderRichText, richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
-import { DEFAULT_BLOG_CATEGORIES, type BlogPost } from '@/lib/builder/blog/blog-engine';
 import {
   resolveViewportFontSize,
   resolveViewportHidden,
@@ -20,11 +19,9 @@ import {
   getHomeSectionTemplateVariant,
 } from '@/lib/builder/canvas/section-templates';
 import {
-  getOfficeLocationPresets,
   googleMapsSearchUrl,
   isOfficeMapNodeId,
   labelPrefix,
-  labelValueAfterColon,
   readButtonHref,
   readButtonLabel,
   readMapAddress,
@@ -48,300 +45,27 @@ import {
   resolveThemeTextTypography,
 } from '@/lib/builder/site/theme';
 import InlineTextEditor from './InlineTextEditor';
-import { linkValueFromLegacy } from '@/lib/builder/links';
-import { loadInsightsPreviewPosts } from './insights-preview-cache';
+import { CanvasNodeBadge } from './CanvasNodeBadge';
+import { CanvasNodeQuickPanels } from './CanvasNodeQuickPanels';
+import { CanvasNodeSelectionOverlay } from './CanvasNodeSelectionOverlay';
+import { InsightsArchiveListPreview } from './CanvasInsightsPreview';
+import type { ResizeHandle } from './canvasNodeTypes';
+import {
+  blogFeedLayoutValue,
+  containerActionValue,
+  currentBuilderLocale,
+  heroSearchDestinations,
+  isColumnManagerTarget,
+  isHeroSearchTarget,
+  normalizeHeroSearchAction,
+  officeIndexFromNodeId,
+  textInputValue,
+  type BlogFeedLayoutPreset,
+} from './canvasNodeUtils';
+import { useCanvasNodeRotation } from './hooks/useCanvasNodeRotation';
 import styles from './SandboxPage.module.css';
 
-function nodeLinkPreviewHref(node: BuilderCanvasNode): string | null {
-  const link = linkValueFromLegacy(
-    (node.content as Parameters<typeof linkValueFromLegacy>[0]) || {},
-  );
-  return link?.href?.trim() ? link.href.trim() : null;
-}
-
-function currentBuilderLocale(): string {
-  if (typeof window === 'undefined') return 'ko';
-  const firstSegment = window.location.pathname.split('/').filter(Boolean)[0];
-  return firstSegment || 'ko';
-}
-
-function isColumnManagerTarget(node: BuilderCanvasNode): boolean {
-  if (node.kind === 'blog-feed') return true;
-  if (node.id === 'home-insights-root' || node.id.startsWith('home-insights-')) return true;
-  const href = nodeLinkPreviewHref(node);
-  return Boolean(href && /\/admin-builder\/columns(?:\/|$)/.test(href));
-}
-
-function isHeroSearchTarget(nodeId: string): boolean {
-  return nodeId === 'home-hero-search-wrapper'
-    || nodeId === 'home-hero-search-container'
-    || nodeId === 'home-hero-search-wrap'
-    || nodeId === 'home-hero-search-bar'
-    || nodeId === 'home-hero-search-input'
-    || nodeId === 'home-hero-search-button'
-    || nodeId === 'home-hero-quick-menu'
-    || /^home-hero-quick-menu-item-\d+$/.test(nodeId);
-}
-
-function textInputValue(node: BuilderCanvasNode | undefined, key: 'text' | 'placeholder' | 'ariaLabel'): string {
-  const content = (node?.content ?? {}) as Record<string, unknown>;
-  const value = content[key];
-  return typeof value === 'string' ? value : '';
-}
-
-function containerActionValue(node: BuilderCanvasNode | undefined): string {
-  const content = (node?.content ?? {}) as Record<string, unknown>;
-  const value = content.action;
-  return typeof value === 'string' ? value : '';
-}
-
-type HeroSearchDestination = {
-  key: string;
-  label: string;
-  action: string;
-};
-
-type BlogFeedLayoutPreset = {
-  key: 'grid' | 'list' | 'masonry' | 'featured-hero';
-  label: string;
-  columns: number;
-  gap: number;
-};
-
-const BLOG_FEED_LAYOUT_PRESETS: BlogFeedLayoutPreset[] = [
-  { key: 'grid', label: 'Grid', columns: 3, gap: 24 },
-  { key: 'list', label: 'List', columns: 1, gap: 16 },
-  { key: 'masonry', label: 'Masonry', columns: 3, gap: 24 },
-  { key: 'featured-hero', label: 'Hero', columns: 3, gap: 24 },
-];
-
-function stopEditorPreviewNavigation(event: {
-  target: EventTarget | null;
-  preventDefault: () => void;
-  stopPropagation: () => void;
-}) {
-  const target = event.target;
-  if (target instanceof Element && target.closest('a[href]')) {
-    event.preventDefault();
-  }
-  event.stopPropagation();
-}
-
-function normalizeHeroSearchAction(action: string, locale: string): string {
-  const fallback = `/${locale}/search`;
-  const trimmed = action.trim();
-  if (!trimmed) return fallback;
-  return trimmed.replace(/([?&]tab=)columns\b/, '$1insights');
-}
-
-function heroSearchDestinations(locale: string): HeroSearchDestination[] {
-  const labels = locale === 'zh-hant'
-    ? { services: '服務', insights: '專欄', videos: '影片', faq: 'FAQ' }
-    : locale === 'en'
-      ? { services: 'Services', insights: 'Columns', videos: 'Videos', faq: 'FAQ' }
-      : { services: '업무', insights: '칼럼', videos: '영상', faq: 'FAQ' };
-
-  return [
-    { key: 'services', label: labels.services, action: `/${locale}/search?tab=services` },
-    { key: 'insights', label: labels.insights, action: `/${locale}/search?tab=insights` },
-    { key: 'videos', label: labels.videos, action: `/${locale}/search?tab=videos` },
-    { key: 'faq', label: labels.faq, action: `/${locale}/search?tab=faq` },
-  ];
-}
-
-function blogFeedLayoutValue(node: BuilderCanvasNode): BlogFeedLayoutPreset['key'] {
-  const value = node.content && 'layout' in node.content ? node.content.layout : null;
-  return value === 'list' || value === 'masonry' || value === 'featured-hero' ? value : 'grid';
-}
-
-const INSIGHTS_PAGE_SIZE = 3;
-
-const insightsCopyByLocale = {
-  ko: {
-    dateFallback: '게시일 확인중',
-    prevLabel: '이전',
-    nextLabel: '다음',
-    readTimeSuffix: '분 읽기',
-    readMore: '자세히 보기',
-  },
-  'zh-hant': {
-    dateFallback: '日期待確認',
-    prevLabel: '上一頁',
-    nextLabel: '下一頁',
-    readTimeSuffix: '分鐘閱讀',
-    readMore: '閱讀全文',
-  },
-  en: {
-    dateFallback: 'Date pending',
-    prevLabel: 'Previous',
-    nextLabel: 'Next',
-    readTimeSuffix: 'min read',
-    readMore: 'Read more',
-  },
-} as const;
-
-type InsightsLocale = keyof typeof insightsCopyByLocale;
-
-function insightsLocale(locale: string): InsightsLocale {
-  return locale === 'zh-hant' || locale === 'en' ? locale : 'ko';
-}
-
-function insightCategoryLabel(category: string | undefined, locale: InsightsLocale): string {
-  if (!category) return DEFAULT_BLOG_CATEGORIES.find((item) => item.slug === 'general')?.name[locale] ?? 'General';
-  return DEFAULT_BLOG_CATEGORIES.find((item) => item.slug === category)?.name[locale] ?? category;
-}
-
-function insightDateLabel(post: BlogPost, locale: InsightsLocale): string {
-  const value = post.publishedAt || post.updatedAt;
-  if (!value) return insightsCopyByLocale[locale].dateFallback;
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return value.slice(0, 10) || insightsCopyByLocale[locale].dateFallback;
-  return date.toISOString().slice(0, 10);
-}
-
-function insightReadTimeLabel(post: BlogPost, locale: InsightsLocale): string {
-  return post.readingTimeMinutes > 0
-    ? `${post.readingTimeMinutes}${locale === 'en' ? ' ' : ''}${insightsCopyByLocale[locale].readTimeSuffix}`
-    : '';
-}
-
-function InsightsArchiveListPreview({ locale }: { locale: string }) {
-  const resolvedLocale = insightsLocale(locale);
-  const copy = insightsCopyByLocale[resolvedLocale];
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [page, setPage] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    setLoaded(false);
-    setPage(0);
-    loadInsightsPreviewPosts(resolvedLocale)
-      .then((nextPosts) => {
-        if (cancelled) return;
-        setPosts(nextPosts);
-      })
-      .finally(() => {
-        if (!cancelled) setLoaded(true);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [resolvedLocale]);
-
-  const listPosts = useMemo(() => posts.slice(1), [posts]);
-  const pageCount = Math.max(1, Math.ceil(listPosts.length / INSIGHTS_PAGE_SIZE));
-  const visibleItems = useMemo(
-    () => listPosts.slice(page * INSIGHTS_PAGE_SIZE, page * INSIGHTS_PAGE_SIZE + INSIGHTS_PAGE_SIZE),
-    [listPosts, page],
-  );
-
-  if (!loaded || posts.length <= 1) return null;
-
-  return (
-    <div
-      className={styles.nodeInsightsPreview}
-      data-builder-insights-preview="true"
-      data-builder-insights-page={`${page + 1} / ${pageCount}`}
-      onPointerDown={(event) => event.stopPropagation()}
-      onMouseDown={(event) => event.stopPropagation()}
-      onClick={stopEditorPreviewNavigation}
-      onAuxClick={stopEditorPreviewNavigation}
-      onKeyDown={(event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          stopEditorPreviewNavigation(event);
-        }
-      }}
-    >
-      {pageCount > 1 ? (
-        <div className="insights-controls">
-          <button
-            type="button"
-            className="insights-nav-btn"
-            aria-label={copy.prevLabel}
-            onClick={() => setPage((current) => (current - 1 + pageCount) % pageCount)}
-          >
-            {copy.prevLabel}
-          </button>
-          <span className="insights-page-indicator">{page + 1} / {pageCount}</span>
-          <button
-            type="button"
-            className="insights-nav-btn"
-            aria-label={copy.nextLabel}
-            onClick={() => setPage((current) => (current + 1) % pageCount)}
-          >
-            {copy.nextLabel}
-          </button>
-        </div>
-      ) : null}
-      <div className="insights-list" key={`builder-insights-page-${page}`}>
-        {visibleItems.map((post) => {
-          const image = post.featuredImage?.trim();
-          return (
-            <article key={post.postId} className="insights-list-item">
-              <div className="insights-list-thumb">
-                <div
-                  className={styles.nodeInsightsThumbImage}
-                  style={image ? { backgroundImage: `url(${image})` } : undefined}
-                  aria-label={post.title}
-                  role="img"
-                />
-                <span className="insights-category-badge insights-category-badge--compact">
-                  {insightCategoryLabel(post.category, resolvedLocale)}
-                </span>
-              </div>
-              <div className="insights-list-copy">
-                <div className="insights-meta-row">
-                  <time className="insights-date">{insightDateLabel(post, resolvedLocale)}</time>
-                  <span className="insights-readtime">{insightReadTimeLabel(post, resolvedLocale)}</span>
-                </div>
-                <h4 className="insights-list-title">
-                  <a
-                    className="link-underline"
-                    href={`/${resolvedLocale}/columns/${post.slug}`}
-                    aria-disabled="true"
-                    draggable={false}
-                    tabIndex={-1}
-                  >
-                    {post.title}
-                  </a>
-                </h4>
-                <p className="insights-list-summary">{post.excerpt}</p>
-                <a
-                  className={styles.nodeInsightsReadMore}
-                  href={`/${resolvedLocale}/columns/${post.slug}`}
-                  aria-disabled="true"
-                  draggable={false}
-                  tabIndex={-1}
-                >
-                  {copy.readMore}
-                </a>
-              </div>
-            </article>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-function officeIndexFromNodeId(nodeId: string): number | null {
-  const tabMatch = /^home-offices-tab-(\d+)$/.exec(nodeId);
-  if (tabMatch) return Number(tabMatch[1]);
-  const layoutMatch = /^home-offices-layout-(\d+)(?:$|-)/.exec(nodeId);
-  if (layoutMatch) return Number(layoutMatch[1]);
-  return null;
-}
-
-export type ResizeHandle =
-  | 'nw'
-  | 'n'
-  | 'ne'
-  | 'e'
-  | 'sw'
-  | 's'
-  | 'w'
-  | 'se';
+export type { ResizeHandle } from './canvasNodeTypes';
 
 interface CanvasNodeProps {
   node: BuilderCanvasNode;
@@ -369,13 +93,11 @@ export default function CanvasNode({
   const [isEditing, setIsEditing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [mapQuickAddressDraft, setMapQuickAddressDraft] = useState('');
-  const [rotationReadout, setRotationReadout] = useState<{ degrees: number; x: number; y: number } | null>(null);
   const [animationPreviewPhase, setAnimationPreviewPhase] = useState<AnimationPreviewPhase>(null);
   const component = getComponent(node.kind);
   const theme = useBuilderTheme();
   const nodeRef = useRef<HTMLDivElement>(null);
   const mapQuickAddressRef = useRef<HTMLTextAreaElement>(null);
-  const rotationDrag = useRef<{ startAngle: number; startRotation: number } | null>(null);
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
   const updateNodeRectsForViewport = useBuilderCanvasStore((s) => s.updateNodeRectsForViewport);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
@@ -393,90 +115,15 @@ export default function CanvasNode({
   const currentMapAddress = node.kind === 'map' ? readMapAddress(node) : '';
   const currentMapZoom = node.kind === 'map' ? readMapZoom(node) : 15;
 
-  const handleRotationPointerDown = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
-      event.stopPropagation();
-      event.preventDefault();
-      const targetEl = nodeRef.current;
-      if (!targetEl) return;
-      const activeEl = targetEl;
-      const rect = activeEl.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-      const startAngle = Math.atan2(event.clientY - centerY, event.clientX - centerX) * (180 / Math.PI);
-      rotationDrag.current = { startAngle, startRotation: node.rotation };
-      setRotationReadout({
-        degrees: Math.round(((node.rotation % 360) + 360) % 360),
-        x: event.clientX - rect.left + 14,
-        y: event.clientY - rect.top - 30,
-      });
-      try {
-        activeEl.setPointerCapture(event.pointerId);
-      } catch {
-        // Pointer capture is best effort; window-level listeners keep rotation dragging stable.
-      }
-      beginMutationSession();
-      let didCleanup = false;
-
-      function handlePointerMove(moveEvent: PointerEvent) {
-        if (!rotationDrag.current) return;
-        const currentAngle = Math.atan2(moveEvent.clientY - centerY, moveEvent.clientX - centerX) * (180 / Math.PI);
-        const rawDegrees = rotationDrag.current.startRotation + (currentAngle - rotationDrag.current.startAngle);
-        const nextDegrees = moveEvent.shiftKey ? Math.round(rawDegrees / 15) * 15 : Math.round(rawDegrees);
-        const normalized = ((nextDegrees % 360) + 360) % 360;
-        setRotationReadout({
-          degrees: normalized,
-          x: moveEvent.clientX - rect.left + 14,
-          y: moveEvent.clientY - rect.top - 30,
-        });
-        updateNode(node.id, (n) => ({ ...n, rotation: normalized }), 'transient');
-      }
-
-      function cleanupRotationDrag(mode: 'commit' | 'cancel', pointerId = event.pointerId) {
-        if (didCleanup) return;
-        didCleanup = true;
-        rotationDrag.current = null;
-        setRotationReadout(null);
-        try {
-          if (activeEl.hasPointerCapture(pointerId)) {
-            activeEl.releasePointerCapture(pointerId);
-          }
-        } catch {
-          // Ignore capture cleanup races when the browser has already released it.
-        }
-        window.removeEventListener('pointermove', handlePointerMove);
-        window.removeEventListener('pointerup', handlePointerUp);
-        window.removeEventListener('pointercancel', handlePointerCancel);
-        window.removeEventListener('keydown', handleKeyDown, true);
-        if (mode === 'commit') {
-          commitMutationSession();
-        } else {
-          cancelMutationSession();
-        }
-      }
-
-      function handlePointerUp(upEvent: PointerEvent) {
-        cleanupRotationDrag('commit', upEvent.pointerId);
-      }
-
-      function handlePointerCancel(cancelEvent: PointerEvent) {
-        cleanupRotationDrag('cancel', cancelEvent.pointerId);
-      }
-
-      function handleKeyDown(keyEvent: KeyboardEvent) {
-        if (keyEvent.key !== 'Escape') return;
-        keyEvent.preventDefault();
-        keyEvent.stopPropagation();
-        cleanupRotationDrag('cancel');
-      }
-
-      window.addEventListener('pointermove', handlePointerMove);
-      window.addEventListener('pointerup', handlePointerUp);
-      window.addEventListener('pointercancel', handlePointerCancel);
-      window.addEventListener('keydown', handleKeyDown, true);
-    },
-    [node.id, node.rotation, beginMutationSession, cancelMutationSession, commitMutationSession, updateNode],
-  );
+  const { rotationReadout, handleRotationPointerDown } = useCanvasNodeRotation({
+    nodeId: node.id,
+    rotation: node.rotation,
+    nodeRef,
+    updateNode,
+    beginMutationSession,
+    commitMutationSession,
+    cancelMutationSession,
+  });
 
   const handleDoubleClick = useCallback(() => {
     if (node.locked) return;
@@ -1027,422 +674,58 @@ export default function CanvasNode({
         onOpenAssetLibrary?.(node.id);
       }}
     >
-      <div className={styles.nodeBadge}>
-        <span>{node.kind}</span>
-        <strong>· {Math.round(effectiveRect.width)}×{Math.round(effectiveRect.height)}</strong>
-        {node.locked ? <em>locked</em> : null}
-        {node.sticky ? <em title={`Pinned ${node.sticky.from === 'bottom' ? 'bottom' : 'top'} +${node.sticky.offset}px`} style={{ color: '#60a5fa' }}>📌</em> : null}
-        {node.anchorName ? <em title={`Anchor: #${node.anchorName}`} style={{ color: '#34d399' }}>⚓ {node.anchorName}</em> : null}
-        {animationSummary ? <em title={animationSummary} style={{ color: '#a78bfa' }}>anim</em> : null}
-        {(() => {
-          const linkHref = nodeLinkPreviewHref(node);
-          if (!linkHref) return null;
-          const preview = linkHref.length > 16 ? `${linkHref.slice(0, 14)}…` : linkHref;
-          return (
-            <em
-              title={`Link: ${linkHref}\n클릭하거나 Cmd+K로 편집`}
-              style={{
-                color: '#fbbf24',
-                cursor: 'pointer',
-                pointerEvents: 'auto',
-                userSelect: 'none',
-              }}
-              onClick={(event) => {
-                event.stopPropagation();
-                event.preventDefault();
-                onSelect(node.id, false);
-                if (typeof document !== 'undefined') {
-                  // Prefer inline popover via SelectionToolbar; CanvasContainer
-                  // listens and opens its lifted popover state. Falls back to
-                  // inspector focus when no listener intercepts.
-                  document.dispatchEvent(
-                    new CustomEvent('builder:open-link-popover', {
-                      detail: { nodeId: node.id },
-                    }),
-                  );
-                }
-              }}
-              onMouseDown={(event) => {
-                event.stopPropagation();
-              }}
-              onPointerDown={(event) => {
-                event.stopPropagation();
-              }}
-            >
-              🔗 {preview}
-            </em>
-          );
-        })()}
-      </div>
-      {showSectionTemplateActions && sectionTemplate ? (
-        <div
-          className={styles.nodeSectionTemplates}
-          data-builder-section-template-panel={sectionTemplate.id}
-          onPointerDown={(event) => {
-            event.stopPropagation();
-          }}
-          onMouseDown={(event) => {
-            event.stopPropagation();
-          }}
-          onClick={(event) => {
-            event.stopPropagation();
-          }}
-        >
-          <span className={styles.nodeSectionTemplateLabel}>{sectionTemplate.label} template</span>
-          {sectionTemplateVariants.map((variant) => (
-            <button
-              key={variant.key}
-              type="button"
-              title={variant.description}
-              className={`${styles.nodeSectionTemplateButton} ${
-                currentSectionTemplateVariant === variant.key ? styles.nodeSectionTemplateButtonActive : ''
-              }`}
-              aria-pressed={currentSectionTemplateVariant === variant.key}
-              onClick={(event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                updateNodeContentInStore(node.id, { variant: variant.key });
-              }}
-            >
-              {variant.label}
-            </button>
-          ))}
-        </div>
-      ) : null}
-      {showBlogFeedQuickEdit ? (
-        <div
-          className={styles.nodeBlogFeedQuickEdit}
-          data-builder-blog-feed-quick-edit="true"
-          onPointerDown={(event) => {
-            event.stopPropagation();
-          }}
-          onMouseDown={(event) => {
-            event.stopPropagation();
-          }}
-          onClick={(event) => {
-            event.stopPropagation();
-          }}
-        >
-          <span className={styles.nodeBlogFeedQuickLabel}>Feed layout</span>
-          {BLOG_FEED_LAYOUT_PRESETS.map((preset) => (
-            <button
-              key={preset.key}
-              type="button"
-              aria-pressed={blogFeedLayout === preset.key}
-              className={blogFeedLayout === preset.key ? styles.nodeBlogFeedQuickActive : undefined}
-              onClick={() => updateBlogFeedLayout(preset)}
-            >
-              {preset.label}
-            </button>
-          ))}
-        </div>
-      ) : null}
-      {showColumnQuickActions ? (
-        <div
-          className={styles.nodeQuickActions}
-          onPointerDown={(event) => {
-            event.stopPropagation();
-          }}
-          onMouseDown={(event) => {
-            event.stopPropagation();
-          }}
-          onClick={(event) => {
-            event.stopPropagation();
-          }}
-        >
-          <button
-            type="button"
-            className={styles.nodeQuickActionPrimary}
-            onClick={(event) => {
-              event.preventDefault();
-              event.stopPropagation();
-              window.location.href = `/${currentBuilderLocale()}/admin-builder/columns`;
-            }}
-          >
-            글 추가/수정
-          </button>
-          <button
-            type="button"
-            className={styles.nodeQuickAction}
-            onClick={(event) => {
-              event.preventDefault();
-              event.stopPropagation();
-              window.location.href = `/${currentBuilderLocale()}/admin-builder/columns?new=1`;
-            }}
-          >
-            새 글
-          </button>
-          <button
-            type="button"
-            className={styles.nodeQuickAction}
-            onClick={(event) => {
-              event.preventDefault();
-              event.stopPropagation();
-              window.open(`/${currentBuilderLocale()}/columns`, '_blank', 'noopener,noreferrer');
-            }}
-          >
-            공개 보기
-          </button>
-        </div>
-      ) : null}
-      {showHeroSearchQuickEdit ? (
-        <div
-          className={styles.nodeHeroSearchQuickEdit}
-          data-builder-hero-search-quick-edit="true"
-          onPointerDown={(event) => {
-            event.stopPropagation();
-          }}
-          onMouseDown={(event) => {
-            event.stopPropagation();
-          }}
-          onClick={(event) => {
-            event.stopPropagation();
-          }}
-          onKeyDown={(event) => {
-            event.stopPropagation();
-          }}
-        >
-          <div className={styles.nodeHeroSearchHeader}>
-            <div>
-              <span>Hero search</span>
-              <strong>검색창 편집</strong>
-            </div>
-          </div>
-          <div className={styles.nodeHeroSearchPresetRow}>
-            {([
-              ['left', 'Left'],
-              ['center', 'Center'],
-              ['wide', 'Wide'],
-            ] as const).map(([layout, label]) => (
-              <button
-                key={layout}
-                type="button"
-                aria-pressed={heroSearchLayout === layout}
-                className={heroSearchLayout === layout ? styles.nodeHeroSearchPresetActive : undefined}
-                onClick={() => updateHeroSearchLayout(layout)}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-          <label className={styles.nodeHeroSearchField}>
-            <span>Placeholder</span>
-            <input
-              type="text"
-              aria-label="Hero search placeholder"
-              value={heroSearchPlaceholder}
-              onChange={(event) => updateHeroSearchPlaceholder(event.currentTarget.value)}
-            />
-          </label>
-          <label className={styles.nodeHeroSearchField}>
-            <span>Search URL</span>
-            <input
-              type="text"
-              aria-label="Hero search action"
-              value={heroSearchAction}
-              onChange={(event) => updateHeroSearchAction(event.currentTarget.value)}
-            />
-          </label>
-          <div className={styles.nodeHeroSearchDestinationRow} aria-label="Hero search destination presets">
-            {heroSearchDestinationOptions.map((destination) => (
-              <button
-                key={destination.key}
-                type="button"
-                aria-pressed={heroSearchAction === destination.action}
-                className={heroSearchAction === destination.action ? styles.nodeHeroSearchPresetActive : undefined}
-                onClick={() => updateHeroSearchAction(destination.action)}
-              >
-                {destination.label}
-              </button>
-            ))}
-          </div>
-          <div className={styles.nodeHeroSearchNote}>검색창, 버튼, 펼침 메뉴 폭을 함께 조정합니다.</div>
-        </div>
-      ) : null}
-      {showMapEditHint ? (
-        <div
-          className={styles.nodeMapEditHint}
-          data-builder-map-edit-hint="true"
-          aria-hidden
-        >
-          <span>Google Map</span>
-          <strong>위치 변경</strong>
-        </div>
-      ) : null}
-      {showMapQuickEdit ? (
-        <div
-          className={`${styles.nodeMapQuickEdit} ${officeQuickEdit ? styles.nodeMapQuickEditSynced : ''}`}
-          data-builder-map-quick-edit="true"
-          onPointerDown={(event) => {
-            event.stopPropagation();
-          }}
-          onMouseDown={(event) => {
-            event.stopPropagation();
-          }}
-          onClick={(event) => {
-            event.stopPropagation();
-          }}
-          onKeyDown={(event) => {
-            event.stopPropagation();
-          }}
-        >
-          <div className={styles.nodeMapQuickEditHeader}>
-            <div>
-              <span>Google Map</span>
-              <strong>{officeQuickEdit ? '사무소 위치 편집' : '위치 편집'}</strong>
-            </div>
-            <button
-              type="button"
-              className={styles.nodeMapHeaderAction}
-              aria-label="Focus quick location field"
-              onClick={() => {
-                mapQuickAddressRef.current?.focus();
-                mapQuickAddressRef.current?.select();
-              }}
-            >
-              위치 변경
-            </button>
-          </div>
-          <div className={styles.nodeMapPresetGrid}>
-            {getOfficeLocationPresets(builderLocale).map((preset) => (
-              <button
-                key={preset.title}
-                type="button"
-                className={`${styles.nodeMapPresetButton} ${
-                  currentMapAddress === preset.address ? styles.nodeMapPresetButtonActive : ''
-                }`}
-                aria-pressed={currentMapAddress === preset.address}
-                onClick={() => {
-                  if (!selected) onSelect(node.id, false);
-                  setMapQuickAddressDraft(preset.address);
-                  applyMapPreset(preset);
-                  window.requestAnimationFrame(() => mapQuickAddressRef.current?.focus());
-                }}
-              >
-                {preset.title}
-              </button>
-            ))}
-          </div>
-          {officeQuickEdit ? (
-            <label className={styles.nodeMapAddressField}>
-              <span>사무소명</span>
-              <input
-                type="text"
-                aria-label="Map quick location title"
-                value={readNodeText(officeTitleNode)}
-                disabled={!officeTitleNode}
-                onChange={(event) => updateOfficeTitle(event.currentTarget.value)}
-              />
-            </label>
-          ) : null}
-          <label className={styles.nodeMapAddressField}>
-            <span>주소</span>
-            <textarea
-              ref={mapQuickAddressRef}
-              aria-label="Map quick address"
-              rows={2}
-              value={mapQuickAddressDraft}
-              placeholder="주소 또는 지역명"
-              onChange={(event) => {
-                setMapQuickAddressDraft(event.currentTarget.value);
-              }}
-              onBlur={(event) => {
-                const nextTarget = event.relatedTarget;
-                const quickEditRoot = event.currentTarget.closest('[data-builder-map-quick-edit="true"]');
-                if (nextTarget instanceof Node && quickEditRoot?.contains(nextTarget)) return;
-                updateMapAddress(event.currentTarget.value);
-              }}
-              onKeyDown={(event) => {
-                if (event.key !== 'Enter' || event.shiftKey) return;
-                event.preventDefault();
-                updateMapAddress(event.currentTarget.value);
-                event.currentTarget.blur();
-              }}
-            />
-          </label>
-          {officeQuickEdit ? (
-            <>
-              <label className={styles.nodeMapAddressField}>
-                <span>전화</span>
-                <input
-                  type="text"
-                  aria-label="Map quick office phone"
-                  value={labelValueAfterColon(officePhoneLabel)}
-                  disabled={!officePhoneNode}
-                  onChange={(event) => updateOfficePhone(event.currentTarget.value)}
-                />
-              </label>
-              {officeFaxNode ? (
-                <label className={styles.nodeMapAddressField}>
-                  <span>팩스</span>
-                  <input
-                    type="text"
-                    aria-label="Map quick office fax"
-                    value={labelValueAfterColon(officeFaxLabel)}
-                    onChange={(event) => updateOfficeFax(event.currentTarget.value)}
-                  />
-                </label>
-              ) : null}
-              <label className={styles.nodeMapAddressField}>
-                <span>Google 지도 링크</span>
-                <input
-                  type="url"
-                  aria-label="Map quick Google Maps URL"
-                  value={officeMapUrl}
-                  disabled={!officeMapLinkNode}
-                  onChange={(event) => updateOfficeMapUrl(event.currentTarget.value)}
-                />
-              </label>
-            </>
-          ) : null}
-          <button
-            type="button"
-            className={styles.nodeMapApplyButton}
-            onClick={() => {
-              const nextAddress = mapQuickAddressRef.current?.value ?? mapQuickAddressDraft;
-              setMapQuickAddressDraft(nextAddress);
-              updateMapAddress(nextAddress);
-              if (officeMapLinkNode) updateOfficeMapUrl(googleMapsSearchUrl(nextAddress));
-            }}
-          >
-            {officeQuickEdit ? '주소로 지도 업데이트' : '위치 적용'}
-          </button>
-          <label className={styles.nodeMapZoomField}>
-            <span>줌 {currentMapZoom}</span>
-            <div className={styles.nodeMapZoomRow}>
-              <button
-                type="button"
-                aria-label="Decrease quick map zoom"
-                disabled={currentMapZoom <= 1}
-                onClick={() => updateMapZoom(currentMapZoom - 1)}
-              >
-                -
-              </button>
-              <input
-                type="range"
-                min={1}
-                max={20}
-                step={1}
-                aria-label="Map quick zoom"
-                value={currentMapZoom}
-                onInput={(event) => updateMapZoom(Number(event.currentTarget.value))}
-                onChange={(event) => updateMapZoom(Number(event.target.value))}
-              />
-              <button
-                type="button"
-                aria-label="Increase quick map zoom"
-                disabled={currentMapZoom >= 20}
-                onClick={() => updateMapZoom(currentMapZoom + 1)}
-              >
-                +
-              </button>
-            </div>
-          </label>
-          {officeQuickEdit ? (
-            <div className={styles.nodeMapSyncNote}>지도, 주소 카드, 길찾기 링크 동시 변경</div>
-          ) : null}
-        </div>
-      ) : null}
+      <CanvasNodeBadge
+        node={node}
+        width={effectiveRect.width}
+        height={effectiveRect.height}
+        animationSummary={animationSummary}
+        onSelect={onSelect}
+      />
+      <CanvasNodeQuickPanels
+        nodeId={node.id}
+        selected={selected}
+        showSectionTemplateActions={showSectionTemplateActions}
+        sectionTemplate={sectionTemplate}
+        sectionTemplateVariants={sectionTemplateVariants}
+        currentSectionTemplateVariant={currentSectionTemplateVariant}
+        onSectionTemplateVariantChange={(variant) => updateNodeContentInStore(node.id, { variant })}
+        showBlogFeedQuickEdit={showBlogFeedQuickEdit}
+        blogFeedLayout={blogFeedLayout}
+        onBlogFeedLayoutChange={updateBlogFeedLayout}
+        showColumnQuickActions={showColumnQuickActions}
+        showHeroSearchQuickEdit={showHeroSearchQuickEdit}
+        heroSearchLayout={heroSearchLayout}
+        onHeroSearchLayoutChange={updateHeroSearchLayout}
+        heroSearchPlaceholder={heroSearchPlaceholder}
+        onHeroSearchPlaceholderChange={updateHeroSearchPlaceholder}
+        heroSearchAction={heroSearchAction}
+        onHeroSearchActionChange={updateHeroSearchAction}
+        heroSearchDestinationOptions={heroSearchDestinationOptions}
+        showMapEditHint={showMapEditHint}
+        showMapQuickEdit={showMapQuickEdit}
+        officeQuickEdit={Boolean(officeQuickEdit)}
+        builderLocale={builderLocale}
+        currentMapAddress={currentMapAddress}
+        currentMapZoom={currentMapZoom}
+        mapQuickAddressDraft={mapQuickAddressDraft}
+        setMapQuickAddressDraft={setMapQuickAddressDraft}
+        mapQuickAddressRef={mapQuickAddressRef}
+        onSelect={onSelect}
+        applyMapPreset={applyMapPreset}
+        updateMapAddress={updateMapAddress}
+        updateMapZoom={updateMapZoom}
+        officeTitleNode={officeTitleNode}
+        officePhoneNode={officePhoneNode}
+        officeFaxNode={officeFaxNode}
+        officeMapLinkNode={officeMapLinkNode}
+        officePhoneLabel={officePhoneLabel}
+        officeFaxLabel={officeFaxLabel}
+        officeMapUrl={officeMapUrl}
+        updateOfficeTitle={updateOfficeTitle}
+        updateOfficePhone={updateOfficePhone}
+        updateOfficeFax={updateOfficeFax}
+        updateOfficeMapUrl={updateOfficeMapUrl}
+      />
       <div
         className={styles.nodeBody}
         style={{
@@ -1496,44 +779,16 @@ export default function CanvasNode({
           }}
         />
       ) : null}
-      {showSelectionHandles ? (
-        <>
-          <div className={styles.rotationLine} />
-          <div
-            className={styles.rotationHandle}
-            onPointerDown={handleRotationPointerDown}
-            role="button"
-            aria-label={`Rotate ${node.kind} node`}
-          />
-          {(['nw', 'n', 'ne', 'e', 'se', 's', 'sw', 'w'] as ResizeHandle[]).map((handle) => (
-            <button
-              key={handle}
-              type="button"
-              className={`${styles.resizeHandle} ${styles[`resizeHandle${handle.toUpperCase()}` as keyof typeof styles]}`}
-              onPointerDown={(event) => {
-                event.stopPropagation();
-                onResizeStart(node.id, handle, event);
-              }}
-              aria-label={`Resize ${node.kind} node ${handle}`}
-            />
-          ))}
-          <div className={styles.nodeSizeLabel} aria-hidden>
-            {node.kind} · {Math.round(effectiveRect.width)}×{Math.round(effectiveRect.height)}
-          </div>
-          {rotationReadout ? (
-            <div
-              className={styles.rotationReadout}
-              style={{
-                left: `${rotationReadout.x}px`,
-                top: `${rotationReadout.y}px`,
-              }}
-              aria-live="polite"
-            >
-              {rotationReadout.degrees}°
-            </div>
-          ) : null}
-        </>
-      ) : null}
+      <CanvasNodeSelectionOverlay
+        show={showSelectionHandles}
+        nodeId={node.id}
+        nodeKind={node.kind}
+        width={effectiveRect.width}
+        height={effectiveRect.height}
+        rotationReadout={rotationReadout}
+        onRotationPointerDown={handleRotationPointerDown}
+        onResizeStart={onResizeStart}
+      />
     </div>
   );
 }

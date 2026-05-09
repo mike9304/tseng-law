@@ -1,7 +1,7 @@
 import { withSentryConfig } from '@sentry/nextjs';
 
 const locales = ['ko', 'zh-hant', 'en'];
-const distDir = process.env.NEXT_DIST_DIR;
+const distDir = process.env.NEXT_DIST_DIR ?? (process.env.NEXT_DEV ? '.next-dev' : '.next-build');
 
 const legacyColumnAliases = {
   'gym-injury-lawsuit': 'taiwan-gym-injury-lawsuit',
@@ -25,7 +25,7 @@ const legacyColumnAliases = {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  ...(distDir ? { distDir } : {}),
+  distDir,
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp']

@@ -131,7 +131,8 @@ export const NumberStepper = forwardRef<HTMLInputElement, NumberStepperProps>(fu
   const [draft, setDraft] = useState(value === null ? '' : String(value));
 
   useEffect(() => {
-    setDraft(value === null ? '' : String(value));
+    const nextDraft = value === null ? '' : String(value);
+    setDraft((currentDraft) => (currentDraft === nextDraft ? currentDraft : nextDraft));
   }, [value]);
 
   const clamp = useCallback(

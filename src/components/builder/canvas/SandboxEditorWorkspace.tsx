@@ -178,6 +178,8 @@ export default function SandboxEditorWorkspace({
               if (target.closest(`.${styles.globalRegionBadge}`)) return;
               if (target.closest('[data-builder-site-brand]')) return;
               if (target.closest('[data-builder-header-action]')) return;
+              if (target.closest('[data-builder-mobile-hamburger]')) return;
+              if (target.closest('[data-builder-mobile-drawer]')) return;
               const navTarget = target.closest<HTMLElement>('[data-builder-nav-item-id]');
               if (navTarget?.dataset.builderNavItemId) return;
               event.preventDefault();
@@ -215,6 +217,7 @@ export default function SandboxEditorWorkspace({
               locale={locale}
               currentSlug={currentSlug}
               onNavigate={onHeaderNavigate}
+              mobileMode={Boolean(viewportWidth && viewportWidth <= 480)}
               builderEditable
               activeBuilderNavItemId={activeNavItemId}
               onRequestEditNavItem={onRequestEditNavItem}

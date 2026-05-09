@@ -462,3 +462,40 @@ Created: 2026-05-09T12:52:13.760Z
   - W31/W37 auto-fit 및 W39+ hamburger/preview runtime은 M09/M10 범위로 유지.
   - W33은 editor hidden override UI는 구현됐고 public mobile 미렌더 최종 증거는 M10 runtime 검증에서 닫는다.
 - 다음 마일스톤: M09
+
+## M09 — mobile auto-fit and automatic hamburger conversion
+
+- 시작/종료: 2026-05-10T03:22:00+09:00 / 2026-05-10T03:39:00+09:00
+- 변경 파일:
+  - `src/lib/builder/canvas/responsive.ts` — tree-aware `autoFitMobileTree()` 추가. top-level root를 375px 전폭 세로 스택으로 배치하고, descendant local rect/fontSize를 같은 scale로 생성한다.
+  - `src/lib/builder/canvas/store.ts` — `applyMobileAutoFit()` 추가. 기존 desktop 값은 건드리지 않고 누락된 `responsive.mobile.rect/fontSize`만 생성한다.
+  - `src/components/builder/canvas/SandboxPage.tsx` — 모바일 viewport 진입/페이지 전환 시 auto-fit을 한 번만 적용하고, top bar와 store viewport sync를 단방향+명시 업데이트로 정리해 update-depth loop를 제거했다.
+  - `src/components/builder/canvas/InspectorControls.tsx` — NumberStepper draft 동기화가 같은 문자열이면 setState하지 않도록 방어했다.
+  - `src/components/builder/published/SiteHeader.tsx` — desktop horizontal navigation을 모바일 hamburger + slide drawer로 자동 변환. editor mobile viewport에서는 `mobileMode`로 강제 적용한다.
+  - `src/components/builder/canvas/SandboxEditorWorkspace.tsx` — editor mobile viewport에서 SiteHeader mobile mode를 전달하고, hamburger/drawer click이 Navigation panel capture에 먹히지 않게 예외 처리.
+  - `src/app/globals.css` — hamburger button, mobile drawer, forced editor mobile header styles 추가.
+  - `src/lib/builder/canvas/__tests__/responsive-schema-lock.test.ts` — auto-fit rect/fontSize scaling 및 explicit mobile override 보존 unit 추가.
+  - `tests/builder-editor/mobile-auto-fit.playwright.ts` — 모바일 진입, hamburger drawer open, services root 375px auto-fit, mobile font-size scaling 검증 추가.
+  - `tests/builder-editor/mobile-inspector.playwright.ts` — M09 auto-fit 이후 모바일 진입 시 override 상태가 즉시 `created`인 정상 동작으로 기대값 갱신.
+- 의사결정:
+  - M09 auto-fit은 user-edited mobile override를 덮어쓰지 않는다. 누락된 mobile rect/fontSize만 채워 desktop layout을 보존한다.
+  - editor mobile viewport는 브라우저 폭이 desktop이어도 Wix처럼 header가 즉시 hamburger로 보여야 하므로 `mobileMode` prop으로 강제 전환한다.
+  - public runtime은 기존 CSS media query 기반 모바일 전환을 유지하고, 같은 drawer markup을 사용한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (33 files / 766 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-auto-fit.playwright.ts --workers=1` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-auto-fit.playwright.ts tests/builder-editor/mobile-inspector.playwright.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed)
+- W 판정:
+  - W31/W37/W39 green evidence 확보.
+  - W40~W45는 M10 범위로 유지한다.
+- 리스크 / 알려진 문제:
+  - Playwright Chromium은 macOS local sandbox에서 Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.
+  - visual regression/axe-core 전용 gate는 M04 인프라 범위에서 계속 보강 필요.
+- 사용자 피드백 흡수:
+  - 2026-05-10 "편집기 로컬에서 뜬거 3000번 봤는데 사이트 열면 옆쪽이 짤려" → 모바일 viewport auto-fit을 적용해 375px canvas에서 root section 전폭/단열 배치를 생성.
+  - 2026-05-10 "맨위 메뉴 눌렀을때 다른 메뉴 나오는 칸은 어떻게 편집 처리" → desktop mega edit flow는 유지하고, mobile viewport에서는 hamburger drawer 안의 메뉴 항목도 같은 `data-builder-nav-item-id` 편집 대상으로 노출.
+- 다음 마일스톤: M10

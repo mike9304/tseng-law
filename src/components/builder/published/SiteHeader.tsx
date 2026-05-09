@@ -76,6 +76,7 @@ export default function SiteHeader({
   locale,
   currentSlug,
   onNavigate,
+  mobileMode = false,
   builderEditable = false,
   activeBuilderNavItemId,
   onRequestEditNavItem,
@@ -89,6 +90,7 @@ export default function SiteHeader({
   locale: Locale;
   currentSlug: string;
   onNavigate?: (href: string) => void;
+  mobileMode?: boolean;
   builderEditable?: boolean;
   activeBuilderNavItemId?: string | null;
   onRequestEditNavItem?: (itemId: string) => void;
@@ -111,6 +113,7 @@ export default function SiteHeader({
   }, 'light') || defaultLogo;
   const [searchOpen, setSearchOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [pinnedMenu, setPinnedMenu] = useState<string | null>(null);
   const [builderEditingMenu, setBuilderEditingMenu] = useState<string | null>(null);
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, visible: false });
@@ -198,6 +201,7 @@ export default function SiteHeader({
 
   useEffect(() => {
     if (searchOpen) closeMegaMenuNow();
+    if (searchOpen) setMobileMenuOpen(false);
   }, [closeMegaMenuNow, searchOpen]);
 
   useEffect(() => {
@@ -211,6 +215,7 @@ export default function SiteHeader({
     if (!onNavigate || /^(https?:|mailto:|tel:|#)/.test(href)) return;
     event.preventDefault();
     closeMegaMenuNow();
+    setMobileMenuOpen(false);
     onNavigate(href);
   }
 
@@ -260,9 +265,22 @@ export default function SiteHeader({
     return true;
   }
 
+  function handleBuilderMobileNavClick(event: React.MouseEvent<HTMLElement>, source?: BuilderNavItem) {
+    if (!builderEditable || !source) return false;
+    event.preventDefault();
+    event.stopPropagation();
+    setMobileMenuOpen(true);
+    closeMegaMenuNow();
+    onRequestEditNavItem?.(source.id);
+    return true;
+  }
+
   return (
     <>
-      <header className={`header scrolled${openMenu ? ' mega-open' : ''} builder-site-header`}>
+      <header
+        className={`header scrolled${openMenu ? ' mega-open' : ''}${mobileMode ? ' mobile-nav-forced' : ''}${mobileMenuOpen ? ' mobile-drawer-open' : ''} builder-site-header`}
+        data-builder-mobile-header={mobileMode ? 'true' : undefined}
+      >
         <div className="header-utility">
           <div className="container">
             <nav className="utility-nav" aria-label={locale === 'ko' ? '보조 메뉴' : locale === 'zh-hant' ? '輔助選單' : 'Utility menu'}>
@@ -318,6 +336,25 @@ export default function SiteHeader({
               </span>
               <strong className="logo-kr">{brandText}</strong>
             </a>
+
+            <button
+              type="button"
+              className="mobile-toggle site-header-hamburger"
+              data-builder-mobile-hamburger="true"
+              aria-label={mobileMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="site-mobile-nav-drawer"
+              onClick={(event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                closeMegaMenuNow();
+                setMobileMenuOpen((current) => !current);
+              }}
+            >
+              <span aria-hidden />
+              <span aria-hidden />
+              <span aria-hidden />
+            </button>
 
             <nav
               className={`main-nav${openMenu ? ' menu-open' : ''}`}
@@ -411,6 +448,78 @@ export default function SiteHeader({
             </div>
           </div>
           <div className="header-accent-line" />
+        </div>
+
+        <div
+          id="site-mobile-nav-drawer"
+          className={`site-mobile-nav-drawer${mobileMenuOpen ? ' open' : ''}`}
+          data-builder-mobile-drawer={mobileMenuOpen ? 'open' : 'closed'}
+          aria-hidden={mobileMenuOpen ? 'false' : 'true'}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div className="site-mobile-nav-panel" role="dialog" aria-modal="true" aria-label="Mobile menu" onClick={(event) => event.stopPropagation()}>
+            <div className="site-mobile-nav-header">
+              <strong>{brandText}</strong>
+              <button type="button" onClick={() => setMobileMenuOpen(false)}>
+                Close
+              </button>
+            </div>
+            <nav aria-label="Mobile main menu">
+              <ul className="site-mobile-nav-list">
+                {displayNavItems.map((item) => {
+                  const panel = megaPanels.find((candidate) => candidate.key === item.key);
+                  return (
+                    <li key={item.key}>
+                      <a
+                        href={item.href}
+                        data-builder-nav-item-id={builderEditable && item.source ? item.source.id : undefined}
+                        data-builder-nav-active={builderEditable && item.source?.id === activeBuilderNavItemId ? 'true' : undefined}
+                        onClick={(event) => {
+                          if (handleBuilderMobileNavClick(event, item.source)) return;
+                          setMobileMenuOpen(false);
+                          navigate(event, item.href);
+                        }}
+                      >
+                        {getLabel(item.source, item.labels, locale)}
+                      </a>
+                      {panel ? (
+                        <ul>
+                          {panel.links.map((link) => (
+                            <li key={`${panel.key}-mobile-${link.href}`}>
+                              <a
+                                href={link.href}
+                                target={link.href.startsWith('http') ? '_blank' : undefined}
+                                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                data-builder-nav-item-id={builderEditable && link.source ? link.source.id : undefined}
+                                data-builder-nav-active={builderEditable && link.source?.id === activeBuilderNavItemId ? 'true' : undefined}
+                                onClick={(event) => {
+                                  if (handleBuilderMobileNavClick(event, link.source)) return;
+                                  setMobileMenuOpen(false);
+                                  navigate(event, link.href);
+                                }}
+                              >
+                                {link.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+            <div className="site-mobile-nav-utility">
+              {utilityLinks.map((item) => (
+                <a key={`mobile-${item.href}`} href={item.href} onClick={(event) => {
+                  setMobileMenuOpen(false);
+                  navigate(event, item.href);
+                }}>
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div

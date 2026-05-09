@@ -31,7 +31,7 @@ import {
   type ResponsiveConfig,
   type ResponsiveOverride,
 } from '@/lib/builder/canvas/types';
-import type { Viewport } from '@/lib/builder/canvas/responsive';
+import { autoFitMobileTree, type Viewport } from '@/lib/builder/canvas/responsive';
 import {
   createHistory,
   pushHistory,
@@ -103,6 +103,7 @@ interface BuilderCanvasStoreState {
   setViewport: (viewport: Viewport) => void;
   interactivePreview: BuilderCanvasInteractivePreviewState;
   setInteractivePreviewIndex: (section: BuilderCanvasPreviewSection, index: number) => void;
+  applyMobileAutoFit: (mobileWidth?: number) => void;
   replaceDocument: (document: BuilderCanvasDocument) => void;
   setSelectedNodeId: (nodeId: string | null) => void;
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
@@ -536,6 +537,47 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         };
       }
       return state;
+    }),
+  applyMobileAutoFit: (mobileWidth) =>
+    set((state) => {
+      if (!state.document) return state;
+      const overrides = autoFitMobileTree(state.document.nodes, mobileWidth);
+      if (overrides.length === 0) return state;
+      const overrideById = new Map(overrides.map((override) => [override.nodeId, override]));
+      let changed = false;
+      const document = updateNodes(state.document, (nodes) =>
+        nodes.map((node) => {
+          const override = overrideById.get(node.id);
+          if (!override) return node;
+          const responsive: ResponsiveConfigValue = (node.responsive ?? {}) as ResponsiveConfigValue;
+          const previousMobile = (responsive.mobile ?? {}) as ResponsiveOverrideValue;
+          const needsRectPatch = previousMobile.rect === undefined;
+          const needsFontSizePatch =
+            override.fontSize !== undefined && previousMobile.fontSize === undefined;
+          if (!needsRectPatch && !needsFontSizePatch) return node;
+          changed = true;
+          const nextMobile: ResponsiveOverrideValue = {
+            ...previousMobile,
+            ...(needsRectPatch ? { rect: override.rect } : {}),
+            ...(needsFontSizePatch ? { fontSize: override.fontSize } : {}),
+          };
+          return {
+            ...node,
+            responsive: {
+              ...responsive,
+              mobile: nextMobile,
+            },
+          } as BuilderCanvasNode;
+        }),
+      );
+      if (!changed) return state;
+      const nextState = applyCommittedDocument(state, document);
+      if (state.selectedNodeId !== null || nextState === state) return nextState;
+      return {
+        ...nextState,
+        selectedNodeId: null,
+        selectedNodeIds: [],
+      };
     }),
   replaceDocument: (document) =>
     set({

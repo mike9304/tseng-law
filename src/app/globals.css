@@ -4819,6 +4819,208 @@ html.has-cyber-cursor .button {
   display: none;
 }
 
+.site-header-hamburger {
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--text-heading);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.site-header-hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.header.mobile-drawer-open .site-header-hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header.mobile-drawer-open .site-header-hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.mobile-drawer-open .site-header-hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.site-mobile-nav-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(15, 23, 42, 0.32);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 180ms ease,
+    visibility 0s 180ms;
+}
+
+.site-mobile-nav-drawer.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 180ms ease,
+    visibility 0s 0s;
+}
+
+.site-mobile-nav-panel {
+  width: min(92vw, 390px);
+  height: 100%;
+  overflow-y: auto;
+  background: var(--white);
+  border-left: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xl);
+  transform: translateX(24px);
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-mobile-nav-drawer.open .site-mobile-nav-panel {
+  transform: translateX(0);
+}
+
+.site-mobile-nav-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+}
+
+.site-mobile-nav-header strong {
+  font-family: var(--font-heading-ko);
+  color: var(--text-heading);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.site-mobile-nav-header button {
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  background: var(--gray-50);
+  color: var(--text-body);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.42rem 0.7rem;
+}
+
+.site-mobile-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 1.15rem 1.2rem;
+}
+
+.site-mobile-nav-list > li {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.site-mobile-nav-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  color: var(--text-heading);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.site-mobile-nav-list ul {
+  list-style: none;
+  margin: -0.25rem 0 0.75rem;
+  padding: 0 0 0 0.75rem;
+  border-left: 2px solid var(--border-light);
+}
+
+.site-mobile-nav-list ul a {
+  min-height: 38px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.site-mobile-nav-utility {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1.15rem 1.4rem;
+}
+
+.site-mobile-nav-utility a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  background: var(--gray-50);
+  color: var(--text-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.header.mobile-nav-forced .header-utility,
+.header.mobile-nav-forced .mega-menu {
+  display: none;
+}
+
+.header.mobile-nav-forced .header-main-inner {
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  min-height: 62px;
+  gap: 0.55rem;
+}
+
+.header.mobile-nav-forced .main-nav {
+  display: none;
+}
+
+.header.mobile-nav-forced .mobile-toggle {
+  display: inline-flex;
+}
+
+.header.mobile-nav-forced .header-main .logo-mark {
+  width: 34px;
+  height: 34px;
+}
+
+.header.mobile-nav-forced .header-main .logo-kr {
+  font-size: clamp(0.88rem, 0.55vw + 0.72rem, 1rem);
+  max-width: none;
+}
+
+.header.mobile-nav-forced .header-actions .button {
+  display: none;
+}
+
+.header.mobile-nav-forced .header-actions {
+  gap: 0.4rem;
+  align-items: center;
+}
+
 .icon-button {
   min-width: 38px;
   min-height: 38px;

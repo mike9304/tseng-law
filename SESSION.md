@@ -3025,3 +3025,26 @@ Prompt-to-artifact 체크:
 메모:
 - W32/W34/W35/W38은 M08 evidence 확보.
 - W31/W37 auto-fit과 W39~W45 mobile runtime/preview는 M09/M10으로 이어간다.
+
+## 2026-05-10 Codex /goal Wix full builder M09 mobile auto-fit
+
+범위:
+- M09 `Mobile auto-fit + 자동 변환`을 완료했다.
+- 모바일 viewport 진입 시 override 없는 root section은 375px 전폭 세로 스택으로 자동 fit되고, descendant rect/fontSize도 같은 비율로 축소된다.
+- 기존 user mobile override는 덮어쓰지 않고, 누락된 `responsive.mobile.rect/fontSize`만 생성한다.
+- 모바일 auto-fit 적용 중 `updatedAt`/viewport sync가 반복되며 생길 수 있는 update-depth loop를 제거했다.
+- editor mobile viewport에서는 SiteHeader가 desktop horizontal nav 대신 hamburger + slide drawer로 강제 전환된다.
+- public SiteHeader도 같은 mobile drawer markup을 사용해 실제 mobile media query에서 hamburger로 전환된다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npm run test:unit` ✅ (33 files / 766 tests)
+- `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+- `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-auto-fit.playwright.ts --workers=1` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-auto-fit.playwright.ts tests/builder-editor/mobile-inspector.playwright.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed)
+
+메모:
+- W31/W37/W39는 M09 evidence 확보로 green 처리했다.
+- 다음 마일스톤은 M10 `Mobile sticky / preview iframe`이며 W40~W45를 닫는다.

@@ -74,6 +74,12 @@ interface Rect {
   height: number;
 }
 
+export interface MobileAutoFitOverride {
+  nodeId: string;
+  rect: Rect;
+  fontSize?: number;
+}
+
 /**
  * Resolve the effective rect for a node at the given viewport.
  * Cascades desktop → tablet → mobile so that mobile inherits any
@@ -211,4 +217,96 @@ export function autoFitMobile(
       mobileRect: { x, y, width: newWidth, height: newHeight },
     };
   });
+}
+
+function rootForNode(
+  node: BuilderCanvasNode,
+  nodesById: Map<string, BuilderCanvasNode>,
+): BuilderCanvasNode {
+  let current = node;
+  const seen = new Set<string>();
+  while (current.parentId && !seen.has(current.id)) {
+    seen.add(current.id);
+    const parent = nodesById.get(current.parentId);
+    if (!parent) break;
+    current = parent;
+  }
+  return current;
+}
+
+function hasMobileRectOverride(node: BuilderCanvasNode): boolean {
+  const responsive = node.responsive as ResponsiveConfig | undefined;
+  return Boolean(responsive?.mobile?.rect);
+}
+
+function hasMobileFontOverride(node: BuilderCanvasNode): boolean {
+  const responsive = node.responsive as ResponsiveConfig | undefined;
+  return responsive?.mobile?.fontSize !== undefined;
+}
+
+/**
+ * Tree-aware mobile auto-fit.
+ *
+ * Top-level sections are stacked full-width in mobile mode. Descendant local
+ * rects are scaled by their root section's ratio so the existing absolute
+ * design remains inspectable while fitting inside the 375px mobile canvas.
+ * Explicit mobile rect/fontSize overrides are respected and not overwritten.
+ */
+export function autoFitMobileTree(
+  nodes: BuilderCanvasNode[],
+  mobileWidth: number = VIEWPORT_WIDTHS.mobile,
+): MobileAutoFitOverride[] {
+  const nodesById = new Map(nodes.map((node) => [node.id, node]));
+  const visibleRoots = nodes
+    .filter((node) => !node.parentId && node.visible !== false)
+    .sort((left, right) => left.rect.y - right.rect.y || left.zIndex - right.zIndex);
+  const rootLayout = new Map<string, { y: number; scale: number }>();
+  let cursorY = 0;
+
+  for (const root of visibleRoots) {
+    const scale = root.rect.width > 0 ? Math.min(1, mobileWidth / root.rect.width) : 1;
+    rootLayout.set(root.id, { y: cursorY, scale });
+    cursorY += Math.max(1, Math.round(root.rect.height * scale));
+  }
+
+  return nodes
+    .filter((node) => node.visible !== false)
+    .map((node): MobileAutoFitOverride | null => {
+      const root = rootForNode(node, nodesById);
+      const layout = rootLayout.get(root.id);
+      if (!layout) return null;
+      const isRoot = node.id === root.id;
+      const shouldPatchRect = !hasMobileRectOverride(node);
+      const content = node.content as Record<string, unknown>;
+      const baseFontSize = typeof content.fontSize === 'number' ? content.fontSize : undefined;
+      const shouldPatchFontSize = baseFontSize !== undefined && !hasMobileFontOverride(node);
+      if (!shouldPatchRect && !shouldPatchFontSize) return null;
+
+      const scaledRect = isRoot
+        ? {
+            x: 0,
+            y: layout.y,
+            width: mobileWidth,
+            height: Math.max(1, Math.round(node.rect.height * layout.scale)),
+          }
+        : {
+            x: Math.max(0, Math.round(node.rect.x * layout.scale)),
+            y: Math.max(0, Math.round(node.rect.y * layout.scale)),
+            width: Math.max(1, Math.round(node.rect.width * layout.scale)),
+            height: Math.max(1, Math.round(node.rect.height * layout.scale)),
+          };
+
+      return {
+        nodeId: node.id,
+        rect: shouldPatchRect ? scaledRect : resolveViewportRect(node, 'mobile'),
+        ...(shouldPatchFontSize
+          ? { fontSize: clampFontSize(Math.round(baseFontSize * layout.scale)) }
+          : {}),
+      };
+    })
+    .filter((override): override is MobileAutoFitOverride => Boolean(override));
+}
+
+function clampFontSize(value: number): number {
+  return Math.max(8, Math.min(160, value));
 }

@@ -165,6 +165,7 @@ export default function SandboxPage({
     updateNode,
     updateNodeContent,
     setViewport: setStoreViewport,
+    applyMobileAutoFit,
   } = useBuilderCanvasStore();
   const [assetLibraryNodeId, setAssetLibraryNodeId] = useState<string | null>(null);
   const [imageEditorRequest, setImageEditorRequest] = useState<ImageEditorRequest>(null);
@@ -172,6 +173,7 @@ export default function SandboxPage({
   const [activityChips, setActivityChips] = useState<ActivityChip[]>([]);
   const previousDraftSaveStateRef = useRef(draftSaveState);
   const saveBadgeTimerRef = useRef<number | null>(null);
+  const mobileAutoFitKeyRef = useRef<string | null>(null);
   const canvasColumnRef = useRef<HTMLDivElement>(null);
   const [viewport, setViewport] = useState<ViewportMode>('desktop');
   const [publishOpen, setPublishOpen] = useState(false);
@@ -194,6 +196,10 @@ export default function SandboxPage({
   const addNodes = useBuilderCanvasStore((state) => state.addNodes);
   const storeViewport = useBuilderCanvasStore((state) => state.viewport);
   const publicChromeCopy = useMemo(() => getPublicChromeCopy(locale), [locale]);
+  const handleViewportChange = useCallback((nextViewport: ViewportMode) => {
+    setViewport(nextViewport);
+    setStoreViewport(nextViewport);
+  }, [setStoreViewport]);
 
   useEffect(() => {
     setClientReady(true);
@@ -361,12 +367,21 @@ export default function SandboxPage({
   }, [activeDrawer, handlePagesPanelPaste]);
 
   useEffect(() => {
-    setStoreViewport(viewport);
-  }, [viewport, setStoreViewport]);
+    setViewport((currentViewport) => (
+      currentViewport === storeViewport ? currentViewport : storeViewport
+    ));
+  }, [storeViewport]);
 
   useEffect(() => {
-    if (storeViewport !== viewport) setViewport(storeViewport);
-  }, [storeViewport, viewport]);
+    if (viewport !== 'mobile') {
+      mobileAutoFitKeyRef.current = null;
+      return;
+    }
+    const autoFitKey = `${activePageId ?? 'page'}:${canvasDocument?.nodes.length ?? 0}`;
+    if (mobileAutoFitKeyRef.current === autoFitKey) return;
+    mobileAutoFitKeyRef.current = autoFitKey;
+    applyMobileAutoFit(VIEWPORT_WIDTHS.mobile ?? 375);
+  }, [applyMobileAutoFit, canvasDocument?.nodes.length, activePageId, viewport]);
 
   useEffect(() => {
     const column = canvasColumnRef.current;
@@ -609,7 +624,7 @@ export default function SandboxPage({
         }
         selectionCount={selectedNodeIds.length}
         viewport={viewport}
-        onViewportChange={setViewport}
+        onViewportChange={handleViewportChange}
         onPublish={() => setPublishOpen(true)}
         onOpenSeo={() => setSeoOpen(true)}
         onOpenSettings={() => setSettingsOpen(true)}

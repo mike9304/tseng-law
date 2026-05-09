@@ -24,8 +24,8 @@ test.describe('/ko/admin-builder mobile inspector overrides', () => {
 
     await viewportControl.locator('[data-builder-inspector-viewport-option="mobile"]').click();
     await expect(page.locator('[data-builder-topbar-viewport="mobile"]')).toHaveAttribute('aria-pressed', 'true');
-    await expect(viewportControl).toHaveAttribute('data-builder-viewport-override-state', 'inherited');
-    await expect(page.locator('[data-builder-viewport-override-banner="inherited"]').first()).toBeVisible();
+    await expect(viewportControl).toHaveAttribute('data-builder-viewport-override-state', 'created');
+    await expect(page.locator('[data-builder-viewport-override-banner="created"]').first()).toContainText('Override created');
 
     const widthInput = page.getByLabel('Width value').first();
     const originalWidth = Number(await widthInput.inputValue());

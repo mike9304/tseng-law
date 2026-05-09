@@ -40,7 +40,10 @@ export const builderCanvasNodeKinds = [
   'divider',
   'spacer',
   'icon',
+  'video',
   'video-embed',
+  'audio',
+  'lottie',
   'form',
   'form-input',
   'form-textarea',
@@ -359,6 +362,40 @@ const imageCanvasNodeSchema = baseCanvasNodeSchema.extend({
     alt: z.string().max(300),
     fit: z.enum(['cover', 'contain']),
     cropAspect: z.string().max(20).optional(),
+    clickAction: z.enum(['none', 'link', 'lightbox', 'popup']).default('none').optional(),
+    hoverSrc: z.string().max(2000).optional(),
+    hotspots: z
+      .array(
+        z.object({
+          x: z.number().min(0).max(100),
+          y: z.number().min(0).max(100),
+          label: z.string().max(120),
+          href: z.string().max(500).optional(),
+        }),
+      )
+      .max(12)
+      .optional(),
+    compare: z
+      .object({
+        enabled: z.boolean().default(true),
+        beforeSrc: z.string().max(2000),
+        afterSrc: z.string().max(2000),
+        position: z.number().int().min(5).max(95).default(50),
+      })
+      .optional(),
+    svg: z
+      .object({
+        enabled: z.boolean().default(true),
+        name: z.enum(['scales', 'shield', 'building', 'spark']).default('scales'),
+        color: builderColorValueSchema,
+      })
+      .optional(),
+    gif: z
+      .object({
+        provider: z.enum(['manual', 'giphy']).default('manual'),
+        query: z.string().max(120).optional(),
+      })
+      .optional(),
     /**
      * Focal point for `object-position` when fit='cover'. 0~100 (% from
      * top-left). Default center (50,50). 예: portrait를 container ratio가
@@ -507,7 +544,20 @@ const iconCanvasNodeSchema = baseCanvasNodeSchema.extend({
     name: z.string().max(64).default('✦'),
     size: z.number().int().min(12).max(120).default(32),
     color: builderColorValueSchema,
-    set: z.enum(['emoji', 'unicode']).default('emoji'),
+    set: z.enum(['emoji', 'unicode', 'lucide', 'fontawesome']).default('emoji'),
+  }),
+});
+
+const videoCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('video'),
+  content: z.object({
+    url: z.string().max(2000).default(''),
+    autoplay: z.boolean().default(false),
+    loop: z.boolean().default(false),
+    muted: z.boolean().default(false),
+    controls: z.boolean().default(true),
+    thumbnail: z.string().max(2000).optional(),
+    mode: z.enum(['box', 'background']).default('box'),
   }),
 });
 
@@ -521,6 +571,29 @@ const videoEmbedCanvasNodeSchema = baseCanvasNodeSchema.extend({
     muted: z.boolean().default(false),
     controls: z.boolean().default(true),
     posterImage: z.string().max(2000).optional(),
+  }),
+});
+
+const audioCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('audio'),
+  content: z.object({
+    provider: z.enum(['file', 'spotify', 'soundcloud']).default('file'),
+    src: z.string().max(2000).default(''),
+    title: z.string().max(160).default('Audio track'),
+    artist: z.string().max(160).default(''),
+    autoplay: z.boolean().default(false),
+    controls: z.boolean().default(true),
+  }),
+});
+
+const lottieCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('lottie'),
+  content: z.object({
+    src: z.string().max(2000).default(''),
+    label: z.string().max(160).default('Lottie animation'),
+    autoplay: z.boolean().default(true),
+    loop: z.boolean().default(true),
+    speed: z.number().min(0.25).max(4).default(1),
   }),
 });
 
@@ -904,7 +977,10 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   dividerCanvasNodeSchema,
   spacerCanvasNodeSchema,
   iconCanvasNodeSchema,
+  videoCanvasNodeSchema,
   videoEmbedCanvasNodeSchema,
+  audioCanvasNodeSchema,
+  lottieCanvasNodeSchema,
   formCanvasNodeSchema,
   formInputCanvasNodeSchema,
   formTextareaCanvasNodeSchema,
@@ -941,7 +1017,10 @@ export type BuilderCompositeCanvasNode = z.infer<typeof compositeCanvasNodeSchem
 export type BuilderDividerCanvasNode = z.infer<typeof dividerCanvasNodeSchema>;
 export type BuilderSpacerCanvasNode = z.infer<typeof spacerCanvasNodeSchema>;
 export type BuilderIconCanvasNode = z.infer<typeof iconCanvasNodeSchema>;
+export type BuilderVideoCanvasNode = z.infer<typeof videoCanvasNodeSchema>;
 export type BuilderVideoEmbedCanvasNode = z.infer<typeof videoEmbedCanvasNodeSchema>;
+export type BuilderAudioCanvasNode = z.infer<typeof audioCanvasNodeSchema>;
+export type BuilderLottieCanvasNode = z.infer<typeof lottieCanvasNodeSchema>;
 export type BuilderFormCanvasNode = z.infer<typeof formCanvasNodeSchema>;
 export type BuilderFormInputCanvasNode = z.infer<typeof formInputCanvasNodeSchema>;
 export type BuilderFormTextareaCanvasNode = z.infer<typeof formTextareaCanvasNodeSchema>;

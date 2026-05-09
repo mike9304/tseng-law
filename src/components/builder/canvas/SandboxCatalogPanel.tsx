@@ -34,7 +34,7 @@ const CATEGORY_LABELS: Record<BuilderComponentCategory, string> = {
 };
 const CATEGORY_SUBLABELS: Record<BuilderComponentCategory, string> = {
   basic: 'text, button, heading',
-  media: 'image, gallery, video',
+  media: 'image, gallery, video, audio',
   layout: 'container, section',
   domain: 'composite, domain blocks',
   advanced: 'embed, spacer, divider',
@@ -49,7 +49,7 @@ const CATEGORY_ICONS: Record<BuilderComponentCategory, string> = {
 
 const KIND_PRIORITY: Partial<Record<BuilderComponentCategory, string[]>> = {
   basic: ['text', 'button', 'heading'],
-  media: ['image'],
+  media: ['image', 'gallery', 'video', 'video-embed', 'audio', 'lottie', 'icon'],
   layout: ['container', 'section'],
   domain: [
     'composite',
@@ -68,6 +68,7 @@ const KIND_PRIORITY: Partial<Record<BuilderComponentCategory, string[]>> = {
 const FEATURED_KINDS: BuilderCanvasNodeKind[] = ['text', 'button', 'image', 'container', 'form'];
 
 type TextWidgetKind = Extract<BuilderCanvasNodeKind, 'text' | 'heading'>;
+type MediaWidgetKind = Extract<BuilderCanvasNodeKind, 'image' | 'video' | 'video-embed' | 'audio' | 'lottie' | 'icon'>;
 
 interface TextWidgetPreset {
   id: string;
@@ -75,6 +76,18 @@ interface TextWidgetPreset {
   description: string;
   icon: string;
   kind: TextWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+interface MediaWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: MediaWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -319,6 +332,247 @@ const TEXT_WIDGET_PRESETS: TextWidgetPreset[] = [
   },
 ];
 
+const MEDIA_IMAGE_A = '/images/header-skyline-buildings.webp';
+const MEDIA_IMAGE_B = '/images/header-skyline-buildings.png';
+const MEDIA_BLOG_IMAGE = '/images/blog/001-taiwan-company-establishment-basics/featured-01.jpg';
+const PLACEHOLDER_IMAGE_SRC = '/images/placeholder-image.svg';
+
+const MEDIA_WIDGET_PRESETS: MediaWidgetPreset[] = [
+  {
+    id: 'lightbox-trigger',
+    label: 'Lightbox image',
+    description: '클릭하면 전체 화면 이미지',
+    icon: 'LB',
+    kind: 'image',
+    width: 360,
+    height: 240,
+    content: {
+      src: MEDIA_IMAGE_A,
+      alt: 'Lightbox skyline image',
+      clickAction: 'lightbox',
+    },
+  },
+  {
+    id: 'image-hotspots',
+    label: 'Image hotspots',
+    description: '이미지 위 포인트와 툴팁',
+    icon: 'HS',
+    kind: 'image',
+    width: 420,
+    height: 260,
+    content: {
+      src: MEDIA_BLOG_IMAGE,
+      alt: 'Hotspot article image',
+      hotspots: [
+        { x: 30, y: 42, label: '상담 포인트', href: '/ko/contact' },
+        { x: 68, y: 58, label: '증거 자료' },
+      ],
+    },
+  },
+  {
+    id: 'before-after',
+    label: 'Before / After',
+    description: '비교 슬라이더',
+    icon: 'BA',
+    kind: 'image',
+    width: 420,
+    height: 260,
+    content: {
+      src: MEDIA_IMAGE_A,
+      alt: 'Before after compare',
+      compare: {
+        enabled: true,
+        beforeSrc: MEDIA_IMAGE_A,
+        afterSrc: MEDIA_IMAGE_B,
+        position: 52,
+      },
+    },
+  },
+  {
+    id: 'hover-swap',
+    label: 'Hover swap',
+    description: '마우스 오버 이미지 전환',
+    icon: 'HS',
+    kind: 'image',
+    width: 360,
+    height: 230,
+    content: {
+      src: MEDIA_IMAGE_A,
+      alt: 'Hover swap image',
+      hoverSrc: MEDIA_IMAGE_B,
+    },
+  },
+  {
+    id: 'image-click-action',
+    label: 'Image click action',
+    description: '링크/팝업/라이트박스 전환',
+    icon: 'CA',
+    kind: 'image',
+    width: 320,
+    height: 220,
+    content: {
+      src: MEDIA_BLOG_IMAGE,
+      alt: 'Clickable legal article image',
+      clickAction: 'link',
+      link: { href: '/ko/column', target: '_self' },
+    },
+  },
+  {
+    id: 'inline-svg-color',
+    label: 'Inline SVG',
+    description: '색상 편집 가능한 SVG',
+    icon: 'SVG',
+    kind: 'image',
+    width: 180,
+    height: 180,
+    content: {
+      src: PLACEHOLDER_IMAGE_SRC,
+      alt: 'Editable SVG scales',
+      svg: {
+        enabled: true,
+        name: 'scales',
+        color: { kind: 'token', token: 'primary' },
+      },
+    },
+  },
+  {
+    id: 'lottie-animation',
+    label: 'Lottie animation',
+    description: 'Lottie URL/속도/루프',
+    icon: 'LO',
+    kind: 'lottie',
+    width: 260,
+    height: 220,
+    content: {
+      label: 'Consultation motion',
+      autoplay: true,
+      loop: true,
+      speed: 1,
+    },
+  },
+  {
+    id: 'mp4-video-box',
+    label: 'MP4 video box',
+    description: '업로드 MP4용 비디오 박스',
+    icon: 'MP4',
+    kind: 'video',
+    width: 420,
+    height: 236,
+    content: {
+      url: '',
+      thumbnail: MEDIA_IMAGE_A,
+      controls: true,
+      mode: 'box',
+    },
+  },
+  {
+    id: 'youtube-embed',
+    label: 'YouTube embed',
+    description: '커스텀 YouTube 래퍼',
+    icon: 'YT',
+    kind: 'video-embed',
+    width: 480,
+    height: 270,
+    content: {
+      provider: 'youtube',
+      src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      controls: true,
+    },
+  },
+  {
+    id: 'vimeo-embed',
+    label: 'Vimeo embed',
+    description: 'Vimeo URL/ID 지원',
+    icon: 'VM',
+    kind: 'video-embed',
+    width: 480,
+    height: 270,
+    content: {
+      provider: 'vimeo',
+      src: 'https://vimeo.com/76979871',
+      controls: true,
+    },
+  },
+  {
+    id: 'video-background',
+    label: 'Video background',
+    description: '섹션 배경용 영상',
+    icon: 'BG',
+    kind: 'video',
+    width: 560,
+    height: 315,
+    content: {
+      url: '/videos/builder-background.mp4',
+      thumbnail: MEDIA_IMAGE_A,
+      autoplay: true,
+      loop: true,
+      muted: true,
+      controls: false,
+      mode: 'background',
+    },
+  },
+  {
+    id: 'audio-player',
+    label: 'Audio player',
+    description: '파일 오디오 플레이어',
+    icon: 'AU',
+    kind: 'audio',
+    width: 360,
+    height: 150,
+    content: {
+      provider: 'file',
+      src: '',
+      title: '상담 안내 오디오',
+      artist: 'Hojung Law',
+      controls: true,
+    },
+  },
+  {
+    id: 'spotify-soundcloud',
+    label: 'Spotify / SoundCloud',
+    description: '음원 임베드 전환',
+    icon: 'SP',
+    kind: 'audio',
+    width: 420,
+    height: 170,
+    content: {
+      provider: 'spotify',
+      src: 'https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT',
+      title: 'Podcast embed',
+      artist: 'Spotify',
+    },
+  },
+  {
+    id: 'gif-giphy',
+    label: 'GIF / Giphy',
+    description: 'GIF URL과 검색 메모',
+    icon: 'GIF',
+    kind: 'image',
+    width: 300,
+    height: 220,
+    content: {
+      src: MEDIA_IMAGE_A,
+      alt: 'GIF placeholder',
+      gif: { provider: 'giphy', query: 'law office' },
+    },
+  },
+  {
+    id: 'icon-library',
+    label: 'Icon library',
+    description: 'Lucide/FontAwesome 세트',
+    icon: 'IC',
+    kind: 'icon',
+    width: 96,
+    height: 96,
+    content: {
+      name: 'scale',
+      set: 'lucide',
+      size: 58,
+      color: { kind: 'token', token: 'primary' },
+    },
+  },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -384,6 +638,17 @@ function textWidgetMatchesSearch(preset: TextWidgetPreset, query: string): boole
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function mediaWidgetMatchesSearch(preset: MediaWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'media widget',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
@@ -406,6 +671,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
 
   const visibleTextWidgetPresets = useMemo(
     () => TEXT_WIDGET_PRESETS.filter((preset) => textWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
+  const visibleMediaWidgetPresets = useMemo(
+    () => MEDIA_WIDGET_PRESETS.filter((preset) => mediaWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
 
@@ -442,8 +711,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -453,6 +722,31 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   }
 
   function handleAddTextWidgetPreset(preset: TextWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddMediaWidgetPreset(preset: MediaWidgetPreset) {
     const sequence = addSequenceRef.current;
     addSequenceRef.current += 1;
     const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
@@ -581,6 +875,56 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                   >
                     <span className={styles.textWidgetPresetIcon}>{preset.icon}</span>
                     <span className={styles.textWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleMediaWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['media-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'media-widgets': !(current['media-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>◩</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Media widget pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    lightbox, hotspots, compare, video, audio, icons · {visibleMediaWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['media-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['media-widgets'] ?? true) ? (
+              <div className={styles.mediaWidgetGrid}>
+                {visibleMediaWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.mediaWidgetPresetButton}
+                    data-builder-media-widget-preset={preset.id}
+                    onClick={() => handleAddMediaWidgetPreset(preset)}
+                  >
+                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.mediaWidgetPresetCopy}>
                       <strong>{preset.label}</strong>
                       <small>{preset.description}</small>
                     </span>

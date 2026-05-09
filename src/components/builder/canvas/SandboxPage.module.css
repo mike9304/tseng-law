@@ -1400,6 +1400,90 @@
   line-height: 1.25;
 }
 
+.mediaWidgetGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mediaWidgetPresetButton {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  min-height: 74px;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 8px;
+  background: var(--editor-panel-elevated, #fff);
+  color: var(--editor-fg-primary, #0f172a);
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.mediaWidgetPresetButton:hover {
+  border-color: color-mix(in srgb, var(--editor-accent, #116dff) 34%, var(--editor-border-hairline, #dbe2ea));
+  background: var(--editor-accent-soft, #eff6ff);
+  box-shadow: 0 10px 24px rgba(17, 109, 255, 0.12);
+}
+
+.mediaWidgetPresetButton:active {
+  transform: translateY(1px);
+}
+
+.mediaWidgetPresetIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--editor-bg, #f4f5f7);
+  color: var(--editor-accent, #116dff);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.mediaWidgetPresetCopy {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.mediaWidgetPresetCopy strong {
+  overflow: hidden;
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mediaWidgetPresetCopy small {
+  color: var(--editor-fg-muted, #64748b);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.inspectorFieldset {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0.35rem 0 0;
+  border: 1px solid var(--editor-border-hairline, #dbe2ea);
+  border-radius: 8px;
+  background: var(--editor-bg, #f8fafc);
+  padding: 0.75rem;
+}
+
+.inspectorFieldset legend {
+  padding: 0 0.35rem;
+  color: var(--editor-fg-muted, #64748b);
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
 .catalogEmptyState {
   display: grid;
   gap: 0.18rem;

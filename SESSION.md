@@ -3091,3 +3091,24 @@ Prompt-to-artifact 체크:
 메모:
 - W46/W47/W48/W49/W50/W51/W52/W53/W54/W55는 M11 evidence 확보로 green 처리했다.
 - 구현은 현재 repo의 registry-driven 구조를 따른다. 별도 kind 10개를 늘리기보다 기존 `text`/`heading` 노드에 Wix식 text-family controls/presets을 추가했다.
+
+## 2026-05-10 Codex /goal Wix full builder M12 media widget pack
+
+범위:
+- M12 `Media 위젯 팩`을 완료했다.
+- + 패널 Catalog에 `Media widget pack` 섹션을 추가하고 W56~W70 프리셋 15종을 제공한다.
+- Image renderer/Inspector에 lightbox, popup/link click action, hotspots, before/after slider, hover swap, inline SVG color, GIF metadata를 추가했다.
+- `video` kind를 schema에 추가하고 MP4/direct video box와 background video mode를 지원한다.
+- `audio` kind를 추가해 file audio player와 Spotify/SoundCloud embeds를 지원한다.
+- `lottie` kind를 추가해 Lottie URL embed와 fallback animated preview를 지원한다.
+- 기존 `video-embed`는 YouTube/Vimeo preset으로 노출하고, 기존 `icon` kind는 Lucide/FontAwesome set을 지원하도록 확장했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run test:unit -- src/lib/builder/canvas/__tests__/media-widgets.test.ts` ✅
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/media-widgets.playwright.ts --workers=1` ✅
+
+메모:
+- W56/W57/W58/W59/W60/W61/W62/W63/W64/W65/W66/W67/W68/W69/W70는 M12 evidence 확보로 green 처리했다.
+- 실제 파일 업로드, Giphy 검색 API, Lottie JSON 파싱은 asset pipeline 확장 트랙으로 남긴다. 이번 M12는 Wix식 Add/Inspector/runtime surface를 먼저 닫았다.
+- Playwright Chromium은 macOS sandbox Mach port 권한 실패가 있어 sandbox 밖에서 실행했다.

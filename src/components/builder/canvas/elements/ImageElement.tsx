@@ -1,8 +1,13 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
 import { filtersToCSS, isDefaultFilters, type ImageFilters } from '@/lib/builder/canvas/filters';
 import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
 import { sanitizeLinkValue } from '@/lib/builder/links';
+import type { BuilderTheme } from '@/lib/builder/site/types';
+import { resolveThemeColor } from '@/lib/builder/site/theme';
 
 const PLACEHOLDER_SRC = '/images/placeholder-image.svg';
 
@@ -16,10 +21,8 @@ function isPlaceholderOrEmpty(src: string): boolean {
  */
 function parseAspectRatio(cropAspect: string | undefined): number | null {
   if (!cropAspect || cropAspect === 'Free') return null;
-  // Try matching from the known presets first
   const preset = ASPECT_RATIOS.find((r) => r.label === cropAspect);
   if (preset && preset.value) return preset.value;
-  // Fallback: parse "W:H" format
   const parts = cropAspect.split(':');
   if (parts.length === 2) {
     const w = parseFloat(parts[0]);
@@ -29,38 +32,106 @@ function parseAspectRatio(cropAspect: string | undefined): number | null {
   return null;
 }
 
-/**
- * Build a CSS clip-path inset() that crops the element to the given
- * aspect ratio, centered within the container rect.
- */
 function aspectToClipPath(
   containerWidth: number,
   containerHeight: number,
   targetRatio: number,
 ): string | undefined {
   const containerRatio = containerWidth / containerHeight;
-  if (Math.abs(containerRatio - targetRatio) < 0.01) return undefined; // already matches
+  if (Math.abs(containerRatio - targetRatio) < 0.01) return undefined;
 
   if (containerRatio > targetRatio) {
-    // Container is wider than target — clip left/right
     const visibleFraction = targetRatio / containerRatio;
     const insetPct = ((1 - visibleFraction) / 2) * 100;
     return `inset(0% ${insetPct.toFixed(1)}%)`;
   }
-  // Container is taller than target — clip top/bottom
   const visibleFraction = containerRatio / targetRatio;
   const insetPct = ((1 - visibleFraction) / 2) * 100;
   return `inset(${insetPct.toFixed(1)}% 0%)`;
 }
 
+function InlineSvgArt({
+  name,
+  color,
+}: {
+  name: NonNullable<BuilderImageCanvasNode['content']['svg']>['name'];
+  color: string;
+}) {
+  if (name === 'shield') {
+    return (
+      <svg viewBox="0 0 120 120" role="img" aria-label="Shield icon">
+        <path d="M60 10 102 26v30c0 27-17 45-42 54C35 101 18 83 18 56V26l42-16Z" fill={color} opacity="0.14" />
+        <path d="M60 16 96 30v27c0 23-14 39-36 47-22-8-36-24-36-47V30l36-14Z" fill="none" stroke={color} strokeWidth="7" />
+        <path d="m42 60 12 12 28-31" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
+      </svg>
+    );
+  }
+  if (name === 'building') {
+    return (
+      <svg viewBox="0 0 120 120" role="img" aria-label="Building icon">
+        <rect x="26" y="22" width="68" height="78" rx="6" fill={color} opacity="0.12" />
+        <path d="M28 100V26c0-3 2-5 5-5h54c3 0 5 2 5 5v74" fill="none" stroke={color} strokeWidth="7" />
+        <path d="M43 42h10M67 42h10M43 60h10M67 60h10M43 78h10M67 78h10M18 100h84" stroke={color} strokeLinecap="round" strokeWidth="7" />
+      </svg>
+    );
+  }
+  if (name === 'spark') {
+    return (
+      <svg viewBox="0 0 120 120" role="img" aria-label="Spark icon">
+        <path d="M60 15 71 48l34 12-34 12-11 33-12-33-33-12 33-12 12-33Z" fill={color} opacity="0.16" />
+        <path d="M60 15 71 48l34 12-34 12-11 33-12-33-33-12 33-12 12-33Z" fill="none" stroke={color} strokeLinejoin="round" strokeWidth="7" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 120 120" role="img" aria-label="Scales icon">
+      <path d="M60 15v84M32 35h56M60 35 36 72h48L60 35Z" fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="7" />
+      <path d="M28 72c2 12 12 20 24 20s22-8 24-20M8 72h48M64 72h48M44 105h32" fill="none" stroke={color} strokeLinecap="round" strokeWidth="7" />
+    </svg>
+  );
+}
+
 export default function ImageElement({
   node,
   mode = 'edit',
+  theme,
 }: {
   node: BuilderImageCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  theme?: BuilderTheme;
 }) {
-  if (isPlaceholderOrEmpty(node.content.src)) {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [comparePosition, setComparePosition] = useState(node.content.compare?.position ?? 50);
+  const filters = (node.content as { filters?: ImageFilters }).filters;
+  const cssFilter =
+    filters && !isDefaultFilters(filters)
+      ? filtersToCSS(filters)
+      : undefined;
+
+  const targetRatio = parseAspectRatio(node.content.cropAspect);
+  const clipPath = targetRatio
+    ? aspectToClipPath(node.rect.width, node.rect.height, targetRatio)
+    : undefined;
+
+  const link = sanitizeLinkValue(node.content.link);
+  const interactive = mode !== 'edit';
+  const lightboxSlug = link?.href.startsWith('lightbox:')
+    ? link.href.slice('lightbox:'.length).trim()
+    : '';
+  let clickAction = node.content.clickAction ?? 'none';
+  if (lightboxSlug) clickAction = 'lightbox';
+  if (clickAction === 'none' && link) clickAction = 'link';
+
+  const svg = node.content.svg?.enabled ? node.content.svg : null;
+  const compare = node.content.compare?.enabled ? node.content.compare : null;
+  const imageAlt = node.content.alt || 'Image';
+  const svgColor = svg
+    ? (resolveThemeColor(svg.color, theme) ?? '#116dff')
+    : '#116dff';
+
+  const placeholder = isPlaceholderOrEmpty(node.content.src) && !svg && !compare;
+  if (placeholder) {
     return (
       <div
         style={{
@@ -104,25 +175,28 @@ export default function ImageElement({
     );
   }
 
-  const filters = (node.content as { filters?: ImageFilters }).filters;
-  const cssFilter =
-    filters && !isDefaultFilters(filters)
-      ? filtersToCSS(filters)
-      : undefined;
-
-  const targetRatio = parseAspectRatio(node.content.cropAspect);
-  const clipPath = targetRatio
-    ? aspectToClipPath(node.rect.width, node.rect.height, targetRatio)
-    : undefined;
-
-  const link = sanitizeLinkValue(node.content.link);
-  const interactive = mode === 'published';
-  const lightboxSlug = link?.href.startsWith('lightbox:')
-    ? link.href.slice('lightbox:'.length).trim()
-    : '';
+  const baseImage = (
+    <Image
+      src={node.content.src}
+      alt={node.content.alt}
+      fill
+      draggable={false}
+      sizes="(max-width: 1280px) 100vw, 360px"
+      unoptimized={Boolean(node.content.gif)}
+      style={{
+        objectFit: node.content.fit,
+        objectPosition: node.content.focalPoint
+          ? `${node.content.focalPoint.x}% ${node.content.focalPoint.y}%`
+          : undefined,
+        filter: cssFilter,
+      }}
+    />
+  );
 
   const imageFrame = (
     <div
+      className="builder-image-media-frame"
+      data-builder-media-widget={compare ? 'before-after' : svg ? 'inline-svg' : node.content.gif ? 'gif' : 'image'}
       style={{
         position: 'relative',
         width: '100%',
@@ -131,64 +205,181 @@ export default function ImageElement({
         overflow: 'hidden',
         userSelect: 'none',
         clipPath: clipPath || undefined,
+        background: svg ? 'rgba(248, 250, 252, 0.92)' : undefined,
       }}
     >
-      <Image
-        src={node.content.src}
-        alt={node.content.alt}
-        fill
-        draggable={false}
-        sizes="(max-width: 1280px) 100vw, 360px"
-        style={{
-          objectFit: node.content.fit,
-          objectPosition: node.content.focalPoint
-            ? `${node.content.focalPoint.x}% ${node.content.focalPoint.y}%`
-            : undefined,
-          filter: cssFilter,
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: 'rgba(0,0,0,0.4)',
-          color: '#fff',
-          fontSize: '0.8rem',
-          fontWeight: 600,
-          opacity: 0,
-          transition: 'opacity 200ms ease',
-          pointerEvents: 'none',
-        }}
-        className="image-hover-overlay"
-      >
+      {svg ? (
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '12%',
+          }}
+        >
+          <InlineSvgArt name={svg.name} color={svgColor} />
+        </div>
+      ) : compare ? (
+        <div className="builder-image-compare" data-builder-before-after="true">
+          <Image
+            src={compare.beforeSrc}
+            alt={`${imageAlt} before`}
+            fill
+            draggable={false}
+            sizes="(max-width: 1280px) 100vw, 360px"
+            style={{ objectFit: node.content.fit }}
+          />
+          <div
+            className="builder-image-compare-after"
+            style={{ clipPath: `inset(0 ${100 - comparePosition}% 0 0)` }}
+          >
+            <Image
+              src={compare.afterSrc}
+              alt={`${imageAlt} after`}
+              fill
+              draggable={false}
+              sizes="(max-width: 1280px) 100vw, 360px"
+              style={{ objectFit: node.content.fit }}
+            />
+          </div>
+          <span
+            className="builder-image-compare-handle"
+            style={{ left: `${comparePosition}%` }}
+            aria-hidden
+          />
+          {interactive ? (
+            <input
+              className="builder-image-compare-range"
+              type="range"
+              min={5}
+              max={95}
+              value={comparePosition}
+              aria-label="Before after comparison"
+              onChange={(event) => setComparePosition(Number(event.currentTarget.value))}
+            />
+          ) : null}
+        </div>
+      ) : (
+        <>
+          {baseImage}
+          {node.content.hoverSrc ? (
+            <Image
+              src={node.content.hoverSrc}
+              alt=""
+              fill
+              draggable={false}
+              sizes="(max-width: 1280px) 100vw, 360px"
+              className="builder-image-hover-swap"
+              style={{
+                objectFit: node.content.fit,
+                objectPosition: node.content.focalPoint
+                  ? `${node.content.focalPoint.x}% ${node.content.focalPoint.y}%`
+                  : undefined,
+              }}
+            />
+          ) : null}
+        </>
+      )}
+      {(node.content.hotspots ?? []).map((hotspot, index) => (
+        <a
+          key={`${hotspot.label}-${index}`}
+          href={interactive && hotspot.href ? hotspot.href : undefined}
+          className="builder-image-hotspot"
+          style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%` }}
+          aria-label={hotspot.label}
+          tabIndex={interactive ? 0 : -1}
+        >
+          <span>{hotspot.label}</span>
+        </a>
+      ))}
+      <div className="image-hover-overlay">
         이미지 변경
       </div>
-      <style>{`.image-hover-overlay { opacity: 0 !important; } *:hover > .image-hover-overlay { opacity: 1 !important; }`}</style>
     </div>
   );
 
-  if (!link || !interactive) return imageFrame;
+  if (!interactive) return imageFrame;
 
-  return (
-    <a
-      href={lightboxSlug ? '#' : link.href}
-      target={lightboxSlug ? undefined : link.target}
-      rel={lightboxSlug ? undefined : link.rel}
-      title={link.title}
-      aria-label={link.ariaLabel}
-      data-lightbox-target={lightboxSlug || undefined}
-      style={{
-        display: 'block',
-        width: '100%',
-        height: '100%',
-        color: 'inherit',
-        textDecoration: 'none',
-      }}
-    >
-      {imageFrame}
-    </a>
+  const modalImage = (
+    <div className="builder-media-modal-image">
+      {svg ? <InlineSvgArt name={svg.name} color={svgColor} /> : (
+        <Image
+          src={compare?.afterSrc ?? node.content.src}
+          alt={node.content.alt}
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'contain' }}
+          unoptimized={Boolean(node.content.gif)}
+        />
+      )}
+    </div>
   );
+
+  const lightboxModal = lightboxOpen ? (
+    <div className="builder-media-modal" role="dialog" aria-modal="true" aria-label={imageAlt} onClick={() => setLightboxOpen(false)}>
+      <button type="button" className="builder-media-modal-close" onClick={() => setLightboxOpen(false)} aria-label="Close lightbox">
+        ×
+      </button>
+      {modalImage}
+    </div>
+  ) : null;
+
+  const popupModal = popupOpen ? (
+    <div className="builder-media-modal" role="dialog" aria-modal="true" aria-label={`${imageAlt} popup`} onClick={() => setPopupOpen(false)}>
+      <div className="builder-media-popup-card" onClick={(event) => event.stopPropagation()}>
+        <button type="button" className="builder-media-popup-close" onClick={() => setPopupOpen(false)} aria-label="Close popup">
+          ×
+        </button>
+        <strong>{node.content.alt || 'Image detail'}</strong>
+        <span>{node.content.hotspots?.[0]?.label ?? '미디어 팝업 콘텐츠'}</span>
+      </div>
+    </div>
+  ) : null;
+
+  if (clickAction === 'link' && link) {
+    return (
+      <a
+        href={link.href}
+        target={link.target}
+        rel={link.rel}
+        title={link.title}
+        aria-label={link.ariaLabel}
+        style={{
+          display: 'block',
+          width: '100%',
+          height: '100%',
+          color: 'inherit',
+          textDecoration: 'none',
+        }}
+      >
+        {imageFrame}
+      </a>
+    );
+  }
+
+  if (clickAction === 'lightbox') {
+    return (
+      <>
+        <button type="button" className="builder-media-click-frame" data-lightbox-target={lightboxSlug || node.id} onClick={() => setLightboxOpen(true)}>
+          {imageFrame}
+        </button>
+        {lightboxModal}
+      </>
+    );
+  }
+
+  if (clickAction === 'popup') {
+    return (
+      <>
+        <button type="button" className="builder-media-click-frame" onClick={() => setPopupOpen(true)}>
+          {imageFrame}
+        </button>
+        {popupModal}
+      </>
+    );
+  }
+
+  return imageFrame;
 }

@@ -565,3 +565,42 @@ Created: 2026-05-09T12:52:13.760Z
   - M11은 repo의 실제 component registry 구조를 따랐다. goal 문서의 canonical 예시(`site/types.ts`, `published-node-frame.ts`, `components/widgets/...`)와 파일명이 다르지만, canvas/published 렌더는 현재 registry-driven 구조에서 동일 노드로 동작한다.
   - visual baseline 10개는 별도 screenshot 파일을 추가하지 않고, Playwright DOM/runtime evidence로 고정했다. M04 visual baseline suite에는 기존 editor states가 유지된다.
 - 다음 마일스톤: M12
+
+## M12 — media widget pack
+
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — `video`, `audio`, `lottie` kind를 schema union에 추가하고 image node에 `clickAction`, `hoverSrc`, `hotspots`, `compare`, `svg`, `gif` content를 추가했다. icon set은 `lucide`/`fontawesome`을 허용한다.
+  - `src/components/builder/canvas/elements/ImageElement.tsx` — lightbox/popup click action, hotspot tooltip, before/after slider, hover swap, inline SVG color, GIF marker 렌더를 추가했다.
+  - `src/lib/builder/components/image/Inspector.tsx` — media interaction, before/after, SVG/GIF controls를 추가했다.
+  - `src/lib/builder/components/video/index.tsx`, `src/lib/builder/components/video/VideoRender.tsx` — MP4/direct video box와 background video mode, poster/controls Inspector를 추가했다.
+  - `src/lib/builder/components/videoEmbed/index.tsx`/`VideoEmbedRender.tsx` — 기존 YouTube/Vimeo provider를 M12 프리셋에서 재사용한다.
+  - `src/lib/builder/components/audio/index.tsx` — file audio player, Spotify embed, SoundCloud embed kind를 추가했다.
+  - `src/lib/builder/components/lottie/index.tsx` — Lottie URL/label/autoplay/loop/speed kind와 fallback motion preview를 추가했다.
+  - `src/lib/builder/components/icon/index.tsx` — Lucide/FontAwesome set 선택과 대표 SVG icon 렌더를 추가했다.
+  - `src/lib/builder/components/registry.ts` — `audio`, `lottie` registry imports를 추가했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Media widget pack` 섹션과 W56~W70 프리셋 15종 quick-add를 추가했다.
+  - `src/components/builder/canvas/SandboxPage.module.css`, `src/app/globals.css` — media preset card, inspector fieldset, hotspot/compare/lightbox/lottie runtime style을 추가했다.
+  - `src/lib/builder/canvas/__tests__/media-widgets.test.ts` — media schema normalization unit을 추가했다.
+  - `tests/builder-editor/media-widgets.playwright.ts` — 격리 page 생성 → + 패널 Media widget pack 15종 클릭 → canvas DOM evidence 확인 → cleanup 시나리오를 추가했다.
+- 구현:
+  - W56/W60은 `image.content.clickAction`으로 none/link/lightbox/popup을 통합한다. legacy `lightbox:` link도 lightbox trigger로 해석한다.
+  - W57은 image `hotspots[]`를 percent coordinate로 저장하고 hover/focus tooltip을 렌더한다.
+  - W58은 image `compare` content로 before/after 이미지를 겹치고 range handle로 조정한다.
+  - W59는 `hoverSrc` overlay image를 hover opacity swap으로 렌더한다.
+  - W61은 업로드 pipeline 확장 없이 현재 목표 범위에서 inline SVG preset + color token/string editing으로 구현했다.
+  - W62는 외부 Lottie iframe URL이 있으면 embed하고, 없으면 에디터에서 식별 가능한 animated preview를 제공한다.
+  - W63/W66은 `video` kind의 `mode: box|background`로 묶었다.
+  - W64/W65는 기존 `video-embed` kind의 YouTube/Vimeo provider를 M12 catalog preset으로 노출한다.
+  - W67/W68은 `audio` kind의 `provider: file|spotify|soundcloud`로 묶었다.
+  - W69는 image GIF marker와 query metadata를 보존한다.
+  - W70은 기존 `icon` kind를 확장해 Lucide/FontAwesome 대표 icon set을 제공한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/media-widgets.test.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/media-widgets.playwright.ts --workers=1` ✅
+- W 판정:
+  - W56/W57/W58/W59/W60/W61/W62/W63/W64/W65/W66/W67/W68/W69/W70 green evidence 확보.
+- 리스크 / 알려진 문제:
+  - 실제 파일 업로드, Giphy 검색 API, Lottie JSON 파싱은 별도 asset pipeline 확장 트랙이다. M12는 Wix식 Add/Inspector/runtime surface를 먼저 완성했다.
+  - Playwright helper가 시각 안정화를 위해 iframe을 숨기므로 YouTube/Vimeo는 visibility가 아니라 iframe src 존재로 검증한다.
+- 다음 마일스톤: M13

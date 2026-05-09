@@ -27,6 +27,8 @@ import './section';
 import './gallery';
 import './video';
 import './videoEmbed';
+import './audio';
+import './lottie';
 import './map';
 import './customEmbed';
 import './icon';

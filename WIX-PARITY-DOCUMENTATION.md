@@ -298,3 +298,36 @@ Created: 2026-05-09T12:52:13.760Z
 - 사용자 피드백 흡수:
   - 반복되던 “build 후 `.next` 삭제 + dev 재시작” 운영 부담을 줄였다. 이후 검증은 build와 dev가 서로 산출물을 덮어쓰지 않는 전제로 진행한다.
 - 다음 마일스톤: M07
+
+## M06 follow-up — post-M06 gate stabilization
+
+- 시작/종료: 2026-05-10T01:21:00+09:00 / 2026-05-10T01:39:00+09:00
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxPage.tsx` — `data-editor-ready` hydration flag 추가
+  - `tests/builder-editor/helpers/editor.ts` — client-ready 이후 Playwright 클릭 시작
+  - `src/components/builder/canvas/InlineTextEditor.tsx` — toolbar command 직전 현재 텍스트 저장으로 텍스트/서식 undo 단계 분리
+  - `tests/builder-editor/design-pool.playwright.ts` — blank canvas empty state 문구 최신화
+  - `tests/builder-editor/empty-error-states.playwright.ts` — IME/autosave 입력 전 전체 선택으로 ProseMirror append flake 제거
+  - `SESSION.md` / `Wix 체크포인트.md` — 자동 gate 최신 증거 기록
+- 커밋:
+  - `16a3e51 G-Editor: stabilize post-M06 builder gates`
+- 의사결정:
+  - editor shell SSR 표시와 client hydration 완료를 명시적으로 분리한다. Playwright와 사용자가 hydration 전 click handler 미부착 상태를 치지 않게 하기 위한 안정화다.
+  - inline text toolbar는 format command 직전에 저장을 한 번 시도한다. 변경이 없으면 signature guard로 no-op이고, 텍스트 변경이 있으면 서식 적용과 별도 undo/redo 단계가 된다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/inline-text-editor.playwright.ts --workers=1` ✅ (1 passed)
+  - `BASE_URL=http://localhost:3000 npm run test:builder-editor -- --project=chromium-builder --workers=1` ✅ (42 passed / 4.3m)
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit` ✅ (29 files / 755 tests)
+  - `npm run security:builder-routes` ✅ (71 route files / 62 mutation handlers)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- 리스크 / 알려진 문제:
+  - self-check subagent는 현재 thread agent limit 때문에 생성하지 못했다. full Chromium builder suite와 전체 gate로 대체 검증했다.
+  - `/ko/admin-builder`는 Basic Auth 401 응답으로 정상 health를 확인했다.
+- 보류된 W (있을 경우):
+  - 없음
+- 사용자 피드백 흡수:
+  - “백지”, “검증 자체 안 됨”, “계속해야지” 피드백을 반영해 hydration readiness와 full suite 안정성을 먼저 닫았다.
+- 다음 마일스톤: M07

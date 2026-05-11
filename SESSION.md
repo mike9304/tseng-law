@@ -4100,3 +4100,37 @@ sticky 할당 + z-test 유의성.
 
 남은 항목: 런타임에서 variant.overrides / pageId 를 실제로 적용하는 페이지
 렌더링 통합 (현재는 데이터·쿠키만), 분석에 variant 차원 자동 추가.
+
+## 2026-05-11 Claude PR #9 — Email Template 디자인 빌더
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.9. MJML 대신 자체 블록 모델 + 이메일
+세이프 HTML 렌더링. 캠페인 본문/예약 confirmation 등에서 재사용 가능.
+
+**lib (marketing/templates/)**
+- types.ts — EmailBlock discriminated union (heading/text/button/image/divider/spacer),
+  EmailTemplate (blocks + pageBackground/contentBackground), zod discriminated schema.
+- storage.ts — blob+file dual backend (`marketing/templates/<id>.json`).
+- renderer.ts — renderTemplateToHtml 가 600px table-based layout 으로 출력
+  (모든 이메일 클라이언트 호환). 사용자 텍스트 escape. renderTemplateToText 도 함께
+  생성 (button 은 'label: href' 형식).
+
+**API**
+- GET/POST /api/builder/marketing/templates — 목록 / 생성.
+- GET/PATCH /api/builder/marketing/templates/[id] — 조회 (`?render=html` 옵션으로
+  렌더링 결과까지). 수정.
+- permission: 'manage-campaigns'.
+
+**Admin UI**
+- /[locale]/admin-builder/marketing/templates — 템플릿 목록 + 인라인 생성.
+- /[locale]/admin-builder/marketing/templates/[id]/edit — 3패널 에디터:
+  좌(블록 추가), 중앙(클릭 가능 라이브 프리뷰 600px 컬럼), 우(선택된 블록 속성 +
+  순서 ↑↓ + 삭제, 페이지/컨텐츠 컬러 피커).
+
+**Tests**
+- templates/__tests__/renderer.test.ts × 5 (table-wrap, XSS escape, button anchor,
+  divider/spacer, text rendering).
+
+검증: typecheck ✅ / unit 842 ✅.
+
+남은 항목: 캠페인 편집기에서 "템플릿 적용" 버튼으로 bodyHtml/bodyText 자동 채우기,
+booking confirmation 등 transactional 이메일 흐름과 연결.

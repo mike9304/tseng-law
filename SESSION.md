@@ -3794,3 +3794,37 @@ journal-tracked idempotent migration으로 안전하게 처리.
 
 남은 follow-up: 빌드 시 자동 실행 (next build pre-step), rollback 메커니즘
 (현재는 forward-only), admin UI.
+
+## 2026-05-11 Claude PR #19 — Translation provider router (OpenAI + DeepL + cache)
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.19. 기존 인라인 OpenAI 호출을 분리해
+providers 모듈화 + DeepL + 캐시 + env 기반 선택.
+
+**lib**
+- translations/providers/types.ts — TranslationProvider 인터페이스 +
+  unconfigured/send/parse/network 명시적 reason.
+- translations/providers/openai.ts — 기존 GPT-4o-mini JSON 응답 흐름 분리.
+  legal-translator system prompt, 호정국제 → 浩正國際 / Hojeong International 브랜드 매핑.
+- translations/providers/deepl.ts — DeepL API (free/pro endpoint 자동 분기,
+  `:fx` suffix 로 판단). preserve_formatting=1.
+- translations/providers/router.ts — translateViaRouter() 진입점:
+  1) source==target → mock 그대로
+  2) preferProvider 인자
+  3) TRANSLATION_PROVIDER env
+  4) 첫 configured provider (deepl > openai)
+  5) mock fallback
+  성공 결과는 SHA1 해시 키로 1024 entry LRU 캐시.
+
+**API**
+- POST /api/builder/translations/translate — 기존 라우트가 인라인 OpenAI
+  호출 대신 translateViaRouter 사용. provider 명시 가능 (openai/deepl/mock).
+- GET 도 신규 추가 — listAvailableProviders() 로 configured 상태 노출.
+
+**Tests**
+- providers/__tests__/router.test.ts × 6 (source==target 패스스루, fallback,
+  중복 호출 캐시, preferProvider=mock 강제, deepl > openai 우선순위, 상태 조회).
+
+검증: typecheck ✅ / unit 803 ✅.
+
+남은 항목: 비용 통제용 사용량 카운터 (현재는 무제한), TranslationManagerView 가
+provider 선택 UI 노출.

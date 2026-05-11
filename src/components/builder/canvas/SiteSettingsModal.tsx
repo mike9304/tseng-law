@@ -898,6 +898,49 @@ export default function SiteSettingsModal({
                   />
                 </div>
               </div>
+
+              <div style={sectionHeadingStyle}>Typography scale (W184)</div>
+              <div style={twoColumnStyle}>
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Base size (px)</label>
+                  <input
+                    type="number"
+                    min={10}
+                    max={28}
+                    value={theme.typographyScale?.baseSize ?? 16}
+                    onChange={(event) => {
+                      const baseSize = Number(event.target.value) || 16;
+                      const ratio = theme.typographyScale?.ratio ?? 1.25;
+                      setTheme((prev) => ({ ...prev, typographyScale: { baseSize, ratio } }));
+                    }}
+                    style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }}
+                  />
+                </div>
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Ratio</label>
+                  <select
+                    value={theme.typographyScale?.ratio ?? 1.25}
+                    onChange={(event) => {
+                      const ratio = Number(event.target.value) as 1.125 | 1.2 | 1.25 | 1.333 | 1.414 | 1.5;
+                      const baseSize = theme.typographyScale?.baseSize ?? 16;
+                      setTheme((prev) => ({ ...prev, typographyScale: { baseSize, ratio } }));
+                    }}
+                    style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }}
+                  >
+                    <option value={1.125}>1.125 — Major Second</option>
+                    <option value={1.2}>1.2 — Minor Third</option>
+                    <option value={1.25}>1.25 — Major Third</option>
+                    <option value={1.333}>1.333 — Perfect Fourth</option>
+                    <option value={1.414}>1.414 — Aug. Fourth</option>
+                    <option value={1.5}>1.5 — Perfect Fifth</option>
+                  </select>
+                </div>
+              </div>
+              <p style={{ fontSize: 11, color: '#64748b', margin: '4px 0 12px' }}>
+                기본 heading 사이즈(h1~h6)를 base × ratio^level 로 자동 계산합니다.
+                노드 인스펙터에서 fontSize 를 직접 입력하면 그 값이 우선합니다.
+              </p>
+
               <div style={sectionHeadingStyle}>Theme text presets</div>
               {THEME_TEXT_PRESET_KEYS.map((key) => {
                 const preset = textPresets[key];

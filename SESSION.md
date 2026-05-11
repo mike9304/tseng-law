@@ -3541,3 +3541,48 @@ W195 evidence green (Inspector 시각화). hreflang/sitemap 인프라는 이미 
 W173 evidence green (visual editor + runtime).
 W185 evidence green (chip Inspector 통합).
 W198/W204/W205 evidence green (Stripe/SMS/Zoom runtime 완성).
+
+## 2026-05-11 Claude PR #4 Email Marketing — lib + API foundation
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.4 첫 라운드. Wix Email Marketing 동급.
+이번 라운드는 데이터 모델 + dispatcher + 공개·관리자 API. UI 는 다음 라운드.
+
+**lib**
+- subscriber-types.ts — Subscriber 인터페이스, double opt-in token / unsub token,
+  subscribe/admin-create/import/update zod 스키마.
+- subscriber-storage.ts — blob+file dual backend (BLOB_READ_WRITE_TOKEN 분기),
+  by-email / by-token 인덱스, listActiveSubscribersForTags.
+- campaign-types.ts — Campaign / CampaignRecipient / CampaignStats,
+  LocalizedText subject/preheader/bodyHtml/bodyText, status enum.
+- campaign-storage.ts — campaigns + recipients 두 컬렉션, aggregateStats 헬퍼.
+- template-renderer.ts — {{email}} {{locale}} {{campaign_name}} 변수 치환,
+  외부 앵커를 /api/marketing/track redirect 로 rewrite, 1×1 픽셀 자동삽입,
+  로케일별 푸터 + Unsubscribe 링크 강제 (CAN-SPAM/GDPR/정통법 강제 충족).
+- dispatcher.ts — Resend API 통합 (RESEND_API_KEY 없으면 dev stub),
+  ensureRecipients 가 segmentTags 로 활성 구독자 펼침. sendCampaignBatch +
+  dispatchPendingCampaigns + sendTestEmail.
+
+**Public API**
+- POST /api/marketing/subscribe — honeypot + rate limit + double opt-in 시작.
+- GET  /api/marketing/verify — opt-in token → status='subscribed'.
+- GET/POST /api/marketing/unsubscribe — 1-click 해지 (token 기반).
+- GET  /api/marketing/track — 클릭 redirect + clickedAt 기록.
+- GET  /api/marketing/track/pixel — 오픈 픽셀 + openedAt 기록.
+- GET  /api/marketing/cron/dispatch — CRON_SECRET 인증 pending 캠페인 배치.
+
+**Admin API (guardMutation)**
+- GET/POST /api/builder/marketing/subscribers — 목록/생성.
+- POST /api/builder/marketing/subscribers/import — CSV bulk (zod 검증).
+- GET/POST /api/builder/marketing/campaigns — 목록/draft 생성.
+- GET/PATCH /api/builder/marketing/campaigns/[id] — 조회/수정 (sending/sent 차단).
+- POST /api/builder/marketing/campaigns/[id]/send — testEmail 또는 batch 발송.
+- GET /api/builder/marketing/campaigns/[id]/stats — open/click/unsubscribe rate.
+
+**Tests**
+- template-renderer.test.ts × 5 (변수 치환 / 앵커 rewrite / 푸터+픽셀 강제 /
+  mailto·tel pass-through / 로케일 푸터 카피).
+
+검증: typecheck ✅ / unit 774 tests ✅.
+
+남은 PR #4 항목: Admin UI (캠페인 목록, 구독자 관리, 캠페인 편집기 빌더-캔버스 재사용),
+permission 등록 (manage-campaigns / view-campaigns / manage-subscribers).

@@ -20551,3 +20551,43 @@ html[data-theme='dark'] .site-header-logo-dark {
 .builder-datadisplay-service-card strong { font-size: 16px; }
 .builder-datadisplay-service-card p { font-size: 13px; line-height: 1.5; margin: 0; }
 .builder-datadisplay-service-card a { font-size: 12px; text-decoration: none; color: inherit; font-weight: 700; }
+
+/* Phase 21 — Forms 후반 */
+.builder-form-signature { display: flex; flex-direction: column; gap: 6px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; background: #ffffff; }
+.builder-form-signature legend { font-size: 12px; font-weight: 700; color: #475569; padding: 0 4px; }
+.builder-form-signature p { margin: 0 0 4px; font-size: 11px; color: #94a3b8; }
+.builder-form-signature canvas {
+  width: 100%;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  touch-action: none;
+  cursor: crosshair;
+}
+.builder-form-signature button {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.builder-form-payment { display: flex; flex-direction: column; gap: 10px; padding: 16px 18px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; }
+.builder-form-payment legend { font-size: 12px; font-weight: 700; color: #475569; padding: 0 4px; }
+.builder-form-payment-summary { display: flex; align-items: baseline; gap: 12px; }
+.builder-form-payment-summary strong { font-size: 22px; font-weight: 800; color: #0f172a; }
+.builder-form-payment-summary small { font-size: 12px; color: #64748b; }
+.builder-form-payment button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 0;
+  background: #635bff;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.builder-form-payment button:disabled { opacity: 0.5; cursor: not-allowed; }
+.builder-form-payment-security { font-size: 11px; color: #94a3b8; }

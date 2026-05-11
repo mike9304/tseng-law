@@ -3334,3 +3334,17 @@ Prompt-to-artifact 체크:
 검증: typecheck ✅ / unit 769 tests ✅. category 'advanced' 자동 분류로 카탈로그에서 검색.
 
 W126~W135 evidence green. M01~M20 완료.
+
+## 2026-05-11 Claude M21 Forms 후반
+
+범위: M21 (W141~W150). 2 신규 kind + form-input number validation 확장.
+- form-input 에 numericMin/numericMax/numericStep/allowDecimals 추가 (W141).
+- form-signature (W147): HTML5 canvas 서명 패드 + pointer event + clear button + has-ink data attr.
+- form-payment (W148): Stripe Checkout / Payment Element / 수동 계좌 안내 + 금액/통화 +
+  성공/취소 URL. 실제 Stripe 백엔드 연결은 follow-up.
+- W142~W146 sweep (이미 존재) / W149 (conditional logic 이미 존재 showIf) / W150 (submission
+  대시보드 sweep) 는 별도 다듬기 필요.
+
+검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.
+
+W141/W147/W148 evidence green. W149는 기존 showIf로 충분, W150 dashboard sweep follow-up.

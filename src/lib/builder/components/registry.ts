@@ -54,6 +54,10 @@ import './formRadio';
 import './formFile';
 import './formDate';
 
+// Phase 21 — Forms 후반
+import './formSignature';
+import './formPayment';
+
 // Phase 14 — Blog widgets
 import './blogFeed';
 import './blogPostCard';

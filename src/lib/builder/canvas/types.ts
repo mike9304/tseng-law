@@ -53,6 +53,9 @@ export const builderCanvasNodeKinds = [
   'form-radio',
   'form-file',
   'form-date',
+  // Phase 21 — Forms 후반
+  'form-signature',
+  'form-payment',
   // Phase 14 — Blog widgets
   'blog-feed',
   'blog-post-card',
@@ -696,6 +699,11 @@ const formInputCanvasNodeSchema = baseCanvasNodeSchema.extend({
     errorMessage: z.string().max(300).optional(),
     showIf: formFieldConditionSchema.optional(),
     variant: formInputVariantKeySchema.optional(),
+    // Phase 21 — Number/decimal validation
+    numericMin: z.number().optional(),
+    numericMax: z.number().optional(),
+    numericStep: z.number().min(0).optional(),
+    allowDecimals: z.boolean().default(true),
   }),
 });
 
@@ -797,6 +805,40 @@ const formDateCanvasNodeSchema = baseCanvasNodeSchema.extend({
     errorMessage: z.string().max(300).optional(),
     showIf: formFieldConditionSchema.optional(),
     variant: formInputVariantKeySchema.optional(),
+  }),
+});
+
+// ─── Phase 21 — Forms 후반 ──────────────────────────────────────
+
+const formSignatureCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('form-signature'),
+  content: z.object({
+    name: z.string().min(1).max(80).default('signature'),
+    label: z.string().max(120).default('서명'),
+    required: z.boolean().default(true),
+    helpText: z.string().max(300).default('박스 안에 서명해 주세요'),
+    strokeColor: z.string().max(60).default('#0f172a'),
+    strokeWidth: z.number().int().min(1).max(8).default(2),
+    showClearButton: z.boolean().default(true),
+    errorMessage: z.string().max(300).optional(),
+    showIf: formFieldConditionSchema.optional(),
+  }),
+});
+
+const formPaymentCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('form-payment'),
+  content: z.object({
+    name: z.string().min(1).max(80).default('payment'),
+    label: z.string().max(120).default('결제'),
+    provider: z.enum(['stripe-checkout', 'stripe-payment-element', 'manual']).default('stripe-checkout'),
+    amountCents: z.number().int().min(0).default(100000),
+    currency: z.enum(['KRW', 'USD', 'TWD', 'JPY', 'EUR']).default('KRW'),
+    description: z.string().max(400).default('상담 비용'),
+    successUrl: z.string().max(2000).default(''),
+    cancelUrl: z.string().max(2000).default(''),
+    showSecurityNote: z.boolean().default(true),
+    errorMessage: z.string().max(300).optional(),
+    showIf: formFieldConditionSchema.optional(),
   }),
 });
 
@@ -1462,6 +1504,8 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   formRadioCanvasNodeSchema,
   formFileCanvasNodeSchema,
   formDateCanvasNodeSchema,
+  formSignatureCanvasNodeSchema,
+  formPaymentCanvasNodeSchema,
   blogFeedCanvasNodeSchema,
   blogPostCardCanvasNodeSchema,
   blogCategoriesCanvasNodeSchema,
@@ -1532,6 +1576,8 @@ export type BuilderFormCheckboxCanvasNode = z.infer<typeof formCheckboxCanvasNod
 export type BuilderFormRadioCanvasNode = z.infer<typeof formRadioCanvasNodeSchema>;
 export type BuilderFormFileCanvasNode = z.infer<typeof formFileCanvasNodeSchema>;
 export type BuilderFormDateCanvasNode = z.infer<typeof formDateCanvasNodeSchema>;
+export type BuilderFormSignatureCanvasNode = z.infer<typeof formSignatureCanvasNodeSchema>;
+export type BuilderFormPaymentCanvasNode = z.infer<typeof formPaymentCanvasNodeSchema>;
 export type BuilderBlogFeedCanvasNode = z.infer<typeof blogFeedCanvasNodeSchema>;
 export type BuilderBlogPostCardCanvasNode = z.infer<typeof blogPostCardCanvasNodeSchema>;
 export type BuilderBlogCategoriesCanvasNode = z.infer<typeof blogCategoriesCanvasNodeSchema>;

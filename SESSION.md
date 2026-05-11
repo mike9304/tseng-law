@@ -3451,3 +3451,10 @@ W196~W215 schema 단계 evidence green.
 검증: typecheck ✅ / unit 769 tests ✅. W160 exit / W167 scrub / W168 hover-fade /
 W170~W171 loop runtime evidence green. W172 page transition / W173 timeline editor
 UI는 별도 follow-up.
+
+## 2026-05-11 Claude Typography scale runtime (M23 follow-up)
+
+HeadingElement가 theme.typographyScale 설정 시 modular ratio로 h1~h6 기본 사이즈를
+자동 계산. 노드별 fontSize override는 그대로 우선.
+
+검증: typecheck ✅ / unit 769 tests ✅.

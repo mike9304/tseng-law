@@ -141,10 +141,78 @@ export default function AnimationsRoot() {
       node.style.setProperty('--builder-anim-loop-duration', `${dur}ms`);
     });
 
+    // Phase 23 W173 — Motion timeline runtime.
+    interface ParsedKeyframe { offset: number; transform?: string; opacity?: number }
+    const timelineNodes = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-anim-timeline]'),
+    );
+    const timelineSpecs: Array<{ node: HTMLElement; keyframes: ParsedKeyframe[]; mode: 'scroll' | 'time'; durationMs: number; startedAt: number }> = [];
+    timelineNodes.forEach((node) => {
+      try {
+        const keyframes = JSON.parse(node.dataset.animTimeline ?? '[]') as ParsedKeyframe[];
+        if (!Array.isArray(keyframes) || keyframes.length === 0) return;
+        keyframes.sort((a, b) => a.offset - b.offset);
+        timelineSpecs.push({
+          node,
+          keyframes,
+          mode: (node.dataset.animTimelineMode as 'scroll' | 'time') || 'time',
+          durationMs: Number(node.dataset.animTimelineDuration) || 1200,
+          startedAt: performance.now(),
+        });
+      } catch {
+        /* ignore malformed timeline */
+      }
+    });
+
+    function interpolate(spec: typeof timelineSpecs[number], progress: number): void {
+      const kfs = spec.keyframes;
+      let a = kfs[0];
+      let b = kfs[kfs.length - 1];
+      for (let i = 0; i < kfs.length - 1; i++) {
+        if (progress >= kfs[i].offset && progress <= kfs[i + 1].offset) {
+          a = kfs[i];
+          b = kfs[i + 1];
+          break;
+        }
+      }
+      const span = b.offset - a.offset || 1;
+      const t = (progress - a.offset) / span;
+      if (a.transform || b.transform) {
+        spec.node.style.setProperty('--builder-anim-timeline-transform', t > 0.5 ? (b.transform ?? 'none') : (a.transform ?? 'none'));
+      }
+      if (a.opacity !== undefined || b.opacity !== undefined) {
+        const av = a.opacity ?? 1;
+        const bv = b.opacity ?? 1;
+        spec.node.style.setProperty('--builder-anim-timeline-opacity', String(av + (bv - av) * t));
+      }
+    }
+
+    let timelineFrame: number | null = null;
+    function tickTimeline(): void {
+      const now = performance.now();
+      for (const spec of timelineSpecs) {
+        if (spec.mode === 'time') {
+          const elapsed = (now - spec.startedAt) % spec.durationMs;
+          interpolate(spec, elapsed / spec.durationMs);
+        } else {
+          const rect = spec.node.getBoundingClientRect();
+          const vh = window.innerHeight || 1;
+          const raw = 1 - (rect.top + rect.height / 2) / vh;
+          const progress = Math.max(0, Math.min(1, raw));
+          interpolate(spec, progress);
+        }
+      }
+      timelineFrame = window.requestAnimationFrame(tickTimeline);
+    }
+    if (timelineSpecs.length > 0) {
+      timelineFrame = window.requestAnimationFrame(tickTimeline);
+    }
+
     return () => {
       observer?.disconnect();
       exitObserver?.disconnect();
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
+      if (timelineFrame) window.cancelAnimationFrame(timelineFrame);
       window.removeEventListener('scroll', requestScrollEffects);
       window.removeEventListener('resize', requestScrollEffects);
     };
@@ -177,6 +245,11 @@ export default function AnimationsRoot() {
       .builder-pub-node[data-anim-scroll-active='true'] {
         transform: var(--builder-scroll-transform, var(--builder-base-transform, none)) !important;
         opacity: var(--builder-scroll-opacity) !important;
+      }
+      .builder-pub-node[data-anim-timeline] {
+        transform: var(--builder-anim-timeline-transform, var(--builder-base-transform, none));
+        opacity: var(--builder-anim-timeline-opacity, 1);
+        will-change: transform, opacity;
       }
       .builder-pub-node[data-anim-hover]:hover {
         transform: var(--builder-anim-hover-transform, var(--builder-base-transform, none)) !important;

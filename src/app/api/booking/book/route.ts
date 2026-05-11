@@ -4,6 +4,7 @@ import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/avai
 import { bookingCreateSchema } from '@/lib/builder/bookings/types';
 import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
+import { createZoomMeeting } from '@/lib/builder/bookings/zoom-client';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -47,6 +48,21 @@ export async function POST(request: NextRequest) {
   });
   if (!available) return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
 
+  let meetingLink: string | undefined;
+  if (service.meetingMode === 'zoom') {
+    const zoom = await createZoomMeeting({
+      topic: `${service.name?.ko || service.name?.en || 'Booking'} · ${parsed.data.customer.name}`,
+      startTimeISO: parsed.data.startAt,
+      durationMinutes: service.durationMinutes,
+      customerEmail: parsed.data.customer.email,
+    });
+    if (zoom.ok) {
+      meetingLink = zoom.meetingLink;
+    } else if (zoom.reason !== 'unconfigured') {
+      console.warn('[booking] zoom meeting creation failed', zoom.reason, zoom.details);
+    }
+  }
+
   const booking = timestamped({
     bookingId: makeBookingId(),
     serviceId: parsed.data.serviceId,
@@ -57,6 +73,10 @@ export async function POST(request: NextRequest) {
     status: 'confirmed' as const,
     source: 'web' as const,
     reminders: [],
+    ...(meetingLink ? { meetingLink } : {}),
+    ...(parsed.data.paymentIntentId
+      ? { paymentIntentId: parsed.data.paymentIntentId, paymentStatus: 'unpaid' as const }
+      : {}),
   });
   await saveBooking(booking);
   await sendBookingConfirmation(booking, { service, staff });

@@ -13,9 +13,11 @@ import {
   type EntrancePreset,
   type HoverAnimationConfig,
   type HoverAnimationPreset,
+  type MotionTimelineConfig,
   type ScrollAnimationConfig,
   type ScrollEffect,
 } from '@/lib/builder/animations/presets';
+import MotionTimelineEditor from '@/components/builder/editor/MotionTimelineEditor';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
 
 type AnimationConfigValue = NonNullable<BuilderAnimationConfig>;
@@ -309,6 +311,27 @@ export default function AnimationsTab({
           onChange={(transitionMs) => updateHover({ transitionMs: Math.round(transitionMs) })}
         />
         <p style={hintStyle}>Hover presets are separate from the Style tab hover controls and can be layered with them.</p>
+      </section>
+
+      <section style={sectionStyle}>
+        <div style={sectionHeaderStyle}>
+          <span style={sectionTitleStyle}>Motion timeline</span>
+        </div>
+        <MotionTimelineEditor
+          value={(node.animation as { timeline?: MotionTimelineConfig } | undefined)?.timeline}
+          disabled={disabled}
+          onChange={(timeline) => {
+            const base = node.animation ?? {};
+            if (!timeline) {
+              const next = { ...base } as Record<string, unknown>;
+              delete next.timeline;
+              commitAnimation(next as AnimationConfigValue);
+              return;
+            }
+            commitAnimation({ ...base, timeline });
+          }}
+        />
+        <p style={hintStyle}>키프레임은 0~1 범위. scroll-bound 켜면 스크롤 진행률에 맞춰 보간, 끄면 durationMs 동안 시간 기반 재생.</p>
       </section>
 
       <button

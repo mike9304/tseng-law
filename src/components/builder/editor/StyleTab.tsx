@@ -22,6 +22,7 @@ import {
   getThemeBindingBadgeStyle,
   type ThemeBindingIndicator,
 } from '@/lib/builder/site/theme-bindings';
+import StyleOriginChip, { resolveColorValueToString } from '@/components/builder/editor/StyleOriginChip';
 import {
   AdvancedDisclosure,
   LabeledRow,
@@ -154,7 +155,18 @@ export default function StyleTab({
       ) : null}
 
       <div style={sectionDividerStyle}>
-        <span style={sectionTitleStyle}>Background</span>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+          <span style={sectionTitleStyle}>Background</span>
+          <StyleOriginChip
+            value={resolveColorValueToString(node.style.backgroundColor, theme)}
+            theme={theme}
+            variantKey={buttonVariantBinding?.label}
+            manualOverride={
+              typeof node.style.backgroundColor === 'string' &&
+              node.style.backgroundColor.length > 0
+            }
+          />
+        </div>
         <BackgroundEditor
           value={node.style.backgroundColor}
           paletteTokens={paletteTokens}
@@ -164,7 +176,16 @@ export default function StyleTab({
       </div>
 
       <div style={sectionDividerStyle}>
-        <span style={sectionTitleStyle}>Border</span>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+          <span style={sectionTitleStyle}>Border</span>
+          <StyleOriginChip
+            value={resolveColorValueToString(node.style.borderColor, theme)}
+            theme={theme}
+            manualOverride={
+              typeof node.style.borderColor === 'string' && node.style.borderColor.length > 0
+            }
+          />
+        </div>
         <LabeledRow label="Border color">
           <ColorPicker
             value={node.style.borderColor}

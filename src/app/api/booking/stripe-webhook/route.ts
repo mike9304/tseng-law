@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHmac, timingSafeEqual } from 'node:crypto';
+import { listBookings, saveBooking } from '@/lib/builder/bookings/storage';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -86,33 +87,62 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 
+  async function updateBookingPaymentStatus(
+    intentId: string,
+    nextStatus: 'paid' | 'unpaid',
+  ): Promise<boolean> {
+    if (!intentId) return false;
+    const bookings = await listBookings({ includeCancelled: true });
+    const match = bookings.find((b) => b.paymentIntentId === intentId);
+    if (!match) return false;
+    await saveBooking({ ...match, paymentStatus: nextStatus, updatedAt: new Date().toISOString() });
+    return true;
+  }
+
   switch (event.type) {
     case 'payment_intent.succeeded': {
       const obj = event.data?.object ?? {};
-      const metadata = (obj.metadata as Record<string, string> | undefined) ?? {};
+      const intentId = String(obj.id ?? '');
+      const updated = await updateBookingPaymentStatus(intentId, 'paid');
       console.info('[booking/stripe-webhook] payment_intent.succeeded', {
         id: event.id,
-        intentId: obj.id,
-        serviceId: metadata.serviceId,
+        intentId,
         amount: obj.amount,
         currency: obj.currency,
+        bookingUpdated: updated,
       });
-      // Booking row creation is deferred to /api/booking/book (called by the
-      // client after PaymentIntent succeeds) so that a single source of truth
-      // governs availability checks. A future iteration may move that here.
-      return NextResponse.json({ ok: true, handled: true });
+      return NextResponse.json({ ok: true, handled: true, bookingUpdated: updated });
     }
     case 'payment_intent.payment_failed': {
       const obj = event.data?.object ?? {};
+      const intentId = String(obj.id ?? '');
+      const updated = await updateBookingPaymentStatus(intentId, 'unpaid');
       console.warn('[booking/stripe-webhook] payment_intent.payment_failed', {
         id: event.id,
-        intentId: obj.id,
+        intentId,
         lastError: (obj.last_payment_error as { message?: string } | undefined)?.message,
+        bookingUpdated: updated,
       });
-      return NextResponse.json({ ok: true, handled: true });
+      return NextResponse.json({ ok: true, handled: true, bookingUpdated: updated });
+    }
+    case 'charge.refunded': {
+      const obj = event.data?.object ?? {};
+      const intentId = String(obj.payment_intent ?? '');
+      if (intentId) {
+        const bookings = await listBookings({ includeCancelled: true });
+        const match = bookings.find((b) => b.paymentIntentId === intentId);
+        if (match) {
+          const refunded = obj.amount_refunded as number | undefined;
+          const total = obj.amount as number | undefined;
+          const nextStatus: 'refunded' | 'partial-refund' =
+            refunded && total && refunded >= total ? 'refunded' : 'partial-refund';
+          await saveBooking({ ...match, paymentStatus: nextStatus, updatedAt: new Date().toISOString() });
+          return NextResponse.json({ ok: true, handled: true, bookingUpdated: true });
+        }
+      }
+      return NextResponse.json({ ok: true, handled: true, bookingUpdated: false });
     }
     default: {
-      // Ack unhandled events so Stripe doesn't retry.
       return NextResponse.json({ ok: true, handled: false, type: event.type });
     }
   }

@@ -257,6 +257,20 @@ export const animationConfigSchema = z.object({
     durationMs: z.number().int().min(200).max(20000).default(2400),
     intensity: z.number().int().min(0).max(100).default(30),
   }).optional(),
+  timeline: z.object({
+    scrollBound: z.boolean().default(false),
+    durationMs: z.number().int().min(200).max(20000).default(1200),
+    keyframes: z
+      .array(
+        z.object({
+          offset: z.number().min(0).max(1),
+          transform: z.string().max(200).optional(),
+          opacity: z.number().min(0).max(1).optional(),
+        }),
+      )
+      .max(16)
+      .default([]),
+  }).optional(),
 }).optional();
 
 export type BuilderAnimationConfig = z.infer<typeof animationConfigSchema>;

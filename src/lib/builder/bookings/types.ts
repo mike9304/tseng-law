@@ -15,7 +15,12 @@ export type DayOfWeek = (typeof dayOfWeeks)[number];
 
 export type BookingStatus = 'pending' | 'confirmed' | 'cancelled' | 'completed' | 'no-show';
 export type BookingSource = 'web' | 'admin';
-export type BookingReminderType = 'email-confirmation' | 'email-reminder-24h' | 'email-reminder-1h';
+export type BookingReminderType =
+  | 'email-confirmation'
+  | 'email-reminder-24h'
+  | 'email-reminder-1h'
+  | 'sms-reminder-24h'
+  | 'sms-reminder-1h';
 
 export type LocalizedText = Record<Locale, string>;
 
@@ -220,6 +225,7 @@ export const bookingCreateSchema = z.object({
   }),
   source: z.enum(['web', 'admin']).default('web'),
   status: z.enum(['pending', 'confirmed', 'cancelled', 'completed', 'no-show']).default('confirmed'),
+  paymentIntentId: z.string().trim().min(1).max(200).optional(),
 });
 
 export const bookingUpdateSchema = z.object({

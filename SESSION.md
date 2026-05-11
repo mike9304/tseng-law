@@ -3500,3 +3500,44 @@ follow-up.
 
 W195 evidence green (Inspector 시각화). hreflang/sitemap 인프라는 이미 존재했고
 이번 작업으로 빌더 안에서도 확인할 수 있게 됐다.
+
+## 2026-05-11 Claude Booking 통합 + Style chip + Motion timeline (M22/M23/M26 follow-ups)
+
+**1. Booking → Zoom 자동 미팅 생성 (W205 runtime)**
+- /api/booking/book 가 service.meetingMode === 'zoom' 이면 createZoomMeeting 호출.
+- 성공 시 booking.meetingLink 저장, ZOOM_* 미설정이면 graceful skip.
+- bookingCreateSchema 에 paymentIntentId optional 추가 → book 시 같이 저장.
+
+**2. Stripe webhook → booking row paymentStatus 업데이트 (W198 runtime)**
+- /api/booking/stripe-webhook 가 더이상 단순 로깅만 아님.
+- payment_intent.succeeded → paymentIntentId 매칭 booking 의 paymentStatus='paid'.
+- payment_intent.payment_failed → paymentStatus='unpaid'.
+- charge.refunded → amount_refunded vs amount 비교해 refunded/partial-refund.
+
+**3. SMS reminder cron (W204 runtime)**
+- /api/booking/sms-reminders 신규 라우트. POST/GET 둘 다 지원.
+- CRON_SECRET 헤더 (x-cron-secret 또는 Authorization Bearer) 인증.
+- 24h ± 30m / 1h ± 15m 윈도우 스캔, twilio sendSms 호출.
+- BookingReminderType 에 'sms-reminder-24h' / 'sms-reminder-1h' 추가.
+- 보낸 후 booking.reminders 에 기록 (중복 발송 방지).
+
+**4. Inspector Style origin chip (W185 UI)**
+- StyleOriginChip 컴포넌트 — Theme/Variant/Manual/Default 4단계 색상 뱃지.
+- StyleTab 의 Background / Border 섹션 헤더에 통합. classifyStyleOrigin 헬퍼
+  재사용. token 참조면 theme, 문자열 직접입력이면 manual 로 분류.
+
+**5. Motion timeline 비주얼 에디터 + runtime (W173)**
+- animationConfigSchema 에 `timeline: { scrollBound, durationMs, keyframes[] }` 추가.
+- MotionTimelineEditor 컴포넌트 — 가로 트랙 클릭 → 키프레임 추가, offset/transform/opacity
+  편집, scroll-bound 토글, duration 입력, 제거 버튼.
+- AnimationsTab 에 Motion timeline 섹션 신규.
+- animation-render.ts 가 data-anim-timeline (JSON 키프레임) / -mode / -duration 속성 emit.
+- AnimationsRoot 가 requestAnimationFrame 루프로 키프레임 보간 →
+  --builder-anim-timeline-transform / -opacity CSS 변수 세팅.
+  scroll 모드는 viewport 중심 기준 progress, time 모드는 durationMs 순환.
+
+검증: typecheck ✅ / unit 769 ✅.
+
+W173 evidence green (visual editor + runtime).
+W185 evidence green (chip Inspector 통합).
+W198/W204/W205 evidence green (Stripe/SMS/Zoom runtime 완성).

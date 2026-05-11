@@ -28,6 +28,10 @@ export interface PublishedAnimationAttributes {
   'data-anim-loop'?: string;
   'data-anim-loop-duration'?: string;
   'data-anim-loop-intensity'?: string;
+  // Phase 23 timeline runtime.
+  'data-anim-timeline'?: string;
+  'data-anim-timeline-mode'?: 'time' | 'scroll';
+  'data-anim-timeline-duration'?: string;
 }
 
 export interface EditorAnimationStyle {
@@ -135,6 +139,12 @@ export function getPublishedAnimationAttributes(
     attrs['data-anim-loop'] = normalized.loop.preset;
     attrs['data-anim-loop-duration'] = String(normalized.loop.durationMs);
     attrs['data-anim-loop-intensity'] = String(normalized.loop.intensity);
+  }
+
+  if (normalized.timeline && normalized.timeline.keyframes.length > 0) {
+    attrs['data-anim-timeline'] = JSON.stringify(normalized.timeline.keyframes);
+    attrs['data-anim-timeline-mode'] = normalized.timeline.scrollBound ? 'scroll' : 'time';
+    attrs['data-anim-timeline-duration'] = String(normalized.timeline.durationMs);
   }
 
   return attrs;

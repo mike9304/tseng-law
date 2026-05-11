@@ -75,6 +75,7 @@ type InteractiveWidgetKind = Extract<
   BuilderCanvasNodeKind,
   'countdown' | 'progress' | 'rating' | 'notification-bar' | 'back-to-top' | 'button'
 >;
+type NavigationWidgetKind = Extract<BuilderCanvasNodeKind, 'menu-bar' | 'anchor-menu' | 'breadcrumbs'>;
 
 interface TextWidgetPreset {
   id: string;
@@ -130,6 +131,18 @@ interface InteractiveWidgetPreset {
   description: string;
   icon: string;
   kind: InteractiveWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+interface NavigationWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: NavigationWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -1223,6 +1236,101 @@ const INTERACTIVE_WIDGET_PRESETS: InteractiveWidgetPreset[] = [
   },
 ];
 
+const NAVIGATION_WIDGET_PRESETS: NavigationWidgetPreset[] = [
+  {
+    id: 'nav-menu-horizontal',
+    label: 'Horizontal menu',
+    description: '가로 메뉴 바',
+    icon: 'MH',
+    kind: 'menu-bar',
+    width: 560,
+    height: 56,
+    content: { orientation: 'horizontal', variant: 'plain' },
+  },
+  {
+    id: 'nav-menu-vertical',
+    label: 'Vertical menu',
+    description: '세로 메뉴',
+    icon: 'MV',
+    kind: 'menu-bar',
+    width: 220,
+    height: 240,
+    content: { orientation: 'vertical', variant: 'plain' },
+  },
+  {
+    id: 'nav-menu-dropdown',
+    label: 'Dropdown menu',
+    description: '드롭다운 계층',
+    icon: 'MD',
+    kind: 'menu-bar',
+    width: 560,
+    height: 56,
+    content: {
+      orientation: 'horizontal',
+      variant: 'dropdown',
+      items: [
+        { label: '서비스', href: '/ko/services', children: [
+          { label: '기업 자문', href: '/ko/services/corporate', description: '회사 설립과 운영 자문' },
+          { label: '이민', href: '/ko/services/immigration', description: '비자/체류 자격' },
+        ] },
+        { label: '변호사', href: '/ko/lawyers' },
+        { label: '문의', href: '/ko/contact' },
+      ],
+    },
+  },
+  {
+    id: 'nav-menu-mega',
+    label: 'Mega menu',
+    description: '대형 드롭다운',
+    icon: 'MM',
+    kind: 'menu-bar',
+    width: 720,
+    height: 56,
+    content: {
+      orientation: 'horizontal',
+      variant: 'mega',
+      items: [
+        { label: '서비스', href: '/ko/services', children: [
+          { label: '기업', href: '/ko/services/corporate', description: '한·대 법인 자문' },
+          { label: '이민', href: '/ko/services/immigration', description: '비자/체류' },
+          { label: '소송', href: '/ko/services/litigation', description: '민·형사' },
+          { label: '가사', href: '/ko/services/family', description: '이혼/상속' },
+        ] },
+      ],
+    },
+  },
+  {
+    id: 'nav-anchor-menu',
+    label: 'Anchor menu',
+    description: '섹션 점프 메뉴',
+    icon: '⚓',
+    kind: 'anchor-menu',
+    width: 360,
+    height: 48,
+    content: {},
+  },
+  {
+    id: 'nav-breadcrumbs-chevron',
+    label: 'Breadcrumbs',
+    description: '경로 표시',
+    icon: '›',
+    kind: 'breadcrumbs',
+    width: 520,
+    height: 32,
+    content: { separator: 'chevron' },
+  },
+  {
+    id: 'nav-breadcrumbs-slash',
+    label: 'Breadcrumbs (slash)',
+    description: '/ 구분자',
+    icon: '/',
+    kind: 'breadcrumbs',
+    width: 520,
+    height: 32,
+    content: { separator: 'slash' },
+  },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -1337,6 +1445,20 @@ function interactiveWidgetMatchesSearch(preset: InteractiveWidgetPreset, query: 
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function navigationWidgetMatchesSearch(preset: NavigationWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'navigation widget',
+    'menu',
+    'breadcrumb',
+    'anchor',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
@@ -1377,6 +1499,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     () => INTERACTIVE_WIDGET_PRESETS.filter((preset) => interactiveWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
+  const visibleNavigationWidgetPresets = useMemo(
+    () => NAVIGATION_WIDGET_PRESETS.filter((preset) => navigationWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -1411,8 +1537,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -1516,6 +1642,31 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         ...(preset.style ?? {}),
       },
       anchorName: preset.id === 'layout-sticky-anchor' ? 'services' : seed.anchorName,
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddNavigationWidgetPreset(preset: NavigationWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
     } as BuilderCanvasNode;
 
     addNode(node);
@@ -1848,6 +1999,56 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                     className={styles.mediaWidgetPresetButton}
                     data-builder-interactive-widget-preset={preset.id}
                     onClick={() => handleAddInteractiveWidgetPreset(preset)}
+                  >
+                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.mediaWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleNavigationWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['navigation-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'navigation-widgets': !(current['navigation-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>≡</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Navigation widget pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    menu, dropdown, mega, anchor, breadcrumbs · {visibleNavigationWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['navigation-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['navigation-widgets'] ?? true) ? (
+              <div className={styles.mediaWidgetGrid}>
+                {visibleNavigationWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.mediaWidgetPresetButton}
+                    data-builder-navigation-widget-preset={preset.id}
+                    onClick={() => handleAddNavigationWidgetPreset(preset)}
                   >
                     <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
                     <span className={styles.mediaWidgetPresetCopy}>

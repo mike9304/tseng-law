@@ -3263,3 +3263,17 @@ Prompt-to-artifact 체크:
 - cookie consent version 을 bump 하면 모든 방문자가 다시 prompt.
 - 모든 트리거가 admin 토글 없이 default 비활성 — `cookieConsent.enabled=false` /
   `popup.active=false` 가 기본.
+
+## 2026-05-11 Claude M16 Navigation 위젯 팩
+
+범위:
+- M16 (W99~W105). 3 신규 kind (menu-bar / anchor-menu / breadcrumbs).
+- menu-bar: orientation (horizontal/vertical) + variant (plain/pill/dropdown/mega)
+  + items (children dropdown) + 모바일 햄버거 토글.
+- anchor-menu: 섹션 점프 + sticky + offsetTopPx + scroll spy 활성 표시.
+- breadcrumbs: chevron/slash/dot 구분자 + 홈 prefix.
+- 카탈로그 Navigation widget pack 7 프리셋 (horizontal/vertical/dropdown/mega/
+  anchor/breadcrumbs chevron·slash).
+- globals.css builder-nav-* 스타일 + 767px 미만 햄버거 + mobile 메뉴 dropdown.
+
+검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.

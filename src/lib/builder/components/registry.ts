@@ -67,3 +67,8 @@ import './progress';
 import './rating';
 import './notificationBar';
 import './backToTop';
+
+// Phase 16 — Navigation widgets
+import './menuBar';
+import './anchorMenu';
+import './breadcrumbs';

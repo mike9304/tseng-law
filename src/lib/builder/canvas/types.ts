@@ -76,6 +76,10 @@ export const builderCanvasNodeKinds = [
   'rating',
   'notification-bar',
   'back-to-top',
+  // Phase 16 — Navigation widgets
+  'menu-bar',
+  'anchor-menu',
+  'breadcrumbs',
 ] as const;
 
 /**
@@ -1053,6 +1057,56 @@ const backToTopCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+// ─── Phase 16 — Navigation widgets ───────────────────────────────
+
+const menuItemSchema = z.object({
+  label: z.string().max(60),
+  href: z.string().max(2000),
+  children: z.array(z.object({
+    label: z.string().max(60),
+    href: z.string().max(2000),
+    description: z.string().max(200).optional(),
+  })).max(40).optional(),
+});
+
+const menuBarCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('menu-bar'),
+  content: z.object({
+    items: z.array(menuItemSchema).max(20).default([]),
+    orientation: z.enum(['horizontal', 'vertical']).default('horizontal'),
+    variant: z.enum(['plain', 'pill', 'dropdown', 'mega']).default('plain'),
+    activeHref: z.string().max(2000).default(''),
+    showMobileHamburger: z.boolean().default(true),
+  }),
+});
+
+const anchorMenuCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('anchor-menu'),
+  content: z.object({
+    items: z.array(z.object({
+      label: z.string().max(60),
+      anchorId: z.string().max(120),
+    })).max(20).default([]),
+    sticky: z.boolean().default(true),
+    offsetTopPx: z.number().int().min(0).max(400).default(0),
+    activeColor: z.string().max(60).default('#0f172a'),
+  }),
+});
+
+const breadcrumbsCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('breadcrumbs'),
+  content: z.object({
+    items: z.array(z.object({
+      label: z.string().max(80),
+      href: z.string().max(2000).optional(),
+    })).max(10).default([]),
+    separator: z.enum(['slash', 'chevron', 'dot']).default('chevron'),
+    showHome: z.boolean().default(true),
+    homeLabel: z.string().max(40).default('홈'),
+    homeHref: z.string().max(2000).default('/'),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
@@ -1097,6 +1151,9 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   ratingCanvasNodeSchema,
   notificationBarCanvasNodeSchema,
   backToTopCanvasNodeSchema,
+  menuBarCanvasNodeSchema,
+  anchorMenuCanvasNodeSchema,
+  breadcrumbsCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -1142,6 +1199,9 @@ export type BuilderProgressCanvasNode = z.infer<typeof progressCanvasNodeSchema>
 export type BuilderRatingCanvasNode = z.infer<typeof ratingCanvasNodeSchema>;
 export type BuilderNotificationBarCanvasNode = z.infer<typeof notificationBarCanvasNodeSchema>;
 export type BuilderBackToTopCanvasNode = z.infer<typeof backToTopCanvasNodeSchema>;
+export type BuilderMenuBarCanvasNode = z.infer<typeof menuBarCanvasNodeSchema>;
+export type BuilderAnchorMenuCanvasNode = z.infer<typeof anchorMenuCanvasNodeSchema>;
+export type BuilderBreadcrumbsCanvasNode = z.infer<typeof breadcrumbsCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({

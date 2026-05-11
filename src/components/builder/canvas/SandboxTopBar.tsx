@@ -9,6 +9,7 @@ import {
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import LocaleSwitcher from './LocaleSwitcher';
 import EditorThemeToggle from './EditorThemeToggle';
+import EditorPrefsButton from './EditorPrefsButton';
 import styles from './SandboxPage.module.css';
 
 export type ViewportMode = 'desktop' | 'tablet' | 'mobile';
@@ -136,6 +137,7 @@ export default function SandboxTopBar({
       </div>
 
       <div className={styles.topBarActions}>
+        <EditorPrefsButton />
         <EditorThemeToggle />
         {selectionCount > 0 ? (
           <span className={styles.selectionPill} title={selectedSummary}>

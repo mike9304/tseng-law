@@ -23,7 +23,7 @@
 | M19 | P3i    | Decorative 팩                     | W118~W125 | 14h  | M14  | 🟢   |
 | M20 | P3j    | Data Display 팩                   | W126~W135 | 22h  | M14  | 🟢   |
 | M21 | P4     | Forms 후반                        | W141~W150 | 30h  | M11  | 🟢   |
-| M22 | P5     | Motion 후반                       | W160~W175 | 40h  | M07  | 🟡   |
+| M22 | P5     | Motion 후반                       | W160~W175 | 40h  | M07  | 🟢   |
 | M23 | P6     | Design system 마무리              | W184~W185 | 12h  | —    | 🟡   |
 | M24 | P7     | SEO + Publish 성숙                | W186~W195 | 24h  | —    | 🟡   |
 | M25 | P8     | Bookings 본격 1 (서비스/스태프)   | W196~W202 | 24h  | M21  | 🟡   |

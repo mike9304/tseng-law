@@ -806,3 +806,30 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run security:builder-routes` ✅
 - W 판정:
   - W136~W150 green evidence 확보. W148은 Stripe Checkout session 경로 기준이며, webhook/refund/Payment Element 심화는 Bookings 결제 마일스톤에서 이어간다.
+
+## M22 — motion runtime parity
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/animations/presets.ts` — click/exit/loop/timeline/default normalize와 custom cubic-bezier easing value를 추가했다.
+  - `src/lib/builder/canvas/types.ts` — exit/loop/timeline/click animation schema와 cubic-bezier string validation을 추가했다.
+  - `src/lib/builder/animations/animation-render.ts` — published attrs/style와 editor hover opacity style을 exit/loop/timeline/click까지 확장했다.
+  - `src/components/builder/editor/AnimationsTab.tsx` — Exit/Loop/Click controls, custom Easing field, scrub options, timeline wiring을 추가했다.
+  - `src/components/builder/editor/MotionTimelineEditor.tsx` — offset/timeOffset keyframe 표시와 편집을 안정화했다.
+  - `src/components/builder/published/AnimationsRoot.tsx` — exit viewport leave, scrub runtime, hover fade, loop intensity, click replay, timeline runtime을 연결했다.
+  - `src/app/api/builder/site/settings/route.ts`, `src/components/builder/canvas/SiteSettingsModal.tsx` — W172 page transition 설정 UI/API를 추가했다.
+  - `tests/builder-editor/motion-runtime.playwright.ts` — inspector controls와 임시 published page runtime attrs를 실제 브라우저로 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/animations/__tests__/animation-render.test.ts src/lib/builder/site/__tests__/published-node-frame.test.ts` ✅ (17 passed)
+  - `BASE_URL=http://127.0.0.1:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/motion-runtime.playwright.ts --project=chromium-builder --workers=1` ✅ (2 passed)
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run security:builder-routes` ✅
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- W 판정:
+  - W159/W160/W167/W168/W170/W171/W172/W173/W174/W175 자동검증 evidence 확보.
+  - W174 elastic preset과 W173 Claude drag/easing-visualizer UI는 별도 디자인 트랙으로 남긴다.
+- 커밋:
+  - `cfd4ee5 G-Editor: advance motion runtime parity`
+- 다음 마일스톤:
+  - M23 Design system 마무리.

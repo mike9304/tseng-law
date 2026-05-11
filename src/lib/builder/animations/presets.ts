@@ -60,6 +60,15 @@ export const HOVER_ANIMATION_PRESET_KEYS = [
   'fade',
 ] as const;
 
+// Phase 22 — Click trigger animations (W175).
+export const CLICK_ANIMATION_PRESET_KEYS = [
+  'none',
+  'pulse',
+  'bounce',
+  'shake',
+  'flash',
+] as const;
+
 // Phase 22 — Loop animations (W170~W171) — always-on idle motion.
 export const LOOP_PRESET_KEYS = [
   'none',
@@ -93,13 +102,15 @@ export const ANIMATION_EASING_KEYS = [
 export type EntrancePreset = (typeof ENTRANCE_PRESET_KEYS)[number];
 export type ScrollEffect = (typeof SCROLL_EFFECT_KEYS)[number];
 export type HoverAnimationPreset = (typeof HOVER_ANIMATION_PRESET_KEYS)[number];
+export type ClickAnimationPreset = (typeof CLICK_ANIMATION_PRESET_KEYS)[number];
 export type AnimationEasing = (typeof ANIMATION_EASING_KEYS)[number];
+export type AnimationEasingValue = AnimationEasing | string;
 
 export interface EntranceAnimationConfig {
   preset: EntrancePreset;
   duration: number;
   delay: number;
-  easing: AnimationEasing;
+  easing: AnimationEasingValue;
   triggerOnce: boolean;
 }
 
@@ -113,11 +124,17 @@ export interface HoverAnimationConfig {
   transitionMs: number;
 }
 
+export interface ClickAnimationConfig {
+  preset: ClickAnimationPreset;
+  durationMs: number;
+  intensity: number;
+}
+
 // Phase 22 — Exit / loop / keyframe configs.
 export interface ExitAnimationConfig {
   preset: ExitPreset;
   duration: number;
-  easing: AnimationEasing;
+  easing: AnimationEasingValue;
 }
 
 export interface LoopAnimationConfig {
@@ -127,9 +144,15 @@ export interface LoopAnimationConfig {
 }
 
 export interface MotionKeyframe {
-  offset: number; // 0~1, scroll progress or timeline position
+  offset?: number; // 0~1, scroll progress or timeline position
+  timeOffset?: number;
   transform?: string;
   opacity?: number;
+  properties?: {
+    transform?: string;
+    opacity?: number;
+  };
+  easing?: AnimationEasingValue;
 }
 
 export interface MotionTimelineConfig {
@@ -143,9 +166,10 @@ export interface NormalizedAnimationConfig {
   entrance: EntranceAnimationConfig;
   scroll: ScrollAnimationConfig;
   hover: HoverAnimationConfig;
-  exit?: ExitAnimationConfig;
-  loop?: LoopAnimationConfig;
-  timeline?: MotionTimelineConfig;
+  click: ClickAnimationConfig;
+  exit: ExitAnimationConfig;
+  loop: LoopAnimationConfig;
+  timeline: MotionTimelineConfig;
 }
 
 export const DEFAULT_EXIT_ANIMATION: ExitAnimationConfig = {
@@ -205,10 +229,20 @@ export const DEFAULT_HOVER_ANIMATION: HoverAnimationConfig = {
   transitionMs: 200,
 };
 
+export const DEFAULT_CLICK_ANIMATION: ClickAnimationConfig = {
+  preset: 'none',
+  durationMs: 500,
+  intensity: 30,
+};
+
 export const DEFAULT_ANIMATION_CONFIG: NormalizedAnimationConfig = {
   entrance: DEFAULT_ENTRANCE_ANIMATION,
   scroll: DEFAULT_SCROLL_ANIMATION,
   hover: DEFAULT_HOVER_ANIMATION,
+  click: DEFAULT_CLICK_ANIMATION,
+  exit: DEFAULT_EXIT_ANIMATION,
+  loop: DEFAULT_LOOP_ANIMATION,
+  timeline: DEFAULT_MOTION_TIMELINE,
 };
 
 export const ENTRANCE_PRESET_DEFINITIONS: Record<EntrancePreset, EntrancePresetDefinition> = {
@@ -382,6 +416,43 @@ export const HOVER_PRESET_DEFINITIONS: Record<HoverAnimationPreset, HoverPresetD
   },
 };
 
+export const EXIT_PRESET_OPTIONS: Array<{ value: ExitPreset; label: string; description: string }> = [
+  { value: 'none', label: 'None', description: 'No exit animation.' },
+  { value: 'fade-out', label: 'Fade out', description: 'Opacity fades to zero when leaving the viewport.' },
+  { value: 'slide-up', label: 'Slide up', description: 'Moves upward while fading out.' },
+  { value: 'slide-down', label: 'Slide down', description: 'Moves downward while fading out.' },
+  { value: 'slide-left', label: 'Slide left', description: 'Moves left while fading out.' },
+  { value: 'slide-right', label: 'Slide right', description: 'Moves right while fading out.' },
+  { value: 'zoom-out', label: 'Zoom out', description: 'Scales down while fading out.' },
+  { value: 'collapse', label: 'Collapse', description: 'Collapses vertically from the top edge.' },
+];
+
+export const LOOP_PRESET_OPTIONS: Array<{ value: LoopPreset; label: string; description: string }> = [
+  { value: 'none', label: 'None', description: 'No idle loop.' },
+  { value: 'pulse', label: 'Pulse', description: 'Soft repeating scale pulse.' },
+  { value: 'float', label: 'Float', description: 'Slow vertical floating motion.' },
+  { value: 'bounce', label: 'Bounce', description: 'Stronger vertical bounce.' },
+  { value: 'sway', label: 'Sway', description: 'Gentle side-to-side rotation.' },
+  { value: 'wiggle', label: 'Wiggle', description: 'Short repeating rotational wiggle.' },
+  { value: 'breath', label: 'Breath', description: 'Subtle opacity and scale breathing.' },
+];
+
+export const CLICK_PRESET_OPTIONS: Array<{ value: ClickAnimationPreset; label: string; description: string }> = [
+  { value: 'none', label: 'None', description: 'No click trigger.' },
+  { value: 'pulse', label: 'Pulse', description: 'Scale pulse once when clicked.' },
+  { value: 'bounce', label: 'Bounce', description: 'Move upward and settle when clicked.' },
+  { value: 'shake', label: 'Shake', description: 'Short horizontal shake when clicked.' },
+  { value: 'flash', label: 'Flash', description: 'Brief opacity flash when clicked.' },
+];
+
+export const PAGE_TRANSITION_OPTIONS: Array<{ value: PageTransition; label: string; description: string }> = [
+  { value: 'none', label: 'None', description: 'No page transition.' },
+  { value: 'fade', label: 'Fade', description: 'Fade route content into view.' },
+  { value: 'slide-up', label: 'Slide up', description: 'Fade and slide content upward.' },
+  { value: 'slide-left', label: 'Slide left', description: 'Fade and slide content left.' },
+  { value: 'scale', label: 'Scale', description: 'Fade and scale content into place.' },
+];
+
 export const SCROLL_EFFECT_OPTIONS: Array<{ value: ScrollEffect; label: string; description: string }> = [
   { value: 'none', label: 'None', description: 'No scroll effect.' },
   { value: 'parallax-y', label: 'Parallax Y', description: 'Moves vertically at a different scroll speed.' },
@@ -389,6 +460,9 @@ export const SCROLL_EFFECT_OPTIONS: Array<{ value: ScrollEffect; label: string; 
   { value: 'scale-on-scroll', label: 'Scale on scroll', description: 'Scales subtly while scrolling.' },
   { value: 'rotate-on-scroll', label: 'Rotate on scroll', description: 'Rotates based on viewport position.' },
   { value: 'pin', label: 'Pin', description: 'Keeps the node sticky during scroll.' },
+  { value: 'scrub-translate', label: 'Scrub translate', description: 'Maps scroll progress directly to vertical movement.' },
+  { value: 'scrub-opacity', label: 'Scrub opacity', description: 'Maps scroll progress directly to opacity.' },
+  { value: 'scrub-rotate', label: 'Scrub rotate', description: 'Maps scroll progress directly to rotation.' },
 ];
 
 export const ENTRANCE_PRESET_OPTIONS = ENTRANCE_PRESET_KEYS.map((value) => ({
@@ -408,6 +482,27 @@ export const ANIMATION_EASING_OPTIONS = ANIMATION_EASING_KEYS.map((value) => ({
   label: value,
 }));
 
+function clampNumber(value: number, min: number, max: number): number {
+  return Math.max(min, Math.min(max, value));
+}
+
+function normalizeMotionKeyframes(keyframes: MotionKeyframe[] | undefined): MotionKeyframe[] {
+  return (keyframes ?? [])
+    .map((keyframe) => {
+      const rawOffset = keyframe.offset ?? keyframe.timeOffset ?? 0;
+      const offset = Number.isFinite(rawOffset) ? clampNumber(Number(rawOffset), 0, 1) : 0;
+      const transform = keyframe.transform ?? keyframe.properties?.transform;
+      const opacity = keyframe.opacity ?? keyframe.properties?.opacity;
+      return {
+        offset,
+        ...(transform ? { transform } : {}),
+        ...(typeof opacity === 'number' ? { opacity: clampNumber(opacity, 0, 1) } : {}),
+        ...(keyframe.easing ? { easing: keyframe.easing } : {}),
+      };
+    })
+    .sort((a, b) => a.offset - b.offset);
+}
+
 export function normalizeAnimationConfig(animation?: BuilderAnimationConfig | null): NormalizedAnimationConfig {
   return {
     entrance: {
@@ -421,6 +516,23 @@ export function normalizeAnimationConfig(animation?: BuilderAnimationConfig | nu
     hover: {
       ...DEFAULT_HOVER_ANIMATION,
       ...(animation?.hover ?? {}),
+    },
+    click: {
+      ...DEFAULT_CLICK_ANIMATION,
+      ...(animation?.click ?? {}),
+    },
+    exit: {
+      ...DEFAULT_EXIT_ANIMATION,
+      ...(animation?.exit ?? {}),
+    },
+    loop: {
+      ...DEFAULT_LOOP_ANIMATION,
+      ...(animation?.loop ?? {}),
+    },
+    timeline: {
+      ...DEFAULT_MOTION_TIMELINE,
+      ...(animation?.timeline ?? {}),
+      keyframes: normalizeMotionKeyframes(animation?.timeline?.keyframes as MotionKeyframe[] | undefined),
     },
   };
 }

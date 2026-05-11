@@ -21,6 +21,9 @@ export interface PublishedAnimationAttributes {
   'data-anim-scroll'?: string;
   'data-anim-intensity'?: string;
   'data-anim-hover'?: string;
+  'data-anim-click'?: string;
+  'data-anim-click-duration'?: string;
+  'data-anim-click-intensity'?: string;
   // Phase 22 runtime.
   'data-anim-exit'?: string;
   'data-anim-exit-duration'?: string;
@@ -89,8 +92,30 @@ export function hasHoverAnimation(animation?: BuilderAnimationConfig | null): bo
   return normalizeAnimationConfig(animation).hover.preset !== 'none';
 }
 
+export function hasExitAnimation(animation?: BuilderAnimationConfig | null): boolean {
+  return normalizeAnimationConfig(animation).exit.preset !== 'none';
+}
+
+export function hasClickAnimation(animation?: BuilderAnimationConfig | null): boolean {
+  return normalizeAnimationConfig(animation).click.preset !== 'none';
+}
+
+export function hasLoopAnimation(animation?: BuilderAnimationConfig | null): boolean {
+  return normalizeAnimationConfig(animation).loop.preset !== 'none';
+}
+
+export function hasTimelineAnimation(animation?: BuilderAnimationConfig | null): boolean {
+  return normalizeAnimationConfig(animation).timeline.keyframes.length > 0;
+}
+
 export function hasActiveAnimation(animation?: BuilderAnimationConfig | null): boolean {
-  return hasEntranceAnimation(animation) || hasScrollAnimation(animation) || hasHoverAnimation(animation);
+  return hasEntranceAnimation(animation)
+    || hasScrollAnimation(animation)
+    || hasHoverAnimation(animation)
+    || hasClickAnimation(animation)
+    || hasExitAnimation(animation)
+    || hasLoopAnimation(animation)
+    || hasTimelineAnimation(animation);
 }
 
 export function getAnimationSummary(animation?: BuilderAnimationConfig | null): string | null {
@@ -104,6 +129,18 @@ export function getAnimationSummary(animation?: BuilderAnimationConfig | null): 
   }
   if (normalized.hover.preset !== 'none') {
     parts.push(`hover: ${HOVER_PRESET_DEFINITIONS[normalized.hover.preset].label}`);
+  }
+  if (normalized.click.preset !== 'none') {
+    parts.push(`click: ${normalized.click.preset}`);
+  }
+  if (normalized.exit.preset !== 'none') {
+    parts.push(`exit: ${normalized.exit.preset}`);
+  }
+  if (normalized.loop.preset !== 'none') {
+    parts.push(`loop: ${normalized.loop.preset}`);
+  }
+  if (normalized.timeline.keyframes.length > 0) {
+    parts.push(`timeline: ${normalized.timeline.scrollBound ? 'scroll' : 'time'}`);
   }
   return parts.length > 0 ? parts.join(', ') : null;
 }
@@ -129,19 +166,25 @@ export function getPublishedAnimationAttributes(
     attrs['data-anim-hover'] = normalized.hover.preset;
   }
 
+  if (normalized.click.preset !== 'none') {
+    attrs['data-anim-click'] = normalized.click.preset;
+    attrs['data-anim-click-duration'] = String(normalized.click.durationMs);
+    attrs['data-anim-click-intensity'] = String(normalized.click.intensity);
+  }
+
   // Phase 22 runtime — exit / loop attributes.
-  if (normalized.exit && normalized.exit.preset !== 'none') {
+  if (normalized.exit.preset !== 'none') {
     attrs['data-anim-exit'] = normalized.exit.preset;
     attrs['data-anim-exit-duration'] = String(normalized.exit.duration);
     attrs['data-anim-exit-easing'] = normalized.exit.easing;
   }
-  if (normalized.loop && normalized.loop.preset !== 'none') {
+  if (normalized.loop.preset !== 'none') {
     attrs['data-anim-loop'] = normalized.loop.preset;
     attrs['data-anim-loop-duration'] = String(normalized.loop.durationMs);
     attrs['data-anim-loop-intensity'] = String(normalized.loop.intensity);
   }
 
-  if (normalized.timeline && normalized.timeline.keyframes.length > 0) {
+  if (normalized.timeline.keyframes.length > 0) {
     attrs['data-anim-timeline'] = JSON.stringify(normalized.timeline.keyframes);
     attrs['data-anim-timeline-mode'] = normalized.timeline.scrollBound ? 'scroll' : 'time';
     attrs['data-anim-timeline-duration'] = String(normalized.timeline.durationMs);
@@ -185,6 +228,7 @@ export function buildPublishedAnimationStyle({
     '--builder-anim-hover-transform': hoverTransform,
     '--builder-anim-hover-box-shadow': hoverDefinition.boxShadow,
     '--builder-anim-hover-filter': hoverDefinition.filter,
+    '--builder-anim-hover-opacity': hoverDefinition.opacity,
   };
 }
 
@@ -228,10 +272,12 @@ export function buildEditorAnimationStyle({
   if (isHovered && normalized.hover.preset !== 'none') {
     const hoverDefinition = HOVER_PRESET_DEFINITIONS[normalized.hover.preset];
     if (hoverDefinition.transform) transforms.push(hoverDefinition.transform);
+    if (typeof hoverDefinition.opacity === 'number') opacity = hoverDefinition.opacity;
     boxShadow = resolveHoverBoxShadow(hoverDefinition.boxShadow, primaryColor);
     filter = hoverDefinition.filter;
     const hoverDuration = cssMs(normalized.hover.transitionMs);
     transitionParts.push(
+      `opacity ${hoverDuration} ease`,
       `transform ${hoverDuration} ease`,
       `box-shadow ${hoverDuration} ease`,
       `filter ${hoverDuration} ease`,
@@ -239,6 +285,7 @@ export function buildEditorAnimationStyle({
   } else if (normalized.hover.preset !== 'none') {
     const hoverDuration = cssMs((normalized.hover as HoverAnimationConfig).transitionMs);
     transitionParts.push(
+      `opacity ${hoverDuration} ease`,
       `transform ${hoverDuration} ease`,
       `box-shadow ${hoverDuration} ease`,
       `filter ${hoverDuration} ease`,

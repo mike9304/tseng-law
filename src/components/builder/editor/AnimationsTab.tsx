@@ -4,15 +4,25 @@ import type { CSSProperties } from 'react';
 import type { BuilderAnimationConfig, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
   ANIMATION_EASING_OPTIONS,
+  CLICK_PRESET_OPTIONS,
   ENTRANCE_PRESET_OPTIONS,
+  EXIT_PRESET_OPTIONS,
   HOVER_PRESET_OPTIONS,
+  LOOP_PRESET_OPTIONS,
   SCROLL_EFFECT_OPTIONS,
   normalizeAnimationConfig,
   type AnimationEasing,
+  type AnimationEasingValue,
+  type ClickAnimationConfig,
+  type ClickAnimationPreset,
   type EntranceAnimationConfig,
   type EntrancePreset,
+  type ExitAnimationConfig,
+  type ExitPreset,
   type HoverAnimationConfig,
   type HoverAnimationPreset,
+  type LoopAnimationConfig,
+  type LoopPreset,
   type MotionTimelineConfig,
   type ScrollAnimationConfig,
   type ScrollEffect,
@@ -65,6 +75,72 @@ const previewButtonStyle: CSSProperties = {
 
 function clampNumber(value: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, value));
+}
+
+function isPresetEasing(value: AnimationEasingValue): value is AnimationEasing {
+  return ANIMATION_EASING_OPTIONS.some((option) => option.value === value);
+}
+
+function isCubicBezierEasing(value: string): boolean {
+  return /^cubic-bezier\(\s*-?(?:\d+|\d*\.\d+)\s*,\s*-?(?:\d+|\d*\.\d+)\s*,\s*-?(?:\d+|\d*\.\d+)\s*,\s*-?(?:\d+|\d*\.\d+)\s*\)$/.test(value.trim());
+}
+
+function EasingField({
+  label = 'Easing',
+  value,
+  disabled,
+  onChange,
+}: {
+  label?: string;
+  value: AnimationEasingValue;
+  disabled?: boolean;
+  onChange: (value: AnimationEasingValue) => void;
+}) {
+  const isPreset = isPresetEasing(value);
+  const customValue = isPreset ? '' : value;
+  const commitCustom = (rawValue: string) => {
+    const nextValue = rawValue.trim();
+    if (isCubicBezierEasing(nextValue)) onChange(nextValue);
+  };
+
+  return (
+    <div className={styles.inspectorFieldGrid}>
+      <label className={styles.inspectorField}>
+        <span className={styles.inspectorFieldLabel}>{label}</span>
+        <select
+          className={styles.inspectorSelect}
+          aria-label={label}
+          value={isPreset ? value : 'custom'}
+          disabled={disabled}
+          onChange={(event) => {
+            const nextValue = event.target.value;
+            onChange(nextValue === 'custom' ? 'cubic-bezier(0.25, 0.1, 0.25, 1)' : nextValue);
+          }}
+        >
+          {ANIMATION_EASING_OPTIONS.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+          <option value="custom">Custom cubic-bezier</option>
+        </select>
+      </label>
+      <label className={styles.inspectorField}>
+        <span className={styles.inspectorFieldLabel}>Custom</span>
+        <input
+          className={styles.inspectorInput}
+          type="text"
+          defaultValue={customValue}
+          placeholder="cubic-bezier(0.34, 1.56, 0.64, 1)"
+          disabled={disabled || isPreset}
+          onBlur={(event) => commitCustom(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') commitCustom(event.currentTarget.value);
+          }}
+        />
+      </label>
+    </div>
+  );
 }
 
 function RangeField({
@@ -166,6 +242,36 @@ export default function AnimationsTab({
     });
   };
 
+  const updateClick = (patch: Partial<ClickAnimationConfig>) => {
+    commitAnimation({
+      ...(node.animation ?? {}),
+      click: {
+        ...animation.click,
+        ...patch,
+      },
+    });
+  };
+
+  const updateExit = (patch: Partial<ExitAnimationConfig>) => {
+    commitAnimation({
+      ...(node.animation ?? {}),
+      exit: {
+        ...animation.exit,
+        ...patch,
+      },
+    });
+  };
+
+  const updateLoop = (patch: Partial<LoopAnimationConfig>) => {
+    commitAnimation({
+      ...(node.animation ?? {}),
+      loop: {
+        ...animation.loop,
+        ...patch,
+      },
+    });
+  };
+
   const playPreview = () => {
     window.document.dispatchEvent(
       new CustomEvent('builder:play-animation-preview', {
@@ -193,6 +299,7 @@ export default function AnimationsTab({
           <span className={styles.inspectorFieldLabel}>Preset</span>
           <select
             className={styles.inspectorSelect}
+            aria-label="Entrance preset"
             value={animation.entrance.preset}
             disabled={disabled}
             onChange={(event) => updateEntrance({ preset: event.target.value as EntrancePreset })}
@@ -227,21 +334,11 @@ export default function AnimationsTab({
         />
 
         <div className={styles.inspectorFieldGrid}>
-          <label className={styles.inspectorField}>
-            <span className={styles.inspectorFieldLabel}>Easing</span>
-            <select
-              className={styles.inspectorSelect}
-              value={animation.entrance.easing}
-              disabled={disabled}
-              onChange={(event) => updateEntrance({ easing: event.target.value as AnimationEasing })}
-            >
-              {ANIMATION_EASING_OPTIONS.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </label>
+          <EasingField
+            value={animation.entrance.easing}
+            disabled={disabled}
+            onChange={(easing) => updateEntrance({ easing })}
+          />
           <label className={styles.inspectorToggle}>
             <input
               type="checkbox"
@@ -255,11 +352,88 @@ export default function AnimationsTab({
       </section>
 
       <section style={sectionStyle}>
+        <span style={sectionTitleStyle}>Exit</span>
+        <label className={styles.inspectorField}>
+          <span className={styles.inspectorFieldLabel}>Preset</span>
+          <select
+            className={styles.inspectorSelect}
+            aria-label="Exit preset"
+            value={animation.exit.preset}
+            disabled={disabled}
+            onChange={(event) => updateExit({ preset: event.target.value as ExitPreset })}
+          >
+            {EXIT_PRESET_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <RangeField
+          label="Duration"
+          value={animation.exit.duration}
+          min={100}
+          max={3000}
+          step={50}
+          suffix="ms"
+          disabled={disabled || animation.exit.preset === 'none'}
+          onChange={(duration) => updateExit({ duration: Math.round(duration) })}
+        />
+        <EasingField
+          value={animation.exit.easing}
+          disabled={disabled || animation.exit.preset === 'none'}
+          onChange={(easing) => updateExit({ easing })}
+        />
+        <p style={hintStyle}>Exit runs when the element leaves the viewport on the published page.</p>
+      </section>
+
+      <section style={sectionStyle}>
+        <span style={sectionTitleStyle}>Loop</span>
+        <label className={styles.inspectorField}>
+          <span className={styles.inspectorFieldLabel}>Preset</span>
+          <select
+            className={styles.inspectorSelect}
+            aria-label="Loop preset"
+            value={animation.loop.preset}
+            disabled={disabled}
+            onChange={(event) => updateLoop({ preset: event.target.value as LoopPreset })}
+          >
+            {LOOP_PRESET_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <RangeField
+          label="Duration"
+          value={animation.loop.durationMs}
+          min={200}
+          max={20000}
+          step={100}
+          suffix="ms"
+          disabled={disabled || animation.loop.preset === 'none'}
+          onChange={(durationMs) => updateLoop({ durationMs: Math.round(durationMs) })}
+        />
+        <RangeField
+          label="Intensity"
+          value={animation.loop.intensity}
+          min={0}
+          max={100}
+          step={1}
+          disabled={disabled || animation.loop.preset === 'none'}
+          onChange={(intensity) => updateLoop({ intensity: Math.round(intensity) })}
+        />
+        <p style={hintStyle}>Loop presets run continuously on the published page and respect reduced motion.</p>
+      </section>
+
+      <section style={sectionStyle}>
         <span style={sectionTitleStyle}>Scroll</span>
         <label className={styles.inspectorField}>
           <span className={styles.inspectorFieldLabel}>Effect</span>
           <select
             className={styles.inspectorSelect}
+            aria-label="Scroll effect"
             value={animation.scroll.effect}
             disabled={disabled}
             onChange={(event) => updateScroll({ effect: event.target.value as ScrollEffect })}
@@ -289,6 +463,7 @@ export default function AnimationsTab({
           <span className={styles.inspectorFieldLabel}>Preset</span>
           <select
             className={styles.inspectorSelect}
+            aria-label="Hover preset"
             value={animation.hover.preset}
             disabled={disabled}
             onChange={(event) => updateHover({ preset: event.target.value as HoverAnimationPreset })}
@@ -311,6 +486,46 @@ export default function AnimationsTab({
           onChange={(transitionMs) => updateHover({ transitionMs: Math.round(transitionMs) })}
         />
         <p style={hintStyle}>Hover presets are separate from the Style tab hover controls and can be layered with them.</p>
+      </section>
+
+      <section style={sectionStyle}>
+        <span style={sectionTitleStyle}>Click</span>
+        <label className={styles.inspectorField}>
+          <span className={styles.inspectorFieldLabel}>Preset</span>
+          <select
+            className={styles.inspectorSelect}
+            aria-label="Click preset"
+            value={animation.click.preset}
+            disabled={disabled}
+            onChange={(event) => updateClick({ preset: event.target.value as ClickAnimationPreset })}
+          >
+            {CLICK_PRESET_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <RangeField
+          label="Duration"
+          value={animation.click.durationMs}
+          min={100}
+          max={3000}
+          step={50}
+          suffix="ms"
+          disabled={disabled || animation.click.preset === 'none'}
+          onChange={(durationMs) => updateClick({ durationMs: Math.round(durationMs) })}
+        />
+        <RangeField
+          label="Intensity"
+          value={animation.click.intensity}
+          min={0}
+          max={100}
+          step={1}
+          disabled={disabled || animation.click.preset === 'none'}
+          onChange={(intensity) => updateClick({ intensity: Math.round(intensity) })}
+        />
+        <p style={hintStyle}>Click trigger replays once every time the published element is clicked.</p>
       </section>
 
       <section style={sectionStyle}>

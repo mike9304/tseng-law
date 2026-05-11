@@ -40,8 +40,13 @@ const markerStyle: CSSProperties = {
   fontWeight: 800,
 };
 
+function keyframeOffset(keyframe: MotionKeyframe): number {
+  const raw = keyframe.offset ?? keyframe.timeOffset ?? 0;
+  return Math.max(0, Math.min(1, raw));
+}
+
 /**
- * Phase 23 W173 — Motion timeline visual editor.
+ * Phase 22 W173 — Motion timeline visual editor.
  *
  * Renders a horizontal track with draggable keyframe markers (offset 0~1).
  * Each keyframe can have a CSS `transform` and `opacity`. Supports a
@@ -71,7 +76,7 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
     if (keyframes.length >= 16) return;
     const clamped = Math.max(0, Math.min(1, offset));
     const next: MotionKeyframe = { offset: Number(clamped.toFixed(3)), transform: '', opacity: 1 };
-    update({ keyframes: [...keyframes, next].sort((a, b) => a.offset - b.offset) });
+    update({ keyframes: [...keyframes, next].sort((a, b) => keyframeOffset(a) - keyframeOffset(b)) });
   }
 
   function handleTrackClick(event: React.MouseEvent<HTMLDivElement>) {
@@ -130,8 +135,8 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
         {keyframes.map((kf, idx) => (
           <div
             key={idx}
-            style={{ ...markerStyle, left: `${kf.offset * 100}%` }}
-            title={`#${idx} · offset ${kf.offset.toFixed(2)}`}
+            style={{ ...markerStyle, left: `${keyframeOffset(kf) * 100}%` }}
+            title={`#${idx} · offset ${keyframeOffset(kf).toFixed(2)}`}
           >
             {idx + 1}
           </div>
@@ -173,7 +178,7 @@ export default function MotionTimelineEditor({ value, disabled, onChange }: Prop
                 min={0}
                 max={1}
                 step={0.01}
-                value={kf.offset}
+                value={keyframeOffset(kf)}
                 disabled={disabled}
                 onChange={(event) => updateKeyframe(idx, { offset: Math.max(0, Math.min(1, Number(event.target.value))) })}
                 style={{ padding: '3px 6px', border: '1px solid #cbd5e1', borderRadius: 4 }}

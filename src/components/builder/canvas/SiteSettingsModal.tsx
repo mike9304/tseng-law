@@ -2,6 +2,10 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import {
+  PAGE_TRANSITION_OPTIONS,
+  type PageTransition,
+} from '@/lib/builder/animations/presets';
+import {
   DEFAULT_THEME,
   type BrandKitAssets,
   type BuilderHeaderFooterConfig,
@@ -50,10 +54,12 @@ interface SiteSettingsForm {
   logoDark: string;
   favicon: string;
   ogImage: string;
+  pageTransition: PageTransition;
+  pageTransitionDurationMs: number;
   assets?: BrandKitAssets;
 }
 
-type SiteSettingsFieldKey = Exclude<keyof SiteSettingsForm, 'assets'>;
+type SiteSettingsFieldKey = Exclude<keyof SiteSettingsForm, 'assets' | 'pageTransition' | 'pageTransitionDurationMs'>;
 type SiteSettingsTab = 'general' | 'brand' | 'typography' | 'presets' | 'dark' | 'mobile' | 'advanced';
 
 const EMPTY_SETTINGS: SiteSettingsForm = {
@@ -67,6 +73,8 @@ const EMPTY_SETTINGS: SiteSettingsForm = {
   logoDark: '',
   favicon: '',
   ogImage: '',
+  pageTransition: 'none',
+  pageTransitionDurationMs: 280,
 };
 
 const formStyle: React.CSSProperties = {
@@ -242,6 +250,8 @@ function toSettingsForm(settings?: Partial<BuilderSiteSettings>): SiteSettingsFo
     logoDark: settings?.logoDark ?? '',
     favicon: settings?.favicon ?? '',
     ogImage: settings?.ogImage ?? '',
+    pageTransition: settings?.pageTransition ?? 'none',
+    pageTransitionDurationMs: settings?.pageTransitionDurationMs ?? 280,
     assets: settings?.assets,
   };
 }
@@ -258,6 +268,8 @@ function toSettingsPayload(settings: SiteSettingsForm): BuilderSiteSettings {
     logoDark: settings.logoDark,
     favicon: settings.favicon,
     ogImage: settings.ogImage,
+    pageTransition: settings.pageTransition,
+    pageTransitionDurationMs: settings.pageTransitionDurationMs,
     assets: settings.assets,
   };
 }
@@ -780,6 +792,57 @@ export default function SiteSettingsModal({
             </div>
           ) : activeTab === 'advanced' ? (
             <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>Motion</div>
+              <div style={twoColumnStyle}>
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Page transition</label>
+                  <select
+                    aria-label="Page transition"
+                    value={settings.pageTransition}
+                    style={inputStyle}
+                    onChange={(event) => {
+                      const value = event.target.value as PageTransition;
+                      setSettings((prev) => ({
+                        ...prev,
+                        pageTransition: value,
+                      }));
+                    }}
+                  >
+                    {PAGE_TRANSITION_OPTIONS.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div style={fieldStyle}>
+                  <label style={labelStyle}>Duration</label>
+                  <input
+                    aria-label="Page transition duration"
+                    type="number"
+                    min={80}
+                    max={3000}
+                    step={20}
+                    value={settings.pageTransitionDurationMs}
+                    style={inputStyle}
+                    disabled={settings.pageTransition === 'none'}
+                    onChange={(event) => {
+                      const raw = Number(event.target.value);
+                      const next = Number.isFinite(raw)
+                        ? Math.max(80, Math.min(3000, Math.round(raw)))
+                        : 280;
+                      setSettings((prev) => ({
+                        ...prev,
+                        pageTransitionDurationMs: next,
+                      }));
+                    }}
+                  />
+                </div>
+              </div>
+              <p style={{ margin: 0, color: '#64748b', fontSize: '0.76rem', lineHeight: 1.45 }}>
+                Published 페이지 wrapper에 fade/slide/scale 전환을 적용합니다. 방문자가 reduced motion을 켜면 자동으로 꺼집니다.
+              </p>
+
               <div style={sectionHeadingStyle}>Theme colors</div>
               {THEME_COLOR_TOKENS.map((token) => (
                 <div key={token} style={fieldStyle}>

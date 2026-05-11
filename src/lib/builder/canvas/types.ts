@@ -12,6 +12,7 @@ import {
 } from '@/lib/builder/site/component-variants';
 import {
   ANIMATION_EASING_KEYS,
+  CLICK_ANIMATION_PRESET_KEYS,
   ENTRANCE_PRESET_KEYS,
   EXIT_PRESET_KEYS,
   HOVER_ANIMATION_PRESET_KEYS,
@@ -230,12 +231,30 @@ export const hoverStyleSchema = z.object({
 export type BuilderHoverStyle = z.infer<typeof hoverStyleSchema>;
 export type { BuilderBackgroundValue };
 
+const cubicBezierEasingSchema = z
+  .string()
+  .trim()
+  .max(80)
+  .regex(
+    /^cubic-bezier\(\s*-?(?:\d+|\d*\.\d+)\s*,\s*-?(?:\d+|\d*\.\d+)\s*,\s*-?(?:\d+|\d*\.\d+)\s*,\s*-?(?:\d+|\d*\.\d+)\s*\)$/,
+  );
+
+const animationEasingValueSchema = z.union([
+  z.enum(ANIMATION_EASING_KEYS),
+  cubicBezierEasingSchema,
+]);
+
+const animationTimelinePropertiesSchema = z.object({
+  transform: z.string().max(200).optional(),
+  opacity: z.number().min(0).max(1).optional(),
+}).optional();
+
 export const animationConfigSchema = z.object({
   entrance: z.object({
     preset: z.enum(ENTRANCE_PRESET_KEYS).default('none'),
     duration: z.number().int().min(100).max(3000).default(600),
     delay: z.number().int().min(0).max(3000).default(0),
-    easing: z.enum(ANIMATION_EASING_KEYS).default('ease-out'),
+    easing: animationEasingValueSchema.default('ease-out'),
     triggerOnce: z.boolean().default(true),
   }).optional(),
   scroll: z.object({
@@ -246,11 +265,16 @@ export const animationConfigSchema = z.object({
     preset: z.enum(HOVER_ANIMATION_PRESET_KEYS).default('none'),
     transitionMs: z.number().int().min(0).max(2000).default(200),
   }).optional(),
+  click: z.object({
+    preset: z.enum(CLICK_ANIMATION_PRESET_KEYS).default('none'),
+    durationMs: z.number().int().min(100).max(3000).default(500),
+    intensity: z.number().int().min(0).max(100).default(30),
+  }).optional(),
   // Phase 22 — exit / loop / timeline runtime.
   exit: z.object({
     preset: z.enum(EXIT_PRESET_KEYS).default('none'),
     duration: z.number().int().min(100).max(3000).default(400),
-    easing: z.enum(ANIMATION_EASING_KEYS).default('ease-out'),
+    easing: animationEasingValueSchema.default('ease-out'),
   }).optional(),
   loop: z.object({
     preset: z.enum(LOOP_PRESET_KEYS).default('none'),
@@ -263,9 +287,12 @@ export const animationConfigSchema = z.object({
     keyframes: z
       .array(
         z.object({
-          offset: z.number().min(0).max(1),
+          offset: z.number().min(0).max(1).optional(),
+          timeOffset: z.number().min(0).max(1).optional(),
           transform: z.string().max(200).optional(),
           opacity: z.number().min(0).max(1).optional(),
+          properties: animationTimelinePropertiesSchema,
+          easing: animationEasingValueSchema.optional(),
         }),
       )
       .max(16)

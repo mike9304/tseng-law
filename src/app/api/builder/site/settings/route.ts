@@ -82,6 +82,8 @@ const siteSettingsSchema = z.object({
   logoDark: optionalTrimmedString(2000),
   favicon: optionalTrimmedString(2000),
   ogImage: optionalTrimmedString(2000),
+  pageTransition: z.enum(['none', 'fade', 'slide-up', 'slide-left', 'scale']).optional(),
+  pageTransitionDurationMs: z.number().int().min(80).max(3000).optional(),
   assets: brandKitAssetsSchema.optional(),
   seoChecklist: z.object({
     businessName: optionalTrimmedString(200),
@@ -183,6 +185,16 @@ function sanitizeSettings(settings?: BuilderSiteSettings): BuilderSiteSettings |
   if (assets) {
     nextSettings.assets = assets;
   }
+  if (settings.pageTransition === 'none'
+    || settings.pageTransition === 'fade'
+    || settings.pageTransition === 'slide-up'
+    || settings.pageTransition === 'slide-left'
+    || settings.pageTransition === 'scale') {
+    nextSettings.pageTransition = settings.pageTransition;
+  }
+  if (typeof settings.pageTransitionDurationMs === 'number' && Number.isFinite(settings.pageTransitionDurationMs)) {
+    nextSettings.pageTransitionDurationMs = Math.max(80, Math.min(3000, Math.round(settings.pageTransitionDurationMs)));
+  }
   if (settings.seoChecklist) {
     const seoKeywords = (settings.seoChecklist.keywords ?? [])
       .map((keyword) => keyword.trim())
@@ -245,6 +257,26 @@ function mergeSettings(
       nextSettings.seoChecklist = sanitized.seoChecklist;
     } else {
       delete nextSettings.seoChecklist;
+    }
+  }
+
+  if (Object.prototype.hasOwnProperty.call(patch, 'pageTransition')) {
+    if (patch.pageTransition === 'none'
+      || patch.pageTransition === 'fade'
+      || patch.pageTransition === 'slide-up'
+      || patch.pageTransition === 'slide-left'
+      || patch.pageTransition === 'scale') {
+      nextSettings.pageTransition = patch.pageTransition;
+    } else {
+      delete nextSettings.pageTransition;
+    }
+  }
+
+  if (Object.prototype.hasOwnProperty.call(patch, 'pageTransitionDurationMs')) {
+    if (typeof patch.pageTransitionDurationMs === 'number' && Number.isFinite(patch.pageTransitionDurationMs)) {
+      nextSettings.pageTransitionDurationMs = Math.max(80, Math.min(3000, Math.round(patch.pageTransitionDurationMs)));
+    } else {
+      delete nextSettings.pageTransitionDurationMs;
     }
   }
 

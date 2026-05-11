@@ -3828,3 +3828,29 @@ providers 모듈화 + DeepL + 캐시 + env 기반 선택.
 
 남은 항목: 비용 통제용 사용량 카운터 (현재는 무제한), TranslationManagerView 가
 provider 선택 UI 노출.
+
+## 2026-05-11 Codex G-Editor compile blocker + M14~M20 documentation sync
+
+사용자 피드백:
+- "주요업무 템플릿 테스트 하려고 클릭하면 글이 안 보인다" 회귀를 재확인하던 중 `/ko/admin-builder`가 Build Error overlay로 막히는 상태를 발견했다.
+
+원인:
+- registry component 중 hook을 쓰는 파일들이 Client Component boundary 없이 import되고 있었다.
+- Next dev overlay 첫 오류는 `src/lib/builder/components/addressBlock/index.tsx`의 `useState` import였다.
+- 같은 registry import chain에서 순차적으로 터질 수 있는 hook 사용 컴포넌트 11개를 같이 보강했다.
+
+변경:
+- `addressBlock`, `anchorMenu`, `backToTop`, `countdown`, `counter`, `formSignature`, `menuBar`, `notificationBar`, `parallaxBg`, `shareButtons`, `testimonialCarousel` index에 `'use client'` 추가.
+- 기존 lint blocker였던 `marketing/dispatcher.ts` unused `getRecipient` import 제거.
+- `security/guard.ts`의 unused placeholder parameter 제거.
+- `WIX-PARITY-PLAN.md`에서 M14~M20은 실제 커밋 근거 기준 🟢, M21~M28은 schema/UI follow-up 잔여가 있어 🟡로 동기화.
+- `WIX-PARITY-DOCUMENTATION.md`에 M14~M20 및 이번 compile blocker fix evidence를 append.
+- `/Users/son7/Desktop/ai memory save 계획/Wix 체크포인트.md`는 W79~W135 상태를 M14~M20 evidence 기준으로 🟢 동기화.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅
+
+커밋:
+- `41f1f0c G-Editor: fix client hook component boundaries`

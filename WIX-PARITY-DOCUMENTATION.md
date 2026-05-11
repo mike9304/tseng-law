@@ -633,3 +633,140 @@ Created: 2026-05-09T12:52:13.760Z
 - 리스크 / 알려진 문제:
   - 필터 pill은 현재 프리셋/Inspector 상태 반영 중심이다. 공개 페이지에서 사용자가 pill을 눌러 activeFilter를 바꾸는 상호작용은 M15 interactive track에서 더 고도화할 수 있다.
 - 다음 마일스톤: M14
+
+## M14 — layout widget pack
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — container `layoutMode`에 strip/box/columns/repeater/tabs/accordion/slideshow/hoverBox와 `layoutItems`, `activeIndex`, `sticky`, `anchorTarget`를 추가했다.
+  - `src/lib/builder/components/container/Element.tsx` — tabs/accordion/slideshow/hoverBox/repeater preview와 sticky/anchor data attributes를 렌더한다.
+  - `src/lib/builder/components/container/Inspector.tsx` — layout mode, layout items, active index, sticky/anchor controls를 연결했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Layout widget pack` W79~W88 프리셋 10종을 추가했다.
+  - `tests/builder-editor/layout-widgets.playwright.ts` — layout widget pack quick-add DOM evidence를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅
+  - `npm run test:unit` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layout-widgets.playwright.ts --workers=1` ✅
+- W 판정:
+  - W79/W80/W81/W82/W83/W84/W85/W86/W87/W88 green evidence 확보.
+- 커밋:
+  - `b5b98bc G-Editor: add layout widget pack`
+  - `cd07729 G-Editor: add layout widget pack playwright`
+
+## M15 — interactive widget pack
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — countdown/progress/rating/notification/back-to-top schema를 추가했다.
+  - `src/lib/builder/components/countdown`, `progress`, `rating`, `notificationBar`, `backToTop` — runtime + Inspector를 추가했다.
+  - `src/lib/builder/site/types.ts`, `src/components/builder/published/Popup*`, `CookieConsent*` — popup/cookie consent site-level entity와 published runtime을 추가했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Interactive widget pack` W89~W98 프리셋을 추가했다.
+  - `tests/builder-editor/interactive-widgets.playwright.ts` — canvas interactive widget pack quick-add evidence를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅
+  - `npm run test:unit` ✅
+- W 판정:
+  - W89/W90은 기존 button variant/icon 버튼 프리셋으로 흡수.
+  - W91/W92/W94는 popup/cookie consent site-level runtime으로 처리.
+  - W93/W95/W96/W97/W98 green evidence 확보.
+- 커밋:
+  - `ac4231c G-Editor: add interactive widget pack`
+  - `7e2466b G-Editor: add popup and cookie consent (M15-2)`
+
+## M16 — navigation widget pack
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — menu-bar/anchor-menu/breadcrumbs schema를 추가했다.
+  - `src/lib/builder/components/menuBar`, `anchorMenu`, `breadcrumbs` — horizontal/vertical/dropdown/mega menu, sticky anchor menu, breadcrumb runtime + Inspector를 추가했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Navigation widget pack` W99~W105 프리셋 7종을 추가했다.
+  - `src/app/globals.css` — nav widget runtime style과 모바일 hamburger behavior를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅
+  - `npm run test:unit` ✅
+- W 판정:
+  - W99/W100/W101/W102/W103/W104/W105 green evidence 확보.
+- 커밋:
+  - `93bb1fa G-Editor: add navigation widget pack`
+
+## M17 — social widget pack
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — social-bar/share-buttons/social-embed/floating-chat schema를 추가했다.
+  - `src/lib/builder/components/socialBar`, `shareButtons`, `socialEmbed`, `floatingChat` — provider icon/link, share URL, embed placeholder, chat floating runtime + Inspector를 추가했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Social widget pack` W106~W113 프리셋 8종을 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅
+  - `npm run test:unit` ✅
+- W 판정:
+  - W106/W107/W108/W109/W110/W111/W112/W113 green evidence 확보.
+- 커밋:
+  - `13a6eec G-Editor: add social widget pack`
+
+## M18 — maps and location widget pack
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/components/addressBlock`, `businessHours`, `multiLocationMap` — 주소 복합 카드, 영업시간, 다중 위치 지도/list runtime + Inspector를 추가했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Maps & Location pack` W115~W117 프리셋을 추가했다.
+  - 기존 W114 `map`은 office sync + quick edit panel + Google Maps iframe query 반영 테스트 근거를 유지한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅
+  - `npm run test:unit` ✅
+- W 판정:
+  - W114/W115/W116/W117 green evidence 확보.
+- 커밋:
+  - `7303e2f G-Editor: add maps and location widget pack`
+
+## M19 — decorative widget pack
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — shape/pattern/parallax-bg/frame/sticker schema를 추가했다.
+  - `src/lib/builder/components/shape`, `pattern`, `parallaxBg`, `frame`, `sticker` — decorative runtime + Inspector를 추가했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — `Decorative widget pack` W118~W125 프리셋 11종을 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅
+  - `npm run test:unit` ✅
+- W 판정:
+  - W118/W119/W120/W121/W122/W123/W124/W125 green evidence 확보.
+- 커밋:
+  - `3fa08ee G-Editor: add decorative widget pack`
+
+## M20 — data display widget pack
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — bar/line/pie chart, counter, testimonial carousel, pricing/comparison table, timeline, team member, service feature schema를 추가했다.
+  - `src/lib/builder/components/barChart`, `lineChart`, `pieChart`, `counter`, `testimonialCarousel`, `pricingTable`, `comparisonTable`, `timeline`, `teamMemberCard`, `serviceFeatureCard` — data display runtime + Inspector를 추가했다.
+  - `src/lib/builder/components/registry.ts` — data display registry imports를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit` ✅
+- W 판정:
+  - W126/W127/W128/W129/W130/W131/W132/W133/W134/W135 green evidence 확보.
+- 커밋:
+  - `9e54953 G-Editor: add data display widget pack`
+
+## 2026-05-11 — editor compile blocker fix
+
+- 사용자 피드백:
+  - 주요업무 템플릿/노드 클릭 중 글이 사라지는 문제를 재확인하던 중 `/ko/admin-builder` 자체가 Build Error overlay로 막히는 상태를 발견했다.
+- 원인:
+  - hook을 쓰는 registry component 파일들이 Server Component로 해석되어 `addressBlock/index.tsx`의 `useState` import에서 Next compile error가 발생했다.
+- 변경:
+  - hook을 쓰는 registry components 11개에 `'use client'` boundary를 추가했다.
+  - 기존 lint blocker였던 marketing dispatcher unused import와 guard placeholder argument를 정리했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅
+- 커밋:
+  - `41f1f0c G-Editor: fix client hook component boundaries`

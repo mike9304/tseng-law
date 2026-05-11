@@ -3374,3 +3374,14 @@ hook / scrub scroll handler 적용은 follow-up.
 - style-origin.ts: classifyStyleOrigin() (theme/variant/manual/default) + 색 매핑 (W185).
 
 검증: typecheck ✅ / unit 769 tests ✅. heading style 컴포넌트 연결은 follow-up.
+
+## 2026-05-11 Claude M24 SEO + Publish 성숙 (구조화 데이터 helper)
+
+범위: M24 (W186~W195) 점진. 기존 sitemap/robots/hreflang/structured-data 인프라가
+이미 존재하므로 schema.org LegalService/FAQPage/Article 헬퍼만 신규 추가.
+- buildLegalServiceJsonLd / buildFaqJsonLd / buildArticleJsonLd 헬퍼 (W192).
+- 기존 sitemap-builder.ts (W186), robots.ts (W191), hreflang.ts (W187), redirects
+  field (W188 W190) 는 이미 존재. 인스펙터 통합과 명시적 cache invalidation
+  (W194), pre-render 검증 (W193), SEO Inspector 시각화 (W195) 는 follow-up.
+
+검증: typecheck ✅ / unit 769 tests ✅.

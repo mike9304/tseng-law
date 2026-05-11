@@ -3304,3 +3304,15 @@ Prompt-to-artifact 체크:
 - 카탈로그 Maps & Location pack 3 프리셋.
 
 검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.
+
+## 2026-05-11 Claude M19 Decorative 위젯 팩
+
+범위: M19 (W118~W125). 5 신규 kind. W119(divider) / W120(spacer) / W121(gradient)는 기존 유지.
+- shape (W118+W124): 9 도형 (circle/square/triangle/pentagon/hexagon/star/heart/arrow/blob) SVG path.
+- pattern (W122): 6 패턴 (dots/grid/diagonal/stripes/waves/checkerboard) CSS gradient.
+- parallax-bg (W123): scroll listener + 이미지/오버레이/제목 inline.
+- frame (W124): 5 스타일 (solid/double/corner accent/photo/tag) + 라벨.
+- sticker (W125): 3 변형 (badge/pill/banner clip-path).
+- 카탈로그 Decorative widget pack 11 프리셋.
+
+검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.

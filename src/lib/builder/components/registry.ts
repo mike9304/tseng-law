@@ -83,3 +83,10 @@ import './floatingChat';
 import './addressBlock';
 import './businessHours';
 import './multiLocationMap';
+
+// Phase 19 — Decorative widgets
+import './shape';
+import './pattern';
+import './parallaxBg';
+import './frame';
+import './sticker';

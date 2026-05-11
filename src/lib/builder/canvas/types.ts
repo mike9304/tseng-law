@@ -89,6 +89,12 @@ export const builderCanvasNodeKinds = [
   'address-block',
   'business-hours',
   'multi-location-map',
+  // Phase 19 — Decorative widgets
+  'shape',
+  'pattern',
+  'parallax-bg',
+  'frame',
+  'sticker',
 ] as const;
 
 /**
@@ -1232,6 +1238,62 @@ const multiLocationMapCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+// ─── Phase 19 — Decorative widgets ───────────────────────────────
+
+const shapeCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('shape'),
+  content: z.object({
+    shape: z.enum(['circle', 'square', 'triangle', 'pentagon', 'hexagon', 'star', 'heart', 'arrow', 'blob']).default('circle'),
+    fill: z.string().max(60).default('#1d4ed8'),
+    stroke: z.string().max(60).default(''),
+    strokeWidth: z.number().int().min(0).max(20).default(0),
+  }),
+});
+
+const patternCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('pattern'),
+  content: z.object({
+    pattern: z.enum(['dots', 'grid', 'diagonal', 'waves', 'stripes', 'checkerboard']).default('dots'),
+    color: z.string().max(60).default('#cbd5e1'),
+    background: z.string().max(60).default('#f8fafc'),
+    scale: z.number().int().min(4).max(120).default(24),
+  }),
+});
+
+const parallaxBgCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('parallax-bg'),
+  content: z.object({
+    imageUrl: z.string().max(2000).default(''),
+    overlayColor: z.string().max(60).default('rgba(15, 23, 42, 0.4)'),
+    speed: z.number().min(0).max(2).default(0.4),
+    contentTitle: z.string().max(160).default(''),
+    contentSubtitle: z.string().max(280).default(''),
+  }),
+});
+
+const frameCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('frame'),
+  content: z.object({
+    style: z.enum(['solid', 'double', 'corner', 'photo', 'tag']).default('solid'),
+    color: z.string().max(60).default('#0f172a'),
+    width: z.number().int().min(1).max(40).default(4),
+    radius: z.number().int().min(0).max(120).default(12),
+    label: z.string().max(80).default(''),
+  }),
+});
+
+const stickerCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('sticker'),
+  content: z.object({
+    emoji: z.string().max(20).default('⭐'),
+    label: z.string().max(80).default(''),
+    background: z.string().max(60).default('#fde68a'),
+    color: z.string().max(60).default('#92400e'),
+    rotation: z.number().int().min(-45).max(45).default(-8),
+    variant: z.enum(['badge', 'pill', 'banner']).default('badge'),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
@@ -1286,6 +1348,11 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   addressBlockCanvasNodeSchema,
   businessHoursCanvasNodeSchema,
   multiLocationMapCanvasNodeSchema,
+  shapeCanvasNodeSchema,
+  patternCanvasNodeSchema,
+  parallaxBgCanvasNodeSchema,
+  frameCanvasNodeSchema,
+  stickerCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -1341,6 +1408,11 @@ export type BuilderFloatingChatCanvasNode = z.infer<typeof floatingChatCanvasNod
 export type BuilderAddressBlockCanvasNode = z.infer<typeof addressBlockCanvasNodeSchema>;
 export type BuilderBusinessHoursCanvasNode = z.infer<typeof businessHoursCanvasNodeSchema>;
 export type BuilderMultiLocationMapCanvasNode = z.infer<typeof multiLocationMapCanvasNodeSchema>;
+export type BuilderShapeCanvasNode = z.infer<typeof shapeCanvasNodeSchema>;
+export type BuilderPatternCanvasNode = z.infer<typeof patternCanvasNodeSchema>;
+export type BuilderParallaxBgCanvasNode = z.infer<typeof parallaxBgCanvasNodeSchema>;
+export type BuilderFrameCanvasNode = z.infer<typeof frameCanvasNodeSchema>;
+export type BuilderStickerCanvasNode = z.infer<typeof stickerCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({

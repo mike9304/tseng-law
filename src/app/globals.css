@@ -20463,3 +20463,28 @@ html[data-theme='dark'] .site-header-logo-dark {
   justify-content: center;
 }
 .builder-location-empty em { color: #94a3b8; font-size: 12px; }
+
+/* Phase 19 — Decorative */
+.builder-decorative-shape { display: block; }
+.builder-decorative-pattern { display: block; border-radius: 8px; }
+.builder-decorative-parallax { border-radius: 12px; }
+.builder-decorative-frame { position: relative; }
+.builder-decorative-sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+}
+.builder-decorative-sticker[data-builder-sticker-variant='banner'] {
+  border-radius: 4px;
+  padding: 10px 20px;
+  clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%);
+}
+.builder-decorative-sticker[data-builder-sticker-variant='pill'] {
+  border-radius: 999px;
+  padding: 6px 14px;
+}

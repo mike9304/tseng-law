@@ -78,6 +78,7 @@ type InteractiveWidgetKind = Extract<
 type NavigationWidgetKind = Extract<BuilderCanvasNodeKind, 'menu-bar' | 'anchor-menu' | 'breadcrumbs'>;
 type SocialWidgetKind = Extract<BuilderCanvasNodeKind, 'social-bar' | 'share-buttons' | 'social-embed' | 'floating-chat'>;
 type LocationWidgetKind = Extract<BuilderCanvasNodeKind, 'address-block' | 'business-hours' | 'multi-location-map' | 'map'>;
+type DecorativeWidgetKind = Extract<BuilderCanvasNodeKind, 'shape' | 'pattern' | 'parallax-bg' | 'frame' | 'sticker' | 'divider' | 'spacer'>;
 
 interface TextWidgetPreset {
   id: string;
@@ -169,6 +170,18 @@ interface LocationWidgetPreset {
   description: string;
   icon: string;
   kind: LocationWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+interface DecorativeWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: DecorativeWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -1473,6 +1486,20 @@ const LOCATION_WIDGET_PRESETS: LocationWidgetPreset[] = [
   },
 ];
 
+const DECORATIVE_WIDGET_PRESETS: DecorativeWidgetPreset[] = [
+  { id: 'decorative-shape-circle', label: 'Circle shape', description: '원형 도형', icon: '●', kind: 'shape', width: 160, height: 160, content: { shape: 'circle' } },
+  { id: 'decorative-shape-blob', label: 'Blob shape', description: '블롭', icon: '☁', kind: 'shape', width: 200, height: 200, content: { shape: 'blob', fill: '#fcd34d' } },
+  { id: 'decorative-shape-arrow', label: 'Arrow shape', description: '화살표', icon: '➜', kind: 'shape', width: 200, height: 120, content: { shape: 'arrow', fill: '#0ea5e9' } },
+  { id: 'decorative-pattern-dots', label: 'Dots pattern', description: '점 패턴', icon: '▦', kind: 'pattern', width: 360, height: 220, content: { pattern: 'dots' } },
+  { id: 'decorative-pattern-grid', label: 'Grid pattern', description: '그리드 패턴', icon: '⊞', kind: 'pattern', width: 360, height: 220, content: { pattern: 'grid' } },
+  { id: 'decorative-pattern-waves', label: 'Waves pattern', description: '물결', icon: '〰', kind: 'pattern', width: 360, height: 160, content: { pattern: 'waves' } },
+  { id: 'decorative-parallax', label: 'Parallax bg', description: '패럴랙스 배경', icon: '⛰', kind: 'parallax-bg', width: 720, height: 360, content: {} },
+  { id: 'decorative-frame-solid', label: 'Frame', description: '액자 프레임', icon: '▢', kind: 'frame', width: 220, height: 220, content: {} },
+  { id: 'decorative-frame-photo', label: 'Photo frame', description: '사진 프레임', icon: '▣', kind: 'frame', width: 240, height: 280, content: { style: 'photo', width: 6, label: 'Featured' } },
+  { id: 'decorative-sticker-star', label: 'Star sticker', description: '추천 스티커', icon: '⭐', kind: 'sticker', width: 140, height: 64, content: {} },
+  { id: 'decorative-sticker-banner', label: 'Banner sticker', description: '리본 배너', icon: '🎀', kind: 'sticker', width: 200, height: 56, content: { variant: 'banner', emoji: '🎉', label: 'New' } },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -1601,6 +1628,22 @@ function navigationWidgetMatchesSearch(preset: NavigationWidgetPreset, query: st
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function decorativeWidgetMatchesSearch(preset: DecorativeWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'decorative widget',
+    'shape',
+    'pattern',
+    'frame',
+    'sticker',
+    'parallax',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 function locationWidgetMatchesSearch(preset: LocationWidgetPreset, query: string): boolean {
   if (!query) return true;
   return [
@@ -1685,6 +1728,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     () => LOCATION_WIDGET_PRESETS.filter((preset) => locationWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
+  const visibleDecorativeWidgetPresets = useMemo(
+    () => DECORATIVE_WIDGET_PRESETS.filter((preset) => decorativeWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -1719,8 +1766,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length + DECORATIVE_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length + visibleDecorativeWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -1824,6 +1871,31 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         ...(preset.style ?? {}),
       },
       anchorName: preset.id === 'layout-sticky-anchor' ? 'services' : seed.anchorName,
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddDecorativeWidgetPreset(preset: DecorativeWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
     } as BuilderCanvasNode;
 
     addNode(node);
@@ -2381,6 +2453,56 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                     className={styles.mediaWidgetPresetButton}
                     data-builder-location-widget-preset={preset.id}
                     onClick={() => handleAddLocationWidgetPreset(preset)}
+                  >
+                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.mediaWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleDecorativeWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['decorative-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'decorative-widgets': !(current['decorative-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>◆</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Decorative widget pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    shape, pattern, parallax, frame, sticker · {visibleDecorativeWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['decorative-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['decorative-widgets'] ?? true) ? (
+              <div className={styles.mediaWidgetGrid}>
+                {visibleDecorativeWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.mediaWidgetPresetButton}
+                    data-builder-decorative-widget-preset={preset.id}
+                    onClick={() => handleAddDecorativeWidgetPreset(preset)}
                   >
                     <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
                     <span className={styles.mediaWidgetPresetCopy}>

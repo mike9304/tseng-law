@@ -201,6 +201,9 @@ export interface BuilderSiteSettings {
   businessRegNumber?: string;
   seoChecklist?: BuilderSeoChecklistSettings;
   seoDefaults?: BuilderSeoDefaults;
+  // Phase 22 W172 — page transition preset.
+  pageTransition?: 'none' | 'fade' | 'slide-up' | 'slide-left' | 'scale';
+  pageTransitionDurationMs?: number;
 }
 
 export interface BuilderSeoChecklistSettings {

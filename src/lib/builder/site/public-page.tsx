@@ -76,6 +76,7 @@ import PopupMount from '@/components/builder/published/PopupMount';
 import PopupOverlay from '@/components/builder/published/PopupOverlay';
 import CookieConsentBanner from '@/components/builder/published/CookieConsentBanner';
 import CookieConsentMount from '@/components/builder/published/CookieConsentMount';
+import PageTransitionWrapper from '@/components/builder/published/PageTransitionWrapper';
 import {
   buildPublishedAnimationStyle,
   getPublishedAnimationAttributes,
@@ -864,6 +865,10 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       ) : null}
       <AnimationsRoot />
       <PublishedInteractions />
+      <PageTransitionWrapper
+        preset={settings?.pageTransition ?? 'none'}
+        durationMs={settings?.pageTransitionDurationMs ?? 280}
+      >
       {resolved.headerCanvas ? (
         <GlobalCanvasSection
           canvas={resolved.headerCanvas}
@@ -969,6 +974,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           <CookieConsentBanner config={resolved.cookieConsent} />
         </>
       ) : null}
+      </PageTransitionWrapper>
     </>
   );
 }

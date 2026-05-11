@@ -37,9 +37,22 @@ export const DEFAULT_TYPOGRAPHY_SCALE: { baseSize: number; ratio: TypographyScal
   ratio: 1.25,
 };
 
+export function normalizeTypographyScale(
+  value: BuilderTheme['typographyScale'] | undefined,
+): BuilderTheme['typographyScale'] | undefined {
+  if (!value) return undefined;
+  const ratio = TYPOGRAPHY_SCALE_RATIOS.includes(value.ratio as TypographyScaleRatio)
+    ? value.ratio as TypographyScaleRatio
+    : DEFAULT_TYPOGRAPHY_SCALE.ratio;
+  return {
+    baseSize: Math.max(10, Math.min(28, Math.round(value.baseSize))),
+    ratio,
+  };
+}
+
 export function resolveTypographyScale(theme: BuilderTheme): ResolvedTypographyScale {
-  const cfg = theme.typographyScale ?? DEFAULT_TYPOGRAPHY_SCALE;
-  const baseSize = Math.max(10, Math.min(28, cfg.baseSize));
+  const cfg = normalizeTypographyScale(theme.typographyScale) ?? DEFAULT_TYPOGRAPHY_SCALE;
+  const baseSize = cfg.baseSize;
   const ratio = cfg.ratio;
   const step = (level: number) => Math.round(baseSize * Math.pow(ratio, level) * 100) / 100;
   return {

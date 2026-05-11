@@ -19,8 +19,10 @@ import {
 import {
   THEME_COLOR_TOKENS,
   THEME_TEXT_PRESET_KEYS,
+  applyTypographyScaleToTheme,
   normalizeDarkColors,
   normalizeThemeTextPresets,
+  normalizeThemeTypographyScale,
 } from '@/lib/builder/site/theme';
 import { normalizeLocale } from '@/lib/locales';
 
@@ -119,6 +121,18 @@ const themeColorsSchema = z.object({
   muted: z.string().trim().min(1).max(64),
 }).strict();
 
+const typographyScaleSchema = z.object({
+  baseSize: z.number().int().min(10).max(28),
+  ratio: z.union([
+    z.literal(1.125),
+    z.literal(1.2),
+    z.literal(1.25),
+    z.literal(1.333),
+    z.literal(1.414),
+    z.literal(1.5),
+  ]),
+}).strict();
+
 const siteThemeSchema = z.object({
   colors: themeColorsSchema,
   darkColors: themeColorsSchema.optional(),
@@ -136,6 +150,7 @@ const siteThemeSchema = z.object({
       THEME_TEXT_PRESET_KEYS.map((key) => [key, themeTextPresetSchema]),
     ) as Record<(typeof THEME_TEXT_PRESET_KEYS)[number], typeof themeTextPresetSchema>,
   ).strict().optional(),
+  typographyScale: typographyScaleSchema.optional(),
 }).strict();
 
 const settingsPayloadSchema = z.object({
@@ -329,13 +344,14 @@ function mergeMobileBottomBarConfig(
 
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
   const colors = { ...DEFAULT_THEME.colors, ...theme?.colors };
-  return {
+  return applyTypographyScaleToTheme({
     colors,
     darkColors: normalizeDarkColors(colors, theme?.darkColors),
     fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
     themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
-  };
+    typographyScale: normalizeThemeTypographyScale(theme),
+  });
 }
 
 export async function GET(request: NextRequest) {

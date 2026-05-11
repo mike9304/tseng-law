@@ -29,6 +29,7 @@ import {
   THEME_COLOR_TOKENS,
   THEME_TEXT_PRESET_KEYS,
   SITE_THEME_PRESETS,
+  applyTypographyScaleToTheme,
   type BuilderColorValue,
   type SiteThemePreset,
   type ThemeTextPreset,
@@ -39,6 +40,7 @@ import {
   normalizeBrandKit,
   normalizeDarkColors,
   normalizeThemeTextPresets,
+  normalizeThemeTypographyScale,
   resolveThemeColor,
   type BrandKit,
 } from '@/lib/builder/site/theme';
@@ -211,18 +213,19 @@ const SETTINGS_TABS: Array<{ key: SiteSettingsTab; label: string; icon: string }
 
 function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
   const colors = { ...DEFAULT_THEME.colors, ...theme?.colors };
-  return {
+  return applyTypographyScaleToTheme({
     colors,
     darkColors: normalizeDarkColors(colors, theme?.darkColors),
     fonts: { ...DEFAULT_THEME.fonts, ...theme?.fonts },
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
     themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
-  };
+    typographyScale: normalizeThemeTypographyScale(theme),
+  });
 }
 
 function themeFromPreset(preset: SiteThemePreset): BuilderTheme {
   const radius = Math.max(0, Math.round(preset.radiusScale));
-  return {
+  return applyTypographyScaleToTheme({
     colors: preset.colors,
     fonts: {
       heading: preset.fonts.title,
@@ -235,7 +238,7 @@ function themeFromPreset(preset: SiteThemePreset): BuilderTheme {
       lg: Math.max(radius, Math.round(radius * 1.5)),
     },
     themeTextPresets: preset.textPresets,
-  };
+  });
 }
 
 function toSettingsForm(settings?: Partial<BuilderSiteSettings>): SiteSettingsForm {
@@ -481,7 +484,10 @@ export default function SiteSettingsModal({
   };
 
   const applyPreset = (preset: SiteThemePreset) => {
-    const nextTheme = themeFromPreset(preset);
+    const nextTheme = applyTypographyScaleToTheme({
+      ...themeFromPreset(preset),
+      typographyScale: theme.typographyScale,
+    });
     setTheme(nextTheme);
     setBrandKit(createBrandKitFromTheme(nextTheme, settings));
     setPendingPreset(null);
@@ -968,13 +974,14 @@ export default function SiteSettingsModal({
                   <label style={labelStyle}>Base size (px)</label>
                   <input
                     type="number"
+                    aria-label="Typography base size"
                     min={10}
                     max={28}
                     value={theme.typographyScale?.baseSize ?? 16}
                     onChange={(event) => {
                       const baseSize = Number(event.target.value) || 16;
                       const ratio = theme.typographyScale?.ratio ?? 1.25;
-                      setTheme((prev) => ({ ...prev, typographyScale: { baseSize, ratio } }));
+                      setTheme((prev) => applyTypographyScaleToTheme({ ...prev, typographyScale: { baseSize, ratio } }));
                     }}
                     style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }}
                   />
@@ -982,11 +989,12 @@ export default function SiteSettingsModal({
                 <div style={fieldStyle}>
                   <label style={labelStyle}>Ratio</label>
                   <select
+                    aria-label="Typography scale ratio"
                     value={theme.typographyScale?.ratio ?? 1.25}
                     onChange={(event) => {
                       const ratio = Number(event.target.value) as 1.125 | 1.2 | 1.25 | 1.333 | 1.414 | 1.5;
                       const baseSize = theme.typographyScale?.baseSize ?? 16;
-                      setTheme((prev) => ({ ...prev, typographyScale: { baseSize, ratio } }));
+                      setTheme((prev) => applyTypographyScaleToTheme({ ...prev, typographyScale: { baseSize, ratio } }));
                     }}
                     style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }}
                   >

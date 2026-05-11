@@ -12,6 +12,7 @@ import {
   createThemeTextPresetPatch,
   resolveThemeTextTypography,
 } from '@/lib/builder/site/theme';
+import { headingFontSizeFromTheme } from '@/lib/builder/site/typography-scale';
 
 const LEVEL_TO_SIZE = {
   1: 48,
@@ -30,11 +31,14 @@ export default function HeadingInspector({
   const headingNode = node as BuilderHeadingCanvasNode;
   const theme = useBuilderTheme();
   const level = Math.max(1, Math.min(6, headingNode.content.level)) as keyof typeof LEVEL_TO_SIZE;
+  const scaledDefaultSize = theme.typographyScale
+    ? headingFontSizeFromTheme(theme, level)
+    : LEVEL_TO_SIZE[level];
   const typography = resolveThemeTextTypography(
     {
       themePreset: headingNode.content.themePreset,
       fontFamily: headingNode.content.fontFamily,
-      fontSize: headingNode.content.fontSize ?? LEVEL_TO_SIZE[level],
+      fontSize: headingNode.content.fontSize ?? scaledDefaultSize,
       fontWeight: headingNode.content.fontWeight ?? 'bold',
       lineHeight: headingNode.content.lineHeight ?? 1.05,
       letterSpacing: headingNode.content.letterSpacing ?? 0,

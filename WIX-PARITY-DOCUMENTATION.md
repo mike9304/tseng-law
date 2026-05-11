@@ -833,3 +833,24 @@ Created: 2026-05-09T12:52:13.760Z
   - `cfd4ee5 G-Editor: advance motion runtime parity`
 - 다음 마일스톤:
   - M23 Design system 마무리.
+
+## M23 — design system finishing
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/site/typography-scale.ts` — modular scale normalize/resolve helper를 정리했다.
+  - `src/lib/builder/site/theme.ts` — typographyScale 적용 시 title/body/quote preset size를 자동 재계산한다.
+  - `src/app/api/builder/site/settings/route.ts` — settings API theme schema/merge가 `typographyScale`을 저장·복원한다.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Typography 탭 base/ratio 조작이 preset size에 즉시 반영되고 저장 후 재오픈된다.
+  - `src/lib/builder/components/heading/Inspector.tsx` — heading inspector 기본 size도 active scale을 따른다.
+  - `src/components/builder/editor/StyleTab.tsx` — Style sources visualizer를 추가해 Background/Border/Radius/Shadow/Opacity/Hover/Variant 출처를 Theme/Variant/Manual/Default chip으로 표시한다.
+  - `src/lib/builder/site/__tests__/typography-scale.test.ts`, `src/lib/builder/site/__tests__/style-origin.test.ts`, `tests/builder-editor/design-system-m23.playwright.ts` — scale 저장/프리셋 계산/Style origin UI를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/typography-scale.test.ts src/lib/builder/site/__tests__/style-origin.test.ts` ✅ (6 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed)
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run security:builder-routes` ✅
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- W 판정:
+  - W184/W185 자동검증 evidence 확보. 사용자 직접 QA 전까지 체크포인트는 `자동검증 통과 / 사용자 QA 대기`로 둔다.

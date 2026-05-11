@@ -103,11 +103,150 @@ const bindingSummaryStyle: React.CSSProperties = {
   background: '#f8fafc',
 };
 
+const styleSourcePanelStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 8,
+  padding: '10px',
+  border: '1px solid #dbeafe',
+  borderRadius: 8,
+  background: '#f8fbff',
+};
+
+const styleSourceGridStyle: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  gap: 6,
+};
+
+const styleSourceRowStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 8,
+  minHeight: 28,
+  padding: '5px 7px',
+  border: '1px solid #e2e8f0',
+  borderRadius: 7,
+  background: '#ffffff',
+};
+
 function ThemeBindingBadge({ indicator }: { indicator: ThemeBindingIndicator }) {
   return (
     <span title={indicator.title} style={getThemeBindingBadgeStyle(indicator.tone)}>
       {indicator.label}
     </span>
+  );
+}
+
+function isNonTransparentColor(value: BuilderColorValue | BuilderBackgroundValue | undefined): boolean {
+  if (!value) return false;
+  if (typeof value !== 'string') return true;
+  const normalized = value.trim().toLowerCase().replace(/\s+/g, '');
+  return (
+    normalized.length > 0
+    && normalized !== 'transparent'
+    && normalized !== 'rgba(0,0,0,0)'
+    && normalized !== 'hsla(0,0%,0%,0)'
+  );
+}
+
+function hasManualRadiusOverride(style: BuilderCanvasNodeStyle, theme: ReturnType<typeof useBuilderTheme>): boolean {
+  const radius = style.borderRadius;
+  if (radius === 14) return false;
+  return radius !== theme.radii.sm && radius !== theme.radii.md && radius !== theme.radii.lg;
+}
+
+function hasManualShadowOverride(style: BuilderCanvasNodeStyle): boolean {
+  return (
+    style.shadowX !== 0
+    || style.shadowY !== 0
+    || style.shadowBlur !== 0
+    || style.shadowSpread !== 0
+  );
+}
+
+function StyleSourceVisualizer({
+  node,
+  theme,
+  buttonVariantBinding,
+}: {
+  node: BuilderCanvasNode;
+  theme: ReturnType<typeof useBuilderTheme>;
+  buttonVariantBinding: ThemeBindingIndicator | null;
+}) {
+  const variantKey = node.kind === 'button' ? node.content.style : undefined;
+  const backgroundIsManual = typeof node.style.backgroundColor === 'string'
+    && isNonTransparentColor(node.style.backgroundColor);
+  const borderIsManual = typeof node.style.borderColor === 'string'
+    && isNonTransparentColor(node.style.borderColor);
+  const rows = [
+    {
+      label: 'Background',
+      value: resolveColorValueToString(node.style.backgroundColor, theme),
+      variantKey: buttonVariantBinding && !backgroundIsManual ? buttonVariantBinding.label : undefined,
+      manualOverride: backgroundIsManual,
+    },
+    {
+      label: 'Border',
+      value: resolveColorValueToString(node.style.borderColor, theme),
+      manualOverride: borderIsManual && node.style.borderWidth > 0,
+    },
+    {
+      label: 'Radius',
+      value: node.style.borderRadius,
+      manualOverride: hasManualRadiusOverride(node.style, theme),
+    },
+    {
+      label: 'Shadow',
+      value: node.style.shadowBlur,
+      variantKey: buttonVariantBinding && !hasManualShadowOverride(node.style) ? buttonVariantBinding.label : undefined,
+      manualOverride: hasManualShadowOverride(node.style),
+    },
+    {
+      label: 'Opacity',
+      value: node.style.opacity,
+      manualOverride: node.style.opacity !== 100,
+    },
+    {
+      label: 'Hover',
+      value: node.hoverStyle ? 'hover' : undefined,
+      manualOverride: Boolean(node.hoverStyle),
+    },
+    ...(variantKey
+      ? [{
+        label: 'Variant',
+        value: variantKey,
+        variantKey,
+        manualOverride: false,
+      }]
+      : []),
+  ];
+
+  return (
+    <div style={styleSourcePanelStyle} data-builder-style-origin-visualizer="true">
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+        <span style={sectionTitleStyle}>Style sources</span>
+        <span style={{ fontSize: 10, fontWeight: 700, color: '#64748b' }}>Theme / Variant / Manual</span>
+      </div>
+      <div style={styleSourceGridStyle}>
+        {rows.map((row) => (
+          <div
+            key={row.label}
+            style={styleSourceRowStyle}
+            data-builder-style-source-row={row.label.toLowerCase()}
+          >
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#334155' }}>{row.label}</span>
+            <StyleOriginChip
+              value={row.value}
+              theme={theme}
+              variantKey={row.variantKey}
+              manualOverride={row.manualOverride}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -147,6 +286,12 @@ export default function StyleTab({
 
   return (
     <div className={styles.inspectorFormStack}>
+      <StyleSourceVisualizer
+        node={node}
+        theme={theme}
+        buttonVariantBinding={buttonVariantBinding}
+      />
+
       {buttonVariantBinding ? (
         <div style={bindingSummaryStyle}>
           <span style={sectionTitleStyle}>Button variant</span>

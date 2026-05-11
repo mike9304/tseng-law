@@ -4,6 +4,10 @@ import type {
   BuilderTheme,
   BuilderThemeColors,
 } from '@/lib/builder/site/types';
+import {
+  normalizeTypographyScale,
+  resolveTypographyScale,
+} from '@/lib/builder/site/typography-scale';
 
 export const THEME_COLOR_TOKENS = [
   'primary',
@@ -488,6 +492,55 @@ export function normalizeThemeTextPresets(
   return next;
 }
 
+function typographyScaleTextPresetSizes(theme: BuilderTheme): Partial<Record<ThemeTextPresetKey, number>> | null {
+  if (!theme.typographyScale) return null;
+  const scale = resolveTypographyScale(theme);
+  return {
+    title1: Math.round(scale.h1),
+    title2: Math.round(scale.h2),
+    title3: Math.round(scale.h3),
+    body: Math.round(scale.body),
+    quote: Math.round(scale.h4),
+  };
+}
+
+export function applyTypographyScaleToThemeTextPresets(theme: BuilderTheme): ThemeTextPresets {
+  const presets = normalizeThemeTextPresets(theme.themeTextPresets);
+  const sizes = typographyScaleTextPresetSizes(theme);
+  if (!sizes) return presets;
+  const next = { ...presets };
+  for (const key of THEME_TEXT_PRESET_KEYS) {
+    next[key] = {
+      ...presets[key],
+      fontSize: sizes[key] ?? presets[key].fontSize,
+    };
+  }
+  return next;
+}
+
+export function normalizeThemeTypographyScale(
+  theme?: Partial<BuilderTheme>,
+): BuilderTheme['typographyScale'] | undefined {
+  return normalizeTypographyScale(theme?.typographyScale);
+}
+
+export function applyTypographyScaleToTheme(theme: BuilderTheme): BuilderTheme {
+  const typographyScale = normalizeThemeTypographyScale(theme);
+  if (!typographyScale) {
+    const themeWithoutScale: BuilderTheme = { ...theme };
+    delete themeWithoutScale.typographyScale;
+    return themeWithoutScale;
+  }
+  const nextTheme: BuilderTheme = {
+    ...theme,
+    typographyScale,
+  };
+  return {
+    ...nextTheme,
+    themeTextPresets: applyTypographyScaleToThemeTextPresets(nextTheme),
+  };
+}
+
 export interface BrandKit {
   logoLight?: string;
   logoDark?: string;
@@ -644,7 +697,7 @@ export function createThemeFromBrandKit(
   const titleFont = kit.fonts.title;
   const bodyFont = kit.fonts.body;
 
-  return {
+  return applyTypographyScaleToTheme({
     colors,
     darkColors: normalizeDarkColors(colors, baseTheme?.darkColors),
     fonts: {
@@ -664,7 +717,8 @@ export function createThemeFromBrandKit(
       body: { fontFamily: bodyFont, color: { kind: 'token', token: 'text' } },
       quote: { fontFamily: titleFont, color: { kind: 'token', token: 'secondary' } },
     }),
-  };
+    typographyScale: baseTheme?.typographyScale,
+  });
 }
 
 export function getThemeTextPresets(theme?: BuilderTheme): ThemeTextPresets {

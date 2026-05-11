@@ -3586,3 +3586,26 @@ CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.4 첫 라운드. Wix Email Marketing 동급.
 
 남은 PR #4 항목: Admin UI (캠페인 목록, 구독자 관리, 캠페인 편집기 빌더-캔버스 재사용),
 permission 등록 (manage-campaigns / view-campaigns / manage-subscribers).
+
+## 2026-05-11 Claude PR #4 round 2 — Marketing admin UI
+
+이번 라운드는 어드민 UI 3개 페이지 + 3개 클라이언트 컴포넌트.
+
+**UI**
+- /[locale]/admin-builder/marketing/page.tsx — 캠페인 리스트
+  (status 뱃지, 세그먼트 표시, 발송/오픈/클릭 카운트, 테스트·발송 액션).
+- /[locale]/admin-builder/marketing/subscribers/page.tsx — 구독자 리스트
+  (상태 필터, 이메일 검색, 인라인 생성 폼, 태그/로케일/출처 표시).
+- /[locale]/admin-builder/marketing/campaigns/[campaignId]/edit — 캠페인 편집
+  (다국어 탭, subject/bodyHtml/bodyText 로케일별 편집, 발신자/세그먼트/예약 사이드바, 상태 카드).
+
+**Components**
+- MarketingNav (캠페인/구독자 탭).
+- CampaignsAdmin — 캠페인 목록 + 인라인 draft 생성 + send 액션 (테스트는 prompt, 배치는 confirm).
+- SubscribersAdmin — 검색·필터·인라인 추가.
+- CampaignEditor — 다국어 편집 grid (1fr + 320px 사이드).
+
+검증: typecheck ✅ / unit 774 ✅.
+
+PR #4 lib+API+UI 완성. 남은 항목: permission enum 등록 (manage-campaigns 등),
+폼-빌더 캔버스 재사용한 비주얼 이메일 빌더 (현재는 raw HTML textarea).

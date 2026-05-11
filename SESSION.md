@@ -3467,3 +3467,17 @@ HeadingElement가 theme.typographyScale 설정 시 modular ratio로 h1~h6 기본
 - rate limit 8/60s, automatic_payment_methods=true, receipt_email + metadata.
 
 검증: typecheck ✅ / unit 769 tests ✅ / security 71 routes 62 mutation handlers ✅.
+
+## 2026-05-11 Claude Editor theme toggle (M28 follow-up)
+
+- EditorThemeToggle 컴포넌트 — light/dark/auto 3단 토글.
+- SandboxTopBar 우측 actions 영역에 마운트.
+- localStorage `tw_builder_editor_prefs_v1` 의 theme 필드 사용.
+- `html[data-builder-editor-theme="..."]` 데이터 속성 토글로 CSS 캐스케이드에
+  연결할 수 있다 (실제 다크 톤 CSS는 follow-up).
+
+검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.
+
+W225 evidence green (UI 토글). Rulers (W216) / outline view (W218) / 단축키
+매핑 UI (W219) / element comments (W224) / component library (W223) UI 통합은
+follow-up.

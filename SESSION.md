@@ -4244,3 +4244,23 @@ Pusher/Ably 미사용; Vercel Fluid Compute SSE + 폴링 1.5s 자체 구현.
 
 남은 항목: 공개 사이트에 실제 chat widget (현재는 backend + admin 만),
 방문자 IP 봇 탐지 / spam 가드 강화.
+
+## 2026-05-11 Claude PR #20 — Wix parity integration smoke test
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.20. 통합 PR 이 모두 합쳐진 상태에서
+cross-PR 흐름을 in-process 로 점검하는 smoke test. Playwright E2E 는 별도
+서버 띄움이 필요해 vitest 통합 시나리오로 대체.
+
+**Test (src/lib/builder/__tests__/integration/wix-parity.smoke.test.ts)**
+1. Subscribers + webhook 동시 저장 → 두 storage 가 격리되어 작동.
+2. Migration runner 실행 → backup snapshot 생성 → backup 목록에 1건.
+3. A/B 변형 결정 sticky + webhook signature 정상/위변조 케이스 + dispatcher
+   호출이 throw 없이 delivery 레코드 반환.
+
+테스트 시작 전 BLOB_READ_WRITE_TOKEN 제거 + 관련 runtime-data 하위 디렉토리
+모두 rm 하여 file 백엔드 격리. afterEach 에서 env 복원.
+
+검증: typecheck ✅ / unit 853 ✅.
+
+남은 follow-up: Playwright E2E 시나리오 (서버 띄움 필요), 호정 실제 도메인
+QA 시나리오 (실제 결제·Zoom·Stripe 인증 환경 의존).

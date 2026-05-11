@@ -73,7 +73,7 @@ type GalleryWidgetKind = Extract<BuilderCanvasNodeKind, 'gallery'>;
 type LayoutWidgetKind = Extract<BuilderCanvasNodeKind, 'container'>;
 type InteractiveWidgetKind = Extract<
   BuilderCanvasNodeKind,
-  'countdown' | 'progress' | 'rating' | 'notification-bar' | 'back-to-top'
+  'countdown' | 'progress' | 'rating' | 'notification-bar' | 'back-to-top' | 'button'
 >;
 
 interface TextWidgetPreset {
@@ -1177,6 +1177,48 @@ const INTERACTIVE_WIDGET_PRESETS: InteractiveWidgetPreset[] = [
       icon: 'arrow-up',
       placement: 'bottom-right',
       variant: 'circle',
+    },
+  },
+  {
+    id: 'interactive-popup-trigger',
+    label: 'Popup trigger',
+    description: 'popup:slug 트리거 버튼',
+    icon: 'PU',
+    kind: 'button',
+    width: 180,
+    height: 44,
+    content: {
+      label: '팝업 열기',
+      href: 'popup:welcome',
+      variant: 'primary',
+    },
+  },
+  {
+    id: 'interactive-lightbox-trigger',
+    label: 'Lightbox trigger',
+    description: 'lightbox:slug 트리거 버튼',
+    icon: 'LB',
+    kind: 'button',
+    width: 200,
+    height: 44,
+    content: {
+      label: '라이트박스 열기',
+      href: 'lightbox:welcome',
+      variant: 'secondary',
+    },
+  },
+  {
+    id: 'interactive-cookie-consent-open',
+    label: 'Cookie settings',
+    description: 'cookie-consent:open 트리거',
+    icon: 'CK',
+    kind: 'button',
+    width: 200,
+    height: 44,
+    content: {
+      label: '쿠키 설정',
+      href: 'cookie-consent:open',
+      variant: 'ghost',
     },
   },
 ];

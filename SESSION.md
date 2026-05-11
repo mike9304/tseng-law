@@ -3212,3 +3212,54 @@ Prompt-to-artifact 체크:
   `safeHref(raw)` 헬퍼 사용 (http/https/mailto/tel/relative/anchor 만 허용).
 - Countdown setInterval cleanup은 mode==='edit' 일 때 등록하지 않는다 (편집
   중에는 정적 미리보기로 충분).
+
+## 2026-05-11 Claude M15-2 site-level entities (popup / cookie consent)
+
+범위:
+- M15 마무리. W91 / W92 / W94 site-level entity 3종.
+- 추가 타입 (`src/lib/builder/site/types.ts`):
+  - `BuilderPopup` — slug + trigger (manual/on-load/on-exit-intent/on-scroll) +
+    delayMs + scrollPercent + oncePerVisitor + sizing + dismissable.
+  - `BuilderCookieConsent` — version (bump으로 재요청) + layout (bar-bottom/bar-
+    top/modal-center/card-corner) + 다국어 텍스트 + 카테고리 (required/optional).
+  - `createDefaultPopup` / `createDefaultCookieConsent` factory.
+- BuilderSiteDocument에 `popups?: BuilderPopup[]` + `cookieConsent?: BuilderCookieConsent` 추가.
+- Link prefix 확장 (`src/lib/builder/links.ts`): 'popup:', 'cookie-consent:' 허용.
+  `describeLinkScheme` return type에 'popup' / 'cookie-consent' 추가.
+- Public runtime (3 신규 컴포넌트):
+  - `PopupMount` — 클릭 위임 (data-popup-target / href="popup:slug") + auto
+    triggers (on-load/on-scroll/on-exit-intent) + oncePerVisitor localStorage 게이트.
+  - `PopupOverlay` — LightboxOverlay 동일 패턴. dismissable / closeOnEsc /
+    closeOnOutsideClick / backdrop. 본문은 향후 popup canvas 인프라로 교체.
+  - `CookieConsentBanner` — 4 layout + Accept all / Decline / Manage panel
+    (카테고리 토글). localStorage `tw_cookie_consent_v1:<version>` 키로 결정 저장.
+    `builder-cookie-consent:decision` 이벤트 발행.
+  - `CookieConsentMount` — `href="cookie-consent:open"` 또는
+    `data-cookie-consent="open"` 클릭 위임 → `builder-cookie-consent:open` 이벤트.
+- `resolvePublishedSitePage` 가 popups (locale + active 필터) + cookieConsent
+  (enabled + locale 일치) 를 반환하도록 확장.
+- `PublishedSitePageView` 가 PopupMount/PopupOverlay (slug별) + CookieConsentMount/
+  Banner 를 mount.
+- 카탈로그 Interactive widget pack 에 3 트리거 button preset 추가:
+  popup-trigger / lightbox-trigger / cookie-consent-open.
+- `flex` 데브 페이지 mock에 popups: [] / cookieConsent: null 보강.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅
+- `npm run test:unit` ✅ 36 files / 769 tests
+- `npm run security:builder-routes` ✅ 71 routes / 62 mutation handlers
+
+남은 작업 (M15 polish, follow-up):
+- Builder admin UI: popup list / 편집기 (lightbox 패턴 따라 별도 canvas 문서 +
+  popup-trigger 시각화). 현재 popup overlay 본문은 plain placeholder text.
+- 카탈로그에 popup-canvas 편집 진입점.
+- cookie consent 설정 UI: site settings 모달 패널 (version bump / 카테고리 편집).
+- Playwright E2E: 4 시나리오 (수동 trigger / on-load / cookie banner 표시·동의 /
+  decline-only).
+
+메모:
+- popup `oncePerVisitor` 는 localStorage `tw_popup_seen:<slug>` 키로 게이트. 같은 slug 재오픈은 시크릿 모드 / localStorage 초기화 필요.
+- cookie consent version 을 bump 하면 모든 방문자가 다시 prompt.
+- 모든 트리거가 admin 토글 없이 default 비활성 — `cookieConsent.enabled=false` /
+  `popup.active=false` 가 기본.

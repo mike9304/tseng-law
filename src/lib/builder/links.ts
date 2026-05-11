@@ -9,7 +9,7 @@ export interface LinkValue {
 }
 
 const ALLOW_SCHEMES = ['https:', 'http:', 'mailto:', 'tel:'];
-const ALLOW_PREFIXES = ['/', '#', 'lightbox:'];
+const ALLOW_PREFIXES = ['/', '#', 'lightbox:', 'popup:', 'cookie-consent:'];
 const BLOCK_PATTERNS = [
   /^javascript:/i,
   /^vbscript:/i,
@@ -58,11 +58,22 @@ export function sanitizeLinkValue(input: Partial<LinkValue> | null | undefined):
 
 export function describeLinkScheme(
   href: string,
-): 'internal' | 'anchor' | 'lightbox' | 'mailto' | 'tel' | 'http' | 'invalid' {
+):
+  | 'internal'
+  | 'anchor'
+  | 'lightbox'
+  | 'popup'
+  | 'cookie-consent'
+  | 'mailto'
+  | 'tel'
+  | 'http'
+  | 'invalid' {
   const value = href.trim();
   if (!isLinkSafe(value)) return 'invalid';
   if (value.startsWith('#')) return 'anchor';
   if (value.startsWith('lightbox:')) return 'lightbox';
+  if (value.startsWith('popup:')) return 'popup';
+  if (value.startsWith('cookie-consent:')) return 'cookie-consent';
   if (value.startsWith('/')) return 'internal';
   if (/^mailto:/i.test(value)) return 'mailto';
   if (/^tel:/i.test(value)) return 'tel';

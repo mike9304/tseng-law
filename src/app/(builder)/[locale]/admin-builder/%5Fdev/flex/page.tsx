@@ -51,6 +51,8 @@ export default function BuilderFlexDevPage({
       noIndex: true,
     },
     lightboxes: [],
+    popups: [],
+    cookieConsent: null,
     headerCanvas: null,
     footerCanvas: null,
   };

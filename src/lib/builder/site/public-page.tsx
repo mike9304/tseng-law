@@ -22,6 +22,8 @@ import { isContainerLikeKind } from '@/lib/builder/canvas/types';
 import { VIEWPORT_BREAKPOINTS } from '@/lib/builder/canvas/responsive';
 import type {
   BuilderLightbox,
+  BuilderPopup,
+  BuilderCookieConsent,
   BuilderPageMeta,
   BuilderSiteDocument,
   BuilderTheme,
@@ -70,6 +72,10 @@ import PublishedInteractions from '@/components/builder/published/PublishedInter
 import DarkModeToggle from '@/components/builder/published/DarkModeToggle';
 import LightboxMount from '@/components/builder/published/LightboxMount';
 import LightboxOverlay from '@/components/builder/published/LightboxOverlay';
+import PopupMount from '@/components/builder/published/PopupMount';
+import PopupOverlay from '@/components/builder/published/PopupOverlay';
+import CookieConsentBanner from '@/components/builder/published/CookieConsentBanner';
+import CookieConsentMount from '@/components/builder/published/CookieConsentMount';
 import {
   buildPublishedAnimationStyle,
   getPublishedAnimationAttributes,
@@ -179,6 +185,8 @@ export interface ResolvedPublishedSitePage {
   pageMeta: BuilderPageMeta;
   canvas: BuilderCanvasDocument;
   lightboxes: ResolvedLightbox[];
+  popups: BuilderPopup[];
+  cookieConsent: BuilderCookieConsent | null;
   headerCanvas: BuilderCanvasDocument | null;
   footerCanvas: BuilderCanvasDocument | null;
 }
@@ -252,6 +260,11 @@ export async function resolvePublishedSitePage(
     readFooterCanvas(DEFAULT_BUILDER_SITE_ID),
   ]);
 
+  const popups = (site.popups ?? []).filter((p) => p.locale === locale && p.active);
+  const cookieConsent = site.cookieConsent && site.cookieConsent.enabled && site.cookieConsent.locale === locale
+    ? site.cookieConsent
+    : null;
+
   return {
     locale,
     slugPath,
@@ -259,6 +272,8 @@ export async function resolvePublishedSitePage(
     pageMeta,
     canvas,
     lightboxes,
+    popups,
+    cookieConsent,
     headerCanvas: headerCanvas && headerCanvas.nodes.length > 0 ? headerCanvas : null,
     footerCanvas: footerCanvas && footerCanvas.nodes.length > 0 ? footerCanvas : null,
   };
@@ -921,6 +936,39 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           ))}
         </>
       )}
+      {resolved.popups.length > 0 && (
+        <>
+          <PopupMount popups={resolved.popups} />
+          {resolved.popups.map((p) => (
+            <PopupOverlay
+              key={p.id}
+              config={{
+                id: p.id,
+                slug: p.slug,
+                width: p.width,
+                height: p.height,
+                closeOnOutsideClick: p.closeOnOutsideClick,
+                closeOnEsc: p.closeOnEsc,
+                dismissable: p.dismissable,
+                backdropOpacity: p.backdropOpacity,
+              }}
+            >
+              <div data-builder-popup-canvas={p.slug}>
+                <strong style={{ display: 'block', fontSize: 16, marginBottom: 8 }}>{p.name}</strong>
+                <p style={{ margin: 0, fontSize: 14, color: '#475569' }}>
+                  팝업 본문을 빌더 admin에서 편집하세요.
+                </p>
+              </div>
+            </PopupOverlay>
+          ))}
+        </>
+      )}
+      {resolved.cookieConsent ? (
+        <>
+          <CookieConsentMount />
+          <CookieConsentBanner config={resolved.cookieConsent} />
+        </>
+      ) : null}
     </>
   );
 }

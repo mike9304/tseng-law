@@ -236,6 +236,68 @@ export interface BuilderLightbox {
   updatedAt: string;
 }
 
+// Phase 15 — Popup (auto-trigger or button-trigger modal).
+// Trigger types:
+//   - 'manual':         button with `href: popup:<slug>` opens it
+//   - 'on-load':        opens on first page view (after delayMs)
+//   - 'on-exit-intent': desktop mouseleave to top edge
+//   - 'on-scroll':      after scrollPercent of page height
+// Stored as a list under `popups` on the site doc. Each popup has its own
+// canvas document under page id `popup:<id>`.
+export type BuilderPopupTrigger = 'manual' | 'on-load' | 'on-exit-intent' | 'on-scroll';
+
+export interface BuilderPopup {
+  id: string;
+  name: string;
+  slug: string; // English alphanumeric, `popup:<slug>` trigger key
+  locale: Locale;
+  trigger: BuilderPopupTrigger;
+  /** Delay before auto-open (ms), used by `on-load` trigger. */
+  delayMs: number;
+  /** Scroll percent (0~100), used by `on-scroll` trigger. */
+  scrollPercent: number;
+  /** Show at most once per visitor (uses localStorage fingerprint). */
+  oncePerVisitor: boolean;
+  width?: number;
+  height?: number;
+  closeOnOutsideClick: boolean;
+  closeOnEsc: boolean;
+  dismissable: boolean;
+  backdropOpacity: number;
+  active: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Phase 15 — Cookie consent (site-level banner).
+// Exactly one config per site (singleton). Storage key in visitor localStorage
+// is derived from `version` so bumping the version re-prompts.
+export type CookieConsentLayout = 'bar-bottom' | 'bar-top' | 'modal-center' | 'card-corner';
+
+export interface BuilderCookieConsent {
+  enabled: boolean;
+  version: string; // Bump to re-prompt all visitors (e.g. '2026-05-11')
+  layout: CookieConsentLayout;
+  locale: Locale;
+  title: string;
+  description: string;
+  acceptLabel: string;
+  declineLabel: string;
+  manageLabel: string;
+  policyUrl?: string;
+  /** Categories shown in the manage panel. */
+  categories: Array<{
+    key: string;
+    label: string;
+    description: string;
+    /** required:true → toggle disabled & always on. */
+    required: boolean;
+    defaultEnabled: boolean;
+  }>;
+  createdAt: string;
+  updatedAt: string;
+}
+
 // Saved section library — Wix Studio "Saved Sections" parity.
 // A user designs a container + descendants once and reuses across pages.
 export type SavedSectionCategory =
@@ -301,6 +363,8 @@ export interface BuilderSiteDocument {
   mobileBottomBar?: BuilderMobileBottomBar;
   pages: BuilderPageMeta[];
   lightboxes?: BuilderLightbox[];
+  popups?: BuilderPopup[];
+  cookieConsent?: BuilderCookieConsent;
   translations?: TranslationEntry[];
   sectionLibrary?: SavedSection[];
   redirects?: SiteRedirect[];
@@ -342,6 +406,79 @@ let lightboxIdCounter = 0;
 export function generateLightboxId(): string {
   lightboxIdCounter += 1;
   return `lightbox-${Date.now()}-${lightboxIdCounter}`;
+}
+
+let popupIdCounter = 0;
+export function generatePopupId(): string {
+  popupIdCounter += 1;
+  return `popup-${Date.now()}-${popupIdCounter}`;
+}
+
+export function createDefaultPopup(
+  locale: Locale,
+  slug: string,
+  name: string,
+): BuilderPopup {
+  const now = new Date().toISOString();
+  return {
+    id: generatePopupId(),
+    name,
+    slug,
+    locale,
+    trigger: 'manual',
+    delayMs: 2000,
+    scrollPercent: 40,
+    oncePerVisitor: true,
+    width: 520,
+    height: 360,
+    closeOnOutsideClick: true,
+    closeOnEsc: true,
+    dismissable: true,
+    backdropOpacity: 60,
+    active: true,
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
+export function createDefaultCookieConsent(locale: Locale): BuilderCookieConsent {
+  const now = new Date().toISOString();
+  return {
+    enabled: false,
+    version: now.slice(0, 10),
+    layout: 'bar-bottom',
+    locale,
+    title: '쿠키 사용 안내',
+    description: '본 사이트는 서비스 개선을 위해 쿠키를 사용합니다. 자세한 내용은 정책 페이지를 참고해 주세요.',
+    acceptLabel: '모두 동의',
+    declineLabel: '필수만 허용',
+    manageLabel: '설정',
+    categories: [
+      {
+        key: 'necessary',
+        label: '필수',
+        description: '사이트 동작에 반드시 필요한 쿠키입니다.',
+        required: true,
+        defaultEnabled: true,
+      },
+      {
+        key: 'analytics',
+        label: '분석',
+        description: '방문 통계 및 개선을 위한 쿠키입니다.',
+        required: false,
+        defaultEnabled: false,
+      },
+      {
+        key: 'marketing',
+        label: '마케팅',
+        description: '맞춤형 안내·캠페인 측정에 사용됩니다.',
+        required: false,
+        defaultEnabled: false,
+      },
+    ],
+    createdAt: now,
+    updatedAt: now,
+  };
 }
 
 export function createDefaultLightbox(

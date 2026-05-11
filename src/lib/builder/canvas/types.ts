@@ -13,7 +13,9 @@ import {
 import {
   ANIMATION_EASING_KEYS,
   ENTRANCE_PRESET_KEYS,
+  EXIT_PRESET_KEYS,
   HOVER_ANIMATION_PRESET_KEYS,
+  LOOP_PRESET_KEYS,
   SCROLL_EFFECT_KEYS,
 } from '@/lib/builder/animations/presets';
 import { linkValueSchema } from '@/lib/builder/links';
@@ -243,6 +245,17 @@ export const animationConfigSchema = z.object({
   hover: z.object({
     preset: z.enum(HOVER_ANIMATION_PRESET_KEYS).default('none'),
     transitionMs: z.number().int().min(0).max(2000).default(200),
+  }).optional(),
+  // Phase 22 — exit / loop / timeline runtime.
+  exit: z.object({
+    preset: z.enum(EXIT_PRESET_KEYS).default('none'),
+    duration: z.number().int().min(100).max(3000).default(400),
+    easing: z.enum(ANIMATION_EASING_KEYS).default('ease-out'),
+  }).optional(),
+  loop: z.object({
+    preset: z.enum(LOOP_PRESET_KEYS).default('none'),
+    durationMs: z.number().int().min(200).max(20000).default(2400),
+    intensity: z.number().int().min(0).max(100).default(30),
   }).optional(),
 }).optional();
 

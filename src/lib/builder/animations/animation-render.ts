@@ -21,6 +21,13 @@ export interface PublishedAnimationAttributes {
   'data-anim-scroll'?: string;
   'data-anim-intensity'?: string;
   'data-anim-hover'?: string;
+  // Phase 22 runtime.
+  'data-anim-exit'?: string;
+  'data-anim-exit-duration'?: string;
+  'data-anim-exit-easing'?: string;
+  'data-anim-loop'?: string;
+  'data-anim-loop-duration'?: string;
+  'data-anim-loop-intensity'?: string;
 }
 
 export interface EditorAnimationStyle {
@@ -116,6 +123,18 @@ export function getPublishedAnimationAttributes(
 
   if (normalized.hover.preset !== 'none') {
     attrs['data-anim-hover'] = normalized.hover.preset;
+  }
+
+  // Phase 22 runtime — exit / loop attributes.
+  if (normalized.exit && normalized.exit.preset !== 'none') {
+    attrs['data-anim-exit'] = normalized.exit.preset;
+    attrs['data-anim-exit-duration'] = String(normalized.exit.duration);
+    attrs['data-anim-exit-easing'] = normalized.exit.easing;
+  }
+  if (normalized.loop && normalized.loop.preset !== 'none') {
+    attrs['data-anim-loop'] = normalized.loop.preset;
+    attrs['data-anim-loop-duration'] = String(normalized.loop.durationMs);
+    attrs['data-anim-loop-intensity'] = String(normalized.loop.intensity);
   }
 
   return attrs;

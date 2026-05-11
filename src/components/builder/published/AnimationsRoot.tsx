@@ -87,6 +87,9 @@ export default function AnimationsRoot() {
         } else if (effect === 'fade-on-scroll') {
           const opacity = clamp(0.35 + (1 - Math.abs(centeredProgress)) * 0.65, 0.35, 1);
           node.style.setProperty('--builder-scroll-opacity', opacity.toFixed(3));
+        } else if (effect === 'scrub-translate' || effect === 'scrub-opacity' || effect === 'scrub-rotate') {
+          node.style.setProperty('--builder-anim-scrub-progress', progress.toFixed(3));
+          node.style.setProperty('--builder-anim-intensity', String(intensity));
         }
 
         if (effectTransform) {
@@ -105,8 +108,42 @@ export default function AnimationsRoot() {
     window.addEventListener('scroll', requestScrollEffects, { passive: true });
     window.addEventListener('resize', requestScrollEffects);
 
+    // Phase 22 — Exit animation: trigger when node leaves viewport.
+    const exitNodes = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-anim-exit]'),
+    ).filter((node) => node.dataset.animExit && node.dataset.animExit !== 'none');
+
+    let exitObserver: IntersectionObserver | null = null;
+    if ('IntersectionObserver' in window && exitNodes.length > 0) {
+      exitObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            const node = entry.target as HTMLElement;
+            const dur = node.dataset.animExitDuration ?? '400';
+            node.style.setProperty('--builder-anim-exit-ms', `${dur}ms`);
+            node.dataset.animExitState = entry.isIntersecting ? 'present' : 'leaving';
+          }
+        },
+        { threshold: 0.05 },
+      );
+      exitNodes.forEach((node) => {
+        node.dataset.animExitState = 'present';
+        exitObserver?.observe(node);
+      });
+    }
+
+    // Phase 22 — Loop animations: feed CSS variable for keyframe duration.
+    const loopNodes = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-anim-loop]'),
+    ).filter((node) => node.dataset.animLoop && node.dataset.animLoop !== 'none');
+    loopNodes.forEach((node) => {
+      const dur = node.dataset.animLoopDuration ?? '2400';
+      node.style.setProperty('--builder-anim-loop-duration', `${dur}ms`);
+    });
+
     return () => {
       observer?.disconnect();
+      exitObserver?.disconnect();
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
       window.removeEventListener('scroll', requestScrollEffects);
       window.removeEventListener('resize', requestScrollEffects);

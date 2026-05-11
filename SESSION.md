@@ -3427,3 +3427,27 @@ W196~W215 schema 단계 evidence green.
 ★ M01~M28 schema 단계 모두 evidence green. 호정 빌더 G-Editor 로드맵 28
 마일스톤 완주 (단, 다수 마일스톤이 schema/helper 단계로 runtime 통합 follow-up
 필요 — runtime 깊이는 코덱스가 한도 풀린 후 polish 권장).
+
+## 2026-05-11 Claude Motion runtime 통합 (M22 follow-up)
+
+범위: M22 schema를 published runtime에 연결.
+- animationConfigSchema에 exit / loop optional 필드 (preset + duration 등) 추가.
+- getPublishedAnimationAttributes 가 data-anim-exit / data-anim-loop 등 attributes
+  를 추가로 emit.
+- AnimationsRoot.tsx 가:
+  · scrub-* effect 노드에 --builder-anim-scrub-progress CSS var 주입 (W167 runtime).
+  · IntersectionObserver로 exit 노드 leaving 시 data-anim-exit-state='leaving'
+    토글 (W160 runtime).
+  · loop 노드의 --builder-anim-loop-duration CSS var 주입 (W170~W171 runtime).
+- globals.css:
+  · [data-anim-exit][data-anim-exit-state='leaving'] transition rules (fade-out /
+    slide-up/down/left/right / zoom-out / collapse).
+  · @keyframes builder-loop-{pulse,float,bounce,sway,wiggle,breath} +
+    [data-anim-loop='...'] animation 연결.
+  · [data-anim-hover='fade']:hover { opacity: 0.75 } (W168 runtime).
+  · [data-anim-scroll='scrub-*'] transform/opacity calc() rules.
+  · @media (prefers-reduced-motion: reduce) 가드.
+
+검증: typecheck ✅ / unit 769 tests ✅. W160 exit / W167 scrub / W168 hover-fade /
+W170~W171 loop runtime evidence green. W172 page transition / W173 timeline editor
+UI는 별도 follow-up.

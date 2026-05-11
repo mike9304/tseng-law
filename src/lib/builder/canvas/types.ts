@@ -80,6 +80,11 @@ export const builderCanvasNodeKinds = [
   'menu-bar',
   'anchor-menu',
   'breadcrumbs',
+  // Phase 17 — Social widgets
+  'social-bar',
+  'share-buttons',
+  'social-embed',
+  'floating-chat',
 ] as const;
 
 /**
@@ -1107,6 +1112,74 @@ const breadcrumbsCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+// ─── Phase 17 — Social widgets ───────────────────────────────────
+
+const socialProviderSchema = z.enum([
+  'instagram',
+  'facebook',
+  'twitter',
+  'threads',
+  'youtube',
+  'linkedin',
+  'tiktok',
+  'whatsapp',
+  'line',
+  'kakao',
+  'naver',
+  'x',
+]);
+
+const socialBarCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('social-bar'),
+  content: z.object({
+    items: z.array(z.object({
+      provider: socialProviderSchema,
+      href: z.string().max(2000),
+      label: z.string().max(60).optional(),
+    })).max(20).default([]),
+    layout: z.enum(['row', 'column']).default('row'),
+    style: z.enum(['plain', 'solid', 'outline']).default('plain'),
+    size: z.number().int().min(24).max(80).default(36),
+    color: z.string().max(60).default('#0f172a'),
+  }),
+});
+
+const shareButtonsCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('share-buttons'),
+  content: z.object({
+    providers: z.array(z.enum(['copy', 'facebook', 'twitter', 'kakao', 'line', 'whatsapp', 'email']))
+      .max(10)
+      .default(['copy', 'facebook', 'twitter', 'kakao']),
+    title: z.string().max(120).default('공유하기'),
+    layout: z.enum(['row', 'column']).default('row'),
+    size: z.number().int().min(28).max(80).default(40),
+  }),
+});
+
+const socialEmbedCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('social-embed'),
+  content: z.object({
+    provider: z.enum(['instagram-feed', 'youtube-subscribe', 'linkedin-follow', 'tiktok-feed']).default('instagram-feed'),
+    handle: z.string().max(160).default(''),
+    channelId: z.string().max(160).optional(),
+    layout: z.enum(['grid', 'list']).default('grid'),
+    count: z.number().int().min(1).max(20).default(6),
+    showHeader: z.boolean().default(true),
+  }),
+});
+
+const floatingChatCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('floating-chat'),
+  content: z.object({
+    provider: z.enum(['whatsapp', 'line', 'kakao', 'telegram', 'messenger', 'custom']).default('whatsapp'),
+    href: z.string().max(2000).default(''),
+    label: z.string().max(80).default('문의하기'),
+    placement: z.enum(['bottom-right', 'bottom-left', 'bottom-center']).default('bottom-right'),
+    showLabel: z.boolean().default(false),
+    color: z.string().max(60).default('#25d366'),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
@@ -1154,6 +1227,10 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   menuBarCanvasNodeSchema,
   anchorMenuCanvasNodeSchema,
   breadcrumbsCanvasNodeSchema,
+  socialBarCanvasNodeSchema,
+  shareButtonsCanvasNodeSchema,
+  socialEmbedCanvasNodeSchema,
+  floatingChatCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -1202,6 +1279,10 @@ export type BuilderBackToTopCanvasNode = z.infer<typeof backToTopCanvasNodeSchem
 export type BuilderMenuBarCanvasNode = z.infer<typeof menuBarCanvasNodeSchema>;
 export type BuilderAnchorMenuCanvasNode = z.infer<typeof anchorMenuCanvasNodeSchema>;
 export type BuilderBreadcrumbsCanvasNode = z.infer<typeof breadcrumbsCanvasNodeSchema>;
+export type BuilderSocialBarCanvasNode = z.infer<typeof socialBarCanvasNodeSchema>;
+export type BuilderShareButtonsCanvasNode = z.infer<typeof shareButtonsCanvasNodeSchema>;
+export type BuilderSocialEmbedCanvasNode = z.infer<typeof socialEmbedCanvasNodeSchema>;
+export type BuilderFloatingChatCanvasNode = z.infer<typeof floatingChatCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({

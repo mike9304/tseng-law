@@ -76,6 +76,7 @@ type InteractiveWidgetKind = Extract<
   'countdown' | 'progress' | 'rating' | 'notification-bar' | 'back-to-top' | 'button'
 >;
 type NavigationWidgetKind = Extract<BuilderCanvasNodeKind, 'menu-bar' | 'anchor-menu' | 'breadcrumbs'>;
+type SocialWidgetKind = Extract<BuilderCanvasNodeKind, 'social-bar' | 'share-buttons' | 'social-embed' | 'floating-chat'>;
 
 interface TextWidgetPreset {
   id: string;
@@ -143,6 +144,18 @@ interface NavigationWidgetPreset {
   description: string;
   icon: string;
   kind: NavigationWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+interface SocialWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: SocialWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -1331,6 +1344,89 @@ const NAVIGATION_WIDGET_PRESETS: NavigationWidgetPreset[] = [
   },
 ];
 
+const SOCIAL_WIDGET_PRESETS: SocialWidgetPreset[] = [
+  {
+    id: 'social-bar-row',
+    label: 'Social bar',
+    description: '소셜 링크 모음',
+    icon: 'SB',
+    kind: 'social-bar',
+    width: 220,
+    height: 48,
+    content: {},
+  },
+  {
+    id: 'social-share',
+    label: 'Share buttons',
+    description: '페이지 공유 4종',
+    icon: '⇪',
+    kind: 'share-buttons',
+    width: 320,
+    height: 96,
+    content: {},
+  },
+  {
+    id: 'social-instagram-feed',
+    label: 'Instagram feed',
+    description: '인스타그램 그리드',
+    icon: 'IG',
+    kind: 'social-embed',
+    width: 420,
+    height: 360,
+    content: { provider: 'instagram-feed' },
+  },
+  {
+    id: 'social-youtube-subscribe',
+    label: 'YouTube subscribe',
+    description: '유튜브 구독 위젯',
+    icon: 'YT',
+    kind: 'social-embed',
+    width: 280,
+    height: 120,
+    content: { provider: 'youtube-subscribe', layout: 'list', count: 1, showHeader: true },
+  },
+  {
+    id: 'social-linkedin-follow',
+    label: 'LinkedIn follow',
+    description: '링크드인 팔로우',
+    icon: 'in',
+    kind: 'social-embed',
+    width: 280,
+    height: 120,
+    content: { provider: 'linkedin-follow', layout: 'list', count: 1, showHeader: true },
+  },
+  {
+    id: 'social-floating-whatsapp',
+    label: 'WhatsApp floating',
+    description: 'WhatsApp 플로팅',
+    icon: 'WA',
+    kind: 'floating-chat',
+    width: 64,
+    height: 64,
+    content: { provider: 'whatsapp' },
+  },
+  {
+    id: 'social-floating-line',
+    label: 'LINE floating',
+    description: 'LINE 플로팅',
+    icon: 'LN',
+    kind: 'floating-chat',
+    width: 64,
+    height: 64,
+    content: { provider: 'line', color: '#06c755', href: 'https://line.me/' },
+  },
+  {
+    id: 'social-floating-kakao',
+    label: 'Kakao floating',
+    description: '카카오 플로팅',
+    icon: 'K',
+    kind: 'floating-chat',
+    width: 64,
+    height: 64,
+    content: { provider: 'kakao', color: '#fee500', href: 'https://pf.kakao.com/' },
+  },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -1459,6 +1555,24 @@ function navigationWidgetMatchesSearch(preset: NavigationWidgetPreset, query: st
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function socialWidgetMatchesSearch(preset: SocialWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'social widget',
+    'instagram',
+    'youtube',
+    'linkedin',
+    'whatsapp',
+    'line',
+    'kakao',
+    'share',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
@@ -1503,6 +1617,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     () => NAVIGATION_WIDGET_PRESETS.filter((preset) => navigationWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
+  const visibleSocialWidgetPresets = useMemo(
+    () => SOCIAL_WIDGET_PRESETS.filter((preset) => socialWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -1537,8 +1655,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -1642,6 +1760,31 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         ...(preset.style ?? {}),
       },
       anchorName: preset.id === 'layout-sticky-anchor' ? 'services' : seed.anchorName,
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddSocialWidgetPreset(preset: SocialWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
     } as BuilderCanvasNode;
 
     addNode(node);
@@ -2049,6 +2192,56 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                     className={styles.mediaWidgetPresetButton}
                     data-builder-navigation-widget-preset={preset.id}
                     onClick={() => handleAddNavigationWidgetPreset(preset)}
+                  >
+                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.mediaWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleSocialWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['social-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'social-widgets': !(current['social-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>@</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Social widget pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    social-bar, share, embed, floating chat · {visibleSocialWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['social-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['social-widgets'] ?? true) ? (
+              <div className={styles.mediaWidgetGrid}>
+                {visibleSocialWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.mediaWidgetPresetButton}
+                    data-builder-social-widget-preset={preset.id}
+                    onClick={() => handleAddSocialWidgetPreset(preset)}
                   >
                     <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
                     <span className={styles.mediaWidgetPresetCopy}>

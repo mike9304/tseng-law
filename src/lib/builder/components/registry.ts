@@ -72,3 +72,9 @@ import './backToTop';
 import './menuBar';
 import './anchorMenu';
 import './breadcrumbs';
+
+// Phase 17 — Social widgets
+import './socialBar';
+import './shareButtons';
+import './socialEmbed';
+import './floatingChat';

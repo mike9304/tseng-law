@@ -3277,3 +3277,19 @@ Prompt-to-artifact 체크:
 - globals.css builder-nav-* 스타일 + 767px 미만 햄버거 + mobile 메뉴 dropdown.
 
 검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.
+
+## 2026-05-11 Claude M17 Social 위젯 팩
+
+범위:
+- M17 (W106~W113). 4 신규 kind (social-bar / share-buttons / social-embed /
+  floating-chat). 카탈로그 Social widget pack 8 프리셋.
+- social-bar: instagram/facebook/twitter/threads/youtube/linkedin/tiktok/whatsapp/
+  line/kakao/naver/x 12 provider 글리프.
+- share-buttons: copy(navigator.clipboard) + facebook/twitter/kakao/line/whatsapp/
+  email sharer URL + window.open popup.
+- social-embed: provider별 placeholder grid (실제 SDK 로드는 외부 트랙 또는
+  customEmbed 사용).
+- floating-chat: WhatsApp/LINE/Kakao/Telegram/Messenger/custom 프로바이더 + 색
+  fallback + placement.
+
+검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.

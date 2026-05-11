@@ -3987,3 +3987,41 @@ shipping. Claude 라운드는 admin UI 만 추가.
   로 교체하고 finalRules 단계에서 배열 보장.
 
 검증: typecheck ✅ / unit 823 ✅.
+
+## 2026-05-11 Claude PR #18 — Backup / 복구 cron
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.18. Vercel Blob + file 양쪽 백엔드에서
+모든 JSON 컬렉션 스냅샷 + 복원.
+
+**lib**
+- backups/types.ts — BackupManifest / BackupEntry / BackupSummary.
+- backups/registry.ts — BACKUP_SOURCES 11종 prefix
+  (builder-site, builder-bookings, builder-forms, marketing, search, webhooks,
+  errors, migrations, members, crm, analytics).
+- backups/backup-engine.ts — createBackupSnapshot 가 모든 source 를 walk →
+  단일 JSON manifest 로 저장 (`backups/${id}.json`). 30일 retention
+  (pruneOldBackups). blob 모드는 list + get, file 모드는 디렉토리 walk.
+- backups/restore-engine.ts — manifest 의 entries 를 원래 key 로 다시 write.
+  dryRun 지원.
+
+**Admin API (permission: 'settings')**
+- GET  /api/builder/backups — 목록.
+- POST /api/builder/backups — 수동 백업.
+- GET  /api/builder/backups/[id] — 메타데이터 (entries 제외, payload 거대화 방지).
+- POST /api/builder/backups/[id]/restore — `{ confirm: "RESTORE" }` 필수.
+
+**Cron**
+- /api/cron/backup — CRON_SECRET 인증 후 createBackupSnapshot({triggeredBy:'cron'}).
+  Vercel cron 매일 1회 예약 가능.
+
+**Admin UI**
+- /[locale]/admin-builder/backups — 백업 목록 + "지금 백업" + 복원 버튼.
+
+**Tests**
+- backups/__tests__/registry.test.ts × 3 (모든 feature surface 포함, 중복 없음,
+  trailing-slash convention).
+
+검증: typecheck ✅ / unit 826 ✅.
+
+남은 항목: vercel.json 또는 vercel.ts 에 cron 등록 (현재는 라우트만 존재),
+restore-from-backup.mjs CLI 스크립트.

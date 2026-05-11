@@ -680,6 +680,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const headerRegion = page.locator('[class*="globalHeaderRegion"]').first();
     const editableMenuItem = headerRegion.locator('[data-builder-nav-item-id]').filter({ hasText: /업무분야|호정소개|칼럼|Home|About|Services/ }).first();
     await expect(editableMenuItem).toBeVisible();
+    const menuItemId = await editableMenuItem.getAttribute('data-builder-nav-item-id');
+    expect(menuItemId).toBeTruthy();
     const headerEditMenuButton = headerRegion.getByRole('button', { name: 'Edit menu' });
     await expect(headerEditMenuButton).toBeVisible();
     await editableMenuItem.hover();
@@ -692,27 +694,28 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     );
     await expect(headerEditMenuButton).toBeVisible();
     await headerEditMenuButton.click();
-    const navDrawer = page.locator('[aria-hidden="false"]').first();
+    const navDrawer = page.locator('aside[aria-hidden="false"]').first();
     await expect(navDrawer.getByText('Navigation').first()).toBeVisible();
     await editableMenuItem.hover();
     const servicesMegaPanel = builderHeader.locator('.mega-panel.active').first();
     await expect(servicesMegaPanel).toContainText('투자·법인설립');
     const editDropdownButton = servicesMegaPanel.getByRole('button', { name: 'Edit dropdown' });
     await expect(editDropdownButton).toBeVisible();
-    await expect(builderHeader.locator('[data-builder-nav-item-id="nav-services-investment"]').first()).toBeVisible();
+    const servicesInvestmentMegaLink = servicesMegaPanel
+      .locator('[data-builder-nav-item-id="nav-services-investment"]')
+      .first();
+    await expect(servicesInvestmentMegaLink).toBeVisible();
     const servicesInvestmentRow = navDrawer.locator('[data-builder-nav-item-row="nav-services-investment"]').first();
     await expect(servicesInvestmentRow).toBeVisible();
     await expect(servicesInvestmentRow).toContainText('Mega');
     await expect(servicesInvestmentRow).toContainText('투자·법인설립');
     await editDropdownButton.click();
     await expect(servicesMegaPanel.locator('[data-builder-mega-editing-chip="true"]')).toContainText('Dropdown editing');
-    await expect(navDrawer.locator('[data-builder-nav-edit-id="nav-services"]').first()).toBeVisible();
+    await expect(navDrawer.locator(`[data-builder-nav-edit-id="${menuItemId}"]`).first()).toBeVisible();
     await page.mouse.move(28, 220);
     await expect(headerEditMenuButton).toBeVisible();
     await expect(builderHeader.locator('.mega-panel.active').first()).toContainText('투자·법인설립');
     await expect(servicesMegaPanel.locator('[data-builder-mega-editing-chip="true"]')).toBeVisible();
-    const menuItemId = await editableMenuItem.getAttribute('data-builder-nav-item-id');
-    expect(menuItemId).toBeTruthy();
     await editableMenuItem.click();
     await expect(servicesMegaPanel).toContainText('투자·법인설립');
     await expect(servicesMegaPanel.getByRole('button', { name: 'Edit dropdown' })).toBeVisible();
@@ -723,12 +726,12 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     expect(originalNavLabel).toBeTruthy();
     await expect(navLabelInput).toHaveValue(originalNavLabel || '');
     await editableMenuItem.hover();
-    await builderHeader.locator('[data-builder-nav-item-id="nav-services-investment"]').first().click();
+    await servicesInvestmentMegaLink.click();
     await expect(navLabelInput).toHaveValue('투자·법인설립');
     const originalNavigation = await navigationFromApi(page);
     try {
       await servicesMegaPanel.getByRole('button', { name: 'Add menu item' }).click();
-      await expect(navDrawer.locator('[data-builder-nav-edit-id^="nav-services-child-"]').first()).toBeVisible();
+      await expect(navDrawer.locator(`[data-builder-nav-edit-id^="${menuItemId}-child-"]`).first()).toBeVisible();
     } finally {
       await restoreNavigation(page, originalNavigation);
     }

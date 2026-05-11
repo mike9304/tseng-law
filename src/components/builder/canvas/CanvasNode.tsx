@@ -326,26 +326,29 @@ export default function CanvasNode({
   const nestedChildren = childIds
     .map((cid) => nodesById.get(cid))
     .filter((n): n is BuilderCanvasNode => n != null && n.visible);
-  const findSelfOrAncestor = (pattern: RegExp) => {
-    let cursor: string | null = node.id;
+  const findNodeOrAncestor = (startId: string, pattern: RegExp) => {
+    let cursor: string | null = startId;
     while (cursor) {
       if (pattern.test(cursor)) return cursor;
       cursor = nodesById.get(cursor)?.parentId ?? null;
     }
     return null;
   };
+  const findSelfOrAncestor = (pattern: RegExp) => findNodeOrAncestor(node.id, pattern);
   const serviceCardAncestorId = findSelfOrAncestor(/^home-services-card-\d+$/);
   const serviceCardMatch = /^home-services-card-(\d+)/.exec(serviceCardAncestorId ?? node.id);
   const selectedServiceCards = new Set(
     selectedNodeIds
-      .map((selectedId) => /^home-services-card-(\d+)/.exec(selectedId)?.[1])
+      .map((selectedId) => findNodeOrAncestor(selectedId, /^home-services-card-\d+$/))
+      .map((selectedId) => /^home-services-card-(\d+)/.exec(selectedId ?? '')?.[1])
       .filter((value): value is string => Boolean(value)),
   );
   const faqItemAncestorId = findSelfOrAncestor(/^home-faq-item-\d+$/);
   const faqItemMatch = /^home-faq-item-(\d+)/.exec(faqItemAncestorId ?? node.id);
   const selectedFaqItems = new Set(
     selectedNodeIds
-      .map((selectedId) => /^home-faq-item-(\d+)/.exec(selectedId)?.[1])
+      .map((selectedId) => findNodeOrAncestor(selectedId, /^home-faq-item-\d+$/))
+      .map((selectedId) => /^home-faq-item-(\d+)/.exec(selectedId ?? '')?.[1])
       .filter((value): value is string => Boolean(value)),
   );
   const serviceCardIndex = serviceCardMatch?.[1] != null ? Number(serviceCardMatch[1]) : null;

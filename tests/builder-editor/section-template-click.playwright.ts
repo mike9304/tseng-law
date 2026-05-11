@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { openBuilder } from './helpers/editor';
+import { openBuilder, openCatalogDrawer } from './helpers/editor';
 
 test.describe('/ko/admin-builder section design templates', () => {
   test('lets users click a section chip before applying a design template', async ({ page }) => {
@@ -33,5 +33,42 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
     await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
+  });
+
+  test('keeps inserted service template text visible while selecting nested nodes', async ({ page }) => {
+    await openBuilder(page, `/ko/admin-builder?builtInServiceTemplate=${Date.now().toString(36)}`);
+    await page.keyboard.press('Escape');
+
+    const catalogDrawer = await openCatalogDrawer(page);
+    await expect(catalogDrawer.getByText('Section templates')).toBeVisible();
+    const serviceTemplateButton = catalogDrawer.getByTitle('Service Accordion 섹션 추가');
+    await serviceTemplateButton.scrollIntoViewIfNeeded();
+    await expect(serviceTemplateButton).toBeVisible();
+    await serviceTemplateButton.click();
+
+    const insertedTitle = page.getByText('서비스 상세를 단계별로 펼쳐 보게 합니다').last();
+    const scopeTitle = page.getByText('Scope', { exact: true }).last();
+    const processTitle = page.getByText('Process', { exact: true }).last();
+    const deliverablesTitle = page.getByText('Deliverables', { exact: true }).last();
+    const scopeBody = page.getByText('포함 범위와 제외 범위를 명확히 합니다.').last();
+    const processBody = page.getByText('진행 단계와 담당 역할을 설명합니다.').last();
+    const deliverablesBody = page.getByText('최종 산출물을 구체적으로 안내합니다.').last();
+
+    await expect(insertedTitle).toBeVisible();
+    await expect(scopeTitle).toBeVisible();
+    await expect(processTitle).toBeVisible();
+    await expect(deliverablesTitle).toBeVisible();
+
+    await insertedTitle.click({ force: true });
+    await expect(scopeBody).toBeVisible();
+
+    await scopeTitle.click({ force: true });
+    await expect(scopeBody).toBeVisible();
+
+    await processTitle.click({ force: true });
+    await expect(processBody).toBeVisible();
+
+    await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await expect(deliverablesBody).toBeVisible();
   });
 });

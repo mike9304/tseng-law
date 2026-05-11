@@ -15,7 +15,9 @@
     "eval:consultation": "vite-node --root . --config vitest.config.ts scripts/run-consultation-eval.ts",
     "security:builder-routes": "node scripts/assert-builder-route-guards.mjs",
     "smoke:builder": "node scripts/smoke-builder-api.mjs",
-    "qa": "npm run typecheck && npm run lint && npm run test:unit && npm run security:builder-routes"
+    "qa": "npm run typecheck && npm run lint && npm run test:unit && npm run security:builder-routes",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build -o storybook-static"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
@@ -45,12 +47,15 @@
     "@axe-core/playwright": "^4.11.3",
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.59.1",
+    "@storybook/nextjs": "^8.6.18",
+    "@storybook/react": "^8.6.18",
     "@types/node": "^20.11.0",
     "@types/nodemailer": "^7.0.11",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.0",
+    "storybook": "^8.6.18",
     "typescript": "^5.4.0",
     "vitest": "^3.2.4"
   }

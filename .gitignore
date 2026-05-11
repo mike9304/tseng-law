@@ -26,6 +26,9 @@ test-results/
 playwright-report/
 .lighthouseci/
 
+# storybook build output
+storybook-static/
+
 # data
 data/reviews.json
 data/audit/

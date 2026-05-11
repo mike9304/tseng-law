@@ -36,7 +36,7 @@ interface GuardOptions {
  * basic-auth is treated as the implicit `owner` role. Keeping this
  * indirection lets us swap in real RBAC without rewriting route call sites.
  */
-function resolveRoleForAdmin(_username: string): UserRole {
+function resolveRoleForAdmin(): UserRole {
   return 'owner';
 }
 
@@ -66,7 +66,7 @@ export function guardMutation(
 
   // 3. Permission gate
   if (options.permission) {
-    const role = resolveRoleForAdmin(auth.username);
+    const role = resolveRoleForAdmin();
     if (!hasBuilderPermission(role, options.permission)) {
       return Promise.resolve(
         NextResponse.json(

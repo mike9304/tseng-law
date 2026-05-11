@@ -2,7 +2,6 @@ import type { Campaign } from './campaign-types';
 import type { Subscriber } from './subscriber-types';
 import {
   getCampaign,
-  getRecipient,
   listRecipientsForCampaign,
   saveCampaign,
   saveRecipient,

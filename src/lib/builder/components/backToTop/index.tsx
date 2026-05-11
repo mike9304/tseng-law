@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderBackToTopCanvasNode } from '@/lib/builder/canvas/types';

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderNotificationBarCanvasNode } from '@/lib/builder/canvas/types';

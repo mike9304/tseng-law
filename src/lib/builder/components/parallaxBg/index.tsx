@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderParallaxBgCanvasNode } from '@/lib/builder/canvas/types';

@@ -71,6 +71,10 @@ type TextWidgetKind = Extract<BuilderCanvasNodeKind, 'text' | 'heading'>;
 type MediaWidgetKind = Extract<BuilderCanvasNodeKind, 'image' | 'video' | 'video-embed' | 'audio' | 'lottie' | 'icon'>;
 type GalleryWidgetKind = Extract<BuilderCanvasNodeKind, 'gallery'>;
 type LayoutWidgetKind = Extract<BuilderCanvasNodeKind, 'container'>;
+type InteractiveWidgetKind = Extract<
+  BuilderCanvasNodeKind,
+  'countdown' | 'progress' | 'rating' | 'notification-bar' | 'back-to-top'
+>;
 
 interface TextWidgetPreset {
   id: string;
@@ -114,6 +118,18 @@ interface LayoutWidgetPreset {
   description: string;
   icon: string;
   kind: LayoutWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+interface InteractiveWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: InteractiveWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -991,6 +1007,180 @@ const LAYOUT_WIDGET_PRESETS: LayoutWidgetPreset[] = [
   },
 ];
 
+const INTERACTIVE_WIDGET_PRESETS: InteractiveWidgetPreset[] = [
+  {
+    id: 'interactive-countdown-card',
+    label: 'Countdown card',
+    description: '카드형 카운트다운',
+    icon: 'CD',
+    kind: 'countdown',
+    width: 360,
+    height: 140,
+    content: {
+      label: '오픈까지',
+      targetAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
+      variant: 'card',
+      showDays: true,
+      showHours: true,
+      showMinutes: true,
+      showSeconds: true,
+    },
+  },
+  {
+    id: 'interactive-countdown-compact',
+    label: 'Countdown compact',
+    description: '컴팩트 카운트다운',
+    icon: 'CC',
+    kind: 'countdown',
+    width: 260,
+    height: 60,
+    content: {
+      label: '마감',
+      targetAt: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+      variant: 'compact',
+      showDays: false,
+      showHours: true,
+      showMinutes: true,
+      showSeconds: true,
+    },
+  },
+  {
+    id: 'interactive-progress-bar',
+    label: 'Progress bar',
+    description: '진행 바',
+    icon: 'PB',
+    kind: 'progress',
+    width: 320,
+    height: 70,
+    content: {
+      label: '진행률',
+      value: 60,
+      showPercent: true,
+      variant: 'bar',
+      color: '#1d4ed8',
+      trackColor: '#e2e8f0',
+    },
+  },
+  {
+    id: 'interactive-progress-ring',
+    label: 'Progress ring',
+    description: '원형 진행률',
+    icon: 'PR',
+    kind: 'progress',
+    width: 180,
+    height: 180,
+    content: {
+      label: '진행률',
+      value: 72,
+      showPercent: true,
+      variant: 'ring',
+      color: '#10b981',
+      trackColor: '#e2e8f0',
+    },
+  },
+  {
+    id: 'interactive-progress-segments',
+    label: 'Progress segments',
+    description: '세그먼트 진행률',
+    icon: 'PS',
+    kind: 'progress',
+    width: 320,
+    height: 80,
+    content: {
+      label: '단계',
+      value: 50,
+      showPercent: false,
+      variant: 'segments',
+      color: '#0f172a',
+      trackColor: '#e2e8f0',
+    },
+  },
+  {
+    id: 'interactive-rating-stars',
+    label: 'Star rating',
+    description: '별점 (5/5)',
+    icon: '★',
+    kind: 'rating',
+    width: 260,
+    height: 80,
+    content: {
+      label: '의뢰인 만족도',
+      value: 4.8,
+      max: 5,
+      showValue: true,
+      color: '#f59e0b',
+      variant: 'stars',
+    },
+  },
+  {
+    id: 'interactive-rating-hearts',
+    label: 'Heart rating',
+    description: '하트 평점',
+    icon: '♥',
+    kind: 'rating',
+    width: 260,
+    height: 80,
+    content: {
+      label: '추천도',
+      value: 4.2,
+      max: 5,
+      showValue: true,
+      color: '#ef4444',
+      variant: 'hearts',
+    },
+  },
+  {
+    id: 'interactive-notification-bar-info',
+    label: 'Notification bar',
+    description: '상단 공지 바',
+    icon: 'NB',
+    kind: 'notification-bar',
+    width: 720,
+    height: 56,
+    content: {
+      message: '한국·대만 자문 신규 시간대를 추가했습니다.',
+      ctaLabel: '자세히',
+      ctaHref: '/ko/contact',
+      dismissable: true,
+      tone: 'info',
+      position: 'top',
+    },
+  },
+  {
+    id: 'interactive-notification-bar-warning',
+    label: 'Notice bar (warning)',
+    description: '경고 톤 바',
+    icon: 'NW',
+    kind: 'notification-bar',
+    width: 720,
+    height: 56,
+    content: {
+      message: '추석 연휴 동안 일부 상담 시간이 제한됩니다.',
+      ctaLabel: '일정 확인',
+      ctaHref: '',
+      dismissable: true,
+      tone: 'warning',
+      position: 'top',
+    },
+  },
+  {
+    id: 'interactive-back-to-top',
+    label: 'Back to top',
+    description: '맨 위로 버튼',
+    icon: '↑',
+    kind: 'back-to-top',
+    width: 72,
+    height: 72,
+    content: {
+      label: '맨 위로',
+      showAfterPx: 400,
+      icon: 'arrow-up',
+      placement: 'bottom-right',
+      variant: 'circle',
+    },
+  },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -1089,6 +1279,22 @@ function layoutWidgetMatchesSearch(preset: LayoutWidgetPreset, query: string): b
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function interactiveWidgetMatchesSearch(preset: InteractiveWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'interactive widget',
+    'countdown',
+    'progress',
+    'rating',
+    'notification',
+    'back to top',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
@@ -1125,6 +1331,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     () => LAYOUT_WIDGET_PRESETS.filter((preset) => layoutWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
+  const visibleInteractiveWidgetPresets = useMemo(
+    () => INTERACTIVE_WIDGET_PRESETS.filter((preset) => interactiveWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -1159,8 +1369,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -1264,6 +1474,31 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         ...(preset.style ?? {}),
       },
       anchorName: preset.id === 'layout-sticky-anchor' ? 'services' : seed.anchorName,
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddInteractiveWidgetPreset(preset: InteractiveWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
     } as BuilderCanvasNode;
 
     addNode(node);
@@ -1521,6 +1756,56 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                     className={styles.mediaWidgetPresetButton}
                     data-builder-layout-widget-preset={preset.id}
                     onClick={() => handleAddLayoutWidgetPreset(preset)}
+                  >
+                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.mediaWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleInteractiveWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['interactive-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'interactive-widgets': !(current['interactive-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>◉</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Interactive widget pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    countdown, progress, rating, notification, back-to-top · {visibleInteractiveWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['interactive-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['interactive-widgets'] ?? true) ? (
+              <div className={styles.mediaWidgetGrid}>
+                {visibleInteractiveWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.mediaWidgetPresetButton}
+                    data-builder-interactive-widget-preset={preset.id}
+                    onClick={() => handleAddInteractiveWidgetPreset(preset)}
                   >
                     <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
                     <span className={styles.mediaWidgetPresetCopy}>

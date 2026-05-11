@@ -3174,3 +3174,41 @@ Prompt-to-artifact 체크:
 - `BASE_URL=...` Playwright 실행은 이 환경에서 dev server 띄울 수 없어 보류.
   다음 코덱스 turn 또는 사용자가 `npm run test:builder-editor -- layout-widgets`
   로 실행 권장.
+
+## 2026-05-11 Claude M15 Interactive 위젯 팩 1차 (canvas widgets)
+
+범위:
+- M15 `Interactive 위젯 팩` 1차 분 (canvas-level widgets 5종) 완료.
+- W95 Countdown (kind=countdown, card/compact/inline variant + 자동 1초 tick),
+  W96 Progress (kind=progress, bar/ring/segments + SVG ring + percent toggle),
+  W97 Rating (kind=rating, stars/hearts/dots + fractional fill mask),
+  W93 Notification bar (kind=notification-bar, info/warning/success/danger tone +
+  CTA + dismissable + 자체 useState 닫힘 상태),
+  W98 Back to top (kind=back-to-top, scroll listener + smooth scrollTo + circle/
+  pill/square variant + show-after-px gate).
+- W90 Icon button / W89 Button variants 는 기존 button kind에 흡수 — 추가 kind 없음.
+- W91 Lightbox modal / W92 Popup with trigger / W94 Cookie consent 는 site-level
+  entity 가 필요하므로 M15-2 분으로 분리한다 (코덱스 lightboxes 패턴 확장).
+- 카탈로그 패널에 `Interactive widget pack` 섹션 + 프리셋 10종 (countdown card·
+  compact, progress bar·ring·segments, rating stars·hearts, notification info·
+  warning, back-to-top).
+- globals.css 에 builder-interactive-* 스타일 ~200줄 (countdown segments / progress
+  bar·ring·segments / rating fractional fill / notification tone palette / back-
+  to-top variant placement) 추가.
+- Playwright `tests/builder-editor/interactive-widgets.playwright.ts` 신규.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅
+- `npm run test:unit` ✅ 36 files / 769 tests
+- `npm run security:builder-routes` ✅ 71 routes / 62 mutation handlers
+- Playwright dev server 보류 (M14와 동일 환경 한계 — `npm run test:builder-editor
+  -- interactive-widgets` 로 별도 실행).
+
+메모:
+- W95~W98 evidence green. W90/W89 는 기존 button kind 흡수로 close. W91/W92/W94
+  는 M15-2 site-level 분으로 남긴다.
+- Notification bar 의 CTA href 검증은 sanitizeLinkValue 시그니처 불일치로 inline
+  `safeHref(raw)` 헬퍼 사용 (http/https/mailto/tel/relative/anchor 만 허용).
+- Countdown setInterval cleanup은 mode==='edit' 일 때 등록하지 않는다 (편집
+  중에는 정적 미리보기로 충분).

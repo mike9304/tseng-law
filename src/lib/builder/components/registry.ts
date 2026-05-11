@@ -60,3 +60,10 @@ import './blogPostCard';
 import './blogCategories';
 import './blogArchive';
 import './featuredPosts';
+
+// Phase 15 — Interactive widgets
+import './countdown';
+import './progress';
+import './rating';
+import './notificationBar';
+import './backToTop';

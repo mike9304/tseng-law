@@ -70,6 +70,12 @@ export const builderCanvasNodeKinds = [
   'contactForm',
   'ctaBanner',
   'booking-widget',
+  // Phase 15 — Interactive widgets
+  'countdown',
+  'progress',
+  'rating',
+  'notification-bar',
+  'back-to-top',
 ] as const;
 
 /**
@@ -984,6 +990,69 @@ const bookingWidgetCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+// ─── Phase 15 — Interactive widgets ──────────────────────────────
+
+const countdownCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('countdown'),
+  content: z.object({
+    targetAt: z.string().max(50).default(''),
+    label: z.string().max(120).default('카운트다운'),
+    expiredText: z.string().max(120).default('마감되었습니다'),
+    showDays: z.boolean().default(true),
+    showHours: z.boolean().default(true),
+    showMinutes: z.boolean().default(true),
+    showSeconds: z.boolean().default(true),
+    variant: z.enum(['compact', 'card', 'inline']).default('card'),
+  }),
+});
+
+const progressCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('progress'),
+  content: z.object({
+    label: z.string().max(120).default('진행률'),
+    value: z.number().min(0).max(100).default(60),
+    showPercent: z.boolean().default(true),
+    variant: z.enum(['bar', 'ring', 'segments']).default('bar'),
+    color: z.string().max(60).default('#1d4ed8'),
+    trackColor: z.string().max(60).default('#e2e8f0'),
+  }),
+});
+
+const ratingCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('rating'),
+  content: z.object({
+    label: z.string().max(120).default('별점'),
+    value: z.number().min(0).max(5).default(4.5),
+    max: z.number().int().min(3).max(10).default(5),
+    showValue: z.boolean().default(true),
+    color: z.string().max(60).default('#f59e0b'),
+    variant: z.enum(['stars', 'hearts', 'dots']).default('stars'),
+  }),
+});
+
+const notificationBarCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('notification-bar'),
+  content: z.object({
+    message: z.string().max(280).default('새 공지가 도착했습니다.'),
+    ctaLabel: z.string().max(60).default('자세히 보기'),
+    ctaHref: z.string().max(2000).default(''),
+    dismissable: z.boolean().default(true),
+    tone: z.enum(['info', 'warning', 'success', 'danger']).default('info'),
+    position: z.enum(['top', 'bottom']).default('top'),
+  }),
+});
+
+const backToTopCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('back-to-top'),
+  content: z.object({
+    label: z.string().max(40).default('맨 위로'),
+    showAfterPx: z.number().int().min(0).max(4000).default(400),
+    icon: z.enum(['arrow-up', 'chevron-up', 'rocket']).default('arrow-up'),
+    placement: z.enum(['bottom-right', 'bottom-left', 'bottom-center']).default('bottom-right'),
+    variant: z.enum(['circle', 'pill', 'square']).default('circle'),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
@@ -1023,6 +1092,11 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   contactFormCanvasNodeSchema,
   ctaBannerCanvasNodeSchema,
   bookingWidgetCanvasNodeSchema,
+  countdownCanvasNodeSchema,
+  progressCanvasNodeSchema,
+  ratingCanvasNodeSchema,
+  notificationBarCanvasNodeSchema,
+  backToTopCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -1063,6 +1137,11 @@ export type BuilderFaqListCanvasNode = z.infer<typeof faqListCanvasNodeSchema>;
 export type BuilderContactFormCanvasNode = z.infer<typeof contactFormCanvasNodeSchema>;
 export type BuilderCtaBannerCanvasNode = z.infer<typeof ctaBannerCanvasNodeSchema>;
 export type BuilderBookingWidgetCanvasNode = z.infer<typeof bookingWidgetCanvasNodeSchema>;
+export type BuilderCountdownCanvasNode = z.infer<typeof countdownCanvasNodeSchema>;
+export type BuilderProgressCanvasNode = z.infer<typeof progressCanvasNodeSchema>;
+export type BuilderRatingCanvasNode = z.infer<typeof ratingCanvasNodeSchema>;
+export type BuilderNotificationBarCanvasNode = z.infer<typeof notificationBarCanvasNodeSchema>;
+export type BuilderBackToTopCanvasNode = z.infer<typeof backToTopCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({

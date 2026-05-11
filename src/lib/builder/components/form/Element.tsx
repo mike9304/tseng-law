@@ -12,6 +12,7 @@ import {
 import { BuilderFormRuntimeProvider } from '@/lib/builder/forms/runtime-context';
 import type { FormValues } from '@/lib/builder/forms/conditional';
 import { getDefaultValidationMessage } from '@/lib/builder/forms/render-helpers';
+import type { FormSubmissionFile } from '@/lib/builder/forms/form-engine';
 
 interface FormElementProps {
   node: BuilderFormCanvasNode;
@@ -247,15 +248,21 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
 
     setStatus('submitting');
     try {
+      const locale = typeof window !== 'undefined'
+        ? window.location.pathname.split('/').filter(Boolean)[0] || 'ko'
+        : 'ko';
+      const files = await uploadFormFiles(formEl, locale);
       const res = await fetch('/api/forms/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          formId: content.name,
           formName: content.name,
           submitTo: content.submitTo,
           targetEmail: content.targetEmail,
           webhookUrl: content.webhookUrl,
           fields,
+          files,
           loadedAt: loadedAtRef.current,
           submittedAt: Date.now(),
           pageSlug: typeof window !== 'undefined' ? window.location.pathname : '',
@@ -275,8 +282,8 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
       if (content.redirectUrl && typeof window !== 'undefined') {
         window.location.href = content.redirectUrl;
       }
-    } catch {
-      setErrorMsg('네트워크 오류가 발생했습니다.');
+    } catch (error) {
+      setErrorMsg(error instanceof Error ? error.message : '네트워크 오류가 발생했습니다.');
       setStatus('error');
     }
   }
@@ -406,8 +413,52 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
       }
     }
 
+    const signatureFields = Array.from(
+      formEl.querySelectorAll<HTMLElement>('[data-builder-form-widget="signature"][data-builder-form-name]'),
+    );
+    for (const signature of signatureFields) {
+      const name = signature.getAttribute('data-builder-form-name') ?? '';
+      const required = signature.getAttribute('aria-required') === 'true';
+      const hidden = signature.closest<HTMLElement>('.builder-pub-node')?.style.display === 'none';
+      const hasInk = signature.getAttribute('data-builder-signature-has-ink') === 'true';
+      if (name && required && !hidden && !hasInk) {
+        errors[name] = '필수 입력 항목입니다.';
+      }
+    }
+
     return errors;
   }
+}
+
+async function uploadFormFiles(formEl: HTMLFormElement, locale: string): Promise<FormSubmissionFile[]> {
+  const uploads: FormSubmissionFile[] = [];
+  const inputs = Array.from(formEl.querySelectorAll<HTMLInputElement>('input[type="file"][name]'));
+
+  for (const input of inputs) {
+    const wrapper = input.closest<HTMLElement>('.builder-pub-node');
+    if (wrapper && wrapper.style.display === 'none') continue;
+    for (const file of Array.from(input.files ?? [])) {
+      if (file.size <= 0) continue;
+      const body = new FormData();
+      body.set('fieldId', input.name);
+      body.set('locale', locale);
+      body.set('file', file);
+      const response = await fetch('/api/forms/uploads', {
+        method: 'POST',
+        body,
+      });
+      const payload = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        file?: FormSubmissionFile;
+      };
+      if (!response.ok || !payload.file) {
+        throw new Error(payload.error || '파일 업로드에 실패했습니다.');
+      }
+      uploads.push(payload.file);
+    }
+  }
+
+  return uploads;
 }
 
 function stepButtonStyle(disabled: boolean): React.CSSProperties {

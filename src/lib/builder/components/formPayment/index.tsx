@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderFormPaymentCanvasNode } from '@/lib/builder/canvas/types';
 
@@ -22,6 +25,33 @@ function FormPaymentRender({
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
+
+  async function startPayment() {
+    if (mode === 'edit') return;
+    if (c.provider === 'manual') {
+      setStatus('idle');
+      return;
+    }
+    setStatus('loading');
+    const response = await fetch('/api/forms/stripe-checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        amountCents: c.amountCents,
+        currency: c.currency,
+        description: c.description || c.label,
+        successUrl: c.successUrl || undefined,
+        cancelUrl: c.cancelUrl || undefined,
+      }),
+    });
+    const payload = (await response.json().catch(() => ({}))) as { url?: string };
+    if (response.ok && payload.url && typeof window !== 'undefined') {
+      window.location.href = payload.url;
+      return;
+    }
+    setStatus('error');
+  }
 
   return (
     <fieldset
@@ -35,14 +65,16 @@ function FormPaymentRender({
         <strong>{formatAmount(c.amountCents, c.currency)}</strong>
         <small>{c.description}</small>
       </div>
-      <button type="button" disabled={mode === 'edit'}>
-        {c.provider === 'manual' ? '계좌 안내 보기' : 'Stripe로 결제 진행'}
+      <button type="button" disabled={mode === 'edit' || status === 'loading'} onClick={startPayment}>
+        {status === 'loading' ? '결제 준비 중...' : c.provider === 'manual' ? '계좌 안내 보기' : 'Stripe로 결제 진행'}
       </button>
+      <input type="hidden" name={c.name} value={`${c.provider}:${c.currency}:${c.amountCents}`} readOnly />
       {c.showSecurityNote ? (
         <small className="builder-form-payment-security">
           결제는 외부 PG(Stripe)에서 안전하게 처리됩니다.
         </small>
       ) : null}
+      {status === 'error' ? <small role="alert">Stripe 설정을 확인해 주세요.</small> : null}
     </fieldset>
   );
 }

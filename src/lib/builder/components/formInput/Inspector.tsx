@@ -14,6 +14,14 @@ const selectStyle: React.CSSProperties = {
   background: '#fff',
 };
 
+const CONDITION_OPTIONS = [
+  { value: 'equals', label: 'equals' },
+  { value: 'notEquals', label: 'not equals' },
+  { value: 'contains', label: 'contains' },
+  { value: 'isEmpty', label: 'is empty' },
+  { value: 'isNotEmpty', label: 'is not empty' },
+] as const;
+
 export default function FormInputInspector({
   node,
   onUpdate,
@@ -139,6 +147,53 @@ export default function FormInputInspector({
           placeholder="^[a-zA-Z0-9]+$"
         />
       </label>
+      {c.type === 'number' ? (
+        <>
+          <label>
+            <span>Minimum</span>
+            <input
+              type="number"
+              value={c.numericMin ?? ''}
+              disabled={disabled}
+              onChange={(event) =>
+                onUpdate({ numericMin: event.target.value === '' ? undefined : Number(event.target.value) })
+              }
+            />
+          </label>
+          <label>
+            <span>Maximum</span>
+            <input
+              type="number"
+              value={c.numericMax ?? ''}
+              disabled={disabled}
+              onChange={(event) =>
+                onUpdate({ numericMax: event.target.value === '' ? undefined : Number(event.target.value) })
+              }
+            />
+          </label>
+          <label>
+            <span>Step</span>
+            <input
+              type="number"
+              min={0}
+              value={c.numericStep ?? ''}
+              disabled={disabled}
+              onChange={(event) =>
+                onUpdate({ numericStep: event.target.value === '' ? undefined : Number(event.target.value) })
+              }
+            />
+          </label>
+          <label>
+            <span>Allow decimals</span>
+            <input
+              type="checkbox"
+              checked={c.allowDecimals}
+              disabled={disabled}
+              onChange={(event) => onUpdate({ allowDecimals: event.target.checked })}
+            />
+          </label>
+        </>
+      ) : null}
       <label>
         <span>Show if field</span>
         <input
@@ -155,6 +210,23 @@ export default function FormInputInspector({
           }
         />
       </label>
+      {c.showIf ? (
+        <label>
+          <span>Condition</span>
+          <select
+            style={selectStyle}
+            value={c.showIf.operator}
+            disabled={disabled}
+            onChange={(event) => onUpdate({ showIf: { ...c.showIf!, operator: event.target.value as typeof c.showIf.operator } })}
+          >
+            {CONDITION_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      ) : null}
       <label>
         <span>Show if value</span>
         <input

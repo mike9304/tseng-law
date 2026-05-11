@@ -61,6 +61,15 @@ export default function FormSchemaEditor({ initialSchema }: Props) {
     }));
   }
 
+  function updateFieldValidation(id: string, patch: NonNullable<FormField['validation']>) {
+    setSchema((s) => ({
+      ...s,
+      fields: s.fields.map((f) => (
+        f.id === id ? { ...f, validation: { ...(f.validation ?? {}), ...patch } } : f
+      )),
+    }));
+  }
+
   function addField() {
     const newField: FormField = {
       id: makeFieldId(),
@@ -246,6 +255,104 @@ export default function FormSchemaEditor({ initialSchema }: Props) {
                       onChange={(e) => updateField(field.id, { options: e.target.value.split(',').map((s) => s.trim()).filter(Boolean) })}
                       style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
                     />
+                  ) : null}
+
+                  {field.type === 'text' || field.type === 'email' || field.type === 'phone' || field.type === 'textarea' ? (
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 6 }}>
+                      <input
+                        type="number"
+                        placeholder="min length"
+                        value={field.validation?.minLength ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { minLength: e.target.value === '' ? undefined : Number(e.target.value) })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                      <input
+                        type="number"
+                        placeholder="max length"
+                        value={field.validation?.maxLength ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { maxLength: e.target.value === '' ? undefined : Number(e.target.value) })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                      <input
+                        type="text"
+                        placeholder="regex pattern"
+                        value={field.validation?.pattern ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { pattern: e.target.value || undefined })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                    </div>
+                  ) : null}
+
+                  {field.type === 'number' ? (
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 6, alignItems: 'center' }}>
+                      <input
+                        type="number"
+                        placeholder="min"
+                        value={field.validation?.min ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { min: e.target.value === '' ? undefined : Number(e.target.value) })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                      <input
+                        type="number"
+                        placeholder="max"
+                        value={field.validation?.max ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { max: e.target.value === '' ? undefined : Number(e.target.value) })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                      <input
+                        type="number"
+                        min={0}
+                        placeholder="step"
+                        value={field.validation?.step ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { step: e.target.value === '' ? undefined : Number(e.target.value) })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                      <label style={{ fontSize: 11, display: 'flex', alignItems: 'center', gap: 4 }}>
+                        <input
+                          type="checkbox"
+                          checked={field.validation?.allowDecimals !== false}
+                          onChange={(e) => updateFieldValidation(field.id, { allowDecimals: e.target.checked })}
+                        />
+                        decimal
+                      </label>
+                    </div>
+                  ) : null}
+
+                  {field.type === 'date' ? (
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 6 }}>
+                      <input
+                        type="date"
+                        value={field.validation?.dateMin ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { dateMin: e.target.value || undefined })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                      <input
+                        type="date"
+                        value={field.validation?.dateMax ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { dateMax: e.target.value || undefined })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                    </div>
+                  ) : null}
+
+                  {field.type === 'file' ? (
+                    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 6 }}>
+                      <input
+                        type="text"
+                        placeholder="image/*,.pdf,.docx"
+                        value={field.validation?.accept ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { accept: e.target.value || undefined })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                      <input
+                        type="number"
+                        min={0}
+                        placeholder="max bytes"
+                        value={field.validation?.maxFileSize ?? ''}
+                        onChange={(e) => updateFieldValidation(field.id, { maxFileSize: e.target.value === '' ? undefined : Number(e.target.value) })}
+                        style={{ padding: '4px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                      />
+                    </div>
                   ) : null}
 
                   <details style={{ fontSize: 11 }}>

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderFormSignatureCanvasNode } from '@/lib/builder/canvas/types';
+import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
 
 function FormSignatureRender({
   node,
@@ -15,6 +16,8 @@ function FormSignatureRender({
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const drawingRef = useRef(false);
   const [hasInk, setHasInk] = useState(false);
+  const [signatureValue, setSignatureValue] = useState('');
+  const field = useFormFieldRuntime({ nodeId: node.id, name: c.name, showIf: c.showIf });
 
   useEffect(() => {
     if (!canvasRef.current) return;
@@ -58,6 +61,11 @@ function FormSignatureRender({
   }
 
   function onUp() {
+    if (drawingRef.current) {
+      const dataUrl = canvasRef.current?.toDataURL('image/png') ?? '';
+      setSignatureValue(dataUrl);
+      field.onValueChange(dataUrl || undefined);
+    }
     drawingRef.current = false;
   }
 
@@ -68,33 +76,39 @@ function FormSignatureRender({
     if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     setHasInk(false);
+    setSignatureValue('');
+    field.onValueChange(undefined);
   }
 
   return (
-    <fieldset
-      className="builder-form-signature"
-      data-builder-form-widget="signature"
-      data-builder-form-name={c.name}
-      aria-required={c.required ? 'true' : 'false'}
-    >
-      <legend>{c.label}{c.required ? ' *' : ''}</legend>
-      {c.helpText ? <p>{c.helpText}</p> : null}
-      <canvas
-        ref={canvasRef}
-        width={520}
-        height={180}
-        onPointerDown={onDown}
-        onPointerMove={onMove}
-        onPointerUp={onUp}
-        onPointerCancel={onUp}
+    <div ref={field.rootRef} style={{ opacity: mode !== 'published' && c.showIf ? 0.72 : 1 }}>
+      <fieldset
+        className="builder-form-signature"
+        data-builder-form-widget="signature"
+        data-builder-form-name={c.name}
         data-builder-signature-has-ink={hasInk ? 'true' : 'false'}
-      />
-      {c.showClearButton ? (
-        <button type="button" onClick={() => mode !== 'edit' && clear()}>
-          지우기
-        </button>
-      ) : null}
-    </fieldset>
+        aria-required={c.required ? 'true' : 'false'}
+      >
+        <legend>{c.label}{c.required ? ' *' : ''}</legend>
+        {c.helpText ? <p>{c.helpText}</p> : null}
+        <canvas
+          ref={canvasRef}
+          width={520}
+          height={180}
+          onPointerDown={onDown}
+          onPointerMove={onMove}
+          onPointerUp={onUp}
+          onPointerCancel={onUp}
+        />
+        <input type="hidden" name={c.name} value={signatureValue} readOnly />
+        {c.showClearButton ? (
+          <button type="button" onClick={() => mode !== 'edit' && clear()}>
+            지우기
+          </button>
+        ) : null}
+        {field.error ? <span role="alert">{field.error}</span> : null}
+      </fieldset>
+    </div>
   );
 }
 

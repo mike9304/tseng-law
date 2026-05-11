@@ -787,3 +787,22 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run security:builder-routes` ✅
 - 리스크:
   - Sentry source map upload, alert routing은 아직 운영 배포 hook 작업으로 남아 있다. 현재 단계는 에러 수집/저장/선택적 forward의 코드 경로를 닫았다.
+
+## M21 — forms advanced validation, upload, signature, and payment
+
+- 시작/종료: 2026-05-11 / 2026-05-11
+- 변경 파일:
+  - `src/lib/builder/forms/form-engine.ts` — Vercel Blob/file fallback schema·submission storage, number/date/phone/select/radio/checkbox/file/conditional server validation을 추가했다.
+  - `src/app/api/forms/submit/route.ts` — stored schema lookup, server validation, signature data URL materialization, file metadata persistence, webhook/email payload file forwarding을 추가했다.
+  - `src/lib/builder/forms/uploads.ts`, `src/app/api/forms/uploads/**` — form file/signature upload 저장·조회 경로를 추가했다.
+  - `src/lib/builder/components/form/Element.tsx` — published form submit 전에 파일 업로드를 수행하고 signature required 상태를 검사한다.
+  - `src/lib/builder/components/formSignature/index.tsx` — canvas signature를 hidden PNG data URL 값으로 제출하고 runtime condition과 연결했다.
+  - `src/lib/builder/components/formPayment/index.tsx`, `src/app/api/forms/stripe-checkout/route.ts` — Stripe Checkout session 생성 경로와 payment field CTA를 연결했다.
+  - `src/components/builder/forms/FormSchemaEditor.tsx` — min/max/regex, number min/max/step/decimal, date range, file accept/max bytes 설정 UI를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/conditional.test.ts src/lib/builder/forms/__tests__/validation.test.ts` ✅
+  - `npm run security:builder-routes` ✅
+- W 판정:
+  - W136~W150 green evidence 확보. W148은 Stripe Checkout session 경로 기준이며, webhook/refund/Payment Element 심화는 Bookings 결제 마일스톤에서 이어간다.

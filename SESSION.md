@@ -3880,3 +3880,26 @@ local log + optional Sentry forwarder 형태로 추가.
 - sentry-adapter.test.ts × 2 (missing/malformed DSN no-op, store endpoint payload)
 
 검증: typecheck ✅ / lint ✅ / targeted unit 5 ✅ / security 87 routes 76 mutation handlers ✅.
+
+## 2026-05-11 Codex M21 — Forms 후반 green
+
+M21(W136~W150)을 서버 검증과 실제 제출 저장 기준으로 보강했다.
+
+변경:
+- `form-engine.ts`에 Blob/file fallback schema·submission storage를 추가해 로컬에서도 폼 스키마/제출 대시보드가 비지 않게 했다.
+- `validateSubmission()`을 number min/max/step/decimal, phone, date range, select/radio/checkbox option, file accept/max size, conditional visibility까지 검사하도록 확장했다.
+- `/api/forms/submit`이 `formId` schema를 찾아 서버 검증하고, signature data URL을 업로드 파일로 저장하며, 파일 metadata를 submission/email/webhook payload에 포함하도록 했다.
+- `/api/forms/uploads` 및 조회 route를 추가해 published form file upload와 signature PNG 저장 경로를 닫았다.
+- `form` runtime은 파일을 먼저 업로드하고 signature required를 검사한다.
+- `form-signature`는 canvas 결과를 hidden PNG data URL로 제출한다.
+- `form-payment`와 `/api/forms/stripe-checkout`을 연결해 Stripe Checkout session 생성 흐름을 추가했다.
+- FormSchemaEditor에 text/number/date/file validation 설정 UI를 추가했다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (기존 `<img>` warnings only)
+- `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/conditional.test.ts src/lib/builder/forms/__tests__/validation.test.ts` ✅
+- `npm run security:builder-routes` ✅
+
+남은 주의:
+- Stripe webhook/refund/Payment Element 심화는 M25~M26 Bookings 결제 트랙에서 이어간다.

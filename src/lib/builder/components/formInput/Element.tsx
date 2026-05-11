@@ -51,6 +51,10 @@ export default function FormInputElement({
         required={c.required && field.visible}
         minLength={c.minLength}
         maxLength={c.maxLength}
+        min={c.type === 'number' ? c.numericMin : undefined}
+        max={c.type === 'number' ? c.numericMax : undefined}
+        step={c.type === 'number' ? c.numericStep ?? (c.allowDecimals ? 'any' : 1) : undefined}
+        inputMode={c.type === 'number' ? (c.allowDecimals ? 'decimal' : 'numeric') : undefined}
         pattern={c.pattern}
         data-builder-field-label={c.label}
         data-builder-error-message={c.errorMessage}

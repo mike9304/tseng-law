@@ -20,6 +20,10 @@ const fieldSchema = z.object({
       maxLength: z.number().int().min(0).max(10_000).optional(),
       min: z.number().optional(),
       max: z.number().optional(),
+      step: z.number().min(0).optional(),
+      allowDecimals: z.boolean().optional(),
+      dateMin: z.string().max(80).optional(),
+      dateMax: z.string().max(80).optional(),
       accept: z.string().max(200).optional(),
       maxFileSize: z.number().int().min(0).max(50_000_000).optional(),
     })

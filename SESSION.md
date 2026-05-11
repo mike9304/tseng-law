@@ -4134,3 +4134,44 @@ CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.9. MJML 대신 자체 블록 모델 + 이메
 
 남은 항목: 캠페인 편집기에서 "템플릿 적용" 버튼으로 bodyHtml/bodyText 자동 채우기,
 booking confirmation 등 transactional 이메일 흐름과 연결.
+
+## 2026-05-11 Claude PR #8 — Calendar Sync (Google · Outlook)
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.8. 변호사별 Google Calendar / Outlook
+연결 후 booking 일정을 외부 캘린더로 push. 단방향 sync 우선 (외부 → booking pull
+은 의도적으로 미구현 — 호정 booking 이 source of truth).
+
+**lib (bookings/calendar-sync/)**
+- types.ts — CalendarConnection (provider + 암호화된 refresh token + status),
+  CalendarSyncResult.
+- encryption.ts — AES-256-GCM, key = SHA256(CMS_SESSION_SECRET).
+  `iv:cipher:authTag` hex 형식. GCM auth tag 로 tamper detection.
+- storage.ts — blob+file dual backend, `cs_<provider>_<staffId>` id, makeOauthState().
+- google.ts — buildGoogleAuthUrl / exchangeGoogleCode / refreshGoogleAccessToken /
+  pushEventToGoogle (calendar.events scope).
+- outlook.ts — Microsoft Graph 동급. tenant configurable, offline_access scope.
+- sync-engine.ts — syncConnection: 토큰 refresh → 미래 confirmed booking 만 push →
+  status / lastSyncedAt 업데이트. syncAllConnections 가 모든 활성 연결 순회.
+
+**OAuth API (permission: 'manage-bookings')**
+- GET /api/builder/bookings/calendar-sync/connect/google?staffId=... — auth URL.
+- GET /api/builder/bookings/calendar-sync/connect/outlook?staffId=... — auth URL.
+- GET /api/builder/bookings/calendar-sync/oauth-callback — code+state 검증 →
+  refresh token 암호화 저장 → connection 생성.
+- POST /api/builder/bookings/calendar-sync/sync-now[?connectionId=...] — 수동 동기화.
+
+**Cron**
+- /api/cron/calendar-sync — CRON_SECRET 인증, syncAllConnections.
+  30분 주기 (vercel.json 등록은 별도).
+
+**Admin UI**
+- /[locale]/admin-builder/bookings/calendar-sync — 스태프 × provider 매트릭스.
+  연결 안 됨 상태에서 "연결" 클릭 → OAuth flow. 연결됨 상태에서 status 뱃지 +
+  지금 동기화 + 마지막 동기화 시각. env 미설정 provider 는 disabled.
+
+**Tests**
+- encryption.test.ts × 3 (round-trip, GCM tamper detection, secret missing throw).
+
+검증: typecheck ✅ / unit 845 ✅.
+
+남은 항목: 외부 → booking pull (consent 모델 정리 후), Vercel cron 등록 entry.

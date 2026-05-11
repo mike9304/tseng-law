@@ -3157,3 +3157,20 @@ Prompt-to-artifact 체크:
 - W79~W88는 M14 evidence 확보로 green 처리했다.
 - Playwright builder-editor 신규 E2E 미작성 (M11~M13 처럼 layout-widgets.playwright.ts 추가 권장 — 다음 turn).
 - Manual QA: `/ko/admin-builder` 좌측 + 패널에서 "Layout widget pack" 펼치고 10종 한 번씩 추가해 보면 검증 완료.
+
+## 2026-05-11 Claude M14 layout-widgets E2E follow-up
+
+범위:
+- 코덱스 M11/M12/M13 패턴에 맞춰 `tests/builder-editor/layout-widgets.playwright.ts`를 추가했다.
+- 카탈로그 → "Layout widget pack" 펼치고 W79~W88 10 프리셋을 순차 추가한 뒤
+  data-builder-layout-mode (strip/box/columns/repeater/grid) +
+  data-builder-layout-widget (tabs/accordion/slideshow/hoverBox/repeater) +
+  data-builder-layout-sticky=true 가 캔버스에 attach 되는지 검증한다.
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅
+- `npm run test:unit` ✅ 36 files 769 tests
+- `BASE_URL=...` Playwright 실행은 이 환경에서 dev server 띄울 수 없어 보류.
+  다음 코덱스 turn 또는 사용자가 `npm run test:builder-editor -- layout-widgets`
+  로 실행 권장.

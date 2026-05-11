@@ -204,6 +204,8 @@ export interface BuilderSiteSettings {
   // Phase 22 W172 — page transition preset.
   pageTransition?: 'none' | 'fade' | 'slide-up' | 'slide-left' | 'scale';
   pageTransitionDurationMs?: number;
+  // PR #14 — public live chat widget toggle.
+  liveChatWidgetEnabled?: boolean;
 }
 
 export interface BuilderSeoChecklistSettings {

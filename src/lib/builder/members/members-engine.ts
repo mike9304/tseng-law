@@ -79,6 +79,15 @@ export async function createMember(data: {
   await put(`${MEMBERS_PREFIX}${member.memberId}.json`, JSON.stringify(member), {
     access: 'private', allowOverwrite: true, contentType: 'application/json',
   });
+  // PR #13 — fire webhook event (best-effort dynamic import to avoid circular deps).
+  void import('@/lib/builder/webhooks/dispatcher').then(({ emitEvent }) => {
+    emitEvent('member.registered', {
+      memberId: member.memberId,
+      email: member.email,
+      name: member.name,
+      role: member.role,
+    });
+  }).catch(() => undefined);
   return member;
 }
 

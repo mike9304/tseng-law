@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import type { FormSubmission } from '@/lib/builder/forms/form-engine';
 
@@ -137,22 +138,39 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
             {formId} &middot; {submissions.length} total &middot; {unreadCount} unread
           </p>
         </div>
-        <button
-          onClick={refreshList}
-          disabled={loading}
-          style={{
-            padding: '0.5rem 1rem',
-            fontSize: '0.85rem',
-            background: '#123b63',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 6,
-            cursor: loading ? 'wait' : 'pointer',
-            opacity: loading ? 0.6 : 1,
-          }}
-        >
-          Refresh
-        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <Link
+            href={`/ko/admin-builder/forms/builder/${encodeURIComponent(formId)}`}
+            style={{
+              padding: '0.5rem 1rem',
+              fontSize: '0.85rem',
+              background: '#fff',
+              color: '#0f172a',
+              border: '1px solid #cbd5e1',
+              borderRadius: 6,
+              textDecoration: 'none',
+              fontWeight: 600,
+            }}
+          >
+            폼 빌더 열기
+          </Link>
+          <button
+            onClick={refreshList}
+            disabled={loading}
+            style={{
+              padding: '0.5rem 1rem',
+              fontSize: '0.85rem',
+              background: '#123b63',
+              color: '#fff',
+              border: 'none',
+              borderRadius: 6,
+              cursor: loading ? 'wait' : 'pointer',
+              opacity: loading ? 0.6 : 1,
+            }}
+          >
+            Refresh
+          </button>
+        </div>
       </div>
 
       {/* Filter Bar */}

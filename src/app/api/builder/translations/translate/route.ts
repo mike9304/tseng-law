@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
+  getUsageSnapshot,
   listAvailableProviders,
   translateViaRouter,
 } from '@/lib/builder/translations/providers/router';
@@ -18,7 +19,11 @@ function parseProviderId(value: unknown): TranslationProviderId | undefined {
 export async function GET(request: NextRequest) {
   const auth = await guardMutation(request, { allowReadOnly: true, permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
-  return NextResponse.json({ ok: true, providers: listAvailableProviders() });
+  return NextResponse.json({
+    ok: true,
+    providers: listAvailableProviders(),
+    usage: getUsageSnapshot(),
+  });
 }
 
 export async function POST(request: NextRequest) {

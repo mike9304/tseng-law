@@ -83,9 +83,13 @@ export async function translateViaRouter(args: RouterArgs): Promise<TranslationP
     return { ok: true, provider: 'mock', text: args.sourceText };
   }
   const cached = readCache(selected.id, args);
-  if (cached) return cached;
+  if (cached) {
+    recordUsage(selected.id, args, 'hit');
+    return cached;
+  }
   const result = await selected.translate(args);
   rememberResult(selected.id, args, result);
+  recordUsage(selected.id, args, result.ok ? 'miss' : 'error');
   return result;
 }
 
@@ -95,4 +99,40 @@ export function clearTranslationCache(): void {
 
 export function listAvailableProviders(): Array<{ id: TranslationProviderId; configured: boolean }> {
   return PROVIDERS.map((p) => ({ id: p.id, configured: p.isConfigured() }));
+}
+
+interface UsageBucket {
+  total: number;
+  byProvider: Partial<Record<TranslationProviderId, number>>;
+  charactersBilled: number;
+  cacheHits: number;
+  errors: number;
+}
+
+const usage: UsageBucket = { total: 0, byProvider: {}, charactersBilled: 0, cacheHits: 0, errors: 0 };
+
+export function recordUsage(provider: TranslationProviderId, args: TranslationProviderArgs, kind: 'hit' | 'miss' | 'error'): void {
+  if (kind === 'hit') {
+    usage.cacheHits += 1;
+    return;
+  }
+  if (kind === 'error') {
+    usage.errors += 1;
+    return;
+  }
+  usage.total += 1;
+  usage.byProvider[provider] = (usage.byProvider[provider] ?? 0) + 1;
+  usage.charactersBilled += args.sourceText.length;
+}
+
+export function getUsageSnapshot(): UsageBucket {
+  return JSON.parse(JSON.stringify(usage)) as UsageBucket;
+}
+
+export function resetUsage(): void {
+  usage.total = 0;
+  usage.byProvider = {};
+  usage.charactersBilled = 0;
+  usage.cacheHits = 0;
+  usage.errors = 0;
 }

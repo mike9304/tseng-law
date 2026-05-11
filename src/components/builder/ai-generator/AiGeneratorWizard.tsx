@@ -41,6 +41,40 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const [busy, setBusy] = useState(false);
   const [draft, setDraft] = useState<DraftResponse['draft'] | null>(null);
   const [error, setError] = useState('');
+  const [applying, setApplying] = useState(false);
+  const [appliedPageId, setAppliedPageId] = useState<string | null>(null);
+
+  async function apply() {
+    if (!draft) return;
+    const slug = window.prompt('새 페이지 slug', `ai-${Date.now()}`);
+    if (!slug) return;
+    setApplying(true);
+    setError('');
+    setAppliedPageId(null);
+    try {
+      const res = await fetch('/api/builder/ai-generator/apply', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          spec: {
+            industry, companyName: companyName.trim(), slogan: slogan.trim() || undefined,
+            tone, colorPreference, locale,
+          },
+          slug,
+          title: companyName.trim(),
+        }),
+      });
+      const payload = (await res.json().catch(() => ({}))) as { pageId?: string; error?: string };
+      if (!res.ok || !payload.pageId) {
+        setError(payload.error ?? '적용 실패');
+        return;
+      }
+      setAppliedPageId(payload.pageId);
+    } finally {
+      setApplying(false);
+    }
+  }
 
   async function generate() {
     setBusy(true);
@@ -219,10 +253,29 @@ export default function AiGeneratorWizard({ locale }: Props) {
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
               <button type="button" onClick={() => setStep(4)} style={{ padding: '8px 16px', border: '1px solid #cbd5e1', background: '#fff', borderRadius: 8, cursor: 'pointer' }}>다시 생성</button>
-              <button type="button" disabled style={{ padding: '8px 16px', border: 0, background: '#94a3b8', color: '#fff', borderRadius: 8, cursor: 'not-allowed', opacity: 0.7 }} title="canvas 임포트는 follow-up 예정">
-                사이트에 적용 (예정)
+              <button
+                type="button"
+                disabled={applying}
+                onClick={apply}
+                style={{
+                  padding: '8px 16px',
+                  border: 0,
+                  background: applying ? '#94a3b8' : '#16a34a',
+                  color: '#fff',
+                  borderRadius: 8,
+                  cursor: applying ? 'not-allowed' : 'pointer',
+                  fontWeight: 700,
+                }}
+              >
+                {applying ? '적용 중...' : '사이트에 적용'}
               </button>
             </div>
+            {appliedPageId ? (
+              <div style={{ fontSize: 12, color: '#15803d' }}>
+                새 페이지 생성됨 — pageId: <code>{appliedPageId}</code>
+              </div>
+            ) : null}
+            {error ? <div style={{ fontSize: 12, color: '#dc2626' }}>{error}</div> : null}
           </div>
         ) : null}
       </section>

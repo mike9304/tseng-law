@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import type { WebhookEventType, WebhookSubscription } from '@/lib/builder/webhooks/types';
 import { WEBHOOK_EVENT_TYPES } from '@/lib/builder/webhooks/types';
@@ -151,7 +152,13 @@ export default function WebhooksAdmin({ initialSubscriptions }: Props) {
                   </span>
                 </td>
                 <td style={{ padding: '8px 12px', color: '#64748b' }}>{new Date(sub.createdAt).toLocaleDateString('ko-KR')}</td>
-                <td style={{ padding: '8px 12px' }}>
+                <td style={{ padding: '8px 12px', display: 'flex', gap: 6 }}>
+                  <Link
+                    href={`/ko/admin-builder/webhooks/${sub.webhookId}`}
+                    style={{ padding: '4px 8px', border: '1px solid #cbd5e1', background: '#fff', borderRadius: 4, fontSize: 11, color: '#0f172a', textDecoration: 'none' }}
+                  >
+                    이력
+                  </Link>
                   <button type="button" onClick={() => toggleActive(sub.webhookId, !sub.active)} style={{ padding: '4px 8px', border: '1px solid #cbd5e1', background: '#fff', borderRadius: 4, fontSize: 11, cursor: 'pointer' }}>
                     {sub.active ? '비활성화' : '활성화'}
                   </button>

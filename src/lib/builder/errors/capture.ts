@@ -1,5 +1,6 @@
 import { appendErrorLog, makeErrorId } from './storage';
 import { forwardToSentry } from './sentry-adapter';
+import { alertSlackForError } from './slack-adapter';
 import type { CapturedError, ErrorOrigin, ErrorSeverity } from './types';
 
 export interface CaptureArgs {
@@ -45,6 +46,8 @@ export async function captureBuilderError(args: CaptureArgs): Promise<CapturedEr
   } catch (saveErr) {
     console.warn('[errors] failed to persist captured error', saveErr);
   }
+  // Slack side-channel: fire-and-forget for error/fatal only.
+  void alertSlackForError(entry).catch(() => undefined);
   return entry;
 }
 

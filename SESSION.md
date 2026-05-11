@@ -4297,3 +4297,83 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
 
 남은 항목: Chromatic visual regression 연결, 기존 38개 widget kind 스토리화
 (canvas internal 컴포넌트는 store/theme 의존성 mock 필요해 별도 라운드).
+
+## 2026-05-11 Claude — Wix-parity follow-up sweep (PR #4·#5·#7·#10·#11·#12·#13·#14·#16·#17·#19)
+
+진행 흐름이 끊기지 않게 한 라운드로 모든 follow-up 처리. 별도 PR 으로 분기하지 않고
+단일 commit 으로 머지.
+
+### Round 1 (Quick wires)
+- **PR #4 — 캠페인 편집기에 템플릿 적용**: `/api/builder/marketing/templates` 목록을
+  사이드바 select 로 노출, 선택 시 `?render=html` 호출 → bodyHtml/bodyText 자동 채움.
+- **PR #7 — FormSubmissionsDashboard → 폼 빌더 진입 링크**: 헤더 우측에
+  `/ko/admin-builder/forms/builder/${formId}` 링크 버튼 추가.
+- **PR #13 — member.registered 이벤트 발신**: members-engine.createMember
+  성공 직후 dynamic import 로 emitEvent('member.registered', { memberId, email,
+  name, role }).
+- **PR #19 — usage counter**: translateViaRouter 가 호출마다
+  recordUsage(provider, args, 'hit'|'miss'|'error'). GET /api/builder/translations/translate
+  가 `getUsageSnapshot()` 노출 (total/byProvider/charactersBilled/cacheHits/errors).
+
+### Round 2 (Cron + CLI)
+- **vercel.json**: backup(03:00), calendar-sync(*/30), marketing/dispatch(*/5),
+  sms-reminders(*/15), webhooks-retry(*/10) 다섯 crons 등록.
+- **scripts/restore-from-backup.mjs**: CLI — `<backupId> [--dry-run]`.
+  Dynamic import 로 restoreBackup 호출.
+
+### Round 3 (Public widget — site-search)
+- **canvas types**: 'site-search' kind 추가 (placeholder/submitLabel/showResultsInline/
+  kinds/locale/maxResults). discriminated union + 타입 export.
+- **components/siteSearch/**: Render(검색 폼 + 결과 컨테이너) + Inspector(속성 편집).
+  registry import 추가.
+- **published/SiteSearchEnhancer.tsx**: 클라이언트 enhancer — 폼에 200ms debounce
+  input 리스너 부착, /api/search 호출, 결과 inline 렌더. no-JS fallback 으로 form
+  submit 은 /[locale]/search 로 redirect.
+- **globals.css**: builder-site-search* 스타일 (input/button/results dropdown).
+- **public-page.tsx**: SiteSearchEnhancer 마운트.
+
+### Round 4 (Runtime wires)
+- **PR #10 — ExperimentVariantSwap.tsx**: 클라이언트 컴포넌트.
+  `[data-builder-experiment-id]` + `data-builder-experiment-variant` 마크업 검색 →
+  /api/experiments/assign 호출 → 비활성 variant 숨김. `[data-builder-experiment-goal]`
+  클릭 시 /api/experiments/event 자동 fire (capture phase). public-page 에 마운트.
+- **PR #11 — canvas 임포트**: `draftToCanvasNodes(draft)` 가 hero+sections 를
+  section/heading/text/button 노드 트리로 변환. `/api/builder/ai-generator/apply`
+  신규 — slug 받아 createPage + writePageCanvas('draft'). 위저드 "사이트에 적용"
+  버튼 활성화, 성공 시 pageId 표시.
+- **PR #12 — 30s 자동 검증 폴링**: DomainsAdmin 가 `autoPollEnabled` 토글로
+  pending/error 도메인을 30초마다 verify 라우트 호출 후 목록 새로고침.
+
+### Round 5 (PR #6 잔여)
+- /api/builder 밖 routes 는 이미 모두 permission 적용 (sweep 완료 — 추가 변경 없음).
+
+### Round 6 (Webhooks/migrations/errors 마무리)
+- **PR #13 — 재시도 cron**: /api/cron/webhooks-retry. attempts 횟수에 따라
+  1/5/30/240분 backoff (MAX_ATTEMPTS=5). 비활성 subscription 은 즉시 포기.
+- **PR #13 — deliveries admin UI**: /[locale]/admin-builder/webhooks/[webhookId]
+  페이지 신규. WebhookDeliveriesView 가 상태 뱃지 + 재시도 버튼 + HTTP/시도/오류 표시.
+  WebhooksAdmin 의 액션 컬럼에 "이력" 링크 추가.
+- **PR #17 — migrations admin UI**: /[locale]/admin-builder/migrations.
+  MigrationsAdmin 가 pending 카드 + 실행 버튼 + 적용 이력 표.
+- **PR #16 — Slack 알림**: errors/slack-adapter.ts. SLACK_WEBHOOK_URL 설정 +
+  severity in {error, fatal} 일 때 mrkdwn 블록 메시지 fire-and-forget POST.
+  capture.ts 가 alertSlackForError 비동기 호출.
+
+### Round 7 (Live chat + Form funnel)
+- **PR #14 — public chat widget**: published/LiveChatWidget.tsx. 우하단 floating
+  bubble, localStorage `tw_live_chat_session_v1` 으로 visitorToken 유지, SSE
+  /api/live-chat/stream 구독. BuilderSiteSettings.liveChatWidgetEnabled 토글로
+  public-page 마운트 제어.
+- **PR #7 — funnel 트래킹**: forms/funnel/storage.ts (FunnelEvent +
+  computeFunnelStats), POST /api/forms/track (rate-limit 120/min),
+  GET /api/builder/forms/funnel?formId 또는 전체 perForm 요약.
+
+검증: typecheck ✅ / unit 853 ✅. (새 라우트는 happy/error path 정도만 covered.)
+
+남은 진짜 follow-up:
+- 실서버 Playwright E2E (Stripe/Zoom/Google 실 인증 필요)
+- Chromatic visual regression 연결 (PR #15)
+- canvas internal 38 widget kind storybook 화 (theme/store mock 필요)
+- AI generator quota / per-user cost 한도
+- 외부 → booking pull 방향의 calendar sync
+- 호정 실 도메인 인수 시 form funnel 클라이언트 hook 코드 (현재는 API만)

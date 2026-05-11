@@ -1,11 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { Campaign } from '@/lib/builder/marketing/campaign-types';
+import type { EmailTemplate } from '@/lib/builder/marketing/templates/types';
 import type { Locale } from '@/lib/locales';
 
 interface Props {
   campaign: Campaign;
+}
+
+interface TemplateSummary {
+  templateId: string;
+  name: string;
+  category?: string;
 }
 
 type LocaleKey = Locale;
@@ -25,6 +32,46 @@ export default function CampaignEditor({ campaign }: Props) {
   const [activeLocale, setActiveLocale] = useState<LocaleKey>('ko');
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
+  const [templates, setTemplates] = useState<TemplateSummary[]>([]);
+  const [applyingTemplateId, setApplyingTemplateId] = useState('');
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const res = await fetch('/api/builder/marketing/templates', { credentials: 'same-origin' });
+      if (!res.ok || cancelled) return;
+      const payload = (await res.json()) as { templates: TemplateSummary[] };
+      setTemplates(payload.templates);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  async function applyTemplate(templateId: string) {
+    if (!templateId) return;
+    setApplyingTemplateId(templateId);
+    setMessage('');
+    try {
+      const res = await fetch(`/api/builder/marketing/templates/${templateId}?render=html`, {
+        credentials: 'same-origin',
+      });
+      if (!res.ok) {
+        const payload = (await res.json().catch(() => ({}))) as { error?: string };
+        setMessage(`템플릿 적용 실패: ${payload.error ?? res.statusText}`);
+        return;
+      }
+      const payload = (await res.json()) as { template: EmailTemplate; html: string; text: string };
+      setForm((f) => ({
+        ...f,
+        bodyHtml: { ko: payload.html, 'zh-hant': payload.html, en: payload.html },
+        bodyText: { ko: payload.text, 'zh-hant': payload.text, en: payload.text },
+      }));
+      setMessage(`템플릿 "${payload.template.name}" 적용 — 로케일별 본문 수정 필요`);
+    } finally {
+      setApplyingTemplateId('');
+    }
+  }
 
   function setSubjectFor(locale: LocaleKey, value: string) {
     setForm((f) => ({ ...f, subject: { ...f.subject, [locale]: value } }));
@@ -150,6 +197,25 @@ export default function CampaignEditor({ campaign }: Props) {
           {saving ? '저장 중...' : '저장'}
         </button>
         {message ? <div style={{ fontSize: 12, color: message.includes('실패') ? '#dc2626' : '#16a34a' }}>{message}</div> : null}
+
+        <hr style={{ border: 0, borderTop: '1px solid #e2e8f0', margin: '8px 0' }} />
+        <strong style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase' }}>템플릿 적용</strong>
+        <select
+          value=""
+          onChange={(e) => applyTemplate(e.target.value)}
+          disabled={Boolean(applyingTemplateId)}
+          style={{ padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 12 }}
+        >
+          <option value="">— 템플릿 선택 —</option>
+          {templates.map((t) => (
+            <option key={t.templateId} value={t.templateId}>
+              {t.name}{t.category ? ` (${t.category})` : ''}
+            </option>
+          ))}
+        </select>
+        <span style={{ fontSize: 10, color: '#94a3b8' }}>
+          선택한 템플릿의 HTML/텍스트가 모든 로케일에 적용됩니다. 로케일별로 수정하세요.
+        </span>
 
         <hr style={{ border: 0, borderTop: '1px solid #e2e8f0', margin: '8px 0' }} />
         <div style={{ fontSize: 11, color: '#64748b', lineHeight: 1.5 }}>

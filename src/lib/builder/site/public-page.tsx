@@ -77,6 +77,9 @@ import PopupOverlay from '@/components/builder/published/PopupOverlay';
 import CookieConsentBanner from '@/components/builder/published/CookieConsentBanner';
 import CookieConsentMount from '@/components/builder/published/CookieConsentMount';
 import PageTransitionWrapper from '@/components/builder/published/PageTransitionWrapper';
+import SiteSearchEnhancer from '@/components/builder/published/SiteSearchEnhancer';
+import ExperimentVariantSwap from '@/components/builder/published/ExperimentVariantSwap';
+import LiveChatWidget from '@/components/builder/published/LiveChatWidget';
 import {
   buildPublishedAnimationStyle,
   getPublishedAnimationAttributes,
@@ -864,6 +867,9 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         />
       ) : null}
       <AnimationsRoot />
+      <SiteSearchEnhancer />
+      <ExperimentVariantSwap />
+      {settings?.liveChatWidgetEnabled ? <LiveChatWidget /> : null}
       <PublishedInteractions />
       <PageTransitionWrapper
         preset={settings?.pageTransition ?? 'none'}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { DomainBinding, DomainStatus } from '@/lib/builder/domains/types';
 
 interface Props {
@@ -29,6 +29,30 @@ export default function DomainsAdmin({ initialDomains }: Props) {
   const [busy, setBusy] = useState(false);
   const [verifyingId, setVerifyingId] = useState<string | null>(null);
   const [message, setMessage] = useState('');
+  const [autoPollEnabled, setAutoPollEnabled] = useState(true);
+
+  // PR #12 follow-up — auto-verify pending domains every 30s.
+  useEffect(() => {
+    if (!autoPollEnabled) return;
+    const pendingIds = domains
+      .filter((d) => d.status === 'pending-dns' || d.status === 'error')
+      .map((d) => d.domain);
+    if (pendingIds.length === 0) return;
+    const interval = setInterval(async () => {
+      for (const domain of pendingIds) {
+        await fetch(`/api/builder/domains/${encodeURIComponent(domain)}/verify`, {
+          method: 'POST',
+          credentials: 'same-origin',
+        }).catch(() => undefined);
+      }
+      const res = await fetch('/api/builder/domains', { credentials: 'same-origin' }).catch(() => null);
+      if (res?.ok) {
+        const payload = (await res.json()) as { domains: DomainBinding[] };
+        setDomains(payload.domains);
+      }
+    }, 30_000);
+    return () => clearInterval(interval);
+  }, [autoPollEnabled, domains]);
 
   async function refresh() {
     const res = await fetch('/api/builder/domains', { credentials: 'same-origin' });
@@ -114,6 +138,11 @@ export default function DomainsAdmin({ initialDomains }: Props) {
         </button>
       </div>
       {message ? <div style={{ fontSize: 12, color: message.includes('완료') ? '#16a34a' : '#dc2626' }}>{message}</div> : null}
+
+      <label style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#475569' }}>
+        <input type="checkbox" checked={autoPollEnabled} onChange={(e) => setAutoPollEnabled(e.target.checked)} />
+        대기 중인 도메인 30초마다 자동 검증
+      </label>
 
       {domains.map((binding) => (
         <div

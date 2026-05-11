@@ -112,6 +112,8 @@ export const builderCanvasNodeKinds = [
   'timeline',
   'team-member-card',
   'service-feature-card',
+  // Phase 25 — Public surfaces
+  'site-search',
 ] as const;
 
 /**
@@ -1534,6 +1536,20 @@ const serviceFeatureCardCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+const siteSearchCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('site-search'),
+  content: z.object({
+    placeholder: z.string().max(120).default('검색...'),
+    submitLabel: z.string().max(40).default('Search'),
+    showResultsInline: z.boolean().default(true),
+    /** Filter results by kind. Empty = all. */
+    kinds: z.array(z.enum(['page', 'blog', 'faq'])).max(3).default([]),
+    /** Locale override; when empty, uses the page locale. */
+    locale: z.string().max(20).default(''),
+    maxResults: z.number().int().min(1).max(20).default(8),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
@@ -1605,6 +1621,7 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   timelineCanvasNodeSchema,
   teamMemberCardCanvasNodeSchema,
   serviceFeatureCardCanvasNodeSchema,
+  siteSearchCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -1677,6 +1694,7 @@ export type BuilderComparisonTableCanvasNode = z.infer<typeof comparisonTableCan
 export type BuilderTimelineCanvasNode = z.infer<typeof timelineCanvasNodeSchema>;
 export type BuilderTeamMemberCardCanvasNode = z.infer<typeof teamMemberCardCanvasNodeSchema>;
 export type BuilderServiceFeatureCardCanvasNode = z.infer<typeof serviceFeatureCardCanvasNodeSchema>;
+export type BuilderSiteSearchCanvasNode = z.infer<typeof siteSearchCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({

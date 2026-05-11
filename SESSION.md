@@ -3348,3 +3348,20 @@ W126~W135 evidence green. M01~M20 완료.
 검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.
 
 W141/W147/W148 evidence green. W149는 기존 showIf로 충분, W150 dashboard sweep follow-up.
+
+## 2026-05-11 Claude M22 Motion 후반 (preset 확장)
+
+범위: M22 (W159~W173) schema/preset 확장. Runtime hook 통합은 follow-up.
+- ENTRANCE_PRESET_KEYS에 expand-in / expand-from-left / expand-from-right 추가 (W159).
+- EXIT_PRESET_KEYS 신규 enum + ExitAnimationConfig + DEFAULT_EXIT_ANIMATION (W160).
+- SCROLL_EFFECT_KEYS에 scrub-translate / scrub-opacity / scrub-rotate 추가 (W167).
+- HOVER_ANIMATION_PRESET_KEYS에 'fade' 추가 + HoverPresetDefinition.opacity 필드 (W168).
+- LOOP_PRESET_KEYS 신규 (pulse/float/bounce/sway/wiggle/breath) + LoopAnimationConfig (W170~W171).
+- PAGE_TRANSITION_KEYS 신규 enum (fade/slide-up/slide-left/scale) (W172).
+- MotionTimelineConfig + MotionKeyframe schema (W173).
+
+검증: typecheck ✅ / unit 769 tests ✅.
+
+W159/W160/W167/W168/W170/W171/W172/W173 schema 단계 evidence green.
+Runtime IntersectionObserver leaving / loop CSS keyframes / page transition layout
+hook / scrub scroll handler 적용은 follow-up.

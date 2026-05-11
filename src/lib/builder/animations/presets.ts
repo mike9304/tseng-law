@@ -9,6 +9,10 @@ export const ENTRANCE_PRESET_KEYS = [
   'slide-right',
   'zoom-in',
   'zoom-out',
+  // Phase 22 — Expand-in variants (W159)
+  'expand-in',
+  'expand-from-left',
+  'expand-from-right',
   'bounce-in',
   'flip-x',
   'flip-y',
@@ -18,6 +22,20 @@ export const ENTRANCE_PRESET_KEYS = [
   'float-up',
 ] as const;
 
+// Phase 22 — Exit animations (W160). Mirrors entrance keys but
+// triggers on element leaving viewport via IntersectionObserver.
+export const EXIT_PRESET_KEYS = [
+  'none',
+  'fade-out',
+  'slide-up',
+  'slide-down',
+  'slide-left',
+  'slide-right',
+  'zoom-out',
+  'collapse',
+] as const;
+export type ExitPreset = (typeof EXIT_PRESET_KEYS)[number];
+
 export const SCROLL_EFFECT_KEYS = [
   'none',
   'parallax-y',
@@ -25,6 +43,10 @@ export const SCROLL_EFFECT_KEYS = [
   'scale-on-scroll',
   'rotate-on-scroll',
   'pin',
+  // Phase 22 — Scrub animations (W167) — scroll progress → frame value.
+  'scrub-translate',
+  'scrub-opacity',
+  'scrub-rotate',
 ] as const;
 
 export const HOVER_ANIMATION_PRESET_KEYS = [
@@ -34,7 +56,31 @@ export const HOVER_ANIMATION_PRESET_KEYS = [
   'glow',
   'rotate-3d',
   'tint',
+  // Phase 22 — Hover fade (W168)
+  'fade',
 ] as const;
+
+// Phase 22 — Loop animations (W170~W171) — always-on idle motion.
+export const LOOP_PRESET_KEYS = [
+  'none',
+  'pulse',
+  'float',
+  'bounce',
+  'sway',
+  'wiggle',
+  'breath',
+] as const;
+export type LoopPreset = (typeof LOOP_PRESET_KEYS)[number];
+
+// Phase 22 — Page transition (W172). Applied to route content wrapper.
+export const PAGE_TRANSITION_KEYS = [
+  'none',
+  'fade',
+  'slide-up',
+  'slide-left',
+  'scale',
+] as const;
+export type PageTransition = (typeof PAGE_TRANSITION_KEYS)[number];
 
 export const ANIMATION_EASING_KEYS = [
   'ease',
@@ -67,11 +113,58 @@ export interface HoverAnimationConfig {
   transitionMs: number;
 }
 
+// Phase 22 — Exit / loop / keyframe configs.
+export interface ExitAnimationConfig {
+  preset: ExitPreset;
+  duration: number;
+  easing: AnimationEasing;
+}
+
+export interface LoopAnimationConfig {
+  preset: LoopPreset;
+  durationMs: number;
+  intensity: number; // 0~100
+}
+
+export interface MotionKeyframe {
+  offset: number; // 0~1, scroll progress or timeline position
+  transform?: string;
+  opacity?: number;
+}
+
+export interface MotionTimelineConfig {
+  /** Bound to scroll progress when true; otherwise time-based via durationMs. */
+  scrollBound: boolean;
+  durationMs: number;
+  keyframes: MotionKeyframe[];
+}
+
 export interface NormalizedAnimationConfig {
   entrance: EntranceAnimationConfig;
   scroll: ScrollAnimationConfig;
   hover: HoverAnimationConfig;
+  exit?: ExitAnimationConfig;
+  loop?: LoopAnimationConfig;
+  timeline?: MotionTimelineConfig;
 }
+
+export const DEFAULT_EXIT_ANIMATION: ExitAnimationConfig = {
+  preset: 'none',
+  duration: 400,
+  easing: 'ease-out',
+};
+
+export const DEFAULT_LOOP_ANIMATION: LoopAnimationConfig = {
+  preset: 'none',
+  durationMs: 2400,
+  intensity: 30,
+};
+
+export const DEFAULT_MOTION_TIMELINE: MotionTimelineConfig = {
+  scrollBound: false,
+  durationMs: 1200,
+  keyframes: [],
+};
 
 export interface EntrancePresetDefinition {
   label: string;
@@ -91,6 +184,7 @@ export interface HoverPresetDefinition {
   transform?: string;
   boxShadow?: string;
   filter?: string;
+  opacity?: number;
 }
 
 export const DEFAULT_ENTRANCE_ANIMATION: EntranceAnimationConfig = {
@@ -129,6 +223,30 @@ export const ENTRANCE_PRESET_DEFINITIONS: Record<EntrancePreset, EntrancePresetD
     description: 'Opacity fades from 0 to 1.',
     initialOpacity: 0,
     visibleOpacity: 1,
+  },
+  'expand-in': {
+    label: 'Expand in',
+    description: '중앙에서 확장되며 등장.',
+    initialOpacity: 0,
+    visibleOpacity: 1,
+    initialTransform: 'scale(0.6)',
+    visibleTransform: 'scale(1)',
+  },
+  'expand-from-left': {
+    label: 'Expand from left',
+    description: '왼쪽 끝에서 확장.',
+    initialOpacity: 0,
+    visibleOpacity: 1,
+    initialTransform: 'translateX(-20px) scale(0.8)',
+    visibleTransform: 'translateX(0) scale(1)',
+  },
+  'expand-from-right': {
+    label: 'Expand from right',
+    description: '오른쪽 끝에서 확장.',
+    initialOpacity: 0,
+    visibleOpacity: 1,
+    initialTransform: 'translateX(20px) scale(0.8)',
+    visibleTransform: 'translateX(0) scale(1)',
   },
   'slide-up': {
     label: 'Slide up',
@@ -256,6 +374,11 @@ export const HOVER_PRESET_DEFINITIONS: Record<HoverAnimationPreset, HoverPresetD
     label: 'Tint',
     description: 'Brightens and saturates the node.',
     filter: 'brightness(1.1) saturate(1.2)',
+  },
+  fade: {
+    label: 'Fade',
+    description: 'Lowers opacity slightly on hover.',
+    opacity: 0.75,
   },
 };
 

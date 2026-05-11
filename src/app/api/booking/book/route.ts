@@ -5,6 +5,7 @@ import { bookingCreateSchema } from '@/lib/builder/bookings/types';
 import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
 import { createZoomMeeting } from '@/lib/builder/bookings/zoom-client';
+import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -80,6 +81,13 @@ export async function POST(request: NextRequest) {
   });
   await saveBooking(booking);
   await sendBookingConfirmation(booking, { service, staff });
+  emitEvent('booking.created', {
+    bookingId: booking.bookingId,
+    serviceId: booking.serviceId,
+    staffId: booking.staffId,
+    startAt: booking.startAt,
+    customer: { email: booking.customer.email, name: booking.customer.name, locale: booking.customer.locale },
+  });
 
   return NextResponse.json({ bookingId: booking.bookingId, booking }, { status: 201 });
 }

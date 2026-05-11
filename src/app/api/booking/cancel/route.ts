@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { getBooking, getService, saveBooking } from '@/lib/builder/bookings/storage';
+import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -132,6 +133,12 @@ export async function POST(request: NextRequest) {
     updatedAt: now,
   };
   await saveBooking(updated);
+  emitEvent('booking.cancelled', {
+    bookingId: updated.bookingId,
+    reason: parsed.data.reason,
+    refundDecision,
+    paymentStatus: updated.paymentStatus,
+  });
 
   return NextResponse.json({
     ok: true,

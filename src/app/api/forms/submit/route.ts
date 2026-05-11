@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { saveSubmission, type FormSubmission } from '@/lib/builder/forms/form-engine';
+import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -233,6 +234,12 @@ export async function POST(request: NextRequest) {
     console.error('[forms/submit] storage save failed:', err);
     // Don't fail the request — fall through and try email/webhook.
   }
+  emitEvent('form.submitted', {
+    submissionId: submission.submissionId,
+    formId: submission.formId,
+    submittedAt: submission.submittedAt,
+    fields: submission.data,
+  });
 
   // Routing
   if (body.submitTo === 'email' && body.targetEmail) {

@@ -3723,3 +3723,45 @@ multi-step, conditional logic builder, preview). 통계 funnel 은 follow-up.
 
 남은 항목: 폼 funnel 통계 (시작/단계별 이탈/완료 — submission 외 별도 이벤트 트래킹 필요),
 폼 빌더 진입 링크를 기존 FormSubmissionsDashboard 에 추가.
+
+## 2026-05-11 Claude PR #13 — Webhooks / Zapier 통합
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.13. 외부 시스템 (Zapier/Make/n8n) 으로
+이벤트 fan-out. HMAC-SHA256 서명, 재시도, admin UI.
+
+**lib**
+- webhooks/types.ts — WebhookSubscription / WebhookDelivery / WEBHOOK_EVENT_TYPES
+  (form.submitted, booking.created, booking.cancelled, contact.created,
+  page.published, member.registered).
+- webhooks/signature.ts — Stripe 스타일 `t=…,v1=…` 헤더 (HMAC-SHA256),
+  timingSafeEqual 검증 + tolerance.
+- webhooks/storage.ts — blob+file dual backend (subscriptions + deliveries).
+- webhooks/dispatcher.ts — emitEvent(event, payload) fire-and-forget,
+  performDelivery 가 X-Hojeong-Signature / -Event / -Delivery-Id 헤더 발송.
+  retryDelivery 는 attempts 증가.
+
+**Admin API (permission: 'settings')**
+- POST /api/builder/webhooks — 신규 (secret 1회만 노출).
+- GET  /api/builder/webhooks — 목록 (secret 마스킹).
+- PATCH/DELETE /api/builder/webhooks/[id] — 수정 / 비활성화.
+- GET  /api/builder/webhooks/[id]/deliveries — 전송 이력.
+- POST /api/builder/webhooks/[id]/retry — 실패 재전송.
+
+**Event 통합**
+- /api/booking/book → emitEvent('booking.created')
+- /api/booking/cancel → emitEvent('booking.cancelled')
+- /api/forms/submit → emitEvent('form.submitted')
+- publish.ts → emitEvent('page.published') (best-effort dynamic import)
+
+**Admin UI**
+- /[locale]/admin-builder/webhooks — 등록 폼 (event 체크박스 8종),
+  표 (URL/이벤트/상태/날짜), 활성화 토글. 생성 시 secret 1회 표시.
+
+**Tests**
+- signature.test.ts × 5 (sign→verify round-trip, wrong secret, tampered body,
+  stale timestamp, malformed header).
+
+검증: typecheck ✅ / unit 794 ✅.
+
+남은 항목: 재시도 cron (지수 백오프), member.registered 이벤트 wire-up,
+delivery 페이지 admin UI (현재는 API 만).

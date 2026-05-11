@@ -213,6 +213,18 @@ export async function publishPage(
   // the public /api/search endpoint reflects the freshly published content.
   void rebuildSearchIndexBestEffort();
 
+  // PR #13 — emit a webhook event for any subscriber listening on page.published.
+  void import('@/lib/builder/webhooks/dispatcher').then(({ emitEvent }) => {
+    emitEvent('page.published', {
+      siteId,
+      pageId,
+      slug: page.slug || '',
+      locale: draftState.record.document.locale,
+      publishedRevision: revisionResult.revision,
+      publishedAt: publishedSavedAt,
+    });
+  }).catch(() => undefined);
+
   return {
     ok: true,
     revisionId: revisionResult.revisionId,

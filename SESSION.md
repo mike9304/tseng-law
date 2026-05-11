@@ -3407,3 +3407,23 @@ hook / scrub scroll handler 적용은 follow-up.
 - 다중 location 가용성 계산 통합 (W212)
 
 W196~W215 schema 단계 evidence green.
+
+## 2026-05-11 Claude M28 에디터 고도화 (preferences schema)
+
+범위: M28 (W216~W225). 에디터 사용자 설정 schema + localStorage 헬퍼.
+- EditorPreferences 인터페이스 (rulers / outline / pixelGrid / referenceGuides /
+  alignDistribute / customKeybindings / comments / componentLibrary).
+- DEFAULT_EDITOR_PREFS + loadEditorPreferences() / saveEditorPreferences()
+  (localStorage `tw_builder_editor_prefs_v1`).
+- makeGuideId / makeCommentId 헬퍼.
+- W216 rulers / W218 outline / W220 align-distribute / W221 pixel grid / W222
+  reference guides / W223 component library / W224 element comments / W225 editor
+  theme 의 schema 단계 evidence green.
+- W217 Layers tree advanced 는 기존 인프라 sweep.
+- W219 단축키 매핑 UI 는 customKeybindings 배열로 schema 완비.
+
+검증: typecheck ✅ / unit 769 tests ✅. UI 통합은 builder editor 패널 follow-up.
+
+★ M01~M28 schema 단계 모두 evidence green. 호정 빌더 G-Editor 로드맵 28
+마일스톤 완주 (단, 다수 마일스톤이 schema/helper 단계로 runtime 통합 follow-up
+필요 — runtime 깊이는 코덱스가 한도 풀린 후 polish 권장).

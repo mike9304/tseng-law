@@ -77,6 +77,7 @@ type InteractiveWidgetKind = Extract<
 >;
 type NavigationWidgetKind = Extract<BuilderCanvasNodeKind, 'menu-bar' | 'anchor-menu' | 'breadcrumbs'>;
 type SocialWidgetKind = Extract<BuilderCanvasNodeKind, 'social-bar' | 'share-buttons' | 'social-embed' | 'floating-chat'>;
+type LocationWidgetKind = Extract<BuilderCanvasNodeKind, 'address-block' | 'business-hours' | 'multi-location-map' | 'map'>;
 
 interface TextWidgetPreset {
   id: string;
@@ -156,6 +157,18 @@ interface SocialWidgetPreset {
   description: string;
   icon: string;
   kind: SocialWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+interface LocationWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: LocationWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -1427,6 +1440,39 @@ const SOCIAL_WIDGET_PRESETS: SocialWidgetPreset[] = [
   },
 ];
 
+const LOCATION_WIDGET_PRESETS: LocationWidgetPreset[] = [
+  {
+    id: 'location-address-block',
+    label: 'Address block',
+    description: '주소 + 길찾기',
+    icon: '📍',
+    kind: 'address-block',
+    width: 320,
+    height: 220,
+    content: {},
+  },
+  {
+    id: 'location-business-hours',
+    label: 'Business hours',
+    description: '영업 시간 테이블',
+    icon: '🕒',
+    kind: 'business-hours',
+    width: 280,
+    height: 280,
+    content: {},
+  },
+  {
+    id: 'location-multi-map',
+    label: 'Multi-location map',
+    description: '다중 지점',
+    icon: '🗺',
+    kind: 'multi-location-map',
+    width: 480,
+    height: 320,
+    content: {},
+  },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -1555,6 +1601,20 @@ function navigationWidgetMatchesSearch(preset: NavigationWidgetPreset, query: st
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function locationWidgetMatchesSearch(preset: LocationWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'location widget',
+    'maps',
+    'address',
+    'hours',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 function socialWidgetMatchesSearch(preset: SocialWidgetPreset, query: string): boolean {
   if (!query) return true;
   return [
@@ -1621,6 +1681,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     () => SOCIAL_WIDGET_PRESETS.filter((preset) => socialWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
+  const visibleLocationWidgetPresets = useMemo(
+    () => LOCATION_WIDGET_PRESETS.filter((preset) => locationWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -1655,8 +1719,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -1760,6 +1824,31 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         ...(preset.style ?? {}),
       },
       anchorName: preset.id === 'layout-sticky-anchor' ? 'services' : seed.anchorName,
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddLocationWidgetPreset(preset: LocationWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
     } as BuilderCanvasNode;
 
     addNode(node);
@@ -2242,6 +2331,56 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                     className={styles.mediaWidgetPresetButton}
                     data-builder-social-widget-preset={preset.id}
                     onClick={() => handleAddSocialWidgetPreset(preset)}
+                  >
+                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.mediaWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleLocationWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['location-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'location-widgets': !(current['location-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>📍</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Maps &amp; Location pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    address, hours, multi-map · {visibleLocationWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['location-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['location-widgets'] ?? true) ? (
+              <div className={styles.mediaWidgetGrid}>
+                {visibleLocationWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.mediaWidgetPresetButton}
+                    data-builder-location-widget-preset={preset.id}
+                    onClick={() => handleAddLocationWidgetPreset(preset)}
                   >
                     <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
                     <span className={styles.mediaWidgetPresetCopy}>

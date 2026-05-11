@@ -20395,3 +20395,71 @@ html[data-theme='dark'] .site-header-logo-dark {
   border-radius: 8px;
   white-space: nowrap;
 }
+
+/* Phase 18 — Maps & Location */
+.builder-location-address {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  font-style: normal;
+  font-size: 13px;
+  color: #0f172a;
+}
+.builder-location-address strong { font-size: 12px; color: #475569; text-transform: uppercase; letter-spacing: 0.04em; }
+.builder-location-address [data-builder-location-phone='true'] { font-weight: 600; }
+.builder-location-address-actions { display: flex; gap: 8px; margin-top: 8px; }
+.builder-location-address-actions button,
+.builder-location-address-actions a {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  text-decoration: none;
+}
+.builder-location-business-hours { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; font-size: 13px; }
+.builder-location-business-hours strong { font-size: 14px; }
+.builder-location-business-hours small { color: #94a3b8; font-size: 11px; }
+.builder-location-business-hours ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.builder-location-business-hours li { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed #e2e8f0; }
+.builder-location-business-hours li[data-builder-business-hours-today='true'] { font-weight: 700; color: #0f172a; }
+.builder-location-business-hours li[data-builder-business-hours-closed='true'] em { color: #b91c1c; }
+.builder-location-business-hours p { margin: 8px 0 0; font-size: 11px; color: #64748b; }
+.builder-location-multi-map {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 13px;
+}
+.builder-location-multi-map header { display: flex; justify-content: space-between; align-items: baseline; }
+.builder-location-multi-map header strong { font-size: 14px; }
+.builder-location-multi-map header small { color: #94a3b8; font-size: 11px; }
+.builder-location-multi-map-body { display: grid; grid-template-columns: 1fr 1.4fr; gap: 12px; }
+.builder-location-multi-map[data-builder-location-list='false'] .builder-location-multi-map-body { grid-template-columns: 1fr; }
+.builder-location-multi-map ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.builder-location-multi-map li { padding: 8px 10px; border-radius: 8px; background: #f8fafc; display: flex; flex-direction: column; gap: 2px; }
+.builder-location-multi-map li[data-active='true'] { background: #0f172a; color: #ffffff; }
+.builder-location-multi-map-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  min-height: 120px;
+  justify-content: center;
+}
+.builder-location-empty em { color: #94a3b8; font-size: 12px; }

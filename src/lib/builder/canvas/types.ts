@@ -85,6 +85,10 @@ export const builderCanvasNodeKinds = [
   'share-buttons',
   'social-embed',
   'floating-chat',
+  // Phase 18 — Maps & Location
+  'address-block',
+  'business-hours',
+  'multi-location-map',
 ] as const;
 
 /**
@@ -1180,6 +1184,54 @@ const floatingChatCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+// ─── Phase 18 — Maps & Location ──────────────────────────────────
+
+const addressBlockCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('address-block'),
+  content: z.object({
+    label: z.string().max(80).default('주소'),
+    line1: z.string().max(200).default(''),
+    line2: z.string().max(200).default(''),
+    cityRegion: z.string().max(160).default(''),
+    postalCode: z.string().max(40).default(''),
+    country: z.string().max(80).default(''),
+    phone: z.string().max(80).default(''),
+    showCopyButton: z.boolean().default(true),
+    showDirectionsLink: z.boolean().default(true),
+    directionsHref: z.string().max(2000).default(''),
+  }),
+});
+
+const businessHoursCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('business-hours'),
+  content: z.object({
+    title: z.string().max(80).default('영업 시간'),
+    timezone: z.string().max(80).default('Asia/Seoul'),
+    rows: z.array(z.object({
+      day: z.string().max(20),
+      hours: z.string().max(60),
+      closed: z.boolean().default(false),
+    })).max(14).default([]),
+    showCurrentStatus: z.boolean().default(true),
+    note: z.string().max(240).default(''),
+  }),
+});
+
+const multiLocationMapCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('multi-location-map'),
+  content: z.object({
+    title: z.string().max(80).default('지점 안내'),
+    locations: z.array(z.object({
+      name: z.string().max(80),
+      address: z.string().max(200),
+      lat: z.number().default(0),
+      lng: z.number().default(0),
+    })).max(20).default([]),
+    activeIndex: z.number().int().min(0).max(20).default(0),
+    showList: z.boolean().default(true),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
@@ -1231,6 +1283,9 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   shareButtonsCanvasNodeSchema,
   socialEmbedCanvasNodeSchema,
   floatingChatCanvasNodeSchema,
+  addressBlockCanvasNodeSchema,
+  businessHoursCanvasNodeSchema,
+  multiLocationMapCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -1283,6 +1338,9 @@ export type BuilderSocialBarCanvasNode = z.infer<typeof socialBarCanvasNodeSchem
 export type BuilderShareButtonsCanvasNode = z.infer<typeof shareButtonsCanvasNodeSchema>;
 export type BuilderSocialEmbedCanvasNode = z.infer<typeof socialEmbedCanvasNodeSchema>;
 export type BuilderFloatingChatCanvasNode = z.infer<typeof floatingChatCanvasNodeSchema>;
+export type BuilderAddressBlockCanvasNode = z.infer<typeof addressBlockCanvasNodeSchema>;
+export type BuilderBusinessHoursCanvasNode = z.infer<typeof businessHoursCanvasNodeSchema>;
+export type BuilderMultiLocationMapCanvasNode = z.infer<typeof multiLocationMapCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({

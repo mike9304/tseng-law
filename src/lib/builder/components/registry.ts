@@ -78,3 +78,8 @@ import './socialBar';
 import './shareButtons';
 import './socialEmbed';
 import './floatingChat';
+
+// Phase 18 — Maps & Location
+import './addressBlock';
+import './businessHours';
+import './multiLocationMap';

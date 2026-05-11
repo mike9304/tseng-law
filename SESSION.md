@@ -3293,3 +3293,14 @@ Prompt-to-artifact 체크:
   fallback + placement.
 
 검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.
+
+## 2026-05-11 Claude M18 Maps & Location 위젯 팩
+
+범위:
+- M18 (W114~W117). 3 신규 kind. 기존 'map' kind는 그대로 (W114 sweep).
+- address-block: 1행/2행/도시/우편/국가/전화 + 복사 버튼 + Google Maps 길찾기 링크.
+- business-hours: 7일 + 휴무 flag + 오늘 강조 + 시간대 + 비고.
+- multi-location-map: 지점 리스트 + active index + Google Maps 검색 링크.
+- 카탈로그 Maps & Location pack 3 프리셋.
+
+검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.

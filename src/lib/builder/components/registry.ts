@@ -90,3 +90,15 @@ import './pattern';
 import './parallaxBg';
 import './frame';
 import './sticker';
+
+// Phase 20 — Data Display widgets
+import './barChart';
+import './lineChart';
+import './pieChart';
+import './counter';
+import './testimonialCarousel';
+import './pricingTable';
+import './comparisonTable';
+import './timeline';
+import './teamMemberCard';
+import './serviceFeatureCard';

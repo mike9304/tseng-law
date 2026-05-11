@@ -95,6 +95,17 @@ export const builderCanvasNodeKinds = [
   'parallax-bg',
   'frame',
   'sticker',
+  // Phase 20 — Data Display widgets
+  'bar-chart',
+  'line-chart',
+  'pie-chart',
+  'counter',
+  'testimonial-carousel',
+  'pricing-table',
+  'comparison-table',
+  'timeline',
+  'team-member-card',
+  'service-feature-card',
 ] as const;
 
 /**
@@ -1294,6 +1305,139 @@ const stickerCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+// ─── Phase 20 — Data Display widgets ─────────────────────────────
+
+const chartDataPointSchema = z.object({
+  label: z.string().max(40),
+  value: z.number(),
+});
+
+const barChartCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('bar-chart'),
+  content: z.object({
+    title: z.string().max(120).default(''),
+    points: z.array(chartDataPointSchema).max(40).default([]),
+    color: z.string().max(60).default('#1d4ed8'),
+    showValueLabel: z.boolean().default(true),
+  }),
+});
+
+const lineChartCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('line-chart'),
+  content: z.object({
+    title: z.string().max(120).default(''),
+    points: z.array(chartDataPointSchema).max(40).default([]),
+    color: z.string().max(60).default('#0ea5e9'),
+    smooth: z.boolean().default(true),
+    showPoints: z.boolean().default(true),
+  }),
+});
+
+const pieChartCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('pie-chart'),
+  content: z.object({
+    title: z.string().max(120).default(''),
+    slices: z.array(z.object({
+      label: z.string().max(40),
+      value: z.number().min(0),
+      color: z.string().max(60).optional(),
+    })).max(12).default([]),
+    showLegend: z.boolean().default(true),
+    donut: z.boolean().default(false),
+  }),
+});
+
+const counterCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('counter'),
+  content: z.object({
+    title: z.string().max(120).default(''),
+    suffix: z.string().max(20).default(''),
+    prefix: z.string().max(20).default(''),
+    target: z.number().default(100),
+    durationMs: z.number().int().min(200).max(20000).default(1500),
+    decimals: z.number().int().min(0).max(4).default(0),
+  }),
+});
+
+const testimonialCarouselCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('testimonial-carousel'),
+  content: z.object({
+    items: z.array(z.object({
+      quote: z.string().max(800),
+      name: z.string().max(80),
+      role: z.string().max(160).optional(),
+      avatar: z.string().max(2000).optional(),
+    })).max(20).default([]),
+    autoplayMs: z.number().int().min(0).max(60000).default(6000),
+    showStars: z.boolean().default(true),
+  }),
+});
+
+const pricingTableCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('pricing-table'),
+  content: z.object({
+    plans: z.array(z.object({
+      name: z.string().max(60),
+      price: z.string().max(60),
+      period: z.string().max(40).optional(),
+      featured: z.boolean().default(false),
+      features: z.array(z.string().max(160)).max(20).default([]),
+      ctaLabel: z.string().max(60).default('선택'),
+      ctaHref: z.string().max(2000).default(''),
+    })).max(6).default([]),
+  }),
+});
+
+const comparisonTableCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('comparison-table'),
+  content: z.object({
+    columns: z.array(z.string().max(60)).max(8).default([]),
+    rows: z.array(z.object({
+      feature: z.string().max(120),
+      values: z.array(z.string().max(60)).max(8),
+    })).max(20).default([]),
+  }),
+});
+
+const timelineCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('timeline'),
+  content: z.object({
+    items: z.array(z.object({
+      year: z.string().max(20),
+      title: z.string().max(120),
+      description: z.string().max(400).optional(),
+    })).max(40).default([]),
+    orientation: z.enum(['vertical', 'horizontal']).default('vertical'),
+    accentColor: z.string().max(60).default('#0f172a'),
+  }),
+});
+
+const teamMemberCardCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('team-member-card'),
+  content: z.object({
+    name: z.string().max(80).default(''),
+    role: z.string().max(160).default(''),
+    bio: z.string().max(600).default(''),
+    avatar: z.string().max(2000).default(''),
+    socialLinks: z.array(z.object({
+      label: z.string().max(40),
+      href: z.string().max(2000),
+    })).max(8).default([]),
+  }),
+});
+
+const serviceFeatureCardCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('service-feature-card'),
+  content: z.object({
+    icon: z.string().max(20).default('★'),
+    title: z.string().max(120).default(''),
+    description: z.string().max(600).default(''),
+    ctaLabel: z.string().max(60).default(''),
+    ctaHref: z.string().max(2000).default(''),
+    variant: z.enum(['minimal', 'card', 'gradient']).default('card'),
+  }),
+});
+
 export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   textCanvasNodeSchema,
   imageCanvasNodeSchema,
@@ -1353,6 +1497,16 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   parallaxBgCanvasNodeSchema,
   frameCanvasNodeSchema,
   stickerCanvasNodeSchema,
+  barChartCanvasNodeSchema,
+  lineChartCanvasNodeSchema,
+  pieChartCanvasNodeSchema,
+  counterCanvasNodeSchema,
+  testimonialCarouselCanvasNodeSchema,
+  pricingTableCanvasNodeSchema,
+  comparisonTableCanvasNodeSchema,
+  timelineCanvasNodeSchema,
+  teamMemberCardCanvasNodeSchema,
+  serviceFeatureCardCanvasNodeSchema,
 ]);
 
 export type BuilderTextCanvasNode = z.infer<typeof textCanvasNodeSchema>;
@@ -1413,6 +1567,16 @@ export type BuilderPatternCanvasNode = z.infer<typeof patternCanvasNodeSchema>;
 export type BuilderParallaxBgCanvasNode = z.infer<typeof parallaxBgCanvasNodeSchema>;
 export type BuilderFrameCanvasNode = z.infer<typeof frameCanvasNodeSchema>;
 export type BuilderStickerCanvasNode = z.infer<typeof stickerCanvasNodeSchema>;
+export type BuilderBarChartCanvasNode = z.infer<typeof barChartCanvasNodeSchema>;
+export type BuilderLineChartCanvasNode = z.infer<typeof lineChartCanvasNodeSchema>;
+export type BuilderPieChartCanvasNode = z.infer<typeof pieChartCanvasNodeSchema>;
+export type BuilderCounterCanvasNode = z.infer<typeof counterCanvasNodeSchema>;
+export type BuilderTestimonialCarouselCanvasNode = z.infer<typeof testimonialCarouselCanvasNodeSchema>;
+export type BuilderPricingTableCanvasNode = z.infer<typeof pricingTableCanvasNodeSchema>;
+export type BuilderComparisonTableCanvasNode = z.infer<typeof comparisonTableCanvasNodeSchema>;
+export type BuilderTimelineCanvasNode = z.infer<typeof timelineCanvasNodeSchema>;
+export type BuilderTeamMemberCardCanvasNode = z.infer<typeof teamMemberCardCanvasNodeSchema>;
+export type BuilderServiceFeatureCardCanvasNode = z.infer<typeof serviceFeatureCardCanvasNodeSchema>;
 export type BuilderCanvasNode = z.infer<typeof builderCanvasNodeSchema>;
 
 export const builderCanvasDocumentSchema = z.object({

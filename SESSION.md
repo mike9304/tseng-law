@@ -3316,3 +3316,21 @@ Prompt-to-artifact 체크:
 - 카탈로그 Decorative widget pack 11 프리셋.
 
 검증: typecheck ✅ / lint ✅ / unit 769 tests ✅.
+
+## 2026-05-11 Claude M20 Data Display 위젯 팩
+
+범위: M20 (W126~W135). 10 신규 kind. 외부 차트 lib 없이 inline SVG/CSS.
+- bar-chart (W126): SVG 바 + value label.
+- line-chart (W127): SVG path (smooth Bezier 또는 linear) + 포인트 도트.
+- pie-chart (W128): SVG arc + donut 옵션 + 범례 + 자동 색.
+- counter (W129): requestAnimationFrame easing + prefix/suffix/decimals.
+- testimonial-carousel (W130): setInterval autoplay + 네비 도트 + 별점.
+- pricing-table (W131): featured plan 강조 + 기능 리스트 + CTA.
+- comparison-table (W132): 컬럼/행 inline 편집.
+- timeline (W133): vertical/horizontal + accent CSS var.
+- team-member-card (W134): Next/Image avatar + social links.
+- service-feature-card (W135): minimal/card/gradient variant.
+
+검증: typecheck ✅ / unit 769 tests ✅. category 'advanced' 자동 분류로 카탈로그에서 검색.
+
+W126~W135 evidence green. M01~M20 완료.

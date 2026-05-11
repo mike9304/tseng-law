@@ -4175,3 +4175,37 @@ CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.8. 변호사별 Google Calendar / Outlook
 검증: typecheck ✅ / unit 845 ✅.
 
 남은 항목: 외부 → booking pull (consent 모델 정리 후), Vercel cron 등록 entry.
+
+## 2026-05-11 Claude PR #11 — AI Site Generator (Wix ADI clone)
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.11. 5-step wizard: 업종 → 회사명/슬로건 →
+톤 → 컬러 → 미리보기. 산업 템플릿 + LLM 콘텐츠 생성. Canvas 임포트는 follow-up.
+
+**lib (ai-generator/)**
+- site-spec.ts — 31개 industry enum + tone (5종) + colorPreference (5종) + zod 스키마.
+- template-selector.ts — selectBlueprint(industry, tone): 산업별 sections 목록 +
+  heroHeadlineHint + 5종 palette. law/accounting/consulting/medical/.../saas/agency
+  각각 매핑, 그 외는 default blueprint.
+- content-generator.ts — generateSiteContent(spec, blueprint):
+  OPENAI_API_KEY 있으면 GPT-4o-mini JSON 응답 호출 (response_format=json_object),
+  없으면 deterministic fallback (industry-aware 한국어 stub).
+- orchestrator.ts — generateSiteDraft: blueprint pick → palette resolve →
+  content generate → GeneratedSiteDraft.
+- cache.ts — spec SHA1 키 256 entry LRU 캐시 (동일 입력 재요청 시 무료).
+
+**API**
+- POST /api/builder/ai-generator — 캐시 우선, miss 시 LLM 호출. permission: 'edit-pages'.
+
+**Admin UI**
+- /[locale]/admin-builder/ai-generator — 5-step wizard 좌측 + 본문.
+  step 5 미리보기는 hero/sections 렌더 + palette swatch.
+- "사이트에 적용" 버튼은 disabled (canvas 임포트 follow-up 표시).
+
+**Tests**
+- orchestrator.test.ts × 5 (slogan→headline 우선순위, company name fallback,
+  industry section 차이, default blueprint, palette 형식).
+
+검증: typecheck ✅ / unit 850 ✅.
+
+남은 항목: GeneratedSiteDraft → BuilderCanvasNode 트리 변환 (canvas 임포트),
+quota / rate-limit (cost 통제).

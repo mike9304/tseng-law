@@ -209,6 +209,10 @@ export async function publishPage(
     // dev or non-existent path
   }
 
+  // PR #5 — rebuild the search index asynchronously after each publish so
+  // the public /api/search endpoint reflects the freshly published content.
+  void rebuildSearchIndexBestEffort();
+
   return {
     ok: true,
     revisionId: revisionResult.revisionId,
@@ -220,6 +224,21 @@ export async function publishPage(
     warnings: checks.warnings,
     checks,
   };
+}
+
+async function rebuildSearchIndexBestEffort(): Promise<void> {
+  try {
+    const [{ collectAllSearchDocs }, { buildSearchIndex }, { saveSearchIndex }] = await Promise.all([
+      import('@/lib/builder/search/source-collector'),
+      import('@/lib/builder/search/index-builder'),
+      import('@/lib/builder/search/index-storage'),
+    ]);
+    const docs = await collectAllSearchDocs('default');
+    const index = buildSearchIndex(docs);
+    await saveSearchIndex(index);
+  } catch (err) {
+    console.warn('[publish] search index rebuild failed', err);
+  }
 }
 
 export async function publishPageWithChecks(

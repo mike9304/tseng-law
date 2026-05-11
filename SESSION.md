@@ -3609,3 +3609,43 @@ permission 등록 (manage-campaigns / view-campaigns / manage-subscribers).
 
 PR #4 lib+API+UI 완성. 남은 항목: permission enum 등록 (manage-campaigns 등),
 폼-빌더 캔버스 재사용한 비주얼 이메일 빌더 (현재는 raw HTML textarea).
+
+## 2026-05-11 Claude PR #5 Site Search — lib + API + admin UI + publish hook
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.5. MiniSearch 의존성 추가 대신
+자체 inverted-index + tf-idf 작성 (의존성 0 정책 + CJK bigram 지원).
+
+**lib**
+- search/types.ts — SearchDoc / SearchIndex / SearchHit / SearchQueryLog.
+- search/tokenize.ts — ASCII 소문자화, CJK 캐릭터 + 인접 2-gram, ASCII↔CJK
+  경계 자동 분리. 한글/한자/일본어 부분 매치 보장.
+- search/index-builder.ts — buildSearchIndex(docs) → byLocale + invertedByLocale.
+- search/query-engine.ts — tf-idf 스코어링, locale 필터, kind 필터, title boost ×1.5,
+  하이라이트 (전후 30~60자 컨텍스트).
+- search/index-storage.ts — blob+file dual backend, queries.json log 어펜드 (cap 5000).
+- search/source-collector.ts — listPages + readPageCanvas → noIndex 페이지 제외,
+  모든 텍스트 콘텐츠 재귀 추출.
+
+**Public API**
+- GET /api/search?q=&locale=&kinds=&limit= — rate-limit 60/min, query log 자동 어펜드.
+
+**Admin API (guardMutation)**
+- POST /api/builder/search/rebuild — 전체 인덱스 재빌드.
+- GET  /api/builder/search/queries — 인기 쿼리, 결과 0건 쿼리 집계.
+
+**Admin UI**
+- /[locale]/admin-builder/search — 인덱스 상태 카드 + 재빌드 버튼 + 인기 쿼리
+  테이블 + 0-result 쿼리 칩.
+
+**Publish 통합**
+- publish.ts 가 페이지 발행 직후 rebuildSearchIndexBestEffort() 비동기 호출.
+  실패 시 publish 결과를 깨뜨리지 않고 warn 로그.
+
+**Tests**
+- search.test.ts × 7 (토크나이저 + 인덱스 + 쿼리 엔진 + locale 격리 + kind 필터 +
+  title boost).
+
+검증: typecheck ✅ / unit 781 ✅.
+
+남은 follow-up: 공개 site-search 위젯 (canvas node kind 'site-search'),
+기존 /[locale]/search 페이지가 새 builder 인덱스 결과도 머지하는 UI 통합.

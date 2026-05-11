@@ -3689,3 +3689,37 @@ CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.6. 171개 mutation route 일괄 permission
 남은 follow-up: (a) /api/builder 밖의 mutation route들 (consultation/forms/line/reviews 등),
 (b) 실제 per-user RBAC store (현재는 admin=owner implicit),
 (c) e2e (editor 토큰으로 user 관리 시도 → 403 확인).
+
+## 2026-05-11 Claude PR #7 — Form Builder UI 강화
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.7. 폼 스키마 편집기 (drag-drop reorder,
+multi-step, conditional logic builder, preview). 통계 funnel 은 follow-up.
+
+**Schema 확장**
+- FormField 에 `step?: number` + conditionalOn 에 `operator: 'equals' |
+  'not-equals' | 'contains' | 'empty' | 'not-empty'` 추가.
+- FormSchema 에 `steps?: FormStep[]` 추가.
+- validateSubmission 가 새 operator 모두 평가.
+
+**API**
+- GET /api/builder/forms/schemas — 목록.
+- POST /api/builder/forms/schemas — 신규 생성.
+- GET/PATCH /api/builder/forms/schemas/[formId] — 조회/수정.
+- 모두 `manage-forms` permission (PR #6 enum).
+
+**UI**
+- /[locale]/admin-builder/forms/builder/[formId] — 빌더 페이지.
+- FormSchemaEditor 컴포넌트:
+  - HTML5 draggable 로 필드 행 재정렬 (라이브러리 0 의존).
+  - Step 탭 + "새 step 추가" 버튼, 필드별 step 셀렉트.
+  - 조건부 로직 details — fieldId / operator / value 입력.
+  - 우측 미리보기 패널이 isFieldVisible 로 실시간 숨김 처리.
+
+**Tests**
+- conditional.test.ts × 3 (not-equals 숨김 시 required 면제, contains 보임,
+  empty operator 정확성).
+
+검증: typecheck ✅ / unit 789 ✅.
+
+남은 항목: 폼 funnel 통계 (시작/단계별 이탈/완료 — submission 외 별도 이벤트 트래킹 필요),
+폼 빌더 진입 링크를 기존 FormSubmissionsDashboard 에 추가.

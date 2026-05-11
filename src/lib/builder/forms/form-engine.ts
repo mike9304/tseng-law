@@ -15,6 +15,13 @@ import { get, put, list } from '@vercel/blob';
 
 export type FormFieldType = 'text' | 'email' | 'phone' | 'textarea' | 'select' | 'checkbox' | 'radio' | 'file' | 'date' | 'number';
 
+export type ConditionalOperator =
+  | 'equals'
+  | 'not-equals'
+  | 'contains'
+  | 'empty'
+  | 'not-empty';
+
 export interface FormField {
   id: string;
   type: FormFieldType;
@@ -33,14 +40,24 @@ export interface FormField {
   };
   conditionalOn?: {
     fieldId: string;
-    value: string;
+    value?: string;
+    operator?: ConditionalOperator;
   };
+  /** PR #7 — index into FormSchema.steps. Defaults to 0. */
+  step?: number;
+}
+
+export interface FormStep {
+  id: string;
+  label: string;
 }
 
 export interface FormSchema {
   formId: string;
   name: string;
   fields: FormField[];
+  /** PR #7 — multi-step support. When absent, the form is single-step. */
+  steps?: FormStep[];
   submitLabel: string;
   successMessage: string;
   errorMessage: string;
@@ -152,7 +169,28 @@ export function validateSubmission(
     // Skip conditionally hidden fields
     if (field.conditionalOn) {
       const depValue = data[field.conditionalOn.fieldId];
-      if (String(depValue) !== field.conditionalOn.value) continue;
+      const actual = depValue == null ? '' : String(depValue);
+      const expected = field.conditionalOn.value ?? '';
+      const op = field.conditionalOn.operator ?? 'equals';
+      let visible = true;
+      switch (op) {
+        case 'equals':
+          visible = actual === expected;
+          break;
+        case 'not-equals':
+          visible = actual !== expected;
+          break;
+        case 'contains':
+          visible = actual.includes(expected);
+          break;
+        case 'empty':
+          visible = actual.trim().length === 0;
+          break;
+        case 'not-empty':
+          visible = actual.trim().length > 0;
+          break;
+      }
+      if (!visible) continue;
     }
 
     const value = data[field.id];

@@ -44,7 +44,18 @@ export function stretchToCSS(
 
 // ─── Flex/Grid Layout ─────────────────────────────────────────────
 
-export type ContainerLayoutMode = 'absolute' | 'flex' | 'grid';
+export type ContainerLayoutMode =
+  | 'absolute'
+  | 'flex'
+  | 'grid'
+  | 'strip'
+  | 'box'
+  | 'columns'
+  | 'repeater'
+  | 'tabs'
+  | 'accordion'
+  | 'slideshow'
+  | 'hoverBox';
 
 export interface FlexConfig {
   direction: 'row' | 'column';

@@ -43,6 +43,29 @@ const smallInputStyle: React.CSSProperties = {
   borderRadius: 6,
 };
 
+function layoutItemsToText(items: BuilderContainerCanvasNode['content']['layoutItems']): string {
+  return (items ?? [])
+    .map((item) => [item.title, item.description ?? '', item.image ?? ''].join(' | '))
+    .join('\n');
+}
+
+type LayoutItem = NonNullable<BuilderContainerCanvasNode['content']['layoutItems']>[number];
+
+function parseLayoutItems(value: string): BuilderContainerCanvasNode['content']['layoutItems'] | undefined {
+  const items: LayoutItem[] = [];
+  for (const rawLine of value.split('\n')) {
+    const line = rawLine.trim();
+    if (!line) continue;
+    const [title, description, image] = line.split('|').map((part) => part.trim());
+    if (!title) continue;
+    const item: LayoutItem = { title: title.slice(0, 120) };
+    if (description) item.description = description.slice(0, 500);
+    if (image) item.image = image;
+    items.push(item);
+  }
+  return items.length ? items.slice(0, 12) : undefined;
+}
+
 export default function ContainerInspector({
   node,
   onUpdate,
@@ -123,7 +146,65 @@ export default function ContainerInspector({
         <option value="absolute">Absolute (default)</option>
         <option value="flex">Flex</option>
         <option value="grid">Grid</option>
+        <option value="strip">Strip</option>
+        <option value="box">Box</option>
+        <option value="columns">Columns</option>
+        <option value="repeater">Repeater</option>
+        <option value="tabs">Tabs</option>
+        <option value="accordion">Accordion</option>
+        <option value="slideshow">Slideshow container</option>
+        <option value="hoverBox">Hover box</option>
       </select>
+
+      {['columns', 'repeater', 'tabs', 'accordion', 'slideshow', 'hoverBox'].includes(layoutMode) ? (
+        <>
+          <span style={sectionLabelStyle}>Layout Items</span>
+          <label>
+            <span>Items (title | description | image)</span>
+            <textarea
+              rows={5}
+              style={{ ...smallInputStyle, resize: 'vertical', fontFamily: 'inherit' }}
+              value={layoutItemsToText(content.layoutItems)}
+              disabled={disabled}
+              onChange={(event) => onUpdate({ layoutItems: parseLayoutItems(event.target.value) })}
+            />
+          </label>
+          <label>
+            <span>Active index</span>
+            <input
+              type="number"
+              style={smallInputStyle}
+              min={0}
+              max={20}
+              value={content.activeIndex ?? 0}
+              disabled={disabled}
+              onChange={(event) => onUpdate({ activeIndex: Number(event.target.value) })}
+            />
+          </label>
+        </>
+      ) : null}
+
+      <span style={sectionLabelStyle}>Anchor / Sticky</span>
+      <label>
+        <span>Anchor target</span>
+        <input
+          type="text"
+          style={smallInputStyle}
+          value={content.anchorTarget ?? ''}
+          disabled={disabled}
+          placeholder="services"
+          onChange={(event) => onUpdate({ anchorTarget: event.target.value || undefined })}
+        />
+      </label>
+      <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <input
+          type="checkbox"
+          checked={Boolean(content.sticky)}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ sticky: event.target.checked })}
+        />
+        <span>Sticky on published page</span>
+      </label>
 
       {/* ── Flex Controls ──────────────────────────────────── */}
       {layoutMode === 'flex' && (

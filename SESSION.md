@@ -3130,3 +3130,30 @@ Prompt-to-artifact 체크:
 메모:
 - W71/W72/W73/W74/W75/W76/W77/W78는 M13 evidence 확보로 green 처리했다.
 - 필터 pill click으로 runtime activeFilter를 바꾸는 수준의 interactive behavior는 M15 Interactive track에서 더 다듬을 수 있다.
+
+## 2026-05-11 Claude M14 Layout 위젯 팩 (코덱스 한도 후 이어서)
+
+범위:
+- M14 `Layout 위젯 팩`을 완료했다.
+- 코덱스가 한도 직전까지 남긴 WIP를 main에서 그대로 이어서 마무리.
+- 카탈로그 패널에 `Layout widget pack` 섹션을 추가하고 W79~W88 프리셋 10종을 제공한다 (strip, box, columns ×3, repeater, tabs, accordion, slideshow container, hover box, sticky/anchor, grid layout).
+- Container schema/defaultContent에 layoutMode 8 신규 값 (strip/box/columns/repeater/tabs/accordion/slideshow/hoverBox) + layoutItems / activeIndex / sticky / anchorTarget 를 추가했다.
+- Container Element renderer에 tabs/accordion/slideshow/hoverBox/repeater preview + published sticky positioning + anchor target data attribute 를 추가했다.
+- Container Inspector에 layout-mode dropdown 확장 + layoutItems textarea + active index + anchor target + sticky toggle 를 연결했다.
+- globals.css 에 builder-layout-* 클래스 161줄 추가 (tabs list/accordion/slideshow/hoverbox/repeater 시각화).
+
+검증:
+- `npm run typecheck` ✅
+- `npm run lint` ✅ (handleAddLayoutWidgetPreset → 카탈로그 UI 통합으로 unused 해소)
+- `npm run test:unit` ✅ 36 files / 769 tests
+- `npm run security:builder-routes` ✅ 71 routes / 62 mutation handlers
+
+수정 사항 (코덱스 WIP 마무리):
+- `src/lib/builder/components/container/Inspector.tsx` import 들여쓰기 깨짐 fix (`type GridConfig,`)
+- `src/lib/builder/components/container/Inspector.tsx` `parseLayoutItems` 의 type predicate filter를 명시적 LayoutItem 누적 패턴으로 교체 (exactOptionalPropertyTypes 호환)
+- `src/components/builder/canvas/SandboxCatalogPanel.tsx` 에 `Layout widget pack` 카테고리 섹션 추가 (Gallery 패턴 따라). `handleAddLayoutWidgetPreset` 핸들러를 UI에 연결.
+
+메모:
+- W79~W88는 M14 evidence 확보로 green 처리했다.
+- Playwright builder-editor 신규 E2E 미작성 (M11~M13 처럼 layout-widgets.playwright.ts 추가 권장 — 다음 turn).
+- Manual QA: `/ko/admin-builder` 좌측 + 패널에서 "Layout widget pack" 펼치고 10종 한 번씩 추가해 보면 검증 완료.

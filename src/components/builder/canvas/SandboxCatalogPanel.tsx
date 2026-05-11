@@ -70,6 +70,7 @@ const FEATURED_KINDS: BuilderCanvasNodeKind[] = ['text', 'button', 'image', 'con
 type TextWidgetKind = Extract<BuilderCanvasNodeKind, 'text' | 'heading'>;
 type MediaWidgetKind = Extract<BuilderCanvasNodeKind, 'image' | 'video' | 'video-embed' | 'audio' | 'lottie' | 'icon'>;
 type GalleryWidgetKind = Extract<BuilderCanvasNodeKind, 'gallery'>;
+type LayoutWidgetKind = Extract<BuilderCanvasNodeKind, 'container'>;
 
 interface TextWidgetPreset {
   id: string;
@@ -101,6 +102,18 @@ interface GalleryWidgetPreset {
   description: string;
   icon: string;
   kind: GalleryWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+interface LayoutWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: LayoutWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -767,6 +780,217 @@ const GALLERY_WIDGET_PRESETS: GalleryWidgetPreset[] = [
   },
 ];
 
+const LAYOUT_ITEMS = [
+  { title: '상담 예약', description: '방문 전 사건 요지를 정리합니다.', image: MEDIA_IMAGE_A },
+  { title: '사건 검토', description: '자료와 쟁점을 구조화합니다.', image: MEDIA_BLOG_IMAGE },
+  { title: '전략 수립', description: '절차와 비용, 가능성을 안내합니다.', image: MEDIA_IMAGE_B },
+  { title: '진행 공유', description: '단계별 변화를 투명하게 공유합니다.', image: '/images/blog/010-taiwan-gym-injury-lawsuit/featured-01.jpg' },
+];
+
+const LAYOUT_WIDGET_PRESETS: LayoutWidgetPreset[] = [
+  {
+    id: 'layout-strip',
+    label: 'Strip',
+    description: '전폭 섹션 밴드',
+    icon: 'ST',
+    kind: 'container',
+    width: 960,
+    height: 180,
+    content: {
+      label: 'Strip',
+      layoutMode: 'strip',
+      background: 'rgba(17, 109, 255, 0.08)',
+      borderWidth: 0,
+      borderRadius: 0,
+      padding: 28,
+    },
+  },
+  {
+    id: 'layout-box',
+    label: 'Box',
+    description: '카드형 박스',
+    icon: 'BX',
+    kind: 'container',
+    width: 360,
+    height: 240,
+    content: {
+      label: 'Box',
+      layoutMode: 'box',
+      background: '#ffffff',
+      borderColor: '#dbe2ea',
+      borderStyle: 'solid',
+      borderWidth: 1,
+      borderRadius: 18,
+      padding: 24,
+      variant: 'elevated',
+    },
+  },
+  {
+    id: 'layout-columns',
+    label: 'Columns 2/3/4',
+    description: '반응형 컬럼 프레임',
+    icon: 'CL',
+    kind: 'container',
+    width: 760,
+    height: 260,
+    content: {
+      label: 'Columns',
+      layoutMode: 'columns',
+      background: 'rgba(248, 250, 252, 0.96)',
+      borderWidth: 1,
+      borderStyle: 'dashed',
+      borderColor: '#cbd5e1',
+      borderRadius: 16,
+      padding: 18,
+      flexConfig: { direction: 'row', wrap: true, justifyContent: 'space-between', alignItems: 'stretch', gap: 16 },
+      layoutItems: LAYOUT_ITEMS.slice(0, 3),
+    },
+  },
+  {
+    id: 'layout-repeater',
+    label: 'Repeater',
+    description: '반복 카드 데이터',
+    icon: 'RP',
+    kind: 'container',
+    width: 720,
+    height: 260,
+    content: {
+      label: 'Repeater',
+      layoutMode: 'repeater',
+      background: 'rgba(248, 250, 252, 0.96)',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#e2e8f0',
+      borderRadius: 16,
+      padding: 16,
+      layoutItems: LAYOUT_ITEMS.slice(0, 3),
+    },
+  },
+  {
+    id: 'layout-tabs',
+    label: 'Tabs',
+    description: '탭 전환 패널',
+    icon: 'TB',
+    kind: 'container',
+    width: 560,
+    height: 240,
+    content: {
+      label: 'Tabs',
+      layoutMode: 'tabs',
+      background: '#ffffff',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#dbe2ea',
+      borderRadius: 16,
+      padding: 18,
+      activeIndex: 0,
+      layoutItems: LAYOUT_ITEMS.slice(0, 3),
+    },
+  },
+  {
+    id: 'layout-accordion',
+    label: 'Accordion',
+    description: '펼침형 정보 블록',
+    icon: 'AC',
+    kind: 'container',
+    width: 520,
+    height: 300,
+    content: {
+      label: 'Accordion',
+      layoutMode: 'accordion',
+      background: 'rgba(248, 250, 252, 0.96)',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#dbe2ea',
+      borderRadius: 16,
+      padding: 16,
+      activeIndex: 1,
+      layoutItems: LAYOUT_ITEMS.slice(0, 4),
+    },
+  },
+  {
+    id: 'layout-slideshow-container',
+    label: 'Slideshow container',
+    description: '콘텐츠 슬라이드 프레임',
+    icon: 'SC',
+    kind: 'container',
+    width: 620,
+    height: 320,
+    content: {
+      label: 'Slideshow container',
+      layoutMode: 'slideshow',
+      background: '#0f172a',
+      borderWidth: 0,
+      borderRadius: 18,
+      padding: 0,
+      activeIndex: 0,
+      layoutItems: LAYOUT_ITEMS,
+    },
+  },
+  {
+    id: 'layout-hover-box',
+    label: 'Hover box',
+    description: 'hover 상태 카드',
+    icon: 'HB',
+    kind: 'container',
+    width: 340,
+    height: 220,
+    content: {
+      label: 'Hover box',
+      layoutMode: 'hoverBox',
+      background: '#ffffff',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#dbe2ea',
+      borderRadius: 18,
+      padding: 0,
+      layoutItems: [LAYOUT_ITEMS[0]],
+    },
+  },
+  {
+    id: 'layout-sticky-anchor',
+    label: 'Sticky / Anchor',
+    description: '고정/앵커 타깃',
+    icon: 'AN',
+    kind: 'container',
+    width: 520,
+    height: 86,
+    content: {
+      label: 'Sticky anchor',
+      layoutMode: 'flex',
+      background: '#ffffff',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#dbe2ea',
+      borderRadius: 999,
+      padding: 14,
+      sticky: true,
+      anchorTarget: 'services',
+      flexConfig: { direction: 'row', wrap: false, justifyContent: 'space-around', alignItems: 'center', gap: 12 },
+    },
+  },
+  {
+    id: 'layout-grid',
+    label: 'Grid layout',
+    description: 'CSS grid frame',
+    icon: 'GD',
+    kind: 'container',
+    width: 620,
+    height: 340,
+    content: {
+      label: 'Grid layout',
+      layoutMode: 'grid',
+      background: 'rgba(248, 250, 252, 0.96)',
+      borderWidth: 1,
+      borderStyle: 'dashed',
+      borderColor: '#cbd5e1',
+      borderRadius: 16,
+      padding: 18,
+      gridConfig: { columns: 3, rows: 2, columnGap: 14, rowGap: 14 },
+    },
+  },
+];
+
 function resolveCenteredNode(
   kind: BuilderCanvasNodeKind,
   existingCount: number,
@@ -854,6 +1078,17 @@ function galleryWidgetMatchesSearch(preset: GalleryWidgetPreset, query: string):
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function layoutWidgetMatchesSearch(preset: LayoutWidgetPreset, query: string): boolean {
+  if (!query) return true;
+  return [
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'layout widget',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
@@ -884,6 +1119,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
   );
   const visibleGalleryWidgetPresets = useMemo(
     () => GALLERY_WIDGET_PRESETS.filter((preset) => galleryWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
+  const visibleLayoutWidgetPresets = useMemo(
+    () => LAYOUT_WIDGET_PRESETS.filter((preset) => layoutWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
 
@@ -920,8 +1159,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -999,6 +1238,32 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         ...seed.style,
         ...(preset.style ?? {}),
       },
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddLayoutWidgetPreset(preset: LayoutWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
+      anchorName: preset.id === 'layout-sticky-anchor' ? 'services' : seed.anchorName,
     } as BuilderCanvasNode;
 
     addNode(node);
@@ -1206,6 +1471,56 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                     className={styles.mediaWidgetPresetButton}
                     data-builder-gallery-widget-preset={preset.id}
                     onClick={() => handleAddGalleryWidgetPreset(preset)}
+                  >
+                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
+                    <span className={styles.mediaWidgetPresetCopy}>
+                      <strong>{preset.label}</strong>
+                      <small>{preset.description}</small>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {visibleLayoutWidgetPresets.length > 0 ? (
+          <div className={styles.catalogCategorySection}>
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['layout-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => {
+                setCategoryOpen((current) => ({
+                  ...current,
+                  'layout-widgets': !(current['layout-widgets'] ?? true),
+                }));
+              }}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>▦</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Layout widget pack</span>
+                  <span className={styles.catalogCategoryHint}>
+                    strip, box, columns, repeater, tabs, accordion, slideshow, hover · {visibleLayoutWidgetPresets.length}
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['layout-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['layout-widgets'] ?? true) ? (
+              <div className={styles.mediaWidgetGrid}>
+                {visibleLayoutWidgetPresets.map((preset) => (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    className={styles.mediaWidgetPresetButton}
+                    data-builder-layout-widget-preset={preset.id}
+                    onClick={() => handleAddLayoutWidgetPreset(preset)}
                   >
                     <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
                     <span className={styles.mediaWidgetPresetCopy}>

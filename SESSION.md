@@ -3385,3 +3385,25 @@ hook / scrub scroll handler 적용은 follow-up.
   (W194), pre-render 검증 (W193), SEO Inspector 시각화 (W195) 는 follow-up.
 
 검증: typecheck ✅ / unit 769 tests ✅.
+
+## 2026-05-11 Claude M25-M27 Bookings 본격 (schema)
+
+범위: M25/M26/M27 (W196~W215) 일괄 schema 확장.
+- BookingService 확장: paymentMode (free/paid) + priceAmount/priceCurrency (W196~W202),
+  allowedLocationIds (W212), meetingMode (W205), cancellationPolicyId (W206),
+  reminderOffsetsHours (W215).
+- Booking 확장: paymentStatus / paymentIntentId / meetingLink / locationId /
+  cancellationReason / cancelledAt / customerTimezone.
+- BookingLocation 신규 (W212 다중 사무소).
+- BookingCancellationPolicy 신규 (W206 캔슬 정책 entity).
+
+검증: typecheck ✅ / unit 769 tests ✅. 기존 sendBookingConfirmation (W203) 유지.
+
+남은 follow-up:
+- Stripe Payment Intent backend (W197~W201)
+- Zoom OAuth + Create meeting API (W205)
+- 캔슬 환불 처리 endpoint (W206)
+- Twilio SMS 알림 (W204) — 옵션
+- 다중 location 가용성 계산 통합 (W212)
+
+W196~W215 schema 단계 evidence green.

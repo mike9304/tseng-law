@@ -34,6 +34,44 @@ export interface BookingService {
   isActive: boolean;
   createdAt: string;
   updatedAt: string;
+  // Phase 25 — Payment mode (W196~W202).
+  paymentMode?: 'free' | 'paid';
+  priceAmount?: number;        // smallest currency unit (e.g. cents/won)
+  priceCurrency?: 'KRW' | 'USD' | 'TWD' | 'JPY' | 'EUR';
+  // Phase 27 — Multi-location (W212).
+  allowedLocationIds?: string[];
+  // Phase 26 — Meeting mode (W205).
+  meetingMode?: 'in-person' | 'zoom' | 'phone' | 'hybrid';
+  // Phase 26 — Cancellation policy reference (W206).
+  cancellationPolicyId?: string;
+  // Phase 27 — Reminder schedule offsets in hours before start (W215).
+  reminderOffsetsHours?: number[];
+}
+
+// Phase 27 — Multiple offices (W212).
+export interface BookingLocation {
+  locationId: string;
+  name: LocalizedText;
+  address: LocalizedText;
+  timezone: string;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Phase 26 — Cancellation policy entity (W206).
+export interface BookingCancellationPolicy {
+  policyId: string;
+  name: string;
+  description?: string;
+  /** Minimum hours before start time required to cancel for full refund. */
+  fullRefundHoursBefore: number;
+  /** Minimum hours before start time required to cancel for partial refund. */
+  partialRefundHoursBefore: number;
+  /** Partial refund percentage (0~100). */
+  partialRefundPercent: number;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface Staff {
@@ -84,6 +122,14 @@ export interface Booking {
   createdAt: string;
   updatedAt: string;
   reminders: Array<{ sentAt: string; type: BookingReminderType }>;
+  // Phase 25~27 extensions.
+  paymentStatus?: 'unpaid' | 'paid' | 'refunded' | 'partial-refund';
+  paymentIntentId?: string;
+  meetingLink?: string;            // W205 Zoom 자동 링크
+  locationId?: string;             // W212 다중 사무소
+  cancellationReason?: string;     // W206
+  cancelledAt?: string;            // W206
+  customerTimezone?: string;       // W214
 }
 
 export interface CalendarEntry {

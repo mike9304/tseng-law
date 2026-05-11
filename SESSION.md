@@ -4060,3 +4060,43 @@ Vercel alias attach + SSL.
 
 남은 항목: 30초 폴링 자동 검증 (현재는 수동 버튼), Vercel webhook 받아 SSL
 provisioning 완료 시 자동 상태 갱신.
+
+## 2026-05-11 Claude PR #10 — A/B 테스트
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.10. 페이지 단위 variant + traffic split +
+sticky 할당 + z-test 유의성.
+
+**lib**
+- experiments/types.ts — Experiment / Variant / ExperimentMetrics + zod 스키마.
+  status: draft/running/paused/completed.
+- experiments/storage.ts — blob+file dual, exp_<ts>_<hex> id.
+- experiments/assign.ts — assignVariant(experiment, sessionId): SHA256
+  hash → 첫 8 hex → mod totalWeight → 누적 weight 워크. 동일 sessionId 는
+  동일 variant.
+- experiments/stats.ts — two-proportion z-test, Abramowitz erf 근사로
+  normalCdf. n<30 → 'insufficient', p<0.05 → 'significant', 나머지 'inconclusive'.
+
+**Public API**
+- GET /api/experiments/assign?experimentId=... — 변형 할당 + tw_exp_sid 쿠키 set,
+  exposure 카운트 자동 증가, rate-limit 120/min.
+- POST /api/experiments/event — { experimentId, variantId, goal } 전환 보고.
+  goal 미스매치 시 무시, rate-limit 60/min.
+
+**Admin API (permission: 'settings')**
+- GET/POST /api/builder/experiments — 목록 / 생성.
+- GET/PATCH /api/builder/experiments/[id] — 조회 / 상태 변경.
+  running 으로 전환 시 startedAt 기록, completed 시 endedAt.
+- GET /api/builder/experiments/[id]/results — VariantStats[] + 합계.
+
+**Admin UI**
+- /[locale]/admin-builder/experiments — 카드 리스트, 시작/일시중지/종료 버튼,
+  variant 별 노출/전환/전환율 표. 생성 폼은 variantId:weight 텍스트 입력.
+
+**Tests**
+- assign.test.ts × 4 (sticky, weight ratio, 변형 없음 null, 0 weight null).
+- stats.test.ts × 4 (control row, significant, insufficient, inconclusive).
+
+검증: typecheck ✅ / unit 837 ✅.
+
+남은 항목: 런타임에서 variant.overrides / pageId 를 실제로 적용하는 페이지
+렌더링 통합 (현재는 데이터·쿠키만), 분석에 variant 차원 자동 추가.

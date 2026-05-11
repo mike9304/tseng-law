@@ -167,6 +167,12 @@ export interface BuilderTheme {
     lg: number;
   };
   themeTextPresets?: ThemeTextPresets;
+  // Phase 23 — Typography scale ratio (W184). Heading sizes are derived as
+  // baseSize * ratio^level where level = 0 for body, +1/+2/... for h6..h1.
+  typographyScale?: {
+    baseSize: number;        // default 16
+    ratio: 1.125 | 1.2 | 1.25 | 1.333 | 1.414 | 1.5;
+  };
 }
 
 // P4-18: locale 별 Header/Footer 캔버스 ID

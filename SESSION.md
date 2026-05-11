@@ -3365,3 +3365,12 @@ W141/W147/W148 evidence green. W149는 기존 showIf로 충분, W150 dashboard s
 W159/W160/W167/W168/W170/W171/W172/W173 schema 단계 evidence green.
 Runtime IntersectionObserver leaving / loop CSS keyframes / page transition layout
 hook / scrub scroll handler 적용은 follow-up.
+
+## 2026-05-11 Claude M23 Design system 마무리
+
+범위: M23 (W184~W185). pure helper 추가.
+- BuilderTheme에 typographyScale 옵션 (baseSize + ratio 6단계).
+- typography-scale.ts: resolveTypographyScale() + headingFontSizeFromTheme() (W184).
+- style-origin.ts: classifyStyleOrigin() (theme/variant/manual/default) + 색 매핑 (W185).
+
+검증: typecheck ✅ / unit 769 tests ✅. heading style 컴포넌트 연결은 follow-up.

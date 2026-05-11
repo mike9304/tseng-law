@@ -74,7 +74,7 @@ async function translateWithOpenAI(
 }
 
 export async function POST(request: NextRequest) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
   try {

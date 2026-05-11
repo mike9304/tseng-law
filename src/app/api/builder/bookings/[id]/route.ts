@@ -8,7 +8,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'manage-bookings' });
   if (auth instanceof NextResponse) return auth;
 
   const existing = await getBooking(params.id);

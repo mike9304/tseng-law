@@ -40,7 +40,7 @@ export async function PATCH(
   request: NextRequest,
   { params }: { params: { id: string } },
 ) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
   let raw: unknown;
@@ -76,7 +76,7 @@ export async function DELETE(
   request: NextRequest,
   { params }: { params: { id: string } },
 ) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');

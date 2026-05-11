@@ -10,7 +10,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { siteId: string } }
 ) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
   if (!isDefaultBuilderSiteId(params.siteId)) {

@@ -14,7 +14,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } },
 ) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
   const draft = await readLightboxCanvas('default', params.id);
@@ -28,7 +28,7 @@ export async function PUT(
   request: NextRequest,
   { params }: { params: { id: string } },
 ) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
   let body: { document?: unknown };

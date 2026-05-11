@@ -9,7 +9,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
   try {

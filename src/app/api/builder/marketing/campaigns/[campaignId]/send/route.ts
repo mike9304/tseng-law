@@ -15,7 +15,7 @@ export async function POST(
   request: NextRequest,
   { params }: { params: { campaignId: string } },
 ) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'manage-campaigns' });
   if (auth instanceof NextResponse) return auth;
 
   const campaign = await getCampaign(params.campaignId);

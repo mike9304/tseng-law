@@ -12,9 +12,14 @@ import {
   checkPublishRateLimit,
   type RateLimitResult,
 } from '@/lib/builder/security/rate-limit';
+import type { BuilderPermission } from '@/lib/builder/security/permissions';
+import { hasBuilderPermission } from '@/lib/builder/security/permissions';
+import type { UserRole } from '@/lib/builder/collab/collab-engine';
 
 export interface GuardResult {
   username: string;
+  /** PR #6 — granular permission used for this request (for audit). */
+  permission?: BuilderPermission;
 }
 
 type GuardBucket = 'mutation' | 'publish' | 'asset';
@@ -22,6 +27,17 @@ type GuardBucket = 'mutation' | 'publish' | 'asset';
 interface GuardOptions {
   bucket?: GuardBucket;
   allowReadOnly?: boolean;
+  /** PR #6 — required granular permission. Defaults to 'edit-pages'. */
+  permission?: BuilderPermission;
+}
+
+/**
+ * Until a real per-user role store lands, the single admin user behind
+ * basic-auth is treated as the implicit `owner` role. Keeping this
+ * indirection lets us swap in real RBAC without rewriting route call sites.
+ */
+function resolveRoleForAdmin(_username: string): UserRole {
+  return 'owner';
 }
 
 function rateLimitForBucket(bucket: GuardBucket, ip: string): Promise<RateLimitResult> {
@@ -48,7 +64,20 @@ export function guardMutation(
   const csrf = validateCsrf(request);
   if (csrf) return Promise.resolve(csrf);
 
-  // 3. Rate limit
+  // 3. Permission gate
+  if (options.permission) {
+    const role = resolveRoleForAdmin(auth.username);
+    if (!hasBuilderPermission(role, options.permission)) {
+      return Promise.resolve(
+        NextResponse.json(
+          { error: `Missing permission: ${options.permission}` },
+          { status: 403 },
+        ),
+      );
+    }
+  }
+
+  // 4. Rate limit
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
   return rateLimitForBucket(options.bucket ?? 'mutation', ip).then((rl) => {
     if (!rl.allowed) {
@@ -58,7 +87,7 @@ export function guardMutation(
       );
     }
 
-    return { username: auth.username };
+    return { username: auth.username, permission: options.permission };
   });
 }
 

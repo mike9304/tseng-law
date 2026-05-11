@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'manage-campaigns' });
   if (auth instanceof NextResponse) return auth;
 
   const raw = await request.json().catch(() => null);

@@ -8,7 +8,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'manage-search' });
   if (auth instanceof NextResponse) return auth;
 
   const docs = await collectAllSearchDocs('default');

@@ -17,7 +17,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
   try {

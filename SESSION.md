@@ -3649,3 +3649,43 @@ CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.5. MiniSearch 의존성 추가 대신
 
 남은 follow-up: 공개 site-search 위젯 (canvas node kind 'site-search'),
 기존 /[locale]/search 페이지가 새 builder 인덱스 결과도 머지하는 UI 통합.
+
+## 2026-05-11 Claude PR #6 — granular permission enum + sweep
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.6. 171개 mutation route 일괄 permission
+적용. 이번 라운드는 builder API surface (62 routes) 에 한정. 나머지는 follow-up.
+
+**lib**
+- security/permissions.ts — BUILDER_PERMISSIONS 18종 enum (edit-pages, publish,
+  delete-pages, edit-blog, manage-forms, edit-seo, manage-campaigns,
+  view-campaigns, manage-subscribers, manage-cases, view-cases, manage-contacts,
+  view-contacts, manage-bookings, view-bookings, manage-users, manage-search,
+  settings). GRANULAR_TO_COARSE 매핑 → 기존 collab-engine ROLE_PERMISSIONS 활용.
+  hasBuilderPermission(role, perm) 게이트.
+
+**guardMutation 확장**
+- options.permission?: BuilderPermission — 통과 시 username + permission 반환,
+  실패 시 403 'Missing permission: X'.
+- 현재 admin 단일 사용자는 implicit 'owner' (resolveRoleForAdmin) — 향후 RBAC
+  도입 시 이 함수만 교체.
+
+**Sweep (62 builder routes)**
+- /api/builder/sites/* → edit-pages
+- /api/builder/site/seo* / redirects → edit-seo
+- /api/builder/site/settings → settings
+- /api/builder/bookings/* → manage-bookings
+- /api/builder/forms/* → manage-forms
+- /api/builder/translations/* → edit-pages
+- /api/builder/marketing/subscribers* → manage-subscribers
+- /api/builder/marketing/campaigns* → manage-campaigns
+- /api/builder/search/rebuild → manage-search
+- /api/builder/home/publish, revisions/rollback → publish
+
+**Tests**
+- permissions.test.ts × 5 (owner/editor/reviewer/viewer role × granular perm matrix).
+
+검증: typecheck ✅ / unit 786 ✅.
+
+남은 follow-up: (a) /api/builder 밖의 mutation route들 (consultation/forms/line/reviews 등),
+(b) 실제 per-user RBAC store (현재는 admin=owner implicit),
+(c) e2e (editor 토큰으로 user 관리 시도 → 403 확인).

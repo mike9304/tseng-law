@@ -21,7 +21,7 @@ async function readJsonBody(request: NextRequest): Promise<SeedRequestBody | nul
 }
 
 export async function POST(request: NextRequest) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
 
   let body: SeedRequestBody | null;

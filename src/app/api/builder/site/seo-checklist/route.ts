@@ -34,7 +34,7 @@ function sanitizeChecklist(input: BuilderSeoChecklistSettings): BuilderSeoCheckl
 }
 
 export async function GET(request: NextRequest) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
   try {
@@ -51,7 +51,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PATCH(request: NextRequest) {
-  const auth = await guardMutation(request);
+  const auth = await guardMutation(request, { permission: 'edit-seo' });
   if (auth instanceof NextResponse) return auth;
 
   try {

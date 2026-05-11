@@ -770,3 +770,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅
 - 커밋:
   - `41f1f0c G-Editor: fix client hook component boundaries`
+
+## 2026-05-11 — PR #16 builder error capture
+
+- 변경 파일:
+  - `src/app/api/builder/errors/route.ts` — POST client/runtime error report + GET admin error log endpoint를 추가했다.
+  - `src/lib/builder/errors/capture.ts` — local log + optional Sentry forward capture helper를 추가했다.
+  - `src/lib/builder/errors/storage.ts` — Vercel Blob/file fallback error log storage를 추가했다.
+  - `src/lib/builder/errors/sentry-adapter.ts` — `SENTRY_DSN` 기반 HTTP store API forwarder를 추가했다.
+  - `src/lib/builder/errors/types.ts` — error origin/severity/entry 타입을 추가했다.
+  - `src/lib/builder/errors/__tests__/*.test.ts` — capture + Sentry adapter unit tests 5개를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run test:unit -- src/lib/builder/errors/__tests__/capture.test.ts src/lib/builder/errors/__tests__/sentry-adapter.test.ts` ✅
+  - `npm run security:builder-routes` ✅
+- 리스크:
+  - Sentry source map upload, alert routing은 아직 운영 배포 hook 작업으로 남아 있다. 현재 단계는 에러 수집/저장/선택적 forward의 코드 경로를 닫았다.

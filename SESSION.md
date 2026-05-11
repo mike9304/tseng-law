@@ -3854,3 +3854,29 @@ provider 선택 UI 노출.
 
 커밋:
 - `41f1f0c G-Editor: fix client hook component boundaries`
+
+## 2026-05-11 Codex PR #16 — Builder error capture API
+
+CODEX-GOAL-WIX-PARITY-COMPLETE.md 4.16의 Sentry/error monitoring 트랙을 빌더용
+local log + optional Sentry forwarder 형태로 추가.
+
+**API**
+- POST `/api/builder/errors` — 공개 client/runtime error report endpoint.
+  origin/severity/message/stack/tags/extra를 zod로 제한하고 IP별 60/min rate limit.
+- GET `/api/builder/errors` — admin settings 권한으로 최근 200개 error log와
+  severity count 조회. mutation route guard coverage 대상.
+
+**lib**
+- `errors/capture.ts` — captureBuilderError(), captureBuilderErrorAsync().
+  local log write를 기본으로 하고 Sentry forward는 best-effort.
+- `errors/storage.ts` — Vercel Blob 또는 `runtime-data/errors/log.json` fallback,
+  최근 1000개 cap.
+- `errors/sentry-adapter.ts` — SENTRY_DSN이 있을 때 HTTP store API로 전송.
+- `errors/types.ts` — CapturedError / ErrorOrigin / ErrorSeverity.
+
+**Tests**
+- capture.test.ts × 3 (normalization/persist, Sentry accepted flag, persistence
+  failure swallow)
+- sentry-adapter.test.ts × 2 (missing/malformed DSN no-op, store endpoint payload)
+
+검증: typecheck ✅ / lint ✅ / targeted unit 5 ✅ / security 87 routes 76 mutation handlers ✅.

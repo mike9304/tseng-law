@@ -3481,3 +3481,22 @@ HeadingElement가 theme.typographyScale 설정 시 modular ratio로 h1~h6 기본
 W225 evidence green (UI 토글). Rulers (W216) / outline view (W218) / 단축키
 매핑 UI (W219) / element comments (W224) / component library (W223) UI 통합은
 follow-up.
+
+## 2026-05-11 Claude SEO Inspector hreflang/sitemap 시각화 (M24 W195 follow-up)
+
+- GET /api/builder/site/pages/[pageId]/seo 응답 확장:
+  `hreflang` (alternate 배열), `siblings` (linkedPageIds 해석 결과),
+  `missingLocales` (findMissingLocales), `sitemapIncluded` (page.noIndex 반영),
+  page 객체에 `linkedPageIds` + `noIndex` 추가.
+- SeoPanel — 새 탭 `Hreflang & Sitemap`. 3개 섹션:
+  1) Hreflang alternate URL 세트 (x-default 강조)
+  2) 다국어 형제 페이지 + indexed/noindex 뱃지
+  3) Sitemap 포함 상태 (성공/차단 컬러 카드)
+  + 누락 로케일 경고 카드 (linkedPageIds 미연결 시).
+- 데이터 소스: `buildHreflangAlternates` / `findMissingLocales` /
+  `localeToHreflangTag` (이미 존재하던 hreflang.ts 헬퍼 재사용).
+
+검증: typecheck ✅.
+
+W195 evidence green (Inspector 시각화). hreflang/sitemap 인프라는 이미 존재했고
+이번 작업으로 빌더 안에서도 확인할 수 있게 됐다.

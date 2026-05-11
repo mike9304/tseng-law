@@ -7,6 +7,11 @@ import type { BuilderNavItem, BuilderSeoMetadata } from '@/lib/builder/site/type
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import { buildDefaultSeoMetadata } from '@/lib/builder/seo/defaults';
 import {
+  buildHreflangAlternates,
+  findMissingLocales,
+  localeToHreflangTag,
+} from '@/lib/builder/seo/hreflang';
+import {
   normalizeSeoSlugInput,
   validateBuilderPageSeo,
 } from '@/lib/builder/seo/validation';
@@ -250,6 +255,25 @@ export async function GET(
       return pageNotFoundResponse(params.pageId);
     }
 
+    const siteUrl = getSiteUrl();
+    const hreflang = buildHreflangAlternates(page, siteUrl, site.pages);
+    const missingLocales = findMissingLocales(page, site.pages);
+    const siblings = Object.entries(page.linkedPageIds ?? {})
+      .map(([loc, linkedId]) => {
+        if (!linkedId) return null;
+        const linked = site.pages.find((p) => p.pageId === linkedId);
+        if (!linked) return null;
+        return {
+          locale: loc,
+          pageId: linked.pageId,
+          slug: linked.slug,
+          hreflang: localeToHreflangTag(linked.locale),
+          noIndex: Boolean(linked.noIndex || linked.seo?.noIndex),
+        };
+      })
+      .filter((value): value is NonNullable<typeof value> => value !== null);
+    const sitemapIncluded = !(page.noIndex || page.seo?.noIndex);
+
     return NextResponse.json({
       ok: true,
       page: {
@@ -258,23 +282,29 @@ export async function GET(
         title: page.title,
         locale: page.locale,
         isHomePage: page.isHomePage,
+        linkedPageIds: page.linkedPageIds ?? {},
+        noIndex: Boolean(page.noIndex),
       },
       seo: page.seo ?? {},
       defaultSeo: buildDefaultSeoMetadata({
         page,
         site,
-        siteUrl: getSiteUrl(),
+        siteUrl,
         locale,
       }),
       defaults: {
         publicPath: buildSitePagePath(page.locale, page.slug),
-        canonical: `${getSiteUrl().replace(/\/+$/, '')}${buildSitePagePath(page.locale, page.slug)}`,
+        canonical: `${siteUrl.replace(/\/+$/, '')}${buildSitePagePath(page.locale, page.slug)}`,
       },
+      hreflang,
+      siblings,
+      missingLocales,
+      sitemapIncluded,
       validation: validateBuilderPageSeo({
         page,
         site,
         seo: page.seo,
-        siteUrl: getSiteUrl(),
+        siteUrl,
       }),
     });
   } catch (error) {

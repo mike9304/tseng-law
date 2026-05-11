@@ -3458,3 +3458,12 @@ HeadingElement가 theme.typographyScale 설정 시 modular ratio로 h1~h6 기본
 자동 계산. 노드별 fontSize override는 그대로 우선.
 
 검증: typecheck ✅ / unit 769 tests ✅.
+
+## 2026-05-11 Claude Stripe Payment Intent endpoint (M25 follow-up)
+
+- POST /api/booking/payment-intent — paid 서비스용 Stripe Payment Intent 생성.
+  STRIPE_SECRET_KEY 없으면 dev에선 stub clientSecret + warning, production 시 503.
+- service.paymentMode === 'paid' + priceAmount/priceCurrency 검증.
+- rate limit 8/60s, automatic_payment_methods=true, receipt_email + metadata.
+
+검증: typecheck ✅ / unit 769 tests ✅ / security 71 routes 62 mutation handlers ✅.

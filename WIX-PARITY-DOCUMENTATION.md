@@ -1944,3 +1944,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (11 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. page template 적용 직후 slug prompt에서 focus가 editor canvas로 새거나 Escape/back path가 깨지는 경로를 닫았다.
+
+## M84 — SEO panel focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SeoPanel.tsx` — SEO panel dialog에 initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, Escape close, 닫힌 뒤 toolbar trigger focus 복귀를 추가했다.
+  - `tests/builder-editor/seo-publish-history.playwright.ts` — 실제 test page의 SEO panel을 열고 focus trap, 외부 focus 차단, Escape close, toolbar trigger focus 복귀를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W186/W190/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. SEO metadata panel에서 keyboard focus가 editor canvas로 새거나 Escape 후 편집 흐름이 끊기는 경로를 닫았다.

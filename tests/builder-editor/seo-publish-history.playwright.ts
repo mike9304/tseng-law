@@ -238,6 +238,70 @@ async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string, page
 }
 
 test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
+  test('traps focus in the SEO panel and restores focus to the toolbar trigger', async ({ page }) => {
+    test.setTimeout(60_000);
+
+    const token = `seo-focus-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const slug = `seo-focus-${token}`;
+    const pageTitle = `SEO focus ${token}`;
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        data: {
+          locale: 'ko',
+          slug,
+          title: pageTitle,
+          document: makeDocument({ token, titleText: pageTitle }),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      await openBuilderPageFromPagesPanel(page, pageTitle, pageId!);
+      const seoTrigger = page.getByTitle('현재 페이지 SEO');
+      await seoTrigger.click();
+
+      const seoDialog = page.getByRole('dialog', { name: '페이지 SEO' });
+      await expect(seoDialog).toBeVisible();
+      await expect(seoDialog.getByLabel('SEO title')).toBeVisible();
+      const firstFocusable = seoDialog.getByRole('button', { name: '추천 적용' });
+      const lastFocusable = seoDialog.getByRole('button', { name: '저장' });
+      await expect(firstFocusable).toBeFocused();
+
+      await page.keyboard.press('Shift+Tab');
+      await expect(lastFocusable).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(firstFocusable).toBeFocused();
+
+      await page.locator('body').evaluate((body) => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.dataset.seoFocusProbe = 'true';
+        probe.textContent = 'outside seo focus probe';
+        body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(firstFocusable).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(seoDialog).not.toBeVisible();
+      await expect(seoTrigger).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('covers W26 rollback, W27 public head, and W28 publish blockers', async ({ page }) => {
     test.setTimeout(120_000);
 

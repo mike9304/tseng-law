@@ -85,3 +85,4 @@
 | M81 | QA     | Asset library focus trap | W22,W216,W225 | 1h | M80 | 🟡 에셋 라이브러리 focus trap/Escape/canvas focus 누수 방지 자동검증 통과 / 사용자 QA 대기 |
 | M82 | QA     | Preview modal focus trap | W40,W45,W216,W225 | 1h | M81 | 🟡 미리보기 modal focus trap/reload shortcut/Escape 복귀 자동검증 통과 / 사용자 QA 대기 |
 | M83 | QA     | Page slug prompt focus trap | W14,W18,W216,W225 | 1h | M82 | 🟡 페이지 템플릿 slug prompt focus trap/Escape/back path 자동검증 통과 / 사용자 QA 대기 |
+| M84 | QA     | SEO panel focus trap | W186,W190,W216,W225 | 1h | M83 | 🟡 SEO panel focus trap/Escape/toolbar focus 복귀 자동검증 통과 / 사용자 QA 대기 |

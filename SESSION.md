@@ -5341,3 +5341,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (11 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 남은 custom dialog/overlay 중 ModalShell 미사용 경로를 계속 줄이고, editor/public smoke를 다시 묶어본다.
+
+## 2026-05-13 Codex /goal M84 SEO panel focus trap
+
+- SEO panel은 `role="dialog"`는 있었지만 custom overlay라 initial focus, Tab trap, 외부 focus 차단, 닫힌 뒤 toolbar trigger focus 복귀가 없었다.
+- `SeoPanel`에 dialog ref 기반 focus trap, body scroll lock, Escape close, close cleanup 중 focus restore를 추가했다. `document` prop은 `canvasDocument`로 alias 처리해 DOM `document`와 충돌하지 않도록 했다.
+- Playwright는 임시 page 생성 → `/ko/admin-builder?pageId=...` 진입 → SEO toolbar trigger 클릭 → `페이지 SEO` dialog에서 추천 적용 initial focus, Shift+Tab/Tab wrap, 외부 focus probe 차단, Escape close와 toolbar trigger focus 복귀를 검증한다.
+- 기존 “W26-W28 through actual editor UI clicks” SEO 저장/발행 흐름도 재실행해 저장/닫기 path가 유지되는지 확인했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - `VersionHistoryPanel`, `SaveSectionModal` 등 남은 custom editor dialog/overlay의 keyboard/focus gap을 계속 줄인다.

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import type {
   BuilderSeoAdditionalMetaTag,
@@ -169,6 +169,15 @@ interface SeoAssistantResponse {
   tasks?: BuilderSeoAssistantTask[];
   error?: string;
 }
+
+const FOCUSABLE_SELECTOR = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
 
 const backdropStyle: React.CSSProperties = {
   position: 'fixed',
@@ -479,11 +488,20 @@ function seoPayloadFromForm(form: SeoFormState): BuilderSeoMetadata {
   };
 }
 
+function getFocusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => (
+    !element.hidden &&
+    !element.closest('[hidden]') &&
+    element.getAttribute('aria-hidden') !== 'true' &&
+    element.getClientRects().length > 0
+  ));
+}
+
 export default function SeoPanel({
   open,
   pageId,
   locale,
-  document,
+  document: canvasDocument,
   siteName,
   onSaved,
   onClose,
@@ -511,6 +529,14 @@ export default function SeoPanel({
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
+  const closingRef = useRef(false);
+
+  const closePanel = useCallback(() => {
+    closingRef.current = true;
+    onClose();
+  }, [onClose]);
 
   const fetchAssistant = useCallback(async () => {
     if (!pageId) return;
@@ -590,14 +616,76 @@ export default function SeoPanel({
     if (open) void fetchSeo();
   }, [fetchSeo, open]);
 
-  useEffect(() => {
-    if (!open) return undefined;
-    const handleEsc = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
+  useLayoutEffect(() => {
+    if (!open) {
+      if (closingRef.current) {
+        const restoreTarget = restoreFocusRef.current;
+        window.setTimeout(() => {
+          if (restoreTarget?.isConnected) restoreTarget.focus({ preventScroll: true });
+          restoreFocusRef.current = null;
+          closingRef.current = false;
+        }, 0);
+      } else {
+        restoreFocusRef.current = null;
+      }
+      return undefined;
+    }
+
+    restoreFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    closingRef.current = false;
+    const panel = panelRef.current;
+    if (!panel) return undefined;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const focusFrame = window.requestAnimationFrame(() => {
+      const focusable = getFocusableElements(panel);
+      (focusable[0] ?? panel).focus({ preventScroll: true });
+    });
+    const handleFocusIn = (event: FocusEvent) => {
+      if (panel.contains(event.target as Node | null)) return;
+      const focusable = getFocusableElements(panel);
+      (focusable[0] ?? panel).focus({ preventScroll: true });
     };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [onClose, open]);
+
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('focusin', handleFocusIn);
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.body.style.overflow = previousBodyOverflow;
+      document.removeEventListener('focusin', handleFocusIn);
+    };
+  }, [open]);
+
+  const handlePanelKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      closePanel();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+
+    const panel = panelRef.current;
+    if (!panel) return;
+    const focusable = getFocusableElements(panel);
+    if (focusable.length === 0) {
+      event.preventDefault();
+      panel.focus({ preventScroll: true });
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus({ preventScroll: true });
+      return;
+    }
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus({ preventScroll: true });
+    }
+  };
 
   const localIssues = useMemo(() => {
     if (!page) return serverIssues;
@@ -716,7 +804,7 @@ export default function SeoPanel({
   };
 
   const applyRecommendation = () => {
-    const recommendation = buildRecommendation({ form, page, document, siteName, locale });
+    const recommendation = buildRecommendation({ form, page, document: canvasDocument, siteName, locale });
     setForm((current) => ({ ...current, ...recommendation }));
   };
 
@@ -780,7 +868,7 @@ export default function SeoPanel({
       setDefaults(payload.defaults ?? defaults);
       setServerIssues(payload.validation ?? []);
       if (payload.page) onSaved?.(payload.page);
-      onClose();
+      closePanel();
     } catch {
       setError('SEO 메타데이터를 저장하지 못했습니다.');
     } finally {
@@ -804,10 +892,19 @@ export default function SeoPanel({
     <div
       style={backdropStyle}
       onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
+        if (event.target === event.currentTarget) closePanel();
       }}
     >
-      <div style={panelStyle} role="dialog" aria-modal="true" aria-label="페이지 SEO">
+      <div
+        ref={panelRef}
+        style={panelStyle}
+        role="dialog"
+        aria-modal="true"
+        aria-label="페이지 SEO"
+        tabIndex={-1}
+        data-builder-seo-panel-dialog="true"
+        onKeyDownCapture={handlePanelKeyDown}
+      >
         <div style={headerStyle}>
           <div style={{ display: 'grid', gap: 3, minWidth: 0 }}>
             <strong style={{ fontSize: '1rem', color: '#0f172a' }}>페이지 SEO</strong>
@@ -819,7 +916,7 @@ export default function SeoPanel({
             <button type="button" style={ghostButtonStyle} onClick={applyRecommendation}>
               추천 적용
             </button>
-            <button type="button" style={ghostButtonStyle} onClick={onClose}>
+            <button type="button" style={ghostButtonStyle} onClick={closePanel}>
               닫기
             </button>
           </div>
@@ -1418,7 +1515,7 @@ export default function SeoPanel({
         <div style={footerStyle}>
           <span style={{ minHeight: 18, color: '#dc2626', fontSize: '0.78rem' }}>{error ?? ''}</span>
           <div style={{ display: 'flex', gap: 8 }}>
-            <button type="button" style={ghostButtonStyle} onClick={onClose}>
+            <button type="button" style={ghostButtonStyle} onClick={closePanel}>
               취소
             </button>
             <button

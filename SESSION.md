@@ -4974,3 +4974,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M55 Interactive preview document reset
+
+- M54 이후 남은 상태 누수 후보를 재스캔했고, `replaceDocument()`가 selection/history는 초기화하지만 services/FAQ preview state는 유지하던 점을 닫았다.
+- `interactivePreview` 기본값을 helper로 분리하고, 페이지 전환/템플릿 적용/rollback처럼 문서를 교체하는 경로에서 services/FAQ open/revealed index를 기본 `[0]` 상태로 되돌린다.
+- 서비스 2번과 FAQ 3번을 열어 둔 뒤 다른 문서로 교체하면 preview state가 초기화되는 단위 회귀를 추가했다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (5 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - W216~W225 editor 고도화 잔여 UX 또는 template/page switching 실사용 회귀를 계속 재스캔한다.

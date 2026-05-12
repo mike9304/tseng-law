@@ -1545,3 +1545,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. “다른 노드 선택 후 글이 안 보임” 회귀 방어를 FAQ accordion에도 확장했다.
+
+## M55 — Interactive preview document reset
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/store.ts` — services/FAQ editor preview 기본 상태를 helper로 분리하고, `replaceDocument()` 시 선택/히스토리와 함께 preview open/revealed index도 초기화한다.
+  - `src/lib/builder/canvas/__tests__/store-transient.test.ts` — 서비스 2번/FAQ 3번을 열어 둔 뒤 다른 문서로 교체하면 preview 상태가 `[0]` 기본값으로 돌아오는 단위 회귀를 추가했다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (5 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. page/template/document 전환 후 이전 페이지에서 열어 둔 서비스/FAQ preview 상태가 다음 문서의 텍스트 표시를 오염시키지 않게 막았다.

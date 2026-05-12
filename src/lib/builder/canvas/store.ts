@@ -185,6 +185,15 @@ const TRANSIENT_UPDATE_NODES_OPTIONS: UpdateNodesOptions = {
 };
 const EMPTY_NODES_BY_ID = new Map<string, BuilderCanvasNode>();
 
+function createDefaultInteractivePreviewState(): BuilderCanvasInteractivePreviewState {
+  return {
+    servicesOpenIndex: 0,
+    servicesRevealedIndices: [0],
+    faqOpenIndex: 0,
+    faqRevealedIndices: [0],
+  };
+}
+
 function updateNodesOptionsForMode(mode: MutationMode): UpdateNodesOptions | undefined {
   return mode === 'transient' ? TRANSIENT_UPDATE_NODES_OPTIONS : undefined;
 }
@@ -515,12 +524,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   nodesById: EMPTY_NODES_BY_ID,
   viewport: 'desktop' as Viewport,
   setViewport: (viewport) => set({ viewport }),
-  interactivePreview: {
-    servicesOpenIndex: 0,
-    servicesRevealedIndices: [0],
-    faqOpenIndex: 0,
-    faqRevealedIndices: [0],
-  },
+  interactivePreview: createDefaultInteractivePreviewState(),
   setInteractivePreviewIndex: (section, index) =>
     set((state) => {
       const clampedIndex = Math.max(0, Math.round(index));
@@ -615,6 +619,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       selectedNodeIds: [],
       activeGroupId: null,
       draftSaveState: 'idle',
+      interactivePreview: createDefaultInteractivePreviewState(),
       history: createHistory(document),
       mutationBaseDocument: null,
       canUndo: false,

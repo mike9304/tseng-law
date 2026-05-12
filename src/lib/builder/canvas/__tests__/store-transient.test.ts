@@ -65,6 +65,31 @@ function manyNodeDocumentFixture(count: number): BuilderCanvasDocument {
 }
 
 describe('canvas store transient updates', () => {
+  it('resets interactive preview state when replacing the document', () => {
+    useBuilderCanvasStore.getState().replaceDocument(documentFixture());
+    useBuilderCanvasStore.getState().setInteractivePreviewIndex('services', 2);
+    useBuilderCanvasStore.getState().setInteractivePreviewIndex('faq', 3);
+
+    expect(useBuilderCanvasStore.getState().interactivePreview).toEqual({
+      servicesOpenIndex: 2,
+      servicesRevealedIndices: [0, 2],
+      faqOpenIndex: 3,
+      faqRevealedIndices: [0, 3],
+    });
+
+    useBuilderCanvasStore.getState().replaceDocument({
+      ...documentFixture(),
+      updatedBy: 'store-transient-test-next-page',
+    });
+
+    expect(useBuilderCanvasStore.getState().interactivePreview).toEqual({
+      servicesOpenIndex: 0,
+      servicesRevealedIndices: [0],
+      faqOpenIndex: 0,
+      faqRevealedIndices: [0],
+    });
+  });
+
   it('does not create a history entry for structurally identical committed node updates', () => {
     useBuilderCanvasStore.getState().replaceDocument(sortedDocumentFixture());
     useBuilderCanvasStore.getState().updateNode('first', (node) => ({

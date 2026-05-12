@@ -37,7 +37,7 @@ function parseStripeSignatureHeader(header: string): { timestamp: number; signat
   return { timestamp, signatures: sigs };
 }
 
-function verifySignature(rawBody: string, header: string, secret: string, toleranceSeconds = 300): boolean {
+function verifySignature(rawBody: string, header: string, secret: string, toleranceSeconds = 120): boolean {
   const parsed = parseStripeSignatureHeader(header);
   if (!parsed) return false;
   const ageSec = Math.abs(Date.now() / 1000 - parsed.timestamp);
@@ -95,6 +95,18 @@ export async function POST(request: NextRequest) {
     const bookings = await listBookings({ includeCancelled: true });
     const match = bookings.find((b) => b.paymentIntentId === intentId);
     if (!match) return false;
+    // Idempotency: if the booking is already in the requested state, no-op.
+    // Stripe redelivers webhooks on retry — flipping back-and-forth would
+    // confuse downstream analytics and could re-fire derived notifications.
+    if (match.paymentStatus === nextStatus) return true;
+    // Don't resurrect cancelled bookings as 'paid' — they should stay in
+    // their cancelled refund state (refunded / partial-refund).
+    if (
+      nextStatus === 'paid'
+      && (match.status === 'cancelled' || match.paymentStatus === 'refunded' || match.paymentStatus === 'partial-refund')
+    ) {
+      return false;
+    }
     await saveBooking({ ...match, paymentStatus: nextStatus, updatedAt: new Date().toISOString() });
     return true;
   }

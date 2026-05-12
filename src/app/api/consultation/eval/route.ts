@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { runConsultationEval } from '@/lib/consultation/eval/run-eval';
+import { safeEqualStrings } from '@/lib/builder/security/timing-safe';
 
 export const runtime = 'nodejs';
 /** This endpoint runs a sequential sweep of 25+ LLM calls. Do not cache. */
@@ -36,7 +37,7 @@ function guardOrNull(request: NextRequest): NextResponse | null {
   }
 
   const provided = request.headers.get('x-eval-secret');
-  if (provided !== expected) {
+  if (!safeEqualStrings(provided, expected)) {
     return NextResponse.json(
       { success: false, error: 'Invalid or missing evaluation secret.' },
       { status: 403 },

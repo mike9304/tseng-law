@@ -30,12 +30,15 @@ function CustomEmbedRender({ node, mode }: { node: { content: CustomEmbedContent
   }
 
   if (mode === 'published' || mode === 'preview') {
-    // Sandboxed iframe to prevent XSS from user-provided HTML
+    // Sandboxed iframe. We DO NOT include `allow-same-origin` because
+    // combining it with `allow-scripts` would defeat the sandbox — the
+    // iframe could then read/write the parent origin's storage and cookies.
+    // Custom embed scripts run in an opaque origin and can't escape.
     const srcDoc = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{margin:0;font-family:system-ui;}</style></head><body>${html}</body></html>`;
     return (
       <iframe
         srcDoc={srcDoc}
-        sandbox="allow-scripts allow-same-origin"
+        sandbox="allow-scripts allow-popups allow-forms"
         style={{ width: '100%', height: '100%', border: 'none', borderRadius: 8 }}
         title="Custom embed"
       />

@@ -648,14 +648,19 @@ export default function CanvasContainer({
               const kind = event.dataTransfer.getData('application/x-builder-node-kind');
               if (!builderCanvasNodeKinds.includes(kind as (typeof builderCanvasNodeKinds)[number])) return;
               const position = resolveStagePosition(event.clientX, event.clientY);
-              addNode(
-                createCanvasNodeTemplate(
-                  kind as (typeof builderCanvasNodeKinds)[number],
-                  position.x,
-                  position.y,
-                  nodes.length,
-                ),
+              const template = createCanvasNodeTemplate(
+                kind as (typeof builderCanvasNodeKinds)[number],
+                position.x,
+                position.y,
+                nodes.length,
               );
+              // Honor the hovered container so dropping into a section/form
+              // actually nests the new node rather than orphaning it at the
+              // page root (with the container highlighted misleadingly).
+              if (hoveredContainerId) {
+                (template as { parentId?: string }).parentId = hoveredContainerId;
+              }
+              addNode(template);
               setDraftSaveState('saving');
             }}
           >

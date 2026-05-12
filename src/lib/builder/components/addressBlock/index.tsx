@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderAddressBlockCanvasNode } from '@/lib/builder/canvas/types';
 
@@ -17,15 +17,21 @@ function AddressBlockRender({
 }) {
   const c = node.content;
   const [copied, setCopied] = useState(false);
+  const copiedTimerRef = useRef<number | null>(null);
   const address = buildAddressString(c);
   const directionsHref = c.directionsHref || (address ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}` : '');
+
+  useEffect(() => () => {
+    if (copiedTimerRef.current !== null) window.clearTimeout(copiedTimerRef.current);
+  }, []);
 
   async function copyAddress() {
     if (mode === 'edit') return;
     try {
       await navigator.clipboard.writeText(address);
       setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
+      if (copiedTimerRef.current !== null) window.clearTimeout(copiedTimerRef.current);
+      copiedTimerRef.current = window.setTimeout(() => setCopied(false), 2000);
     } catch {
       /* ignore */
     }

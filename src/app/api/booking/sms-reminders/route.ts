@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isCronAuthorized } from '@/lib/builder/security/cron-auth';
 import { listBookings, saveBooking, getService } from '@/lib/builder/bookings/storage';
 import { sendSms } from '@/lib/builder/bookings/sms-client';
 import type { Booking, BookingReminderType } from '@/lib/builder/bookings/types';
@@ -32,13 +33,7 @@ const WINDOWS: ReminderWindow[] = [
 ];
 
 function authorized(request: NextRequest): boolean {
-  const secret = process.env.CRON_SECRET ?? '';
-  if (!secret) return process.env.NODE_ENV !== 'production';
-  const headerSecret =
-    request.headers.get('x-cron-secret') ||
-    request.headers.get('authorization')?.replace(/^Bearer\s+/i, '') ||
-    '';
-  return headerSecret === secret;
+  return isCronAuthorized(request);
 }
 
 function alreadySent(booking: Booking, type: BookingReminderType): boolean {

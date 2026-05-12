@@ -37,10 +37,18 @@ function CountdownRender({
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const content = node.content;
-  const [now, setNow] = useState<number>(() => Date.now());
+  // Use the parsed target as a deterministic SSR initial so server + client
+  // first paint agree (Date.now() in the initializer would otherwise hydrate
+  // with a different value than the server rendered).
+  const ssrInitial = Date.parse(content.targetAt);
+  const [now, setNow] = useState<number>(() => (Number.isFinite(ssrInitial) ? ssrInitial : 0));
 
   useEffect(() => {
-    if (mode === 'edit') return undefined;
+    if (mode === 'edit') {
+      setNow(Date.now());
+      return undefined;
+    }
+    setNow(Date.now());
     const id = window.setInterval(() => setNow(Date.now()), 1000);
     return () => window.clearInterval(id);
   }, [mode]);

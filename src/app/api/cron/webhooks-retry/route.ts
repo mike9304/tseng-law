@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isCronAuthorized } from '@/lib/builder/security/cron-auth';
 import {
   getSubscription,
   saveDelivery,
@@ -20,13 +21,7 @@ const MAX_ATTEMPTS = 5;
 const BACKOFF_MIN: Record<number, number> = { 1: 1, 2: 5, 3: 30, 4: 240 };
 
 function authorized(request: NextRequest): boolean {
-  const secret = process.env.CRON_SECRET ?? '';
-  if (!secret) return process.env.NODE_ENV !== 'production';
-  const headerSecret =
-    request.headers.get('x-cron-secret') ||
-    request.headers.get('authorization')?.replace(/^Bearer\s+/i, '') ||
-    '';
-  return headerSecret === secret;
+  return isCronAuthorized(request);
 }
 
 async function listFailedDeliveries(): Promise<WebhookDelivery[]> {

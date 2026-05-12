@@ -44,6 +44,9 @@ export async function POST(request: NextRequest) {
   if (service.paymentMode === 'paid' && !parsed.data.paymentIntentId) {
     return NextResponse.json({ error: 'Payment is required before booking this service.' }, { status: 402 });
   }
+  if (service.paymentMode !== 'paid' && parsed.data.paymentIntentId) {
+    return NextResponse.json({ error: 'paymentIntentId not allowed for free services.' }, { status: 400 });
+  }
 
   const available = await isSlotAvailable({
     serviceId: parsed.data.serviceId,

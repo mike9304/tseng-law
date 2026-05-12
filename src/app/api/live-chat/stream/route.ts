@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getConversation } from '@/lib/builder/live-chat/storage';
 import { buildChatStream } from '@/lib/builder/live-chat/sse';
+import { safeEqualStrings } from '@/lib/builder/security/timing-safe';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -13,7 +14,7 @@ export async function GET(request: NextRequest) {
   }
   const conversation = await getConversation(conversationId);
   if (!conversation) return NextResponse.json({ error: 'Conversation not found' }, { status: 404 });
-  if (conversation.visitorToken !== visitorToken) {
+  if (!safeEqualStrings(conversation.visitorToken, visitorToken)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
   const stream = buildChatStream({

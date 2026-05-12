@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderShareButtonsCanvasNode } from '@/lib/builder/canvas/types';
 
@@ -40,6 +40,11 @@ function ShareButtonsRender({
 }) {
   const c = node.content;
   const [copied, setCopied] = useState(false);
+  const copiedTimerRef = useRef<number | null>(null);
+
+  useEffect(() => () => {
+    if (copiedTimerRef.current !== null) window.clearTimeout(copiedTimerRef.current);
+  }, []);
 
   async function handleClick(provider: Provider) {
     if (mode === 'edit') return;
@@ -49,7 +54,8 @@ function ShareButtonsRender({
       try {
         await navigator.clipboard.writeText(pageUrl);
         setCopied(true);
-        window.setTimeout(() => setCopied(false), 2000);
+        if (copiedTimerRef.current !== null) window.clearTimeout(copiedTimerRef.current);
+        copiedTimerRef.current = window.setTimeout(() => setCopied(false), 2000);
       } catch {
         /* ignore */
       }

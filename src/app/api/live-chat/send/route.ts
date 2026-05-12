@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { safeEqualStrings } from '@/lib/builder/security/timing-safe';
 import {
   appendMessage,
   getConversation,
@@ -35,7 +36,7 @@ export async function POST(request: NextRequest) {
 
   const conversation = await getConversation(parsed.data.conversationId);
   if (!conversation) return NextResponse.json({ error: 'Conversation not found' }, { status: 404 });
-  if (conversation.visitorToken !== parsed.data.visitorToken) {
+  if (!safeEqualStrings(conversation.visitorToken, parsed.data.visitorToken)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
   if (conversation.status === 'closed') {

@@ -1,17 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isCronAuthorized } from '@/lib/builder/security/cron-auth';
 import { dispatchPendingCampaigns } from '@/lib/builder/marketing/dispatcher';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 function authorized(request: NextRequest): boolean {
-  const secret = process.env.CRON_SECRET ?? '';
-  if (!secret) return process.env.NODE_ENV !== 'production';
-  const headerSecret =
-    request.headers.get('x-cron-secret') ||
-    request.headers.get('authorization')?.replace(/^Bearer\s+/i, '') ||
-    '';
-  return headerSecret === secret;
+  return isCronAuthorized(request);
 }
 
 async function run(request: NextRequest) {

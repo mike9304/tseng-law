@@ -762,9 +762,24 @@ export default function CanvasNode({
         event.stopPropagation();
         // Prevent nested anchors / form-submit buttons inside widgets from
         // navigating the editor away when designers click to select them.
+        // ⌘/Ctrl-click opens the link in a new tab (standard convention)
+        // so designers can still verify navigation targets.
         const target = event.target as HTMLElement | null;
-        const navigates = target?.closest('a[href], button[type="submit"], input[type="submit"]');
-        if (navigates) {
+        const anchor = target?.closest<HTMLAnchorElement>('a[href]');
+        const submitter = target?.closest('button[type="submit"], input[type="submit"]');
+        if (anchor) {
+          if (event.metaKey || event.ctrlKey) {
+            const href = anchor.getAttribute('href') ?? '';
+            if (href && href !== '#' && !href.startsWith('lightbox:') && !href.startsWith('popup:')) {
+              try {
+                window.open(href, '_blank', 'noopener,noreferrer');
+              } catch {
+                /* popup blocked */
+              }
+            }
+          }
+          event.preventDefault();
+        } else if (submitter) {
           event.preventDefault();
         }
         if (node.kind !== 'image' || !selected || node.locked || !isInteractive) return;
@@ -843,7 +858,25 @@ export default function CanvasNode({
               ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
               : 'none'),
           opacity: renderedOpacity,
-          overflow: isEditing || isContainerLikeKind(node.kind) ? 'visible' : undefined,
+          // Text/heading/button can have content that legitimately exceeds
+          // the node's rect (designer is still resizing). Show overflow in
+          // the editor so the clipping is visible — without this the
+          // designer can't tell the box is too small.
+          overflow:
+            isEditing
+            || isContainerLikeKind(node.kind)
+            || node.kind === 'text'
+            || node.kind === 'heading'
+            || node.kind === 'button'
+            || node.kind === 'notification-bar'
+            || node.kind === 'address-block'
+            || node.kind === 'business-hours'
+            || node.kind === 'pricing-table'
+            || node.kind === 'comparison-table'
+            || node.kind === 'team-member-card'
+            || node.kind === 'service-feature-card'
+              ? 'visible'
+              : undefined,
           pointerEvents: isEditing ? 'auto' : 'none',
           transform: bodyTransform,
           transformOrigin: bodyTransform || editorAnimationStyle.transformOrigin ? 'center center' : undefined,

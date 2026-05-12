@@ -234,7 +234,10 @@ export default function TextElement({
         letterSpacing: `${typography.letterSpacing}px`,
         display: 'flex',
         alignItems: verticalAlignToFlexAlign(node.content.verticalAlign),
-        overflow: 'hidden',
+        // Allow text to extend past the node rect so designers immediately
+        // see when a box is too short for the content. Marquee still hides
+        // overflow because it animates through it.
+        overflow: node.content.marquee?.enabled ? 'hidden' : 'visible',
         wordBreak: 'break-word',
         whiteSpace: node.content.marquee?.enabled ? 'nowrap' : 'pre-wrap',
         textShadow: buildTextShadow(node.content.textShadow),

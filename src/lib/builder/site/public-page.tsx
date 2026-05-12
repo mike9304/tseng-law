@@ -897,7 +897,11 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
       <main
         className="builder-pub-main"
         style={{
-          maxWidth: hasTopLevelComposite ? undefined : 1200,
+          // Canvas stage width is 1280 (see canvas/responsive.ts).
+          // Published main used to be 1200, so any widget the designer
+          // dropped within 80px of the canvas right edge was clipped at
+          // runtime. Match the canvas dimensions so WYSIWYG holds.
+          maxWidth: hasTopLevelComposite ? undefined : 1280,
           margin: '0 auto',
           position: 'relative',
           minHeight: Math.max(publishedContentHeight, 720),

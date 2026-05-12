@@ -380,23 +380,12 @@ export default function Header({ locale }: { locale: Locale }) {
                       setOpenMenu(item.key);
                     }}
                     onClick={(event) => {
-                      if (!hasMegaPanel(item.key)) {
-                        closeMegaMenuNow();
-                        return;
-                      }
-                      const isModifiedClick =
-                        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0;
-                      if (isModifiedClick) {
-                        closeMegaMenuNow();
-                        return;
-                      }
-                      if (openMenu !== item.key) {
-                        event.preventDefault();
-                        clearCloseTimeout();
-                        moveIndicator(item.key, true);
-                        setOpenMenu(item.key);
-                        return;
-                      }
+                      // Always let the click navigate to the parent page.
+                      // Mega menus open on hover/focus already; intercepting
+                      // the first click to just open the menu confused
+                      // visitors who expected the link to take them to the
+                      // overview page.
+                      void event;
                       closeMegaMenuNow();
                     }}
                   >

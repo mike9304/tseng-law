@@ -13,6 +13,7 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(designDrawer).toContainText('주요 서비스의 글, 주소, 링크 데이터는 그대로');
     await expect(designDrawer.locator('[data-builder-section-template-option^="services:"]')).toHaveCount(12);
     await expect(designDrawer.getByRole('button', { name: '← 섹션 목록' })).toBeVisible();
+    await expect(designDrawer.getByRole('button', { name: '섹션 목록으로 돌아가기' })).toBeVisible();
     await designDrawer.getByRole('button', { name: '← 섹션 목록' }).click();
     await expect(designDrawer.getByRole('button', { name: '칼럼 아카이브' })).toBeVisible();
     await designDrawer.getByRole('button', { name: '주요 서비스' }).click();
@@ -44,6 +45,8 @@ test.describe('/ko/admin-builder section design templates', () => {
 
     const catalogDrawer = await openCatalogDrawer(page);
     await expect(catalogDrawer.getByText('Section templates')).toBeVisible();
+    await expect(catalogDrawer.locator('[data-builder-built-in-section-category="services"]')).toHaveCount(12);
+    await expect(catalogDrawer.getByText('Practice Bento Board')).toBeVisible();
     const serviceTemplateButton = catalogDrawer.getByTitle('Service Accordion 섹션 추가');
     await serviceTemplateButton.scrollIntoViewIfNeeded();
     await expect(serviceTemplateButton).toBeVisible();

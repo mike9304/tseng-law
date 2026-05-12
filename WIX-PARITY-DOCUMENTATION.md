@@ -1419,3 +1419,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W193은 `자동검증 통과 / 사용자 QA 대기` 유지. Pages와 hreflang/linking 작업 이후 남아 있던 locale pageId cross-open 위험을 editor route와 draft API 양쪽에서 닫았다.
+
+## M46 — Service section gallery depth
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/sections/templates.ts` — services built-in section templates를 4개에서 12개로 확장했다. 신규 템플릿은 Practice Bento, Process Ladder, Risk Matrix, Retainer Packages, Industry Solutions, Comparison Table, Cross-border Desk, Case Intake Flow다.
+  - `src/components/builder/sections/SectionTemplateCard.tsx` — template/category data attribute와 명시적 aria-label을 추가해 클릭 target과 자동검증을 안정화했다.
+  - `src/components/builder/canvas/SandboxEditorRail.tsx` — Section design detail view 본문에 `섹션 목록으로 돌아가기` 버튼을 추가해 variant 목록에서 빠져나오는 흐름을 명확히 했다.
+  - `src/lib/builder/sections/__tests__/normalize.test.ts` — built-in section 총량과 services category 기대 수를 61개/12개로 갱신했다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Design panel back CTA, services built-in template 12개 노출, 신규 Practice Bento Board 노출을 실제 editor UI에서 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/sections/__tests__/normalize.test.ts` ✅ (17 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W84는 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자 체감상 “서비스/주요업무 템플릿이 너무 적고 돌아가기 어렵다”는 gap을 template depth와 editor back affordance로 보강했다.

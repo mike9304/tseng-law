@@ -4865,3 +4865,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 사용자가 보고한 “섹션 디자인 템플릿 클릭/뒤로가기 UX”와 “주요업무 템플릿 수 부족”을 이어서 다룬다.
+
+## 2026-05-13 Codex /goal M46 Service section gallery depth
+
+- 사용자가 보고한 “주요업무 눌러서 사용하려는데 네 개 템플릿만 있음”과 “템플릿 적용하려고 한 뒤 다시 뒤로 가고 싶으면 버튼도 없음” 피드백을 반영했다.
+- Built-in section gallery의 services category를 4개에서 12개로 확장했다. Practice Bento, Process Ladder, Risk Matrix, Retainer Packages, Industry Solutions, Comparison Table, Cross-border Desk, Case Intake Flow를 추가했다.
+- 섹션 템플릿 카드에 category/template data attribute와 명시적 aria-label을 붙여 클릭 테스트와 접근성을 안정화했다.
+- Design > Section design detail view에는 header의 `← 섹션 목록` 외에 본문 바로 아래 `섹션 목록으로 돌아가기` 버튼을 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/sections/__tests__/normalize.test.ts` ✅ (17 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 템플릿 gallery를 실제 외부 AI 디자인/대량 템플릿처럼 더 넓히는 방향과, 남은 노드 선택/백지화 이슈를 계속 재현한다.

@@ -254,6 +254,17 @@ export default function SandboxEditorRail({
                   <p className={styles.panelCopy}>
                     {selectedSectionTemplate.label}의 글, 주소, 링크 데이터는 그대로 두고 디자인 템플릿만 바꿉니다.
                   </p>
+                  <button
+                    type="button"
+                    className={styles.panelHeaderButton}
+                    data-builder-section-template-back="true"
+                    onClick={() => {
+                      setFocusedSectionTemplateId(null);
+                      onSelectNode(null);
+                    }}
+                  >
+                    섹션 목록으로 돌아가기
+                  </button>
                   <div className={styles.sectionTemplateVariantGrid}>
                     {selectedSectionTemplateVariants.map((variant) => (
                       <button

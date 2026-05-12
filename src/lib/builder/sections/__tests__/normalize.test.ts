@@ -172,13 +172,13 @@ describe('BUILT_IN_SECTIONS', () => {
     team: 4,
     gallery: 4,
     faq: 3,
-    services: 4,
+    services: 12,
     contact: 3,
   } satisfies Record<BuiltInSectionCategory, number>;
 
   it('keeps the template catalog at the Wix-grade Track B minimum', () => {
     expect(BUILT_IN_SECTION_CATEGORIES).toHaveLength(13);
-    expect(BUILT_IN_SECTIONS).toHaveLength(53);
+    expect(BUILT_IN_SECTIONS).toHaveLength(61);
   });
 
   it('has the expected category coverage', () => {

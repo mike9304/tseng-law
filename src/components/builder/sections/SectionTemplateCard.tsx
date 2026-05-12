@@ -72,7 +72,10 @@ export function SectionTemplateCard({
     <button
       type="button"
       style={cardButtonStyle}
+      data-builder-built-in-section-template={template.id}
+      data-builder-built-in-section-category={template.category}
       title={`${template.name} 섹션 추가`}
+      aria-label={`${template.name} 섹션 추가`}
       onClick={onClick}
     >
       <div

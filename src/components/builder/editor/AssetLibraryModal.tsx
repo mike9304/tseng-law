@@ -99,6 +99,9 @@ export default function AssetLibraryModal({
   open,
   locale,
   selectedUrl = null,
+  initialFolder,
+  autoFolderOnSelect,
+  autoTagOnSelect,
   onClose,
   onSelect,
   onToast,
@@ -106,6 +109,9 @@ export default function AssetLibraryModal({
   open: boolean;
   locale: Locale;
   selectedUrl?: string | null;
+  initialFolder?: string;
+  autoFolderOnSelect?: string;
+  autoTagOnSelect?: string;
   onClose: () => void;
   onSelect: (asset: BuilderAssetListItem) => void;
   onToast?: (message: string, tone: 'success' | 'error') => void;
@@ -173,8 +179,9 @@ export default function AssetLibraryModal({
 
   useEffect(() => {
     if (!open) return;
+    if (initialFolder) setActiveFolder(initialFolder);
     void loadAssets();
-  }, [loadAssets, open]);
+  }, [initialFolder, loadAssets, open]);
 
   useEffect(() => {
     if (!open) {
@@ -406,6 +413,36 @@ export default function AssetLibraryModal({
     } finally {
       setDeleteFilename(null);
     }
+  }
+
+  function handleSelectAsset(asset: BuilderAssetListItem) {
+    if (autoFolderOnSelect || autoTagOnSelect) {
+      const currentLibrary = libraryStateRef.current ?? libraryState;
+      const nextFolderMap = autoFolderOnSelect
+        ? { ...currentLibrary.assetFolderByFilename, [asset.filename]: autoFolderOnSelect }
+        : currentLibrary.assetFolderByFilename;
+      const existingTags = currentLibrary.assetTagsByFilename[asset.filename] ?? [];
+      const nextAssetTags = autoTagOnSelect && !existingTags.includes(autoTagOnSelect)
+        ? [...existingTags, autoTagOnSelect]
+        : existingTags;
+      const nextTagMap = autoTagOnSelect
+        ? { ...currentLibrary.assetTagsByFilename, [asset.filename]: nextAssetTags }
+        : currentLibrary.assetTagsByFilename;
+      const nextTags = autoTagOnSelect && !currentLibrary.tags.includes(autoTagOnSelect)
+        ? [...currentLibrary.tags, autoTagOnSelect]
+        : currentLibrary.tags;
+      setAssetFolderByFilename(nextFolderMap);
+      setAssetTagsByFilename(nextTagMap);
+      setTags(nextTags);
+      scheduleLibraryStateSave({
+        ...currentLibrary,
+        tags: nextTags,
+        assetFolderByFilename: nextFolderMap,
+        assetTagsByFilename: nextTagMap,
+      });
+    }
+    onSelect(asset);
+    onClose();
   }
 
   if (!open) return null;
@@ -657,10 +694,7 @@ export default function AssetLibraryModal({
                   <button
                     type="button"
                     className={styles.actionButton}
-                    onClick={() => {
-                      onSelect(asset);
-                      onClose();
-                    }}
+                    onClick={() => handleSelectAsset(asset)}
                   >
                     Use image
                   </button>

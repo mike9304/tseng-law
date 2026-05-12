@@ -769,7 +769,16 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
 
     await modal.getByRole('button', { name: /Brand kit/ }).click();
     await expect(modal).toContainText('Brand kit changes are site-wide');
+    await expect(modal).toContainText('Brand asset library');
+    await expect(modal).toContainText('0/4 brand assets selected');
     await expect(modal.locator('img')).toHaveCount(0);
+    await modal.getByRole('button', { name: 'Open brand assets' }).click();
+    const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+    await expect(assetDialog).toBeVisible();
+    await expect(assetDialog).toContainText('Folders');
+    await expect(assetDialog).toContainText('Brand');
+    await assetDialog.getByRole('button', { name: 'Close' }).click();
+    await expect(assetDialog).toHaveCount(0);
     await modal.getByRole('button', { name: 'Apply brand kit' }).click();
     await expect(modal).toContainText('Brand kit을 현재 사이트 테마에 적용했습니다');
 

@@ -4703,3 +4703,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W182 brand asset library gap을 우선 본다.
+
+## 2026-05-12 Codex /goal M36 brand asset library polish
+
+- W182의 남은 gap인 Brand asset library 연결성을 보강했다.
+- Brand kit 탭에 Brand asset library 영역을 추가해 Light logo/Dark logo/Favicon/OG image 4개 슬롯의 연결 상태를 보여주고, 각 슬롯에서 Asset library를 바로 열 수 있게 했다.
+- Brand kit에서 여는 Asset library는 Brand folder로 시작하며, 선택한 asset은 자동으로 `brand` folder/tag에 분류된다.
+- Site Settings Playwright는 Brand asset library 노출, `0/4 brand assets selected` 상태, Brand folder asset dialog 진입/닫기 경로를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (893 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - 남은 checkpoint yellow를 다시 스캔해 W176/W177/W179/W180/W184/W185 등 디자인 시스템 마지막 gap부터 닫는다.

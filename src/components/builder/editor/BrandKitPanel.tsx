@@ -98,6 +98,30 @@ const logoCardStyle: React.CSSProperties = {
   boxShadow: '0 12px 30px rgba(15, 23, 42, 0.06)',
 };
 
+const brandAssetLibraryStyle: React.CSSProperties = {
+  border: '1px solid #dbe3ef',
+  borderRadius: 16,
+  padding: 14,
+  background: '#fff',
+  display: 'grid',
+  gap: 12,
+};
+
+const brandAssetChipStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 8,
+  minHeight: 34,
+  padding: '7px 9px',
+  border: '1px solid #dbe3ef',
+  borderRadius: 10,
+  background: '#fff',
+  color: '#334155',
+  fontSize: '0.74rem',
+  fontWeight: 800,
+};
+
 const assetRowStyle: React.CSSProperties = {
   ...fieldStyle,
   padding: 12,
@@ -221,6 +245,7 @@ export default function BrandKitPanel({
   const [assetPickerKey, setAssetPickerKey] = useState<BrandAssetKey | null>(null);
   const logoPreview = resolveBrandAssetPreview(value, 'logoLight', 'logoLightAssetId');
   const activePickerField = BRAND_ASSET_FIELDS.find((field) => field.assetKey === assetPickerKey);
+  const selectedAssetCount = BRAND_ASSET_FIELDS.filter((field) => Boolean(value.assets?.[field.assetKey])).length;
 
   return (
     <div style={panelShellStyle}>
@@ -327,6 +352,56 @@ export default function BrandKitPanel({
         </div>
       </div>
 
+      <section style={brandAssetLibraryStyle}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+          <div>
+            <div style={sectionHeadingStyle}>Brand asset library</div>
+            <strong style={{ color: '#0f172a', fontSize: '0.94rem' }}>
+              {selectedAssetCount}/4 brand assets selected
+            </strong>
+          </div>
+          <button type="button" style={actionButtonStyle} onClick={() => setAssetPickerKey('logoLightAssetId')}>
+            Open brand assets
+          </button>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 8 }}>
+          {BRAND_ASSET_FIELDS.map((field) => {
+            const selected = Boolean(value.assets?.[field.assetKey]);
+            return (
+              <button
+                key={field.assetKey}
+                type="button"
+                style={{
+                  ...brandAssetChipStyle,
+                  borderColor: selected ? '#116dff' : '#dbe3ef',
+                  color: selected ? '#116dff' : '#64748b',
+                }}
+                onClick={() => setAssetPickerKey(field.assetKey)}
+              >
+                <span>{field.label}</span>
+                <span>{selected ? 'Linked' : 'Pick'}</span>
+              </button>
+            );
+          })}
+        </div>
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+          {BRAND_COLOR_KEYS.map((key) => (
+            <span
+              key={key}
+              title={THEME_COLOR_LABELS[key]}
+              aria-label={`${THEME_COLOR_LABELS[key]} color`}
+              style={{
+                width: 24,
+                height: 24,
+                borderRadius: 999,
+                border: '1px solid rgba(15,23,42,0.14)',
+                background: value.colors[key],
+              }}
+            />
+          ))}
+        </div>
+      </section>
+
       <div style={colorGridStyle}>
         {BRAND_COLOR_KEYS.map((key) => (
           <div key={key} style={fieldStyle}>
@@ -397,6 +472,9 @@ export default function BrandKitPanel({
           open
           locale={locale}
           selectedUrl={resolveBuilderBrandAssetUrl(value.assets?.[activePickerField.assetKey])}
+          initialFolder="brand"
+          autoFolderOnSelect="brand"
+          autoTagOnSelect="brand"
           onClose={() => setAssetPickerKey(null)}
           onSelect={(asset) => {
             onChange(updateBrandAsset(value, activePickerField.assetKey, asset));

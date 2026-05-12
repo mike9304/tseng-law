@@ -1245,3 +1245,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W178은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Built-in preset 외에 사용자가 현재 스타일을 My Theme로 저장하고 다시 불러올 수 있다.
+
+## M36 — Brand asset library polish
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/components/builder/editor/BrandKitPanel.tsx` — Brand kit 탭 안에 Brand asset library 영역을 추가했다. Light logo/Dark logo/Favicon/OG image 4개 슬롯의 연결 상태를 한눈에 보여주고, 각 슬롯에서 Asset library를 바로 열 수 있다.
+  - `src/components/builder/editor/AssetLibraryModal.tsx` — 모달을 특정 folder로 열고, 선택한 asset을 자동 folder/tag로 분류하는 옵션을 추가했다. Brand kit에서 연 asset picker는 Brand folder로 시작하고 선택 asset을 `brand` folder/tag에 연결한다.
+  - `tests/builder-editor/design-pool.playwright.ts` — Site Settings 실제 클릭 흐름에서 Brand asset library 노출, 0/4 상태, Brand folder asset dialog 진입/닫기를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (893 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W182는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Brand kit의 logo variant/color palette에서 실제 asset library를 직접 열고, 선택 asset을 brand asset으로 분류할 수 있다.

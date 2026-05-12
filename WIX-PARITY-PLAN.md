@@ -37,3 +37,4 @@
 | M33 | P6     | Radius/shadow effect presets      | W183 | 3h | M23 | 🟡 W183 자동검증 통과 / 사용자 QA 대기 |
 | M34 | P6     | Design token bundle export/import | W181 | 3h | M33 | 🟡 W181 자동검증 통과 / 사용자 QA 대기 |
 | M35 | P6     | Custom My Theme save/load         | W178 | 3h | M34 | 🟡 W178 자동검증 통과 / 사용자 QA 대기 |
+| M36 | P6     | Brand asset library polish        | W182 | 3h | M35 | 🟡 W182 자동검증 통과 / 사용자 QA 대기 |

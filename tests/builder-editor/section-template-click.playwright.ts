@@ -34,6 +34,23 @@ function collectHrefValues(value: unknown, hrefs: string[] = []): string[] {
   return hrefs;
 }
 
+type TestNavigationItem = {
+  id?: string;
+  pageId?: string;
+  href?: string;
+  label?: string | Record<string, string>;
+  children?: TestNavigationItem[];
+};
+
+function findNavigationItemByPageId(items: TestNavigationItem[], pageId: string): TestNavigationItem | undefined {
+  for (const item of items) {
+    if (item.pageId === pageId) return item;
+    const childMatch = item.children ? findNavigationItemByPageId(item.children, pageId) : undefined;
+    if (childMatch) return childMatch;
+  }
+  return undefined;
+}
+
 test.describe('/ko/admin-builder section design templates', () => {
   test('lets users click a section chip before applying a design template', async ({ page }) => {
     await openBuilder(page, `/ko/admin-builder?sectionTemplateClick=${Date.now().toString(36)}`);
@@ -476,6 +493,131 @@ test.describe('/ko/admin-builder section design templates', () => {
           }
         }
       });
+    }
+  });
+
+  test('keeps auto-added page navigation label and href in sync after rename and delete', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-nav-sync-${token}`;
+    const renamedSlug = `${slug}-renamed`;
+    const title = `Auto nav sync ${token}`;
+    const renamedTitle = `Auto nav sync renamed ${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(slug));
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title,
+          document: {
+            version: 1,
+            locale: 'ko',
+            updatedAt: '2026-05-13T00:00:00.000Z',
+            updatedBy: 'playwright-nav-sync',
+            stageWidth: 1280,
+            stageHeight: 880,
+            nodes: [
+              {
+                id: 'nav-sync-heading',
+                kind: 'heading',
+                rect: { x: 100, y: 100, width: 600, height: 80 },
+                zIndex: 0,
+                content: {
+                  text: title,
+                  level: 1,
+                  color: '#111827',
+                  align: 'left',
+                },
+              },
+            ],
+          },
+          addToNavigation: true,
+        },
+        headers: mutationHeaders(slug),
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { pageId?: string; success?: boolean; error?: string };
+      expect(created.success, created.error).toBe(true);
+      expect(created.pageId).toBeTruthy();
+      pageId = created.pageId!;
+
+      const navigationResponse = await page.request.get('/api/builder/site/navigation?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(navigationResponse.status()).toBe(200);
+      const navigationPayload = (await navigationResponse.json()) as { navigation?: TestNavigationItem[] };
+      const createdNavItem = findNavigationItemByPageId(navigationPayload.navigation ?? [], pageId);
+      expect(createdNavItem?.id).toBe(`nav-${pageId}`);
+      expect(createdNavItem?.href).toBe(`/ko/${slug}`);
+      const createdLabel = createdNavItem?.label;
+      expect(typeof createdLabel === 'object' && createdLabel ? createdLabel.ko : createdLabel).toBe(title);
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish?locale=ko`, {
+        headers: mutationHeaders(slug),
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      const publicMainNav = page.getByRole('navigation', { name: 'Main' });
+      await expect(publicMainNav.getByRole('link', { name: title })).toHaveAttribute('href', `/ko/${slug}`);
+
+      const renameResponse = await page.request.patch(`/api/builder/site/pages/${pageId}?locale=ko`, {
+        data: {
+          title: renamedTitle,
+          slug: renamedSlug,
+        },
+        headers: mutationHeaders(slug),
+      });
+      expect(renameResponse.status()).toBe(200);
+      const renamePayload = (await renameResponse.json()) as { page?: { slug?: string; title?: Record<string, string> } };
+      expect(renamePayload.page?.slug).toBe(renamedSlug);
+      expect(renamePayload.page?.title?.ko).toBe(renamedTitle);
+
+      const navAfterRenameResponse = await page.request.get('/api/builder/site/navigation?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(navAfterRenameResponse.status()).toBe(200);
+      const navAfterRenamePayload = (await navAfterRenameResponse.json()) as { navigation?: TestNavigationItem[] };
+      const renamedNavItem = findNavigationItemByPageId(navAfterRenamePayload.navigation ?? [], pageId);
+      expect(renamedNavItem?.href).toBe(`/ko/${renamedSlug}`);
+      const renamedLabel = renamedNavItem?.label;
+      expect(typeof renamedLabel === 'object' && renamedLabel ? renamedLabel.ko : renamedLabel).toBe(renamedTitle);
+
+      await page.goto(`/ko/${renamedSlug}`, { waitUntil: 'domcontentloaded' });
+      const renamedPublicMainNav = page.getByRole('navigation', { name: 'Main' });
+      await expect(renamedPublicMainNav.getByRole('link', { name: renamedTitle })).toHaveAttribute('href', `/ko/${renamedSlug}`);
+      await expect(renamedPublicMainNav.getByRole('link', { name: title })).toHaveCount(0);
+
+      const deleteResponse = await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+        headers: mutationHeaders(slug),
+      });
+      expect(deleteResponse.status()).toBe(200);
+
+      const navAfterDeleteResponse = await page.request.get('/api/builder/site/navigation?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(navAfterDeleteResponse.status()).toBe(200);
+      const navAfterDeletePayload = (await navAfterDeleteResponse.json()) as { navigation?: TestNavigationItem[] };
+      expect(findNavigationItemByPageId(navAfterDeletePayload.navigation ?? [], pageId)).toBeUndefined();
+
+      await page.goto('/ko', { waitUntil: 'domcontentloaded' });
+      const homeMainNav = page.getByRole('navigation', { name: 'Main' });
+      await expect(homeMainNav.getByRole('link', { name: renamedTitle })).toHaveCount(0);
+      pageId = null;
+    } finally {
+      pageId ??= await findPageIdBySlug(page, slug);
+      pageId ??= await findPageIdBySlug(page, renamedSlug);
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
     }
   });
 

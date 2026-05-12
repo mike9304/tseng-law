@@ -5180,3 +5180,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (8 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - page rename/delete navigation cleanup/fallback 흐름을 실제 editor/API 회귀로 고정한다.
+
+## 2026-05-13 Codex /goal M72 Auto navigation rename/delete sync
+
+- M69에서 page template/blank page 생성 시 `nav-{pageId}` 메뉴를 자동 추가했지만, 이후 page PATCH rename은 href만 바꾸고 자동 생성 메뉴 label은 예전 제목으로 남을 수 있는 gap을 닫았다.
+- `pages/[pageId]` PATCH의 navigation update가 해당 pageId의 href를 갱신하면서, `id === nav-{pageId}`인 자동 생성 메뉴 label은 page.title로 함께 동기화한다. 사용자가 직접 만든 다른 nav label은 유지된다.
+- Playwright는 `addToNavigation: true` page 생성 → publish/public header old label 확인 → PATCH rename/title 변경 → navigation API href+label 변경 → public header new label 확인 → DELETE 후 navigation API와 home public header에서 제거까지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "keeps auto-added page navigation label and href in sync after rename and delete" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - remaining W216~W225 editor polish나 다국어 navigation rename/delete path를 계속 재스캔한다.

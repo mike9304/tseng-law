@@ -73,3 +73,4 @@
 | M69 | QA     | Page template navigation wiring | W14,W18,W216 | 1h | M64 | 🟡 템플릿 생성 페이지 메뉴 연결/공개 헤더 도달 자동검증 통과 / 사용자 QA 대기 |
 | M70 | QA     | Locale template page creation guard | W14,W193,W216 | 1h | M69 | 🟡 zh-hant 템플릿 생성 메뉴 href/템플릿 링크 안전성 자동검증 통과 / 사용자 QA 대기 |
 | M71 | QA     | API template link normalization guard | W14,W193,W216 | 1h | M70 | 🟡 zh-hant/en synthetic 템플릿 내부 링크 저장 정규화 자동검증 통과 / 사용자 QA 대기 |
+| M72 | QA     | Auto navigation rename/delete sync | W14,W18,W216 | 1h | M69 | 🟡 자동 추가 메뉴 label/href rename/delete 동기화 자동검증 통과 / 사용자 QA 대기 |

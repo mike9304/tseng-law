@@ -1777,3 +1777,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (8 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. UI 카탈로그 template에 없는 `/ko/contact`, `/ko?query`, `/ko#anchor`, nested hotspot href까지 API 생성/저장 경로에서 locale-safe하게 정규화됨을 자동검증으로 고정했다.
+
+## M72 — Auto navigation rename/delete sync
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/app/api/builder/site/pages/[pageId]/route.ts` — page rename PATCH가 navigation href뿐 아니라 `nav-{pageId}` 자동 생성 메뉴 label도 page title로 동기화한다. 직접 만든 navigation label은 건드리지 않는다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — `addToNavigation: true` page의 생성→publish→rename→public header→delete cleanup까지 자동 생성 메뉴 label/href 동기화를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "keeps auto-added page navigation label and href in sync after rename and delete" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 템플릿/blank 생성으로 자동 메뉴에 들어간 페이지가 rename/delete 후 공개 헤더와 navigation state에서 오래된 제목이나 고아 링크를 남기지 않도록 고정했다.

@@ -3,7 +3,7 @@ import { ZodError, z } from 'zod';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { deletePage, readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
-import type { BuilderNavItem } from '@/lib/builder/site/types';
+import type { BuilderNavItem, BuilderPageMeta } from '@/lib/builder/site/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import {
   normalizeSeoSlugInput,
@@ -33,15 +33,16 @@ function pageHref(locale: string, slug: string, isHomePage?: boolean): string {
   return buildSitePagePath(locale, isHomePage ? '' : slug);
 }
 
-function updateNavigationHref(
+function updateNavigationPageReference(
   items: BuilderNavItem[],
-  pageId: string,
+  page: BuilderPageMeta,
   nextHref: string,
 ): BuilderNavItem[] {
   return items.map((item) => ({
     ...item,
-    href: item.pageId === pageId ? nextHref : item.href,
-    children: item.children ? updateNavigationHref(item.children, pageId, nextHref) : item.children,
+    href: item.pageId === page.pageId ? nextHref : item.href,
+    label: item.pageId === page.pageId && item.id === `nav-${page.pageId}` ? page.title : item.label,
+    children: item.children ? updateNavigationPageReference(item.children, page, nextHref) : item.children,
   }));
 }
 
@@ -82,9 +83,9 @@ export async function PATCH(
     page.slug = nextSlug;
     page.updatedAt = now;
     site.updatedAt = now;
-    site.navigation = updateNavigationHref(
+    site.navigation = updateNavigationPageReference(
       site.navigation,
-      page.pageId,
+      page,
       pageHref(page.locale, nextSlug, page.isHomePage),
     );
 

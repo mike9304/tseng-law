@@ -15,11 +15,9 @@ import { buildChildrenMap, resolveCanvasNodeAbsoluteRect } from '@/lib/builder/c
 import type {
   BuilderCanvasNode,
   BuilderCanvasDocument,
-  ResponsiveConfig,
-  ResponsiveOverride,
 } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind } from '@/lib/builder/canvas/types';
-import { VIEWPORT_BREAKPOINTS } from '@/lib/builder/canvas/responsive';
+import { buildResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
 import type {
   BuilderLightbox,
   BuilderPopup,
@@ -91,20 +89,6 @@ interface ResolvedLightbox {
   canvas: BuilderCanvasDocument;
 }
 
-/**
- * Tablet breakpoint: applies between mobile (<= 767) and desktop (>= 1024).
- * Mobile breakpoint: applies <= 767px.
- * Tablet rules use a min/max range so they don't bleed into mobile.
- */
-const TABLET_MAX = VIEWPORT_BREAKPOINTS.tablet + 255; // 768 + 255 = 1023
-const MOBILE_MAX = VIEWPORT_BREAKPOINTS.tablet - 1;   // 767
-
-/**
- * Widget kinds whose content height is content-driven (text wraps, line
- * count is unpredictable). For these we let `height: auto` win and use the
- * designer's rect.height as `minHeight` so the published render never
- * clips trailing lines.
- */
 function isTextShapedKind(kind: string): boolean {
   return (
     kind === 'text'
@@ -114,89 +98,6 @@ function isTextShapedKind(kind: string): boolean {
     || kind === 'address-block'
     || kind === 'business-hours'
   );
-}
-
-function escapeCssId(id: string): string {
-  // Wrap in [data-node-id="..."]; only need to escape backslashes and quotes.
-  return id.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
-}
-
-function buildResponsiveOverrideRule(
-  node: BuilderCanvasNode,
-  override: ResponsiveOverride,
-): string {
-  if (!override) return '';
-  const declarations: string[] = [];
-  if (override.rect) {
-    const r = override.rect;
-    if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
-    if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
-    if (r.width !== undefined) declarations.push(`width: ${r.width}px`);
-    if (r.height !== undefined) declarations.push(`height: ${r.height}px`);
-  }
-  if (override.hidden) {
-    declarations.push('display: none');
-  }
-  if (override.fontSize !== undefined) {
-    declarations.push(`font-size: ${override.fontSize}px`);
-  }
-  if (declarations.length === 0) return '';
-  const selector = `[data-node-id="${escapeCssId(node.id)}"]`;
-  // External CSS always loses to inline styles (the wrapper writes
-  // left/top/width/height inline from desktop rect), so `!important`
-  // is required for both tablet and mobile rules. The mobile @media
-  // also has to beat the existing 768px fallback that resets nodes
-  // to position:relative — same `!important` carries that too.
-  return `${selector} { ${declarations.map((d) => `${d} !important`).join('; ')}; }`;
-}
-
-/**
- * Build a stylesheet that, for each node with `responsive` overrides,
- * emits @media blocks. The cascade in resolver is desktop → tablet → mobile.
- * In CSS we replicate it by emitting tablet rules (min:768 max:1023) and
- * mobile rules (max:767). Mobile rules also include any tablet override
- * that mobile doesn't itself override — so the cascade works in both
- * directions whether the user sets one or both buckets.
- */
-function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
-  const tabletRules: string[] = [];
-  const mobileRules: string[] = [];
-  for (const node of nodes) {
-    const responsive = node.responsive as ResponsiveConfig | undefined;
-    if (!responsive) continue;
-    if (responsive.tablet) {
-      const rule = buildResponsiveOverrideRule(node, responsive.tablet);
-      if (rule) tabletRules.push(rule);
-    }
-    if (responsive.mobile || responsive.tablet) {
-      // Mobile inherits tablet, then mobile keys win.
-      const merged: ResponsiveOverride = {
-        ...(responsive.tablet ?? {}),
-        ...(responsive.mobile ?? {}),
-        rect: {
-          ...(responsive.tablet?.rect ?? {}),
-          ...(responsive.mobile?.rect ?? {}),
-        },
-      };
-      // If both are present but neither defines the field, keep undefined.
-      if (
-        merged.rect
-        && Object.keys(merged.rect).length === 0
-      ) {
-        merged.rect = undefined;
-      }
-      const rule = buildResponsiveOverrideRule(node, merged);
-      if (rule) mobileRules.push(rule);
-    }
-  }
-  let css = '';
-  if (tabletRules.length > 0) {
-    css += `@media (min-width: ${VIEWPORT_BREAKPOINTS.tablet}px) and (max-width: ${TABLET_MAX}px) {\n  ${tabletRules.join('\n  ')}\n}\n`;
-  }
-  if (mobileRules.length > 0) {
-    css += `@media (max-width: ${MOBILE_MAX}px) {\n  ${mobileRules.join('\n  ')}\n}\n`;
-  }
-  return css;
 }
 
 export interface ResolvedPublishedSitePage {
@@ -438,7 +339,11 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
   const hasTopLevelComposite = topLevelNodes.some((node) => node.kind === 'composite');
   const flowTopLevelCompositeNodes = topLevelNodes
     .filter((node): node is BuilderCanvasNode => node.kind === 'composite')
-    .sort((left, right) => left.rect.y - right.rect.y || left.zIndex - right.zIndex);
+    .sort((left, right) =>
+      left.rect.y - right.rect.y
+      || left.zIndex - right.zIndex
+      || left.id.localeCompare(right.id),
+    );
   const flowSectionMetrics = new Map<string, { marginTop: number; minHeight: number }>();
   let previousFlowBottom = 0;
 
@@ -548,22 +453,22 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
             : useFlowWrapper ? undefined : node.rect.y,
           bottom: useSticky && stickyConfig?.from === 'bottom' ? (stickyConfig?.offset ?? 0) : undefined,
           width: flowAsSection ? '100%' : node.rect.width,
-          // Text-shaped widgets honor the rect width but let the height
-          // auto-grow to fit content. Otherwise a long heading or wrapped
-          // paragraph in a short box clips the bottom lines silently.
-          // node.rect.height becomes the minimum so designer-chosen
-          // visual spacing is preserved.
           height: flowAsSection
             ? 'auto'
             : isTextShapedKind(node.kind)
               ? 'auto'
               : node.rect.height,
+          // Use the designer's rect.height as a floor for flow composites and
+          // text-shaped widgets; content can grow without clipping.
           minHeight: flowAsSection
-            ? flowSectionMetric?.minHeight
+            ? (flowSectionMetric?.minHeight ?? node.rect.height)
             : isTextShapedKind(node.kind)
               ? node.rect.height
               : undefined,
-          marginTop: flowAsSection ? flowSectionMetric?.marginTop : undefined,
+          // Always emit marginTop (even 0) for flow composites so the CSS
+          // fallback at globals.css:19245 never silently injects a clamp gap
+          // when the designer intended adjacent sections.
+          marginTop: flowAsSection ? (flowSectionMetric?.marginTop ?? 0) : undefined,
           zIndex: useSticky
             ? Math.max(node.zIndex, 100)
             : useFlowWrapper

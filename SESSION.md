@@ -4582,3 +4582,22 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
 - 체크포인트:
   - W219/W220/W221/W222/W223/W224/W225 자동검증 evidence 확보. 전체 lint/unit/security/build는 이 slice 최종 게이트로 이어서 실행.
+
+## 2026-05-12 Codex /goal M29 red checkpoint close
+
+- W17/W36/W189 red checkpoint를 닫는 보강 slice를 진행했다.
+- Published responsive CSS를 `responsive-stylesheet.ts`로 분리했다. tablet/mobile media query가 desktop inline rect보다 우선하도록 `!important`를 유지하고, mobile은 tablet override를 상속한다.
+- Flow composite는 viewport별 y/height override 기준으로 margin-top을 다시 계산해 모바일 공개 페이지에서 섹션 간격이 desktop inline 값에 묶이지 않게 했다.
+- Scheduled publish storage/API/cron runner를 추가했다. PublishModal에서 예약 시간을 저장하면 draft를 먼저 저장하고 expected draft revision을 job에 고정한다. Cron runner는 due job을 기존 `publishPage()` pipeline으로 발행한다.
+- 신규 routes:
+  - `/api/builder/site/pages/[pageId]/scheduled-publish` GET/POST/DELETE
+  - `/api/cron/scheduled-publish` GET/POST
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/responsive-stylesheet.test.ts src/lib/builder/site/__tests__/scheduled-publish.test.ts` ✅ (5 passed)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run test:unit` ✅ (888 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 체크포인트:
+  - W17/W36/W189 자동검증 evidence 확보. 실제 모바일/예약 발행 사용자 QA는 대기.

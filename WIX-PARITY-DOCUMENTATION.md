@@ -1109,3 +1109,23 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W219/W220/W221/W222/W223/W224/W225는 `자동검증 통과 / 사용자 QA 대기`로 상향한다.
+
+## M29 — Red checkpoint close / responsive + scheduled publish
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/site/responsive-stylesheet.ts`, `src/lib/builder/site/public-page.tsx` — published responsive CSS 생성을 분리하고 tablet/mobile media query, hidden/fontSize/rect cascade, flow composite gap recomputation을 검증 가능한 모듈로 고정했다.
+  - `src/lib/builder/site/scheduled-publish.ts` — page별 active schedule을 저장한다. 새 예약은 이전 scheduled job을 cancelled로 바꾸고, due runner는 기존 `publishPage()` pipeline을 호출한다.
+  - `src/app/api/builder/site/pages/[pageId]/scheduled-publish/route.ts` — 예약 조회/생성/취소 API를 추가했다. 모든 mutation은 `guardMutation({ permission: 'publish' })`를 통과한다.
+  - `src/app/api/cron/scheduled-publish/route.ts` — `CRON_SECRET` 기반 due publish runner를 추가했다.
+  - `src/components/builder/canvas/PublishModal.tsx` — 예약 발행 패널을 추가했다. 예약 전 draft를 저장하고 expected draft revision을 job에 고정한다.
+  - `src/lib/builder/site/__tests__/responsive-stylesheet.test.ts`, `scheduled-publish.test.ts` — public media CSS와 scheduled publish runner를 단위 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/responsive-stylesheet.test.ts src/lib/builder/site/__tests__/scheduled-publish.test.ts` ✅ (5 passed)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run test:unit` ✅ (888 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W17/W36/W189는 `자동검증 통과 / 사용자 QA 대기`로 상향한다.

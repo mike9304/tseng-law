@@ -45,6 +45,13 @@ interface PublishErrorBody {
   current?: { revision?: number };
 }
 
+interface ScheduledPublishJob {
+  jobId: string;
+  scheduledAt: string;
+  status: 'scheduled' | 'publishing' | 'published' | 'failed' | 'cancelled';
+  expectedDraftRevision?: number;
+}
+
 function blockerSuite(blockers: CheckResult[]): PublishCheckSuite {
   return {
     results: blockers,
@@ -232,6 +239,60 @@ function publishButtonStyle(enabled: boolean): React.CSSProperties {
   };
 }
 
+const schedulePanelStyle: React.CSSProperties = {
+  marginTop: 16,
+  padding: 12,
+  borderRadius: 10,
+  border: '1px solid #dbeafe',
+  background: '#eff6ff',
+  display: 'grid',
+  gap: 8,
+};
+
+const scheduleRowStyle: React.CSSProperties = {
+  display: 'flex',
+  gap: 8,
+  alignItems: 'center',
+  flexWrap: 'wrap',
+};
+
+const scheduleInputStyle: React.CSSProperties = {
+  flex: '1 1 190px',
+  minWidth: 0,
+  padding: '8px 10px',
+  borderRadius: 8,
+  border: '1px solid #bfdbfe',
+  background: '#fff',
+  color: '#0f172a',
+  fontSize: '0.82rem',
+};
+
+const scheduleButtonStyle: React.CSSProperties = {
+  padding: '8px 14px',
+  borderRadius: 8,
+  border: '1px solid #2563eb',
+  background: '#fff',
+  color: '#1d4ed8',
+  fontSize: '0.82rem',
+  fontWeight: 700,
+  cursor: 'pointer',
+};
+
+function toLocalDateTimeInput(date: Date): string {
+  const offsetMs = date.getTimezoneOffset() * 60_000;
+  return new Date(date.getTime() - offsetMs).toISOString().slice(0, 16);
+}
+
+function defaultScheduleInput(): string {
+  return toLocalDateTimeInput(new Date(Date.now() + 60 * 60 * 1000));
+}
+
+function formatScheduledAt(value: string): string {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return value;
+  return parsed.toLocaleString();
+}
+
 function severityIcon(sev: 'blocker' | 'warning' | 'info'): string {
   if (sev === 'blocker') return '✕';
   if (sev === 'warning') return '!';
@@ -356,6 +417,9 @@ export default function PublishModal({
   const [publishedSlug, setPublishedSlug] = useState<string | null>(null);
   const [suite, setSuite] = useState<PublishCheckSuite | null>(null);
   const [overrideWarnings, setOverrideWarnings] = useState(false);
+  const [scheduledAtInput, setScheduledAtInput] = useState(defaultScheduleInput);
+  const [scheduledJob, setScheduledJob] = useState<ScheduledPublishJob | null>(null);
+  const [schedulePending, setSchedulePending] = useState(false);
 
   const runChecks = useCallback(async () => {
     if (!document) return;
@@ -425,10 +489,29 @@ export default function PublishModal({
       setPublishedSlug(null);
       setSuite(null);
       setOverrideWarnings(false);
+      setScheduledJob(null);
+      setSchedulePending(false);
       return;
     }
     void runChecks();
   }, [open, runChecks]);
+
+  useEffect(() => {
+    if (!open || !activePageId) return;
+    setScheduledAtInput(defaultScheduleInput());
+    void fetch(`/api/builder/site/pages/${activePageId}/scheduled-publish?locale=${locale}`, {
+      method: 'GET',
+      credentials: 'same-origin',
+    })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { ok?: boolean; job?: ScheduledPublishJob | null } | null) => {
+        if (data?.ok && data.job) {
+          setScheduledJob(data.job);
+          setScheduledAtInput(toLocalDateTimeInput(new Date(data.job.scheduledAt)));
+        }
+      })
+      .catch(() => undefined);
+  }, [open, activePageId, locale]);
 
   const grouped = useMemo(() => {
     if (!suite) return { blockers: [], warnings: [], infos: [] };
@@ -442,6 +525,7 @@ export default function PublishModal({
 
   const canPublish = !!suite && !suite.hasBlocker && publishState === 'ready';
   const hasWarningsOnly = !!suite && !suite.hasBlocker && suite.warningCount > 0;
+  const canSubmitPublish = canPublish && ((suite?.warningCount ?? 0) === 0 || overrideWarnings);
 
   const handleFix = useCallback(
     (nodeId: string) => {
@@ -451,44 +535,60 @@ export default function PublishModal({
     [setSelectedNodeId, onClose],
   );
 
+  const saveDraftForPublish = useCallback(async (): Promise<{
+    ok: true;
+    expectedDraftRevision?: number;
+  } | {
+    ok: false;
+    message: string;
+  }> => {
+    if (!document || !activePageId) return { ok: false, message: '발행할 페이지가 없습니다.' };
+    const saveResponse = await fetch(
+      `/api/builder/site/pages/${activePageId}/draft?locale=${locale}`,
+      {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ expectedRevision: draftMeta?.revision, document }),
+      },
+    );
+    if (!saveResponse.ok) {
+      const errData = (await saveResponse.json().catch(() => ({}))) as { error?: string };
+      return {
+        ok: false,
+        message: errData.error === 'draft_conflict'
+          ? 'Draft가 다른 탭에서 변경되었습니다. 새로고침 후 다시 발행하세요.'
+          : '발행 전 draft 저장에 실패했습니다.',
+      };
+    }
+    const saveData = (await saveResponse.json()) as {
+      draft?: DraftMeta;
+      document?: BuilderCanvasDocument;
+    };
+    if (saveData.draft) {
+      onDraftSaved?.(saveData.draft, saveData.document);
+    }
+    return {
+      ok: true,
+      expectedDraftRevision: saveData.draft?.revision ?? draftMeta?.revision,
+    };
+  }, [activePageId, document, draftMeta?.revision, locale, onDraftSaved]);
+
   const handlePublish = useCallback(async () => {
-    if (!canPublish || !document) return;
+    if (!canSubmitPublish || !document) return;
     setPublishState('publishing');
     setPublishError(null);
 
     try {
       if (activePageId) {
         // ── Site page publish: save draft then call publish API ──
-        const saveResponse = await fetch(
-          `/api/builder/site/pages/${activePageId}/draft?locale=${locale}`,
-          {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'same-origin',
-            body: JSON.stringify({ expectedRevision: draftMeta?.revision, document }),
-          },
-        );
-        if (!saveResponse.ok) {
-          const errData = (await saveResponse.json().catch(() => ({}))) as {
-            error?: string;
-          };
-          const message =
-            errData.error === 'draft_conflict'
-              ? 'Draft가 다른 탭에서 변경되었습니다. 새로고침 후 다시 발행하세요.'
-              : '발행 전 draft 저장에 실패했습니다.';
+        const draftSave = await saveDraftForPublish();
+        if (!draftSave.ok) {
           setPublishState('error');
-          setPublishError(message);
-          onToast?.(message, 'error');
+          setPublishError(draftSave.message);
+          onToast?.(draftSave.message, 'error');
           return;
         }
-        const saveData = (await saveResponse.json()) as {
-          draft?: DraftMeta;
-          document?: BuilderCanvasDocument;
-        };
-        if (saveData.draft) {
-          onDraftSaved?.(saveData.draft, saveData.document);
-        }
-        const expectedDraftRevision = saveData.draft?.revision ?? draftMeta?.revision;
 
         const publishResponse = await fetch(
           `/api/builder/site/pages/${activePageId}/publish?locale=${locale}`,
@@ -496,7 +596,7 @@ export default function PublishModal({
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'same-origin',
-            body: JSON.stringify({ expectedDraftRevision }),
+            body: JSON.stringify({ expectedDraftRevision: draftSave.expectedDraftRevision }),
           },
         );
 
@@ -550,7 +650,74 @@ export default function PublishModal({
       setPublishState('error');
       setPublishError('발행 중 네트워크 오류가 발생했습니다.');
     }
-  }, [canPublish, document, locale, activePageId, draftMeta?.revision, onDraftSaved, onToast, onClose]);
+  }, [canSubmitPublish, document, locale, activePageId, onToast, onClose, saveDraftForPublish]);
+
+  const handleSchedulePublish = useCallback(async () => {
+    if (!canSubmitPublish || !document || !activePageId) return;
+    const scheduledMs = Date.parse(scheduledAtInput);
+    if (!Number.isFinite(scheduledMs) || scheduledMs <= Date.now()) {
+      const message = '현재 이후 시간으로 예약해 주세요.';
+      setPublishError(message);
+      setPublishState('error');
+      onToast?.(message, 'error');
+      return;
+    }
+
+    setSchedulePending(true);
+    setPublishError(null);
+    try {
+      const draftSave = await saveDraftForPublish();
+      if (!draftSave.ok) {
+        setPublishState('error');
+        setPublishError(draftSave.message);
+        onToast?.(draftSave.message, 'error');
+        return;
+      }
+      const response = await fetch(
+        `/api/builder/site/pages/${activePageId}/scheduled-publish?locale=${locale}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({
+            locale,
+            scheduledAt: new Date(scheduledMs).toISOString(),
+            expectedDraftRevision: draftSave.expectedDraftRevision,
+          }),
+        },
+      );
+      const data = (await response.json().catch(() => ({}))) as {
+        ok?: boolean;
+        job?: ScheduledPublishJob;
+        error?: string;
+      };
+      if (!response.ok || !data.ok || !data.job) {
+        const message = data.error || '예약 발행 저장에 실패했습니다.';
+        setPublishState('error');
+        setPublishError(message);
+        onToast?.(message, 'error');
+        return;
+      }
+      setScheduledJob(data.job);
+      setPublishState('ready');
+      onToast?.('예약 발행 저장 완료', 'success');
+    } catch {
+      const message = '예약 발행 저장 중 네트워크 오류가 발생했습니다.';
+      setPublishState('error');
+      setPublishError(message);
+      onToast?.(message, 'error');
+    } finally {
+      setSchedulePending(false);
+    }
+  }, [
+    activePageId,
+    canSubmitPublish,
+    document,
+    locale,
+    onToast,
+    saveDraftForPublish,
+    scheduledAtInput,
+  ]);
 
   if (!open) return null;
 
@@ -630,6 +797,48 @@ export default function PublishModal({
                   모든 검사 통과 — 발행 가능
                 </p>
               )}
+
+              {activePageId ? (
+                <div style={schedulePanelStyle}>
+                  <div style={{ ...checklistLabelStyle, color: '#1e40af' }}>
+                    <span>예약 발행</span>
+                    {scheduledJob ? (
+                      <span style={checklistStatusStyle}>{scheduledJob.status}</span>
+                    ) : null}
+                  </div>
+                  <div style={scheduleRowStyle}>
+                    <input
+                      type="datetime-local"
+                      value={scheduledAtInput}
+                      onChange={(event) => setScheduledAtInput(event.target.value)}
+                      style={scheduleInputStyle}
+                      aria-label="Scheduled publish time"
+                    />
+                    <button
+                      type="button"
+                      style={{
+                        ...scheduleButtonStyle,
+                        opacity: canSubmitPublish && !schedulePending ? 1 : 0.55,
+                        cursor: canSubmitPublish && !schedulePending ? 'pointer' : 'not-allowed',
+                      }}
+                      disabled={!canSubmitPublish || schedulePending}
+                      onClick={handleSchedulePublish}
+                    >
+                      {schedulePending ? '예약 중...' : '예약'}
+                    </button>
+                  </div>
+                  {scheduledJob ? (
+                    <div style={{ ...checklistDetailStyle, color: '#1e40af' }}>
+                      {formatScheduledAt(scheduledJob.scheduledAt)} 발행 대기
+                      {scheduledJob.expectedDraftRevision ? ` · draft v${scheduledJob.expectedDraftRevision}` : ''}
+                    </div>
+                  ) : (
+                    <div style={{ ...checklistDetailStyle, color: '#1e40af' }}>
+                      예약 시점의 draft revision이 고정되고, cron runner가 시간이 지나면 자동 발행합니다.
+                    </div>
+                  )}
+                </div>
+              ) : null}
             </>
           )}
 
@@ -671,11 +880,9 @@ export default function PublishModal({
         {publishState !== 'success' && (
           <button
             type="button"
-            style={publishButtonStyle(
-              canPublish && ((suite?.warningCount ?? 0) === 0 || overrideWarnings),
-            )}
+            style={publishButtonStyle(canSubmitPublish)}
             disabled={
-              !canPublish ||
+              !canSubmitPublish ||
               publishState !== 'ready' ||
               ((suite?.warningCount ?? 0) > 0 && !overrideWarnings)
             }

@@ -15,6 +15,7 @@ export type DayOfWeek = (typeof dayOfWeeks)[number];
 
 export type BookingStatus = 'pending' | 'confirmed' | 'cancelled' | 'completed' | 'no-show';
 export type BookingSource = 'web' | 'admin';
+export type BookingWaitlistStatus = 'active' | 'contacted' | 'promoted' | 'closed';
 export type BookingReminderType =
   | 'email-confirmation'
   | 'email-reminder-24h'
@@ -141,6 +142,20 @@ export interface Booking {
   customerTimezone?: string;       // W214
 }
 
+export interface BookingWaitlistEntry {
+  waitlistId: string;
+  serviceId: string;
+  staffId: string;
+  requestedDate: string;
+  customer: Booking['customer'];
+  customerTimezone?: string;
+  status: BookingWaitlistStatus;
+  source: BookingSource;
+  promotedBookingId?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface CalendarEntry {
   id: string;
   type: 'booking' | 'blocked';
@@ -243,6 +258,36 @@ export const bookingCreateSchema = z.object({
   source: z.enum(['web', 'admin']).default('web'),
   status: z.enum(['pending', 'confirmed', 'cancelled', 'completed', 'no-show']).default('confirmed'),
   paymentIntentId: z.string().trim().min(1).max(200).optional(),
+});
+
+export const bookingWaitlistCreateSchema = z.object({
+  serviceId: z.string().trim().min(1),
+  staffId: z.string().trim().min(1),
+  requestedDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  customer: z.object({
+    name: z.string().trim().min(1).max(120),
+    email: z.string().trim().email().max(200),
+    phone: z.string().trim().max(80).optional(),
+    notes: z.string().trim().max(3000).optional(),
+    caseSummary: z.string().trim().max(4000).optional(),
+    attachmentUrls: z.array(z.string().trim().url().max(2000)).max(8).optional(),
+    customFields: z.array(z.object({
+      label: z.string().trim().min(1).max(120),
+      value: z.string().trim().max(2000),
+    })).max(12).optional(),
+    locale: z.enum(locales).default('ko'),
+  }),
+  customerTimezone: z.string().trim().min(1).max(80).optional(),
+  source: z.enum(['web', 'admin']).default('web'),
+});
+
+export const bookingWaitlistUpdateSchema = z.object({
+  status: z.enum(['active', 'contacted', 'closed']),
+});
+
+export const bookingWaitlistPromoteSchema = z.object({
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+  staffId: z.string().trim().min(1).optional(),
 });
 
 export const bookingUpdateSchema = z.object({

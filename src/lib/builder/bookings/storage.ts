@@ -4,6 +4,8 @@ import { get, list, put } from '@vercel/blob';
 import type {
   Booking,
   BookingService,
+  BookingWaitlistEntry,
+  BookingWaitlistStatus,
   DayOfWeek,
   Staff,
   StaffAvailability,
@@ -13,7 +15,7 @@ import { createLocalizedText, dayOfWeeks } from '@/lib/builder/bookings/types';
 const BOOKINGS_ROOT = path.join(process.cwd(), 'runtime-data', 'builder-bookings');
 const BLOB_PREFIX = 'builder-bookings/';
 
-type Collection = 'services' | 'staff' | 'availability' | 'bookings';
+type Collection = 'services' | 'staff' | 'availability' | 'bookings' | 'waitlist';
 type BookingBackend = 'blob' | 'file';
 
 function getBackend(): BookingBackend {
@@ -257,6 +259,10 @@ export function makeBookingId(): string {
   return `bk-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
+export function makeWaitlistId(): string {
+  return `wl-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
 export function makeServiceId(): string {
   return `svc-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
 }
@@ -334,6 +340,29 @@ export async function getBooking(bookingId: string): Promise<Booking | null> {
 
 export async function saveBooking(booking: Booking): Promise<void> {
   await writeJson('bookings', booking.bookingId, booking);
+}
+
+export async function getWaitlistEntry(waitlistId: string): Promise<BookingWaitlistEntry | null> {
+  return readJson<BookingWaitlistEntry>('waitlist', waitlistId);
+}
+
+export async function saveWaitlistEntry(entry: BookingWaitlistEntry): Promise<void> {
+  await writeJson('waitlist', entry.waitlistId, entry);
+}
+
+export async function listWaitlistEntries(options: {
+  status?: BookingWaitlistStatus;
+  includeClosed?: boolean;
+  serviceId?: string;
+  staffId?: string;
+} = {}): Promise<BookingWaitlistEntry[]> {
+  const entries = await listJson<BookingWaitlistEntry>('waitlist');
+  return entries
+    .filter((entry) => options.includeClosed || entry.status !== 'closed')
+    .filter((entry) => !options.status || entry.status === options.status)
+    .filter((entry) => !options.serviceId || entry.serviceId === options.serviceId)
+    .filter((entry) => !options.staffId || entry.staffId === options.staffId)
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 }
 
 export async function listBookings(options: {

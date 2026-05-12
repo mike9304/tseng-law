@@ -4499,3 +4499,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅
 - 체크포인트:
   - W213/W214 자동검증 evidence 확보. W211 waitlist, W212 recurring availability, W215 email templates는 M27 후속 slice로 남긴다.
+
+## 2026-05-12 Codex /goal M27 waitlist
+
+- Booking waitlist를 별도 storage collection으로 추가했다. Booking status에 대기 상태를 억지로 섞지 않고 `BookingWaitlistEntry`가 service/staff/requestedDate/customer/status/promotedBookingId를 보관한다.
+- 공개 booking widget은 선택 날짜에 slot이 없으면 `Join waitlist` panel을 띄운다. 이름/이메일/전화/메모/동의를 받아 `/api/booking/waitlist`로 저장하고, 동일 날짜·서비스·staff·이메일 중복은 기존 entry로 처리한다.
+- 관리자 dashboard에는 waitlist count와 table을 추가했다. Promote는 availability를 다시 확인하고 slot lock을 잡은 뒤 normal booking을 만들고 waitlist를 `promoted`로 전환한다. Contacted/Close 상태 전환도 제공한다.
+- 새 builder mutation route는 모두 `guardMutation({ permission: 'manage-bookings' })`를 통과한다. 공개 waitlist route는 rate limit과 honeypot을 유지한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m27-waitlist.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npx vitest run src/lib/builder/bookings/__tests__/analytics.test.ts src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (6 passed)
+  - `npm run security:builder-routes` ✅
+  - `npm run lint` ✅
+  - `npm run test:unit` ✅ (874 passed)
+  - `npm run build` ✅
+- 체크포인트:
+  - W211 자동검증 evidence 확보. W212 recurring availability, W215 booking email templates는 M27 후속으로 남긴다.

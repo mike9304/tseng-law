@@ -171,6 +171,26 @@
   margin-top: 16px;
 }
 
+.sectionHeader {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.inlineActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.inlineActions .button,
+.inlineActions .buttonSecondary {
+  min-height: 32px;
+  padding: 0 10px;
+}
+
 .panel {
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid rgba(120, 137, 166, 0.2);
@@ -189,7 +209,7 @@
 .dashboardGrid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-bottom: 16px;
 }
 

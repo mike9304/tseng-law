@@ -1002,4 +1002,27 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W213/W214는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Dashboard analytics와 고객 profile/history는 로컬 데이터 기준 동작을 검증했고, 실제 운영 데이터 분석·장기 이력 QA는 사용자 검증으로 남긴다.
-  - W211 waitlist, W212 recurring availability template, W215 booking email templates는 M27 후속 slice로 계속 진행한다.
+  - 이 시점에서는 W211 waitlist, W212 recurring availability template, W215 booking email templates를 M27 후속 slice로 남겼다.
+
+## M27 — Bookings 본격 3 waitlist slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/bookings/types.ts`, `storage.ts` — booking 본체 status를 오염시키지 않고 별도 `BookingWaitlistEntry`와 `waitlist` storage collection을 추가했다.
+  - `src/app/api/booking/waitlist/route.ts` — 공개 waitlist POST route를 추가했다. rate limit, honeypot, service/staff validation, 빈 slot 확인, 동일 날짜/이메일 중복 방지를 거친 뒤 active waitlist entry를 저장한다.
+  - `src/app/api/builder/bookings/waitlist/[id]/route.ts`, `[id]/promote/route.ts` — 관리자 waitlist status update와 promotion route를 추가했다. 모든 builder mutation은 `guardMutation({ permission: 'manage-bookings' })`를 통과하고, promotion은 직전 slot availability와 slot lock을 다시 확인한 뒤 normal booking을 생성한다.
+  - `src/components/builder/bookings/BookingFlowSteps.tsx`, `BookingFlowSteps.module.css` — 공개 booking widget에서 선택 날짜에 slot이 없으면 Wix Bookings형 `Join waitlist` panel을 보여준다.
+  - `src/components/builder/bookings/BookingDashboardAdmin.tsx`, `BookingsAdmin.module.css`, dashboard page — 관리자 dashboard에 waitlist count와 waitlist table/action(Promote, Contacted, Close)을 추가했다.
+  - `src/lib/builder/webhooks/types.ts` — `booking.waitlist.joined` webhook event type을 추가했다.
+  - `tests/builder-editor/bookings-m27-waitlist.playwright.ts` — 실제 공개 페이지에서 빈 시간표 → waitlist 등록 → admin dashboard 확인 → availability 재오픈 → promote → booking row 생성까지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m27-waitlist.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npx vitest run src/lib/builder/bookings/__tests__/analytics.test.ts src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (6 passed)
+  - `npm run security:builder-routes` ✅ (111 route files / 92 mutation handlers)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run test:unit` ✅ (874 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W211은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. “만석 또는 slot 없음 → 대기 등록 → admin promotion” 경로는 자동검증 통과했다.
+  - W212 recurring availability template, W215 booking email templates는 M27 후속 slice로 유지한다.

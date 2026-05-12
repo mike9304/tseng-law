@@ -1,7 +1,14 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import type { Booking, BookingService, BookingStatus, Staff } from '@/lib/builder/bookings/types';
+import type {
+  Booking,
+  BookingService,
+  BookingStatus,
+  BookingWaitlistEntry,
+  BookingWaitlistStatus,
+  Staff,
+} from '@/lib/builder/bookings/types';
 import { textForLocale } from '@/lib/builder/bookings/types';
 import { buildBookingAnalytics, buildCustomerProfiles } from '@/lib/builder/bookings/analytics';
 import type { Locale } from '@/lib/locales';
@@ -41,15 +48,18 @@ function formatDateTime(iso: string): string {
 export default function BookingDashboardAdmin({
   locale,
   initialBookings,
+  initialWaitlist,
   services,
   staff,
 }: {
   locale: Locale;
   initialBookings: Booking[];
+  initialWaitlist: BookingWaitlistEntry[];
   services: BookingService[];
   staff: Staff[];
 }) {
   const [bookings, setBookings] = useState(initialBookings);
+  const [waitlistEntries, setWaitlistEntries] = useState(initialWaitlist);
   const [query, setQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<'' | BookingStatus>('');
   const [staffFilter, setStaffFilter] = useState('');
@@ -60,6 +70,7 @@ export default function BookingDashboardAdmin({
   const [draftStaffId, setDraftStaffId] = useState('');
   const [draftStartAt, setDraftStartAt] = useState('');
   const [saving, setSaving] = useState(false);
+  const [waitlistActionId, setWaitlistActionId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const serviceById = useMemo(() => new Map(services.map((service) => [service.serviceId, service])), [services]);
@@ -69,6 +80,10 @@ export default function BookingDashboardAdmin({
   const customerProfileByEmail = useMemo(
     () => new Map(customerProfiles.map((profile) => [profile.email, profile])),
     [customerProfiles],
+  );
+  const activeWaitlist = useMemo(
+    () => waitlistEntries.filter((entry) => entry.status === 'active' || entry.status === 'contacted'),
+    [waitlistEntries],
   );
 
   const filtered = useMemo(() => {
@@ -130,6 +145,61 @@ export default function BookingDashboardAdmin({
     }
   };
 
+  const updateWaitlistEntry = (entry: BookingWaitlistEntry) => {
+    setWaitlistEntries((current) => current.map((item) => item.waitlistId === entry.waitlistId ? entry : item));
+  };
+
+  const patchWaitlist = async (entry: BookingWaitlistEntry, status: Exclude<BookingWaitlistStatus, 'promoted'>) => {
+    setWaitlistActionId(entry.waitlistId);
+    setError(null);
+    try {
+      const res = await fetch(`/api/builder/bookings/waitlist/${entry.waitlistId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ status }),
+      });
+      if (!res.ok) {
+        const body = (await res.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(body?.error || 'Waitlist update failed');
+      }
+      const data = (await res.json()) as { waitlist: BookingWaitlistEntry };
+      updateWaitlistEntry(data.waitlist);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Waitlist update failed');
+    } finally {
+      setWaitlistActionId(null);
+    }
+  };
+
+  const promoteWaitlist = async (entry: BookingWaitlistEntry) => {
+    setWaitlistActionId(entry.waitlistId);
+    setError(null);
+    try {
+      const res = await fetch(`/api/builder/bookings/waitlist/${entry.waitlistId}/promote`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({}),
+      });
+      if (!res.ok) {
+        const body = (await res.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(body?.error || 'Waitlist promotion failed');
+      }
+      const data = (await res.json()) as { booking?: Booking; waitlist: BookingWaitlistEntry };
+      if (data.booking) {
+        setBookings((current) => current.some((item) => item.bookingId === data.booking!.bookingId)
+          ? current
+          : [...current, data.booking!].sort((a, b) => a.startAt.localeCompare(b.startAt)));
+      }
+      updateWaitlistEntry(data.waitlist);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Waitlist promotion failed');
+    } finally {
+      setWaitlistActionId(null);
+    }
+  };
+
   const selectedService = selected ? serviceById.get(selected.serviceId) : undefined;
   const selectedStaff = selected ? staffById.get(selected.staffId) : undefined;
   const selectedCustomerProfile = selected
@@ -159,6 +229,10 @@ export default function BookingDashboardAdmin({
         <div className={styles.statCard}>
           <span>No-show</span>
           <strong>{analytics.noShow}</strong>
+        </div>
+        <div className={styles.statCard}>
+          <span>Waitlist</span>
+          <strong>{activeWaitlist.length}</strong>
         </div>
       </section>
 
@@ -283,6 +357,90 @@ export default function BookingDashboardAdmin({
             </tbody>
           </table>
           {filtered.length === 0 ? <p className={styles.muted}>No bookings match these filters.</p> : null}
+        </div>
+      </section>
+
+      <section className={styles.panel} data-booking-waitlist-admin="true">
+        <div className={styles.sectionHeader}>
+          <div>
+            <h2 className={styles.cardTitle}>Waitlist</h2>
+            <p className={styles.muted}>Full dates and no-slot requests. Promote creates the next available booking for the requested date.</p>
+          </div>
+          <span className={styles.chip}>{activeWaitlist.length} active</span>
+        </div>
+        <div className={styles.tableWrap}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th>Requested</th>
+                <th>Customer</th>
+                <th>Service</th>
+                <th>Staff</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {waitlistEntries.map((entry) => {
+                const service = serviceById.get(entry.serviceId);
+                const member = staffById.get(entry.staffId);
+                const busy = waitlistActionId === entry.waitlistId;
+                return (
+                  <tr key={entry.waitlistId} data-waitlist-row={entry.waitlistId}>
+                    <td>
+                      {entry.requestedDate}
+                      <span>{formatDateTime(entry.createdAt)}</span>
+                    </td>
+                    <td>
+                      <strong>{entry.customer.name}</strong>
+                      <span>{entry.customer.email}</span>
+                    </td>
+                    <td>{textForLocale(service?.name, locale) || entry.serviceId}</td>
+                    <td>{textForLocale(member?.name, locale) || entry.staffId}</td>
+                    <td><span className={styles.statusPill} data-waitlist-status={entry.status}>{entry.status}</span></td>
+                    <td>
+                      <div className={styles.inlineActions}>
+                        <button
+                          className={styles.button}
+                          type="button"
+                          disabled={busy || entry.status === 'promoted' || entry.status === 'closed'}
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            void promoteWaitlist(entry);
+                          }}
+                        >
+                          Promote
+                        </button>
+                        <button
+                          className={styles.buttonSecondary}
+                          type="button"
+                          disabled={busy || entry.status === 'promoted' || entry.status === 'closed'}
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            void patchWaitlist(entry, entry.status === 'contacted' ? 'active' : 'contacted');
+                          }}
+                        >
+                          {entry.status === 'contacted' ? 'Mark active' : 'Contacted'}
+                        </button>
+                        <button
+                          className={styles.buttonSecondary}
+                          type="button"
+                          disabled={busy || entry.status === 'promoted' || entry.status === 'closed'}
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            void patchWaitlist(entry, 'closed');
+                          }}
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {waitlistEntries.length === 0 ? <p className={styles.muted}>No waitlist requests yet.</p> : null}
         </div>
       </section>
 

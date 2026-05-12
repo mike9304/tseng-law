@@ -9,6 +9,7 @@ import styles from './BookingFlowSteps.module.css';
 
 type FlowStep = 0 | 1 | 2 | 3;
 type PaymentStatus = 'idle' | 'creating' | 'ready' | 'confirming' | 'confirmed' | 'error';
+type WaitlistStatus = 'idle' | 'joining' | 'joined' | 'error';
 
 interface StripeElementsLike {
   create(type: 'payment'): { mount(target: HTMLElement | string): void; unmount?(): void };
@@ -135,6 +136,7 @@ export default function BookingFlowSteps({
   const [loading, setLoading] = useState(false);
   const [completed, setCompleted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [waitlist, setWaitlist] = useState<{ status: WaitlistStatus; error?: string; duplicate?: boolean }>({ status: 'idle' });
   const [payment, setPayment] = useState<{
     status: PaymentStatus;
     paymentIntentId?: string;
@@ -176,6 +178,8 @@ export default function BookingFlowSteps({
   useEffect(() => {
     if (!serviceId || !staffId || !date) return;
     setLoading(true);
+    setSlot(null);
+    setWaitlist({ status: 'idle' });
     const params = new URLSearchParams({ serviceId, staffId, date });
     fetch(`/api/booking/availability?${params.toString()}`)
       .then((res) => res.ok ? res.json() : Promise.reject())
@@ -355,6 +359,51 @@ export default function BookingFlowSteps({
     }
   };
 
+  const submitWaitlist = async () => {
+    if (!serviceId || !staffId || !date) return;
+    if (!customer.name || !customer.email || !customer.consent) {
+      setWaitlist({ status: 'error', error: '이름, 이메일, 개인정보 동의를 확인해 주세요.' });
+      return;
+    }
+    setWaitlist({ status: 'joining' });
+    setError(null);
+    try {
+      const customFields = customLabels.map((label) => ({
+        label,
+        value: customer.customFieldValues[label] ?? '',
+      }));
+      const res = await fetch('/api/booking/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          serviceId,
+          staffId,
+          requestedDate: date,
+          customer: {
+            name: customer.name,
+            email: customer.email,
+            phone: customer.phone,
+            notes: customer.notes,
+            caseSummary: showCaseSummary ? customer.caseSummary : undefined,
+            attachmentUrls: showAttachmentLinks ? parseAttachmentLinks(customer.attachmentLinks) : undefined,
+            customFields: customFields.length > 0 ? customFields : undefined,
+            locale,
+          },
+          customerTimezone,
+          company: customer.company,
+        }),
+      });
+      const payload = (await res.json().catch(() => ({}))) as { duplicate?: boolean; error?: string };
+      if (!res.ok && res.status !== 200) throw new Error(payload.error || 'waitlist failed');
+      setWaitlist({ status: 'joined', duplicate: payload.duplicate });
+    } catch (err) {
+      setWaitlist({
+        status: 'error',
+        error: err instanceof Error ? err.message : '대기 등록을 완료하지 못했습니다.',
+      });
+    }
+  };
+
   if (completed) {
     return (
       <div className={styles.flow} data-booking-flow="true">
@@ -427,6 +476,38 @@ export default function BookingFlowSteps({
               {!loading && slots.length === 0 ? <span className={styles.muted}>No available slots for this date.</span> : null}
             </div>
           </div>
+          {!loading && slots.length === 0 ? (
+            <div className={`${styles.waitlistPanel} ${styles.fieldFull}`} data-booking-waitlist="true">
+              <div>
+                <span className={styles.label}>Waitlist</span>
+                <p className={styles.muted}>취소나 새 시간이 생기면 이 날짜의 대기자 명단에서 먼저 연락할 수 있게 등록합니다.</p>
+              </div>
+              <input style={{ display: 'none' }} tabIndex={-1} autoComplete="off" value={customer.company} onChange={(event) => setCustomer({ ...customer, company: event.target.value })} />
+              <div className={styles.waitlistFields}>
+                <label className={styles.field}><span className={styles.label}>Name</span><input className={styles.input} value={customer.name} onChange={(event) => setCustomer({ ...customer, name: event.target.value })} /></label>
+                <label className={styles.field}><span className={styles.label}>Email</span><input className={styles.input} type="email" value={customer.email} onChange={(event) => setCustomer({ ...customer, email: event.target.value })} /></label>
+                <label className={styles.field}><span className={styles.label}>Phone</span><input className={styles.input} value={customer.phone} onChange={(event) => setCustomer({ ...customer, phone: event.target.value })} /></label>
+                <label className={styles.field}><span className={styles.label}>Notes</span><input className={styles.input} value={customer.notes} onChange={(event) => setCustomer({ ...customer, notes: event.target.value })} /></label>
+              </div>
+              <label className={styles.label}>
+                <input type="checkbox" checked={customer.consent} onChange={(event) => setCustomer({ ...customer, consent: event.target.checked })} /> 개인정보 수집 및 대기자 연락 안내에 동의합니다.
+              </label>
+              {waitlist.status === 'joined' ? (
+                <div className={styles.notice} data-booking-waitlist-confirmed="true">
+                  {waitlist.duplicate ? '이미 같은 날짜 대기자 명단에 등록되어 있습니다.' : '대기자 명단에 등록되었습니다.'}
+                </div>
+              ) : null}
+              {waitlist.status === 'error' ? <p className={styles.error}>{waitlist.error}</p> : null}
+              <button
+                className={styles.button}
+                type="button"
+                onClick={submitWaitlist}
+                disabled={waitlist.status === 'joining' || !customer.name || !customer.email || !customer.consent}
+              >
+                {waitlist.status === 'joining' ? 'Joining...' : 'Join waitlist'}
+              </button>
+            </div>
+          ) : null}
         </div>
       ) : null}
 

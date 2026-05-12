@@ -5,6 +5,7 @@ export const WEBHOOK_EVENT_TYPES = [
   'booking.created',
   'booking.cancelled',
   'booking.rescheduled',
+  'booking.waitlist.joined',
   'contact.created',
   'page.published',
   'member.registered',

@@ -32,3 +32,4 @@
 | M28 | P9     | 에디터 고도화                     | W216~W225 | 24h  | M02  | 🟡 W216~W225 자동검증 통과 / 사용자 QA 대기 |
 | M29 | P2/P7  | Red checkpoint close              | W17,W36,W189 | 8h | M07,M24 | 🟡 W17/W36/W189 자동검증 통과 / 사용자 QA 대기 |
 | M30 | QA     | Section template click stability  | W18,W22,W84 | 3h | M28  | 🟡 실제 클릭 자동검증 통과 / 사용자 QA 대기 |
+| M31 | P5     | Background parallax runtime       | W161 | 3h | M22 | 🟡 W161 자동검증 통과 / 사용자 QA 대기 |

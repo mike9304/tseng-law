@@ -114,6 +114,43 @@ function makeMotionDocument(token: string): TestDocument {
         },
       },
       {
+        id: `motion-bg-${token}`,
+        kind: 'container',
+        rect: { x: 720, y: 720, width: 420, height: 260 },
+        style: {
+          ...baseStyle,
+          borderWidth: 0,
+          backgroundColor: {
+            kind: 'image',
+            src: 'data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20400%20240%22%3E%3Crect%20width=%22400%22%20height=%22240%22%20fill=%22%230f172a%22/%3E%3Cpath%20d=%22M0%20160L80%20110L140%20140L220%2070L400%20160V240H0Z%22%20fill=%22%23d7b46a%22/%3E%3C/svg%3E',
+            size: 'cover',
+            position: 'center',
+            repeat: 'no-repeat',
+          },
+        },
+        zIndex: 0,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: 'Background parallax target',
+          background: 'transparent',
+          borderColor: '#cbd5e1',
+          borderStyle: 'solid',
+          borderWidth: 0,
+          borderRadius: 0,
+          padding: 0,
+          layoutMode: 'absolute',
+          as: 'div',
+        },
+        animation: {
+          scroll: {
+            effect: 'background-parallax',
+            intensity: 36,
+          },
+        },
+      },
+      {
         id: `motion-spacer-${token}`,
         kind: 'container',
         rect: { x: 0, y: 1500, width: 1280, height: 220 },
@@ -212,21 +249,26 @@ test.describe('/ko published motion runtime', () => {
     await expect(page.getByText('Click', { exact: true })).toBeVisible();
     await expect(page.getByText('Motion timeline', { exact: true })).toBeVisible();
 
-    const exitSection = page.getByText('Exit', { exact: true }).locator('xpath=ancestor::section[1]');
-    await exitSection.getByRole('combobox', { name: 'Exit preset' }).selectOption('fade-out');
+    const exitPreset = page.getByRole('combobox', { name: 'Exit preset' });
+    await exitPreset.selectOption('fade-out');
+    const exitSection = exitPreset.locator('xpath=ancestor::section[1]');
     await exitSection.getByRole('combobox', { name: 'Easing' }).selectOption('custom');
     await expect(exitSection.getByPlaceholder('cubic-bezier(0.34, 1.56, 0.64, 1)')).toBeEnabled();
 
-    const loopSection = page.getByText('Loop', { exact: true }).locator('xpath=ancestor::section[1]');
-    await loopSection.getByRole('combobox', { name: 'Loop preset' }).selectOption('float');
+    const loopPreset = page.getByRole('combobox', { name: 'Loop preset' });
+    await loopPreset.selectOption('float');
+    const loopSection = loopPreset.locator('xpath=ancestor::section[1]');
     await expect(loopSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();
 
-    const scrollSection = page.getByText('Scroll', { exact: true }).locator('xpath=ancestor::section[1]');
-    await scrollSection.getByRole('combobox', { name: 'Scroll effect' }).selectOption('scrub-translate');
+    const scrollEffect = page.getByRole('combobox', { name: 'Scroll effect' });
+    await scrollEffect.selectOption('background-parallax');
+    await scrollEffect.selectOption('scrub-translate');
+    const scrollSection = scrollEffect.locator('xpath=ancestor::section[1]');
     await expect(scrollSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();
 
-    const clickSection = page.getByText('Click', { exact: true }).locator('xpath=ancestor::section[1]');
-    await clickSection.getByRole('combobox', { name: 'Click preset' }).selectOption('pulse');
+    const clickPreset = page.getByRole('combobox', { name: 'Click preset' });
+    await clickPreset.selectOption('pulse');
+    const clickSection = clickPreset.locator('xpath=ancestor::section[1]');
     await expect(clickSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();
 
     const settingsModal = await openSiteSettings(page);
@@ -289,6 +331,7 @@ test.describe('/ko published motion runtime', () => {
       expect(html).toContain('data-anim-hover="fade"');
       expect(html).toContain('data-anim-click="pulse"');
       expect(html).toContain('data-anim-timeline-mode="time"');
+      expect(html).toContain('data-anim-scroll="background-parallax"');
 
       await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
 
@@ -320,6 +363,18 @@ test.describe('/ko published motion runtime', () => {
             && node.style.getPropertyValue('--builder-scroll-transform').includes('translateY');
         },
         handle,
+      );
+
+      const backgroundTarget = page.locator(`[data-node-id="motion-bg-${token}"]`).first();
+      await expect(backgroundTarget).toHaveAttribute('data-anim-scroll', 'background-parallax');
+      const backgroundHandle = await backgroundTarget.elementHandle();
+      expect(backgroundHandle).toBeTruthy();
+      await page.waitForFunction(
+        (element) => {
+          const node = element as HTMLElement;
+          return node.style.getPropertyValue('--builder-bg-parallax-position').includes('calc(50% +');
+        },
+        backgroundHandle,
       );
 
       await target.hover();

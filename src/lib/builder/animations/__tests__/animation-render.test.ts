@@ -118,4 +118,20 @@ describe('builder animation rendering', () => {
     expect(editorStyle.opacity).toBe(0.75);
     expect(editorStyle.transition).toContain('opacity 180ms ease');
   });
+
+  it('exposes background parallax as a published scroll effect', () => {
+    const animation: BuilderAnimationConfig = {
+      scroll: {
+        effect: 'background-parallax',
+        intensity: 36,
+      },
+    };
+
+    expect(SCROLL_EFFECT_OPTIONS.map((option) => option.value)).toContain('background-parallax');
+    expect(getPublishedAnimationAttributes(animation)).toMatchObject({
+      'data-anim-scroll': 'background-parallax',
+      'data-anim-intensity': '36',
+    });
+    expect(getAnimationSummary(animation)).toBe('scroll: background-parallax');
+  });
 });

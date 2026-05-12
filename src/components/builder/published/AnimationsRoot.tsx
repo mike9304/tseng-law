@@ -16,6 +16,21 @@ function mergeTransform(baseTransform: string, effectTransform: string): string 
     .join(' ') || 'none';
 }
 
+function splitBackgroundPositions(value: string): string[] {
+  const positions = value
+    .split(',')
+    .map((position) => position.trim())
+    .filter(Boolean);
+  return positions.length > 0 ? positions : ['center center'];
+}
+
+function composeBackgroundParallaxPosition(basePosition: string, offset: number): string {
+  const positions = splitBackgroundPositions(basePosition);
+  const imageLayerIndex = positions.length - 1;
+  positions[imageLayerIndex] = `50% calc(50% + ${offset}px)`;
+  return positions.join(', ');
+}
+
 export default function AnimationsRoot() {
   useEffect(() => {
     const entranceNodes = Array.from(
@@ -80,6 +95,14 @@ export default function AnimationsRoot() {
 
         if (effect === 'parallax-y') {
           effectTransform = `translateY(${Math.round(centeredProgress * -intensity)}px)`;
+        } else if (effect === 'background-parallax') {
+          const computedStyle = getComputedStyle(node);
+          const basePosition = node.style.getPropertyValue('--builder-bg-base-position').trim()
+            || computedStyle.backgroundPosition
+            || 'center center';
+          const offset = Math.round(centeredProgress * -intensity);
+          node.style.setProperty('--builder-bg-base-position', basePosition);
+          node.style.setProperty('--builder-bg-parallax-position', composeBackgroundParallaxPosition(basePosition, offset));
         } else if (effect === 'scale-on-scroll') {
           effectTransform = `scale(${clamp(1 + centeredProgress * (intensity / 400), 0.75, 1.25).toFixed(3)})`;
         } else if (effect === 'rotate-on-scroll') {
@@ -327,9 +350,13 @@ export default function AnimationsRoot() {
         position: sticky !important;
         top: 24px;
       }
-      .builder-pub-node[data-anim-scroll-active='true'] {
+      .builder-pub-node[data-anim-scroll-active='true']:not([data-anim-scroll='background-parallax']) {
         transform: var(--builder-scroll-transform, var(--builder-base-transform, none)) !important;
         opacity: var(--builder-scroll-opacity) !important;
+      }
+      .builder-pub-node[data-anim-scroll='background-parallax'][data-anim-scroll-active='true'] {
+        background-position: var(--builder-bg-parallax-position, var(--builder-bg-base-position, center center)) !important;
+        will-change: background-position;
       }
       .builder-pub-node[data-anim-timeline] {
         transform: var(--builder-anim-timeline-transform, var(--builder-base-transform, none));
@@ -388,6 +415,7 @@ export default function AnimationsRoot() {
         .builder-pub-node[data-anim-hover]:hover {
           opacity: var(--builder-anim-visible-opacity, 1) !important;
           transform: var(--builder-base-transform, none) !important;
+          background-position: var(--builder-bg-base-position, revert) !important;
           clip-path: none !important;
           transition: none !important;
           animation: none !important;

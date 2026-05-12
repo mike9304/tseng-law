@@ -4619,3 +4619,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - 남은 yellow checkpoint 중 W161 parallax/background runtime, W174/W178/W181/W182/W183 디자인 시스템/템플릿 품질 gap을 self-goal 후보로 둔다.
+
+## 2026-05-12 Codex /goal M31 background parallax runtime
+
+- W161의 남은 gap인 배경 전용 parallax를 구현했다.
+- Scroll effect preset에 `background-parallax`를 추가했다. 기존 `parallax-y`는 요소 transform을 움직이고, 새 옵션은 background-position만 움직인다.
+- Published `AnimationsRoot`에서 scroll progress와 intensity로 `--builder-bg-parallax-position`을 갱신한다. Overlay+image background처럼 background layer가 여러 개인 경우 마지막 image layer만 이동한다.
+- Motion runtime Playwright는 inspector에서 `background-parallax` 선택 가능 여부와 공개 페이지에서 실제 CSS variable이 갱신되는지 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/animations/__tests__/animation-render.test.ts` ✅ (3 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/motion-runtime.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (889 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W174 elastic easing preset 또는 W178/W181/W182/W183 theme/brand asset 품질 gap.

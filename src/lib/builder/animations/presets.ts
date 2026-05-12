@@ -39,6 +39,7 @@ export type ExitPreset = (typeof EXIT_PRESET_KEYS)[number];
 export const SCROLL_EFFECT_KEYS = [
   'none',
   'parallax-y',
+  'background-parallax',
   'fade-on-scroll',
   'scale-on-scroll',
   'rotate-on-scroll',
@@ -456,6 +457,7 @@ export const PAGE_TRANSITION_OPTIONS: Array<{ value: PageTransition; label: stri
 export const SCROLL_EFFECT_OPTIONS: Array<{ value: ScrollEffect; label: string; description: string }> = [
   { value: 'none', label: 'None', description: 'No scroll effect.' },
   { value: 'parallax-y', label: 'Parallax Y', description: 'Moves vertically at a different scroll speed.' },
+  { value: 'background-parallax', label: 'Background parallax', description: 'Moves the background image at a different scroll speed.' },
   { value: 'fade-on-scroll', label: 'Fade on scroll', description: 'Fades based on viewport position.' },
   { value: 'scale-on-scroll', label: 'Scale on scroll', description: 'Scales subtly while scrolling.' },
   { value: 'rotate-on-scroll', label: 'Rotate on scroll', description: 'Rotates based on viewport position.' },

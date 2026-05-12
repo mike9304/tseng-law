@@ -1151,3 +1151,22 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W18/W22/W84 관련 실사용 click regression은 `자동검증 통과 / 사용자 QA 대기`로 둔다. 다음 self-goal은 남은 yellow checkpoint 중 W161/W174/W178/W181/W182/W183 계열을 우선 후보로 본다.
+
+## M31 — Background parallax runtime
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/animations/presets.ts` — Scroll effect에 `background-parallax` 옵션을 추가했다. 기존 `parallax-y` element transform과 분리해 배경 이미지 전용 효과로 노출한다.
+  - `src/components/builder/published/AnimationsRoot.tsx` — 공개 페이지 scroll runtime에서 `background-parallax` 노드의 background-position을 스크롤 진행률과 intensity 기준으로 갱신한다. Overlay+image 다중 background layer에서는 마지막 image layer만 움직인다.
+  - `src/lib/builder/animations/__tests__/animation-render.test.ts` — preset option과 published attr emission을 단위 검증한다.
+  - `tests/builder-editor/motion-runtime.playwright.ts` — Inspector에서 `background-parallax` 옵션 선택 가능 여부와 공개 페이지에서 `--builder-bg-parallax-position`이 실제 갱신되는 경로를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/animations/__tests__/animation-render.test.ts` ✅ (3 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/motion-runtime.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (889 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W161은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Element `parallax-y`와 background-only parallax 모두 런타임 evidence를 확보했다.

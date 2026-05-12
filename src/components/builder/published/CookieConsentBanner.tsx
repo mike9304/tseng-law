@@ -1,7 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { BuilderCookieConsent } from '@/lib/builder/site/types';
+import {
+  resolvePublishedOverlayOpener,
+  usePublishedOverlayFocus,
+  type PublishedOverlayOpenDetail,
+} from './overlayFocus';
 
 interface ConsentDecision {
   version: string;
@@ -65,6 +70,9 @@ function layoutBoxStyle(layout: BuilderCookieConsent['layout']): React.CSSProper
 export default function CookieConsentBanner({ config }: { config: BuilderCookieConsent }) {
   const [visible, setVisible] = useState(false);
   const [managing, setManaging] = useState(false);
+  const bannerRef = useRef<HTMLDivElement | null>(null);
+  const manageButtonRef = useRef<HTMLButtonElement | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
   const [categories, setCategories] = useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {};
     for (const cat of config.categories) {
@@ -87,13 +95,24 @@ export default function CookieConsentBanner({ config }: { config: BuilderCookieC
   }, [config.enabled, config.version]);
 
   useEffect(() => {
-    function handleOpen() {
+    function handleOpen(event: Event) {
+      const detail = (event as CustomEvent<PublishedOverlayOpenDetail>).detail;
+      openerRef.current = resolvePublishedOverlayOpener(detail?.opener);
       setVisible(true);
       setManaging(true);
     }
     window.addEventListener('builder-cookie-consent:open', handleOpen);
     return () => window.removeEventListener('builder-cookie-consent:open', handleOpen);
   }, []);
+
+  const isModalLayout = config.layout === 'modal-center';
+
+  usePublishedOverlayFocus({
+    open: visible && isModalLayout,
+    overlayRef: bannerRef,
+    initialFocusRef: manageButtonRef,
+    openerRef,
+  });
 
   if (!config.enabled || !visible) return null;
 
@@ -127,14 +146,15 @@ export default function CookieConsentBanner({ config }: { config: BuilderCookieC
     commit(next);
   }
 
-  const isModalLayout = config.layout === 'modal-center';
-
   return (
     <div
+      ref={bannerRef}
       data-builder-cookie-consent={config.layout}
       data-builder-cookie-managing={managing ? 'true' : 'false'}
-      role="region"
+      role={isModalLayout ? 'dialog' : 'region'}
+      aria-modal={isModalLayout ? 'true' : undefined}
       aria-label="cookie consent"
+      tabIndex={isModalLayout ? -1 : undefined}
       style={layoutBoxStyle(config.layout)}
     >
       <div
@@ -207,6 +227,7 @@ export default function CookieConsentBanner({ config }: { config: BuilderCookieC
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {!managing ? (
             <button
+              ref={manageButtonRef}
               type="button"
               onClick={() => setManaging(true)}
               style={{

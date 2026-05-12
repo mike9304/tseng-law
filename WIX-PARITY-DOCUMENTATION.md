@@ -2057,3 +2057,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W23/W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. direct trigger가 없는 published overlay open에서도 focus가 body로 떨어지지 않도록 닫았다.
+
+## M92 — Cookie consent modal focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/published/CookieConsentBanner.tsx` — `modal-center` cookie consent를 `role="dialog" aria-modal="true"`로 렌더하고, 공통 published overlay focus helper로 initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, opener focus restore를 추가했다.
+  - `src/components/builder/published/CookieConsentMount.tsx` — `cookie-consent:open` trigger가 click뿐 아니라 Enter/Space로도 열리며 opener를 open event detail로 전달한다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — modal cookie consent 자동 노출, focus trap, 외부 focus probe 차단, keyboard reopen, 저장 후 opener focus restore를 published page에서 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/CookieConsentBanner.tsx src/components/builder/published/CookieConsentMount.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public cookie consent modal에서 focus가 페이지 배경으로 새거나 trigger keyboard reopen이 안 되는 경로를 닫았다.

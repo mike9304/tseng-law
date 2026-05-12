@@ -1,6 +1,6 @@
 import { expect, test, type APIRequestContext } from '@playwright/test';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
-import { createDefaultPopup } from '@/lib/builder/site/types';
+import { createDefaultCookieConsent, createDefaultPopup, type BuilderCookieConsent } from '@/lib/builder/site/types';
 
 type TestDocument = {
   version: 1;
@@ -263,6 +263,32 @@ function makePublishedOverlayTriggerDocument(token: string, lightboxSlug: string
   };
 }
 
+function makePublishedCookieConsentDocument(token: string): TestDocument {
+  const now = new Date().toISOString();
+  const rootId = `cookie-root-${token}`;
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `published-cookie-${token}`,
+    stageWidth: 1280,
+    stageHeight: 640,
+    nodes: [
+      containerNode(rootId, { x: 0, y: 0, width: 1280, height: 640 }, 'section section--light', {
+        as: 'main',
+      }),
+      textNode(`cookie-title-${token}`, rootId, 72, `Published cookie consent ${token}`),
+      buttonNode(
+        `published-cookie-trigger-${token}`,
+        rootId,
+        { x: 80, y: 160, width: 280, height: 56 },
+        'Open cookie settings',
+        'cookie-consent:open',
+      ),
+    ],
+  };
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -497,6 +523,113 @@ test.describe('/ko published builder interactions', () => {
           popups: (latestSite.popups ?? []).filter((item) => item.id !== popupId),
           updatedAt: new Date().toISOString(),
         });
+      }
+    }
+  });
+
+  test('traps focus in the modal cookie consent banner and keyboard trigger', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-published-cookie-${token}`;
+    let pageId: string | null = null;
+    let originalCookieConsent: BuilderCookieConsent | undefined;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Cookie Consent ${token}`,
+        makePublishedCookieConsentDocument(token),
+      );
+
+      const site = await readSiteDocument('default', 'ko');
+      originalCookieConsent = site.cookieConsent;
+      await writeSiteDocument({
+        ...site,
+        cookieConsent: {
+          ...createDefaultCookieConsent('ko'),
+          enabled: true,
+          version: `playwright-${token}`,
+          layout: 'modal-center',
+          title: `Cookie consent ${token}`,
+          description: '쿠키 동의 모달 포커스 검증입니다.',
+          manageLabel: 'Manage cookies',
+          acceptLabel: 'Accept all',
+          declineLabel: 'Reject optional',
+          categories: [
+            {
+              key: 'necessary',
+              label: 'Necessary',
+              description: 'Required site cookies',
+              required: true,
+              defaultEnabled: true,
+            },
+            {
+              key: 'analytics',
+              label: 'Analytics',
+              description: 'Usage analytics',
+              required: false,
+              defaultEnabled: false,
+            },
+          ],
+        },
+        updatedAt: new Date().toISOString(),
+      });
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+
+      const dialog = page.getByRole('dialog', { name: 'cookie consent' });
+      await expect(dialog).toBeVisible();
+      const manageButton = dialog.getByRole('button', { name: 'Manage cookies' });
+      await expect(manageButton).toBeFocused();
+      await page.keyboard.press('Shift+Tab');
+      await expect(dialog.getByRole('button', { name: 'Accept all' })).toBeFocused();
+
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.textContent = 'outside cookie focus probe';
+        probe.setAttribute('data-cookie-focus-probe', 'true');
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect.poll(async () => dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);
+
+      await dialog.getByRole('button', { name: 'Accept all' }).click();
+      await expect(dialog).toHaveCount(0);
+
+      const trigger = page.getByRole('link', { name: 'Open cookie settings' });
+      await trigger.focus();
+      await expect(trigger).toBeFocused();
+      await page.keyboard.press('Space');
+      await expect(dialog).toBeVisible();
+      await expect(dialog).toHaveAttribute('data-builder-cookie-managing', 'true');
+      await expect.poll(async () => dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);
+      await dialog.getByRole('button', { name: '저장' }).click();
+      await expect(dialog).toHaveCount(0);
+      await expect(trigger).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      const latestSite = await readSiteDocument('default', 'ko');
+      const restoredSite = { ...latestSite, updatedAt: new Date().toISOString() };
+      if (originalCookieConsent) {
+        await writeSiteDocument({ ...restoredSite, cookieConsent: originalCookieConsent });
+      } else {
+        const { cookieConsent: _cookieConsent, ...withoutCookieConsent } = restoredSite;
+        void _cookieConsent;
+        await writeSiteDocument(withoutCookieConsent);
       }
     }
   });

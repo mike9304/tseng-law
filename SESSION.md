@@ -5450,3 +5450,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - published overlay auto-trigger 잔여 경로와 editor floating surface를 이어서 점검한다.
+
+## 2026-05-13 Codex /goal M92 Cookie consent modal focus trap
+
+- published cookie consent의 `modal-center` layout은 실제 modal처럼 보이지만 `role="region"`이고 focus trap, body scroll lock, opener focus restore가 없었다.
+- `CookieConsentBanner`에서 modal layout일 때 `role="dialog" aria-modal="true"`로 렌더하고, 공통 published overlay focus helper를 연결했다. 자동 노출 시에는 manage button으로 initial focus를 보내고, 외부 focus probe를 다시 dialog 안으로 되돌린다.
+- `CookieConsentMount`는 `cookie-consent:open` trigger click뿐 아니라 Enter/Space keyboard reopen을 처리하고 opener를 event detail로 전달한다.
+- Playwright는 임시 published page와 modal cookie consent 설정을 만들고, 자동 노출 focus trap, 외부 focus 차단, Accept close, keyboard reopen, Save close 후 trigger focus restore를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/CookieConsentBanner.tsx src/components/builder/published/CookieConsentMount.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - published/user-facing overlay 잔여 경로 또는 editor floating surface를 계속 줄인다.

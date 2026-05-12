@@ -5034,3 +5034,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - W216~W225 editor 고도화/템플릿 적용 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M60 Template internal link locale normalization
+
+- M59 이후 남은 locale 혼선 후보로, KO 기반 page template document를 zh-hant/en 페이지에 적용할 때 node content 안의 CTA/hotspot href가 `/ko/...`로 남는 경로를 닫았다.
+- `normalizeCanvasDocument()`가 nested object/array의 `href` 값을 재귀적으로 보고, `/ko`, `/zh-hant`, `/en`으로 시작하는 내부 링크만 요청 locale prefix로 바꾼다. 외부 URL과 `#contact` 같은 순수 anchor link는 그대로 둔다.
+- 단위 테스트는 button href/link, image hotspot href, query/hash 포함 prefix, 외부 URL, anchor 보존을 같이 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/locale-links.test.ts` ✅ (1 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - W216~W225 editor 고도화/템플릿 적용 회귀를 계속 재스캔한다.

@@ -1618,3 +1618,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W193은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “편집기는 한국어인데 사이트가 중국어로 뜨는” 경로를 public resolver 단에서 막았다.
+
+## M60 — Template internal link locale normalization
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/types.ts` — `normalizeCanvasDocument()`가 node content 내부의 nested `href` 값을 재귀적으로 보정한다. `/ko`, `/zh-hant`, `/en`으로 시작하는 내부 링크만 요청 locale prefix로 바꾸고 외부 URL/순수 앵커는 유지한다.
+  - `src/lib/builder/canvas/__tests__/locale-links.test.ts` — button link, image hotspot, nested link, query/hash 포함 locale prefix, 외부 URL, anchor link 보존을 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/locale-links.test.ts` ✅ (1 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. KO 기반 템플릿을 zh-hant/en 페이지에 적용할 때 CTA와 hotspot 링크가 `/ko/...`로 남아 locale 혼선을 만드는 경로를 막았다.

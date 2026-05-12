@@ -1861,6 +1861,56 @@ export function createBlankCanvasDocument(locale: Locale): BuilderCanvasDocument
   };
 }
 
+const LOCALE_PREFIXED_HREF_RE = /^\/(?:ko|zh-hant|en)(?=\/|$|[?#])/;
+
+function localizeInternalHref(href: string, locale: Locale): string {
+  return href.replace(LOCALE_PREFIXED_HREF_RE, `/${locale}`);
+}
+
+function localizeLocalePrefixedHrefs(value: unknown, locale: Locale): unknown {
+  if (Array.isArray(value)) {
+    let changed = false;
+    const next = value.map((item) => {
+      const localized = localizeLocalePrefixedHrefs(item, locale);
+      if (localized !== item) changed = true;
+      return localized;
+    });
+    return changed ? next : value;
+  }
+
+  if (!value || typeof value !== 'object') return value;
+
+  const record = value as Record<string, unknown>;
+  let changed = false;
+  const next: Record<string, unknown> = {};
+
+  for (const [key, child] of Object.entries(record)) {
+    const localized = key === 'href' && typeof child === 'string'
+      ? localizeInternalHref(child, locale)
+      : localizeLocalePrefixedHrefs(child, locale);
+    if (localized !== child) changed = true;
+    next[key] = localized;
+  }
+
+  return changed ? next : value;
+}
+
+function normalizeCanvasNode(node: BuilderCanvasNode, index: number, locale: Locale): BuilderCanvasNode {
+  return {
+    ...node,
+    parentId: node.parentId,
+    zIndex: index,
+    rotation: Math.max(0, Math.min(360, Math.round(node.rotation))),
+    rect: {
+      x: Math.max(0, Math.round(node.rect.x)),
+      y: Math.max(0, Math.round(node.rect.y)),
+      width: Math.max(40, Math.round(node.rect.width)),
+      height: Math.max(32, Math.round(node.rect.height)),
+    },
+    content: localizeLocalePrefixedHrefs(node.content, locale),
+  } as BuilderCanvasNode;
+}
+
 export function normalizeCanvasDocument(
   input: unknown,
   locale: Locale,
@@ -1883,18 +1933,7 @@ export function normalizeCanvasDocument(
 
   const nodes = [...parsed.data.nodes]
     .sort((left, right) => left.zIndex - right.zIndex)
-    .map((node, index) => ({
-      ...node,
-      parentId: node.parentId,
-      zIndex: index,
-      rotation: Math.max(0, Math.min(360, Math.round(node.rotation))),
-      rect: {
-        x: Math.max(0, Math.round(node.rect.x)),
-        y: Math.max(0, Math.round(node.rect.y)),
-        width: Math.max(40, Math.round(node.rect.width)),
-        height: Math.max(32, Math.round(node.rect.height)),
-      },
-    }));
+    .map((node, index) => normalizeCanvasNode(node, index, locale));
 
   return {
     ...parsed.data,

@@ -190,10 +190,11 @@ test.describe('/ko/admin-builder section design templates', () => {
 
       const slugPrompt = page.getByRole('dialog', { name: '페이지 slug 입력' });
       await expect(slugPrompt).toBeVisible();
+      await expect(slugPrompt.getByLabel('메뉴에 추가')).toBeChecked();
       await slugPrompt.getByPlaceholder('예: about, services, contact').fill(slug);
       await slugPrompt.getByRole('button', { name: '생성' }).click();
       await expect(slugPrompt).toBeHidden({ timeout: 20_000 });
-      await expect(page.getByText(/Loaded page:/).last()).toBeVisible({ timeout: 20_000 });
+      await expect(page.getByRole('button', { name: `/${slug}`, exact: true })).toBeVisible({ timeout: 20_000 });
 
       const canvas = page.getByRole('application', { name: 'Canvas editor' });
       await expect(canvas.getByText('신뢰할 수 있는 법률 파트너')).toBeVisible({ timeout: 20_000 });
@@ -213,12 +214,33 @@ test.describe('/ko/admin-builder section design templates', () => {
       expect(createdPage?.pageId).toBe(pageId);
       expect(createdPage?.title?.ko).toBe('법률사무소 홈');
 
+      const navigationResponse = await page.request.get('/api/builder/site/navigation?locale=ko', {
+        headers: mutationHeaders(slug),
+      });
+      expect(navigationResponse.status()).toBe(200);
+      const navigationPayload = (await navigationResponse.json()) as {
+        navigation?: Array<{ pageId?: string; href?: string; label?: string | Record<string, string> }>;
+      };
+      const navItem = navigationPayload.navigation?.find((entry) => entry.pageId === pageId);
+      expect(navItem?.href).toBe(`/ko/${slug}`);
+      const navLabel = navItem?.label;
+      expect(typeof navLabel === 'object' && navLabel ? navLabel.ko : navLabel).toBe('법률사무소 홈');
+
       const draftResponse = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
         headers: mutationHeaders(slug),
       });
       expect(draftResponse.status()).toBe(200);
       const draftPayload = (await draftResponse.json()) as { document?: unknown };
       expect(JSON.stringify(draftPayload.document)).toContain('신뢰할 수 있는 법률 파트너');
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish?locale=ko`, {
+        headers: mutationHeaders(slug),
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      const publicMainNav = page.getByRole('navigation', { name: 'Main' });
+      await expect(publicMainNav.getByRole('link', { name: '법률사무소 홈' })).toHaveAttribute('href', `/ko/${slug}`);
     } finally {
       pageId ??= await findPageIdBySlug(page, slug);
       if (pageId) {

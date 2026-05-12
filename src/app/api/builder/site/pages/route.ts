@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { normalizeLocale } from '@/lib/locales';
 import { listPages, createPage, readPageCanvas, readSiteDocument, writePageCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { normalizeCanvasDocument, createDefaultCanvasDocument, createBlankCanvasDocument } from '@/lib/builder/canvas/types';
 import { guardMutation } from '@/lib/builder/security/guard';
+import type { BuilderNavItem } from '@/lib/builder/site/types';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
 
 export const runtime = 'nodejs';
 
@@ -26,6 +29,7 @@ export async function POST(request: NextRequest) {
     document?: unknown;
     linkedFromPageId?: string;
     blank?: boolean;
+    addToNavigation?: boolean;
   };
   try {
     body = (await request.json()) as {
@@ -35,6 +39,7 @@ export async function POST(request: NextRequest) {
       document?: unknown;
       linkedFromPageId?: string;
       blank?: boolean;
+      addToNavigation?: boolean;
     };
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
@@ -78,6 +83,38 @@ export async function POST(request: NextRequest) {
       createdPage.title = { ...sourcePage.title, [locale]: title };
       nextSite.updatedAt = new Date().toISOString();
       await writeSiteDocument(nextSite);
+    }
+  }
+
+  if (body.addToNavigation === true) {
+    const nextSite = await readSiteDocument('default', locale);
+    const createdPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
+    if (createdPage) {
+      const href = buildSitePagePath(locale, createdPage.slug || '');
+      const hasNavigationItem = (items: BuilderNavItem[]): boolean => items.some((item) => (
+        item.pageId === createdPage.pageId
+        || item.href === href
+        || Boolean(item.children?.length && hasNavigationItem(item.children))
+      ));
+      if (!hasNavigationItem(nextSite.navigation ?? [])) {
+        nextSite.navigation = [
+          ...(nextSite.navigation ?? []),
+          {
+            id: `nav-${createdPage.pageId}`,
+            label: createdPage.title,
+            pageId: createdPage.pageId,
+            href,
+          },
+        ];
+        nextSite.updatedAt = new Date().toISOString();
+        await writeSiteDocument(nextSite);
+        try {
+          revalidatePath(buildSitePagePath(locale, ''));
+          revalidatePath(href);
+        } catch {
+          // Best effort: local dev and tests read the latest site document directly.
+        }
+      }
     }
   }
 

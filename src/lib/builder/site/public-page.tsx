@@ -20,6 +20,7 @@ import { isContainerLikeKind } from '@/lib/builder/canvas/types';
 import { buildResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
 import type {
   BuilderLightbox,
+  BuilderNavItem,
   BuilderPopup,
   BuilderCookieConsent,
   BuilderPageMeta,
@@ -56,7 +57,7 @@ import {
 import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-frame';
 import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
 import { getSiteUrl } from '@/lib/seo';
-import { buildSitePagePath } from '@/lib/builder/site/paths';
+import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { findPageMetaForLocale } from '@/lib/builder/site/page-resolution';
 import {
   normalizeHeaderFooterMobileConfig,
@@ -823,6 +824,9 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           theme={publishedTheme}
           tag="header"
           mobileSticky={headerFooterConfig.mobileSticky}
+          navItems={navItems}
+          locale={locale}
+          currentSlug={slugPath}
         />
       ) : (
         <SiteHeader
@@ -1039,11 +1043,17 @@ function GlobalCanvasSection({
   theme,
   tag,
   mobileSticky = false,
+  navItems = [],
+  locale,
+  currentSlug = '',
 }: {
   canvas: BuilderCanvasDocument;
   theme: BuilderSiteDocument['theme'];
   tag: 'header' | 'footer';
   mobileSticky?: boolean;
+  navItems?: BuilderNavItem[];
+  locale?: Locale;
+  currentSlug?: string;
 }) {
   const visibleNodes = canvas.nodes.filter((node) => node.visible !== false);
   const childrenMap = buildChildrenMap(visibleNodes);
@@ -1104,12 +1114,15 @@ function GlobalCanvasSection({
   }
 
   const Tag = tag;
+  const currentPath = locale ? buildSitePagePath(locale, currentSlug) : '';
+  const showNavigationFallback = tag === 'header' && locale && navItems.length > 0;
   return (
     <Tag
       data-builder-global-section={tag}
       data-builder-mobile-sticky={tag === 'header' && mobileSticky ? 'true' : undefined}
       className={tag === 'header' && mobileSticky ? 'builder-global-header-mobile-sticky' : undefined}
       style={{
+        position: 'relative',
         width: '100%',
         background: 'var(--builder-color-background)',
         color: 'var(--builder-color-text)',
@@ -1125,6 +1138,56 @@ function GlobalCanvasSection({
       >
         {topLevelNodes.map((node) => renderGlobalNode(node))}
       </div>
+      {showNavigationFallback ? (
+        <nav
+          aria-label="Main"
+          data-builder-global-nav-fallback="true"
+          style={{
+            position: 'absolute',
+            top: 12,
+            right: 24,
+            zIndex: 20,
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'flex-end',
+            gap: 6,
+            maxWidth: 'min(720px, calc(100vw - 48px))',
+            pointerEvents: 'auto',
+          }}
+        >
+          {navItems.map((item) => {
+            const href = normalizeSiteHref(item.href, locale);
+            const label = typeof item.label === 'string'
+              ? item.label
+              : item.label[locale] || item.label.ko || item.label.en || item.label['zh-hant'] || 'Menu';
+            const isActive = comparableSitePath(href, locale) === comparableSitePath(currentPath, locale);
+            return (
+              <a
+                key={item.id}
+                href={href}
+                aria-current={isActive ? 'page' : undefined}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  minHeight: 32,
+                  padding: '6px 10px',
+                  borderRadius: 999,
+                  background: isActive ? 'var(--builder-color-primary)' : 'rgba(255,255,255,.86)',
+                  color: isActive ? '#fff' : 'var(--builder-color-text)',
+                  border: '1px solid rgba(15,23,42,.12)',
+                  boxShadow: '0 8px 22px rgba(15,23,42,.08)',
+                  textDecoration: 'none',
+                  fontSize: 13,
+                  fontWeight: 700,
+                  lineHeight: 1.1,
+                }}
+              >
+                {label}
+              </a>
+            );
+          })}
+        </nav>
+      ) : null}
     </Tag>
   );
 }

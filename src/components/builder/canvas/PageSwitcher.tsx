@@ -352,6 +352,7 @@ export default function PageSwitcher({
   const [pendingTemplate, setPendingTemplate] = useState<BuilderCanvasDocument | null | undefined>(undefined);
   const [pendingTemplateName, setPendingTemplateName] = useState<string | null>(null);
   const [slugInput, setSlugInput] = useState('');
+  const [addToNavigation, setAddToNavigation] = useState(true);
   const [showSlugPrompt, setShowSlugPrompt] = useState(false);
   const [hoveredPageId, setHoveredPageId] = useState<string | null>(null);
   const [openMenuPageId, setOpenMenuPageId] = useState<string | null>(null);
@@ -431,6 +432,7 @@ export default function PageSwitcher({
     setPendingTemplate(templateDocument);
     setPendingTemplateName(templateName?.trim() || null);
     setSlugInput('');
+    setAddToNavigation(true);
     setShowGallery(false);
     setShowSlugPrompt(true);
   };
@@ -449,6 +451,7 @@ export default function PageSwitcher({
           locale,
           slug,
           title: pendingTemplateName ?? slug,
+          addToNavigation,
           ...(pendingTemplate ? { document: pendingTemplate } : { blank: true }),
         }),
       });
@@ -464,6 +467,7 @@ export default function PageSwitcher({
         setShowSlugPrompt(false);
         clearPendingTemplate();
         setSlugInput('');
+        setAddToNavigation(true);
         onSelectPage(nextPageId, data.page?.slug);
       } else {
         setErrorMessage(await readPageResponseError(response, '페이지를 생성하지 못했습니다.'));
@@ -800,6 +804,7 @@ export default function PageSwitcher({
             if (event.target === event.currentTarget) {
               setShowSlugPrompt(false);
               clearPendingTemplate();
+              setAddToNavigation(true);
             }
           }}
         >
@@ -856,6 +861,36 @@ export default function PageSwitcher({
                 boxSizing: 'border-box',
               }}
             />
+            <label
+              style={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: 8,
+                padding: '8px 10px',
+                marginBottom: 16,
+                border: '1px solid #dbe4ee',
+                borderRadius: 10,
+                background: '#f8fafc',
+                color: '#334155',
+                fontSize: '0.8rem',
+                fontWeight: 700,
+                lineHeight: 1.35,
+                cursor: 'pointer',
+              }}
+            >
+              <input
+                type="checkbox"
+                checked={addToNavigation}
+                onChange={(event) => setAddToNavigation(event.target.checked)}
+                style={{ marginTop: 2 }}
+              />
+              <span>
+                메뉴에 추가
+                <span style={{ display: 'block', marginTop: 2, color: '#64748b', fontWeight: 500 }}>
+                  생성한 페이지를 사이트 상단 메뉴에 바로 연결합니다.
+                </span>
+              </span>
+            </label>
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
               {pendingTemplate ? (
                 <button
@@ -877,6 +912,7 @@ export default function PageSwitcher({
                 onClick={() => {
                   setShowSlugPrompt(false);
                   clearPendingTemplate();
+                  setAddToNavigation(true);
                 }}
                 style={{ padding: '6px 16px', background: '#f1f5f9', color: '#334155', border: '1px solid #cbd5e1', borderRadius: 8, fontSize: '0.82rem', cursor: 'pointer' }}
               >

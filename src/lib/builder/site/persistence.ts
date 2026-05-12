@@ -44,6 +44,14 @@ type WriteSiteDocumentOptions = {
    * next document are filtered separately by createdAt.
    */
   preserveMissingPages?: boolean;
+  /**
+   * Most site writes are partial panel saves that loaded an older site snapshot.
+   * Preserve concurrently-created menu items unless a destructive navigation
+   * edit explicitly opts out.
+   */
+  preserveMissingNavigation?: boolean;
+  /** Writes that only update page publish metadata must not overwrite menu edits. */
+  preserveNavigation?: boolean;
 };
 
 function isBlobBackend(): boolean {
@@ -178,6 +186,50 @@ export function reconcileSiteDocumentPagesForWrite(
   };
 }
 
+function navigationIdentity(item: BuilderNavItem): string[] {
+  return [
+    `id:${item.id}`,
+    `page:${item.pageId}`,
+    `href:${item.href}`,
+  ];
+}
+
+function collectNavigationIdentities(items: BuilderNavItem[], identities = new Set<string>()): Set<string> {
+  for (const item of items) {
+    for (const identity of navigationIdentity(item)) {
+      identities.add(identity);
+    }
+    if (item.children?.length) collectNavigationIdentities(item.children, identities);
+  }
+  return identities;
+}
+
+function shouldKeepLatestNavItem(item: BuilderNavItem, nextDoc: BuilderSiteDocument): boolean {
+  if (!item.pageId || item.pageId.startsWith('external-')) return true;
+  return nextDoc.pages.some((page) => page.pageId === item.pageId);
+}
+
+export function reconcileSiteDocumentNavigationForWrite(
+  nextDoc: BuilderSiteDocument,
+  latestDoc: BuilderSiteDocument | null,
+  options: WriteSiteDocumentOptions = {},
+): BuilderSiteDocument {
+  if (options.preserveMissingNavigation === false) return nextDoc;
+  if (!latestDoc?.navigation?.length) return nextDoc;
+
+  const nextIdentities = collectNavigationIdentities(nextDoc.navigation ?? []);
+  const missingItems = latestDoc.navigation.filter((item) => (
+    shouldKeepLatestNavItem(item, nextDoc) &&
+    !navigationIdentity(item).some((identity) => nextIdentities.has(identity))
+  ));
+  if (missingItems.length === 0) return nextDoc;
+
+  return {
+    ...nextDoc,
+    navigation: [...(nextDoc.navigation ?? []), ...missingItems],
+  };
+}
+
 export async function writeSiteDocument(
   doc: BuilderSiteDocument,
   options: WriteSiteDocumentOptions = {},
@@ -192,8 +244,12 @@ export async function writeSiteDocument(
   try {
     const normalizedSiteId = normalizeBuilderSiteId(doc.siteId);
     const latestDoc = await loadSiteDocument(normalizedSiteId);
-    const seoMergedDoc = mergeUntouchedPageSeoForWrite({ ...doc, siteId: normalizedSiteId }, latestDoc);
-    const mergedDoc = reconcileSiteDocumentPagesForWrite(seoMergedDoc, latestDoc, options);
+    const navigationMergedDoc = options.preserveNavigation && latestDoc
+      ? { ...doc, navigation: latestDoc.navigation ?? doc.navigation }
+      : doc;
+    const seoMergedDoc = mergeUntouchedPageSeoForWrite({ ...navigationMergedDoc, siteId: normalizedSiteId }, latestDoc);
+    const pageMergedDoc = reconcileSiteDocumentPagesForWrite(seoMergedDoc, latestDoc, options);
+    const mergedDoc = reconcileSiteDocumentNavigationForWrite(pageMergedDoc, latestDoc, options);
     const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
     const pathname = sitePathname(normalizedSiteId);
     const json = JSON.stringify(normalizedDoc);
@@ -446,7 +502,7 @@ export async function deletePage(siteId: string, pageId: string, locale: Locale)
   site.pages = site.pages.filter((p) => p.pageId !== pageId);
   site.navigation = removeNavigationItemsForPage(site.navigation, pageId);
   site.updatedAt = new Date().toISOString();
-  await writeSiteDocument(site, { preserveMissingPages: false });
+  await writeSiteDocument(site, { preserveMissingPages: false, preserveMissingNavigation: false });
 }
 
 function pageLocaleProjectionKey(page: BuilderPageMeta): string {

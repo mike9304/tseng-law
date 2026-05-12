@@ -40,31 +40,91 @@ function localizedPath(locale: Locale, slug: string): string {
   return slug ? `/${locale}/${slug}` : `/${locale}`;
 }
 
+function fallbackNavLabel(label: BuilderNavItem['label'], locale: Locale): string {
+  if (typeof label === 'string') return label;
+  return label[locale] || label.ko || label.en || label['zh-hant'] || 'Menu';
+}
+
+function labelsFromNavItem(item: BuilderNavItem, locale: Locale): Record<Locale, string> {
+  const fallback = fallbackNavLabel(item.label, locale);
+  if (typeof item.label === 'string') {
+    return { ko: fallback, 'zh-hant': fallback, en: fallback };
+  }
+  return {
+    ko: item.label.ko || fallback,
+    'zh-hant': item.label['zh-hant'] || fallback,
+    en: item.label.en || fallback,
+  };
+}
+
+function matchingHeaderSpec(item: BuilderNavItem, locale: Locale): HeaderNavSpec | null {
+  return HEADER_NAV_SPECS.find((spec) => {
+    const path = localizedPath(locale, spec.slug);
+    return comparableSitePath(normalizeSiteHref(item.href, locale), locale) === comparableSitePath(path, locale)
+      || item.id === `nav-${spec.key}`;
+  }) ?? null;
+}
+
+function isHomeNavigationItem(item: BuilderNavItem, locale: Locale): boolean {
+  return item.id === 'nav-home'
+    || comparableSitePath(normalizeSiteHref(item.href, locale), locale) === comparableSitePath(localizedPath(locale, ''), locale);
+}
+
 function localeSwitchPath(targetLocale: Locale, currentSlug: string): string {
   return currentSlug ? `/${targetLocale}/${currentSlug}` : `/${targetLocale}`;
 }
 
 function buildHeaderNavItems(navItems: BuilderNavItem[], locale: Locale): HeaderNavItem[] {
-  const indexedItems = HEADER_NAV_SPECS.map((spec, specIndex) => {
-    const path = localizedPath(locale, spec.slug);
-    const source = navItems.find((item) => (
-      comparableSitePath(normalizeSiteHref(item.href, locale), locale) === comparableSitePath(path, locale) ||
-      item.id === `nav-${spec.key}`
-    ));
-    return {
+  const usedSpecKeys = new Set<string>();
+  const indexedItems: Array<{ item: HeaderNavItem; sourceIndex: number; specIndex: number }> = [];
+
+  navItems.forEach((source, sourceIndex) => {
+    if (isHomeNavigationItem(source, locale)) return;
+    const spec = matchingHeaderSpec(source, locale);
+    if (spec) {
+      if (usedSpecKeys.has(spec.key)) return;
+      usedSpecKeys.add(spec.key);
+      indexedItems.push({
+        item: {
+          ...spec,
+          source,
+          href: normalizeSiteHref(source.href, locale),
+        },
+        sourceIndex,
+        specIndex: HEADER_NAV_SPECS.findIndex((candidate) => candidate.key === spec.key),
+      });
+      return;
+    }
+
+    indexedItems.push({
+      item: {
+        key: source.id,
+        slug: '',
+        labels: labelsFromNavItem(source, locale),
+        source,
+        href: normalizeSiteHref(source.href, locale),
+      },
+      sourceIndex,
+      specIndex: HEADER_NAV_SPECS.length + sourceIndex,
+    });
+  });
+
+  HEADER_NAV_SPECS.forEach((spec, specIndex) => {
+    if (usedSpecKeys.has(spec.key)) return;
+    indexedItems.push({
       item: {
         ...spec,
-        source,
-        href: source ? normalizeSiteHref(source.href, locale) : path,
+        href: localizedPath(locale, spec.slug),
       },
-      sourceIndex: source ? navItems.findIndex((item) => item.id === source.id) : -1,
+      sourceIndex: Number.MAX_SAFE_INTEGER,
       specIndex,
-    };
+    });
   });
+
   return indexedItems
     .sort((left, right) => {
-      const leftIndex = left.sourceIndex >= 0 ? left.sourceIndex : Number.MAX_SAFE_INTEGER + left.specIndex;
-      const rightIndex = right.sourceIndex >= 0 ? right.sourceIndex : Number.MAX_SAFE_INTEGER + right.specIndex;
+      const leftIndex = left.sourceIndex < Number.MAX_SAFE_INTEGER ? left.sourceIndex : Number.MAX_SAFE_INTEGER + left.specIndex;
+      const rightIndex = right.sourceIndex < Number.MAX_SAFE_INTEGER ? right.sourceIndex : Number.MAX_SAFE_INTEGER + right.specIndex;
       return leftIndex - rightIndex;
     })
     .map(({ item }) => item);

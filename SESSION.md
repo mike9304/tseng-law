@@ -5142,3 +5142,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - 전체 WIX parity 문서/goal 파일 기준으로 남은 editor UX gap을 계속 스캔한다.
+
+## 2026-05-13 Codex /goal M69 Page template navigation wiring
+
+- self-check agent가 M69 최우선 후보로 잡은 “page template으로 새 페이지를 만들었지만 live header/menu에서 찾을 수 없는” Wix parity gap을 닫았다.
+- `PageSwitcher`의 page template/blank page slug prompt에 `메뉴에 추가` 기본 체크 옵션을 추가했고, `/api/builder/site/pages` POST는 `addToNavigation`이 true면 생성된 pageId/title/href를 site navigation에 바로 append한다.
+- `writeSiteDocument()`는 page list처럼 navigation도 최신-only 항목을 기본 보존한다. publish/다른 panel 저장이 오래된 site snapshot으로 새 메뉴 항목을 덮어쓰던 race를 막고, Navigation editor/delete/seed cleanup 같은 의도적 제거 경로만 `preserveMissingNavigation: false`로 opt-out한다.
+- global header canvas가 있는 공개 페이지에서도 새 메뉴가 도달 가능하도록 `PublishedSitePageView`의 global header wrapper에 site navigation fallback을 함께 렌더한다. 일반 `SiteHeader`도 기본 6개 spec 외 사용자 정의 nav item을 표시한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/site/__tests__/persistence.test.ts` ✅ (13 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - zh-hant/en page template 생성 시 내부 링크·메뉴 href locale normalization을 UI E2E로 확장하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

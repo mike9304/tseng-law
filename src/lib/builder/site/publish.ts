@@ -206,7 +206,7 @@ export async function publishPage(
   const cacheInvalidatedAt = new Date().toISOString();
 
   try {
-    await writeSiteDocument(site);
+    await writeSiteDocument(site, { preserveNavigation: true });
   } catch {
     throw new PublishError('site_write_failed', 500);
   }

@@ -70,3 +70,4 @@
 | M66 | QA     | Custom shortcut label sync | W216,W219 | 1h | M65 | 🟡 커스텀 단축키 라벨/도움말/메뉴/툴팁 동기화 자동검증 통과 / 사용자 QA 대기 |
 | M67 | QA     | Layer focus real pointer actions | W18,W84,W216 | 1h | M66 | 🟡 레이어 선택 후 실제 우클릭 메뉴 자동검증 통과 / 사용자 QA 대기 |
 | M68 | QA     | Archive/image click blanking guard | W18,W84,W216 | 1h | M67 | 🟡 칼럼 아카이브/이미지 클릭 백지화 방어 자동검증 강화 / 사용자 QA 대기 |
+| M69 | QA     | Page template navigation wiring | W14,W18,W216 | 1h | M64 | 🟡 템플릿 생성 페이지 메뉴 연결/공개 헤더 도달 자동검증 통과 / 사용자 QA 대기 |

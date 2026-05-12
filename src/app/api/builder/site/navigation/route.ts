@@ -63,7 +63,7 @@ export async function PUT(request: NextRequest) {
   const site = await readSiteDocument('default', locale);
   site.navigation = body.navigation;
   site.updatedAt = new Date().toISOString();
-  await writeSiteDocument(site);
+  await writeSiteDocument(site, { preserveMissingNavigation: false });
   revalidateNavigationSurfaces(site, locale);
 
   return NextResponse.json({ success: true, navigation: site.navigation });

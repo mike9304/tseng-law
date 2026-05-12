@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import {
   mergeUntouchedPageSeoForWrite,
+  reconcileSiteDocumentNavigationForWrite,
   reconcileSiteDocumentPagesForWrite,
 } from '@/lib/builder/site/persistence';
-import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
+import type { BuilderNavItem, BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 
 function page(pageId: string, updatedAt: string): BuilderPageMeta {
   return {
@@ -36,6 +37,15 @@ function site(pages: BuilderPageMeta[], updatedAt: string): BuilderSiteDocument 
     createdAt: '2026-01-01T00:00:00.000Z',
     updatedAt,
   } as unknown as BuilderSiteDocument;
+}
+
+function navItem(id: string, pageId: string, href: string): BuilderNavItem {
+  return {
+    id,
+    pageId,
+    href,
+    label: { ko: id, 'zh-hant': id, en: id },
+  };
 }
 
 describe('reconcileSiteDocumentPagesForWrite', () => {
@@ -120,6 +130,69 @@ describe('reconcileSiteDocumentPagesForWrite', () => {
 
     expect(reconcileSiteDocumentPagesForWrite(staleNext, latest).pages.map((entry) => entry.pageId))
       .toEqual(['home']);
+  });
+});
+
+describe('reconcileSiteDocumentNavigationForWrite', () => {
+  it('preserves latest-only navigation items by default', () => {
+    const home = page('home', '2026-01-01T00:00:00.000Z');
+    const created = page('created', '2026-01-02T00:00:00.000Z');
+    const latest = {
+      ...site([home, created], '2026-01-02T00:00:01.000Z'),
+      navigation: [
+        navItem('nav-home', 'home', '/ko'),
+        navItem('nav-created', 'created', '/ko/created'),
+      ],
+    };
+    const staleWriter = {
+      ...site([home, created], '2026-01-03T00:00:00.000Z'),
+      navigation: [navItem('nav-home', 'home', '/ko')],
+    };
+
+    const reconciled = reconcileSiteDocumentNavigationForWrite(staleWriter, latest);
+
+    expect(reconciled.navigation.map((entry) => entry.id)).toEqual(['nav-home', 'nav-created']);
+  });
+
+  it('allows explicit navigation deletion paths to opt out', () => {
+    const home = page('home', '2026-01-01T00:00:00.000Z');
+    const created = page('created', '2026-01-02T00:00:00.000Z');
+    const latest = {
+      ...site([home, created], '2026-01-02T00:00:01.000Z'),
+      navigation: [
+        navItem('nav-home', 'home', '/ko'),
+        navItem('nav-created', 'created', '/ko/created'),
+      ],
+    };
+    const next = {
+      ...site([home, created], '2026-01-03T00:00:00.000Z'),
+      navigation: [navItem('nav-home', 'home', '/ko')],
+    };
+
+    const reconciled = reconcileSiteDocumentNavigationForWrite(next, latest, {
+      preserveMissingNavigation: false,
+    });
+
+    expect(reconciled.navigation.map((entry) => entry.id)).toEqual(['nav-home']);
+  });
+
+  it('does not resurrect latest-only navigation items whose page was deleted', () => {
+    const home = page('home', '2026-01-01T00:00:00.000Z');
+    const latest = {
+      ...site([home], '2026-01-02T00:00:01.000Z'),
+      navigation: [
+        navItem('nav-home', 'home', '/ko'),
+        navItem('nav-deleted', 'deleted', '/ko/deleted'),
+      ],
+    };
+    const staleWriter = {
+      ...site([home], '2026-01-03T00:00:00.000Z'),
+      navigation: [navItem('nav-home', 'home', '/ko')],
+    };
+
+    const reconciled = reconcileSiteDocumentNavigationForWrite(staleWriter, latest);
+
+    expect(reconciled.navigation.map((entry) => entry.id)).toEqual(['nav-home']);
   });
 });
 

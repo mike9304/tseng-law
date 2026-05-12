@@ -1736,3 +1736,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. “칼럼 아카이브/사진 클릭 후 백지화” 계열을 URL만이 아니라 실제 editor surface 생존 기준으로 고정했다.
+
+## M69 — Page template navigation wiring
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/PageSwitcher.tsx` — page template/blank page 생성 prompt에 `메뉴에 추가` 기본 체크 옵션을 추가하고 POST body에 `addToNavigation`을 전달한다.
+  - `src/app/api/builder/site/pages/route.ts` — 새 페이지 생성 시 요청이 `addToNavigation`이면 생성된 pageId/title/href를 site navigation에 append하고 home/new page path를 revalidate한다.
+  - `src/lib/builder/site/persistence.ts`, `src/lib/builder/site/publish.ts`, `src/app/api/builder/site/navigation/route.ts`, `src/lib/builder/canvas/seed-pages.ts` — site write 병합에서 최신-only navigation item을 기본 보존하고, navigation 삭제/seed cleanup/delete page만 opt-out한다. publish는 최신 navigation을 보존하며 page metadata만 저장한다.
+  - `src/components/builder/published/SiteHeader.tsx`, `src/lib/builder/site/public-page.tsx` — public header가 기본 spec 외 custom nav item도 렌더하고, global header canvas가 있을 때도 접근 가능한 Main navigation fallback을 함께 노출한다.
+  - `src/lib/builder/site/__tests__/persistence.test.ts`, `tests/builder-editor/section-template-click.playwright.ts` — navigation merge race와 page template 생성→menu 추가→publish→public header link 도달을 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/site/__tests__/persistence.test.ts` ✅ (13 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Wix처럼 템플릿으로 만든 페이지가 생성 직후 메뉴에 들어가고, 발행 후 공개 헤더에서 실제로 도달 가능한지 자동검증으로 고정했다.

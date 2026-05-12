@@ -5552,3 +5552,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (10 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - public non-builder mobile drawer/search 또는 published widget click path에서 남은 keyboard collision을 계속 줄인다.
+
+## 2026-05-13 Codex /goal M99 Public mobile drawer focus trap
+
+- legacy public `Header`의 mobile toggle은 `aria-expanded`/`aria-controls`가 없고, `MobileNavDrawer`는 initial focus와 Tab trap은 일부 있었지만 외부 focus 차단과 닫힌 뒤 toggle focus restore가 없었다.
+- `Header`는 mobile toggle ref와 close restore guard를 갖게 했다. drawer open/close label을 분리하고, Escape/backdrop/button close 후 새 toggle button으로 focus를 돌린다. drawer에서 검색을 열 때는 toggle restore 대신 search overlay로 흐름을 넘긴다.
+- `MobileNavDrawer`는 `public-mobile-nav-drawer` id가 있는 modal dialog로 유지하고, close button initial focus, visible focusable 기반 Tab/Shift+Tab wrap, 외부 focus probe 차단, capture Escape close를 처리한다.
+- Playwright는 legacy public `/ko`에서 AI chat/event popup localStorage를 잠시 닫고 모바일 viewport로 진입해, keyboard open, aria state, focus wrap, 외부 focus 차단, Escape close, Space reopen, close button restore를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/Header.tsx src/components/MobileNavDrawer.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "public mobile navigation" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (11 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - public year-end event popup 또는 남은 public/published overlay의 keyboard/focus gap을 계속 줄인다.

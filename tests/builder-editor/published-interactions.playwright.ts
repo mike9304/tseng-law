@@ -1145,6 +1145,71 @@ test.describe('/ko published builder interactions', () => {
     }
   });
 
+  test('traps focus in the public mobile navigation drawer', async ({ page }) => {
+    await page.addInitScript(() => {
+      window.localStorage.setItem('hojeong-ai-chat-collapsed', 'true');
+      window.localStorage.setItem('hojeong-year-end-event-hide-until', String(Date.now() + 24 * 60 * 60 * 1000));
+    });
+
+    try {
+      await page.setViewportSize({ width: 390, height: 760 });
+      await page.goto('/ko', { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const toggle = page.locator('header .mobile-toggle').first();
+      await expect(toggle).toBeVisible();
+      await expect(toggle).toHaveAttribute('aria-label', '메뉴 열기');
+      await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+      await expect(toggle).toHaveAttribute('aria-controls', 'public-mobile-nav-drawer');
+      await toggle.focus();
+      await expect(toggle).toBeFocused();
+      await toggle.press('Enter');
+
+      const dialog = page.getByRole('dialog', { name: '모바일 메뉴' });
+      await expect(dialog).toBeVisible();
+      await expect(toggle).toHaveAttribute('aria-label', '메뉴 닫기');
+      await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+      const closeButton = dialog.getByRole('button', { name: '닫기' });
+      await expect(closeButton).toBeFocused();
+
+      const firstLink = dialog.locator('.drawer-brand');
+      const lastLink = dialog.locator('.drawer-footer .button');
+      await lastLink.focus();
+      await page.keyboard.press('Tab');
+      await expect(firstLink).toBeFocused();
+      await page.keyboard.press('Shift+Tab');
+      await expect(lastLink).toBeFocused();
+
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.textContent = 'outside public mobile nav focus probe';
+        probe.setAttribute('data-public-mobile-nav-focus-probe', 'true');
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(closeButton).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(dialog).toHaveCount(0);
+      await expect(toggle).toHaveAttribute('aria-label', '메뉴 열기');
+      await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+      await expect(toggle).toBeFocused();
+
+      await toggle.press('Space');
+      await expect(dialog).toBeVisible();
+      await expect(closeButton).toBeFocused();
+      await closeButton.click();
+      await expect(dialog).toHaveCount(0);
+      await expect(toggle).toBeFocused();
+    } finally {
+      await page.evaluate(() => {
+        window.localStorage.removeItem('hojeong-ai-chat-collapsed');
+        window.localStorage.removeItem('hojeong-year-end-event-hide-until');
+      }).catch(() => undefined);
+    }
+  });
+
   test('opens the published menu bar dropdown and mobile menu from keyboard', async ({ page }) => {
     const token = Date.now().toString(36);
     const slug = `g-editor-menu-bar-${token}`;

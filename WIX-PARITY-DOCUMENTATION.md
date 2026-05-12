@@ -2160,3 +2160,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (10 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public AI chat에서 keyboard 위치를 잃는 경로와 hidden legacy dialog가 published overlay Escape를 가로채는 충돌을 닫았다.
+
+## M99 — Public mobile drawer focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/Header.tsx` — legacy public header mobile toggle에 `aria-expanded`/`aria-controls`와 open/close label을 추가하고, drawer close 후 새 toggle button으로 focus를 복귀시키는 guard를 추가했다.
+  - `src/components/MobileNavDrawer.tsx` — public mobile drawer를 명시 id가 있는 modal dialog로 유지하면서 close button initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, Escape close를 처리한다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — legacy public `/ko` 모바일 viewport에서 drawer keyboard open, focus wrap, 외부 focus probe 차단, Escape/button close와 toggle focus restore를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/Header.tsx src/components/MobileNavDrawer.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "public mobile navigation" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (11 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W40/W99/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. builder-published fallback header와 별개로 legacy public `/ko` 모바일 drawer에서도 keyboard focus가 배경으로 새거나 닫힌 뒤 위치를 잃는 경로를 닫았다.

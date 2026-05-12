@@ -188,7 +188,11 @@ export default function Header({ locale }: { locale: Locale }) {
   const mainNavRef = useRef<HTMLElement | null>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const closeTimeoutRef = useRef<number | null>(null);
+  const mobileToggleRef = useRef<HTMLButtonElement | null>(null);
+  const restoreMobileToggleOnCloseRef = useRef(false);
   const menuLabel = locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : 'Menu';
+  const openMenuLabel = locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : 'Open menu';
+  const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : 'Close menu';
   const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : 'Open search';
   const skipLabel = locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : 'Skip to main content';
   const utilityLinks =
@@ -250,6 +254,22 @@ export default function Header({ locale }: { locale: Locale }) {
     }, 300);
   }, [clearCloseTimeout]);
 
+  const openMobileDrawer = useCallback(() => {
+    restoreMobileToggleOnCloseRef.current = false;
+    setDrawerOpen(true);
+  }, []);
+
+  const closeMobileDrawer = useCallback(() => {
+    restoreMobileToggleOnCloseRef.current = true;
+    setDrawerOpen(false);
+  }, []);
+
+  const openSearchFromMobileDrawer = useCallback(() => {
+    restoreMobileToggleOnCloseRef.current = false;
+    setDrawerOpen(false);
+    setSearchOpen(true);
+  }, []);
+
   const moveIndicator = useCallback((key: string | null, visible = true) => {
     if (!key) {
       setIndicatorStyle((prev) => ({ ...prev, visible: false }));
@@ -284,6 +304,15 @@ export default function Header({ locale }: { locale: Locale }) {
       closeMegaMenuNow();
     }
   }, [closeMegaMenuNow, drawerOpen, searchOpen]);
+
+  useEffect(() => {
+    if (drawerOpen || !restoreMobileToggleOnCloseRef.current) return;
+    restoreMobileToggleOnCloseRef.current = false;
+    const frame = window.requestAnimationFrame(() => {
+      mobileToggleRef.current?.focus();
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [drawerOpen]);
 
   useEffect(() => {
     const onKeydown = (event: KeyboardEvent) => {
@@ -409,8 +438,11 @@ export default function Header({ locale }: { locale: Locale }) {
             <button
               className="icon-button mobile-toggle"
               type="button"
-              onClick={() => setDrawerOpen(true)}
-              aria-label={menuLabel}
+              ref={mobileToggleRef}
+              onClick={openMobileDrawer}
+              aria-label={drawerOpen ? closeMenuLabel : openMenuLabel}
+              aria-expanded={drawerOpen}
+              aria-controls="public-mobile-nav-drawer"
             >
               {menuLabel}
             </button>
@@ -452,11 +484,8 @@ export default function Header({ locale }: { locale: Locale }) {
       <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} locale={locale} />
       <MobileNavDrawer
         open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-        onSearch={() => {
-          setDrawerOpen(false);
-          setSearchOpen(true);
-        }}
+        onClose={closeMobileDrawer}
+        onSearch={openSearchFromMobileDrawer}
         locale={locale}
       />
     </header>

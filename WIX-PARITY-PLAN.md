@@ -100,3 +100,4 @@
 | M96 | QA     | Published header search overlay focus trap | W40,W98,W216,W225 | 1h | M95 | 🟡 header search overlay focus trap/Escape/restore 자동검증 통과 / 사용자 QA 대기 |
 | M97 | QA     | Public live chat focus trap | W98,W216,W225 | 1h | M96 | 🟡 live chat dialog focus trap/Escape/restore 자동검증 통과 / 사용자 QA 대기 |
 | M98 | QA     | Public AI chat keyboard path guard | W98,W216,W225 | 1h | M97 | 🟡 AI chat focus wrap/Escape/restore 및 hidden chrome guard 자동검증 통과 / 사용자 QA 대기 |
+| M99 | QA     | Public mobile drawer focus trap | W40,W99,W216,W225 | 1h | M98 | 🟡 legacy public mobile drawer focus trap/Escape/restore 자동검증 통과 / 사용자 QA 대기 |

@@ -19,7 +19,9 @@ export default function MobileNavDrawer({
   locale: Locale;
   onSearch: () => void;
 }) {
+  const dialogRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const content = siteContent[locale];
   const pathname = usePathname();
   const current = pathname ?? '';
@@ -40,28 +42,52 @@ export default function MobileNavDrawer({
 
   useEffect(() => {
     if (!open) return;
+    const dialog = dialogRef.current;
     const panel = panelRef.current;
-    const focusable = panel?.querySelectorAll<HTMLElement>('a, button, input, [tabindex]:not([tabindex="-1"])');
-    const first = focusable?.[0];
-    const last = focusable?.[focusable.length - 1];
-    first?.focus();
+    const getFocusable = () => (
+      Array.from(panel?.querySelectorAll<HTMLElement>('a, button, input, [tabindex]:not([tabindex="-1"])') ?? [])
+        .filter((element) => !element.hasAttribute('disabled') && element.getClientRects().length > 0)
+    );
+    const focusInitial = () => {
+      closeButtonRef.current?.focus();
+      if (document.activeElement === closeButtonRef.current) return;
+      getFocusable()[0]?.focus();
+    };
+    focusInitial();
 
     const handler = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
-      if (event.key === 'Tab' && focusable && focusable.length > 0) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        onClose();
+        return;
+      }
+      if (event.key === 'Tab') {
+        const focusable = getFocusable();
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (!first || !last) return;
         if (event.shiftKey && document.activeElement === first) {
           event.preventDefault();
-          last?.focus();
+          last.focus();
         } else if (!event.shiftKey && document.activeElement === last) {
           event.preventDefault();
-          first?.focus();
+          first.focus();
         }
       }
     };
 
-    document.addEventListener('keydown', handler);
+    const handleFocusIn = (event: FocusEvent) => {
+      if (dialog?.contains(event.target as Node | null)) return;
+      event.preventDefault();
+      focusInitial();
+    };
+
+    document.addEventListener('keydown', handler, true);
+    document.addEventListener('focusin', handleFocusIn, true);
     return () => {
-      document.removeEventListener('keydown', handler);
+      document.removeEventListener('keydown', handler, true);
+      document.removeEventListener('focusin', handleFocusIn, true);
     };
   }, [open, onClose]);
 
@@ -73,7 +99,16 @@ export default function MobileNavDrawer({
   const brandLogo = locale === 'zh-hant' ? '/images/brand/hovering-logo-zh.png' : '/images/brand/hovering-logo-ko.png';
 
   return (
-    <div className="drawer" data-open={open} role="dialog" aria-modal="true" aria-label={drawerLabel} onClick={onClose}>
+    <div
+      className="drawer"
+      id="public-mobile-nav-drawer"
+      data-open={open}
+      role="dialog"
+      aria-modal="true"
+      aria-label={drawerLabel}
+      ref={dialogRef}
+      onClick={onClose}
+    >
       <div className="drawer-panel" ref={panelRef} onClick={(event) => event.stopPropagation()}>
         <div className="drawer-header">
           <Link className="header-logo drawer-brand" href={`/${locale}`} onClick={onClose}>
@@ -82,7 +117,7 @@ export default function MobileNavDrawer({
             </span>
             <span className="logo-kr">{brandText}</span>
           </Link>
-          <button className="icon-button" type="button" onClick={onClose} aria-label={closeLabel}>
+          <button className="icon-button" type="button" onClick={onClose} aria-label={closeLabel} ref={closeButtonRef}>
             ×
           </button>
         </div>

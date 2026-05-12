@@ -783,6 +783,29 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.screenshot({ path: `${screenshotDir}/design-pool-font-picker.png` });
 
     await modal.getByRole('button', { name: /Presets/ }).click();
+    const tokenDownloadPromise = page.waitForEvent('download');
+    await modal.getByRole('button', { name: 'Export design tokens' }).click();
+    const tokenDownload = await tokenDownloadPromise;
+    expect(tokenDownload.suggestedFilename()).toBe('hojeong-design-tokens.json');
+    await expect(modal).toContainText('Design token JSON을 내보냈습니다');
+    await modal.locator('[data-design-token-import-input]').setInputFiles({
+      name: 'hojeong-design-tokens-import.json',
+      mimeType: 'application/json',
+      buffer: Buffer.from(JSON.stringify({
+        schemaVersion: 1,
+        theme: {
+          colors: { primary: '#0f766e' },
+          fonts: { heading: 'Inter', body: 'Noto Sans KR' },
+          radii: { sm: 0, md: 2, lg: 4 },
+          effects: { radiusPreset: 'sharp', shadowPreset: 'strong' },
+          typographyScale: { baseSize: 18, ratio: 1.25 },
+        },
+      })),
+    });
+    await expect(modal).toContainText('Design token JSON을 불러와 적용했습니다');
+    await modal.getByRole('button', { name: /Advanced/ }).click();
+    await expect(modal.locator('input[value="#0f766e"]').first()).toBeVisible();
+    await modal.getByRole('button', { name: /Presets/ }).click();
     await modal.getByRole('button', { name: 'Use Soft' }).first().click();
     await expect(modal).toContainText('Soft radius preset applied');
     await modal.getByRole('button', { name: 'Use Strong' }).click();

@@ -681,6 +681,118 @@ export function applyTypographyScaleToTheme(theme: BuilderTheme): BuilderTheme {
   };
 }
 
+export interface DesignTokenBundle {
+  schemaVersion: 1;
+  exportedAt: string;
+  siteName?: string;
+  theme: BuilderTheme;
+}
+
+function asRecord(value: unknown): Record<string, unknown> | undefined {
+  return value && typeof value === 'object' ? value as Record<string, unknown> : undefined;
+}
+
+function normalizeTokenColors(
+  value: unknown,
+  fallback: BuilderThemeColors,
+): BuilderThemeColors {
+  const source = asRecord(value);
+  return {
+    primary: normalizeTokenColorValue(source?.primary, fallback.primary),
+    secondary: normalizeTokenColorValue(source?.secondary, fallback.secondary),
+    accent: normalizeTokenColorValue(source?.accent, fallback.accent),
+    background: normalizeTokenColorValue(source?.background, fallback.background),
+    text: normalizeTokenColorValue(source?.text, fallback.text),
+    muted: normalizeTokenColorValue(source?.muted, fallback.muted),
+  };
+}
+
+function normalizeTokenColorValue(value: unknown, fallback: string): string {
+  return typeof value === 'string' && value.trim().length > 0 ? value.trim() : fallback;
+}
+
+function normalizeTokenFonts(
+  value: unknown,
+  fallback: BuilderTheme['fonts'],
+): BuilderTheme['fonts'] {
+  const source = asRecord(value);
+  const heading = source?.heading;
+  const body = source?.body;
+  return {
+    heading: typeof heading === 'string' && heading.trim().length > 0 ? heading.trim() : fallback.heading,
+    body: typeof body === 'string' && body.trim().length > 0 ? body.trim() : fallback.body,
+  };
+}
+
+function normalizeTokenRadii(
+  value: unknown,
+  fallback: BuilderTheme['radii'],
+): BuilderTheme['radii'] {
+  const source = asRecord(value);
+  const normalizeRadius = (key: keyof BuilderTheme['radii'], max: number) => {
+    const candidate = source?.[key];
+    if (typeof candidate !== 'number' || !Number.isFinite(candidate)) return fallback[key];
+    return Math.max(0, Math.min(max, Math.round(candidate)));
+  };
+  return {
+    sm: normalizeRadius('sm', 64),
+    md: normalizeRadius('md', 64),
+    lg: normalizeRadius('lg', 128),
+  };
+}
+
+export function createDesignTokenBundle(
+  theme: BuilderTheme,
+  siteName?: string,
+): DesignTokenBundle {
+  const colors = normalizeTokenColors(theme.colors, theme.colors);
+  return {
+    schemaVersion: 1,
+    exportedAt: new Date().toISOString(),
+    siteName: siteName?.trim() || undefined,
+    theme: applyTypographyScaleToTheme({
+      ...theme,
+      colors,
+      darkColors: normalizeDarkColors(colors, theme.darkColors),
+      fonts: normalizeTokenFonts(theme.fonts, theme.fonts),
+      radii: normalizeTokenRadii(theme.radii, theme.radii),
+      effects: normalizeThemeEffects(theme),
+      themeTextPresets: normalizeThemeTextPresets(theme.themeTextPresets),
+    }),
+  };
+}
+
+export function normalizeDesignTokenTheme(
+  value: unknown,
+  fallback: BuilderTheme,
+): BuilderTheme {
+  const source = asRecord(value);
+  const themeSource = asRecord(source?.theme) ?? source ?? {};
+  const colors = normalizeTokenColors(themeSource.colors, fallback.colors);
+  const fallbackDarkColors = normalizeDarkColors(colors, fallback.darkColors);
+  const rawDarkColors = asRecord(themeSource.darkColors);
+  const typographyScale = normalizeTypographyScale(
+    themeSource.typographyScale as BuilderTheme['typographyScale'] | undefined,
+  );
+  const effects = asRecord(themeSource.effects)
+    ? themeSource.effects as BuilderTheme['effects']
+    : fallback.effects;
+  const themeTextPresets = asRecord(themeSource.themeTextPresets)
+    ? themeSource.themeTextPresets as Partial<Record<ThemeTextPresetKey, Partial<ThemeTextPreset>>>
+    : fallback.themeTextPresets;
+
+  return applyTypographyScaleToTheme({
+    ...fallback,
+    colors,
+    darkColors: rawDarkColors ? normalizeTokenColors(rawDarkColors, fallbackDarkColors) : fallbackDarkColors,
+    fonts: normalizeTokenFonts(themeSource.fonts, fallback.fonts),
+    radii: normalizeTokenRadii(themeSource.radii, fallback.radii),
+    effects: normalizeThemeEffects({ effects }),
+    themeTextPresets: normalizeThemeTextPresets(themeTextPresets),
+    typographyScale,
+  });
+}
+
 export interface BrandKit {
   logoLight?: string;
   logoDark?: string;

@@ -1210,3 +1210,22 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W183은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Site Settings에서 전역 radius/shadow preset을 고르고 저장할 수 있으며, card variant shadow가 published 스타일에 반영된다.
+
+## M34 — Design token bundle export/import
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/site/theme.ts` — `DesignTokenBundle` schema와 `createDesignTokenBundle()`, `normalizeDesignTokenTheme()`을 추가했다. colors/darkColors/fonts/radii/effects/text presets/typography scale을 한 JSON bundle로 정규화한다.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Site Settings > Presets 탭에 `Export design tokens` / `Import design tokens` 버튼을 추가했다. Import는 현재 theme state와 brand kit export state를 즉시 갱신하고, 저장 버튼으로 API에 반영된다.
+  - `src/lib/builder/site/__tests__/theme-effects.test.ts` — design token bundle round-trip을 단위 검증한다.
+  - `tests/builder-editor/design-pool.playwright.ts` — 실제 modal에서 token JSON 다운로드 파일명, import file input, imported primary color 반영을 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/theme-effects.test.ts` ✅ (3 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (893 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W181은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Brand kit JSON과 별도로 전체 theme token bundle을 export/import할 수 있다.

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   PAGE_TRANSITION_OPTIONS,
   type PageTransition,
@@ -34,6 +34,7 @@ import {
   applyThemeRadiusPreset,
   applyThemeShadowPreset,
   applyTypographyScaleToTheme,
+  createDesignTokenBundle,
   type BuilderColorValue,
   type SiteThemePreset,
   type ThemeTextPreset,
@@ -43,6 +44,7 @@ import {
   createThemeFromBrandKit,
   normalizeBrandKit,
   normalizeDarkColors,
+  normalizeDesignTokenTheme,
   normalizeThemeEffects,
   normalizeThemeTextPresets,
   normalizeThemeTypographyScale,
@@ -340,6 +342,7 @@ export default function SiteSettingsModal({
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const tokenImportInputRef = useRef<HTMLInputElement | null>(null);
 
   const fetchSettings = useCallback(async () => {
     setLoading(true);
@@ -546,6 +549,39 @@ export default function SiteSettingsModal({
       setError(null);
     } catch {
       setError('Brand kit JSON을 읽지 못했습니다.');
+    }
+  };
+
+  const exportDesignTokens = () => {
+    const payload = createDesignTokenBundle(
+      {
+        ...theme,
+        darkColors: normalizeDarkColors(theme.colors, theme.darkColors),
+        themeTextPresets: normalizeThemeTextPresets(theme.themeTextPresets),
+      },
+      settings.firmName || brandKit.metadata?.siteName,
+    );
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'hojeong-design-tokens.json';
+    anchor.click();
+    URL.revokeObjectURL(url);
+    setNotice('Design token JSON을 내보냈습니다.');
+  };
+
+  const importDesignTokens = async (file: File) => {
+    try {
+      const text = await file.text();
+      const parsed = JSON.parse(text) as unknown;
+      const nextTheme = normalizeDesignTokenTheme(parsed, theme);
+      setTheme(nextTheme);
+      setBrandKit(createBrandKitFromTheme(nextTheme, settings));
+      setNotice('Design token JSON을 불러와 적용했습니다. 저장을 눌러 사이트에 반영하세요.');
+      setError(null);
+    } catch {
+      setError('Design token JSON을 읽지 못했습니다.');
     }
   };
 
@@ -1124,7 +1160,36 @@ export default function SiteSettingsModal({
             </div>
           ) : (
             <>
+            <input
+              ref={tokenImportInputRef}
+              data-design-token-import-input
+              type="file"
+              accept="application/json,.json"
+              style={{ display: 'none' }}
+              onChange={(event) => {
+                const file = event.target.files?.[0];
+                if (file) void importDesignTokens(file);
+                event.currentTarget.value = '';
+              }}
+            />
             <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>Design token bundle</div>
+              <section style={presetCardStyle}>
+                <strong style={{ color: '#0f172a', fontSize: '0.9rem' }}>
+                  Theme token JSON
+                </strong>
+                <span style={{ color: '#64748b', fontSize: '0.76rem', lineHeight: 1.45 }}>
+                  Colors, dark colors, fonts, typography scale, text presets, radii, and shadow settings move together as one design system file.
+                </span>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  <button type="button" style={presetButtonStyle} onClick={exportDesignTokens}>
+                    Export design tokens
+                  </button>
+                  <button type="button" style={presetButtonStyle} onClick={() => tokenImportInputRef.current?.click()}>
+                    Import design tokens
+                  </button>
+                </div>
+              </section>
               <div style={sectionHeadingStyle}>Radius & shadow presets</div>
               <div style={presetGridStyle}>
                 {THEME_RADIUS_PRESETS.map((preset) => {

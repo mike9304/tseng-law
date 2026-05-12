@@ -4670,3 +4670,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W178 theme preset save/load, W181 token export/import, W182 brand asset library 중 theme persistence/export 품질 gap을 우선 본다.
+
+## 2026-05-12 Codex /goal M34 design token bundle export/import
+
+- W181의 남은 gap인 전체 design token JSON export/import를 구현했다.
+- `DesignTokenBundle`은 colors/darkColors/fonts/radii/effects/theme text presets/typography scale을 한 파일로 내보낸다.
+- Site Settings > Presets 탭에 `Export design tokens` / `Import design tokens` 흐름을 추가했다. Import 후 theme state와 brand kit export state가 즉시 동기화되고, 저장 버튼으로 site settings API에 반영된다.
+- 단위 테스트는 token bundle round-trip을 검증하고, Playwright는 실제 modal에서 다운로드 파일명, import file input, imported primary color 반영을 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/theme-effects.test.ts` ✅ (3 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (893 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W178 custom theme preset save/load 또는 W182 brand asset library gap을 우선 본다.

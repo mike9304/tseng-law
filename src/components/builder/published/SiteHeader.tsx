@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
 import type { BuilderNavItem, BuilderSiteSettings, BuilderTheme } from '@/lib/builder/site/types';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
+import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
 import { resolveBrandLogo } from '@/lib/builder/site/theme';
 import { siteContent } from '@/data/site-content';
 import SearchOverlay from '@/components/SearchOverlay';
@@ -75,10 +76,11 @@ function localeSwitchPath(targetLocale: Locale, currentSlug: string): string {
 }
 
 function buildHeaderNavItems(navItems: BuilderNavItem[], locale: Locale): HeaderNavItem[] {
+  const visibleNavItems = filterNavigationForLocale(navItems, locale);
   const usedSpecKeys = new Set<string>();
   const indexedItems: Array<{ item: HeaderNavItem; sourceIndex: number; specIndex: number }> = [];
 
-  navItems.forEach((source, sourceIndex) => {
+  visibleNavItems.forEach((source, sourceIndex) => {
     if (isHomeNavigationItem(source, locale)) return;
     const spec = matchingHeaderSpec(source, locale);
     if (spec) {

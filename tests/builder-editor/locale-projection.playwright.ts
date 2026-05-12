@@ -140,4 +140,42 @@ test.describe('/admin-builder locale projection', () => {
       }
     }
   });
+
+  test('does not project Traditional Chinese navigation items into the Korean editor header', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const slug = `m77-nav-guard-${token}`;
+    const zhTitle = `繁中導覽防混 ${token}`;
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'zh-hant',
+          slug,
+          title: zhTitle,
+          document: makeLocaleGuardDocument(token, zhTitle),
+          addToNavigation: true,
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      await openBuilder(page, `/zh-hant/admin-builder?navLocaleProjection=${token}`);
+      await expect(page.locator('.builder-site-header')).toContainText(zhTitle);
+
+      await openBuilder(page, `/ko/admin-builder?navLocaleProjection=${token}`);
+      const koHeader = page.locator('.builder-site-header');
+      await expect(koHeader).not.toContainText(zhTitle);
+      await expect(koHeader.locator(`a[href="/ko/zh-hant/${slug}"]`)).toHaveCount(0);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=zh-hant`).catch(() => undefined);
+      }
+    }
+  });
 });

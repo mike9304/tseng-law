@@ -58,6 +58,7 @@ import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-fr
 import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
+import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
 import { findPageMetaForLocale } from '@/lib/builder/site/page-resolution';
 import {
   normalizeHeaderFooterMobileConfig,
@@ -1115,7 +1116,8 @@ function GlobalCanvasSection({
 
   const Tag = tag;
   const currentPath = locale ? buildSitePagePath(locale, currentSlug) : '';
-  const showNavigationFallback = tag === 'header' && locale && navItems.length > 0;
+  const visibleNavItems = locale ? filterNavigationForLocale(navItems, locale) : [];
+  const showNavigationFallback = tag === 'header' && locale && visibleNavItems.length > 0;
   return (
     <Tag
       data-builder-global-section={tag}
@@ -1155,7 +1157,7 @@ function GlobalCanvasSection({
             pointerEvents: 'auto',
           }}
         >
-          {navItems.map((item) => {
+          {visibleNavItems.map((item) => {
             const href = normalizeSiteHref(item.href, locale);
             const label = typeof item.label === 'string'
               ? item.label

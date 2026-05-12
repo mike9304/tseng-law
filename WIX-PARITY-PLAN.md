@@ -78,3 +78,4 @@
 | M74 | QA     | Shortcut modal Escape close | W216,W219,W225 | 1h | M73 | 🟡 focused shortcut input Escape 닫기/미저장 자동검증 통과 / 사용자 QA 대기 |
 | M75 | QA     | Plus zoom shortcut parser guard | W216,W219 | 1h | M74 | 🟡 `Mod++`/plus key zoom shortcut 자동검증 통과 / 사용자 QA 대기 |
 | M76 | QA     | Locale standard page seed guard | W14,W193,W216 | 1h | M75 | 🟡 KO 홈 누락 시 locale별 seed 복구 자동검증 통과 / 사용자 QA 대기 |
+| M77 | QA     | Locale navigation projection guard | W14,W18,W193,W216 | 1h | M76 | 🟡 비한국어 자동 메뉴가 한국어 header/footer에 섞이지 않도록 자동검증 통과 / 사용자 QA 대기 |

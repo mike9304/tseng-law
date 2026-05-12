@@ -1,6 +1,7 @@
 import type { BuilderNavItem, BuilderSiteSettings, BuilderTheme } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import { normalizeSiteHref } from '@/lib/builder/site/paths';
+import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
 
 function getLabel(item: BuilderNavItem, locale: Locale): string {
   if (typeof item.label === 'string') return item.label;
@@ -27,6 +28,7 @@ export default function SiteFooter({
   const mutedColor = theme?.colors.muted || '#f3f4f6';
   const bodyFont = theme?.fonts.body;
   const headingFont = theme?.fonts.heading;
+  const visibleNavItems = filterNavigationForLocale(navItems, locale);
 
   return (
     <footer style={{
@@ -57,10 +59,10 @@ export default function SiteFooter({
         </div>
 
         {/* Column 2: Quick Links */}
-        {navItems.length > 0 && (
+        {visibleNavItems.length > 0 && (
           <div>
             <strong style={{ color: textColor, display: 'block', marginBottom: 12, fontFamily: headingFont }}>바로가기</strong>
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <a
                 key={item.id}
                 href={normalizeSiteHref(item.href, locale)}

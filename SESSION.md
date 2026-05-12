@@ -5246,3 +5246,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - locale별 navigation href 저장 형태와 public/editor page projection 잔여 gap을 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M77 Locale navigation projection guard
+
+- M76 이후 남은 locale 혼선 후보인 shared navigation 표시 경계를 닫았다.
+- `/api/builder/site/pages`의 `addToNavigation`은 생성 locale href를 저장하므로, zh-hant/en에서 만든 자동 메뉴가 raw shared navigation에 남는다. public/header 렌더가 이를 그대로 custom item으로 보면 한국어 editor/header/footer에 번중 메뉴가 섞일 수 있었다.
+- `hrefLocalePrefix()` / `isForeignLocaleHref()` / `filterNavigationForLocale()` helper를 추가했다. 상대 내부 링크(`/services`), 현재 locale 링크(`/ko/...`), 외부 URL, mailto/tel/hash는 유지하고 현재 locale과 다른 내부 locale prefix만 표시 레이어에서 제거한다.
+- `SiteHeader`, `SiteFooter`, global header fallback은 locale-filtered navigation을 렌더한다. Navigation 원본 데이터와 Navigation editor 저장 경로는 보존했다.
+- Playwright는 zh-hant 페이지를 `addToNavigation: true`로 생성해 zh-hant editor header에는 표시되고, ko editor header에는 번중 label과 `/ko/zh-hant/...` 오염 href가 나타나지 않는지 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/site/__tests__/navigation.test.ts` ✅ (3 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - W216~W225 editor polish와 page/template locale/navigation 잔여 gap을 계속 재스캔한다.

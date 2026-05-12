@@ -1,4 +1,4 @@
-import type { Locale } from '@/lib/locales';
+import { isLocale, type Locale } from '@/lib/locales';
 
 function trimSlashes(value: string): string {
   return value.replace(/^\/+|\/+$/g, '');
@@ -25,6 +25,18 @@ export function normalizeSiteHref(href: string, locale: Locale | string): string
   if (href.startsWith('/p/')) return buildSitePagePath(locale, href.slice('/p/'.length));
   if (href.startsWith('/')) return `/${locale}${href}`;
   return buildSitePagePath(locale, href);
+}
+
+export function hrefLocalePrefix(href: string): Locale | null {
+  if (!href || /^(https?:|mailto:|tel:|#)/.test(href)) return null;
+  const path = href.trim().split(/[?#]/)[0] ?? '';
+  const firstSegment = path.replace(/^\/+/, '').split('/')[0];
+  return isLocale(firstSegment) ? firstSegment : null;
+}
+
+export function isForeignLocaleHref(href: string, locale: Locale | string): boolean {
+  const hrefLocale = hrefLocalePrefix(href);
+  return Boolean(hrefLocale && hrefLocale !== locale);
 }
 
 export function comparableSitePath(href: string, locale: Locale | string): string {

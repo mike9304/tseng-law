@@ -1846,3 +1846,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W14/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 다른 locale의 seed page가 한국어 홈/표준 페이지 생성을 막아 editor가 엉뚱한 첫 페이지로 열리는 경로를 고정했다.
+
+## M77 — Locale navigation projection guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/site/paths.ts` — 내부 href의 locale prefix를 감지하는 helper를 추가했다.
+  - `src/lib/builder/site/navigation.ts` — navigation item 중 현재 locale과 다른 내부 locale href를 표시 layer에서 걸러내는 projection helper를 추가했다.
+  - `src/components/builder/published/SiteHeader.tsx`, `src/components/builder/published/SiteFooter.tsx`, `src/lib/builder/site/public-page.tsx` — header/footer와 global header fallback이 raw shared navigation 대신 locale-filtered navigation을 렌더한다.
+  - `src/lib/builder/site/__tests__/navigation.test.ts` — 상대 내부 링크/외부 링크는 유지하고 `/zh-hant/...` 같은 foreign-locale internal href만 제거하는지 검증한다.
+  - `tests/builder-editor/locale-projection.playwright.ts` — zh-hant 자동 메뉴 생성 후 ko editor header에 해당 번중 메뉴가 나오지 않는지 실제 UI로 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/site/__tests__/navigation.test.ts` ✅ (3 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 템플릿/페이지 생성으로 생긴 비한국어 메뉴가 한국어 editor/public header/footer에 커스텀 링크로 섞여 보이는 경로를 표시 projection에서 차단했다.

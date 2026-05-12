@@ -4719,3 +4719,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - 남은 checkpoint yellow를 다시 스캔해 W176/W177/W179/W180/W184/W185 등 디자인 시스템 마지막 gap부터 닫는다.
+
+## 2026-05-12 Codex /goal M37 component design presets bulk apply
+
+- W179의 남은 gap인 컴포넌트별 스타일 프리셋 일괄 적용을 구현했다.
+- Site Settings > Presets 탭에 Classic/Soft/Editorial/Conversion component design presets를 추가했다.
+- 각 preset은 현재 페이지의 button/card/form field/form submit을 한 번에 patch하고, canvas store mutation과 draft autosave 경로를 그대로 탄다.
+- 단위 테스트는 preset helper가 기존 content를 보존하면서 style/variant만 바꾸는지 검증하고, Playwright는 실제 modal에서 `Apply Editorial system` 클릭 후 draft API에 `primary-link:editorial:underline:outline`이 저장되는지 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/component-design-presets.test.ts` ✅ (1 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "bulk applies component design presets" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W176/W177/W180/W184/W185 등 남은 design system yellow checkpoint를 재스캔한다.

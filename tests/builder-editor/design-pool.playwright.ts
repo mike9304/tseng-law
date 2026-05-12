@@ -106,6 +106,111 @@ function makePublicSectionTemplateDocument(token: string) {
   };
 }
 
+function makeComponentDesignPresetDocument(token: string) {
+  const now = new Date().toISOString();
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `component-preset-${token}`,
+    stageWidth: 1280,
+    stageHeight: 720,
+    nodes: [
+      {
+        id: `component-card-${token}`,
+        kind: 'container',
+        rect: { x: 96, y: 96, width: 420, height: 220 },
+        style: baseNodeStyle,
+        zIndex: 0,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: 'Component preset card',
+          background: '#ffffff',
+          borderColor: '#cbd5e1',
+          borderStyle: 'solid',
+          borderWidth: 1,
+          borderRadius: 12,
+          padding: 24,
+          layoutMode: 'absolute',
+          as: 'article',
+          variant: 'flat',
+        },
+      },
+      {
+        id: `component-button-${token}`,
+        kind: 'button',
+        rect: { x: 128, y: 148, width: 180, height: 48 },
+        style: baseNodeStyle,
+        zIndex: 1,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: '상담 예약',
+          href: '/ko/contact',
+          style: 'primary-solid',
+        },
+      },
+      {
+        id: `component-form-${token}`,
+        kind: 'form',
+        rect: { x: 600, y: 96, width: 430, height: 260 },
+        style: baseNodeStyle,
+        zIndex: 2,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          name: `component-preset-form-${token}`,
+          submitTo: 'storage',
+          successMessage: '감사합니다.',
+          method: 'POST',
+          layoutMode: 'absolute',
+          captcha: 'none',
+        },
+      },
+      {
+        id: `component-field-${token}`,
+        kind: 'form-input',
+        parentId: `component-form-${token}`,
+        rect: { x: 24, y: 28, width: 320, height: 78 },
+        style: baseNodeStyle,
+        zIndex: 3,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          name: 'email',
+          label: 'Email',
+          placeholder: 'client@example.com',
+          type: 'email',
+          required: true,
+          variant: 'default',
+        },
+      },
+      {
+        id: `component-submit-${token}`,
+        kind: 'form-submit',
+        parentId: `component-form-${token}`,
+        rect: { x: 24, y: 128, width: 180, height: 48 },
+        style: baseNodeStyle,
+        zIndex: 4,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          label: 'Send',
+          style: 'primary',
+          fullWidth: false,
+          loadingLabel: 'Sending...',
+        },
+      },
+    ],
+  };
+}
+
 type TestNavigationItem = {
   id: string;
   label: string | Record<string, string>;
@@ -272,8 +377,8 @@ async function waitForEditorCss(page: Page): Promise<void> {
   }
 }
 
-async function openBuilder(page: Page): Promise<void> {
-  await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+async function openBuilder(page: Page, path = '/ko/admin-builder'): Promise<void> {
+  await page.goto(path, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('[data-editor-shell]')).toBeVisible();
   await waitForEditorCss(page);
   await page.waitForTimeout(5_000);
@@ -839,6 +944,65 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(modal).toContainText('#RRGGBB');
     await modal.getByRole('button', { name: 'Close' }).click();
     await expect(page.locator('[data-modal-shell="true"]')).toHaveCount(0);
+  });
+
+  test('bulk applies component design presets to button, card, and form nodes', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-component-presets-${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(slug));
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: `G Editor Component Presets ${token}`,
+          document: makeComponentDesignPresetDocument(token),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      expect(created.pageId).toBeTruthy();
+      pageId = created.pageId!;
+
+      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&componentPresets=${token}`);
+      const modal = await openSiteSettings(page);
+      await modal.getByRole('button', { name: /Presets/ }).click();
+      await expect(modal).toContainText('Component design presets');
+      await expect(modal.locator('[data-component-design-preset="editorial"]')).toContainText('Card: editorial');
+      await modal.getByRole('button', { name: 'Apply Editorial system' }).click();
+      await expect(modal).toContainText('Editorial system preset applied to 4 components');
+
+      await expect.poll(async () => {
+        if (!pageId) return 'missing';
+        const draftResponse = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+          headers: mutationHeaders(slug),
+        });
+        if (draftResponse.status() !== 200) return 'missing';
+        const draftPayload = (await draftResponse.json()) as {
+          document?: {
+            nodes?: Array<{ id?: string; content?: { style?: string; variant?: string } }>;
+          };
+        };
+        const nodes = draftPayload.document?.nodes ?? [];
+        const buttonStyle = nodes.find((node) => node.id === `component-button-${token}`)?.content?.style;
+        const cardVariant = nodes.find((node) => node.id === `component-card-${token}`)?.content?.variant;
+        const fieldVariant = nodes.find((node) => node.id === `component-field-${token}`)?.content?.variant;
+        const submitStyle = nodes.find((node) => node.id === `component-submit-${token}`)?.content?.style;
+        return `${buttonStyle}:${cardVariant}:${fieldVariant}:${submitStyle}`;
+      }, { timeout: 20_000 }).toBe('primary-link:editorial:underline:outline');
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
   });
 
   test('persists Site Settings through the real API and reflects them in editor and published pages', async ({ page }) => {

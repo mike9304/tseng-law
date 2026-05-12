@@ -21,6 +21,12 @@ import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/Sa
 import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import {
+  applyComponentDesignPresetToNodes,
+  getComponentDesignPreset,
+  type ComponentDesignPresetKey,
+  type ComponentDesignPresetPatchResult,
+} from '@/lib/builder/site/component-design-presets';
 import { type BuilderLightbox, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme, type SavedSection } from '@/lib/builder/site/types';
 import { collectThemeFontFamilies } from '@/lib/builder/site/theme';
 import type { Locale } from '@/lib/locales';
@@ -164,6 +170,7 @@ export default function SandboxPage({
     setDraftSaveState,
     updateNode,
     updateNodeContent,
+    updateSelectedNodes,
     setViewport: setStoreViewport,
     applyMobileAutoFit,
   } = useBuilderCanvasStore();
@@ -333,6 +340,30 @@ export default function SandboxPage({
     pushToast,
     onMissingHeaderPage: () => setActiveDrawer('pages'),
   });
+
+  const handleApplyComponentDesignPreset = useCallback((presetKey: ComponentDesignPresetKey): ComponentDesignPresetPatchResult => {
+    const preset = getComponentDesignPreset(presetKey);
+    if (!canvasDocument) {
+      const emptyResult: ComponentDesignPresetPatchResult = {
+        nodes: [],
+        changedNodeIds: [],
+        counts: { buttons: 0, cards: 0, formFields: 0, formSubmits: 0 },
+      };
+      pushToast('현재 페이지 문서를 아직 불러오지 못했습니다.', 'error');
+      return emptyResult;
+    }
+
+    const result = applyComponentDesignPresetToNodes(canvasDocument.nodes, preset.key);
+    if (result.changedNodeIds.length === 0) {
+      pushToast('현재 페이지에 변경할 button/card/form 요소가 없습니다.', 'error');
+      return result;
+    }
+
+    const nextNodeById = new Map(result.nodes.map((node) => [node.id, node]));
+    updateSelectedNodes(result.changedNodeIds, (node) => nextNodeById.get(node.id) ?? node);
+    pushToast(`${preset.label} preset applied to ${result.changedNodeIds.length} components`, 'success');
+    return result;
+  }, [canvasDocument, pushToast, updateSelectedNodes]);
 
   const handlePagesPanelPaste = useCallback(() => {
     const state = useBuilderCanvasStore.getState();
@@ -757,6 +788,7 @@ export default function SandboxPage({
             setSiteSettingsState(settings);
             setSiteThemeState(theme);
           }}
+          onApplyComponentDesignPreset={handleApplyComponentDesignPreset}
           onCloseHistory={() => setHistoryOpen(false)}
           onCloseHelp={() => setHelpOpen(false)}
           onClosePreview={() => setPreviewOpen(false)}

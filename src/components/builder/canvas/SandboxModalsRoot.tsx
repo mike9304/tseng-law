@@ -12,6 +12,10 @@ import SiteSettingsModal from '@/components/builder/canvas/SiteSettingsModal';
 import VersionHistoryPanel from '@/components/builder/canvas/VersionHistoryPanel';
 import SaveSectionModal, { type SaveSectionPayload } from '@/components/builder/sections/SaveSectionModal';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type {
+  ComponentDesignPresetKey,
+  ComponentDesignPresetPatchResult,
+} from '@/lib/builder/site/component-design-presets';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import type { BuilderSiteSettings, BuilderTheme, SavedSection } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
@@ -63,6 +67,7 @@ type SandboxModalsRootProps = {
   onSeoSaved: (page: { pageId: string; slug: string }) => void;
   onCloseSettings: () => void;
   onSettingsSaved: (payload: { settings: BuilderSiteSettings; theme: BuilderTheme }) => void;
+  onApplyComponentDesignPreset: (presetKey: ComponentDesignPresetKey) => ComponentDesignPresetPatchResult;
   onCloseHistory: () => void;
   onCloseHelp: () => void;
   onClosePreview: () => void;
@@ -103,6 +108,7 @@ export default function SandboxModalsRoot({
   onSeoSaved,
   onCloseSettings,
   onSettingsSaved,
+  onApplyComponentDesignPreset,
   onCloseHistory,
   onCloseHelp,
   onClosePreview,
@@ -170,6 +176,7 @@ export default function SandboxModalsRoot({
         open={settingsOpen}
         locale={locale}
         onSaved={onSettingsSaved}
+        onApplyComponentDesignPreset={onApplyComponentDesignPreset}
         onClose={onCloseSettings}
       />
 

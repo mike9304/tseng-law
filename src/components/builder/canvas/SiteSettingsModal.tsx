@@ -25,6 +25,11 @@ import ColorPicker from '@/components/builder/editor/ColorPicker';
 import FontPicker from '@/components/builder/editor/FontPicker';
 import ModalShell from './ModalShell';
 import {
+  COMPONENT_DESIGN_PRESETS,
+  type ComponentDesignPresetKey,
+  type ComponentDesignPresetPatchResult,
+} from '@/lib/builder/site/component-design-presets';
+import {
   THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
   THEME_RADIUS_PRESETS,
@@ -362,6 +367,7 @@ export default function SiteSettingsModal({
   open,
   locale,
   onSaved,
+  onApplyComponentDesignPreset,
   onClose,
 }: {
   open: boolean;
@@ -373,6 +379,7 @@ export default function SiteSettingsModal({
     headerFooter: BuilderHeaderFooterConfig;
     mobileBottomBar: BuilderMobileBottomBar;
   }) => void;
+  onApplyComponentDesignPreset?: (presetKey: ComponentDesignPresetKey) => ComponentDesignPresetPatchResult;
   onClose: () => void;
 }) {
   const [settings, setSettings] = useState<SiteSettingsForm>(EMPTY_SETTINGS);
@@ -389,6 +396,19 @@ export default function SiteSettingsModal({
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const tokenImportInputRef = useRef<HTMLInputElement | null>(null);
+
+  function handleComponentDesignPresetApply(presetKey: ComponentDesignPresetKey) {
+    const preset = COMPONENT_DESIGN_PRESETS.find((candidate) => candidate.key === presetKey);
+    const result = onApplyComponentDesignPreset?.(presetKey);
+    if (!result || result.changedNodeIds.length === 0) {
+      setNotice(`${preset?.label ?? 'Component'} preset: 변경할 button/card/form 요소가 현재 페이지에 없습니다.`);
+      return;
+    }
+    setNotice(
+      `${preset?.label ?? 'Component'} preset applied to ${result.changedNodeIds.length} components`
+      + ` (${result.counts.buttons} buttons, ${result.counts.cards} cards, ${result.counts.formFields} fields, ${result.counts.formSubmits} submits).`,
+    );
+  }
 
   const fetchSettings = useCallback(async () => {
     setLoading(true);
@@ -1258,6 +1278,50 @@ export default function SiteSettingsModal({
               }}
             />
             <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>Component design presets (W179)</div>
+              <div style={presetGridStyle}>
+                {COMPONENT_DESIGN_PRESETS.map((preset) => (
+                  <section
+                    key={preset.key}
+                    data-component-design-preset={preset.key}
+                    style={presetCardStyle}
+                  >
+                    <div>
+                      <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.9rem' }}>
+                        {preset.label}
+                      </strong>
+                      <span style={{ color: '#64748b', fontSize: '0.72rem', lineHeight: 1.45 }}>
+                        {preset.description}
+                      </span>
+                    </div>
+                    <div
+                      style={{
+                        border: '1px solid #e2e8f0',
+                        borderRadius: theme.radii.md,
+                        padding: 10,
+                        background: '#f8fafc',
+                        display: 'grid',
+                        gap: 7,
+                        color: '#334155',
+                        fontSize: '0.72rem',
+                        fontWeight: 800,
+                      }}
+                    >
+                      <span>Button: {preset.buttonVariant}</span>
+                      <span>Card: {preset.cardVariant}</span>
+                      <span>Form: {preset.formInputVariant}</span>
+                    </div>
+                    <button
+                      type="button"
+                      style={presetButtonStyle}
+                      onClick={() => handleComponentDesignPresetApply(preset.key)}
+                    >
+                      Apply {preset.label}
+                    </button>
+                  </section>
+                ))}
+              </div>
+
               <div style={sectionHeadingStyle}>Design token bundle</div>
               <section style={presetCardStyle}>
                 <strong style={{ color: '#0f172a', fontSize: '0.9rem' }}>

@@ -1262,3 +1262,22 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W182는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Brand kit의 logo variant/color palette에서 실제 asset library를 직접 열고, 선택 asset을 brand asset으로 분류할 수 있다.
+
+## M37 — Component design presets bulk apply
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/site/component-design-presets.ts` — Classic/Soft/Editorial/Conversion component design preset을 정의하고, 현재 페이지의 button/card/form field/form submit 노드에 일괄 patch하는 helper를 추가했다.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Site Settings > Presets 탭에 Component design presets 영역을 추가했다. 각 preset은 button/card/form 매핑을 보여주고, 클릭 시 현재 페이지 요소들에 일괄 적용된다.
+  - `src/components/builder/canvas/SandboxPage.tsx`, `src/components/builder/canvas/SandboxModalsRoot.tsx` — modal action을 canvas store mutation과 toast에 연결했다.
+  - `src/lib/builder/site/__tests__/component-design-presets.test.ts`, `tests/builder-editor/design-pool.playwright.ts` — helper unit과 실제 modal 클릭 후 draft 저장 반영을 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/component-design-presets.test.ts` ✅ (1 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "bulk applies component design presets" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W179는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. 버튼 프리셋을 넘어서 card/form field/form submit까지 Site Settings에서 한 번에 적용되고 draft persistence까지 확인했다.

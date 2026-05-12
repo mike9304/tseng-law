@@ -1817,3 +1817,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W216/W219/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. shortcut map이 Wix형 modal처럼 keyboard dismiss를 지원하고 입력 중 취소 시 저장 side effect를 남기지 않도록 고정했다.
+
+## M75 — Plus zoom shortcut parser guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/shortcuts.ts` — shortcut combo tokenizer가 `Mod++`를 `Mod+Plus`로 해석하도록 보강하고, 실제 `+` key 입력이 Shift를 동반해도 zoomIn fallback을 허용한다.
+  - `src/lib/builder/canvas/__tests__/shortcuts.test.ts` — `Ctrl+=`, `Ctrl++`, `Ctrl+Shift++` zoomIn 매칭을 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts` ✅ (3 passed)
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+- W 판정:
+  - W216/W219는 `자동검증 통과 / 사용자 QA 대기` 유지. shortcut help가 안내하는 Cmd/Ctrl + plus zoom 경로가 parser에서 빈 key token으로 누락되지 않도록 고정했다.

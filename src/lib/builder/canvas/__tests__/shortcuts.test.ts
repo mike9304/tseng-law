@@ -29,6 +29,8 @@ describe('builder canvas shortcut map', () => {
     expect(matchShortcut(eventFor({ key: 'd', metaKey: true }))).toBe('duplicate');
     expect(matchShortcut(eventFor({ key: 'v', metaKey: true, altKey: true }))).toBe('pasteStyle');
     expect(matchShortcut(eventFor({ key: '=', ctrlKey: true }))).toBe('zoomIn');
+    expect(matchShortcut(eventFor({ key: '+', ctrlKey: true }))).toBe('zoomIn');
+    expect(matchShortcut(eventFor({ key: '+', ctrlKey: true, shiftKey: true }))).toBe('zoomIn');
     expect(matchShortcut(eventFor({ key: 'ArrowDown', shiftKey: true }))).toBe('nudgeDownLarge');
   });
 

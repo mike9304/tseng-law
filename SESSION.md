@@ -5218,3 +5218,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - shortcut parser `Mod++` edge case나 W216~W225 editor modal/accessibility 잔여 gap을 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M75 Plus zoom shortcut parser guard
+
+- self-check agent의 secondary candidate였던 `Mod++` shortcut edge를 닫았다.
+- 기존 parser는 combo를 단순 `+`로 split해 `Mod++`의 실제 key token `+`가 빈 문자열로 사라졌다. 이 때문에 help text가 안내하는 Cmd/Ctrl + `+` 경로가 일부 키보드에서 zoomIn으로 매칭되지 않을 수 있었다.
+- `tokenizeCombo()`를 추가해 `++`를 `+Plus`로 안전하게 해석하고, `+` key가 Shift 조합으로 들어오는 경우도 zoomIn fallback에서 허용했다.
+- unit test는 `Ctrl+=`, `Ctrl++`, `Ctrl+Shift++` 모두 `zoomIn`으로 매칭되는지 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts` ✅ (3 passed)
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+- 다음 후보:
+  - W216~W225 editor modal/accessibility 잔여 gap 또는 user-reported page/template locale/navigation path를 계속 재스캔한다.

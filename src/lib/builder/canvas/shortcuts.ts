@@ -254,8 +254,14 @@ function normalizeComboKey(token: string): string {
   return lower;
 }
 
+function tokenizeCombo(combo: string): string[] {
+  const trimmed = combo.trim();
+  const plusSafeCombo = trimmed === '+' ? 'Plus' : trimmed.replace(/\+\+/g, '+Plus');
+  return plusSafeCombo.split('+').map((token) => token.trim()).filter(Boolean);
+}
+
 function comboMatchesEvent(combo: string, e: KeyboardEvent): boolean {
-  const tokens = combo.split('+').map((token) => token.trim()).filter(Boolean);
+  const tokens = tokenizeCombo(combo);
   if (tokens.length === 0) return false;
 
   let needsMod = false;
@@ -281,9 +287,10 @@ function comboMatchesEvent(combo: string, e: KeyboardEvent): boolean {
   if (needsCtrl && !e.ctrlKey) return false;
   if (needsMeta && !e.metaKey) return false;
   if (needsAlt !== e.altKey) return false;
-  if (needsShift !== e.shiftKey) return false;
 
   const eventKey = normalizeEventKey(e.key);
+  const plusKeyAllowsImplicitShift = keyToken === '+' && !needsShift && eventKey === '+';
+  if (needsShift !== e.shiftKey && !plusKeyAllowsImplicitShift) return false;
   return eventKey === keyToken;
 }
 

@@ -16,6 +16,7 @@ import {
   writeSiteDocument,
 } from '@/lib/builder/site/persistence';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
+import { matchesStandardPageSlugForLocale } from '@/lib/builder/site/standard-pages';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { createHomePageCanvasDocument } from './seed-home';
 import {
@@ -389,10 +390,8 @@ const extraNavigationItems: Array<{
   label: Record<Locale, string>;
 }> = [];
 
-function findSeedPage(site: BuilderSiteDocument, seed: PageSeedDefinition): BuilderPageMeta | undefined {
-  const candidates = seed.isHomePage
-    ? site.pages.filter((page) => page.isHomePage || page.slug === '')
-    : site.pages.filter((page) => page.slug === seed.slug);
+function findSeedPage(site: BuilderSiteDocument, locale: Locale, seed: PageSeedDefinition): BuilderPageMeta | undefined {
+  const candidates = site.pages.filter((page) => matchesStandardPageSlugForLocale(page, locale, seed.slug));
 
   return [...candidates].sort((left, right) => {
     const publishedDelta = Number(Boolean(right.publishedAt)) - Number(Boolean(left.publishedAt));
@@ -412,8 +411,7 @@ async function removeDuplicateSeedPages(
   const duplicateIds = site.pages
     .filter((page) => {
       if (page.pageId === preferredPageId) return false;
-      if (seed.isHomePage) return page.isHomePage || page.slug === '';
-      return page.slug === seed.slug;
+      return matchesStandardPageSlugForLocale(page, locale, seed.slug);
     })
     .map((page) => page.pageId);
 
@@ -505,7 +503,7 @@ async function seedExistingPageIfNeeded(
 }
 
 async function createAndSeedPage(siteId: string, locale: Locale, seed: PageSeedDefinition) {
-  const existing = findSeedPage(await readSiteDocument(siteId, locale), seed);
+  const existing = findSeedPage(await readSiteDocument(siteId, locale), locale, seed);
   if (existing) {
     if (seed.isHomePage) {
       await seedExistingHomeIfNeeded(siteId, locale, existing, seed);
@@ -530,7 +528,7 @@ async function ensureStandardNavigation(siteId: string, locale: Locale) {
   for (const seed of pageSeeds) {
     if (seed.includeInNavigation === false) continue;
 
-    const page = findSeedPage(site, seed);
+    const page = findSeedPage(site, locale, seed);
     if (!page) continue;
 
     const href = seed.slug ? `/${seed.slug}` : '/';
@@ -575,7 +573,7 @@ async function seedSitePagesInternal(siteId: string, locale: Locale): Promise<vo
 
   for (const seed of pageSeeds) {
     const site = await readSiteDocument(siteId, locale);
-    const existing = findSeedPage(site, seed);
+    const existing = findSeedPage(site, locale, seed);
     if (existing) {
       if (seed.isHomePage) {
         await seedExistingHomeIfNeeded(siteId, locale, existing, seed);
@@ -589,7 +587,7 @@ async function seedSitePagesInternal(siteId: string, locale: Locale): Promise<vo
     await createAndSeedPage(siteId, locale, seed);
 
     const refreshedSite = await readSiteDocument(siteId, locale);
-    const created = findSeedPage(refreshedSite, seed);
+    const created = findSeedPage(refreshedSite, locale, seed);
     if (created) {
       await removeDuplicateSeedPages(siteId, locale, seed, created.pageId);
     }

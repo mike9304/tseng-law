@@ -1830,3 +1830,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W216/W219는 `자동검증 통과 / 사용자 QA 대기` 유지. shortcut help가 안내하는 Cmd/Ctrl + plus zoom 경로가 parser에서 빈 key token으로 누락되지 않도록 고정했다.
+
+## M76 — Locale standard page seed guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/site/standard-pages.ts` — required standard page seed 판단을 locale-aware helper로 분리했다.
+  - `src/app/(builder)/[locale]/admin-builder/page.tsx` — `/ko/admin-builder` 같은 editor entry가 요청 locale 기준으로 standard page 누락을 판단한다.
+  - `src/lib/builder/canvas/seed-pages.ts` — seed page lookup과 duplicate cleanup이 같은 locale의 홈/slug만 기존/중복으로 취급하도록 변경했다.
+  - `src/lib/builder/site/__tests__/standard-pages.test.ts` — 다른 locale 홈/slug가 요청 locale seed를 막지 않는지, locale-less legacy pages는 default Korean으로만 취급되는지 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/site/__tests__/standard-pages.test.ts` ✅ (5 passed)
+  - `npm run typecheck` ✅
+  - local `/ko/admin-builder?m76Seed=...` 요청 후 authenticated pages API에서 Korean home restored 확인 ✅ (`count: 12`, `slug: ""`, `locale: "ko"`)
+  - `git diff --check` ✅
+- W 판정:
+  - W14/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 다른 locale의 seed page가 한국어 홈/표준 페이지 생성을 막아 editor가 엉뚱한 첫 페이지로 열리는 경로를 고정했다.

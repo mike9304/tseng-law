@@ -5231,3 +5231,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - W216~W225 editor modal/accessibility 잔여 gap 또는 user-reported page/template locale/navigation path를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M76 Locale standard page seed guard
+
+- 실제 로컬 상태에서 `/api/builder/site/pages?locale=ko`에 한국어 홈이 빠졌고 `/ko/admin-builder` 상단 current page가 `/lawyers`로 잡히는 상태를 확인했다. 사용자가 말한 “한국어 편집기인데 다른 언어/페이지처럼 보임” 계열의 원인 후보였다.
+- admin-builder의 standard page seed 판단을 전체 site pages 기준에서 요청 locale 기준으로 분리했다.
+- `seed-pages` 내부의 `findSeedPage()`와 duplicate cleanup도 같은 locale의 seed page만 기존/중복으로 보도록 고쳐, zh-hant 홈/slug가 ko 홈/slug 생성을 막거나 cleanup 대상이 되지 않게 했다.
+- `standard-pages.test.ts`는 다른 locale의 홈/slug만 있을 때 요청 locale은 seed가 필요하다고 판정하고, legacy locale-less pages는 default Korean으로만 취급하는지 검증한다.
+- 실제 로컬 검증:
+  - `/ko/admin-builder?m76Seed=...` 요청 후 `/api/builder/site/pages?locale=ko`가 `count: 12`, home `{ slug: "", locale: "ko", title: "홈" }`을 반환했다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/site/__tests__/standard-pages.test.ts` ✅ (5 passed)
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+- 다음 후보:
+  - locale별 navigation href 저장 형태와 public/editor page projection 잔여 gap을 계속 재스캔한다.

@@ -21,6 +21,7 @@ import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair'
 import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
 import type { BuilderNavItem, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { mergeHeaderMegaChildren, type HeaderMegaKey } from '@/lib/builder/site/header-mega';
+import { needsStandardPageSeedForLocale } from '@/lib/builder/site/standard-pages';
 
 export const dynamic = 'force-dynamic';
 
@@ -438,18 +439,6 @@ function upgradePublicHeaderNavigation(site: BuilderSiteDocument): BuilderSiteDo
   };
 }
 
-const REQUIRED_SEED_SLUGS = ['', 'about', 'services', 'contact', 'lawyers', 'faq', 'pricing', 'reviews', 'columns', 'privacy', 'disclaimer'];
-
-function needsStandardPageSeed(sitePages: Array<{ slug: string; isHomePage?: boolean }>): boolean {
-  if (sitePages.length === 0) return true;
-  return REQUIRED_SEED_SLUGS.some((slug) => {
-    if (slug === '') {
-      return !sitePages.some((page) => page.isHomePage || page.slug === '');
-    }
-    return !sitePages.some((page) => page.slug === slug);
-  });
-}
-
 /**
  * Unified builder entry point.
  *
@@ -474,7 +463,7 @@ export default async function BuilderMainPage({
   // Try to load from site document (multi-page model). Seeding every request is
   // expensive because it checks each page canvas; only do it when metadata is missing.
   let site = await readSiteDocument('default', locale);
-  if (force || needsStandardPageSeed(site.pages)) {
+  if (force || needsStandardPageSeedForLocale(site.pages, locale)) {
     await seedSitePages('default', locale);
     site = await readSiteDocument('default', locale);
   }

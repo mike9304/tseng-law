@@ -329,6 +329,53 @@ test.describe('/ko/admin-builder section design templates', () => {
     }
   });
 
+  test('traps focus in the page template preview and restores to the preview trigger', async ({ page }) => {
+    const token = Date.now().toString(36);
+    await openBuilder(page, `/ko/admin-builder?templatePreviewFocus=${token}`);
+    await page.keyboard.press('Escape');
+
+    const catalogDrawer = await openCatalogDrawer(page);
+    const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+    await addSearch.fill('법률');
+    const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
+    const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
+    await expect(lawHomeResult).toContainText('법률사무소 홈');
+    await lawHomeResult.click();
+
+    const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
+    await expect(gallery).toBeVisible();
+    const previewTrigger = gallery.getByRole('button', { name: '법률사무소 홈 미리보기' });
+    await previewTrigger.click();
+
+    const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+    await expect(preview).toBeVisible();
+    const closeButton = preview.getByRole('button', { name: 'Close' });
+    const useButton = preview.getByRole('button', { name: '이 템플릿 사용' });
+    await expect(closeButton).toBeFocused();
+
+    await page.keyboard.press('Shift+Tab');
+    await expect(useButton).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(closeButton).toBeFocused();
+
+    await page.evaluate(() => {
+      const outsideButton = document.createElement('button');
+      outsideButton.type = 'button';
+      outsideButton.dataset.builderTemplatePreviewOutsideFocusProbe = 'true';
+      outsideButton.textContent = 'outside template preview focus probe';
+      document.body.appendChild(outsideButton);
+      outsideButton.focus();
+    });
+    await expect(closeButton).toBeFocused();
+
+    await page.keyboard.press('Escape');
+    await expect(preview).not.toBeVisible();
+    await expect(previewTrigger).toBeFocused();
+
+    await page.keyboard.press('Escape');
+    await expect(gallery).not.toBeVisible();
+  });
+
   test('creates and selects a real page from a page template', async ({ page }) => {
     test.setTimeout(90_000);
 

@@ -5382,3 +5382,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - `TemplateGalleryModal`/template preview 계열이나 color/font picker popover의 keyboard/focus gap을 계속 줄인다.
+
+## 2026-05-13 Codex /goal M87 Template preview ModalShell focus guard
+
+- `TemplateGalleryModal`은 ModalShell을 쓰지만, ModalShell에는 programmatic/external focus가 dialog 밖으로 나갔을 때 다시 끌어오는 guard가 없었다. nested preview는 별도 전역 Escape listener도 가지고 있어 ModalShell의 topmost 처리와 중복될 수 있었다.
+- `ModalShell`에 `focusin` guard를 추가해 topmost shell 밖으로 focus가 이동하면 첫 focusable로 되돌린다. hidden/aria-hidden 요소는 focus 순서에서 제외한다.
+- template preview nested modal의 별도 Escape listener를 제거하고, preview를 연 버튼을 `previewReturnFocusRef`로 기억해 닫힌 뒤 해당 미리보기 trigger로 focus를 명시 복귀시킨다.
+- 첫 focused test는 preview close 뒤 trigger focus 복귀가 안 돼 실패했고, trigger restore를 추가한 뒤 통과했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "traps focus in the page template preview" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom|traps focus in the page template slug prompt|keeps the page template creation prompt usable" --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - ModalShell 미사용 color/font picker popover 또는 published lightbox/popup overlay의 keyboard/focus gap을 계속 점검한다.

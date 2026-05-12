@@ -1983,3 +1983,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W84/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 컨테이너 우클릭 → 섹션 저장 modal에서 keyboard focus가 context menu/canvas로 새는 경로를 닫았다.
+
+## M87 — Template preview ModalShell focus guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/ModalShell.tsx` — ModalShell 기반 dialog에 외부/programmatic focus 재진입 차단을 추가하고, hidden/aria-hidden 요소를 focus 순서에서 제외했다.
+  - `src/components/builder/canvas/TemplateGalleryModal.tsx` — template preview nested modal의 별도 전역 Escape listener를 제거하고, preview trigger를 기억해 닫힌 뒤 해당 미리보기 버튼으로 focus를 명시 복귀시킨다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Add 패널 → page template showroom → nested preview에서 Tab trap, 외부 focus 차단, Escape close, preview trigger focus 복귀를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "traps focus in the page template preview" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom|traps focus in the page template slug prompt|keeps the page template creation prompt usable" --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 템플릿 preview nested modal에서 focus가 parent gallery/editor로 새거나 닫힌 뒤 위치를 잃는 경로를 닫았다.

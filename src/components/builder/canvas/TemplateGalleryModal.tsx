@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import { getAllTemplates } from '@/lib/builder/templates/registry';
 import type {
@@ -310,7 +310,7 @@ function TemplateCard({
   template: PageTemplate;
   hovered: boolean;
   onHover: (id: string | null) => void;
-  onPreview: (template: PageTemplate) => void;
+  onPreview: (template: PageTemplate, trigger: HTMLElement) => void;
   onSelect: (template: PageTemplate) => void;
 }) {
   const palette = getTemplatePalette(template.paletteKey);
@@ -342,7 +342,7 @@ function TemplateCard({
           cursor: 'pointer',
           borderBottom: '1px solid #dbe3ef',
         }}
-        onClick={() => onPreview(template)}
+        onClick={(event) => onPreview(template, event.currentTarget)}
         aria-label={`${template.name} 미리보기`}
       >
         <TemplateThumbnailRenderer template={template} width={320} height={190} />
@@ -376,7 +376,7 @@ function TemplateCard({
             background: '#ffffff',
             color: '#334155',
           }}
-          onClick={() => onPreview(template)}
+          onClick={(event) => onPreview(template, event.currentTarget)}
         >
           미리보기
         </button>
@@ -413,18 +413,6 @@ function PreviewPanel({
     : viewport === 'tablet'
       ? { width: 420, height: 560 }
       : { width: 260, height: 560 };
-
-  useEffect(() => {
-    const handler = (event: KeyboardEvent) => {
-      if (event.key !== 'Escape') return;
-      event.preventDefault();
-      event.stopPropagation();
-      event.stopImmediatePropagation();
-      onClose();
-    };
-    window.addEventListener('keydown', handler, true);
-    return () => window.removeEventListener('keydown', handler, true);
-  }, [onClose]);
 
   return (
     <ModalShell
@@ -533,6 +521,7 @@ export default function TemplateGalleryModal({
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [filters, setFilters] = useState<TemplateFilterState>(DEFAULT_TEMPLATE_FILTERS);
   const [previewTemplate, setPreviewTemplate] = useState<PageTemplate | null>(null);
+  const previewReturnFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const normalizedInitialSearch = initialSearch.trim();
@@ -551,20 +540,6 @@ export default function TemplateGalleryModal({
     return () => window.clearTimeout(timeoutId);
   }, [onSearchChange, searchInput]);
 
-  useEffect(() => {
-    const handler = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        const modalShells = Array.from(document.querySelectorAll('[data-modal-shell="true"]'));
-        const topmostShell = modalShells[modalShells.length - 1] ?? null;
-        if (topmostShell?.getAttribute('data-modal-nested') === 'true') return;
-        if (previewTemplate) return;
-        onClose();
-      }
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [onClose, previewTemplate]);
-
   const filteredTemplates = useMemo(() => {
     return allTemplates.filter((template) => {
       const categoryMatches = activeCategory === 'all' || template.category === activeCategory;
@@ -582,6 +557,20 @@ export default function TemplateGalleryModal({
 
   const selectTemplate = (template: PageTemplate) => {
     onSelect(cloneTemplateDocument(template.document), template.name);
+  };
+
+  const openPreview = (template: PageTemplate, trigger: HTMLElement) => {
+    previewReturnFocusRef.current = trigger;
+    setPreviewTemplate(template);
+  };
+
+  const closePreview = () => {
+    const restoreTarget = previewReturnFocusRef.current;
+    setPreviewTemplate(null);
+    window.setTimeout(() => {
+      if (restoreTarget?.isConnected) restoreTarget.focus({ preventScroll: true });
+      previewReturnFocusRef.current = null;
+    }, 0);
   };
 
   const updateFilter = <K extends keyof TemplateFilterState>(key: K, value: TemplateFilterState[K]) => {
@@ -746,7 +735,7 @@ export default function TemplateGalleryModal({
                       template={template}
                       hovered={hoveredId === `featured-${template.id}`}
                       onHover={(id) => setHoveredId(id ? `featured-${id}` : null)}
-                      onPreview={setPreviewTemplate}
+                      onPreview={openPreview}
                       onSelect={selectTemplate}
                     />
                   ))}
@@ -789,7 +778,7 @@ export default function TemplateGalleryModal({
                       template={template}
                       hovered={hoveredId === template.id}
                       onHover={setHoveredId}
-                      onPreview={setPreviewTemplate}
+                      onPreview={openPreview}
                       onSelect={selectTemplate}
                     />
                   ))}
@@ -802,7 +791,7 @@ export default function TemplateGalleryModal({
       {previewTemplate ? (
         <PreviewPanel
           template={previewTemplate}
-          onClose={() => setPreviewTemplate(null)}
+          onClose={closePreview}
           onSelect={selectTemplate}
         />
       ) : null}

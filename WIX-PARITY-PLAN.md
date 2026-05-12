@@ -88,3 +88,4 @@
 | M84 | QA     | SEO panel focus trap | W186,W190,W216,W225 | 1h | M83 | 🟡 SEO panel focus trap/Escape/toolbar focus 복귀 자동검증 통과 / 사용자 QA 대기 |
 | M85 | QA     | Version history focus trap | W195,W216,W225 | 1h | M84 | 🟡 버전 히스토리/복원 확인 focus trap/Escape/toolbar focus 복귀 자동검증 통과 / 사용자 QA 대기 |
 | M86 | QA     | Save section modal focus trap | W84,W216,W225 | 1h | M85 | 🟡 섹션 저장 modal focus trap/Escape/context menu 경로 자동검증 통과 / 사용자 QA 대기 |
+| M87 | QA     | Template preview ModalShell focus guard | W14,W18,W216,W225 | 1h | M86 | 🟡 템플릿 preview focus trap/외부 focus 차단/trigger 복귀 자동검증 통과 / 사용자 QA 대기 |

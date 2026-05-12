@@ -99,6 +99,17 @@ function prefersReducedMotion(): boolean {
   return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 }
 
+function getFocusableElements(panel: HTMLElement): HTMLElement[] {
+  return Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((node) => (
+    !node.hasAttribute('disabled') &&
+    node.tabIndex !== -1 &&
+    !node.hidden &&
+    !node.closest('[hidden]') &&
+    node.getAttribute('aria-hidden') !== 'true' &&
+    node.getClientRects().length > 0
+  ));
+}
+
 function getActionStyle(variant: ModalShellAction['variant']): string {
   if (variant === 'primary') return styles.actionPrimary;
   if (variant === 'danger') return styles.actionDanger;
@@ -151,7 +162,7 @@ export default function ModalShell({
     restoreFocusRef.current = (document.activeElement as HTMLElement | null) ?? null;
     const panel = internalPanelRef.current;
     if (panel) {
-      const focusables = panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      const focusables = getFocusableElements(panel);
       (focusables[0] ?? panel).focus({ preventScroll: true });
     }
     return () => {
@@ -185,8 +196,7 @@ export default function ModalShell({
       if (event.key !== 'Tab') return;
       const panel = internalPanelRef.current;
       if (!panel) return;
-      const nodes = Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
-        .filter((node) => !node.hasAttribute('disabled') && node.tabIndex !== -1);
+      const nodes = getFocusableElements(panel);
       if (nodes.length === 0) {
         event.preventDefault();
         panel.focus({ preventScroll: true });
@@ -205,8 +215,23 @@ export default function ModalShell({
         first.focus({ preventScroll: true });
       }
     }
+    function handleFocusIn(event: FocusEvent) {
+      const panel = internalPanelRef.current;
+      if (!panel) return;
+      const currentShell = panel.closest('[data-modal-shell="true"]');
+      const modalShells = Array.from(document.querySelectorAll('[data-modal-shell="true"]'));
+      const topmostShell = modalShells[modalShells.length - 1] ?? null;
+      if (currentShell && topmostShell && currentShell !== topmostShell) return;
+      if (panel.contains(event.target as Node | null)) return;
+      const nodes = getFocusableElements(panel);
+      (nodes[0] ?? panel).focus({ preventScroll: true });
+    }
     window.addEventListener('keydown', handleKey, true);
-    return () => window.removeEventListener('keydown', handleKey, true);
+    document.addEventListener('focusin', handleFocusIn);
+    return () => {
+      window.removeEventListener('keydown', handleKey, true);
+      document.removeEventListener('focusin', handleFocusIn);
+    };
   }, [dismissable, onClose, open]);
 
   const handleBackdropClick = useCallback(

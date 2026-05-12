@@ -858,23 +858,13 @@ export default function CanvasNode({
               ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
               : 'none'),
           opacity: renderedOpacity,
-          // Text/heading/button can have content that legitimately exceeds
-          // the node's rect (designer is still resizing). Show overflow in
-          // the editor so the clipping is visible — without this the
-          // designer can't tell the box is too small.
+          // Containers + the inline editor always show overflow because
+          // their children may legitimately extend the bounds. Other
+          // widgets only show overflow when SELECTED — so designers
+          // notice their box is too short while editing, without
+          // unselected widgets bleeding text into each other.
           overflow:
-            isEditing
-            || isContainerLikeKind(node.kind)
-            || node.kind === 'text'
-            || node.kind === 'heading'
-            || node.kind === 'button'
-            || node.kind === 'notification-bar'
-            || node.kind === 'address-block'
-            || node.kind === 'business-hours'
-            || node.kind === 'pricing-table'
-            || node.kind === 'comparison-table'
-            || node.kind === 'team-member-card'
-            || node.kind === 'service-feature-card'
+            isEditing || isContainerLikeKind(node.kind) || selected
               ? 'visible'
               : undefined,
           pointerEvents: isEditing ? 'auto' : 'none',

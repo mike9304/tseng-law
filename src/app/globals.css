@@ -19236,7 +19236,13 @@ body:has([data-builder-published-page='true']) {
   color: var(--text-secondary, #5f7869);
 }
 
-.builder-pub-node[data-builder-flow-section='true'] + .builder-pub-node[data-builder-flow-section='true'] {
+/**
+ * Fallback gap between adjacent flow composite sections. Inline style on
+ * each section (set by public-page.tsx based on the designer's rect.y)
+ * normally takes precedence, but this provides breathing room when no
+ * inline marginTop was computed.
+ */
+.builder-pub-node[data-builder-flow-section='true'] + .builder-pub-node[data-builder-flow-section='true']:not([style*='margin-top']) {
   margin-block-start: clamp(56px, 7vw, 96px);
 }
 

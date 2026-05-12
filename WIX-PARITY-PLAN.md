@@ -53,3 +53,4 @@
 | M49 | QA     | Add panel page template showroom entry | W14,W18,W216 | 2h | M48 | 🟡 Add 패널 261개 페이지 템플릿 진입 자동검증 통과 / 사용자 QA 대기 |
 | M50 | QA     | Add-to-page template search handoff | W14,W18,W216 | 1h | M49 | 🟡 Add 검색어 템플릿 쇼룸 전달 자동검증 통과 / 사용자 QA 대기 |
 | M51 | QA     | Page template prompt back path | W14,W18,W216 | 1h | M50 | 🟡 템플릿 적용 확인 단계 뒤로가기 자동검증 통과 / 사용자 QA 대기 |
+| M52 | QA     | Page template search previews | W14,W18,W216 | 1h | M51 | 🟡 Add 검색 결과 페이지 템플릿 미리보기 자동검증 통과 / 사용자 QA 대기 |

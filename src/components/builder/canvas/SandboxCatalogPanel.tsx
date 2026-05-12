@@ -19,6 +19,8 @@ import {
   getBuiltInSectionSearchResults,
   type BuiltInSectionTemplate,
 } from '@/lib/builder/sections/templates';
+import { getTemplateCatalog } from '@/lib/builder/templates/registry';
+import type { TemplateCatalogItem } from '@/lib/builder/templates/types';
 import { BuiltInSectionsPanel } from '@/components/builder/sections/BuiltInSectionsPanel';
 import SavedSectionsPanel from '@/components/builder/sections/SavedSectionsPanel';
 import type { Locale } from '@/lib/locales';
@@ -26,6 +28,7 @@ import styles from './SandboxPage.module.css';
 
 const STAGE_WIDTH = 1280;
 const STAGE_HEIGHT = 880;
+const PAGE_TEMPLATE_PREVIEW_LIMIT = 4;
 
 const CATEGORY_ORDER: BuilderComponentCategory[] = ['basic', 'media', 'layout', 'domain'];
 const CATEGORY_LABELS: Record<BuilderComponentCategory, string> = {
@@ -1692,6 +1695,48 @@ function socialWidgetMatchesSearch(preset: SocialWidgetPreset, query: string): b
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
+function pageTemplateMatchesSearch(template: TemplateCatalogItem, query: string): boolean {
+  if (!query) return true;
+  return [
+    template.name,
+    template.description,
+    template.id,
+    template.category,
+    template.subcategory,
+    template.visualStyle,
+    template.density,
+    template.layoutFamily,
+    template.pageType,
+    template.qualityTier,
+    template.ctaGoal,
+    ...(template.tags ?? []),
+    ...(template.sections ?? []),
+    'page template',
+    'page templates',
+    '페이지 템플릿',
+    '템플릿 쇼룸',
+    'template market',
+    'ai design',
+  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+}
+
+function pageTemplateSearchScore(template: TemplateCatalogItem, query: string): number {
+  if (!query) return 0;
+  const includes = (value: unknown) => String(value ?? '').toLocaleLowerCase('ko-KR').includes(query);
+  let score = 0;
+  if (includes(template.name)) score += 100;
+  if (includes(template.id)) score += 80;
+  if (includes(template.subcategory)) score += 70;
+  if (includes(template.description)) score += 60;
+  if (template.tags?.some(includes)) score += 45;
+  if (template.sections?.some(includes)) score += 35;
+  if (includes(template.category)) score += 30;
+  if (includes(template.pageType)) score += 20;
+  if (template.featured) score += 6;
+  if (template.qualityTier === 'premium') score += 4;
+  return score;
+}
+
 export default function SandboxCatalogPanel({
   locale,
   onOpenPageTemplates,
@@ -1709,6 +1754,7 @@ export default function SandboxCatalogPanel({
   });
   const nodes = document?.nodes ?? [];
   const components = listComponents();
+  const pageTemplateCatalog = useMemo(() => getTemplateCatalog(), []);
   const effectiveLocale: Locale = locale ?? (document?.locale as Locale) ?? 'ko';
   const normalizedQuery = normalizeSearchTerm(query);
 
@@ -1762,6 +1808,18 @@ export default function SandboxCatalogPanel({
     () => getBuiltInSectionSearchResults('').length,
     [],
   );
+  const matchingPageTemplates = useMemo(
+    () => (normalizedQuery
+      ? pageTemplateCatalog
+        .filter((template) => pageTemplateMatchesSearch(template, normalizedQuery))
+        .sort((left, right) => (
+          pageTemplateSearchScore(right, normalizedQuery)
+          - pageTemplateSearchScore(left, normalizedQuery)
+        ))
+      : []),
+    [normalizedQuery, pageTemplateCatalog],
+  );
+  const visiblePageTemplatePreviews = matchingPageTemplates.slice(0, PAGE_TEMPLATE_PREVIEW_LIMIT);
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -1796,8 +1854,8 @@ export default function SandboxCatalogPanel({
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length + DECORATIVE_WIDGET_PRESETS.length + totalBuiltInSectionTemplateCount;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length + visibleDecorativeWidgetPresets.length + visibleBuiltInSectionTemplates.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length + DECORATIVE_WIDGET_PRESETS.length + totalBuiltInSectionTemplateCount + pageTemplateCatalog.length;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length + visibleDecorativeWidgetPresets.length + visibleBuiltInSectionTemplates.length + matchingPageTemplates.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -2108,6 +2166,57 @@ export default function SandboxCatalogPanel({
         {normalizedQuery ? (
           <div className={styles.catalogResultMeta} aria-live="polite">
             Showing {visibleCatalogCount} result{visibleCatalogCount === 1 ? '' : 's'} for “{query.trim()}”
+          </div>
+        ) : null}
+
+        {normalizedQuery && onOpenPageTemplates && matchingPageTemplates.length > 0 ? (
+          <div
+            className={styles.catalogCategorySection}
+            data-builder-page-template-search-results="true"
+          >
+            <div className={styles.catalogCategoryButton}>
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>PG</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>Page template showroom</span>
+                  <span
+                    className={styles.catalogCategoryHint}
+                    data-builder-page-template-result-count="true"
+                  >
+                    {matchingPageTemplates.length}/{pageTemplateCatalog.length} page templates
+                  </span>
+                </span>
+              </span>
+              <button
+                type="button"
+                className={styles.catalogQuickAddButton}
+                onClick={() => onOpenPageTemplates(query)}
+              >
+                전체 결과 보기
+              </button>
+            </div>
+
+            <div className={styles.mediaWidgetGrid}>
+              {visiblePageTemplatePreviews.map((template) => (
+                <button
+                  key={template.id}
+                  type="button"
+                  className={styles.mediaWidgetPresetButton}
+                  data-builder-page-template-result-id={template.id}
+                  onClick={() => onOpenPageTemplates(template.name)}
+                >
+                  <span className={styles.mediaWidgetPresetIcon}>
+                    {String(template.pageType ?? template.category).slice(0, 2).toUpperCase()}
+                  </span>
+                  <span className={styles.mediaWidgetPresetCopy}>
+                    <strong>{template.name}</strong>
+                    <small>
+                      {template.category} · {template.pageType ?? 'page'} · {template.sectionCount} sections
+                    </small>
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
         ) : null}
 

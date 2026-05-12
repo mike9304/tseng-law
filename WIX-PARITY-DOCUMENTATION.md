@@ -1505,3 +1505,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 지적한 template apply 후 back affordance 부재를 page template 생성 단계까지 보강했다.
+
+## M52 — Page template search previews
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — Add 패널 검색 결과에 page template showroom preview 영역을 추가했다. `getTemplateCatalog()` metadata를 사용해 261개 page template 중 query match를 찾고, 이름/id/설명/태그/섹션 매칭 score로 상위 4개를 보여준다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Add 패널 `법률` 검색 시 page template result 영역, `/261 page templates` count, `law-home` result card, card click 후 showroom search handoff, preview/use/back path를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add 검색에서 page template을 바로 발견하고 showroom으로 진입하는 전문 템플릿 마켓형 흐름을 보강했다.

@@ -4938,3 +4938,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 페이지/섹션 템플릿 검색 경험을 한 단계 더 통합하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M52 Page template search previews
+
+- Add 패널 검색 결과 안에 261개 page template showroom의 상위 결과를 직접 노출했다. 사용자는 CTA만 누르는 대신 `법률` 검색 결과에서 바로 `법률사무소 홈` 같은 page template card를 볼 수 있다.
+- `SandboxCatalogPanel`이 page template catalog metadata를 검색하고, 이름/id/설명/태그/섹션 매칭에 점수를 줘 더 직접적인 match를 앞에 배치한다.
+- page template result card를 클릭하면 해당 템플릿 이름으로 showroom을 열고, 기존 preview/use/back prompt 흐름도 이어진다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - template result card에 thumbnail/metadata를 더 풍부하게 하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

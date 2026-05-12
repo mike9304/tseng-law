@@ -285,4 +285,39 @@ test.describe('M28 editor advanced panels', () => {
       }
     }
   });
+
+  test('closes the shortcut map with Escape without persisting focused input edits', async ({ page }) => {
+    await page.addInitScript((key) => window.localStorage.removeItem(key), PREFS_KEY);
+    const token = `${Date.now().toString(36)}-escape`;
+    let pageId: string | null = null;
+
+    try {
+      pageId = await createAdvancedPanelsPage(page.request, token);
+      await page.goto(`/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&shortcutEscape=${token}`, {
+        waitUntil: 'domcontentloaded',
+      });
+      await expect(page.locator('[data-editor-shell]')).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
+
+      await page.locator('[data-builder-prefs-button]').click();
+      await page.locator('[data-builder-shortcut-map-open="true"]').click();
+      const keybindingsModal = page.locator('[data-builder-keybindings-modal="true"]');
+      await expect(keybindingsModal).toBeVisible();
+      await keybindingsModal.locator('[data-builder-keybinding-input="duplicate"]').fill('Mod+Alt+Z');
+      await page.keyboard.press('Escape');
+      await expect(keybindingsModal).toBeHidden();
+
+      const prefs = await page.evaluate((key) => JSON.parse(window.localStorage.getItem(key) || '{}'), PREFS_KEY) as {
+        customKeybindings?: Array<{ action: string; combo: string }>;
+      };
+      expect(prefs.customKeybindings ?? []).not.toContainEqual({ action: 'duplicate', combo: 'Mod+Alt+Z' });
+      await expect.poll(() => countSelectedNodes(page)).toBe(0);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(token),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
 });

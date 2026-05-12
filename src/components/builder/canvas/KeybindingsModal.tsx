@@ -34,6 +34,19 @@ export default function KeybindingsModal({ open, onClose }: Props) {
     setBindings(DEFAULT_KEYBINDINGS.map((d) => ({ action: d.action, combo: map.get(d.action) ?? d.combo })));
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return undefined;
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      onClose();
+    }
+    window.addEventListener('keydown', handleEscape, true);
+    return () => window.removeEventListener('keydown', handleEscape, true);
+  }, [onClose, open]);
+
   function updateCombo(action: string, combo: string) {
     setBindings((prev) => prev.map((b) => (b.action === action ? { ...b, combo } : b)));
   }

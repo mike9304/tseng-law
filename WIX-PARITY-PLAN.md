@@ -75,3 +75,4 @@
 | M71 | QA     | API template link normalization guard | W14,W193,W216 | 1h | M70 | 🟡 zh-hant/en synthetic 템플릿 내부 링크 저장 정규화 자동검증 통과 / 사용자 QA 대기 |
 | M72 | QA     | Auto navigation rename/delete sync | W14,W18,W216 | 1h | M69 | 🟡 자동 추가 메뉴 label/href rename/delete 동기화 자동검증 통과 / 사용자 QA 대기 |
 | M73 | QA     | Undo timeline action evidence | W216,W225 | 1h | M72 | 🟡 undo timeline 버튼 실제 undo/redo 자동검증 통과 / 사용자 QA 대기 |
+| M74 | QA     | Shortcut modal Escape close | W216,W219,W225 | 1h | M73 | 🟡 focused shortcut input Escape 닫기/미저장 자동검증 통과 / 사용자 QA 대기 |

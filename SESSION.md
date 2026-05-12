@@ -5205,3 +5205,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - W216~W225 editor polish와 page/template locale/navigation 잔여 gap을 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M74 Shortcut modal Escape close
+
+- self-check agent가 지목한 W219/W225 editor polish gap: `KeybindingsModal`은 backdrop/cancel/save로는 닫히지만, keybinding input에 focus가 있을 때 `Escape`로 닫히지 않았다.
+- `KeybindingsModal`에 open-scoped capture `keydown` listener를 추가해 `Escape`를 prevent/stopImmediatePropagation 후 `onClose()`로 처리한다. canvas selection clear 같은 하위 shortcut handler로 전파되지 않게 했다.
+- Playwright는 shortcut map modal을 열고 `duplicate` input에 임시 combo를 입력한 뒤 `Escape`로 닫고, localStorage customKeybindings에 저장되지 않으며 selection도 생기지 않는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts -g "closes the shortcut map with Escape" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - shortcut parser `Mod++` edge case나 W216~W225 editor modal/accessibility 잔여 gap을 계속 재스캔한다.

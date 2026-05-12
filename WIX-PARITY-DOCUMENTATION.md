@@ -1803,3 +1803,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. History 패널이 표시만 되는 상태가 아니라 실제 undo/redo command surface로 동작함을 자동검증으로 고정했다.
+
+## M74 — Shortcut modal Escape close
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/KeybindingsModal.tsx` — modal이 open일 때 `Escape` keydown을 capture 단계에서 처리해 닫고, canvas/editor shortcut handler로 전파되지 않게 했다.
+  - `tests/builder-editor/editor-advanced-panels.playwright.ts` — keybinding input이 focus된 상태에서 `Escape`로 modal이 닫히며, 입력한 임시 combo가 저장되지 않고 selection side effect도 없는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts -g "closes the shortcut map with Escape" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W216/W219/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. shortcut map이 Wix형 modal처럼 keyboard dismiss를 지원하고 입력 중 취소 시 저장 side effect를 남기지 않도록 고정했다.

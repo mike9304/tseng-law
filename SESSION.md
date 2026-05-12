@@ -5261,3 +5261,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - W216~W225 editor polish와 page/template locale/navigation 잔여 gap을 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M78 Service template reload persistence
+
+- self-check agent가 지목한 최소 잔여 위험: 주요업무 템플릿은 같은 세션 click visibility는 검증됐지만, autosave/reload 뒤에도 draft와 화면 텍스트가 유지되는지는 별도 검증이 없었다.
+- `section-template-click.playwright.ts`에 빈 테스트 page 생성 → `/ko/admin-builder?pageId=...` 진입 → Add 패널 `주요업무` 검색 → `Service Accordion` 삽입 → draft JSON에 본문 저장 확인 → editor reload → 제목/Scope/Process/Deliverables 클릭 → 화면과 draft JSON 모두에 본문 유지 확인 회귀를 추가했다.
+- 이 테스트는 사용자가 반복 보고한 “주요업무 템플릿 선택 뒤 다른 노드 선택하면 글이 없어짐” 계열을 stale draft/replace/save-after-insert race까지 포함해 막는다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "persists inserted service template text" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (10 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - W216~W225 editor polish와 page/template switching 잔여 gap을 계속 재스캔한다.

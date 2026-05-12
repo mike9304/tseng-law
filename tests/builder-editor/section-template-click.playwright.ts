@@ -18,6 +18,16 @@ async function findPageIdBySlug(page: Page, slug: string, locale = 'ko'): Promis
   return payload.pages?.find((entry) => entry.slug === slug)?.pageId ?? null;
 }
 
+async function draftDocumentText(page: Page, pageId: string, locale = 'ko'): Promise<string> {
+  const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=${encodeURIComponent(locale)}`, {
+    headers: mutationHeaders(pageId),
+    failOnStatusCode: false,
+  });
+  if (response.status() !== 200) return '';
+  const payload = (await response.json()) as { document?: unknown };
+  return JSON.stringify(payload.document ?? null);
+}
+
 function collectHrefValues(value: unknown, hrefs: string[] = []): string[] {
   if (!value || typeof value !== 'object') return hrefs;
   if (Array.isArray(value)) {
@@ -151,6 +161,77 @@ test.describe('/ko/admin-builder section design templates', () => {
 
     await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 } });
     await expect(deliverablesBody).toBeVisible();
+  });
+
+  test('persists inserted service template text after autosave and reload', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-service-reload-${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(slug));
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: `Service reload ${token}`,
+          blank: true,
+        },
+        headers: mutationHeaders(slug),
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId!)}&serviceReload=${token}`);
+      await page.keyboard.press('Escape');
+
+      const catalogDrawer = await openCatalogDrawer(page);
+      await catalogDrawer.getByRole('searchbox', { name: 'Search add elements' }).fill('주요업무');
+      const serviceTemplateButton = catalogDrawer.getByTitle('Service Accordion 섹션 추가');
+      await serviceTemplateButton.scrollIntoViewIfNeeded();
+      await expect(serviceTemplateButton).toBeVisible();
+      await serviceTemplateButton.click();
+
+      await expect.poll(async () => draftDocumentText(page, pageId!), { timeout: 30_000 }).toContain('포함 범위와 제외 범위를 명확히 합니다.');
+
+      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId!)}&serviceReloadAfter=${token}`);
+
+      const insertedTitle = page.locator('[data-node-id^="heading-"]').filter({ hasText: '서비스 상세를 단계별로 펼쳐 보게 합니다' }).last();
+      const scopeTitle = page.locator('[data-node-id^="heading-"]').filter({ hasText: 'Scope' }).last();
+      const processTitle = page.locator('[data-node-id^="heading-"]').filter({ hasText: 'Process' }).last();
+      const deliverablesTitle = page.locator('[data-node-id^="heading-"]').filter({ hasText: 'Deliverables' }).last();
+      const scopeBody = page.getByText('포함 범위와 제외 범위를 명확히 합니다.').last();
+      const processBody = page.getByText('진행 단계와 담당 역할을 설명합니다.').last();
+      const deliverablesBody = page.getByText('최종 산출물을 구체적으로 안내합니다.').last();
+
+      await expect(insertedTitle).toBeVisible();
+      await expect(scopeBody).toBeVisible();
+
+      await insertedTitle.click();
+      await expect(scopeBody).toBeVisible();
+      await scopeTitle.click();
+      await expect(scopeBody).toBeVisible();
+      await processTitle.click();
+      await expect(processBody).toBeVisible();
+      await deliverablesTitle.click();
+      await expect(deliverablesBody).toBeVisible();
+
+      const draftText = await draftDocumentText(page, pageId!);
+      expect(draftText).toContain('포함 범위와 제외 범위를 명확히 합니다.');
+      expect(draftText).toContain('진행 단계와 담당 역할을 설명합니다.');
+      expect(draftText).toContain('최종 산출물을 구체적으로 안내합니다.');
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+        }).catch(() => undefined);
+      }
+    }
   });
 
   test('opens the full page template showroom from the Add panel', async ({ page }) => {

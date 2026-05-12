@@ -1863,3 +1863,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 템플릿/페이지 생성으로 생긴 비한국어 메뉴가 한국어 editor/public header/footer에 커스텀 링크로 섞여 보이는 경로를 표시 projection에서 차단했다.
+
+## M78 — Service template reload persistence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/section-template-click.playwright.ts` — 빈 테스트 page에 `주요업무`/`Service Accordion` 템플릿을 삽입하고, autosave된 draft JSON과 editor reload 후 화면 텍스트를 함께 검증하는 회귀를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "persists inserted service template text" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (10 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. “주요업무 템플릿 선택 뒤 다른 노드 선택하면 글이 사라짐” 계열을 같은 세션 클릭뿐 아니라 autosave/reload 이후까지 고정했다.

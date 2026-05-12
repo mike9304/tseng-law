@@ -6,6 +6,8 @@ import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
 import { createZoomMeeting } from '@/lib/builder/bookings/zoom-client';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
+import { fetchPaymentIntentStatus, isPaymentIntentBookable } from '@/lib/builder/bookings/stripe-verify';
+import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -48,12 +50,49 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'paymentIntentId not allowed for free services.' }, { status: 400 });
   }
 
-  const available = await isSlotAvailable({
+  // Server-side verify the paymentIntent so a client can't fabricate
+  // an id to hold a slot or bypass payment. When STRIPE_SECRET_KEY is
+  // unset (dev) we fall through and trust the client until the webhook
+  // arrives.
+  let paymentSettled = false;
+  if (service.paymentMode === 'paid' && parsed.data.paymentIntentId) {
+    const intent = await fetchPaymentIntentStatus(parsed.data.paymentIntentId);
+    if (intent !== null) {
+      // serviceId metadata must match to prevent reusing an intent for a
+      // different service.
+      const intentServiceId = intent.metadata?.serviceId;
+      if (intentServiceId && intentServiceId !== service.serviceId) {
+        return NextResponse.json({ error: 'PaymentIntent does not match this service.' }, { status: 400 });
+      }
+      if (!isPaymentIntentBookable(intent)) {
+        return NextResponse.json({ error: `Payment not settled (status: ${intent.status})` }, { status: 402 });
+      }
+      paymentSettled = intent.status === 'succeeded';
+    } else if (process.env.NODE_ENV === 'production' && process.env.STRIPE_SECRET_KEY) {
+      // Key is set but verification failed → don't trust the intent.
+      return NextResponse.json({ error: 'PaymentIntent could not be verified.' }, { status: 402 });
+    }
+  }
+
+  const slotKey = {
     serviceId: parsed.data.serviceId,
     staffId: parsed.data.staffId,
     startAt: parsed.data.startAt,
-  });
-  if (!available) return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
+  };
+  if (!acquireSlotLock(slotKey)) {
+    return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
+  }
+
+  try {
+    const available = await isSlotAvailable(slotKey);
+    if (!available) {
+      releaseSlotLock(slotKey);
+      return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
+    }
+  } catch (err) {
+    releaseSlotLock(slotKey);
+    throw err;
+  }
 
   let meetingLink: string | undefined;
   if (service.meetingMode === 'zoom') {
@@ -83,10 +122,14 @@ export async function POST(request: NextRequest) {
     ...(parsed.data.customerTimezone ? { customerTimezone: parsed.data.customerTimezone } : {}),
     ...(meetingLink ? { meetingLink } : {}),
     ...(parsed.data.paymentIntentId
-      ? { paymentIntentId: parsed.data.paymentIntentId, paymentStatus: 'unpaid' as const }
+      ? {
+          paymentIntentId: parsed.data.paymentIntentId,
+          paymentStatus: (paymentSettled ? 'paid' : 'unpaid') as 'paid' | 'unpaid',
+        }
       : {}),
   });
   await saveBooking(booking);
+  releaseSlotLock(slotKey);
   await sendBookingConfirmation(booking, { service, staff });
   emitEvent('booking.created', {
     bookingId: booking.bookingId,

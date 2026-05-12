@@ -214,8 +214,10 @@ export async function publishPage(
   for (const targetPath of revalidatedPaths) {
     try {
       revalidatePath(targetPath);
-    } catch {
-      // dev or non-existent path
+    } catch (err) {
+      // dev or non-existent path — log so failures don't silently leave a
+      // stale cache in production.
+      console.warn('[publish] revalidatePath failed', targetPath, err);
     }
   }
 

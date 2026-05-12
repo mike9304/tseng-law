@@ -121,9 +121,25 @@ export default function CompositeRender({
       case 'legacy-page-disclaimer':
         return <DisclaimerLegacyPageBody locale={locale} />;
       default:
+        // Visible diagnostic so a designer notices the missing wiring; the
+        // canvas error boundary keeps siblings rendering.
         return (
-          <div style={{ padding: 24, color: '#94a3b8', fontSize: 13 }}>
-            Unknown composite: {componentKey}
+          <div
+            role="alert"
+            style={{
+              padding: 24,
+              color: '#b91c1c',
+              fontSize: 12,
+              border: '1.5px dashed #f87171',
+              background: 'rgba(254, 226, 226, 0.45)',
+              borderRadius: 8,
+            }}
+          >
+            <strong>Composite registry 누락</strong>
+            <div style={{ marginTop: 4, fontFamily: 'ui-monospace, Menlo, monospace' }}>{componentKey}</div>
+            <div style={{ marginTop: 4, color: '#7f1d1d' }}>
+              새 composite kind 가 components/composite/Render.tsx switch 에 추가되어야 합니다.
+            </div>
           </div>
         );
     }

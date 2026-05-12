@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { isLinkSafe } from '@/lib/builder/links';
 
 /**
  * PR #9 — Email template model.
@@ -86,22 +87,28 @@ const textSchema = z.object({
   kind: z.literal('text'),
   text: z.string().trim().min(1).max(4000),
 });
+const safeUrl = z.string().trim().url().max(2000).refine(isLinkSafe, 'Unsafe URL scheme');
+const safeColor = z.string().trim().max(40).regex(
+  /^(#[0-9a-fA-F]{3,8}|rgba?\([0-9., ]+\)|hsla?\([0-9., %]+\)|[a-zA-Z]+)$/,
+  'Invalid CSS color',
+);
+
 const buttonSchema = z.object({
   ...blockBase,
   kind: z.literal('button'),
   label: z.string().trim().min(1).max(120),
-  href: z.string().trim().url().max(2000),
-  background: z.string().max(40).optional(),
-  textColor: z.string().max(40).optional(),
+  href: safeUrl,
+  background: safeColor.optional(),
+  textColor: safeColor.optional(),
 });
 const imageSchema = z.object({
   ...blockBase,
   kind: z.literal('image'),
-  src: z.string().trim().url().max(2000),
+  src: safeUrl,
   alt: z.string().max(200).optional(),
   width: z.number().int().min(40).max(800).optional(),
 });
-const dividerSchema = z.object({ ...blockBase, kind: z.literal('divider'), color: z.string().max(40).optional() });
+const dividerSchema = z.object({ ...blockBase, kind: z.literal('divider'), color: safeColor.optional() });
 const spacerSchema = z.object({ ...blockBase, kind: z.literal('spacer'), height: z.number().int().min(4).max(120) });
 
 export const blockSchema = z.discriminatedUnion('kind', [

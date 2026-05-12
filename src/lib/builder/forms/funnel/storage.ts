@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import { get, put } from '@vercel/blob';
+import crypto from 'node:crypto';
+import { get, list, put } from '@vercel/blob';
 
 export type FunnelEventKind = 'view' | 'step' | 'submit' | 'abandon';
 
@@ -12,38 +13,93 @@ export interface FunnelEvent {
 }
 
 const ROOT = path.join(process.cwd(), 'runtime-data', 'form-funnel');
-const BLOB_PATH = 'form-funnel/events.json';
-const CAP = 5000;
+const BLOB_PREFIX = 'form-funnel/events/';
+const SOFT_CAP = 5000;
 
 function backend(): 'blob' | 'file' {
   return process.env.BLOB_READ_WRITE_TOKEN ? 'blob' : 'file';
 }
 
+function eventId(event: FunnelEvent): string {
+  const random = crypto.randomBytes(6).toString('hex');
+  const dateKey = event.at.slice(0, 10);
+  return `${dateKey}/${event.formId.replace(/[^a-z0-9_-]/gi, '_')}_${random}`;
+}
+
+/**
+ * Per-event file write so concurrent funnel events don't collide. The
+ * previous single-events.json read-modify-write pattern lost events under
+ * concurrent traffic. SOFT_CAP enforcement now lives in listFunnelEvents
+ * by sorting + slicing at read time.
+ */
 export async function appendFunnelEvent(event: FunnelEvent): Promise<void> {
-  const existing = await listFunnelEvents();
-  const next = [...existing, event].slice(-CAP);
-  const body = JSON.stringify(next);
+  const id = eventId(event);
+  const body = JSON.stringify(event);
   if (backend() === 'blob') {
-    await put(BLOB_PATH, body, { access: 'private', allowOverwrite: true, contentType: 'application/json' });
+    await put(`${BLOB_PREFIX}${id}.json`, body, {
+      access: 'private',
+      allowOverwrite: false,
+      contentType: 'application/json',
+    });
     return;
   }
-  await fs.mkdir(ROOT, { recursive: true });
-  await fs.writeFile(path.join(ROOT, 'events.json'), body, 'utf8');
+  const target = path.join(ROOT, `${id}.json`);
+  await fs.mkdir(path.dirname(target), { recursive: true });
+  await fs.writeFile(target, body, 'utf8');
 }
 
 export async function listFunnelEvents(): Promise<FunnelEvent[]> {
   try {
-    if (backend() === 'blob') {
-      const result = await get(BLOB_PATH, { access: 'private', useCache: false });
-      if (result?.statusCode === 200 && result.stream) {
-        return JSON.parse(await new Response(result.stream).text()) as FunnelEvent[];
-      }
-      return [];
-    }
-    const raw = await fs.readFile(path.join(ROOT, 'events.json'), 'utf8');
-    return JSON.parse(raw) as FunnelEvent[];
+    const events = backend() === 'blob' ? await listBlob() : await listFile();
+    events.sort((a, b) => a.at.localeCompare(b.at));
+    return events.slice(-SOFT_CAP);
   } catch {
     return [];
+  }
+}
+
+async function listBlob(): Promise<FunnelEvent[]> {
+  const result = await list({ prefix: BLOB_PREFIX });
+  const out: FunnelEvent[] = [];
+  for (const blob of result.blobs) {
+    try {
+      const item = await get(blob.pathname, { access: 'private', useCache: false });
+      if (item?.statusCode === 200 && item.stream) {
+        out.push(JSON.parse(await new Response(item.stream).text()) as FunnelEvent);
+      }
+    } catch {
+      /* skip */
+    }
+  }
+  return out;
+}
+
+async function listFile(): Promise<FunnelEvent[]> {
+  const out: FunnelEvent[] = [];
+  await walkDir(ROOT, out);
+  return out;
+}
+
+async function walkDir(dir: string, out: FunnelEvent[]): Promise<void> {
+  let entries: import('fs').Dirent[] = [];
+  try {
+    entries = await fs.readdir(dir, { withFileTypes: true });
+  } catch {
+    return;
+  }
+  for (const entry of entries) {
+    const abs = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      await walkDir(abs, out);
+      continue;
+    }
+    if (!entry.name.endsWith('.json')) continue;
+    try {
+      const raw = await fs.readFile(abs, 'utf8');
+      out.push(JSON.parse(raw) as FunnelEvent);
+    } catch {
+      /* skip */
+    }
   }
 }
 

@@ -87,6 +87,23 @@ function isValidExternalUrl(href: string): boolean {
   }
 }
 
+function siteLightboxSlugs(site?: BuilderSiteDocument | null): Set<string> {
+  const set = new Set<string>();
+  for (const lightbox of site?.lightboxes ?? []) {
+    if (lightbox.slug) set.add(lightbox.slug);
+  }
+  return set;
+}
+
+function sitePopupSlugs(site?: BuilderSiteDocument | null): Set<string> {
+  const set = new Set<string>();
+  for (const popup of site?.popups ?? []) {
+    const slug = (popup as { slug?: string }).slug;
+    if (slug) set.add(slug);
+  }
+  return set;
+}
+
 function siteSlugSet(site?: BuilderSiteDocument | null): Set<string> {
   if (!site) return new Set<string>();
   const set = new Set<string>();
@@ -140,6 +157,8 @@ export function checkBrokenLinks(
 ): CheckResult[] {
   const results: CheckResult[] = [];
   const slugs = siteSlugSet(site);
+  const lightboxSlugs = siteLightboxSlugs(site);
+  const popupSlugs = sitePopupSlugs(site);
 
   for (const node of doc.nodes) {
     for (const candidate of collectNodeLinks(node)) {
@@ -173,8 +192,35 @@ export function checkBrokenLinks(
         continue;
       }
 
-      if (isAnchorLink(trimmed) || isLightboxLink(trimmed)) {
-        // Anchor / lightbox refs not validated here — assume ok.
+      if (isAnchorLink(trimmed)) {
+        continue;
+      }
+      if (isLightboxLink(trimmed)) {
+        const slug = trimmed.slice('lightbox:'.length);
+        if (slug && !lightboxSlugs.has(slug)) {
+          results.push({
+            id: `broken-lightbox-${node.id}`,
+            severity: 'blocker',
+            category: 'links',
+            message: `존재하지 않는 라이트박스: lightbox:${slug} (노드 ${node.id})`,
+            affectedNodeIds: [node.id],
+            fixHint: 'Lightboxes 페이지에서 해당 slug 의 라이트박스를 만들거나 링크를 수정하세요.',
+          });
+        }
+        continue;
+      }
+      if (trimmed.startsWith('popup:')) {
+        const slug = trimmed.slice('popup:'.length);
+        if (slug && !popupSlugs.has(slug)) {
+          results.push({
+            id: `broken-popup-${node.id}`,
+            severity: 'blocker',
+            category: 'links',
+            message: `존재하지 않는 팝업: popup:${slug} (노드 ${node.id})`,
+            affectedNodeIds: [node.id],
+            fixHint: '팝업을 추가하거나 링크 대상을 수정하세요.',
+          });
+        }
         continue;
       }
 

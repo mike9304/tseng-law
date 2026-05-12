@@ -1614,6 +1614,89 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     }
   });
 
+  test('shows duplicate slug validation while renaming a page in the Pages panel', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const sourceSlug = `g-editor-rename-source-${token}`;
+    const targetSlug = `g-editor-rename-target-${token}`;
+    const sourceTitle = `Rename source ${token}`;
+    const targetTitle = `Rename target ${token}`;
+    let sourcePageId: string | null = null;
+    let targetPageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(targetSlug));
+
+    try {
+      const sourceCreate = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug: sourceSlug,
+          title: sourceTitle,
+          blank: true,
+        },
+        headers: mutationHeaders(sourceSlug),
+      });
+      expect(sourceCreate.status()).toBe(200);
+      sourcePageId = ((await sourceCreate.json()) as { pageId?: string }).pageId ?? null;
+      expect(sourcePageId).toBeTruthy();
+
+      const targetCreate = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug: targetSlug,
+          title: targetTitle,
+          blank: true,
+        },
+        headers: mutationHeaders(targetSlug),
+      });
+      expect(targetCreate.status()).toBe(200);
+      targetPageId = ((await targetCreate.json()) as { pageId?: string }).pageId ?? null;
+      expect(targetPageId).toBeTruthy();
+
+      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(targetPageId!)}`);
+      await page.locator('[class*="iconRail"]').getByRole('button', { name: 'Pages', exact: true }).click();
+      const pagesDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Pages' }).first();
+      const targetRow = pagesDrawer.locator(`[data-builder-page-row="${targetPageId}"]`).first();
+      await targetRow.scrollIntoViewIfNeeded();
+      await expect(targetRow).toBeVisible();
+
+      await targetRow.hover();
+      await targetRow.getByRole('button', { name: '페이지 메뉴' }).click();
+      await pagesDrawer.getByRole('button', { name: '이름 변경' }).click();
+      await targetRow.getByLabel('페이지 이름').fill(`Duplicate rename ${token}`);
+      await targetRow.getByLabel('페이지 slug').fill(sourceSlug);
+
+      const renameResponsePromise = page.waitForResponse((response) => (
+        response.url().includes(`/api/builder/site/pages/${targetPageId}`)
+        && response.request().method() === 'PATCH'
+      ));
+      await targetRow.getByLabel('페이지 slug').press('Enter');
+      const renameResponse = await renameResponsePromise;
+      expect(renameResponse.status()).toBe(400);
+
+      await expect(pagesDrawer.getByRole('status')).toContainText('같은 locale 안에 동일한 slug');
+      await expect(targetRow).toHaveAttribute('data-builder-page-slug', targetSlug);
+      await expect.poll(async () => findPageIdBySlug(page, targetSlug), { timeout: 20_000 }).toBe(targetPageId);
+      await expect.poll(async () => findPageIdBySlug(page, sourceSlug), { timeout: 20_000 }).toBe(sourcePageId);
+    } finally {
+      targetPageId ??= await findPageIdBySlug(page, targetSlug);
+      sourcePageId ??= await findPageIdBySlug(page, sourceSlug);
+      if (targetPageId) {
+        await page.request.delete(`/api/builder/site/pages/${targetPageId}?locale=ko`, {
+          headers: mutationHeaders(targetSlug),
+          failOnStatusCode: false,
+        });
+      }
+      if (sourcePageId) {
+        await page.request.delete(`/api/builder/site/pages/${sourcePageId}?locale=ko`, {
+          headers: mutationHeaders(sourceSlug),
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
+    }
+  });
+
   test('keeps active page slug and nested navigation in sync after rename and delete', async ({ page }) => {
     test.setTimeout(90_000);
 

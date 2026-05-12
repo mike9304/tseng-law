@@ -4818,3 +4818,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - M42 커밋 후 남은 yellow checkpoint를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M43 Pages CRUD validation hardening
+
+- W14의 남은 gap 중 “rename/delete 전체 CRUD는 있지만 실패 UX가 원인을 알려주는가”를 보강했다.
+- Pages 패널 create/rename/delete 실패 시 API validation payload를 읽어 duplicate slug, validation issue message, generic error 순으로 사용자에게 보여준다.
+- Pages status message에 `role="status"`/`aria-live`를 추가하고 rename title/slug input에 `aria-label`을 붙여 Playwright와 접근성 모두 안정화했다.
+- Playwright는 source page와 target page를 만든 뒤 target rename slug를 source slug로 바꾸는 실패 경로를 실제 UI로 실행한다. 실패 후 duplicate slug 메시지가 보이고, 두 pageId가 모두 유지되는지 검증한다.
+- 기존 “active page slug + nested navigation sync after rename/delete” 테스트도 함께 재실행해 rename 성공, nav href 동기화, delete cleanup 경로를 재확인했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "duplicate slug validation|keeps active page slug" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (기존 `<img>` warning만)
+  - `npm run security:builder-routes` ✅ (115 builder route file / 95 mutation handler guard coverage)
+  - `npm run test:unit` ✅ (72 files / 894 tests)
+  - `npm run build` ✅ (Google Fonts 최적화 warning + 기존 `<img>` warning만)
+- 다음 후보:
+  - M43 커밋 후 W03/W09/W12 등 초기 editor WIP 중 사용자 체감 gap을 계속 재스캔한다.

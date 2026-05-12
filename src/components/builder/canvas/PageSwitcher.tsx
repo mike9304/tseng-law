@@ -131,6 +131,46 @@ function menuItemStyle(destructive = false, disabled = false): React.CSSProperti
   };
 }
 
+function readPageErrorMessage(payload: unknown, fallback: string): string {
+  if (!payload || typeof payload !== 'object') return fallback;
+  const body = payload as {
+    error?: unknown;
+    message?: unknown;
+    issues?: unknown;
+    validation?: unknown;
+  };
+
+  if (body.error === 'duplicate_slug') {
+    return '같은 locale 안에 동일한 slug를 쓰는 페이지가 있습니다.';
+  }
+
+  const issueSource = Array.isArray(body.issues)
+    ? body.issues
+    : Array.isArray(body.validation)
+      ? body.validation
+      : [];
+  const firstIssue = issueSource.find((issue): issue is { message?: unknown; fixHint?: unknown; field?: unknown } => (
+    Boolean(issue) && typeof issue === 'object'
+  ));
+  if (firstIssue) {
+    if (typeof firstIssue.message === 'string' && firstIssue.message.trim()) {
+      return firstIssue.message;
+    }
+    if (typeof firstIssue.fixHint === 'string' && firstIssue.fixHint.trim()) {
+      return firstIssue.fixHint;
+    }
+  }
+
+  if (typeof body.message === 'string' && body.message.trim()) return body.message;
+  if (typeof body.error === 'string' && body.error.trim()) return body.error;
+  return fallback;
+}
+
+async function readPageResponseError(response: Response, fallback: string): Promise<string> {
+  const payload = await response.json().catch(() => null) as unknown;
+  return readPageErrorMessage(payload, fallback);
+}
+
 const editContainerStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
@@ -391,7 +431,7 @@ export default function PageSwitcher({
           onSelectPage(data.pageId, data.page?.slug);
         }
       } else {
-        setErrorMessage('페이지를 생성하지 못했습니다.');
+        setErrorMessage(await readPageResponseError(response, '페이지를 생성하지 못했습니다.'));
       }
     } catch {
       setErrorMessage('페이지를 생성하지 못했습니다.');
@@ -436,7 +476,7 @@ export default function PageSwitcher({
         },
       );
       if (!response.ok) {
-        setErrorMessage('페이지 이름을 저장하지 못했습니다.');
+        setErrorMessage(await readPageResponseError(response, '페이지 이름을 저장하지 못했습니다.'));
         return;
       }
 
@@ -466,7 +506,7 @@ export default function PageSwitcher({
         },
       );
       if (!response.ok) {
-        setErrorMessage('페이지를 삭제하지 못했습니다.');
+        setErrorMessage(await readPageResponseError(response, '페이지를 삭제하지 못했습니다.'));
         return;
       }
 
@@ -572,7 +612,11 @@ export default function PageSwitcher({
         </section>
       ) : null}
 
-      {errorMessage ? <div style={statusMessageStyle}>{errorMessage}</div> : null}
+      {errorMessage ? (
+        <div style={statusMessageStyle} role="status" aria-live="polite">
+          {errorMessage}
+        </div>
+      ) : null}
 
       {loading ? (
         <div style={{ padding: '8px 10px', fontSize: '0.8rem', color: '#94a3b8' }}>
@@ -613,6 +657,7 @@ export default function PageSwitcher({
                   <input
                     ref={titleInputRef}
                     type="text"
+                    aria-label="페이지 이름"
                     value={editingTitle}
                     placeholder="페이지 이름"
                     style={editInputStyle}
@@ -621,6 +666,7 @@ export default function PageSwitcher({
                   />
                   <input
                     type="text"
+                    aria-label="페이지 slug"
                     value={editingSlug}
                     placeholder="slug"
                     style={editInputStyle}

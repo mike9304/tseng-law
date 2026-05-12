@@ -1369,3 +1369,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W195는 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 Version History diff preview에 더해 실제 Publish dialog에서 draft-vs-published 변경 요약을 발행 직전 확인할 수 있게 했다.
+
+## M43 — Pages CRUD validation hardening
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/PageSwitcher.tsx` — Pages 패널의 create/rename/delete 실패가 generic error로 끝나지 않도록 API validation payload를 읽어 사용자에게 원인 메시지를 표시한다. status 영역에 `role="status"`/`aria-live`를 추가하고, rename title/slug input에 명시적 접근성 label을 붙였다.
+  - `tests/builder-editor/design-pool.playwright.ts` — 같은 locale 내 duplicate slug로 rename을 시도했을 때 Pages 패널이 `같은 locale 안에 동일한 slug...` 메시지를 보여주고 기존 source/target page가 모두 보존되는지 검증한다. 기존 rename/delete/nav sync 테스트도 함께 재실행했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "duplicate slug validation|keeps active page slug" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (기존 `<img>` warning만)
+  - `npm run security:builder-routes` ✅ (115 builder route file / 95 mutation handler guard coverage)
+  - `npm run test:unit` ✅ (72 files / 894 tests)
+  - `npm run build` ✅ (Google Fonts 최적화 warning + 기존 `<img>` warning만)
+- W 판정:
+  - W14는 `자동검증 통과 / 사용자 QA 대기` 유지. 새 페이지 생성, duplicate 생성 방어, rename/delete/nav sync에 더해 rename validation 실패 UX까지 실제 UI evidence를 확보했다.

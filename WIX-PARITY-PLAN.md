@@ -57,3 +57,4 @@
 | M53 | QA     | Page template result thumbnails | W14,W18,W216 | 1h | M52 | 🟡 Add 검색 결과 썸네일/품질 배지 자동검증 통과 / 사용자 QA 대기 |
 | M54 | QA     | FAQ reveal persistence | W18,W84,W216 | 1h | M44 | 🟡 FAQ 답변 텍스트 유지 자동검증 통과 / 사용자 QA 대기 |
 | M55 | QA     | Interactive preview document reset | W18,W84,W216 | 1h | M54 | 🟡 페이지/템플릿 전환 preview 상태 초기화 자동검증 통과 / 사용자 QA 대기 |
+| M56 | P9     | Editor preference normalization | W216~W225 | 1h | M28 | 🟡 editor prefs nested default/legacy 복구 자동검증 통과 / 사용자 QA 대기 |

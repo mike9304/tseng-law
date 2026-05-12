@@ -1558,3 +1558,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. page/template/document 전환 후 이전 페이지에서 열어 둔 서비스/FAQ preview 상태가 다음 문서의 텍스트 표시를 오염시키지 않게 막았다.
+
+## M56 — Editor preference normalization
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/editor-prefs.ts` — localStorage의 과거/부분 editor prefs를 깊게 정규화한다. `rulers`, `outline`, `pixelGrid`, `alignDistribute` nested default를 채우고 grid size/opacity/tolerance를 clamp하며 invalid guide/keybinding/comment/library entry는 걸러낸다.
+  - `src/lib/builder/canvas/__tests__/editor-prefs.test.ts` — nested field 누락 복구, invalid array entry 제거, numeric clamp를 단위 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (2 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W216~W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 이전 버전 localStorage나 부분 저장된 prefs 때문에 rulers/grid/guides/shortcut/comment/component-library UI가 undefined nested 값으로 흔들리는 위험을 줄였다.

@@ -4986,3 +4986,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - W216~W225 editor 고도화 잔여 UX 또는 template/page switching 실사용 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M56 Editor preference normalization
+
+- M28 editor prefs 저장값을 점검했고, 기존 `loadEditorPreferences()`가 top-level만 merge해 과거/부분 localStorage에서 nested 기본값이 빠질 수 있는 gap을 닫았다.
+- `normalizeEditorPreferences()`를 추가해 rulers/outline/pixelGrid/alignDistribute 기본값을 깊게 채우고, grid size/opacity/tolerance는 안전 범위로 clamp한다.
+- reference guides, shortcut overrides, comments, component library entries는 필수 필드가 맞는 항목만 유지한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (2 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - W216~W225 editor 고도화 또는 template/page switching 실사용 회귀를 계속 재스캔한다.

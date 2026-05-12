@@ -67,6 +67,8 @@ const FOCUSABLE_SELECTOR = [
   '[contenteditable="true"]:not([tabindex="-1"])',
 ].join(',');
 
+const CHILD_POPOVER_SELECTOR = '[data-builder-popover-dialog="true"]';
+
 const scrollLock = (() => {
   let count = 0;
   let savedOverflow = '';
@@ -180,6 +182,7 @@ export default function ModalShell({
   useEffect(() => {
     if (!open) return undefined;
     function handleKey(event: KeyboardEvent) {
+      if ((event.target as Element | null)?.closest(CHILD_POPOVER_SELECTOR)) return;
       const currentShell = internalPanelRef.current?.closest('[data-modal-shell="true"]');
       const modalShells = Array.from(document.querySelectorAll('[data-modal-shell="true"]'));
       const topmostShell = modalShells[modalShells.length - 1] ?? null;

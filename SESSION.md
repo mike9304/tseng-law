@@ -5395,3 +5395,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom|traps focus in the page template slug prompt|keeps the page template creation prompt usable" --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - ModalShell 미사용 color/font picker popover 또는 published lightbox/popup overlay의 keyboard/focus gap을 계속 점검한다.
+
+## 2026-05-13 Codex /goal M88 Advanced picker popover focus trap
+
+- `ColorPickerAdvanced`와 `FontPickerAdvanced`는 floating popover지만 initial focus, Tab trap, 외부 focus 차단, trigger focus restore가 없었다.
+- color picker는 custom color text input으로 initial focus를 보내고, font picker는 search input으로 initial focus를 보낸다. 두 popover 모두 Tab/Shift+Tab wrap, 외부 focus probe 차단, Escape close 후 trigger focus 복귀를 추가했다.
+- 첫 focused Playwright run에서 font picker `Escape`가 parent `SiteSettingsModal`까지 닫는 충돌을 잡았다. `ModalShell`이 `data-builder-popover-dialog` 내부 keydown은 처리하지 않도록 guard해 child popover와 parent modal keyboard scope를 분리했다.
+- 광범위 Site Settings regression 중 `Apply` button count가 component preset의 `Apply ...` 버튼까지 부분 일치로 잡히는 기존 취약점을 발견해, 정확히 `Apply`인 theme preset button만 세도록 test selector를 좁혔다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "traps focus in advanced color and font picker" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers editor shell density|covers site settings" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - published lightbox/popup overlay나 남은 floating editor overlay의 keyboard/focus gap을 계속 점검한다.

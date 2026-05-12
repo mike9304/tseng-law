@@ -1,6 +1,14 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+  type KeyboardEvent as ReactKeyboardEvent,
+} from 'react';
 import type { BuilderColorValue, ThemeColorToken } from '@/lib/builder/site/theme';
 import { THEME_COLOR_LABELS, isThemeColorReference } from '@/lib/builder/site/theme';
 import {
@@ -29,6 +37,14 @@ export interface ColorPickerProps {
 type EyeDropperConstructor = new () => {
   open: () => Promise<{ sRGBHex: string }>;
 };
+
+const FOCUSABLE_SELECTOR = [
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
 
 function normalizeCustomValue(value: string): string {
   const trimmed = value.trim();
@@ -149,6 +165,15 @@ function swatchButtonStyle(color: string, active: boolean): CSSProperties {
   };
 }
 
+function getFocusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => (
+    !element.hidden &&
+    !element.closest('[hidden]') &&
+    element.getAttribute('aria-hidden') !== 'true' &&
+    element.getClientRects().length > 0
+  ));
+}
+
 export default function ColorPickerAdvanced({
   value,
   onChange,
@@ -158,6 +183,10 @@ export default function ColorPickerAdvanced({
   enableContrast = true,
 }: ColorPickerProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const textInputRef = useRef<HTMLInputElement | null>(null);
+  const closingRef = useRef(false);
   const [open, setOpen] = useState(false);
   const [textValue, setTextValue] = useState(colorToText(value));
   const [recentColors, setRecentColors] = useState<string[]>([]);
@@ -175,6 +204,11 @@ export default function ColorPickerAdvanced({
   const activeToken = isThemeColorReference(value) ? value.token : null;
   const bindingIndicator = getColorBindingIndicator(value);
   const EyeDropper = getEyeDropper();
+
+  const closePopover = () => {
+    closingRef.current = true;
+    setOpen(false);
+  };
 
   useEffect(() => {
     setTextValue(colorToText(value));
@@ -194,6 +228,63 @@ export default function ColorPickerAdvanced({
     window.addEventListener('click', handleWindowClick, true);
     return () => window.removeEventListener('click', handleWindowClick, true);
   }, [open]);
+
+  useLayoutEffect(() => {
+    if (!open) return undefined;
+    closingRef.current = false;
+    const panel = panelRef.current;
+    if (!panel) return undefined;
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      (textInputRef.current ?? getFocusableElements(panel)[0] ?? panel).focus({ preventScroll: true });
+    });
+    const handleFocusIn = (event: FocusEvent) => {
+      if (wrapperRef.current?.contains(event.target as Node | null)) return;
+      (textInputRef.current ?? getFocusableElements(panel)[0] ?? panel).focus({ preventScroll: true });
+    };
+
+    document.addEventListener('focusin', handleFocusIn);
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.removeEventListener('focusin', handleFocusIn);
+      if (!closingRef.current) return;
+      window.setTimeout(() => {
+        if (triggerRef.current?.isConnected) triggerRef.current.focus({ preventScroll: true });
+        closingRef.current = false;
+      }, 0);
+    };
+  }, [open]);
+
+  const handlePanelKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      closePopover();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+
+    const panel = panelRef.current;
+    if (!panel) return;
+    const focusable = getFocusableElements(panel);
+    if (focusable.length === 0) {
+      event.preventDefault();
+      panel.focus({ preventScroll: true });
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus({ preventScroll: true });
+      return;
+    }
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus({ preventScroll: true });
+    }
+  };
 
   const pushRecent = (nextColor: string) => {
     setRecentColors((current) => {
@@ -246,10 +337,17 @@ export default function ColorPickerAdvanced({
   return (
     <div ref={wrapperRef} style={wrapperStyle} data-color-picker-advanced>
       <button
+        ref={triggerRef}
         type="button"
         disabled={disabled}
         style={{ ...triggerStyle, opacity: disabled ? 0.6 : 1 }}
-        onClick={() => setOpen((current) => !current)}
+        onClick={() => {
+          if (open) {
+            closePopover();
+            return;
+          }
+          setOpen(true);
+        }}
       >
         <span style={{ width: 24, height: 24, borderRadius: 7, border: '1px solid #cbd5e1', background: currentColor }} />
         <span style={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 12, fontWeight: 800 }}>
@@ -259,7 +357,16 @@ export default function ColorPickerAdvanced({
       </button>
 
       {open ? (
-        <div style={panelStyle} role="dialog" aria-label="Advanced color picker">
+        <div
+          ref={panelRef}
+          style={panelStyle}
+          role="dialog"
+          aria-label="Advanced color picker"
+          tabIndex={-1}
+          data-builder-color-picker-dialog="true"
+          data-builder-popover-dialog="true"
+          onKeyDownCapture={handlePanelKeyDown}
+        >
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10 }}>
             <div style={{ display: 'grid', gap: 4 }}>
               <strong style={{ color: '#0f172a', fontSize: 13 }}>Color</strong>
@@ -294,6 +401,7 @@ export default function ColorPickerAdvanced({
 
           <div style={{ display: 'grid', gridTemplateColumns: '44px minmax(0, 1fr)', gap: 8 }}>
             <input
+              aria-label="Native color value"
               type="color"
               value={currentHex}
               disabled={disabled}
@@ -301,6 +409,7 @@ export default function ColorPickerAdvanced({
               onChange={(event) => commitCustomColor(event.target.value)}
             />
             <input
+              ref={textInputRef}
               type="text"
               value={textValue}
               disabled={disabled}

@@ -1,6 +1,14 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+  type KeyboardEvent as ReactKeyboardEvent,
+} from 'react';
 import { FONT_CATALOG, buildGoogleFontsUrl, fontFamilyCSS, type FontOption } from '@/lib/builder/canvas/fonts';
 import { useBuilderTheme } from './BuilderThemeContext';
 
@@ -11,6 +19,14 @@ export interface FontPickerProps {
 }
 
 type FontCategory = 'all' | FontOption['category'];
+
+const FOCUSABLE_SELECTOR = [
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
 
 const SYSTEM_FONTS = [
   { family: 'system-ui', category: 'sans-serif' as const, note: 'System' },
@@ -86,12 +102,25 @@ function highlight(text: string, query: string) {
   );
 }
 
+function getFocusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => (
+    !element.hidden &&
+    !element.closest('[hidden]') &&
+    element.getAttribute('aria-hidden') !== 'true' &&
+    element.getClientRects().length > 0
+  ));
+}
+
 export default function FontPickerAdvanced({
   value,
   onChange,
   disabled = false,
 }: FontPickerProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
+  const closingRef = useRef(false);
   const theme = useBuilderTheme();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -135,6 +164,11 @@ export default function FontPickerAdvanced({
   });
   const currentFont = value || 'system-ui';
 
+  const closePopover = () => {
+    closingRef.current = true;
+    setOpen(false);
+  };
+
   useEffect(() => {
     if (!open) return undefined;
     const handleWindowClick = (event: MouseEvent) => {
@@ -145,6 +179,63 @@ export default function FontPickerAdvanced({
     window.addEventListener('click', handleWindowClick, true);
     return () => window.removeEventListener('click', handleWindowClick, true);
   }, [open]);
+
+  useLayoutEffect(() => {
+    if (!open) return undefined;
+    closingRef.current = false;
+    const panel = panelRef.current;
+    if (!panel) return undefined;
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      (searchInputRef.current ?? getFocusableElements(panel)[0] ?? panel).focus({ preventScroll: true });
+    });
+    const handleFocusIn = (event: FocusEvent) => {
+      if (wrapperRef.current?.contains(event.target as Node | null)) return;
+      (searchInputRef.current ?? getFocusableElements(panel)[0] ?? panel).focus({ preventScroll: true });
+    };
+
+    document.addEventListener('focusin', handleFocusIn);
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.removeEventListener('focusin', handleFocusIn);
+      if (!closingRef.current) return;
+      window.setTimeout(() => {
+        if (triggerRef.current?.isConnected) triggerRef.current.focus({ preventScroll: true });
+        closingRef.current = false;
+      }, 0);
+    };
+  }, [open]);
+
+  const handlePanelKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      closePopover();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+
+    const panel = panelRef.current;
+    if (!panel) return;
+    const focusable = getFocusableElements(panel);
+    if (focusable.length === 0) {
+      event.preventDefault();
+      panel.focus({ preventScroll: true });
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus({ preventScroll: true });
+      return;
+    }
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus({ preventScroll: true });
+    }
+  };
 
   useEffect(() => {
     if (!open) return undefined;
@@ -163,6 +254,7 @@ export default function FontPickerAdvanced({
   return (
     <div ref={wrapperRef} style={wrapperStyle} data-font-picker>
       <button
+        ref={triggerRef}
         type="button"
         disabled={disabled}
         style={{
@@ -170,13 +262,28 @@ export default function FontPickerAdvanced({
           fontFamily: fontFamilyCSS(currentFont),
           opacity: disabled ? 0.6 : 1,
         }}
-        onClick={() => setOpen((current) => !current)}
+        onClick={() => {
+          if (open) {
+            closePopover();
+            return;
+          }
+          setOpen(true);
+        }}
       >
         {currentFont}
       </button>
 
       {open ? (
-        <div style={popoverStyle} role="dialog" aria-label="Advanced font picker">
+        <div
+          ref={panelRef}
+          style={popoverStyle}
+          role="dialog"
+          aria-label="Advanced font picker"
+          tabIndex={-1}
+          data-builder-font-picker-dialog="true"
+          data-builder-popover-dialog="true"
+          onKeyDownCapture={handlePanelKeyDown}
+        >
           <div style={{ display: 'grid', gap: 4 }}>
             <strong style={{ color: '#0f172a', fontSize: 13 }}>Fonts</strong>
             <span style={{ color: '#64748b', fontSize: 11 }}>
@@ -185,6 +292,7 @@ export default function FontPickerAdvanced({
           </div>
 
           <input
+            ref={searchInputRef}
             type="text"
             value={query}
             placeholder="Search fonts"
@@ -261,7 +369,7 @@ export default function FontPickerAdvanced({
                 }}
                 onClick={() => {
                   onChange(font.family);
-                  setOpen(false);
+                  closePopover();
                 }}
               >
                 <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>

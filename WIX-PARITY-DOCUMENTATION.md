@@ -1997,3 +1997,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom|traps focus in the page template slug prompt|keeps the page template creation prompt usable" --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 템플릿 preview nested modal에서 focus가 parent gallery/editor로 새거나 닫힌 뒤 위치를 잃는 경로를 닫았다.
+
+## M88 — Advanced picker popover focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/editor/ColorPickerAdvanced.tsx` — advanced color picker popover에 custom color input initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, Escape close, trigger focus 복귀를 추가했다.
+  - `src/components/builder/editor/FontPickerAdvanced.tsx` — advanced font picker popover에 search input initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, Escape close, trigger focus 복귀를 추가했다.
+  - `src/components/builder/canvas/ModalShell.tsx` — child popover의 keyboard event는 parent ModalShell이 처리하지 않도록 `data-builder-popover-dialog` guard를 추가했다.
+  - `tests/builder-editor/design-pool.playwright.ts` — color/font picker popover focus trap, 외부 focus 차단, Escape close, parent Site Settings modal 격리를 검증한다. 기존 Site Settings test는 정확히 `Apply`인 theme preset button만 세도록 좁혔다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "traps focus in advanced color and font picker" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers editor shell density|covers site settings" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W181/W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. color/font picker popover에서 keyboard focus가 editor나 parent modal로 새고, font picker Escape가 Site Settings 전체를 닫는 경로를 닫았다.

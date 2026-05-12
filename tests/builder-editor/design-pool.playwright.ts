@@ -672,6 +672,75 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.keyboard.press('Escape');
   });
 
+  test('traps focus in advanced color and font picker popovers', async ({ page }) => {
+    test.setTimeout(60_000);
+
+    await openBuilder(page, `/ko/admin-builder?pickerFocus=${Date.now().toString(36)}`);
+    await selectFirstNode(page);
+    await closeEditorOverlayIfPresent(page);
+
+    await page.getByRole('button', { name: /^style$/i }).click();
+    await expect(page.locator('.insp-row').first()).toBeVisible();
+    const colorPicker = page.locator('[data-color-picker-advanced]').first();
+    await expect(colorPicker).toBeVisible();
+    const colorTrigger = colorPicker.getByRole('button').first();
+    await colorTrigger.click();
+    const colorDialog = page.getByRole('dialog', { name: 'Advanced color picker' });
+    await expect(colorDialog).toBeVisible();
+    const colorTextInput = colorDialog.getByPlaceholder('#123b63 or hsl(211 70% 40%)');
+    const nativeColorInput = colorDialog.getByLabel('Native color value');
+    await expect(colorTextInput).toBeFocused();
+
+    await page.keyboard.press('Shift+Tab');
+    await expect(nativeColorInput).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(colorTextInput).toBeFocused();
+
+    await page.evaluate(() => {
+      const outsideButton = document.createElement('button');
+      outsideButton.type = 'button';
+      outsideButton.dataset.builderColorPickerOutsideFocusProbe = 'true';
+      outsideButton.textContent = 'outside color picker focus probe';
+      document.body.appendChild(outsideButton);
+      outsideButton.focus();
+    });
+    await expect(colorTextInput).toBeFocused();
+
+    await page.keyboard.press('Escape');
+    await expect(colorDialog).toHaveCount(0);
+    await expect(colorTrigger).toBeFocused();
+
+    const modal = await openSiteSettings(page);
+    await modal.getByRole('button', { name: /Typography/ }).click();
+    const fontPicker = modal.locator('[data-font-picker]').first();
+    await expect(fontPicker).toBeVisible();
+    const fontTrigger = fontPicker.getByRole('button').first();
+    await fontTrigger.click();
+    const fontDialog = page.getByRole('dialog', { name: 'Advanced font picker' });
+    await expect(fontDialog).toBeVisible();
+    const fontSearch = fontDialog.getByPlaceholder('Search fonts');
+    await expect(fontSearch).toBeFocused();
+
+    await page.keyboard.press('Shift+Tab');
+    await expect(fontDialog.getByRole('button').last()).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(fontSearch).toBeFocused();
+
+    await page.evaluate(() => {
+      const outsideButton = document.createElement('button');
+      outsideButton.type = 'button';
+      outsideButton.dataset.builderFontPickerOutsideFocusProbe = 'true';
+      outsideButton.textContent = 'outside font picker focus probe';
+      document.body.appendChild(outsideButton);
+      outsideButton.focus();
+    });
+    await expect(fontSearch).toBeFocused();
+
+    await page.keyboard.press('Escape');
+    await expect(fontDialog).toHaveCount(0);
+    await expect(fontTrigger).toBeFocused();
+  });
+
   test('switches stateful home section template variants without replacing content', async ({ page }) => {
     await openBuilder(page);
 
@@ -931,7 +1000,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(modal).toContainText('preset applied');
     await modal.getByRole('button', { name: 'Delete' }).first().click();
     await expect(modal).toContainText('My Theme preset deleted');
-    await expect(modal.getByRole('button', { name: 'Apply' })).toHaveCount(5);
+    await expect(modal.getByRole('button', { name: /^Apply$/ })).toHaveCount(5);
 
     await modal.getByRole('button', { name: /Dark mode/ }).click();
     await expect(modal).toContainText('Light preview');

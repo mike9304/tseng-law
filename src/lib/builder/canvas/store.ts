@@ -77,6 +77,7 @@ export type BuilderCanvasPreviewSection = 'services' | 'faq';
 
 interface BuilderCanvasInteractivePreviewState {
   servicesOpenIndex: number;
+  servicesRevealedIndices: number[];
   faqOpenIndex: number;
 }
 
@@ -515,18 +516,32 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   setViewport: (viewport) => set({ viewport }),
   interactivePreview: {
     servicesOpenIndex: 0,
+    servicesRevealedIndices: [0],
     faqOpenIndex: 0,
   },
   setInteractivePreviewIndex: (section, index) =>
     set((state) => {
       const clampedIndex = Math.max(0, Math.round(index));
-      if (section === 'services' && state.interactivePreview.servicesOpenIndex !== clampedIndex) {
-        return {
-          interactivePreview: {
-            ...state.interactivePreview,
-            servicesOpenIndex: clampedIndex,
-          },
-        };
+      if (section === 'services') {
+        const currentRevealed = state.interactivePreview.servicesRevealedIndices.length > 0
+          ? state.interactivePreview.servicesRevealedIndices
+          : [state.interactivePreview.servicesOpenIndex];
+        const servicesRevealedIndices = currentRevealed.includes(clampedIndex)
+          ? currentRevealed
+          : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
+        if (
+          state.interactivePreview.servicesOpenIndex !== clampedIndex
+          || servicesRevealedIndices !== currentRevealed
+        ) {
+          return {
+            interactivePreview: {
+              ...state.interactivePreview,
+              servicesOpenIndex: clampedIndex,
+              servicesRevealedIndices,
+            },
+          };
+        }
+        return state;
       }
       if (section === 'faq' && state.interactivePreview.faqOpenIndex !== clampedIndex) {
         return {

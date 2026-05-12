@@ -29,10 +29,13 @@ test.describe('/ko/admin-builder section design templates', () => {
 
     await page.locator('[data-node-id="home-services-card-1-title"]').first().click({ position: { x: 12, y: 12 } });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
     await page.locator('[data-node-id="home-services-description"]').first().click({ position: { x: 12, y: 12 } });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
     await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 } });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
   });
 
   test('keeps inserted service template text visible while selecting nested nodes', async ({ page }) => {

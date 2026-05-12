@@ -4835,3 +4835,21 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts 최적화 warning + 기존 `<img>` warning만)
 - 다음 후보:
   - M43 커밋 후 W03/W09/W12 등 초기 editor WIP 중 사용자 체감 gap을 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M44 Services template text persistence
+
+- 사용자가 계속 재현한 “주요업무/주요 서비스 노드 선택 뒤 다른 노드를 선택하면 글이 안 보임” 문제를 editor preview state 기준으로 다시 막았다.
+- 원인은 editor canvas가 public accordion의 single-open 스타일을 그대로 따라가면서, 두 번째 service card를 선택하면 첫 번째 card detail이 `display: none` 상태가 되는 데 있었다. 편집 중에는 텍스트를 잃어버린 것처럼 보이므로, public runtime은 유지하고 editor preview만 multi-reveal로 바꿨다.
+- `store.ts`는 `servicesRevealedIndices`를 유지하고, `CanvasNode.tsx`는 선택된 card와 이전에 reveal된 card 모두를 `data-builder-preview-open` 상태로 렌더한다.
+- `section-template-click.playwright.ts`는 주요 서비스 템플릿을 실제 클릭으로 적용한 뒤 card 1, 섹션 설명, hero title을 차례로 선택해도 card 0/1 상세 텍스트가 계속 visible인지 검증한다.
+- `admin-builder.playwright.ts` smoke expectation도 editor multi-reveal 동작에 맞췄다. 다만 전체 smoke는 M44 assertion 이전의 기존 layout/hero quick-edit assertion에서 먼저 실패해, 이번 gate는 isolated section-template regression으로 닫았다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅ (M44 코드/test 파일)
+  - `npm run lint` ✅ (기존 `<img>` warning만)
+  - `npm run security:builder-routes` ✅ (115 builder route file / 95 mutation handler guard coverage)
+  - `npm run test:unit` ✅ (72 files / 894 tests)
+  - `npm run build` ✅ (Google Fonts 최적화 warning + 기존 `<img>` warning만)
+- 다음 후보:
+  - 사용자가 보고한 `/ko/admin-builder`에서 한국어 편집기인데 중국어 사이트가 뜨는 locale/content mismatch를 다음 self-goal로 우선 재현한다.

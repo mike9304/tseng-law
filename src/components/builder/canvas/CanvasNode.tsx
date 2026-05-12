@@ -360,6 +360,11 @@ export default function CanvasNode({
   const selectedFaqIndex = selectedFaqItems.size > 0
     ? Number([...selectedFaqItems][0])
     : interactivePreview.faqOpenIndex;
+  const servicesRevealedIndices = new Set(
+    interactivePreview.servicesRevealedIndices?.length
+      ? interactivePreview.servicesRevealedIndices
+      : [interactivePreview.servicesOpenIndex],
+  );
   const activeOfficeIndex = officeIndexFromNodeId(primarySelectedNodeId ?? '') ?? selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => {
     const nextIndex = officeIndexFromNodeId(selectedId);
     return nextIndex ?? activeIndex;
@@ -374,6 +379,7 @@ export default function CanvasNode({
     : undefined;
   const builderPreviewOpen = serviceCardMatch
     ? serviceCardIndex === selectedServiceIndex
+      || (serviceCardIndex != null && servicesRevealedIndices.has(serviceCardIndex))
     : faqItemMatch
       ? faqItemIndex === selectedFaqIndex
       : false;

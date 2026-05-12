@@ -45,3 +45,4 @@
 | M41 | P7     | Hreflang public metadata evidence | W193 | 2h | M24 | 🟡 W193 자동검증 통과 / 사용자 QA 대기 |
 | M42 | P7     | Publish diff viewer 실사용 evidence | W195 | 2h | M24 | 🟡 W195 자동검증 통과 / 사용자 QA 대기 |
 | M43 | P1     | Pages CRUD validation hardening | W14 | 2h | M28 | 🟡 W14 자동검증 통과 / 사용자 QA 대기 |
+| M44 | QA     | Services template text persistence | W18,W84 | 2h | M30 | 🟡 주요 서비스 텍스트 유지 자동검증 통과 / 사용자 QA 대기 |

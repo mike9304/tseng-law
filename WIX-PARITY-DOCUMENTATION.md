@@ -1385,3 +1385,23 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts 최적화 warning + 기존 `<img>` warning만)
 - W 판정:
   - W14는 `자동검증 통과 / 사용자 QA 대기` 유지. 새 페이지 생성, duplicate 생성 방어, rename/delete/nav sync에 더해 rename validation 실패 UX까지 실제 UI evidence를 확보했다.
+
+## M44 — Services template text persistence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/store.ts` — editor interactive preview가 주요 서비스에서 마지막 open index만 기억하지 않고, 사용자가 한 번 열어 확인한 service card index 목록을 유지한다.
+  - `src/components/builder/canvas/CanvasNode.tsx` — 주요 서비스 card/detail 노드는 현재 선택된 card뿐 아니라 이전에 reveal된 card도 editor canvas에서 계속 open preview로 렌더한다. public accordion runtime은 바꾸지 않고 editor 안정성만 보강했다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — 주요 서비스 디자인 템플릿 적용, 두 번째 card 선택, 섹션 설명/hero title 선택 뒤에도 card 0/1 상세 텍스트가 계속 보이는지 실제 클릭으로 검증한다.
+  - `tests/builder-editor/admin-builder.playwright.ts` — 기존 smoke expectation을 editor multi-reveal 동작에 맞게 갱신했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅ (M44 코드/test 파일)
+  - `npm run lint` ✅ (기존 `<img>` warning만)
+  - `npm run security:builder-routes` ✅ (115 builder route file / 95 mutation handler guard coverage)
+  - `npm run test:unit` ✅ (72 files / 894 tests)
+  - `npm run build` ✅ (Google Fonts 최적화 warning + 기존 `<img>` warning만)
+  - 참고: `admin-builder.playwright.ts -g "covers Wix-like editor chrome"` smoke도 실행했지만, M44 서비스 assertion 이전의 기존 layout/hero quick-edit assertion에서 먼저 막혀 M44 gate로 쓰지 않았다.
+- W 판정:
+  - W18/W84는 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 보고한 “주요업무/주요 서비스 노드 선택 후 다른 노드를 누르면 글이 사라짐” 회귀에 대해 editor 전용 persistence evidence를 확보했다.

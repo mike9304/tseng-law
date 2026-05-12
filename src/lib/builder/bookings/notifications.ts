@@ -40,14 +40,20 @@ async function sendEmail(payload: { to: string | string[]; subject: string; html
 
 function bookingSummaryHtml(booking: Booking, service?: BookingService | null, staff?: Staff | null): string {
   const locale = booking.customer.locale;
+  const attachments = booking.customer.attachmentUrls ?? [];
+  const customFields = booking.customer.customFields ?? [];
   return `
     <p><strong>Service</strong>: ${escapeHtml(textForLocale(service?.name, locale) || booking.serviceId)}</p>
     <p><strong>Staff</strong>: ${escapeHtml(textForLocale(staff?.name, locale) || booking.staffId)}</p>
     <p><strong>Time</strong>: ${escapeHtml(new Date(booking.startAt).toLocaleString(locale))}</p>
+    ${booking.customerTimezone ? `<p><strong>Customer timezone</strong>: ${escapeHtml(booking.customerTimezone)}</p>` : ''}
     <p><strong>Name</strong>: ${escapeHtml(booking.customer.name)}</p>
     <p><strong>Email</strong>: ${escapeHtml(booking.customer.email)}</p>
     ${booking.customer.phone ? `<p><strong>Phone</strong>: ${escapeHtml(booking.customer.phone)}</p>` : ''}
     ${booking.customer.notes ? `<p><strong>Notes</strong>: ${escapeHtml(booking.customer.notes)}</p>` : ''}
+    ${booking.customer.caseSummary ? `<p><strong>Case summary</strong>: ${escapeHtml(booking.customer.caseSummary)}</p>` : ''}
+    ${attachments.length > 0 ? `<p><strong>Attachments</strong>: ${attachments.map((url) => escapeHtml(url)).join('<br>')}</p>` : ''}
+    ${customFields.map((field) => `<p><strong>${escapeHtml(field.label)}</strong>: ${escapeHtml(field.value)}</p>`).join('')}
   `;
 }
 

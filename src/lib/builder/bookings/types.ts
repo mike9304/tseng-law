@@ -36,6 +36,7 @@ export interface BookingService {
   staffIds: string[];
   bufferBeforeMinutes: number;
   bufferAfterMinutes: number;
+  slotStepMinutes?: number;
   isActive: boolean;
   createdAt: string;
   updatedAt: string;
@@ -118,6 +119,9 @@ export interface Booking {
     email: string;
     phone?: string;
     notes?: string;
+    caseSummary?: string;
+    attachmentUrls?: string[];
+    customFields?: Array<{ label: string; value: string }>;
     locale: Locale;
   };
   startAt: string;
@@ -175,7 +179,11 @@ export const bookingServiceInputSchema = z.object({
   staffIds: z.array(z.string().trim().min(1)).default([]),
   bufferBeforeMinutes: z.coerce.number().int().min(0).max(240).default(0),
   bufferAfterMinutes: z.coerce.number().int().min(0).max(240).default(15),
+  slotStepMinutes: z.coerce.number().int().min(5).max(240).default(30),
   isActive: z.coerce.boolean().default(true),
+  paymentMode: z.enum(['free', 'paid']).default('free'),
+  priceAmount: z.coerce.number().int().min(0).max(200_000_000).optional(),
+  priceCurrency: z.enum(['KRW', 'USD', 'TWD', 'JPY', 'EUR']).default('TWD'),
 });
 
 export const staffInputSchema = z.object({
@@ -221,8 +229,15 @@ export const bookingCreateSchema = z.object({
     email: z.string().trim().email().max(200),
     phone: z.string().trim().max(80).optional(),
     notes: z.string().trim().max(3000).optional(),
+    caseSummary: z.string().trim().max(4000).optional(),
+    attachmentUrls: z.array(z.string().trim().url().max(2000)).max(8).optional(),
+    customFields: z.array(z.object({
+      label: z.string().trim().min(1).max(120),
+      value: z.string().trim().max(2000),
+    })).max(12).optional(),
     locale: z.enum(locales).default('ko'),
   }),
+  customerTimezone: z.string().trim().min(1).max(80).optional(),
   source: z.enum(['web', 'admin']).default('web'),
   status: z.enum(['pending', 'confirmed', 'cancelled', 'completed', 'no-show']).default('confirmed'),
   paymentIntentId: z.string().trim().min(1).max(200).optional(),
@@ -237,7 +252,14 @@ export const bookingUpdateSchema = z.object({
     email: z.string().trim().email().max(200).optional(),
     phone: z.string().trim().max(80).optional(),
     notes: z.string().trim().max(3000).optional(),
+    caseSummary: z.string().trim().max(4000).optional(),
+    attachmentUrls: z.array(z.string().trim().url().max(2000)).max(8).optional(),
+    customFields: z.array(z.object({
+      label: z.string().trim().min(1).max(120),
+      value: z.string().trim().max(2000),
+    })).max(12).optional(),
   }).optional(),
+  customerTimezone: z.string().trim().min(1).max(80).optional(),
 });
 
 export function createLocalizedText(value: string): LocalizedText {

@@ -1115,6 +1115,11 @@ const bookingWidgetCanvasNodeSchema = baseCanvasNodeSchema.extend({
     staffId: z.string().max(120).default(''),
     successMessage: z.string().max(500).default('예약이 완료되었습니다'),
     redirectAfterBooking: z.string().max(500).default(''),
+    showCaseSummary: z.boolean().default(true),
+    caseSummaryLabel: z.string().max(120).default('사건 개요'),
+    showAttachmentLinks: z.boolean().default(true),
+    attachmentLinksLabel: z.string().max(120).default('첨부 링크'),
+    customFieldLabels: z.string().max(1000).default(''),
   }),
 });
 

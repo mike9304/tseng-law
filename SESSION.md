@@ -4397,3 +4397,24 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
 - 체크포인트:
   - W186/W187/W188/W190/W191/W192/W193/W194/W195 자동검증 evidence 확보.
   - W189 scheduled publish는 현재 M24 prompt 범위 밖이라 별도 publish scheduling 작업으로 남긴다.
+
+## 2026-05-12 Codex /goal M25 Bookings 본격 1
+
+- M24에서 전역 lint/build를 막던 `CalendarSyncAdmin.tsx` unused setter를 Bookings milestone 안에서 정리했다.
+- Services admin에 paid/free, price/currency, booking interval, buffer before/after, category, active 상태, 중국어 description 편집을 연결했다.
+- Staff admin에 active, title ZH, bio ZH, service assignment 편집을 연결했다.
+- Availability admin은 요일별 여러 time range와 blocked dates를 함께 다루며, slot 계산은 service별 `slotStepMinutes`, buffer before/after, active staff/service를 반영한다.
+- 공개 Booking widget은 Service → Staff → Slot → Info flow에서 로컬 타임존/업체 타임존을 함께 보여주고, 사건 개요/첨부 URL/custom fields를 inspector 설정대로 저장한다.
+- paid service는 `/api/booking/payment-intent` 선행 후 `/api/booking/book`에 저장되며, dev 환경은 `pi_stub_dev`로 E2E 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/availability.test.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m25.playwright.ts --project=chromium-builder --workers=1` ✅
+  - `npm run lint` ✅
+  - `npm run security:builder-routes` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/availability.test.ts src/lib/builder/bookings/calendar-sync/__tests__/encryption.test.ts` ✅
+  - `npm run test:unit` ✅ (858 passed)
+  - `npm run build` ✅
+- 체크포인트:
+  - W196/W197/W198/W199/W200/W201/W202 자동검증 evidence 확보.
+  - 사용자 직접 QA 전까지 `자동검증 통과 / 사용자 QA 대기`로 둔다.

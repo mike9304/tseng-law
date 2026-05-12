@@ -21,7 +21,11 @@ type ServiceDraft = {
   staffIds: string[];
   bufferBeforeMinutes: number;
   bufferAfterMinutes: number;
+  slotStepMinutes: number;
   isActive: boolean;
+  paymentMode: 'free' | 'paid';
+  priceAmount: number;
+  priceCurrency: 'KRW' | 'USD' | 'TWD' | 'JPY' | 'EUR';
 };
 
 function draftFromService(service?: BookingService): ServiceDraft {
@@ -40,7 +44,11 @@ function draftFromService(service?: BookingService): ServiceDraft {
     staffIds: service?.staffIds || [],
     bufferBeforeMinutes: service?.bufferBeforeMinutes || 0,
     bufferAfterMinutes: service?.bufferAfterMinutes ?? 15,
+    slotStepMinutes: service?.slotStepMinutes ?? 30,
     isActive: service?.isActive ?? true,
+    paymentMode: service?.paymentMode ?? 'free',
+    priceAmount: service?.priceAmount ?? service?.priceTwd ?? 0,
+    priceCurrency: service?.priceCurrency ?? 'TWD',
   };
 }
 
@@ -64,7 +72,11 @@ function servicePayload(draft: ServiceDraft) {
     staffIds: draft.staffIds,
     bufferBeforeMinutes: draft.bufferBeforeMinutes,
     bufferAfterMinutes: draft.bufferAfterMinutes,
+    slotStepMinutes: draft.slotStepMinutes,
     isActive: draft.isActive,
+    paymentMode: draft.paymentMode,
+    priceAmount: draft.paymentMode === 'paid' ? draft.priceAmount : undefined,
+    priceCurrency: draft.priceCurrency,
   };
 }
 
@@ -142,6 +154,8 @@ export default function BookingServicesAdmin({
               <div className={styles.metaRow}>
                 <span className={styles.chip}>{service.durationMinutes} min</span>
                 <span className={styles.chip}>TWD {service.priceTwd?.toLocaleString() || 0}</span>
+                <span className={styles.chip}>{service.paymentMode === 'paid' ? `Paid ${service.priceCurrency ?? 'TWD'} ${(service.priceAmount ?? service.priceTwd ?? 0).toLocaleString()}` : 'Free booking'}</span>
+                <span className={styles.chip}>Every {service.slotStepMinutes ?? 30} min</span>
                 <span className={styles.chip}>{service.isActive ? 'Active' : 'Inactive'}</span>
               </div>
               <p className={styles.muted}>
@@ -188,8 +202,46 @@ export default function BookingServicesAdmin({
                 <input className={styles.input} type="number" min={0} value={draft.priceTwd} onChange={(e) => setDraft({ ...draft, priceTwd: Number(e.target.value) })} />
               </label>
               <label className={styles.field}>
+                <span className={styles.label}>Payment mode</span>
+                <select className={styles.select} value={draft.paymentMode} onChange={(e) => setDraft({ ...draft, paymentMode: e.target.value as ServiceDraft['paymentMode'] })}>
+                  <option value="free">Free booking</option>
+                  <option value="paid">Paid before booking</option>
+                </select>
+              </label>
+              <label className={styles.field}>
+                <span className={styles.label}>Payment amount</span>
+                <input className={styles.input} type="number" min={0} value={draft.priceAmount} onChange={(e) => setDraft({ ...draft, priceAmount: Number(e.target.value) })} />
+              </label>
+              <label className={styles.field}>
+                <span className={styles.label}>Payment currency</span>
+                <select className={styles.select} value={draft.priceCurrency} onChange={(e) => setDraft({ ...draft, priceCurrency: e.target.value as ServiceDraft['priceCurrency'] })}>
+                  <option value="TWD">TWD</option>
+                  <option value="KRW">KRW</option>
+                  <option value="USD">USD</option>
+                  <option value="JPY">JPY</option>
+                  <option value="EUR">EUR</option>
+                </select>
+              </label>
+              <label className={styles.field}>
+                <span className={styles.label}>Category</span>
+                <input className={styles.input} value={draft.category} onChange={(e) => setDraft({ ...draft, category: e.target.value })} />
+              </label>
+              <label className={styles.field}>
+                <span className={styles.label}>
+                  <input type="checkbox" checked={draft.isActive} onChange={(e) => setDraft({ ...draft, isActive: e.target.checked })} /> Active
+                </span>
+              </label>
+              <label className={styles.field}>
+                <span className={styles.label}>Buffer before</span>
+                <input className={styles.input} type="number" min={0} value={draft.bufferBeforeMinutes} onChange={(e) => setDraft({ ...draft, bufferBeforeMinutes: Number(e.target.value) })} />
+              </label>
+              <label className={styles.field}>
                 <span className={styles.label}>Buffer after</span>
                 <input className={styles.input} type="number" min={0} value={draft.bufferAfterMinutes} onChange={(e) => setDraft({ ...draft, bufferAfterMinutes: Number(e.target.value) })} />
+              </label>
+              <label className={styles.field}>
+                <span className={styles.label}>Booking interval</span>
+                <input className={styles.input} type="number" min={5} value={draft.slotStepMinutes} onChange={(e) => setDraft({ ...draft, slotStepMinutes: Number(e.target.value) })} />
               </label>
               <label className={`${styles.field} ${styles.fieldFull}`}>
                 <span className={styles.label}>Image URL</span>
@@ -202,6 +254,10 @@ export default function BookingServicesAdmin({
               <label className={`${styles.field} ${styles.fieldFull}`}>
                 <span className={styles.label}>Description EN</span>
                 <textarea className={styles.textarea} value={draft.descriptionEn} onChange={(e) => setDraft({ ...draft, descriptionEn: e.target.value })} />
+              </label>
+              <label className={`${styles.field} ${styles.fieldFull}`}>
+                <span className={styles.label}>Description ZH</span>
+                <textarea className={styles.textarea} value={draft.descriptionZh} onChange={(e) => setDraft({ ...draft, descriptionZh: e.target.value })} />
               </label>
               <label className={`${styles.field} ${styles.fieldFull}`}>
                 <span className={styles.label}>Staff</span>

@@ -147,9 +147,12 @@ export default function BookingStaffAdmin({
               <label className={styles.field}><span className={styles.label}>Email</span><input className={styles.input} value={draft.email} onChange={(e) => setDraft({ ...draft, email: e.target.value })} /></label>
               <label className={styles.field}><span className={styles.label}>Title KO</span><input className={styles.input} value={draft.titleKo} onChange={(e) => setDraft({ ...draft, titleKo: e.target.value })} /></label>
               <label className={styles.field}><span className={styles.label}>Title EN</span><input className={styles.input} value={draft.titleEn} onChange={(e) => setDraft({ ...draft, titleEn: e.target.value })} /></label>
+              <label className={styles.field}><span className={styles.label}>Title ZH</span><input className={styles.input} value={draft.titleZh} onChange={(e) => setDraft({ ...draft, titleZh: e.target.value })} /></label>
+              <label className={styles.field}><span className={styles.label}><input type="checkbox" checked={draft.isActive} onChange={(e) => setDraft({ ...draft, isActive: e.target.checked })} /> Active</span></label>
               <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Photo URL</span><input className={styles.input} value={draft.photo} onChange={(e) => setDraft({ ...draft, photo: e.target.value })} /></label>
               <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Bio KO</span><textarea className={styles.textarea} value={draft.bioKo} onChange={(e) => setDraft({ ...draft, bioKo: e.target.value })} /></label>
               <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Bio EN</span><textarea className={styles.textarea} value={draft.bioEn} onChange={(e) => setDraft({ ...draft, bioEn: e.target.value })} /></label>
+              <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Bio ZH</span><textarea className={styles.textarea} value={draft.bioZh} onChange={(e) => setDraft({ ...draft, bioZh: e.target.value })} /></label>
             </div>
             <div className={styles.actions}>
               <button className={styles.button} type="button" onClick={save} disabled={saving}>{saving ? 'Saving...' : 'Save staff'}</button>

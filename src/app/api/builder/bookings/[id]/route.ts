@@ -42,6 +42,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     endAt: timingChanged ? addBookingDuration(nextStartAt, service.durationMinutes) : existing.endAt,
     status: parsed.data.status || existing.status,
     customer: { ...existing.customer, ...parsed.data.customer },
+    customerTimezone: parsed.data.customerTimezone ?? existing.customerTimezone,
   }, existing.createdAt);
   await saveBooking(next);
   return NextResponse.json({ booking: next });

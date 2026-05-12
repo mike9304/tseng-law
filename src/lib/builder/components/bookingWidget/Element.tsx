@@ -130,7 +130,18 @@ function BookingWidgetPreview({ node }: { node: BuilderBookingWidgetCanvasNode }
 }
 
 export default function BookingWidgetElement({ node, mode = 'edit' }: BookingWidgetElementProps) {
-  const { eyebrow, title, locale, successMessage, redirectAfterBooking } = node.content;
+  const {
+    eyebrow,
+    title,
+    locale,
+    successMessage,
+    redirectAfterBooking,
+    showCaseSummary,
+    caseSummaryLabel,
+    showAttachmentLinks,
+    attachmentLinksLabel,
+    customFieldLabels,
+  } = node.content;
   const serviceId = normalizeOptionalId(node.content.serviceId);
   const staffId = normalizeOptionalId(node.content.staffId);
   const redirectUrl = normalizeOptionalId(redirectAfterBooking);
@@ -151,6 +162,11 @@ export default function BookingWidgetElement({ node, mode = 'edit' }: BookingWid
           staffId={staffId}
           successMessage={successMessage}
           redirectAfterBooking={redirectUrl}
+          showCaseSummary={showCaseSummary}
+          caseSummaryLabel={caseSummaryLabel}
+          showAttachmentLinks={showAttachmentLinks}
+          attachmentLinksLabel={attachmentLinksLabel}
+          customFieldLabels={customFieldLabels}
         />
       ) : (
         <BookingWidgetPreview node={node} />

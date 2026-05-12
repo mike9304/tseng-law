@@ -15,6 +15,11 @@ export interface BookingFlowStepsProps {
   staffId?: string;
   successMessage?: string;
   redirectAfterBooking?: string;
+  showCaseSummary?: boolean;
+  caseSummaryLabel?: string;
+  showAttachmentLinks?: boolean;
+  attachmentLinksLabel?: string;
+  customFieldLabels?: string;
 }
 
 function todayPlus(days: number): string {
@@ -23,14 +28,53 @@ function todayPlus(days: number): string {
   return date.toISOString().slice(0, 10);
 }
 
+function browserTimezone(): string {
+  try {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone || 'Asia/Seoul';
+  } catch {
+    return 'Asia/Seoul';
+  }
+}
+
+function formatInTimezone(iso: string, locale: Locale, timezone: string): string {
+  return new Intl.DateTimeFormat(locale, {
+    timeZone: timezone,
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(new Date(iso));
+}
+
+function parseAttachmentLinks(value: string): string[] {
+  return value
+    .split(/\r?\n/)
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .slice(0, 8);
+}
+
+function parseCustomFieldLabels(value: string): string[] {
+  return value
+    .split(/\r?\n/)
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .slice(0, 12);
+}
+
 export default function BookingFlowSteps({
   locale: rawLocale = 'ko',
   serviceId: fixedServiceId,
   staffId: fixedStaffId,
   successMessage = '예약이 완료되었습니다',
   redirectAfterBooking,
+  showCaseSummary = true,
+  caseSummaryLabel = '사건 개요',
+  showAttachmentLinks = true,
+  attachmentLinksLabel = '첨부 링크',
+  customFieldLabels = '',
 }: BookingFlowStepsProps) {
   const locale = normalizeLocale(rawLocale);
+  const customerTimezone = browserTimezone();
+  const customLabels = useMemo(() => parseCustomFieldLabels(customFieldLabels), [customFieldLabels]);
   const [step, setStep] = useState<FlowStep>(0);
   const [services, setServices] = useState<BookingService[]>([]);
   const [staff, setStaff] = useState<Staff[]>([]);
@@ -39,7 +83,17 @@ export default function BookingFlowSteps({
   const [staffId, setStaffId] = useState(fixedStaffId || '');
   const [date, setDate] = useState(todayPlus(1));
   const [slot, setSlot] = useState<Slot | null>(null);
-  const [customer, setCustomer] = useState({ name: '', email: '', phone: '', notes: '', consent: false, company: '' });
+  const [customer, setCustomer] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    notes: '',
+    caseSummary: '',
+    attachmentLinks: '',
+    customFieldValues: {} as Record<string, string>,
+    consent: false,
+    company: '',
+  });
   const [loading, setLoading] = useState(false);
   const [completed, setCompleted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -87,6 +141,28 @@ export default function BookingFlowSteps({
     setLoading(true);
     setError(null);
     try {
+      let paymentIntentId: string | undefined;
+      if (selectedService?.paymentMode === 'paid') {
+        const paymentRes = await fetch('/api/booking/payment-intent', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            serviceId,
+            customer: { name: customer.name, email: customer.email },
+          }),
+        });
+        const payment = (await paymentRes.json().catch(() => ({}))) as {
+          paymentIntentId?: string;
+          stub?: boolean;
+        };
+        if (!paymentRes.ok) throw new Error('payment intent failed');
+        paymentIntentId = payment.paymentIntentId ?? (payment.stub ? 'pi_stub_dev' : undefined);
+        if (!paymentIntentId) throw new Error('payment confirmation required');
+      }
+      const customFields = customLabels.map((label) => ({
+        label,
+        value: customer.customFieldValues[label] ?? '',
+      }));
       const res = await fetch('/api/booking/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -99,8 +175,13 @@ export default function BookingFlowSteps({
             email: customer.email,
             phone: customer.phone,
             notes: customer.notes,
+            caseSummary: showCaseSummary ? customer.caseSummary : undefined,
+            attachmentUrls: showAttachmentLinks ? parseAttachmentLinks(customer.attachmentLinks) : undefined,
+            customFields: customFields.length > 0 ? customFields : undefined,
             locale,
           },
+          customerTimezone,
+          paymentIntentId,
           company: customer.company,
         }),
       });
@@ -116,19 +197,19 @@ export default function BookingFlowSteps({
 
   if (completed) {
     return (
-      <div className={styles.flow}>
+      <div className={styles.flow} data-booking-flow="true">
         <div className={styles.notice}>{successMessage}</div>
         <div className={styles.panel} style={{ boxShadow: 'none' }}>
           <h2 className={styles.cardTitle}>{textForLocale(selectedService?.name, locale)}</h2>
           <p className={styles.muted}>{selectedStaff ? textForLocale(selectedStaff.name, locale) : ''}</p>
-          <p className={styles.muted}>{slot ? new Date(slot.startAt).toLocaleString(locale) : ''}</p>
+          <p className={styles.muted}>{slot ? `${new Date(slot.startAt).toLocaleString(locale)} · ${customerTimezone}` : ''}</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className={styles.flow}>
+    <div className={styles.flow} data-booking-flow="true">
       <div className={styles.steps}>
         {['Service', 'Staff', 'Date & time', 'Info'].map((label, index) => (
           <div className={styles.step} data-active={step === index} key={label}>{index + 1}. {label}</div>
@@ -139,9 +220,16 @@ export default function BookingFlowSteps({
       {step === 0 ? (
         <div className={styles.optionGrid}>
           {services.map((service) => (
-            <button className={styles.option} data-active={service.serviceId === serviceId} key={service.serviceId} type="button" onClick={() => setServiceId(service.serviceId)}>
+            <button className={styles.option} data-active={service.serviceId === serviceId} data-booking-service-id={service.serviceId} key={service.serviceId} type="button" onClick={() => setServiceId(service.serviceId)}>
               <strong>{textForLocale(service.name, locale)}</strong>
-              <p className={styles.muted}>{service.durationMinutes} min · TWD {service.priceTwd?.toLocaleString() || 0}</p>
+              <p className={styles.muted}>
+                {service.durationMinutes} min · {service.paymentMode === 'paid'
+                  ? `${service.priceCurrency ?? 'TWD'} ${(service.priceAmount ?? service.priceTwd ?? 0).toLocaleString()}`
+                  : `TWD ${service.priceTwd?.toLocaleString() || 0}`}
+              </p>
+              <p className={styles.muted}>
+                {service.paymentMode === 'paid' ? '결제 후 예약 확정' : '결제 없이 예약 확정'} · {service.slotStepMinutes ?? 30}분 간격
+              </p>
               <p className={styles.muted}>{textForLocale(service.description, locale)}</p>
             </button>
           ))}
@@ -151,7 +239,7 @@ export default function BookingFlowSteps({
       {step === 1 ? (
         <div className={styles.optionGrid}>
           {staff.map((member) => (
-            <button className={styles.option} data-active={member.staffId === staffId} key={member.staffId} type="button" onClick={() => setStaffId(member.staffId)}>
+            <button className={styles.option} data-active={member.staffId === staffId} data-booking-staff-id={member.staffId} key={member.staffId} type="button" onClick={() => setStaffId(member.staffId)}>
               <strong>{textForLocale(member.name, locale)}</strong>
               <p className={styles.muted}>{textForLocale(member.title, locale)}</p>
               <p className={styles.muted}>{textForLocale(member.bio, locale)}</p>
@@ -168,10 +256,12 @@ export default function BookingFlowSteps({
           </label>
           <div className={`${styles.field} ${styles.fieldFull}`}>
             <span className={styles.label}>{loading ? 'Loading slots...' : 'Available times'}</span>
+            <p className={styles.muted}>내 시간대: {customerTimezone}</p>
             <div className={styles.slots}>
               {slots.map((item) => (
-                <button className={styles.slot} data-active={slot?.startAt === item.startAt} key={`${item.staffId}-${item.startAt}`} type="button" onClick={() => setSlot(item)}>
-                  {new Date(item.startAt).toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })}
+                <button className={styles.slot} data-active={slot?.startAt === item.startAt} data-booking-slot-start={item.startAt} key={`${item.staffId}-${item.startAt}`} type="button" onClick={() => setSlot(item)}>
+                  {formatInTimezone(item.startAt, locale, customerTimezone)}
+                  {item.timezone !== customerTimezone ? ` / ${formatInTimezone(item.startAt, locale, item.timezone)} ${item.timezone}` : ''}
                 </button>
               ))}
               {!loading && slots.length === 0 ? <span className={styles.muted}>No available slots for this date.</span> : null}
@@ -187,6 +277,36 @@ export default function BookingFlowSteps({
           <label className={styles.field}><span className={styles.label}>Email</span><input className={styles.input} type="email" value={customer.email} onChange={(event) => setCustomer({ ...customer, email: event.target.value })} /></label>
           <label className={styles.field}><span className={styles.label}>Phone</span><input className={styles.input} value={customer.phone} onChange={(event) => setCustomer({ ...customer, phone: event.target.value })} /></label>
           <label className={`${styles.field} ${styles.fieldFull}`}><span className={styles.label}>Notes</span><textarea className={styles.textarea} value={customer.notes} onChange={(event) => setCustomer({ ...customer, notes: event.target.value })} /></label>
+          {showCaseSummary ? (
+            <label className={`${styles.field} ${styles.fieldFull}`}>
+              <span className={styles.label}>{caseSummaryLabel}</span>
+              <textarea className={styles.textarea} value={customer.caseSummary} onChange={(event) => setCustomer({ ...customer, caseSummary: event.target.value })} />
+            </label>
+          ) : null}
+          {showAttachmentLinks ? (
+            <label className={`${styles.field} ${styles.fieldFull}`}>
+              <span className={styles.label}>{attachmentLinksLabel}</span>
+              <textarea className={styles.textarea} value={customer.attachmentLinks} onChange={(event) => setCustomer({ ...customer, attachmentLinks: event.target.value })} placeholder="https://drive.google.com/..." />
+            </label>
+          ) : null}
+          {customLabels.map((label) => (
+            <label className={`${styles.field} ${styles.fieldFull}`} key={label}>
+              <span className={styles.label}>{label}</span>
+              <input
+                className={styles.input}
+                value={customer.customFieldValues[label] ?? ''}
+                onChange={(event) => setCustomer({
+                  ...customer,
+                  customFieldValues: { ...customer.customFieldValues, [label]: event.target.value },
+                })}
+              />
+            </label>
+          ))}
+          {selectedService?.paymentMode === 'paid' ? (
+            <div className={`${styles.notice} ${styles.fieldFull}`}>
+              {selectedService.priceCurrency ?? 'TWD'} {(selectedService.priceAmount ?? selectedService.priceTwd ?? 0).toLocaleString()} 결제 준비 후 예약을 확정합니다.
+            </div>
+          ) : null}
           <label className={`${styles.field} ${styles.fieldFull}`}>
             <span className={styles.label}>
               <input type="checkbox" checked={customer.consent} onChange={(event) => setCustomer({ ...customer, consent: event.target.checked })} /> 개인정보 수집 및 상담 예약 안내에 동의합니다.

@@ -108,6 +108,60 @@ export default function BookingWidgetInspector({
           placeholder="/ko/thank-you"
         />
       </label>
+
+      <span style={sectionLabelStyle}>Booking Form</span>
+      <label>
+        <span>
+          <input
+            type="checkbox"
+            checked={c.showCaseSummary}
+            disabled={disabled}
+            onChange={(event) => onUpdate({ showCaseSummary: event.target.checked })}
+          />{' '}
+          Case summary field
+        </span>
+      </label>
+      <label>
+        <span>Case summary label</span>
+        <input
+          type="text"
+          value={c.caseSummaryLabel}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ caseSummaryLabel: event.target.value })}
+          placeholder="사건 개요"
+        />
+      </label>
+      <label>
+        <span>
+          <input
+            type="checkbox"
+            checked={c.showAttachmentLinks}
+            disabled={disabled}
+            onChange={(event) => onUpdate({ showAttachmentLinks: event.target.checked })}
+          />{' '}
+          Attachment links field
+        </span>
+      </label>
+      <label>
+        <span>Attachment label</span>
+        <input
+          type="text"
+          value={c.attachmentLinksLabel}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ attachmentLinksLabel: event.target.value })}
+          placeholder="첨부 링크"
+        />
+      </label>
+      <label>
+        <span>Custom fields</span>
+        <textarea
+          rows={4}
+          value={c.customFieldLabels}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ customFieldLabels: event.target.value })}
+          placeholder={'희망 상담 언어\n상대방 이름\n사건 지역'}
+        />
+      </label>
     </>
   );
 }

@@ -878,3 +878,28 @@ Created: 2026-05-09T12:52:13.760Z
 - W 판정:
   - W186/W187/W188/W190/W191/W192/W193/W194/W195 자동검증 evidence 확보.
   - W189 scheduled publish는 현재 master prompt의 M24 구현 범위 밖이며, 별도 publish scheduling milestone로 남긴다.
+
+## M25 — Bookings 본격 1 (서비스/스태프)
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/bookings/types.ts`, `storage.ts`, `availability.ts` — 서비스 결제 모드/가격/통화/예약 간격, 고객 타임존, 사건 개요/첨부/custom fields 타입과 저장/슬롯 계산을 확장했다.
+  - `src/app/api/booking/book/route.ts`, `src/app/api/builder/bookings/admin-create/route.ts`, `src/app/api/builder/bookings/[id]/route.ts` — 공개 예약, 관리자 생성/수정 payload에 타임존과 커스텀 폼 데이터를 저장하고 paid service는 payment intent 선행을 요구한다.
+  - `src/components/builder/bookings/BookingServicesAdmin.tsx`, `BookingStaffAdmin.tsx`, `BookingAvailabilityAdmin.tsx`, `BookingCalendarAdmin.tsx`, `BookingsAdmin.module.css` — Services/Staff/Availability 관리 UI를 Wix Bookings형 편집 흐름으로 확장했다.
+  - `src/components/builder/bookings/BookingFlowSteps.tsx`, `src/lib/builder/components/bookingWidget/*`, `src/lib/builder/canvas/types.ts` — 공개 예약 위젯에 서비스→스태프→슬롯→정보 입력 flow, 로컬/업체 타임존 표시, 사건 개요/첨부/custom fields inspector를 연결했다.
+  - `src/components/builder/bookings/CalendarSyncAdmin.tsx` — M24 전역 lint/build를 막던 기존 unused setter를 정리했다.
+  - `src/lib/builder/bookings/__tests__/availability.test.ts`, `tests/builder-editor/bookings-m25.playwright.ts` — 서비스/스태프/availability/booking flow 자동검증을 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (3 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m25.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run security:builder-routes` ✅ (109 route files / 90 mutation handlers)
+  - `npx vitest run src/lib/builder/bookings/__tests__/availability.test.ts src/lib/builder/bookings/calendar-sync/__tests__/encryption.test.ts` ✅ (6 passed)
+  - `npm run test:unit` ✅ (858 passed)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- W 판정:
+  - W196/W197/W198/W199/W200/W201/W202 자동검증 evidence 확보.
+  - 결제는 옵션 C 하이브리드 기본으로 구현했다. 무료 서비스는 바로 예약되고, 유료 서비스는 기존 Stripe Payment Intent route를 선행 호출한 뒤 booking row를 저장한다. 로컬 개발 환경은 `pi_stub_dev` stub으로 E2E를 통과한다.
+  - 실제 Stripe Payment Element 확인, 환불/리스케줄/취소 정책, calendar 양방향/Zoom 알림 심화는 M26~M27 Bookings 후속에서 계속 진행한다.
+  - 사용자 직접 QA 전까지 체크포인트는 `자동검증 통과 / 사용자 QA 대기`로 둔다.

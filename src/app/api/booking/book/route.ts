@@ -41,6 +41,9 @@ export async function POST(request: NextRequest) {
   if (!service || !service.isActive || !staff || !staff.isActive) {
     return NextResponse.json({ error: 'Service or staff not available' }, { status: 404 });
   }
+  if (service.paymentMode === 'paid' && !parsed.data.paymentIntentId) {
+    return NextResponse.json({ error: 'Payment is required before booking this service.' }, { status: 402 });
+  }
 
   const available = await isSlotAvailable({
     serviceId: parsed.data.serviceId,
@@ -74,6 +77,7 @@ export async function POST(request: NextRequest) {
     status: 'confirmed' as const,
     source: 'web' as const,
     reminders: [],
+    ...(parsed.data.customerTimezone ? { customerTimezone: parsed.data.customerTimezone } : {}),
     ...(meetingLink ? { meetingLink } : {}),
     ...(parsed.data.paymentIntentId
       ? { paymentIntentId: parsed.data.paymentIntentId, paymentStatus: 'unpaid' as const }
@@ -87,6 +91,7 @@ export async function POST(request: NextRequest) {
     staffId: booking.staffId,
     startAt: booking.startAt,
     customer: { email: booking.customer.email, name: booking.customer.name, locale: booking.customer.locale },
+    customerTimezone: booking.customerTimezone,
   });
 
   return NextResponse.json({ bookingId: booking.bookingId, booking }, { status: 201 });

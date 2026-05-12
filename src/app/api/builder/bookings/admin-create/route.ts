@@ -38,6 +38,7 @@ export async function POST(request: NextRequest) {
     status: parsed.data.status,
     source: 'admin' as const,
     reminders: [],
+    ...(parsed.data.customerTimezone ? { customerTimezone: parsed.data.customerTimezone } : {}),
   });
   await saveBooking(booking);
   await sendBookingConfirmation(booking, { service, staff });

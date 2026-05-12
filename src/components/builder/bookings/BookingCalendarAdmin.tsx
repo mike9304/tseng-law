@@ -181,6 +181,12 @@ export default function BookingCalendarAdmin({
                   <p><strong>Email:</strong> {selectedEntry.booking.customer.email}</p>
                   <p><strong>Phone:</strong> {selectedEntry.booking.customer.phone || '-'}</p>
                   <p><strong>Notes:</strong> {selectedEntry.booking.customer.notes || '-'}</p>
+                  <p><strong>Timezone:</strong> {selectedEntry.booking.customerTimezone || '-'}</p>
+                  <p><strong>Case summary:</strong> {selectedEntry.booking.customer.caseSummary || '-'}</p>
+                  <p><strong>Attachments:</strong> {(selectedEntry.booking.customer.attachmentUrls ?? []).join(', ') || '-'}</p>
+                  {(selectedEntry.booking.customer.customFields ?? []).map((field) => (
+                    <p key={field.label}><strong>{field.label}:</strong> {field.value || '-'}</p>
+                  ))}
                 </div>
                 <div className={styles.actions}>
                   {selectedEntry.booking.status !== 'cancelled' ? (

@@ -96,50 +96,84 @@ export default function BookingAvailabilityAdmin({
         </div>
         <div className={styles.availabilityGrid}>
           {dayOfWeeks.map((day) => {
-            const block = availability.weekly[day][0] || { start: '09:00', end: '18:00' };
-            const enabled = availability.weekly[day].length > 0;
+            const blocks = availability.weekly[day];
+            const enabled = blocks.length > 0;
+            const fallbackBlock = blocks[0] || { start: '09:00', end: '18:00' };
             return (
-              <div className={styles.dayRow} key={day}>
-                <label className={styles.label}>
-                  <input
-                    type="checkbox"
-                    checked={enabled}
-                    onChange={(event) => setAvailability({
+              <div className={styles.availabilityDay} key={day}>
+                <div className={styles.dayRow}>
+                  <label className={styles.label}>
+                    <input
+                      type="checkbox"
+                      checked={enabled}
+                      onChange={(event) => setAvailability({
+                        ...availability,
+                        weekly: {
+                          ...availability.weekly,
+                          [day]: event.target.checked ? [fallbackBlock] : [],
+                        },
+                      })}
+                    />{' '}
+                    {dayLabels[day]}
+                  </label>
+                  <button
+                    className={styles.buttonSecondary}
+                    type="button"
+                    disabled={!enabled}
+                    onClick={() => setAvailability({
                       ...availability,
                       weekly: {
                         ...availability.weekly,
-                        [day]: event.target.checked ? [block] : [],
+                        [day]: [...blocks, { start: '13:00', end: '17:00' }],
                       },
                     })}
-                  />{' '}
-                  {dayLabels[day]}
-                </label>
-                <input
-                  className={styles.input}
-                  type="time"
-                  value={block.start}
-                  disabled={!enabled}
-                  onChange={(event) => setAvailability({
-                    ...availability,
-                    weekly: {
-                      ...availability.weekly,
-                      [day]: [{ ...block, start: event.target.value }],
-                    },
-                  })}
-                />
-                <input
-                  className={styles.input}
-                  type="time"
-                  value={block.end}
-                  disabled={!enabled}
-                  onChange={(event) => setAvailability({
-                    ...availability,
-                    weekly: {
-                      ...availability.weekly,
-                      [day]: [{ ...block, end: event.target.value }],
-                    },
-                  })}
-                />
+                  >
+                    Add time range
+                  </button>
+                </div>
+                {blocks.map((block, blockIndex) => (
+                  <div className={styles.timeRangeRow} key={`${day}-${blockIndex}`}>
+                    <input
+                      className={styles.input}
+                      aria-label={`${dayLabels[day]} start ${blockIndex + 1}`}
+                      type="time"
+                      value={block.start}
+                      onChange={(event) => {
+                        const nextBlocks = blocks.map((item, index) => index === blockIndex ? { ...item, start: event.target.value } : item);
+                        setAvailability({
+                          ...availability,
+                          weekly: { ...availability.weekly, [day]: nextBlocks },
+                        });
+                      }}
+                    />
+                    <input
+                      className={styles.input}
+                      aria-label={`${dayLabels[day]} end ${blockIndex + 1}`}
+                      type="time"
+                      value={block.end}
+                      onChange={(event) => {
+                        const nextBlocks = blocks.map((item, index) => index === blockIndex ? { ...item, end: event.target.value } : item);
+                        setAvailability({
+                          ...availability,
+                          weekly: { ...availability.weekly, [day]: nextBlocks },
+                        });
+                      }}
+                    />
+                    <button
+                      className={styles.buttonSecondary}
+                      type="button"
+                      onClick={() => setAvailability({
+                        ...availability,
+                        weekly: {
+                          ...availability.weekly,
+                          [day]: blocks.filter((_, index) => index !== blockIndex),
+                        },
+                      })}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                ))}
               </div>
             );
           })}

@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function CalendarSyncAdmin({ initialConnections, staff, googleConfigured, outlookConfigured }: Props) {
-  const [connections, setConnections] = useState(initialConnections);
+  const [connections] = useState(initialConnections);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [message, setMessage] = useState('');
 

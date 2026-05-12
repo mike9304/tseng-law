@@ -15,6 +15,11 @@ export default defineComponent({
     staffId: '',
     successMessage: '예약이 완료되었습니다',
     redirectAfterBooking: '',
+    showCaseSummary: true,
+    caseSummaryLabel: '사건 개요',
+    showAttachmentLinks: true,
+    attachmentLinksLabel: '첨부 링크',
+    customFieldLabels: '',
   },
   defaultStyle: {
     backgroundColor: 'transparent',

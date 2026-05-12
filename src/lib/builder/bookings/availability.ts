@@ -17,6 +17,7 @@ export interface Slot {
   startAt: string;
   endAt: string;
   staffId: string;
+  timezone: string;
 }
 
 const SLOT_STEP_MINUTES = 30;
@@ -73,6 +74,7 @@ async function computeSlotsForStaff(serviceId: string, staffId: string, date: st
   const bookings = await listBookings({ from, to, staffId });
   const bufferBefore = service.bufferBeforeMinutes;
   const bufferAfter = service.bufferAfterMinutes;
+  const slotStepMinutes = service.slotStepMinutes ?? SLOT_STEP_MINUTES;
   const now = new Date().toISOString();
 
   const slots: Slot[] = [];
@@ -81,7 +83,7 @@ async function computeSlotsForStaff(serviceId: string, staffId: string, date: st
     const blockEnd = parseTimeToMinutes(block.end);
     const latestStart = blockEnd - service.durationMinutes;
 
-    for (let cursor = blockStart; cursor <= latestStart; cursor += SLOT_STEP_MINUTES) {
+    for (let cursor = blockStart; cursor <= latestStart; cursor += slotStepMinutes) {
       const startAt = toIso(date, minutesToTime(cursor), availability.timezone);
       const endAt = addMinutes(startAt, service.durationMinutes);
       if (startAt <= now) continue;
@@ -96,7 +98,7 @@ async function computeSlotsForStaff(serviceId: string, staffId: string, date: st
       const hasConflict = bookings.some((booking) =>
         intervalsOverlap(candidateStartWithBuffer, candidateEndWithBuffer, booking.startAt, booking.endAt),
       );
-      if (!hasConflict) slots.push({ startAt, endAt, staffId });
+      if (!hasConflict) slots.push({ startAt, endAt, staffId, timezone: availability.timezone });
     }
   }
 

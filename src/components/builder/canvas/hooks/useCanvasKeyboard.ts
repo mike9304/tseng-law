@@ -16,9 +16,11 @@ type UseCanvasKeyboardShortcutsArgs = {
   focusSelectedLinkInput: () => void;
   groupSelectedNodes: () => void;
   handleCopy: () => void;
+  handleCopyStyle: () => void;
   handleCut: () => void;
   handleDuplicate: () => void;
   handlePaste: () => void;
+  handlePasteStyle: () => void;
   handleRedo: () => void;
   handleUndo: () => void;
   nudgeSelectedNode: (deltaX: number, deltaY: number) => void;
@@ -42,9 +44,11 @@ export function useCanvasKeyboardShortcuts({
   focusSelectedLinkInput,
   groupSelectedNodes,
   handleCopy,
+  handleCopyStyle,
   handleCut,
   handleDuplicate,
   handlePaste,
+  handlePasteStyle,
   handleRedo,
   handleUndo,
   nudgeSelectedNode,
@@ -94,8 +98,14 @@ export function useCanvasKeyboardShortcuts({
         case 'copy':
           handleCopy();
           break;
+        case 'copyStyle':
+          handleCopyStyle();
+          break;
         case 'paste':
           handlePaste();
+          break;
+        case 'pasteStyle':
+          handlePasteStyle();
           break;
         case 'cut':
           handleCut();
@@ -179,9 +189,11 @@ export function useCanvasKeyboardShortcuts({
     focusSelectedLinkInput,
     groupSelectedNodes,
     handleCopy,
+    handleCopyStyle,
     handleCut,
     handleDuplicate,
     handlePaste,
+    handlePasteStyle,
     handleRedo,
     handleUndo,
     nudgeSelectedNode,

@@ -2,10 +2,12 @@
 
 import { useEffect, useMemo, useState, type FormEvent } from 'react';
 import {
+  BUILDER_EDITOR_PREFS_EVENT,
   DEFAULT_EDITOR_PREFS,
   loadEditorPreferences,
   makeCommentId,
-  saveEditorPreferences,
+  saveAndBroadcastEditorPreferences,
+  type EditorPreferences,
   type ElementComment,
 } from '@/lib/builder/canvas/editor-prefs';
 
@@ -27,6 +29,12 @@ export default function ElementCommentsPanel({ selectedNodeId, authorLabel = 'de
 
   useEffect(() => {
     setComments(loadEditorPreferences().comments);
+    function handlePrefsChange(event: Event) {
+      const prefs = (event as CustomEvent<EditorPreferences>).detail ?? loadEditorPreferences();
+      setComments(prefs.comments);
+    }
+    document.addEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
+    return () => document.removeEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
   }, []);
 
   const scoped = useMemo(
@@ -36,7 +44,7 @@ export default function ElementCommentsPanel({ selectedNodeId, authorLabel = 'de
 
   function persistAll(next: ElementComment[]) {
     const prefs = loadEditorPreferences() ?? DEFAULT_EDITOR_PREFS;
-    saveEditorPreferences({ ...prefs, comments: next });
+    saveAndBroadcastEditorPreferences({ ...prefs, comments: next });
     setComments(next);
   }
 
@@ -66,14 +74,14 @@ export default function ElementCommentsPanel({ selectedNodeId, authorLabel = 'de
 
   if (!selectedNodeId) {
     return (
-      <div style={{ padding: 12, color: '#94a3b8', fontSize: 12 }}>
+      <div data-builder-element-comments="empty" style={{ padding: 12, color: '#94a3b8', fontSize: 12 }}>
         노드를 선택하면 주석을 추가할 수 있습니다.
       </div>
     );
   }
 
   return (
-    <div style={{ padding: 12, display: 'flex', flexDirection: 'column', gap: 10, fontSize: 12 }}>
+    <div data-builder-element-comments={selectedNodeId} style={{ padding: 12, display: 'flex', flexDirection: 'column', gap: 10, fontSize: 12 }}>
       <strong style={{ fontSize: 11, color: '#475569', textTransform: 'uppercase' }}>
         주석 · {scoped.length}
       </strong>
@@ -125,10 +133,12 @@ export default function ElementCommentsPanel({ selectedNodeId, authorLabel = 'de
           value={draft}
           onChange={(event) => setDraft(event.target.value)}
           placeholder="이 노드에 대한 주석..."
+          data-builder-comment-input="true"
           style={{ padding: 6, fontSize: 12, border: '1px solid #cbd5e1', borderRadius: 6, fontFamily: 'inherit', resize: 'vertical' }}
         />
         <button
           type="submit"
+          data-builder-comment-submit="true"
           disabled={!draft.trim()}
           style={{
             alignSelf: 'flex-end',

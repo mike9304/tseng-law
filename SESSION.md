@@ -4565,3 +4565,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run security:builder-routes` ✅
 - 체크포인트:
   - W216/W217/W218 자동검증 evidence 확보. W219~W225는 M28 다음 slice로 계속 진행.
+
+## 2026-05-12 Codex /goal M28 editor advanced panels
+
+- M28 에디터 고도화 후반 slice로 W219~W225를 연결했다.
+- Layers panel은 zIndex tree/search/visibility/lock row를 자동검증 가능한 surface로 보강했다.
+- Shortcut map modal을 Editor preferences에 연결했고, custom keybinding override가 실제 `matchShortcut`에서 기본 단축키를 대체하도록 수정했다.
+- Inspector multi-select에 align 6종, distribute H/V, match W/H 버튼을 추가했다.
+- Style-only copy/paste를 `Mod+Alt+C/V`와 context menu로 연결했다.
+- Add drawer에 Component library를 붙여 선택 노드 tree 저장/삽입을 지원한다.
+- Inspector에 Element comments thread를 붙여 선택 노드별 주석을 localStorage editor preferences에 저장한다.
+- Zoom dock은 25~200% slider/buttons 검증 surface를 갖췄고, History drawer에는 Undo stack timeline을 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/shortcuts.test.ts` ✅ (2 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 체크포인트:
+  - W219/W220/W221/W222/W223/W224/W225 자동검증 evidence 확보. 전체 lint/unit/security/build는 이 slice 최종 게이트로 이어서 실행.

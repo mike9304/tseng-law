@@ -4,27 +4,15 @@ import { useEffect, useState } from 'react';
 import {
   DEFAULT_EDITOR_PREFS,
   loadEditorPreferences,
-  saveEditorPreferences,
+  saveAndBroadcastEditorPreferences,
   type CustomKeybinding,
 } from '@/lib/builder/canvas/editor-prefs';
+import { DEFAULT_KEYBINDINGS } from '@/lib/builder/canvas/shortcuts';
 
 interface Props {
   open: boolean;
   onClose: () => void;
 }
-
-const DEFAULT_BINDINGS: CustomKeybinding[] = [
-  { action: 'duplicate', combo: 'Mod+D' },
-  { action: 'group', combo: 'Mod+G' },
-  { action: 'ungroup', combo: 'Mod+Shift+G' },
-  { action: 'undo', combo: 'Mod+Z' },
-  { action: 'redo', combo: 'Mod+Shift+Z' },
-  { action: 'delete', combo: 'Backspace' },
-  { action: 'lock', combo: 'Mod+L' },
-  { action: 'hide', combo: 'Mod+H' },
-  { action: 'paste-style', combo: 'Mod+Alt+V' },
-  { action: 'select-all', combo: 'Mod+A' },
-];
 
 /**
  * Phase 28 W219 — Keybinding mapping modal.
@@ -34,15 +22,17 @@ const DEFAULT_BINDINGS: CustomKeybinding[] = [
  * wired into existing shortcut listeners) instead of hard-coding combos.
  */
 export default function KeybindingsModal({ open, onClose }: Props) {
-  const [bindings, setBindings] = useState<CustomKeybinding[]>(DEFAULT_BINDINGS);
+  const [bindings, setBindings] = useState<CustomKeybinding[]>(
+    () => DEFAULT_KEYBINDINGS.map((binding) => ({ action: binding.action, combo: binding.combo })),
+  );
 
   useEffect(() => {
     if (!open) return;
     const prefs = loadEditorPreferences();
     const map = new Map<string, string>();
-    for (const b of DEFAULT_BINDINGS) map.set(b.action, b.combo);
+    for (const b of DEFAULT_KEYBINDINGS) map.set(b.action, b.combo);
     for (const b of prefs.customKeybindings) map.set(b.action, b.combo);
-    setBindings(DEFAULT_BINDINGS.map((d) => ({ action: d.action, combo: map.get(d.action) ?? d.combo })));
+    setBindings(DEFAULT_KEYBINDINGS.map((d) => ({ action: d.action, combo: map.get(d.action) ?? d.combo })));
   }, [open]);
 
   function updateCombo(action: string, combo: string) {
@@ -52,11 +42,15 @@ export default function KeybindingsModal({ open, onClose }: Props) {
   function persist() {
     const prefs = loadEditorPreferences() ?? DEFAULT_EDITOR_PREFS;
     const overrides = bindings.filter((b) => {
-      const def = DEFAULT_BINDINGS.find((d) => d.action === b.action);
-      return def?.combo !== b.combo;
+      const def = DEFAULT_KEYBINDINGS.find((d) => d.action === b.action);
+      return b.combo.trim() && def?.combo !== b.combo.trim();
     });
-    saveEditorPreferences({ ...prefs, customKeybindings: overrides });
+    saveAndBroadcastEditorPreferences({ ...prefs, customKeybindings: overrides });
     onClose();
+  }
+
+  function reset() {
+    setBindings(DEFAULT_KEYBINDINGS.map((binding) => ({ action: binding.action, combo: binding.combo })));
   }
 
   if (!open) return null;
@@ -65,6 +59,7 @@ export default function KeybindingsModal({ open, onClose }: Props) {
       role="dialog"
       aria-modal="true"
       aria-label="Keybindings"
+      data-builder-keybindings-modal="true"
       style={{
         position: 'fixed',
         inset: 0,
@@ -99,6 +94,7 @@ export default function KeybindingsModal({ open, onClose }: Props) {
           <thead>
             <tr>
               <th style={{ textAlign: 'left', padding: 6, color: '#475569' }}>액션</th>
+              <th style={{ textAlign: 'left', padding: 6, color: '#475569' }}>설명</th>
               <th style={{ textAlign: 'left', padding: 6, color: '#475569' }}>단축키</th>
             </tr>
           </thead>
@@ -106,9 +102,13 @@ export default function KeybindingsModal({ open, onClose }: Props) {
             {bindings.map((b) => (
               <tr key={b.action}>
                 <td style={{ padding: 6, fontFamily: 'ui-monospace, Menlo, monospace' }}>{b.action}</td>
+                <td style={{ padding: 6, color: '#475569' }}>
+                  {DEFAULT_KEYBINDINGS.find((binding) => binding.action === b.action)?.label ?? b.action}
+                </td>
                 <td style={{ padding: 6 }}>
                   <input
                     type="text"
+                    data-builder-keybinding-input={b.action}
                     value={b.combo}
                     onChange={(event) => updateCombo(b.action, event.target.value)}
                     style={{
@@ -126,6 +126,13 @@ export default function KeybindingsModal({ open, onClose }: Props) {
           </tbody>
         </table>
         <div style={{ marginTop: 16, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+          <button
+            type="button"
+            onClick={reset}
+            style={{ marginRight: 'auto', padding: '8px 14px', border: '1px solid #cbd5e1', background: '#ffffff', borderRadius: 8, cursor: 'pointer' }}
+          >
+            기본값
+          </button>
           <button
             type="button"
             onClick={onClose}
@@ -150,6 +157,6 @@ export function resolveKeybinding(action: string): string {
   const prefs = loadEditorPreferences();
   const override = prefs.customKeybindings.find((b) => b.action === action);
   if (override) return override.combo;
-  const fallback = DEFAULT_BINDINGS.find((b) => b.action === action);
+  const fallback = DEFAULT_KEYBINDINGS.find((b) => b.action === action);
   return fallback?.combo ?? '';
 }

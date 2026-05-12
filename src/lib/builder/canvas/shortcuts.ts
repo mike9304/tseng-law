@@ -19,6 +19,8 @@ export type CanvasAction =
   | 'copy'
   | 'paste'
   | 'cut'
+  | 'copyStyle'
+  | 'pasteStyle'
   | 'group'
   | 'ungroup'
   | 'zoomIn'
@@ -41,8 +43,50 @@ export type CanvasAction =
   | 'editLink'
   | null;
 
+export interface ShortcutBindingDefinition {
+  action: Exclude<CanvasAction, null>;
+  combo: string;
+  label: string;
+}
+
+export const DEFAULT_KEYBINDINGS: ShortcutBindingDefinition[] = [
+  { action: 'undo', combo: 'Mod+Z', label: 'Undo' },
+  { action: 'redo', combo: 'Mod+Shift+Z', label: 'Redo' },
+  { action: 'delete', combo: 'Backspace', label: 'Delete selection' },
+  { action: 'duplicate', combo: 'Mod+D', label: 'Duplicate selection' },
+  { action: 'selectAll', combo: 'Mod+A', label: 'Select all nodes' },
+  { action: 'deselect', combo: 'Escape', label: 'Deselect / exit group' },
+  { action: 'copy', combo: 'Mod+C', label: 'Copy nodes' },
+  { action: 'paste', combo: 'Mod+V', label: 'Paste nodes' },
+  { action: 'cut', combo: 'Mod+X', label: 'Cut nodes' },
+  { action: 'copyStyle', combo: 'Mod+Alt+C', label: 'Copy style' },
+  { action: 'pasteStyle', combo: 'Mod+Alt+V', label: 'Paste style' },
+  { action: 'group', combo: 'Mod+G', label: 'Group selection' },
+  { action: 'ungroup', combo: 'Mod+Shift+G', label: 'Ungroup selection' },
+  { action: 'showHelp', combo: 'Mod+/', label: 'Open shortcuts help' },
+  { action: 'toggleGrid', combo: 'Shift+G', label: 'Toggle pixel grid' },
+  { action: 'editLink', combo: 'Mod+K', label: 'Edit link' },
+  { action: 'zoomIn', combo: 'Mod+=', label: 'Zoom in' },
+  { action: 'zoomOut', combo: 'Mod+-', label: 'Zoom out' },
+  { action: 'zoomReset', combo: 'Mod+0', label: 'Fit canvas' },
+  { action: 'bringForward', combo: 'Mod+]', label: 'Bring forward' },
+  { action: 'sendBackward', combo: 'Mod+[', label: 'Send backward' },
+  { action: 'bringToFront', combo: 'Mod+Shift+]', label: 'Bring to front' },
+  { action: 'sendToBack', combo: 'Mod+Shift+[', label: 'Send to back' },
+  { action: 'nudgeUp', combo: 'ArrowUp', label: 'Nudge up' },
+  { action: 'nudgeDown', combo: 'ArrowDown', label: 'Nudge down' },
+  { action: 'nudgeLeft', combo: 'ArrowLeft', label: 'Nudge left' },
+  { action: 'nudgeRight', combo: 'ArrowRight', label: 'Nudge right' },
+  { action: 'nudgeUpLarge', combo: 'Shift+ArrowUp', label: 'Nudge up 10px' },
+  { action: 'nudgeDownLarge', combo: 'Shift+ArrowDown', label: 'Nudge down 10px' },
+  { action: 'nudgeLeftLarge', combo: 'Shift+ArrowLeft', label: 'Nudge left 10px' },
+  { action: 'nudgeRightLarge', combo: 'Shift+ArrowRight', label: 'Nudge right 10px' },
+];
+
+const SUPPORTED_ACTIONS = new Set(DEFAULT_KEYBINDINGS.map((binding) => binding.action));
+
 function isTextInput(target: EventTarget | null): boolean {
-  if (!target || !(target instanceof HTMLElement)) return false;
+  if (!target || typeof HTMLElement === 'undefined' || !(target instanceof HTMLElement)) return false;
   const tag = target.tagName;
   if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true;
   if (target.isContentEditable) return true;
@@ -50,73 +94,125 @@ function isTextInput(target: EventTarget | null): boolean {
 }
 
 function isMenuNavigationTarget(target: EventTarget | null, key: string): boolean {
-  if (!target || !(target instanceof HTMLElement)) return false;
+  if (!target || typeof HTMLElement === 'undefined' || !(target instanceof HTMLElement)) return false;
   if (!target.closest('[role="menu"]')) return false;
   return key.startsWith('Arrow') || key === 'Enter' || key === ' ';
+}
+
+function normalizeAction(action: string): Exclude<CanvasAction, null> | null {
+  const aliases: Record<string, Exclude<CanvasAction, null>> = {
+    'paste-style': 'pasteStyle',
+    'copy-style': 'copyStyle',
+    'select-all': 'selectAll',
+    'zoom-in': 'zoomIn',
+    'zoom-out': 'zoomOut',
+    'zoom-reset': 'zoomReset',
+    'bring-forward': 'bringForward',
+    'send-backward': 'sendBackward',
+    'bring-to-front': 'bringToFront',
+    'send-to-back': 'sendToBack',
+    'toggle-grid': 'toggleGrid',
+    'edit-link': 'editLink',
+    'show-help': 'showHelp',
+  };
+  const normalized = aliases[action] ?? action;
+  return SUPPORTED_ACTIONS.has(normalized as Exclude<CanvasAction, null>)
+    ? normalized as Exclude<CanvasAction, null>
+    : null;
+}
+
+function getCustomBindings(): Array<{ action: Exclude<CanvasAction, null>; combo: string }> {
+  if (typeof window === 'undefined') return [];
+  try {
+    const raw = window.localStorage.getItem('tw_builder_editor_prefs_v1');
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as { customKeybindings?: Array<{ action?: string; combo?: string }> };
+    return (parsed.customKeybindings ?? [])
+      .map((binding) => ({
+        action: normalizeAction(binding.action ?? ''),
+        combo: (binding.combo ?? '').trim(),
+      }))
+      .filter((binding): binding is { action: Exclude<CanvasAction, null>; combo: string } => (
+        Boolean(binding.action) && binding.combo.length > 0
+      ));
+  } catch {
+    return [];
+  }
+}
+
+function normalizeEventKey(key: string): string {
+  if (key === ' ') return 'space';
+  if (key.length === 1) return key.toLowerCase();
+  return key.toLowerCase();
+}
+
+function normalizeComboKey(token: string): string {
+  const lower = token.trim().toLowerCase();
+  if (lower === 'space') return 'space';
+  if (lower === 'esc') return 'escape';
+  if (lower === 'del') return 'delete';
+  if (lower === 'plus') return '+';
+  if (lower === 'minus') return '-';
+  if (lower === 'cmd') return 'meta';
+  if (lower === 'option') return 'alt';
+  if (lower === 'return') return 'enter';
+  return lower;
+}
+
+function comboMatchesEvent(combo: string, e: KeyboardEvent): boolean {
+  const tokens = combo.split('+').map((token) => token.trim()).filter(Boolean);
+  if (tokens.length === 0) return false;
+
+  let needsMod = false;
+  let needsAlt = false;
+  let needsShift = false;
+  let needsCtrl = false;
+  let needsMeta = false;
+  let keyToken = '';
+
+  for (const token of tokens) {
+    const normalized = normalizeComboKey(token);
+    if (normalized === 'mod') needsMod = true;
+    else if (normalized === 'alt') needsAlt = true;
+    else if (normalized === 'shift') needsShift = true;
+    else if (normalized === 'ctrl' || normalized === 'control') needsCtrl = true;
+    else if (normalized === 'meta') needsMeta = true;
+    else keyToken = normalized;
+  }
+
+  if (needsMod && !(e.metaKey || e.ctrlKey)) return false;
+  if (!needsMod && !needsCtrl && e.ctrlKey) return false;
+  if (!needsMod && !needsMeta && e.metaKey) return false;
+  if (needsCtrl && !e.ctrlKey) return false;
+  if (needsMeta && !e.metaKey) return false;
+  if (needsAlt !== e.altKey) return false;
+  if (needsShift !== e.shiftKey) return false;
+
+  const eventKey = normalizeEventKey(e.key);
+  return eventKey === keyToken;
 }
 
 export function matchShortcut(e: KeyboardEvent): CanvasAction {
   if (isTextInput(e.target)) return null;
 
-  const meta = e.metaKey || e.ctrlKey;
-  const shift = e.shiftKey;
   const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-  if (!meta && isMenuNavigationTarget(e.target, key)) return null;
+  if (!(e.metaKey || e.ctrlKey) && isMenuNavigationTarget(e.target, key)) return null;
 
-  // Undo / Redo
-  if (meta && !shift && key === 'z') return 'undo';
-  if (meta && shift && key === 'z') return 'redo';
-  if (meta && !shift && key === 'y') return 'redo';
+  const customBindings = getCustomBindings();
+  const overriddenActions = new Set(customBindings.map((binding) => binding.action));
+  for (const binding of customBindings) {
+    if (comboMatchesEvent(binding.combo, e)) return binding.action;
+  }
 
-  // Delete
-  if (key === 'Delete' || key === 'Backspace') return 'delete';
+  for (const binding of DEFAULT_KEYBINDINGS) {
+    if (overriddenActions.has(binding.action)) continue;
+    if (comboMatchesEvent(binding.combo, e)) return binding.action;
+  }
 
-  // Duplicate
-  if (meta && key === 'd') return 'duplicate';
-
-  // Select all / Deselect
-  if (meta && key === 'a') return 'selectAll';
-  if (key === 'Escape') return 'deselect';
-
-  // Clipboard
-  if (meta && !shift && key === 'c') return 'copy';
-  if (meta && !shift && key === 'v') return 'paste';
-  if (meta && !shift && key === 'x') return 'cut';
-
-  // Group
-  if (meta && !shift && key === 'g') return 'group';
-  if (meta && shift && key === 'g') return 'ungroup';
-
-  // Help (Cmd+/ or ?)
-  if (meta && key === '/') return 'showHelp';
-  if (!meta && shift && key === '?') return 'showHelp';
-
-  // Grid
-  if (!meta && shift && key === 'g') return 'toggleGrid';
-
-  // Edit link (Cmd+K)
-  if (meta && !shift && key === 'k') return 'editLink';
-
-  // Zoom
-  if (meta && (key === '=' || key === '+')) return 'zoomIn';
-  if (meta && key === '-') return 'zoomOut';
-  if (meta && key === '0') return 'zoomReset';
-
-  // Z-order
-  if (meta && key === ']') return 'bringForward';
-  if (meta && key === '[') return 'sendBackward';
-  if (meta && shift && key === ']') return 'bringToFront';
-  if (meta && shift && key === '[') return 'sendToBack';
-
-  // Nudge
-  if (!meta && !shift && key === 'ArrowUp') return 'nudgeUp';
-  if (!meta && !shift && key === 'ArrowDown') return 'nudgeDown';
-  if (!meta && !shift && key === 'ArrowLeft') return 'nudgeLeft';
-  if (!meta && !shift && key === 'ArrowRight') return 'nudgeRight';
-  if (!meta && shift && key === 'ArrowUp') return 'nudgeUpLarge';
-  if (!meta && shift && key === 'ArrowDown') return 'nudgeDownLarge';
-  if (!meta && shift && key === 'ArrowLeft') return 'nudgeLeftLarge';
-  if (!meta && shift && key === 'ArrowRight') return 'nudgeRightLarge';
+  if (!overriddenActions.has('redo') && comboMatchesEvent('Mod+Y', e)) return 'redo';
+  if (!overriddenActions.has('delete') && comboMatchesEvent('Delete', e)) return 'delete';
+  if (!overriddenActions.has('zoomIn') && comboMatchesEvent('Mod++', e)) return 'zoomIn';
+  if (!overriddenActions.has('showHelp') && comboMatchesEvent('Shift+?', e)) return 'showHelp';
 
   return null;
 }

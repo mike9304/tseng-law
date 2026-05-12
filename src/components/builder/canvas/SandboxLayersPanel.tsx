@@ -390,7 +390,7 @@ export default function SandboxLayersPanel() {
   const matchCount = searchState.directMatches.size;
 
   return (
-    <section className={styles.panelSection}>
+    <section className={styles.panelSection} data-builder-layers-panel="true">
       <header className={styles.panelSectionHeader}>
         <div>
           <span>Layers</span>

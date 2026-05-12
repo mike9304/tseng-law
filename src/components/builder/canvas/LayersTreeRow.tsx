@@ -136,6 +136,9 @@ export default function LayersTreeRow({
           dropMode === 'inside' ? styles.layerDropInside : '',
         ].filter(Boolean).join(' ')}
         style={{ paddingLeft: 8 + depth * 16 }}
+        data-builder-layer-row={node.id}
+        data-builder-layer-depth={depth}
+        data-builder-layer-z={node.zIndex}
         title={`${node.kind} ${node.id}`}
         onMouseEnter={() => onHoverStart(node.id)}
         onMouseLeave={onHoverEnd}
@@ -195,6 +198,7 @@ export default function LayersTreeRow({
           <button
             type="button"
             className={styles.layerQuickAction}
+            data-builder-layer-visibility={node.id}
             title={node.visible ? 'Hide on canvas' : 'Show on canvas'}
             onClick={(event) => {
               event.stopPropagation();
@@ -206,6 +210,7 @@ export default function LayersTreeRow({
           <button
             type="button"
             className={styles.layerQuickAction}
+            data-builder-layer-lock={node.id}
             title={node.locked ? 'Unlock' : 'Lock'}
             onClick={(event) => {
               event.stopPropagation();

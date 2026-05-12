@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import A11yPanel from '@/components/builder/canvas/A11yPanel';
+import ElementCommentsPanel from '@/components/builder/canvas/ElementCommentsPanel';
 import AnimationsTab from '@/components/builder/editor/AnimationsTab';
 import BreakpointBadge from '@/components/builder/editor/BreakpointBadge';
 import ContentTab from '@/components/builder/editor/ContentTab';
@@ -394,6 +395,8 @@ export default function SandboxInspectorPanel({
     updateNodeContent,
     updateNodeStyle,
     alignSelectedNodes,
+    distributeSelectedNodes,
+    matchSelectedNodesSize,
     duplicateSelectedNode,
     bringSelectedNodeForward,
     sendSelectedNodeBackward,
@@ -530,23 +533,37 @@ export default function SandboxInspectorPanel({
                 </button>
               </div>
               <div className={styles.alignToolbar}>
-                <button type="button" className={styles.toolbarButton} title="왼쪽 정렬" onClick={() => alignSelectedNodes('left')}>
+                <button type="button" className={styles.toolbarButton} data-builder-align-action="left" title="왼쪽 정렬" onClick={() => alignSelectedNodes('left')}>
                   Left
                 </button>
-                <button type="button" className={styles.toolbarButton} title="가운데 정렬" onClick={() => alignSelectedNodes('center')}>
+                <button type="button" className={styles.toolbarButton} data-builder-align-action="center" title="가운데 정렬" onClick={() => alignSelectedNodes('center')}>
                   Center
                 </button>
-                <button type="button" className={styles.toolbarButton} title="오른쪽 정렬" onClick={() => alignSelectedNodes('right')}>
+                <button type="button" className={styles.toolbarButton} data-builder-align-action="right" title="오른쪽 정렬" onClick={() => alignSelectedNodes('right')}>
                   Right
                 </button>
-                <button type="button" className={styles.toolbarButton} title="상단 정렬" onClick={() => alignSelectedNodes('top')}>
+                <button type="button" className={styles.toolbarButton} data-builder-align-action="top" title="상단 정렬" onClick={() => alignSelectedNodes('top')}>
                   Top
                 </button>
-                <button type="button" className={styles.toolbarButton} title="중앙 정렬" onClick={() => alignSelectedNodes('middle')}>
+                <button type="button" className={styles.toolbarButton} data-builder-align-action="middle" title="중앙 정렬" onClick={() => alignSelectedNodes('middle')}>
                   Middle
                 </button>
-                <button type="button" className={styles.toolbarButton} title="하단 정렬" onClick={() => alignSelectedNodes('bottom')}>
+                <button type="button" className={styles.toolbarButton} data-builder-align-action="bottom" title="하단 정렬" onClick={() => alignSelectedNodes('bottom')}>
                   Bottom
+                </button>
+              </div>
+              <div className={styles.alignToolbar}>
+                <button type="button" className={styles.toolbarButton} data-builder-distribute-action="horizontal" title="가로 간격 분배" onClick={() => distributeSelectedNodes('horizontal')}>
+                  Distribute H
+                </button>
+                <button type="button" className={styles.toolbarButton} data-builder-distribute-action="vertical" title="세로 간격 분배" onClick={() => distributeSelectedNodes('vertical')}>
+                  Distribute V
+                </button>
+                <button type="button" className={styles.toolbarButton} data-builder-match-size-action="width" title="첫 기준 너비에 맞춤" onClick={() => matchSelectedNodesSize('width')}>
+                  Match W
+                </button>
+                <button type="button" className={styles.toolbarButton} data-builder-match-size-action="height" title="첫 기준 높이에 맞춤" onClick={() => matchSelectedNodesSize('height')}>
+                  Match H
                 </button>
               </div>
             </InspectorSection>
@@ -1216,6 +1233,10 @@ export default function SandboxInspectorPanel({
                   locked 상태에서는 drag, resize, nudge, delete, z-order 가 막힙니다. inspector 에서만 unlock 가능합니다.
                 </p>
               ) : null}
+            </section>
+
+            <section className={styles.panelSection} data-builder-element-comments-section="true">
+              <ElementCommentsPanel selectedNodeId={selectedNode.id} />
             </section>
 
             <section className={styles.panelSection}>

@@ -1089,3 +1089,23 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run security:builder-routes` ✅ (113 route files / 93 mutation handlers)
 - W 판정:
   - W216/W217/W218은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. W219~W225는 다음 M28 slice로 남긴다.
+
+## M28 — Editor advanced panels/shortcuts/timeline slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/canvas/shortcuts.ts`, `KeybindingsModal.tsx`, `EditorPrefsButton.tsx` — Wix형 단축키 맵을 `DEFAULT_KEYBINDINGS`로 정리하고, 사용자 override를 localStorage editor preferences에 저장한 뒤 실제 `matchShortcut` 처리에 반영한다.
+  - `src/lib/builder/canvas/style-clipboard.ts`, `CanvasContainer.tsx`, `CanvasContextMenuLayer.tsx`, `hooks/useCanvasKeyboard.ts` — `Mod+Alt+C/V`와 context menu에서 style-only copy/paste를 지원한다.
+  - `SandboxInspectorPanel.tsx` — 다중 선택 시 좌/중/우/상/중/하 정렬, horizontal/vertical distribute, match width/height 버튼을 노출한다.
+  - `SandboxLayersPanel.tsx`, `LayersTreeRow.tsx`, `LayerSearchInput.tsx` — Layers tree에 자동검증용 data attr을 추가하고 zIndex/search/visibility/lock 트리 view를 검증 가능하게 했다.
+  - `ComponentLibraryPanel.tsx`, `SandboxEditorRail.tsx` — Add drawer에 component library를 연결했다. 선택 노드 tree를 저장하고 fresh id로 +32/+32 offset 삽입한다.
+  - `ElementCommentsPanel.tsx`, `SandboxInspectorPanel.tsx` — 선택 노드별 주석 thread를 inspector에 연결하고 editor preferences로 persist/broadcast한다.
+  - `CanvasZoomDock.tsx` — zoom dock을 25~200% UI로 고정하고 자동검증 attr을 추가했다.
+  - `UndoStackTimeline.tsx`, `SandboxEditorRail.tsx` — History drawer에 undo stack timeline을 추가하고 snapshot별 변경 요약/현재 cursor/Undo/Redo를 표시한다.
+  - `src/lib/builder/canvas/__tests__/shortcuts.test.ts`, `tests/builder-editor/editor-advanced-panels.playwright.ts` — custom keybinding override, style paste, layers/search, component library, comments, align/distribute, zoom, undo timeline을 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/shortcuts.test.ts` ✅ (2 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W219/W220/W221/W222/W223/W224/W225는 `자동검증 통과 / 사용자 QA 대기`로 상향한다.

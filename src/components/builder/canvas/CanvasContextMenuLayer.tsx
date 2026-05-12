@@ -18,9 +18,11 @@ type CanvasContextMenuLayerProps = {
   focusSelectedLinkInput: () => void;
   groupSelectedNodes: () => void;
   handleCopy: () => void;
+  handleCopyStyle: () => void;
   handleCut: () => void;
   handleDuplicate: () => void;
   handlePaste: () => void;
+  handlePasteStyle: () => void;
   hasUnlockedSelection: boolean;
   matchSelectedNodesSize: (axis: 'width' | 'height') => void;
   nodes: BuilderCanvasNode[];
@@ -34,6 +36,7 @@ type CanvasContextMenuLayerProps = {
   sendSelectedNodeBackward: () => void;
   sendSelectedNodeToBack: () => void;
   setContextMenu: (menu: ContextMenuState | null) => void;
+  styleClipboardHasContent: boolean;
   toggleSelectedNodeLock: () => void;
   ungroupSelectedNode: () => void;
   updateNode: (nodeId: string, updater: (node: BuilderCanvasNode) => BuilderCanvasNode) => void;
@@ -53,9 +56,11 @@ export default function CanvasContextMenuLayer({
   focusSelectedLinkInput,
   groupSelectedNodes,
   handleCopy,
+  handleCopyStyle,
   handleCut,
   handleDuplicate,
   handlePaste,
+  handlePasteStyle,
   hasUnlockedSelection,
   matchSelectedNodesSize,
   nodes,
@@ -69,6 +74,7 @@ export default function CanvasContextMenuLayer({
   sendSelectedNodeBackward,
   sendSelectedNodeToBack,
   setContextMenu,
+  styleClipboardHasContent,
   toggleSelectedNodeLock,
   ungroupSelectedNode,
   updateNode,
@@ -238,16 +244,24 @@ export default function CanvasContextMenuLayer({
         {
           key: 'paste-style',
           label: 'Paste style',
-          shortcut: '⌥⇧⌘V',
-          title: 'Coming soon - Codex F-track',
-          disabled: true,
+          shortcut: '⌥⌘V',
+          title: '선택 노드에 스타일만 붙여넣기',
+          disabled: !styleClipboardHasContent || !hasUnlockedSelection,
+          onSelect: () => {
+            setContextMenu(null);
+            handlePasteStyle();
+          },
         },
         {
           key: 'copy-style',
           label: 'Copy style',
           shortcut: '⌥⌘C',
-          title: 'Coming soon - Codex F-track',
-          disabled: true,
+          title: '선택 노드의 스타일만 복사',
+          disabled: contextSelectionCount !== 1 || !contextPrimaryNode,
+          onSelect: () => {
+            setContextMenu(null);
+            handleCopyStyle();
+          },
         },
         { key: 'sep-arrange', label: '', separator: true },
         {

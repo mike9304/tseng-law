@@ -21,6 +21,7 @@ export default function LayerSearchInput({
         value={value}
         placeholder="노드 검색..."
         aria-label="Search layers"
+        data-builder-layer-search="true"
         onChange={(event) => onChange(event.target.value)}
       />
       <span className={styles.layerSearchMeta}>

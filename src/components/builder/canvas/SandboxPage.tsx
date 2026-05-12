@@ -789,7 +789,7 @@ export default function SandboxPage({
             </div>
           ) : null}
           {activityChips.map((chip) => (
-            <div key={chip.id} className={styles.activityChip}>
+            <div key={chip.id} className={styles.activityChip} data-builder-activity-chip="true">
               {chip.message}
             </div>
           ))}

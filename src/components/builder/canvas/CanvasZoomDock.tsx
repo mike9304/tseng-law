@@ -22,22 +22,23 @@ export default function CanvasZoomDock({
   zoomState,
 }: CanvasZoomDockProps) {
   return (
-    <div className={styles.zoomDock}>
+    <div className={styles.zoomDock} data-builder-zoom-dock="true">
       <button
         type="button"
         className={styles.toolbarButton}
+        data-builder-zoom-action="out"
         title="축소 (Cmd--)"
         onClick={() => setZoomState((currentState) => stepZoomOut(currentState))}
       >
         -
       </button>
-      <span className={styles.zoomLabel}>{zoomLabel(zoomState)}</span>
+      <span className={styles.zoomLabel} data-builder-zoom-label="true">{zoomLabel(zoomState)}</span>
       <input
         className={styles.zoomSlider}
         type="range"
         aria-label="Canvas zoom"
         min={25}
-        max={400}
+        max={200}
         step={5}
         value={Math.round(zoomState.zoom * 100)}
         onChange={(event) => setZoomState((currentState) => zoomTo(currentState, Number(event.target.value) / 100))}
@@ -45,6 +46,7 @@ export default function CanvasZoomDock({
       <button
         type="button"
         className={styles.toolbarButton}
+        data-builder-zoom-action="in"
         title="확대 (Cmd-+)"
         onClick={() => setZoomState((currentState) => stepZoomIn(currentState))}
       >
@@ -53,6 +55,7 @@ export default function CanvasZoomDock({
       <button
         type="button"
         className={styles.toolbarButton}
+        data-builder-zoom-action="100"
         title="100%"
         onClick={() => setZoomState((currentState) => zoomTo(currentState, 1))}
       >
@@ -61,6 +64,7 @@ export default function CanvasZoomDock({
       <button
         type="button"
         className={styles.toolbarButton}
+        data-builder-zoom-action="fit"
         title="화면에 맞추기"
         onClick={fitCanvas}
       >

@@ -5,6 +5,8 @@ import NavigationEditor from '@/components/builder/canvas/NavigationEditor';
 import PageSwitcher from '@/components/builder/canvas/PageSwitcher';
 import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel';
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
+import ComponentLibraryPanel from '@/components/builder/canvas/ComponentLibraryPanel';
+import UndoStackTimeline from '@/components/builder/canvas/UndoStackTimeline';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import {
@@ -222,6 +224,7 @@ export default function SandboxEditorRail({
         {activeDrawer === 'add' ? (
           <div className={styles.drawerBody}>
             <SandboxCatalogPanel locale={locale} />
+            <ComponentLibraryPanel />
           </div>
         ) : null}
 
@@ -406,6 +409,7 @@ export default function SandboxEditorRail({
 
         {activeDrawer === 'history' ? (
           <div className={styles.drawerBody}>
+            <UndoStackTimeline />
             <section className={styles.panelSection}>
               <header className={styles.panelSectionHeader}>
                 <div>

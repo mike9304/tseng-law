@@ -9,6 +9,7 @@ import {
   saveAndBroadcastEditorPreferences,
   type EditorPreferences,
 } from '@/lib/builder/canvas/editor-prefs';
+import KeybindingsModal from './KeybindingsModal';
 import styles from './SandboxPage.module.css';
 
 /**
@@ -19,6 +20,7 @@ import styles from './SandboxPage.module.css';
  */
 export default function EditorPrefsButton() {
   const [open, setOpen] = useState(false);
+  const [keybindingsOpen, setKeybindingsOpen] = useState(false);
   const [prefs, setPrefs] = useState<EditorPreferences>(DEFAULT_EDITOR_PREFS);
 
   useEffect(() => {
@@ -110,8 +112,26 @@ export default function EditorPrefsButton() {
               style={{ width: 56, padding: '3px 6px', border: '1px solid #cbd5e1', borderRadius: 4 }}
             />
           </label>
+          <button
+            type="button"
+            data-builder-shortcut-map-open="true"
+            onClick={() => setKeybindingsOpen(true)}
+            style={{
+              padding: '8px 10px',
+              border: '1px solid #cbd5e1',
+              borderRadius: 8,
+              background: '#ffffff',
+              color: '#0f172a',
+              cursor: 'pointer',
+              fontWeight: 800,
+              textAlign: 'left',
+            }}
+          >
+            Shortcut map
+          </button>
         </div>
       ) : null}
+      <KeybindingsModal open={keybindingsOpen} onClose={() => setKeybindingsOpen(false)} />
     </div>
   );
 }

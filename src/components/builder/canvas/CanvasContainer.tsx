@@ -33,6 +33,11 @@ import {
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
 import {
+  copyNodeStyleToClipboard,
+  hasStyleClipboard,
+  readStyleClipboard,
+} from '@/lib/builder/canvas/style-clipboard';
+import {
   applyEditorPreferencesToDocument,
   BUILDER_EDITOR_PREFS_EVENT,
   DEFAULT_EDITOR_PREFS,
@@ -120,6 +125,7 @@ export default function CanvasContainer({
     toggleSelectedNodeLock,
     addNode,
     updateNode,
+    updateSelectedNodes,
     duplicateSelectedNode,
     bringSelectedNodeForward,
     sendSelectedNodeBackward,
@@ -139,6 +145,7 @@ export default function CanvasContainer({
   const [overlapPicker, setOverlapPicker] = useState<OverlapPickerState | null>(null);
   const [zoomState, setZoomState] = useState<ZoomState>(() => createDefaultZoomState());
   const [editorPrefs, setEditorPrefs] = useState<EditorPreferences>(DEFAULT_EDITOR_PREFS);
+  const [styleClipboardAvailable, setStyleClipboardAvailable] = useState(false);
   const editorPrefsRef = useRef<EditorPreferences>(DEFAULT_EDITOR_PREFS);
 
   const describeHistorySelection = useCallback(() => {
@@ -185,6 +192,34 @@ export default function CanvasContainer({
     const pastedCount = state.clipboardCount;
     onActivity?.(`Pasted ${describeClipboardCount(pastedCount)}`);
   }, [describeClipboardCount, onActivity, pasteClipboardNodes]);
+
+  const handleCopyStyle = useCallback(() => {
+    const state = useBuilderCanvasStore.getState();
+    const sourceNode = state.document?.nodes.find((node) => node.id === state.selectedNodeId) ?? null;
+    if (!sourceNode) return;
+    const payload = copyNodeStyleToClipboard(sourceNode);
+    if (!payload) return;
+    setStyleClipboardAvailable(true);
+    onActivity?.(`Copied style: ${sourceNode.kind}`);
+  }, [onActivity]);
+
+  const handlePasteStyle = useCallback(() => {
+    const payload = readStyleClipboard();
+    if (!payload) return;
+    const state = useBuilderCanvasStore.getState();
+    const targetIds = state.selectedNodeIds.filter((nodeId) => {
+      const node = state.document?.nodes.find((candidate) => candidate.id === nodeId);
+      return node && !node.locked;
+    });
+    if (targetIds.length === 0) return;
+    updateSelectedNodes(targetIds, (node) => ({
+      ...node,
+      style: { ...payload.style },
+      hoverStyle: payload.hoverStyle ? { ...payload.hoverStyle } : undefined,
+    }));
+    setDraftSaveState('saving');
+    onActivity?.(`Pasted style to ${targetIds.length} node${targetIds.length === 1 ? '' : 's'}`);
+  }, [onActivity, setDraftSaveState, updateSelectedNodes]);
 
   const handleDuplicate = useCallback(() => {
     const count = useBuilderCanvasStore.getState().selectedNodeIds.length;
@@ -364,9 +399,11 @@ export default function CanvasContainer({
     focusSelectedLinkInput,
     groupSelectedNodes,
     handleCopy,
+    handleCopyStyle,
     handleCut,
     handleDuplicate,
     handlePaste,
+    handlePasteStyle,
     handleRedo,
     handleUndo,
     nudgeSelectedNode,
@@ -417,6 +454,10 @@ export default function CanvasContainer({
 
     document.addEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
     return () => document.removeEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
+  }, []);
+
+  useEffect(() => {
+    setStyleClipboardAvailable(hasStyleClipboard());
   }, []);
 
   useEffect(() => {
@@ -929,9 +970,11 @@ export default function CanvasContainer({
           focusSelectedLinkInput={focusSelectedLinkInput}
           groupSelectedNodes={groupSelectedNodes}
           handleCopy={handleCopy}
+          handleCopyStyle={handleCopyStyle}
           handleCut={handleCut}
           handleDuplicate={handleDuplicate}
           handlePaste={handlePaste}
+          handlePasteStyle={handlePasteStyle}
           hasUnlockedSelection={hasUnlockedSelection}
           matchSelectedNodesSize={matchSelectedNodesSize}
           nodes={nodes}
@@ -945,6 +988,7 @@ export default function CanvasContainer({
           sendSelectedNodeBackward={sendSelectedNodeBackward}
           sendSelectedNodeToBack={sendSelectedNodeToBack}
           setContextMenu={setContextMenu}
+          styleClipboardHasContent={styleClipboardAvailable}
           toggleSelectedNodeLock={toggleSelectedNodeLock}
           ungroupSelectedNode={ungroupSelectedNode}
           updateNode={updateNode}

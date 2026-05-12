@@ -110,6 +110,7 @@ export function saveEditorPreferences(prefs: EditorPreferences): void {
 
 export function applyEditorPreferencesToDocument(prefs: EditorPreferences): void {
   if (typeof document === 'undefined') return;
+  document.documentElement.dataset.builderEditorTheme = prefs.theme;
   document.documentElement.dataset.builderOutline = prefs.outline.enabled ? 'true' : 'false';
   document.documentElement.dataset.builderPixelGrid = prefs.pixelGrid.enabled ? 'true' : 'false';
   document.documentElement.style.setProperty('--builder-pixel-grid-size', `${prefs.pixelGrid.size}px`);

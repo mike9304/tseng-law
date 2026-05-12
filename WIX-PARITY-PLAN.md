@@ -67,3 +67,4 @@
 | M63 | QA     | Page template create retry state | W14,W18,W216 | 1h | M62 | 🟡 템플릿 페이지 생성 실패 후 재시도/뒤로가기 상태 자동검증 통과 / 사용자 QA 대기 |
 | M64 | QA     | Page template create success persistence | W14,W18,W216 | 1h | M63 | 🟡 템플릿 페이지 생성 성공/선택/draft 저장 자동검증 통과 / 사용자 QA 대기 |
 | M65 | QA     | Custom shortcut runtime evidence | W216,W219 | 1h | M64 | 🟡 커스텀 단축키 저장/기본 override/실제 복제 dispatch 자동검증 통과 / 사용자 QA 대기 |
+| M66 | QA     | Custom shortcut label sync | W216,W219 | 1h | M65 | 🟡 커스텀 단축키 라벨/도움말/메뉴/툴팁 동기화 자동검증 통과 / 사용자 QA 대기 |

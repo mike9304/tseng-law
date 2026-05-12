@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import LinkPicker, { type LinkPickerContext } from '@/components/builder/editor/LinkPicker';
+import { useShortcutLabels } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
 import styles from './SandboxPage.module.css';
@@ -75,6 +76,17 @@ export default function SelectionToolbar({
   const isButton = single?.kind === 'button';
   const canEditLink = isButton || showEditLink;
   const anyLocked = selectedNodes.some((node) => node.locked);
+  const shortcutLabels = useShortcutLabels([
+    'editLink',
+    'duplicate',
+    'bringForward',
+    'sendBackward',
+    'delete',
+  ]);
+  const shortcutTitle = (title: string, action: 'editLink' | 'duplicate' | 'bringForward' | 'sendBackward' | 'delete') => {
+    const label = shortcutLabels.get(action)?.title;
+    return label ? `${title} (${label})` : title;
+  };
 
   useEffect(() => {
     if (!canEditLink) setLinkPopoverOpen(false);
@@ -100,7 +112,9 @@ export default function SelectionToolbar({
       key: 'edit-link',
       label: hasActiveLink ? previewLinkHref(currentLink?.href) : '링크 추가',
       icon: '🔗',
-      title: hasActiveLink ? `현재: ${currentLink?.href}\n클릭해서 편집 (Cmd+K)` : '링크 추가 (Cmd+K)',
+      title: hasActiveLink
+        ? `현재: ${currentLink?.href}\n${shortcutTitle('클릭해서 편집', 'editLink')}`
+        : shortcutTitle('링크 추가', 'editLink'),
       onClick: () => {
         if (linkTargetNode && onChangeLink) {
           setLinkPopoverOpen((current) => !current);
@@ -136,7 +150,7 @@ export default function SelectionToolbar({
       key: 'duplicate',
       label: '복제',
       icon: '⎘',
-      title: '복제 (Cmd+D)',
+      title: shortcutTitle('복제', 'duplicate'),
       onClick: onDuplicate,
       disabled: anyLocked,
     },
@@ -144,7 +158,7 @@ export default function SelectionToolbar({
       key: 'forward',
       label: '앞',
       icon: '↑',
-      title: '한 단계 앞 (Cmd+])',
+      title: shortcutTitle('한 단계 앞', 'bringForward'),
       onClick: onBringForward,
       disabled: selectedNodes.length !== 1 || anyLocked,
     },
@@ -152,7 +166,7 @@ export default function SelectionToolbar({
       key: 'backward',
       label: '뒤',
       icon: '↓',
-      title: '한 단계 뒤 (Cmd+[)',
+      title: shortcutTitle('한 단계 뒤', 'sendBackward'),
       onClick: onSendBackward,
       disabled: selectedNodes.length !== 1 || anyLocked,
     },
@@ -160,7 +174,7 @@ export default function SelectionToolbar({
       key: 'delete',
       label: '삭제',
       icon: '🗑',
-      title: '삭제 (Delete)',
+      title: shortcutTitle('삭제', 'delete'),
       onClick: onDelete,
       disabled: anyLocked,
     },

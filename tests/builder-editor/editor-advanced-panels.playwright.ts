@@ -11,6 +11,29 @@ async function countSelectedNodes(page: Page): Promise<number> {
   return page.locator('[data-node-id][data-selected="true"]').count();
 }
 
+async function ensureLayersPanelOpen(page: Page): Promise<ReturnType<Page['locator']>> {
+  const layersPanel = page.locator('[data-builder-layers-panel="true"]');
+  if (await layersPanel.isVisible().catch(() => false)) {
+    return layersPanel;
+  }
+  const layersButton = page.getByRole('button', { name: /Layers/i });
+  await layersButton.click();
+  if (!(await layersPanel.isVisible({ timeout: 2500 }).catch(() => false))) {
+    await page.getByRole('button', { name: /Pages/i }).click();
+    await layersButton.click();
+  }
+  await expect(layersPanel).toBeVisible();
+  return layersPanel;
+}
+
+async function closeEditorPrefsPopover(page: Page) {
+  const prefsDialog = page.getByRole('dialog', { name: 'Editor preferences' });
+  if (await prefsDialog.isVisible().catch(() => false)) {
+    await page.locator('[data-builder-prefs-button]').click();
+    await expect(prefsDialog).toBeHidden();
+  }
+}
+
 test.describe('M28 editor advanced panels', () => {
   test.setTimeout(120_000);
 
@@ -19,9 +42,9 @@ test.describe('M28 editor advanced panels', () => {
     await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
 
     await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+    await expect(page.locator('[data-editor-shell]')).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
 
-    await page.getByRole('button', { name: /Layers/i }).click();
-    await expect(page.locator('[data-builder-layers-panel="true"]')).toBeVisible();
+    const layersPanel = await ensureLayersPanelOpen(page);
     const layerRows = page.locator('[data-builder-layer-row]');
     await expect(layerRows.first()).toBeVisible();
     await expect(layerRows.first()).toHaveAttribute('data-builder-layer-z', /\d+/);
@@ -30,6 +53,7 @@ test.describe('M28 editor advanced panels', () => {
 
     await page.locator('[data-builder-layer-search="true"]').fill('home-hero-title');
     const heroTitleLayer = page.locator('[data-builder-layer-row="home-hero-title"]');
+    const heroTitleNode = page.locator('[data-node-id="home-hero-title"]').first();
     await heroTitleLayer.scrollIntoViewIfNeeded();
     await heroTitleLayer.click();
     await expect(page.locator('[data-builder-element-comments="home-hero-title"]')).toBeVisible();
@@ -39,17 +63,17 @@ test.describe('M28 editor advanced panels', () => {
 
     await page.getByRole('button', { name: /Add/i }).click();
     await expect(page.locator('[data-builder-component-library="true"]')).toBeVisible();
+    await heroTitleNode.scrollIntoViewIfNeeded();
+    await heroTitleNode.click({ position: { x: 12, y: 12 }, force: true });
+    await expect(heroTitleNode).toHaveAttribute('data-selected', 'true');
     await page.locator('[data-builder-component-library-name="true"]').fill('Hero title test');
+    await expect(page.locator('[data-builder-component-library-save="true"]')).toBeEnabled();
     await page.locator('[data-builder-component-library-save="true"]').click();
     await expect(page.getByText('Hero title test')).toBeVisible();
     await page.locator('[data-builder-component-library-insert]').first().click();
     await expect(page.locator('[data-builder-activity-chip="true"]').filter({ hasText: /saving|Pasted|Copied|Toggled|style/i }).or(page.locator('[data-builder-component-library="true"]'))).toBeVisible();
 
-    const layersPanel = page.locator('[data-builder-layers-panel="true"]');
-    if (!(await layersPanel.isVisible().catch(() => false))) {
-      await page.getByRole('button', { name: /Layers/i }).click();
-    }
-    await expect(layersPanel).toBeVisible();
+    await ensureLayersPanelOpen(page);
     await page.locator('[data-builder-layer-search="true"]').fill('home-hero-title');
     await heroTitleLayer.scrollIntoViewIfNeeded();
     await heroTitleLayer.click();
@@ -81,18 +105,35 @@ test.describe('M28 editor advanced panels', () => {
       customKeybindings?: Array<{ action: string; combo: string }>;
     };
     expect(prefs.customKeybindings).toContainEqual({ action: 'duplicate', combo: 'Mod+Shift+X' });
+    const browserIsMac = await page.evaluate(() => /Mac|iPhone|iPad|iPod/.test(navigator.platform));
+    const customDuplicateShortcutTitle = browserIsMac ? 'Cmd+Shift+X' : 'Ctrl+Shift+X';
+    const customDuplicateShortcutGlyph = browserIsMac ? '⇧⌘X' : 'Shift+Ctrl+X';
 
-    if (!(await layersPanel.isVisible().catch(() => false))) {
-      await page.getByRole('button', { name: /Layers/i }).click();
-    }
-    await expect(layersPanel).toBeVisible();
+    await closeEditorPrefsPopover(page);
+    await ensureLayersPanelOpen(page);
     await page.keyboard.press('Escape');
     await expect.poll(() => countSelectedNodes(page)).toBe(0);
     await page.locator('[data-builder-layer-search="true"]').fill('home-hero-title');
     await heroTitleLayer.scrollIntoViewIfNeeded();
     await heroTitleLayer.click();
-    const heroTitleNode = page.locator('[data-node-id="home-hero-title"]').first();
     await expect(heroTitleNode).toHaveAttribute('data-selected', 'true');
+    await expect.poll(() => countSelectedNodes(page)).toBe(1);
+    await expect(page.locator(`[title="복제 (${customDuplicateShortcutTitle})"]`)).toBeVisible();
+    await expect(page.locator(`[title="선택 노드 복제 (${customDuplicateShortcutTitle})"]`)).toBeVisible();
+    const heroTitleBox = await heroTitleNode.boundingBox();
+    expect(heroTitleBox).not.toBeNull();
+    await heroTitleNode.dispatchEvent('contextmenu', {
+      bubbles: true,
+      cancelable: true,
+      button: 2,
+      clientX: heroTitleBox!.x + Math.min(12, heroTitleBox!.width / 2),
+      clientY: heroTitleBox!.y + Math.min(12, heroTitleBox!.height / 2),
+    });
+    await expect(page.getByRole('menuitem', { name: /Duplicate/ })).toContainText(customDuplicateShortcutGlyph);
+    await page.keyboard.press('Escape');
+    await page.locator('[data-builder-layer-search="true"]').fill('home-hero-title');
+    await heroTitleLayer.scrollIntoViewIfNeeded();
+    await heroTitleLayer.click();
     await expect.poll(() => countSelectedNodes(page)).toBe(1);
     const generatedTextCountBeforeDuplicate = await countGeneratedTextNodes(page);
     await page.keyboard.press(`${shortcutModifier}+D`);

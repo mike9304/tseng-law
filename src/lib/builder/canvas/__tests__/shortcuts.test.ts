@@ -1,5 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
-import { matchShortcut } from '@/lib/builder/canvas/shortcuts';
+import {
+  formatShortcutCombo,
+  matchShortcut,
+  resolveShortcutCombo,
+} from '@/lib/builder/canvas/shortcuts';
 
 function eventFor(combo: {
   key: string;
@@ -42,6 +46,30 @@ describe('builder canvas shortcut map', () => {
 
     expect(matchShortcut(eventFor({ key: 'd', metaKey: true }))).toBeNull();
     expect(matchShortcut(eventFor({ key: 'd', metaKey: true, shiftKey: true }))).toBe('duplicate');
+
+    vi.unstubAllGlobals();
+  });
+
+  it('resolves and formats custom shortcut labels through the same binding map', () => {
+    const storage = new Map<string, string>();
+    vi.stubGlobal('navigator', { platform: 'MacIntel' });
+    vi.stubGlobal('window', {
+      localStorage: {
+        getItem: (key: string) => storage.get(key) ?? null,
+        setItem: (key: string, value: string) => storage.set(key, value),
+      },
+    });
+    storage.set('tw_builder_editor_prefs_v1', JSON.stringify({
+      customKeybindings: [
+        { action: 'duplicate', combo: 'Mod+Shift+X' },
+        { action: 'paste-style', combo: 'Mod+Alt+Shift+V' },
+      ],
+    }));
+
+    expect(resolveShortcutCombo('duplicate')).toBe('Mod+Shift+X');
+    expect(resolveShortcutCombo('pasteStyle')).toBe('Mod+Alt+Shift+V');
+    expect(formatShortcutCombo(resolveShortcutCombo('duplicate'), 'glyph')).toBe('⇧⌘X');
+    expect(formatShortcutCombo(resolveShortcutCombo('duplicate'), 'title')).toBe('Cmd+Shift+X');
 
     vi.unstubAllGlobals();
   });

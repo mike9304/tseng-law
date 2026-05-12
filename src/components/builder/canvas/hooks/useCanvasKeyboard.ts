@@ -32,6 +32,7 @@ type UseCanvasKeyboardShortcutsArgs = {
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
   setZoomState: Dispatch<SetStateAction<ZoomState>>;
   toggleGrid: () => void;
+  toggleSelectedNodeLock: () => void;
   ungroupSelectedNode: () => void;
 };
 
@@ -60,6 +61,7 @@ export function useCanvasKeyboardShortcuts({
   setSelectedNodeIds,
   setZoomState,
   toggleGrid,
+  toggleSelectedNodeLock,
   ungroupSelectedNode,
 }: UseCanvasKeyboardShortcutsArgs) {
   useEffect(() => {
@@ -134,6 +136,9 @@ export function useCanvasKeyboardShortcuts({
         case 'sendToBack':
           sendSelectedNodeToBack();
           break;
+        case 'toggleLock':
+          toggleSelectedNodeLock();
+          break;
         case 'nudgeUp':
           nudgeSelectedNode(0, -NUDGE_PX);
           break;
@@ -205,6 +210,7 @@ export function useCanvasKeyboardShortcuts({
     setSelectedNodeIds,
     setZoomState,
     toggleGrid,
+    toggleSelectedNodeLock,
     ungroupSelectedNode,
   ]);
 }

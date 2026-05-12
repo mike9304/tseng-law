@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import A11yPanel from '@/components/builder/canvas/A11yPanel';
 import ElementCommentsPanel from '@/components/builder/canvas/ElementCommentsPanel';
+import { useShortcutLabels } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import AnimationsTab from '@/components/builder/editor/AnimationsTab';
 import BreakpointBadge from '@/components/builder/editor/BreakpointBadge';
 import ContentTab from '@/components/builder/editor/ContentTab';
@@ -409,6 +410,8 @@ export default function SandboxInspectorPanel({
   } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
   const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content' | 'animations' | 'a11y' | 'seo'>('layout');
+  const shortcutLabels = useShortcutLabels(['duplicate']);
+  const duplicateShortcutTitle = shortcutLabels.get('duplicate')?.title;
 
   const linkPickerContext = useMemo<LinkPickerContext>(
     () => ({
@@ -1257,7 +1260,7 @@ export default function SandboxInspectorPanel({
                 <button type="button" className={styles.actionButton} title="맨 앞으로 가져오기" onClick={bringSelectedNodeToFront} disabled={selectedNode.locked}>
                   Bring to front
                 </button>
-                <button type="button" className={styles.actionButton} title="선택 노드 복제 (Cmd-D)" onClick={duplicateSelectedNode} disabled={selectedNode.locked}>
+                <button type="button" className={styles.actionButton} title={duplicateShortcutTitle ? `선택 노드 복제 (${duplicateShortcutTitle})` : '선택 노드 복제'} onClick={duplicateSelectedNode} disabled={selectedNode.locked}>
                   Duplicate
                 </button>
               </div>

@@ -1,5 +1,7 @@
 'use client';
 
+import { useMemo } from 'react';
+import { useShortcutLabels, type ShortcutAction } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import ModalShell from './ModalShell';
 
 interface ShortcutGroup {
@@ -7,68 +9,94 @@ interface ShortcutGroup {
   items: Array<{ keys: string; description: string }>;
 }
 
-const isMac = typeof navigator !== 'undefined' && /Mac|iPhone|iPad|iPod/.test(navigator.platform);
-const mod = isMac ? '⌘' : 'Ctrl';
-
-const groups: ShortcutGroup[] = [
-  {
-    title: '편집',
-    items: [
-      { keys: `${mod}+Z`, description: '실행 취소' },
-      { keys: `${mod}+Shift+Z`, description: '다시 실행' },
-      { keys: `${mod}+C`, description: '복사' },
-      { keys: `${mod}+X`, description: '잘라내기' },
-      { keys: `${mod}+V`, description: '붙여넣기' },
-      { keys: `${mod}+D`, description: '복제' },
-      { keys: 'Delete / Backspace', description: '삭제' },
-      { keys: `${mod}+A`, description: '전체 선택' },
-      { keys: 'Esc', description: '선택 해제 / 그룹 나가기' },
-    ],
-  },
-  {
-    title: '그룹',
-    items: [
-      { keys: `${mod}+G`, description: '그룹 만들기' },
-      { keys: `${mod}+Shift+G`, description: '그룹 해제' },
-      { keys: 'Double-click', description: '컨테이너 진입 / 텍스트 편집' },
-    ],
-  },
-  {
-    title: 'Z-order',
-    items: [
-      { keys: `${mod}+]`, description: '한 단계 앞으로' },
-      { keys: `${mod}+[`, description: '한 단계 뒤로' },
-      { keys: `${mod}+Shift+]`, description: '맨 앞으로' },
-      { keys: `${mod}+Shift+[`, description: '맨 뒤로' },
-    ],
-  },
-  {
-    title: '이동',
-    items: [
-      { keys: '↑ ↓ ← →', description: '1px 이동' },
-      { keys: 'Shift+화살표', description: '10px 이동' },
-      { keys: 'Alt+클릭', description: '부모 컨테이너 선택' },
-      { keys: 'Space+드래그', description: '캔버스 패닝' },
-    ],
-  },
-  {
-    title: '확대/축소',
-    items: [
-      { keys: `${mod}+ +`, description: '확대' },
-      { keys: `${mod}+-`, description: '축소' },
-      { keys: `${mod}+0`, description: '100%' },
-      { keys: `${mod}+휠`, description: '마우스 휠 줌' },
-    ],
-  },
-  {
-    title: '도움말',
-    items: [
-      { keys: `${mod}+/ 또는 ?`, description: '이 도움말 열기/닫기' },
-    ],
-  },
+const SHORTCUT_ACTIONS: ShortcutAction[] = [
+  'undo',
+  'redo',
+  'copy',
+  'cut',
+  'paste',
+  'duplicate',
+  'delete',
+  'selectAll',
+  'deselect',
+  'group',
+  'ungroup',
+  'bringForward',
+  'sendBackward',
+  'bringToFront',
+  'sendToBack',
+  'nudgeUp',
+  'nudgeDown',
+  'nudgeLeft',
+  'nudgeRight',
+  'nudgeUpLarge',
+  'zoomIn',
+  'zoomOut',
+  'zoomReset',
+  'showHelp',
 ];
 
 export default function ShortcutsHelpModal({ onClose }: { onClose: () => void }) {
+  const shortcutLabels = useShortcutLabels(SHORTCUT_ACTIONS);
+  const shortcut = (action: ShortcutAction, fallback = '') => shortcutLabels.get(action)?.glyph || fallback;
+  const groups: ShortcutGroup[] = useMemo(() => [
+    {
+      title: '편집',
+      items: [
+        { keys: shortcut('undo'), description: '실행 취소' },
+        { keys: shortcut('redo'), description: '다시 실행' },
+        { keys: shortcut('copy'), description: '복사' },
+        { keys: shortcut('cut'), description: '잘라내기' },
+        { keys: shortcut('paste'), description: '붙여넣기' },
+        { keys: shortcut('duplicate'), description: '복제' },
+        { keys: `${shortcut('delete')} / Delete`, description: '삭제' },
+        { keys: shortcut('selectAll'), description: '전체 선택' },
+        { keys: shortcut('deselect'), description: '선택 해제 / 그룹 나가기' },
+      ],
+    },
+    {
+      title: '그룹',
+      items: [
+        { keys: shortcut('group'), description: '그룹 만들기' },
+        { keys: shortcut('ungroup'), description: '그룹 해제' },
+        { keys: 'Double-click', description: '컨테이너 진입 / 텍스트 편집' },
+      ],
+    },
+    {
+      title: 'Z-order',
+      items: [
+        { keys: shortcut('bringForward'), description: '한 단계 앞으로' },
+        { keys: shortcut('sendBackward'), description: '한 단계 뒤로' },
+        { keys: shortcut('bringToFront'), description: '맨 앞으로' },
+        { keys: shortcut('sendToBack'), description: '맨 뒤로' },
+      ],
+    },
+    {
+      title: '이동',
+      items: [
+        { keys: '↑ ↓ ← →', description: '1px 이동' },
+        { keys: 'Shift+화살표', description: '10px 이동' },
+        { keys: 'Alt+클릭', description: '부모 컨테이너 선택' },
+        { keys: 'Space+드래그', description: '캔버스 패닝' },
+      ],
+    },
+    {
+      title: '확대/축소',
+      items: [
+        { keys: shortcut('zoomIn'), description: '확대' },
+        { keys: shortcut('zoomOut'), description: '축소' },
+        { keys: shortcut('zoomReset'), description: '100%' },
+        { keys: 'Mod+휠', description: '마우스 휠 줌' },
+      ],
+    },
+    {
+      title: '도움말',
+      items: [
+        { keys: `${shortcut('showHelp')} 또는 ?`, description: '이 도움말 열기/닫기' },
+      ],
+    },
+  ], [shortcutLabels]);
+
   return (
     <ModalShell
       title="키보드 단축키"

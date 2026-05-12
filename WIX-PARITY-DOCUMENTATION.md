@@ -1692,3 +1692,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (4 passed)
 - W 판정:
   - W216/W219는 `자동검증 통과 / 사용자 QA 대기` 유지. shortcut map이 저장 UI에만 머물지 않고 기본 단축키 override와 실제 canvas action dispatch까지 연결되는지 자동검증으로 고정했다.
+
+## M66 — Custom shortcut label sync
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/shortcuts.ts` — runtime과 표시 UI가 같은 effective binding map을 쓰도록 custom binding resolver와 platform-aware label formatter를 export한다. `toggleLock` 기본 단축키도 실제 action으로 등록했다.
+  - `src/components/builder/canvas/hooks/useShortcutLabels.ts` — editor prefs/storage 변경을 구독해 action별 glyph/title 라벨을 계산한다.
+  - `src/components/builder/canvas/CanvasContextMenuLayer.tsx`, `SelectionToolbar.tsx`, `SandboxInspectorPanel.tsx`, `ShortcutsHelpModal.tsx`, `CanvasStageToolbar.tsx`, `CanvasZoomDock.tsx`, `CanvasNodeBadge.tsx` — 메뉴/툴팁/도움말 라벨을 하드코딩 대신 effective shortcut label에서 읽는다.
+  - `src/components/builder/canvas/hooks/useCanvasKeyboard.ts`, `CanvasContainer.tsx`, `KeybindingsModal.tsx` — `toggleLock` dispatch와 shortcut modal resolver를 같은 helper로 맞췄다.
+  - `src/lib/builder/canvas/__tests__/shortcuts.test.ts`, `tests/builder-editor/editor-advanced-panels.playwright.ts` — custom duplicate shortcut 저장 뒤 툴바/인스펙터/context menu 라벨과 실제 runtime dispatch가 같이 바뀌는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (5 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W216/W219는 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 단축키를 바꾸면 저장/동작뿐 아니라 editor 곳곳의 표시 라벨까지 같은 값으로 갱신된다.

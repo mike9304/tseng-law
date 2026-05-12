@@ -1,5 +1,6 @@
 'use client';
 
+import { useShortcutLabels } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import styles from './SandboxPage.module.css';
 
 type CanvasStageToolbarProps = {
@@ -25,6 +26,12 @@ export default function CanvasStageToolbar({
   onToggleGrid,
   setContextMenu,
 }: CanvasStageToolbarProps) {
+  const shortcutLabels = useShortcutLabels(['undo', 'redo', 'toggleGrid']);
+  const shortcutTitle = (title: string, action: 'undo' | 'redo' | 'toggleGrid') => {
+    const label = shortcutLabels.get(action)?.title;
+    return label ? `${title} (${label})` : title;
+  };
+
   return (
     <div
       className={styles.canvasToolbar}
@@ -36,7 +43,7 @@ export default function CanvasStageToolbar({
         className={styles.toolbarButton}
         data-active={gridEnabled ? 'true' : undefined}
         aria-pressed={gridEnabled}
-        title="Grid snap (Shift-G)"
+        title={shortcutTitle('Grid snap', 'toggleGrid')}
         style={gridEnabled ? {
           background: '#116dff',
           borderColor: '#116dff',
@@ -88,7 +95,7 @@ export default function CanvasStageToolbar({
       <button
         type="button"
         className={styles.toolbarButton}
-        title="실행 취소 (Cmd-Z)"
+        title={shortcutTitle('실행 취소', 'undo')}
         onClick={() => {
           setContextMenu(null);
           handleUndo();
@@ -100,7 +107,7 @@ export default function CanvasStageToolbar({
       <button
         type="button"
         className={styles.toolbarButton}
-        title="다시 실행 (Cmd-Shift-Z)"
+        title={shortcutTitle('다시 실행', 'redo')}
         onClick={() => {
           setContextMenu(null);
           handleRedo();

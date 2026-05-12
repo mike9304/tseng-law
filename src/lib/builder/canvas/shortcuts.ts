@@ -9,6 +9,8 @@
  * has focus (the user is typing text, not commanding the editor).
  */
 
+import { loadEditorPreferences } from '@/lib/builder/canvas/editor-prefs';
+
 export type CanvasAction =
   | 'undo'
   | 'redo'
@@ -31,6 +33,7 @@ export type CanvasAction =
   | 'sendBackward'
   | 'bringToFront'
   | 'sendToBack'
+  | 'toggleLock'
   | 'nudgeUp'
   | 'nudgeDown'
   | 'nudgeLeft'
@@ -73,6 +76,7 @@ export const DEFAULT_KEYBINDINGS: ShortcutBindingDefinition[] = [
   { action: 'sendBackward', combo: 'Mod+[', label: 'Send backward' },
   { action: 'bringToFront', combo: 'Mod+Shift+]', label: 'Bring to front' },
   { action: 'sendToBack', combo: 'Mod+Shift+[', label: 'Send to back' },
+  { action: 'toggleLock', combo: 'Mod+L', label: 'Lock / unlock selection' },
   { action: 'nudgeUp', combo: 'ArrowUp', label: 'Nudge up' },
   { action: 'nudgeDown', combo: 'ArrowDown', label: 'Nudge down' },
   { action: 'nudgeLeft', combo: 'ArrowLeft', label: 'Nudge left' },
@@ -124,10 +128,7 @@ function normalizeAction(action: string): Exclude<CanvasAction, null> | null {
 function getCustomBindings(): Array<{ action: Exclude<CanvasAction, null>; combo: string }> {
   if (typeof window === 'undefined') return [];
   try {
-    const raw = window.localStorage.getItem('tw_builder_editor_prefs_v1');
-    if (!raw) return [];
-    const parsed = JSON.parse(raw) as { customKeybindings?: Array<{ action?: string; combo?: string }> };
-    return (parsed.customKeybindings ?? [])
+    return loadEditorPreferences().customKeybindings
       .map((binding) => ({
         action: normalizeAction(binding.action ?? ''),
         combo: (binding.combo ?? '').trim(),
@@ -138,6 +139,100 @@ function getCustomBindings(): Array<{ action: Exclude<CanvasAction, null>; combo
   } catch {
     return [];
   }
+}
+
+export function resolveShortcutCombo(actionInput: string): string {
+  const action = normalizeAction(actionInput);
+  if (!action) return '';
+
+  const customBinding = getCustomBindings().find((binding) => binding.action === action);
+  if (customBinding) return customBinding.combo;
+
+  return DEFAULT_KEYBINDINGS.find((binding) => binding.action === action)?.combo ?? '';
+}
+
+function isMacPlatform(): boolean {
+  if (typeof navigator === 'undefined') return false;
+  return /Mac|iPhone|iPad|iPod/.test(navigator.platform);
+}
+
+export type ShortcutDisplayStyle = 'glyph' | 'title';
+
+export function formatShortcutCombo(
+  combo: string,
+  style: ShortcutDisplayStyle = 'glyph',
+): string {
+  const tokens = combo.split('+').map((token) => token.trim()).filter(Boolean);
+  if (tokens.length === 0) return '';
+
+  const isMac = isMacPlatform();
+  const modifiers = {
+    mod: false,
+    ctrl: false,
+    alt: false,
+    shift: false,
+  };
+  const keys: string[] = [];
+
+  for (const token of tokens) {
+    const normalized = normalizeComboKey(token);
+    if (normalized === 'mod') modifiers.mod = true;
+    else if (normalized === 'ctrl' || normalized === 'control') modifiers.ctrl = true;
+    else if (normalized === 'alt') modifiers.alt = true;
+    else if (normalized === 'shift') modifiers.shift = true;
+    else keys.push(normalized);
+  }
+
+  const key = keys[keys.length - 1] ?? '';
+  if (style === 'title') {
+    const parts = [
+      modifiers.mod ? (isMac ? 'Cmd' : 'Ctrl') : null,
+      modifiers.ctrl && !(modifiers.mod && !isMac) ? 'Ctrl' : null,
+      modifiers.alt ? (isMac ? 'Option' : 'Alt') : null,
+      modifiers.shift ? 'Shift' : null,
+      titleKeyLabel(key),
+    ].filter(Boolean);
+    return parts.join('+');
+  }
+
+  const parts = [
+    modifiers.shift ? (isMac ? '⇧' : 'Shift+') : null,
+    modifiers.ctrl && !(modifiers.mod && !isMac) ? (isMac ? '⌃' : 'Ctrl+') : null,
+    modifiers.alt ? (isMac ? '⌥' : 'Alt+') : null,
+    modifiers.mod ? (isMac ? '⌘' : 'Ctrl+') : null,
+    glyphKeyLabel(key),
+  ].filter(Boolean);
+  return parts.join('');
+}
+
+function titleKeyLabel(key: string): string {
+  if (!key) return '';
+  if (key === 'escape') return 'Esc';
+  if (key === 'backspace') return 'Backspace';
+  if (key === 'delete') return 'Delete';
+  if (key === 'space') return 'Space';
+  if (key.length === 1) return key.toUpperCase();
+  return key.replace(/^arrow/, 'Arrow');
+}
+
+function glyphKeyLabel(key: string): string {
+  if (!key) return '';
+  if (key === 'escape') return 'Esc';
+  if (key === 'backspace') return '⌫';
+  if (key === 'delete') return 'Del';
+  if (key === 'space') return 'Space';
+  if (key.length === 1) return key.toUpperCase();
+  if (key.startsWith('arrow')) {
+    const direction = key.slice('arrow'.length);
+    const arrows: Record<string, string> = {
+      up: '↑',
+      down: '↓',
+      left: '←',
+      right: '→',
+    };
+    return arrows[direction] ?? titleKeyLabel(key);
+  }
+  return titleKeyLabel(key);
 }
 
 function normalizeEventKey(key: string): string {

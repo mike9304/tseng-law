@@ -415,6 +415,7 @@ export default function CanvasContainer({
     setSelectedNodeIds,
     setZoomState,
     toggleGrid: handleToggleGrid,
+    toggleSelectedNodeLock,
     ungroupSelectedNode,
   });
 

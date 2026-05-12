@@ -5103,3 +5103,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (4 passed)
 - 다음 후보:
   - W216~W225 editor 고도화와 템플릿/페이지 전환 실사용 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M66 Custom shortcut label sync
+
+- M65에서 runtime dispatch는 고정했지만, 툴바/인스펙터/컨텍스트 메뉴/도움말의 단축키 표시가 기본값(`Cmd+D` 등)에 머무는 gap을 닫았다.
+- `shortcuts.ts`에 effective binding resolver/formatter를 추가하고, `useShortcutLabels()` 훅으로 editor prefs 변경 이벤트와 storage 변경을 구독하게 했다.
+- selection toolbar, inspector duplicate button, context menu, shortcuts help, stage toolbar, zoom dock, link badge가 같은 binding map을 읽어 커스텀 단축키 라벨을 표시한다.
+- 기존 context menu에 보이던 lock 단축키도 실제 `toggleLock` action으로 연결해 표시와 동작을 맞췄다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (5 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - 실제 우클릭/노드 클릭/템플릿 전환 체감 회귀와 W216~W225 editor 고도화를 계속 재스캔한다.

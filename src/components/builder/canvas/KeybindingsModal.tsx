@@ -7,7 +7,7 @@ import {
   saveAndBroadcastEditorPreferences,
   type CustomKeybinding,
 } from '@/lib/builder/canvas/editor-prefs';
-import { DEFAULT_KEYBINDINGS } from '@/lib/builder/canvas/shortcuts';
+import { DEFAULT_KEYBINDINGS, resolveShortcutCombo } from '@/lib/builder/canvas/shortcuts';
 
 interface Props {
   open: boolean;
@@ -17,9 +17,8 @@ interface Props {
 /**
  * Phase 28 W219 — Keybinding mapping modal.
  *
- * Stores user-defined combo overrides in editor preferences. Runtime
- * keyboard handlers should call resolveKeybinding(action) (helper to be
- * wired into existing shortcut listeners) instead of hard-coding combos.
+ * Stores user-defined combo overrides in editor preferences. Runtime keyboard
+ * handlers and visible shortcut labels read the same effective binding map.
  */
 export default function KeybindingsModal({ open, onClose }: Props) {
   const [bindings, setBindings] = useState<CustomKeybinding[]>(
@@ -154,9 +153,5 @@ export default function KeybindingsModal({ open, onClose }: Props) {
 }
 
 export function resolveKeybinding(action: string): string {
-  const prefs = loadEditorPreferences();
-  const override = prefs.customKeybindings.find((b) => b.action === action);
-  if (override) return override.combo;
-  const fallback = DEFAULT_KEYBINDINGS.find((b) => b.action === action);
-  return fallback?.combo ?? '';
+  return resolveShortcutCombo(action);
 }

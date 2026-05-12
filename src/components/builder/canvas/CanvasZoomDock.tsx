@@ -8,6 +8,7 @@ import {
   zoomTo,
   type ZoomState,
 } from '@/lib/builder/canvas/zoom';
+import { useShortcutLabels } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import styles from './SandboxPage.module.css';
 
 type CanvasZoomDockProps = {
@@ -21,13 +22,19 @@ export default function CanvasZoomDock({
   setZoomState,
   zoomState,
 }: CanvasZoomDockProps) {
+  const shortcutLabels = useShortcutLabels(['zoomOut', 'zoomIn', 'zoomReset']);
+  const shortcutTitle = (title: string, action: 'zoomOut' | 'zoomIn' | 'zoomReset') => {
+    const label = shortcutLabels.get(action)?.title;
+    return label ? `${title} (${label})` : title;
+  };
+
   return (
     <div className={styles.zoomDock} data-builder-zoom-dock="true">
       <button
         type="button"
         className={styles.toolbarButton}
         data-builder-zoom-action="out"
-        title="축소 (Cmd--)"
+        title={shortcutTitle('축소', 'zoomOut')}
         onClick={() => setZoomState((currentState) => stepZoomOut(currentState))}
       >
         -
@@ -47,7 +54,7 @@ export default function CanvasZoomDock({
         type="button"
         className={styles.toolbarButton}
         data-builder-zoom-action="in"
-        title="확대 (Cmd-+)"
+        title={shortcutTitle('확대', 'zoomIn')}
         onClick={() => setZoomState((currentState) => stepZoomIn(currentState))}
       >
         +
@@ -56,7 +63,7 @@ export default function CanvasZoomDock({
         type="button"
         className={styles.toolbarButton}
         data-builder-zoom-action="100"
-        title="100%"
+        title={shortcutTitle('100%', 'zoomReset')}
         onClick={() => setZoomState((currentState) => zoomTo(currentState, 1))}
       >
         100%

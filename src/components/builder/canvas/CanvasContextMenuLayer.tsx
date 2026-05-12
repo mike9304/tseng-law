@@ -2,6 +2,7 @@
 
 import ContextMenu from '@/components/builder/canvas/ContextMenu';
 import type { ImageEditTab } from '@/components/builder/canvas/ImageEditDialog';
+import { useShortcutLabels, type ShortcutAction } from '@/components/builder/canvas/hooks/useShortcutLabels';
 import { type ContextMenuState } from '@/components/builder/canvas/canvasInteraction';
 import { linkValueFromLegacy, type LinkValue } from '@/lib/builder/links';
 import { isContainerLikeKind, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
@@ -81,6 +82,29 @@ export default function CanvasContextMenuLayer({
   updateResponsiveOverride,
   updateSelectedLink,
 }: CanvasContextMenuLayerProps) {
+  const shortcutLabels = useShortcutLabels([
+    'editLink',
+    'copy',
+    'cut',
+    'paste',
+    'duplicate',
+    'pasteStyle',
+    'copyStyle',
+    'bringToFront',
+    'bringForward',
+    'sendBackward',
+    'sendToBack',
+    'toggleLock',
+    'group',
+    'ungroup',
+    'delete',
+  ]);
+  const shortcutGlyph = (action: ShortcutAction) => shortcutLabels.get(action)?.glyph ?? '';
+  const shortcutTitle = (title: string, action: ShortcutAction) => {
+    const label = shortcutLabels.get(action)?.title;
+    return label ? `${title} (${label})` : title;
+  };
+
   if (!contextMenu) return null;
 
   const contextMenuTitle = selectedNodeIds.length > 1
@@ -178,8 +202,8 @@ export default function CanvasContextMenuLayer({
             }
             return '링크 편집';
           })(),
-          title: '링크 편집 (Cmd+K)',
-          shortcut: '⌘K',
+          title: shortcutTitle('링크 편집', 'editLink'),
+          shortcut: shortcutGlyph('editLink'),
           disabled:
             selectedNodeIds.length !== 1 ||
             !selectedLinkTargetNode ||
@@ -212,39 +236,39 @@ export default function CanvasContextMenuLayer({
         {
           key: 'copy',
           label: 'Copy',
-          shortcut: '⌘C',
-          title: '복사 (Cmd-C)',
+          shortcut: shortcutGlyph('copy'),
+          title: shortcutTitle('복사', 'copy'),
           disabled: selectedNodeIds.length === 0,
           onSelect: handleCopy,
         },
         {
           key: 'cut',
           label: 'Cut',
-          shortcut: '⌘X',
-          title: '잘라내기 (Cmd-X)',
+          shortcut: shortcutGlyph('cut'),
+          title: shortcutTitle('잘라내기', 'cut'),
           disabled: !hasUnlockedSelection,
           onSelect: handleCut,
         },
         {
           key: 'paste',
           label: 'Paste',
-          shortcut: '⌘V',
-          title: '붙여넣기 (Cmd-V)',
+          shortcut: shortcutGlyph('paste'),
+          title: shortcutTitle('붙여넣기', 'paste'),
           disabled: !clipboardHasContent,
           onSelect: handlePaste,
         },
         {
           key: 'duplicate',
           label: 'Duplicate',
-          shortcut: '⌘D',
-          title: '복제 (Cmd-D)',
+          shortcut: shortcutGlyph('duplicate'),
+          title: shortcutTitle('복제', 'duplicate'),
           disabled: !hasUnlockedSelection,
           onSelect: handleDuplicate,
         },
         {
           key: 'paste-style',
           label: 'Paste style',
-          shortcut: '⌥⌘V',
+          shortcut: shortcutGlyph('pasteStyle'),
           title: '선택 노드에 스타일만 붙여넣기',
           disabled: !styleClipboardHasContent || !hasUnlockedSelection,
           onSelect: () => {
@@ -255,7 +279,7 @@ export default function CanvasContextMenuLayer({
         {
           key: 'copy-style',
           label: 'Copy style',
-          shortcut: '⌥⌘C',
+          shortcut: shortcutGlyph('copyStyle'),
           title: '선택 노드의 스타일만 복사',
           disabled: contextSelectionCount !== 1 || !contextPrimaryNode,
           onSelect: () => {
@@ -267,7 +291,7 @@ export default function CanvasContextMenuLayer({
         {
           key: 'bring-front',
           label: 'Bring to front',
-          shortcut: '⇧⌘]',
+          shortcut: shortcutGlyph('bringToFront'),
           title: '맨 앞으로 가져오기',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           onSelect: bringSelectedNodeToFront,
@@ -275,7 +299,7 @@ export default function CanvasContextMenuLayer({
         {
           key: 'bring-forward',
           label: 'Bring forward',
-          shortcut: '⌘]',
+          shortcut: shortcutGlyph('bringForward'),
           title: '한 단계 앞으로',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           onSelect: bringSelectedNodeForward,
@@ -283,7 +307,7 @@ export default function CanvasContextMenuLayer({
         {
           key: 'send-backward',
           label: 'Send backward',
-          shortcut: '⌘[',
+          shortcut: shortcutGlyph('sendBackward'),
           title: '한 단계 뒤로',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           onSelect: sendSelectedNodeBackward,
@@ -291,7 +315,7 @@ export default function CanvasContextMenuLayer({
         {
           key: 'send-back',
           label: 'Send to back',
-          shortcut: '⇧⌘[',
+          shortcut: shortcutGlyph('sendToBack'),
           title: '맨 뒤로 보내기',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           onSelect: sendSelectedNodeToBack,
@@ -300,7 +324,7 @@ export default function CanvasContextMenuLayer({
           key: 'lock',
           label: selectedNodes.every((node) => node.locked) ? 'Unlock selection' : 'Lock selection',
           title: '선택 잠금 토글',
-          shortcut: '⌘L',
+          shortcut: shortcutGlyph('toggleLock'),
           disabled: selectedNodeIds.length === 0,
           onSelect: toggleSelectedNodeLock,
         },
@@ -495,7 +519,7 @@ export default function CanvasContextMenuLayer({
           key: 'group',
           label: 'Group',
           title: '그룹 만들기 (2개 이상)',
-          shortcut: 'Cmd+G',
+          shortcut: shortcutGlyph('group'),
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: groupSelectedNodes,
         },
@@ -503,7 +527,7 @@ export default function CanvasContextMenuLayer({
           key: 'ungroup',
           label: 'Ungroup',
           title: '그룹 해제',
-          shortcut: 'Cmd+Shift+G',
+          shortcut: shortcutGlyph('ungroup'),
           disabled:
             selectedNodeIds.length !== 1 ||
             selectedNodes[0]?.kind !== 'container' ||
@@ -514,8 +538,8 @@ export default function CanvasContextMenuLayer({
         {
           key: 'delete',
           label: 'Delete',
-          shortcut: '⌫',
-          title: '삭제 (Delete)',
+          shortcut: shortcutGlyph('delete'),
+          title: shortcutTitle('삭제', 'delete'),
           tone: 'danger',
           disabled: !hasUnlockedSelection,
           onSelect: deleteSelectedNode,

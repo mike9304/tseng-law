@@ -382,6 +382,15 @@ export default function CanvasNode({
   const heroSearchActive = selectedNodeIds.some(isHeroSearchTarget);
   const showHeroSearchQuickEdit = selected && isInteractive && !node.locked && isHeroSearchTarget(node.id);
 
+  const syncInteractivePreviewForSelection = useCallback(() => {
+    if (serviceCardIndex != null) {
+      setInteractivePreviewIndex('services', serviceCardIndex);
+    }
+    if (faqItemIndex != null) {
+      setInteractivePreviewIndex('faq', faqItemIndex);
+    }
+  }, [faqItemIndex, serviceCardIndex, setInteractivePreviewIndex]);
+
   useEffect(() => {
     if (!selected) return;
     if (serviceCardIndex != null) {
@@ -657,7 +666,7 @@ export default function CanvasNode({
   const renderedOpacity = typeof editorAnimationStyle.opacity === 'number'
     ? (node.style.opacity / 100) * editorAnimationStyle.opacity
     : node.style.opacity / 100;
-  const nodePointerEvents = isDimmedRoot || isActiveGroupFrame || (isContainerWithChildren && !isEditing)
+  const nodePointerEvents = isDimmedRoot || isActiveGroupFrame
     ? 'none'
     : 'auto';
 
@@ -720,6 +729,7 @@ export default function CanvasNode({
         if (!isInteractive) return;
         if (event.button !== 0) return;
         const additive = event.metaKey || event.ctrlKey || event.shiftKey;
+        syncInteractivePreviewForSelection();
         onSelect(node.id, additive);
         if (additive || node.locked) return;
         scheduleTouchContextMenu(event);

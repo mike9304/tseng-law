@@ -23,15 +23,15 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(servicesRoot).toHaveAttribute('data-section-variant', 'split');
     await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
 
-    await page.locator('[data-node-id="home-services-list"]').first().click({ position: { x: 8, y: 8 }, force: true });
+    await page.locator('[data-node-id="home-services-list"]').first().click({ position: { x: 8, y: 8 } });
     await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
     await expect(servicesRoot).toContainText('투자·법인설립');
 
-    await page.locator('[data-node-id="home-services-card-1-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await page.locator('[data-node-id="home-services-card-1-title"]').first().click({ position: { x: 12, y: 12 } });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
-    await page.locator('[data-node-id="home-services-description"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await page.locator('[data-node-id="home-services-description"]').first().click({ position: { x: 12, y: 12 } });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
-    await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 } });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
   });
 
@@ -46,10 +46,10 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(serviceTemplateButton).toBeVisible();
     await serviceTemplateButton.click();
 
-    const insertedTitle = page.getByText('서비스 상세를 단계별로 펼쳐 보게 합니다').last();
-    const scopeTitle = page.getByText('Scope', { exact: true }).last();
-    const processTitle = page.getByText('Process', { exact: true }).last();
-    const deliverablesTitle = page.getByText('Deliverables', { exact: true }).last();
+    const insertedTitle = page.locator('[data-node-id^="heading-"]').filter({ hasText: '서비스 상세를 단계별로 펼쳐 보게 합니다' }).last();
+    const scopeTitle = page.locator('[data-node-id^="heading-"]').filter({ hasText: 'Scope' }).last();
+    const processTitle = page.locator('[data-node-id^="heading-"]').filter({ hasText: 'Process' }).last();
+    const deliverablesTitle = page.locator('[data-node-id^="heading-"]').filter({ hasText: 'Deliverables' }).last();
     const scopeBody = page.getByText('포함 범위와 제외 범위를 명확히 합니다.').last();
     const processBody = page.getByText('진행 단계와 담당 역할을 설명합니다.').last();
     const deliverablesBody = page.getByText('최종 산출물을 구체적으로 안내합니다.').last();
@@ -59,16 +59,16 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(processTitle).toBeVisible();
     await expect(deliverablesTitle).toBeVisible();
 
-    await insertedTitle.click({ force: true });
+    await insertedTitle.click();
     await expect(scopeBody).toBeVisible();
 
-    await scopeTitle.click({ force: true });
+    await scopeTitle.click();
     await expect(scopeBody).toBeVisible();
 
-    await processTitle.click({ force: true });
+    await processTitle.click();
     await expect(processBody).toBeVisible();
 
-    await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
+    await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 } });
     await expect(deliverablesBody).toBeVisible();
   });
 });

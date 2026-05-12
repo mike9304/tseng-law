@@ -1517,6 +1517,19 @@ function resolveCenteredNode(
   };
 }
 
+function resolveSectionInsertOffset(nodes: BuilderCanvasNode[], template: BuiltInSectionTemplate): { x: number; y: number } {
+  const root = template.nodes.find((node) => node.id === template.rootNodeId);
+  const width = root?.rect.width ?? STAGE_WIDTH;
+  const existingBottom = nodes
+    .filter((node) => !node.parentId && node.visible)
+    .reduce((bottom, node) => Math.max(bottom, node.rect.y + node.rect.height), 0);
+
+  return {
+    x: Math.max(0, Math.round((STAGE_WIDTH - width) / 2)),
+    y: Math.max(48, existingBottom + 48),
+  };
+}
+
 function getDisplayCategory(component: BuilderComponentDefinition): BuilderComponentCategory {
   if (component.kind === 'image') return 'media';
   return component.category;
@@ -1677,7 +1690,7 @@ function socialWidgetMatchesSearch(preset: SocialWidgetPreset, query: string): b
 }
 
 export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
-  const { document, addNode, addNodes, setDraftSaveState } = useBuilderCanvasStore();
+  const { document, addNode, addNodes, setSelectedNodeId, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
   const addSequenceRef = useRef(0);
@@ -2004,9 +2017,14 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
 
   function handleInsertBuiltInSection(template: BuiltInSectionTemplate) {
     if (!document) return;
-    const result = insertSectionSnapshot(template.nodes, template.rootNodeId);
+    const result = insertSectionSnapshot(
+      template.nodes,
+      template.rootNodeId,
+      resolveSectionInsertOffset(nodes, template),
+    );
     if (result.nodes.length === 0) return;
     addNodes(result.nodes, result.rootNodeId);
+    setSelectedNodeId(result.rootNodeId);
     setDraftSaveState('saving');
   }
 

@@ -31,3 +31,4 @@
 | M27 | P8     | Bookings 본격 3 (다국어/정책)     | W211~W215 | 16h  | M26  | 🟡 W211~W215 자동검증 통과 / 사용자·provider QA 대기 |
 | M28 | P9     | 에디터 고도화                     | W216~W225 | 24h  | M02  | 🟡 W216~W225 자동검증 통과 / 사용자 QA 대기 |
 | M29 | P2/P7  | Red checkpoint close              | W17,W36,W189 | 8h | M07,M24 | 🟡 W17/W36/W189 자동검증 통과 / 사용자 QA 대기 |
+| M30 | QA     | Section template click stability  | W18,W22,W84 | 3h | M28  | 🟡 실제 클릭 자동검증 통과 / 사용자 QA 대기 |

@@ -1129,3 +1129,25 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W17/W36/W189는 `자동검증 통과 / 사용자 QA 대기`로 상향한다.
+
+## M30 — Section template click stability
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 사용자 피드백:
+  - 주요 업무/섹션 디자인 템플릿을 클릭해 테스트할 때 텍스트가 사라지거나 다른 노드를 클릭한 뒤 글이 안 보이는 문제가 있었다.
+  - 섹션 디자인 템플릿 삽입 후 뒤쪽 본문/히어로 클릭이 실제 사용자 클릭으로 안정적으로 되지 않았다.
+- 변경 파일:
+  - `src/components/builder/canvas/CanvasNode.tsx` — child-containing container도 실제 클릭 대상이 되도록 pointer events 정책을 보정했다. 서비스/FAQ interactive preview index는 선택 시점에 즉시 동기화해 selection 변경 직후 accordion body가 접히지 않게 했다.
+  - `src/components/builder/canvas/CanvasNodeSelectionOverlay.module.css` — 회전 핸들을 콘텐츠 위에서 더 멀리 띄워, 선택 핸들이 바로 다음 텍스트 클릭을 가로막는 문제를 줄였다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — 내장 섹션 템플릿은 현재 visible root section 하단에 중앙 정렬로 삽입하고 root section만 선택하도록 변경했다. 새 섹션이 hero 위에 겹쳐 기존 노드 클릭을 막지 않는다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — `force: true`를 제거하고 실제 사용자 클릭 경로로 서비스 accordion, 섹션 삽입, 기존 hero 재클릭을 검증한다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npx vitest run src/lib/builder/canvas/__tests__/shortcuts.test.ts src/lib/builder/canvas/__tests__/snap.test.ts` ✅ (8 passed)
+  - `npm run test:unit` ✅ (888 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W18/W22/W84 관련 실사용 click regression은 `자동검증 통과 / 사용자 QA 대기`로 둔다. 다음 self-goal은 남은 yellow checkpoint 중 W161/W174/W178/W181/W182/W183 계열을 우선 후보로 본다.

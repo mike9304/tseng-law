@@ -40,12 +40,12 @@
 
 .rotationHandle {
   position: absolute;
-  top: calc(-39px / var(--canvas-zoom, 1));
+  top: calc(-52px / var(--canvas-zoom, 1));
   left: 50%;
   pointer-events: auto;
   transform: translateX(-50%);
-  width: calc(17px / var(--canvas-zoom, 1));
-  height: calc(23px / var(--canvas-zoom, 1));
+  width: calc(15px / var(--canvas-zoom, 1));
+  height: calc(15px / var(--canvas-zoom, 1));
   border: 0;
   background: transparent;
   cursor: grab;
@@ -86,10 +86,10 @@
 
 .rotationLine {
   position: absolute;
-  top: calc(-28px / var(--canvas-zoom, 1));
+  top: calc(-42px / var(--canvas-zoom, 1));
   left: 50%;
   width: calc(1px / var(--canvas-zoom, 1));
-  height: calc(28px / var(--canvas-zoom, 1));
+  height: calc(42px / var(--canvas-zoom, 1));
   background: #116dff;
   pointer-events: none;
   z-index: 4;

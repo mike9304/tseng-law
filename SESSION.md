@@ -4601,3 +4601,21 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 체크포인트:
   - W17/W36/W189 자동검증 evidence 확보. 실제 모바일/예약 발행 사용자 QA는 대기.
+
+## 2026-05-12 Codex /goal M30 section template click stability
+
+- 사용자가 보고한 “주요 업무/섹션 디자인 템플릿 클릭 후 글이 사라짐”, “다른 노드를 클릭하면 텍스트가 안 보임” 회귀를 우선 처리했다.
+- child-containing container의 pointer events를 되살려 카드/리스트 빈 영역도 실제 선택 가능한 노드가 되게 했다.
+- 서비스/FAQ interactive preview index를 선택 시점에 즉시 동기화해 accordion detail이 selection 변경 직후 접히지 않게 했다.
+- 회전 핸들을 콘텐츠에서 더 멀리 띄워 선택 overlay가 바로 다음 텍스트 클릭을 가로막는 문제를 줄였다.
+- 섹션 디자인 템플릿은 현재 root section 하단에 중앙 정렬로 삽입하고 root section만 선택한다. 새 섹션이 hero 위에 겹쳐 기존 노드 클릭을 막던 경로를 제거했다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npx vitest run src/lib/builder/canvas/__tests__/shortcuts.test.ts src/lib/builder/canvas/__tests__/snap.test.ts` ✅ (8 passed)
+  - `npm run test:unit` ✅ (888 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - 남은 yellow checkpoint 중 W161 parallax/background runtime, W174/W178/W181/W182/W183 디자인 시스템/템플릿 품질 gap을 self-goal 후보로 둔다.

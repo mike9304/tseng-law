@@ -9,7 +9,10 @@ test.describe('/ko/admin-builder section design templates', () => {
     await page.getByRole('button', { name: 'Design', exact: true }).click();
     const designDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Section design' }).first();
     await expect(designDrawer).toBeVisible();
-    await designDrawer.getByRole('button', { name: '주요 서비스' }).click();
+    const servicesTarget = designDrawer.locator('[data-builder-section-template-target="services"]');
+    await expect(servicesTarget).toContainText('12개 디자인 템플릿');
+    await expect(designDrawer.locator('[data-builder-design-open-page-template-market="true"]')).toContainText(/전체 페이지 템플릿 \d+개 보기/);
+    await servicesTarget.click();
     await expect(designDrawer).toContainText('주요 서비스의 글, 주소, 링크 데이터는 그대로');
     await expect(designDrawer.locator('[data-builder-section-template-option^="services:"]')).toHaveCount(12);
     await expect(designDrawer.getByRole('button', { name: '← 섹션 목록' })).toBeVisible();
@@ -37,6 +40,22 @@ test.describe('/ko/admin-builder section design templates', () => {
     await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 } });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
+  });
+
+  test('opens the full page template showroom from the Design panel', async ({ page }) => {
+    await openBuilder(page, `/ko/admin-builder?designPageTemplateMarket=${Date.now().toString(36)}`);
+    await page.keyboard.press('Escape');
+
+    await page.getByRole('button', { name: 'Design', exact: true }).click();
+    const designDrawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Section design' }).first();
+    await expect(designDrawer).toBeVisible();
+    await designDrawer.locator('[data-builder-design-open-page-template-market="true"]').click();
+
+    const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
+    await expect(gallery).toBeVisible();
+    await expect(gallery.getByRole('searchbox')).toHaveValue('홈페이지');
+    await gallery.getByRole('button', { name: 'Close' }).click();
+    await expect(gallery).toBeHidden();
   });
 
   test('keeps inserted service template text visible while selecting nested nodes', async ({ page }) => {

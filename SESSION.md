@@ -5058,3 +5058,14 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run typecheck` ✅
 - 다음 후보:
   - 템플릿 적용/페이지 전환 race와 W216~W225 editor 고도화 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M62 Design panel template discovery
+
+- 사용자가 Design 패널에서 “주요업무 눌렀는데 겨우 네 개 템플릿만 있음”이라고 느낀 원인을 정보 구조에서 보강했다.
+- Design 패널 첫 화면은 이제 섹션 이름 4개 pill이 아니라 각 섹션별 template entry card를 보여준다. 주요 서비스/칼럼/FAQ/오시는길 각각 `12개 디자인 템플릿`임을 표시한다.
+- 같은 Design 패널에서 `전체 페이지 템플릿 261개 보기` 버튼으로 full template showroom을 바로 열 수 있다. Add 패널과 같은 page template market entry를 공유한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 템플릿 적용/페이지 전환 UX와 W216~W225 editor 고도화 회귀를 계속 재스캔한다.

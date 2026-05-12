@@ -1643,3 +1643,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run typecheck` ✅
 - W 판정:
   - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “주요업무 템플릿 클릭 후 다른 노드 선택하면 글이 없어짐” 경로를 초기 draft race 관점에서 재현하고 차단했다.
+
+## M62 — Design panel template discovery
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxEditorRail.tsx` — Design 패널의 첫 화면을 섹션 이름 4개 pill 대신 카드형 template entry로 바꿨다. 각 섹션이 `12개 디자인 템플릿`을 가진다는 점을 표시하고, 같은 패널에서 전체 페이지 템플릿 261개 쇼룸으로 바로 이동할 수 있게 했다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Design 패널에서 주요 서비스가 12개 디자인 템플릿으로 표시되는지, 전체 페이지 템플릿 버튼이 showroom을 `홈페이지` 검색으로 여는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “주요업무 눌렀는데 겨우 네 개 템플릿만 있음” 혼선을 Design 패널 정보 구조에서 줄였다.

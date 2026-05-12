@@ -17,6 +17,7 @@ import {
   getHomeSectionTemplateVariant,
   type HomeSectionTemplateId,
 } from '@/lib/builder/canvas/section-templates';
+import { getAllTemplates } from '@/lib/builder/templates/registry';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
@@ -94,6 +95,7 @@ export default function SandboxEditorRail({
 }: SandboxEditorRailProps) {
   const [focusedSectionTemplateId, setFocusedSectionTemplateId] = useState<HomeSectionTemplateId | null>(null);
   const [pageTemplateGalleryRequest, setPageTemplateGalleryRequest] = useState({ id: 0, query: '' });
+  const pageTemplateCount = useMemo(() => getAllTemplates().length, []);
   const openPageTemplateGallery = (query?: string) => {
     const normalizedQuery = (query ?? '').trim();
     setPageTemplateGalleryRequest((current) => ({
@@ -311,21 +313,40 @@ export default function SandboxEditorRail({
               ) : (
                 <>
                   <p className={styles.panelCopy}>
-                    주요 서비스, 칼럼 아카이브, FAQ, 오시는길 섹션을 선택하면 디자인 템플릿을 바꿀 수 있습니다.
+                    섹션을 선택하면 해당 영역의 디자인 변형 12개를 바로 적용할 수 있습니다.
                   </p>
-                  <div className={styles.sectionTemplateHintList}>
+                  <button
+                    type="button"
+                    className={styles.actionButton}
+                    data-builder-design-open-page-template-market="true"
+                    onClick={() => openPageTemplateGallery('홈페이지')}
+                  >
+                    전체 페이지 템플릿 {pageTemplateCount}개 보기
+                  </button>
+                  <div className={styles.sectionTemplateVariantGrid} data-builder-section-template-targets="true">
                     {(availableSectionTemplates.length > 0 ? availableSectionTemplates : HOME_SECTION_TEMPLATE_TARGETS).map((target) => (
                       <button
                         key={target.id}
                         type="button"
-                        className={styles.sectionTemplateHintButton}
+                        data-builder-section-template-target={target.id}
+                        className={styles.sectionTemplateVariantCard}
                         disabled={!availableSectionTemplates.some((available) => available.id === target.id)}
                         onClick={() => {
                           setFocusedSectionTemplateId(target.id);
                           onSelectNode(target.nodeId);
                         }}
                       >
-                        {target.label}
+                        <em
+                          className={styles.sectionTemplateVariantPreview}
+                          data-section-template-preview={getHomeSectionTemplateVariantOptions(target.id)[0]?.key ?? 'flat'}
+                          aria-hidden="true"
+                        >
+                          <i />
+                          <i />
+                          <i />
+                        </em>
+                        <strong>{target.label}</strong>
+                        <span>{getHomeSectionTemplateVariantOptions(target.id).length}개 디자인 템플릿 · {target.description}</span>
                       </button>
                     ))}
                   </div>

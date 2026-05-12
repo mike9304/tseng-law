@@ -1,5 +1,12 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import { openBuilder } from './helpers/editor';
+
+async function expectEditorSurfaceIntact(page: Page) {
+  await expect(page).toHaveURL(/\/ko\/admin-builder/);
+  await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+  await expect(page.locator('body')).toContainText('호정국제');
+  await expect.poll(() => page.locator('[data-node-id]').count()).toBeGreaterThan(25);
+}
 
 test.describe('/ko/admin-builder node click stability', () => {
   test('does not move canvas nodes when a click has only pointer jitter', async ({ page }) => {
@@ -36,21 +43,23 @@ test.describe('/ko/admin-builder node click stability', () => {
     const archive = page.locator('[data-node-id="home-insights-list-wrap"]').first();
     await archive.scrollIntoViewIfNeeded();
     await archive.click({ position: { x: 20, y: 20 }, force: true });
-    await expect(page).toHaveURL(/\/ko\/admin-builder/);
-    await expect(canvas).toBeVisible();
+    await expectEditorSurfaceIntact(page);
+    await expect(archive).toBeVisible();
     await expect(page.locator('[data-node-id="home-insights-title"]').first()).toBeVisible();
 
     const previewLink = page.locator('[data-builder-insights-preview="true"] a[href]').first();
     if (await previewLink.isVisible().catch(() => false)) {
       await previewLink.click({ force: true });
-      await expect(page).toHaveURL(/\/ko\/admin-builder/);
-      await expect(canvas).toBeVisible();
+      await expectEditorSurfaceIntact(page);
+      await expect(archive).toBeVisible();
     }
 
     const image = page.locator('[data-node-id="home-hero-media-image"]').first();
     await image.scrollIntoViewIfNeeded();
     const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
     await image.click({ position: { x: 20, y: 20 }, force: true });
+    await expectEditorSurfaceIntact(page);
+    await expect(image).toHaveAttribute('data-selected', 'true');
     if (!(await assetDialog.isVisible().catch(() => false))) {
       await image.click({ position: { x: 20, y: 20 }, force: true });
     }
@@ -58,7 +67,7 @@ test.describe('/ko/admin-builder node click stability', () => {
     await expect(assetDialog).toContainText('Select, upload, or remove builder images');
     await assetDialog.getByRole('button', { name: 'Close' }).click();
     await expect(assetDialog).toBeHidden();
-    await expect(canvas).toBeVisible();
+    await expectEditorSurfaceIntact(page);
   });
 
   test('keeps revealed FAQ answer text visible while selecting other nodes', async ({ page }) => {

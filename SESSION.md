@@ -5130,3 +5130,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - 템플릿 적용 뒤 노드 전환/칼럼/이미지 클릭 백지화 회귀와 W216~W225 editor 고도화를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M68 Archive/image click blanking guard
+
+- 사용자가 말한 “칼럼아카이브나 사진 클릭하면 사라져 백지가 되는” 경로를 기존 `node-click-stability.playwright.ts`로 재확인했다.
+- 기존 방어 로직은 현재 통과한다. M68에서는 테스트가 단순 URL 유지에 그치지 않고, editor body text, canvas application, node tree count, 아카이브/이미지 노드 유지, 이미지 선택 후 asset library 노출까지 확인하게 강화했다.
+- 아카이브 preview 내부 링크 클릭도 `/ko/admin-builder`에 머물고 canvas가 살아있는지 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - 전체 WIX parity 문서/goal 파일 기준으로 남은 editor UX gap을 계속 스캔한다.

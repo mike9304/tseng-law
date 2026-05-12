@@ -44,11 +44,28 @@ export default function LightboxMount({ slugs }: { slugs: string[] }) {
       openFromTrigger(trigger, event);
     }
 
+    function openFromHash() {
+      const hash = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : '';
+      if (!hash.startsWith('lb-')) return;
+      const slug = hash.slice(3);
+      if (!slug || !known.has(slug)) return;
+      const activeElement = document.activeElement instanceof HTMLElement ? document.activeElement : undefined;
+      window.dispatchEvent(
+        new CustomEvent<PublishedOverlayOpenDetail>('builder-lightbox:open', {
+          detail: { slug, opener: activeElement },
+        }),
+      );
+    }
+
     document.addEventListener('click', handler);
     document.addEventListener('keydown', keyHandler);
+    window.addEventListener('hashchange', openFromHash);
+    const initialHashTimer = window.setTimeout(openFromHash, 0);
     return () => {
       document.removeEventListener('click', handler);
       document.removeEventListener('keydown', keyHandler);
+      window.removeEventListener('hashchange', openFromHash);
+      window.clearTimeout(initialHashTimer);
     };
   }, [slugs]);
 

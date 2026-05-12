@@ -2100,3 +2100,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W40/W99/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public mobile navigation drawer에서 focus가 페이지 배경으로 새거나 Escape/backdrop close 후 위치를 잃는 경로를 닫았다.
+
+## M95 — Published menu-bar keyboard navigation
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/components/menuBar/index.tsx` — menu-bar registry 파일에서 client hook render를 분리해 published server renderer에서도 component registration side effect가 실행되게 했다.
+  - `src/lib/builder/components/menuBar/MenuBarRender.tsx` — published/preview dropdown에 focus/ArrowDown/Space open, Escape close, parent focus restore를 추가했다. mobile hamburger는 `aria-expanded`/`aria-controls`, keyboard open, first item initial focus, Escape close와 hamburger focus restore를 처리한다.
+  - `src/components/builder/published/LightboxMount.tsx` — `#lb-<slug>` hash open을 전역 mount에서도 표준 `builder-lightbox:open` 이벤트로 변환해 hydration/hashchange 타이밍을 안정화했다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — published menu-bar dropdown과 mobile hamburger keyboard path를 추가하고, full published interaction suite에 포함했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/LightboxMount.tsx src/lib/builder/components/menuBar/index.tsx src/lib/builder/components/menuBar/MenuBarRender.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "opens the published menu bar dropdown" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "restores focus for hash lightbox" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (7 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W99/W100/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. menu-bar가 published에서 fallback 텍스트로 떨어지는 경로와 dropdown/mobile keyboard focus가 사라지는 경로를 닫았다.

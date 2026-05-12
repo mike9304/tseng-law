@@ -364,6 +364,54 @@ function makePublishedHeaderDrawerDocument(token: string): TestDocument {
   };
 }
 
+function makePublishedMenuBarDocument(token: string): TestDocument {
+  const now = new Date().toISOString();
+  const rootId = `menu-bar-root-${token}`;
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `published-menu-bar-${token}`,
+    stageWidth: 1280,
+    stageHeight: 560,
+    nodes: [
+      containerNode(rootId, { x: 0, y: 0, width: 1280, height: 560 }, 'section section--light', {
+        as: 'main',
+      }),
+      textNode(`menu-bar-title-${token}`, rootId, 72, `Published menu bar ${token}`),
+      {
+        id: `published-menu-bar-${token}`,
+        kind: 'menu-bar',
+        parentId: rootId,
+        rect: { x: 80, y: 150, width: 620, height: 180 },
+        style: { ...baseStyle, borderRadius: 8 },
+        zIndex: 2,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          items: [
+            {
+              label: '서비스',
+              href: '#services',
+              children: [
+                { label: '기업법무', href: '#corporate', description: 'Corporate counsel' },
+                { label: '분쟁대응', href: '#disputes', description: 'Dispute response' },
+              ],
+            },
+            { label: '변호사', href: '#lawyers' },
+            { label: '문의', href: '#contact' },
+          ],
+          orientation: 'horizontal',
+          variant: 'dropdown',
+          activeHref: '#services',
+          showMobileHamburger: true,
+        },
+      },
+    ],
+  };
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -888,6 +936,78 @@ test.describe('/ko published builder interactions', () => {
           delete restoredSite.headerFooter;
         }
         await writeSiteDocument(restoredSite);
+      }
+    }
+  });
+
+  test('opens the published menu bar dropdown and mobile menu from keyboard', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-menu-bar-${token}`;
+    let pageId: string | null = null;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Menu Bar ${token}`,
+        makePublishedMenuBarDocument(token),
+      );
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+
+      await page.setViewportSize({ width: 1024, height: 760 });
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const widget = page.locator(`[data-node-id="published-menu-bar-${token}"] [data-builder-nav-widget="menu-bar"]`);
+      await expect(widget).toBeVisible();
+      const servicesLink = widget.getByRole('link', { name: '서비스' });
+      await servicesLink.focus();
+      await expect(servicesLink).toBeFocused();
+      const dropdown = widget.locator('.builder-nav-menu-dropdown');
+      await expect(dropdown).toBeVisible();
+      await expect(servicesLink).toHaveAttribute('aria-expanded', 'true');
+      await servicesLink.press('ArrowDown');
+      await expect(widget.getByRole('link', { name: '기업법무' })).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(dropdown).toHaveCount(0);
+      await expect(servicesLink).toBeFocused();
+      await expect(servicesLink).toHaveAttribute('aria-expanded', 'false');
+
+      await page.setViewportSize({ width: 390, height: 760 });
+      await page.reload({ waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const mobileWidget = page.locator(`[data-node-id="published-menu-bar-${token}"] [data-builder-nav-widget="menu-bar"]`);
+      const hamburger = mobileWidget.getByRole('button', { name: 'open menu' });
+      const mobilePanel = mobileWidget.locator('[data-builder-menu-mobile-panel="true"]');
+      await expect(hamburger).toBeVisible();
+      await expect(mobilePanel).toHaveAttribute('data-builder-menu-mobile-open', 'false');
+      await hamburger.focus();
+      await hamburger.press('Enter');
+      await expect(mobilePanel).toHaveAttribute('data-builder-menu-mobile-open', 'true');
+      const mobileServicesLink = mobileWidget.getByRole('link', { name: '서비스' });
+      await expect(mobileServicesLink).toBeFocused();
+      await mobileServicesLink.press('ArrowDown');
+      await expect(mobileWidget.getByRole('link', { name: '기업법무' })).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(mobileServicesLink).toBeFocused();
+      await expect(mobileWidget.locator('.builder-nav-menu-dropdown')).toHaveCount(0);
+      await page.keyboard.press('Escape');
+      await expect(mobilePanel).toHaveAttribute('data-builder-menu-mobile-open', 'false');
+      await expect(hamburger).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
       }
     }
   });

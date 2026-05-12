@@ -5493,3 +5493,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - published widget-level hamburger/menu overlay 또는 public navigation widget focus/keyboard gap을 계속 줄인다.
+
+## 2026-05-13 Codex /goal M95 Published menu-bar keyboard navigation
+
+- `menuBar/index.tsx`가 `'use client'` 모듈이라 published server renderer의 component registry side effect가 실행되지 않아, 공개 페이지에서 menu-bar가 실제 nav가 아니라 fallback 텍스트 `menu-bar`로 출력될 수 있었다.
+- menu-bar registry 파일은 server-safe `defineComponent`만 남기고, hook 기반 render는 `MenuBarRender.tsx` client component로 분리했다.
+- published/preview menu-bar dropdown은 focus/ArrowDown/Space로 열리고, child Escape는 dropdown을 닫은 뒤 parent link로 focus를 돌린다. 이때 restore focus가 다시 dropdown을 여는 루프를 막기 위해 1회 suppress guard를 넣었다.
+- mobile hamburger는 `aria-expanded`/`aria-controls`, keyboard open, first item initial focus, Escape close와 hamburger focus restore를 처리한다. focus가 nav 밖으로 잠깐 빠진 상태에서도 Escape가 닫히도록 document-level Escape backup을 추가했다.
+- full published regression 중 hash lightbox open이 간헐적으로 이벤트를 놓치는 기존 취약점을 발견해, `LightboxMount`가 `#lb-<slug>` hash도 표준 `builder-lightbox:open` 이벤트로 변환하게 보강했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/LightboxMount.tsx src/lib/builder/components/menuBar/index.tsx src/lib/builder/components/menuBar/MenuBarRender.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "opens the published menu bar dropdown" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "restores focus for hash lightbox" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (7 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - published navigation/search/chat 계열 위젯의 remaining keyboard/focus gap을 계속 줄인다.

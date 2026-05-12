@@ -40,8 +40,26 @@ export async function POST(request: NextRequest) {
   if (!experiment.variants.some((v) => v.variantId === parsed.data.variantId)) {
     return NextResponse.json({ error: 'Unknown variant' }, { status: 400 });
   }
+
+  // Only count each conversion once per session/experiment/goal — otherwise a
+  // designer's CTA that re-fires (e.g. modal re-open) inflates the conversion
+  // rate. The marker cookie is short-lived (24h) so a returning visitor on a
+  // different day can still convert.
+  const cookieHeader = request.headers.get('cookie') ?? '';
+  const safeId = parsed.data.experimentId.replace(/[^a-zA-Z0-9_]/g, '_');
+  const safeGoal = parsed.data.goal.replace(/[^a-zA-Z0-9_]/g, '_');
+  const goalCookie = `tw_exp_conv_${safeId}_${safeGoal}`;
+  if (cookieHeader.includes(`${goalCookie}=`)) {
+    return NextResponse.json({ ok: true, ignored: 'already-counted' });
+  }
   experiment.metrics.conversions[parsed.data.variantId] =
     (experiment.metrics.conversions[parsed.data.variantId] ?? 0) + 1;
   await saveExperiment(experiment);
-  return NextResponse.json({ ok: true });
+  const response = NextResponse.json({ ok: true });
+  response.cookies.set(goalCookie, '1', {
+    maxAge: 60 * 60 * 24,
+    sameSite: 'lax',
+    path: '/',
+  });
+  return response;
 }

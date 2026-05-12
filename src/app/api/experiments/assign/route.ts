@@ -53,9 +53,15 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ ok: true, variantId: null, reason: 'no-variants' });
   }
 
-  // Increment exposure count (best-effort; not a transaction — slight skew tolerated).
-  experiment.metrics.exposures[variant.variantId] = (experiment.metrics.exposures[variant.variantId] ?? 0) + 1;
-  void saveExperiment(experiment).catch(() => undefined);
+  // Only count the FIRST exposure per session/experiment, otherwise every page
+  // navigation by the same visitor inflates the count and skews the z-test.
+  const cookieHeader = request.headers.get('cookie') ?? '';
+  const exposureCookieName = `tw_exp_${experiment.experimentId.replace(/[^a-zA-Z0-9_]/g, '_')}`;
+  const alreadyCounted = cookieHeader.includes(`${exposureCookieName}=`);
+  if (!alreadyCounted) {
+    experiment.metrics.exposures[variant.variantId] = (experiment.metrics.exposures[variant.variantId] ?? 0) + 1;
+    void saveExperiment(experiment).catch(() => undefined);
+  }
 
   const response = NextResponse.json({
     ok: true,
@@ -63,10 +69,18 @@ export async function GET(request: NextRequest) {
     label: variant.label,
     overrides: variant.overrides,
     pageId: variant.pageId,
+    firstExposure: !alreadyCounted,
   });
   // Sticky cookie so subsequent calls land on the same variant.
-  if (!request.headers.get('cookie')?.includes('tw_exp_sid=')) {
+  if (!cookieHeader.includes('tw_exp_sid=')) {
     response.cookies.set('tw_exp_sid', sessionId, {
+      maxAge: 60 * 60 * 24 * 30,
+      sameSite: 'lax',
+      path: '/',
+    });
+  }
+  if (!alreadyCounted) {
+    response.cookies.set(exposureCookieName, variant.variantId, {
       maxAge: 60 * 60 * 24 * 30,
       sameSite: 'lax',
       path: '/',

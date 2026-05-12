@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import {
   getRecipientByToken,
   saveRecipient,
@@ -16,7 +17,19 @@ function isSafeRedirect(target: string): boolean {
   }
 }
 
+function clientIp(request: NextRequest): string {
+  return (
+    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    request.headers.get('x-real-ip') ||
+    'unknown'
+  );
+}
+
 export async function GET(request: NextRequest) {
+  const rate = await checkRateLimit(`marketing-track:${clientIp(request)}`, 60, 60_000);
+  if (!rate.allowed) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+  }
   const token = request.nextUrl.searchParams.get('token') ?? '';
   const target = request.nextUrl.searchParams.get('u') ?? '';
   if (!target || !isSafeRedirect(target)) {

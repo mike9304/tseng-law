@@ -110,12 +110,18 @@ export async function POST(request: NextRequest) {
 
   let refundResult: { ok: boolean; refundId?: string; error?: string } | null = null;
   if (refundDecision !== 'none' && booking.paymentIntentId) {
-    refundResult = await attemptStripeRefund(
-      booking.paymentIntentId,
-      refundDecision === 'partial' && policy
-        ? undefined // partial requires knowing amount in cents; left for follow-up
-        : undefined,
-    );
+    let partialAmountCents: number | undefined;
+    if (refundDecision === 'partial' && policy) {
+      const service = await getService(booking.serviceId);
+      if (service?.priceAmount && service.priceAmount > 0) {
+        // Smallest currency unit (already cents/won per the service schema).
+        partialAmountCents = Math.max(
+          1,
+          Math.floor((service.priceAmount * policy.partialRefundPercent) / 100),
+        );
+      }
+    }
+    refundResult = await attemptStripeRefund(booking.paymentIntentId, partialAmountCents);
   }
 
   const now = new Date().toISOString();

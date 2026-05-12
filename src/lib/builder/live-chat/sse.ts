@@ -32,9 +32,11 @@ export function buildChatStream(args: StreamArgs): ReadableStream<Uint8Array> {
   return new ReadableStream<Uint8Array>({
     async start(controller) {
       try {
+        // Initial dump: send every message so reconnects show full history,
+        // including the observer's own past messages. The "no echo" rule
+        // applies only to live ticks below.
         const initial = await listMessagesForConversation(args.conversationId);
-        const filtered = initial.filter((m) => m.role !== args.observerRole || m.role === 'admin' && args.observerRole === 'admin');
-        for (const message of filtered) {
+        for (const message of initial) {
           controller.enqueue(encoder.encode(`event: message\ndata: ${JSON.stringify(message)}\n\n`));
           lastSentAt = message.at;
         }

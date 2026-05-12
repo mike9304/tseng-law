@@ -91,7 +91,26 @@ async function ensureRecipients(campaign: Campaign): Promise<void> {
   }
 }
 
+/** Per-process lock to keep two concurrent batch dispatches from emailing the
+ * same recipient twice (storage is not transactional). */
+const inFlight = new Set<string>();
+
 export async function sendCampaignBatch(args: {
+  campaignId: string;
+  batchSize: number;
+}): Promise<SendResult> {
+  if (inFlight.has(args.campaignId)) {
+    return { ok: true, attempted: 0, succeeded: 0, failed: 0, remaining: -1, errors: [{ email: '*', error: 'batch already in flight' }] };
+  }
+  inFlight.add(args.campaignId);
+  try {
+    return await sendCampaignBatchInner(args);
+  } finally {
+    inFlight.delete(args.campaignId);
+  }
+}
+
+async function sendCampaignBatchInner(args: {
   campaignId: string;
   batchSize: number;
 }): Promise<SendResult> {

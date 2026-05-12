@@ -1680,3 +1680,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. page template showroom에서 고른 템플릿이 새 페이지 title과 draft document로 실제 저장되는 성공 path를 자동검증으로 고정했다.
+
+## M65 — Custom shortcut runtime evidence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/editor-advanced-panels.playwright.ts` — shortcut map 저장 후 실제 runtime keydown dispatch까지 확인한다. duplicate를 `Mod+Shift+X`로 override하고, 기존 `Mod+D`는 더 이상 복제하지 않으며 커스텀 조합만 단일 선택된 `home-hero-title`을 `text-*` 노드로 복제하는지 검증한다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (4 passed)
+- W 판정:
+  - W216/W219는 `자동검증 통과 / 사용자 QA 대기` 유지. shortcut map이 저장 UI에만 머물지 않고 기본 단축키 override와 실제 canvas action dispatch까지 연결되는지 자동검증으로 고정했다.

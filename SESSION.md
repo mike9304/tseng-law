@@ -5091,3 +5091,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - W216~W225 editor 고도화와 템플릿/페이지 전환 실사용 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M65 Custom shortcut runtime evidence
+
+- M28의 shortcut map 검증이 localStorage 저장까지만 확인하던 gap을 닫았다.
+- `editor-advanced-panels.playwright.ts`는 duplicate 단축키를 `Mod+Shift+X`로 override한 뒤, 기존 `Mod+D`가 더 이상 복제하지 않고 커스텀 조합만 선택된 `home-hero-title`을 실제 `text-*` 노드로 복제하는지 검증한다.
+- `Meta+A` 다중 선택 잔여 상태가 custom shortcut 검증을 오염시키지 않도록 `Escape`로 선택을 비우고 레이어에서 단일 노드를 다시 선택하는 절차를 추가했다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (4 passed)
+- 다음 후보:
+  - W216~W225 editor 고도화와 템플릿/페이지 전환 실사용 회귀를 계속 재스캔한다.

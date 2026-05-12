@@ -1,6 +1,15 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 const PREFS_KEY = 'tw_builder_editor_prefs_v1';
+const shortcutModifier = process.platform === 'darwin' ? 'Meta' : 'Control';
+
+async function countGeneratedTextNodes(page: Page): Promise<number> {
+  return page.locator('[data-node-id^="text-"]').count();
+}
+
+async function countSelectedNodes(page: Page): Promise<number> {
+  return page.locator('[data-node-id][data-selected="true"]').count();
+}
 
 test.describe('M28 editor advanced panels', () => {
   test.setTimeout(120_000);
@@ -36,7 +45,11 @@ test.describe('M28 editor advanced panels', () => {
     await page.locator('[data-builder-component-library-insert]').first().click();
     await expect(page.locator('[data-builder-activity-chip="true"]').filter({ hasText: /saving|Pasted|Copied|Toggled|style/i }).or(page.locator('[data-builder-component-library="true"]'))).toBeVisible();
 
-    await page.getByRole('button', { name: /Layers/i }).click();
+    const layersPanel = page.locator('[data-builder-layers-panel="true"]');
+    if (!(await layersPanel.isVisible().catch(() => false))) {
+      await page.getByRole('button', { name: /Layers/i }).click();
+    }
+    await expect(layersPanel).toBeVisible();
     await page.locator('[data-builder-layer-search="true"]').fill('home-hero-title');
     await heroTitleLayer.scrollIntoViewIfNeeded();
     await heroTitleLayer.click();
@@ -62,12 +75,31 @@ test.describe('M28 editor advanced panels', () => {
     await page.locator('[data-builder-prefs-button]').click();
     await page.locator('[data-builder-shortcut-map-open="true"]').click();
     await expect(page.locator('[data-builder-keybindings-modal="true"]')).toBeVisible();
-    await page.locator('[data-builder-keybinding-input="duplicate"]').fill('Mod+Shift+D');
+    await page.locator('[data-builder-keybinding-input="duplicate"]').fill('Mod+Shift+X');
     await page.getByRole('button', { name: '저장' }).click();
     const prefs = await page.evaluate((key) => JSON.parse(window.localStorage.getItem(key) || '{}'), PREFS_KEY) as {
       customKeybindings?: Array<{ action: string; combo: string }>;
     };
-    expect(prefs.customKeybindings).toContainEqual({ action: 'duplicate', combo: 'Mod+Shift+D' });
+    expect(prefs.customKeybindings).toContainEqual({ action: 'duplicate', combo: 'Mod+Shift+X' });
+
+    if (!(await layersPanel.isVisible().catch(() => false))) {
+      await page.getByRole('button', { name: /Layers/i }).click();
+    }
+    await expect(layersPanel).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect.poll(() => countSelectedNodes(page)).toBe(0);
+    await page.locator('[data-builder-layer-search="true"]').fill('home-hero-title');
+    await heroTitleLayer.scrollIntoViewIfNeeded();
+    await heroTitleLayer.click();
+    const heroTitleNode = page.locator('[data-node-id="home-hero-title"]').first();
+    await expect(heroTitleNode).toHaveAttribute('data-selected', 'true');
+    await expect.poll(() => countSelectedNodes(page)).toBe(1);
+    const generatedTextCountBeforeDuplicate = await countGeneratedTextNodes(page);
+    await page.keyboard.press(`${shortcutModifier}+D`);
+    await expect.poll(() => countGeneratedTextNodes(page)).toBe(generatedTextCountBeforeDuplicate);
+    await page.keyboard.press(`${shortcutModifier}+Shift+X`);
+    await expect.poll(() => countGeneratedTextNodes(page)).toBe(generatedTextCountBeforeDuplicate + 1);
+    await expect(page.locator('[data-node-id^="text-"][data-selected="true"]').last()).toBeVisible();
 
     await page.getByRole('button', { name: /History/i }).click();
     await expect(page.locator('[data-builder-undo-timeline="true"]')).toBeVisible();

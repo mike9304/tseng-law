@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHmac, timingSafeEqual } from 'node:crypto';
-import { listBookings, saveBooking } from '@/lib/builder/bookings/storage';
+import { getBooking, listBookings, saveBooking } from '@/lib/builder/bookings/storage';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -148,7 +148,19 @@ export async function POST(request: NextRequest) {
           const total = obj.amount as number | undefined;
           const nextStatus: 'refunded' | 'partial-refund' =
             refunded && total && refunded >= total ? 'refunded' : 'partial-refund';
-          await saveBooking({ ...match, paymentStatus: nextStatus, updatedAt: new Date().toISOString() });
+          // Narrow the concurrent-refund race: re-read just before write
+          // so an in-flight cancel/refund that already set this status
+          // wins and we don't clobber its updatedAt or downgrade
+          // 'refunded' to 'partial-refund' due to webhook redelivery.
+          const latest = await getBooking(match.bookingId);
+          const target = latest ?? match;
+          if (
+            target.paymentStatus === 'refunded'
+            || (target.paymentStatus === 'partial-refund' && nextStatus === 'partial-refund')
+          ) {
+            return NextResponse.json({ ok: true, handled: true, bookingUpdated: false });
+          }
+          await saveBooking({ ...target, paymentStatus: nextStatus, updatedAt: new Date().toISOString() });
           return NextResponse.json({ ok: true, handled: true, bookingUpdated: true });
         }
       }

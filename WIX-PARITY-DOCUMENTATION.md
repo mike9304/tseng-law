@@ -963,3 +963,23 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W204는 자동검증 기준 `자동검증 통과 / provider OAuth QA 대기`로 상향한다. 실제 Google/Outlook 계정 OAuth, provider API quota/permissions, 실캘린더 event round-trip은 사용자·provider QA로 남긴다.
+
+## M26 — Bookings 본격 2 payment element/refund slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/components/builder/bookings/BookingFlowSteps.tsx`, `BookingFlowSteps.module.css` — paid booking public widget을 Stripe Payment Element 확인 단계로 바꿨다. 유료 서비스는 `결제 준비` → Payment Element mount 또는 dev stub → `결제 확인/테스트 결제 완료` 후에만 `Confirm booking`이 활성화된다.
+  - `src/app/api/booking/payment-intent/route.ts` — dev stub도 `paymentIntentId`를 반환하고, 실제 Stripe 모드에서는 publishable key 누락 시 503으로 명확히 실패한다.
+  - `src/lib/builder/bookings/__tests__/refund.test.ts` — cancellation policy에 따른 full/partial/no-refund Stripe refund 계산과 booking payment status 적용을 단위 검증한다.
+  - `src/app/api/booking/cancel/route.ts`, `src/app/api/booking/stripe-webhook/route.ts` — cancel/refund와 Stripe `charge.refunded` webhook 동시 처리 시 이미 취소·환불된 booking을 덮어쓰거나 downgrade하지 않도록 직전 재조회 race guard를 추가했다.
+  - `tests/builder-editor/bookings-m25.playwright.ts` — public paid booking widget에서 결제 확인 전 예약 버튼 disabled, stub Payment Element 표시, 확인 후 booking 생성까지 E2E 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/refund.test.ts` ✅ (3 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m25.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅
+  - `npm run test:unit` ✅ (872 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W210은 `자동검증 통과 / live Stripe QA 대기`로 상향한다. 로컬 dev stub은 Payment Element UI gate까지 검증했고, 실제 카드 결제·환불은 Stripe publishable/secret/webhook 환경에서 사용자/provider QA가 필요하다.

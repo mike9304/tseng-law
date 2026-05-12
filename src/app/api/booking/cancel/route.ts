@@ -58,6 +58,16 @@ export async function POST(request: NextRequest) {
 
   const outcome = await computeRefundForCancel(booking);
   const updated = applyRefundOutcome(booking, outcome, parsed.data.reason);
+  // Narrow the cancel race: re-read immediately before write so a parallel
+  // cancel that already flipped status to 'cancelled' wins, and we don't
+  // double-refund or clobber its updatedAt.
+  const latest = await getBooking(parsed.data.bookingId);
+  if (latest && latest.status === 'cancelled') {
+    return NextResponse.json(
+      { error: 'Booking already cancelled', booking: latest },
+      { status: 409 },
+    );
+  }
   await saveBooking(updated);
   emitEvent('booking.cancelled', {
     bookingId: updated.bookingId,

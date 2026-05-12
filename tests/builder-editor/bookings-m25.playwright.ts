@@ -17,7 +17,12 @@ const baseStyle = {
 
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'bookings-m25';
-  return { 'x-forwarded-for': `pw-${safeScope}` };
+  const username = process.env.BUILDER_SMOKE_USERNAME ?? process.env.CMS_ADMIN_USERNAME ?? 'admin';
+  const password = process.env.BUILDER_SMOKE_PASSWORD ?? process.env.CMS_ADMIN_PASSWORD ?? 'local-review-2026!';
+  return {
+    'x-forwarded-for': `pw-${safeScope}`,
+    authorization: `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
+  };
 }
 
 function todayPlus(days: number): string {
@@ -147,6 +152,8 @@ function bookingWidgetDocument(token: string, serviceId: string, staffId: string
 }
 
 test.describe('M25 Bookings services, staff, slots, and public widget', () => {
+  test.setTimeout(120_000);
+
   test('covers W196-W202 with hybrid paid service booking flow', async ({ page }) => {
     const token = Date.now().toString(36);
     const slug = `g-editor-m25-bookings-${token}`;
@@ -268,9 +275,21 @@ test.describe('M25 Bookings services, staff, slots, and public widget', () => {
       await flow.getByLabel('희망 상담 언어').fill('한국어');
       await flow.getByLabel('상대방 이름').fill('테스트 상대방');
       await flow.locator('input[type="checkbox"]').check();
+      await expect(flow.getByRole('button', { name: 'Confirm booking' })).toBeDisabled();
+
+      const widgetPaymentResponse = page.waitForResponse((response) =>
+        response.url().includes('/api/booking/payment-intent') && response.request().method() === 'POST',
+      );
+      await flow.getByRole('button', { name: '결제 준비' }).click();
+      expect((await widgetPaymentResponse).status()).toBe(200);
+      await expect(flow.locator('[data-booking-payment-element="stub"]')).toBeVisible();
+      await flow.getByRole('button', { name: '테스트 결제 완료' }).click();
+      await expect(flow.locator('[data-booking-payment-confirmed="true"]')).toBeVisible();
+      await expect(flow.getByRole('button', { name: 'Confirm booking' })).toBeEnabled();
 
       const bookResponsePromise = page.waitForResponse((response) =>
         response.url().includes('/api/booking/book') && response.request().method() === 'POST',
+        { timeout: 30_000 },
       );
       await flow.getByRole('button', { name: 'Confirm booking' }).click();
       const bookResponse = await bookResponsePromise;

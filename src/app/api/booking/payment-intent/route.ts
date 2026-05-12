@@ -72,10 +72,17 @@ export async function POST(request: NextRequest) {
       ok: true,
       stub: true,
       clientSecret: 'pi_stub_dev_secret',
+      paymentIntentId: 'pi_stub_dev',
       amount: service.priceAmount,
       currency: service.priceCurrency.toLowerCase(),
       note: 'STRIPE_SECRET_KEY unset — returned stub client_secret for dev wiring only.',
     });
+  }
+
+  const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? process.env.STRIPE_PUBLISHABLE_KEY;
+  if (!publishableKey) {
+    console.warn('[booking/payment-intent] Stripe publishable key missing');
+    return NextResponse.json({ error: 'Payment client not configured' }, { status: 503 });
   }
 
   try {
@@ -113,6 +120,7 @@ export async function POST(request: NextRequest) {
       stub: false,
       clientSecret: data.client_secret,
       paymentIntentId: data.id,
+      publishableKey,
       amount: service.priceAmount,
       currency: service.priceCurrency.toLowerCase(),
     });

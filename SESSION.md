@@ -4466,3 +4466,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 체크포인트:
   - W204 자동검증 evidence 확보. 실제 Google/Outlook OAuth 계정 연결과 실 provider round-trip은 provider QA 대기.
+
+## 2026-05-12 Codex /goal M26 payment element/refund
+
+- Paid booking public widget을 Stripe Payment Element 확인 단계로 바꿨다. 유료 서비스는 `결제 준비` 후 Payment Element 또는 dev stub이 뜨고, `결제 확인/테스트 결제 완료` 전에는 `Confirm booking`이 disabled 상태로 유지된다.
+- `/api/booking/payment-intent`는 dev stub `paymentIntentId`를 반환하고, 실제 Stripe 모드에서는 publishable key 누락을 503으로 차단한다.
+- Cancellation refund 단위 테스트를 추가해 full refund, 50% partial refund, no-refund window를 검증했다.
+- `booking/cancel`과 `stripe-webhook`은 cancel/refund 동시 처리 시 이미 취소·환불된 row를 덮어쓰지 않도록 직전 재조회 guard를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/refund.test.ts` ✅ (3 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m25.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅
+  - `npm run test:unit` ✅ (872 passed)
+  - `npm run build` ✅ (Google Fonts warning + 기존 `<img>` warning only)
+- 체크포인트:
+  - W210은 `자동검증 통과 / live Stripe QA 대기`로 상향. 실제 Stripe 카드 결제·webhook·환불 round-trip은 provider QA로 남긴다.

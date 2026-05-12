@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { BookingService, Staff } from '@/lib/builder/bookings/types';
 import type { Slot } from '@/lib/builder/bookings/availability';
 import { textForLocale } from '@/lib/builder/bookings/types';
@@ -8,6 +8,25 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from './BookingFlowSteps.module.css';
 
 type FlowStep = 0 | 1 | 2 | 3;
+type PaymentStatus = 'idle' | 'creating' | 'ready' | 'confirming' | 'confirmed' | 'error';
+
+interface StripeElementsLike {
+  create(type: 'payment'): { mount(target: HTMLElement | string): void; unmount?(): void };
+}
+
+interface StripeLike {
+  elements(options: { clientSecret: string }): StripeElementsLike;
+  confirmPayment(options: {
+    elements: StripeElementsLike;
+    redirect: 'if_required';
+  }): Promise<{ error?: { message?: string }; paymentIntent?: { id?: string; status?: string } }>;
+}
+
+declare global {
+  interface Window {
+    Stripe?: (publishableKey: string) => StripeLike | null;
+  }
+}
 
 export interface BookingFlowStepsProps {
   locale?: Locale | string;
@@ -60,6 +79,25 @@ function parseCustomFieldLabels(value: string): string[] {
     .slice(0, 12);
 }
 
+function loadStripeJs(): Promise<void> {
+  if (typeof window === 'undefined') return Promise.reject(new Error('window unavailable'));
+  if (window.Stripe) return Promise.resolve();
+  return new Promise((resolve, reject) => {
+    const existing = document.querySelector<HTMLScriptElement>('script[src="https://js.stripe.com/v3/"]');
+    if (existing) {
+      existing.addEventListener('load', () => resolve(), { once: true });
+      existing.addEventListener('error', () => reject(new Error('Stripe.js load failed')), { once: true });
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = 'https://js.stripe.com/v3/';
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Stripe.js load failed'));
+    document.head.appendChild(script);
+  });
+}
+
 export default function BookingFlowSteps({
   locale: rawLocale = 'ko',
   serviceId: fixedServiceId,
@@ -97,9 +135,22 @@ export default function BookingFlowSteps({
   const [loading, setLoading] = useState(false);
   const [completed, setCompleted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [payment, setPayment] = useState<{
+    status: PaymentStatus;
+    paymentIntentId?: string;
+    clientSecret?: string;
+    publishableKey?: string;
+    amount?: number;
+    currency?: string;
+    stub?: boolean;
+    error?: string;
+  }>({ status: 'idle' });
+  const stripeRefs = useRef<{ stripe: StripeLike; elements: StripeElementsLike; element: { unmount?(): void } } | null>(null);
+  const paymentElementRef = useRef<HTMLDivElement | null>(null);
 
   const selectedService = useMemo(() => services.find((service) => service.serviceId === serviceId), [serviceId, services]);
   const selectedStaff = useMemo(() => staff.find((member) => member.staffId === staffId), [staffId, staff]);
+  const paidService = selectedService?.paymentMode === 'paid';
 
   useEffect(() => {
     fetch(`/api/booking/services?locale=${locale}`)
@@ -133,6 +184,126 @@ export default function BookingFlowSteps({
       .finally(() => setLoading(false));
   }, [date, serviceId, staffId]);
 
+  useEffect(() => {
+    stripeRefs.current?.element.unmount?.();
+    stripeRefs.current = null;
+    setPayment({ status: 'idle' });
+  }, [customer.email, customer.name, serviceId]);
+
+  useEffect(() => {
+    if (!paidService || payment.status !== 'ready' || payment.stub || !payment.clientSecret || !payment.publishableKey) return;
+    let cancelled = false;
+    async function mountStripeElement() {
+      try {
+        await loadStripeJs();
+        if (cancelled || !window.Stripe || !paymentElementRef.current || !payment.publishableKey || !payment.clientSecret) return;
+        const stripe = window.Stripe(payment.publishableKey);
+        if (!stripe) throw new Error('Stripe.js 초기화 실패');
+        const elements = stripe.elements({ clientSecret: payment.clientSecret });
+        const element = elements.create('payment');
+        element.mount(paymentElementRef.current);
+        stripeRefs.current = { stripe, elements, element };
+      } catch (err) {
+        setPayment((current) => ({
+          ...current,
+          status: 'error',
+          error: err instanceof Error ? err.message : 'Stripe Payment Element를 불러오지 못했습니다.',
+        }));
+      }
+    }
+    void mountStripeElement();
+    return () => {
+      cancelled = true;
+      stripeRefs.current?.element.unmount?.();
+      stripeRefs.current = null;
+    };
+  }, [paidService, payment.clientSecret, payment.publishableKey, payment.status, payment.stub]);
+
+  const preparePayment = async () => {
+    if (!paidService) return;
+    if (!customer.name || !customer.email) {
+      setError('결제 전 이름과 이메일을 입력해 주세요.');
+      return;
+    }
+    setPayment({ status: 'creating' });
+    setError(null);
+    try {
+      const paymentRes = await fetch('/api/booking/payment-intent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          serviceId,
+          customer: { name: customer.name, email: customer.email },
+        }),
+      });
+      const payload = (await paymentRes.json().catch(() => ({}))) as {
+        paymentIntentId?: string;
+        clientSecret?: string;
+        publishableKey?: string;
+        amount?: number;
+        currency?: string;
+        stub?: boolean;
+        error?: string;
+      };
+      if (!paymentRes.ok || !payload.clientSecret) {
+        throw new Error(payload.error || 'payment intent failed');
+      }
+      setPayment({
+        status: 'ready',
+        paymentIntentId: payload.paymentIntentId ?? (payload.stub ? 'pi_stub_dev' : undefined),
+        clientSecret: payload.clientSecret,
+        publishableKey: payload.publishableKey,
+        amount: payload.amount,
+        currency: payload.currency,
+        stub: payload.stub,
+      });
+    } catch (err) {
+      setPayment({
+        status: 'error',
+        error: err instanceof Error ? err.message : '결제를 준비하지 못했습니다.',
+      });
+    }
+  };
+
+  const confirmPayment = async () => {
+    if (!paidService) return;
+    if (payment.stub) {
+      setPayment((current) => ({
+        ...current,
+        status: 'confirmed',
+        paymentIntentId: current.paymentIntentId ?? 'pi_stub_dev',
+      }));
+      return;
+    }
+    if (!payment.paymentIntentId || !stripeRefs.current) {
+      setPayment((current) => ({ ...current, status: 'error', error: 'Payment Element가 아직 준비되지 않았습니다.' }));
+      return;
+    }
+    setPayment((current) => ({ ...current, status: 'confirming', error: undefined }));
+    try {
+      const result = await stripeRefs.current.stripe.confirmPayment({
+        elements: stripeRefs.current.elements,
+        redirect: 'if_required',
+      });
+      if (result.error) throw new Error(result.error.message || 'Stripe 결제 확인 실패');
+      const status = result.paymentIntent?.status;
+      if (status && !['succeeded', 'processing', 'requires_capture'].includes(status)) {
+        throw new Error(`PaymentIntent status: ${status}`);
+      }
+      setPayment((current) => ({
+        ...current,
+        status: 'confirmed',
+        paymentIntentId: result.paymentIntent?.id ?? current.paymentIntentId,
+      }));
+    } catch (err) {
+      setPayment((current) => ({
+        ...current,
+        status: 'error',
+        error: err instanceof Error ? err.message : '결제 확인에 실패했습니다.',
+      }));
+    }
+  };
+
   const submit = async () => {
     if (!slot || !customer.consent) {
       setError('예약 시간과 개인정보 동의를 확인해 주세요.');
@@ -142,22 +313,11 @@ export default function BookingFlowSteps({
     setError(null);
     try {
       let paymentIntentId: string | undefined;
-      if (selectedService?.paymentMode === 'paid') {
-        const paymentRes = await fetch('/api/booking/payment-intent', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            serviceId,
-            customer: { name: customer.name, email: customer.email },
-          }),
-        });
-        const payment = (await paymentRes.json().catch(() => ({}))) as {
-          paymentIntentId?: string;
-          stub?: boolean;
-        };
-        if (!paymentRes.ok) throw new Error('payment intent failed');
-        paymentIntentId = payment.paymentIntentId ?? (payment.stub ? 'pi_stub_dev' : undefined);
-        if (!paymentIntentId) throw new Error('payment confirmation required');
+      if (paidService) {
+        if (payment.status !== 'confirmed' || !payment.paymentIntentId) {
+          throw new Error('payment confirmation required');
+        }
+        paymentIntentId = payment.paymentIntentId;
       }
       const customFields = customLabels.map((label) => ({
         label,
@@ -302,9 +462,45 @@ export default function BookingFlowSteps({
               />
             </label>
           ))}
-          {selectedService?.paymentMode === 'paid' ? (
-            <div className={`${styles.notice} ${styles.fieldFull}`}>
-              {selectedService.priceCurrency ?? 'TWD'} {(selectedService.priceAmount ?? selectedService.priceTwd ?? 0).toLocaleString()} 결제 준비 후 예약을 확정합니다.
+          {paidService ? (
+            <div className={`${styles.paymentPanel} ${styles.fieldFull}`} data-booking-payment-panel="true">
+              <div className={styles.paymentHeader}>
+                <div>
+                  <span className={styles.label}>Payment Element</span>
+                  <p className={styles.muted}>
+                    {selectedService?.priceCurrency ?? 'TWD'} {(selectedService?.priceAmount ?? selectedService?.priceTwd ?? 0).toLocaleString()} 결제 확인 후 예약이 확정됩니다.
+                  </p>
+                </div>
+                <span className={styles.paymentChip} data-payment-status={payment.status}>
+                  {payment.status}
+                </span>
+              </div>
+              {payment.status === 'idle' || payment.status === 'error' ? (
+                <button className={styles.buttonSecondary} type="button" onClick={preparePayment} disabled={!customer.name || !customer.email}>
+                  결제 준비
+                </button>
+              ) : null}
+              {payment.status === 'creating' ? <p className={styles.muted}>결제창을 준비 중입니다...</p> : null}
+              {payment.status === 'ready' && payment.stub ? (
+                <div className={styles.paymentElementMock} data-booking-payment-element="stub">
+                  <strong>Stripe Payment Element</strong>
+                  <span>개발 환경 테스트 결제</span>
+                  <button className={styles.button} type="button" onClick={confirmPayment}>테스트 결제 완료</button>
+                </div>
+              ) : null}
+              {(payment.status === 'ready' || payment.status === 'confirming') && !payment.stub ? (
+                <>
+                  <div className={styles.paymentElement} data-booking-payment-element="stripe" ref={paymentElementRef} />
+                  {payment.status === 'ready' ? <button className={styles.button} type="button" onClick={confirmPayment}>결제 확인</button> : null}
+                </>
+              ) : null}
+              {payment.status === 'confirming' ? <p className={styles.muted}>Stripe 결제를 확인 중입니다...</p> : null}
+              {payment.status === 'confirmed' ? (
+                <div className={styles.notice} data-booking-payment-confirmed="true">
+                  결제가 확인되었습니다. 이제 예약을 확정할 수 있습니다.
+                </div>
+              ) : null}
+              {payment.error ? <p className={styles.error}>{payment.error}</p> : null}
             </div>
           ) : null}
           <label className={`${styles.field} ${styles.fieldFull}`}>
@@ -320,7 +516,14 @@ export default function BookingFlowSteps({
         {step < 3 ? (
           <button className={styles.button} type="button" onClick={() => setStep((step + 1) as FlowStep)} disabled={(step === 0 && !serviceId) || (step === 1 && !staffId) || (step === 2 && !slot)}>Continue</button>
         ) : (
-          <button className={styles.button} type="button" onClick={submit} disabled={loading || !customer.name || !customer.email}>{loading ? 'Booking...' : 'Confirm booking'}</button>
+          <button
+            className={styles.button}
+            type="button"
+            onClick={submit}
+            disabled={loading || !customer.name || !customer.email || (paidService && payment.status !== 'confirmed')}
+          >
+            {loading ? 'Booking...' : 'Confirm booking'}
+          </button>
         )}
       </div>
     </div>

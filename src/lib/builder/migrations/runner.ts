@@ -48,9 +48,20 @@ export async function runMigrations(
         touched: outcome.touched,
         details: outcome.details,
       };
+      // Optimistic concurrency: reload the journal before persisting so a
+      // concurrent admin that just applied a different migration isn't
+      // clobbered by an unconditional overwrite.
+      const latest = await loadMigrationJournal();
+      const merged = {
+        version: JOURNAL_VERSION,
+        applied: latest.applied.some((r) => r.id === record.id)
+          ? latest.applied
+          : [...latest.applied, record],
+      };
+      applied.add(migration.id);
       result.applied.push(record);
-      journal.applied.push(record);
-      journal.version = JOURNAL_VERSION;
+      journal.applied = merged.applied;
+      journal.version = merged.version;
       await saveMigrationJournal(journal);
       log(`applied ${migration.id} (${record.durationMs}ms, ${record.touched} touched)`);
     } catch (err) {

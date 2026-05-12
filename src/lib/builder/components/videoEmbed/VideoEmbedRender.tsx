@@ -53,6 +53,9 @@ function buildVimeoEmbedUrl(videoId: string, flags: VideoEmbedFlags): string {
 }
 
 function isSafeUrl(value: string): boolean {
+  // Block protocol-relative URLs (`//evil.example/...`) which resolve
+  // against the current origin and let an attacker swap the host.
+  if (value.trim().startsWith('//')) return false;
   try {
     const parsed = new URL(value);
     return parsed.protocol === 'https:' || parsed.protocol === 'http:';

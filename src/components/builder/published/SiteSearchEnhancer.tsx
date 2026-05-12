@@ -62,12 +62,23 @@ export default function SiteSearchEnhancer() {
             return;
           }
           resultsBox.hidden = false;
-          resultsBox.innerHTML = hits
-            .map((hit) => {
-              const summary = hit.highlights?.[0] || hit.summary || '';
-              return `<a class="builder-site-search-hit" href="${hit.url}"><strong>${hit.title}</strong><small>${summary}</small></a>`;
-            })
-            .join('');
+          // Render via DOM creation so titles/summaries are auto-escaped and
+          // a malicious title can't inject HTML.
+          resultsBox.innerHTML = '';
+          for (const hit of hits) {
+            const anchor = document.createElement('a');
+            anchor.className = 'builder-site-search-hit';
+            // Only accept internal paths so a poisoned index can't ship a
+            // javascript: URL into the live DOM.
+            const safeUrl = typeof hit.url === 'string' && hit.url.startsWith('/') ? hit.url : '#';
+            anchor.setAttribute('href', safeUrl);
+            const titleEl = document.createElement('strong');
+            titleEl.textContent = hit.title;
+            const summaryEl = document.createElement('small');
+            summaryEl.textContent = hit.highlights?.[0] || hit.summary || '';
+            anchor.append(titleEl, summaryEl);
+            resultsBox.appendChild(anchor);
+          }
         } catch (err) {
           // AbortError is normal; ignore.
           if ((err as { name?: string } | null)?.name !== 'AbortError') {

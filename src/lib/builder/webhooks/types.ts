@@ -4,6 +4,7 @@ export const WEBHOOK_EVENT_TYPES = [
   'form.submitted',
   'booking.created',
   'booking.cancelled',
+  'booking.rescheduled',
   'contact.created',
   'page.published',
   'member.registered',

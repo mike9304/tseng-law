@@ -23,15 +23,12 @@ export default function InboxAdmin({ initialConversations }: Props) {
       setMessages([]);
       return;
     }
-    let cancelled = false;
-    (async () => {
-      const res = await fetch(`/api/builder/live-chat/${selectedId}`, { credentials: 'same-origin' });
-      if (!res.ok || cancelled) return;
-      const payload = (await res.json()) as { messages: ChatMessage[] };
-      setMessages(payload.messages);
-    })();
+    // Reset to empty; SSE will dump the initial history. We avoid the
+    // race where the parallel HTTP GET landed after live messages and
+    // clobbered them — instead just hit the GET to reset unread.
+    setMessages([]);
+    void fetch(`/api/builder/live-chat/${selectedId}`, { credentials: 'same-origin' }).catch(() => undefined);
 
-    // Subscribe to stream for live updates.
     if (sourceRef.current) sourceRef.current.close();
     const source = new EventSource(`/api/builder/live-chat/${selectedId}/stream`, { withCredentials: true });
     source.addEventListener('message', (event) => {
@@ -44,7 +41,6 @@ export default function InboxAdmin({ initialConversations }: Props) {
     });
     sourceRef.current = source;
     return () => {
-      cancelled = true;
       source.close();
     };
   }, [selectedId]);

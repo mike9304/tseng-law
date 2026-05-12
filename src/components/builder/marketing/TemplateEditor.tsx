@@ -41,20 +41,29 @@ function defaultBlock(kind: EmailBlockKind): EmailBlock {
   }
 }
 
+function esc(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function renderBlockHtml(block: EmailBlock): string {
   switch (block.kind) {
     case 'heading': {
-      const size = (block.level ?? 2) === 1 ? 24 : (block.level ?? 2) === 2 ? 20 : 16;
-      return `<h${block.level ?? 2} style="margin:0;text-align:${block.align ?? 'left'};font-size:${size}px;color:#0f172a">${block.text}</h${block.level ?? 2}>`;
+      const level = block.level ?? 2;
+      const size = level === 1 ? 24 : level === 2 ? 20 : 16;
+      return `<h${level} style="margin:0;text-align:${block.align ?? 'left'};font-size:${size}px;color:#0f172a">${esc(block.text)}</h${level}>`;
     }
     case 'text':
-      return `<p style="margin:0;line-height:1.6;color:#1f2937">${block.text.replace(/\n/g, '<br />')}</p>`;
+      return `<p style="margin:0;line-height:1.6;color:#1f2937">${esc(block.text).replace(/\n/g, '<br />')}</p>`;
     case 'button':
-      return `<a href="${block.href}" style="display:inline-block;background:${block.background ?? '#0f172a'};color:${block.textColor ?? '#fff'};padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:700">${block.label}</a>`;
+      return `<a href="${esc(block.href)}" style="display:inline-block;background:${esc(block.background ?? '#0f172a')};color:${esc(block.textColor ?? '#fff')};padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:700">${esc(block.label)}</a>`;
     case 'image':
-      return `<img src="${block.src}" alt="${block.alt ?? ''}" style="max-width:100%;width:${block.width ?? 320}px;display:block;border:0" />`;
+      return `<img src="${esc(block.src)}" alt="${esc(block.alt ?? '')}" style="max-width:100%;width:${block.width ?? 320}px;display:block;border:0" />`;
     case 'divider':
-      return `<hr style="border:0;border-top:1px solid ${block.color ?? '#e2e8f0'}" />`;
+      return `<hr style="border:0;border-top:1px solid ${esc(block.color ?? '#e2e8f0')}" />`;
     case 'spacer':
       return `<div style="height:${block.height}px"></div>`;
   }

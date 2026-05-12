@@ -19,10 +19,23 @@ interface RateLimitEntry {
 
 const store = new Map<string, RateLimitEntry>();
 const UPSTASH_TIMEOUT_MS = 1500;
+/** Hard cap so the in-memory fallback can't grow unbounded under IP rotation. */
+const STORE_CAP = 5000;
 
 function cleanOld(entry: RateLimitEntry, windowMs: number): void {
   const cutoff = Date.now() - windowMs;
   entry.timestamps = entry.timestamps.filter((t) => t > cutoff);
+}
+
+function pruneStoreIfFull(): void {
+  if (store.size < STORE_CAP) return;
+  // Evict oldest insertion-order entries (Map preserves insertion order).
+  const toDrop = Math.ceil(STORE_CAP * 0.1);
+  let i = 0;
+  for (const key of store.keys()) {
+    if (i++ >= toDrop) break;
+    store.delete(key);
+  }
 }
 
 export interface RateLimitResult {
@@ -55,6 +68,7 @@ function checkInMemoryRateLimit(
 ): RateLimitResult {
   let entry = store.get(key);
   if (!entry) {
+    pruneStoreIfFull();
     entry = { timestamps: [] };
     store.set(key, entry);
   }

@@ -1170,3 +1170,23 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W161은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Element `parallax-y`와 background-only parallax 모두 런타임 evidence를 확보했다.
+
+## M32 — Elastic easing preset
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/animations/presets.ts` — animation easing preset에 `elastic`을 추가했다.
+  - `src/lib/builder/animations/animation-render.ts` — 저장값 `elastic`은 유지하되 published/editor CSS 출력에서는 `cubic-bezier(0.34, 1.56, 0.64, 1)`로 변환한다.
+  - `src/components/builder/published/AnimationsRoot.tsx` — exit animation runtime도 legacy/직접 attr의 `elastic` 값을 CSS-safe cubic-bezier로 처리한다.
+  - `src/lib/builder/animations/__tests__/animation-render.test.ts` — elastic option, normalization preservation, published/editor CSS conversion을 검증한다.
+  - `tests/builder-editor/motion-runtime.playwright.ts` — Inspector easing dropdown에서 `elastic` 선택 가능 여부와 custom input disabled 상태를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/animations/__tests__/animation-render.test.ts` ✅ (4 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/motion-runtime.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (890 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W174는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. 기본 easing, custom cubic-bezier, elastic preset이 모두 Inspector/runtime 경로에 존재한다.

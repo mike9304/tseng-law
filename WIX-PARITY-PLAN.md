@@ -33,3 +33,4 @@
 | M29 | P2/P7  | Red checkpoint close              | W17,W36,W189 | 8h | M07,M24 | 🟡 W17/W36/W189 자동검증 통과 / 사용자 QA 대기 |
 | M30 | QA     | Section template click stability  | W18,W22,W84 | 3h | M28  | 🟡 실제 클릭 자동검증 통과 / 사용자 QA 대기 |
 | M31 | P5     | Background parallax runtime       | W161 | 3h | M22 | 🟡 W161 자동검증 통과 / 사용자 QA 대기 |
+| M32 | P5     | Elastic easing preset             | W174 | 2h | M22 | 🟡 W174 자동검증 통과 / 사용자 QA 대기 |

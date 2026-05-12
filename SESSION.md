@@ -4636,3 +4636,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W174 elastic easing preset 또는 W178/W181/W182/W183 theme/brand asset 품질 gap.
+
+## 2026-05-12 Codex /goal M32 elastic easing preset
+
+- W174의 남은 gap인 `elastic` easing preset을 추가했다.
+- Animation easing dropdown에 `Elastic` 옵션을 추가했다. 저장/정규화 값은 `elastic`으로 유지하고, published/editor CSS 출력은 `cubic-bezier(0.34, 1.56, 0.64, 1)`로 변환한다.
+- Published exit runtime에서도 `data-anim-exit-easing="elastic"` 형태가 들어와도 CSS-safe cubic-bezier로 처리한다.
+- Motion runtime Playwright는 inspector에서 `elastic` 선택이 가능하고 custom input이 비활성화되는지 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/animations/__tests__/animation-render.test.ts` ✅ (4 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/motion-runtime.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (890 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W178 theme preset save/load, W181 token export/import, W182 brand asset library, W183 radius/shadow presets.

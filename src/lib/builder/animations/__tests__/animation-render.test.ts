@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import {
+  ANIMATION_EASING_OPTIONS,
   SCROLL_EFFECT_OPTIONS,
   normalizeAnimationConfig,
   type MotionKeyframe,
 } from '@/lib/builder/animations/presets';
 import {
+  ELASTIC_EASING_CSS,
   buildEditorAnimationStyle,
   buildPublishedAnimationStyle,
   getAnimationSummary,
@@ -133,5 +135,32 @@ describe('builder animation rendering', () => {
       'data-anim-intensity': '36',
     });
     expect(getAnimationSummary(animation)).toBe('scroll: background-parallax');
+  });
+
+  it('maps elastic easing to a CSS-safe cubic-bezier while preserving the preset option', () => {
+    const animation: BuilderAnimationConfig = {
+      entrance: {
+        preset: 'slide-up',
+        duration: 640,
+        delay: 0,
+        easing: 'elastic',
+        triggerOnce: true,
+      },
+      exit: {
+        preset: 'fade-out',
+        duration: 420,
+        easing: 'elastic',
+      },
+    };
+
+    expect(ANIMATION_EASING_OPTIONS.map((option) => option.value)).toContain('elastic');
+    expect(normalizeAnimationConfig(animation).entrance.easing).toBe('elastic');
+    expect(buildPublishedAnimationStyle({ animation })['--builder-anim-easing']).toBe(ELASTIC_EASING_CSS);
+    expect(getPublishedAnimationAttributes(animation)['data-anim-exit-easing']).toBe(ELASTIC_EASING_CSS);
+    expect(buildEditorAnimationStyle({
+      animation,
+      isHovered: false,
+      previewPhase: 'visible',
+    }).transition).toContain(ELASTIC_EASING_CSS);
   });
 });

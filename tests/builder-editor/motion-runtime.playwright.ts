@@ -253,20 +253,28 @@ test.describe('/ko published motion runtime', () => {
     await exitPreset.selectOption('fade-out');
     const exitSection = exitPreset.locator('xpath=ancestor::section[1]');
     await exitSection.getByRole('combobox', { name: 'Easing' }).selectOption('custom');
-    await expect(exitSection.getByPlaceholder('cubic-bezier(0.34, 1.56, 0.64, 1)')).toBeEnabled();
+    const exitCustomEasing = exitSection.getByPlaceholder('cubic-bezier(0.34, 1.56, 0.64, 1)');
+    await expect(exitCustomEasing).toBeEnabled();
+    await exitSection.getByRole('combobox', { name: 'Easing' }).selectOption('elastic');
+    await expect(exitCustomEasing).toBeDisabled();
+    await page.waitForTimeout(150);
 
     const loopPreset = page.getByRole('combobox', { name: 'Loop preset' });
+    await expect(loopPreset).toBeEnabled();
     await loopPreset.selectOption('float');
     const loopSection = loopPreset.locator('xpath=ancestor::section[1]');
     await expect(loopSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();
 
     const scrollEffect = page.getByRole('combobox', { name: 'Scroll effect' });
+    await expect(scrollEffect).toBeEnabled();
     await scrollEffect.selectOption('background-parallax');
+    await page.waitForTimeout(150);
     await scrollEffect.selectOption('scrub-translate');
     const scrollSection = scrollEffect.locator('xpath=ancestor::section[1]');
     await expect(scrollSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();
 
     const clickPreset = page.getByRole('combobox', { name: 'Click preset' });
+    await expect(clickPreset).toBeEnabled();
     await clickPreset.selectOption('pulse');
     const clickSection = clickPreset.locator('xpath=ancestor::section[1]');
     await expect(clickSection.getByRole('spinbutton', { name: 'Intensity' })).toBeEnabled();

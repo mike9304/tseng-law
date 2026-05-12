@@ -10,6 +10,8 @@ import {
   type NormalizedAnimationConfig,
 } from '@/lib/builder/animations/presets';
 
+export const ELASTIC_EASING_CSS = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+
 export type AnimationPreviewPhase = 'initial' | 'visible' | null;
 
 type AnimationCssVars = CSSProperties & Record<string, string | number | undefined>;
@@ -60,8 +62,12 @@ function cssMs(value: number): string {
   return `${Math.round(value)}ms`;
 }
 
+export function resolveAnimationEasingCss(value: string): string {
+  return value === 'elastic' ? ELASTIC_EASING_CSS : value;
+}
+
 function getEntranceEasing(config: EntranceAnimationConfig): string {
-  return ENTRANCE_PRESET_DEFINITIONS[config.preset].easing ?? config.easing;
+  return resolveAnimationEasingCss(ENTRANCE_PRESET_DEFINITIONS[config.preset].easing ?? config.easing);
 }
 
 function buildEntranceTransform(
@@ -176,7 +182,7 @@ export function getPublishedAnimationAttributes(
   if (normalized.exit.preset !== 'none') {
     attrs['data-anim-exit'] = normalized.exit.preset;
     attrs['data-anim-exit-duration'] = String(normalized.exit.duration);
-    attrs['data-anim-exit-easing'] = normalized.exit.easing;
+    attrs['data-anim-exit-easing'] = resolveAnimationEasingCss(normalized.exit.easing);
   }
   if (normalized.loop.preset !== 'none') {
     attrs['data-anim-loop'] = normalized.loop.preset;

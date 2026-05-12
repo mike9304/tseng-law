@@ -98,6 +98,7 @@ export const ANIMATION_EASING_KEYS = [
   'ease-out',
   'ease-in-out',
   'linear',
+  'elastic',
 ] as const;
 
 export type EntrancePreset = (typeof ENTRANCE_PRESET_KEYS)[number];
@@ -481,7 +482,7 @@ export const HOVER_PRESET_OPTIONS = HOVER_ANIMATION_PRESET_KEYS.map((value) => (
 
 export const ANIMATION_EASING_OPTIONS = ANIMATION_EASING_KEYS.map((value) => ({
   value,
-  label: value,
+  label: value === 'elastic' ? 'Elastic' : value,
 }));
 
 function clampNumber(value: number, min: number, max: number): number {

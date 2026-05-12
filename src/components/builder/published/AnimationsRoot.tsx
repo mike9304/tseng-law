@@ -157,7 +157,12 @@ export default function AnimationsRoot() {
             const node = entry.target as HTMLElement;
             const dur = node.dataset.animExitDuration ?? '400';
             node.style.setProperty('--builder-anim-exit-ms', `${dur}ms`);
-            node.style.setProperty('--builder-anim-exit-easing', node.dataset.animExitEasing || 'ease-out');
+            node.style.setProperty(
+              '--builder-anim-exit-easing',
+              node.dataset.animExitEasing === 'elastic'
+                ? 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+                : node.dataset.animExitEasing || 'ease-out',
+            );
             node.dataset.animExitState = entry.isIntersecting ? 'present' : 'leaving';
           }
         },

@@ -1875,3 +1875,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (10 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. “주요업무 템플릿 선택 뒤 다른 노드 선택하면 글이 사라짐” 계열을 같은 세션 클릭뿐 아니라 autosave/reload 이후까지 고정했다.
+
+## M79 — Shortcut modal focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/KeybindingsModal.tsx` — shortcut map modal에 initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, 닫힐 때 trigger focus 복귀를 추가했다.
+  - `tests/builder-editor/editor-advanced-panels.playwright.ts` — shortcut map을 실제로 열고 첫 입력 focus, Shift+Tab/Tab wrap, 외부 focus probe 차단, Escape 후 trigger focus 복귀를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts -g "traps focus inside the shortcut map" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W216/W219/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. shortcut map이 Wix형 modal처럼 keyboard focus를 modal 안에 가두고 닫힌 뒤 편집 흐름으로 focus를 되돌리도록 고정했다.

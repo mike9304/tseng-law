@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {
   DEFAULT_EDITOR_PREFS,
   loadEditorPreferences,
@@ -14,6 +14,16 @@ interface Props {
   onClose: () => void;
 }
 
+const FOCUSABLE_SELECTOR = [
+  'a[href]:not([tabindex="-1"])',
+  'button:not([disabled]):not([tabindex="-1"])',
+  'input:not([disabled]):not([tabindex="-1"]):not([type="hidden"])',
+  'select:not([disabled]):not([tabindex="-1"])',
+  'textarea:not([disabled]):not([tabindex="-1"])',
+  '[tabindex]:not([tabindex="-1"])',
+  '[contenteditable="true"]:not([tabindex="-1"])',
+].join(',');
+
 /**
  * Phase 28 W219 — Keybinding mapping modal.
  *
@@ -21,6 +31,8 @@ interface Props {
  * handlers and visible shortcut labels read the same effective binding map.
  */
 export default function KeybindingsModal({ open, onClose }: Props) {
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
   const [bindings, setBindings] = useState<CustomKeybinding[]>(
     () => DEFAULT_KEYBINDINGS.map((binding) => ({ action: binding.action, combo: binding.combo })),
   );
@@ -34,18 +46,87 @@ export default function KeybindingsModal({ open, onClose }: Props) {
     setBindings(DEFAULT_KEYBINDINGS.map((d) => ({ action: d.action, combo: map.get(d.action) ?? d.combo })));
   }, [open]);
 
+  useLayoutEffect(() => {
+    if (!open) return undefined;
+    restoreFocusRef.current = (document.activeElement as HTMLElement | null) ?? null;
+    const panel = panelRef.current;
+    if (panel) {
+      const focusables = panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      (focusables[0] ?? panel).focus({ preventScroll: true });
+    }
+    return () => {
+      const previous = restoreFocusRef.current;
+      if (!previous || typeof previous.focus !== 'function') return;
+      try {
+        previous.focus({ preventScroll: true });
+      } catch {
+        // Ignore detached focus targets.
+      }
+    };
+  }, [open]);
+
   useEffect(() => {
     if (!open) return undefined;
-    function handleEscape(event: KeyboardEvent) {
-      if (event.key !== 'Escape') return;
+    function handleKeydown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        onClose();
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+      const panel = panelRef.current;
+      if (!panel) return;
+      const focusables = Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
+        .filter((node) => !node.hasAttribute('disabled') && node.tabIndex !== -1);
+      if (focusables.length === 0) {
+        event.preventDefault();
+        panel.focus({ preventScroll: true });
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (event.shiftKey) {
+        if (active === first || active === panel) {
+          event.preventDefault();
+          last.focus({ preventScroll: true });
+        }
+        return;
+      }
+      if (active === last) {
+        event.preventDefault();
+        first.focus({ preventScroll: true });
+      }
+    }
+    window.addEventListener('keydown', handleKeydown, true);
+    return () => window.removeEventListener('keydown', handleKeydown, true);
+  }, [onClose, open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    function handlePointerFocus(event: FocusEvent) {
+      const panel = panelRef.current;
+      if (!panel || !event.target || panel.contains(event.target as Node)) return;
       event.preventDefault();
       event.stopPropagation();
-      event.stopImmediatePropagation();
-      onClose();
+      const focusables = panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      (focusables[0] ?? panel).focus({ preventScroll: true });
     }
-    window.addEventListener('keydown', handleEscape, true);
-    return () => window.removeEventListener('keydown', handleEscape, true);
-  }, [onClose, open]);
+    document.addEventListener('focusin', handlePointerFocus);
+    return () => document.removeEventListener('focusin', handlePointerFocus);
+  }, [open]);
 
   function updateCombo(action: string, combo: string) {
     setBindings((prev) => prev.map((b) => (b.action === action ? { ...b, combo } : b)));
@@ -85,6 +166,9 @@ export default function KeybindingsModal({ open, onClose }: Props) {
       onClick={onClose}
     >
       <div
+        ref={panelRef}
+        tabIndex={-1}
+        data-builder-keybindings-panel="true"
         onClick={(e) => e.stopPropagation()}
         style={{
           background: '#ffffff',

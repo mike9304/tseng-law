@@ -320,4 +320,63 @@ test.describe('M28 editor advanced panels', () => {
       }
     }
   });
+
+  test('traps focus inside the shortcut map and restores focus to the trigger', async ({ page }) => {
+    await page.addInitScript((key) => window.localStorage.removeItem(key), PREFS_KEY);
+    const token = `${Date.now().toString(36)}-focus`;
+    let pageId: string | null = null;
+
+    try {
+      pageId = await createAdvancedPanelsPage(page.request, token);
+      await page.goto(`/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&shortcutFocus=${token}`, {
+        waitUntil: 'domcontentloaded',
+      });
+      await expect(page.locator('[data-editor-shell]')).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
+
+      await page.locator('[data-builder-prefs-button]').click();
+      const shortcutMapButton = page.locator('[data-builder-shortcut-map-open="true"]');
+      await shortcutMapButton.click();
+
+      const keybindingsModal = page.locator('[data-builder-keybindings-modal="true"]');
+      const keybindingsPanel = page.locator('[data-builder-keybindings-panel="true"]');
+      const firstInput = keybindingsModal.locator('[data-builder-keybinding-input]').first();
+      const saveButton = keybindingsModal.getByRole('button', { name: '저장' });
+
+      await expect(keybindingsModal).toBeVisible();
+      await expect(keybindingsPanel).toBeVisible();
+      await expect(firstInput).toBeFocused();
+      await expect.poll(() => page.evaluate(() => (
+        Boolean(document.activeElement?.closest('[data-builder-keybindings-panel="true"]'))
+      ))).toBe(true);
+
+      await page.keyboard.press('Shift+Tab');
+      await expect(saveButton).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(firstInput).toBeFocused();
+
+      await page.evaluate(() => {
+        const outsideButton = document.createElement('button');
+        outsideButton.type = 'button';
+        outsideButton.dataset.builderOutsideFocusProbe = 'true';
+        outsideButton.textContent = 'outside focus probe';
+        document.body.appendChild(outsideButton);
+        outsideButton.focus();
+      });
+      await expect(firstInput).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(keybindingsModal).toBeHidden();
+      await expect(shortcutMapButton).toBeFocused();
+    } finally {
+      await page.evaluate(() => {
+        document.querySelector('[data-builder-outside-focus-probe="true"]')?.remove();
+      }).catch(() => undefined);
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(token),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
 });

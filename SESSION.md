@@ -5273,3 +5273,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (10 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - W216~W225 editor polish와 page/template switching 잔여 gap을 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M79 Shortcut modal focus trap
+
+- M74에서 shortcut map `Escape` close는 닫았지만, custom modal이라 `ModalShell` 계열 focus trap과 focus restore가 없었다.
+- `KeybindingsModal`에 panel ref 기반 initial focus, Tab/Shift+Tab 순환, 외부 focus probe 차단, body scroll lock, 닫힐 때 shortcut map trigger로 focus 복귀를 추가했다.
+- Playwright는 shortcut map을 열고 첫 input focus, Shift+Tab으로 마지막 저장 버튼 wrap, Tab으로 첫 input 복귀, 외부 button 강제 focus 차단, Escape 후 trigger focus 복귀를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts -g "traps focus inside the shortcut map" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 다른 custom editor modal의 focus trap/keyboard dismiss gap이나 W216~W225 잔여 accessibility polish를 계속 재스캔한다.

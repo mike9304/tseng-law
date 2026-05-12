@@ -11,6 +11,10 @@ import type { Locale } from '@/lib/locales';
 const AUTOSAVE_DEBOUNCE_MS = 1000;
 const NETWORK_ERROR_MESSAGE = '네트워크 오류, 다시 시도해주세요';
 
+interface LoadDraftOptions {
+  skipIfEditedSinceRequest?: boolean;
+}
+
 export interface DraftMeta {
   revision: number;
   savedAt: string;
@@ -83,6 +87,7 @@ export function useSandboxSiteState({
   const initialDraftLoadedRef = useRef(false);
   const activePageIdRef = useRef<string | null>(initialPageId ?? null);
   const localeRef = useRef(locale);
+  const canvasDocumentRef = useRef<BuilderCanvasDocument | null>(canvasDocument);
   const [syncedUpdatedAt, setSyncedUpdatedAt] = useState(initialDocument.updatedAt);
   const [draftMeta, setDraftMeta] = useState<DraftMeta | null>(null);
   const [draftConflict, setDraftConflict] = useState<DraftConflict | null>(null);
@@ -110,15 +115,27 @@ export function useSandboxSiteState({
   }, [locale]);
 
   useEffect(() => {
+    canvasDocumentRef.current = canvasDocument;
+  }, [canvasDocument]);
+
+  useEffect(() => {
     replaceDocument(initialDocument);
     setSyncedUpdatedAt(initialDocument.updatedAt);
   }, [initialDocument, replaceDocument]);
 
   const loadDraft = useCallback(
-    async (pageId: string, nextLocale: Locale): Promise<boolean> => {
+    async (pageId: string, nextLocale: Locale, options: LoadDraftOptions = {}): Promise<boolean> => {
+      const requestDocumentUpdatedAt = canvasDocumentRef.current?.updatedAt ?? initialDocument.updatedAt;
       const payload = await fetchSiteDraft(pageId, nextLocale);
       if (!payload?.document) return false;
       if (activePageIdRef.current !== pageId || localeRef.current !== nextLocale) return false;
+      if (
+        options.skipIfEditedSinceRequest
+        && canvasDocumentRef.current
+        && canvasDocumentRef.current.updatedAt !== requestDocumentUpdatedAt
+      ) {
+        return false;
+      }
       replaceDocument(payload.document);
       setSyncedUpdatedAt(payload.document.updatedAt);
       setDraftMeta(payload.draft);
@@ -127,13 +144,13 @@ export function useSandboxSiteState({
       setSaveBlockReason(null);
       return true;
     },
-    [replaceDocument, setDraftSaveState],
+    [initialDocument.updatedAt, replaceDocument, setDraftSaveState],
   );
 
   useEffect(() => {
     if (!activePageId || initialDraftLoadedRef.current) return;
     initialDraftLoadedRef.current = true;
-    void loadDraft(activePageId, locale);
+    void loadDraft(activePageId, locale, { skipIfEditedSinceRequest: true });
   }, [activePageId, loadDraft, locale]);
 
   useEffect(() => {

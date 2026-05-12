@@ -5046,3 +5046,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - W216~W225 editor 고도화/템플릿 적용 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M61 Initial draft overwrite guard
+
+- M60 이후 `section-template-click.playwright.ts`를 재실행해 사용자가 말한 주요업무 템플릿 글 사라짐 계열이 다시 실패하는 것을 확인했다.
+- 원인은 `/admin-builder` 초기 draft fetch가 늦게 끝나면서, 사용자가 이미 Add 패널에서 삽입한 Service Accordion 섹션 문서를 이전 서버 draft로 `replaceDocument()`하는 race였다.
+- `useSandboxSiteState`에 현재 canvas document ref를 두고, 초기 draft 로드 요청이 시작된 뒤 `updatedAt`이 바뀌었으면 응답을 무시하게 했다. 명시적 page/locale 전환이나 conflict reload의 draft load는 기존처럼 동작한다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (6 passed)
+  - `npm run typecheck` ✅
+- 다음 후보:
+  - 템플릿 적용/페이지 전환 race와 W216~W225 editor 고도화 회귀를 계속 재스캔한다.

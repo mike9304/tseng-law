@@ -62,3 +62,4 @@
 | M58 | QA     | Template search aliases | W14,W18,W216 | 1h | M57 | 🟡 한국어 업종/페이지/템플릿 사이트 검색 자동검증 통과 / 사용자 QA 대기 |
 | M59 | QA     | Public locale page resolution guard | W14,W193 | 1h | M45 | 🟡 `/ko` public/editor 중국어 혼선 자동검증 통과 / 사용자 QA 대기 |
 | M60 | QA     | Template internal link locale normalization | W14,W193,W216 | 1h | M59 | 🟡 템플릿 내부 링크 locale prefix 자동검증 통과 / 사용자 QA 대기 |
+| M61 | QA     | Initial draft overwrite guard | W18,W84,W216 | 1h | M57 | 🟡 템플릿 삽입 직후 초기 draft overwrite 회귀 자동검증 통과 / 사용자 QA 대기 |

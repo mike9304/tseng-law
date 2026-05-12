@@ -1631,3 +1631,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. KO 기반 템플릿을 zh-hant/en 페이지에 적용할 때 CTA와 hotspot 링크가 `/ko/...`로 남아 locale 혼선을 만드는 경로를 막았다.
+
+## M61 — Initial draft overwrite guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/hooks/useSandboxSiteState.ts` — `/admin-builder` 초기 draft fetch가 시작된 뒤 사용자가 템플릿/노드 편집을 먼저 수행하면, 늦게 도착한 초기 draft 응답이 현재 canvas를 `replaceDocument()`로 덮어쓰지 않게 했다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts` ✅ (6 passed)
+  - `npm run typecheck` ✅
+- W 판정:
+  - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “주요업무 템플릿 클릭 후 다른 노드 선택하면 글이 없어짐” 경로를 초기 draft race 관점에서 재현하고 차단했다.

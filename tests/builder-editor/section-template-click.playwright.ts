@@ -89,11 +89,15 @@ test.describe('/ko/admin-builder section design templates', () => {
     await page.keyboard.press('Escape');
 
     const catalogDrawer = await openCatalogDrawer(page);
-    await catalogDrawer.getByRole('searchbox', { name: 'Search add elements' }).fill('법률');
+    const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+    await addSearch.fill('홈페이지');
     await expect(catalogDrawer.locator('[data-builder-open-page-template-market="true"]')).toBeVisible();
     const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
     await expect(pageTemplateResults).toBeVisible();
     await expect(pageTemplateResults.locator('[data-builder-page-template-result-count="true"]')).toContainText('/261 page templates');
+    await expect(pageTemplateResults.locator('[data-builder-page-template-result-id$="-home"]').first()).toBeVisible();
+
+    await addSearch.fill('법률');
     const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
     await expect(lawHomeResult).toContainText('법률사무소 홈');
     await expect(lawHomeResult.locator('[data-template-thumbnail-renderer="html-scaled-mock"]')).toBeVisible();

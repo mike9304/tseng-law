@@ -1587,3 +1587,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 지적한 template back path와 주요업무 글 hidden 회귀를 각각 검색어 보존과 store-level preview sync로 보강했다.
+
+## M58 — Template search aliases
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/templates/filters.ts` — page template 검색 alias와 score helper를 공통화했다. `홈페이지`, `주요업무`, `칼럼 아카이브`, `예약하기`, `쇼핑몰`, `여행사`, `치과`, `동물병원`, `AI 디자인 전문 사이트` 같은 한국어 검색어를 catalog 전체에서 처리한다.
+  - `src/components/builder/canvas/TemplateGalleryModal.tsx` — template showroom 검색도 공통 `matchesTemplateSearch()`와 `normalizeTemplateSearchQuery()`를 사용하게 했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — Add 패널 page template preview 검색과 score를 같은 helper로 교체하고, 상위 preview 노출을 8개로 늘렸다.
+  - `src/lib/builder/templates/__tests__/filters.test.ts` — alias match, market phrasing, direct/alias score 우선순위를 261개 실제 template catalog로 검증한다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Add 패널에서 `홈페이지` 검색만으로 page template results가 뜨고 `*-home` 템플릿이 보이는지 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/templates/__tests__/filters.test.ts` ✅ (5 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “템플릿 있는 AI 디자인 전문 사이트처럼 검색해서 가져오기” 흐름을 Add 패널과 full showroom 검색 기준까지 확장했다.

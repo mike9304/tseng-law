@@ -5010,3 +5010,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - W216~W225 editor 고도화 또는 template/page switching 실사용 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M58 Template search aliases
+
+- Add 패널 page template results와 full template showroom이 서로 다른 검색 기준을 쓰던 부분을 공통 helper로 묶었다.
+- `filters.ts`에 한국어 page type/industry/template-market alias와 score helper를 추가했다. `홈페이지`, `주요업무`, `칼럼 아카이브`, `예약하기`, `쇼핑몰`, `여행사`, `치과`, `동물병원`, `AI 디자인 전문 사이트` 같은 검색어가 실제 261개 template catalog에서 잡힌다.
+- Add 패널의 page template preview 결과는 같은 score를 쓰고, 상위 노출을 4개에서 8개로 늘렸다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/templates/__tests__/filters.test.ts` ✅ (5 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - template discovery UX를 더 실사용에 가깝게 다듬거나, W216~W225 editor 고도화/템플릿 적용 회귀를 계속 재스캔한다.

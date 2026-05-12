@@ -59,3 +59,4 @@
 | M55 | QA     | Interactive preview document reset | W18,W84,W216 | 1h | M54 | 🟡 페이지/템플릿 전환 preview 상태 초기화 자동검증 통과 / 사용자 QA 대기 |
 | M56 | P9     | Editor preference normalization | W216~W225 | 1h | M28 | 🟡 editor prefs nested default/legacy 복구 자동검증 통과 / 사용자 QA 대기 |
 | M57 | QA     | Template gallery back search + preview sync | W14,W18,W84,W216 | 1h | M56 | 🟡 템플릿 뒤로가기 검색 유지/서비스 글 클릭 회귀 자동검증 통과 / 사용자 QA 대기 |
+| M58 | QA     | Template search aliases | W14,W18,W216 | 1h | M57 | 🟡 한국어 업종/페이지/템플릿 사이트 검색 자동검증 통과 / 사용자 QA 대기 |

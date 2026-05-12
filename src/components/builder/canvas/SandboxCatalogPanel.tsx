@@ -21,6 +21,10 @@ import {
 } from '@/lib/builder/sections/templates';
 import { getAllTemplates } from '@/lib/builder/templates/registry';
 import {
+  matchesTemplateSearch,
+  scoreTemplateSearch,
+} from '@/lib/builder/templates/filters';
+import {
   TEMPLATE_PAGE_TYPE_LABELS,
   TEMPLATE_QUALITY_LABELS,
   TEMPLATE_STYLE_LABELS,
@@ -30,11 +34,12 @@ import { BuiltInSectionsPanel } from '@/components/builder/sections/BuiltInSecti
 import SavedSectionsPanel from '@/components/builder/sections/SavedSectionsPanel';
 import type { Locale } from '@/lib/locales';
 import TemplateThumbnailRenderer from './TemplateThumbnailRenderer';
+import { TEMPLATE_CATEGORY_LABELS } from './template-categories';
 import styles from './SandboxPage.module.css';
 
 const STAGE_WIDTH = 1280;
 const STAGE_HEIGHT = 880;
-const PAGE_TEMPLATE_PREVIEW_LIMIT = 4;
+const PAGE_TEMPLATE_PREVIEW_LIMIT = 8;
 
 const CATEGORY_ORDER: BuilderComponentCategory[] = ['basic', 'media', 'layout', 'domain'];
 const CATEGORY_LABELS: Record<BuilderComponentCategory, string> = {
@@ -1706,46 +1711,16 @@ function getPageTemplateSectionCount(template: PageTemplate): number {
     ?? template.document.nodes.filter((node) => node.kind === 'section' || node.kind === 'container').length;
 }
 
+function getPageTemplateCategoryLabel(template: PageTemplate): string {
+  return TEMPLATE_CATEGORY_LABELS[template.category] ?? template.category;
+}
+
 function pageTemplateMatchesSearch(template: PageTemplate, query: string): boolean {
-  if (!query) return true;
-  return [
-    template.name,
-    template.description,
-    template.id,
-    template.category,
-    template.subcategory,
-    template.visualStyle,
-    template.density,
-    template.layoutFamily,
-    template.pageType,
-    template.qualityTier,
-    template.ctaGoal,
-    ...(template.tags ?? []),
-    ...(template.sections ?? []),
-    'page template',
-    'page templates',
-    '페이지 템플릿',
-    '템플릿 쇼룸',
-    'template market',
-    'ai design',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
+  return matchesTemplateSearch(template, query, getPageTemplateCategoryLabel(template));
 }
 
 function pageTemplateSearchScore(template: PageTemplate, query: string): number {
-  if (!query) return 0;
-  const includes = (value: unknown) => String(value ?? '').toLocaleLowerCase('ko-KR').includes(query);
-  let score = 0;
-  if (includes(template.name)) score += 100;
-  if (includes(template.id)) score += 80;
-  if (includes(template.subcategory)) score += 70;
-  if (includes(template.description)) score += 60;
-  if (template.tags?.some(includes)) score += 45;
-  if (template.sections?.some(includes)) score += 35;
-  if (includes(template.category)) score += 30;
-  if (includes(template.pageType)) score += 20;
-  if (template.featured) score += 6;
-  if (template.qualityTier === 'premium') score += 4;
-  return score;
+  return scoreTemplateSearch(template, query, getPageTemplateCategoryLabel(template));
 }
 
 function getPageTemplateMeta(template: PageTemplate): string {

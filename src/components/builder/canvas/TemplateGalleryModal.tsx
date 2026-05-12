@@ -16,9 +16,10 @@ import {
   TEMPLATE_PAGE_TYPE_FILTERS,
   TEMPLATE_QUALITY_FILTERS,
   TEMPLATE_STYLE_FILTERS,
-  buildTemplateSearchText,
   hasActiveTemplateFilters,
   matchesTemplateFilters,
+  matchesTemplateSearch,
+  normalizeTemplateSearchQuery,
   type TemplateFilterState,
 } from '@/lib/builder/templates/filters';
 import {
@@ -274,7 +275,7 @@ function cloneTemplateDocument(document: BuilderCanvasDocument): BuilderCanvasDo
 function matchesSearch(template: PageTemplate, query: string): boolean {
   if (!query) return true;
   const categoryLabel = TEMPLATE_CATEGORY_LABELS[template.category] ?? template.category;
-  return buildTemplateSearchText(template, categoryLabel).includes(query);
+  return matchesTemplateSearch(template, query, categoryLabel);
 }
 
 function formatTemplateMeta(template: PageTemplate): string {
@@ -528,7 +529,7 @@ export default function TemplateGalleryModal({
 }) {
   const [activeCategory, setActiveCategory] = useState<TemplateCategoryKey>('all');
   const [searchInput, setSearchInput] = useState(initialSearch);
-  const [searchQuery, setSearchQuery] = useState(initialSearch.trim().toLowerCase());
+  const [searchQuery, setSearchQuery] = useState(normalizeTemplateSearchQuery(initialSearch));
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [filters, setFilters] = useState<TemplateFilterState>(DEFAULT_TEMPLATE_FILTERS);
   const [previewTemplate, setPreviewTemplate] = useState<PageTemplate | null>(null);
@@ -536,7 +537,7 @@ export default function TemplateGalleryModal({
   useEffect(() => {
     const normalizedInitialSearch = initialSearch.trim();
     setSearchInput(normalizedInitialSearch);
-    setSearchQuery(normalizedInitialSearch.toLowerCase());
+    setSearchQuery(normalizeTemplateSearchQuery(normalizedInitialSearch));
     setActiveCategory('all');
     onSearchChange?.(normalizedInitialSearch);
   }, [initialSearch, onSearchChange]);
@@ -544,7 +545,7 @@ export default function TemplateGalleryModal({
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
       const normalizedSearch = searchInput.trim();
-      setSearchQuery(normalizedSearch.toLowerCase());
+      setSearchQuery(normalizeTemplateSearchQuery(normalizedSearch));
       onSearchChange?.(normalizedSearch);
     }, 200);
     return () => window.clearTimeout(timeoutId);

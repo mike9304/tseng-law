@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type RefObject } from 'react';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
 import { filtersToCSS, isDefaultFilters, type ImageFilters } from '@/lib/builder/canvas/filters';
 import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
@@ -10,9 +10,87 @@ import type { BuilderTheme } from '@/lib/builder/site/types';
 import { resolveThemeColor } from '@/lib/builder/site/theme';
 
 const PLACEHOLDER_SRC = '/images/placeholder-image.svg';
+const FOCUSABLE_SELECTOR = [
+  'button:not([disabled])',
+  'a[href]',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
 
 function isPlaceholderOrEmpty(src: string): boolean {
   return !src || src === PLACEHOLDER_SRC;
+}
+
+function getFocusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => (
+    !element.hidden &&
+    !element.closest('[hidden]') &&
+    element.getAttribute('aria-hidden') !== 'true' &&
+    element.getClientRects().length > 0
+  ));
+}
+
+function useMediaModalFocusTrap(
+  open: boolean,
+  dialogRef: RefObject<HTMLElement | null>,
+  initialFocusRef: RefObject<HTMLElement | null>,
+  onClose: () => void,
+) {
+  useEffect(() => {
+    if (!open) return undefined;
+    const dialog = dialogRef.current;
+    if (!dialog) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      (initialFocusRef.current ?? getFocusableElements(dialog)[0] ?? dialog).focus({ preventScroll: true });
+    });
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        onClose();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+
+      const focusable = getFocusableElements(dialog);
+      if (focusable.length === 0) {
+        event.preventDefault();
+        dialog.focus({ preventScroll: true });
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus({ preventScroll: true });
+        return;
+      }
+      if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus({ preventScroll: true });
+      }
+    };
+    const handleFocusIn = (event: FocusEvent) => {
+      if (dialog.contains(event.target as Node | null)) return;
+      (initialFocusRef.current ?? getFocusableElements(dialog)[0] ?? dialog).focus({ preventScroll: true });
+    };
+
+    dialog.addEventListener('keydown', handleKeyDown, true);
+    document.addEventListener('focusin', handleFocusIn);
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      dialog.removeEventListener('keydown', handleKeyDown, true);
+      document.removeEventListener('focusin', handleFocusIn);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [dialogRef, initialFocusRef, onClose, open]);
 }
 
 /**
@@ -103,6 +181,12 @@ export default function ImageElement({
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
   const [comparePosition, setComparePosition] = useState(node.content.compare?.position ?? 50);
+  const lightboxTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const lightboxDialogRef = useRef<HTMLDivElement | null>(null);
+  const lightboxCloseRef = useRef<HTMLButtonElement | null>(null);
+  const popupTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const popupDialogRef = useRef<HTMLDivElement | null>(null);
+  const popupCloseRef = useRef<HTMLButtonElement | null>(null);
   const filters = (node.content as { filters?: ImageFilters }).filters;
   const cssFilter =
     filters && !isDefaultFilters(filters)
@@ -129,6 +213,23 @@ export default function ImageElement({
   const svgColor = svg
     ? (resolveThemeColor(svg.color, theme) ?? '#116dff')
     : '#116dff';
+
+  const closeLightbox = useCallback(() => {
+    setLightboxOpen(false);
+    window.setTimeout(() => {
+      if (lightboxTriggerRef.current?.isConnected) lightboxTriggerRef.current.focus({ preventScroll: true });
+    }, 0);
+  }, []);
+
+  const closePopup = useCallback(() => {
+    setPopupOpen(false);
+    window.setTimeout(() => {
+      if (popupTriggerRef.current?.isConnected) popupTriggerRef.current.focus({ preventScroll: true });
+    }, 0);
+  }, []);
+
+  useMediaModalFocusTrap(lightboxOpen, lightboxDialogRef, lightboxCloseRef, closeLightbox);
+  useMediaModalFocusTrap(popupOpen, popupDialogRef, popupCloseRef, closePopup);
 
   const placeholder = isPlaceholderOrEmpty(node.content.src) && !svg && !compare;
   if (placeholder) {
@@ -318,18 +419,36 @@ export default function ImageElement({
   );
 
   const lightboxModal = lightboxOpen ? (
-    <div className="builder-media-modal" role="dialog" aria-modal="true" aria-label={imageAlt} onClick={() => setLightboxOpen(false)}>
-      <button type="button" className="builder-media-modal-close" onClick={() => setLightboxOpen(false)} aria-label="Close lightbox">
+    <div
+      ref={lightboxDialogRef}
+      className="builder-media-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label={imageAlt}
+      tabIndex={-1}
+      onClick={closeLightbox}
+    >
+      <button ref={lightboxCloseRef} type="button" className="builder-media-modal-close" onClick={closeLightbox} aria-label="Close lightbox">
         ×
       </button>
-      {modalImage}
+      <div onClick={(event) => event.stopPropagation()} style={{ display: 'contents' }}>
+        {modalImage}
+      </div>
     </div>
   ) : null;
 
   const popupModal = popupOpen ? (
-    <div className="builder-media-modal" role="dialog" aria-modal="true" aria-label={`${imageAlt} popup`} onClick={() => setPopupOpen(false)}>
+    <div
+      ref={popupDialogRef}
+      className="builder-media-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${imageAlt} popup`}
+      tabIndex={-1}
+      onClick={closePopup}
+    >
       <div className="builder-media-popup-card" onClick={(event) => event.stopPropagation()}>
-        <button type="button" className="builder-media-popup-close" onClick={() => setPopupOpen(false)} aria-label="Close popup">
+        <button ref={popupCloseRef} type="button" className="builder-media-popup-close" onClick={closePopup} aria-label="Close popup">
           ×
         </button>
         <strong>{node.content.alt || 'Image detail'}</strong>
@@ -362,7 +481,7 @@ export default function ImageElement({
   if (clickAction === 'lightbox') {
     return (
       <>
-        <button type="button" className="builder-media-click-frame" data-lightbox-target={lightboxSlug || node.id} onClick={() => setLightboxOpen(true)}>
+        <button ref={lightboxTriggerRef} type="button" className="builder-media-click-frame" data-lightbox-target={lightboxSlug || node.id} onClick={() => setLightboxOpen(true)}>
           {imageFrame}
         </button>
         {lightboxModal}
@@ -373,7 +492,7 @@ export default function ImageElement({
   if (clickAction === 'popup') {
     return (
       <>
-        <button type="button" className="builder-media-click-frame" onClick={() => setPopupOpen(true)}>
+        <button ref={popupTriggerRef} type="button" className="builder-media-click-frame" onClick={() => setPopupOpen(true)}>
           {imageFrame}
         </button>
         {popupModal}

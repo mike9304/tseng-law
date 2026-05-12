@@ -106,7 +106,7 @@ function makePublishedInteractionDocument(token: string): TestDocument {
     updatedAt: now,
     updatedBy: `published-interactions-${token}`,
     stageWidth: 1280,
-    stageHeight: 900,
+    stageHeight: 1080,
     nodes: [
       containerNode(rootId, { x: 0, y: 0, width: 1280, height: 900 }, 'section section--light', {
         as: 'main',
@@ -163,6 +163,41 @@ function makePublishedInteractionDocument(token: string): TestDocument {
         parentId: 'home-faq-item-0',
       },
       textNode('home-faq-item-0-answer', 'home-faq-item-0-answer-wrap', 12, '전화나 온라인 문의로 예약할 수 있습니다.'),
+      {
+        id: `published-lightbox-image-${token}`,
+        kind: 'image',
+        parentId: rootId,
+        rect: { x: 80, y: 680, width: 300, height: 190 },
+        style: { ...baseStyle, borderRadius: 14 },
+        zIndex: 4,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          src: '/images/header-skyline-ratio.webp',
+          alt: `Published lightbox image ${token}`,
+          fit: 'cover',
+          clickAction: 'lightbox',
+        },
+      },
+      {
+        id: `published-popup-image-${token}`,
+        kind: 'image',
+        parentId: rootId,
+        rect: { x: 430, y: 680, width: 300, height: 190 },
+        style: { ...baseStyle, borderRadius: 14 },
+        zIndex: 5,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          src: '/images/header-skyline-ratio.webp',
+          alt: `Published popup image ${token}`,
+          fit: 'cover',
+          clickAction: 'popup',
+          hotspots: [{ x: 50, y: 50, label: 'Popup detail stays visible' }],
+        },
+      },
     ],
   };
 }
@@ -235,6 +270,48 @@ test.describe('/ko published builder interactions', () => {
       await expect(faq.locator('.faq-question')).toHaveAttribute('aria-expanded', 'true');
       await faq.locator('.faq-question').click();
       await expect(faq.locator('.faq-answer-wrap')).not.toHaveClass(/is-open/);
+
+      const lightboxTrigger = page.locator(`[data-node-id="published-lightbox-image-${token}"] .builder-media-click-frame`);
+      await expect(lightboxTrigger).toBeVisible();
+      await lightboxTrigger.click();
+      const lightboxDialog = page.getByRole('dialog', { name: `Published lightbox image ${token}` });
+      await expect(lightboxDialog).toBeVisible();
+      const lightboxClose = lightboxDialog.getByRole('button', { name: 'Close lightbox' });
+      await expect(lightboxClose).toBeFocused();
+      await lightboxDialog.locator('.builder-media-modal-image').click();
+      await expect(lightboxDialog).toBeVisible();
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.dataset.publishedMediaOutsideFocusProbe = 'lightbox';
+        probe.textContent = 'outside media focus probe';
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(lightboxClose).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(lightboxDialog).toHaveCount(0);
+      await expect(lightboxTrigger).toBeFocused();
+
+      const popupTrigger = page.locator(`[data-node-id="published-popup-image-${token}"] .builder-media-click-frame`);
+      await expect(popupTrigger).toBeVisible();
+      await popupTrigger.click();
+      const popupDialog = page.getByRole('dialog', { name: `Published popup image ${token} popup` });
+      await expect(popupDialog).toBeVisible();
+      const popupClose = popupDialog.getByRole('button', { name: 'Close popup' });
+      await expect(popupClose).toBeFocused();
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.dataset.publishedMediaOutsideFocusProbe = 'popup';
+        probe.textContent = 'outside popup focus probe';
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(popupClose).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(popupDialog).toHaveCount(0);
+      await expect(popupTrigger).toBeFocused();
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {

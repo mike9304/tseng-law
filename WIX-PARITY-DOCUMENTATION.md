@@ -2012,3 +2012,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers editor shell density|covers site settings" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W181/W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. color/font picker popover에서 keyboard focus가 editor나 parent modal로 새고, font picker Escape가 Site Settings 전체를 닫는 경로를 닫았다.
+
+## M89 — Published media modal blanking guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/elements/ImageElement.tsx` — published/preview image click lightbox와 popup에 initial close-button focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, Escape close, trigger focus 복귀를 추가했다. lightbox 이미지 본문 클릭은 더 이상 backdrop close로 전파되지 않는다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — published page에 lightbox/popup 이미지 노드를 추가하고, 이미지 내부 클릭 유지, 외부 focus 차단, Escape close, trigger focus 복귀를 서비스/FAQ interaction smoke와 함께 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W22/W23/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 공개 이미지 클릭 후 이미지 본문 클릭이 modal을 즉시 닫아 “사라짐/백지화”처럼 보이는 경로와 keyboard focus 누수를 닫았다.

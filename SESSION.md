@@ -5408,3 +5408,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers editor shell density|covers site settings" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - published lightbox/popup overlay나 남은 floating editor overlay의 keyboard/focus gap을 계속 점검한다.
+
+## 2026-05-13 Codex /goal M89 Published media modal blanking guard
+
+- 사용자 리포트의 “사진 클릭하면 사라져 백지가 됨” 계열을 공개 이미지 모달에서 재점검했다. `ImageElement`의 built-in lightbox는 backdrop에 click handler가 있고 이미지 본문이 propagation을 막지 않아, 확대 이미지 영역 클릭도 닫힘으로 처리될 수 있었다.
+- image lightbox/popup에 close-button initial focus, Tab/Shift+Tab wrap, 외부 focus probe 차단, body scroll lock, Escape close, 닫힌 뒤 trigger focus 복귀를 추가했다.
+- lightbox 이미지 본문은 click propagation을 막아 이미지 자체를 클릭해도 modal이 유지된다. 바깥 backdrop 클릭은 기존처럼 닫힌다.
+- Playwright는 published test page에 lightbox/popup 이미지 노드를 추가하고 서비스/FAQ interaction smoke와 함께 이미지 내부 클릭 유지, 외부 focus 차단, Escape close, trigger focus 복귀를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - site-level `LightboxMount`/`PopupMount`의 Enter/Space keyboard trigger와 overlay focus restore를 published runtime에서 고정한다.

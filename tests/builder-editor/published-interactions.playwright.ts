@@ -1028,6 +1028,22 @@ test.describe('/ko published builder interactions', () => {
       const input = dialog.getByRole('searchbox', { name: '어떻게 도와드릴까요?' });
       await expect(input).toBeFocused();
 
+      const tabs = dialog.getByRole('tab');
+      await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'true');
+      await tabs.nth(0).focus();
+      await tabs.nth(0).press('ArrowRight');
+      await expect(tabs.nth(1)).toBeFocused();
+      await expect(tabs.nth(1)).toHaveAttribute('aria-selected', 'true');
+      await tabs.nth(1).press('End');
+      const lastTab = tabs.last();
+      await expect(lastTab).toBeFocused();
+      await expect(lastTab).toHaveAttribute('aria-selected', 'true');
+      await lastTab.press('Home');
+      await expect(tabs.nth(0)).toBeFocused();
+      await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'true');
+      await tabs.nth(0).press('ArrowLeft');
+      await expect(lastTab).toBeFocused();
+
       const closeButton = dialog.getByRole('button', { name: '닫기' });
       await closeButton.focus();
       await page.keyboard.press('Shift+Tab');
@@ -1432,9 +1448,11 @@ test.describe('/ko published builder interactions', () => {
       const mobilePanel = mobileWidget.locator('[data-builder-menu-mobile-panel="true"]');
       await expect(hamburger).toBeVisible();
       await expect(mobilePanel).toHaveAttribute('data-builder-menu-mobile-open', 'false');
-      await hamburger.focus();
-      await hamburger.press('Enter');
-      await expect(mobilePanel).toHaveAttribute('data-builder-menu-mobile-open', 'true');
+      await expect.poll(async () => {
+        await hamburger.focus();
+        await hamburger.press('Enter');
+        return await mobilePanel.getAttribute('data-builder-menu-mobile-open');
+      }).toBe('true');
       const mobileServicesLink = mobileWidget.getByRole('link', { name: '서비스' });
       await expect(mobileServicesLink).toBeFocused();
       await mobileServicesLink.press('ArrowDown');

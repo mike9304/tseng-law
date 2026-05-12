@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import Link from 'next/link';
 import { siteContent } from '@/data/site-content';
 import type { Locale } from '@/lib/locales';
@@ -27,6 +27,7 @@ export default function SearchOverlay({
   const inputRef = useRef<HTMLInputElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const openerRef = useRef<HTMLElement | null>(null);
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const index = useMemo(() => getSearchIndex(locale), [locale]);
   const activeCategory = activeTab as SearchCategory;
   const results = useMemo(
@@ -60,6 +61,32 @@ export default function SearchOverlay({
     document.addEventListener('keydown', handler, true);
     return () => document.removeEventListener('keydown', handler, true);
   }, [open, onClose]);
+
+  const activateTab = useCallback((tabId: string, shouldFocus = false) => {
+    setActiveTab(tabId);
+    if (shouldFocus) {
+      window.requestAnimationFrame(() => {
+        tabRefs.current[tabId]?.focus();
+      });
+    }
+  }, []);
+
+  const handleTabKeyDown = useCallback((event: ReactKeyboardEvent<HTMLButtonElement>, index: number) => {
+    let nextIndex: number | null = null;
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+      nextIndex = (index + 1) % content.tabs.length;
+    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+      nextIndex = (index - 1 + content.tabs.length) % content.tabs.length;
+    } else if (event.key === 'Home') {
+      nextIndex = 0;
+    } else if (event.key === 'End') {
+      nextIndex = content.tabs.length - 1;
+    }
+
+    if (nextIndex === null) return;
+    event.preventDefault();
+    activateTab(content.tabs[nextIndex].id, true);
+  }, [activateTab, content.tabs]);
 
   if (!open) return null;
 
@@ -105,17 +132,21 @@ export default function SearchOverlay({
           </button>
         </form>
         <div className="search-tabs" role="tablist" aria-label={tabListLabel}>
-          {content.tabs.map((tab) => (
+          {content.tabs.map((tab, index) => (
             <button
               key={tab.id}
               id={`${locale}-search-overlay-tab-${tab.id}`}
+              ref={(element) => {
+                tabRefs.current[tab.id] = element;
+              }}
               type="button"
               className={activeTab === tab.id ? 'active' : ''}
               role="tab"
               aria-selected={activeTab === tab.id}
               aria-controls={tabPanelId}
               tabIndex={activeTab === tab.id ? 0 : -1}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => activateTab(tab.id)}
+              onKeyDown={(event) => handleTabKeyDown(event, index)}
             >
               {tab.label}
             </button>

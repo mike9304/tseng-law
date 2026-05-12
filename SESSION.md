@@ -5608,3 +5608,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - remaining published widgets의 keyboard/state evidence와 editor-public parity 회귀를 계속 줄인다.
+
+## 2026-05-13 Codex /goal M103 Published search tablist keyboard
+
+- public `SearchOverlay`는 `role="tablist"`/`role="tab"` 구조지만 Arrow/Home/End 키보드 전환이 없어 mouse/click 중심이었다.
+- search overlay tablist에 ArrowRight/ArrowDown, ArrowLeft/ArrowUp, Home, End 전환을 추가하고, 선택된 탭으로 focus가 유지되게 했다.
+- Playwright는 published header search overlay에서 탭 selected state, ArrowRight, End, Home, ArrowLeft wrap을 검증한다.
+- full published regression에서 menu-bar mobile open이 간헐적으로 hydration 직후 Enter를 놓치는 flake가 드러나, 테스트가 실제 `data-builder-menu-mobile-open="true"` 상태까지 keyboard open을 재시도하게 안정화했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/SearchOverlay.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "published header search" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "published header search|opens the published menu bar" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - editor click regression suites를 최신 상태에서 재실행하거나 remaining public widgets의 keyboard/a11y evidence를 계속 보강한다.

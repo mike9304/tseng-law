@@ -2219,3 +2219,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W84/W98/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자 제보가 있었던 주요업무/FAQ disclosure 계열 텍스트 유지 경로에 keyboard+a11y state evidence를 추가했다.
+
+## M103 — Published search tablist keyboard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/SearchOverlay.tsx` — search overlay tablist가 ArrowRight/ArrowDown, ArrowLeft/ArrowUp, Home, End로 탭을 전환하고 focus를 활성 탭으로 유지하도록 보강했다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — published header search overlay 테스트에 tablist keyboard 전환과 selected state 확인을 추가했다. mobile menu-bar test는 hydration 직후 Enter flake를 줄이도록 실제 open state까지 keyboard open을 재시도한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/SearchOverlay.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "published header search" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "published header search|opens the published menu bar" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W40/W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. search overlay tablist가 mouse-only 상태에 머물지 않도록 keyboard evidence를 확보했고, 기존 published menu-bar hydration timing 회귀도 테스트 안정성으로 보강했다.

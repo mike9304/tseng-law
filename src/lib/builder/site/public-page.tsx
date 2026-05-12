@@ -99,6 +99,23 @@ interface ResolvedLightbox {
 const TABLET_MAX = VIEWPORT_BREAKPOINTS.tablet + 255; // 768 + 255 = 1023
 const MOBILE_MAX = VIEWPORT_BREAKPOINTS.tablet - 1;   // 767
 
+/**
+ * Widget kinds whose content height is content-driven (text wraps, line
+ * count is unpredictable). For these we let `height: auto` win and use the
+ * designer's rect.height as `minHeight` so the published render never
+ * clips trailing lines.
+ */
+function isTextShapedKind(kind: string): boolean {
+  return (
+    kind === 'text'
+    || kind === 'heading'
+    || kind === 'button'
+    || kind === 'notification-bar'
+    || kind === 'address-block'
+    || kind === 'business-hours'
+  );
+}
+
 function escapeCssId(id: string): string {
   // Wrap in [data-node-id="..."]; only need to escape backslashes and quotes.
   return id.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
@@ -434,11 +451,21 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     previousFlowBottom = Math.max(previousFlowBottom + marginTop + node.rect.height, node.rect.y + node.rect.height);
   }
 
+  // Render composites first (they participate in document flow with
+  // computed margin-top), then absolute non-composites on top. Without
+  // this, a non-composite widget placed between two composite sections
+  // (e.g. a site-search bar in a gap) ended up partially covered by the
+  // next composite because later DOM siblings stack above earlier ones
+  // when z-indexes match.
   const renderedTopLevelNodes = [...topLevelNodes].sort((left, right) => {
-    if (left.kind === 'composite' && right.kind === 'composite') {
+    const leftIsComposite = left.kind === 'composite';
+    const rightIsComposite = right.kind === 'composite';
+    if (leftIsComposite && rightIsComposite) {
       return left.rect.y - right.rect.y || left.zIndex - right.zIndex;
     }
-    return left.zIndex - right.zIndex;
+    if (leftIsComposite && !rightIsComposite) return -1;
+    if (!leftIsComposite && rightIsComposite) return 1;
+    return left.rect.y - right.rect.y || left.zIndex - right.zIndex;
   });
   const publishedContentHeight = visibleNodes.reduce((maxHeight, node) => {
     const absoluteRect = resolveCanvasNodeAbsoluteRect(node, nodesById);
@@ -521,10 +548,32 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
             : useFlowWrapper ? undefined : node.rect.y,
           bottom: useSticky && stickyConfig?.from === 'bottom' ? (stickyConfig?.offset ?? 0) : undefined,
           width: flowAsSection ? '100%' : node.rect.width,
-          height: flowAsSection ? 'auto' : node.rect.height,
-          minHeight: flowAsSection ? flowSectionMetric?.minHeight : undefined,
+          // Text-shaped widgets honor the rect width but let the height
+          // auto-grow to fit content. Otherwise a long heading or wrapped
+          // paragraph in a short box clips the bottom lines silently.
+          // node.rect.height becomes the minimum so designer-chosen
+          // visual spacing is preserved.
+          height: flowAsSection
+            ? 'auto'
+            : isTextShapedKind(node.kind)
+              ? 'auto'
+              : node.rect.height,
+          minHeight: flowAsSection
+            ? flowSectionMetric?.minHeight
+            : isTextShapedKind(node.kind)
+              ? node.rect.height
+              : undefined,
           marginTop: flowAsSection ? flowSectionMetric?.marginTop : undefined,
-          zIndex: useSticky ? Math.max(node.zIndex, 100) : useFlowWrapper ? undefined : node.zIndex,
+          zIndex: useSticky
+            ? Math.max(node.zIndex, 100)
+            : useFlowWrapper
+              ? undefined
+              // Top-level absolute widgets between flow composites need
+              // a positive baseline z-index so a composite's relative
+              // stacking context doesn't end up covering them.
+              : isTopLevel
+                ? Math.max(node.zIndex, 1)
+                : node.zIndex,
           overflow: flowAsSection ? 'visible' : undefined,
           transform: baseTransform,
           ...backgroundStyle,

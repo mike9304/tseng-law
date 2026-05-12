@@ -1790,3 +1790,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 템플릿/blank 생성으로 자동 메뉴에 들어간 페이지가 rename/delete 후 공개 헤더와 navigation state에서 오래된 제목이나 고아 링크를 남기지 않도록 고정했다.
+
+## M73 — Undo timeline action evidence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/UndoStackTimeline.tsx` — History 패널의 Undo/Redo 버튼에 안정적인 `data-builder-undo-action` 테스트 식별자를 추가했다.
+  - `tests/builder-editor/editor-advanced-panels.playwright.ts` — 전역 사이트 문서 상태에 의존하지 않도록 임시 테스트 page를 생성/삭제하고, comments 입력을 선택 node comments panel에 scoped 재시도한다. custom duplicate 후 Undo/Redo 버튼을 실제 클릭해 canvas node count가 되돌아가고 다시 복구되는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. History 패널이 표시만 되는 상태가 아니라 실제 undo/redo command surface로 동작함을 자동검증으로 고정했다.

@@ -81,10 +81,22 @@ export default function UndoStackTimeline() {
           <strong>{entries.length} snapshots</strong>
         </div>
         <div style={{ display: 'flex', gap: 6 }}>
-          <button type="button" className={styles.panelHeaderButton} disabled={!canUndo} onClick={undo}>
+          <button
+            type="button"
+            className={styles.panelHeaderButton}
+            data-builder-undo-action="undo"
+            disabled={!canUndo}
+            onClick={undo}
+          >
             Undo
           </button>
-          <button type="button" className={styles.panelHeaderButton} disabled={!canRedo} onClick={redo}>
+          <button
+            type="button"
+            className={styles.panelHeaderButton}
+            data-builder-undo-action="redo"
+            disabled={!canRedo}
+            onClick={redo}
+          >
             Redo
           </button>
         </div>

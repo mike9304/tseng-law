@@ -5192,3 +5192,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - remaining W216~W225 editor polish나 다국어 navigation rename/delete path를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M73 Undo timeline action evidence
+
+- M28 advanced panels 테스트는 History/undo timeline이 보이는지만 확인하고 실제 Undo/Redo 버튼이 canvas history에 연결됐는지 증명하지 못했다.
+- `UndoStackTimeline`의 Undo/Redo 버튼에 `data-builder-undo-action` 식별자를 추가했다.
+- `editor-advanced-panels.playwright.ts`는 전역 사이트 상태에서 한국어 홈이 빠져도 흔들리지 않도록 임시 canvas page를 API로 생성해 열고, 테스트 종료 시 삭제한다. 이 과정에서 주석 입력도 선택 node comments panel 범위 안에서 재시도하도록 안정화했다.
+- Playwright는 custom duplicate shortcut으로 생성된 `text-*` 노드 수를 기준으로 Undo 버튼 클릭 시 복제 노드가 사라지고, Redo 버튼 클릭 시 다시 생성되는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - W216~W225 editor polish와 page/template locale/navigation 잔여 gap을 계속 재스캔한다.

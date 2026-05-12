@@ -60,7 +60,7 @@ const builderSeoMetadataSchema = z.object({
   focusKeyword: optionalSeoString(80),
   structuredDataBlocks: z.array(z.object({
     id: z.string().trim().min(1).max(120),
-    type: z.enum(['LegalService', 'Organization', 'LocalBusiness', 'FAQPage', 'BreadcrumbList', 'Custom']),
+    type: z.enum(['LegalService', 'Organization', 'LocalBusiness', 'FAQPage', 'Article', 'BreadcrumbList', 'Custom']),
     label: optionalSeoString(120),
     enabled: z.boolean(),
     json: optionalSeoString(10000),

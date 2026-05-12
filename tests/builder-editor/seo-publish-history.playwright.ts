@@ -38,6 +38,8 @@ function makeDocument(options: {
   titleText: string;
   imageAlt?: string;
   buttonHref?: string;
+  faqQuestion?: string;
+  faqAnswer?: string;
 }): TestDocument {
   const now = new Date().toISOString();
   return {
@@ -126,8 +128,45 @@ function makeDocument(options: {
           as: 'a',
         },
       },
+      ...(options.faqQuestion && options.faqAnswer
+        ? [
+            {
+              id: `faq-${options.token}`,
+              kind: 'faqList',
+              parentId: `root-${options.token}`,
+              rect: { x: 520, y: 210, width: 520, height: 220 },
+              style: { ...baseStyle, borderRadius: 12 },
+              zIndex: 4,
+              rotation: 0,
+              locked: false,
+              visible: true,
+              content: {
+                items: [
+                  {
+                    question: options.faqQuestion,
+                    answer: options.faqAnswer,
+                  },
+                ],
+              },
+            },
+          ]
+        : []),
     ],
   };
+}
+
+function extractJsonLd(html: string): Array<Record<string, unknown>> {
+  const payloads: Array<Record<string, unknown>> = [];
+  const pattern = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+  for (const match of html.matchAll(pattern)) {
+    const raw = match[1]?.trim();
+    if (!raw) continue;
+    const parsed = JSON.parse(raw) as unknown;
+    if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+      payloads.push(parsed as Record<string, unknown>);
+    }
+  }
+  return payloads;
 }
 
 async function currentDraftRevision(request: APIRequestContext, pageId: string, scope: string): Promise<number> {
@@ -162,7 +201,15 @@ function escapeRegex(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string): Promise<void> {
+async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string, pageId?: string): Promise<void> {
+  if (pageId) {
+    await page.goto(`/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&seoUiTest=${Date.now().toString(36)}`, {
+      waitUntil: 'domcontentloaded',
+    });
+    await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+    return;
+  }
+
   await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
   await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
   await page.getByRole('button', { name: 'Pages', exact: true }).click();
@@ -378,6 +425,104 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     }
   });
 
+  test('covers W192 structured data blocks in public JSON-LD output', async ({ page }) => {
+    const token = `w192-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const slug = `structured-${token}`;
+    const faqQuestion = `W192 FAQ question ${token}`;
+    const faqAnswer = `W192 FAQ answer ${token}`;
+    const articleHeadline = `W192 Article headline ${token}`;
+    const document = makeDocument({
+      token,
+      titleText: `Structured data page ${token}`,
+      faqQuestion,
+      faqAnswer,
+    });
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        data: {
+          locale: 'ko',
+          slug,
+          title: `Structured ${token}`,
+          document,
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      const seoResponse = await page.request.patch(`/api/builder/site/pages/${pageId}/seo?locale=ko`, {
+        headers,
+        data: {
+          seo: {
+            title: `W192 structured data ${token}`,
+            description: `W192 structured data public JSON-LD proof for ${token}.`,
+            structuredData: {
+              legalService: true,
+              breadcrumbList: true,
+              faqPage: 'auto',
+            },
+            structuredDataBlocks: [
+              {
+                id: `article-${token}`,
+                type: 'Article',
+                label: 'Article JSON-LD',
+                enabled: true,
+                json: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'Article',
+                  headline: articleHeadline,
+                  description: `Article JSON-LD description ${token}`,
+                  datePublished: '2026-05-12',
+                  dateModified: '2026-05-12',
+                  author: {
+                    '@type': 'Organization',
+                    name: '호정국제 법률사무소',
+                  },
+                }),
+              },
+            ],
+          },
+        },
+      });
+      expect(seoResponse.status()).toBe(200);
+
+      const revision = await currentDraftRevision(page.request, pageId!, token);
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers,
+        data: { expectedDraftRevision: revision },
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      const publicResponse = await page.request.get(`/ko/${slug}`);
+      expect(publicResponse.status()).toBe(200);
+      const publicHtml = await publicResponse.text();
+      const jsonLd = extractJsonLd(publicHtml);
+      expect(jsonLd.map((payload) => payload['@type'])).toEqual(
+        expect.arrayContaining(['LegalService', 'BreadcrumbList', 'FAQPage', 'Article']),
+      );
+
+      const faqPayload = jsonLd.find((payload) => payload['@type'] === 'FAQPage');
+      expect(JSON.stringify(faqPayload)).toContain(faqQuestion);
+      expect(JSON.stringify(faqPayload)).toContain(faqAnswer);
+
+      const articlePayload = jsonLd.find((payload) => payload['@type'] === 'Article');
+      expect(articlePayload?.headline).toBe(articleHeadline);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('covers W26-W28 through actual editor UI clicks', async ({ page }) => {
     test.setTimeout(120_000);
 
@@ -425,7 +570,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       );
       expect(revision).toBeGreaterThan(0);
 
-      await openBuilderPageFromPagesPanel(page, pageTitle);
+      await openBuilderPageFromPagesPanel(page, pageTitle, pageId!);
       const titleNode = page.locator(`[data-node-id="title-${token}"]`).first();
       await expect(titleNode).toContainText(changedTitle);
 
@@ -467,6 +612,12 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await seoDialog.getByRole('button', { name: 'Social share' }).click();
       await seoDialog.getByLabel('OG image URL').fill('/images/header-skyline-ratio.webp');
       await expect(seoDialog.getByText('OG image preview')).toBeVisible();
+      await seoDialog.getByRole('button', { name: 'Advanced' }).click();
+      await seoDialog.getByRole('button', { name: '+ Article' }).click();
+      await expect(seoDialog.getByText('JSON-LD blocks')).toBeVisible();
+      const advancedSection = seoDialog.locator('section').filter({ hasText: '구조화 데이터' }).first();
+      await expect(advancedSection.locator('input[type="text"]').last()).toHaveValue('Article JSON-LD');
+      await expect(advancedSection.locator('textarea').last()).toHaveValue(/"@type": "Article"/);
       const seoSaveResponsePromise = page.waitForResponse((response) => (
         response.request().method() === 'PATCH' &&
         response.url().includes(`/api/builder/site/pages/${pageId}/seo`)

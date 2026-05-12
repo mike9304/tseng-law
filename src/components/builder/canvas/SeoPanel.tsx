@@ -6,6 +6,7 @@ import type {
   BuilderSeoAdditionalMetaTag,
   BuilderSeoMetadata,
   BuilderStructuredDataBlock,
+  BuilderStructuredDataBlockType,
 } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import type { BuilderSeoAssistantTask } from '@/lib/builder/seo/assistant';
@@ -70,6 +71,53 @@ const EMPTY_SEO: SeoFormState = {
     breadcrumbList: true,
   },
 };
+
+const STRUCTURED_DATA_BLOCK_TYPES: Array<{ type: BuilderStructuredDataBlockType; label: string }> = [
+  { type: 'Article', label: 'Article' },
+  { type: 'FAQPage', label: 'FAQPage' },
+  { type: 'LegalService', label: 'LegalService' },
+  { type: 'Organization', label: 'Organization' },
+  { type: 'LocalBusiness', label: 'LocalBusiness' },
+  { type: 'BreadcrumbList', label: 'BreadcrumbList' },
+  { type: 'Custom', label: 'Custom' },
+];
+
+const STRUCTURED_DATA_BLOCK_TEMPLATES: Record<BuilderStructuredDataBlockType, { label: string; json: string }> = {
+  Article: {
+    label: 'Article JSON-LD',
+    json: '{\n  "@context": "https://schema.org",\n  "@type": "Article",\n  "headline": "칼럼 제목",\n  "description": "칼럼 요약",\n  "datePublished": "2026-05-12",\n  "dateModified": "2026-05-12",\n  "author": {\n    "@type": "Organization",\n    "name": "호정국제 법률사무소"\n  }\n}',
+  },
+  FAQPage: {
+    label: 'FAQPage JSON-LD',
+    json: '{\n  "@context": "https://schema.org",\n  "@type": "FAQPage",\n  "mainEntity": [\n    {\n      "@type": "Question",\n      "name": "질문을 입력하세요",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "답변을 입력하세요"\n      }\n    }\n  ]\n}',
+  },
+  LegalService: {
+    label: 'LegalService JSON-LD',
+    json: '{\n  "@context": "https://schema.org",\n  "@type": "LegalService",\n  "name": "호정국제 법률사무소",\n  "url": "https://tseng-law.com"\n}',
+  },
+  Organization: {
+    label: 'Organization JSON-LD',
+    json: '{\n  "@context": "https://schema.org",\n  "@type": "Organization",\n  "name": "호정국제 법률사무소",\n  "url": "https://tseng-law.com"\n}',
+  },
+  LocalBusiness: {
+    label: 'LocalBusiness JSON-LD',
+    json: '{\n  "@context": "https://schema.org",\n  "@type": "LocalBusiness",\n  "name": "호정국제 법률사무소",\n  "url": "https://tseng-law.com"\n}',
+  },
+  BreadcrumbList: {
+    label: 'BreadcrumbList JSON-LD',
+    json: '{\n  "@context": "https://schema.org",\n  "@type": "BreadcrumbList",\n  "itemListElement": []\n}',
+  },
+  Custom: {
+    label: 'Custom JSON-LD',
+    json: '{\n  "@context": "https://schema.org",\n  "@type": "Organization"\n}',
+  },
+};
+
+function isStarterStructuredDataJson(json: string | undefined): boolean {
+  const normalized = (json ?? '').trim();
+  if (!normalized) return true;
+  return Object.values(STRUCTURED_DATA_BLOCK_TEMPLATES).some((template) => template.json.trim() === normalized);
+}
 
 interface SeoPageResponseMeta {
   pageId: string;
@@ -615,19 +663,36 @@ export default function SeoPanel({
     }));
   };
 
-  const addStructuredDataBlock = () => {
+  const addStructuredDataBlock = (type: BuilderStructuredDataBlockType = 'Article') => {
+    const template = STRUCTURED_DATA_BLOCK_TEMPLATES[type];
     setForm((current) => ({
       ...current,
       structuredDataBlocks: [
         ...current.structuredDataBlocks,
         {
           id: `schema-${Date.now().toString(36)}`,
-          type: 'Custom',
-          label: 'Custom JSON-LD',
+          type,
+          label: template.label,
           enabled: true,
-          json: '{\n  "@context": "https://schema.org",\n  "@type": "Organization"\n}',
+          json: template.json,
         },
       ],
+    }));
+  };
+
+  const changeStructuredDataBlockType = (id: string, type: BuilderStructuredDataBlockType) => {
+    const template = STRUCTURED_DATA_BLOCK_TEMPLATES[type];
+    setForm((current) => ({
+      ...current,
+      structuredDataBlocks: current.structuredDataBlocks.map((block) => {
+        if (block.id !== id) return block;
+        return {
+          ...block,
+          type,
+          label: block.label?.trim() ? block.label : template.label,
+          json: isStarterStructuredDataJson(block.json) ? template.json : block.json,
+        };
+      }),
     }));
   };
 
@@ -1085,11 +1150,11 @@ export default function SeoPanel({
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center' }}>
                   <div>
-                    <h4 style={{ ...sectionTitleStyle, fontSize: '0.78rem' }}>Custom JSON-LD blocks</h4>
-                    <span style={helpTextStyle}>페이지별로 추가할 JSON-LD를 저장합니다.</span>
+                    <h4 style={{ ...sectionTitleStyle, fontSize: '0.78rem' }}>JSON-LD blocks</h4>
+                    <span style={helpTextStyle}>Article, FAQPage 같은 schema.org 블록을 페이지별로 저장합니다.</span>
                   </div>
-                  <button type="button" style={ghostButtonStyle} onClick={addStructuredDataBlock}>
-                    + Schema
+                  <button type="button" style={ghostButtonStyle} onClick={() => addStructuredDataBlock('Article')}>
+                    + Article
                   </button>
                 </div>
                 {form.structuredDataBlocks.length === 0 ? (
@@ -1102,6 +1167,23 @@ export default function SeoPanel({
                       <div key={block.id} style={previewCardStyle}>
                         <div style={twoColumnStyle}>
                           <label style={fieldStyle}>
+                            <span style={labelStyle}>Type</span>
+                            <select
+                              value={block.type}
+                              style={inputStyle}
+                              onChange={(event) => changeStructuredDataBlockType(
+                                block.id,
+                                event.target.value as BuilderStructuredDataBlockType,
+                              )}
+                            >
+                              {STRUCTURED_DATA_BLOCK_TYPES.map((option) => (
+                                <option key={option.type} value={option.type}>
+                                  {option.label}
+                                </option>
+                              ))}
+                            </select>
+                          </label>
+                          <label style={fieldStyle}>
                             <span style={labelStyle}>Label</span>
                             <input
                               type="text"
@@ -1109,14 +1191,6 @@ export default function SeoPanel({
                               style={inputStyle}
                               onChange={(event) => updateStructuredDataBlock(block.id, { label: event.target.value })}
                             />
-                          </label>
-                          <label style={checkboxRowStyle}>
-                            <input
-                              type="checkbox"
-                              checked={block.enabled}
-                              onChange={(event) => updateStructuredDataBlock(block.id, { enabled: event.target.checked })}
-                            />
-                            <span>사용</span>
                           </label>
                         </div>
                         <textarea
@@ -1126,6 +1200,14 @@ export default function SeoPanel({
                           onChange={(event) => updateStructuredDataBlock(block.id, { json: event.target.value })}
                         />
                         <div style={formActionsStyle}>
+                          <label style={{ ...checkboxRowStyle, marginRight: 'auto' }}>
+                            <input
+                              type="checkbox"
+                              checked={block.enabled}
+                              onChange={(event) => updateStructuredDataBlock(block.id, { enabled: event.target.checked })}
+                            />
+                            <span>사용</span>
+                          </label>
                           <span style={helpTextStyle}>{block.type}</span>
                           <button type="button" style={ghostButtonStyle} onClick={() => removeStructuredDataBlock(block.id)}>
                             삭제

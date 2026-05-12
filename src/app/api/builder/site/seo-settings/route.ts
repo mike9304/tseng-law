@@ -40,7 +40,7 @@ const structuredDataSchema = z.object({
 
 const structuredDataBlockSchema = z.object({
   id: z.string().trim().min(1).max(120),
-  type: z.enum(['LegalService', 'Organization', 'LocalBusiness', 'FAQPage', 'BreadcrumbList', 'Custom']),
+  type: z.enum(['LegalService', 'Organization', 'LocalBusiness', 'FAQPage', 'Article', 'BreadcrumbList', 'Custom']),
   label: optionalString(120),
   enabled: z.boolean(),
   json: optionalString(10000),

@@ -1315,3 +1315,21 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W188은 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 UI/API evidence에 실제 middleware public 301/308 response evidence를 추가했다.
+
+## M40 — Structured data public JSON-LD evidence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/site/types.ts` — `BuilderStructuredDataBlockType`에 `Article`을 정식 block type으로 추가했다.
+  - `src/app/api/builder/site/pages/[pageId]/seo/route.ts`, `src/app/api/builder/site/seo-settings/route.ts` — page/site SEO 저장 schema에서 Article structured-data block을 허용한다.
+  - `src/components/builder/canvas/SeoPanel.tsx` — Advanced > JSON-LD blocks를 Custom 전용에서 schema.org block picker로 확장했다. `+ Article` starter는 Article JSON-LD template을 즉시 채운다.
+  - `tests/builder-editor/seo-publish-history.playwright.ts` — W192 public evidence를 추가했다. FAQ widget + Article block 페이지를 발행하고 공개 HTML의 `application/ld+json` payload에서 LegalService/BreadcrumbList/FAQPage/Article을 직접 검증한다. 기존 UI 클릭 테스트도 `+ Article` starter 값을 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W192|covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (115 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W192는 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 helper/UI evidence에 실제 published HTML JSON-LD payload 검증을 추가했다.

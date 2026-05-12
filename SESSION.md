@@ -4768,3 +4768,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W191/W193 structured data/hreflang public head evidence 또는 W195 publish diff viewer 실사용 evidence를 재스캔한다.
+
+## 2026-05-13 Codex /goal M40 structured data public JSON-LD evidence
+
+- W192의 약한 지점인 “schema.org structured data가 실제 공개 HTML의 JSON-LD script로 나오는가”를 보강했다.
+- SEO 패널의 JSON-LD blocks UI에 Article starter를 추가했다. `+ Article` 클릭 시 Article JSON-LD template이 들어가고, block type을 Article/FAQPage/LegalService/Organization/LocalBusiness/BreadcrumbList/Custom으로 바꿀 수 있다.
+- page/site SEO schema validation에서 `Article` block type을 정식 허용한다.
+- Playwright는 API로 FAQ widget이 있는 페이지를 만들고 Article JSON-LD block을 저장/발행한 뒤, `/ko/{slug}` 공개 HTML의 `application/ld+json` payload에서 LegalService/BreadcrumbList/FAQPage/Article과 headline/question/answer를 직접 검증한다.
+- 기존 W26-W28 UI 클릭 테스트도 SEO Advanced 탭에서 `+ Article` 클릭 후 Label input/textarea 값이 Article template으로 채워지는지 확인하도록 보강했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W192|covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (115 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W193 hreflang public head/runtime evidence 또는 W195 publish diff viewer 실사용 evidence를 재스캔한다.

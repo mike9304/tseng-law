@@ -115,6 +115,7 @@ export type BuilderStructuredDataBlockType =
   | 'Organization'
   | 'LocalBusiness'
   | 'FAQPage'
+  | 'Article'
   | 'BreadcrumbList'
   | 'Custom';
 

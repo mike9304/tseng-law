@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { BuilderAssetFolder, BuilderAssetLibraryState, BuilderAssetListItem } from '@/lib/builder/assets';
 import type { Locale } from '@/lib/locales';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
@@ -28,6 +28,26 @@ const DEFAULT_FOLDERS: BuilderAssetFolder[] = [
 
 const DEFAULT_TAGS = ['hero', 'office', 'people'];
 const ASSET_LIBRARY_STORAGE_VERSION = 1;
+const FOCUSABLE_SELECTOR = [
+  'a[href]:not([tabindex="-1"])',
+  'button:not([disabled]):not([tabindex="-1"])',
+  'input:not([disabled]):not([tabindex="-1"]):not([type="hidden"])',
+  'select:not([disabled]):not([tabindex="-1"])',
+  'textarea:not([disabled]):not([tabindex="-1"])',
+  '[tabindex]:not([tabindex="-1"])',
+  '[contenteditable="true"]:not([tabindex="-1"])',
+].join(',');
+
+function getFocusableElements(root: HTMLElement): HTMLElement[] {
+  return Array.from(root.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
+    .filter((node) => (
+      !node.hasAttribute('disabled')
+      && node.tabIndex !== -1
+      && !node.hasAttribute('hidden')
+      && !node.closest('[hidden]')
+      && node.getClientRects().length > 0
+    ));
+}
 
 function formatBytes(value: number) {
   if (value >= 1024 * 1024) return `${(value / (1024 * 1024)).toFixed(1)} MB`;
@@ -117,6 +137,9 @@ export default function AssetLibraryModal({
   onToast?: (message: string, tone: 'success' | 'error') => void;
 }) {
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
+  const closingRef = useRef(false);
   const lastSyncedLibraryJsonRef = useRef<string>('');
   const libraryStateRef = useRef<BuilderAssetLibraryState | null>(null);
   const pendingLibraryStateRef = useRef<BuilderAssetLibraryState | null>(null);
@@ -255,13 +278,86 @@ export default function AssetLibraryModal({
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
         onClose();
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+      const dialog = dialogRef.current;
+      if (!dialog) return;
+      const focusables = getFocusableElements(dialog);
+      if (focusables.length === 0) {
+        event.preventDefault();
+        dialog.focus({ preventScroll: true });
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (event.shiftKey) {
+        if (active === first || active === dialog) {
+          event.preventDefault();
+          last.focus({ preventScroll: true });
+        }
+        return;
+      }
+      if (active === last) {
+        event.preventDefault();
+        first.focus({ preventScroll: true });
       }
     }
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown, true);
+    return () => window.removeEventListener('keydown', handleKeyDown, true);
   }, [onClose, open]);
+
+  useLayoutEffect(() => {
+    if (!open) return undefined;
+    closingRef.current = false;
+    restoreFocusRef.current = (document.activeElement as HTMLElement | null) ?? null;
+    const dialog = dialogRef.current;
+    if (dialog) {
+      const focusables = getFocusableElements(dialog);
+      (focusables[0] ?? dialog).focus({ preventScroll: true });
+    }
+    return () => {
+      closingRef.current = true;
+      const previous = restoreFocusRef.current;
+      if (!previous || typeof previous.focus !== 'function') return;
+      try {
+        previous.focus({ preventScroll: true });
+      } catch {
+        // Ignore detached focus targets.
+      }
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    function handleFocusIn(event: FocusEvent) {
+      if (closingRef.current) return;
+      const dialog = dialogRef.current;
+      if (!dialog || !event.target || dialog.contains(event.target as Node)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const focusables = getFocusableElements(dialog);
+      (focusables[0] ?? dialog).focus({ preventScroll: true });
+    }
+    document.addEventListener('focusin', handleFocusIn);
+    return () => document.removeEventListener('focusin', handleFocusIn);
+  }, [open]);
 
   const filteredAssets = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -450,10 +546,13 @@ export default function AssetLibraryModal({
   return (
     <div className={styles.modalOverlay} role="presentation" onClick={onClose}>
       <div
+        ref={dialogRef}
         className={styles.modalCard}
         role="dialog"
         aria-modal="true"
         aria-label="Asset library"
+        tabIndex={-1}
+        data-builder-asset-library-dialog="true"
         onClick={(event) => event.stopPropagation()}
       >
         <header className={styles.modalHeader}>

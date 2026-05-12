@@ -177,6 +177,52 @@ test.describe('/ko/admin-builder image asset workflow', () => {
     }).catch(() => undefined);
   });
 
+  test('traps focus in the asset library and closes without leaking dialog focus', async ({ page }) => {
+    await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('[data-editor-shell]')).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
+
+    await imageNode(page);
+    await selectImageLayer(page);
+    const replaceTrigger = page.locator('button[title="이미지 교체"]').first();
+    await expect(replaceTrigger).toBeVisible();
+    await replaceTrigger.focus();
+    await expect(replaceTrigger).toBeFocused();
+    await page.keyboard.press('Enter');
+
+    const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+    const closeButton = assetDialog.getByRole('button', { name: 'Close' });
+    await expect(assetDialog).toBeVisible();
+    await expect(closeButton).toBeFocused();
+
+    await page.keyboard.press('Shift+Tab');
+    await expect.poll(() => page.evaluate(() => (
+      Boolean(document.activeElement?.closest('[data-builder-asset-library-dialog="true"]'))
+    ))).toBe(true);
+    await page.keyboard.press('Tab');
+    await expect(closeButton).toBeFocused();
+
+    await page.evaluate(() => {
+      const outsideButton = document.createElement('button');
+      outsideButton.type = 'button';
+      outsideButton.dataset.builderAssetOutsideFocusProbe = 'true';
+      outsideButton.textContent = 'outside asset focus probe';
+      document.body.appendChild(outsideButton);
+      outsideButton.focus();
+    });
+    await expect(closeButton).toBeFocused();
+
+    await page.keyboard.press('Escape');
+    await expect(assetDialog).toBeHidden();
+    await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+    await expect.poll(() => page.evaluate(() => (
+      Boolean(document.activeElement?.closest('[data-builder-asset-library-dialog="true"]'))
+    ))).toBe(false);
+
+    await page.evaluate(() => {
+      document.querySelector('[data-builder-asset-outside-focus-probe="true"]')?.remove();
+    }).catch(() => undefined);
+  });
+
   test('covers W22 asset organization/replacement and W23 Crop/Filter/Alt paths', async ({ page }) => {
     const token = `w22-${Date.now().toString(36)}`;
     const uploaded: UploadedAsset[] = [];

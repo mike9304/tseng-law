@@ -1904,3 +1904,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W22/W23/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 이미지/사진 편집 dialog에서 focus가 canvas로 새거나 Escape가 selection shortcut으로 먹히는 경로를 차단했다.
+
+## M81 — Asset library focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/editor/AssetLibraryModal.tsx` — Asset library dialog에 visible focusable 기반 initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, 닫힐 때 focus restore를 추가했다.
+  - `tests/builder-editor/asset-image-workflow.playwright.ts` — selection toolbar의 이미지 교체 trigger를 키보드로 열고, Asset library focus trap/외부 focus 차단/Escape close 후 dialog focus 누수 없음까지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행; 최초 1회 ECONNRESET 후 서버 생존 확인 및 재실행 통과)
+- W 판정:
+  - W22/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 이미지 교체/업로드 dialog에서 focus가 editor canvas로 새거나 Escape가 하위 shortcut으로 먹히는 경로를 닫았다.

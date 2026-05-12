@@ -5300,3 +5300,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - AssetLibraryModal 또는 PreviewModal 같은 남은 custom editor modal의 keyboard/focus gap을 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M81 Asset library focus trap
+
+- `AssetLibraryModal`은 이미지 교체/업로드 핵심 경로인데, Escape만 처리하고 initial focus/Tab trap/외부 focus 차단이 없었다.
+- visible focusable만 대상으로 잡는 focus helper를 추가해 hidden file input이 trap 순서에 끼지 않도록 했다.
+- open 시 Close 버튼으로 initial focus가 이동하고, Shift+Tab/Tab 순환, 외부 focus probe 차단, Escape close, close 후 dialog focus 누수 없음까지 검증했다.
+- 기존 asset replacement/crop/filter/alt 전체 workflow도 재실행했다. 첫 전체 실행은 `/api/builder/assets` GET 중 `ECONNRESET`이 있었고, 서버 생존 확인 뒤 재실행에서 전체 3개가 통과했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - PreviewModal 또는 PageSwitcher slug prompt 같은 남은 custom dialog keyboard/focus gap을 계속 재스캔한다.

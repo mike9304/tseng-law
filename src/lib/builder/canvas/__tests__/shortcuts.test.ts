@@ -11,6 +11,7 @@ function eventFor(combo: {
   ctrlKey?: boolean;
   altKey?: boolean;
   shiftKey?: boolean;
+  target?: EventTarget | null;
 }): KeyboardEvent {
   return {
     key: combo.key,
@@ -18,7 +19,7 @@ function eventFor(combo: {
     ctrlKey: Boolean(combo.ctrlKey),
     altKey: Boolean(combo.altKey),
     shiftKey: Boolean(combo.shiftKey),
-    target: null,
+    target: combo.target ?? null,
     preventDefault: vi.fn(),
     stopPropagation: vi.fn(),
   } as unknown as KeyboardEvent;
@@ -74,5 +75,25 @@ describe('builder canvas shortcut map', () => {
     expect(formatShortcutCombo(resolveShortcutCombo('duplicate'), 'title')).toBe('Cmd+Shift+X');
 
     vi.unstubAllGlobals();
+  });
+
+  it('does not let canvas shortcuts consume modal dialog keyboard events', () => {
+    class FakeElement {
+      tagName = 'BUTTON';
+      isContentEditable = false;
+
+      closest(selector: string): object | null {
+        return selector.includes('[role="dialog"]') ? {} : null;
+      }
+    }
+    vi.stubGlobal('HTMLElement', FakeElement);
+
+    try {
+      const modalButton = new FakeElement() as unknown as EventTarget;
+      expect(matchShortcut(eventFor({ key: 'Escape', target: modalButton }))).toBeNull();
+      expect(matchShortcut(eventFor({ key: 'd', metaKey: true, target: modalButton }))).toBeNull();
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
 });

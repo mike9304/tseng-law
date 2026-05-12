@@ -5285,3 +5285,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 다른 custom editor modal의 focus trap/keyboard dismiss gap이나 W216~W225 잔여 accessibility polish를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M80 Image edit dialog focus trap
+
+- `ImageEditDialog`도 custom modal이라 initial focus, Tab trap, 외부 focus 차단, trigger focus 복귀가 없었다. 이미지/사진 편집 중 keyboard focus가 canvas로 빠지거나 Escape가 canvas shortcut으로 먼저 먹히는 계열을 닫았다.
+- `ImageEditDialog`에 dialog ref 기반 focus trap, body scroll lock, close cleanup 중 focus restore guard를 추가했다.
+- `shortcuts.ts`에는 `[role="dialog"][aria-modal="true"]`와 `data-modal-shell` 내부 keyboard event를 canvas shortcut이 소비하지 않도록 guard를 추가했다.
+- Playwright는 Layers 패널로 이미지 노드를 안정적으로 선택한 뒤 inspector의 `Crop / Filter / Alt` trigger를 키보드 Enter로 열고, Close initial focus, Shift+Tab/Tab wrap, 외부 focus probe 차단, Escape close 후 trigger focus 복귀를 검증한다.
+- 기존 `asset-image-workflow.playwright.ts`의 asset replacement/crop/filter/alt 전체 경로도 같은 Layers 선택 방식으로 안정화했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts` ✅ (4 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the image edit dialog" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - AssetLibraryModal 또는 PreviewModal 같은 남은 custom editor modal의 keyboard/focus gap을 계속 재스캔한다.

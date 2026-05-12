@@ -54,6 +54,21 @@ async function imageNode(page: Page) {
   return node;
 }
 
+async function ensureLayersPanelOpen(page: Page): Promise<ReturnType<Page['locator']>> {
+  const layersPanel = page.locator('[data-builder-layers-panel="true"]');
+  if (await layersPanel.isVisible().catch(() => false)) return layersPanel;
+  await page.getByRole('button', { name: /Layers/i }).click();
+  await expect(layersPanel).toBeVisible();
+  return layersPanel;
+}
+
+async function selectImageLayer(page: Page): Promise<void> {
+  await ensureLayersPanelOpen(page);
+  await page.locator('[data-builder-layer-search="true"]').fill('home-hero-media-image');
+  await page.locator('[data-builder-layer-row="home-hero-media-image"]').click();
+  await expect(page.locator('[data-node-id="home-hero-media-image"][data-selected="true"]')).toBeVisible();
+}
+
 async function openImageContextMenu(page: Page) {
   const node = await imageNode(page);
   const openMenu = async () => node.evaluate((element) => {
@@ -118,6 +133,50 @@ async function cleanupAssetLibraryToken(page: Page, token: string): Promise<void
 }
 
 test.describe('/ko/admin-builder image asset workflow', () => {
+  test('traps focus in the image edit dialog and restores the inspector trigger', async ({ page }) => {
+    await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('[data-editor-shell]')).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
+
+    await imageNode(page);
+    await selectImageLayer(page);
+    const inspector = page.locator('[class*="inspectorColumn"]').first();
+    await expect(inspector).toBeVisible();
+    await inspector.getByRole('button', { name: 'content' }).click();
+    const trigger = inspector.getByRole('button', { name: 'Crop / Filter / Alt' });
+    await trigger.focus();
+    await expect(trigger).toBeFocused();
+    await page.keyboard.press('Enter');
+
+    const dialog = page.getByRole('dialog', { name: 'Crop, filter, and alt text' });
+    const closeButton = dialog.getByRole('button', { name: 'Close' });
+    const applyButton = dialog.getByRole('button', { name: 'Apply' });
+    await expect(dialog).toBeVisible();
+    await expect(closeButton).toBeFocused();
+
+    await page.keyboard.press('Shift+Tab');
+    await expect(applyButton).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(closeButton).toBeFocused();
+
+    await page.evaluate(() => {
+      const outsideButton = document.createElement('button');
+      outsideButton.type = 'button';
+      outsideButton.dataset.builderImageOutsideFocusProbe = 'true';
+      outsideButton.textContent = 'outside image focus probe';
+      document.body.appendChild(outsideButton);
+      outsideButton.focus();
+    });
+    await expect(closeButton).toBeFocused();
+
+    await page.keyboard.press('Escape');
+    await expect(dialog).toBeHidden();
+    await expect(trigger).toBeFocused();
+
+    await page.evaluate(() => {
+      document.querySelector('[data-builder-image-outside-focus-probe="true"]')?.remove();
+    }).catch(() => undefined);
+  });
+
   test('covers W22 asset organization/replacement and W23 Crop/Filter/Alt paths', async ({ page }) => {
     const token = `w22-${Date.now().toString(36)}`;
     const uploaded: UploadedAsset[] = [];
@@ -131,7 +190,7 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       const node = await imageNode(page);
       const renderedImage = node.locator('img').first();
       originalAlt = (await renderedImage.getAttribute('alt')) ?? '';
-      await node.click({ position: { x: 24, y: 24 }, force: true });
+      await selectImageLayer(page);
       await expect(page).toHaveURL(/\/ko\/admin-builder/);
       await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
 
@@ -204,7 +263,7 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       await filterDialog.getByRole('button', { name: 'Apply' }).click();
       await expect(renderedImage).toHaveAttribute('style', /grayscale\(100%\)/);
 
-      await node.click({ position: { x: 18, y: 18 }, force: true });
+      await selectImageLayer(page);
       const inspector = page.locator('[class*="inspectorColumn"]').first();
       await expect(inspector).toBeVisible();
       await inspector.getByRole('button', { name: 'content' }).click();

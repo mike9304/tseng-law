@@ -1888,3 +1888,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W216/W219/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. shortcut map이 Wix형 modal처럼 keyboard focus를 modal 안에 가두고 닫힌 뒤 편집 흐름으로 focus를 되돌리도록 고정했다.
+
+## M80 — Image edit dialog focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/ImageEditDialog.tsx` — Crop/Filter/Alt dialog에 initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, 닫힐 때 trigger focus 복귀를 추가했다.
+  - `src/lib/builder/canvas/shortcuts.ts` — modal dialog 내부 keyboard event는 canvas shortcut handler가 소비하지 않도록 guard를 추가했다.
+  - `src/lib/builder/canvas/__tests__/shortcuts.test.ts` — modal 내부 `Escape`/custom shortcut이 canvas action으로 매칭되지 않는지 검증한다.
+  - `tests/builder-editor/asset-image-workflow.playwright.ts` — 이미지 편집 dialog focus trap/restore를 추가하고, 기존 asset replacement/crop/filter/alt 경로의 이미지 선택을 Layers 기반으로 안정화했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/shortcuts.test.ts` ✅ (4 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the image edit dialog" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W22/W23/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 이미지/사진 편집 dialog에서 focus가 canvas로 새거나 Escape가 selection shortcut으로 먹히는 경로를 차단했다.

@@ -81,3 +81,4 @@
 | M77 | QA     | Locale navigation projection guard | W14,W18,W193,W216 | 1h | M76 | 🟡 비한국어 자동 메뉴가 한국어 header/footer에 섞이지 않도록 자동검증 통과 / 사용자 QA 대기 |
 | M78 | QA     | Service template reload persistence | W18,W84,W216 | 1h | M77 | 🟡 주요업무 템플릿 autosave/reload 후 텍스트 유지 자동검증 통과 / 사용자 QA 대기 |
 | M79 | QA     | Shortcut modal focus trap | W216,W219,W225 | 1h | M78 | 🟡 shortcut map Tab 순환/외부 focus 차단/trigger focus 복귀 자동검증 통과 / 사용자 QA 대기 |
+| M80 | QA     | Image edit dialog focus trap | W22,W23,W216,W225 | 1h | M79 | 🟡 이미지 편집 dialog focus trap/Escape/canvas shortcut 격리 자동검증 통과 / 사용자 QA 대기 |

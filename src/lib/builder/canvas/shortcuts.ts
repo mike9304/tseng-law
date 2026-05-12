@@ -97,6 +97,11 @@ function isTextInput(target: EventTarget | null): boolean {
   return false;
 }
 
+function isModalTarget(target: EventTarget | null): boolean {
+  if (!target || typeof HTMLElement === 'undefined' || !(target instanceof HTMLElement)) return false;
+  return Boolean(target.closest('[role="dialog"][aria-modal="true"], [data-modal-shell="true"]'));
+}
+
 function isMenuNavigationTarget(target: EventTarget | null, key: string): boolean {
   if (!target || typeof HTMLElement === 'undefined' || !(target instanceof HTMLElement)) return false;
   if (!target.closest('[role="menu"]')) return false;
@@ -296,6 +301,7 @@ function comboMatchesEvent(combo: string, e: KeyboardEvent): boolean {
 
 export function matchShortcut(e: KeyboardEvent): CanvasAction {
   if (isTextInput(e.target)) return null;
+  if (isModalTarget(e.target)) return null;
 
   const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
   if (!(e.metaKey || e.ctrlKey) && isMenuNavigationTarget(e.target, key)) return null;

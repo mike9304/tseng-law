@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
 import {
   DEFAULT_FILTERS,
@@ -19,6 +19,16 @@ const FILTER_SLIDERS: Array<{ key: keyof ImageFilters; label: string; min: numbe
   { key: 'grayscale', label: 'B&W', min: 0, max: 100, unit: '%' },
   { key: 'sepia', label: 'Sepia', min: 0, max: 100, unit: '%' },
 ];
+
+const FOCUSABLE_SELECTOR = [
+  'a[href]:not([tabindex="-1"])',
+  'button:not([disabled]):not([tabindex="-1"])',
+  'input:not([disabled]):not([tabindex="-1"]):not([type="hidden"])',
+  'select:not([disabled]):not([tabindex="-1"])',
+  'textarea:not([disabled]):not([tabindex="-1"])',
+  '[tabindex]:not([tabindex="-1"])',
+  '[contenteditable="true"]:not([tabindex="-1"])',
+].join(',');
 
 export type ImageEditTab = 'crop' | 'filter' | 'alt';
 type ImageFocalPoint = { x: number; y: number };
@@ -56,6 +66,9 @@ export default function ImageEditDialog({
   onApply: (content: { alt: string; cropAspect: string; focalPoint: ImageFocalPoint; filters: ImageFilters }) => void;
   onClose: () => void;
 }) {
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
+  const closingRef = useRef(false);
   const [activeTab, setActiveTab] = useState<ImageEditTab>('crop');
   const [draftAlt, setDraftAlt] = useState(alt);
   const [draftAspect, setDraftAspect] = useState(cropAspect || 'Free');
@@ -71,14 +84,90 @@ export default function ImageEditDialog({
     setDraftFilters(filters ?? DEFAULT_FILTERS);
   }, [alt, cropAspect, filters, focalPoint, initialTab, open]);
 
+  useLayoutEffect(() => {
+    if (!open) return undefined;
+    closingRef.current = false;
+    restoreFocusRef.current = (document.activeElement as HTMLElement | null) ?? null;
+    const dialog = dialogRef.current;
+    if (dialog) {
+      const focusables = dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      (focusables[0] ?? dialog).focus({ preventScroll: true });
+    }
+    return () => {
+      closingRef.current = true;
+      const previous = restoreFocusRef.current;
+      if (!previous || typeof previous.focus !== 'function') return;
+      try {
+        previous.focus({ preventScroll: true });
+      } catch {
+        // Ignore detached focus targets.
+      }
+    };
+  }, [open]);
+
   useEffect(() => {
     if (!open) return undefined;
     const handler = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        onClose();
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+      const dialog = dialogRef.current;
+      if (!dialog) return;
+      const focusables = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
+        .filter((node) => !node.hasAttribute('disabled') && node.tabIndex !== -1);
+      if (focusables.length === 0) {
+        event.preventDefault();
+        dialog.focus({ preventScroll: true });
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (event.shiftKey) {
+        if (active === first || active === dialog) {
+          event.preventDefault();
+          last.focus({ preventScroll: true });
+        }
+        return;
+      }
+      if (active === last) {
+        event.preventDefault();
+        first.focus({ preventScroll: true });
+      }
     };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    window.addEventListener('keydown', handler, true);
+    return () => window.removeEventListener('keydown', handler, true);
   }, [onClose, open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    function handleFocusIn(event: FocusEvent) {
+      if (closingRef.current) return;
+      const dialog = dialogRef.current;
+      if (!dialog || !event.target || dialog.contains(event.target as Node)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const focusables = dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      (focusables[0] ?? dialog).focus({ preventScroll: true });
+    }
+    document.addEventListener('focusin', handleFocusIn);
+    return () => document.removeEventListener('focusin', handleFocusIn);
+  }, [open]);
 
   const selectedRatio = useMemo(
     () => ASPECT_RATIOS.find((ratio) => ratio.label === draftAspect)?.value ?? null,
@@ -97,10 +186,13 @@ export default function ImageEditDialog({
   return (
     <div className={styles.modalOverlay} role="presentation" onClick={onClose}>
       <div
+        ref={dialogRef}
         className={`${styles.modalCard} ${styles.imageEditDialog}`}
         role="dialog"
         aria-modal="true"
         aria-label="Crop, filter, and alt text"
+        tabIndex={-1}
+        data-builder-image-edit-dialog="true"
         onClick={(event) => event.stopPropagation()}
       >
         <header className={styles.modalHeader}>

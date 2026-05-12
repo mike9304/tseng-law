@@ -4785,3 +4785,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W193 hreflang public head/runtime evidence 또는 W195 publish diff viewer 실사용 evidence를 재스캔한다.
+
+## 2026-05-13 Codex /goal M41 hreflang public metadata evidence
+
+- W193의 약한 지점인 “linkedPageIds 기반 hreflang이 실제 공개 HTML alternate link로 주입되는가”를 보강했다.
+- `seo-publish-history.playwright.ts`에 KO/EN linked page 발행 테스트를 추가했다. KO 페이지 생성 후 EN 페이지를 `linkedFromPageId`로 생성해 양방향 link를 만들고, 두 페이지를 각각 발행한다.
+- 공개 `/ko/{slug}` HTML에서 `rel="alternate"` link의 ko/en/x-default href를 직접 확인하고, `/p/` legacy URL이 섞이지 않는지도 검증한다.
+- 같은 테스트에서 SEO API의 `hreflang` 배열과 `missingLocales`가 Inspector 상태와 일치하는지도 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W193" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (115 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W195 publish diff viewer 실사용 evidence 또는 남은 yellow checkpoint 재스캔.

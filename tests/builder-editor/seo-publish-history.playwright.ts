@@ -11,7 +11,7 @@ function mutationHeaders(scope: string): Record<string, string> {
 
 type TestDocument = {
   version: 1;
-  locale: 'ko';
+  locale: 'ko' | 'zh-hant' | 'en';
   updatedAt: string;
   updatedBy: string;
   stageWidth: number;
@@ -36,6 +36,7 @@ const baseStyle = {
 function makeDocument(options: {
   token: string;
   titleText: string;
+  locale?: 'ko' | 'zh-hant' | 'en';
   imageAlt?: string;
   buttonHref?: string;
   faqQuestion?: string;
@@ -44,7 +45,7 @@ function makeDocument(options: {
   const now = new Date().toISOString();
   return {
     version: 1,
-    locale: 'ko',
+    locale: options.locale ?? 'ko',
     updatedAt: now,
     updatedBy: `w26-w28-${options.token}`,
     stageWidth: 1280,
@@ -169,8 +170,21 @@ function extractJsonLd(html: string): Array<Record<string, unknown>> {
   return payloads;
 }
 
-async function currentDraftRevision(request: APIRequestContext, pageId: string, scope: string): Promise<number> {
-  const response = await request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+function hasAlternateLink(html: string, hreflang: string, href: string): boolean {
+  const linkTags = html.match(/<link[^>]+rel="alternate"[^>]*>/g) ?? [];
+  return linkTags.some((tag) => (
+    (tag.includes(`hreflang="${hreflang}"`) || tag.includes(`hrefLang="${hreflang}"`))
+    && tag.includes(`href="${href}"`)
+  ));
+}
+
+async function currentDraftRevision(
+  request: APIRequestContext,
+  pageId: string,
+  scope: string,
+  locale: 'ko' | 'zh-hant' | 'en' = 'ko',
+): Promise<number> {
+  const response = await request.get(`/api/builder/site/pages/${pageId}/draft?locale=${locale}`, {
     headers: mutationHeaders(scope),
   });
   expect(response.status()).toBe(200);
@@ -185,8 +199,9 @@ async function putDraft(
   expectedRevision: number,
   document: TestDocument,
   scope: string,
+  locale: 'ko' | 'zh-hant' | 'en' = 'ko',
 ): Promise<number> {
-  const response = await request.put(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+  const response = await request.put(`/api/builder/site/pages/${pageId}/draft?locale=${locale}`, {
     headers: mutationHeaders(scope),
     data: { expectedRevision, document },
   });
@@ -516,6 +531,98 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
+  test('covers W193 hreflang links in public metadata output', async ({ page }) => {
+    const token = `w193-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const koSlug = `hreflang-${token}`;
+    const enSlug = `hreflang-en-${token}`;
+    const koTitle = `W193 KO ${token}`;
+    const enTitle = `W193 EN ${token}`;
+    let koPageId: string | null = null;
+    let enPageId: string | null = null;
+
+    try {
+      const koCreateResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        data: {
+          locale: 'ko',
+          slug: koSlug,
+          title: koTitle,
+          document: makeDocument({ token: `${token}-ko`, titleText: koTitle, locale: 'ko' }),
+        },
+      });
+      expect(koCreateResponse.status()).toBe(200);
+      const koCreated = (await koCreateResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(koCreated.success, koCreated.error).toBe(true);
+      koPageId = koCreated.pageId ?? null;
+      expect(koPageId).toBeTruthy();
+
+      const enCreateResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        data: {
+          locale: 'en',
+          slug: enSlug,
+          title: enTitle,
+          linkedFromPageId: koPageId,
+          document: makeDocument({ token: `${token}-en`, titleText: enTitle, locale: 'en' }),
+        },
+      });
+      expect(enCreateResponse.status()).toBe(200);
+      const enCreated = (await enCreateResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(enCreated.success, enCreated.error).toBe(true);
+      enPageId = enCreated.pageId ?? null;
+      expect(enPageId).toBeTruthy();
+
+      const koRevision = await currentDraftRevision(page.request, koPageId!, token, 'ko');
+      const koPublishResponse = await page.request.post(`/api/builder/site/pages/${koPageId}/publish`, {
+        headers,
+        data: { expectedDraftRevision: koRevision },
+      });
+      expect(koPublishResponse.status()).toBe(200);
+
+      const enRevision = await currentDraftRevision(page.request, enPageId!, token, 'en');
+      const enPublishResponse = await page.request.post(`/api/builder/site/pages/${enPageId}/publish`, {
+        headers,
+        data: { expectedDraftRevision: enRevision },
+      });
+      expect(enPublishResponse.status()).toBe(200);
+
+      const publicResponse = await page.request.get(`/ko/${koSlug}`);
+      expect(publicResponse.status()).toBe(200);
+      const publicHtml = await publicResponse.text();
+      expect(hasAlternateLink(publicHtml, 'ko', `https://tseng-law.com/ko/${koSlug}`)).toBe(true);
+      expect(hasAlternateLink(publicHtml, 'en', `https://tseng-law.com/en/${enSlug}`)).toBe(true);
+      expect(hasAlternateLink(publicHtml, 'x-default', `https://tseng-law.com/ko/${koSlug}`)).toBe(true);
+      expect(publicHtml).not.toContain('/p/');
+
+      const seoResponse = await page.request.get(`/api/builder/site/pages/${koPageId}/seo?locale=ko`, {
+        headers: { ...headers, Authorization: builderAuthHeader },
+      });
+      expect(seoResponse.status()).toBe(200);
+      const seoPayload = (await seoResponse.json()) as {
+        hreflang?: Array<{ hreflang: string; href: string }>;
+        missingLocales?: string[];
+      };
+      expect(seoPayload.hreflang?.map((entry) => entry.hreflang)).toEqual(
+        expect.arrayContaining(['ko', 'en', 'x-default']),
+      );
+      expect(seoPayload.missingLocales).toContain('zh-hant');
+    } finally {
+      if (enPageId) {
+        await page.request.delete(`/api/builder/site/pages/${enPageId}?locale=en`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+      if (koPageId) {
+        await page.request.delete(`/api/builder/site/pages/${koPageId}?locale=ko`, {
           headers,
           failOnStatusCode: false,
         });

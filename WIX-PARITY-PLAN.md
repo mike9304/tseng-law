@@ -42,3 +42,4 @@
 | M38 | P6     | Typography/source inspector polish | W184~W185 | 2h | M37 | 🟡 W184/W185 자동검증 통과 / 사용자 QA 대기 |
 | M39 | P7     | Redirect manager public runtime evidence | W188 | 3h | M24 | 🟡 W188 자동검증 통과 / 사용자 QA 대기 |
 | M40 | P7     | Structured data public JSON-LD evidence | W192 | 2h | M24 | 🟡 W192 자동검증 통과 / 사용자 QA 대기 |
+| M41 | P7     | Hreflang public metadata evidence | W193 | 2h | M24 | 🟡 W193 자동검증 통과 / 사용자 QA 대기 |

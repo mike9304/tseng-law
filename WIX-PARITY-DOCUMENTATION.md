@@ -1333,3 +1333,21 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W192는 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 helper/UI evidence에 실제 published HTML JSON-LD payload 검증을 추가했다.
+
+## M41 — Hreflang public metadata evidence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/seo-publish-history.playwright.ts` — W193 public metadata evidence를 추가했다. KO 페이지와 `linkedFromPageId` 기반 EN 페이지를 만들고, 두 draft를 발행한 뒤 공개 KO HTML의 alternate link를 검증한다.
+- 검증:
+  - 공개 HTML에서 `rel="alternate"` ko/en/x-default link가 `https://tseng-law.com/{locale}/{slug}` 형태로 주입된다.
+  - legacy `/p/` URL이 alternate link에 섞이지 않는다.
+  - SEO API의 `hreflang` 배열과 `missingLocales`가 Inspector 시각화에 필요한 상태를 반환한다.
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W193" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (115 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W193은 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 hreflang helper/Inspector evidence에 실제 published metadata alternate link 검증을 추가했다.

@@ -4752,3 +4752,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - Motion W170~W175 user-QA 대기 항목을 실제 interaction evidence 기준으로 보강하거나, SEO W188/W190~W195 yellow를 재스캔한다.
+
+## 2026-05-13 Codex /goal M39 redirect manager public runtime evidence
+
+- W188의 약한 지점인 “redirect manager UI로 만든 규칙이 실제 public 301/308 응답으로 나오는가”를 보강했다.
+- middleware redirect loader는 production Blob path를 유지하고, local origin에서는 same-origin public read endpoint를 통해 Node persistence의 active redirect rules를 읽는다.
+- `/api/builder/site/redirects/public` GET endpoint를 추가했다. local hostname에서만 active rules를 반환하고 외부 hostname은 404로 닫는다.
+- Playwright는 `/ko/admin-builder/seo/redirects` UI에서 301/308 rule을 생성한 뒤, public old path를 `maxRedirects: 0`으로 요청해 status와 Location header를 직접 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/redirect-manager.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (115 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W191/W193 structured data/hreflang public head evidence 또는 W195 publish diff viewer 실사용 evidence를 재스캔한다.

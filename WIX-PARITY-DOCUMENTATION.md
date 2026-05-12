@@ -1298,3 +1298,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W184/W185는 계속 `자동검증 통과 / 사용자 QA 대기`로 둔다. 이미 통과한 기능에 실사용 가시성을 더해, typography scale과 style origin을 사용자가 더 즉시 이해할 수 있게 했다.
+
+## M39 — Redirect manager public runtime evidence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/seo/redirects-edge.ts`, `src/middleware.ts` — middleware redirect loader가 local origin에서는 same-origin public read endpoint를 사용하도록 보강했다. Production Blob path는 유지한다.
+  - `src/app/api/builder/site/redirects/public/route.ts` — local-only GET endpoint를 추가해 middleware가 Node persistence에 저장된 redirect rules를 읽을 수 있게 했다. 외부 hostname은 404로 닫는다.
+  - `tests/builder-editor/redirect-manager.playwright.ts` — Redirect manager UI에서 301/308 rule을 생성하고, public request를 `maxRedirects: 0`으로 보내 status와 Location header를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/redirect-manager.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (115 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W188은 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 UI/API evidence에 실제 middleware public 301/308 response evidence를 추가했다.

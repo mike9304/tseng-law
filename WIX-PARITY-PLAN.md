@@ -40,3 +40,4 @@
 | M36 | P6     | Brand asset library polish        | W182 | 3h | M35 | 🟡 W182 자동검증 통과 / 사용자 QA 대기 |
 | M37 | P6     | Component design presets bulk apply | W179 | 3h | M36 | 🟡 W179 자동검증 통과 / 사용자 QA 대기 |
 | M38 | P6     | Typography/source inspector polish | W184~W185 | 2h | M37 | 🟡 W184/W185 자동검증 통과 / 사용자 QA 대기 |
+| M39 | P7     | Redirect manager public runtime evidence | W188 | 3h | M24 | 🟡 W188 자동검증 통과 / 사용자 QA 대기 |

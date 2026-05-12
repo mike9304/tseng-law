@@ -3,10 +3,10 @@
  *
  * Middleware runs on the Edge runtime. The Node-only filesystem
  * fallback in `persistence.ts` is not available there, so this module
- * fetches Vercel Blob directly with the platform fetch API and falls back
- * to "no rules" when
- * the blob token is missing (typical for `next dev` without a linked
- * project) — never blocks the request.
+ * fetches Vercel Blob directly with the platform fetch API. For local
+ * development and Playwright, it falls back to a same-origin public read API
+ * so redirect-manager changes can be verified against the actual middleware
+ * response path without requiring a Vercel Blob token.
  *
  * A short-lived module-level cache (60s TTL) keeps per-request cost
  * negligible. Vercel reuses edge instances within a region, so the
@@ -28,6 +28,16 @@ interface CacheSlot {
 }
 
 let cache: CacheSlot | null = null;
+
+function isLocalOrigin(origin: string | undefined): boolean {
+  if (!origin) return false;
+  try {
+    const { hostname } = new URL(origin);
+    return hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '0.0.0.0';
+  } catch {
+    return false;
+  }
+}
 
 async function fetchRulesFromBlob(): Promise<SiteRedirect[]> {
   const token = process.env.BLOB_READ_WRITE_TOKEN;
@@ -55,7 +65,28 @@ async function fetchRulesFromBlob(): Promise<SiteRedirect[]> {
   }
 }
 
-export async function loadActiveRedirects(): Promise<SiteRedirect[]> {
+async function fetchRulesFromPublicApi(origin: string): Promise<SiteRedirect[]> {
+  try {
+    const url = new URL('/api/builder/site/redirects/public?locale=ko', origin);
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: { accept: 'application/json' },
+      cache: 'no-store',
+    });
+    if (!response.ok) return [];
+    const payload = await response.json() as { redirects?: SiteRedirect[] };
+    return Array.isArray(payload.redirects) ? payload.redirects : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function loadActiveRedirects(origin?: string): Promise<SiteRedirect[]> {
+  const localOrigin = isLocalOrigin(origin);
+  if (localOrigin && origin) {
+    return (await fetchRulesFromPublicApi(origin)).filter((r) => r.isActive);
+  }
+
   const now = Date.now();
   if (cache && now - cache.fetchedAt < TTL_MS) {
     return cache.rules;

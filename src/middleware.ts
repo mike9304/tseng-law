@@ -96,7 +96,7 @@ function handleAdminAuth(request: NextRequest): NextResponse {
 
 async function handlePublicRedirect(request: NextRequest): Promise<NextResponse | null> {
   const pathname = request.nextUrl.pathname;
-  const rules = await loadActiveRedirects();
+  const rules = await loadActiveRedirects(request.nextUrl.origin);
   if (rules.length === 0) return null;
   const match = findMatchingRedirect(pathname, rules);
   if (!match) return null;

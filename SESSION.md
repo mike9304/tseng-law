@@ -5354,3 +5354,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - `VersionHistoryPanel`, `SaveSectionModal` 등 남은 custom editor dialog/overlay의 keyboard/focus gap을 계속 줄인다.
+
+## 2026-05-13 Codex /goal M85 Version history focus trap
+
+- `VersionHistoryPanel`도 custom overlay라 전역 Escape 외에 initial focus, Tab trap, 외부 focus 차단, 닫힌 뒤 toolbar trigger focus 복귀가 없었다.
+- panel ref 기반 focus trap과 body scroll lock을 추가했고, 복원 확인 overlay는 별도 `alertdialog` trap으로 잡아 confirm 중 Tab이 배경 timeline/restore button으로 빠지지 않도록 했다.
+- Escape는 confirm overlay가 열려 있으면 confirm만 닫고, history panel만 열려 있으면 panel을 닫으며 toolbar trigger로 focus를 돌린다.
+- Playwright는 임시 page와 manual revision을 만든 뒤 version history panel open → Close initial focus → Shift+Tab/Tab wrap → 외부 focus probe 차단 → inline restore confirm focus trap → Escape confirm close/trigger restore → Escape panel close/toolbar focus 복귀를 검증한다.
+- 기존 “W26-W28 through actual editor UI clicks” 복원/SEO/발행 흐름도 재실행했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the version history panel" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - `SaveSectionModal`, `TemplateGalleryModal` preview confirm 등 남은 custom editor overlay의 keyboard/focus gap을 계속 줄인다.

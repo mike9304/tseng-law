@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import {
   computeDocumentDiff,
@@ -25,6 +25,15 @@ interface DraftMeta {
   savedAt: string;
   updatedBy?: string;
 }
+
+const FOCUSABLE_SELECTOR = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
 
 const backdropStyle: React.CSSProperties = {
   position: 'fixed',
@@ -316,6 +325,15 @@ function formatSourceLabel(source?: string): string {
   return 'saved revision';
 }
 
+function getFocusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => (
+    !element.hidden &&
+    !element.closest('[hidden]') &&
+    element.getAttribute('aria-hidden') !== 'true' &&
+    element.getClientRects().length > 0
+  ));
+}
+
 export default function VersionHistoryPanel({
   open,
   pageId,
@@ -344,6 +362,34 @@ export default function VersionHistoryPanel({
   const [currentDraftMeta, setCurrentDraftMeta] = useState<DraftMeta | null>(draftMeta ?? null);
   const [hoveringId, setHoveringId] = useState<string | null>(null);
   const [hoverSummaries, setHoverSummaries] = useState<Record<string, DocumentDiffSummary>>({});
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const confirmRef = useRef<HTMLDivElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
+  const confirmReturnFocusRef = useRef<HTMLElement | null>(null);
+  const closingRef = useRef(false);
+
+  const activeTrapContainer = useCallback(() => (
+    confirmRef.current ?? panelRef.current
+  ), []);
+
+  const closePanel = useCallback(() => {
+    closingRef.current = true;
+    onClose();
+  }, [onClose]);
+
+  const openRestoreConfirm = (revisionId: string) => {
+    confirmReturnFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setConfirmId(revisionId);
+  };
+
+  const closeRestoreConfirm = useCallback(() => {
+    const returnTarget = confirmReturnFocusRef.current;
+    setConfirmId(null);
+    window.setTimeout(() => {
+      if (returnTarget?.isConnected) returnTarget.focus({ preventScroll: true });
+      confirmReturnFocusRef.current = null;
+    }, 0);
+  }, []);
 
   const fetchRevisions = useCallback(async () => {
     if (!pageId) return;
@@ -445,14 +491,94 @@ export default function VersionHistoryPanel({
     if (draftMeta) setCurrentDraftMeta(draftMeta);
   }, [draftMeta]);
 
-  useEffect(() => {
-    if (!open) return undefined;
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+  useLayoutEffect(() => {
+    if (!open) {
+      if (closingRef.current) {
+        const restoreTarget = restoreFocusRef.current;
+        window.setTimeout(() => {
+          if (restoreTarget?.isConnected) restoreTarget.focus({ preventScroll: true });
+          restoreFocusRef.current = null;
+          closingRef.current = false;
+          confirmReturnFocusRef.current = null;
+        }, 0);
+      } else {
+        restoreFocusRef.current = null;
+        confirmReturnFocusRef.current = null;
+      }
+      return undefined;
+    }
+
+    restoreFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    closingRef.current = false;
+    const panel = panelRef.current;
+    if (!panel) return undefined;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const focusFrame = window.requestAnimationFrame(() => {
+      const trapContainer = activeTrapContainer();
+      if (!trapContainer) return;
+      const focusable = getFocusableElements(trapContainer);
+      (focusable[0] ?? trapContainer).focus({ preventScroll: true });
+    });
+    const handleFocusIn = (event: FocusEvent) => {
+      const trapContainer = activeTrapContainer();
+      if (!trapContainer) return;
+      if (trapContainer.contains(event.target as Node | null)) return;
+      const focusable = getFocusableElements(trapContainer);
+      (focusable[0] ?? trapContainer).focus({ preventScroll: true });
     };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [open, onClose]);
+
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('focusin', handleFocusIn);
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.body.style.overflow = previousBodyOverflow;
+      document.removeEventListener('focusin', handleFocusIn);
+    };
+  }, [activeTrapContainer, open]);
+
+  useLayoutEffect(() => {
+    if (!open || !confirmId) return;
+    const confirmPanel = confirmRef.current;
+    if (!confirmPanel) return;
+    const focusable = getFocusableElements(confirmPanel);
+    (focusable[0] ?? confirmPanel).focus({ preventScroll: true });
+  }, [confirmId, open]);
+
+  const handlePanelKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      if (confirmId) {
+        closeRestoreConfirm();
+      } else {
+        closePanel();
+      }
+      return;
+    }
+    if (event.key !== 'Tab') return;
+
+    const trapContainer = activeTrapContainer();
+    if (!trapContainer) return;
+    const focusable = getFocusableElements(trapContainer);
+    if (focusable.length === 0) {
+      event.preventDefault();
+      trapContainer.focus({ preventScroll: true });
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus({ preventScroll: true });
+      return;
+    }
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus({ preventScroll: true });
+    }
+  };
 
   const diff = useMemo<DocumentDiff | null>(() => {
     if (!currentDocument || !selectedDoc) return null;
@@ -480,7 +606,7 @@ export default function VersionHistoryPanel({
           setCurrentDraftMeta(data.draft);
           onRestored?.(data.draft, data.document);
         }
-        onClose();
+        closePanel();
       }
     } catch {
       // silent
@@ -496,12 +622,29 @@ export default function VersionHistoryPanel({
     <div
       style={backdropStyle}
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        if (e.target === e.currentTarget) closePanel();
       }}
     >
-      <div style={{ ...panelStyle, position: 'relative' }}>
+      <div
+        ref={panelRef}
+        style={{ ...panelStyle, position: 'relative' }}
+        role="dialog"
+        aria-modal="true"
+        aria-label="버전 히스토리"
+        tabIndex={-1}
+        data-builder-version-history-dialog="true"
+        onKeyDownCapture={handlePanelKeyDown}
+      >
         {confirmId && (
-          <div style={confirmOverlayStyle}>
+          <div
+            ref={confirmRef}
+            style={confirmOverlayStyle}
+            role="alertdialog"
+            aria-modal="true"
+            aria-label="리비전 복원 확인"
+            tabIndex={-1}
+            data-builder-version-restore-dialog="true"
+          >
             <p style={confirmTextStyle}>
               이 리비전으로 복원하시겠습니까?<br />
               현재 draft 는 자동으로 백업된 후 덮어씌워집니다.
@@ -510,7 +653,7 @@ export default function VersionHistoryPanel({
               <button
                 type="button"
                 style={cancelBtnStyle}
-                onClick={() => setConfirmId(null)}
+                onClick={closeRestoreConfirm}
                 disabled={restoring}
               >
                 취소
@@ -529,7 +672,7 @@ export default function VersionHistoryPanel({
 
         <div style={headerStyle}>
           <span style={titleStyle}>버전 히스토리</span>
-          <button type="button" style={closeBtnStyle} onClick={onClose}>
+          <button type="button" style={closeBtnStyle} onClick={closePanel}>
             닫기
           </button>
         </div>
@@ -602,7 +745,7 @@ export default function VersionHistoryPanel({
                       disabled={restoring}
                       onClick={(event) => {
                         event.stopPropagation();
-                        setConfirmId(rev.revisionId);
+                        openRestoreConfirm(rev.revisionId);
                       }}
                     >
                       복원
@@ -687,7 +830,7 @@ export default function VersionHistoryPanel({
                   <button
                     type="button"
                     style={selectedId ? restoreBtnStyle : restoreBtnDisabledStyle}
-                    onClick={() => selectedId && setConfirmId(selectedId)}
+                    onClick={() => selectedId && openRestoreConfirm(selectedId)}
                     disabled={!selectedId}
                   >
                     이 버전으로 복원

@@ -302,6 +302,107 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     }
   });
 
+  test('traps focus in the version history panel and restore confirmation', async ({ page }) => {
+    test.setTimeout(60_000);
+
+    const token = `history-focus-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const slug = `history-focus-${token}`;
+    const pageTitle = `History focus ${token}`;
+    const cleanDoc = makeDocument({ token, titleText: pageTitle });
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        data: {
+          locale: 'ko',
+          slug,
+          title: pageTitle,
+          document: cleanDoc,
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      const snapshotResponse = await page.request.post(`/api/builder/site/pages/${pageId}/revisions`, {
+        headers,
+        data: { source: 'manual', document: cleanDoc },
+      });
+      expect(snapshotResponse.status()).toBe(200);
+
+      await openBuilderPageFromPagesPanel(page, pageTitle, pageId!);
+      const historyTrigger = page.getByTitle('버전 히스토리');
+      await historyTrigger.click();
+
+      const historyDialog = page.getByRole('dialog', { name: '버전 히스토리' });
+      await expect(historyDialog).toBeVisible();
+      const closeButton = historyDialog.getByRole('button', { name: '닫기' });
+      await expect(closeButton).toBeFocused();
+      const manualRevisionCard = historyDialog.getByRole('button', { name: /manual/ }).first();
+      await expect(manualRevisionCard).toBeVisible();
+      const inlineRestoreButton = historyDialog.getByRole('button', { name: '복원', exact: true }).first();
+
+      await page.keyboard.press('Shift+Tab');
+      await expect(inlineRestoreButton).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(closeButton).toBeFocused();
+
+      await page.locator('body').evaluate((body) => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.dataset.historyFocusProbe = 'true';
+        probe.textContent = 'outside history focus probe';
+        body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(closeButton).toBeFocused();
+
+      await inlineRestoreButton.click();
+      const restoreDialog = page.getByRole('alertdialog', { name: '리비전 복원 확인' });
+      await expect(restoreDialog).toBeVisible();
+      const cancelRestoreButton = restoreDialog.getByRole('button', { name: '취소' });
+      const confirmRestoreButton = restoreDialog.getByRole('button', { name: '복원', exact: true });
+      await expect(cancelRestoreButton).toBeFocused();
+      await page.keyboard.press('Shift+Tab');
+      await expect(confirmRestoreButton).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(cancelRestoreButton).toBeFocused();
+
+      await page.locator('body').evaluate((body) => {
+        const probe = document.querySelector<HTMLButtonElement>('[data-history-focus-probe="true"]');
+        if (probe) {
+          probe.focus();
+          return;
+        }
+        const nextProbe = document.createElement('button');
+        nextProbe.type = 'button';
+        nextProbe.dataset.historyFocusProbe = 'true';
+        nextProbe.textContent = 'outside history focus probe';
+        body.appendChild(nextProbe);
+        nextProbe.focus();
+      });
+      await expect(cancelRestoreButton).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(restoreDialog).not.toBeVisible();
+      await expect(inlineRestoreButton).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(historyDialog).not.toBeVisible();
+      await expect(historyTrigger).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('covers W26 rollback, W27 public head, and W28 publish blockers', async ({ page }) => {
     test.setTimeout(120_000);
 

@@ -1957,3 +1957,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W186/W190/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. SEO metadata panel에서 keyboard focus가 editor canvas로 새거나 Escape 후 편집 흐름이 끊기는 경로를 닫았다.
+
+## M85 — Version history focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/VersionHistoryPanel.tsx` — version history dialog에 initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, Escape close, toolbar trigger focus 복귀를 추가했다. 복원 확인 overlay도 별도 `alertdialog` trap으로 묶어 Tab이 배경 리비전 카드로 새지 않게 했다.
+  - `tests/builder-editor/seo-publish-history.playwright.ts` — 실제 revision snapshot이 있는 page에서 version history panel과 restore confirmation의 focus trap, 외부 focus 차단, Escape close, toolbar trigger focus 복귀를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the version history panel" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 버전 히스토리와 복원 확인 overlay에서 keyboard focus가 editor canvas나 배경 timeline으로 새는 경로를 닫았다.

@@ -1655,3 +1655,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “주요업무 눌렀는데 겨우 네 개 템플릿만 있음” 혼선을 Design 패널 정보 구조에서 줄였다.
+
+## M63 — Page template create retry state
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/PageSwitcher.tsx` — 템플릿/빈 페이지 생성 요청이 실패하면 slug prompt와 pending template을 유지한다. 성공한 경우에만 prompt를 닫고 pending template/slug input을 정리하며 새 pageId를 선택한다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — 중복 slug 페이지를 먼저 만든 뒤 page template showroom에서 `법률사무소 홈`을 선택하고 같은 slug로 생성 실패를 유도한다. 오류 뒤 prompt, 입력값, `다른 템플릿 선택` back path, showroom 검색어가 모두 유지되는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 템플릿 적용 직후 실패해도 사용자가 처음부터 다시 찾지 않고 바로 수정/뒤로가기를 할 수 있게 했다.

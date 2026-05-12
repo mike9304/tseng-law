@@ -5069,3 +5069,14 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 템플릿 적용/페이지 전환 UX와 W216~W225 editor 고도화 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M63 Page template create retry state
+
+- 템플릿 적용 확인 prompt에서 slug 중복/API 실패가 나면 prompt가 닫히고 선택한 템플릿도 사라져, 사용자가 slug 수정이나 `다른 템플릿 선택`으로 돌아갈 수 없던 흐름을 고쳤다.
+- `PageSwitcher`는 page create 성공 시에만 slug prompt와 pending template을 정리한다. 실패 시에는 slug 입력값, 선택 템플릿, back button을 유지하고 prompt 안에 오류를 표시한다.
+- prompt overlay에 `role="dialog"`/`aria-modal`/`aria-label`을 붙여 테스트와 접근성 기준을 맞췄다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 템플릿 생성 성공 후 새 페이지 선택/저장 persistence와 W216~W225 editor 고도화 회귀를 계속 재스캔한다.

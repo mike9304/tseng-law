@@ -432,7 +432,6 @@ export default function PageSwitcher({
     if (creating) return;
     const slug = slugInput.trim() || `page-${Date.now().toString(36)}`;
     setCreating(true);
-    setShowSlugPrompt(false);
     setErrorMessage(null);
     try {
       const response = await fetch('/api/builder/site/pages', {
@@ -448,18 +447,26 @@ export default function PageSwitcher({
       });
       if (response.ok) {
         const data = (await response.json()) as { pageId?: string; page?: PageMeta };
-        await fetchPages();
-        if (data.pageId) {
-          onSelectPage(data.pageId, data.page?.slug);
+        const nextPageId = data.pageId ?? data.page?.pageId ?? null;
+        if (!nextPageId) {
+          setErrorMessage('페이지를 생성하지 못했습니다.');
+          setShowSlugPrompt(true);
+          return;
         }
+        await fetchPages();
+        setShowSlugPrompt(false);
+        setPendingTemplate(undefined);
+        setSlugInput('');
+        onSelectPage(nextPageId, data.page?.slug);
       } else {
         setErrorMessage(await readPageResponseError(response, '페이지를 생성하지 못했습니다.'));
+        setShowSlugPrompt(true);
       }
     } catch {
       setErrorMessage('페이지를 생성하지 못했습니다.');
+      setShowSlugPrompt(true);
     } finally {
       setCreating(false);
-      setPendingTemplate(undefined);
     }
   };
 
@@ -768,6 +775,9 @@ export default function PageSwitcher({
 
       {showSlugPrompt ? (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="페이지 slug 입력"
           style={{
             position: 'fixed',
             inset: 0,
@@ -802,6 +812,25 @@ export default function PageSwitcher({
             <div style={{ fontSize: '0.82rem', color: '#64748b', marginBottom: 16 }}>
               {pendingTemplate ? '선택한 템플릿으로 새 페이지를 생성합니다.' : '빈 페이지를 생성합니다.'}
             </div>
+            {errorMessage ? (
+              <div
+                role="status"
+                aria-live="polite"
+                style={{
+                  margin: '-4px 0 14px',
+                  padding: '8px 10px',
+                  borderRadius: 8,
+                  background: '#fef2f2',
+                  border: '1px solid #fecaca',
+                  color: '#b91c1c',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  lineHeight: 1.35,
+                }}
+              >
+                {errorMessage}
+              </div>
+            ) : null}
             <input
               type="text"
               placeholder="예: about, services, contact"

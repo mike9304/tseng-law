@@ -1,5 +1,22 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import { openBuilder, openCatalogDrawer } from './helpers/editor';
+
+function mutationHeaders(scope: string): Record<string, string> {
+  const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'section-template-click';
+  return { 'x-forwarded-for': `pw-${safeScope}` };
+}
+
+async function findPageIdBySlug(page: Page, slug: string): Promise<string | null> {
+  const response = await page.request.get('/api/builder/site/pages?locale=ko', {
+    headers: mutationHeaders(slug),
+    failOnStatusCode: false,
+  });
+  if (response.status() !== 200) return null;
+  const payload = (await response.json()) as {
+    pages?: Array<{ pageId?: string; slug?: string }>;
+  };
+  return payload.pages?.find((entry) => entry.slug === slug)?.pageId ?? null;
+}
 
 test.describe('/ko/admin-builder section design templates', () => {
   test('lets users click a section chip before applying a design template', async ({ page }) => {
@@ -142,5 +159,74 @@ test.describe('/ko/admin-builder section design templates', () => {
 
     await gallery.getByRole('button', { name: 'Close' }).click();
     await expect(gallery).toBeHidden();
+  });
+
+  test('keeps the page template creation prompt usable after a duplicate slug error', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = Date.now().toString(36);
+    const slug = `g-editor-template-retry-${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(slug));
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: `Template retry source ${token}`,
+          blank: true,
+        },
+        headers: mutationHeaders(slug),
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { pageId?: string; success?: boolean; error?: string };
+      expect(created.success, created.error).toBe(true);
+      expect(created.pageId).toBeTruthy();
+      pageId = created.pageId!;
+
+      await openBuilder(page, `/ko/admin-builder?templateRetry=${token}`);
+      await page.keyboard.press('Escape');
+
+      const catalogDrawer = await openCatalogDrawer(page);
+      const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+      await addSearch.fill('법률');
+      const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
+      const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
+      await expect(lawHomeResult).toContainText('법률사무소 홈');
+      await lawHomeResult.click();
+
+      const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
+      await expect(gallery).toBeVisible();
+      await gallery.getByRole('button', { name: '법률사무소 홈 미리보기' }).click();
+      const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+      await expect(preview).toBeVisible();
+      await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
+
+      const slugPrompt = page.getByRole('dialog', { name: '페이지 slug 입력' });
+      await expect(slugPrompt).toBeVisible();
+      await expect(slugPrompt).toContainText('선택한 템플릿으로 새 페이지를 생성합니다.');
+      const slugInput = slugPrompt.getByPlaceholder('예: about, services, contact');
+      await slugInput.fill(slug);
+      await slugPrompt.getByRole('button', { name: '생성' }).click();
+
+      await expect(slugPrompt).toBeVisible();
+      await expect(slugPrompt.getByRole('status')).toContainText('같은 locale 안에 동일한 slug');
+      await expect(slugInput).toHaveValue(slug);
+      await expect(slugPrompt.getByRole('button', { name: '다른 템플릿 선택' })).toBeVisible();
+
+      await slugPrompt.getByRole('button', { name: '다른 템플릿 선택' }).click();
+      await expect(gallery).toBeVisible();
+      await expect(gallery.getByRole('searchbox')).toHaveValue('법률사무소 홈');
+    } finally {
+      pageId ??= await findPageIdBySlug(page, slug);
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
+    }
   });
 });

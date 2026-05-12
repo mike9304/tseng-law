@@ -12,6 +12,7 @@ type DashboardTab = 'checklist' | 'defaults' | 'pages' | 'tools';
 interface SeoSettingsResponse {
   ok?: boolean;
   defaults?: BuilderSeoDefaults;
+  robotsTxt?: string;
   preview?: Array<{ pageId: string; title: string; description: string; publicPath: string }>;
   error?: string;
 }
@@ -138,6 +139,7 @@ export default function SeoDashboardView({
     initialOverview.checklistSettings.serviceMode ?? 'both',
   );
   const [defaults, setDefaults] = useState<BuilderSeoDefaults>(emptyDefaults);
+  const [robotsTxt, setRobotsTxt] = useState('');
   const [preview, setPreview] = useState<SeoSettingsResponse['preview']>([]);
   const [selectedPageIds, setSelectedPageIds] = useState<string[]>([]);
   const [resetTitle, setResetTitle] = useState(true);
@@ -158,6 +160,7 @@ export default function SeoDashboardView({
       const payload = (await response.json().catch(() => ({}))) as SeoSettingsResponse;
       if (!cancelled && response.ok) {
         setDefaults(payload.defaults ?? emptyDefaults());
+        setRobotsTxt(payload.robotsTxt ?? '');
         setPreview(payload.preview ?? []);
       }
     }
@@ -214,6 +217,23 @@ export default function SeoDashboardView({
     setPreview(payload.preview ?? []);
     await refreshOverview();
     setStatus('SEO defaults 저장됨');
+  };
+
+  const saveRobots = async () => {
+    setStatus('Robots.txt 저장 중...');
+    const response = await fetch(`/api/builder/site/seo-settings?locale=${encodeURIComponent(locale)}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify({ robotsTxt }),
+    });
+    const payload = (await response.json().catch(() => ({}))) as SeoSettingsResponse;
+    if (!response.ok) {
+      setStatus(payload.error || 'Robots.txt 저장 실패');
+      return;
+    }
+    setRobotsTxt(payload.robotsTxt ?? '');
+    setStatus('Robots.txt 저장됨');
   };
 
   const applyBulk = async (setIndexable?: boolean) => {
@@ -487,6 +507,24 @@ export default function SeoDashboardView({
               Robots.txt
               <div style={{ color: '#64748b', fontSize: '0.78rem', marginTop: 5 }}>Noindex pages are disallowed</div>
             </a>
+          </div>
+          <div style={{ ...cardStyle, padding: 14, display: 'grid', gap: 10 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center' }}>
+              <div>
+                <h3 style={{ margin: 0, fontSize: '0.92rem' }}>Custom robots.txt</h3>
+                <p style={{ margin: '4px 0 0', color: '#64748b', fontSize: '0.78rem' }}>
+                  비우면 사이트의 noindex 페이지를 기준으로 자동 생성합니다.
+                </p>
+              </div>
+              <button type="button" style={buttonStyle} onClick={saveRobots}>Robots 저장</button>
+            </div>
+            <textarea
+              aria-label="Custom robots.txt"
+              value={robotsTxt}
+              onChange={(event) => setRobotsTxt(event.target.value)}
+              placeholder={'User-agent: *\nAllow: /\nDisallow: /private\nSitemap: https://tseng-law.com/sitemap.xml'}
+              style={{ ...inputStyle, minHeight: 150, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', lineHeight: 1.55 }}
+            />
           </div>
         </section>
       ) : null}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { listConversations } from '@/lib/builder/live-chat/storage';
+import { toSafeChatConversation } from '@/lib/builder/live-chat/types';
 import InboxAdmin from '@/components/builder/live-chat/InboxAdmin';
 
 export const dynamic = 'force-dynamic';
@@ -19,9 +20,7 @@ export default async function InboxPage() {
           방문자의 실시간 대화. SSE 기반 (Fluid Compute streaming). 폴링 1.5s.
         </p>
       </header>
-      <InboxAdmin
-        initialConversations={conversations.map(({ visitorToken: _v, ...rest }) => rest)}
-      />
+      <InboxAdmin initialConversations={conversations.map(toSafeChatConversation)} />
     </main>
   );
 }

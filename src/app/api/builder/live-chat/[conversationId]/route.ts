@@ -5,6 +5,7 @@ import {
   listMessagesForConversation,
   saveConversation,
 } from '@/lib/builder/live-chat/storage';
+import { toSafeChatConversation } from '@/lib/builder/live-chat/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -23,8 +24,7 @@ export async function GET(
   if (conversation.unreadByAdmin > 0) {
     await saveConversation({ ...conversation, unreadByAdmin: 0 });
   }
-  const { visitorToken: _v, ...safe } = conversation;
-  return NextResponse.json({ ok: true, conversation: safe, messages });
+  return NextResponse.json({ ok: true, conversation: toSafeChatConversation(conversation), messages });
 }
 
 export async function PATCH(

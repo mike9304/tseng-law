@@ -4377,3 +4377,23 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
 - AI generator quota / per-user cost 한도
 - 외부 → booking pull 방향의 calendar sync
 - 호정 실 도메인 인수 시 form funnel 클라이언트 hook 코드 (현재는 API만)
+
+## 2026-05-12 Codex /goal M24 SEO + Publish 성숙
+
+- custom `robots.txt`를 site settings에 저장하고 `/robots.txt` route가 production에서 우선 적용하도록 연결했다. 비어 있으면 기존 noindex 기반 자동 robots를 유지한다.
+- SEO Dashboard Tools 탭에 `Custom robots.txt` 편집 textarea와 저장 버튼을 추가했다.
+- publish 결과에 `cacheInvalidatedAt`, `revalidatedPaths`를 추가하고 page/sitemap/robots를 명시 revalidate한다.
+- publish gate에 `prerender-ready` info check를 추가해 PublishModal preflight에서 prerender 대상 경로를 드러낸다.
+- `seo-publish-history.playwright.ts`에 robots 저장/public route, pre-render check, revalidate evidence assertion을 추가했고, 테스트 직접 API 요청은 고유 `x-forwarded-for`로 분리해 mutation rate-limit 오염을 막았다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/seo/__tests__/robots.test.ts` ✅
+  - `npm run test:unit` ✅ (855 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts --project=chromium-builder --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `npm run security:builder-routes` ✅ (109 route files / 90 mutation handlers)
+- 전역 gate 메모:
+  - `npm run lint`와 `npm run build`는 M24 변경 후 기능적으로는 통과 경로를 확인했지만, Bookings M25 금지 영역 `src/components/builder/bookings/CalendarSyncAdmin.tsx`의 기존 `setConnections` unused lint error를 되돌려 둔 상태라 현재 전역 실행은 실패한다.
+  - M25 Bookings milestone 진입 즉시 이 한 줄 lint cleanup을 포함해 전체 lint/build를 다시 green으로 만든다.
+- 체크포인트:
+  - W186/W187/W188/W190/W191/W192/W193/W194/W195 자동검증 evidence 확보.
+  - W189 scheduled publish는 현재 M24 prompt 범위 밖이라 별도 publish scheduling 작업으로 남긴다.

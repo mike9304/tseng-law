@@ -64,7 +64,7 @@ export function parseCustomRobotsTxt(
 
   const finalRules: RobotsRule[] = rules.length > 0 ? rules : [{ userAgent: '*', allow: '/' }];
   return {
-    rules: finalRules,
+    rules: finalRules.length === 1 ? finalRules[0] : finalRules,
     sitemap: sitemaps.length > 0 ? sitemaps : fallbackSitemap,
   };
 }

@@ -25,7 +25,7 @@
 | M21 | P4     | Forms 후반                        | W141~W150 | 30h  | M11  | 🟢   |
 | M22 | P5     | Motion 후반                       | W160~W175 | 40h  | M07  | 🟢   |
 | M23 | P6     | Design system 마무리              | W184~W185 | 12h  | —    | 🟢   |
-| M24 | P7     | SEO + Publish 성숙                | W186~W195 | 24h  | —    | 🟡   |
+| M24 | P7     | SEO + Publish 성숙                | W186~W195 | 24h  | —    | 🟡 자동검증 통과 / M25 lint cleanup 대기 |
 | M25 | P8     | Bookings 본격 1 (서비스/스태프)   | W196~W202 | 24h  | M21  | 🟡   |
 | M26 | P8     | Bookings 본격 2 (예약/결제)       | W203~W210 | 28h  | M25  | 🟡   |
 | M27 | P8     | Bookings 본격 3 (다국어/정책)     | W211~W215 | 16h  | M26  | 🟡   |

@@ -42,6 +42,8 @@ export async function POST(
       publishedRevisionId: result.publishedRevisionId,
       publishedRevision: result.publishedRevision,
       publishedSavedAt: result.publishedSavedAt,
+      cacheInvalidatedAt: result.cacheInvalidatedAt,
+      revalidatedPaths: result.revalidatedPaths,
       warnings: result.warnings,
     });
   } catch (error) {

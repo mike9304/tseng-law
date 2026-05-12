@@ -63,6 +63,10 @@ const seoDefaultsSchema = z.object({
   structuredDataBlocks: z.array(structuredDataBlockSchema).max(5).optional(),
 }).strict();
 
+const seoSettingsSchema = seoDefaultsSchema.extend({
+  robotsTxt: z.string().max(5000).optional(),
+});
+
 function validationErrorResponse(error: ZodError): NextResponse {
   return NextResponse.json(
     { ok: false, error: 'validation_error', issues: error.flatten() },
@@ -102,6 +106,7 @@ export async function GET(request: NextRequest) {
       ok: true,
       defaults: getBuilderSeoDefaults(site),
       factoryDefaults: DEFAULT_BUILDER_SEO_DEFAULTS,
+      robotsTxt: site.settings?.robotsTxt ?? '',
       preview: buildSeoPreviewRows({ site, siteUrl: getSiteUrl(), locale }),
     });
   } catch (error) {
@@ -116,19 +121,21 @@ export async function PATCH(request: NextRequest) {
   if (auth instanceof NextResponse) return auth;
 
   try {
-    const payload = seoDefaultsSchema.parse(await request.json());
+    const rawPayload = await request.json();
+    const payload = seoSettingsSchema.parse(rawPayload);
+    const { robotsTxt, ...defaultsPayload } = payload;
     const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
     const site = await readSiteDocument('default', locale);
     const nextDefaults = cleanDefaults({
       ...getBuilderSeoDefaults(site),
-      ...payload,
+      ...defaultsPayload,
       patterns: {
         ...(getBuilderSeoDefaults(site).patterns ?? {}),
-        ...(payload.patterns ?? {}),
+        ...(defaultsPayload.patterns ?? {}),
       },
       structuredData: {
         ...(getBuilderSeoDefaults(site).structuredData ?? {}),
-        ...(payload.structuredData ?? {}),
+        ...(defaultsPayload.structuredData ?? {}),
       },
     });
 
@@ -136,12 +143,18 @@ export async function PATCH(request: NextRequest) {
       ...(site.settings ?? {}),
       seoDefaults: nextDefaults,
     };
+    if (Object.prototype.hasOwnProperty.call(rawPayload, 'robotsTxt')) {
+      const cleanedRobots = typeof robotsTxt === 'string' ? robotsTxt.trim() : '';
+      if (cleanedRobots) site.settings.robotsTxt = cleanedRobots;
+      else delete site.settings.robotsTxt;
+    }
     site.updatedAt = new Date().toISOString();
     await writeSiteDocument(site);
 
     return NextResponse.json({
       ok: true,
       defaults: getBuilderSeoDefaults(site),
+      robotsTxt: site.settings?.robotsTxt ?? '',
       preview: buildSeoPreviewRows({ site, siteUrl: getSiteUrl(), locale }),
     });
   } catch (error) {

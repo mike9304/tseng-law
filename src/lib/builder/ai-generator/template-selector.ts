@@ -110,6 +110,7 @@ const REGISTRY: Partial<Record<Industry, Omit<SiteBlueprint, 'industry'>>> = {
 };
 
 export function selectBlueprint(industry: Industry, _tone: Tone = 'professional'): SiteBlueprint {
+  void _tone;
   const partial = REGISTRY[industry];
   if (!partial) return DEFAULT_BLUEPRINT;
   return { industry, ...partial };

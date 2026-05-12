@@ -133,6 +133,8 @@ export interface PublishResult {
   publishedRevisionId: string;
   publishedRevision: number;
   publishedSavedAt: string;
+  cacheInvalidatedAt: string;
+  revalidatedPaths: string[];
   slug: string;
   warnings: string[];
   checks: PublishCheckResult;
@@ -196,6 +198,12 @@ export async function publishPage(
   page.lastPublishedDraftRevision = draftState.record.revision;
   page.updatedAt = publishedSavedAt;
   site.updatedAt = publishedSavedAt;
+  const revalidatedPaths = [
+    buildSitePagePath(draftState.record.document.locale, page.slug || ''),
+    '/sitemap.xml',
+    '/robots.txt',
+  ];
+  const cacheInvalidatedAt = new Date().toISOString();
 
   try {
     await writeSiteDocument(site);
@@ -203,10 +211,12 @@ export async function publishPage(
     throw new PublishError('site_write_failed', 500);
   }
 
-  try {
-    revalidatePath(buildSitePagePath(draftState.record.document.locale, page.slug || ''));
-  } catch {
-    // dev or non-existent path
+  for (const targetPath of revalidatedPaths) {
+    try {
+      revalidatePath(targetPath);
+    } catch {
+      // dev or non-existent path
+    }
   }
 
   // PR #5 — rebuild the search index asynchronously after each publish so
@@ -232,6 +242,8 @@ export async function publishPage(
     publishedRevisionId: revisionResult.revisionId,
     publishedRevision: revisionResult.revision,
     publishedSavedAt,
+    cacheInvalidatedAt,
+    revalidatedPaths,
     slug: page.slug || '',
     warnings: checks.warnings,
     checks,

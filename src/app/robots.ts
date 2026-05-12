@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
-import { locales } from '@/lib/locales';
+import { defaultLocale, locales } from '@/lib/locales';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import { parseCustomRobotsTxt } from '@/lib/builder/seo/robots';
 
 export const dynamic = 'force-dynamic';
 
@@ -42,13 +43,32 @@ async function collectNoIndexPaths(): Promise<string[]> {
   return out;
 }
 
+async function collectCustomRobotsText(): Promise<string | null> {
+  const orderedLocales = [defaultLocale, ...locales.filter((locale) => locale !== defaultLocale)];
+  for (const locale of orderedLocales) {
+    try {
+      const site = await readSiteDocument('default', locale);
+      const custom = site.settings?.robotsTxt?.trim();
+      if (custom) return custom;
+    } catch {
+      // Best-effort: if one locale doc is unavailable, try the next locale.
+    }
+  }
+  return null;
+}
+
 export default async function robots(): Promise<MetadataRoute.Robots> {
+  const sitemap = `${getSiteUrl()}/sitemap.xml`;
+
   if (isPreviewEnvironment()) {
     return {
       rules: { userAgent: '*', disallow: '/' },
-      sitemap: `${getSiteUrl()}/sitemap.xml`,
+      sitemap,
     };
   }
+
+  const customRobots = await collectCustomRobotsText();
+  if (customRobots) return parseCustomRobotsTxt(customRobots, sitemap);
 
   const noIndexPaths = await collectNoIndexPaths();
   const disallow = ['/api/', '/admin-builder', '/admin-consultation', ...noIndexPaths];
@@ -59,6 +79,6 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
       allow: '/',
       disallow,
     },
-    sitemap: `${getSiteUrl()}/sitemap.xml`,
+    sitemap,
   };
 }

@@ -23,3 +23,11 @@ export interface ChatConversation {
   lastMessageAt: string;
   unreadByAdmin: number;
 }
+
+export type SafeChatConversation = Omit<ChatConversation, 'visitorToken'>;
+
+export function toSafeChatConversation(conversation: ChatConversation): SafeChatConversation {
+  const safe: Partial<ChatConversation> = { ...conversation };
+  delete safe.visitorToken;
+  return safe as SafeChatConversation;
+}

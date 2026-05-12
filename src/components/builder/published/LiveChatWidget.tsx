@@ -172,7 +172,11 @@ export default function LiveChatWidget({ enabled = true }: { enabled?: boolean }
               type="text"
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter' && !sending) (session ? sendMessage() : startConversation()); }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !sending) {
+                  void (session ? sendMessage() : startConversation());
+                }
+              }}
               placeholder={session ? '메시지를 입력하세요...' : '문의 내용을 입력하세요'}
               disabled={sending}
               style={{ flex: 1, padding: '8px 10px', border: '1px solid #cbd5e1', borderRadius: 6, fontSize: 13 }}

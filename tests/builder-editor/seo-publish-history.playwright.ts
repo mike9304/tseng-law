@@ -4,6 +4,11 @@ const builderAuthHeader = `Basic ${Buffer.from(
   `${process.env.BUILDER_SMOKE_USERNAME ?? process.env.CMS_ADMIN_USERNAME ?? 'admin'}:${process.env.BUILDER_SMOKE_PASSWORD ?? process.env.CMS_ADMIN_PASSWORD ?? 'local-review-2026!'}`,
 ).toString('base64')}`;
 
+function mutationHeaders(scope: string): Record<string, string> {
+  const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'seo-publish-history';
+  return { 'x-forwarded-for': `pw-${safeScope}` };
+}
+
 type TestDocument = {
   version: 1;
   locale: 'ko';
@@ -125,8 +130,10 @@ function makeDocument(options: {
   };
 }
 
-async function currentDraftRevision(request: APIRequestContext, pageId: string): Promise<number> {
-  const response = await request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
+async function currentDraftRevision(request: APIRequestContext, pageId: string, scope: string): Promise<number> {
+  const response = await request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+    headers: mutationHeaders(scope),
+  });
   expect(response.status()).toBe(200);
   const payload = (await response.json()) as { draft?: { revision?: number } };
   expect(typeof payload.draft?.revision).toBe('number');
@@ -138,8 +145,10 @@ async function putDraft(
   pageId: string,
   expectedRevision: number,
   document: TestDocument,
+  scope: string,
 ): Promise<number> {
   const response = await request.put(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+    headers: mutationHeaders(scope),
     data: { expectedRevision, document },
   });
   expect(response.status()).toBe(200);
@@ -171,6 +180,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     test.setTimeout(120_000);
 
     const token = `w26w28-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
     const slug = `g-editor-${token}`;
     const originalTitle = `Original revision ${token}`;
     const cleanDoc = makeDocument({ token, titleText: originalTitle });
@@ -178,6 +188,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
 
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
         data: {
           locale: 'ko',
           slug,
@@ -192,6 +203,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       pageId = created.pageId!;
 
       const snapshotResponse = await page.request.post(`/api/builder/site/pages/${pageId}/revisions`, {
+        headers,
         data: { source: 'manual', document: cleanDoc },
       });
       expect(snapshotResponse.status()).toBe(200);
@@ -199,13 +211,13 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       expect(snapshot.ok).toBe(true);
       expect(snapshot.revisionId).toBeTruthy();
 
-      let revision = await currentDraftRevision(page.request, pageId);
+      let revision = await currentDraftRevision(page.request, pageId, token);
       const changedDoc = makeDocument({ token, titleText: `Changed draft ${token}` });
-      revision = await putDraft(page.request, pageId, revision, changedDoc);
+      revision = await putDraft(page.request, pageId, revision, changedDoc, token);
 
       const rollbackResponse = await page.request.post(
         `/api/builder/site/pages/${pageId}/revisions/rollback`,
-        { data: { revisionId: snapshot.revisionId } },
+        { headers, data: { revisionId: snapshot.revisionId } },
       );
       expect(rollbackResponse.status()).toBe(200);
       const rollback = (await rollbackResponse.json()) as { ok?: boolean; document?: TestDocument; backupRevisionId?: string };
@@ -213,16 +225,17 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       expect(rollback.backupRevisionId).toBeTruthy();
       expect(JSON.stringify(rollback.document)).toContain(originalTitle);
 
-      revision = await currentDraftRevision(page.request, pageId);
+      revision = await currentDraftRevision(page.request, pageId, token);
       const badDoc = makeDocument({
         token,
         titleText: originalTitle,
         imageAlt: '',
         buttonHref: 'javascript:alert(1)',
       });
-      revision = await putDraft(page.request, pageId, revision, badDoc);
+      revision = await putDraft(page.request, pageId, revision, badDoc, token);
 
       const checksResponse = await page.request.post('/api/builder/site/publish-checks', {
+        headers,
         data: { siteId: 'default', pageId, locale: 'ko', document: badDoc },
       });
       expect(checksResponse.status()).toBe(200);
@@ -243,10 +256,12 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
         expect.arrayContaining([
           expect.objectContaining({ id: `unsafe-link-button-${token}`, severity: 'blocker' }),
           expect.objectContaining({ id: `image-no-alt-image-${token}`, severity: 'warning' }),
+          expect.objectContaining({ id: 'prerender-ready', severity: 'info' }),
         ]),
       );
 
       const blockedPublishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers,
         data: { expectedDraftRevision: revision },
         failOnStatusCode: false,
       });
@@ -258,12 +273,13 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
 
       const publishedTitle = `Published revision ${token}`;
       const publishedDoc = makeDocument({ token, titleText: publishedTitle });
-      revision = await putDraft(page.request, pageId, revision, publishedDoc);
+      revision = await putDraft(page.request, pageId, revision, publishedDoc, token);
 
       const seoTitle = `W27 SEO title ${token}`;
       const seoDescription = `W27 SEO description ${token} proves that the saved page SEO reaches the public head.`;
       const canonical = `https://tseng-law.com/ko/${slug}`;
       const seoResponse = await page.request.patch(`/api/builder/site/pages/${pageId}/seo?locale=ko`, {
+        headers,
         data: {
           seo: {
             title: seoTitle,
@@ -281,6 +297,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       expect(seoPayload.seo?.canonical).toBe(canonical);
 
       const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers,
         data: { expectedDraftRevision: revision },
       });
       expect(publishResponse.status()).toBe(200);
@@ -288,11 +305,17 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
         ok?: boolean;
         publishedRevisionId?: string;
         publishedRevision?: number;
+        cacheInvalidatedAt?: string;
+        revalidatedPaths?: string[];
         slug?: string;
       };
       expect(published.ok).toBe(true);
       expect(published.publishedRevisionId).toBeTruthy();
       expect(published.slug).toBe(slug);
+      expect(published.cacheInvalidatedAt).toBeTruthy();
+      expect(published.revalidatedPaths ?? []).toEqual(
+        expect.arrayContaining([`/ko/${slug}`, '/sitemap.xml', '/robots.txt']),
+      );
 
       const publicResponse = await page.request.get(`/ko/${slug}`);
       expect(publicResponse.status()).toBe(200);
@@ -307,9 +330,51 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
           failOnStatusCode: false,
         });
       }
+    }
+  });
+
+  test('covers W187 custom robots.txt settings and public route output', async ({ page }) => {
+    const token = `m24-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const settingsResponse = await page.request.get('/api/builder/site/seo-settings?locale=ko', {
+      headers,
+    });
+    expect(settingsResponse.status()).toBe(200);
+    const settingsPayload = (await settingsResponse.json()) as { robotsTxt?: string };
+    const originalRobots = settingsPayload.robotsTxt ?? '';
+    const customRobots = [
+      'User-agent: *',
+      'Allow: /',
+      `Disallow: /${token}-private`,
+      'Crawl-delay: 3',
+      'Sitemap: https://tseng-law.com/custom-sitemap.xml',
+    ].join('\n');
+
+    try {
+      const saveResponse = await page.request.patch('/api/builder/site/seo-settings?locale=ko', {
+        headers,
+        data: { robotsTxt: customRobots },
+      });
+      expect(saveResponse.status()).toBe(200);
+      const savePayload = (await saveResponse.json()) as { robotsTxt?: string; error?: string };
+      expect(savePayload.robotsTxt, savePayload.error).toContain(`/${token}-private`);
+
+      const robotsResponse = await page.request.get('/robots.txt');
+      expect(robotsResponse.status()).toBe(200);
+      const robotsText = await robotsResponse.text();
+      expect(robotsText).toMatch(new RegExp(`Disallow:\\s*/${token}-private`, 'i'));
+      expect(robotsText).toMatch(/Crawl-delay:\s*3/i);
+      expect(robotsText).toContain('https://tseng-law.com/custom-sitemap.xml');
+    } finally {
+      await page.request.patch('/api/builder/site/seo-settings?locale=ko', {
+        headers,
+        data: { robotsTxt: originalRobots },
+        failOnStatusCode: false,
+      });
     }
   });
 
@@ -317,6 +382,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     test.setTimeout(120_000);
 
     const token = `w26w28ui-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
     const slug = `g-editor-${token}`;
     const pageTitle = `G Editor UI ${token}`;
     const originalTitle = `UI original revision ${token}`;
@@ -326,6 +392,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
 
     try {
       const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
         data: {
           locale: 'ko',
           slug,
@@ -340,6 +407,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       expect(pageId).toBeTruthy();
 
       const snapshotResponse = await page.request.post(`/api/builder/site/pages/${pageId}/revisions`, {
+        headers,
         data: { source: 'manual', document: cleanDoc },
       });
       expect(snapshotResponse.status()).toBe(200);
@@ -347,12 +415,13 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       expect(snapshot.ok).toBe(true);
       expect(snapshot.revisionId).toBeTruthy();
 
-      let revision = await currentDraftRevision(page.request, pageId!);
+      let revision = await currentDraftRevision(page.request, pageId!, token);
       revision = await putDraft(
         page.request,
         pageId!,
         revision,
         makeDocument({ token, titleText: changedTitle }),
+        token,
       );
       expect(revision).toBeGreaterThan(0);
 
@@ -374,7 +443,9 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(page.getByText('버전 히스토리')).not.toBeVisible();
       await expect(titleNode).toContainText(originalTitle);
       await expect.poll(async () => {
-        const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
+        const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+          headers,
+        });
         const payload = (await response.json()) as { document?: TestDocument };
         return JSON.stringify(payload.document ?? {});
       }).toContain(originalTitle);
@@ -408,7 +479,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(seoDialog).not.toBeVisible();
       await expect.poll(async () => {
         const response = await page.request.get(`/api/builder/site/pages/${pageId}/seo?locale=ko`, {
-          headers: { Authorization: builderAuthHeader },
+          headers: { ...headers, Authorization: builderAuthHeader },
         });
         if (!response.ok()) return `status:${response.status()}`;
         const payload = (await response.json()) as { seo?: { title?: string; canonical?: string } };
@@ -433,7 +504,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(page.getByText('발행 완료').first()).toBeVisible({ timeout: 15_000 });
       await expect.poll(async () => {
         const response = await page.request.get(`/api/builder/site/pages/${pageId}/seo?locale=ko`, {
-          headers: { Authorization: builderAuthHeader },
+          headers: { ...headers, Authorization: builderAuthHeader },
         });
         if (!response.ok()) return `status:${response.status()}`;
         const payload = (await response.json()) as { seo?: { title?: string; canonical?: string } };
@@ -450,6 +521,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
           failOnStatusCode: false,
         });
       }

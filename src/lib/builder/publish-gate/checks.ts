@@ -17,6 +17,7 @@ import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/can
 import { isLinkSafe, linkValueFromLegacy } from '@/lib/builder/links';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { validateBuilderPageSeo } from '@/lib/builder/seo/validation';
+import { buildSitePagePath } from '@/lib/builder/site/paths';
 
 export type CheckSeverity = 'blocker' | 'warning' | 'info';
 
@@ -294,6 +295,26 @@ export function checkSeoMeta(
     message: issue.message,
     fixHint: issue.fixHint,
   }));
+}
+
+export function checkPrerenderReadiness(page?: BuilderPageMeta | null): CheckResult[] {
+  if (!page) {
+    return [{
+      id: 'prerender-page-meta-missing',
+      severity: 'warning',
+      category: 'performance',
+      message: 'Pre-render 대상 페이지 메타데이터를 확인할 수 없습니다.',
+      fixHint: '페이지 메타데이터를 다시 불러온 뒤 발행 체크를 실행하세요.',
+    }];
+  }
+
+  return [{
+    id: 'prerender-ready',
+    severity: 'info',
+    category: 'performance',
+    message: `Pre-render target ready: ${buildSitePagePath(page.locale, page.slug || '')}`,
+    fixHint: 'Publish will revalidate the page, sitemap.xml, and robots.txt.',
+  }];
 }
 
 export function checkFormTarget(doc: BuilderCanvasDocument): CheckResult[] {

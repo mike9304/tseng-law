@@ -854,3 +854,27 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
 - W 판정:
   - W184/W185 자동검증 evidence 확보. 사용자 직접 QA 전까지 체크포인트는 `자동검증 통과 / 사용자 QA 대기`로 둔다.
+
+## M24 — SEO + Publish maturity
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/app/robots.ts`, `src/lib/builder/seo/robots.ts` — site settings 기반 custom `robots.txt`를 우선 적용하고, 비어 있으면 기존 noindex 기반 자동 robots를 유지한다.
+  - `src/app/api/builder/site/seo-settings/route.ts`, `src/components/builder/seo/SeoDashboardView.tsx` — SEO Tools 탭에 `Custom robots.txt` 편집/저장 UI와 API payload를 추가했다.
+  - `src/lib/builder/site/publish.ts`, `src/app/api/builder/site/pages/[pageId]/publish/route.ts` — publish 결과에 `cacheInvalidatedAt`, `revalidatedPaths`를 노출하고 page/sitemap/robots 경로를 명시 revalidate한다.
+  - `src/lib/builder/publish-gate/checks.ts`, `src/lib/builder/publish-gate/gate-runner.ts` — publish preflight에 `prerender-ready` info check를 추가했다.
+  - `tests/builder-editor/seo-publish-history.playwright.ts` — robots 저장 → `/robots.txt` 반영, `prerender-ready`, publish revalidate evidence, rate-limit bucket isolation을 검증한다.
+  - `src/lib/builder/seo/__tests__/robots.test.ts` — custom robots parser unit coverage를 추가했다.
+  - `src/lib/builder/live-chat/types.ts`, live-chat routes/inbox, `LiveChatWidget.tsx`, `template-selector.ts` — M24 검증 중 발견된 lint-only no-op 정리를 수행했다. visitorToken 제거 helper와 async handler `void` 처리만 포함한다.
+- 이미 존재하던 M24 기반:
+  - sitemap 자동 생성, hreflang 시각화/alternate, redirect manager, canonical, structured data, OG/Twitter preview, VersionHistory rollback/publish preflight는 기존 구현과 `seo-publish-history.playwright.ts`에서 함께 검증된다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/seo/__tests__/robots.test.ts` ✅ (2 passed)
+  - `npm run test:unit` ✅ (855 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts --project=chromium-builder --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run security:builder-routes` ✅ (109 route files / 90 mutation handlers)
+  - `npm run lint` / `npm run build` ⚠️ M24 변경 파일은 통과했으나, 금지된 Bookings M25 영역 `CalendarSyncAdmin.tsx`의 기존 unused setter가 전역 lint/build를 막는다. 해당 한 줄 정리는 M25 Bookings milestone에서 처리한다.
+- W 판정:
+  - W186/W187/W188/W190/W191/W192/W193/W194/W195 자동검증 evidence 확보.
+  - W189 scheduled publish는 현재 master prompt의 M24 구현 범위 밖이며, 별도 publish scheduling milestone로 남긴다.

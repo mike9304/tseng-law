@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { listConversations } from '@/lib/builder/live-chat/storage';
+import { toSafeChatConversation } from '@/lib/builder/live-chat/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -12,7 +13,7 @@ export async function GET(request: NextRequest) {
   // Strip visitorToken from admin payload.
   return NextResponse.json({
     ok: true,
-    conversations: conversations.map(({ visitorToken: _v, ...rest }) => rest),
+    conversations: conversations.map(toSafeChatConversation),
     total: conversations.length,
   });
 }

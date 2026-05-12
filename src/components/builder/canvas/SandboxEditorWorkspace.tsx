@@ -187,7 +187,7 @@ export default function SandboxEditorWorkspace({
               onSetActiveDrawer('nav');
             }}
           >
-            <div className={styles.globalRegionBadge}>
+            <div className={styles.globalRegionBadge} style={{ top: 8 }}>
               <span>Header</span>
               <strong>Menu editable</strong>
               <button

@@ -4549,3 +4549,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts warning + 기존 `<img>` warning only)
 - 체크포인트:
   - W215 자동검증 evidence 확보. M27 W211~W215는 모두 자동검증 통과 상태이며, 실제 Resend provider 발송·수신함 rendering은 사용자/provider QA 대기.
+
+## 2026-05-12 Codex /goal M28 rulers guides grid
+
+- M28 에디터 고도화 1차 slice로 W216~W218을 구현했다.
+- Canvas ruler를 상단/좌측 pixel ruler로 노출하고, ruler 클릭으로 custom vertical/horizontal guide를 생성한다. Guide는 drag/remove 가능한 overlay로 표시되고 editor preferences localStorage에 저장된다.
+- Grid floating toolbar를 추가해 Grid toggle, grid size 입력, `Shift+G` 단축키를 제공한다. Grid size는 canvas background와 snap engine에 반영된다.
+- `computeSnap`이 기존 6px tolerance 흐름에서 grid snap과 reference guide snap을 같이 고려하도록 보강했다.
+- React state updater 내부에서 prefs 저장/브로드캐스트가 일어나던 문제를 제거해 grid toggle이 되돌아가는 경고를 해결했다.
+- Header edit badge가 ruler 클릭을 막던 레이어 충돌을 보정했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/snap.test.ts` ✅ (6 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run security:builder-routes` ✅
+- 체크포인트:
+  - W216/W217/W218 자동검증 evidence 확보. W219~W225는 M28 다음 slice로 계속 진행.

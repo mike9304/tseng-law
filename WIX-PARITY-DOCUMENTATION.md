@@ -1071,3 +1071,21 @@ Created: 2026-05-09T12:52:13.760Z
 - W 판정:
   - W215는 `자동검증 통과 / 사용자·provider QA 대기`로 상향한다. 관리자 편집과 렌더링은 검증했고, 실제 Resend 발송·수신함 렌더링은 provider 환경 QA로 남긴다.
   - M27 W211~W215는 모두 자동검증 evidence를 확보했다.
+
+## M28 — Editor advanced rulers/guides/grid slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/canvas/editor-prefs.ts`, `EditorPrefsButton.tsx` — editor preferences를 document dataset/CSS vars에 적용하고 `builder:editor-prefs-change` 이벤트로 설정 UI와 canvas toolbar를 동기화한다.
+  - `src/components/builder/canvas/CanvasRulers.tsx`, `CustomGuidesOverlay.tsx`, `CanvasContainer.tsx` — 상단/좌측 pixel ruler, ruler click 기반 custom vertical/horizontal guide 생성, guide drag/remove, localStorage persistence를 연결했다.
+  - `src/components/builder/canvas/CanvasStageToolbar.tsx`, `src/lib/builder/canvas/shortcuts.ts`, `hooks/useCanvasKeyboard.ts` — floating toolbar에 Grid toggle/size control을 추가하고 `Shift+G` 단축키를 연결했다.
+  - `src/lib/builder/canvas/snap.ts`, `hooks/useCanvasInteractions.ts` — pixel grid snap과 custom reference guide snap을 기존 6px snap tolerance 경로에 연결했다.
+  - `src/components/builder/canvas/SandboxEditorWorkspace.tsx` — header edit badge가 canvas ruler/floating toolbar를 덮지 않도록 위치를 보정했다.
+  - `src/lib/builder/canvas/__tests__/snap.test.ts`, `tests/builder-editor/editor-guides-grid.playwright.ts` — grid snap, reference guide snap, rulers/grid toggle/grid size/Shift+G/guide persistence를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/snap.test.ts` ✅ (6 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run security:builder-routes` ✅ (113 route files / 93 mutation handlers)
+- W 판정:
+  - W216/W217/W218은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. W219~W225는 다음 M28 slice로 남긴다.

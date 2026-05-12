@@ -1,12 +1,13 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react';
 import AlignmentGuides from '@/components/builder/canvas/AlignmentGuides';
 import CanvasFeedbackOverlay from '@/components/builder/canvas/CanvasFeedbackOverlay';
 import CanvasContextMenuLayer from '@/components/builder/canvas/CanvasContextMenuLayer';
 import CanvasDropHighlight from '@/components/builder/canvas/CanvasDropHighlight';
 import CanvasOverlapPickerLayer from '@/components/builder/canvas/CanvasOverlapPickerLayer';
 import CanvasRulers from '@/components/builder/canvas/CanvasRulers';
+import CustomGuidesOverlay from '@/components/builder/canvas/CustomGuidesOverlay';
 import CanvasSelectionToolbarLayer from '@/components/builder/canvas/CanvasSelectionToolbarLayer';
 import CanvasStageNodes from '@/components/builder/canvas/CanvasStageNodes';
 import CanvasStageToolbar from '@/components/builder/canvas/CanvasStageToolbar';
@@ -31,6 +32,16 @@ import {
   createCanvasNodeTemplate,
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
+import {
+  applyEditorPreferencesToDocument,
+  BUILDER_EDITOR_PREFS_EVENT,
+  DEFAULT_EDITOR_PREFS,
+  loadEditorPreferences,
+  makeGuideId,
+  saveAndBroadcastEditorPreferences,
+  type EditorPreferences,
+  type ReferenceGuide,
+} from '@/lib/builder/canvas/editor-prefs';
 import {
   resolveCanvasNodeAbsoluteRectForViewport,
 } from '@/lib/builder/canvas/tree';
@@ -127,6 +138,8 @@ export default function CanvasContainer({
   const [contextMenu, setContextMenu] = useState<ContextMenuState | null>(null);
   const [overlapPicker, setOverlapPicker] = useState<OverlapPickerState | null>(null);
   const [zoomState, setZoomState] = useState<ZoomState>(() => createDefaultZoomState());
+  const [editorPrefs, setEditorPrefs] = useState<EditorPreferences>(DEFAULT_EDITOR_PREFS);
+  const editorPrefsRef = useRef<EditorPreferences>(DEFAULT_EDITOR_PREFS);
 
   const describeHistorySelection = useCallback(() => {
     const count = useBuilderCanvasStore.getState().selectedNodeIds.length;
@@ -179,6 +192,41 @@ export default function CanvasContainer({
     duplicateSelectedNode();
     onToast?.('Duplicated', 'success');
   }, [duplicateSelectedNode, onToast]);
+
+  const updateEditorPrefs = useCallback((
+    updater: (current: EditorPreferences) => EditorPreferences,
+    options: { persist?: boolean } = {},
+  ) => {
+    const next = updater(editorPrefsRef.current);
+    editorPrefsRef.current = next;
+    setEditorPrefs(next);
+    if (options.persist !== false) {
+      saveAndBroadcastEditorPreferences(next);
+    }
+  }, []);
+
+  const handleToggleGrid = useCallback(() => {
+    updateEditorPrefs((current) => ({
+      ...current,
+      pixelGrid: {
+        ...current.pixelGrid,
+        enabled: !current.pixelGrid.enabled,
+      },
+    }));
+    onActivity?.('Toggled grid snap');
+  }, [onActivity, updateEditorPrefs]);
+
+  const handleGridSizeChange = useCallback((size: number) => {
+    const nextSize = Math.max(4, Math.min(80, Number.isFinite(size) ? Math.round(size / 4) * 4 : 16));
+    updateEditorPrefs((current) => ({
+      ...current,
+      pixelGrid: {
+        ...current.pixelGrid,
+        enabled: true,
+        size: nextSize,
+      },
+    }));
+  }, [updateEditorPrefs]);
 
   const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? EMPTY_CANVAS_NODES);
   const stageWidth = useBuilderCanvasStore(
@@ -251,9 +299,11 @@ export default function CanvasContainer({
     captureInteractionGeometry,
     commitMutationSession,
     currentViewport,
+    gridSnapSize: editorPrefs.pixelGrid.enabled ? editorPrefs.pixelGrid.size : 0,
     nodes,
     nodesById,
     onToast,
+    referenceGuides: editorPrefs.referenceGuides,
     selectedNodeIds,
     setActiveViewport,
     setContextMenu,
@@ -327,6 +377,7 @@ export default function CanvasContainer({
     setOverlapPicker,
     setSelectedNodeIds,
     setZoomState,
+    toggleGrid: handleToggleGrid,
     ungroupSelectedNode,
   });
 
@@ -351,6 +402,22 @@ export default function CanvasContainer({
       resizeObserver?.disconnect();
     };
   }, [fitCanvas, viewportResetKey]);
+
+  useEffect(() => {
+    const loaded = loadEditorPreferences();
+    editorPrefsRef.current = loaded;
+    setEditorPrefs(loaded);
+    applyEditorPreferencesToDocument(loaded);
+
+    function handlePrefsChange(event: Event) {
+      const next = (event as CustomEvent<EditorPreferences>).detail ?? loadEditorPreferences();
+      editorPrefsRef.current = next;
+      setEditorPrefs(next);
+    }
+
+    document.addEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
+    return () => document.removeEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
+  }, []);
 
   useEffect(() => {
     if (!contextMenu) return undefined;
@@ -389,6 +456,81 @@ export default function CanvasContainer({
       y: Math.max(0, Math.min(stageHeight - 48, Math.round(nextPoint.y))),
     };
   }, [zoomState, stageWidth, stageHeight]);
+
+  const resolveCanvasPoint = useCallback((clientX: number, clientY: number): { x: number; y: number } => {
+    const rect = viewportRef.current?.getBoundingClientRect();
+    if (!rect) return { x: 0, y: 0 };
+    const point = screenToCanvas(clientX - rect.left, clientY - rect.top, zoomState);
+    return {
+      x: Math.max(0, Math.min(stageWidth, Math.round(point.x))),
+      y: Math.max(0, Math.min(stageHeight, Math.round(point.y))),
+    };
+  }, [stageHeight, stageWidth, zoomState]);
+
+  const createReferenceGuide = useCallback((axis: ReferenceGuide['axis'], position: number) => {
+    const boundedPosition = axis === 'vertical'
+      ? Math.max(0, Math.min(stageWidth, position))
+      : Math.max(0, Math.min(stageHeight, position));
+    const guide: ReferenceGuide = {
+      id: makeGuideId(),
+      axis,
+      position: boundedPosition,
+      label: `${axis === 'vertical' ? 'X' : 'Y'} ${Math.round(boundedPosition)}px`,
+      color: '#e11d48',
+    };
+    updateEditorPrefs((current) => ({
+      ...current,
+      referenceGuides: [...current.referenceGuides, guide],
+    }));
+    onActivity?.(`Guide added: ${guide.label}`);
+  }, [onActivity, stageHeight, stageWidth, updateEditorPrefs]);
+
+  const removeReferenceGuide = useCallback((guideId: string) => {
+    updateEditorPrefs((current) => ({
+      ...current,
+      referenceGuides: current.referenceGuides.filter((guide) => guide.id !== guideId),
+    }));
+  }, [updateEditorPrefs]);
+
+  const startReferenceGuideDrag = useCallback((guide: ReferenceGuide, event: ReactPointerEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const pointerId = event.pointerId;
+    const moveGuide = (clientX: number, clientY: number) => {
+      const point = resolveCanvasPoint(clientX, clientY);
+      const position = guide.axis === 'vertical'
+        ? Math.max(0, Math.min(stageWidth, point.x))
+        : Math.max(0, Math.min(stageHeight, point.y));
+      updateEditorPrefs((current) => ({
+        ...current,
+        referenceGuides: current.referenceGuides.map((item) => (
+          item.id === guide.id
+            ? {
+                ...item,
+                position,
+                label: `${guide.axis === 'vertical' ? 'X' : 'Y'} ${Math.round(position)}px`,
+              }
+            : item
+        )),
+      }), { persist: false });
+    };
+
+    function handlePointerMove(pointerEvent: PointerEvent) {
+      if (pointerEvent.pointerId !== pointerId) return;
+      moveGuide(pointerEvent.clientX, pointerEvent.clientY);
+    }
+
+    function handlePointerUp(pointerEvent: PointerEvent) {
+      if (pointerEvent.pointerId !== pointerId) return;
+      moveGuide(pointerEvent.clientX, pointerEvent.clientY);
+      saveAndBroadcastEditorPreferences(editorPrefsRef.current);
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+    }
+
+    window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('pointerup', handlePointerUp);
+  }, [resolveCanvasPoint, stageHeight, stageWidth, updateEditorPrefs]);
 
   const resolveViewportPopupPosition = useCallback((clientX: number, clientY: number) => {
     const rect = viewportRef.current?.getBoundingClientRect();
@@ -584,6 +726,8 @@ export default function CanvasContainer({
             aria-label="Canvas editor"
             aria-roledescription="freeform canvas"
             onPointerDownCapture={(event) => {
+              if (event.target instanceof Element && event.target.closest('[data-builder-floating-ui="true"]')) return;
+
               const shouldPan = event.button === 1 || (event.button === 0 && isSpacePressed);
               if (shouldPan) {
                 event.preventDefault();
@@ -611,6 +755,8 @@ export default function CanvasContainer({
               openOverlapPicker(event.clientX, event.clientY, overlapCandidates, 'hint');
             }}
             onPointerDown={(event) => {
+              if (event.target instanceof Element && event.target.closest('[data-builder-floating-ui="true"]')) return;
+
               setContextMenu(null);
               if (event.target === event.currentTarget) {
                 setOverlapPicker(null);
@@ -664,8 +810,33 @@ export default function CanvasContainer({
               setDraftSaveState('saving');
             }}
           >
-            <CanvasRulers stageHeight={stageHeight} stageWidth={stageWidth} />
-            <div className={styles.stageGrid} aria-hidden />
+            {editorPrefs.rulers.enabled ? (
+              <CanvasRulers
+                onCreateGuide={createReferenceGuide}
+                stageHeight={stageHeight}
+                stageWidth={stageWidth}
+                zoom={zoomState.zoom}
+              />
+            ) : null}
+            {editorPrefs.pixelGrid.enabled ? (
+              <div
+                className={styles.stageGrid}
+                data-builder-grid="true"
+                aria-hidden
+                style={{
+                  backgroundImage: `radial-gradient(circle, ${editorPrefs.pixelGrid.color} ${1 / zoomState.zoom}px, transparent ${1 / zoomState.zoom}px)`,
+                  backgroundSize: `${editorPrefs.pixelGrid.size}px ${editorPrefs.pixelGrid.size}px`,
+                  opacity: editorPrefs.pixelGrid.opacity / 100,
+                }}
+              />
+            ) : null}
+            <CustomGuidesOverlay
+              guides={editorPrefs.referenceGuides}
+              onRemoveGuide={removeReferenceGuide}
+              onStartGuideDrag={startReferenceGuideDrag}
+              stageHeight={stageHeight}
+              stageWidth={stageWidth}
+            />
             <AlignmentGuides guides={guides} />
             <CanvasDropHighlight
               absoluteRectById={absoluteRectById}
@@ -692,8 +863,12 @@ export default function CanvasContainer({
             <CanvasStageToolbar
               canRedo={canRedo}
               canUndo={canUndo}
+              gridEnabled={editorPrefs.pixelGrid.enabled}
+              gridSize={editorPrefs.pixelGrid.size}
               handleRedo={handleRedo}
               handleUndo={handleUndo}
+              onGridSizeChange={handleGridSizeChange}
+              onToggleGrid={handleToggleGrid}
               setContextMenu={setContextMenu}
             />
           </div>

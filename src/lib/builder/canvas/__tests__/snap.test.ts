@@ -37,6 +37,29 @@ describe('builder canvas snap engine', () => {
     );
   });
 
+  it('snaps to the configured pixel grid when grid snap is enabled', () => {
+    const moving: Rect = { x: 47, y: 65, width: 160, height: 80 };
+    const result = computeSnap(moving, [], 16, canvas);
+
+    expect(result.snappedRect.x).toBe(48);
+    expect(result.snappedRect.y).toBe(64);
+  });
+
+  it('snaps edges and centers to custom reference guides', () => {
+    const moving: Rect = { x: 245, y: 195, width: 100, height: 80 };
+    const result = computeSnap(moving, [], 0, canvas, [
+      { axis: 'vertical', position: 250 },
+      { axis: 'horizontal', position: 200 },
+    ]);
+
+    expect(result.snappedRect.x).toBe(250);
+    expect(result.snappedRect.y).toBe(200);
+    expect(result.guides).toEqual(expect.arrayContaining([
+      expect.objectContaining({ axis: 'vertical', position: 250 }),
+      expect.objectContaining({ axis: 'horizontal', position: 200 }),
+    ]));
+  });
+
   it('prunes snap candidates outside the active viewport bounds', () => {
     const visiblePeer: Rect = { x: 80, y: 120, width: 160, height: 80 };
     const partiallyVisiblePeer: Rect = { x: 1240, y: 80, width: 120, height: 80 };

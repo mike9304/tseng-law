@@ -28,6 +28,10 @@ export interface SnapResult {
 }
 
 export type SnapCandidateBounds = Rect;
+export interface SnapReferenceGuide {
+  axis: 'horizontal' | 'vertical';
+  position: number;
+}
 
 const SNAP_THRESHOLD = 6;
 const MAX_SPACING_GUIDE_PX = 96;
@@ -133,6 +137,7 @@ export function computeSnap(
   others: Rect[],
   gridSize: number,
   canvasSize: { width: number; height: number },
+  referenceGuides: SnapReferenceGuide[] = [],
 ): SnapResult {
   let { x, y } = moving;
   const guides: AlignmentGuide[] = [];
@@ -185,6 +190,18 @@ export function computeSnap(
     considerY(meEdges.centerY, oe.centerY);
     considerY(meEdges.top, oe.centerY);
     considerY(meEdges.bottom, oe.centerY);
+  }
+
+  for (const guide of referenceGuides) {
+    if (guide.axis === 'vertical') {
+      considerX(meEdges.left, guide.position);
+      considerX(meEdges.right, guide.position);
+      considerX(meEdges.centerX, guide.position);
+    } else {
+      considerY(meEdges.top, guide.position);
+      considerY(meEdges.bottom, guide.position);
+      considerY(meEdges.centerY, guide.position);
+    }
   }
 
   // 3. Canvas center snap
@@ -287,6 +304,54 @@ export function computeSnap(
           gap,
         });
       }
+    }
+  }
+
+  for (const guide of referenceGuides) {
+    if (guide.axis === 'vertical') {
+      addVerticalAlignmentGuide(
+        guides,
+        finalEdges,
+        { left: guide.position, right: guide.position, top: 0, bottom: canvasSize.height, centerX: guide.position, centerY: canvasSize.height / 2 },
+        finalEdges.left,
+        guide.position,
+      );
+      addVerticalAlignmentGuide(
+        guides,
+        finalEdges,
+        { left: guide.position, right: guide.position, top: 0, bottom: canvasSize.height, centerX: guide.position, centerY: canvasSize.height / 2 },
+        finalEdges.right,
+        guide.position,
+      );
+      addVerticalAlignmentGuide(
+        guides,
+        finalEdges,
+        { left: guide.position, right: guide.position, top: 0, bottom: canvasSize.height, centerX: guide.position, centerY: canvasSize.height / 2 },
+        finalEdges.centerX,
+        guide.position,
+      );
+    } else {
+      addHorizontalAlignmentGuide(
+        guides,
+        finalEdges,
+        { left: 0, right: canvasSize.width, top: guide.position, bottom: guide.position, centerX: canvasSize.width / 2, centerY: guide.position },
+        finalEdges.top,
+        guide.position,
+      );
+      addHorizontalAlignmentGuide(
+        guides,
+        finalEdges,
+        { left: 0, right: canvasSize.width, top: guide.position, bottom: guide.position, centerX: canvasSize.width / 2, centerY: guide.position },
+        finalEdges.bottom,
+        guide.position,
+      );
+      addHorizontalAlignmentGuide(
+        guides,
+        finalEdges,
+        { left: 0, right: canvasSize.width, top: guide.position, bottom: guide.position, centerX: canvasSize.width / 2, centerY: guide.position },
+        finalEdges.centerY,
+        guide.position,
+      );
     }
   }
 

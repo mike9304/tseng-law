@@ -21,7 +21,7 @@ import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import { isContainerLikeKind, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { computeSnap } from '@/lib/builder/canvas/snap';
-import type { AlignmentGuide } from '@/lib/builder/canvas/snap';
+import type { AlignmentGuide, SnapReferenceGuide } from '@/lib/builder/canvas/snap';
 import type { ZoomState } from '@/lib/builder/canvas/zoom';
 
 type UseCanvasInteractionsArgs = {
@@ -33,6 +33,7 @@ type UseCanvasInteractionsArgs = {
   captureInteractionGeometry: () => InteractionGeometrySnapshot;
   commitMutationSession: () => void;
   currentViewport: Viewport;
+  gridSnapSize: number;
   nodes: BuilderCanvasNode[];
   nodesById: Map<string, BuilderCanvasNode>;
   onToast?: (message: string, tone: 'success' | 'error') => void;
@@ -53,6 +54,7 @@ type UseCanvasInteractionsArgs = {
   ) => void;
   viewportRef: RefObject<HTMLDivElement | null>;
   visibleNodes: BuilderCanvasNode[];
+  referenceGuides: SnapReferenceGuide[];
   zoomState: ZoomState;
 };
 
@@ -65,6 +67,7 @@ export function useCanvasInteractions({
   captureInteractionGeometry,
   commitMutationSession,
   currentViewport,
+  gridSnapSize,
   nodes,
   nodesById,
   onToast,
@@ -81,6 +84,7 @@ export function useCanvasInteractions({
   updateNodeRectsForViewport,
   viewportRef,
   visibleNodes,
+  referenceGuides,
   zoomState,
 }: UseCanvasInteractionsArgs) {
   const [interaction, setInteraction] = useState<InteractionState>(null);
@@ -210,10 +214,10 @@ export function useCanvasInteractions({
             const parentRect = currentNode.parentId
               ? currentAbsoluteRects.get(currentNode.parentId) ?? null
               : null;
-            const { snappedRect, guides: nextGuides } = computeSnap(tentative, activeInteraction.snapRects, 0, {
+            const { snappedRect, guides: nextGuides } = computeSnap(tentative, activeInteraction.snapRects, gridSnapSize, {
               width: stageWidth,
               height: stageHeight,
-            });
+            }, referenceGuides);
             setGuides(nextGuides);
             updateNodeRectsForViewport(
               new Map([
@@ -457,9 +461,11 @@ export function useCanvasInteractions({
   }, [
     cancelMutationSession,
     commitMutationSession,
+    gridSnapSize,
     interaction,
     moveNodeIntoContainer,
     onToast,
+    referenceGuides,
     setOverlapPicker,
     setActiveViewport,
     setZoomState,

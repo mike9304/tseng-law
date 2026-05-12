@@ -29,6 +29,7 @@ type UseCanvasKeyboardShortcutsArgs = {
   setOverlapPicker: (value: null) => void;
   setSelectedNodeIds: (nodeIds: string[], primaryNodeId?: string | null) => void;
   setZoomState: Dispatch<SetStateAction<ZoomState>>;
+  toggleGrid: () => void;
   ungroupSelectedNode: () => void;
 };
 
@@ -54,6 +55,7 @@ export function useCanvasKeyboardShortcuts({
   setOverlapPicker,
   setSelectedNodeIds,
   setZoomState,
+  toggleGrid,
   ungroupSelectedNode,
 }: UseCanvasKeyboardShortcutsArgs) {
   useEffect(() => {
@@ -106,6 +108,9 @@ export function useCanvasKeyboardShortcuts({
           break;
         case 'zoomReset':
           fitCanvas();
+          break;
+        case 'toggleGrid':
+          toggleGrid();
           break;
         case 'bringForward':
           bringSelectedNodeForward();
@@ -187,6 +192,7 @@ export function useCanvasKeyboardShortcuts({
     setOverlapPicker,
     setSelectedNodeIds,
     setZoomState,
+    toggleGrid,
     ungroupSelectedNode,
   ]);
 }

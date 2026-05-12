@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import {
+  applyEditorPreferencesToDocument,
+  BUILDER_EDITOR_PREFS_EVENT,
   DEFAULT_EDITOR_PREFS,
   loadEditorPreferences,
-  saveEditorPreferences,
+  saveAndBroadcastEditorPreferences,
   type EditorPreferences,
 } from '@/lib/builder/canvas/editor-prefs';
 import styles from './SandboxPage.module.css';
@@ -20,20 +22,20 @@ export default function EditorPrefsButton() {
   const [prefs, setPrefs] = useState<EditorPreferences>(DEFAULT_EDITOR_PREFS);
 
   useEffect(() => {
-    setPrefs(loadEditorPreferences());
+    const loaded = loadEditorPreferences();
+    setPrefs(loaded);
+    applyEditorPreferencesToDocument(loaded);
+    function handlePrefsChange(event: Event) {
+      setPrefs((event as CustomEvent<EditorPreferences>).detail ?? loadEditorPreferences());
+    }
+    document.addEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
+    return () => document.removeEventListener(BUILDER_EDITOR_PREFS_EVENT, handlePrefsChange);
   }, []);
 
   function update(partial: Partial<EditorPreferences>) {
     const next: EditorPreferences = { ...prefs, ...partial };
     setPrefs(next);
-    saveEditorPreferences(next);
-    if (typeof document !== 'undefined') {
-      document.documentElement.dataset.builderOutline = next.outline.enabled ? 'true' : 'false';
-      document.documentElement.dataset.builderPixelGrid = next.pixelGrid.enabled ? 'true' : 'false';
-      document.documentElement.style.setProperty('--builder-pixel-grid-size', `${next.pixelGrid.size}px`);
-      document.documentElement.style.setProperty('--builder-pixel-grid-color', next.pixelGrid.color);
-      document.documentElement.style.setProperty('--builder-pixel-grid-opacity', `${next.pixelGrid.opacity / 100}`);
-    }
+    saveAndBroadcastEditorPreferences(next);
   }
 
   return (
@@ -93,7 +95,7 @@ export default function EditorPrefsButton() {
               checked={prefs.pixelGrid.enabled}
               onChange={(event) => update({ pixelGrid: { ...prefs.pixelGrid, enabled: event.target.checked } })}
             />
-            <span>Pixel grid</span>
+            <span>Pixel grid + snap</span>
           </label>
           <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ flex: 1 }}>Grid size</span>

@@ -24,6 +24,7 @@ export type CanvasAction =
   | 'zoomIn'
   | 'zoomOut'
   | 'zoomReset'
+  | 'toggleGrid'
   | 'bringForward'
   | 'sendBackward'
   | 'bringToFront'
@@ -89,6 +90,9 @@ export function matchShortcut(e: KeyboardEvent): CanvasAction {
   // Help (Cmd+/ or ?)
   if (meta && key === '/') return 'showHelp';
   if (!meta && shift && key === '?') return 'showHelp';
+
+  // Grid
+  if (!meta && shift && key === 'g') return 'toggleGrid';
 
   // Edit link (Cmd+K)
   if (meta && !shift && key === 'k') return 'editLink';

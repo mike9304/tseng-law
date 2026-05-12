@@ -5327,3 +5327,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-runtime.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - PageSwitcher slug prompt 같은 남은 custom dialog를 ModalShell 수준 keyboard/focus로 끌어올린다.
+
+## 2026-05-13 Codex /goal M83 Page slug prompt focus trap
+
+- Page/template 생성 slug prompt는 custom dialog였고, 템플릿 적용 후 “다른 템플릿 선택” back path와 함께 쓰이는 핵심 흐름인데 Escape/Tab trap/외부 focus 차단이 없었다.
+- `PageSwitcher` slug prompt에 initial focus, Tab/Shift+Tab wrap, 외부 focus probe 차단, body scroll lock, Escape close를 추가했다. 기존 “다른 템플릿 선택” 버튼은 gallery/search 복귀 동작을 유지했다.
+- Playwright는 Add 패널에서 법률 page template을 선택하고 template preview의 `이 템플릿 사용`으로 slug prompt를 연 뒤, input initial focus, Shift+Tab create button wrap, 외부 focus 차단, Escape close를 검증한다.
+- 기존 duplicate slug error 뒤 “다른 템플릿 선택” back path 테스트와 전체 `section-template-click` suite도 통과했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "traps focus in the page template slug prompt" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "keeps the page template creation prompt usable" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (11 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 남은 custom dialog/overlay 중 ModalShell 미사용 경로를 계속 줄이고, editor/public smoke를 다시 묶어본다.

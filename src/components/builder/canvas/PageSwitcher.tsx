@@ -1,9 +1,19 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import TemplateGalleryModal from './TemplateGalleryModal';
+
+const FOCUSABLE_SELECTOR = [
+  'a[href]:not([tabindex="-1"])',
+  'button:not([disabled]):not([tabindex="-1"])',
+  'input:not([disabled]):not([tabindex="-1"]):not([type="hidden"])',
+  'select:not([disabled]):not([tabindex="-1"])',
+  'textarea:not([disabled]):not([tabindex="-1"])',
+  '[tabindex]:not([tabindex="-1"])',
+  '[contenteditable="true"]:not([tabindex="-1"])',
+].join(',');
 
 interface PageMeta {
   pageId: string;
@@ -362,6 +372,9 @@ export default function PageSwitcher({
   const [submittingPageId, setSubmittingPageId] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const titleInputRef = useRef<HTMLInputElement | null>(null);
+  const slugPromptRef = useRef<HTMLDivElement | null>(null);
+  const slugPromptRestoreFocusRef = useRef<HTMLElement | null>(null);
+  const slugPromptClosingRef = useRef(false);
   const columnsPage = pages.find((page) => page.slug === 'columns') ?? null;
 
   const fetchPages = useCallback(async (): Promise<PageMeta[]> => {
@@ -428,6 +441,12 @@ export default function PageSwitcher({
     setPendingTemplateName(null);
   };
 
+  const closeSlugPrompt = useCallback(() => {
+    setShowSlugPrompt(false);
+    clearPendingTemplate();
+    setAddToNavigation(true);
+  }, []);
+
   const handleTemplateSelect = (templateDocument: BuilderCanvasDocument | null, templateName?: string) => {
     setPendingTemplate(templateDocument);
     setPendingTemplateName(templateName?.trim() || null);
@@ -436,6 +455,90 @@ export default function PageSwitcher({
     setShowGallery(false);
     setShowSlugPrompt(true);
   };
+
+  useLayoutEffect(() => {
+    if (!showSlugPrompt) return undefined;
+    slugPromptClosingRef.current = false;
+    slugPromptRestoreFocusRef.current = (document.activeElement as HTMLElement | null) ?? null;
+    const dialog = slugPromptRef.current;
+    if (dialog) {
+      const focusables = dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      (focusables[0] ?? dialog).focus({ preventScroll: true });
+    }
+    return () => {
+      slugPromptClosingRef.current = true;
+      const previous = slugPromptRestoreFocusRef.current;
+      if (!previous || typeof previous.focus !== 'function') return;
+      try {
+        previous.focus({ preventScroll: true });
+      } catch {
+        // Ignore detached focus targets.
+      }
+    };
+  }, [showSlugPrompt]);
+
+  useEffect(() => {
+    if (!showSlugPrompt) return undefined;
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        closeSlugPrompt();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const dialog = slugPromptRef.current;
+      if (!dialog) return;
+      const focusables = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
+        .filter((node) => !node.hasAttribute('disabled') && node.tabIndex !== -1);
+      if (focusables.length === 0) {
+        event.preventDefault();
+        dialog.focus({ preventScroll: true });
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (event.shiftKey) {
+        if (active === first || active === dialog) {
+          event.preventDefault();
+          last.focus({ preventScroll: true });
+        }
+        return;
+      }
+      if (active === last) {
+        event.preventDefault();
+        first.focus({ preventScroll: true });
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown, true);
+    return () => window.removeEventListener('keydown', handleKeyDown, true);
+  }, [closeSlugPrompt, showSlugPrompt]);
+
+  useEffect(() => {
+    if (!showSlugPrompt) return undefined;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [showSlugPrompt]);
+
+  useEffect(() => {
+    if (!showSlugPrompt) return undefined;
+    function handleFocusIn(event: FocusEvent) {
+      if (slugPromptClosingRef.current) return;
+      const dialog = slugPromptRef.current;
+      if (!dialog || !event.target || dialog.contains(event.target as Node)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const focusables = dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      (focusables[0] ?? dialog).focus({ preventScroll: true });
+    }
+    document.addEventListener('focusin', handleFocusIn);
+    return () => document.removeEventListener('focusin', handleFocusIn);
+  }, [showSlugPrompt]);
 
   const handleCreatePage = async () => {
     if (creating) return;
@@ -802,13 +905,14 @@ export default function PageSwitcher({
           }}
           onClick={(event) => {
             if (event.target === event.currentTarget) {
-              setShowSlugPrompt(false);
-              clearPendingTemplate();
-              setAddToNavigation(true);
+              closeSlugPrompt();
             }
           }}
         >
           <div
+            ref={slugPromptRef}
+            tabIndex={-1}
+            data-builder-slug-prompt-dialog="true"
             style={{
               background: '#fff',
               borderRadius: 16,
@@ -910,9 +1014,7 @@ export default function PageSwitcher({
               <button
                 type="button"
                 onClick={() => {
-                  setShowSlugPrompt(false);
-                  clearPendingTemplate();
-                  setAddToNavigation(true);
+                  closeSlugPrompt();
                 }}
                 style={{ padding: '6px 16px', background: '#f1f5f9', color: '#334155', border: '1px solid #cbd5e1', borderRadius: 8, fontSize: '0.82rem', cursor: 'pointer' }}
               >

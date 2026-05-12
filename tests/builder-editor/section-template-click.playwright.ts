@@ -275,6 +275,60 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(gallery).toBeHidden();
   });
 
+  test('traps focus in the page template slug prompt and closes with Escape', async ({ page }) => {
+    const token = Date.now().toString(36);
+    await openBuilder(page, `/ko/admin-builder?slugPromptFocus=${token}`);
+    await page.keyboard.press('Escape');
+
+    try {
+      const catalogDrawer = await openCatalogDrawer(page);
+      const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+      await addSearch.fill('법률');
+      const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
+      const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
+      await expect(lawHomeResult).toContainText('법률사무소 홈');
+      await lawHomeResult.click();
+
+      const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
+      await expect(gallery).toBeVisible();
+      await gallery.getByRole('button', { name: '법률사무소 홈 미리보기' }).click();
+      const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+      await expect(preview).toBeVisible();
+      await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
+
+      const slugPrompt = page.getByRole('dialog', { name: '페이지 slug 입력' });
+      const slugInput = slugPrompt.getByPlaceholder('예: about, services, contact');
+      const createButton = slugPrompt.getByRole('button', { name: '생성' });
+      await expect(slugPrompt).toBeVisible();
+      await expect(slugInput).toBeFocused();
+
+      await page.keyboard.press('Shift+Tab');
+      await expect(createButton).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(slugInput).toBeFocused();
+
+      await page.evaluate(() => {
+        const outsideButton = document.createElement('button');
+        outsideButton.type = 'button';
+        outsideButton.dataset.builderSlugPromptOutsideFocusProbe = 'true';
+        outsideButton.textContent = 'outside slug prompt focus probe';
+        document.body.appendChild(outsideButton);
+        outsideButton.focus();
+      });
+      await expect(slugInput).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(slugPrompt).toBeHidden();
+      await expect.poll(() => page.evaluate(() => (
+        Boolean(document.activeElement?.closest('[data-builder-slug-prompt-dialog="true"]'))
+      ))).toBe(false);
+    } finally {
+      await page.evaluate(() => {
+        document.querySelector('[data-builder-slug-prompt-outside-focus-probe="true"]')?.remove();
+      }).catch(() => undefined);
+    }
+  });
+
   test('creates and selects a real page from a page template', async ({ page }) => {
     test.setTimeout(90_000);
 

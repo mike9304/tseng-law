@@ -5595,3 +5595,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - remaining published widgets의 keyboard path와 public/editor parity 회귀를 계속 줄인다.
+
+## 2026-05-13 Codex /goal M102 Published disclosure aria wiring
+
+- `PublishedInteractions`의 services/FAQ disclosure enhancer는 role/button, tabindex, Enter/Space 토글은 제공했지만 toggle과 panel 연결(`aria-controls`)과 panel visibility state(`aria-hidden`)가 빠져 있었다.
+- service body와 FAQ answer에 stable fallback id를 보장하고, toggle/question에 `aria-controls`를 연결했다. open/close 상태가 바뀔 때 body/answer의 `aria-hidden`도 `aria-expanded`와 같이 동기화한다.
+- Playwright는 기존 published services/FAQ 테스트를 click 중심에서 keyboard 중심으로 확장했다. Enter/Space 토글, role/tabindex, aria-controls, aria-hidden, single-open service behavior를 함께 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/PublishedInteractions.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "services and FAQ" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - remaining published widgets의 keyboard/state evidence와 editor-public parity 회귀를 계속 줄인다.

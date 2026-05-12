@@ -2205,3 +2205,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W98/W100/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. published site-search 결과가 mouse-only dropdown에 머물지 않고 키보드로 이동/닫기/복귀되는 경로를 확보했다.
+
+## M102 — Published disclosure aria wiring
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/published/PublishedInteractions.tsx` — published services/FAQ disclosure enhancer가 toggle과 body/answer를 `aria-controls`로 연결하고, body/answer `aria-hidden`을 expanded 상태와 동기화한다. 기존 Enter/Space/click 토글 동작은 유지했다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — services/FAQ published interaction 검증을 click 중심에서 Enter/Space keyboard와 role/tabindex/aria-controls/aria-hidden 상태 확인까지 확장했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/PublishedInteractions.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "services and FAQ" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W84/W98/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자 제보가 있었던 주요업무/FAQ disclosure 계열 텍스트 유지 경로에 keyboard+a11y state evidence를 추가했다.

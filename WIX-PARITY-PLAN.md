@@ -103,3 +103,4 @@
 | M99 | QA     | Public mobile drawer focus trap | W40,W99,W216,W225 | 1h | M98 | 🟡 legacy public mobile drawer focus trap/Escape/restore 자동검증 통과 / 사용자 QA 대기 |
 | M100 | QA    | Public year-end popup focus trap | W98,W216,W225 | 1h | M99 | 🟡 event popup focus trap/scope guard 자동검증 통과 / 사용자 QA 대기 |
 | M101 | QA    | Published site-search keyboard results | W98,W100,W216,W225 | 1h | M100 | 🟡 inline search listbox keyboard 자동검증 통과 / 사용자 QA 대기 |
+| M102 | QA    | Published disclosure aria wiring | W18,W84,W98,W216 | 1h | M101 | 🟡 services/FAQ disclosure keyboard+aria 자동검증 통과 / 사용자 QA 대기 |

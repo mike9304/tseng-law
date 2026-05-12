@@ -1667,3 +1667,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 템플릿 적용 직후 실패해도 사용자가 처음부터 다시 찾지 않고 바로 수정/뒤로가기를 할 수 있게 했다.
+
+## M64 — Page template create success persistence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/TemplateGalleryModal.tsx` — template select callback에 template name을 함께 전달한다.
+  - `src/components/builder/canvas/PageSwitcher.tsx` — 선택한 page template으로 새 페이지를 만들 때 title을 slug가 아니라 template name으로 저장한다. 성공 시에만 pending template/name을 정리한다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — `법률사무소 홈` page template으로 실제 페이지를 생성하고, editor canvas 전환, pages API title, draft API 저장 문서까지 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. page template showroom에서 고른 템플릿이 새 페이지 title과 draft document로 실제 저장되는 성공 path를 자동검증으로 고정했다.

@@ -5080,3 +5080,14 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 템플릿 생성 성공 후 새 페이지 선택/저장 persistence와 W216~W225 editor 고도화 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M64 Page template create success persistence
+
+- page template 생성 성공 path를 실제 UI+API로 고정했다.
+- `TemplateGalleryModal`이 선택한 template name을 `PageSwitcher`에 넘기고, 새 페이지 title은 slug 대신 template name(`법률사무소 홈`)을 사용한다. 빈 페이지는 기존처럼 slug title을 유지한다.
+- Playwright는 Add 패널에서 `법률` 검색 → `법률사무소 홈` preview → slug 입력 → 생성 → 새 canvas에 template text 표시 → pages API title 확인 → draft API에 template document 저장 확인까지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - W216~W225 editor 고도화와 템플릿/페이지 전환 실사용 회귀를 계속 재스캔한다.

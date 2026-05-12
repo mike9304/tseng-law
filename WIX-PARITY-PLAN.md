@@ -65,3 +65,4 @@
 | M61 | QA     | Initial draft overwrite guard | W18,W84,W216 | 1h | M57 | 🟡 템플릿 삽입 직후 초기 draft overwrite 회귀 자동검증 통과 / 사용자 QA 대기 |
 | M62 | QA     | Design panel template discovery | W14,W18,W216 | 1h | M61 | 🟡 Design 패널 섹션/페이지 템플릿 발견성 자동검증 통과 / 사용자 QA 대기 |
 | M63 | QA     | Page template create retry state | W14,W18,W216 | 1h | M62 | 🟡 템플릿 페이지 생성 실패 후 재시도/뒤로가기 상태 자동검증 통과 / 사용자 QA 대기 |
+| M64 | QA     | Page template create success persistence | W14,W18,W216 | 1h | M63 | 🟡 템플릿 페이지 생성 성공/선택/draft 저장 자동검증 통과 / 사용자 QA 대기 |

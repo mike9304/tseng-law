@@ -350,6 +350,7 @@ export default function PageSwitcher({
   const [templateGalleryOpenSearch, setTemplateGalleryOpenSearch] = useState(templateGalleryInitialSearch.trim());
   const [templateGalleryLastSearch, setTemplateGalleryLastSearch] = useState(templateGalleryInitialSearch.trim());
   const [pendingTemplate, setPendingTemplate] = useState<BuilderCanvasDocument | null | undefined>(undefined);
+  const [pendingTemplateName, setPendingTemplateName] = useState<string | null>(null);
   const [slugInput, setSlugInput] = useState('');
   const [showSlugPrompt, setShowSlugPrompt] = useState(false);
   const [hoveredPageId, setHoveredPageId] = useState<string | null>(null);
@@ -421,8 +422,14 @@ export default function PageSwitcher({
     return () => window.removeEventListener('click', handleWindowClick, true);
   }, [openMenuPageId]);
 
-  const handleTemplateSelect = (templateDocument: BuilderCanvasDocument | null) => {
+  const clearPendingTemplate = () => {
+    setPendingTemplate(undefined);
+    setPendingTemplateName(null);
+  };
+
+  const handleTemplateSelect = (templateDocument: BuilderCanvasDocument | null, templateName?: string) => {
     setPendingTemplate(templateDocument);
+    setPendingTemplateName(templateName?.trim() || null);
     setSlugInput('');
     setShowGallery(false);
     setShowSlugPrompt(true);
@@ -441,7 +448,7 @@ export default function PageSwitcher({
         body: JSON.stringify({
           locale,
           slug,
-          title: slug,
+          title: pendingTemplateName ?? slug,
           ...(pendingTemplate ? { document: pendingTemplate } : { blank: true }),
         }),
       });
@@ -455,7 +462,7 @@ export default function PageSwitcher({
         }
         await fetchPages();
         setShowSlugPrompt(false);
-        setPendingTemplate(undefined);
+        clearPendingTemplate();
         setSlugInput('');
         onSelectPage(nextPageId, data.page?.slug);
       } else {
@@ -768,7 +775,7 @@ export default function PageSwitcher({
         <TemplateGalleryModal
           initialSearch={templateGalleryOpenSearch}
           onSearchChange={handleTemplateGallerySearchChange}
-          onSelect={(doc) => handleTemplateSelect(doc)}
+          onSelect={(doc, templateName) => handleTemplateSelect(doc, templateName)}
           onClose={() => setShowGallery(false)}
         />
       ) : null}
@@ -792,7 +799,7 @@ export default function PageSwitcher({
           onClick={(event) => {
             if (event.target === event.currentTarget) {
               setShowSlugPrompt(false);
-              setPendingTemplate(undefined);
+              clearPendingTemplate();
             }
           }}
         >
@@ -856,7 +863,7 @@ export default function PageSwitcher({
                   data-builder-page-template-back="true"
                   onClick={() => {
                     setShowSlugPrompt(false);
-                    setPendingTemplate(undefined);
+                    clearPendingTemplate();
                     setTemplateGalleryOpenSearch(templateGalleryLastSearch);
                     setShowGallery(true);
                   }}
@@ -869,7 +876,7 @@ export default function PageSwitcher({
                 type="button"
                 onClick={() => {
                   setShowSlugPrompt(false);
-                  setPendingTemplate(undefined);
+                  clearPendingTemplate();
                 }}
                 style={{ padding: '6px 16px', background: '#f1f5f9', color: '#334155', border: '1px solid #cbd5e1', borderRadius: 8, fontSize: '0.82rem', cursor: 'pointer' }}
               >

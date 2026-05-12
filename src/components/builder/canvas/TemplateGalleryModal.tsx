@@ -524,7 +524,7 @@ export default function TemplateGalleryModal({
 }: {
   initialSearch?: string;
   onSearchChange?: (query: string) => void;
-  onSelect: (document: BuilderCanvasDocument | null) => void;
+  onSelect: (document: BuilderCanvasDocument | null, templateName?: string) => void;
   onClose: () => void;
 }) {
   const [activeCategory, setActiveCategory] = useState<TemplateCategoryKey>('all');
@@ -581,7 +581,7 @@ export default function TemplateGalleryModal({
   const showFeatured = activeCategory === 'all' && searchQuery.length === 0 && !hasFilters;
 
   const selectTemplate = (template: PageTemplate) => {
-    onSelect(cloneTemplateDocument(template.document));
+    onSelect(cloneTemplateDocument(template.document), template.name);
   };
 
   const updateFilter = <K extends keyof TemplateFilterState>(key: K, value: TemplateFilterState[K]) => {

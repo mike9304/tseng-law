@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/locales';
 import { siteContent, type SiteContent } from '@/data/site-content';
@@ -21,6 +21,8 @@ export default function QuickContactWidget({
   // Start closed to match SSR, then sync with localStorage on mount
   const [chatOpen, setChatOpen] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement | null>(null);
+  const restoreToggleOnCloseRef = useRef(false);
   const toggleText =
     locale === 'ko' ? 'AI 상담' : locale === 'zh-hant' ? 'AI 諮詢' : 'AI Chat';
 
@@ -41,6 +43,7 @@ export default function QuickContactWidget({
   }, [isUtilityPage]);
 
   const handleClose = () => {
+    restoreToggleOnCloseRef.current = true;
     setChatOpen(false);
     try {
       window.localStorage.setItem(STORAGE_KEY, 'true');
@@ -50,6 +53,7 @@ export default function QuickContactWidget({
   };
 
   const handleOpen = () => {
+    restoreToggleOnCloseRef.current = false;
     setChatOpen(true);
     try {
       window.localStorage.setItem(STORAGE_KEY, 'false');
@@ -57,6 +61,15 @@ export default function QuickContactWidget({
       /* ignore */
     }
   };
+
+  useEffect(() => {
+    if (chatOpen || !restoreToggleOnCloseRef.current) return undefined;
+    restoreToggleOnCloseRef.current = false;
+    const frame = window.requestAnimationFrame(() => {
+      toggleRef.current?.focus({ preventScroll: true });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [chatOpen]);
 
   // Avoid flashing the toggle button before hydration determines state.
   if (!hydrated) {
@@ -72,6 +85,7 @@ export default function QuickContactWidget({
       {!chatOpen && (
         <div className="quick-contact" data-visible="true">
           <button
+            ref={toggleRef}
             type="button"
             className="quick-contact-toggle"
             aria-label={resolvedContent.buttonLabel}

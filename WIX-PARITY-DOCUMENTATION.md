@@ -2145,3 +2145,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public live chat panel에서 focus가 배경으로 새거나 닫힌 뒤 bubble 위치를 잃는 경로를 닫았다.
+
+## M98 — Public AI chat keyboard path guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/FloatingAiChat.tsx` — public AI chat dialog 내부에서 Tab/Shift+Tab 순환과 Escape close를 처리한다. builder-published route에서 legacy chrome이 CSS로 숨겨져도 hidden dialog가 Escape를 가로채지 않도록 visible rect guard를 추가했다.
+  - `src/components/QuickContactWidget.tsx` — AI chat close 후 새로 렌더된 quick-contact toggle button으로 focus를 명시 복귀시킨다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — legacy public `/ko`에서 AI chat keyboard open, focus wrap, Escape close, trigger focus restore를 검증하고, full published interaction suite에서 hidden legacy chrome이 builder-published overlays를 방해하지 않는지 함께 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/FloatingAiChat.tsx src/components/QuickContactWidget.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "public AI chat" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (10 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public AI chat에서 keyboard 위치를 잃는 경로와 hidden legacy dialog가 published overlay Escape를 가로채는 충돌을 닫았다.

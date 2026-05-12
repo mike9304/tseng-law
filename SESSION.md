@@ -5537,3 +5537,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - public quick-contact/floating AI chat 또는 남은 published widget click path를 계속 점검한다.
+
+## 2026-05-13 Codex /goal M98 Public AI chat keyboard path guard
+
+- `FloatingAiChat`은 `role="dialog"`지만 내부 keyboard wrap과 close 후 quick-contact toggle focus restore가 없었다.
+- AI chat은 첫 방문 기본 open floating panel이라 페이지 전체를 막는 modal trap으로 바꾸지는 않고, focus가 panel 내부에 있을 때 Tab/Shift+Tab 순환과 Escape close를 처리하도록 했다.
+- `QuickContactWidget`은 close 후 새로 렌더되는 toggle button으로 focus를 명시 복귀시킨다.
+- 첫 full published regression에서 builder-published route에서도 legacy chrome의 숨겨진 `FloatingAiChat`이 mount되어 Escape capture를 가로채는 실제 충돌을 발견했다. dialog가 CSS로 숨겨져 visible rect가 없으면 focus/keyboard handler가 동작하지 않도록 guard했다.
+- Playwright는 legacy public `/ko`에서 AI chat keyboard open, focus wrap, Escape close와 toggle focus restore를 검증하고, published interaction full suite로 hidden legacy chrome이 builder-published overlays를 방해하지 않는지 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/FloatingAiChat.tsx src/components/QuickContactWidget.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "public AI chat" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (10 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - public non-builder mobile drawer/search 또는 published widget click path에서 남은 keyboard collision을 계속 줄인다.

@@ -1113,6 +1113,38 @@ test.describe('/ko published builder interactions', () => {
     }
   });
 
+  test('keeps the public AI chat keyboard path stable', async ({ page }) => {
+    try {
+      await page.addInitScript(() => window.localStorage.setItem('hojeong-ai-chat-collapsed', 'true'));
+      await page.goto('/ko', { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const trigger = page.getByRole('button', { name: '빠른 상담 열기' });
+      await expect(trigger).toBeVisible();
+      await trigger.focus();
+      await expect(trigger).toBeFocused();
+      await trigger.press('Enter');
+
+      const dialog = page.getByRole('dialog', { name: 'AI 상담사' });
+      await expect(dialog).toBeVisible();
+      const input = dialog.getByPlaceholder('질문을 입력해 주세요...');
+      await expect(input).toBeFocused();
+
+      const closeButton = dialog.getByRole('button', { name: '닫기' });
+      await closeButton.focus();
+      await page.keyboard.press('Shift+Tab');
+      await expect(input).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(closeButton).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(dialog).toHaveCount(0);
+      await expect(trigger).toBeFocused();
+    } finally {
+      await page.evaluate(() => window.localStorage.removeItem('hojeong-ai-chat-collapsed')).catch(() => undefined);
+    }
+  });
+
   test('opens the published menu bar dropdown and mobile menu from keyboard', async ({ page }) => {
     const token = Date.now().toString(36);
     const slug = `g-editor-menu-bar-${token}`;

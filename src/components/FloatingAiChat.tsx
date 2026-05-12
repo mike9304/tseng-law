@@ -515,9 +515,11 @@ export default function FloatingAiChat({
   const [feedbackNotice, setFeedbackNotice] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (open && inputRef.current) {
+      if (dialogRef.current && dialogRef.current.getClientRects().length === 0) return;
       inputRef.current.focus();
     }
   }, [open]);
@@ -547,11 +549,36 @@ export default function FloatingAiChat({
 
   useEffect(() => {
     if (!open) return;
-    const onEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+    const getFocusable = () => Array.from(
+      dialogRef.current?.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ) ?? [],
+    ).filter((element) => element.getClientRects().length > 0);
+    const onKeyDown = (e: KeyboardEvent) => {
+      const dialog = dialogRef.current;
+      if (!dialog || dialog.getClientRects().length === 0) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        onClose();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      if (!dialog.contains(document.activeElement)) return;
+      const focusable = getFocusable();
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus({ preventScroll: true });
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus({ preventScroll: true });
+      }
     };
-    window.addEventListener('keydown', onEscape);
-    return () => window.removeEventListener('keydown', onEscape);
+    document.addEventListener('keydown', onKeyDown, true);
+    return () => document.removeEventListener('keydown', onKeyDown, true);
   }, [open, onClose]);
 
   // Hydrate persisted feedback for this session on first render.
@@ -887,9 +914,9 @@ export default function FloatingAiChat({
 
   return (
     <div
+      ref={dialogRef}
       className="floating-ai-chat"
       role="dialog"
-      aria-modal="true"
       aria-label={copy.title}
     >
       <div className="floating-ai-chat-header">

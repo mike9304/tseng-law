@@ -43,6 +43,10 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     status: parsed.data.status || existing.status,
     customer: { ...existing.customer, ...parsed.data.customer },
     customerTimezone: parsed.data.customerTimezone ?? existing.customerTimezone,
+    cancellationReason: parsed.data.cancellationReason ?? existing.cancellationReason,
+    cancelledAt: parsed.data.status === 'cancelled'
+      ? existing.cancelledAt ?? new Date().toISOString()
+      : existing.cancelledAt,
   }, existing.createdAt);
   await saveBooking(next);
   return NextResponse.json({ booking: next });

@@ -903,3 +903,26 @@ Created: 2026-05-09T12:52:13.760Z
   - 결제는 옵션 C 하이브리드 기본으로 구현했다. 무료 서비스는 바로 예약되고, 유료 서비스는 기존 Stripe Payment Intent route를 선행 호출한 뒤 booking row를 저장한다. 로컬 개발 환경은 `pi_stub_dev` stub으로 E2E를 통과한다.
   - 실제 Stripe Payment Element 확인, 환불/리스케줄/취소 정책, calendar 양방향/Zoom 알림 심화는 M26~M27 Bookings 후속에서 계속 진행한다.
   - 사용자 직접 QA 전까지 체크포인트는 `자동검증 통과 / 사용자 QA 대기`로 둔다.
+
+## M26 — Bookings 본격 2 partial (운영 대시보드/상태/리스케줄)
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/app/(builder)/[locale]/admin-builder/bookings/dashboard/page.tsx`, `src/components/builder/bookings/BookingDashboardAdmin.tsx` — Wix Bookings형 admin dashboard를 추가했다. 검색, 상태/staff/service/date 필터, 예약 상세 modal, 리스케줄, status transition, no-show 처리, timeline을 제공한다.
+  - `src/components/builder/bookings/BookingCalendarAdmin.tsx` — Calendar 화면에 Month/Week/List view 전환을 추가했다.
+  - `src/components/builder/bookings/BookingServicesAdmin.tsx`, `src/lib/builder/bookings/types.ts` — service 편집에 `meetingMode`와 `cancellationPolicyId`를 노출하고 API schema에 저장한다.
+  - `src/app/api/builder/bookings/[id]/route.ts` — admin booking update가 cancellation reason/cancelledAt을 보존한다.
+  - `src/lib/builder/bookings/notifications.ts` — meeting link가 생성된 booking은 confirmation email summary에도 링크를 포함한다.
+  - `tests/builder-editor/bookings-m26-dashboard.playwright.ts` — service meeting/cancel policy 저장, dashboard filter/search, no-show, reschedule, confirm, calendar Month/Week/List 전환을 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅ (기존 `<img>` warnings only)
+  - `npm run security:builder-routes` ✅ (109 route files / 90 mutation handlers)
+  - `npx vitest run src/lib/builder/bookings/__tests__/availability.test.ts src/lib/builder/bookings/calendar-sync/__tests__/encryption.test.ts` ✅ (6 passed)
+  - `npm run test:unit` ✅ (858 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m26-dashboard.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run build` ✅ (Google Fonts stylesheet download warning + 기존 `<img>` warnings only)
+- W 판정:
+  - Master prompt 기준 W205/W206/W207/W208/W209/W210의 운영 UI 핵심 자동검증 evidence 확보.
+  - 외부 provider가 필요한 실제 Resend/SMTP 수신, Twilio SMS 수신, Zoom OAuth 실계정 생성, Google Calendar 양방향 pull, 고객 토큰 기반 cancel/reschedule link, Stripe Payment Element/환불 end-to-end는 후속 M26 slice로 남긴다.
+  - 사용자 직접 QA 전까지 체크포인트는 `부분 자동검증 통과 / provider·고객 링크 후속`으로 둔다.

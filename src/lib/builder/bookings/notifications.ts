@@ -46,6 +46,7 @@ function bookingSummaryHtml(booking: Booking, service?: BookingService | null, s
     <p><strong>Service</strong>: ${escapeHtml(textForLocale(service?.name, locale) || booking.serviceId)}</p>
     <p><strong>Staff</strong>: ${escapeHtml(textForLocale(staff?.name, locale) || booking.staffId)}</p>
     <p><strong>Time</strong>: ${escapeHtml(new Date(booking.startAt).toLocaleString(locale))}</p>
+    ${booking.meetingLink ? `<p><strong>Meeting link</strong>: <a href="${escapeHtml(booking.meetingLink)}">${escapeHtml(booking.meetingLink)}</a></p>` : ''}
     ${booking.customerTimezone ? `<p><strong>Customer timezone</strong>: ${escapeHtml(booking.customerTimezone)}</p>` : ''}
     <p><strong>Name</strong>: ${escapeHtml(booking.customer.name)}</p>
     <p><strong>Email</strong>: ${escapeHtml(booking.customer.email)}</p>

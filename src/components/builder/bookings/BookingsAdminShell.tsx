@@ -4,6 +4,7 @@ import type { Locale } from '@/lib/locales';
 import styles from './BookingsAdmin.module.css';
 
 const navItems = [
+  { key: 'dashboard', label: 'Dashboard', href: 'dashboard' },
   { key: 'services', label: 'Services', href: 'services' },
   { key: 'staff', label: 'Staff', href: 'staff' },
   { key: 'calendar', label: 'Calendar', href: 'calendar' },
@@ -17,7 +18,7 @@ export default function BookingsAdminShell({
   children,
 }: {
   locale: Locale;
-  active: 'services' | 'staff' | 'calendar';
+  active: 'dashboard' | 'services' | 'staff' | 'calendar';
   title: string;
   subtitle: string;
   children: ReactNode;

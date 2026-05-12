@@ -7,6 +7,7 @@ import type { Locale } from '@/lib/locales';
 import styles from './BookingsAdmin.module.css';
 
 const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+type CalendarViewMode = 'month' | 'week' | 'list';
 
 function monthKey(date: Date): string {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
@@ -31,6 +32,19 @@ function dateKey(date: Date): string {
   return date.toISOString().slice(0, 10);
 }
 
+function weekCells(month: string): Date[] {
+  const [year, monthNumber] = month.split('-').map(Number);
+  const today = new Date();
+  const anchor = monthKey(today) === month ? today : new Date(year, (monthNumber || 1) - 1, 1);
+  const start = new Date(anchor);
+  start.setDate(anchor.getDate() - anchor.getDay());
+  return Array.from({ length: 7 }, (_, index) => {
+    const date = new Date(start);
+    date.setDate(start.getDate() + index);
+    return date;
+  });
+}
+
 function localDateTime(iso: string): string {
   return new Date(iso).toLocaleString();
 }
@@ -50,8 +64,10 @@ export default function BookingCalendarAdmin({
   const [selectedEntry, setSelectedEntry] = useState<CalendarEntry | null>(null);
   const [staffFilter, setStaffFilter] = useState('');
   const [month, setMonth] = useState(monthKey(new Date()));
+  const [viewMode, setViewMode] = useState<CalendarViewMode>('month');
   const [loading, setLoading] = useState(false);
   const range = useMemo(() => monthRange(month), [month]);
+  const weekRange = useMemo(() => weekCells(month), [month]);
 
   const filteredEntries = entries.filter((entry) => !staffFilter || entry.staffId === staffFilter);
   const entriesByDate = useMemo(() => {
@@ -119,6 +135,18 @@ export default function BookingCalendarAdmin({
           </div>
           <h2 className={styles.cardTitle}>{month}</h2>
           <div className={styles.actions}>
+            <div className={styles.viewSwitch} aria-label="Calendar view">
+              {(['month', 'week', 'list'] as CalendarViewMode[]).map((mode) => (
+                <button
+                  data-active={viewMode === mode}
+                  key={mode}
+                  onClick={() => setViewMode(mode)}
+                  type="button"
+                >
+                  {mode[0].toUpperCase() + mode.slice(1)}
+                </button>
+              ))}
+            </div>
             <select
               className={styles.select}
               value={staffFilter}
@@ -136,30 +164,42 @@ export default function BookingCalendarAdmin({
           </div>
         </div>
 
-        <div className={styles.calendarGrid}>
-          {weekdays.map((day) => <div className={styles.weekday} key={day}>{day}</div>)}
-          {range.cells.map((cell) => {
-            const key = dateKey(cell);
-            const dayEntries = entriesByDate.get(key) || [];
-            return (
-              <div className={styles.calendarDay} key={key} style={{ opacity: key.startsWith(month) ? 1 : 0.45 }}>
-                <div className={styles.dayNumber}>{cell.getDate()}</div>
-                {dayEntries.map((entry) => (
-                  <button
-                    className={styles.event}
-                    data-status={entry.status}
-                    data-type={entry.type}
-                    key={entry.id}
-                    type="button"
-                    onClick={() => setSelectedEntry(entry)}
-                  >
-                    {new Date(entry.startAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} {entry.title}
-                  </button>
-                ))}
-              </div>
-            );
-          })}
-        </div>
+        {viewMode === 'list' ? (
+          <div className={styles.calendarList} data-calendar-view="list">
+            {filteredEntries.length > 0 ? filteredEntries.map((entry) => (
+              <button className={styles.listItem} key={entry.id} type="button" onClick={() => setSelectedEntry(entry)}>
+                <span>{localDateTime(entry.startAt)}</span>
+                <strong>{entry.title}</strong>
+                <em>{entry.status || entry.type}</em>
+              </button>
+            )) : <p className={styles.muted}>No calendar entries in this range.</p>}
+          </div>
+        ) : (
+          <div className={styles.calendarGrid} data-calendar-view={viewMode}>
+            {weekdays.map((day) => <div className={styles.weekday} key={day}>{day}</div>)}
+            {(viewMode === 'week' ? weekRange : range.cells).map((cell) => {
+              const key = dateKey(cell);
+              const dayEntries = entriesByDate.get(key) || [];
+              return (
+                <div className={styles.calendarDay} key={key} style={{ opacity: viewMode === 'week' || key.startsWith(month) ? 1 : 0.45 }}>
+                  <div className={styles.dayNumber}>{cell.getDate()}</div>
+                  {dayEntries.map((entry) => (
+                    <button
+                      className={styles.event}
+                      data-status={entry.status}
+                      data-type={entry.type}
+                      key={entry.id}
+                      type="button"
+                      onClick={() => setSelectedEntry(entry)}
+                    >
+                      {new Date(entry.startAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} {entry.title}
+                    </button>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </section>
 
       {selectedEntry ? (

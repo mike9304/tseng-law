@@ -26,6 +26,8 @@ type ServiceDraft = {
   paymentMode: 'free' | 'paid';
   priceAmount: number;
   priceCurrency: 'KRW' | 'USD' | 'TWD' | 'JPY' | 'EUR';
+  meetingMode: 'in-person' | 'zoom' | 'phone' | 'hybrid';
+  cancellationPolicyId: string;
 };
 
 function draftFromService(service?: BookingService): ServiceDraft {
@@ -49,6 +51,8 @@ function draftFromService(service?: BookingService): ServiceDraft {
     paymentMode: service?.paymentMode ?? 'free',
     priceAmount: service?.priceAmount ?? service?.priceTwd ?? 0,
     priceCurrency: service?.priceCurrency ?? 'TWD',
+    meetingMode: service?.meetingMode ?? 'in-person',
+    cancellationPolicyId: service?.cancellationPolicyId ?? '',
   };
 }
 
@@ -77,6 +81,8 @@ function servicePayload(draft: ServiceDraft) {
     paymentMode: draft.paymentMode,
     priceAmount: draft.paymentMode === 'paid' ? draft.priceAmount : undefined,
     priceCurrency: draft.priceCurrency,
+    meetingMode: draft.meetingMode,
+    cancellationPolicyId: draft.cancellationPolicyId || undefined,
   };
 }
 
@@ -155,6 +161,8 @@ export default function BookingServicesAdmin({
                 <span className={styles.chip}>{service.durationMinutes} min</span>
                 <span className={styles.chip}>TWD {service.priceTwd?.toLocaleString() || 0}</span>
                 <span className={styles.chip}>{service.paymentMode === 'paid' ? `Paid ${service.priceCurrency ?? 'TWD'} ${(service.priceAmount ?? service.priceTwd ?? 0).toLocaleString()}` : 'Free booking'}</span>
+                <span className={styles.chip}>{service.meetingMode ?? 'in-person'}</span>
+                {service.cancellationPolicyId ? <span className={styles.chip}>Policy {service.cancellationPolicyId}</span> : null}
                 <span className={styles.chip}>Every {service.slotStepMinutes ?? 30} min</span>
                 <span className={styles.chip}>{service.isActive ? 'Active' : 'Inactive'}</span>
               </div>
@@ -220,6 +228,24 @@ export default function BookingServicesAdmin({
                   <option value="USD">USD</option>
                   <option value="JPY">JPY</option>
                   <option value="EUR">EUR</option>
+                </select>
+              </label>
+              <label className={styles.field}>
+                <span className={styles.label}>Meeting mode</span>
+                <select className={styles.select} value={draft.meetingMode} onChange={(e) => setDraft({ ...draft, meetingMode: e.target.value as ServiceDraft['meetingMode'] })}>
+                  <option value="in-person">In-person</option>
+                  <option value="zoom">Zoom auto link</option>
+                  <option value="phone">Phone</option>
+                  <option value="hybrid">Hybrid</option>
+                </select>
+              </label>
+              <label className={styles.field}>
+                <span className={styles.label}>Cancellation policy</span>
+                <select className={styles.select} value={draft.cancellationPolicyId} onChange={(e) => setDraft({ ...draft, cancellationPolicyId: e.target.value })}>
+                  <option value="">No policy</option>
+                  <option value="standard-24h">Standard: full 24h / partial 6h</option>
+                  <option value="strict-48h">Strict: full 48h / partial 24h</option>
+                  <option value="flexible-6h">Flexible: full 6h</option>
                 </select>
               </label>
               <label className={styles.field}>

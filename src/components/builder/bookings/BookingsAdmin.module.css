@@ -179,6 +179,166 @@
   padding: 20px;
 }
 
+.panelCompact {
+  background: #f8fafc;
+  border: 1px solid #dce4ef;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.dashboardGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(120, 137, 166, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 18px 55px rgba(30, 44, 72, 0.08);
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+}
+
+.statCard span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.statCard strong {
+  color: #172033;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.filterBar {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(220px, 1.35fr) repeat(5, minmax(132px, 1fr));
+  margin-bottom: 16px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  min-width: 920px;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table th {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.table tr {
+  cursor: pointer;
+}
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.table td span:not(.statusPill) {
+  color: #64748b;
+  display: block;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.statusPill {
+  background: #edf4ff;
+  border: 1px solid #d6e6ff;
+  border-radius: 999px;
+  color: #1458cc;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 5px 9px;
+  text-transform: capitalize;
+}
+
+.statusPill[data-booking-status='pending'] {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #9a3412;
+}
+
+.statusPill[data-booking-status='completed'] {
+  background: #ecfdf5;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.statusPill[data-booking-status='no-show'] {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.statusPill[data-booking-status='cancelled'] {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.detailGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.timeline {
+  border-left: 2px solid #dbe4ef;
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  padding-left: 18px;
+}
+
+.timelineItem {
+  position: relative;
+}
+
+.timelineItem span {
+  background: #176bff;
+  border: 2px solid white;
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px #dbe4ef;
+  height: 10px;
+  left: -24px;
+  position: absolute;
+  top: 4px;
+  width: 10px;
+}
+
+.timelineItem strong {
+  display: block;
+  font-size: 13px;
+}
+
+.timelineItem p {
+  color: #64748b;
+  font-size: 12px;
+  margin: 3px 0 0;
+}
+
 .formGrid {
   display: grid;
   gap: 12px;
@@ -315,6 +475,31 @@
   margin-bottom: 16px;
 }
 
+.viewSwitch {
+  background: #eef4ff;
+  border: 1px solid #d6e6ff;
+  border-radius: 999px;
+  display: inline-flex;
+  padding: 3px;
+}
+
+.viewSwitch button {
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: #1458cc;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 900;
+  min-height: 30px;
+  padding: 0 10px;
+}
+
+.viewSwitch button[data-active='true'] {
+  background: #176bff;
+  color: white;
+}
+
 .calendarGrid {
   display: grid;
   gap: 1px;
@@ -365,6 +550,38 @@
 .event[data-status='cancelled'],
 .event[data-type='blocked'] {
   background: #94a3b8;
+}
+
+.calendarList {
+  display: grid;
+  gap: 8px;
+}
+
+.listItem {
+  align-items: center;
+  background: white;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  color: #172033;
+  cursor: pointer;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 180px 1fr auto;
+  padding: 12px;
+  text-align: left;
+}
+
+.listItem:hover {
+  border-color: #176bff;
+  box-shadow: 0 0 0 3px rgba(23, 107, 255, 0.1);
+}
+
+.listItem span,
+.listItem em {
+  color: #64748b;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
 }
 
 .flow {
@@ -474,6 +691,10 @@
 
   .split,
   .formGrid,
+  .filterBar,
+  .dashboardGrid,
+  .detailGrid,
+  .listItem,
   .dayRow,
   .timeRangeRow,
   .steps {

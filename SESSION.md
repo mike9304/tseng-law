@@ -4418,3 +4418,21 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
 - 체크포인트:
   - W196/W197/W198/W199/W200/W201/W202 자동검증 evidence 확보.
   - 사용자 직접 QA 전까지 `자동검증 통과 / 사용자 QA 대기`로 둔다.
+
+## 2026-05-12 Codex /goal M26 Bookings 본격 2 partial
+
+- Bookings index를 `/admin-builder/bookings/dashboard`로 보내고, Dashboard 탭을 추가했다.
+- 새 dashboard는 예약 총계/upcoming/pending/no-show 지표, 검색, status/staff/service/date 필터, booking detail modal, reschedule, confirm/complete/no-show/cancel 상태 변경, timeline을 제공한다.
+- Calendar admin에 Month/Week/List view switch를 추가했다.
+- Services admin에 meeting mode(`in-person/zoom/phone/hybrid`)와 cancellation policy preset을 노출하고 API schema에 저장한다.
+- booking confirmation email summary에 meeting link를 포함한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run lint` ✅
+  - `npm run security:builder-routes` ✅
+  - targeted bookings unit 6 passed ✅
+  - `npm run test:unit` ✅ (858 passed)
+  - `bookings-m26-dashboard.playwright.ts` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run build` ✅
+- 남은 후속:
+  - 실제 Resend/SMTP 수신, Twilio SMS 수신, Zoom OAuth 실계정 생성, Google Calendar 양방향 pull, 고객 토큰 기반 cancel/reschedule link, Stripe Payment Element/환불 end-to-end.

@@ -184,6 +184,8 @@ export const bookingServiceInputSchema = z.object({
   paymentMode: z.enum(['free', 'paid']).default('free'),
   priceAmount: z.coerce.number().int().min(0).max(200_000_000).optional(),
   priceCurrency: z.enum(['KRW', 'USD', 'TWD', 'JPY', 'EUR']).default('TWD'),
+  meetingMode: z.enum(['in-person', 'zoom', 'phone', 'hybrid']).default('in-person'),
+  cancellationPolicyId: z.string().trim().max(120).optional(),
 });
 
 export const staffInputSchema = z.object({
@@ -247,6 +249,7 @@ export const bookingUpdateSchema = z.object({
   startAt: isoSchema.optional(),
   staffId: z.string().trim().min(1).optional(),
   status: z.enum(['pending', 'confirmed', 'cancelled', 'completed', 'no-show']).optional(),
+  cancellationReason: z.string().trim().max(300).optional(),
   customer: z.object({
     name: z.string().trim().min(1).max(120).optional(),
     email: z.string().trim().email().max(200).optional(),

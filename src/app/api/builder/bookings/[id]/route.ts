@@ -3,6 +3,7 @@ import { guardMutation } from '@/lib/builder/security/guard';
 import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/availability';
 import { bookingUpdateSchema } from '@/lib/builder/bookings/types';
 import { getBooking, getService, getStaff, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
+import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -49,5 +50,8 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       : existing.cancelledAt,
   }, existing.createdAt);
   await saveBooking(next);
+  if (existing.status !== 'cancelled' && next.status === 'cancelled') {
+    await sendBookingCancellation(next, { service, staff });
+  }
   return NextResponse.json({ booking: next });
 }

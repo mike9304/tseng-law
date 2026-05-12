@@ -7,6 +7,7 @@ import { getBooking, getService, getStaff, saveBooking, timestamped } from '@/li
 import { textForLocale } from '@/lib/builder/bookings/types';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { applyRefundOutcome, computeRefundForCancel } from '@/lib/builder/bookings/refund';
+import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -100,6 +101,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
     const cancelled = applyRefundOutcome(result.booking, outcome, parsed.data.reason);
     const updated = timestamped(cancelled, result.booking.createdAt);
     await saveBooking(updated);
+    await sendBookingCancellation(updated, { service: result.service, staff: result.staff });
     emitEvent('booking.cancelled', {
       bookingId: updated.bookingId,
       reason: parsed.data.reason,

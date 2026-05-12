@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
-import { getBooking, saveBooking } from '@/lib/builder/bookings/storage';
+import { getBooking, getService, getStaff, saveBooking } from '@/lib/builder/bookings/storage';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { applyRefundOutcome, computeRefundForCancel } from '@/lib/builder/bookings/refund';
+import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -69,6 +70,11 @@ export async function POST(request: NextRequest) {
     );
   }
   await saveBooking(updated);
+  const [service, staff] = await Promise.all([
+    getService(updated.serviceId),
+    getStaff(updated.staffId),
+  ]);
+  await sendBookingCancellation(updated, { service, staff });
   emitEvent('booking.cancelled', {
     bookingId: updated.bookingId,
     reason: parsed.data.reason,

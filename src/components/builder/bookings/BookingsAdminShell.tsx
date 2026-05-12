@@ -8,7 +8,10 @@ const navItems = [
   { key: 'services', label: 'Services', href: 'services' },
   { key: 'staff', label: 'Staff', href: 'staff' },
   { key: 'calendar', label: 'Calendar', href: 'calendar' },
+  { key: 'email-templates', label: 'Email', href: 'email-templates' },
 ] as const;
+
+type BookingsAdminNavKey = (typeof navItems)[number]['key'];
 
 export default function BookingsAdminShell({
   locale,
@@ -18,7 +21,7 @@ export default function BookingsAdminShell({
   children,
 }: {
   locale: Locale;
-  active: 'dashboard' | 'services' | 'staff' | 'calendar';
+  active: BookingsAdminNavKey;
   title: string;
   subtitle: string;
   children: ReactNode;

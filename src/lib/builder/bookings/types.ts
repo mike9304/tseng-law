@@ -17,6 +17,13 @@ export type BookingStatus = 'pending' | 'confirmed' | 'cancelled' | 'completed' 
 export type BookingSource = 'web' | 'admin';
 export type BookingWaitlistStatus = 'active' | 'contacted' | 'promoted' | 'closed';
 export type HolidayCalendar = 'none' | 'kr' | 'tw' | 'kr-tw';
+export const bookingEmailTemplateTypes = [
+  'customer-confirmation',
+  'admin-notification',
+  'customer-reminder',
+  'customer-cancellation',
+] as const;
+export type BookingEmailTemplateType = (typeof bookingEmailTemplateTypes)[number];
 export type BookingReminderType =
   | 'email-confirmation'
   | 'email-reminder-24h'
@@ -159,6 +166,16 @@ export interface BookingWaitlistEntry {
   updatedAt: string;
 }
 
+export interface BookingEmailTemplate {
+  templateId: BookingEmailTemplateType;
+  type: BookingEmailTemplateType;
+  subject: string;
+  body: string;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface CalendarEntry {
   id: string;
   type: 'booking' | 'blocked';
@@ -293,6 +310,12 @@ export const bookingWaitlistUpdateSchema = z.object({
 export const bookingWaitlistPromoteSchema = z.object({
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
   staffId: z.string().trim().min(1).optional(),
+});
+
+export const bookingEmailTemplateInputSchema = z.object({
+  subject: z.string().trim().min(1).max(300),
+  body: z.string().trim().min(1).max(8000),
+  isActive: z.coerce.boolean().default(true),
 });
 
 export const bookingUpdateSchema = z.object({

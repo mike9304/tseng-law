@@ -4532,3 +4532,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅
 - 체크포인트:
   - W212 자동검증 evidence 확보. W215 booking email templates는 M27 후속으로 남긴다.
+
+## 2026-05-12 Codex /goal M27 email templates
+
+- Booking email templates storage/admin UI를 추가했다. Bookings admin에 Email tab이 생겼고, confirmation/admin notification/reminder/cancellation 템플릿을 subject/body 단위로 편집하고 placeholder chip과 live preview로 확인할 수 있다.
+- 템플릿 렌더러는 `{{customerName}}`, `{{serviceName}}`, `{{staffName}}`, `{{startTime}}`, `{{manageUrl}}`, `{{bookingSummary}}` 등 예약 변수를 지원하며 HTML 출력은 escape 처리한다.
+- Booking confirmation, admin notification, customer cancellation, customer reminder 발송 경로를 저장된 템플릿 기반으로 전환했다. 취소 API와 customer manage cancel도 cancellation template을 사용한다.
+- `/api/booking/email-reminders` cron route를 추가해 email reminder template이 실제 dispatcher에서 호출되도록 했다. Resend 미설정 시 전송은 skip/error summary로 남기고 booking 생성은 막지 않는다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/email-templates.test.ts src/lib/builder/bookings/__tests__/availability-templates.test.ts` ✅ (4 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m27-email-templates.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run security:builder-routes` ✅ (113 route files / 93 mutation handlers)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run test:unit` ✅ (879 passed)
+  - `npm run build` ✅ (Google Fonts warning + 기존 `<img>` warning only)
+- 체크포인트:
+  - W215 자동검증 evidence 확보. M27 W211~W215는 모두 자동검증 통과 상태이며, 실제 Resend provider 발송·수신함 rendering은 사용자/provider QA 대기.

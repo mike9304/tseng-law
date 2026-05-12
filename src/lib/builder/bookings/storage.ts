@@ -3,6 +3,8 @@ import path from 'path';
 import { get, list, put } from '@vercel/blob';
 import type {
   Booking,
+  BookingEmailTemplate,
+  BookingEmailTemplateType,
   BookingService,
   BookingWaitlistEntry,
   BookingWaitlistStatus,
@@ -15,7 +17,7 @@ import { createLocalizedText, dayOfWeeks } from '@/lib/builder/bookings/types';
 const BOOKINGS_ROOT = path.join(process.cwd(), 'runtime-data', 'builder-bookings');
 const BLOB_PREFIX = 'builder-bookings/';
 
-type Collection = 'services' | 'staff' | 'availability' | 'bookings' | 'waitlist';
+type Collection = 'services' | 'staff' | 'availability' | 'bookings' | 'waitlist' | 'email-templates';
 type BookingBackend = 'blob' | 'file';
 
 function getBackend(): BookingBackend {
@@ -367,6 +369,18 @@ export async function listWaitlistEntries(options: {
     .filter((entry) => !options.serviceId || entry.serviceId === options.serviceId)
     .filter((entry) => !options.staffId || entry.staffId === options.staffId)
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+}
+
+export async function getBookingEmailTemplate(type: BookingEmailTemplateType): Promise<BookingEmailTemplate | null> {
+  return readJson<BookingEmailTemplate>('email-templates', type);
+}
+
+export async function saveBookingEmailTemplate(template: BookingEmailTemplate): Promise<void> {
+  await writeJson('email-templates', template.type, template);
+}
+
+export async function listStoredBookingEmailTemplates(): Promise<BookingEmailTemplate[]> {
+  return listJson<BookingEmailTemplate>('email-templates');
 }
 
 export async function listBookings(options: {

@@ -1048,3 +1048,26 @@ Created: 2026-05-09T12:52:13.760Z
 - W 판정:
   - W212는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. 매주 월~금 템플릿 적용과 KR/TW 공휴일 slot exclusion은 자동검증 통과했다.
   - W215 booking email templates는 M27 후속 slice로 유지한다.
+
+## M27 — Bookings 본격 3 email templates slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/bookings/email-template-config.ts`, `email-templates.ts` — customer confirmation, admin notification, customer reminder, customer cancellation 템플릿 기본값과 placeholder 렌더러를 추가했다. `{{customerName}}`, `{{serviceName}}`, `{{staffName}}`, `{{startTime}}`, `{{manageUrl}}`, `{{bookingSummary}}` 등 핵심 변수를 지원하고 HTML 출력은 escape 처리한다.
+  - `src/lib/builder/bookings/types.ts`, `storage.ts` — `BookingEmailTemplate` 타입과 `email-templates` storage collection을 추가했다.
+  - `src/app/api/builder/bookings/email-templates/*` — 관리자 템플릿 조회/저장 API를 추가했다. PATCH는 `guardMutation({ permission: 'manage-bookings' })`를 통과한다.
+  - `src/components/builder/bookings/BookingEmailTemplatesAdmin.tsx`, `BookingsAdminShell.tsx`, `BookingsAdmin.module.css`, email templates page — Bookings admin에 Email tab을 추가하고 템플릿 목록, subject/body editor, placeholder chips, live preview, reset/save flow를 제공한다.
+  - `src/lib/builder/bookings/notifications.ts`, booking cancel/manage/admin update routes — booking confirmation/admin notification/reminder/cancellation 발송을 저장된 템플릿 기반 렌더링으로 전환했다. 취소 경로는 customer cancellation email을 보낸다.
+  - `src/app/api/booking/email-reminders/route.ts` — cron-authorized email reminder dispatcher를 추가했다. 서비스 reminder offset을 우선 사용하고, 기본은 24h reminder다.
+  - `src/lib/builder/bookings/__tests__/email-templates.test.ts`, `tests/builder-editor/bookings-m27-email-templates.playwright.ts` — 템플릿 렌더링/escape, 관리자 저장/미리보기/재로드 persistence를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/email-templates.test.ts src/lib/builder/bookings/__tests__/availability-templates.test.ts` ✅ (4 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m27-email-templates.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run security:builder-routes` ✅ (113 route files / 93 mutation handlers)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run test:unit` ✅ (879 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W215는 `자동검증 통과 / 사용자·provider QA 대기`로 상향한다. 관리자 편집과 렌더링은 검증했고, 실제 Resend 발송·수신함 렌더링은 provider 환경 QA로 남긴다.
+  - M27 W211~W215는 모두 자동검증 evidence를 확보했다.

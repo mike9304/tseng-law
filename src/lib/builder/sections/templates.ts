@@ -2125,3 +2125,51 @@ export function getBuiltInSectionsByCategory(): Record<BuiltInSectionCategory, B
 
   return buckets;
 }
+
+const BUILT_IN_SECTION_SEARCH_ALIASES: Record<BuiltInSectionCategory, string[]> = {
+  hero: ['main visual', 'landing', 'headline', '첫 화면', '히어로', '랜딩'],
+  features: ['benefits', 'cards', '장점', '특징', '기능'],
+  testimonials: ['reviews', 'quotes', '후기', '리뷰', '추천'],
+  cta: ['conversion', 'lead', 'call to action', '문의 유도', '전환'],
+  footer: ['bottom', 'site footer', '하단', '푸터'],
+  legal: ['privacy', 'terms', 'policy', '약관', '개인정보', '법무'],
+  stats: ['metrics', 'numbers', '숫자', '성과', '지표'],
+  pricing: ['plans', 'packages', '가격', '요금', '패키지'],
+  team: ['people', 'staff', 'lawyers', '구성원', '변호사', '팀'],
+  gallery: ['portfolio', 'photos', 'images', '사진', '갤러리', '포트폴리오'],
+  faq: ['qna', 'questions', 'help', '질문', '자주 묻는 질문'],
+  services: ['practice', 'business', 'work', 'service', '주요업무', '주요 업무', '주요 서비스', '업무', '서비스'],
+  contact: ['form', 'map', 'address', '문의', '연락', '오시는길', '지도'],
+};
+
+function normalizeBuiltInSectionSearchTerm(value: string): string {
+  return value.trim().toLocaleLowerCase('ko-KR');
+}
+
+export function builtInSectionTemplateMatchesQuery(
+  template: BuiltInSectionTemplate,
+  query: string,
+): boolean {
+  const normalizedQuery = normalizeBuiltInSectionSearchTerm(query);
+  if (!normalizedQuery) return true;
+  return [
+    template.id,
+    template.name,
+    template.category,
+    template.description ?? '',
+    template.thumbnailHint ?? '',
+    ...BUILT_IN_SECTION_SEARCH_ALIASES[template.category],
+    'section template',
+    'design pack',
+    'template market',
+    'ai design',
+    '섹션 템플릿',
+    '디자인팩',
+    '디자인 팩',
+    '템플릿',
+  ].some((value) => normalizeBuiltInSectionSearchTerm(String(value)).includes(normalizedQuery));
+}
+
+export function getBuiltInSectionSearchResults(query: string): BuiltInSectionTemplate[] {
+  return BUILT_IN_SECTIONS.filter((template) => builtInSectionTemplateMatchesQuery(template, query));
+}

@@ -1448,3 +1448,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 보고한 “노드 선택 뒤 다른 노드 선택하면 아래로 사라지고 글이 안 보임”, “칼럼 아카이브/사진 클릭하면 백지” 경로를 accidental drag와 editor navigation 안정성 관점에서 막았다.
+
+## M48 — Section template market search
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/sections/templates.ts` — built-in section template 검색 helper와 category별 한국어/영어 alias를 추가했다. `주요업무`, `주요 서비스`, `AI design`, `template market` 같은 검색어가 실제 services design pack을 찾는다.
+  - `src/components/builder/sections/BuiltInSectionsPanel.tsx` — Section template market header, category filter, 결과 count를 추가했다. 검색어 변경 시 category filter를 All로 되돌려 검색 결과가 바로 보인다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — Add 패널 검색 결과에 section templates를 포함했다. 검색 중에도 맞는 섹션 템플릿 영역이 사라지지 않고, 전체 catalog count에도 반영된다.
+  - `src/lib/builder/sections/__tests__/normalize.test.ts`, `tests/builder-editor/section-template-click.playwright.ts` — `주요업무` 검색으로 services 12개가 노출되고 Case Intake Flow까지 보이는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/sections/__tests__/normalize.test.ts` ✅ (18 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “직접 디자인하지 않고 이미 템플릿 있는 전문 사이트처럼 가져다 쓰는” 흐름을 Add 패널의 template market 검색/필터 UX로 보강했다.

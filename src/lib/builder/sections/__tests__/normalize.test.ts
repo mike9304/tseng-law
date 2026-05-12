@@ -8,6 +8,7 @@ import { normalizeSavedSectionSnapshot } from '@/lib/builder/sections/normalize'
 import {
   BUILT_IN_SECTION_CATEGORIES,
   BUILT_IN_SECTIONS,
+  getBuiltInSectionSearchResults,
   getBuiltInSectionsByCategory,
   type BuiltInSectionCategory,
 } from '@/lib/builder/sections/templates';
@@ -187,6 +188,14 @@ describe('BUILT_IN_SECTIONS', () => {
     for (const category of BUILT_IN_SECTION_CATEGORIES) {
       expect(buckets[category], category).toHaveLength(expectedCounts[category]);
     }
+  });
+
+  it('lets Korean service/work queries find the expanded services design pack', () => {
+    const results = getBuiltInSectionSearchResults('주요업무');
+
+    expect(results).toHaveLength(expectedCounts.services);
+    expect(results.every((template) => template.category === 'services')).toBe(true);
+    expect(results.map((template) => template.id)).toContain('services-case-intake-flow');
   });
 
   it('uses unique template ids and valid existing canvas node kinds', () => {

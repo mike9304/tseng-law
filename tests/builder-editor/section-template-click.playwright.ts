@@ -45,6 +45,12 @@ test.describe('/ko/admin-builder section design templates', () => {
 
     const catalogDrawer = await openCatalogDrawer(page);
     await expect(catalogDrawer.getByText('Section templates')).toBeVisible();
+    await expect(catalogDrawer.locator('[data-builder-built-in-section-library="true"]')).toBeVisible();
+    await catalogDrawer.getByRole('searchbox', { name: 'Search add elements' }).fill('주요업무');
+    await expect(catalogDrawer.locator('[data-builder-built-in-section-result-count="true"]')).toContainText('12/12');
+    await expect(catalogDrawer.locator('[data-builder-built-in-section-category="services"]')).toHaveCount(12);
+    await expect(catalogDrawer.getByText('Case Intake Flow')).toBeVisible();
+    await catalogDrawer.getByRole('searchbox', { name: 'Search add elements' }).fill('');
     await expect(catalogDrawer.locator('[data-builder-built-in-section-category="services"]')).toHaveCount(12);
     await expect(catalogDrawer.getByText('Practice Bento Board')).toBeVisible();
     const serviceTemplateButton = catalogDrawer.getByTitle('Service Accordion 섹션 추가');

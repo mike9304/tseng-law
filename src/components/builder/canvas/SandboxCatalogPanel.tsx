@@ -15,7 +15,10 @@ import {
 } from '@/lib/builder/rich-text/types';
 import { richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import { insertSectionSnapshot } from '@/lib/builder/sections/insertSection';
-import type { BuiltInSectionTemplate } from '@/lib/builder/sections/templates';
+import {
+  getBuiltInSectionSearchResults,
+  type BuiltInSectionTemplate,
+} from '@/lib/builder/sections/templates';
 import { BuiltInSectionsPanel } from '@/components/builder/sections/BuiltInSectionsPanel';
 import SavedSectionsPanel from '@/components/builder/sections/SavedSectionsPanel';
 import type { Locale } from '@/lib/locales';
@@ -1745,6 +1748,14 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     () => DECORATIVE_WIDGET_PRESETS.filter((preset) => decorativeWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
+  const visibleBuiltInSectionTemplates = useMemo(
+    () => getBuiltInSectionSearchResults(normalizedQuery),
+    [normalizedQuery],
+  );
+  const totalBuiltInSectionTemplateCount = useMemo(
+    () => getBuiltInSectionSearchResults('').length,
+    [],
+  );
 
   const groupedCategories = useMemo(() => {
     const buckets = new Map<BuilderComponentCategory, BuilderComponentDefinition[]>();
@@ -1779,8 +1790,8 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length + DECORATIVE_WIDGET_PRESETS.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length + visibleDecorativeWidgetPresets.length;
+  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length + DECORATIVE_WIDGET_PRESETS.length + totalBuiltInSectionTemplateCount;
+  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length + visibleDecorativeWidgetPresets.length + visibleBuiltInSectionTemplates.length;
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -2535,7 +2546,7 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         ) : null}
 
         {/* Built-in section templates — normalized section snapshots. */}
-        {!normalizedQuery ? (
+        {(!normalizedQuery || visibleBuiltInSectionTemplates.length > 0) ? (
           <div className={styles.catalogCategorySection}>
             <button
               type="button"
@@ -2554,7 +2565,7 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
                 <span className={styles.catalogCategoryTitle}>
                   <span className={styles.catalogCategoryName}>Section templates</span>
                   <span className={styles.catalogCategoryHint}>
-                    바로 삽입 가능한 기본 섹션
+                    전문 디자인팩 · {visibleBuiltInSectionTemplates.length}
                   </span>
                 </span>
               </span>
@@ -2564,7 +2575,10 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
             </button>
 
             {(categoryOpen['built-in-sections'] ?? true) ? (
-              <BuiltInSectionsPanel onInsert={handleInsertBuiltInSection} />
+              <BuiltInSectionsPanel
+                query={normalizedQuery}
+                onInsert={handleInsertBuiltInSection}
+              />
             ) : null}
           </div>
         ) : null}

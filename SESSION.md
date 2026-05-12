@@ -4890,3 +4890,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 외부 AI 디자인 사이트 수준의 섹션 템플릿 폭 확장 또는 W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M48 Section template market search
+
+- 사용자가 말한 “직접 디자인하지 않고 이미 템플릿 있는 AI 디자인 전문 사이트처럼 가져올 수 있어야 한다”는 피드백을 Add 패널 템플릿 탐색 UX에 반영했다.
+- Built-in section templates에 검색 helper와 category alias를 추가했다. `주요업무`, `주요 서비스`, `AI design`, `template market` 같은 검색어가 실제 services design pack을 찾는다.
+- Add 패널 검색 결과에 section templates를 포함하고, `Section template market` header, category filter, result count를 붙였다. 검색어가 바뀌면 category filter는 All로 돌아가 결과가 바로 보인다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/sections/__tests__/normalize.test.ts` ✅ (18 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - 실제 템플릿 카탈로그를 더 대량화하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

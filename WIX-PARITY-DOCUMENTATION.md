@@ -1281,3 +1281,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W179는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. 버튼 프리셋을 넘어서 card/form field/form submit까지 Site Settings에서 한 번에 적용되고 draft persistence까지 확인했다.
+
+## M38 — Typography/source inspector polish
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Typography 탭에 W184 scale preview ladder를 추가했다. base/ratio 변경 시 H1~H6/Body 계산 결과 px가 즉시 보인다.
+  - `src/components/builder/editor/StyleTab.tsx` — W185 Style sources visualizer 각 행에 `theme.colors.*`, `variant:*`, `사용자 직접 입력`, `기본값` 힌트를 직접 표시한다. tooltip에만 숨어 있던 출처가 inspector에서 바로 읽힌다.
+  - `tests/builder-editor/design-system-m23.playwright.ts` — typography preview H1/Body px와 style source hint 표시를 실제 브라우저 경로로 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W184/W185는 계속 `자동검증 통과 / 사용자 QA 대기`로 둔다. 이미 통과한 기능에 실사용 가시성을 더해, typography scale과 style origin을 사용자가 더 즉시 이해할 수 있게 했다.

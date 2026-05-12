@@ -77,6 +77,10 @@ test.describe('M23 design system parity', () => {
       await settingsModal.getByRole('button', { name: 'Typography' }).click();
       await expect(settingsModal.getByRole('spinbutton', { name: 'Typography base size' })).toHaveValue('17');
       await expect(settingsModal.getByRole('combobox', { name: 'Typography scale ratio' })).toHaveValue('1.333');
+      const typographyPreview = settingsModal.locator('[data-builder-typography-scale-preview="true"]');
+      await expect(typographyPreview).toBeVisible();
+      await expect(typographyPreview.locator('[data-builder-typography-scale-preview-row="h1"]')).toContainText('95px');
+      await expect(typographyPreview.locator('[data-builder-typography-scale-preview-row="body"]')).toContainText('17px');
       await settingsModal.getByRole('button', { name: '취소' }).click();
 
       await selectCanvasNode(page, 'home-hero-title');
@@ -86,12 +90,14 @@ test.describe('M23 design system parity', () => {
       await expect(visualizer).toBeVisible();
       await expect(visualizer).toContainText('Style sources');
       await expect(visualizer.locator('[data-builder-style-source-row="background"]')).toBeVisible();
+      await expect(visualizer.locator('[data-builder-style-source-hint="background"]')).toContainText('기본값');
       await expect(visualizer.locator('[data-builder-style-origin="default"]').first()).toBeVisible();
 
       await selectCanvasNode(page, 'home-hero-search-button');
       await inspector.getByRole('button', { name: 'style', exact: true }).click();
       const buttonVisualizer = inspector.locator('[data-builder-style-origin-visualizer="true"]').first();
       await expect(buttonVisualizer.locator('[data-builder-style-source-row="variant"]')).toBeVisible();
+      await expect(buttonVisualizer.locator('[data-builder-style-source-hint="variant"]')).toContainText('variant:');
       await expect(buttonVisualizer.locator('[data-builder-style-origin="variant"]').first()).toBeVisible();
     } finally {
       if (originalTheme) {

@@ -56,6 +56,7 @@ import {
   resolveThemeColor,
   type BrandKit,
 } from '@/lib/builder/site/theme';
+import { resolveTypographyScale } from '@/lib/builder/site/typography-scale';
 
 interface SiteSettingsForm {
   firmName: string;
@@ -696,6 +697,7 @@ export default function SiteSettingsModal({
     color: theme.colors[token],
   }));
   const textPresets = normalizeThemeTextPresets(theme.themeTextPresets);
+  const typographyScalePreview = resolveTypographyScale(theme);
   const darkColors = normalizeDarkColors(theme.colors, theme.darkColors);
   const footerHint = error ? (
     <span style={{ color: '#dc2626' }}>{error}</span>
@@ -1162,6 +1164,63 @@ export default function SiteSettingsModal({
                 기본 heading 사이즈(h1~h6)를 base × ratio^level 로 자동 계산합니다.
                 노드 인스펙터에서 fontSize 를 직접 입력하면 그 값이 우선합니다.
               </p>
+
+              <div
+                data-builder-typography-scale-preview="true"
+                style={{
+                  display: 'grid',
+                  gap: 6,
+                  border: '1px solid #e2e8f0',
+                  borderRadius: 10,
+                  padding: 10,
+                  background: '#f8fafc',
+                  marginBottom: 14,
+                }}
+              >
+                {[
+                  ['H1', typographyScalePreview.h1],
+                  ['H2', typographyScalePreview.h2],
+                  ['H3', typographyScalePreview.h3],
+                  ['H4', typographyScalePreview.h4],
+                  ['H5', typographyScalePreview.h5],
+                  ['H6', typographyScalePreview.h6],
+                  ['Body', typographyScalePreview.body],
+                ].map(([label, size]) => {
+                  const numericSize = Number(size);
+                  return (
+                    <div
+                      key={label}
+                      data-builder-typography-scale-preview-row={String(label).toLowerCase()}
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: '48px minmax(0, 1fr) 52px',
+                        alignItems: 'center',
+                        gap: 10,
+                        minHeight: 30,
+                      }}
+                    >
+                      <span style={{ color: '#64748b', fontSize: 11, fontWeight: 800 }}>{label}</span>
+                      <span
+                        style={{
+                          minWidth: 0,
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                          color: '#0f172a',
+                          fontFamily: String(label).startsWith('H') ? theme.fonts.heading : theme.fonts.body,
+                          fontSize: Math.max(11, Math.min(22, numericSize / 3.5)),
+                          fontWeight: String(label).startsWith('H') ? 800 : 500,
+                        }}
+                      >
+                        호정국제 법률사무소
+                      </span>
+                      <span style={{ color: '#334155', fontSize: 11, fontWeight: 800, textAlign: 'right' }}>
+                        {Math.round(numericSize)}px
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
 
               <div style={sectionHeadingStyle}>Theme text presets</div>
               {THEME_TEXT_PRESET_KEYS.map((key) => {

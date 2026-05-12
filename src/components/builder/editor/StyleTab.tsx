@@ -23,6 +23,7 @@ import {
   type ThemeBindingIndicator,
 } from '@/lib/builder/site/theme-bindings';
 import StyleOriginChip, { resolveColorValueToString } from '@/components/builder/editor/StyleOriginChip';
+import { classifyStyleOrigin } from '@/lib/builder/site/style-origin';
 import {
   AdvancedDisclosure,
   LabeledRow,
@@ -131,6 +132,24 @@ const styleSourceRowStyle: React.CSSProperties = {
   background: '#ffffff',
 };
 
+const styleSourceLabelStackStyle: React.CSSProperties = {
+  display: 'flex',
+  minWidth: 0,
+  flexDirection: 'column',
+  gap: 2,
+};
+
+const styleSourceHintStyle: React.CSSProperties = {
+  minWidth: 0,
+  maxWidth: 112,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  color: '#64748b',
+  fontSize: 10,
+  fontWeight: 600,
+};
+
 function ThemeBindingBadge({ indicator }: { indicator: ThemeBindingIndicator }) {
   return (
     <span title={indicator.title} style={getThemeBindingBadgeStyle(indicator.tone)}>
@@ -163,6 +182,50 @@ function hasManualShadowOverride(style: BuilderCanvasNodeStyle): boolean {
     || style.shadowY !== 0
     || style.shadowBlur !== 0
     || style.shadowSpread !== 0
+  );
+}
+
+function StyleSourceRow({
+  row,
+  theme,
+}: {
+  row: {
+    label: string;
+    value: unknown;
+    variantKey?: string;
+    manualOverride?: boolean;
+  };
+  theme: ReturnType<typeof useBuilderTheme>;
+}) {
+  const origin = classifyStyleOrigin({
+    value: row.value,
+    theme,
+    variantKey: row.variantKey,
+    manualOverride: row.manualOverride,
+  });
+
+  return (
+    <div
+      style={styleSourceRowStyle}
+      data-builder-style-source-row={row.label.toLowerCase()}
+    >
+      <span style={styleSourceLabelStackStyle}>
+        <span style={{ fontSize: 11, fontWeight: 700, color: '#334155' }}>{row.label}</span>
+        <span
+          style={styleSourceHintStyle}
+          title={origin.hint}
+          data-builder-style-source-hint={row.label.toLowerCase()}
+        >
+          {origin.hint}
+        </span>
+      </span>
+      <StyleOriginChip
+        value={row.value}
+        theme={theme}
+        variantKey={row.variantKey}
+        manualOverride={row.manualOverride}
+      />
+    </div>
   );
 }
 
@@ -231,19 +294,11 @@ function StyleSourceVisualizer({
       </div>
       <div style={styleSourceGridStyle}>
         {rows.map((row) => (
-          <div
+          <StyleSourceRow
             key={row.label}
-            style={styleSourceRowStyle}
-            data-builder-style-source-row={row.label.toLowerCase()}
-          >
-            <span style={{ fontSize: 11, fontWeight: 700, color: '#334155' }}>{row.label}</span>
-            <StyleOriginChip
-              value={row.value}
-              theme={theme}
-              variantKey={row.variantKey}
-              manualOverride={row.manualOverride}
-            />
-          </div>
+            row={row}
+            theme={theme}
+          />
         ))}
       </div>
     </div>

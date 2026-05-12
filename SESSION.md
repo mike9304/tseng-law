@@ -4736,3 +4736,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W176/W177/W180/W184/W185 등 남은 design system yellow checkpoint를 재스캔한다.
+
+## 2026-05-13 Codex /goal M38 typography/source inspector polish
+
+- W184/W185의 사용자 QA 대기 gap 중 “변경 결과와 출처가 한눈에 보이는가”를 보강했다.
+- Site Settings > Typography에 H1~H6/Body scale preview ladder를 추가해 base/ratio 변경 결과 px 값을 즉시 보여준다.
+- Inspector Style sources visualizer 각 행에 출처 힌트를 직접 표시한다. `theme.colors.*`, `variant:*`, `사용자 직접 입력`, `기본값`이 tooltip 없이도 보인다.
+- Playwright는 typography preview에서 H1 95px/Body 17px가 보이고, background/variant source hint가 inspector에 표시되는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - Motion W170~W175 user-QA 대기 항목을 실제 interaction evidence 기준으로 보강하거나, SEO W188/W190~W195 yellow를 재스캔한다.

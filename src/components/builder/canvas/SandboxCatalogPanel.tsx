@@ -1697,7 +1697,7 @@ export default function SandboxCatalogPanel({
   onOpenPageTemplates,
 }: {
   locale?: Locale;
-  onOpenPageTemplates?: () => void;
+  onOpenPageTemplates?: (query?: string) => void;
 }) {
   const { document, addNode, addNodes, setSelectedNodeId, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
@@ -2072,7 +2072,7 @@ export default function SandboxCatalogPanel({
             type="button"
             className={styles.actionButton}
             data-builder-open-page-template-market="true"
-            onClick={onOpenPageTemplates}
+            onClick={() => onOpenPageTemplates(query)}
           >
             전체 페이지 템플릿 261개 보기
           </button>

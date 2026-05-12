@@ -4915,3 +4915,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - 페이지 템플릿/섹션 템플릿을 같은 검색 경험으로 더 통합하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M50 Add-to-page template search handoff
+
+- M49에서 Add 패널에 노출한 261개 page template showroom이 Add 검색어를 이어받도록 연결했다.
+- `TemplateGalleryModal`에 `initialSearch` prop을 추가하고, `SandboxCatalogPanel → SandboxEditorRail → PageSwitcher`로 query를 전달한다.
+- Add 패널에서 `법률` 검색 후 showroom을 열면 쇼룸 검색창도 `법률`로 시작하고 `법률사무소 홈`이 바로 보인다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - 페이지/섹션 템플릿 검색 경험을 더 통합하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

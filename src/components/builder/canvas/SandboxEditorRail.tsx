@@ -93,9 +93,13 @@ export default function SandboxEditorRail({
   onToast,
 }: SandboxEditorRailProps) {
   const [focusedSectionTemplateId, setFocusedSectionTemplateId] = useState<HomeSectionTemplateId | null>(null);
-  const [pageTemplateGalleryRequestId, setPageTemplateGalleryRequestId] = useState(0);
-  const openPageTemplateGallery = () => {
-    setPageTemplateGalleryRequestId((current) => current + 1);
+  const [pageTemplateGalleryRequest, setPageTemplateGalleryRequest] = useState({ id: 0, query: '' });
+  const openPageTemplateGallery = (query?: string) => {
+    const normalizedQuery = (query ?? '').trim();
+    setPageTemplateGalleryRequest((current) => ({
+      id: current.id + 1,
+      query: normalizedQuery,
+    }));
     if (activeDrawer !== 'pages') {
       onToggleDrawer('pages');
     }
@@ -221,7 +225,8 @@ export default function SandboxEditorRail({
               activePageId={activePageId}
               clipboardCount={clipboardCount}
               columnPostsSummary={columnPostsSummary}
-              templateGalleryRequestId={pageTemplateGalleryRequestId}
+              templateGalleryInitialSearch={pageTemplateGalleryRequest.query}
+              templateGalleryRequestId={pageTemplateGalleryRequest.id}
               onSelectPage={onSelectPage}
               onPagesChange={onPagesChange}
               onToast={onToast}

@@ -516,18 +516,27 @@ function PreviewPanel({
 }
 
 export default function TemplateGalleryModal({
+  initialSearch = '',
   onSelect,
   onClose,
 }: {
+  initialSearch?: string;
   onSelect: (document: BuilderCanvasDocument | null) => void;
   onClose: () => void;
 }) {
   const [activeCategory, setActiveCategory] = useState<TemplateCategoryKey>('all');
-  const [searchInput, setSearchInput] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchInput, setSearchInput] = useState(initialSearch);
+  const [searchQuery, setSearchQuery] = useState(initialSearch.trim().toLowerCase());
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [filters, setFilters] = useState<TemplateFilterState>(DEFAULT_TEMPLATE_FILTERS);
   const [previewTemplate, setPreviewTemplate] = useState<PageTemplate | null>(null);
+
+  useEffect(() => {
+    const normalizedInitialSearch = initialSearch.trim();
+    setSearchInput(normalizedInitialSearch);
+    setSearchQuery(normalizedInitialSearch.toLowerCase());
+    setActiveCategory('all');
+  }, [initialSearch]);
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {

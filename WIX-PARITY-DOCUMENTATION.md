@@ -1479,3 +1479,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 261개 page template gallery가 Pages 내부에 숨어 있던 문제를 Add 패널의 template market 진입점으로 보강했다.
+
+## M50 — Add-to-page template search handoff
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/TemplateGalleryModal.tsx` — `initialSearch` prop을 추가해 외부에서 열린 template showroom이 기존 검색어를 즉시 반영하게 했다.
+  - `src/components/builder/canvas/PageSwitcher.tsx`, `SandboxEditorRail.tsx`, `SandboxCatalogPanel.tsx` — Add 패널 검색어를 Pages template gallery open request와 함께 전달한다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Add 패널에서 `법률` 검색 후 template showroom을 열면 쇼룸 검색창도 `법률`이고 `법률사무소 홈`이 바로 보이는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add 검색에서 page template showroom으로 넘어갈 때 검색 맥락이 끊기지 않게 했다.

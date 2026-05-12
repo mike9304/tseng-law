@@ -89,11 +89,13 @@ test.describe('/ko/admin-builder section design templates', () => {
     await page.keyboard.press('Escape');
 
     const catalogDrawer = await openCatalogDrawer(page);
+    await catalogDrawer.getByRole('searchbox', { name: 'Search add elements' }).fill('법률');
     await catalogDrawer.locator('[data-builder-open-page-template-market="true"]').click();
 
     const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
     await expect(gallery).toBeVisible();
-    await expect(gallery.getByText('261개 템플릿')).toBeVisible();
+    await expect(gallery.getByRole('searchbox')).toHaveValue('법률');
+    await expect(gallery.getByText('법률사무소 홈')).toBeVisible();
     await gallery.getByRole('button', { name: 'Close' }).click();
     await expect(gallery).toBeHidden();
   });

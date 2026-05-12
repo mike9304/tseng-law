@@ -327,6 +327,7 @@ export default function PageSwitcher({
   activePageId,
   clipboardCount = 0,
   columnPostsSummary,
+  templateGalleryInitialSearch = '',
   templateGalleryRequestId,
   onSelectPage,
   onPagesChange,
@@ -336,6 +337,7 @@ export default function PageSwitcher({
   activePageId: string | null;
   clipboardCount?: number;
   columnPostsSummary?: ColumnQuickSummary;
+  templateGalleryInitialSearch?: string;
   templateGalleryRequestId?: number;
   onSelectPage: (pageId: string, nextSlug?: string) => void;
   onPagesChange?: (pages: PageMeta[]) => void;
@@ -744,6 +746,7 @@ export default function PageSwitcher({
 
       {showGallery ? (
         <TemplateGalleryModal
+          initialSearch={templateGalleryInitialSearch}
           onSelect={(doc) => handleTemplateSelect(doc)}
           onClose={() => setShowGallery(false)}
         />

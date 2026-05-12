@@ -5523,3 +5523,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (8 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - public live chat/floating chat 계열 overlay의 keyboard/focus path를 점검한다.
+
+## 2026-05-13 Codex /goal M97 Public live chat focus trap
+
+- public `LiveChatWidget`은 화면 위에 떠 있는 패널이지만 일반 div라서 initial focus, Tab trap, 외부 focus 차단, Escape close, trigger focus restore가 없었다.
+- chat panel을 `role="dialog" aria-modal="true"`로 렌더하고 공통 `usePublishedOverlayFocus` helper에 연결했다. draft input initial focus, Tab/Shift+Tab wrap, 외부 focus probe 차단, body scroll lock을 처리한다.
+- panel open 중 bubble trigger가 DOM에서 사라지고 close 시 새 button으로 다시 렌더되는 구조라, 공통 opener restore만으로는 stale 참조가 될 수 있었다. 닫힌 직후 새 trigger button으로 focus를 명시 복귀시키는 별도 restore guard를 추가했다.
+- Playwright는 site settings의 `liveChatWidgetEnabled`를 임시 활성화하고 localStorage 세션을 지운 뒤, keyboard open, focus trap, 외부 focus 차단, Escape close와 trigger focus restore를 검증한다. cleanup은 page와 site settings를 원복한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/LiveChatWidget.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "public live chat" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - public quick-contact/floating AI chat 또는 남은 published widget click path를 계속 점검한다.

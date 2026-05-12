@@ -2131,3 +2131,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (8 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W40/W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. header search overlay에서 focus가 페이지 배경으로 새거나 Escape close 뒤 위치를 잃는 경로를 닫았다.
+
+## M97 — Public live chat focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/published/LiveChatWidget.tsx` — public live chat panel을 `role="dialog" aria-modal="true"`로 렌더하고, 공통 published overlay focus helper로 draft input initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, Escape close를 처리한다. panel open 중 bubble trigger가 DOM에서 사라지는 구조라 닫힌 뒤 새 trigger button으로 focus를 명시 복귀시킨다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — site setting의 `liveChatWidgetEnabled`를 임시 활성화하고, keyboard open, focus trap, 외부 focus probe 차단, Escape close와 trigger focus restore를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/LiveChatWidget.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "public live chat" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public live chat panel에서 focus가 배경으로 새거나 닫힌 뒤 bubble 위치를 잃는 경로를 닫았다.

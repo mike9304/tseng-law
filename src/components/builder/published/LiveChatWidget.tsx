@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePublishedOverlayFocus } from './overlayFocus';
 
 interface ChatMessage {
   messageId: string;
@@ -55,6 +56,11 @@ export default function LiveChatWidget({ enabled = true }: { enabled?: boolean }
   const [error, setError] = useState('');
   const sourceRef = useRef<EventSource | null>(null);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const draftInputRef = useRef<HTMLInputElement | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
+  const restoreTriggerOnCloseRef = useRef(false);
 
   useEffect(() => {
     setSession(loadSession());
@@ -81,6 +87,39 @@ export default function LiveChatWidget({ enabled = true }: { enabled?: boolean }
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
+
+  function closeChat(restoreTrigger = true) {
+    restoreTriggerOnCloseRef.current = restoreTrigger;
+    setOpen(false);
+  }
+
+  useEffect(() => {
+    if (open || !restoreTriggerOnCloseRef.current) return undefined;
+    restoreTriggerOnCloseRef.current = false;
+    const frame = window.requestAnimationFrame(() => {
+      triggerRef.current?.focus({ preventScroll: true });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [open]);
+
+  usePublishedOverlayFocus({
+    open,
+    overlayRef: panelRef,
+    initialFocusRef: draftInputRef,
+    openerRef,
+  });
+
+  useEffect(() => {
+    if (!open) return undefined;
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      event.stopPropagation();
+      closeChat(true);
+    }
+    document.addEventListener('keydown', handleKeyDown, true);
+    return () => document.removeEventListener('keydown', handleKeyDown, true);
+  }, [open]);
 
   async function startConversation() {
     if (!draft.trim()) return;
@@ -147,10 +186,17 @@ export default function LiveChatWidget({ enabled = true }: { enabled?: boolean }
   return (
     <div style={{ position: 'fixed', bottom: 20, right: 20, zIndex: 9999, fontFamily: 'system-ui, sans-serif' }}>
       {open ? (
-        <div style={{ width: 320, height: 460, background: '#fff', borderRadius: 12, boxShadow: '0 12px 32px rgba(15,23,42,0.18)', border: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column' }}>
+        <div
+          ref={panelRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label="호정국제 상담"
+          tabIndex={-1}
+          style={{ width: 320, height: 460, background: '#fff', borderRadius: 12, boxShadow: '0 12px 32px rgba(15,23,42,0.18)', border: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column' }}
+        >
           <header style={{ padding: 12, background: '#0f172a', color: '#fff', borderTopLeftRadius: 12, borderTopRightRadius: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
             <strong style={{ fontSize: 14 }}>호정국제 상담</strong>
-            <button type="button" onClick={() => setOpen(false)} style={{ marginLeft: 'auto', background: 'transparent', border: 0, color: '#fff', cursor: 'pointer', fontSize: 18 }} aria-label="닫기">×</button>
+            <button type="button" onClick={() => closeChat(true)} style={{ marginLeft: 'auto', background: 'transparent', border: 0, color: '#fff', cursor: 'pointer', fontSize: 18 }} aria-label="닫기">×</button>
           </header>
           <div style={{ flex: 1, overflowY: 'auto', padding: 12, background: '#f8fafc', display: 'flex', flexDirection: 'column', gap: 6 }}>
             {!session ? (
@@ -169,6 +215,7 @@ export default function LiveChatWidget({ enabled = true }: { enabled?: boolean }
           </div>
           <div style={{ padding: 8, borderTop: '1px solid #e2e8f0', display: 'flex', gap: 6 }}>
             <input
+              ref={draftInputRef}
               type="text"
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
@@ -189,8 +236,13 @@ export default function LiveChatWidget({ enabled = true }: { enabled?: boolean }
         </div>
       ) : (
         <button
+          ref={triggerRef}
           type="button"
-          onClick={() => setOpen(true)}
+          onClick={(event) => {
+            openerRef.current = event.currentTarget;
+            restoreTriggerOnCloseRef.current = false;
+            setOpen(true);
+          }}
           aria-label="실시간 상담 열기"
           style={{ width: 56, height: 56, borderRadius: '50%', border: 0, background: '#0f172a', color: '#fff', fontSize: 22, boxShadow: '0 10px 20px rgba(15,23,42,0.32)', cursor: 'pointer' }}
         >

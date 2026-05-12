@@ -1,6 +1,6 @@
 import { expect, test, type APIRequestContext } from '@playwright/test';
 import { readHeaderCanvas, readSiteDocument, writeHeaderCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
-import { createDefaultCookieConsent, createDefaultPopup, type BuilderCookieConsent, type BuilderHeaderFooterConfig } from '@/lib/builder/site/types';
+import { createDefaultCookieConsent, createDefaultPopup, type BuilderCookieConsent, type BuilderHeaderFooterConfig, type BuilderSiteSettings } from '@/lib/builder/site/types';
 
 type TestDocument = {
   version: 1;
@@ -1019,6 +1019,96 @@ test.describe('/ko published builder interactions', () => {
       }
       if (touchedHeaderCanvas && originalHeaderCanvas) {
         await writeHeaderCanvas('default', originalHeaderCanvas);
+      }
+    }
+  });
+
+  test('traps focus in the public live chat widget', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-live-chat-${token}`;
+    let pageId: string | null = null;
+    let originalSettings: BuilderSiteSettings | undefined;
+    let touchedSettings = false;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Live Chat ${token}`,
+        makePublishedHeaderDrawerDocument(token),
+      );
+
+      const site = await readSiteDocument('default', 'ko');
+      originalSettings = site.settings;
+      touchedSettings = true;
+      await writeSiteDocument({
+        ...site,
+        settings: {
+          ...(site.settings ?? {}),
+          liveChatWidgetEnabled: true,
+        },
+        updatedAt: new Date().toISOString(),
+      });
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+
+      await page.addInitScript(() => window.localStorage.removeItem('tw_live_chat_session_v1'));
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const trigger = page.getByRole('button', { name: '실시간 상담 열기' });
+      await expect(trigger).toBeVisible();
+      await trigger.focus();
+      await expect(trigger).toBeFocused();
+      await trigger.press('Enter');
+
+      const dialog = page.getByRole('dialog', { name: '호정국제 상담' });
+      await expect(dialog).toBeVisible();
+      const draftInput = dialog.getByPlaceholder('문의 내용을 입력하세요');
+      await expect(draftInput).toBeFocused();
+
+      const closeButton = dialog.getByRole('button', { name: '닫기' });
+      await closeButton.focus();
+      await page.keyboard.press('Shift+Tab');
+      await expect(draftInput).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(closeButton).toBeFocused();
+
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.textContent = 'outside live chat focus probe';
+        probe.setAttribute('data-live-chat-focus-probe', 'true');
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(draftInput).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(dialog).toHaveCount(0);
+      await expect(trigger).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      if (touchedSettings) {
+        const latestSite = await readSiteDocument('default', 'ko');
+        const restoredSite = { ...latestSite, updatedAt: new Date().toISOString() };
+        if (originalSettings) {
+          restoredSite.settings = originalSettings;
+        } else {
+          delete restoredSite.settings;
+        }
+        await writeSiteDocument(restoredSite);
       }
     }
   });

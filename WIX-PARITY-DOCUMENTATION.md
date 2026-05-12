@@ -2071,3 +2071,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public cookie consent modal에서 focus가 페이지 배경으로 새거나 trigger keyboard reopen이 안 되는 경로를 닫았다.
+
+## M93 — Published gallery lightbox focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/components/gallery/GalleryRender.tsx` — published gallery lightbox를 `document.body` portal로 렌더하고, 공통 published overlay focus helper로 close-button initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, opener focus restore를 추가했다. 이미지 본문 클릭은 유지되고 Escape/arrow navigation은 기존처럼 동작한다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — published gallery page를 생성해 lightbox open, close initial focus, ArrowRight/ArrowLeft counter 이동, 이미지 내부 클릭 유지, 외부 focus probe 차단, Escape close와 gallery item focus restore를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/lib/builder/components/gallery/GalleryRender.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "traps focus in the published gallery lightbox" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W71/W72/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public gallery lightbox에서 focus가 페이지 배경으로 새거나 overlay가 node sibling 아래에서 pointer/focus 충돌을 내는 경로를 닫았다.

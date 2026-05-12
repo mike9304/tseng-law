@@ -289,6 +289,62 @@ function makePublishedCookieConsentDocument(token: string): TestDocument {
   };
 }
 
+function makePublishedGalleryDocument(token: string): TestDocument {
+  const now = new Date().toISOString();
+  const rootId = `gallery-root-${token}`;
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `published-gallery-${token}`,
+    stageWidth: 1280,
+    stageHeight: 760,
+    nodes: [
+      containerNode(rootId, { x: 0, y: 0, width: 1280, height: 760 }, 'section section--light', {
+        as: 'main',
+      }),
+      textNode(`gallery-title-${token}`, rootId, 72, `Published gallery lightbox ${token}`),
+      {
+        id: `published-gallery-${token}`,
+        kind: 'gallery',
+        parentId: rootId,
+        rect: { x: 80, y: 160, width: 620, height: 320 },
+        style: { ...baseStyle, borderRadius: 12 },
+        zIndex: 2,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          images: [
+            {
+              src: '/images/header-skyline-ratio.webp',
+              alt: `Gallery focus one ${token}`,
+              caption: 'Gallery one',
+              tags: ['office'],
+            },
+            {
+              src: '/images/header-skyline-buildings.webp',
+              alt: `Gallery focus two ${token}`,
+              caption: 'Gallery two',
+              tags: ['office'],
+            },
+          ],
+          layout: 'grid',
+          columns: 2,
+          gap: 12,
+          showCaptions: true,
+          captionMode: 'overlay',
+          activeFilter: 'all',
+          autoplay: false,
+          interval: 4000,
+          thumbnailPosition: 'bottom',
+          proStyle: 'clean',
+        },
+      },
+    ],
+  };
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -630,6 +686,69 @@ test.describe('/ko published builder interactions', () => {
         const { cookieConsent: _cookieConsent, ...withoutCookieConsent } = restoredSite;
         void _cookieConsent;
         await writeSiteDocument(withoutCookieConsent);
+      }
+    }
+  });
+
+  test('traps focus in the published gallery lightbox', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-published-gallery-${token}`;
+    let pageId: string | null = null;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Gallery ${token}`,
+        makePublishedGalleryDocument(token),
+      );
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+
+      const galleryItem = page
+        .locator(`[data-node-id="published-gallery-${token}"] [data-builder-gallery-item="true"]`)
+        .first();
+      await expect(galleryItem).toBeVisible();
+      await galleryItem.click();
+
+      await expect(page.getByRole('dialog', { name: `Gallery focus one ${token}` })).toBeVisible();
+      const dialog = page.locator('.builder-gallery-lightbox');
+      await expect(dialog).toBeVisible();
+      const closeButton = dialog.getByRole('button', { name: 'Close' });
+      await expect(closeButton).toBeFocused();
+      await page.keyboard.press('ArrowRight');
+      await expect(dialog.locator('.builder-gallery-lightbox-counter')).toContainText('2 / 2');
+      await page.keyboard.press('ArrowLeft');
+      await expect(dialog.locator('.builder-gallery-lightbox-counter')).toContainText('1 / 2');
+
+      await dialog.locator('.builder-gallery-lightbox-image').click();
+      await expect(dialog).toBeVisible();
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.textContent = 'outside gallery focus probe';
+        probe.setAttribute('data-gallery-focus-probe', 'true');
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(closeButton).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(dialog).toHaveCount(0);
+      await expect(galleryItem).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
       }
     }
   });

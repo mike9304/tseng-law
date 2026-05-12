@@ -1,8 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react';
+import { createPortal } from 'react-dom';
 import type { BuilderGalleryCanvasNode } from '@/lib/builder/canvas/types';
+import { usePublishedOverlayFocus } from '@/components/builder/published/overlayFocus';
 
 type GalleryImage = BuilderGalleryCanvasNode['content']['images'][number];
 
@@ -55,7 +57,7 @@ function GalleryTile({
   index: number;
   showCaptions: boolean;
   captionMode: BuilderGalleryCanvasNode['content']['captionMode'];
-  onClick?: () => void;
+  onClick?: (event: ReactMouseEvent<HTMLButtonElement>) => void;
   variant?: 'grid' | 'masonry' | 'pro';
 }) {
   const caption = image.caption || image.alt;
@@ -123,7 +125,10 @@ export default function GalleryRender({
   const displayImages = filteredImages.length ? filteredImages : normalizedImages;
   const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const interactive = mode !== 'edit';
+  const lightboxRef = useRef<HTMLDivElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
+  const interactive = mode === 'published';
 
   useEffect(() => {
     setActiveIndex(0);
@@ -156,8 +161,17 @@ export default function GalleryRender({
     return () => document.removeEventListener('keydown', handler);
   }, [closeLightbox, goNext, goPrev, lightboxIndex]);
 
-  const openLightbox = (index: number) => {
-    if (interactive) setLightboxIndex(index);
+  usePublishedOverlayFocus({
+    open: lightboxIndex !== null,
+    overlayRef: lightboxRef,
+    initialFocusRef: closeButtonRef,
+    openerRef,
+  });
+
+  const openLightbox = (index: number, event: ReactMouseEvent<HTMLButtonElement>) => {
+    if (!interactive) return;
+    openerRef.current = event.currentTarget;
+    setLightboxIndex(index);
   };
 
   const activeImage = displayImages[Math.min(activeIndex, displayImages.length - 1)] ?? displayImages[0];
@@ -191,7 +205,7 @@ export default function GalleryRender({
             index={index}
             showCaptions={showCaptions}
             captionMode={captionMode}
-            onClick={() => openLightbox(index)}
+            onClick={(event) => openLightbox(index, event)}
             variant="masonry"
           />
         ))}
@@ -314,13 +328,58 @@ export default function GalleryRender({
             index={index}
             showCaptions={showCaptions}
             captionMode={captionMode}
-            onClick={() => openLightbox(index)}
+            onClick={(event) => openLightbox(index, event)}
             variant={layout === 'pro' ? 'pro' : 'grid'}
           />
         ))}
       </div>
     );
   }
+
+  const lightboxImage = lightboxIndex !== null ? displayImages[lightboxIndex] : null;
+  const lightbox = lightboxIndex !== null && lightboxImage ? (
+    <div
+      ref={lightboxRef}
+      className="builder-gallery-lightbox"
+      onClick={closeLightbox}
+      role="dialog"
+      aria-modal="true"
+      aria-label={lightboxImage.alt || lightboxImage.caption || 'Gallery image'}
+      tabIndex={-1}
+    >
+      <button
+        ref={closeButtonRef}
+        type="button"
+        className="builder-gallery-lightbox-close"
+        onClick={closeLightbox}
+        aria-label="Close"
+      >
+        ×
+      </button>
+      {displayImages.length > 1 ? (
+        <button type="button" className="builder-gallery-lightbox-prev" onClick={(event) => { event.stopPropagation(); goPrev(); }} aria-label="Previous">
+          ‹
+        </button>
+      ) : null}
+      <div className="builder-gallery-lightbox-image" onClick={(event) => event.stopPropagation()}>
+        <Image
+          src={lightboxImage.src}
+          alt={lightboxImage.alt || ''}
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'contain' }}
+        />
+      </div>
+      {displayImages.length > 1 ? (
+        <button type="button" className="builder-gallery-lightbox-next" onClick={(event) => { event.stopPropagation(); goNext(); }} aria-label="Next">
+          ›
+        </button>
+      ) : null}
+      <div className="builder-gallery-lightbox-counter">
+        {lightboxIndex + 1} / {displayImages.length}
+      </div>
+    </div>
+  ) : null;
 
   return (
     <>
@@ -334,35 +393,11 @@ export default function GalleryRender({
         {content}
       </div>
 
-      {mode === 'published' && lightboxIndex !== null && (
-        <div className="builder-gallery-lightbox" onClick={closeLightbox} role="dialog" aria-modal="true">
-          <button type="button" className="builder-gallery-lightbox-close" onClick={closeLightbox} aria-label="Close">
-            ×
-          </button>
-          {displayImages.length > 1 ? (
-            <button type="button" className="builder-gallery-lightbox-prev" onClick={(event) => { event.stopPropagation(); goPrev(); }} aria-label="Previous">
-              ‹
-            </button>
-          ) : null}
-          <div className="builder-gallery-lightbox-image" onClick={(event) => event.stopPropagation()}>
-            <Image
-              src={displayImages[lightboxIndex].src}
-              alt={displayImages[lightboxIndex].alt || ''}
-              fill
-              sizes="100vw"
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
-          {displayImages.length > 1 ? (
-            <button type="button" className="builder-gallery-lightbox-next" onClick={(event) => { event.stopPropagation(); goNext(); }} aria-label="Next">
-              ›
-            </button>
-          ) : null}
-          <div className="builder-gallery-lightbox-counter">
-            {lightboxIndex + 1} / {displayImages.length}
-          </div>
-        </div>
-      )}
+      {mode === 'published' && lightbox
+        ? typeof document !== 'undefined'
+          ? createPortal(lightbox, document.body)
+          : lightbox
+        : null}
     </>
   );
 }

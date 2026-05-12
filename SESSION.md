@@ -5463,3 +5463,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - published/user-facing overlay 잔여 경로 또는 editor floating surface를 계속 줄인다.
+
+## 2026-05-13 Codex /goal M93 Published gallery lightbox focus trap
+
+- published gallery lightbox는 Escape/arrow keyboard handling은 있었지만, focus trap, body scroll lock, opener focus restore, body portal 렌더가 없었다.
+- `GalleryRender`의 published lightbox를 `document.body` portal로 옮기고 공통 `usePublishedOverlayFocus` helper를 연결했다. close button으로 initial focus를 보내고, Tab/Shift+Tab wrap, 외부 focus probe 차단, Escape close 후 gallery item focus 복귀를 처리한다.
+- lightbox 인덱스가 display image 범위를 벗어나는 경우를 가드해 빈 화면/런타임 에러로 이어지지 않게 했다. 이미지 본문 클릭 유지와 ArrowRight/ArrowLeft navigation은 그대로 검증했다.
+- 첫 full Playwright run에서 ArrowRight 후 dialog accessible name이 두 번째 이미지 alt로 바뀌어 테스트 로케이터가 끊기는 문제를 발견했고, stable lightbox root 기준 검증으로 보정했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/lib/builder/components/gallery/GalleryRender.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "traps focus in the published gallery lightbox" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - published header mobile navigation dialog나 남은 user-facing overlay의 keyboard/focus gap을 계속 줄인다.

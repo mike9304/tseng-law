@@ -46,6 +46,7 @@ import {
 } from '@/lib/builder/site/theme';
 import InlineTextEditor from './InlineTextEditor';
 import { CanvasNodeBadge } from './CanvasNodeBadge';
+import CanvasNodeErrorBoundary from './CanvasNodeErrorBoundary';
 import { CanvasNodeQuickPanels } from './CanvasNodeQuickPanels';
 import { CanvasNodeSelectionOverlay } from './CanvasNodeSelectionOverlay';
 import { InsightsArchiveListPreview } from './CanvasInsightsPreview';
@@ -610,13 +611,15 @@ export default function CanvasNode({
       onBlur={handleInlineBlur}
     />
   ) : component ? (
-    isContainerLikeKind(node.kind) ? (
-      <component.Render node={node} mode="edit" theme={theme}>
-        {renderNestedChildNodes()}
-      </component.Render>
-    ) : (
-      <component.Render node={node} mode="edit" theme={theme} />
-    )
+    <CanvasNodeErrorBoundary nodeKind={node.kind} nodeId={node.id}>
+      {isContainerLikeKind(node.kind) ? (
+        <component.Render node={node} mode="edit" theme={theme}>
+          {renderNestedChildNodes()}
+        </component.Render>
+      ) : (
+        <component.Render node={node} mode="edit" theme={theme} />
+      )}
+    </CanvasNodeErrorBoundary>
   ) : null;
 
   const hasVisibleBorder = node.style.borderWidth > 0;
@@ -739,8 +742,20 @@ export default function CanvasNode({
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onSubmitCapture={(event) => {
+        // Edit-mode safety: never let widget forms submit and reload the editor.
+        event.preventDefault();
+        event.stopPropagation();
+      }}
       onClick={(event) => {
         event.stopPropagation();
+        // Prevent nested anchors / form-submit buttons inside widgets from
+        // navigating the editor away when designers click to select them.
+        const target = event.target as HTMLElement | null;
+        const navigates = target?.closest('a[href], button[type="submit"], input[type="submit"]');
+        if (navigates) {
+          event.preventDefault();
+        }
         if (node.kind !== 'image' || !selected || node.locked || !isInteractive) return;
         onOpenAssetLibrary?.(node.id);
       }}

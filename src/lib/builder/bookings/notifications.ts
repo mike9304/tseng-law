@@ -1,5 +1,6 @@
 import type { Booking, BookingService, Staff } from '@/lib/builder/bookings/types';
 import { textForLocale } from '@/lib/builder/bookings/types';
+import { buildBookingManageUrl } from '@/lib/builder/bookings/manage-token';
 
 function escapeHtml(input: string): string {
   return input
@@ -42,6 +43,7 @@ function bookingSummaryHtml(booking: Booking, service?: BookingService | null, s
   const locale = booking.customer.locale;
   const attachments = booking.customer.attachmentUrls ?? [];
   const customFields = booking.customer.customFields ?? [];
+  const manageUrl = buildBookingManageUrl(booking, locale);
   return `
     <p><strong>Service</strong>: ${escapeHtml(textForLocale(service?.name, locale) || booking.serviceId)}</p>
     <p><strong>Staff</strong>: ${escapeHtml(textForLocale(staff?.name, locale) || booking.staffId)}</p>
@@ -55,6 +57,7 @@ function bookingSummaryHtml(booking: Booking, service?: BookingService | null, s
     ${booking.customer.caseSummary ? `<p><strong>Case summary</strong>: ${escapeHtml(booking.customer.caseSummary)}</p>` : ''}
     ${attachments.length > 0 ? `<p><strong>Attachments</strong>: ${attachments.map((url) => escapeHtml(url)).join('<br>')}</p>` : ''}
     ${customFields.map((field) => `<p><strong>${escapeHtml(field.label)}</strong>: ${escapeHtml(field.value)}</p>`).join('')}
+    <p><a href="${escapeHtml(manageUrl)}">Manage, reschedule, or cancel this booking</a></p>
   `;
 }
 
@@ -79,11 +82,12 @@ export async function sendBookingConfirmation(
 }
 
 export async function sendBookingReminder(booking: Booking): Promise<void> {
+  const manageUrl = buildBookingManageUrl(booking, booking.customer.locale);
   await sendEmail({
     to: booking.customer.email,
     subject: '[Hojeong] Consultation reminder',
     html: `<h2>Consultation reminder</h2><p>Your consultation starts at ${escapeHtml(
       new Date(booking.startAt).toLocaleString(booking.customer.locale),
-    )}.</p>`,
+    )}.</p><p><a href="${escapeHtml(manageUrl)}">Manage this booking</a></p>`,
   });
 }

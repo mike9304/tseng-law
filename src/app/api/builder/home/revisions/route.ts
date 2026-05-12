@@ -7,7 +7,7 @@ import {
   normalizeBuilderHomeLocale,
   readBuilderHomeSnapshotHistoryDetail,
 } from '@/lib/builder/persistence';
-import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderRead } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 

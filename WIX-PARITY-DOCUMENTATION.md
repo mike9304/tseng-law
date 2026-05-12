@@ -926,3 +926,21 @@ Created: 2026-05-09T12:52:13.760Z
   - Master prompt 기준 W205/W206/W207/W208/W209/W210의 운영 UI 핵심 자동검증 evidence 확보.
   - 외부 provider가 필요한 실제 Resend/SMTP 수신, Twilio SMS 수신, Zoom OAuth 실계정 생성, Google Calendar 양방향 pull, 고객 토큰 기반 cancel/reschedule link, Stripe Payment Element/환불 end-to-end는 후속 M26 slice로 남긴다.
   - 사용자 직접 QA 전까지 체크포인트는 `부분 자동검증 통과 / provider·고객 링크 후속`으로 둔다.
+
+## M26 — Bookings 본격 2 customer link slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/bookings/manage-token.ts` — bookingId/customer email/expiry를 HMAC 서명한 고객 관리 토큰을 생성·검증하고 locale별 manage URL을 만든다.
+  - `src/lib/builder/bookings/notifications.ts` — confirmation summary와 reminder email에 고객용 관리/리스케줄/취소 링크를 포함한다.
+  - `src/app/api/booking/manage/[token]/route.ts` — signed token 기반 공개 GET/PATCH endpoint를 추가했다. 고객은 링크로 예약을 조회하고, 가능한 슬롯으로 reschedule하거나 cancellation policy/refund 계산을 거쳐 cancel할 수 있다.
+  - `src/app/[locale]/bookings/manage/[token]/page.tsx`, `src/components/builder/bookings/BookingManageClient.tsx` — 공개 고객 관리 페이지를 추가했다.
+  - `src/components/QuickContactWidget.tsx`, `src/components/YearEndEventPopup.tsx` — `/bookings/manage/` 유틸리티 페이지에서는 AI chat/event popup을 끄도록 해, 고객의 예약 변경/취소 버튼을 마케팅 오버레이가 가로막지 않게 했다.
+  - `src/lib/builder/bookings/__tests__/manage-token.test.ts`, `tests/builder-editor/bookings-m26-customer-manage.playwright.ts` — 토큰 변조/만료 rejection과 공개 링크 reschedule/cancel flow를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/manage-token.test.ts src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (5 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m26-customer-manage.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W203/W206 고객 링크 자동검증 evidence 확보. 실제 Resend/SMTP 수신 자체는 provider QA 대기지만, 이메일 본문에 들어가는 signed manage URL과 링크 도착 후 reschedule/cancel 동작은 자동검증 통과.
+  - W205는 provider QA, W210은 Stripe Payment Element/환불 E2E, W204는 Google Calendar 양방향 pull 후속으로 유지한다.

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/locales';
 
 const HIDE_UNTIL_KEY = 'hojeong-year-end-event-hide-until';
@@ -51,10 +52,16 @@ const copyByLocale: Record<Locale, PopupCopy> = {
 };
 
 export default function YearEndEventPopup({ locale }: { locale: Locale }) {
+  const pathname = usePathname();
+  const isUtilityPage = pathname?.includes('/bookings/manage/') ?? false;
   const [open, setOpen] = useState(false);
   const copy = useMemo(() => copyByLocale[locale], [locale]);
 
   useEffect(() => {
+    if (isUtilityPage) {
+      setOpen(false);
+      return;
+    }
     if (typeof window === 'undefined') return;
     try {
       const hideUntil = Number(localStorage.getItem(HIDE_UNTIL_KEY) ?? '0');
@@ -63,10 +70,10 @@ export default function YearEndEventPopup({ locale }: { locale: Locale }) {
       // noop
     }
     setOpen(true);
-  }, []);
+  }, [isUtilityPage]);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open || isUtilityPage) return;
     const onEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setOpen(false);
@@ -78,7 +85,7 @@ export default function YearEndEventPopup({ locale }: { locale: Locale }) {
       document.body.style.overflow = '';
       window.removeEventListener('keydown', onEscape);
     };
-  }, [open]);
+  }, [open, isUtilityPage]);
 
   const hideForDay = () => {
     try {
@@ -89,7 +96,7 @@ export default function YearEndEventPopup({ locale }: { locale: Locale }) {
     setOpen(false);
   };
 
-  if (!open) return null;
+  if (isUtilityPage || !open) return null;
 
   return (
     <div className="year-end-popup-backdrop" role="dialog" aria-modal="true" aria-label={copy.title} onClick={() => setOpen(false)}>

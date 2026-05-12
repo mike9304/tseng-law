@@ -4436,3 +4436,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅
 - 남은 후속:
   - 실제 Resend/SMTP 수신, Twilio SMS 수신, Zoom OAuth 실계정 생성, Google Calendar 양방향 pull, 고객 토큰 기반 cancel/reschedule link, Stripe Payment Element/환불 end-to-end.
+
+## 2026-05-12 Codex /goal M26 customer booking links
+
+- 고객용 booking manage token을 추가했다. token은 bookingId/customer email/expiry를 HMAC 서명하고, confirmation/reminder email에는 locale별 `/bookings/manage/[token]` 링크가 포함된다.
+- 공개 `/[locale]/bookings/manage/[token]` 페이지와 `/api/booking/manage/[token]` GET/PATCH를 추가했다. 고객은 링크로 예약을 조회하고, 가능한 슬롯으로 reschedule하거나 cancellation policy/refund 계산을 거쳐 cancel할 수 있다.
+- 고객 관리 페이지에서는 공개 사이트 AI chat과 year-end popup을 숨겨, 마케팅 오버레이가 예약 변경/취소 버튼 클릭을 가로막지 않게 했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/manage-token.test.ts src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (5 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m26-customer-manage.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 체크포인트:
+  - W203/W206 고객 링크 경로 자동검증 evidence 확보. 실제 Resend/SMTP 수신은 provider QA 대기.

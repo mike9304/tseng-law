@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/locales';
 import { siteContent, type SiteContent } from '@/data/site-content';
 import FloatingAiChat from '@/components/FloatingAiChat';
@@ -14,6 +15,8 @@ export default function QuickContactWidget({
   locale: Locale;
   content?: SiteContent['quickContact'];
 }) {
+  const pathname = usePathname();
+  const isUtilityPage = pathname?.includes('/bookings/manage/') ?? false;
   const resolvedContent = content ?? siteContent[locale].quickContact;
   // Start closed to match SSR, then sync with localStorage on mount
   const [chatOpen, setChatOpen] = useState(false);
@@ -22,6 +25,11 @@ export default function QuickContactWidget({
     locale === 'ko' ? 'AI 상담' : locale === 'zh-hant' ? 'AI 諮詢' : 'AI Chat';
 
   useEffect(() => {
+    if (isUtilityPage) {
+      setChatOpen(false);
+      setHydrated(true);
+      return;
+    }
     try {
       const collapsed = window.localStorage.getItem(STORAGE_KEY);
       // First visit (no key) → open by default. Otherwise honor stored state.
@@ -30,7 +38,7 @@ export default function QuickContactWidget({
       setChatOpen(true);
     }
     setHydrated(true);
-  }, []);
+  }, [isUtilityPage]);
 
   const handleClose = () => {
     setChatOpen(false);
@@ -52,6 +60,10 @@ export default function QuickContactWidget({
 
   // Avoid flashing the toggle button before hydration determines state.
   if (!hydrated) {
+    return null;
+  }
+
+  if (isUtilityPage) {
     return null;
   }
 

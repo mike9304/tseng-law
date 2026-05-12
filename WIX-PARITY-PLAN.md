@@ -97,3 +97,4 @@
 | M93 | QA     | Published gallery lightbox focus trap | W71,W72,W216,W225 | 1h | M92 | 🟡 gallery lightbox focus trap/portal 자동검증 통과 / 사용자 QA 대기 |
 | M94 | QA     | Published mobile header drawer focus trap | W40,W99,W216,W225 | 1h | M93 | 🟡 mobile header drawer focus trap/Escape/restore 자동검증 통과 / 사용자 QA 대기 |
 | M95 | QA     | Published menu-bar keyboard navigation | W99,W100,W216,W225 | 1h | M94 | 🟡 menu-bar dropdown/mobile keyboard 자동검증 통과 / 사용자 QA 대기 |
+| M96 | QA     | Published header search overlay focus trap | W40,W98,W216,W225 | 1h | M95 | 🟡 header search overlay focus trap/Escape/restore 자동검증 통과 / 사용자 QA 대기 |

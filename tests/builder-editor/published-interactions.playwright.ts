@@ -940,6 +940,89 @@ test.describe('/ko published builder interactions', () => {
     }
   });
 
+  test('traps focus in the published header search overlay', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-header-search-${token}`;
+    let pageId: string | null = null;
+    let originalHeaderCanvas: Awaited<ReturnType<typeof readHeaderCanvas>> = null;
+    let touchedHeaderCanvas = false;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Header Search ${token}`,
+        makePublishedHeaderDrawerDocument(token),
+      );
+
+      originalHeaderCanvas = await readHeaderCanvas('default');
+      touchedHeaderCanvas = true;
+      await writeHeaderCanvas('default', {
+        version: 1,
+        locale: 'ko',
+        updatedAt: new Date().toISOString(),
+        updatedBy: `published-header-search-${token}`,
+        stageWidth: 1280,
+        stageHeight: 96,
+        nodes: [],
+      });
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+
+      await page.setViewportSize({ width: 1024, height: 760 });
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const searchButton = page.locator('[data-builder-header-action="search"]').first();
+      await expect(searchButton).toBeVisible();
+      await searchButton.focus();
+      await expect(searchButton).toBeFocused();
+      await searchButton.press('Enter');
+
+      const dialog = page.getByRole('dialog', { name: '검색' });
+      await expect(dialog).toBeVisible();
+      const input = dialog.getByRole('searchbox', { name: '어떻게 도와드릴까요?' });
+      await expect(input).toBeFocused();
+
+      const closeButton = dialog.getByRole('button', { name: '닫기' });
+      await closeButton.focus();
+      await page.keyboard.press('Shift+Tab');
+      await expect(dialog.getByRole('link', { name: '노사 분쟁' })).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(closeButton).toBeFocused();
+
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.textContent = 'outside search overlay focus probe';
+        probe.setAttribute('data-header-search-focus-probe', 'true');
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(input).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(dialog).toHaveCount(0);
+      await expect(searchButton).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      if (touchedHeaderCanvas && originalHeaderCanvas) {
+        await writeHeaderCanvas('default', originalHeaderCanvas);
+      }
+    }
+  });
+
   test('opens the published menu bar dropdown and mobile menu from keyboard', async ({ page }) => {
     const token = Date.now().toString(36);
     const slug = `g-editor-menu-bar-${token}`;

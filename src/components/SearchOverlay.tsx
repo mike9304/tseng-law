@@ -6,6 +6,10 @@ import { siteContent } from '@/data/site-content';
 import type { Locale } from '@/lib/locales';
 import SmartLink from '@/components/SmartLink';
 import { filterSearchIndex, getSearchIndex, type SearchCategory } from '@/lib/search';
+import {
+  resolvePublishedOverlayOpener,
+  usePublishedOverlayFocus,
+} from '@/components/builder/published/overlayFocus';
 
 export default function SearchOverlay({
   open,
@@ -21,7 +25,8 @@ export default function SearchOverlay({
   const [query, setQuery] = useState('');
   const tabPanelId = `${locale}-search-overlay-panel`;
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const panelRef = useRef<HTMLDivElement | null>(null);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
   const index = useMemo(() => getSearchIndex(locale), [locale]);
   const activeCategory = activeTab as SearchCategory;
   const results = useMemo(
@@ -31,47 +36,29 @@ export default function SearchOverlay({
 
   useEffect(() => {
     if (!open) return;
+    openerRef.current = resolvePublishedOverlayOpener();
     setActiveTab(content.tabs[0].id);
     setQuery('');
-    inputRef.current?.focus();
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [open, content.tabs]);
 
-  useEffect(() => {
-    if (!open) return;
-    const panel = panelRef.current;
-    const focusable = panel?.querySelectorAll<HTMLElement>('a, button, input, [tabindex]:not([tabindex="-1"])');
-    const first = focusable?.[0];
-    const last = focusable?.[focusable.length - 1];
-
-    const handler = (event: KeyboardEvent) => {
-      if (event.key === 'Tab' && focusable && focusable.length > 0) {
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last?.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first?.focus();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handler);
-    return () => document.removeEventListener('keydown', handler);
-  }, [open]);
+  usePublishedOverlayFocus({
+    open,
+    overlayRef,
+    initialFocusRef: inputRef,
+    openerRef,
+  });
 
   useEffect(() => {
     if (!open) return;
     const handler = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
         onClose();
       }
     };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    document.addEventListener('keydown', handler, true);
+    return () => document.removeEventListener('keydown', handler, true);
   }, [open, onClose]);
 
   if (!open) return null;
@@ -86,6 +73,7 @@ export default function SearchOverlay({
 
   return (
     <div
+      ref={overlayRef}
       className="search-overlay"
       data-open={open}
       role="dialog"
@@ -93,7 +81,7 @@ export default function SearchOverlay({
       aria-label={content.title}
       onClick={onClose}
     >
-      <div className="search-panel" ref={panelRef} onClick={(event) => event.stopPropagation()}>
+      <div className="search-panel" onClick={(event) => event.stopPropagation()}>
         <header>
           <strong>{content.title}</strong>
           <button className="icon-button" type="button" onClick={onClose} aria-label={closeLabel}>

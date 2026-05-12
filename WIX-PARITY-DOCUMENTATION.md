@@ -2117,3 +2117,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (7 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W99/W100/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. menu-bar가 published에서 fallback 텍스트로 떨어지는 경로와 dropdown/mobile keyboard focus가 사라지는 경로를 닫았다.
+
+## M96 — Published header search overlay focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/SearchOverlay.tsx` — public header search overlay를 공통 `usePublishedOverlayFocus` helper에 연결했다. search input initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, Escape close 후 search button focus restore를 처리한다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — fallback public header에서 search button keyboard open, focus trap, 외부 focus probe 차단, Escape close와 opener focus restore를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/SearchOverlay.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "published header search" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (8 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W40/W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. header search overlay에서 focus가 페이지 배경으로 새거나 Escape close 뒤 위치를 잃는 경로를 닫았다.

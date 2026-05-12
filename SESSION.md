@@ -5509,3 +5509,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (7 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - published navigation/search/chat 계열 위젯의 remaining keyboard/focus gap을 계속 줄인다.
+
+## 2026-05-13 Codex /goal M96 Published header search overlay focus trap
+
+- public header search overlay는 dialog로 렌더되지만 opener focus restore와 programmatic/external focus guard가 자체 구현에 머물러 있었다.
+- `SearchOverlay`를 공통 `usePublishedOverlayFocus` helper에 연결해 search input initial focus, Tab/Shift+Tab wrap, 외부 focus probe 차단, body scroll lock, Escape close 후 search button focus 복귀를 처리한다.
+- 기존 Escape handler는 capture 단계에서 prevent/stop 처리하도록 바꿔 배경 header/menu keyboard handler와 충돌하지 않게 했다.
+- Playwright는 fallback public header canvas를 노출한 뒤 search button Enter open, close button 기준 Tab wrap, 외부 focus probe 차단, Escape close와 opener focus restore를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/SearchOverlay.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "published header search" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (8 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - public live chat/floating chat 계열 overlay의 keyboard/focus path를 점검한다.

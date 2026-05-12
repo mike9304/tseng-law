@@ -403,6 +403,81 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     }
   });
 
+  test('traps focus in the save section modal opened from the canvas context menu', async ({ page }) => {
+    test.setTimeout(60_000);
+
+    const token = `save-section-focus-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const slug = `save-section-focus-${token}`;
+    const pageTitle = `Save section focus ${token}`;
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        data: {
+          locale: 'ko',
+          slug,
+          title: pageTitle,
+          document: makeDocument({ token, titleText: pageTitle }),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      await openBuilderPageFromPagesPanel(page, pageTitle, pageId!);
+      const rootNode = page.locator(`[data-node-id="root-${token}"]`).first();
+      await expect(rootNode).toBeVisible();
+      await rootNode.click({ position: { x: 24, y: 24 }, force: true });
+      await rootNode.click({ button: 'right', position: { x: 24, y: 24 }, force: true });
+      await page.getByRole('menuitem', { name: /Save as section/ }).click();
+
+      const saveDialog = page.getByRole('dialog', { name: '섹션으로 저장' });
+      await expect(saveDialog).toBeVisible();
+      const closeButton = saveDialog.getByRole('button', { name: '닫기' });
+      const cancelButton = saveDialog.getByRole('button', { name: '취소' });
+      const saveButton = saveDialog.getByRole('button', { name: '저장', exact: true });
+      const nameInput = saveDialog.getByPlaceholder('예) 호정 hero 섹션');
+      await expect(nameInput).toBeFocused();
+
+      await page.keyboard.press('Shift+Tab');
+      await expect(closeButton).toBeFocused();
+      await page.keyboard.press('Shift+Tab');
+      await expect(cancelButton).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(closeButton).toBeFocused();
+
+      await nameInput.fill(`M86 focus ${token}`);
+      await saveButton.focus();
+      await expect(saveButton).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(closeButton).toBeFocused();
+
+      await page.locator('body').evaluate((body) => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.dataset.saveSectionFocusProbe = 'true';
+        probe.textContent = 'outside save section focus probe';
+        body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(nameInput).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(saveDialog).not.toBeVisible();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('covers W26 rollback, W27 public head, and W28 publish blockers', async ({ page }) => {
     test.setTimeout(120_000);
 

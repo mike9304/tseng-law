@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
@@ -22,10 +22,28 @@ const CATEGORY_LABELS: Record<SavedSectionCategory, string> = {
   custom: 'Custom',
 };
 
+const FOCUSABLE_SELECTOR = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
+
 export interface SaveSectionPayload {
   rootNodeId: string;
   /** Snapshot — root + descendants. The modal/server normalize before storage. */
   nodes: BuilderCanvasNode[];
+}
+
+function getFocusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => (
+    !element.hidden &&
+    !element.closest('[hidden]') &&
+    element.getAttribute('aria-hidden') !== 'true' &&
+    element.getClientRects().length > 0
+  ));
 }
 
 export default function SaveSectionModal({
@@ -44,14 +62,77 @@ export default function SaveSectionModal({
   const [category, setCategory] = useState<SavedSectionCategory>('custom');
   const [submitting, setSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const nameInputRef = useRef<HTMLInputElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
+  const closingRef = useRef(false);
 
-  useEffect(() => {
-    function handleKey(event: KeyboardEvent) {
-      if (event.key === 'Escape') onClose();
-    }
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
+  const closeModal = useCallback(() => {
+    closingRef.current = true;
+    onClose();
   }, [onClose]);
+
+  useLayoutEffect(() => {
+    restoreFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    closingRef.current = false;
+    const panel = panelRef.current;
+    if (!panel) return undefined;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const focusFrame = window.requestAnimationFrame(() => {
+      (nameInputRef.current ?? getFocusableElements(panel)[0] ?? panel).focus({ preventScroll: true });
+    });
+    const handleFocusIn = (event: FocusEvent) => {
+      if (panel.contains(event.target as Node | null)) return;
+      (nameInputRef.current ?? getFocusableElements(panel)[0] ?? panel).focus({ preventScroll: true });
+    };
+
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('focusin', handleFocusIn);
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.body.style.overflow = previousBodyOverflow;
+      document.removeEventListener('focusin', handleFocusIn);
+      if (!closingRef.current) return;
+      const restoreTarget = restoreFocusRef.current;
+      window.setTimeout(() => {
+        if (restoreTarget?.isConnected) restoreTarget.focus({ preventScroll: true });
+        restoreFocusRef.current = null;
+        closingRef.current = false;
+      }, 0);
+    };
+  }, []);
+
+  const handleDialogKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      closeModal();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+
+    const panel = panelRef.current;
+    if (!panel) return;
+    const focusable = getFocusableElements(panel);
+    if (focusable.length === 0) {
+      event.preventDefault();
+      panel.focus({ preventScroll: true });
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus({ preventScroll: true });
+      return;
+    }
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus({ preventScroll: true });
+    }
+  };
 
   const normalizedPayload = useMemo(
     () => ({
@@ -100,6 +181,7 @@ export default function SaveSectionModal({
         setErrorMessage(data.error ?? '저장에 실패했습니다.');
         return;
       }
+      closingRef.current = true;
       onSaved(data.section);
     } catch (error) {
       const message = error instanceof Error ? error.message : '저장에 실패했습니다.';
@@ -111,8 +193,7 @@ export default function SaveSectionModal({
 
   return (
     <div
-      role="dialog"
-      aria-label="섹션으로 저장"
+      role="presentation"
       style={{
         position: 'fixed',
         inset: 0,
@@ -125,10 +206,17 @@ export default function SaveSectionModal({
         WebkitBackdropFilter: 'blur(6px)',
       }}
       onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
+        if (event.target === event.currentTarget) closeModal();
       }}
     >
       <div
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="섹션으로 저장"
+        tabIndex={-1}
+        data-builder-save-section-dialog="true"
+        onKeyDownCapture={handleDialogKeyDown}
         style={{
           background: '#fff',
           borderRadius: 16,
@@ -148,7 +236,7 @@ export default function SaveSectionModal({
           </h2>
           <button
             type="button"
-            onClick={onClose}
+            onClick={closeModal}
             aria-label="닫기"
             style={{
               border: 'none',
@@ -185,6 +273,7 @@ export default function SaveSectionModal({
         <label style={labelStyle}>
           <span style={labelTextStyle}>이름 *</span>
           <input
+            ref={nameInputRef}
             type="text"
             value={name}
             onChange={(event) => setName(event.target.value)}
@@ -240,7 +329,7 @@ export default function SaveSectionModal({
         <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 4 }}>
           <button
             type="button"
-            onClick={onClose}
+            onClick={closeModal}
             disabled={submitting}
             style={{
               padding: '8px 14px',

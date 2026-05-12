@@ -1970,3 +1970,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 버전 히스토리와 복원 확인 overlay에서 keyboard focus가 editor canvas나 배경 timeline으로 새는 경로를 닫았다.
+
+## M86 — Save section modal focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/sections/SaveSectionModal.tsx` — save-as-section dialog에 initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, Escape close, 닫힌 뒤 focus restore를 추가했다.
+  - `tests/builder-editor/seo-publish-history.playwright.ts` — 실제 canvas context menu의 `Save as section...` 경로로 modal을 열고 focus trap, 외부 focus 차단, Escape close를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the save section modal" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W84/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 컨테이너 우클릭 → 섹션 저장 modal에서 keyboard focus가 context menu/canvas로 새는 경로를 닫았다.

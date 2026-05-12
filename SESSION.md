@@ -5368,3 +5368,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W26-W28 through actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - `SaveSectionModal`, `TemplateGalleryModal` preview confirm 등 남은 custom editor overlay의 keyboard/focus gap을 계속 줄인다.
+
+## 2026-05-13 Codex /goal M86 Save section modal focus trap
+
+- `SaveSectionModal`은 canvas context menu에서 열리는 custom dialog인데, 전역 Escape와 input `autoFocus` 외에 Tab trap, 외부 focus 차단, body scroll lock, 닫힌 뒤 focus restore가 없었다.
+- modal shell을 `role="dialog" aria-modal="true"` panel로 정리하고, 이름 input initial focus, Tab/Shift+Tab wrap, 외부 focus probe 차단, Escape close를 추가했다.
+- 저장 성공 경로도 focus restore cleanup을 타도록 `closingRef`를 세운 뒤 `onSaved`를 호출한다.
+- Playwright는 임시 page의 root container를 우클릭해 `Save as section...` 메뉴로 modal을 열고, 이름 input initial focus, close/cancel/save Tab wrap, 외부 focus probe 차단, Escape close를 검증한다.
+- 기존 layer/right-click context menu smoke도 재실행했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the save section modal" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - `TemplateGalleryModal`/template preview 계열이나 color/font picker popover의 keyboard/focus gap을 계속 줄인다.

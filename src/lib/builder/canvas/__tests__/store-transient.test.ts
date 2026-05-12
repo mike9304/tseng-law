@@ -25,6 +25,33 @@ function textNode(id: string, zIndex: number): BuilderCanvasNode {
   };
 }
 
+function containerNode(id: string, zIndex: number, parentId?: string): BuilderCanvasNode {
+  return {
+    id,
+    kind: 'container',
+    rect: { x: 10 + zIndex * 20, y: 20 + zIndex * 20, width: 220, height: 80 },
+    style: createDefaultCanvasNodeStyle(),
+    zIndex,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    parentId,
+    content: {
+      label: id,
+      background: 'rgba(248, 250, 252, 0.96)',
+      borderColor: '#cbd5e1',
+      borderStyle: 'dashed',
+      borderWidth: 0,
+      borderRadius: 12,
+      layoutMode: 'absolute',
+      padding: 0,
+      activeIndex: 0,
+      sticky: false,
+      variant: 'flat',
+    },
+  };
+}
+
 function documentFixture(): BuilderCanvasDocument {
   return {
     version: 1,
@@ -64,7 +91,48 @@ function manyNodeDocumentFixture(count: number): BuilderCanvasDocument {
   };
 }
 
+function interactiveDocumentFixture(): BuilderCanvasDocument {
+  return {
+    ...documentFixture(),
+    nodes: [
+      containerNode('home-services-root', 0),
+      containerNode('home-services-card-1', 1, 'home-services-root'),
+      containerNode('home-services-card-1-toggle', 2, 'home-services-card-1'),
+      textNode('home-services-card-1-title', 3),
+      containerNode('home-faq-root', 4),
+      containerNode('home-faq-item-2', 5, 'home-faq-root'),
+      textNode('home-faq-item-2-question', 6),
+    ].map((node) => {
+      if (node.id === 'home-services-card-1-title') {
+        return { ...node, parentId: 'home-services-card-1-toggle' };
+      }
+      if (node.id === 'home-faq-item-2-question') {
+        return { ...node, parentId: 'home-faq-item-2' };
+      }
+      return node;
+    }),
+  };
+}
+
 describe('canvas store transient updates', () => {
+  it('reveals service and FAQ preview state synchronously with selection', () => {
+    useBuilderCanvasStore.getState().replaceDocument(interactiveDocumentFixture());
+
+    useBuilderCanvasStore.getState().setSelectedNodeId('home-services-card-1-title');
+    expect(useBuilderCanvasStore.getState().interactivePreview).toMatchObject({
+      servicesOpenIndex: 1,
+      servicesRevealedIndices: [0, 1],
+    });
+
+    useBuilderCanvasStore.getState().setSelectedNodeId('home-faq-item-2-question');
+    expect(useBuilderCanvasStore.getState().interactivePreview).toEqual({
+      servicesOpenIndex: 1,
+      servicesRevealedIndices: [0, 1],
+      faqOpenIndex: 2,
+      faqRevealedIndices: [0, 2],
+    });
+  });
+
   it('resets interactive preview state when replacing the document', () => {
     useBuilderCanvasStore.getState().replaceDocument(documentFixture());
     useBuilderCanvasStore.getState().setInteractivePreviewIndex('services', 2);

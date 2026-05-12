@@ -105,14 +105,17 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(gallery.getByRole('searchbox')).toHaveValue('법률사무소 홈');
     await expect(gallery.getByRole('button', { name: '법률사무소 홈 미리보기' })).toBeVisible();
 
-    await gallery.getByRole('button', { name: '법률사무소 홈 미리보기' }).click();
-    const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+    await gallery.getByRole('searchbox').fill('여행사 홈');
+    await expect(gallery.getByRole('button', { name: '여행사 홈 미리보기' })).toBeVisible();
+
+    await gallery.getByRole('button', { name: '여행사 홈 미리보기' }).click();
+    const preview = page.getByRole('dialog', { name: '여행사 홈' });
     await expect(preview).toBeVisible();
     await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
     await expect(page.getByText('선택한 템플릿으로 새 페이지를 생성합니다.')).toBeVisible();
     await page.getByRole('button', { name: '다른 템플릿 선택' }).click();
     await expect(gallery).toBeVisible();
-    await expect(gallery.getByRole('searchbox')).toHaveValue('법률사무소 홈');
+    await expect(gallery.getByRole('searchbox')).toHaveValue('여행사 홈');
 
     await gallery.getByRole('button', { name: 'Close' }).click();
     await expect(gallery).toBeHidden();

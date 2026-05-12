@@ -4998,3 +4998,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - W216~W225 editor 고도화 또는 template/page switching 실사용 회귀를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M57 Template gallery back search + preview sync
+
+- Template showroom에서 외부 검색어로 진입한 뒤 내부에서 다른 검색어를 입력하고 적용 확인 prompt에서 뒤로 가면, 최신 showroom 검색어가 유지되도록 했다.
+- `TemplateGalleryModal`은 `onSearchChange`를 통해 debounced search input을 상위로 전달하고, `PageSwitcher`는 gallery open search와 last search를 분리해서 back path에 사용한다.
+- Playwright 재실행 중 주요업무 `home-services-card-1-detail-0`이 실제 클릭 뒤 hidden으로 남는 실패가 재현돼, preview open/revealed index 동기화를 `CanvasNode` effect에만 맡기지 않고 store selection setter에서 즉시 처리하게 보강했다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (8 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - W216~W225 editor 고도화 또는 template/page switching 실사용 회귀를 계속 재스캔한다.

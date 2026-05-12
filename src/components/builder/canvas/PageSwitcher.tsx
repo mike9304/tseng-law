@@ -347,6 +347,8 @@ export default function PageSwitcher({
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
   const [showGallery, setShowGallery] = useState(false);
+  const [templateGalleryOpenSearch, setTemplateGalleryOpenSearch] = useState(templateGalleryInitialSearch.trim());
+  const [templateGalleryLastSearch, setTemplateGalleryLastSearch] = useState(templateGalleryInitialSearch.trim());
   const [pendingTemplate, setPendingTemplate] = useState<BuilderCanvasDocument | null | undefined>(undefined);
   const [slugInput, setSlugInput] = useState('');
   const [showSlugPrompt, setShowSlugPrompt] = useState(false);
@@ -391,10 +393,21 @@ export default function PageSwitcher({
     window.setTimeout(() => titleInputRef.current?.focus(), 0);
   }, [editingPageId]);
 
+  const openTemplateGallery = useCallback((search = '') => {
+    const normalizedSearch = search.trim();
+    setTemplateGalleryOpenSearch(normalizedSearch);
+    setTemplateGalleryLastSearch(normalizedSearch);
+    setShowGallery(true);
+  }, []);
+
+  const handleTemplateGallerySearchChange = useCallback((query: string) => {
+    setTemplateGalleryLastSearch(query.trim());
+  }, []);
+
   useEffect(() => {
     if (!templateGalleryRequestId) return;
-    setShowGallery(true);
-  }, [templateGalleryRequestId]);
+    openTemplateGallery(templateGalleryInitialSearch);
+  }, [openTemplateGallery, templateGalleryInitialSearch, templateGalleryRequestId]);
 
   useEffect(() => {
     if (!openMenuPageId) return;
@@ -553,7 +566,7 @@ export default function PageSwitcher({
           type="button"
           style={addButtonStyle}
           disabled={creating}
-          onClick={() => setShowGallery(true)}
+          onClick={() => openTemplateGallery()}
         >
           {creating ? '...' : '+ New'}
         </button>
@@ -639,7 +652,7 @@ export default function PageSwitcher({
             type="button"
             style={{ ...addButtonStyle, width: 'fit-content', minHeight: 28 }}
             disabled={creating}
-            onClick={() => setShowGallery(true)}
+            onClick={() => openTemplateGallery()}
           >
             첫 페이지 만들기
           </button>
@@ -746,7 +759,8 @@ export default function PageSwitcher({
 
       {showGallery ? (
         <TemplateGalleryModal
-          initialSearch={templateGalleryInitialSearch}
+          initialSearch={templateGalleryOpenSearch}
+          onSearchChange={handleTemplateGallerySearchChange}
           onSelect={(doc) => handleTemplateSelect(doc)}
           onClose={() => setShowGallery(false)}
         />
@@ -814,6 +828,7 @@ export default function PageSwitcher({
                   onClick={() => {
                     setShowSlugPrompt(false);
                     setPendingTemplate(undefined);
+                    setTemplateGalleryOpenSearch(templateGalleryLastSearch);
                     setShowGallery(true);
                   }}
                   style={{ padding: '6px 16px', background: '#eff6ff', color: '#123b63', border: '1px solid #bfdbfe', borderRadius: 8, fontSize: '0.82rem', fontWeight: 700, cursor: 'pointer' }}

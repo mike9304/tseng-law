@@ -1571,3 +1571,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W216~W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 이전 버전 localStorage나 부분 저장된 prefs 때문에 rulers/grid/guides/shortcut/comment/component-library UI가 undefined nested 값으로 흔들리는 위험을 줄였다.
+
+## M57 — Template gallery back search + preview sync
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/TemplateGalleryModal.tsx` — 쇼룸 내부 search input 변화를 `onSearchChange`로 상위에 알린다.
+  - `src/components/builder/canvas/PageSwitcher.tsx` — template gallery open search와 last search를 분리해, 템플릿 적용 확인 prompt에서 `다른 템플릿 선택`으로 돌아갈 때 쇼룸 내부 최신 검색어를 유지한다.
+  - `src/lib/builder/canvas/store.ts` — services/FAQ preview open/revealed index를 selection setter 단계에서 즉시 동기화한다. CanvasNode effect보다 아래에서 처리해 실제 클릭 경로에서 상세 글이 hidden으로 남는 플레이크를 줄인다.
+  - `src/lib/builder/canvas/__tests__/store-transient.test.ts` — service/FAQ nested node 선택 직후 preview index가 바로 업데이트되는 store 단위 회귀를 추가했다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Add 패널 `법률` 검색으로 showroom 진입 후 showroom 내부에서 `여행사 홈`으로 다시 검색하고, 적용 확인에서 뒤로 돌아와도 `여행사 홈` 검색어가 유지되는지 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/editor-prefs.test.ts` ✅ (8 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 지적한 template back path와 주요업무 글 hidden 회귀를 각각 검색어 보존과 store-level preview sync로 보강했다.

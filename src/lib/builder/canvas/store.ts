@@ -194,6 +194,80 @@ function createDefaultInteractivePreviewState(): BuilderCanvasInteractivePreview
   };
 }
 
+function revealPreviewIndex(
+  current: BuilderCanvasInteractivePreviewState,
+  section: BuilderCanvasPreviewSection,
+  index: number,
+): BuilderCanvasInteractivePreviewState {
+  const clampedIndex = Math.max(0, Math.round(index));
+  if (section === 'services') {
+    const currentRevealed = current.servicesRevealedIndices.length > 0
+      ? current.servicesRevealedIndices
+      : [current.servicesOpenIndex];
+    const servicesRevealedIndices = currentRevealed.includes(clampedIndex)
+      ? currentRevealed
+      : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
+    if (current.servicesOpenIndex === clampedIndex && servicesRevealedIndices === currentRevealed) {
+      return current;
+    }
+    return {
+      ...current,
+      servicesOpenIndex: clampedIndex,
+      servicesRevealedIndices,
+    };
+  }
+
+  const currentRevealed = current.faqRevealedIndices.length > 0
+    ? current.faqRevealedIndices
+    : [current.faqOpenIndex];
+  const faqRevealedIndices = currentRevealed.includes(clampedIndex)
+    ? currentRevealed
+    : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
+  if (current.faqOpenIndex === clampedIndex && faqRevealedIndices === currentRevealed) {
+    return current;
+  }
+  return {
+    ...current,
+    faqOpenIndex: clampedIndex,
+    faqRevealedIndices,
+  };
+}
+
+function findNodeOrAncestorId(
+  nodesById: Map<string, BuilderCanvasNode>,
+  startId: string,
+  pattern: RegExp,
+): string | null {
+  let cursor: string | null = startId;
+  while (cursor) {
+    if (pattern.test(cursor)) return cursor;
+    cursor = nodesById.get(cursor)?.parentId ?? null;
+  }
+  return null;
+}
+
+function revealPreviewForSelection(
+  current: BuilderCanvasInteractivePreviewState,
+  nodesById: Map<string, BuilderCanvasNode>,
+  selectedNodeIds: string[],
+): BuilderCanvasInteractivePreviewState {
+  let next = current;
+  for (const nodeId of selectedNodeIds) {
+    const serviceCardId = findNodeOrAncestorId(nodesById, nodeId, /^home-services-card-\d+$/);
+    const serviceCardIndex = /^home-services-card-(\d+)$/.exec(serviceCardId ?? '')?.[1];
+    if (serviceCardIndex != null) {
+      next = revealPreviewIndex(next, 'services', Number(serviceCardIndex));
+    }
+
+    const faqItemId = findNodeOrAncestorId(nodesById, nodeId, /^home-faq-item-\d+$/);
+    const faqItemIndex = /^home-faq-item-(\d+)$/.exec(faqItemId ?? '')?.[1];
+    if (faqItemIndex != null) {
+      next = revealPreviewIndex(next, 'faq', Number(faqItemIndex));
+    }
+  }
+  return next;
+}
+
 function updateNodesOptionsForMode(mode: MutationMode): UpdateNodesOptions | undefined {
   return mode === 'transient' ? TRANSIENT_UPDATE_NODES_OPTIONS : undefined;
 }
@@ -527,49 +601,8 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   interactivePreview: createDefaultInteractivePreviewState(),
   setInteractivePreviewIndex: (section, index) =>
     set((state) => {
-      const clampedIndex = Math.max(0, Math.round(index));
-      if (section === 'services') {
-        const currentRevealed = state.interactivePreview.servicesRevealedIndices.length > 0
-          ? state.interactivePreview.servicesRevealedIndices
-          : [state.interactivePreview.servicesOpenIndex];
-        const servicesRevealedIndices = currentRevealed.includes(clampedIndex)
-          ? currentRevealed
-          : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
-        if (
-          state.interactivePreview.servicesOpenIndex !== clampedIndex
-          || servicesRevealedIndices !== currentRevealed
-        ) {
-          return {
-            interactivePreview: {
-              ...state.interactivePreview,
-              servicesOpenIndex: clampedIndex,
-              servicesRevealedIndices,
-            },
-          };
-        }
-        return state;
-      }
-      if (section === 'faq') {
-        const currentRevealed = state.interactivePreview.faqRevealedIndices.length > 0
-          ? state.interactivePreview.faqRevealedIndices
-          : [state.interactivePreview.faqOpenIndex];
-        const faqRevealedIndices = currentRevealed.includes(clampedIndex)
-          ? currentRevealed
-          : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
-        if (
-          state.interactivePreview.faqOpenIndex !== clampedIndex
-          || faqRevealedIndices !== currentRevealed
-        ) {
-          return {
-            interactivePreview: {
-              ...state.interactivePreview,
-              faqOpenIndex: clampedIndex,
-              faqRevealedIndices,
-            },
-          };
-        }
-      }
-      return state;
+      const interactivePreview = revealPreviewIndex(state.interactivePreview, section, index);
+      return interactivePreview === state.interactivePreview ? state : { interactivePreview };
     }),
   applyMobileAutoFit: (mobileWidth) =>
     set((state) => {
@@ -628,10 +661,16 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       nodesById: getCanvasNodesById(document.nodes),
     }),
   setSelectedNodeId: (selectedNodeId) =>
-    set({
-      selectedNodeId,
-      selectedNodeIds: selectedNodeId ? [selectedNodeId] : [],
-      selectedSurfaceKey: null,
+    set((state) => {
+      const selectedNodeIds = selectedNodeId ? [selectedNodeId] : [];
+      return {
+        selectedNodeId,
+        selectedNodeIds,
+        selectedSurfaceKey: null,
+        interactivePreview: selectedNodeId
+          ? revealPreviewForSelection(state.interactivePreview, state.nodesById, selectedNodeIds)
+          : state.interactivePreview,
+      };
     }),
   setSelectedNodeIds: (selectedNodeIds, primaryNodeId = null) =>
     set((state) => {
@@ -643,9 +682,11 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         };
       }
       const selectedId = primaryNodeId ?? selectedNodeIds[selectedNodeIds.length - 1] ?? null;
+      const resolvedNodeIds = resolveSelectedNodeIds(state.document, selectedNodeIds, selectedId);
       return {
         selectedNodeId: selectedId,
-        selectedNodeIds: resolveSelectedNodeIds(state.document, selectedNodeIds, selectedId),
+        selectedNodeIds: resolvedNodeIds,
+        interactivePreview: revealPreviewForSelection(state.interactivePreview, state.nodesById, resolvedNodeIds),
       };
     }),
   toggleNodeSelection: (nodeId) =>
@@ -661,11 +702,13 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
           selectedNodeIds: [],
         };
       }
+      const selectedNodeId = exists
+        ? selectedNodeIds[selectedNodeIds.length - 1] ?? null
+        : nodeId;
       return {
-        selectedNodeId: exists
-          ? selectedNodeIds[selectedNodeIds.length - 1] ?? null
-          : nodeId,
+        selectedNodeId,
         selectedNodeIds,
+        interactivePreview: revealPreviewForSelection(state.interactivePreview, state.nodesById, selectedNodeIds),
       };
     }),
   enterGroup: (groupId) =>

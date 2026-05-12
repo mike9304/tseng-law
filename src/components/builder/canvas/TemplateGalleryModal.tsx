@@ -517,10 +517,12 @@ function PreviewPanel({
 
 export default function TemplateGalleryModal({
   initialSearch = '',
+  onSearchChange,
   onSelect,
   onClose,
 }: {
   initialSearch?: string;
+  onSearchChange?: (query: string) => void;
   onSelect: (document: BuilderCanvasDocument | null) => void;
   onClose: () => void;
 }) {
@@ -536,14 +538,17 @@ export default function TemplateGalleryModal({
     setSearchInput(normalizedInitialSearch);
     setSearchQuery(normalizedInitialSearch.toLowerCase());
     setActiveCategory('all');
-  }, [initialSearch]);
+    onSearchChange?.(normalizedInitialSearch);
+  }, [initialSearch, onSearchChange]);
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
-      setSearchQuery(searchInput.trim().toLowerCase());
+      const normalizedSearch = searchInput.trim();
+      setSearchQuery(normalizedSearch.toLowerCase());
+      onSearchChange?.(normalizedSearch);
     }, 200);
     return () => window.clearTimeout(timeoutId);
-  }, [searchInput]);
+  }, [onSearchChange, searchInput]);
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {

@@ -1229,3 +1229,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W181은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Brand kit JSON과 별도로 전체 theme token bundle을 export/import할 수 있다.
+
+## M35 — Custom My Theme save/load
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Site Settings > Presets 탭에 My Themes 영역을 추가했다. 현재 theme를 `Save as My Theme`로 localStorage에 저장하고, 저장된 preset은 preview card에서 `Apply My Theme` 또는 `Delete`할 수 있다.
+  - `tests/builder-editor/design-pool.playwright.ts` — My Theme 저장, preset card 표시, 재적용, 삭제 notice를 실제 브라우저 경로로 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (893 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W178은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Built-in preset 외에 사용자가 현재 스타일을 My Theme로 저장하고 다시 불러올 수 있다.

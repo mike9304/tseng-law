@@ -70,6 +70,14 @@ interface SiteSettingsForm {
 
 type SiteSettingsFieldKey = Exclude<keyof SiteSettingsForm, 'assets' | 'pageTransition' | 'pageTransitionDurationMs'>;
 type SiteSettingsTab = 'general' | 'brand' | 'typography' | 'presets' | 'dark' | 'mobile' | 'advanced';
+type CustomThemePreset = {
+  id: string;
+  name: string;
+  savedAt: string;
+  theme: BuilderTheme;
+};
+
+const CUSTOM_THEME_PRESETS_STORAGE_KEY = 'builder:custom-theme-presets:v1';
 
 const EMPTY_SETTINGS: SiteSettingsForm = {
   firmName: '',
@@ -303,6 +311,43 @@ function isValidHexColor(value: string): boolean {
   return /^#[0-9a-fA-F]{6}$/.test(value.trim());
 }
 
+function safeStorage(): Storage | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    return window.localStorage;
+  } catch {
+    return null;
+  }
+}
+
+function readCustomThemePresets(): CustomThemePreset[] {
+  const storage = safeStorage();
+  if (!storage) return [];
+  try {
+    const parsed = JSON.parse(storage.getItem(CUSTOM_THEME_PRESETS_STORAGE_KEY) ?? '[]') as unknown;
+    if (!Array.isArray(parsed)) return [];
+    return parsed.flatMap((item) => {
+      if (!item || typeof item !== 'object') return [];
+      const source = item as Partial<CustomThemePreset>;
+      if (!source.theme || typeof source.name !== 'string') return [];
+      return [{
+        id: typeof source.id === 'string' ? source.id : `theme-${source.name}`,
+        name: source.name.trim() || 'My Theme',
+        savedAt: typeof source.savedAt === 'string' ? source.savedAt : new Date(0).toISOString(),
+        theme: normalizeDesignTokenTheme({ theme: source.theme }, DEFAULT_THEME),
+      }];
+    });
+  } catch {
+    return [];
+  }
+}
+
+function writeCustomThemePresets(presets: CustomThemePreset[]): void {
+  const storage = safeStorage();
+  if (!storage) return;
+  storage.setItem(CUSTOM_THEME_PRESETS_STORAGE_KEY, JSON.stringify(presets.slice(0, 12)));
+}
+
 interface SiteSettingsResponse {
   ok?: boolean;
   settings?: Partial<BuilderSiteSettings>;
@@ -338,6 +383,7 @@ export default function SiteSettingsModal({
   const [mobileBottomBar, setMobileBottomBar] = useState<BuilderMobileBottomBar>(() => normalizeMobileBottomBar(undefined, EMPTY_SETTINGS));
   const [activeTab, setActiveTab] = useState<SiteSettingsTab>('general');
   const [pendingPreset, setPendingPreset] = useState<SiteThemePreset | null>(null);
+  const [customThemePresets, setCustomThemePresets] = useState<CustomThemePreset[]>([]);
   const [notice, setNotice] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -374,6 +420,10 @@ export default function SiteSettingsModal({
   useEffect(() => {
     if (open) void fetchSettings();
   }, [open, fetchSettings]);
+
+  useEffect(() => {
+    if (open) setCustomThemePresets(readCustomThemePresets());
+  }, [open]);
 
   const handleSave = async () => {
     for (const token of THEME_COLOR_TOKENS) {
@@ -583,6 +633,41 @@ export default function SiteSettingsModal({
     } catch {
       setError('Design token JSON을 읽지 못했습니다.');
     }
+  };
+
+  const saveCurrentThemePreset = () => {
+    const name = settings.firmName ? `${settings.firmName} My Theme` : 'My Theme';
+    const preset: CustomThemePreset = {
+      id: `theme-${Date.now()}`,
+      name,
+      savedAt: new Date().toISOString(),
+      theme: createDesignTokenBundle(
+        {
+          ...theme,
+          darkColors: normalizeDarkColors(theme.colors, theme.darkColors),
+          themeTextPresets: normalizeThemeTextPresets(theme.themeTextPresets),
+        },
+        name,
+      ).theme,
+    };
+    const nextPresets = [preset, ...customThemePresets.filter((item) => item.name !== name)].slice(0, 12);
+    writeCustomThemePresets(nextPresets);
+    setCustomThemePresets(nextPresets);
+    setNotice(`${name} saved. 다른 사이트 설정에서도 My Themes에서 불러올 수 있습니다.`);
+  };
+
+  const applyCustomThemePreset = (preset: CustomThemePreset) => {
+    const nextTheme = normalizeDesignTokenTheme({ theme: preset.theme }, theme);
+    setTheme(nextTheme);
+    setBrandKit(createBrandKitFromTheme(nextTheme, settings));
+    setNotice(`${preset.name} preset applied. 저장을 눌러 사이트에 반영하세요.`);
+  };
+
+  const deleteCustomThemePreset = (id: string) => {
+    const nextPresets = customThemePresets.filter((preset) => preset.id !== id);
+    writeCustomThemePresets(nextPresets);
+    setCustomThemePresets(nextPresets);
+    setNotice('My Theme preset deleted.');
   };
 
   const paletteTokens = THEME_COLOR_TOKENS.map((token) => ({
@@ -1285,6 +1370,79 @@ export default function SiteSettingsModal({
               </div>
             </div>
             <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>My Themes</div>
+              <section style={presetCardStyle}>
+                <strong style={{ color: '#0f172a', fontSize: '0.9rem' }}>
+                  Save current theme
+                </strong>
+                <span style={{ color: '#64748b', fontSize: '0.76rem', lineHeight: 1.45 }}>
+                  Store the current colors, fonts, text presets, radius, and shadow choices as a reusable local theme preset.
+                </span>
+                <button type="button" style={presetButtonStyle} onClick={saveCurrentThemePreset}>
+                  Save as My Theme
+                </button>
+              </section>
+              {customThemePresets.length > 0 ? (
+                <div style={presetGridStyle}>
+                  {customThemePresets.map((preset) => (
+                    <section key={preset.id} data-custom-theme-preset={preset.id} style={presetCardStyle}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                        <div>
+                          <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.9rem' }}>
+                            {preset.name}
+                          </strong>
+                          <span style={{ color: '#64748b', fontSize: '0.72rem' }}>
+                            Saved {new Date(preset.savedAt).toLocaleDateString()}
+                          </span>
+                        </div>
+                        <div style={{ display: 'flex', gap: 3 }}>
+                          {THEME_COLOR_TOKENS.slice(0, 5).map((token) => (
+                            <span
+                              key={token}
+                              aria-hidden
+                              style={{
+                                width: 14,
+                                height: 14,
+                                borderRadius: 999,
+                                border: '1px solid rgba(15,23,42,0.14)',
+                                background: preset.theme.colors[token],
+                              }}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      <div style={{ borderRadius: preset.theme.radii.md, background: preset.theme.colors.background, border: `1px solid ${preset.theme.colors.muted}`, padding: 10 }}>
+                        <div style={{ fontFamily: preset.theme.fonts.heading, color: preset.theme.colors.text, fontSize: 22, lineHeight: 1 }}>
+                          Aa
+                        </div>
+                        <div style={{ fontFamily: preset.theme.fonts.body, color: preset.theme.colors.secondary, fontSize: 12, marginTop: 5 }}>
+                          My Theme
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', gap: 8 }}>
+                        <button
+                          type="button"
+                          style={{ ...presetButtonStyle, flex: 1 }}
+                          onClick={() => applyCustomThemePreset(preset)}
+                        >
+                          Apply My Theme
+                        </button>
+                        <button
+                          type="button"
+                          style={{ ...presetButtonStyle, color: '#b91c1c' }}
+                          onClick={() => deleteCustomThemePreset(preset.id)}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </section>
+                  ))}
+                </div>
+              ) : (
+                <span style={{ color: '#64748b', fontSize: '0.76rem' }}>
+                  No saved themes yet.
+                </span>
+              )}
               <div style={sectionHeadingStyle}>Theme presets</div>
               {pendingPreset ? (
                 <div style={{ border: '1px solid #bfdbfe', borderRadius: 10, padding: 12, background: '#eff6ff', display: 'flex', flexDirection: 'column', gap: 10 }}>

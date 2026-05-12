@@ -4687,3 +4687,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W178 custom theme preset save/load 또는 W182 brand asset library gap을 우선 본다.
+
+## 2026-05-12 Codex /goal M35 custom My Theme save/load
+
+- W178의 남은 gap인 사용자 custom theme preset 저장/불러오기를 구현했다.
+- Site Settings > Presets 탭에 My Themes 영역을 추가했다. 현재 theme를 `Save as My Theme`로 localStorage에 저장하고, 저장된 preset card에서 `Apply My Theme` / `Delete`를 실행할 수 있다.
+- 저장 preset은 colors/fonts/text presets/radii/effects/typography scale이 포함된 normalized theme로 보관된다.
+- Playwright는 실제 modal에서 My Theme 저장, preset card 표시, 재적용 notice, 삭제 notice를 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (893 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W182 brand asset library gap을 우선 본다.

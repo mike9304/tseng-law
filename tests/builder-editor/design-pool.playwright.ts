@@ -810,6 +810,13 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await expect(modal).toContainText('Soft radius preset applied');
     await modal.getByRole('button', { name: 'Use Strong' }).click();
     await expect(modal).toContainText('Strong shadow preset applied');
+    await modal.getByRole('button', { name: 'Save as My Theme' }).click();
+    await expect(modal).toContainText('My Theme');
+    await expect(modal.locator('[data-custom-theme-preset]').first()).toBeVisible();
+    await modal.getByRole('button', { name: 'Apply My Theme' }).first().click();
+    await expect(modal).toContainText('preset applied');
+    await modal.getByRole('button', { name: 'Delete' }).first().click();
+    await expect(modal).toContainText('My Theme preset deleted');
     await expect(modal.getByRole('button', { name: 'Apply' })).toHaveCount(5);
 
     await modal.getByRole('button', { name: /Dark mode/ }).click();

@@ -1603,3 +1603,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “템플릿 있는 AI 디자인 전문 사이트처럼 검색해서 가져오기” 흐름을 Add 패널과 full showroom 검색 기준까지 확장했다.
+
+## M59 — Public locale page resolution guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/site/page-resolution.ts` — public/editor 공용 page meta resolver를 추가했다. `projectPagesForLocale()` 결과 안에서 home/slug 후보를 고르기 때문에 `/ko`가 같은 slug의 최신 `zh-hant` page meta를 잡지 않는다.
+  - `src/lib/builder/site/public-page.tsx` — published page resolver가 locale-filtered resolver를 사용하게 했다.
+  - `src/lib/builder/site/__tests__/page-resolution.test.ts` — zh-hant home이 더 최신이어도 Korean public home은 ko page를 고르고, target locale page가 없을 때만 default-locale projection을 허용하는 회귀를 추가했다.
+  - `tests/builder-editor/locale-projection.playwright.ts` — `/zh-hant/admin-builder` 방문 후 `/ko/admin-builder`와 public `/ko`가 모두 한국어 home text를 유지하고 번중 hero text를 포함하지 않는지 검증한다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/site/__tests__/page-resolution.test.ts` ✅ (3 passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W193은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “편집기는 한국어인데 사이트가 중국어로 뜨는” 경로를 public resolver 단에서 막았다.

@@ -85,6 +85,13 @@ test.describe('/admin-builder locale projection', () => {
       .first();
     await expect(koHeroTitle).toContainText('대만 법률을 한국어로 명확하게.');
     await expect(koHeroTitle).not.toContainText('以韓語清楚說明台灣法律。');
+
+    const publicKoResponse = await page.goto(`/ko?localeProjectionPublic=${Date.now().toString(36)}`, {
+      waitUntil: 'domcontentloaded',
+    });
+    expect(publicKoResponse?.status()).toBeLessThan(400);
+    await expect(page.locator('body')).toContainText('대만 법률을 한국어로 명확하게.');
+    await expect(page.locator('body')).not.toContainText('以韓語清楚說明台灣法律。');
   });
 
   test('does not open a Traditional Chinese page id inside the Korean editor route', async ({ page }) => {

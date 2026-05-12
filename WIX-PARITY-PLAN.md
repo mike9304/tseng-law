@@ -60,3 +60,4 @@
 | M56 | P9     | Editor preference normalization | W216~W225 | 1h | M28 | 🟡 editor prefs nested default/legacy 복구 자동검증 통과 / 사용자 QA 대기 |
 | M57 | QA     | Template gallery back search + preview sync | W14,W18,W84,W216 | 1h | M56 | 🟡 템플릿 뒤로가기 검색 유지/서비스 글 클릭 회귀 자동검증 통과 / 사용자 QA 대기 |
 | M58 | QA     | Template search aliases | W14,W18,W216 | 1h | M57 | 🟡 한국어 업종/페이지/템플릿 사이트 검색 자동검증 통과 / 사용자 QA 대기 |
+| M59 | QA     | Public locale page resolution guard | W14,W193 | 1h | M45 | 🟡 `/ko` public/editor 중국어 혼선 자동검증 통과 / 사용자 QA 대기 |

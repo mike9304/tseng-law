@@ -57,6 +57,7 @@ import { buildPublishedSurfaceFrame } from '@/lib/builder/site/published-node-fr
 import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-templates';
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import { findPageMetaForLocale } from '@/lib/builder/site/page-resolution';
 import {
   normalizeHeaderFooterMobileConfig,
   normalizeMobileBottomBar,
@@ -134,19 +135,6 @@ function buildThemeInitScript(
   return `(function(){try{var saved=${allowVisitorToggle ? "localStorage.getItem('builder-theme')" : 'null'};if(saved!=='light'&&saved!=='dark'){saved=null;}var defaultMode='${defaultMode}';var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;var theme=saved||(defaultMode==='auto'?(prefersDark?'dark':'light'):defaultMode);document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme='${safeMode}';}})();`;
 }
 
-function findPageMeta(site: BuilderSiteDocument, slugPath: string): BuilderPageMeta | undefined {
-  const candidates = !slugPath
-    ? site.pages.filter((page) => page.isHomePage || page.slug === '')
-    : site.pages.filter((page) => page.slug === slugPath);
-
-  return [...candidates].sort((left, right) => {
-    const publishedDelta = Number(Boolean(right.publishedAt)) - Number(Boolean(left.publishedAt));
-    if (publishedDelta !== 0) return publishedDelta;
-
-    return (right.updatedAt || right.createdAt).localeCompare(left.updatedAt || left.createdAt);
-  })[0];
-}
-
 async function readPublishedPageCanvas(pageMeta: BuilderPageMeta): Promise<BuilderCanvasDocument | null> {
   if (pageMeta.publishedRevisionId) {
     return readRevisionDocument(pageMeta.pageId, pageMeta.publishedRevisionId);
@@ -160,7 +148,7 @@ export async function resolvePublishedSitePage(
   slugPath: string,
 ): Promise<ResolvedPublishedSitePage | null> {
   const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
-  const pageMeta = findPageMeta(site, slugPath);
+  const pageMeta = findPageMetaForLocale(site.pages, locale, slugPath);
   if (!pageMeta?.publishedAt) return null;
 
   const canvas = await readPublishedPageCanvas(pageMeta);

@@ -1753,3 +1753,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Wix처럼 템플릿으로 만든 페이지가 생성 직후 메뉴에 들어가고, 발행 후 공개 헤더에서 실제로 도달 가능한지 자동검증으로 고정했다.
+
+## M70 — Locale template page creation guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/section-template-click.playwright.ts` — page lookup helper를 locale-aware로 확장하고, `/zh-hant/admin-builder`에서 page template 생성→navigation append→draft href safety→publish→public header link까지 확인하는 회귀 테스트를 추가한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "creates zh-hant template pages with localized menu and safe template links" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (7 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 비한국어 locale에서 템플릿으로 만든 페이지가 한국어 public path를 섞지 않고, 메뉴와 공개 헤더가 해당 locale 경로로 연결되는지 자동검증으로 고정했다.

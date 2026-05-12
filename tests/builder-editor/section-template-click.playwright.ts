@@ -6,8 +6,8 @@ function mutationHeaders(scope: string): Record<string, string> {
   return { 'x-forwarded-for': `pw-${safeScope}` };
 }
 
-async function findPageIdBySlug(page: Page, slug: string): Promise<string | null> {
-  const response = await page.request.get('/api/builder/site/pages?locale=ko', {
+async function findPageIdBySlug(page: Page, slug: string, locale = 'ko'): Promise<string | null> {
+  const response = await page.request.get(`/api/builder/site/pages?locale=${encodeURIComponent(locale)}`, {
     headers: mutationHeaders(slug),
     failOnStatusCode: false,
   });
@@ -16,6 +16,22 @@ async function findPageIdBySlug(page: Page, slug: string): Promise<string | null
     pages?: Array<{ pageId?: string; slug?: string }>;
   };
   return payload.pages?.find((entry) => entry.slug === slug)?.pageId ?? null;
+}
+
+function collectHrefValues(value: unknown, hrefs: string[] = []): string[] {
+  if (!value || typeof value !== 'object') return hrefs;
+  if (Array.isArray(value)) {
+    value.forEach((entry) => collectHrefValues(entry, hrefs));
+    return hrefs;
+  }
+  Object.entries(value as Record<string, unknown>).forEach(([key, child]) => {
+    if (key === 'href' && typeof child === 'string') {
+      hrefs.push(child);
+      return;
+    }
+    collectHrefValues(child, hrefs);
+  });
+  return hrefs;
 }
 
 test.describe('/ko/admin-builder section design templates', () => {
@@ -250,6 +266,89 @@ test.describe('/ko/admin-builder section design templates', () => {
         });
       }
       await page.request.get('/ko/admin-builder?reseed=1', { timeout: 60_000 }).catch(() => undefined);
+    }
+  });
+
+  test('creates zh-hant template pages with localized menu and safe template links', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const locale = 'zh-hant';
+    const token = Date.now().toString(36);
+    const slug = `g-editor-template-zh-${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(slug));
+
+    try {
+      await openBuilder(page, `/${locale}/admin-builder?templateLocale=${token}`);
+      await page.keyboard.press('Escape');
+
+      const catalogDrawer = await openCatalogDrawer(page);
+      const addSearch = catalogDrawer.getByRole('searchbox', { name: 'Search add elements' });
+      await addSearch.fill('법률');
+      const pageTemplateResults = catalogDrawer.locator('[data-builder-page-template-search-results="true"]');
+      const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
+      await expect(lawHomeResult).toContainText('법률사무소 홈');
+      await lawHomeResult.click();
+
+      const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
+      await expect(gallery).toBeVisible();
+      await gallery.getByRole('button', { name: '법률사무소 홈 미리보기' }).click();
+      const preview = page.getByRole('dialog', { name: '법률사무소 홈' });
+      await expect(preview).toBeVisible();
+      await preview.getByRole('button', { name: '이 템플릿 사용' }).click();
+
+      const slugPrompt = page.getByRole('dialog', { name: '페이지 slug 입력' });
+      await expect(slugPrompt).toBeVisible();
+      await expect(slugPrompt.getByLabel('메뉴에 추가')).toBeChecked();
+      await slugPrompt.getByPlaceholder('예: about, services, contact').fill(slug);
+      await slugPrompt.getByRole('button', { name: '생성' }).click();
+      await expect(slugPrompt).toBeHidden({ timeout: 20_000 });
+      await expect(page.getByRole('button', { name: `/${slug}`, exact: true })).toBeVisible({ timeout: 20_000 });
+
+      const canvas = page.getByRole('application', { name: 'Canvas editor' });
+      await expect(canvas.getByText('신뢰할 수 있는 법률 파트너')).toBeVisible({ timeout: 20_000 });
+
+      pageId = await findPageIdBySlug(page, slug, locale);
+      expect(pageId).toBeTruthy();
+
+      const navigationResponse = await page.request.get(`/api/builder/site/navigation?locale=${locale}`, {
+        headers: mutationHeaders(slug),
+      });
+      expect(navigationResponse.status()).toBe(200);
+      const navigationPayload = (await navigationResponse.json()) as {
+        navigation?: Array<{ pageId?: string; href?: string; label?: string | Record<string, string> }>;
+      };
+      const navItem = navigationPayload.navigation?.find((entry) => entry.pageId === pageId);
+      expect(navItem?.href).toBe(`/${locale}/${slug}`);
+      const navLabel = navItem?.label;
+      expect(typeof navLabel === 'object' && navLabel ? navLabel.ko : navLabel).toBe('법률사무소 홈');
+
+      const draftResponse = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=${locale}`, {
+        headers: mutationHeaders(slug),
+      });
+      expect(draftResponse.status()).toBe(200);
+      const draftPayload = (await draftResponse.json()) as { document?: unknown };
+      const hrefs = collectHrefValues(draftPayload.document);
+      expect(hrefs.length).toBeGreaterThan(0);
+      expect(hrefs.filter((href) => href === '/ko' || href.startsWith('/ko/'))).toEqual([]);
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish?locale=${locale}`, {
+        headers: mutationHeaders(slug),
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      await page.goto(`/${locale}/${slug}`, { waitUntil: 'domcontentloaded' });
+      const publicMainNav = page.getByRole('navigation', { name: 'Main' });
+      await expect(publicMainNav.getByRole('link', { name: '법률사무소 홈' })).toHaveAttribute('href', `/${locale}/${slug}`);
+    } finally {
+      pageId ??= await findPageIdBySlug(page, slug, locale);
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=${locale}`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      await page.request.get(`/${locale}/admin-builder?reseed=1`, { timeout: 60_000 }).catch(() => undefined);
     }
   });
 

@@ -5156,3 +5156,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - zh-hant/en page template 생성 시 내부 링크·메뉴 href locale normalization을 UI E2E로 확장하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M70 Locale template page creation guard
+
+- M69에서 메뉴 연결은 고정했지만, 사용자가 지적한 “한국어 편집기인데 중국어 사이트가 뜨는” 계열의 locale 혼선이 page template 생성 UI에도 재발하지 않도록 `zh-hant` 실제 생성 path를 추가 검증했다.
+- `findPageIdBySlug()` helper를 locale-aware로 확장하고, 생성된 draft document의 모든 `href` 값을 수집해 template document 안에 `/ko` public path가 유입되지 않는지 확인한다.
+- Playwright는 `/zh-hant/admin-builder`에서 Add 패널 `법률` 검색 → `법률사무소 홈` template preview → slug 생성 → `메뉴에 추가` 기본 체크 → navigation API href `/zh-hant/{slug}` → publish → public header `Main` nav href까지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "creates zh-hant template pages with localized menu and safe template links" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (7 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - page rename/delete와 navigation cleanup/fallback, 또는 en locale template creation까지 같은 path를 확장 검증한다.

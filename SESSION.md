@@ -4653,3 +4653,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W178 theme preset save/load, W181 token export/import, W182 brand asset library, W183 radius/shadow presets.
+
+## 2026-05-12 Codex /goal M33 radius/shadow effect presets
+
+- W183의 남은 gap인 전역 코너 반경/그림자 프리셋을 구현했다.
+- `BuilderTheme.effects`에 radius/shadow preset metadata를 추가하고, theme helper에서 Sharp/Medium/Soft radius와 None/Soft/Medium/Strong shadow preset을 정규화·적용한다.
+- Site Settings > Presets 탭에서 radius/shadow preset picker를 클릭하면 theme preview와 brand kit export state가 즉시 갱신된다.
+- site settings API schema/merge 경로가 `effects`를 보존하고, card variant resolver는 theme shadow preset을 읽어 elevated/floating 계열 shadow를 전역 preset에 맞춘다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/theme-effects.test.ts` ✅ (2 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (892 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - W178 theme preset save/load, W181 token export/import, W182 brand asset library 중 theme persistence/export 품질 gap을 우선 본다.

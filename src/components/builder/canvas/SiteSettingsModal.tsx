@@ -27,8 +27,12 @@ import ModalShell from './ModalShell';
 import {
   THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
+  THEME_RADIUS_PRESETS,
+  THEME_SHADOW_PRESETS,
   THEME_TEXT_PRESET_KEYS,
   SITE_THEME_PRESETS,
+  applyThemeRadiusPreset,
+  applyThemeShadowPreset,
   applyTypographyScaleToTheme,
   type BuilderColorValue,
   type SiteThemePreset,
@@ -39,6 +43,7 @@ import {
   createThemeFromBrandKit,
   normalizeBrandKit,
   normalizeDarkColors,
+  normalizeThemeEffects,
   normalizeThemeTextPresets,
   normalizeThemeTypographyScale,
   resolveThemeColor,
@@ -220,6 +225,7 @@ function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
     themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
     typographyScale: normalizeThemeTypographyScale(theme),
+    effects: normalizeThemeEffects(theme),
   });
 }
 
@@ -236,6 +242,10 @@ function themeFromPreset(preset: SiteThemePreset): BuilderTheme {
       sm: Math.max(0, Math.round(radius * 0.5)),
       md: radius,
       lg: Math.max(radius, Math.round(radius * 1.5)),
+    },
+    effects: {
+      radiusPreset: radius <= 2 ? 'sharp' : radius >= 12 ? 'soft' : 'medium',
+      shadowPreset: preset.shadowIntensity === 'subtle' ? 'soft' : preset.shadowIntensity,
     },
     themeTextPresets: preset.textPresets,
   });
@@ -1113,6 +1123,102 @@ export default function SiteSettingsModal({
               })}
             </div>
           ) : (
+            <>
+            <div style={sectionStyle}>
+              <div style={sectionHeadingStyle}>Radius & shadow presets</div>
+              <div style={presetGridStyle}>
+                {THEME_RADIUS_PRESETS.map((preset) => {
+                  const active = (theme.effects?.radiusPreset ?? 'medium') === preset.key;
+                  return (
+                    <section
+                      key={preset.key}
+                      data-theme-radius-preset={preset.key}
+                      style={{
+                        ...presetCardStyle,
+                        borderColor: active ? '#116dff' : '#e2e8f0',
+                        background: active ? '#f8fbff' : '#fff',
+                      }}
+                    >
+                      <div>
+                        <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.9rem' }}>
+                          {preset.label} radius
+                        </strong>
+                        <span style={{ color: '#64748b', fontSize: '0.72rem', lineHeight: 1.45 }}>
+                          {preset.description}
+                        </span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'end', gap: 8, minHeight: 46 }}>
+                        <span aria-hidden style={{ width: 34, height: 24, borderRadius: preset.radii.sm, border: '1px solid #bfdbfe', background: '#eff6ff' }} />
+                        <span aria-hidden style={{ width: 44, height: 32, borderRadius: preset.radii.md, border: '1px solid #93c5fd', background: '#dbeafe' }} />
+                        <span aria-hidden style={{ width: 54, height: 40, borderRadius: preset.radii.lg, border: '1px solid #60a5fa', background: '#bfdbfe' }} />
+                      </div>
+                      <button
+                        type="button"
+                        style={presetButtonStyle}
+                        onClick={() => {
+                          const nextTheme = applyThemeRadiusPreset(theme, preset.key);
+                          setTheme(nextTheme);
+                          setBrandKit(createBrandKitFromTheme(nextTheme, settings));
+                          setNotice(`${preset.label} radius preset applied. 저장을 눌러 사이트에 반영하세요.`);
+                        }}
+                      >
+                        Use {preset.label}
+                      </button>
+                    </section>
+                  );
+                })}
+              </div>
+              <div style={presetGridStyle}>
+                {THEME_SHADOW_PRESETS.map((preset) => {
+                  const active = (theme.effects?.shadowPreset ?? 'soft') === preset.key;
+                  return (
+                    <section
+                      key={preset.key}
+                      data-theme-shadow-preset={preset.key}
+                      style={{
+                        ...presetCardStyle,
+                        borderColor: active ? '#116dff' : '#e2e8f0',
+                        background: active ? '#f8fbff' : '#fff',
+                      }}
+                    >
+                      <div>
+                        <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.9rem' }}>
+                          {preset.label} shadow
+                        </strong>
+                        <span style={{ color: '#64748b', fontSize: '0.72rem', lineHeight: 1.45 }}>
+                          {preset.description}
+                        </span>
+                      </div>
+                      <div style={{ minHeight: 56, display: 'grid', placeItems: 'center', background: '#f8fafc', borderRadius: 8 }}>
+                        <span
+                          aria-hidden
+                          style={{
+                            width: 72,
+                            height: 34,
+                            borderRadius: theme.radii.md,
+                            border: '1px solid #e2e8f0',
+                            background: '#fff',
+                            boxShadow: preset.shadows.md,
+                          }}
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        style={presetButtonStyle}
+                        onClick={() => {
+                          const nextTheme = applyThemeShadowPreset(theme, preset.key);
+                          setTheme(nextTheme);
+                          setBrandKit(createBrandKitFromTheme(nextTheme, settings));
+                          setNotice(`${preset.label} shadow preset applied. 저장을 눌러 사이트에 반영하세요.`);
+                        }}
+                      >
+                        Use {preset.label}
+                      </button>
+                    </section>
+                  );
+                })}
+              </div>
+            </div>
             <div style={sectionStyle}>
               <div style={sectionHeadingStyle}>Theme presets</div>
               {pendingPreset ? (
@@ -1183,6 +1289,7 @@ export default function SiteSettingsModal({
                 ))}
               </div>
             </div>
+            </>
           )}
         </div>
       </div>

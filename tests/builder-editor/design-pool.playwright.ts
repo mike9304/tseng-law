@@ -783,6 +783,10 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.screenshot({ path: `${screenshotDir}/design-pool-font-picker.png` });
 
     await modal.getByRole('button', { name: /Presets/ }).click();
+    await modal.getByRole('button', { name: 'Use Soft' }).first().click();
+    await expect(modal).toContainText('Soft radius preset applied');
+    await modal.getByRole('button', { name: 'Use Strong' }).click();
+    await expect(modal).toContainText('Strong shadow preset applied');
     await expect(modal.getByRole('button', { name: 'Apply' })).toHaveCount(5);
 
     await modal.getByRole('button', { name: /Dark mode/ }).click();

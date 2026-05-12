@@ -21,6 +21,7 @@ import {
   THEME_TEXT_PRESET_KEYS,
   applyTypographyScaleToTheme,
   normalizeDarkColors,
+  normalizeThemeEffects,
   normalizeThemeTextPresets,
   normalizeThemeTypographyScale,
 } from '@/lib/builder/site/theme';
@@ -133,6 +134,11 @@ const typographyScaleSchema = z.object({
   ]),
 }).strict();
 
+const themeEffectsSchema = z.object({
+  radiusPreset: z.enum(['sharp', 'medium', 'soft']).optional(),
+  shadowPreset: z.enum(['none', 'soft', 'medium', 'strong']).optional(),
+}).strict();
+
 const siteThemeSchema = z.object({
   colors: themeColorsSchema,
   darkColors: themeColorsSchema.optional(),
@@ -151,6 +157,7 @@ const siteThemeSchema = z.object({
     ) as Record<(typeof THEME_TEXT_PRESET_KEYS)[number], typeof themeTextPresetSchema>,
   ).strict().optional(),
   typographyScale: typographyScaleSchema.optional(),
+  effects: themeEffectsSchema.optional(),
 }).strict();
 
 const settingsPayloadSchema = z.object({
@@ -351,6 +358,7 @@ function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
     radii: { ...DEFAULT_THEME.radii, ...theme?.radii },
     themeTextPresets: normalizeThemeTextPresets(theme?.themeTextPresets),
     typographyScale: normalizeThemeTypographyScale(theme),
+    effects: normalizeThemeEffects(theme),
   });
 }
 

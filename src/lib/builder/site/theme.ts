@@ -183,6 +183,142 @@ export interface SiteThemePreset {
   textPresets: ThemeTextPresets;
 }
 
+export type ThemeRadiusPresetKey = 'sharp' | 'medium' | 'soft';
+export type ThemeShadowPresetKey = 'none' | 'soft' | 'medium' | 'strong';
+
+export interface ThemeRadiusPreset {
+  key: ThemeRadiusPresetKey;
+  label: string;
+  description: string;
+  radii: BuilderTheme['radii'];
+}
+
+export interface ThemeShadowPreset {
+  key: ThemeShadowPresetKey;
+  label: string;
+  description: string;
+  shadows: {
+    sm: string;
+    md: string;
+    lg: string;
+  };
+}
+
+export const THEME_RADIUS_PRESETS: ThemeRadiusPreset[] = [
+  {
+    key: 'sharp',
+    label: 'Sharp',
+    description: 'Tight professional edges for dense layouts.',
+    radii: { sm: 0, md: 2, lg: 4 },
+  },
+  {
+    key: 'medium',
+    label: 'Medium',
+    description: 'Balanced Wix-like corners for general sections.',
+    radii: { sm: 4, md: 8, lg: 16 },
+  },
+  {
+    key: 'soft',
+    label: 'Soft',
+    description: 'Larger rounded cards and friendly panels.',
+    radii: { sm: 8, md: 14, lg: 24 },
+  },
+];
+
+export const THEME_SHADOW_PRESETS: ThemeShadowPreset[] = [
+  {
+    key: 'none',
+    label: 'None',
+    description: 'Flat surfaces with no global elevation.',
+    shadows: { sm: 'none', md: 'none', lg: 'none' },
+  },
+  {
+    key: 'soft',
+    label: 'Soft',
+    description: 'Quiet elevation for editorial service blocks.',
+    shadows: {
+      sm: '0 8px 20px rgba(15, 23, 42, 0.05)',
+      md: '0 14px 34px rgba(15, 23, 42, 0.08)',
+      lg: '0 22px 56px rgba(15, 23, 42, 0.12)',
+    },
+  },
+  {
+    key: 'medium',
+    label: 'Medium',
+    description: 'More visible Wix-style card separation.',
+    shadows: {
+      sm: '0 10px 24px rgba(15, 23, 42, 0.07)',
+      md: '0 20px 48px rgba(15, 23, 42, 0.12)',
+      lg: '0 28px 72px rgba(15, 23, 42, 0.16)',
+    },
+  },
+  {
+    key: 'strong',
+    label: 'Strong',
+    description: 'High emphasis surfaces for bold templates.',
+    shadows: {
+      sm: '0 12px 30px rgba(15, 23, 42, 0.10)',
+      md: '0 24px 62px rgba(15, 23, 42, 0.18)',
+      lg: '0 36px 92px rgba(15, 23, 42, 0.24)',
+    },
+  },
+];
+
+function normalizeRadiusPresetKey(value: unknown, fallback: ThemeRadiusPresetKey = 'medium'): ThemeRadiusPresetKey {
+  return THEME_RADIUS_PRESETS.some((preset) => preset.key === value) ? value as ThemeRadiusPresetKey : fallback;
+}
+
+function normalizeShadowPresetKey(value: unknown, fallback: ThemeShadowPresetKey = 'soft'): ThemeShadowPresetKey {
+  return THEME_SHADOW_PRESETS.some((preset) => preset.key === value) ? value as ThemeShadowPresetKey : fallback;
+}
+
+export function getThemeRadiusPreset(key: unknown): ThemeRadiusPreset {
+  return THEME_RADIUS_PRESETS.find((preset) => preset.key === normalizeRadiusPresetKey(key)) ?? THEME_RADIUS_PRESETS[1];
+}
+
+export function getThemeShadowPreset(key: unknown): ThemeShadowPreset {
+  return THEME_SHADOW_PRESETS.find((preset) => preset.key === normalizeShadowPresetKey(key)) ?? THEME_SHADOW_PRESETS[1];
+}
+
+export function normalizeThemeEffects(theme?: Partial<BuilderTheme>): NonNullable<BuilderTheme['effects']> {
+  return {
+    radiusPreset: normalizeRadiusPresetKey(theme?.effects?.radiusPreset),
+    shadowPreset: normalizeShadowPresetKey(theme?.effects?.shadowPreset),
+  };
+}
+
+export function applyThemeRadiusPreset(theme: BuilderTheme, key: ThemeRadiusPresetKey): BuilderTheme {
+  const preset = getThemeRadiusPreset(key);
+  return {
+    ...theme,
+    radii: preset.radii,
+    effects: {
+      ...normalizeThemeEffects(theme),
+      radiusPreset: preset.key,
+    },
+  };
+}
+
+export function applyThemeShadowPreset(theme: BuilderTheme, key: ThemeShadowPresetKey): BuilderTheme {
+  const preset = getThemeShadowPreset(key);
+  return {
+    ...theme,
+    effects: {
+      ...normalizeThemeEffects(theme),
+      shadowPreset: preset.key,
+    },
+  };
+}
+
+export function resolveThemeShadow(
+  theme: BuilderTheme | undefined,
+  level: keyof ThemeShadowPreset['shadows'],
+  fallback: string,
+): string {
+  if (!theme?.effects?.shadowPreset) return fallback;
+  return getThemeShadowPreset(theme.effects.shadowPreset).shadows[level] ?? fallback;
+}
+
 function createPresetTextPresets(
   titleFont: string,
   bodyFont: string,
@@ -527,13 +663,17 @@ export function normalizeThemeTypographyScale(
 export function applyTypographyScaleToTheme(theme: BuilderTheme): BuilderTheme {
   const typographyScale = normalizeThemeTypographyScale(theme);
   if (!typographyScale) {
-    const themeWithoutScale: BuilderTheme = { ...theme };
+    const themeWithoutScale: BuilderTheme = {
+      ...theme,
+      effects: normalizeThemeEffects(theme),
+    };
     delete themeWithoutScale.typographyScale;
     return themeWithoutScale;
   }
   const nextTheme: BuilderTheme = {
     ...theme,
     typographyScale,
+    effects: normalizeThemeEffects(theme),
   };
   return {
     ...nextTheme,
@@ -718,6 +858,7 @@ export function createThemeFromBrandKit(
       quote: { fontFamily: titleFont, color: { kind: 'token', token: 'secondary' } },
     }),
     typographyScale: baseTheme?.typographyScale,
+    effects: normalizeThemeEffects(baseTheme),
   });
 }
 

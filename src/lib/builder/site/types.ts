@@ -166,6 +166,10 @@ export interface BuilderTheme {
     md: number;
     lg: number;
   };
+  effects?: {
+    radiusPreset?: 'sharp' | 'medium' | 'soft';
+    shadowPreset?: 'none' | 'soft' | 'medium' | 'strong';
+  };
   themeTextPresets?: ThemeTextPresets;
   // Phase 23 — Typography scale ratio (W184). Heading sizes are derived as
   // baseSize * ratio^level where level = 0 for body, +1/+2/... for h6..h1.
@@ -405,6 +409,7 @@ export const DEFAULT_THEME: BuilderTheme = {
     body: 'system-ui, sans-serif',
   },
   radii: { sm: 4, md: 8, lg: 16 },
+  effects: { radiusPreset: 'medium', shadowPreset: 'soft' },
   themeTextPresets: DEFAULT_THEME_TEXT_PRESETS,
 };
 

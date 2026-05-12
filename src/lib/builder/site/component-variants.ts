@@ -3,6 +3,7 @@ import {
   isImageBackgroundValue,
   resolveBackgroundStyle,
   resolveThemeColor,
+  resolveThemeShadow,
   type ResolvedBackgroundStyle,
   type ThemeColorToken,
 } from '@/lib/builder/site/theme';
@@ -423,6 +424,12 @@ function resolveVariantColor(value: VariantColorValue, theme?: BuilderTheme): st
   return typeof value === 'string' ? value : resolveThemeColor(value, theme);
 }
 
+function resolveCardVariantShadow(variant: CardVariantDefinition, theme?: BuilderTheme): string {
+  if (variant.tokens.shadow === 'none') return 'none';
+  const level = ['floating', 'glass', 'spotlight', 'contrast'].includes(variant.key) ? 'lg' : 'md';
+  return resolveThemeShadow(theme, level, variant.tokens.shadow);
+}
+
 function resolveVariantRadius(value: FormInputVariantTokens['borderRadius'], theme?: BuilderTheme): number {
   if (typeof value === 'number') return value;
   return theme?.radii?.[value] ?? (value === 'sm' ? 4 : value === 'lg' ? 12 : 8);
@@ -521,7 +528,7 @@ export function resolveCardVariantStyle(
       : 'none',
     borderColor,
     borderRadius: variant.tokens.borderRadius,
-    boxShadow: variant.tokens.shadow,
+    boxShadow: resolveCardVariantShadow(variant, theme),
     backdropFilter,
     WebkitBackdropFilter: backdropFilter,
   };

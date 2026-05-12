@@ -1190,3 +1190,23 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W174는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. 기본 easing, custom cubic-bezier, elastic preset이 모두 Inspector/runtime 경로에 존재한다.
+
+## M33 — Radius/shadow effect presets
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/site/types.ts`, `src/lib/builder/site/theme.ts` — `BuilderTheme.effects`에 radius/shadow preset metadata를 추가하고, Sharp/Medium/Soft radius 및 None/Soft/Medium/Strong shadow preset helper를 제공한다.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Site Settings > Presets 탭에 radius/shadow preset picker를 추가했다. 선택 즉시 theme preview와 brand kit export state가 갱신되고 저장 API payload에 포함된다.
+  - `src/app/api/builder/site/settings/route.ts` — site theme schema가 `effects`를 검증하고, GET/PUT merge 과정에서 preset metadata를 정규화한다.
+  - `src/lib/builder/site/component-variants.ts` — published/editor card variant elevation이 theme shadow preset을 읽도록 연결했다. flat card는 `none`을 유지한다.
+  - `src/lib/builder/site/__tests__/theme-effects.test.ts`, `tests/builder-editor/design-pool.playwright.ts` — preset 적용, card shadow resolver, Site Settings 실제 클릭 흐름을 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/theme-effects.test.ts` ✅ (2 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (114 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (892 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W183은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Site Settings에서 전역 radius/shadow preset을 고르고 저장할 수 있으며, card variant shadow가 published 스타일에 반영된다.

@@ -55,3 +55,4 @@
 | M51 | QA     | Page template prompt back path | W14,W18,W216 | 1h | M50 | 🟡 템플릿 적용 확인 단계 뒤로가기 자동검증 통과 / 사용자 QA 대기 |
 | M52 | QA     | Page template search previews | W14,W18,W216 | 1h | M51 | 🟡 Add 검색 결과 페이지 템플릿 미리보기 자동검증 통과 / 사용자 QA 대기 |
 | M53 | QA     | Page template result thumbnails | W14,W18,W216 | 1h | M52 | 🟡 Add 검색 결과 썸네일/품질 배지 자동검증 통과 / 사용자 QA 대기 |
+| M54 | QA     | FAQ reveal persistence | W18,W84,W216 | 1h | M44 | 🟡 FAQ 답변 텍스트 유지 자동검증 통과 / 사용자 QA 대기 |

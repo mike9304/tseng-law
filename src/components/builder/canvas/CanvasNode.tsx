@@ -365,6 +365,11 @@ export default function CanvasNode({
       ? interactivePreview.servicesRevealedIndices
       : [interactivePreview.servicesOpenIndex],
   );
+  const faqRevealedIndices = new Set(
+    interactivePreview.faqRevealedIndices?.length
+      ? interactivePreview.faqRevealedIndices
+      : [interactivePreview.faqOpenIndex],
+  );
   const activeOfficeIndex = officeIndexFromNodeId(primarySelectedNodeId ?? '') ?? selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => {
     const nextIndex = officeIndexFromNodeId(selectedId);
     return nextIndex ?? activeIndex;
@@ -382,6 +387,7 @@ export default function CanvasNode({
       || (serviceCardIndex != null && servicesRevealedIndices.has(serviceCardIndex))
     : faqItemMatch
       ? faqItemIndex === selectedFaqIndex
+        || (faqItemIndex != null && faqRevealedIndices.has(faqItemIndex))
       : false;
   const servicesOpenIndex = Math.max(0, Math.round(selectedServiceIndex));
   const faqOpenIndex = Math.max(0, Math.round(selectedFaqIndex));

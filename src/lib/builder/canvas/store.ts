@@ -79,6 +79,7 @@ interface BuilderCanvasInteractivePreviewState {
   servicesOpenIndex: number;
   servicesRevealedIndices: number[];
   faqOpenIndex: number;
+  faqRevealedIndices: number[];
 }
 
 interface BuilderCanvasStoreState {
@@ -518,6 +519,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     servicesOpenIndex: 0,
     servicesRevealedIndices: [0],
     faqOpenIndex: 0,
+    faqRevealedIndices: [0],
   },
   setInteractivePreviewIndex: (section, index) =>
     set((state) => {
@@ -543,13 +545,25 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         }
         return state;
       }
-      if (section === 'faq' && state.interactivePreview.faqOpenIndex !== clampedIndex) {
-        return {
-          interactivePreview: {
-            ...state.interactivePreview,
-            faqOpenIndex: clampedIndex,
-          },
-        };
+      if (section === 'faq') {
+        const currentRevealed = state.interactivePreview.faqRevealedIndices.length > 0
+          ? state.interactivePreview.faqRevealedIndices
+          : [state.interactivePreview.faqOpenIndex];
+        const faqRevealedIndices = currentRevealed.includes(clampedIndex)
+          ? currentRevealed
+          : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
+        if (
+          state.interactivePreview.faqOpenIndex !== clampedIndex
+          || faqRevealedIndices !== currentRevealed
+        ) {
+          return {
+            interactivePreview: {
+              ...state.interactivePreview,
+              faqOpenIndex: clampedIndex,
+              faqRevealedIndices,
+            },
+          };
+        }
       }
       return state;
     }),

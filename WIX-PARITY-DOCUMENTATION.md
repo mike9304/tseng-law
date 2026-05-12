@@ -1531,3 +1531,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add 검색 결과가 단순 목록이 아니라 실제 template market preview에 가깝게 보이도록 보강했다.
+
+## M54 — FAQ reveal persistence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/store.ts` — editor interactive preview state에 `faqRevealedIndices`를 추가했다. FAQ item을 선택할 때 open index와 함께 한 번 열어 본 index 목록을 누적한다.
+  - `src/components/builder/canvas/CanvasNode.tsx` — FAQ item도 services처럼 현재 선택 index뿐 아니라 revealed index에 포함되면 `data-builder-preview-open`을 유지한다.
+  - `tests/builder-editor/node-click-stability.playwright.ts` — FAQ 1번 answer를 연 뒤 hero title 같은 다른 노드를 선택해도 FAQ 0/1 answer text가 계속 visible인지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. “다른 노드 선택 후 글이 안 보임” 회귀 방어를 FAQ accordion에도 확장했다.

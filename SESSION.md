@@ -4962,3 +4962,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M54 FAQ reveal persistence
+
+- 사용자 보고의 “노드 선택 뒤 글이 사라짐” 계열을 FAQ accordion에도 확장 점검했다.
+- `interactivePreview`에 `faqRevealedIndices`를 추가했다. editor canvas에서 한 번 열어 확인한 FAQ answer는 다른 노드를 선택해도 계속 visible preview로 남는다.
+- 서비스 카드의 editor-only multi reveal 정책과 FAQ 동작을 맞췄고, published single-open runtime은 건드리지 않았다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

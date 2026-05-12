@@ -60,4 +60,26 @@ test.describe('/ko/admin-builder node click stability', () => {
     await expect(assetDialog).toBeHidden();
     await expect(canvas).toBeVisible();
   });
+
+  test('keeps revealed FAQ answer text visible while selecting other nodes', async ({ page }) => {
+    await openBuilder(page, `/ko/admin-builder?faqClickStability=${Date.now().toString(36)}`);
+    await page.keyboard.press('Escape');
+
+    const firstAnswer = page.locator('[data-node-id="home-faq-item-0-answer"]').first();
+    const secondQuestion = page.locator('[data-node-id="home-faq-item-1-question-text"]').first();
+    const secondAnswer = page.locator('[data-node-id="home-faq-item-1-answer"]').first();
+    const heroTitle = page.locator('[data-node-id="home-hero-title"]').first();
+
+    await firstAnswer.scrollIntoViewIfNeeded();
+    await expect(firstAnswer).toBeVisible();
+    await expect(secondAnswer).toBeHidden();
+
+    await secondQuestion.click({ position: { x: 12, y: 12 }, force: true });
+    await expect(secondAnswer).toBeVisible();
+    await expect(firstAnswer).toBeVisible();
+
+    await heroTitle.click({ position: { x: 12, y: 12 }, force: true });
+    await expect(firstAnswer).toBeVisible();
+    await expect(secondAnswer).toBeVisible();
+  });
 });

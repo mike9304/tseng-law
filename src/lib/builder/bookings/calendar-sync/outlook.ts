@@ -1,5 +1,5 @@
 import { decryptToken } from './encryption';
-import type { CalendarConnection } from './types';
+import type { CalendarConnection, ExternalCalendarEvent } from './types';
 
 const SCOPE = 'offline_access Calendars.ReadWrite';
 
@@ -108,32 +108,147 @@ export interface OutlookCalendarEvent {
   end: string;
   description?: string;
   attendees?: string[];
+  bookingId?: string;
 }
 
-export async function pushEventToOutlook(accessToken: string, event: OutlookCalendarEvent): Promise<{ ok: boolean; id?: string; error?: string }> {
+type CalendarEventWriteResult = { ok: true; id: string } | { ok: false; error: string; status?: number };
+
+function outlookDateToIso(value: string | undefined): string {
+  if (!value) return '';
+  const dateInput = /(?:Z|[+-]\d{2}:\d{2})$/i.test(value) ? value : `${value}Z`;
+  const date = new Date(dateInput);
+  return Number.isNaN(date.getTime()) ? '' : date.toISOString();
+}
+
+function outlookEventBody(event: OutlookCalendarEvent, includeTransactionId = true): object {
+  return {
+    subject: event.summary,
+    body: { contentType: 'Text', content: event.description ?? '' },
+    start: { dateTime: event.start, timeZone: 'UTC' },
+    end: { dateTime: event.end, timeZone: 'UTC' },
+    attendees: event.attendees?.map((email) => ({
+      emailAddress: { address: email },
+      type: 'required',
+    })),
+    transactionId: includeTransactionId && event.bookingId ? `hojeong-${event.bookingId}` : undefined,
+  };
+}
+
+export async function pushEventToOutlook(
+  accessToken: string,
+  event: OutlookCalendarEvent,
+  fetchImpl: typeof fetch = fetch,
+): Promise<CalendarEventWriteResult> {
   try {
-    const res = await fetch('https://graph.microsoft.com/v1.0/me/events', {
+    const res = await fetchImpl('https://graph.microsoft.com/v1.0/me/events', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        subject: event.summary,
-        body: { contentType: 'Text', content: event.description ?? '' },
-        start: { dateTime: event.start, timeZone: 'UTC' },
-        end: { dateTime: event.end, timeZone: 'UTC' },
-        attendees: event.attendees?.map((email) => ({
-          emailAddress: { address: email },
-          type: 'required',
-        })),
-      }),
+      body: JSON.stringify(outlookEventBody(event)),
     });
     const data = (await res.json().catch(() => ({}))) as { id?: string; error?: { message?: string } };
     if (!res.ok || !data.id) {
-      return { ok: false, error: data.error?.message ?? `${res.status}` };
+      return { ok: false, error: data.error?.message ?? `${res.status}`, status: res.status };
     }
     return { ok: true, id: data.id };
+  } catch (err) {
+    return { ok: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
+export async function updateEventInOutlook(
+  accessToken: string,
+  eventId: string,
+  event: OutlookCalendarEvent,
+  fetchImpl: typeof fetch = fetch,
+): Promise<CalendarEventWriteResult> {
+  try {
+    const res = await fetchImpl(`https://graph.microsoft.com/v1.0/me/events/${encodeURIComponent(eventId)}`, {
+      method: 'PATCH',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(outlookEventBody(event, false)),
+    });
+    const data = (await res.json().catch(() => ({}))) as { id?: string; error?: { message?: string } };
+    if (!res.ok) {
+      return { ok: false, error: data.error?.message ?? `${res.status}`, status: res.status };
+    }
+    return { ok: true, id: data.id ?? eventId };
+  } catch (err) {
+    return { ok: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
+export async function listEventsFromOutlook(
+  accessToken: string,
+  range: { timeMin: string; timeMax: string },
+  fetchImpl: typeof fetch = fetch,
+): Promise<{ ok: true; events: ExternalCalendarEvent[] } | { ok: false; error: string }> {
+  try {
+    const events: ExternalCalendarEvent[] = [];
+    const params = new URLSearchParams({
+      startDateTime: range.timeMin,
+      endDateTime: range.timeMax,
+      '$top': '250',
+      '$select': 'id,subject,bodyPreview,start,end,attendees,isCancelled,isAllDay,showAs,webLink,lastModifiedDateTime',
+      '$orderby': 'start/dateTime',
+    });
+    let nextUrl: string | undefined = `https://graph.microsoft.com/v1.0/me/calendarView?${params.toString()}`;
+    while (nextUrl) {
+      const res = await fetchImpl(nextUrl, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          Prefer: 'outlook.timezone="UTC"',
+        },
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        value?: Array<{
+          id?: string;
+          subject?: string;
+          bodyPreview?: string;
+          isCancelled?: boolean;
+          isAllDay?: boolean;
+          showAs?: string;
+          webLink?: string;
+          lastModifiedDateTime?: string;
+          start?: { dateTime?: string; timeZone?: string };
+          end?: { dateTime?: string; timeZone?: string };
+          attendees?: Array<{ emailAddress?: { address?: string } }>;
+        }>;
+        '@odata.nextLink'?: string;
+        error?: { message?: string };
+      };
+      if (!res.ok) {
+        return { ok: false, error: data.error?.message ?? `list failed (${res.status})` };
+      }
+      for (const item of data.value ?? []) {
+        if (!item.id) continue;
+        if (item.isAllDay) continue;
+        const status = item.isCancelled ? 'cancelled' : 'confirmed';
+        if (status !== 'cancelled' && item.showAs === 'free') continue;
+        const start = outlookDateToIso(item.start?.dateTime);
+        const end = outlookDateToIso(item.end?.dateTime);
+        if (status !== 'cancelled' && (!start || !end)) continue;
+        events.push({
+          provider: 'outlook',
+          externalId: item.id,
+          summary: item.subject || '(untitled)',
+          description: item.bodyPreview,
+          start,
+          end,
+          status,
+          attendees: item.attendees?.map((attendee) => attendee.emailAddress?.address || '').filter(Boolean),
+          updatedAt: item.lastModifiedDateTime,
+          htmlLink: item.webLink,
+        });
+      }
+      nextUrl = data['@odata.nextLink'];
+    }
+    return { ok: true, events };
   } catch (err) {
     return { ok: false, error: err instanceof Error ? err.message : String(err) };
   }

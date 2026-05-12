@@ -4448,3 +4448,21 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m26-customer-manage.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
 - 체크포인트:
   - W203/W206 고객 링크 경로 자동검증 evidence 확보. 실제 Resend/SMTP 수신은 provider QA 대기.
+
+## 2026-05-12 Codex /goal M26 calendar pull import
+
+- Calendar sync를 push-only에서 보수적 양방향 pull 구조로 확장했다.
+- Hojeong이 push하는 provider event description에는 `Booking ID:`를 포함하고, connection별 `eventMappings`로 provider event ID를 저장한다. 다음 sync부터는 같은 booking을 새 event로 계속 만들지 않고 provider update를 시도한다.
+- Pull 시 저장된 external ID 또는 신뢰 가능한 Booking ID가 있으면 해당 staff booking만 reschedule/cancel로 반영한다. stale duplicate provider event가 같은 Booking ID를 들고 있어도 저장된 mapping과 다르면 무시한다.
+- 외부 캘린더에서 직접 만든 일정은 fake booking으로 만들지 않고 staff availability `blockedDates` busy block으로 import/update/remove한다. 그래서 공개 booking slot 계산에서 외부 busy 시간이 제외된다.
+- Google/Outlook timed event mapper를 추가했고, all-day/free event는 제외하며, pagination을 따라간다. 삭제 이벤트는 날짜가 없어도 기존 busy block 제거와 mapped booking cancel에 사용할 수 있게 했다.
+- Calendar Sync admin UI는 수동 동기화 결과를 `푸시 n건, 가져오기 n건`으로 보여주고, 양방향 정책 설명을 업데이트했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/calendar-sync/__tests__/provider-mappers.test.ts src/lib/builder/bookings/calendar-sync/__tests__/sync-engine.test.ts src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (12 passed)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅
+  - `npm run test:unit` ✅ (869 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 체크포인트:
+  - W204 자동검증 evidence 확보. 실제 Google/Outlook OAuth 계정 연결과 실 provider round-trip은 provider QA 대기.

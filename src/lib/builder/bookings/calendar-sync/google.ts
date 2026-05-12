@@ -1,5 +1,5 @@
 import { decryptToken } from './encryption';
-import type { CalendarConnection } from './types';
+import type { CalendarConnection, ExternalCalendarEvent } from './types';
 
 const SCOPE = 'https://www.googleapis.com/auth/calendar.events';
 
@@ -104,29 +104,143 @@ export interface GoogleCalendarEvent {
   end: string;
   description?: string;
   attendees?: string[];
+  bookingId?: string;
 }
 
-export async function pushEventToGoogle(accessToken: string, event: GoogleCalendarEvent): Promise<{ ok: boolean; id?: string; error?: string }> {
+type CalendarEventWriteResult = { ok: true; id: string } | { ok: false; error: string; status?: number };
+
+function toIsoOrEmpty(value: string | undefined): string {
+  if (!value) return '';
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? '' : date.toISOString();
+}
+
+function googleEventBody(event: GoogleCalendarEvent): object {
+  return {
+    summary: event.summary,
+    description: event.description,
+    start: { dateTime: event.start },
+    end: { dateTime: event.end },
+    attendees: event.attendees?.map((email) => ({ email })),
+    extendedProperties: event.bookingId ? { private: { hojeongBookingId: event.bookingId } } : undefined,
+  };
+}
+
+export async function pushEventToGoogle(
+  accessToken: string,
+  event: GoogleCalendarEvent,
+  fetchImpl: typeof fetch = fetch,
+): Promise<CalendarEventWriteResult> {
   try {
-    const res = await fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events', {
+    const res = await fetchImpl('https://www.googleapis.com/calendar/v3/calendars/primary/events', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        summary: event.summary,
-        description: event.description,
-        start: { dateTime: event.start },
-        end: { dateTime: event.end },
-        attendees: event.attendees?.map((email) => ({ email })),
-      }),
+      body: JSON.stringify(googleEventBody(event)),
     });
     const data = (await res.json().catch(() => ({}))) as { id?: string; error?: { message?: string } };
     if (!res.ok || !data.id) {
-      return { ok: false, error: data.error?.message ?? `${res.status}` };
+      return { ok: false, error: data.error?.message ?? `${res.status}`, status: res.status };
     }
     return { ok: true, id: data.id };
+  } catch (err) {
+    return { ok: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
+export async function updateEventInGoogle(
+  accessToken: string,
+  eventId: string,
+  event: GoogleCalendarEvent,
+  fetchImpl: typeof fetch = fetch,
+): Promise<CalendarEventWriteResult> {
+  try {
+    const res = await fetchImpl(`https://www.googleapis.com/calendar/v3/calendars/primary/events/${encodeURIComponent(eventId)}`, {
+      method: 'PATCH',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(googleEventBody(event)),
+    });
+    const data = (await res.json().catch(() => ({}))) as { id?: string; error?: { message?: string } };
+    if (!res.ok) {
+      return { ok: false, error: data.error?.message ?? `${res.status}`, status: res.status };
+    }
+    return { ok: true, id: data.id ?? eventId };
+  } catch (err) {
+    return { ok: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
+export async function listEventsFromGoogle(
+  accessToken: string,
+  range: { timeMin: string; timeMax: string },
+  fetchImpl: typeof fetch = fetch,
+): Promise<{ ok: true; events: ExternalCalendarEvent[] } | { ok: false; error: string }> {
+  try {
+    const events: ExternalCalendarEvent[] = [];
+    let pageToken: string | undefined;
+    do {
+      const params = new URLSearchParams({
+        timeMin: range.timeMin,
+        timeMax: range.timeMax,
+        singleEvents: 'true',
+        orderBy: 'startTime',
+        showDeleted: 'true',
+        maxResults: '250',
+      });
+      if (pageToken) params.set('pageToken', pageToken);
+      const res = await fetchImpl(`https://www.googleapis.com/calendar/v3/calendars/primary/events?${params.toString()}`, {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        items?: Array<{
+          id?: string;
+          status?: string;
+          summary?: string;
+          description?: string;
+          htmlLink?: string;
+          updated?: string;
+          transparency?: string;
+          start?: { dateTime?: string; date?: string };
+          end?: { dateTime?: string; date?: string };
+          attendees?: Array<{ email?: string }>;
+          extendedProperties?: { private?: { hojeongBookingId?: string } };
+          error?: { message?: string };
+        }>;
+        nextPageToken?: string;
+        error?: { message?: string };
+      };
+      if (!res.ok) {
+        return { ok: false, error: data.error?.message ?? `list failed (${res.status})` };
+      }
+      for (const item of data.items ?? []) {
+        if (!item.id) continue;
+        const status = item.status === 'cancelled' ? 'cancelled' : 'confirmed';
+        if (status !== 'cancelled' && item.transparency === 'transparent') continue;
+        const start = toIsoOrEmpty(item.start?.dateTime);
+        const end = toIsoOrEmpty(item.end?.dateTime);
+        if (status !== 'cancelled' && (!start || !end)) continue;
+        events.push({
+          provider: 'google',
+          externalId: item.id,
+          summary: item.summary || '(untitled)',
+          description: item.description,
+          start,
+          end,
+          status,
+          attendees: item.attendees?.map((attendee) => attendee.email || '').filter(Boolean),
+          updatedAt: item.updated,
+          htmlLink: item.htmlLink,
+          bookingId: item.extendedProperties?.private?.hojeongBookingId,
+        });
+      }
+      pageToken = data.nextPageToken;
+    } while (pageToken);
+    return { ok: true, events };
   } catch (err) {
     return { ok: false, error: err instanceof Error ? err.message : String(err) };
   }

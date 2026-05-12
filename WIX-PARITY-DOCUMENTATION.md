@@ -944,3 +944,22 @@ Created: 2026-05-09T12:52:13.760Z
 - W 판정:
   - W203/W206 고객 링크 자동검증 evidence 확보. 실제 Resend/SMTP 수신 자체는 provider QA 대기지만, 이메일 본문에 들어가는 signed manage URL과 링크 도착 후 reschedule/cancel 동작은 자동검증 통과.
   - W205는 provider QA, W210은 Stripe Payment Element/환불 E2E, W204는 Google Calendar 양방향 pull 후속으로 유지한다.
+
+## M26 — Bookings 본격 2 calendar pull import slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/bookings/calendar-sync/types.ts` — provider pull 결과를 담는 `ExternalCalendarEvent` 타입을 추가했다.
+  - `src/lib/builder/bookings/calendar-sync/google.ts`, `outlook.ts` — Google Calendar/Outlook calendarView timed events를 UTC ISO로 정규화해 가져오고, all-day/free 이벤트는 public slot 차단에 쓰지 않도록 제외한다. 삭제 이벤트는 날짜 없이 내려와도 cancellation event로 유지하고 provider pagination을 따라간다.
+  - `src/lib/builder/bookings/calendar-sync/sync-engine.ts` — push event 설명에 `Booking ID:`를 심고 connection별 `eventMappings`로 provider event ID를 저장해 다음 sync부터 update로 덮어쓴다. Pull 시 저장된 external ID 또는 신뢰 가능한 Booking ID가 있으면 기존 booking reschedule/cancel로 반영한다. ID가 없는 외부 일정은 fake booking을 만들지 않고 staff `blockedDates` busy block으로 import/update/remove한다.
+  - `src/components/builder/bookings/CalendarSyncAdmin.tsx`, `src/app/(builder)/[locale]/admin-builder/bookings/calendar-sync/page.tsx` — Calendar Sync UI 문구와 수동 동기화 결과를 push/pull 양방향 기준으로 정리했다.
+  - `src/lib/builder/bookings/calendar-sync/__tests__/provider-mappers.test.ts`, `sync-engine.test.ts`, `src/lib/builder/bookings/__tests__/availability.test.ts` — provider mapper, pagination, free/all-day skip, idempotent busy import, deleted event removal, mapped external event tombstone cancel, stale duplicate push ignore, Booking ID 기반 reschedule/cancel, public slot exclusion을 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/calendar-sync/__tests__/provider-mappers.test.ts src/lib/builder/bookings/calendar-sync/__tests__/sync-engine.test.ts src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (12 passed)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅
+  - `npm run test:unit` ✅ (869 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W204는 자동검증 기준 `자동검증 통과 / provider OAuth QA 대기`로 상향한다. 실제 Google/Outlook 계정 OAuth, provider API quota/permissions, 실캘린더 event round-trip은 사용자·provider QA로 남긴다.

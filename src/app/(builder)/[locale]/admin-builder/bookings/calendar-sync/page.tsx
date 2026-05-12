@@ -21,7 +21,7 @@ export default async function CalendarSyncPage() {
       <header style={{ padding: '16px 24px', borderBottom: '1px solid #e2e8f0' }}>
         <h1 style={{ margin: 0, fontSize: 20 }}>Calendar Sync (Google · Outlook)</h1>
         <p style={{ margin: '4px 0 0', fontSize: 13, color: '#64748b' }}>
-          스태프 OAuth 연결 후 30분마다 자동으로 booking 일정을 외부 캘린더에 push.
+          스태프 OAuth 연결 후 예약은 외부 캘린더로 보내고, 외부 일정은 busy block으로 가져와 공개 예약 슬롯에서 제외합니다.
         </p>
       </header>
       <CalendarSyncAdmin

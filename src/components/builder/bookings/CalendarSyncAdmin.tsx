@@ -36,12 +36,22 @@ export default function CalendarSyncAdmin({ initialConnections, staff, googleCon
         method: 'POST',
         credentials: 'same-origin',
       });
-      const payload = (await res.json().catch(() => ({}))) as { result?: { pushed: number; errors: Array<{ message: string }> } };
+      const payload = (await res.json().catch(() => ({}))) as {
+        result?: { pushed: number; pulled: number; errors: Array<{ message: string }> };
+        error?: string;
+      };
+      if (!res.ok || !payload.result) {
+        setMessage(payload.error ?? '동기화 실패');
+        return;
+      }
       const pushed = payload.result?.pushed ?? 0;
+      const pulled = payload.result?.pulled ?? 0;
       const errs = payload.result?.errors ?? [];
-      setMessage(errs.length === 0 ? `푸시 ${pushed}건` : `푸시 ${pushed}건, 오류 ${errs.length}건: ${errs[0].message}`);
-      const refreshRes = await fetch('/api/builder/bookings/calendar-sync/sync-now', { method: 'POST', credentials: 'same-origin' }).catch(() => null);
-      void refreshRes;
+      setMessage(
+        errs.length === 0
+          ? `푸시 ${pushed}건, 가져오기 ${pulled}건`
+          : `푸시 ${pushed}건, 가져오기 ${pulled}건, 오류 ${errs.length}건: ${errs[0].message ?? payload.error ?? '동기화 실패'}`,
+      );
     } finally {
       setBusyId(null);
     }
@@ -104,7 +114,7 @@ export default function CalendarSyncAdmin({ initialConnections, staff, googleCon
       {message ? <div style={{ fontSize: 12, color: message.includes('오류') || message.includes('실패') ? '#dc2626' : '#16a34a' }}>{message}</div> : null}
 
       <div style={{ fontSize: 11, color: '#64748b', marginTop: 12 }}>
-        ※ 현재는 booking → 외부 캘린더 단방향 push. 외부에서 만든 일정은 가져오지 않습니다.
+        ※ Hojeong 예약은 외부 캘린더로 push하고, 외부에서 만든 일정은 스태프 busy block으로 가져와 공개 예약 슬롯에서 제외합니다.
       </div>
     </div>
   );

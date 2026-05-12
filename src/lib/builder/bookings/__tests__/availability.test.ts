@@ -96,6 +96,21 @@ describe('booking availability slots', () => {
     expect(slots.map((slot) => slot.startAt)).toEqual(['2099-01-05T00:00:00.000Z']);
   });
 
+  it('excludes imported external calendar busy blocks from public slots', async () => {
+    fixtures.availability = {
+      ...fixtures.availability!,
+      blockedDates: [{
+        start: '2099-01-05T00:15:00.000Z',
+        end: '2099-01-05T00:45:00.000Z',
+        reason: 'External calendar:google:cs_google_staff-test:evt-1:Client meeting',
+      }],
+    };
+
+    const slots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2099-01-05' });
+
+    expect(slots.map((slot) => slot.startAt)).toEqual([]);
+  });
+
   it('fans out "any staff" requests across eligible active staff only', async () => {
     fixtures.service = { ...fixtures.service!, staffIds: [] };
     fixtures.staff = [

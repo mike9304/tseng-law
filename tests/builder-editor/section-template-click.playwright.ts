@@ -96,6 +96,8 @@ test.describe('/ko/admin-builder section design templates', () => {
     await expect(pageTemplateResults.locator('[data-builder-page-template-result-count="true"]')).toContainText('/261 page templates');
     const lawHomeResult = pageTemplateResults.locator('[data-builder-page-template-result-id="law-home"]');
     await expect(lawHomeResult).toContainText('법률사무소 홈');
+    await expect(lawHomeResult.locator('[data-template-thumbnail-renderer="html-scaled-mock"]')).toBeVisible();
+    await expect(lawHomeResult.locator('[data-builder-page-template-quality="true"]')).toContainText('Premium');
     await lawHomeResult.click();
 
     const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });

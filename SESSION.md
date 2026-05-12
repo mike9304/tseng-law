@@ -4950,3 +4950,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - template result card에 thumbnail/metadata를 더 풍부하게 하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M53 Page template result thumbnails
+
+- M52의 page template search result card를 텍스트 버튼에서 미니 showroom card로 보강했다.
+- Add 패널 검색 결과 card는 `TemplateThumbnailRenderer` 기반 썸네일, Premium/Standard 품질 배지, 페이지 타입, 스타일, 섹션 수, 대표 태그를 보여준다.
+- 검색은 full page template document를 유지하는 `getAllTemplates()` 기반으로 바꿔 썸네일과 metadata를 같은 source에서 렌더한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

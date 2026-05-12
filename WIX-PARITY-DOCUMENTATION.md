@@ -1518,3 +1518,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add 검색에서 page template을 바로 발견하고 showroom으로 진입하는 전문 템플릿 마켓형 흐름을 보강했다.
+
+## M53 — Page template result thumbnails
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — Add 패널 page template result card를 미니 showroom card로 바꿨다. `getAllTemplates()`를 사용해 full template document를 유지하고, `TemplateThumbnailRenderer` 썸네일, Premium/Standard badge, 페이지 타입, 스타일, 섹션 수, 대표 tag를 함께 렌더한다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — `law-home` result card 안에 `data-template-thumbnail-renderer="html-scaled-mock"` 썸네일과 Premium badge가 보이는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add 검색 결과가 단순 목록이 아니라 실제 template market preview에 가깝게 보이도록 보강했다.

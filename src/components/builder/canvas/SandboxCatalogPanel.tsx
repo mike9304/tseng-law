@@ -19,11 +19,17 @@ import {
   getBuiltInSectionSearchResults,
   type BuiltInSectionTemplate,
 } from '@/lib/builder/sections/templates';
-import { getTemplateCatalog } from '@/lib/builder/templates/registry';
-import type { TemplateCatalogItem } from '@/lib/builder/templates/types';
+import { getAllTemplates } from '@/lib/builder/templates/registry';
+import {
+  TEMPLATE_PAGE_TYPE_LABELS,
+  TEMPLATE_QUALITY_LABELS,
+  TEMPLATE_STYLE_LABELS,
+} from '@/lib/builder/templates/design-system';
+import type { PageTemplate } from '@/lib/builder/templates/types';
 import { BuiltInSectionsPanel } from '@/components/builder/sections/BuiltInSectionsPanel';
 import SavedSectionsPanel from '@/components/builder/sections/SavedSectionsPanel';
 import type { Locale } from '@/lib/locales';
+import TemplateThumbnailRenderer from './TemplateThumbnailRenderer';
 import styles from './SandboxPage.module.css';
 
 const STAGE_WIDTH = 1280;
@@ -1695,7 +1701,12 @@ function socialWidgetMatchesSearch(preset: SocialWidgetPreset, query: string): b
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
-function pageTemplateMatchesSearch(template: TemplateCatalogItem, query: string): boolean {
+function getPageTemplateSectionCount(template: PageTemplate): number {
+  return template.sections?.length
+    ?? template.document.nodes.filter((node) => node.kind === 'section' || node.kind === 'container').length;
+}
+
+function pageTemplateMatchesSearch(template: PageTemplate, query: string): boolean {
   if (!query) return true;
   return [
     template.name,
@@ -1720,7 +1731,7 @@ function pageTemplateMatchesSearch(template: TemplateCatalogItem, query: string)
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
-function pageTemplateSearchScore(template: TemplateCatalogItem, query: string): number {
+function pageTemplateSearchScore(template: PageTemplate, query: string): number {
   if (!query) return 0;
   const includes = (value: unknown) => String(value ?? '').toLocaleLowerCase('ko-KR').includes(query);
   let score = 0;
@@ -1735,6 +1746,17 @@ function pageTemplateSearchScore(template: TemplateCatalogItem, query: string): 
   if (template.featured) score += 6;
   if (template.qualityTier === 'premium') score += 4;
   return score;
+}
+
+function getPageTemplateMeta(template: PageTemplate): string {
+  const pageType = template.pageType ? TEMPLATE_PAGE_TYPE_LABELS[template.pageType] : '페이지';
+  const style = template.visualStyle ? TEMPLATE_STYLE_LABELS[template.visualStyle] : 'Standard';
+  return `${pageType} · ${style} · ${getPageTemplateSectionCount(template)} sections`;
+}
+
+function getPageTemplateQualityLabel(template: PageTemplate): string {
+  if (!template.qualityTier) return 'Standard';
+  return TEMPLATE_QUALITY_LABELS[template.qualityTier];
 }
 
 export default function SandboxCatalogPanel({
@@ -1754,7 +1776,7 @@ export default function SandboxCatalogPanel({
   });
   const nodes = document?.nodes ?? [];
   const components = listComponents();
-  const pageTemplateCatalog = useMemo(() => getTemplateCatalog(), []);
+  const pageTemplateCatalog = useMemo(() => getAllTemplates(), []);
   const effectiveLocale: Locale = locale ?? (document?.locale as Locale) ?? 'ko';
   const normalizedQuery = normalizeSearchTerm(query);
 
@@ -1815,6 +1837,7 @@ export default function SandboxCatalogPanel({
         .sort((left, right) => (
           pageTemplateSearchScore(right, normalizedQuery)
           - pageTemplateSearchScore(left, normalizedQuery)
+          || left.name.localeCompare(right.name, 'ko')
         ))
       : []),
     [normalizedQuery, pageTemplateCatalog],
@@ -2196,23 +2219,111 @@ export default function SandboxCatalogPanel({
               </button>
             </div>
 
-            <div className={styles.mediaWidgetGrid}>
+            <div style={{ display: 'grid', gap: 10 }}>
               {visiblePageTemplatePreviews.map((template) => (
                 <button
                   key={template.id}
                   type="button"
-                  className={styles.mediaWidgetPresetButton}
                   data-builder-page-template-result-id={template.id}
                   onClick={() => onOpenPageTemplates(template.name)}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '96px minmax(0, 1fr)',
+                    gap: 10,
+                    alignItems: 'stretch',
+                    minHeight: 88,
+                    border: '1px solid var(--editor-border-hairline, #dbe2ea)',
+                    borderRadius: 8,
+                    background: 'var(--editor-panel-elevated, #fff)',
+                    color: 'var(--editor-fg-primary, #0f172a)',
+                    padding: 8,
+                    textAlign: 'left',
+                    cursor: 'pointer',
+                    boxShadow: '0 6px 18px rgba(15, 23, 42, 0.06)',
+                  }}
                 >
-                  <span className={styles.mediaWidgetPresetIcon}>
-                    {String(template.pageType ?? template.category).slice(0, 2).toUpperCase()}
+                  <span
+                    style={{
+                      display: 'block',
+                      minWidth: 0,
+                      overflow: 'hidden',
+                      border: '1px solid var(--editor-border-hairline, #dbe2ea)',
+                      borderRadius: 7,
+                      background: 'var(--editor-bg, #f4f5f7)',
+                    }}
+                  >
+                    <TemplateThumbnailRenderer template={template} width={160} height={96} eager />
                   </span>
-                  <span className={styles.mediaWidgetPresetCopy}>
-                    <strong>{template.name}</strong>
-                    <small>
-                      {template.category} · {template.pageType ?? 'page'} · {template.sectionCount} sections
+                  <span style={{ display: 'grid', alignContent: 'start', minWidth: 0, gap: 5 }}>
+                    <span
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 6,
+                        minWidth: 0,
+                      }}
+                    >
+                      <strong
+                        style={{
+                          minWidth: 0,
+                          overflow: 'hidden',
+                          fontSize: '0.78rem',
+                          fontWeight: 850,
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {template.name}
+                      </strong>
+                      <span
+                        data-builder-page-template-quality="true"
+                        style={{
+                          flex: '0 0 auto',
+                          borderRadius: 999,
+                          background: template.qualityTier === 'premium' ? '#111827' : 'var(--editor-bg, #f4f5f7)',
+                          color: template.qualityTier === 'premium' ? '#fff' : 'var(--editor-fg-muted, #64748b)',
+                          padding: '2px 6px',
+                          fontSize: '0.6rem',
+                          fontWeight: 850,
+                          lineHeight: 1.2,
+                        }}
+                      >
+                        {getPageTemplateQualityLabel(template)}
+                      </span>
+                    </span>
+                    <small
+                      style={{
+                        color: 'var(--editor-fg-muted, #64748b)',
+                        fontSize: '0.68rem',
+                        fontWeight: 750,
+                        lineHeight: 1.35,
+                      }}
+                    >
+                      {getPageTemplateMeta(template)}
                     </small>
+                    <span
+                      style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: 4,
+                      }}
+                    >
+                      {(template.tags ?? []).slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          style={{
+                            borderRadius: 999,
+                            background: 'var(--editor-accent-soft, #eff6ff)',
+                            color: 'var(--editor-accent, #116dff)',
+                            padding: '2px 6px',
+                            fontSize: '0.6rem',
+                            fontWeight: 800,
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </span>
                   </span>
                 </button>
               ))}

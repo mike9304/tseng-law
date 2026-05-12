@@ -5581,3 +5581,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - remaining public/published widget collision과 editor-public parity 회귀를 계속 줄인다.
+
+## 2026-05-13 Codex /goal M101 Published site-search keyboard results
+
+- published `site-search` live enhancer는 결과 anchor를 렌더하지만 listbox/option semantics, arrow-key 이동, Escape close, input focus restore가 없었다.
+- `siteSearch` render에 `aria-autocomplete`, `aria-controls`, `aria-expanded`, `aria-haspopup`를 추가하고 results container를 `role="listbox"`로 렌더한다.
+- `SiteSearchEnhancer`는 live hits를 `role="option"` anchor로 만들고 ArrowDown/ArrowUp/Home/End 이동, `aria-activedescendant`, Escape close 후 input focus 복귀를 처리한다. 빈 결과는 DOM 생성 방식으로 유지해 HTML 주입 가능성을 줄였다.
+- Playwright는 임시 published site-search page와 route-mocked `/api/search` payload로 inline results keyboard path를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/lib/builder/components/siteSearch/index.tsx src/components/builder/published/SiteSearchEnhancer.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "inline site-search" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - remaining published widgets의 keyboard path와 public/editor parity 회귀를 계속 줄인다.

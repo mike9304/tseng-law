@@ -412,6 +412,44 @@ function makePublishedMenuBarDocument(token: string): TestDocument {
   };
 }
 
+function makePublishedSiteSearchDocument(token: string): TestDocument {
+  const now = new Date().toISOString();
+  const rootId = `site-search-root-${token}`;
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `published-site-search-${token}`,
+    stageWidth: 1280,
+    stageHeight: 560,
+    nodes: [
+      containerNode(rootId, { x: 0, y: 0, width: 1280, height: 560 }, 'section section--light', {
+        as: 'main',
+      }),
+      textNode(`site-search-title-${token}`, rootId, 72, `Published site search ${token}`),
+      {
+        id: `published-site-search-${token}`,
+        kind: 'site-search',
+        parentId: rootId,
+        rect: { x: 80, y: 150, width: 520, height: 72 },
+        style: { ...baseStyle, borderRadius: 8 },
+        zIndex: 2,
+        rotation: 0,
+        locked: false,
+        visible: true,
+        content: {
+          placeholder: '사이트 검색어',
+          submitLabel: '검색',
+          showResultsInline: true,
+          kinds: [],
+          locale: 'ko',
+          maxResults: 4,
+        },
+      },
+    ],
+  };
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -1254,6 +1292,94 @@ test.describe('/ko published builder interactions', () => {
         window.localStorage.removeItem('hojeong-ai-chat-collapsed');
         window.localStorage.removeItem('hojeong-year-end-event-hide-until');
       }).catch(() => undefined);
+    }
+  });
+
+  test('navigates published inline site-search results from keyboard', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-site-search-${token}`;
+    let pageId: string | null = null;
+
+    try {
+      await page.route('**/api/search?**', async (route) => {
+        await route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({
+            hits: [
+              {
+                id: `search-hit-1-${token}`,
+                kind: 'page',
+                title: '기업법무 상담',
+                url: '/ko/services/corporate',
+                summary: '계약 검토와 기업 자문',
+              },
+              {
+                id: `search-hit-2-${token}`,
+                kind: 'faq',
+                title: '법무 상담 비용',
+                url: '/ko/pricing',
+                summary: '상담 비용 안내',
+              },
+            ],
+          }),
+        });
+      });
+
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Site Search ${token}`,
+        makePublishedSiteSearchDocument(token),
+      );
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const form = page.locator(`[data-node-id="published-site-search-${token}"] [data-builder-site-search="true"]`);
+      const input = form.getByRole('searchbox', { name: '사이트 검색어' });
+      const results = form.locator('[data-builder-site-search-results="true"]');
+      await expect(input).toHaveAttribute('aria-expanded', 'false');
+
+      await input.fill('법무');
+      const firstOption = form.getByRole('option', { name: /기업법무 상담/ });
+      const secondOption = form.getByRole('option', { name: /법무 상담 비용/ });
+      await expect(firstOption).toBeVisible();
+      await expect(secondOption).toBeVisible();
+      await expect(input).toHaveAttribute('aria-expanded', 'true');
+
+      await input.press('ArrowDown');
+      await expect(firstOption).toBeFocused();
+      await page.keyboard.press('ArrowDown');
+      await expect(secondOption).toBeFocused();
+      await page.keyboard.press('ArrowUp');
+      await expect(firstOption).toBeFocused();
+      await page.keyboard.press('End');
+      await expect(secondOption).toBeFocused();
+      await page.keyboard.press('Home');
+      await expect(firstOption).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(results).toBeHidden();
+      await expect(input).toBeFocused();
+      await expect(input).toHaveAttribute('aria-expanded', 'false');
+      await expect(input).not.toHaveAttribute('aria-activedescendant', /.*/);
+    } finally {
+      await page.unroute('**/api/search?**').catch(() => undefined);
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
     }
   });
 

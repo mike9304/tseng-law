@@ -8,6 +8,7 @@ function SiteSearchRender({
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const resultsId = `builder-site-search-results-${node.id}`;
   // Static markup; client-side enhancement (live results) is wired in
   // SiteSearchPublishedClient when present, otherwise the form falls back
   // to the existing /search page.
@@ -28,11 +29,21 @@ function SiteSearchRender({
         name="q"
         placeholder={c.placeholder}
         aria-label={c.placeholder}
+        aria-autocomplete="list"
+        aria-controls={c.showResultsInline ? resultsId : undefined}
+        aria-expanded={c.showResultsInline ? false : undefined}
+        aria-haspopup={c.showResultsInline ? 'listbox' : undefined}
         data-builder-site-search-input="true"
       />
       <button type="submit">{c.submitLabel}</button>
       {c.showResultsInline ? (
-        <div className="builder-site-search-results" data-builder-site-search-results="true" hidden />
+        <div
+          className="builder-site-search-results"
+          id={resultsId}
+          role="listbox"
+          data-builder-site-search-results="true"
+          hidden
+        />
       ) : null}
     </form>
   );

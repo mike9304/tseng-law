@@ -2190,3 +2190,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. homepage auto popup의 keyboard focus gap을 닫고, 자동 popup이 builder-published custom routes의 overlay Escape를 가로채는 충돌도 같이 막았다.
+
+## M101 — Published site-search keyboard results
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/components/siteSearch/index.tsx` — inline site-search input에 `aria-autocomplete`, `aria-controls`, `aria-expanded`, `aria-haspopup`를 추가하고 결과 박스를 `role="listbox"`로 렌더한다.
+  - `src/components/builder/published/SiteSearchEnhancer.tsx` — live results를 `role="option"` anchor로 만들고 ArrowDown/ArrowUp/Home/End 이동, `aria-activedescendant`, Escape close 후 input focus restore를 처리한다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — published site-search page를 만들고 `/api/search`를 route mock으로 고정해 inline results keyboard navigation과 Escape close를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/lib/builder/components/siteSearch/index.tsx src/components/builder/published/SiteSearchEnhancer.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "inline site-search" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W98/W100/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. published site-search 결과가 mouse-only dropdown에 머물지 않고 키보드로 이동/닫기/복귀되는 경로를 확보했다.

@@ -102,3 +102,4 @@
 | M98 | QA     | Public AI chat keyboard path guard | W98,W216,W225 | 1h | M97 | 🟡 AI chat focus wrap/Escape/restore 및 hidden chrome guard 자동검증 통과 / 사용자 QA 대기 |
 | M99 | QA     | Public mobile drawer focus trap | W40,W99,W216,W225 | 1h | M98 | 🟡 legacy public mobile drawer focus trap/Escape/restore 자동검증 통과 / 사용자 QA 대기 |
 | M100 | QA    | Public year-end popup focus trap | W98,W216,W225 | 1h | M99 | 🟡 event popup focus trap/scope guard 자동검증 통과 / 사용자 QA 대기 |
+| M101 | QA    | Published site-search keyboard results | W98,W100,W216,W225 | 1h | M100 | 🟡 inline search listbox keyboard 자동검증 통과 / 사용자 QA 대기 |

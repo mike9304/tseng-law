@@ -983,3 +983,23 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W210은 `자동검증 통과 / live Stripe QA 대기`로 상향한다. 로컬 dev stub은 Payment Element UI gate까지 검증했고, 실제 카드 결제·환불은 Stripe publishable/secret/webhook 환경에서 사용자/provider QA가 필요하다.
+
+## M27 — Bookings 본격 3 analytics/customer profile slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/bookings/analytics.ts` — booking list를 기반으로 total/upcoming/pending/confirmed/completed/cancelled/no-show, completion/cancellation/no-show rate, paid revenue, service/staff breakdown, customer email별 profile을 계산한다.
+  - `src/components/builder/bookings/BookingDashboardAdmin.tsx`, `BookingsAdmin.module.css` — Dashboard 상단에 Wix Bookings형 analytics 카드와 service/customer breakdown을 추가하고, booking row와 detail modal에 고객 방문 횟수/이력 profile을 표시한다.
+  - `src/lib/builder/bookings/__tests__/analytics.test.ts` — analytics summary와 customer profile grouping을 단위 검증한다.
+  - `tests/builder-editor/bookings-m26-dashboard.playwright.ts` — 기존 dashboard E2E에 analytics panel, customer visit chip, profile modal, customer history timeline assertion을 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/analytics.test.ts` ✅ (2 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m26-dashboard.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅
+  - `npm run test:unit` ✅ (874 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W213/W214는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. Dashboard analytics와 고객 profile/history는 로컬 데이터 기준 동작을 검증했고, 실제 운영 데이터 분석·장기 이력 QA는 사용자 검증으로 남긴다.
+  - W211 waitlist, W212 recurring availability template, W215 booking email templates는 M27 후속 slice로 계속 진행한다.

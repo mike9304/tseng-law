@@ -4483,3 +4483,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts warning + 기존 `<img>` warning only)
 - 체크포인트:
   - W210은 `자동검증 통과 / live Stripe QA 대기`로 상향. 실제 Stripe 카드 결제·webhook·환불 round-trip은 provider QA로 남긴다.
+
+## 2026-05-12 Codex /goal M27 analytics customer profile
+
+- Booking dashboard에 analytics strip을 추가했다. 총 예약, upcoming, pending, confirmed, completed, cancelled, no-show에 더해 성사율/취소율/no-show율/결제 수익을 표시한다.
+- Service/staff/customer breakdown 계산을 `src/lib/builder/bookings/analytics.ts`로 분리했고, customer email별 profile은 total/upcoming/completed/cancelled/no-show, last/next booking, bookingIds를 제공한다.
+- Dashboard row에는 고객 방문 횟수 chip을 표시하고, booking detail modal에는 customer profile panel과 고객 이력 timeline item을 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/analytics.test.ts` ✅ (2 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m26-dashboard.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅
+  - `npm run security:builder-routes` ✅
+  - `npm run test:unit` ✅ (874 passed)
+  - `npm run build` ✅
+- 체크포인트:
+  - W213/W214 자동검증 evidence 확보. W211 waitlist, W212 recurring availability, W215 email templates는 M27 후속 slice로 남긴다.

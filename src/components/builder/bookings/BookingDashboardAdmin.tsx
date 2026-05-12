@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import type { Booking, BookingService, BookingStatus, Staff } from '@/lib/builder/bookings/types';
 import { textForLocale } from '@/lib/builder/bookings/types';
+import { buildBookingAnalytics, buildCustomerProfiles } from '@/lib/builder/bookings/analytics';
 import type { Locale } from '@/lib/locales';
 import styles from './BookingsAdmin.module.css';
 
@@ -63,6 +64,12 @@ export default function BookingDashboardAdmin({
 
   const serviceById = useMemo(() => new Map(services.map((service) => [service.serviceId, service])), [services]);
   const staffById = useMemo(() => new Map(staff.map((member) => [member.staffId, member])), [staff]);
+  const analytics = useMemo(() => buildBookingAnalytics(bookings, services, staff, locale), [bookings, locale, services, staff]);
+  const customerProfiles = useMemo(() => buildCustomerProfiles(bookings), [bookings]);
+  const customerProfileByEmail = useMemo(
+    () => new Map(customerProfiles.map((profile) => [profile.email, profile])),
+    [customerProfiles],
+  );
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -89,13 +96,6 @@ export default function BookingDashboardAdmin({
         && startMs <= toMs;
     });
   }, [bookings, fromDate, locale, query, serviceById, serviceFilter, staffById, staffFilter, statusFilter, toDate]);
-
-  const stats = useMemo(() => ({
-    total: bookings.length,
-    upcoming: bookings.filter((booking) => booking.status !== 'cancelled' && Date.parse(booking.startAt) >= Date.now()).length,
-    pending: bookings.filter((booking) => booking.status === 'pending').length,
-    noShow: bookings.filter((booking) => booking.status === 'no-show').length,
-  }), [bookings]);
 
   const openBooking = (booking: Booking) => {
     setSelected(booking);
@@ -132,25 +132,80 @@ export default function BookingDashboardAdmin({
 
   const selectedService = selected ? serviceById.get(selected.serviceId) : undefined;
   const selectedStaff = selected ? staffById.get(selected.staffId) : undefined;
+  const selectedCustomerProfile = selected
+    ? customerProfileByEmail.get(selected.customer.email.trim().toLowerCase())
+    : undefined;
+  const selectedCustomerBookings = selectedCustomerProfile
+    ? bookings
+        .filter((booking) => selectedCustomerProfile.bookingIds.includes(booking.bookingId))
+        .sort((a, b) => b.startAt.localeCompare(a.startAt))
+    : [];
 
   return (
     <>
       <section className={styles.dashboardGrid} data-booking-dashboard="true">
         <div className={styles.statCard}>
           <span>Total</span>
-          <strong>{stats.total}</strong>
+          <strong>{analytics.total}</strong>
         </div>
         <div className={styles.statCard}>
           <span>Upcoming</span>
-          <strong>{stats.upcoming}</strong>
+          <strong>{analytics.upcoming}</strong>
         </div>
         <div className={styles.statCard}>
           <span>Pending</span>
-          <strong>{stats.pending}</strong>
+          <strong>{analytics.pending}</strong>
         </div>
         <div className={styles.statCard}>
           <span>No-show</span>
-          <strong>{stats.noShow}</strong>
+          <strong>{analytics.noShow}</strong>
+        </div>
+      </section>
+
+      <section className={styles.analyticsGrid} data-booking-analytics="true">
+        <div className={styles.analyticsCard}>
+          <span>Completion</span>
+          <strong>{analytics.completionRate}%</strong>
+          <p>{analytics.completed} completed</p>
+        </div>
+        <div className={styles.analyticsCard}>
+          <span>Cancellation</span>
+          <strong>{analytics.cancellationRate}%</strong>
+          <p>{analytics.cancelled} cancelled</p>
+        </div>
+        <div className={styles.analyticsCard}>
+          <span>No-show rate</span>
+          <strong>{analytics.noShowRate}%</strong>
+          <p>{analytics.noShow} no-shows</p>
+        </div>
+        <div className={styles.analyticsCard}>
+          <span>Paid revenue</span>
+          <strong>{analytics.revenueAmount.toLocaleString()}</strong>
+          <p>Booked paid payments</p>
+        </div>
+        <div className={styles.breakdownCard}>
+          <div className={styles.breakdownHeader}>
+            <strong>Services</strong>
+            <span>{analytics.byService.length}</span>
+          </div>
+          {analytics.byService.slice(0, 4).map((item) => (
+            <div className={styles.breakdownRow} key={item.id}>
+              <span>{item.label}</span>
+              <strong>{item.total}</strong>
+            </div>
+          ))}
+        </div>
+        <div className={styles.breakdownCard}>
+          <div className={styles.breakdownHeader}>
+            <strong>Customers</strong>
+            <span>{customerProfiles.length}</span>
+          </div>
+          {customerProfiles.slice(0, 4).map((profile) => (
+            <div className={styles.breakdownRow} key={profile.email}>
+              <span>{profile.name}</span>
+              <strong>{profile.totalBookings}</strong>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -212,6 +267,11 @@ export default function BookingDashboardAdmin({
                     <td>
                       <strong>{booking.customer.name}</strong>
                       <span>{booking.customer.email}</span>
+                      {customerProfileByEmail.get(booking.customer.email.trim().toLowerCase())?.totalBookings ? (
+                        <em className={styles.inlineMetric}>
+                          {customerProfileByEmail.get(booking.customer.email.trim().toLowerCase())?.totalBookings} visits
+                        </em>
+                      ) : null}
                     </td>
                     <td>{textForLocale(service?.name, locale) || booking.serviceId}</td>
                     <td>{textForLocale(member?.name, locale) || booking.staffId}</td>
@@ -250,6 +310,13 @@ export default function BookingDashboardAdmin({
                 <p><strong>Timezone:</strong> {selected.customerTimezone || '-'}</p>
                 <p><strong>Case:</strong> {selected.customer.caseSummary || selected.customer.notes || '-'}</p>
               </div>
+              <div className={styles.panelCompact} data-customer-profile="true">
+                <h3 className={styles.cardTitle}>Customer profile</h3>
+                <p><strong>Total visits:</strong> {selectedCustomerProfile?.totalBookings ?? 1}</p>
+                <p><strong>Upcoming:</strong> {selectedCustomerProfile?.upcomingBookings ?? 0}</p>
+                <p><strong>Completed:</strong> {selectedCustomerProfile?.completedBookings ?? 0}</p>
+                <p><strong>Cancelled:</strong> {selectedCustomerProfile?.cancelledBookings ?? 0}</p>
+              </div>
               <div className={styles.panelCompact}>
                 <h3 className={styles.cardTitle}>Reschedule</h3>
                 <label className={styles.field}>
@@ -273,6 +340,13 @@ export default function BookingDashboardAdmin({
               </div>
             </div>
             <div className={styles.timeline} data-booking-timeline="true">
+              {selectedCustomerBookings.map((booking) => (
+                <div className={styles.timelineItem} data-customer-history-item={booking.bookingId} key={`history-${booking.bookingId}`}>
+                  <span />
+                  <strong>{booking.status}</strong>
+                  <p>{formatDateTime(booking.startAt)} · {textForLocale(serviceById.get(booking.serviceId)?.name, locale) || booking.serviceId}</p>
+                </div>
+              ))}
               <div className={styles.timelineItem}>
                 <span />
                 <strong>Created</strong>

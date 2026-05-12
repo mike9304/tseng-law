@@ -215,6 +215,77 @@
   line-height: 1;
 }
 
+.analyticsGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) repeat(2, minmax(180px, 1.25fr));
+  margin-bottom: 16px;
+}
+
+.analyticsCard,
+.breakdownCard {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(120, 137, 166, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 18px 55px rgba(30, 44, 72, 0.08);
+  padding: 16px;
+}
+
+.analyticsCard {
+  display: grid;
+  gap: 5px;
+}
+
+.analyticsCard span,
+.breakdownHeader span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.analyticsCard strong {
+  color: #172033;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.analyticsCard p {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0;
+}
+
+.breakdownCard {
+  display: grid;
+  gap: 8px;
+}
+
+.breakdownHeader,
+.breakdownRow {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.breakdownHeader strong,
+.breakdownRow strong {
+  color: #172033;
+}
+
+.breakdownRow {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 8px;
+}
+
+.breakdownRow span {
+  color: #64748b;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .filterBar {
   display: grid;
   gap: 12px;
@@ -260,6 +331,15 @@
   display: block;
   font-size: 12px;
   margin-top: 3px;
+}
+
+.inlineMetric {
+  color: #1458cc;
+  display: inline-flex;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  margin-top: 5px;
 }
 
 .statusPill {
@@ -692,6 +772,7 @@
   .split,
   .formGrid,
   .filterBar,
+  .analyticsGrid,
   .dashboardGrid,
   .detailGrid,
   .listItem,

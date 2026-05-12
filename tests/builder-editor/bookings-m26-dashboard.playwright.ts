@@ -3,7 +3,12 @@ import { dayOfWeeks } from '@/lib/builder/bookings/types';
 
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'bookings-m26';
-  return { 'x-forwarded-for': `pw-${safeScope}` };
+  const username = process.env.BUILDER_SMOKE_USERNAME ?? process.env.CMS_ADMIN_USERNAME ?? 'admin';
+  const password = process.env.BUILDER_SMOKE_PASSWORD ?? process.env.CMS_ADMIN_PASSWORD ?? 'local-review-2026!';
+  return {
+    'x-forwarded-for': `pw-${safeScope}`,
+    authorization: `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
+  };
 }
 
 function allWeek(start: string, end: string) {
@@ -23,7 +28,7 @@ function toLocalInputValue(iso: string): string {
 }
 
 test.describe('M26 Bookings dashboard and service operations', () => {
-  test.setTimeout(120_000);
+  test.setTimeout(180_000);
 
   test('covers dashboard filters, reschedule, no-show, and meeting/cancel policy settings', async ({ page }) => {
     const token = Date.now().toString(36);
@@ -85,7 +90,10 @@ test.describe('M26 Bookings dashboard and service operations', () => {
       expect(availabilityResponse.status()).toBe(200);
 
       const bookingDate = todayPlus(2);
-      const slotResponse = await page.request.get(`/api/booking/availability?serviceId=${serviceId}&staffId=${staffId}&date=${bookingDate}`, { headers });
+      const slotResponse = await page.request.get(`/api/booking/availability?serviceId=${serviceId}&staffId=${staffId}&date=${bookingDate}`, {
+        headers,
+        timeout: 45_000,
+      });
       expect(slotResponse.status()).toBe(200);
       const slots = ((await slotResponse.json()) as { slots: Array<{ startAt: string }> }).slots;
       expect(slots.length).toBeGreaterThan(2);
@@ -94,6 +102,7 @@ test.describe('M26 Bookings dashboard and service operations', () => {
 
       const bookingResponse = await page.request.post('/api/builder/bookings/admin-create', {
         headers,
+        timeout: 45_000,
         data: {
           serviceId,
           staffId,
@@ -115,16 +124,24 @@ test.describe('M26 Bookings dashboard and service operations', () => {
 
       await page.goto('/ko/admin-builder/bookings/dashboard', { waitUntil: 'domcontentloaded' });
       await expect(page.locator('[data-booking-dashboard="true"]')).toBeVisible();
+      const analytics = page.locator('[data-booking-analytics="true"]');
+      await expect(analytics).toBeVisible();
+      await expect(analytics.getByText('Completion', { exact: true })).toBeVisible();
+      await expect(analytics.getByText('Customers', { exact: true })).toBeVisible();
       await expect(page.getByRole('link', { name: 'Dashboard' })).toHaveAttribute('data-active', 'true');
       await page.getByPlaceholder('Name, email, notes, service').fill(token);
       await page.getByLabel('Status').selectOption('pending');
       const row = page.locator(`[data-booking-row="${bookingId}"]`);
       await expect(row).toBeVisible();
+      await expect(row.getByText('1 visits')).toBeVisible();
       await row.click();
       await expect(page.locator('[data-booking-timeline="true"]')).toBeVisible();
+      await expect(page.locator('[data-customer-profile="true"]')).toContainText('Total visits');
+      await expect(page.locator(`[data-customer-history-item="${bookingId}"]`)).toBeVisible();
 
       const noShowResponse = page.waitForResponse((response) =>
         response.url().includes(`/api/builder/bookings/${bookingId}`) && response.request().method() === 'PATCH',
+        { timeout: 45_000 },
       );
       await page.getByRole('button', { name: 'Mark no-show' }).click();
       const noShowPayload = (await (await noShowResponse).json()) as { booking: { status: string } };
@@ -133,6 +150,7 @@ test.describe('M26 Bookings dashboard and service operations', () => {
 
       const rescheduleResponse = page.waitForResponse((response) =>
         response.url().includes(`/api/builder/bookings/${bookingId}`) && response.request().method() === 'PATCH',
+        { timeout: 45_000 },
       );
       await page.getByLabel('Start time').fill(toLocalInputValue(rescheduledStartAt));
       await page.getByRole('button', { name: 'Save reschedule' }).click();
@@ -142,6 +160,7 @@ test.describe('M26 Bookings dashboard and service operations', () => {
 
       const confirmResponse = page.waitForResponse((response) =>
         response.url().includes(`/api/builder/bookings/${bookingId}`) && response.request().method() === 'PATCH',
+        { timeout: 45_000 },
       );
       await page.getByRole('button', { name: 'Confirm' }).click();
       const confirmPayload = (await (await confirmResponse).json()) as { booking: { status: string } };

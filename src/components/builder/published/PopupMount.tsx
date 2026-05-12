@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import type { BuilderPopup } from '@/lib/builder/site/types';
+import type { PublishedOverlayOpenDetail } from './overlayFocus';
 
 /**
  * Installs three things for site-level popups:
@@ -37,11 +38,23 @@ export default function PopupMount({ popups }: { popups: BuilderPopup[] }) {
       }
     }
 
-    function open(slug: string, gate: { oncePerVisitor: boolean }): void {
+    function open(slug: string, gate: { oncePerVisitor: boolean; opener?: HTMLElement | null }): void {
       if (!known.has(slug)) return;
       if (shouldSuppress(slug, gate.oncePerVisitor)) return;
-      window.dispatchEvent(new CustomEvent('builder-popup:open', { detail: { slug } }));
+      window.dispatchEvent(new CustomEvent<PublishedOverlayOpenDetail>('builder-popup:open', { detail: { slug, opener: gate.opener ?? null } }));
       markSeen(slug);
+    }
+
+    function openFromTrigger(trigger: HTMLElement, event: MouseEvent | KeyboardEvent) {
+      const slug = trigger.dataset.popupTarget
+        ?? trigger.getAttribute('href')?.replace(/^popup:/, '')
+        ?? '';
+      if (!slug || !known.has(slug)) return false;
+      event.preventDefault();
+      event.stopPropagation();
+      const matching = popups.find((p) => p.slug === slug);
+      open(slug, { oncePerVisitor: matching?.oncePerVisitor ?? false, opener: trigger });
+      return true;
     }
 
     function clickHandler(event: MouseEvent) {
@@ -49,18 +62,22 @@ export default function PopupMount({ popups }: { popups: BuilderPopup[] }) {
       if (!(target instanceof Element)) return;
       const trigger = target.closest<HTMLElement>('[data-popup-target], a[href^="popup:"]');
       if (!trigger) return;
-      const slug = trigger.dataset.popupTarget
-        ?? trigger.getAttribute('href')?.replace(/^popup:/, '')
-        ?? '';
-      if (!slug || !known.has(slug)) return;
-      event.preventDefault();
-      event.stopPropagation();
-      const matching = popups.find((p) => p.slug === slug);
-      open(slug, { oncePerVisitor: matching?.oncePerVisitor ?? false });
+      openFromTrigger(trigger, event);
+    }
+
+    function keyHandler(event: KeyboardEvent) {
+      if (event.key !== 'Enter' && event.key !== ' ' && event.key !== 'Space') return;
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const trigger = target.closest<HTMLElement>('[data-popup-target], a[href^="popup:"]');
+      if (!trigger) return;
+      openFromTrigger(trigger, event);
     }
 
     document.addEventListener('click', clickHandler);
     cleanups.push(() => document.removeEventListener('click', clickHandler));
+    document.addEventListener('keydown', keyHandler);
+    cleanups.push(() => document.removeEventListener('keydown', keyHandler));
 
     // Auto: on-load
     for (const popup of popups) {

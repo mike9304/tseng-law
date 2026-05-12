@@ -2024,3 +2024,21 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W22/W23/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 공개 이미지 클릭 후 이미지 본문 클릭이 modal을 즉시 닫아 “사라짐/백지화”처럼 보이는 경로와 keyboard focus 누수를 닫았다.
+
+## M90 — Published overlay keyboard focus restore
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/published/overlayFocus.ts` — published lightbox/popup 공통 focus helper를 추가해 close button initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, 닫힌 뒤 opener focus restore를 처리한다.
+  - `src/components/builder/published/LightboxMount.tsx` — `data-lightbox-target` trigger가 click뿐 아니라 Enter/Space로도 열리며, opener element를 overlay open event detail로 전달한다.
+  - `src/components/builder/published/PopupMount.tsx` — `data-popup-target`/`popup:` anchor trigger가 Enter/Space로도 열리며, once-per-visitor gate를 유지한 채 opener를 overlay에 전달한다.
+  - `src/components/builder/published/LightboxOverlay.tsx`, `src/components/builder/published/PopupOverlay.tsx` — 공통 focus helper를 연결하고 overlay root를 focusable dialog로 정리했다.
+  - `src/lib/builder/site/persistence.ts` — site document normalization이 `popups`를 보존하도록 해 site-level popup이 다른 site write 뒤 사라지지 않게 했다.
+  - `src/components/builder/canvas/elements/ImageElement.tsx` — built-in image lightbox/popup modal을 `document.body` portal로 렌더해 sibling node가 modal pointer event를 가로채는 회귀를 막았다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — published page의 site lightbox/popup keyboard trigger, close initial focus, Escape close, opener focus restore, 기존 image modal/service/FAQ interaction 회귀를 함께 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- tests/builder-editor/published-interactions.playwright.ts src/lib/builder/site/persistence.ts src/components/builder/published/LightboxMount.tsx src/components/builder/published/PopupMount.tsx src/components/builder/published/LightboxOverlay.tsx src/components/builder/published/PopupOverlay.tsx src/components/builder/published/overlayFocus.ts src/components/builder/canvas/elements/ImageElement.tsx` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W23/W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. site-level modal trigger가 mouse-only였던 gap과 overlay focus restore 누수를 닫았고, 공개 이미지 modal stacking 회귀도 같이 막았다.

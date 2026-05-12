@@ -561,6 +561,7 @@ function normalizeSiteDocumentLifecycle(
         createDefaultPageLifecycleMeta(page.documentKind ?? 'section-snapshot-v1'),
     })),
     lightboxes: site.lightboxes ?? [],
+    popups: site.popups ?? [],
     translations: site.translations ?? [],
     sectionLibrary: site.sectionLibrary ?? [],
     redirects: site.redirects ?? [],

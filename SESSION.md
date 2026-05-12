@@ -5420,3 +5420,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - site-level `LightboxMount`/`PopupMount`의 Enter/Space keyboard trigger와 overlay focus restore를 published runtime에서 고정한다.
+
+## 2026-05-13 Codex /goal M90 Published overlay keyboard focus restore
+
+- site-level `LightboxMount`/`PopupMount`는 published trigger click만 위임하고 Enter/Space keyboard open, opener focus restore가 없었다.
+- 공통 `usePublishedOverlayFocus` helper를 추가해 published lightbox/popup overlay의 close-button initial focus, Tab/Shift+Tab wrap, 외부 focus probe 차단, body scroll lock, close 후 opener focus 복귀를 처리한다.
+- `LightboxMount`는 `data-lightbox-target` trigger에서 Enter/Space를 받아 `builder-lightbox:open` event detail에 opener를 실어 보낸다.
+- `PopupMount`는 `data-popup-target`과 `popup:` anchor에서 Enter/Space를 받아 once-per-visitor gate를 유지한 채 `builder-popup:open` event detail에 opener를 실어 보낸다.
+- site document normalization이 `popups`를 보존하도록 고쳤다. 이 보존이 없으면 site-level popup이 다른 site write 뒤 사라질 수 있었다.
+- M90 broad run 중 built-in image modal이 node 내부에 렌더되어 sibling image node가 pointer event를 가로채는 회귀를 발견했고, `ImageElement` lightbox/popup modal을 `document.body` portal로 옮겼다.
+- Playwright는 임시 published page를 만들고 site lightbox/popup을 붙인 뒤, keyboard trigger open, close initial focus, Escape close, opener focus restore와 기존 image modal/service/FAQ interaction을 함께 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- tests/builder-editor/published-interactions.playwright.ts src/lib/builder/site/persistence.ts src/components/builder/published/LightboxMount.tsx src/components/builder/published/PopupMount.tsx src/components/builder/published/LightboxOverlay.tsx src/components/builder/published/PopupOverlay.tsx src/components/builder/published/overlayFocus.ts src/components/builder/canvas/elements/ImageElement.tsx` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - published runtime에 남은 site-level overlay/auto-trigger와 editor floating surface를 이어서 점검한다.

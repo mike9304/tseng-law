@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState, type RefObject } from 'react';
+import { createPortal } from 'react-dom';
 import type { BuilderImageCanvasNode } from '@/lib/builder/canvas/types';
 import { filtersToCSS, isDefaultFilters, type ImageFilters } from '@/lib/builder/canvas/filters';
 import { ASPECT_RATIOS } from '@/lib/builder/canvas/crop';
@@ -484,7 +485,7 @@ export default function ImageElement({
         <button ref={lightboxTriggerRef} type="button" className="builder-media-click-frame" data-lightbox-target={lightboxSlug || node.id} onClick={() => setLightboxOpen(true)}>
           {imageFrame}
         </button>
-        {lightboxModal}
+        {lightboxModal && typeof document !== 'undefined' ? createPortal(lightboxModal, document.body) : lightboxModal}
       </>
     );
   }
@@ -495,7 +496,7 @@ export default function ImageElement({
         <button ref={popupTriggerRef} type="button" className="builder-media-click-frame" onClick={() => setPopupOpen(true)}>
           {imageFrame}
         </button>
-        {popupModal}
+        {popupModal && typeof document !== 'undefined' ? createPortal(popupModal, document.body) : popupModal}
       </>
     );
   }

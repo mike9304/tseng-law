@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
+import { usePublishedOverlayFocus, type PublishedOverlayOpenDetail } from './overlayFocus';
 
 export interface PopupOverlayConfig {
   id: string;
@@ -23,6 +24,8 @@ export default function PopupOverlay({
 }) {
   const [open, setOpen] = useState(false);
   const overlayRef = useRef<HTMLDivElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
 
   const close = useCallback(() => {
     setOpen(false);
@@ -30,8 +33,11 @@ export default function PopupOverlay({
 
   useEffect(() => {
     function handleOpen(e: Event) {
-      const ce = e as CustomEvent<{ slug: string }>;
-      if (ce.detail?.slug === config.slug) setOpen(true);
+      const ce = e as CustomEvent<PublishedOverlayOpenDetail>;
+      if (ce.detail?.slug === config.slug) {
+        openerRef.current = ce.detail.opener instanceof HTMLElement ? ce.detail.opener : null;
+        setOpen(true);
+      }
     }
     function handleClose(e: Event) {
       const ce = e as CustomEvent<{ slug?: string }>;
@@ -54,15 +60,12 @@ export default function PopupOverlay({
     return () => window.removeEventListener('keydown', handleKey);
   }, [open, config.closeOnEsc, close]);
 
-  useEffect(() => {
-    if (typeof document === 'undefined') return undefined;
-    if (!open) return undefined;
-    const previous = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = previous;
-    };
-  }, [open]);
+  usePublishedOverlayFocus({
+    open,
+    overlayRef,
+    initialFocusRef: closeButtonRef,
+    openerRef,
+  });
 
   if (!open) return null;
 
@@ -79,6 +82,7 @@ export default function PopupOverlay({
       data-popup-overlay={config.slug}
       role="dialog"
       aria-modal="true"
+      tabIndex={-1}
       style={{
         position: 'fixed',
         inset: 0,
@@ -105,6 +109,7 @@ export default function PopupOverlay({
       >
         {config.dismissable && (
           <button
+            ref={closeButtonRef}
             type="button"
             onClick={close}
             aria-label="Close"

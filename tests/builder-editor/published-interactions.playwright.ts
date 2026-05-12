@@ -1,4 +1,6 @@
 import { expect, test, type APIRequestContext } from '@playwright/test';
+import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
+import { createDefaultPopup } from '@/lib/builder/site/types';
 
 type TestDocument = {
   version: 1;
@@ -202,6 +204,65 @@ function makePublishedInteractionDocument(token: string): TestDocument {
   };
 }
 
+function buttonNode(
+  id: string,
+  parentId: string,
+  rect: Record<string, number>,
+  label: string,
+  href: string,
+): Record<string, unknown> {
+  return {
+    id,
+    kind: 'button',
+    parentId,
+    rect,
+    style: { ...baseStyle, borderRadius: 8 },
+    zIndex: 2,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    content: {
+      label,
+      href,
+      style: 'primary',
+      as: 'a',
+    },
+  };
+}
+
+function makePublishedOverlayTriggerDocument(token: string, lightboxSlug: string, popupSlug: string): TestDocument {
+  const now = new Date().toISOString();
+  const rootId = `overlay-root-${token}`;
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `published-overlays-${token}`,
+    stageWidth: 1280,
+    stageHeight: 760,
+    nodes: [
+      containerNode(rootId, { x: 0, y: 0, width: 1280, height: 760 }, 'section section--light', {
+        as: 'main',
+      }),
+      textNode(`overlay-title-${token}`, rootId, 72, `Published overlay keyboard ${token}`),
+      buttonNode(
+        `published-lightbox-trigger-${token}`,
+        rootId,
+        { x: 80, y: 160, width: 260, height: 56 },
+        'Open site lightbox',
+        `lightbox:${lightboxSlug}`,
+      ),
+      buttonNode(
+        `published-popup-trigger-${token}`,
+        rootId,
+        { x: 380, y: 160, width: 260, height: 56 },
+        'Open site popup',
+        `popup:${popupSlug}`,
+      ),
+    ],
+  };
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -226,6 +287,122 @@ async function createBuilderPage(
 }
 
 test.describe('/ko published builder interactions', () => {
+  test('opens site lightbox and popup overlays from keyboard triggers with focus restore', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-published-overlays-${token}`;
+    const lightboxSlug = `keyboard-lightbox-${token}`;
+    const popupSlug = `keyboard-popup-${token}`;
+    let pageId: string | null = null;
+    let popupId: string | null = null;
+    let lightboxId: string | null = null;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Overlays ${token}`,
+        makePublishedOverlayTriggerDocument(token, lightboxSlug, popupSlug),
+      );
+
+      const lightboxResponse = await page.request.post('/api/builder/site/lightboxes', {
+        headers: mutationHeaders(`${slug}-lightbox`),
+        data: { locale: 'ko', slug: lightboxSlug, name: `Keyboard Lightbox ${token}` },
+      });
+      expect(lightboxResponse.status()).toBe(200);
+      const lightboxPayload = (await lightboxResponse.json()) as { ok?: boolean; lightbox?: { id: string } };
+      expect(lightboxPayload.ok).toBe(true);
+      expect(lightboxPayload.lightbox?.id).toBeTruthy();
+      lightboxId = lightboxPayload.lightbox!.id;
+
+      const site = await readSiteDocument('default', 'ko');
+      const popup = {
+        ...createDefaultPopup('ko', popupSlug, `Keyboard Popup ${token}`),
+        oncePerVisitor: false,
+        delayMs: 0,
+      };
+      popupId = popup.id;
+      await writeSiteDocument({
+        ...site,
+        popups: [...(site.popups ?? []).filter((item) => item.slug !== popupSlug), popup],
+        updatedAt: new Date().toISOString(),
+      });
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+      expect(publishPayload.slug).toBe(slug);
+
+      const latestSite = await readSiteDocument('default', 'ko');
+      const publishedPage = latestSite.pages.find((entry) => entry.pageId === pageId);
+      expect(publishedPage?.publishedAt).toBeTruthy();
+      expect(latestSite.lightboxes?.some((item) => item.id === lightboxId && item.slug === lightboxSlug)).toBe(true);
+      expect(latestSite.popups?.some((item) => item.id === popupId && item.slug === popupSlug)).toBe(true);
+
+      const htmlResponse = await page.request.get(`/ko/${slug}`);
+      expect(htmlResponse.status()).toBe(200);
+      const html = await htmlResponse.text();
+      expect(html).toContain(`published-lightbox-trigger-${token}`);
+      expect(html).toContain(`published-popup-trigger-${token}`);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+
+      const lightboxWrapper = page.locator(`[data-node-id="published-lightbox-trigger-${token}"]`);
+      await expect(lightboxWrapper).toHaveAttribute('role', 'button');
+      await lightboxWrapper.focus();
+      await page.keyboard.press('Enter');
+      const lightboxDialog = page.locator(`[data-lightbox-overlay="${lightboxSlug}"]`);
+      await expect(lightboxDialog).toBeVisible();
+      const lightboxClose = lightboxDialog.getByRole('button', { name: 'Close' });
+      await expect(lightboxClose).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(lightboxDialog).toHaveCount(0);
+      await expect(lightboxWrapper).toBeFocused();
+
+      await page.keyboard.press('Space');
+      await expect(lightboxDialog).toBeVisible();
+      await expect(lightboxClose).toBeFocused();
+      await lightboxClose.click();
+      await expect(lightboxDialog).toHaveCount(0);
+      await expect(lightboxWrapper).toBeFocused();
+
+      const popupTrigger = page.getByRole('link', { name: 'Open site popup' });
+      await popupTrigger.focus();
+      await page.keyboard.press('Space');
+      const popupDialog = page.locator(`[data-popup-overlay="${popupSlug}"]`);
+      await expect(popupDialog).toBeVisible();
+      const popupClose = popupDialog.getByRole('button', { name: 'Close' });
+      await expect(popupClose).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(popupDialog).toHaveCount(0);
+      await expect(popupTrigger).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      if (lightboxId) {
+        await page.request.delete(`/api/builder/site/lightboxes/${lightboxId}?locale=ko`, {
+          headers: mutationHeaders(`${slug}-lightbox`),
+          failOnStatusCode: false,
+        });
+      }
+      if (popupId) {
+        const latestSite = await readSiteDocument('default', 'ko');
+        await writeSiteDocument({
+          ...latestSite,
+          popups: (latestSite.popups ?? []).filter((item) => item.id !== popupId),
+          updatedAt: new Date().toISOString(),
+        });
+      }
+    }
+  });
+
   test('keeps services and FAQ sections interactive after publish', async ({ page }) => {
     const token = Date.now().toString(36);
     const slug = `g-editor-published-interactions-${token}`;

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZodError, z } from 'zod';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import {
   DEFAULT_THEME,
@@ -355,7 +355,7 @@ function mergeTheme(theme?: Partial<BuilderTheme>): BuilderTheme {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = await guardMutation(request, { permission: 'settings' });
+  const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
 
   try {

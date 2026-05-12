@@ -747,6 +747,17 @@ export default function CanvasNode({
         event.preventDefault();
         event.stopPropagation();
       }}
+      onKeyDownCapture={(event) => {
+        // Enter inside a focused widget input/button can trigger an implicit
+        // form submit. Swallow it so designers don't accidentally navigate.
+        if (event.key === 'Enter') {
+          const target = event.target as HTMLElement | null;
+          const inputLike = target?.closest('input, button');
+          if (inputLike) {
+            event.preventDefault();
+          }
+        }
+      }}
       onClick={(event) => {
         event.stopPropagation();
         // Prevent nested anchors / form-submit buttons inside widgets from

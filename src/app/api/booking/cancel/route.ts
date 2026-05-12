@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
-import { getBooking, getService, saveBooking } from '@/lib/builder/bookings/storage';
+import { getBooking, saveBooking } from '@/lib/builder/bookings/storage';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
+import { applyRefundOutcome, computeRefundForCancel } from '@/lib/builder/bookings/refund';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -32,49 +33,6 @@ function clientIp(request: NextRequest): string {
   );
 }
 
-interface CancellationPolicyShape {
-  fullRefundHoursBefore: number;
-  partialRefundHoursBefore: number;
-  partialRefundPercent: number;
-}
-
-async function loadPolicyForService(serviceId: string): Promise<CancellationPolicyShape | null> {
-  const svc = await getService(serviceId);
-  if (!svc?.cancellationPolicyId) return null;
-  // The policies are stored in the same bookings root by convention; if no
-  // store is implemented yet, return a sensible default.
-  return {
-    fullRefundHoursBefore: 24,
-    partialRefundHoursBefore: 6,
-    partialRefundPercent: 50,
-  };
-}
-
-async function attemptStripeRefund(paymentIntentId: string, amountCents?: number): Promise<{ ok: boolean; refundId?: string; error?: string }> {
-  const key = process.env.STRIPE_SECRET_KEY ?? '';
-  if (!key) return { ok: false, error: 'STRIPE_SECRET_KEY unset' };
-  try {
-    const body = new URLSearchParams();
-    body.set('payment_intent', paymentIntentId);
-    if (amountCents !== undefined) body.set('amount', String(amountCents));
-    const res = await fetch('https://api.stripe.com/v1/refunds', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${key}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: body.toString(),
-    });
-    if (!res.ok) {
-      return { ok: false, error: `Stripe ${res.status}` };
-    }
-    const data = (await res.json()) as { id?: string };
-    return { ok: true, refundId: data.id };
-  } catch (err) {
-    return { ok: false, error: err instanceof Error ? err.message : String(err) };
-  }
-}
-
 export async function POST(request: NextRequest) {
   const ip = clientIp(request);
   const rate = await checkRateLimit(`booking-cancel:${ip}`, 8, 60_000);
@@ -98,59 +56,21 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Booking already cancelled' }, { status: 409 });
   }
 
-  const policy = await loadPolicyForService(booking.serviceId);
-  const hoursUntilStart = (Date.parse(booking.startAt) - Date.now()) / (1000 * 60 * 60);
-
-  let refundDecision: 'full' | 'partial' | 'none' = 'none';
-  if (policy && booking.paymentStatus === 'paid') {
-    if (hoursUntilStart >= policy.fullRefundHoursBefore) refundDecision = 'full';
-    else if (hoursUntilStart >= policy.partialRefundHoursBefore) refundDecision = 'partial';
-    else refundDecision = 'none';
-  }
-
-  let refundResult: { ok: boolean; refundId?: string; error?: string } | null = null;
-  if (refundDecision !== 'none' && booking.paymentIntentId) {
-    let partialAmountCents: number | undefined;
-    if (refundDecision === 'partial' && policy) {
-      const service = await getService(booking.serviceId);
-      if (service?.priceAmount && service.priceAmount > 0) {
-        // Smallest currency unit (already cents/won per the service schema).
-        partialAmountCents = Math.max(
-          1,
-          Math.floor((service.priceAmount * policy.partialRefundPercent) / 100),
-        );
-      }
-    }
-    refundResult = await attemptStripeRefund(booking.paymentIntentId, partialAmountCents);
-  }
-
-  const now = new Date().toISOString();
-  const updated = {
-    ...booking,
-    status: 'cancelled' as const,
-    cancelledAt: now,
-    cancellationReason: parsed.data.reason,
-    paymentStatus:
-      refundDecision === 'full'
-        ? ('refunded' as const)
-        : refundDecision === 'partial'
-          ? ('partial-refund' as const)
-          : booking.paymentStatus,
-    updatedAt: now,
-  };
+  const outcome = await computeRefundForCancel(booking);
+  const updated = applyRefundOutcome(booking, outcome, parsed.data.reason);
   await saveBooking(updated);
   emitEvent('booking.cancelled', {
     bookingId: updated.bookingId,
     reason: parsed.data.reason,
-    refundDecision,
+    refundDecision: outcome.decision,
     paymentStatus: updated.paymentStatus,
   });
 
   return NextResponse.json({
     ok: true,
     booking: updated,
-    refundDecision,
-    refundResult,
-    hoursUntilStart: Math.round(hoursUntilStart * 10) / 10,
+    refundDecision: outcome.decision,
+    refundResult: outcome.refundResult,
+    hoursUntilStart: outcome.hoursUntilStart,
   });
 }

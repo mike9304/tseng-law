@@ -610,7 +610,15 @@ function parseBuilderSnapshot(
   try {
     const parsed = JSON.parse(raw) as unknown;
     return parseBuilderSnapshotValue(parsed, pageKey, kind, locale, defaults);
-  } catch {
+  } catch (err) {
+    // Surface corruption so an admin notices the page can't be parsed,
+    // rather than silently returning null and rendering an empty page.
+    console.warn('[persistence] failed to parse snapshot', {
+      pageKey,
+      kind,
+      locale,
+      error: err instanceof Error ? err.message : String(err),
+    });
     return null;
   }
 }

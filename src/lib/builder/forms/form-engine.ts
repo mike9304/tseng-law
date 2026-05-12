@@ -262,12 +262,21 @@ export function validateSubmission(
     }
 
     if (field.validation?.pattern) {
-      try {
-        if (!new RegExp(field.validation.pattern).test(strVal)) {
-          errors.push({ fieldId: field.id, message: '입력 형식이 올바르지 않습니다.' });
+      // Defensive bounds for ReDoS: nested quantifiers + long input is the
+      // classic catastrophic-backtracking shape. Reject patterns that
+      // combine those before we hand them to the regex engine.
+      const pattern = field.validation.pattern;
+      const looksDangerous = /(\(.+\+.+\)\+|\(.+\*.+\)\*|\(.+\+.+\)\*|\(.+\*.+\)\+)/.test(pattern);
+      if (pattern.length > 500 || strVal.length > 4000 || looksDangerous) {
+        errors.push({ fieldId: field.id, message: '검증식이 너무 복잡하거나 입력이 너무 깁니다.' });
+      } else {
+        try {
+          if (!new RegExp(pattern).test(strVal)) {
+            errors.push({ fieldId: field.id, message: '입력 형식이 올바르지 않습니다.' });
+          }
+        } catch {
+          errors.push({ fieldId: field.id, message: '검증식 설정이 올바르지 않습니다.' });
         }
-      } catch {
-        errors.push({ fieldId: field.id, message: '검증식 설정이 올바르지 않습니다.' });
       }
     }
   }

@@ -27,6 +27,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid import payload' }, { status: 400 });
   }
 
+  // Hard cap on cumulative payload size — 2000 rows × ~1KB worst case is
+  // already large enough to trip Vercel's body limit. Reject early instead
+  // of OOMing mid-import.
+  let cumulativeChars = 0;
+  for (const row of parsed.data.rows) {
+    cumulativeChars += row.email.length + (row.tags?.join('').length ?? 0);
+    if (cumulativeChars > 256 * 1024) {
+      return NextResponse.json({ error: 'Import payload exceeds 256KB cumulative.' }, { status: 413 });
+    }
+  }
+
   const now = new Date().toISOString();
   let created = 0;
   let updated = 0;

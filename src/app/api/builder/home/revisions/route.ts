@@ -7,7 +7,7 @@ import {
   normalizeBuilderHomeLocale,
   readBuilderHomeSnapshotHistoryDetail,
 } from '@/lib/builder/persistence';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 
@@ -16,7 +16,7 @@ function badRequest(message: string) {
 }
 
 export async function GET(request: NextRequest) {
-  const auth = await guardMutation(request, { permission: 'edit-pages' });
+  const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeBuilderHomeLocale(request.nextUrl.searchParams.get('locale'));

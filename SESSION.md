@@ -4927,3 +4927,14 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - 페이지/섹션 템플릿 검색 경험을 더 통합하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M51 Page template prompt back path
+
+- 사용자가 말한 “템플릿 적용하려고 한 뒤 다시 뒤로 가고 싶으면 버튼도 없음” 피드백을 page template 생성 확인 단계까지 확장했다.
+- `PageSwitcher`의 page slug prompt에 `다른 템플릿 선택` 버튼을 추가했다. 선택한 템플릿으로 새 페이지를 생성하기 전, prompt에서 바로 261개 template showroom으로 돌아갈 수 있다.
+- Add 패널 검색어로 연 showroom에서 template preview → `이 템플릿 사용` → slug prompt → `다른 템플릿 선택`을 눌러도 쇼룸 검색어 `법률`이 유지되는지 Playwright로 고정했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 페이지/섹션 템플릿 검색 경험을 한 단계 더 통합하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

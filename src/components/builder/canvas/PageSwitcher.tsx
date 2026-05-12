@@ -807,6 +807,20 @@ export default function PageSwitcher({
               }}
             />
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+              {pendingTemplate ? (
+                <button
+                  type="button"
+                  data-builder-page-template-back="true"
+                  onClick={() => {
+                    setShowSlugPrompt(false);
+                    setPendingTemplate(undefined);
+                    setShowGallery(true);
+                  }}
+                  style={{ padding: '6px 16px', background: '#eff6ff', color: '#123b63', border: '1px solid #bfdbfe', borderRadius: 8, fontSize: '0.82rem', fontWeight: 700, cursor: 'pointer' }}
+                >
+                  다른 템플릿 선택
+                </button>
+              ) : null}
               <button
                 type="button"
                 onClick={() => {

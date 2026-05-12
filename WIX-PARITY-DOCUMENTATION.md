@@ -1493,3 +1493,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add 검색에서 page template showroom으로 넘어갈 때 검색 맥락이 끊기지 않게 했다.
+
+## M51 — Page template prompt back path
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/PageSwitcher.tsx` — page template 선택 후 뜨는 slug prompt에 `다른 템플릿 선택` 버튼을 추가했다. 생성 확정 전에도 261개 template showroom으로 되돌아갈 수 있고, pending template은 안전하게 해제된다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Add 패널 `법률` 검색 → page template showroom → `법률사무소 홈` preview → `이 템플릿 사용` → slug prompt → `다른 템플릿 선택` 경로를 실제 브라우저에서 검증한다. 되돌아온 showroom은 검색어 `법률`을 유지한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 지적한 template apply 후 back affordance 부재를 page template 생성 단계까지 보강했다.

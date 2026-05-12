@@ -52,3 +52,4 @@
 | M48 | QA     | Section template market search | W18,W84,W216 | 2h | M46 | 🟡 주요업무 검색/디자인팩 UX 자동검증 통과 / 사용자 QA 대기 |
 | M49 | QA     | Add panel page template showroom entry | W14,W18,W216 | 2h | M48 | 🟡 Add 패널 261개 페이지 템플릿 진입 자동검증 통과 / 사용자 QA 대기 |
 | M50 | QA     | Add-to-page template search handoff | W14,W18,W216 | 1h | M49 | 🟡 Add 검색어 템플릿 쇼룸 전달 자동검증 통과 / 사용자 QA 대기 |
+| M51 | QA     | Page template prompt back path | W14,W18,W216 | 1h | M50 | 🟡 템플릿 적용 확인 단계 뒤로가기 자동검증 통과 / 사용자 QA 대기 |

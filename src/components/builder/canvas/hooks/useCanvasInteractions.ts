@@ -58,6 +58,8 @@ type UseCanvasInteractionsArgs = {
   zoomState: ZoomState;
 };
 
+const MOVE_ACTIVATION_THRESHOLD_PX = 4;
+
 export function useCanvasInteractions({
   activeGroupId,
   activeViewport,
@@ -94,6 +96,7 @@ export function useCanvasInteractions({
   const [hoveredContainerId, setHoveredContainerId] = useState<string | null>(null);
   const canceledInteractionPointerIdsRef = useRef<Set<number>>(new Set());
   const interactionGeometrySnapshotRef = useRef<InteractionGeometrySnapshot | null>(null);
+  const moveActivationRef = useRef<{ pointerId: number; active: boolean } | null>(null);
   const pendingPointerMoveRef = useRef<PointerMoveSnapshot | null>(null);
   const pointerMoveFrameRef = useRef<number | null>(null);
   const moveNodeIntoContainer = useBuilderCanvasStore((state) => state.moveNodeIntoContainer);
@@ -102,6 +105,7 @@ export function useCanvasInteractions({
     if (!activeViewport || activeViewport === currentViewport) return;
     cancelMutationSession();
     interactionGeometrySnapshotRef.current = null;
+    moveActivationRef.current = null;
     setActiveViewport(null);
     setInteraction(null);
     setInteractionPointer(null);
@@ -120,6 +124,7 @@ export function useCanvasInteractions({
       canceledInteractionPointerIdsRef.current.add(activeInteraction.pointerId);
       cancelMutationSession();
       interactionGeometrySnapshotRef.current = null;
+      moveActivationRef.current = null;
       setInteraction(null);
       setActiveViewport(null);
       setInteractionPointer(null);
@@ -178,6 +183,20 @@ export function useCanvasInteractions({
         y: viewportRect ? pointer.clientY - viewportRect.top : pointer.clientY,
       });
       if (activeInteraction.type === 'move') {
+        const rawDeltaX = pointer.clientX - activeInteraction.originX;
+        const rawDeltaY = pointer.clientY - activeInteraction.originY;
+        const moveActivation = moveActivationRef.current?.pointerId === activeInteraction.pointerId
+          ? moveActivationRef.current
+          : null;
+        if (
+          !moveActivation?.active
+          && Math.hypot(rawDeltaX, rawDeltaY) < MOVE_ACTIVATION_THRESHOLD_PX
+        ) {
+          return;
+        }
+        if (!moveActivation?.active) {
+          moveActivationRef.current = { pointerId: activeInteraction.pointerId, active: true };
+        }
         setOverlapPicker(null);
         const geometry = interactionGeometrySnapshotRef.current;
         if (!geometry) return;
@@ -380,6 +399,21 @@ export function useCanvasInteractions({
       flushPendingPointerMove();
       if (canceledInteractionPointerIdsRef.current.delete(activeInteraction.pointerId)) {
         interactionGeometrySnapshotRef.current = null;
+        moveActivationRef.current = null;
+        return;
+      }
+      const activeMoveActivation = moveActivationRef.current?.pointerId === activeInteraction.pointerId
+        ? moveActivationRef.current
+        : null;
+      if (activeInteraction.type === 'move' && !activeMoveActivation?.active) {
+        cancelMutationSession();
+        interactionGeometrySnapshotRef.current = null;
+        moveActivationRef.current = null;
+        setHoveredContainerId(null);
+        setInteraction(null);
+        setActiveViewport(null);
+        setInteractionPointer(null);
+        setGuides([]);
         return;
       }
       const currentHoveredContainerId = (() => {
@@ -441,6 +475,7 @@ export function useCanvasInteractions({
       }
       setHoveredContainerId(null);
       interactionGeometrySnapshotRef.current = null;
+      moveActivationRef.current = null;
       setInteraction(null);
       setActiveViewport(null);
       setInteractionPointer(null);
@@ -481,6 +516,7 @@ export function useCanvasInteractions({
     setOverlapPicker(null);
     setSelectionBox(null);
     interactionGeometrySnapshotRef.current = null;
+    moveActivationRef.current = null;
     setInteraction({
       type: 'pan',
       pointerId: event.pointerId,
@@ -532,6 +568,7 @@ export function useCanvasInteractions({
     setActiveViewport(interactionViewport);
     interactionGeometrySnapshotRef.current = captureInteractionGeometry();
     beginMutationSession();
+    moveActivationRef.current = { pointerId: event.pointerId, active: false };
     setInteractionPointer({
       x: event.clientX - (viewportRef.current?.getBoundingClientRect().left ?? 0),
       y: event.clientY - (viewportRef.current?.getBoundingClientRect().top ?? 0),
@@ -573,6 +610,7 @@ export function useCanvasInteractions({
     event.preventDefault();
     event.stopPropagation();
     setOverlapPicker(null);
+    moveActivationRef.current = null;
     const targetNode = nodesById.get(nodeId);
     if (!targetNode) return;
     const interactionViewport = currentViewport;

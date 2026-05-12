@@ -4878,3 +4878,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 템플릿 gallery를 실제 외부 AI 디자인/대량 템플릿처럼 더 넓히는 방향과, 남은 노드 선택/백지화 이슈를 계속 재현한다.
+
+## 2026-05-13 Codex /goal M47 Node click movement guard
+
+- 사용자가 다시 재현한 “노드를 클릭하면 아래로 사라지는지 글이 안 보임”, “칼럼 아카이브/사진 클릭하면 백지” 피드백을 클릭/드래그 경계에서 보강했다.
+- `useCanvasInteractions`의 move interaction에 4px activation threshold를 추가했다. pointerdown 선택은 유지하되, 포인터가 임계값 이상 움직이기 전에는 transient 이동, reparent, commit을 하지 않는다.
+- 새 Playwright는 2px pointer jitter click으로 주요 서비스 노드 위치가 바뀌지 않는지, 칼럼 아카이브/이미지 클릭 뒤에도 editor canvas와 Asset library modal이 유지되는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 외부 AI 디자인 사이트 수준의 섹션 템플릿 폭 확장 또는 W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

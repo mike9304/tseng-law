@@ -1435,3 +1435,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W84는 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자 체감상 “서비스/주요업무 템플릿이 너무 적고 돌아가기 어렵다”는 gap을 template depth와 editor back affordance로 보강했다.
+
+## M47 — Node click movement guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/hooks/useCanvasInteractions.ts` — 클릭과 드래그를 분리하기 위해 move interaction에 4px 활성화 임계값을 추가했다. 선택 pointerdown은 기존처럼 유지하되, 포인터가 임계값 이상 움직이기 전에는 transient rect update, reparent, commit이 실행되지 않는다.
+  - `tests/builder-editor/node-click-stability.playwright.ts` — 2px pointer jitter 클릭이 주요 서비스 노드를 이동시키지 않는지, 칼럼 아카이브와 이미지 클릭 뒤에도 `/ko/admin-builder` 캔버스와 Asset library modal이 살아있는지 실제 브라우저 클릭으로 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 보고한 “노드 선택 뒤 다른 노드 선택하면 아래로 사라지고 글이 안 보임”, “칼럼 아카이브/사진 클릭하면 백지” 경로를 accidental drag와 editor navigation 안정성 관점에서 막았다.

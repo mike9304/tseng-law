@@ -48,3 +48,4 @@
 | M44 | QA     | Services template text persistence | W18,W84 | 2h | M30 | 🟡 주요 서비스 텍스트 유지 자동검증 통과 / 사용자 QA 대기 |
 | M45 | QA     | Locale page projection guard | W14,W193 | 2h | M43 | 🟡 KO/zh-hant pageId 혼선 자동검증 통과 / 사용자 QA 대기 |
 | M46 | QA     | Service section gallery depth | W18,W84 | 2h | M44 | 🟡 서비스 섹션 템플릿 12개/뒤로가기 UX 자동검증 통과 / 사용자 QA 대기 |
+| M47 | QA     | Node click movement guard | W18,W84,W216 | 2h | M44 | 🟡 노드 클릭/칼럼/이미지 백지화 회귀 자동검증 통과 / 사용자 QA 대기 |

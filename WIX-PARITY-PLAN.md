@@ -92,3 +92,4 @@
 | M88 | QA     | Advanced picker popover focus trap | W181,W184,W216,W225 | 1h | M87 | 🟡 color/font picker popover focus trap/Escape/parent modal 격리 자동검증 통과 / 사용자 QA 대기 |
 | M89 | QA     | Published media modal blanking guard | W22,W23,W216,W225 | 1h | M88 | 🟡 공개 이미지 lightbox/popup focus trap/이미지 내부 클릭 유지 자동검증 통과 / 사용자 QA 대기 |
 | M90 | QA     | Published overlay keyboard focus restore | W23,W98,W216,W225 | 1h | M89 | 🟡 site lightbox/popup Enter/Space trigger/focus restore 자동검증 통과 / 사용자 QA 대기 |
+| M91 | QA     | Published auto overlay focus fallback | W23,W98,W216,W225 | 1h | M90 | 🟡 hash lightbox/on-load popup focus fallback 자동검증 통과 / 사용자 QA 대기 |

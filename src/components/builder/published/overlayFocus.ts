@@ -16,6 +16,22 @@ export type PublishedOverlayOpenDetail = {
   opener?: HTMLElement | null;
 };
 
+export function resolvePublishedOverlayOpener(candidate?: HTMLElement | null): HTMLElement | null {
+  if (candidate instanceof HTMLElement && candidate.isConnected) return candidate;
+
+  const activeElement = document.activeElement;
+  if (
+    activeElement instanceof HTMLElement &&
+    activeElement !== document.body &&
+    activeElement !== document.documentElement &&
+    activeElement.isConnected
+  ) {
+    return activeElement;
+  }
+
+  return null;
+}
+
 function getFocusableElements(container: HTMLElement): HTMLElement[] {
   return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => (
     !element.hidden &&

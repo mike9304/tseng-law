@@ -2,7 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { usePublishedOverlayFocus, type PublishedOverlayOpenDetail } from './overlayFocus';
+import {
+  resolvePublishedOverlayOpener,
+  usePublishedOverlayFocus,
+  type PublishedOverlayOpenDetail,
+} from './overlayFocus';
 
 export interface PopupOverlayConfig {
   id: string;
@@ -35,7 +39,7 @@ export default function PopupOverlay({
     function handleOpen(e: Event) {
       const ce = e as CustomEvent<PublishedOverlayOpenDetail>;
       if (ce.detail?.slug === config.slug) {
-        openerRef.current = ce.detail.opener instanceof HTMLElement ? ce.detail.opener : null;
+        openerRef.current = resolvePublishedOverlayOpener(ce.detail.opener);
         setOpen(true);
       }
     }

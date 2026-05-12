@@ -5436,3 +5436,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - published runtime에 남은 site-level overlay/auto-trigger와 editor floating surface를 이어서 점검한다.
+
+## 2026-05-13 Codex /goal M91 Published auto overlay focus fallback
+
+- M90은 manual trigger의 opener detail을 overlay로 전달했지만, hash lightbox open과 popup on-load/on-scroll/on-exit-intent처럼 opener detail이 없는 open 경로는 닫힌 뒤 focus가 body로 떨어질 수 있었다.
+- `resolvePublishedOverlayOpener`를 추가해 explicit opener가 없으면 현재 `document.activeElement`를 fallback opener로 기억한다.
+- `LightboxOverlay`는 `builder-lightbox:open` event와 `#lb-<slug>` hash open 모두 이 fallback을 거친다.
+- `PopupOverlay`는 manual event뿐 아니라 auto-trigger event에서도 fallback opener를 저장한다.
+- Playwright는 임시 published page에서 focus된 trigger가 있는 상태로 hash lightbox를 열고 Escape close 후 trigger focus가 돌아오는지, on-load popup이 열린 뒤 Escape close 후 기존 focused link로 돌아오는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/overlayFocus.ts src/components/builder/published/LightboxOverlay.tsx src/components/builder/published/PopupOverlay.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - published overlay auto-trigger 잔여 경로와 editor floating surface를 이어서 점검한다.

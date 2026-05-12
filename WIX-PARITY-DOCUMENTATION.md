@@ -2042,3 +2042,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W23/W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. site-level modal trigger가 mouse-only였던 gap과 overlay focus restore 누수를 닫았고, 공개 이미지 modal stacking 회귀도 같이 막았다.
+
+## M91 — Published auto overlay focus fallback
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/published/overlayFocus.ts` — event detail에 opener가 없는 overlay open 경로에서도 현재 `document.activeElement`를 fallback opener로 기억하는 `resolvePublishedOverlayOpener`를 추가했다.
+  - `src/components/builder/published/LightboxOverlay.tsx` — `builder-lightbox:open` event와 `#lb-<slug>` hash open 모두 fallback opener를 저장해 닫힌 뒤 focus를 되돌린다.
+  - `src/components/builder/published/PopupOverlay.tsx` — manual trigger뿐 아니라 on-load/on-scroll/on-exit-intent popup처럼 opener detail이 없는 open도 현재 focus를 fallback으로 복귀시킨다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — hash lightbox open과 on-load popup open에서 close initial focus, Escape close, fallback opener focus restore를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/overlayFocus.ts src/components/builder/published/LightboxOverlay.tsx src/components/builder/published/PopupOverlay.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W23/W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. direct trigger가 없는 published overlay open에서도 focus가 body로 떨어지지 않도록 닫았다.

@@ -403,6 +403,104 @@ test.describe('/ko published builder interactions', () => {
     }
   });
 
+  test('restores focus for hash lightbox and automatic popup opens', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-published-auto-overlay-${token}`;
+    const lightboxSlug = `hash-lightbox-${token}`;
+    const popupSlug = `autoload-popup-${token}`;
+    let pageId: string | null = null;
+    let lightboxId: string | null = null;
+    let popupId: string | null = null;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Auto Overlay ${token}`,
+        makePublishedOverlayTriggerDocument(token, lightboxSlug, popupSlug),
+      );
+
+      const lightboxResponse = await page.request.post('/api/builder/site/lightboxes', {
+        headers: mutationHeaders(`${slug}-lightbox`),
+        data: { locale: 'ko', slug: lightboxSlug, name: `Hash Lightbox ${token}` },
+      });
+      expect(lightboxResponse.status()).toBe(200);
+      const lightboxPayload = (await lightboxResponse.json()) as { ok?: boolean; lightbox?: { id: string } };
+      expect(lightboxPayload.ok).toBe(true);
+      expect(lightboxPayload.lightbox?.id).toBeTruthy();
+      lightboxId = lightboxPayload.lightbox!.id;
+
+      const site = await readSiteDocument('default', 'ko');
+      const popup = {
+        ...createDefaultPopup('ko', popupSlug, `Autoload Popup ${token}`),
+        trigger: 'on-load' as const,
+        oncePerVisitor: false,
+        delayMs: 1800,
+      };
+      popupId = popup.id;
+      await writeSiteDocument({
+        ...site,
+        popups: [...(site.popups ?? []).filter((item) => item.slug !== popupSlug), popup],
+        updatedAt: new Date().toISOString(),
+      });
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+
+      const lightboxWrapper = page.locator(`[data-node-id="published-lightbox-trigger-${token}"]`);
+      await expect(lightboxWrapper).toHaveAttribute('role', 'button');
+      await lightboxWrapper.focus();
+      await expect(lightboxWrapper).toBeFocused();
+      await page.evaluate((targetSlug) => {
+        window.location.hash = `lb-${targetSlug}`;
+      }, lightboxSlug);
+      const lightboxDialog = page.locator(`[data-lightbox-overlay="${lightboxSlug}"]`);
+      await expect(lightboxDialog).toBeVisible();
+      await expect(lightboxDialog.getByRole('button', { name: 'Close' })).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(lightboxDialog).toHaveCount(0);
+      await expect(lightboxWrapper).toBeFocused();
+
+      const popupTrigger = page.getByRole('link', { name: 'Open site popup' });
+      await popupTrigger.focus();
+      await expect(popupTrigger).toBeFocused();
+      const popupDialog = page.locator(`[data-popup-overlay="${popupSlug}"]`);
+      await expect(popupDialog).toBeVisible({ timeout: 5000 });
+      await expect(popupDialog.getByRole('button', { name: 'Close' })).toBeFocused();
+      await page.keyboard.press('Escape');
+      await expect(popupDialog).toHaveCount(0);
+      await expect(popupTrigger).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      if (lightboxId) {
+        await page.request.delete(`/api/builder/site/lightboxes/${lightboxId}?locale=ko`, {
+          headers: mutationHeaders(`${slug}-lightbox`),
+          failOnStatusCode: false,
+        });
+      }
+      if (popupId) {
+        const latestSite = await readSiteDocument('default', 'ko');
+        await writeSiteDocument({
+          ...latestSite,
+          popups: (latestSite.popups ?? []).filter((item) => item.id !== popupId),
+          updatedAt: new Date().toISOString(),
+        });
+      }
+    }
+  });
+
   test('keeps services and FAQ sections interactive after publish', async ({ page }) => {
     const token = Date.now().toString(36);
     const slug = `g-editor-published-interactions-${token}`;

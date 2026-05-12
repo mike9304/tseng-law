@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/locales';
+import { usePublishedOverlayFocus } from '@/components/builder/published/overlayFocus';
 
 const HIDE_UNTIL_KEY = 'hojeong-year-end-event-hide-until';
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
@@ -54,11 +55,16 @@ const copyByLocale: Record<Locale, PopupCopy> = {
 export default function YearEndEventPopup({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const isUtilityPage = pathname?.includes('/bookings/manage/') ?? false;
+  const normalizedPath = pathname?.replace(/\/+$/, '') || `/${locale}`;
+  const isEligiblePage = normalizedPath === `/${locale}`;
   const [open, setOpen] = useState(false);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
   const copy = useMemo(() => copyByLocale[locale], [locale]);
 
   useEffect(() => {
-    if (isUtilityPage) {
+    if (isUtilityPage || !isEligiblePage) {
       setOpen(false);
       return;
     }
@@ -70,22 +76,29 @@ export default function YearEndEventPopup({ locale }: { locale: Locale }) {
       // noop
     }
     setOpen(true);
-  }, [isUtilityPage]);
+  }, [isEligiblePage, isUtilityPage]);
+
+  usePublishedOverlayFocus({
+    open: open && !isUtilityPage && isEligiblePage,
+    overlayRef,
+    initialFocusRef: closeButtonRef,
+    openerRef,
+  });
 
   useEffect(() => {
-    if (!open || isUtilityPage) return;
+    if (!open || isUtilityPage || !isEligiblePage) return;
     const onEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
         setOpen(false);
       }
     };
-    document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', onEscape);
+    window.addEventListener('keydown', onEscape, true);
     return () => {
-      document.body.style.overflow = '';
-      window.removeEventListener('keydown', onEscape);
+      window.removeEventListener('keydown', onEscape, true);
     };
-  }, [open, isUtilityPage]);
+  }, [isEligiblePage, open, isUtilityPage]);
 
   const hideForDay = () => {
     try {
@@ -96,14 +109,27 @@ export default function YearEndEventPopup({ locale }: { locale: Locale }) {
     setOpen(false);
   };
 
-  if (isUtilityPage || !open) return null;
+  if (isUtilityPage || !isEligiblePage || !open) return null;
 
   return (
-    <div className="year-end-popup-backdrop" role="dialog" aria-modal="true" aria-label={copy.title} onClick={() => setOpen(false)}>
+    <div
+      className="year-end-popup-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-label={copy.title}
+      ref={overlayRef}
+      onClick={() => setOpen(false)}
+    >
       <div className="year-end-popup" onClick={(event) => event.stopPropagation()}>
         <div className="year-end-popup-top">
           <span className="year-end-popup-badge">{copy.badge}</span>
-          <button type="button" className="year-end-popup-close" onClick={() => setOpen(false)} aria-label={copy.close}>
+          <button
+            type="button"
+            className="year-end-popup-close"
+            onClick={() => setOpen(false)}
+            aria-label={copy.close}
+            ref={closeButtonRef}
+          >
             ×
           </button>
         </div>

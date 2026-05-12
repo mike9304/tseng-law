@@ -2175,3 +2175,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (11 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W40/W99/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. builder-published fallback header와 별개로 legacy public `/ko` 모바일 drawer에서도 keyboard focus가 배경으로 새거나 닫힌 뒤 위치를 잃는 경로를 닫았다.
+
+## M100 — Public year-end popup focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/YearEndEventPopup.tsx` — public event popup을 공통 overlay focus helper에 연결해 close button initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, Escape close를 처리한다. 자동 노출 범위는 locale 홈(`/ko`, `/zh-hant`, `/en`)으로 한정해 custom published page overlay와 충돌하지 않게 했다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — legacy public `/ko`에서 event popup focus trap을 검증하고, AI chat 테스트는 event popup을 명시적으로 숨긴 상태로 고정했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/YearEndEventPopup.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "year-end event" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "year-end event|public AI chat|opens site lightbox" --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. homepage auto popup의 keyboard focus gap을 닫고, 자동 popup이 builder-published custom routes의 overlay Escape를 가로채는 충돌도 같이 막았다.

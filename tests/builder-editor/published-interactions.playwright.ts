@@ -1115,7 +1115,10 @@ test.describe('/ko published builder interactions', () => {
 
   test('keeps the public AI chat keyboard path stable', async ({ page }) => {
     try {
-      await page.addInitScript(() => window.localStorage.setItem('hojeong-ai-chat-collapsed', 'true'));
+      await page.addInitScript(() => {
+        window.localStorage.setItem('hojeong-ai-chat-collapsed', 'true');
+        window.localStorage.setItem('hojeong-year-end-event-hide-until', String(Date.now() + 24 * 60 * 60 * 1000));
+      });
       await page.goto('/ko', { waitUntil: 'domcontentloaded' });
       await page.waitForLoadState('networkidle');
 
@@ -1141,7 +1144,10 @@ test.describe('/ko published builder interactions', () => {
       await expect(dialog).toHaveCount(0);
       await expect(trigger).toBeFocused();
     } finally {
-      await page.evaluate(() => window.localStorage.removeItem('hojeong-ai-chat-collapsed')).catch(() => undefined);
+      await page.evaluate(() => {
+        window.localStorage.removeItem('hojeong-ai-chat-collapsed');
+        window.localStorage.removeItem('hojeong-year-end-event-hide-until');
+      }).catch(() => undefined);
     }
   });
 
@@ -1202,6 +1208,47 @@ test.describe('/ko published builder interactions', () => {
       await closeButton.click();
       await expect(dialog).toHaveCount(0);
       await expect(toggle).toBeFocused();
+    } finally {
+      await page.evaluate(() => {
+        window.localStorage.removeItem('hojeong-ai-chat-collapsed');
+        window.localStorage.removeItem('hojeong-year-end-event-hide-until');
+      }).catch(() => undefined);
+    }
+  });
+
+  test('traps focus in the public year-end event popup', async ({ page }) => {
+    await page.addInitScript(() => {
+      window.localStorage.setItem('hojeong-ai-chat-collapsed', 'true');
+      window.localStorage.removeItem('hojeong-year-end-event-hide-until');
+    });
+
+    try {
+      await page.goto('/ko', { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const dialog = page.getByRole('dialog', { name: '2026년 기념 리뷰 이벤트' });
+      await expect(dialog).toBeVisible();
+      const closeButton = dialog.getByRole('button', { name: '닫기' });
+      const hideButton = dialog.getByRole('button', { name: '오늘 하루 보지 않기' });
+      await expect(closeButton).toBeFocused();
+
+      await page.keyboard.press('Shift+Tab');
+      await expect(hideButton).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(closeButton).toBeFocused();
+
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.textContent = 'outside year-end popup focus probe';
+        probe.setAttribute('data-year-end-popup-focus-probe', 'true');
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(closeButton).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(dialog).toHaveCount(0);
     } finally {
       await page.evaluate(() => {
         window.localStorage.removeItem('hojeong-ai-chat-collapsed');

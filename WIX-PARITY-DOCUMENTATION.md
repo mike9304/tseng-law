@@ -2085,3 +2085,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W71/W72/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public gallery lightbox에서 focus가 페이지 배경으로 새거나 overlay가 node sibling 아래에서 pointer/focus 충돌을 내는 경로를 닫았다.
+
+## M94 — Published mobile header drawer focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/published/SiteHeader.tsx` — fallback public header의 mobile drawer dialog에 공통 published overlay focus helper를 연결했다. hamburger opener를 기억하고 close button initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, Escape close, backdrop close 후 opener focus restore를 처리한다.
+  - `tests/builder-editor/published-interactions.playwright.ts` — global header canvas를 임시로 비워 fallback `SiteHeader`를 노출하고, mobile hamburger keyboard open, focus trap, 외부 focus probe 차단, Escape/backdrop close와 hamburger focus restore를 검증한다. 기존 overlay 테스트도 hydration 후 `locator.press()`로 안정화했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/SiteHeader.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "traps focus in the fallback mobile site header drawer" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "opens site lightbox|restores focus for hash" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W40/W99/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. public mobile navigation drawer에서 focus가 페이지 배경으로 새거나 Escape/backdrop close 후 위치를 잃는 경로를 닫았다.

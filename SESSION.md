@@ -5477,3 +5477,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - published header mobile navigation dialog나 남은 user-facing overlay의 keyboard/focus gap을 계속 줄인다.
+
+## 2026-05-13 Codex /goal M94 Published mobile header drawer focus trap
+
+- fallback public `SiteHeader`의 mobile drawer는 `role="dialog" aria-modal="true"`만 있었고, initial focus, Tab trap, 외부 focus 차단, body scroll lock, Escape close, opener focus restore가 없었다.
+- `SiteHeader` mobile drawer panel에 공통 `usePublishedOverlayFocus` helper를 연결했다. hamburger click/keyboard open 시 opener를 기억하고, close button initial focus, Tab/Shift+Tab wrap, 외부 focus probe 차단, Escape/backdrop close 후 hamburger focus 복귀를 처리한다.
+- Playwright는 global header canvas를 임시로 빈 문서로 바꿔 fallback header를 노출하고, site header mobile mode를 `force`로 둔 뒤 모바일 viewport에서 keyboard open/focus trap/Escape/backdrop close를 검증한다. cleanup에서 page, header canvas, headerFooter config를 원복한다.
+- 첫 focused run은 `domcontentloaded` 직후 hydration 전에 Enter를 보내 drawer가 열리지 않아 실패했고, `networkidle` + `locator.press()`로 실제 hydrated button keyboard path를 고정했다.
+- full published suite 첫 run에서 기존 overlay tests의 동일한 hydration/focus 타이밍 취약점도 드러나, 기존 site lightbox/popup tests를 hydrated 이후 `locator.press()`로 안정화하고 on-load popup delay를 hash focus restore 검증 이후로 미뤘다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/published/SiteHeader.tsx tests/builder-editor/published-interactions.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "traps focus in the fallback mobile site header drawer" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "opens site lightbox|restores focus for hash" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - published widget-level hamburger/menu overlay 또는 public navigation widget focus/keyboard gap을 계속 줄인다.

@@ -1,6 +1,6 @@
 import { expect, test, type APIRequestContext } from '@playwright/test';
-import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
-import { createDefaultCookieConsent, createDefaultPopup, type BuilderCookieConsent } from '@/lib/builder/site/types';
+import { readHeaderCanvas, readSiteDocument, writeHeaderCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
+import { createDefaultCookieConsent, createDefaultPopup, type BuilderCookieConsent, type BuilderHeaderFooterConfig } from '@/lib/builder/site/types';
 
 type TestDocument = {
   version: 1;
@@ -345,6 +345,25 @@ function makePublishedGalleryDocument(token: string): TestDocument {
   };
 }
 
+function makePublishedHeaderDrawerDocument(token: string): TestDocument {
+  const now = new Date().toISOString();
+  const rootId = `mobile-header-root-${token}`;
+  return {
+    version: 1,
+    locale: 'ko',
+    updatedAt: now,
+    updatedBy: `published-mobile-header-${token}`,
+    stageWidth: 1280,
+    stageHeight: 520,
+    nodes: [
+      containerNode(rootId, { x: 0, y: 0, width: 1280, height: 520 }, 'section section--light', {
+        as: 'main',
+      }),
+      textNode(`mobile-header-title-${token}`, rootId, 80, `Published mobile header ${token}`),
+    ],
+  };
+}
+
 async function createBuilderPage(
   request: APIRequestContext,
   slug: string,
@@ -431,11 +450,13 @@ test.describe('/ko published builder interactions', () => {
       expect(html).toContain(`published-popup-trigger-${token}`);
 
       await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
 
       const lightboxWrapper = page.locator(`[data-node-id="published-lightbox-trigger-${token}"]`);
       await expect(lightboxWrapper).toHaveAttribute('role', 'button');
       await lightboxWrapper.focus();
-      await page.keyboard.press('Enter');
+      await expect(lightboxWrapper).toBeFocused();
+      await lightboxWrapper.press('Enter');
       const lightboxDialog = page.locator(`[data-lightbox-overlay="${lightboxSlug}"]`);
       await expect(lightboxDialog).toBeVisible();
       const lightboxClose = lightboxDialog.getByRole('button', { name: 'Close' });
@@ -444,7 +465,7 @@ test.describe('/ko published builder interactions', () => {
       await expect(lightboxDialog).toHaveCount(0);
       await expect(lightboxWrapper).toBeFocused();
 
-      await page.keyboard.press('Space');
+      await lightboxWrapper.press('Space');
       await expect(lightboxDialog).toBeVisible();
       await expect(lightboxClose).toBeFocused();
       await lightboxClose.click();
@@ -453,7 +474,8 @@ test.describe('/ko published builder interactions', () => {
 
       const popupTrigger = page.getByRole('link', { name: 'Open site popup' });
       await popupTrigger.focus();
-      await page.keyboard.press('Space');
+      await expect(popupTrigger).toBeFocused();
+      await popupTrigger.press('Space');
       const popupDialog = page.locator(`[data-popup-overlay="${popupSlug}"]`);
       await expect(popupDialog).toBeVisible();
       const popupClose = popupDialog.getByRole('button', { name: 'Close' });
@@ -517,7 +539,7 @@ test.describe('/ko published builder interactions', () => {
         ...createDefaultPopup('ko', popupSlug, `Autoload Popup ${token}`),
         trigger: 'on-load' as const,
         oncePerVisitor: false,
-        delayMs: 1800,
+        delayMs: 5000,
       };
       popupId = popup.id;
       await writeSiteDocument({
@@ -535,6 +557,7 @@ test.describe('/ko published builder interactions', () => {
       expect(publishPayload.ok, publishPayload.error).toBe(true);
 
       await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
 
       const lightboxWrapper = page.locator(`[data-node-id="published-lightbox-trigger-${token}"]`);
       await expect(lightboxWrapper).toHaveAttribute('role', 'button');
@@ -749,6 +772,122 @@ test.describe('/ko published builder interactions', () => {
           headers: mutationHeaders(slug),
           failOnStatusCode: false,
         });
+      }
+    }
+  });
+
+  test('traps focus in the fallback mobile site header drawer', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-mobile-header-${token}`;
+    let pageId: string | null = null;
+    let originalHeaderCanvas: Awaited<ReturnType<typeof readHeaderCanvas>> = null;
+    let originalHeaderFooter: BuilderHeaderFooterConfig | undefined;
+    let touchedHeaderCanvas = false;
+    let touchedHeaderFooter = false;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Mobile Header ${token}`,
+        makePublishedHeaderDrawerDocument(token),
+      );
+
+      originalHeaderCanvas = await readHeaderCanvas('default');
+      touchedHeaderCanvas = true;
+      await writeHeaderCanvas('default', {
+        version: 1,
+        locale: 'ko',
+        updatedAt: new Date().toISOString(),
+        updatedBy: `published-mobile-header-${token}`,
+        stageWidth: 1280,
+        stageHeight: 96,
+        nodes: [],
+      });
+
+      const site = await readSiteDocument('default', 'ko');
+      originalHeaderFooter = site.headerFooter;
+      touchedHeaderFooter = true;
+      await writeSiteDocument({
+        ...site,
+        headerFooter: {
+          ...(site.headerFooter ?? {}),
+          mobileHamburger: 'force',
+        },
+        updatedAt: new Date().toISOString(),
+      });
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      const publishPayload = (await publishResponse.json()) as { ok?: boolean; slug?: string; error?: string };
+      expect(publishResponse.status(), JSON.stringify(publishPayload)).toBe(200);
+      expect(publishPayload.ok, publishPayload.error).toBe(true);
+
+      await page.setViewportSize({ width: 390, height: 760 });
+      await page.goto(`/ko/${slug}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+
+      const toggle = page.locator('[data-builder-mobile-hamburger="true"]').first();
+      await expect(toggle).toBeVisible();
+      await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+      await toggle.focus();
+      await expect(toggle).toBeFocused();
+      await toggle.press('Enter');
+
+      const drawer = page.locator('#site-mobile-nav-drawer');
+      const dialog = page.getByRole('dialog', { name: 'Mobile menu' });
+      await expect(drawer).toHaveAttribute('data-builder-mobile-drawer', 'open');
+      await expect(dialog).toBeVisible();
+      const closeButton = dialog.getByRole('button', { name: 'Close' });
+      await expect(closeButton).toBeFocused();
+
+      await page.keyboard.press('Shift+Tab');
+      await expect(dialog.locator('.site-mobile-nav-utility a').last()).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(closeButton).toBeFocused();
+
+      await page.evaluate(() => {
+        const probe = document.createElement('button');
+        probe.type = 'button';
+        probe.textContent = 'outside mobile menu focus probe';
+        probe.setAttribute('data-mobile-header-focus-probe', 'true');
+        document.body.appendChild(probe);
+        probe.focus();
+      });
+      await expect(closeButton).toBeFocused();
+
+      await page.keyboard.press('Escape');
+      await expect(drawer).toHaveAttribute('data-builder-mobile-drawer', 'closed');
+      await expect(dialog).toBeHidden();
+      await expect(toggle).toBeFocused();
+
+      await toggle.press('Space');
+      await expect(drawer).toHaveAttribute('data-builder-mobile-drawer', 'open');
+      await expect(closeButton).toBeFocused();
+      await drawer.click({ position: { x: 8, y: 8 } });
+      await expect(drawer).toHaveAttribute('data-builder-mobile-drawer', 'closed');
+      await expect(toggle).toBeFocused();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+      if (touchedHeaderCanvas && originalHeaderCanvas) {
+        await writeHeaderCanvas('default', originalHeaderCanvas);
+      }
+      if (touchedHeaderFooter) {
+        const latestSite = await readSiteDocument('default', 'ko');
+        const restoredSite = { ...latestSite, updatedAt: new Date().toISOString() };
+        if (originalHeaderFooter) {
+          restoredSite.headerFooter = originalHeaderFooter;
+        } else {
+          delete restoredSite.headerFooter;
+        }
+        await writeSiteDocument(restoredSite);
       }
     }
   });

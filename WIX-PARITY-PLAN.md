@@ -95,3 +95,4 @@
 | M91 | QA     | Published auto overlay focus fallback | W23,W98,W216,W225 | 1h | M90 | 🟡 hash lightbox/on-load popup focus fallback 자동검증 통과 / 사용자 QA 대기 |
 | M92 | QA     | Cookie consent modal focus trap | W98,W216,W225 | 1h | M91 | 🟡 cookie consent modal focus trap/keyboard reopen 자동검증 통과 / 사용자 QA 대기 |
 | M93 | QA     | Published gallery lightbox focus trap | W71,W72,W216,W225 | 1h | M92 | 🟡 gallery lightbox focus trap/portal 자동검증 통과 / 사용자 QA 대기 |
+| M94 | QA     | Published mobile header drawer focus trap | W40,W99,W216,W225 | 1h | M93 | 🟡 mobile header drawer focus trap/Escape/restore 자동검증 통과 / 사용자 QA 대기 |

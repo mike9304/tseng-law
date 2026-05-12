@@ -10,6 +10,7 @@ import { resolveBrandLogo } from '@/lib/builder/site/theme';
 import { siteContent } from '@/data/site-content';
 import SearchOverlay from '@/components/SearchOverlay';
 import { buildHeaderMegaPanels, type HeaderMegaPanel } from '@/lib/builder/site/header-mega';
+import { usePublishedOverlayFocus } from '@/components/builder/published/overlayFocus';
 
 type HeaderNavSpec = {
   key: string;
@@ -186,6 +187,9 @@ export default function SiteHeader({
   const mainNavRef = useRef<HTMLElement | null>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const closeTimeoutRef = useRef<number | null>(null);
+  const mobilePanelRef = useRef<HTMLDivElement | null>(null);
+  const mobileCloseButtonRef = useRef<HTMLButtonElement | null>(null);
+  const mobileMenuOpenerRef = useRef<HTMLElement | null>(null);
   const displayNavItems = useMemo(() => buildHeaderNavItems(navItems, locale), [locale, navItems]);
   const megaPanels = useMemo<HeaderMegaPanel[]>(() => buildHeaderMegaPanels(locale, displayNavItems), [displayNavItems, locale]);
   const megaPanelKeys = useMemo(() => new Set<string>(megaPanels.map((panel) => panel.key)), [megaPanels]);
@@ -271,6 +275,25 @@ export default function SiteHeader({
     if (searchOpen) closeMegaMenuNow();
     if (searchOpen) setMobileMenuOpen(false);
   }, [closeMegaMenuNow, searchOpen]);
+
+  usePublishedOverlayFocus({
+    open: mobileMenuOpen,
+    overlayRef: mobilePanelRef,
+    initialFocusRef: mobileCloseButtonRef,
+    openerRef: mobileMenuOpenerRef,
+  });
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return undefined;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      event.stopPropagation();
+      setMobileMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleKeyDown, true);
+    return () => document.removeEventListener('keydown', handleKeyDown, true);
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     if (builderEditable) return;
@@ -418,7 +441,11 @@ export default function SiteHeader({
                 event.preventDefault();
                 event.stopPropagation();
                 closeMegaMenuNow();
-                setMobileMenuOpen((current) => !current);
+                const opener = event.currentTarget;
+                setMobileMenuOpen((current) => {
+                  if (!current) mobileMenuOpenerRef.current = opener;
+                  return !current;
+                });
               }}
             >
               <span aria-hidden />
@@ -527,10 +554,18 @@ export default function SiteHeader({
           aria-hidden={mobileMenuOpen ? 'false' : 'true'}
           onClick={() => setMobileMenuOpen(false)}
         >
-          <div className="site-mobile-nav-panel" role="dialog" aria-modal="true" aria-label="Mobile menu" onClick={(event) => event.stopPropagation()}>
+          <div
+            ref={mobilePanelRef}
+            className="site-mobile-nav-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile menu"
+            tabIndex={-1}
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="site-mobile-nav-header">
               <strong>{brandText}</strong>
-              <button type="button" onClick={() => setMobileMenuOpen(false)}>
+              <button ref={mobileCloseButtonRef} type="button" onClick={() => setMobileMenuOpen(false)}>
                 Close
               </button>
             </div>

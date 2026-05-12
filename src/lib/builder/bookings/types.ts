@@ -16,6 +16,7 @@ export type DayOfWeek = (typeof dayOfWeeks)[number];
 export type BookingStatus = 'pending' | 'confirmed' | 'cancelled' | 'completed' | 'no-show';
 export type BookingSource = 'web' | 'admin';
 export type BookingWaitlistStatus = 'active' | 'contacted' | 'promoted' | 'closed';
+export type HolidayCalendar = 'none' | 'kr' | 'tw' | 'kr-tw';
 export type BookingReminderType =
   | 'email-confirmation'
   | 'email-reminder-24h'
@@ -109,6 +110,8 @@ export interface StaffAvailability {
   weekly: Record<DayOfWeek, AvailabilityBlock[]>;
   blockedDates: BlockedDate[];
   timezone: string;
+  recurringTemplateId?: string;
+  holidayCalendar?: HolidayCalendar;
 }
 
 export interface Booking {
@@ -235,6 +238,8 @@ export const staffAvailabilitySchema = z.object({
     message: 'Blocked date start must be before end.',
   })).default([]),
   timezone: z.string().trim().min(1).max(80).default('Asia/Taipei'),
+  recurringTemplateId: z.string().trim().max(80).optional(),
+  holidayCalendar: z.enum(['none', 'kr', 'tw', 'kr-tw']).default('none'),
 });
 
 export const bookingCreateSchema = z.object({

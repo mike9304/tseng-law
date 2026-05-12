@@ -1026,3 +1026,25 @@ Created: 2026-05-09T12:52:13.760Z
 - W 판정:
   - W211은 `자동검증 통과 / 사용자 QA 대기`로 상향한다. “만석 또는 slot 없음 → 대기 등록 → admin promotion” 경로는 자동검증 통과했다.
   - W212 recurring availability template, W215 booking email templates는 M27 후속 slice로 유지한다.
+
+## M27 — Bookings 본격 3 recurring availability slice
+
+- 시작/종료: 2026-05-12 / 2026-05-12
+- 변경 파일:
+  - `src/lib/builder/bookings/availability-templates.ts` — 반복 가용성 템플릿(`Weekdays 10-18`, `Weekdays 09-18`, split lunch, weekend, clear)과 공휴일 캘린더 판정 helper를 추가했다.
+  - `src/lib/builder/bookings/types.ts`, `storage.ts` — `StaffAvailability`에 `recurringTemplateId`, `holidayCalendar`을 추가하고 기존 availability 저장과 seed 기본값을 backward-compatible하게 유지했다.
+  - `src/lib/builder/bookings/availability.ts` — public slot 계산에서 holiday calendar가 지정된 날짜는 recurring weekly block이 있어도 slot을 생성하지 않도록 했다.
+  - `src/components/builder/bookings/BookingAvailabilityAdmin.tsx` — staff availability UI에 recurring template 선택/적용 버튼과 holiday calendar 선택을 추가했다.
+  - `src/lib/builder/bookings/__tests__/availability-templates.test.ts`, `availability.test.ts` — 템플릿 적용, KR/TW/combined fixed holiday match, 공휴일 slot exclusion을 단위 검증한다.
+  - `tests/builder-editor/bookings-m27-recurring-availability.playwright.ts` — admin UI에서 템플릿 적용/저장 후 일반 평일은 slot이 열리고 공휴일 평일은 slot이 비는 것을 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/availability-templates.test.ts src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (7 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m27-recurring-availability.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run security:builder-routes` ✅
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run test:unit` ✅ (877 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W212는 `자동검증 통과 / 사용자 QA 대기`로 상향한다. 매주 월~금 템플릿 적용과 KR/TW 공휴일 slot exclusion은 자동검증 통과했다.
+  - W215 booking email templates는 M27 후속 slice로 유지한다.

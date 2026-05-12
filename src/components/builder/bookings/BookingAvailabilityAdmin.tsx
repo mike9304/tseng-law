@@ -3,6 +3,11 @@
 import { useState } from 'react';
 import type { Staff, StaffAvailability } from '@/lib/builder/bookings/types';
 import { dayOfWeeks, textForLocale } from '@/lib/builder/bookings/types';
+import {
+  applyRecurringAvailabilityTemplate,
+  recurringAvailabilityTemplates,
+  type RecurringAvailabilityTemplateId,
+} from '@/lib/builder/bookings/availability-templates';
 import type { Locale } from '@/lib/locales';
 import styles from './BookingsAdmin.module.css';
 
@@ -37,6 +42,9 @@ export default function BookingAvailabilityAdmin({
   initialAvailability: StaffAvailability;
 }) {
   const [availability, setAvailability] = useState(initialAvailability);
+  const [templateId, setTemplateId] = useState<RecurringAvailabilityTemplateId>(
+    (initialAvailability.recurringTemplateId as RecurringAvailabilityTemplateId | undefined) ?? 'weekdays-10-18',
+  );
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -80,8 +88,28 @@ export default function BookingAvailabilityAdmin({
         <div className={styles.toolbar}>
           <div>
             <h2 className={styles.cardTitle}>Working hours</h2>
-            <p className={styles.muted}>One time range per day for the MVP foundation.</p>
+            <p className={styles.muted}>Apply a recurring template, then fine-tune individual days like Wix Bookings.</p>
           </div>
+          <label className={styles.field} style={{ minWidth: 240 }}>
+            <span className={styles.label}>Recurring template</span>
+            <select
+              className={styles.select}
+              data-availability-template="true"
+              value={templateId}
+              onChange={(event) => setTemplateId(event.target.value as RecurringAvailabilityTemplateId)}
+            >
+              {recurringAvailabilityTemplates.map((template) => (
+                <option key={template.templateId} value={template.templateId}>{template.label}</option>
+              ))}
+            </select>
+          </label>
+          <button
+            className={styles.buttonSecondary}
+            type="button"
+            onClick={() => setAvailability(applyRecurringAvailabilityTemplate(availability, templateId))}
+          >
+            Apply template
+          </button>
           <label className={styles.field} style={{ minWidth: 180 }}>
             <span className={styles.label}>Timezone</span>
             <select
@@ -91,6 +119,22 @@ export default function BookingAvailabilityAdmin({
             >
               <option value="Asia/Taipei">Asia/Taipei</option>
               <option value="Asia/Seoul">Asia/Seoul</option>
+            </select>
+          </label>
+          <label className={styles.field} style={{ minWidth: 210 }}>
+            <span className={styles.label}>Holiday calendar</span>
+            <select
+              className={styles.select}
+              value={availability.holidayCalendar ?? 'none'}
+              onChange={(event) => setAvailability({
+                ...availability,
+                holidayCalendar: event.target.value as StaffAvailability['holidayCalendar'],
+              })}
+            >
+              <option value="none">No automatic holidays</option>
+              <option value="kr">Korea public holidays</option>
+              <option value="tw">Taiwan public holidays</option>
+              <option value="kr-tw">Korea + Taiwan public holidays</option>
             </select>
           </label>
         </div>

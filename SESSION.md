@@ -4516,3 +4516,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅
 - 체크포인트:
   - W211 자동검증 evidence 확보. W212 recurring availability, W215 booking email templates는 M27 후속으로 남긴다.
+
+## 2026-05-12 Codex /goal M27 recurring availability
+
+- Staff availability에 recurring template과 holiday calendar를 추가했다. 템플릿은 weekdays 10-18, weekdays 09-18, 점심 제외 split, weekend limited, clear all을 제공한다.
+- Availability admin에서 템플릿 선택 후 `Apply template`으로 weekly block을 일괄 적용하고, `Holiday calendar`에서 Korea/Taiwan/combined 공휴일 자동 제외를 선택할 수 있다.
+- Public availability 계산은 staff의 `holidayCalendar`를 확인해 KR/TW fixed public holiday 날짜에는 weekly block이 있어도 slot을 생성하지 않는다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/bookings/__tests__/availability-templates.test.ts src/lib/builder/bookings/__tests__/availability.test.ts` ✅ (7 passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m27-recurring-availability.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run security:builder-routes` ✅
+  - `npm run lint` ✅
+  - `npm run test:unit` ✅ (877 passed)
+  - `npm run build` ✅
+- 체크포인트:
+  - W212 자동검증 evidence 확보. W215 booking email templates는 M27 후속으로 남긴다.

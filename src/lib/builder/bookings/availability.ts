@@ -6,6 +6,7 @@ import {
   listStaff,
 } from '@/lib/builder/bookings/storage';
 import { dayOfWeeks, type DayOfWeek } from '@/lib/builder/bookings/types';
+import { isHolidayDate } from '@/lib/builder/bookings/availability-templates';
 
 export interface SlotRequest {
   serviceId: string;
@@ -64,6 +65,7 @@ async function computeSlotsForStaff(serviceId: string, staffId: string, date: st
 
   if (!service || !service.isActive || !staff || !staff.isActive) return [];
   if (service.staffIds.length > 0 && !service.staffIds.includes(staffId)) return [];
+  if (isHolidayDate(date, availability.holidayCalendar)) return [];
 
   const day = dayOfWeekForDate(date);
   const blocks = availability.weekly[day] || [];

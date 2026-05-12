@@ -251,6 +251,8 @@ async function ensureSeedData(): Promise<void> {
       weekly: weeklyDefaults(),
       blockedDates: [],
       timezone: 'Asia/Taipei',
+      recurringTemplateId: 'weekdays-09-18',
+      holidayCalendar: 'none',
     } satisfies StaffAvailability)),
   ]);
 }
@@ -322,6 +324,8 @@ export async function getStaffAvailability(staffId: string): Promise<StaffAvaila
     weekly: weeklyDefaults(),
     blockedDates: [],
     timezone: 'Asia/Taipei',
+    recurringTemplateId: 'weekdays-09-18',
+    holidayCalendar: 'none',
   };
 }
 

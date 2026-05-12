@@ -111,6 +111,19 @@ describe('booking availability slots', () => {
     expect(slots.map((slot) => slot.startAt)).toEqual([]);
   });
 
+  it('excludes automatic public holidays from recurring weekly slots', async () => {
+    fixtures.availability = {
+      ...fixtures.availability!,
+      holidayCalendar: 'kr',
+    };
+
+    const normalSlots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2026-10-08' });
+    const holidaySlots = await computeAvailableSlots({ serviceId: 'svc-test', staffId: 'staff-test', date: '2026-10-09' });
+
+    expect(normalSlots.length).toBeGreaterThan(0);
+    expect(holidaySlots).toEqual([]);
+  });
+
   it('fans out "any staff" requests across eligible active staff only', async () => {
     fixtures.service = { ...fixtures.service!, staffIds: [] };
     fixtures.staff = [

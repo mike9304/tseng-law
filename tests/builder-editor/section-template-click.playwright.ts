@@ -352,6 +352,133 @@ test.describe('/ko/admin-builder section design templates', () => {
     }
   });
 
+  test('stores page template documents with localized internal hrefs through the pages api', async ({ page }) => {
+    test.setTimeout(60_000);
+
+    const token = Date.now().toString(36);
+    const locales = ['zh-hant', 'en'] as const;
+
+    for (const locale of locales) {
+      const slug = `g-editor-link-normalize-${locale.replace(/[^a-z0-9]/gi, '-')}-${token}`;
+      let pageId: string | null = null;
+
+      await test.step(`normalizes template hrefs for ${locale}`, async () => {
+        try {
+          const createResponse = await page.request.post('/api/builder/site/pages', {
+            data: {
+              locale,
+              slug,
+              title: `Template link normalize ${locale}`,
+              document: {
+                version: 1,
+                locale: 'ko',
+                updatedAt: '2026-05-13T00:00:00.000Z',
+                updatedBy: 'playwright-template-link-normalize',
+                stageWidth: 1280,
+                stageHeight: 880,
+                nodes: [
+                  {
+                    id: 'button-ko-contact',
+                    kind: 'button',
+                    rect: { x: 100, y: 100, width: 180, height: 48 },
+                    zIndex: 0,
+                    content: {
+                      label: '상담 요청',
+                      href: '/ko/contact',
+                      style: 'primary',
+                      link: { href: '/ko?source=template', target: '_self' },
+                    },
+                  },
+                  {
+                    id: 'text-ko-services',
+                    kind: 'text',
+                    rect: { x: 100, y: 170, width: 360, height: 80 },
+                    zIndex: 1,
+                    content: {
+                      text: '서비스 보기',
+                      fontSize: 18,
+                      color: '#111827',
+                      fontWeight: 'regular',
+                      align: 'left',
+                      link: { href: '/ko/services?from=text', target: '_self' },
+                    },
+                  },
+                  {
+                    id: 'image-hotspot',
+                    kind: 'image',
+                    rect: { x: 100, y: 280, width: 320, height: 180 },
+                    zIndex: 2,
+                    content: {
+                      src: '/images/header-skyline-buildings.webp',
+                      alt: 'office',
+                      fit: 'cover',
+                      hotspots: [
+                        { x: 50, y: 50, label: '문의', href: '/ko/about' },
+                        { x: 65, y: 55, label: '외부', href: 'https://example.com/ko/about' },
+                        { x: 70, y: 60, label: '홈 앵커', href: '/ko#top' },
+                      ],
+                      link: { href: '#contact', target: '_self' },
+                    },
+                  },
+                ],
+              },
+            },
+            headers: mutationHeaders(slug),
+          });
+          expect(createResponse.status()).toBe(200);
+          const created = (await createResponse.json()) as { pageId?: string; success?: boolean; error?: string };
+          expect(created.success, created.error).toBe(true);
+          expect(created.pageId).toBeTruthy();
+          pageId = created.pageId!;
+
+          const draftResponse = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=${locale}`, {
+            headers: mutationHeaders(slug),
+          });
+          expect(draftResponse.status()).toBe(200);
+          const draftPayload = (await draftResponse.json()) as {
+            document?: {
+              locale?: string;
+              nodes?: Array<{ id?: string; content?: Record<string, unknown> }>;
+            };
+          };
+          expect(draftPayload.document?.locale).toBe(locale);
+
+          const nodes = draftPayload.document?.nodes ?? [];
+          const button = nodes.find((node) => node.id === 'button-ko-contact')?.content as
+            | { href?: string; link?: { href?: string } }
+            | undefined;
+          expect(button?.href).toBe(`/${locale}/contact`);
+          expect(button?.link?.href).toBe(`/${locale}?source=template`);
+
+          const text = nodes.find((node) => node.id === 'text-ko-services')?.content as
+            | { link?: { href?: string } }
+            | undefined;
+          expect(text?.link?.href).toBe(`/${locale}/services?from=text`);
+
+          const image = nodes.find((node) => node.id === 'image-hotspot')?.content as
+            | { hotspots?: Array<{ href?: string }>; link?: { href?: string } }
+            | undefined;
+          expect(image?.hotspots?.[0]?.href).toBe(`/${locale}/about`);
+          expect(image?.hotspots?.[1]?.href).toBe('https://example.com/ko/about');
+          expect(image?.hotspots?.[2]?.href).toBe(`/${locale}#top`);
+          expect(image?.link?.href).toBe('#contact');
+
+          const internalKoHrefs = collectHrefValues(draftPayload.document)
+            .filter((href) => href === '/ko' || href.startsWith('/ko/'));
+          expect(internalKoHrefs).toEqual([]);
+        } finally {
+          pageId ??= await findPageIdBySlug(page, slug, locale);
+          if (pageId) {
+            await page.request.delete(`/api/builder/site/pages/${pageId}?locale=${locale}`, {
+              headers: mutationHeaders(slug),
+              failOnStatusCode: false,
+            });
+          }
+        }
+      });
+    }
+  });
+
   test('keeps the page template creation prompt usable after a duplicate slug error', async ({ page }) => {
     test.setTimeout(90_000);
 

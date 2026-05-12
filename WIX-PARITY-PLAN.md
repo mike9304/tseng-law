@@ -72,3 +72,4 @@
 | M68 | QA     | Archive/image click blanking guard | W18,W84,W216 | 1h | M67 | 🟡 칼럼 아카이브/이미지 클릭 백지화 방어 자동검증 강화 / 사용자 QA 대기 |
 | M69 | QA     | Page template navigation wiring | W14,W18,W216 | 1h | M64 | 🟡 템플릿 생성 페이지 메뉴 연결/공개 헤더 도달 자동검증 통과 / 사용자 QA 대기 |
 | M70 | QA     | Locale template page creation guard | W14,W193,W216 | 1h | M69 | 🟡 zh-hant 템플릿 생성 메뉴 href/템플릿 링크 안전성 자동검증 통과 / 사용자 QA 대기 |
+| M71 | QA     | API template link normalization guard | W14,W193,W216 | 1h | M70 | 🟡 zh-hant/en synthetic 템플릿 내부 링크 저장 정규화 자동검증 통과 / 사용자 QA 대기 |

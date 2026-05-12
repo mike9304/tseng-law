@@ -5168,3 +5168,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (7 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - page rename/delete와 navigation cleanup/fallback, 또는 en locale template creation까지 같은 path를 확장 검증한다.
+
+## 2026-05-13 Codex /goal M71 API template link normalization guard
+
+- M70의 실제 카탈로그 template UI 검증은 `law-home`이 `#` 링크 중심이라 `/ko/contact` 같은 hard-coded public path 정규화까지 직접 증명하지 못했다. M71은 `/api/builder/site/pages` 생성 경로에 synthetic template document를 넣어 저장 단계의 normalization을 고정했다.
+- 테스트 문서는 button href `/ko/contact`, nested link `/ko?source=template`, text link `/ko/services?from=text`, image hotspots `/ko/about`, `/ko#top`, 외부 URL `https://example.com/ko/about`, anchor `#contact`를 포함한다.
+- `zh-hant`와 `en` 각각에 대해 생성 draft의 `document.locale`, button/text/hotspot href 정규화, 외부 URL/anchor 보존, 남은 internal `/ko` href 없음, finally cleanup delete를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "stores page template documents with localized internal hrefs through the pages api" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (8 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - page rename/delete navigation cleanup/fallback 흐름을 실제 editor/API 회귀로 고정한다.

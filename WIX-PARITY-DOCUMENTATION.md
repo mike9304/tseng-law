@@ -1765,3 +1765,15 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (7 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 비한국어 locale에서 템플릿으로 만든 페이지가 한국어 public path를 섞지 않고, 메뉴와 공개 헤더가 해당 locale 경로로 연결되는지 자동검증으로 고정했다.
+
+## M71 — API template link normalization guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/section-template-click.playwright.ts` — `/api/builder/site/pages`에 synthetic template document를 POST해 `zh-hant`와 `en` draft 저장 단계에서 내부 `/ko` href가 대상 locale로 정규화되는지 확인한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "stores page template documents with localized internal hrefs through the pages api" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (8 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. UI 카탈로그 template에 없는 `/ko/contact`, `/ko?query`, `/ko#anchor`, nested hotspot href까지 API 생성/저장 경로에서 locale-safe하게 정규화됨을 자동검증으로 고정했다.

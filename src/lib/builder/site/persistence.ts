@@ -12,7 +12,7 @@
 import { get, put } from '@vercel/blob';
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-import type { Locale } from '@/lib/locales';
+import { defaultLocale, type Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import {
   type BuilderSiteDocument,
@@ -449,9 +449,45 @@ export async function deletePage(siteId: string, pageId: string, locale: Locale)
   await writeSiteDocument(site, { preserveMissingPages: false });
 }
 
+function pageLocaleProjectionKey(page: BuilderPageMeta): string {
+  return page.isHomePage || page.slug === '' ? '__home__' : page.slug;
+}
+
+function hasLocaleEquivalentPage(
+  pages: BuilderPageMeta[],
+  sourcePage: BuilderPageMeta,
+  locale: Locale,
+): boolean {
+  const linkedPageId = sourcePage.linkedPageIds?.[locale];
+  if (linkedPageId && pages.some((page) => page.pageId === linkedPageId && page.locale === locale)) {
+    return true;
+  }
+  const sourceKey = pageLocaleProjectionKey(sourcePage);
+  return pages.some((page) => (
+    page.locale === locale && pageLocaleProjectionKey(page) === sourceKey
+  ));
+}
+
+export function canProjectPageToLocale(
+  page: BuilderPageMeta,
+  pages: BuilderPageMeta[],
+  locale: Locale,
+): boolean {
+  if (page.locale === locale) return true;
+  if (locale === defaultLocale || page.locale !== defaultLocale) return false;
+  return !hasLocaleEquivalentPage(pages, page, locale);
+}
+
+export function projectPagesForLocale(
+  pages: BuilderPageMeta[],
+  locale: Locale,
+): BuilderPageMeta[] {
+  return pages.filter((page) => canProjectPageToLocale(page, pages, locale));
+}
+
 export async function listPages(siteId: string, locale: Locale): Promise<BuilderPageMeta[]> {
   const site = await readSiteDocument(siteId, locale);
-  return site.pages;
+  return projectPagesForLocale(site.pages, locale);
 }
 
 function normalizeSiteDocumentLifecycle(

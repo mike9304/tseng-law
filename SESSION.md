@@ -4853,3 +4853,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts 최적화 warning + 기존 `<img>` warning만)
 - 다음 후보:
   - 사용자가 보고한 `/ko/admin-builder`에서 한국어 편집기인데 중국어 사이트가 뜨는 locale/content mismatch를 다음 self-goal로 우선 재현한다.
+
+## 2026-05-13 Codex /goal M45 Locale page projection guard
+
+- 사용자가 보고한 “편집기는 한국어인데 중국어 사이트가 뜸” 문제를 pageId/locale projection 경계에서 막았다.
+- `listPages`와 `/ko/admin-builder` 초기 page 선택은 현재 locale에 투영 가능한 page만 보게 했다. 기본 KO route는 KO page만 열고, non-default locale은 해당 locale 전용 page가 없을 때만 KO source page를 fallback projection으로 본다.
+- Draft GET/PUT API는 요청 locale과 page locale이 맞지 않는 전용 pageId를 409 `locale_mismatch`로 거부한다. 따라서 `/ko/admin-builder?pageId=<zh-hant pageId>`가 더 이상 중국어 draft를 한국어 editor canvas로 열지 않는다.
+- Playwright는 zh-hant page를 실제 생성하고, KO page 목록 제외, zh-hant 목록 포함, KO draft 409, KO editor fallback home 렌더를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 사용자가 보고한 “섹션 디자인 템플릿 클릭/뒤로가기 UX”와 “주요업무 템플릿 수 부족”을 이어서 다룬다.

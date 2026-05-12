@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
 import SandboxPage from '@/components/builder/canvas/SandboxPage';
-import { readSiteDocument, readPageCanvas, writePageCanvas, publishPage, writeSiteDocument } from '@/lib/builder/site/persistence';
+import {
+  projectPagesForLocale,
+  readSiteDocument,
+  readPageCanvas,
+  writePageCanvas,
+  publishPage,
+  writeSiteDocument,
+} from '@/lib/builder/site/persistence';
 import { readCanvasSandboxDraft } from '@/lib/builder/canvas/persistence';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
@@ -480,9 +487,10 @@ export default async function BuilderMainPage({
       // Best-effort header parity upgrade; the in-memory editor still receives the nav items.
     }
   }
-  const homePage = site.pages.find((p) => p.isHomePage) || site.pages[0];
+  const visiblePages = projectPagesForLocale(site.pages, locale);
+  const homePage = visiblePages.find((p) => p.isHomePage) || visiblePages[0];
   const requestedPage = searchParams?.pageId
-    ? site.pages.find((page) => page.pageId === searchParams.pageId)
+    ? visiblePages.find((page) => page.pageId === searchParams.pageId)
     : null;
   const initialPage = requestedPage ?? homePage;
   const canPersistInitialPageDraft = Boolean(initialPage && initialPage.locale === locale);
@@ -584,7 +592,7 @@ export default async function BuilderMainPage({
       siteTheme={site.theme}
       navItems={site.navigation || []}
       currentSlug={initialPage?.slug || ''}
-      sitePages={site.pages}
+      sitePages={visiblePages}
       siteLightboxes={site.lightboxes ?? []}
     />
   );

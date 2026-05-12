@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
+  canProjectPageToLocale,
+  readSiteDocument,
   readPageCanvasRecordState,
   updatePageCanvasRecord,
 } from '@/lib/builder/site/persistence';
@@ -29,6 +31,25 @@ class DraftWriteError extends Error {
   }
 }
 
+async function localeMismatchResponse(
+  pageId: string,
+  locale: ReturnType<typeof normalizeLocale>,
+): Promise<NextResponse | null> {
+  const site = await readSiteDocument('default', locale);
+  const page = site.pages.find((candidate) => candidate.pageId === pageId);
+  if (!page || canProjectPageToLocale(page, site.pages, locale)) return null;
+  return NextResponse.json(
+    {
+      ok: false,
+      error: 'locale_mismatch',
+      message: `Page ${pageId} belongs to ${page.locale}, not ${locale}.`,
+      pageLocale: page.locale,
+      requestedLocale: locale,
+    },
+    { status: 409 },
+  );
+}
+
 export async function GET(
   request: NextRequest,
   { params }: { params: { pageId: string } },
@@ -43,6 +64,8 @@ export async function GET(
   }
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const mismatch = await localeMismatchResponse(params.pageId, locale);
+  if (mismatch) return mismatch;
   const document = repairHomeCanvasLocale(
     normalizeCanvasDocument(state.record.document, locale),
     locale,
@@ -70,6 +93,8 @@ export async function PUT(
   }
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const mismatch = await localeMismatchResponse(params.pageId, locale);
+  if (mismatch) return mismatch;
   const expectedRevision =
     typeof body.expectedRevision === 'number' && Number.isInteger(body.expectedRevision)
       ? body.expectedRevision

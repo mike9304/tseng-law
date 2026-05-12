@@ -1405,3 +1405,17 @@ Created: 2026-05-09T12:52:13.760Z
   - 참고: `admin-builder.playwright.ts -g "covers Wix-like editor chrome"` smoke도 실행했지만, M44 서비스 assertion 이전의 기존 layout/hero quick-edit assertion에서 먼저 막혀 M44 gate로 쓰지 않았다.
 - W 판정:
   - W18/W84는 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 보고한 “주요업무/주요 서비스 노드 선택 후 다른 노드를 누르면 글이 사라짐” 회귀에 대해 editor 전용 persistence evidence를 확보했다.
+
+## M45 — Locale page projection guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/site/persistence.ts` — site page 목록을 locale별로 projection하는 `projectPagesForLocale`/`canProjectPageToLocale` helper를 추가했다. KO/default route는 KO page만 보여주고, zh-hant/en route는 locale-specific page가 없는 경우에만 KO source page를 fallback으로 받는다.
+  - `src/app/(builder)/[locale]/admin-builder/page.tsx` — editor initial page, requested `pageId`, page switcher 목록을 locale-visible page 집합에서만 고르게 했다.
+  - `src/app/api/builder/site/pages/[pageId]/draft/route.ts` — draft GET/PUT 전에 page locale mismatch를 검사해 전용 zh-hant page를 KO locale로 읽거나 저장하려는 요청을 409 `locale_mismatch`로 거부한다.
+  - `tests/builder-editor/locale-projection.playwright.ts` — zh-hant 전용 page를 생성하고 KO 목록 제외, zh-hant 목록 포함, KO draft 409, KO editor fallback home 렌더를 실제 API/UI 흐름으로 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W193은 `자동검증 통과 / 사용자 QA 대기` 유지. Pages와 hreflang/linking 작업 이후 남아 있던 locale pageId cross-open 위험을 editor route와 draft API 양쪽에서 닫았다.

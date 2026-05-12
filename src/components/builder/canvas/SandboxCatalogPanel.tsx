@@ -1692,7 +1692,13 @@ function socialWidgetMatchesSearch(preset: SocialWidgetPreset, query: string): b
   ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
 }
 
-export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
+export default function SandboxCatalogPanel({
+  locale,
+  onOpenPageTemplates,
+}: {
+  locale?: Locale;
+  onOpenPageTemplates?: () => void;
+}) {
   const { document, addNode, addNodes, setSelectedNodeId, setDraftSaveState } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
@@ -2061,6 +2067,16 @@ export default function SandboxCatalogPanel({ locale }: { locale?: Locale }) {
         <p className={styles.panelCopy}>
           registry 컴포넌트를 카테고리별로 묶었습니다. drag 로 캔버스에 추가하거나 quick-add 로 중앙에 바로 생성합니다.
         </p>
+        {onOpenPageTemplates ? (
+          <button
+            type="button"
+            className={styles.actionButton}
+            data-builder-open-page-template-market="true"
+            onClick={onOpenPageTemplates}
+          >
+            전체 페이지 템플릿 261개 보기
+          </button>
+        ) : null}
 
         <label className={styles.catalogSearchLabel}>
           <span>Search elements</span>

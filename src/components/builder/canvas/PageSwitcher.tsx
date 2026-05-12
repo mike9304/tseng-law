@@ -327,6 +327,7 @@ export default function PageSwitcher({
   activePageId,
   clipboardCount = 0,
   columnPostsSummary,
+  templateGalleryRequestId,
   onSelectPage,
   onPagesChange,
   onToast,
@@ -335,6 +336,7 @@ export default function PageSwitcher({
   activePageId: string | null;
   clipboardCount?: number;
   columnPostsSummary?: ColumnQuickSummary;
+  templateGalleryRequestId?: number;
   onSelectPage: (pageId: string, nextSlug?: string) => void;
   onPagesChange?: (pages: PageMeta[]) => void;
   onToast?: (message: string, tone: 'success' | 'error') => void;
@@ -386,6 +388,11 @@ export default function PageSwitcher({
     if (!editingPageId) return;
     window.setTimeout(() => titleInputRef.current?.focus(), 0);
   }, [editingPageId]);
+
+  useEffect(() => {
+    if (!templateGalleryRequestId) return;
+    setShowGallery(true);
+  }, [templateGalleryRequestId]);
 
   useEffect(() => {
     if (!openMenuPageId) return;

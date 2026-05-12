@@ -83,4 +83,18 @@ test.describe('/ko/admin-builder section design templates', () => {
     await page.locator('[data-node-id="home-hero-title"]').first().click({ position: { x: 12, y: 12 } });
     await expect(deliverablesBody).toBeVisible();
   });
+
+  test('opens the full page template showroom from the Add panel', async ({ page }) => {
+    await openBuilder(page, `/ko/admin-builder?pageTemplateMarket=${Date.now().toString(36)}`);
+    await page.keyboard.press('Escape');
+
+    const catalogDrawer = await openCatalogDrawer(page);
+    await catalogDrawer.locator('[data-builder-open-page-template-market="true"]').click();
+
+    const gallery = page.getByRole('dialog', { name: '프리미엄 템플릿 쇼룸' });
+    await expect(gallery).toBeVisible();
+    await expect(gallery.getByText('261개 템플릿')).toBeVisible();
+    await gallery.getByRole('button', { name: 'Close' }).click();
+    await expect(gallery).toBeHidden();
+  });
 });

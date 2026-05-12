@@ -1464,3 +1464,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 말한 “직접 디자인하지 않고 이미 템플릿 있는 전문 사이트처럼 가져다 쓰는” 흐름을 Add 패널의 template market 검색/필터 UX로 보강했다.
+
+## M49 — Add panel page template showroom entry
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — Add 패널 상단에 `전체 페이지 템플릿 261개 보기` CTA를 추가했다.
+  - `src/components/builder/canvas/SandboxEditorRail.tsx` — Add 패널 CTA가 Pages drawer로 전환하면서 page template gallery open request를 전달하게 했다.
+  - `src/components/builder/canvas/PageSwitcher.tsx` — 외부 request id를 받아 기존 `TemplateGalleryModal`을 열 수 있게 했다. 기존 Pages `+ New` 흐름은 유지된다.
+  - `tests/builder-editor/section-template-click.playwright.ts` — Add 패널에서 page template showroom을 열고 `261개 템플릿` 표시와 닫기까지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 261개 page template gallery가 Pages 내부에 숨어 있던 문제를 Add 패널의 template market 진입점으로 보강했다.

@@ -4903,3 +4903,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - 실제 템플릿 카탈로그를 더 대량화하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M49 Add panel page template showroom entry
+
+- 기존 261개 페이지 템플릿 쇼룸이 Pages `+ New` 안쪽에만 있어 Add 패널 사용자가 발견하기 어려운 문제를 보강했다.
+- Add 패널 상단에 `전체 페이지 템플릿 261개 보기` CTA를 추가했다. 클릭하면 Pages drawer로 전환하고 기존 `TemplateGalleryModal`을 즉시 연다.
+- `PageSwitcher`는 외부 request id로 template gallery를 열 수 있게 했고, 기존 Pages `+ New` 흐름은 그대로 유지했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - 페이지 템플릿/섹션 템플릿을 같은 검색 경험으로 더 통합하거나, W216~W225 editor 고도화 잔여 UX를 계속 재스캔한다.

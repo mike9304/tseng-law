@@ -93,6 +93,13 @@ export default function SandboxEditorRail({
   onToast,
 }: SandboxEditorRailProps) {
   const [focusedSectionTemplateId, setFocusedSectionTemplateId] = useState<HomeSectionTemplateId | null>(null);
+  const [pageTemplateGalleryRequestId, setPageTemplateGalleryRequestId] = useState(0);
+  const openPageTemplateGallery = () => {
+    setPageTemplateGalleryRequestId((current) => current + 1);
+    if (activeDrawer !== 'pages') {
+      onToggleDrawer('pages');
+    }
+  };
   const availableSectionTemplates = useMemo(() => {
     const nodeIds = new Set(document?.nodes.map((node) => node.id) ?? []);
     return HOME_SECTION_TEMPLATE_TARGETS.filter((target) => nodeIds.has(target.nodeId));
@@ -214,6 +221,7 @@ export default function SandboxEditorRail({
               activePageId={activePageId}
               clipboardCount={clipboardCount}
               columnPostsSummary={columnPostsSummary}
+              templateGalleryRequestId={pageTemplateGalleryRequestId}
               onSelectPage={onSelectPage}
               onPagesChange={onPagesChange}
               onToast={onToast}
@@ -223,7 +231,10 @@ export default function SandboxEditorRail({
 
         {activeDrawer === 'add' ? (
           <div className={styles.drawerBody}>
-            <SandboxCatalogPanel locale={locale} />
+            <SandboxCatalogPanel
+              locale={locale}
+              onOpenPageTemplates={openPageTemplateGallery}
+            />
             <ComponentLibraryPanel />
           </div>
         ) : null}

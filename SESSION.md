@@ -5313,3 +5313,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - PreviewModal 또는 PageSwitcher slug prompt 같은 남은 custom dialog keyboard/focus gap을 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M82 Preview modal focus trap
+
+- `PreviewModal`은 full-screen iframe dialog인데 Escape/reload shortcut만 처리하고 focus trap/restore가 없었다.
+- preview dialog에 initial focus, Tab/Shift+Tab wrap, 외부 focus probe 차단, body scroll lock, Escape close 후 Preview trigger focus 복귀를 추가했다.
+- `Cmd/Ctrl+R` reload shortcut은 modal capture listener에서 prevent/stop 처리해 browser reload나 canvas shortcuts로 새지 않도록 했다.
+- Playwright는 Preview trigger를 keyboard Enter로 열고 desktop button initial focus, close button wrap, 외부 focus 차단, reload shortcut 후 dialog 유지, Escape close와 trigger focus 복귀를 검증한다.
+- 기존 `mobile-runtime.playwright.ts`도 돌려 mobile preview iframe src/device 전환/long press 흐름이 유지되는지 확인했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/preview-modal-focus.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-runtime.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - PageSwitcher slug prompt 같은 남은 custom dialog를 ModalShell 수준 keyboard/focus로 끌어올린다.

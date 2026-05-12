@@ -1917,3 +1917,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행; 최초 1회 ECONNRESET 후 서버 생존 확인 및 재실행 통과)
 - W 판정:
   - W22/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 이미지 교체/업로드 dialog에서 focus가 editor canvas로 새거나 Escape가 하위 shortcut으로 먹히는 경로를 닫았다.
+
+## M82 — Preview modal focus trap
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/PreviewModal.tsx` — full-screen preview dialog에 initial focus, Tab/Shift+Tab 순환, 외부 focus 재진입 차단, body scroll lock, 닫힐 때 Preview trigger focus 복귀를 추가했다. `Cmd/Ctrl+R` reload shortcut은 modal 안에서만 처리되도록 capture 단계에서 전파를 막는다.
+  - `tests/builder-editor/preview-modal-focus.playwright.ts` — Preview 버튼을 키보드로 열고 desktop initial focus, close button wrap, 외부 focus probe 차단, `ControlOrMeta+R` reload 유지, Escape close와 trigger focus 복귀를 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/preview-modal-focus.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-runtime.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W40/W45/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. preview iframe/device switcher dialog에서 focus가 editor로 새거나 reload/Escape shortcuts가 canvas로 전파되는 경로를 닫았다.

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 type DeviceMode = 'desktop' | 'tablet' | 'mobile';
 
@@ -54,6 +54,16 @@ const ICONS: Record<DeviceMode, string> = {
   mobile: '▯',
 };
 
+const FOCUSABLE_SELECTOR = [
+  'a[href]:not([tabindex="-1"])',
+  'button:not([disabled]):not([tabindex="-1"])',
+  'input:not([disabled]):not([tabindex="-1"]):not([type="hidden"])',
+  'select:not([disabled]):not([tabindex="-1"])',
+  'textarea:not([disabled]):not([tabindex="-1"])',
+  '[tabindex]:not([tabindex="-1"])',
+  '[contenteditable="true"]:not([tabindex="-1"])',
+].join(',');
+
 export default function PreviewModal({
   open,
   onClose,
@@ -65,6 +75,9 @@ export default function PreviewModal({
   previewUrl: string | null;
   initialDevice?: DeviceMode;
 }) {
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+  const restoreFocusRef = useRef<HTMLElement | null>(null);
+  const closingRef = useRef(false);
   const [device, setDevice] = useState<DeviceMode>(initialDevice);
   const [reloadKey, setReloadKey] = useState(0);
 
@@ -76,15 +89,94 @@ export default function PreviewModal({
   useEffect(() => {
     if (!open) return;
     function onKey(event: KeyboardEvent) {
-      if (event.key === 'Escape') onClose();
-      else if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'r') {
+      if (event.key === 'Escape') {
         event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        onClose();
+        return;
+      }
+
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'r') {
+        event.preventDefault();
+        event.stopPropagation();
         setReloadKey((prev) => prev + 1);
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+      const dialog = dialogRef.current;
+      if (!dialog) return;
+      const focusables = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
+        .filter((node) => !node.hasAttribute('disabled') && node.tabIndex !== -1);
+      if (focusables.length === 0) {
+        event.preventDefault();
+        dialog.focus({ preventScroll: true });
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (event.shiftKey) {
+        if (active === first || active === dialog) {
+          event.preventDefault();
+          last.focus({ preventScroll: true });
+        }
+        return;
+      }
+      if (active === last) {
+        event.preventDefault();
+        first.focus({ preventScroll: true });
       }
     }
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    window.addEventListener('keydown', onKey, true);
+    return () => window.removeEventListener('keydown', onKey, true);
   }, [open, onClose]);
+
+  useLayoutEffect(() => {
+    if (!open) return undefined;
+    closingRef.current = false;
+    restoreFocusRef.current = (document.activeElement as HTMLElement | null) ?? null;
+    const dialog = dialogRef.current;
+    if (dialog) {
+      const focusables = dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      (focusables[0] ?? dialog).focus({ preventScroll: true });
+    }
+    return () => {
+      closingRef.current = true;
+      const previous = restoreFocusRef.current;
+      if (!previous || typeof previous.focus !== 'function') return;
+      try {
+        previous.focus({ preventScroll: true });
+      } catch {
+        // Ignore detached focus targets.
+      }
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    function handleFocusIn(event: FocusEvent) {
+      if (closingRef.current) return;
+      const dialog = dialogRef.current;
+      if (!dialog || !event.target || dialog.contains(event.target as Node)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const focusables = dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+      (focusables[0] ?? dialog).focus({ preventScroll: true });
+    }
+    document.addEventListener('focusin', handleFocusIn);
+    return () => document.removeEventListener('focusin', handleFocusIn);
+  }, [open]);
 
   const spec = DEVICES[device];
 
@@ -108,9 +200,12 @@ export default function PreviewModal({
 
   return (
     <div
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
       aria-label="페이지 미리보기"
+      tabIndex={-1}
+      data-builder-preview-dialog="true"
       style={{
         position: 'fixed',
         inset: 0,

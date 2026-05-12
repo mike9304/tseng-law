@@ -83,3 +83,4 @@
 | M79 | QA     | Shortcut modal focus trap | W216,W219,W225 | 1h | M78 | 🟡 shortcut map Tab 순환/외부 focus 차단/trigger focus 복귀 자동검증 통과 / 사용자 QA 대기 |
 | M80 | QA     | Image edit dialog focus trap | W22,W23,W216,W225 | 1h | M79 | 🟡 이미지 편집 dialog focus trap/Escape/canvas shortcut 격리 자동검증 통과 / 사용자 QA 대기 |
 | M81 | QA     | Asset library focus trap | W22,W216,W225 | 1h | M80 | 🟡 에셋 라이브러리 focus trap/Escape/canvas focus 누수 방지 자동검증 통과 / 사용자 QA 대기 |
+| M82 | QA     | Preview modal focus trap | W40,W45,W216,W225 | 1h | M81 | 🟡 미리보기 modal focus trap/reload shortcut/Escape 복귀 자동검증 통과 / 사용자 QA 대기 |

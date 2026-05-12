@@ -1709,3 +1709,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W216/W219는 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 단축키를 바꾸면 저장/동작뿐 아니라 editor 곳곳의 표시 라벨까지 같은 값으로 갱신된다.
+
+## M67 — Layer focus real pointer actions
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxLayersPanel.tsx` — 레이어 row 선택 시 `builder:focus-canvas-node` 이벤트를 발행한다. 다중 선택 토글도 같은 노드 focus 요청을 보낸다.
+  - `src/components/builder/canvas/CanvasContainer.tsx` — focus 이벤트를 받아 선택 노드 rect가 viewport 안으로 들어오도록 horizontal pan을 보정한다.
+  - `tests/builder-editor/layer-focus-context-menu.playwright.ts` — 레이어에서 선택한 노드가 실제 `elementFromPoint()` hit target이 되는지 확인하고, 실제 mouse right-click으로 context menu가 열리는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 레이어 선택 후 선택 노드가 화면 밖에 남아 실제 클릭/우클릭이 먹지 않던 체감 회귀를 막았다.

@@ -509,6 +509,40 @@ export default function CanvasContainer({
     };
   }, [stageHeight, stageWidth, zoomState]);
 
+  const focusCanvasNodeInViewport = useCallback((nodeId: string) => {
+    const nodeRect = absoluteRectById.get(nodeId)
+      ?? (nodesById.get(nodeId) ? resolveViewportRect(nodesById.get(nodeId)!, geometryViewport) : null);
+    const viewportRect = viewportRef.current?.getBoundingClientRect();
+    if (!nodeRect || !viewportRect) return;
+
+    setZoomState((currentState) => {
+      const scaledStageWidth = stageWidth * currentState.zoom;
+      const centeredPanX = Math.round(
+        (viewportRect.width - nodeRect.width * currentState.zoom) / 2
+        - nodeRect.x * currentState.zoom,
+      );
+      const minPanX = Math.min(0, Math.round(viewportRect.width - scaledStageWidth));
+      const maxPanX = scaledStageWidth <= viewportRect.width
+        ? Math.round((viewportRect.width - scaledStageWidth) / 2)
+        : 0;
+      const nextPanX = Math.max(minPanX, Math.min(maxPanX, centeredPanX));
+      if (nextPanX === currentState.panX) return currentState;
+      return { ...currentState, panX: nextPanX };
+    });
+
+  }, [absoluteRectById, geometryViewport, nodesById, setZoomState, stageWidth]);
+
+  useEffect(() => {
+    function handleFocusCanvasNode(event: Event) {
+      const nodeId = (event as CustomEvent<{ nodeId?: unknown }>).detail?.nodeId;
+      if (typeof nodeId !== 'string' || !nodeId) return;
+      focusCanvasNodeInViewport(nodeId);
+    }
+
+    document.addEventListener('builder:focus-canvas-node', handleFocusCanvasNode);
+    return () => document.removeEventListener('builder:focus-canvas-node', handleFocusCanvasNode);
+  }, [focusCanvasNodeInViewport]);
+
   const createReferenceGuide = useCallback((axis: ReferenceGuide['axis'], position: number) => {
     const boundedPosition = axis === 'vertical'
       ? Math.max(0, Math.min(stageWidth, position))

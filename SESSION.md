@@ -5117,3 +5117,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - 실제 우클릭/노드 클릭/템플릿 전환 체감 회귀와 W216~W225 editor 고도화를 계속 재스캔한다.
+
+## 2026-05-13 Codex /goal M67 Layer focus real pointer actions
+
+- M66 검증 중 레이어 패널에서 선택한 노드가 실제 화면 x=8000px대에 남아, DOM 선택은 됐지만 실제 브라우저 포인터 우클릭은 메뉴를 못 여는 회귀 후보를 재현했다.
+- `SandboxLayersPanel`은 레이어 row 선택 시 `builder:focus-canvas-node` 이벤트를 보내고, `CanvasContainer`는 선택 노드 rect를 기준으로 horizontal pan을 조정해 선택 노드가 viewport 안에 들어오게 했다.
+- 별도 Playwright는 `elementFromPoint()`가 선택된 `home-hero-title`을 실제로 가리키는지 확인한 뒤, synthetic dispatch 없이 `page.mouse.click(..., { button: 'right' })`로 컨텍스트 메뉴를 연다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 다음 후보:
+  - 템플릿 적용 뒤 노드 전환/칼럼/이미지 클릭 백지화 회귀와 W216~W225 editor 고도화를 계속 재스캔한다.

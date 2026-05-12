@@ -71,6 +71,13 @@ function escapeSelectorValue(value: string): string {
   return value.replace(/["\\]/g, '\\$&');
 }
 
+function requestCanvasNodeFocus(nodeId: string) {
+  if (typeof document === 'undefined') return;
+  document.dispatchEvent(new CustomEvent('builder:focus-canvas-node', {
+    detail: { nodeId },
+  }));
+}
+
 function isNodeAncestor(
   ancestorId: string,
   nodeId: string,
@@ -338,9 +345,11 @@ export default function SandboxLayersPanel() {
     (nodeId: string, event: MouseEvent | KeyboardEvent) => {
       if (event.metaKey || event.ctrlKey || event.shiftKey) {
         toggleNodeSelection(nodeId);
+        requestCanvasNodeFocus(nodeId);
         return;
       }
       setSelectedNodeId(nodeId);
+      requestCanvasNodeFocus(nodeId);
     },
     [setSelectedNodeId, toggleNodeSelection],
   );

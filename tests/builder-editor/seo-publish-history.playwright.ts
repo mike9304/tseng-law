@@ -630,6 +630,72 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
     }
   });
 
+  test('covers W195 publish dialog draft-vs-published diff summary', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = `w195-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    const slug = `publish-diff-${token}`;
+    const pageTitle = `W195 Publish Diff ${token}`;
+    const originalTitle = `W195 original published ${token}`;
+    const changedTitle = `W195 changed draft ${token}`;
+    let pageId: string | null = null;
+
+    try {
+      const createResponse = await page.request.post('/api/builder/site/pages', {
+        headers,
+        data: {
+          locale: 'ko',
+          slug,
+          title: pageTitle,
+          document: makeDocument({ token, titleText: originalTitle }),
+        },
+      });
+      expect(createResponse.status()).toBe(200);
+      const created = (await createResponse.json()) as { success?: boolean; pageId?: string; error?: string };
+      expect(created.success, created.error).toBe(true);
+      pageId = created.pageId ?? null;
+      expect(pageId).toBeTruthy();
+
+      let revision = await currentDraftRevision(page.request, pageId!, token);
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers,
+        data: { expectedDraftRevision: revision },
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      revision = await currentDraftRevision(page.request, pageId!, token);
+      await putDraft(
+        page.request,
+        pageId!,
+        revision,
+        makeDocument({ token, titleText: changedTitle }),
+        token,
+      );
+
+      await openBuilderPageFromPagesPanel(page, pageTitle, pageId!);
+      await expect(page.locator(`[data-node-id="title-${token}"]`).first()).toContainText(changedTitle);
+
+      await page.getByTitle('사이트 발행').click();
+      const publishDialog = page.getByRole('dialog', { name: 'Publish Page' });
+      await expect(publishDialog).toBeVisible();
+      await expect(publishDialog.getByText('Draft vs published')).toBeVisible();
+      await expect(publishDialog.getByText('+0 / -0 / ~1', { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText('~ 변경됨 1', { exact: true })).toBeVisible();
+      await expect(publishDialog.getByText(new RegExp(`title-${token}`))).toBeVisible();
+      await expect(
+        publishDialog.getByText(new RegExp(`W195 original published .*${escapeRegex(changedTitle)}`)),
+      ).toBeVisible();
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('covers W26-W28 through actual editor UI clicks', async ({ page }) => {
     test.setTimeout(120_000);
 

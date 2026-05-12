@@ -2,8 +2,17 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import {
+  computeDocumentDiff,
+  formatDocumentDiffSummary,
+  summarizeDiffNode,
+  summarizeDocumentDiff,
+  type DocumentDiff,
+  type DocumentDiffSummary,
+} from '@/lib/builder/canvas/document-diff';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
+import type { BuilderPageMeta } from '@/lib/builder/site/types';
 import type {
   CheckResult,
   PublishCheckSuite,
@@ -51,6 +60,19 @@ interface ScheduledPublishJob {
   status: 'scheduled' | 'publishing' | 'published' | 'failed' | 'cancelled';
   expectedDraftRevision?: number;
 }
+
+type PublishDiffState =
+  | { status: 'idle' | 'loading' }
+  | { status: 'missing'; message: string }
+  | { status: 'error'; message: string }
+  | {
+      status: 'ready';
+      diff: DocumentDiff;
+      summary: DocumentDiffSummary;
+      publishedRevision?: number;
+      publishedRevisionId: string;
+      publishedSavedAt?: string;
+    };
 
 function blockerSuite(blockers: CheckResult[]): PublishCheckSuite {
   return {
@@ -249,6 +271,51 @@ const schedulePanelStyle: React.CSSProperties = {
   gap: 8,
 };
 
+const publishDiffPanelStyle: React.CSSProperties = {
+  marginTop: 16,
+  padding: 12,
+  borderRadius: 10,
+  border: '1px solid #c7d2fe',
+  background: '#f8fafc',
+  display: 'grid',
+  gap: 10,
+};
+
+const publishDiffStatRowStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  flexWrap: 'wrap',
+  gap: 8,
+};
+
+const publishDiffStatStyle = (color: string): React.CSSProperties => ({
+  padding: '4px 8px',
+  borderRadius: 999,
+  background: '#fff',
+  border: '1px solid #e2e8f0',
+  color,
+  fontSize: '0.72rem',
+  fontWeight: 850,
+});
+
+const publishDiffListStyle: React.CSSProperties = {
+  listStyle: 'none',
+  margin: 0,
+  padding: 0,
+  display: 'grid',
+  gap: 4,
+};
+
+const publishDiffItemStyle: React.CSSProperties = {
+  padding: '6px 8px',
+  borderRadius: 7,
+  background: '#fff',
+  border: '1px solid #e2e8f0',
+  color: '#334155',
+  fontSize: '0.74rem',
+  lineHeight: 1.35,
+};
+
 const scheduleRowStyle: React.CSSProperties = {
   display: 'flex',
   gap: 8,
@@ -420,6 +487,7 @@ export default function PublishModal({
   const [scheduledAtInput, setScheduledAtInput] = useState(defaultScheduleInput);
   const [scheduledJob, setScheduledJob] = useState<ScheduledPublishJob | null>(null);
   const [schedulePending, setSchedulePending] = useState(false);
+  const [publishDiff, setPublishDiff] = useState<PublishDiffState>({ status: 'idle' });
 
   const runChecks = useCallback(async () => {
     if (!document) return;
@@ -482,6 +550,61 @@ export default function PublishModal({
     setPublishState('ready');
   }, [document, activePageId, locale]);
 
+  const loadPublishDiff = useCallback(async () => {
+    if (!document || !activePageId) {
+      setPublishDiff({ status: 'idle' });
+      return;
+    }
+
+    setPublishDiff({ status: 'loading' });
+    try {
+      const pagesResponse = await fetch(
+        `/api/builder/site/pages?locale=${encodeURIComponent(locale)}`,
+        { credentials: 'same-origin' },
+      );
+      if (!pagesResponse.ok) {
+        setPublishDiff({ status: 'error', message: 'published 기준 정보를 불러오지 못했습니다.' });
+        return;
+      }
+      const pagesPayload = (await pagesResponse.json()) as { pages?: BuilderPageMeta[] };
+      const pageMeta = (pagesPayload.pages ?? []).find((page) => page.pageId === activePageId);
+      const revisionId = pageMeta?.publishedRevisionId;
+      if (!revisionId) {
+        setPublishDiff({
+          status: 'missing',
+          message: '아직 published baseline이 없습니다. 이번 발행이 첫 published snapshot이 됩니다.',
+        });
+        return;
+      }
+
+      const revisionResponse = await fetch(
+        `/api/builder/site/pages/${encodeURIComponent(activePageId)}/revisions?revisionId=${encodeURIComponent(revisionId)}`,
+        { credentials: 'same-origin' },
+      );
+      if (!revisionResponse.ok) {
+        setPublishDiff({ status: 'error', message: '마지막 published revision을 불러오지 못했습니다.' });
+        return;
+      }
+      const revisionPayload = (await revisionResponse.json()) as { document?: BuilderCanvasDocument };
+      if (!revisionPayload.document) {
+        setPublishDiff({ status: 'error', message: 'published revision 문서가 비어 있습니다.' });
+        return;
+      }
+
+      const diff = computeDocumentDiff(document, revisionPayload.document);
+      setPublishDiff({
+        status: 'ready',
+        diff,
+        summary: summarizeDocumentDiff(diff),
+        publishedRevision: pageMeta?.publishedRevision,
+        publishedRevisionId: revisionId,
+        publishedSavedAt: pageMeta?.publishedSavedAt ?? pageMeta?.publishedAt,
+      });
+    } catch {
+      setPublishDiff({ status: 'error', message: 'published diff 계산 중 네트워크 오류가 발생했습니다.' });
+    }
+  }, [activePageId, document, locale]);
+
   useEffect(() => {
     if (!open) {
       setPublishState('checking');
@@ -491,10 +614,12 @@ export default function PublishModal({
       setOverrideWarnings(false);
       setScheduledJob(null);
       setSchedulePending(false);
+      setPublishDiff({ status: 'idle' });
       return;
     }
     void runChecks();
-  }, [open, runChecks]);
+    void loadPublishDiff();
+  }, [open, runChecks, loadPublishDiff]);
 
   useEffect(() => {
     if (!open || !activePageId) return;
@@ -526,6 +651,29 @@ export default function PublishModal({
   const canPublish = !!suite && !suite.hasBlocker && publishState === 'ready';
   const hasWarningsOnly = !!suite && !suite.hasBlocker && suite.warningCount > 0;
   const canSubmitPublish = canPublish && ((suite?.warningCount ?? 0) === 0 || overrideWarnings);
+  const publishDiffExamples = useMemo(() => {
+    if (publishDiff.status !== 'ready') return [];
+    return [
+      ...publishDiff.diff.added.slice(0, 2).map((node) => ({
+        id: node.id,
+        tone: '추가',
+        detail: summarizeDiffNode(node),
+      })),
+      ...publishDiff.diff.removed.slice(0, 2).map((node) => ({
+        id: node.id,
+        tone: '삭제',
+        detail: summarizeDiffNode(node),
+      })),
+      ...publishDiff.diff.modified.slice(0, 3).map((node) => ({
+        id: node.id,
+        tone: '변경',
+        detail: `${node.kind} · ${node.changes.join(' · ')}`,
+      })),
+    ].slice(0, 5);
+  }, [publishDiff]);
+  const publishDiffChangedCount = publishDiff.status === 'ready'
+    ? publishDiff.summary.added + publishDiff.summary.removed + publishDiff.summary.modified
+    : 0;
 
   const handleFix = useCallback(
     (nodeId: string) => {
@@ -752,6 +900,61 @@ export default function PublishModal({
                   </div>
                 ))}
               </div>
+
+              {activePageId ? (
+                <div style={publishDiffPanelStyle}>
+                  <div style={checklistLabelStyle}>
+                    <span>Draft vs published</span>
+                    <span style={checklistStatusStyle}>
+                      {publishDiff.status === 'ready'
+                        ? formatDocumentDiffSummary(publishDiff.summary)
+                        : publishDiff.status === 'loading'
+                          ? '계산 중'
+                          : publishDiff.status === 'missing'
+                            ? '첫 발행'
+                            : publishDiff.status === 'error'
+                              ? '확인 필요'
+                              : '대기'}
+                    </span>
+                  </div>
+
+                  {publishDiff.status === 'ready' ? (
+                    <>
+                      <div style={publishDiffStatRowStyle}>
+                        <span style={publishDiffStatStyle('#16a34a')}>+ 추가됨 {publishDiff.summary.added}</span>
+                        <span style={publishDiffStatStyle('#dc2626')}>- 삭제됨 {publishDiff.summary.removed}</span>
+                        <span style={publishDiffStatStyle('#ca8a04')}>~ 변경됨 {publishDiff.summary.modified}</span>
+                        <span style={{ ...checklistDetailStyle, marginTop: 0 }}>
+                          published v{publishDiff.publishedRevision ?? '?'}
+                          {publishDiff.publishedSavedAt ? ` · ${formatScheduledAt(publishDiff.publishedSavedAt)}` : ''}
+                        </span>
+                      </div>
+                      {publishDiffChangedCount === 0 ? (
+                        <div style={checklistDetailStyle}>
+                          마지막 published revision과 현재 draft가 동일합니다.
+                        </div>
+                      ) : (
+                        <ul style={publishDiffListStyle} aria-label="Draft vs published changed nodes">
+                          {publishDiffExamples.map((item) => (
+                            <li key={`${item.tone}-${item.id}`} style={publishDiffItemStyle}>
+                              <strong>{item.tone}</strong>{' '}
+                              <code>{item.id}</code> · {item.detail}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <div style={checklistDetailStyle}>
+                      {publishDiff.status === 'loading'
+                        ? '마지막 published revision과 현재 draft 차이를 계산 중입니다.'
+                        : publishDiff.status === 'missing' || publishDiff.status === 'error'
+                          ? publishDiff.message
+                          : 'published 기준이 준비되면 발행 전 변경 요약이 표시됩니다.'}
+                    </div>
+                  )}
+                </div>
+              ) : null}
 
               {grouped.blockers.length > 0 && (
                 <>

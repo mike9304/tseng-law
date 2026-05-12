@@ -1351,3 +1351,21 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - W 판정:
   - W193은 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 hreflang helper/Inspector evidence에 실제 published metadata alternate link 검증을 추가했다.
+
+## M42 — Publish diff viewer 실사용 evidence
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/document-diff.ts` — Version History와 Publish dialog가 공유하는 draft-vs-revision diff helper를 추가했다. added/removed/modified node summary와 대표 변경 설명을 계산한다.
+  - `src/components/builder/canvas/VersionHistoryPanel.tsx` — 기존 내장 diff 계산을 공용 helper로 교체해 같은 diff semantics를 유지한다.
+  - `src/components/builder/canvas/PublishModal.tsx` — Publish dialog preflight 안에 `Draft vs published` 패널을 추가했다. 마지막 `publishedRevisionId` 문서를 revisions API로 읽고 현재 draft와 비교해 `+ / - / ~` 요약, published revision, 대표 변경 node를 발행 전에 보여준다.
+  - `tests/builder-editor/seo-publish-history.playwright.ts` — W195 UI evidence를 추가했다. 최초 publish 후 draft title을 변경하고 Publish dialog를 열어 `+0 / -0 / ~1`, `~ 변경됨 1`, 변경 node id와 text diff가 표시되는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W195" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (115 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- W 판정:
+  - W195는 `자동검증 통과 / 사용자 QA 대기` 유지. 기존 Version History diff preview에 더해 실제 Publish dialog에서 draft-vs-published 변경 요약을 발행 직전 확인할 수 있게 했다.

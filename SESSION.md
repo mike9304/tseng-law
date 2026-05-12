@@ -4801,3 +4801,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
 - 다음 후보:
   - W195 publish diff viewer 실사용 evidence 또는 남은 yellow checkpoint 재스캔.
+
+## 2026-05-13 Codex /goal M42 publish diff viewer 실사용 evidence
+
+- W195의 약한 지점인 “Publish 전 draft와 마지막 published의 차이를 실제 발행 모달에서 볼 수 있는가”를 보강했다.
+- `src/lib/builder/canvas/document-diff.ts`를 추가해 Version History와 Publish dialog가 같은 diff 계산을 공유한다.
+- Publish dialog에 `Draft vs published` 패널을 추가했다. 마지막 `publishedRevisionId` 문서를 revisions API로 읽고 현재 draft와 비교해 `+ / - / ~` 요약, published revision, 대표 변경 node를 표시한다.
+- 기존 `VersionHistoryPanel`은 공용 diff helper로 교체해 기능 중복과 diff semantics drift를 줄였다.
+- Playwright는 최초 publish 후 draft title만 변경하고 Publish dialog를 열어 `+0 / -0 / ~1`, `~ 변경됨 1`, 변경 node id와 text diff가 표시되는지 검증한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W195" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run lint` ✅ (`<img>` 기존 warning only)
+  - `npm run security:builder-routes` ✅ (115 route files / 95 mutation handlers)
+  - `npm run test:unit` ✅ (894 passed)
+  - `npm run build` ✅ (Google Fonts download warning + 기존 `<img>` warning only)
+- 다음 후보:
+  - M42 커밋 후 남은 yellow checkpoint를 계속 재스캔한다.

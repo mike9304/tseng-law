@@ -17,37 +17,62 @@ interface NodeRect {
   rect: Rect;
 }
 
+function minBy(nodes: NodeRect[], getValue: (node: NodeRect) => number): number {
+  if (nodes.length === 0) return 0;
+  let min = Infinity;
+  for (const node of nodes) {
+    min = Math.min(min, getValue(node));
+  }
+  return min;
+}
+
+function maxBy(nodes: NodeRect[], getValue: (node: NodeRect) => number): number {
+  if (nodes.length === 0) return 0;
+  let max = -Infinity;
+  for (const node of nodes) {
+    max = Math.max(max, getValue(node));
+  }
+  return max;
+}
+
+function averageBy(nodes: NodeRect[], getValue: (node: NodeRect) => number): number {
+  if (nodes.length === 0) return 0;
+  let sum = 0;
+  for (const node of nodes) {
+    sum += getValue(node);
+  }
+  return sum / nodes.length;
+}
+
 // ─── Align ────────────────────────────────────────────────────────
 
 export function alignLeft(nodes: NodeRect[]): NodeRect[] {
-  const minX = Math.min(...nodes.map((n) => n.rect.x));
+  const minX = minBy(nodes, (n) => n.rect.x);
   return nodes.map((n) => ({ ...n, rect: { ...n.rect, x: minX } }));
 }
 
 export function alignCenter(nodes: NodeRect[]): NodeRect[] {
-  const centers = nodes.map((n) => n.rect.x + n.rect.width / 2);
-  const avgCenter = centers.reduce((a, b) => a + b, 0) / centers.length;
+  const avgCenter = averageBy(nodes, (n) => n.rect.x + n.rect.width / 2);
   return nodes.map((n) => ({ ...n, rect: { ...n.rect, x: Math.round(avgCenter - n.rect.width / 2) } }));
 }
 
 export function alignRight(nodes: NodeRect[]): NodeRect[] {
-  const maxRight = Math.max(...nodes.map((n) => n.rect.x + n.rect.width));
+  const maxRight = maxBy(nodes, (n) => n.rect.x + n.rect.width);
   return nodes.map((n) => ({ ...n, rect: { ...n.rect, x: maxRight - n.rect.width } }));
 }
 
 export function alignTop(nodes: NodeRect[]): NodeRect[] {
-  const minY = Math.min(...nodes.map((n) => n.rect.y));
+  const minY = minBy(nodes, (n) => n.rect.y);
   return nodes.map((n) => ({ ...n, rect: { ...n.rect, y: minY } }));
 }
 
 export function alignMiddle(nodes: NodeRect[]): NodeRect[] {
-  const middles = nodes.map((n) => n.rect.y + n.rect.height / 2);
-  const avgMiddle = middles.reduce((a, b) => a + b, 0) / middles.length;
+  const avgMiddle = averageBy(nodes, (n) => n.rect.y + n.rect.height / 2);
   return nodes.map((n) => ({ ...n, rect: { ...n.rect, y: Math.round(avgMiddle - n.rect.height / 2) } }));
 }
 
 export function alignBottom(nodes: NodeRect[]): NodeRect[] {
-  const maxBottom = Math.max(...nodes.map((n) => n.rect.y + n.rect.height));
+  const maxBottom = maxBy(nodes, (n) => n.rect.y + n.rect.height);
   return nodes.map((n) => ({ ...n, rect: { ...n.rect, y: maxBottom - n.rect.height } }));
 }
 
@@ -90,11 +115,11 @@ export function distributeVertical(nodes: NodeRect[]): NodeRect[] {
 // ─── Match Size ───────────────────────────────────────────────────
 
 export function matchWidth(nodes: NodeRect[]): NodeRect[] {
-  const maxWidth = Math.max(...nodes.map((n) => n.rect.width));
+  const maxWidth = maxBy(nodes, (n) => n.rect.width);
   return nodes.map((n) => ({ ...n, rect: { ...n.rect, width: maxWidth } }));
 }
 
 export function matchHeight(nodes: NodeRect[]): NodeRect[] {
-  const maxHeight = Math.max(...nodes.map((n) => n.rect.height));
+  const maxHeight = maxBy(nodes, (n) => n.rect.height);
   return nodes.map((n) => ({ ...n, rect: { ...n.rect, height: maxHeight } }));
 }

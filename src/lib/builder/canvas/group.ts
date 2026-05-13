@@ -26,11 +26,18 @@ export interface GroupResult {
 export function groupNodes(nodes: BuilderCanvasNode[]): GroupResult | null {
   if (nodes.length < 2) return null;
 
-  const minX = Math.min(...nodes.map((n) => n.rect.x));
-  const minY = Math.min(...nodes.map((n) => n.rect.y));
-  const maxX = Math.max(...nodes.map((n) => n.rect.x + n.rect.width));
-  const maxY = Math.max(...nodes.map((n) => n.rect.y + n.rect.height));
-  const maxZ = Math.max(...nodes.map((n) => n.zIndex));
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+  let maxZ = -Infinity;
+  for (const node of nodes) {
+    minX = Math.min(minX, node.rect.x);
+    minY = Math.min(minY, node.rect.y);
+    maxX = Math.max(maxX, node.rect.x + node.rect.width);
+    maxY = Math.max(maxY, node.rect.y + node.rect.height);
+    maxZ = Math.max(maxZ, node.zIndex);
+  }
 
   const children: BuilderCanvasNode[] = nodes.map((n) => ({
     ...structuredClone(n),

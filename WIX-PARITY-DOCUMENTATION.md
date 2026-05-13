@@ -2577,3 +2577,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx vitest run src/lib/builder/components/floatingChat/__tests__/floatingChat.test.tsx src/app/api/consultation/knowledge/__tests__/route.test.ts src/app/api/marketing/track/__tests__/route.test.ts src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/__tests__/links.test.ts` ✅ (5 files, 29 tests passed)
 - W 판정:
   - W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. admin form redirect origin guard, campaign tracking protocol filter, forms/link/floating-chat security regressions를 latest code에서 통과시켰다.
+
+## M128 — Align/group bounds spread cleanup
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/align.ts` — align/match size 계산에서 `Math.min(...nodes.map())`, `Math.max(...nodes.map())`, center/middle 임시 배열 생성을 루프 기반 helper로 교체했다.
+  - `src/lib/builder/canvas/group.ts` — group bounds와 max z-index 계산을 다섯 번의 spread/map 대신 한 번의 루프로 계산한다.
+  - `src/lib/builder/canvas/__tests__/align-group-bounds.test.ts` — 130,000개 선택집합에서 align/match가 spread argument limit 없이 동작하는지, center/middle 기존 수식과 group child relative rect가 유지되는지 검증했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M128 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/align-group-bounds.test.ts src/lib/builder/canvas/__tests__/snap.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (3 files, 11 tests passed)
+- W 판정:
+  - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. large multi-select align/group bounds와 기존 snap/index 회귀를 latest code에서 통과시켰다.

@@ -5981,3 +5981,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - admin form redirect origin guard, same-origin admin query preservation, campaign tracking unsafe protocol rejection, forms/link/floating-chat security regressions.
 - 다음 후보:
   - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.
+
+## 2026-05-13 Codex /goal M128 Align/group bounds spread cleanup
+
+- audit #4/#6/#7/#10/#11 후보를 현재 코드와 대조했고, pointermove absolute rect snapshot/rAF, snap candidate prune, history structural sharing, insights preview cache, space-key input guard는 이미 반영된 상태임을 확인했다.
+- 아직 남아 있던 순수 유틸의 large selection bounds 계산을 정리했다.
+- `align.ts`의 min/max/average 계산에서 `Math.min(...nodes.map())`/`Math.max(...nodes.map())`/center 임시 배열을 제거했다.
+- `group.ts`의 group bounds/max z-index 계산을 한 번의 루프로 통합했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/align-group-bounds.test.ts src/lib/builder/canvas/__tests__/snap.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (3 files, 11 tests)
+- 확인된 커버리지:
+  - 130,000개 선택집합 align/match spread limit 회피, center/middle 기존 수식 유지, group relative child rect 유지, snap/index regressions.
+- 다음 후보:
+  - 남은 dirty/문서 상태 확인 후, `CODEX-GOAL-WIX-FULL-BUILDER.md` M01 잔여 항목 중 실제 미해결만 선별한다.

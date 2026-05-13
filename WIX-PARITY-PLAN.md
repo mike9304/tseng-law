@@ -129,3 +129,4 @@
 | M125 | Sec   | Render-site/file URL safeHref sweep | W22,W98,W216 | 1h | M124 | 🟡 links/forms unit 23 + cookie E2E 1 passed / 사용자 QA 대기 |
 | M126 | Sec   | Marketing template preview URL guard | W216 | 1h | M125 | 🟡 marketing preview/link unit 18 passed / 사용자 QA 대기 |
 | M127 | Sec   | Admin redirect and floating URL guard tests | W22,W216 | 1h | M126 | 🟡 route/security unit 29 + typecheck passed / 사용자 QA 대기 |
+| M128 | Perf  | Align/group bounds spread cleanup | W216,W225 | 1h | M127 | 🟡 align/group/snap/index unit 11 + typecheck passed / 사용자 QA 대기 |

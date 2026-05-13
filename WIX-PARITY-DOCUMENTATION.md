@@ -2272,3 +2272,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/a11y-smoke.playwright.ts tests/builder-editor/chrome-click-safety.playwright.ts tests/builder-editor/mobile-inspector.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W40/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. core editor axe states, header/footer click containment, mobile inspector override 경로를 최신 코드에서 다시 통과시켰다.
+
+## M107 — SEO/history/save-section focus sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/seo-publish-history.playwright.ts` — SEO/publish/history 테스트의 빌더 페이지 오픈 헬퍼가 `data-editor-ready="true"`를 기다린 뒤 SEO/history/save-section focus 경로를 클릭하게 했다. Hydration 전 SEO trigger click이 놓이는 flake를 제거했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M107 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- tests/builder-editor/seo-publish-history.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "SEO panel" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus|save section modal" --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W84/W186/W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. SEO panel, version history restore confirmation, save-section modal focus trap/restore 경로를 최신 코드에서 다시 통과시켰다.

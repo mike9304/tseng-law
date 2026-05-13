@@ -221,11 +221,17 @@ async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string, page
     await page.goto(`/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&seoUiTest=${Date.now().toString(36)}`, {
       waitUntil: 'domcontentloaded',
     });
+    const shell = page.locator('[data-editor-shell]').first();
+    await expect(shell).toBeVisible({ timeout: 30_000 });
+    await expect(shell).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
     await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
     return;
   }
 
   await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+  const shell = page.locator('[data-editor-shell]').first();
+  await expect(shell).toBeVisible({ timeout: 30_000 });
+  await expect(shell).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
   await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
   await page.getByRole('button', { name: 'Pages', exact: true }).click();
   const pagesDrawer = page.locator('[aria-hidden="false"]').first();

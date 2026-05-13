@@ -5666,3 +5666,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/a11y-smoke.playwright.ts tests/builder-editor/chrome-click-safety.playwright.ts tests/builder-editor/mobile-inspector.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - 에디터 keyboard/selection 계열 또는 publish/SEO 회귀 묶음 중 최신 sweep이 부족한 곳을 계속 줄인다.
+
+## 2026-05-13 Codex /goal M107 SEO/history/save-section focus sweep
+
+- `seo-publish-history.playwright.ts`에서 SEO panel, version history, save-section modal focus trap slice를 최신 코드로 재실행했다.
+- 첫 실행에서 SEO panel만 실패했다. `pageId` 직접 진입 후 `getByTitle('현재 페이지 SEO')` 클릭이 에디터 hydration ready 전에 들어가 dialog open 이벤트가 놓이는 flake였다.
+- 해당 파일의 공통 `openBuilderPageFromPagesPanel` helper가 `data-editor-ready="true"`를 기다리게 보강했다. 이 helper를 쓰는 SEO/history/save-section/publish UI tests도 같은 ready 조건을 공유한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- tests/builder-editor/seo-publish-history.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "SEO panel" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus|save section modal" --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - publish/metadata 긴 E2E slice를 나눠서 최신 코드에서 계속 재검증한다.

@@ -6089,3 +6089,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - stage click routing, public chrome click safety, template insertion/text persistence, page template prompt/preview path.
 - 다음 후보:
   - `SandboxInspectorPanel.tsx` style/helper split 또는 `SeoPanel.tsx` form section split 중 회귀 표면이 작은 파일을 고른다.
+
+## 2026-05-13 Codex /goal M136 SandboxInspectorPanel widget split
+
+- `SandboxInspectorPanel.tsx`의 device visibility toggles, empty state, composite surface editor 렌더링을 `SandboxInspectorPanel.widgets.tsx`로 분리했다.
+- inspector state, tab orchestration, layout/content/style update flow는 기존 파일에 유지했고, `SandboxInspectorPanel.tsx` LOC는 1277에서 1049로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-inspector.playwright.ts tests/builder-editor/inline-text-editor.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (14 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - mobile inspector viewport overrides, inline text editor persistence, 주요업무 템플릿 nested node selection/text persistence, page template prompt/preview path.
+- 다음 후보:
+  - `SandboxInspectorPanel.tsx` layout/content tab subview split로 본체를 800줄 이하에 가깝게 내린다.

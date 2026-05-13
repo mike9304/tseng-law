@@ -2690,3 +2690,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-regression.playwright.ts tests/builder-editor/chrome-click-safety.playwright.ts tests/builder-editor/section-template-click.playwright.ts -g "click|keeps inserted service template text|lets users click|chrome" --project=chromium-builder --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W84/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. stage click routing, public chrome click safety, template insertion/text persistence, page template prompt/preview path를 latest code에서 통과시켰다.
+
+## M136 — SandboxInspectorPanel widget split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxInspectorPanel.widgets.tsx` — device visibility toggles, inspector empty state, composite surface editor 렌더링을 전용 위젯 파일로 분리했다.
+  - `src/components/builder/canvas/SandboxInspectorPanel.tsx` — inspector state, tabs, layout/content/style orchestration 중심으로 남겼다. 파일 길이는 1277줄에서 1049줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M136 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-inspector.playwright.ts tests/builder-editor/inline-text-editor.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (14 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W40/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. mobile inspector overrides, inline text editor persistence, 주요업무 템플릿 nested node selection/text persistence, page template prompt/preview path를 latest code에서 통과시켰다.

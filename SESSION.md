@@ -6101,3 +6101,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - mobile inspector viewport overrides, inline text editor persistence, 주요업무 템플릿 nested node selection/text persistence, page template prompt/preview path.
 - 다음 후보:
   - `SandboxInspectorPanel.tsx` layout/content tab subview split로 본체를 800줄 이하에 가깝게 내린다.
+
+## 2026-05-13 Codex /goal M137 SandboxInspectorPanel layout tab split
+
+- `SandboxInspectorPanel.tsx`의 layout 탭을 `SandboxInspectorLayoutTab.tsx`로 분리했다.
+- 새 layout tab은 viewport override selector, responsive rect/font controls, rotation, lock/visible/pin, anchor editor를 소유한다.
+- `SandboxInspectorPanel.tsx`는 tab shell과 content/style/animation/a11y/seo orchestration 중심으로 남겼고, LOC는 1049에서 597로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-inspector.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - mobile inspector viewport override controls, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence, page template prompt/preview path.
+- 다음 후보:
+  - `SandboxInspectorPanel.tsx`의 office quick edit content block 또는 multi-select batch panel을 별도 subview로 분리한다.

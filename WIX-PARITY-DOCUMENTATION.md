@@ -2703,3 +2703,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-inspector.playwright.ts tests/builder-editor/inline-text-editor.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (14 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W40/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. mobile inspector overrides, inline text editor persistence, 주요업무 템플릿 nested node selection/text persistence, page template prompt/preview path를 latest code에서 통과시켰다.
+
+## M137 — SandboxInspectorPanel layout tab split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxInspectorLayoutTab.tsx` — viewport override selector, rect/font responsive controls, rotation, lock/visible/pin, anchor editor를 전용 layout tab 컴포넌트로 분리했다.
+  - `src/components/builder/canvas/SandboxInspectorPanel.tsx` — tab shell, content/style/animation/a11y/seo orchestration 중심으로 남겼다. 파일 길이는 1049줄에서 597줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M137 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-inspector.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W40/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. mobile inspector viewport override controls, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence, page template prompt/preview path를 latest code에서 통과시켰다.

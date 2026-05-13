@@ -138,3 +138,4 @@
 | M134 | Refactor | CanvasNode interaction/render helper split | W18,W84,W216,W225 | 1h | M133 | 🟡 CanvasNode 944→765 LOC + typecheck/template E2E 12 passed / 사용자 QA 대기 |
 | M135 | Refactor | CanvasContainer geometry/drop helper split | W18,W84,W216,W225 | 1h | M134 | 🟡 CanvasContainer 1038→793 LOC + typecheck/click-template E2E 13 passed / 사용자 QA 대기 |
 | M136 | Refactor | SandboxInspectorPanel widget split | W18,W40,W84,W216 | 1h | M135 | 🟡 SandboxInspectorPanel 1277→1049 LOC + typecheck/inspector-template E2E 14 passed / 사용자 QA 대기 |
+| M137 | Refactor | SandboxInspectorPanel layout tab split | W18,W40,W84,W216 | 1h | M136 | 🟡 SandboxInspectorPanel 1049→597 LOC + typecheck/inspector-template E2E 13 passed / 사용자 QA 대기 |

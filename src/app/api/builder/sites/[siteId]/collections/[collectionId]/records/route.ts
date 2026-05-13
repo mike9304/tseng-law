@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
+  BuilderCmsPermissionError,
   BuilderCmsValidationError,
   createEditableBuilderCmsRecord,
   readEditableBuilderCmsCollection,
@@ -28,12 +29,20 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
-    const detail = await readEditableBuilderCmsCollection(params.siteId, locale, params.collectionId);
+    const detail = await readEditableBuilderCmsCollection(
+      params.siteId,
+      locale,
+      params.collectionId,
+      { actor: 'admin' },
+    );
     if (!detail) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
     return NextResponse.json({ ok: true, records: detail.records });
   } catch (error) {
+    if (error instanceof BuilderCmsPermissionError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
+    }
     console.error('[builder-cms-records] list failed', error);
     return NextResponse.json(
       { ok: false, error: 'Failed to read CMS records.' },
@@ -68,12 +77,16 @@ export async function POST(
       locale,
       params.collectionId,
       payload,
+      { actor: 'admin' },
     );
     if (!record) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
     return NextResponse.json({ ok: true, record }, { status: 201 });
   } catch (error) {
+    if (error instanceof BuilderCmsPermissionError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
+    }
     if (error instanceof BuilderCmsValidationError) {
       return NextResponse.json(
         { ok: false, error: error.message, issues: error.issues },

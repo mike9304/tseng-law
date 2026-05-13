@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
+  BuilderCmsPermissionError,
   BuilderCmsValidationError,
   deleteEditableBuilderCmsRecord,
   readEditableBuilderCmsCollection,
@@ -29,13 +30,21 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
-    const detail = await readEditableBuilderCmsCollection(params.siteId, locale, params.collectionId);
+    const detail = await readEditableBuilderCmsCollection(
+      params.siteId,
+      locale,
+      params.collectionId,
+      { actor: 'admin' },
+    );
     const record = detail?.records.find((candidate) => candidate.recordId === params.recordId);
     if (!record) {
       return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
     }
     return NextResponse.json({ ok: true, record });
   } catch (error) {
+    if (error instanceof BuilderCmsPermissionError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
+    }
     console.error('[builder-cms-record] read failed', error);
     return NextResponse.json(
       { ok: false, error: 'Failed to read CMS record.' },
@@ -71,12 +80,16 @@ export async function PATCH(
       params.collectionId,
       params.recordId,
       payload,
+      { actor: 'admin' },
     );
     if (!record) {
       return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
     }
     return NextResponse.json({ ok: true, record });
   } catch (error) {
+    if (error instanceof BuilderCmsPermissionError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
+    }
     if (error instanceof BuilderCmsValidationError) {
       return NextResponse.json(
         { ok: false, error: error.message, issues: error.issues },
@@ -116,12 +129,16 @@ export async function DELETE(
       locale,
       params.collectionId,
       params.recordId,
+      { actor: 'admin' },
     );
     if (!deleted) {
       return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
     }
     return NextResponse.json({ ok: true });
   } catch (error) {
+    if (error instanceof BuilderCmsPermissionError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
+    }
     console.error('[builder-cms-record] delete failed', error);
     return NextResponse.json(
       { ok: false, error: 'Failed to delete CMS record.' },

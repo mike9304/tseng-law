@@ -99,7 +99,7 @@ export default async function BuilderCmsPage({ params }: { params: { locale: Loc
               <li>F07 schema model: in progress</li>
               <li>F08 content manager UI: in progress</li>
               <li>F09-F10 field validation: in progress</li>
-              <li>F12/F16 permissions and guarded APIs: in progress</li>
+              <li>F12/F16 permissions UI and guarded APIs: in progress</li>
             </ul>
           </section>
         </>

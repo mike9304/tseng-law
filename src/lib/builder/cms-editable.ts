@@ -9,6 +9,7 @@ import {
   type BuilderCmsFieldDefinition,
   type BuilderCmsFieldType,
   type BuilderCmsImageValue,
+  type BuilderCmsPermissionActor,
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
   type BuilderCmsRecordRevision,
@@ -21,6 +22,16 @@ export class BuilderCmsValidationError extends Error {
   constructor(message: string, public readonly issues: string[] = [message]) {
     super(message);
     this.name = 'BuilderCmsValidationError';
+  }
+}
+
+export class BuilderCmsPermissionError extends Error {
+  constructor(
+    public readonly action: BuilderCmsPermissionAction,
+    public readonly actor: BuilderCmsPermissionActor,
+  ) {
+    super(`CMS permission denied for ${actor} to ${action} records.`);
+    this.name = 'BuilderCmsPermissionError';
   }
 }
 
@@ -43,7 +54,12 @@ type RecordInput = {
   fields?: unknown;
 };
 
+export type BuilderCmsPermissionAction = keyof BuilderCmsPermissions;
 export type BuilderCmsRecordSortDirection = 'asc' | 'desc';
+
+export interface BuilderCmsAccessOptions {
+  actor?: BuilderCmsPermissionActor;
+}
 
 export interface BuilderCmsRecordListOptions {
   query?: string;
@@ -55,6 +71,7 @@ export type BuilderCmsCsvImportMode = 'append' | 'replace';
 
 export interface BuilderCmsCsvImportOptions {
   mode?: BuilderCmsCsvImportMode;
+  actor?: BuilderCmsPermissionActor;
 }
 
 export interface BuilderCmsCsvExportResult {
@@ -79,6 +96,14 @@ export function defaultBuilderCmsPermissions(): BuilderCmsPermissions {
   };
 }
 
+export function canAccessBuilderCmsCollection(
+  collection: Pick<BuilderCmsCollection, 'permissions'>,
+  action: BuilderCmsPermissionAction,
+  actor: BuilderCmsPermissionActor,
+): boolean {
+  return normalizePermissions(collection.permissions)[action].includes(actor);
+}
+
 export async function listEditableBuilderCmsCollections(
   siteId: string,
   localeInput: string | null | undefined,
@@ -92,12 +117,14 @@ export async function readEditableBuilderCmsCollection(
   siteId: string,
   localeInput: string | null | undefined,
   collectionId: string,
+  options: BuilderCmsAccessOptions = {},
 ): Promise<BuilderCmsCollectionDetail | null> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
   const collection = normalizeCmsCollections(site.cmsCollections).find(
     (candidate) => candidate.collectionId === collectionId,
   );
+  if (collection) assertCmsPermission(collection, 'read', resolveCmsActor(options));
   return collection ? toCollectionDetail(collection) : null;
 }
 
@@ -158,6 +185,7 @@ export async function createEditableBuilderCmsRecord(
   localeInput: string | null | undefined,
   collectionId: string,
   input: RecordInput,
+  options: BuilderCmsAccessOptions = {},
 ): Promise<BuilderCmsRecord | null> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
@@ -168,6 +196,7 @@ export async function createEditableBuilderCmsRecord(
   const now = new Date().toISOString();
   const recordId = normalizeOptionalId(input.recordId, 'recordId') ?? generateEntityId('record');
   const collection = collections[index];
+  assertCmsPermission(collection, 'create', resolveCmsActor(options));
   ensureUniqueRecordId(collection, recordId);
   const record: BuilderCmsRecord = {
     recordId,
@@ -196,6 +225,7 @@ export async function updateEditableBuilderCmsRecord(
   collectionId: string,
   recordId: string,
   input: RecordInput,
+  options: BuilderCmsAccessOptions = {},
 ): Promise<BuilderCmsRecord | null> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
@@ -204,6 +234,7 @@ export async function updateEditableBuilderCmsRecord(
   if (collectionIndex === -1) return null;
 
   const collection = collections[collectionIndex];
+  assertCmsPermission(collection, 'update', resolveCmsActor(options));
   const recordIndex = collection.records.findIndex((candidate) => candidate.recordId === recordId);
   if (recordIndex === -1) return null;
 
@@ -238,6 +269,7 @@ export async function restoreEditableBuilderCmsRecordRevision(
   collectionId: string,
   recordId: string,
   revisionId: string,
+  options: BuilderCmsAccessOptions = {},
 ): Promise<BuilderCmsRecord | null> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
@@ -246,6 +278,7 @@ export async function restoreEditableBuilderCmsRecordRevision(
   if (collectionIndex === -1) return null;
 
   const collection = collections[collectionIndex];
+  assertCmsPermission(collection, 'update', resolveCmsActor(options));
   const recordIndex = collection.records.findIndex((candidate) => candidate.recordId === recordId);
   if (recordIndex === -1) return null;
 
@@ -284,6 +317,7 @@ export async function duplicateEditableBuilderCmsRecord(
   localeInput: string | null | undefined,
   collectionId: string,
   recordId: string,
+  options: BuilderCmsAccessOptions = {},
 ): Promise<BuilderCmsRecord | null> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
@@ -292,6 +326,9 @@ export async function duplicateEditableBuilderCmsRecord(
   if (collectionIndex === -1) return null;
 
   const collection = collections[collectionIndex];
+  const actor = resolveCmsActor(options);
+  assertCmsPermission(collection, 'read', actor);
+  assertCmsPermission(collection, 'create', actor);
   const source = collection.records.find((candidate) => candidate.recordId === recordId);
   if (!source) return null;
 
@@ -324,6 +361,7 @@ export async function deleteEditableBuilderCmsRecord(
   localeInput: string | null | undefined,
   collectionId: string,
   recordId: string,
+  options: BuilderCmsAccessOptions = {},
 ): Promise<boolean> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
@@ -332,6 +370,7 @@ export async function deleteEditableBuilderCmsRecord(
   if (collectionIndex === -1) return false;
 
   const collection = collections[collectionIndex];
+  assertCmsPermission(collection, 'delete', resolveCmsActor(options));
   const records = collection.records.filter((record) => record.recordId !== recordId);
   if (records.length === collection.records.length) return false;
   const now = new Date().toISOString();
@@ -376,6 +415,7 @@ export async function exportEditableBuilderCmsRecordsCsv(
   siteId: string,
   localeInput: string | null | undefined,
   collectionId: string,
+  options: BuilderCmsAccessOptions = {},
 ): Promise<BuilderCmsCsvExportResult | null> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
@@ -383,6 +423,7 @@ export async function exportEditableBuilderCmsRecordsCsv(
     (candidate) => candidate.collectionId === collectionId,
   );
   if (!collection) return null;
+  assertCmsPermission(collection, 'read', resolveCmsActor(options));
 
   const headers = csvHeadersForCollection(collection);
   const rows = collection.records.map((record) => headers.map((header) => csvRecordCell(collection, record, header)));
@@ -406,7 +447,10 @@ export async function importEditableBuilderCmsRecordsCsv(
   if (collectionIndex === -1) return null;
 
   const collection = collections[collectionIndex];
+  const actor = resolveCmsActor(options);
+  assertCmsPermission(collection, 'create', actor);
   const mode: BuilderCmsCsvImportMode = options.mode === 'replace' ? 'replace' : 'append';
+  if (mode === 'replace') assertCmsPermission(collection, 'delete', actor);
   const importedRecords = buildImportedCsvRecords(collection, csvText, mode);
   const now = new Date().toISOString();
   const nextCollection: BuilderCmsCollection = {
@@ -645,16 +689,38 @@ function normalizePermissions(input: unknown): BuilderCmsPermissions {
   };
 }
 
+function assertCmsPermission(
+  collection: BuilderCmsCollection,
+  action: BuilderCmsPermissionAction,
+  actor: BuilderCmsPermissionActor,
+): void {
+  if (!canAccessBuilderCmsCollection(collection, action, actor)) {
+    throw new BuilderCmsPermissionError(action, actor);
+  }
+}
+
+function resolveCmsActor(options: BuilderCmsAccessOptions): BuilderCmsPermissionActor {
+  return options.actor ?? 'admin';
+}
+
 function normalizePermissionActors(
   input: unknown,
   fallback: BuilderCmsPermissions['read'],
 ): BuilderCmsPermissions['read'] {
-  if (!Array.isArray(input)) return fallback;
+  if (!Array.isArray(input)) return orderPermissionActors(fallback);
   const actors = input.filter((actor): actor is BuilderCmsPermissions['read'][number] => (
     typeof actor === 'string' &&
     builderCmsPermissionActors.includes(actor as BuilderCmsPermissions['read'][number])
   ));
-  return actors.length > 0 ? Array.from(new Set(actors)) : fallback;
+  return orderPermissionActors(actors.length > 0 ? actors : fallback);
+}
+
+function orderPermissionActors(
+  actors: Iterable<BuilderCmsPermissionActor>,
+): BuilderCmsPermissions['read'] {
+  const actorSet = new Set<BuilderCmsPermissionActor>(actors);
+  actorSet.add('admin');
+  return builderCmsPermissionActors.filter((actor) => actorSet.has(actor));
 }
 
 function validateRecordFields(

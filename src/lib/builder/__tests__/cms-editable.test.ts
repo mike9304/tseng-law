@@ -2,7 +2,9 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_THEME, type BuilderSiteDocument } from '@/lib/builder/site/types';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import {
+  BuilderCmsPermissionError,
   BuilderCmsValidationError,
+  canAccessBuilderCmsCollection,
   createEditableBuilderCmsCollection,
   createEditableBuilderCmsRecord,
   deleteEditableBuilderCmsRecord,
@@ -13,6 +15,7 @@ import {
   listEditableBuilderCmsCollections,
   readEditableBuilderCmsCollection,
   restoreEditableBuilderCmsRecordRevision,
+  updateEditableBuilderCmsCollection,
   updateEditableBuilderCmsRecord,
 } from '@/lib/builder/cms-editable';
 
@@ -331,6 +334,89 @@ describe('editable builder CMS store', () => {
       }),
     ).rejects.toMatchObject({
       issues: ['Hero image must be an image URL.'],
+    });
+  });
+
+  it('updates CMS permissions and gates record access by actor', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'testimonials',
+      name: 'Testimonials',
+      permissions: {
+        read: ['public', 'admin', 'public'],
+        create: ['member'],
+        update: ['staff'],
+        delete: [],
+      },
+    });
+
+    const detail = await readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials');
+    expect(detail?.permissions).toEqual({
+      read: ['public', 'admin'],
+      create: ['member', 'admin'],
+      update: ['staff', 'admin'],
+      delete: ['admin'],
+    });
+    expect(canAccessBuilderCmsCollection(detail!, 'read', 'public')).toBe(true);
+    expect(canAccessBuilderCmsCollection(detail!, 'create', 'public')).toBe(false);
+
+    await expect(
+      readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials', { actor: 'member' }),
+    ).rejects.toBeInstanceOf(BuilderCmsPermissionError);
+
+    await expect(
+      createEditableBuilderCmsRecord(
+        'test-site',
+        'ko',
+        'testimonials',
+        { fields: { title: 'Public quote', slug: 'public' } },
+        { actor: 'public' },
+      ),
+    ).rejects.toBeInstanceOf(BuilderCmsPermissionError);
+
+    const created = await createEditableBuilderCmsRecord(
+      'test-site',
+      'ko',
+      'testimonials',
+      { fields: { title: 'Member quote', slug: 'member' } },
+      { actor: 'member' },
+    );
+    expect(created?.fields).toMatchObject({ title: 'Member quote', slug: 'member' });
+
+    await expect(
+      updateEditableBuilderCmsRecord(
+        'test-site',
+        'ko',
+        'testimonials',
+        created!.recordId,
+        { fields: { title: 'Member update', slug: 'member-update' } },
+        { actor: 'member' },
+      ),
+    ).rejects.toBeInstanceOf(BuilderCmsPermissionError);
+
+    await expect(
+      updateEditableBuilderCmsRecord(
+        'test-site',
+        'ko',
+        'testimonials',
+        created!.recordId,
+        { fields: { title: 'Staff update', slug: 'staff-update' } },
+        { actor: 'staff' },
+      ),
+    ).resolves.toMatchObject({ fields: { title: 'Staff update', slug: 'staff-update' } });
+
+    const updated = await updateEditableBuilderCmsCollection('test-site', 'ko', 'testimonials', {
+      permissions: {
+        read: ['member'],
+        create: ['public'],
+        update: ['admin'],
+        delete: ['staff'],
+      },
+    });
+    expect(updated?.permissions).toEqual({
+      read: ['member', 'admin'],
+      create: ['public', 'admin'],
+      update: ['admin'],
+      delete: ['staff', 'admin'],
     });
   });
 

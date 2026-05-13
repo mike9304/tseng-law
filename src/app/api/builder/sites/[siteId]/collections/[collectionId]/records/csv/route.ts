@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
+  BuilderCmsPermissionError,
   BuilderCmsValidationError,
   exportEditableBuilderCmsRecordsCsv,
   importEditableBuilderCmsRecordsCsv,
@@ -29,7 +30,12 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
-    const result = await exportEditableBuilderCmsRecordsCsv(params.siteId, locale, params.collectionId);
+    const result = await exportEditableBuilderCmsRecordsCsv(
+      params.siteId,
+      locale,
+      params.collectionId,
+      { actor: 'admin' },
+    );
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
@@ -41,6 +47,9 @@ export async function GET(
       },
     });
   } catch (error) {
+    if (error instanceof BuilderCmsPermissionError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
+    }
     console.error('[builder-cms-records-csv] export failed', error);
     return NextResponse.json(
       { ok: false, error: 'Failed to export CMS records.' },
@@ -77,13 +86,16 @@ export async function POST(
       locale,
       params.collectionId,
       csv,
-      { mode },
+      { mode, actor: 'admin' },
     );
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
     return NextResponse.json({ ok: true, ...result }, { status: 201 });
   } catch (error) {
+    if (error instanceof BuilderCmsPermissionError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
+    }
     if (error instanceof BuilderCmsValidationError) {
       return NextResponse.json(
         { ok: false, error: error.message, issues: error.issues },

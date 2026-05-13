@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
+  BuilderCmsPermissionError,
   BuilderCmsValidationError,
   restoreEditableBuilderCmsRecordRevision,
 } from '@/lib/builder/cms-editable';
@@ -33,12 +34,16 @@ export async function POST(
       params.collectionId,
       params.recordId,
       params.revisionId,
+      { actor: 'admin' },
     );
     if (!record) {
       return NextResponse.json({ ok: false, error: 'Unknown CMS revision.' }, { status: 404 });
     }
     return NextResponse.json({ ok: true, record });
   } catch (error) {
+    if (error instanceof BuilderCmsPermissionError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
+    }
     if (error instanceof BuilderCmsValidationError) {
       return NextResponse.json(
         { ok: false, error: error.message, issues: error.issues },

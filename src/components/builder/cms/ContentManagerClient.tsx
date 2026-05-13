@@ -1,14 +1,17 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
-import type {
-  BuilderCmsCollectionDetail,
-  BuilderCmsCollectionSummary,
-  BuilderCmsFieldDefinition,
-  BuilderCmsImageValue,
-  BuilderCmsRecord,
-  BuilderCmsRecordRevision,
+import {
+  builderCmsPermissionActors,
+  type BuilderCmsCollectionDetail,
+  type BuilderCmsCollectionSummary,
+  type BuilderCmsFieldDefinition,
+  type BuilderCmsImageValue,
+  type BuilderCmsPermissionActor,
+  type BuilderCmsPermissions,
+  type BuilderCmsRecord,
+  type BuilderCmsRecordRevision,
 } from '@/lib/builder/cms-types';
 import type { BuilderAssetListItem } from '@/lib/builder/assets';
 import type { BuilderCollectionSummary } from '@/lib/builder/cms';
@@ -53,6 +56,21 @@ type RecordFormValue = string | boolean | BuilderCmsImageValue;
 type RecordFormState = Record<string, RecordFormValue>;
 type RecordSortDirection = 'asc' | 'desc';
 type CsvImportMode = 'append' | 'replace';
+type CmsPermissionOperation = keyof BuilderCmsPermissions;
+
+const cmsPermissionOperations: { action: CmsPermissionOperation; label: string; hint: string }[] = [
+  { action: 'read', label: 'Read records', hint: 'Allows viewing and export.' },
+  { action: 'create', label: 'Create records', hint: 'Allows new records, duplicates, and CSV append.' },
+  { action: 'update', label: 'Update records', hint: 'Allows edits and revision restores.' },
+  { action: 'delete', label: 'Delete records', hint: 'Allows deletes and CSV replace.' },
+];
+
+const cmsPermissionActorLabels: Record<BuilderCmsPermissionActor, string> = {
+  public: 'Public',
+  member: 'Member',
+  staff: 'Staff',
+  admin: 'Admin',
+};
 
 const panelStyle = {
   display: 'grid',
@@ -95,6 +113,7 @@ export default function ContentManagerClient({
   const [collections, setCollections] = useState(initialEditableCollections);
   const [selectedCollectionId, setSelectedCollectionId] = useState(collections[0]?.collectionId ?? '');
   const [detail, setDetail] = useState<BuilderCmsCollectionDetail | null>(null);
+  const [permissionDraft, setPermissionDraft] = useState<BuilderCmsPermissions>(() => defaultCmsPermissionDraft());
   const [recordForm, setRecordForm] = useState<RecordFormState>({});
   const [editingRecordId, setEditingRecordId] = useState<string | null>(null);
   const [recordQuery, setRecordQuery] = useState('');
@@ -127,6 +146,10 @@ export default function ContentManagerClient({
       sortDirection: recordSortDirection,
     });
   }, [detail, effectiveRecordSortBy, recordQuery, recordSortDirection]);
+
+  useEffect(() => {
+    setPermissionDraft(detail ? normalizePermissionDraft(detail.permissions) : defaultCmsPermissionDraft());
+  }, [detail]);
 
   async function refreshCollections(nextSelectedId?: string) {
     const response = await fetch(`${apiBase(siteId)}?locale=${locale}`, { credentials: 'same-origin' });
@@ -215,6 +238,41 @@ export default function ContentManagerClient({
     } finally {
       setBusy(false);
     }
+  }
+
+  async function savePermissions() {
+    if (!detail) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(`${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}?locale=${locale}`, {
+        method: 'PATCH',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ permissions: permissionDraft }),
+      });
+      const result = await response.json() as ApiCollectionDetail;
+      if (!response.ok || !result.ok || !result.detail) {
+        throw new Error(result.issues?.join('\n') || result.error || 'Failed to save permissions.');
+      }
+      setDetail(result.detail);
+      setPermissionDraft(normalizePermissionDraft(result.detail.permissions));
+      await refreshCollections(result.detail.collectionId);
+      setMessage('Permissions updated.');
+    } catch (saveError) {
+      setError(saveError instanceof Error ? saveError.message : 'Failed to save permissions.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  function togglePermissionActor(
+    action: CmsPermissionOperation,
+    actor: BuilderCmsPermissionActor,
+    enabled: boolean,
+  ) {
+    setPermissionDraft((current) => togglePermissionActorValue(current, action, actor, enabled));
   }
 
   async function saveRecord() {
@@ -547,6 +605,69 @@ export default function ContentManagerClient({
                 >
                   Delete collection
                 </button>
+              </div>
+            </section>
+
+            <section className="builder-preview-inspector-card">
+              <h2>Permissions</h2>
+              <div className="builder-dashboard-page-list">
+                {cmsPermissionOperations.map((operation) => (
+                  <article key={operation.action} className="builder-dashboard-page-card">
+                    <div className="builder-dashboard-page-head">
+                      <div>
+                        <strong>{operation.label}</strong>
+                        <span>{operation.hint}</span>
+                      </div>
+                      <span className="builder-stage-pill">
+                        {permissionDraft[operation.action].join(', ')}
+                      </span>
+                    </div>
+                    <div
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+                        gap: 8,
+                        marginTop: 10,
+                      }}
+                    >
+                      {builderCmsPermissionActors.map((actor) => (
+                        <label
+                          key={`${operation.action}-${actor}`}
+                          style={{
+                            alignItems: 'center',
+                            border: '1px solid #e2e8f0',
+                            borderRadius: 8,
+                            color: '#334155',
+                            display: 'flex',
+                            gap: 8,
+                            padding: '8px 10px',
+                          }}
+                        >
+                          <input
+                            type="checkbox"
+                            checked={permissionDraft[operation.action].includes(actor)}
+                            disabled={busy || actor === 'admin'}
+                            onChange={(event) => {
+                              togglePermissionActor(operation.action, actor, event.target.checked);
+                            }}
+                          />
+                          <span>{cmsPermissionActorLabels[actor]}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </article>
+                ))}
+              </div>
+              <div className="builder-dashboard-page-actions" style={{ marginTop: 12 }}>
+                <button
+                  type="button"
+                  className="builder-action-btn builder-action-btn--primary"
+                  onClick={() => void savePermissions()}
+                  disabled={busy}
+                >
+                  Save permissions
+                </button>
+                <span style={{ color: '#64748b', fontSize: 12 }}>Admin remains locked on.</span>
               </div>
             </section>
 
@@ -976,6 +1097,46 @@ function CmsFieldInput({
       />
     </label>
   );
+}
+
+function defaultCmsPermissionDraft(): BuilderCmsPermissions {
+  return {
+    read: ['admin'],
+    create: ['admin'],
+    update: ['admin'],
+    delete: ['admin'],
+  };
+}
+
+function normalizePermissionDraft(permissions: BuilderCmsPermissions): BuilderCmsPermissions {
+  return {
+    read: orderPermissionActors(permissions.read),
+    create: orderPermissionActors(permissions.create),
+    update: orderPermissionActors(permissions.update),
+    delete: orderPermissionActors(permissions.delete),
+  };
+}
+
+function togglePermissionActorValue(
+  permissions: BuilderCmsPermissions,
+  action: CmsPermissionOperation,
+  actor: BuilderCmsPermissionActor,
+  enabled: boolean,
+): BuilderCmsPermissions {
+  const actors = new Set<BuilderCmsPermissionActor>(permissions[action]);
+  if (enabled) actors.add(actor);
+  else actors.delete(actor);
+  actors.add('admin');
+  return {
+    ...permissions,
+    [action]: orderPermissionActors(actors),
+  };
+}
+
+function orderPermissionActors(actors: Iterable<BuilderCmsPermissionActor>): BuilderCmsPermissionActor[] {
+  const actorSet = new Set<BuilderCmsPermissionActor>(actors);
+  actorSet.add('admin');
+  return builderCmsPermissionActors.filter((actor) => actorSet.has(actor));
 }
 
 function apiBase(siteId: string) {

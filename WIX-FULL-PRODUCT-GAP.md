@@ -36,7 +36,7 @@ Tracking file: `WIX-FULL-PRODUCT-CHECKPOINTS.md`.
 | Area | F range | Wix surface | Current status | Required outcome |
 | --- | --- | --- | --- | --- |
 | Product benchmark | F01-F06 | Full Wix scope scoring | Seeded | Versioned scoring rubric, source links, recurring audit checklist |
-| CMS foundations | F07-F16 | Collections, fields, CSV import, permissions | Partial: CRUD, search/sort, CSV, revisions, image fields | Collection CRUD, typed fields, import/export, content manager UI |
+| CMS foundations | F07-F16 | Collections, fields, CSV import, permissions | Partial: CRUD, search/sort, CSV, revisions, image fields, permissions UI/gates | Collection CRUD, typed fields, import/export, content manager UI |
 | Dynamic content | F17-F26 | Datasets, repeaters, dynamic pages | Partial page templates only | Dataset binding, repeater binding, dynamic URLs, SEO per item |
 | Visitor data input | F27-F32 | User input to CMS | Partial forms only | Form-to-collection mapping, moderation, validation, spam/rate controls |
 | App Market architecture | F33-F42 | 800+ apps ecosystem concept | Missing | Local app manifest, install/enable/disable, app settings, widget/runtime hooks |

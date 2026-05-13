@@ -1,7 +1,7 @@
 import type { ColumnPost } from '@/lib/columns';
 import type { FAQItem } from '@/data/faq-content';
 import { siteContent, type SiteContent } from '@/data/site-content';
-import { resolveInsightsDatasetPosts } from '@/lib/builder/datasets';
+import { resolveInsightsDatasetPosts, resolveServicesDatasetItems } from '@/lib/builder/datasets';
 import type { Locale } from '@/lib/locales';
 import type {
   BuilderHomeDocumentState,
@@ -37,12 +37,13 @@ export default function BuilderPublishedHomeRenderer({
 }: BuilderPublishedHomeRendererProps) {
   const services = siteContent[locale].services;
   const resolvedPosts = resolveInsightsDatasetPosts(document, posts);
+  const resolvedServiceItems = resolveServicesDatasetItems(document, locale, posts, state?.serviceItems);
   const resolvedFaqItems = state?.faqItems ?? fallbackFaqItems;
   const resolvedServices = {
     label: services.label,
     title: services.title,
     description: services.description,
-    items: state?.serviceItems ?? services.items,
+    items: resolvedServiceItems,
   };
   const overrides = state?.overrides ?? {};
 

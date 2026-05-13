@@ -92,6 +92,18 @@ export const homeInsightsContentGroups = [
     surfaceIds: [...homeInsightsButtonSurfaceIds],
   },
 ] as const satisfies readonly BuilderSectionContentGroupDefinition[];
+export const homeServicesContentGroups = [
+  {
+    groupKey: 'header',
+    label: 'Services header',
+    surfaceIds: [...homeServicesTextSurfaceIds],
+  },
+  {
+    groupKey: 'list',
+    label: 'Services list',
+    datasetTargetIds: ['home.services.list'],
+  },
+] as const satisfies readonly BuilderSectionContentGroupDefinition[];
 export const homeAttorneyContentGroups = [
   {
     groupKey: 'media',
@@ -176,6 +188,7 @@ export const homeSectionDefinitions: BuilderSectionDefinition[] = [
     componentName: 'ServicesBento',
     description: '업무 분야 카드 섹션',
     supportedTargets: ['text', 'button'],
+    contentGroups: homeServicesContentGroups,
     textSurfaceIds: homeServicesTextSurfaceIds,
   },
   {

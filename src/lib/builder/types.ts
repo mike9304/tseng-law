@@ -10,7 +10,7 @@ export const builderDatasetCollectionIds = [
   'attorney-profiles',
 ] as const;
 export type BuilderDatasetCollectionId = (typeof builderDatasetCollectionIds)[number];
-export const builderDatasetTargetIds = ['home.insights.feed'] as const;
+export const builderDatasetTargetIds = ['home.insights.feed', 'home.services.list'] as const;
 export type BuilderDatasetTargetId = (typeof builderDatasetTargetIds)[number];
 export const builderDatasetModes = ['list'] as const;
 export type BuilderDatasetMode = (typeof builderDatasetModes)[number];

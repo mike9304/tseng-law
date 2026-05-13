@@ -50,9 +50,11 @@ import {
   writeLocalBuilderPublishedSnapshot,
 } from '@/lib/builder/content';
 import {
+  getBuilderBindableTargets,
   getBuilderBindableTarget,
   getBuilderPageDatasetBinding,
   resolveInsightsDatasetPosts,
+  resolveServicesDatasetItems,
 } from '@/lib/builder/datasets';
 import { buildBuilderCollectionHref } from '@/lib/builder/hrefs';
 import {
@@ -695,14 +697,13 @@ export default function BuilderInteractiveHomePreview({
     }),
     [activeCollectionIndex, faqDraftItems, overrides, serviceItems]
   );
-  const insightsDatasetTarget = getBuilderBindableTarget('home.insights.feed');
-  const insightsDatasetBinding = useMemo(
-    () => getBuilderPageDatasetBinding(pageDocument, 'home.insights.feed'),
-    [pageDocument]
-  );
   const insightsDatasetPosts = useMemo(
     () => resolveInsightsDatasetPosts(pageDocument, posts),
     [pageDocument, posts]
+  );
+  const servicesDatasetItems = useMemo(
+    () => resolveServicesDatasetItems(pageDocument, locale, posts, serviceItems),
+    [locale, pageDocument, posts, serviceItems]
   );
   const pageApiBase = `/api/builder/sites/${DEFAULT_BUILDER_SITE_ID}/pages/home`;
   const publicPageHref = `/${locale}`;
@@ -776,6 +777,15 @@ export default function BuilderInteractiveHomePreview({
   );
   const hasMultiSectionSelection =
     selection.targetKind === 'section' && selectedSections.length > 1;
+  const selectedDatasetTargets = useMemo(
+    () =>
+      hasMultiSectionSelection
+        ? []
+        : getBuilderBindableTargets(pageDocument.pageKey).filter(
+            (target) => target.sectionKey === selection.sectionKey
+          ),
+    [hasMultiSectionSelection, pageDocument.pageKey, selection.sectionKey]
+  );
   const sectionByKey = useMemo(
     () => new Map(pageDocument.root.children.map((section) => [section.sectionKey, section] as const)),
     [pageDocument.root.children]
@@ -950,9 +960,9 @@ export default function BuilderInteractiveHomePreview({
       label: canonicalServices.label,
       title: canonicalServices.title,
       description: canonicalServices.description,
-      items: serviceItems,
+      items: servicesDatasetItems,
     }),
-    [canonicalServices.description, canonicalServices.label, canonicalServices.title, serviceItems]
+    [canonicalServices.description, canonicalServices.label, canonicalServices.title, servicesDatasetItems]
   );
   const publishingReadiness = useMemo(
     () =>
@@ -5643,74 +5653,79 @@ export default function BuilderInteractiveHomePreview({
               <p className="builder-preview-editor-note">{editorGuardNotice}</p>
             ) : null}
 
-            {!hasMultiSectionSelection && selection.sectionKey === insightsDatasetTarget.sectionKey ? (
-              <BuilderInspectorStatusCard
-                subtitle="Dataset binding"
-                tone="needs-review"
-                message={`${insightsDatasetTarget.title} is now backed by a persisted dataset contract. This binding is real and changes how many column records the section receives.`}
-                meta={[
-                  {
-                    label: 'target',
-                    value: insightsDatasetBinding.targetId,
-                  },
-                  {
-                    label: 'collection',
-                    value: insightsDatasetBinding.collectionId,
-                  },
-                  {
-                    label: 'mode',
-                    value: insightsDatasetBinding.mode,
-                  },
-                  {
-                    label: 'record limit',
-                    value: String(insightsDatasetBinding.limit ?? insightsDatasetTarget.defaultLimit ?? 0),
-                  },
-                ]}
-                note="WAVE-03-B02 is intentionally narrow: one real bindable target, persisted in the page document, with preview/runtime effect and no fake generic data tab."
-                actions={
-                  <>
-                    {(insightsDatasetTarget.limitOptions ?? []).map((limit) => (
+            {selectedDatasetTargets.map((datasetTarget) => {
+              const datasetBinding = getBuilderPageDatasetBinding(pageDocument, datasetTarget.targetId);
+
+              return (
+                <BuilderInspectorStatusCard
+                  key={datasetTarget.targetId}
+                  subtitle="Dataset binding"
+                  tone="needs-review"
+                  message={`${datasetTarget.title} is backed by a persisted dataset contract. This binding is real and changes how many records the section receives.`}
+                  meta={[
+                    {
+                      label: 'target',
+                      value: datasetBinding.targetId,
+                    },
+                    {
+                      label: 'collection',
+                      value: datasetBinding.collectionId,
+                    },
+                    {
+                      label: 'mode',
+                      value: datasetBinding.mode,
+                    },
+                    {
+                      label: 'record limit',
+                      value: String(datasetBinding.limit ?? datasetTarget.defaultLimit ?? 0),
+                    },
+                  ]}
+                  note="Dataset targets are persisted in the page document and applied in both editor preview and published runtime."
+                  actions={
+                    <>
+                      {(datasetTarget.limitOptions ?? []).map((limit) => (
+                        <button
+                          key={limit}
+                          type="button"
+                          className={`builder-action-btn${
+                            (datasetBinding.limit ?? datasetTarget.defaultLimit) === limit
+                              ? ' builder-action-btn--primary'
+                              : ''
+                          }`}
+                          onClick={() =>
+                            updateDatasetLimit(
+                              datasetTarget.targetId,
+                              limit,
+                              `Set ${datasetTarget.title} dataset limit to ${limit}`
+                            )
+                          }
+                        >
+                          {limit} records
+                        </button>
+                      ))}
                       <button
-                        key={limit}
                         type="button"
-                        className={`builder-action-btn${
-                          (insightsDatasetBinding.limit ?? insightsDatasetTarget.defaultLimit) === limit
-                            ? ' builder-action-btn--primary'
-                            : ''
-                        }`}
+                        className="builder-action-btn"
                         onClick={() =>
-                          updateDatasetLimit(
-                            insightsDatasetTarget.targetId,
-                            limit,
-                            `Set insights dataset limit to ${limit}`
+                          resetDatasetBinding(
+                            datasetTarget.targetId,
+                            `Reset ${datasetTarget.title} dataset binding`
                           )
                         }
                       >
-                        {limit} records
+                        Reset binding
                       </button>
-                    ))}
-                    <button
-                      type="button"
-                      className="builder-action-btn"
-                      onClick={() =>
-                        resetDatasetBinding(
-                          insightsDatasetTarget.targetId,
-                          'Reset insights dataset binding'
-                        )
-                      }
-                    >
-                      Reset binding
-                    </button>
-                    <Link
-                      href={buildBuilderCollectionHref(locale, insightsDatasetBinding.collectionId)}
-                      className="builder-action-btn"
-                    >
-                      Open collection detail
-                    </Link>
-                  </>
-                }
-              />
-            ) : null}
+                      <Link
+                        href={buildBuilderCollectionHref(locale, datasetBinding.collectionId)}
+                        className="builder-action-btn"
+                      >
+                        Open collection detail
+                      </Link>
+                    </>
+                  }
+                />
+              );
+            })}
 
             <BuilderInspectorStatusCard
               variant="readiness"
@@ -9475,17 +9490,21 @@ function collectStructuralChanges(
     });
   }
 
-  const leftInsightsBinding = formatDatasetBindingSummary(left.document, 'home.insights.feed');
-  const rightInsightsBinding = formatDatasetBindingSummary(right.document, 'home.insights.feed');
-  if (leftInsightsBinding !== rightInsightsBinding) {
-    changes.push({
-      sectionKey: 'home.insights',
-      sectionTitle: homeSectionRegistry['home.insights'].title,
-      group: 'dataset',
-      label: 'Insights dataset binding',
-      leftValue: leftInsightsBinding,
-      rightValue: rightInsightsBinding,
-    });
+  for (const targetId of ['home.insights.feed', 'home.services.list'] satisfies BuilderDatasetTargetId[]) {
+    const target = getBuilderBindableTarget(targetId);
+    const leftBinding = formatDatasetBindingSummary(left.document, targetId);
+    const rightBinding = formatDatasetBindingSummary(right.document, targetId);
+
+    if (leftBinding !== rightBinding) {
+      changes.push({
+        sectionKey: target.sectionKey,
+        sectionTitle: homeSectionRegistry[target.sectionKey].title,
+        group: 'dataset',
+        label: `${target.title} dataset binding`,
+        leftValue: leftBinding,
+        rightValue: rightBinding,
+      });
+    }
   }
 
   return changes;

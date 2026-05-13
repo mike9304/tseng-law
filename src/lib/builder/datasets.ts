@@ -1,9 +1,11 @@
 import type { ColumnPost } from '@/lib/columns';
+import { serviceAreas } from '@/data/service-details';
 import type { Locale } from '@/lib/locales';
 import type {
   BuilderDatasetCollectionId,
   BuilderDatasetMode,
   BuilderDatasetTargetId,
+  BuilderServiceItem,
   BuilderPageDatasetBinding,
   BuilderPageDocument,
   BuilderPageKey,
@@ -59,6 +61,20 @@ const builderBindableTargetDefinitions: readonly BuilderBindableTargetDefinition
     defaultCollectionId: 'columns',
     defaultLimit: 4,
     limitOptions: [4, 7, 10],
+    runtimeStatus: 'runtime-applied',
+  },
+  {
+    targetId: 'home.services.list',
+    pageKey: 'home',
+    sectionKey: 'home.services',
+    title: 'Services list',
+    description:
+      'Service cards on the home page. This binding is real and controls how many service-area records the section receives.',
+    collectionIds: ['service-areas'],
+    mode: 'list',
+    defaultCollectionId: 'service-areas',
+    defaultLimit: 6,
+    limitOptions: [3, 6],
     runtimeStatus: 'runtime-applied',
   },
 ] as const;
@@ -231,6 +247,32 @@ export function resolveInsightsDatasetPosts(
   return posts.slice(0, limit);
 }
 
+export function resolveServicesDatasetItems(
+  document: Pick<BuilderPageDocument, 'pageKey' | 'datasets'>,
+  locale: Locale,
+  posts: ColumnPost[],
+  sourceItems?: BuilderServiceItem[]
+): BuilderServiceItem[] {
+  const binding = getBuilderPageDatasetBinding(document, 'home.services.list');
+  const limit = normalizeLimit(binding.limit, getBuilderBindableTarget('home.services.list').defaultLimit);
+  if (sourceItems && sourceItems.length > 0) {
+    return sourceItems.slice(0, limit);
+  }
+
+  const postsBySlug = new Map(posts.map((post) => [post.slug, post] as const));
+
+  return serviceAreas.slice(0, limit).map((service) => ({
+    title: service.title[locale],
+    description: service.subtitle[locale],
+    href: `/${locale}/services#${service.slug}`,
+    details: service.keyPoints[locale].slice(0, 5),
+    relatedColumns: service.columnSlugs.map((slug) => ({
+      slug,
+      title: postsBySlug.get(slug)?.title ?? slug,
+    })),
+  }));
+}
+
 function readBuilderDatasetSampleRecords(
   targetId: BuilderDatasetTargetId,
   binding: BuilderPageDatasetBinding,
@@ -245,6 +287,15 @@ function readBuilderDatasetSampleRecords(
         secondaryLabel: `${post.categoryLabel} · ${post.dateDisplay || post.date}`,
         routePath: `/${locale}/columns/${post.slug}`,
       }));
+    case 'home.services.list':
+      return serviceAreas
+        .slice(0, normalizeLimit(binding.limit, getBuilderBindableTarget(targetId).defaultLimit))
+        .map((service) => ({
+          recordId: service.slug,
+          primaryLabel: service.title[locale],
+          secondaryLabel: service.subtitle[locale],
+          routePath: `/${locale}/services/${service.slug}`,
+        }));
     default:
       return assertNever(targetId);
   }

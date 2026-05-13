@@ -12,7 +12,6 @@ import BuilderReadonlyHomePreview from '@/components/builder/BuilderReadonlyHome
 import BuilderReadonlyPagePreview from '@/components/builder/BuilderReadonlyPagePreview';
 import {
   readBuilderPageDatasetOverviews,
-  resolveInsightsDatasetPosts,
 } from '@/lib/builder/datasets';
 import {
   buildBuilderPageHref,
@@ -72,8 +71,6 @@ export default async function BuilderPageRoute({ params, searchParams }: Builder
   const overview = await readBuilderSiteOverview(locale);
   const snapshot = await readPreferredBuilderPreviewSnapshot(pageKey, locale);
   const allPosts = pageKey === 'home' ? await getAllColumnPostsIncludingBlob(locale) : [];
-  const resolvedPosts =
-    pageKey === 'home' ? resolveInsightsDatasetPosts(snapshot.snapshot.document, allPosts) : [];
   const faqItems = pageKey === 'home' ? faqContent[locale] : null;
   const datasetOverviews = readBuilderPageDatasetOverviews(
     pageKey,
@@ -108,7 +105,7 @@ export default async function BuilderPageRoute({ params, searchParams }: Builder
         <BuilderInteractiveHomePreview
           locale={locale}
           document={snapshot.snapshot.document}
-          posts={resolvedPosts}
+          posts={allPosts}
           faqItems={faqItems}
           presentation="embedded"
         />
@@ -146,7 +143,7 @@ function renderReadonlyPage({
         <BuilderReadonlyHomePreview
           locale={locale}
           document={snapshotDocument}
-          posts={resolveInsightsDatasetPosts(snapshotDocument, allPosts)}
+          posts={allPosts}
           faqItems={faqItems}
           state={snapshotState as BuilderHomeDocumentState}
         />

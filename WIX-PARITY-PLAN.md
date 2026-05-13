@@ -109,3 +109,4 @@
 | M105 | QA    | Editor modal/focus regression sweep | W03,W216,W225 | 1h | M104 | 🟡 inline text/pageId focus + preview/layer suites 3 passed / 사용자 QA 대기 |
 | M106 | QA    | Editor a11y/chrome/mobile sweep | W40,W216,W225 | 1h | M105 | 🟡 axe core states + chrome click + mobile inspector 3 passed / 사용자 QA 대기 |
 | M107 | QA    | SEO/history/save-section focus sweep | W84,W186,W195,W216,W225 | 1h | M106 | 🟡 SEO/history/save-section focus traps 3 passed / 사용자 QA 대기 |
+| M108 | QA    | Publish/metadata E2E sweep | W26,W27,W28,W187,W192,W193,W195 | 1h | M107 | 🟡 publish/head/robots/JSON-LD/hreflang/diff/UI click 6 passed / 사용자 QA 대기 |

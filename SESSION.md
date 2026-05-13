@@ -5679,3 +5679,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus|save section modal" --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - publish/metadata 긴 E2E slice를 나눠서 최신 코드에서 계속 재검증한다.
+
+## 2026-05-13 Codex /goal M108 Publish/metadata E2E sweep
+
+- publish/metadata 긴 E2E slice를 최신 코드에서 나눠 재실행했다.
+- 제품 코드는 변경하지 않았다. M108은 W26/W27/W28/W187/W192/W193/W195에 대한 검증 증거 기록이다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "W26 rollback|custom robots|structured data|hreflang|publish dialog" --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - W26 rollback, W27 public head metadata, W28 publish blockers.
+  - W187 custom robots.txt settings/public route output.
+  - W192 structured data JSON-LD public output.
+  - W193 hreflang public metadata output.
+  - W195 publish dialog draft-vs-published diff summary.
+- 다음 후보:
+  - media/asset/gallery/motion 계열의 최신 E2E sweep으로 이어간다.

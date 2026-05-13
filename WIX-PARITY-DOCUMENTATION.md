@@ -2286,3 +2286,14 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus|save section modal" --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W84/W186/W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. SEO panel, version history restore confirmation, save-section modal focus trap/restore 경로를 최신 코드에서 다시 통과시켰다.
+
+## M108 — Publish/metadata E2E sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M108 검증 증거만 기록했다. 제품 코드는 변경하지 않았다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "W26 rollback|custom robots|structured data|hreflang|publish dialog" --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "actual editor UI clicks" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W26/W27/W28/W187/W192/W193/W195는 `자동검증 통과 / 사용자 QA 대기` 유지. rollback, public head metadata, publish blockers, custom robots.txt, structured data JSON-LD, hreflang, publish diff dialog를 최신 코드에서 다시 통과시켰다.

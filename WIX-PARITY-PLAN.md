@@ -144,3 +144,4 @@
 | M140 | Refactor | SandboxCatalogPanel preset data split | W14,W18,W84,W216 | 1h | M139 | 🟡 SandboxCatalogPanel 2659→1239 LOC + typecheck/template E2E 4 passed / 사용자 QA 대기 |
 | M141 | Refactor | SandboxCatalogPanel widget section split | W14,W18,W84,W216 | 1h | M140 | 🟡 SandboxCatalogPanel 1239→906 LOC + typecheck/template E2E 4 passed / 사용자 QA 대기 |
 | M142 | Refactor | SeoPanel style split | W195,W216,W225 | 1h | M141 | 🟡 SeoPanel 1534→1376 LOC + typecheck/SEO focus E2E passed / 사용자 QA 대기 |
+| M143 | Refactor | SiteSettingsModal style split | W184,W216,W225 | 1h | M142 | 🟡 SiteSettingsModal 1644→1556 LOC + typecheck/settings E2E passed / 사용자 QA 대기 |

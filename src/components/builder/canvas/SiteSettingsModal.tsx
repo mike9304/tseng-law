@@ -57,6 +57,20 @@ import {
   type BrandKit,
 } from '@/lib/builder/site/theme';
 import { resolveTypographyScale } from '@/lib/builder/site/typography-scale';
+import {
+  cancelBtnStyle,
+  fieldStyle,
+  formStyle,
+  inputStyle,
+  labelStyle,
+  presetButtonStyle,
+  presetCardStyle,
+  presetGridStyle,
+  saveBtnStyle,
+  sectionHeadingStyle,
+  sectionStyle,
+  twoColumnStyle,
+} from './SiteSettingsModal.styles';
 
 interface SiteSettingsForm {
   firmName: string;
@@ -98,108 +112,6 @@ const EMPTY_SETTINGS: SiteSettingsForm = {
   ogImage: '',
   pageTransition: 'none',
   pageTransitionDurationMs: 280,
-};
-
-const formStyle: React.CSSProperties = {
-  flex: 1,
-  overflowY: 'auto',
-  padding: '16px 20px',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 20,
-};
-
-const sectionStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 12,
-};
-
-const sectionHeadingStyle: React.CSSProperties = {
-  fontSize: '0.76rem',
-  fontWeight: 700,
-  letterSpacing: '0.05em',
-  textTransform: 'uppercase',
-  color: '#64748b',
-};
-
-const fieldStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-};
-
-const labelStyle: React.CSSProperties = {
-  fontSize: '0.78rem',
-  fontWeight: 600,
-  color: '#334155',
-};
-
-const inputStyle: React.CSSProperties = {
-  padding: '8px 12px',
-  border: '1px solid #e2e8f0',
-  borderRadius: 8,
-  fontSize: '0.85rem',
-  color: '#0f172a',
-  outline: 'none',
-  transition: 'border-color 150ms ease',
-  boxSizing: 'border-box',
-};
-
-const twoColumnStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
-  gap: 12,
-};
-
-const cancelBtnStyle: React.CSSProperties = {
-  padding: '8px 18px',
-  fontSize: '0.82rem',
-  fontWeight: 600,
-  border: '1px solid #cbd5e1',
-  borderRadius: 8,
-  background: '#fff',
-  color: '#334155',
-  cursor: 'pointer',
-};
-
-const saveBtnStyle: React.CSSProperties = {
-  padding: '8px 18px',
-  fontSize: '0.82rem',
-  fontWeight: 600,
-  border: 'none',
-  borderRadius: 8,
-  background: '#116dff',
-  color: '#fff',
-  cursor: 'pointer',
-  transition: 'background 120ms ease',
-};
-
-const presetGridStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-  gap: 10,
-};
-
-const presetCardStyle: React.CSSProperties = {
-  border: '1px solid #e2e8f0',
-  borderRadius: 10,
-  background: '#fff',
-  padding: 12,
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 10,
-};
-
-const presetButtonStyle: React.CSSProperties = {
-  padding: '7px 10px',
-  border: '1px solid #cbd5e1',
-  borderRadius: 7,
-  background: '#f8fafc',
-  color: '#0f172a',
-  fontSize: '0.78rem',
-  fontWeight: 700,
-  cursor: 'pointer',
 };
 
 interface FieldDef {

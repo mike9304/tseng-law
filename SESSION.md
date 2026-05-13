@@ -6178,3 +6178,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - SEO panel focus trap/restore path.
 - 다음 후보:
   - `SeoPanel.tsx`의 Advanced/Hreflang/Assistant 탭 중 하나를 별도 subview로 분리하거나 `SiteSettingsModal.tsx` style/form section split을 진행한다.
+
+## 2026-05-13 Codex /goal M143 SiteSettingsModal style split
+
+- `SiteSettingsModal.tsx`의 Site Settings form/section/field/input/preset card/grid/button style constants를 `SiteSettingsModal.styles.ts`로 분리했다.
+- `SiteSettingsModal.tsx`는 settings fetch/save, theme/brand/mobile/typography state logic과 tab content 렌더링 중심으로 남겼고, LOC는 1644에서 1556으로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts -g "persists typography scale" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Site Settings Typography scale persistence, inspector style source chip path.
+- 다음 후보:
+  - `SiteSettingsModal.tsx`의 General/Mobile/Presets 탭 subview 분리 또는 `SeoPanel.tsx` Advanced/Hreflang/Assistant 탭 subview 분리를 진행한다.

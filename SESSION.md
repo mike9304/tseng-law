@@ -5779,3 +5779,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - stale-tab page deletion reconciliation with concurrent page additions preserved.
 - 다음 후보:
   - visual/office-map/public smoke 또는 bookings/forms 쪽 dirty worktree와 충돌하지 않는 검증을 계속 진행한다.
+
+## 2026-05-13 Codex /goal M115 Forms/upload/webhook unit sweep
+
+- forms/upload/webhook 관련 단위 테스트를 최신 dirty worktree 기준으로 실행했다.
+- 제품 코드는 변경하지 않았다. `src/app/api/forms/submit/route.ts`, `src/lib/builder/forms/uploads.ts`, `src/lib/builder/forms/webhook-retry.ts`에 별도 dirty diff가 있는 상태라 검증만 수행했다.
+- 검증:
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/validation.test.ts src/lib/builder/forms/__tests__/conditional.test.ts src/lib/builder/canvas/__tests__/upload-validation.test.ts src/lib/builder/webhooks/__tests__/signature.test.ts` ✅ (5 files, 43 tests passed)
+- 확인된 커버리지:
+  - `/api/forms/submit` stored schema validation, signature data URL materialization, submission file metadata.
+  - form validation/conditional logic.
+  - upload MIME sniffing and size rejection.
+  - outbound webhook HMAC signature helper.
+- 다음 후보:
+  - bookings admin/runtime E2E와 bookings domain unit tests를 최신 상태로 재검증한다.

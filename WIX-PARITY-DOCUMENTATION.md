@@ -2372,3 +2372,13 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/cross-tab-delete-race.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W05/W09/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. empty canvas/pages/assets/blog feed, save failure blocking, auth expiry, IME blur commit, long Korean text wrapping, stale-tab page deletion reconciliation을 최신 코드에서 통과시켰다.
+
+## M115 — Forms/upload/webhook unit sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M115 검증 증거만 기록했다. 제품 코드는 변경하지 않았다.
+- 검증:
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/validation.test.ts src/lib/builder/forms/__tests__/conditional.test.ts src/lib/builder/canvas/__tests__/upload-validation.test.ts src/lib/builder/webhooks/__tests__/signature.test.ts` ✅ (5 files, 43 tests passed)
+- W 판정:
+  - W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. form submit validation/signature materialization, conditional/validation logic, upload MIME/size validation, webhook signature helper를 최신 코드에서 통과시켰다.

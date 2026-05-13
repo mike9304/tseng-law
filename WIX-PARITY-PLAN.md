@@ -133,3 +133,4 @@
 | M129 | Refactor | SandboxPage feedback/chrome split | W216,W225 | 1h | M128 | 🟡 SandboxPage 864→743 LOC + typecheck/chrome E2E passed / 사용자 QA 대기 |
 | M130 | Refactor | TemplateGalleryModal style split | W14,W18,W216 | 1h | M129 | 🟡 TemplateGalleryModal 800→594 LOC + typecheck/design E2E passed / 사용자 QA 대기 |
 | M131 | Refactor | VersionHistoryPanel style split | W195,W216,W225 | 1h | M130 | 🟡 VersionHistoryPanel 883→610 LOC + typecheck/history E2E passed / 사용자 QA 대기 |
+| M132 | Refactor | PageSwitcher helper/style split | W14,W18,W216,W225 | 1h | M131 | 🟡 PageSwitcher 1037→756 LOC + typecheck/template E2E 12 passed / 사용자 QA 대기 |

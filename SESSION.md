@@ -6035,3 +6035,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - version history panel focus trap, restore confirmation keyboard path.
 - 다음 후보:
   - `CanvasNode.tsx`/`CanvasContainer.tsx` 중 900~1000줄대 파일에서 UI helper나 pointer subview를 작은 단위로 분리한다.
+
+## 2026-05-13 Codex /goal M132 PageSwitcher helper/style split
+
+- `PageSwitcher.tsx`의 row/menu/edit/empty/clipboard/columns quick card style constants를 `PageSwitcher.styles.ts`로 분리했다.
+- slug prompt focusable selector와 API error parser는 `PageSwitcher.helpers.ts`로 분리했다.
+- pages/template CRUD and focus logic은 기존 파일에 유지했고, `PageSwitcher.tsx` LOC는 1037에서 756으로 내려갔다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - section template click stability, page template showroom, slug prompt focus/back path, template create/rename/delete sync, duplicate slug recovery.
+- 다음 후보:
+  - `CanvasContainer.tsx` pointer/helper split 또는 `CanvasNode.tsx` quick edit state extraction 중 실제 리스크가 낮은 쪽을 선별한다.

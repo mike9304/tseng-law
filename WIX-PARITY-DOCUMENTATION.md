@@ -2631,3 +2631,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "version history" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. version history panel focus trap과 restore confirmation path를 latest code에서 통과시켰다.
+
+## M132 — PageSwitcher helper/style split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/PageSwitcher.styles.ts` — page switcher row/menu/edit/empty/clipboard/columns quick card style constants를 별도 파일로 분리했다.
+  - `src/components/builder/canvas/PageSwitcher.helpers.ts` — slug prompt focusable selector와 API error response parser를 분리했다.
+  - `src/components/builder/canvas/PageSwitcher.tsx` — pages/template CRUD and focus logic만 남기고 styles/helpers를 import한다. 파일 길이는 1037줄에서 756줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M132 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. page template showroom, slug prompt focus trap/back path, create/rename/delete sync, duplicate slug recovery를 latest code에서 통과시켰다.

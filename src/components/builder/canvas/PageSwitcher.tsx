@@ -4,16 +4,36 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import TemplateGalleryModal from './TemplateGalleryModal';
-
-const FOCUSABLE_SELECTOR = [
-  'a[href]:not([tabindex="-1"])',
-  'button:not([disabled]):not([tabindex="-1"])',
-  'input:not([disabled]):not([tabindex="-1"]):not([type="hidden"])',
-  'select:not([disabled]):not([tabindex="-1"])',
-  'textarea:not([disabled]):not([tabindex="-1"])',
-  '[tabindex]:not([tabindex="-1"])',
-  '[contenteditable="true"]:not([tabindex="-1"])',
-].join(',');
+import { FOCUSABLE_SELECTOR, readPageResponseError } from './PageSwitcher.helpers';
+import {
+  actionDotsStyle,
+  addButtonStyle,
+  clipboardPillStyle,
+  columnsQuickActionsStyle,
+  columnsQuickButtonStyle,
+  columnsQuickCardStyle,
+  columnsQuickMetaStyle,
+  columnsQuickTitleStyle,
+  containerStyle,
+  editContainerStyle,
+  editHintStyle,
+  editInputStyle,
+  emptyStateCopyStyle,
+  emptyStateStyle,
+  emptyStateTitleStyle,
+  headerLabelStyle,
+  headerStyle,
+  homeBadgeStyle,
+  menuItemStyle,
+  menuStyle,
+  moreButtonBaseStyle,
+  pageButtonStyle,
+  pageRowStyle,
+  slugStyle,
+  statusDotStyle,
+  statusMessageStyle,
+  titleTextStyle,
+} from './PageSwitcher.styles';
 
 interface PageMeta {
   pageId: string;
@@ -30,307 +50,6 @@ interface ColumnQuickSummary {
   posts: Array<{ slug: string; title: string }>;
   error: string | null;
 }
-
-const containerStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-  padding: '8px 0',
-};
-
-const headerStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: '0 8px',
-  marginBottom: 4,
-};
-
-const headerLabelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#64748b',
-};
-
-const addButtonStyle: React.CSSProperties = {
-  padding: '2px 10px',
-  fontSize: '0.75rem',
-  fontWeight: 600,
-  border: '1px solid #cbd5e1',
-  borderRadius: 6,
-  background: '#fff',
-  color: '#334155',
-  cursor: 'pointer',
-};
-
-function pageRowStyle(active: boolean): React.CSSProperties {
-  return {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 6,
-    padding: '2px 6px',
-    borderRadius: 8,
-    border: active ? '1px solid #123b63' : '1px solid transparent',
-    background: active ? '#eff6ff' : 'transparent',
-    transition: 'background 150ms ease, border-color 150ms ease',
-    position: 'relative',
-  };
-}
-
-function pageButtonStyle(active: boolean): React.CSSProperties {
-  return {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 8,
-    minWidth: 0,
-    flex: 1,
-    padding: '6px 4px',
-    border: 'none',
-    background: 'transparent',
-    cursor: 'pointer',
-    fontSize: '0.82rem',
-    fontWeight: active ? 600 : 400,
-    color: active ? '#123b63' : '#334155',
-    textAlign: 'left',
-  };
-}
-
-const moreButtonBaseStyle: React.CSSProperties = {
-  width: 28,
-  height: 28,
-  borderRadius: 6,
-  border: 'none',
-  background: 'transparent',
-  color: '#64748b',
-  cursor: 'pointer',
-  fontSize: '1rem',
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  transition: 'opacity 120ms ease, background 120ms ease',
-};
-
-const menuStyle: React.CSSProperties = {
-  position: 'absolute',
-  top: '100%',
-  right: 0,
-  marginTop: 6,
-  minWidth: 120,
-  background: '#fff',
-  border: '1px solid #e2e8f0',
-  borderRadius: 10,
-  boxShadow: '0 12px 30px rgba(15, 23, 42, 0.16)',
-  padding: 4,
-  zIndex: 30,
-};
-
-function menuItemStyle(destructive = false, disabled = false): React.CSSProperties {
-  return {
-    width: '100%',
-    padding: '8px 10px',
-    border: 'none',
-    borderRadius: 8,
-    background: 'transparent',
-    color: disabled ? '#94a3b8' : destructive ? '#b91c1c' : '#334155',
-    fontSize: '0.8rem',
-    fontWeight: 500,
-    textAlign: 'left',
-    cursor: disabled ? 'not-allowed' : 'pointer',
-  };
-}
-
-function readPageErrorMessage(payload: unknown, fallback: string): string {
-  if (!payload || typeof payload !== 'object') return fallback;
-  const body = payload as {
-    error?: unknown;
-    message?: unknown;
-    issues?: unknown;
-    validation?: unknown;
-  };
-
-  if (body.error === 'duplicate_slug') {
-    return '같은 locale 안에 동일한 slug를 쓰는 페이지가 있습니다.';
-  }
-
-  const issueSource = Array.isArray(body.issues)
-    ? body.issues
-    : Array.isArray(body.validation)
-      ? body.validation
-      : [];
-  const firstIssue = issueSource.find((issue): issue is { message?: unknown; fixHint?: unknown; field?: unknown } => (
-    Boolean(issue) && typeof issue === 'object'
-  ));
-  if (firstIssue) {
-    if (typeof firstIssue.message === 'string' && firstIssue.message.trim()) {
-      return firstIssue.message;
-    }
-    if (typeof firstIssue.fixHint === 'string' && firstIssue.fixHint.trim()) {
-      return firstIssue.fixHint;
-    }
-  }
-
-  if (typeof body.message === 'string' && body.message.trim()) return body.message;
-  if (typeof body.error === 'string' && body.error.trim()) return body.error;
-  return fallback;
-}
-
-async function readPageResponseError(response: Response, fallback: string): Promise<string> {
-  const payload = await response.json().catch(() => null) as unknown;
-  return readPageErrorMessage(payload, fallback);
-}
-
-const editContainerStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 8,
-  width: '100%',
-  padding: '8px 6px',
-};
-
-const editInputStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '8px 10px',
-  border: '1px solid #cbd5e1',
-  borderRadius: 8,
-  fontSize: '0.82rem',
-  color: '#0f172a',
-  outline: 'none',
-  boxSizing: 'border-box',
-};
-
-const editHintStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  color: '#64748b',
-};
-
-const statusMessageStyle: React.CSSProperties = {
-  padding: '0 8px 4px',
-  fontSize: '0.75rem',
-  color: '#b91c1c',
-};
-
-const emptyStateStyle: React.CSSProperties = {
-  display: 'grid',
-  gap: 8,
-  margin: '4px 8px',
-  padding: 12,
-  border: '1px dashed #cbd5e1',
-  borderRadius: 10,
-  background: '#f8fafc',
-  color: '#334155',
-};
-
-const emptyStateTitleStyle: React.CSSProperties = {
-  fontSize: '0.82rem',
-  fontWeight: 800,
-  color: '#0f172a',
-};
-
-const emptyStateCopyStyle: React.CSSProperties = {
-  fontSize: '0.73rem',
-  lineHeight: 1.45,
-  color: '#64748b',
-};
-
-const titleTextStyle: React.CSSProperties = {
-  minWidth: 0,
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-};
-
-const homeBadgeStyle: React.CSSProperties = {
-  fontSize: '0.65rem',
-  color: '#123b63',
-  fontWeight: 700,
-};
-
-const actionDotsStyle: React.CSSProperties = {
-  fontSize: '0.9rem',
-  lineHeight: 1,
-};
-
-const slugStyle: React.CSSProperties = {
-  fontSize: '0.7rem',
-  color: '#475569',
-  marginLeft: 'auto',
-  flexShrink: 0,
-};
-
-const statusDotStyle = (published: boolean): React.CSSProperties => ({
-  width: 6,
-  height: 6,
-  borderRadius: '50%',
-  background: published ? '#22c55e' : '#e2e8f0',
-  flexShrink: 0,
-});
-
-const clipboardPillStyle: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  alignSelf: 'flex-start',
-  gap: 6,
-  minHeight: 24,
-  margin: '0 8px 8px',
-  padding: '0 9px',
-  border: '1px solid #bfdbfe',
-  borderRadius: 999,
-  background: '#eff6ff',
-  color: '#1d4ed8',
-  fontSize: '0.72rem',
-  fontWeight: 800,
-};
-
-const columnsQuickCardStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: '1fr',
-  gap: 8,
-  margin: '0 8px 10px',
-  padding: 10,
-  border: '1px solid #bfdbfe',
-  borderRadius: 10,
-  background: '#eff6ff',
-  color: '#0f172a',
-};
-
-const columnsQuickTitleStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 8,
-  fontSize: '0.8rem',
-  fontWeight: 800,
-};
-
-const columnsQuickMetaStyle: React.CSSProperties = {
-  color: '#475569',
-  fontSize: '0.72rem',
-  fontWeight: 600,
-};
-
-const columnsQuickActionsStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-  gap: 6,
-};
-
-const columnsQuickButtonStyle: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  minHeight: 30,
-  padding: '0 8px',
-  border: '1px solid #93c5fd',
-  borderRadius: 8,
-  background: '#fff',
-  color: '#1d4ed8',
-  fontSize: '0.73rem',
-  fontWeight: 800,
-  textDecoration: 'none',
-  cursor: 'pointer',
-};
 
 export default function PageSwitcher({
   locale,

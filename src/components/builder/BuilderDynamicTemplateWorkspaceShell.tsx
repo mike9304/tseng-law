@@ -16,11 +16,13 @@ export default function BuilderDynamicTemplateWorkspaceShell({
   overview,
   detail,
   draft,
+  published,
 }: {
   locale: Locale;
   overview: BuilderSiteOverview;
   detail: BuilderDynamicTemplateDetail;
   draft: BuilderDynamicTemplateDraftReadResult;
+  published: BuilderDynamicTemplateDraftReadResult;
 }) {
   return (
     <BuilderWorkspaceFrame
@@ -168,6 +170,7 @@ export default function BuilderDynamicTemplateWorkspaceShell({
                 <span>Record-scoped preview contract</span>
                 <span>SEO preview binding</span>
                 <span>{draft.persisted ? `Draft v${draft.snapshot.revision}` : 'Unsaved draft default'}</span>
+                <span>{published.persisted ? `Published v${published.snapshot.revision}` : 'Not published'}</span>
               </div>
             </article>
           </div>
@@ -181,7 +184,12 @@ export default function BuilderDynamicTemplateWorkspaceShell({
           </p>
         </section>
       </div>
-      <BuilderDynamicTemplateEditorSurface detail={detail} draft={draft} locale={locale} />
+      <BuilderDynamicTemplateEditorSurface
+        detail={detail}
+        draft={draft}
+        published={published}
+        locale={locale}
+      />
     </BuilderWorkspaceFrame>
   );
 }

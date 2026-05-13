@@ -5,7 +5,10 @@ import {
   decodeBuilderDynamicTemplateParam,
   readBuilderDynamicTemplateDetail,
 } from '@/lib/builder/dynamic-templates';
-import { readBuilderDynamicTemplateDraft } from '@/lib/builder/dynamic-template-drafts';
+import {
+  readBuilderDynamicTemplateDraft,
+  readBuilderDynamicTemplatePublished,
+} from '@/lib/builder/dynamic-template-drafts';
 import { readBuilderSiteOverview } from '@/lib/builder/site';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
@@ -39,10 +42,11 @@ export default async function BuilderDynamicTemplateDetailPage({
     notFound();
   }
 
-  const [overview, detail, draft] = await Promise.all([
+  const [overview, detail, draft, published] = await Promise.all([
     readBuilderSiteOverview(locale),
     Promise.resolve(readBuilderDynamicTemplateDetail(templateId, locale)),
     readBuilderDynamicTemplateDraft(templateId, locale),
+    readBuilderDynamicTemplatePublished(templateId, locale),
   ]);
 
   return (
@@ -51,6 +55,7 @@ export default async function BuilderDynamicTemplateDetailPage({
       overview={overview}
       detail={detail}
       draft={draft}
+      published={published}
     />
   );
 }

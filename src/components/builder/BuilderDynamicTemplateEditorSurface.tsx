@@ -12,10 +12,12 @@ import type { Locale } from '@/lib/locales';
 export default function BuilderDynamicTemplateEditorSurface({
   detail,
   draft,
+  published,
   locale,
 }: {
   detail: BuilderDynamicTemplateDetail;
   draft: BuilderDynamicTemplateDraftReadResult;
+  published: BuilderDynamicTemplateDraftReadResult;
   locale: Locale;
 }) {
   const initialDraftState = draft.snapshot.state;
@@ -29,9 +31,17 @@ export default function BuilderDynamicTemplateEditorSurface({
     savedAt: draft.snapshot.savedAt,
     updatedBy: draft.snapshot.updatedBy,
   }));
+  const [publishedMeta, setPublishedMeta] = useState(() => ({
+    persisted: published.persisted,
+    revision: published.snapshot.revision,
+    savedAt: published.snapshot.savedAt,
+    updatedBy: published.snapshot.updatedBy,
+  }));
   const [savedSignature, setSavedSignature] = useState(() => serializeDraftState(initialDraftState));
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [publishStatus, setPublishStatus] = useState<'idle' | 'publishing' | 'published' | 'error'>('idle');
+  const [publishError, setPublishError] = useState<string | null>(null);
 
   useEffect(() => {
     setVisibleBlockIds(new Set(draft.snapshot.state.visibleBlockIds));
@@ -42,9 +52,17 @@ export default function BuilderDynamicTemplateEditorSurface({
       savedAt: draft.snapshot.savedAt,
       updatedBy: draft.snapshot.updatedBy,
     });
+    setPublishedMeta({
+      persisted: published.persisted,
+      revision: published.snapshot.revision,
+      savedAt: published.snapshot.savedAt,
+      updatedBy: published.snapshot.updatedBy,
+    });
     setSavedSignature(serializeDraftState(draft.snapshot.state));
     setSaveStatus('idle');
     setSaveError(null);
+    setPublishStatus('idle');
+    setPublishError(null);
   }, [
     detail.templateId,
     draft.persisted,
@@ -53,6 +71,10 @@ export default function BuilderDynamicTemplateEditorSurface({
     draft.snapshot.state,
     draft.snapshot.updatedBy,
     locale,
+    published.persisted,
+    published.snapshot.revision,
+    published.snapshot.savedAt,
+    published.snapshot.updatedBy,
   ]);
 
   const selectedRecord =
@@ -75,6 +97,11 @@ export default function BuilderDynamicTemplateEditorSurface({
   );
   const draftChanged = currentSignature !== savedSignature;
   const canSave = saveStatus !== 'saving' && (!draftMeta.persisted || draftChanged);
+  const canPublish =
+    draftMeta.persisted &&
+    !draftChanged &&
+    saveStatus !== 'saving' &&
+    publishStatus !== 'publishing';
 
   async function handleSaveDraft() {
     if (!canSave) return;
@@ -120,6 +147,44 @@ export default function BuilderDynamicTemplateEditorSurface({
     }
   }
 
+  async function handlePublishTemplate() {
+    if (!canPublish) return;
+
+    setPublishStatus('publishing');
+    setPublishError(null);
+
+    try {
+      const response = await fetch(
+        `/api/builder/sites/default/dynamic-templates/${encodeURIComponent(
+          detail.templateId
+        )}/publish?locale=${encodeURIComponent(locale)}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({ updatedBy: 'builder-dynamic-template-editor' }),
+        }
+      );
+      const payload = (await response.json().catch(() => null)) as DynamicTemplatePublishResponse | null;
+
+      if (!response.ok || !payload?.ok || !payload.published?.snapshot) {
+        throw new Error(payload?.error ?? 'Failed to publish dynamic template draft.');
+      }
+
+      const nextPublished = payload.published.snapshot;
+      setPublishedMeta({
+        persisted: true,
+        revision: nextPublished.revision,
+        savedAt: nextPublished.savedAt,
+        updatedBy: nextPublished.updatedBy,
+      });
+      setPublishStatus('published');
+    } catch (error) {
+      setPublishStatus('error');
+      setPublishError(error instanceof Error ? error.message : 'Failed to publish dynamic template draft.');
+    }
+  }
+
   return (
     <div className="builder-dashboard-grid" data-builder-dynamic-template-editor="true">
       <section className="builder-preview-inspector-card" data-builder-dynamic-template-draft-controls="true">
@@ -137,14 +202,26 @@ export default function BuilderDynamicTemplateEditorSurface({
           >
             {saveStatus === 'saving' ? 'Saving...' : 'Save draft'}
           </button>
+          <button
+            type="button"
+            className="builder-action-btn builder-action-btn--primary"
+            data-builder-dynamic-template-publish="true"
+            disabled={!canPublish}
+            onClick={handlePublishTemplate}
+          >
+            {publishStatus === 'publishing' ? 'Publishing...' : 'Publish'}
+          </button>
         </div>
         <div className="builder-dashboard-page-meta" aria-live="polite">
           <span>{draftMeta.persisted ? `Draft v${draftMeta.revision}` : 'Not saved yet'}</span>
           <span>{draftChanged ? 'Unsaved changes' : 'No unsaved changes'}</span>
           <span>{draftMeta.savedAt ?? 'Default state'}</span>
+          <span>{publishedMeta.persisted ? `Published v${publishedMeta.revision}` : 'Not published'}</span>
+          <span>{publishedMeta.savedAt ?? 'No published snapshot'}</span>
           {draftMeta.updatedBy ? <span>{draftMeta.updatedBy}</span> : null}
         </div>
         {saveError ? <p className="builder-field-error">{saveError}</p> : null}
+        {publishError ? <p className="builder-field-error">{publishError}</p> : null}
       </section>
 
       <section className="builder-preview-inspector-card">
@@ -297,6 +374,14 @@ type DynamicTemplateDraftSaveResponse = {
   ok?: boolean;
   error?: string;
   draft?: {
+    snapshot?: BuilderDynamicTemplateDraftSnapshot;
+  };
+};
+
+type DynamicTemplatePublishResponse = {
+  ok?: boolean;
+  error?: string;
+  published?: {
     snapshot?: BuilderDynamicTemplateDraftSnapshot;
   };
 };

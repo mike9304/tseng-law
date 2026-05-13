@@ -13,6 +13,7 @@ const BUILDER_DYNAMIC_TEMPLATE_RUNTIME_ROOT = path.join(process.cwd(), 'runtime-
 const BUILDER_DYNAMIC_TEMPLATE_UPDATED_BY = 'builder-dynamic-template-api';
 
 export type BuilderDynamicTemplateDraftBackend = 'blob' | 'file';
+export type BuilderDynamicTemplateSnapshotKind = 'draft' | 'published';
 
 export interface BuilderDynamicTemplateDraftState {
   version: 1;
@@ -46,6 +47,19 @@ export interface BuilderDynamicTemplateDraftWriteInput {
 export interface BuilderDynamicTemplateDraftWriteResult {
   backend: BuilderDynamicTemplateDraftBackend;
   snapshot: BuilderDynamicTemplateDraftSnapshot;
+}
+
+export interface BuilderDynamicTemplateDraftPublishInput {
+  templateId: BuilderDynamicTemplateId;
+  locale: Locale;
+  updatedBy?: string;
+}
+
+export class BuilderDynamicTemplateDraftMissingError extends Error {
+  constructor(templateId: BuilderDynamicTemplateId, locale: Locale) {
+    super(`No dynamic template draft exists for ${templateId} (${locale}).`);
+    this.name = 'BuilderDynamicTemplateDraftMissingError';
+  }
 }
 
 interface BuilderDynamicTemplateDraftStore {
@@ -95,10 +109,25 @@ export async function readBuilderDynamicTemplateDraft(
   templateId: BuilderDynamicTemplateId,
   localeInput: string | null | undefined
 ): Promise<BuilderDynamicTemplateDraftReadResult> {
+  return readBuilderDynamicTemplateSnapshot('draft', templateId, localeInput);
+}
+
+export async function readBuilderDynamicTemplatePublished(
+  templateId: BuilderDynamicTemplateId,
+  localeInput: string | null | undefined
+): Promise<BuilderDynamicTemplateDraftReadResult> {
+  return readBuilderDynamicTemplateSnapshot('published', templateId, localeInput);
+}
+
+export async function readBuilderDynamicTemplateSnapshot(
+  kind: BuilderDynamicTemplateSnapshotKind,
+  templateId: BuilderDynamicTemplateId,
+  localeInput: string | null | undefined
+): Promise<BuilderDynamicTemplateDraftReadResult> {
   const locale = normalizeLocale(localeInput ?? undefined);
   const detail = readBuilderDynamicTemplateDetail(templateId, locale);
   const store = resolveBuilderDynamicTemplateDraftStore();
-  const raw = await store.read(getBuilderDynamicTemplateDraftPath(templateId, locale));
+  const raw = await store.read(getBuilderDynamicTemplateSnapshotPath(templateId, locale, kind));
 
   if (!raw) {
     return {
@@ -142,13 +171,67 @@ export async function writeBuilderDynamicTemplateDraft(
   };
 
   await store.write(
-    getBuilderDynamicTemplateDraftPath(input.templateId, locale),
+    getBuilderDynamicTemplateSnapshotPath(input.templateId, locale, 'draft'),
     JSON.stringify(snapshot, null, 2)
   );
 
   return {
     backend: store.backend,
     snapshot,
+  };
+}
+
+export async function publishBuilderDynamicTemplateDraft(
+  input: BuilderDynamicTemplateDraftPublishInput
+): Promise<BuilderDynamicTemplateDraftWriteResult> {
+  const locale = normalizeLocale(input.locale);
+  const store = resolveBuilderDynamicTemplateDraftStore();
+  const draft = await readBuilderDynamicTemplateDraft(input.templateId, locale);
+  if (!draft.persisted) {
+    throw new BuilderDynamicTemplateDraftMissingError(input.templateId, locale);
+  }
+
+  const published = await readBuilderDynamicTemplatePublished(input.templateId, locale);
+  const snapshot = buildPublishedBuilderDynamicTemplateSnapshot({
+    draftSnapshot: draft.snapshot,
+    currentPublishedSnapshot: published.snapshot,
+    updatedBy: input.updatedBy,
+  });
+
+  await store.write(
+    getBuilderDynamicTemplateSnapshotPath(input.templateId, locale, 'published'),
+    JSON.stringify(snapshot, null, 2)
+  );
+
+  return {
+    backend: store.backend,
+    snapshot,
+  };
+}
+
+export function buildPublishedBuilderDynamicTemplateSnapshot({
+  draftSnapshot,
+  currentPublishedSnapshot,
+  updatedBy,
+  savedAt = new Date().toISOString(),
+}: {
+  draftSnapshot: BuilderDynamicTemplateDraftSnapshot;
+  currentPublishedSnapshot: BuilderDynamicTemplateDraftSnapshot;
+  updatedBy?: string;
+  savedAt?: string;
+}): BuilderDynamicTemplateDraftSnapshot {
+  return {
+    version: 1,
+    templateId: draftSnapshot.templateId,
+    locale: draftSnapshot.locale,
+    revision: currentPublishedSnapshot.revision + 1,
+    savedAt,
+    updatedBy: sanitizeUpdatedBy(updatedBy),
+    state: {
+      version: 1,
+      visibleBlockIds: [...draftSnapshot.state.visibleBlockIds],
+      selectedRecordId: draftSnapshot.state.selectedRecordId,
+    },
   };
 }
 
@@ -253,11 +336,12 @@ function createFileBuilderDynamicTemplateDraftStore(): BuilderDynamicTemplateDra
   };
 }
 
-function getBuilderDynamicTemplateDraftPath(
+function getBuilderDynamicTemplateSnapshotPath(
   templateId: BuilderDynamicTemplateId,
-  locale: Locale
+  locale: Locale,
+  kind: BuilderDynamicTemplateSnapshotKind
 ): string {
-  return `${BUILDER_DYNAMIC_TEMPLATE_STORAGE_ROOT}/${templateId}/${locale}/draft.json`;
+  return `${BUILDER_DYNAMIC_TEMPLATE_STORAGE_ROOT}/${templateId}/${locale}/${kind}.json`;
 }
 
 function resolveRuntimePath(pathname: string): string {

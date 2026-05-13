@@ -5,6 +5,7 @@ import {
 } from '@/lib/builder/dynamic-templates';
 import {
   readBuilderDynamicTemplateDraft,
+  readBuilderDynamicTemplatePublished,
   writeBuilderDynamicTemplateDraft,
 } from '@/lib/builder/dynamic-template-drafts';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
@@ -32,11 +33,12 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = normalizeLocale(url.searchParams.get('locale') ?? undefined);
-    const [detail, draft] = await Promise.all([
+    const [detail, draft, published] = await Promise.all([
       Promise.resolve(readBuilderDynamicTemplateDetail(templateId, locale)),
       readBuilderDynamicTemplateDraft(templateId, locale),
+      readBuilderDynamicTemplatePublished(templateId, locale),
     ]);
-    return NextResponse.json({ ok: true, siteId: params.siteId, locale, detail, draft });
+    return NextResponse.json({ ok: true, siteId: params.siteId, locale, detail, draft, published });
   } catch (error) {
     console.error('[builder-dynamic-template-detail] failed', error);
     return NextResponse.json(

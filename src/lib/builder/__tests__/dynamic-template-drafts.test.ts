@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  buildPublishedBuilderDynamicTemplateSnapshot,
   createDefaultBuilderDynamicTemplateDraftState,
   normalizeBuilderDynamicTemplateDraftState,
 } from '@/lib/builder/dynamic-template-drafts';
@@ -57,6 +58,50 @@ describe('builder dynamic template drafts', () => {
       version: 1,
       visibleBlockIds: [],
       selectedRecordId: null,
+    });
+  });
+
+  it('builds a published snapshot from the current draft state', () => {
+    const detail = readBuilderDynamicTemplateDetail('service-areas.item-template', 'ko');
+    const draftState = createDefaultBuilderDynamicTemplateDraftState(detail);
+    const published = buildPublishedBuilderDynamicTemplateSnapshot({
+      draftSnapshot: {
+        version: 1,
+        templateId: detail.templateId,
+        locale: 'ko',
+        revision: 4,
+        savedAt: '2026-05-13T07:00:00.000Z',
+        updatedBy: 'draft-editor',
+        state: {
+          ...draftState,
+          visibleBlockIds: ['service-areas.item.hero'],
+        },
+      },
+      currentPublishedSnapshot: {
+        version: 1,
+        templateId: detail.templateId,
+        locale: 'ko',
+        revision: 2,
+        savedAt: '2026-05-13T06:00:00.000Z',
+        updatedBy: 'publisher',
+        state: draftState,
+      },
+      updatedBy: 'template-publisher',
+      savedAt: '2026-05-13T08:00:00.000Z',
+    });
+
+    expect(published).toEqual({
+      version: 1,
+      templateId: detail.templateId,
+      locale: 'ko',
+      revision: 3,
+      savedAt: '2026-05-13T08:00:00.000Z',
+      updatedBy: 'template-publisher',
+      state: {
+        version: 1,
+        visibleBlockIds: ['service-areas.item.hero'],
+        selectedRecordId: 'investment',
+      },
     });
   });
 });

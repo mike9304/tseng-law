@@ -8,6 +8,7 @@ import {
   type BuilderCmsCollectionSummary,
   type BuilderCmsFieldDefinition,
   type BuilderCmsFieldType,
+  type BuilderCmsImageValue,
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
   type BuilderCmsRecordRevision,
@@ -740,10 +741,11 @@ function coerceFieldValue(field: BuilderCmsFieldDefinition, value: unknown): unk
     }
     case 'slug':
       return normalizeSlug(value);
+    case 'image':
+      return normalizeImageValue(field, value);
     case 'reference':
     case 'text':
     case 'rich-text':
-    case 'image':
     default: {
       const text = String(value);
       if (field.validation?.pattern) {
@@ -753,6 +755,33 @@ function coerceFieldValue(field: BuilderCmsFieldDefinition, value: unknown): unk
       return text;
     }
   }
+}
+
+function normalizeImageValue(field: BuilderCmsFieldDefinition, value: unknown): BuilderCmsImageValue {
+  const source = isRecordObject(value) ? value : { url: value };
+  const url = String(source.url ?? '').trim();
+  if (!/^https?:\/\//.test(url) && !url.startsWith('/')) {
+    throw new Error(`${field.label} must be an image URL.`);
+  }
+
+  return {
+    url,
+    assetId: typeof source.assetId === 'string' && source.assetId.trim() ? source.assetId.trim() : undefined,
+    filename: typeof source.filename === 'string' && source.filename.trim() ? source.filename.trim() : undefined,
+    altText: typeof source.altText === 'string' ? source.altText.trim() : undefined,
+    focalPoint: normalizeFocalPoint(source.focalPoint),
+  };
+}
+
+function normalizeFocalPoint(input: unknown): BuilderCmsImageValue['focalPoint'] {
+  if (!isRecordObject(input)) return undefined;
+  const x = Number(input.x);
+  const y = Number(input.y);
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return undefined;
+  return {
+    x: Math.min(1, Math.max(0, x)),
+    y: Math.min(1, Math.max(0, y)),
+  };
 }
 
 function isUniqueFieldValue(
@@ -832,6 +861,10 @@ function nextUniqueFieldValue(
 function stringifyRecordValue(value: unknown): string {
   if (Array.isArray(value)) return value.map(stringifyRecordValue).join(' ');
   if (value === null || value === undefined) return '';
+  if (isRecordObject(value)) {
+    if (typeof value.url === 'string') return value.url;
+    return JSON.stringify(value);
+  }
   return String(value);
 }
 

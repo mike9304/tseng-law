@@ -47,6 +47,17 @@ export interface BuilderCmsFieldDefinition {
   relationCollectionId?: string;
 }
 
+export interface BuilderCmsImageValue {
+  url: string;
+  assetId?: string;
+  filename?: string;
+  altText?: string;
+  focalPoint?: {
+    x: number;
+    y: number;
+  };
+}
+
 export type BuilderCmsRecordStatus = 'draft' | 'published' | 'archived';
 export type BuilderCmsRecordRevisionAction = 'update' | 'restore';
 

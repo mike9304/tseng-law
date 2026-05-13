@@ -268,6 +268,72 @@ describe('editable builder CMS store', () => {
     ).resolves.toMatchObject({ recordCount: 1 });
   });
 
+  it('stores image fields with asset, alt text, and focal metadata', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'gallery',
+      name: 'Gallery',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+        },
+        {
+          fieldId: 'field-slug',
+          key: 'slug',
+          label: 'Slug',
+          type: 'slug',
+          localized: false,
+          repeated: false,
+          required: true,
+          unique: true,
+        },
+        {
+          fieldId: 'field-hero',
+          key: 'hero',
+          label: 'Hero image',
+          type: 'image',
+          localized: false,
+          repeated: false,
+          required: false,
+        },
+      ],
+    });
+
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'gallery', {
+      fields: {
+        title: 'Lobby',
+        slug: 'lobby',
+        hero: {
+          url: '/api/builder/assets/lobby.webp',
+          assetId: 'builder/assets/ko/lobby.webp',
+          filename: 'lobby.webp',
+          altText: 'Law office lobby',
+          focalPoint: { x: -1, y: 2 },
+        },
+      },
+    });
+    expect(created?.fields.hero).toMatchObject({
+      url: '/api/builder/assets/lobby.webp',
+      assetId: 'builder/assets/ko/lobby.webp',
+      filename: 'lobby.webp',
+      altText: 'Law office lobby',
+      focalPoint: { x: 0, y: 1 },
+    });
+
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'gallery', {
+        fields: { title: 'Broken', slug: 'broken', hero: 'not-an-image-url' },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Hero image must be an image URL.'],
+    });
+  });
+
   it('reserves static source collection ids', async () => {
     await expect(
       createEditableBuilderCmsCollection('test-site', 'ko', {

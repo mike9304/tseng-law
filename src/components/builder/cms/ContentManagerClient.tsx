@@ -1,13 +1,16 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import type {
   BuilderCmsCollectionDetail,
   BuilderCmsCollectionSummary,
   BuilderCmsFieldDefinition,
+  BuilderCmsImageValue,
   BuilderCmsRecord,
   BuilderCmsRecordRevision,
 } from '@/lib/builder/cms-types';
+import type { BuilderAssetListItem } from '@/lib/builder/assets';
 import type { BuilderCollectionSummary } from '@/lib/builder/cms';
 import type { Locale } from '@/lib/locales';
 
@@ -46,7 +49,8 @@ type ContentManagerClientProps = {
   initialEditableCollections: BuilderCmsCollectionSummary[];
 };
 
-type RecordFormState = Record<string, string | boolean>;
+type RecordFormValue = string | boolean | BuilderCmsImageValue;
+type RecordFormState = Record<string, RecordFormValue>;
 type RecordSortDirection = 'asc' | 'desc';
 type CsvImportMode = 'append' | 'replace';
 
@@ -98,6 +102,7 @@ export default function ContentManagerClient({
   const [recordSortDirection, setRecordSortDirection] = useState<RecordSortDirection>('desc');
   const [csvImportText, setCsvImportText] = useState('');
   const [csvImportMode, setCsvImportMode] = useState<CsvImportMode>('append');
+  const [assetFieldKey, setAssetFieldKey] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -390,8 +395,9 @@ export default function ContentManagerClient({
   }
 
   return (
-    <div style={panelStyle}>
-      <section className="builder-preview-inspector-card builder-dashboard-sidebar">
+    <>
+      <div style={panelStyle}>
+        <section className="builder-preview-inspector-card builder-dashboard-sidebar">
         <h2>CMS</h2>
         <div className="builder-dashboard-nav-list">
           {collections.map((collection) => (
@@ -577,6 +583,9 @@ export default function ContentManagerClient({
                       value={recordForm[field.key]}
                       disabled={busy}
                       onChange={(value) => setRecordForm((current) => ({ ...current, [field.key]: value }))}
+                      onRequestAssetLibrary={
+                        field.type === 'image' ? () => setAssetFieldKey(field.key) : undefined
+                      }
                     />
                   ))}
                 </div>
@@ -803,7 +812,31 @@ export default function ContentManagerClient({
           </>
         ) : null}
       </div>
-    </div>
+      </div>
+      {assetFieldKey ? (
+        <AssetLibraryModal
+          open
+          locale={locale}
+          selectedUrl={imageValueFromForm(recordForm[assetFieldKey])?.url ?? null}
+          initialFolder="uploads"
+          autoFolderOnSelect="uploads"
+          autoTagOnSelect="cms"
+          onClose={() => setAssetFieldKey(null)}
+          onSelect={(asset) => {
+            setRecordForm((current) => ({
+              ...current,
+              [assetFieldKey]: imageValueFromAsset(asset),
+            }));
+            setAssetFieldKey(null);
+            setMessage('Image selected from Asset Library.');
+          }}
+          onToast={(toastMessage, tone) => {
+            if (tone === 'error') setError(toastMessage);
+            else setMessage(toastMessage);
+          }}
+        />
+      ) : null}
+    </>
   );
 }
 
@@ -812,11 +845,13 @@ function CmsFieldInput({
   value,
   disabled,
   onChange,
+  onRequestAssetLibrary,
 }: {
   field: BuilderCmsFieldDefinition;
-  value: string | boolean | undefined;
+  value: RecordFormValue | undefined;
   disabled: boolean;
-  onChange: (value: string | boolean) => void;
+  onChange: (value: RecordFormValue) => void;
+  onRequestAssetLibrary?: () => void;
 }) {
   if (field.type === 'boolean') {
     return (
@@ -847,6 +882,75 @@ function CmsFieldInput({
           onChange={(event) => onChange(event.target.value)}
         />
       </label>
+    );
+  }
+
+  if (field.type === 'image') {
+    const imageValue = imageValueFromForm(value) ?? { url: '', altText: '', focalPoint: { x: 0.5, y: 0.5 } };
+    return (
+      <div style={labelStyle}>
+        <span>{field.label}</span>
+        <input
+          type="url"
+          style={inputStyle}
+          value={imageValue.url}
+          placeholder="/api/builder/assets/example.webp"
+          disabled={disabled}
+          onChange={(event) => onChange({ ...imageValue, url: event.target.value })}
+        />
+        <input
+          type="text"
+          style={inputStyle}
+          value={imageValue.altText ?? ''}
+          placeholder="Alt text"
+          disabled={disabled}
+          onChange={(event) => onChange({ ...imageValue, altText: event.target.value })}
+        />
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+          <input
+            type="number"
+            min={0}
+            max={1}
+            step={0.01}
+            aria-label={`${field.label} focal X`}
+            style={inputStyle}
+            value={imageValue.focalPoint?.x ?? 0.5}
+            disabled={disabled}
+            onChange={(event) => onChange({
+              ...imageValue,
+              focalPoint: {
+                x: Number(event.target.value),
+                y: imageValue.focalPoint?.y ?? 0.5,
+              },
+            })}
+          />
+          <input
+            type="number"
+            min={0}
+            max={1}
+            step={0.01}
+            aria-label={`${field.label} focal Y`}
+            style={inputStyle}
+            value={imageValue.focalPoint?.y ?? 0.5}
+            disabled={disabled}
+            onChange={(event) => onChange({
+              ...imageValue,
+              focalPoint: {
+                x: imageValue.focalPoint?.x ?? 0.5,
+                y: Number(event.target.value),
+              },
+            })}
+          />
+        </div>
+        <button
+          type="button"
+          className="builder-action-btn"
+          onClick={onRequestAssetLibrary}
+          disabled={disabled}
+        >
+          Asset Library
+        </button>
+      </div>
     );
   }
 
@@ -911,6 +1015,7 @@ function createRecordFormFromRecord(
 ): RecordFormState {
   return Object.fromEntries(fields.map((field) => {
     const value = record.fields[field.key];
+    if (field.type === 'image' && imageValueFromForm(value)) return [field.key, imageValueFromForm(value)!];
     if (Array.isArray(value)) return [field.key, value.join('\n')];
     if (typeof value === 'boolean') return [field.key, value];
     return [field.key, value === undefined || value === null ? '' : String(value)];
@@ -920,8 +1025,29 @@ function createRecordFormFromRecord(
 function formatValue(value: unknown): string {
   if (Array.isArray(value)) return value.join(', ');
   if (typeof value === 'boolean') return value ? 'true' : 'false';
+  if (isImageValue(value)) return value.altText ? `${value.url} (${value.altText})` : value.url;
   if (value === undefined || value === null || value === '') return '-';
   return String(value);
+}
+
+function imageValueFromAsset(asset: BuilderAssetListItem): BuilderCmsImageValue {
+  return {
+    url: asset.url,
+    assetId: asset.pathname,
+    filename: asset.filename,
+    altText: asset.filename,
+    focalPoint: { x: 0.5, y: 0.5 },
+  };
+}
+
+function imageValueFromForm(value: unknown): BuilderCmsImageValue | null {
+  if (isImageValue(value)) return value;
+  if (typeof value === 'string' && value.trim()) return { url: value.trim() };
+  return null;
+}
+
+function isImageValue(value: unknown): value is BuilderCmsImageValue {
+  return Boolean(value && typeof value === 'object' && 'url' in value && typeof value.url === 'string');
 }
 
 function filterAndSortRecords(

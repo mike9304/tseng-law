@@ -106,3 +106,4 @@
 | M102 | QA    | Published disclosure aria wiring | W18,W84,W98,W216 | 1h | M101 | 🟡 services/FAQ disclosure keyboard+aria 자동검증 통과 / 사용자 QA 대기 |
 | M103 | QA    | Published search tablist keyboard | W40,W98,W216,W225 | 1h | M102 | 🟡 search overlay tablist Arrow/Home/End 자동검증 통과 / 사용자 QA 대기 |
 | M104 | QA    | Editor click/template regression sweep | W18,W22,W84,W216 | 1h | M103 | 🟡 node-click + section-template suites 15 passed / 사용자 QA 대기 |
+| M105 | QA    | Editor modal/focus regression sweep | W03,W216,W225 | 1h | M104 | 🟡 inline text/pageId focus + preview/layer suites 3 passed / 사용자 QA 대기 |

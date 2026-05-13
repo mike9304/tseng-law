@@ -5639,3 +5639,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - page template showroom, preview, slug prompt, duplicate slug retry/back path, locale link normalization, auto navigation rename/delete가 최신 코드에서 통과.
 - 다음 후보:
   - 남은 public widget keyboard evidence 또는 editor modal/drawer 최신 회귀 sweep을 계속 진행한다.
+
+## 2026-05-13 Codex /goal M105 Editor modal/focus regression sweep
+
+- editor modal/drawer 최신 회귀 묶음(`preview-modal-focus`, `inline-text-editor`, `layer-focus-context-menu`)을 재실행했다.
+- 첫 실행에서 `inline-text-editor`가 Pages drawer를 통해 방금 만든 테스트 페이지를 다시 여는 헬퍼 때문에 실패했다. 최신 에디터에서는 drawer open/close 상태와 hydration 타이밍에 영향을 받아 테스트 목적과 무관한 flake가 생겼다.
+- inline text test는 생성 API가 돌려준 `pageId`로 `/ko/admin-builder?pageId=...`를 직접 열게 바꿨다. 에디터 shell의 `data-editor-ready="true"`를 기다리고, 텍스트 노드 선택은 resize handle 8개가 보일 때까지 짧게 재시도한다.
+- 제품 코드는 변경하지 않았다. 테스트가 실제로 검증해야 하는 inline text toolbar, bold toggle, Escape close, persistence, undo/redo, reload persistence 경로는 유지했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- tests/builder-editor/inline-text-editor.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/inline-text-editor.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/preview-modal-focus.playwright.ts tests/builder-editor/inline-text-editor.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - editor a11y/chrome click safety/mobile inspector처럼 아직 최신 sweep을 덜 한 UI 회귀를 계속 줄인다.

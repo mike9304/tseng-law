@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext, type Locator, type Page } from '@playwright/test';
+import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
 
 const shortcutModifier = 'ControlOrMeta';
 
@@ -25,10 +25,6 @@ const baseStyle = {
   shadowColor: 'rgba(15, 23, 42, 0.16)',
   opacity: 100,
 };
-
-function escapeRegex(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
 
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'inline-text';
@@ -150,42 +146,41 @@ async function createBuilderPage(
   return payload.pageId!;
 }
 
-async function openPagesDrawer(page: Page): Promise<Locator> {
-  const drawer = page.locator('aside[aria-hidden="false"]').first();
-  if (await drawer.isVisible().catch(() => false)) return drawer;
-
-  const pagesButton = page.getByRole('button', { name: 'Pages', exact: true });
-  await expect(pagesButton).toBeVisible();
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    await pagesButton.click({ force: true });
-    await page.waitForTimeout(250);
-    if (await drawer.isVisible().catch(() => false)) return drawer;
-  }
-  await expect(drawer).toBeVisible();
-  return drawer;
+async function openBuilderPageById(page: Page, pageId: string, scope: string): Promise<void> {
+  await page.goto(
+    `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&inlineTextTest=${Date.now().toString(36)}-${scope}`,
+    { waitUntil: 'domcontentloaded' },
+  );
+  const shell = page.locator('[data-editor-shell]').first();
+  await expect(shell).toBeVisible({ timeout: 30_000 });
+  await expect(shell).toHaveAttribute('data-editor-ready', 'true', { timeout: 30_000 });
+  await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
 }
 
-async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string): Promise<void> {
-  let pageButton: Locator | null = null;
-  for (let attempt = 0; attempt < 4; attempt += 1) {
-    await page.goto(`/ko/admin-builder?inlineTextTest=${Date.now().toString(36)}-${attempt}`, {
-      waitUntil: 'domcontentloaded',
+async function selectNodeWithHandles(page: Page, nodeId: string): Promise<ReturnType<Page['locator']>> {
+  const node = page.locator(`[data-node-id="${nodeId}"]`).first();
+  await expect(node).toBeVisible({ timeout: 15_000 });
+
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    const box = await node.boundingBox();
+    await node.click({
+      position: box
+        ? {
+          x: Math.max(1, Math.min(box.width - 1, box.width / 2)),
+          y: Math.max(1, Math.min(box.height - 1, box.height / 2)),
+        }
+        : { x: 24, y: 24 },
+      force: true,
     });
-    await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
-    const pagesDrawer = await openPagesDrawer(page);
-    pageButton = pagesDrawer.getByRole('button', { name: new RegExp(escapeRegex(pageTitle)) }).first();
-    if ((await pageButton.count()) > 0) break;
-    await page.waitForTimeout(750);
+    const selected = page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first();
+    const handleCount = await selected.locator('[class*="resizeHandle"]:visible').count().catch(() => 0);
+    if (handleCount === 8) return selected;
+    await page.waitForTimeout(200);
   }
-  pageButton ??= page
-    .locator('aside[aria-hidden="false"]')
-    .first()
-    .getByRole('button', { name: new RegExp(escapeRegex(pageTitle)) })
-    .first();
-  await expect(pageButton).toBeVisible({ timeout: 15_000 });
-  await pageButton.click();
-  await expect(page.getByText(/Loaded page:/).last()).toBeVisible({ timeout: 3_000 }).catch(() => undefined);
-  await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+
+  const selected = page.locator(`[data-node-id="${nodeId}"][class*="nodeSelected"]`).first();
+  await expect(selected.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
+  return selected;
 }
 
 async function draftNodes(page: Page, pageId: string): Promise<Array<Record<string, any>>> {
@@ -221,10 +216,10 @@ test.describe('/ko/admin-builder inline text editing', () => {
         }),
       );
 
-      await openBuilderPageFromPagesPanel(page, title);
-      const textNode = page.locator(`[data-node-id="${textId}"]`).first();
+      await openBuilderPageById(page, pageId, 'initial');
+      let textNode = page.locator(`[data-node-id="${textId}"]`).first();
       await expect(textNode).toContainText(originalText);
-      await textNode.click({ position: { x: 24, y: 24 }, force: true });
+      textNode = await selectNodeWithHandles(page, textId);
       await expect(textNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
 
       await textNode.dblclick({ position: { x: 30, y: 30 }, force: true });
@@ -328,7 +323,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
         };
       }, { timeout: 15_000 }).toEqual({ text: editedText, bold: true });
 
-      await openBuilderPageFromPagesPanel(page, title);
+      await openBuilderPageById(page, pageId, 'reload');
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText, {
         timeout: 15_000,
       });

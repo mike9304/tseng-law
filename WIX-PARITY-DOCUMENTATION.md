@@ -2244,3 +2244,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (15 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W22/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 반복 제보한 주요업무 텍스트 사라짐, 노드 클릭 이동, 칼럼/이미지 클릭 백지화, 템플릿 뒤로가기/생성/중복 slug 회귀를 최신 코드에서 다시 통과시켰다.
+
+## M105 — Editor modal/focus regression sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/inline-text-editor.playwright.ts` — inline text test가 Pages drawer 상태에 의존하지 않고 생성한 `pageId`로 직접 에디터를 열도록 바꿨다. 재진입 후 `data-editor-ready="true"`를 기다리고, 텍스트 노드 선택은 resize handle 8개가 보일 때까지 짧게 재시도해 hydration/선택 타이밍 flake를 제거했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M105 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- tests/builder-editor/inline-text-editor.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/inline-text-editor.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/preview-modal-focus.playwright.ts tests/builder-editor/inline-text-editor.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W03/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. inline text toolbar/persist/undo-redo 경로와 preview modal/layer context focus 회귀를 최신 코드에서 다시 통과시켰다.

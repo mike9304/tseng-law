@@ -6009,3 +6009,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - editor shell render, public chrome click safety, save/toast overlay compile path.
 - 다음 후보:
   - 다음 hot file인 `TemplateGalleryModal.tsx`/`VersionHistoryPanel.tsx` 중 800줄 경계에 걸린 파일부터 작은 UI chunk로 분리한다.
+
+## 2026-05-13 Codex /goal M130 TemplateGalleryModal style split
+
+- 800줄 경계에 있던 `TemplateGalleryModal.tsx`를 기능 변경 없이 정리했다.
+- template gallery inline style constants와 quality badge style helper를 `TemplateGalleryModal.styles.ts`로 분리했다.
+- `TemplateGalleryModal.tsx`는 검색/필터/미리보기/선택 로직 중심으로 남겼고, LOC는 800에서 594로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "switches stateful home section template variants" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - design pool section template variant switching, template modal import/compile path.
+- 다음 후보:
+  - `VersionHistoryPanel.tsx`의 modal styles/diff summary subview 분리로 800줄 이하를 만든다.

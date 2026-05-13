@@ -2605,3 +2605,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/chrome-click-safety.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. admin builder shell, public chrome click safety, save/toast overlay compile path를 latest code에서 통과시켰다.
+
+## M130 — TemplateGalleryModal style split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/TemplateGalleryModal.styles.ts` — template gallery modal의 inline style constants와 quality badge style helper를 별도 파일로 분리했다.
+  - `src/components/builder/canvas/TemplateGalleryModal.tsx` — 검색/필터/미리보기/선택 로직만 남기고 style constants를 import한다. 파일 길이는 800줄에서 594줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M130 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "switches stateful home section template variants" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. design pool section template variant switching과 template modal compile path를 latest code에서 통과시켰다.

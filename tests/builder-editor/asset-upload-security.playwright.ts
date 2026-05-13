@@ -53,6 +53,16 @@ test('builder asset upload accepts real PNG and rejects spoofed or oversized fil
       ok: false,
       code: 'payload_too_large',
     });
+
+    const traversalDelete = await page.request.delete('/api/builder/assets?locale=ko', {
+      timeout: 30_000,
+      data: { locale: 'ko', filename: '../package.json' },
+    });
+    expect(traversalDelete.status()).toBe(400);
+    await expect(traversalDelete.json()).resolves.toMatchObject({
+      ok: false,
+      error: 'Invalid asset filename.',
+    });
   } finally {
     await Promise.all(uploaded.map((filename) => deleteAsset(page, filename)));
   }

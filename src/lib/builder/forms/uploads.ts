@@ -154,5 +154,13 @@ function hasBlobToken(): boolean {
 }
 
 function resolveUploadRuntimePath(pathname: string): string {
-  return path.join(FORM_UPLOAD_RUNTIME_ROOT, pathname);
+  const candidate = path.resolve(path.join(FORM_UPLOAD_RUNTIME_ROOT, pathname));
+  const root = path.resolve(FORM_UPLOAD_RUNTIME_ROOT);
+  // Belt-and-braces against path traversal: even if upstream filename
+  // normalization is bypassed, the resolved path must remain inside the
+  // upload root. Otherwise refuse.
+  if (candidate !== root && !candidate.startsWith(root + path.sep)) {
+    throw new Error('Refusing to resolve upload outside the upload root');
+  }
+  return candidate;
 }

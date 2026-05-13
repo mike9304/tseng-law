@@ -5827,3 +5827,23 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Chromium visual baselines: first screen, catalog drawer, text inspector, site settings loaded state.
 - 다음 후보:
   - backup/migration/automation 또는 remaining dirty worktree의 asset/forms/persistence 계열을 검증/정리한다.
+
+## 2026-05-13 Codex /goal M118 Asset/forms security hardening
+
+- remaining dirty worktree 중 asset/forms 보안 범위를 제품 코드와 테스트로 정리했다. UI/persistence dirty diff는 다음 M119 범위로 남겼다.
+- asset DELETE는 `filename`을 서버 생성 파일명 형식으로 제한하고 `..` traversal payload를 400으로 거부한다.
+- form submit은 공통 `checkRateLimit`로 rate limit을 옮겨 Upstash/메모리 fallback 정책과 `Retry-After` 응답을 쓴다.
+- failed webhook delivery는 새 `webhook-retry` queue에 저장된다. queue는 local/blob backend, due drain, exponential retry, max-attempt drop, safe id/path guard를 제공하며 dev에서는 기본 local backend다.
+- form upload local path resolution은 `runtime-data` root containment를 확인해 root 밖 경로를 거부한다.
+- 검증:
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/webhook-retry.test.ts` ✅ (2 files, 8 tests passed)
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/validation.test.ts src/lib/builder/forms/__tests__/conditional.test.ts src/lib/builder/forms/__tests__/webhook-retry.test.ts src/lib/builder/canvas/__tests__/upload-validation.test.ts src/lib/builder/webhooks/__tests__/signature.test.ts src/lib/builder/security/__tests__/rate-limit.test.ts` ✅ (7 files, 53 tests passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-upload-security.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `git diff --check` ✅
+- 확인된 커버리지:
+  - form submit validation/signature materialization, rate-limit 429/Retry-After, failed webhook retry recording.
+  - retry queue record/list/drain/reschedule/drop and invalid id ignore.
+  - asset upload MIME/size guards and invalid asset delete traversal rejection.
+- 다음 후보:
+  - M119로 남은 `globals.css`, `SandboxPage.module.css`, `canvas/types.ts`, `persistence.ts` dirty diff를 검증/정리한다.

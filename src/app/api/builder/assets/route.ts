@@ -150,7 +150,20 @@ export async function DELETE(request: NextRequest) {
 
   try {
     const payload = await request.json();
-    const filename = typeof payload?.filename === 'string' ? payload.filename : null;
+    const rawFilename = typeof payload?.filename === 'string' ? payload.filename : null;
+    // Asset filenames are produced server-side as a UUID + extension. Reject
+    // anything outside that shape to prevent path traversal via crafted
+    // payload.filename (e.g. "../../etc/passwd").
+    const filename =
+      rawFilename && /^[A-Za-z0-9._-]{1,128}$/.test(rawFilename) && !rawFilename.includes('..')
+        ? rawFilename
+        : null;
+    if (rawFilename && !filename) {
+      return NextResponse.json(
+        { ok: false, error: 'Invalid asset filename.' },
+        { status: 400 },
+      );
+    }
     await deleteBuilderImageAsset({
       locale: request.nextUrl.searchParams.get('locale') ?? payload?.locale,
       filename,

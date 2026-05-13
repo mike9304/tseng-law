@@ -8,27 +8,16 @@ import {
   type FormSubmissionFile,
 } from '@/lib/builder/forms/form-engine';
 import { saveFormUpload } from '@/lib/builder/forms/uploads';
+import { recordFailedWebhook } from '@/lib/builder/forms/webhook-retry';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
+import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-// ─── Rate limit (in-memory; resets on cold start) ────────────────────
-type RateBucket = { count: number; windowStart: number };
+// ─── Rate limit (distributed via Upstash, falls back to in-memory) ──
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_MS = 60_000;
-const rateBuckets = new Map<string, RateBucket>();
-
-function allowRequest(ip: string): boolean {
-  const now = Date.now();
-  const bucket = rateBuckets.get(ip);
-  if (!bucket || now - bucket.windowStart > RATE_LIMIT_WINDOW_MS) {
-    rateBuckets.set(ip, { count: 1, windowStart: now });
-    return true;
-  }
-  bucket.count += 1;
-  return bucket.count <= RATE_LIMIT_MAX;
-}
 
 // ─── Body schema ─────────────────────────────────────────────────────
 
@@ -77,18 +66,25 @@ function makeSubmissionId(): string {
 }
 
 async function forwardToWebhook(url: string, payload: unknown): Promise<void> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 5_000);
   try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 5_000);
-    await fetch(url, {
+    const res = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
       signal: controller.signal,
     });
-    clearTimeout(timeout);
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
   } catch (err) {
     console.error('[forms/submit] webhook forward failed:', err);
+    // Persist for later retry by the drain cron; previously this was
+    // a silent loss of the submission webhook.
+    await recordFailedWebhook(url, payload, err).catch(() => {});
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
@@ -238,10 +234,14 @@ function parseImageDataUrl(value: string): { contentType: 'image/png' | 'image/j
 
 export async function POST(request: NextRequest) {
   const ip = getClientIp(request);
-  if (!allowRequest(ip)) {
+  const rate = await checkRateLimit(`forms-submit:${ip}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS);
+  if (!rate.allowed) {
     return NextResponse.json(
       { error: '요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.' },
-      { status: 429 },
+      {
+        status: 429,
+        headers: { 'Retry-After': String(Math.ceil(rate.retryAfterMs / 1000)) },
+      },
     );
   }
 

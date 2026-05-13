@@ -2417,3 +2417,21 @@ Created: 2026-05-09T12:52:13.760Z
   - `npm run typecheck` ✅
 - W 판정:
   - W23/W40/W71/W72/W98/W99/W100/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. office map editor/published reflection, lightbox/popup/cookie/gallery/mobile drawer/header search/live chat/AI chat/menu/search/disclosure keyboard paths, Wix-like visual baselines를 최신 코드에서 통과시켰다.
+
+## M118 — Asset/forms security hardening
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/app/api/builder/assets/route.ts` — asset DELETE payload의 filename을 서버 생성 파일명 형식으로 제한하고 `..` traversal 문자열을 400으로 거부하게 했다.
+  - `src/app/api/forms/submit/route.ts` — form submit rate limit을 공통 `checkRateLimit`로 옮겨 Upstash/메모리 fallback 정책을 쓰고, 429 응답에 `Retry-After`를 제공한다. webhook 전송 실패는 성공 응답을 유지하되 retry queue에 기록한다.
+  - `src/lib/builder/forms/webhook-retry.ts` — failed webhook delivery를 file/blob backend에 저장하고, due entry drain, retry backoff, max-attempt drop, safe id/path guard를 제공한다. 개발 환경은 blob token이 있어도 기본 local backend이며, blob 검증은 `BUILDER_USE_BLOB_IN_DEV=1`로 opt-in 한다.
+  - `src/lib/builder/forms/uploads.ts` — local form upload path resolution이 runtime-data root 밖으로 나가지 못하게 resolve 후 root containment를 검사한다.
+  - `src/app/api/forms/__tests__/submit-route.test.ts`, `src/lib/builder/forms/__tests__/webhook-retry.test.ts`, `tests/builder-editor/asset-upload-security.playwright.ts` — rate limit, failed webhook retry, retry drain/drop, invalid asset delete traversal regression을 검증한다.
+- 검증:
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/webhook-retry.test.ts` ✅ (2 files, 8 tests passed)
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/validation.test.ts src/lib/builder/forms/__tests__/conditional.test.ts src/lib/builder/forms/__tests__/webhook-retry.test.ts src/lib/builder/canvas/__tests__/upload-validation.test.ts src/lib/builder/webhooks/__tests__/signature.test.ts src/lib/builder/security/__tests__/rate-limit.test.ts` ✅ (7 files, 53 tests passed)
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-upload-security.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `git diff --check` ✅
+- W 판정:
+  - W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. asset upload/delete security, form submit validation/materialization, rate limit fallback, failed webhook retry persistence/drain을 최신 코드에서 통과시켰다.

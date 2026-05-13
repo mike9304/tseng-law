@@ -1,5 +1,7 @@
 import { NextRequest } from 'next/server';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { recordFailedWebhook } from '@/lib/builder/forms/webhook-retry';
+import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 
 vi.mock('@/lib/builder/forms/form-engine', async () => {
   const actual = await vi.importActual<typeof import('@/lib/builder/forms/form-engine')>(
@@ -28,9 +30,23 @@ vi.mock('@/lib/builder/webhooks/dispatcher', () => ({
   emitEvent: vi.fn(),
 }));
 
+vi.mock('@/lib/builder/forms/webhook-retry', () => ({
+  recordFailedWebhook: vi.fn(async () => undefined),
+}));
+
+vi.mock('@/lib/builder/security/rate-limit', () => ({
+  checkRateLimit: vi.fn(async () => ({ allowed: true, remaining: 4, retryAfterMs: 0 })),
+}));
+
 describe('/api/forms/submit', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.mocked(checkRateLimit).mockResolvedValue({ allowed: true, remaining: 4, retryAfterMs: 0 });
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    vi.restoreAllMocks();
   });
 
   it('validates against stored form schema and rejects invalid fields', async () => {
@@ -99,6 +115,56 @@ describe('/api/forms/submit', () => {
         files: expect.arrayContaining([expect.objectContaining({ fieldId: 'signature' })]),
       }),
     );
+  });
+
+  it('returns Retry-After when the submit rate limit is exceeded', async () => {
+    vi.mocked(checkRateLimit).mockResolvedValueOnce({ allowed: false, remaining: 0, retryAfterMs: 2500 });
+    const engine = await import('@/lib/builder/forms/form-engine');
+    const route = await import('../submit/route');
+    const response = await route.POST(makeRequest({}));
+    const payload = await response.json();
+
+    expect(response.status).toBe(429);
+    expect(response.headers.get('retry-after')).toBe('3');
+    expect(payload.error).toContain('요청이 너무 많습니다');
+    expect(engine.saveSubmission).not.toHaveBeenCalled();
+  });
+
+  it('records failed webhook deliveries without failing the form response', async () => {
+    const engine = await import('@/lib/builder/forms/form-engine');
+    vi.mocked(engine.loadFormSchema).mockResolvedValue(null);
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const fetchMock = vi.fn(async () => new Response('downstream unavailable', { status: 503 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const route = await import('../submit/route');
+    const request = makeRequest({
+      formId: 'webhook-form',
+      formName: 'Webhook form',
+      submitTo: 'webhook',
+      webhookUrl: 'https://hooks.example.test/form',
+      fields: { email: 'client@example.test' },
+      loadedAt: 0,
+      submittedAt: 4000,
+    });
+
+    const response = await route.POST(request);
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.ok).toBe(true);
+    expect(fetchMock).toHaveBeenCalledWith(
+      'https://hooks.example.test/form',
+      expect.objectContaining({ method: 'POST' }),
+    );
+    expect(recordFailedWebhook).toHaveBeenCalledWith(
+      'https://hooks.example.test/form',
+      expect.objectContaining({
+        formName: 'Webhook form',
+        fields: { email: 'client@example.test' },
+      }),
+      expect.any(Error),
+    );
+    consoleError.mockRestore();
   });
 });
 

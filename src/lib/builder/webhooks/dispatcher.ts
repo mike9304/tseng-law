@@ -4,6 +4,7 @@ import {
   saveDelivery,
 } from './storage';
 import { signWebhookPayload } from './signature';
+import { reasonUrlUnsafe } from './url-guard';
 import type { WebhookDelivery, WebhookEventType, WebhookSubscription } from './types';
 
 /**
@@ -32,6 +33,21 @@ async function performDelivery(
     attempts: attempt,
     createdAt: now,
   };
+  // SECURITY: SSRF guard. Refuse loopback / private / cloud-metadata
+  // targets before issuing the fetch so a misconfigured or malicious
+  // subscription cannot probe internal services or exfiltrate IMDS
+  // credentials. Treated as a "failed" delivery for audit consistency.
+  const unsafeReason = reasonUrlUnsafe(subscription.url);
+  if (unsafeReason) {
+    delivery.status = 'failed';
+    delivery.lastTriedAt = new Date().toISOString();
+    delivery.error = `Refused: ${unsafeReason}`;
+    await saveDelivery(delivery);
+    return delivery;
+  }
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 8_000);
   try {
     const res = await fetch(subscription.url, {
       method: 'POST',
@@ -42,6 +58,7 @@ async function performDelivery(
         'X-Hojeong-Delivery-Id': deliveryId,
       },
       body,
+      signal: controller.signal,
     });
     const text = await res.text().catch(() => '');
     delivery.responseStatus = res.status;
@@ -52,7 +69,11 @@ async function performDelivery(
   } catch (err) {
     delivery.status = 'failed';
     delivery.lastTriedAt = new Date().toISOString();
-    delivery.error = err instanceof Error ? err.message : String(err);
+    delivery.error = err instanceof Error
+      ? (err.name === 'AbortError' ? 'Webhook delivery timed out after 8s' : err.message)
+      : String(err);
+  } finally {
+    clearTimeout(timeoutId);
   }
   await saveDelivery(delivery);
   return delivery;

@@ -12,6 +12,7 @@ import { ZodError, z } from 'zod';
 import { columnLocaleSchema } from '@/lib/builder/columns/types';
 import { listAllBlogPosts, listBlogPosts } from '@/lib/builder/blog/column-adapter';
 import { filterPosts, sortPosts, type BlogPost } from '@/lib/builder/blog/blog-engine';
+import { guardBuilderRead } from '@/lib/builder/security/guard';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -39,6 +40,15 @@ export async function GET(request: NextRequest) {
       featured: sp.get('featured') ?? undefined,
       scope: sp.get('scope') ?? 'public',
     });
+
+    // SECURITY: scope=all returns DRAFT posts. Drafts must never leak to
+    // anonymous visitors. Require builder admin auth when callers ask for
+    // unpublished content. Without this, /api/builder/blog/posts?scope=all
+    // exposes work-in-progress legal articles to anyone with the URL.
+    if (parsed.scope === 'all') {
+      const auth = guardBuilderRead(request);
+      if (auth instanceof NextResponse) return auth;
+    }
 
     const all: BlogPost[] = parsed.scope === 'all'
       ? await listAllBlogPosts(parsed.locale)

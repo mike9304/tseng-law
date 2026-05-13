@@ -2502,3 +2502,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. repeated no-op update compare, node click stability, archive/image click safety, FAQ reveal persistence를 latest store comparison code에서 통과시켰다.
+
+## M123 — Public form webhook SSRF guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/app/api/forms/submit/route.ts` — public form `webhookUrl` delivery 전에 `reasonUrlUnsafe()`를 적용해 loopback/RFC1918/link-local/metadata/non-http URL을 fetch하지 않고 거부한다. 거부된 URL은 retry queue에도 기록하지 않는다.
+  - `src/lib/builder/forms/webhook-retry.ts` — defense-in-depth로 unsafe URL record를 무시하고, 기존 queue에 들어온 unsafe due entry는 fetch 없이 drop한다.
+  - `src/app/api/forms/__tests__/submit-route.test.ts`, `src/lib/builder/forms/__tests__/webhook-retry.test.ts` — public submit SSRF refusal, retry record refusal, drain-time drop regression을 추가했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M123 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/webhook-retry.test.ts src/lib/builder/webhooks/__tests__/url-guard.test.ts` ✅ (3 files, 55 tests passed)
+- W 판정:
+  - W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. anonymous form submit webhook SSRF guard, retry queue URL guard, URL classifier matrix를 최신 코드에서 통과시켰다.

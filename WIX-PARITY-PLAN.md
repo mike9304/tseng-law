@@ -124,3 +124,4 @@
 | M120 | Perf  | Shared node index hot-path cleanup | W216,W225 | 1h | M119 | 🟡 store/index unit 8 + click/template E2E 6 passed / 사용자 QA 대기 |
 | M121 | Perf  | Store direct lookup cleanup | W216,W225 | 1h | M120 | 🟡 store/index unit 8 + click/layer E2E 4 passed / 사용자 QA 대기 |
 | M122 | Perf  | Canvas document compare signature cache | W216,W225 | 1h | M121 | 🟡 store/index unit 9 + node-click E2E 3 passed / 사용자 QA 대기 |
+| M123 | Sec   | Public form webhook SSRF guard | W22,W216 | 1h | M118 | 🟡 forms/webhook/url-guard unit 55 passed / 사용자 QA 대기 |

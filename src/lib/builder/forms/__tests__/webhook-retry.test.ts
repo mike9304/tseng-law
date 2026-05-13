@@ -92,4 +92,35 @@ describe('webhook retry queue', () => {
 
     expect(await listPendingWebhooks()).toEqual([]);
   });
+
+  it('refuses to record webhook entries whose URL targets internal hosts', async () => {
+    await recordFailedWebhook('http://127.0.0.1/admin', { ok: true }, new Error('boom'));
+    await recordFailedWebhook('http://169.254.169.254/latest/meta-data/', { ok: true }, new Error('boom'));
+    await recordFailedWebhook('http://[::1]/probe', { ok: true }, new Error('boom'));
+    await recordFailedWebhook('file:///etc/passwd', { ok: true }, new Error('boom'));
+
+    expect(await listPendingWebhooks()).toEqual([]);
+  });
+
+  it('drops drained entries whose URL fails the SSRF guard without fetching', async () => {
+    await fs.mkdir(ROOT, { recursive: true });
+    const id = 'wh_drain_unsafe_test';
+    const entry = {
+      id,
+      url: 'http://10.0.0.5/admin',
+      payload: { ok: true },
+      attempts: 1,
+      nextAttemptAt: new Date(Date.now() - 1000).toISOString(),
+      createdAt: new Date().toISOString(),
+    };
+    await fs.writeFile(path.join(ROOT, `${id}.json`), JSON.stringify(entry), 'utf8');
+    const fetchMock = vi.fn(async () => new Response(null, { status: 204 }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    const result = await drainPendingWebhooks();
+
+    expect(result).toEqual({ processed: 1, delivered: 0, failed: 0, dropped: 1 });
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(await listPendingWebhooks()).toEqual([]);
+  });
 });

@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import crypto from 'node:crypto';
 import { get, list, put, del } from '@vercel/blob';
+import { reasonUrlUnsafe } from '@/lib/builder/webhooks/url-guard';
 
 const ROOT = path.join(process.cwd(), 'runtime-data', 'webhook-retry');
 const BLOB_PREFIX = 'webhook-retry/entries/';
@@ -62,6 +63,12 @@ export async function recordFailedWebhook(
   payload: unknown,
   error: unknown,
 ): Promise<void> {
+  // Defense in depth: refuse to persist SSRF-targeting URLs so an attacker
+  // can't seed the retry queue with internal targets via a tampered storage
+  // backend or a future caller that bypasses the submit-route guard.
+  if (reasonUrlUnsafe(url) !== null) {
+    return;
+  }
   const id = makeId();
   const now = new Date();
   const entry: PendingWebhookDelivery = {
@@ -151,6 +158,13 @@ export async function drainPendingWebhooks(): Promise<{
   let dropped = 0;
 
   for (const entry of due) {
+    // SSRF guard: drop entries whose URL would target loopback / RFC1918 /
+    // cloud metadata. Treated as terminally undeliverable.
+    if (reasonUrlUnsafe(entry.url) !== null) {
+      await deletePendingWebhook(entry.id);
+      dropped += 1;
+      continue;
+    }
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8_000);
     try {

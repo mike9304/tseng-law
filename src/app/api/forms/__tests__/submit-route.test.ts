@@ -130,6 +130,37 @@ describe('/api/forms/submit', () => {
     expect(engine.saveSubmission).not.toHaveBeenCalled();
   });
 
+  it('refuses SSRF-targeting webhookUrl without fetching or recording', async () => {
+    const engine = await import('@/lib/builder/forms/form-engine');
+    vi.mocked(engine.loadFormSchema).mockResolvedValue(null);
+    const consoleWarn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+    const fetchMock = vi.fn(async () => new Response(null, { status: 204 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const route = await import('../submit/route');
+    const request = makeRequest({
+      formId: 'webhook-form',
+      formName: 'Webhook form',
+      submitTo: 'webhook',
+      webhookUrl: 'http://169.254.169.254/latest/meta-data/',
+      fields: { email: 'client@example.test' },
+      loadedAt: 0,
+      submittedAt: 4000,
+    });
+
+    const response = await route.POST(request);
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.ok).toBe(true);
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(recordFailedWebhook).not.toHaveBeenCalled();
+    expect(consoleWarn).toHaveBeenCalledWith(
+      expect.stringContaining('webhook forward refused'),
+      expect.any(String),
+    );
+    consoleWarn.mockRestore();
+  });
+
   it('records failed webhook deliveries without failing the form response', async () => {
     const engine = await import('@/lib/builder/forms/form-engine');
     vi.mocked(engine.loadFormSchema).mockResolvedValue(null);

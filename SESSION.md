@@ -5911,3 +5911,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - no-op update compare/history guard, node click jitter, archive/image click safety, FAQ reveal persistence.
 - 다음 후보:
   - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.
+
+## 2026-05-13 Codex /goal M123 Public form webhook SSRF guard
+
+- 남은 forms/webhook dirty diff를 보안 보강으로 검증/정리했다.
+- public form submit의 `webhookUrl`에 `reasonUrlUnsafe()`를 적용해 loopback/RFC1918/link-local/cloud metadata/non-http URL을 fetch하지 않고 거부한다. 거부된 URL은 retry queue에도 기록하지 않는다.
+- retry queue도 defense-in-depth로 unsafe URL record를 무시하고, storage에 이미 들어온 unsafe due entry는 fetch 없이 drop한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/webhook-retry.test.ts src/lib/builder/webhooks/__tests__/url-guard.test.ts` ✅ (3 files, 55 tests)
+- 확인된 커버리지:
+  - anonymous form submit webhook SSRF refusal, retry record refusal, drain-time unsafe URL drop, URL guard matrix.
+- 다음 후보:
+  - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.

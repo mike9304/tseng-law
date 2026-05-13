@@ -11,6 +11,7 @@ import { saveFormUpload } from '@/lib/builder/forms/uploads';
 import { recordFailedWebhook } from '@/lib/builder/forms/webhook-retry';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import { reasonUrlUnsafe } from '@/lib/builder/webhooks/url-guard';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -66,6 +67,14 @@ function makeSubmissionId(): string {
 }
 
 async function forwardToWebhook(url: string, payload: unknown): Promise<void> {
+  // SSRF guard. This endpoint is anonymous + public; without the guard an
+  // attacker can target loopback / RFC1918 / cloud metadata via webhookUrl.
+  // Blind SSRF is still useful for internal port probing and IMDS hits.
+  const unsafeReason = reasonUrlUnsafe(url);
+  if (unsafeReason) {
+    console.warn('[forms/submit] webhook forward refused:', unsafeReason);
+    return;
+  }
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 5_000);
   try {
@@ -80,8 +89,6 @@ async function forwardToWebhook(url: string, payload: unknown): Promise<void> {
     }
   } catch (err) {
     console.error('[forms/submit] webhook forward failed:', err);
-    // Persist for later retry by the drain cron; previously this was
-    // a silent loss of the submission webhook.
     await recordFailedWebhook(url, payload, err).catch(() => {});
   } finally {
     clearTimeout(timeout);

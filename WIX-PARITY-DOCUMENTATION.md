@@ -2645,3 +2645,18 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. page template showroom, slug prompt focus trap/back path, create/rename/delete sync, duplicate slug recovery를 latest code에서 통과시켰다.
+
+## M133 — PublishModal style/preflight split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/PublishModal.styles.ts` — publish/preflight checklist, draft-vs-published diff, schedule panel, button style constants와 style helper를 별도 파일로 분리했다.
+  - `src/components/builder/canvas/PublishModalPreflight.tsx` — preflight item aggregation, schedule date formatting, blocker suite fallback, checklist row 렌더링을 별도 파일로 분리했다.
+  - `src/components/builder/canvas/PublishModal.tsx` — publish API/save/schedule/diff orchestration만 남기고 style/preflight helper를 import한다. 파일 길이는 1100줄에서 737줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M133 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W195 publish dialog draft-vs-published diff summary" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W195 publish dialog|covers W26-W28 through actual editor UI clicks" --project=chromium-builder --workers=1` ⚠️ W26-W28 passed, W195는 첫 묶음 실행에서 published baseline 조회가 일시적으로 `첫 발행`으로 표시되어 실패한 뒤 단일 재실행에서 통과했다.
+- W 판정:
+  - W26/W27/W28/W195/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. publish modal preflight checklist, warning override/publish click path, draft-vs-published diff summary compile/render path를 latest code에서 통과시켰다.

@@ -6048,3 +6048,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - section template click stability, page template showroom, slug prompt focus/back path, template create/rename/delete sync, duplicate slug recovery.
 - 다음 후보:
   - `CanvasContainer.tsx` pointer/helper split 또는 `CanvasNode.tsx` quick edit state extraction 중 실제 리스크가 낮은 쪽을 선별한다.
+
+## 2026-05-13 Codex /goal M133 PublishModal style/preflight split
+
+- `PublishModal.tsx`의 publish/preflight/diff/schedule inline style constants를 `PublishModal.styles.ts`로 분리했다.
+- preflight checklist item aggregation, blocker suite fallback, schedule datetime formatting, checklist row 렌더링은 `PublishModalPreflight.tsx`로 분리했다.
+- publish API/save/schedule/diff orchestration은 기존 파일에 유지했고, `PublishModal.tsx` LOC는 1100에서 737로 내려갔다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W195 publish dialog draft-vs-published diff summary" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W195 publish dialog|covers W26-W28 through actual editor UI clicks" --project=chromium-builder --workers=1` ⚠️ W26-W28 passed, W195는 첫 묶음 실행에서 published baseline 조회가 일시적으로 `첫 발행` 상태가 되어 실패 후 단일 재실행에서 통과
+- 확인된 커버리지:
+  - publish modal preflight checklist, draft-vs-published diff summary, warning override/publish click path.
+- 다음 후보:
+  - `CanvasContainer.tsx` pointer/helper split 또는 `CanvasNode.tsx` quick edit state extraction 중 실제 리스크가 낮은 쪽을 선별한다.

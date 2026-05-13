@@ -25,6 +25,39 @@ import {
   checkImageAlt,
 } from '@/lib/builder/publish-gate/checks';
 import ModalShell from './ModalShell';
+import {
+  blockerSuite,
+  buildPreflightItems,
+  CheckListItem,
+  defaultScheduleInput,
+  formatScheduleInput,
+  formatScheduledAt,
+  itemStatus,
+} from './PublishModalPreflight';
+import {
+  buttonRowStyle,
+  cancelButtonStyle,
+  checklistCardStyle,
+  checklistDetailStyle,
+  checklistGridStyle,
+  checklistLabelStyle,
+  checklistStatusStyle,
+  listStyle,
+  publishButtonStyle,
+  publishDiffItemStyle,
+  publishDiffListStyle,
+  publishDiffPanelStyle,
+  publishDiffStatRowStyle,
+  publishDiffStatStyle,
+  publishWarnButtonStyle,
+  scheduleButtonStyle,
+  scheduleInputStyle,
+  schedulePanelStyle,
+  scheduleRowStyle,
+  sectionTitleStyle,
+  severityBoxStyle,
+  successBoxStyle,
+} from './PublishModal.styles';
 
 type PublishState = 'checking' | 'ready' | 'publishing' | 'success' | 'error';
 
@@ -35,17 +68,6 @@ interface DraftMeta {
 }
 
 type ToastTone = 'success' | 'error';
-
-type PreflightTone = 'ok' | 'warning' | 'blocker';
-
-interface PreflightItem {
-  key: string;
-  label: string;
-  detail: string;
-  tone: PreflightTone;
-  blockerCount: number;
-  warningCount: number;
-}
 
 interface PublishErrorBody {
   error?: string;
@@ -73,391 +95,6 @@ type PublishDiffState =
       publishedRevisionId: string;
       publishedSavedAt?: string;
     };
-
-function blockerSuite(blockers: CheckResult[]): PublishCheckSuite {
-  return {
-    results: blockers,
-    hasBlocker: blockers.some((result) => result.severity === 'blocker'),
-    blockerCount: blockers.filter((result) => result.severity === 'blocker').length,
-    warningCount: blockers.filter((result) => result.severity === 'warning').length,
-    infoCount: blockers.filter((result) => result.severity === 'info').length,
-    checkedAt: new Date().toISOString(),
-  };
-}
-
-const sectionTitleStyle: React.CSSProperties = {
-  fontSize: '0.78rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  color: '#64748b',
-  margin: '16px 0 6px',
-};
-
-const checklistGridStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-  gap: 8,
-  marginTop: 12,
-};
-
-function checklistCardStyle(tone: PreflightTone): React.CSSProperties {
-  const palette = tone === 'blocker'
-    ? { background: '#fef2f2', border: '#fca5a5', color: '#991b1b' }
-    : tone === 'warning'
-      ? { background: '#fffbeb', border: '#fde68a', color: '#92400e' }
-      : { background: '#f0fdf4', border: '#86efac', color: '#166534' };
-  return {
-    minHeight: 78,
-    padding: '10px 12px',
-    borderRadius: 10,
-    border: `1px solid ${palette.border}`,
-    background: palette.background,
-    color: palette.color,
-  };
-}
-
-const checklistLabelStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 8,
-  fontSize: '0.8rem',
-  fontWeight: 800,
-};
-
-const checklistDetailStyle: React.CSSProperties = {
-  marginTop: 6,
-  fontSize: '0.72rem',
-  lineHeight: 1.35,
-  opacity: 0.82,
-};
-
-const checklistStatusStyle: React.CSSProperties = {
-  flexShrink: 0,
-  padding: '2px 7px',
-  borderRadius: 999,
-  background: 'rgba(255,255,255,0.68)',
-  fontSize: '0.66rem',
-  fontWeight: 850,
-};
-
-const listStyle: React.CSSProperties = {
-  listStyle: 'none',
-  padding: 0,
-  margin: 0,
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 6,
-};
-
-function severityBoxStyle(sev: 'blocker' | 'warning' | 'info'): React.CSSProperties {
-  if (sev === 'blocker') {
-    return {
-      padding: '8px 12px',
-      borderRadius: 8,
-      background: '#fef2f2',
-      color: '#991b1b',
-      fontSize: '0.82rem',
-      border: '1px solid #fca5a5',
-      display: 'flex',
-      alignItems: 'flex-start',
-      justifyContent: 'space-between',
-      gap: 10,
-    };
-  }
-  if (sev === 'warning') {
-    return {
-      padding: '8px 12px',
-      borderRadius: 8,
-      background: '#fffbeb',
-      color: '#92400e',
-      fontSize: '0.82rem',
-      border: '1px solid #fde68a',
-      display: 'flex',
-      alignItems: 'flex-start',
-      justifyContent: 'space-between',
-      gap: 10,
-    };
-  }
-  return {
-    padding: '8px 12px',
-    borderRadius: 8,
-    background: '#eff6ff',
-    color: '#1e40af',
-    fontSize: '0.82rem',
-    border: '1px solid #bfdbfe',
-    display: 'flex',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between',
-    gap: 10,
-  };
-}
-
-const fixButtonStyle: React.CSSProperties = {
-  flexShrink: 0,
-  padding: '4px 10px',
-  fontSize: '0.72rem',
-  fontWeight: 600,
-  border: '1px solid currentColor',
-  background: 'rgba(255,255,255,0.7)',
-  color: 'inherit',
-  borderRadius: 6,
-  cursor: 'pointer',
-};
-
-const successBoxStyle: React.CSSProperties = {
-  padding: '14px 16px',
-  borderRadius: 10,
-  background: '#f0fdf4',
-  border: '1px solid #86efac',
-  color: '#166534',
-  fontSize: '0.88rem',
-  fontWeight: 500,
-  textAlign: 'center',
-};
-
-const buttonRowStyle: React.CSSProperties = {
-  display: 'flex',
-  gap: 10,
-  justifyContent: 'flex-end',
-  marginTop: 20,
-  flexWrap: 'wrap',
-};
-
-const cancelButtonStyle: React.CSSProperties = {
-  padding: '8px 18px',
-  borderRadius: 8,
-  border: '1px solid #cbd5e1',
-  background: '#fff',
-  color: '#334155',
-  fontSize: '0.85rem',
-  fontWeight: 600,
-  cursor: 'pointer',
-};
-
-const publishWarnButtonStyle: React.CSSProperties = {
-  padding: '8px 16px',
-  borderRadius: 8,
-  border: '1px solid #f59e0b',
-  background: '#fff',
-  color: '#92400e',
-  fontSize: '0.82rem',
-  fontWeight: 600,
-  cursor: 'pointer',
-};
-
-function publishButtonStyle(enabled: boolean): React.CSSProperties {
-  return {
-    padding: '8px 20px',
-    borderRadius: 8,
-    border: 'none',
-    background: enabled ? '#123b63' : '#94a3b8',
-    color: '#fff',
-    fontSize: '0.85rem',
-    fontWeight: 600,
-    cursor: enabled ? 'pointer' : 'not-allowed',
-    opacity: enabled ? 1 : 0.6,
-  };
-}
-
-const schedulePanelStyle: React.CSSProperties = {
-  marginTop: 16,
-  padding: 12,
-  borderRadius: 10,
-  border: '1px solid #dbeafe',
-  background: '#eff6ff',
-  display: 'grid',
-  gap: 8,
-};
-
-const publishDiffPanelStyle: React.CSSProperties = {
-  marginTop: 16,
-  padding: 12,
-  borderRadius: 10,
-  border: '1px solid #c7d2fe',
-  background: '#f8fafc',
-  display: 'grid',
-  gap: 10,
-};
-
-const publishDiffStatRowStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  flexWrap: 'wrap',
-  gap: 8,
-};
-
-const publishDiffStatStyle = (color: string): React.CSSProperties => ({
-  padding: '4px 8px',
-  borderRadius: 999,
-  background: '#fff',
-  border: '1px solid #e2e8f0',
-  color,
-  fontSize: '0.72rem',
-  fontWeight: 850,
-});
-
-const publishDiffListStyle: React.CSSProperties = {
-  listStyle: 'none',
-  margin: 0,
-  padding: 0,
-  display: 'grid',
-  gap: 4,
-};
-
-const publishDiffItemStyle: React.CSSProperties = {
-  padding: '6px 8px',
-  borderRadius: 7,
-  background: '#fff',
-  border: '1px solid #e2e8f0',
-  color: '#334155',
-  fontSize: '0.74rem',
-  lineHeight: 1.35,
-};
-
-const scheduleRowStyle: React.CSSProperties = {
-  display: 'flex',
-  gap: 8,
-  alignItems: 'center',
-  flexWrap: 'wrap',
-};
-
-const scheduleInputStyle: React.CSSProperties = {
-  flex: '1 1 190px',
-  minWidth: 0,
-  padding: '8px 10px',
-  borderRadius: 8,
-  border: '1px solid #bfdbfe',
-  background: '#fff',
-  color: '#0f172a',
-  fontSize: '0.82rem',
-};
-
-const scheduleButtonStyle: React.CSSProperties = {
-  padding: '8px 14px',
-  borderRadius: 8,
-  border: '1px solid #2563eb',
-  background: '#fff',
-  color: '#1d4ed8',
-  fontSize: '0.82rem',
-  fontWeight: 700,
-  cursor: 'pointer',
-};
-
-function toLocalDateTimeInput(date: Date): string {
-  const offsetMs = date.getTimezoneOffset() * 60_000;
-  return new Date(date.getTime() - offsetMs).toISOString().slice(0, 16);
-}
-
-function defaultScheduleInput(): string {
-  return toLocalDateTimeInput(new Date(Date.now() + 60 * 60 * 1000));
-}
-
-function formatScheduledAt(value: string): string {
-  const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return value;
-  return parsed.toLocaleString();
-}
-
-function severityIcon(sev: 'blocker' | 'warning' | 'info'): string {
-  if (sev === 'blocker') return '✕';
-  if (sev === 'warning') return '!';
-  return 'ℹ';
-}
-
-function itemTone(results: CheckResult[]): PreflightTone {
-  if (results.some((result) => result.severity === 'blocker')) return 'blocker';
-  if (results.some((result) => result.severity === 'warning')) return 'warning';
-  return 'ok';
-}
-
-function itemStatus(item: PreflightItem): string {
-  if (item.tone === 'blocker') return `${item.blockerCount} blocker`;
-  if (item.tone === 'warning') return `${item.warningCount} warning`;
-  return 'Passed';
-}
-
-function buildPreflightItems(suite: PublishCheckSuite | null): PreflightItem[] {
-  const results = suite?.results ?? [];
-  const imageResults = results.filter((result) =>
-    result.category === 'images'
-    || (result.category === 'accessibility' && result.id.startsWith('image-')),
-  );
-  const linkResults = results.filter((result) => result.category === 'links');
-  const seoResults = results.filter((result) => result.category === 'seo');
-  const formResults = results.filter((result) => result.category === 'forms');
-
-  return [
-    {
-      key: 'images',
-      label: 'Images',
-      detail: '빈 alt 이미지 / 비어 있는 이미지 소스',
-      tone: itemTone(imageResults),
-      blockerCount: imageResults.filter((result) => result.severity === 'blocker').length,
-      warningCount: imageResults.filter((result) => result.severity === 'warning').length,
-    },
-    {
-      key: 'links',
-      label: 'Links',
-      detail: '빈 링크 / 잘못된 URL / 없는 내부 경로',
-      tone: itemTone(linkResults),
-      blockerCount: linkResults.filter((result) => result.severity === 'blocker').length,
-      warningCount: linkResults.filter((result) => result.severity === 'warning').length,
-    },
-    {
-      key: 'seo',
-      label: 'SEO',
-      detail: 'title / description 누락 및 권장 길이',
-      tone: itemTone(seoResults),
-      blockerCount: seoResults.filter((result) => result.severity === 'blocker').length,
-      warningCount: seoResults.filter((result) => result.severity === 'warning').length,
-    },
-    {
-      key: 'forms',
-      label: 'Forms',
-      detail: 'form action / email / webhook 대상',
-      tone: itemTone(formResults),
-      blockerCount: formResults.filter((result) => result.severity === 'blocker').length,
-      warningCount: formResults.filter((result) => result.severity === 'warning').length,
-    },
-  ];
-}
-
-function CheckListItem({
-  result,
-  onFix,
-}: {
-  result: CheckResult;
-  onFix?: (nodeId: string) => void;
-}): JSX.Element {
-  const firstNode = result.affectedNodeIds?.[0];
-  return (
-    <li style={severityBoxStyle(result.severity)}>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', gap: 6, alignItems: 'baseline' }}>
-          <span style={{ fontWeight: 700 }}>{severityIcon(result.severity)}</span>
-          <span style={{ fontWeight: 600 }}>{result.message}</span>
-        </div>
-        {result.fixHint ? (
-          <div style={{ marginTop: 4, opacity: 0.8, fontSize: '0.74rem' }}>
-            ↳ {result.fixHint}
-          </div>
-        ) : null}
-      </div>
-      {firstNode && onFix ? (
-        <button
-          type="button"
-          style={fixButtonStyle}
-          onClick={() => onFix(firstNode)}
-          aria-label="Fix this issue"
-        >
-          Fix
-        </button>
-      ) : null}
-    </li>
-  );
-}
 
 export default function PublishModal({
   open,
@@ -632,7 +269,7 @@ export default function PublishModal({
       .then((data: { ok?: boolean; job?: ScheduledPublishJob | null } | null) => {
         if (data?.ok && data.job) {
           setScheduledJob(data.job);
-          setScheduledAtInput(toLocalDateTimeInput(new Date(data.job.scheduledAt)));
+          setScheduledAtInput(formatScheduleInput(data.job.scheduledAt));
         }
       })
       .catch(() => undefined);

@@ -90,7 +90,11 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
 
   const parsed = updateSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid booking update', details: parsed.error.issues.slice(0, 3) }, { status: 400 });
+    // Don't leak Zod error structure — the issues array reveals internal
+    // schema shape (field names, constraints) which helps an attacker map
+    // the API surface. A generic 400 is sufficient for a token-scoped
+    // customer link: the form on the page knows what fields are valid.
+    return NextResponse.json({ error: 'Invalid booking update' }, { status: 400 });
   }
 
   if (parsed.data.action === 'cancel') {

@@ -101,8 +101,25 @@ function isIpv6Private(ip: string): boolean {
   }
   // Unique local fc00::/7
   if (lower.startsWith('fc') || lower.startsWith('fd')) return true;
-  // IPv4-mapped ::ffff:x.x.x.x — recheck the embedded v4
-  const v4Match = lower.match(/::ffff:(\d+\.\d+\.\d+\.\d+)$/);
-  if (v4Match) return isIpv4Private(v4Match[1]);
+  // IPv4-mapped ::ffff:x.x.x.x — dotted form
+  const dottedMatch = lower.match(/::ffff:(\d+\.\d+\.\d+\.\d+)$/);
+  if (dottedMatch) return isIpv4Private(dottedMatch[1]);
+  // IPv4-mapped ::ffff:XXXX:YYYY — hex form (Node URL canonicalizes to this).
+  // Decode the two trailing hex groups into a dotted v4 and re-check.
+  const hexMatch = lower.match(/^::ffff:([0-9a-f]{1,4}):([0-9a-f]{1,4})$/);
+  if (hexMatch) {
+    const high = Number.parseInt(hexMatch[1], 16);
+    const low = Number.parseInt(hexMatch[2], 16);
+    if (Number.isFinite(high) && Number.isFinite(low)) {
+      const a = (high >> 8) & 0xff;
+      const b = high & 0xff;
+      const c = (low >> 8) & 0xff;
+      const d = low & 0xff;
+      return isIpv4Private(`${a}.${b}.${c}.${d}`);
+    }
+  }
+  // Conservative: ANY ::ffff: prefix (other forms) is IPv4-mapped and
+  // suspicious enough to block — legitimate webhooks shouldn't use this.
+  if (lower.startsWith('::ffff:')) return true;
   return false;
 }

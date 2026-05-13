@@ -2771,3 +2771,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Add panel|opens the full page template showroom from the Design panel|lets users click a section chip|keeps inserted service template text visible" --project=chromium-builder --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add/Design page template showroom, section chip click, 주요업무 템플릿 nested node selection/text persistence를 latest code에서 통과시켰다.
+
+## M142 — SeoPanel style split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SeoPanel.styles.ts` — SEO modal, form, section, tab, button, preview, checkbox style constants를 분리했다.
+  - `src/components/builder/canvas/SeoPanel.tsx` — SEO fetch/save/validation/focus trap과 tab content 렌더링 중심으로 남겼다. 파일 길이는 1534줄에서 1376줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M142 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. SEO panel focus trap/restore path를 latest code에서 통과시켰다.

@@ -19,6 +19,29 @@ import {
   normalizeStructuredDataSettings,
   validateBuilderPageSeo,
 } from '@/lib/builder/seo/validation';
+import {
+  backdropStyle,
+  checkboxGridStyle,
+  checkboxRowStyle,
+  fieldStyle,
+  footerStyle,
+  formActionsStyle,
+  formStyle,
+  ghostButtonStyle,
+  headerStyle,
+  helpTextStyle,
+  inputStyle,
+  labelStyle,
+  panelStyle,
+  previewCardStyle,
+  primaryButtonStyle,
+  sectionStyle,
+  sectionTitleStyle,
+  tabBarStyle,
+  tabButtonStyle,
+  textareaStyle,
+  twoColumnStyle,
+} from './SeoPanel.styles';
 
 interface SeoFormState {
   slug: string;
@@ -178,187 +201,6 @@ const FOCUSABLE_SELECTOR = [
   'textarea:not([disabled])',
   '[tabindex]:not([tabindex="-1"])',
 ].join(',');
-
-const backdropStyle: React.CSSProperties = {
-  position: 'fixed',
-  inset: 0,
-  zIndex: 21000,
-  background: 'rgba(15, 23, 42, 0.45)',
-  backdropFilter: 'blur(6px)',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
-
-const panelStyle: React.CSSProperties = {
-  width: 760,
-  maxWidth: '94vw',
-  maxHeight: '88vh',
-  background: '#fff',
-  borderRadius: 12,
-  boxShadow: '0 24px 64px rgba(15, 23, 42, 0.18)',
-  display: 'flex',
-  flexDirection: 'column',
-  overflow: 'hidden',
-};
-
-const headerStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 16,
-  padding: '16px 20px',
-  borderBottom: '1px solid #e2e8f0',
-};
-
-const formStyle: React.CSSProperties = {
-  flex: 1,
-  overflowY: 'auto',
-  padding: '16px 20px',
-  display: 'grid',
-  gap: 14,
-};
-
-const sectionStyle: React.CSSProperties = {
-  display: 'grid',
-  gap: 12,
-  padding: 14,
-  border: '1px solid #e2e8f0',
-  borderRadius: 8,
-  background: '#fff',
-};
-
-const twoColumnStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
-  gap: 12,
-};
-
-const fieldStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 5,
-};
-
-const labelStyle: React.CSSProperties = {
-  fontSize: '0.77rem',
-  fontWeight: 700,
-  color: '#334155',
-};
-
-const helpTextStyle: React.CSSProperties = {
-  fontSize: '0.73rem',
-  color: '#64748b',
-  lineHeight: 1.45,
-};
-
-const inputStyle: React.CSSProperties = {
-  padding: '8px 10px',
-  border: '1px solid #dbe2ea',
-  borderRadius: 8,
-  fontSize: '0.84rem',
-  color: '#0f172a',
-  outline: 'none',
-};
-
-const textareaStyle: React.CSSProperties = {
-  ...inputStyle,
-  minHeight: 86,
-  resize: 'vertical',
-  fontFamily: 'inherit',
-};
-
-const sectionTitleStyle: React.CSSProperties = {
-  margin: 0,
-  fontSize: '0.86rem',
-  fontWeight: 800,
-  color: '#0f172a',
-};
-
-const footerStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 12,
-  padding: '12px 20px',
-  borderTop: '1px solid #e2e8f0',
-};
-
-const ghostButtonStyle: React.CSSProperties = {
-  padding: '8px 14px',
-  fontSize: '0.82rem',
-  fontWeight: 700,
-  border: '1px solid #cbd5e1',
-  borderRadius: 8,
-  background: '#fff',
-  color: '#334155',
-  cursor: 'pointer',
-};
-
-const primaryButtonStyle: React.CSSProperties = {
-  padding: '8px 16px',
-  fontSize: '0.82rem',
-  fontWeight: 800,
-  border: 'none',
-  borderRadius: 8,
-  background: '#123b63',
-  color: '#fff',
-  cursor: 'pointer',
-};
-
-const previewCardStyle: React.CSSProperties = {
-  display: 'grid',
-  gap: 8,
-  padding: 12,
-  border: '1px solid #dbe2ea',
-  borderRadius: 8,
-  background: '#f8fafc',
-};
-
-const checkboxGridStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))',
-  gap: 8,
-};
-
-const checkboxRowStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'flex-start',
-  gap: 8,
-  padding: '9px 10px',
-  border: '1px solid #e2e8f0',
-  borderRadius: 8,
-  background: '#f8fafc',
-  fontSize: '0.78rem',
-  color: '#334155',
-};
-
-const formActionsStyle: React.CSSProperties = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  gap: 8,
-  alignItems: 'center',
-};
-
-const tabBarStyle: React.CSSProperties = {
-  display: 'flex',
-  gap: 8,
-  padding: '10px 20px',
-  borderBottom: '1px solid #e2e8f0',
-  background: '#f8fafc',
-};
-
-const tabButtonStyle = (active: boolean): React.CSSProperties => ({
-  border: '1px solid',
-  borderColor: active ? '#123b63' : '#cbd5e1',
-  borderRadius: 8,
-  background: active ? '#123b63' : '#fff',
-  color: active ? '#fff' : '#334155',
-  cursor: 'pointer',
-  fontSize: '0.78rem',
-  fontWeight: 800,
-  padding: '7px 10px',
-});
 
 function counterColor(length: number, min: number, max: number): string {
   if (length === 0) return '#dc2626';

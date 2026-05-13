@@ -6166,3 +6166,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Add/Design page template showroom, section chip click, 주요업무 템플릿 nested node selection/text persistence.
 - 다음 후보:
   - `SeoPanel.tsx` 또는 `SiteSettingsModal.tsx`에서 독립 form section/component를 선별해 같은 방식으로 분리한다.
+
+## 2026-05-13 Codex /goal M142 SeoPanel style split
+
+- `SeoPanel.tsx`의 SEO modal/form/section/tab/button/preview/checkbox style constants를 `SeoPanel.styles.ts`로 분리했다.
+- `SeoPanel.tsx`는 SEO fetch/save/validation/focus trap과 tab content 렌더링 중심으로 남겼고, LOC는 1534에서 1376으로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - SEO panel focus trap/restore path.
+- 다음 후보:
+  - `SeoPanel.tsx`의 Advanced/Hreflang/Assistant 탭 중 하나를 별도 subview로 분리하거나 `SiteSettingsModal.tsx` style/form section split을 진행한다.

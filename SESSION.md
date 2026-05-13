@@ -5764,3 +5764,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts tests/builder-editor/zh-hant-smoke.playwright.ts tests/builder-editor/mobile-runtime.playwright.ts tests/builder-editor/mobile-auto-fit.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - cross-tab delete race, empty/error states, visual smoke 또는 bookings/forms 쪽 dirty worktree와 충돌하지 않는 검증을 계속 진행한다.
+
+## 2026-05-13 Codex /goal M114 Empty/error/race-state sweep
+
+- empty/error states와 cross-tab delete race 최신 E2E sweep을 실행했다.
+- 제품 코드는 변경하지 않았다. `src/lib/builder/persistence.ts`에 별도 dirty diff가 있는 상태라 cross-tab race는 검증만 수행했다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/empty-error-states.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/cross-tab-delete-race.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - empty canvas, empty pages, empty asset library, empty blog feed.
+  - network/500/401 save failure UI, publish blocking, retry affordance.
+  - IME outside-click commit, long Korean text no-width expansion.
+  - stale-tab page deletion reconciliation with concurrent page additions preserved.
+- 다음 후보:
+  - visual/office-map/public smoke 또는 bookings/forms 쪽 dirty worktree와 충돌하지 않는 검증을 계속 진행한다.

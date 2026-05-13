@@ -2361,3 +2361,14 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts tests/builder-editor/zh-hant-smoke.playwright.ts tests/builder-editor/mobile-runtime.playwright.ts tests/builder-editor/mobile-auto-fit.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W10/W14/W40/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Korean/Traditional Chinese locale isolation, zh-hant editor/public smoke, mobile auto-fit, mobile preview/runtime, sticky CTA and touch context menu를 최신 코드에서 통과시켰다.
+
+## M114 — Empty/error/race-state sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M114 검증 증거만 기록했다. 제품 코드는 변경하지 않았다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/empty-error-states.playwright.ts --workers=1` ✅ (9 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/cross-tab-delete-race.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W05/W09/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. empty canvas/pages/assets/blog feed, save failure blocking, auth expiry, IME blur commit, long Korean text wrapping, stale-tab page deletion reconciliation을 최신 코드에서 통과시켰다.

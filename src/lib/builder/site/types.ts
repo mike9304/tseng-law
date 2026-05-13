@@ -9,6 +9,7 @@
 
 import type { Locale } from '@/lib/locales';
 import type { TranslationEntry } from '@/lib/builder/translations/types';
+import type { BuilderCmsCollection } from '@/lib/builder/cms-types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 import {
@@ -383,6 +384,7 @@ export interface BuilderSiteDocument {
   popups?: BuilderPopup[];
   cookieConsent?: BuilderCookieConsent;
   translations?: TranslationEntry[];
+  cmsCollections?: BuilderCmsCollection[];
   sectionLibrary?: SavedSection[];
   redirects?: SiteRedirect[];
   createdAt: string;

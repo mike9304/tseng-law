@@ -40,6 +40,30 @@ Created: 2026-05-09T12:52:13.760Z
 - 다음:
   - M158에서 CMS collections/content manager v1을 시작한다.
 
+## M158-A — Editable CMS Store, APIs, And Content Manager Seed
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/cms-types.ts` — persistent CMS collection/field/record/permission 타입 추가
+  - `src/lib/builder/cms-editable.ts` — site document 기반 editable CMS CRUD/validation 엔진 추가
+  - `src/lib/builder/site/types.ts` / `src/lib/builder/site/persistence.ts` — `cmsCollections` 저장 필드 유지
+  - `src/app/api/builder/sites/[siteId]/collections/**` — guarded collection/record CRUD API 추가
+  - `src/app/(builder)/[locale]/admin-builder/cms/page.tsx` / `src/components/builder/cms/ContentManagerClient.tsx` — Content Manager UI 추가
+  - `src/components/builder/canvas/SandboxEditorRail.tsx` / `src/components/builder/BuilderWorkspaceDashboard.tsx` — CMS 진입점 추가
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — collection/record CRUD, required/unique validation, static ID reservation 테스트
+- F-layer 판정:
+  - F07/F08/F09/F10/F12/F16 🟡
+  - F11/F13/F14/F15 🔴
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts` ✅ (4 tests)
+  - `npm run security:builder-routes` ✅ (117 route files / 101 mutation handlers)
+  - `npx next lint --file ...CMS changed files...` ✅
+  - `git diff --check` ✅
+  - `npm run lint` ⚠️ blocked by pre-existing non-CMS lint errors in `SandboxCatalogPanel.tsx` and currently dirty heading files
+- 남은 M158:
+  - CSV import/export, content revisions, media-field asset integration, search/filter/sort views, duplicate row UI.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

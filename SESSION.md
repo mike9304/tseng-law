@@ -6387,3 +6387,24 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
 - `WIX-PARITY-PLAN.md`의 M157은 🟢로 전환했고 다음 실제 구현 마일스톤은 M158 CMS collections/content manager v1이다.
 - 검증:
   - `git diff --check` ✅.
+
+## 2026-05-13 Codex /goal M158-A Editable CMS seed
+
+- M158 CMS collections/content manager v1의 첫 구현으로 editable CMS store/API/UI를 추가했다.
+- `cmsCollections`를 site document에 저장하고, collection schema/record/permission 타입을 `cms-types.ts`로 분리했다.
+- `cms-editable.ts`에서 collection CRUD, record CRUD, required/unique/default/min/max/pattern/type validation, static source collection ID reservation을 처리한다.
+- `/api/builder/sites/[siteId]/collections/**`에 guarded collection/record mutation endpoints를 추가했다.
+- `/${locale}/admin-builder/cms` Content Manager 화면에서 editable collection 생성, collection 열기/삭제, record 생성/수정/삭제가 가능하다.
+- 에디터 좌측 rail과 workspace dashboard에 Content Manager 진입점을 추가했다.
+- 체크포인트 상태:
+  - F07/F08/F09/F10/F12/F16 🟡
+  - F11/F13/F14/F15 🔴
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts` ✅ (4 tests)
+  - `npm run security:builder-routes` ✅ (117 route files / 101 mutation handlers)
+  - `npx next lint --file ...CMS changed files...` ✅
+  - `git diff --check` ✅
+  - `npm run lint` ⚠️ 기존 non-CMS lint errors로 blocked: `SandboxCatalogPanel.tsx` unused constants, dirty heading file unused import.
+- 다음 후보:
+  - M158-B: CSV import/export + search/filter/sort + duplicate row UI 또는 content revisions.

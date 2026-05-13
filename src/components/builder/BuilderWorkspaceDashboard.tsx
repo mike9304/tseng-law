@@ -291,7 +291,12 @@ export default function BuilderWorkspaceDashboard({
 
         <section id="cms-inventory-kickoff" className="builder-preview-inspector-card">
           <h2>CMS inventory kickoff</h2>
-          <p>These collections are real read-only inventory from the current site codebase. Collection editing, datasets, and dynamic-page binding are still deferred.</p>
+          <p>Static source collections remain read-only; editable CMS collections are managed in Content Manager.</p>
+          <div className="builder-dashboard-page-actions">
+            <Link href={`/${locale}/admin-builder/cms`} className="builder-action-btn builder-action-btn--primary">
+              Open Content Manager
+            </Link>
+          </div>
           <div className="builder-dashboard-page-list">
             {overview.collections.map((collection) => (
               <article key={collection.id} className="builder-dashboard-page-card">

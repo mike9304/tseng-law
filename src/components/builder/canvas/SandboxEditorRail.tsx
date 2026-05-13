@@ -204,6 +204,15 @@ export default function SandboxEditorRail({
           <span className={styles.railButtonIcon} aria-hidden="true">▦</span>
           <span className={styles.railButtonLabel}>칼럼</span>
         </button>
+        <a
+          className={styles.railButton}
+          href={`/${locale}/admin-builder/cms`}
+          aria-label="Content Manager"
+          title="CMS Content Manager"
+        >
+          <span className={styles.railButtonIcon} aria-hidden="true">▥</span>
+          <span className={styles.railButtonLabel}>CMS</span>
+        </a>
         <button
           type="button"
           className={`${styles.railButton} ${activeDrawer === 'history' ? styles.railButtonActive : ''}`}

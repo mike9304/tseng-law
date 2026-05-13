@@ -563,6 +563,7 @@ function normalizeSiteDocumentLifecycle(
     lightboxes: site.lightboxes ?? [],
     popups: site.popups ?? [],
     translations: site.translations ?? [],
+    cmsCollections: site.cmsCollections ?? [],
     sectionLibrary: site.sectionLibrary ?? [],
     redirects: site.redirects ?? [],
   });

@@ -1,53 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
-  isBuilderCollectionId,
-  readBuilderCollectionDetail,
-} from '@/lib/builder/cms';
-import {
   BuilderCmsValidationError,
-  deleteEditableBuilderCmsCollection,
+  deleteEditableBuilderCmsRecord,
   readEditableBuilderCmsCollection,
-  updateEditableBuilderCmsCollection,
+  updateEditableBuilderCmsRecord,
 } from '@/lib/builder/cms-editable';
+import { isBuilderCollectionId } from '@/lib/builder/cms';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string } }
-) {
-  const auth = await guardMutation(request, { permission: 'edit-pages' });
-  if (auth instanceof NextResponse) return auth;
-
-  if (!isDefaultBuilderSiteId(params.siteId)) {
-    return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
-  }
-
-  try {
-    const url = new URL(request.url);
-    const locale = url.searchParams.get('locale');
-    if (isBuilderCollectionId(params.collectionId)) {
-      const detail = readBuilderCollectionDetail(params.collectionId, locale);
-      return NextResponse.json({ ok: true, detail, source: 'static' });
-    }
-
-    const detail = await readEditableBuilderCmsCollection(params.siteId, locale, params.collectionId);
-    if (!detail) {
-      return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
-    }
-    return NextResponse.json({ ok: true, detail, source: 'editable' });
-  } catch (error) {
-    console.error('[builder-collection-detail] failed', error);
-    return NextResponse.json(
-      { ok: false, error: 'Failed to read builder collection detail.' },
-      { status: 500 }
-    );
-  }
-}
-
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string } }
+  { params }: { params: { siteId: string; collectionId: string; recordId: string } },
 ) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
@@ -57,7 +21,42 @@ export async function PATCH(
   }
   if (isBuilderCollectionId(params.collectionId)) {
     return NextResponse.json(
-      { ok: false, error: 'Static source collections cannot be edited here.' },
+      { ok: false, error: 'Static source collection records are read through their detail endpoint.' },
+      { status: 409 },
+    );
+  }
+
+  try {
+    const url = new URL(request.url);
+    const locale = url.searchParams.get('locale');
+    const detail = await readEditableBuilderCmsCollection(params.siteId, locale, params.collectionId);
+    const record = detail?.records.find((candidate) => candidate.recordId === params.recordId);
+    if (!record) {
+      return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
+    }
+    return NextResponse.json({ ok: true, record });
+  } catch (error) {
+    console.error('[builder-cms-record] read failed', error);
+    return NextResponse.json(
+      { ok: false, error: 'Failed to read CMS record.' },
+      { status: 500 },
+    );
+  }
+}
+
+export async function PATCH(
+  request: NextRequest,
+  { params }: { params: { siteId: string; collectionId: string; recordId: string } },
+) {
+  const auth = await guardMutation(request, { permission: 'edit-pages' });
+  if (auth instanceof NextResponse) return auth;
+
+  if (!isDefaultBuilderSiteId(params.siteId)) {
+    return NextResponse.json({ ok: false, error: 'Unknown builder site.' }, { status: 404 });
+  }
+  if (isBuilderCollectionId(params.collectionId)) {
+    return NextResponse.json(
+      { ok: false, error: 'Static source collection records cannot be edited here.' },
       { status: 409 },
     );
   }
@@ -66,16 +65,17 @@ export async function PATCH(
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
     const payload = await request.json();
-    const detail = await updateEditableBuilderCmsCollection(
+    const record = await updateEditableBuilderCmsRecord(
       params.siteId,
       locale,
       params.collectionId,
+      params.recordId,
       payload,
     );
-    if (!detail) {
-      return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
+    if (!record) {
+      return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
     }
-    return NextResponse.json({ ok: true, detail });
+    return NextResponse.json({ ok: true, record });
   } catch (error) {
     if (error instanceof BuilderCmsValidationError) {
       return NextResponse.json(
@@ -83,9 +83,9 @@ export async function PATCH(
         { status: 400 },
       );
     }
-    console.error('[builder-collection-detail] update failed', error);
+    console.error('[builder-cms-record] update failed', error);
     return NextResponse.json(
-      { ok: false, error: 'Failed to update builder collection.' },
+      { ok: false, error: 'Failed to update CMS record.' },
       { status: 500 },
     );
   }
@@ -93,7 +93,7 @@ export async function PATCH(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { siteId: string; collectionId: string } }
+  { params }: { params: { siteId: string; collectionId: string; recordId: string } },
 ) {
   const auth = await guardMutation(request, { permission: 'edit-pages' });
   if (auth instanceof NextResponse) return auth;
@@ -103,7 +103,7 @@ export async function DELETE(
   }
   if (isBuilderCollectionId(params.collectionId)) {
     return NextResponse.json(
-      { ok: false, error: 'Static source collections cannot be deleted here.' },
+      { ok: false, error: 'Static source collection records cannot be deleted here.' },
       { status: 409 },
     );
   }
@@ -111,15 +111,20 @@ export async function DELETE(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
-    const deleted = await deleteEditableBuilderCmsCollection(params.siteId, locale, params.collectionId);
+    const deleted = await deleteEditableBuilderCmsRecord(
+      params.siteId,
+      locale,
+      params.collectionId,
+      params.recordId,
+    );
     if (!deleted) {
-      return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
+      return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
     }
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error('[builder-collection-detail] delete failed', error);
+    console.error('[builder-cms-record] delete failed', error);
     return NextResponse.json(
-      { ok: false, error: 'Failed to delete builder collection.' },
+      { ok: false, error: 'Failed to delete CMS record.' },
       { status: 500 },
     );
   }

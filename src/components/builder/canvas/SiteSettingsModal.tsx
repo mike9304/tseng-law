@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
-  PAGE_TRANSITION_OPTIONS,
   type PageTransition,
 } from '@/lib/builder/animations/presets';
 import {
@@ -60,6 +59,7 @@ import {
   SiteSettingsGeneralTab,
   type SiteSettingsGeneralFieldKey,
 } from './SiteSettingsGeneralTab';
+import { SiteSettingsAdvancedTab } from './SiteSettingsAdvancedTab';
 import { SiteSettingsMobileTab } from './SiteSettingsMobileTab';
 import {
   cancelBtnStyle,
@@ -716,86 +716,25 @@ export default function SiteSettingsModal({
               onChangeMobileBottomBar={setMobileBottomBar}
             />
           ) : activeTab === 'advanced' ? (
-            <div style={sectionStyle}>
-              <div style={sectionHeadingStyle}>Motion</div>
-              <div style={twoColumnStyle}>
-                <div style={fieldStyle}>
-                  <label style={labelStyle}>Page transition</label>
-                  <select
-                    aria-label="Page transition"
-                    value={settings.pageTransition}
-                    style={inputStyle}
-                    onChange={(event) => {
-                      const value = event.target.value as PageTransition;
-                      setSettings((prev) => ({
-                        ...prev,
-                        pageTransition: value,
-                      }));
-                    }}
-                  >
-                    {PAGE_TRANSITION_OPTIONS.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div style={fieldStyle}>
-                  <label style={labelStyle}>Duration</label>
-                  <input
-                    aria-label="Page transition duration"
-                    type="number"
-                    min={80}
-                    max={3000}
-                    step={20}
-                    value={settings.pageTransitionDurationMs}
-                    style={inputStyle}
-                    disabled={settings.pageTransition === 'none'}
-                    onChange={(event) => {
-                      const raw = Number(event.target.value);
-                      const next = Number.isFinite(raw)
-                        ? Math.max(80, Math.min(3000, Math.round(raw)))
-                        : 280;
-                      setSettings((prev) => ({
-                        ...prev,
-                        pageTransitionDurationMs: next,
-                      }));
-                    }}
-                  />
-                </div>
-              </div>
-              <p style={{ margin: 0, color: '#64748b', fontSize: '0.76rem', lineHeight: 1.45 }}>
-                Published 페이지 wrapper에 fade/slide/scale 전환을 적용합니다. 방문자가 reduced motion을 켜면 자동으로 꺼집니다.
-              </p>
-
-              <div style={sectionHeadingStyle}>Theme colors</div>
-              {THEME_COLOR_TOKENS.map((token) => (
-                <div key={token} style={fieldStyle}>
-                  <label style={labelStyle}>{THEME_COLOR_LABELS[token]}</label>
-                  <div style={{ display: 'grid', gridTemplateColumns: '56px 1fr', gap: 8, alignItems: 'center' }}>
-                    <input
-                      type="color"
-                      value={isValidHexColor(theme.colors[token]) ? theme.colors[token] : DEFAULT_THEME.colors[token]}
-                      style={{ width: 56, height: 38, padding: 4, border: '1px solid #e2e8f0', borderRadius: 8, background: '#fff', cursor: 'pointer' }}
-                      onChange={(event) => updateThemeColor(token, event.target.value)}
-                    />
-                    <input
-                      type="text"
-                      value={theme.colors[token]}
-                      placeholder="#123B63"
-                      style={inputStyle}
-                      onChange={(event) => updateThemeColor(token, event.target.value)}
-                      onFocus={(event) => {
-                        event.currentTarget.style.borderColor = '#116dff';
-                      }}
-                      onBlur={(event) => {
-                        event.currentTarget.style.borderColor = '#e2e8f0';
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+            <SiteSettingsAdvancedTab
+              pageTransition={settings.pageTransition}
+              pageTransitionDurationMs={settings.pageTransitionDurationMs}
+              theme={theme}
+              isValidHexColor={isValidHexColor}
+              onChangePageTransition={(value) => {
+                setSettings((prev) => ({
+                  ...prev,
+                  pageTransition: value,
+                }));
+              }}
+              onChangePageTransitionDurationMs={(value) => {
+                setSettings((prev) => ({
+                  ...prev,
+                  pageTransitionDurationMs: value,
+                }));
+              }}
+              onChangeThemeColor={updateThemeColor}
+            />
           ) : activeTab === 'dark' ? (
             <div style={sectionStyle}>
               <div style={sectionStyle}>

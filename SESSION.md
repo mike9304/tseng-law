@@ -6214,3 +6214,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Mobile preview iframe, sticky CTA settings, touch long press context menu path.
 - 다음 후보:
   - `SiteSettingsModal.tsx` Presets 탭이나 Typography 탭을 subview로 분리해 본체를 1300줄 이하에 가깝게 내린다.
+
+## 2026-05-13 Codex /goal M146 SiteSettingsModal advanced tab split
+
+- `SiteSettingsModal.tsx`의 Advanced 탭 Motion page transition controls와 Theme colors editor를 `SiteSettingsAdvancedTab.tsx`로 분리했다.
+- `SiteSettingsModal.tsx`는 Advanced 탭을 컴포넌트 호출로 줄이고 settings/theme save orchestration을 유지했으며, LOC는 1410에서 1349로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/motion-runtime.playwright.ts -g "page transition" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/motion-runtime.playwright.ts -g "page transition" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Site Settings Advanced page transition 설정과 published motion runtime attrs path.
+- 다음 후보:
+  - `SiteSettingsModal.tsx` Presets 탭이나 Typography 탭을 subview로 분리해 본체를 1300줄 이하로 내린다.

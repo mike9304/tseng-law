@@ -2797,3 +2797,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts -g "persists typography scale" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Site Settings Typography scale persistence와 inspector style source chip path를 latest code에서 통과시켰다.
+
+## M144 — SiteSettingsModal general tab split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SiteSettingsGeneralTab.tsx` — Site Settings General 탭의 기본 정보 필드 목록과 input 렌더링을 분리했다.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — General 탭은 새 컴포넌트 호출로 줄이고, settings/theme/mobile/typography state logic을 유지했다. 파일 길이는 1556줄에서 1517줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M144 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts -g "persists typography scale" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Site Settings modal open/save-adjacent typography scale persistence path를 latest code에서 통과시켰다.

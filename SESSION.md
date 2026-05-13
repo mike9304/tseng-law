@@ -6190,3 +6190,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Site Settings Typography scale persistence, inspector style source chip path.
 - 다음 후보:
   - `SiteSettingsModal.tsx`의 General/Mobile/Presets 탭 subview 분리 또는 `SeoPanel.tsx` Advanced/Hreflang/Assistant 탭 subview 분리를 진행한다.
+
+## 2026-05-13 Codex /goal M144 SiteSettingsModal general tab split
+
+- `SiteSettingsModal.tsx`의 General 탭 기본 정보 field definitions와 input 렌더링을 `SiteSettingsGeneralTab.tsx`로 분리했다.
+- `SiteSettingsModal.tsx`는 General 탭을 컴포넌트 호출로 줄이고 settings/theme/mobile/typography state logic을 유지했으며, LOC는 1556에서 1517로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts -g "persists typography scale" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Site Settings modal open/save-adjacent typography scale persistence path.
+- 다음 후보:
+  - `SiteSettingsModal.tsx`의 Mobile 또는 Presets 탭 subview 분리로 본체를 1400줄 이하에 가깝게 내린다.

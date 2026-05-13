@@ -1058,7 +1058,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document || state.selectedNodeIds.length !== 1) return state;
       const targetId = state.selectedNodeIds[0]!;
-      const groupNode = state.document.nodes.find((node) => node.id === targetId);
+      const groupNode = state.nodesById.get(targetId);
       if (!groupNode || groupNode.kind !== 'container') return state;
       const childIds = state.childrenMap[targetId] ?? [];
       if (childIds.length === 0) return state;
@@ -1223,7 +1223,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   updateNode: (nodeId, updater, mode = 'commit') =>
     set((state) => {
       if (!state.document) return state;
-      const existingNode = state.document.nodes.find((node) => node.id === nodeId);
+      const existingNode = state.nodesById.get(nodeId);
       if (!existingNode) return state;
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((node) => (node.id === nodeId ? updater(node) : node)),
@@ -1253,7 +1253,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   updateNodeContent: (nodeId, content, mode = 'commit') =>
     set((state) => {
       if (!state.document) return state;
-      const existingNode = state.document.nodes.find((node) => node.id === nodeId);
+      const existingNode = state.nodesById.get(nodeId);
       if (!existingNode) return state;
       // Merge keys that exist in the node's content or the component's default content
       const componentDef = getComponent(existingNode.kind);
@@ -1286,7 +1286,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   updateNodeStyle: (nodeId, style, mode = 'commit') =>
     set((state) => {
       if (!state.document) return state;
-      const existingNode = state.document.nodes.find((node) => node.id === nodeId);
+      const existingNode = state.nodesById.get(nodeId);
       if (!existingNode) return state;
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((node) => (
@@ -1368,7 +1368,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   bringSelectedNodeForward: () =>
     set((state) => {
       if (!state.document || !state.selectedNodeId) return state;
-      const selectedNode = state.document.nodes.find((node) => node.id === state.selectedNodeId);
+      const selectedNode = state.nodesById.get(state.selectedNodeId);
       if (!selectedNode || selectedNode.locked) return state;
       const currentIndex = state.document.nodes.findIndex((node) => node.id === state.selectedNodeId);
       if (state.selectedNodeIds.length !== 1) return state;
@@ -1380,7 +1380,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   sendSelectedNodeBackward: () =>
     set((state) => {
       if (!state.document || !state.selectedNodeId) return state;
-      const selectedNode = state.document.nodes.find((node) => node.id === state.selectedNodeId);
+      const selectedNode = state.nodesById.get(state.selectedNodeId);
       if (!selectedNode || selectedNode.locked) return state;
       const currentIndex = state.document.nodes.findIndex((node) => node.id === state.selectedNodeId);
       if (state.selectedNodeIds.length !== 1) return state;
@@ -1392,7 +1392,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   bringSelectedNodeToFront: () =>
     set((state) => {
       if (!state.document || !state.selectedNodeId || state.selectedNodeIds.length !== 1) return state;
-      const selectedNode = state.document.nodes.find((node) => node.id === state.selectedNodeId);
+      const selectedNode = state.nodesById.get(state.selectedNodeId);
       if (!selectedNode || selectedNode.locked) return state;
       const document = updateNodes(state.document, (nodes) =>
         reorderNodeSequence(nodes, state.selectedNodeId!, nodes.length - 1));
@@ -1401,7 +1401,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   sendSelectedNodeToBack: () =>
     set((state) => {
       if (!state.document || !state.selectedNodeId || state.selectedNodeIds.length !== 1) return state;
-      const selectedNode = state.document.nodes.find((node) => node.id === state.selectedNodeId);
+      const selectedNode = state.nodesById.get(state.selectedNodeId);
       if (!selectedNode || selectedNode.locked) return state;
       const document = updateNodes(state.document, (nodes) =>
         reorderNodeSequence(nodes, state.selectedNodeId!, 0));
@@ -1481,7 +1481,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document) return state;
       if (viewport === 'desktop') return state; // desktop edits go to node.rect directly
-      const existingNode = state.document.nodes.find((node) => node.id === nodeId);
+      const existingNode = state.nodesById.get(nodeId);
       if (!existingNode) return state;
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((node) => {
@@ -1523,7 +1523,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document) return state;
       if (viewport === 'desktop') return state;
-      const existingNode = state.document.nodes.find((node) => node.id === nodeId);
+      const existingNode = state.nodesById.get(nodeId);
       if (!existingNode || !existingNode.responsive) return state;
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((node) => {

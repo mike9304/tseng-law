@@ -5882,3 +5882,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - node click jitter, archive/image click, FAQ reveal persistence, layer-selected real right-click, section chip click, inserted 주요업무 템플릿 텍스트 visibility.
 - 다음 후보:
   - 감사 Critical #2/#3 쪽으로 이어가 transient update normalization과 sameDocumentContent 비용을 더 줄인다.
+
+## 2026-05-13 Codex /goal M121 Store direct lookup cleanup
+
+- 감사 Critical #2/#3를 확인했다. transient update normalize/touchUpdatedAt 방지는 이미 `TRANSIENT_UPDATE_NODES_OPTIONS`와 `store-transient.test.ts`로 들어가 있어 중복 변경하지 않았다.
+- 대신 store 액션 내부의 단일 노드 조회를 계속 `state.nodesById`로 통일했다. ungroup, updateNode, updateNodeContent, updateNodeStyle, z-order, responsive override/reset 경로에서 O(N) `find()`를 제거했다.
+- bring/send forward/backward의 `findIndex`는 순서 index가 필요하므로 유지했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (2 files, 8 tests)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - node click jitter, archive/image click safety, FAQ reveal persistence, layer-selected real right-click.
+- 다음 후보:
+  - `sameDocumentContent`/history push 경로의 큰 content 비교 비용을 테스트 가능한 단위로 줄인다.

@@ -2469,3 +2469,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "lets users click a section chip|keeps inserted service template text visible while selecting nested nodes" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. canvas selection/layer context menu, node click stability, FAQ reveal persistence, section template insert/select 경로를 최신 shared index store 코드에서 통과시켰다.
+
+## M121 — Store direct lookup cleanup
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/store.ts` — ungroup, updateNode, updateNodeContent, updateNodeStyle, z-order, responsive override/reset 경로의 단일 노드 존재 확인을 `state.document.nodes.find(...)`에서 `state.nodesById.get(...)`으로 바꿨다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M121 검증 증거를 기록했다.
+- 의사결정:
+  - bring/send forward/backward의 `findIndex`는 순서 index가 필요하므로 유지했다.
+  - 감사 Critical #2의 transient normalize/touchUpdatedAt 방지는 이미 `TRANSIENT_UPDATE_NODES_OPTIONS`와 단위 테스트가 있어 중복 변경하지 않았다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (2 files, 8 tests passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. node click stability, FAQ reveal persistence, archive/image click safety, layer context menu 경로를 direct lookup cleanup 뒤에도 통과시켰다.

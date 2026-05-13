@@ -40,7 +40,15 @@ export interface BuilderPageDatasetOverview {
     secondaryLabel: string;
     routePath: string;
   }[];
+  repeaterItems: BuilderDatasetRepeaterPreviewItem[];
   notes: string[];
+}
+
+export interface BuilderDatasetRepeaterPreviewItem {
+  itemId: string;
+  title: string;
+  description: string;
+  href: string;
 }
 
 export interface BuilderResolvedBindableTarget {
@@ -187,6 +195,7 @@ export function readBuilderPageDatasetOverviews(
   return getBuilderBindableTargets(pageKey).map((definition) => {
     const binding = getBuilderPageDatasetBinding(document, definition.targetId);
     const sampleRecords = readBuilderDatasetSampleRecords(definition.targetId, binding, locale, posts);
+    const repeaterItems = sampleRecords.map(toRepeaterPreviewItem);
 
     return {
       targetId: definition.targetId,
@@ -197,12 +206,22 @@ export function readBuilderPageDatasetOverviews(
       collectionIds: [...definition.collectionIds],
       currentBinding: cloneBuilderPageDatasetBinding(binding),
       sampleRecords,
+      repeaterItems,
       notes: [
         'This seam is document-level and runtime-applied.',
-        'The current batch exposes collection detail and binding visibility before broader dataset editing.',
+        'The current batch exposes a generic repeater item contract before full visual repeater editing.',
       ],
     };
   });
+}
+
+export function readBuilderDatasetRepeaterItems(
+  targetId: BuilderDatasetTargetId,
+  binding: BuilderPageDatasetBinding,
+  locale: Locale,
+  posts: ColumnPost[]
+): BuilderDatasetRepeaterPreviewItem[] {
+  return readBuilderDatasetSampleRecords(targetId, binding, locale, posts).map(toRepeaterPreviewItem);
 }
 
 export function replaceBuilderPageDatasetLimit(
@@ -299,6 +318,20 @@ function readBuilderDatasetSampleRecords(
     default:
       return assertNever(targetId);
   }
+}
+
+function toRepeaterPreviewItem(record: {
+  recordId: string;
+  primaryLabel: string;
+  secondaryLabel: string;
+  routePath: string;
+}): BuilderDatasetRepeaterPreviewItem {
+  return {
+    itemId: record.recordId,
+    title: record.primaryLabel,
+    description: record.secondaryLabel,
+    href: record.routePath,
+  };
 }
 
 function normalizeBuilderDatasetBinding(

@@ -4,6 +4,7 @@ import {
   createDefaultBuilderPageDatasets,
   getBuilderBindableTargets,
   readBuilderPageDatasetOverviews,
+  readBuilderDatasetRepeaterItems,
   replaceBuilderPageDatasetLimit,
   resolveServicesDatasetItems,
 } from '@/lib/builder/datasets';
@@ -106,6 +107,33 @@ describe('builder datasets', () => {
           routePath: '/ko/services/investment',
         }),
       ]),
+      repeaterItems: expect.arrayContaining([
+        expect.objectContaining({
+          itemId: 'investment',
+          title: '투자·법인설립',
+          href: '/ko/services/investment',
+        }),
+      ]),
+    });
+  });
+
+  it('projects any dataset target into generic repeater preview items', () => {
+    const [insightsBinding, servicesBinding] = createDefaultBuilderPageDatasets('home');
+
+    expect(
+      readBuilderDatasetRepeaterItems('home.insights.feed', insightsBinding!, 'ko', posts)[0]
+    ).toMatchObject({
+      itemId: 'taiwan-company-establishment-basics',
+      title: '대만 회사설립 기초편',
+      href: '/ko/columns/taiwan-company-establishment-basics',
+    });
+
+    expect(
+      readBuilderDatasetRepeaterItems('home.services.list', servicesBinding!, 'ko', posts)[0]
+    ).toMatchObject({
+      itemId: 'investment',
+      title: '투자·법인설립',
+      href: '/ko/services/investment',
     });
   });
 });

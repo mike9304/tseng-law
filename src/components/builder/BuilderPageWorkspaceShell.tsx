@@ -172,6 +172,15 @@ export default function BuilderPageWorkspaceShell({
                           </dd>
                           <dd>{item.description}</dd>
                           <dd>
+                            Repeater preview:{' '}
+                            {item.repeaterItems.length > 0
+                              ? item.repeaterItems
+                                  .slice(0, 3)
+                                  .map((record) => record.title)
+                                  .join(' / ')
+                              : 'No records'}
+                          </dd>
+                          <dd>
                             <Link
                               href={buildBuilderCollectionHref(locale, item.currentBinding.collectionId)}
                               className="builder-link-inline"

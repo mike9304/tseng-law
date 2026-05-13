@@ -6377,3 +6377,13 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - 문서 변경만 수행. `git diff --check` 예정.
 - 다음 후보:
   - M157 Full Wix benchmark and F01-F120 checkpoint seed.
+
+## 2026-05-13 Codex /goal M157 Full Wix product benchmark seed
+
+- `WIX-FULL-PRODUCT-CHECKPOINTS.md`를 추가해 F01~F120을 실제 추적 가능한 체크포인트로 고정했다.
+- F01~F06은 공식 Wix/Wix Studio source manifest, W/F two-layer gate, gap inventory, M157~M176 plan/manual/prompt gate가 준비되어 🟢로 판정했다.
+- F07~F120은 아직 구현 전이므로 🔴로 유지했다. 전체 Wix 완료 선언은 `W01~W225 203+ green` AND `F01~F120 96+ green` AND 사용자 최종 OK 전까지 금지한다.
+- `WIX-FULL-PRODUCT-GAP.md`에는 F-layer 추적 파일 링크와 benchmark seeded 상태를 반영했다.
+- `WIX-PARITY-PLAN.md`의 M157은 🟢로 전환했고 다음 실제 구현 마일스톤은 M158 CMS collections/content manager v1이다.
+- 검증:
+  - `git diff --check` ✅.

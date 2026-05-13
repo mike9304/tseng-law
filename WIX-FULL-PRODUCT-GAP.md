@@ -29,11 +29,13 @@ Full goal completion must not be declared until both are true:
 - W01-W225: 203+ items green or explicitly waived by user.
 - F01-F120: 96+ items green or explicitly waived by user.
 
+Tracking file: `WIX-FULL-PRODUCT-CHECKPOINTS.md`.
+
 ## Full Wix Product Gap Map
 
 | Area | F range | Wix surface | Current status | Required outcome |
 | --- | --- | --- | --- | --- |
-| Product benchmark | F01-F06 | Full Wix scope scoring | Missing | Versioned scoring rubric, source links, recurring audit checklist |
+| Product benchmark | F01-F06 | Full Wix scope scoring | Seeded | Versioned scoring rubric, source links, recurring audit checklist |
 | CMS foundations | F07-F16 | Collections, fields, CSV import, permissions | Mostly missing | Collection CRUD, typed fields, import/export, content manager UI |
 | Dynamic content | F17-F26 | Datasets, repeaters, dynamic pages | Partial page templates only | Dataset binding, repeater binding, dynamic URLs, SEO per item |
 | Visitor data input | F27-F32 | User input to CMS | Partial forms only | Form-to-collection mapping, moderation, validation, spam/rate controls |

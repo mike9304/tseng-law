@@ -158,7 +158,7 @@
 | M154 | Refactor | SeoPanel basics tab split | W27,W186,W195,W216,W225 | 1h | M153 | 🟡 SeoPanel 939→836 LOC + typecheck/SEO focus E2E passed / 사용자 QA 대기 |
 | M155 | Refactor | Asset library grid split | W22,W23,W216,W225 | 1h | M154 | 🟡 AssetLibraryModal 818→751 LOC + typecheck/asset focus E2E passed / 사용자 QA 대기 |
 | M156 | Refactor | Asset library chrome split | W22,W23,W216,W225 | 1h | M155 | 🟡 AssetLibraryModal 751→637 LOC + typecheck/asset focus E2E passed / 사용자 QA 대기 |
-| M157 | Scope | Full Wix product benchmark + F01-F120 seed | F01~F06 | 3h | M156 | 🔴 실제 Wix 전체 제품 기준으로 계획 확장 |
+| M157 | Scope | Full Wix product benchmark + F01-F120 seed | F01~F06 | 3h | M156 | 🟢 F01~F06 green + F01~F120 checkpoint seed / 다음 M158 CMS 시작 |
 | M158 | CMS | CMS collections/content manager v1 | F07~F16 | 24h | M157 | 🔴 collections CRUD, typed fields, CSV import/export |
 | M159 | CMS | Dataset/repeater/dynamic page binding | F17~F26 | 32h | M158 | 🔴 datasets, repeaters, dynamic URLs, per-item SEO |
 | M160 | CMS | Visitor input to CMS + moderation | F27~F32 | 18h | M159 | 🔴 form-to-collection mapping, validation, spam/rate controls |

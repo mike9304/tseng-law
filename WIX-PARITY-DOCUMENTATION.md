@@ -23,6 +23,23 @@ Created: 2026-05-09T12:52:13.760Z
 - 다음:
   - M157에서 F01~F120 상세 체크포인트를 실제 파일로 seed하고 scoring/audit gate를 자동화한다.
 
+## M157 — Full Wix Product Benchmark + F01-F120 Seed
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `WIX-FULL-PRODUCT-CHECKPOINTS.md` — F01~F120 전체 Wix 제품 체크포인트와 완료 게이트를 추가
+  - `WIX-FULL-PRODUCT-GAP.md` — F-layer 추적 파일 연결 및 F01~F06 seeded 상태 반영
+  - `WIX-PARITY-PLAN.md` — M157을 🟢로 전환하고 다음 M158 CMS 시작점 고정
+  - `SESSION.md` — 범위 보정 후속 인계 기록
+- 판정:
+  - F01~F06 🟢
+  - F07~F120 🔴
+  - W-layer만으로는 완료 선언 금지 유지
+- 검증:
+  - `git diff --check` ✅
+- 다음:
+  - M158에서 CMS collections/content manager v1을 시작한다.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

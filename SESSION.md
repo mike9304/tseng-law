@@ -6254,3 +6254,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Site Settings Presets tab의 design token export/import, radius/shadow preset, My Theme, theme preset path.
 - 다음 후보:
   - `SiteSettingsModal.tsx` Dark mode 탭을 subview로 분리하거나 `SeoPanel.tsx` Advanced/Hreflang/Assistant 탭 split으로 넘어간다.
+
+## 2026-05-13 Codex /goal M149 SiteSettingsModal dark mode tab split
+
+- `SiteSettingsModal.tsx`의 Dark mode runtime selector, visitor toggle, light/dark simultaneous preview, dark color editor를 `SiteSettingsDarkModeTab.tsx`로 분리했다.
+- `SiteSettingsModal.tsx`는 Dark mode 탭을 컴포넌트 호출로 줄이고 darkMode/theme save orchestration을 유지했으며, LOC는 824에서 719로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell tabs" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell tabs" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Site Settings Dark mode tab의 light/dark preview와 validation-adjacent settings path.
+- 다음 후보:
+  - `SeoPanel.tsx` Advanced/Hreflang/Assistant 탭 split으로 넘어가 큰 modal 정리를 계속한다.

@@ -2866,3 +2866,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell tabs" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W179/W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Site Settings Presets tab의 design token export/import, radius/shadow preset, My Theme, theme preset path를 latest code에서 통과시켰다.
+
+## M149 — SiteSettingsModal dark mode tab split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SiteSettingsDarkModeTab.tsx` — Dark mode runtime selector, visitor toggle, light/dark simultaneous preview, dark color editor를 분리했다.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Dark mode 탭은 새 컴포넌트 호출로 줄이고 darkMode/theme save orchestration을 유지했다. 파일 길이는 824줄에서 719줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M149 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell tabs" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell tabs" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W23/W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Site Settings Dark mode tab의 light/dark preview와 validation-adjacent settings path를 latest code에서 통과시켰다.

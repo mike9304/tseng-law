@@ -382,8 +382,8 @@ export default function BuilderWorkspaceDashboard({
         <section id="dynamic-template-registry" className="builder-preview-inspector-card">
           <h2>Dynamic template registry</h2>
           <p>
-            Read-only template ownership only. These entries prove which live code routes currently own
-            collection-backed list/item templates, but they do not imply a builder template editor.
+            Template ownership entries now open a v0 block editor with record selection and
+            binding previews for collection-backed list/item templates.
           </p>
           <div className="builder-dashboard-page-list">
             {overview.dynamicTemplates.map((template) => (
@@ -408,7 +408,7 @@ export default function BuilderWorkspaceDashboard({
                     href={buildBuilderDynamicTemplateHref(locale, template.templateId)}
                     className="builder-action-btn builder-action-btn--primary"
                   >
-                    Open ownership detail
+                    Open template editor
                   </Link>
                 </div>
               </article>

@@ -21,7 +21,7 @@ export default function BuilderDynamicRouteWorkspaceShell({
   return (
     <BuilderWorkspaceFrame
       title={`${detail.title} dynamic route`}
-      description="Registry + preview context seam only. This route does not render or edit a dynamic page template yet."
+      description="Registry + preview context seam with a linked dynamic template editor v0."
       activeRail="pages"
       stageUrl={buildBuilderDynamicRouteHref(locale, detail.routeId, {
         previewRecordId: detail.previewContext.selectedRecordId,
@@ -49,7 +49,7 @@ export default function BuilderDynamicRouteWorkspaceShell({
       leftSidebar={
         <section className="builder-preview-inspector-card builder-dashboard-sidebar">
           <h2>Dynamic routes</h2>
-          <p>Only route registry entries backed by real live routes appear here. Template ownership is now explicit, but template editing remains deferred.</p>
+          <p>Only route registry entries backed by real live routes appear here. Template ownership now links into a v0 block editor.</p>
           <div className="builder-dashboard-nav-list">
             {overview.dynamicRoutes.map((route) => (
               <Link
@@ -70,8 +70,8 @@ export default function BuilderDynamicRouteWorkspaceShell({
           <section className="builder-preview-inspector-card">
             <h2>Route policy</h2>
             <ul className="builder-preview-inspector-notes">
-              <li>This route now links to an explicit read-only template ownership entry.</li>
-              <li>Preview context resolves path ownership only. It does not render a record-scoped page inside the builder yet.</li>
+              <li>This route now links to an explicit template ownership and block-editor entry.</li>
+              <li>Preview context resolves path ownership, record SEO, and the editable template contract.</li>
               <li>Collection CRUD and record CRUD remain outside this batch.</li>
             </ul>
           </section>
@@ -184,7 +184,7 @@ export default function BuilderDynamicRouteWorkspaceShell({
           <h2>Template ownership seam</h2>
           <p>
             This route now maps into an explicit template ownership entry. The entry documents which
-            code route owns the list/item template, but it still does not expose canvas editing.
+            code route owns the list/item template and opens the v0 block editor for that template.
           </p>
           <div className="builder-dashboard-page-list">
             <article className="builder-dashboard-page-card">
@@ -249,7 +249,7 @@ export default function BuilderDynamicRouteWorkspaceShell({
           <h2>Preview record options</h2>
           {detail.kind === 'item' ? (
             <>
-              <p>Selecting a record only resolves preview context. It does not open a dynamic template editor.</p>
+              <p>Selecting a record resolves preview context and can be used in the linked dynamic template editor.</p>
               <div className="builder-dashboard-page-list">
                 {detail.sampleRecords.map((record) => {
                   const isActive = record.recordId === detail.previewContext.selectedRecordId;

@@ -20,7 +20,7 @@ export function generateMetadata({
   return buildSeoMetadata({
     locale,
     title: 'Builder Dynamic Template Detail',
-    description: 'Read-only dynamic template ownership detail inside the Hojeong builder.',
+    description: 'Dynamic template editor v0 inside the Hojeong builder.',
     path: `/builder/dynamic-templates/${params.templateId}`,
     noindex: true,
   });

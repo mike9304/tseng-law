@@ -1,6 +1,8 @@
 import {
+  readBuilderCollectionRecordPreviews,
   readBuilderCollectionSummaries,
   type BuilderCollectionId,
+  type BuilderCollectionRecordPreview,
 } from '@/lib/builder/cms';
 import { normalizeLocale } from '@/lib/locales';
 
@@ -16,9 +18,20 @@ export const builderDynamicTemplateIds = [
 export type BuilderDynamicTemplateId = (typeof builderDynamicTemplateIds)[number];
 export type BuilderDynamicTemplateKind = 'list' | 'item';
 export type BuilderDynamicTemplateOwnerType = 'code-route';
-export type BuilderDynamicTemplateBuilderSupport = 'read-only-ownership';
-export type BuilderDynamicTemplateEditorStatus = 'deferred';
-export type BuilderDynamicTemplatePreviewStatus = 'route-context-only';
+export type BuilderDynamicTemplateBuilderSupport = 'template-editor-v0';
+export type BuilderDynamicTemplateEditorStatus = 'block-contract-editable';
+export type BuilderDynamicTemplatePreviewStatus = 'collection-preview-contract' | 'record-preview-contract';
+
+export type BuilderDynamicTemplateBlockControl = 'visibility-toggle' | 'binding-preview';
+
+export interface BuilderDynamicTemplateEditableBlock {
+  blockId: string;
+  label: string;
+  description: string;
+  control: BuilderDynamicTemplateBlockControl;
+  defaultVisible: boolean;
+  boundFields: string[];
+}
 
 export interface BuilderDynamicTemplateSummary {
   templateId: BuilderDynamicTemplateId;
@@ -40,6 +53,8 @@ export interface BuilderDynamicTemplateSummary {
 
 export interface BuilderDynamicTemplateDetail extends BuilderDynamicTemplateSummary {
   exclusions: string[];
+  editableBlocks: BuilderDynamicTemplateEditableBlock[];
+  previewRecords: BuilderCollectionRecordPreview[];
 }
 
 export interface BuilderSiteDynamicTemplateEntry {
@@ -160,9 +175,10 @@ export function readBuilderDynamicTemplateSummaries(
       ownerType: 'code-route',
       runtimeOwner: 'next-app-router',
       runtimeModulePath: definition.runtimeModulePath,
-      builderSupport: 'read-only-ownership',
-      editorStatus: 'deferred',
-      previewStatus: 'route-context-only',
+      builderSupport: 'template-editor-v0',
+      editorStatus: 'block-contract-editable',
+      previewStatus:
+        definition.kind === 'item' ? 'record-preview-contract' : 'collection-preview-contract',
       localized: collection.localized,
     };
   });
@@ -182,11 +198,16 @@ export function readBuilderDynamicTemplateDetail(
 
   return {
     ...summary,
+    editableBlocks: buildDynamicTemplateEditableBlocks(summary),
+    previewRecords: readBuilderCollectionRecordPreviews(summary.collectionId, localeInput).slice(
+      0,
+      summary.kind === 'item' ? 6 : 4
+    ),
     exclusions: [
-      'No dynamic template editor is available in this batch.',
-      'No record-scoped builder canvas preview is available in this batch.',
+      'Dynamic template editor is v0 block-control only in this batch.',
+      'Record-scoped preview resolves collection fields, SEO, and canonical links.',
       'No dynamic page draft/publish lifecycle exists for this template yet.',
-      'No manage/edit dynamic pages or dynamic SEO mapping are implied here.',
+      'No freeform canvas layout editing or per-template publish slot is implied here yet.',
     ],
   };
 }
@@ -205,4 +226,64 @@ export function readBuilderDynamicTemplateEntries(
     editorStatus: template.editorStatus,
     previewStatus: template.previewStatus,
   }));
+}
+
+function buildDynamicTemplateEditableBlocks(
+  summary: BuilderDynamicTemplateSummary
+): BuilderDynamicTemplateEditableBlock[] {
+  if (summary.kind === 'list') {
+    return [
+      {
+        blockId: `${summary.collectionId}.list.hero`,
+        label: 'List hero',
+        description: 'Collection title, route notes, and localized path pattern.',
+        control: 'visibility-toggle',
+        defaultVisible: true,
+        boundFields: ['collection.title', 'route.notes', 'route.pathPattern'],
+      },
+      {
+        blockId: `${summary.collectionId}.list.repeater`,
+        label: 'Record repeater',
+        description: 'Collection records rendered as a route-linked list.',
+        control: 'binding-preview',
+        defaultVisible: true,
+        boundFields: ['record.primaryLabel', 'record.secondaryLabel', 'record.routePath'],
+      },
+      {
+        blockId: `${summary.collectionId}.list.seo`,
+        label: 'List SEO card',
+        description: 'Collection route SEO preview and indexability.',
+        control: 'visibility-toggle',
+        defaultVisible: true,
+        boundFields: ['seo.title', 'seo.description', 'seo.canonicalPath'],
+      },
+    ];
+  }
+
+  return [
+    {
+      blockId: `${summary.collectionId}.item.hero`,
+      label: 'Record hero',
+      description: 'Selected record title, secondary label, and public route.',
+      control: 'visibility-toggle',
+      defaultVisible: true,
+      boundFields: ['record.primaryLabel', 'record.secondaryLabel', 'record.routePath'],
+    },
+    {
+      blockId: `${summary.collectionId}.item.body`,
+      label: 'Record body',
+      description: 'Primary record copy area mapped from the collection schema.',
+      control: 'binding-preview',
+      defaultVisible: true,
+      boundFields: ['record.primaryLabel', 'record.secondaryLabel'],
+    },
+    {
+      blockId: `${summary.collectionId}.item.seo`,
+      label: 'Record SEO card',
+      description: 'Per-record title, description, canonical path, and indexability.',
+      control: 'visibility-toggle',
+      defaultVisible: true,
+      boundFields: ['seo.title', 'seo.description', 'seo.canonicalPath', 'seo.noIndex'],
+    },
+  ];
 }

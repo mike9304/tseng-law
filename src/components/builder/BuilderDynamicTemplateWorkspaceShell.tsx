@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BuilderDynamicTemplateEditorSurface from '@/components/builder/BuilderDynamicTemplateEditorSurface';
 import BuilderWorkspaceFrame from '@/components/builder/BuilderWorkspaceFrame';
 import type { BuilderDynamicTemplateDetail } from '@/lib/builder/dynamic-templates';
 import {
@@ -21,7 +22,7 @@ export default function BuilderDynamicTemplateWorkspaceShell({
   return (
     <BuilderWorkspaceFrame
       title={`${detail.title} template`}
-      description="Read-only dynamic template ownership detail. This surface documents which live code route owns the template without implying a builder template editor."
+      description="Dynamic template editor v0. This surface exposes record preview selection and block-level template controls before full canvas editing lands."
       activeRail="pages"
       stageUrl={buildBuilderDynamicTemplateHref(locale, detail.templateId)}
       railItems={[
@@ -47,7 +48,7 @@ export default function BuilderDynamicTemplateWorkspaceShell({
       leftSidebar={
         <section className="builder-preview-inspector-card builder-dashboard-sidebar">
           <h2>Dynamic templates</h2>
-          <p>Only explicit ownership entries appear here. They document runtime ownership but do not open a template canvas.</p>
+          <p>Explicit ownership entries now expose a v0 block editor and record preview contract.</p>
           <div className="builder-dashboard-nav-list">
             {overview.dynamicTemplates.map((template) => (
               <Link
@@ -160,15 +161,24 @@ export default function BuilderDynamicTemplateWorkspaceShell({
                 </div>
               </div>
               <div className="builder-dashboard-page-meta">
-                <span>No canvas render</span>
-                <span>No inline editing</span>
-                <span>No record-scoped preview renderer</span>
+                <span>Block visibility controls</span>
+                <span>Record-scoped preview contract</span>
+                <span>SEO preview binding</span>
                 <span>No dynamic page draft or publish lifecycle</span>
               </div>
             </article>
           </div>
         </section>
+
+        <section className="builder-preview-inspector-card">
+          <h2>Template editor v0</h2>
+          <p>
+            Toggle dynamic template blocks and switch sample records to verify the collection binding
+            before full dynamic canvas editing and publish lifecycle are added.
+          </p>
+        </section>
       </div>
+      <BuilderDynamicTemplateEditorSurface detail={detail} locale={locale} />
     </BuilderWorkspaceFrame>
   );
 }

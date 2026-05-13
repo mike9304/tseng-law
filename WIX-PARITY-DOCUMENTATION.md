@@ -2307,3 +2307,13 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/media-widgets.playwright.ts tests/builder-editor/gallery-widgets.playwright.ts tests/builder-editor/motion-runtime.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W22/W23/W71/W72/W161/W174/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. media widget catalog, gallery preset catalog, motion inspector controls, published motion/page-transition runtime attrs를 최신 코드에서 다시 통과시켰다.
+
+## M110 — Asset upload/image workflow sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M110 검증 증거만 기록했다. 제품 코드는 변경하지 않았다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-upload-security.playwright.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W22/W23/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. asset upload MIME/size guard, image edit dialog focus trap, asset library focus trap, folder/tag persistence, replacement undo, crop/filter/alt text paths를 최신 코드에서 다시 통과시켰다.

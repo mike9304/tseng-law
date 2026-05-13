@@ -5709,3 +5709,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - published runtime에서 entrance/exit/loop/scroll/hover/click/timeline/page transition attrs와 CSS runtime state가 적용된다.
 - 다음 후보:
   - asset image workflow/security 또는 layout/interactive widgets 최신 sweep으로 이어간다.
+
+## 2026-05-13 Codex /goal M110 Asset upload/image workflow sweep
+
+- asset upload security와 image asset workflow 최신 E2E sweep을 실행했다.
+- `src/app/api/builder/assets/route.ts`에 별도 dirty diff가 있는 상태라 제품 코드는 추가로 건드리지 않고 검증 증거만 기록했다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-upload-security.playwright.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - real PNG upload accept, spoofed PNG reject, oversized image reject.
+  - image edit dialog focus trap, Escape close, inspector trigger focus restore.
+  - asset library focus trap, Escape close, focus leak guard.
+  - folder/tag persistence, search/sort, image replacement undo, crop focal point, filter persistence, alt text edit/restore.
+- 다음 후보:
+  - layout widgets, interactive widgets, clipboard/cross-tab persistence 최신 sweep으로 이어간다.

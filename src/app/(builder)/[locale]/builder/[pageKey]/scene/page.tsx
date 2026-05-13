@@ -8,6 +8,7 @@ import {
   readBuilderPageSnapshotOverview,
   readBuilderSiteOverview,
 } from '@/lib/builder/site';
+import { getAllColumnPosts } from '@/lib/columns';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
 
@@ -58,7 +59,9 @@ export default async function BuilderPageSceneRoute({ params }: BuilderPageScene
     readBuilderSiteOverview(locale),
     readBuilderPageSnapshotOverview(pageKey, locale),
   ]);
-  const scene = buildBuilderSceneDocument(pageOverview.preferred.snapshot.snapshot.document);
+  const scene = buildBuilderSceneDocument(pageOverview.preferred.snapshot.snapshot.document, {
+    posts: getAllColumnPosts(locale),
+  });
   const summary = summarizeBuilderSceneDocument(scene);
 
   return (

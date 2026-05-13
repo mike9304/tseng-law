@@ -4,7 +4,14 @@ import {
   getBuilderSectionContentGroups,
   getBuilderSectionDefinition,
 } from '@/lib/builder/registry';
+import {
+  readBuilderDatasetRepeaterItems,
+  type BuilderDatasetRepeaterPreviewItem,
+} from '@/lib/builder/datasets';
+import type { ColumnPost } from '@/lib/columns';
 import type {
+  BuilderDatasetCollectionId,
+  BuilderDatasetTargetId,
   BuilderEditableTargetKind,
   BuilderPageDocument,
   BuilderPageKey,
@@ -55,6 +62,9 @@ export interface BuilderSceneNode {
   declaredTargetKind?: BuilderEditableTargetKind;
   surfaceId?: string;
   datasetId?: string;
+  datasetTargetId?: BuilderDatasetTargetId;
+  datasetCollectionId?: BuilderDatasetCollectionId;
+  repeaterItems?: BuilderDatasetRepeaterPreviewItem[];
   geometry?: Pick<BuilderSectionContentGroupNode, 'bounds' | 'overrides' | 'constraints'>;
   hidden?: boolean;
   locked?: boolean;
@@ -81,7 +91,10 @@ export interface BuilderSceneSummary {
   sectionNodeIds: string[];
 }
 
-export function buildBuilderSceneDocument(document: BuilderPageDocument): BuilderSceneDocument {
+export function buildBuilderSceneDocument(
+  document: BuilderPageDocument,
+  options: { posts?: ColumnPost[] } = {}
+): BuilderSceneDocument {
   const rootNodeId = buildSceneNodeId(document.pageKey, 'page');
   const nodes = new Map<string, BuilderSceneNode>();
   const nodeOrder: string[] = [];
@@ -227,6 +240,12 @@ export function buildBuilderSceneDocument(document: BuilderPageDocument): Builde
 
     for (const dataset of document.datasets.filter((candidate) => candidate.sectionKey === section.sectionKey)) {
       const nodeId = `${sectionNodeId}:dataset:${sanitizeSceneToken(dataset.targetId)}`;
+      const repeaterItems = readBuilderDatasetRepeaterItems(
+        dataset.targetId,
+        dataset,
+        document.locale,
+        options.posts ?? []
+      );
       const parentGroup = contentGroups.find((group) =>
         group.datasetTargetIds?.includes(dataset.targetId)
       );
@@ -251,9 +270,14 @@ export function buildBuilderSceneDocument(document: BuilderPageDocument): Builde
         sectionKey: section.sectionKey,
         sourceKind: 'dataset-binding',
         datasetId: dataset.datasetId,
+        datasetTargetId: dataset.targetId,
+        datasetCollectionId: dataset.collectionId,
+        repeaterItems,
         notes: [
           `Dataset target ${dataset.targetId} bound to ${dataset.collectionId}.`,
-          'This node is a binding seam only; it is not yet a fully editable repeater canvas node.',
+          repeaterItems.length > 0
+            ? `Repeater preview resolves ${repeaterItems.length} records for visual layer inspection.`
+            : 'Repeater preview has no records for the current collection/limit.',
         ],
       });
     }
@@ -335,6 +359,14 @@ export function getBuilderSceneSearchText(node: BuilderSceneNode) {
     node.sectionKey,
     node.surfaceId,
     node.datasetId,
+    node.datasetTargetId,
+    node.datasetCollectionId,
+    ...(node.repeaterItems ?? []).flatMap((item) => [
+      item.itemId,
+      item.title,
+      item.description,
+      item.href,
+    ]),
     ...node.notes,
   ]
     .filter(Boolean)

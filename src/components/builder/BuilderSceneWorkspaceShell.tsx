@@ -323,6 +323,18 @@ export default function BuilderSceneWorkspaceShell({
                   <dd>{primaryNode.datasetId ?? 'Not dataset-bound'}</dd>
                 </div>
                 <div>
+                  <dt>Dataset target</dt>
+                  <dd>{primaryNode.datasetTargetId ?? 'Not a repeater target'}</dd>
+                </div>
+                <div>
+                  <dt>Collection</dt>
+                  <dd>{primaryNode.datasetCollectionId ?? 'Not collection-bound'}</dd>
+                </div>
+                <div>
+                  <dt>Repeater preview</dt>
+                  <dd>{primaryNode.repeaterItems?.length ? `${primaryNode.repeaterItems.length} records` : 'No preview records'}</dd>
+                </div>
+                <div>
                   <dt>State</dt>
                   <dd>{formatNodeState(primaryNode)}</dd>
                 </div>
@@ -661,6 +673,25 @@ function SceneCanvasNode({
             <li key={note}>{note}</li>
           ))}
         </ul>
+      ) : null}
+      {node.repeaterItems?.length ? (
+        <div className="builder-dashboard-page-list">
+          {node.repeaterItems.slice(0, 6).map((item) => (
+            <article key={item.itemId} className="builder-dashboard-page-card">
+              <div className="builder-dashboard-page-head">
+                <div>
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </div>
+                <span className="builder-stage-pill">Repeater item</span>
+              </div>
+              <div className="builder-dashboard-page-meta">
+                <span>{item.itemId}</span>
+                <span>{item.href}</span>
+              </div>
+            </article>
+          ))}
+        </div>
       ) : null}
       {node.childNodeIds.length > 0 ? (
         <div className="builder-scene-node__children">

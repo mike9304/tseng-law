@@ -5,6 +5,7 @@ import {
   isDefaultBuilderSiteId,
   readBuilderPageSnapshotOverview,
 } from '@/lib/builder/site';
+import { getAllColumnPosts } from '@/lib/columns';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 
@@ -31,7 +32,9 @@ export async function GET(request: NextRequest, context: BuilderPageSceneRouteCo
   }
 
   const overview = await readBuilderPageSnapshotOverview(pageKey, locale);
-  const scene = buildBuilderSceneDocument(overview.preferred.snapshot.snapshot.document);
+  const scene = buildBuilderSceneDocument(overview.preferred.snapshot.snapshot.document, {
+    posts: getAllColumnPosts(locale),
+  });
   const summary = summarizeBuilderSceneDocument(scene);
 
   return NextResponse.json({

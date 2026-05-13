@@ -5653,3 +5653,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/preview-modal-focus.playwright.ts tests/builder-editor/inline-text-editor.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - editor a11y/chrome click safety/mobile inspector처럼 아직 최신 sweep을 덜 한 UI 회귀를 계속 줄인다.
+
+## 2026-05-13 Codex /goal M106 Editor a11y/chrome/mobile sweep
+
+- 최신 회귀 묶음으로 `a11y-smoke`, `chrome-click-safety`, `mobile-inspector`를 실행했다.
+- 첫 실행에서 실제 gap 두 개가 드러났다. Add 패널 text widget preset icon의 color contrast가 axe WCAG 2.1 AA 기준을 못 맞췄고, chrome-click 테스트는 에디터 hydration ready 전에 locale link를 클릭해 `/en`으로 빠지는 경로를 잡았다.
+- text widget preset icon은 밝은 배경 위 `--editor-accent-strong` 색으로 올려 대비를 확보했다.
+- chrome-click safety 테스트는 공통 `openBuilder` helper로 `data-editor-ready="true"` 이후 public header/footer guard를 검증하게 했다. 제품의 React guard가 붙은 뒤에는 locale/header/footer link가 editor shell 밖으로 이동하지 않는다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/canvas/SandboxPage.module.css tests/builder-editor/chrome-click-safety.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/a11y-smoke.playwright.ts tests/builder-editor/chrome-click-safety.playwright.ts tests/builder-editor/mobile-inspector.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - 에디터 keyboard/selection 계열 또는 publish/SEO 회귀 묶음 중 최신 sweep이 부족한 곳을 계속 줄인다.

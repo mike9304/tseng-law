@@ -2258,3 +2258,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/preview-modal-focus.playwright.ts tests/builder-editor/inline-text-editor.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W03/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. inline text toolbar/persist/undo-redo 경로와 preview modal/layer context focus 회귀를 최신 코드에서 다시 통과시켰다.
+
+## M106 — Editor a11y/chrome/mobile sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxPage.module.css` — Add 패널 text widget preset icon의 전경색을 `--editor-accent-strong` 계열로 올려 axe color-contrast 위반을 제거했다.
+  - `tests/builder-editor/chrome-click-safety.playwright.ts` — public chrome click safety 테스트가 공통 `openBuilder` helper로 `data-editor-ready="true"` 이후 header/footer click guard를 검증하게 했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M106 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/canvas/SandboxPage.module.css tests/builder-editor/chrome-click-safety.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/a11y-smoke.playwright.ts tests/builder-editor/chrome-click-safety.playwright.ts tests/builder-editor/mobile-inspector.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W40/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. core editor axe states, header/footer click containment, mobile inspector override 경로를 최신 코드에서 다시 통과시켰다.

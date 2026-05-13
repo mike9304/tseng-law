@@ -1373,8 +1373,8 @@
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: var(--editor-bg, #f4f5f7);
-  color: var(--editor-accent, #116dff);
+  background: #eef2ff;
+  color: var(--editor-accent-strong, #3730a3);
   font-size: 0.8rem;
   font-weight: 900;
 }

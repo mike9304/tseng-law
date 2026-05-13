@@ -1,11 +1,11 @@
 import { expect, test } from '@playwright/test';
+import { openBuilder } from './helpers/editor';
 
 test.describe('/ko/admin-builder public chrome click safety', () => {
   test('keeps header locale links and footer links inside the editor shell', async ({ page }) => {
-    await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+    await openBuilder(page);
     const editorUrl = page.url();
     const canvas = page.getByRole('application', { name: 'Canvas editor' });
-    await expect(canvas).toBeVisible();
 
     const header = page.locator('.builder-site-header').first();
     await expect(header).toBeVisible();

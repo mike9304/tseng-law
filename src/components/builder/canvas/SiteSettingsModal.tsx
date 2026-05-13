@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   type PageTransition,
 } from '@/lib/builder/animations/presets';
@@ -21,16 +21,12 @@ import { normalizeLocale } from '@/lib/locales';
 import BrandKitPanel from '@/components/builder/editor/BrandKitPanel';
 import ModalShell from './ModalShell';
 import {
-  COMPONENT_DESIGN_PRESETS,
   type ComponentDesignPresetKey,
   type ComponentDesignPresetPatchResult,
 } from '@/lib/builder/site/component-design-presets';
 import {
   THEME_COLOR_LABELS,
   THEME_COLOR_TOKENS,
-  THEME_RADIUS_PRESETS,
-  THEME_SHADOW_PRESETS,
-  SITE_THEME_PRESETS,
   applyThemeRadiusPreset,
   applyThemeShadowPreset,
   applyTypographyScaleToTheme,
@@ -55,17 +51,16 @@ import {
 } from './SiteSettingsGeneralTab';
 import { SiteSettingsAdvancedTab } from './SiteSettingsAdvancedTab';
 import { SiteSettingsMobileTab } from './SiteSettingsMobileTab';
+import {
+  SiteSettingsPresetsTab,
+  type CustomThemePreset,
+} from './SiteSettingsPresetsTab';
 import { SiteSettingsTypographyTab } from './SiteSettingsTypographyTab';
 import {
-  cancelBtnStyle,
   fieldStyle,
   formStyle,
   inputStyle,
   labelStyle,
-  presetButtonStyle,
-  presetCardStyle,
-  presetGridStyle,
-  saveBtnStyle,
   sectionHeadingStyle,
   sectionStyle,
   twoColumnStyle,
@@ -88,12 +83,6 @@ interface SiteSettingsForm {
 }
 
 type SiteSettingsTab = 'general' | 'brand' | 'typography' | 'presets' | 'dark' | 'mobile' | 'advanced';
-type CustomThemePreset = {
-  id: string;
-  name: string;
-  savedAt: string;
-  theme: BuilderTheme;
-};
 
 const CUSTOM_THEME_PRESETS_STORAGE_KEY = 'builder:custom-theme-presets:v1';
 
@@ -286,17 +275,15 @@ export default function SiteSettingsModal({
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const tokenImportInputRef = useRef<HTMLInputElement | null>(null);
 
-  function handleComponentDesignPresetApply(presetKey: ComponentDesignPresetKey) {
-    const preset = COMPONENT_DESIGN_PRESETS.find((candidate) => candidate.key === presetKey);
+  function handleComponentDesignPresetApply(presetKey: ComponentDesignPresetKey, presetLabel: string) {
     const result = onApplyComponentDesignPreset?.(presetKey);
     if (!result || result.changedNodeIds.length === 0) {
-      setNotice(`${preset?.label ?? 'Component'} preset: 변경할 button/card/form 요소가 현재 페이지에 없습니다.`);
+      setNotice(`${presetLabel} preset: 변경할 button/card/form 요소가 현재 페이지에 없습니다.`);
       return;
     }
     setNotice(
-      `${preset?.label ?? 'Component'} preset applied to ${result.changedNodeIds.length} components`
+      `${presetLabel} preset applied to ${result.changedNodeIds.length} components`
       + ` (${result.counts.buttons} buttons, ${result.counts.cards} cards, ${result.counts.formFields} fields, ${result.counts.formSubmits} submits).`,
     );
   }
@@ -803,319 +790,32 @@ export default function SiteSettingsModal({
               onChangeTextPreset={updateTextPreset}
             />
           ) : (
-            <>
-            <input
-              ref={tokenImportInputRef}
-              data-design-token-import-input
-              type="file"
-              accept="application/json,.json"
-              style={{ display: 'none' }}
-              onChange={(event) => {
-                const file = event.target.files?.[0];
-                if (file) void importDesignTokens(file);
-                event.currentTarget.value = '';
+            <SiteSettingsPresetsTab
+              theme={theme}
+              customThemePresets={customThemePresets}
+              pendingPreset={pendingPreset}
+              onApplyComponentDesignPreset={handleComponentDesignPresetApply}
+              onExportDesignTokens={exportDesignTokens}
+              onImportDesignTokens={importDesignTokens}
+              onApplyRadiusPreset={(presetKey, presetLabel) => {
+                const nextTheme = applyThemeRadiusPreset(theme, presetKey);
+                setTheme(nextTheme);
+                setBrandKit(createBrandKitFromTheme(nextTheme, settings));
+                setNotice(`${presetLabel} radius preset applied. 저장을 눌러 사이트에 반영하세요.`);
               }}
+              onApplyShadowPreset={(presetKey, presetLabel) => {
+                const nextTheme = applyThemeShadowPreset(theme, presetKey);
+                setTheme(nextTheme);
+                setBrandKit(createBrandKitFromTheme(nextTheme, settings));
+                setNotice(`${presetLabel} shadow preset applied. 저장을 눌러 사이트에 반영하세요.`);
+              }}
+              onSaveCurrentThemePreset={saveCurrentThemePreset}
+              onApplyCustomThemePreset={applyCustomThemePreset}
+              onDeleteCustomThemePreset={deleteCustomThemePreset}
+              onCancelPendingPreset={() => setPendingPreset(null)}
+              onApplyPendingPreset={applyPreset}
+              onSelectSiteThemePreset={setPendingPreset}
             />
-            <div style={sectionStyle}>
-              <div style={sectionHeadingStyle}>Component design presets (W179)</div>
-              <div style={presetGridStyle}>
-                {COMPONENT_DESIGN_PRESETS.map((preset) => (
-                  <section
-                    key={preset.key}
-                    data-component-design-preset={preset.key}
-                    style={presetCardStyle}
-                  >
-                    <div>
-                      <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.9rem' }}>
-                        {preset.label}
-                      </strong>
-                      <span style={{ color: '#64748b', fontSize: '0.72rem', lineHeight: 1.45 }}>
-                        {preset.description}
-                      </span>
-                    </div>
-                    <div
-                      style={{
-                        border: '1px solid #e2e8f0',
-                        borderRadius: theme.radii.md,
-                        padding: 10,
-                        background: '#f8fafc',
-                        display: 'grid',
-                        gap: 7,
-                        color: '#334155',
-                        fontSize: '0.72rem',
-                        fontWeight: 800,
-                      }}
-                    >
-                      <span>Button: {preset.buttonVariant}</span>
-                      <span>Card: {preset.cardVariant}</span>
-                      <span>Form: {preset.formInputVariant}</span>
-                    </div>
-                    <button
-                      type="button"
-                      style={presetButtonStyle}
-                      onClick={() => handleComponentDesignPresetApply(preset.key)}
-                    >
-                      Apply {preset.label}
-                    </button>
-                  </section>
-                ))}
-              </div>
-
-              <div style={sectionHeadingStyle}>Design token bundle</div>
-              <section style={presetCardStyle}>
-                <strong style={{ color: '#0f172a', fontSize: '0.9rem' }}>
-                  Theme token JSON
-                </strong>
-                <span style={{ color: '#64748b', fontSize: '0.76rem', lineHeight: 1.45 }}>
-                  Colors, dark colors, fonts, typography scale, text presets, radii, and shadow settings move together as one design system file.
-                </span>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                  <button type="button" style={presetButtonStyle} onClick={exportDesignTokens}>
-                    Export design tokens
-                  </button>
-                  <button type="button" style={presetButtonStyle} onClick={() => tokenImportInputRef.current?.click()}>
-                    Import design tokens
-                  </button>
-                </div>
-              </section>
-              <div style={sectionHeadingStyle}>Radius & shadow presets</div>
-              <div style={presetGridStyle}>
-                {THEME_RADIUS_PRESETS.map((preset) => {
-                  const active = (theme.effects?.radiusPreset ?? 'medium') === preset.key;
-                  return (
-                    <section
-                      key={preset.key}
-                      data-theme-radius-preset={preset.key}
-                      style={{
-                        ...presetCardStyle,
-                        borderColor: active ? '#116dff' : '#e2e8f0',
-                        background: active ? '#f8fbff' : '#fff',
-                      }}
-                    >
-                      <div>
-                        <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.9rem' }}>
-                          {preset.label} radius
-                        </strong>
-                        <span style={{ color: '#64748b', fontSize: '0.72rem', lineHeight: 1.45 }}>
-                          {preset.description}
-                        </span>
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'end', gap: 8, minHeight: 46 }}>
-                        <span aria-hidden style={{ width: 34, height: 24, borderRadius: preset.radii.sm, border: '1px solid #bfdbfe', background: '#eff6ff' }} />
-                        <span aria-hidden style={{ width: 44, height: 32, borderRadius: preset.radii.md, border: '1px solid #93c5fd', background: '#dbeafe' }} />
-                        <span aria-hidden style={{ width: 54, height: 40, borderRadius: preset.radii.lg, border: '1px solid #60a5fa', background: '#bfdbfe' }} />
-                      </div>
-                      <button
-                        type="button"
-                        style={presetButtonStyle}
-                        onClick={() => {
-                          const nextTheme = applyThemeRadiusPreset(theme, preset.key);
-                          setTheme(nextTheme);
-                          setBrandKit(createBrandKitFromTheme(nextTheme, settings));
-                          setNotice(`${preset.label} radius preset applied. 저장을 눌러 사이트에 반영하세요.`);
-                        }}
-                      >
-                        Use {preset.label}
-                      </button>
-                    </section>
-                  );
-                })}
-              </div>
-              <div style={presetGridStyle}>
-                {THEME_SHADOW_PRESETS.map((preset) => {
-                  const active = (theme.effects?.shadowPreset ?? 'soft') === preset.key;
-                  return (
-                    <section
-                      key={preset.key}
-                      data-theme-shadow-preset={preset.key}
-                      style={{
-                        ...presetCardStyle,
-                        borderColor: active ? '#116dff' : '#e2e8f0',
-                        background: active ? '#f8fbff' : '#fff',
-                      }}
-                    >
-                      <div>
-                        <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.9rem' }}>
-                          {preset.label} shadow
-                        </strong>
-                        <span style={{ color: '#64748b', fontSize: '0.72rem', lineHeight: 1.45 }}>
-                          {preset.description}
-                        </span>
-                      </div>
-                      <div style={{ minHeight: 56, display: 'grid', placeItems: 'center', background: '#f8fafc', borderRadius: 8 }}>
-                        <span
-                          aria-hidden
-                          style={{
-                            width: 72,
-                            height: 34,
-                            borderRadius: theme.radii.md,
-                            border: '1px solid #e2e8f0',
-                            background: '#fff',
-                            boxShadow: preset.shadows.md,
-                          }}
-                        />
-                      </div>
-                      <button
-                        type="button"
-                        style={presetButtonStyle}
-                        onClick={() => {
-                          const nextTheme = applyThemeShadowPreset(theme, preset.key);
-                          setTheme(nextTheme);
-                          setBrandKit(createBrandKitFromTheme(nextTheme, settings));
-                          setNotice(`${preset.label} shadow preset applied. 저장을 눌러 사이트에 반영하세요.`);
-                        }}
-                      >
-                        Use {preset.label}
-                      </button>
-                    </section>
-                  );
-                })}
-              </div>
-            </div>
-            <div style={sectionStyle}>
-              <div style={sectionHeadingStyle}>My Themes</div>
-              <section style={presetCardStyle}>
-                <strong style={{ color: '#0f172a', fontSize: '0.9rem' }}>
-                  Save current theme
-                </strong>
-                <span style={{ color: '#64748b', fontSize: '0.76rem', lineHeight: 1.45 }}>
-                  Store the current colors, fonts, text presets, radius, and shadow choices as a reusable local theme preset.
-                </span>
-                <button type="button" style={presetButtonStyle} onClick={saveCurrentThemePreset}>
-                  Save as My Theme
-                </button>
-              </section>
-              {customThemePresets.length > 0 ? (
-                <div style={presetGridStyle}>
-                  {customThemePresets.map((preset) => (
-                    <section key={preset.id} data-custom-theme-preset={preset.id} style={presetCardStyle}>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
-                        <div>
-                          <strong style={{ display: 'block', color: '#0f172a', fontSize: '0.9rem' }}>
-                            {preset.name}
-                          </strong>
-                          <span style={{ color: '#64748b', fontSize: '0.72rem' }}>
-                            Saved {new Date(preset.savedAt).toLocaleDateString()}
-                          </span>
-                        </div>
-                        <div style={{ display: 'flex', gap: 3 }}>
-                          {THEME_COLOR_TOKENS.slice(0, 5).map((token) => (
-                            <span
-                              key={token}
-                              aria-hidden
-                              style={{
-                                width: 14,
-                                height: 14,
-                                borderRadius: 999,
-                                border: '1px solid rgba(15,23,42,0.14)',
-                                background: preset.theme.colors[token],
-                              }}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                      <div style={{ borderRadius: preset.theme.radii.md, background: preset.theme.colors.background, border: `1px solid ${preset.theme.colors.muted}`, padding: 10 }}>
-                        <div style={{ fontFamily: preset.theme.fonts.heading, color: preset.theme.colors.text, fontSize: 22, lineHeight: 1 }}>
-                          Aa
-                        </div>
-                        <div style={{ fontFamily: preset.theme.fonts.body, color: preset.theme.colors.secondary, fontSize: 12, marginTop: 5 }}>
-                          My Theme
-                        </div>
-                      </div>
-                      <div style={{ display: 'flex', gap: 8 }}>
-                        <button
-                          type="button"
-                          style={{ ...presetButtonStyle, flex: 1 }}
-                          onClick={() => applyCustomThemePreset(preset)}
-                        >
-                          Apply My Theme
-                        </button>
-                        <button
-                          type="button"
-                          style={{ ...presetButtonStyle, color: '#b91c1c' }}
-                          onClick={() => deleteCustomThemePreset(preset.id)}
-                        >
-                          Delete
-                        </button>
-                      </div>
-                    </section>
-                  ))}
-                </div>
-              ) : (
-                <span style={{ color: '#64748b', fontSize: '0.76rem' }}>
-                  No saved themes yet.
-                </span>
-              )}
-              <div style={sectionHeadingStyle}>Theme presets</div>
-              {pendingPreset ? (
-                <div style={{ border: '1px solid #bfdbfe', borderRadius: 10, padding: 12, background: '#eff6ff', display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  <strong style={{ color: '#1e3a8a', fontSize: '0.86rem' }}>
-                    Apply {pendingPreset.name} to the whole site?
-                  </strong>
-                  <span style={{ color: '#334155', fontSize: '0.78rem', lineHeight: 1.45 }}>
-                    Colors, site fonts, radii, and theme text presets will be replaced. Element-level raw overrides stay unchanged.
-                  </span>
-                  <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
-                    <button type="button" style={cancelBtnStyle} onClick={() => setPendingPreset(null)}>
-                      Cancel
-                    </button>
-                    <button type="button" style={saveBtnStyle} onClick={() => applyPreset(pendingPreset)}>
-                      Apply preset
-                    </button>
-                  </div>
-                </div>
-              ) : null}
-              <div style={presetGridStyle}>
-                {SITE_THEME_PRESETS.map((preset) => (
-                  <section key={preset.key} style={presetCardStyle}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
-                      <div>
-                        <strong style={{ display: 'block', fontFamily: preset.fonts.title, color: preset.colors.text, fontSize: '1rem' }}>
-                          {preset.name}
-                        </strong>
-                        <span style={{ color: '#64748b', fontSize: '0.72rem' }}>
-                          {preset.shadowIntensity} shadow · radius {preset.radiusScale}
-                        </span>
-                      </div>
-                      <div style={{ display: 'flex', gap: 3 }}>
-                        {THEME_COLOR_TOKENS.slice(0, 5).map((token) => (
-                          <span
-                            key={token}
-                            aria-hidden
-                            style={{
-                              width: 14,
-                              height: 14,
-                              borderRadius: 999,
-                              border: '1px solid rgba(15,23,42,0.14)',
-                              background: preset.colors[token],
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <p style={{ margin: 0, color: '#475569', fontSize: '0.76rem', lineHeight: 1.45 }}>
-                      {preset.description}
-                    </p>
-                    <div style={{ borderRadius: 8, background: preset.colors.background, border: `1px solid ${preset.colors.muted}`, padding: 10 }}>
-                      <div style={{ fontFamily: preset.fonts.title, color: preset.colors.text, fontSize: 22, lineHeight: 1 }}>
-                        Aa
-                      </div>
-                      <div style={{ fontFamily: preset.fonts.body, color: preset.colors.secondary, fontSize: 12, marginTop: 5 }}>
-                        안녕하세요 Hello
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      style={presetButtonStyle}
-                      onClick={() => setPendingPreset(preset)}
-                    >
-                      Apply
-                    </button>
-                  </section>
-                ))}
-              </div>
-            </div>
-            </>
           )}
         </div>
       </div>

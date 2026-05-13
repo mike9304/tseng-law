@@ -149,3 +149,4 @@
 | M145 | Refactor | SiteSettingsModal mobile tab split | W10,W40,W216,W225 | 1h | M144 | 🟡 SiteSettingsModal 1517→1410 LOC + typecheck/mobile E2E passed / 사용자 QA 대기 |
 | M146 | Refactor | SiteSettingsModal advanced tab split | W172,W216,W225 | 1h | M145 | 🟡 SiteSettingsModal 1410→1349 LOC + typecheck/motion E2E passed / 사용자 QA 대기 |
 | M147 | Refactor | SiteSettingsModal typography tab split | W184,W216,W225 | 1h | M146 | 🟡 SiteSettingsModal 1349→1124 LOC + typecheck/typography E2E passed / 사용자 QA 대기 |
+| M148 | Refactor | SiteSettingsModal presets tab split | W179,W184,W216,W225 | 1h | M147 | 🟡 SiteSettingsModal 1124→824 LOC + typecheck/site-settings E2E passed / 사용자 QA 대기 |

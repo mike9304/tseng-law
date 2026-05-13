@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import BuilderDynamicTemplateEditorSurface from '@/components/builder/BuilderDynamicTemplateEditorSurface';
 import BuilderWorkspaceFrame from '@/components/builder/BuilderWorkspaceFrame';
+import type { BuilderDynamicTemplateDraftReadResult } from '@/lib/builder/dynamic-template-drafts';
 import type { BuilderDynamicTemplateDetail } from '@/lib/builder/dynamic-templates';
 import {
   buildBuilderCollectionHref,
@@ -14,10 +15,12 @@ export default function BuilderDynamicTemplateWorkspaceShell({
   locale,
   overview,
   detail,
+  draft,
 }: {
   locale: Locale;
   overview: BuilderSiteOverview;
   detail: BuilderDynamicTemplateDetail;
+  draft: BuilderDynamicTemplateDraftReadResult;
 }) {
   return (
     <BuilderWorkspaceFrame
@@ -164,7 +167,7 @@ export default function BuilderDynamicTemplateWorkspaceShell({
                 <span>Block visibility controls</span>
                 <span>Record-scoped preview contract</span>
                 <span>SEO preview binding</span>
-                <span>No dynamic page draft or publish lifecycle</span>
+                <span>{draft.persisted ? `Draft v${draft.snapshot.revision}` : 'Unsaved draft default'}</span>
               </div>
             </article>
           </div>
@@ -178,7 +181,7 @@ export default function BuilderDynamicTemplateWorkspaceShell({
           </p>
         </section>
       </div>
-      <BuilderDynamicTemplateEditorSurface detail={detail} locale={locale} />
+      <BuilderDynamicTemplateEditorSurface detail={detail} draft={draft} locale={locale} />
     </BuilderWorkspaceFrame>
   );
 }

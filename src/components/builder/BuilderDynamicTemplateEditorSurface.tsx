@@ -1,36 +1,152 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import type {
+  BuilderDynamicTemplateDraftReadResult,
+  BuilderDynamicTemplateDraftSnapshot,
+  BuilderDynamicTemplateDraftState,
+} from '@/lib/builder/dynamic-template-drafts';
 import type { BuilderDynamicTemplateDetail } from '@/lib/builder/dynamic-templates';
 import type { Locale } from '@/lib/locales';
 
 export default function BuilderDynamicTemplateEditorSurface({
   detail,
+  draft,
   locale,
 }: {
   detail: BuilderDynamicTemplateDetail;
+  draft: BuilderDynamicTemplateDraftReadResult;
   locale: Locale;
 }) {
-  const defaultVisibleBlockIds = useMemo(
-    () =>
-      new Set(
-        detail.editableBlocks
-          .filter((block) => block.defaultVisible)
-          .map((block) => block.blockId)
-      ),
-    [detail.editableBlocks]
+  const initialDraftState = draft.snapshot.state;
+  const [visibleBlockIds, setVisibleBlockIds] = useState(
+    () => new Set(initialDraftState.visibleBlockIds)
   );
-  const [visibleBlockIds, setVisibleBlockIds] = useState(defaultVisibleBlockIds);
-  const [selectedRecordId, setSelectedRecordId] = useState(
-    detail.previewRecords[0]?.recordId ?? ''
-  );
+  const [selectedRecordId, setSelectedRecordId] = useState(initialDraftState.selectedRecordId ?? '');
+  const [draftMeta, setDraftMeta] = useState(() => ({
+    persisted: draft.persisted,
+    revision: draft.snapshot.revision,
+    savedAt: draft.snapshot.savedAt,
+    updatedBy: draft.snapshot.updatedBy,
+  }));
+  const [savedSignature, setSavedSignature] = useState(() => serializeDraftState(initialDraftState));
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
+  const [saveError, setSaveError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setVisibleBlockIds(new Set(draft.snapshot.state.visibleBlockIds));
+    setSelectedRecordId(draft.snapshot.state.selectedRecordId ?? '');
+    setDraftMeta({
+      persisted: draft.persisted,
+      revision: draft.snapshot.revision,
+      savedAt: draft.snapshot.savedAt,
+      updatedBy: draft.snapshot.updatedBy,
+    });
+    setSavedSignature(serializeDraftState(draft.snapshot.state));
+    setSaveStatus('idle');
+    setSaveError(null);
+  }, [
+    detail.templateId,
+    draft.persisted,
+    draft.snapshot.revision,
+    draft.snapshot.savedAt,
+    draft.snapshot.state,
+    draft.snapshot.updatedBy,
+    locale,
+  ]);
+
   const selectedRecord =
     detail.previewRecords.find((record) => record.recordId === selectedRecordId) ??
     detail.previewRecords[0] ??
     null;
+  const currentDraftState = useMemo<BuilderDynamicTemplateDraftState>(
+    () => ({
+      version: 1,
+      visibleBlockIds: detail.editableBlocks
+        .filter((block) => visibleBlockIds.has(block.blockId))
+        .map((block) => block.blockId),
+      selectedRecordId: selectedRecord?.recordId ?? null,
+    }),
+    [detail.editableBlocks, selectedRecord, visibleBlockIds]
+  );
+  const currentSignature = useMemo(
+    () => serializeDraftState(currentDraftState),
+    [currentDraftState]
+  );
+  const draftChanged = currentSignature !== savedSignature;
+  const canSave = saveStatus !== 'saving' && (!draftMeta.persisted || draftChanged);
+
+  async function handleSaveDraft() {
+    if (!canSave) return;
+
+    setSaveStatus('saving');
+    setSaveError(null);
+
+    try {
+      const response = await fetch(
+        `/api/builder/sites/default/dynamic-templates/${encodeURIComponent(
+          detail.templateId
+        )}?locale=${encodeURIComponent(locale)}`,
+        {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({
+            state: currentDraftState,
+            updatedBy: 'builder-dynamic-template-editor',
+          }),
+        }
+      );
+      const payload = (await response.json().catch(() => null)) as DynamicTemplateDraftSaveResponse | null;
+
+      if (!response.ok || !payload?.ok || !payload.draft?.snapshot) {
+        throw new Error(payload?.error ?? 'Failed to save dynamic template draft.');
+      }
+
+      const nextSnapshot = payload.draft.snapshot;
+      setVisibleBlockIds(new Set(nextSnapshot.state.visibleBlockIds));
+      setSelectedRecordId(nextSnapshot.state.selectedRecordId ?? '');
+      setDraftMeta({
+        persisted: true,
+        revision: nextSnapshot.revision,
+        savedAt: nextSnapshot.savedAt,
+        updatedBy: nextSnapshot.updatedBy,
+      });
+      setSavedSignature(serializeDraftState(nextSnapshot.state));
+      setSaveStatus('saved');
+    } catch (error) {
+      setSaveStatus('error');
+      setSaveError(error instanceof Error ? error.message : 'Failed to save dynamic template draft.');
+    }
+  }
 
   return (
     <div className="builder-dashboard-grid" data-builder-dynamic-template-editor="true">
+      <section className="builder-preview-inspector-card" data-builder-dynamic-template-draft-controls="true">
+        <div className="builder-dashboard-page-head">
+          <div>
+            <h2>Template draft</h2>
+            <span>Persist block visibility and preview-record selection for this dynamic template.</span>
+          </div>
+          <button
+            type="button"
+            className="builder-action-btn"
+            data-builder-dynamic-template-save="true"
+            disabled={!canSave}
+            onClick={handleSaveDraft}
+          >
+            {saveStatus === 'saving' ? 'Saving...' : 'Save draft'}
+          </button>
+        </div>
+        <div className="builder-dashboard-page-meta" aria-live="polite">
+          <span>{draftMeta.persisted ? `Draft v${draftMeta.revision}` : 'Not saved yet'}</span>
+          <span>{draftChanged ? 'Unsaved changes' : 'No unsaved changes'}</span>
+          <span>{draftMeta.savedAt ?? 'Default state'}</span>
+          {draftMeta.updatedBy ? <span>{draftMeta.updatedBy}</span> : null}
+        </div>
+        {saveError ? <p className="builder-field-error">{saveError}</p> : null}
+      </section>
+
       <section className="builder-preview-inspector-card">
         <h2>Template blocks</h2>
         <div className="builder-dashboard-page-list">
@@ -175,4 +291,20 @@ function resolvePreviewBlockCopy(
   }
 
   return `${detail.collectionTitle} · ${detail.publicPathPattern}`;
+}
+
+type DynamicTemplateDraftSaveResponse = {
+  ok?: boolean;
+  error?: string;
+  draft?: {
+    snapshot?: BuilderDynamicTemplateDraftSnapshot;
+  };
+};
+
+function serializeDraftState(state: BuilderDynamicTemplateDraftState): string {
+  return JSON.stringify({
+    version: 1,
+    visibleBlockIds: state.visibleBlockIds,
+    selectedRecordId: state.selectedRecordId ?? null,
+  });
 }

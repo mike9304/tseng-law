@@ -2591,3 +2591,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx vitest run src/lib/builder/canvas/__tests__/align-group-bounds.test.ts src/lib/builder/canvas/__tests__/snap.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (3 files, 11 tests passed)
 - W 판정:
   - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. large multi-select align/group bounds와 기존 snap/index 회귀를 latest code에서 통과시켰다.
+
+## M129 — SandboxPage feedback/chrome split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxPageChrome.ts` — sandbox page 상수, viewport width map, public floating chrome copy, draft conflict banner style, toast/activity 타입을 분리했다.
+  - `src/components/builder/canvas/SandboxFeedbackOverlay.tsx` — lower-left save status/activity chip과 toast stack 렌더링을 전용 컴포넌트로 분리했다.
+  - `src/components/builder/canvas/SandboxPage.tsx` — 페이지 조립 책임만 남기고 feedback/chrome helper를 import하도록 정리했다. 파일 길이는 864줄에서 743줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M129 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/chrome-click-safety.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. admin builder shell, public chrome click safety, save/toast overlay compile path를 latest code에서 통과시켰다.

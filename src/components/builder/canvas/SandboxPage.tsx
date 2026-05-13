@@ -5,6 +5,7 @@ import {
   type BuilderPageSummary,
   type SandboxDrawerPanel,
 } from '@/components/builder/canvas/SandboxEditorRail';
+import SandboxFeedbackOverlay from '@/components/builder/canvas/SandboxFeedbackOverlay';
 import SandboxEditorWorkspace from '@/components/builder/canvas/SandboxEditorWorkspace';
 import SandboxStatusBar, {
   type EditorDensity,
@@ -32,106 +33,19 @@ import { collectThemeFontFamilies } from '@/lib/builder/site/theme';
 import type { Locale } from '@/lib/locales';
 import { useSandboxSiteState } from './hooks/useSandboxSiteState';
 import styles from './SandboxPage.module.css';
-
-const TOAST_TTL_MS = 3000;
-const SAVE_BADGE_TTL_MS = 1600;
-
-const VIEWPORT_WIDTHS: Record<ViewportMode, number | null> = {
-  desktop: null,
-  tablet: 768,
-  mobile: 375,
-};
-
-type PublicChromePanel = 'chat' | 'event' | null;
-type ToastTone = 'success' | 'error';
-type ToastOptions = {
-  actionLabel?: string;
-  onAction?: () => void;
-  ttlMs?: number;
-};
-
-interface SandboxToast {
-  id: string;
-  message: string;
-  tone: ToastTone;
-  actionLabel?: string;
-  onAction?: () => void;
-}
-
-interface ActivityChip {
-  id: string;
-  message: string;
-}
-
-function getPublicChromeCopy(locale: Locale) {
-  if (locale === 'zh-hant') {
-    return {
-      label: '公共浮動工具',
-      chat: 'AI 諮詢',
-      event: '2026 EVENT',
-      top: '回到頂部',
-      chatTitle: 'AI 諮詢',
-      chatBody: '此浮動入口會在正式網站右下角顯示，連接公開 AI 諮詢視窗。',
-      eventTitle: '2026年紀念評論活動',
-      eventBody: '正式網站首次造訪時顯示的評論活動彈窗。',
-      editSettings: '網站設定',
-      editColumns: '專欄管理',
-    };
-  }
-
-  if (locale === 'en') {
-    return {
-      label: 'Public floating tools',
-      chat: 'AI Chat',
-      event: '2026 EVENT',
-      top: 'Back to top',
-      chatTitle: 'AI Chat',
-      chatBody: 'This floating entry appears on the public site and opens the AI consultation chat.',
-      eventTitle: '2026 Commemorative Review Event',
-      eventBody: 'The public event popup shown to first-time visitors before they dismiss it.',
-      editSettings: 'Site settings',
-      editColumns: 'Columns',
-    };
-  }
-
-  return {
-    label: '공개 사이트 플로팅 도구',
-    chat: 'AI 상담',
-    event: '2026 EVENT',
-    top: '상단',
-    chatTitle: 'AI 상담',
-    chatBody: '실제 사이트 우측 하단에 뜨는 공개 AI 상담 진입 버튼입니다.',
-    eventTitle: '2026년 기념 리뷰 이벤트',
-    eventBody: '방문자에게 표시되는 리뷰 이벤트 팝업입니다.',
-    editSettings: '사이트 설정',
-    editColumns: '칼럼 관리',
-  };
-}
-
-const conflictBannerStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 12,
-  padding: '10px 16px',
-  borderBottom: '1px solid #fecaca',
-  background: '#fef2f2',
-  color: '#991b1b',
-  fontSize: '0.84rem',
-  fontWeight: 600,
-};
-
-const conflictReloadButtonStyle: React.CSSProperties = {
-  flexShrink: 0,
-  border: '1px solid #991b1b',
-  borderRadius: 6,
-  background: '#fff',
-  color: '#991b1b',
-  cursor: 'pointer',
-  fontSize: '0.78rem',
-  fontWeight: 700,
-  padding: '6px 10px',
-};
+import {
+  SAVE_BADGE_TTL_MS,
+  TOAST_TTL_MS,
+  VIEWPORT_WIDTHS,
+  conflictBannerStyle,
+  conflictReloadButtonStyle,
+  getPublicChromeCopy,
+  type ActivityChip,
+  type PublicChromePanel,
+  type SandboxToast,
+  type ToastOptions,
+  type ToastTone,
+} from '@/components/builder/canvas/SandboxPageChrome';
 
 export default function SandboxPage({
   initialDocument,
@@ -295,6 +209,10 @@ export default function SandboxPage({
     window.setTimeout(() => {
       setActivityChips((currentChips) => currentChips.filter((chip) => chip.id !== id));
     }, 1800);
+  }, []);
+
+  const dismissToast = useCallback((toastId: string) => {
+    setToasts((currentToasts) => currentToasts.filter((candidate) => candidate.id !== toastId));
   }, []);
 
   const {
@@ -804,51 +722,12 @@ export default function SandboxPage({
           onToast={pushToast}
         />
 
-        <div className={styles.lowerLeftChipStack} aria-live="polite" aria-atomic="false">
-          {draftSaveState !== 'idle' ? (
-            <div
-              className={`${styles.saveStatusChip} ${styles[`saveStatusChip${draftSaveState[0].toUpperCase()}${draftSaveState.slice(1)}` as keyof typeof styles]}`}
-              data-save-status-chip={draftSaveState}
-            >
-              <span className={styles.saveStatusGlyph} data-save-status-glyph aria-hidden="true" />
-              <strong>
-                {draftSaveState === 'saving'
-                  ? 'Saving…'
-                  : draftSaveState === 'saved'
-                    ? 'Saved'
-                    : 'Save failed'}
-              </strong>
-            </div>
-          ) : null}
-          {activityChips.map((chip) => (
-            <div key={chip.id} className={styles.activityChip} data-builder-activity-chip="true">
-              {chip.message}
-            </div>
-          ))}
-        </div>
-
-	        <div className={styles.toastStack} aria-live="polite" aria-atomic="true">
-          {toasts.map((toast) => (
-            <div
-            key={toast.id}
-            className={`${styles.toast} ${toast.tone === 'error' ? styles.toastError : styles.toastSuccess}`}
-          >
-              <span className={styles.toastMessage}>{toast.message}</span>
-              {toast.actionLabel && toast.onAction ? (
-                <button
-                  type="button"
-                  className={styles.toastAction}
-                  onClick={() => {
-                    toast.onAction?.();
-                    setToasts((currentToasts) => currentToasts.filter((candidate) => candidate.id !== toast.id));
-                  }}
-                >
-                  {toast.actionLabel}
-                </button>
-              ) : null}
-            </div>
-          ))}
-	        </div>
+        <SandboxFeedbackOverlay
+          draftSaveState={draftSaveState}
+          activityChips={activityChips}
+          toasts={toasts}
+          onDismissToast={dismissToast}
+        />
         <SandboxStatusBar
           viewport={viewport}
           draftSaveState={draftSaveState}

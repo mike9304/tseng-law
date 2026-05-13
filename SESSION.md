@@ -5995,3 +5995,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - 130,000개 선택집합 align/match spread limit 회피, center/middle 기존 수식 유지, group relative child rect 유지, snap/index regressions.
 - 다음 후보:
   - 남은 dirty/문서 상태 확인 후, `CODEX-GOAL-WIX-FULL-BUILDER.md` M01 잔여 항목 중 실제 미해결만 선별한다.
+
+## 2026-05-13 Codex /goal M129 SandboxPage feedback/chrome split
+
+- M01 잔여 항목 중 실제 코드 품질 병목인 hot-file 크기를 줄였다.
+- `SandboxPage.tsx`에서 public floating chrome copy/viewport/toast/activity/conflict banner 상수를 `SandboxPageChrome.ts`로 분리했다.
+- lower-left save status/activity chip과 toast stack 렌더링을 `SandboxFeedbackOverlay.tsx`로 분리했다.
+- `SandboxPage.tsx` LOC는 864에서 743으로 내려가 800줄 이하 기준을 만족한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/chrome-click-safety.playwright.ts --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - editor shell render, public chrome click safety, save/toast overlay compile path.
+- 다음 후보:
+  - 다음 hot file인 `TemplateGalleryModal.tsx`/`VersionHistoryPanel.tsx` 중 800줄 경계에 걸린 파일부터 작은 UI chunk로 분리한다.

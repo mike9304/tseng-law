@@ -25,10 +25,30 @@ interface InlineTextEditorProps {
   initialRichText?: BuilderRichText;
   fontSize?: number;
   color?: string;
-  fontWeight?: string;
+  fontWeight?: string | number;
+  fontFamily?: string;
+  fontStyle?: string;
+  lineHeight?: string | number;
+  letterSpacing?: string | number;
+  textDecoration?: string;
+  textTransform?: string;
   align?: string;
   onSave: (payload: { richText: BuilderRichText; plainText: string }) => void;
   onBlur: () => void;
+}
+
+function cssValue(value: string | number | undefined): string | undefined {
+  if (value == null) return undefined;
+  return typeof value === 'number' ? String(value) : value;
+}
+
+function normalizeFontWeightCss(fontWeight: string | number): string {
+  if (typeof fontWeight === 'number') return String(fontWeight);
+  const normalized = fontWeight.trim();
+  if (normalized === 'bold') return '700';
+  if (normalized === 'medium') return '500';
+  if (normalized === 'regular') return '400';
+  return normalized || '400';
 }
 
 function toolbarButtonClassName(active: boolean, extraClass?: string): string {
@@ -47,6 +67,12 @@ export default function InlineTextEditor({
   fontSize = 16,
   color = '#1f2937',
   fontWeight = 'regular',
+  fontFamily,
+  fontStyle,
+  lineHeight,
+  letterSpacing,
+  textDecoration,
+  textTransform,
   align = 'left',
   onSave,
   onBlur,
@@ -82,12 +108,18 @@ export default function InlineTextEditor({
         style: [
           `font-size: ${fontSize}px`,
           `color: ${color}`,
-          `font-weight: ${fontWeight === 'bold' ? 700 : fontWeight === 'medium' ? 500 : 400}`,
+          `font-weight: ${normalizeFontWeightCss(fontWeight)}`,
+          fontFamily ? `font-family: ${fontFamily}` : null,
+          fontStyle ? `font-style: ${fontStyle}` : null,
+          lineHeight != null ? `line-height: ${cssValue(lineHeight)}` : null,
+          letterSpacing != null ? `letter-spacing: ${cssValue(letterSpacing)}` : null,
+          textDecoration ? `text-decoration: ${textDecoration}` : null,
+          textTransform ? `text-transform: ${textTransform}` : null,
           `text-align: ${align}`,
           'outline: none',
           'min-height: 1em',
           'width: 100%',
-        ].join(';'),
+        ].filter(Boolean).join(';'),
       },
     },
   });

@@ -44,6 +44,9 @@ function makeInlineTextDocument(options: {
   rootId: string;
   textId: string;
   text: string;
+  className?: string;
+  as?: string;
+  fontSize?: number;
 }): TestDocument {
   const now = new Date().toISOString();
   return {
@@ -87,7 +90,7 @@ function makeInlineTextDocument(options: {
         visible: true,
         content: {
           text: options.text,
-          fontSize: 32,
+          fontSize: options.fontSize ?? 32,
           color: '#0f172a',
           fontWeight: 'bold',
           align: 'left',
@@ -96,7 +99,8 @@ function makeInlineTextDocument(options: {
           fontFamily: 'system-ui',
           verticalAlign: 'top',
           textTransform: 'none',
-          as: 'h2',
+          ...(options.className ? { className: options.className } : {}),
+          as: options.as ?? 'h2',
         },
       },
     ],
@@ -191,6 +195,96 @@ async function draftNodes(page: Page, pageId: string): Promise<Array<Record<stri
 }
 
 test.describe('/ko/admin-builder inline text editing', () => {
+  test('keeps class-based title size and removes block margin while editing', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = `title-style-${Date.now().toString(36)}`;
+    const title = `Inline title style ${token}`;
+    const slug = `g-editor-${token}`;
+    const textId = `inline-title-${token}`;
+    const originalText = `주요 서비스 ${token}`;
+    const editedText = `자주 받는 질문 ${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(token));
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        title,
+        makeInlineTextDocument({
+          token,
+          rootId: `inline-title-root-${token}`,
+          textId,
+          text: originalText,
+          className: 'section-title',
+          as: 'h2',
+          fontSize: 16,
+        }),
+      );
+
+      await openBuilderPageById(page, pageId, 'title-style');
+      let textNode = await selectNodeWithHandles(page, textId);
+      const renderedTitle = textNode.locator('.section-title').first();
+      const beforeVisual = await renderedTitle.evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        return {
+          fontSize: Number.parseFloat(style.fontSize),
+          lineHeight: style.lineHeight,
+          fontWeight: style.fontWeight,
+        };
+      });
+      expect(beforeVisual.fontSize).toBeGreaterThan(32);
+
+      await textNode.dblclick({ position: { x: 30, y: 30 }, force: true });
+      const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
+      const editable = editorShell.locator('.ProseMirror').first();
+      await expect(editorShell).toBeVisible();
+      const editorVisual = await editable.evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        const block = element.querySelector('p,h1,h2,h3');
+        const blockStyle = block ? window.getComputedStyle(block) : null;
+        return {
+          fontSize: Number.parseFloat(style.fontSize),
+          lineHeight: style.lineHeight,
+          fontWeight: style.fontWeight,
+          blockMarginTop: blockStyle ? Number.parseFloat(blockStyle.marginTop) : null,
+          blockMarginBottom: blockStyle ? Number.parseFloat(blockStyle.marginBottom) : null,
+        };
+      });
+      expect(Math.abs(editorVisual.fontSize - beforeVisual.fontSize)).toBeLessThanOrEqual(1);
+      expect(editorVisual.lineHeight).toBe(beforeVisual.lineHeight);
+      expect(editorVisual.fontWeight).toBe(beforeVisual.fontWeight);
+      expect(editorVisual.blockMarginTop).toBe(0);
+      expect(editorVisual.blockMarginBottom).toBe(0);
+
+      await editable.fill(editedText);
+      await page.keyboard.press('Escape');
+      await expect(editorShell).toBeHidden();
+      textNode = page.locator(`[data-node-id="${textId}"]`).first();
+      await expect(textNode).toContainText(editedText);
+      await expect.poll(async () => {
+        const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+        return {
+          text: node?.content?.text ?? null,
+          className: node?.content?.className ?? null,
+          fontSize: node?.content?.fontSize ?? null,
+        };
+      }, { timeout: 15_000 }).toEqual({
+        text: editedText,
+        className: 'section-title',
+        fontSize: 16,
+      });
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('edits text inline with Wix-like toolbar and persists after reload', async ({ page }) => {
     test.setTimeout(90_000);
 

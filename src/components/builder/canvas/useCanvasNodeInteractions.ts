@@ -16,6 +16,7 @@ export function useCanvasNodeInlineEditing({
   enterGroup,
   onUpdateContent,
   onInlineEditingChange,
+  onBeforeStartEditing,
 }: {
   nodeId: string;
   nodeKind: BuilderCanvasNode['kind'];
@@ -23,6 +24,7 @@ export function useCanvasNodeInlineEditing({
   enterGroup: (nodeId: string) => void;
   onUpdateContent?: (nodeId: string, content: Record<string, unknown>) => void;
   onInlineEditingChange?: (nodeId: string, editing: boolean) => void;
+  onBeforeStartEditing?: () => void;
 }) {
   const [isEditing, setIsEditing] = useState(false);
   const isTextKind = nodeKind === 'text' || nodeKind === 'heading';
@@ -35,9 +37,10 @@ export function useCanvasNodeInlineEditing({
       return;
     }
     if (isTextKind) {
+      onBeforeStartEditing?.();
       setIsEditing(true);
     }
-  }, [enterGroup, isTextKind, nodeId, nodeKind, nodeLocked]);
+  }, [enterGroup, isTextKind, nodeId, nodeKind, nodeLocked, onBeforeStartEditing]);
 
   const handleInlineSave = useCallback(
     (payload: { richText: BuilderRichText; plainText: string }) => {
@@ -58,12 +61,13 @@ export function useCanvasNodeInlineEditing({
     const handler = (event: Event) => {
       const detail = (event as CustomEvent<{ nodeId?: string }>).detail;
       if (detail?.nodeId === nodeId && !nodeLocked) {
+        onBeforeStartEditing?.();
         setIsEditing(true);
       }
     };
     document.addEventListener('builder:start-text-edit', handler);
     return () => document.removeEventListener('builder:start-text-edit', handler);
-  }, [isTextKind, nodeId, nodeLocked]);
+  }, [isTextKind, nodeId, nodeLocked, onBeforeStartEditing]);
 
   useEffect(() => {
     if (!isTextKind) return undefined;

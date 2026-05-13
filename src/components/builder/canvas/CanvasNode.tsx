@@ -32,6 +32,7 @@ import {
 } from '@/lib/builder/canvas/office-locations';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import {
+  resolveFontWeightCss,
   resolveThemeColor,
   resolveThemeTextTypography,
 } from '@/lib/builder/site/theme';
@@ -77,6 +78,49 @@ interface CanvasNodeProps {
   onInlineEditingChange?: (nodeId: string, editing: boolean) => void;
 }
 
+interface InlineTextVisualStyle {
+  fontSize?: number;
+  color?: string;
+  fontWeight?: string;
+  fontFamily?: string;
+  fontStyle?: string;
+  lineHeight?: string;
+  letterSpacing?: string;
+  textDecoration?: string;
+  textTransform?: string;
+}
+
+function parseCssNumber(value: string): number | undefined {
+  const parsed = Number.parseFloat(value);
+  return Number.isFinite(parsed) ? parsed : undefined;
+}
+
+function resolveInlineTextRenderElement(root: HTMLDivElement | null): HTMLElement | null {
+  const body = root?.querySelector<HTMLElement>('[data-builder-node-body="true"]');
+  const firstChild = body?.firstElementChild;
+  if (!(firstChild instanceof HTMLElement)) return null;
+  if (firstChild.tagName.toLowerCase() !== 'a') return firstChild;
+  const linkedChild = firstChild.firstElementChild;
+  return linkedChild instanceof HTMLElement ? linkedChild : firstChild;
+}
+
+function captureInlineTextVisualStyle(root: HTMLDivElement | null): InlineTextVisualStyle | null {
+  const element = resolveInlineTextRenderElement(root);
+  if (!element) return null;
+  const style = window.getComputedStyle(element);
+  return {
+    fontSize: parseCssNumber(style.fontSize),
+    color: style.color,
+    fontWeight: style.fontWeight,
+    fontFamily: style.fontFamily,
+    fontStyle: style.fontStyle,
+    lineHeight: style.lineHeight,
+    letterSpacing: style.letterSpacing,
+    textDecoration: style.textDecorationLine,
+    textTransform: style.textTransform,
+  };
+}
+
 export default function CanvasNode({
   node,
   selected,
@@ -89,6 +133,7 @@ export default function CanvasNode({
   onInlineEditingChange,
 }: CanvasNodeProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [inlineTextVisualStyle, setInlineTextVisualStyle] = useState<InlineTextVisualStyle | null>(null);
   const [mapQuickAddressDraft, setMapQuickAddressDraft] = useState('');
   const component = getComponent(node.kind);
   const theme = useBuilderTheme();
@@ -110,6 +155,13 @@ export default function CanvasNode({
   const effectiveFontSize = resolveViewportFontSize(node, viewport);
   const currentMapAddress = node.kind === 'map' ? readMapAddress(node) : '';
   const currentMapZoom = node.kind === 'map' ? readMapZoom(node) : 15;
+  const captureInlineTextStyleForEditing = useCallback(() => {
+    setInlineTextVisualStyle(captureInlineTextVisualStyle(nodeRef.current));
+  }, []);
+
+  useEffect(() => {
+    setInlineTextVisualStyle(null);
+  }, [node.id]);
 
   const { rotationReadout, handleRotationPointerDown } = useCanvasNodeRotation({
     nodeId: node.id,
@@ -134,6 +186,7 @@ export default function CanvasNode({
     enterGroup,
     onUpdateContent,
     onInlineEditingChange,
+    onBeforeStartEditing: captureInlineTextStyleForEditing,
   });
   const animationPreviewPhase = useCanvasNodeAnimationPreview({
     animation: node.animation,
@@ -512,12 +565,21 @@ export default function CanvasNode({
     <InlineTextEditor
       initialText={String(textContent.text || '')}
       initialRichText={initialRichText}
-      fontSize={typography?.fontSize ?? 16}
-      color={resolveThemeColor(typography?.color, theme)}
-      fontWeight={typography?.fontWeight ?? 'regular'}
+      fontSize={inlineTextVisualStyle?.fontSize ?? typography?.fontSize ?? 16}
+      color={inlineTextVisualStyle?.color ?? resolveThemeColor(typography?.color, theme)}
+      fontWeight={inlineTextVisualStyle?.fontWeight ?? (typography ? resolveFontWeightCss(typography) : 'regular')}
+      fontFamily={inlineTextVisualStyle?.fontFamily ?? typography?.fontFamily}
+      fontStyle={inlineTextVisualStyle?.fontStyle ?? typography?.fontStyle}
+      lineHeight={inlineTextVisualStyle?.lineHeight ?? typography?.lineHeight}
+      letterSpacing={inlineTextVisualStyle?.letterSpacing ?? (typography ? `${typography.letterSpacing}px` : undefined)}
+      textDecoration={inlineTextVisualStyle?.textDecoration ?? typography?.textDecoration}
+      textTransform={inlineTextVisualStyle?.textTransform}
       align={typeof textContent.align === 'string' ? textContent.align : 'left'}
       onSave={handleInlineSave}
-      onBlur={handleInlineBlur}
+      onBlur={() => {
+        setInlineTextVisualStyle(null);
+        handleInlineBlur();
+      }}
     />
   ) : component ? (
     <CanvasNodeErrorBoundary nodeKind={node.kind} nodeId={node.id}>
@@ -718,6 +780,7 @@ export default function CanvasNode({
         updateOfficeMapUrl={updateOfficeMapUrl}
       />
       <div
+        data-builder-node-body="true"
         className={styles.nodeBody}
         style={bodyStyle}
       >

@@ -2880,3 +2880,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-pool.playwright.ts -g "covers Site Settings ModalShell tabs" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W23/W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Site Settings Dark mode tab의 light/dark preview와 validation-adjacent settings path를 latest code에서 통과시켰다.
+
+## M150 — SeoPanel hreflang tab split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SeoPanelHreflangTab.tsx` — Hreflang alternates, linked sibling pages, missing locale warning, sitemap inclusion status 렌더링을 분리했다.
+  - `src/components/builder/canvas/SeoPanel.tsx` — Hreflang 탭은 새 컴포넌트 호출로 줄이고 SEO fetch/save/focus trap orchestration을 유지했다. 파일 길이는 1376줄에서 1256줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M150 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W192/W193/W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. SEO panel focus trap/restore path를 latest code에서 통과시키고 Hreflang/Sitemap tab 렌더 경계를 분리했다.

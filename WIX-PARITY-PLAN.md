@@ -151,3 +151,4 @@
 | M147 | Refactor | SiteSettingsModal typography tab split | W184,W216,W225 | 1h | M146 | 🟡 SiteSettingsModal 1349→1124 LOC + typecheck/typography E2E passed / 사용자 QA 대기 |
 | M148 | Refactor | SiteSettingsModal presets tab split | W179,W184,W216,W225 | 1h | M147 | 🟡 SiteSettingsModal 1124→824 LOC + typecheck/site-settings E2E passed / 사용자 QA 대기 |
 | M149 | Refactor | SiteSettingsModal dark mode tab split | W23,W184,W216,W225 | 1h | M148 | 🟡 SiteSettingsModal 824→719 LOC + typecheck/site-settings E2E passed / 사용자 QA 대기 |
+| M150 | Refactor | SeoPanel hreflang tab split | W192,W193,W195,W216,W225 | 1h | M149 | 🟡 SeoPanel 1376→1256 LOC + typecheck/SEO focus E2E passed / 사용자 QA 대기 |

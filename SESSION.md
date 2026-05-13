@@ -6267,3 +6267,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Site Settings Dark mode tab의 light/dark preview와 validation-adjacent settings path.
 - 다음 후보:
   - `SeoPanel.tsx` Advanced/Hreflang/Assistant 탭 split으로 넘어가 큰 modal 정리를 계속한다.
+
+## 2026-05-13 Codex /goal M150 SeoPanel hreflang tab split
+
+- `SeoPanel.tsx`의 Hreflang alternates, linked sibling pages, missing locale warning, sitemap inclusion status 렌더링을 `SeoPanelHreflangTab.tsx`로 분리했다.
+- `SeoPanel.tsx`는 Hreflang 탭을 컴포넌트 호출로 줄이고 SEO fetch/save/focus trap orchestration을 유지했으며, LOC는 1376에서 1256으로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - SEO panel focus trap/restore path.
+- 다음 후보:
+  - `SeoPanel.tsx` Assistant 또는 Advanced structured-data 탭 split을 이어간다.

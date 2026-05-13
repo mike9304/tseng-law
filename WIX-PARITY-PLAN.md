@@ -146,3 +146,4 @@
 | M142 | Refactor | SeoPanel style split | W195,W216,W225 | 1h | M141 | 🟡 SeoPanel 1534→1376 LOC + typecheck/SEO focus E2E passed / 사용자 QA 대기 |
 | M143 | Refactor | SiteSettingsModal style split | W184,W216,W225 | 1h | M142 | 🟡 SiteSettingsModal 1644→1556 LOC + typecheck/settings E2E passed / 사용자 QA 대기 |
 | M144 | Refactor | SiteSettingsModal general tab split | W184,W216,W225 | 1h | M143 | 🟡 SiteSettingsModal 1556→1517 LOC + typecheck/settings E2E passed / 사용자 QA 대기 |
+| M145 | Refactor | SiteSettingsModal mobile tab split | W10,W40,W216,W225 | 1h | M144 | 🟡 SiteSettingsModal 1517→1410 LOC + typecheck/mobile E2E passed / 사용자 QA 대기 |

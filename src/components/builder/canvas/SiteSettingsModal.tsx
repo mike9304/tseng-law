@@ -10,7 +10,6 @@ import {
   type BrandKitAssets,
   type BuilderHeaderFooterConfig,
   type BuilderMobileBottomBar,
-  type BuilderMobileBottomBarAction,
   type BuilderSiteSettings,
   type BuilderTheme,
   type DarkModeConfig,
@@ -61,6 +60,7 @@ import {
   SiteSettingsGeneralTab,
   type SiteSettingsGeneralFieldKey,
 } from './SiteSettingsGeneralTab';
+import { SiteSettingsMobileTab } from './SiteSettingsMobileTab';
 import {
   cancelBtnStyle,
   fieldStyle,
@@ -400,19 +400,6 @@ export default function SiteSettingsModal({
     setSettings((prev) => ({ ...prev, [key]: value }));
   };
 
-  const updateMobileBottomAction = (
-    index: number,
-    patch: Partial<BuilderMobileBottomBarAction>,
-  ) => {
-    setMobileBottomBar((prev) => {
-      const normalized = normalizeMobileBottomBar(prev, settings);
-      const actions = normalized.actions.map((action, actionIndex) => (
-        actionIndex === index ? { ...action, ...patch } : action
-      ));
-      return { ...normalized, actions };
-    });
-  };
-
   const updateThemeColor = (key: keyof BuilderTheme['colors'], value: string) => {
     setTheme((prev) => ({
       ...prev,
@@ -721,107 +708,13 @@ export default function SiteSettingsModal({
               onImport={(file) => void importBrandKit(file)}
             />
           ) : activeTab === 'mobile' ? (
-            <div style={sectionStyle}>
-              <div style={sectionHeadingStyle}>Mobile header</div>
-              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.82rem', fontWeight: 800, color: '#334155' }}>
-                <input
-                  type="checkbox"
-                  checked={headerFooter.mobileSticky === true}
-                  onChange={(event) => {
-                    setHeaderFooter((prev) => ({
-                      ...normalizeHeaderFooterMobileConfig(prev),
-                      mobileSticky: event.target.checked,
-                    }));
-                  }}
-                />
-                Sticky mobile header
-              </label>
-              <div style={fieldStyle}>
-                <label style={labelStyle}>Hamburger mode</label>
-                <select
-                  value={headerFooter.mobileHamburger ?? 'auto'}
-                  style={inputStyle}
-                  onChange={(event) => {
-                    const value = event.target.value;
-                    setHeaderFooter((prev) => ({
-                      ...normalizeHeaderFooterMobileConfig(prev),
-                      mobileHamburger: value === 'off' || value === 'force' ? value : 'auto',
-                    }));
-                  }}
-                >
-                  <option value="auto">Auto</option>
-                  <option value="force">Force hamburger</option>
-                  <option value="off">Desktop menu on mobile</option>
-                </select>
-              </div>
-
-              <div style={sectionHeadingStyle}>Mobile bottom CTA</div>
-              <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.82rem', fontWeight: 800, color: '#334155' }}>
-                <input
-                  type="checkbox"
-                  checked={mobileBottomBar.enabled}
-                  onChange={(event) => {
-                    setMobileBottomBar((prev) => ({
-                      ...normalizeMobileBottomBar(prev, settings),
-                      enabled: event.target.checked,
-                    }));
-                  }}
-                />
-                Show fixed bottom action bar
-              </label>
-              {normalizeMobileBottomBar(mobileBottomBar, settings).actions.map((action, index) => (
-                <section
-                  key={action.id || index}
-                  style={{
-                    border: '1px solid #e2e8f0',
-                    borderRadius: 10,
-                    padding: 12,
-                    display: 'grid',
-                    gridTemplateColumns: '110px 1fr',
-                    gap: 10,
-                    alignItems: 'end',
-                  }}
-                >
-                  <div style={fieldStyle}>
-                    <label style={labelStyle}>Type</label>
-                    <select
-                      value={action.kind}
-                      style={inputStyle}
-                      onChange={(event) => {
-                        const value = event.target.value;
-                        updateMobileBottomAction(index, {
-                          kind: value === 'phone' || value === 'booking' ? value : 'custom',
-                        });
-                      }}
-                    >
-                      <option value="phone">Phone</option>
-                      <option value="booking">Booking</option>
-                      <option value="custom">Custom</option>
-                    </select>
-                  </div>
-                  <div style={twoColumnStyle}>
-                    <div style={fieldStyle}>
-                      <label style={labelStyle}>Label</label>
-                      <input
-                        type="text"
-                        value={action.label}
-                        style={inputStyle}
-                        onChange={(event) => updateMobileBottomAction(index, { label: event.target.value })}
-                      />
-                    </div>
-                    <div style={fieldStyle}>
-                      <label style={labelStyle}>Link</label>
-                      <input
-                        type="text"
-                        value={action.href}
-                        style={inputStyle}
-                        onChange={(event) => updateMobileBottomAction(index, { href: event.target.value })}
-                      />
-                    </div>
-                  </div>
-                </section>
-              ))}
-            </div>
+            <SiteSettingsMobileTab
+              headerFooter={headerFooter}
+              mobileBottomBar={mobileBottomBar}
+              settings={settings}
+              onChangeHeaderFooter={setHeaderFooter}
+              onChangeMobileBottomBar={setMobileBottomBar}
+            />
           ) : activeTab === 'advanced' ? (
             <div style={sectionStyle}>
               <div style={sectionHeadingStyle}>Motion</div>

@@ -6202,3 +6202,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Site Settings modal open/save-adjacent typography scale persistence path.
 - 다음 후보:
   - `SiteSettingsModal.tsx`의 Mobile 또는 Presets 탭 subview 분리로 본체를 1400줄 이하에 가깝게 내린다.
+
+## 2026-05-13 Codex /goal M145 SiteSettingsModal mobile tab split
+
+- `SiteSettingsModal.tsx`의 Mobile 탭 sticky header, hamburger mode, mobile bottom CTA action 렌더링과 action patch helper를 `SiteSettingsMobileTab.tsx`로 분리했다.
+- `SiteSettingsModal.tsx`는 Mobile 탭을 컴포넌트 호출로 줄이고 settings fetch/save 및 theme/typography/preset orchestration을 유지했으며, LOC는 1517에서 1410으로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-runtime.playwright.ts -g "mobile" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Mobile preview iframe, sticky CTA settings, touch long press context menu path.
+- 다음 후보:
+  - `SiteSettingsModal.tsx` Presets 탭이나 Typography 탭을 subview로 분리해 본체를 1300줄 이하에 가깝게 내린다.

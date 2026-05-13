@@ -2810,3 +2810,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts -g "persists typography scale" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Site Settings modal open/save-adjacent typography scale persistence path를 latest code에서 통과시켰다.
+
+## M145 — SiteSettingsModal mobile tab split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SiteSettingsMobileTab.tsx` — Site Settings Mobile 탭의 sticky header, hamburger mode, mobile bottom CTA action 렌더링과 action patch helper를 분리했다.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Mobile 탭은 새 컴포넌트 호출로 줄이고, settings fetch/save 및 theme/typography/preset orchestration을 유지했다. 파일 길이는 1517줄에서 1410줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M145 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-runtime.playwright.ts -g "mobile" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W10/W40/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Mobile preview iframe, sticky CTA settings, touch long press context menu path를 latest code에서 통과시켰다.

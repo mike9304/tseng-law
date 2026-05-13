@@ -141,3 +141,4 @@
 | M137 | Refactor | SandboxInspectorPanel layout tab split | W18,W40,W84,W216 | 1h | M136 | 🟡 SandboxInspectorPanel 1049→597 LOC + typecheck/inspector-template E2E 13 passed / 사용자 QA 대기 |
 | M138 | Refactor | SandboxInspectorPanel office quick edit split | W18,W84,W216 | 1h | M137 | 🟡 SandboxInspectorPanel 597→415 LOC + typecheck/office-template E2E passed / 사용자 QA 대기 |
 | M139 | Refactor | SandboxCatalogPanel search helper split | W14,W18,W84,W216 | 1h | M138 | 🟡 SandboxCatalogPanel 2905→2659 LOC + typecheck/template showroom E2E passed / 사용자 QA 대기 |
+| M140 | Refactor | SandboxCatalogPanel preset data split | W14,W18,W84,W216 | 1h | M139 | 🟡 SandboxCatalogPanel 2659→1239 LOC + typecheck/template E2E 4 passed / 사용자 QA 대기 |

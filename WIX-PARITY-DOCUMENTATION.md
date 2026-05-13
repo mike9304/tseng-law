@@ -2744,3 +2744,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Design panel" --project=chromium-builder --workers=1` ✅ (1 passed on retry, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W14/W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add/Design page template showroom, section chip click, 주요업무 템플릿 nested node selection/text persistence를 latest code에서 통과시켰다.
+
+## M140 — SandboxCatalogPanel preset data split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxCatalogPanel.presets.ts` — text/media/gallery/layout/interactive/navigation/social/location/decorative widget preset 타입과 데이터, rich text 샘플 생성 helper를 분리했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — 카탈로그 필터링, 삽입 handler, 렌더 orchestration 중심으로 남겼다. 파일 길이는 2659줄에서 1239줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M140 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Add panel|opens the full page template showroom from the Design panel|keeps inserted service template text visible|persists inserted service template text" --project=chromium-builder --workers=1` ⚠️ first run blocked before browser startup by macOS Chromium MachPort sandbox permission
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Add panel|opens the full page template showroom from the Design panel|keeps inserted service template text visible|persists inserted service template text" --project=chromium-builder --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add/Design page template showroom, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence를 latest code에서 통과시켰다.

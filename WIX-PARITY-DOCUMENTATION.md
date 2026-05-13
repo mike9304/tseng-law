@@ -2837,3 +2837,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/motion-runtime.playwright.ts -g "page transition" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W172/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Site Settings Advanced page transition 설정과 published motion runtime attrs path를 latest code에서 통과시켰다.
+
+## M147 — SiteSettingsModal typography tab split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SiteSettingsTypographyTab.tsx` — Typography 탭의 site font picker, typography scale preview, theme text preset editor를 분리했다.
+  - `src/components/builder/canvas/SiteSettingsModal.tsx` — Typography 탭은 새 컴포넌트 호출로 줄이고 theme/save orchestration을 유지했다. 파일 길이는 1349줄에서 1124줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M147 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts -g "persists typography scale" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/design-system-m23.playwright.ts -g "persists typography scale" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W184/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Typography scale persistence와 inspector style source chip path를 latest code에서 통과시켰다.

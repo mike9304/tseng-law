@@ -4,7 +4,7 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 import { getComponent } from '@/lib/builder/components/registry';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
-import { isContainerLikeKind } from '@/lib/builder/canvas/types';
+import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
 import type { BuilderRichText } from '@/lib/builder/rich-text/types';
 import { isBuilderRichText, richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import {
@@ -242,6 +242,7 @@ export default function CanvasNode({
   ]);
 
   const isTextKind = node.kind === 'text' || node.kind === 'heading';
+  const isTextShapedNode = isTextShapedKind(node.kind);
   const textContent = node.content as Record<string, unknown>;
   const initialRichText = isTextKind
     ? isBuilderRichText(textContent.richText)
@@ -880,6 +881,8 @@ export default function CanvasNode({
               ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
               : 'none'),
           opacity: renderedOpacity,
+          height: isTextShapedNode ? 'auto' : undefined,
+          minHeight: isTextShapedNode ? `${effectiveRect.height}px` : undefined,
           // Containers + the inline editor always show overflow because
           // their children may legitimately extend the bounds. Other
           // widgets only show overflow when SELECTED — so designers

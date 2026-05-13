@@ -16,7 +16,7 @@ import type {
   BuilderCanvasNode,
   BuilderCanvasDocument,
 } from '@/lib/builder/canvas/types';
-import { isContainerLikeKind } from '@/lib/builder/canvas/types';
+import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
 import { buildResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
 import type {
   BuilderLightbox,
@@ -90,17 +90,6 @@ import '@/lib/builder/components/registry';
 interface ResolvedLightbox {
   meta: BuilderLightbox;
   canvas: BuilderCanvasDocument;
-}
-
-function isTextShapedKind(kind: string): boolean {
-  return (
-    kind === 'text'
-    || kind === 'heading'
-    || kind === 'button'
-    || kind === 'notification-bar'
-    || kind === 'address-block'
-    || kind === 'business-hours'
-  );
 }
 
 export interface ResolvedPublishedSitePage {

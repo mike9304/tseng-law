@@ -698,7 +698,7 @@ html.has-cyber-cursor .button {
 .split-section {
   display: grid;
   min-height: 500px;
-  overflow: hidden;
+  overflow: visible;
   padding: 0;
 }
 
@@ -5670,13 +5670,17 @@ html.has-cyber-cursor .button {
 }
 
 .faq-answer-wrap {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   overflow: hidden;
   padding: 0 1rem;
-  transition: max-height 0.35s ease, padding 0.35s ease;
+  transition: grid-template-rows 0.35s ease, padding 0.35s ease;
+}
+.faq-answer-wrap > * {
+  min-height: 0;
 }
 .faq-answer-wrap.is-open {
-  max-height: 400px;
+  grid-template-rows: 1fr;
   padding: 0 1rem 1rem;
 }
 
@@ -6884,12 +6888,14 @@ a.floating-ai-chat-contact-item:hover strong {
 .reveal {
   opacity: 0;
   transform: translateY(14px);
+  pointer-events: none;
   transition: opacity 560ms ease, transform 560ms ease;
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .reveal-stagger > * {

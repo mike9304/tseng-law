@@ -282,6 +282,24 @@ export async function writeBuilderPageSnapshot(
     revision: currentSnapshot.revision + 1,
   });
 
+  // Narrow the publish race: re-read just before write and abort if the
+  // revision moved underneath us. Storage layer still lacks true CAS, so
+  // a concurrent writer that lands between this check and store.write can
+  // still clobber, but the window shrinks from "all of materialize +
+  // history serialization" down to "single network round-trip".
+  if (normalizedExpectedRevision !== null || normalizedExpectedSavedAt !== null) {
+    const latest = await readBuilderPageSnapshot(input.pageKey, input.kind, input.locale);
+    if (latest.snapshot.revision !== currentSnapshot.revision) {
+      throw new BuilderSnapshotConflictError({
+        kind: input.kind,
+        locale: input.locale,
+        expectedRevision: normalizedExpectedRevision ?? undefined,
+        expectedSavedAt: normalizedExpectedSavedAt ?? undefined,
+        currentSnapshot: latest.snapshot,
+      });
+    }
+  }
+
   await store.write(
     getBuilderSnapshotPath(input.pageKey, input.kind, input.locale),
     JSON.stringify(snapshot, null, 2)

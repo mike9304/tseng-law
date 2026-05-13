@@ -2435,3 +2435,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `git diff --check` ✅
 - W 판정:
   - W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. asset upload/delete security, form submit validation/materialization, rate limit fallback, failed webhook retry persistence/drain을 최신 코드에서 통과시켰다.
+
+## M119 — Section template text/click stability
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/app/globals.css` — split-section overflow를 visible로 열고, FAQ answer animation을 fixed max-height가 아닌 grid row transition으로 바꿔 긴 답변이 잘리지 않게 했다. reveal hidden state는 pointer-events를 꺼서 아직 보이지 않는 레이어가 클릭을 가로채지 않게 했다.
+  - `src/lib/builder/canvas/types.ts`, `src/lib/builder/site/public-page.tsx`, `src/components/builder/canvas/CanvasNode.tsx` — text-shaped widget 판정을 공통 helper로 옮기고, editor node body에서도 text/button/address/business-hours 류를 min-height 기반으로 렌더링해 주요업무 템플릿 텍스트가 선택 전환 뒤 잘리지 않게 했다.
+  - `src/components/builder/canvas/SandboxPage.module.css` — editor node body의 default clipping/background를 제거하고, header edit badge의 컨테이너 hit-test를 통과시켜 hero image 등 canvas node 클릭을 막지 않게 했다. badge 내부 버튼만 pointer event를 받는다.
+  - `src/lib/builder/persistence.ts` — expected revision/savedAt write 직전에 snapshot을 재확인해 stale writer가 최신 revision을 덮는 race window를 줄였다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/persistence.test.ts` ✅ (13 tests passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "lets users click a section chip|opens the full page template showroom from the Design panel|keeps inserted service template text visible while selecting nested nodes" --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/cross-tab-delete-race.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W09/W18/W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 주요업무/섹션 템플릿 클릭, 섹션 목록 뒤로가기, 전체 페이지 템플릿 쇼룸, 템플릿 삽입 후 노드 선택 전환 텍스트 가시성, canvas node click stability, cross-tab deletion race를 최신 코드에서 통과시켰다.

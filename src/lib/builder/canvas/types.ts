@@ -125,6 +125,24 @@ export function isContainerLikeKind(kind: string): boolean {
   return kind === 'container' || kind === 'form';
 }
 
+/**
+ * Widget kinds whose rendered height is content-driven (wrapped text,
+ * variable line counts). For these the designer's `rect.height` should be
+ * treated as a `minHeight` rather than a hard cap, both in the builder
+ * canvas and on the published page, so trailing lines never clip when the
+ * box is shrunk.
+ */
+export function isTextShapedKind(kind: string): boolean {
+  return (
+    kind === 'text'
+    || kind === 'heading'
+    || kind === 'button'
+    || kind === 'notification-bar'
+    || kind === 'address-block'
+    || kind === 'business-hours'
+  );
+}
+
 export const compositeComponentKeys = [
   'hero-search',
   'services-bento',

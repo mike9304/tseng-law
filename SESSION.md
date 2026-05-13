@@ -5847,3 +5847,23 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - asset upload MIME/size guards and invalid asset delete traversal rejection.
 - 다음 후보:
   - M119로 남은 `globals.css`, `SandboxPage.module.css`, `canvas/types.ts`, `persistence.ts` dirty diff를 검증/정리한다.
+
+## 2026-05-13 Codex /goal M119 Section template text/click stability
+
+- 사용자가 지적한 "주요업무 템플릿에서 다른 노드 선택 시 글이 사라짐"과 "섹션 디자인 템플릿 클릭/뒤로가기" 경로를 직접 대상으로 잡았다.
+- public/editor 공통으로 text-shaped widget helper를 사용하게 했고, editor node body는 text/button/address/business-hours류를 `min-height` 기반으로 렌더링한다. node wrapper hitbox는 기존 rect 높이를 유지해 다른 레이어를 덮지 않게 했다.
+- `globals.css`에서 split section overflow를 visible로 열고, FAQ answer는 grid row transition으로 바꿔 fixed max-height clipping을 제거했다. reveal hidden state는 pointer-events none으로 보이지 않는 레이어가 클릭을 가로채지 않게 했다.
+- header edit badge가 hero image 클릭 좌상단을 덮는 문제를 발견해 badge 컨테이너는 pointer-events none, 내부 버튼만 auto로 조정했다.
+- `writeBuilderPageSnapshot`은 expected revision/savedAt write 직전에 snapshot을 재확인해 stale writer race window를 줄였다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+  - `npx vitest run src/lib/builder/site/__tests__/persistence.test.ts` ✅ (13 tests passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "lets users click a section chip|opens the full page template showroom from the Design panel|keeps inserted service template text visible while selecting nested nodes" --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/cross-tab-delete-race.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Design panel section chip click, services 12 templates, section-list back button, full page template showroom.
+  - inserted 주요업무 템플릿 텍스트 visibility across nested node selection and other node selection.
+  - archive/image click safety, FAQ revealed answer persistence, pointer jitter, cross-tab delete race.
+- 다음 후보:
+  - 남은 booking public endpoint rate-limit / OAuth state / webhook URL guard 보안 diff를 별도 M120으로 검증/정리한다.

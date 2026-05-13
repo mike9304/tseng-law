@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {

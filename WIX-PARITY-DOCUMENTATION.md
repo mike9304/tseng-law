@@ -2516,3 +2516,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/webhook-retry.test.ts src/lib/builder/webhooks/__tests__/url-guard.test.ts` ✅ (3 files, 55 tests passed)
 - W 판정:
   - W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. anonymous form submit webhook SSRF guard, retry queue URL guard, URL classifier matrix를 최신 코드에서 통과시켰다.
+
+## M124 — Save section modal cleanup
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/sections/SaveSectionModal.tsx` — 사용하지 않는 `useEffect` import를 제거했다. focus trap 구현은 `useLayoutEffect` 기반 그대로 유지했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M124 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/sections/__tests__/normalize.test.ts src/lib/builder/sections/__tests__/thumbnail.test.ts` ✅ (2 files, 33 tests passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the save section modal" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W84/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. section snapshot normalize/thumbnail과 Save Section modal focus trap을 최신 코드에서 통과시켰다.

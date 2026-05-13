@@ -5924,3 +5924,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - anonymous form submit webhook SSRF refusal, retry record refusal, drain-time unsafe URL drop, URL guard matrix.
 - 다음 후보:
   - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.
+
+## 2026-05-13 Codex /goal M124 Save section modal cleanup
+
+- 남은 실제 코드 diff인 `SaveSectionModal.tsx` unused `useEffect` import 제거를 별도 정리했다.
+- focus trap 구현은 `useLayoutEffect` 기반 그대로 유지했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/sections/__tests__/normalize.test.ts src/lib/builder/sections/__tests__/thumbnail.test.ts` ✅ (2 files, 33 tests)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the save section modal" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - saved section normalize/thumbnail, Save Section modal focus trap.
+- 다음 후보:
+  - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.

@@ -12,6 +12,7 @@ import { recordFailedWebhook } from '@/lib/builder/forms/webhook-retry';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { reasonUrlUnsafe } from '@/lib/builder/webhooks/url-guard';
+import { isLinkSafe } from '@/lib/builder/links';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -36,7 +37,14 @@ const submitBodySchema = z.object({
         name: z.string().trim().min(1).max(240),
         size: z.number().int().min(0).max(50_000_000),
         type: z.string().max(200).optional(),
-        url: z.string().max(2000).optional(),
+        // Reject unsafe schemes (javascript:/data:/vbscript:/protocol-relative)
+        // so admins viewing the submissions dashboard can't be XSS'd by a
+        // crafted file URL that arrived through the public submit endpoint.
+        url: z
+          .string()
+          .max(2000)
+          .refine((value) => !value || isLinkSafe(value), 'Unsafe URL scheme')
+          .optional(),
         uploadedAt: z.string().max(80).optional(),
       }),
     )

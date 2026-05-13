@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import type { FormSubmission } from '@/lib/builder/forms/form-engine';
+import { safeHref } from '@/lib/builder/links';
 
 type DateRange = 'all' | '7d' | '30d';
 type ReadFilter = 'all' | 'read' | 'unread';
@@ -388,13 +389,22 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId }:
                 <div>
                   <strong style={{ color: '#374151' }}>Files:</strong>
                   <ul style={{ margin: '0.25rem 0 0', paddingLeft: '1.25rem' }}>
-                    {selected.files.map((f) => (
-                      <li key={f.url}>
-                        <a href={f.url} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb' }}>
-                          {f.name} ({Math.round(f.size / 1024)}KB)
-                        </a>
-                      </li>
-                    ))}
+                    {selected.files.map((f) => {
+                      const fileHref = safeHref(f.url);
+                      return (
+                        <li key={f.url ?? `${f.name}-${f.size}`}>
+                          {fileHref ? (
+                            <a href={fileHref} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb' }}>
+                              {f.name} ({Math.round(f.size / 1024)}KB)
+                            </a>
+                          ) : (
+                            <span style={{ color: '#475569' }}>
+                              {f.name} ({Math.round(f.size / 1024)}KB)
+                            </span>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               )}

@@ -1,5 +1,6 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderServiceFeatureCardCanvasNode } from '@/lib/builder/canvas/types';
+import { safeHref } from '@/lib/builder/links';
 
 function ServiceFeatureCardRender({
   node,
@@ -17,9 +18,12 @@ function ServiceFeatureCardRender({
       <span className="builder-datadisplay-service-icon" aria-hidden="true">{c.icon}</span>
       <strong>{c.title}</strong>
       {c.description ? <p>{c.description}</p> : null}
-      {c.ctaHref && c.ctaLabel ? (
-        <a href={c.ctaHref}>{c.ctaLabel} →</a>
-      ) : null}
+      {(() => {
+        const ctaHref = safeHref(c.ctaHref);
+        return ctaHref && c.ctaLabel ? (
+          <a href={ctaHref}>{c.ctaLabel} →</a>
+        ) : null;
+      })()}
     </article>
   );
 }

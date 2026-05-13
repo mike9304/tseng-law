@@ -2529,3 +2529,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the save section modal" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W84/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. section snapshot normalize/thumbnail과 Save Section modal focus trap을 최신 코드에서 통과시켰다.
+
+## M125 — Render-site/file URL safeHref sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/links.ts`, `src/lib/builder/__tests__/links.test.ts` — render-site용 `safeHref()` helper와 unsafe/blank/null regression test를 추가했다.
+  - `src/app/api/forms/submit/route.ts`, `src/app/api/forms/__tests__/submit-route.test.ts` — public submit payload의 file URL도 unsafe scheme이면 400으로 거부한다.
+  - `src/lib/builder/components/{addressBlock,breadcrumbs,pricingTable,serviceFeatureCard,teamMemberCard}/index.tsx` — legacy/user-controlled href를 anchor에 직접 넣기 전에 `safeHref()`로 거른다.
+  - `src/components/builder/forms/FormSubmissionsDashboard.tsx`, `src/components/builder/published/CookieConsentBanner.tsx` — submission file URL과 cookie policy URL 렌더링도 unsafe scheme이면 anchor 대신 plain text/null로 처리한다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M125 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/__tests__/links.test.ts` ✅ (17 tests passed)
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/__tests__/links.test.ts` ✅ (2 files, 23 tests passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "cookie consent|inline search|menu-bar" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W22/W98/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. public submit file URL validation, render-site unsafe scheme filtering, cookie consent focus path를 latest code에서 통과시켰다.

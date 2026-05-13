@@ -5937,3 +5937,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - saved section normalize/thumbnail, Save Section modal focus trap.
 - 다음 후보:
   - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.
+
+## 2026-05-13 Codex /goal M125 Render-site/file URL safeHref sweep
+
+- 남은 링크/폼/쿠키 컴포넌트 diff를 XSS 방어 묶음으로 검증/정리했다.
+- `src/lib/builder/links.ts`에 render-site용 `safeHref()` helper를 추가했고, `links.test.ts`에 unsafe/blank/null regression을 추가했다.
+- public form submit payload의 file URL도 unsafe scheme이면 400으로 거부한다.
+- address block, breadcrumbs, pricing table, service feature card, team member card, form submission file links, cookie policy link가 legacy/user-controlled href를 anchor에 직접 넣기 전에 `safeHref()`로 거른다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/__tests__/links.test.ts` ✅ (17 tests)
+  - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/__tests__/links.test.ts` ✅ (2 files, 23 tests)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "cookie consent|inline search|menu-bar" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - public submit file URL validation, link helper unsafe scheme filtering, published cookie consent focus path.
+- 다음 후보:
+  - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.

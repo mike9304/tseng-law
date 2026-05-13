@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import {
   describeLinkScheme,
   isLinkSafe,
+  safeHref,
   sanitizeLinkValue,
 } from '@/lib/builder/links';
 
@@ -34,6 +35,19 @@ describe('builder links', () => {
       title: undefined,
       ariaLabel: undefined,
     });
+  });
+
+  it('safeHref returns the href when safe and undefined otherwise', () => {
+    expect(safeHref('https://example.com')).toBe('https://example.com');
+    expect(safeHref('  /about  ')).toBe('/about');
+    expect(safeHref('javascript:alert(1)')).toBeUndefined();
+    expect(safeHref('data:text/html,<h1>x</h1>')).toBeUndefined();
+    expect(safeHref('vbscript:msg')).toBeUndefined();
+    expect(safeHref('//evil.com')).toBeUndefined();
+    expect(safeHref(undefined)).toBeUndefined();
+    expect(safeHref(null)).toBeUndefined();
+    expect(safeHref('')).toBeUndefined();
+    expect(safeHref('   ')).toBeUndefined();
   });
 
   it('describes allowed schemes for UI labels', () => {

@@ -56,6 +56,18 @@ export function sanitizeLinkValue(input: Partial<LinkValue> | null | undefined):
   };
 }
 
+/**
+ * Returns the href when it passes {@link isLinkSafe}, otherwise undefined.
+ * Use at anchor render sites so legacy or attacker-supplied content can't
+ * inject `javascript:` / `data:` / `vbscript:` URLs.
+ */
+export function safeHref(href: string | null | undefined): string | undefined {
+  if (typeof href !== 'string') return undefined;
+  const value = href.trim();
+  if (!value) return undefined;
+  return isLinkSafe(value) ? value : undefined;
+}
+
 export function describeLinkScheme(
   href: string,
 ):

@@ -1,5 +1,6 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderBreadcrumbsCanvasNode } from '@/lib/builder/canvas/types';
+import { safeHref } from '@/lib/builder/links';
 
 const SEPARATOR_GLYPH: Record<BuilderBreadcrumbsCanvasNode['content']['separator'], string> = {
   slash: '/',
@@ -28,9 +29,10 @@ function BreadcrumbsRender({
       <ol>
         {items.map((item, idx) => {
           const isLast = idx === items.length - 1;
+          const itemHref = safeHref(item.href);
           return (
             <li key={`${item.label}-${idx}`} data-active={isLast ? 'true' : 'false'}>
-              {item.href && !isLast ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}
+              {itemHref && !isLast ? <a href={itemHref}>{item.label}</a> : <span>{item.label}</span>}
               {!isLast ? (
                 <em aria-hidden="true" className="builder-nav-breadcrumbs-sep">
                   {SEPARATOR_GLYPH[c.separator]}

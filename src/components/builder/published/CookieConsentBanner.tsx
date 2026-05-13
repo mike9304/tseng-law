@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { BuilderCookieConsent } from '@/lib/builder/site/types';
+import { safeHref } from '@/lib/builder/links';
 import {
   resolvePublishedOverlayOpener,
   usePublishedOverlayFocus,
@@ -177,14 +178,17 @@ export default function CookieConsentBanner({ config }: { config: BuilderCookieC
           <strong style={{ display: 'block', fontSize: 14 }}>{config.title}</strong>
           <p style={{ margin: '6px 0 0', fontSize: 13, color: '#475569', lineHeight: 1.5 }}>
             {config.description}
-            {config.policyUrl ? (
-              <>
-                {' '}
-                <a href={config.policyUrl} style={{ color: '#1d4ed8', textDecoration: 'underline' }}>
-                  Policy
-                </a>
-              </>
-            ) : null}
+            {(() => {
+              const policyHref = safeHref(config.policyUrl);
+              return policyHref ? (
+                <>
+                  {' '}
+                  <a href={policyHref} style={{ color: '#1d4ed8', textDecoration: 'underline' }}>
+                    Policy
+                  </a>
+                </>
+              ) : null;
+            })()}
           </p>
         </div>
 

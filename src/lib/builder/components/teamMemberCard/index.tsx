@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderTeamMemberCardCanvasNode } from '@/lib/builder/canvas/types';
+import { safeHref } from '@/lib/builder/links';
 
 function TeamMemberCardRender({
   node,
@@ -23,11 +24,18 @@ function TeamMemberCardRender({
       {c.bio ? <p>{c.bio}</p> : null}
       {c.socialLinks.length > 0 ? (
         <ul>
-          {c.socialLinks.map((link, idx) => (
-            <li key={`${link.label}-${idx}`}>
-              <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
-            </li>
-          ))}
+          {c.socialLinks.map((link, idx) => {
+            const href = safeHref(link.href);
+            return (
+              <li key={`${link.label}-${idx}`}>
+                {href ? (
+                  <a href={href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+                ) : (
+                  <span>{link.label}</span>
+                )}
+              </li>
+            );
+          })}
         </ul>
       ) : null}
     </article>

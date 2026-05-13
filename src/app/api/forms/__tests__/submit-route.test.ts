@@ -130,6 +130,35 @@ describe('/api/forms/submit', () => {
     expect(engine.saveSubmission).not.toHaveBeenCalled();
   });
 
+  it('rejects file entries whose URL uses an unsafe scheme', async () => {
+    const engine = await import('@/lib/builder/forms/form-engine');
+    vi.mocked(engine.loadFormSchema).mockResolvedValue(null);
+    const route = await import('../submit/route');
+    const request = makeRequest({
+      formId: 'attachment-form',
+      formName: 'Attachment form',
+      submitTo: 'storage',
+      fields: { email: 'client@example.test' },
+      files: [
+        {
+          fieldId: 'doc',
+          name: 'evil.txt',
+          size: 12,
+          url: 'javascript:alert(document.domain)',
+        },
+      ],
+      loadedAt: 0,
+      submittedAt: 4000,
+    });
+
+    const response = await route.POST(request);
+    const payload = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(payload.error).toBeDefined();
+    expect(engine.saveSubmission).not.toHaveBeenCalled();
+  });
+
   it('refuses SSRF-targeting webhookUrl without fetching or recording', async () => {
     const engine = await import('@/lib/builder/forms/form-engine');
     vi.mocked(engine.loadFormSchema).mockResolvedValue(null);

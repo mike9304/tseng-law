@@ -4,7 +4,6 @@ import { useMemo, useRef, useState } from 'react';
 import { listComponents } from '@/lib/builder/components/registry';
 import type { BuilderComponentCategory, BuilderComponentDefinition } from '@/lib/builder/components/define';
 import {
-  createCanvasNodeTemplate,
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode, BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
@@ -20,69 +19,41 @@ import {
   type BuiltInSectionTemplate,
 } from '@/lib/builder/sections/templates';
 import { getAllTemplates } from '@/lib/builder/templates/registry';
-import {
-  matchesTemplateSearch,
-  scoreTemplateSearch,
-} from '@/lib/builder/templates/filters';
-import {
-  TEMPLATE_PAGE_TYPE_LABELS,
-  TEMPLATE_QUALITY_LABELS,
-  TEMPLATE_STYLE_LABELS,
-} from '@/lib/builder/templates/design-system';
 import type { PageTemplate } from '@/lib/builder/templates/types';
 import { BuiltInSectionsPanel } from '@/components/builder/sections/BuiltInSectionsPanel';
 import SavedSectionsPanel from '@/components/builder/sections/SavedSectionsPanel';
 import type { Locale } from '@/lib/locales';
 import TemplateThumbnailRenderer from './TemplateThumbnailRenderer';
-import { TEMPLATE_CATEGORY_LABELS } from './template-categories';
+import {
+  CATEGORY_ICONS,
+  CATEGORY_LABELS,
+  CATEGORY_ORDER,
+  CATEGORY_SUBLABELS,
+  compareByCategoryPriority,
+  componentMatchesSearch,
+  decorativeWidgetMatchesSearch,
+  FEATURED_KINDS,
+  galleryWidgetMatchesSearch,
+  getDisplayCategory,
+  getPageTemplateMeta,
+  getPageTemplateQualityLabel,
+  interactiveWidgetMatchesSearch,
+  layoutWidgetMatchesSearch,
+  locationWidgetMatchesSearch,
+  mediaWidgetMatchesSearch,
+  navigationWidgetMatchesSearch,
+  normalizeSearchTerm,
+  PAGE_TEMPLATE_PREVIEW_LIMIT,
+  pageTemplateMatchesSearch,
+  pageTemplateSearchScore,
+  resolveCenteredNode,
+  resolveSectionInsertOffset,
+  socialWidgetMatchesSearch,
+  STAGE_HEIGHT,
+  STAGE_WIDTH,
+  textWidgetMatchesSearch,
+} from './SandboxCatalogPanel.helpers';
 import styles from './SandboxPage.module.css';
-
-const STAGE_WIDTH = 1280;
-const STAGE_HEIGHT = 880;
-const PAGE_TEMPLATE_PREVIEW_LIMIT = 8;
-
-const CATEGORY_ORDER: BuilderComponentCategory[] = ['basic', 'media', 'layout', 'domain'];
-const CATEGORY_LABELS: Record<BuilderComponentCategory, string> = {
-  basic: 'Basic',
-  media: 'Media',
-  layout: 'Layout',
-  domain: 'Domain',
-  advanced: 'Advanced',
-};
-const CATEGORY_SUBLABELS: Record<BuilderComponentCategory, string> = {
-  basic: 'text, button, heading',
-  media: 'image, gallery, video, audio',
-  layout: 'container, section',
-  domain: 'composite, domain blocks',
-  advanced: 'embed, spacer, divider',
-};
-const CATEGORY_ICONS: Record<BuilderComponentCategory, string> = {
-  basic: 'Aa',
-  media: '◩',
-  layout: '▦',
-  domain: '◈',
-  advanced: '⋯',
-};
-
-const KIND_PRIORITY: Partial<Record<BuilderComponentCategory, string[]>> = {
-  basic: ['text', 'button', 'heading'],
-  media: ['image', 'gallery', 'video', 'video-embed', 'audio', 'lottie', 'icon'],
-  layout: ['container', 'section'],
-  domain: [
-    'composite',
-    'form',
-    'form-input',
-    'form-textarea',
-    'form-select',
-    'form-radio',
-    'form-checkbox',
-    'form-date',
-    'form-file',
-    'form-submit',
-  ],
-};
-
-const FEATURED_KINDS: BuilderCanvasNodeKind[] = ['text', 'button', 'image', 'container', 'form'];
 
 type TextWidgetKind = Extract<BuilderCanvasNodeKind, 'text' | 'heading'>;
 type MediaWidgetKind = Extract<BuilderCanvasNodeKind, 'image' | 'video' | 'video-embed' | 'audio' | 'lottie' | 'icon'>;
@@ -1516,223 +1487,6 @@ const DECORATIVE_WIDGET_PRESETS: DecorativeWidgetPreset[] = [
   { id: 'decorative-sticker-star', label: 'Star sticker', description: '추천 스티커', icon: '⭐', kind: 'sticker', width: 140, height: 64, content: {} },
   { id: 'decorative-sticker-banner', label: 'Banner sticker', description: '리본 배너', icon: '🎀', kind: 'sticker', width: 200, height: 56, content: { variant: 'banner', emoji: '🎉', label: 'New' } },
 ];
-
-function resolveCenteredNode(
-  kind: BuilderCanvasNodeKind,
-  existingCount: number,
-  cascadeSeed = existingCount,
-) {
-  const seed = createCanvasNodeTemplate(kind, 0, 0, existingCount);
-  const cascadeOffset = (cascadeSeed % 12) * 22;
-  return {
-    ...seed,
-    rect: {
-      ...seed.rect,
-      x: Math.round((STAGE_WIDTH - seed.rect.width) / 2 + cascadeOffset),
-      y: Math.round((STAGE_HEIGHT - seed.rect.height) / 2 + cascadeOffset),
-    },
-  };
-}
-
-function resolveSectionInsertOffset(nodes: BuilderCanvasNode[], template: BuiltInSectionTemplate): { x: number; y: number } {
-  const root = template.nodes.find((node) => node.id === template.rootNodeId);
-  const width = root?.rect.width ?? STAGE_WIDTH;
-  const existingBottom = nodes
-    .filter((node) => !node.parentId && node.visible)
-    .reduce((bottom, node) => Math.max(bottom, node.rect.y + node.rect.height), 0);
-
-  return {
-    x: Math.max(0, Math.round((STAGE_WIDTH - width) / 2)),
-    y: Math.max(48, existingBottom + 48),
-  };
-}
-
-function getDisplayCategory(component: BuilderComponentDefinition): BuilderComponentCategory {
-  if (component.kind === 'image') return 'media';
-  return component.category;
-}
-
-function compareByCategoryPriority(
-  category: BuilderComponentCategory,
-  left: BuilderComponentDefinition,
-  right: BuilderComponentDefinition,
-): number {
-  const priority = KIND_PRIORITY[category] ?? [];
-  const leftIndex = priority.indexOf(left.kind);
-  const rightIndex = priority.indexOf(right.kind);
-
-  if (leftIndex !== -1 || rightIndex !== -1) {
-    if (leftIndex === -1) return 1;
-    if (rightIndex === -1) return -1;
-    return leftIndex - rightIndex;
-  }
-
-  return left.displayName.localeCompare(right.displayName, 'ko');
-}
-
-function normalizeSearchTerm(value: string): string {
-  return value.trim().toLocaleLowerCase('ko-KR');
-}
-
-function componentMatchesSearch(component: BuilderComponentDefinition, query: string): boolean {
-  if (!query) return true;
-  return [
-    component.displayName,
-    component.kind,
-    component.category,
-    getDisplayCategory(component),
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function textWidgetMatchesSearch(preset: TextWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'text widget',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function mediaWidgetMatchesSearch(preset: MediaWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'media widget',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function galleryWidgetMatchesSearch(preset: GalleryWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'gallery widget',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function layoutWidgetMatchesSearch(preset: LayoutWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'layout widget',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function interactiveWidgetMatchesSearch(preset: InteractiveWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'interactive widget',
-    'countdown',
-    'progress',
-    'rating',
-    'notification',
-    'back to top',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function navigationWidgetMatchesSearch(preset: NavigationWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'navigation widget',
-    'menu',
-    'breadcrumb',
-    'anchor',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function decorativeWidgetMatchesSearch(preset: DecorativeWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'decorative widget',
-    'shape',
-    'pattern',
-    'frame',
-    'sticker',
-    'parallax',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function locationWidgetMatchesSearch(preset: LocationWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'location widget',
-    'maps',
-    'address',
-    'hours',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function socialWidgetMatchesSearch(preset: SocialWidgetPreset, query: string): boolean {
-  if (!query) return true;
-  return [
-    preset.label,
-    preset.description,
-    preset.id,
-    preset.kind,
-    'social widget',
-    'instagram',
-    'youtube',
-    'linkedin',
-    'whatsapp',
-    'line',
-    'kakao',
-    'share',
-  ].some((value) => String(value).toLocaleLowerCase('ko-KR').includes(query));
-}
-
-function getPageTemplateSectionCount(template: PageTemplate): number {
-  return template.sections?.length
-    ?? template.document.nodes.filter((node) => node.kind === 'section' || node.kind === 'container').length;
-}
-
-function getPageTemplateCategoryLabel(template: PageTemplate): string {
-  return TEMPLATE_CATEGORY_LABELS[template.category] ?? template.category;
-}
-
-function pageTemplateMatchesSearch(template: PageTemplate, query: string): boolean {
-  return matchesTemplateSearch(template, query, getPageTemplateCategoryLabel(template));
-}
-
-function pageTemplateSearchScore(template: PageTemplate, query: string): number {
-  return scoreTemplateSearch(template, query, getPageTemplateCategoryLabel(template));
-}
-
-function getPageTemplateMeta(template: PageTemplate): string {
-  const pageType = template.pageType ? TEMPLATE_PAGE_TYPE_LABELS[template.pageType] : '페이지';
-  const style = template.visualStyle ? TEMPLATE_STYLE_LABELS[template.visualStyle] : 'Standard';
-  return `${pageType} · ${style} · ${getPageTemplateSectionCount(template)} sections`;
-}
-
-function getPageTemplateQualityLabel(template: PageTemplate): string {
-  if (!template.qualityTier) return 'Standard';
-  return TEMPLATE_QUALITY_LABELS[template.qualityTier];
-}
 
 export default function SandboxCatalogPanel({
   locale,

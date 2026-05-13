@@ -2730,3 +2730,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/office-map-public.playwright.ts -g "quick panel and Content inspector" --project=chromium-builder --workers=1` ✅ (1 passed on retry, 첫 실행은 canvas quick-edit 선택 타이밍에서 element not found)
 - W 판정:
   - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. office map quick panel + Content inspector update path, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence를 latest code에서 통과시켰다.
+
+## M139 — SandboxCatalogPanel search helper split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxCatalogPanel.helpers.ts` — Add/Catalog 패널의 카테고리 상수, 검색 정규화/매칭, 페이지 템플릿 메타/품질 label, centered insert/section offset helper를 분리했다.
+  - `src/components/builder/canvas/SandboxCatalogPanel.tsx` — 프리셋 데이터와 렌더/insert orchestration 중심으로 남겼다. 파일 길이는 2905줄에서 2659줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M139 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Add panel|opens the full page template showroom from the Design panel|lets users click a section chip|keeps inserted service template text visible" --project=chromium-builder --workers=1` ⚠️ 3 passed, Design panel test first run failed while editor shell stayed `data-editor-ready=false`
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Design panel" --project=chromium-builder --workers=1` ✅ (1 passed on retry, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W14/W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Add/Design page template showroom, section chip click, 주요업무 템플릿 nested node selection/text persistence를 latest code에서 통과시켰다.

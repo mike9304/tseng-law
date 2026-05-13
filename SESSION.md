@@ -6128,3 +6128,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - office map quick panel + Content inspector update path, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence.
 - 다음 후보:
   - `SandboxInspectorPanel.tsx`의 multi-select batch panel을 별도 subview로 분리하거나 다른 700줄대 hot file을 선별한다.
+
+## 2026-05-13 Codex /goal M139 SandboxCatalogPanel search helper split
+
+- `SandboxCatalogPanel.tsx`의 카테고리 상수, 검색 정규화/매칭, 페이지 템플릿 메타/품질 label, centered insert/section offset helper를 `SandboxCatalogPanel.helpers.ts`로 분리했다.
+- Catalog 패널 본체는 프리셋 데이터와 렌더/insert orchestration 중심으로 남겼고, LOC는 2905에서 2659로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Add panel|opens the full page template showroom from the Design panel|lets users click a section chip|keeps inserted service template text visible" --project=chromium-builder --workers=1` ⚠️ 3 passed, Design panel test first run failed while editor shell stayed `data-editor-ready=false`
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Design panel" --project=chromium-builder --workers=1` ✅ (1 passed on retry, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Add/Design page template showroom, section chip click, 주요업무 템플릿 nested node selection/text persistence.
+- 다음 후보:
+  - `SandboxCatalogPanel.tsx`의 widget preset 데이터 또는 반복 preset grid render block을 별도 모듈로 계속 분리한다.

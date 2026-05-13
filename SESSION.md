@@ -6022,3 +6022,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - design pool section template variant switching, template modal import/compile path.
 - 다음 후보:
   - `VersionHistoryPanel.tsx`의 modal styles/diff summary subview 분리로 800줄 이하를 만든다.
+
+## 2026-05-13 Codex /goal M131 VersionHistoryPanel style split
+
+- `VersionHistoryPanel.tsx`의 dialog/timeline/restore/diff preview style constants를 `VersionHistoryPanel.styles.ts`로 분리했다.
+- focus trap, revision fetch, restore confirmation, diff calculation/rendering logic은 기존 파일에 유지했다.
+- `VersionHistoryPanel.tsx` LOC는 883에서 610으로 내려갔다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "version history" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - version history panel focus trap, restore confirmation keyboard path.
+- 다음 후보:
+  - `CanvasNode.tsx`/`CanvasContainer.tsx` 중 900~1000줄대 파일에서 UI helper나 pointer subview를 작은 단위로 분리한다.

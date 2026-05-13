@@ -5793,3 +5793,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - outbound webhook HMAC signature helper.
 - 다음 후보:
   - bookings admin/runtime E2E와 bookings domain unit tests를 최신 상태로 재검증한다.
+
+## 2026-05-13 Codex /goal M116 Bookings runtime/admin sweep
+
+- bookings admin/runtime E2E와 bookings domain unit tests를 최신 상태로 재검증했다.
+- 첫 bookings E2E sweep은 `.env.local`의 `BLOB_READ_WRITE_TOKEN` 때문에 bookings storage가 원격 blob backend로 붙어 `/api/booking/availability`와 booking mutation이 Playwright 15s API timeout을 넘기며 5/6 실패했다.
+- `src/lib/builder/bookings/storage.ts`의 backend selector를 site persistence 정책과 맞췄다. dev에서는 기본 file backend를 쓰고, `BUILDER_BOOKINGS_BACKEND=local`/`CONSULTATION_LOG_BACKEND=local` local override를 지원하며, dev blob 검증은 `BUILDER_USE_BLOB_IN_DEV=1`로 opt-in 한다.
+- 검증:
+  - `npx vitest run src/lib/builder/bookings/__tests__/analytics.test.ts src/lib/builder/bookings/__tests__/availability-templates.test.ts src/lib/builder/bookings/__tests__/refund.test.ts src/lib/builder/bookings/__tests__/email-templates.test.ts src/lib/builder/bookings/__tests__/manage-token.test.ts src/lib/builder/bookings/__tests__/availability.test.ts src/lib/builder/bookings/calendar-sync/__tests__/provider-mappers.test.ts src/lib/builder/bookings/calendar-sync/__tests__/sync-engine.test.ts src/lib/builder/bookings/calendar-sync/__tests__/encryption.test.ts` ✅ (9 files, 27 tests passed)
+  - `npm run typecheck` ✅
+  - `curl -s -u admin:local-review-2026! "http://localhost:3000/api/booking/availability?serviceId=svc-initial-consultation&staffId=staff-tseng&date=2026-05-14"` ✅ (즉시 slots JSON 응답)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m25.playwright.ts tests/builder-editor/bookings-m26-dashboard.playwright.ts tests/builder-editor/bookings-m26-customer-manage.playwright.ts tests/builder-editor/bookings-m27-email-templates.playwright.ts tests/builder-editor/bookings-m27-recurring-availability.playwright.ts tests/builder-editor/bookings-m27-waitlist.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - W196-W202 paid booking widget, service/staff/slot CRUD, payment stub, admin dashboard, reschedule/no-show, calendar views, customer manage token.
+  - W211/W212/W215 waitlist join/promote, recurring availability holiday exclusion, booking email template preview/save.
+- 다음 후보:
+  - visual/office-map/public smoke 또는 backup/migration/automation 계열의 최신 sweep으로 이어간다.

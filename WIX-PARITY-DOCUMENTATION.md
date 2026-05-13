@@ -2382,3 +2382,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx vitest run src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/forms/__tests__/validation.test.ts src/lib/builder/forms/__tests__/conditional.test.ts src/lib/builder/canvas/__tests__/upload-validation.test.ts src/lib/builder/webhooks/__tests__/signature.test.ts` ✅ (5 files, 43 tests passed)
 - W 판정:
   - W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. form submit validation/signature materialization, conditional/validation logic, upload MIME/size validation, webhook signature helper를 최신 코드에서 통과시켰다.
+
+## M116 — Bookings runtime/admin sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/bookings/storage.ts` — `BLOB_READ_WRITE_TOKEN`이 있어도 개발 환경에서는 기본 file backend를 사용하게 했다. `BUILDER_BOOKINGS_BACKEND=local` 또는 기존 `CONSULTATION_LOG_BACKEND=local`도 local override로 처리하고, 개발에서 blob 검증이 필요할 때만 `BUILDER_USE_BLOB_IN_DEV=1`로 opt-in 한다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M116 검증 증거를 기록했다.
+- 원인/수정:
+  - 첫 bookings E2E sweep은 `.env.local`의 blob token 때문에 bookings storage가 원격 blob backend로 붙어 `/api/booking/availability`와 booking mutation이 Playwright 15s API timeout을 넘기며 5/6 실패했다.
+  - site persistence의 dev backend 정책과 맞춰 bookings도 local dev 기본값을 file backend로 정규화했다.
+- 검증:
+  - `npx vitest run src/lib/builder/bookings/__tests__/analytics.test.ts src/lib/builder/bookings/__tests__/availability-templates.test.ts src/lib/builder/bookings/__tests__/refund.test.ts src/lib/builder/bookings/__tests__/email-templates.test.ts src/lib/builder/bookings/__tests__/manage-token.test.ts src/lib/builder/bookings/__tests__/availability.test.ts src/lib/builder/bookings/calendar-sync/__tests__/provider-mappers.test.ts src/lib/builder/bookings/calendar-sync/__tests__/sync-engine.test.ts src/lib/builder/bookings/calendar-sync/__tests__/encryption.test.ts` ✅ (9 files, 27 tests passed)
+  - `npm run typecheck` ✅
+  - `curl -s -u admin:local-review-2026! "http://localhost:3000/api/booking/availability?serviceId=svc-initial-consultation&staffId=staff-tseng&date=2026-05-14"` ✅ (즉시 slots JSON 응답)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m25.playwright.ts tests/builder-editor/bookings-m26-dashboard.playwright.ts tests/builder-editor/bookings-m26-customer-manage.playwright.ts tests/builder-editor/bookings-m27-email-templates.playwright.ts tests/builder-editor/bookings-m27-recurring-availability.playwright.ts tests/builder-editor/bookings-m27-waitlist.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W196/W197/W198/W199/W200/W201/W202/W211/W212/W215/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. paid booking widget, service/staff/slot CRUD, admin dashboard/reschedule/no-show/calendar views, customer manage link, email templates, recurring holiday exclusion, waitlist promote 경로를 최신 코드에서 통과시켰다.

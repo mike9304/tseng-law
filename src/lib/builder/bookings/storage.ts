@@ -21,7 +21,11 @@ type Collection = 'services' | 'staff' | 'availability' | 'bookings' | 'waitlist
 type BookingBackend = 'blob' | 'file';
 
 function getBackend(): BookingBackend {
-  return process.env.BLOB_READ_WRITE_TOKEN ? 'blob' : 'file';
+  if (!process.env.BLOB_READ_WRITE_TOKEN) return 'file';
+  if (process.env.CONSULTATION_LOG_BACKEND === 'local') return 'file';
+  if (process.env.BUILDER_BOOKINGS_BACKEND === 'local') return 'file';
+  if (process.env.NODE_ENV !== 'production' && process.env.BUILDER_USE_BLOB_IN_DEV !== '1') return 'file';
+  return 'blob';
 }
 
 function collectionPrefix(collection: Collection): string {

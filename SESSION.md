@@ -5723,3 +5723,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - folder/tag persistence, search/sort, image replacement undo, crop focal point, filter persistence, alt text edit/restore.
 - 다음 후보:
   - layout widgets, interactive widgets, clipboard/cross-tab persistence 최신 sweep으로 이어간다.
+
+## 2026-05-13 Codex /goal M111 Layout/interactive/clipboard sweep
+
+- layout/interactive/clipboard 최신 E2E sweep을 실행했다.
+- 첫 실행에서 두 가지 문제가 드러났다. clipboard 삭제 케이스는 Pages drawer 헬퍼가 최신 editor ready 상태를 기다리지 못해 플래이크가 있었고, layout widget은 빈 children 배열을 실제 자식처럼 판단해 tabs/accordion/slideshow preview marker가 렌더되지 않았다.
+- `ContainerElement`는 `Children.count(children) > 0`으로 실제 자식 수를 판정한다. 빈 children 배열만 들어오는 layout preview 노드는 다시 자체 preview를 렌더한다.
+- clipboard 삭제/undo/reload 케이스는 생성한 `pageId`로 직접 빌더를 열고 공통 `openBuilder` helper의 `data-editor-ready="true"` 조건을 공유한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/lib/builder/components/container/Element.tsx tests/builder-editor/clipboard-persistence.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/clipboard-persistence.playwright.ts -g "deletes selected containers|persists Delete" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layout-widgets.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layout-widgets.playwright.ts tests/builder-editor/interactive-widgets.playwright.ts tests/builder-editor/clipboard-persistence.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - cross-tab delete race, advanced panels, design system/editor guides grid 최신 sweep으로 이어간다.

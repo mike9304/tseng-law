@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { Children, type ReactNode } from 'react';
 import Image from 'next/image';
 import type { BuilderContainerCanvasNode } from '@/lib/builder/canvas/types';
 import { sanitizeLinkValue } from '@/lib/builder/links';
@@ -50,7 +50,7 @@ export default function ContainerElement({
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
   const link = sanitizeLinkValue(content.link);
   const interactive = mode === 'published';
-  const hasChildren = Boolean(children);
+  const hasChildren = Children.count(children) > 0;
   const lightboxSlug = link?.href.startsWith('lightbox:')
     ? link.href.slice('lightbox:'.length).trim()
     : '';

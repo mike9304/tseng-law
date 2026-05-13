@@ -1,4 +1,5 @@
 import { expect, test, type APIRequestContext, type Locator, type Page } from '@playwright/test';
+import { openBuilder } from './helpers/editor';
 
 const shortcutModifier = 'ControlOrMeta';
 
@@ -245,10 +246,7 @@ async function openBuilderPageFromPagesPanel(page: Page, pageTitle: string): Pro
 }
 
 async function openBuilderPageById(page: Page, pageId: string, scope: string): Promise<void> {
-  await page.goto(`/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&clipboardTest=${Date.now().toString(36)}-${scope}`, {
-    waitUntil: 'domcontentloaded',
-  });
-  await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
+  await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(pageId)}&clipboardTest=${Date.now().toString(36)}-${scope}`);
 }
 
 async function openPagesDrawer(page: Page): Promise<Locator> {
@@ -357,7 +355,7 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
         }),
       );
 
-      await openBuilderPageFromPagesPanel(page, title);
+      await openBuilderPageById(page, pageId!, 'cascade-open');
       const child = page.locator(`[data-node-id="${childId}"]`).first();
       await expect(child).toContainText(childText);
       await expect(page.locator(`[data-node-id="${siblingId}"]`).first()).toContainText(siblingText);
@@ -435,7 +433,7 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
         }),
       );
 
-      await openBuilderPageFromPagesPanel(page, title);
+      await openBuilderPageById(page, pageId!, 'delete-open');
       const node = page.locator(`[data-node-id="${nodeId}"]`).first();
       await expect(node).toContainText(text);
       await node.click({ position: { x: 20, y: 20 }, force: true });
@@ -459,7 +457,7 @@ test.describe('/ko/admin-builder clipboard and duplicate persistence', () => {
         timeout: 15_000,
       }).toBe(0);
 
-      await openBuilderPageFromPagesPanel(page, title);
+      await openBuilderPageById(page, pageId!, 'delete-reload');
       await expect.poll(() => visibleLeafTextCount(page, text), { timeout: 10_000 }).toBe(0);
     } finally {
       if (pageId) {

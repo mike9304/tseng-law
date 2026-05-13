@@ -2317,3 +2317,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/asset-upload-security.playwright.ts tests/builder-editor/asset-image-workflow.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W22/W23/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. asset upload MIME/size guard, image edit dialog focus trap, asset library focus trap, folder/tag persistence, replacement undo, crop/filter/alt text paths를 최신 코드에서 다시 통과시켰다.
+
+## M111 — Layout/interactive/clipboard sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/components/container/Element.tsx` — React `Children.count`로 실제 자식 수를 판정하게 해 빈 children 배열 때문에 tabs/accordion/slideshow layout preview가 숨는 문제를 수정했다.
+  - `tests/builder-editor/clipboard-persistence.playwright.ts` — 삭제/undo/reload 케이스가 생성한 `pageId`로 직접 빌더를 열고 공통 `openBuilder` ready 조건을 기다리게 했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M111 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/lib/builder/components/container/Element.tsx tests/builder-editor/clipboard-persistence.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/clipboard-persistence.playwright.ts -g "deletes selected containers|persists Delete" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layout-widgets.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layout-widgets.playwright.ts tests/builder-editor/interactive-widgets.playwright.ts tests/builder-editor/clipboard-persistence.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W09/W29/W30/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. container cascade delete, Delete/Backspace persistence, Cmd+D duplicate, cross-page copy/paste persistence, layout widget previews, interactive widget presets를 최신 코드에서 통과시켰다.

@@ -1,5 +1,7 @@
+import React from 'react';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderFloatingChatCanvasNode } from '@/lib/builder/canvas/types';
+import { safeHref as toSafeHref } from '@/lib/builder/links';
 
 const PROVIDER_GLYPH: Record<BuilderFloatingChatCanvasNode['content']['provider'], string> = {
   whatsapp: 'WA',
@@ -27,7 +29,7 @@ function FloatingChatRender({
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
-  const safeHref = c.href.trim() || '#';
+  const safeHref = toSafeHref(c.href) ?? '#';
   const bg = c.color && c.color.trim() ? c.color : PROVIDER_COLOR_FALLBACK[c.provider];
 
   return (

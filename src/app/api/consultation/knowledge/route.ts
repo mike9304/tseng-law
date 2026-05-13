@@ -31,10 +31,26 @@ function normalizeCategory(value: FormDataEntryValue | string | null): Consultat
 }
 
 function redirectBack(request: NextRequest, status: string): NextResponse {
-  const referer = request.headers.get('referer') || `/${normalizeLocale('ko')}/admin-consultation`;
-  const url = new URL(referer);
-  url.searchParams.set('knowledge', status);
-  return NextResponse.redirect(url, { status: 303 });
+  // Open-redirect guard: the referer header is attacker-controllable, so an
+  // admin-CSRF chain (Basic Auth replays in the browser) could otherwise be
+  // amplified by bouncing the admin off-site. Honor the referer only when
+  // it points back at this origin; fall back to the admin index otherwise.
+  const origin = request.nextUrl.origin;
+  const fallback = new URL(`/${normalizeLocale('ko')}/admin-consultation`, origin);
+  const refererHeader = request.headers.get('referer');
+  let target = fallback;
+  if (refererHeader) {
+    try {
+      const parsed = new URL(refererHeader);
+      if (parsed.origin === origin) {
+        target = parsed;
+      }
+    } catch {
+      // ignore malformed referer
+    }
+  }
+  target.searchParams.set('knowledge', status);
+  return NextResponse.redirect(target, { status: 303 });
 }
 
 export async function GET(request: NextRequest) {

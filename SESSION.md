@@ -5966,3 +5966,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - marketing template editor preview DOM URL guard and shared link helper.
 - 다음 후보:
   - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.
+
+## 2026-05-13 Codex /goal M127 Admin redirect and floating URL guard tests
+
+- 남은 API route diff를 보안 회귀 테스트 묶음으로 검증/정리했다.
+- consultation knowledge form POST redirect는 attacker-controlled referer를 그대로 신뢰하지 않고, 같은 origin referer만 유지한다. 외부 referer는 `/ko/admin-consultation?knowledge=...`로 fallback한다.
+- campaign click tracking route는 의도적 open redirect임을 주석으로 남기고, 현재 최소 방어선인 http/https protocol filter를 unit test로 고정했다.
+- floating chat href도 `safeHref()`를 통과시켜 unsafe protocol이면 `#`로 대체하고, SSR test path에 맞춰 component React import를 명시했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/components/floatingChat/__tests__/floatingChat.test.tsx src/app/api/consultation/knowledge/__tests__/route.test.ts src/app/api/marketing/track/__tests__/route.test.ts` ✅ (3 files, 6 tests)
+  - `npx vitest run src/lib/builder/components/floatingChat/__tests__/floatingChat.test.tsx src/app/api/consultation/knowledge/__tests__/route.test.ts src/app/api/marketing/track/__tests__/route.test.ts src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/__tests__/links.test.ts` ✅ (5 files, 29 tests)
+- 확인된 커버리지:
+  - admin form redirect origin guard, same-origin admin query preservation, campaign tracking unsafe protocol rejection, forms/link/floating-chat security regressions.
+- 다음 후보:
+  - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.

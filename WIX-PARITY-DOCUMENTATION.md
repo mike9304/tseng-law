@@ -2559,3 +2559,21 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx vitest run src/components/builder/marketing/__tests__/TemplateEditor.test.tsx src/lib/builder/__tests__/links.test.ts` ✅ (2 files, 18 tests passed)
 - W 판정:
   - W216은 `자동검증 통과 / 사용자 QA 대기` 유지. marketing template editor preview DOM URL guard를 latest code에서 통과시켰다.
+
+## M127 — Admin redirect and floating URL guard tests
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/app/api/consultation/knowledge/route.ts` — form POST 이후 referer redirect를 같은 origin일 때만 허용하고, 외부/malformed referer는 `/ko/admin-consultation` fallback으로 보낸다.
+  - `src/app/api/consultation/knowledge/__tests__/route.test.ts` — 외부 referer open redirect 방지와 same-origin admin filter query 보존을 검증했다.
+  - `src/app/api/marketing/track/route.ts` — campaign click tracking redirect가 의도적 open redirect임을 주석으로 명확히 하고, 현재 최소 방어선이 http/https protocol filter임을 기록했다.
+  - `src/app/api/marketing/track/__tests__/route.test.ts` — http/https target redirect 허용과 `javascript:` protocol 거부를 검증했다.
+  - `src/lib/builder/components/floatingChat/index.tsx` — floating chat href도 `safeHref()`로 통과시켜 unsafe protocol이면 `#`로 대체한다. SSR 렌더 테스트 경로에 맞춰 React import도 명시했다.
+  - `src/lib/builder/components/floatingChat/__tests__/floatingChat.test.tsx` — unsafe `javascript:` href가 anchor에 반사되지 않고, safe chat URL은 유지되는지 검증했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M127 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/components/floatingChat/__tests__/floatingChat.test.tsx src/app/api/consultation/knowledge/__tests__/route.test.ts src/app/api/marketing/track/__tests__/route.test.ts` ✅ (3 files, 6 tests passed)
+  - `npx vitest run src/lib/builder/components/floatingChat/__tests__/floatingChat.test.tsx src/app/api/consultation/knowledge/__tests__/route.test.ts src/app/api/marketing/track/__tests__/route.test.ts src/app/api/forms/__tests__/submit-route.test.ts src/lib/builder/__tests__/links.test.ts` ✅ (5 files, 29 tests passed)
+- W 판정:
+  - W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. admin form redirect origin guard, campaign tracking protocol filter, forms/link/floating-chat security regressions를 latest code에서 통과시켰다.

@@ -8,6 +8,13 @@ import {
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+// This endpoint is an intentional open redirect: campaign click tracking
+// needs to bounce recipients to arbitrary third-party URLs that the campaign
+// template author chose. We accept the phishing-by-association tradeoff for
+// now because the right hardening is HMAC-signing the `u` parameter at send
+// time and verifying the signature here (multi-file change + token migration
+// for in-flight campaigns). Until then, the protocol-only filter is the
+// minimum bar and `?u=` URLs should be treated as user-controllable.
 function isSafeRedirect(target: string): boolean {
   try {
     const url = new URL(target);

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import type { BuilderAssetFolder, BuilderAssetLibraryState, BuilderAssetListItem } from '@/lib/builder/assets';
 import type { Locale } from '@/lib/locales';
 import styles from '@/components/builder/canvas/SandboxPage.module.css';
+import { AssetLibraryChrome, type AssetSortMode } from './AssetLibraryChrome';
 import { AssetLibraryGrid } from './AssetLibraryGrid';
 
 interface AssetListResponse {
@@ -18,8 +19,6 @@ interface AssetUploadResponse {
   asset?: BuilderAssetListItem;
   error?: string;
 }
-
-type AssetSortMode = 'date-desc' | 'date-asc' | 'name-asc' | 'name-desc';
 
 const DEFAULT_FOLDERS: BuilderAssetFolder[] = [
   { id: 'uploads', name: 'Uploads' },
@@ -559,142 +558,29 @@ export default function AssetLibraryModal({
         </header>
 
         <div className={styles.assetLibraryShell}>
-          <aside className={styles.assetFolderTree}>
-            <span className={styles.modalEyebrow}>Folders</span>
-            {folderTree.map((folder) => (
-              <button
-                key={folder.id}
-                type="button"
-                className={`${styles.assetFolderButton} ${activeFolder === folder.id ? styles.assetFolderButtonActive : ''}`}
-                onClick={() => setActiveFolder(folder.id)}
-              >
-                <span>{folder.name}</span>
-                <strong>{folder.count}</strong>
-              </button>
-            ))}
-            <div className={styles.assetCreateRow}>
-              <input
-                className={styles.inspectorInput}
-                value={newFolderName}
-                placeholder="New folder"
-                onChange={(event) => setNewFolderName(event.target.value)}
-                onKeyDown={(event) => {
-                  if (event.key === 'Enter') createFolder();
-                }}
-              />
-              <button type="button" className={styles.actionButton} onClick={createFolder}>Add</button>
-            </div>
-          </aside>
-
-          <section className={styles.assetLibraryMain}>
-            <div className={styles.modalToolbar}>
-              <label className={styles.modalSearchField}>
-                <span>Search</span>
-                <input
-                  className={styles.inspectorInput}
-                  type="search"
-                  value={search}
-                  placeholder="filename"
-                  onChange={(event) => setSearch(event.target.value)}
-                />
-              </label>
-              <label className={styles.modalSearchField}>
-                <span>Sort</span>
-                <select
-                  className={styles.inspectorInput}
-                  value={sortMode}
-                  onChange={(event) => setSortMode(event.target.value as AssetSortMode)}
-                >
-                  <option value="date-desc">Newest first</option>
-                  <option value="date-asc">Oldest first</option>
-                  <option value="name-asc">Name A-Z</option>
-                  <option value="name-desc">Name Z-A</option>
-                </select>
-              </label>
-              <div className={styles.modalToolbarActions}>
-                <button
-                  type="button"
-                  className={styles.actionButton}
-                  disabled={isLoading}
-                  onClick={() => void loadAssets()}
-                >
-                  Refresh
-                </button>
-                <button
-                  type="button"
-                  className={styles.actionButton}
-                  disabled={isUploading}
-                  onClick={() => inputRef.current?.click()}
-                >
-                  {isUploading ? 'Uploading…' : 'Upload image'}
-                </button>
-                <input
-                  ref={inputRef}
-                  hidden
-                  type="file"
-                  accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
-                  onChange={(event) => {
-                    const file = event.target.files?.[0];
-                    event.currentTarget.value = '';
-                    if (file) {
-                      void uploadFile(file);
-                    }
-                  }}
-                />
-              </div>
-            </div>
-
-            <div className={styles.assetTagBar}>
-              <button
-                type="button"
-                className={`${styles.assetTagChip} ${activeTag === 'all' ? styles.assetTagChipActive : ''}`}
-                onClick={() => setActiveTag('all')}
-              >
-                All tags
-              </button>
-              {tags.map((tag) => (
-                <button
-                  key={tag}
-                  type="button"
-                  className={`${styles.assetTagChip} ${activeTag === tag ? styles.assetTagChipActive : ''}`}
-                  onClick={() => setActiveTag(tag)}
-                >
-                  {tag}
-                </button>
-              ))}
-              <input
-                className={styles.assetTagInput}
-                value={newTagName}
-                placeholder="New tag"
-                onChange={(event) => setNewTagName(event.target.value)}
-                onKeyDown={(event) => {
-                  if (event.key === 'Enter') createTag();
-                }}
-              />
-              <button type="button" className={styles.assetTagChip} onClick={createTag}>Create</button>
-            </div>
-
-            <button
-              type="button"
-              className={styles.uploadDropZone}
-              disabled={isUploading}
-              onClick={() => inputRef.current?.click()}
-              onDragOver={(event) => {
-                event.preventDefault();
-                event.dataTransfer.dropEffect = 'copy';
-              }}
-              onDrop={(event) => {
-                event.preventDefault();
-                const file = event.dataTransfer.files?.[0];
-                if (file) {
-                  void uploadFile(file);
-                }
-              }}
-            >
-              <strong>{isUploading ? 'Uploading image…' : 'Drop image here or click to upload'}</strong>
-              <span>JPG, PNG, WEBP, GIF, AVIF · max 8 MB</span>
-            </button>
-
+          <AssetLibraryChrome
+            folderTree={folderTree}
+            activeFolder={activeFolder}
+            newFolderName={newFolderName}
+            search={search}
+            sortMode={sortMode}
+            isLoading={isLoading}
+            isUploading={isUploading}
+            inputRef={inputRef}
+            activeTag={activeTag}
+            tags={tags}
+            newTagName={newTagName}
+            onChangeActiveFolder={setActiveFolder}
+            onChangeNewFolderName={setNewFolderName}
+            onCreateFolder={createFolder}
+            onChangeSearch={setSearch}
+            onChangeSortMode={setSortMode}
+            onRefresh={() => void loadAssets()}
+            onUploadFile={(file) => void uploadFile(file)}
+            onChangeActiveTag={setActiveTag}
+            onChangeNewTagName={setNewTagName}
+            onCreateTag={createTag}
+          >
             {error ? <p className={styles.modalError}>{error}</p> : null}
             {isLoading ? <p className={styles.modalHint}>Loading assets…</p> : null}
             {!isLoading && filteredAssets.length === 0 ? (
@@ -743,7 +629,7 @@ export default function AssetLibraryModal({
               onChangeAssetFolder={changeAssetFolder}
               onToggleAssetTag={toggleAssetTag}
             />
-          </section>
+          </AssetLibraryChrome>
         </div>
       </div>
     </div>

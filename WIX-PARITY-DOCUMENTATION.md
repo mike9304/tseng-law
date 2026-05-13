@@ -2964,3 +2964,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W22/W23/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Asset library grid 렌더 경계를 분리하고 modal focus trap/restore path를 latest code에서 통과시켰다.
+
+## M156 — Asset library chrome split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/editor/AssetLibraryChrome.tsx` — folder sidebar, search/sort toolbar, upload button/file input, tag filter bar, drop zone 렌더링을 분리했다.
+  - `src/components/builder/editor/AssetLibraryModal.tsx` — asset loading, persistence, filtering, upload/delete/select orchestration과 empty/error/grid children 조합만 유지했다. 파일 길이는 751줄에서 637줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M156 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W22/W23/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Asset library chrome 렌더 경계를 분리하고 modal focus trap/restore path를 latest code에서 통과시켰다.

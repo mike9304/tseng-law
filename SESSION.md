@@ -6345,3 +6345,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Asset Library modal focus trap/restore path.
 - 다음 후보:
   - `AssetLibraryModal.tsx` folder/sidebar 또는 toolbar/upload shell split을 이어간다.
+
+## 2026-05-13 Codex /goal M156 Asset library chrome split
+
+- `AssetLibraryModal.tsx`의 folder sidebar, search/sort toolbar, upload button/file input, tag filter bar, drop zone 렌더링을 `AssetLibraryChrome.tsx`로 분리했다.
+- `AssetLibraryModal.tsx`는 asset loading, persistence, filtering, upload/delete/select orchestration과 empty/error/grid children 조합만 유지했으며, LOC는 751에서 637로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Asset Library modal focus trap/restore path.
+- 다음 후보:
+  - `AssetLibraryModal.tsx` persistence hook split 또는 `SandboxCatalogPanel.tsx` residual section split을 이어간다.

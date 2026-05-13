@@ -2908,3 +2908,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W186/W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. SEO Assistant 탭 렌더 경계를 분리하고 panel focus trap/restore path를 latest code에서 통과시켰다.
+
+## M152 — SeoPanel advanced schema tab split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SeoPanelAdvancedTab.tsx` — Advanced SEO meta tags, structured data toggles, JSON-LD block editor 렌더링을 분리했다.
+  - `src/components/builder/canvas/SeoPanel.tsx` — Advanced 탭은 새 컴포넌트 호출로 줄이고 SEO state/update/save/focus trap orchestration을 유지했다. 파일 길이는 1187줄에서 1025줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M152 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W28/W186/W195/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. Advanced meta/structured data tab 렌더 경계를 분리하고 SEO panel focus trap/restore path를 latest code에서 통과시켰다.

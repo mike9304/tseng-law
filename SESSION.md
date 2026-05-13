@@ -6293,3 +6293,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - SEO panel focus trap/restore path.
 - 다음 후보:
   - `SeoPanel.tsx` Advanced structured-data 탭 split을 이어간다.
+
+## 2026-05-13 Codex /goal M152 SeoPanel advanced schema tab split
+
+- `SeoPanel.tsx`의 Advanced SEO meta tags, structured data toggles, JSON-LD block editor 렌더링을 `SeoPanelAdvancedTab.tsx`로 분리했다.
+- `SeoPanel.tsx`는 Advanced 탭을 컴포넌트 호출로 줄이고 SEO state/update/save/focus trap orchestration을 유지했으며, LOC는 1187에서 1025로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "traps focus in the SEO panel" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - SEO panel focus trap/restore path.
+- 다음 후보:
+  - `SeoPanel.tsx` Basics/Social 탭 또는 shared field section split을 이어간다.

@@ -10,6 +10,7 @@ import type {
 } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import type { BuilderSeoAssistantTask } from '@/lib/builder/seo/assistant';
+import { SeoPanelAdvancedTab } from './SeoPanelAdvancedTab';
 import { SeoPanelAssistantTab } from './SeoPanelAssistantTab';
 import {
   SeoPanelHreflangTab,
@@ -100,16 +101,6 @@ const EMPTY_SEO: SeoFormState = {
     breadcrumbList: true,
   },
 };
-
-const STRUCTURED_DATA_BLOCK_TYPES: Array<{ type: BuilderStructuredDataBlockType; label: string }> = [
-  { type: 'Article', label: 'Article' },
-  { type: 'FAQPage', label: 'FAQPage' },
-  { type: 'LegalService', label: 'LegalService' },
-  { type: 'Organization', label: 'Organization' },
-  { type: 'LocalBusiness', label: 'LocalBusiness' },
-  { type: 'BreadcrumbList', label: 'BreadcrumbList' },
-  { type: 'Custom', label: 'Custom' },
-];
 
 const STRUCTURED_DATA_BLOCK_TEMPLATES: Record<BuilderStructuredDataBlockType, { label: string; json: string }> = {
   Article: {
@@ -976,173 +967,20 @@ export default function SeoPanel({
                 </div>
               </section>
 
-              <section style={{ ...sectionStyle, display: activeTab === 'advanced' ? 'grid' : 'none' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center' }}>
-                  <div>
-                    <h3 style={sectionTitleStyle}>Advanced SEO meta tags</h3>
-                    <span style={helpTextStyle}>Wix Advanced SEO의 additional meta tags에 해당합니다. name/content meta tag로 public head에 반영됩니다.</span>
-                  </div>
-                  <button type="button" style={ghostButtonStyle} onClick={addAdditionalMetaTag}>
-                    + Meta
-                  </button>
-                </div>
-                {form.additionalMetaTags.length === 0 ? (
-                  <div style={{ ...previewCardStyle, color: '#64748b', fontSize: '0.78rem' }}>
-                    Additional meta tag가 없습니다.
-                  </div>
-                ) : (
-                  <div style={{ display: 'grid', gap: 8 }}>
-                    {form.additionalMetaTags.map((tag) => (
-                      <div
-                        key={tag.id}
-                        style={{
-                          display: 'grid',
-                          gridTemplateColumns: 'minmax(120px, 0.8fr) minmax(180px, 1.2fr) auto',
-                          gap: 8,
-                          alignItems: 'center',
-                        }}
-                      >
-                        <input
-                          type="text"
-                          value={tag.name}
-                          placeholder="meta name"
-                          style={inputStyle}
-                          onChange={(event) => updateAdditionalMetaTag(tag.id, 'name', event.target.value)}
-                        />
-                        <input
-                          type="text"
-                          value={tag.content}
-                          placeholder="meta content"
-                          style={inputStyle}
-                          onChange={(event) => updateAdditionalMetaTag(tag.id, 'content', event.target.value)}
-                        />
-                        <button type="button" style={ghostButtonStyle} onClick={() => removeAdditionalMetaTag(tag.id)}>
-                          삭제
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </section>
-
-              <section style={{ ...sectionStyle, display: activeTab === 'advanced' ? 'grid' : 'none' }}>
-                <h3 style={sectionTitleStyle}>구조화 데이터</h3>
-                <div style={checkboxGridStyle}>
-                  <label style={checkboxRowStyle}>
-                    <input
-                      type="checkbox"
-                      checked={form.structuredData.legalService}
-                      onChange={(event) => updateStructuredField('legalService', event.target.checked)}
-                    />
-                    <span>LegalService</span>
-                  </label>
-                  <label style={checkboxRowStyle}>
-                    <input
-                      type="checkbox"
-                      checked={form.structuredData.organization}
-                      onChange={(event) => updateStructuredField('organization', event.target.checked)}
-                    />
-                    <span>Organization</span>
-                  </label>
-                  <label style={checkboxRowStyle}>
-                    <input
-                      type="checkbox"
-                      checked={form.structuredData.localBusiness}
-                      onChange={(event) => updateStructuredField('localBusiness', event.target.checked)}
-                    />
-                    <span>LocalBusiness</span>
-                  </label>
-                  <label style={checkboxRowStyle}>
-                    <input
-                      type="checkbox"
-                      checked={form.structuredData.breadcrumbList}
-                      onChange={(event) => updateStructuredField('breadcrumbList', event.target.checked)}
-                    />
-                    <span>BreadcrumbList</span>
-                  </label>
-                </div>
-                <div style={fieldStyle}>
-                  <label style={labelStyle} htmlFor="builder-seo-faq-schema">FAQPage</label>
-                  <select
-                    id="builder-seo-faq-schema"
-                    value={form.structuredData.faqPage}
-                    style={inputStyle}
-                    onChange={(event) => updateStructuredField('faqPage', event.target.value as 'auto' | 'off')}
-                  >
-                    <option value="auto">FAQ widgets에서 자동 생성</option>
-                    <option value="off">끄기</option>
-                  </select>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center' }}>
-                  <div>
-                    <h4 style={{ ...sectionTitleStyle, fontSize: '0.78rem' }}>JSON-LD blocks</h4>
-                    <span style={helpTextStyle}>Article, FAQPage 같은 schema.org 블록을 페이지별로 저장합니다.</span>
-                  </div>
-                  <button type="button" style={ghostButtonStyle} onClick={() => addStructuredDataBlock('Article')}>
-                    + Article
-                  </button>
-                </div>
-                {form.structuredDataBlocks.length === 0 ? (
-                  <div style={{ ...previewCardStyle, color: '#64748b', fontSize: '0.78rem' }}>
-                    추가 JSON-LD 블록이 없습니다.
-                  </div>
-                ) : (
-                  <div style={{ display: 'grid', gap: 8 }}>
-                    {form.structuredDataBlocks.map((block) => (
-                      <div key={block.id} style={previewCardStyle}>
-                        <div style={twoColumnStyle}>
-                          <label style={fieldStyle}>
-                            <span style={labelStyle}>Type</span>
-                            <select
-                              value={block.type}
-                              style={inputStyle}
-                              onChange={(event) => changeStructuredDataBlockType(
-                                block.id,
-                                event.target.value as BuilderStructuredDataBlockType,
-                              )}
-                            >
-                              {STRUCTURED_DATA_BLOCK_TYPES.map((option) => (
-                                <option key={option.type} value={option.type}>
-                                  {option.label}
-                                </option>
-                              ))}
-                            </select>
-                          </label>
-                          <label style={fieldStyle}>
-                            <span style={labelStyle}>Label</span>
-                            <input
-                              type="text"
-                              value={block.label ?? ''}
-                              style={inputStyle}
-                              onChange={(event) => updateStructuredDataBlock(block.id, { label: event.target.value })}
-                            />
-                          </label>
-                        </div>
-                        <textarea
-                          value={block.json ?? ''}
-                          style={textareaStyle}
-                          rows={5}
-                          onChange={(event) => updateStructuredDataBlock(block.id, { json: event.target.value })}
-                        />
-                        <div style={formActionsStyle}>
-                          <label style={{ ...checkboxRowStyle, marginRight: 'auto' }}>
-                            <input
-                              type="checkbox"
-                              checked={block.enabled}
-                              onChange={(event) => updateStructuredDataBlock(block.id, { enabled: event.target.checked })}
-                            />
-                            <span>사용</span>
-                          </label>
-                          <span style={helpTextStyle}>{block.type}</span>
-                          <button type="button" style={ghostButtonStyle} onClick={() => removeStructuredDataBlock(block.id)}>
-                            삭제
-                          </button>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </section>
+              <SeoPanelAdvancedTab
+                active={activeTab === 'advanced'}
+                additionalMetaTags={form.additionalMetaTags}
+                structuredData={form.structuredData}
+                structuredDataBlocks={form.structuredDataBlocks}
+                onAddAdditionalMetaTag={addAdditionalMetaTag}
+                onUpdateAdditionalMetaTag={updateAdditionalMetaTag}
+                onRemoveAdditionalMetaTag={removeAdditionalMetaTag}
+                onUpdateStructuredField={updateStructuredField}
+                onAddStructuredDataBlock={addStructuredDataBlock}
+                onChangeStructuredDataBlockType={changeStructuredDataBlockType}
+                onUpdateStructuredDataBlock={updateStructuredDataBlock}
+                onRemoveStructuredDataBlock={removeStructuredDataBlock}
+              />
 
               <SeoPanelHreflangTab
                 active={activeTab === 'hreflang'}

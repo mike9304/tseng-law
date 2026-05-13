@@ -49,6 +49,13 @@ export interface BuilderDynamicTemplateDraftWriteResult {
   snapshot: BuilderDynamicTemplateDraftSnapshot;
 }
 
+export interface BuilderDynamicTemplateBlockVisibility {
+  persisted: boolean;
+  revision: number;
+  savedAt: string | null;
+  visibleBlockIds: string[];
+}
+
 export interface BuilderDynamicTemplateDraftPublishInput {
   templateId: BuilderDynamicTemplateId;
   locale: Locale;
@@ -117,6 +124,26 @@ export async function readBuilderDynamicTemplatePublished(
   localeInput: string | null | undefined
 ): Promise<BuilderDynamicTemplateDraftReadResult> {
   return readBuilderDynamicTemplateSnapshot('published', templateId, localeInput);
+}
+
+export async function readBuilderDynamicTemplatePublishedBlockVisibility(
+  templateId: BuilderDynamicTemplateId,
+  localeInput: string | null | undefined
+): Promise<BuilderDynamicTemplateBlockVisibility> {
+  const published = await readBuilderDynamicTemplatePublished(templateId, localeInput);
+  return {
+    persisted: published.persisted,
+    revision: published.snapshot.revision,
+    savedAt: published.snapshot.savedAt,
+    visibleBlockIds: [...published.snapshot.state.visibleBlockIds],
+  };
+}
+
+export function isBuilderDynamicTemplateBlockVisible(
+  visibility: Pick<BuilderDynamicTemplateBlockVisibility, 'visibleBlockIds'>,
+  blockId: string
+): boolean {
+  return visibility.visibleBlockIds.includes(blockId);
 }
 
 export async function readBuilderDynamicTemplateSnapshot(

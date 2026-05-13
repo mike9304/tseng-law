@@ -8,6 +8,10 @@ import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profile
 import { getServiceArea, getServiceSlugs } from '@/data/service-details';
 import { getColumnPost } from '@/lib/columns';
 import JsonLd from '@/components/JsonLd';
+import {
+  isBuilderDynamicTemplateBlockVisible,
+  readBuilderDynamicTemplatePublishedBlockVisibility,
+} from '@/lib/builder/dynamic-template-drafts';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export function generateStaticParams() {
@@ -40,7 +44,7 @@ export function generateMetadata({ params }: { params: { locale: Locale; slug: s
   });
 }
 
-export default function ServiceDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
+export default async function ServiceDetailPage({ params }: { params: { locale: Locale; slug: string } }) {
   const locale = normalizeLocale(params.locale);
   const area = getServiceArea(params.slug);
   if (!area) return notFound();
@@ -80,136 +84,151 @@ export default function ServiceDetailPage({ params }: { params: { locale: Locale
     .filter((c): c is NonNullable<typeof c> => c != null);
 
   const points = area.keyPoints[locale];
+  const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
+    'service-areas.item-template',
+    locale
+  );
+  const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.hero');
+  const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.body');
+  const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'service-areas.item.seo');
 
   return (
     <>
-      <JsonLd
-        data={buildBreadcrumbJsonLd(locale, [
-          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
-          { name: locale === 'ko' ? '업무분야' : locale === 'zh-hant' ? '服務領域' : 'Practice Areas', path: `/${locale}/services` },
-          { name: area.title[locale], path: `/${locale}/services/${area.slug}` },
-        ])}
-      />
-      <JsonLd
-        data={buildLegalServiceJsonLd(locale, {
-          name: area.title[locale],
-          description,
-          path: `/services/${area.slug}`,
-          serviceType: area.title[locale],
-        })}
-      />
-      {attorney ? (
-        <JsonLd
-          data={buildPersonJsonLd({
-            locale,
-            path: `/${locale}/lawyers/${attorney.slug}`,
-            name: attorney.name,
-            alternateName: attorney.alternateNames,
-            description: attorney.description,
-            image: attorney.image,
-            email: attorney.email,
-            jobTitle: attorney.role,
-            sameAs: attorney.sameAs,
-            knowsLanguage: attorney.languages,
-            knowsAbout: attorney.practiceAreas,
-            alumniOf: attorney.education,
-          })}
-        />
+      {showSeo ? (
+        <>
+          <JsonLd
+            data={buildBreadcrumbJsonLd(locale, [
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+              { name: locale === 'ko' ? '업무분야' : locale === 'zh-hant' ? '服務領域' : 'Practice Areas', path: `/${locale}/services` },
+              { name: area.title[locale], path: `/${locale}/services/${area.slug}` },
+            ])}
+          />
+          <JsonLd
+            data={buildLegalServiceJsonLd(locale, {
+              name: area.title[locale],
+              description,
+              path: `/services/${area.slug}`,
+              serviceType: area.title[locale],
+            })}
+          />
+          {attorney ? (
+            <JsonLd
+              data={buildPersonJsonLd({
+                locale,
+                path: `/${locale}/lawyers/${attorney.slug}`,
+                name: attorney.name,
+                alternateName: attorney.alternateNames,
+                description: attorney.description,
+                image: attorney.image,
+                email: attorney.email,
+                jobTitle: attorney.role,
+                sameAs: attorney.sameAs,
+                knowsLanguage: attorney.languages,
+                knowsAbout: attorney.practiceAreas,
+                alumniOf: attorney.education,
+              })}
+            />
+          ) : null}
+        </>
       ) : null}
-      <section className="svc-hero" data-tone="dark">
-        <div className="container svc-hero-inner">
-          <Link href={`/${locale}/services`} className="svc-back-link">{backLabel}</Link>
-          <h1 className="svc-hero-title">{area.title[locale]}</h1>
-          <p className="svc-hero-subtitle">{area.subtitle[locale]}</p>
-        </div>
-      </section>
-
-      <article className="svc-article">
-        <div className="container svc-container">
-          <div className="svc-body">
-            <p className="svc-intro">{area.intro[locale]}</p>
-            {attorney ? (
-              <p className="svc-review-note">
-                {reviewLead}
-                <Link href={`/${locale}/lawyers/${attorney.slug}`} className="link-underline">
-                  {attorney.name}
-                </Link>
-                {reviewTail}
-              </p>
-            ) : null}
-
-            {points.length > 0 && (
-              <div className="svc-keypoints">
-                <h2 className="svc-keypoints-title">{keyPointsLabel}</h2>
-                <ul className="svc-keypoints-list">
-                  {points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {columns.length > 0 && (
-              <div className="svc-columns-section">
-                <h2 className="svc-columns-heading">{columnsLabel}</h2>
-                <div className="svc-columns-grid">
-                  {columns.map((col) => (
-                    <Link
-                      key={col.slug}
-                      href={`/${locale}/columns/${col.slug}`}
-                      className="svc-col-card"
-                    >
-                      <div className="svc-col-card-media">
-                        <Image src={col.featuredImage} alt={col.title} width={640} height={360} />
-                        <div className="svc-col-card-overlay" />
-                        <span className="svc-col-badge">{col.categoryLabel}</span>
-                      </div>
-                      <h3 className="svc-col-card-title">{col.title}</h3>
-                      <p className="svc-col-card-summary">{col.summary}</p>
-                      <span className="svc-col-card-meta">
-                        <time>{col.dateDisplay || col.date}</time>
-                        {col.readTime && <span>{col.readTime}</span>}
-                      </span>
-                      <span className="svc-col-card-link">{readMore}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {columns.length === 0 && (
-              <div className="svc-empty"><p>{emptyMsg}</p></div>
-            )}
+      {showHero ? (
+        <section className="svc-hero" data-tone="dark">
+          <div className="container svc-hero-inner">
+            <Link href={`/${locale}/services`} className="svc-back-link">{backLabel}</Link>
+            <h1 className="svc-hero-title">{area.title[locale]}</h1>
+            <p className="svc-hero-subtitle">{area.subtitle[locale]}</p>
           </div>
+        </section>
+      ) : null}
 
-          <aside className="svc-sidebar">
-            <div className="svc-sidebar-card svc-sidebar-card--attorney">
-              <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
-            </div>
-            {columns.length > 0 && (
-              <div className="svc-sidebar-card">
-                <h3 className="svc-sidebar-title">{columnsLabel.split(' —')[0]}</h3>
-                <ul className="svc-related-list">
-                  {columns.map((col) => (
-                    <li key={col.slug}>
-                      <Link href={`/${locale}/columns/${col.slug}`} className="svc-related-link">
-                        {col.title}
+      {showBody ? (
+        <article className="svc-article">
+          <div className="container svc-container">
+            <div className="svc-body">
+              <p className="svc-intro">{area.intro[locale]}</p>
+              {attorney ? (
+                <p className="svc-review-note">
+                  {reviewLead}
+                  <Link href={`/${locale}/lawyers/${attorney.slug}`} className="link-underline">
+                    {attorney.name}
+                  </Link>
+                  {reviewTail}
+                </p>
+              ) : null}
+
+              {points.length > 0 && (
+                <div className="svc-keypoints">
+                  <h2 className="svc-keypoints-title">{keyPointsLabel}</h2>
+                  <ul className="svc-keypoints-list">
+                    {points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {columns.length > 0 && (
+                <div className="svc-columns-section">
+                  <h2 className="svc-columns-heading">{columnsLabel}</h2>
+                  <div className="svc-columns-grid">
+                    {columns.map((col) => (
+                      <Link
+                        key={col.slug}
+                        href={`/${locale}/columns/${col.slug}`}
+                        className="svc-col-card"
+                      >
+                        <div className="svc-col-card-media">
+                          <Image src={col.featuredImage} alt={col.title} width={640} height={360} />
+                          <div className="svc-col-card-overlay" />
+                          <span className="svc-col-badge">{col.categoryLabel}</span>
+                        </div>
+                        <h3 className="svc-col-card-title">{col.title}</h3>
+                        <p className="svc-col-card-summary">{col.summary}</p>
+                        <span className="svc-col-card-meta">
+                          <time>{col.dateDisplay || col.date}</time>
+                          {col.readTime && <span>{col.readTime}</span>}
+                        </span>
+                        <span className="svc-col-card-link">{readMore}</span>
                       </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            <div className="svc-sidebar-card">
-              <h3 className="svc-sidebar-title">{contactLabel}</h3>
-              <p className="svc-sidebar-text">{contactDesc}</p>
-              <Link href={`/${locale}/contact`} className="button svc-sidebar-btn">
-                {contactBtn}
-              </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {columns.length === 0 && (
+                <div className="svc-empty"><p>{emptyMsg}</p></div>
+              )}
             </div>
-          </aside>
-        </div>
-      </article>
+
+            <aside className="svc-sidebar">
+              <div className="svc-sidebar-card svc-sidebar-card--attorney">
+                <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
+              </div>
+              {columns.length > 0 && (
+                <div className="svc-sidebar-card">
+                  <h3 className="svc-sidebar-title">{columnsLabel.split(' —')[0]}</h3>
+                  <ul className="svc-related-list">
+                    {columns.map((col) => (
+                      <li key={col.slug}>
+                        <Link href={`/${locale}/columns/${col.slug}`} className="svc-related-link">
+                          {col.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              <div className="svc-sidebar-card">
+                <h3 className="svc-sidebar-title">{contactLabel}</h3>
+                <p className="svc-sidebar-text">{contactDesc}</p>
+                <Link href={`/${locale}/contact`} className="button svc-sidebar-btn">
+                  {contactBtn}
+                </Link>
+              </div>
+            </aside>
+          </div>
+        </article>
+      ) : null}
     </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { pageCopy } from '@/data/page-copy';
+import { readBuilderDynamicTemplatePublishedBlockVisibility } from '@/lib/builder/dynamic-template-drafts';
 import { buildSeoMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/locales';
 import { LawyersLegacyPageBody } from './legacy-page-bodies';
@@ -21,6 +22,11 @@ export function getLawyersLegacyMetadata(locale: Locale): Metadata {
   });
 }
 
-export function LawyersLegacyPage({ locale }: { locale: Locale }) {
-  return <LawyersLegacyPageBody locale={locale} />;
+export async function LawyersLegacyPage({ locale }: { locale: Locale }) {
+  const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
+    'attorney-profiles.list-template',
+    locale
+  );
+
+  return <LawyersLegacyPageBody locale={locale} visibleBlockIds={templateVisibility.visibleBlockIds} />;
 }

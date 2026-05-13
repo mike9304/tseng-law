@@ -7,6 +7,10 @@ import PageHeader from '@/components/PageHeader';
 import FAQAccordion from '@/components/FAQAccordion';
 import { getAttorneyProfile, getAttorneyProfilePath, getAttorneyProfileSlugs } from '@/data/attorney-profiles';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import {
+  isBuilderDynamicTemplateBlockVisible,
+  readBuilderDynamicTemplatePublishedBlockVisibility,
+} from '@/lib/builder/dynamic-template-drafts';
 import { buildBreadcrumbJsonLd, buildProfilePageJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 const sectionLabels = {
@@ -69,7 +73,7 @@ export function generateMetadata({ params }: { params: { locale: Locale; slug: s
   });
 }
 
-export default function LawyerProfilePage({ params }: { params: { locale: Locale; slug: string } }) {
+export default async function LawyerProfilePage({ params }: { params: { locale: Locale; slug: string } }) {
   const locale = normalizeLocale(params.locale);
   const profile = getAttorneyProfile(locale, params.slug);
   const labels = sectionLabels[locale];
@@ -79,6 +83,13 @@ export default function LawyerProfilePage({ params }: { params: { locale: Locale
   }
 
   const profilePath = getAttorneyProfilePath(locale, profile.slug);
+  const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
+    'attorney-profiles.item-template',
+    locale
+  );
+  const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.hero');
+  const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.body');
+  const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'attorney-profiles.item.seo');
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -94,162 +105,172 @@ export default function LawyerProfilePage({ params }: { params: { locale: Locale
 
   return (
     <>
-      <JsonLd
-        data={buildBreadcrumbJsonLd(locale, [
-          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
-          { name: locale === 'ko' ? '변호사소개' : locale === 'zh-hant' ? '律師團隊' : 'Lawyers', path: `/${locale}/lawyers` },
-          { name: profile.name, path: profilePath },
-        ])}
-      />
-      <JsonLd
-        data={buildProfilePageJsonLd({
-          locale,
-          path: profilePath,
-          name: profile.name,
-          alternateName: profile.alternateNames,
-          description: profile.description,
-          image: profile.image,
-          email: profile.email,
-          jobTitle: profile.role,
-          sameAs: profile.sameAs,
-          knowsLanguage: profile.languages,
-          knowsAbout: profile.practiceAreas,
-          alumniOf: profile.education,
-        })}
-      />
-      <JsonLd data={faqSchema} />
+      {showSeo ? (
+        <>
+          <JsonLd
+            data={buildBreadcrumbJsonLd(locale, [
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+              { name: locale === 'ko' ? '변호사소개' : locale === 'zh-hant' ? '律師團隊' : 'Lawyers', path: `/${locale}/lawyers` },
+              { name: profile.name, path: profilePath },
+            ])}
+          />
+          <JsonLd
+            data={buildProfilePageJsonLd({
+              locale,
+              path: profilePath,
+              name: profile.name,
+              alternateName: profile.alternateNames,
+              description: profile.description,
+              image: profile.image,
+              email: profile.email,
+              jobTitle: profile.role,
+              sameAs: profile.sameAs,
+              knowsLanguage: profile.languages,
+              knowsAbout: profile.practiceAreas,
+              alumniOf: profile.education,
+            })}
+          />
+          <JsonLd data={faqSchema} />
+        </>
+      ) : null}
 
-      <PageHeader
-        locale={locale}
-        label={labels.pageLabel}
-        title={profile.title}
-        description={profile.description}
-      />
+      {showHero ? (
+        <PageHeader
+          locale={locale}
+          label={labels.pageLabel}
+          title={profile.title}
+          description={profile.description}
+        />
+      ) : null}
 
-      <section className="section section--light">
-        <div className="container">
-          <div className="profile-hero-card">
-            <div className="profile-hero-photo">
-              <Image
-                src={profile.image}
-                alt={`${profile.name} ${profile.role}`}
-                fill
-                sizes="(max-width: 900px) 100vw, 360px"
-                className="person-photo"
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <div className="profile-hero-body">
-              <div className="section-label">{labels.facts}</div>
-              <h2 className="section-title profile-hero-title">{profile.name}</h2>
-              <p className="profile-hero-role">{profile.role}</p>
-              <a href={`mailto:${profile.email}`} className="attorney-card-email">{profile.email}</a>
-              <div className="profile-summary-list">
-                {profile.summary.map((line) => (
-                  <p key={line} className="split-text">{line}</p>
-                ))}
+      {showBody ? (
+        <>
+          <section className="section section--light">
+            <div className="container">
+              <div className="profile-hero-card">
+                <div className="profile-hero-photo">
+                  <Image
+                    src={profile.image}
+                    alt={`${profile.name} ${profile.role}`}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 360px"
+                    className="person-photo"
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="profile-hero-body">
+                  <div className="section-label">{labels.facts}</div>
+                  <h2 className="section-title profile-hero-title">{profile.name}</h2>
+                  <p className="profile-hero-role">{profile.role}</p>
+                  <a href={`mailto:${profile.email}`} className="attorney-card-email">{profile.email}</a>
+                  <div className="profile-summary-list">
+                    {profile.summary.map((line) => (
+                      <p key={line} className="split-text">{line}</p>
+                    ))}
+                  </div>
+                  <div className="profile-chip-group">
+                    {profile.languages.map((language) => (
+                      <span key={language} className="profile-chip">
+                        {language}
+                      </span>
+                    ))}
+                  </div>
+                  <Link href={`/${locale}/contact`} className="button profile-hero-cta">
+                    {labels.contact}
+                  </Link>
+                </div>
               </div>
-              <div className="profile-chip-group">
-                {profile.languages.map((language) => (
-                  <span key={language} className="profile-chip">
-                    {language}
-                  </span>
-                ))}
-              </div>
-              <Link href={`/${locale}/contact`} className="button profile-hero-cta">
-                {labels.contact}
-              </Link>
-            </div>
-          </div>
 
-          <article className="profile-entity-card">
-            <div className="section-label">{labels.searchTerms}</div>
-            <div className="profile-chip-group">
-              {profile.searchTerms.map((term) => (
-                <span key={term} className="profile-chip profile-chip--entity">
-                  {term}
-                </span>
-              ))}
-            </div>
-          </article>
-
-          <div className="profile-proof-grid">
-            {profile.proofPoints.map((item) => (
-              <article key={item} className="profile-proof-card">
-                <p className="profile-proof-text">{item}</p>
+              <article className="profile-entity-card">
+                <div className="section-label">{labels.searchTerms}</div>
+                <div className="profile-chip-group">
+                  {profile.searchTerms.map((term) => (
+                    <span key={term} className="profile-chip profile-chip--entity">
+                      {term}
+                    </span>
+                  ))}
+                </div>
               </article>
-            ))}
-          </div>
 
-          <div className="profile-card-grid">
-            <article className="profile-info-card">
-              <h3 className="profile-card-title">{labels.facts}</h3>
-              <ul className="attorney-list">
-                {profile.practiceAreas.map((item) => (
-                  <li key={item}>{item}</li>
+              <div className="profile-proof-grid">
+                {profile.proofPoints.map((item) => (
+                  <article key={item} className="profile-proof-card">
+                    <p className="profile-proof-text">{item}</p>
+                  </article>
                 ))}
-              </ul>
-            </article>
+              </div>
 
-            <article className="profile-info-card">
-              <h3 className="profile-card-title">{labels.matters}</h3>
-              <ul className="attorney-list">
-                {profile.notableMatters.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+              <div className="profile-card-grid">
+                <article className="profile-info-card">
+                  <h3 className="profile-card-title">{labels.facts}</h3>
+                  <ul className="attorney-list">
+                    {profile.practiceAreas.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
 
-            <article className="profile-info-card">
-              <h3 className="profile-card-title">{labels.internalLinks}</h3>
-              <ul className="profile-link-list">
-                {profile.internalLinks.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} className="link-underline">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </article>
+                <article className="profile-info-card">
+                  <h3 className="profile-card-title">{labels.matters}</h3>
+                  <ul className="attorney-list">
+                    {profile.notableMatters.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
 
-            <article className="profile-info-card">
-              <h3 className="profile-card-title">{labels.externalProfiles}</h3>
-              <ul className="profile-link-list">
-                {profile.externalProfiles.map((item) => (
-                  <li key={item.href}>
-                    <a href={item.href} className="link-underline" target="_blank" rel="noreferrer">
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </div>
+                <article className="profile-info-card">
+                  <h3 className="profile-card-title">{labels.internalLinks}</h3>
+                  <ul className="profile-link-list">
+                    {profile.internalLinks.map((item) => (
+                      <li key={item.href}>
+                        <Link href={item.href} className="link-underline">
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
 
-          <div className="profile-card-grid">
-            <article className="profile-info-card">
-              <h3 className="profile-card-title">{labels.education}</h3>
-              <ul className="attorney-list">
-                {profile.education.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+                <article className="profile-info-card">
+                  <h3 className="profile-card-title">{labels.externalProfiles}</h3>
+                  <ul className="profile-link-list">
+                    {profile.externalProfiles.map((item) => (
+                      <li key={item.href}>
+                        <a href={item.href} className="link-underline" target="_blank" rel="noreferrer">
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </div>
 
-            <article className="profile-info-card">
-              <h3 className="profile-card-title">{labels.experience}</h3>
-              <ul className="attorney-list">
-                {profile.experience.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
+              <div className="profile-card-grid">
+                <article className="profile-info-card">
+                  <h3 className="profile-card-title">{labels.education}</h3>
+                  <ul className="attorney-list">
+                    {profile.education.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
 
-      <FAQAccordion locale={locale} items={profile.faq} sectionClassName="section section--gray" />
+                <article className="profile-info-card">
+                  <h3 className="profile-card-title">{labels.experience}</h3>
+                  <ul className="attorney-list">
+                    {profile.experience.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <FAQAccordion locale={locale} items={profile.faq} sectionClassName="section section--gray" />
+        </>
+      ) : null}
     </>
   );
 }

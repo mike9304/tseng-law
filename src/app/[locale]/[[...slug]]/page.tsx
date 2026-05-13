@@ -39,7 +39,7 @@ export default async function MainSiteCatchAllPage({
   const locale: Locale = normalizeLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 
-  const legacyPage = renderLegacyPage(slugPath, locale);
+  const legacyPage = await renderLegacyPage(slugPath, locale);
   if (legacyPage) return legacyPage;
 
   const publishedPage = await resolvePublishedSitePage(locale, slugPath);

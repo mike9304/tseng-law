@@ -5,6 +5,10 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import ColumnsGrid from '@/components/ColumnsGrid';
 import { pageCopy } from '@/data/page-copy';
+import {
+  isBuilderDynamicTemplateBlockVisible,
+  readBuilderDynamicTemplatePublishedBlockVisibility,
+} from '@/lib/builder/dynamic-template-drafts';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -33,30 +37,43 @@ export default async function ColumnsPage({ params }: { params: { locale: Locale
   const copy = pageCopy[locale].insights;
   const posts = await getAllColumnPostsIncludingBlob(locale);
   const byline = locale === 'ko' ? '증준외 변호사' : locale === 'zh-hant' ? '曾俊瑋律師' : 'Attorney Wei Tseng';
+  const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
+    'columns.list-template',
+    locale
+  );
+  const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.hero');
+  const showRepeater = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.repeater');
+  const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.list.seo');
 
   return (
     <>
-      <JsonLd
-        data={buildBreadcrumbJsonLd(locale, [
-          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
-          { name: copy.title, path: `/${locale}/columns` },
-        ])}
-      />
-      <JsonLd
-        data={buildCollectionPageJsonLd({
-          locale,
-          path: `/${locale}/columns`,
-          name: copy.title,
-          description: copy.description,
-          items: posts.slice(0, 20).map((post) => ({
-            name: `${post.title} · ${byline}`,
-            path: `/${locale}/columns/${post.slug}`,
-            description: post.summary,
-          })),
-        })}
-      />
-      <PageHeader locale={locale} label="COLUMNS" title={copy.title} description={copy.description} />
-      <ColumnsGrid locale={locale} posts={posts} />
+      {showSeo ? (
+        <>
+          <JsonLd
+            data={buildBreadcrumbJsonLd(locale, [
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+              { name: copy.title, path: `/${locale}/columns` },
+            ])}
+          />
+          <JsonLd
+            data={buildCollectionPageJsonLd({
+              locale,
+              path: `/${locale}/columns`,
+              name: copy.title,
+              description: copy.description,
+              items: posts.slice(0, 20).map((post) => ({
+                name: `${post.title} · ${byline}`,
+                path: `/${locale}/columns/${post.slug}`,
+                description: post.summary,
+              })),
+            })}
+          />
+        </>
+      ) : null}
+      {showHero ? (
+        <PageHeader locale={locale} label="COLUMNS" title={copy.title} description={copy.description} />
+      ) : null}
+      {showRepeater ? <ColumnsGrid locale={locale} posts={posts} /> : null}
     </>
   );
 }

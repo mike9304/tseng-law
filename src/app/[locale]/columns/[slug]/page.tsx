@@ -8,6 +8,10 @@ import { getColumnPost } from '@/lib/columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
 import JsonLd from '@/components/JsonLd';
+import {
+  isBuilderDynamicTemplateBlockVisible,
+  readBuilderDynamicTemplatePublishedBlockVisibility,
+} from '@/lib/builder/dynamic-template-drafts';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildSeoMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -74,97 +78,112 @@ export default async function ColumnDetailPage({ params }: { params: { locale: L
 
   const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : '← Previous';
   const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : 'Next →';
+  const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
+    'columns.item-template',
+    locale
+  );
+  const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.hero');
+  const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.body');
+  const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.seo');
 
   return (
     <>
-      <JsonLd
-        data={buildBreadcrumbJsonLd(locale, [
-          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
-          { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : 'Columns', path: `/${locale}/columns` },
-          { name: post.title, path: `/${locale}/columns/${post.slug}` },
-        ])}
-      />
-      <JsonLd
-        data={buildArticleJsonLd({
-          locale,
-          title: post.title,
-          description: post.summary,
-          path: `/${locale}/columns/${post.slug}`,
-          image: post.featuredImage,
-          datePublished: post.date,
-          dateModified: post.date,
-          authorName,
-          authorUrl: authorProfilePath,
-          authorSameAs: [
-            'https://www.hoveringlaw.com.tw/en/wei.html',
-            'https://www.wei-wei-lawyer.com/about-8',
-            'https://www.youtube.com/@weilawyer',
-            'https://blog.naver.com/wei_lawyer/223461663913',
-          ],
-          authorAlternateNames: ['증준외', '曾俊瑋', 'Wei Tseng'],
-          articleSection: post.categoryLabel,
-        })}
-      />
-      <section className="blog-hero" data-tone="dark">
-        <div className="blog-hero-bg">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={post.featuredImage} alt={post.title} className="blog-hero-img" />
-          <div className="blog-hero-overlay" />
-        </div>
-        <div className="container blog-hero-inner">
-          <Link href={`/${locale}/columns`} className="blog-back-link">{backLabel}</Link>
-          <span className="blog-category-badge">{post.categoryLabel}</span>
-          <h1 className="blog-hero-title">{post.title}</h1>
-          <div className="blog-meta">
-            <Link href={authorProfilePath} className="link-underline">
-              {authorName}
-            </Link>
-            <time>{post.dateDisplay || post.date}</time>
-            {post.readTime ? <span>{post.readTime}</span> : null}
+      {showSeo ? (
+        <>
+          <JsonLd
+            data={buildBreadcrumbJsonLd(locale, [
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+              { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : 'Columns', path: `/${locale}/columns` },
+              { name: post.title, path: `/${locale}/columns/${post.slug}` },
+            ])}
+          />
+          <JsonLd
+            data={buildArticleJsonLd({
+              locale,
+              title: post.title,
+              description: post.summary,
+              path: `/${locale}/columns/${post.slug}`,
+              image: post.featuredImage,
+              datePublished: post.date,
+              dateModified: post.date,
+              authorName,
+              authorUrl: authorProfilePath,
+              authorSameAs: [
+                'https://www.hoveringlaw.com.tw/en/wei.html',
+                'https://www.wei-wei-lawyer.com/about-8',
+                'https://www.youtube.com/@weilawyer',
+                'https://blog.naver.com/wei_lawyer/223461663913',
+              ],
+              authorAlternateNames: ['증준외', '曾俊瑋', 'Wei Tseng'],
+              articleSection: post.categoryLabel,
+            })}
+          />
+        </>
+      ) : null}
+      {showHero ? (
+        <section className="blog-hero" data-tone="dark">
+          <div className="blog-hero-bg">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={post.featuredImage} alt={post.title} className="blog-hero-img" />
+            <div className="blog-hero-overlay" />
           </div>
-        </div>
-      </section>
-
-      <article className="blog-article">
-        <div className="container blog-container">
-          <div className="blog-body">
-            <ColumnContent content={post.content} />
-          </div>
-          <aside className="blog-sidebar">
-            <div className="blog-sidebar-card">
-              <h3 className="blog-sidebar-title">{locale === 'ko' ? '상담 예약' : locale === 'zh-hant' ? '預約諮詢' : 'Book Consultation'}</h3>
-              <p className="blog-sidebar-text">
-                {locale === 'ko'
-                  ? '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.'
-                  : locale === 'zh-hant'
-                    ? '如有任何台灣法律相關問題，歡迎隨時聯繫我們。'
-                    : 'If you have any questions about Taiwan law, feel free to contact us.'}
-              </p>
-              <Link href={`/${locale}/contact`} className="button blog-sidebar-btn">
-                {locale === 'ko' ? '문의하기' : locale === 'zh-hant' ? '聯絡我們' : 'Contact Us'}
+          <div className="container blog-hero-inner">
+            <Link href={`/${locale}/columns`} className="blog-back-link">{backLabel}</Link>
+            <span className="blog-category-badge">{post.categoryLabel}</span>
+            <h1 className="blog-hero-title">{post.title}</h1>
+            <div className="blog-meta">
+              <Link href={authorProfilePath} className="link-underline">
+                {authorName}
               </Link>
+              <time>{post.dateDisplay || post.date}</time>
+              {post.readTime ? <span>{post.readTime}</span> : null}
             </div>
-            <div className="blog-sidebar-card blog-sidebar-card--attorney">
-              <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
+          </div>
+        </section>
+      ) : null}
+
+      {showBody ? (
+        <article className="blog-article">
+          <div className="container blog-container">
+            <div className="blog-body">
+              <ColumnContent content={post.content} />
             </div>
-            <div className="blog-sidebar-card">
-              <h3 className="blog-sidebar-title">{guideTitle}</h3>
-              <ul className="blog-related-list">
-                {guideLinks.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} className="blog-related-link">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </article>
+            <aside className="blog-sidebar">
+              <div className="blog-sidebar-card">
+                <h3 className="blog-sidebar-title">{locale === 'ko' ? '상담 예약' : locale === 'zh-hant' ? '預約諮詢' : 'Book Consultation'}</h3>
+                <p className="blog-sidebar-text">
+                  {locale === 'ko'
+                    ? '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.'
+                    : locale === 'zh-hant'
+                      ? '如有任何台灣法律相關問題，歡迎隨時聯繫我們。'
+                      : 'If you have any questions about Taiwan law, feel free to contact us.'}
+                </p>
+                <Link href={`/${locale}/contact`} className="button blog-sidebar-btn">
+                  {locale === 'ko' ? '문의하기' : locale === 'zh-hant' ? '聯絡我們' : 'Contact Us'}
+                </Link>
+              </div>
+              <div className="blog-sidebar-card blog-sidebar-card--attorney">
+                <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
+              </div>
+              <div className="blog-sidebar-card">
+                <h3 className="blog-sidebar-title">{guideTitle}</h3>
+                <ul className="blog-related-list">
+                  {guideLinks.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className="blog-related-link">
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </article>
+      ) : null}
 
       {/* Prev / Next Navigation */}
-      {(prevPost || nextPost) && (
+      {showBody && (prevPost || nextPost) && (
         <nav className="container" style={{
           display: 'flex',
           justifyContent: 'space-between',

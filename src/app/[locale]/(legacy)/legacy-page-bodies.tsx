@@ -35,12 +35,22 @@ export function AboutLegacyPageBody({ locale }: { locale: Locale }) {
   );
 }
 
-export function ServicesLegacyPageBody({ locale }: { locale: Locale }) {
+export function ServicesLegacyPageBody({
+  locale,
+  visibleBlockIds,
+}: {
+  locale: Locale;
+  visibleBlockIds?: string[];
+}) {
   const copy = pageCopy[locale].services;
+  const showHero = isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.hero');
+  const showRepeater = isTemplateBlockVisible(visibleBlockIds, 'service-areas.list.repeater');
   return (
     <>
-      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
-      <ServicesBento locale={locale} />
+      {showHero ? (
+        <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+      ) : null}
+      {showRepeater ? <ServicesBento locale={locale} /> : null}
     </>
   );
 }
@@ -57,55 +67,70 @@ export function ContactLegacyPageBody({ locale }: { locale: Locale }) {
   );
 }
 
-export function LawyersLegacyPageBody({ locale }: { locale: Locale }) {
+export function LawyersLegacyPageBody({
+  locale,
+  visibleBlockIds,
+}: {
+  locale: Locale;
+  visibleBlockIds?: string[];
+}) {
   const copy = pageCopy[locale].lawyers;
   const profile = getAttorneyProfile(locale, primaryAttorneySlug);
+  const showHero = isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.hero');
+  const showRepeater = isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.repeater');
+  const showSeo = isTemplateBlockVisible(visibleBlockIds, 'attorney-profiles.list.seo');
 
   return (
     <>
-      <JsonLd
-        data={buildBreadcrumbJsonLd(locale, [
-          { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
-          { name: copy.title, path: `/${locale}/lawyers` },
-        ])}
-      />
-      {profile ? (
+      {showSeo ? (
         <>
           <JsonLd
-            data={buildPersonJsonLd({
-              locale,
-              path: `/${locale}/lawyers/${profile.slug}`,
-              name: profile.name,
-              alternateName: profile.alternateNames,
-              description: profile.description,
-              image: profile.image,
-              email: profile.email,
-              jobTitle: profile.role,
-              sameAs: profile.sameAs,
-              knowsLanguage: profile.languages,
-              knowsAbout: profile.practiceAreas,
-              alumniOf: profile.education,
-            })}
+            data={buildBreadcrumbJsonLd(locale, [
+              { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : 'Home', path: `/${locale}` },
+              { name: copy.title, path: `/${locale}/lawyers` },
+            ])}
           />
-          <JsonLd
-            data={buildCollectionPageJsonLd({
-              locale,
-              path: `/${locale}/lawyers`,
-              name: copy.title,
-              description: copy.description,
-              items: [
-                {
-                  name: profile.name,
+          {profile ? (
+            <>
+              <JsonLd
+                data={buildPersonJsonLd({
+                  locale,
                   path: `/${locale}/lawyers/${profile.slug}`,
+                  name: profile.name,
+                  alternateName: profile.alternateNames,
                   description: profile.description,
-                },
-              ],
-            })}
-          />
+                  image: profile.image,
+                  email: profile.email,
+                  jobTitle: profile.role,
+                  sameAs: profile.sameAs,
+                  knowsLanguage: profile.languages,
+                  knowsAbout: profile.practiceAreas,
+                  alumniOf: profile.education,
+                })}
+              />
+              <JsonLd
+                data={buildCollectionPageJsonLd({
+                  locale,
+                  path: `/${locale}/lawyers`,
+                  name: copy.title,
+                  description: copy.description,
+                  items: [
+                    {
+                      name: profile.name,
+                      path: `/${locale}/lawyers/${profile.slug}`,
+                      description: profile.description,
+                    },
+                  ],
+                })}
+              />
+            </>
+          ) : null}
         </>
       ) : null}
-      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
-      <AttorneyProfileSection locale={locale} />
+      {showHero ? (
+        <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+      ) : null}
+      {showRepeater ? <AttorneyProfileSection locale={locale} /> : null}
     </>
   );
 }
@@ -183,4 +208,8 @@ export function DisclaimerLegacyPageBody({ locale }: { locale: Locale }) {
       <LegalPageSections locale={locale} content={content} />
     </>
   );
+}
+
+function isTemplateBlockVisible(visibleBlockIds: string[] | undefined, blockId: string): boolean {
+  return !visibleBlockIds || visibleBlockIds.includes(blockId);
 }

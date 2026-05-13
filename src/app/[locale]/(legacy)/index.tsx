@@ -38,7 +38,7 @@ export function getLegacyPageMetadata(slugPath: string, locale: Locale): Metadat
   }
 }
 
-export function renderLegacyPage(slugPath: string, locale: Locale) {
+export async function renderLegacyPage(slugPath: string, locale: Locale) {
   switch (slugPath) {
     case '':
       return <HomeLegacyPage locale={locale} />;

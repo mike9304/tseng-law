@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { pageCopy } from '@/data/page-copy';
+import { readBuilderDynamicTemplatePublishedBlockVisibility } from '@/lib/builder/dynamic-template-drafts';
 import { buildSeoMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/locales';
 import { ServicesLegacyPageBody } from './legacy-page-bodies';
@@ -21,6 +22,11 @@ export function getServicesLegacyMetadata(locale: Locale): Metadata {
   });
 }
 
-export function ServicesLegacyPage({ locale }: { locale: Locale }) {
-  return <ServicesLegacyPageBody locale={locale} />;
+export async function ServicesLegacyPage({ locale }: { locale: Locale }) {
+  const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
+    'service-areas.list-template',
+    locale
+  );
+
+  return <ServicesLegacyPageBody locale={locale} visibleBlockIds={templateVisibility.visibleBlockIds} />;
 }

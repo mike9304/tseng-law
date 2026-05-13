@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   buildPublishedBuilderDynamicTemplateSnapshot,
   createDefaultBuilderDynamicTemplateDraftState,
+  isBuilderDynamicTemplateBlockVisible,
   normalizeBuilderDynamicTemplateDraftState,
 } from '@/lib/builder/dynamic-template-drafts';
 import { readBuilderDynamicTemplateDetail } from '@/lib/builder/dynamic-templates';
@@ -40,6 +41,21 @@ describe('builder dynamic template drafts', () => {
       visibleBlockIds: ['columns.list.seo', 'columns.list.hero'],
       selectedRecordId: detail.previewRecords[0]?.recordId ?? null,
     });
+  });
+
+  it('resolves published block visibility from visible block ids', () => {
+    expect(
+      isBuilderDynamicTemplateBlockVisible(
+        { visibleBlockIds: ['columns.list.hero', 'columns.list.repeater'] },
+        'columns.list.repeater'
+      )
+    ).toBe(true);
+    expect(
+      isBuilderDynamicTemplateBlockVisible(
+        { visibleBlockIds: ['columns.list.hero', 'columns.list.repeater'] },
+        'columns.list.seo'
+      )
+    ).toBe(false);
   });
 
   it('allows every block to be hidden and clears record selection when no samples exist', () => {

@@ -40,6 +40,14 @@ type RecordInput = {
   fields?: unknown;
 };
 
+export type BuilderCmsRecordSortDirection = 'asc' | 'desc';
+
+export interface BuilderCmsRecordListOptions {
+  query?: string;
+  sortBy?: string;
+  sortDirection?: BuilderCmsRecordSortDirection;
+}
+
 let generatedIdCounter = 0;
 
 export function defaultBuilderCmsPermissions(): BuilderCmsPermissions {
@@ -203,6 +211,46 @@ export async function updateEditableBuilderCmsRecord(
   return nextRecord;
 }
 
+export async function duplicateEditableBuilderCmsRecord(
+  siteId: string,
+  localeInput: string | null | undefined,
+  collectionId: string,
+  recordId: string,
+): Promise<BuilderCmsRecord | null> {
+  const locale = normalizeLocale(localeInput ?? undefined);
+  const site = await readSiteDocument(siteId, locale);
+  const collections = normalizeCmsCollections(site.cmsCollections);
+  const collectionIndex = collections.findIndex((candidate) => candidate.collectionId === collectionId);
+  if (collectionIndex === -1) return null;
+
+  const collection = collections[collectionIndex];
+  const source = collection.records.find((candidate) => candidate.recordId === recordId);
+  if (!source) return null;
+
+  const now = new Date().toISOString();
+  const nextRecordId = generateUniqueRecordId(collection);
+  const fields = buildDuplicateRecordFields(collection, source, nextRecordId);
+  const record: BuilderCmsRecord = {
+    recordId: nextRecordId,
+    status: 'draft',
+    locale: source.locale,
+    fields,
+    createdAt: now,
+    updatedAt: now,
+  };
+  const nextCollection = {
+    ...collection,
+    records: [...collection.records, record],
+    updatedAt: now,
+  };
+  site.cmsCollections = collections.map((candidate, candidateIndex) => (
+    candidateIndex === collectionIndex ? nextCollection : candidate
+  ));
+  site.updatedAt = now;
+  await writeSiteDocument(site);
+  return record;
+}
+
 export async function deleteEditableBuilderCmsRecord(
   siteId: string,
   localeInput: string | null | undefined,
@@ -226,6 +274,34 @@ export async function deleteEditableBuilderCmsRecord(
   site.updatedAt = now;
   await writeSiteDocument(site);
   return true;
+}
+
+export function filterAndSortBuilderCmsRecords(
+  records: BuilderCmsRecord[],
+  fields: BuilderCmsFieldDefinition[],
+  options: BuilderCmsRecordListOptions = {},
+): BuilderCmsRecord[] {
+  const query = options.query?.trim().toLowerCase() ?? '';
+  const sortBy = options.sortBy?.trim() || 'updatedAt';
+  const sortDirection = options.sortDirection === 'asc' ? 1 : -1;
+
+  const filtered = query
+    ? records.filter((record) => {
+        const searchable = [
+          record.recordId,
+          record.status,
+          record.locale ?? '',
+          ...fields.map((field) => stringifyRecordValue(record.fields[field.key])),
+        ].join(' ').toLowerCase();
+        return searchable.includes(query);
+      })
+    : records;
+
+  return [...filtered].sort((left, right) => {
+    const leftValue = sortRecordValue(left, sortBy);
+    const rightValue = sortRecordValue(right, sortBy);
+    return compareRecordValues(leftValue, rightValue) * sortDirection;
+  });
 }
 
 export function normalizeCmsCollections(input: unknown): BuilderCmsCollection[] {
@@ -552,6 +628,72 @@ function isUniqueFieldValue(
   ));
 }
 
+function buildDuplicateRecordFields(
+  collection: BuilderCmsCollection,
+  source: BuilderCmsRecord,
+  nextRecordId: string,
+): Record<string, unknown> {
+  const fields = { ...source.fields };
+  for (const field of collection.fields) {
+    if (!field.unique) continue;
+    fields[field.key] = nextUniqueFieldValue(collection, field, fields[field.key], nextRecordId);
+  }
+  return validateRecordFields(collection, fields, { recordId: nextRecordId });
+}
+
+function nextUniqueFieldValue(
+  collection: BuilderCmsCollection,
+  field: BuilderCmsFieldDefinition,
+  value: unknown,
+  nextRecordId: string,
+): unknown {
+  if (field.type === 'slug') {
+    const base = normalizeSlug(value);
+    for (let index = 1; index < 100; index += 1) {
+      const candidate = index === 1 ? `${base}-copy` : `${base}-copy-${index}`;
+      if (isUniqueFieldValue(collection, field, candidate, nextRecordId)) return candidate;
+    }
+  }
+
+  if (
+    field.type === 'text' ||
+    field.type === 'rich-text' ||
+    field.type === 'reference' ||
+    field.type === 'image' ||
+    field.type === 'url'
+  ) {
+    const base = String(value ?? field.key).trim() || field.key;
+    for (let index = 1; index < 100; index += 1) {
+      const candidate = index === 1 ? `${base} Copy` : `${base} Copy ${index}`;
+      if (isUniqueFieldValue(collection, field, candidate, nextRecordId)) return candidate;
+    }
+  }
+
+  throw new BuilderCmsValidationError(`Cannot duplicate unique field: ${field.label}`);
+}
+
+function stringifyRecordValue(value: unknown): string {
+  if (Array.isArray(value)) return value.map(stringifyRecordValue).join(' ');
+  if (value === null || value === undefined) return '';
+  return String(value);
+}
+
+function sortRecordValue(record: BuilderCmsRecord, sortBy: string): unknown {
+  if (sortBy === 'recordId') return record.recordId;
+  if (sortBy === 'status') return record.status;
+  if (sortBy === 'createdAt') return record.createdAt;
+  if (sortBy === 'updatedAt') return record.updatedAt;
+  return record.fields[sortBy];
+}
+
+function compareRecordValues(left: unknown, right: unknown): number {
+  if (typeof left === 'number' && typeof right === 'number') return left - right;
+  return stringifyRecordValue(left).localeCompare(stringifyRecordValue(right), 'en', {
+    numeric: true,
+    sensitivity: 'base',
+  });
+}
+
 function ensureUniqueCollectionId(collections: BuilderCmsCollection[], collectionId: string): void {
   if (collections.some((collection) => collection.collectionId === collectionId)) {
     throw new BuilderCmsValidationError(`Collection already exists: ${collectionId}`);
@@ -562,6 +704,14 @@ function ensureUniqueRecordId(collection: BuilderCmsCollection, recordId: string
   if (collection.records.some((record) => record.recordId === recordId)) {
     throw new BuilderCmsValidationError(`Record already exists: ${recordId}`);
   }
+}
+
+function generateUniqueRecordId(collection: BuilderCmsCollection): string {
+  let recordId = generateEntityId('record');
+  while (collection.records.some((record) => record.recordId === recordId)) {
+    recordId = generateEntityId('record');
+  }
+  return recordId;
 }
 
 function normalizeFieldType(input: unknown): BuilderCmsFieldType {

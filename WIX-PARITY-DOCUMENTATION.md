@@ -64,6 +64,27 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - CSV import/export, content revisions, media-field asset integration, search/filter/sort views, duplicate row UI.
 
+## M158-B — CMS Row Duplicate, Search, And Sort
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/cms-editable.ts` — editable CMS record duplicate 엔진, unique slug copy 방어, record search/sort helper 추가
+  - `src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/duplicate/route.ts` — guarded record duplicate API 추가
+  - `src/components/builder/cms/ContentManagerClient.tsx` — Content Manager records 영역에 검색, field/system sort, direction, Duplicate action 추가
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — duplicate slug copy와 record filter/sort 단위 테스트 추가
+  - `WIX-FULL-PRODUCT-CHECKPOINTS.md` / `WIX-PARITY-PLAN.md` / `SESSION.md` — M158-B 진행 상태 반영
+- F-layer 판정:
+  - F08 유지 🟡: create/edit/duplicate/delete/search/sort가 가능하지만 bulk edit/import/revisions는 후속.
+  - F15 🔴 → 🟡: typed filter/saved view/pagination 전에는 미완성이지만 기본 query + field/system sort가 구현됨.
+  - F16 유지 🟡: duplicate mutation route도 guard coverage에 포함.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts` ✅ (6 tests)
+  - `npm run security:builder-routes` ✅ (118 route files / 102 mutation handlers)
+  - `npx next lint --file src/lib/builder/cms-editable.ts --file src/lib/builder/__tests__/cms-editable.test.ts --file src/components/builder/cms/ContentManagerClient.tsx --file 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/duplicate/route.ts'` ✅
+- 남은 M158:
+  - CSV import/export, content revisions, media-field asset integration, typed filters/saved views/stable pagination.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

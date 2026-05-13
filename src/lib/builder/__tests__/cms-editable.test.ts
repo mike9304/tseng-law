@@ -6,6 +6,8 @@ import {
   createEditableBuilderCmsCollection,
   createEditableBuilderCmsRecord,
   deleteEditableBuilderCmsRecord,
+  duplicateEditableBuilderCmsRecord,
+  filterAndSortBuilderCmsRecords,
   listEditableBuilderCmsCollections,
   readEditableBuilderCmsCollection,
   updateEditableBuilderCmsRecord,
@@ -120,6 +122,71 @@ describe('editable builder CMS store', () => {
     await expect(
       readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
     ).resolves.toMatchObject({ recordCount: 0 });
+  });
+
+  it('duplicates editable records with unique copy slugs', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'testimonials',
+      name: 'Testimonials',
+    });
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+      fields: { title: 'First quote', slug: 'first' },
+    });
+    expect(created).not.toBeNull();
+
+    const duplicate = await duplicateEditableBuilderCmsRecord(
+      'test-site',
+      'ko',
+      'testimonials',
+      created!.recordId,
+    );
+    expect(duplicate?.recordId).not.toBe(created!.recordId);
+    expect(duplicate?.status).toBe('draft');
+    expect(duplicate?.fields).toMatchObject({ title: 'First quote', slug: 'first-copy' });
+
+    const secondDuplicate = await duplicateEditableBuilderCmsRecord(
+      'test-site',
+      'ko',
+      'testimonials',
+      created!.recordId,
+    );
+    expect(secondDuplicate?.fields).toMatchObject({ slug: 'first-copy-2' });
+
+    await expect(
+      readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
+    ).resolves.toMatchObject({ recordCount: 3 });
+  });
+
+  it('filters and sorts records by searchable field values', async () => {
+    const detail = await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'testimonials',
+      name: 'Testimonials',
+    });
+    await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+      fields: { title: 'Beta quote', slug: 'beta' },
+    });
+    await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+      fields: { title: 'Alpha quote', slug: 'alpha' },
+    });
+    await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+      fields: { title: 'Gamma quote', slug: 'gamma' },
+    });
+    const latest = await readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials');
+    expect(latest).not.toBeNull();
+
+    expect(
+      filterAndSortBuilderCmsRecords(latest!.records, detail.fields, {
+        query: 'alpha',
+        sortBy: 'title',
+        sortDirection: 'asc',
+      }).map((record) => record.fields.title),
+    ).toEqual(['Alpha quote']);
+    expect(
+      filterAndSortBuilderCmsRecords(latest!.records, detail.fields, {
+        sortBy: 'title',
+        sortDirection: 'desc',
+      }).map((record) => record.fields.title),
+    ).toEqual(['Gamma quote', 'Beta quote', 'Alpha quote']);
   });
 
   it('reserves static source collection ids', async () => {

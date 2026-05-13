@@ -6408,3 +6408,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run lint` ⚠️ 기존 non-CMS lint errors로 blocked: `SandboxCatalogPanel.tsx` unused constants, dirty heading file unused import.
 - 다음 후보:
   - M158-B: CSV import/export + search/filter/sort + duplicate row UI 또는 content revisions.
+
+## 2026-05-13 Codex /goal M158-B CMS row duplicate/search/sort
+
+- editable CMS record duplicate 엔진을 추가했다. 복제된 row는 `draft`로 생성되고, unique slug는 `first-copy`, `first-copy-2`처럼 충돌 없이 재작성된다.
+- `/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/duplicate` POST route를 추가하고 `edit-pages` guard coverage에 포함했다.
+- `/${locale}/admin-builder/cms` Content Manager records 영역에 검색 입력, system/field sort, asc/desc direction, Duplicate action을 추가했다.
+- 체크포인트 상태:
+  - F08 유지 🟡: create/edit/duplicate/delete/search/sort 가능. bulk edit/import/revisions는 후속.
+  - F15 🔴 → 🟡: 기본 query + field/system sort 구현. typed filters/saved views/pagination은 후속.
+  - F16 유지 🟡: 118 route files / 102 mutation handlers guard coverage 통과.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts` ✅ (6 tests)
+  - `npm run security:builder-routes` ✅
+  - `npx next lint --file ...CMS M158-B changed files...` ✅
+- 다음 후보:
+  - M158-C: CSV import/export 또는 content revisions/media field asset integration.

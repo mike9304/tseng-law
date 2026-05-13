@@ -24,6 +24,13 @@ type ApiCollectionDetail = {
   issues?: string[];
 };
 
+type ApiRecordMutation = {
+  ok: boolean;
+  record?: BuilderCmsRecord;
+  error?: string;
+  issues?: string[];
+};
+
 type ContentManagerClientProps = {
   locale: Locale;
   siteId: string;
@@ -32,6 +39,7 @@ type ContentManagerClientProps = {
 };
 
 type RecordFormState = Record<string, string | boolean>;
+type RecordSortDirection = 'asc' | 'desc';
 
 const panelStyle = {
   display: 'grid',
@@ -76,6 +84,9 @@ export default function ContentManagerClient({
   const [detail, setDetail] = useState<BuilderCmsCollectionDetail | null>(null);
   const [recordForm, setRecordForm] = useState<RecordFormState>({});
   const [editingRecordId, setEditingRecordId] = useState<string | null>(null);
+  const [recordQuery, setRecordQuery] = useState('');
+  const [recordSortBy, setRecordSortBy] = useState('updatedAt');
+  const [recordSortDirection, setRecordSortDirection] = useState<RecordSortDirection>('desc');
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -84,6 +95,22 @@ export default function ContentManagerClient({
     () => collections.find((collection) => collection.collectionId === selectedCollectionId) ?? null,
     [collections, selectedCollectionId],
   );
+
+  const effectiveRecordSortBy = useMemo(() => {
+    if (!detail) return recordSortBy;
+    const isSystemSort = systemRecordSortOptions.some((option) => option.value === recordSortBy);
+    const isFieldSort = detail.fields.some((field) => field.key === recordSortBy);
+    return isSystemSort || isFieldSort ? recordSortBy : 'updatedAt';
+  }, [detail, recordSortBy]);
+
+  const visibleRecords = useMemo(() => {
+    if (!detail) return [];
+    return filterAndSortRecords(detail.records, detail.fields, {
+      query: recordQuery,
+      sortBy: effectiveRecordSortBy,
+      sortDirection: recordSortDirection,
+    });
+  }, [detail, effectiveRecordSortBy, recordQuery, recordSortDirection]);
 
   async function refreshCollections(nextSelectedId?: string) {
     const response = await fetch(`${apiBase(siteId)}?locale=${locale}`, { credentials: 'same-origin' });
@@ -225,6 +252,30 @@ export default function ContentManagerClient({
       setMessage('Record deleted.');
     } catch (deleteError) {
       setError(deleteError instanceof Error ? deleteError.message : 'Failed to delete record.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function duplicateRecord(recordId: string) {
+    if (!detail) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(
+        `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/${encodeURIComponent(recordId)}/duplicate?locale=${locale}`,
+        { method: 'POST', credentials: 'same-origin' },
+      );
+      const result = await response.json() as ApiRecordMutation;
+      if (!response.ok || !result.ok || !result.record) {
+        throw new Error(result.issues?.join('\n') || result.error || 'Failed to duplicate record.');
+      }
+      await loadDetail(detail.collectionId);
+      await refreshCollections(detail.collectionId);
+      setMessage('Record duplicated.');
+    } catch (duplicateError) {
+      setError(duplicateError instanceof Error ? duplicateError.message : 'Failed to duplicate record.');
     } finally {
       setBusy(false);
     }
@@ -455,8 +506,57 @@ export default function ContentManagerClient({
 
             <section className="builder-preview-inspector-card">
               <h2>Records</h2>
+              <div style={{ ...formGridStyle, marginBottom: 12 }}>
+                <label style={labelStyle}>
+                  Search
+                  <input
+                    type="search"
+                    style={inputStyle}
+                    value={recordQuery}
+                    placeholder="Record ID, status, value"
+                    disabled={busy}
+                    onChange={(event) => setRecordQuery(event.target.value)}
+                  />
+                </label>
+                <label style={labelStyle}>
+                  Sort by
+                  <select
+                    style={inputStyle}
+                    value={effectiveRecordSortBy}
+                    disabled={busy}
+                    onChange={(event) => setRecordSortBy(event.target.value)}
+                  >
+                    <optgroup label="Record">
+                      {systemRecordSortOptions.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
+                    </optgroup>
+                    <optgroup label="Fields">
+                      {detail.fields.map((field) => (
+                        <option key={field.fieldId} value={field.key}>
+                          {field.label}
+                        </option>
+                      ))}
+                    </optgroup>
+                  </select>
+                </label>
+                <label style={labelStyle}>
+                  Direction
+                  <select
+                    style={inputStyle}
+                    value={recordSortDirection}
+                    disabled={busy}
+                    onChange={(event) => setRecordSortDirection(event.target.value === 'asc' ? 'asc' : 'desc')}
+                  >
+                    <option value="desc">Descending</option>
+                    <option value="asc">Ascending</option>
+                  </select>
+                </label>
+              </div>
               <div className="builder-dashboard-page-list">
-                {detail.records.map((record) => (
+                {visibleRecords.map((record) => (
                   <article key={record.recordId} className="builder-dashboard-page-card">
                     <div className="builder-dashboard-page-head">
                       <div>
@@ -484,6 +584,14 @@ export default function ContentManagerClient({
                       <button
                         type="button"
                         className="builder-action-btn"
+                        onClick={() => void duplicateRecord(record.recordId)}
+                        disabled={busy}
+                      >
+                        Duplicate
+                      </button>
+                      <button
+                        type="button"
+                        className="builder-action-btn"
                         onClick={() => void deleteRecord(record.recordId)}
                         disabled={busy}
                       >
@@ -497,6 +605,16 @@ export default function ContentManagerClient({
                     <div className="builder-dashboard-page-head">
                       <div>
                         <strong>No records</strong>
+                        <span>{detail.collectionId}</span>
+                      </div>
+                    </div>
+                  </article>
+                ) : null}
+                {detail.records.length > 0 && visibleRecords.length === 0 ? (
+                  <article className="builder-dashboard-page-card">
+                    <div className="builder-dashboard-page-head">
+                      <div>
+                        <strong>No matching records</strong>
                         <span>{detail.collectionId}</span>
                       </div>
                     </div>
@@ -582,6 +700,13 @@ function apiBase(siteId: string) {
   return `/api/builder/sites/${encodeURIComponent(siteId)}/collections`;
 }
 
+const systemRecordSortOptions = [
+  { value: 'updatedAt', label: 'Updated' },
+  { value: 'createdAt', label: 'Created' },
+  { value: 'recordId', label: 'Record ID' },
+  { value: 'status', label: 'Status' },
+];
+
 function createEmptyRecordForm(fields: BuilderCmsFieldDefinition[]): RecordFormState {
   return Object.fromEntries(fields.map((field) => [field.key, '']));
 }
@@ -603,4 +728,44 @@ function formatValue(value: unknown): string {
   if (typeof value === 'boolean') return value ? 'true' : 'false';
   if (value === undefined || value === null || value === '') return '-';
   return String(value);
+}
+
+function filterAndSortRecords(
+  records: BuilderCmsRecord[],
+  fields: BuilderCmsFieldDefinition[],
+  options: { query: string; sortBy: string; sortDirection: RecordSortDirection },
+): BuilderCmsRecord[] {
+  const query = options.query.trim().toLowerCase();
+  const filtered = query
+    ? records.filter((record) => {
+        const searchable = [
+          record.recordId,
+          record.status,
+          record.locale ?? '',
+          ...fields.map((field) => formatValue(record.fields[field.key])),
+        ].join(' ').toLowerCase();
+        return searchable.includes(query);
+      })
+    : records;
+
+  const direction = options.sortDirection === 'asc' ? 1 : -1;
+  return [...filtered].sort((left, right) => (
+    compareRecordValues(sortRecordValue(left, options.sortBy), sortRecordValue(right, options.sortBy)) * direction
+  ));
+}
+
+function sortRecordValue(record: BuilderCmsRecord, sortBy: string): unknown {
+  if (sortBy === 'recordId') return record.recordId;
+  if (sortBy === 'status') return record.status;
+  if (sortBy === 'createdAt') return record.createdAt;
+  if (sortBy === 'updatedAt') return record.updatedAt;
+  return record.fields[sortBy];
+}
+
+function compareRecordValues(left: unknown, right: unknown): number {
+  if (typeof left === 'number' && typeof right === 'number') return left - right;
+  return formatValue(left).localeCompare(formatValue(right), 'en', {
+    numeric: true,
+    sensitivity: 'base',
+  });
 }

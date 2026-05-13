@@ -6154,3 +6154,15 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Add/Design page template showroom, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence.
 - 다음 후보:
   - `SandboxCatalogPanel.tsx`의 반복 widget section render block을 별도 subview/helper로 분리하거나 `SeoPanel.tsx`의 form section split을 진행한다.
+
+## 2026-05-13 Codex /goal M141 SandboxCatalogPanel widget section split
+
+- `SandboxCatalogPanel.tsx`의 text/media 계열 9개 widget pack accordion + grid 반복 렌더링을 `SandboxCatalogWidgetSection.tsx` generic 컴포넌트로 분리했다.
+- `SandboxCatalogPanel.tsx`는 category state, filtering, insert handler, page template/search/section template orchestration 중심으로 남겼고, LOC는 1239에서 906으로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "opens the full page template showroom from the Add panel|opens the full page template showroom from the Design panel|lets users click a section chip|keeps inserted service template text visible" --project=chromium-builder --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Add/Design page template showroom, section chip click, 주요업무 템플릿 nested node selection/text persistence.
+- 다음 후보:
+  - `SeoPanel.tsx` 또는 `SiteSettingsModal.tsx`에서 독립 form section/component를 선별해 같은 방식으로 분리한다.

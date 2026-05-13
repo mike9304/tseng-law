@@ -17,6 +17,7 @@ import { BuiltInSectionsPanel } from '@/components/builder/sections/BuiltInSecti
 import SavedSectionsPanel from '@/components/builder/sections/SavedSectionsPanel';
 import type { Locale } from '@/lib/locales';
 import TemplateThumbnailRenderer from './TemplateThumbnailRenderer';
+import { SandboxCatalogWidgetSection } from './SandboxCatalogWidgetSection';
 import {
   DECORATIVE_WIDGET_PRESETS,
   GALLERY_WIDGET_PRESETS,
@@ -188,6 +189,13 @@ export default function SandboxCatalogPanel({
   );
   const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length + DECORATIVE_WIDGET_PRESETS.length + totalBuiltInSectionTemplateCount + pageTemplateCatalog.length;
   const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length + visibleDecorativeWidgetPresets.length + visibleBuiltInSectionTemplates.length + matchingPageTemplates.length;
+
+  function toggleCategory(categoryId: string, defaultOpen = true) {
+    setCategoryOpen((current) => ({
+      ...current,
+      [categoryId]: !(current[categoryId] ?? defaultOpen),
+    }));
+  }
 
   function handleQuickAdd(kind: BuilderCanvasNodeKind) {
     const sequence = addSequenceRef.current;
@@ -640,455 +648,114 @@ export default function SandboxCatalogPanel({
           </div>
         ) : null}
 
-        {visibleTextWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['text-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'text-widgets': !(current['text-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>T</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Text widget pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    H1-H6, rich text, path, columns, quote, list, marquee · {visibleTextWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['text-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
+        <SandboxCatalogWidgetSection
+          categoryId="text-widgets"
+          icon="T"
+          name="Text widget pack"
+          hint={`H1-H6, rich text, path, columns, quote, list, marquee · ${visibleTextWidgetPresets.length}`}
+          presets={visibleTextWidgetPresets}
+          isOpen={categoryOpen['text-widgets'] ?? true}
+          dataAttribute="data-builder-text-widget-preset"
+          onAdd={handleAddTextWidgetPreset}
+          onToggle={() => toggleCategory('text-widgets')}
+          variant="text"
+        />
 
-            {(categoryOpen['text-widgets'] ?? true) ? (
-              <div className={styles.textWidgetGrid}>
-                {visibleTextWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.textWidgetPresetButton}
-                    data-builder-text-widget-preset={preset.id}
-                    onClick={() => handleAddTextWidgetPreset(preset)}
-                  >
-                    <span className={styles.textWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.textWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
+        <SandboxCatalogWidgetSection
+          categoryId="media-widgets"
+          icon="◩"
+          name="Media widget pack"
+          hint={`lightbox, hotspots, compare, video, audio, icons · ${visibleMediaWidgetPresets.length}`}
+          presets={visibleMediaWidgetPresets}
+          isOpen={categoryOpen['media-widgets'] ?? true}
+          dataAttribute="data-builder-media-widget-preset"
+          onAdd={handleAddMediaWidgetPreset}
+          onToggle={() => toggleCategory('media-widgets')}
+        />
 
-        {visibleMediaWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['media-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'media-widgets': !(current['media-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>◩</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Media widget pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    lightbox, hotspots, compare, video, audio, icons · {visibleMediaWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['media-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
+        <SandboxCatalogWidgetSection
+          categoryId="gallery-widgets"
+          icon="▧"
+          name="Gallery widget pack"
+          hint={`grid, masonry, slider, slideshow, thumbnail, pro, caption, filter · ${visibleGalleryWidgetPresets.length}`}
+          presets={visibleGalleryWidgetPresets}
+          isOpen={categoryOpen['gallery-widgets'] ?? true}
+          dataAttribute="data-builder-gallery-widget-preset"
+          onAdd={handleAddGalleryWidgetPreset}
+          onToggle={() => toggleCategory('gallery-widgets')}
+        />
 
-            {(categoryOpen['media-widgets'] ?? true) ? (
-              <div className={styles.mediaWidgetGrid}>
-                {visibleMediaWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.mediaWidgetPresetButton}
-                    data-builder-media-widget-preset={preset.id}
-                    onClick={() => handleAddMediaWidgetPreset(preset)}
-                  >
-                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.mediaWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
+        <SandboxCatalogWidgetSection
+          categoryId="layout-widgets"
+          icon="▦"
+          name="Layout widget pack"
+          hint={`strip, box, columns, repeater, tabs, accordion, slideshow, hover · ${visibleLayoutWidgetPresets.length}`}
+          presets={visibleLayoutWidgetPresets}
+          isOpen={categoryOpen['layout-widgets'] ?? true}
+          dataAttribute="data-builder-layout-widget-preset"
+          onAdd={handleAddLayoutWidgetPreset}
+          onToggle={() => toggleCategory('layout-widgets')}
+        />
 
-        {visibleGalleryWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['gallery-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'gallery-widgets': !(current['gallery-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>▧</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Gallery widget pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    grid, masonry, slider, slideshow, thumbnail, pro, caption, filter · {visibleGalleryWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['gallery-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
+        <SandboxCatalogWidgetSection
+          categoryId="interactive-widgets"
+          icon="◉"
+          name="Interactive widget pack"
+          hint={`countdown, progress, rating, notification, back-to-top · ${visibleInteractiveWidgetPresets.length}`}
+          presets={visibleInteractiveWidgetPresets}
+          isOpen={categoryOpen['interactive-widgets'] ?? true}
+          dataAttribute="data-builder-interactive-widget-preset"
+          onAdd={handleAddInteractiveWidgetPreset}
+          onToggle={() => toggleCategory('interactive-widgets')}
+        />
 
-            {(categoryOpen['gallery-widgets'] ?? true) ? (
-              <div className={styles.mediaWidgetGrid}>
-                {visibleGalleryWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.mediaWidgetPresetButton}
-                    data-builder-gallery-widget-preset={preset.id}
-                    onClick={() => handleAddGalleryWidgetPreset(preset)}
-                  >
-                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.mediaWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
+        <SandboxCatalogWidgetSection
+          categoryId="navigation-widgets"
+          icon="≡"
+          name="Navigation widget pack"
+          hint={`menu, dropdown, mega, anchor, breadcrumbs · ${visibleNavigationWidgetPresets.length}`}
+          presets={visibleNavigationWidgetPresets}
+          isOpen={categoryOpen['navigation-widgets'] ?? true}
+          dataAttribute="data-builder-navigation-widget-preset"
+          onAdd={handleAddNavigationWidgetPreset}
+          onToggle={() => toggleCategory('navigation-widgets')}
+        />
 
-        {visibleLayoutWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['layout-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'layout-widgets': !(current['layout-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>▦</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Layout widget pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    strip, box, columns, repeater, tabs, accordion, slideshow, hover · {visibleLayoutWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['layout-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
+        <SandboxCatalogWidgetSection
+          categoryId="social-widgets"
+          icon="@"
+          name="Social widget pack"
+          hint={`social-bar, share, embed, floating chat · ${visibleSocialWidgetPresets.length}`}
+          presets={visibleSocialWidgetPresets}
+          isOpen={categoryOpen['social-widgets'] ?? true}
+          dataAttribute="data-builder-social-widget-preset"
+          onAdd={handleAddSocialWidgetPreset}
+          onToggle={() => toggleCategory('social-widgets')}
+        />
 
-            {(categoryOpen['layout-widgets'] ?? true) ? (
-              <div className={styles.mediaWidgetGrid}>
-                {visibleLayoutWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.mediaWidgetPresetButton}
-                    data-builder-layout-widget-preset={preset.id}
-                    onClick={() => handleAddLayoutWidgetPreset(preset)}
-                  >
-                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.mediaWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
+        <SandboxCatalogWidgetSection
+          categoryId="location-widgets"
+          icon="📍"
+          name="Maps & Location pack"
+          hint={`address, hours, multi-map · ${visibleLocationWidgetPresets.length}`}
+          presets={visibleLocationWidgetPresets}
+          isOpen={categoryOpen['location-widgets'] ?? true}
+          dataAttribute="data-builder-location-widget-preset"
+          onAdd={handleAddLocationWidgetPreset}
+          onToggle={() => toggleCategory('location-widgets')}
+        />
 
-        {visibleInteractiveWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['interactive-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'interactive-widgets': !(current['interactive-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>◉</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Interactive widget pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    countdown, progress, rating, notification, back-to-top · {visibleInteractiveWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['interactive-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
-
-            {(categoryOpen['interactive-widgets'] ?? true) ? (
-              <div className={styles.mediaWidgetGrid}>
-                {visibleInteractiveWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.mediaWidgetPresetButton}
-                    data-builder-interactive-widget-preset={preset.id}
-                    onClick={() => handleAddInteractiveWidgetPreset(preset)}
-                  >
-                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.mediaWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
-
-        {visibleNavigationWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['navigation-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'navigation-widgets': !(current['navigation-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>≡</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Navigation widget pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    menu, dropdown, mega, anchor, breadcrumbs · {visibleNavigationWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['navigation-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
-
-            {(categoryOpen['navigation-widgets'] ?? true) ? (
-              <div className={styles.mediaWidgetGrid}>
-                {visibleNavigationWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.mediaWidgetPresetButton}
-                    data-builder-navigation-widget-preset={preset.id}
-                    onClick={() => handleAddNavigationWidgetPreset(preset)}
-                  >
-                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.mediaWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
-
-        {visibleSocialWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['social-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'social-widgets': !(current['social-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>@</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Social widget pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    social-bar, share, embed, floating chat · {visibleSocialWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['social-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
-
-            {(categoryOpen['social-widgets'] ?? true) ? (
-              <div className={styles.mediaWidgetGrid}>
-                {visibleSocialWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.mediaWidgetPresetButton}
-                    data-builder-social-widget-preset={preset.id}
-                    onClick={() => handleAddSocialWidgetPreset(preset)}
-                  >
-                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.mediaWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
-
-        {visibleLocationWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['location-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'location-widgets': !(current['location-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>📍</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Maps &amp; Location pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    address, hours, multi-map · {visibleLocationWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['location-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
-
-            {(categoryOpen['location-widgets'] ?? true) ? (
-              <div className={styles.mediaWidgetGrid}>
-                {visibleLocationWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.mediaWidgetPresetButton}
-                    data-builder-location-widget-preset={preset.id}
-                    onClick={() => handleAddLocationWidgetPreset(preset)}
-                  >
-                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.mediaWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
-
-        {visibleDecorativeWidgetPresets.length > 0 ? (
-          <div className={styles.catalogCategorySection}>
-            <button
-              type="button"
-              className={`${styles.catalogCategoryButton} ${
-                (categoryOpen['decorative-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
-              }`}
-              onClick={() => {
-                setCategoryOpen((current) => ({
-                  ...current,
-                  'decorative-widgets': !(current['decorative-widgets'] ?? true),
-                }));
-              }}
-            >
-              <span className={styles.catalogCategoryMeta}>
-                <span className={styles.catalogCategoryIcon}>◆</span>
-                <span className={styles.catalogCategoryTitle}>
-                  <span className={styles.catalogCategoryName}>Decorative widget pack</span>
-                  <span className={styles.catalogCategoryHint}>
-                    shape, pattern, parallax, frame, sticker · {visibleDecorativeWidgetPresets.length}
-                  </span>
-                </span>
-              </span>
-              <span className={styles.catalogCategoryToggle}>
-                {(categoryOpen['decorative-widgets'] ?? true) ? '−' : '+'}
-              </span>
-            </button>
-
-            {(categoryOpen['decorative-widgets'] ?? true) ? (
-              <div className={styles.mediaWidgetGrid}>
-                {visibleDecorativeWidgetPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    type="button"
-                    className={styles.mediaWidgetPresetButton}
-                    data-builder-decorative-widget-preset={preset.id}
-                    onClick={() => handleAddDecorativeWidgetPreset(preset)}
-                  >
-                    <span className={styles.mediaWidgetPresetIcon}>{preset.icon}</span>
-                    <span className={styles.mediaWidgetPresetCopy}>
-                      <strong>{preset.label}</strong>
-                      <small>{preset.description}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
+        <SandboxCatalogWidgetSection
+          categoryId="decorative-widgets"
+          icon="◆"
+          name="Decorative widget pack"
+          hint={`shape, pattern, parallax, frame, sticker · ${visibleDecorativeWidgetPresets.length}`}
+          presets={visibleDecorativeWidgetPresets}
+          isOpen={categoryOpen['decorative-widgets'] ?? true}
+          dataAttribute="data-builder-decorative-widget-preset"
+          onAdd={handleAddDecorativeWidgetPreset}
+          onToggle={() => toggleCategory('decorative-widgets')}
+        />
 
         {/* Built-in section templates — normalized section snapshots. */}
         {(!normalizedQuery || visibleBuiltInSectionTemplates.length > 0) ? (

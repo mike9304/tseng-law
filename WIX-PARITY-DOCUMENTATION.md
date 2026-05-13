@@ -2234,3 +2234,13 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W40/W98/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. search overlay tablist가 mouse-only 상태에 머물지 않도록 keyboard evidence를 확보했고, 기존 published menu-bar hydration timing 회귀도 테스트 안정성으로 보강했다.
+
+## M104 — Editor click/template regression sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — 최신 검증 증거만 기록했다. 제품 코드는 변경하지 않았다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (15 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W22/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 사용자가 반복 제보한 주요업무 텍스트 사라짐, 노드 클릭 이동, 칼럼/이미지 클릭 백지화, 템플릿 뒤로가기/생성/중복 slug 회귀를 최신 코드에서 다시 통과시켰다.

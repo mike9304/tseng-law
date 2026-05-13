@@ -5623,3 +5623,19 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - editor click regression suites를 최신 상태에서 재실행하거나 remaining public widgets의 keyboard/a11y evidence를 계속 보강한다.
+
+## 2026-05-13 Codex /goal M104 Editor click/template regression sweep
+
+- 제품 코드는 변경하지 않고, 사용자가 반복 제보한 editor click/template 계열을 최신 코드로 재검증했다.
+- 재실행 범위:
+  - `tests/builder-editor/node-click-stability.playwright.ts`
+  - `tests/builder-editor/section-template-click.playwright.ts`
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/section-template-click.playwright.ts --workers=1` ✅ (15 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - pointer jitter click으로 주요 서비스 노드가 이동하지 않음.
+  - 칼럼 아카이브/이미지 클릭 뒤 editor canvas가 백지화되지 않음.
+  - FAQ answer와 주요업무/service template text가 다른 노드 선택, autosave/reload 후에도 visible.
+  - page template showroom, preview, slug prompt, duplicate slug retry/back path, locale link normalization, auto navigation rename/delete가 최신 코드에서 통과.
+- 다음 후보:
+  - 남은 public widget keyboard evidence 또는 editor modal/drawer 최신 회귀 sweep을 계속 진행한다.

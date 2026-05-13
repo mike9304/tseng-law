@@ -2452,3 +2452,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/cross-tab-delete-race.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W09/W18/W22/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. 주요업무/섹션 템플릿 클릭, 섹션 목록 뒤로가기, 전체 페이지 템플릿 쇼룸, 템플릿 삽입 후 노드 선택 전환 텍스트 가시성, canvas node click stability, cross-tab deletion race를 최신 코드에서 통과시켰다.
+
+## M120 — Shared node index hot-path cleanup
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/store.ts` — store가 이미 유지하는 `state.nodesById`를 enter/exit group, paste, group/ungroup, addNode/addNodes, reorder, container move 경로에서 재사용하게 했다. 액션마다 `getCanvasNodesById(state.document.nodes)`를 다시 호출하던 hot-path 중복을 제거했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M120 검증 증거를 기록했다.
+- 의사결정:
+  - `getCanvasNodesById()` WeakMap 캐시는 유지한다. store 밖 또는 새 document node array를 처리하는 경로에는 여전히 유효한 안전장치다.
+  - schema/UI 변경 없이 감사 Critical #1의 남은 store 내부 인덱스 재생성만 좁게 닫았다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (2 files, 8 tests passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "lets users click a section chip|keeps inserted service template text visible while selecting nested nodes" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. canvas selection/layer context menu, node click stability, FAQ reveal persistence, section template insert/select 경로를 최신 shared index store 코드에서 통과시켰다.

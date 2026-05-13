@@ -714,7 +714,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   enterGroup: (groupId) =>
     set((state) => {
       if (!state.document) return state;
-      const groupNode = state.document.nodes.find((node) => node.id === groupId);
+      const groupNode = state.nodesById.get(groupId);
       if (!groupNode || (!isContainerLikeKind(groupNode.kind) && groupNode.kind !== 'composite')) {
         return state;
       }
@@ -727,7 +727,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   exitGroup: () =>
     set((state) => {
       if (!state.document || !state.activeGroupId) return state;
-      const groupNode = state.document.nodes.find((node) => node.id === state.activeGroupId);
+      const groupNode = state.nodesById.get(state.activeGroupId);
       return {
         activeGroupId: null,
         selectedNodeId: groupNode?.id ?? null,
@@ -861,10 +861,10 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   pasteClipboardNodes: () =>
     set((state) => {
       if (!state.document) return state;
+      const nodesById = state.nodesById;
       const activeGroupNode = state.activeGroupId
-        ? state.document.nodes.find((node) => node.id === state.activeGroupId) ?? null
+        ? nodesById.get(state.activeGroupId) ?? null
         : null;
-      const nodesById = getCanvasNodesById(state.document.nodes);
       const activeGroupRect = activeGroupNode
         ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
         : null;
@@ -988,7 +988,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       const sharedParentId = targetNodes[0]!.parentId ?? null;
       const allShareParent = targetNodes.every((node) => (node.parentId ?? null) === sharedParentId);
       if (!allShareParent) return state;
-      const nodesById = getCanvasNodesById(state.document.nodes);
+      const nodesById = state.nodesById;
       const absoluteRects = new Map<string, CanvasNodeRect>();
       let minX = Number.POSITIVE_INFINITY;
       let minY = Number.POSITIVE_INFINITY;
@@ -1062,7 +1062,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
       if (!groupNode || groupNode.kind !== 'container') return state;
       const childIds = state.childrenMap[targetId] ?? [];
       if (childIds.length === 0) return state;
-      const nodesById = getCanvasNodesById(state.document.nodes);
+      const nodesById = state.nodesById;
       const groupAbsoluteRect = resolveCanvasNodeAbsoluteRect(groupNode, nodesById);
       const groupParentNode = groupNode.parentId ? nodesById.get(groupNode.parentId) ?? null : null;
       const groupParentAbsoluteRect = groupParentNode
@@ -1120,10 +1120,10 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   addNode: (node) =>
     set((state) => {
       if (!state.document) return state;
+      const nodesById = state.nodesById;
       const activeGroupNode = state.activeGroupId
-        ? state.document.nodes.find((candidate) => candidate.id === state.activeGroupId) ?? null
+        ? nodesById.get(state.activeGroupId) ?? null
         : null;
-      const nodesById = getCanvasNodesById(state.document.nodes);
       const activeGroupRect = activeGroupNode
         ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
         : null;
@@ -1141,10 +1141,10 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
     set((state) => {
       if (!state.document || incomingNodes.length === 0) return state;
       const incomingIds = new Set(incomingNodes.map((n) => n.id));
+      const nodesById = state.nodesById;
       const activeGroupNode = state.activeGroupId
-        ? state.document.nodes.find((candidate) => candidate.id === state.activeGroupId) ?? null
+        ? nodesById.get(state.activeGroupId) ?? null
         : null;
-      const nodesById = getCanvasNodesById(state.document.nodes);
       const activeGroupRect = activeGroupNode
         ? resolveCanvasNodeAbsoluteRect(activeGroupNode, nodesById)
         : null;
@@ -1410,7 +1410,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   reorderNodes: (orderedIds) =>
     set((state) => {
       if (!state.document) return state;
-      const nodeMap = new Map(getCanvasNodesById(state.document.nodes));
+      const nodeMap = new Map(state.nodesById);
       const reordered: BuilderCanvasNode[] = [];
       for (const id of orderedIds) {
         const node = nodeMap.get(id);
@@ -1432,7 +1432,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   moveNodeIntoContainer: (nodeId, containerId) =>
     set((state) => {
       if (!state.document) return state;
-      const nodesById = getCanvasNodesById(state.document.nodes);
+      const nodesById = state.nodesById;
       const node = nodesById.get(nodeId);
       const container = nodesById.get(containerId);
       if (!node || !container || !isContainerLikeKind(container.kind) || nodeId === containerId) return state;
@@ -1456,7 +1456,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
   moveNodeOutOfContainer: (nodeId) =>
     set((state) => {
       if (!state.document) return state;
-      const nodesById = getCanvasNodesById(state.document.nodes);
+      const nodesById = state.nodesById;
       const node = nodesById.get(nodeId);
       if (!node || !node.parentId) return state;
       const absoluteNodeRect = resolveCanvasNodeAbsoluteRect(node, nodesById);

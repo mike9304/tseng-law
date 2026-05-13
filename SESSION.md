@@ -5867,3 +5867,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - archive/image click safety, FAQ revealed answer persistence, pointer jitter, cross-tab delete race.
 - 다음 후보:
   - 남은 booking public endpoint rate-limit / OAuth state / webhook URL guard 보안 diff를 별도 M120으로 검증/정리한다.
+
+## 2026-05-13 Codex /goal M120 Shared node index hot-path cleanup
+
+- `79ba046 Security: P1 follow-ups + unit tests for new guards`가 이미 booking public rate-limit / OAuth state / webhook URL guard 범위를 커밋한 것을 확인해, 중복 작업 대신 감사 Critical #1의 남은 store 내부 인덱스 재생성 제거로 전환했다.
+- `useBuilderCanvasStore`는 이미 `childrenMap`과 `nodesById`를 document 교체/변경 시 동기화한다. 이번 M120은 enter/exit group, paste, group/ungroup, addNode/addNodes, reorder, container move 경로에서 액션마다 새 lookup을 요청하지 않고 `state.nodesById`를 재사용하게 했다.
+- `getCanvasNodesById()` WeakMap 캐시는 유지했다. store 바깥 경로와 새 node array를 받는 경로에는 계속 유효하다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (2 files, 8 tests)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "lets users click a section chip|keeps inserted service template text visible while selecting nested nodes" --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - node click jitter, archive/image click, FAQ reveal persistence, layer-selected real right-click, section chip click, inserted 주요업무 템플릿 텍스트 visibility.
+- 다음 후보:
+  - 감사 Critical #2/#3 쪽으로 이어가 transient update normalization과 sameDocumentContent 비용을 더 줄인다.

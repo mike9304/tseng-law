@@ -121,3 +121,4 @@
 | M117 | QA    | Public interactions/visual sweep | W23,W40,W71,W72,W98,W99,W100,W216,W225 | 1h | M116 | 🟡 public interactions 15 + visual baseline 1 passed / 사용자 QA 대기 |
 | M118 | QA    | Asset/forms security hardening | W22,W216 | 1h | M117 | 🟡 asset delete guard + forms retry/rate limit tests 53 passed + E2E 1 passed / 사용자 QA 대기 |
 | M119 | QA    | Section template text/click stability | W09,W18,W22,W216 | 1h | M118 | 🟡 section templates 3 + node/race 4 + persistence unit 13 passed / 사용자 QA 대기 |
+| M120 | Perf  | Shared node index hot-path cleanup | W216,W225 | 1h | M119 | 🟡 store/index unit 8 + click/template E2E 6 passed / 사용자 QA 대기 |

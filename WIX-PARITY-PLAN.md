@@ -127,3 +127,4 @@
 | M123 | Sec   | Public form webhook SSRF guard | W22,W216 | 1h | M118 | 🟡 forms/webhook/url-guard unit 55 passed / 사용자 QA 대기 |
 | M124 | QA    | Save section modal cleanup | W84,W216,W225 | 1h | M123 | 🟡 section unit 33 + focus E2E 1 passed / 사용자 QA 대기 |
 | M125 | Sec   | Render-site/file URL safeHref sweep | W22,W98,W216 | 1h | M124 | 🟡 links/forms unit 23 + cookie E2E 1 passed / 사용자 QA 대기 |
+| M126 | Sec   | Marketing template preview URL guard | W216 | 1h | M125 | 🟡 marketing preview/link unit 18 passed / 사용자 QA 대기 |

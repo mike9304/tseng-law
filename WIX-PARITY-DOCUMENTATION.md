@@ -2546,3 +2546,16 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/published-interactions.playwright.ts -g "cookie consent|inline search|menu-bar" --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W22/W98/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. public submit file URL validation, render-site unsafe scheme filtering, cookie consent focus path를 latest code에서 통과시켰다.
+
+## M126 — Marketing template preview URL guard
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/marketing/TemplateEditor.tsx` — save 전 admin preview HTML이 user-typed `javascript:`/`data:` button/image URL을 live DOM href/src로 반사하지 않도록 `previewUrl()`을 적용했다.
+  - `src/components/builder/marketing/__tests__/TemplateEditor.test.tsx` — unsafe button href/image src가 preview markup에서 `#`로 대체되는 regression test를 추가했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M126 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/components/builder/marketing/__tests__/TemplateEditor.test.tsx src/lib/builder/__tests__/links.test.ts` ✅ (2 files, 18 tests passed)
+- W 판정:
+  - W216은 `자동검증 통과 / 사용자 QA 대기` 유지. marketing template editor preview DOM URL guard를 latest code에서 통과시켰다.

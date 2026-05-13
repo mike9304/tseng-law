@@ -5953,3 +5953,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - public submit file URL validation, link helper unsafe scheme filtering, published cookie consent focus path.
 - 다음 후보:
   - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.
+
+## 2026-05-13 Codex /goal M126 Marketing template preview URL guard
+
+- 남은 `TemplateEditor.tsx` diff를 admin preview DOM URL guard로 검증/정리했다.
+- save path는 schema가 URL을 검증하지만, 저장 전 편집기 state에는 사용자가 입력 중인 raw `javascript:`/`data:` URL이 있을 수 있다. preview HTML의 button href/image src에는 `previewUrl()`을 적용해 unsafe URL을 `#`로 대체한다.
+- `TemplateEditor.test.tsx`를 추가해 unsafe button href/image src가 preview markup에 live href/src로 반사되지 않는지 확인했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/components/builder/marketing/__tests__/TemplateEditor.test.tsx src/lib/builder/__tests__/links.test.ts` ✅ (2 files, 18 tests)
+- 확인된 커버리지:
+  - marketing template editor preview DOM URL guard and shared link helper.
+- 다음 후보:
+  - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.

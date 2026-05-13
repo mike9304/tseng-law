@@ -1,11 +1,12 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import type {
   EmailBlock,
   EmailBlockKind,
   EmailTemplate,
 } from '@/lib/builder/marketing/templates/types';
+import { isLinkSafe } from '@/lib/builder/links';
 
 interface Props {
   initialTemplate: EmailTemplate;
@@ -49,6 +50,14 @@ function esc(value: string): string {
     .replace(/"/g, '&quot;');
 }
 
+function previewUrl(value: string): string {
+  // The save path is schema-validated, but in-editor state can still hold a
+  // raw user-typed `javascript:` / `data:` URL before save. Don't reflect it
+  // into the live admin preview's DOM.
+  const trimmed = value.trim();
+  return trimmed && isLinkSafe(trimmed) ? trimmed : '#';
+}
+
 function renderBlockHtml(block: EmailBlock): string {
   switch (block.kind) {
     case 'heading': {
@@ -59,9 +68,9 @@ function renderBlockHtml(block: EmailBlock): string {
     case 'text':
       return `<p style="margin:0;line-height:1.6;color:#1f2937">${esc(block.text).replace(/\n/g, '<br />')}</p>`;
     case 'button':
-      return `<a href="${esc(block.href)}" style="display:inline-block;background:${esc(block.background ?? '#0f172a')};color:${esc(block.textColor ?? '#fff')};padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:700">${esc(block.label)}</a>`;
+      return `<a href="${esc(previewUrl(block.href))}" style="display:inline-block;background:${esc(block.background ?? '#0f172a')};color:${esc(block.textColor ?? '#fff')};padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:700">${esc(block.label)}</a>`;
     case 'image':
-      return `<img src="${esc(block.src)}" alt="${esc(block.alt ?? '')}" style="max-width:100%;width:${block.width ?? 320}px;display:block;border:0" />`;
+      return `<img src="${esc(previewUrl(block.src))}" alt="${esc(block.alt ?? '')}" style="max-width:100%;width:${block.width ?? 320}px;display:block;border:0" />`;
     case 'divider':
       return `<hr style="border:0;border-top:1px solid ${esc(block.color ?? '#e2e8f0')}" />`;
     case 'spacer':

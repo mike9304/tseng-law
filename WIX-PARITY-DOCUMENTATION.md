@@ -2716,3 +2716,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-inspector.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W40/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. mobile inspector viewport override controls, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence, page template prompt/preview path를 latest code에서 통과시켰다.
+
+## M138 — SandboxInspectorPanel office quick edit split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxInspectorOfficeQuickEdit.tsx` — 사무소 지도 Content inspector의 프리셋, 주소, 줌, 전화/팩스, 길찾기 URL 동기화 UI를 별도 컴포넌트로 분리했다.
+  - `src/components/builder/canvas/SandboxInspectorPanel.tsx` — office quick edit 탐지와 content tab routing만 남겼다. 파일 길이는 597줄에서 415줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M138 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "keeps inserted service template text visible|persists inserted service template text" --project=chromium-builder --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승 실행)
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/office-map-public.playwright.ts -g "quick panel and Content inspector" --project=chromium-builder --workers=1` ✅ (1 passed on retry, 첫 실행은 canvas quick-edit 선택 타이밍에서 element not found)
+- W 판정:
+  - W18/W84/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. office map quick panel + Content inspector update path, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence를 latest code에서 통과시켰다.

@@ -6114,3 +6114,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - mobile inspector viewport override controls, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence, page template prompt/preview path.
 - 다음 후보:
   - `SandboxInspectorPanel.tsx`의 office quick edit content block 또는 multi-select batch panel을 별도 subview로 분리한다.
+
+## 2026-05-13 Codex /goal M138 SandboxInspectorPanel office quick edit split
+
+- `SandboxInspectorPanel.tsx`의 사무소 지도 Content inspector 블록을 `SandboxInspectorOfficeQuickEdit.tsx`로 분리했다.
+- 새 컴포넌트는 사무소 프리셋, 주소, 줌, 전화/팩스, 길찾기 URL 동기화 UI를 소유한다.
+- `SandboxInspectorPanel.tsx`는 office quick edit 탐지와 content tab routing만 남겼고, LOC는 597에서 415로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/section-template-click.playwright.ts -g "keeps inserted service template text visible|persists inserted service template text" --project=chromium-builder --workers=1` ✅ (2 passed, Chromium sandbox 권한 상승)
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/office-map-public.playwright.ts -g "quick panel and Content inspector" --project=chromium-builder --workers=1` ✅ (1 passed on retry, 첫 실행은 canvas quick-edit 선택 타이밍에서 element not found)
+- 확인된 커버리지:
+  - office map quick panel + Content inspector update path, 주요업무 템플릿 nested node selection/text persistence, autosave/reload persistence.
+- 다음 후보:
+  - `SandboxInspectorPanel.tsx`의 multi-select batch panel을 별도 subview로 분리하거나 다른 700줄대 hot file을 선별한다.

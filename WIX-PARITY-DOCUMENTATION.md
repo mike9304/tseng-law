@@ -2660,3 +2660,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/seo-publish-history.playwright.ts -g "covers W195 publish dialog|covers W26-W28 through actual editor UI clicks" --project=chromium-builder --workers=1` ⚠️ W26-W28 passed, W195는 첫 묶음 실행에서 published baseline 조회가 일시적으로 `첫 발행`으로 표시되어 실패한 뒤 단일 재실행에서 통과했다.
 - W 판정:
   - W26/W27/W28/W195/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. publish modal preflight checklist, warning override/publish click path, draft-vs-published diff summary compile/render path를 latest code에서 통과시켰다.
+
+## M134 — CanvasNode interaction/render helper split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/useCanvasNodeInteractions.ts` — inline text editing lifecycle, touch long-press context menu scheduling, animation preview event state를 전용 hooks로 분리했다.
+  - `src/components/builder/canvas/CanvasNodeRenderStyles.ts` — node wrapper/body style calculation과 animation summary calculation을 pure helper로 분리했다.
+  - `src/components/builder/canvas/CanvasNode.tsx` — node-specific preview/quick-edit orchestration과 event wiring만 남기고 hook/style helper를 import한다. 파일 길이는 944줄에서 765줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M134 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-regression.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W84/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 주요업무 템플릿 텍스트 유지, nested node selection, page template prompt/preview focus path, node click stability를 latest code에서 통과시켰다.

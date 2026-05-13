@@ -6062,3 +6062,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - publish modal preflight checklist, draft-vs-published diff summary, warning override/publish click path.
 - 다음 후보:
   - `CanvasContainer.tsx` pointer/helper split 또는 `CanvasNode.tsx` quick edit state extraction 중 실제 리스크가 낮은 쪽을 선별한다.
+
+## 2026-05-13 Codex /goal M134 CanvasNode interaction/render helper split
+
+- `CanvasNode.tsx`의 inline text editing lifecycle, touch long-press context menu, animation preview event state를 `useCanvasNodeInteractions.ts` hooks로 분리했다.
+- node wrapper/body style calculation과 animation summary calculation은 `CanvasNodeRenderStyles.ts` pure helper로 분리했다.
+- `CanvasNode.tsx`는 node-specific preview/quick-edit orchestration과 event wiring 중심으로 남겼고, LOC는 944에서 765로 내려갔다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-regression.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - node click stability, 주요업무 템플릿 nested node selection/text persistence, page template prompt/preview focus path.
+- 다음 후보:
+  - `CanvasContainer.tsx`의 stage shell/geometry helper split 또는 `SandboxInspectorPanel.tsx`의 style/helper split 중 더 작은 surface를 고른다.

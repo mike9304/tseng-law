@@ -135,3 +135,4 @@
 | M131 | Refactor | VersionHistoryPanel style split | W195,W216,W225 | 1h | M130 | 🟡 VersionHistoryPanel 883→610 LOC + typecheck/history E2E passed / 사용자 QA 대기 |
 | M132 | Refactor | PageSwitcher helper/style split | W14,W18,W216,W225 | 1h | M131 | 🟡 PageSwitcher 1037→756 LOC + typecheck/template E2E 12 passed / 사용자 QA 대기 |
 | M133 | Refactor | PublishModal style/preflight split | W26,W27,W28,W195,W216 | 1h | M132 | 🟡 PublishModal 1100→737 LOC + typecheck/publish E2E passed / 사용자 QA 대기 |
+| M134 | Refactor | CanvasNode interaction/render helper split | W18,W84,W216,W225 | 1h | M133 | 🟡 CanvasNode 944→765 LOC + typecheck/template E2E 12 passed / 사용자 QA 대기 |

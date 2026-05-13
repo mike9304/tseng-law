@@ -5,7 +5,6 @@ import { getComponent } from '@/lib/builder/components/registry';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
-import type { BuilderRichText } from '@/lib/builder/rich-text/types';
 import { isBuilderRichText, richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import {
   resolveViewportFontSize,
@@ -33,14 +32,6 @@ import {
 } from '@/lib/builder/canvas/office-locations';
 import { useBuilderTheme } from '@/components/builder/editor/BuilderThemeContext';
 import {
-  buildEditorAnimationStyle,
-  getAnimationSummary,
-  mergeCssTransforms,
-  type AnimationPreviewPhase,
-} from '@/lib/builder/animations/animation-render';
-import {
-  buildHoverTransform,
-  resolveBackgroundStyle,
   resolveThemeColor,
   resolveThemeTextTypography,
 } from '@/lib/builder/site/theme';
@@ -48,6 +39,7 @@ import InlineTextEditor from './InlineTextEditor';
 import { CanvasNodeBadge } from './CanvasNodeBadge';
 import CanvasNodeErrorBoundary from './CanvasNodeErrorBoundary';
 import { CanvasNodeQuickPanels } from './CanvasNodeQuickPanels';
+import { buildCanvasNodeRenderStyles } from './CanvasNodeRenderStyles';
 import { CanvasNodeSelectionOverlay } from './CanvasNodeSelectionOverlay';
 import { InsightsArchiveListPreview } from './CanvasInsightsPreview';
 import type { ResizeHandle } from './canvasNodeTypes';
@@ -64,6 +56,11 @@ import {
   type BlogFeedLayoutPreset,
 } from './canvasNodeUtils';
 import { useCanvasNodeRotation } from './hooks/useCanvasNodeRotation';
+import {
+  useCanvasNodeAnimationPreview,
+  useCanvasNodeInlineEditing,
+  useCanvasNodeTouchContextMenu,
+} from './useCanvasNodeInteractions';
 import styles from './SandboxPage.module.css';
 
 export type { ResizeHandle } from './canvasNodeTypes';
@@ -91,20 +88,12 @@ export default function CanvasNode({
   onUpdateContent,
   onInlineEditingChange,
 }: CanvasNodeProps) {
-  const [isEditing, setIsEditing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [mapQuickAddressDraft, setMapQuickAddressDraft] = useState('');
-  const [animationPreviewPhase, setAnimationPreviewPhase] = useState<AnimationPreviewPhase>(null);
   const component = getComponent(node.kind);
   const theme = useBuilderTheme();
   const nodeRef = useRef<HTMLDivElement>(null);
   const mapQuickAddressRef = useRef<HTMLTextAreaElement>(null);
-  const touchContextMenuRef = useRef<{
-    timerId: number;
-    pointerId: number;
-    clientX: number;
-    clientY: number;
-  } | null>(null);
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
   const updateNodeRectsForViewport = useBuilderCanvasStore((s) => s.updateNodeRectsForViewport);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
@@ -132,116 +121,26 @@ export default function CanvasNode({
     cancelMutationSession,
   });
 
-  const handleDoubleClick = useCallback(() => {
-    if (node.locked) return;
-    if (node.kind === 'composite') {
-      enterGroup(node.id);
-      setIsEditing(false);
-      return;
-    }
-    if (node.kind === 'text' || node.kind === 'heading') {
-      setIsEditing(true);
-    }
-  }, [enterGroup, node.id, node.kind, node.locked]);
+  const {
+    handleDoubleClick,
+    handleInlineBlur,
+    handleInlineSave,
+    isEditing,
+    isTextKind,
+  } = useCanvasNodeInlineEditing({
+    nodeId: node.id,
+    nodeKind: node.kind,
+    nodeLocked: node.locked,
+    enterGroup,
+    onUpdateContent,
+    onInlineEditingChange,
+  });
+  const animationPreviewPhase = useCanvasNodeAnimationPreview({
+    animation: node.animation,
+    nodeId: node.id,
+    nodeLocked: node.locked,
+  });
 
-  const clearTouchContextMenu = useCallback(() => {
-    const pending = touchContextMenuRef.current;
-    if (!pending) return;
-    window.clearTimeout(pending.timerId);
-    touchContextMenuRef.current = null;
-  }, []);
-
-  const cancelTouchContextMenuOnMove = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
-      const pending = touchContextMenuRef.current;
-      if (!pending || pending.pointerId !== event.pointerId) return;
-      const distance = Math.hypot(event.clientX - pending.clientX, event.clientY - pending.clientY);
-      if (distance > 8) clearTouchContextMenu();
-    },
-    [clearTouchContextMenu],
-  );
-
-  useEffect(() => () => clearTouchContextMenu(), [clearTouchContextMenu]);
-
-  const handleInlineSave = useCallback(
-    (payload: { richText: BuilderRichText; plainText: string }) => {
-      onUpdateContent?.(node.id, {
-        text: payload.plainText,
-        richText: payload.richText,
-      });
-    },
-    [node.id, onUpdateContent],
-  );
-
-  const handleInlineBlur = useCallback(() => {
-    setIsEditing(false);
-  }, []);
-
-  useEffect(() => {
-    if (node.kind !== 'text' && node.kind !== 'heading') return;
-    const handler = (event: Event) => {
-      const detail = (event as CustomEvent<{ nodeId?: string }>).detail;
-      if (detail?.nodeId === node.id && !node.locked) {
-        setIsEditing(true);
-      }
-    };
-    document.addEventListener('builder:start-text-edit', handler);
-    return () => document.removeEventListener('builder:start-text-edit', handler);
-  }, [node.id, node.kind, node.locked]);
-
-  useEffect(() => {
-    if (node.kind !== 'text' && node.kind !== 'heading') return undefined;
-    onInlineEditingChange?.(node.id, isEditing);
-    return () => {
-      if (isEditing) onInlineEditingChange?.(node.id, false);
-    };
-  }, [isEditing, node.id, node.kind, onInlineEditingChange]);
-
-  const previewEntrancePreset = node.animation?.entrance?.preset ?? 'none';
-  const previewEntranceDuration = node.animation?.entrance?.duration ?? 600;
-  const previewEntranceDelay = node.animation?.entrance?.delay ?? 0;
-
-  useEffect(() => {
-    let timeoutId: number | undefined;
-    let firstFrameId: number | undefined;
-    let secondFrameId: number | undefined;
-
-    const handler = (event: Event) => {
-      const detail = (event as CustomEvent<{ nodeId?: string }>).detail;
-      if (detail?.nodeId !== node.id || node.locked || previewEntrancePreset === 'none') return;
-
-      if (timeoutId) window.clearTimeout(timeoutId);
-      if (firstFrameId) window.cancelAnimationFrame(firstFrameId);
-      if (secondFrameId) window.cancelAnimationFrame(secondFrameId);
-
-      setAnimationPreviewPhase('initial');
-      firstFrameId = window.requestAnimationFrame(() => {
-        secondFrameId = window.requestAnimationFrame(() => {
-          setAnimationPreviewPhase('visible');
-        });
-      });
-      timeoutId = window.setTimeout(
-        () => setAnimationPreviewPhase(null),
-        previewEntranceDuration + previewEntranceDelay + 180,
-      );
-    };
-
-    document.addEventListener('builder:play-animation-preview', handler);
-    return () => {
-      document.removeEventListener('builder:play-animation-preview', handler);
-      if (timeoutId) window.clearTimeout(timeoutId);
-      if (firstFrameId) window.cancelAnimationFrame(firstFrameId);
-      if (secondFrameId) window.cancelAnimationFrame(secondFrameId);
-    };
-  }, [
-    node.id,
-    node.locked,
-    previewEntranceDelay,
-    previewEntranceDuration,
-    previewEntrancePreset,
-  ]);
-
-  const isTextKind = node.kind === 'text' || node.kind === 'heading';
   const isTextShapedNode = isTextShapedKind(node.kind);
   const textContent = node.content as Record<string, unknown>;
   const initialRichText = isTextKind
@@ -256,26 +155,14 @@ export default function CanvasNode({
   const isRootNode = !node.parentId;
   const isDimmedRoot = activeGroupId !== null && isRootNode && node.id !== activeGroupId;
   const isInteractive = !isDimmedRoot;
-  const scheduleTouchContextMenu = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
-      if (event.pointerType !== 'touch' || node.locked || !isInteractive) return;
-      clearTouchContextMenu();
-      const target = event.currentTarget;
-      const { pointerId, clientX, clientY } = event;
-      const timerId = window.setTimeout(() => {
-        target.dispatchEvent(new MouseEvent('contextmenu', {
-          bubbles: true,
-          cancelable: true,
-          button: 2,
-          clientX,
-          clientY,
-        }));
-        touchContextMenuRef.current = null;
-      }, 560);
-      touchContextMenuRef.current = { timerId, pointerId, clientX, clientY };
-    },
-    [clearTouchContextMenu, isInteractive, node.locked],
-  );
+  const {
+    cancelTouchContextMenuOnMove,
+    clearTouchContextMenu,
+    scheduleTouchContextMenu,
+  } = useCanvasNodeTouchContextMenu({
+    isInteractive,
+    nodeLocked: node.locked,
+  });
   const showColumnQuickActions = selected && isInteractive && isColumnManagerTarget(node);
   const showBlogFeedQuickEdit = selected && isInteractive && node.kind === 'blog-feed';
   const blogFeedLayout = blogFeedLayoutValue(node);
@@ -644,44 +531,28 @@ export default function CanvasNode({
     </CanvasNodeErrorBoundary>
   ) : null;
 
-  const hasVisibleBorder = node.style.borderWidth > 0;
-  const activeHoverStyle = node.hoverStyle && isHovered ? node.hoverStyle : null;
-  const animationSummary = getAnimationSummary(node.animation);
-  const editorAnimationStyle = buildEditorAnimationStyle({
-    animation: node.animation,
-    isHovered,
-    previewPhase: animationPreviewPhase,
-    primaryColor: resolveThemeColor({ token: 'primary' }, theme),
-  });
-  const backgroundStyle = resolveBackgroundStyle(
-    activeHoverStyle?.backgroundColor ?? node.style.backgroundColor,
-    theme,
-  );
-  const renderedBorderColor = activeHoverStyle?.borderColor ?? node.style.borderColor;
-  const renderedShadowBlur = activeHoverStyle?.shadowBlur ?? node.style.shadowBlur;
-  const renderedShadowSpread = activeHoverStyle?.shadowSpread ?? node.style.shadowSpread;
-  const renderedShadowColor = activeHoverStyle?.shadowColor ?? node.style.shadowColor;
-  const hasVisibleShadow = renderedShadowBlur > 0
-    || renderedShadowSpread !== 0
-    || node.style.shadowX !== 0
-    || node.style.shadowY !== 0;
-  const isContainerWithChildren = isContainerLikeKind(node.kind) && nestedChildren.length > 0;
+  const isContainerLikeNode = isContainerLikeKind(node.kind);
+  const isContainerWithChildren = isContainerLikeNode && nestedChildren.length > 0;
   const showSelectionHandles = selected && !node.locked && isInteractive && !isEditing;
   const showInsightsListPreview = node.id === 'home-insights-list-wrap' && isInteractive;
-  const hoverTransition = node.hoverStyle
-    ? `background ${node.hoverStyle.transitionMs ?? 200}ms ease, border-color ${node.hoverStyle.transitionMs ?? 200}ms ease, box-shadow ${node.hoverStyle.transitionMs ?? 200}ms ease, transform ${node.hoverStyle.transitionMs ?? 200}ms ease`
-    : undefined;
-  const bodyTransform = mergeCssTransforms(
-    activeHoverStyle ? buildHoverTransform(activeHoverStyle) : undefined,
-    editorAnimationStyle.transform,
-  );
-  const bodyTransition = [hoverTransition, editorAnimationStyle.transition].filter(Boolean).join(', ') || undefined;
-  const renderedOpacity = typeof editorAnimationStyle.opacity === 'number'
-    ? (node.style.opacity / 100) * editorAnimationStyle.opacity
-    : node.style.opacity / 100;
-  const nodePointerEvents = isDimmedRoot || isActiveGroupFrame
-    ? 'none'
-    : 'auto';
+  const { animationSummary, bodyStyle, nodeStyle } = buildCanvasNodeRenderStyles({
+    animationPreviewPhase,
+    effectiveFontSize,
+    effectiveRect,
+    isActiveGroupFrame,
+    isContainerLikeNode,
+    isContainerWithChildren,
+    isDimmedRoot,
+    isEditing,
+    isHovered,
+    isTextShapedNode,
+    node,
+    officeLayoutDisplay,
+    parentUsesFlowLayout,
+    selected,
+    selectionZIndexBoost,
+    theme,
+  });
 
   if (isHiddenAtViewport) {
     return null;
@@ -691,22 +562,7 @@ export default function CanvasNode({
     <div
       ref={nodeRef}
       className={`${styles.node} ${selected ? styles.nodeSelected : ''} ${node.locked ? styles.nodeLocked : ''}`}
-      style={{
-        position: parentUsesFlowLayout ? 'relative' : 'absolute',
-        left: parentUsesFlowLayout ? undefined : `${effectiveRect.x}px`,
-        top: parentUsesFlowLayout ? undefined : `${effectiveRect.y}px`,
-        width: `${effectiveRect.width}px`,
-        height: `${effectiveRect.height}px`,
-        zIndex: parentUsesFlowLayout ? undefined : node.zIndex + 10 + selectionZIndexBoost,
-        transform: `rotate(${node.rotation}deg)`,
-        transformOrigin: 'center center',
-        opacity: isDimmedRoot ? 0.3 : 1,
-        pointerEvents: nodePointerEvents,
-        display: officeLayoutDisplay,
-        outline: isActiveGroupFrame ? '2px dashed rgba(37, 99, 235, 0.72)' : undefined,
-        outlineOffset: isActiveGroupFrame ? 4 : undefined,
-        fontSize: effectiveFontSize ? `${effectiveFontSize}px` : undefined,
-      }}
+      style={nodeStyle}
       data-node-id={node.id}
       data-selected={selected ? 'true' : undefined}
       data-builder-section-template={sectionTemplate?.id}
@@ -863,45 +719,10 @@ export default function CanvasNode({
       />
       <div
         className={styles.nodeBody}
-        style={{
-          position: 'relative',
-          ...backgroundStyle,
-          borderRadius: `${node.style.borderRadius}px`,
-          border: hasVisibleBorder
-            ? `${node.style.borderWidth}px ${node.style.borderStyle} ${resolveThemeColor(renderedBorderColor, theme)}`
-            : isActiveGroupFrame
-              ? '2px dashed rgba(37, 99, 235, 0.72)'
-              : isContainerWithChildren && selected
-              ? '1px dashed #94a3b8'
-              : 'none',
-          boxShadow: editorAnimationStyle.boxShadow
-            ?? (hasVisibleShadow
-              ? `${node.style.shadowX}px ${node.style.shadowY}px ${renderedShadowBlur}px ${renderedShadowSpread}px ${resolveThemeColor(renderedShadowColor, theme)}`
-              : isActiveGroupFrame
-              ? '0 0 0 1px rgba(147, 197, 253, 0.5)'
-              : 'none'),
-          opacity: renderedOpacity,
-          height: isTextShapedNode ? 'auto' : undefined,
-          minHeight: isTextShapedNode ? `${effectiveRect.height}px` : undefined,
-          // Containers + the inline editor always show overflow because
-          // their children may legitimately extend the bounds. Other
-          // widgets only show overflow when SELECTED — so designers
-          // notice their box is too short while editing, without
-          // unselected widgets bleeding text into each other.
-          overflow:
-            isEditing || isContainerLikeKind(node.kind) || selected
-              ? 'visible'
-              : undefined,
-          pointerEvents: isEditing ? 'auto' : 'none',
-          transform: bodyTransform,
-          transformOrigin: bodyTransform || editorAnimationStyle.transformOrigin ? 'center center' : undefined,
-          transition: bodyTransition,
-          clipPath: editorAnimationStyle.clipPath,
-          filter: editorAnimationStyle.filter,
-        }}
+        style={bodyStyle}
       >
         {body}
-        {!isContainerLikeKind(node.kind) ? renderNestedChildNodes() : null}
+        {!isContainerLikeNode ? renderNestedChildNodes() : null}
       </div>
       {showInsightsListPreview ? <InsightsArchiveListPreview locale={currentBuilderLocale()} /> : null}
       {node.kind === 'map' && !node.locked && isInteractive ? (

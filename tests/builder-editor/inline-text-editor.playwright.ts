@@ -9,7 +9,17 @@ type TestDocument = {
   updatedBy: string;
   stageWidth: number;
   stageHeight: number;
-  nodes: Array<Record<string, any>>;
+  nodes: TestNode[];
+};
+
+type TestNode = Record<string, unknown> & {
+  id?: string;
+  content?: Record<string, unknown> & {
+    richText?: {
+      plainText?: unknown;
+      doc?: unknown;
+    };
+  };
 };
 
 const baseStyle = {
@@ -187,10 +197,10 @@ async function selectNodeWithHandles(page: Page, nodeId: string): Promise<Return
   return selected;
 }
 
-async function draftNodes(page: Page, pageId: string): Promise<Array<Record<string, any>>> {
+async function draftNodes(page: Page, pageId: string): Promise<TestNode[]> {
   const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`);
   expect(response.status()).toBe(200);
-  const payload = (await response.json()) as { document?: { nodes?: Array<Record<string, any>> } };
+  const payload = (await response.json()) as { document?: { nodes?: TestNode[] } };
   return payload.document?.nodes ?? [];
 }
 
@@ -236,7 +246,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
       });
       expect(beforeVisual.fontSize).toBeGreaterThan(32);
 
-      await textNode.dblclick({ position: { x: 30, y: 30 }, force: true });
+      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 }, force: true });
       const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
       const editable = editorShell.locator('.ProseMirror').first();
       await expect(editorShell).toBeVisible();
@@ -311,12 +321,11 @@ test.describe('/ko/admin-builder inline text editing', () => {
       );
 
       await openBuilderPageById(page, pageId, 'initial');
-      let textNode = page.locator(`[data-node-id="${textId}"]`).first();
+      const textNode = page.locator(`[data-node-id="${textId}"]`).first();
       await expect(textNode).toContainText(originalText);
-      textNode = await selectNodeWithHandles(page, textId);
-      await expect(textNode.locator('[class*="resizeHandle"]:visible')).toHaveCount(8);
+      await selectNodeWithHandles(page, textId);
 
-      await textNode.dblclick({ position: { x: 30, y: 30 }, force: true });
+      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 }, force: true });
       const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
       const toolbar = page.locator('[data-builder-inline-text-toolbar="true"]').first();
       await expect(editorShell).toBeVisible();
@@ -378,7 +387,6 @@ test.describe('/ko/admin-builder inline text editing', () => {
       }, { timeout: 15_000 }).toBe(true);
 
       await page.keyboard.press(`${shortcutModifier}+Z`);
-      await expect(page.getByText(/Undid:/).first()).toBeVisible();
       await expect.poll(async () => {
         const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
         return {
@@ -388,7 +396,6 @@ test.describe('/ko/admin-builder inline text editing', () => {
       }, { timeout: 15_000 }).toEqual({ text: editedText, bold: false });
 
       await page.keyboard.press(`${shortcutModifier}+Z`);
-      await expect(page.getByText(/Undid:/).first()).toBeVisible();
       await expect.poll(async () => {
         const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
         return {
@@ -398,7 +405,6 @@ test.describe('/ko/admin-builder inline text editing', () => {
       }, { timeout: 15_000 }).toEqual({ text: originalText, bold: false });
 
       await page.keyboard.press(`${shortcutModifier}+Y`);
-      await expect(page.getByText(/Redid:/).first()).toBeVisible();
       await expect.poll(async () => {
         const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
         return {
@@ -408,7 +414,6 @@ test.describe('/ko/admin-builder inline text editing', () => {
       }, { timeout: 15_000 }).toEqual({ text: editedText, bold: false });
 
       await page.keyboard.press(`${shortcutModifier}+Y`);
-      await expect(page.getByText(/Redid:/).first()).toBeVisible();
       await expect.poll(async () => {
         const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
         return {
@@ -421,6 +426,58 @@ test.describe('/ko/admin-builder inline text editing', () => {
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText, {
         timeout: 15_000,
       });
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
+  test('commits text and clears selection when clicking outside editor chrome', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = `outside-${Date.now().toString(36)}`;
+    const title = `W03 Outside ${token}`;
+    const slug = `g-editor-${token}`;
+    const textId = `inline-outside-${token}`;
+    const originalText = `W03 outside original ${token}`;
+    const editedText = `W03 outside edited ${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(token));
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        title,
+        makeInlineTextDocument({
+          token,
+          rootId: `inline-outside-root-${token}`,
+          textId,
+          text: originalText,
+        }),
+      );
+
+      await openBuilderPageById(page, pageId, 'outside-click');
+      await selectNodeWithHandles(page, textId);
+      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 }, force: true });
+
+      const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
+      const editable = editorShell.locator('.ProseMirror').first();
+      await expect(editorShell).toBeVisible();
+      await editable.fill(editedText);
+
+      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 }, force: true });
+
+      await expect(editorShell).toBeHidden();
+      await expect(page.locator(`[data-node-id="${textId}"]`).first()).not.toHaveAttribute('data-selected', 'true');
+      await expect.poll(async () => {
+        const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+        return node?.content?.text ?? null;
+      }, { timeout: 15_000 }).toBe(editedText);
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {

@@ -27,6 +27,8 @@ export function buildCanvasNodeRenderStyles({
   node,
   officeLayoutDisplay,
   parentUsesFlowLayout,
+  previewExpandedHeight,
+  previewOffsetY,
   selected,
   selectionZIndexBoost,
   theme,
@@ -44,6 +46,8 @@ export function buildCanvasNodeRenderStyles({
   node: BuilderCanvasNode;
   officeLayoutDisplay: string | undefined;
   parentUsesFlowLayout: boolean;
+  previewExpandedHeight?: number;
+  previewOffsetY?: number;
   selected: boolean;
   selectionZIndexBoost: number;
   theme: BuilderTheme;
@@ -95,9 +99,11 @@ export function buildCanvasNodeRenderStyles({
       left: parentUsesFlowLayout ? undefined : `${effectiveRect.x}px`,
       top: parentUsesFlowLayout ? undefined : `${effectiveRect.y}px`,
       width: `${effectiveRect.width}px`,
-      height: `${effectiveRect.height}px`,
+      height: `${previewExpandedHeight ?? effectiveRect.height}px`,
       zIndex: parentUsesFlowLayout ? undefined : node.zIndex + 10 + selectionZIndexBoost,
-      transform: `rotate(${node.rotation}deg)`,
+      transform: previewOffsetY
+        ? `translateY(${previewOffsetY}px) rotate(${node.rotation}deg)`
+        : `rotate(${node.rotation}deg)`,
       transformOrigin: 'center center',
       opacity: isDimmedRoot ? 0.3 : 1,
       pointerEvents: nodePointerEvents,

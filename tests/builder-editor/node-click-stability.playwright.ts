@@ -8,6 +8,19 @@ async function expectEditorSurfaceIntact(page: Page) {
   await expect.poll(() => page.locator('[data-node-id]').count()).toBeGreaterThan(25);
 }
 
+async function expectNodeBelow(
+  upper: ReturnType<Page['locator']>,
+  lower: ReturnType<Page['locator']>,
+  minGap = 4,
+) {
+  const upperBox = await upper.boundingBox();
+  const lowerBox = await lower.boundingBox();
+  expect(upperBox).not.toBeNull();
+  expect(lowerBox).not.toBeNull();
+  if (!upperBox || !lowerBox) throw new Error('Missing node bounds for vertical stack assertion.');
+  expect(lowerBox.y).toBeGreaterThanOrEqual(upperBox.y + upperBox.height + minGap);
+}
+
 test.describe('/ko/admin-builder node click stability', () => {
   test('does not move canvas nodes when a click has only pointer jitter', async ({ page }) => {
     await openBuilder(page, `/ko/admin-builder?nodeClickStability=${Date.now().toString(36)}`);
@@ -39,7 +52,6 @@ test.describe('/ko/admin-builder node click stability', () => {
     await openBuilder(page, `/ko/admin-builder?nodeSurfaceStability=${Date.now().toString(36)}`);
     await page.keyboard.press('Escape');
 
-    const canvas = page.getByRole('application', { name: 'Canvas editor' });
     const archive = page.locator('[data-node-id="home-insights-list-wrap"]').first();
     await archive.scrollIntoViewIfNeeded();
     await archive.click({ position: { x: 20, y: 20 }, force: true });
@@ -75,8 +87,10 @@ test.describe('/ko/admin-builder node click stability', () => {
     await page.keyboard.press('Escape');
 
     const firstAnswer = page.locator('[data-node-id="home-faq-item-0-answer"]').first();
+    const firstItem = page.locator('[data-node-id="home-faq-item-0"]').first();
     const secondQuestion = page.locator('[data-node-id="home-faq-item-1-question-text"]').first();
     const secondAnswer = page.locator('[data-node-id="home-faq-item-1-answer"]').first();
+    const secondItem = page.locator('[data-node-id="home-faq-item-1"]').first();
     const heroTitle = page.locator('[data-node-id="home-hero-title"]').first();
 
     await firstAnswer.scrollIntoViewIfNeeded();
@@ -86,9 +100,31 @@ test.describe('/ko/admin-builder node click stability', () => {
     await secondQuestion.click({ position: { x: 12, y: 12 }, force: true });
     await expect(secondAnswer).toBeVisible();
     await expect(firstAnswer).toBeVisible();
+    await expectNodeBelow(firstItem, secondItem, 4);
 
     await heroTitle.click({ position: { x: 12, y: 12 }, force: true });
     await expect(firstAnswer).toBeVisible();
     await expect(secondAnswer).toBeVisible();
+    await expectNodeBelow(firstItem, secondItem, 4);
+  });
+
+  test('pushes revealed service cards downward instead of overlapping text', async ({ page }) => {
+    await openBuilder(page, `/ko/admin-builder?serviceClickStack=${Date.now().toString(36)}`);
+    await page.keyboard.press('Escape');
+
+    const firstCard = page.locator('[data-node-id="home-services-card-0"]').first();
+    const firstDetail = page.locator('[data-node-id="home-services-card-0-detail-0"]').first();
+    const secondCard = page.locator('[data-node-id="home-services-card-1"]').first();
+    const secondTitle = page.locator('[data-node-id="home-services-card-1-title"]').first();
+    const secondDetail = page.locator('[data-node-id="home-services-card-1-detail-0"]').first();
+
+    await firstDetail.scrollIntoViewIfNeeded();
+    await expect(firstDetail).toBeVisible();
+    await expect(secondDetail).toBeHidden();
+
+    await secondTitle.click({ position: { x: 12, y: 12 }, force: true });
+    await expect(firstDetail).toBeVisible();
+    await expect(secondDetail).toBeVisible();
+    await expectNodeBelow(firstCard, secondCard, 8);
   });
 });

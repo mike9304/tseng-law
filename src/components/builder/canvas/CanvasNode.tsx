@@ -90,9 +90,23 @@ interface InlineTextVisualStyle {
   textTransform?: string;
 }
 
+const SERVICES_PREVIEW_EXPANDED_HEIGHT = 364;
+const SERVICES_PREVIEW_STACK_DELTA = 232;
+const FAQ_PREVIEW_EXPANDED_HEIGHT = 128;
+const FAQ_PREVIEW_STACK_DELTA = 60;
+
 function parseCssNumber(value: string): number | undefined {
   const parsed = Number.parseFloat(value);
   return Number.isFinite(parsed) ? parsed : undefined;
+}
+
+function countRevealedBefore(revealedIndices: Set<number>, index: number | null): number {
+  if (index == null) return 0;
+  let count = 0;
+  revealedIndices.forEach((revealedIndex) => {
+    if (revealedIndex < index) count += 1;
+  });
+  return count;
 }
 
 function resolveInlineTextRenderElement(root: HTMLDivElement | null): HTMLElement | null {
@@ -330,6 +344,18 @@ export default function CanvasNode({
       ? faqItemIndex === selectedFaqIndex
         || (faqItemIndex != null && faqRevealedIndices.has(faqItemIndex))
       : false;
+  const isServicePreviewFrame = serviceCardIndex != null && node.id === serviceCardAncestorId;
+  const isFaqPreviewFrame = faqItemIndex != null && node.id === faqItemAncestorId;
+  const previewOffsetY = isServicePreviewFrame
+    ? countRevealedBefore(servicesRevealedIndices, serviceCardIndex) * SERVICES_PREVIEW_STACK_DELTA
+    : isFaqPreviewFrame
+      ? countRevealedBefore(faqRevealedIndices, faqItemIndex) * FAQ_PREVIEW_STACK_DELTA
+      : 0;
+  const previewExpandedHeight = builderPreviewOpen && isServicePreviewFrame
+    ? SERVICES_PREVIEW_EXPANDED_HEIGHT
+    : builderPreviewOpen && isFaqPreviewFrame
+      ? FAQ_PREVIEW_EXPANDED_HEIGHT
+      : undefined;
   const servicesOpenIndex = Math.max(0, Math.round(selectedServiceIndex));
   const faqOpenIndex = Math.max(0, Math.round(selectedFaqIndex));
   const heroSearchActive = selectedNodeIds.some(isHeroSearchTarget);
@@ -611,6 +637,8 @@ export default function CanvasNode({
     node,
     officeLayoutDisplay,
     parentUsesFlowLayout,
+    previewExpandedHeight,
+    previewOffsetY,
     selected,
     selectionZIndexBoost,
     theme,

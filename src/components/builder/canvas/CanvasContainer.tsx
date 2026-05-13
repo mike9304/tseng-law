@@ -368,6 +368,28 @@ export default function CanvasContainer({
     visibleNodes,
   });
 
+  useEffect(() => {
+    if (!inlineEditingNodeId) return undefined;
+
+    const handlePointerDownOutsideInlineEditor = (event: PointerEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest('[data-builder-inline-text-editor="true"], [data-builder-floating-ui="true"]')) return;
+      if (target.closest('[data-node-id]')) return;
+
+      window.setTimeout(() => {
+        const state = useBuilderCanvasStore.getState();
+        if (!state.selectedNodeIds.includes(inlineEditingNodeId)) return;
+        setSelectedNodeIds([], null);
+      }, 0);
+    };
+
+    document.addEventListener('pointerdown', handlePointerDownOutsideInlineEditor, true);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDownOutsideInlineEditor, true);
+    };
+  }, [inlineEditingNodeId, setSelectedNodeIds]);
+
   const fitCanvas = useCallback(() => {
     const rect = viewportRef.current?.getBoundingClientRect();
     if (!rect) return;

@@ -451,3 +451,103 @@ normalizeBookings() 마이그 path 포함.
 - W223 Component library (사용자가 만든 재사용 노드)
 - W224 Element comments (디자이너 주석)
 - W225 Editor theme (라이트/다크)
+
+---
+
+## 17. Full Wix Product Extension (M157~M176)
+
+2026-05-13 scope correction: W01~W225 is not sufficient for "full Wix." It covers the visual editor and many site-builder capabilities, but not the full Wix/Wix Studio product surface.
+
+Authoritative scope file:
+- `WIX-FULL-PRODUCT-GAP.md`
+
+Official Wix/Wix Studio source baseline:
+- https://www.wix.com/studio/features
+- https://support.wix.com/en/article/wix-studio-about-the-studio-editor
+- https://support.wix.com/en/article/wix-studio-using-the-cms
+- https://support.wix.com/en/article/about-the-wix-app-market
+- https://support.wix.com/en/article/wix-stores-an-overview-of-store-features
+- https://support.wix.com/en/article/wix-bookings-about-wix-bookings
+- https://support.wix.com/en/article/wix-multilingual-an-overview
+- https://www.wix.com/studio/for-web-developers
+
+### M157 — Full Wix product benchmark + F01-F120 seed
+- Create/maintain the F01-F120 checklist derived from `WIX-FULL-PRODUCT-GAP.md`.
+- Update completion gates so W01-W225 alone cannot close the full goal.
+- Add a recurring audit section to Documentation/Session/checkpoint.
+
+### M158 — CMS collections/content manager v1
+- Collection schema CRUD, typed fields, CSV import/export, content table, permissions.
+- Tests: collection normalize/migration, route guard, content table smoke.
+
+### M159 — Dataset/repeater/dynamic page binding
+- Dataset source config, repeater binding, dynamic pages, item URL routing, per-item SEO.
+- Tests: dynamic route render, repeater binding, missing item 404, SEO metadata.
+
+### M160 — Visitor input to CMS + moderation
+- Form-to-collection mapping, validation, moderation queue, spam/rate controls.
+- Tests: public submit, moderation approval, malicious payload rejection.
+
+### M161 — App Market shell and app manifest runtime
+- App manifest, install/enable/disable, settings panel, widget registration, runtime hooks.
+- Tests: app lifecycle, disabled app render guard, settings persistence.
+
+### M162 — Native app pack foundations
+- Blog, Events, Members, FAQ, Chat, Portfolio module shells with dashboard + public widgets.
+- Tests: module routing, widget insertion, public render.
+
+### M163 — Stores/eCommerce core
+- Product catalog, product page, category/gallery, cart, checkout adapter, order admin.
+- Tests: product CRUD, cart persistence, checkout handoff, order creation.
+
+### M164 — Payments/business operations
+- Provider abstraction, tax/shipping/discount rules, refunds, receipts/invoices.
+- Tests: free/paid/provider-fail flows, webhook guard, refund state.
+
+### M165 — Bookings pro parity extension
+- Packages, memberships, resources, staff calendar depth, client portal.
+- Tests: package booking, resource conflict, client cancel/reschedule.
+
+### M166 — AI site builder + responsive AI
+- Prompt-to-site generation, layout suggestions, breakpoint repair suggestions.
+- Tests: deterministic generation fixtures, undo/revert, responsive candidate apply.
+
+### M167 — AI text/image/code assistants
+- Text suggestions, image prompt/edit flow, code assistant safe snippets.
+- Tests: safe apply/revert, prompt audit log, unsafe code rejection.
+
+### M168 — Realtime collaboration/comments/roles
+- Presence, canvas comments, role permissions, conflict handling.
+- Tests: two-session editing, comment lifecycle, permission denial.
+
+### M169 — Branching, approvals, client handoff
+- Version branches, review links, approvals, handoff audit trail.
+- Tests: branch create/merge, approval token, read-only review mode.
+
+### M170 — Developer platform/custom code/serverless
+- Custom code slots, serverless functions, public/private API surface, logs.
+- Tests: route execution, auth guard, deploy-time validation.
+
+### M171 — Marketing/CRM/automation/integrations
+- CRM contacts, automations, email campaigns, analytics/marketing connectors.
+- Tests: lead capture, automation trigger, connector failure fallback.
+
+### M172 — Full translation manager
+- Manual/auto translation adapter, per-language assets/menu/SEO, translation status dashboard.
+- Tests: language-specific render, fallback rules, untranslated warning.
+
+### M173 — Enterprise workspace/media/shared CMS/analytics
+- Multi-site workspace, account-level media, shared collections, cross-site analytics.
+- Tests: account media reuse, shared collection projection, analytics summary.
+
+### M174 — Infrastructure/observability/recovery parity
+- Deploy health, cache invalidation, backup/restore, logs, performance/security dashboards.
+- Tests: backup restore dry-run, cache purge, health check route.
+
+### M175 — Full product navigation and cross-surface polish
+- Unified dashboard/editor/app/settings navigation with no dead ends.
+- Tests: top-level navigation smoke across all F-layer surfaces.
+
+### M176 — Full Wix product audit and 90% gate
+- W01-W225 and F01-F120 audit.
+- Required close condition: W203+ green and F96+ green, or explicit user waiver.

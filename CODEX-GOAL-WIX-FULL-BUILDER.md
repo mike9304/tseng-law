@@ -46,7 +46,6 @@ W01~W225 중 자동 검증 + Codex 자평 기준 🟢 = 203 이상.
 - 신뢰출처 (always read first):
   - `AGENTS.md` (아키텍처 lock-in, 절대 위반 금지)
   - `Wix 체크포인트.md` (W01~W225 정의 / 상태 업데이트 대상)
-  - `WIX-FULL-PRODUCT-GAP.md` (F01~F120 전체 Wix 제품 gap 정의 / 상태 업데이트 대상)
   - `SESSION.md` (직전 세션 인계, 갱신 대상)
   - `CODEX-AUDIT-FINDINGS-2026-05-09.md` (Critical/High 잔여)
   - 첫 실행 시 생성하는 4 파일 (§5)

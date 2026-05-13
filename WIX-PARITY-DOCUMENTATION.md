@@ -3,6 +3,26 @@
 Long-horizon Wix parity decision/progress/risk log.
 Created: 2026-05-09T12:52:13.760Z
 
+## 2026-05-13 — Scope Correction: Full Wix Product Gap
+
+- 사용자 피드백: "너가 전체 윅스 기준보다 25%만 됐다며 그럼 우리 계획도 남은 75%를 더 채우도록 수정해야 하지 않아? 나는 윅스 만들어 달라 했으니까"
+- 결정:
+  - 기존 W01~W225는 유지하되, 이를 "Wix visual editor parity layer"로 재분류한다.
+  - 실제 Wix/Wix Studio 전체 제품 기준의 누락 영역을 `WIX-FULL-PRODUCT-GAP.md`로 새로 정의한다.
+  - 새 F-layer F01~F120과 M157~M176을 추가해 CMS, App Market, Stores/eCommerce, AI, collaboration, developer platform, multilingual, enterprise/ops까지 포함한다.
+  - 최종 완료 조건은 `W01~W225 중 203+ green`만으로 부족하다. `F01~F120 중 96+ green`도 필요하다.
+- 근거 소스:
+  - Wix Studio features: https://www.wix.com/studio/features
+  - Studio Editor overview: https://support.wix.com/en/article/wix-studio-about-the-studio-editor
+  - Studio CMS: https://support.wix.com/en/article/wix-studio-using-the-cms
+  - Wix App Market: https://support.wix.com/en/article/about-the-wix-app-market
+  - Wix Stores: https://support.wix.com/en/article/wix-stores-an-overview-of-store-features
+  - Wix Bookings: https://support.wix.com/en/article/wix-bookings-about-wix-bookings
+  - Wix Multilingual: https://support.wix.com/en/article/wix-multilingual-an-overview
+  - Wix Studio developer platform: https://www.wix.com/studio/for-web-developers
+- 다음:
+  - M157에서 F01~F120 상세 체크포인트를 실제 파일로 seed하고 scoring/audit gate를 자동화한다.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

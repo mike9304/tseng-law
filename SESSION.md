@@ -6358,3 +6358,22 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - Asset Library modal focus trap/restore path.
 - 다음 후보:
   - `AssetLibraryModal.tsx` persistence hook split 또는 `SandboxCatalogPanel.tsx` residual section split을 이어간다.
+
+## 2026-05-13 Codex /goal Scope correction Full Wix product gap
+
+- 사용자 지적에 따라 기존 W01~W225 계획을 "Wix visual editor parity layer"로 재분류했다.
+- 새 `WIX-FULL-PRODUCT-GAP.md`를 추가해 실제 Wix/Wix Studio 전체 제품 기준의 F01~F120 full product layer를 정의했다.
+- `WIX-PARITY-PLAN.md`에 M157~M176을 추가했다:
+  - M157 benchmark/checkpoint seed
+  - M158~M160 CMS/dynamic data
+  - M161~M162 App Market/native apps
+  - M163~M165 Stores/payments/bookings pro
+  - M166~M167 AI builder/assistants
+  - M168~M170 collaboration/developer platform
+  - M171~M174 marketing/i18n/enterprise/ops
+  - M175~M176 unified UX and full release audit
+- 완료 조건을 `W01~W225 203+ green` AND `F01~F120 96+ green` AND 사용자 OK 1회로 수정했다.
+- 검증:
+  - 문서 변경만 수행. `git diff --check` 예정.
+- 다음 후보:
+  - M157 Full Wix benchmark and F01-F120 checkpoint seed.

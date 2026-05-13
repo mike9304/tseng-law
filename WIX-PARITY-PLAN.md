@@ -158,3 +158,23 @@
 | M154 | Refactor | SeoPanel basics tab split | W27,W186,W195,W216,W225 | 1h | M153 | 🟡 SeoPanel 939→836 LOC + typecheck/SEO focus E2E passed / 사용자 QA 대기 |
 | M155 | Refactor | Asset library grid split | W22,W23,W216,W225 | 1h | M154 | 🟡 AssetLibraryModal 818→751 LOC + typecheck/asset focus E2E passed / 사용자 QA 대기 |
 | M156 | Refactor | Asset library chrome split | W22,W23,W216,W225 | 1h | M155 | 🟡 AssetLibraryModal 751→637 LOC + typecheck/asset focus E2E passed / 사용자 QA 대기 |
+| M157 | Scope | Full Wix product benchmark + F01-F120 seed | F01~F06 | 3h | M156 | 🔴 실제 Wix 전체 제품 기준으로 계획 확장 |
+| M158 | CMS | CMS collections/content manager v1 | F07~F16 | 24h | M157 | 🔴 collections CRUD, typed fields, CSV import/export |
+| M159 | CMS | Dataset/repeater/dynamic page binding | F17~F26 | 32h | M158 | 🔴 datasets, repeaters, dynamic URLs, per-item SEO |
+| M160 | CMS | Visitor input to CMS + moderation | F27~F32 | 18h | M159 | 🔴 form-to-collection mapping, validation, spam/rate controls |
+| M161 | Apps | App Market shell and app manifest runtime | F33~F42 | 28h | M157 | 🔴 install/enable/disable/settings/widget hooks |
+| M162 | Apps | Native app pack foundations | F43~F52 | 36h | M161 | 🔴 Blog/Events/Members/FAQ/Chat/Portfolio dashboard + widgets |
+| M163 | Commerce | Stores/eCommerce core | F53~F66 | 48h | M157 | 🔴 catalog, product pages, cart, checkout adapter, order admin |
+| M164 | Commerce | Payments/business operations | F67~F74 | 36h | M163 | 🔴 provider abstraction, taxes, shipping, discounts, refunds, receipts |
+| M165 | Bookings | Bookings pro parity extension | F75~F84 | 32h | M164 | 🔴 packages, resources, client portal, staff calendar depth |
+| M166 | AI | AI site builder + responsive AI | F85~F90 | 40h | M157 | 🔴 prompt-to-site, layout suggestions, breakpoint fixes |
+| M167 | AI | AI text/image/code assistants | F91~F94 | 36h | M166 | 🔴 content/image/code generation and safe apply/revert |
+| M168 | Collab | Realtime collaboration/comments/roles | F95~F104 | 48h | M157 | 🔴 presence, comments, permissions, conflict handling |
+| M169 | Collab | Branching, approvals, client handoff | F95~F104 | 28h | M168 | 🔴 version branches, review links, approval audit trail |
+| M170 | Dev | Developer platform/custom code/serverless | F105~F112 | 48h | M157 | 🔴 code slots, functions, API/SDK surface, logs |
+| M171 | Growth | Marketing/CRM/automation/integrations | F43~F52,F105~F112 | 36h | M162,M170 | 🔴 forms CRM, email automations, analytics integrations |
+| M172 | i18n | Full translation manager | F113~F120 | 32h | M159 | 🔴 manual/auto translation, per-language assets/menu/SEO |
+| M173 | Enterprise | Account workspace/media/shared CMS/analytics | F95~F120 | 40h | M168,M172 | 🔴 multi-site workspace, account-level assets, shared collections |
+| M174 | Ops | Infrastructure/observability/recovery parity | F01~F120 | 36h | M170 | 🔴 deploy health, cache, backups, logs, perf/security dashboards |
+| M175 | UX | Full product navigation and cross-surface polish | F01~F120 | 32h | M158~M174 | 🔴 unified dashboard/editor/app/settings navigation |
+| M176 | Release | Full Wix product audit and 90% gate | F01~F120,W01~W225 | 24h | M175 | 🔴 W203+ and F96+ green before final user OK |

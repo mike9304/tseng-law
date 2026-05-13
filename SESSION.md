@@ -6425,3 +6425,21 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npx next lint --file ...CMS M158-B changed files...` ✅
 - 다음 후보:
   - M158-C: CSV import/export 또는 content revisions/media field asset integration.
+
+## 2026-05-13 Codex /goal M158-C CMS CSV import/export
+
+- editable CMS record CSV import/export 엔진을 추가했다.
+- Export는 `recordId,status,locale,{field keys...}` header와 RFC4180 기본 quote/escape를 사용한다.
+- Import는 append/replace mode를 지원하고, 모든 행을 먼저 검증한 뒤 site document에 쓰므로 실패 시 기존 records가 유지된다.
+- `/api/builder/sites/[siteId]/collections/[collectionId]/records/csv` GET/POST route를 추가하고 `edit-pages` guard coverage에 포함했다.
+- `/${locale}/admin-builder/cms` Content Manager records 영역에 CSV textarea, append/replace selector, Import CSV, Export CSV action을 추가했다.
+- 체크포인트 상태:
+  - F11 🔴 → 🟡: CSV import/export + validation summary + rollback-on-failure 구현. 대용량 streaming/import mapping UI는 후속.
+  - F16 유지 🟡: 119 route files / 103 mutation handlers guard coverage 통과.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts` ✅ (7 tests)
+  - `npm run security:builder-routes` ✅
+  - `npx next lint --file ...CMS M158-C changed files...` ✅
+- 다음 후보:
+  - M158-D: content revisions 또는 media field asset integration.

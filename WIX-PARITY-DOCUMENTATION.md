@@ -85,6 +85,26 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - CSV import/export, content revisions, media-field asset integration, typed filters/saved views/stable pagination.
 
+## M158-C — CMS CSV Import And Export
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/cms-editable.ts` — CSV export/import 엔진, quote/escape parser, append/replace mode, 전체 행 검증 후 write 처리 추가
+  - `src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/csv/route.ts` — guarded CSV export/import endpoint 추가
+  - `src/components/builder/cms/ContentManagerClient.tsx` — Content Manager records 영역에 CSV textarea, append/replace selector, import/export actions 추가
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — CSV export, append import, validation rollback, replace import 단위 테스트 추가
+  - `WIX-FULL-PRODUCT-CHECKPOINTS.md` / `WIX-PARITY-PLAN.md` / `SESSION.md` — M158-C 진행 상태 반영
+- F-layer 판정:
+  - F11 🔴 → 🟡: CSV import/export, validation summary, rollback-on-failure가 구현됨. 대용량 streaming/import mapping UI는 후속.
+  - F16 유지 🟡: CSV import mutation route도 guard coverage에 포함.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts` ✅ (7 tests)
+  - `npm run security:builder-routes` ✅ (119 route files / 103 mutation handlers)
+  - `npx next lint --file src/lib/builder/cms-editable.ts --file src/lib/builder/__tests__/cms-editable.test.ts --file src/components/builder/cms/ContentManagerClient.tsx --file 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/csv/route.ts'` ✅
+- 남은 M158:
+  - content revisions, media-field asset integration, typed filters/saved views/stable pagination.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

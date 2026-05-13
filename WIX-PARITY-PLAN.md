@@ -159,7 +159,7 @@
 | M155 | Refactor | Asset library grid split | W22,W23,W216,W225 | 1h | M154 | 🟡 AssetLibraryModal 818→751 LOC + typecheck/asset focus E2E passed / 사용자 QA 대기 |
 | M156 | Refactor | Asset library chrome split | W22,W23,W216,W225 | 1h | M155 | 🟡 AssetLibraryModal 751→637 LOC + typecheck/asset focus E2E passed / 사용자 QA 대기 |
 | M157 | Scope | Full Wix product benchmark + F01-F120 seed | F01~F06 | 3h | M156 | 🟢 F01~F06 green + F01~F120 checkpoint seed / 다음 M158 CMS 시작 |
-| M158 | CMS | CMS collections/content manager v1 | F07~F16 | 24h | M157 | 🟡 editable CRUD + row duplicate/search/sort + typecheck/unit/security passed / CSV revisions media remain |
+| M158 | CMS | CMS collections/content manager v1 | F07~F16 | 24h | M157 | 🟡 editable CRUD + row duplicate/search/sort + CSV import/export + typecheck/unit/security passed / revisions media remain |
 | M159 | CMS | Dataset/repeater/dynamic page binding | F17~F26 | 32h | M158 | 🔴 datasets, repeaters, dynamic URLs, per-item SEO |
 | M160 | CMS | Visitor input to CMS + moderation | F27~F32 | 18h | M159 | 🔴 form-to-collection mapping, validation, spam/rate controls |
 | M161 | Apps | App Market shell and app manifest runtime | F33~F42 | 28h | M157 | 🔴 install/enable/disable/settings/widget hooks |

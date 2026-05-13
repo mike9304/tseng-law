@@ -48,6 +48,23 @@ export interface BuilderCmsRecordListOptions {
   sortDirection?: BuilderCmsRecordSortDirection;
 }
 
+export type BuilderCmsCsvImportMode = 'append' | 'replace';
+
+export interface BuilderCmsCsvImportOptions {
+  mode?: BuilderCmsCsvImportMode;
+}
+
+export interface BuilderCmsCsvExportResult {
+  filename: string;
+  csv: string;
+}
+
+export interface BuilderCmsCsvImportResult {
+  imported: number;
+  mode: BuilderCmsCsvImportMode;
+  records: BuilderCmsRecord[];
+}
+
 let generatedIdCounter = 0;
 
 export function defaultBuilderCmsPermissions(): BuilderCmsPermissions {
@@ -302,6 +319,60 @@ export function filterAndSortBuilderCmsRecords(
     const rightValue = sortRecordValue(right, sortBy);
     return compareRecordValues(leftValue, rightValue) * sortDirection;
   });
+}
+
+export async function exportEditableBuilderCmsRecordsCsv(
+  siteId: string,
+  localeInput: string | null | undefined,
+  collectionId: string,
+): Promise<BuilderCmsCsvExportResult | null> {
+  const locale = normalizeLocale(localeInput ?? undefined);
+  const site = await readSiteDocument(siteId, locale);
+  const collection = normalizeCmsCollections(site.cmsCollections).find(
+    (candidate) => candidate.collectionId === collectionId,
+  );
+  if (!collection) return null;
+
+  const headers = csvHeadersForCollection(collection);
+  const rows = collection.records.map((record) => headers.map((header) => csvRecordCell(collection, record, header)));
+  return {
+    filename: `${collection.slug || collection.collectionId}-records.csv`,
+    csv: stringifyCsv([headers, ...rows]),
+  };
+}
+
+export async function importEditableBuilderCmsRecordsCsv(
+  siteId: string,
+  localeInput: string | null | undefined,
+  collectionId: string,
+  csvText: string,
+  options: BuilderCmsCsvImportOptions = {},
+): Promise<BuilderCmsCsvImportResult | null> {
+  const locale = normalizeLocale(localeInput ?? undefined);
+  const site = await readSiteDocument(siteId, locale);
+  const collections = normalizeCmsCollections(site.cmsCollections);
+  const collectionIndex = collections.findIndex((candidate) => candidate.collectionId === collectionId);
+  if (collectionIndex === -1) return null;
+
+  const collection = collections[collectionIndex];
+  const mode: BuilderCmsCsvImportMode = options.mode === 'replace' ? 'replace' : 'append';
+  const importedRecords = buildImportedCsvRecords(collection, csvText, mode);
+  const now = new Date().toISOString();
+  const nextCollection: BuilderCmsCollection = {
+    ...collection,
+    records: mode === 'replace' ? importedRecords : [...collection.records, ...importedRecords],
+    updatedAt: now,
+  };
+  site.cmsCollections = collections.map((candidate, candidateIndex) => (
+    candidateIndex === collectionIndex ? nextCollection : candidate
+  ));
+  site.updatedAt = now;
+  await writeSiteDocument(site);
+  return {
+    imported: importedRecords.length,
+    mode,
+    records: importedRecords,
+  };
 }
 
 export function normalizeCmsCollections(input: unknown): BuilderCmsCollection[] {
@@ -692,6 +763,142 @@ function compareRecordValues(left: unknown, right: unknown): number {
     numeric: true,
     sensitivity: 'base',
   });
+}
+
+function csvHeadersForCollection(collection: BuilderCmsCollection): string[] {
+  return ['recordId', 'status', 'locale', ...collection.fields.map((field) => field.key)];
+}
+
+function csvRecordCell(
+  collection: BuilderCmsCollection,
+  record: BuilderCmsRecord,
+  header: string,
+): string {
+  if (header === 'recordId') return record.recordId;
+  if (header === 'status') return record.status;
+  if (header === 'locale') return record.locale ?? '';
+  const field = collection.fields.find((candidate) => candidate.key === header);
+  if (!field) return '';
+  const value = record.fields[field.key];
+  if (Array.isArray(value)) return value.map(stringifyRecordValue).join('\n');
+  return stringifyRecordValue(value);
+}
+
+function stringifyCsv(rows: string[][]): string {
+  return `${rows.map((row) => row.map(escapeCsvCell).join(',')).join('\n')}\n`;
+}
+
+function escapeCsvCell(value: string): string {
+  return /[",\n\r]/.test(value) ? `"${value.replace(/"/g, '""')}"` : value;
+}
+
+function buildImportedCsvRecords(
+  collection: BuilderCmsCollection,
+  csvText: string,
+  mode: BuilderCmsCsvImportMode,
+): BuilderCmsRecord[] {
+  const table = parseCsvTable(csvText);
+  if (table.length === 0) {
+    throw new BuilderCmsValidationError('CSV import requires a header row.');
+  }
+
+  const headers = table[0].map((header) => header.trim());
+  const requiredHeaders = new Set(csvHeadersForCollection(collection));
+  const unknownHeaders = headers.filter((header) => header && !requiredHeaders.has(header));
+  if (unknownHeaders.length > 0) {
+    throw new BuilderCmsValidationError(
+      'CSV import has unknown columns.',
+      unknownHeaders.map((header) => `Unknown column: ${header}`),
+    );
+  }
+
+  const fieldKeys = new Set(collection.fields.map((field) => field.key));
+  const issues: string[] = [];
+  const now = new Date().toISOString();
+  const validationCollection: BuilderCmsCollection = {
+    ...collection,
+    records: mode === 'replace' ? [] : [...collection.records],
+  };
+  const importedRecords: BuilderCmsRecord[] = [];
+
+  for (const [rowOffset, cells] of table.slice(1).entries()) {
+    const rowNumber = rowOffset + 2;
+    if (cells.every((cell) => cell.trim() === '')) continue;
+    const row = Object.fromEntries(headers.map((header, index) => [header, cells[index] ?? '']));
+    try {
+      const recordId = normalizeOptionalId(row.recordId, `row ${rowNumber} recordId`)
+        ?? generateUniqueRecordId(validationCollection);
+      ensureUniqueRecordId(validationCollection, recordId);
+      const fields = Object.fromEntries(
+        collection.fields.map((field) => [field.key, fieldKeys.has(field.key) ? row[field.key] : undefined]),
+      );
+      const record: BuilderCmsRecord = {
+        recordId,
+        status: normalizeRecordStatus(row.status),
+        locale: row.locale ? normalizeLocale(String(row.locale)) : undefined,
+        fields: validateRecordFields(validationCollection, fields, { recordId }),
+        createdAt: now,
+        updatedAt: now,
+      };
+      validationCollection.records.push(record);
+      importedRecords.push(record);
+    } catch (error) {
+      if (error instanceof BuilderCmsValidationError) {
+        issues.push(...error.issues.map((issue) => `Row ${rowNumber}: ${issue}`));
+      } else {
+        issues.push(`Row ${rowNumber}: ${error instanceof Error ? error.message : 'Invalid row.'}`);
+      }
+    }
+  }
+
+  if (issues.length > 0) {
+    throw new BuilderCmsValidationError('CMS CSV import failed.', issues);
+  }
+  return importedRecords;
+}
+
+function parseCsvTable(text: string): string[][] {
+  const rows: string[][] = [];
+  let row: string[] = [];
+  let cell = '';
+  let inQuotes = false;
+
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+    if (inQuotes) {
+      if (char === '"' && text[index + 1] === '"') {
+        cell += '"';
+        index += 1;
+      } else if (char === '"') {
+        inQuotes = false;
+      } else {
+        cell += char;
+      }
+      continue;
+    }
+
+    if (char === '"') {
+      inQuotes = true;
+    } else if (char === ',') {
+      row.push(cell);
+      cell = '';
+    } else if (char === '\n') {
+      row.push(cell);
+      rows.push(row);
+      row = [];
+      cell = '';
+    } else if (char !== '\r') {
+      cell += char;
+    }
+  }
+
+  if (inQuotes) {
+    throw new BuilderCmsValidationError('CSV import has an unterminated quoted field.');
+  }
+
+  row.push(cell);
+  rows.push(row);
+  return rows.filter((candidate) => candidate.some((value) => value.trim() !== ''));
 }
 
 function ensureUniqueCollectionId(collections: BuilderCmsCollection[], collectionId: string): void {

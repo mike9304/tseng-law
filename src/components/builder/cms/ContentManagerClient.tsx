@@ -31,6 +31,13 @@ type ApiRecordMutation = {
   issues?: string[];
 };
 
+type ApiCsvImport = {
+  ok: boolean;
+  imported?: number;
+  error?: string;
+  issues?: string[];
+};
+
 type ContentManagerClientProps = {
   locale: Locale;
   siteId: string;
@@ -40,6 +47,7 @@ type ContentManagerClientProps = {
 
 type RecordFormState = Record<string, string | boolean>;
 type RecordSortDirection = 'asc' | 'desc';
+type CsvImportMode = 'append' | 'replace';
 
 const panelStyle = {
   display: 'grid',
@@ -87,6 +95,8 @@ export default function ContentManagerClient({
   const [recordQuery, setRecordQuery] = useState('');
   const [recordSortBy, setRecordSortBy] = useState('updatedAt');
   const [recordSortDirection, setRecordSortDirection] = useState<RecordSortDirection>('desc');
+  const [csvImportText, setCsvImportText] = useState('');
+  const [csvImportMode, setCsvImportMode] = useState<CsvImportMode>('append');
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -276,6 +286,73 @@ export default function ContentManagerClient({
       setMessage('Record duplicated.');
     } catch (duplicateError) {
       setError(duplicateError instanceof Error ? duplicateError.message : 'Failed to duplicate record.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function exportCsv() {
+    if (!detail) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(
+        `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/csv?locale=${locale}`,
+        { credentials: 'same-origin' },
+      );
+      if (!response.ok) {
+        const result = await response.json().catch(() => null) as { error?: string } | null;
+        throw new Error(result?.error ?? 'Failed to export CSV.');
+      }
+      const csv = await response.text();
+      const filename = filenameFromContentDisposition(response.headers.get('content-disposition'))
+        ?? `${detail.slug || detail.collectionId}-records.csv`;
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(link.href);
+      setMessage('CSV exported.');
+    } catch (exportError) {
+      setError(exportError instanceof Error ? exportError.message : 'Failed to export CSV.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function importCsv() {
+    if (!detail) return;
+    if (!csvImportText.trim()) {
+      setError('CSV text is required.');
+      return;
+    }
+    if (csvImportMode === 'replace' && !window.confirm(`Replace all records in ${detail.collectionId}?`)) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(
+        `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/csv?locale=${locale}`,
+        {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ csv: csvImportText, mode: csvImportMode }),
+        },
+      );
+      const result = await response.json() as ApiCsvImport;
+      if (!response.ok || !result.ok) {
+        throw new Error(result.issues?.join('\n') || result.error || 'Failed to import CSV.');
+      }
+      await loadDetail(detail.collectionId);
+      await refreshCollections(detail.collectionId);
+      setCsvImportText('');
+      setMessage(`Imported ${result.imported ?? 0} records.`);
+    } catch (importError) {
+      setError(importError instanceof Error ? importError.message : 'Failed to import CSV.');
     } finally {
       setBusy(false);
     }
@@ -555,6 +632,46 @@ export default function ContentManagerClient({
                   </select>
                 </label>
               </div>
+              <div style={{ display: 'grid', gap: 10, marginBottom: 12 }}>
+                <label style={labelStyle}>
+                  CSV
+                  <textarea
+                    style={{ ...inputStyle, minHeight: 92, resize: 'vertical', fontFamily: 'monospace' }}
+                    value={csvImportText}
+                    placeholder="recordId,status,locale,title,slug"
+                    disabled={busy}
+                    onChange={(event) => setCsvImportText(event.target.value)}
+                  />
+                </label>
+                <div className="builder-dashboard-page-actions">
+                  <select
+                    aria-label="CSV import mode"
+                    style={{ ...inputStyle, width: 140 }}
+                    value={csvImportMode}
+                    disabled={busy}
+                    onChange={(event) => setCsvImportMode(event.target.value === 'replace' ? 'replace' : 'append')}
+                  >
+                    <option value="append">Append</option>
+                    <option value="replace">Replace</option>
+                  </select>
+                  <button
+                    type="button"
+                    className="builder-action-btn builder-action-btn--primary"
+                    onClick={() => void importCsv()}
+                    disabled={busy || !csvImportText.trim()}
+                  >
+                    Import CSV
+                  </button>
+                  <button
+                    type="button"
+                    className="builder-action-btn"
+                    onClick={() => void exportCsv()}
+                    disabled={busy}
+                  >
+                    Export CSV
+                  </button>
+                </div>
+              </div>
               <div className="builder-dashboard-page-list">
                 {visibleRecords.map((record) => (
                   <article key={record.recordId} className="builder-dashboard-page-card">
@@ -698,6 +815,11 @@ function CmsFieldInput({
 
 function apiBase(siteId: string) {
   return `/api/builder/sites/${encodeURIComponent(siteId)}/collections`;
+}
+
+function filenameFromContentDisposition(header: string | null): string | null {
+  const match = header?.match(/filename="([^"]+)"/);
+  return match?.[1] ?? null;
 }
 
 const systemRecordSortOptions = [

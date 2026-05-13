@@ -7,7 +7,9 @@ import {
   createEditableBuilderCmsRecord,
   deleteEditableBuilderCmsRecord,
   duplicateEditableBuilderCmsRecord,
+  exportEditableBuilderCmsRecordsCsv,
   filterAndSortBuilderCmsRecords,
+  importEditableBuilderCmsRecordsCsv,
   listEditableBuilderCmsCollections,
   readEditableBuilderCmsCollection,
   updateEditableBuilderCmsRecord,
@@ -187,6 +189,60 @@ describe('editable builder CMS store', () => {
         sortDirection: 'desc',
       }).map((record) => record.fields.title),
     ).toEqual(['Gamma quote', 'Beta quote', 'Alpha quote']);
+  });
+
+  it('exports and imports CSV rows with rollback on validation failure', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'testimonials',
+      name: 'Testimonials',
+    });
+    await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+      fields: { title: 'First, quote', slug: 'first' },
+    });
+
+    const exported = await exportEditableBuilderCmsRecordsCsv('test-site', 'ko', 'testimonials');
+    expect(exported?.filename).toBe('testimonials-records.csv');
+    expect(exported?.csv).toContain('recordId,status,locale,title,slug');
+    expect(exported?.csv).toContain('"First, quote"');
+
+    await expect(
+      importEditableBuilderCmsRecordsCsv(
+        'test-site',
+        'ko',
+        'testimonials',
+        'recordId,status,locale,title,slug\n,published,ko,Second quote,second\n',
+      ),
+    ).resolves.toMatchObject({ imported: 1, mode: 'append' });
+    await expect(
+      readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
+    ).resolves.toMatchObject({ recordCount: 2 });
+
+    await expect(
+      importEditableBuilderCmsRecordsCsv(
+        'test-site',
+        'ko',
+        'testimonials',
+        'recordId,status,locale,title,slug\n,published,ko,Bad duplicate,first\n',
+      ),
+    ).rejects.toMatchObject({
+      issues: ['Row 2: Slug must be unique.'],
+    });
+    await expect(
+      readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
+    ).resolves.toMatchObject({ recordCount: 2 });
+
+    await expect(
+      importEditableBuilderCmsRecordsCsv(
+        'test-site',
+        'ko',
+        'testimonials',
+        'recordId,status,locale,title,slug\n,published,ko,Replacement quote,replacement\n',
+        { mode: 'replace' },
+      ),
+    ).resolves.toMatchObject({ imported: 1, mode: 'replace' });
+    await expect(
+      readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
+    ).resolves.toMatchObject({ recordCount: 1 });
   });
 
   it('reserves static source collection ids', async () => {

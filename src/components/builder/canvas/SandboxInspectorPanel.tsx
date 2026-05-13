@@ -14,6 +14,7 @@ import {
   resolveOfficeNodeGroup,
   type OfficeNodeGroup,
 } from '@/lib/builder/canvas/office-locations';
+import { resolveBuilderCanvasRepeaterQuickEdit } from '@/lib/builder/canvas/repeater-quick-edit';
 import {
   InspectorNotice,
   InspectorSection,
@@ -26,6 +27,7 @@ import {
 } from './SandboxInspectorPanel.widgets';
 import SandboxInspectorLayoutTab from './SandboxInspectorLayoutTab';
 import SandboxInspectorOfficeQuickEdit from './SandboxInspectorOfficeQuickEdit';
+import SandboxInspectorRepeaterQuickEdit from './SandboxInspectorRepeaterQuickEdit';
 import styles from './SandboxPage.module.css';
 
 function resolveOfficeQuickEdit(nodes: BuilderCanvasNode[], selectedNode: BuilderCanvasNode | null): OfficeNodeGroup | null {
@@ -152,6 +154,14 @@ export default function SandboxInspectorPanel({
     () => resolveOfficeQuickEdit(document?.nodes ?? [], singleSelection ? selectedNode : null),
     [document?.nodes, selectedNode, singleSelection],
   );
+  const repeaterQuickEdit = useMemo(
+    () =>
+      resolveBuilderCanvasRepeaterQuickEdit(
+        document?.nodes ?? [],
+        singleSelection ? selectedNode?.id : null,
+      ),
+    [document?.nodes, selectedNode?.id, singleSelection],
+  );
 
   return (
     <aside className={styles.inspectorPlaceholder} data-builder-inspector-panel="true" aria-label="Inspector panel">
@@ -233,6 +243,13 @@ export default function SandboxInspectorPanel({
         ) : selectedNode ? (
           <>
             {compositeSurfaceEditor}
+            {repeaterQuickEdit ? (
+              <SandboxInspectorRepeaterQuickEdit
+                quickEdit={repeaterQuickEdit}
+                disabled={selectedNode.locked}
+                updateNodeContent={updateNodeContent}
+              />
+            ) : null}
             {(() => {
               const tabTitles = {
                 layout: 'x/y/w/h, 회전, lock/hidden 설정',

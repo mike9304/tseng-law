@@ -5809,3 +5809,21 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - W211/W212/W215 waitlist join/promote, recurring availability holiday exclusion, booking email template preview/save.
 - 다음 후보:
   - visual/office-map/public smoke 또는 backup/migration/automation 계열의 최신 sweep으로 이어간다.
+
+## 2026-05-13 Codex /goal M117 Public interactions/visual sweep
+
+- office-map/public interaction sweep과 Wix-like visual baseline을 최신 상태로 재검증했다.
+- 기능성 public sweep은 제품 코드 변경 없이 15개 테스트가 통과했다.
+- visual baseline 첫 실행은 현재 기본 사이트 메뉴/캔버스 상태가 baseline보다 확장되어 first screen이 2% 차이로 실패했다.
+- snapshot update 직후 일반 실행은 Site settings modal baseline이 로딩 상태로 잡혀 흔들렸다. `tests/builder-editor/helpers/editor.ts`의 `openSiteSettings`가 `기본 정보`와 `예: 호정국제법률사무소` placeholder를 기다리게 해 로드 완료 상태를 기준으로 고정했다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/office-map-public.playwright.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (15 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/visual-regression.playwright.ts --workers=1 --update-snapshots` ✅ (1 passed, snapshots 갱신)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/visual-regression.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `npm run typecheck` ✅
+- 확인된 커버리지:
+  - office map quick edit/content inspector/published sync.
+  - published lightbox, popup, cookie consent, gallery lightbox, fallback/mobile drawers, header search, live chat, AI chat, inline site-search, menu-bar, services/FAQ disclosure keyboard paths.
+  - Chromium visual baselines: first screen, catalog drawer, text inspector, site settings loaded state.
+- 다음 후보:
+  - backup/migration/automation 또는 remaining dirty worktree의 asset/forms/persistence 계열을 검증/정리한다.

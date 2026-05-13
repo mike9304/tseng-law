@@ -62,6 +62,8 @@ export async function openSiteSettings(page: Page): Promise<Locator> {
   const modal = page.locator('[data-modal-shell="true"][data-modal-nested="false"]').last();
   await expect(modal).toBeVisible();
   await expect(modal).toContainText('사이트 설정');
+  await expect(modal.getByText('기본 정보')).toBeVisible();
+  await expect(modal.getByPlaceholder('예: 호정국제법률사무소')).toBeVisible();
   return modal;
 }
 

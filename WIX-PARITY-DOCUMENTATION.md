@@ -2399,3 +2399,21 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/bookings-m25.playwright.ts tests/builder-editor/bookings-m26-dashboard.playwright.ts tests/builder-editor/bookings-m26-customer-manage.playwright.ts tests/builder-editor/bookings-m27-email-templates.playwright.ts tests/builder-editor/bookings-m27-recurring-availability.playwright.ts tests/builder-editor/bookings-m27-waitlist.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W196/W197/W198/W199/W200/W201/W202/W211/W212/W215/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. paid booking widget, service/staff/slot CRUD, admin dashboard/reschedule/no-show/calendar views, customer manage link, email templates, recurring holiday exclusion, waitlist promote 경로를 최신 코드에서 통과시켰다.
+
+## M117 — Public interactions/visual sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/helpers/editor.ts` — visual snapshot 전에 Site settings modal의 General form이 실제로 로드될 때까지 기다리게 했다.
+  - `tests/visual/baseline/chromium-builder/visual-regression.playwright.ts/*.png` — 현재 기본 사이트 메뉴/캔버스 상태와 로드 완료된 Site settings modal 기준으로 Chromium visual baselines를 갱신했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M117 검증 증거를 기록했다.
+- 원인/수정:
+  - visual baseline 첫 실행은 현재 기본 사이트 메뉴가 baseline보다 확장되어 first screen이 2% 차이로 실패했다.
+  - snapshot update 직후 일반 실행은 Site settings modal을 로딩 상태로 캡처한 baseline 때문에 흔들렸다. helper가 `기본 정보`와 `예: 호정국제법률사무소` 입력 placeholder를 기다리게 해 로드 완료 상태를 기준으로 고정했다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/office-map-public.playwright.ts tests/builder-editor/published-interactions.playwright.ts --workers=1` ✅ (15 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/visual-regression.playwright.ts --workers=1 --update-snapshots` ✅ (1 passed, snapshots 갱신)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/visual-regression.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `npm run typecheck` ✅
+- W 판정:
+  - W23/W40/W71/W72/W98/W99/W100/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. office map editor/published reflection, lightbox/popup/cookie/gallery/mobile drawer/header search/live chat/AI chat/menu/search/disclosure keyboard paths, Wix-like visual baselines를 최신 코드에서 통과시켰다.

@@ -6,6 +6,7 @@ import type {
   BuilderCmsCollectionSummary,
   BuilderCmsFieldDefinition,
   BuilderCmsRecord,
+  BuilderCmsRecordRevision,
 } from '@/lib/builder/cms-types';
 import type { BuilderCollectionSummary } from '@/lib/builder/cms';
 import type { Locale } from '@/lib/locales';
@@ -358,6 +359,30 @@ export default function ContentManagerClient({
     }
   }
 
+  async function restoreRevision(recordId: string, revisionId: string) {
+    if (!detail || !window.confirm(`Restore revision ${revisionId}?`)) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(
+        `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/${encodeURIComponent(recordId)}/revisions/${encodeURIComponent(revisionId)}/restore?locale=${locale}`,
+        { method: 'POST', credentials: 'same-origin' },
+      );
+      const result = await response.json() as ApiRecordMutation;
+      if (!response.ok || !result.ok || !result.record) {
+        throw new Error(result.issues?.join('\n') || result.error || 'Failed to restore revision.');
+      }
+      await loadDetail(detail.collectionId);
+      await refreshCollections(detail.collectionId);
+      setMessage('Revision restored.');
+    } catch (restoreError) {
+      setError(restoreError instanceof Error ? restoreError.message : 'Failed to restore revision.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
   function beginEditRecord(record: BuilderCmsRecord) {
     if (!detail) return;
     setEditingRecordId(record.recordId);
@@ -688,6 +713,7 @@ export default function ContentManagerClient({
                           {field.label}: {formatValue(record.fields[field.key])}
                         </span>
                       ))}
+                      <span>{record.revisions?.length ?? 0} revisions</span>
                     </div>
                     <div className="builder-dashboard-page-actions">
                       <button
@@ -715,6 +741,41 @@ export default function ContentManagerClient({
                         Delete
                       </button>
                     </div>
+                    {record.revisions?.length ? (
+                      <div style={{ display: 'grid', gap: 10, marginTop: 10 }}>
+                        {latestRevisions(record.revisions).map((revision) => (
+                          <div
+                            key={revision.revisionId}
+                            style={{ borderTop: '1px solid #e2e8f0', display: 'grid', gap: 8, paddingTop: 10 }}
+                          >
+                            <div className="builder-dashboard-page-head">
+                              <div>
+                                <strong>{revision.action === 'restore' ? 'Restore snapshot' : 'Update snapshot'}</strong>
+                                <span>{formatDateTime(revision.createdAt)} by {revision.authorLabel}</span>
+                              </div>
+                              <span className="builder-stage-pill">{revision.status}</span>
+                            </div>
+                            <div className="builder-dashboard-page-meta">
+                              {detail.fields.slice(0, 3).map((field) => (
+                                <span key={field.fieldId}>
+                                  {field.label}: {formatValue(revision.fields[field.key])}
+                                </span>
+                              ))}
+                            </div>
+                            <div className="builder-dashboard-page-actions">
+                              <button
+                                type="button"
+                                className="builder-action-btn"
+                                onClick={() => void restoreRevision(record.recordId, revision.revisionId)}
+                                disabled={busy}
+                              >
+                                Restore
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
                   </article>
                 ))}
                 {detail.records.length === 0 ? (
@@ -820,6 +881,17 @@ function apiBase(siteId: string) {
 function filenameFromContentDisposition(header: string | null): string | null {
   const match = header?.match(/filename="([^"]+)"/);
   return match?.[1] ?? null;
+}
+
+function latestRevisions(revisions: BuilderCmsRecordRevision[]): BuilderCmsRecordRevision[] {
+  return [...revisions]
+    .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt))
+    .slice(0, 3);
+}
+
+function formatDateTime(value: string): string {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? value : date.toLocaleString();
 }
 
 const systemRecordSortOptions = [

@@ -105,6 +105,27 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - content revisions, media-field asset integration, typed filters/saved views/stable pagination.
 
+## M158-D — CMS Record Revisions And Restore
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/cms-types.ts` — `BuilderCmsRecordRevision` 타입과 record `revisions` 필드 추가
+  - `src/lib/builder/cms-editable.ts` — update/restore snapshot 저장, revision normalize, restore 엔진 추가
+  - `src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/revisions/[revisionId]/restore/route.ts` — guarded revision restore endpoint 추가
+  - `src/components/builder/cms/ContentManagerClient.tsx` — Content Manager records 카드에 revision count, 최근 revision, Restore action 추가
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — update revision 생성, restore snapshot 복원, restore 전 상태 revision 보존 테스트 추가
+  - `WIX-FULL-PRODUCT-CHECKPOINTS.md` / `WIX-PARITY-PLAN.md` / `SESSION.md` — M158-D 진행 상태 반영
+- F-layer 판정:
+  - F13 🔴 → 🟡: row history, restore, author/time metadata가 기본 구현됨. diff view, named revisions, per-user identity는 후속.
+  - F16 유지 🟡: revision restore mutation route도 guard coverage에 포함.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts` ✅ (7 tests)
+  - `npm run security:builder-routes` ✅ (120 route files / 104 mutation handlers)
+  - `npx next lint --file src/lib/builder/cms-types.ts --file src/lib/builder/cms-editable.ts --file src/lib/builder/__tests__/cms-editable.test.ts --file src/components/builder/cms/ContentManagerClient.tsx --file 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/revisions/[revisionId]/restore/route.ts'` ✅
+- 남은 M158:
+  - media-field asset integration, typed filters/saved views/stable pagination.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

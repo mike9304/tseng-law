@@ -10,6 +10,8 @@ import {
   type BuilderCmsFieldType,
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
+  type BuilderCmsRecordRevision,
+  type BuilderCmsRecordRevisionAction,
   type BuilderCmsRecordStatus,
 } from '@/lib/builder/cms-types';
 import { normalizeLocale } from '@/lib/locales';
@@ -211,6 +213,54 @@ export async function updateEditableBuilderCmsRecord(
     status: input.status ? normalizeRecordStatus(input.status) : previous.status,
     locale: input.locale ? normalizeLocale(String(input.locale)) : previous.locale,
     fields: validateRecordFields(collection, input.fields ?? previous.fields, { recordId }),
+    revisions: appendRecordRevision(previous, 'update'),
+    updatedAt: now,
+  };
+  const nextCollection = {
+    ...collection,
+    records: collection.records.map((candidate, candidateIndex) => (
+      candidateIndex === recordIndex ? nextRecord : candidate
+    )),
+    updatedAt: now,
+  };
+  site.cmsCollections = collections.map((candidate, candidateIndex) => (
+    candidateIndex === collectionIndex ? nextCollection : candidate
+  ));
+  site.updatedAt = now;
+  await writeSiteDocument(site);
+  return nextRecord;
+}
+
+export async function restoreEditableBuilderCmsRecordRevision(
+  siteId: string,
+  localeInput: string | null | undefined,
+  collectionId: string,
+  recordId: string,
+  revisionId: string,
+): Promise<BuilderCmsRecord | null> {
+  const locale = normalizeLocale(localeInput ?? undefined);
+  const site = await readSiteDocument(siteId, locale);
+  const collections = normalizeCmsCollections(site.cmsCollections);
+  const collectionIndex = collections.findIndex((candidate) => candidate.collectionId === collectionId);
+  if (collectionIndex === -1) return null;
+
+  const collection = collections[collectionIndex];
+  const recordIndex = collection.records.findIndex((candidate) => candidate.recordId === recordId);
+  if (recordIndex === -1) return null;
+
+  const current = collection.records[recordIndex];
+  const revision = normalizeRecordRevisions(current.revisions).find(
+    (candidate) => candidate.revisionId === revisionId,
+  );
+  if (!revision) return null;
+
+  const now = new Date().toISOString();
+  const nextRecord: BuilderCmsRecord = {
+    ...current,
+    status: revision.status,
+    locale: revision.locale,
+    fields: validateRecordFields(collection, revision.fields, { recordId }),
+    revisions: appendRecordRevision(current, 'restore'),
     updatedAt: now,
   };
   const nextCollection = {
@@ -557,11 +607,29 @@ function normalizeRecords(input: unknown): BuilderCmsRecord[] {
     .filter((item): item is Partial<BuilderCmsRecord> => !!item && typeof item === 'object')
     .map((record) => ({
       recordId: normalizeRequiredId(record.recordId, 'recordId'),
-      status: normalizeRecordStatus(record.status),
-      locale: record.locale ? normalizeLocale(String(record.locale)) : undefined,
-      fields: isRecordObject(record.fields) ? record.fields : {},
-      createdAt: normalizeTimestamp(record.createdAt),
-      updatedAt: normalizeTimestamp(record.updatedAt),
+    status: normalizeRecordStatus(record.status),
+    locale: record.locale ? normalizeLocale(String(record.locale)) : undefined,
+    fields: isRecordObject(record.fields) ? record.fields : {},
+    revisions: normalizeRecordRevisions(record.revisions),
+    createdAt: normalizeTimestamp(record.createdAt),
+    updatedAt: normalizeTimestamp(record.updatedAt),
+  }));
+}
+
+function normalizeRecordRevisions(input: unknown): BuilderCmsRecordRevision[] {
+  if (!Array.isArray(input)) return [];
+  return input
+    .filter((item): item is Partial<BuilderCmsRecordRevision> => !!item && typeof item === 'object')
+    .map((revision) => ({
+      revisionId: normalizeRequiredId(revision.revisionId, 'revisionId'),
+      status: normalizeRecordStatus(revision.status),
+      locale: revision.locale ? normalizeLocale(String(revision.locale)) : undefined,
+      fields: isRecordObject(revision.fields) ? revision.fields : {},
+      createdAt: normalizeTimestamp(revision.createdAt),
+      authorLabel: typeof revision.authorLabel === 'string' && revision.authorLabel.trim()
+        ? revision.authorLabel.trim()
+        : 'Admin',
+      action: normalizeRevisionAction(revision.action),
     }));
 }
 
@@ -697,6 +765,24 @@ function isUniqueFieldValue(
     record.recordId !== recordId &&
     record.fields[field.key] === value
   ));
+}
+
+function appendRecordRevision(
+  record: BuilderCmsRecord,
+  action: BuilderCmsRecordRevisionAction,
+): BuilderCmsRecordRevision[] {
+  return [
+    ...normalizeRecordRevisions(record.revisions),
+    {
+      revisionId: generateEntityId('revision'),
+      status: record.status,
+      locale: record.locale,
+      fields: { ...record.fields },
+      createdAt: new Date().toISOString(),
+      authorLabel: 'Admin',
+      action,
+    },
+  ].slice(-50);
 }
 
 function buildDuplicateRecordFields(
@@ -932,6 +1018,10 @@ function normalizeRecordStatus(input: unknown): BuilderCmsRecordStatus {
   return input === 'published' || input === 'archived' ? input : 'draft';
 }
 
+function normalizeRevisionAction(input: unknown): BuilderCmsRecordRevisionAction {
+  return input === 'restore' ? 'restore' : 'update';
+}
+
 function normalizeRequiredString(input: unknown, label: string): string {
   if (typeof input !== 'string' || !input.trim()) {
     throw new BuilderCmsValidationError(`${label} is required.`);
@@ -982,7 +1072,7 @@ function isRecordObject(input: unknown): input is Record<string, unknown> {
   return !!input && typeof input === 'object' && !Array.isArray(input);
 }
 
-function generateEntityId(prefix: 'collection' | 'field' | 'record'): string {
+function generateEntityId(prefix: 'collection' | 'field' | 'record' | 'revision'): string {
   generatedIdCounter += 1;
   return `${prefix}-${Date.now().toString(36)}-${generatedIdCounter.toString(36)}`;
 }

@@ -12,6 +12,7 @@ import {
   importEditableBuilderCmsRecordsCsv,
   listEditableBuilderCmsCollections,
   readEditableBuilderCmsCollection,
+  restoreEditableBuilderCmsRecordRevision,
   updateEditableBuilderCmsRecord,
 } from '@/lib/builder/cms-editable';
 
@@ -113,6 +114,28 @@ describe('editable builder CMS store', () => {
       { fields: { title: 'After', slug: 'after' } },
     );
     expect(updated?.fields).toMatchObject({ title: 'After', slug: 'after' });
+
+    const withRevision = await readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials');
+    const revision = withRevision?.records[0].revisions?.[0];
+    expect(revision).toMatchObject({
+      action: 'update',
+      authorLabel: 'Admin',
+      fields: { title: 'Before', slug: 'before' },
+    });
+
+    const restored = await restoreEditableBuilderCmsRecordRevision(
+      'test-site',
+      'ko',
+      'testimonials',
+      created!.recordId,
+      revision!.revisionId,
+    );
+    expect(restored?.fields).toMatchObject({ title: 'Before', slug: 'before' });
+    const restoreRevision = restored?.revisions?.[restored.revisions.length - 1];
+    expect(restoreRevision).toMatchObject({
+      action: 'restore',
+      fields: { title: 'After', slug: 'after' },
+    });
 
     await expect(
       readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),

@@ -48,12 +48,24 @@ export interface BuilderCmsFieldDefinition {
 }
 
 export type BuilderCmsRecordStatus = 'draft' | 'published' | 'archived';
+export type BuilderCmsRecordRevisionAction = 'update' | 'restore';
+
+export interface BuilderCmsRecordRevision {
+  revisionId: string;
+  status: BuilderCmsRecordStatus;
+  locale?: Locale;
+  fields: Record<string, unknown>;
+  createdAt: string;
+  authorLabel: string;
+  action: BuilderCmsRecordRevisionAction;
+}
 
 export interface BuilderCmsRecord {
   recordId: string;
   status: BuilderCmsRecordStatus;
   locale?: Locale;
   fields: Record<string, unknown>;
+  revisions?: BuilderCmsRecordRevision[];
   createdAt: string;
   updatedAt: string;
 }

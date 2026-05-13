@@ -6443,3 +6443,21 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npx next lint --file ...CMS M158-C changed files...` ✅
 - 다음 후보:
   - M158-D: content revisions 또는 media field asset integration.
+
+## 2026-05-13 Codex /goal M158-D CMS record revisions/restore
+
+- CMS record에 `revisions` snapshot 모델을 추가했다.
+- record update 시 이전 status/locale/fields가 author/time/action metadata와 함께 revision으로 저장된다.
+- revision restore API를 추가했다. 복원 시 현재 상태도 `restore` action revision으로 보존해 되돌릴 수 있는 흐름을 유지한다.
+- `/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/revisions/[revisionId]/restore` POST route를 추가하고 `edit-pages` guard coverage에 포함했다.
+- `/${locale}/admin-builder/cms` Content Manager records 카드에 revision count, 최근 revision 3개, Restore action을 추가했다.
+- 체크포인트 상태:
+  - F13 🔴 → 🟡: row history, restore, author/time metadata 기본 구현. diff view/named revisions/per-user identity는 후속.
+  - F16 유지 🟡: 120 route files / 104 mutation handlers guard coverage 통과.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts` ✅ (7 tests)
+  - `npm run security:builder-routes` ✅
+  - `npx next lint --file ...CMS M158-D changed files...` ✅
+- 다음 후보:
+  - M158-E: media field asset integration 또는 typed filters/saved views/stable pagination.

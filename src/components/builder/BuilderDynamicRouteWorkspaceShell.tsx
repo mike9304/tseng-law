@@ -128,6 +128,31 @@ export default function BuilderDynamicRouteWorkspaceShell({
               </div>
             </dl>
           </section>
+          <section className="builder-preview-inspector-card">
+            <h2>Dynamic SEO preview</h2>
+            <dl className="builder-preview-inspector-list">
+              <div>
+                <dt>Status</dt>
+                <dd>{detail.previewContext.seoPreview.status}</dd>
+              </div>
+              <div>
+                <dt>Title</dt>
+                <dd>{detail.previewContext.seoPreview.title ?? 'Select a record first'}</dd>
+              </div>
+              <div>
+                <dt>Description</dt>
+                <dd>{detail.previewContext.seoPreview.description ?? 'No record SEO resolved yet'}</dd>
+              </div>
+              <div>
+                <dt>Canonical path</dt>
+                <dd>{detail.previewContext.seoPreview.canonicalPath ?? 'No canonical path resolved yet'}</dd>
+              </div>
+              <div>
+                <dt>Indexing</dt>
+                <dd>{detail.previewContext.seoPreview.noIndex ? 'Noindex' : 'Indexable'}</dd>
+              </div>
+            </dl>
+          </section>
         </>
       }
     >
@@ -202,6 +227,10 @@ export default function BuilderDynamicRouteWorkspaceShell({
                 <span>{detail.pathPattern}</span>
                 <span>{detail.previewContext.resolvedPath ?? 'No resolved live route'}</span>
               </div>
+              <div className="builder-dashboard-page-meta">
+                <span>SEO title: {detail.previewContext.seoPreview.title ?? 'Not resolved'}</span>
+                <span>Canonical: {detail.previewContext.seoPreview.canonicalPath ?? 'Not resolved'}</span>
+              </div>
               {detail.previewContext.resolvedPath ? (
                 <div className="builder-dashboard-page-actions">
                   <Link
@@ -237,6 +266,10 @@ export default function BuilderDynamicRouteWorkspaceShell({
                       <div className="builder-dashboard-page-meta">
                         <span>{record.recordId}</span>
                         <span>{record.routePath}</span>
+                      </div>
+                      <div className="builder-dashboard-page-meta">
+                        <span>SEO title: {record.seo.title}</span>
+                        <span>{record.seo.noIndex ? 'Noindex' : 'Indexable'}</span>
                       </div>
                       <div className="builder-dashboard-page-actions">
                         <Link

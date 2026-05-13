@@ -60,6 +60,16 @@ export interface BuilderCollectionRecordPreview {
   primaryLabel: string;
   secondaryLabel: string;
   routePath: string;
+  seo: BuilderCollectionRecordSeoPreview;
+}
+
+export interface BuilderCollectionRecordSeoPreview {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  keywords: string[];
+  image?: string;
+  noIndex: boolean;
 }
 
 export interface BuilderCollectionBindableTargetSummary {
@@ -268,6 +278,18 @@ export function readBuilderCollectionRecordPreviews(
         primaryLabel: post.title,
         secondaryLabel: `${post.categoryLabel} · ${post.dateDisplay || post.date}`,
         routePath: `/${locale}/columns/${post.slug}`,
+        seo: {
+          title: post.title,
+          description: post.summary,
+          canonicalPath: `/${locale}/columns/${post.slug}`,
+          keywords: [
+            post.title,
+            post.categoryLabel,
+            locale === 'ko' ? '대만 법률' : locale === 'zh-hant' ? '台灣法律' : 'Taiwan law',
+          ],
+          image: post.featuredImage,
+          noIndex: locale === 'en',
+        },
       }));
     case 'service-areas':
       return serviceAreas.map((area) => ({
@@ -275,6 +297,17 @@ export function readBuilderCollectionRecordPreviews(
         primaryLabel: area.title[locale],
         secondaryLabel: `${area.subtitle[locale]} · ${area.columnSlugs.length} linked columns`,
         routePath: `/${locale}/services/${area.slug}`,
+        seo: {
+          title: area.title[locale],
+          description: summarizeForSeo(area.intro[locale]),
+          canonicalPath: `/${locale}/services/${area.slug}`,
+          keywords: [
+            area.title[locale],
+            area.subtitle[locale],
+            locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan lawyer',
+          ],
+          noIndex: false,
+        },
       }));
     case 'attorney-profiles': {
       const localizedAttorneyProfiles = attorneyProfiles[locale];
@@ -286,12 +319,24 @@ export function readBuilderCollectionRecordPreviews(
           primaryLabel: profile.name,
           secondaryLabel: `${profile.role} · ${profile.email}`,
           routePath: `/${locale}/lawyers/${profile.slug}`,
+          seo: {
+            title: profile.title,
+            description: profile.description,
+            canonicalPath: `/${locale}/lawyers/${profile.slug}`,
+            keywords: profile.keywords,
+            image: profile.image,
+            noIndex: false,
+          },
         };
       });
     }
     default:
       return assertNever(collectionId);
   }
+}
+
+function summarizeForSeo(text: string, maxLength = 160) {
+  return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}...` : text;
 }
 
 function assertNever(value: never): never {

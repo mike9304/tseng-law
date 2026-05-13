@@ -47,6 +47,17 @@ export interface BuilderDynamicRoutePreviewContext {
   resolvedPath: string | null;
   summary: string;
   note: string;
+  seoPreview: BuilderDynamicRouteSeoPreview;
+}
+
+export interface BuilderDynamicRouteSeoPreview {
+  status: 'collection-route' | 'record-required' | 'record-selected' | 'record-missing';
+  title: string | null;
+  description: string | null;
+  canonicalPath: string | null;
+  keywords: string[];
+  image?: string;
+  noIndex: boolean;
 }
 
 export interface BuilderDynamicRouteDetail extends BuilderDynamicRouteSummary {
@@ -235,6 +246,14 @@ function resolveBuilderDynamicRoutePreviewContext(
       resolvedPath: route.pathPattern,
       summary: 'Collection route preview',
       note: 'List routes do not require a concrete record context in this batch.',
+      seoPreview: {
+        status: 'collection-route',
+        title: route.title,
+        description: route.notes,
+        canonicalPath: route.pathPattern,
+        keywords: [route.collectionTitle],
+        noIndex: false,
+      },
     };
   }
 
@@ -245,6 +264,14 @@ function resolveBuilderDynamicRoutePreviewContext(
       resolvedPath: null,
       summary: 'Preview record required',
       note: 'Choose one of the sample records below to resolve an item-route preview context.',
+      seoPreview: {
+        status: 'record-required',
+        title: null,
+        description: null,
+        canonicalPath: null,
+        keywords: [],
+        noIndex: false,
+      },
     };
   }
 
@@ -256,6 +283,14 @@ function resolveBuilderDynamicRoutePreviewContext(
       resolvedPath: null,
       summary: 'Preview record not found',
       note: 'The selected preview record is not available in the current sample set.',
+      seoPreview: {
+        status: 'record-missing',
+        title: null,
+        description: null,
+        canonicalPath: null,
+        keywords: [],
+        noIndex: false,
+      },
     };
   }
 
@@ -265,5 +300,14 @@ function resolveBuilderDynamicRoutePreviewContext(
     resolvedPath: selectedRecord.routePath,
     summary: selectedRecord.primaryLabel,
     note: selectedRecord.secondaryLabel,
+    seoPreview: {
+      status: 'record-selected',
+      title: selectedRecord.seo.title,
+      description: selectedRecord.seo.description,
+      canonicalPath: selectedRecord.seo.canonicalPath,
+      keywords: selectedRecord.seo.keywords,
+      image: selectedRecord.seo.image,
+      noIndex: selectedRecord.seo.noIndex,
+    },
   };
 }

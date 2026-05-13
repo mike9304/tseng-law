@@ -2347,3 +2347,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts tests/builder-editor/design-system-m23.playwright.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W181/W184/W216/W219/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. layers, shortcut map, align/distribute, style paste, components, comments, zoom, undo timeline, typography scale, style source chips, rulers/grid/custom guides를 최신 코드에서 통과시켰다.
+
+## M113 — Locale/mobile runtime sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/SandboxEditorWorkspace.tsx` — global header badge를 header 내부 상단이 아닌 기본 CSS 위치로 되돌려 모바일 헤더의 hamburger/search control을 덮지 않게 했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M113 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/canvas/SandboxEditorWorkspace.tsx` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-auto-fit.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts tests/builder-editor/zh-hant-smoke.playwright.ts tests/builder-editor/mobile-runtime.playwright.ts tests/builder-editor/mobile-auto-fit.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W10/W14/W40/W193/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. Korean/Traditional Chinese locale isolation, zh-hant editor/public smoke, mobile auto-fit, mobile preview/runtime, sticky CTA and touch context menu를 최신 코드에서 통과시켰다.

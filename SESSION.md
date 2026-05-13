@@ -5751,3 +5751,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts tests/builder-editor/design-system-m23.playwright.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - cross-tab delete race와 locale/zh-hant/mobile runtime 쪽 최신 sweep으로 이어간다.
+
+## 2026-05-13 Codex /goal M113 Locale/mobile runtime sweep
+
+- locale projection, zh-hant smoke, mobile runtime, mobile auto-fit 최신 E2E sweep을 실행했다.
+- 첫 실행에서 mobile auto-fit만 실패했다. global header editing badge의 inline `top: 8` 배치가 모바일 헤더 내부의 hamburger button 위를 덮어 실제 클릭을 막고 있었다.
+- `SandboxEditorWorkspace`의 header badge inline top override를 제거해 CSS 기본 위치(`top: calc(100% - 1px)`)로 내려놓았다. header badge의 edit/settings 버튼은 유지하면서 모바일 헤더 controls를 덮지 않는다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- src/components/builder/canvas/SandboxEditorWorkspace.tsx` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/mobile-auto-fit.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/locale-projection.playwright.ts tests/builder-editor/zh-hant-smoke.playwright.ts tests/builder-editor/mobile-runtime.playwright.ts tests/builder-editor/mobile-auto-fit.playwright.ts --workers=1` ✅ (6 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - cross-tab delete race, empty/error states, visual smoke 또는 bookings/forms 쪽 dirty worktree와 충돌하지 않는 검증을 계속 진행한다.

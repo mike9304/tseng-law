@@ -6332,3 +6332,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - SEO panel focus trap/restore path.
 - 다음 후보:
   - `SeoPanel.tsx` shell/header/footer 또는 recommendation helpers split을 이어간다.
+
+## 2026-05-13 Codex /goal M155 Asset library grid split
+
+- `AssetLibraryModal.tsx`의 asset card grid, image preview, file meta, folder selector, mini tag toggles, select/delete actions 렌더링을 `AssetLibraryGrid.tsx`로 분리했다.
+- `AssetLibraryModal.tsx`는 asset library state, persistence, upload/delete/select orchestration을 유지하고 grid 렌더링을 컴포넌트 호출로 줄였으며, LOC는 818에서 751로 줄었다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --project=chromium-builder --workers=1` ⚠️ 첫 실행은 macOS Chromium MachPort sandbox permission으로 브라우저 시작 전 실패
+  - `npx playwright test --config=playwright.config.ts tests/builder-editor/asset-image-workflow.playwright.ts -g "traps focus in the asset library" --project=chromium-builder --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - Asset Library modal focus trap/restore path.
+- 다음 후보:
+  - `AssetLibraryModal.tsx` folder/sidebar 또는 toolbar/upload shell split을 이어간다.

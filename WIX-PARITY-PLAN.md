@@ -156,3 +156,4 @@
 | M152 | Refactor | SeoPanel advanced schema tab split | W28,W186,W195,W216,W225 | 1h | M151 | 🟡 SeoPanel 1187→1025 LOC + typecheck/SEO focus E2E passed / 사용자 QA 대기 |
 | M153 | Refactor | SeoPanel social share tab split | W27,W186,W195,W216,W225 | 1h | M152 | 🟡 SeoPanel 1025→939 LOC + typecheck/SEO focus E2E passed / 사용자 QA 대기 |
 | M154 | Refactor | SeoPanel basics tab split | W27,W186,W195,W216,W225 | 1h | M153 | 🟡 SeoPanel 939→836 LOC + typecheck/SEO focus E2E passed / 사용자 QA 대기 |
+| M155 | Refactor | Asset library grid split | W22,W23,W216,W225 | 1h | M154 | 🟡 AssetLibraryModal 818→751 LOC + typecheck/asset focus E2E passed / 사용자 QA 대기 |

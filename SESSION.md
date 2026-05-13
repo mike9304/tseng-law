@@ -6075,3 +6075,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - node click stability, 주요업무 템플릿 nested node selection/text persistence, page template prompt/preview focus path.
 - 다음 후보:
   - `CanvasContainer.tsx`의 stage shell/geometry helper split 또는 `SandboxInspectorPanel.tsx`의 style/helper split 중 더 작은 surface를 고른다.
+
+## 2026-05-13 Codex /goal M135 CanvasContainer geometry/drop helper split
+
+- `CanvasContainer.tsx`의 stage 좌표 변환, viewport focus, context menu/overlap picker position 계산을 `useCanvasStageGeometry.ts`로 분리했다.
+- ruler guide 생성/삭제/drag persistence는 `useCanvasReferenceGuides.ts`로, drag ghost/resize/snap/multi-select bbox 파생 geometry는 `useCanvasFeedbackGeometry.ts`로 분리했다.
+- saved section drop과 node kind drop 생성 로직은 `useCanvasStageDrop.ts`로 분리했다.
+- `CanvasContainer.tsx`는 canvas state orchestration과 stage shell 렌더링 중심으로 남겼고, LOC는 1038에서 793으로 내려갔다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-regression.playwright.ts tests/builder-editor/chrome-click-safety.playwright.ts tests/builder-editor/section-template-click.playwright.ts -g "click|keeps inserted service template text|lets users click|chrome" --project=chromium-builder --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - stage click routing, public chrome click safety, template insertion/text persistence, page template prompt/preview path.
+- 다음 후보:
+  - `SandboxInspectorPanel.tsx` style/helper split 또는 `SeoPanel.tsx` form section split 중 회귀 표면이 작은 파일을 고른다.

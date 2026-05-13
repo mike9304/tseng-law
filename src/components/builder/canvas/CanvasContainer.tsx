@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import AlignmentGuides from '@/components/builder/canvas/AlignmentGuides';
 import CanvasFeedbackOverlay from '@/components/builder/canvas/CanvasFeedbackOverlay';
 import CanvasContextMenuLayer from '@/components/builder/canvas/CanvasContextMenuLayer';
@@ -14,10 +14,6 @@ import CanvasStageToolbar from '@/components/builder/canvas/CanvasStageToolbar';
 import CanvasZoomDock from '@/components/builder/canvas/CanvasZoomDock';
 import type { ImageEditTab } from '@/components/builder/canvas/ImageEditDialog';
 import {
-  clampViewportPopupPosition,
-  clampVisibleViewportPopupPosition,
-  getCanvasNodeDepth,
-  unionRects,
   type ContextMenuState,
   type InteractionGeometrySnapshot,
   type OverlapPickerState,
@@ -28,10 +24,7 @@ import { useCanvasKeyboardShortcuts } from '@/components/builder/canvas/hooks/us
 import { useCanvasLinkEditing } from '@/components/builder/canvas/hooks/useCanvasLinkEditing';
 import { useCanvasSelectionBox } from '@/components/builder/canvas/hooks/useCanvasSelectionBox';
 import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
-import {
-  createCanvasNodeTemplate,
-  useBuilderCanvasStore,
-} from '@/lib/builder/canvas/store';
+import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import {
   copyNodeStyleToClipboard,
   hasStyleClipboard,
@@ -42,31 +35,30 @@ import {
   BUILDER_EDITOR_PREFS_EVENT,
   DEFAULT_EDITOR_PREFS,
   loadEditorPreferences,
-  makeGuideId,
   saveAndBroadcastEditorPreferences,
   type EditorPreferences,
-  type ReferenceGuide,
 } from '@/lib/builder/canvas/editor-prefs';
 import {
   resolveCanvasNodeAbsoluteRectForViewport,
 } from '@/lib/builder/canvas/tree';
-import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
-import { builderCanvasNodeKinds, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { Viewport } from '@/lib/builder/canvas/responsive';
+import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
   createDefaultZoomState,
   MAX_ZOOM,
   MIN_ZOOM,
-  screenToCanvas,
   zoomIn as stepZoomIn,
   zoomOut as stepZoomOut,
   type ZoomState,
 } from '@/lib/builder/canvas/zoom';
+import { useCanvasReferenceGuides } from './useCanvasReferenceGuides';
+import { useCanvasFeedbackGeometry } from './useCanvasFeedbackGeometry';
+import { useCanvasStageDrop } from './useCanvasStageDrop';
+import { useCanvasStageGeometry } from './useCanvasStageGeometry';
 import styles from './SandboxPage.module.css';
 
 const DEFAULT_STAGE_WIDTH = 1280;
 const DEFAULT_STAGE_HEIGHT = 880;
-const CONTEXT_MENU_WIDTH = 276;
-const CONTEXT_MENU_MAX_HEIGHT = 520;
 const EMPTY_CANVAS_NODES: BuilderCanvasNode[] = [];
 
 export default function CanvasContainer({
@@ -489,197 +481,45 @@ export default function CanvasContainer({
     };
   }, [overlapPicker]);
 
-  const resolveStagePosition = useCallback((clientX: number, clientY: number): { x: number; y: number } => {
-    const rect = viewportRef.current?.getBoundingClientRect();
-    if (!rect) return { x: 48, y: 48 };
-    const nextPoint = screenToCanvas(clientX - rect.left, clientY - rect.top, zoomState);
-    return {
-      x: Math.max(0, Math.min(stageWidth - 80, Math.round(nextPoint.x))),
-      y: Math.max(0, Math.min(stageHeight - 48, Math.round(nextPoint.y))),
-    };
-  }, [zoomState, stageWidth, stageHeight]);
+  const {
+    openOverlapPicker,
+    resolveCanvasPoint,
+    resolveContextMenuPosition,
+    resolveOverlapCandidates,
+    resolveStagePosition,
+  } = useCanvasStageGeometry({
+    absoluteRectById,
+    geometryViewport,
+    nodesById,
+    selectableNodes,
+    setOverlapPicker,
+    setZoomState,
+    stageHeight,
+    stageWidth,
+    viewportRef,
+    zoomState,
+  });
 
-  const resolveCanvasPoint = useCallback((clientX: number, clientY: number): { x: number; y: number } => {
-    const rect = viewportRef.current?.getBoundingClientRect();
-    if (!rect) return { x: 0, y: 0 };
-    const point = screenToCanvas(clientX - rect.left, clientY - rect.top, zoomState);
-    return {
-      x: Math.max(0, Math.min(stageWidth, Math.round(point.x))),
-      y: Math.max(0, Math.min(stageHeight, Math.round(point.y))),
-    };
-  }, [stageHeight, stageWidth, zoomState]);
-
-  const focusCanvasNodeInViewport = useCallback((nodeId: string) => {
-    const nodeRect = absoluteRectById.get(nodeId)
-      ?? (nodesById.get(nodeId) ? resolveViewportRect(nodesById.get(nodeId)!, geometryViewport) : null);
-    const viewportRect = viewportRef.current?.getBoundingClientRect();
-    if (!nodeRect || !viewportRect) return;
-
-    setZoomState((currentState) => {
-      const scaledStageWidth = stageWidth * currentState.zoom;
-      const centeredPanX = Math.round(
-        (viewportRect.width - nodeRect.width * currentState.zoom) / 2
-        - nodeRect.x * currentState.zoom,
-      );
-      const minPanX = Math.min(0, Math.round(viewportRect.width - scaledStageWidth));
-      const maxPanX = scaledStageWidth <= viewportRect.width
-        ? Math.round((viewportRect.width - scaledStageWidth) / 2)
-        : 0;
-      const nextPanX = Math.max(minPanX, Math.min(maxPanX, centeredPanX));
-      if (nextPanX === currentState.panX) return currentState;
-      return { ...currentState, panX: nextPanX };
-    });
-
-  }, [absoluteRectById, geometryViewport, nodesById, setZoomState, stageWidth]);
-
-  useEffect(() => {
-    function handleFocusCanvasNode(event: Event) {
-      const nodeId = (event as CustomEvent<{ nodeId?: unknown }>).detail?.nodeId;
-      if (typeof nodeId !== 'string' || !nodeId) return;
-      focusCanvasNodeInViewport(nodeId);
-    }
-
-    document.addEventListener('builder:focus-canvas-node', handleFocusCanvasNode);
-    return () => document.removeEventListener('builder:focus-canvas-node', handleFocusCanvasNode);
-  }, [focusCanvasNodeInViewport]);
-
-  const createReferenceGuide = useCallback((axis: ReferenceGuide['axis'], position: number) => {
-    const boundedPosition = axis === 'vertical'
-      ? Math.max(0, Math.min(stageWidth, position))
-      : Math.max(0, Math.min(stageHeight, position));
-    const guide: ReferenceGuide = {
-      id: makeGuideId(),
-      axis,
-      position: boundedPosition,
-      label: `${axis === 'vertical' ? 'X' : 'Y'} ${Math.round(boundedPosition)}px`,
-      color: '#e11d48',
-    };
-    updateEditorPrefs((current) => ({
-      ...current,
-      referenceGuides: [...current.referenceGuides, guide],
-    }));
-    onActivity?.(`Guide added: ${guide.label}`);
-  }, [onActivity, stageHeight, stageWidth, updateEditorPrefs]);
-
-  const removeReferenceGuide = useCallback((guideId: string) => {
-    updateEditorPrefs((current) => ({
-      ...current,
-      referenceGuides: current.referenceGuides.filter((guide) => guide.id !== guideId),
-    }));
-  }, [updateEditorPrefs]);
-
-  const startReferenceGuideDrag = useCallback((guide: ReferenceGuide, event: ReactPointerEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-    const pointerId = event.pointerId;
-    const moveGuide = (clientX: number, clientY: number) => {
-      const point = resolveCanvasPoint(clientX, clientY);
-      const position = guide.axis === 'vertical'
-        ? Math.max(0, Math.min(stageWidth, point.x))
-        : Math.max(0, Math.min(stageHeight, point.y));
-      updateEditorPrefs((current) => ({
-        ...current,
-        referenceGuides: current.referenceGuides.map((item) => (
-          item.id === guide.id
-            ? {
-                ...item,
-                position,
-                label: `${guide.axis === 'vertical' ? 'X' : 'Y'} ${Math.round(position)}px`,
-              }
-            : item
-        )),
-      }), { persist: false });
-    };
-
-    function handlePointerMove(pointerEvent: PointerEvent) {
-      if (pointerEvent.pointerId !== pointerId) return;
-      moveGuide(pointerEvent.clientX, pointerEvent.clientY);
-    }
-
-    function handlePointerUp(pointerEvent: PointerEvent) {
-      if (pointerEvent.pointerId !== pointerId) return;
-      moveGuide(pointerEvent.clientX, pointerEvent.clientY);
-      saveAndBroadcastEditorPreferences(editorPrefsRef.current);
-      window.removeEventListener('pointermove', handlePointerMove);
-      window.removeEventListener('pointerup', handlePointerUp);
-    }
-
-    window.addEventListener('pointermove', handlePointerMove);
-    window.addEventListener('pointerup', handlePointerUp);
-  }, [resolveCanvasPoint, stageHeight, stageWidth, updateEditorPrefs]);
-
-  const resolveViewportPopupPosition = useCallback((clientX: number, clientY: number) => {
-    const rect = viewportRef.current?.getBoundingClientRect();
-    const width = rect?.width ?? stageWidth;
-    const height = rect?.height ?? stageHeight;
-    const rawX = rect ? clientX - rect.left : clientX;
-    const rawY = rect ? clientY - rect.top : clientY;
-    return {
-      x: Math.max(12, Math.min(width - 244, rawX + 10)),
-      y: Math.max(12, Math.min(height - 280, rawY + 10)),
-    };
-  }, [stageHeight, stageWidth]);
-
-  const resolveContextMenuPosition = useCallback((clientX: number, clientY: number) => {
-    const rect = viewportRef.current?.getBoundingClientRect();
-    const width = rect?.width ?? stageWidth;
-    const height = rect?.height ?? stageHeight;
-    const rawX = rect ? clientX - rect.left : clientX;
-    const rawY = rect ? clientY - rect.top : clientY;
-    if (rect && typeof window !== 'undefined') {
-      return clampVisibleViewportPopupPosition(
-        rawX,
-        rawY,
-        rect,
-        CONTEXT_MENU_WIDTH,
-        CONTEXT_MENU_MAX_HEIGHT,
-      );
-    }
-    return clampViewportPopupPosition(
-      rawX,
-      rawY,
-      width,
-      height,
-      CONTEXT_MENU_WIDTH,
-      CONTEXT_MENU_MAX_HEIGHT,
-    );
-  }, [stageHeight, stageWidth]);
-
-  const resolveOverlapCandidates = useCallback(
-    (clientX: number, clientY: number): BuilderCanvasNode[] => {
-      const point = resolveStagePosition(clientX, clientY);
-      return selectableNodes
-        .filter((node) => {
-          const rect = absoluteRectById.get(node.id) ?? resolveViewportRect(node, geometryViewport);
-          return (
-            point.x >= rect.x
-            && point.x <= rect.x + rect.width
-            && point.y >= rect.y
-            && point.y <= rect.y + rect.height
-          );
-        })
-        .sort((left, right) => {
-          const zDelta = right.zIndex - left.zIndex;
-          if (zDelta !== 0) return zDelta;
-          return getCanvasNodeDepth(right, nodesById) - getCanvasNodeDepth(left, nodesById);
-        })
-        .slice(0, 8);
-    },
-    [absoluteRectById, geometryViewport, nodesById, resolveStagePosition, selectableNodes],
-  );
-
-  const openOverlapPicker = useCallback(
-    (clientX: number, clientY: number, candidates: BuilderCanvasNode[], mode: OverlapPickerState['mode']) => {
-      const position = resolveViewportPopupPosition(clientX, clientY);
-      setOverlapPicker({
-        nodeIds: candidates.map((node) => node.id),
-        x: position.x,
-        y: position.y,
-        mode,
-      });
-    },
-    [resolveViewportPopupPosition],
-  );
+  const {
+    createReferenceGuide,
+    removeReferenceGuide,
+    startReferenceGuideDrag,
+  } = useCanvasReferenceGuides({
+    editorPrefsRef,
+    onActivity,
+    resolveCanvasPoint,
+    stageHeight,
+    stageWidth,
+    updateEditorPrefs,
+  });
+  const { handleStageDragOver, handleStageDrop } = useCanvasStageDrop({
+    addNode,
+    hoveredContainerId,
+    nodeCount: nodes.length,
+    onRequestInsertSavedSection,
+    resolveStagePosition,
+    setDraftSaveState,
+  });
 
   const selectionBoxRect = useCanvasSelectionBox({
     absoluteRectById,
@@ -693,79 +533,23 @@ export default function CanvasContainer({
     setSelectionBox,
   });
 
-  const interactionMode = interaction?.type === 'move' || interaction?.type === 'resize'
-    ? interaction.type
-    : null;
-
-  const interactionNodeIds = useMemo(() => {
-    if (!interaction) return selectedNodeIds;
-    if (interaction.type === 'move') return interaction.nodeIds;
-    if (interaction.type === 'resize') return [interaction.nodeId];
-    return selectedNodeIds;
-  }, [interaction, selectedNodeIds]);
-
-  const dragGhostStartRects = useMemo(() => {
-    if (!interactionMode || !interaction) return [];
-    if (interaction.type === 'move') {
-      return Object.values(interaction.startAbsoluteRects);
-    }
-    if (interaction.type === 'resize') {
-      return [interaction.startAbsoluteRect];
-    }
-    return [];
-  }, [interaction, interactionMode]);
-
-  const dragGhostCurrentRects = useMemo(() => (
-    interactionNodeIds
-      .map((nodeId) => absoluteRectById.get(nodeId))
-      .filter((rect): rect is BuilderCanvasNode['rect'] => Boolean(rect))
-  ), [absoluteRectById, interactionNodeIds]);
-
-  const resizeCurrentRect = useMemo(() => {
-    if (!interaction || interaction.type !== 'resize') return null;
-    return absoluteRectById.get(interaction.nodeId) ?? null;
-  }, [absoluteRectById, interaction]);
-
-  const interactionActiveRect = useMemo(() => {
-    if (!interactionMode) return null;
-    return unionRects(dragGhostCurrentRects);
-  }, [dragGhostCurrentRects, interactionMode]);
-
-  const snapOtherRects = useMemo(() => {
-    const activeIds = new Set(interactionNodeIds);
-    return visibleNodes
-      .filter((node) => !activeIds.has(node.id))
-      .map((node) => absoluteRectById.get(node.id) ?? resolveViewportRect(node, geometryViewport));
-  }, [absoluteRectById, geometryViewport, interactionNodeIds, visibleNodes]);
-
-  // Bounding box of selected nodes in stage coordinates (pre-zoom/pan transform)
-  const selectionBboxStage = useMemo(() => {
-    if (selectedNodes.length === 0 || interaction) return null;
-    let minX = Infinity;
-    let minY = Infinity;
-    let maxX = -Infinity;
-    let maxY = -Infinity;
-    for (const node of selectedNodes) {
-      const rect = absoluteRectById.get(node.id) ?? resolveViewportRect(node, geometryViewport);
-      minX = Math.min(minX, rect.x);
-      minY = Math.min(minY, rect.y);
-      maxX = Math.max(maxX, rect.x + rect.width);
-      maxY = Math.max(maxY, rect.y + rect.height);
-    }
-    if (!Number.isFinite(minX)) return null;
-    return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
-  }, [absoluteRectById, geometryViewport, interaction, selectedNodes]);
-
-  // Convert stage coords → screen coords (relative to stage container)
-  const selectionBboxScreen = useMemo(() => {
-    if (!selectionBboxStage) return null;
-    return {
-      x: selectionBboxStage.x * zoomState.zoom + zoomState.panX,
-      y: selectionBboxStage.y * zoomState.zoom + zoomState.panY,
-      width: selectionBboxStage.width * zoomState.zoom,
-      height: selectionBboxStage.height * zoomState.zoom,
-    };
-  }, [selectionBboxStage, zoomState.panX, zoomState.panY, zoomState.zoom]);
+  const {
+    dragGhostCurrentRects,
+    dragGhostStartRects,
+    interactionActiveRect,
+    interactionMode,
+    resizeCurrentRect,
+    selectionBboxScreen,
+    snapOtherRects,
+  } = useCanvasFeedbackGeometry({
+    absoluteRectById,
+    geometryViewport,
+    interaction,
+    selectedNodeIds,
+    selectedNodes,
+    visibleNodes,
+    zoomState,
+  });
 
   return (
     <div className={styles.stageSurface}>
@@ -854,37 +638,8 @@ export default function CanvasContainer({
                 }
               }
             }}
-            onDragOver={(event) => {
-              event.preventDefault();
-              event.dataTransfer.dropEffect = 'copy';
-            }}
-            onDrop={(event) => {
-              event.preventDefault();
-              const savedSectionId = event.dataTransfer.getData('application/x-builder-saved-section-id');
-              if (savedSectionId && onRequestInsertSavedSection) {
-                const position = resolveStagePosition(event.clientX, event.clientY);
-                onRequestInsertSavedSection(savedSectionId, position);
-                setDraftSaveState('saving');
-                return;
-              }
-              const kind = event.dataTransfer.getData('application/x-builder-node-kind');
-              if (!builderCanvasNodeKinds.includes(kind as (typeof builderCanvasNodeKinds)[number])) return;
-              const position = resolveStagePosition(event.clientX, event.clientY);
-              const template = createCanvasNodeTemplate(
-                kind as (typeof builderCanvasNodeKinds)[number],
-                position.x,
-                position.y,
-                nodes.length,
-              );
-              // Honor the hovered container so dropping into a section/form
-              // actually nests the new node rather than orphaning it at the
-              // page root (with the container highlighted misleadingly).
-              if (hoveredContainerId) {
-                (template as { parentId?: string }).parentId = hoveredContainerId;
-              }
-              addNode(template);
-              setDraftSaveState('saving');
-            }}
+            onDragOver={handleStageDragOver}
+            onDrop={handleStageDrop}
           >
             {editorPrefs.rulers.enabled ? (
               <CanvasRulers

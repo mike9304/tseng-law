@@ -2674,3 +2674,19 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-regression.playwright.ts tests/builder-editor/section-template-click.playwright.ts --project=chromium-builder --workers=1` ✅ (12 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W18/W84/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. 주요업무 템플릿 텍스트 유지, nested node selection, page template prompt/preview focus path, node click stability를 latest code에서 통과시켰다.
+
+## M135 — CanvasContainer geometry/drop helper split
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/components/builder/canvas/useCanvasStageGeometry.ts` — stage 좌표 변환, viewport focus, context menu/overlap picker position 계산을 전용 hook으로 분리했다.
+  - `src/components/builder/canvas/useCanvasReferenceGuides.ts` — ruler guide 생성/삭제/drag persistence를 전용 hook으로 분리했다.
+  - `src/components/builder/canvas/useCanvasFeedbackGeometry.ts` — drag ghost, resize readout, snap label, multi-selection bbox에 필요한 파생 geometry를 전용 hook으로 분리했다.
+  - `src/components/builder/canvas/useCanvasStageDrop.ts` — saved section drop과 node kind drop 생성 로직을 전용 hook으로 분리했다.
+  - `src/components/builder/canvas/CanvasContainer.tsx` — canvas state orchestration과 stage shell 렌더링만 남기고 helper hooks를 import한다. 파일 길이는 1038줄에서 793줄로 줄었다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M135 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-regression.playwright.ts tests/builder-editor/chrome-click-safety.playwright.ts tests/builder-editor/section-template-click.playwright.ts -g "click|keeps inserted service template text|lets users click|chrome" --project=chromium-builder --workers=1` ✅ (13 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W18/W84/W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. stage click routing, public chrome click safety, template insertion/text persistence, page template prompt/preview path를 latest code에서 통과시켰다.

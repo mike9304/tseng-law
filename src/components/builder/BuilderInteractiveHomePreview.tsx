@@ -56,6 +56,10 @@ import {
   resolveInsightsDatasetPosts,
   resolveServicesDatasetItems,
 } from '@/lib/builder/datasets';
+import {
+  resolveBuilderCollectionItemFocusFromNodeId,
+  type BuilderCollectionItemFocus,
+} from '@/lib/builder/collection-focus';
 import { buildBuilderCollectionHref } from '@/lib/builder/hrefs';
 import {
   buildBuilderContentGroupNodeId,
@@ -1001,6 +1005,17 @@ export default function BuilderInteractiveHomePreview({
     setSelection(nextSelection);
     setSelectedSectionIds([nextSelection.sectionId]);
   }, []);
+
+  const focusCollectionItemFromCanvas = useCallback(
+    (focus: BuilderCollectionItemFocus) => {
+      const itemCount = focus.sectionKey === 'home.services' ? serviceItems.length : faqDraftItems.length;
+      setActiveCollectionIndex((current) => ({
+        ...current,
+        [focus.sectionKey]: clampCollectionIndex(focus.index, itemCount),
+      }));
+    },
+    [faqDraftItems.length, serviceItems.length]
+  );
 
   const focusSection = useCallback(
     (sectionKey: BuilderSectionKey, options?: { scroll?: boolean }) => {
@@ -4960,6 +4975,7 @@ export default function BuilderInteractiveHomePreview({
                       sectionKey: section.sectionKey,
                       definition,
                       onSelect: selectSingleTarget,
+                      onCollectionItemFocus: focusCollectionItemFromCanvas,
                     });
                   }}
                 >
@@ -7152,6 +7168,8 @@ export default function BuilderInteractiveHomePreview({
                       <article
                         key={`faq-item-${index}-${item.question}`}
                         className={`builder-collection-card${active ? ' is-active' : ''}`}
+                        data-builder-collection-section="home.faq"
+                        data-builder-collection-index={index}
                         onClick={() =>
                           setActiveCollectionIndex((current) => ({
                             ...current,
@@ -7286,6 +7304,8 @@ export default function BuilderInteractiveHomePreview({
                       <article
                         key={`service-item-${index}-${item.title}`}
                         className={`builder-collection-card${active ? ' is-active' : ''}`}
+                        data-builder-collection-section="home.services"
+                        data-builder-collection-index={index}
                         onClick={() =>
                           setActiveCollectionIndex((current) => ({
                             ...current,
@@ -7794,12 +7814,14 @@ function handleSurfaceClick({
   sectionKey,
   definition,
   onSelect,
+  onCollectionItemFocus,
 }: {
   event: React.MouseEvent<HTMLDivElement>;
   sectionId: string;
   sectionKey: BuilderSectionKey;
   definition: BuilderSectionDefinition;
   onSelect: (selection: BuilderSelectionState) => void;
+  onCollectionItemFocus?: (focus: BuilderCollectionItemFocus) => void;
 }) {
   const surface = event.currentTarget;
   const target = event.target;
@@ -7808,8 +7830,15 @@ function handleSurfaceClick({
     return;
   }
 
-  event.preventDefault();
-  event.stopPropagation();
+  const collectionItemFocus = resolveCollectionItemFocusFromTarget(target, surface);
+  if (collectionItemFocus) {
+    onCollectionItemFocus?.(collectionItemFocus);
+  }
+
+  if (!isCollectionDisclosureToggle(target, surface)) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
 
   const classified = classifyTarget(target, surface);
   if (!classified) {
@@ -7835,6 +7864,42 @@ function handleSurfaceClick({
       classified.kind === 'group' ||
       (classified.kind !== 'unknown' && definition.supportedTargets.includes(classified.kind)),
   });
+}
+
+function resolveCollectionItemFocusFromTarget(
+  target: HTMLElement,
+  surface: HTMLElement
+): BuilderCollectionItemFocus | null {
+  const node = target.closest('[data-node-id]');
+  if (node instanceof HTMLElement && surface.contains(node)) {
+    const focus = resolveBuilderCollectionItemFocusFromNodeId(node.dataset.nodeId);
+    if (focus) return focus;
+  }
+
+  const serviceCard = target.closest('.services-detail-card');
+  if (serviceCard instanceof HTMLElement && surface.contains(serviceCard)) {
+    const index = getElementIndexWithinSurface(surface, '.services-detail-card', serviceCard);
+    return index == null ? null : { sectionKey: 'home.services', index };
+  }
+
+  const faqItem = target.closest('.faq-item');
+  if (faqItem instanceof HTMLElement && surface.contains(faqItem)) {
+    const index = getElementIndexWithinSurface(surface, '.faq-item', faqItem);
+    return index == null ? null : { sectionKey: 'home.faq', index };
+  }
+
+  return null;
+}
+
+function getElementIndexWithinSurface(surface: HTMLElement, selector: string, element: HTMLElement) {
+  const matches = Array.from(surface.querySelectorAll<HTMLElement>(selector));
+  const index = matches.indexOf(element);
+  return index >= 0 ? index : null;
+}
+
+function isCollectionDisclosureToggle(target: HTMLElement, surface: HTMLElement) {
+  const toggle = target.closest('.services-detail-toggle, .faq-question button');
+  return toggle instanceof HTMLElement && surface.contains(toggle);
 }
 
 function classifyTarget(

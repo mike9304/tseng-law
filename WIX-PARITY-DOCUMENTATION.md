@@ -2333,3 +2333,17 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layout-widgets.playwright.ts tests/builder-editor/interactive-widgets.playwright.ts tests/builder-editor/clipboard-persistence.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W09/W29/W30/W216은 `자동검증 통과 / 사용자 QA 대기` 유지. container cascade delete, Delete/Backspace persistence, Cmd+D duplicate, cross-page copy/paste persistence, layout widget previews, interactive widget presets를 최신 코드에서 통과시켰다.
+
+## M112 — Advanced/design/guides sweep
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `tests/builder-editor/editor-guides-grid.playwright.ts` — grid snap 테스트가 공통 `openBuilder` helper로 `data-editor-ready="true"`를 기다리고 toolbar grid button을 title로 명시해 클릭하게 했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M112 검증 증거를 기록했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- tests/builder-editor/editor-guides-grid.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승 실행)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts tests/builder-editor/design-system-m23.playwright.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W181/W184/W216/W219/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. layers, shortcut map, align/distribute, style paste, components, comments, zoom, undo timeline, typography scale, style source chips, rulers/grid/custom guides를 최신 코드에서 통과시켰다.

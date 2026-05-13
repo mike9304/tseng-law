@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { openBuilder } from './helpers/editor';
 
 const PREFS_KEY = 'tw_builder_editor_prefs_v1';
 
@@ -7,14 +8,17 @@ test.describe('M28 editor rulers, guides, and grid snap', () => {
 
   test('shows rulers, toggles grid snap, changes grid size, and creates a custom guide', async ({ page }) => {
     await page.addInitScript((key) => window.localStorage.removeItem(key), PREFS_KEY);
-    await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+    await openBuilder(page, '/ko/admin-builder');
 
     const canvas = page.getByRole('application', { name: 'Canvas editor' });
     await expect(canvas).toBeVisible();
     await expect(page.locator('[data-builder-ruler="top"]').first()).toBeVisible();
     await expect(page.locator('[data-builder-ruler="left"]').first()).toBeVisible();
 
-    await page.getByRole('button', { name: 'Grid' }).click();
+    const gridButton = page.getByTitle(/Grid snap/);
+    await expect(gridButton).toBeEnabled();
+    await gridButton.click();
+    await expect(gridButton).toHaveAttribute('aria-pressed', 'true');
     const grid = page.locator('[data-builder-grid="true"]').first();
     await expect(grid).toBeVisible();
 

@@ -5738,3 +5738,16 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/layout-widgets.playwright.ts tests/builder-editor/interactive-widgets.playwright.ts tests/builder-editor/clipboard-persistence.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
 - 다음 후보:
   - cross-tab delete race, advanced panels, design system/editor guides grid 최신 sweep으로 이어간다.
+
+## 2026-05-13 Codex /goal M112 Advanced/design/guides sweep
+
+- advanced panels, design system, editor guides/grid 최신 E2E sweep을 실행했다.
+- 첫 실행에서 guides/grid 테스트만 실패했다. 에디터 hydration ready 전에 generic `Grid` button click이 들어가 grid overlay가 켜지지 않는 테스트 플래이크였다.
+- guides/grid 테스트는 공통 `openBuilder` helper로 `data-editor-ready="true"`를 기다리고, toolbar의 `Grid snap` title button을 명시적으로 클릭한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `git diff --check -- tests/builder-editor/editor-guides-grid.playwright.ts` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (1 passed, Chromium sandbox 권한 상승)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/editor-advanced-panels.playwright.ts tests/builder-editor/design-system-m23.playwright.ts tests/builder-editor/editor-guides-grid.playwright.ts --workers=1` ✅ (5 passed, Chromium sandbox 권한 상승)
+- 다음 후보:
+  - cross-tab delete race와 locale/zh-hant/mobile runtime 쪽 최신 sweep으로 이어간다.

@@ -113,3 +113,4 @@
 | M109 | QA    | Media/gallery/motion runtime sweep | W22,W23,W71,W72,W161,W174,W216 | 1h | M108 | 🟡 media/gallery catalog + motion runtime 4 passed / 사용자 QA 대기 |
 | M110 | QA    | Asset upload/image workflow sweep | W22,W23,W216,W225 | 1h | M109 | 🟡 asset upload security + image workflow 4 passed / 사용자 QA 대기 |
 | M111 | QA    | Layout/interactive/clipboard sweep | W09,W29,W30,W216 | 1h | M110 | 🟡 layout preview fix + interactive/clipboard 5 passed / 사용자 QA 대기 |
+| M112 | QA    | Advanced/design/guides sweep | W181,W184,W216,W219,W225 | 1h | M111 | 🟡 advanced panels/design system/guides 5 passed / 사용자 QA 대기 |

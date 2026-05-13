@@ -5695,3 +5695,17 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - W195 publish dialog draft-vs-published diff summary.
 - 다음 후보:
   - media/asset/gallery/motion 계열의 최신 E2E sweep으로 이어간다.
+
+## 2026-05-13 Codex /goal M109 Media/gallery/motion runtime sweep
+
+- media/gallery/motion 계열 최신 E2E sweep을 실행했다.
+- 제품 코드는 변경하지 않았다. M109는 catalog preset 추가 경로와 published motion runtime에 대한 검증 증거 기록이다.
+- 검증:
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/media-widgets.playwright.ts tests/builder-editor/gallery-widgets.playwright.ts tests/builder-editor/motion-runtime.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - M12 media widget presets 15개가 Add catalog에서 삽입되고 expected runtime markers를 렌더한다.
+  - M13 gallery widget presets 8개가 Add catalog에서 삽입되고 grid/masonry/slider/slideshow/thumbnail/pro/filter variants를 렌더한다.
+  - M22 motion inspector controls, custom/elastic easing enable state, background parallax option, page transition settings가 동작한다.
+  - published runtime에서 entrance/exit/loop/scroll/hover/click/timeline/page transition attrs와 CSS runtime state가 적용된다.
+- 다음 후보:
+  - asset image workflow/security 또는 layout/interactive widgets 최신 sweep으로 이어간다.

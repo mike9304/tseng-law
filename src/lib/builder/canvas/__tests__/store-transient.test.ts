@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { useBuilderCanvasStore } from '../store';
 import { createDefaultCanvasNodeStyle, type BuilderCanvasDocument, type BuilderCanvasNode } from '../types';
 
@@ -164,6 +164,23 @@ describe('canvas store transient updates', () => {
       ...node,
       rect: { ...node.rect },
     }));
+
+    const state = useBuilderCanvasStore.getState();
+    expect(state.canUndo).toBe(false);
+    expect(state.document?.updatedAt).toBe('2026-01-01T00:00:00.000Z');
+  });
+
+  it('reuses JSON signatures for unchanged node payload comparisons', () => {
+    useBuilderCanvasStore.getState().replaceDocument(sortedDocumentFixture());
+    useBuilderCanvasStore.getState().updateNodeStyle('first', { opacity: 100 });
+
+    const stringifySpy = vi.spyOn(JSON, 'stringify');
+    try {
+      useBuilderCanvasStore.getState().updateNodeStyle('first', { opacity: 100 });
+      expect(stringifySpy).toHaveBeenCalledTimes(1);
+    } finally {
+      stringifySpy.mockRestore();
+    }
 
     const state = useBuilderCanvasStore.getState();
     expect(state.canUndo).toBe(false);

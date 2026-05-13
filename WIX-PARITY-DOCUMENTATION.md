@@ -2485,3 +2485,20 @@ Created: 2026-05-09T12:52:13.760Z
   - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/layer-focus-context-menu.playwright.ts --workers=1` ✅ (4 passed, Chromium sandbox 권한 상승 실행)
 - W 판정:
   - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. node click stability, FAQ reveal persistence, archive/image click safety, layer context menu 경로를 direct lookup cleanup 뒤에도 통과시켰다.
+
+## M122 — Canvas document compare signature cache
+
+- 시작/종료: 2026-05-13 / 2026-05-13
+- 변경 파일:
+  - `src/lib/builder/canvas/store.ts` — `sameJsonContent()`가 unchanged object payload를 반복 비교할 때 같은 `style/content/responsive` 객체를 매번 stringify하지 않도록 WeakMap signature cache를 추가했다.
+  - `src/lib/builder/canvas/__tests__/store-transient.test.ts` — no-op style update에서 JSON signature가 재사용되고 history entry가 생기지 않는 regression test를 추가했다.
+  - `WIX-PARITY-PLAN.md`, `WIX-PARITY-DOCUMENTATION.md`, `SESSION.md` — M122 검증 증거를 기록했다.
+- 의사결정:
+  - history/store는 immutable document snapshots와 structural sharing을 전제로 하므로 object reference 기반 WeakMap cache를 선택했다.
+  - primitive/null 값은 기존처럼 즉시 JSON signature로 비교한다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (2 files, 9 tests passed)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승 실행)
+- W 판정:
+  - W216/W225는 `자동검증 통과 / 사용자 QA 대기` 유지. repeated no-op update compare, node click stability, archive/image click safety, FAQ reveal persistence를 latest store comparison code에서 통과시켰다.

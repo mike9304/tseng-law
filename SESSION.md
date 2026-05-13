@@ -5896,3 +5896,18 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - node click jitter, archive/image click safety, FAQ reveal persistence, layer-selected real right-click.
 - 다음 후보:
   - `sameDocumentContent`/history push 경로의 큰 content 비교 비용을 테스트 가능한 단위로 줄인다.
+
+## 2026-05-13 Codex /goal M122 Canvas document compare signature cache
+
+- `sameDocumentContent`/history push 경로의 repeated `JSON.stringify` 비용을 줄였다.
+- `sameJsonContent()`에 WeakMap 기반 JSON signature cache를 추가했다. immutable document snapshots + structural sharing 전제에서 동일 `style/content/responsive` 객체를 반복 비교할 때 stringify를 재사용한다.
+- primitive/null 값은 기존처럼 JSON signature로 비교한다.
+- `store-transient.test.ts`에 no-op style update가 signature cache를 재사용하고 history entry를 만들지 않는 regression test를 추가했다.
+- 검증:
+  - `npm run typecheck` ✅
+  - `npx vitest run src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/canvas/__tests__/indexes.test.ts` ✅ (2 files, 9 tests)
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/node-click-stability.playwright.ts --workers=1` ✅ (3 passed, Chromium sandbox 권한 상승)
+- 확인된 커버리지:
+  - no-op update compare/history guard, node click jitter, archive/image click safety, FAQ reveal persistence.
+- 다음 후보:
+  - audit Critical #4 pointermove absolute rect recalculation path를 읽고, pointerdown/rAF 범위에서 가장 좁은 개선점을 찾는다.

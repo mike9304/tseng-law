@@ -184,6 +184,7 @@ const TRANSIENT_UPDATE_NODES_OPTIONS: UpdateNodesOptions = {
   touchUpdatedAt: false,
 };
 const EMPTY_NODES_BY_ID = new Map<string, BuilderCanvasNode>();
+const jsonContentSignatureCache = new WeakMap<object, string>();
 
 function createDefaultInteractivePreviewState(): BuilderCanvasInteractivePreviewState {
   return {
@@ -369,8 +370,19 @@ function sameDocumentContent(left: BuilderCanvasDocument, right: BuilderCanvasDo
   return true;
 }
 
+function jsonContentSignature(value: unknown): string | undefined {
+  if (value && typeof value === 'object') {
+    const cached = jsonContentSignatureCache.get(value);
+    if (cached !== undefined) return cached;
+    const signature = JSON.stringify(value);
+    jsonContentSignatureCache.set(value, signature);
+    return signature;
+  }
+  return JSON.stringify(value);
+}
+
 function sameJsonContent(left: unknown, right: unknown): boolean {
-  return left === right || JSON.stringify(left) === JSON.stringify(right);
+  return left === right || jsonContentSignature(left) === jsonContentSignature(right);
 }
 
 function sameCanvasNodeContent(left: BuilderCanvasNode, right: BuilderCanvasNode): boolean {

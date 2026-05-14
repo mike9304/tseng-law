@@ -248,7 +248,7 @@ test.describe('M28 editor advanced panels', () => {
         clientX: heroTitleBox!.x + Math.min(12, heroTitleBox!.width / 2),
         clientY: heroTitleBox!.y + Math.min(12, heroTitleBox!.height / 2),
       });
-      await expect(page.getByRole('menuitem', { name: /Duplicate/ })).toContainText(customDuplicateShortcutGlyph);
+      await expect(page.getByRole('menuitem', { name: /Duplicate|복제/ })).toContainText(customDuplicateShortcutGlyph);
       await page.keyboard.press('Escape');
       await page.locator('[data-builder-layer-search="true"]').fill('home-hero-title');
       await heroTitleLayer.scrollIntoViewIfNeeded();

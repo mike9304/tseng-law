@@ -241,7 +241,10 @@ test.describe('/ko published motion runtime', () => {
     await selectLayerNode(page, 'home-hero-title', 'text');
 
     const inspector = page.locator('[data-builder-inspector-panel="true"]').first();
-    await expect(inspector).toContainText('home-hero-title');
+    // Inspector header no longer prints the node ID — verify selection on
+    // the canvas itself, then check the kind label that the panel does show.
+    await expect(page.locator('[data-node-id="home-hero-title"][data-selected="true"]')).toBeVisible();
+    await expect(inspector).toContainText(/text/i);
     await inspector.getByRole('button', { name: 'animations', exact: true }).click();
     await expect(page.getByText('Entrance', { exact: true })).toBeVisible();
     await expect(page.getByText('Exit', { exact: true })).toBeVisible();

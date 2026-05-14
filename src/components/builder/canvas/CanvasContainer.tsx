@@ -619,13 +619,17 @@ export default function CanvasContainer({
               }
 
               if (event.button !== 0 || event.target === event.currentTarget) return;
-              const overlapCandidates = resolveOverlapCandidates(event.clientX, event.clientY);
-              if (overlapCandidates.length <= 1) {
-                setOverlapPicker(null);
-                return;
-              }
 
+              // Plain click selects the topmost hit through each node's own
+              // handler. Alt-click opens the explicit overlap layer picker
+              // for ambiguous cases — the previous always-on "N layers"
+              // hint was visual noise on every nested click.
               if (event.altKey) {
+                const overlapCandidates = resolveOverlapCandidates(event.clientX, event.clientY);
+                if (overlapCandidates.length <= 1) {
+                  setOverlapPicker(null);
+                  return;
+                }
                 event.preventDefault();
                 event.stopPropagation();
                 setContextMenu(null);
@@ -634,7 +638,7 @@ export default function CanvasContainer({
                 return;
               }
 
-              openOverlapPicker(event.clientX, event.clientY, overlapCandidates, 'hint');
+              setOverlapPicker(null);
             }}
             onPointerDown={(event) => {
               if (event.target instanceof Element && event.target.closest('[data-builder-floating-ui="true"]')) return;

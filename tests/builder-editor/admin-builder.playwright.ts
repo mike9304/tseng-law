@@ -926,7 +926,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     expect(Math.abs(afterRatio - beforeRatio)).toBeLessThan(0.25);
     const savedChip = page.locator('[data-save-status-chip="saved"]').first();
     await expect(savedChip).toBeVisible({ timeout: 5_000 });
-    await expect(savedChip).toContainText('Saved');
+    await expect(savedChip).toContainText(/^Saved$|^저장됨$/);
     await expect(savedChip.locator('[data-save-status-glyph]')).toHaveCSS('background-color', 'rgb(34, 197, 94)');
     await expect(savedChip).toHaveCSS('animation-duration', '0.2s, 0.2s');
     await expect(savedChip).toHaveCSS('animation-delay', '0s, 1.42s');

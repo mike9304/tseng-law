@@ -276,7 +276,7 @@ test.describe('/ko/admin-builder M05 empty and error states', () => {
       await triggerDraftAutosave(page, textId);
       await expect(page.getByText('서버 오류로 저장을 멈췄습니다. 잠시 후 다시 시도해주세요.')).toBeVisible({ timeout: 12_000 });
       await expect(page.getByText('저장 차단')).toBeVisible();
-      await expect(page.getByRole('button', { name: 'Publish' })).toBeDisabled();
+      await expect(page.getByRole('button', { name: /^Publish$|^발행$/ })).toBeDisabled();
     } finally {
       if (pageId) await deleteBuilderPage(page, pageId, slug);
     }
@@ -305,7 +305,7 @@ test.describe('/ko/admin-builder M05 empty and error states', () => {
       await triggerDraftAutosave(page, textId);
       await expect(page.getByText('로그인이 만료되어 저장할 수 없습니다. 다시 로그인한 뒤 시도해주세요.')).toBeVisible({ timeout: 12_000 });
       await expect(page.getByText('저장 차단')).toBeVisible();
-      await expect(page.getByRole('button', { name: 'Publish' })).toBeDisabled();
+      await expect(page.getByRole('button', { name: /^Publish$|^발행$/ })).toBeDisabled();
     } finally {
       if (pageId) await deleteBuilderPage(page, pageId, slug);
     }

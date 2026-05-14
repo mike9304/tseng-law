@@ -6,7 +6,7 @@ test.describe('M82 preview modal focus trap', () => {
     try {
       await openBuilder(page);
 
-      const previewTrigger = page.getByRole('button', { name: 'Preview', exact: true });
+      const previewTrigger = page.getByRole('button', { name: /^Preview$|^미리보기$/ });
       await previewTrigger.focus();
       await expect(previewTrigger).toBeFocused();
       await page.keyboard.press('Enter');

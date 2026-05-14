@@ -63,8 +63,6 @@ import {
   resolveCenteredNode,
   resolveSectionInsertOffset,
   socialWidgetMatchesSearch,
-  STAGE_HEIGHT,
-  STAGE_WIDTH,
   textWidgetMatchesSearch,
 } from './SandboxCatalogPanel.helpers';
 import styles from './SandboxPage.module.css';

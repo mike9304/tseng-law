@@ -336,6 +336,11 @@ export default function SiteSettingsModal({
     setSaving(true);
     setError(null);
     try {
+      // The PUT schema accepts only the two mobile fields this modal owns.
+      // headerCanvasId / footerCanvasId are server-managed and are preserved
+      // by the server's merge — sending them back would be rejected as
+      // unrecognized strict keys.
+      const normalizedHeaderFooter = normalizeHeaderFooterMobileConfig(headerFooter);
       const payload = {
         settings: toSettingsPayload(settings),
         theme: {
@@ -343,7 +348,10 @@ export default function SiteSettingsModal({
           darkColors: resolvedDarkColors,
         },
         darkMode,
-        headerFooter: normalizeHeaderFooterMobileConfig(headerFooter),
+        headerFooter: {
+          mobileSticky: normalizedHeaderFooter.mobileSticky,
+          mobileHamburger: normalizedHeaderFooter.mobileHamburger,
+        },
         mobileBottomBar: normalizeMobileBottomBar(mobileBottomBar, settings),
       };
       const response = await fetch(`/api/builder/site/settings?locale=${encodeURIComponent(locale)}`, {

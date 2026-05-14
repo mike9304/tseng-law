@@ -728,7 +728,10 @@
 }
 
 .globalRegionBadge button {
-  pointer-events: auto;
+  /* The badge hangs ~24px into the stage and would intercept clicks
+   * on the top ruler (which lives at the same y-band). Only become
+   * interactive once the header is actually hovered/focused/edited. */
+  pointer-events: none;
   height: 20px;
   padding: 0 7px;
   border: 1px solid var(--editor-border-hairline, #dbe2ea);
@@ -738,6 +741,12 @@
   font-size: 10px;
   font-weight: 850;
   cursor: pointer;
+}
+
+.globalHeaderRegion:hover .globalRegionBadge button,
+.globalHeaderRegion:focus-within .globalRegionBadge button,
+.globalHeaderRegion[data-editing='true'] .globalRegionBadge button {
+  pointer-events: auto;
 }
 
 .globalRegionBadge button:hover {

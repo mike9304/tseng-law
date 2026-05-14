@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { BUILDER_EDITOR_PREFS_EVENT } from '@/lib/builder/canvas/editor-prefs';
 import {
   formatShortcutCombo,
+  isMacPlatform,
   resolveShortcutCombo,
   type CanvasAction,
 } from '@/lib/builder/canvas/shortcuts';
@@ -18,8 +19,13 @@ export interface ShortcutLabel {
 export function useShortcutLabels(actions: ShortcutAction[]): Map<ShortcutAction, ShortcutLabel> {
   const actionKey = actions.join('|');
   const [revision, setRevision] = useState(0);
+  // Defer Mac/Ctrl detection until after mount so server-rendered HTML
+  // (always Ctrl, since `navigator` is undefined there) matches the first
+  // client paint. The real platform value is applied on the next render.
+  const [isMac, setIsMac] = useState(false);
 
   useEffect(() => {
+    setIsMac(isMacPlatform());
     const refresh = () => setRevision((current) => current + 1);
     document.addEventListener(BUILDER_EDITOR_PREFS_EVENT, refresh);
     window.addEventListener('storage', refresh);
@@ -34,10 +40,10 @@ export function useShortcutLabels(actions: ShortcutAction[]): Map<ShortcutAction
     for (const action of actionKey.split('|') as ShortcutAction[]) {
       const combo = resolveShortcutCombo(action);
       labels.set(action, {
-        glyph: formatShortcutCombo(combo, 'glyph'),
-        title: formatShortcutCombo(combo, 'title'),
+        glyph: formatShortcutCombo(combo, 'glyph', isMac),
+        title: formatShortcutCombo(combo, 'title', isMac),
       });
     }
     return labels;
-  }, [actionKey, revision]);
+  }, [actionKey, isMac, revision]);
 }

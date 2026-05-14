@@ -156,7 +156,7 @@ export function resolveShortcutCombo(actionInput: string): string {
   return DEFAULT_KEYBINDINGS.find((binding) => binding.action === action)?.combo ?? '';
 }
 
-function isMacPlatform(): boolean {
+export function isMacPlatform(): boolean {
   if (typeof navigator === 'undefined') return false;
   return /Mac|iPhone|iPad|iPod/.test(navigator.platform);
 }
@@ -166,11 +166,15 @@ export type ShortcutDisplayStyle = 'glyph' | 'title';
 export function formatShortcutCombo(
   combo: string,
   style: ShortcutDisplayStyle = 'glyph',
+  overrideIsMac?: boolean,
 ): string {
   const tokens = combo.split('+').map((token) => token.trim()).filter(Boolean);
   if (tokens.length === 0) return '';
 
-  const isMac = isMacPlatform();
+  // SSR / first paint must agree with the server: callers (e.g. the
+  // useShortcutLabels hook) pass `false` until after mount, then switch
+  // to the real detection. This avoids the Cmd↔Ctrl hydration mismatch.
+  const isMac = overrideIsMac ?? isMacPlatform();
   const modifiers = {
     mod: false,
     ctrl: false,

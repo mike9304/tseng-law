@@ -42,7 +42,11 @@ const nextConfig = {
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://plausible.io https://*.vercel-insights.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
-              "img-src 'self' data: blob: https://*.vercel-storage.com https://*.public.blob.vercel-storage.com",
+              // Allow user-pasted image URLs (logo, hero image, etc.) over
+              // HTTPS — a builder lets designers point to any external CDN.
+              // `data:` / `blob:` cover inline previews and `https:` is the
+              // single broad allow for arbitrary public images.
+              "img-src 'self' data: blob: https:",
               "connect-src 'self' https://api.openai.com https://*.vercel-storage.com https://*.public.blob.vercel-storage.com https://www.google-analytics.com",
               // Lottie widget embeds LottieFiles iframes for animation
               // playback (lottie.host / lottiefiles.com); no script-src or

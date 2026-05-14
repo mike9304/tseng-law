@@ -69,8 +69,18 @@ function DetailRow({ label, value }: { label: string; value: string }) {
 }
 
 function formatDate(value: string): string {
+  // See SubmissionsListView#formatDate — deterministic UTC YYYY-MM-DD
+  // HH:mm:ss to avoid AM/오전 hydration mismatch.
   try {
-    return new Date(value).toLocaleString('ko-KR');
+    const d = new Date(value);
+    if (Number.isNaN(d.getTime())) return value;
+    const yyyy = d.getUTCFullYear();
+    const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const dd = String(d.getUTCDate()).padStart(2, '0');
+    const hh = String(d.getUTCHours()).padStart(2, '0');
+    const mi = String(d.getUTCMinutes()).padStart(2, '0');
+    const ss = String(d.getUTCSeconds()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
   } catch {
     return value;
   }

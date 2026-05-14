@@ -155,8 +155,19 @@ function summarize(submission: FormSubmission): string {
 }
 
 function formatDate(value: string): string {
+  // Deterministic YYYY-MM-DD HH:mm:ss (UTC). `toLocaleString('ko-KR')`
+  // emits different AM/PM glyphs on Node's ICU vs the browser's, which
+  // produces hydration mismatch warnings (Server "AM" vs Client "오전").
   try {
-    return new Date(value).toLocaleString('ko-KR');
+    const d = new Date(value);
+    if (Number.isNaN(d.getTime())) return value;
+    const yyyy = d.getUTCFullYear();
+    const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const dd = String(d.getUTCDate()).padStart(2, '0');
+    const hh = String(d.getUTCHours()).padStart(2, '0');
+    const mi = String(d.getUTCMinutes()).padStart(2, '0');
+    const ss = String(d.getUTCSeconds()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
   } catch {
     return value;
   }

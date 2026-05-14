@@ -41,6 +41,6 @@ test.describe('M67 layer focus context menu', () => {
     expect(hitTarget).not.toBeNull();
 
     await page.mouse.click(hitTarget!.point.x, hitTarget!.point.y, { button: 'right' });
-    await expect(page.getByRole('menuitem', { name: /Duplicate/ })).toBeVisible();
+    await expect(page.getByRole('menuitem', { name: /Duplicate|복제/ })).toBeVisible();
   });
 });

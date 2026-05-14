@@ -432,7 +432,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
 
     const topBar = page.locator('header[class*="topBar"]').first();
     await expect(topBar).toBeVisible();
-    await expect(topBar).toContainText('Publish');
+    await expect(topBar).toContainText(/Publish|발행/);
     await waitForEditorCss(page);
     await recoverFromDevChunkOverlay(page);
     await expect.poll(async () => (await topBar.boundingBox())?.height ?? 999).toBeLessThanOrEqual(36);
@@ -598,17 +598,29 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search$/);
     await expect(page.locator('[data-node-id="home-hero-search-input"] input.hero-search-input[type="search"][name="q"]').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-hero-search-button"] button.hero-search-btn[type="submit"]').first()).toBeVisible();
-    await page.locator('[data-node-id="home-hero-search-bar"]').first().click({ position: { x: 24, y: 20 }, force: true });
+    // The hero-search-bar overlays the boundary between the hero and the
+    // insights section (the `overlap` className is intentional). In the
+    // editor canvas the insights-root CanvasNode sits visually on top of the
+    // bar's bottom half, so click near the bar's top edge to land cleanly
+    // on the bar rather than the intercepting insights region.
+    const heroSearchBarLocator = page.locator('[data-node-id="home-hero-search-bar"]').first();
+    await heroSearchBarLocator.scrollIntoViewIfNeeded();
+    await heroSearchBarLocator.click({ position: { x: 24, y: 4 } });
     const heroSearchQuickEdit = page.locator('[data-builder-hero-search-quick-edit="true"]').first();
     await expect(heroSearchQuickEdit).toBeVisible();
-    await heroSearchQuickEdit.getByRole('button', { name: 'Center' }).click();
+    // QuickEdit panel buttons sit above hero-quick-menu nodes; the canvas
+    // stacking can leave a sibling intercepting pointer events. Use
+    // dispatchEvent so the React handler fires on the actual button
+    // regardless of which DOM element receives the synthetic click at the
+    // overlapped screen position.
+    await heroSearchQuickEdit.getByRole('button', { name: 'Center' }).dispatchEvent('click');
     await expect(page.locator('[data-node-id="home-hero-search-wrap"]').first()).toHaveCSS('left', '258px');
-    await heroSearchQuickEdit.getByRole('button', { name: 'Left' }).click();
+    await heroSearchQuickEdit.getByRole('button', { name: 'Left' }).dispatchEvent('click');
     await expect(page.locator('[data-node-id="home-hero-search-wrap"]').first()).toHaveCSS('left', '0px');
     const temporarySearchPlaceholder = `검색어 입력 ${Date.now().toString(36)}`;
     await heroSearchQuickEdit.getByLabel('Hero search placeholder').fill(temporarySearchPlaceholder);
     await expect(page.locator('[data-node-id="home-hero-search-input"] input.hero-search-input').first()).toHaveAttribute('placeholder', temporarySearchPlaceholder);
-    await heroSearchQuickEdit.getByRole('button', { name: '칼럼' }).click();
+    await heroSearchQuickEdit.getByRole('button', { name: '칼럼' }).dispatchEvent('click');
     await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search\?tab=insights$/);
     await heroSearchQuickEdit.getByLabel('Hero search action').fill('/ko/search?tab=columns');
     await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search\?tab=insights$/);

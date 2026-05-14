@@ -3448,6 +3448,15 @@
   box-shadow: 0 0 0 calc(1px / var(--canvas-zoom, 1)) rgba(191, 219, 254, 0.28) !important;
 }
 
+/* Only the deepest hovered node shows the hover ring. Without this,
+ * `:hover` cascades to every ancestor `.node` and stacks 4–5 outlines on
+ * top of each other in nested areas (FAQ items, services cards, blog cards…). */
+.node:hover:not(.nodeSelected):has(.node:hover),
+.stage .node[data-node-id]:hover:not(.nodeSelected):has(.node[data-node-id]:hover) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .nodeSelected {
   outline: 2px solid #116dff;
   outline-offset: 0;

@@ -374,7 +374,7 @@ export default function CanvasContainer({
     const handlePointerDownOutsideInlineEditor = (event: PointerEvent) => {
       const target = event.target;
       if (!(target instanceof Element)) return;
-      if (target.closest('[data-builder-inline-text-editor="true"], [data-builder-floating-ui="true"]')) return;
+      if (target.closest('[data-builder-inline-text-editor="true"]')) return;
       if (target.closest('[data-node-id]')) return;
 
       window.setTimeout(() => {

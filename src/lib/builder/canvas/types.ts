@@ -19,7 +19,7 @@ import {
   LOOP_PRESET_KEYS,
   SCROLL_EFFECT_KEYS,
 } from '@/lib/builder/animations/presets';
-import { linkValueSchema } from '@/lib/builder/links';
+import { isLinkSafe, linkValueSchema } from '@/lib/builder/links';
 import { createBuilderRichTextSchema } from '@/lib/builder/rich-text/types';
 const imageFiltersSchema = z.object({
   brightness: z.number().min(0).max(200),
@@ -427,6 +427,20 @@ const textCanvasNodeSchema = baseCanvasNodeSchema.extend({
     fontSize: z.number().int().min(12).max(160),
     color: builderColorValueSchema,
     fontWeight: z.enum(['regular', 'medium', 'bold']),
+    // Optional numeric weight (100~900). When present it takes precedence
+    // over the legacy enum at render time so older documents using
+    // 'regular'/'medium'/'bold' keep rendering unchanged.
+    fontWeightNumeric: z
+      .number()
+      .int()
+      .min(100)
+      .max(900)
+      .multipleOf(100)
+      .optional(),
+    fontStyle: z.enum(['normal', 'italic']).optional(),
+    textDecoration: z
+      .enum(['none', 'underline', 'line-through', 'underline line-through'])
+      .optional(),
     align: z.enum(['left', 'center', 'right']),
     lineHeight: z.number().min(0.5).max(4).default(1.25),
     letterSpacing: z.number().min(-2).max(10).default(0),
@@ -554,6 +568,17 @@ const headingCanvasNodeSchema = baseCanvasNodeSchema.extend({
     fontFamily: z.string().max(120).optional(),
     fontSize: z.number().int().min(12).max(160).optional(),
     fontWeight: z.enum(['regular', 'medium', 'bold']).optional(),
+    fontWeightNumeric: z
+      .number()
+      .int()
+      .min(100)
+      .max(900)
+      .multipleOf(100)
+      .optional(),
+    fontStyle: z.enum(['normal', 'italic']).optional(),
+    textDecoration: z
+      .enum(['none', 'underline', 'line-through', 'underline line-through'])
+      .optional(),
     lineHeight: z.number().min(0.5).max(4).optional(),
     letterSpacing: z.number().min(-2).max(10).optional(),
     themePreset: themeTextPresetKeySchema.optional(),
@@ -710,7 +735,14 @@ const audioCanvasNodeSchema = baseCanvasNodeSchema.extend({
 const lottieCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('lottie'),
   content: z.object({
-    src: z.string().max(2000).default(''),
+    // Empty string = unconfigured widget; otherwise the URL must be a safe
+    // scheme so `javascript:` / `data:text/html` can't be smuggled into an
+    // <iframe src> via the admin form.
+    src: z
+      .string()
+      .max(2000)
+      .default('')
+      .refine((value) => !value || isLinkSafe(value), 'Unsafe URL scheme'),
     label: z.string().max(160).default('Lottie animation'),
     autoplay: z.boolean().default(true),
     loop: z.boolean().default(true),
@@ -834,6 +866,7 @@ const formCheckboxCanvasNodeSchema = baseCanvasNodeSchema.extend({
     options: z.array(formOptionSchema).max(50).optional(),
     errorMessage: z.string().max(300).optional(),
     showIf: formFieldConditionSchema.optional(),
+    variant: formInputVariantKeySchema.optional(),
   }),
 });
 
@@ -848,6 +881,7 @@ const formRadioCanvasNodeSchema = baseCanvasNodeSchema.extend({
     layout: z.enum(['vertical', 'horizontal']).default('vertical'),
     errorMessage: z.string().max(300).optional(),
     showIf: formFieldConditionSchema.optional(),
+    variant: formInputVariantKeySchema.optional(),
   }),
 });
 
@@ -1544,6 +1578,7 @@ const teamMemberCardCanvasNodeSchema = baseCanvasNodeSchema.extend({
       label: z.string().max(40),
       href: z.string().max(2000),
     })).max(8).default([]),
+    variant: cardVariantKeySchema.optional(),
   }),
 });
 

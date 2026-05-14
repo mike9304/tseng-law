@@ -549,6 +549,28 @@ export default function AnimationsTab({
         <p style={hintStyle}>키프레임은 0~1 범위. scroll-bound 켜면 스크롤 진행률에 맞춰 보간, 끄면 durationMs 동안 시간 기반 재생.</p>
       </section>
 
+      <section style={sectionStyle} data-builder-lottie-hint="true">
+        <span style={sectionTitleStyle}>Lottie animation</span>
+        <p style={hintStyle}>
+          더 정교한 벡터 애니메이션이 필요하면 좌측 Add 패널의 <strong>Media → Lottie</strong> 위젯을
+          캔버스에 추가하세요. LottieFiles 공식 임베드 URL을 붙여넣으면 재생/속도/루프가
+          위젯의 Inspector에서 그대로 제어됩니다.
+        </p>
+        <ul
+          style={{
+            margin: 0,
+            paddingLeft: 16,
+            color: '#64748b',
+            fontSize: '0.72rem',
+            lineHeight: 1.55,
+          }}
+        >
+          <li>지원 호스트: lottie.host / lottiefiles.com (CSP 허용 완료)</li>
+          <li>예: <code>https://lottie.host/embed/&lt;id&gt;/&lt;hash&gt;.lottie</code></li>
+          <li>iframe 격리: <code>sandbox=&quot;allow-scripts allow-same-origin&quot;</code></li>
+        </ul>
+      </section>
+
       <button
         type="button"
         className={styles.actionButton}

@@ -44,7 +44,10 @@ const nextConfig = {
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https://*.vercel-storage.com https://*.public.blob.vercel-storage.com",
               "connect-src 'self' https://api.openai.com https://*.vercel-storage.com https://*.public.blob.vercel-storage.com https://www.google-analytics.com",
-              "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com https://maps.google.com",
+              // Lottie widget embeds LottieFiles iframes for animation
+              // playback (lottie.host / lottiefiles.com); no script-src or
+              // connect-src changes needed.
+              "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com https://maps.google.com https://lottie.host https://lottiefiles.com",
               "media-src 'self' blob:",
               "object-src 'none'",
               "base-uri 'self'",

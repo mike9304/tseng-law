@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext } from '@playwright/test';
+import { expect, test, type APIRequestContext, type Locator } from '@playwright/test';
 import { readHeaderCanvas, readSiteDocument, writeHeaderCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { createDefaultCookieConsent, createDefaultPopup, type BuilderCookieConsent, type BuilderHeaderFooterConfig, type BuilderSiteSettings } from '@/lib/builder/site/types';
 
@@ -47,6 +47,15 @@ async function waitForRateLimit(response: Awaited<ReturnType<APIRequestContext['
   const waitMs = Math.max(1000, Math.min(65_000, Number.isFinite(retryAfter) ? retryAfter * 1000 : 1000));
   await new Promise((resolve) => setTimeout(resolve, waitMs));
   return true;
+}
+
+async function expectNodeBelow(upper: Locator, lower: Locator, minGap = 0): Promise<void> {
+  const upperBox = await upper.boundingBox();
+  const lowerBox = await lower.boundingBox();
+  expect(upperBox).not.toBeNull();
+  expect(lowerBox).not.toBeNull();
+  if (!upperBox || !lowerBox) throw new Error('Missing published node bounds.');
+  expect(lowerBox.y).toBeGreaterThanOrEqual(upperBox.y + upperBox.height + minGap);
 }
 
 function containerNode(
@@ -1506,6 +1515,7 @@ test.describe('/ko published builder interactions', () => {
       const service0Body = service0.locator('.services-detail-body');
       const service1Toggle = service1.locator('.services-detail-toggle');
       const service1Body = service1.locator('.services-detail-body');
+      const faq = page.locator('[data-node-id="home-faq-item-0"]').first();
       await expect(service0Toggle).toHaveAttribute('role', 'button');
       await expect(service0Toggle).toHaveAttribute('tabindex', '0');
       await expect(service0Toggle).toHaveAttribute('aria-expanded', 'false');
@@ -1517,14 +1527,15 @@ test.describe('/ko published builder interactions', () => {
       await expect(service0Body).toHaveClass(/is-open/);
       await expect(service0Body).toHaveAttribute('aria-hidden', 'false');
       await expect(service0Toggle).toHaveAttribute('aria-expanded', 'true');
+      await expectNodeBelow(service0, service1, 4);
       await service1Toggle.focus();
       await service1Toggle.press('Space');
       await expect(service1Body).toHaveClass(/is-open/);
       await expect(service1Body).toHaveAttribute('aria-hidden', 'false');
       await expect(service0Body).not.toHaveClass(/is-open/);
       await expect(service0Body).toHaveAttribute('aria-hidden', 'true');
+      await expectNodeBelow(service1, faq, 4);
 
-      const faq = page.locator('[data-node-id="home-faq-item-0"]').first();
       const faqQuestion = faq.locator('.faq-question');
       const faqAnswer = faq.locator('.faq-answer-wrap');
       await expect(faqQuestion).toHaveAttribute('role', 'button');

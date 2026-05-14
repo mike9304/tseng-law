@@ -2,6 +2,11 @@
 
 import { useEffect } from 'react';
 
+const SERVICE_EXPANDED_HEIGHT = 420;
+const SERVICE_BODY_EXPANDED_HEIGHT = 330;
+const FAQ_EXPANDED_HEIGHT = 190;
+const FAQ_BODY_EXPANDED_HEIGHT = 122;
+
 function findByNodeIdPattern(pattern: RegExp): HTMLElement[] {
   return Array.from(document.querySelectorAll<HTMLElement>('[data-node-id]'))
     .filter((element) => pattern.test(element.dataset.nodeId ?? ''));
@@ -28,6 +33,99 @@ function ensureId(element: HTMLElement | null, fallback: string): string | null 
   return element.id;
 }
 
+function readPixelValue(value: string | null | undefined): number | null {
+  if (!value) return null;
+  const parsed = Number.parseFloat(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function rememberBaseStackMetrics(elements: HTMLElement[]): void {
+  for (const element of elements) {
+    if (!element.dataset.builderBaseTop) {
+      element.dataset.builderBaseTop = String(
+        readPixelValue(element.style.top) ?? element.offsetTop,
+      );
+    }
+    if (!element.dataset.builderBaseHeight) {
+      element.dataset.builderBaseHeight = String(
+        readPixelValue(element.style.height) ?? element.offsetHeight,
+      );
+    }
+  }
+}
+
+function baseMetric(element: HTMLElement, key: 'builderBaseTop' | 'builderBaseHeight'): number {
+  const parsed = Number.parseFloat(element.dataset[key] ?? '');
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function logicalSiblingStack(elements: HTMLElement[]): HTMLElement[] {
+  const reference = elements[0];
+  const parentNodeId = reference?.dataset.parentNodeId;
+  if (!parentNodeId) return elements;
+  const siblings = Array.from(
+    document.querySelectorAll<HTMLElement>(`[data-parent-node-id="${CSS.escape(parentNodeId)}"]`),
+  );
+  rememberBaseStackMetrics(siblings);
+  return siblings.sort((a, b) => baseMetric(a, 'builderBaseTop') - baseMetric(b, 'builderBaseTop'));
+}
+
+function applyExpandedSiblingStack(elements: HTMLElement[]): void {
+  if (elements.length === 0) return;
+  const stack = logicalSiblingStack(elements);
+  rememberBaseStackMetrics(elements);
+  let offset = 0;
+
+  stack.forEach((element) => {
+    const baseTop = baseMetric(element, 'builderBaseTop');
+    const baseHeight = baseMetric(element, 'builderBaseHeight');
+    const expandedHeight = readPixelValue(element.dataset.builderExpandedHeight);
+    const isExpanded = element.dataset.builderExpanded === 'true' && expandedHeight != null;
+    element.style.top = `${baseTop + offset}px`;
+    element.style.height = `${isExpanded ? expandedHeight : baseHeight}px`;
+    element.style.overflow = isExpanded ? 'visible' : '';
+    if (isExpanded) offset += Math.max(0, expandedHeight - baseHeight);
+  });
+}
+
+function setServiceDecomposedBodyVisibility(card: HTMLElement, isOpen: boolean): void {
+  const nodeId = card.dataset.nodeId;
+  if (!nodeId) return;
+  const escaped = CSS.escape(nodeId);
+  const bodyNode = card.querySelector<HTMLElement>(`[data-node-id="${escaped}-body"]`);
+  const details = card.querySelectorAll<HTMLElement>([
+    `[data-node-id^="${escaped}-"][data-node-id*="-detail-"]`,
+    `[data-node-id="${escaped}-checklist"]`,
+    `[data-node-id="${escaped}-columns"]`,
+    `[data-node-id="${escaped}-more"]`,
+  ].join(','));
+
+  if (bodyNode) {
+    bodyNode.style.height = isOpen ? `${SERVICE_BODY_EXPANDED_HEIGHT}px` : '';
+    bodyNode.style.overflow = isOpen ? 'visible' : '';
+  }
+
+  for (const detail of details) {
+    detail.style.display = isOpen ? 'block' : 'none';
+  }
+}
+
+function setFaqDecomposedBodyVisibility(item: HTMLElement, isOpen: boolean): void {
+  const nodeId = item.dataset.nodeId;
+  if (!nodeId) return;
+  const escaped = CSS.escape(nodeId);
+  const answerWrapNode = item.querySelector<HTMLElement>(`[data-node-id="${escaped}-answer-wrap"]`);
+  const answerNode = item.querySelector<HTMLElement>(`[data-node-id="${escaped}-answer"]`);
+
+  if (answerWrapNode) {
+    answerWrapNode.style.height = isOpen ? `${FAQ_BODY_EXPANDED_HEIGHT}px` : '';
+    answerWrapNode.style.overflow = isOpen ? 'visible' : '';
+  }
+  if (answerNode) {
+    answerNode.style.display = isOpen ? 'block' : 'none';
+  }
+}
+
 export default function PublishedInteractions() {
   useEffect(() => {
     const serviceCards = findByNodeIdPattern(/^home-services-card-\d+$/);
@@ -39,12 +137,20 @@ export default function PublishedInteractions() {
         const body = card.querySelector<HTMLElement>('.services-detail-body');
         const toggle = card.querySelector<HTMLElement>('.services-detail-toggle');
         card.dataset.builderExpanded = isOpen ? 'true' : 'false';
+        if (isOpen) {
+          card.dataset.builderExpandedHeight = String(SERVICE_EXPANDED_HEIGHT);
+        } else {
+          delete card.dataset.builderExpandedHeight;
+        }
         toggleClass(card.querySelector('.services-detail-card'), 'is-open', isOpen);
         toggleClass(body, 'is-open', isOpen);
         toggleClass(card.querySelector('.services-detail-chevron'), 'open', isOpen);
+        setServiceDecomposedBodyVisibility(card, isOpen);
+        if (body) body.style.overflow = isOpen ? 'visible' : '';
         body?.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
         toggle?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       }
+      applyExpandedSiblingStack(serviceCards);
     };
 
     const setOpenFaq = (activeItem: HTMLElement | null) => {
@@ -53,11 +159,19 @@ export default function PublishedInteractions() {
         const answer = item.querySelector<HTMLElement>('.faq-answer-wrap');
         const question = item.querySelector<HTMLElement>('.faq-question');
         item.dataset.builderExpanded = isOpen ? 'true' : 'false';
+        if (isOpen) {
+          item.dataset.builderExpandedHeight = String(FAQ_EXPANDED_HEIGHT);
+        } else {
+          delete item.dataset.builderExpandedHeight;
+        }
         toggleClass(item.querySelector('.faq-item'), 'is-open', isOpen);
         toggleClass(answer, 'is-open', isOpen);
+        setFaqDecomposedBodyVisibility(item, isOpen);
+        if (answer) answer.style.overflow = isOpen ? 'visible' : '';
         answer?.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
         question?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       }
+      applyExpandedSiblingStack(faqItems);
     };
 
     for (const card of serviceCards) {

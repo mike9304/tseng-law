@@ -90,10 +90,10 @@ interface InlineTextVisualStyle {
   textTransform?: string;
 }
 
-const SERVICES_PREVIEW_EXPANDED_HEIGHT = 364;
-const SERVICES_PREVIEW_STACK_DELTA = 232;
-const FAQ_PREVIEW_EXPANDED_HEIGHT = 128;
-const FAQ_PREVIEW_STACK_DELTA = 60;
+const SERVICES_PREVIEW_EXPANDED_HEIGHT = 420;
+const SERVICES_PREVIEW_STACK_DELTA = 288;
+const FAQ_PREVIEW_EXPANDED_HEIGHT = 190;
+const FAQ_PREVIEW_STACK_DELTA = 122;
 
 function parseCssNumber(value: string): number | undefined {
   const parsed = Number.parseFloat(value);

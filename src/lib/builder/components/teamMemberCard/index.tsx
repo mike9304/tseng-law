@@ -2,16 +2,35 @@ import Image from 'next/image';
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderTeamMemberCardCanvasNode } from '@/lib/builder/canvas/types';
 import { safeHref } from '@/lib/builder/links';
+import type { BuilderTheme } from '@/lib/builder/site/types';
+import {
+  CARD_VARIANTS,
+  resolveCardVariantStyle,
+} from '@/lib/builder/site/component-variants';
 
 function TeamMemberCardRender({
   node,
+  theme,
 }: {
   node: BuilderTeamMemberCardCanvasNode;
+  theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
+  const variantStyle = resolveCardVariantStyle(c.variant, theme);
   return (
-    <article className="builder-datadisplay-team-card" data-builder-datadisplay-widget="team-member-card">
+    <article
+      className="builder-datadisplay-team-card"
+      data-builder-datadisplay-widget="team-member-card"
+      style={{
+        background: variantStyle.background,
+        border: variantStyle.border,
+        borderRadius: variantStyle.borderRadius,
+        boxShadow: variantStyle.boxShadow,
+        backdropFilter: variantStyle.backdropFilter,
+        WebkitBackdropFilter: variantStyle.WebkitBackdropFilter,
+      }}
+    >
       <div className="builder-datadisplay-team-avatar">
         {c.avatar ? (
           <Image src={c.avatar} alt={c.name} width={120} height={120} style={{ objectFit: 'cover', borderRadius: '50%' }} />
@@ -92,6 +111,20 @@ function TeamMemberCardInspector({
           disabled={disabled}
           onChange={(event) => onUpdate({ socialLinks: parseSocial(event.target.value) })}
         />
+      </label>
+      <label>
+        <span>카드 스타일</span>
+        <select
+          value={c.variant ?? 'flat'}
+          disabled={disabled}
+          onChange={(event) => onUpdate({ variant: event.target.value })}
+        >
+          {CARD_VARIANTS.map((variant) => (
+            <option key={variant.key} value={variant.key}>
+              {variant.label}
+            </option>
+          ))}
+        </select>
       </label>
     </>
   );

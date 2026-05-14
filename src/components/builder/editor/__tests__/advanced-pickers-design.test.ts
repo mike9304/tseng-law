@@ -44,11 +44,15 @@ describe('D-POOL-5 advanced picker contracts', () => {
   });
 
   test('wires advanced pickers into SiteSettings and StyleTab surfaces', () => {
+    // SiteSettings modal was split into per-tab files; FontPicker now lives in
+    // the typography tab. Accept either the modal shell or the typography tab.
     const siteSettings = read('src/components/builder/canvas/SiteSettingsModal.tsx');
+    const siteSettingsTypography = read('src/components/builder/canvas/SiteSettingsTypographyTab.tsx');
+    const siteSettingsSurfaces = `${siteSettings}\n${siteSettingsTypography}`;
     const brandKit = read('src/components/builder/editor/BrandKitPanel.tsx');
     const styleTab = read('src/components/builder/editor/StyleTab.tsx');
 
-    expect(siteSettings).toContain('<FontPicker');
+    expect(siteSettingsSurfaces).toContain('<FontPicker');
     expect(brandKit).toContain('<FontPicker');
     expect(styleTab).toContain('<ColorPicker');
     expect(styleTab).toContain('paletteTokens={paletteTokens}');

@@ -13,6 +13,8 @@ describe('D-POOL inspector and modal design contracts', () => {
     const layout = read('src/app/(builder)/[locale]/layout.tsx');
     const controls = read('src/components/builder/canvas/InspectorControls.tsx');
     const inspector = read('src/components/builder/canvas/SandboxInspectorPanel.tsx');
+    const inspectorLayoutTab = read('src/components/builder/canvas/SandboxInspectorLayoutTab.tsx');
+    const inspectorSurfaces = `${inspector}\n${inspectorLayoutTab}`;
     const styleTab = read('src/components/builder/editor/StyleTab.tsx');
     const contentTab = read('src/components/builder/editor/ContentTab.tsx');
     const css = read('src/components/builder/canvas/SandboxPage.module.css');
@@ -33,7 +35,9 @@ describe('D-POOL inspector and modal design contracts', () => {
 
     expect(inspector).toContain("activeTab, setActiveTab] = useState<'layout' | 'style' | 'content' | 'animations' | 'a11y' | 'seo'>");
     expect(inspector).toContain('<MixedValueBadge />');
-    expect(inspector).toContain('<SegmentedControl');
+    // SegmentedControl usage is allowed in either the inspector shell or the
+    // split layout tab, since the panel composes the layout tab.
+    expect(inspectorSurfaces).toContain('<SegmentedControl');
     expect(styleTab).toContain("from '@/components/builder/canvas/InspectorControls'");
     expect(styleTab).toContain('<AdvancedDisclosure');
     expect(contentTab).toContain("data-inspector-content-adapter=\"true\"");

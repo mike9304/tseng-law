@@ -117,6 +117,10 @@ export interface ThemeTextPreset {
   fontFamily: string;
   fontSize: number;
   fontWeight: BuilderFontWeight;
+  /** Optional 100~900 numeric weight; preferred over the legacy enum at render time. */
+  fontWeightNumeric?: number;
+  fontStyle?: 'normal' | 'italic';
+  textDecoration?: 'none' | 'underline' | 'line-through' | 'underline line-through';
   lineHeight: number;
   letterSpacing: number;
   color: BuilderColorValue;
@@ -996,6 +1000,9 @@ export function createThemeTextPresetPatch(
     fontFamily: preset.fontFamily,
     fontSize: preset.fontSize,
     fontWeight: preset.fontWeight,
+    fontWeightNumeric: preset.fontWeightNumeric,
+    fontStyle: preset.fontStyle,
+    textDecoration: preset.textDecoration,
     lineHeight: preset.lineHeight,
     letterSpacing: preset.letterSpacing,
     color: preset.color,
@@ -1008,6 +1015,9 @@ export function resolveThemeTextTypography(
     fontFamily?: string;
     fontSize?: number;
     fontWeight?: BuilderFontWeight;
+    fontWeightNumeric?: number;
+    fontStyle?: 'normal' | 'italic';
+    textDecoration?: 'none' | 'underline' | 'line-through' | 'underline line-through';
     lineHeight?: number;
     letterSpacing?: number;
     color?: BuilderColorValue;
@@ -1019,10 +1029,33 @@ export function resolveThemeTextTypography(
     fontFamily: preset?.fontFamily ?? content.fontFamily ?? 'system-ui',
     fontSize: preset?.fontSize ?? content.fontSize ?? 16,
     fontWeight: preset?.fontWeight ?? content.fontWeight ?? 'regular',
+    fontWeightNumeric: preset?.fontWeightNumeric ?? content.fontWeightNumeric,
+    fontStyle: preset?.fontStyle ?? content.fontStyle,
+    textDecoration: preset?.textDecoration ?? content.textDecoration,
     lineHeight: preset?.lineHeight ?? content.lineHeight ?? 1.25,
     letterSpacing: preset?.letterSpacing ?? content.letterSpacing ?? 0,
     color: preset?.color ?? content.color ?? '#0f172a',
   };
+}
+
+/**
+ * Convert the resolved typography (legacy enum + optional numeric override)
+ * to a CSS `font-weight` value. Numeric override wins so 'bold'-style
+ * documents keep rendering unchanged when no numeric value is present.
+ */
+export function resolveFontWeightCss(typography: {
+  fontWeight?: BuilderFontWeight;
+  fontWeightNumeric?: number;
+}): number {
+  if (
+    typeof typography.fontWeightNumeric === 'number'
+    && Number.isFinite(typography.fontWeightNumeric)
+  ) {
+    return typography.fontWeightNumeric;
+  }
+  if (typography.fontWeight === 'bold') return 700;
+  if (typography.fontWeight === 'medium') return 600;
+  return 400;
 }
 
 export function collectThemeFontFamilies(theme: BuilderTheme): string[] {

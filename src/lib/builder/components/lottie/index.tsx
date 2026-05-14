@@ -28,6 +28,12 @@ function LottieRender({ node }: { node: BuilderLottieCanvasNode }) {
           background: '#f8fafc',
         }}
         allow="autoplay"
+        // Isolate the LottieFiles iframe — the embedded page can still run
+        // its own scripts (Lottie playback requires it) but cannot reach
+        // back into the parent origin or trigger top-level navigations.
+        sandbox="allow-scripts allow-same-origin"
+        loading="lazy"
+        referrerPolicy="no-referrer"
       />
     );
   }
@@ -65,6 +71,7 @@ function LottieInspector({
 }: BuilderComponentInspectorProps) {
   const lottieNode = node as BuilderLottieCanvasNode;
   const content = lottieNode.content;
+  const srcIsEmbeddable = content.src ? isEmbeddableLottieUrl(content.src) : false;
 
   return (
     <>
@@ -74,10 +81,41 @@ function LottieInspector({
           type="text"
           value={content.src}
           disabled={disabled}
-          placeholder="https://lottie.host/embed/..."
+          placeholder="https://lottie.host/embed/<id>/<hash>.lottie"
           onChange={(event) => onUpdate({ src: event.target.value })}
         />
       </label>
+      {!content.src ? (
+        <p style={{ margin: 0, color: '#64748b', fontSize: '0.72rem', lineHeight: 1.5 }}>
+          <a
+            href="https://lottiefiles.com/featured"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#1d4ed8', textDecoration: 'underline' }}
+          >
+            lottiefiles.com
+          </a>
+          에서 애니메이션을 고른 뒤 <strong>Embed</strong> 탭의{' '}
+          <code>iframe src=&quot;...&quot;</code> URL을 복사해 붙여넣으세요. 자체 자산을
+          쓰려면 <code>lottie.host</code>에 업로드한 후 동일한 형식의 임베드 URL을 사용하세요.
+        </p>
+      ) : !srcIsEmbeddable ? (
+        <p
+          style={{
+            margin: 0,
+            color: '#b45309',
+            fontSize: '0.72rem',
+            lineHeight: 1.5,
+            background: '#fffbeb',
+            border: '1px solid #fcd34d',
+            borderRadius: 6,
+            padding: '6px 8px',
+          }}
+        >
+          ⚠ <code>lottie.host</code> / <code>lottiefiles.com</code> 외 호스트는 CSP가 차단합니다.
+          현재 URL은 미리보기로만 표시되고 발행된 페이지에서는 빈 placeholder가 됩니다.
+        </p>
+      ) : null}
       <label>
         <span>Label</span>
         <input

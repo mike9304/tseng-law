@@ -1,0 +1,94 @@
+import { NextRequest } from 'next/server';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import {
+  appendMessage,
+  saveConversation,
+} from '@/lib/builder/live-chat/storage';
+import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
+
+vi.mock('@/lib/builder/security/rate-limit', () => ({
+  checkRateLimit: vi.fn(async () => ({ allowed: true, remaining: 5, retryAfterMs: 0 })),
+}));
+
+vi.mock('@/lib/builder/live-chat/storage', () => ({
+  saveConversation: vi.fn(async () => undefined),
+  appendMessage: vi.fn(async () => undefined),
+  makeConversationId: vi.fn(() => 'cnv-test-1'),
+  makeMessageId: vi.fn(() => 'msg-test-1'),
+  makeVisitorToken: vi.fn(() => 'tok-test-1'),
+}));
+
+vi.mock('@/lib/builder/webhooks/dispatcher', () => ({
+  emitEvent: vi.fn(),
+}));
+
+function makeRequest(body: unknown): NextRequest {
+  return new NextRequest('https://law.example.test/api/live-chat/start', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.7' },
+    body: JSON.stringify(body),
+  });
+}
+
+describe('/api/live-chat/start', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    vi.mocked(checkRateLimit).mockResolvedValue({ allowed: true, remaining: 5, retryAfterMs: 0 });
+  });
+
+  it('creates a conversation, persists initial visitor message, and emits contact event', async () => {
+    const route = await import('../route');
+    const response = await route.POST(
+      makeRequest({
+        visitorName: '김민수',
+        visitorEmail: 'kim@example.test',
+        pagePath: '/ko/contact',
+        message: '상담 가능한가요?',
+      }),
+    );
+    const payload = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(payload.ok).toBe(true);
+    expect(payload.conversationId).toBe('cnv-test-1');
+    expect(payload.visitorToken).toBe('tok-test-1');
+    expect(saveConversation).toHaveBeenCalledTimes(1);
+    expect(appendMessage).toHaveBeenCalledWith(
+      expect.objectContaining({ role: 'visitor', body: '상담 가능한가요?' }),
+    );
+    expect(emitEvent).toHaveBeenCalledWith(
+      'contact.created',
+      expect.objectContaining({ source: 'live-chat', conversationId: 'cnv-test-1' }),
+    );
+  });
+
+  it('returns 429 when the start rate limit is exceeded', async () => {
+    vi.mocked(checkRateLimit).mockResolvedValueOnce({ allowed: false, remaining: 0, retryAfterMs: 5000 });
+    const route = await import('../route');
+    const response = await route.POST(makeRequest({ message: '안녕하세요' }));
+
+    expect(response.status).toBe(429);
+    expect(saveConversation).not.toHaveBeenCalled();
+  });
+
+  it('rejects empty message with 400', async () => {
+    const route = await import('../route');
+    const response = await route.POST(makeRequest({ message: '' }));
+
+    expect(response.status).toBe(400);
+    expect(saveConversation).not.toHaveBeenCalled();
+  });
+
+  it('rejects a body that is not valid JSON with 400', async () => {
+    const route = await import('../route');
+    const request = new NextRequest('https://law.example.test/api/live-chat/start', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-forwarded-for': '127.0.0.7' },
+      body: 'not-json',
+    });
+
+    const response = await route.POST(request);
+    expect(response.status).toBe(400);
+  });
+});

@@ -34,6 +34,9 @@ export default function HeadingElement({
       fontFamily: node.content.fontFamily,
       fontSize: node.content.fontSize ?? scaledDefaultSize,
       fontWeight: node.content.fontWeight ?? 'bold',
+      fontWeightNumeric: node.content.fontWeightNumeric,
+      fontStyle: node.content.fontStyle,
+      textDecoration: node.content.textDecoration,
       lineHeight: node.content.lineHeight ?? 1.05,
       letterSpacing: node.content.letterSpacing ?? 0,
       color: node.content.color,
@@ -53,12 +56,14 @@ export default function HeadingElement({
         color: resolveThemeColor(typography.color, theme),
         fontSize: `${typography.fontSize}px`,
         fontFamily,
-        fontWeight:
-          typography.fontWeight === 'bold'
+        fontWeight: typography.fontWeightNumeric
+          ?? (typography.fontWeight === 'bold'
             ? 800
             : typography.fontWeight === 'medium'
               ? 600
-              : 400,
+              : 400),
+        fontStyle: typography.fontStyle || undefined,
+        textDecoration: typography.textDecoration || undefined,
         textAlign: node.content.align,
         lineHeight: typography.lineHeight,
         letterSpacing: `${typography.letterSpacing}px`,

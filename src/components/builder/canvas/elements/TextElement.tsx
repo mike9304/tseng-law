@@ -3,7 +3,11 @@ import type { BuilderTextCanvasNode } from '@/lib/builder/canvas/types';
 import { fontFamilyCSS } from '@/lib/builder/canvas/fonts';
 import { RichTextRenderer } from '@/lib/builder/rich-text/render';
 import type { BuilderTheme } from '@/lib/builder/site/types';
-import { resolveThemeColor, resolveThemeTextTypography } from '@/lib/builder/site/theme';
+import {
+  resolveFontWeightCss,
+  resolveThemeColor,
+  resolveThemeTextTypography,
+} from '@/lib/builder/site/theme';
 import { sanitizeLinkValue } from '@/lib/builder/links';
 
 function verticalAlignToFlexAlign(va?: string): string {
@@ -104,10 +108,14 @@ function TextPath({
         fill={resolveThemeColor(typography.color, theme)}
         fontFamily={fontFamily}
         fontSize={Math.max(18, typography.fontSize * 2.25)}
-        fontWeight={typography.fontWeight === 'bold' ? 700 : typography.fontWeight === 'medium' ? 600 : 400}
+        fontWeight={resolveFontWeightCss(typography)}
+        fontStyle={typography.fontStyle || undefined}
         letterSpacing={typography.letterSpacing * 2}
         textAnchor={node.content.align === 'center' ? 'middle' : node.content.align === 'right' ? 'end' : 'start'}
-        style={{ textTransform: (node.content.textTransform as CSSProperties['textTransform']) || undefined }}
+        style={{
+          textTransform: (node.content.textTransform as CSSProperties['textTransform']) || undefined,
+          textDecoration: typography.textDecoration || undefined,
+        }}
       >
         <textPath
           href={`#${pathId}`}
@@ -223,12 +231,9 @@ export default function TextElement({
         color: resolveThemeColor(typography.color, theme),
         fontSize: `${typography.fontSize}px`,
         fontFamily,
-        fontWeight:
-          typography.fontWeight === 'bold'
-            ? 700
-            : typography.fontWeight === 'medium'
-              ? 600
-              : 400,
+        fontWeight: resolveFontWeightCss(typography),
+        fontStyle: typography.fontStyle || undefined,
+        textDecoration: typography.textDecoration || undefined,
         textAlign: node.content.align,
         lineHeight: typography.lineHeight,
         letterSpacing: `${typography.letterSpacing}px`,

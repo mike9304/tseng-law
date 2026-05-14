@@ -137,6 +137,75 @@ export default function HeadingInspector({
         </select>
       </label>
       <label>
+        <span>Weight (numeric)</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <input
+            type="range"
+            min={100}
+            max={900}
+            step={100}
+            value={headingNode.content.fontWeightNumeric ?? 0}
+            disabled={disabled}
+            onChange={(event) => {
+              const next = Number(event.target.value);
+              updateDetachedTypography({
+                fontWeightNumeric: next === 0 ? undefined : next,
+              });
+            }}
+            style={{ flex: 1 }}
+          />
+          <span style={{ minWidth: 36, fontSize: '0.75rem', color: '#475569' }}>
+            {headingNode.content.fontWeightNumeric ?? '—'}
+          </span>
+          {headingNode.content.fontWeightNumeric !== undefined ? (
+            <button
+              type="button"
+              disabled={disabled}
+              style={{ fontSize: '0.7rem', cursor: 'pointer', background: 'none', border: '1px solid #cbd5e1', borderRadius: 4, padding: '1px 6px', color: '#64748b' }}
+              onClick={() => updateDetachedTypography({ fontWeightNumeric: undefined })}
+            >
+              Clear
+            </button>
+          ) : null}
+        </div>
+        <small style={{ color: '#64748b', fontSize: '0.7rem' }}>
+          비어있으면 위 enum 사용. 100~900 설정 시 우선.
+        </small>
+      </label>
+      <label>
+        <span>Style</span>
+        <select
+          value={headingNode.content.fontStyle ?? 'normal'}
+          disabled={disabled}
+          onChange={(event) =>
+            updateDetachedTypography({
+              fontStyle: event.target.value === 'italic' ? 'italic' : undefined,
+            })
+          }
+        >
+          <option value="normal">Normal</option>
+          <option value="italic">Italic</option>
+        </select>
+      </label>
+      <label>
+        <span>Decoration</span>
+        <select
+          value={headingNode.content.textDecoration ?? 'none'}
+          disabled={disabled}
+          onChange={(event) => {
+            const v = event.target.value;
+            updateDetachedTypography({
+              textDecoration: v === 'none' ? undefined : v,
+            });
+          }}
+        >
+          <option value="none">None</option>
+          <option value="underline">Underline</option>
+          <option value="line-through">Line-through</option>
+          <option value="underline line-through">Both</option>
+        </select>
+      </label>
+      <label>
         <span>Line height</span>
         <input
           type="range"

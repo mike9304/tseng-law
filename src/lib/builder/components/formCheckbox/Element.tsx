@@ -1,18 +1,33 @@
 'use client';
 
+import type { CSSProperties } from 'react';
 import type { BuilderFormCheckboxCanvasNode } from '@/lib/builder/canvas/types';
+import type { BuilderTheme } from '@/lib/builder/site/types';
+import { resolveThemeColor } from '@/lib/builder/site/theme';
+import {
+  normalizeFormInputVariantKey,
+  resolveFormInputVariantStyle,
+} from '@/lib/builder/site/component-variants';
 import { useFormFieldRuntime } from '@/lib/builder/forms/render-helpers';
 
 export default function FormCheckboxElement({
   node,
+  theme,
   mode = 'edit',
 }: {
   node: BuilderFormCheckboxCanvasNode;
+  theme?: BuilderTheme;
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const c = node.content;
   const field = useFormFieldRuntime({ nodeId: node.id, name: c.name, showIf: c.showIf });
   const options = c.options && c.options.length > 0 ? c.options : [{ value: 'yes', label: c.label }];
+  const variantKey = normalizeFormInputVariantKey(c.variant);
+  const variantStyle = resolveFormInputVariantStyle(c.variant, theme, {
+    error: Boolean(field.error),
+  });
+  const accentColor = resolveThemeColor({ kind: 'token', token: 'primary' }, theme);
+  const optionWrapperStyle = buildOptionWrapperStyle(variantKey, variantStyle);
 
   return (
     <div ref={field.rootRef} style={{ ...shellStyle, opacity: mode !== 'published' && c.showIf ? 0.72 : 1 }}>
@@ -24,7 +39,7 @@ export default function FormCheckboxElement({
       ) : null}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         {options.map((option, index) => (
-          <label key={option.value} style={optionStyle}>
+          <label key={option.value} style={{ ...optionStyle, ...optionWrapperStyle }}>
             <input
               type="checkbox"
               name={c.name}
@@ -35,6 +50,7 @@ export default function FormCheckboxElement({
               data-builder-error-message={c.errorMessage}
               aria-invalid={field.error ? true : undefined}
               aria-describedby={field.error ? `field-${node.id}-error` : undefined}
+              style={{ accentColor }}
               onChange={(event) => {
                 if (options.length === 1) {
                   field.onValueChange(event.currentTarget.checked ? option.value : undefined);
@@ -56,6 +72,33 @@ export default function FormCheckboxElement({
       {field.error ? <span id={`field-${node.id}-error`} style={errorStyle}>{field.error}</span> : null}
     </div>
   );
+}
+
+function buildOptionWrapperStyle(
+  variant: ReturnType<typeof normalizeFormInputVariantKey>,
+  variantStyle: ReturnType<typeof resolveFormInputVariantStyle>,
+): CSSProperties {
+  if (variant === 'filled') {
+    return {
+      background: variantStyle.background,
+      border: variantStyle.border,
+      borderColor: variantStyle.borderColor,
+      borderRadius: variantStyle.borderRadius,
+      padding: '8px 10px',
+      transition: variantStyle.transition,
+    };
+  }
+  if (variant === 'underline') {
+    return {
+      background: 'transparent',
+      borderBottom: variantStyle.borderBottom,
+      borderColor: variantStyle.borderColor,
+      borderRadius: 0,
+      padding: '6px 0',
+      transition: variantStyle.transition,
+    };
+  }
+  return {};
 }
 
 const shellStyle: React.CSSProperties = {

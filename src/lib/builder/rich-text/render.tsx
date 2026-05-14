@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import React, { type CSSProperties, type ReactNode } from 'react';
 import type { BuilderRichText } from './types';
 import {
   richTextFromPlainText,
@@ -17,6 +17,17 @@ export interface RenderRichTextOptions {
 export interface RichTextRendererProps extends RenderRichTextOptions {
   richText?: BuilderRichText | null;
 }
+
+const INHERIT_TEXT_BLOCK_STYLE: CSSProperties = {
+  margin: 0,
+  color: 'inherit',
+  font: 'inherit',
+  letterSpacing: 'inherit',
+  lineHeight: 'inherit',
+  textAlign: 'inherit',
+  textDecoration: 'inherit',
+  textTransform: 'inherit',
+};
 
 function renderMarks(child: ReactNode, marks: SafeTipTapMark[] | undefined, key: string): ReactNode {
   if (!marks || marks.length === 0) return child;
@@ -63,13 +74,13 @@ function renderInlineContent(nodes: SafeTipTapNode[] | undefined, keyPrefix: str
 
 function renderBlockNode(node: SafeTipTapNode, key: string): ReactNode {
   if (node.type === 'paragraph') {
-    return <p key={key}>{renderInlineContent(node.content, key)}</p>;
+    return <p key={key} style={INHERIT_TEXT_BLOCK_STYLE}>{renderInlineContent(node.content, key)}</p>;
   }
 
   if (node.type === 'heading') {
     const level = node.attrs?.level ?? 2;
     const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-    return <Tag key={key}>{renderInlineContent(node.content, key)}</Tag>;
+    return <Tag key={key} style={INHERIT_TEXT_BLOCK_STYLE}>{renderInlineContent(node.content, key)}</Tag>;
   }
 
   if (node.type === 'bulletList') {

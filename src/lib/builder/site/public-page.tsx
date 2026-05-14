@@ -414,6 +414,7 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         id={node.anchorName ? node.anchorName : undefined}
         className="builder-pub-node"
         data-node-id={node.id}
+        data-parent-node-id={node.parentId}
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
         data-builder-sticky={useSticky ? 'true' : undefined}
         data-builder-section-template={sectionTemplate?.id}

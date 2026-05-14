@@ -68,7 +68,7 @@ export async function openSiteSettings(page: Page): Promise<Locator> {
 }
 
 export async function openPreviewModalMobile(page: Page): Promise<Locator> {
-  await page.getByRole('button', { name: 'Preview' }).click();
+  await page.getByRole('button', { name: /^Preview$|^미리보기$/ }).click();
   const modal = page.getByRole('dialog', { name: '페이지 미리보기' });
   await expect(modal).toBeVisible();
   await modal.getByRole('button', { name: /Mobile/ }).click();
@@ -92,7 +92,14 @@ export async function openAssetLibrary(page: Page): Promise<Locator> {
   });
   const menu = page.getByRole('menu').last();
   await expect(menu).toBeVisible();
-  await menu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();
+  // The menuitem handler runs setContextMenu(null) + opens the asset-library
+  // modal in the same render tick. Playwright's click action retries after
+  // dispatch and now sees the modal overlay covering the (just-unmounted)
+  // menuitem, so it never returns success. Use dispatchEvent('click') to
+  // skip the post-action retry loop — the React handler still fires from
+  // the dispatched event, and dialog visibility is asserted next.
+  await menu.getByRole('menuitem', { name: /이미지 교체|Replace image/ })
+    .dispatchEvent('click');
   const dialog = page.getByRole('dialog', { name: 'Asset library' });
   await expect(dialog).toBeVisible();
   return dialog;

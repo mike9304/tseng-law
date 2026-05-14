@@ -24,30 +24,38 @@ export default function BuilderAdminBackBar() {
     <Link
       href={`/${locale}/admin-builder`}
       data-builder-admin-back-bar="true"
-      aria-label="사이트 빌더로 돌아가기"
+      aria-label="사이트 빌더 편집기로 돌아가기"
       style={{
         position: 'fixed',
-        top: 12,
-        left: 12,
+        top: 14,
+        left: 14,
         zIndex: 10500,
         display: 'inline-flex',
         alignItems: 'center',
-        gap: 6,
-        padding: '6px 12px',
+        gap: 8,
+        padding: '10px 18px',
         borderRadius: 999,
-        border: '1px solid #cbd5e1',
-        background: 'rgba(255, 255, 255, 0.96)',
-        backdropFilter: 'blur(8px)',
-        color: '#0f172a',
-        fontSize: 12,
-        fontWeight: 700,
+        border: '1px solid #0f172a',
+        background: '#0f172a',
+        color: '#ffffff',
+        fontSize: 14,
+        fontWeight: 800,
         textDecoration: 'none',
-        boxShadow: '0 10px 24px rgba(15, 23, 42, 0.12)',
+        boxShadow: '0 12px 32px rgba(15, 23, 42, 0.28)',
         whiteSpace: 'nowrap',
+        transition: 'transform 120ms ease, box-shadow 120ms ease',
+      }}
+      onMouseEnter={(event) => {
+        (event.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-1px)';
+        (event.currentTarget as HTMLAnchorElement).style.boxShadow = '0 18px 40px rgba(15, 23, 42, 0.38)';
+      }}
+      onMouseLeave={(event) => {
+        (event.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)';
+        (event.currentTarget as HTMLAnchorElement).style.boxShadow = '0 12px 32px rgba(15, 23, 42, 0.28)';
       }}
     >
-      <span aria-hidden>←</span>
-      <span>사이트 빌더</span>
+      <span aria-hidden style={{ fontSize: 18, lineHeight: 1 }}>←</span>
+      <span>사이트 빌더 편집기</span>
     </Link>
   );
 }

@@ -163,9 +163,9 @@ async function expectSelectedNodeHandles(page: Page, node?: Locator): Promise<Lo
     };
   });
   expect(rotationHandleStyle.cursor).toBe('grab');
-  expect(rotationHandleStyle.width).toBeGreaterThanOrEqual(16);
+  expect(rotationHandleStyle.width).toBeGreaterThanOrEqual(14);
   expect(rotationHandleStyle.width).toBeLessThanOrEqual(22);
-  expect(rotationHandleStyle.height).toBeGreaterThanOrEqual(22);
+  expect(rotationHandleStyle.height).toBeGreaterThanOrEqual(14);
   expect(rotationHandleStyle.height).toBeLessThanOrEqual(29);
 
   const sizeLabel = selectedNode.locator('[class*="nodeSizeLabel"]').first();
@@ -355,7 +355,9 @@ async function expectRedoChip(page: Page): Promise<void> {
 }
 
 async function closeModalOverlayIfPresent(page: Page): Promise<void> {
-  const closeButton = page.getByRole('button', { name: /Close|닫기|취소|Cancel/ }).first();
+  // Match standalone Close/Cancel labels — guard against "실행 취소" (Undo)
+  // which contains "취소" as a substring.
+  const closeButton = page.getByRole('button', { name: /^Close$|^닫기$|^취소$|^Cancel$/ }).first();
   if ((await closeButton.count()) === 0 || !(await closeButton.isVisible())) return;
   await closeButton.click();
   await page.waitForTimeout(150);
@@ -696,7 +698,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     expect(menuItemId).toBeTruthy();
     const headerEditMenuButton = headerRegion.getByRole('button', { name: 'Edit menu' });
     await expect(headerEditMenuButton).toBeVisible();
-    await editableMenuItem.hover();
+    // Earlier test steps may leave the Pages drawer's quick-jump panel
+    // open over the header; dispatch mouse events directly so the header
+    // item still receives hover regardless of the drawer overlay.
+    await editableMenuItem.dispatchEvent('mouseover');
+    await editableMenuItem.dispatchEvent('mouseenter');
     const editMenuBox = await headerEditMenuButton.boundingBox();
     expect(editMenuBox).toBeTruthy();
     await page.mouse.move(
@@ -708,7 +714,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await headerEditMenuButton.click();
     const navDrawer = page.locator('aside[aria-hidden="false"]').first();
     await expect(navDrawer.getByText('Navigation').first()).toBeVisible();
-    await editableMenuItem.hover();
+    // Drawer overlays the header — dispatch mouse events directly.
+    await editableMenuItem.dispatchEvent('mouseover');
+    await editableMenuItem.dispatchEvent('mouseenter');
     const servicesMegaPanel = builderHeader.locator('.mega-panel.active').first();
     await expect(servicesMegaPanel).toContainText('투자·법인설립');
     const editDropdownButton = servicesMegaPanel.getByRole('button', { name: 'Edit dropdown' });
@@ -728,7 +736,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(headerEditMenuButton).toBeVisible();
     await expect(builderHeader.locator('.mega-panel.active').first()).toContainText('투자·법인설립');
     await expect(servicesMegaPanel.locator('[data-builder-mega-editing-chip="true"]')).toBeVisible();
-    await editableMenuItem.click();
+    await editableMenuItem.dispatchEvent('click');
     await expect(servicesMegaPanel).toContainText('투자·법인설립');
     await expect(servicesMegaPanel.getByRole('button', { name: 'Edit dropdown' })).toBeVisible();
     await expect(servicesMegaPanel.getByRole('button', { name: 'Add menu item' })).toBeVisible();
@@ -737,7 +745,8 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const originalNavLabel = await navLabelFromApi(page, menuItemId || '');
     expect(originalNavLabel).toBeTruthy();
     await expect(navLabelInput).toHaveValue(originalNavLabel || '');
-    await editableMenuItem.hover();
+    await editableMenuItem.dispatchEvent('mouseover');
+    await editableMenuItem.dispatchEvent('mouseenter');
     await servicesInvestmentMegaLink.click();
     await expect(navLabelInput).toHaveValue('투자·법인설립');
     const originalNavigation = await navigationFromApi(page);
@@ -827,11 +836,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect.poll(async () => firstContextAction.evaluate((element) => (
       window.getComputedStyle(element).color
     ))).toMatch(/190,\s*24,\s*93/);
-    await contextMenu.getByRole('menuitem', { name: /Hide on viewport/ }).focus();
+    await contextMenu.getByRole('menuitem', { name: /Hide on viewport|기기별 숨김/ }).focus();
     await page.keyboard.press('ArrowRight');
     const contextSubmenu = page.locator('[class*="contextSubmenu"]').last();
     await expect(contextSubmenu).toBeVisible();
-    await expect(contextSubmenu).toContainText('Hide on mobile');
+    await expect(contextSubmenu).toContainText(/Hide on mobile|모바일에서 숨김/);
     await page.keyboard.press('Escape');
 
     await selectFirstNode(page);

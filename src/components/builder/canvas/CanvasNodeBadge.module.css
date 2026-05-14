@@ -28,6 +28,14 @@
   opacity: 1;
 }
 
+/* Hover cascades to every ancestor `[data-node-id]`, so without this each
+ * ancestor lights up its own badge and the screen stacks 4–5 of them.
+ * Only the deepest hovered node should expose its badge. Selected nodes
+ * still show their badge regardless of nesting. */
+:global([data-node-id]):hover:not([data-selected='true']):has(:global([data-node-id]):hover) > .nodeBadge {
+  opacity: 0;
+}
+
 .nodeBadge span {
   min-width: 0;
   overflow: hidden;

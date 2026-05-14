@@ -93,7 +93,13 @@ const siteSettingsSchema = z.object({
     keywords: z.array(z.string().trim().min(1).max(80)).max(5).optional(),
     serviceMode: z.enum(['physical', 'online', 'both']).optional(),
   }).strict().optional(),
-}).strict();
+  // seoDefaults / robotsTxt / liveChatWidgetEnabled live in the same file
+  // but are owned by their own dedicated endpoints (/api/builder/site/
+  // seo-settings, /robots.txt, /live-chat). They can show up in cleanup
+  // round-trips that re-PUT the GET response; silently allow & ignore
+  // instead of rejecting, otherwise the test cleanup leaves the site
+  // settings corrupted for the next test in a sweep.
+}).passthrough();
 
 const themeColorValueSchema = z.union([
   z.string().trim().min(1).max(2000),

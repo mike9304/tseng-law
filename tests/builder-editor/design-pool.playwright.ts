@@ -413,7 +413,7 @@ async function selectFirstNode(page: Page): Promise<Locator> {
 }
 
 async function closeEditorOverlayIfPresent(page: Page): Promise<void> {
-  const closeButton = page.getByRole('button', { name: /Close|닫기|취소|Cancel/ }).first();
+  const closeButton = page.getByRole('button', { name: /^Close$|^닫기$|^취소$|^Cancel$/ }).first();
   if ((await closeButton.count()) > 0 && await closeButton.isVisible()) {
     await closeButton.click();
     await page.waitForTimeout(150);
@@ -581,19 +581,19 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     const shell = page.locator('[data-editor-shell]');
     const status = page.getByLabel('Editor status');
     await expect(status).toBeVisible();
-    await expect(status).toContainText('Viewport: desktop');
-    await expect(status.getByRole('button', { name: 'cozy' })).toHaveAttribute('aria-pressed', 'true');
+    await expect(status).toContainText(/Viewport: desktop|뷰포트: desktop/);
+    await expect(status.getByRole('button', { name: /^cozy$|^보통$/ })).toHaveAttribute('aria-pressed', 'true');
 
-    await status.getByRole('button', { name: 'comfortable' }).evaluate((button) => {
+    await status.getByRole('button', { name: /^comfortable$|^넓게$/ }).evaluate((button) => {
       (button as HTMLButtonElement).click();
     });
     await expect(shell).toHaveAttribute('data-editor-density', 'comfortable');
-    await status.getByRole('button', { name: 'Light' }).evaluate((button) => {
+    await status.getByRole('button', { name: /^Light$|^라이트$/ }).evaluate((button) => {
       (button as HTMLButtonElement).click();
     });
     await expect(shell).toHaveAttribute('data-editor-theme', 'dark');
     await page.screenshot({ path: `${screenshotDir}/design-pool-editor-dark.png` });
-    await status.getByRole('button', { name: 'Dark' }).evaluate((button) => {
+    await status.getByRole('button', { name: /^Dark$|^다크$/ }).evaluate((button) => {
       (button as HTMLButtonElement).click();
     });
     await expect(shell).toHaveAttribute('data-editor-theme', 'light');
@@ -610,7 +610,7 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await page.keyboard.press('Escape');
     await expect(inspectorColumn).toBeVisible();
     await expect(page.locator('[data-builder-inspector-empty="true"]')).toBeVisible();
-    await expect(inspectorColumn).toContainText('Select an element to edit');
+    await expect(inspectorColumn).toContainText(/Select an element to edit|편집할 요소를 선택하세요/);
     await page.screenshot({ path: `${screenshotDir}/design-pool-inspector-empty-or-initial.png` });
     await selectFirstNode(page);
     await closeEditorOverlayIfPresent(page);
@@ -659,15 +659,15 @@ test.describe('/ko/admin-builder design-pool browser coverage', () => {
     await clickCanvasNode(contextNode, { button: 'right' });
     const contextMenu = page.locator('[role="menu"]').first();
     await expect(contextMenu).toBeVisible();
-    await expect(contextMenu).toContainText('Hide on viewport');
-    await expect(contextMenu).toContainText('Delete');
-    await contextMenu.getByRole('menuitem', { name: /Hide on viewport/ }).evaluate((element) => {
+    await expect(contextMenu).toContainText(/Hide on viewport|기기별 숨김/);
+    await expect(contextMenu).toContainText(/Delete|삭제/);
+    await contextMenu.getByRole('menuitem', { name: /Hide on viewport|기기별 숨김/ }).evaluate((element) => {
       (element as HTMLElement).focus({ preventScroll: true });
     });
     await page.keyboard.press('ArrowRight');
     const submenu = page.locator('[class*="contextSubmenu"]').last();
     await expect(submenu).toBeVisible();
-    await expect(submenu).toContainText('Hide on mobile');
+    await expect(submenu).toContainText(/Hide on mobile|모바일에서 숨김/);
     await page.screenshot({ path: `${screenshotDir}/design-pool-context-submenu.png` });
     await page.keyboard.press('Escape');
   });

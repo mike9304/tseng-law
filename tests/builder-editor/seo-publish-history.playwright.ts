@@ -439,7 +439,7 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(rootNode).toBeVisible();
       await rootNode.click({ position: { x: 24, y: 24 }, force: true });
       await rootNode.click({ button: 'right', position: { x: 24, y: 24 }, force: true });
-      await page.getByRole('menuitem', { name: /Save as section/ }).click();
+      await page.getByRole('menuitem', { name: /Save as section|섹션으로 저장/ }).click();
 
       const saveDialog = page.getByRole('dialog', { name: '섹션으로 저장' });
       await expect(saveDialog).toBeVisible();
@@ -923,9 +923,9 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       await expect(page.locator(`[data-node-id="title-${token}"]`).first()).toContainText(changedTitle);
 
       await page.getByTitle('사이트 발행').click();
-      const publishDialog = page.getByRole('dialog', { name: 'Publish Page' });
+      const publishDialog = page.getByRole('dialog', { name: /Publish Page|페이지 발행/ });
       await expect(publishDialog).toBeVisible();
-      await expect(publishDialog.getByText('Draft vs published')).toBeVisible();
+      await expect(publishDialog.getByText(/Draft vs published|초안 vs 발행본/)).toBeVisible();
       await expect(publishDialog.getByText('+0 / -0 / ~1', { exact: true })).toBeVisible();
       await expect(publishDialog.getByText('~ 변경됨 1', { exact: true })).toBeVisible();
       await expect(publishDialog.getByText(new RegExp(`title-${token}`))).toBeVisible();
@@ -1057,9 +1057,9 @@ test.describe('/ko/admin-builder SEO, publish, and history end-to-end', () => {
       }).toBe(`${seoTitle}|${canonical}`);
 
       await page.getByTitle('사이트 발행').click();
-      const publishDialog = page.getByRole('dialog', { name: 'Publish Page' });
+      const publishDialog = page.getByRole('dialog', { name: /Publish Page|페이지 발행/ });
       await expect(publishDialog).toBeVisible();
-      await expect(publishDialog.getByText('Automatic preflight checklist')).toBeVisible();
+      await expect(publishDialog.getByText(/Automatic preflight checklist|자동 사전 검사/)).toBeVisible();
       await expect(publishDialog.getByText('Images', { exact: true })).toBeVisible();
       await expect(publishDialog.getByText('Links', { exact: true })).toBeVisible();
       await expect(publishDialog.getByText('SEO', { exact: true })).toBeVisible();

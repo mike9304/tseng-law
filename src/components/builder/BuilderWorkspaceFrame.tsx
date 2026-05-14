@@ -23,6 +23,7 @@ export default function BuilderWorkspaceFrame({
   inspector,
   children,
   surfaceTone = 'default',
+  backLink,
 }: {
   title: string;
   description: string;
@@ -35,6 +36,11 @@ export default function BuilderWorkspaceFrame({
   inspector: ReactNode;
   children: ReactNode;
   surfaceTone?: 'default' | 'canvas-priority';
+  /**
+   * Optional back link rendered at the top of the canvas stage head so
+   * users always have a clear way back to the main builder editor.
+   */
+  backLink?: { href: string; label: string };
 }) {
   return (
     <div
@@ -117,6 +123,29 @@ export default function BuilderWorkspaceFrame({
                     surfaceTone === 'canvas-priority' ? ' builder-canvas-stage-meta--canvas-priority' : ''
                   }`}
                 >
+                  {backLink ? (
+                    <Link
+                      href={backLink.href}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 4,
+                        marginBottom: 4,
+                        padding: '4px 10px',
+                        borderRadius: 8,
+                        border: '1px solid #cbd5e1',
+                        background: '#ffffff',
+                        color: '#0f172a',
+                        fontSize: 12,
+                        fontWeight: 700,
+                        textDecoration: 'none',
+                        width: 'fit-content',
+                      }}
+                    >
+                      <span aria-hidden>←</span>
+                      <span>{backLink.label}</span>
+                    </Link>
+                  ) : null}
                   <strong>{title}</strong>
                   <span>{description}</span>
                 </div>

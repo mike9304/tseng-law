@@ -36,6 +36,7 @@ export default async function BuilderCmsPage({ params }: { params: { locale: Loc
       description="Editable CMS collections, schema, and records."
       activeRail="pages"
       stageUrl={`/${locale}/admin-builder/cms`}
+      backLink={{ href: `/${locale}/admin-builder`, label: '사이트 빌더로 돌아가기' }}
       railItems={[
         { key: 'pages', label: 'Pages', description: 'Editor', href: `/${locale}/admin-builder` },
         { key: 'assets', label: 'Assets', description: 'Library', href: `/${locale}/admin-builder` },

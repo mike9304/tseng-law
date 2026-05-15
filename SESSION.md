@@ -6461,3 +6461,30 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npx next lint --file ...CMS M158-D changed files...` ✅
 - 다음 후보:
   - M158-E: media field asset integration 또는 typed filters/saved views/stable pagination.
+
+## 2026-05-13 Codex /goal G-Editor delta: inline text + expandable stack fixes
+
+- 사용자 직접 피드백:
+  - 인라인 텍스트 편집 후 글자 크기가 작아지는 문제.
+  - 텍스트 편집 후 바깥을 눌러도 선택 해제/커밋 흐름이 자연스럽지 않은 문제.
+  - 주요 서비스/FAQ를 펼치면 아래 요소가 밀리지 않고 겹치는 문제.
+- 처리:
+  - `3892611 Keep editor FAQ answers revealed`
+    - 에디터 캔버스 FAQ preview를 누적 reveal로 되돌려, 다른 노드를 선택해도 이미 열린 답변이 편집 중 접히지 않게 했다.
+  - `c7aff95 Allow inline text editor selection`
+    - inline ProseMirror shell에 `user-select: text`를 명시해 Playwright `.fill()`과 실제 사용자 텍스트 교체가 기존 텍스트 뒤에 붙지 않게 했다.
+  - `a4412ef Add responsive flow reflow previews`
+    - top-level section 및 flex/grid direct child를 flow sibling으로 일반화했다.
+    - 반응형 tablet/mobile에서 flow item drag/resize 시 preview gap, viewport-aware insertion index, sibling y 재계산, published responsive margin-top stylesheet를 추가했다.
+    - 주요 서비스/FAQ 같은 펼침형 블록과 반응형 flow child가 아래 요소를 자연스럽게 밀도록 고정했다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/canvas/__tests__/flow.test.ts src/lib/builder/canvas/__tests__/store-transient.test.ts src/lib/builder/site/__tests__/responsive-stylesheet.test.ts` ✅ (12 tests)
+  - `npx eslint src/lib/builder/canvas/flow.ts src/lib/builder/canvas/__tests__/flow.test.ts src/lib/builder/site/responsive-stylesheet.ts src/lib/builder/site/__tests__/responsive-stylesheet.test.ts src/components/builder/canvas/CanvasNode.tsx src/components/builder/canvas/CanvasStageNodes.tsx src/components/builder/canvas/previewGapStyle.ts src/components/builder/canvas/hooks/useCanvasInteractions.ts src/lib/builder/canvas/store.ts src/lib/builder/canvas/tree.ts` ✅
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+  - `BASE_URL=http://localhost:3000 npx playwright test --config=playwright.config.ts tests/builder-editor/inline-text-editor.playwright.ts tests/builder-editor/node-click-stability.playwright.ts tests/builder-editor/published-interactions.playwright.ts -g "keeps class-based title size and removes block margin while editing|commits text and clears selection|revealed|service cards|keeps services and FAQ sections interactive after publish" --workers=1` ✅ (5 passed)
+- 판정:
+  - 이번 사용자 지적 delta는 자동 검증 기준으로 닫힘.
+  - 전체 Wix 제품 목표는 아직 완료 아님. F-layer/CMS/App Market/Stores/AI/collaboration/developer platform/multilingual/ops와 W-layer 잔여 green gate가 남아 있다.
+- 다음 후보:
+  - M158-E CMS media field asset integration 또는 typed filters/saved views/stable pagination.

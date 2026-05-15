@@ -3,6 +3,31 @@
 Long-horizon Wix parity decision/progress/risk log.
 Created: 2026-05-09T12:52:13.760Z
 
+## 2026-05-13 — G-Editor Delta: Inline Text And Expandable Stack Fixes
+
+- 사용자 피드백:
+  - 인라인 텍스트 편집 시 기존 글자 크기/스타일이 유지되어야 한다.
+  - 편집 후 바깥 클릭으로 저장과 선택 해제가 자연스럽게 되어야 한다.
+  - 주요 서비스/FAQ 펼침 시 아래 콘텐츠가 겹치지 않고 내려가야 한다.
+- 구현:
+  - rich text block render/style inheritance와 inline editor text selection을 보강했다.
+  - FAQ editor preview는 누적 reveal로 유지해 편집 중 다른 항목을 선택해도 답변이 접히지 않게 했다.
+  - published interactions와 editor preview stack을 보강하고, responsive flow sibling drag/resize/reflow helper를 추가했다.
+  - flex/grid direct child의 responsive x/y는 left/top offset이 아니라 flow margin gap으로 반영되도록 published stylesheet를 일반화했다.
+- 커밋:
+  - `3892611 Keep editor FAQ answers revealed`
+  - `c7aff95 Allow inline text editor selection`
+  - `a4412ef Add responsive flow reflow previews`
+- 검증:
+  - unit: flow/store-transient/responsive-stylesheet ✅
+  - targeted eslint ✅
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+  - targeted Playwright inline text / service stack / FAQ stack / published interactions ✅ (5 passed)
+- 판정:
+  - 사용자 지적 G-Editor delta는 닫힘.
+  - 전체 Wix 목표 완료 선언은 보류. W/F checkpoint green gate와 full product layer 잔여 작업이 남아 있다.
+
 ## 2026-05-13 — Scope Correction: Full Wix Product Gap
 
 - 사용자 피드백: "너가 전체 윅스 기준보다 25%만 됐다며 그럼 우리 계획도 남은 75%를 더 채우도록 수정해야 하지 않아? 나는 윅스 만들어 달라 했으니까"

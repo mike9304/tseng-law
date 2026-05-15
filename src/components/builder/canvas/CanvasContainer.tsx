@@ -715,6 +715,7 @@ export default function CanvasContainer({
               startResize={startResize}
               toggleNodeSelection={toggleNodeSelection}
               updateNodeContent={updateNodeContent}
+              interaction={interaction}
             />
 
             <CanvasStageToolbar

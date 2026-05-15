@@ -1,10 +1,20 @@
 'use client';
 
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect, type ReactNode } from 'react';
 import { getComponent } from '@/lib/builder/components/registry';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
+import {
+  computeFlowSiblingMetrics,
+  computeTopLevelFlowSectionMetrics,
+  getFlowGroupKey,
+  getFlowSiblingInsertionIndex,
+  getFlowSiblings,
+  isTopLevelFlowSection,
+} from '@/lib/builder/canvas/flow';
+import { parentUsesFlowLayout as parentUsesFlowLayoutFn } from '@/lib/builder/canvas/tree';
+import { PREVIEW_GAP_STYLE } from './previewGapStyle';
 import { isBuilderRichText, richTextFromPlainText } from '@/lib/builder/rich-text/sanitize';
 import {
   resolveViewportFontSize,
@@ -44,6 +54,7 @@ import { buildCanvasNodeRenderStyles } from './CanvasNodeRenderStyles';
 import { CanvasNodeSelectionOverlay } from './CanvasNodeSelectionOverlay';
 import { InsightsArchiveListPreview } from './CanvasInsightsPreview';
 import type { ResizeHandle } from './canvasNodeTypes';
+import type { InteractionState } from './canvasInteraction';
 import {
   blogFeedLayoutValue,
   containerActionValue,
@@ -76,6 +87,7 @@ interface CanvasNodeProps {
   onResizeStart: (nodeId: string, handle: ResizeHandle, event: React.PointerEvent<HTMLButtonElement>) => void;
   onUpdateContent?: (nodeId: string, content: Record<string, unknown>) => void;
   onInlineEditingChange?: (nodeId: string, editing: boolean) => void;
+  interaction?: InteractionState | null;
 }
 
 interface InlineTextVisualStyle {
@@ -145,6 +157,7 @@ export default function CanvasNode({
   onResizeStart,
   onUpdateContent,
   onInlineEditingChange,
+  interaction,
 }: CanvasNodeProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [inlineTextVisualStyle, setInlineTextVisualStyle] = useState<InlineTextVisualStyle | null>(null);
@@ -273,11 +286,71 @@ export default function CanvasNode({
   const officePhonePrefix = labelPrefix(officePhoneLabel, 'TEL');
   const officeFaxPrefix = labelPrefix(officeFaxLabel, 'FAX');
   const officeMapUrl = readButtonHref(officeMapLinkNode);
-  const parentNode = node.parentId ? nodesById.get(node.parentId) : undefined;
-  const parentLayoutMode = parentNode && isContainerLikeKind(parentNode.kind)
-    ? (parentNode.content as { layoutMode?: 'absolute' | 'flex' | 'grid' }).layoutMode ?? 'absolute'
-    : undefined;
-  const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
+  const parentUsesFlowLayout = parentUsesFlowLayoutFn(node, nodesById);
+  // Flow section metrics (top-level composites only) — computed here from store so that
+  // Editor canvas renders top-level sections with the exact same marginTop / flow layout
+  // as Published (public-page.tsx). This is the core of P0-02.1.
+  const flowMetricsSource = Array.from(nodesById.values()).filter((n) => n.visible !== false);
+  const flowSectionMetrics = computeTopLevelFlowSectionMetrics(flowMetricsSource);
+  const isFlowSection = isTopLevelFlowSection(node);
+  const flowSectionMetric = isFlowSection ? flowSectionMetrics.get(node.id) : undefined;
+
+  // P0-03 (Responsive-in-Flow): For nodes that are direct children of a flex/grid
+  // container, compute sibling-based marginTop using viewport-effective y values.
+  // This only runs for responsive viewports (tablet/mobile) so that desktop keeps
+  // the natural flex/grid layout/gap behavior; responsive overrides for y are
+  // previewed via explicit margin-top (matching the generalized published logic).
+  let innerFlowMarginTop: number | undefined;
+  if (!isFlowSection && parentUsesFlowLayout && viewport !== 'desktop' && node.parentId) {
+    const siblings = Array.from(nodesById.values()).filter(
+      (n) => n.parentId === node.parentId && n.visible !== false
+    );
+    if (siblings.length > 0) {
+      const siblingMetrics = computeFlowSiblingMetrics(siblings, viewport);
+      innerFlowMarginTop = siblingMetrics.get(node.id)?.marginTop;
+    }
+  }
+  const effectiveFlowMarginTop = flowSectionMetric?.marginTop ?? innerFlowMarginTop;
+
+  // During active move drag OR height/position resize on a flow-layout participant
+  // (top-level flow section OR direct child of a flex/grid container) in responsive
+  // viewports, we temporarily force absolute positioning (using current effective rect)
+  // so the gesture can freely change size/position without the flow wrapper (relative +
+  // marginTop) fighting the pointer. Siblings continue using flow rendering + live
+  // marginTop (via computeFlowSiblingMetrics on transient rects) for reflow preview.
+  // On desktop, force absolute is used only for move (to enable zIndex reorder drag);
+  // resize on desktop lets native flex/grid handle reflow.
+  // Restored when interaction ends. (P0-03 A-2 resize parity + prior drag phases)
+  const isFlowParticipantBeingInteracted =
+    ((interaction?.type === 'move' && interaction.nodeIds.includes(node.id)) ||
+     (interaction?.type === 'resize' && interaction.nodeId === node.id && viewport !== 'desktop')) &&
+    (isFlowSection || parentUsesFlowLayout);
+
+  // P0-03 A-1 + A-3 polish: Live visual insertion indicator (drop preview gap) for inner flow
+  // children being dragged inside a flex/grid container in responsive viewport.
+  // Mirrors the top-level previewGapInfo logic from CanvasStageNodes but scoped
+  // to this container's direct flow siblings using the generalized helpers.
+  // The polished indicator (thinner dashed bar with depth) is inserted into the children
+  // render list at the live insertion slot for clear "where it will land" feedback.
+  // Uses shared PREVIEW_GAP_STYLE (improved for A-3: tighter height, stronger line, flex-safe).
+  let innerFlowPreviewGapInfo: { insertionIndex: number; draggedId: string } | null = null;
+  if (interaction?.type === 'move' && viewport !== 'desktop') {
+    const draggedId = interaction.nodeId;
+    const draggedNode = nodesById.get(draggedId);
+    if (draggedNode && draggedNode.parentId === node.id) {
+      const flowGroupKey = getFlowGroupKey(draggedNode, nodesById);
+      if (flowGroupKey === node.id) {
+        const allNodesList = Array.from(nodesById.values());
+        const insertionIndex = getFlowSiblingInsertionIndex(allNodesList, draggedId, nodesById, viewport);
+        innerFlowPreviewGapInfo = { insertionIndex, draggedId };
+      }
+    }
+  }
+
+  // Local useSticky mirrors the guard in buildCanvasNodeRenderStyles (and published)
+  // so that data-builder-sticky only appears when sticky rendering is actually active.
+  // Top-level flow sections never use sticky (they use flow wrapper instead).
+  const useSticky = Boolean(node.sticky) && !parentUsesFlowLayout && !isFlowSection;
   const childIds = childrenMap[node.id] ?? [];
   const nestedChildren = childIds
     .map((cid) => nodesById.get(cid))
@@ -568,8 +641,11 @@ export default function CanvasNode({
     [node.id, updateNodeContentInStore],
   );
 
-  const renderNestedChildNodes = () =>
-    nestedChildren.map((child) => {
+  const renderNestedChildNodes = () => {
+    // Always pass interaction down so nested nodes (incl. inner flow children) can
+    // correctly compute forceAbsoluteDuringInteraction (drag + responsive resize) and other
+    // drag/resize-aware behaviors (P0-03).
+    const renderChild = (child: BuilderCanvasNode) => {
       const isChildSelected = selectedNodeIds.includes(child.id);
       return (
         <CanvasNode
@@ -583,9 +659,59 @@ export default function CanvasNode({
           onResizeStart={onResizeStart}
           onUpdateContent={onUpdateContent}
           onInlineEditingChange={onInlineEditingChange}
+          interaction={interaction}
         />
       );
+    };
+
+    if (!innerFlowPreviewGapInfo) {
+      return nestedChildren.map(renderChild);
+    }
+
+    // Live insertion indicator for flow siblings inside this container (flex/grid).
+    // Render siblings in current flow-sorted order (by live rect.y) and insert
+    // the polished explicit preview gap (A-3 refined shared style) at the target slot.
+    // This gives clear visual drop target feedback while reflow preview runs.
+    const allNodesList = Array.from(nodesById.values());
+    const flowSiblings = getFlowSiblings(allNodesList, node.id);
+    const sortedSiblings = [...flowSiblings].sort((left, right) =>
+      left.rect.y - right.rect.y ||
+      left.zIndex - right.zIndex ||
+      left.id.localeCompare(right.id)
+    );
+
+    const insertionIndex = innerFlowPreviewGapInfo.insertionIndex;
+    const elements: ReactNode[] = [];
+
+    sortedSiblings.forEach((sibling, idx) => {
+      const showGapBefore = insertionIndex === idx;
+      if (showGapBefore) {
+        elements.push(
+          <div
+            key={`preview-gap-inner-${idx}-${innerFlowPreviewGapInfo!.draggedId}`}
+            style={PREVIEW_GAP_STYLE}
+            aria-hidden
+            data-preview-gap="flow-sibling"
+          />
+        );
+      }
+      elements.push(renderChild(sibling));
     });
+
+    // Handle explicit end-of-group insertion (matches top-level pattern)
+    if (insertionIndex === sortedSiblings.length) {
+      elements.push(
+        <div
+          key={`preview-gap-inner-end-${innerFlowPreviewGapInfo!.draggedId}`}
+          style={PREVIEW_GAP_STYLE}
+          aria-hidden
+          data-preview-gap="flow-sibling"
+        />
+      );
+    }
+
+    return elements;
+  };
 
   const body = isEditing && isTextKind ? (
     <InlineTextEditor
@@ -637,6 +763,10 @@ export default function CanvasNode({
     node,
     officeLayoutDisplay,
     parentUsesFlowLayout,
+    isTopLevelFlowSection: isFlowSection,
+    flowSectionMarginTop: effectiveFlowMarginTop,
+    flowSectionMinHeight: flowSectionMetric?.minHeight,
+    forceAbsoluteDuringInteraction: isFlowParticipantBeingInteracted,
     previewExpandedHeight,
     previewOffsetY,
     selected,
@@ -655,6 +785,8 @@ export default function CanvasNode({
       style={nodeStyle}
       data-node-id={node.id}
       data-selected={selected ? 'true' : undefined}
+      data-builder-sticky={useSticky ? 'true' : undefined}
+      data-builder-flow-section={isFlowSection ? 'true' : undefined}
       data-builder-section-template={sectionTemplate?.id}
       data-section-variant={sectionTemplate ? currentSectionTemplateVariant : undefined}
       data-builder-hero-search-active={node.id === 'home-hero-quick-menu' && heroSearchActive ? 'true' : undefined}

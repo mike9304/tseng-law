@@ -3,7 +3,9 @@ import type {
   ResponsiveConfig,
   ResponsiveOverride,
 } from '@/lib/builder/canvas/types';
-import { VIEWPORT_BREAKPOINTS } from '@/lib/builder/canvas/responsive';
+import { isContainerLikeKind } from '@/lib/builder/canvas/types';
+import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
+import { resolveViewportRect, type Viewport, VIEWPORT_BREAKPOINTS } from '@/lib/builder/canvas/responsive';
 
 const TABLET_MAX = VIEWPORT_BREAKPOINTS.tablet + 255;
 const MOBILE_MAX = VIEWPORT_BREAKPOINTS.tablet - 1;
@@ -15,13 +17,20 @@ function escapeCssId(id: string): string {
 function buildResponsiveOverrideRule(
   node: BuilderCanvasNode,
   override: ResponsiveOverride,
+  inFlowContext = false,
 ): string {
   if (!override) return '';
   const declarations: string[] = [];
   if (override.rect) {
     const r = override.rect;
-    if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
-    if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
+    // M177: For nodes inside flex/grid containers, skip left/top entirely.
+    // Their positioning is driven by flow (flex/grid + DOM order), not absolute rect coords.
+    // Responsive overrides for x/y would incorrectly offset the element even when position:relative.
+    // Width/height overrides remain valid and useful for sizing flex items.
+    if (!inFlowContext) {
+      if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
+      if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
+    }
     if (r.width !== undefined) declarations.push(`width: ${r.width}px`);
     if (r.height !== undefined) declarations.push(`height: ${r.height}px`);
   }
@@ -35,11 +44,24 @@ function buildResponsiveOverrideRule(
   return `[data-node-id="${escapeCssId(node.id)}"] { ${declarations.map((d) => `${d} !important`).join('; ')}; }`;
 }
 
+/**
+ * Builds margin-top gap rules for a group of flow siblings so that their
+ * responsive y/height overrides produce correct vertical stacking in
+ * published output (via !important margin-top in the viewport media query).
+ *
+ * Works for both:
+ *  - Top-level composites (document flow)
+ *  - Direct children of any flex/grid layout containers (inner flow)
+ *
+ * Uses the shared resolveViewportRect for consistent cascade (tablet/mobile).
+ */
 function buildFlowGapStylesheetForViewport(
-  composites: BuilderCanvasNode[],
+  flowSiblings: BuilderCanvasNode[],
   viewport: 'tablet' | 'mobile',
 ): string[] {
-  const anyOverride = composites.some((node) => {
+  const v: Viewport = viewport;
+
+  const anyOverride = flowSiblings.some((node) => {
     const responsive = node.responsive as ResponsiveConfig | undefined;
     const bucket = viewport === 'mobile'
       ? (responsive?.mobile ?? responsive?.tablet)
@@ -48,17 +70,9 @@ function buildFlowGapStylesheetForViewport(
   });
   if (!anyOverride) return [];
 
-  const resolved = composites.map((node) => {
-    const responsive = node.responsive as ResponsiveConfig | undefined;
-    const tablet = responsive?.tablet?.rect ?? {};
-    const mobile = responsive?.mobile?.rect ?? {};
-    const y = viewport === 'mobile'
-      ? (mobile.y ?? tablet.y ?? node.rect.y)
-      : (tablet.y ?? node.rect.y);
-    const height = viewport === 'mobile'
-      ? (mobile.height ?? tablet.height ?? node.rect.height)
-      : (tablet.height ?? node.rect.height);
-    return { node, y, height };
+  const resolved = flowSiblings.map((node) => {
+    const r = resolveViewportRect(node, v);
+    return { node, y: r.y, height: r.height };
   }).sort((left, right) =>
     left.y - right.y
     || left.node.zIndex - right.node.zIndex
@@ -79,12 +93,17 @@ export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
   const tabletRules: string[] = [];
   const mobileRules: string[] = [];
 
+  // Build lookup for efficient parent layout checks (M177 responsive-in-flow)
+  const nodesById = new Map(nodes.map((n) => [n.id, n]));
+
   for (const node of nodes) {
     const responsive = node.responsive as ResponsiveConfig | undefined;
     if (!responsive) continue;
 
+    const inFlowContext = parentUsesFlowLayout(node, nodesById);
+
     if (responsive.tablet) {
-      const rule = buildResponsiveOverrideRule(node, responsive.tablet);
+      const rule = buildResponsiveOverrideRule(node, responsive.tablet, inFlowContext);
       if (rule) tabletRules.push(rule);
     }
 
@@ -100,16 +119,36 @@ export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
       if (merged.rect && Object.keys(merged.rect).length === 0) {
         merged.rect = undefined;
       }
-      const rule = buildResponsiveOverrideRule(node, merged);
+      const rule = buildResponsiveOverrideRule(node, merged, inFlowContext);
       if (rule) mobileRules.push(rule);
     }
   }
 
-  const composites = nodes.filter((node) => !node.parentId && node.kind === 'composite');
-  const tabletGap = buildFlowGapStylesheetForViewport(composites, 'tablet');
-  if (tabletGap.length > 0) tabletRules.push(...tabletGap);
-  const mobileGap = buildFlowGapStylesheetForViewport(composites, 'mobile');
-  if (mobileGap.length > 0) mobileRules.push(...mobileGap);
+  // Generalized flow gap rules (P0-03): top-level composites + direct children
+  // of any flex/grid containers. This ensures responsive y/height overrides on
+  // inner flow children also produce correct margin-top spacing in published pages.
+  const tabletGapRules: string[] = [];
+  const mobileGapRules: string[] = [];
+
+  // Top-level flow sections (composites without parent)
+  const topLevelComposites = nodes.filter((node) => !node.parentId && node.kind === 'composite');
+  tabletGapRules.push(...buildFlowGapStylesheetForViewport(topLevelComposites, 'tablet'));
+  mobileGapRules.push(...buildFlowGapStylesheetForViewport(topLevelComposites, 'mobile'));
+
+  // Inner flow children: direct children of containers with layoutMode flex or grid
+  for (const container of nodes) {
+    if (!isContainerLikeKind(container.kind)) continue;
+    const lm = (container.content as { layoutMode?: string } | undefined)?.layoutMode;
+    if (lm !== 'flex' && lm !== 'grid') continue;
+    const directChildren = nodes.filter((child) => child.parentId === container.id);
+    if (directChildren.length > 0) {
+      tabletGapRules.push(...buildFlowGapStylesheetForViewport(directChildren, 'tablet'));
+      mobileGapRules.push(...buildFlowGapStylesheetForViewport(directChildren, 'mobile'));
+    }
+  }
+
+  if (tabletGapRules.length > 0) tabletRules.push(...tabletGapRules);
+  if (mobileGapRules.length > 0) mobileRules.push(...mobileGapRules);
 
   let css = '';
   if (tabletRules.length > 0) {

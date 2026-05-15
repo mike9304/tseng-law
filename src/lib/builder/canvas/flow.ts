@@ -1,0 +1,565 @@
+import type { BuilderCanvasNode } from './types';
+import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
+import { parentUsesFlowLayout } from './tree';
+
+type CanvasRect = BuilderCanvasNode['rect'];
+
+function effectiveRect(node: BuilderCanvasNode, viewport?: Viewport): CanvasRect {
+  return viewport ? resolveViewportRect(node, viewport) : node.rect;
+}
+
+function withRect(node: BuilderCanvasNode, rect: CanvasRect): BuilderCanvasNode {
+  return { ...node, rect } as BuilderCanvasNode;
+}
+
+function compareFlowNodes(left: BuilderCanvasNode, right: BuilderCanvasNode): number {
+  return left.rect.y - right.rect.y ||
+    left.zIndex - right.zIndex ||
+    left.id.localeCompare(right.id);
+}
+
+/**
+ * Returns true if the node is a top-level composite (section) that should
+ * participate in document flow layout (like in Published).
+ * Matches the `flowAsSection` logic from public-page.tsx.
+ */
+export function isTopLevelFlowSection(node: BuilderCanvasNode): boolean {
+  return !node.parentId && node.kind === 'composite';
+}
+
+/**
+ * Generalized computation of marginTop / minHeight metrics for a group of
+ * "flow siblings" — nodes that share the same flow parent context.
+ * Examples:
+ *  - Top-level composites (document flow sections)
+ *  - Direct children of a container whose layoutMode is 'flex' or 'grid'
+ *
+ * When `viewport` is provided (and not 'desktop'), uses resolveViewportRect
+ * so that responsive y/height overrides are respected for Live Reflow Preview
+ * in Tablet/Mobile viewports (P0-03).
+ *
+ * This powers both editor rendering (marginTop style) and the published
+ * responsive gap stylesheet generation.
+ */
+export function computeFlowSiblingMetrics(
+  siblings: BuilderCanvasNode[],
+  viewport?: Viewport,
+): Map<string, { marginTop: number; minHeight: number }> {
+  if (!siblings || siblings.length === 0) return new Map();
+
+  const resolvedEntries = siblings.map((node) => {
+    const rect = viewport ? resolveViewportRect(node, viewport) : node.rect;
+    return { node, y: rect.y, height: rect.height };
+  }).sort((left, right) =>
+    left.y - right.y
+    || left.node.zIndex - right.node.zIndex
+    || left.node.id.localeCompare(right.node.id),
+  );
+
+  const metrics = new Map<string, { marginTop: number; minHeight: number }>();
+  let previousFlowBottom = 0;
+
+  for (const entry of resolvedEntries) {
+    const marginTop = Math.max(0, entry.y - previousFlowBottom);
+    metrics.set(entry.node.id, {
+      marginTop,
+      minHeight: entry.height,
+    });
+    previousFlowBottom = Math.max(
+      previousFlowBottom + marginTop + entry.height,
+      entry.y + entry.height
+    );
+  }
+
+  return metrics;
+}
+
+/**
+ * Computes marginTop and minHeight for each top-level composite section
+ * so that Editor can render them with flow-based stacking (position:relative,
+ * width:100%, marginTop) that matches Published exactly.
+ *
+ * Delegates to the generalized computeFlowSiblingMetrics (with optional
+ * viewport support for responsive-in-flow).
+ */
+export function computeTopLevelFlowSectionMetrics(
+  nodes: BuilderCanvasNode[],
+  viewport?: Viewport,
+): Map<string, { marginTop: number; minHeight: number }> {
+  const topLevelNodes = nodes.filter((node) => !node.parentId);
+
+  const flowTopLevelCompositeNodes = topLevelNodes
+    .filter((node): node is BuilderCanvasNode => node.kind === 'composite');
+
+  return computeFlowSiblingMetrics(flowTopLevelCompositeNodes, viewport);
+}
+
+/**
+ * Computes the live insertion index for a top-level flow section (composite
+ * with no parentId) that is currently being dragged.
+ *
+ * Purpose: Enables "Live Sibling Reflow Preview" (P0-02.2.2) — while the user
+ * drags a section, this tells the UI exactly where in the vertical flow order
+ * the dragged section would land if released now. This index is the foundation
+ * for rendering a visual preview gap / drop indicator between sibling sections
+ * (next micro-step) and for performing the actual reorder + y-recalculation on
+ * drop (later step).
+ *
+ * How it works:
+ * - The `nodes` list is the current document nodes; during a drag the store
+ *   has already applied the transient (live) `rect.y` to the dragged node.
+ * - Only top-level composites participate in flow ordering (same rule as
+ *   `isTopLevelFlowSection` and `computeTopLevelFlowSectionMetrics`).
+ * - The remaining flow sections are sorted by the canonical order key:
+ *     rect.y ASC, zIndex ASC, id ASC (localeCompare) for stability.
+ * - The dragged node's *current* rect.y (plus its zIndex/id for tie-breaking)
+ *   is located in that sorted order.
+ * - Returns the 0-based index the dragged section would occupy in the final
+ *   ordered list of flow sections. This is also the insertion index you would
+ *   use with `splice(insertionIndex, 0, draggedId)` on the list of the *other*
+ *   flow sections (0 = before the first, N = after the last).
+ *
+ * The function is pure, has no side effects, and is safe to call on every
+ * pointer move frame during drag.
+ */
+export function getFlowSectionInsertionIndex(
+  nodes: BuilderCanvasNode[],
+  draggedNodeId: string
+): number {
+  const flowSections = nodes.filter(isTopLevelFlowSection);
+
+  // Locate the dragged node among flow sections (it must have a transient rect.y)
+  const draggedIndexInFlow = flowSections.findIndex((n) => n.id === draggedNodeId);
+  if (draggedIndexInFlow === -1) {
+    // Dragged node is not a top-level flow section — not applicable for reflow.
+    return 0;
+  }
+
+  // Sort a copy using the exact same comparator used for flow layout everywhere.
+  const sorted = [...flowSections].sort((left, right) =>
+    left.rect.y - right.rect.y
+    || left.zIndex - right.zIndex
+    || left.id.localeCompare(right.id),
+  );
+
+  // The position of the dragged node in the sorted list *is* the insertion index.
+  // Because the transient y is already on the node object, this reflects live drag position.
+  return sorted.findIndex((n) => n.id === draggedNodeId);
+}
+
+/**
+ * Computes the original flow insertion index of a top-level flow section
+ * using its *start* rect (pre-drag y) instead of the current (possibly transient)
+ * rect. Used to detect "no actual reorder" (same slot) on drop for clean
+ * undo/redo (no spurious history entry) and to prevent position drift.
+ */
+export function getFlowSectionOriginalIndex(
+  nodes: BuilderCanvasNode[],
+  draggedNodeId: string,
+  startRects?: Record<string, BuilderCanvasNode['rect']>
+): number {
+  const flowSections = nodes.filter(isTopLevelFlowSection);
+  const draggedCurrent = flowSections.find((n) => n.id === draggedNodeId);
+  if (!draggedCurrent) return -1;
+
+  const draggedStartRect = startRects?.[draggedNodeId] ?? draggedCurrent.rect;
+
+  const origSortable = flowSections.map((n) =>
+    n.id === draggedNodeId
+      ? ({ ...n, rect: { ...n.rect, y: draggedStartRect.y } } as BuilderCanvasNode)
+      : n
+  );
+  const originalSorted = [...origSortable].sort((left, right) =>
+    left.rect.y - right.rect.y ||
+    left.zIndex - right.zIndex ||
+    left.id.localeCompare(right.id)
+  );
+
+  return originalSorted.findIndex((n) => n.id === draggedNodeId);
+}
+
+/**
+ * 2-2.3 (completed): On drag end for a top-level flow section, compute the final
+ * rect.y updates so the dragged section moves to the target slot (from live
+ * insertionIndex), and ALL flow sections are re-positioned into a clean vertical
+ * stack using the *original* per-section marginTops (computed via
+ * computeTopLevelFlowSectionMetrics on pre-drag state).
+ *
+ * This is the refined 2-2.3.2 logic:
+ * - Each section "carries" its original marginTop (the visual gap above it).
+ * - New order is built by removing dragged and inserting at targetIndex.
+ * - y positions are rebuilt from top by stacking: newY = prevBottom + marginTop_of_this_section.
+ * - This preserves original inter-section gaps as much as possible (marginTops travel with sections).
+ * - Dragged section always lands at a *natural flow y* for its new slot (not the raw mouse y).
+ * - If target slot == original slot, the result y's exactly match start positions (no drift).
+ *
+ * Only flow sections (top-level composites) are returned in the map; non-flow
+ * top-level nodes are untouched. The map is then applied with 'commit' mode
+ * (one history entry) or cancelled (no-op case) in useCanvasInteractions.
+ *
+ * startRects recovers the original y/height of the dragged node.
+ */
+export function computeReorderedFlowSectionRects(
+  nodes: BuilderCanvasNode[],
+  draggedNodeId: string,
+  insertionIndex: number,
+  startRects?: Record<string, BuilderCanvasNode['rect']>
+): Map<string, BuilderCanvasNode['rect']> {
+  const flowSections = nodes.filter(isTopLevelFlowSection);
+  const draggedCurrent = flowSections.find((n) => n.id === draggedNodeId);
+  if (!draggedCurrent) return new Map();
+
+  const draggedStartRect = startRects?.[draggedNodeId] ?? draggedCurrent.rect;
+  const draggedHeight = draggedStartRect.height;
+
+  // Build original metrics (marginTop per section) using pre-drag positions.
+  // We temporarily swap the dragged rect to its start rect for metric computation.
+  const metricsSource = nodes.map((n) =>
+    n.id === draggedNodeId
+      ? ({ ...n, rect: draggedStartRect } as BuilderCanvasNode)
+      : n
+  );
+  const originalMetrics = computeTopLevelFlowSectionMetrics(metricsSource);
+
+  // Original order (with dragged at its start y for stable sort)
+  const origSortable = flowSections.map((n) =>
+    n.id === draggedNodeId
+      ? ({ ...n, rect: { ...n.rect, y: draggedStartRect.y } } as BuilderCanvasNode)
+      : n
+  );
+  const originalSorted = [...origSortable].sort((left, right) =>
+    left.rect.y - right.rect.y ||
+    left.zIndex - right.zIndex ||
+    left.id.localeCompare(right.id)
+  );
+
+  const targetIndex = Math.max(0, Math.min(originalSorted.length, insertionIndex));
+
+  // Build new order: others keep their relative order, insert dragged at target slot.
+  const others = originalSorted.filter((n) => n.id !== draggedNodeId);
+  const insertPos = Math.max(0, Math.min(others.length, targetIndex));
+  const newOrder: BuilderCanvasNode[] = [...others];
+  // Use a representative object for the dragged (zIndex/id matter only for sort, not here)
+  newOrder.splice(insertPos, 0, draggedCurrent);
+
+  // Rebuild y positions from top, carrying each section's original marginTop.
+  const newRects = new Map<string, BuilderCanvasNode['rect']>();
+  let previousFlowBottom = 0;
+
+  for (const section of newOrder) {
+    const id = section.id;
+    const isDragged = id === draggedNodeId;
+    const height = isDragged ? draggedHeight : section.rect.height;
+    const metric = originalMetrics.get(id);
+    const marginTop = metric ? metric.marginTop : 0;
+
+    const newY = previousFlowBottom + marginTop;
+
+    const baseRect = isDragged ? draggedStartRect : section.rect;
+    const newRect: BuilderCanvasNode['rect'] = {
+      ...baseRect,
+      y: Math.max(0, newY),
+    };
+    newRects.set(id, newRect);
+
+    previousFlowBottom = Math.max(
+      previousFlowBottom + marginTop + height,
+      newY + height
+    );
+  }
+
+  return newRects;
+}
+
+/**
+ * Returns the flow group identifier for drag/reorder purposes:
+ * - `null` for top-level flow sections (no parentId, kind==='composite')
+ * - the parent container's id (string) for direct children of a flex/grid container
+ * - `null` otherwise (not a flow-layout participant for drag)
+ *
+ * This enables unified drag behavior for both top-level sections (P0-02)
+ * and inner flow children (P0-03 responsive-in-flow drag support).
+ */
+export function getFlowGroupKey(
+  node: BuilderCanvasNode,
+  nodesById: Map<string, BuilderCanvasNode>,
+): string | null {
+  if (isTopLevelFlowSection(node)) return null;
+  if (parentUsesFlowLayout(node, nodesById)) return node.parentId ?? null;
+  return null;
+}
+
+/**
+ * Returns the list of sibling nodes that participate in the same flow group.
+ * - For `flowGroupKey === null`: top-level composites (flow sections)
+ * - For string key: visible direct children of the container with that id
+ *   (caller is responsible for ensuring the container actually uses flex/grid)
+ */
+export function getFlowSiblings(
+  nodes: BuilderCanvasNode[],
+  flowGroupKey: string | null,
+): BuilderCanvasNode[] {
+  if (flowGroupKey === null) {
+    return nodes.filter(isTopLevelFlowSection);
+  }
+  return nodes.filter((n) => n.parentId === flowGroupKey && n.visible !== false);
+}
+
+/**
+ * Generalized version of getFlowSectionInsertionIndex that works for any
+ * flow group (top-level sections or direct children inside a flex/grid container).
+ *
+ * Used during drag to compute live insertion slot for natural reflow on commit.
+ */
+export function getFlowSiblingInsertionIndex(
+  nodes: BuilderCanvasNode[],
+  draggedNodeId: string,
+  nodesById: Map<string, BuilderCanvasNode>,
+  viewport?: Viewport,
+): number {
+  const draggedNode = nodes.find((n) => n.id === draggedNodeId);
+  if (!draggedNode) return 0;
+
+  const flowGroupKey = getFlowGroupKey(draggedNode, nodesById);
+  const siblings = getFlowSiblings(nodes, flowGroupKey);
+
+  if (siblings.length === 0) return 0;
+
+  const draggedInGroup = siblings.find((n) => n.id === draggedNodeId);
+  if (!draggedInGroup) return 0;
+
+  // Sort using same canonical order key as computeFlowSiblingMetrics.
+  const sorted = siblings
+    .map((sibling) => withRect(sibling, effectiveRect(sibling, viewport)))
+    .sort(compareFlowNodes);
+
+  return sorted.findIndex((n) => n.id === draggedNodeId);
+}
+
+/**
+ * Generalized version of getFlowSectionOriginalIndex for any flow group.
+ * Recovers pre-drag insertion index using startRects for the dragged node.
+ */
+export function getFlowSiblingOriginalIndex(
+  nodes: BuilderCanvasNode[],
+  draggedNodeId: string,
+  nodesById: Map<string, BuilderCanvasNode>,
+  startRects?: Record<string, BuilderCanvasNode['rect']>,
+  viewport?: Viewport,
+): number {
+  const draggedNodeForKey = nodes.find((n) => n.id === draggedNodeId);
+  const flowGroupKey = draggedNodeForKey ? getFlowGroupKey(draggedNodeForKey, nodesById) : null;
+  const siblings = getFlowSiblings(nodes, flowGroupKey);
+
+  const draggedCurrent = siblings.find((n) => n.id === draggedNodeId);
+  if (!draggedCurrent) return -1;
+
+  const draggedStartRect = startRects?.[draggedNodeId] ?? draggedCurrent.rect;
+
+  const origSortable = siblings.map((n) =>
+    withRect(n, n.id === draggedNodeId ? draggedStartRect : effectiveRect(n, viewport))
+  );
+
+  const originalSorted = [...origSortable].sort(compareFlowNodes);
+
+  return originalSorted.findIndex((n) => n.id === draggedNodeId);
+}
+
+/**
+ * Generalized version of computeReorderedFlowSectionRects for any flow group
+ * (top-level or inner flex/grid children).
+ *
+ * On commit for a flow drag in responsive (or desktop), this produces the
+ * final rects (primarily updated .y) so the dragged node lands at the natural
+ * flow position for its insertion slot, and siblings are restacked preserving
+ * their original marginTop gaps (computed from pre-drag state).
+ *
+ * This makes drop "snap" cleanly without position drift, exactly as for
+ * top-level flow sections.
+ */
+export function computeReorderedFlowSiblingRects(
+  nodes: BuilderCanvasNode[],
+  draggedNodeId: string,
+  insertionIndex: number,
+  nodesById: Map<string, BuilderCanvasNode>,
+  startRects?: Record<string, BuilderCanvasNode['rect']>,
+  viewport?: Viewport,
+): Map<string, BuilderCanvasNode['rect']> {
+  const draggedNodeForKey = nodes.find((n) => n.id === draggedNodeId);
+  const flowGroupKey = draggedNodeForKey ? getFlowGroupKey(draggedNodeForKey, nodesById) : null;
+  const siblings = getFlowSiblings(nodes, flowGroupKey);
+  const draggedCurrent = siblings.find((n) => n.id === draggedNodeId);
+  if (!draggedCurrent) return new Map();
+
+  const draggedStartRect = startRects?.[draggedNodeId] ?? draggedCurrent.rect;
+
+  // Build original metrics using pre-drag rect for the dragged (via computeFlowSiblingMetrics)
+  const flowSiblingsForMetrics = siblings.map((n) =>
+    withRect(n, n.id === draggedNodeId ? draggedStartRect : effectiveRect(n, viewport))
+  );
+  const originalMetrics = computeFlowSiblingMetrics(flowSiblingsForMetrics);
+
+  // Original order snapshot (with dragged at start y)
+  const origSortable = siblings.map((n) =>
+    withRect(n, n.id === draggedNodeId ? draggedStartRect : effectiveRect(n, viewport))
+  );
+  const originalSorted = [...origSortable].sort(compareFlowNodes);
+
+  const targetIndex = Math.max(0, Math.min(originalSorted.length, insertionIndex));
+
+  const others = originalSorted.filter((n) => n.id !== draggedNodeId);
+  const insertPos = Math.max(0, Math.min(others.length, targetIndex));
+  const newOrder: BuilderCanvasNode[] = [...others];
+  newOrder.splice(insertPos, 0, draggedCurrent);
+
+  const newRects = new Map<string, BuilderCanvasNode['rect']>();
+  let previousFlowBottom = 0;
+
+  for (const sibling of newOrder) {
+    const id = sibling.id;
+    const height = sibling.rect.height;
+    const metric = originalMetrics.get(id);
+    const marginTop = metric ? metric.marginTop : 0;
+
+    const newY = previousFlowBottom + marginTop;
+
+    const newRect: BuilderCanvasNode['rect'] = {
+      ...sibling.rect,
+      y: Math.max(0, newY),
+    };
+    newRects.set(id, newRect);
+
+    previousFlowBottom = Math.max(
+      previousFlowBottom + marginTop + height,
+      newY + height
+    );
+  }
+
+  return newRects;
+}
+
+/**
+ * Computes the new zIndex assignments for the siblings in a flow group (inner flex/grid
+ * container children only) after a successful drop reorder in responsive viewport.
+ *
+ * It reuses the exact same newOrder logic as computeReorderedFlowSiblingRects, then
+ * reassigns the sorted existing zIndex values of the group to the nodes in the new
+ * visual flow order. This ensures that childrenMap (which sorts siblings by zIndex)
+ * will produce exactly the same order as the y+marginTop flow order the user saw
+ * in the responsive preview — for true WYSIWYG desktop parity.
+ *
+ * Only intended for flow *containers* (parentId present); top-level flow sections
+ * have separate z handling and are excluded by the caller.
+ */
+export function computeNewZIndexOrderForFlowSiblings(
+  nodes: BuilderCanvasNode[],
+  draggedNodeId: string,
+  insertionIndex: number,
+  nodesById: Map<string, BuilderCanvasNode>,
+  startRects?: Record<string, BuilderCanvasNode['rect']>,
+  viewport?: Viewport,
+): Map<string, number> {
+  const draggedNodeForKey = nodes.find((n) => n.id === draggedNodeId);
+  const flowGroupKey = draggedNodeForKey ? getFlowGroupKey(draggedNodeForKey, nodesById) : null;
+  const siblings = getFlowSiblings(nodes, flowGroupKey);
+  const draggedCurrent = siblings.find((n) => n.id === draggedNodeId);
+  if (!draggedCurrent || siblings.length === 0) return new Map();
+
+  const draggedStartRect = startRects?.[draggedNodeId] ?? draggedCurrent.rect;
+
+  // Original order snapshot (with dragged at start y) — same as in computeReorderedFlowSiblingRects
+  const origSortable = siblings.map((n) =>
+    withRect(n, n.id === draggedNodeId ? draggedStartRect : effectiveRect(n, viewport))
+  );
+  const originalSorted = [...origSortable].sort(compareFlowNodes);
+
+  const targetIndex = Math.max(0, Math.min(originalSorted.length, insertionIndex));
+
+  const others = originalSorted.filter((n) => n.id !== draggedNodeId);
+  const insertPos = Math.max(0, Math.min(others.length, targetIndex));
+  const newOrder: BuilderCanvasNode[] = [...others];
+  newOrder.splice(insertPos, 0, draggedCurrent);
+
+  // Reassign sorted existing z values to the new order (scoped to this sibling group only)
+  const sortedZValues = siblings.map((n) => n.zIndex).sort((a, b) => a - b);
+  const zMap = new Map<string, number>();
+  newOrder.forEach((node, idx) => {
+    zMap.set(node.id, sortedZValues[idx] ?? (sortedZValues[sortedZValues.length - 1] ?? 0) + idx + 1);
+  });
+  return zMap;
+}
+
+/**
+ * Computes updated rects after a height (or top-handle y) resize of a flow-layout
+ * participant (top-level section or direct child of flex/grid container) in a
+ * responsive viewport.
+ *
+ * - The resized node's final rect (y + new height from the resize gesture) is kept.
+ * - Siblings after it in the original flow order get their y recalculated from the
+ *   new bottom of the resized node + their original marginTop gaps (computed from
+ *   pre-resize state via startRect).
+ * - Siblings before the resized node are left untouched.
+ * - This ensures live reflow preview during resize (via updated marginTop on siblings)
+ *   + clean one-history-entry commit of height + sibling y positions.
+ * - Reuses the same generalized flow sibling helpers for consistency with drag.
+ * - Only meaningful for responsive viewports (desktop flex/grid handles reflow natively).
+ */
+export function computeResizedFlowSiblingRects(
+  nodes: BuilderCanvasNode[],
+  resizedNodeId: string,
+  nodesById: Map<string, BuilderCanvasNode>,
+  startRect: BuilderCanvasNode['rect'],
+  finalRect: BuilderCanvasNode['rect'],
+  viewport?: Viewport,
+): Map<string, BuilderCanvasNode['rect']> {
+  const resizedNodeForKey = nodes.find((n) => n.id === resizedNodeId);
+  const flowGroupKey = resizedNodeForKey ? getFlowGroupKey(resizedNodeForKey, nodesById) : null;
+
+  const siblings = getFlowSiblings(nodes, flowGroupKey);
+  const resizedCurrent = siblings.find((n) => n.id === resizedNodeId);
+  if (!resizedCurrent) return new Map();
+
+  // Original metrics (marginTop per sibling) computed with pre-resize rect for the resized node.
+  const flowSiblingsForMetrics = siblings.map((n) =>
+    withRect(n, n.id === resizedNodeId ? startRect : effectiveRect(n, viewport))
+  );
+  const originalMetrics = computeFlowSiblingMetrics(flowSiblingsForMetrics);
+
+  // Original stable order (using start y for resized to determine position in flow).
+  const origSortable = siblings.map((n) =>
+    withRect(n, n.id === resizedNodeId ? startRect : effectiveRect(n, viewport))
+  );
+  const originalSorted = [...origSortable].sort(compareFlowNodes);
+
+  const resizedIndexInOrder = originalSorted.findIndex((n) => n.id === resizedNodeId);
+  if (resizedIndexInOrder === -1) return new Map();
+
+  const newRects = new Map<string, BuilderCanvasNode['rect']>();
+
+  // Always include the resized node's final rect (the one user achieved via handle drag).
+  newRects.set(resizedNodeId, finalRect);
+
+  // Start stacking from the resized node's final bottom for all *subsequent* siblings.
+  let previousFlowBottom = finalRect.y + finalRect.height;
+
+  for (let i = resizedIndexInOrder + 1; i < originalSorted.length; i++) {
+    const sibling = originalSorted[i];
+    const metric = originalMetrics.get(sibling.id);
+    const marginTop = metric ? metric.marginTop : 0;
+
+    const newY = previousFlowBottom + marginTop;
+
+    const newRect: BuilderCanvasNode['rect'] = {
+      ...sibling.rect,
+      y: Math.max(0, newY),
+    };
+    newRects.set(sibling.id, newRect);
+
+    previousFlowBottom = Math.max(
+      previousFlowBottom + marginTop + sibling.rect.height,
+      newY + sibling.rect.height
+    );
+  }
+
+  return newRects;
+}

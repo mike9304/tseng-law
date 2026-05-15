@@ -1,4 +1,5 @@
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
+import { isContainerLikeKind } from '@/lib/builder/canvas/types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 
 export function buildChildrenMap(nodes: BuilderCanvasNode[]): Record<string, string[]> {
@@ -14,6 +15,37 @@ export function buildChildrenMap(nodes: BuilderCanvasNode[]): Record<string, str
   }
 
   return childrenMap;
+}
+
+/**
+ * Returns the layoutMode of the node's direct parent container (if any).
+ * Used to determine whether children participate in flex/grid flow vs absolute.
+ * Mirrors the computation in CanvasNode.tsx and public-page.tsx.
+ */
+export function getParentLayoutMode(
+  node: BuilderCanvasNode,
+  nodesById: Map<string, BuilderCanvasNode>,
+): 'absolute' | 'flex' | 'grid' | undefined {
+  if (!node.parentId) return undefined;
+  const parent = nodesById.get(node.parentId);
+  if (!parent || !isContainerLikeKind(parent.kind)) return undefined;
+  const content = parent.content as { layoutMode?: 'absolute' | 'flex' | 'grid' } | undefined;
+  return content?.layoutMode ?? 'absolute';
+}
+
+/**
+ * Returns true if this node's direct parent container uses flex or grid layout.
+ * In that case, the node's rect.x / rect.y (including responsive overrides)
+ * should NOT be used as positioning offsets — layout is driven by the
+ * parent's flex/grid rules + DOM order. This is the core guard for M177
+ * responsive-in-flow fixes.
+ */
+export function parentUsesFlowLayout(
+  node: BuilderCanvasNode,
+  nodesById: Map<string, BuilderCanvasNode>,
+): boolean {
+  const mode = getParentLayoutMode(node, nodesById);
+  return mode === 'flex' || mode === 'grid';
 }
 
 export function resolveCanvasNodeAbsoluteRect(
@@ -34,10 +66,15 @@ export function resolveCanvasNodeAbsoluteRect(
   const parentRect = resolveCanvasNodeAbsoluteRect(parentNode, nodesById, seen);
   seen.delete(node.id);
 
+  const usesFlow = parentUsesFlowLayout(node, nodesById);
+  const localX = usesFlow ? 0 : node.rect.x;
+  const localY = usesFlow ? 0 : node.rect.y;
+
   return {
-    ...node.rect,
-    x: parentRect.x + node.rect.x,
-    y: parentRect.y + node.rect.y,
+    x: parentRect.x + localX,
+    y: parentRect.y + localY,
+    width: node.rect.width,
+    height: node.rect.height,
   };
 }
 
@@ -61,10 +98,15 @@ export function resolveCanvasNodeAbsoluteRectForViewport(
   const parentRect = resolveCanvasNodeAbsoluteRectForViewport(parentNode, nodesById, viewport, seen);
   seen.delete(node.id);
 
+  const usesFlow = parentUsesFlowLayout(node, nodesById);
+  const localX = usesFlow ? 0 : nodeRect.x;
+  const localY = usesFlow ? 0 : nodeRect.y;
+
   return {
-    ...nodeRect,
-    x: parentRect.x + nodeRect.x,
-    y: parentRect.y + nodeRect.y,
+    x: parentRect.x + localX,
+    y: parentRect.y + localY,
+    width: nodeRect.width,
+    height: nodeRect.height,
   };
 }
 

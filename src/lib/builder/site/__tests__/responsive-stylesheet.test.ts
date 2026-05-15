@@ -2,7 +2,11 @@ import { describe, expect, it } from 'vitest';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { buildResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
 
-function node(overrides: Partial<BuilderCanvasNode>): BuilderCanvasNode {
+type TestNodeOverrides = Partial<Omit<BuilderCanvasNode, 'content'>> & {
+  content?: Record<string, unknown>;
+};
+
+function node(overrides: TestNodeOverrides): BuilderCanvasNode {
   return {
     id: 'node-1',
     kind: 'text',
@@ -62,5 +66,36 @@ describe('published responsive stylesheet', () => {
 
     expect(css).toContain('[data-node-id="section-a"] { margin-top: 0px !important; }');
     expect(css).toContain('[data-node-id="section-b"] { margin-top: 24px !important; }');
+  });
+
+  it('uses flow gaps instead of left/top offsets for responsive flex children', () => {
+    const css = buildResponsiveStylesheet([
+      node({
+        id: 'flow-parent',
+        kind: 'container',
+        content: { layoutMode: 'flex' },
+        rect: { x: 0, y: 0, width: 640, height: 420 },
+      }),
+      node({
+        id: 'flow-a',
+        parentId: 'flow-parent',
+        zIndex: 1,
+        responsive: { mobile: { rect: { x: 50, y: 80, width: 220, height: 120 } } },
+      }),
+      node({
+        id: 'flow-b',
+        parentId: 'flow-parent',
+        zIndex: 2,
+        responsive: { mobile: { rect: { y: 230, height: 90 } } },
+      }),
+    ]);
+
+    const flowARules = css.split('\n').filter((line) => line.includes('[data-node-id="flow-a"]'));
+    expect(flowARules.some((line) => line.includes('left:'))).toBe(false);
+    expect(flowARules.some((line) => line.includes('top:') && !line.includes('margin-top'))).toBe(false);
+    expect(flowARules.some((line) => line.includes('width: 220px !important'))).toBe(true);
+    expect(flowARules.some((line) => line.includes('height: 120px !important'))).toBe(true);
+    expect(flowARules.some((line) => line.includes('margin-top: 80px !important'))).toBe(true);
+    expect(css).toContain('[data-node-id="flow-b"] { margin-top: 30px !important; }');
   });
 });

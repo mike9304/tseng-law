@@ -150,6 +150,7 @@ interface BuilderCanvasStoreState {
     rectsById: BuilderCanvasNodeRectsById,
     viewport: Viewport,
     mode?: MutationMode,
+    zIndexById?: Map<string, number> | Record<string, number>,
   ) => void;
   updateNodeContent: (nodeId: string, content: Record<string, unknown>, mode?: MutationMode) => void;
   updateNodeStyle: (nodeId: string, style: Partial<BuilderCanvasNodeStyle>, mode?: MutationMode) => void;
@@ -1244,15 +1245,26 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         ? applyTransientDocument(state, document)
         : applyCommittedDocument(state, document);
     }),
-  updateNodeRectsForViewport: (rectsById, viewport, mode = 'commit') =>
+  updateNodeRectsForViewport: (rectsById, viewport, mode = 'commit', zIndexById) =>
     set((state) => {
       if (!state.document) return state;
       let changed = false;
+      const zMap = zIndexById instanceof Map ? zIndexById : zIndexById ? new Map(Object.entries(zIndexById).map(([k, v]) => [k, Number(v)])) : null;
       const document = updateNodes(state.document, (nodes) =>
         nodes.map((node) => {
           const rect = getCanvasNodeRectById(rectsById, node.id);
-          if (!rect) return node;
-          const nextNode = applyCanvasNodeRectForViewport(node, rect, viewport);
+          const z = zMap ? zMap.get(node.id) : undefined;
+          if (!rect && z === undefined) return node;
+          let nextNode = node;
+          if (rect) {
+            const afterRect = applyCanvasNodeRectForViewport(node, rect, viewport);
+            if (afterRect !== node) {
+              nextNode = afterRect;
+            }
+          }
+          if (z !== undefined && nextNode.zIndex !== z) {
+            nextNode = { ...nextNode, zIndex: z } as BuilderCanvasNode;
+          }
           if (nextNode !== node) changed = true;
           return nextNode;
         }),
@@ -1278,18 +1290,45 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         }
       }
       if (Object.keys(validContent).length === 0) return state;
+
+      // P0-03: When a container switches its layoutMode to flex/grid, reset x/y of
+      // direct children to 0. This prevents stale absolute positioning from breaking
+      // flow layout after the mode change. (x/y overrides in responsive are left as-is
+      // since they are already ignored in flow context by geometry + stylesheet logic.)
+      const prevLayoutMode = (existingNode.content as { layoutMode?: string }).layoutMode ?? 'absolute';
+      const nextLayoutMode = validContent.layoutMode as string | undefined;
+      const switchingToFlowLayout =
+        (nextLayoutMode === 'flex' || nextLayoutMode === 'grid') &&
+        prevLayoutMode !== 'flex' &&
+        prevLayoutMode !== 'grid' &&
+        isContainerLikeKind(existingNode.kind);
+      const childIdsToReset = switchingToFlowLayout
+        ? (state.childrenMap[nodeId] ?? [])
+        : [];
+
       const document = updateNodes(state.document, (nodes) =>
-        nodes.map((node) => (
-          node.id === nodeId
-            ? {
-                ...node,
-                content: {
-                  ...node.content,
-                  ...validContent,
-                },
-              } as BuilderCanvasNode
-            : node
-        )),
+        nodes.map((node) => {
+          if (node.id === nodeId) {
+            return {
+              ...node,
+              content: {
+                ...node.content,
+                ...validContent,
+              },
+            } as BuilderCanvasNode;
+          }
+          if (childIdsToReset.includes(node.id)) {
+            return {
+              ...node,
+              rect: {
+                ...node.rect,
+                x: 0,
+                y: 0,
+              },
+            };
+          }
+          return node;
+        }),
         updateNodesOptionsForMode(mode));
       return mode === 'transient'
         ? applyTransientDocument(state, document)

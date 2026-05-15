@@ -20,9 +20,19 @@ import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import { isContainerLikeKind, type BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
 import { computeSnap } from '@/lib/builder/canvas/snap';
 import type { AlignmentGuide, SnapReferenceGuide } from '@/lib/builder/canvas/snap';
 import type { ZoomState } from '@/lib/builder/canvas/zoom';
+import {
+  isTopLevelFlowSection,
+  getFlowSiblingInsertionIndex,
+  getFlowSiblingOriginalIndex,
+  computeReorderedFlowSiblingRects,
+  getFlowGroupKey,
+  computeNewZIndexOrderForFlowSiblings,
+  computeResizedFlowSiblingRects,
+} from '@/lib/builder/canvas/flow';
 
 type UseCanvasInteractionsArgs = {
   activeGroupId: string | null;
@@ -51,6 +61,7 @@ type UseCanvasInteractionsArgs = {
     rects: Map<string, BuilderCanvasNode['rect']>,
     viewport: Viewport,
     mode?: 'commit' | 'transient',
+    zIndexById?: Map<string, number>,
   ) => void;
   viewportRef: RefObject<HTMLDivElement | null>;
   visibleNodes: BuilderCanvasNode[];
@@ -167,10 +178,11 @@ export function useCanvasInteractions({
       if (canceledInteractionPointerIdsRef.current.has(activeInteraction.pointerId)) return;
       if (activeInteraction.type === 'pan') {
         const deltaX = pointer.clientX - activeInteraction.originX;
+        const deltaY = pointer.clientY - activeInteraction.originY;
         setZoomState((currentState) => ({
           ...currentState,
           panX: activeInteraction.startPanX + deltaX,
-          panY: 0,
+          panY: activeInteraction.startPanY + deltaY,
         }));
         return;
       }
@@ -457,6 +469,8 @@ export function useCanvasInteractions({
         && activeInteraction.nodeIds.length === 1
         && currentHoveredContainerId !== activeInteraction.startParentId,
       );
+      let didSpecialFlowReorderCommit = false;
+      let didSpecialFlowResizeCommit = false;
       if (willReparent && activeInteraction.type === 'move' && activeInteraction.viewport !== 'desktop') {
         cancelMutationSession();
         onToast?.('Reparenting is desktop-only in this build', 'error');
@@ -468,8 +482,151 @@ export function useCanvasInteractions({
           && currentHoveredContainerId
         ) {
           moveNodeIntoContainer(activeInteraction.nodeIds[0], currentHoveredContainerId);
+        } else if (
+          // 2-2.3 + P0-03 extension: Special commit path for Live Sibling Reflow (Drop Reorder)
+          // for BOTH top-level flow sections AND inner flow children (direct children of
+          // flex/grid containers).
+          // - Uses generalized insertionIndex (live, y-based among flow siblings) + originalIndex
+          //   (from startRects) to detect real reorder.
+          // - Same-slot: cancel (no history, snaps back to natural y, no drift).
+          // - Different slot: computeReorderedFlowSiblingRects (generalized, uses
+          //   computeFlowSiblingMetrics + carries original marginTops) → 'commit' for clean history.
+          // This makes drag inside flow containers in responsive viewports (tablet/mobile)
+          // feel natural: temporarily absolute (forceAbsoluteDuringInteraction for move/resize), live sibling reflow,
+          // drop snaps to correct flow slot.
+          // Only for single-node flow moves that did not reparent (reparent remains desktop-only).
+          activeInteraction.type === 'move'
+          && activeInteraction.nodeIds.length === 1
+          && !willReparent
+        ) {
+          const movedId = activeInteraction.nodeIds[0];
+          // Use store.getState for freshest nodes (transient rects are live in the document)
+          const currentDoc = useBuilderCanvasStore.getState().document;
+          const freshNodes = currentDoc?.nodes ?? [];
+          const movedNode = freshNodes.find((n) => n.id === movedId);
+          if (movedNode) {
+            const latestNodesById = getCanvasNodesById(freshNodes);
+            const isFlowLayoutItem =
+              isTopLevelFlowSection(movedNode) ||
+              parentUsesFlowLayout(movedNode, latestNodesById);
+
+            if (isFlowLayoutItem) {
+              const insertionIndex = getFlowSiblingInsertionIndex(
+                freshNodes,
+                movedId,
+                latestNodesById,
+                activeInteraction.viewport,
+              );
+              const origIndex = getFlowSiblingOriginalIndex(
+                freshNodes,
+                movedId,
+                latestNodesById,
+                activeInteraction.startRects,
+                activeInteraction.viewport,
+              );
+
+              if (origIndex === -1 || origIndex === insertionIndex) {
+                // No actual reorder (same slot or invalid). Restore original positions without
+                // creating a history entry. Prevents position drift when user drags within a slot.
+                cancelMutationSession();
+                didSpecialFlowReorderCommit = true;
+              } else {
+                const reorderRects = computeReorderedFlowSiblingRects(
+                  freshNodes,
+                  movedId,
+                  insertionIndex,
+                  latestNodesById,
+                  activeInteraction.startRects,
+                  activeInteraction.viewport,
+                );
+                if (reorderRects.size > 0) {
+                  // P0-03 Phase 2 polish: For successful inner flow-sibling reorders
+                  // (not top-level sections), also reassign zIndexes scoped to the
+                  // container's direct children so that childrenMap (zIndex-sorted)
+                  // exactly matches the new flow order from the responsive drag preview.
+                  // This is done atomically with the rect commit (one history entry).
+                  const flowGroupKey = getFlowGroupKey(movedNode, latestNodesById);
+                  const zIndexById =
+                    flowGroupKey !== null
+                      ? computeNewZIndexOrderForFlowSiblings(
+                          freshNodes,
+                          movedId,
+                          insertionIndex,
+                          latestNodesById,
+                          activeInteraction.startRects,
+                          activeInteraction.viewport,
+                        )
+                      : undefined;
+                  updateNodeRectsForViewport(
+                    reorderRects,
+                    activeInteraction.viewport,
+                    'commit',
+                    zIndexById,
+                  );
+                  didSpecialFlowReorderCommit = true;
+                } else {
+                  cancelMutationSession();
+                  didSpecialFlowReorderCommit = true;
+                }
+              }
+            }
+          }
         }
-        if (activeInteraction.type !== 'pan') {
+
+        // A-2 Resize Parity (P0-03): Special commit path for flow layout items (inner flex/grid
+        // children or top-level sections) when resizing in non-desktop responsive viewport.
+        // - During resize: the node is forced absolute (see CanvasNode), transient height/y updates
+        //   cause siblings to live-reflow via recomputed marginTop in computeFlowSiblingMetrics.
+        // - On commit: use computeResizedFlowSiblingRects (preserves original marginTops from
+        //   startRect, keeps resized's final rect, updates y of subsequent siblings) → one clean
+        //   'commit' updateNodeRectsForViewport (single history entry, no drift).
+        // - Desktop resize of flow children relies on native flex/grid reflow (no y overrides needed).
+        // - Falls back to normal commitMutationSession only if not a responsive flow resize.
+        if (
+          activeInteraction.type === 'resize'
+          && activeInteraction.viewport !== 'desktop'
+        ) {
+          const resizedId = activeInteraction.nodeId;
+          const currentDoc = useBuilderCanvasStore.getState().document;
+          const freshNodes = currentDoc?.nodes ?? [];
+          const resizedNode = freshNodes.find((n) => n.id === resizedId);
+          if (resizedNode) {
+            const latestNodesById = getCanvasNodesById(freshNodes);
+            const isFlowLayoutItem =
+              isTopLevelFlowSection(resizedNode) ||
+              parentUsesFlowLayout(resizedNode, latestNodesById);
+
+            if (isFlowLayoutItem) {
+              // A-4 edge case coverage (drag + resize flow in responsive):
+              // - Empty/single-child containers: no-op on siblings, just persist resized rect cleanly.
+              // - Nested flow containers: each level uses its own parentId flowGroupKey independently.
+              // - Mid-interaction viewport switch: use captured interaction.viewport for consistency.
+              // - Undo/redo: single atomic 'commit' with all affected rects + no z change for resize.
+              // - Same as drag: cancel not needed (height change always meaningful); clamps prevent <0 y.
+              // - Locked / multi-select: resize is single-node only (enforced upstream in startResize).
+              const startRect = activeInteraction.startRect;
+              const finalRectForResized = resolveViewportRect(resizedNode, activeInteraction.viewport);
+              const resizeRects = computeResizedFlowSiblingRects(
+                freshNodes,
+                resizedId,
+                latestNodesById,
+                startRect,
+                finalRectForResized,
+                activeInteraction.viewport,
+              );
+              if (resizeRects.size > 0) {
+                updateNodeRectsForViewport(
+                  resizeRects,
+                  activeInteraction.viewport,
+                  'commit',
+                );
+                didSpecialFlowResizeCommit = true;
+              }
+            }
+          }
+        }
+
+        if (activeInteraction.type !== 'pan' && !didSpecialFlowReorderCommit && !didSpecialFlowResizeCommit) {
           commitMutationSession();
         }
       }

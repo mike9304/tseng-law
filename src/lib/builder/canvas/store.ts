@@ -218,19 +218,19 @@ function revealPreviewIndex(
     };
   }
 
-  // FAQ behaves as a real accordion in published mode (single open at a
-  // time). Mirror that in editor preview so the designer sees the same
-  // single-open accordion they ship — even though the services-card
-  // preview accumulates reveals to support side-by-side editing.
-  if (current.faqOpenIndex === clampedIndex
-    && current.faqRevealedIndices.length === 1
-    && current.faqRevealedIndices[0] === clampedIndex) {
+  const currentRevealed = current.faqRevealedIndices.length > 0
+    ? current.faqRevealedIndices
+    : [current.faqOpenIndex];
+  const faqRevealedIndices = currentRevealed.includes(clampedIndex)
+    ? currentRevealed
+    : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
+  if (current.faqOpenIndex === clampedIndex && faqRevealedIndices === currentRevealed) {
     return current;
   }
   return {
     ...current,
     faqOpenIndex: clampedIndex,
-    faqRevealedIndices: [clampedIndex],
+    faqRevealedIndices,
   };
 }
 

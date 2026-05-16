@@ -6696,3 +6696,24 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - M158-N: F12 actor identity audit trail 또는 F13 revision diff/names.
+
+## 2026-05-17 Codex /goal M158-N CMS named revision diffs
+
+- CMS record revision에 사람이 읽을 수 있는 `name`과 구조화된 `diff`를 추가했다.
+- 저장소:
+  - record update, revision restore, bulk status update가 이전 snapshot과 다음 state를 비교해 status/locale/field diff를 저장한다.
+  - legacy revision은 normalize 시 기본 name과 empty diff로 안전하게 읽는다.
+  - diff value는 stable stringify로 비교하고 object 값은 JSON clone 형태로 저장한다.
+- UI:
+  - Content Manager recent revision cards가 `Update status, slug, title` 같은 revision name을 표시한다.
+  - status/locale/field before -> after 변경 요약을 revision 카드에 보여준다.
+- 체크포인트 상태:
+  - F13 🟡 → 🟢: row history, restore, author/time metadata + named diff evidence 충족.
+  - M158 전체는 아직 🟡: F12 actor identity/per-actor permission evidence 잔여.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (16 tests)
+  - `npx eslint src/lib/builder/cms-types.ts src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts` ✅
+  - `npm run typecheck` ✅
+  - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
+- 다음 후보:
+  - M158-O: F12 actor identity audit trail and per-actor route/UI evidence.

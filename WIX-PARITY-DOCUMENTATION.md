@@ -309,6 +309,24 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - F12/F13 hardening: actor identity, revision diff/names.
 
+## M158-N — CMS Named Revision Diffs
+
+- 시작/종료: 2026-05-17 / 2026-05-17
+- 변경 파일:
+  - `src/lib/builder/cms-types.ts` — `BuilderCmsRecordRevisionDiff`와 revision `name`/`diff` metadata 추가
+  - `src/lib/builder/cms-editable.ts` — update/restore/bulk status 변경 시 이전 snapshot과 다음 state의 status/locale/field diff를 저장하고 사람이 읽는 revision name 생성
+  - `src/components/builder/cms/ContentManagerClient.tsx` — recent revision cards에 revision name과 field/status/locale before -> after diff 표시
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — update/restore revision name, status diff, field diff persistence 검증 추가
+- F-layer 판정:
+  - F13 🟡 → 🟢: row history, restore, author/time metadata에 더해 named revision diff evidence까지 갖춤.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (16 tests)
+  - `npx eslint src/lib/builder/cms-types.ts src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts` ✅
+  - `npm run typecheck` ✅
+  - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
+- 남은 M158:
+  - F12 hardening: actor identity and per-actor permission evidence.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

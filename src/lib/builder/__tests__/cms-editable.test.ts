@@ -139,9 +139,10 @@ describe('editable builder CMS store', () => {
       'ko',
       'testimonials',
       created!.recordId,
-      { fields: { title: 'After', slug: 'after' } },
+      { status: 'published', fields: { title: 'After', slug: 'after' } },
     );
     expect(updated?.fields).toMatchObject({ title: 'After', slug: 'after' });
+    expect(updated?.status).toBe('published');
 
     const withRevision = await readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials');
     const revision = withRevision?.records[0].revisions?.[0];
@@ -149,6 +150,14 @@ describe('editable builder CMS store', () => {
       action: 'update',
       authorLabel: 'Admin',
       fields: { title: 'Before', slug: 'before' },
+      name: 'Update status, slug, title',
+      diff: {
+        status: { before: 'draft', after: 'published' },
+        fields: expect.arrayContaining([
+          { fieldKey: 'title', before: 'Before', after: 'After' },
+          { fieldKey: 'slug', before: 'before', after: 'after' },
+        ]),
+      },
     });
 
     const restored = await restoreEditableBuilderCmsRecordRevision(
@@ -159,10 +168,19 @@ describe('editable builder CMS store', () => {
       revision!.revisionId,
     );
     expect(restored?.fields).toMatchObject({ title: 'Before', slug: 'before' });
+    expect(restored?.status).toBe('draft');
     const restoreRevision = restored?.revisions?.[restored.revisions.length - 1];
     expect(restoreRevision).toMatchObject({
       action: 'restore',
       fields: { title: 'After', slug: 'after' },
+      name: 'Restore status, slug, title',
+      diff: {
+        status: { before: 'published', after: 'draft' },
+        fields: expect.arrayContaining([
+          { fieldKey: 'title', before: 'After', after: 'Before' },
+          { fieldKey: 'slug', before: 'after', after: 'before' },
+        ]),
+      },
     });
 
     await expect(

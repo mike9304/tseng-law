@@ -77,6 +77,24 @@ export interface BuilderCmsImageValue {
 export type BuilderCmsRecordStatus = 'draft' | 'published' | 'archived';
 export type BuilderCmsRecordRevisionAction = 'update' | 'restore';
 
+export interface BuilderCmsRecordRevisionFieldDiff {
+  fieldKey: string;
+  before: unknown;
+  after: unknown;
+}
+
+export interface BuilderCmsRecordRevisionDiff {
+  status?: {
+    before: BuilderCmsRecordStatus;
+    after: BuilderCmsRecordStatus;
+  };
+  locale?: {
+    before?: Locale;
+    after?: Locale;
+  };
+  fields: BuilderCmsRecordRevisionFieldDiff[];
+}
+
 export interface BuilderCmsRecordRevision {
   revisionId: string;
   status: BuilderCmsRecordStatus;
@@ -85,6 +103,8 @@ export interface BuilderCmsRecordRevision {
   createdAt: string;
   authorLabel: string;
   action: BuilderCmsRecordRevisionAction;
+  name: string;
+  diff: BuilderCmsRecordRevisionDiff;
 }
 
 export interface BuilderCmsRecord {

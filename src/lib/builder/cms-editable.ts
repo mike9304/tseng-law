@@ -20,6 +20,7 @@ import {
   type BuilderCmsPermissionActor,
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
+  type BuilderCmsRecordRevisionDiff,
   type BuilderCmsRecordRevision,
   type BuilderCmsRecordRevisionAction,
   type BuilderCmsRecordStatus,
@@ -277,12 +278,14 @@ export async function updateEditableBuilderCmsRecord(
   const previous = collection.records[recordIndex];
   const fields = validateRecordFields(collection, input.fields ?? previous.fields, { recordId });
   await assertRecordMediaAssetsExist(collection, fields);
+  const status = input.status ? normalizeRecordStatus(input.status) : previous.status;
+  const nextLocale = input.locale ? normalizeLocale(String(input.locale)) : previous.locale;
   const nextRecord: BuilderCmsRecord = {
     ...previous,
-    status: input.status ? normalizeRecordStatus(input.status) : previous.status,
-    locale: input.locale ? normalizeLocale(String(input.locale)) : previous.locale,
+    status,
+    locale: nextLocale,
     fields,
-    revisions: appendRecordRevision(previous, 'update'),
+    revisions: appendRecordRevision(previous, 'update', { status, locale: nextLocale, fields }),
     updatedAt: now,
   };
   const nextCollection = {
@@ -333,7 +336,11 @@ export async function restoreEditableBuilderCmsRecordRevision(
     status: revision.status,
     locale: revision.locale,
     fields,
-    revisions: appendRecordRevision(current, 'restore'),
+    revisions: appendRecordRevision(current, 'restore', {
+      status: revision.status,
+      locale: revision.locale,
+      fields,
+    }),
     updatedAt: now,
   };
   const nextCollection = {
@@ -464,7 +471,7 @@ export async function bulkUpdateEditableBuilderCmsRecordStatus(
       ...record,
       status,
       fields,
-      revisions: appendRecordRevision(record, 'update'),
+      revisions: appendRecordRevision(record, 'update', { status, locale: record.locale, fields }),
       updatedAt: now,
     };
   });
@@ -924,17 +931,22 @@ function normalizeRecordRevisions(input: unknown): BuilderCmsRecordRevision[] {
   if (!Array.isArray(input)) return [];
   return input
     .filter((item): item is Partial<BuilderCmsRecordRevision> => !!item && typeof item === 'object')
-    .map((revision) => ({
-      revisionId: normalizeRequiredId(revision.revisionId, 'revisionId'),
-      status: normalizeRecordStatus(revision.status),
-      locale: revision.locale ? normalizeLocale(String(revision.locale)) : undefined,
-      fields: isRecordObject(revision.fields) ? revision.fields : {},
-      createdAt: normalizeTimestamp(revision.createdAt),
-      authorLabel: typeof revision.authorLabel === 'string' && revision.authorLabel.trim()
-        ? revision.authorLabel.trim()
-        : 'Admin',
-      action: normalizeRevisionAction(revision.action),
-    }));
+    .map((revision) => {
+      const action = normalizeRevisionAction(revision.action);
+      return {
+        revisionId: normalizeRequiredId(revision.revisionId, 'revisionId'),
+        status: normalizeRecordStatus(revision.status),
+        locale: revision.locale ? normalizeLocale(String(revision.locale)) : undefined,
+        fields: isRecordObject(revision.fields) ? revision.fields : {},
+        createdAt: normalizeTimestamp(revision.createdAt),
+        authorLabel: typeof revision.authorLabel === 'string' && revision.authorLabel.trim()
+          ? revision.authorLabel.trim()
+          : 'Admin',
+        action,
+        name: normalizeRevisionName(revision.name, action),
+        diff: normalizeRecordRevisionDiff(revision.diff),
+      };
+    });
 }
 
 function normalizePermissions(input: unknown): BuilderCmsPermissions {
@@ -1207,10 +1219,14 @@ function isUniqueFieldValue(
   ));
 }
 
+type RecordRevisionSnapshot = Pick<BuilderCmsRecord, 'status' | 'locale' | 'fields'>;
+
 function appendRecordRevision(
   record: BuilderCmsRecord,
   action: BuilderCmsRecordRevisionAction,
+  nextSnapshot: RecordRevisionSnapshot = record,
 ): BuilderCmsRecordRevision[] {
+  const diff = buildRecordRevisionDiff(record, nextSnapshot);
   return [
     ...normalizeRecordRevisions(record.revisions),
     {
@@ -1221,8 +1237,119 @@ function appendRecordRevision(
       createdAt: new Date().toISOString(),
       authorLabel: 'Admin',
       action,
+      name: buildRecordRevisionName(action, diff),
+      diff,
     },
   ].slice(-50);
+}
+
+function buildRecordRevisionDiff(
+  before: RecordRevisionSnapshot,
+  after: RecordRevisionSnapshot,
+): BuilderCmsRecordRevisionDiff {
+  const fields = [...new Set([
+    ...Object.keys(before.fields),
+    ...Object.keys(after.fields),
+  ])]
+    .sort((left, right) => left.localeCompare(right))
+    .filter((fieldKey) => !sameRevisionValue(before.fields[fieldKey], after.fields[fieldKey]))
+    .map((fieldKey) => ({
+      fieldKey,
+      before: normalizeRevisionDiffValue(before.fields[fieldKey]),
+      after: normalizeRevisionDiffValue(after.fields[fieldKey]),
+    }));
+
+  const diff: BuilderCmsRecordRevisionDiff = { fields };
+  if (before.status !== after.status) {
+    diff.status = { before: before.status, after: after.status };
+  }
+  if ((before.locale ?? null) !== (after.locale ?? null)) {
+    diff.locale = { before: before.locale, after: after.locale };
+  }
+  return diff;
+}
+
+function buildRecordRevisionName(
+  action: BuilderCmsRecordRevisionAction,
+  diff: BuilderCmsRecordRevisionDiff,
+): string {
+  const labels = [
+    ...(diff.status ? ['status'] : []),
+    ...(diff.locale ? ['locale'] : []),
+    ...diff.fields.map((field) => field.fieldKey),
+  ];
+  if (!labels.length) return action === 'restore' ? 'Restore snapshot' : 'Update snapshot';
+  const visibleLabels = labels.slice(0, 3).join(', ');
+  const suffix = labels.length > 3 ? ` +${labels.length - 3}` : '';
+  return `${action === 'restore' ? 'Restore' : 'Update'} ${visibleLabels}${suffix}`;
+}
+
+function normalizeRecordRevisionDiff(input: unknown): BuilderCmsRecordRevisionDiff {
+  if (!input || typeof input !== 'object') return { fields: [] };
+  const source = input as { fields?: unknown; status?: unknown; locale?: unknown };
+  const diff: BuilderCmsRecordRevisionDiff = {
+    fields: Array.isArray(source.fields)
+      ? source.fields
+        .filter((item): item is { fieldKey?: unknown; before?: unknown; after?: unknown } => (
+          !!item && typeof item === 'object'
+        ))
+        .map((item) => ({
+          fieldKey: typeof item.fieldKey === 'string' && item.fieldKey.trim()
+            ? item.fieldKey.trim()
+            : '',
+          before: normalizeRevisionDiffValue(item.before),
+          after: normalizeRevisionDiffValue(item.after),
+        }))
+        .filter((item) => item.fieldKey)
+      : [],
+  };
+
+  if (source.status && typeof source.status === 'object') {
+    const status = source.status as { before?: unknown; after?: unknown };
+    diff.status = {
+      before: normalizeRecordStatus(status.before),
+      after: normalizeRecordStatus(status.after),
+    };
+  }
+  if (source.locale && typeof source.locale === 'object') {
+    const locale = source.locale as { before?: unknown; after?: unknown };
+    const before = typeof locale.before === 'string' && locale.before.trim()
+      ? normalizeLocale(locale.before)
+      : undefined;
+    const after = typeof locale.after === 'string' && locale.after.trim()
+      ? normalizeLocale(locale.after)
+      : undefined;
+    diff.locale = { before, after };
+  }
+  return diff;
+}
+
+function normalizeRevisionName(input: unknown, action: BuilderCmsRecordRevisionAction): string {
+  if (typeof input === 'string' && input.trim()) return input.trim().slice(0, 120);
+  return action === 'restore' ? 'Restore snapshot' : 'Update snapshot';
+}
+
+function sameRevisionValue(left: unknown, right: unknown): boolean {
+  return stableRevisionStringify(left) === stableRevisionStringify(right);
+}
+
+function stableRevisionStringify(value: unknown): string {
+  if (Array.isArray(value)) {
+    return `[${value.map((item) => stableRevisionStringify(item)).join(',')}]`;
+  }
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value as Record<string, unknown>)
+      .sort((left, right) => left.localeCompare(right))
+      .map((key) => `${JSON.stringify(key)}:${stableRevisionStringify((value as Record<string, unknown>)[key])}`)
+      .join(',')}}`;
+  }
+  return JSON.stringify(value) ?? 'undefined';
+}
+
+function normalizeRevisionDiffValue(value: unknown): unknown {
+  if (value === undefined) return null;
+  if (!value || typeof value !== 'object') return value;
+  return JSON.parse(JSON.stringify(value)) as unknown;
 }
 
 function buildDuplicateRecordFields(

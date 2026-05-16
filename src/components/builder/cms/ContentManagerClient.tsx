@@ -1749,18 +1749,29 @@ export default function ContentManagerClient({
                           >
                             <div className="builder-dashboard-page-head">
                               <div>
-                                <strong>{revision.action === 'restore' ? 'Restore snapshot' : 'Update snapshot'}</strong>
+                                <strong>{revision.name}</strong>
                                 <span>{formatDateTime(revision.createdAt)} by {revision.authorLabel}</span>
                               </div>
                               <span className="builder-stage-pill">{revision.status}</span>
                             </div>
-                            <div className="builder-dashboard-page-meta">
-                              {detail.fields.slice(0, 3).map((field) => (
-                                <span key={field.fieldId}>
-                                  {field.label}: {formatValue(revision.fields[field.key])}
-                                </span>
-                              ))}
-                            </div>
+                            {(() => {
+                              const diffItems = revisionDiffItems(revision, detail.fields);
+                              return diffItems.length ? (
+                                <div className="builder-dashboard-page-meta">
+                                  {diffItems.map((item) => (
+                                    <span key={item}>{item}</span>
+                                  ))}
+                                </div>
+                              ) : (
+                                <div className="builder-dashboard-page-meta">
+                                  {detail.fields.slice(0, 3).map((field) => (
+                                    <span key={field.fieldId}>
+                                      {field.label}: {formatValue(revision.fields[field.key])}
+                                    </span>
+                                  ))}
+                                </div>
+                              );
+                            })()}
                             <div className="builder-dashboard-page-actions">
                               <button
                                 type="button"
@@ -2148,6 +2159,27 @@ function latestRevisions(revisions: BuilderCmsRecordRevision[]): BuilderCmsRecor
   return [...revisions]
     .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt))
     .slice(0, 3);
+}
+
+function revisionDiffItems(
+  revision: BuilderCmsRecordRevision,
+  fields: BuilderCmsFieldDefinition[],
+): string[] {
+  const fieldLabels = new Map(fields.map((field) => [field.key, field.label]));
+  const items: string[] = [];
+  if (revision.diff.status) {
+    items.push(`Status: ${revision.diff.status.before} -> ${revision.diff.status.after}`);
+  }
+  if (revision.diff.locale) {
+    items.push(`Locale: ${revision.diff.locale.before ?? '-'} -> ${revision.diff.locale.after ?? '-'}`);
+  }
+  for (const change of revision.diff.fields.slice(0, 4)) {
+    items.push(`${fieldLabels.get(change.fieldKey) ?? change.fieldKey}: ${formatValue(change.before)} -> ${formatValue(change.after)}`);
+  }
+  if (revision.diff.fields.length > 4) {
+    items.push(`+${revision.diff.fields.length - 4} more field changes`);
+  }
+  return items;
 }
 
 function formatDateTime(value: string): string {

@@ -189,6 +189,23 @@ Created: 2026-05-09T12:52:13.760Z
   - F14 actual asset existence/library-state coupling.
   - F07~F13/F16 hardening.
 
+## M158-G — CMS Media Field Actual Asset Validation
+
+- 시작/종료: 2026-05-16 / 2026-05-16
+- 변경 파일:
+  - `src/lib/builder/cms-editable.ts` — create/update/duplicate/restore/CSV import/collection schema update 경로에서 CMS image field가 가리키는 builder asset URL의 실제 저장소 존재를 검증
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — `readBuilderImageAsset` mock을 추가하고 missing asset validation을 검증
+  - `WIX-FULL-PRODUCT-CHECKPOINTS.md` / `SESSION.md` — F14 green evidence 반영
+- F-layer 판정:
+  - F14 🟡 → 🟢: CMS media fields가 Asset Library modal을 재사용하고, builder asset URL/assetId/filename/alt/focal metadata를 저장하며, missing asset과 URL/assetId mismatch를 차단한다.
+  - folder/tag 기반 library organization은 `AssetLibraryModal`/asset library state 영역의 별도 UX depth로 남긴다.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (12 tests)
+  - `npx eslint src/lib/builder/cms-editable.ts src/lib/builder/__tests__/cms-editable.test.ts src/components/builder/cms/ContentManagerClient.tsx` ✅
+  - `npm run typecheck` ✅
+- 남은 M158:
+  - F07~F13/F16 hardening: schema/index UI, bulk workflows, diff/named revision, actor identity, broader API hardening evidence.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

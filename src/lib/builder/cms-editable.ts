@@ -3,7 +3,7 @@ import {
   queryBuilderCmsRecords,
   stringifyBuilderCmsRecordValue,
 } from '@/lib/builder/cms-record-query';
-import { parseBuilderAssetUrl } from '@/lib/builder/assets';
+import { parseBuilderAssetUrl, readBuilderImageAsset } from '@/lib/builder/assets';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import {
   builderCmsFieldTypes,
@@ -161,6 +161,7 @@ export async function updateEditableBuilderCmsCollection(
   if (index === -1) return null;
 
   const next = updateCollectionFromInput(collections[index], input, collections);
+  await assertCollectionMediaAssetsExist(next);
   site.cmsCollections = collections.map((collection, candidateIndex) => (
     candidateIndex === index ? next : collection
   ));
@@ -203,11 +204,13 @@ export async function createEditableBuilderCmsRecord(
   const collection = collections[index];
   assertCmsPermission(collection, 'create', resolveCmsActor(options));
   ensureUniqueRecordId(collection, recordId);
+  const fields = validateRecordFields(collection, input.fields, { recordId });
+  await assertRecordMediaAssetsExist(collection, fields);
   const record: BuilderCmsRecord = {
     recordId,
     status: normalizeRecordStatus(input.status),
     locale: input.locale ? normalizeLocale(String(input.locale)) : undefined,
-    fields: validateRecordFields(collection, input.fields, { recordId }),
+    fields,
     createdAt: now,
     updatedAt: now,
   };
@@ -245,11 +248,13 @@ export async function updateEditableBuilderCmsRecord(
 
   const now = new Date().toISOString();
   const previous = collection.records[recordIndex];
+  const fields = validateRecordFields(collection, input.fields ?? previous.fields, { recordId });
+  await assertRecordMediaAssetsExist(collection, fields);
   const nextRecord: BuilderCmsRecord = {
     ...previous,
     status: input.status ? normalizeRecordStatus(input.status) : previous.status,
     locale: input.locale ? normalizeLocale(String(input.locale)) : previous.locale,
-    fields: validateRecordFields(collection, input.fields ?? previous.fields, { recordId }),
+    fields,
     revisions: appendRecordRevision(previous, 'update'),
     updatedAt: now,
   };
@@ -294,11 +299,13 @@ export async function restoreEditableBuilderCmsRecordRevision(
   if (!revision) return null;
 
   const now = new Date().toISOString();
+  const fields = validateRecordFields(collection, revision.fields, { recordId });
+  await assertRecordMediaAssetsExist(collection, fields);
   const nextRecord: BuilderCmsRecord = {
     ...current,
     status: revision.status,
     locale: revision.locale,
-    fields: validateRecordFields(collection, revision.fields, { recordId }),
+    fields,
     revisions: appendRecordRevision(current, 'restore'),
     updatedAt: now,
   };
@@ -340,6 +347,7 @@ export async function duplicateEditableBuilderCmsRecord(
   const now = new Date().toISOString();
   const nextRecordId = generateUniqueRecordId(collection);
   const fields = buildDuplicateRecordFields(collection, source, nextRecordId);
+  await assertRecordMediaAssetsExist(collection, fields);
   const record: BuilderCmsRecord = {
     recordId: nextRecordId,
     status: 'draft',
@@ -439,7 +447,7 @@ export async function importEditableBuilderCmsRecordsCsv(
   assertCmsPermission(collection, 'create', actor);
   const mode: BuilderCmsCsvImportMode = options.mode === 'replace' ? 'replace' : 'append';
   if (mode === 'replace') assertCmsPermission(collection, 'delete', actor);
-  const importedRecords = buildImportedCsvRecords(collection, csvText, mode);
+  const importedRecords = await buildImportedCsvRecords(collection, csvText, mode);
   const now = new Date().toISOString();
   const nextCollection: BuilderCmsCollection = {
     ...collection,
@@ -749,6 +757,38 @@ function validateRecordFields(
   return fields;
 }
 
+async function assertRecordMediaAssetsExist(
+  collection: BuilderCmsCollection,
+  fields: Record<string, unknown>,
+): Promise<void> {
+  const issues: string[] = [];
+
+  for (const field of collection.fields) {
+    if (field.type !== 'image') continue;
+    const value = fields[field.key];
+    if (!isRecordObject(value) || typeof value.url !== 'string') continue;
+    const reference = parseBuilderAssetUrl(value.url);
+    if (!reference) continue;
+    const asset = await readBuilderImageAsset({
+      locale: reference.locale,
+      assetPath: [reference.filename],
+    });
+    if (!asset) {
+      issues.push(`${field.label} points to a missing builder asset.`);
+    }
+  }
+
+  if (issues.length > 0) {
+    throw new BuilderCmsValidationError('CMS media asset validation failed.', issues);
+  }
+}
+
+async function assertCollectionMediaAssetsExist(collection: BuilderCmsCollection): Promise<void> {
+  for (const record of collection.records) {
+    await assertRecordMediaAssetsExist(collection, record.fields);
+  }
+}
+
 function coerceFieldValue(field: BuilderCmsFieldDefinition, value: unknown): unknown {
   if (field.repeated || field.type === 'string-list') {
     if (Array.isArray(value)) return value.map((item) => String(item));
@@ -969,11 +1009,11 @@ function escapeCsvCell(value: string): string {
   return /[",\n\r]/.test(value) ? `"${value.replace(/"/g, '""')}"` : value;
 }
 
-function buildImportedCsvRecords(
+async function buildImportedCsvRecords(
   collection: BuilderCmsCollection,
   csvText: string,
   mode: BuilderCmsCsvImportMode,
-): BuilderCmsRecord[] {
+): Promise<BuilderCmsRecord[]> {
   const table = parseCsvTable(csvText);
   if (table.length === 0) {
     throw new BuilderCmsValidationError('CSV import requires a header row.');
@@ -1009,11 +1049,13 @@ function buildImportedCsvRecords(
       const fields = Object.fromEntries(
         collection.fields.map((field) => [field.key, fieldKeys.has(field.key) ? row[field.key] : undefined]),
       );
+      const recordFields = validateRecordFields(validationCollection, fields, { recordId });
+      await assertRecordMediaAssetsExist(validationCollection, recordFields);
       const record: BuilderCmsRecord = {
         recordId,
         status: normalizeRecordStatus(row.status),
         locale: row.locale ? normalizeLocale(String(row.locale)) : undefined,
-        fields: validateRecordFields(validationCollection, fields, { recordId }),
+        fields: recordFields,
         createdAt: now,
         updatedAt: now,
       };

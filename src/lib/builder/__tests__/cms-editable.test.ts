@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_THEME, type BuilderSiteDocument } from '@/lib/builder/site/types';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
+import { readBuilderImageAsset } from '@/lib/builder/assets';
 import {
   BuilderCmsPermissionError,
   BuilderCmsValidationError,
@@ -24,8 +25,17 @@ vi.mock('@/lib/builder/site/persistence', () => ({
   writeSiteDocument: vi.fn(),
 }));
 
+vi.mock('@/lib/builder/assets', async () => {
+  const actual = await vi.importActual<typeof import('@/lib/builder/assets')>('@/lib/builder/assets');
+  return {
+    ...actual,
+    readBuilderImageAsset: vi.fn(),
+  };
+});
+
 const mockedReadSiteDocument = vi.mocked(readSiteDocument);
 const mockedWriteSiteDocument = vi.mocked(writeSiteDocument);
+const mockedReadBuilderImageAsset = vi.mocked(readBuilderImageAsset);
 
 describe('editable builder CMS store', () => {
   let siteDoc: BuilderSiteDocument;
@@ -48,6 +58,12 @@ describe('editable builder CMS store', () => {
     mockedWriteSiteDocument.mockReset();
     mockedWriteSiteDocument.mockImplementation(async (nextDoc) => {
       siteDoc = nextDoc;
+    });
+    mockedReadBuilderImageAsset.mockReset();
+    mockedReadBuilderImageAsset.mockResolvedValue({
+      backend: 'file',
+      content: Buffer.from('image'),
+      contentType: 'image/webp',
     });
   });
 
@@ -354,6 +370,14 @@ describe('editable builder CMS store', () => {
       }),
     ).rejects.toMatchObject({
       issues: ['Hero image must be a valid builder asset URL.'],
+    });
+    mockedReadBuilderImageAsset.mockResolvedValueOnce(null);
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'gallery', {
+        fields: { title: 'Missing', slug: 'missing', hero: '/api/builder/assets/ko/missing.webp' },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Hero image points to a missing builder asset.'],
     });
   });
 

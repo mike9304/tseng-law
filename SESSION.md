@@ -6525,3 +6525,23 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run typecheck` ✅
 - 다음 후보:
   - M158-G: CMS image record save에서 actual asset existence check와 asset library metadata coupling.
+
+## 2026-05-16 Codex /goal M158-G CMS media actual asset validation
+
+- CMS image field가 builder asset URL을 가리키는 경우 실제 저장소에 asset이 존재하는지 검증하도록 추가했다.
+- 적용 경로:
+  - record create/update
+  - duplicate
+  - revision restore
+  - CSV import
+  - collection schema update 후 기존 record 재검증
+- missing asset은 `CMS media asset validation failed.` / `{Field} points to a missing builder asset.` issue로 차단된다.
+- 체크포인트 상태:
+  - F14 🟡 → 🟢: Asset Library reuse, URL/assetId/filename/alt/focal metadata 저장, URL/assetId mismatch guard, actual asset existence validation까지 자동 검증됨.
+  - M158 전체는 아직 🟡: F07~F13/F16 hardening 잔여가 있음.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (12 tests)
+  - `npx eslint src/lib/builder/cms-editable.ts src/lib/builder/__tests__/cms-editable.test.ts src/components/builder/cms/ContentManagerClient.tsx` ✅
+  - `npm run typecheck` ✅
+- 다음 후보:
+  - M158-H: F16 guarded CMS APIs evidence 확장 또는 F07 schema/index UI hardening.

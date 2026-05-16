@@ -3,6 +3,14 @@
 import { useEffect, useMemo, useState } from 'react';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import {
+  createBuilderCmsRecordSavedView,
+  normalizeBuilderCmsRecordSavedViews,
+  queryBuilderCmsRecords,
+  type BuilderCmsRecordFilter,
+  type BuilderCmsRecordFilterOperator,
+  type BuilderCmsRecordSavedView,
+} from '@/lib/builder/cms-record-query';
+import {
   builderCmsPermissionActors,
   type BuilderCmsCollectionDetail,
   type BuilderCmsCollectionSummary,
@@ -57,6 +65,9 @@ type RecordFormState = Record<string, RecordFormValue>;
 type RecordSortDirection = 'asc' | 'desc';
 type CsvImportMode = 'append' | 'replace';
 type CmsPermissionOperation = keyof BuilderCmsPermissions;
+
+const DEFAULT_RECORD_PAGE_SIZE = 10;
+const RECORD_VIEW_STORAGE_PREFIX = 'builder-cms-record-views';
 
 const cmsPermissionOperations: { action: CmsPermissionOperation; label: string; hint: string }[] = [
   { action: 'read', label: 'Read records', hint: 'Allows viewing and export.' },
@@ -119,6 +130,15 @@ export default function ContentManagerClient({
   const [recordQuery, setRecordQuery] = useState('');
   const [recordSortBy, setRecordSortBy] = useState('updatedAt');
   const [recordSortDirection, setRecordSortDirection] = useState<RecordSortDirection>('desc');
+  const [recordFilters, setRecordFilters] = useState<BuilderCmsRecordFilter[]>([]);
+  const [recordFilterField, setRecordFilterField] = useState('status');
+  const [recordFilterOperator, setRecordFilterOperator] = useState<BuilderCmsRecordFilterOperator>('is');
+  const [recordFilterValue, setRecordFilterValue] = useState('published');
+  const [recordPage, setRecordPage] = useState(1);
+  const [recordPageSize, setRecordPageSize] = useState(DEFAULT_RECORD_PAGE_SIZE);
+  const [savedViews, setSavedViews] = useState<BuilderCmsRecordSavedView[]>([]);
+  const [selectedViewId, setSelectedViewId] = useState('');
+  const [newViewName, setNewViewName] = useState('');
   const [csvImportText, setCsvImportText] = useState('');
   const [csvImportMode, setCsvImportMode] = useState<CsvImportMode>('append');
   const [assetFieldKey, setAssetFieldKey] = useState<string | null>(null);
@@ -138,18 +158,53 @@ export default function ContentManagerClient({
     return isSystemSort || isFieldSort ? recordSortBy : 'updatedAt';
   }, [detail, recordSortBy]);
 
-  const visibleRecords = useMemo(() => {
-    if (!detail) return [];
-    return filterAndSortRecords(detail.records, detail.fields, {
+  const recordQueryResult = useMemo(() => {
+    if (!detail) {
+      return {
+        records: [],
+        total: 0,
+        page: 1,
+        pageSize: recordPageSize,
+        pageCount: 1,
+        filteredRecordIds: [],
+      };
+    }
+    return queryBuilderCmsRecords(detail.records, detail.fields, {
       query: recordQuery,
+      filters: recordFilters,
       sortBy: effectiveRecordSortBy,
       sortDirection: recordSortDirection,
+      page: recordPage,
+      pageSize: recordPageSize,
     });
-  }, [detail, effectiveRecordSortBy, recordQuery, recordSortDirection]);
+  }, [detail, effectiveRecordSortBy, recordFilters, recordPage, recordPageSize, recordQuery, recordSortDirection]);
+
+  const visibleRecords = recordQueryResult.records;
 
   useEffect(() => {
     setPermissionDraft(detail ? normalizePermissionDraft(detail.permissions) : defaultCmsPermissionDraft());
   }, [detail]);
+
+  useEffect(() => {
+    if (!detail) {
+      setSavedViews([]);
+      setSelectedViewId('');
+      return;
+    }
+    const nextFilterField = defaultRecordFilterField(detail.fields);
+    const nextFilterOperator = recordFilterOperatorsForField(detail.fields, nextFilterField)[0]?.value ?? 'contains';
+    setRecordPage(1);
+    setRecordFilterField(nextFilterField);
+    setRecordFilterOperator(nextFilterOperator);
+    setRecordFilterValue(defaultRecordFilterValue(nextFilterField, nextFilterOperator));
+    if (typeof window === 'undefined') return;
+    setSavedViews(readSavedRecordViews(siteId, locale, detail.collectionId));
+    setSelectedViewId('');
+  }, [detail?.collectionId, detail, locale, siteId]);
+
+  useEffect(() => {
+    if (recordQueryResult.page !== recordPage) setRecordPage(recordQueryResult.page);
+  }, [recordPage, recordQueryResult.page]);
 
   async function refreshCollections(nextSelectedId?: string) {
     const response = await fetch(`${apiBase(siteId)}?locale=${locale}`, { credentials: 'same-origin' });
@@ -273,6 +328,87 @@ export default function ContentManagerClient({
     enabled: boolean,
   ) {
     setPermissionDraft((current) => togglePermissionActorValue(current, action, actor, enabled));
+  }
+
+  function addRecordFilter() {
+    if (!detail) return;
+    const operator = recordFilterOperator;
+    const fieldKey = recordFilterField || defaultRecordFilterField(detail.fields);
+    const value = operator === 'empty' || operator === 'not-empty' ? undefined : recordFilterValue;
+    setRecordFilters((current) => [
+      ...current,
+      {
+        filterId: `filter-${Date.now()}-${current.length + 1}`,
+        fieldKey,
+        operator,
+        value,
+      },
+    ]);
+    setRecordPage(1);
+    setSelectedViewId('');
+  }
+
+  function removeRecordFilter(filterId: string) {
+    setRecordFilters((current) => current.filter((filter) => filter.filterId !== filterId));
+    setRecordPage(1);
+    setSelectedViewId('');
+  }
+
+  function clearRecordFilters() {
+    setRecordQuery('');
+    setRecordFilters([]);
+    setRecordPage(1);
+    setSelectedViewId('');
+  }
+
+  function applyRecordSavedView(viewId: string) {
+    const view = savedViews.find((candidate) => candidate.viewId === viewId);
+    if (!view) {
+      setSelectedViewId('');
+      return;
+    }
+    setSelectedViewId(view.viewId);
+    setRecordQuery(view.query);
+    setRecordFilters(view.filters);
+    setRecordSortBy(view.sortBy);
+    setRecordSortDirection(view.sortDirection);
+    setRecordPageSize(view.pageSize);
+    setRecordPage(1);
+  }
+
+  function saveRecordView() {
+    if (!detail) return;
+    try {
+      const view = createBuilderCmsRecordSavedView({
+        name: newViewName || `${detail.name} view`,
+        query: recordQuery,
+        filters: recordFilters,
+        sortBy: effectiveRecordSortBy,
+        sortDirection: recordSortDirection,
+        pageSize: recordPageSize,
+      });
+      const nextViews = [
+        view,
+        ...savedViews.filter((candidate) => candidate.name.toLowerCase() !== view.name.toLowerCase()),
+      ].slice(0, 12);
+      setSavedViews(nextViews);
+      writeSavedRecordViews(siteId, locale, detail.collectionId, nextViews);
+      setSelectedViewId(view.viewId);
+      setNewViewName('');
+      setMessage(`Saved view "${view.name}".`);
+      setError(null);
+    } catch (saveError) {
+      setError(saveError instanceof Error ? saveError.message : 'Failed to save view.');
+    }
+  }
+
+  function deleteRecordSavedView(viewId: string) {
+    if (!detail) return;
+    const nextViews = savedViews.filter((view) => view.viewId !== viewId);
+    setSavedViews(nextViews);
+    writeSavedRecordViews(siteId, locale, detail.collectionId, nextViews);
+    if (selectedViewId === viewId) setSelectedViewId('');
+    setMessage('Saved view deleted.');
   }
 
   async function saveRecord() {
@@ -747,7 +883,11 @@ export default function ContentManagerClient({
                     value={recordQuery}
                     placeholder="Record ID, status, value"
                     disabled={busy}
-                    onChange={(event) => setRecordQuery(event.target.value)}
+                    onChange={(event) => {
+                      setRecordQuery(event.target.value);
+                      setRecordPage(1);
+                      setSelectedViewId('');
+                    }}
                   />
                 </label>
                 <label style={labelStyle}>
@@ -756,7 +896,11 @@ export default function ContentManagerClient({
                     style={inputStyle}
                     value={effectiveRecordSortBy}
                     disabled={busy}
-                    onChange={(event) => setRecordSortBy(event.target.value)}
+                    onChange={(event) => {
+                      setRecordSortBy(event.target.value);
+                      setRecordPage(1);
+                      setSelectedViewId('');
+                    }}
                   >
                     <optgroup label="Record">
                       {systemRecordSortOptions.map((option) => (
@@ -780,12 +924,156 @@ export default function ContentManagerClient({
                     style={inputStyle}
                     value={recordSortDirection}
                     disabled={busy}
-                    onChange={(event) => setRecordSortDirection(event.target.value === 'asc' ? 'asc' : 'desc')}
+                    onChange={(event) => {
+                      setRecordSortDirection(event.target.value === 'asc' ? 'asc' : 'desc');
+                      setRecordPage(1);
+                      setSelectedViewId('');
+                    }}
                   >
                     <option value="desc">Descending</option>
                     <option value="asc">Ascending</option>
                   </select>
                 </label>
+                <label style={labelStyle}>
+                  Page size
+                  <select
+                    style={inputStyle}
+                    value={recordPageSize}
+                    disabled={busy}
+                    onChange={(event) => {
+                      setRecordPageSize(Number(event.target.value));
+                      setRecordPage(1);
+                    }}
+                  >
+                    {[5, 10, 25, 50].map((size) => (
+                      <option key={size} value={size}>{size}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+              <div style={{ display: 'grid', gap: 10, marginBottom: 12 }}>
+                <div style={{ ...formGridStyle, alignItems: 'end' }}>
+                  <label style={labelStyle}>
+                    Filter field
+                    <select
+                      style={inputStyle}
+                      value={recordFilterField}
+                      disabled={busy}
+                      onChange={(event) => {
+                        const nextField = event.target.value;
+                        const nextOperator = recordFilterOperatorsForField(detail.fields, nextField)[0]?.value ?? 'contains';
+                        setRecordFilterField(nextField);
+                        setRecordFilterOperator(nextOperator);
+                        setRecordFilterValue(defaultRecordFilterValue(nextField, nextOperator));
+                      }}
+                    >
+                      {recordFilterFieldOptions(detail.fields).map((option) => (
+                        <option key={option.value} value={option.value}>{option.label}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <label style={labelStyle}>
+                    Operator
+                    <select
+                      style={inputStyle}
+                      value={recordFilterOperator}
+                      disabled={busy}
+                      onChange={(event) => {
+                        const nextOperator = event.target.value as BuilderCmsRecordFilterOperator;
+                        setRecordFilterOperator(nextOperator);
+                        setRecordFilterValue(defaultRecordFilterValue(recordFilterField, nextOperator));
+                      }}
+                    >
+                      {recordFilterOperatorsForField(detail.fields, recordFilterField).map((option) => (
+                        <option key={option.value} value={option.value}>{option.label}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <label style={labelStyle}>
+                    Value
+                    <input
+                      type={recordFilterInputType(detail.fields, recordFilterField)}
+                      style={inputStyle}
+                      value={recordFilterValue}
+                      disabled={busy || recordFilterOperator === 'empty' || recordFilterOperator === 'not-empty'}
+                      placeholder={recordFilterOperator === 'empty' || recordFilterOperator === 'not-empty' ? 'No value' : 'Filter value'}
+                      onChange={(event) => setRecordFilterValue(event.target.value)}
+                    />
+                  </label>
+                  <button
+                    type="button"
+                    className="builder-action-btn builder-action-btn--primary"
+                    onClick={addRecordFilter}
+                    disabled={busy}
+                  >
+                    Add filter
+                  </button>
+                </div>
+                {recordFilters.length > 0 ? (
+                  <div className="builder-dashboard-page-actions">
+                    {recordFilters.map((filter) => (
+                      <button
+                        key={filter.filterId}
+                        type="button"
+                        className="builder-action-btn"
+                        onClick={() => removeRecordFilter(filter.filterId)}
+                        disabled={busy}
+                      >
+                        {formatRecordFilter(detail.fields, filter)} x
+                      </button>
+                    ))}
+                    <button type="button" className="builder-action-btn" onClick={clearRecordFilters} disabled={busy}>
+                      Clear filters
+                    </button>
+                  </div>
+                ) : null}
+                <div style={{ ...formGridStyle, alignItems: 'end' }}>
+                  <label style={labelStyle}>
+                    Saved views
+                    <select
+                      style={inputStyle}
+                      value={selectedViewId}
+                      disabled={busy}
+                      onChange={(event) => applyRecordSavedView(event.target.value)}
+                    >
+                      <option value="">Select view</option>
+                      {savedViews.map((view) => (
+                        <option key={view.viewId} value={view.viewId}>{view.name}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <label style={labelStyle}>
+                    View name
+                    <input
+                      type="text"
+                      style={inputStyle}
+                      value={newViewName}
+                      placeholder="Published Korean items"
+                      disabled={busy}
+                      onChange={(event) => setNewViewName(event.target.value)}
+                    />
+                  </label>
+                  <button
+                    type="button"
+                    className="builder-action-btn builder-action-btn--primary"
+                    onClick={saveRecordView}
+                    disabled={busy}
+                  >
+                    Save view
+                  </button>
+                  <button
+                    type="button"
+                    className="builder-action-btn"
+                    onClick={() => deleteRecordSavedView(selectedViewId)}
+                    disabled={busy || !selectedViewId}
+                  >
+                    Delete view
+                  </button>
+                </div>
+                <p style={{ color: '#64748b', fontSize: 12, margin: 0 }}>
+                  Showing {visibleRecords.length} of {recordQueryResult.total} matching records from {detail.records.length} total.
+                  Page {recordQueryResult.page} of {recordQueryResult.pageCount}.
+                </p>
               </div>
               <div style={{ display: 'grid', gap: 10, marginBottom: 12 }}>
                 <label style={labelStyle}>
@@ -928,6 +1216,27 @@ export default function ContentManagerClient({
                     </div>
                   </article>
                 ) : null}
+              </div>
+              <div className="builder-dashboard-page-actions" style={{ marginTop: 12 }}>
+                <button
+                  type="button"
+                  className="builder-action-btn"
+                  onClick={() => setRecordPage((page) => Math.max(1, page - 1))}
+                  disabled={busy || recordQueryResult.page <= 1}
+                >
+                  Previous
+                </button>
+                <span style={{ color: '#64748b', fontSize: 12 }}>
+                  {recordQueryResult.page} / {recordQueryResult.pageCount}
+                </span>
+                <button
+                  type="button"
+                  className="builder-action-btn"
+                  onClick={() => setRecordPage((page) => Math.min(recordQueryResult.pageCount, page + 1))}
+                  disabled={busy || recordQueryResult.page >= recordQueryResult.pageCount}
+                >
+                  Next
+                </button>
               </div>
             </section>
           </>
@@ -1211,42 +1520,122 @@ function isImageValue(value: unknown): value is BuilderCmsImageValue {
   return Boolean(value && typeof value === 'object' && 'url' in value && typeof value.url === 'string');
 }
 
-function filterAndSortRecords(
-  records: BuilderCmsRecord[],
+function recordFilterFieldOptions(fields: BuilderCmsFieldDefinition[]): { value: string; label: string }[] {
+  return [
+    { value: 'status', label: 'Status' },
+    { value: 'locale', label: 'Locale' },
+    { value: 'recordId', label: 'Record ID' },
+    { value: 'createdAt', label: 'Created' },
+    { value: 'updatedAt', label: 'Updated' },
+    ...fields.map((field) => ({ value: field.key, label: field.label })),
+  ];
+}
+
+function defaultRecordFilterField(fields: BuilderCmsFieldDefinition[]): string {
+  return fields[0]?.key ?? 'status';
+}
+
+function recordFilterOperatorsForField(
   fields: BuilderCmsFieldDefinition[],
-  options: { query: string; sortBy: string; sortDirection: RecordSortDirection },
-): BuilderCmsRecord[] {
-  const query = options.query.trim().toLowerCase();
-  const filtered = query
-    ? records.filter((record) => {
-        const searchable = [
-          record.recordId,
-          record.status,
-          record.locale ?? '',
-          ...fields.map((field) => formatValue(record.fields[field.key])),
-        ].join(' ').toLowerCase();
-        return searchable.includes(query);
-      })
-    : records;
-
-  const direction = options.sortDirection === 'asc' ? 1 : -1;
-  return [...filtered].sort((left, right) => (
-    compareRecordValues(sortRecordValue(left, options.sortBy), sortRecordValue(right, options.sortBy)) * direction
-  ));
+  fieldKey: string,
+): { value: BuilderCmsRecordFilterOperator; label: string }[] {
+  const field = fields.find((candidate) => candidate.key === fieldKey);
+  const type = field?.type ?? (fieldKey === 'createdAt' || fieldKey === 'updatedAt' ? 'date' : 'text');
+  if (type === 'number') {
+    return [
+      { value: 'is', label: 'is' },
+      { value: 'is-not', label: 'is not' },
+      { value: 'gt', label: 'greater than' },
+      { value: 'gte', label: 'at least' },
+      { value: 'lt', label: 'less than' },
+      { value: 'lte', label: 'at most' },
+      { value: 'empty', label: 'is empty' },
+      { value: 'not-empty', label: 'is not empty' },
+    ];
+  }
+  if (type === 'boolean') {
+    return [
+      { value: 'is', label: 'is' },
+      { value: 'is-not', label: 'is not' },
+      { value: 'empty', label: 'is empty' },
+      { value: 'not-empty', label: 'is not empty' },
+    ];
+  }
+  if (type === 'date') {
+    return [
+      { value: 'is', label: 'is' },
+      { value: 'before', label: 'before' },
+      { value: 'after', label: 'after' },
+      { value: 'empty', label: 'is empty' },
+      { value: 'not-empty', label: 'is not empty' },
+    ];
+  }
+  if (type === 'string-list' || field?.repeated) {
+    return [
+      { value: 'includes', label: 'includes' },
+      { value: 'contains', label: 'contains text' },
+      { value: 'empty', label: 'is empty' },
+      { value: 'not-empty', label: 'is not empty' },
+    ];
+  }
+  return [
+    { value: 'contains', label: 'contains' },
+    { value: 'not-contains', label: 'does not contain' },
+    { value: 'is', label: 'is' },
+    { value: 'is-not', label: 'is not' },
+    { value: 'empty', label: 'is empty' },
+    { value: 'not-empty', label: 'is not empty' },
+  ];
 }
 
-function sortRecordValue(record: BuilderCmsRecord, sortBy: string): unknown {
-  if (sortBy === 'recordId') return record.recordId;
-  if (sortBy === 'status') return record.status;
-  if (sortBy === 'createdAt') return record.createdAt;
-  if (sortBy === 'updatedAt') return record.updatedAt;
-  return record.fields[sortBy];
+function recordFilterInputType(fields: BuilderCmsFieldDefinition[], fieldKey: string): string {
+  const field = fields.find((candidate) => candidate.key === fieldKey);
+  if (field?.type === 'number') return 'number';
+  if (field?.type === 'date' || fieldKey === 'createdAt' || fieldKey === 'updatedAt') return 'date';
+  return 'text';
 }
 
-function compareRecordValues(left: unknown, right: unknown): number {
-  if (typeof left === 'number' && typeof right === 'number') return left - right;
-  return formatValue(left).localeCompare(formatValue(right), 'en', {
-    numeric: true,
-    sensitivity: 'base',
-  });
+function defaultRecordFilterValue(fieldKey: string, operator: BuilderCmsRecordFilterOperator): string {
+  if (operator === 'empty' || operator === 'not-empty') return '';
+  if (fieldKey === 'status') return 'published';
+  if (fieldKey === 'locale') return 'ko';
+  return '';
+}
+
+function formatRecordFilter(fields: BuilderCmsFieldDefinition[], filter: BuilderCmsRecordFilter): string {
+  const fieldLabel = recordFilterFieldOptions(fields).find((field) => field.value === filter.fieldKey)?.label ?? filter.fieldKey;
+  const operatorLabel = recordFilterOperatorsForField(fields, filter.fieldKey)
+    .find((operator) => operator.value === filter.operator)?.label ?? filter.operator;
+  const suffix = filter.operator === 'empty' || filter.operator === 'not-empty'
+    ? ''
+    : ` ${formatValue(filter.value)}`;
+  return `${fieldLabel} ${operatorLabel}${suffix}`;
+}
+
+function recordViewsStorageKey(siteId: string, locale: Locale, collectionId: string): string {
+  return `${RECORD_VIEW_STORAGE_PREFIX}:${siteId}:${locale}:${collectionId}`;
+}
+
+function readSavedRecordViews(siteId: string, locale: Locale, collectionId: string): BuilderCmsRecordSavedView[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    return normalizeBuilderCmsRecordSavedViews(
+      JSON.parse(window.localStorage.getItem(recordViewsStorageKey(siteId, locale, collectionId)) ?? '[]'),
+    );
+  } catch {
+    return [];
+  }
+}
+
+function writeSavedRecordViews(
+  siteId: string,
+  locale: Locale,
+  collectionId: string,
+  views: BuilderCmsRecordSavedView[],
+) {
+  if (typeof window === 'undefined') return;
+  window.localStorage.setItem(
+    recordViewsStorageKey(siteId, locale, collectionId),
+    JSON.stringify(normalizeBuilderCmsRecordSavedViews(views)),
+  );
 }

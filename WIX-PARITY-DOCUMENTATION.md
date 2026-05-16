@@ -151,6 +151,26 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - media-field asset integration, typed filters/saved views/stable pagination.
 
+## M158-E — CMS Typed Filters, Saved Views, And Stable Pagination
+
+- 시작/종료: 2026-05-16 / 2026-05-16
+- 변경 파일:
+  - `src/lib/builder/cms-record-query.ts` — CMS record free-text query, typed filters, deterministic sort, stable pagination, saved-view normalization 엔진 추가
+  - `src/lib/builder/cms-editable.ts` — 기존 `filterAndSortBuilderCmsRecords`가 새 query 엔진을 재사용하되 기존 전체-result 반환 계약은 유지
+  - `src/components/builder/cms/ContentManagerClient.tsx` — Content Manager Records 영역에 typed filter builder, filter chips, page size selector, Previous/Next pagination, local saved views 추가
+  - `src/lib/builder/__tests__/cms-record-query.test.ts` — typed filter/media metadata search, deterministic tie-break pagination, saved-view normalization 검증 추가
+  - `WIX-FULL-PRODUCT-CHECKPOINTS.md` / `WIX-PARITY-PLAN.md` / `SESSION.md` — M158-E 진행 상태 반영
+- F-layer 판정:
+  - F15 🟡 → 🟢: Content Manager가 typed filters, saved views, stable pagination을 지원한다.
+  - 단, saved views는 v1에서 admin browser local storage 기반이다. 계정/팀 공유 saved views는 Wix-depth enhancement로 후속.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-record-query.test.ts src/lib/builder/__tests__/cms-editable.test.ts` ✅ (12 tests)
+  - `npx eslint src/lib/builder/cms-record-query.ts src/lib/builder/__tests__/cms-record-query.test.ts src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx` ✅
+  - `npm run typecheck` ✅
+- 남은 M158:
+  - F14 media-field asset integration.
+  - F07~F13/F16은 v1 구현이 있으나 schema/index UI, bulk workflows, diff/named revision, actor identity, API hardening coverage를 더 올려야 한다.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

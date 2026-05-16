@@ -6488,3 +6488,23 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - 전체 Wix 제품 목표는 아직 완료 아님. F-layer/CMS/App Market/Stores/AI/collaboration/developer platform/multilingual/ops와 W-layer 잔여 green gate가 남아 있다.
 - 다음 후보:
   - M158-E CMS media field asset integration 또는 typed filters/saved views/stable pagination.
+
+## 2026-05-16 Codex /goal M158-E CMS typed filters/saved views/pagination
+
+- CMS Content Manager Records 영역을 단순 query/sort에서 typed filter + saved view + stable pagination으로 확장했다.
+- `src/lib/builder/cms-record-query.ts`를 추가해 free-text query, field/system typed filters, deterministic sort tie-break, page/pageSize slicing, saved-view normalization을 UI와 tests가 공유하도록 분리했다.
+- 기존 `filterAndSortBuilderCmsRecords`는 새 query 엔진을 쓰되 pageSize를 전체 record 수로 넣어 기존 전체-result 반환 계약을 유지했다.
+- `/${locale}/admin-builder/cms` records UI에 다음을 추가했다:
+  - field/operator/value 기반 typed filter builder
+  - filter chip 제거/clear
+  - 5/10/25/50 page size, Previous/Next pagination
+  - admin browser localStorage 기반 saved views
+- 체크포인트 상태:
+  - F15 🟡 → 🟢: typed filters, saved views, stable pagination 구현 및 자동 검증 통과.
+  - M158 전체는 아직 🟡: F14 media-field asset integration과 CMS hardening 잔여가 남아 있음.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-record-query.test.ts src/lib/builder/__tests__/cms-editable.test.ts` ✅ (12 tests)
+  - `npx eslint src/lib/builder/cms-record-query.ts src/lib/builder/__tests__/cms-record-query.test.ts src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx` ✅
+  - `npm run typecheck` ✅
+- 다음 후보:
+  - M158-F: F14 media-field asset integration을 server-side asset validation/metadata 관점까지 끌어올리기.

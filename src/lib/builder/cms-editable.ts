@@ -1,4 +1,8 @@
 import { isBuilderCollectionId } from '@/lib/builder/cms';
+import {
+  queryBuilderCmsRecords,
+  stringifyBuilderCmsRecordValue,
+} from '@/lib/builder/cms-record-query';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import {
   builderCmsFieldTypes,
@@ -388,27 +392,10 @@ export function filterAndSortBuilderCmsRecords(
   fields: BuilderCmsFieldDefinition[],
   options: BuilderCmsRecordListOptions = {},
 ): BuilderCmsRecord[] {
-  const query = options.query?.trim().toLowerCase() ?? '';
-  const sortBy = options.sortBy?.trim() || 'updatedAt';
-  const sortDirection = options.sortDirection === 'asc' ? 1 : -1;
-
-  const filtered = query
-    ? records.filter((record) => {
-        const searchable = [
-          record.recordId,
-          record.status,
-          record.locale ?? '',
-          ...fields.map((field) => stringifyRecordValue(record.fields[field.key])),
-        ].join(' ').toLowerCase();
-        return searchable.includes(query);
-      })
-    : records;
-
-  return [...filtered].sort((left, right) => {
-    const leftValue = sortRecordValue(left, sortBy);
-    const rightValue = sortRecordValue(right, sortBy);
-    return compareRecordValues(leftValue, rightValue) * sortDirection;
-  });
+  return queryBuilderCmsRecords(records, fields, {
+    ...options,
+    pageSize: Math.max(1, records.length),
+  }).records;
 }
 
 export async function exportEditableBuilderCmsRecordsCsv(
@@ -924,32 +911,6 @@ function nextUniqueFieldValue(
   throw new BuilderCmsValidationError(`Cannot duplicate unique field: ${field.label}`);
 }
 
-function stringifyRecordValue(value: unknown): string {
-  if (Array.isArray(value)) return value.map(stringifyRecordValue).join(' ');
-  if (value === null || value === undefined) return '';
-  if (isRecordObject(value)) {
-    if (typeof value.url === 'string') return value.url;
-    return JSON.stringify(value);
-  }
-  return String(value);
-}
-
-function sortRecordValue(record: BuilderCmsRecord, sortBy: string): unknown {
-  if (sortBy === 'recordId') return record.recordId;
-  if (sortBy === 'status') return record.status;
-  if (sortBy === 'createdAt') return record.createdAt;
-  if (sortBy === 'updatedAt') return record.updatedAt;
-  return record.fields[sortBy];
-}
-
-function compareRecordValues(left: unknown, right: unknown): number {
-  if (typeof left === 'number' && typeof right === 'number') return left - right;
-  return stringifyRecordValue(left).localeCompare(stringifyRecordValue(right), 'en', {
-    numeric: true,
-    sensitivity: 'base',
-  });
-}
-
 function csvHeadersForCollection(collection: BuilderCmsCollection): string[] {
   return ['recordId', 'status', 'locale', ...collection.fields.map((field) => field.key)];
 }
@@ -965,8 +926,8 @@ function csvRecordCell(
   const field = collection.fields.find((candidate) => candidate.key === header);
   if (!field) return '';
   const value = record.fields[field.key];
-  if (Array.isArray(value)) return value.map(stringifyRecordValue).join('\n');
-  return stringifyRecordValue(value);
+  if (Array.isArray(value)) return value.map(stringifyBuilderCmsRecordValue).join('\n');
+  return stringifyBuilderCmsRecordValue(value);
 }
 
 function stringifyCsv(rows: string[][]): string {

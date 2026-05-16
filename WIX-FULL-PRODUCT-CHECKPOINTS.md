@@ -42,7 +42,7 @@ Completion gate:
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F17 | Dynamic | Dataset config | Editor can attach a dataset to a collection with mode, filters, sort, and item limit | 🔴 |
+| F17 | Dynamic | Dataset config | Editor can attach a dataset to a collection with mode, filters, sort, and item limit | 🟢 |
 | F18 | Dynamic | Element field binding | Text, image, link, button, gallery, and repeater elements bind to dataset fields | 🔴 |
 | F19 | Dynamic | Repeater component | Repeater renders collection rows with template editing and empty/loading states | 🔴 |
 | F20 | Dynamic | Dynamic list pages | Admin can create list pages backed by a collection and dataset filters | 🔴 |

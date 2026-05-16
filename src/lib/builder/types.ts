@@ -14,6 +14,10 @@ export const builderDatasetTargetIds = ['home.insights.feed', 'home.services.lis
 export type BuilderDatasetTargetId = (typeof builderDatasetTargetIds)[number];
 export const builderDatasetModes = ['list'] as const;
 export type BuilderDatasetMode = (typeof builderDatasetModes)[number];
+export const builderDatasetFilterOperators = ['equals', 'contains'] as const;
+export type BuilderDatasetFilterOperator = (typeof builderDatasetFilterOperators)[number];
+export const builderDatasetSortDirections = ['asc', 'desc'] as const;
+export type BuilderDatasetSortDirection = (typeof builderDatasetSortDirections)[number];
 
 export const builderHomeSectionKeys = [
   'home.hero',
@@ -200,7 +204,20 @@ export interface BuilderPageDatasetBinding {
   sectionKey: BuilderSectionKey;
   collectionId: BuilderDatasetCollectionId;
   mode: BuilderDatasetMode;
+  filters?: BuilderPageDatasetFilter[];
+  sort?: BuilderPageDatasetSort[];
   limit?: number;
+}
+
+export interface BuilderPageDatasetFilter {
+  fieldId: string;
+  operator: BuilderDatasetFilterOperator;
+  value: string;
+}
+
+export interface BuilderPageDatasetSort {
+  fieldId: string;
+  direction: BuilderDatasetSortDirection;
 }
 
 export interface BuilderPageDocument {

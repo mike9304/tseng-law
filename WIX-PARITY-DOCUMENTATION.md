@@ -348,6 +348,26 @@ Created: 2026-05-09T12:52:13.760Z
 - 다음:
   - M159: dataset/repeater/dynamic page binding F17~F26를 이어서 올린다.
 
+## M159-A — Dataset Config Filters And Sort
+
+- 시작/종료: 2026-05-17 / 2026-05-17
+- 변경 파일:
+  - `src/lib/builder/types.ts` — dataset filter/sort types와 `BuilderPageDatasetBinding.filters/sort` 추가
+  - `src/lib/builder/datasets.ts` — bindable target mode options, filter/sort field metadata, binding patch normalize, runtime filter/sort/limit 적용 추가
+  - `src/lib/builder/content.ts` — document-level dataset binding patch helper 추가
+  - `src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/route.ts` — dataset PUT이 collection/mode/filters/sort/limit patch를 저장
+  - `src/components/builder/BuilderInteractiveHomePreview.tsx` — selected dataset target inspector에서 collection/mode/filter/sort/limit 편집 UI 제공
+  - `src/components/builder/BuilderPageWorkspaceShell.tsx` — page diagnostics에 dataset filters/sort 표시
+  - `src/lib/builder/__tests__/datasets.test.ts` — filter/sort normalize와 runtime 적용 검증 추가
+- F-layer 판정:
+  - F17 🔴 → 🟢: editor can persist collection, mode, filters, sort, and item limit for registered runtime datasets.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/datasets.test.ts` ✅ (6 tests)
+  - `npx eslint src/lib/builder/types.ts src/lib/builder/datasets.ts src/lib/builder/content.ts src/components/builder/BuilderInteractiveHomePreview.tsx src/components/builder/BuilderPageWorkspaceShell.tsx 'src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/route.ts' src/lib/builder/__tests__/datasets.test.ts` ✅
+  - `npm run typecheck` ✅
+- 남은 M159:
+  - F18~F26: element field binding, repeater authoring, dynamic list/item route creation, slug conflicts/redirects, per-item SEO, visitor filters/pagination, preview/publish atomicity.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

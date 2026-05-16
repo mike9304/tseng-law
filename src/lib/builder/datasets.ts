@@ -3,14 +3,23 @@ import { serviceAreas } from '@/data/service-details';
 import type { Locale } from '@/lib/locales';
 import type {
   BuilderDatasetCollectionId,
+  BuilderDatasetFilterOperator,
   BuilderDatasetMode,
+  BuilderDatasetSortDirection,
   BuilderDatasetTargetId,
   BuilderServiceItem,
   BuilderPageDatasetBinding,
+  BuilderPageDatasetFilter,
+  BuilderPageDatasetSort,
   BuilderPageDocument,
   BuilderPageKey,
   BuilderSectionKey,
 } from '@/lib/builder/types';
+
+export interface BuilderDatasetFieldDefinition {
+  fieldId: string;
+  label: string;
+}
 
 export interface BuilderBindableTargetDefinition {
   targetId: BuilderDatasetTargetId;
@@ -20,7 +29,11 @@ export interface BuilderBindableTargetDefinition {
   description: string;
   collectionIds: BuilderDatasetCollectionId[];
   mode: BuilderDatasetMode;
+  modeOptions: BuilderDatasetMode[];
   defaultCollectionId: BuilderDatasetCollectionId;
+  filterFields: BuilderDatasetFieldDefinition[];
+  sortFields: BuilderDatasetFieldDefinition[];
+  defaultSort?: BuilderPageDatasetSort[];
   defaultLimit?: number;
   limitOptions?: number[];
   runtimeStatus: 'runtime-applied';
@@ -42,6 +55,14 @@ export interface BuilderPageDatasetOverview {
   }[];
   repeaterItems: BuilderDatasetRepeaterPreviewItem[];
   notes: string[];
+}
+
+export interface BuilderPageDatasetBindingPatch {
+  collectionId?: BuilderDatasetCollectionId;
+  mode?: BuilderDatasetMode;
+  filters?: BuilderPageDatasetFilter[];
+  sort?: BuilderPageDatasetSort[];
+  limit?: number;
 }
 
 export interface BuilderDatasetRepeaterPreviewItem {
@@ -66,7 +87,20 @@ const builderBindableTargetDefinitions: readonly BuilderBindableTargetDefinition
       'Column archive cards on the home page. This binding is real and controls how many column records the section receives.',
     collectionIds: ['columns'],
     mode: 'list',
+    modeOptions: ['list'],
     defaultCollectionId: 'columns',
+    filterFields: [
+      { fieldId: 'title', label: 'Title' },
+      { fieldId: 'slug', label: 'Slug' },
+      { fieldId: 'category', label: 'Category' },
+      { fieldId: 'categoryLabel', label: 'Category label' },
+    ],
+    sortFields: [
+      { fieldId: 'date', label: 'Date' },
+      { fieldId: 'title', label: 'Title' },
+      { fieldId: 'category', label: 'Category' },
+      { fieldId: 'slug', label: 'Slug' },
+    ],
     defaultLimit: 4,
     limitOptions: [4, 7, 10],
     runtimeStatus: 'runtime-applied',
@@ -80,7 +114,17 @@ const builderBindableTargetDefinitions: readonly BuilderBindableTargetDefinition
       'Service cards on the home page. This binding is real and controls how many service-area records the section receives.',
     collectionIds: ['service-areas'],
     mode: 'list',
+    modeOptions: ['list'],
     defaultCollectionId: 'service-areas',
+    filterFields: [
+      { fieldId: 'title', label: 'Title' },
+      { fieldId: 'description', label: 'Description' },
+      { fieldId: 'href', label: 'Link' },
+    ],
+    sortFields: [
+      { fieldId: 'title', label: 'Title' },
+      { fieldId: 'href', label: 'Link' },
+    ],
     defaultLimit: 6,
     limitOptions: [3, 6],
     runtimeStatus: 'runtime-applied',
@@ -138,6 +182,8 @@ export function createDefaultBuilderPageDatasets(pageKey: BuilderPageKey): Build
     sectionKey: definition.sectionKey,
     collectionId: definition.defaultCollectionId,
     mode: definition.mode,
+    filters: [],
+    sort: cloneDatasetSort(definition.defaultSort ?? []),
     limit: definition.defaultLimit,
   }));
 }
@@ -152,6 +198,8 @@ export function cloneBuilderPageDatasetBinding(
     sectionKey: binding.sectionKey,
     collectionId: binding.collectionId,
     mode: binding.mode,
+    filters: cloneDatasetFilters(binding.filters ?? []),
+    sort: cloneDatasetSort(binding.sort ?? []),
     limit: typeof binding.limit === 'number' ? binding.limit : undefined,
   };
 }
@@ -230,10 +278,19 @@ export function replaceBuilderPageDatasetLimit(
   targetId: BuilderDatasetTargetId,
   limit: number
 ) {
+  return replaceBuilderPageDatasetBinding(datasets, pageKey, targetId, { limit });
+}
+
+export function replaceBuilderPageDatasetBinding(
+  datasets: BuilderPageDatasetBinding[],
+  pageKey: BuilderPageKey,
+  targetId: BuilderDatasetTargetId,
+  patch: BuilderPageDatasetBindingPatch
+) {
   return normalizeBuilderPageDatasets(
     pageKey,
     datasets.map((binding) =>
-      binding.targetId === targetId ? { ...binding, limit } : cloneBuilderPageDatasetBinding(binding)
+      binding.targetId === targetId ? { ...binding, ...patch } : cloneBuilderPageDatasetBinding(binding)
     ),
     createDefaultBuilderPageDatasets(pageKey)
   );
@@ -263,7 +320,14 @@ export function resolveInsightsDatasetPosts(
 ) {
   const binding = getBuilderPageDatasetBinding(document, 'home.insights.feed');
   const limit = normalizeLimit(binding.limit, getBuilderBindableTarget('home.insights.feed').defaultLimit);
-  return posts.slice(0, limit);
+  return applyDatasetLimit(
+    sortDatasetRecords(
+      filterDatasetRecords(posts, binding, readColumnDatasetField),
+      binding,
+      readColumnDatasetField
+    ),
+    limit
+  );
 }
 
 export function resolveServicesDatasetItems(
@@ -275,12 +339,28 @@ export function resolveServicesDatasetItems(
   const binding = getBuilderPageDatasetBinding(document, 'home.services.list');
   const limit = normalizeLimit(binding.limit, getBuilderBindableTarget('home.services.list').defaultLimit);
   if (sourceItems && sourceItems.length > 0) {
-    return sourceItems.slice(0, limit);
+    return applyDatasetLimit(
+      sortDatasetRecords(
+        filterDatasetRecords(sourceItems, binding, readServiceItemDatasetField),
+        binding,
+        readServiceItemDatasetField
+      ),
+      limit
+    );
   }
 
   const postsBySlug = new Map(posts.map((post) => [post.slug, post] as const));
 
-  return serviceAreas.slice(0, limit).map((service) => ({
+  return applyDatasetLimit(
+    sortDatasetRecords(
+      filterDatasetRecords(serviceAreas, binding, (service, fieldId) =>
+        readServiceAreaDatasetField(service, fieldId, locale)
+      ),
+      binding,
+      (service, fieldId) => readServiceAreaDatasetField(service, fieldId, locale)
+    ),
+    limit
+  ).map((service) => ({
     title: service.title[locale],
     description: service.subtitle[locale],
     href: `/${locale}/services#${service.slug}`,
@@ -307,8 +387,16 @@ function readBuilderDatasetSampleRecords(
         routePath: `/${locale}/columns/${post.slug}`,
       }));
     case 'home.services.list':
-      return serviceAreas
-        .slice(0, normalizeLimit(binding.limit, getBuilderBindableTarget(targetId).defaultLimit))
+      return applyDatasetLimit(
+        sortDatasetRecords(
+          filterDatasetRecords(serviceAreas, binding, (service, fieldId) =>
+            readServiceAreaDatasetField(service, fieldId, locale)
+          ),
+          binding,
+          (service, fieldId) => readServiceAreaDatasetField(service, fieldId, locale)
+        ),
+        normalizeLimit(binding.limit, getBuilderBindableTarget(targetId).defaultLimit)
+      )
         .map((service) => ({
           recordId: service.slug,
           primaryLabel: service.title[locale],
@@ -349,12 +437,155 @@ function normalizeBuilderDatasetBinding(
     collectionId: definition.collectionIds.includes(candidate?.collectionId as BuilderDatasetCollectionId)
       ? (candidate?.collectionId as BuilderDatasetCollectionId)
       : definition.defaultCollectionId,
-    mode: definition.mode,
+    mode: definition.modeOptions.includes(candidate?.mode as BuilderDatasetMode)
+      ? (candidate?.mode as BuilderDatasetMode)
+      : definition.mode,
+    filters: normalizeDatasetFilters(definition, candidate?.filters),
+    sort: normalizeDatasetSort(definition, candidate?.sort ?? definition.defaultSort),
     limit:
       typeof definition.defaultLimit === 'number'
         ? normalizeLimit(candidate?.limit, definition.defaultLimit)
         : undefined,
   };
+}
+
+function normalizeDatasetFilters(
+  definition: BuilderBindableTargetDefinition,
+  input: unknown
+): BuilderPageDatasetFilter[] {
+  if (!Array.isArray(input)) return [];
+  const allowedFields = new Set(definition.filterFields.map((field) => field.fieldId));
+  return input
+    .filter((item): item is Partial<BuilderPageDatasetFilter> => !!item && typeof item === 'object')
+    .map((filter) => ({
+      fieldId: typeof filter.fieldId === 'string' && allowedFields.has(filter.fieldId) ? filter.fieldId : '',
+      operator: normalizeFilterOperator(filter.operator),
+      value: typeof filter.value === 'string' ? filter.value.trim().slice(0, 120) : '',
+    }))
+    .filter((filter) => filter.fieldId && filter.value)
+    .slice(0, 6);
+}
+
+function normalizeDatasetSort(
+  definition: BuilderBindableTargetDefinition,
+  input: unknown
+): BuilderPageDatasetSort[] {
+  if (!Array.isArray(input)) return [];
+  const allowedFields = new Set(definition.sortFields.map((field) => field.fieldId));
+  const seen = new Set<string>();
+  return input
+    .filter((item): item is Partial<BuilderPageDatasetSort> => !!item && typeof item === 'object')
+    .map((sort) => ({
+      fieldId: typeof sort.fieldId === 'string' && allowedFields.has(sort.fieldId) ? sort.fieldId : '',
+      direction: normalizeSortDirection(sort.direction),
+    }))
+    .filter((sort) => {
+      if (!sort.fieldId || seen.has(sort.fieldId)) return false;
+      seen.add(sort.fieldId);
+      return true;
+    })
+    .slice(0, 3);
+}
+
+function cloneDatasetFilters(filters: BuilderPageDatasetFilter[]): BuilderPageDatasetFilter[] {
+  return filters.map((filter) => ({ ...filter }));
+}
+
+function cloneDatasetSort(sort: BuilderPageDatasetSort[]): BuilderPageDatasetSort[] {
+  return sort.map((item) => ({ ...item }));
+}
+
+function normalizeFilterOperator(input: unknown): BuilderDatasetFilterOperator {
+  return input === 'equals' ? 'equals' : 'contains';
+}
+
+function normalizeSortDirection(input: unknown): BuilderDatasetSortDirection {
+  return input === 'desc' ? 'desc' : 'asc';
+}
+
+function filterDatasetRecords<TRecord>(
+  records: TRecord[],
+  binding: BuilderPageDatasetBinding,
+  readField: (record: TRecord, fieldId: string) => string
+): TRecord[] {
+  const filters = binding.filters ?? [];
+  if (!filters.length) return records;
+  return records.filter((record) =>
+    filters.every((filter) => {
+      const value = readField(record, filter.fieldId).trim().toLocaleLowerCase();
+      const needle = filter.value.trim().toLocaleLowerCase();
+      return filter.operator === 'equals' ? value === needle : value.includes(needle);
+    })
+  );
+}
+
+function sortDatasetRecords<TRecord>(
+  records: TRecord[],
+  binding: BuilderPageDatasetBinding,
+  readField: (record: TRecord, fieldId: string) => string
+): TRecord[] {
+  const sort = binding.sort ?? [];
+  if (!sort.length) return records;
+  return [...records].sort((left, right) => {
+    for (const sortItem of sort) {
+      const leftValue = readField(left, sortItem.fieldId);
+      const rightValue = readField(right, sortItem.fieldId);
+      const compared = leftValue.localeCompare(rightValue, 'ko', { numeric: true, sensitivity: 'base' });
+      if (compared !== 0) return sortItem.direction === 'desc' ? -compared : compared;
+    }
+    return 0;
+  });
+}
+
+function applyDatasetLimit<TRecord>(records: TRecord[], limit: number | undefined): TRecord[] {
+  return typeof limit === 'number' ? records.slice(0, limit) : records;
+}
+
+function readColumnDatasetField(post: ColumnPost, fieldId: string): string {
+  switch (fieldId) {
+    case 'slug':
+      return post.slug;
+    case 'title':
+      return post.title;
+    case 'category':
+      return post.category;
+    case 'categoryLabel':
+      return post.categoryLabel;
+    case 'date':
+      return post.date;
+    default:
+      return '';
+  }
+}
+
+function readServiceItemDatasetField(item: BuilderServiceItem, fieldId: string): string {
+  switch (fieldId) {
+    case 'title':
+      return item.title;
+    case 'description':
+      return item.description;
+    case 'href':
+      return item.href;
+    default:
+      return '';
+  }
+}
+
+function readServiceAreaDatasetField(
+  service: (typeof serviceAreas)[number],
+  fieldId: string,
+  locale: Locale
+): string {
+  switch (fieldId) {
+    case 'title':
+      return service.title[locale];
+    case 'description':
+      return service.subtitle[locale];
+    case 'href':
+      return service.slug;
+    default:
+      return '';
+  }
 }
 
 function normalizeLimit(value: number | undefined, fallback: number | undefined) {

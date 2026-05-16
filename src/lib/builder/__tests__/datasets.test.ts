@@ -5,6 +5,7 @@ import {
   getBuilderBindableTargets,
   readBuilderPageDatasetOverviews,
   readBuilderDatasetRepeaterItems,
+  replaceBuilderPageDatasetBinding,
   replaceBuilderPageDatasetLimit,
   resolveServicesDatasetItems,
 } from '@/lib/builder/datasets';
@@ -48,12 +49,14 @@ describe('builder datasets', () => {
         targetId: 'home.insights.feed',
         sectionKey: 'home.insights',
         collectionId: 'columns',
+        sort: [],
         limit: 4,
       },
       {
         targetId: 'home.services.list',
         sectionKey: 'home.services',
         collectionId: 'service-areas',
+        sort: [],
         limit: 6,
       },
     ]);
@@ -80,6 +83,56 @@ describe('builder datasets', () => {
     expect(items[0]?.relatedColumns?.[0]).toEqual({
       slug: 'taiwan-company-establishment-basics',
       title: '대만 회사설립 기초편',
+    });
+  });
+
+  it('applies dataset filters and sort order before runtime limits', () => {
+    const configuredDatasets = replaceBuilderPageDatasetBinding(
+      createDefaultBuilderPageDatasets('home'),
+      'home',
+      'home.insights.feed',
+      {
+        filters: [{ fieldId: 'category', operator: 'equals', value: 'case' }],
+        sort: [{ fieldId: 'title', direction: 'asc' }],
+        limit: 1,
+      }
+    );
+
+    const items = readBuilderDatasetRepeaterItems(
+      'home.insights.feed',
+      configuredDatasets.find((binding) => binding.targetId === 'home.insights.feed')!,
+      'ko',
+      posts
+    );
+
+    expect(items).toEqual([
+      expect.objectContaining({
+        itemId: 'taiwan-gym-injury-lawsuit',
+        title: '헬스장 부상 소송',
+      }),
+    ]);
+  });
+
+  it('normalizes unsupported dataset filter and sort fields out of bindings', () => {
+    const configuredDatasets = replaceBuilderPageDatasetBinding(
+      createDefaultBuilderPageDatasets('home'),
+      'home',
+      'home.services.list',
+      {
+        filters: [
+          { fieldId: 'missing', operator: 'contains', value: 'ignored' },
+          { fieldId: 'title', operator: 'contains', value: '소송' },
+        ],
+        sort: [
+          { fieldId: 'missing', direction: 'desc' },
+          { fieldId: 'title', direction: 'desc' },
+        ],
+      }
+    );
+
+    expect(configuredDatasets.find((binding) => binding.targetId === 'home.services.list')).toMatchObject({
+      filters: [{ fieldId: 'title', operator: 'contains', value: '소송' }],
+      sort: [{ fieldId: 'title', direction: 'desc' }],
     });
   });
 

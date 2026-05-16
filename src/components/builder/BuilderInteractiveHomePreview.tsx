@@ -39,6 +39,7 @@ import {
   resetBuilderDocumentSectionLayout,
   resolveBuilderSectionHidden,
   resolveBuilderSectionLayout,
+  setBuilderDocumentDatasetBinding,
   setBuilderDocumentDatasetLimit,
   setBuilderDocumentSectionHidden,
   setBuilderDocumentSectionLocked,
@@ -73,6 +74,10 @@ import {
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import type {
   BuilderCollectionSectionKey,
+  BuilderDatasetCollectionId,
+  BuilderDatasetFilterOperator,
+  BuilderDatasetMode,
+  BuilderDatasetSortDirection,
   BuilderDatasetTargetId,
   BuilderEditableTargetKind,
   BuilderSectionFrameClipboardPayload,
@@ -80,6 +85,7 @@ import type {
   BuilderPersistedSceneNodeSource,
   BuilderSceneNodeBounds,
   BuilderPageDocument,
+  BuilderPageDatasetBinding,
   BuilderPageSnapshot,
   BuilderSectionAlignmentPreset,
   BuilderSectionKey,
@@ -514,6 +520,15 @@ const SECTION_SPACING_OPTIONS: Array<{ value: BuilderSectionSpacingPreset; label
   { value: 'normal', label: 'Normal' },
   { value: 'relaxed', label: 'Relaxed' },
 ];
+
+const datasetControlStyle = {
+  display: 'grid',
+  gap: 4,
+  minWidth: 142,
+  color: '#475569',
+  fontSize: 11,
+  fontWeight: 700,
+} satisfies CSSProperties;
 
 const TEXT_SELECTOR = [
   'h1',
@@ -3044,6 +3059,32 @@ export default function BuilderInteractiveHomePreview({
       }
 
       const nextDocument = setBuilderDocumentDatasetLimit(pageDocument, targetId, limit);
+      recordWorkspaceSnapshot(
+        buildWorkspaceSnapshot(nextDocument, currentDocumentState, selection, label)
+      );
+    },
+    [
+      blockLockedSectionAction,
+      buildWorkspaceSnapshot,
+      currentDocumentState,
+      pageDocument,
+      recordWorkspaceSnapshot,
+      selection,
+    ]
+  );
+
+  const updateDatasetBinding = useCallback(
+    (
+      targetId: BuilderDatasetTargetId,
+      patch: Parameters<typeof setBuilderDocumentDatasetBinding>[2],
+      label: string
+    ) => {
+      const target = getBuilderBindableTarget(targetId);
+      if (blockLockedSectionAction([target.sectionKey], 'changing dataset binding')) {
+        return;
+      }
+
+      const nextDocument = setBuilderDocumentDatasetBinding(pageDocument, targetId, patch);
       recordWorkspaceSnapshot(
         buildWorkspaceSnapshot(nextDocument, currentDocumentState, selection, label)
       );
@@ -5671,13 +5712,20 @@ export default function BuilderInteractiveHomePreview({
 
             {selectedDatasetTargets.map((datasetTarget) => {
               const datasetBinding = getBuilderPageDatasetBinding(pageDocument, datasetTarget.targetId);
+              const activeFilter = datasetBinding.filters?.[0];
+              const activeSort = datasetBinding.sort?.[0];
+              const filterField = activeFilter?.fieldId ?? datasetTarget.filterFields[0]?.fieldId ?? '';
+              const filterOperator = activeFilter?.operator ?? 'contains';
+              const filterValue = activeFilter?.value ?? '';
+              const sortField = activeSort?.fieldId ?? '';
+              const sortDirection = activeSort?.direction ?? 'asc';
 
               return (
                 <BuilderInspectorStatusCard
                   key={datasetTarget.targetId}
                   subtitle="Dataset binding"
                   tone="needs-review"
-                  message={`${datasetTarget.title} is backed by a persisted dataset contract. This binding is real and changes how many records the section receives.`}
+                  message={`${datasetTarget.title} is backed by a persisted dataset contract. This binding is real and controls collection, mode, filters, sort, and record limit.`}
                   meta={[
                     {
                       label: 'target',
@@ -5695,10 +5743,179 @@ export default function BuilderInteractiveHomePreview({
                       label: 'record limit',
                       value: String(datasetBinding.limit ?? datasetTarget.defaultLimit ?? 0),
                     },
+                    {
+                      label: 'filter',
+                      value: formatDatasetFilters(datasetBinding),
+                    },
+                    {
+                      label: 'sort',
+                      value: formatDatasetSort(datasetBinding),
+                    },
                   ]}
                   note="Dataset targets are persisted in the page document and applied in both editor preview and published runtime."
                   actions={
                     <>
+                      <label style={datasetControlStyle}>
+                        <span>Collection</span>
+                        <select
+                          value={datasetBinding.collectionId}
+                          onChange={(event) =>
+                            updateDatasetBinding(
+                              datasetTarget.targetId,
+                              { collectionId: event.target.value as BuilderDatasetCollectionId },
+                              `Set ${datasetTarget.title} dataset collection`
+                            )
+                          }
+                        >
+                          {datasetTarget.collectionIds.map((collectionId) => (
+                            <option key={collectionId} value={collectionId}>{collectionId}</option>
+                          ))}
+                        </select>
+                      </label>
+                      <label style={datasetControlStyle}>
+                        <span>Mode</span>
+                        <select
+                          value={datasetBinding.mode}
+                          onChange={(event) =>
+                            updateDatasetBinding(
+                              datasetTarget.targetId,
+                              { mode: event.target.value as BuilderDatasetMode },
+                              `Set ${datasetTarget.title} dataset mode`
+                            )
+                          }
+                        >
+                          {datasetTarget.modeOptions.map((mode) => (
+                            <option key={mode} value={mode}>{mode}</option>
+                          ))}
+                        </select>
+                      </label>
+                      {datasetTarget.filterFields.length ? (
+                        <>
+                          <label style={datasetControlStyle}>
+                            <span>Filter field</span>
+                            <select
+                              value={filterField}
+                              onChange={(event) =>
+                                updateDatasetBinding(
+                                  datasetTarget.targetId,
+                                  {
+                                    filters: filterValue
+                                      ? [{
+                                        fieldId: event.target.value,
+                                        operator: filterOperator as BuilderDatasetFilterOperator,
+                                        value: filterValue,
+                                      }]
+                                      : [],
+                                  },
+                                  `Set ${datasetTarget.title} dataset filter field`
+                                )
+                              }
+                            >
+                              {datasetTarget.filterFields.map((field) => (
+                                <option key={field.fieldId} value={field.fieldId}>{field.label}</option>
+                              ))}
+                            </select>
+                          </label>
+                          <label style={datasetControlStyle}>
+                            <span>Filter</span>
+                            <select
+                              value={filterOperator}
+                              onChange={(event) =>
+                                updateDatasetBinding(
+                                  datasetTarget.targetId,
+                                  {
+                                    filters: filterValue
+                                      ? [{
+                                        fieldId: filterField,
+                                        operator: event.target.value as BuilderDatasetFilterOperator,
+                                        value: filterValue,
+                                      }]
+                                      : [],
+                                  },
+                                  `Set ${datasetTarget.title} dataset filter operator`
+                                )
+                              }
+                            >
+                              <option value="contains">contains</option>
+                              <option value="equals">equals</option>
+                            </select>
+                          </label>
+                          <label style={datasetControlStyle}>
+                            <span>Value</span>
+                            <input
+                              value={filterValue}
+                              placeholder="Filter value"
+                              onChange={(event) =>
+                                updateDatasetBinding(
+                                  datasetTarget.targetId,
+                                  {
+                                    filters: event.target.value.trim()
+                                      ? [{
+                                        fieldId: filterField,
+                                        operator: filterOperator as BuilderDatasetFilterOperator,
+                                        value: event.target.value,
+                                      }]
+                                      : [],
+                                  },
+                                  `Set ${datasetTarget.title} dataset filter`
+                                )
+                              }
+                            />
+                          </label>
+                        </>
+                      ) : null}
+                      {datasetTarget.sortFields.length ? (
+                        <>
+                          <label style={datasetControlStyle}>
+                            <span>Sort field</span>
+                            <select
+                              value={sortField}
+                              onChange={(event) =>
+                                updateDatasetBinding(
+                                  datasetTarget.targetId,
+                                  {
+                                    sort: event.target.value
+                                      ? [{
+                                        fieldId: event.target.value,
+                                        direction: sortDirection as BuilderDatasetSortDirection,
+                                      }]
+                                      : [],
+                                  },
+                                  `Set ${datasetTarget.title} dataset sort field`
+                                )
+                              }
+                            >
+                              <option value="">Original order</option>
+                              {datasetTarget.sortFields.map((field) => (
+                                <option key={field.fieldId} value={field.fieldId}>{field.label}</option>
+                              ))}
+                            </select>
+                          </label>
+                          <label style={datasetControlStyle}>
+                            <span>Direction</span>
+                            <select
+                              value={sortDirection}
+                              onChange={(event) =>
+                                updateDatasetBinding(
+                                  datasetTarget.targetId,
+                                  {
+                                    sort: sortField
+                                      ? [{
+                                        fieldId: sortField,
+                                        direction: event.target.value as BuilderDatasetSortDirection,
+                                      }]
+                                      : [],
+                                  },
+                                  `Set ${datasetTarget.title} dataset sort direction`
+                                )
+                              }
+                            >
+                              <option value="asc">Ascending</option>
+                              <option value="desc">Descending</option>
+                            </select>
+                          </label>
+                        </>
+                      ) : null}
                       {(datasetTarget.limitOptions ?? []).map((limit) => (
                         <button
                           key={limit}
@@ -9802,7 +10019,19 @@ function formatDatasetBindingSummary(
   targetId: BuilderDatasetTargetId
 ) {
   const binding = getBuilderPageDatasetBinding(document, targetId);
-  return `${binding.collectionId} · ${binding.mode} · limit ${binding.limit ?? 'default'}`;
+  return `${binding.collectionId} · ${binding.mode} · limit ${binding.limit ?? 'default'} · ${formatDatasetFilters(binding)} · ${formatDatasetSort(binding)}`;
+}
+
+function formatDatasetFilters(binding: BuilderPageDatasetBinding) {
+  const filters = binding.filters ?? [];
+  if (!filters.length) return 'no filters';
+  return filters.map((filter) => `${filter.fieldId} ${filter.operator} ${filter.value}`).join(' + ');
+}
+
+function formatDatasetSort(binding: BuilderPageDatasetBinding) {
+  const sort = binding.sort ?? [];
+  if (!sort.length) return 'original order';
+  return sort.map((item) => `${item.fieldId} ${item.direction}`).join(', ');
 }
 
 function buildServerSnapshotMeta(

@@ -6740,3 +6740,26 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - M159-A: dataset/repeater/dynamic page binding F17~F26 gap 재평가 후 다음 green slice 구현.
+
+## 2026-05-17 Codex /goal M159-A dataset config filters and sort
+
+- M159 F17을 먼저 green으로 올렸다.
+- 데이터 모델:
+  - `BuilderPageDatasetBinding`에 `filters`와 `sort`를 추가했다.
+  - bindable target 정의에 modeOptions/filterFields/sortFields metadata를 추가했다.
+  - dataset patch normalize가 지원하지 않는 field/filter/sort를 제거한다.
+- 런타임:
+  - home insights/services dataset resolver가 filters -> sort -> limit 순서로 실제 레코드에 적용한다.
+  - page dataset API PUT이 collection/mode/filters/sort/limit patch를 저장한다.
+- UI:
+  - admin-builder 선택 섹션 dataset inspector에서 collection, mode, filter field/operator/value, sort field/direction, limit을 편집할 수 있다.
+  - Page diagnostics에 dataset filters/sort summary를 표시한다.
+- 체크포인트 상태:
+  - F17 🔴 → 🟢: collection/mode/filter/sort/limit dataset config evidence 충족.
+  - M159 전체는 아직 🟡: F18~F26 잔여.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/datasets.test.ts` ✅ (6 tests)
+  - `npx eslint src/lib/builder/types.ts src/lib/builder/datasets.ts src/lib/builder/content.ts src/components/builder/BuilderInteractiveHomePreview.tsx src/components/builder/BuilderPageWorkspaceShell.tsx 'src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/route.ts' src/lib/builder/__tests__/datasets.test.ts` ✅
+  - `npm run typecheck` ✅
+- 다음 후보:
+  - M159-B: F18 element field binding 또는 F19 repeater authoring.

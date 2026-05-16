@@ -170,6 +170,21 @@ export default function BuilderPageWorkspaceShell({
                               ? ` · limit ${item.currentBinding.limit}`
                               : ''}
                           </dd>
+                          <dd>
+                            Filters:{' '}
+                            {item.currentBinding.filters?.length
+                              ? item.currentBinding.filters
+                                  .map((filter) => `${filter.fieldId} ${filter.operator} ${filter.value}`)
+                                  .join(' + ')
+                              : 'none'}
+                            {' · '}
+                            Sort:{' '}
+                            {item.currentBinding.sort?.length
+                              ? item.currentBinding.sort
+                                  .map((sort) => `${sort.fieldId} ${sort.direction}`)
+                                  .join(', ')
+                              : 'original'}
+                          </dd>
                           <dd>{item.description}</dd>
                           <dd>
                             Repeater preview:{' '}

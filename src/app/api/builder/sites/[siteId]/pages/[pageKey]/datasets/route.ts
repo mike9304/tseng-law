@@ -4,7 +4,7 @@ import {
   getBuilderBindableTargets,
   isBuilderDatasetTargetId,
   readBuilderPageDatasetOverviews,
-  replaceBuilderPageDatasetLimit,
+  replaceBuilderPageDatasetBinding,
 } from '@/lib/builder/datasets';
 import {
   BuilderSnapshotConflictError,
@@ -12,6 +12,12 @@ import {
   writeBuilderPageSnapshot,
 } from '@/lib/builder/persistence';
 import { isBuilderPageKey, isDefaultBuilderSiteId } from '@/lib/builder/site';
+import type {
+  BuilderDatasetCollectionId,
+  BuilderDatasetMode,
+  BuilderPageDatasetFilter,
+  BuilderPageDatasetSort,
+} from '@/lib/builder/types';
 import { normalizeLocale } from '@/lib/locales';
 import { guardMutation } from '@/lib/builder/security/guard';
 
@@ -94,7 +100,11 @@ export async function PUT(
   const limit =
     typeof record.limit === 'number' && Number.isFinite(record.limit)
       ? Math.trunc(record.limit)
-      : null;
+      : undefined;
+  const collectionId = typeof record.collectionId === 'string' ? record.collectionId : undefined;
+  const mode = typeof record.mode === 'string' ? record.mode : undefined;
+  const filters = Array.isArray(record.filters) ? record.filters : undefined;
+  const sort = Array.isArray(record.sort) ? record.sort : undefined;
   const expectedRevision =
     typeof record.expectedRevision === 'number' && Number.isFinite(record.expectedRevision)
       ? Math.trunc(record.expectedRevision)
@@ -102,10 +112,6 @@ export async function PUT(
 
   if (!targetId) {
     return badRequest('Unknown dataset target.');
-  }
-
-  if (limit === null) {
-    return badRequest('Dataset limit is required.');
   }
 
   const bindableTargets = getBuilderBindableTargets(params.pageKey);
@@ -117,11 +123,17 @@ export async function PUT(
     const draft = await readBuilderPageSnapshot(params.pageKey, 'draft', locale);
     const nextDocument = {
       ...draft.snapshot.document,
-      datasets: replaceBuilderPageDatasetLimit(
+      datasets: replaceBuilderPageDatasetBinding(
         draft.snapshot.document.datasets,
         params.pageKey,
         targetId,
-        limit
+        {
+          collectionId: collectionId as BuilderDatasetCollectionId | undefined,
+          mode: mode as BuilderDatasetMode | undefined,
+          filters: filters as BuilderPageDatasetFilter[] | undefined,
+          sort: sort as BuilderPageDatasetSort[] | undefined,
+          limit,
+        }
       ),
     };
 

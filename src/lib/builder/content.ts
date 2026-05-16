@@ -9,8 +9,10 @@ import {
 import {
   cloneBuilderPageDatasetBinding,
   normalizeBuilderPageDatasets,
+  replaceBuilderPageDatasetBinding,
   replaceBuilderPageDatasetLimit,
   resetBuilderPageDatasetBinding,
+  type BuilderPageDatasetBindingPatch,
 } from '@/lib/builder/datasets';
 import type {
   BuilderDatasetTargetId,
@@ -595,6 +597,17 @@ export function setBuilderDocumentDatasetLimit(
   return touchBuilderDocument({
     ...cloneBuilderDocument(document),
     datasets: replaceBuilderPageDatasetLimit(document.datasets, document.pageKey, targetId, limit),
+  });
+}
+
+export function setBuilderDocumentDatasetBinding(
+  document: BuilderPageDocument,
+  targetId: BuilderDatasetTargetId,
+  patch: BuilderPageDatasetBindingPatch
+): BuilderPageDocument {
+  return touchBuilderDocument({
+    ...cloneBuilderDocument(document),
+    datasets: replaceBuilderPageDatasetBinding(document.datasets, document.pageKey, targetId, patch),
   });
 }
 

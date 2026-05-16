@@ -8,6 +8,7 @@ import {
 import { isBuilderCollectionId } from '@/lib/builder/cms';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { resolveBuilderCmsRouteActor } from '@/lib/builder/cms-route-actor';
 
 type BulkRecordPayload = {
   action?: unknown;
@@ -37,6 +38,7 @@ export async function POST(
     const locale = url.searchParams.get('locale');
     const payload = await request.json() as BulkRecordPayload;
     const action = String(payload.action ?? '');
+    const routeActor = resolveBuilderCmsRouteActor(auth, request);
 
     if (action === 'delete') {
       const result = await bulkDeleteEditableBuilderCmsRecords(
@@ -44,12 +46,12 @@ export async function POST(
         locale,
         params.collectionId,
         payload.recordIds,
-        { actor: 'admin' },
+        routeActor,
       );
       if (!result) {
         return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
       }
-      return NextResponse.json({ ok: true, action, ...result });
+      return NextResponse.json({ ok: true, actor: routeActor.actor, action, ...result });
     }
 
     const status = statusFromBulkAction(action, payload.status);
@@ -59,12 +61,12 @@ export async function POST(
       params.collectionId,
       payload.recordIds,
       status,
-      { actor: 'admin' },
+      routeActor,
     );
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
-    return NextResponse.json({ ok: true, action: 'status', status, ...result });
+    return NextResponse.json({ ok: true, actor: routeActor.actor, action: 'status', status, ...result });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {
       return NextResponse.json({ ok: false, error: error.message }, { status: 403 });

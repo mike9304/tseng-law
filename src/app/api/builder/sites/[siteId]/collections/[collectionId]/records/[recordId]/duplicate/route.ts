@@ -7,6 +7,7 @@ import {
 import { isBuilderCollectionId } from '@/lib/builder/cms';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { resolveBuilderCmsRouteActor } from '@/lib/builder/cms-route-actor';
 
 export async function POST(
   request: NextRequest,
@@ -28,17 +29,18 @@ export async function POST(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
+    const routeActor = resolveBuilderCmsRouteActor(auth, request);
     const record = await duplicateEditableBuilderCmsRecord(
       params.siteId,
       locale,
       params.collectionId,
       params.recordId,
-      { actor: 'admin' },
+      routeActor,
     );
     if (!record) {
       return NextResponse.json({ ok: false, error: 'Unknown CMS record.' }, { status: 404 });
     }
-    return NextResponse.json({ ok: true, record }, { status: 201 });
+    return NextResponse.json({ ok: true, actor: routeActor.actor, record }, { status: 201 });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {
       return NextResponse.json({ ok: false, error: error.message }, { status: 403 });

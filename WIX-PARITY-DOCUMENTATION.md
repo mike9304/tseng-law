@@ -327,6 +327,27 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - F12 hardening: actor identity and per-actor permission evidence.
 
+## M158-O — CMS Actor-Scoped Permissions
+
+- 시작/종료: 2026-05-17 / 2026-05-17
+- 변경 파일:
+  - `src/lib/builder/cms-route-actor.ts` — CMS route actor resolver와 `x-builder-cms-actor` preview header 추가
+  - `src/lib/builder/cms-editable.ts` — `actorLabel` access option을 revision author metadata에 반영
+  - `src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/**/route.ts` — record list/create/update/delete/duplicate/bulk/CSV/restore routes가 request actor를 CMS permission engine에 전달
+  - `src/components/builder/cms/ContentManagerClient.tsx` — Content Manager permissions panel에 active record actor selector 추가, record mutations/CSV/restore 요청에 actor header 전송
+  - `src/lib/builder/__tests__/cms-route-actor.test.ts` / `cms-editable.test.ts` — route actor normalization/defaulting, staff actor authorLabel, permission gate evidence 추가
+- F-layer 판정:
+  - F12 🟡 → 🟢: public/member/staff/admin actor 권한이 엔진뿐 아니라 guarded CMS record routes와 UI preview actor flow까지 관통함.
+  - M158 🟡 → 🟢: F07~F16 CMS foundations checkpoint complete.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts src/lib/builder/__tests__/cms-route-actor.test.ts` ✅ (19 tests)
+  - `npx eslint src/lib/builder/cms-route-actor.ts src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-route-actor.test.ts 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/bulk/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/csv/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/duplicate/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/revisions/[revisionId]/restore/route.ts'` ✅
+  - `npm run typecheck` ✅
+  - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
+  - `git diff --check` ✅
+- 다음:
+  - M159: dataset/repeater/dynamic page binding F17~F26를 이어서 올린다.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

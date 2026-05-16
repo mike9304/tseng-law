@@ -69,6 +69,7 @@ export type BuilderCmsRecordSortDirection = 'asc' | 'desc';
 
 export interface BuilderCmsAccessOptions {
   actor?: BuilderCmsPermissionActor;
+  actorLabel?: string;
 }
 
 export interface BuilderCmsRecordListOptions {
@@ -285,7 +286,7 @@ export async function updateEditableBuilderCmsRecord(
     status,
     locale: nextLocale,
     fields,
-    revisions: appendRecordRevision(previous, 'update', { status, locale: nextLocale, fields }),
+    revisions: appendRecordRevision(previous, 'update', { status, locale: nextLocale, fields }, options),
     updatedAt: now,
   };
   const nextCollection = {
@@ -340,7 +341,7 @@ export async function restoreEditableBuilderCmsRecordRevision(
       status: revision.status,
       locale: revision.locale,
       fields,
-    }),
+    }, options),
     updatedAt: now,
   };
   const nextCollection = {
@@ -471,7 +472,7 @@ export async function bulkUpdateEditableBuilderCmsRecordStatus(
       ...record,
       status,
       fields,
-      revisions: appendRecordRevision(record, 'update', { status, locale: record.locale, fields }),
+      revisions: appendRecordRevision(record, 'update', { status, locale: record.locale, fields }, options),
       updatedAt: now,
     };
   });
@@ -974,6 +975,19 @@ function resolveCmsActor(options: BuilderCmsAccessOptions): BuilderCmsPermission
   return options.actor ?? 'admin';
 }
 
+function resolveCmsActorLabel(options: BuilderCmsAccessOptions): string {
+  if (typeof options.actorLabel === 'string' && options.actorLabel.trim()) {
+    return options.actorLabel.trim().slice(0, 120);
+  }
+  return options.actor === 'staff'
+    ? 'Staff'
+    : options.actor === 'member'
+      ? 'Member'
+      : options.actor === 'public'
+        ? 'Public'
+        : 'Admin';
+}
+
 function normalizePermissionActors(
   input: unknown,
   fallback: BuilderCmsPermissions['read'],
@@ -1225,6 +1239,7 @@ function appendRecordRevision(
   record: BuilderCmsRecord,
   action: BuilderCmsRecordRevisionAction,
   nextSnapshot: RecordRevisionSnapshot = record,
+  options: BuilderCmsAccessOptions = {},
 ): BuilderCmsRecordRevision[] {
   const diff = buildRecordRevisionDiff(record, nextSnapshot);
   return [
@@ -1235,7 +1250,7 @@ function appendRecordRevision(
       locale: record.locale,
       fields: { ...record.fields },
       createdAt: new Date().toISOString(),
-      authorLabel: 'Admin',
+      authorLabel: resolveCmsActorLabel(options),
       action,
       name: buildRecordRevisionName(action, diff),
       diff,

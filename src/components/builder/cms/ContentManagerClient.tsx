@@ -26,6 +26,7 @@ import {
   type BuilderCmsRecordRevision,
   type BuilderCmsRecordStatus,
 } from '@/lib/builder/cms-types';
+import { CMS_ACTOR_HEADER } from '@/lib/builder/cms-route-actor';
 import type { BuilderAssetListItem } from '@/lib/builder/assets';
 import type { BuilderCollectionSummary } from '@/lib/builder/cms';
 import type { Locale } from '@/lib/locales';
@@ -162,6 +163,7 @@ export default function ContentManagerClient({
   const [selectedCollectionId, setSelectedCollectionId] = useState(collections[0]?.collectionId ?? '');
   const [detail, setDetail] = useState<BuilderCmsCollectionDetail | null>(null);
   const [permissionDraft, setPermissionDraft] = useState<BuilderCmsPermissions>(() => defaultCmsPermissionDraft());
+  const [cmsActor, setCmsActor] = useState<BuilderCmsPermissionActor>('admin');
   const [recordForm, setRecordForm] = useState<RecordFormState>({});
   const [editingRecordId, setEditingRecordId] = useState<string | null>(null);
   const [recordQuery, setRecordQuery] = useState('');
@@ -639,7 +641,7 @@ export default function ContentManagerClient({
       const response = await fetch(endpoint, {
         method: editingRecordId ? 'PATCH' : 'POST',
         credentials: 'same-origin',
-        headers: { 'Content-Type': 'application/json' },
+        headers: cmsActorJsonHeaders(cmsActor),
         body: JSON.stringify({ fields: recordForm }),
       });
       const result = await response.json() as {
@@ -669,7 +671,7 @@ export default function ContentManagerClient({
     try {
       const response = await fetch(
         `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/${encodeURIComponent(recordId)}?locale=${locale}`,
-        { method: 'DELETE', credentials: 'same-origin' },
+        { method: 'DELETE', credentials: 'same-origin', headers: cmsActorHeaders(cmsActor) },
       );
       const result = await response.json() as { ok: boolean; error?: string };
       if (!response.ok || !result.ok) throw new Error(result.error ?? 'Failed to delete record.');
@@ -692,7 +694,7 @@ export default function ContentManagerClient({
     try {
       const response = await fetch(
         `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/${encodeURIComponent(recordId)}/duplicate?locale=${locale}`,
-        { method: 'POST', credentials: 'same-origin' },
+        { method: 'POST', credentials: 'same-origin', headers: cmsActorHeaders(cmsActor) },
       );
       const result = await response.json() as ApiRecordMutation;
       if (!response.ok || !result.ok || !result.record) {
@@ -721,7 +723,7 @@ export default function ContentManagerClient({
         {
           method: 'POST',
           credentials: 'same-origin',
-          headers: { 'Content-Type': 'application/json' },
+          headers: cmsActorJsonHeaders(cmsActor),
           body: JSON.stringify({ action: 'status', status, recordIds: selectedRecordIds }),
         },
       );
@@ -753,7 +755,7 @@ export default function ContentManagerClient({
         {
           method: 'POST',
           credentials: 'same-origin',
-          headers: { 'Content-Type': 'application/json' },
+          headers: cmsActorJsonHeaders(cmsActor),
           body: JSON.stringify({ action: 'delete', recordIds: selectedRecordIds }),
         },
       );
@@ -781,7 +783,7 @@ export default function ContentManagerClient({
     try {
       const response = await fetch(
         `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/csv?locale=${locale}`,
-        { credentials: 'same-origin' },
+        { credentials: 'same-origin', headers: cmsActorHeaders(cmsActor) },
       );
       if (!response.ok) {
         const result = await response.json().catch(() => null) as { error?: string } | null;
@@ -821,7 +823,7 @@ export default function ContentManagerClient({
         {
           method: 'POST',
           credentials: 'same-origin',
-          headers: { 'Content-Type': 'application/json' },
+          headers: cmsActorJsonHeaders(cmsActor),
           body: JSON.stringify({ csv: csvImportText, mode: csvImportMode, columnMap: effectiveCsvColumnMap }),
         },
       );
@@ -851,7 +853,7 @@ export default function ContentManagerClient({
     try {
       const response = await fetch(
         `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/${encodeURIComponent(recordId)}/revisions/${encodeURIComponent(revisionId)}/restore?locale=${locale}`,
-        { method: 'POST', credentials: 'same-origin' },
+        { method: 'POST', credentials: 'same-origin', headers: cmsActorHeaders(cmsActor) },
       );
       const result = await response.json() as ApiRecordMutation;
       if (!response.ok || !result.ok || !result.record) {
@@ -1035,6 +1037,30 @@ export default function ContentManagerClient({
 
             <section className="builder-preview-inspector-card">
               <h2>Permissions</h2>
+              <div style={{ ...formGridStyle, marginBottom: 12 }}>
+                <label style={labelStyle}>
+                  Record actor
+                  <select
+                    value={cmsActor}
+                    onChange={(event) => setCmsActor(event.target.value as BuilderCmsPermissionActor)}
+                    style={inputStyle}
+                    disabled={busy}
+                  >
+                    {builderCmsPermissionActors.map((actor) => (
+                      <option key={actor} value={actor}>{cmsPermissionActorLabels[actor]}</option>
+                    ))}
+                  </select>
+                </label>
+                <article className="builder-dashboard-page-card">
+                  <div className="builder-dashboard-page-head">
+                    <div>
+                      <strong>{cmsPermissionActorLabels[cmsActor]}</strong>
+                      <span>Active record request actor</span>
+                    </div>
+                    <span className="builder-stage-pill">{cmsActor}</span>
+                  </div>
+                </article>
+              </div>
               <div className="builder-dashboard-page-list">
                 {cmsPermissionOperations.map((operation) => (
                   <article key={operation.action} className="builder-dashboard-page-card">
@@ -2148,6 +2174,14 @@ function parseCsvHeaderRow(csv: string): string[] {
 
 function apiBase(siteId: string) {
   return `/api/builder/sites/${encodeURIComponent(siteId)}/collections`;
+}
+
+function cmsActorHeaders(actor: BuilderCmsPermissionActor): HeadersInit {
+  return { [CMS_ACTOR_HEADER]: actor };
+}
+
+function cmsActorJsonHeaders(actor: BuilderCmsPermissionActor): HeadersInit {
+  return { 'Content-Type': 'application/json', ...cmsActorHeaders(actor) };
 }
 
 function filenameFromContentDisposition(header: string | null): string | null {

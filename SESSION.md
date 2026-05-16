@@ -6717,3 +6717,26 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
 - 다음 후보:
   - M158-O: F12 actor identity audit trail and per-actor route/UI evidence.
+
+## 2026-05-17 Codex /goal M158-O CMS actor-scoped permissions
+
+- CMS record routes의 hardcoded `{ actor: 'admin' }` 우회를 제거하고 request actor를 CMS permission engine에 전달하도록 변경했다.
+- 저장소/API:
+  - `src/lib/builder/cms-route-actor.ts`를 추가했다.
+  - `x-builder-cms-actor` header는 admin-authenticated preview request에서 public/member/staff/admin actor를 선택한다.
+  - record list/create/update/delete/duplicate/bulk/CSV/export/import/revision restore routes가 resolved actor를 사용한다.
+  - mutation revision authorLabel은 `admin as staff` 같은 actor identity를 기록한다.
+- UI:
+  - Content Manager Permissions 패널에 active record actor selector를 추가했다.
+  - record mutations, CSV, restore 요청에 active actor header를 전송한다.
+- 체크포인트 상태:
+  - F12 🟡 → 🟢: public/member/staff/admin actor 권한이 엔진, guarded API route, UI preview flow까지 관통.
+  - M158 🟡 → 🟢: F07~F16 CMS foundations complete.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts src/lib/builder/__tests__/cms-route-actor.test.ts` ✅ (19 tests)
+  - `npx eslint src/lib/builder/cms-route-actor.ts src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-route-actor.test.ts 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/bulk/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/csv/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/duplicate/route.ts' 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/revisions/[revisionId]/restore/route.ts'` ✅
+  - `npm run typecheck` ✅
+  - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
+  - `git diff --check` ✅
+- 다음 후보:
+  - M159-A: dataset/repeater/dynamic page binding F17~F26 gap 재평가 후 다음 green slice 구현.

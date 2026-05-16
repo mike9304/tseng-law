@@ -878,16 +878,17 @@ describe('editable builder CMS store', () => {
       ),
     ).rejects.toBeInstanceOf(BuilderCmsPermissionError);
 
-    await expect(
-      updateEditableBuilderCmsRecord(
-        'test-site',
-        'ko',
-        'testimonials',
-        created!.recordId,
-        { fields: { title: 'Staff update', slug: 'staff-update' } },
-        { actor: 'staff' },
-      ),
-    ).resolves.toMatchObject({ fields: { title: 'Staff update', slug: 'staff-update' } });
+    const staffUpdated = await updateEditableBuilderCmsRecord(
+      'test-site',
+      'ko',
+      'testimonials',
+      created!.recordId,
+      { fields: { title: 'Staff update', slug: 'staff-update' } },
+      { actor: 'staff', actorLabel: 'admin as staff' },
+    );
+    expect(staffUpdated).toMatchObject({ fields: { title: 'Staff update', slug: 'staff-update' } });
+    const staffRevision = staffUpdated?.revisions?.[staffUpdated.revisions.length - 1];
+    expect(staffRevision?.authorLabel).toBe('admin as staff');
 
     const updated = await updateEditableBuilderCmsCollection('test-site', 'ko', 'testimonials', {
       permissions: {

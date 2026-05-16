@@ -8,6 +8,7 @@ import {
 import { isBuilderCollectionId } from '@/lib/builder/cms';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { resolveBuilderCmsRouteActor } from '@/lib/builder/cms-route-actor';
 
 export async function GET(
   request: NextRequest,
@@ -29,16 +30,17 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
+    const routeActor = resolveBuilderCmsRouteActor(auth, request);
     const detail = await readEditableBuilderCmsCollection(
       params.siteId,
       locale,
       params.collectionId,
-      { actor: 'admin' },
+      routeActor,
     );
     if (!detail) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
-    return NextResponse.json({ ok: true, records: detail.records });
+    return NextResponse.json({ ok: true, actor: routeActor.actor, records: detail.records });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {
       return NextResponse.json({ ok: false, error: error.message }, { status: 403 });
@@ -72,17 +74,18 @@ export async function POST(
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
     const payload = await request.json();
+    const routeActor = resolveBuilderCmsRouteActor(auth, request);
     const record = await createEditableBuilderCmsRecord(
       params.siteId,
       locale,
       params.collectionId,
       payload,
-      { actor: 'admin' },
+      routeActor,
     );
     if (!record) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
-    return NextResponse.json({ ok: true, record }, { status: 201 });
+    return NextResponse.json({ ok: true, actor: routeActor.actor, record }, { status: 201 });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {
       return NextResponse.json({ ok: false, error: error.message }, { status: 403 });

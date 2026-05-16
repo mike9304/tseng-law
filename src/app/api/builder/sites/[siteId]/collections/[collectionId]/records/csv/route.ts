@@ -9,6 +9,7 @@ import {
 import { isBuilderCollectionId } from '@/lib/builder/cms';
 import { isDefaultBuilderSiteId } from '@/lib/builder/site';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { CMS_ACTOR_HEADER, resolveBuilderCmsRouteActor } from '@/lib/builder/cms-route-actor';
 
 export async function GET(
   request: NextRequest,
@@ -30,11 +31,12 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
+    const routeActor = resolveBuilderCmsRouteActor(auth, request);
     const result = await exportEditableBuilderCmsRecordsCsv(
       params.siteId,
       locale,
       params.collectionId,
-      { actor: 'admin' },
+      routeActor,
     );
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
@@ -44,6 +46,7 @@ export async function GET(
       headers: {
         'content-disposition': `attachment; filename="${result.filename}"`,
         'content-type': 'text/csv; charset=utf-8',
+        [CMS_ACTOR_HEADER]: routeActor.actor,
       },
     });
   } catch (error) {
@@ -82,17 +85,18 @@ export async function POST(
     const mode: BuilderCmsCsvImportMode = payload.mode === 'replace' ? 'replace' : 'append';
     const csv = typeof payload.csv === 'string' ? payload.csv : '';
     const columnMap = isCsvColumnMap(payload.columnMap) ? payload.columnMap : undefined;
+    const routeActor = resolveBuilderCmsRouteActor(auth, request);
     const result = await importEditableBuilderCmsRecordsCsv(
       params.siteId,
       locale,
       params.collectionId,
       csv,
-      { mode, actor: 'admin', columnMap },
+      { mode, columnMap, ...routeActor },
     );
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
     }
-    return NextResponse.json({ ok: true, ...result }, { status: 201 });
+    return NextResponse.json({ ok: true, actor: routeActor.actor, ...result }, { status: 201 });
   } catch (error) {
     if (error instanceof BuilderCmsPermissionError) {
       return NextResponse.json({ ok: false, error: error.message }, { status: 403 });

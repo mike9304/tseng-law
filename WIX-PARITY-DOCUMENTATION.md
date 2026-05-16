@@ -237,6 +237,25 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - F08/F10/F11/F12/F13 hardening: bulk workflows, advanced validation UI, import mapping/streaming, actor identity, revision diff/names.
 
+## M158-J — CMS Bulk Row Workflow
+
+- 시작/종료: 2026-05-17 / 2026-05-17
+- 변경 파일:
+  - `src/lib/builder/cms-editable.ts` — selected record ID list validation, strict status validation, bulk status update, bulk delete 엔진 추가
+  - `src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/bulk/route.ts` — guarded CMS bulk mutation route 추가
+  - `src/components/builder/cms/ContentManagerClient.tsx` — visible row selection, per-row checkbox, selected count, bulk publish/draft/archive/delete/clear UI 추가
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — duplicate IDs dedupe, missing ID reporting, revision snapshot, bulk delete persistence 검증 추가
+- F-layer 판정:
+  - F08 🟡 → 🟢: Admin can create/edit/duplicate/delete/search/sort rows, and now manage selected rows with bulk publish/draft/archive/delete workflows.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (14 tests)
+  - `npx eslint src/lib/builder/cms-editable.ts src/lib/builder/__tests__/cms-editable.test.ts src/components/builder/cms/ContentManagerClient.tsx 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/bulk/route.ts'` ✅
+  - `npm run typecheck` ✅
+  - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
+  - `git diff --check` ✅
+- 남은 M158:
+  - F09/F10/F11/F12/F13 hardening: typed field UI completeness, advanced validation UI, import mapping/streaming, actor identity, revision diff/names.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

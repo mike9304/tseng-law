@@ -5,6 +5,8 @@ import { readBuilderImageAsset } from '@/lib/builder/assets';
 import {
   BuilderCmsPermissionError,
   BuilderCmsValidationError,
+  bulkDeleteEditableBuilderCmsRecords,
+  bulkUpdateEditableBuilderCmsRecordStatus,
   canAccessBuilderCmsCollection,
   createEditableBuilderCmsCollection,
   createEditableBuilderCmsRecord,
@@ -206,6 +208,68 @@ describe('editable builder CMS store', () => {
     await expect(
       readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
     ).resolves.toMatchObject({ recordCount: 3 });
+  });
+
+  it('bulk updates and deletes selected editable records', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'testimonials',
+      name: 'Testimonials',
+    });
+    const first = await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+      fields: { title: 'First quote', slug: 'first' },
+    });
+    const second = await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+      fields: { title: 'Second quote', slug: 'second' },
+    });
+    const third = await createEditableBuilderCmsRecord('test-site', 'ko', 'testimonials', {
+      fields: { title: 'Third quote', slug: 'third' },
+    });
+
+    const archived = await bulkUpdateEditableBuilderCmsRecordStatus(
+      'test-site',
+      'ko',
+      'testimonials',
+      [first!.recordId, second!.recordId, first!.recordId, 'missing-record'],
+      'archived',
+    );
+
+    expect(archived).toMatchObject({
+      requested: 3,
+      updated: 2,
+      missingRecordIds: ['missing-record'],
+    });
+    expect(archived?.records.map((record) => record.status)).toEqual(['archived', 'archived']);
+    expect(archived?.records[0].revisions?.[0]).toMatchObject({
+      action: 'update',
+      status: 'draft',
+      fields: { title: 'First quote', slug: 'first' },
+    });
+
+    const latest = await readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials');
+    expect(latest?.records.map((record) => [record.fields.slug, record.status])).toEqual([
+      ['first', 'archived'],
+      ['second', 'archived'],
+      ['third', 'draft'],
+    ]);
+
+    const deleted = await bulkDeleteEditableBuilderCmsRecords(
+      'test-site',
+      'ko',
+      'testimonials',
+      [first!.recordId, third!.recordId, 'missing-record'],
+    );
+
+    expect(deleted).toMatchObject({
+      requested: 3,
+      deleted: 2,
+      missingRecordIds: ['missing-record'],
+    });
+    await expect(
+      readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
+    ).resolves.toMatchObject({
+      recordCount: 1,
+      records: [{ recordId: second!.recordId }],
+    });
   });
 
   it('filters and sorts records by searchable field values', async () => {

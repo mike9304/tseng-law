@@ -93,6 +93,20 @@ export interface BuilderCmsCsvImportResult {
   records: BuilderCmsRecord[];
 }
 
+export interface BuilderCmsBulkStatusResult {
+  requested: number;
+  updated: number;
+  records: BuilderCmsRecord[];
+  missingRecordIds: string[];
+}
+
+export interface BuilderCmsBulkDeleteResult {
+  requested: number;
+  deleted: number;
+  records: BuilderCmsRecord[];
+  missingRecordIds: string[];
+}
+
 let generatedIdCounter = 0;
 
 export function defaultBuilderCmsPermissions(): BuilderCmsPermissions {
@@ -397,6 +411,112 @@ export async function deleteEditableBuilderCmsRecord(
   site.updatedAt = now;
   await writeSiteDocument(site);
   return true;
+}
+
+export async function bulkUpdateEditableBuilderCmsRecordStatus(
+  siteId: string,
+  localeInput: string | null | undefined,
+  collectionId: string,
+  recordIdsInput: unknown,
+  statusInput: unknown,
+  options: BuilderCmsAccessOptions = {},
+): Promise<BuilderCmsBulkStatusResult | null> {
+  const recordIds = normalizeRecordIdList(recordIdsInput);
+  const status = normalizeRecordStatusStrict(statusInput);
+  const locale = normalizeLocale(localeInput ?? undefined);
+  const site = await readSiteDocument(siteId, locale);
+  const collections = normalizeCmsCollections(site.cmsCollections);
+  const collectionIndex = collections.findIndex((candidate) => candidate.collectionId === collectionId);
+  if (collectionIndex === -1) return null;
+
+  const collection = collections[collectionIndex];
+  assertCmsPermission(collection, 'update', resolveCmsActor(options));
+  const requestedRecordIds = new Set(recordIds);
+  const foundRecordIds = new Set<string>();
+  const validatedFields = new Map<string, Record<string, unknown>>();
+
+  for (const record of collection.records) {
+    if (!requestedRecordIds.has(record.recordId)) continue;
+    foundRecordIds.add(record.recordId);
+    const fields = validateRecordFields(collection, record.fields, { recordId: record.recordId });
+    await assertRecordMediaAssetsExist(collection, fields);
+    validatedFields.set(record.recordId, fields);
+  }
+
+  const now = new Date().toISOString();
+  let updated = 0;
+  const records = collection.records.map((record) => {
+    if (!requestedRecordIds.has(record.recordId)) return record;
+    const fields = validatedFields.get(record.recordId) ?? record.fields;
+    if (record.status === status) return { ...record, fields };
+    updated += 1;
+    return {
+      ...record,
+      status,
+      fields,
+      revisions: appendRecordRevision(record, 'update'),
+      updatedAt: now,
+    };
+  });
+
+  if (updated > 0) {
+    const nextCollection = { ...collection, records, updatedAt: now };
+    site.cmsCollections = collections.map((candidate, candidateIndex) => (
+      candidateIndex === collectionIndex ? nextCollection : candidate
+    ));
+    site.updatedAt = now;
+    await writeSiteDocument(site);
+  }
+
+  return {
+    requested: recordIds.length,
+    updated,
+    records: records.filter((record) => requestedRecordIds.has(record.recordId)),
+    missingRecordIds: recordIds.filter((recordId) => !foundRecordIds.has(recordId)),
+  };
+}
+
+export async function bulkDeleteEditableBuilderCmsRecords(
+  siteId: string,
+  localeInput: string | null | undefined,
+  collectionId: string,
+  recordIdsInput: unknown,
+  options: BuilderCmsAccessOptions = {},
+): Promise<BuilderCmsBulkDeleteResult | null> {
+  const recordIds = normalizeRecordIdList(recordIdsInput);
+  const locale = normalizeLocale(localeInput ?? undefined);
+  const site = await readSiteDocument(siteId, locale);
+  const collections = normalizeCmsCollections(site.cmsCollections);
+  const collectionIndex = collections.findIndex((candidate) => candidate.collectionId === collectionId);
+  if (collectionIndex === -1) return null;
+
+  const collection = collections[collectionIndex];
+  assertCmsPermission(collection, 'delete', resolveCmsActor(options));
+  const requestedRecordIds = new Set(recordIds);
+  const foundRecordIds = new Set<string>();
+  const records = collection.records.filter((record) => {
+    if (!requestedRecordIds.has(record.recordId)) return true;
+    foundRecordIds.add(record.recordId);
+    return false;
+  });
+  const deleted = collection.records.length - records.length;
+
+  if (deleted > 0) {
+    const now = new Date().toISOString();
+    const nextCollection = { ...collection, records, updatedAt: now };
+    site.cmsCollections = collections.map((candidate, candidateIndex) => (
+      candidateIndex === collectionIndex ? nextCollection : candidate
+    ));
+    site.updatedAt = now;
+    await writeSiteDocument(site);
+  }
+
+  return {
+    requested: recordIds.length,
+    deleted,
+    records,
+    missingRecordIds: recordIds.filter((recordId) => !foundRecordIds.has(recordId)),
+  };
 }
 
 export function filterAndSortBuilderCmsRecords(
@@ -1241,6 +1361,11 @@ function normalizeRecordStatus(input: unknown): BuilderCmsRecordStatus {
   return input === 'published' || input === 'archived' ? input : 'draft';
 }
 
+function normalizeRecordStatusStrict(input: unknown): BuilderCmsRecordStatus {
+  if (input === 'draft' || input === 'published' || input === 'archived') return input;
+  throw new BuilderCmsValidationError('Record status must be draft, published, or archived.');
+}
+
 function normalizeRevisionAction(input: unknown): BuilderCmsRecordRevisionAction {
   return input === 'restore' ? 'restore' : 'update';
 }
@@ -1265,6 +1390,18 @@ function normalizeOptionalId(input: unknown, label: string): string | null {
     throw new BuilderCmsValidationError(`${label} must use lowercase letters, numbers, and hyphens.`);
   }
   return value;
+}
+
+function normalizeRecordIdList(input: unknown): string[] {
+  if (!Array.isArray(input)) {
+    throw new BuilderCmsValidationError('recordIds must be an array.');
+  }
+  const recordIds = input.map((value, index) => normalizeRequiredId(value, `recordIds[${index}]`));
+  const uniqueRecordIds = [...new Set(recordIds)];
+  if (uniqueRecordIds.length === 0) {
+    throw new BuilderCmsValidationError('At least one record ID is required.');
+  }
+  return uniqueRecordIds;
 }
 
 function normalizeFieldKey(input: unknown, label: string): string {

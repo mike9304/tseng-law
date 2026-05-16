@@ -22,6 +22,7 @@ import {
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
   type BuilderCmsRecordRevision,
+  type BuilderCmsRecordStatus,
 } from '@/lib/builder/cms-types';
 import type { BuilderAssetListItem } from '@/lib/builder/assets';
 import type { BuilderCollectionSummary } from '@/lib/builder/cms';
@@ -44,6 +45,19 @@ type ApiCollectionDetail = {
 type ApiRecordMutation = {
   ok: boolean;
   record?: BuilderCmsRecord;
+  error?: string;
+  issues?: string[];
+};
+
+type ApiBulkRecordMutation = {
+  ok: boolean;
+  action?: string;
+  status?: BuilderCmsRecordStatus;
+  requested?: number;
+  updated?: number;
+  deleted?: number;
+  records?: BuilderCmsRecord[];
+  missingRecordIds?: string[];
   error?: string;
   issues?: string[];
 };
@@ -141,6 +155,7 @@ export default function ContentManagerClient({
   const [savedViews, setSavedViews] = useState<BuilderCmsRecordSavedView[]>([]);
   const [selectedViewId, setSelectedViewId] = useState('');
   const [newViewName, setNewViewName] = useState('');
+  const [selectedRecordIds, setSelectedRecordIds] = useState<string[]>([]);
   const [csvImportText, setCsvImportText] = useState('');
   const [csvImportMode, setCsvImportMode] = useState<CsvImportMode>('append');
   const [assetFieldKey, setAssetFieldKey] = useState<string | null>(null);
@@ -190,6 +205,10 @@ export default function ContentManagerClient({
   }, [detail, effectiveRecordSortBy, recordFilters, recordPage, recordPageSize, recordQuery, recordSortDirection]);
 
   const visibleRecords = recordQueryResult.records;
+  const selectedRecordIdSet = useMemo(() => new Set(selectedRecordIds), [selectedRecordIds]);
+  const visibleRecordIds = useMemo(() => visibleRecords.map((record) => record.recordId), [visibleRecords]);
+  const allVisibleRecordsSelected = visibleRecordIds.length > 0
+    && visibleRecordIds.every((recordId) => selectedRecordIdSet.has(recordId));
 
   useEffect(() => {
     setPermissionDraft(detail ? normalizePermissionDraft(detail.permissions) : defaultCmsPermissionDraft());
@@ -207,6 +226,7 @@ export default function ContentManagerClient({
     setRecordFilterField(nextFilterField);
     setRecordFilterOperator(nextFilterOperator);
     setRecordFilterValue(defaultRecordFilterValue(nextFilterField, nextFilterOperator));
+    setSelectedRecordIds([]);
     if (typeof window === 'undefined') return;
     setSavedViews(readSavedRecordViews(siteId, locale, detail.collectionId));
     setSelectedViewId('');
@@ -371,6 +391,23 @@ export default function ContentManagerClient({
     setSelectedViewId('');
   }
 
+  function toggleRecordSelection(recordId: string, selected: boolean) {
+    setSelectedRecordIds((current) => {
+      if (selected) return current.includes(recordId) ? current : [...current, recordId];
+      return current.filter((candidate) => candidate !== recordId);
+    });
+  }
+
+  function toggleVisibleRecordSelection(selected: boolean) {
+    setSelectedRecordIds((current) => {
+      const visibleIdSet = new Set(visibleRecordIds);
+      if (!selected) return current.filter((recordId) => !visibleIdSet.has(recordId));
+      const next = new Set(current);
+      for (const recordId of visibleRecordIds) next.add(recordId);
+      return [...next];
+    });
+  }
+
   function applyRecordSavedView(viewId: string) {
     const view = savedViews.find((candidate) => candidate.viewId === viewId);
     if (!view) {
@@ -530,6 +567,7 @@ export default function ContentManagerClient({
       if (!response.ok || !result.ok) throw new Error(result.error ?? 'Failed to delete record.');
       await loadDetail(detail.collectionId);
       await refreshCollections(detail.collectionId);
+      setSelectedRecordIds((current) => current.filter((candidate) => candidate !== recordId));
       setMessage('Record deleted.');
     } catch (deleteError) {
       setError(deleteError instanceof Error ? deleteError.message : 'Failed to delete record.');
@@ -557,6 +595,71 @@ export default function ContentManagerClient({
       setMessage('Record duplicated.');
     } catch (duplicateError) {
       setError(duplicateError instanceof Error ? duplicateError.message : 'Failed to duplicate record.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function bulkUpdateSelectedRecordsStatus(status: BuilderCmsRecordStatus) {
+    if (!detail || selectedRecordIds.length === 0) return;
+    const actionLabel = status === 'published' ? 'publish' : status === 'draft' ? 'move to draft' : 'archive';
+    if (!window.confirm(`${actionLabel} ${selectedRecordIds.length} selected records?`)) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(
+        `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/bulk?locale=${locale}`,
+        {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'status', status, recordIds: selectedRecordIds }),
+        },
+      );
+      const result = await response.json() as ApiBulkRecordMutation;
+      if (!response.ok || !result.ok) {
+        throw new Error(result.issues?.join('\n') || result.error || 'Failed to update selected records.');
+      }
+      await loadDetail(detail.collectionId);
+      await refreshCollections(detail.collectionId);
+      setSelectedRecordIds([]);
+      const missing = result.missingRecordIds?.length ? ` ${result.missingRecordIds.length} missing.` : '';
+      setMessage(`Updated ${result.updated ?? 0} selected records.${missing}`);
+    } catch (bulkError) {
+      setError(bulkError instanceof Error ? bulkError.message : 'Failed to update selected records.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function bulkDeleteSelectedRecords() {
+    if (!detail || selectedRecordIds.length === 0) return;
+    if (!window.confirm(`Delete ${selectedRecordIds.length} selected records?`)) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(
+        `${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}/records/bulk?locale=${locale}`,
+        {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'delete', recordIds: selectedRecordIds }),
+        },
+      );
+      const result = await response.json() as ApiBulkRecordMutation;
+      if (!response.ok || !result.ok) {
+        throw new Error(result.issues?.join('\n') || result.error || 'Failed to delete selected records.');
+      }
+      await loadDetail(detail.collectionId);
+      await refreshCollections(detail.collectionId);
+      setSelectedRecordIds([]);
+      const missing = result.missingRecordIds?.length ? ` ${result.missingRecordIds.length} missing.` : '';
+      setMessage(`Deleted ${result.deleted ?? 0} selected records.${missing}`);
+    } catch (bulkError) {
+      setError(bulkError instanceof Error ? bulkError.message : 'Failed to delete selected records.');
     } finally {
       setBusy(false);
     }
@@ -1227,6 +1330,69 @@ export default function ContentManagerClient({
                   Showing {visibleRecords.length} of {recordQueryResult.total} matching records from {detail.records.length} total.
                   Page {recordQueryResult.page} of {recordQueryResult.pageCount}.
                 </p>
+                <div className="builder-dashboard-page-actions" style={{ justifyContent: 'space-between' }}>
+                  <label
+                    style={{
+                      alignItems: 'center',
+                      color: '#475569',
+                      display: 'flex',
+                      fontSize: 12,
+                      fontWeight: 700,
+                      gap: 8,
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={allVisibleRecordsSelected}
+                      disabled={busy || visibleRecordIds.length === 0}
+                      onChange={(event) => toggleVisibleRecordSelection(event.target.checked)}
+                    />
+                    Select visible
+                  </label>
+                  <span style={{ color: '#64748b', fontSize: 12 }}>
+                    {selectedRecordIds.length} selected
+                  </span>
+                  <button
+                    type="button"
+                    className="builder-action-btn"
+                    onClick={() => void bulkUpdateSelectedRecordsStatus('published')}
+                    disabled={busy || selectedRecordIds.length === 0}
+                  >
+                    Publish
+                  </button>
+                  <button
+                    type="button"
+                    className="builder-action-btn"
+                    onClick={() => void bulkUpdateSelectedRecordsStatus('draft')}
+                    disabled={busy || selectedRecordIds.length === 0}
+                  >
+                    Draft
+                  </button>
+                  <button
+                    type="button"
+                    className="builder-action-btn"
+                    onClick={() => void bulkUpdateSelectedRecordsStatus('archived')}
+                    disabled={busy || selectedRecordIds.length === 0}
+                  >
+                    Archive
+                  </button>
+                  <button
+                    type="button"
+                    className="builder-action-btn"
+                    onClick={() => void bulkDeleteSelectedRecords()}
+                    disabled={busy || selectedRecordIds.length === 0}
+                  >
+                    Delete selected
+                  </button>
+                  <button
+                    type="button"
+                    className="builder-action-btn"
+                    onClick={() => setSelectedRecordIds([])}
+                    disabled={busy || selectedRecordIds.length === 0}
+                  >
+                    Clear
+                  </button>
+                </div>
               </div>
               <div style={{ display: 'grid', gap: 10, marginBottom: 12 }}>
                 <label style={labelStyle}>
@@ -1272,10 +1438,26 @@ export default function ContentManagerClient({
                 {visibleRecords.map((record) => (
                   <article key={record.recordId} className="builder-dashboard-page-card">
                     <div className="builder-dashboard-page-head">
-                      <div>
-                        <strong>{record.fields.title ? String(record.fields.title) : record.recordId}</strong>
-                        <span>{record.recordId}</span>
-                      </div>
+                      <label
+                        style={{
+                          alignItems: 'flex-start',
+                          display: 'flex',
+                          gap: 10,
+                          minWidth: 0,
+                        }}
+                      >
+                        <input
+                          type="checkbox"
+                          aria-label={`Select ${record.recordId}`}
+                          checked={selectedRecordIdSet.has(record.recordId)}
+                          disabled={busy}
+                          onChange={(event) => toggleRecordSelection(record.recordId, event.target.checked)}
+                        />
+                        <span style={{ display: 'grid', minWidth: 0 }}>
+                          <strong>{record.fields.title ? String(record.fields.title) : record.recordId}</strong>
+                          <span>{record.recordId}</span>
+                        </span>
+                      </label>
                       <span className="builder-stage-pill">{record.status}</span>
                     </div>
                     <div className="builder-dashboard-page-meta">

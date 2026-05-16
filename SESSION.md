@@ -6595,3 +6595,27 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run typecheck` ✅
 - 다음 후보:
   - M158-J: F08 bulk row workflow 또는 F10 validation UI hardening.
+
+## 2026-05-17 Codex /goal M158-J CMS bulk row workflow
+
+- CMS Content Manager record list에 selected-row workflow를 추가했다.
+- UI:
+  - visible rows select checkbox
+  - per-record checkbox
+  - selected count
+  - bulk Publish / Draft / Archive / Delete selected / Clear actions
+- 저장소/API:
+  - `bulkUpdateEditableBuilderCmsRecordStatus`는 record IDs를 dedupe하고, strict status만 허용하며, 기존 record snapshot을 revision으로 남긴다.
+  - `bulkDeleteEditableBuilderCmsRecords`는 selected IDs를 한 번에 삭제하고 missing IDs를 보고한다.
+  - 새 `/records/bulk` route는 `guardMutation(request, { permission: 'edit-pages' })` 아래에서 bulk status/delete를 처리한다.
+- 체크포인트 상태:
+  - F08 🟡 → 🟢: create/edit/duplicate/delete/search/sort row UI에 bulk publish/draft/archive/delete selected workflow까지 붙었다.
+  - M158 전체는 아직 🟡: F09/F10/F11/F12/F13 hardening 잔여.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (14 tests)
+  - `npx eslint src/lib/builder/cms-editable.ts src/lib/builder/__tests__/cms-editable.test.ts src/components/builder/cms/ContentManagerClient.tsx 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/bulk/route.ts'` ✅
+  - `npm run typecheck` ✅
+  - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
+  - `git diff --check` ✅
+- 다음 후보:
+  - M158-K: F09 typed field UI completeness 또는 F10 validation/defaults UI hardening.

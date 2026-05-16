@@ -6644,3 +6644,31 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - M158-L: F10 validation/defaults UI hardening 또는 F13 revision diff/names.
+
+## 2026-05-17 Codex /goal M158-L CMS validation defaults and help text
+
+- CMS field model에 `helpText`를 추가했다.
+- Field schema normalization:
+  - defaultValue는 field type 기준으로 coerce/validate된다.
+  - helpText는 trim 후 240자 cap.
+  - validation min/max는 숫자로 normalize하고 min > max는 거부한다.
+  - regex pattern은 저장 전에 `RegExp` 생성 가능 여부를 검증한다.
+  - options는 dedupe된 string list로 normalize한다.
+- Record validation:
+  - number min/max enforcement.
+  - text/rich-text/slug/email/url/reference length min/max + regex + options enforcement.
+  - string-list/tags length min/max + allowed options enforcement.
+- UI:
+  - add field form에 default value, help text, min, max, regex, options controls를 추가했다.
+  - field cards에 default/validation/help metadata를 표시한다.
+  - record field inputs에 help text를 표시한다.
+- 체크포인트 상태:
+  - F10 🟡 → 🟢: required/unique/default/min/max/regex/options/help text 저장·표시·서버 enforcement evidence 충족.
+  - M158 전체는 아직 🟡: F11/F12/F13 hardening 잔여.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (16 tests)
+  - `npx eslint src/lib/builder/cms-types.ts src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts` ✅
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+- 다음 후보:
+  - M158-M: F11 import mapping/summary hardening 또는 F13 revision diff/names.

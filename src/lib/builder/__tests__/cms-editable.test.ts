@@ -616,6 +616,154 @@ describe('editable builder CMS store', () => {
     });
   });
 
+  it('normalizes defaults, help text, min/max, regex, and options for fields', async () => {
+    const detail = await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'validated',
+      name: 'Validated',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+          helpText: ' Use a short internal title ',
+        },
+        {
+          fieldId: 'field-slug',
+          key: 'slug',
+          label: 'Slug',
+          type: 'slug',
+          localized: false,
+          repeated: false,
+          required: true,
+          unique: true,
+        },
+        {
+          fieldId: 'field-summary',
+          key: 'summary',
+          label: 'Summary',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: false,
+          defaultValue: 'Valid summary',
+          validation: { min: '5' as unknown as number, max: 20, pattern: '^Valid' },
+        },
+        {
+          fieldId: 'field-score',
+          key: 'score',
+          label: 'Score',
+          type: 'number',
+          localized: false,
+          repeated: false,
+          required: false,
+          defaultValue: '7',
+          validation: { min: 1, max: 10 },
+        },
+        {
+          fieldId: 'field-state',
+          key: 'state',
+          label: 'State',
+          type: 'text',
+          localized: false,
+          repeated: false,
+          required: false,
+          defaultValue: 'published',
+          validation: { options: ['draft', 'published', 'published'] },
+        },
+      ],
+    });
+
+    expect(detail.fields.find((field) => field.key === 'title')).toMatchObject({
+      helpText: 'Use a short internal title',
+    });
+    expect(detail.fields.find((field) => field.key === 'summary')).toMatchObject({
+      defaultValue: 'Valid summary',
+      validation: { min: 5, max: 20, pattern: '^Valid' },
+    });
+    expect(detail.fields.find((field) => field.key === 'score')).toMatchObject({
+      defaultValue: 7,
+      validation: { min: 1, max: 10 },
+    });
+    expect(detail.fields.find((field) => field.key === 'state')).toMatchObject({
+      defaultValue: 'published',
+      validation: { options: ['draft', 'published'] },
+    });
+
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'validated', {
+      fields: { title: 'Defaulted', slug: 'defaulted' },
+    });
+    expect(created?.fields).toMatchObject({
+      summary: 'Valid summary',
+      score: 7,
+      state: 'published',
+    });
+
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'validated', {
+        fields: {
+          title: 'Bad summary',
+          slug: 'bad-summary',
+          summary: 'No',
+          score: 5,
+          state: 'draft',
+        },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Summary must be at least 5.'],
+    });
+
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'validated', {
+        fields: {
+          title: 'Bad score',
+          slug: 'bad-score',
+          summary: 'Valid custom',
+          score: 11,
+          state: 'draft',
+        },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Score must be at most 10.'],
+    });
+
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'validated', {
+        fields: {
+          title: 'Bad option',
+          slug: 'bad-option',
+          summary: 'Valid custom',
+          score: 5,
+          state: 'archived',
+        },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['State must be one of: draft, published.'],
+    });
+
+    await expect(
+      updateEditableBuilderCmsCollection('test-site', 'ko', 'validated', {
+        fields: [
+          {
+            fieldId: 'field-broken',
+            key: 'broken',
+            label: 'Broken',
+            type: 'text',
+            localized: false,
+            repeated: false,
+            required: false,
+            validation: { pattern: '[' },
+          },
+        ],
+      }),
+    ).rejects.toMatchObject({
+      message: 'fields[0].validation.pattern must be a valid regex.',
+    });
+  });
+
   it('updates CMS permissions and gates record access by actor', async () => {
     await createEditableBuilderCmsCollection('test-site', 'ko', {
       collectionId: 'testimonials',

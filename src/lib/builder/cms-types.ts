@@ -42,6 +42,7 @@ export interface BuilderCmsFieldDefinition {
   repeated: boolean;
   required: boolean;
   unique?: boolean;
+  helpText?: string;
   defaultValue?: unknown;
   validation?: BuilderCmsFieldValidation;
   relationCollectionId?: string;

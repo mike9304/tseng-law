@@ -507,6 +507,9 @@ export default function ContentManagerClient({
       repeated: formData.get('repeated') === 'on',
       required: formData.get('required') === 'on',
       unique: formData.get('unique') === 'on',
+      helpText: String(formData.get('helpText') ?? '').trim() || undefined,
+      defaultValue: defaultValueFromFieldForm(formData),
+      validation: validationFromFieldForm(formData),
       relationCollectionId,
     };
     await saveCollectionFields([...detail.fields, nextField]);
@@ -1085,6 +1088,14 @@ export default function ContentManagerClient({
                       <span>{field.required ? 'Required' : 'Optional'}</span>
                       <span>{field.unique ? 'Unique' : 'Not unique'}</span>
                       <span>{field.localized ? 'Localized' : 'Shared'}</span>
+                      {field.defaultValue !== undefined ? <span>Default: {formatValue(field.defaultValue)}</span> : null}
+                      {field.validation?.min !== undefined ? <span>Min: {field.validation.min}</span> : null}
+                      {field.validation?.max !== undefined ? <span>Max: {field.validation.max}</span> : null}
+                      {field.validation?.pattern ? <span>Regex: {field.validation.pattern}</span> : null}
+                      {field.validation?.options?.length ? (
+                        <span>Options: {field.validation.options.join(', ')}</span>
+                      ) : null}
+                      {field.helpText ? <span>Help: {field.helpText}</span> : null}
                     </div>
                   </article>
                 ))}
@@ -1124,6 +1135,35 @@ export default function ContentManagerClient({
                         </option>
                       ))}
                     </select>
+                  </label>
+                  <label style={labelStyle}>
+                    Default value
+                    <input name="defaultValue" type="text" style={inputStyle} placeholder="Optional default" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Help text
+                    <input name="helpText" type="text" style={inputStyle} placeholder="Shown under the field" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Min
+                    <input name="validationMin" type="number" style={inputStyle} placeholder="Min value or length" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Max
+                    <input name="validationMax" type="number" style={inputStyle} placeholder="Max value or length" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Regex pattern
+                    <input name="validationPattern" type="text" style={inputStyle} placeholder="^[A-Z].+" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Allowed options
+                    <textarea
+                      name="validationOptions"
+                      style={{ ...inputStyle, minHeight: 72, resize: 'vertical' }}
+                      placeholder="One option per line"
+                      disabled={busy}
+                    />
                   </label>
                 </div>
                 <div className="builder-dashboard-page-actions">
@@ -1765,6 +1805,7 @@ function CmsFieldInput({
     return (
       <label style={labelStyle}>
         {field.label}
+        {field.helpText ? <span style={{ color: '#64748b', fontWeight: 500 }}>{field.helpText}</span> : null}
         <select
           style={inputStyle}
           value={value === true ? 'true' : value === false ? 'false' : ''}
@@ -1783,6 +1824,7 @@ function CmsFieldInput({
     return (
       <label style={labelStyle}>
         {field.label}
+        {field.helpText ? <span style={{ color: '#64748b', fontWeight: 500 }}>{field.helpText}</span> : null}
         <textarea
           style={{ ...inputStyle, minHeight: 118, resize: 'vertical' }}
           value={typeof value === 'string' ? value : ''}
@@ -1798,6 +1840,7 @@ function CmsFieldInput({
     return (
       <label style={labelStyle}>
         {field.label}
+        {field.helpText ? <span style={{ color: '#64748b', fontWeight: 500 }}>{field.helpText}</span> : null}
         <input
           type="text"
           style={inputStyle}
@@ -1814,6 +1857,7 @@ function CmsFieldInput({
     return (
       <label style={labelStyle}>
         {field.label}
+        {field.helpText ? <span style={{ color: '#64748b', fontWeight: 500 }}>{field.helpText}</span> : null}
         <textarea
           style={{ ...inputStyle, minHeight: 82, resize: 'vertical' }}
           value={typeof value === 'string' ? value : ''}
@@ -1830,6 +1874,7 @@ function CmsFieldInput({
     return (
       <div style={labelStyle}>
         <span>{field.label}</span>
+        {field.helpText ? <span style={{ color: '#64748b', fontWeight: 500 }}>{field.helpText}</span> : null}
         <input
           type="url"
           style={inputStyle}
@@ -1912,6 +1957,7 @@ function CmsFieldInput({
   return (
     <label style={labelStyle}>
       {field.label}
+      {field.helpText ? <span style={{ color: '#64748b', fontWeight: 500 }}>{field.helpText}</span> : null}
       <input
         type={inputType}
         style={inputStyle}
@@ -1969,6 +2015,33 @@ function normalizeCmsFieldType(input: FormDataEntryValue | null): BuilderCmsFiel
     : 'text';
 }
 
+function defaultValueFromFieldForm(formData: FormData): string | undefined {
+  const value = String(formData.get('defaultValue') ?? '').trim();
+  return value || undefined;
+}
+
+function validationFromFieldForm(formData: FormData): BuilderCmsFieldDefinition['validation'] {
+  const min = optionalNumberFromForm(formData.get('validationMin'));
+  const max = optionalNumberFromForm(formData.get('validationMax'));
+  const pattern = String(formData.get('validationPattern') ?? '').trim();
+  const options = String(formData.get('validationOptions') ?? '')
+    .split('\n')
+    .map((option) => option.trim())
+    .filter(Boolean);
+  const validation: NonNullable<BuilderCmsFieldDefinition['validation']> = {};
+  if (min !== undefined) validation.min = min;
+  if (max !== undefined) validation.max = max;
+  if (pattern) validation.pattern = pattern;
+  if (options.length > 0) validation.options = [...new Set(options)];
+  return Object.keys(validation).length > 0 ? validation : undefined;
+}
+
+function optionalNumberFromForm(value: FormDataEntryValue | null): number | undefined {
+  if (typeof value !== 'string' || !value.trim()) return undefined;
+  const numeric = Number(value);
+  return Number.isFinite(numeric) ? numeric : undefined;
+}
+
 function apiBase(siteId: string) {
   return `/api/builder/sites/${encodeURIComponent(siteId)}/collections`;
 }
@@ -1997,7 +2070,7 @@ const systemRecordSortOptions = [
 ];
 
 function createEmptyRecordForm(fields: BuilderCmsFieldDefinition[]): RecordFormState {
-  return Object.fromEntries(fields.map((field) => [field.key, '']));
+  return Object.fromEntries(fields.map((field) => [field.key, recordFormValueFromField(field, field.defaultValue)]));
 }
 
 function createRecordFormFromRecord(
@@ -2006,11 +2079,18 @@ function createRecordFormFromRecord(
 ): RecordFormState {
   return Object.fromEntries(fields.map((field) => {
     const value = record.fields[field.key];
-    if (field.type === 'image' && imageValueFromForm(value)) return [field.key, imageValueFromForm(value)!];
-    if (Array.isArray(value)) return [field.key, value.join('\n')];
-    if (typeof value === 'boolean') return [field.key, value];
-    return [field.key, value === undefined || value === null ? '' : String(value)];
+    return [field.key, recordFormValueFromField(field, value)];
   }));
+}
+
+function recordFormValueFromField(
+  field: BuilderCmsFieldDefinition,
+  value: unknown,
+): RecordFormValue {
+  if (field.type === 'image' && imageValueFromForm(value)) return imageValueFromForm(value)!;
+  if (Array.isArray(value)) return value.join('\n');
+  if (typeof value === 'boolean') return value;
+  return value === undefined || value === null ? '' : String(value);
 }
 
 function formatValue(value: unknown): string {

@@ -272,6 +272,24 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - F10/F11/F12/F13 hardening: advanced validation/defaults UI, import mapping/streaming, actor identity, revision diff/names.
 
+## M158-L — CMS Validation Defaults And Help Text
+
+- 시작/종료: 2026-05-17 / 2026-05-17
+- 변경 파일:
+  - `src/lib/builder/cms-types.ts` — field `helpText` metadata 추가
+  - `src/lib/builder/cms-editable.ts` — field defaultValue normalization, helpText trim/cap, min/max/pattern/options validation normalization, text/list/number option enforcement 추가
+  - `src/components/builder/cms/ContentManagerClient.tsx` — add-field form에 default/help/min/max/regex/options controls 추가, field cards and record inputs에 validation/help metadata 표시
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — default coercion, help text normalization, min/max, regex, options, invalid regex rejection 검증 추가
+- F-layer 판정:
+  - F10 🟡 → 🟢: required/unique/default values/min/max/regex/options/help text are stored, rendered, normalized, and enforced by CMS mutations.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (16 tests)
+  - `npx eslint src/lib/builder/cms-types.ts src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts` ✅
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+- 남은 M158:
+  - F11/F12/F13 hardening: import mapping/streaming, actor identity, revision diff/names.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

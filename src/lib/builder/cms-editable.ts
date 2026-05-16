@@ -12,6 +12,7 @@ import {
   type BuilderCmsCollectionDetail,
   type BuilderCmsCollectionSummary,
   type BuilderCmsFieldDefinition,
+  type BuilderCmsFieldValidation,
   type BuilderCmsFieldType,
   type BuilderCmsImageValue,
   type BuilderCmsIndexDefinition,
@@ -757,7 +758,7 @@ function normalizeFieldDefinitions(
       throw new BuilderCmsValidationError(`Duplicate field key: ${key}`);
     }
     seenKeys.add(key);
-    return {
+    const field: BuilderCmsFieldDefinition = {
       fieldId: normalizeOptionalId(source.fieldId, `fields[${index}].fieldId`) ?? generateEntityId('field'),
       key,
       label: normalizeRequiredString(source.label ?? key, `fields[${index}].label`),
@@ -766,15 +767,57 @@ function normalizeFieldDefinitions(
       repeated: Boolean(source.repeated),
       required: Boolean(source.required),
       unique: Boolean(source.unique),
-      defaultValue: source.defaultValue,
-      validation: source.validation && typeof source.validation === 'object'
-        ? source.validation
-        : undefined,
+      helpText: normalizeOptionalFieldText(source.helpText, 240),
+      validation: normalizeFieldValidation(source.validation, index),
       relationCollectionId: typeof source.relationCollectionId === 'string'
         ? normalizeRequiredId(source.relationCollectionId, `fields[${index}].relationCollectionId`)
         : undefined,
     };
+    return {
+      ...field,
+      defaultValue: normalizeFieldDefaultValue(field, source.defaultValue, index),
+    };
   });
+}
+
+function normalizeFieldValidation(input: unknown, fieldIndex: number): BuilderCmsFieldValidation | undefined {
+  if (!input || typeof input !== 'object') return undefined;
+  const source = input as Partial<BuilderCmsFieldValidation>;
+  const validation: BuilderCmsFieldValidation = {};
+  const min = normalizeOptionalNumber(source.min, `fields[${fieldIndex}].validation.min`);
+  const max = normalizeOptionalNumber(source.max, `fields[${fieldIndex}].validation.max`);
+  if (min !== undefined) validation.min = min;
+  if (max !== undefined) validation.max = max;
+  if (min !== undefined && max !== undefined && min > max) {
+    throw new BuilderCmsValidationError(`fields[${fieldIndex}].validation.min must be less than or equal to max.`);
+  }
+  if (typeof source.pattern === 'string' && source.pattern.trim()) {
+    try {
+      new RegExp(source.pattern.trim());
+    } catch {
+      throw new BuilderCmsValidationError(`fields[${fieldIndex}].validation.pattern must be a valid regex.`);
+    }
+    validation.pattern = source.pattern.trim();
+  }
+  const options = normalizeValidationOptions(source.options);
+  if (options.length > 0) validation.options = options;
+  return Object.keys(validation).length > 0 ? validation : undefined;
+}
+
+function normalizeFieldDefaultValue(
+  field: BuilderCmsFieldDefinition,
+  input: unknown,
+  fieldIndex: number,
+): unknown {
+  if (input === undefined || input === null || input === '') return undefined;
+  try {
+    return coerceFieldValue(field, input);
+  } catch (error) {
+    throw new BuilderCmsValidationError(
+      `fields[${fieldIndex}].defaultValue is invalid.`,
+      [error instanceof Error ? error.message : `fields[${fieldIndex}].defaultValue is invalid.`],
+    );
+  }
 }
 
 function defaultIndexDefinitions(fields: BuilderCmsFieldDefinition[]): BuilderCmsIndexDefinition[] {
@@ -1001,26 +1044,28 @@ async function assertCollectionMediaAssetsExist(collection: BuilderCmsCollection
 
 function coerceFieldValue(field: BuilderCmsFieldDefinition, value: unknown): unknown {
   if (field.repeated || field.type === 'string-list') {
-    if (Array.isArray(value)) return value.map((item) => String(item));
-    if (typeof value === 'string') {
-      return value
-        .split('\n')
-        .map((item) => item.trim())
-        .filter(Boolean);
+    const list = Array.isArray(value)
+      ? value.map((item) => String(item))
+      : typeof value === 'string'
+        ? value
+          .split('\n')
+          .map((item) => item.trim())
+          .filter(Boolean)
+        : null;
+    if (!list) throw new Error(`${field.label} must be a list.`);
+    validateFieldMinMax(field, list.length);
+    if (field.validation?.options?.length) {
+      const invalid = list.find((item) => !field.validation?.options?.includes(item));
+      if (invalid) throw new Error(`${field.label} includes an unsupported option: ${invalid}.`);
     }
-    throw new Error(`${field.label} must be a list.`);
+    return list;
   }
 
   switch (field.type) {
     case 'number': {
       const numberValue = typeof value === 'number' ? value : Number(value);
       if (!Number.isFinite(numberValue)) throw new Error(`${field.label} must be a number.`);
-      if (typeof field.validation?.min === 'number' && numberValue < field.validation.min) {
-        throw new Error(`${field.label} must be at least ${field.validation.min}.`);
-      }
-      if (typeof field.validation?.max === 'number' && numberValue > field.validation.max) {
-        throw new Error(`${field.label} must be at most ${field.validation.max}.`);
-      }
+      validateFieldMinMax(field, numberValue);
       return numberValue;
     }
     case 'boolean':
@@ -1036,15 +1081,20 @@ function coerceFieldValue(field: BuilderCmsFieldDefinition, value: unknown): unk
     case 'email': {
       const email = String(value).trim();
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error(`${field.label} must be an email.`);
+      validateTextFieldValue(field, email);
       return email;
     }
     case 'url': {
       const url = String(value).trim();
       if (!/^https?:\/\//.test(url) && !url.startsWith('/')) throw new Error(`${field.label} must be a URL.`);
+      validateTextFieldValue(field, url);
       return url;
     }
-    case 'slug':
-      return normalizeSlug(value);
+    case 'slug': {
+      const slug = normalizeSlug(value);
+      validateTextFieldValue(field, slug);
+      return slug;
+    }
     case 'image':
       return normalizeImageValue(field, value);
     case 'reference':
@@ -1052,12 +1102,29 @@ function coerceFieldValue(field: BuilderCmsFieldDefinition, value: unknown): unk
     case 'rich-text':
     default: {
       const text = String(value);
-      if (field.validation?.pattern) {
-        const pattern = new RegExp(field.validation.pattern);
-        if (!pattern.test(text)) throw new Error(`${field.label} does not match its pattern.`);
-      }
+      validateTextFieldValue(field, text);
       return text;
     }
+  }
+}
+
+function validateTextFieldValue(field: BuilderCmsFieldDefinition, value: string): void {
+  validateFieldMinMax(field, value.length);
+  if (field.validation?.pattern) {
+    const pattern = new RegExp(field.validation.pattern);
+    if (!pattern.test(value)) throw new Error(`${field.label} does not match its pattern.`);
+  }
+  if (field.validation?.options?.length && !field.validation.options.includes(value)) {
+    throw new Error(`${field.label} must be one of: ${field.validation.options.join(', ')}.`);
+  }
+}
+
+function validateFieldMinMax(field: BuilderCmsFieldDefinition, value: number): void {
+  if (typeof field.validation?.min === 'number' && value < field.validation.min) {
+    throw new Error(`${field.label} must be at least ${field.validation.min}.`);
+  }
+  if (typeof field.validation?.max === 'number' && value > field.validation.max) {
+    throw new Error(`${field.label} must be at most ${field.validation.max}.`);
   }
 }
 
@@ -1375,6 +1442,30 @@ function normalizeRequiredString(input: unknown, label: string): string {
     throw new BuilderCmsValidationError(`${label} is required.`);
   }
   return input.trim();
+}
+
+function normalizeOptionalFieldText(input: unknown, maxLength: number): string | undefined {
+  if (typeof input !== 'string') return undefined;
+  const trimmed = input.trim();
+  return trimmed ? trimmed.slice(0, maxLength) : undefined;
+}
+
+function normalizeOptionalNumber(input: unknown, label: string): number | undefined {
+  if (input === undefined || input === null || input === '') return undefined;
+  const value = typeof input === 'number' ? input : Number(input);
+  if (!Number.isFinite(value)) {
+    throw new BuilderCmsValidationError(`${label} must be a number.`);
+  }
+  return value;
+}
+
+function normalizeValidationOptions(input: unknown): string[] {
+  const options = Array.isArray(input)
+    ? input
+    : typeof input === 'string'
+      ? input.split('\n')
+      : [];
+  return [...new Set(options.map((option) => String(option).trim()).filter(Boolean))].slice(0, 200);
 }
 
 function normalizeRequiredId(input: unknown, label: string): string {

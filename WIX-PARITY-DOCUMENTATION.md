@@ -290,6 +290,25 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - F11/F12/F13 hardening: import mapping/streaming, actor identity, revision diff/names.
 
+## M158-M — CMS CSV Mapping And Import Summary
+
+- 시작/종료: 2026-05-17 / 2026-05-17
+- 변경 파일:
+  - `src/lib/builder/cms-editable.ts` — CSV `columnMap`, mapped/skipped summary, missing mapped column validation 추가
+  - `src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/csv/route.ts` — import payload의 `columnMap` 전달
+  - `src/components/builder/cms/ContentManagerClient.tsx` — CSV header preview, target-to-source column mapping UI, import summary 표시 추가
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — custom header mapping, skipped column summary, missing mapped column validation 검증 추가
+- F-layer 판정:
+  - F11 🟡 → 🟢: rows export/import with rollback remain green, and import now has mapping preview plus validation summary evidence.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (16 tests)
+  - `npx eslint src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/csv/route.ts'` ✅
+  - `npm run typecheck` ✅
+  - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
+  - `git diff --check` ✅
+- 남은 M158:
+  - F12/F13 hardening: actor identity, revision diff/names.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

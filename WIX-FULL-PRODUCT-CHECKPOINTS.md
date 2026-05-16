@@ -31,7 +31,7 @@ Completion gate:
 | F08 | CMS | Content manager UI | Admin can create, edit, duplicate, delete, search, and sort collection rows | 🟢 |
 | F09 | CMS | Typed field coverage | Text, rich text, number, boolean, date, media, reference, tags, URL, email fields render and persist | 🟢 |
 | F10 | CMS | Field validation/defaults | Required, unique, default values, min/max, regex, and help text are enforced | 🟢 |
-| F11 | CMS | CSV import/export | Collection rows import/export with validation summary and rollback on failure | 🟡 |
+| F11 | CMS | CSV import/export | Collection rows import/export with validation summary and rollback on failure | 🟢 |
 | F12 | CMS | Collection permissions | Read/write/admin permissions are enforced for public, member, staff, and admin actors | 🟡 |
 | F13 | CMS | Content revisions | Row history, restore, and author/time metadata are available | 🟡 |
 | F14 | CMS | Media field integration | CMS media fields reuse the asset library and store alt text/focal metadata | 🟢 |

@@ -356,6 +356,46 @@ describe('editable builder CMS store', () => {
     await expect(
       readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
     ).resolves.toMatchObject({ recordCount: 1 });
+
+    const mappedImport = await importEditableBuilderCmsRecordsCsv(
+      'test-site',
+      'ko',
+      'testimonials',
+      'Headline,Path,State,Unused\nMapped quote,mapped,published,ignored\n',
+      {
+        columnMap: {
+          title: 'Headline',
+          slug: 'Path',
+          status: 'State',
+        },
+      },
+    );
+    expect(mappedImport).toMatchObject({
+      imported: 1,
+      summary: {
+        mappedColumns: [
+          { target: 'status', source: 'State' },
+          { target: 'title', source: 'Headline' },
+          { target: 'slug', source: 'Path' },
+        ],
+        skippedColumns: ['Unused'],
+      },
+    });
+    await expect(
+      readEditableBuilderCmsCollection('test-site', 'ko', 'testimonials'),
+    ).resolves.toMatchObject({ recordCount: 2 });
+
+    await expect(
+      importEditableBuilderCmsRecordsCsv(
+        'test-site',
+        'ko',
+        'testimonials',
+        'Headline,Path\nBroken,broken\n',
+        { columnMap: { title: 'Missing headline', slug: 'Path' } },
+      ),
+    ).rejects.toMatchObject({
+      issues: ['title maps to missing column: Missing headline'],
+    });
   });
 
   it('stores image fields with asset, alt text, and focal metadata', async () => {

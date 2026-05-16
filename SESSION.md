@@ -6672,3 +6672,27 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - M158-M: F11 import mapping/summary hardening 또는 F13 revision diff/names.
+
+## 2026-05-17 Codex /goal M158-M CMS CSV mapping and import summary
+
+- CSV import가 exact CMS header만 받던 상태에서 custom header mapping을 지원하도록 확장했다.
+- 저장소/API:
+  - `BuilderCmsCsvImportOptions.columnMap` 추가.
+  - `buildImportedCsvRecords`가 target column -> source header mapping을 적용한다.
+  - mapped columns / skipped columns summary를 import result에 포함한다.
+  - explicit mapping이 존재하지 않는 source header를 가리키면 validation error로 rollback된다.
+- UI:
+  - CSV textarea에 header가 있으면 row/column preview를 표시한다.
+  - recordId/status/locale/field key별 source header select를 제공한다.
+  - import 후 mapped/skipped column summary를 표시한다.
+- 체크포인트 상태:
+  - F11 🟡 → 🟢: CSV import/export + validation summary + rollback + import mapping UI evidence 충족.
+  - M158 전체는 아직 🟡: F12/F13 hardening 잔여.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (16 tests)
+  - `npx eslint src/lib/builder/cms-editable.ts src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts 'src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/csv/route.ts'` ✅
+  - `npm run typecheck` ✅
+  - `npm run security:builder-routes` ✅ (`Checked 122 builder route file(s); 107 mutation handler(s) have guard coverage.`)
+  - `git diff --check` ✅
+- 다음 후보:
+  - M158-N: F12 actor identity audit trail 또는 F13 revision diff/names.

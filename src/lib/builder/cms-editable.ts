@@ -77,10 +77,12 @@ export interface BuilderCmsRecordListOptions {
 }
 
 export type BuilderCmsCsvImportMode = 'append' | 'replace';
+export type BuilderCmsCsvColumnMap = Record<string, string>;
 
 export interface BuilderCmsCsvImportOptions {
   mode?: BuilderCmsCsvImportMode;
   actor?: BuilderCmsPermissionActor;
+  columnMap?: BuilderCmsCsvColumnMap;
 }
 
 export interface BuilderCmsCsvExportResult {
@@ -92,6 +94,13 @@ export interface BuilderCmsCsvImportResult {
   imported: number;
   mode: BuilderCmsCsvImportMode;
   records: BuilderCmsRecord[];
+  summary: BuilderCmsCsvImportSummary;
+}
+
+export interface BuilderCmsCsvImportSummary {
+  headers: string[];
+  mappedColumns: { target: string; source: string }[];
+  skippedColumns: string[];
 }
 
 export interface BuilderCmsBulkStatusResult {
@@ -571,11 +580,11 @@ export async function importEditableBuilderCmsRecordsCsv(
   assertCmsPermission(collection, 'create', actor);
   const mode: BuilderCmsCsvImportMode = options.mode === 'replace' ? 'replace' : 'append';
   if (mode === 'replace') assertCmsPermission(collection, 'delete', actor);
-  const importedRecords = await buildImportedCsvRecords(collection, csvText, mode);
+  const importResult = await buildImportedCsvRecords(collection, csvText, mode, options.columnMap);
   const now = new Date().toISOString();
   const nextCollection: BuilderCmsCollection = {
     ...collection,
-    records: mode === 'replace' ? importedRecords : [...collection.records, ...importedRecords],
+    records: mode === 'replace' ? importResult.records : [...collection.records, ...importResult.records],
     updatedAt: now,
   };
   site.cmsCollections = collections.map((candidate, candidateIndex) => (
@@ -584,9 +593,10 @@ export async function importEditableBuilderCmsRecordsCsv(
   site.updatedAt = now;
   await writeSiteDocument(site);
   return {
-    imported: importedRecords.length,
+    imported: importResult.records.length,
     mode,
-    records: importedRecords,
+    records: importResult.records,
+    summary: importResult.summary,
   };
 }
 
@@ -1290,21 +1300,26 @@ async function buildImportedCsvRecords(
   collection: BuilderCmsCollection,
   csvText: string,
   mode: BuilderCmsCsvImportMode,
-): Promise<BuilderCmsRecord[]> {
+  columnMapInput?: BuilderCmsCsvColumnMap,
+): Promise<{ records: BuilderCmsRecord[]; summary: BuilderCmsCsvImportSummary }> {
   const table = parseCsvTable(csvText);
   if (table.length === 0) {
     throw new BuilderCmsValidationError('CSV import requires a header row.');
   }
 
   const headers = table[0].map((header) => header.trim());
+  const expectedHeaders = csvHeadersForCollection(collection);
   const requiredHeaders = new Set(csvHeadersForCollection(collection));
+  const hasColumnMap = !!columnMapInput && Object.keys(columnMapInput).length > 0;
   const unknownHeaders = headers.filter((header) => header && !requiredHeaders.has(header));
-  if (unknownHeaders.length > 0) {
+  if (!hasColumnMap && unknownHeaders.length > 0) {
     throw new BuilderCmsValidationError(
       'CSV import has unknown columns.',
       unknownHeaders.map((header) => `Unknown column: ${header}`),
     );
   }
+  const columnMapping = normalizeCsvColumnMapping(expectedHeaders, headers, columnMapInput);
+  const mappedSourceHeaders = new Set(columnMapping.mappedColumns.map((mapping) => mapping.source));
 
   const fieldKeys = new Set(collection.fields.map((field) => field.key));
   const issues: string[] = [];
@@ -1318,7 +1333,11 @@ async function buildImportedCsvRecords(
   for (const [rowOffset, cells] of table.slice(1).entries()) {
     const rowNumber = rowOffset + 2;
     if (cells.every((cell) => cell.trim() === '')) continue;
-    const row = Object.fromEntries(headers.map((header, index) => [header, cells[index] ?? '']));
+    const sourceRow = Object.fromEntries(headers.map((header, index) => [header, cells[index] ?? '']));
+    const row = Object.fromEntries(expectedHeaders.map((target) => {
+      const sourceHeader = columnMapping.targetToSource[target];
+      return [target, sourceHeader ? sourceRow[sourceHeader] ?? '' : ''];
+    }));
     try {
       const recordId = normalizeOptionalId(row.recordId, `row ${rowNumber} recordId`)
         ?? generateUniqueRecordId(validationCollection);
@@ -1350,7 +1369,47 @@ async function buildImportedCsvRecords(
   if (issues.length > 0) {
     throw new BuilderCmsValidationError('CMS CSV import failed.', issues);
   }
-  return importedRecords;
+  return {
+    records: importedRecords,
+    summary: {
+      headers,
+      mappedColumns: columnMapping.mappedColumns,
+      skippedColumns: headers.filter((header) => header && !mappedSourceHeaders.has(header)),
+    },
+  };
+}
+
+function normalizeCsvColumnMapping(
+  expectedHeaders: string[],
+  sourceHeaders: string[],
+  columnMapInput?: BuilderCmsCsvColumnMap,
+): { targetToSource: Record<string, string | undefined>; mappedColumns: { target: string; source: string }[] } {
+  const sourceHeaderSet = new Set(sourceHeaders);
+  const targetToSource: Record<string, string | undefined> = {};
+  const mappedColumns: { target: string; source: string }[] = [];
+
+  for (const target of expectedHeaders) {
+    const isExplicitMapping = typeof columnMapInput?.[target] === 'string';
+    const mappedSource = isExplicitMapping ? columnMapInput[target].trim() : target;
+    if (!mappedSource) {
+      targetToSource[target] = undefined;
+      continue;
+    }
+    if (!sourceHeaderSet.has(mappedSource)) {
+      if (!isExplicitMapping) {
+        targetToSource[target] = undefined;
+        continue;
+      }
+      throw new BuilderCmsValidationError(
+        'CSV import mapping references unknown columns.',
+        [`${target} maps to missing column: ${mappedSource}`],
+      );
+    }
+    targetToSource[target] = mappedSource;
+    mappedColumns.push({ target, source: mappedSource });
+  }
+
+  return { targetToSource, mappedColumns };
 }
 
 function parseCsvTable(text: string): string[][] {

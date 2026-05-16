@@ -78,15 +78,16 @@ export async function POST(
   try {
     const url = new URL(request.url);
     const locale = url.searchParams.get('locale');
-    const payload = await request.json() as { csv?: unknown; mode?: unknown };
+    const payload = await request.json() as { csv?: unknown; mode?: unknown; columnMap?: unknown };
     const mode: BuilderCmsCsvImportMode = payload.mode === 'replace' ? 'replace' : 'append';
     const csv = typeof payload.csv === 'string' ? payload.csv : '';
+    const columnMap = isCsvColumnMap(payload.columnMap) ? payload.columnMap : undefined;
     const result = await importEditableBuilderCmsRecordsCsv(
       params.siteId,
       locale,
       params.collectionId,
       csv,
-      { mode, actor: 'admin' },
+      { mode, actor: 'admin', columnMap },
     );
     if (!result) {
       return NextResponse.json({ ok: false, error: 'Unknown builder collection.' }, { status: 404 });
@@ -108,4 +109,11 @@ export async function POST(
       { status: 500 },
     );
   }
+}
+
+function isCsvColumnMap(input: unknown): input is Record<string, string> {
+  return !!input &&
+    typeof input === 'object' &&
+    !Array.isArray(input) &&
+    Object.values(input).every((value) => typeof value === 'string');
 }

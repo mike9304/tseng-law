@@ -67,6 +67,11 @@ type ApiBulkRecordMutation = {
 type ApiCsvImport = {
   ok: boolean;
   imported?: number;
+  summary?: {
+    headers: string[];
+    mappedColumns: { target: string; source: string }[];
+    skippedColumns: string[];
+  };
   error?: string;
   issues?: string[];
 };
@@ -174,6 +179,8 @@ export default function ContentManagerClient({
   const [selectedRecordIds, setSelectedRecordIds] = useState<string[]>([]);
   const [csvImportText, setCsvImportText] = useState('');
   const [csvImportMode, setCsvImportMode] = useState<CsvImportMode>('append');
+  const [csvColumnMap, setCsvColumnMap] = useState<Record<string, string>>({});
+  const [csvImportSummary, setCsvImportSummary] = useState<ApiCsvImport['summary'] | null>(null);
   const [assetFieldKey, setAssetFieldKey] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
@@ -243,6 +250,18 @@ export default function ContentManagerClient({
   const visibleRecordIds = useMemo(() => visibleRecords.map((record) => record.recordId), [visibleRecords]);
   const allVisibleRecordsSelected = visibleRecordIds.length > 0
     && visibleRecordIds.every((recordId) => selectedRecordIdSet.has(recordId));
+  const csvHeaders = useMemo(() => parseCsvHeaderRow(csvImportText), [csvImportText]);
+  const csvTargetColumns = useMemo(() => {
+    if (!detail) return [];
+    return ['recordId', 'status', 'locale', ...detail.fields.map((field) => field.key)];
+  }, [detail]);
+  const effectiveCsvColumnMap = useMemo(() => {
+    const headerSet = new Set(csvHeaders);
+    return Object.fromEntries(csvTargetColumns.map((target) => [
+      target,
+      csvColumnMap[target] ?? (headerSet.has(target) ? target : ''),
+    ]));
+  }, [csvColumnMap, csvHeaders, csvTargetColumns]);
 
   useEffect(() => {
     setPermissionDraft(detail ? normalizePermissionDraft(detail.permissions) : defaultCmsPermissionDraft());
@@ -297,6 +316,8 @@ export default function ContentManagerClient({
       setDetail(payload.detail);
       setRecordForm(createEmptyRecordForm(payload.detail.fields));
       setEditingRecordId(null);
+      setCsvColumnMap({});
+      setCsvImportSummary(null);
     } catch (loadError) {
       setError(loadError instanceof Error ? loadError.message : 'Failed to load collection.');
     } finally {
@@ -801,7 +822,7 @@ export default function ContentManagerClient({
           method: 'POST',
           credentials: 'same-origin',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ csv: csvImportText, mode: csvImportMode }),
+          body: JSON.stringify({ csv: csvImportText, mode: csvImportMode, columnMap: effectiveCsvColumnMap }),
         },
       );
       const result = await response.json() as ApiCsvImport;
@@ -811,7 +832,10 @@ export default function ContentManagerClient({
       await loadDetail(detail.collectionId);
       await refreshCollections(detail.collectionId);
       setCsvImportText('');
-      setMessage(`Imported ${result.imported ?? 0} records.`);
+      setCsvColumnMap({});
+      setCsvImportSummary(result.summary ?? null);
+      const skipped = result.summary?.skippedColumns.length ? ` Skipped ${result.summary.skippedColumns.length} columns.` : '';
+      setMessage(`Imported ${result.imported ?? 0} records.${skipped}`);
     } catch (importError) {
       setError(importError instanceof Error ? importError.message : 'Failed to import CSV.');
     } finally {
@@ -1585,9 +1609,48 @@ export default function ContentManagerClient({
                     value={csvImportText}
                     placeholder="recordId,status,locale,title,slug"
                     disabled={busy}
-                    onChange={(event) => setCsvImportText(event.target.value)}
+                    onChange={(event) => {
+                      setCsvImportText(event.target.value);
+                      setCsvImportSummary(null);
+                    }}
                   />
                 </label>
+                {csvHeaders.length > 0 ? (
+                  <div style={{ display: 'grid', gap: 10 }}>
+                    <p style={{ color: '#64748b', fontSize: 12, margin: 0 }}>
+                      CSV preview: {Math.max(0, csvImportText.trim().split(/\r?\n/).length - 1)} rows,
+                      {' '}{csvHeaders.length} columns.
+                    </p>
+                    <div style={formGridStyle}>
+                      {csvTargetColumns.map((target) => (
+                        <label key={target} style={labelStyle}>
+                          {target}
+                          <select
+                            style={inputStyle}
+                            value={effectiveCsvColumnMap[target] ?? ''}
+                            disabled={busy}
+                            onChange={(event) => {
+                              setCsvColumnMap((current) => ({ ...current, [target]: event.target.value }));
+                            }}
+                          >
+                            <option value="">Not mapped</option>
+                            {csvHeaders.map((header) => (
+                              <option key={`${target}-${header}`} value={header}>{header}</option>
+                            ))}
+                          </select>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+                {csvImportSummary ? (
+                  <p style={{ color: '#64748b', fontSize: 12, margin: 0 }}>
+                    Imported with {csvImportSummary.mappedColumns.length} mapped columns
+                    {csvImportSummary.skippedColumns.length
+                      ? `; skipped ${csvImportSummary.skippedColumns.join(', ')}`
+                      : '; no skipped columns'}.
+                  </p>
+                ) : null}
                 <div className="builder-dashboard-page-actions">
                   <select
                     aria-label="CSV import mode"
@@ -2040,6 +2103,36 @@ function optionalNumberFromForm(value: FormDataEntryValue | null): number | unde
   if (typeof value !== 'string' || !value.trim()) return undefined;
   const numeric = Number(value);
   return Number.isFinite(numeric) ? numeric : undefined;
+}
+
+function parseCsvHeaderRow(csv: string): string[] {
+  const firstLine = csv.split(/\r?\n/).find((line) => line.trim());
+  if (!firstLine) return [];
+  const headers: string[] = [];
+  let cell = '';
+  let inQuotes = false;
+  for (let index = 0; index < firstLine.length; index += 1) {
+    const char = firstLine[index];
+    if (inQuotes) {
+      if (char === '"' && firstLine[index + 1] === '"') {
+        cell += '"';
+        index += 1;
+      } else if (char === '"') {
+        inQuotes = false;
+      } else {
+        cell += char;
+      }
+    } else if (char === '"') {
+      inQuotes = true;
+    } else if (char === ',') {
+      headers.push(cell.trim());
+      cell = '';
+    } else {
+      cell += char;
+    }
+  }
+  headers.push(cell.trim());
+  return headers.filter(Boolean);
 }
 
 function apiBase(siteId: string) {

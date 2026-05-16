@@ -6619,3 +6619,28 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `git diff --check` ✅
 - 다음 후보:
   - M158-K: F09 typed field UI completeness 또는 F10 validation/defaults UI hardening.
+
+## 2026-05-17 Codex /goal M158-K CMS typed field UI coverage
+
+- CMS Schema card에서 새 필드를 추가할 수 있게 했다.
+- 지원 UI:
+  - field label/key/type selector
+  - reference collection selector
+  - required/unique/localized/repeated flags
+- 레코드 입력 UI:
+  - rich text는 multiline textarea
+  - reference는 record ID input + relation collection placeholder
+  - string-list/tags/repeated fields는 one-value-per-line textarea
+  - boolean empty value는 false로 강제되지 않게 보정
+- 검증:
+  - CMS engine test가 text/rich-text/slug/number/boolean/date/image/email/url/string-list/reference 저장을 확인한다.
+- 체크포인트 상태:
+  - F09 🟡 → 🟢: typed field coverage + field creation UI + persistence evidence 충족.
+  - M158 전체는 아직 🟡: F10/F11/F12/F13 hardening 잔여.
+- 검증 명령:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (15 tests)
+  - `npx eslint src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts` ✅
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+- 다음 후보:
+  - M158-L: F10 validation/defaults UI hardening 또는 F13 revision diff/names.

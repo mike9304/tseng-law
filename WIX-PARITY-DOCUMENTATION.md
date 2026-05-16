@@ -256,6 +256,22 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - F09/F10/F11/F12/F13 hardening: typed field UI completeness, advanced validation UI, import mapping/streaming, actor identity, revision diff/names.
 
+## M158-K — CMS Typed Field UI Coverage
+
+- 시작/종료: 2026-05-17 / 2026-05-17
+- 변경 파일:
+  - `src/components/builder/cms/ContentManagerClient.tsx` — Schema card에 CMS field type selector/add-field form 추가, reference collection selector 추가, rich text/reference/tags/string-list typed record inputs 보강
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — text, rich text, slug, number, boolean, date, image, email, URL, string-list/tags, reference field persist 검증 추가
+- F-layer 판정:
+  - F09 🟡 → 🟢: typed field model, field creation UI, and record persistence now cover text/rich-text/number/boolean/date/media/reference/tags/URL/email.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (15 tests)
+  - `npx eslint src/components/builder/cms/ContentManagerClient.tsx src/lib/builder/__tests__/cms-editable.test.ts` ✅
+  - `npm run typecheck` ✅
+  - `git diff --check` ✅
+- 남은 M158:
+  - F10/F11/F12/F13 hardening: advanced validation/defaults UI, import mapping/streaming, actor identity, revision diff/names.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

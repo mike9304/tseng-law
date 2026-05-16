@@ -452,6 +452,170 @@ describe('editable builder CMS store', () => {
     });
   });
 
+  it('persists typed CMS field values across record field types', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'authors',
+      name: 'Authors',
+    });
+    const detail = await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'articles',
+      name: 'Articles',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+        },
+        {
+          fieldId: 'field-slug',
+          key: 'slug',
+          label: 'Slug',
+          type: 'slug',
+          localized: false,
+          repeated: false,
+          required: true,
+          unique: true,
+        },
+        {
+          fieldId: 'field-body',
+          key: 'body',
+          label: 'Body',
+          type: 'rich-text',
+          localized: true,
+          repeated: false,
+          required: false,
+        },
+        {
+          fieldId: 'field-order',
+          key: 'order',
+          label: 'Order',
+          type: 'number',
+          localized: false,
+          repeated: false,
+          required: false,
+        },
+        {
+          fieldId: 'field-featured',
+          key: 'featured',
+          label: 'Featured',
+          type: 'boolean',
+          localized: false,
+          repeated: false,
+          required: false,
+        },
+        {
+          fieldId: 'field-published-at',
+          key: 'publishedAt',
+          label: 'Published at',
+          type: 'date',
+          localized: false,
+          repeated: false,
+          required: false,
+        },
+        {
+          fieldId: 'field-hero',
+          key: 'hero',
+          label: 'Hero image',
+          type: 'image',
+          localized: false,
+          repeated: false,
+          required: false,
+        },
+        {
+          fieldId: 'field-contact',
+          key: 'contact',
+          label: 'Contact',
+          type: 'email',
+          localized: false,
+          repeated: false,
+          required: false,
+        },
+        {
+          fieldId: 'field-website',
+          key: 'website',
+          label: 'Website',
+          type: 'url',
+          localized: false,
+          repeated: false,
+          required: false,
+        },
+        {
+          fieldId: 'field-tags',
+          key: 'tags',
+          label: 'Tags',
+          type: 'string-list',
+          localized: true,
+          repeated: false,
+          required: false,
+        },
+        {
+          fieldId: 'field-author',
+          key: 'author',
+          label: 'Author',
+          type: 'reference',
+          localized: false,
+          repeated: false,
+          required: false,
+          relationCollectionId: 'authors',
+        },
+      ],
+    });
+
+    expect(detail.fields.map((field) => field.type)).toEqual([
+      'text',
+      'slug',
+      'rich-text',
+      'number',
+      'boolean',
+      'date',
+      'image',
+      'email',
+      'url',
+      'string-list',
+      'reference',
+    ]);
+    expect(detail.fields.find((field) => field.key === 'author')).toMatchObject({
+      relationCollectionId: 'authors',
+    });
+
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'articles', {
+      fields: {
+        title: 'Taiwan law update',
+        slug: 'taiwan-law-update',
+        body: '<p>Clear article body</p>',
+        order: '7',
+        featured: true,
+        publishedAt: '2026-05-17',
+        hero: '/api/builder/assets/ko/article.webp',
+        contact: 'editor@example.com',
+        website: 'https://example.com/article',
+        tags: 'taiwan\nlaw\nvisa',
+        author: 'record-author',
+      },
+    });
+
+    expect(created?.fields).toMatchObject({
+      title: 'Taiwan law update',
+      slug: 'taiwan-law-update',
+      body: '<p>Clear article body</p>',
+      order: 7,
+      featured: true,
+      publishedAt: '2026-05-17',
+      hero: {
+        url: '/api/builder/assets/ko/article.webp',
+        assetId: 'builder/assets/ko/article.webp',
+      },
+      contact: 'editor@example.com',
+      website: 'https://example.com/article',
+      tags: ['taiwan', 'law', 'visa'],
+      author: 'record-author',
+    });
+  });
+
   it('updates CMS permissions and gates record access by actor', async () => {
     await createEditableBuilderCmsCollection('test-site', 'ko', {
       collectionId: 'testimonials',

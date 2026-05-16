@@ -11,10 +11,12 @@ import {
   type BuilderCmsRecordSavedView,
 } from '@/lib/builder/cms-record-query';
 import {
+  builderCmsFieldTypes,
   builderCmsPermissionActors,
   type BuilderCmsCollectionDetail,
   type BuilderCmsCollectionSummary,
   type BuilderCmsFieldDefinition,
+  type BuilderCmsFieldType,
   type BuilderCmsImageValue,
   type BuilderCmsIndexDefinition,
   type BuilderCmsIndexSortDirection,
@@ -99,6 +101,20 @@ const cmsPermissionActorLabels: Record<BuilderCmsPermissionActor, string> = {
   admin: 'Admin',
 };
 
+const cmsFieldTypeLabels: Record<BuilderCmsFieldType, string> = {
+  text: 'Text',
+  'rich-text': 'Rich text',
+  slug: 'Slug',
+  number: 'Number',
+  boolean: 'Boolean',
+  date: 'Date',
+  image: 'Image',
+  email: 'Email',
+  url: 'URL',
+  'string-list': 'Tags / string list',
+  reference: 'Reference',
+};
+
 const panelStyle = {
   display: 'grid',
   gridTemplateColumns: 'minmax(220px, 280px) minmax(0, 1fr)',
@@ -167,6 +183,24 @@ export default function ContentManagerClient({
     () => collections.find((collection) => collection.collectionId === selectedCollectionId) ?? null,
     [collections, selectedCollectionId],
   );
+  const referenceCollectionOptions = useMemo(() => {
+    const options = [
+      ...sourceCollections.map((collection) => ({
+        collectionId: collection.id,
+        name: collection.title,
+      })),
+      ...collections.map((collection) => ({
+        collectionId: collection.collectionId,
+        name: collection.name,
+      })),
+    ];
+    const seen = new Set<string>();
+    return options.filter((option) => {
+      if (seen.has(option.collectionId)) return false;
+      seen.add(option.collectionId);
+      return true;
+    });
+  }, [collections, sourceCollections]);
 
   const indexDraft = useMemo(() => {
     if (!detail) return [];
@@ -456,6 +490,56 @@ export default function ContentManagerClient({
     writeSavedRecordViews(siteId, locale, detail.collectionId, nextViews);
     if (selectedViewId === viewId) setSelectedViewId('');
     setMessage('Saved view deleted.');
+  }
+
+  async function addCollectionField(formData: FormData) {
+    if (!detail) return;
+    const type = normalizeCmsFieldType(formData.get('type'));
+    const relationCollectionId = type === 'reference'
+      ? String(formData.get('relationCollectionId') ?? '').trim() || undefined
+      : undefined;
+    const nextField: BuilderCmsFieldDefinition = {
+      fieldId: `field-${Date.now().toString(36)}`,
+      key: String(formData.get('key') ?? '').trim(),
+      label: String(formData.get('label') ?? '').trim(),
+      type,
+      localized: formData.get('localized') === 'on',
+      repeated: formData.get('repeated') === 'on',
+      required: formData.get('required') === 'on',
+      unique: formData.get('unique') === 'on',
+      relationCollectionId,
+    };
+    await saveCollectionFields([...detail.fields, nextField]);
+  }
+
+  async function saveCollectionFields(fields: BuilderCmsCollectionDetail['fields']) {
+    if (!detail) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(`${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}?locale=${locale}`, {
+        method: 'PATCH',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fields }),
+      });
+      const result = await response.json() as ApiCollectionDetail;
+      if (!response.ok || !result.ok || !result.detail) {
+        throw new Error(result.issues?.join('\n') || result.error || 'Failed to save fields.');
+      }
+      setDetail(result.detail);
+      setRecordForm((current) => ({
+        ...createEmptyRecordForm(result.detail!.fields),
+        ...current,
+      }));
+      await refreshCollections(result.detail.collectionId);
+      setMessage('Fields updated.');
+    } catch (saveError) {
+      setError(saveError instanceof Error ? saveError.message : 'Failed to save fields.');
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function addCollectionIndex(formData: FormData) {
@@ -1005,6 +1089,65 @@ export default function ContentManagerClient({
                   </article>
                 ))}
               </div>
+              <form
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  void addCollectionField(new FormData(event.currentTarget));
+                  event.currentTarget.reset();
+                }}
+                style={{ display: 'grid', gap: 10, marginTop: 12 }}
+              >
+                <div style={formGridStyle}>
+                  <label style={labelStyle}>
+                    Field label
+                    <input name="label" type="text" style={inputStyle} placeholder="Summary" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Field key
+                    <input name="key" type="text" style={inputStyle} placeholder="summary" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Type
+                    <select name="type" style={inputStyle} defaultValue="text" disabled={busy}>
+                      {builderCmsFieldTypes.map((type) => (
+                        <option key={type} value={type}>{cmsFieldTypeLabels[type]}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <label style={labelStyle}>
+                    Reference collection
+                    <select name="relationCollectionId" style={inputStyle} defaultValue="" disabled={busy}>
+                      <option value="">None</option>
+                      {referenceCollectionOptions.map((collection) => (
+                        <option key={collection.collectionId} value={collection.collectionId}>
+                          {collection.name}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+                <div className="builder-dashboard-page-actions">
+                  <label style={{ alignItems: 'center', display: 'flex', gap: 8 }}>
+                    <input name="required" type="checkbox" disabled={busy} />
+                    Required
+                  </label>
+                  <label style={{ alignItems: 'center', display: 'flex', gap: 8 }}>
+                    <input name="unique" type="checkbox" disabled={busy} />
+                    Unique
+                  </label>
+                  <label style={{ alignItems: 'center', display: 'flex', gap: 8 }}>
+                    <input name="localized" type="checkbox" disabled={busy} />
+                    Localized
+                  </label>
+                  <label style={{ alignItems: 'center', display: 'flex', gap: 8 }}>
+                    <input name="repeated" type="checkbox" disabled={busy} />
+                    Repeated
+                  </label>
+                  <button type="submit" className="builder-action-btn builder-action-btn--primary" disabled={busy}>
+                    Add field
+                  </button>
+                </div>
+              </form>
               <h3 style={{ color: '#0f172a', fontSize: 14, margin: '16px 0 8px' }}>Indexes</h3>
               <div className="builder-dashboard-page-list">
                 {detail.indexes.map((index) => (
@@ -1626,12 +1769,43 @@ function CmsFieldInput({
           style={inputStyle}
           value={value === true ? 'true' : value === false ? 'false' : ''}
           disabled={disabled}
-          onChange={(event) => onChange(event.target.value === 'true')}
+          onChange={(event) => onChange(event.target.value === '' ? '' : event.target.value === 'true')}
         >
           <option value="">Select</option>
           <option value="true">True</option>
           <option value="false">False</option>
         </select>
+      </label>
+    );
+  }
+
+  if (field.type === 'rich-text') {
+    return (
+      <label style={labelStyle}>
+        {field.label}
+        <textarea
+          style={{ ...inputStyle, minHeight: 118, resize: 'vertical' }}
+          value={typeof value === 'string' ? value : ''}
+          disabled={disabled}
+          placeholder="Formatted text or HTML"
+          onChange={(event) => onChange(event.target.value)}
+        />
+      </label>
+    );
+  }
+
+  if (field.type === 'reference') {
+    return (
+      <label style={labelStyle}>
+        {field.label}
+        <input
+          type="text"
+          style={inputStyle}
+          value={typeof value === 'string' ? value : ''}
+          disabled={disabled}
+          placeholder={field.relationCollectionId ? `Record ID from ${field.relationCollectionId}` : 'Referenced record ID'}
+          onChange={(event) => onChange(event.target.value)}
+        />
       </label>
     );
   }
@@ -1644,6 +1818,7 @@ function CmsFieldInput({
           style={{ ...inputStyle, minHeight: 82, resize: 'vertical' }}
           value={typeof value === 'string' ? value : ''}
           disabled={disabled}
+          placeholder="One value per line"
           onChange={(event) => onChange(event.target.value)}
         />
       </label>
@@ -1786,6 +1961,12 @@ function orderPermissionActors(actors: Iterable<BuilderCmsPermissionActor>): Bui
   const actorSet = new Set<BuilderCmsPermissionActor>(actors);
   actorSet.add('admin');
   return builderCmsPermissionActors.filter((actor) => actorSet.has(actor));
+}
+
+function normalizeCmsFieldType(input: FormDataEntryValue | null): BuilderCmsFieldType {
+  return typeof input === 'string' && builderCmsFieldTypes.includes(input as BuilderCmsFieldType)
+    ? input as BuilderCmsFieldType
+    : 'text';
 }
 
 function apiBase(siteId: string) {

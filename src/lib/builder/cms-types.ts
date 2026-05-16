@@ -47,6 +47,21 @@ export interface BuilderCmsFieldDefinition {
   relationCollectionId?: string;
 }
 
+export type BuilderCmsIndexSortDirection = 'asc' | 'desc';
+
+export interface BuilderCmsIndexField {
+  fieldKey: string;
+  direction: BuilderCmsIndexSortDirection;
+}
+
+export interface BuilderCmsIndexDefinition {
+  indexId: string;
+  name: string;
+  fields: BuilderCmsIndexField[];
+  unique: boolean;
+  createdAt: string;
+}
+
 export interface BuilderCmsImageValue {
   url: string;
   assetId?: string;
@@ -88,6 +103,7 @@ export interface BuilderCmsCollection {
   description: string;
   localized: boolean;
   fields: BuilderCmsFieldDefinition[];
+  indexes: BuilderCmsIndexDefinition[];
   records: BuilderCmsRecord[];
   permissions: BuilderCmsPermissions;
   createdAt: string;
@@ -101,6 +117,7 @@ export interface BuilderCmsCollectionSummary {
   description: string;
   localized: boolean;
   fieldCount: number;
+  indexCount: number;
   recordCount: number;
   permissions: BuilderCmsPermissions;
   createdAt: string;
@@ -109,5 +126,6 @@ export interface BuilderCmsCollectionSummary {
 
 export interface BuilderCmsCollectionDetail extends BuilderCmsCollectionSummary {
   fields: BuilderCmsFieldDefinition[];
+  indexes: BuilderCmsIndexDefinition[];
   records: BuilderCmsRecord[];
 }

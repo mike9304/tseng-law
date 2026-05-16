@@ -16,6 +16,8 @@ import {
   type BuilderCmsCollectionSummary,
   type BuilderCmsFieldDefinition,
   type BuilderCmsImageValue,
+  type BuilderCmsIndexDefinition,
+  type BuilderCmsIndexSortDirection,
   type BuilderCmsPermissionActor,
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
@@ -150,6 +152,14 @@ export default function ContentManagerClient({
     () => collections.find((collection) => collection.collectionId === selectedCollectionId) ?? null,
     [collections, selectedCollectionId],
   );
+
+  const indexDraft = useMemo(() => {
+    if (!detail) return [];
+    return detail.indexes.map((index) => ({
+      ...index,
+      fields: index.fields.map((field) => ({ ...field })),
+    }));
+  }, [detail]);
 
   const effectiveRecordSortBy = useMemo(() => {
     if (!detail) return recordSortBy;
@@ -409,6 +419,67 @@ export default function ContentManagerClient({
     writeSavedRecordViews(siteId, locale, detail.collectionId, nextViews);
     if (selectedViewId === viewId) setSelectedViewId('');
     setMessage('Saved view deleted.');
+  }
+
+  async function addCollectionIndex(formData: FormData) {
+    if (!detail) return;
+    const fieldKeys = String(formData.get('fields') ?? '')
+      .split(',')
+      .map((field) => field.trim())
+      .filter(Boolean);
+    if (fieldKeys.length === 0) {
+      setError('Index fields are required.');
+      return;
+    }
+    const fieldKeySet = new Set(detail.fields.map((field) => field.key));
+    const unknownField = fieldKeys.find((field) => !fieldKeySet.has(field));
+    if (unknownField) {
+      setError(`Unknown index field: ${unknownField}`);
+      return;
+    }
+    const direction: BuilderCmsIndexSortDirection = formData.get('direction') === 'desc' ? 'desc' : 'asc';
+    const nextIndex: BuilderCmsIndexDefinition = {
+      indexId: `idx-${fieldKeys.join('-')}-${Date.now()}`,
+      name: String(formData.get('name') ?? '').trim() || `${fieldKeys.join(', ')} index`,
+      fields: fieldKeys.map((fieldKey) => ({
+        fieldKey,
+        direction,
+      })),
+      unique: formData.get('unique') === 'on',
+      createdAt: new Date().toISOString(),
+    };
+    await saveCollectionIndexes([...indexDraft, nextIndex]);
+  }
+
+  async function deleteCollectionIndex(indexId: string) {
+    if (!detail) return;
+    await saveCollectionIndexes(indexDraft.filter((index) => index.indexId !== indexId));
+  }
+
+  async function saveCollectionIndexes(indexes: BuilderCmsCollectionDetail['indexes']) {
+    if (!detail) return;
+    setBusy(true);
+    setError(null);
+    setMessage(null);
+    try {
+      const response = await fetch(`${apiBase(siteId)}/${encodeURIComponent(detail.collectionId)}?locale=${locale}`, {
+        method: 'PATCH',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ indexes }),
+      });
+      const result = await response.json() as ApiCollectionDetail;
+      if (!response.ok || !result.ok || !result.detail) {
+        throw new Error(result.issues?.join('\n') || result.error || 'Failed to save indexes.');
+      }
+      setDetail(result.detail);
+      await refreshCollections(result.detail.collectionId);
+      setMessage('Indexes updated.');
+    } catch (saveError) {
+      setError(saveError instanceof Error ? saveError.message : 'Failed to save indexes.');
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function saveRecord() {
@@ -728,6 +799,10 @@ export default function ContentManagerClient({
                   <span>Fields</span>
                 </article>
                 <article className="builder-dashboard-kpi-card">
+                  <strong>{detail.indexes.length}</strong>
+                  <span>Indexes</span>
+                </article>
+                <article className="builder-dashboard-kpi-card">
                   <strong>{detail.localized ? 'Locale' : 'Shared'}</strong>
                   <span>Mode</span>
                 </article>
@@ -827,6 +902,84 @@ export default function ContentManagerClient({
                   </article>
                 ))}
               </div>
+              <h3 style={{ color: '#0f172a', fontSize: 14, margin: '16px 0 8px' }}>Indexes</h3>
+              <div className="builder-dashboard-page-list">
+                {detail.indexes.map((index) => (
+                  <article key={index.indexId} className="builder-dashboard-page-card">
+                    <div className="builder-dashboard-page-head">
+                      <div>
+                        <strong>{index.name}</strong>
+                        <span>{index.fields.map((field) => `${field.fieldKey} ${field.direction}`).join(', ')}</span>
+                      </div>
+                      <span className="builder-stage-pill">{index.unique ? 'unique' : 'index'}</span>
+                    </div>
+                    <div className="builder-dashboard-page-actions">
+                      <button
+                        type="button"
+                        className="builder-action-btn"
+                        onClick={() => void deleteCollectionIndex(index.indexId)}
+                        disabled={busy}
+                      >
+                        Delete index
+                      </button>
+                    </div>
+                  </article>
+                ))}
+                {detail.indexes.length === 0 ? (
+                  <article className="builder-dashboard-page-card">
+                    <div className="builder-dashboard-page-head">
+                      <div>
+                        <strong>No indexes</strong>
+                        <span>Add a field index below</span>
+                      </div>
+                    </div>
+                  </article>
+                ) : null}
+              </div>
+              <form
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  void addCollectionIndex(new FormData(event.currentTarget));
+                  event.currentTarget.reset();
+                }}
+                style={{ display: 'grid', gap: 10, marginTop: 12 }}
+              >
+                <div style={formGridStyle}>
+                  <label style={labelStyle}>
+                    Index name
+                    <input name="name" type="text" style={inputStyle} placeholder="Published lookup" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Fields
+                    <input name="fields" type="text" style={inputStyle} placeholder="slug, status" disabled={busy} />
+                  </label>
+                  <label style={labelStyle}>
+                    Direction
+                    <select name="direction" style={inputStyle} defaultValue="asc" disabled={busy}>
+                      <option value="asc">Ascending</option>
+                      <option value="desc">Descending</option>
+                    </select>
+                  </label>
+                  <label
+                    style={{
+                      alignItems: 'center',
+                      color: '#475569',
+                      display: 'flex',
+                      fontSize: 12,
+                      fontWeight: 700,
+                      gap: 8,
+                    }}
+                  >
+                    <input name="unique" type="checkbox" disabled={busy} />
+                    Unique
+                  </label>
+                </div>
+                <div className="builder-dashboard-page-actions">
+                  <button type="submit" className="builder-action-btn builder-action-btn--primary" disabled={busy}>
+                    Add index
+                  </button>
+                </div>
+              </form>
             </section>
 
             <section className="builder-preview-inspector-card">

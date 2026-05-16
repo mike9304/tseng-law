@@ -220,6 +220,23 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - F07~F13 hardening: schema/index UI, bulk workflows, diff/named revision, actor identity.
 
+## M158-I — CMS Collection Index Schema UI
+
+- 시작/종료: 2026-05-16 / 2026-05-16
+- 변경 파일:
+  - `src/lib/builder/cms-types.ts` — `BuilderCmsIndexDefinition` / index field direction 타입 추가, collection summary/detail에 `indexes`/`indexCount` 추가
+  - `src/lib/builder/cms-editable.ts` — collection create/update/normalize 경로에 index metadata normalize/validation/default unique slug index 추가
+  - `src/components/builder/cms/ContentManagerClient.tsx` — Schema card에 index count, index list, index add/delete UI 추가
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — default unique index, summary index count, custom compound index, unknown field rejection 검증 추가
+- F-layer 판정:
+  - F07 🟡 → 🟢: Collections now define id, name, fields, permissions, timestamps, and indexes with UI/API persistence.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (13 tests)
+  - `npx eslint src/lib/builder/cms-types.ts src/lib/builder/cms-editable.ts src/lib/builder/__tests__/cms-editable.test.ts src/components/builder/cms/ContentManagerClient.tsx` ✅
+  - `npm run typecheck` ✅
+- 남은 M158:
+  - F08/F10/F11/F12/F13 hardening: bulk workflows, advanced validation UI, import mapping/streaming, actor identity, revision diff/names.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

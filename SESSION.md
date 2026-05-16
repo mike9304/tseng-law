@@ -6569,3 +6569,29 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run typecheck` ✅
 - 다음 후보:
   - M158-I: F07 collection schema/index UI hardening 또는 F08 bulk workflow depth.
+
+## 2026-05-16 Codex /goal M158-I CMS collection index schema UI
+
+- CMS collection schema model에 index metadata를 추가했다.
+- 타입:
+  - `BuilderCmsIndexDefinition`
+  - `BuilderCmsIndexField`
+  - `BuilderCmsIndexSortDirection`
+  - collection summary/detail의 `indexes`, `indexCount`
+- 저장소/API:
+  - collection create/update/normalize에서 `indexes`를 받고 검증한다.
+  - unique field는 기본 index로 노출된다.
+  - index field가 collection field에 없거나 같은 index 안에서 중복되면 validation error.
+- UI:
+  - Content Manager Schema card에 index count/list를 표시한다.
+  - index name, comma-separated fields, direction, unique flag로 index 추가 가능.
+  - 기존 index delete 가능.
+- 체크포인트 상태:
+  - F07 🟡 → 🟢: id/name/fields/permissions/timestamps/indexes schema model + UI/API persistence evidence 충족.
+  - M158 전체는 아직 🟡: F08/F10/F11/F12/F13 hardening 잔여.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (13 tests)
+  - `npx eslint src/lib/builder/cms-types.ts src/lib/builder/cms-editable.ts src/lib/builder/__tests__/cms-editable.test.ts src/components/builder/cms/ContentManagerClient.tsx` ✅
+  - `npm run typecheck` ✅
+- 다음 후보:
+  - M158-J: F08 bulk row workflow 또는 F10 validation UI hardening.

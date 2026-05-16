@@ -77,6 +77,13 @@ describe('editable builder CMS store', () => {
 
     expect(detail.collectionId).toBe('testimonials');
     expect(detail.fields.map((field) => field.key)).toEqual(['title', 'slug']);
+    expect(detail.indexes).toMatchObject([
+      {
+        indexId: 'idx-slug',
+        fields: [{ fieldKey: 'slug', direction: 'asc' }],
+        unique: true,
+      },
+    ]);
     expect(detail.permissions).toEqual({
       read: ['admin'],
       create: ['admin'],
@@ -84,7 +91,7 @@ describe('editable builder CMS store', () => {
       delete: ['admin'],
     });
     await expect(listEditableBuilderCmsCollections('test-site', 'ko')).resolves.toMatchObject([
-      { collectionId: 'testimonials', recordCount: 0, fieldCount: 2 },
+      { collectionId: 'testimonials', recordCount: 0, fieldCount: 2, indexCount: 1 },
     ]);
     expect(mockedWriteSiteDocument).toHaveBeenCalledTimes(1);
   });
@@ -472,6 +479,70 @@ describe('editable builder CMS store', () => {
       }),
     ).rejects.toMatchObject({
       message: 'Static source collection IDs are reserved.',
+    });
+  });
+
+  it('stores collection index metadata and rejects unknown index fields', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'articles',
+      name: 'Articles',
+      fields: [
+        {
+          fieldId: 'field-title',
+          key: 'title',
+          label: 'Title',
+          type: 'text',
+          localized: true,
+          repeated: false,
+          required: true,
+        },
+        {
+          fieldId: 'field-status',
+          key: 'status',
+          label: 'Status',
+          type: 'text',
+          localized: false,
+          repeated: false,
+          required: false,
+        },
+      ],
+      indexes: [
+        {
+          indexId: 'idx-status-title',
+          name: 'Status title',
+          fields: [
+            { fieldKey: 'status', direction: 'asc' },
+            { fieldKey: 'title', direction: 'desc' },
+          ],
+          unique: false,
+          createdAt: '2026-05-16T00:00:00.000Z',
+        },
+      ],
+    });
+
+    const detail = await readEditableBuilderCmsCollection('test-site', 'ko', 'articles');
+    expect(detail?.indexes).toMatchObject([
+      {
+        indexId: 'idx-status-title',
+        fields: [
+          { fieldKey: 'status', direction: 'asc' },
+          { fieldKey: 'title', direction: 'desc' },
+        ],
+      },
+    ]);
+
+    await expect(
+      updateEditableBuilderCmsCollection('test-site', 'ko', 'articles', {
+        indexes: [
+          {
+            name: 'Broken',
+            fields: [{ fieldKey: 'missing', direction: 'asc' }],
+            unique: false,
+          },
+        ],
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Index 1 references an unknown field: missing'],
     });
   });
 });

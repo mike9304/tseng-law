@@ -14,6 +14,8 @@ import {
   type BuilderCmsFieldDefinition,
   type BuilderCmsFieldType,
   type BuilderCmsImageValue,
+  type BuilderCmsIndexDefinition,
+  type BuilderCmsIndexField,
   type BuilderCmsPermissionActor,
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
@@ -47,6 +49,7 @@ type CollectionInput = {
   description?: unknown;
   localized?: unknown;
   fields?: unknown;
+  indexes?: unknown;
   permissions?: unknown;
 };
 
@@ -470,18 +473,22 @@ export function normalizeCmsCollections(input: unknown): BuilderCmsCollection[] 
   if (!Array.isArray(input)) return [];
   return input
     .filter((item): item is Partial<BuilderCmsCollection> => !!item && typeof item === 'object')
-    .map((collection) => ({
-      collectionId: normalizeRequiredId(collection.collectionId, 'collectionId'),
-      name: normalizeRequiredString(collection.name, 'name'),
-      slug: normalizeSlug(collection.slug ?? collection.name ?? collection.collectionId),
-      description: typeof collection.description === 'string' ? collection.description : '',
-      localized: Boolean(collection.localized),
-      fields: normalizeFieldDefinitions(collection.fields),
-      records: normalizeRecords(collection.records),
-      permissions: normalizePermissions(collection.permissions),
-      createdAt: normalizeTimestamp(collection.createdAt),
-      updatedAt: normalizeTimestamp(collection.updatedAt),
-    }));
+    .map((collection) => {
+      const fields = normalizeFieldDefinitions(collection.fields);
+      return {
+        collectionId: normalizeRequiredId(collection.collectionId, 'collectionId'),
+        name: normalizeRequiredString(collection.name, 'name'),
+        slug: normalizeSlug(collection.slug ?? collection.name ?? collection.collectionId),
+        description: typeof collection.description === 'string' ? collection.description : '',
+        localized: Boolean(collection.localized),
+        fields,
+        indexes: normalizeIndexDefinitions(collection.indexes, fields, { useDefaults: true }),
+        records: normalizeRecords(collection.records),
+        permissions: normalizePermissions(collection.permissions),
+        createdAt: normalizeTimestamp(collection.createdAt),
+        updatedAt: normalizeTimestamp(collection.updatedAt),
+      };
+    });
 }
 
 function createCollectionFromInput(
@@ -495,6 +502,7 @@ function createCollectionFromInput(
     throw new BuilderCmsValidationError('Static source collection IDs are reserved.');
   }
   ensureUniqueCollectionId(existingCollections, collectionId);
+  const fields = normalizeFieldDefinitions(input.fields, { useDefaults: true });
 
   return {
     collectionId,
@@ -502,7 +510,8 @@ function createCollectionFromInput(
     slug: normalizeSlug(input.slug ?? collectionId),
     description: typeof input.description === 'string' ? input.description : '',
     localized: Boolean(input.localized),
-    fields: normalizeFieldDefinitions(input.fields, { useDefaults: true }),
+    fields,
+    indexes: normalizeIndexDefinitions(input.indexes, fields, { useDefaults: true }),
     records: [],
     permissions: normalizePermissions(input.permissions),
     createdAt: now,
@@ -529,6 +538,9 @@ function updateCollectionFromInput(
     );
   }
 
+  const fields = input.fields === undefined
+    ? current.fields
+    : normalizeFieldDefinitions(input.fields, { useDefaults: false });
   const next: BuilderCmsCollection = {
     ...current,
     collectionId,
@@ -538,9 +550,10 @@ function updateCollectionFromInput(
       ? current.description
       : String(input.description ?? ''),
     localized: input.localized === undefined ? current.localized : Boolean(input.localized),
-    fields: input.fields === undefined
-      ? current.fields
-      : normalizeFieldDefinitions(input.fields, { useDefaults: false }),
+    fields,
+    indexes: input.indexes === undefined
+      ? normalizeIndexDefinitions(current.indexes, fields, { useDefaults: true })
+      : normalizeIndexDefinitions(input.indexes, fields, { useDefaults: false }),
     permissions: input.permissions === undefined
       ? current.permissions
       : normalizePermissions(input.permissions),
@@ -562,6 +575,7 @@ function toCollectionSummary(collection: BuilderCmsCollection): BuilderCmsCollec
     description: collection.description,
     localized: collection.localized,
     fieldCount: collection.fields.length,
+    indexCount: collection.indexes.length,
     recordCount: collection.records.length,
     permissions: collection.permissions,
     createdAt: collection.createdAt,
@@ -573,6 +587,7 @@ function toCollectionDetail(collection: BuilderCmsCollection): BuilderCmsCollect
   return {
     ...toCollectionSummary(collection),
     fields: collection.fields,
+    indexes: collection.indexes,
     records: collection.records,
   };
 }
@@ -638,6 +653,81 @@ function normalizeFieldDefinitions(
       relationCollectionId: typeof source.relationCollectionId === 'string'
         ? normalizeRequiredId(source.relationCollectionId, `fields[${index}].relationCollectionId`)
         : undefined,
+    };
+  });
+}
+
+function defaultIndexDefinitions(fields: BuilderCmsFieldDefinition[]): BuilderCmsIndexDefinition[] {
+  return fields
+    .filter((field) => field.unique)
+    .map((field) => ({
+      indexId: `idx-${field.key}`,
+      name: `${field.label} unique`,
+      fields: [{ fieldKey: field.key, direction: 'asc' as const }],
+      unique: true,
+      createdAt: new Date(0).toISOString(),
+    }));
+}
+
+function normalizeIndexDefinitions(
+  input: unknown,
+  fields: BuilderCmsFieldDefinition[],
+  options: { useDefaults?: boolean } = {},
+): BuilderCmsIndexDefinition[] {
+  if (!Array.isArray(input) || input.length === 0) {
+    return options.useDefaults ? defaultIndexDefinitions(fields) : [];
+  }
+
+  const fieldKeys = new Set(fields.map((field) => field.key));
+  const seenIndexIds = new Set<string>();
+  return input.map((item, index) => {
+    if (!item || typeof item !== 'object') {
+      throw new BuilderCmsValidationError(`Index ${index + 1} must be an object.`);
+    }
+    const source = item as Partial<BuilderCmsIndexDefinition>;
+    const indexId = normalizeOptionalId(source.indexId, `indexes[${index}].indexId`)
+      ?? generateEntityId('index');
+    if (seenIndexIds.has(indexId)) {
+      throw new BuilderCmsValidationError(`Duplicate index ID: ${indexId}`);
+    }
+    seenIndexIds.add(indexId);
+    const indexFields = normalizeIndexFields(source.fields, fieldKeys, index);
+    return {
+      indexId,
+      name: normalizeRequiredString(source.name ?? indexId, `indexes[${index}].name`),
+      fields: indexFields,
+      unique: Boolean(source.unique),
+      createdAt: normalizeTimestamp(source.createdAt),
+    };
+  });
+}
+
+function normalizeIndexFields(
+  input: unknown,
+  fieldKeys: Set<string>,
+  index: number,
+): BuilderCmsIndexField[] {
+  if (!Array.isArray(input) || input.length === 0) {
+    throw new BuilderCmsValidationError(`Index ${index + 1} must include at least one field.`);
+  }
+
+  const seenFieldKeys = new Set<string>();
+  return input.map((item, fieldIndex) => {
+    if (!item || typeof item !== 'object') {
+      throw new BuilderCmsValidationError(`Index ${index + 1} field ${fieldIndex + 1} must be an object.`);
+    }
+    const source = item as Partial<BuilderCmsIndexField>;
+    const fieldKey = normalizeFieldKey(source.fieldKey, `indexes[${index}].fields[${fieldIndex}].fieldKey`);
+    if (!fieldKeys.has(fieldKey)) {
+      throw new BuilderCmsValidationError(`Index ${index + 1} references an unknown field: ${fieldKey}`);
+    }
+    if (seenFieldKeys.has(fieldKey)) {
+      throw new BuilderCmsValidationError(`Index ${index + 1} repeats field: ${fieldKey}`);
+    }
+    seenFieldKeys.add(fieldKey);
+    return {
+      fieldKey,
+      direction: source.direction === 'desc' ? 'desc' : 'asc',
     };
   });
 }
@@ -1205,7 +1295,7 @@ function isRecordObject(input: unknown): input is Record<string, unknown> {
   return !!input && typeof input === 'object' && !Array.isArray(input);
 }
 
-function generateEntityId(prefix: 'collection' | 'field' | 'record' | 'revision'): string {
+function generateEntityId(prefix: 'collection' | 'field' | 'index' | 'record' | 'revision'): string {
   generatedIdCounter += 1;
   return `${prefix}-${Date.now().toString(36)}-${generatedIdCounter.toString(36)}`;
 }

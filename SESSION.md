@@ -6545,3 +6545,27 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run typecheck` ✅
 - 다음 후보:
   - M158-H: F16 guarded CMS APIs evidence 확장 또는 F07 schema/index UI hardening.
+
+## 2026-05-16 Codex /goal M158-H CMS guarded API evidence
+
+- CMS API guard 상태를 실제 route scanner와 CMS engine tests 기준으로 재검증했다.
+- `npm run security:builder-routes` 결과:
+  - 121 builder route files
+  - 106 mutation handlers
+  - 모두 `guardMutation` coverage 통과
+- CMS routes 확인:
+  - collections list/create/detail/update/delete
+  - records list/create/update/delete
+  - CSV import/export
+  - duplicate
+  - revision restore
+  - 각 mutation route는 `permission: 'edit-pages'` guard를 사용한다.
+- 체크포인트 상태:
+  - F16 🟡 → 🟢: route guard coverage + CMS engine schema/permission/typed payload validation evidence 충족.
+  - M158 전체는 아직 🟡: F07~F13 hardening 잔여가 있음.
+- 검증:
+  - `npm run security:builder-routes` ✅
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (12 tests)
+  - `npm run typecheck` ✅
+- 다음 후보:
+  - M158-I: F07 collection schema/index UI hardening 또는 F08 bulk workflow depth.

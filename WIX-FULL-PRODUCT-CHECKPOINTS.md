@@ -36,7 +36,7 @@ Completion gate:
 | F13 | CMS | Content revisions | Row history, restore, and author/time metadata are available | 🟡 |
 | F14 | CMS | Media field integration | CMS media fields reuse the asset library and store alt text/focal metadata | 🟢 |
 | F15 | CMS | Search/filter/sort | Content manager supports typed filters, saved views, and stable pagination | 🟢 |
-| F16 | CMS | Guarded CMS APIs | Internal APIs validate schema, permissions, and typed payloads | 🟡 |
+| F16 | CMS | Guarded CMS APIs | Internal APIs validate schema, permissions, and typed payloads | 🟢 |
 
 ## M159 Dynamic Content
 

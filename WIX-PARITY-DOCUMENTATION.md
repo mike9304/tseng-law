@@ -206,6 +206,20 @@ Created: 2026-05-09T12:52:13.760Z
 - 남은 M158:
   - F07~F13/F16 hardening: schema/index UI, bulk workflows, diff/named revision, actor identity, broader API hardening evidence.
 
+## M158-H — CMS API Guard Coverage Evidence
+
+- 시작/종료: 2026-05-16 / 2026-05-16
+- 변경 파일:
+  - `WIX-FULL-PRODUCT-CHECKPOINTS.md` / `SESSION.md` — F16 guard evidence 반영
+- F-layer 판정:
+  - F16 🟡 → 🟢: CMS collection/record/CSV/duplicate/revision restore routes use `guardMutation(request, { permission: 'edit-pages' })`; CMS engine validates schemas, typed payloads, permissions, duplicate IDs, required/unique fields, CSV rollback, revisions, and media assets.
+- 검증:
+  - `npm run security:builder-routes` ✅ (121 builder route files / 106 mutation handlers guarded)
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (12 tests)
+  - `npm run typecheck` ✅
+- 남은 M158:
+  - F07~F13 hardening: schema/index UI, bulk workflows, diff/named revision, actor identity.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

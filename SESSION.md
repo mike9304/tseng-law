@@ -6508,3 +6508,20 @@ Storybook 8 로 문서화. Chromatic 통합은 follow-up.
   - `npm run typecheck` ✅
 - 다음 후보:
   - M158-F: F14 media-field asset integration을 server-side asset validation/metadata 관점까지 끌어올리기.
+
+## 2026-05-16 Codex /goal M158-F CMS media asset metadata guard
+
+- CMS image field 저장 시 builder asset URL을 정규화하고, `assetId`를 URL에서 재생성하도록 변경했다.
+- `/api/builder/assets/{locale}/{filename}` 형식이 깨진 URL은 CMS validation error로 막는다.
+- URL과 payload의 `assetId` locale/filename이 다르면 validation error로 막아 media field metadata drift를 줄였다.
+- alt text는 trim + 180자 cap, focal point는 기존처럼 0~1 clamp를 유지한다.
+- CMS UI에서 image URL을 수동 변경하면 기존 `assetId`/`filename`을 제거해, 외부 URL에 오래된 Asset Library metadata가 붙어 저장되지 않게 했다.
+- 체크포인트 상태:
+  - F14 🔴 → 🟡: Asset Library URL/assetId/filename/alt/focal metadata 저장 일관성을 확보.
+  - F14 🟢까지는 실제 asset existence validation과 library folder/tag metadata 서버 결합이 남아 있음.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (12 tests)
+  - `npx eslint src/lib/builder/cms-editable.ts src/lib/builder/__tests__/cms-editable.test.ts src/components/builder/cms/ContentManagerClient.tsx` ✅
+  - `npm run typecheck` ✅
+- 다음 후보:
+  - M158-G: CMS image record save에서 actual asset existence check와 asset library metadata coupling.

@@ -3,6 +3,7 @@ import {
   queryBuilderCmsRecords,
   stringifyBuilderCmsRecordValue,
 } from '@/lib/builder/cms-record-query';
+import { parseBuilderAssetUrl } from '@/lib/builder/assets';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
 import {
   builderCmsFieldTypes,
@@ -817,13 +818,43 @@ function normalizeImageValue(field: BuilderCmsFieldDefinition, value: unknown): 
     throw new Error(`${field.label} must be an image URL.`);
   }
 
+  const builderAsset = parseBuilderAssetUrl(url);
+  if (url.startsWith('/api/builder/assets/') && !builderAsset) {
+    throw new Error(`${field.label} must be a valid builder asset URL.`);
+  }
+
+  const assetId = normalizeBuilderCmsImageAssetId(source.assetId);
+  if (assetId && !builderAsset) {
+    throw new Error(`${field.label} asset ID requires a builder asset URL.`);
+  }
+
+  const expectedAssetId = builderAsset ? builderCmsAssetIdFromUrlReference(builderAsset) : undefined;
+  if (assetId && expectedAssetId && assetId !== expectedAssetId) {
+    throw new Error(`${field.label} asset ID must match its URL.`);
+  }
+
   return {
     url,
-    assetId: typeof source.assetId === 'string' && source.assetId.trim() ? source.assetId.trim() : undefined,
-    filename: typeof source.filename === 'string' && source.filename.trim() ? source.filename.trim() : undefined,
-    altText: typeof source.altText === 'string' ? source.altText.trim() : undefined,
+    assetId: expectedAssetId,
+    filename: builderAsset?.filename
+      ?? (typeof source.filename === 'string' && source.filename.trim() ? source.filename.trim() : undefined),
+    altText: typeof source.altText === 'string' ? source.altText.trim().slice(0, 180) : undefined,
     focalPoint: normalizeFocalPoint(source.focalPoint),
   };
+}
+
+function normalizeBuilderCmsImageAssetId(input: unknown): string | undefined {
+  if (typeof input !== 'string') return undefined;
+  const trimmed = input.trim();
+  if (!trimmed) return undefined;
+  const parts = trimmed.split('/');
+  if (parts.length !== 4 || parts[0] !== 'builder' || parts[1] !== 'assets') return trimmed;
+  const reference = parseBuilderAssetUrl(`/api/builder/assets/${parts[2]}/${parts[3]}`);
+  return reference ? builderCmsAssetIdFromUrlReference(reference) : trimmed;
+}
+
+function builderCmsAssetIdFromUrlReference(reference: { locale: string; filename: string }): string {
+  return `builder/assets/${reference.locale}/${reference.filename}`;
 }
 
 function normalizeFocalPoint(input: unknown): BuilderCmsImageValue['focalPoint'] {

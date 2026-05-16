@@ -312,16 +312,15 @@ describe('editable builder CMS store', () => {
         title: 'Lobby',
         slug: 'lobby',
         hero: {
-          url: '/api/builder/assets/lobby.webp',
-          assetId: 'builder/assets/ko/lobby.webp',
+          url: '/api/builder/assets/ko/lobby.webp',
           filename: 'lobby.webp',
-          altText: 'Law office lobby',
+          altText: ' Law office lobby ',
           focalPoint: { x: -1, y: 2 },
         },
       },
     });
     expect(created?.fields.hero).toMatchObject({
-      url: '/api/builder/assets/lobby.webp',
+      url: '/api/builder/assets/ko/lobby.webp',
       assetId: 'builder/assets/ko/lobby.webp',
       filename: 'lobby.webp',
       altText: 'Law office lobby',
@@ -334,6 +333,27 @@ describe('editable builder CMS store', () => {
       }),
     ).rejects.toMatchObject({
       issues: ['Hero image must be an image URL.'],
+    });
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'gallery', {
+        fields: {
+          title: 'Mismatched',
+          slug: 'mismatched',
+          hero: {
+            url: '/api/builder/assets/ko/lobby.webp',
+            assetId: 'builder/assets/en/lobby.webp',
+          },
+        },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Hero image asset ID must match its URL.'],
+    });
+    await expect(
+      createEditableBuilderCmsRecord('test-site', 'ko', 'gallery', {
+        fields: { title: 'Malformed', slug: 'malformed', hero: '/api/builder/assets/lobby.webp' },
+      }),
+    ).rejects.toMatchObject({
+      issues: ['Hero image must be a valid builder asset URL.'],
     });
   });
 

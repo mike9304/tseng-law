@@ -1324,9 +1324,14 @@ function CmsFieldInput({
           type="url"
           style={inputStyle}
           value={imageValue.url}
-          placeholder="/api/builder/assets/example.webp"
+          placeholder="/api/builder/assets/ko/example.webp"
           disabled={disabled}
-          onChange={(event) => onChange({ ...imageValue, url: event.target.value })}
+          onChange={(event) => onChange({
+            ...imageValue,
+            url: event.target.value,
+            assetId: undefined,
+            filename: undefined,
+          })}
         />
         <input
           type="text"

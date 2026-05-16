@@ -171,6 +171,24 @@ Created: 2026-05-09T12:52:13.760Z
   - F14 media-field asset integration.
   - F07~F13/F16은 v1 구현이 있으나 schema/index UI, bulk workflows, diff/named revision, actor identity, API hardening coverage를 더 올려야 한다.
 
+## M158-F — CMS Media Field Asset Metadata Guard
+
+- 시작/종료: 2026-05-16 / 2026-05-16
+- 변경 파일:
+  - `src/lib/builder/cms-editable.ts` — CMS image field 정규화에서 `/api/builder/assets/{locale}/{filename}` URL을 검증하고, `assetId`를 URL에서 재생성하며 mismatch를 validation error로 차단
+  - `src/components/builder/cms/ContentManagerClient.tsx` — CMS image URL을 수동 변경하면 기존 `assetId`/`filename`을 제거해 잘못된 asset metadata가 남지 않도록 보정
+  - `src/lib/builder/__tests__/cms-editable.test.ts` — builder asset URL normalization, alt trim/focal clamp, assetId mismatch, malformed asset URL 검증 추가
+- F-layer 판정:
+  - F14 🔴 → 🟡: CMS media fields가 Asset Library URL/assetId/filename/alt/focal metadata를 일관되게 저장하고 mismatch를 막는다.
+  - F14는 아직 🟢 아님: record save 시 실제 asset 존재 확인과 asset-library folder/tag metadata의 서버 결합이 후속으로 남음.
+- 검증:
+  - `npm run test:unit -- src/lib/builder/__tests__/cms-editable.test.ts src/lib/builder/__tests__/cms-record-query.test.ts` ✅ (12 tests)
+  - `npx eslint src/lib/builder/cms-editable.ts src/lib/builder/__tests__/cms-editable.test.ts src/components/builder/cms/ContentManagerClient.tsx` ✅
+  - `npm run typecheck` ✅
+- 남은 M158:
+  - F14 actual asset existence/library-state coupling.
+  - F07~F13/F16 hardening.
+
 ## M00 — mergeMissingPages 데이터 손실 fix
 
 - 시작/종료: 2026-05-09T21:52:00+09:00 / 2026-05-09T22:04:00+09:00

@@ -50,6 +50,7 @@ type AiMaskRect = {
 };
 type AiBrushPoint = { x: number; y: number };
 type AiBrushMode = 'paint' | 'erase';
+type AiPreviewFrame = 'desktop' | 'mobile';
 type AiBrushStroke = {
   id: string;
   points: AiBrushPoint[];
@@ -124,6 +125,7 @@ export default function ImageEditDialog({
   const restoreFocusRef = useRef<HTMLElement | null>(null);
   const closingRef = useRef(false);
   const [activeTab, setActiveTab] = useState<ImageEditTab>('crop');
+  const [dialogImageSrc, setDialogImageSrc] = useState(imageSrc);
   const [draftAlt, setDraftAlt] = useState(alt);
   const [draftAspect, setDraftAspect] = useState(cropAspect || 'Free');
   const [draftFocalPoint, setDraftFocalPoint] = useState<ImageFocalPoint>(() => normalizeFocalPoint(focalPoint));
@@ -143,9 +145,21 @@ export default function ImageEditDialog({
   const [aiMaskEdge, setAiMaskEdge] = useState(DEFAULT_AI_MASK_EDGE);
   const [aiReviewOriginal, setAiReviewOriginal] = useState(false);
   const [aiReviewHistory, setAiReviewHistory] = useState<AiReviewHistoryState>(EMPTY_AI_REVIEW_HISTORY);
+  const [aiPreviewFrame, setAiPreviewFrame] = useState<AiPreviewFrame>('desktop');
   const previewImageRef = useRef<HTMLImageElement | null>(null);
   const aiBrushIdRef = useRef(0);
   const activeBrushStrokeIdRef = useRef<string | null>(null);
+  const dialogOpenSnapshotRef = useRef(false);
+
+  useEffect(() => {
+    if (!open) {
+      dialogOpenSnapshotRef.current = false;
+      return;
+    }
+    if (dialogOpenSnapshotRef.current) return;
+    dialogOpenSnapshotRef.current = true;
+    setDialogImageSrc(imageSrc);
+  }, [imageSrc, open]);
 
   useEffect(() => {
     if (!open) return;
@@ -169,6 +183,7 @@ export default function ImageEditDialog({
     setAiMaskEdge(DEFAULT_AI_MASK_EDGE);
     setAiReviewOriginal(false);
     setAiReviewHistory(EMPTY_AI_REVIEW_HISTORY);
+    setAiPreviewFrame('desktop');
     activeBrushStrokeIdRef.current = null;
   }, [alt, cropAspect, filters, focalPoint, initialTab, open]);
 
@@ -264,11 +279,11 @@ export default function ImageEditDialog({
   const canUndoAiReview = aiReviewHistory.index > 0;
   const canRedoAiReview = aiReviewHistory.index >= 0 && aiReviewHistory.index < aiReviewHistory.entries.length - 1;
   const previewSrc = activeTab === 'ai' && aiReviewOriginal && aiEditedAsset?.url
-    ? imageSrc
-    : aiEditedAsset?.url ?? imageSrc;
+    ? dialogImageSrc
+    : aiEditedAsset?.url ?? dialogImageSrc;
   const previewFilter = !isDefaultFilters(draftFilters) ? filtersToCSS(draftFilters) : undefined;
   const builderAssetUrl = useMemo(() => {
-    const trimmed = imageSrc.trim();
+    const trimmed = dialogImageSrc.trim();
     if (trimmed.startsWith('/api/builder/assets/')) return trimmed;
     if (typeof window === 'undefined') return null;
     try {
@@ -278,7 +293,7 @@ export default function ImageEditDialog({
     } catch {
       return null;
     }
-  }, [imageSrc]);
+  }, [dialogImageSrc]);
   const updateFocalPoint = (partial: Partial<ImageFocalPoint>) => {
     setDraftFocalPoint((current) => ({
       x: clampFocal(partial.x ?? current.x),
@@ -485,7 +500,10 @@ export default function ImageEditDialog({
         <div className={styles.imageEditLayout}>
           <div className={styles.imageEditPreview}>
             {previewSrc ? (
-              <div className={styles.imageEditPreviewFrame}>
+              <div
+                className={`${styles.imageEditPreviewFrame} ${activeTab === 'ai' && aiPreviewFrame === 'mobile' ? styles.imageEditPreviewFrameMobile : ''}`}
+                data-builder-ai-image-preview-mode={activeTab === 'ai' ? aiPreviewFrame : undefined}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   ref={previewImageRef}
@@ -711,6 +729,22 @@ export default function ImageEditDialog({
                     현재 빌더 자산을 기반으로 새 이미지를 만들고, Apply를 누르면 이 이미지로 교체됩니다.
                   </p>
                 </div>
+                <div className={styles.imageEditAiViewportControls} data-builder-ai-image-preview-controls="true">
+                  <span className={styles.inspectorFieldLabel}>Preview frame</span>
+                  <div className={styles.imageEditAiViewportButtons} aria-label="AI image preview frame">
+                    {(['desktop', 'mobile'] as AiPreviewFrame[]).map((frame) => (
+                      <button
+                        key={frame}
+                        type="button"
+                        className={`${styles.imageEditOptionButton} ${aiPreviewFrame === frame ? styles.imageEditOptionButtonActive : ''}`}
+                        data-builder-ai-image-preview-mode-button={frame}
+                        onClick={() => setAiPreviewFrame(frame)}
+                      >
+                        {frame === 'desktop' ? 'Desktop' : 'Mobile'}
+                      </button>
+                    ))}
+                  </div>
+                </div>
                 <label className={styles.inspectorField}>
                   <span className={styles.inspectorFieldLabel}>Edit prompt</span>
                   <textarea
@@ -931,7 +965,7 @@ export default function ImageEditDialog({
                     <div className={styles.imageEditAiTransactionFrame}>
                       <span>Current</span>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={imageSrc} alt="" />
+                      <img src={dialogImageSrc} alt="" />
                     </div>
                     <div className={styles.imageEditAiTransactionFrame}>
                       <span>Selected edit</span>

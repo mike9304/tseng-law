@@ -119,12 +119,27 @@ test('/ko/admin-builder/ai-generator generates sitemap and content plan from exp
   await expect(sitemap).toContainText('/columns');
   await expect(page.locator('[data-ai-generator-visual-brief]')).toContainText('professional split hero');
   await expect(page.locator('[data-ai-generator-image-prompt]')).toContainText('타이베이 스카이라인');
+  await expect(page.locator('[data-ai-generator-prompt-version]')).toContainText('ai-site-builder-2026-05-21-af');
+  await expect(page.locator('[data-ai-generator-prompt-changelog]')).toContainText('Responsive draft review');
+  await expect(page.locator('[data-ai-generator-prompt-changelog]')).toContainText('Desktop/Mobile generated draft preview frame');
+  const draftPreview = page.locator('[data-ai-generator-draft-preview-mode]');
+  await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'desktop');
+  await page.locator('[data-ai-generator-draft-preview-mode-button="mobile"]').click();
+  await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'mobile');
+  await expect(draftPreview.locator('h3')).toBeVisible();
+  await page.locator('[data-ai-generator-draft-preview-mode-button="desktop"]').click();
+  await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'desktop');
   await page.locator('[data-ai-generator-generate-hero-image]').click();
   await expect(page.locator('[data-ai-generator-image-generation-status]')).toContainText('generated-image-2-hero.webp');
   await expect(page.locator('[data-ai-generator-selected-hero-asset]')).toContainText('generated-image-2-hero.webp');
   await expect(page.locator('[data-ai-generator-content-plan]')).toBeVisible();
   await expect(page.locator('[data-ai-generator-content-plan]')).toContainText('포지셔닝');
   await expect(page.locator('[data-ai-generator-apply-panel]')).toBeVisible();
+  const singleApplyReview = page.locator('[data-ai-generator-apply-review]');
+  await expect(singleApplyReview).toHaveAttribute('data-ai-generator-apply-review-scope', 'single');
+  await expect(singleApplyReview).toHaveAttribute('data-ai-generator-apply-review-page-count', '1');
+  await expect(singleApplyReview.locator('[data-ai-generator-apply-review-page]')).toHaveCount(1);
+  await expect(singleApplyReview).toContainText('현재 사이트를 덮어쓰지 않고');
   await expect(page.locator('[data-ai-generator-history]')).toContainText('1 saved');
   await expect(page.locator('[data-ai-generator-history]')).toContainText('호정국제법률사무소');
   await expect(page.evaluate((historyKey) => {
@@ -371,9 +386,15 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
     await expect(page.locator('[data-ai-generator-slug]')).toBeDisabled();
     await expect(page.locator('[data-ai-generator-sitemap-select-panel]')).toBeVisible();
     await expect(page.locator('[data-ai-generator-selected-count]')).toContainText('3/3');
+	    const sitemapApplyReview = page.locator('[data-ai-generator-apply-review]');
+	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-scope', 'sitemap');
+	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-page-count', '3');
+	    await expect(sitemapApplyReview.locator('[data-ai-generator-apply-review-page]')).toHaveCount(3);
 	    await expect(page.locator('[data-ai-generator-page-status="planned"]')).toHaveCount(3);
 	    await page.locator(`[data-ai-generator-sitemap-page-checkbox="guides-${token}"]`).uncheck();
 	    await expect(page.locator('[data-ai-generator-selected-count]')).toContainText('2/3');
+	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-page-count', '2');
+	    await expect(sitemapApplyReview.locator(`[data-ai-generator-apply-review-page-slug="guides-${token}"]`)).toHaveCount(0);
 	    await expect(page.locator('[data-ai-generator-page-status="planned"]')).toHaveCount(2);
 	    await expect(page.locator('[data-ai-generator-page-status="not_selected"]')).toHaveCount(1);
 	    await page.locator('[data-ai-generator-include-navigation-toggle]').check();
@@ -381,6 +402,7 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
 	      'data-ai-generator-navigation-status',
 	      'enabled',
 	    );
+	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-navigation', 'enabled');
 	    await expect(page.locator('[data-ai-generator-navigation-helper]')).toContainText('공개 header');
 
 	    await page.locator('[data-ai-generator-create-selected-drafts]').click();

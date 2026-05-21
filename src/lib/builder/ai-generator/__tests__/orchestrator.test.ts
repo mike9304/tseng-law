@@ -1,5 +1,10 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { generateSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
+import {
+  AI_GENERATOR_BLUEPRINT_VERSION,
+  AI_GENERATOR_CONTENT_VERSION,
+  AI_GENERATOR_PROMPT_VERSION,
+  generateSiteDraft,
+} from '@/lib/builder/ai-generator/orchestrator';
 import { siteSpecSchema } from '@/lib/builder/ai-generator/site-spec';
 import { selectBlueprint } from '@/lib/builder/ai-generator/template-selector';
 
@@ -23,6 +28,13 @@ describe('AI site generator', () => {
     expect(draft.content.hero.headline).toBe('대만 진출 전문');
     expect(draft.content.sections.length).toBeGreaterThanOrEqual(4);
     expect(draft.palette.primary).toMatch(/^#/);
+    expect(draft.promptVersion).toBe(AI_GENERATOR_PROMPT_VERSION);
+    expect(draft.blueprintVersion).toBe(AI_GENERATOR_BLUEPRINT_VERSION);
+    expect(draft.contentVersion).toBe(AI_GENERATOR_CONTENT_VERSION);
+    expect(draft.promptChangelog[0]).toMatchObject({
+      version: AI_GENERATOR_PROMPT_VERSION,
+      label: 'Responsive draft review',
+    });
   });
 
   it('uses company name in headline when no slogan provided', async () => {

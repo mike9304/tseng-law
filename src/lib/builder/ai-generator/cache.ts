@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import type { GeneratedSiteDraft } from './orchestrator';
+import { AI_GENERATOR_PROMPT_VERSION, type GeneratedSiteDraft } from './orchestrator';
 import type { SiteSpec } from './site-spec';
 
 const cache = new Map<string, GeneratedSiteDraft>();
@@ -8,7 +8,7 @@ const CAP = 256;
 function specKey(spec: SiteSpec): string {
   return crypto
     .createHash('sha1')
-    .update(JSON.stringify(spec))
+    .update(JSON.stringify({ promptVersion: AI_GENERATOR_PROMPT_VERSION, spec }))
     .digest('hex')
     .slice(0, 16);
 }

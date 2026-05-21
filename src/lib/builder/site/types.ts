@@ -95,6 +95,8 @@ export interface BuilderPageMeta {
   noIndex?: boolean;
   password?: string;
   memberAccess?: BuilderMemberAccessMeta;
+  /** F105 — per-page custom code slots injected into <head>/<body>. */
+  customCode?: { head?: string; bodyStart?: string; bodyEnd?: string };
 }
 
 export interface BuilderSeoMetadata {
@@ -115,6 +117,17 @@ export interface BuilderSeoMetadata {
   overrideState?: BuilderSeoOverrideState;
   focusKeyword?: string;
   structuredDataBlocks?: BuilderStructuredDataBlock[];
+  /**
+   * F117 — Per-language SEO overrides. When present, `localizedOverrides[locale]`
+   * wins field-by-field over the source-locale SEO values in
+   * `projectSeoToLocales`. Stored on the source-locale page so the projection
+   * helper works even when the target locale page does not yet exist.
+   */
+  localizedOverrides?: Partial<Record<Locale, {
+    title?: string;
+    description?: string;
+    ogImage?: string;
+  }>>;
 }
 
 export interface BuilderSeoAdditionalMetaTag {
@@ -627,4 +640,6 @@ export interface BuilderSiteSettings {
 
 export interface BuilderSiteDocument {
   darkMode?: DarkModeConfig;
+  /** F105 — site-level custom code slots injected into <head>/<body>. */
+  customCode?: { siteHead?: string; siteBodyStart?: string; siteBodyEnd?: string };
 }

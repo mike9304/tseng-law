@@ -20,7 +20,16 @@ import type { Locale } from '@/lib/locales';
 import styles from './AiGeneratorWizard.module.css';
 
 type WizardStep = 1 | 2 | 3 | 4 | 5 | 6;
-type Draft = Pick<GeneratedSiteDraft, 'spec' | 'blueprint' | 'palette' | 'content' | 'plan'>;
+type DraftCore = Pick<
+  GeneratedSiteDraft,
+  'spec' | 'blueprint' | 'palette' | 'content' | 'plan'
+>;
+type DraftVersionMetadata = Partial<Pick<
+  GeneratedSiteDraft,
+  'generatedAt' | 'promptVersion' | 'blueprintVersion' | 'contentVersion' | 'promptChangelog'
+>>;
+type Draft = DraftCore & DraftVersionMetadata;
+type DraftPreviewFrame = 'desktop' | 'mobile';
 
 interface PromptHistoryEntry {
   id: string;
@@ -164,6 +173,11 @@ function normalizePlanSlug(slug: string): string {
   return normalized || '/';
 }
 
+function displayPlanPath(slug: string): string {
+  const normalized = normalizePlanSlug(slug);
+  return normalized === '/' ? '/' : `/${normalized}`;
+}
+
 function selectableSitemapSlugs(draft: Draft): string[] {
   return draft.plan.sitemap
     .map((page) => normalizePlanSlug(page.slug))
@@ -273,6 +287,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const [selectedHeroAsset, setSelectedHeroAsset] = useState<HeroAssetSelection | null>(null);
   const [imageGenerating, setImageGenerating] = useState(false);
   const [imageGenerationNotice, setImageGenerationNotice] = useState('');
+  const [draftPreviewFrame, setDraftPreviewFrame] = useState<DraftPreviewFrame>('desktop');
 
   useEffect(() => {
     setHydrated(true);
@@ -510,6 +525,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setSavedSectionIds({});
     setSectionSaveNotice('');
     setDraftSlug(suggestDraftSlug());
+    setDraftPreviewFrame('desktop');
     setError('');
     setHistoryNotice('이전 생성안을 복원했습니다.');
     setStep(6);
@@ -560,6 +576,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
       setSelectedSitemapPageSlugs(selectableSitemapSlugs(payload.draft));
       rememberDraft(payload.draft);
       setDraftSlug(suggestDraftSlug());
+      setDraftPreviewFrame('desktop');
       setStep(6);
     } finally {
       setBusy(false);
@@ -689,6 +706,36 @@ export default function AiGeneratorWizard({ locale }: Props) {
     [draft, locale],
   );
   const activeVisualBrief = draft ? visualBriefForUi(draft) : null;
+  const activePromptVersion = draft?.promptVersion ?? 'legacy-local-draft';
+  const activeBlueprintVersion = draft?.blueprintVersion ?? 'unknown-blueprint';
+  const activePromptChange = draft?.promptChangelog?.find((entry) => entry.version === activePromptVersion)
+    ?? draft?.promptChangelog?.[0]
+    ?? null;
+  const applyReviewPages = useMemo(() => {
+    if (!draft) return [];
+    if (applyScope === 'single') {
+      const slug = normalizePlanSlug(draftSlug);
+      return [{
+        title: `${draft.spec.companyName || companyName || 'AI site'} draft`,
+        slug,
+        sections: ['hero', ...draft.content.sections.map((section) => section.sectionId)],
+      }];
+    }
+    return draft.plan.sitemap
+      .filter((page) => {
+        const slug = normalizePlanSlug(page.slug);
+        return slug !== '/' && selectedSitemapPageSlugSet.has(slug);
+      })
+      .map((page) => ({
+        title: page.title,
+        slug: normalizePlanSlug(page.slug),
+        sections: page.sections,
+      }));
+  }, [applyScope, companyName, draft, draftSlug, selectedSitemapPageSlugSet]);
+  const applyReviewSectionCount = useMemo(
+    () => applyReviewPages.reduce((total, page) => total + page.sections.length, 0),
+    [applyReviewPages],
+  );
 
   return (
     <div className={styles.shell} data-ai-generator data-ai-generator-ready={hydrated ? 'true' : 'false'}>
@@ -1036,6 +1083,20 @@ export default function AiGeneratorWizard({ locale }: Props) {
                   <span className={styles.eyebrow}>Visual Brief</span>
                   <strong data-ai-generator-design-treatment>{activeVisualBrief.treatment}</strong>
                   <p data-ai-generator-image-prompt>{activeVisualBrief.imagePrompt}</p>
+                  <small data-ai-generator-prompt-version>
+                    Prompt version: {activePromptVersion} · {activeBlueprintVersion}
+                  </small>
+                  {activePromptChange ? (
+                    <div className={styles.promptVersionCard} data-ai-generator-prompt-changelog>
+                      <strong>{activePromptChange.label}</strong>
+                      <p>{activePromptChange.summary}</p>
+                      <div>
+                        {activePromptChange.changes.slice(0, 3).map((change) => (
+                          <span key={change}>{change}</span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
                   {draft.spec.heroImageAsset ? (
                     <small data-ai-generator-selected-hero-asset>
                       Hero asset: {draft.spec.heroImageAsset.filename}
@@ -1058,7 +1119,27 @@ export default function AiGeneratorWizard({ locale }: Props) {
                   ) : null}
                 </div>
               ) : null}
-              <div className={styles.canvasPreview} style={{ background: draft.palette.background }}>
+              <div className={styles.draftPreviewControls} data-ai-generator-draft-preview-controls>
+                <span>Preview frame</span>
+                <div aria-label="AI generated draft preview frame">
+                  {(['desktop', 'mobile'] as DraftPreviewFrame[]).map((frame) => (
+                    <button
+                      key={frame}
+                      type="button"
+                      className={draftPreviewFrame === frame ? styles.previewFrameButtonActive : styles.previewFrameButton}
+                      data-ai-generator-draft-preview-mode-button={frame}
+                      onClick={() => setDraftPreviewFrame(frame)}
+                    >
+                      {frame === 'desktop' ? 'Desktop' : 'Mobile'}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div
+                className={`${styles.canvasPreview} ${draftPreviewFrame === 'mobile' ? styles.canvasPreviewMobile : ''}`}
+                style={{ background: draft.palette.background }}
+                data-ai-generator-draft-preview-mode={draftPreviewFrame}
+              >
                 <div className={styles.previewBrowser}>
                   <div className={styles.previewHero}>
                     <span style={{ color: draft.palette.accent }}>{draft.spec.industry}</span>
@@ -1198,6 +1279,61 @@ export default function AiGeneratorWizard({ locale }: Props) {
 	                    <em>{includeNavigation ? 'Nav on' : 'Draft only'}</em>
 	                  </label>
 	                ) : null}
+                <div
+                  className={styles.applyReviewCard}
+                  data-ai-generator-apply-review
+                  data-ai-generator-apply-review-scope={applyScope}
+                  data-ai-generator-apply-review-page-count={applyReviewPages.length}
+                  data-ai-generator-apply-review-section-count={applyReviewSectionCount}
+                  data-ai-generator-apply-review-navigation={applyScope === 'sitemap' && includeNavigation ? 'enabled' : 'disabled'}
+                >
+                  <div className={styles.applyReviewHeader}>
+                    <span>Apply review</span>
+                    <strong>
+                      {applyScope === 'sitemap'
+                        ? `${applyReviewPages.length} draft pages`
+                        : `${displayPlanPath(draftSlug)} draft`}
+                    </strong>
+                  </div>
+                  <div className={styles.applyReviewStats}>
+                    <span>
+                      <strong>{applyReviewPages.length}</strong>
+                      Pages
+                    </span>
+                    <span>
+                      <strong>{applyReviewSectionCount}</strong>
+                      Sections
+                    </span>
+                    <span>
+                      <strong>{applyScope === 'sitemap' && includeNavigation ? 'On' : 'Off'}</strong>
+                      Navigation
+                    </span>
+                  </div>
+                  {applyReviewPages.length > 0 ? (
+                    <div className={styles.applyReviewPageList}>
+                      {applyReviewPages.slice(0, 4).map((page) => (
+                        <span
+                          key={page.slug}
+                          data-ai-generator-apply-review-page
+                          data-ai-generator-apply-review-page-slug={page.slug}
+                        >
+                          <strong>{page.title}</strong>
+                          <small>{displayPlanPath(page.slug)} · {page.sections.slice(0, 4).join(' / ')}</small>
+                        </span>
+                      ))}
+                      {applyReviewPages.length > 4 ? (
+                        <em>+{applyReviewPages.length - 4} more</em>
+                      ) : null}
+                    </div>
+                  ) : (
+                    <p>선택된 생성 대상이 없습니다.</p>
+                  )}
+                  <p>
+                    {applyScope === 'sitemap'
+                      ? '선택한 slug만 draft로 생성하고, 기존 slug는 서버 검증 후 건너뜁니다.'
+                      : '현재 사이트를 덮어쓰지 않고 새 draft page로 생성합니다.'}
+                  </p>
+                </div>
                 <div className={styles.actionRowCompact}>
                   <button type="button" className={styles.secondaryButton} onClick={() => setStep(5)}>
                     다시 생성

@@ -13,6 +13,32 @@ import type { SiteSpec } from './site-spec';
  * importer in a follow-up; this round does not write to the site doc.
  */
 
+export const AI_GENERATOR_PROMPT_VERSION = 'ai-site-builder-2026-05-21-af';
+export const AI_GENERATOR_BLUEPRINT_VERSION = 'blueprint-library-v1';
+export const AI_GENERATOR_CONTENT_VERSION = 'content-generator-v1';
+
+export interface GeneratedPromptVersionEntry {
+  version: string;
+  label: string;
+  summary: string;
+  createdAt: string;
+  changes: string[];
+}
+
+export const AI_GENERATOR_PROMPT_CHANGELOG: GeneratedPromptVersionEntry[] = [
+  {
+    version: AI_GENERATOR_PROMPT_VERSION,
+    label: 'Responsive draft review',
+    summary: 'Adds apply review metadata, page-level responsive preview, and prompt-version cache isolation.',
+    createdAt: '2026-05-21',
+    changes: [
+      'Apply review summary before draft creation',
+      'Desktop/Mobile generated draft preview frame',
+      'Prompt-version-aware draft cache key',
+    ],
+  },
+];
+
 export interface GeneratedSiteDraft {
   spec: SiteSpec;
   blueprint: SiteBlueprint;
@@ -20,6 +46,10 @@ export interface GeneratedSiteDraft {
   content: GeneratedSiteContent;
   plan: GeneratedSitePlan;
   generatedAt: string;
+  promptVersion: string;
+  blueprintVersion: string;
+  contentVersion: string;
+  promptChangelog: GeneratedPromptVersionEntry[];
 }
 
 export interface GeneratedSitePlanPage {
@@ -169,6 +199,10 @@ export async function generateSiteDraft(spec: SiteSpec): Promise<GeneratedSiteDr
     content,
     plan,
     generatedAt: new Date().toISOString(),
+    promptVersion: AI_GENERATOR_PROMPT_VERSION,
+    blueprintVersion: AI_GENERATOR_BLUEPRINT_VERSION,
+    contentVersion: AI_GENERATOR_CONTENT_VERSION,
+    promptChangelog: AI_GENERATOR_PROMPT_CHANGELOG,
   };
 }
 

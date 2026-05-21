@@ -406,6 +406,13 @@ test.describe('/ko/admin-builder image asset workflow', () => {
       await editDialog.locator('[data-builder-ai-image-edit-generate="true"]').click();
       await expect(editDialog.locator('[data-builder-ai-image-edit-status="true"]')).toContainText(firstEditedFilename);
       await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
+      const aiPreviewFrame = editDialog.locator('[data-builder-ai-image-preview-mode]');
+      await expect(aiPreviewFrame).toHaveAttribute('data-builder-ai-image-preview-mode', 'desktop');
+      await editDialog.locator('[data-builder-ai-image-preview-mode-button="mobile"]').click();
+      await expect(aiPreviewFrame).toHaveAttribute('data-builder-ai-image-preview-mode', 'mobile');
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
+      await editDialog.locator('[data-builder-ai-image-preview-mode-button="desktop"]').click();
+      await expect(aiPreviewFrame).toHaveAttribute('data-builder-ai-image-preview-mode', 'desktop');
       await expect(editDialog.locator('[data-builder-ai-image-edit-transaction="true"]')).toContainText(firstEditedFilename);
       await expect(editDialog.locator('[data-builder-ai-image-edit-transaction="true"] img').nth(0)).toHaveAttribute('src', new RegExp(uploaded[0].filename));
       await expect(editDialog.locator('[data-builder-ai-image-edit-transaction="true"] img').nth(1)).toHaveAttribute('src', new RegExp(firstEditedFilename));

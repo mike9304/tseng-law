@@ -123,7 +123,39 @@ test('/ko/admin-builder/ai-generator generates sitemap and content plan from exp
     'data-ai-generator-prompt-selected',
     'true',
   );
+  await expect(page.locator('[data-ai-generator-prompt-comparison]')).toHaveAttribute(
+    'data-ai-generator-prompt-comparison-mode',
+    'rollback',
+  );
+  await expect(page.locator('[data-ai-generator-prompt-diff-current]')).toContainText('Desktop/Mobile');
+  await page.locator('[data-ai-generator-compare-drafts]').click();
+  await expect(page.locator('[data-ai-generator-draft-comparison]')).toBeVisible({ timeout: AI_GENERATE_TIMEOUT_MS });
+  await expect(page.locator('[data-ai-generator-draft-comparison]')).toHaveAttribute(
+    'data-ai-generator-draft-comparison-selected',
+    'ai-site-builder-2026-05-21-ae',
+  );
+  await expect(page.locator('[data-ai-generator-draft-comparison]')).toHaveAttribute(
+    'data-ai-generator-draft-comparison-current',
+    'ai-site-builder-2026-05-21-af',
+  );
+  await expect(page.locator('[data-ai-generator-draft-comparison-selected-card]')).toContainText('Selected draft');
+  await expect(page.locator('[data-ai-generator-draft-comparison-current-card]')).toContainText('Current draft');
+  await expect(page.locator('[data-ai-generator-draft-visual-selected]')).toBeVisible();
+  await expect(page.locator('[data-ai-generator-draft-visual-current]')).toBeVisible();
+  const fullPageVisualDiff = page.locator('[data-ai-generator-page-visual-diff]');
+  await expect(fullPageVisualDiff).toBeVisible();
+  await expect(fullPageVisualDiff).toContainText('Full-page visual diff');
+  await expect(fullPageVisualDiff).toContainText('Palette tokens');
+  await expect(fullPageVisualDiff.locator('[data-ai-generator-page-visual-strip="selected"]')).toBeVisible();
+  await expect(fullPageVisualDiff.locator('[data-ai-generator-page-visual-strip="current"]')).toBeVisible();
+  await expect(fullPageVisualDiff).toHaveAttribute('data-ai-generator-page-visual-diff-guidance', '2');
+  await expect(page.locator('[data-ai-generator-draft-comparison-delta]')).toBeVisible();
+  await expect(page.locator('[data-ai-generator-draft-comparison-delta]')).toContainText('Visual treatment differs');
   await page.locator('[data-ai-generator-prompt-option="ai-site-builder-2026-05-21-af"]').click();
+  await expect(page.locator('[data-ai-generator-prompt-comparison]')).toHaveAttribute(
+    'data-ai-generator-prompt-comparison-mode',
+    'current',
+  );
   await page.locator('[data-ai-generator-generate]').click();
 
   const sitemap = page.locator('[data-ai-generator-sitemap]');
@@ -139,6 +171,28 @@ test('/ko/admin-builder/ai-generator generates sitemap and content plan from exp
   await page.locator('[data-ai-generator-draft-preview-mode-button="mobile"]').click();
   await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'mobile');
   await expect(draftPreview.locator('h3')).toBeVisible();
+  await page.locator('[data-ai-generator-apply-responsive-fix]').click();
+  await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'mobile');
+  await expect(page.locator('[data-ai-generator-responsive-fix-status]')).toContainText('모바일 CTA');
+  await expect(page.locator('[data-ai-generator-visual-brief]')).toContainText('mobile-safe CTA spacing');
+  await page.locator('[data-ai-generator-undo-responsive-fix]').click();
+  await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'desktop');
+  await expect(page.locator('[data-ai-generator-responsive-fix-status]')).toContainText('되돌렸습니다');
+  await expect(page.locator('[data-ai-generator-designer-suggestions]')).toBeVisible();
+  await page.locator('[data-ai-generator-designer-suggestion="editorial-trust"]').click();
+  await expect(page.locator('[data-ai-generator-designer-suggestions]')).toHaveAttribute(
+    'data-ai-generator-designer-suggestion-active',
+    'editorial-trust',
+  );
+  await expect(page.locator('[data-ai-generator-designer-suggestion-status]')).toContainText('Editorial trust');
+  await expect(page.locator('[data-ai-generator-design-treatment]')).toContainText('Designer polish');
+  await page.locator('[data-ai-generator-undo-designer-suggestion]').click();
+  await expect(page.locator('[data-ai-generator-designer-suggestions]')).toHaveAttribute(
+    'data-ai-generator-designer-suggestion-active',
+    'none',
+  );
+  await expect(page.locator('[data-ai-generator-designer-suggestion-status]')).toContainText('되돌렸습니다');
+  await expect(page.locator('[data-ai-generator-design-treatment]')).not.toContainText('Designer polish');
   await page.locator('[data-ai-generator-draft-preview-mode-button="desktop"]').click();
   await expect(draftPreview).toHaveAttribute('data-ai-generator-draft-preview-mode', 'desktop');
   await page.locator('[data-ai-generator-generate-hero-image]').click();
@@ -402,9 +456,30 @@ test('/ko/admin-builder/ai-generator creates selected sitemap draft pages with s
 	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-scope', 'sitemap');
 	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-page-count', '3');
 	    await expect(sitemapApplyReview.locator('[data-ai-generator-apply-review-page]')).toHaveCount(3);
+    const sitemapTreeOrder = page.locator('[data-ai-generator-sitemap-tree-order]');
+    await expect(sitemapTreeOrder).toBeVisible();
+    await expect(sitemapTreeOrder).toHaveAttribute('data-ai-generator-sitemap-tree-order-count', '3');
+    await expect(sitemapTreeOrder.locator(`[data-ai-generator-sitemap-order-row="roadmap-${token}"]`)).toHaveAttribute(
+      'data-ai-generator-sitemap-order-index',
+      '0',
+    );
+    await page.locator(`[data-ai-generator-sitemap-order-down="roadmap-${token}"]`).click();
+    await expect(sitemapTreeOrder.locator(`[data-ai-generator-sitemap-order-row="roadmap-${token}"]`)).toHaveAttribute(
+      'data-ai-generator-sitemap-order-index',
+      '1',
+    );
+    await expect(sitemapApplyReview.locator('[data-ai-generator-apply-review-page]').first()).toHaveAttribute(
+      'data-ai-generator-apply-review-page-slug',
+      `guides-${token}`,
+    );
 	    await expect(page.locator('[data-ai-generator-page-status="planned"]')).toHaveCount(3);
 	    await page.locator(`[data-ai-generator-sitemap-page-checkbox="guides-${token}"]`).uncheck();
 	    await expect(page.locator('[data-ai-generator-selected-count]')).toContainText('2/3');
+    await expect(sitemapTreeOrder).toHaveAttribute('data-ai-generator-sitemap-tree-order-count', '2');
+    await expect(sitemapTreeOrder.locator(`[data-ai-generator-sitemap-order-row="roadmap-${token}"]`)).toHaveAttribute(
+      'data-ai-generator-sitemap-order-index',
+      '0',
+    );
 	    await expect(sitemapApplyReview).toHaveAttribute('data-ai-generator-apply-review-page-count', '2');
 	    await expect(sitemapApplyReview.locator(`[data-ai-generator-apply-review-page-slug="guides-${token}"]`)).toHaveCount(0);
 	    await expect(page.locator('[data-ai-generator-page-status="planned"]')).toHaveCount(2);

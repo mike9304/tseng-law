@@ -160,43 +160,51 @@ Completion gate:
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F95 | Collaboration | Presence/cursors | Multiple editors show active users, selected nodes, and cursor/location state | 🔴 |
-| F96 | Collaboration | Conflict handling | Concurrent edits resolve deterministically with user-visible conflict feedback | 🔴 |
-| F97 | Collaboration | Canvas comments | Comments can be attached to pages/elements/regions | 🔴 |
-| F98 | Collaboration | Resolve/assign comments | Comments support assign, reply, resolve, reopen, and filter states | 🔴 |
-| F99 | Collaboration | Roles/permissions | Owner/admin/designer/editor/client roles gate editor/admin actions | 🔴 |
-| F100 | Collaboration | Client review mode | Clients can review/comment without full editor permissions | 🔴 |
+| F95 | Collaboration | Presence/cursors | Multiple editors show active users, selected nodes, and cursor/location state | 🟡 In-memory `presence-store.ts` with TTL + heartbeat, `/api/builder/collab/presence` GET/POST routes behind `guardBuilderRead`/`guardMutation`, and `PresenceIndicator` client component (avatar stack with initials, selected-node tooltip). Per-process only; Redis/Upstash backend remains for multi-replica deploys. |
+| F96 | Collaboration | Conflict handling | Concurrent edits resolve deterministically with user-visible conflict feedback | 🔴 Deferred — needs CRDT decision. |
+| F97 | Collaboration | Canvas comments | Comments can be attached to pages/elements/regions | 🟡 File-backed `comments-store.ts` with per-(site,page) write mutex, GET/POST + PATCH (resolve/reopen) + DELETE routes, `CommentsPanel` React component with attach-to-node toggle and resolve filter. Unit + Playwright coverage. |
+| F98 | Collaboration | Resolve/assign comments | Comments support assign, reply, resolve, reopen, and filter states | 🟡 Resolve/reopen/delete + show-resolved filter shipped; assignment, replies, and threaded follow-ups remain. |
+| F99 | Collaboration | Roles/permissions | Owner/admin/designer/editor/client roles gate editor/admin actions | 🔴 Deferred — depends on real per-user RBAC store. |
+| F100 | Collaboration | Client review mode | Clients can review/comment without full editor permissions | 🔴 Depends on F99 + per-user accounts. |
 | F101 | Workflow | Branches/variants | Site changes can be isolated in branches/variants and compared | 🔴 |
 | F102 | Workflow | Approval workflow | Publish can require approval for selected roles/sites | 🔴 |
-| F103 | Workflow | Audit log | Security, publish, app, CMS, commerce, and role changes are logged | 🔴 |
+| F103 | Workflow | Audit log | Security, publish, app, CMS, commerce, and role changes are logged | 🟡 Existing `audit/record` + new ops Security panel surface CSRF denials, publish.blocked/failure, asset.delete events; deeper coverage across CMS/commerce/role changes remains. |
 | F104 | Workflow | Notifications | Comment, approval, order, booking, app, and publish notifications have a shared model | 🔴 |
 
 ## M170 Developer Platform
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F105 | Dev | Custom code slots | Page/site head/body/custom element code slots exist with validation and preview warnings | 🔴 |
-| F106 | Dev | Serverless functions | Backend function route model, environment, and local execution harness exist | 🔴 |
+| F105 | Dev | Custom code slots | Page/site head/body/custom element code slots exist with validation and preview warnings | 🟡 `validateCustomCode` strips insecure `<script src="http://...">` and `<iframe>` tags, warns on `eval()`, caps at 8000 chars. Site/per-page custom code stored on BuilderSiteDocument/BuilderPageMeta with new PATCH routes; render injection in PublishedSitePageView. `CustomCodePanel` admin UI with live warning chips. |
+| F106 | Dev | Serverless functions | Backend function route model, environment, and local execution harness exist | 🟡 `functions-model.ts` stores typed function records (slug/code/runtime/enabled), GET/POST/PATCH/DELETE + invoke routes, sandboxed `new Function('ctx', code)` execution with log capture. Real isolation (Sandbox/vm2) remains. |
 | F107 | Dev | API/SDK surface | Internal SDK docs/types cover pages, CMS, media, apps, bookings, commerce, and publish | 🔴 |
-| F108 | Dev | Data APIs | CMS and app data APIs support typed query/mutation with permissions | 🔴 |
+| F108 | Dev | Data APIs | CMS and app data APIs support typed query/mutation with permissions | 🟡 Already covered by M158/M160 CMS routes; SDK-style facade pending. |
 | F109 | Dev | App extension hooks | Apps can hook editor, public runtime, checkout, bookings, and CMS lifecycle events | 🔴 |
-| F110 | Dev | Logs/console | Admin can inspect function/app/webhook logs and errors | 🔴 |
+| F110 | Dev | Logs/console | Admin can inspect function/app/webhook logs and errors | 🟡 In-process ring buffer (`logs-store.ts`) per source (function/webhook/app) with GET `/api/builder/dev/logs?source=&since=`, function invocation auto-logs to store, `DevLogsPanel` table view with auto-refresh. Needs durable storage for multi-replica production. |
 | F111 | Dev | Local dev/deploy validation | Custom code/app functions pass typecheck, lint, smoke, and publish validation | 🔴 |
-| F112 | Dev | Secrets manager | Site secrets can be stored, scoped, rotated, and referenced by server code | 🔴 |
+| F112 | Dev | Secrets manager | Site secrets can be stored, scoped, rotated, and referenced by server code | 🔴 Pending Vercel env decision. |
 
 ## M171-M174 Cross-Cutting Milestones
 
 M171-M174 are represented across the F-layer checkpoints above plus existing W-layer SEO/publish/admin gates. Do not mark those milestones complete unless their dependent F-items are green and a dedicated milestone memo links the relevant implementation/test evidence.
 
+**2026-05-21 first-slice progress** — six parallel sub-agents drafted credible MVP slices for the remaining 🔴 milestones in one wave:
+
+- **M171 Marketing/CRM** 🟡: file-backed contacts (`contact-model.ts` / `contact-store.ts`) with merge-by-email + tag union, automation engine with contact-created/tag-added/form-submitted triggers and add-tag/send-email-stub/HMAC-signed-webhook actions, Slack/generic/Mailchimp-stub dispatcher, `/admin-builder/crm` three-tab UI (contacts/automations/integrations), public form submissions auto-merge into CRM. Real Mailchimp + outbox viewer + subscriber linkage remain.
+- **M173 Enterprise workspace** 🟡: single-account workspace (`account.json` under `runtime-data/workspace/`) with sites/members/shared-assets/analytics tabs, owner-safety guard against demoting the last owner, file-backed shared asset library reusing existing magic-byte validator, cross-site CMS rollup, payment analytics rollup across orders+bookings.
+- **M174 Ops/observability** 🟡: health snapshot collector aggregating audit/error/backup/cache signals, opaque cache key listing with clear-one/all, backup stub register, unified log aggregator (audit/dev/security/error), process perf snapshot, sliding-window security summary, six-tab `/admin-builder/ops` dashboard.
+
+All three pass typecheck/lint and ship with unit + Playwright coverage. Storage paths now compute via functions instead of import-time constants so test cwd swaps actually isolate state.
+
 ## M172 Multilingual
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F113 | Multilingual | Translation manager dashboard | Admin sees language status across pages, CMS rows, app content, SEO, and media | 🔴 |
-| F114 | Multilingual | Manual translations | Editors can edit per-language text/content without overwriting source language | 🔴 |
-| F115 | Multilingual | Auto-translation adapter | Translation adapter can propose changes with review/apply/rollback behavior | 🔴 |
+| F113 | Multilingual | Translation manager dashboard | Admin sees language status across pages, CMS rows, app content, SEO, and media | 🟡 `dashboard-model.ts` computes per-page × per-locale status (untranslated/draft/published/outdated) from existing site documents, GET `/api/builder/translations/dashboard?sourceLocale=ko` returns the grid, admin server page renders the table with status filters. |
+| F114 | Multilingual | Manual translations | Editors can edit per-language text/content without overwriting source language | 🟡 `edit-store.ts` applies node-level text patches to target locale draft canvas with content path resolver, POST `/api/builder/translations/edit`, `TranslationEditor` side-by-side editor component with per-locale SEO inputs. Rich-text patches remain. |
+| F115 | Multilingual | Auto-translation adapter | Translation adapter can propose changes with review/apply/rollback behavior | 🟡 `auto-translate.ts` extracts translatable nodes and calls existing AI text endpoint per node with bounded concurrency; UI Auto-translate button populates target inputs for review before save. Batching/streaming remain. |
 | F116 | Multilingual | Per-language menu/slug | Menus and slugs are configurable by language with redirects/canonical handling | 🔴 |
-| F117 | Multilingual | Per-language SEO | SEO title, description, OG, structured data, and sitemap output vary by language | 🔴 |
+| F117 | Multilingual | Per-language SEO | SEO title, description, OG, structured data, and sitemap output vary by language | 🟡 New `BuilderSeoMetadata.localizedOverrides` field stored on source page; `seo-projection.ts` returns effective per-locale `{title, description, ogImage}` (override → source fallback); SEO inputs in TranslationEditor persist via `setPageLocaleSeoOverride`. Consumers of `pageMeta.seo` should switch to `resolveLocaleSeo(page, locale)` to honour overrides. |
 | F118 | Multilingual | Per-language media/assets | Media replacement and alt text can vary by language | 🔴 |
 | F119 | Multilingual | Translation status warnings | Publish warns on missing/stale translations and broken language routes | 🔴 |
-| F120 | Multilingual | App translation compatibility | First-party/native apps expose translatable strings and content to the manager | 🔴 |
+| F120 | Multilingual | App translation compatibility | First-party/native apps expose translatable strings and content to the manager | 🟡 Existing app translation sync (M162) shipped via `translations/sync.ts`; deeper review/apply flow pending. |

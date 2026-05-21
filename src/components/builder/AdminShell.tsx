@@ -15,6 +15,7 @@ import type { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import AdminNavRail from './AdminNavRail';
 import AdminBreadcrumb from './AdminBreadcrumb';
+import NotificationInbox from './notifications/NotificationInbox';
 
 interface AdminShellProps {
   children: ReactNode;
@@ -37,7 +38,20 @@ export default function AdminShell({ children }: AdminShellProps) {
     >
       <AdminNavRail />
       <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
-        <AdminBreadcrumb />
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '4px 16px 0',
+            background: '#f8fafc',
+          }}
+        >
+          <AdminBreadcrumb />
+          <div style={{ marginLeft: 'auto', paddingTop: 8 }}>
+            <NotificationInbox />
+          </div>
+        </div>
         <div style={{ flex: 1, minWidth: 0 }}>{children}</div>
       </div>
     </div>

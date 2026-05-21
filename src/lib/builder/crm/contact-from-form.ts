@@ -58,10 +58,7 @@ export async function recordFormSubmissionAsContact(
   try {
     const { fields, formName } = submission;
 
-    const explicitEmail =
-      pickField(fields, (key) => EMAIL_FIELD_HINTS.test(key)) ??
-      pickField(fields, (_) => false) ??
-      pickField(fields, () => true && false);
+    const explicitEmail = pickField(fields, (key) => EMAIL_FIELD_HINTS.test(key));
     const fallbackEmail = explicitEmail ?? Object.values(fields).find((value) => typeof value === 'string' && looksLikeEmail(value));
     const email = explicitEmail && looksLikeEmail(explicitEmail) ? explicitEmail : fallbackEmail;
     if (!email || !looksLikeEmail(email)) return null;

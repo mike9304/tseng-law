@@ -154,7 +154,9 @@ async function reconcileCheckoutCart(
 }
 
 export async function POST(request: NextRequest) {
-  const rate = await checkRateLimit(`commerce-checkout:${clientIp(request)}`, 12, 60_000);
+  
+  // builder-route-guard: allow-public — intentional public visitor endpoint
+const rate = await checkRateLimit(`commerce-checkout:${clientIp(request)}`, 12, 60_000);
   if (!rate.allowed) {
     return NextResponse.json(
       { ok: false, error: 'too_many_requests' },

@@ -284,7 +284,7 @@ export default function TranslationEditor({
         </h2>
         {sources.length === 0 ? (
           <p style={{ fontSize: 13, color: '#64748b' }}>
-            No translatable text nodes were found in this page's draft canvas.
+            No translatable text nodes were found in this page&apos;s draft canvas.
           </p>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>

@@ -13,7 +13,9 @@ const rsvpSchema = z.object({
 });
 
 export async function POST(request: NextRequest, { params }: { params: { eventId: string } }) {
-  try {
+  
+  // builder-route-guard: allow-public — intentional public visitor endpoint
+try {
     const input = rsvpSchema.parse(await request.json());
     const errors = validateAttendee(input);
     if (errors.length > 0) {

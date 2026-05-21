@@ -19,7 +19,9 @@ function providerSecret(provider: string): string | null {
 }
 
 export async function POST(request: NextRequest, { params }: { params: { provider: string } }) {
-  if (!isCommercePaymentProvider(params.provider)) {
+  
+  // builder-route-guard: allow-public — intentional public visitor endpoint
+if (!isCommercePaymentProvider(params.provider)) {
     return NextResponse.json({ ok: false, error: 'payment_provider_not_found' }, { status: 404 });
   }
 

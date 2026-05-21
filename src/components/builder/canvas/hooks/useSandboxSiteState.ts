@@ -133,6 +133,7 @@ export function useSandboxSiteState({
         options.skipIfEditedSinceRequest
         && canvasDocumentRef.current
         && canvasDocumentRef.current.updatedAt !== requestDocumentUpdatedAt
+        && canvasDocumentRef.current.updatedAt !== initialDocument.updatedAt
       ) {
         return false;
       }

@@ -186,3 +186,273 @@ export function buildCustomerProfiles(bookings: Booking[], nowMs = Date.now()): 
     return lastB.localeCompare(lastA) || a.email.localeCompare(b.email);
   });
 }
+
+// ---------------------------------------------------------------------------
+// F84 — Booking funnel & utilization analytics.
+//
+// Pure functions that derive richer metrics from the same `Booking[]` set.
+// Used by the admin analytics dashboard and the `GET /api/builder/bookings/
+// analytics` route to surface conversion, utilization, and heatmap views.
+// ---------------------------------------------------------------------------
+
+export interface BookingFunnelMetrics {
+  /** Bookings created (any status) that fall in the window. */
+  leads: number;
+  confirmed: number;
+  completed: number;
+  cancelled: number;
+  noShow: number;
+  /** Percentage of leads that reached confirmed/completed status. 0..100. */
+  leadToConfirmRate: number;
+  /** Percentage of leads that successfully reached completed status. */
+  leadToCompletionRate: number;
+  /** Percentage of confirmed bookings that turned into no-shows. */
+  noShowRate: number;
+  /** Percentage of confirmed bookings that were cancelled afterwards. */
+  cancellationRate: number;
+}
+
+export interface ServiceUtilization {
+  serviceId: string;
+  label: string;
+  total: number;
+  completed: number;
+  /** Total minutes booked across non-cancelled bookings. */
+  bookedMinutes: number;
+  /** Completion-divided-by-total as percentage. */
+  completionRate: number;
+}
+
+export interface StaffUtilization {
+  staffId: string;
+  label: string;
+  total: number;
+  completed: number;
+  bookedMinutes: number;
+  /**
+   * Booked minutes divided by `capacityMinutes` when provided, expressed as
+   * percentage. When no capacity is available, returns 0.
+   */
+  utilizationPercent: number;
+}
+
+export interface PeakHourCell {
+  /** 0..6 — Sunday..Saturday in JS Date convention. */
+  dayOfWeek: number;
+  /** 0..23. */
+  hour: number;
+  count: number;
+}
+
+export interface PeakHourHeatmap {
+  cells: PeakHourCell[];
+  /** Peak count across all cells. */
+  maxCount: number;
+}
+
+export interface BookingFunnelOptions {
+  /** Inclusive window start (ISO). */
+  from?: string;
+  /** Exclusive window end (ISO). */
+  to?: string;
+  /** Filter by service id. */
+  serviceId?: string;
+  /** Filter by staff id. */
+  staffId?: string;
+}
+
+function bookingDurationMinutes(booking: Booking): number {
+  const start = Date.parse(booking.startAt);
+  const end = Date.parse(booking.endAt);
+  if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return 0;
+  return Math.round((end - start) / 60_000);
+}
+
+function withinWindow(booking: Booking, from?: string, to?: string): boolean {
+  if (from && booking.startAt < from) return false;
+  if (to && booking.startAt >= to) return false;
+  return true;
+}
+
+function applyFilters(bookings: Booking[], options: BookingFunnelOptions): Booking[] {
+  return bookings
+    .filter((booking) => withinWindow(booking, options.from, options.to))
+    .filter((booking) => !options.serviceId || booking.serviceId === options.serviceId)
+    .filter((booking) => !options.staffId || booking.staffId === options.staffId);
+}
+
+/**
+ * Compute the booking funnel (lead -> confirm -> complete -> no-show).
+ *
+ * Leads = every booking in window (any status). A `confirmed` booking
+ * counts as "reaching confirmed" once it has progressed past `pending`;
+ * a `completed` booking counts as both confirmed and completed since
+ * completion implies prior confirmation.
+ */
+export function buildBookingFunnelMetrics(
+  bookings: Booking[],
+  options: BookingFunnelOptions = {},
+): BookingFunnelMetrics {
+  const filtered = applyFilters(bookings, options);
+  const leads = filtered.length;
+  const confirmed = filtered.filter((booking) => (
+    booking.status === 'confirmed'
+      || booking.status === 'completed'
+      || booking.status === 'no-show'
+  )).length;
+  const completed = filtered.filter((booking) => booking.status === 'completed').length;
+  const cancelled = filtered.filter((booking) => booking.status === 'cancelled').length;
+  const noShow = filtered.filter((booking) => booking.status === 'no-show').length;
+
+  return {
+    leads,
+    confirmed,
+    completed,
+    cancelled,
+    noShow,
+    leadToConfirmRate: roundRate(confirmed, leads),
+    leadToCompletionRate: roundRate(completed, leads),
+    noShowRate: roundRate(noShow, confirmed),
+    cancellationRate: roundRate(cancelled, leads),
+  };
+}
+
+/**
+ * Per-service utilization. Booked minutes ignores cancelled bookings —
+ * we treat cancellations as freed time rather than utilization.
+ */
+export function buildServiceUtilization(
+  bookings: Booking[],
+  services: BookingService[],
+  locale: Locale,
+  options: BookingFunnelOptions = {},
+): ServiceUtilization[] {
+  const filtered = applyFilters(bookings, options);
+  const serviceById = new Map(services.map((service) => [service.serviceId, service]));
+  const map = new Map<string, ServiceUtilization>();
+
+  for (const booking of filtered) {
+    const service = serviceById.get(booking.serviceId);
+    const entry = map.get(booking.serviceId) ?? {
+      serviceId: booking.serviceId,
+      label: textForLocale(service?.name, locale) || booking.serviceId,
+      total: 0,
+      completed: 0,
+      bookedMinutes: 0,
+      completionRate: 0,
+    };
+    entry.total += 1;
+    if (booking.status === 'completed') entry.completed += 1;
+    if (booking.status !== 'cancelled') entry.bookedMinutes += bookingDurationMinutes(booking);
+    map.set(booking.serviceId, entry);
+  }
+
+  for (const entry of map.values()) {
+    entry.completionRate = roundRate(entry.completed, entry.total);
+  }
+
+  return Array.from(map.values()).sort((a, b) => (
+    b.bookedMinutes - a.bookedMinutes || a.label.localeCompare(b.label)
+  ));
+}
+
+/**
+ * Per-staff utilization. Pass `capacityMinutesByStaff` to compute a real
+ * percentage (e.g. weekly availability × window length). When omitted,
+ * `utilizationPercent` is 0 — callers should treat that as "unknown".
+ */
+export function buildStaffUtilization(
+  bookings: Booking[],
+  staff: Staff[],
+  locale: Locale,
+  options: BookingFunnelOptions & { capacityMinutesByStaff?: Record<string, number> } = {},
+): StaffUtilization[] {
+  const filtered = applyFilters(bookings, options);
+  const staffById = new Map(staff.map((member) => [member.staffId, member]));
+  const map = new Map<string, StaffUtilization>();
+
+  for (const booking of filtered) {
+    const member = staffById.get(booking.staffId);
+    const entry = map.get(booking.staffId) ?? {
+      staffId: booking.staffId,
+      label: textForLocale(member?.name, locale) || booking.staffId,
+      total: 0,
+      completed: 0,
+      bookedMinutes: 0,
+      utilizationPercent: 0,
+    };
+    entry.total += 1;
+    if (booking.status === 'completed') entry.completed += 1;
+    if (booking.status !== 'cancelled') entry.bookedMinutes += bookingDurationMinutes(booking);
+    map.set(booking.staffId, entry);
+  }
+
+  for (const entry of map.values()) {
+    const capacity = options.capacityMinutesByStaff?.[entry.staffId] ?? 0;
+    entry.utilizationPercent = roundRate(entry.bookedMinutes, capacity);
+  }
+
+  return Array.from(map.values()).sort((a, b) => (
+    b.bookedMinutes - a.bookedMinutes || a.label.localeCompare(b.label)
+  ));
+}
+
+/**
+ * Day-of-week × hour-of-day heatmap of booking starts. Cancelled bookings
+ * are excluded so the heatmap reflects actual demand, not abandoned drafts.
+ */
+export function buildPeakHourHeatmap(
+  bookings: Booking[],
+  options: BookingFunnelOptions = {},
+): PeakHourHeatmap {
+  const filtered = applyFilters(bookings, options).filter((booking) => booking.status !== 'cancelled');
+  const grid: number[][] = Array.from({ length: 7 }, () => new Array<number>(24).fill(0));
+
+  for (const booking of filtered) {
+    const startMs = Date.parse(booking.startAt);
+    if (!Number.isFinite(startMs)) continue;
+    const date = new Date(startMs);
+    const day = date.getUTCDay();
+    const hour = date.getUTCHours();
+    grid[day][hour] += 1;
+  }
+
+  const cells: PeakHourCell[] = [];
+  let maxCount = 0;
+  for (let day = 0; day < 7; day += 1) {
+    for (let hour = 0; hour < 24; hour += 1) {
+      const count = grid[day][hour];
+      if (count === 0) continue;
+      cells.push({ dayOfWeek: day, hour, count });
+      if (count > maxCount) maxCount = count;
+    }
+  }
+
+  return { cells, maxCount };
+}
+
+export interface BookingAnalyticsBundle {
+  funnel: BookingFunnelMetrics;
+  serviceUtilization: ServiceUtilization[];
+  staffUtilization: StaffUtilization[];
+  peakHours: PeakHourHeatmap;
+}
+
+/**
+ * Convenience wrapper that builds every funnel-style metric in a single call.
+ * Used by the admin route — keeps the route file tiny.
+ */
+export function buildBookingAnalyticsBundle(
+  bookings: Booking[],
+  services: BookingService[],
+  staff: Staff[],
+  locale: Locale,
+  options: BookingFunnelOptions & { capacityMinutesByStaff?: Record<string, number> } = {},
+): BookingAnalyticsBundle {
+  return {
+    funnel: buildBookingFunnelMetrics(bookings, options),
+    serviceUtilization: buildServiceUtilization(bookings, services, locale, options),
+    staffUtilization: buildStaffUtilization(bookings, staff, locale, options),
+    peakHours: buildPeakHourHeatmap(bookings, options),
+  };
+}

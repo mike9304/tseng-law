@@ -52,6 +52,24 @@ describe('AI site generator', () => {
     expect(draft.promptChangelog.map((entry) => entry.version)).toContain(rollbackVersion);
   });
 
+  it('uses prompt version behavior to change responsive visual guidance', async () => {
+    const rollbackVersion = AI_GENERATOR_PROMPT_CHANGELOG[1].version;
+    const spec = {
+      industry: 'law',
+      companyName: '호정국제법률사무소',
+      tone: 'professional',
+      colorPreference: 'cool',
+      locale: 'ko',
+    } as const;
+    const current = await generateSiteDraft(spec, { promptVersion: AI_GENERATOR_PROMPT_VERSION });
+    const rollback = await generateSiteDraft(spec, { promptVersion: rollbackVersion });
+
+    expect(current.plan.visualBrief.treatment).toContain('responsive breakpoint review');
+    expect(current.plan.visualBrief.imagePrompt).toContain('Responsive breakpoint review');
+    expect(rollback.plan.visualBrief.treatment).not.toContain('responsive breakpoint review');
+    expect(current.plan.visualBrief.treatment).not.toBe(rollback.plan.visualBrief.treatment);
+  });
+
   it('uses company name in headline when no slogan provided', async () => {
     const draft = await generateSiteDraft({
       industry: 'law',

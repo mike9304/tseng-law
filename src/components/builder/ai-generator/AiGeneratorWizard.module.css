@@ -1587,6 +1587,46 @@
   text-align: right;
 }
 
+.responsiveFixCard {
+  display: grid;
+  gap: 10px;
+  margin-top: 2px;
+  border: 1px solid #d9e7e5;
+  border-radius: 8px;
+  padding: 11px;
+  background: #ffffff;
+}
+
+.responsiveFixCard > div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.responsiveFixCard strong {
+  color: #151923;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.responsiveFixCard p {
+  margin: 0;
+  color: #5d6778;
+  font-size: 11px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.responsiveFixActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.responsiveFixActions .secondaryButton {
+  min-height: 36px;
+  padding: 0 12px;
+}
+
 .draftPreviewControls {
   display: flex;
   align-items: center;

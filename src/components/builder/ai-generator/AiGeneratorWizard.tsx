@@ -288,9 +288,53 @@ function generatedDraftDelta(selected: Draft, current: Draft): string[] {
   if (draftPaletteSignature(selected) !== draftPaletteSignature(current)) {
     changes.push('Palette differs between selected and current draft.');
   }
+  if (selected.plan.visualBrief.treatment !== current.plan.visualBrief.treatment) {
+    changes.push('Visual treatment differs between selected and current prompt behavior.');
+  }
+  if (selected.plan.visualBrief.composition !== current.plan.visualBrief.composition) {
+    changes.push('Responsive composition guidance differs between selected and current prompt behavior.');
+  }
   return changes.length > 0
     ? changes
     : ['No generated content/design difference detected yet; the selected rollback currently changes metadata/cache isolation only.'];
+}
+
+function compactResponsiveText(value: string, maxLength: number): string {
+  const compact = value.replace(/\s+/g, ' ').trim();
+  if (compact.length <= maxLength) return compact;
+  const clipped = compact.slice(0, Math.max(0, maxLength - 1)).trim();
+  const lastSpace = clipped.lastIndexOf(' ');
+  return `${(lastSpace > 48 ? clipped.slice(0, lastSpace) : clipped).trim()}…`;
+}
+
+function responsiveFixedDraft(source: Draft): Draft {
+  return {
+    ...source,
+    content: {
+      ...source.content,
+      hero: {
+        ...source.content.hero,
+        body: compactResponsiveText(source.content.hero.body, 150),
+        ctaLabel: source.content.hero.ctaLabel || '문의하기',
+      },
+      sections: source.content.sections.map((section) => ({
+        ...section,
+        body: compactResponsiveText(section.body, 165),
+      })),
+    },
+    plan: {
+      ...source.plan,
+      visualBrief: {
+        ...source.plan.visualBrief,
+        treatment: source.plan.visualBrief.treatment.includes('mobile-safe CTA spacing')
+          ? source.plan.visualBrief.treatment
+          : `${source.plan.visualBrief.treatment}; mobile-safe CTA spacing`,
+        composition: source.plan.visualBrief.composition.includes('Responsive auto-fix applied')
+          ? source.plan.visualBrief.composition
+          : `${source.plan.visualBrief.composition} Responsive auto-fix applied: stack proof cards before CTA and reserve tap-safe spacing.`,
+      },
+    },
+  };
 }
 
 export default function AiGeneratorWizard({ locale }: Props) {
@@ -337,6 +381,8 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const [selectedPromptVersion, setSelectedPromptVersion] = useState(AI_GENERATOR_PROMPT_VERSION);
   const [comparingDrafts, setComparingDrafts] = useState(false);
   const [generatedDraftComparison, setGeneratedDraftComparison] = useState<GeneratedDraftComparison | null>(null);
+  const [responsiveFixSnapshot, setResponsiveFixSnapshot] = useState<Draft | null>(null);
+  const [responsiveFixNotice, setResponsiveFixNotice] = useState('');
   const promptVersionComparison = useMemo(() => {
     const selected = promptVersionEntry(selectedPromptVersion);
     const current = promptVersionEntry(AI_GENERATOR_PROMPT_VERSION);
@@ -588,6 +634,8 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setDiscardNotice('');
     setSavedSectionIds({});
     setSectionSaveNotice('');
+    setResponsiveFixSnapshot(null);
+    setResponsiveFixNotice('');
     setDraftSlug(suggestDraftSlug());
     setDraftPreviewFrame('desktop');
     setError('');
@@ -624,6 +672,8 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setDiscardNotice('');
     setSavedSectionIds({});
     setSectionSaveNotice('');
+    setResponsiveFixSnapshot(null);
+    setResponsiveFixNotice('');
     try {
       const res = await fetch('/api/builder/ai-generator', {
         method: 'POST',
@@ -710,9 +760,31 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setDiscardNotice('');
     setSavedSectionIds({});
     setSectionSaveNotice('');
+    setResponsiveFixSnapshot(null);
+    setResponsiveFixNotice('');
     setDraftSlug(suggestDraftSlug());
     setDraftPreviewFrame('desktop');
     setStep(6);
+  }
+
+  function applyResponsiveDraftFix() {
+    if (!draft) return;
+    const nextDraft = responsiveFixedDraft(draft);
+    setResponsiveFixSnapshot(draft);
+    setDraft(nextDraft);
+    updateStoredDraftHistory(draft, nextDraft);
+    setDraftPreviewFrame('mobile');
+    setResponsiveFixNotice('모바일 CTA 간격과 긴 문장을 자동 보정했습니다.');
+    setError('');
+  }
+
+  function undoResponsiveDraftFix() {
+    if (!draft || !responsiveFixSnapshot) return;
+    updateStoredDraftHistory(draft, responsiveFixSnapshot);
+    setDraft(responsiveFixSnapshot);
+    setResponsiveFixSnapshot(null);
+    setDraftPreviewFrame('desktop');
+    setResponsiveFixNotice('반응형 자동 보정을 되돌렸습니다.');
   }
 
   async function saveGeneratedSection(snapshot: GeneratedSectionSnapshot) {
@@ -1464,6 +1536,38 @@ export default function AiGeneratorWizard({ locale }: Props) {
                       {imageGenerating ? 'Image 2.0 생성 중...' : 'Image 2.0 hero 생성'}
                     </button>
                     <span>1536x1024 · medium · WebP asset</span>
+                  </div>
+                  <div
+                    className={styles.responsiveFixCard}
+                    data-ai-generator-responsive-fix
+                    data-ai-generator-responsive-fix-state={responsiveFixSnapshot ? 'applied' : 'ready'}
+                  >
+                    <div>
+                      <strong>Responsive AI fix</strong>
+                      <p>모바일 프레임에서 긴 문장과 CTA 간격을 먼저 보정합니다.</p>
+                    </div>
+                    <div className={styles.responsiveFixActions}>
+                      <button
+                        type="button"
+                        className={styles.secondaryButton}
+                        onClick={applyResponsiveDraftFix}
+                        data-ai-generator-apply-responsive-fix
+                      >
+                        모바일 보정 적용
+                      </button>
+                      <button
+                        type="button"
+                        className={styles.secondaryButton}
+                        onClick={undoResponsiveDraftFix}
+                        disabled={!responsiveFixSnapshot}
+                        data-ai-generator-undo-responsive-fix
+                      >
+                        되돌리기
+                      </button>
+                    </div>
+                    {responsiveFixNotice ? (
+                      <small data-ai-generator-responsive-fix-status>{responsiveFixNotice}</small>
+                    ) : null}
                   </div>
                   {imageGenerationNotice ? (
                     <small data-ai-generator-image-generation-status>{imageGenerationNotice}</small>

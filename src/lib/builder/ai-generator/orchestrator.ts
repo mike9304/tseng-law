@@ -5,6 +5,7 @@ import {
   AI_GENERATOR_BLUEPRINT_VERSION,
   AI_GENERATOR_CONTENT_VERSION,
   AI_GENERATOR_PROMPT_CHANGELOG,
+  AI_GENERATOR_PROMPT_VERSION,
   resolveAiGeneratorPromptVersion,
   type GeneratedPromptVersionEntry,
 } from './prompt-versions';
@@ -190,7 +191,7 @@ export async function generateSiteDraft(
   const blueprint = selectBlueprint(spec.industry, spec.tone);
   const palette = blueprint.palettes[spec.colorPreference];
   const content = await generateSiteContent(spec, blueprint);
-  const plan = buildSitePlan(spec, blueprint, content);
+  const plan = buildSitePlan(spec, blueprint, content, promptVersion);
   return {
     spec,
     blueprint,
@@ -209,9 +210,10 @@ function buildSitePlan(
   spec: SiteSpec,
   blueprint: SiteBlueprint,
   content: GeneratedSiteContent,
+  promptVersion: string,
 ): GeneratedSitePlan {
   const pageInputs = normalizePageInputs(spec.desiredPages, spec.industry);
-  const visualBrief = buildVisualBrief(spec, blueprint);
+  const visualBrief = buildVisualBrief(spec, blueprint, promptVersion);
   return {
     sitemap: pageInputs.map((page) => pageFromInput(page, blueprint)),
     contentPlan: [content.hero, ...content.sections].map((section) => ({
@@ -320,24 +322,33 @@ function visualCompositionFor(spec: SiteSpec): string {
   return 'Clear headline block, media-ready hero card, reusable content cards, and mobile-safe vertical stacking.';
 }
 
-function buildVisualBrief(spec: SiteSpec, blueprint: SiteBlueprint): GeneratedVisualBrief {
+function buildVisualBrief(spec: SiteSpec, blueprint: SiteBlueprint, promptVersion: string): GeneratedVisualBrief {
   const direction = clipVisualText(spec.visualDirection?.trim() || defaultVisualDirection(spec), 500);
   const keywords = spec.brandKeywords && spec.brandKeywords.length > 0
     ? spec.brandKeywords
     : defaultKeywords(spec);
+  const responsivePromptInstruction = promptVersion === AI_GENERATOR_PROMPT_VERSION
+    ? ' Responsive breakpoint review: preserve CTA/proof card spacing on desktop and stacked mobile layouts.'
+    : '';
   const promptParts = [
     `Create a polished website hero image for ${spec.companyName}.`,
     `Industry: ${spec.industry}. Tone: ${spec.tone}.`,
     `Direction: ${direction}.`,
     `Brand keywords: ${keywords.slice(0, 4).join(', ')}.`,
     `Layout intent: ${blueprint.heroHeadlineHint}.`,
-    'No readable text, no logos, no private documents, no distorted hands or faces.',
+    `No readable text, no logos, no private documents, no distorted hands or faces.${responsivePromptInstruction}`,
   ];
+  const treatment = promptVersion === AI_GENERATOR_PROMPT_VERSION
+    ? `${visualTreatmentFor(spec)} with responsive breakpoint review rails and mobile CTA clearance`
+    : visualTreatmentFor(spec);
+  const composition = promptVersion === AI_GENERATOR_PROMPT_VERSION
+    ? `${visualCompositionFor(spec)} Include a desktop/mobile handoff note for proof cards and CTA spacing.`
+    : visualCompositionFor(spec);
   return {
     direction,
     imagePrompt: clipVisualText(promptParts.join(' '), 900),
-    treatment: visualTreatmentFor(spec),
-    composition: visualCompositionFor(spec),
+    treatment,
+    composition,
   };
 }
 

@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { z } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import {
   buildTextAssistantPrompt,

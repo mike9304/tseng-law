@@ -1,9 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/locales';
+
+const COLUMNS_PAGE_SIZE = 12;
+
+const loadMoreLabels = {
+  ko: { button: '더 보기', remaining: '개 더 있음' },
+  'zh-hant': { button: '載入更多', remaining: ' 篇待載入' },
+  en: { button: 'Load more', remaining: ' more available' },
+} as const;
 
 type ColumnCategory = 'formation' | 'legal' | 'case';
 
@@ -73,19 +81,35 @@ export default function ColumnsGrid({
     ? requestedCategory
     : 'all';
   const [active, setActive] = useState<ColumnCategory | 'all'>(initialActive);
-  const filtered = posts.filter((post) => {
-    const categoryMatches = requestedCategory
-      ? post.blogCategory === requestedCategory || post.category === requestedCategory
-      : active === 'all' || post.category === active;
-    if (!categoryMatches) return false;
-    if (requestedAuthor && post.authorName !== requestedAuthor) return false;
-    if (requestedYear && !post.date.startsWith(requestedYear)) return false;
-    if (requestedMonth) {
-      const month = post.date.slice(5, 7).replace(/^0/, '');
-      if (month !== requestedMonth.replace(/^0/, '')) return false;
-    }
-    return postMatchesQuery(post, requestedQuery);
-  });
+  const [visibleCount, setVisibleCount] = useState(COLUMNS_PAGE_SIZE);
+  const filtered = useMemo(
+    () =>
+      posts.filter((post) => {
+        const categoryMatches = requestedCategory
+          ? post.blogCategory === requestedCategory || post.category === requestedCategory
+          : active === 'all' || post.category === active;
+        if (!categoryMatches) return false;
+        if (requestedAuthor && post.authorName !== requestedAuthor) return false;
+        if (requestedYear && !post.date.startsWith(requestedYear)) return false;
+        if (requestedMonth) {
+          const month = post.date.slice(5, 7).replace(/^0/, '');
+          if (month !== requestedMonth.replace(/^0/, '')) return false;
+        }
+        return postMatchesQuery(post, requestedQuery);
+      }),
+    [active, posts, requestedAuthor, requestedCategory, requestedMonth, requestedQuery, requestedYear],
+  );
+
+  // Reset pagination whenever the filter result set changes so the user
+  // doesn't see "Load more" jump from page 3 to page 1 silently after
+  // toggling a category chip.
+  useEffect(() => {
+    setVisibleCount(COLUMNS_PAGE_SIZE);
+  }, [active, requestedAuthor, requestedCategory, requestedMonth, requestedQuery, requestedYear]);
+
+  const visiblePosts = filtered.slice(0, visibleCount);
+  const remainingCount = Math.max(0, filtered.length - visibleCount);
+  const loadMoreCopy = loadMoreLabels[locale];
 
   const cats: { id: ColumnCategory | 'all'; label: string }[] = [
     { id: 'all', label: labels.all },
@@ -109,8 +133,8 @@ export default function ColumnsGrid({
             </button>
           ))}
         </div>
-        <div className="columns-grid">
-          {filtered.map((post) => (
+        <div className="columns-grid" data-columns-visible-count={visiblePosts.length}>
+          {visiblePosts.map((post) => (
             <Link key={post.slug} href={`/${locale}/columns/${post.slug}`} className="columns-card">
               <div className="columns-card-img">
                 <Image src={post.featuredImage} alt={post.title} width={600} height={340} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
@@ -139,6 +163,22 @@ export default function ColumnsGrid({
             {locale === 'ko' ? '해당 카테고리의 글이 없습니다.' : locale === 'zh-hant' ? '此分類尚無文章。' : 'No posts in this category yet.'}
           </p>
         )}
+        {remainingCount > 0 ? (
+          <div className="columns-pagination" data-columns-remaining={remainingCount}>
+            <button
+              type="button"
+              className="columns-load-more"
+              onClick={() => setVisibleCount((value) => value + COLUMNS_PAGE_SIZE)}
+              data-columns-load-more="true"
+            >
+              {loadMoreCopy.button}
+              <span className="columns-load-more-meta">
+                ({remainingCount}
+                {loadMoreCopy.remaining})
+              </span>
+            </button>
+          </div>
+        ) : null}
       </div>
     </section>
   );

@@ -7795,6 +7795,38 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 .columns-empty { text-align: center; padding: 4rem 0; color: var(--neutral-400); }
 
+.columns-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.4rem;
+}
+
+.columns-load-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--neutral-200, #d4d4d4);
+  background: #ffffff;
+  color: var(--neutral-900, #111827);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.columns-load-more:hover {
+  border-color: var(--neutral-400, #9ca3af);
+  background: var(--neutral-50, #f9fafb);
+}
+
+.columns-load-more-meta {
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--neutral-500, #6b7280);
+}
+
 @media (max-width: 1024px) { .columns-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .columns-grid { grid-template-columns: 1fr; } }
 

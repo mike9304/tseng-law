@@ -1,5 +1,5 @@
 import { listBookings, listServices, listStaff } from '@/lib/builder/bookings/storage';
-import { textForLocale, type Booking, type BookingPaymentStatus, type BookingStatus } from '@/lib/builder/bookings/types';
+import { textForLocale, type BookingPaymentStatus, type BookingStatus } from '@/lib/builder/bookings/types';
 import type { Locale } from '@/lib/locales';
 
 export interface CustomerPortalBooking {

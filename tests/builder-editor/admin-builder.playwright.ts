@@ -501,6 +501,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const designDrawer = page.locator('aside[aria-hidden="false"]').first();
     await expect(designDrawer).toBeVisible();
     await expect.poll(async () => (await designDrawer.boundingBox())?.width ?? 0).toBeGreaterThanOrEqual(300);
+    await expect(designRailLabel).toBeHidden();
     await expect(designDrawer).toContainText('Site settings');
 
     await expect(page.getByRole('application', { name: 'Canvas editor' })).toBeVisible();
@@ -558,11 +559,13 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(insightsPreview.locator('.insights-page-indicator').first()).toContainText(/1 \/ [2-9]/);
     const firstPreviewTitle = (await insightsPreview.locator('.insights-list-title').first().innerText()).trim();
     expect(firstPreviewTitle.length).toBeGreaterThan(0);
+    const firstPreviewHref = await insightsPreview.locator('a[href*="/columns/"]').first().getAttribute('href');
+    expect(firstPreviewHref).toBeTruthy();
     await insightsPreview.getByRole('button', { name: '다음' }).click();
     await expect(insightsPreview.locator('.insights-page-indicator').first()).toContainText(/2 \/ [2-9]/);
     await expect.poll(async () => (
-      (await insightsPreview.locator('.insights-list-title').first().innerText()).trim()
-    )).not.toBe(firstPreviewTitle);
+      await insightsPreview.locator('a[href*="/columns/"]').first().getAttribute('href')
+    )).not.toBe(firstPreviewHref);
     await insightsPreview.getByRole('button', { name: '이전' }).click();
     await expect(insightsPreview.locator('.insights-page-indicator').first()).toContainText(/1 \/ [2-9]/);
     const editorUrlBeforeInsightsLink = page.url();
@@ -600,14 +603,9 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(heroSearchForm).toHaveAttribute('action', /\/ko\/search$/);
     await expect(page.locator('[data-node-id="home-hero-search-input"] input.hero-search-input[type="search"][name="q"]').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-hero-search-button"] button.hero-search-btn[type="submit"]').first()).toBeVisible();
-    // The hero-search-bar overlays the boundary between the hero and the
-    // insights section (the `overlap` className is intentional). In the
-    // editor canvas the insights-root CanvasNode sits visually on top of the
-    // bar's bottom half, so click near the bar's top edge to land cleanly
-    // on the bar rather than the intercepting insights region.
     const heroSearchBarLocator = page.locator('[data-node-id="home-hero-search-bar"]').first();
     await heroSearchBarLocator.scrollIntoViewIfNeeded();
-    await heroSearchBarLocator.click({ position: { x: 24, y: 4 } });
+    await heroSearchBarLocator.click({ position: { x: 24, y: 24 } });
     const heroSearchQuickEdit = page.locator('[data-builder-hero-search-quick-edit="true"]').first();
     await expect(heroSearchQuickEdit).toBeVisible();
     // QuickEdit panel buttons sit above hero-quick-menu nodes; the canvas
@@ -631,16 +629,23 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     const heroSearchGeometry = await page.evaluate(() => {
       const hero = document.querySelector('[data-node-id="home-hero-root"]')?.getBoundingClientRect();
       const form = document.querySelector('[data-node-id="home-hero-search-bar"] form')?.getBoundingClientRect();
-      if (!hero || !form) return null;
+      const insights = document.querySelector('[data-node-id="home-insights-root"]')?.getBoundingClientRect();
+      const formElement = document.querySelector('[data-node-id="home-hero-search-bar"] form');
+      if (!hero || !form || !insights || !formElement) return null;
+      const bottomHit = document.elementFromPoint(form.left + form.width / 2, form.bottom - 2);
       return {
         heroBottom: hero.bottom,
-        formCenterY: form.top + form.height / 2,
+        formBottom: form.bottom,
         formLeft: form.left,
         heroLeft: hero.left,
+        insightsTop: insights.top,
+        bottomHitInsideForm: Boolean(bottomHit && formElement.contains(bottomHit)),
       };
     });
     expect(heroSearchGeometry).toBeTruthy();
-    expect(Math.abs((heroSearchGeometry?.formCenterY ?? 0) - (heroSearchGeometry?.heroBottom ?? 9999))).toBeLessThanOrEqual(48);
+    expect((heroSearchGeometry?.heroBottom ?? 0) - (heroSearchGeometry?.formBottom ?? 9999)).toBeGreaterThanOrEqual(48);
+    expect((heroSearchGeometry?.insightsTop ?? 0) - (heroSearchGeometry?.formBottom ?? 9999)).toBeGreaterThanOrEqual(48);
+    expect(heroSearchGeometry?.bottomHitInsideForm).toBe(true);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeGreaterThanOrEqual(20);
     expect((heroSearchGeometry?.formLeft ?? 0) - (heroSearchGeometry?.heroLeft ?? 0)).toBeLessThanOrEqual(72);
     await page.keyboard.press('Escape');
@@ -663,11 +668,13 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(publicChrome).toContainText('AI 상담');
     await page.keyboard.press('Escape');
     await page.mouse.move(12, 120);
+    await page.locator('[data-node-id="home-services-card-0-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
     await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeHidden();
     await page.locator('[data-node-id="home-services-card-1-title"]').first().click({ position: { x: 12, y: 12 }, force: true });
     await expect(page.locator('[data-node-id="home-services-card-1-detail-0"]').first()).toBeVisible();
-    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeVisible();
+    await expect(page.locator('[data-node-id="home-services-card-0-detail-0"]').first()).toBeHidden();
+    await page.locator('[data-node-id="home-faq-item-0-question-text"]').first().click({ position: { x: 12, y: 12 }, force: true });
     await expect(page.locator('[data-node-id="home-faq-item-0-answer"]').first()).toBeVisible();
     await expect(page.locator('[data-node-id="home-faq-item-1-answer"]').first()).toBeHidden();
     await page.locator('[data-node-id="home-faq-item-1-question-text"]').first().click({ position: { x: 12, y: 12 }, force: true });
@@ -736,7 +743,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(headerEditMenuButton).toBeVisible();
     await expect(builderHeader.locator('.mega-panel.active').first()).toContainText('투자·법인설립');
     await expect(servicesMegaPanel.locator('[data-builder-mega-editing-chip="true"]')).toBeVisible();
-    await editableMenuItem.dispatchEvent('click');
+    await editableMenuItem.dispatchEvent('mouseenter');
     await expect(servicesMegaPanel).toContainText('투자·법인설립');
     await expect(servicesMegaPanel.getByRole('button', { name: 'Edit dropdown' })).toBeVisible();
     await expect(servicesMegaPanel.getByRole('button', { name: 'Add menu item' })).toBeVisible();
@@ -747,7 +754,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(navLabelInput).toHaveValue(originalNavLabel || '');
     await editableMenuItem.dispatchEvent('mouseover');
     await editableMenuItem.dispatchEvent('mouseenter');
-    await servicesInvestmentMegaLink.click();
+    await servicesMegaPanel
+      .locator('.builder-mega-link-row')
+      .filter({ has: servicesInvestmentMegaLink })
+      .getByRole('button', { name: 'Edit' })
+      .click();
     await expect(navLabelInput).toHaveValue('투자·법인설립');
     const originalNavigation = await navigationFromApi(page);
     try {
@@ -876,8 +887,15 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(snapTarget).toBeVisible();
     await snapTarget.click({ position: { x: 18, y: 18 }, force: true });
     const snapNode = await expectSelectedNodeHandles(page, snapTarget);
+    const snapDeltaX = await page.evaluate(() => {
+      const moving = document.querySelector('[data-node-id="home-hero-subtitle"]')?.getBoundingClientRect();
+      const reference = document.querySelector('[data-node-id="home-hero-title"]')?.getBoundingClientRect();
+      if (!moving || !reference) return 0;
+      return reference.right - moving.right;
+    });
+    expect(Math.abs(snapDeltaX)).toBeGreaterThan(4);
     const snapDrag = await startPointerDrag(page, snapNode, { pointerId: 7003 });
-    await movePointerDrag(page, snapDrag, 5, 0);
+    await movePointerDrag(page, snapDrag, snapDeltaX, 0);
     await expect(page.locator('[data-canvas-interaction="move"]')).toBeVisible();
     await expect(
       page.locator('[data-alignment-guide-line][data-alignment-guide-tone="alignment"]').first(),
@@ -885,7 +903,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(
       page.locator('[data-alignment-guide-chip][data-alignment-guide-tone="spacing"]').first(),
     ).toContainText(/\d+px/);
-    await finishPointerDrag(page, snapDrag, 5, 0);
+    await finishPointerDrag(page, snapDrag, snapDeltaX, 0);
 
     const resizeTarget = page.locator('[data-node-id="home-hero-search-input"]:visible').first();
     await expect(resizeTarget).toBeVisible();
@@ -985,11 +1003,11 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
 
     await closeModalOverlayIfPresent(page);
     await page.getByTitle('사이트 발행').click();
-    await expect(page.getByText('Automatic preflight checklist')).toBeVisible();
-    await expect(page.getByText('Images').first()).toBeVisible();
-    await expect(page.getByText('Links').first()).toBeVisible();
-    await expect(page.getByText('SEO').first()).toBeVisible();
-    await expect(page.getByText('Forms').first()).toBeVisible();
+    await expect(page.getByText('자동 사전 검사')).toBeVisible();
+    await expect(page.locator('[data-builder-publish-preflight-item="images"]')).toContainText('Images');
+    await expect(page.locator('[data-builder-publish-preflight-item="links"]')).toContainText('Links');
+    await expect(page.locator('[data-builder-publish-preflight-item="seo"]')).toContainText('SEO');
+    await expect(page.locator('[data-builder-publish-preflight-item="forms"]')).toContainText('Forms');
     await closeModalOverlayIfPresent(page);
 
     await page.getByTitle('버전 히스토리').click();
@@ -1098,6 +1116,7 @@ test.describe('/ko/admin-builder desktop editor parity smoke', () => {
     await expect(columnsPageButton).toBeVisible();
     await columnsPageButton.click();
     await expect(page.getByText(/Loaded page:/)).toBeVisible();
+    await expect(page.locator('aside[aria-hidden="false"]')).toHaveCount(0);
     await expect(page.locator('[data-node-id="columns-page-title"]').first()).toContainText(/칼럼|Columns/);
     const columnsFeedNode = page.locator('[data-node-id="columns-feed"]').first();
     await expect(columnsFeedNode).toBeVisible();

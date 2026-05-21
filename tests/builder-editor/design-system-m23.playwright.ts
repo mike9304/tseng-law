@@ -47,6 +47,16 @@ async function selectCanvasNode(page: Page, nodeId: string): Promise<void> {
 }
 
 test.describe('M23 design system parity', () => {
+  test('exposes designer polish presets directly in the Design drawer', async ({ page }) => {
+    await openBuilder(page, `/ko/admin-builder?designerPolish=${Date.now().toString(36)}`);
+
+    await page.getByRole('button', { name: 'Design', exact: true }).click();
+    const drawer = page.locator('aside[aria-hidden="false"]').filter({ hasText: 'Polish presets' }).first();
+    await expect(drawer.locator('[data-builder-designer-polish="true"]')).toBeVisible();
+    await expect(drawer.locator('[data-builder-designer-preset]')).toHaveCount(4);
+    await expect(drawer.locator('[data-builder-designer-preset="conversion"]')).toContainText('Conversion system');
+  });
+
   test('persists typography scale and exposes style source chips in the inspector', async ({ page }) => {
     const token = Date.now().toString(36);
     const settingsResponse = await page.request.get('/api/builder/site/settings?locale=ko');

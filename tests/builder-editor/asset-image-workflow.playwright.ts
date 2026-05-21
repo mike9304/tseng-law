@@ -98,7 +98,11 @@ async function openImageContextMenu(page: Page) {
 
 async function openImageEditDialog(page: Page, actionName: RegExp) {
   const menu = await openImageContextMenu(page);
-  await menu.getByRole('menuitem', { name: actionName }).click();
+  const preferredAction = menu.getByRole('menuitem', { name: actionName });
+  const action = (await preferredAction.count()) > 0
+    ? preferredAction
+    : menu.getByRole('menuitem', { name: /자르기 \/ 필터 \/ Alt|Crop \/ Filter \/ Alt/ });
+  await action.click();
   const dialog = page.getByRole('dialog', { name: 'Crop, filter, and alt text' });
   await expect(dialog).toBeVisible();
   return dialog;
@@ -337,6 +341,148 @@ test.describe('/ko/admin-builder image asset workflow', () => {
         await deleteAsset(page, asset.filename);
       }
       await cleanupAssetLibraryToken(page, token);
+    }
+  });
+
+  test('applies an Image 2.0 edit result from the image edit dialog', async ({ page }) => {
+    const token = `ai-edit-${Date.now().toString(36)}`;
+    const uploaded: UploadedAsset[] = [];
+    const firstEditedFilename = `${token}-premium.webp`;
+    const secondEditedFilename = `${token}-calm.webp`;
+
+    await page.route('**/api/builder/ai-generator/image/edit', async (route) => {
+      const body = route.request().postDataJSON() as {
+        assetUrl?: string;
+        prompt?: string;
+        outputFormat?: string;
+        mask?: { dataUrl?: string; description?: string };
+      };
+      expect(body.assetUrl).toContain(uploaded[0].filename);
+      expect(body.outputFormat).toBe('webp');
+      expect(body.mask?.dataUrl).toMatch(/^data:image\/png;base64,/);
+      const filename = body.prompt?.includes('calm editorial') ? secondEditedFilename : firstEditedFilename;
+      expect(body.mask?.description).toBe(filename === secondEditedFilename ? 'Brush mask' : 'Center focus');
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          ok: true,
+          model: 'gpt-image-2',
+          asset: {
+            filename,
+            url: `/api/builder/assets/ko/${filename}`,
+          },
+        }),
+      });
+    });
+
+    try {
+      uploaded.push(await uploadAsset(page, `${token}.png`));
+
+      await page.goto('/ko/admin-builder', { waitUntil: 'domcontentloaded' });
+      const node = await imageNode(page);
+      const renderedImage = node.locator('img').first();
+      await selectImageLayer(page);
+
+      const replaceMenu = await openImageContextMenu(page);
+      await replaceMenu.getByRole('menuitem', { name: /이미지 교체|Replace image/ }).click();
+      const assetDialog = page.getByRole('dialog', { name: 'Asset library' });
+      await expect(assetDialog).toBeVisible();
+      await assetDialog.getByRole('searchbox').fill(token);
+      await assetDialog
+        .locator('article')
+        .filter({ hasText: uploaded[0].filename })
+        .getByRole('button', { name: 'Use image' })
+        .click();
+      await expect(renderedImage).toHaveAttribute('src', new RegExp(uploaded[0].filename));
+
+      const editDialog = await openImageEditDialog(page, /Crop \/ Filter \/ Alt/);
+      await editDialog.getByRole('button', { name: 'ai' }).click();
+      await editDialog.locator('[data-builder-ai-image-edit-mask="Center focus"]').click();
+      await expect(editDialog.locator('[class*="imageEditAiMaskOverlay"]')).toBeVisible();
+      await editDialog.locator('[data-builder-ai-image-edit-prompt="true"]').fill(
+        'Make this a brighter premium legal website hero image with realistic office lighting and no text.',
+      );
+      await editDialog.locator('[data-builder-ai-image-edit-generate="true"]').click();
+      await expect(editDialog.locator('[data-builder-ai-image-edit-status="true"]')).toContainText(firstEditedFilename);
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
+      await expect(editDialog.locator('[data-builder-ai-image-edit-transaction="true"]')).toContainText(firstEditedFilename);
+      await expect(editDialog.locator('[data-builder-ai-image-edit-transaction="true"] img').nth(0)).toHaveAttribute('src', new RegExp(uploaded[0].filename));
+      await expect(editDialog.locator('[data-builder-ai-image-edit-transaction="true"] img').nth(1)).toHaveAttribute('src', new RegExp(firstEditedFilename));
+      await editDialog.locator('[data-builder-ai-image-edit-review="original"]').click();
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(uploaded[0].filename));
+      await editDialog.locator('[data-builder-ai-image-edit-review="edited"]').click();
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
+
+      await editDialog.getByRole('button', { name: 'Editorial calm' }).click();
+      await editDialog.locator('[data-builder-ai-image-edit-mask="brush"]').click();
+      const brushSurface = editDialog.locator('[data-builder-ai-image-edit-brush-surface="true"]');
+      await expect(brushSurface).toBeVisible();
+      await editDialog.locator('[data-builder-ai-image-edit-feather="true"]').evaluate((input) => {
+        const range = input as HTMLInputElement;
+        range.value = '6';
+        range.dispatchEvent(new Event('input', { bubbles: true }));
+        range.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      await expect(editDialog.locator('[data-builder-ai-image-edit-feather="true"]')).toHaveValue('6');
+      await editDialog.locator('[data-builder-ai-image-edit-edge="true"]').evaluate((input) => {
+        const range = input as HTMLInputElement;
+        range.value = '3';
+        range.dispatchEvent(new Event('input', { bubbles: true }));
+        range.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      await expect(editDialog.locator('[data-builder-ai-image-edit-edge="true"]')).toHaveValue('3');
+      await editDialog.locator('[data-builder-ai-image-edit-brush-size="true"]').evaluate((input) => {
+        const range = input as HTMLInputElement;
+        range.value = '14';
+        range.dispatchEvent(new Event('input', { bubbles: true }));
+        range.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      const brushBox = await brushSurface.boundingBox();
+      expect(brushBox).toBeTruthy();
+      await page.mouse.move(brushBox!.x + brushBox!.width * 0.35, brushBox!.y + brushBox!.height * 0.35);
+      await page.mouse.down();
+      await page.mouse.move(brushBox!.x + brushBox!.width * 0.66, brushBox!.y + brushBox!.height * 0.55);
+      await page.mouse.up();
+      await expect(editDialog.locator('[data-builder-ai-image-edit-brush-stroke]')).toHaveCount(1);
+      await editDialog.locator('[data-builder-ai-image-edit-undo-brush="true"]').click();
+      await expect(editDialog.locator('[data-builder-ai-image-edit-brush-stroke]')).toHaveCount(0);
+      await page.mouse.move(brushBox!.x + brushBox!.width * 0.28, brushBox!.y + brushBox!.height * 0.42);
+      await page.mouse.down();
+      await page.mouse.move(brushBox!.x + brushBox!.width * 0.7, brushBox!.y + brushBox!.height * 0.58);
+      await page.mouse.up();
+      await expect(editDialog.locator('[data-builder-ai-image-edit-brush-stroke]')).toHaveCount(1);
+      await editDialog.locator('[data-builder-ai-image-edit-brush-mode="erase"]').click();
+      await page.mouse.move(brushBox!.x + brushBox!.width * 0.45, brushBox!.y + brushBox!.height * 0.48);
+      await page.mouse.down();
+      await page.mouse.move(brushBox!.x + brushBox!.width * 0.56, brushBox!.y + brushBox!.height * 0.51);
+      await page.mouse.up();
+      await expect(editDialog.locator('[data-builder-ai-image-edit-brush-stroke]')).toHaveCount(2);
+      await expect(editDialog.locator('[data-builder-ai-image-edit-brush-stroke-mode="erase"]')).toHaveCount(1);
+      await editDialog.locator('[data-builder-ai-image-edit-generate="true"]').click();
+      await expect(editDialog.locator('[data-builder-ai-image-edit-status="true"]')).toContainText(secondEditedFilename);
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(secondEditedFilename));
+      await editDialog.locator('[data-builder-ai-image-edit-review-undo="true"]').click();
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
+      await expect(editDialog.locator('[data-builder-ai-image-edit-transaction="true"]')).toContainText(firstEditedFilename);
+      await editDialog.locator('[data-builder-ai-image-edit-review-redo="true"]').click();
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(secondEditedFilename));
+
+      await editDialog.locator(`[data-builder-ai-image-edit-variant="${firstEditedFilename}"]`).click();
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
+      await editDialog.locator('[data-builder-ai-image-edit-clear="true"]').click();
+      await expect(editDialog.locator('[data-builder-ai-image-edit-status="true"]')).toContainText('AI edit selection cleared');
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(uploaded[0].filename));
+      await editDialog.locator('[data-builder-ai-image-edit-review-undo="true"]').click();
+      await expect(editDialog.locator('[class*="imageEditPreviewFrame"] img')).toHaveAttribute('src', new RegExp(firstEditedFilename));
+
+      await editDialog.getByRole('button', { name: 'Apply' }).click();
+      await expect(renderedImage).toHaveAttribute('src', new RegExp(firstEditedFilename));
+    } finally {
+      await page.unroute('**/api/builder/ai-generator/image/edit').catch(() => undefined);
+      for (const asset of uploaded) {
+        await deleteAsset(page, asset.filename);
+      }
     }
   });
 });

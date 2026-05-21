@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type APIRequestContext } from '@playwright/test';
 import { createBookingManageToken } from '@/lib/builder/bookings/manage-token';
 import { dayOfWeeks } from '@/lib/builder/bookings/types';
 import type { Booking } from '@/lib/builder/bookings/types';
@@ -16,6 +16,30 @@ function todayPlus(days: number): string {
   const date = new Date();
   date.setDate(date.getDate() + days);
   return date.toISOString().slice(0, 10);
+}
+
+async function firstSlotWithinHours(
+  request: APIRequestContext,
+  serviceId: string,
+  staffId: string,
+  token: string,
+  maxHours: number,
+): Promise<string> {
+  const now = Date.now();
+  for (let offset = 0; offset <= 2; offset += 1) {
+    const date = todayPlus(offset);
+    const response = await request.get(`/api/booking/availability?serviceId=${serviceId}&staffId=${staffId}&date=${date}`, {
+      headers: mutationHeaders(`m26-policy-slot-${token}-${date}`),
+    });
+    expect(response.status()).toBe(200);
+    const slots = ((await response.json()) as { slots: Array<{ startAt: string }> }).slots;
+    const slot = slots.find((item) => {
+      const hours = (Date.parse(item.startAt) - now) / (1000 * 60 * 60);
+      return hours > 0.1 && hours < maxHours;
+    });
+    if (slot) return slot.startAt;
+  }
+  throw new Error(`No slot found within ${maxHours} hours.`);
 }
 
 function toLocalInputValue(iso: string): string {
@@ -120,6 +144,9 @@ test.describe('M26 customer booking management links', () => {
       await expect(page.getByText(`M26 고객 링크 상담 ${token}`)).toBeVisible();
       await expect(page.getByText(`M26 링크 고객 ${token}`)).toBeVisible();
       await expect(page.locator('[data-booking-status="confirmed"]')).toBeVisible();
+      await expect(page.locator('[data-booking-manage-policy="true"]')).toContainText('Standard policy');
+      await expect(page.locator('[data-booking-policy-reschedule="allowed"]')).toBeVisible();
+      await expect(page.locator('[data-booking-policy-cancel="allowed"]')).toBeVisible();
 
       const rescheduleResponse = page.waitForResponse((response) =>
         response.url().includes('/api/booking/manage/') && response.request().method() === 'PATCH',
@@ -140,6 +167,133 @@ test.describe('M26 customer booking management links', () => {
       expect(cancelPayload.booking.status).toBe('cancelled');
       expect(cancelPayload.booking.cancellationReason).toContain('고객 링크 취소');
       await expect(page.locator('[data-booking-status="cancelled"]')).toBeVisible();
+    } finally {
+      if (bookingId) {
+        await page.request.patch(`/api/builder/bookings/${bookingId}`, {
+          headers,
+          data: { status: 'cancelled' },
+          failOnStatusCode: false,
+        });
+      }
+      if (serviceId) {
+        await page.request.delete(`/api/builder/bookings/services/${serviceId}`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+      if (staffId) {
+        await page.request.delete(`/api/builder/bookings/staff/${staffId}`, {
+          headers,
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
+  test('blocks customer reschedule when the policy window has passed', async ({ page }) => {
+    const token = `policy-${Date.now().toString(36)}`;
+    const headers = mutationHeaders(token);
+    let staffId: string | null = null;
+    let serviceId: string | null = null;
+    let bookingId: string | null = null;
+
+    await page.setExtraHTTPHeaders(headers);
+
+    try {
+      const staffResponse = await page.request.post('/api/builder/bookings/staff', {
+        headers,
+        data: {
+          name: { ko: `F80 정책 변호사 ${token}`, 'zh-hant': `F80 政策律師 ${token}`, en: `F80 Policy Attorney ${token}` },
+          title: { ko: '정책 담당', 'zh-hant': '政策', en: 'Policy Counsel' },
+          bio: { ko: '정책 창구 검증 담당자', 'zh-hant': '政策測試', en: 'Policy test counsel' },
+          email: '',
+          photo: '',
+          isActive: true,
+        },
+      });
+      expect(staffResponse.status()).toBe(201);
+      staffId = ((await staffResponse.json()) as { staff: { staffId: string } }).staff.staffId;
+
+      const serviceResponse = await page.request.post('/api/builder/bookings/services', {
+        headers,
+        data: {
+          name: { ko: `F80 엄격 정책 상담 ${token}`, 'zh-hant': `F80 嚴格政策諮詢 ${token}`, en: `F80 Strict Policy Consultation ${token}` },
+          description: { ko: '정책 창구 검증', 'zh-hant': '政策測試', en: 'Policy gate check' },
+          durationMinutes: 30,
+          priceTwd: 0,
+          image: '',
+          category: 'consultation',
+          staffIds: [staffId],
+          bufferBeforeMinutes: 0,
+          bufferAfterMinutes: 0,
+          slotStepMinutes: 30,
+          isActive: true,
+          paymentMode: 'free',
+          priceCurrency: 'TWD',
+          meetingMode: 'in-person',
+          cancellationPolicyId: 'strict-48h',
+        },
+      });
+      expect(serviceResponse.status()).toBe(201);
+      serviceId = ((await serviceResponse.json()) as { service: { serviceId: string } }).service.serviceId;
+
+      const availabilityResponse = await page.request.patch(`/api/builder/bookings/staff/${staffId}/availability`, {
+        headers,
+        data: {
+          weekly: allWeek('00:00', '23:30'),
+          blockedDates: [],
+          timezone: 'Asia/Seoul',
+        },
+      });
+      expect(availabilityResponse.status()).toBe(200);
+
+      const startAt = await firstSlotWithinHours(page.request, serviceId, staffId, token, 6);
+      const bookingResponse = await page.request.post('/api/builder/bookings/admin-create', {
+        headers,
+        data: {
+          serviceId,
+          staffId,
+          startAt,
+          status: 'confirmed',
+          customerTimezone: 'Asia/Seoul',
+          customer: {
+            name: `F80 정책 고객 ${token}`,
+            email: `f80-policy-${token}@example.com`,
+            phone: '+82107770000',
+            locale: 'ko',
+          },
+        },
+      });
+      expect(bookingResponse.status()).toBe(201);
+      const booking = ((await bookingResponse.json()) as { booking: Booking }).booking;
+      bookingId = booking.bookingId;
+      const manageToken = createBookingManageToken(booking);
+
+      await page.goto(`/ko/bookings/manage/${encodeURIComponent(manageToken)}`, { waitUntil: 'domcontentloaded' });
+      await expect(page.locator('[data-booking-manage-policy="true"]')).toContainText('Strict policy');
+      await expect(page.locator('[data-booking-policy-reschedule="blocked"]')).toBeVisible();
+      await expect(page.locator('[data-booking-policy-cancel="blocked"]')).toBeVisible();
+      await expect(page.locator('[data-booking-manage-reschedule="disabled"]')).toBeDisabled();
+      await expect(page.locator('[data-booking-manage-cancel="disabled"]')).toBeDisabled();
+
+      const newStartAt = new Date(Date.parse(startAt) + 30 * 60_000).toISOString();
+      const blockedResponse = await page.request.patch(`/api/booking/manage/${encodeURIComponent(manageToken)}`, {
+        headers,
+        data: { action: 'reschedule', startAt: newStartAt },
+        failOnStatusCode: false,
+      });
+      expect(blockedResponse.status()).toBe(409);
+      const blockedJson = await blockedResponse.json() as { error?: string };
+      expect(blockedJson.error).toContain('Reschedule requires');
+
+      const directCancelResponse = await page.request.post('/api/booking/cancel', {
+        headers,
+        data: { bookingId, reason: 'direct cancel policy guard check' },
+        failOnStatusCode: false,
+      });
+      expect(directCancelResponse.status()).toBe(409);
+      const directCancelJson = await directCancelResponse.json() as { error?: string };
+      expect(directCancelJson.error).toContain('Cancellation requires');
     } finally {
       if (bookingId) {
         await page.request.patch(`/api/builder/bookings/${bookingId}`, {

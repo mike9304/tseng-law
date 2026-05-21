@@ -57,6 +57,7 @@ function makeInlineTextDocument(options: {
   className?: string;
   as?: string;
   fontSize?: number;
+  rootRect?: { x: number; y: number; width: number; height: number };
 }): TestDocument {
   const now = new Date().toISOString();
   return {
@@ -70,7 +71,7 @@ function makeInlineTextDocument(options: {
       {
         id: options.rootId,
         kind: 'container',
-        rect: { x: 0, y: 0, width: 1280, height: 760 },
+        rect: options.rootRect ?? { x: 0, y: 0, width: 1280, height: 760 },
         style: baseStyle,
         zIndex: 0,
         rotation: 0,
@@ -205,7 +206,152 @@ async function draftNodes(page: Page, pageId: string): Promise<TestNode[]> {
 }
 
 test.describe('/ko/admin-builder inline text editing', () => {
-  test('keeps class-based title size and removes block margin while editing', async ({ page }) => {
+  test('preserves home hero title size and clears selection after outside click', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    const token = `home-title-${Date.now().toString(36)}`;
+    const title = `Inline home title ${token}`;
+    const slug = `g-editor-${token}`;
+    const textId = 'home-hero-title';
+    const editedText = `대만 법률을 한국어로 명확하게 수정 ${token}`;
+    let pageId: string | null = null;
+    await page.setExtraHTTPHeaders(mutationHeaders(token));
+
+    try {
+      const document = makeInlineTextDocument({
+        token,
+        rootId: 'home-hero-root',
+        textId,
+        text: '대만 법률을 한국어로 명확하게.',
+        className: 'hero-title',
+        as: 'h1',
+        fontSize: 16,
+      });
+      const originalNode = document.nodes.find((candidate) => candidate.id === textId);
+      const originalFontSize = originalNode?.content?.fontSize ?? null;
+
+      pageId = await createBuilderPage(page.request, slug, title, document);
+
+      await openBuilderPageById(page, pageId, 'home-title');
+      const textNode = await selectNodeWithHandles(page, textId);
+      const renderedTitle = textNode.locator('.hero-title').first();
+      const beforeVisual = await renderedTitle.evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        return {
+          color: style.color,
+          fontFamily: style.fontFamily,
+          fontSize: Number.parseFloat(style.fontSize),
+          fontWeight: style.fontWeight,
+          letterSpacing: style.letterSpacing,
+          lineHeight: style.lineHeight,
+        };
+      });
+      expect(beforeVisual.fontSize).toBeGreaterThan(48);
+
+      await page.locator(`[data-node-id="${textId}"]`).first().dblclick({ position: { x: 30, y: 30 }, force: true });
+      const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
+      const editable = editorShell.locator('.ProseMirror').first();
+      await expect(editorShell).toBeVisible();
+      const editorVisual = await editable.evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        const block = element.querySelector('p,h1,h2,h3');
+        const blockStyle = block ? window.getComputedStyle(block) : null;
+        return {
+          color: style.color,
+          fontFamily: style.fontFamily,
+          fontSize: Number.parseFloat(style.fontSize),
+          fontWeight: style.fontWeight,
+          letterSpacing: style.letterSpacing,
+          lineHeight: style.lineHeight,
+          blockMarginTop: blockStyle ? Number.parseFloat(blockStyle.marginTop) : null,
+          blockMarginBottom: blockStyle ? Number.parseFloat(blockStyle.marginBottom) : null,
+        };
+      });
+      expect(Math.abs(editorVisual.fontSize - beforeVisual.fontSize)).toBeLessThanOrEqual(1);
+      expect(editorVisual.lineHeight).toBe(beforeVisual.lineHeight);
+      expect(editorVisual.fontWeight).toBe(beforeVisual.fontWeight);
+      expect(editorVisual.fontFamily).toBe(beforeVisual.fontFamily);
+      expect(editorVisual.letterSpacing).toBe(beforeVisual.letterSpacing);
+      expect(editorVisual.color).toBe(beforeVisual.color);
+      expect(editorVisual.blockMarginTop).toBe(0);
+      expect(editorVisual.blockMarginBottom).toBe(0);
+
+      await editable.fill(editedText);
+      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 }, force: true });
+
+      await expect(editorShell).toBeHidden();
+      await expect(page.locator('[data-node-id][data-selected="true"]')).toHaveCount(0);
+      await expect(page.locator('[class*="selectionPill"]:visible')).toHaveCount(0);
+      await expect(page.locator('[class*="selectionToolbar"]:visible')).toHaveCount(0);
+      await expect(page.locator(`[data-node-id="${textId}"] [class*="resizeHandle"]:visible`)).toHaveCount(0);
+      await expect.poll(async () => page.evaluate(() => {
+        const active = window.document.activeElement;
+        return Boolean(active?.closest('.ProseMirror') || active?.getAttribute('contenteditable') === 'true');
+      })).toBe(false);
+
+      await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText);
+      const afterVisual = await page.locator(`[data-node-id="${textId}"] .hero-title`).first().evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        return {
+          color: style.color,
+          fontFamily: style.fontFamily,
+          fontSize: Number.parseFloat(style.fontSize),
+          fontWeight: style.fontWeight,
+          letterSpacing: style.letterSpacing,
+          lineHeight: style.lineHeight,
+        };
+      });
+      expect(Math.abs(afterVisual.fontSize - beforeVisual.fontSize)).toBeLessThanOrEqual(1);
+      expect(afterVisual.lineHeight).toBe(beforeVisual.lineHeight);
+      expect(afterVisual.fontWeight).toBe(beforeVisual.fontWeight);
+      expect(afterVisual.fontFamily).toBe(beforeVisual.fontFamily);
+      expect(afterVisual.letterSpacing).toBe(beforeVisual.letterSpacing);
+      expect(afterVisual.color).toBe(beforeVisual.color);
+
+      await expect.poll(async () => {
+        const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
+        return {
+          text: node?.content?.text ?? null,
+          richPlainText: node?.content?.richText?.plainText ?? null,
+          className: node?.content?.className ?? null,
+          as: node?.content?.as ?? null,
+          fontSize: node?.content?.fontSize ?? null,
+        };
+      }, { timeout: 15_000 }).toEqual({
+        text: editedText,
+        richPlainText: editedText,
+        className: 'hero-title',
+        as: 'h1',
+        fontSize: originalFontSize,
+      });
+
+      await openBuilderPageById(page, pageId, 'home-title-reload');
+      await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText, {
+        timeout: 15_000,
+      });
+      await expect(page.locator('[data-node-id][data-selected="true"]')).toHaveCount(0);
+      const reloadVisual = await page.locator(`[data-node-id="${textId}"] .hero-title`).first().evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        return {
+          fontSize: Number.parseFloat(style.fontSize),
+          fontWeight: style.fontWeight,
+          lineHeight: style.lineHeight,
+        };
+      });
+      expect(Math.abs(reloadVisual.fontSize - beforeVisual.fontSize)).toBeLessThanOrEqual(1);
+      expect(reloadVisual.lineHeight).toBe(beforeVisual.lineHeight);
+      expect(reloadVisual.fontWeight).toBe(beforeVisual.fontWeight);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
+  test('keeps class-based title size and clears selection after outside click', async ({ page }) => {
     test.setTimeout(90_000);
 
     const token = `title-style-${Date.now().toString(36)}`;
@@ -269,22 +415,58 @@ test.describe('/ko/admin-builder inline text editing', () => {
       expect(editorVisual.blockMarginBottom).toBe(0);
 
       await editable.fill(editedText);
-      await page.keyboard.press('Escape');
+      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 }, force: true });
       await expect(editorShell).toBeHidden();
+      await expect(page.locator('[data-node-id][data-selected="true"]')).toHaveCount(0);
+      await expect(page.locator('[class*="selectionPill"]:visible')).toHaveCount(0);
+      await expect(page.locator('[class*="selectionToolbar"]:visible')).toHaveCount(0);
+      await expect(page.locator(`[data-node-id="${textId}"] [class*="resizeHandle"]:visible`)).toHaveCount(0);
       textNode = page.locator(`[data-node-id="${textId}"]`).first();
       await expect(textNode).toContainText(editedText);
+      const afterVisual = await textNode.locator('.section-title').first().evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        return {
+          fontSize: Number.parseFloat(style.fontSize),
+          lineHeight: style.lineHeight,
+          fontWeight: style.fontWeight,
+        };
+      });
+      expect(Math.abs(afterVisual.fontSize - beforeVisual.fontSize)).toBeLessThanOrEqual(1);
+      expect(afterVisual.lineHeight).toBe(beforeVisual.lineHeight);
+      expect(afterVisual.fontWeight).toBe(beforeVisual.fontWeight);
       await expect.poll(async () => {
         const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
         return {
           text: node?.content?.text ?? null,
+          richPlainText: node?.content?.richText?.plainText ?? null,
           className: node?.content?.className ?? null,
+          as: node?.content?.as ?? null,
           fontSize: node?.content?.fontSize ?? null,
         };
       }, { timeout: 15_000 }).toEqual({
         text: editedText,
+        richPlainText: editedText,
         className: 'section-title',
+        as: 'h2',
         fontSize: 16,
       });
+
+      await openBuilderPageById(page, pageId, 'title-style-reload');
+      await expect(page.locator(`[data-node-id="${textId}"]`).first()).toContainText(editedText, {
+        timeout: 15_000,
+      });
+      await expect(page.locator('[data-node-id][data-selected="true"]')).toHaveCount(0);
+      const reloadVisual = await page.locator(`[data-node-id="${textId}"] .section-title`).first().evaluate((element) => {
+        const style = window.getComputedStyle(element);
+        return {
+          fontSize: Number.parseFloat(style.fontSize),
+          lineHeight: style.lineHeight,
+          fontWeight: style.fontWeight,
+        };
+      });
+      expect(Math.abs(reloadVisual.fontSize - beforeVisual.fontSize)).toBeLessThanOrEqual(1);
+      expect(reloadVisual.lineHeight).toBe(beforeVisual.lineHeight);
+      expect(reloadVisual.fontWeight).toBe(beforeVisual.fontWeight);
     } finally {
       if (pageId) {
         await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
@@ -458,6 +640,7 @@ test.describe('/ko/admin-builder inline text editing', () => {
           rootId: `inline-outside-root-${token}`,
           textId,
           text: originalText,
+          rootRect: { x: 0, y: 0, width: 760, height: 360 },
         }),
       );
 
@@ -468,12 +651,25 @@ test.describe('/ko/admin-builder inline text editing', () => {
       const editorShell = page.locator('[data-builder-inline-text-editor="true"]').first();
       const editable = editorShell.locator('.ProseMirror').first();
       await expect(editorShell).toBeVisible();
+      await editable.click();
+      await editable.press(`${shortcutModifier}+A`);
       await editable.fill(editedText);
 
-      await page.locator('header[class*="topBar"]').click({ position: { x: 20, y: 20 }, force: true });
+      const stage = page.getByLabel('Canvas editor').first();
+      const stageBox = await stage.boundingBox();
+      expect(stageBox).not.toBeNull();
+      if (!stageBox) throw new Error('Missing canvas editor bounds.');
+      await stage.click({
+        position: {
+          x: Math.max(10, Math.floor(stageBox.width * 0.86)),
+          y: Math.max(10, Math.floor(stageBox.height * 0.82)),
+        },
+        force: true,
+      });
 
       await expect(editorShell).toBeHidden();
       await expect(page.locator(`[data-node-id="${textId}"]`).first()).not.toHaveAttribute('data-selected', 'true');
+      await expect(page.getByRole('toolbar', { name: '요소 빠른 작업' })).toBeHidden();
       await expect.poll(async () => {
         const node = (await draftNodes(page, pageId!)).find((candidate) => candidate.id === textId);
         return node?.content?.text ?? null;

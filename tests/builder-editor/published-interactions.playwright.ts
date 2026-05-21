@@ -1,4 +1,5 @@
-import { expect, test, type APIRequestContext, type Locator } from '@playwright/test';
+import { expect, test, type APIRequestContext, type Locator, type Page } from '@playwright/test';
+import { createHomePageCanvasDocument } from '@/lib/builder/canvas/seed-home';
 import { readHeaderCanvas, readSiteDocument, writeHeaderCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { createDefaultCookieConsent, createDefaultPopup, type BuilderCookieConsent, type BuilderHeaderFooterConfig, type BuilderSiteSettings } from '@/lib/builder/site/types';
 
@@ -56,6 +57,165 @@ async function expectNodeBelow(upper: Locator, lower: Locator, minGap = 0): Prom
   expect(lowerBox).not.toBeNull();
   if (!upperBox || !lowerBox) throw new Error('Missing published node bounds.');
   expect(lowerBox.y).toBeGreaterThanOrEqual(upperBox.y + upperBox.height + minGap);
+}
+
+async function expectTopHitTarget(page: Page, nodeId: string): Promise<void> {
+  const node = page.locator(`[data-node-id="${nodeId}"]`).first();
+  await node.scrollIntoViewIfNeeded();
+  await expect(node).toBeVisible();
+
+  const box = await node.boundingBox();
+  expect(box).not.toBeNull();
+  if (!box) throw new Error(`Missing published node bounds for ${nodeId}.`);
+
+  const hitNodeId = await page.evaluate(
+    ({ x, y }) => document
+      .elementFromPoint(x, y)
+      ?.closest('[data-node-id]')
+      ?.getAttribute('data-node-id') ?? null,
+    {
+      x: box.x + (box.width / 2),
+      y: box.y + (box.height / 2),
+    },
+  );
+
+  expect(hitNodeId).toBe(nodeId);
+}
+
+async function expectComputedZIndex(page: Page, nodeId: string, zIndex: string): Promise<void> {
+  await expect.poll(async () => page
+    .locator(`[data-node-id="${nodeId}"]`)
+    .first()
+    .evaluate((element) => window.getComputedStyle(element).zIndex)
+  ).toBe(zIndex);
+}
+
+async function expectNoHorizontalOverflow(page: Page): Promise<void> {
+  await expect.poll(async () => page.evaluate(() => (
+    document.documentElement.scrollWidth <= window.innerWidth + 1
+  ))).toBe(true);
+}
+
+async function expectRootStackNoOverlap(page: Page, nodeIds: string[]): Promise<void> {
+  const boxes = [];
+  for (const nodeId of nodeIds) {
+    const node = page.locator(`[data-node-id="${nodeId}"]`).first();
+    await expect(node).toBeVisible();
+    const box = await node.boundingBox();
+    expect(box).not.toBeNull();
+    if (!box) throw new Error(`Missing published root bounds for ${nodeId}.`);
+    boxes.push({ nodeId, box });
+  }
+
+  for (let index = 1; index < boxes.length; index += 1) {
+    const previous = boxes[index - 1];
+    const current = boxes[index];
+    expect(
+      current.box.y,
+      `${current.nodeId} should not overlap ${previous.nodeId}`,
+    ).toBeGreaterThanOrEqual(previous.box.y + previous.box.height - 1);
+  }
+}
+
+async function expectElementInside(outer: Locator, inner: Locator): Promise<void> {
+  const outerBox = await outer.boundingBox();
+  const innerBox = await inner.boundingBox();
+  expect(outerBox).not.toBeNull();
+  expect(innerBox).not.toBeNull();
+  if (!outerBox || !innerBox) throw new Error('Missing bounds for containment assertion.');
+  expect(innerBox.y).toBeGreaterThanOrEqual(outerBox.y - 1);
+  expect(innerBox.y + innerBox.height).toBeLessThanOrEqual(outerBox.y + outerBox.height + 1);
+}
+
+async function expectPublicBoundaryControlsWork(
+  page: Page,
+  token: string,
+  options: { checkHorizontalOverflow?: boolean } = {},
+): Promise<void> {
+  await expectTopHitTarget(page, 'home-hero-search-input');
+  await expectTopHitTarget(page, 'home-hero-search-button');
+  await expectTopHitTarget(page, 'home-insights-view-all');
+  await expectComputedZIndex(page, 'home-hero-root', '30000');
+  await expectComputedZIndex(page, 'home-insights-root', '20000');
+  if (options.checkHorizontalOverflow) await expectNoHorizontalOverflow(page);
+  await expectRootStackNoOverlap(page, [
+    'home-hero-root',
+    'home-insights-root',
+    'home-services-root',
+    'home-attorney-root',
+    'case-results-root',
+    'home-stats-root',
+    'home-faq-root',
+    'home-offices-root',
+    'home-contact-root',
+  ]);
+
+  const input = page.locator('[data-node-id="home-hero-search-input"] input.hero-search-input').first();
+  await input.click();
+  await expect(input).toBeFocused();
+  await input.fill(`boundary ${token}`);
+  await page.locator('[data-node-id="home-hero-search-button"] button.hero-search-btn').first().click();
+  await expect(page).toHaveURL(new RegExp(`/ko/search\\?q=boundary\\+${token}`));
+}
+
+async function expectPublishedMobileAccordionGeometry(page: Page): Promise<void> {
+  const servicesRoot = page.locator('[data-node-id="home-services-root"]').first();
+  const service0 = page.locator('[data-node-id="home-services-card-0"]').first();
+  const service1 = page.locator('[data-node-id="home-services-card-1"]').first();
+  const service0Body = service0.locator('.services-detail-body').first();
+  const service0More = page.locator('[data-node-id="home-services-card-0-more"]').first();
+  const service1Body = service1.locator('.services-detail-body').first();
+  const service1More = page.locator('[data-node-id="home-services-card-1-more"]').first();
+  const attorneyRoot = page.locator('[data-node-id="home-attorney-root"]').first();
+  const faqRoot = page.locator('[data-node-id="home-faq-root"]').first();
+  const officesRoot = page.locator('[data-node-id="home-offices-root"]').first();
+  const contactRoot = page.locator('[data-node-id="home-contact-root"]').first();
+
+  await service0.locator('.services-detail-toggle').click();
+  await expect(service0Body).toHaveClass(/is-open/);
+  await expect(service1Body).not.toHaveClass(/is-open/);
+  await expectNodeBelow(service0, service1, 4);
+  await expectNodeBelow(servicesRoot, attorneyRoot, -1);
+  await expectElementInside(service0, service0More);
+  await expectElementInside(servicesRoot, service0More);
+  await expectNoHorizontalOverflow(page);
+
+  await service1.locator('.services-detail-toggle').click();
+  await expect(service1Body).toHaveClass(/is-open/);
+  await expect(service0Body).not.toHaveClass(/is-open/);
+  await expectNodeBelow(service0, service1, 4);
+  await expectNodeBelow(servicesRoot, attorneyRoot, -1);
+  await expectElementInside(service1, service1More);
+  await expectElementInside(servicesRoot, service1More);
+  await expectNoHorizontalOverflow(page);
+
+  const faq0 = page.locator('[data-node-id="home-faq-item-0"]').first();
+  const faq0Answer = faq0.locator('.faq-answer-wrap').first();
+  const faq1 = page.locator('[data-node-id="home-faq-item-1"]').first();
+  const faq1Answer = faq1.locator('.faq-answer-wrap').first();
+  const faqRootBefore = await faqRoot.boundingBox();
+  await faq0.locator('.faq-question').click();
+  await expect(faq0Answer).toHaveClass(/is-open/);
+  await expect(faq1Answer).not.toHaveClass(/is-open/);
+  const faqRootAfter = await faqRoot.boundingBox();
+  expect(faqRootBefore).not.toBeNull();
+  expect(faqRootAfter).not.toBeNull();
+  if (!faqRootBefore || !faqRootAfter) throw new Error('Missing FAQ root bounds.');
+  expect(faqRootAfter.height).toBeGreaterThanOrEqual(faqRootBefore.height);
+  await expectElementInside(faqRoot, faq0Answer);
+  await expectNodeBelow(faq0, faq1, 4);
+  await expectNodeBelow(faqRoot, officesRoot, -1);
+  await expectNodeBelow(officesRoot, contactRoot, -1);
+  await expectNoHorizontalOverflow(page);
+
+  await faq1.locator('.faq-question').click();
+  await expect(faq1Answer).toHaveClass(/is-open/);
+  await expect(faq0Answer).not.toHaveClass(/is-open/);
+  await expectElementInside(faqRoot, faq1Answer);
+  await expectNodeBelow(faq0, faq1, 4);
+  await expectNodeBelow(faqRoot, officesRoot, -1);
+  await expectNodeBelow(officesRoot, contactRoot, -1);
+  await expectNoHorizontalOverflow(page);
 }
 
 function containerNode(
@@ -117,9 +277,9 @@ function makePublishedInteractionDocument(token: string): TestDocument {
     updatedAt: now,
     updatedBy: `published-interactions-${token}`,
     stageWidth: 1280,
-    stageHeight: 1080,
+    stageHeight: 1240,
     nodes: [
-      containerNode(rootId, { x: 0, y: 0, width: 1280, height: 900 }, 'section section--light', {
+      containerNode(rootId, { x: 0, y: 0, width: 1280, height: 1080 }, 'section section--light', {
         as: 'main',
       }),
       {
@@ -175,12 +335,29 @@ function makePublishedInteractionDocument(token: string): TestDocument {
       },
       textNode('home-faq-item-0-answer', 'home-faq-item-0-answer-wrap', 12, '전화나 온라인 문의로 예약할 수 있습니다.'),
       {
+        ...containerNode('home-faq-item-1', { x: 80, y: 650, width: 920, height: 130 }, 'faq-item', {
+          as: 'article',
+        }),
+        parentId: rootId,
+        zIndex: 4,
+      },
+      {
+        ...containerNode('home-faq-item-1-question', { x: 0, y: 0, width: 920, height: 58 }, 'faq-question'),
+        parentId: 'home-faq-item-1',
+      },
+      textNode('home-faq-item-1-question-text', 'home-faq-item-1-question', 18, '화상 상담도 가능한가요?'),
+      {
+        ...containerNode('home-faq-item-1-answer-wrap', { x: 0, y: 58, width: 920, height: 68 }, 'faq-answer-wrap'),
+        parentId: 'home-faq-item-1',
+      },
+      textNode('home-faq-item-1-answer', 'home-faq-item-1-answer-wrap', 12, '해외 의뢰인을 위해 온라인 상담을 지원합니다.'),
+      {
         id: `published-lightbox-image-${token}`,
         kind: 'image',
         parentId: rootId,
-        rect: { x: 80, y: 680, width: 300, height: 190 },
+        rect: { x: 80, y: 820, width: 300, height: 190 },
         style: { ...baseStyle, borderRadius: 14 },
-        zIndex: 4,
+        zIndex: 5,
         rotation: 0,
         locked: false,
         visible: true,
@@ -195,9 +372,9 @@ function makePublishedInteractionDocument(token: string): TestDocument {
         id: `published-popup-image-${token}`,
         kind: 'image',
         parentId: rootId,
-        rect: { x: 430, y: 680, width: 300, height: 190 },
+        rect: { x: 430, y: 820, width: 300, height: 190 },
         style: { ...baseStyle, borderRadius: 14 },
-        zIndex: 5,
+        zIndex: 6,
         rotation: 0,
         locked: false,
         visible: true,
@@ -211,6 +388,15 @@ function makePublishedInteractionDocument(token: string): TestDocument {
       },
     ],
   };
+}
+
+function makePublishedHomeBoundaryDocument(token: string): TestDocument {
+  const document = createHomePageCanvasDocument('ko');
+  return {
+    ...document,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `published-home-boundary-${token}`,
+  } as TestDocument;
 }
 
 function buttonNode(
@@ -483,6 +669,56 @@ async function createBuilderPage(
 }
 
 test.describe('/ko published builder interactions', () => {
+  test('keeps published home section-boundary controls as top hit targets', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `g-editor-published-boundary-${token}`;
+    let pageId: string | null = null;
+
+    try {
+      pageId = await createBuilderPage(
+        page.request,
+        slug,
+        `Published Home Boundary ${token}`,
+        makePublishedHomeBoundaryDocument(token),
+      );
+
+      const publishResponse = await page.request.post(`/api/builder/site/pages/${pageId}/publish`, {
+        headers: mutationHeaders(slug),
+        data: {},
+      });
+      expect(publishResponse.status()).toBe(200);
+
+      await page.goto(`/ko/${slug}?desktopBoundary=${token}`, { waitUntil: 'domcontentloaded' });
+      await expectPublicBoundaryControlsWork(page, token);
+
+      await page.goto(`/ko/${slug}?desktopCta=${token}`, { waitUntil: 'domcontentloaded' });
+      await page.locator('[data-node-id="home-insights-view-all"]').first().click();
+      await expect(page).toHaveURL(/\/ko\/columns(?:[?#].*)?$/);
+
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.goto(`/ko/${slug}?mobileBoundary=${token}`, { waitUntil: 'domcontentloaded' });
+      await expectPublishedMobileAccordionGeometry(page);
+      await expectPublicBoundaryControlsWork(page, token, { checkHorizontalOverflow: true });
+
+      await page.setViewportSize({ width: 768, height: 1024 });
+      await page.goto(`/ko/${slug}?tabletBoundary=${token}`, { waitUntil: 'domcontentloaded' });
+      await expectPublishedMobileAccordionGeometry(page);
+      await expectPublicBoundaryControlsWork(page, token, { checkHorizontalOverflow: true });
+
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.goto(`/ko/${slug}?mobileCta=${token}`, { waitUntil: 'domcontentloaded' });
+      await page.locator('[data-node-id="home-insights-view-all"]').first().click();
+      await expect(page).toHaveURL(/\/ko\/columns(?:[?#].*)?$/);
+    } finally {
+      if (pageId) {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+          headers: mutationHeaders(slug),
+          failOnStatusCode: false,
+        });
+      }
+    }
+  });
+
   test('opens site lightbox and popup overlays from keyboard triggers with focus restore', async ({ page }) => {
     const token = Date.now().toString(36);
     const slug = `g-editor-published-overlays-${token}`;
@@ -1515,7 +1751,8 @@ test.describe('/ko published builder interactions', () => {
       const service0Body = service0.locator('.services-detail-body');
       const service1Toggle = service1.locator('.services-detail-toggle');
       const service1Body = service1.locator('.services-detail-body');
-      const faq = page.locator('[data-node-id="home-faq-item-0"]').first();
+      const faq0 = page.locator('[data-node-id="home-faq-item-0"]').first();
+      const faq1 = page.locator('[data-node-id="home-faq-item-1"]').first();
       await expect(service0Toggle).toHaveAttribute('role', 'button');
       await expect(service0Toggle).toHaveAttribute('tabindex', '0');
       await expect(service0Toggle).toHaveAttribute('aria-expanded', 'false');
@@ -1534,23 +1771,40 @@ test.describe('/ko published builder interactions', () => {
       await expect(service1Body).toHaveAttribute('aria-hidden', 'false');
       await expect(service0Body).not.toHaveClass(/is-open/);
       await expect(service0Body).toHaveAttribute('aria-hidden', 'true');
-      await expectNodeBelow(service1, faq, 4);
+      await expectNodeBelow(service1, faq0, 4);
 
-      const faqQuestion = faq.locator('.faq-question');
-      const faqAnswer = faq.locator('.faq-answer-wrap');
-      await expect(faqQuestion).toHaveAttribute('role', 'button');
-      await expect(faqQuestion).toHaveAttribute('tabindex', '0');
-      await expect(faqQuestion).toHaveAttribute('aria-controls', await faqAnswer.getAttribute('id') ?? '');
-      await expect(faqAnswer).not.toHaveClass(/is-open/);
-      await expect(faqAnswer).toHaveAttribute('aria-hidden', 'true');
-      await faqQuestion.focus();
-      await faqQuestion.press('Enter');
-      await expect(faqAnswer).toHaveClass(/is-open/);
-      await expect(faqAnswer).toHaveAttribute('aria-hidden', 'false');
-      await expect(faqQuestion).toHaveAttribute('aria-expanded', 'true');
-      await faqQuestion.press('Space');
-      await expect(faqAnswer).not.toHaveClass(/is-open/);
-      await expect(faqAnswer).toHaveAttribute('aria-hidden', 'true');
+      const faq0Question = faq0.locator('.faq-question');
+      const faq0Answer = faq0.locator('.faq-answer-wrap');
+      const faq1Question = faq1.locator('.faq-question');
+      const faq1Answer = faq1.locator('.faq-answer-wrap');
+      await expect(faq0Question).toHaveAttribute('role', 'button');
+      await expect(faq0Question).toHaveAttribute('tabindex', '0');
+      await expect(faq0Question).toHaveAttribute('aria-controls', await faq0Answer.getAttribute('id') ?? '');
+      await expect(faq1Question).toHaveAttribute('role', 'button');
+      await expect(faq1Question).toHaveAttribute('tabindex', '0');
+      await expect(faq1Question).toHaveAttribute('aria-controls', await faq1Answer.getAttribute('id') ?? '');
+      await expect(faq0Answer).not.toHaveClass(/is-open/);
+      await expect(faq0Answer).toHaveAttribute('aria-hidden', 'true');
+      await expect(faq1Answer).not.toHaveClass(/is-open/);
+      await expect(faq1Answer).toHaveAttribute('aria-hidden', 'true');
+      await faq0Question.focus();
+      await faq0Question.press('Enter');
+      await expect(faq0Answer).toHaveClass(/is-open/);
+      await expect(faq0Answer).toHaveAttribute('aria-hidden', 'false');
+      await expect(faq0Question).toHaveAttribute('aria-expanded', 'true');
+      await expect(faq1Answer).not.toHaveClass(/is-open/);
+      await expectNodeBelow(faq0, faq1, 4);
+      await faq1Question.focus();
+      await faq1Question.press('Enter');
+      await expect(faq1Answer).toHaveClass(/is-open/);
+      await expect(faq1Answer).toHaveAttribute('aria-hidden', 'false');
+      await expect(faq1Question).toHaveAttribute('aria-expanded', 'true');
+      await expect(faq0Answer).not.toHaveClass(/is-open/);
+      await expect(faq0Answer).toHaveAttribute('aria-hidden', 'true');
+      await expectNodeBelow(faq0, faq1, 4);
+      await faq1Question.press('Space');
+      await expect(faq1Answer).not.toHaveClass(/is-open/);
+      await expect(faq1Answer).toHaveAttribute('aria-hidden', 'true');
 
       const lightboxTrigger = page.locator(`[data-node-id="published-lightbox-image-${token}"] .builder-media-click-frame`);
       await expect(lightboxTrigger).toBeVisible();

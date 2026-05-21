@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Locator, type Page } from '@playwright/test';
 
 const tinyPng = Buffer.from(
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=',
@@ -34,12 +34,158 @@ async function deleteAsset(page: Page, filename: string): Promise<void> {
   }).catch(() => undefined);
 }
 
+async function expectReceivesPointerAtCenter(locator: Locator, label: string): Promise<void> {
+  await locator.scrollIntoViewIfNeeded();
+  await expect(locator, label).toBeVisible();
+  await expect.poll(async () => {
+    const box = await locator.boundingBox();
+    if (!box) return 'missing';
+    return locator.evaluate((element, point) => {
+      const hit = document.elementFromPoint(point.x, point.y);
+      if (!hit) return 'missing hit target';
+      if (hit === element || element.contains(hit)) return 'ok';
+      const coveredBy = hit.closest('a, button, [class]') ?? hit;
+      const className = coveredBy instanceof HTMLElement ? coveredBy.className : '';
+      return `covered by ${coveredBy.tagName.toLowerCase()} ${String(className)}`;
+    }, {
+      x: box.x + box.width / 2,
+      y: box.y + box.height / 2,
+    });
+  }, { timeout: 5_000 }).toBe('ok');
+}
+
+async function expectMinTouchTarget(locator: Locator, label: string): Promise<void> {
+  await locator.scrollIntoViewIfNeeded();
+  await expect(locator, label).toBeVisible();
+  await expect.poll(async () => {
+    const box = await locator.boundingBox();
+    if (!box) return 'missing';
+    return box.width >= 43.5 && box.height >= 43.5 ? 'ok' : `${Math.round(box.width)}x${Math.round(box.height)}`;
+  }, { timeout: 5_000 }).toBe('ok');
+}
+
+async function expectColumnsFiltersSeparated(page: Page): Promise<void> {
+  await expect.poll(async () => page.evaluate(() => {
+    const filters = document.querySelector('.columns-filters');
+    const following = document.querySelector('.columns-grid, .columns-empty');
+    if (!filters || !following) return 'missing';
+    const filtersBox = filters.getBoundingClientRect();
+    const followingBox = following.getBoundingClientRect();
+    const gap = followingBox.top - filtersBox.bottom;
+    return gap >= 16 ? 'ok' : `gap ${Math.round(gap)}px`;
+  }), { timeout: 5_000 }).toBe('ok');
+}
+
 test.describe('/ko/admin-builder columns UI workflow', () => {
   test('accepts columns as a public search tab alias', async ({ page }) => {
     await page.goto('/ko/search?q=%ED%9A%8C%EC%82%AC&tab=columns', { waitUntil: 'domcontentloaded' });
     await expect(page.locator('.tab-button.active')).toContainText('칼럼');
     await expect(page.locator('.search-results-total')).not.toContainText('총 0건');
     await expect(page.locator('.list-row').first()).toContainText('칼럼');
+  });
+
+  test('keeps public columns archive filters separated and clickable across viewports', async ({ page }) => {
+    test.setTimeout(90_000);
+
+    for (const viewport of [
+      { name: 'desktop', width: 1440, height: 1000 },
+      { name: 'tablet', width: 768, height: 1024 },
+      { name: 'mobile', width: 390, height: 844 },
+    ]) {
+      await page.setViewportSize({ width: viewport.width, height: viewport.height });
+      await page.goto('/ko/columns', { waitUntil: 'domcontentloaded' });
+
+      const filters = page.locator('.columns-filters').first();
+      await expect(filters).toBeVisible();
+      await expectColumnsFiltersSeparated(page);
+
+      const buttons = page.locator('.columns-filter-btn');
+      const count = await buttons.count();
+      expect(count, `${viewport.name} filter count`).toBeGreaterThan(1);
+
+      for (let index = 0; index < count; index += 1) {
+        const button = buttons.nth(index);
+        await expectMinTouchTarget(button, `${viewport.name} filter ${index + 1}`);
+        await expectReceivesPointerAtCenter(button, `${viewport.name} filter ${index + 1}`);
+        await button.click();
+        await expect(button, `${viewport.name} active filter ${index + 1}`).toHaveClass(/active/);
+        await expectColumnsFiltersSeparated(page);
+        await expectReceivesPointerAtCenter(button, `${viewport.name} active filter ${index + 1}`);
+      }
+    }
+  });
+
+  test('surfaces native blog admin data for scheduled drafts', async ({ page }) => {
+    const token = Date.now().toString(36);
+    const slug = `native-blog-${token}`;
+    const futurePublishedAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+
+    try {
+      const createResponse = await page.request.post('/api/builder/columns?locale=ko', {
+        data: {
+          locale: 'ko',
+          slug,
+          title: `Native Blog Scheduled ${token}`,
+          summary: `Native blog admin scheduled draft ${token}`,
+          bodyMarkdown: `Native blog scheduled body ${token}`,
+          bodyHtml: `<p>Native blog scheduled body ${token}</p>`,
+          frontmatter: {
+            blogCategory: 'labor-law',
+            tags: ['native-blog', token],
+            author: {
+              name: 'F43 Native Blog Author',
+              title: 'Blog editor',
+            },
+            publishedAt: futurePublishedAt,
+          },
+        },
+      });
+      expect(createResponse.status()).toBe(201);
+
+      const adminResponse = await page.request.get('/api/builder/blog/admin?locale=ko');
+      expect(adminResponse.status()).toBe(200);
+      const adminPayload = await adminResponse.json() as {
+        ok?: boolean;
+        model?: {
+          posts: Array<{
+            slug: string;
+            status: string;
+            category: string;
+            authorName: string;
+            tags: string[];
+            scheduledFor?: string;
+          }>;
+          counts: { scheduled: number };
+          authors: Array<{ id: string }>;
+          categories: Array<{ id: string }>;
+          tags: Array<{ id: string }>;
+        };
+      };
+      expect(adminPayload.ok).toBe(true);
+      const adminPost = adminPayload.model?.posts.find((post) => post.slug === slug);
+      expect(adminPost).toMatchObject({
+        slug,
+        status: 'scheduled',
+        category: 'labor-law',
+        authorName: 'F43 Native Blog Author',
+      });
+      expect(adminPost?.tags).toEqual(expect.arrayContaining(['native-blog', token]));
+      expect(adminPost?.scheduledFor).toBe(futurePublishedAt);
+      expect(adminPayload.model?.counts.scheduled).toBeGreaterThanOrEqual(1);
+      expect(adminPayload.model?.authors.map((author) => author.id)).toContain('F43 Native Blog Author');
+      expect(adminPayload.model?.categories.map((category) => category.id)).toContain('labor-law');
+      expect(adminPayload.model?.tags.map((tag) => tag.id)).toContain('native-blog');
+
+      await page.goto('/ko/admin-builder/columns', { waitUntil: 'domcontentloaded' });
+      await expect(page.locator('[data-blog-native-admin]')).toBeVisible();
+      await expect(page.locator('[data-blog-admin-kpi="scheduled"] strong')).not.toHaveText('0');
+      await page.locator('[data-blog-status-filter]').selectOption('scheduled');
+      const scheduledCard = page.locator(`[data-blog-post-card="${slug}"]`);
+      await expect(scheduledCard).toBeVisible();
+      await expect(scheduledCard).toHaveAttribute('data-blog-post-status', 'scheduled');
+    } finally {
+      await page.request.delete(`/api/builder/columns/${slug}?locale=ko&includePublished=1`).catch(() => undefined);
+    }
   });
 
   test('creates, edits, inserts media, publishes, verifies, and cleans up a column through the UI', async ({ page }) => {

@@ -364,9 +364,13 @@ function makeEmptyGlobalFooterDocument() {
 }
 
 async function waitForEditorCss(page: Page): Promise<void> {
-  const isStyled = async () => page.locator('header[class*="topBar"]').first().evaluate((element) => {
-    const style = window.getComputedStyle(element);
-    return style.display === 'grid' && Number.parseFloat(style.height) <= 36;
+  const isStyled = async () => page.evaluate(() => {
+    const shell = document.querySelector<HTMLElement>('[data-editor-shell]');
+    const topBar = document.querySelector<HTMLElement>('header[class*="topBar"]');
+    if (!shell || !topBar || shell.dataset.editorReady !== 'true') return false;
+    const style = window.getComputedStyle(topBar);
+    const height = Number.parseFloat(style.height);
+    return style.display === 'grid' && height >= 48 && height <= 80;
   }).catch(() => false);
 
   try {

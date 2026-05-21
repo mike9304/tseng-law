@@ -196,12 +196,13 @@ test.describe('M25 Bookings services, staff, slots, and public widget', () => {
           isActive: true,
           paymentMode: 'paid',
           priceAmount: 5000,
+          depositAmount: 1500,
           priceCurrency: 'TWD',
         },
       });
       expect(serviceResponse.status()).toBe(201);
       const servicePayload = (await serviceResponse.json()) as {
-        service: { serviceId: string; bufferBeforeMinutes: number; bufferAfterMinutes: number; slotStepMinutes: number; paymentMode?: string };
+        service: { serviceId: string; bufferBeforeMinutes: number; bufferAfterMinutes: number; slotStepMinutes: number; paymentMode?: string; depositAmount?: number };
       };
       serviceId = servicePayload.service.serviceId;
       expect(servicePayload.service).toMatchObject({
@@ -209,6 +210,7 @@ test.describe('M25 Bookings services, staff, slots, and public widget', () => {
         bufferAfterMinutes: 20,
         slotStepMinutes: 15,
         paymentMode: 'paid',
+        depositAmount: 1500,
       });
 
       const availabilityResponse = await page.request.patch(`/api/builder/bookings/staff/${staffId}/availability`, {
@@ -238,7 +240,15 @@ test.describe('M25 Bookings services, staff, slots, and public widget', () => {
         },
       });
       expect(paymentResponse.status()).toBe(200);
-      await expect(paymentResponse.json()).resolves.toMatchObject({ ok: true, amount: 5000, currency: 'twd' });
+      await expect(paymentResponse.json()).resolves.toMatchObject({
+        ok: true,
+        amount: 1500,
+        totalAmount: 5000,
+        depositAmount: 1500,
+        balanceDueAfterPayment: 3500,
+        isDeposit: true,
+        currency: 'twd',
+      });
 
       pageId = await createBuilderPage(page.request, slug, `M25 Bookings ${token}`);
       const revision = await currentDraftRevision(page.request, pageId);
@@ -302,6 +312,9 @@ test.describe('M25 Bookings services, staff, slots, and public widget', () => {
           startAt: string;
           paymentIntentId?: string;
           paymentStatus?: string;
+          paymentAmount?: number;
+          paymentDueNow?: number;
+          depositAmount?: number;
           customerTimezone?: string;
           customer: {
             caseSummary?: string;
@@ -316,6 +329,9 @@ test.describe('M25 Bookings services, staff, slots, and public widget', () => {
       expect(bookPayload.booking.startAt).toBe(selectedSlot);
       expect(bookPayload.booking.paymentIntentId).toBe('pi_stub_dev');
       expect(bookPayload.booking.paymentStatus).toBe('unpaid');
+      expect(bookPayload.booking.paymentAmount).toBe(5000);
+      expect(bookPayload.booking.paymentDueNow).toBe(1500);
+      expect(bookPayload.booking.depositAmount).toBe(1500);
       expect(bookPayload.booking.customerTimezone).toBeTruthy();
       expect(bookPayload.booking.customer.caseSummary).toContain('계약 분쟁');
       expect(bookPayload.booking.customer.attachmentUrls).toEqual(['https://example.com/evidence.pdf']);

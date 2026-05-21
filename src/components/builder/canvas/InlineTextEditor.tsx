@@ -18,6 +18,8 @@ import {
   richTextFromPlainText,
   sanitizeTipTapDoc,
 } from '@/lib/builder/rich-text/sanitize';
+import type { TextAssistantTargetLocale } from '@/lib/builder/ai-generator/text-assistant';
+import AiTextAssistantPanel from './AiTextAssistantPanel';
 import styles from './SandboxPage.module.css';
 
 interface InlineTextEditorProps {
@@ -33,6 +35,10 @@ interface InlineTextEditorProps {
   textDecoration?: string;
   textTransform?: string;
   align?: string;
+  aiLocale?: TextAssistantTargetLocale;
+  aiSiteName?: string;
+  aiBrandTone?: string;
+  aiElementHint?: string;
   onSave: (payload: { richText: BuilderRichText; plainText: string }) => void;
   onBlur: () => void;
 }
@@ -74,6 +80,10 @@ export default function InlineTextEditor({
   textDecoration,
   textTransform,
   align = 'left',
+  aiLocale = 'ko',
+  aiSiteName,
+  aiBrandTone,
+  aiElementHint,
   onSave,
   onBlur,
 }: InlineTextEditorProps) {
@@ -84,6 +94,7 @@ export default function InlineTextEditor({
   const [toolbarBelow, setToolbarBelow] = useState(false);
   const [linkPickerOpen, setLinkPickerOpen] = useState(false);
   const [linkPickerValue, setLinkPickerValue] = useState<LinkValue | null>(null);
+  const [aiPanelOpen, setAiPanelOpen] = useState(false);
   const initialContent = (initialRichText?.doc ?? richTextFromPlainText(initialText).doc) as JSONContent;
 
   // Determine whether toolbar should appear below the element
@@ -409,6 +420,41 @@ export default function InlineTextEditor({
             >
               <LinkPicker value={linkPickerValue} onChange={applyLink} />
             </div>
+          ) : null}
+
+          <span className={styles.inlineTextToolbarDivider} />
+
+          <button
+            type="button"
+            aria-label="AI 텍스트 어시스턴트"
+            aria-expanded={aiPanelOpen}
+            data-builder-inline-text-ai="true"
+            className={toolbarButtonClassName(aiPanelOpen)}
+            title="AI로 텍스트 다시 쓰기/요약/번역/톤 조정"
+            onMouseDown={(event) => {
+              event.preventDefault();
+              handleSave();
+              setAiPanelOpen((value) => !value);
+            }}
+          >
+            AI
+          </button>
+          {aiPanelOpen ? (
+            <AiTextAssistantPanel
+              sourceText={editor?.getText() ?? ''}
+              sourceLocale={aiLocale}
+              siteName={aiSiteName}
+              brandTone={aiBrandTone}
+              elementHint={aiElementHint}
+              placement={toolbarBelow ? 'above' : 'below'}
+              onApply={(text) => {
+                if (!editor) return;
+                editor.chain().focus().setContent(text, true).run();
+                handleSave();
+                setAiPanelOpen(false);
+              }}
+              onClose={() => setAiPanelOpen(false)}
+            />
           ) : null}
         </div>
       ) : null}

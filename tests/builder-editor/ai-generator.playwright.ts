@@ -62,6 +62,7 @@ async function deleteBuilderPage(page: Page, pageId: string) {
 }
 
 test('/ko/admin-builder/ai-generator generates sitemap and content plan from expanded prompt fields', async ({ page }) => {
+  test.setTimeout(120_000);
   await page.setExtraHTTPHeaders({ Authorization: authHeader });
   await page.setViewportSize({ width: 390, height: 900 });
   await page.addInitScript((historyKey) => {

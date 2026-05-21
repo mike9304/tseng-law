@@ -29,6 +29,11 @@ export const BUILDER_PERMISSIONS = [
   'manage-users',
   'manage-search',
   'settings',
+  'manage-roles',
+  'delete-site',
+  'view-cms',
+  'manage-translations',
+  'manage-secrets',
 ] as const;
 
 export type BuilderPermission = (typeof BUILDER_PERMISSIONS)[number];
@@ -60,6 +65,11 @@ const GRANULAR_TO_COARSE: Record<BuilderPermission, string> = {
   'manage-users': 'manage-users',
   'manage-search': 'edit',
   settings: 'settings',
+  'manage-roles': 'manage-users',
+  'delete-site': 'delete',
+  'view-cms': 'comment',
+  'manage-translations': 'edit',
+  'manage-secrets': 'settings',
 };
 
 export function hasBuilderPermission(role: UserRole, permission: BuilderPermission): boolean {

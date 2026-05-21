@@ -117,6 +117,22 @@ interface GeneratedDraftComparison {
   comparedAt: string;
 }
 
+interface DesignerStyleSuggestion {
+  id: string;
+  label: string;
+  description: string;
+  treatment: string;
+  composition: string;
+  palette: Draft['palette'];
+}
+
+interface DraftVisualDiffMetrics {
+  paletteTokens: number;
+  sectionOrder: number;
+  copyLength: number;
+  visualGuidance: number;
+}
+
 interface Props {
   locale: Locale;
 }
@@ -337,6 +353,158 @@ function responsiveFixedDraft(source: Draft): Draft {
   };
 }
 
+function designerStyleSuggestions(source: Draft): DesignerStyleSuggestion[] {
+  return [
+    {
+      id: 'editorial-trust',
+      label: 'Editorial trust',
+      description: '자격·근거·상담 CTA가 차분하게 이어지는 법률형 편집 시스템',
+      treatment: 'editorial trust system with credential rails, measured dividers, and concise proof chips',
+      composition: 'place credentials beside the hero, then alternate proof cards and article-style section rhythm',
+      palette: {
+        ...source.palette,
+        primary: '#102a43',
+        secondary: '#0f766e',
+        accent: '#d6a84f',
+        background: '#f6faf9',
+      },
+    },
+    {
+      id: 'conversion-clarity',
+      label: 'Conversion clarity',
+      description: '상담 버튼·신뢰 수치·핵심 업무를 빠르게 스캔하는 전환형 레이아웃',
+      treatment: 'conversion clarity system with CTA dock, compact service cards, and high-contrast trust metrics',
+      composition: 'pin the primary CTA near proof metrics, then stack service cards with generous tap targets',
+      palette: {
+        ...source.palette,
+        primary: '#111827',
+        secondary: '#2563eb',
+        accent: '#dc6b21',
+        background: '#f8fafc',
+      },
+    },
+    {
+      id: 'boutique-premium',
+      label: 'Boutique premium',
+      description: '고급 사무소 느낌의 여백, 얇은 라인, restrained accent 중심 비주얼',
+      treatment: 'boutique premium system with slim editorial lines, soft media depth, and restrained accent moments',
+      composition: 'lead with spacious hero typography, then use two-column proof/editorial blocks on desktop and clean stacks on mobile',
+      palette: {
+        ...source.palette,
+        primary: '#1f2937',
+        secondary: '#4f46e5',
+        accent: '#b7791f',
+        background: '#fbfbf7',
+      },
+    },
+  ];
+}
+
+function replaceOrAppendBriefNote(value: string, label: string, replacement: string): string {
+  const pattern = new RegExp(`${label}[^.]+\\.?`, 'i');
+  if (pattern.test(value)) {
+    return value.replace(pattern, `${label}${replacement}.`);
+  }
+  return `${value} ${label}${replacement}.`;
+}
+
+function designerPolishedDraft(source: Draft, suggestion: DesignerStyleSuggestion): Draft {
+  return {
+    ...source,
+    palette: suggestion.palette,
+    plan: {
+      ...source.plan,
+      visualBrief: {
+        ...source.plan.visualBrief,
+        treatment: replaceOrAppendBriefNote(
+          source.plan.visualBrief.treatment,
+          'Designer polish: ',
+          suggestion.treatment,
+        ),
+        composition: replaceOrAppendBriefNote(
+          source.plan.visualBrief.composition,
+          'Designer polish layout: ',
+          suggestion.composition,
+        ),
+      },
+    },
+  };
+}
+
+function draftCopyLength(value: Draft): number {
+  return [
+    value.content.hero.headline,
+    value.content.hero.body,
+    ...value.content.sections.flatMap((section) => [section.headline, section.body]),
+  ].join(' ').length;
+}
+
+function draftVisualSectionSignature(value: Draft): string[] {
+  return ['hero', ...value.content.sections.map((section) => section.sectionId)];
+}
+
+function fullPageVisualDiffMetrics(selected: Draft, current: Draft): DraftVisualDiffMetrics {
+  const paletteKeys: Array<keyof Draft['palette']> = ['primary', 'secondary', 'accent', 'background'];
+  const selectedSections = draftVisualSectionSignature(selected);
+  const currentSections = draftVisualSectionSignature(current);
+  const longestSectionCount = Math.max(selectedSections.length, currentSections.length);
+  return {
+    paletteTokens: paletteKeys.filter((key) => selected.palette[key] !== current.palette[key]).length,
+    sectionOrder: Array.from({ length: longestSectionCount }).filter((_, index) => (
+      selectedSections[index] !== currentSections[index]
+    )).length,
+    copyLength: Math.abs(draftCopyLength(current) - draftCopyLength(selected)),
+    visualGuidance: [
+      selected.plan.visualBrief.treatment !== current.plan.visualBrief.treatment,
+      selected.plan.visualBrief.composition !== current.plan.visualBrief.composition,
+    ].filter(Boolean).length,
+  };
+}
+
+function renderDraftPageStrip(draftValue: Draft, label: string, dataAttribute: string): ReactNode {
+  const blocks = [
+    {
+      id: 'hero',
+      label: draftValue.content.hero.headline,
+      detail: draftValue.content.hero.body,
+      size: 'large',
+    },
+    ...draftValue.content.sections.map((section) => ({
+      id: section.sectionId,
+      label: section.headline,
+      detail: section.body,
+      size: 'regular',
+    })),
+  ];
+  return (
+    <article
+      className={styles.generatedPageVisualStrip}
+      style={{ background: draftValue.palette.background }}
+      data-ai-generator-page-visual-strip={dataAttribute}
+    >
+      <div className={styles.generatedPageVisualStripHead}>
+        <span>{label}</span>
+        <strong>{draftValue.promptVersion ?? 'unknown'}</strong>
+      </div>
+      <div className={styles.generatedPageVisualBlocks}>
+        {blocks.map((block) => (
+          <i
+            key={block.id}
+            className={block.size === 'large' ? styles.generatedPageVisualBlockHero : styles.generatedPageVisualBlock}
+            style={{
+              borderColor: block.size === 'large' ? draftValue.palette.accent : draftValue.palette.secondary,
+              color: block.size === 'large' ? draftValue.palette.primary : draftValue.palette.secondary,
+            }}
+            title={block.detail}
+          >
+            {block.label}
+          </i>
+        ))}
+      </div>
+    </article>
+  );
+}
+
 export default function AiGeneratorWizard({ locale }: Props) {
   const [step, setStep] = useState<WizardStep>(1);
   const [industry, setIndustry] = useState<Industry>('law');
@@ -383,6 +551,9 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const [generatedDraftComparison, setGeneratedDraftComparison] = useState<GeneratedDraftComparison | null>(null);
   const [responsiveFixSnapshot, setResponsiveFixSnapshot] = useState<Draft | null>(null);
   const [responsiveFixNotice, setResponsiveFixNotice] = useState('');
+  const [designerSuggestionSnapshot, setDesignerSuggestionSnapshot] = useState<Draft | null>(null);
+  const [designerSuggestionNotice, setDesignerSuggestionNotice] = useState('');
+  const [appliedDesignerSuggestionId, setAppliedDesignerSuggestionId] = useState('');
   const promptVersionComparison = useMemo(() => {
     const selected = promptVersionEntry(selectedPromptVersion);
     const current = promptVersionEntry(AI_GENERATOR_PROMPT_VERSION);
@@ -636,6 +807,9 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setSectionSaveNotice('');
     setResponsiveFixSnapshot(null);
     setResponsiveFixNotice('');
+    setDesignerSuggestionSnapshot(null);
+    setDesignerSuggestionNotice('');
+    setAppliedDesignerSuggestionId('');
     setDraftSlug(suggestDraftSlug());
     setDraftPreviewFrame('desktop');
     setError('');
@@ -674,6 +848,9 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setSectionSaveNotice('');
     setResponsiveFixSnapshot(null);
     setResponsiveFixNotice('');
+    setDesignerSuggestionSnapshot(null);
+    setDesignerSuggestionNotice('');
+    setAppliedDesignerSuggestionId('');
     try {
       const res = await fetch('/api/builder/ai-generator', {
         method: 'POST',
@@ -762,6 +939,9 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setSectionSaveNotice('');
     setResponsiveFixSnapshot(null);
     setResponsiveFixNotice('');
+    setDesignerSuggestionSnapshot(null);
+    setDesignerSuggestionNotice('');
+    setAppliedDesignerSuggestionId('');
     setDraftSlug(suggestDraftSlug());
     setDraftPreviewFrame('desktop');
     setStep(6);
@@ -785,6 +965,38 @@ export default function AiGeneratorWizard({ locale }: Props) {
     setResponsiveFixSnapshot(null);
     setDraftPreviewFrame('desktop');
     setResponsiveFixNotice('반응형 자동 보정을 되돌렸습니다.');
+  }
+
+  function applyDesignerStyleSuggestion(suggestion: DesignerStyleSuggestion) {
+    if (!draft) return;
+    const nextDraft = designerPolishedDraft(draft, suggestion);
+    setDesignerSuggestionSnapshot(draft);
+    setDraft(nextDraft);
+    updateStoredDraftHistory(draft, nextDraft);
+    setAppliedDesignerSuggestionId(suggestion.id);
+    setDesignerSuggestionNotice(`${suggestion.label} 디자인 시스템을 적용했습니다.`);
+    setError('');
+  }
+
+  function undoDesignerStyleSuggestion() {
+    if (!draft || !designerSuggestionSnapshot) return;
+    updateStoredDraftHistory(draft, designerSuggestionSnapshot);
+    setDraft(designerSuggestionSnapshot);
+    setDesignerSuggestionSnapshot(null);
+    setAppliedDesignerSuggestionId('');
+    setDesignerSuggestionNotice('디자이너 스타일 제안을 되돌렸습니다.');
+  }
+
+  function moveSelectedSitemapSlug(slug: string, direction: -1 | 1) {
+    setSelectedSitemapPageSlugs((current) => {
+      const index = current.indexOf(slug);
+      const nextIndex = index + direction;
+      if (index < 0 || nextIndex < 0 || nextIndex >= current.length) return current;
+      const next = [...current];
+      [next[index], next[nextIndex]] = [next[nextIndex], next[index]];
+      return next;
+    });
+    setError('');
   }
 
   async function saveGeneratedSection(snapshot: GeneratedSectionSnapshot) {
@@ -910,6 +1122,12 @@ export default function AiGeneratorWizard({ locale }: Props) {
     [draft, locale],
   );
   const activeVisualBrief = draft ? visualBriefForUi(draft) : null;
+  const designerSuggestions = useMemo(() => (draft ? designerStyleSuggestions(draft) : []), [draft]);
+  const generatedPageVisualDiff = useMemo(() => (
+    generatedDraftComparison
+      ? fullPageVisualDiffMetrics(generatedDraftComparison.selected, generatedDraftComparison.current)
+      : null
+  ), [generatedDraftComparison]);
   const activePromptVersion = draft?.promptVersion ?? 'legacy-local-draft';
   const activeBlueprintVersion = draft?.blueprintVersion ?? 'unknown-blueprint';
   const activePromptChange = draft?.promptChangelog?.find((entry) => entry.version === activePromptVersion)
@@ -925,17 +1143,16 @@ export default function AiGeneratorWizard({ locale }: Props) {
         sections: ['hero', ...draft.content.sections.map((section) => section.sectionId)],
       }];
     }
-    return draft.plan.sitemap
-      .filter((page) => {
-        const slug = normalizePlanSlug(page.slug);
-        return slug !== '/' && selectedSitemapPageSlugSet.has(slug);
-      })
+    const pagesBySlug = new Map(draft.plan.sitemap.map((page) => [normalizePlanSlug(page.slug), page]));
+    return selectedSitemapPageSlugs
+      .map((slug) => pagesBySlug.get(normalizePlanSlug(slug)))
+      .filter((page): page is NonNullable<typeof page> => Boolean(page))
       .map((page) => ({
         title: page.title,
         slug: normalizePlanSlug(page.slug),
         sections: page.sections,
       }));
-  }, [applyScope, companyName, draft, draftSlug, selectedSitemapPageSlugSet]);
+  }, [applyScope, companyName, draft, draftSlug, selectedSitemapPageSlugs]);
   const applyReviewSectionCount = useMemo(
     () => applyReviewPages.reduce((total, page) => total + page.sections.length, 0),
     [applyReviewPages],
@@ -1406,6 +1623,31 @@ export default function AiGeneratorWizard({ locale }: Props) {
                       </button>
                     </article>
                   </div>
+                  {generatedPageVisualDiff ? (
+                    <div
+                      className={styles.generatedPageVisualDiff}
+                      data-ai-generator-page-visual-diff
+                      data-ai-generator-page-visual-diff-palette={generatedPageVisualDiff.paletteTokens}
+                      data-ai-generator-page-visual-diff-sections={generatedPageVisualDiff.sectionOrder}
+                      data-ai-generator-page-visual-diff-copy={generatedPageVisualDiff.copyLength}
+                      data-ai-generator-page-visual-diff-guidance={generatedPageVisualDiff.visualGuidance}
+                    >
+                      <div className={styles.generatedPageVisualDiffHead}>
+                        <span>Full-page visual diff</span>
+                        <strong>전체 페이지 흐름 기준 preview map</strong>
+                      </div>
+                      <div className={styles.generatedPageVisualDiffStats}>
+                        <span>Palette tokens <strong>{generatedPageVisualDiff.paletteTokens}</strong></span>
+                        <span>Section order <strong>{generatedPageVisualDiff.sectionOrder}</strong></span>
+                        <span>Copy delta <strong>{generatedPageVisualDiff.copyLength}</strong></span>
+                        <span>Visual guidance <strong>{generatedPageVisualDiff.visualGuidance}</strong></span>
+                      </div>
+                      <div className={styles.generatedPageVisualDiffGrid}>
+                        {renderDraftPageStrip(generatedDraftComparison.selected, 'Selected page', 'selected')}
+                        {renderDraftPageStrip(generatedDraftComparison.current, 'Current page', 'current')}
+                      </div>
+                    </div>
+                  ) : null}
                   <div className={styles.generatedDraftDelta} data-ai-generator-draft-comparison-delta>
                     <span>Generated delta</span>
                     <ul>
@@ -1569,6 +1811,57 @@ export default function AiGeneratorWizard({ locale }: Props) {
                       <small data-ai-generator-responsive-fix-status>{responsiveFixNotice}</small>
                     ) : null}
                   </div>
+                  <div
+                    className={styles.designerSuggestionCard}
+                    data-ai-generator-designer-suggestions
+                    data-ai-generator-designer-suggestion-active={appliedDesignerSuggestionId || 'none'}
+                  >
+                    <div>
+                      <strong>Designer polish</strong>
+                      <p>Wix Builder처럼 바로 적용 가능한 전문가형 컬러·레이아웃 시스템을 제안합니다.</p>
+                    </div>
+                    <div className={styles.designerSuggestionGrid}>
+                      {designerSuggestions.map((suggestion) => (
+                        <button
+                          key={suggestion.id}
+                          type="button"
+                          className={
+                            appliedDesignerSuggestionId === suggestion.id
+                              ? styles.designerSuggestionButtonActive
+                              : styles.designerSuggestionButton
+                          }
+                          onClick={() => applyDesignerStyleSuggestion(suggestion)}
+                          data-ai-generator-designer-suggestion={suggestion.id}
+                          data-ai-generator-designer-suggestion-selected={
+                            appliedDesignerSuggestionId === suggestion.id ? 'true' : 'false'
+                          }
+                        >
+                          <span className={styles.designerSuggestionSwatches} aria-hidden="true">
+                            <i style={{ background: suggestion.palette.primary }} />
+                            <i style={{ background: suggestion.palette.secondary }} />
+                            <i style={{ background: suggestion.palette.accent }} />
+                            <i style={{ background: suggestion.palette.background }} />
+                          </span>
+                          <strong>{suggestion.label}</strong>
+                          <small>{suggestion.description}</small>
+                        </button>
+                      ))}
+                    </div>
+                    <div className={styles.designerSuggestionActions}>
+                      <button
+                        type="button"
+                        className={styles.secondaryButton}
+                        onClick={undoDesignerStyleSuggestion}
+                        disabled={!designerSuggestionSnapshot}
+                        data-ai-generator-undo-designer-suggestion
+                      >
+                        디자인 되돌리기
+                      </button>
+                      {designerSuggestionNotice ? (
+                        <small data-ai-generator-designer-suggestion-status>{designerSuggestionNotice}</small>
+                      ) : null}
+                    </div>
+                  </div>
                   {imageGenerationNotice ? (
                     <small data-ai-generator-image-generation-status>{imageGenerationNotice}</small>
                   ) : null}
@@ -1705,6 +1998,43 @@ export default function AiGeneratorWizard({ locale }: Props) {
                         선택 해제
                       </button>
                     </div>
+                    {applyReviewPages.length > 0 ? (
+                      <div
+                        className={styles.sitemapTreeOrder}
+                        data-ai-generator-sitemap-tree-order
+                        data-ai-generator-sitemap-tree-order-count={applyReviewPages.length}
+                      >
+                        <span>Page tree order</span>
+                        {applyReviewPages.map((page, index) => (
+                          <div
+                            key={page.slug}
+                            data-ai-generator-sitemap-order-row={page.slug}
+                            data-ai-generator-sitemap-order-index={index}
+                          >
+                            <strong>{index + 1}. {page.title}</strong>
+                            <small>{displayPlanPath(page.slug)}</small>
+                            <button
+                              type="button"
+                              className={styles.ghostButton}
+                              onClick={() => moveSelectedSitemapSlug(page.slug, -1)}
+                              disabled={index === 0 || applying}
+                              data-ai-generator-sitemap-order-up={page.slug}
+                            >
+                              Up
+                            </button>
+                            <button
+                              type="button"
+                              className={styles.ghostButton}
+                              onClick={() => moveSelectedSitemapSlug(page.slug, 1)}
+                              disabled={index === applyReviewPages.length - 1 || applying}
+                              data-ai-generator-sitemap-order-down={page.slug}
+                            >
+                              Down
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
 	                  </div>
 	                ) : null}
 	                {applyScope === 'sitemap' ? (

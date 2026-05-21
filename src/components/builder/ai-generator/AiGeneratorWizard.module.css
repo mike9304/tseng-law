@@ -747,6 +747,130 @@
   overflow-wrap: anywhere;
 }
 
+.generatedPageVisualDiff {
+  display: grid;
+  gap: 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcff;
+}
+
+.generatedPageVisualDiffHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.generatedPageVisualDiffHead span {
+  color: #3b4351;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.generatedPageVisualDiffHead strong {
+  color: #151923;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.generatedPageVisualDiffStats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.generatedPageVisualDiffStats span {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  border: 1px solid #edf1f7;
+  border-radius: 8px;
+  padding: 8px;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.generatedPageVisualDiffStats strong {
+  color: #151923;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.generatedPageVisualDiffGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.generatedPageVisualStrip {
+  min-width: 0;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  padding: 9px;
+  overflow: hidden;
+}
+
+.generatedPageVisualStripHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.generatedPageVisualStripHead span {
+  color: #3b4351;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.generatedPageVisualStripHead strong {
+  color: #64748b;
+  font-size: 9px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.generatedPageVisualBlocks {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.generatedPageVisualBlock,
+.generatedPageVisualBlockHero {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid;
+  border-radius: 7px;
+  padding: 7px;
+  background: #ffffff;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.generatedPageVisualBlockHero {
+  min-height: 56px;
+  font-size: 11px;
+}
+
 .generatedDraftComparisonGrid dl {
   display: grid;
   gap: 5px;
@@ -1297,9 +1421,9 @@
 }
 
 .sitemapSelectPanel {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   min-width: 0;
-  justify-content: space-between;
   gap: 12px;
   align-items: center;
   border: 1px solid #dbe3ef;
@@ -1333,6 +1457,72 @@
   flex-wrap: wrap;
   gap: 8px;
   justify-content: flex-end;
+}
+
+.sitemapTreeOrder {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  border-top: 1px solid #edf1f7;
+  padding-top: 10px;
+}
+
+.sitemapTreeOrder > span {
+  color: #5d6778;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sitemapTreeOrder > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 6px;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid #edf1f7;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f8fafc;
+}
+
+.sitemapTreeOrder strong,
+.sitemapTreeOrder small {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sitemapTreeOrder strong {
+  grid-column: 1;
+  color: #151923;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.sitemapTreeOrder small {
+  grid-column: 1;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.sitemapTreeOrder button {
+  grid-row: 1 / span 2;
+  min-height: 30px;
+  padding: 0 9px;
+  font-size: 10px;
+}
+
+.sitemapTreeOrder button:first-of-type {
+  grid-column: 2;
+}
+
+.sitemapTreeOrder button:last-of-type {
+  grid-column: 3;
 }
 
 .applyReviewCard {
@@ -1624,6 +1814,100 @@
 
 .responsiveFixActions .secondaryButton {
   min-height: 36px;
+  padding: 0 12px;
+}
+
+.designerSuggestionCard {
+  display: grid;
+  gap: 10px;
+  margin-top: 2px;
+  border: 1px solid #d8dde8;
+  border-radius: 8px;
+  padding: 11px;
+  background: #ffffff;
+}
+
+.designerSuggestionCard > div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.designerSuggestionCard strong {
+  color: #151923;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.designerSuggestionCard p {
+  margin: 0;
+  color: #5d6778;
+  font-size: 11px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.designerSuggestionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.designerSuggestionButton,
+.designerSuggestionButtonActive {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  min-height: 116px;
+  padding: 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #151923;
+  text-align: left;
+  cursor: pointer;
+}
+
+.designerSuggestionButtonActive {
+  border-color: #1f8a85;
+  background: #eefbf9;
+  box-shadow: inset 0 0 0 1px rgba(31, 138, 133, 0.18);
+}
+
+.designerSuggestionButton strong,
+.designerSuggestionButtonActive strong {
+  font-size: 11px;
+}
+
+.designerSuggestionButton small,
+.designerSuggestionButtonActive small {
+  color: #5d6778;
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.designerSuggestionSwatches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.designerSuggestionSwatches i {
+  height: 18px;
+  border: 1px solid #cfd8e6;
+  border-radius: 4px;
+}
+
+.designerSuggestionActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.designerSuggestionActions .secondaryButton {
+  min-height: 34px;
   padding: 0 12px;
 }
 
@@ -2001,7 +2285,10 @@
   .previewSections,
   .promptComparisonProfiles,
   .promptDiffGrid,
-  .generatedDraftComparisonGrid {
+  .generatedDraftComparisonGrid,
+  .generatedPageVisualDiffGrid,
+  .generatedPageVisualDiffStats,
+  .designerSuggestionGrid {
     grid-template-columns: 1fr;
   }
 
@@ -2048,7 +2335,8 @@
   }
 
   .promptComparisonActions,
-  .generatedDraftComparisonHead {
+  .generatedDraftComparisonHead,
+  .generatedPageVisualDiffHead {
     align-items: stretch;
     flex-direction: column;
   }
@@ -2069,6 +2357,18 @@
 	  .createdPageList a {
 	    display: grid;
 	  }
+
+  .sitemapSelectPanel,
+  .sitemapTreeOrder > div {
+    grid-template-columns: 1fr;
+  }
+
+  .sitemapTreeOrder button,
+  .sitemapTreeOrder button:first-of-type,
+  .sitemapTreeOrder button:last-of-type {
+    grid-column: auto;
+    grid-row: auto;
+  }
 
   .actionRowCompact .primaryButton,
   .actionRowCompact .secondaryButton {

@@ -335,6 +335,24 @@ export function readBuilderCollectionRecordPreviews(
   }
 }
 
+/**
+ * Look up the SEO preview for a single CMS record. Returns null when the
+ * collection/locale/slug combination doesn't resolve a record. Used by the
+ * public dynamic item page to override page-template SEO with the matched
+ * record's title/description/canonical/image fields.
+ */
+export function findBuilderCollectionRecordSeo(
+  collectionId: BuilderCollectionId,
+  localeInput: string | null | undefined,
+  recordSlug: string | null | undefined,
+): BuilderCollectionRecordSeoPreview | null {
+  const slug = recordSlug?.trim();
+  if (!slug) return null;
+  const previews = readBuilderCollectionRecordPreviews(collectionId, localeInput);
+  const match = previews.find((preview) => preview.recordId === slug);
+  return match?.seo ?? null;
+}
+
 function summarizeForSeo(text: string, maxLength = 160) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}...` : text;
 }

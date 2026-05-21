@@ -27,6 +27,9 @@ playwright-report/
 .lighthouseci/
 qa-reports/
 
+# build cache
+tsconfig.tsbuildinfo
+
 # storybook build output
 storybook-static/
 

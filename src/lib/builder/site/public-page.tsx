@@ -41,6 +41,10 @@ import {
 } from '@/lib/builder/site/theme';
 import { buildPageSeo } from '@/lib/builder/seo/seo-model';
 import {
+  findBuilderCollectionRecordSeo,
+  isBuilderCollectionId,
+} from '@/lib/builder/cms';
+import {
   generateBreadcrumbSchema,
   generateLegalServiceSchema,
   generateLocalBusinessSchema,
@@ -119,6 +123,7 @@ export interface ResolvedPublishedSitePage {
   headerCanvas: BuilderCanvasDocument | null;
   footerCanvas: BuilderCanvasDocument | null;
   datasetDocument?: Pick<BuilderPageDocument, 'pageKey' | 'datasets'>;
+  dynamicItemRecordSlug?: string;
 }
 
 type ParentLayoutMode = 'absolute' | 'flex' | 'grid';
@@ -204,7 +209,16 @@ export async function resolvePublishedSitePage(
     headerCanvas: headerCanvas && headerCanvas.nodes.length > 0 ? headerCanvas : null,
     footerCanvas: footerCanvas && footerCanvas.nodes.length > 0 ? footerCanvas : null,
     datasetDocument,
+    dynamicItemRecordSlug: pageMatch?.dynamicItemRecordSlug,
   };
+}
+
+function resolveAbsoluteSeoUrl(siteUrl: string, value: string): string {
+  if (!value) return value;
+  if (/^https?:\/\//i.test(value)) return value;
+  const base = siteUrl.replace(/\/+$/, '');
+  const path = value.startsWith('/') ? value : `/${value}`;
+  return `${base}${path}`;
 }
 
 export async function buildPublishedSitePageMetadata(
@@ -216,6 +230,37 @@ export async function buildPublishedSitePageMetadata(
 
   const siteUrl = getSiteUrl();
   const seoData = buildPageSeo(resolved.pageMeta, siteUrl, locale, resolved.site.pages, resolved.site);
+
+  // F23 — when the page is a CMS dynamic item page and a record slug matched,
+  // override page-template SEO with the per-record SEO (title/description/
+  // canonical/og image/noIndex) so each generated record URL has its own
+  // metadata instead of a shared template.
+  const dynamicItem = resolved.pageMeta.dynamicItem;
+  if (dynamicItem && resolved.dynamicItemRecordSlug && isBuilderCollectionId(dynamicItem.collectionId)) {
+    const recordSeo = findBuilderCollectionRecordSeo(
+      dynamicItem.collectionId,
+      locale,
+      resolved.dynamicItemRecordSlug,
+    );
+    if (recordSeo) {
+      const canonical = resolveAbsoluteSeoUrl(siteUrl, recordSeo.canonicalPath);
+      seoData.title = recordSeo.title;
+      seoData.description = recordSeo.description;
+      seoData.canonical = canonical;
+      seoData.ogTitle = recordSeo.title;
+      seoData.ogDescription = recordSeo.description;
+      seoData.twitterTitle = recordSeo.title;
+      seoData.twitterDescription = recordSeo.description;
+      if (recordSeo.image) {
+        seoData.ogImage = recordSeo.image;
+        seoData.twitterImage = recordSeo.image;
+      }
+      if (recordSeo.noIndex) {
+        seoData.noIndex = true;
+      }
+    }
+  }
+
   const settings = resolved.site.settings;
   const favicon = resolveBuilderBrandAssetUrl(settings?.assets?.faviconAssetId) ?? settings?.favicon;
   const siteOgImage = resolveBuilderBrandAssetUrl(settings?.assets?.ogImageAssetId) ?? settings?.ogImage;

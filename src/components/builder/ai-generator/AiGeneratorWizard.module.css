@@ -686,6 +686,67 @@
   overflow-wrap: anywhere;
 }
 
+.generatedDraftVisualPreview {
+  min-width: 0;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.generatedDraftVisualBrowser {
+  display: grid;
+  gap: 8px;
+  min-height: 148px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.generatedDraftVisualBrowser span {
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.generatedDraftVisualBrowser strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.generatedDraftVisualBrowser p {
+  margin: 0;
+  color: #5d6778;
+  font-size: 10px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.generatedDraftVisualSections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.generatedDraftVisualSections i {
+  min-width: 0;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 7px;
+  background: #ffffff;
+  color: #3b4351;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
 .generatedDraftComparisonGrid dl {
   display: grid;
   gap: 5px;

@@ -1233,6 +1233,31 @@ export default function AiGeneratorWizard({ locale }: Props) {
                       <span>Selected draft</span>
                       <strong>{generatedDraftComparison.selected.content.hero.headline}</strong>
                       <p>{generatedDraftComparison.selected.content.hero.body}</p>
+                      <div
+                        className={styles.generatedDraftVisualPreview}
+                        style={{ background: generatedDraftComparison.selected.palette.background }}
+                        data-ai-generator-draft-visual-selected
+                      >
+                        <div className={styles.generatedDraftVisualBrowser}>
+                          <span style={{ color: generatedDraftComparison.selected.palette.accent }}>
+                            {generatedDraftComparison.selected.spec.industry}
+                          </span>
+                          <strong style={{ color: generatedDraftComparison.selected.palette.primary }}>
+                            {generatedDraftComparison.selected.content.hero.headline}
+                          </strong>
+                          <p>{generatedDraftComparison.selected.content.hero.body}</p>
+                          <div className={styles.generatedDraftVisualSections}>
+                            {generatedDraftComparison.selected.content.sections.slice(0, 2).map((section) => (
+                              <i
+                                key={section.sectionId}
+                                style={{ borderColor: generatedDraftComparison.selected.palette.secondary }}
+                              >
+                                {section.headline}
+                              </i>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                       <dl>
                         <div>
                           <dt>Version</dt>
@@ -1260,6 +1285,31 @@ export default function AiGeneratorWizard({ locale }: Props) {
                       <span>Current draft</span>
                       <strong>{generatedDraftComparison.current.content.hero.headline}</strong>
                       <p>{generatedDraftComparison.current.content.hero.body}</p>
+                      <div
+                        className={styles.generatedDraftVisualPreview}
+                        style={{ background: generatedDraftComparison.current.palette.background }}
+                        data-ai-generator-draft-visual-current
+                      >
+                        <div className={styles.generatedDraftVisualBrowser}>
+                          <span style={{ color: generatedDraftComparison.current.palette.accent }}>
+                            {generatedDraftComparison.current.spec.industry}
+                          </span>
+                          <strong style={{ color: generatedDraftComparison.current.palette.primary }}>
+                            {generatedDraftComparison.current.content.hero.headline}
+                          </strong>
+                          <p>{generatedDraftComparison.current.content.hero.body}</p>
+                          <div className={styles.generatedDraftVisualSections}>
+                            {generatedDraftComparison.current.content.sections.slice(0, 2).map((section) => (
+                              <i
+                                key={section.sectionId}
+                                style={{ borderColor: generatedDraftComparison.current.palette.secondary }}
+                              >
+                                {section.headline}
+                              </i>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                       <dl>
                         <div>
                           <dt>Version</dt>

@@ -25,6 +25,7 @@ npm-debug.log*
 test-results/
 playwright-report/
 .lighthouseci/
+qa-reports/
 
 # storybook build output
 storybook-static/

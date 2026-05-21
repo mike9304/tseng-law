@@ -43,11 +43,11 @@ Completion gate:
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
 | F17 | Dynamic | Dataset config | Editor can attach a dataset to a collection with mode, filters, sort, and item limit | 🟢 |
-| F18 | Dynamic | Element field binding | Text, image, link, button, gallery, and repeater elements bind to dataset fields | 🔴 |
-| F19 | Dynamic | Repeater component | Repeater renders collection rows with template editing and empty/loading states | 🔴 |
-| F20 | Dynamic | Dynamic list pages | Admin can create list pages backed by a collection and dataset filters | 🔴 |
-| F21 | Dynamic | Dynamic item routing | Item pages resolve by slug/id and render the correct record | 🔴 |
-| F22 | Dynamic | URL slug fields | Slug field generation, conflict handling, and redirects work | 🔴 |
+| F18 | Dynamic | Element field binding | Text, image, link, button, gallery, and repeater elements bind to dataset fields | 🟡 |
+| F19 | Dynamic | Repeater component | Repeater renders collection rows with template editing and empty/loading states | 🟡 |
+| F20 | Dynamic | Dynamic list pages | Admin can create list pages backed by a collection and dataset filters | 🟡 |
+| F21 | Dynamic | Dynamic item routing | Item pages resolve by slug/id and render the correct record | 🟡 |
+| F22 | Dynamic | URL slug fields | Slug field generation, conflict handling, redirect creation, redirect conflict warnings, and CMS record-slug redirects work | 🟡 |
 | F23 | Dynamic | Per-item SEO | Dynamic pages can generate title, description, canonical, OG image, and schema from fields | 🔴 |
 | F24 | Dynamic | Visitor filters/search | Public pages can expose safe search, filters, and sort controls for dataset content | 🔴 |
 | F25 | Dynamic | Pagination/load more | Dataset pagination and load-more behavior preserve query state | 🔴 |
@@ -57,102 +57,102 @@ Completion gate:
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F27 | Input | Form-to-collection mapping | Form submissions can write to a selected collection with mapped fields | 🔴 |
-| F28 | Input | Input field binding | Text, email, phone, checkbox, radio, select, date, upload, and consent fields bind to CMS fields | 🔴 |
-| F29 | Input | Submit validation | Client and server validation return clear field-level errors | 🔴 |
-| F30 | Input | Moderation queue | Visitor-created rows can enter pending/approved/rejected states | 🔴 |
-| F31 | Input | Spam/rate controls | Honeypot, rate limit, and duplicate submission guards are enforced | 🔴 |
-| F32 | Input | Visitor upload fields | Public uploads use asset validation, size limits, scan hooks, and CMS media references | 🔴 |
+| F27 | Input | Form-to-collection mapping | Form submissions can write to a selected collection with mapped fields | 🟢 |
+| F28 | Input | Input field binding | Text, email, phone, checkbox, radio, select, date, upload, and consent fields bind to CMS fields | 🟢 |
+| F29 | Input | Submit validation | Client and server validation return clear field-level errors | 🟢 |
+| F30 | Input | Moderation queue | Visitor-created rows can enter pending/approved/rejected states | 🟢 |
+| F31 | Input | Spam/rate controls | Honeypot, rate limit, and duplicate submission guards are enforced | 🟢 |
+| F32 | Input | Visitor upload fields | Public uploads use asset validation, size limits, scan hooks, and CMS media references | 🟢 |
 
 ## M161 App Market Architecture
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F33 | Apps | App manifest schema | Apps declare metadata, permissions, widgets, settings panels, routes, migrations, and translations | 🔴 |
-| F34 | Apps | App discovery/catalog | Admin can browse/search/filter local app catalog entries | 🔴 |
-| F35 | Apps | Lifecycle controls | Apps install, enable, disable, upgrade, and uninstall without orphaned state | 🔴 |
-| F36 | Apps | App settings UI | Installed apps expose settings panels with validation and save/restore behavior | 🔴 |
-| F37 | Apps | Widget registration | Apps can register editor widgets/components into the add panel | 🔴 |
-| F38 | Apps | Public runtime loader | Published pages load app widgets with scoped data and no global collisions | 🔴 |
-| F39 | Apps | App migrations | Versioned app data migrations run and report status | 🔴 |
-| F40 | Apps | App permissions/scopes | Apps request and enforce scoped access to CMS, media, checkout, bookings, and members data | 🔴 |
-| F41 | Apps | App version model | Installed app version, available update, compatibility, and rollback are tracked | 🔴 |
-| F42 | Apps | Uninstall cleanup | App data removal is explicit, reversible when possible, and audited | 🔴 |
+| F33 | Apps | App manifest schema | Apps declare metadata, permissions, widgets, settings panels, routes, migrations, and translations | 🟢 |
+| F34 | Apps | App discovery/catalog | Admin can browse/search/filter local app catalog entries | 🟢 |
+| F35 | Apps | Lifecycle controls | Apps install, enable, disable, upgrade, and uninstall without orphaned state | 🟢 |
+| F36 | Apps | App settings UI | Installed apps expose settings panels with validation and save/restore behavior | 🟢 |
+| F37 | Apps | Widget registration | Apps can register editor widgets/components into the add panel | 🟢 |
+| F38 | Apps | Public runtime loader | Published pages load app widgets with scoped data and no global collisions | 🟢 |
+| F39 | Apps | App migrations | Versioned app data migrations run and report status | 🟢 |
+| F40 | Apps | App permissions/scopes | Apps request and enforce scoped access to CMS, media, checkout, bookings, and members data | 🟢 |
+| F41 | Apps | App version model | Installed app version, available update, compatibility, and rollback are tracked | 🟢 |
+| F42 | Apps | Uninstall cleanup | App data removal is explicit, reversible when possible, and audited | 🟢 |
 
 ## M162 Native App Packs
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F43 | Native apps | Blog data model/admin | Blog posts, authors, categories, tags, drafts, and scheduling exist | 🔴 |
-| F44 | Native apps | Blog public widgets | Blog list, post, category, author, recent posts, and search widgets publish correctly | 🔴 |
-| F45 | Native apps | Events app | Events admin, RSVP/ticket basics, event pages, and calendar/list widgets exist | 🔴 |
-| F46 | Native apps | Members area | Member profile, login gating, account pages, and role-aware navigation exist | 🔴 |
-| F47 | Native apps | FAQ app | FAQ categories, public widgets, schema output, and search/filter are app-backed | 🔴 |
-| F48 | Native apps | Chat app | Chat inbox/settings widget and public launcher are app-backed | 🔴 |
-| F49 | Native apps | Portfolio app | Portfolio projects, galleries, categories, and project detail pages exist | 🔴 |
-| F50 | Native apps | Site search app | Indexable content model, search results page, and widget configuration exist | 🔴 |
-| F51 | Native apps | App translation hooks | First-party apps participate in the multilingual manager | 🔴 |
-| F52 | Native apps | Unified app dashboard | Installed native apps appear in a single manage/update/settings dashboard | 🔴 |
+| F43 | Native apps | Blog data model/admin | Blog posts, authors, categories, tags, drafts, and scheduling exist | 🟢 |
+| F44 | Native apps | Blog public widgets | Blog list, post, category, author, recent posts, and search widgets publish correctly | 🟢 |
+| F45 | Native apps | Events app | Events admin, RSVP/ticket basics, event pages, and calendar/list widgets exist | 🟢 |
+| F46 | Native apps | Members area | Member profile, login gating, account pages, and role-aware navigation exist | 🟢 |
+| F47 | Native apps | FAQ app | FAQ categories, public widgets, schema output, and search/filter are app-backed | 🟢 |
+| F48 | Native apps | Chat app | Chat inbox/settings widget and public launcher are app-backed | 🟢 |
+| F49 | Native apps | Portfolio app | Portfolio projects, galleries, categories, and project detail pages exist | 🟢 |
+| F50 | Native apps | Site search app | Indexable content model, search results page, and widget configuration exist | 🟢 |
+| F51 | Native apps | App translation hooks | First-party apps participate in the multilingual manager | 🟢 |
+| F52 | Native apps | Unified app dashboard | Installed native apps appear in a single manage/update/settings dashboard | 🟢 |
 
 ## M163 Stores And eCommerce
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F53 | Stores | Product schema | Products support title, description, media, price, inventory, SKU, SEO, variants, and status | 🔴 |
-| F54 | Stores | Product manager | Admin can create, duplicate, bulk edit, import/export, archive, and search products | 🔴 |
-| F55 | Stores | Variants/options | Product options, variant prices, inventory, images, and availability render correctly | 🔴 |
-| F56 | Stores | Categories/collections | Product categories drive navigation, galleries, and dynamic URLs | 🔴 |
-| F57 | Stores | Product gallery widgets | Store galleries support filters, sort, pagination, quick view, and responsive layout | 🔴 |
-| F58 | Stores | Product detail page | PDP supports gallery, variants, quantity, availability, related products, and SEO | 🔴 |
-| F59 | Stores | Cart | Cart add/update/remove, coupon entry, totals, persisted state, and mini-cart work | 🔴 |
-| F60 | Stores | Checkout adapter | Checkout flow supports address, shipping/tax/payment adapter, and order confirmation | 🔴 |
-| F61 | Stores | Order creation | Orders persist line items, customer, payment state, fulfillment state, totals, and audit data | 🔴 |
-| F62 | Stores | Order admin | Admin can view, search, filter, update fulfillment/payment state, and export orders | 🔴 |
-| F63 | Stores | Discounts/coupons | Coupon and automatic discount rules apply safely to cart and checkout | 🔴 |
-| F64 | Stores | Tax rules | Tax calculation rules are configurable and visible in checkout/order admin | 🔴 |
-| F65 | Stores | Shipping/delivery | Shipping zones, rates, pickup/local delivery, and free shipping rules are supported | 🔴 |
-| F66 | Stores | Abandoned cart/notifications | Cart recovery and order notification hooks exist | 🔴 |
+| F53 | Stores | Product schema | Products support title, description, media, price, inventory, SKU, SEO, variants, and status | 🟢 |
+| F54 | Stores | Product manager | Admin can create, duplicate, bulk edit, import/export, archive, and search products | 🟢 |
+| F55 | Stores | Variants/options | Product options, variant prices, inventory, images, and availability render correctly | 🟢 |
+| F56 | Stores | Categories/collections | Product categories drive navigation, galleries, and dynamic URLs | 🟢 |
+| F57 | Stores | Product gallery widgets | Store galleries support filters, sort, pagination, quick view, and responsive layout | 🟢 |
+| F58 | Stores | Product detail page | PDP supports gallery, variants, quantity, availability, related products, and SEO | 🟢 |
+| F59 | Stores | Cart | Cart add/update/remove, coupon entry, totals, persisted state, and mini-cart work | 🟢 |
+| F60 | Stores | Checkout adapter | Checkout flow supports address, shipping/tax/payment adapter, and order confirmation | 🟢 |
+| F61 | Stores | Order creation | Orders persist line items, customer, payment state, fulfillment state, totals, and audit data | 🟢 |
+| F62 | Stores | Order admin | Admin can view, search, filter, update fulfillment/payment state, and export orders | 🟢 |
+| F63 | Stores | Discounts/coupons | Coupon and automatic discount rules apply safely to cart and checkout | 🟢 |
+| F64 | Stores | Tax rules | Tax calculation rules are configurable and visible in checkout/order admin | 🟢 |
+| F65 | Stores | Shipping/delivery | Shipping zones, rates, pickup/local delivery, and free shipping rules are supported | 🟢 |
+| F66 | Stores | Abandoned cart/notifications | Cart recovery and order notification hooks exist | 🟢 |
 
 ## M164 Payments And Business Operations
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F67 | Payments | Provider abstraction | Payment providers expose test-mode intents, captures, failures, and status mapping | 🔴 |
-| F68 | Payments | Webhooks | Provider webhook verification, idempotency, and event replay are implemented | 🔴 |
-| F69 | Payments | Refunds | Refunds and partial refunds update payment, order, and audit states | 🔴 |
-| F70 | Ops | Invoices/receipts | Orders/bookings can generate receipt/invoice data and email/export it | 🔴 |
-| F71 | Payments | Manual payments | Offline/manual payment methods are represented consistently | 🔴 |
-| F72 | Payments | Multi-currency | Currency formatting, conversion placeholder, and checkout restrictions are explicit | 🔴 |
-| F73 | Payments | Security audit | Checkout/payment paths pass permission, CSRF, validation, and logging checks | 🔴 |
-| F74 | Ops | Payment analytics | Revenue, conversion, refund, and failed payment summaries are available | 🔴 |
+| F67 | Payments | Provider abstraction | Payment providers expose test-mode intents, captures, failures, and status mapping | 🟢 |
+| F68 | Payments | Webhooks | Provider webhook verification, idempotency, and event replay are implemented | 🟢 |
+| F69 | Payments | Refunds | Refunds and partial refunds update payment, order, and audit states | 🟢 Internal/manual refunds, Stripe refund execution for non-stub provider payments, provider-failure no-mutation guard, booking cancellation Stripe refunds, refund locks, audit, filters, and CSV visibility are verified |
+| F70 | Ops | Invoices/receipts | Orders/bookings can generate receipt/invoice data and email/export it | 🟡 PDF/share/list/revoke/tracking, optional automatic issuance policy, auditable order/booking invoice/receipt number reservation ledger with local/file concurrency lock, void/supersede lifecycle, unpaid order/booking invoice payment-link create/renew/revoke lifecycle, Stripe Checkout hosted session creation, SCA-capable redirect flow, and paid webhook settlement into receipt automation added; distributed blob CAS hardening, production provider QA, template depth, bulk, and portal workflows remain |
+| F71 | Payments | Manual payments | Offline/manual payment methods are represented consistently | 🟡 Order, booking, and central billing invoice views now have admin-only manual payment records, succeeded/pending/failed/canceled ledger statuses, partial-paid state, balance due tracking, successful-payment overpayment guard, idempotency keys, configurable order/booking offline payment instructions for public pay links and rendered invoices/PDFs, generic status/webhook locks only after successful manual payment entries, invoice balance refresh, stale order/booking pay-link revocation on successful balance movement, persisted stale-link reason/balance metadata, central billing renewal-needed status, per-document payment-link created/renewed/revoked activity history, idempotent customer payment-received outbox events for successful manual and hosted invoice settlements, payment-received workflow toggles for manual/hosted/receipt-overlap behavior, outbox payment summaries, booking hosted-settlement mismatch protection, CSV/search or analytics visibility, and full-payment receipt automation handoff; live email delivery/provider QA and richer branded email body previews remain |
+| F72 | Payments | Multi-currency | Currency formatting, conversion placeholder, and checkout restrictions are explicit | 🟡 Checkout now has an explicit single-currency policy notice, raw mixed-currency cart rejection before product normalization, unsupported/disabled-currency validation, billing document/manual-payment currency chips, a guarded commerce currency settings page/API, base/enabled currency matrix, manual preview-rate metadata, checkout conversion-policy disclosure, and public invoice pay-page currency disclosure; actual conversion, provider currency QA, localized currency editing depth, and order/invoice converted amount workflows remain |
+| F73 | Payments | Security audit | Checkout/payment paths pass permission, CSRF, validation, and logging checks | 🟡 Public invoice payment links now hide customer/payment details on invalid, expired, or revoked tokens, the payment-intents diagnostic endpoint is behind builder admin auth, CSRF, and mutation rate guards, production billing share/payment token generation now requires an explicit billing/NEXTAUTH secret instead of falling back to admin password or a fixed local secret, billing Stripe webhooks now persist a signed event ledger with duplicate no-op handling plus guarded admin list/replay APIs, central billing Activity now surfaces matched hosted webhook status/history/replay controls, unmatched failed/ignored hosted webhook exceptions appear in a compact central billing review panel, and commerce order DELETE now uses the same mutation guard/CSRF/rate limit path as other destructive commerce routes; broader payment security logging/admin visibility audit remains |
+| F74 | Ops | Payment analytics | Revenue, conversion, refund, and failed payment summaries are available | 🟡 Cross-source order/booking payment analytics now has a shared aggregation helper plus `/admin-builder/commerce/payments` cards for net collected, attempts, conversion, failed payments, refunds, by-currency gross/refunded/net/outstanding totals, order-vs-booking source quality, and a compact central Billing analytics strip for collected/balance/refunded/review-needed document scope; deeper trend charts, funnel attribution, exports, provider fee analytics, and alerting remain |
 
 ## M165 Bookings Pro
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F75 | Bookings | Resources/rooms | Services can require resources/rooms with availability constraints | 🔴 |
-| F76 | Bookings | Packages/memberships | Service packages, session credits, memberships, and redemption rules exist | 🔴 |
-| F77 | Bookings | Deposits/varied pricing | Deposits, pay-later, staff/resource-specific pricing, and discounts are supported | 🔴 |
-| F78 | Bookings | Staff calendar depth | Staff calendar supports blocked time, overrides, recurring availability, and conflict checks | 🔴 |
-| F79 | Bookings | Client portal | Clients can see upcoming/past bookings and account details | 🔴 |
-| F80 | Bookings | Cancel/reschedule policy | Policy windows, fees, and self-service reschedule/cancel flows exist | 🔴 |
-| F81 | Bookings | Waitlist | Full sessions can accept waitlist entries and promote clients | 🔴 |
-| F82 | Bookings | Reminders | Email/SMS-style reminder hooks and admin templates exist | 🔴 |
-| F83 | Bookings | Timezone/localization | Booking slots render correctly across site/admin/client timezones and locales | 🔴 |
-| F84 | Bookings | Booking analytics | Utilization, no-show, revenue, staff, and service analytics are available | 🔴 |
+| F75 | Bookings | Resources/rooms | Services can require resources/rooms with availability constraints | 🟡 Resource/room records now exist with admin management, services can require one or more resources, resources can carry one-off blocked times, new bookings snapshot required resources, availability blocks cross-staff overlaps and resource blocked times for required rooms, and same-process resource/date locks reduce double-book races; recurring resource calendars, resource-specific buffers/pricing, richer capacity rules, and provider QA remain |
+| F76 | Bookings | Packages/memberships | Service packages, session credits, memberships, and redemption rules exist | 🟡 Session package definitions, customer email credit grants, admin package/credit management, public paid-booking credit bypass, booking credit redemption snapshots, same-process credit locks, and cancel/save-failure credit restoration exist; automatic package purchase, recurring memberships/subscriptions, member-account portal redemption, proration/refunds, shared/team credits, and deeper audit reporting remain |
+| F77 | Bookings | Deposits/varied pricing | Deposits, pay-later, staff/resource-specific pricing, and discounts are supported | 🟡 Services can now store an optional fixed deposit amount lower than the full price, public payment-intent creation charges only the due-now deposit while snapshotting total/balance metadata, booking creation verifies the Stripe amount/currency before accepting real intents, successful deposit webhooks mark bookings partially paid with online paid totals, billing/manual-payment balance math subtracts online deposits, and public/admin UI surfaces due-now, total, deposit, and balance amounts; pay-later mode, variable/staff/resource pricing, discounts, deposit-specific refunds, and provider QA remain |
+| F78 | Bookings | Staff calendar depth | Staff calendar supports blocked time, overrides, recurring availability, and conflict checks | 🟡 Staff availability already supports weekly availability, one-off blocked dates, holiday calendars, and imported external busy blocks, while required resources now have one-off blocked times that close overlapping booking slots; richer override UI, recurring resource calendars, drag/drop calendar operations, and provider QA remain |
+| F79 | Bookings | Client portal | Clients can see upcoming/past bookings and account details | 🟡 Member account now links to a read-only bookings portal, authenticated members can view upcoming/past bookings matched by normalized customer email, and the member bookings API returns safe DTOs without manage tokens, payment intents, manual payment ledgers, or billing documents; self-service account booking actions, portal payment/documents, richer profile linkage, and full member booking history workflows remain |
+| F80 | Bookings | Cancel/reschedule policy | Policy windows, fees, and self-service reschedule/cancel flows exist | 🟡 Service cancellation policy IDs now drive refund decisions and customer self-service cancel/reschedule windows; signed manage links show policy/refund status, disable blocked actions, and both manage PATCH plus direct cancel API enforce the same policy before refund, credit restore, email, or webhook side effects; custom fee rules, richer admin policy authoring, member-portal actions, payment/document flows, and provider QA remain |
+| F81 | Bookings | Waitlist | Full sessions can accept waitlist entries and promote clients | 🟡 Service capacity/remaining seats now suppress full group slots and expose waitlist entry when no capacity remains; promotion workflow exists from prior waitlist work, but broader full-session operations remain |
+| F82 | Bookings | Reminders | Email/SMS-style reminder hooks and admin templates exist | 🟡 Email/SMS reminder windows now share service-specific schedule settings with admin 24h/1h/off controls; provider delivery QA and deeper per-channel policy remain |
+| F83 | Bookings | Timezone/localization | Booking slots render correctly across site/admin/client timezones and locales | 🟡 Availability now converts staff local date/time through validated IANA timezones instead of a Seoul/Taipei offset shortcut, slot availability checks use the staff local date across UTC boundaries, public booking/manage/member/email surfaces format customer-facing times with explicit saved customer timezone, and long timezone labels have safer mobile wrapping; admin reschedule inputs, office/customer dual-time summaries in every admin view, Zoom timezone handoff, and broader locale copy remain |
+| F84 | Bookings | Booking analytics | Utilization, no-show, revenue, staff, and service analytics are available | 🟡 Dashboard analytics existed and now has a Today/Needs Action operations queue for pending, unpaid, waitlist, no-show, and document-needed work; deeper utilization and export reporting remain |
 
 ## M166-M167 AI Builder And Assistants
 
 | ID | Area | Checkpoint | Done when | Status |
 | --- | --- | --- | --- | --- |
-| F85 | AI | Prompt-to-site intake | AI builder captures business type, goals, pages, brand, tone, and constraints | 🔴 |
-| F86 | AI | Generated sitemap/pages | AI can generate a coherent page tree and initial content plan | 🔴 |
-| F87 | AI | Layout generation | AI can generate page sections from the design pool with editable nodes | 🔴 |
+| F85 | AI | Prompt-to-site intake | AI builder captures business type, goals, pages, brand, tone, and constraints | 🟡 Expanded intake now captures industry, company, slogan, audience, goals, desired pages, brand keywords, constraints, visual direction, optional uploaded hero image asset, tone, and color preference with mobile-safe admin UI; recent prompt/draft history can save and restore the last 6 local generated drafts. Server-side prompt versioning, diff/compare, branches, and multi-user history remain |
+| F86 | AI | Generated sitemap/pages | AI can generate a coherent page tree and initial content plan | 🟡 Draft now returns a deterministic sitemap, content plan, and brand brief preview before apply, and sitemap scope can create selected non-conflicting non-home draft pages from that page tree with optional Navigation insertion for actually-created pages only. Public runtime hides unpublished pageId-backed nav items, so draft menu entries do not leak before publish. Page-tree diff/reorder and publish controls remain |
+| F87 | AI | Layout generation | AI can generate page sections from the design pool with editable nodes | 🟡 Existing apply route generates editable canvas sections from the draft with inline slug entry or selected sitemap-scope creation, invalid/reserved/duplicate slug guards, optional created-page Navigation insertion, draft-only creation, canvas-write rollback, no prompt dialog, UI draft discard, and initial SEO metadata seed; generated drafts now save as schema-valid canvas documents with container-based visible hero/proof/brand visual/content card/CTA primitives, a real hero media image frame, selected uploaded hero asset override, visual brief/prompt/treatment preview, first mobile overrides, mobile content CTA no-overlap placement, mobile-stacked hero proof cards, sitemap starter page cards, and first-slice design-pool template metadata/classes for services/faq/insights/offices. AI generated root sections can also be saved into Saved Sections and reinserted into the builder while preserving metadata/classes/mobile overrides. Remaining gaps: page-tree diff/reorder and publish controls; curated design-pool pixel matching; actual external AI image generation/import workflows; richer responsive AI breakpoint fixes with preview/undo; style suggestions; deeper section generator controls; server-side prompt versioning; broader review/diff transaction UX; F88-F94 assistants |
 | F88 | AI | Responsive AI | AI can suggest and apply breakpoint/layout fixes with preview and undo | 🔴 |
 | F89 | AI | Style/theme suggestions | AI can propose palette, typography, spacing, and component style changes | 🔴 |
 | F90 | AI | Section generator | AI can insert a requested section with copy, assets, and structure | 🔴 |
 | F91 | AI | Text assistant | AI can rewrite, expand, shorten, translate, and tone-adjust selected text | 🔴 |
-| F92 | AI | Image creator connector | Image generation/import flow can create assets with prompt metadata | 🔴 |
+| F92 | AI | Image creator connector | Image generation/import flow can create assets with prompt metadata | 🟡 First usable asset slice: generated hero image nodes retain visual direction, Image 2.0-ready generationPrompt metadata, alt text, focal point, deterministic filter treatment, and can use an existing uploaded builder image asset selected from the AI style step. Actual external image generation/import, newly generated asset persistence, and replace/edit flow remain |
 | F93 | AI | Image edit/replace | AI-assisted image replacement respects selected element, alt text, and focal point | 🔴 |
 | F94 | AI | Code assistant | Developer-facing assistant can explain/build code slots with reviewable diffs | 🔴 |
 

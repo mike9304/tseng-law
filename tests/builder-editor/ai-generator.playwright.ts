@@ -112,6 +112,17 @@ test('/ko/admin-builder/ai-generator generates sitemap and content plan from exp
 
   await page.getByRole('button', { name: /스타일/ }).click();
   await page.locator('[data-ai-generator-visual-direction]').fill('타이베이 스카이라인, 인물 없는 고급 법률 상담 이미지');
+  await expect(page.locator('[data-ai-generator-prompt-selector]')).toContainText('Apply review baseline');
+  await expect(page.locator('[data-ai-generator-prompt-option="ai-site-builder-2026-05-21-af"]')).toHaveAttribute(
+    'data-ai-generator-prompt-selected',
+    'true',
+  );
+  await page.locator('[data-ai-generator-prompt-option="ai-site-builder-2026-05-21-ae"]').click();
+  await expect(page.locator('[data-ai-generator-prompt-option="ai-site-builder-2026-05-21-ae"]')).toHaveAttribute(
+    'data-ai-generator-prompt-selected',
+    'true',
+  );
+  await page.locator('[data-ai-generator-prompt-option="ai-site-builder-2026-05-21-af"]').click();
   await page.locator('[data-ai-generator-generate]').click();
 
   const sitemap = page.locator('[data-ai-generator-sitemap]');

@@ -21,6 +21,15 @@ vi.mock('@/lib/builder/security/guard', () => ({
 
 vi.mock('@/lib/builder/ai-generator/orchestrator', () => ({
   generateSiteDraft: vi.fn(),
+  isSupportedAiGeneratorPromptVersion: vi.fn((version: string) => (
+    version === 'ai-site-builder-2026-05-21-af'
+    || version === 'ai-site-builder-2026-05-21-ae'
+  )),
+  resolveAiGeneratorPromptVersion: vi.fn((version?: string) => (
+    version === 'ai-site-builder-2026-05-21-ae'
+      ? version
+      : 'ai-site-builder-2026-05-21-af'
+  )),
 }));
 
 vi.mock('@/lib/builder/ai-generator/canvas-import', () => ({
@@ -149,7 +158,11 @@ describe('/api/builder/ai-generator/apply', () => {
     vi.mocked(writePageCanvas).mockRejectedValue(new Error('disk full'));
 
     const route = await import('../route');
-    const response = await route.POST(postRequest({ spec, slug: 'ai-rollback' }));
+    const response = await route.POST(postRequest({
+      spec,
+      slug: 'ai-rollback',
+      promptVersion: 'ai-site-builder-2026-05-21-ae',
+    }));
     const payload = await response.json();
 
     expect(response.status).toBe(500);
@@ -165,7 +178,11 @@ describe('/api/builder/ai-generator/apply', () => {
     vi.mocked(writePageCanvas).mockResolvedValue(undefined);
 
     const route = await import('../route');
-    const response = await route.POST(postRequest({ spec, slug: 'ai-rollback' }));
+    const response = await route.POST(postRequest({
+      spec,
+      slug: 'ai-rollback',
+      promptVersion: 'ai-site-builder-2026-05-21-ae',
+    }));
     const payload = await response.json();
     const seededSite = vi.mocked(writeSiteDocument).mock.calls[0]?.[0];
     const seededPage = seededSite?.pages.find((page) => page.pageId === 'page-created');
@@ -173,6 +190,9 @@ describe('/api/builder/ai-generator/apply', () => {
     expect(response.status).toBe(200);
     expect(payload.ok).toBe(true);
     expect(payload.seoSeeded).toBe(true);
+    expect(generateSiteDraft).toHaveBeenCalledWith(spec, {
+      promptVersion: 'ai-site-builder-2026-05-21-ae',
+    });
     expect(seededPage?.seo).toMatchObject({
       title: expect.stringContaining('대만 법률 상담'),
       description: expect.stringContaining('한국 기업을 위한 대만 법률 자문'),

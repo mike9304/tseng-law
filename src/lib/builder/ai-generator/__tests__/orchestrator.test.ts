@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import {
   AI_GENERATOR_BLUEPRINT_VERSION,
   AI_GENERATOR_CONTENT_VERSION,
+  AI_GENERATOR_PROMPT_CHANGELOG,
   AI_GENERATOR_PROMPT_VERSION,
   generateSiteDraft,
 } from '@/lib/builder/ai-generator/orchestrator';
@@ -35,6 +36,20 @@ describe('AI site generator', () => {
       version: AI_GENERATOR_PROMPT_VERSION,
       label: 'Responsive draft review',
     });
+    expect(draft.promptChangelog.length).toBeGreaterThanOrEqual(2);
+  });
+
+  it('stamps a selected supported prompt version on the generated draft', async () => {
+    const rollbackVersion = AI_GENERATOR_PROMPT_CHANGELOG[1].version;
+    const draft = await generateSiteDraft({
+      industry: 'law',
+      companyName: '호정국제법률사무소',
+      tone: 'professional',
+      colorPreference: 'cool',
+      locale: 'ko',
+    }, { promptVersion: rollbackVersion });
+    expect(draft.promptVersion).toBe(rollbackVersion);
+    expect(draft.promptChangelog.map((entry) => entry.version)).toContain(rollbackVersion);
   });
 
   it('uses company name in headline when no slogan provided', async () => {

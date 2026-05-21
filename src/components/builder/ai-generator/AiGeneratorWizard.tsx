@@ -12,6 +12,10 @@ import {
 } from '@/lib/builder/ai-generator/site-spec';
 import type { GeneratedSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
 import {
+  AI_GENERATOR_PROMPT_CHANGELOG,
+  AI_GENERATOR_PROMPT_VERSION,
+} from '@/lib/builder/ai-generator/prompt-versions';
+import {
   draftToSavedSectionSnapshots,
   type GeneratedSectionSnapshot,
 } from '@/lib/builder/ai-generator/canvas-import';
@@ -288,6 +292,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const [imageGenerating, setImageGenerating] = useState(false);
   const [imageGenerationNotice, setImageGenerationNotice] = useState('');
   const [draftPreviewFrame, setDraftPreviewFrame] = useState<DraftPreviewFrame>('desktop');
+  const [selectedPromptVersion, setSelectedPromptVersion] = useState(AI_GENERATOR_PROMPT_VERSION);
 
   useEffect(() => {
     setHydrated(true);
@@ -394,6 +399,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
           slug: applyScope === 'single' ? slug : undefined,
           pageSlugs: applyScope === 'sitemap' ? selectedSitemapPageSlugs : undefined,
           addToNavigation: applyScope === 'sitemap' ? includeNavigation : false,
+          promptVersion: draft.promptVersion,
           title: companyName.trim(),
         }),
       });
@@ -514,6 +520,7 @@ export default function AiGeneratorWizard({ locale }: Props) {
       : null);
     setTone(entry.spec.tone);
     setColorPreference(entry.spec.colorPreference);
+    setSelectedPromptVersion(entry.draft.promptVersion ?? AI_GENERATOR_PROMPT_VERSION);
     setDraft(entry.draft);
     setAppliedPageId(null);
     setAppliedSlug(null);
@@ -565,7 +572,10 @@ export default function AiGeneratorWizard({ locale }: Props) {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(buildSpec()),
+        body: JSON.stringify({
+          spec: buildSpec(),
+          promptVersion: selectedPromptVersion,
+        }),
       });
       const payload = (await res.json().catch(() => ({}))) as DraftResponse;
       if (!res.ok || !payload.draft) {
@@ -994,6 +1004,31 @@ export default function AiGeneratorWizard({ locale }: Props) {
                 placeholder="예: 타이베이 도시감, 전문적인 법률 사무소, 인물 없는 상담 장면"
               />
             </label>
+            <div className={styles.promptSelectorBlock} data-ai-generator-prompt-selector>
+              <div className={styles.promptSelectorHead}>
+                <span>Prompt version</span>
+                <p>생성 전 프롬프트 프로필을 선택해 새 draft와 캐시를 분리합니다.</p>
+              </div>
+              <div className={styles.promptSelectorList}>
+                {AI_GENERATOR_PROMPT_CHANGELOG.map((entry) => {
+                  const selected = selectedPromptVersion === entry.version;
+                  return (
+                    <button
+                      key={entry.version}
+                      type="button"
+                      className={selected ? styles.promptSelectorOptionActive : styles.promptSelectorOption}
+                      onClick={() => setSelectedPromptVersion(entry.version)}
+                      data-ai-generator-prompt-option={entry.version}
+                      data-ai-generator-prompt-selected={selected ? 'true' : 'false'}
+                    >
+                      <strong>{entry.label}</strong>
+                      <small>{entry.version}</small>
+                      <p>{entry.summary}</p>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
             <div className={styles.assetPickerBlock} data-ai-generator-asset-picker>
               <div className={styles.assetPickerHead}>
                 <div>

@@ -1,20 +1,21 @@
 import crypto from 'node:crypto';
-import { AI_GENERATOR_PROMPT_VERSION, type GeneratedSiteDraft } from './orchestrator';
+import { resolveAiGeneratorPromptVersion } from './prompt-versions';
+import type { GeneratedSiteDraft } from './orchestrator';
 import type { SiteSpec } from './site-spec';
 
 const cache = new Map<string, GeneratedSiteDraft>();
 const CAP = 256;
 
-function specKey(spec: SiteSpec): string {
+function specKey(spec: SiteSpec, promptVersion?: string): string {
   return crypto
     .createHash('sha1')
-    .update(JSON.stringify({ promptVersion: AI_GENERATOR_PROMPT_VERSION, spec }))
+    .update(JSON.stringify({ promptVersion: resolveAiGeneratorPromptVersion(promptVersion), spec }))
     .digest('hex')
     .slice(0, 16);
 }
 
-export function readDraftCache(spec: SiteSpec): GeneratedSiteDraft | null {
-  return cache.get(specKey(spec)) ?? null;
+export function readDraftCache(spec: SiteSpec, promptVersion?: string): GeneratedSiteDraft | null {
+  return cache.get(specKey(spec, promptVersion)) ?? null;
 }
 
 export function writeDraftCache(spec: SiteSpec, draft: GeneratedSiteDraft): void {
@@ -22,5 +23,5 @@ export function writeDraftCache(spec: SiteSpec, draft: GeneratedSiteDraft): void
     const firstKey = cache.keys().next().value;
     if (firstKey) cache.delete(firstKey);
   }
-  cache.set(specKey(spec), draft);
+  cache.set(specKey(spec, draft.promptVersion), draft);
 }

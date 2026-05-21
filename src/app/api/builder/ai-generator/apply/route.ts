@@ -2,7 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { guardMutation } from '@/lib/builder/security/guard';
 import { siteSpecSchema } from '@/lib/builder/ai-generator/site-spec';
-import { generateSiteDraft, type GeneratedSiteDraft, type GeneratedSitePlanPage } from '@/lib/builder/ai-generator/orchestrator';
+import {
+  generateSiteDraft,
+  isSupportedAiGeneratorPromptVersion,
+  resolveAiGeneratorPromptVersion,
+  type GeneratedSiteDraft,
+  type GeneratedSitePlanPage,
+} from '@/lib/builder/ai-generator/orchestrator';
 import {
   draftToCanvasNodes,
   draftToSitemapPageCanvasNodes,
@@ -29,6 +35,7 @@ const payloadSchema = z.object({
   scope: z.enum(['single', 'sitemap']).optional().default('single'),
   pageSlugs: z.array(z.string().trim().max(120)).max(10).optional(),
   addToNavigation: z.boolean().optional().default(false),
+  promptVersion: z.string().trim().max(120).optional(),
 });
 
 const PAGE_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -180,6 +187,14 @@ export async function POST(request: NextRequest) {
 
   const locale = normalizeLocale(parsed.data.spec.locale);
   const scope = parsed.data.scope ?? 'single';
+  const promptVersion = resolveAiGeneratorPromptVersion(parsed.data.promptVersion);
+  if (parsed.data.promptVersion && !isSupportedAiGeneratorPromptVersion(parsed.data.promptVersion)) {
+    return NextResponse.json({
+      ok: false,
+      error: 'unsupported_prompt_version',
+      message: 'Selected AI generator prompt version is not available.',
+    }, { status: 400 });
+  }
 
   const site = await readSiteDocument('default', locale);
   const existingSlugs = new Set(site.pages.filter((entry) => entry.locale === locale).map((entry) => entry.slug));
@@ -214,7 +229,7 @@ export async function POST(request: NextRequest) {
     }
     targets = [{ slug, title: parsed.data.title ?? parsed.data.spec.companyName }];
   } else {
-    draft = await generateSiteDraft(parsed.data.spec);
+    draft = await generateSiteDraft(parsed.data.spec, { promptVersion });
     const selectedSlugs = parsed.data.pageSlugs
       ? new Set(parsed.data.pageSlugs.map(sitemapSlugToDraftSlug).filter(Boolean))
       : undefined;
@@ -245,7 +260,7 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  draft ??= await generateSiteDraft(parsed.data.spec);
+  draft ??= await generateSiteDraft(parsed.data.spec, { promptVersion });
   let totalNodeCount = 0;
   const createdPageIds: string[] = [];
   const createdPages: Array<{ pageId: string; slug: string; title: string; nodeCount: number }> = [];

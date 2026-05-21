@@ -1,6 +1,23 @@
 import { generateSiteContent, type GeneratedSiteContent } from './content-generator';
 import { selectBlueprint, type SiteBlueprint } from './template-selector';
 import type { SiteSpec } from './site-spec';
+import {
+  AI_GENERATOR_BLUEPRINT_VERSION,
+  AI_GENERATOR_CONTENT_VERSION,
+  AI_GENERATOR_PROMPT_CHANGELOG,
+  resolveAiGeneratorPromptVersion,
+  type GeneratedPromptVersionEntry,
+} from './prompt-versions';
+
+export {
+  AI_GENERATOR_BLUEPRINT_VERSION,
+  AI_GENERATOR_CONTENT_VERSION,
+  AI_GENERATOR_PROMPT_CHANGELOG,
+  AI_GENERATOR_PROMPT_VERSION,
+  isSupportedAiGeneratorPromptVersion,
+  resolveAiGeneratorPromptVersion,
+  type GeneratedPromptVersionEntry,
+} from './prompt-versions';
 
 /**
  * PR #11 — End-to-end pipeline.
@@ -13,32 +30,6 @@ import type { SiteSpec } from './site-spec';
  * importer in a follow-up; this round does not write to the site doc.
  */
 
-export const AI_GENERATOR_PROMPT_VERSION = 'ai-site-builder-2026-05-21-af';
-export const AI_GENERATOR_BLUEPRINT_VERSION = 'blueprint-library-v1';
-export const AI_GENERATOR_CONTENT_VERSION = 'content-generator-v1';
-
-export interface GeneratedPromptVersionEntry {
-  version: string;
-  label: string;
-  summary: string;
-  createdAt: string;
-  changes: string[];
-}
-
-export const AI_GENERATOR_PROMPT_CHANGELOG: GeneratedPromptVersionEntry[] = [
-  {
-    version: AI_GENERATOR_PROMPT_VERSION,
-    label: 'Responsive draft review',
-    summary: 'Adds apply review metadata, page-level responsive preview, and prompt-version cache isolation.',
-    createdAt: '2026-05-21',
-    changes: [
-      'Apply review summary before draft creation',
-      'Desktop/Mobile generated draft preview frame',
-      'Prompt-version-aware draft cache key',
-    ],
-  },
-];
-
 export interface GeneratedSiteDraft {
   spec: SiteSpec;
   blueprint: SiteBlueprint;
@@ -50,6 +41,10 @@ export interface GeneratedSiteDraft {
   blueprintVersion: string;
   contentVersion: string;
   promptChangelog: GeneratedPromptVersionEntry[];
+}
+
+export interface GenerateSiteDraftOptions {
+  promptVersion?: string;
 }
 
 export interface GeneratedSitePlanPage {
@@ -187,7 +182,11 @@ const SECTION_INTENTS: Record<string, string> = {
   cta: '마지막 화면에서 다음 행동을 명확하게 제안합니다.',
 };
 
-export async function generateSiteDraft(spec: SiteSpec): Promise<GeneratedSiteDraft> {
+export async function generateSiteDraft(
+  spec: SiteSpec,
+  options: GenerateSiteDraftOptions = {},
+): Promise<GeneratedSiteDraft> {
+  const promptVersion = resolveAiGeneratorPromptVersion(options.promptVersion);
   const blueprint = selectBlueprint(spec.industry, spec.tone);
   const palette = blueprint.palettes[spec.colorPreference];
   const content = await generateSiteContent(spec, blueprint);
@@ -199,7 +198,7 @@ export async function generateSiteDraft(spec: SiteSpec): Promise<GeneratedSiteDr
     content,
     plan,
     generatedAt: new Date().toISOString(),
-    promptVersion: AI_GENERATOR_PROMPT_VERSION,
+    promptVersion,
     blueprintVersion: AI_GENERATOR_BLUEPRINT_VERSION,
     contentVersion: AI_GENERATOR_CONTENT_VERSION,
     promptChangelog: AI_GENERATOR_PROMPT_CHANGELOG,

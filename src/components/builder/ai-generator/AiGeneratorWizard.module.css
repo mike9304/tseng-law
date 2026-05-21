@@ -496,6 +496,246 @@
   overflow-wrap: anywhere;
 }
 
+.promptComparisonPanel {
+  display: grid;
+  gap: 12px;
+  border: 1px solid #d9e7e5;
+  border-radius: 8px;
+  padding: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f3fbfa 100%);
+}
+
+.promptComparisonHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.promptComparisonHead span {
+  color: #3b4351;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.promptComparisonHead strong {
+  min-width: 0;
+  color: #0f766e;
+  font-size: 12px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.promptComparisonProfiles,
+.promptDiffGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.promptComparisonProfiles article,
+.promptDiffGrid div {
+  min-width: 0;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  padding: 10px;
+}
+
+.promptComparisonProfiles article {
+  display: grid;
+  gap: 4px;
+}
+
+.promptComparisonProfiles span,
+.promptDiffGrid span {
+  color: #5d6778;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.promptComparisonProfiles strong {
+  color: #151923;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.promptComparisonProfiles small {
+  color: #1f8a85;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.promptDiffGrid div {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.promptDiffGrid ul {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 16px;
+  color: #2f3847;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.promptDiffGrid p {
+  margin: 0;
+  color: #5d6778;
+  font-size: 11px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.promptComparisonActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.promptComparisonActions p {
+  margin: 0;
+  color: #5d6778;
+  font-size: 11px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.generatedDraftComparisonPanel {
+  display: grid;
+  gap: 12px;
+  border: 1px solid #cfd8e6;
+  border-radius: 8px;
+  padding: 14px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.generatedDraftComparisonHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.generatedDraftComparisonHead span,
+.generatedDraftDelta span {
+  color: #3b4351;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.generatedDraftComparisonHead strong {
+  color: #1f8a85;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.generatedDraftComparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.generatedDraftComparisonGrid article {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-width: 0;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  padding: 12px;
+  background: #f8fafc;
+}
+
+.generatedDraftComparisonGrid article > span {
+  color: #5d6778;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.generatedDraftComparisonGrid article > strong {
+  color: #151923;
+  font-size: 13px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.generatedDraftComparisonGrid article > p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.generatedDraftComparisonGrid dl {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+}
+
+.generatedDraftComparisonGrid dl div {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 8px;
+  align-items: baseline;
+}
+
+.generatedDraftComparisonGrid dt,
+.generatedDraftComparisonGrid dd {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.generatedDraftComparisonGrid dt {
+  color: #6b7280;
+  font-weight: 900;
+}
+
+.generatedDraftComparisonGrid dd {
+  color: #1f8a85;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.generatedDraftDelta {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #d9e7e5;
+  border-radius: 8px;
+  padding: 11px;
+  background: #f3fbfa;
+}
+
+.generatedDraftDelta ul {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 16px;
+  color: #2f3847;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
 .tokenRow {
   display: flex;
   flex-wrap: wrap;
@@ -718,6 +958,12 @@
   border: 1px solid #cfd8e6;
   background: #ffffff;
   color: #252b36;
+}
+
+.secondaryButton:disabled {
+  color: #7b8493;
+  background: #edf1f7;
+  cursor: not-allowed;
 }
 
 .errorText,
@@ -1651,7 +1897,10 @@
   .stepList,
   .formGrid,
   .scopeGroup,
-  .previewSections {
+  .previewSections,
+  .promptComparisonProfiles,
+  .promptDiffGrid,
+  .generatedDraftComparisonGrid {
     grid-template-columns: 1fr;
   }
 
@@ -1693,6 +1942,12 @@
   }
 
   .visualBriefActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .promptComparisonActions,
+  .generatedDraftComparisonHead {
     align-items: stretch;
     flex-direction: column;
   }

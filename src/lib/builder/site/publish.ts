@@ -237,6 +237,19 @@ export async function publishPage(
     });
   }).catch(() => undefined);
 
+  // F109 — fire app extension hooks listening on publish.completed.
+  void import('@/lib/builder/apps/hooks-registry').then(({ dispatchAppHook }) => (
+    dispatchAppHook({
+      kind: 'publish.completed',
+      payload: {
+        siteId,
+        pageId,
+        revision: revisionResult.revision,
+        publishedAt: publishedSavedAt,
+      },
+    })
+  )).catch(() => undefined);
+
   return {
     ok: true,
     revisionId: revisionResult.revisionId,

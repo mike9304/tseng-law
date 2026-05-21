@@ -501,7 +501,22 @@ export async function getBooking(bookingId: string): Promise<Booking | null> {
 }
 
 export async function saveBooking(booking: Booking): Promise<void> {
+  // F109 — fire bookings.reservation-created only the first time we see this id.
+  const prior = await readJson<Booking>('bookings', booking.bookingId);
   await writeJson('bookings', booking.bookingId, booking);
+  if (!prior) {
+    void import('@/lib/builder/apps/hooks-registry').then(({ dispatchAppHook }) => (
+      dispatchAppHook({
+        kind: 'bookings.reservation-created',
+        payload: {
+          bookingId: booking.bookingId,
+          serviceId: booking.serviceId,
+          staffId: booking.staffId,
+          startAt: booking.startAt,
+        },
+      })
+    )).catch(() => undefined);
+  }
 }
 
 export async function getWaitlistEntry(waitlistId: string): Promise<BookingWaitlistEntry | null> {

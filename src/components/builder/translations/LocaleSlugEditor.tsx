@@ -23,13 +23,12 @@ interface PatchResponse {
 }
 
 export default function LocaleSlugEditor({
-  siteId: _siteId,
   pageId,
   sourceLocale,
   defaultSlug,
   initialSlugByLocale,
   embedded = false,
-}: Props) {
+}: Omit<Props, 'siteId'> & Partial<Pick<Props, 'siteId'>>) {
   const targetLocales = useMemo(
     () => locales.filter((candidate) => candidate !== sourceLocale),
     [sourceLocale],

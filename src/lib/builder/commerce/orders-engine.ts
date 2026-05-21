@@ -177,7 +177,19 @@ export async function createOrder(input: CommerceOrderCreateInput): Promise<Comm
       }),
     ],
   };
-  return saveOrder(order);
+  const saved = await saveOrder(order);
+  // F109 — fire app extension hooks listening on commerce.order-created.
+  void import('@/lib/builder/apps/hooks-registry').then(({ dispatchAppHook }) => (
+    dispatchAppHook({
+      kind: 'commerce.order-created',
+      payload: {
+        orderId: saved.orderId,
+        totalCents: saved.totals.grandTotalCents,
+        currency: saved.currency,
+      },
+    })
+  )).catch(() => undefined);
+  return saved;
 }
 
 export async function loadOrder(orderId: string): Promise<CommerceOrder | null> {

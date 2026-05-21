@@ -111,6 +111,12 @@ interface HeroAssetSelection {
   alt?: string;
 }
 
+interface GeneratedDraftComparison {
+  selected: Draft;
+  current: Draft;
+  comparedAt: string;
+}
+
 interface Props {
   locale: Locale;
 }
@@ -251,6 +257,42 @@ function draftHistorySignature(value: Draft): string {
   ].join('::');
 }
 
+function promptVersionEntry(version: string) {
+  return AI_GENERATOR_PROMPT_CHANGELOG.find((entry) => entry.version === version)
+    ?? AI_GENERATOR_PROMPT_CHANGELOG[0];
+}
+
+function draftSectionCount(value: Draft): number {
+  return 1 + value.content.sections.length;
+}
+
+function draftPaletteSignature(value: Draft): string {
+  return [value.palette.primary, value.palette.secondary, value.palette.accent, value.palette.background].join(' / ');
+}
+
+function draftSitemapSignature(value: Draft): string {
+  return value.plan.sitemap.map((page) => normalizePlanSlug(page.slug)).join(' / ');
+}
+
+function generatedDraftDelta(selected: Draft, current: Draft): string[] {
+  const changes: string[] = [];
+  if (selected.content.hero.headline !== current.content.hero.headline) {
+    changes.push('Hero headline differs between selected and current draft.');
+  }
+  if (draftSectionCount(selected) !== draftSectionCount(current)) {
+    changes.push(`Section count differs: selected ${draftSectionCount(selected)} vs current ${draftSectionCount(current)}.`);
+  }
+  if (draftSitemapSignature(selected) !== draftSitemapSignature(current)) {
+    changes.push('Sitemap slug set differs between selected and current draft.');
+  }
+  if (draftPaletteSignature(selected) !== draftPaletteSignature(current)) {
+    changes.push('Palette differs between selected and current draft.');
+  }
+  return changes.length > 0
+    ? changes
+    : ['No generated content/design difference detected yet; the selected rollback currently changes metadata/cache isolation only.'];
+}
+
 export default function AiGeneratorWizard({ locale }: Props) {
   const [step, setStep] = useState<WizardStep>(1);
   const [industry, setIndustry] = useState<Industry>('law');
@@ -293,6 +335,21 @@ export default function AiGeneratorWizard({ locale }: Props) {
   const [imageGenerationNotice, setImageGenerationNotice] = useState('');
   const [draftPreviewFrame, setDraftPreviewFrame] = useState<DraftPreviewFrame>('desktop');
   const [selectedPromptVersion, setSelectedPromptVersion] = useState(AI_GENERATOR_PROMPT_VERSION);
+  const [comparingDrafts, setComparingDrafts] = useState(false);
+  const [generatedDraftComparison, setGeneratedDraftComparison] = useState<GeneratedDraftComparison | null>(null);
+  const promptVersionComparison = useMemo(() => {
+    const selected = promptVersionEntry(selectedPromptVersion);
+    const current = promptVersionEntry(AI_GENERATOR_PROMPT_VERSION);
+    const selectedChanges = new Set(selected.changes);
+    const currentChanges = new Set(current.changes);
+    return {
+      selected,
+      current,
+      isCurrent: selected.version === current.version,
+      selectedOnly: selected.changes.filter((change) => !currentChanges.has(change)),
+      currentOnly: current.changes.filter((change) => !selectedChanges.has(change)),
+    };
+  }, [selectedPromptVersion]);
 
   useEffect(() => {
     setHydrated(true);
@@ -591,6 +648,71 @@ export default function AiGeneratorWizard({ locale }: Props) {
     } finally {
       setBusy(false);
     }
+  }
+
+  async function requestDraftForPromptVersion(promptVersion: string): Promise<Draft> {
+    const res = await fetch('/api/builder/ai-generator', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        spec: buildSpec(),
+        promptVersion,
+      }),
+    });
+    const payload = (await res.json().catch(() => ({}))) as DraftResponse;
+    if (!res.ok || !payload.draft) {
+      throw new Error(payload.message ?? payload.error ?? '비교 생성 실패');
+    }
+    return payload.draft;
+  }
+
+  async function comparePromptDrafts() {
+    if (promptVersionComparison.isCurrent) {
+      setError('Rollback 프롬프트 버전을 선택한 뒤 두 draft를 비교해 주세요.');
+      return;
+    }
+    if (!companyName.trim()) {
+      setError('회사명을 입력해 주세요.');
+      setStep(2);
+      return;
+    }
+    setComparingDrafts(true);
+    setError('');
+    setGeneratedDraftComparison(null);
+    try {
+      const [selected, current] = await Promise.all([
+        requestDraftForPromptVersion(promptVersionComparison.selected.version),
+        requestDraftForPromptVersion(promptVersionComparison.current.version),
+      ]);
+      setGeneratedDraftComparison({
+        selected,
+        current,
+        comparedAt: new Date().toISOString(),
+      });
+    } catch (comparisonError) {
+      setError(comparisonError instanceof Error ? comparisonError.message : '비교 생성 실패');
+    } finally {
+      setComparingDrafts(false);
+    }
+  }
+
+  function applyComparedDraft(nextDraft: Draft) {
+    setSelectedPromptVersion(nextDraft.promptVersion ?? AI_GENERATOR_PROMPT_VERSION);
+    setDraft(nextDraft);
+    setSelectedSitemapPageSlugs(selectableSitemapSlugs(nextDraft));
+    rememberDraft(nextDraft);
+    setAppliedPageId(null);
+    setAppliedSlug(null);
+    setAppliedPages([]);
+    setSkippedApplyPages([]);
+    setNavigationAddedSlugs([]);
+    setDiscardNotice('');
+    setSavedSectionIds({});
+    setSectionSaveNotice('');
+    setDraftSlug(suggestDraftSlug());
+    setDraftPreviewFrame('desktop');
+    setStep(6);
   }
 
   async function saveGeneratedSection(snapshot: GeneratedSectionSnapshot) {
@@ -1017,7 +1139,10 @@ export default function AiGeneratorWizard({ locale }: Props) {
                       key={entry.version}
                       type="button"
                       className={selected ? styles.promptSelectorOptionActive : styles.promptSelectorOption}
-                      onClick={() => setSelectedPromptVersion(entry.version)}
+                      onClick={() => {
+                        setSelectedPromptVersion(entry.version);
+                        setGeneratedDraftComparison(null);
+                      }}
                       data-ai-generator-prompt-option={entry.version}
                       data-ai-generator-prompt-selected={selected ? 'true' : 'false'}
                     >
@@ -1028,6 +1153,147 @@ export default function AiGeneratorWizard({ locale }: Props) {
                   );
                 })}
               </div>
+              <div
+                className={styles.promptComparisonPanel}
+                data-ai-generator-prompt-comparison
+                data-ai-generator-prompt-comparison-mode={promptVersionComparison.isCurrent ? 'current' : 'rollback'}
+                data-ai-generator-prompt-current={promptVersionComparison.current.version}
+                data-ai-generator-prompt-selected={promptVersionComparison.selected.version}
+              >
+                <div className={styles.promptComparisonHead}>
+                  <span>Version comparison</span>
+                  <strong>
+                    {promptVersionComparison.isCurrent ? 'Current profile' : 'Rollback profile selected'}
+                  </strong>
+                </div>
+                <div className={styles.promptComparisonProfiles}>
+                  <article>
+                    <span>Selected</span>
+                    <strong>{promptVersionComparison.selected.label}</strong>
+                    <small>{promptVersionComparison.selected.version}</small>
+                  </article>
+                  <article>
+                    <span>Current</span>
+                    <strong>{promptVersionComparison.current.label}</strong>
+                    <small>{promptVersionComparison.current.version}</small>
+                  </article>
+                </div>
+                <div className={styles.promptDiffGrid}>
+                  <div data-ai-generator-prompt-diff-selected>
+                    <span>Selected-only</span>
+                    {promptVersionComparison.selectedOnly.length > 0 ? (
+                      <ul>
+                        {promptVersionComparison.selectedOnly.map((change) => <li key={change}>{change}</li>)}
+                      </ul>
+                    ) : (
+                      <p>{promptVersionComparison.isCurrent ? '현재 기본 버전과 동일합니다.' : 'Rollback baseline has no extra current-only behavior.'}</p>
+                    )}
+                  </div>
+                  <div data-ai-generator-prompt-diff-current>
+                    <span>Current-only</span>
+                    {promptVersionComparison.currentOnly.length > 0 ? (
+                      <ul>
+                        {promptVersionComparison.currentOnly.map((change) => <li key={change}>{change}</li>)}
+                      </ul>
+                    ) : (
+                      <p>{promptVersionComparison.isCurrent ? '선택 버전과 차이가 없습니다.' : 'No newer current changes detected.'}</p>
+                    )}
+                  </div>
+                </div>
+                <div className={styles.promptComparisonActions}>
+                  <button
+                    type="button"
+                    className={styles.secondaryButton}
+                    onClick={comparePromptDrafts}
+                    disabled={comparingDrafts || promptVersionComparison.isCurrent}
+                    data-ai-generator-compare-drafts
+                  >
+                    {comparingDrafts ? '두 draft 비교 중...' : '두 버전 draft 비교'}
+                  </button>
+                  <p>
+                    {promptVersionComparison.isCurrent
+                      ? 'Rollback 버전을 선택하면 실제 draft 두 개를 생성해 비교합니다.'
+                      : '선택 버전과 현재 버전을 같은 입력값으로 생성해 콘텐츠와 디자인 차이를 확인합니다.'}
+                  </p>
+                </div>
+              </div>
+              {generatedDraftComparison ? (
+                <div
+                  className={styles.generatedDraftComparisonPanel}
+                  data-ai-generator-draft-comparison
+                  data-ai-generator-draft-comparison-selected={generatedDraftComparison.selected.promptVersion ?? ''}
+                  data-ai-generator-draft-comparison-current={generatedDraftComparison.current.promptVersion ?? ''}
+                >
+                  <div className={styles.generatedDraftComparisonHead}>
+                    <span>Generated A/B draft comparison</span>
+                    <strong>{formatHistoryDate(generatedDraftComparison.comparedAt)}</strong>
+                  </div>
+                  <div className={styles.generatedDraftComparisonGrid}>
+                    <article data-ai-generator-draft-comparison-selected-card>
+                      <span>Selected draft</span>
+                      <strong>{generatedDraftComparison.selected.content.hero.headline}</strong>
+                      <p>{generatedDraftComparison.selected.content.hero.body}</p>
+                      <dl>
+                        <div>
+                          <dt>Version</dt>
+                          <dd>{generatedDraftComparison.selected.promptVersion}</dd>
+                        </div>
+                        <div>
+                          <dt>Pages</dt>
+                          <dd>{generatedDraftComparison.selected.plan.sitemap.length}</dd>
+                        </div>
+                        <div>
+                          <dt>Sections</dt>
+                          <dd>{draftSectionCount(generatedDraftComparison.selected)}</dd>
+                        </div>
+                      </dl>
+                      <button
+                        type="button"
+                        className={styles.secondaryButton}
+                        onClick={() => applyComparedDraft(generatedDraftComparison.selected)}
+                        data-ai-generator-use-selected-comparison-draft
+                      >
+                        선택 버전 사용
+                      </button>
+                    </article>
+                    <article data-ai-generator-draft-comparison-current-card>
+                      <span>Current draft</span>
+                      <strong>{generatedDraftComparison.current.content.hero.headline}</strong>
+                      <p>{generatedDraftComparison.current.content.hero.body}</p>
+                      <dl>
+                        <div>
+                          <dt>Version</dt>
+                          <dd>{generatedDraftComparison.current.promptVersion}</dd>
+                        </div>
+                        <div>
+                          <dt>Pages</dt>
+                          <dd>{generatedDraftComparison.current.plan.sitemap.length}</dd>
+                        </div>
+                        <div>
+                          <dt>Sections</dt>
+                          <dd>{draftSectionCount(generatedDraftComparison.current)}</dd>
+                        </div>
+                      </dl>
+                      <button
+                        type="button"
+                        className={styles.secondaryButton}
+                        onClick={() => applyComparedDraft(generatedDraftComparison.current)}
+                        data-ai-generator-use-current-comparison-draft
+                      >
+                        현재 버전 사용
+                      </button>
+                    </article>
+                  </div>
+                  <div className={styles.generatedDraftDelta} data-ai-generator-draft-comparison-delta>
+                    <span>Generated delta</span>
+                    <ul>
+                      {generatedDraftDelta(generatedDraftComparison.selected, generatedDraftComparison.current).map((change) => (
+                        <li key={change}>{change}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ) : null}
             </div>
             <div className={styles.assetPickerBlock} data-ai-generator-asset-picker>
               <div className={styles.assetPickerHead}>

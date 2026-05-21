@@ -181,7 +181,7 @@ Completion gate:
 | F108 | Dev | Data APIs | CMS and app data APIs support typed query/mutation with permissions | 🟡 Already covered by M158/M160 CMS routes; SDK-style facade pending. |
 | F109 | Dev | App extension hooks | Apps can hook editor, public runtime, checkout, bookings, and CMS lifecycle events | 🔴 |
 | F110 | Dev | Logs/console | Admin can inspect function/app/webhook logs and errors | 🟡 In-process ring buffer (`logs-store.ts`) per source (function/webhook/app) with GET `/api/builder/dev/logs?source=&since=`, function invocation auto-logs to store, `DevLogsPanel` table view with auto-refresh. Needs durable storage for multi-replica production. |
-| F111 | Dev | Local dev/deploy validation | Custom code/app functions pass typecheck, lint, smoke, and publish validation | 🔴 |
+| F111 | Dev | Local dev/deploy validation | Custom code/app functions pass typecheck, lint, smoke, and publish validation | 🟡 New `/api/builder/publish/validate` GET endpoint runs the existing publish gate (`runAllChecks`) read-only and returns the suite (empty-content, broken-links, image-alt, SEO, stale-dataset, prerender, form-target, responsive-overflow, h1-count). Publish UI can pre-flight before commit. Playwright `publish-validate.playwright.ts` confirms the endpoint shape. Custom-code/serverless-function-specific deploy validation remains. |
 | F112 | Dev | Secrets manager | Site secrets can be stored, scoped, rotated, and referenced by server code | 🔴 Pending Vercel env decision. |
 
 ## M171-M174 Cross-Cutting Milestones

@@ -22,6 +22,7 @@ export default function TranslationCategoryTree({
           ].join(' ')}
           key={category.key}
           type="button"
+          data-translation-category={category.key}
           onClick={() => onSelectCategory(category.key)}
         >
           <span>

@@ -111,7 +111,7 @@ export default function SelectionToolbar({
     actions.push({
       key: 'edit-link',
       label: hasActiveLink ? previewLinkHref(currentLink?.href) : '링크 추가',
-      icon: '🔗',
+      icon: '↪',
       title: hasActiveLink
         ? `현재: ${currentLink?.href}\n${shortcutTitle('클릭해서 편집', 'editLink')}`
         : shortcutTitle('링크 추가', 'editLink'),
@@ -139,7 +139,7 @@ export default function SelectionToolbar({
     actions.push({
       key: 'replace-image',
       label: '교체',
-      icon: '🖼',
+      icon: '▣',
       title: '이미지 교체',
       onClick: onReplaceImage,
       disabled: anyLocked,
@@ -173,7 +173,7 @@ export default function SelectionToolbar({
     {
       key: 'delete',
       label: '삭제',
-      icon: '🗑',
+      icon: '✕',
       title: shortcutTitle('삭제', 'delete'),
       onClick: onDelete,
       disabled: anyLocked,

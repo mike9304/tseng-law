@@ -21,6 +21,11 @@
 
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import type { BuilderStructuredDataBlock } from '@/lib/builder/site/types';
+import type { Locale } from '@/lib/locales';
+import {
+  faqItemsToSchemaItems,
+  listFaqItems,
+} from '@/lib/builder/faq/faq-engine';
 import {
   generateAttorneySchema,
   generateFAQSchema,
@@ -35,6 +40,10 @@ export interface StructuredDataPayload {
 
 interface FaqListContent {
   items?: Array<{ question?: string; answer?: string }>;
+  source?: 'static' | 'app';
+  categoryId?: string;
+  limit?: number;
+  schemaEnabled?: boolean;
 }
 
 interface AttorneyCardContent {
@@ -53,6 +62,7 @@ function collectFaqPayloads(canvas: BuilderCanvasDocument): StructuredDataPayloa
   for (const node of canvas.nodes) {
     if (node.kind !== 'faqList' || !isVisible(node)) continue;
     const content = (node.content ?? {}) as FaqListContent;
+    if (content.schemaEnabled === false || content.source === 'app') continue;
     const items = (content.items ?? [])
       .map((item) => ({
         question: (item.question ?? '').trim(),
@@ -63,6 +73,29 @@ function collectFaqPayloads(canvas: BuilderCanvasDocument): StructuredDataPayloa
     out.push({
       id: `faq-${node.id}`,
       data: generateFAQSchema(items),
+    });
+  }
+  return out;
+}
+
+async function collectAppFaqPayloads(canvas: BuilderCanvasDocument, locale: Locale): Promise<StructuredDataPayload[]> {
+  const out: StructuredDataPayload[] = [];
+  for (const node of canvas.nodes) {
+    if (node.kind !== 'faqList' || !isVisible(node)) continue;
+    const content = (node.content ?? {}) as FaqListContent;
+    if (content.schemaEnabled === false || content.source !== 'app') continue;
+    const items = await listFaqItems({
+      locale,
+      status: 'published',
+      categoryId: content.categoryId,
+      limit: content.limit,
+      schemaOnly: true,
+    });
+    const schemaItems = faqItemsToSchemaItems(items);
+    if (schemaItems.length === 0) continue;
+    out.push({
+      id: `faq-${node.id}`,
+      data: generateFAQSchema(schemaItems),
     });
   }
   return out;
@@ -100,6 +133,18 @@ export function buildStructuredDataPayloads(
   return [
     ...(options.includeFaqPage === false ? [] : collectFaqPayloads(canvas)),
     ...collectAttorneyPayloads(canvas),
+  ];
+}
+
+export async function buildStructuredDataPayloadsAsync(
+  canvas: BuilderCanvasDocument,
+  options: { includeFaqPage?: boolean; locale?: Locale } = {},
+): Promise<StructuredDataPayload[]> {
+  const syncPayloads = buildStructuredDataPayloads(canvas, options);
+  if (options.includeFaqPage === false || !options.locale) return syncPayloads;
+  return [
+    ...syncPayloads,
+    ...(await collectAppFaqPayloads(canvas, options.locale)),
   ];
 }
 

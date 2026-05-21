@@ -5,8 +5,12 @@ import PageHeader from '@/components/PageHeader';
 import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
-import { filterSearchIndex, getSearchIndex, type SearchCategory } from '@/lib/search';
 import { buildSeoMetadata } from '@/lib/seo';
+import { loadSearchIndex } from '@/lib/builder/search/index-storage';
+import { buildSearchIndex } from '@/lib/builder/search/index-builder';
+import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
+import { runSearchQuery } from '@/lib/builder/search/query-engine';
+import type { SearchDocKind } from '@/lib/builder/search/types';
 
 export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
   const locale = normalizeLocale(params.locale);
@@ -21,30 +25,70 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   });
 }
 
-export default function SearchPage({
+const SEARCH_TAB_KIND: Record<string, SearchDocKind | 'all'> = {
+  all: 'all',
+  page: 'page',
+  pages: 'page',
+  services: 'page',
+  videos: 'page',
+  blog: 'blog',
+  columns: 'blog',
+  insights: 'blog',
+  faq: 'faq',
+  portfolio: 'portfolio',
+};
+
+function searchKindLabel(kind: SearchDocKind | 'all', locale: Locale): string {
+  if (kind === 'all') return locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : 'All';
+  if (kind === 'page') return locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : 'Pages';
+  if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '洞見' : 'Columns';
+  if (kind === 'faq') return 'FAQ';
+  return locale === 'ko' ? '포트폴리오' : locale === 'zh-hant' ? '作品集' : 'Portfolio';
+}
+
+function resultKindLabel(kind: SearchDocKind, locale: Locale): string {
+  return searchKindLabel(kind, locale);
+}
+
+async function loadNativeSearchIndex() {
+  return (await loadSearchIndex()) ?? buildSearchIndex(await collectAllSearchDocs('default'));
+}
+
+export default async function SearchPage({
   params,
   searchParams
 }: {
   params: { locale: Locale };
-  searchParams: { q?: string; tab?: string };
+  searchParams: { q?: string; tab?: string; kinds?: string };
 }) {
   const locale = normalizeLocale(params.locale);
   const copy = pageCopy[locale].search;
   const content = siteContent[locale];
-  const query = searchParams.q ?? '';
-  const validTabs = content.search.tabs.map((tab) => tab.id);
-  const requestedTab = searchParams.tab === 'columns' ? 'insights' : searchParams.tab;
-  const activeTab = validTabs.includes(requestedTab ?? '') ? (requestedTab as string) : content.search.tabs[0].id;
-  const activeCategory = activeTab as SearchCategory;
-  const activeTabLabel =
-    content.search.tabs.find((tab) => tab.id === activeTab)?.label ?? content.search.tabs[0].label;
+  const query = (searchParams.q ?? '').trim();
+  const requestedTab = searchParams.kinds?.split(',')[0]?.trim() || searchParams.tab || 'all';
+  const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
   const suggestedLabel = locale === 'ko' ? '추천' : locale === 'zh-hant' ? '建議' : 'Suggested';
   const emptyLabel = locale === 'ko' ? '검색 결과가 없습니다.' : locale === 'zh-hant' ? '沒有搜尋結果。' : 'No search results found.';
+  const index = await loadNativeSearchIndex();
+  const hits = query
+    ? runSearchQuery({
+        index,
+        query,
+        locale,
+        limit: 50,
+        kinds: activeKind === 'all' ? undefined : [activeKind],
+      })
+    : [];
 
-  const index = getSearchIndex(locale);
-  const filtered = filterSearchIndex(index, query, activeCategory);
-  const results = filtered.slice(0, 12);
-  const totalLabel = locale === 'ko' ? `총 ${filtered.length}건` : locale === 'zh-hant' ? `共 ${filtered.length} 筆` : `Total ${filtered.length}`;
+  const results = hits.slice(0, 12);
+  const totalLabel = locale === 'ko' ? `총 ${hits.length}건` : locale === 'zh-hant' ? `共 ${hits.length} 筆` : `Total ${hits.length}`;
+  const tabs: Array<{ id: SearchDocKind | 'all'; label: string }> = [
+    { id: 'all', label: searchKindLabel('all', locale) },
+    { id: 'page', label: searchKindLabel('page', locale) },
+    { id: 'blog', label: searchKindLabel('blog', locale) },
+    { id: 'faq', label: searchKindLabel('faq', locale) },
+    { id: 'portfolio', label: searchKindLabel('portfolio', locale) },
+  ];
 
   return (
     <>
@@ -57,7 +101,7 @@ export default function SearchPage({
             defaultValue={query}
             placeholder={content.search.placeholder}
           />
-          <input type="hidden" name="tab" value={activeTab} />
+          <input type="hidden" name="tab" value={activeKind} />
           <button className="search-submit" type="submit">
             {content.search.title}
           </button>
@@ -66,10 +110,10 @@ export default function SearchPage({
       <section className="section search-results-section">
         <div className="container">
           <div className="search-tabs">
-            {content.search.tabs.map((tab) => (
+            {tabs.map((tab) => (
               <Link
                 key={tab.id}
-                className={`tab-button ${activeTab === tab.id ? 'active' : ''}`}
+                className={`tab-button ${activeKind === tab.id ? 'active' : ''}`}
                 href={`/${locale}/search?q=${encodeURIComponent(query)}&tab=${tab.id}`}
               >
                 {tab.label}
@@ -79,14 +123,14 @@ export default function SearchPage({
           <div className="search-results-total">{totalLabel}</div>
           <div className="list-rows">
             {results.length ? (
-              results.map((item) => (
-                <div key={item.id} className="list-row">
-                  <div className="list-meta">{activeTabLabel}</div>
+              results.map((hit) => (
+                <div key={hit.doc.id} className="list-row">
+                  <div className="list-meta">{resultKindLabel(hit.doc.kind, locale)}</div>
                   <div>
-                    <SmartLink className="link-underline" href={item.href}>
-                      {item.title}
+                    <SmartLink className="link-underline" href={hit.doc.url}>
+                      {hit.doc.title}
                     </SmartLink>
-                    <p className="search-results-desc">{item.description}</p>
+                    <p className="search-results-desc">{hit.highlights[0] || hit.doc.summary}</p>
                   </div>
                 </div>
               ))

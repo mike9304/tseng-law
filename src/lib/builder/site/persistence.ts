@@ -20,6 +20,7 @@ import {
   type BuilderPageLifecycleMeta,
   type BuilderNavItem,
   type BuilderLightbox,
+  type SiteRedirect,
   type PageCanvasRecord,
   type SavedSection,
   type SavedSectionCategory,
@@ -29,6 +30,7 @@ import {
   generateSavedSectionId,
 } from './types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeBuilderInstalledApps, normalizeBuilderUninstalledApps } from '@/lib/builder/apps/types';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 import { normalizeMobileSchemaForSiteDocument } from '@/lib/builder/site/mobile-schema';
 
@@ -52,6 +54,23 @@ type WriteSiteDocumentOptions = {
   preserveMissingNavigation?: boolean;
   /** Writes that only update page publish metadata must not overwrite menu edits. */
   preserveNavigation?: boolean;
+  /** Keep specific next-only pages even when the latest snapshot is newer. */
+  preserveNextPageIds?: readonly string[];
+  /**
+   * Preserve concurrently-created redirect rules for partial site writes.
+   * Redirect Manager deletes can target specific IDs via deleteRedirectIds.
+   */
+  preserveMissingRedirects?: boolean;
+  deleteRedirectIds?: readonly string[];
+  preserveMissingInstalledApps?: boolean;
+  deleteInstalledAppIds?: readonly string[];
+  preserveMissingUninstalledApps?: boolean;
+  deleteUninstalledAppIds?: readonly string[];
+  /**
+   * Targeted destructive page edits should remove only these pages while still
+   * preserving unrelated pages created by concurrent writers.
+   */
+  deletePageIds?: readonly string[];
 };
 
 function isBlobBackend(): boolean {
@@ -135,6 +154,41 @@ export function mergeUntouchedPageSeoForWrite(
   };
 }
 
+function shouldKeepLatestPublishMeta(page: BuilderPageMeta, latestPage: BuilderPageMeta): boolean {
+  const latestPublishedMs = timestampMs(latestPage.publishedSavedAt, latestPage.publishedAt);
+  if (latestPublishedMs === null) return false;
+
+  const nextPublishedMs = timestampMs(page.publishedSavedAt, page.publishedAt);
+  if (nextPublishedMs === null) return true;
+  return latestPublishedMs > nextPublishedMs;
+}
+
+export function mergeLatestPagePublishMetaForWrite(
+  nextDoc: BuilderSiteDocument,
+  latestDoc: BuilderSiteDocument | null,
+): BuilderSiteDocument {
+  if (!latestDoc?.pages?.length || !nextDoc.pages?.length) return nextDoc;
+
+  const latestPageById = new Map(latestDoc.pages.map((page) => [page.pageId, page] as const));
+  let changed = false;
+  const pages = nextDoc.pages.map((page) => {
+    const latestPage = latestPageById.get(page.pageId);
+    if (!latestPage || !shouldKeepLatestPublishMeta(page, latestPage)) return page;
+
+    changed = true;
+    return {
+      ...page,
+      publishedAt: latestPage.publishedAt,
+      publishedRevisionId: latestPage.publishedRevisionId ?? page.publishedRevisionId,
+      publishedRevision: latestPage.publishedRevision ?? page.publishedRevision,
+      publishedSavedAt: latestPage.publishedSavedAt ?? latestPage.publishedAt ?? page.publishedSavedAt,
+      lastPublishedDraftRevision: latestPage.lastPublishedDraftRevision ?? page.lastPublishedDraftRevision,
+    };
+  });
+
+  return changed ? { ...nextDoc, pages } : nextDoc;
+}
+
 function timestampMs(...values: Array<string | undefined>): number | null {
   let newest: number | null = null;
   for (const value of values) {
@@ -163,12 +217,19 @@ export function reconcileSiteDocumentPagesForWrite(
   if (!latestDoc?.pages?.length) return nextDoc;
 
   const latestPageIds = new Set(latestDoc.pages.map((page) => page.pageId));
+  const preserveNextPageIds = new Set(options.preserveNextPageIds ?? []);
+  const deletePageIds = new Set(options.deletePageIds ?? []);
   const filteredNextPages = nextDoc.pages.filter((page) => (
-    latestPageIds.has(page.pageId) || shouldKeepNextOnlyPage(page, latestDoc)
+    !deletePageIds.has(page.pageId) &&
+    (
+      latestPageIds.has(page.pageId)
+      || preserveNextPageIds.has(page.pageId)
+      || shouldKeepNextOnlyPage(page, latestDoc)
+    )
   ));
   const filteredNextPageIds = new Set(filteredNextPages.map((page) => page.pageId));
   const missingPages = options.preserveMissingPages !== false
-    ? latestDoc.pages.filter((page) => !filteredNextPageIds.has(page.pageId))
+    ? latestDoc.pages.filter((page) => !filteredNextPageIds.has(page.pageId) && !deletePageIds.has(page.pageId))
     : [];
   const nextPages = missingPages.length > 0
     ? [...filteredNextPages, ...missingPages]
@@ -230,6 +291,116 @@ export function reconcileSiteDocumentNavigationForWrite(
   };
 }
 
+function activeRedirectSourceConflict(a: SiteRedirect, b: SiteRedirect): boolean {
+  return Boolean(a.isActive && b.isActive && a.from === b.from && a.redirectId !== b.redirectId);
+}
+
+export function reconcileSiteDocumentRedirectsForWrite(
+  nextDoc: BuilderSiteDocument,
+  latestDoc: BuilderSiteDocument | null,
+  options: WriteSiteDocumentOptions = {},
+): BuilderSiteDocument {
+  if (options.preserveMissingRedirects === false) return nextDoc;
+  if (!latestDoc?.redirects?.length) return nextDoc;
+
+  const deleteIds = new Set(options.deleteRedirectIds ?? []);
+  const latestIds = new Set(latestDoc.redirects.map((redirect) => redirect.redirectId));
+  const nextIds = new Set((nextDoc.redirects ?? []).map((redirect) => redirect.redirectId));
+  const merged = (nextDoc.redirects ?? []).filter((redirect) => !deleteIds.has(redirect.redirectId));
+  let changed = merged.length !== (nextDoc.redirects ?? []).length;
+
+  for (const latestRedirect of latestDoc.redirects) {
+    if (deleteIds.has(latestRedirect.redirectId) || nextIds.has(latestRedirect.redirectId)) continue;
+
+    const conflictIndex = merged.findIndex((redirect) => activeRedirectSourceConflict(redirect, latestRedirect));
+    if (conflictIndex >= 0) {
+      const conflictingRedirect = merged[conflictIndex];
+      if (!latestIds.has(conflictingRedirect.redirectId)) {
+        merged.splice(conflictIndex, 1, latestRedirect);
+        changed = true;
+      }
+      continue;
+    }
+
+    merged.push(latestRedirect);
+    changed = true;
+  }
+
+  if (!changed) return nextDoc;
+  return {
+    ...nextDoc,
+    redirects: merged,
+  };
+}
+
+export function reconcileSiteDocumentInstalledAppsForWrite(
+  nextDoc: BuilderSiteDocument,
+  latestDoc: BuilderSiteDocument | null,
+  options: WriteSiteDocumentOptions = {},
+): BuilderSiteDocument {
+  if (options.preserveMissingInstalledApps === false) return nextDoc;
+  if (!latestDoc?.installedApps?.length) return nextDoc;
+
+  const deleteIds = new Set(options.deleteInstalledAppIds ?? []);
+  const latestApps = normalizeBuilderInstalledApps(latestDoc.installedApps);
+  const latestById = new Map(latestApps.map((app) => [app.appId, app]));
+  let changed = false;
+  const nextApps = normalizeBuilderInstalledApps(nextDoc.installedApps ?? [])
+    .filter((app) => !deleteIds.has(app.appId))
+    .map((app) => {
+      const latestApp = latestById.get(app.appId);
+      if (!latestApp) return app;
+      if (Date.parse(latestApp.updatedAt) > Date.parse(app.updatedAt)) {
+        changed = true;
+        return latestApp;
+      }
+      return app;
+    });
+  const nextIds = new Set(nextApps.map((app) => app.appId));
+  const missingApps = latestApps
+    .filter((app) => !deleteIds.has(app.appId) && !nextIds.has(app.appId));
+
+  if (missingApps.length === 0 && !changed && nextApps.length === (nextDoc.installedApps ?? []).length) return nextDoc;
+  return {
+    ...nextDoc,
+    installedApps: [...nextApps, ...missingApps],
+  };
+}
+
+export function reconcileSiteDocumentUninstalledAppsForWrite(
+  nextDoc: BuilderSiteDocument,
+  latestDoc: BuilderSiteDocument | null,
+  options: WriteSiteDocumentOptions = {},
+): BuilderSiteDocument {
+  if (options.preserveMissingUninstalledApps === false) return nextDoc;
+  if (!latestDoc?.uninstalledApps?.length) return nextDoc;
+
+  const deleteIds = new Set(options.deleteUninstalledAppIds ?? []);
+  const latestArchives = normalizeBuilderUninstalledApps(latestDoc.uninstalledApps);
+  const latestById = new Map(latestArchives.map((archive) => [archive.appId, archive]));
+  let changed = false;
+  const nextArchives = normalizeBuilderUninstalledApps(nextDoc.uninstalledApps ?? [])
+    .filter((archive) => !deleteIds.has(archive.appId))
+    .map((archive) => {
+      const latestArchive = latestById.get(archive.appId);
+      if (!latestArchive) return archive;
+      if (Date.parse(latestArchive.uninstalledAt) > Date.parse(archive.uninstalledAt)) {
+        changed = true;
+        return latestArchive;
+      }
+      return archive;
+    });
+  const nextIds = new Set(nextArchives.map((archive) => archive.appId));
+  const missingArchives = latestArchives
+    .filter((archive) => !deleteIds.has(archive.appId) && !nextIds.has(archive.appId));
+
+  if (missingArchives.length === 0 && !changed && nextArchives.length === (nextDoc.uninstalledApps ?? []).length) return nextDoc;
+  return {
+    ...nextDoc,
+    uninstalledApps: [...nextArchives, ...missingArchives],
+  };
+}
+
 export async function writeSiteDocument(
   doc: BuilderSiteDocument,
   options: WriteSiteDocumentOptions = {},
@@ -249,7 +420,11 @@ export async function writeSiteDocument(
       : doc;
     const seoMergedDoc = mergeUntouchedPageSeoForWrite({ ...navigationMergedDoc, siteId: normalizedSiteId }, latestDoc);
     const pageMergedDoc = reconcileSiteDocumentPagesForWrite(seoMergedDoc, latestDoc, options);
-    const mergedDoc = reconcileSiteDocumentNavigationForWrite(pageMergedDoc, latestDoc, options);
+    const publishMetaMergedDoc = mergeLatestPagePublishMetaForWrite(pageMergedDoc, latestDoc);
+    const redirectMergedDoc = reconcileSiteDocumentRedirectsForWrite(publishMetaMergedDoc, latestDoc, options);
+    const appMergedDoc = reconcileSiteDocumentInstalledAppsForWrite(redirectMergedDoc, latestDoc, options);
+    const appArchiveMergedDoc = reconcileSiteDocumentUninstalledAppsForWrite(appMergedDoc, latestDoc, options);
+    const mergedDoc = reconcileSiteDocumentNavigationForWrite(appArchiveMergedDoc, latestDoc, options);
     const normalizedDoc = normalizeSiteDocumentLifecycle(mergedDoc, normalizedSiteId);
     const pathname = sitePathname(normalizedSiteId);
     const json = JSON.stringify(normalizedDoc);
@@ -502,7 +677,7 @@ export async function deletePage(siteId: string, pageId: string, locale: Locale)
   site.pages = site.pages.filter((p) => p.pageId !== pageId);
   site.navigation = removeNavigationItemsForPage(site.navigation, pageId);
   site.updatedAt = new Date().toISOString();
-  await writeSiteDocument(site, { preserveMissingPages: false, preserveMissingNavigation: false });
+  await writeSiteDocument(site, { deletePageIds: [pageId] });
 }
 
 function pageLocaleProjectionKey(page: BuilderPageMeta): string {
@@ -566,6 +741,8 @@ function normalizeSiteDocumentLifecycle(
     cmsCollections: site.cmsCollections ?? [],
     sectionLibrary: site.sectionLibrary ?? [],
     redirects: site.redirects ?? [],
+    installedApps: normalizeBuilderInstalledApps(site.installedApps ?? []),
+    uninstalledApps: normalizeBuilderUninstalledApps(site.uninstalledApps ?? []),
   });
 }
 

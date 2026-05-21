@@ -1,12 +1,14 @@
 import type { ComponentType, ReactNode } from 'react';
 import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { Locale } from '@/lib/locales';
 
 export type BuilderComponentCategory = 'basic' | 'layout' | 'media' | 'domain' | 'advanced';
 
 export interface BuilderComponentRenderProps {
   node: BuilderCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
   children?: ReactNode;
 }
 

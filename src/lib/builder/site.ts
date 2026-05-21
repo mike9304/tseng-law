@@ -26,6 +26,7 @@ import {
   BUILDER_SITE_VERSION,
   DEFAULT_BUILDER_SITE_ID,
   DEFAULT_BUILDER_WORKSPACE_ID,
+  LEGACY_BUILDER_SITE_ID,
 } from '@/lib/builder/constants';
 import { getDefaultBuilderDocument } from '@/lib/builder/content';
 import { readBuilderPageSnapshot } from '@/lib/builder/persistence';
@@ -230,7 +231,7 @@ export function resolveBuilderEditorMode(
 }
 
 export function isDefaultBuilderSiteId(value: string | null | undefined) {
-  return value === DEFAULT_BUILDER_SITE_ID;
+  return value === DEFAULT_BUILDER_SITE_ID || value === LEGACY_BUILDER_SITE_ID;
 }
 
 export function getBuilderPageConfig(pageKey: BuilderPageKey) {

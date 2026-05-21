@@ -17,6 +17,7 @@ interface SandboxStatusBarProps {
 }
 
 const DENSITY_OPTIONS: EditorDensity[] = ['compact', 'cozy', 'comfortable'];
+const DENSITY_LABELS: Record<EditorDensity, string> = { compact: '좁게', cozy: '보통', comfortable: '넓게' };
 
 export default function SandboxStatusBar({
   viewport,
@@ -30,10 +31,10 @@ export default function SandboxStatusBar({
   return (
     <footer className={styles.statusBar} aria-label="Editor status">
       <div className={styles.statusBarCluster}>
-        <span className={styles.statusBarItem}>Viewport: {viewport}</span>
-        <span className={styles.statusBarItem}>{selectionCount} selected</span>
+        <span className={styles.statusBarItem}>뷰포트: {viewport}</span>
+        <span className={styles.statusBarItem}>{selectionCount > 0 ? `${selectionCount}개 선택됨` : ''}</span>
         <span className={`${styles.statusBarItem} ${styles[`statusBarSave_${draftSaveState}` as keyof typeof styles]}`}>
-          {draftSaveState === 'idle' ? 'Autosave idle' : draftSaveState}
+          {draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : ''}
         </span>
       </div>
       <div className={styles.statusBarCluster}>
@@ -46,7 +47,7 @@ export default function SandboxStatusBar({
               aria-pressed={option === density}
               onClick={() => onDensityChange(option)}
             >
-              {option}
+              {DENSITY_LABELS[option]}
             </button>
           ))}
         </div>
@@ -56,9 +57,9 @@ export default function SandboxStatusBar({
           aria-pressed={themeMode === 'dark'}
           onClick={() => onThemeModeChange(themeMode === 'dark' ? 'light' : 'dark')}
         >
-          {themeMode === 'dark' ? 'Dark' : 'Light'}
+          {themeMode === 'dark' ? '다크' : '라이트'}
         </button>
-        <span className={styles.statusBarItem}>Press ? for shortcuts</span>
+        <span className={styles.statusBarItem}>단축키: ?</span>
       </div>
     </footer>
   );

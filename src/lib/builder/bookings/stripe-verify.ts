@@ -34,3 +34,16 @@ export function isPaymentIntentBookable(status: PaymentIntentStatus | null): boo
   if (!status) return false;
   return status.status === 'succeeded' || status.status === 'processing' || status.status === 'requires_capture';
 }
+
+export function paymentIntentPriceMismatch(
+  status: PaymentIntentStatus,
+  expected: { amount: number; currency: string },
+): string | null {
+  if (typeof status.amount !== 'number') return 'PaymentIntent amount could not be verified.';
+  if (status.amount !== expected.amount) return 'PaymentIntent amount does not match this service.';
+  if (!status.currency) return 'PaymentIntent currency could not be verified.';
+  if (status.currency.toLowerCase() !== expected.currency.toLowerCase()) {
+    return 'PaymentIntent currency does not match this service.';
+  }
+  return null;
+}

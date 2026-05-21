@@ -13,6 +13,8 @@ import {
 } from '@/lib/builder/dynamic-template-drafts';
 import { buildBreadcrumbJsonLd, buildProfilePageJsonLd, buildSeoMetadata } from '@/lib/seo';
 
+export const dynamic = 'force-dynamic';
+
 const sectionLabels = {
   ko: {
     pageLabel: 'PROFILE',

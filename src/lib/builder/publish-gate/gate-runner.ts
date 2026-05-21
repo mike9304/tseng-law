@@ -16,6 +16,7 @@ import {
   checkPrerenderReadiness,
   checkResponsiveOverflow,
   checkSeoMeta,
+  checkStaleDatasetBindings,
   type CheckResult,
   type PublishCheckSuite,
 } from './checks';
@@ -32,6 +33,7 @@ export async function runAllChecks(
     ...checkBrokenLinks(canvas, site),
     ...checkImageAlt(canvas),
     ...checkSeoMeta(page, site),
+    ...checkStaleDatasetBindings(canvas),
     ...checkPrerenderReadiness(page),
     ...checkFormTarget(canvas),
     ...checkResponsiveOverflow(canvas),

@@ -1,15 +1,26 @@
 'use client';
 
-import type { CSSProperties, RefObject } from 'react';
+import {
+  useRef,
+  type CSSProperties,
+  type MouseEvent as ReactMouseEvent,
+  type PointerEvent as ReactPointerEvent,
+  type RefObject,
+} from 'react';
 import CanvasContainer from '@/components/builder/canvas/CanvasContainer';
+import { BuilderDatasetPreviewProvider } from '@/components/builder/canvas/BuilderDatasetPreviewContext';
+import type { BuilderRegisteredAppWidget } from '@/lib/builder/apps/widgets';
 import SandboxEditorRail, {
   type ColumnPostsSummary,
   type SandboxDrawerPanel,
 } from '@/components/builder/canvas/SandboxEditorRail';
 import SandboxInspectorPanel from '@/components/builder/canvas/SandboxInspectorPanel';
+import type { ImageEditTab } from '@/components/builder/canvas/ImageEditDialog';
 import SiteFooter from '@/components/builder/published/SiteFooter';
 import SiteHeader from '@/components/builder/published/SiteHeader';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type { BuilderDataBindingPreviewTarget } from '@/lib/builder/datasets';
+import type { ComponentDesignPresetKey } from '@/lib/builder/site/component-design-presets';
 import type { BuilderNavItem, BuilderSiteSettings, BuilderTheme } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
@@ -54,13 +65,16 @@ type SandboxEditorWorkspaceProps = {
   publicChromePanel: PublicChromePanel;
   linkPickerLightboxes: Array<{ id: string; slug: string; name: string }>;
   linkPickerSitePages: Array<{ path: string; title: string; slug: string }>;
+  datasetPreviewTargets?: BuilderDataBindingPreviewTarget[];
+  appWidgets?: BuilderRegisteredAppWidget[];
   onToggleDrawer: (panel: SandboxDrawerPanel) => void;
   onOpenColumnsPanel: () => void;
   onOpenColumnsPage: () => void;
   onOpenSettings: () => void;
   onOpenHistory: () => void;
-  onSetActiveDrawer: (panel: SandboxDrawerPanel) => void;
-  onSelectPage: (pageId: string, nextSlug?: string) => void | Promise<void>;
+  onApplyComponentDesignPreset: (presetKey: ComponentDesignPresetKey) => void;
+  onSetActiveDrawer: (panel: SandboxDrawerPanel | null) => void;
+  onSelectPage: (pageId: string, nextSlug?: string) => boolean | void | Promise<boolean | void>;
   onPagesChange: (pages: Array<{ pageId: string; slug: string; isHomePage?: boolean }>) => void;
   onNavigationChange: (items: BuilderNavItem[]) => void;
   onNavFocusHandled: () => void;
@@ -77,7 +91,7 @@ type SandboxEditorWorkspaceProps = {
   }) => void;
   onSetPublicChromePanel: (updater: PublicChromePanel | ((current: PublicChromePanel) => PublicChromePanel)) => void;
   onRequestAssetLibrary: (nodeId: string | null) => void;
-  onRequestImageEditor: (request: { nodeId: string; initialTab?: 'crop' | 'filter' | 'alt' } | null) => void;
+  onRequestImageEditor: (request: { nodeId: string; initialTab?: ImageEditTab } | null) => void;
   onRequestMoveToPage: (nodeIds: string[]) => void;
   onRequestSaveAsSection: (rootNodeId: string) => void;
   onRequestInsertSavedSection: (sectionId: string, position: { x: number; y: number }) => void;
@@ -110,11 +124,14 @@ export default function SandboxEditorWorkspace({
   publicChromePanel,
   linkPickerLightboxes,
   linkPickerSitePages,
+  datasetPreviewTargets = [],
+  appWidgets = [],
   onToggleDrawer,
   onOpenColumnsPanel,
   onOpenColumnsPage,
   onOpenSettings,
   onOpenHistory,
+  onApplyComponentDesignPreset,
   onSetActiveDrawer,
   onSelectPage,
   onPagesChange,
@@ -136,8 +153,44 @@ export default function SandboxEditorWorkspace({
   onToast,
   onActivity,
 }: SandboxEditorWorkspaceProps) {
+  const pendingHeaderPointerHrefRef = useRef<string | null>(null);
+  const handleHeaderNavActivation = (
+    event: ReactMouseEvent<HTMLElement> | ReactPointerEvent<HTMLElement>,
+    phase: 'pointer' | 'click',
+  ) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return false;
+    const navLink = target.closest<HTMLAnchorElement>('.builder-site-header a.nav-link[href]');
+    if (!navLink) return false;
+    const href = navLink.getAttribute('href') ?? '';
+    if (!href || /^(https?:|mailto:|tel:|#)/.test(href)) return false;
+    if (event.altKey || event.metaKey || event.ctrlKey || event.shiftKey) return false;
+    if ('button' in event && event.button !== 0) return false;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (phase === 'click' && pendingHeaderPointerHrefRef.current === href) {
+      pendingHeaderPointerHrefRef.current = null;
+      return true;
+    }
+
+    if (phase === 'pointer') {
+      pendingHeaderPointerHrefRef.current = href;
+      window.setTimeout(() => {
+        if (pendingHeaderPointerHrefRef.current === href) {
+          pendingHeaderPointerHrefRef.current = null;
+        }
+      }, 500);
+    }
+
+    onHeaderNavigate(href);
+    return true;
+  };
+
   return (
-    <section className={styles.editorShell}>
+    <BuilderDatasetPreviewProvider targets={datasetPreviewTargets}>
+      <section className={styles.editorShell}>
       <SandboxEditorRail
         locale={locale}
         activeDrawer={activeDrawer}
@@ -152,8 +205,10 @@ export default function SandboxEditorWorkspace({
         onToggleDrawer={onToggleDrawer}
         onOpenColumnsPanel={onOpenColumnsPanel}
         onOpenColumnsPage={onOpenColumnsPage}
+        onCloseDrawer={() => onSetActiveDrawer(null)}
         onOpenSettings={onOpenSettings}
         onOpenHistory={onOpenHistory}
+        onApplyComponentDesignPreset={onApplyComponentDesignPreset}
         onSelectPage={onSelectPage}
         onPagesChange={onPagesChange}
         onNavigationChange={onNavigationChange}
@@ -161,6 +216,7 @@ export default function SandboxEditorWorkspace({
         onNavAddChildHandled={onNavAddChildHandled}
         onSelectNode={onSelectNode}
         onUpdateNodeContent={onUpdateNodeContent}
+        appWidgets={appWidgets}
         onToast={onToast}
       />
 
@@ -173,13 +229,20 @@ export default function SandboxEditorWorkspace({
             role="group"
             aria-label="Editable site header"
             title="Edit header navigation"
+            onPointerDownCapture={(event) => {
+              handleHeaderNavActivation(event, 'pointer');
+            }}
             onClickCapture={(event) => {
               const target = event.target as HTMLElement;
               if (target.closest(`.${styles.globalRegionBadge}`)) return;
               if (target.closest('[data-builder-site-brand]')) return;
               if (target.closest('[data-builder-header-action]')) return;
-              if (target.closest('[data-builder-mobile-hamburger]')) return;
+              if (target.closest('[data-builder-mobile-hamburger]')) {
+                onSetActiveDrawer(null);
+                return;
+              }
               if (target.closest('[data-builder-mobile-drawer]')) return;
+              if (handleHeaderNavActivation(event, 'click')) return;
               const navTarget = target.closest<HTMLElement>('[data-builder-nav-item-id]');
               if (navTarget?.dataset.builderNavItemId) return;
               event.preventDefault();
@@ -223,6 +286,7 @@ export default function SandboxEditorWorkspace({
               onRequestEditNavItem={onRequestEditNavItem}
               onRequestAddNavChild={onRequestAddNavChild}
               onRequestEditSiteBrand={onOpenSettings}
+              onRequestOpenMobileMenu={() => onSetActiveDrawer(null)}
             />
           </div>
         ) : null}
@@ -337,6 +401,7 @@ export default function SandboxEditorWorkspace({
           sitePages={linkPickerSitePages}
         />
       </div>
-    </section>
+      </section>
+    </BuilderDatasetPreviewProvider>
   );
 }

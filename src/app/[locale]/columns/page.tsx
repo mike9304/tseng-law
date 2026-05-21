@@ -32,7 +32,13 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   });
 }
 
-export default async function ColumnsPage({ params }: { params: { locale: Locale } }) {
+export default async function ColumnsPage({
+  params,
+  searchParams,
+}: {
+  params: { locale: Locale };
+  searchParams?: { category?: string; author?: string; q?: string; year?: string; month?: string };
+}) {
   const locale = normalizeLocale(params.locale);
   const copy = pageCopy[locale].insights;
   const posts = await getAllColumnPostsIncludingBlob(locale);
@@ -73,7 +79,7 @@ export default async function ColumnsPage({ params }: { params: { locale: Locale
       {showHero ? (
         <PageHeader locale={locale} label="COLUMNS" title={copy.title} description={copy.description} />
       ) : null}
-      {showRepeater ? <ColumnsGrid locale={locale} posts={posts} /> : null}
+      {showRepeater ? <ColumnsGrid locale={locale} posts={posts} initialFilters={searchParams ?? {}} /> : null}
     </>
   );
 }

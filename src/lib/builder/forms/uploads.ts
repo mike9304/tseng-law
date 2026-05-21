@@ -2,7 +2,7 @@ import { get, put } from '@vercel/blob';
 import { randomUUID } from 'crypto';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
-import type { FormSubmissionFile } from './form-engine';
+import type { FormSubmissionFile, FormUploadScanResult } from './form-engine';
 
 const FORM_UPLOAD_PREFIX = 'builder-forms/uploads';
 const FORM_UPLOAD_RUNTIME_ROOT = path.join(process.cwd(), 'runtime-data');
@@ -45,6 +45,13 @@ export async function saveFormUpload(input: {
   const pathname = `${FORM_UPLOAD_PREFIX}/${locale}/${filename}`;
   const content = Buffer.from(await input.file.arrayBuffer());
   const contentType = input.file.type || MIME_BY_EXTENSION[extension] || 'application/octet-stream';
+  const scan = scanFormUpload({
+    content,
+    contentType,
+    extension,
+    filename: input.file.name || filename,
+  });
+  if (!scan.ok) throw new Error(scan.error);
 
   if (hasBlobToken()) {
     await put(pathname, content, {
@@ -66,6 +73,38 @@ export async function saveFormUpload(input: {
     pathname,
     url: buildFormUploadUrl(locale, filename),
     uploadedAt: new Date().toISOString(),
+    scan: scan.result,
+  };
+}
+
+export function scanFormUpload(input: {
+  content: Buffer;
+  contentType: string;
+  extension: string;
+  filename: string;
+}): { ok: true; result: FormUploadScanResult } | { ok: false; error: string } {
+  const issues: string[] = [];
+  const normalizedType = input.contentType.toLowerCase();
+
+  if (!fileSignatureMatches(input.extension, input.content)) {
+    issues.push('파일 내용이 확장자와 일치하지 않습니다.');
+  }
+  if (normalizedType === 'image/svg+xml' && containsUnsafeSvg(input.content)) {
+    issues.push('SVG 파일에 허용되지 않는 스크립트가 포함되어 있습니다.');
+  }
+
+  if (issues.length > 0) {
+    return { ok: false, error: issues[0] ?? '파일 보안 검사를 통과하지 못했습니다.' };
+  }
+
+  return {
+    ok: true,
+    result: {
+      status: 'passed',
+      provider: 'local-upload-scan',
+      scannedAt: new Date().toISOString(),
+      issues: [],
+    },
   };
 }
 
@@ -115,6 +154,26 @@ function validateFormUpload(file: File): { ok: true } | { ok: false; error: stri
     return { ok: false, error: '허용되지 않는 파일 형식입니다.' };
   }
   return { ok: true };
+}
+
+function fileSignatureMatches(extension: string, content: Buffer): boolean {
+  if (extension === '.png') return content.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]));
+  if (extension === '.jpg' || extension === '.jpeg') return content[0] === 0xff && content[1] === 0xd8;
+  if (extension === '.gif') {
+    const header = content.subarray(0, 6).toString('ascii');
+    return header === 'GIF87a' || header === 'GIF89a';
+  }
+  if (extension === '.webp') {
+    return content.subarray(0, 4).toString('ascii') === 'RIFF' && content.subarray(8, 12).toString('ascii') === 'WEBP';
+  }
+  if (extension === '.avif') return content.subarray(4, 12).toString('ascii').includes('ftyp');
+  if (extension === '.pdf') return content.subarray(0, 5).toString('ascii') === '%PDF-';
+  return true;
+}
+
+function containsUnsafeSvg(content: Buffer): boolean {
+  const source = content.toString('utf8').toLowerCase();
+  return /<script[\s>]/.test(source) || /\son[a-z]+\s*=/.test(source) || /javascript\s*:/i.test(source);
 }
 
 function inferUploadExtension(file: File): string {

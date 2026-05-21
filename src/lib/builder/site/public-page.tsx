@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getAllColumnPosts } from '@/lib/columns';
 import type { Locale } from '@/lib/locales';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import {
@@ -8,6 +9,7 @@ import {
   readPageCanvas,
   readSiteDocument,
 } from '@/lib/builder/site/persistence';
+import { readBuilderPageSnapshot } from '@/lib/builder/persistence';
 import { readRevisionDocument } from '@/lib/builder/site/publish';
 import { getComponent } from '@/lib/builder/components/registry';
 import { buildGoogleFontsUrl } from '@/lib/builder/canvas/fonts';
@@ -18,6 +20,7 @@ import type {
 } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
 import { buildResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
+import { computeTopLevelFlowSectionMetrics, isTopLevelFlowSection } from '@/lib/builder/canvas/flow';
 import type {
   BuilderLightbox,
   BuilderNavItem,
@@ -45,7 +48,7 @@ import {
 } from '@/lib/builder/seo/schema-org';
 import {
   buildCustomStructuredDataPayloads,
-  buildStructuredDataPayloads,
+  buildStructuredDataPayloadsAsync,
 } from '@/lib/builder/seo/structured-data';
 import { mergeSeoWithDefaults, mergeStructuredDataSettings } from '@/lib/builder/seo/defaults';
 import { normalizeStructuredDataSettings } from '@/lib/builder/seo/validation';
@@ -59,7 +62,7 @@ import { getHomeSectionTemplateMetadata } from '@/lib/builder/canvas/section-tem
 import { getSiteUrl } from '@/lib/seo';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
-import { findPageMetaForLocale } from '@/lib/builder/site/page-resolution';
+import { findPageMetaForLocaleWithDynamicContext } from '@/lib/builder/site/page-resolution';
 import {
   normalizeHeaderFooterMobileConfig,
   normalizeMobileBottomBar,
@@ -79,13 +82,25 @@ import CookieConsentBanner from '@/components/builder/published/CookieConsentBan
 import CookieConsentMount from '@/components/builder/published/CookieConsentMount';
 import PageTransitionWrapper from '@/components/builder/published/PageTransitionWrapper';
 import SiteSearchEnhancer from '@/components/builder/published/SiteSearchEnhancer';
+import AppRuntimeLoader from '@/components/builder/published/AppRuntimeLoader';
 import ExperimentVariantSwap from '@/components/builder/published/ExperimentVariantSwap';
 import LiveChatWidget from '@/components/builder/published/LiveChatWidget';
 import {
   buildPublishedAnimationStyle,
   getPublishedAnimationAttributes,
 } from '@/lib/builder/animations/animation-render';
+import { resolveBuilderAppWidgetRuntimeForNode } from '@/lib/builder/apps/widgets';
+import { resolveLiveChatSettings } from '@/lib/builder/live-chat/app-settings';
 import '@/lib/builder/components/registry';
+import {
+  applyBuilderDatasetBindingToNode,
+  resolveBuilderDatasetBindingRecordCount,
+  type BuilderDatasetFieldBindingContext,
+} from '@/lib/builder/dataset-field-binding';
+import { createDefaultBuilderPageDatasets } from '@/lib/builder/datasets';
+import { buildBuilderDynamicListDatasetDocument } from '@/lib/builder/dynamic-list-pages';
+import { buildBuilderDynamicItemDatasetDocument } from '@/lib/builder/dynamic-item-pages';
+import type { BuilderPageDocument } from '@/lib/builder/types';
 
 interface ResolvedLightbox {
   meta: BuilderLightbox;
@@ -103,6 +118,7 @@ export interface ResolvedPublishedSitePage {
   cookieConsent: BuilderCookieConsent | null;
   headerCanvas: BuilderCanvasDocument | null;
   footerCanvas: BuilderCanvasDocument | null;
+  datasetDocument?: Pick<BuilderPageDocument, 'pageKey' | 'datasets'>;
 }
 
 type ParentLayoutMode = 'absolute' | 'flex' | 'grid';
@@ -139,7 +155,8 @@ export async function resolvePublishedSitePage(
   slugPath: string,
 ): Promise<ResolvedPublishedSitePage | null> {
   const site = await readSiteDocument(DEFAULT_BUILDER_SITE_ID, locale);
-  const pageMeta = findPageMetaForLocale(site.pages, locale, slugPath);
+  const pageMatch = findPageMetaForLocaleWithDynamicContext(site.pages, locale, slugPath);
+  const pageMeta = pageMatch?.page;
   if (!pageMeta?.publishedAt) return null;
 
   const canvas = await readPublishedPageCanvas(pageMeta);
@@ -156,15 +173,24 @@ export async function resolvePublishedSitePage(
 
   // Global header/footer canvases — only render when present and non-empty.
   // Otherwise the legacy SiteHeader/SiteFooter components are used as fallback.
-  const [headerCanvas, footerCanvas] = await Promise.all([
+  const [headerCanvas, footerCanvas, homeDatasetSnapshot] = await Promise.all([
     readHeaderCanvas(DEFAULT_BUILDER_SITE_ID),
     readFooterCanvas(DEFAULT_BUILDER_SITE_ID),
+    readBuilderPageSnapshot('home', 'published', locale).catch(() => null),
   ]);
 
   const popups = (site.popups ?? []).filter((p) => p.locale === locale && p.active);
   const cookieConsent = site.cookieConsent && site.cookieConsent.enabled && site.cookieConsent.locale === locale
     ? site.cookieConsent
     : null;
+  const datasetDocument = pageMeta.dynamicList
+    ? buildBuilderDynamicListDatasetDocument(pageMeta.dynamicList)
+    : pageMeta.dynamicItem
+      ? buildBuilderDynamicItemDatasetDocument(pageMeta.dynamicItem, pageMatch?.dynamicItemRecordSlug)
+    : homeDatasetSnapshot?.snapshot.document ?? {
+      pageKey: 'home' as const,
+      datasets: createDefaultBuilderPageDatasets('home'),
+    };
 
   return {
     locale,
@@ -177,6 +203,7 @@ export async function resolvePublishedSitePage(
     cookieConsent,
     headerCanvas: headerCanvas && headerCanvas.nodes.length > 0 ? headerCanvas : null,
     footerCanvas: footerCanvas && footerCanvas.nodes.length > 0 ? footerCanvas : null,
+    datasetDocument,
   };
 }
 
@@ -236,8 +263,17 @@ export async function buildPublishedSitePageMetadata(
   };
 }
 
-export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishedSitePage }) {
+export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishedSitePage }) {
   const { site, canvas, locale, slugPath } = resolved;
+  const datasetDocument = resolved.datasetDocument ?? {
+    pageKey: 'home' as const,
+    datasets: createDefaultBuilderPageDatasets('home'),
+  };
+  const datasetBindingContext = {
+    locale,
+    posts: getAllColumnPosts(locale),
+    document: datasetDocument,
+  };
   const usedFonts = new Set<string>();
 
   for (const node of canvas.nodes) {
@@ -252,8 +288,12 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
   }
 
   const fontsUrl = buildGoogleFontsUrl([...usedFonts]);
-  const navItems = site.navigation || [];
+  const navItems = filterNavigationForLocale(site.navigation || [], locale, {
+    pages: site.pages,
+    publishedOnly: true,
+  });
   const settings = site.settings;
+  const liveChatSettings = resolveLiveChatSettings(site.installedApps, settings?.liveChatWidgetEnabled, locale);
   const theme = site.theme;
   const headerFooterConfig = normalizeHeaderFooterMobileConfig(site.headerFooter);
   const mobileBottomBar = normalizeMobileBottomBar(site.mobileBottomBar, settings);
@@ -310,30 +350,14 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         },
       ])
     : null;
-  const structuredDataPayloads = buildStructuredDataPayloads(canvas, {
+  const structuredDataPayloads = await buildStructuredDataPayloadsAsync(canvas, {
     includeFaqPage: structuredSettings.faqPage !== 'off',
+    locale,
   });
   const customStructuredDataPayloads = buildCustomStructuredDataPayloads(mergedSeo.structuredDataBlocks);
   const topLevelNodes = visibleNodes.filter((node) => !node.parentId);
-  const hasTopLevelComposite = topLevelNodes.some((node) => node.kind === 'composite');
-  const flowTopLevelCompositeNodes = topLevelNodes
-    .filter((node): node is BuilderCanvasNode => node.kind === 'composite')
-    .sort((left, right) =>
-      left.rect.y - right.rect.y
-      || left.zIndex - right.zIndex
-      || left.id.localeCompare(right.id),
-    );
-  const flowSectionMetrics = new Map<string, { marginTop: number; minHeight: number }>();
-  let previousFlowBottom = 0;
-
-  for (const node of flowTopLevelCompositeNodes) {
-    const marginTop = Math.max(0, node.rect.y - previousFlowBottom);
-    flowSectionMetrics.set(node.id, {
-      marginTop,
-      minHeight: node.rect.height,
-    });
-    previousFlowBottom = Math.max(previousFlowBottom + marginTop + node.rect.height, node.rect.y + node.rect.height);
-  }
+  const hasTopLevelComposite = topLevelNodes.some(isTopLevelFlowSection);
+  const flowSectionMetrics = computeTopLevelFlowSectionMetrics(visibleNodes);
 
   // Render composites first (they participate in document flow with
   // computed margin-top), then absolute non-composites on top. Without
@@ -342,8 +366,8 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
   // next composite because later DOM siblings stack above earlier ones
   // when z-indexes match.
   const renderedTopLevelNodes = [...topLevelNodes].sort((left, right) => {
-    const leftIsComposite = left.kind === 'composite';
-    const rightIsComposite = right.kind === 'composite';
+    const leftIsComposite = isTopLevelFlowSection(left);
+    const rightIsComposite = isTopLevelFlowSection(right);
     if (leftIsComposite && rightIsComposite) {
       return left.rect.y - right.rect.y || left.zIndex - right.zIndex;
     }
@@ -360,33 +384,35 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     node: BuilderCanvasNode,
     isTopLevel = false,
     parentLayoutMode?: ParentLayoutMode,
+    bindingContext: BuilderDatasetFieldBindingContext = datasetBindingContext,
   ): JSX.Element {
-    const component = getComponent(node.kind);
-    const childNodes = (childrenMap[node.id] ?? [])
+    const renderedNode = applyBuilderDatasetBindingToNode(node, bindingContext);
+    const component = getComponent(renderedNode.kind);
+    const childNodes = (childrenMap[renderedNode.id] ?? [])
       .map((childId) => nodesById.get(childId))
       .filter((child): child is BuilderCanvasNode => Boolean(child && child.visible !== false));
-    const flowAsSection = isTopLevel && node.kind === 'composite';
+    const flowAsSection = isTopLevel && isTopLevelFlowSection(renderedNode);
     const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
     const useFlowWrapper = flowAsSection || parentUsesFlowLayout;
     const childParentLayoutMode: ParentLayoutMode | undefined =
-      isContainerLikeKind(node.kind)
-        ? ((node.content as { layoutMode?: ParentLayoutMode }).layoutMode ?? 'absolute')
+      isContainerLikeKind(renderedNode.kind)
+        ? ((renderedNode.content as { layoutMode?: ParentLayoutMode }).layoutMode ?? 'absolute')
         : undefined;
-    const flowSectionMetric = flowAsSection ? flowSectionMetrics.get(node.id) : undefined;
-    const stickyConfig = node.sticky;
+    const flowSectionMetric = flowAsSection ? flowSectionMetrics.get(renderedNode.id) : undefined;
+    const stickyConfig = renderedNode.sticky;
     const useSticky = Boolean(stickyConfig) && !useFlowWrapper;
-    const baseTransform = node.rotation ? `rotate(${node.rotation}deg)` : undefined;
-    const backgroundStyle = resolveBackgroundStyle(node.style?.backgroundColor, publishedTheme);
-    const hoverStyle = deriveHeuristicHoverStyle(node);
-    const effectiveAnimation = deriveHeuristicAnimation(node);
+    const baseTransform = renderedNode.rotation ? `rotate(${renderedNode.rotation}deg)` : undefined;
+    const backgroundStyle = resolveBackgroundStyle(renderedNode.style?.backgroundColor, publishedTheme);
+    const hoverStyle = deriveHeuristicHoverStyle(renderedNode);
+    const effectiveAnimation = deriveHeuristicAnimation(renderedNode);
     const hoverBackgroundStyle = hoverStyle?.backgroundColor
       ? resolveBackgroundStyle(hoverStyle.backgroundColor, publishedTheme)
       : undefined;
-    const hoverShadowBlur = hoverStyle?.shadowBlur ?? node.style?.shadowBlur ?? 0;
-    const hoverShadowSpread = hoverStyle?.shadowSpread ?? node.style?.shadowSpread ?? 0;
-    const hoverShadowColor = hoverStyle?.shadowColor ?? node.style?.shadowColor;
-    const hoverBoxShadow = hoverStyle && (hoverShadowBlur > 0 || hoverShadowSpread !== 0 || node.style?.shadowX || node.style?.shadowY)
-      ? `${node.style?.shadowX || 0}px ${node.style?.shadowY || 0}px ${hoverShadowBlur}px ${hoverShadowSpread}px ${resolveThemeColor(hoverShadowColor, publishedTheme)}`
+    const hoverShadowBlur = hoverStyle?.shadowBlur ?? renderedNode.style?.shadowBlur ?? 0;
+    const hoverShadowSpread = hoverStyle?.shadowSpread ?? renderedNode.style?.shadowSpread ?? 0;
+    const hoverShadowColor = hoverStyle?.shadowColor ?? renderedNode.style?.shadowColor;
+    const hoverBoxShadow = hoverStyle && (hoverShadowBlur > 0 || hoverShadowSpread !== 0 || renderedNode.style?.shadowX || renderedNode.style?.shadowY)
+      ? `${renderedNode.style?.shadowX || 0}px ${renderedNode.style?.shadowY || 0}px ${hoverShadowBlur}px ${hoverShadowSpread}px ${resolveThemeColor(hoverShadowColor, publishedTheme)}`
       : undefined;
     const hoverTransform = buildHoverTransform(hoverStyle, baseTransform ?? '');
     const hoverDuration = `${hoverStyle?.transitionMs ?? 200}ms`;
@@ -394,82 +420,166 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
     const animationStyle = buildPublishedAnimationStyle({
       animation: effectiveAnimation,
       baseTransform,
-      baseOpacity: node.style?.opacity != null ? node.style.opacity / 100 : 1,
+      baseOpacity: renderedNode.style?.opacity != null ? renderedNode.style.opacity / 100 : 1,
       primaryColor: 'var(--builder-color-primary, #3b82f6)',
     });
-    const sectionTemplate = getHomeSectionTemplateMetadata(node);
+    const sectionTemplate = getHomeSectionTemplateMetadata(renderedNode);
 
     // Lightbox trigger detection: button with href starting with `lightbox:`
     let lightboxTarget: string | undefined;
-    if (node.kind === 'button') {
-      const link = sanitizeLinkValue(linkValueFromLegacy(node.content));
+    if (renderedNode.kind === 'button') {
+      const link = sanitizeLinkValue(linkValueFromLegacy(renderedNode.content));
       if (link?.href.startsWith('lightbox:')) {
         lightboxTarget = link.href.slice('lightbox:'.length).trim();
       }
     }
 
+    const isRepeaterTemplate =
+      renderedNode.kind === 'container'
+      && renderedNode.content.layoutMode === 'repeater'
+      && Boolean(renderedNode.dataBinding)
+      && childNodes.length > 0;
+    const repeaterRecordCount = isRepeaterTemplate && renderedNode.dataBinding
+      ? resolveBuilderDatasetBindingRecordCount(bindingContext, renderedNode.dataBinding, 12)
+      : 0;
+    const repeaterTemplateHeight = childNodes.reduce((height, child) => (
+      Math.max(height, child.rect.y + child.rect.height)
+    ), 0);
+    const repeaterTemplateWidth = childNodes.reduce((width, child) => (
+      Math.max(width, child.rect.x + child.rect.width)
+    ), 0);
+    const appRuntime = resolveBuilderAppWidgetRuntimeForNode(renderedNode, site.installedApps ?? []);
+    const canRenderAppWidget = !appRuntime || appRuntime.status === 'enabled';
+    const renderedChildren = isRepeaterTemplate && repeaterRecordCount > 0
+      ? Array.from({ length: repeaterRecordCount }, (_, recordIndex) => {
+          const recordKey = `${renderedNode.id}__record-${recordIndex + 1}`;
+          return (
+            <div
+              key={recordKey}
+              className="builder-pub-repeater-item"
+              data-builder-repeater-item="true"
+              data-builder-repeater-record-index={recordIndex}
+              style={{
+                position: 'relative',
+                flex: `1 1 ${Math.max(220, repeaterTemplateWidth)}px`,
+                minWidth: Math.min(Math.max(220, repeaterTemplateWidth), Math.max(220, renderedNode.rect.width)),
+                minHeight: Math.max(1, repeaterTemplateHeight),
+              }}
+            >
+              {childNodes.map((child) => renderPublishedNode(
+                {
+                  ...child,
+                  id: `${child.id}__record-${recordIndex + 1}`,
+                  parentId: recordKey,
+                },
+                false,
+                undefined,
+                {
+                  ...bindingContext,
+                  recordIndexOverride: recordIndex,
+                },
+              ))}
+            </div>
+          );
+        })
+      : isRepeaterTemplate
+        ? [
+            <div
+              key={`${renderedNode.id}__empty`}
+              className="builder-pub-repeater-empty"
+              data-builder-repeater-empty="true"
+              role="status"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                minHeight: Math.max(72, Math.min(180, repeaterTemplateHeight || renderedNode.rect.height)),
+                padding: 16,
+                border: '1px dashed rgba(148, 163, 184, 0.55)',
+                borderRadius: 12,
+                background: 'rgba(248, 250, 252, 0.74)',
+                color: 'rgba(71, 85, 105, 0.92)',
+                fontSize: 14,
+                fontWeight: 700,
+                textAlign: 'center',
+              }}
+            >
+              {locale === 'ko' ? '표시할 항목이 없습니다.' : 'No items available.'}
+            </div>,
+          ]
+        : childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode, bindingContext));
+
     return (
       <div
-        key={node.id}
-        id={node.anchorName ? node.anchorName : undefined}
+        key={renderedNode.id}
+        id={renderedNode.anchorName ? renderedNode.anchorName : undefined}
         className="builder-pub-node"
-        data-node-id={node.id}
-        data-parent-node-id={node.parentId}
+        data-node-id={renderedNode.id}
+        data-parent-node-id={renderedNode.parentId}
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
         data-builder-sticky={useSticky ? 'true' : undefined}
         data-builder-section-template={sectionTemplate?.id}
         data-section-variant={sectionTemplate?.variant}
-        data-anchor={node.anchorName ? node.anchorName : undefined}
+        data-anchor={renderedNode.anchorName ? renderedNode.anchorName : undefined}
         data-builder-hover={hoverStyle ? 'true' : undefined}
         data-lightbox-target={lightboxTarget || undefined}
+        data-builder-app-widget={appRuntime?.id}
+        data-builder-app-runtime={appRuntime?.status}
+        data-builder-app-runtime-status={appRuntime?.status}
+        data-builder-app-status={appRuntime?.status}
+        data-builder-app-id={appRuntime?.appId}
+        data-builder-app-widget-id={appRuntime?.widgetId}
+        data-builder-app-component={appRuntime?.component}
+        data-builder-app-instance-id={appRuntime ? renderedNode.id : undefined}
         {...animationAttributes}
         role={lightboxTarget ? 'button' : undefined}
         tabIndex={lightboxTarget ? 0 : undefined}
         style={{
           position: useSticky ? 'sticky' : useFlowWrapper ? 'relative' : 'absolute',
-          left: useSticky || useFlowWrapper ? undefined : node.rect.x,
+          left: useSticky || useFlowWrapper ? undefined : renderedNode.rect.x,
           top: useSticky
             ? (stickyConfig?.from !== 'bottom' ? (stickyConfig?.offset ?? 0) : undefined)
-            : useFlowWrapper ? undefined : node.rect.y,
+            : useFlowWrapper ? undefined : renderedNode.rect.y,
           bottom: useSticky && stickyConfig?.from === 'bottom' ? (stickyConfig?.offset ?? 0) : undefined,
-          width: flowAsSection ? '100%' : node.rect.width,
+          width: flowAsSection ? '100%' : renderedNode.rect.width,
           height: flowAsSection
             ? 'auto'
-            : isTextShapedKind(node.kind)
+            : isTextShapedKind(renderedNode.kind)
               ? 'auto'
-              : node.rect.height,
+              : renderedNode.rect.height,
           // Use the designer's rect.height as a floor for flow composites and
           // text-shaped widgets; content can grow without clipping.
           minHeight: flowAsSection
-            ? (flowSectionMetric?.minHeight ?? node.rect.height)
-            : isTextShapedKind(node.kind)
-              ? node.rect.height
+            ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
+            : isTextShapedKind(renderedNode.kind)
+              ? renderedNode.rect.height
               : undefined,
           // Always emit marginTop (even 0) for flow composites so the CSS
           // fallback at globals.css:19245 never silently injects a clamp gap
           // when the designer intended adjacent sections.
           marginTop: flowAsSection ? (flowSectionMetric?.marginTop ?? 0) : undefined,
           zIndex: useSticky
-            ? Math.max(node.zIndex, 100)
+            ? Math.max(renderedNode.zIndex, 100)
             : useFlowWrapper
               ? undefined
               // Top-level absolute widgets between flow composites need
               // a positive baseline z-index so a composite's relative
               // stacking context doesn't end up covering them.
               : isTopLevel
-                ? Math.max(node.zIndex, 1)
-                : node.zIndex,
+                ? Math.max(renderedNode.zIndex, 1)
+                : renderedNode.zIndex,
           overflow: flowAsSection ? 'visible' : undefined,
           transform: baseTransform,
           ...backgroundStyle,
-          borderRadius: node.style?.borderRadius ? `${node.style.borderRadius}px` : undefined,
-          border: node.style?.borderWidth
-            ? `${node.style.borderWidth}px ${node.style.borderStyle || 'solid'} ${resolveThemeColor(node.style.borderColor, publishedTheme)}`
+          borderRadius: renderedNode.style?.borderRadius ? `${renderedNode.style.borderRadius}px` : undefined,
+          border: renderedNode.style?.borderWidth
+            ? `${renderedNode.style.borderWidth}px ${renderedNode.style.borderStyle || 'solid'} ${resolveThemeColor(renderedNode.style.borderColor, publishedTheme)}`
             : undefined,
-          boxShadow: node.style?.shadowBlur
-            ? `${node.style.shadowX || 0}px ${node.style.shadowY || 0}px ${node.style.shadowBlur}px ${node.style.shadowSpread || 0}px ${resolveThemeColor(node.style.shadowColor, publishedTheme)}`
+          boxShadow: renderedNode.style?.shadowBlur
+            ? `${renderedNode.style.shadowX || 0}px ${renderedNode.style.shadowY || 0}px ${renderedNode.style.shadowBlur}px ${renderedNode.style.shadowSpread || 0}px ${resolveThemeColor(renderedNode.style.shadowColor, publishedTheme)}`
             : undefined,
-          opacity: node.style?.opacity != null ? node.style.opacity / 100 : undefined,
+          opacity: renderedNode.style?.opacity != null ? renderedNode.style.opacity / 100 : undefined,
           transition: hoverStyle
             ? `background ${hoverDuration} ease, border-color ${hoverDuration} ease, box-shadow ${hoverDuration} ease, transform ${hoverDuration} ease`
             : undefined,
@@ -482,15 +592,41 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           ...animationStyle,
         }}
       >
-        {component ? (
-          isContainerLikeKind(node.kind) ? (
-            <component.Render node={node} mode="published" theme={publishedTheme}>
-              {childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode))}
+        {appRuntime && !canRenderAppWidget ? (
+          <>
+            <div
+              data-builder-app-runtime-placeholder="true"
+              aria-label={locale === 'ko' ? '기능을 일시적으로 사용할 수 없습니다.' : 'Feature unavailable'}
+              style={{
+                width: '100%',
+                height: '100%',
+                minHeight: 48,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 12,
+                color: 'rgba(100, 116, 139, 0.82)',
+                fontSize: '0.875rem',
+                fontWeight: 600,
+                textAlign: 'center',
+                background: 'rgba(248, 250, 252, 0.72)',
+                border: '1px dashed rgba(148, 163, 184, 0.5)',
+                borderRadius: 10,
+              }}
+            >
+              {locale === 'ko' ? '이 기능은 일시적으로 사용할 수 없습니다.' : 'This feature is temporarily unavailable.'}
+            </div>
+            {renderedChildren}
+          </>
+        ) : component ? (
+          isContainerLikeKind(renderedNode.kind) ? (
+            <component.Render node={renderedNode} mode="published" theme={publishedTheme} locale={locale}>
+              {renderedChildren}
             </component.Render>
           ) : (
             <>
-              <component.Render node={node} mode="published" theme={publishedTheme} />
-              {childNodes.map((child) => renderPublishedNode(child))}
+              <component.Render node={renderedNode} mode="published" theme={publishedTheme} locale={locale} />
+              {renderedChildren}
             </>
           )
         ) : (
@@ -506,9 +642,9 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
                 fontSize: '0.85rem',
               }}
             >
-              {node.kind}
+              {renderedNode.kind}
             </div>
-            {childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode))}
+            {renderedChildren}
           </>
         )}
       </div>
@@ -534,7 +670,10 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         const heroImage = canvas.nodes
           .filter((node) => node.kind === 'image' && node.visible !== false)
           .sort((a, b) => a.zIndex - b.zIndex)[0];
-        const src = heroImage ? (heroImage.content as { src?: string }).src : null;
+        const renderedHeroImage = heroImage
+          ? applyBuilderDatasetBindingToNode(heroImage, datasetBindingContext)
+          : null;
+        const src = renderedHeroImage ? (renderedHeroImage.content as { src?: string }).src : null;
         return src && !src.includes('placeholder') ? (
           <link rel="preload" as="image" href={src} />
         ) : null;
@@ -571,6 +710,12 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
           border-color: var(--builder-hover-border-color) !important;
           box-shadow: var(--builder-hover-box-shadow) !important;
           transform: var(--builder-hover-transform) !important;
+        }
+        .builder-pub-node[data-node-id='home-hero-root'] {
+          z-index: 30000 !important;
+        }
+        .builder-pub-node[data-node-id='home-insights-root'] {
+          z-index: 20000 !important;
         }
         .builder-pub-node[data-node-id='home-hero-quick-menu'] {
           display: none;
@@ -801,9 +946,10 @@ export function PublishedSitePageView({ resolved }: { resolved: ResolvedPublishe
         />
       ) : null}
       <AnimationsRoot />
+      <AppRuntimeLoader />
       <SiteSearchEnhancer />
       <ExperimentVariantSwap />
-      {settings?.liveChatWidgetEnabled ? <LiveChatWidget /> : null}
+      {liveChatSettings ? <LiveChatWidget {...liveChatSettings} enabled={liveChatSettings.launcherEnabled} /> : null}
       <PublishedInteractions />
       <PageTransitionWrapper
         preset={settings?.pageTransition ?? 'none'}
@@ -992,12 +1138,12 @@ function LightboxCanvas({
       >
         {component ? (
           isContainerLikeKind(node.kind) ? (
-            <component.Render node={node} mode="published" theme={theme}>
+            <component.Render node={node} mode="published" theme={theme} locale={canvas.locale}>
               {childNodes.map((child) => renderLightboxNode(child))}
             </component.Render>
           ) : (
             <>
-              <component.Render node={node} mode="published" theme={theme} />
+              <component.Render node={node} mode="published" theme={theme} locale={canvas.locale} />
               {childNodes.map((child) => renderLightboxNode(child))}
             </>
           )
@@ -1088,12 +1234,12 @@ function GlobalCanvasSection({
       >
         {component ? (
           node.kind === 'container' ? (
-            <component.Render node={node} mode="published" theme={theme}>
+            <component.Render node={node} mode="published" theme={theme} locale={locale}>
               {childNodes.map((child) => renderGlobalNode(child))}
             </component.Render>
           ) : (
             <>
-              <component.Render node={node} mode="published" theme={theme} />
+              <component.Render node={node} mode="published" theme={theme} locale={locale} />
               {childNodes.map((child) => renderGlobalNode(child))}
             </>
           )

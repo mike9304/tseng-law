@@ -75,7 +75,7 @@ export default function CanvasZoomDock({
         title="화면에 맞추기"
         onClick={fitCanvas}
       >
-        Fit
+        맞춤
       </button>
     </div>
   );

@@ -1,0 +1,302 @@
+.root {
+  display: grid;
+  gap: 22px;
+  padding: 24px;
+  color: #172033;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #2d5c48;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.publicLink,
+.actions button,
+.form button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.publicLink,
+.form button {
+  border: 0;
+  padding: 0 16px;
+  background: #172033;
+  color: #fff;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stats div,
+.form,
+.list {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+}
+
+.stats div {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+}
+
+.stats strong {
+  font-size: 1.6rem;
+}
+
+.stats span {
+  color: #64748b;
+  font-size: 0.86rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.form h2,
+.list h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.form label {
+  display: grid;
+  gap: 6px;
+  color: #334155;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.form input,
+.form textarea,
+.form select,
+.filters input,
+.filters select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 6px;
+  padding: 0 10px;
+  color: #172033;
+  font: inherit;
+}
+
+.form textarea {
+  min-height: 120px;
+  padding-top: 10px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.twoCols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.checkbox {
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  align-items: center;
+}
+
+.checkbox input {
+  width: 18px;
+  min-height: 18px;
+}
+
+.message {
+  margin: 0;
+  color: #2d5c48;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.listHeader {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(150px, 220px) minmax(120px, 160px);
+  gap: 8px;
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.cardBody {
+  min-width: 0;
+}
+
+.card h3 {
+  margin: 8px 0 6px;
+  font-size: 1rem;
+  line-height: 1.42;
+}
+
+.card p {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.card small {
+  display: block;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge,
+.badgeMuted {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 8px;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.badge {
+  background: rgba(45, 92, 72, 0.1);
+  color: #2d5c48;
+}
+
+.badgeMuted {
+  background: rgba(100, 116, 139, 0.12);
+  color: #475569;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+.actions button {
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  padding: 0 12px;
+  background: #fff;
+  color: #172033;
+  cursor: pointer;
+}
+
+.actions .danger {
+  border-color: rgba(185, 28, 28, 0.22);
+  color: #b91c1c;
+}
+
+.empty {
+  display: grid;
+  min-height: 120px;
+  place-items: center;
+  border: 1px dashed rgba(15, 23, 42, 0.16);
+  border-radius: 8px;
+  color: #64748b;
+}
+
+@media (max-width: 1020px) {
+  .layout,
+  .listHeader,
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .stats,
+  .filters,
+  .twoCols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .root {
+    padding: 16px;
+  }
+}

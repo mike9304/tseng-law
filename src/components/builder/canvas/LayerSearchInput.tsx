@@ -25,7 +25,7 @@ export default function LayerSearchInput({
         onChange={(event) => onChange(event.target.value)}
       />
       <span className={styles.layerSearchMeta}>
-        {hasQuery ? `${resultCount} match` : 'id / kind / text'}
+        {hasQuery ? `${resultCount}개 결과` : 'id / 종류 / 텍스트'}
       </span>
       {hasQuery ? (
         <button

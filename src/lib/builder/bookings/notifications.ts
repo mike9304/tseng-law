@@ -1,4 +1,4 @@
-import type { Booking, BookingService, Staff } from '@/lib/builder/bookings/types';
+import type { Booking, BookingBillingDocument, BookingService, Staff } from '@/lib/builder/bookings/types';
 import { renderBookingEmail } from '@/lib/builder/bookings/email-templates';
 
 export function isBookingEmailConfigured(): boolean {
@@ -31,6 +31,15 @@ async function sendEmail(payload: { to: string | string[]; subject: string; html
   } catch (error) {
     console.error('[bookings] email send failed:', error);
   }
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 export async function sendBookingConfirmation(
@@ -80,5 +89,44 @@ export async function sendBookingCancellation(
     subject: cancellationEmail.subject,
     html: cancellationEmail.html,
     text: cancellationEmail.text,
+  });
+}
+
+export async function sendBookingBillingDocument(
+  booking: Booking,
+  document: BookingBillingDocument,
+  context: { service?: BookingService | null; staff?: Staff | null } = {},
+): Promise<void> {
+  const label = document.type === 'invoice' ? 'Invoice' : 'Receipt';
+  const serviceName = context.service?.name?.[booking.customer.locale]
+    || context.service?.name?.ko
+    || context.service?.name?.en
+    || booking.serviceId;
+  const formattedAmount = new Intl.NumberFormat('en', {
+    currency: document.currency,
+    style: 'currency',
+  }).format(document.amount / (document.currency === 'KRW' || document.currency === 'JPY' ? 1 : 100));
+  const formattedBalance = new Intl.NumberFormat('en', {
+    currency: document.currency,
+    style: 'currency',
+  }).format(document.balanceDue / (document.currency === 'KRW' || document.currency === 'JPY' ? 1 : 100));
+  const text = [
+    `${label} ${document.number}`,
+    `Service: ${serviceName}`,
+    `Amount: ${formattedAmount}`,
+    `Balance due: ${formattedBalance}`,
+    `Booking: ${booking.bookingId}`,
+  ].join('\n');
+  await sendEmail({
+    to: booking.customer.email,
+    subject: `[Hojeong] ${label} ${document.number}`,
+    html: `
+      <p>${label} <strong>${escapeHtml(document.number)}</strong></p>
+      <p><strong>Service</strong>: ${escapeHtml(serviceName)}</p>
+      <p><strong>Amount</strong>: ${escapeHtml(formattedAmount)}</p>
+      <p><strong>Balance due</strong>: ${escapeHtml(formattedBalance)}</p>
+      <p><strong>Booking</strong>: ${escapeHtml(booking.bookingId)}</p>
+    `,
+    text,
   });
 }

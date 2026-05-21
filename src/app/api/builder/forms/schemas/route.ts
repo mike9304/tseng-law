@@ -43,6 +43,30 @@ const stepSchema = z.object({
   label: z.string().trim().min(1).max(120),
 });
 
+const cmsMappingSchema = z.object({
+  enabled: z.boolean().default(false),
+  siteId: z.string().trim().min(1).max(120).optional(),
+  locale: z.string().trim().min(1).max(20).optional(),
+  collectionId: z.string().trim().min(1).max(120).optional(),
+  status: z.enum(['draft', 'pending', 'approved', 'rejected', 'published', 'archived']).optional(),
+  fields: z
+    .array(
+      z.object({
+        formFieldId: z.string().trim().min(1).max(120),
+        cmsFieldKey: z.string().trim().min(1).max(120),
+      }),
+    )
+    .max(80)
+    .default([]),
+});
+
+const antiSpamSchema = z.object({
+  honeypotFieldName: z.string().trim().min(1).max(120).optional(),
+  minimumSubmitMs: z.number().int().min(0).max(600_000).optional(),
+  duplicateWindowMs: z.number().int().min(0).max(86_400_000).optional(),
+  duplicateFields: z.array(z.string().trim().min(1).max(120)).max(20).optional(),
+});
+
 const schemaPayload = z.object({
   formId: z.string().trim().min(1).max(80),
   name: z.string().trim().min(1).max(200),
@@ -54,6 +78,8 @@ const schemaPayload = z.object({
   notifyEmail: z.string().trim().email().optional(),
   redirectUrl: z.string().trim().url().optional(),
   storeInCms: z.boolean().optional(),
+  cmsMapping: cmsMappingSchema.optional(),
+  antiSpam: antiSpamSchema.optional(),
 });
 
 export async function GET(request: NextRequest) {

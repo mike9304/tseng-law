@@ -14,6 +14,8 @@ import {
 } from '@/lib/builder/dynamic-template-drafts';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 
+export const dynamic = 'force-dynamic';
+
 export function generateStaticParams() {
   const slugs = getServiceSlugs();
   return ['ko', 'zh-hant', 'en'].flatMap((locale) => slugs.map((slug) => ({ locale, slug })));

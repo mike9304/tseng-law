@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHmac, timingSafeEqual } from 'node:crypto';
 import { getBooking, listBookings, saveBooking } from '@/lib/builder/bookings/storage';
+import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
+import { bookingPaymentAmountFor } from '@/lib/builder/bookings/payments';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -90,40 +92,69 @@ export async function POST(request: NextRequest) {
   async function updateBookingPaymentStatus(
     intentId: string,
     nextStatus: 'paid' | 'unpaid',
-  ): Promise<boolean> {
-    if (!intentId) return false;
+    paidAmount?: number,
+  ): Promise<{ updated: boolean; bookingId?: string }> {
+    if (!intentId) return { updated: false };
     const bookings = await listBookings({ includeCancelled: true });
     const match = bookings.find((b) => b.paymentIntentId === intentId);
-    if (!match) return false;
+    if (!match) return { updated: false };
     // Idempotency: if the booking is already in the requested state, no-op.
     // Stripe redelivers webhooks on retry — flipping back-and-forth would
     // confuse downstream analytics and could re-fire derived notifications.
-    if (match.paymentStatus === nextStatus) return true;
+    const totalAmount = bookingPaymentAmountFor(match);
+    const onlinePaidAmount = nextStatus === 'paid' ? Math.max(0, Math.floor(Number(paidAmount ?? match.paymentDueNow ?? totalAmount))) : 0;
+    const resolvedStatus = nextStatus === 'paid' && onlinePaidAmount > 0 && onlinePaidAmount < totalAmount
+      ? 'partially_paid'
+      : nextStatus;
+    if (match.paymentStatus === resolvedStatus && (match.onlinePaidAmount ?? 0) === onlinePaidAmount) {
+      return { updated: false, bookingId: match.bookingId };
+    }
     // Don't resurrect cancelled bookings as 'paid' — they should stay in
     // their cancelled refund state (refunded / partial-refund).
     if (
-      nextStatus === 'paid'
+      resolvedStatus === 'paid'
       && (match.status === 'cancelled' || match.paymentStatus === 'refunded' || match.paymentStatus === 'partial-refund')
     ) {
-      return false;
+      return { updated: false, bookingId: match.bookingId };
     }
-    await saveBooking({ ...match, paymentStatus: nextStatus, updatedAt: new Date().toISOString() });
-    return true;
+    await saveBooking({
+      ...match,
+      paymentStatus: resolvedStatus,
+      onlinePaidAmount,
+      updatedAt: new Date().toISOString(),
+    });
+    return { updated: true, bookingId: match.bookingId };
   }
 
   switch (event.type) {
     case 'payment_intent.succeeded': {
       const obj = event.data?.object ?? {};
       const intentId = String(obj.id ?? '');
-      const updated = await updateBookingPaymentStatus(intentId, 'paid');
+      const amount = typeof obj.amount === 'number' ? obj.amount : undefined;
+      const updated = await updateBookingPaymentStatus(intentId, 'paid', amount);
+      if (updated.bookingId) {
+        const latest = await getBooking(updated.bookingId);
+        if (latest?.paymentStatus !== 'paid') {
+          console.info('[booking/stripe-webhook] payment_intent.succeeded pending balance', {
+            bookingId: updated.bookingId,
+            paymentStatus: latest?.paymentStatus,
+          });
+          return NextResponse.json({ ok: true, handled: true, bookingUpdated: updated.updated });
+        }
+        try {
+          await runBookingBillingAutomation(updated.bookingId, { trigger: 'paid' });
+        } catch (error) {
+          console.error('[booking/stripe-webhook] billing automation failed:', error);
+        }
+      }
       console.info('[booking/stripe-webhook] payment_intent.succeeded', {
         id: event.id,
         intentId,
         amount: obj.amount,
         currency: obj.currency,
-        bookingUpdated: updated,
+        bookingUpdated: updated.updated,
       });
-      return NextResponse.json({ ok: true, handled: true, bookingUpdated: updated });
+      return NextResponse.json({ ok: true, handled: true, bookingUpdated: updated.updated });
     }
     case 'payment_intent.payment_failed': {
       const obj = event.data?.object ?? {};
@@ -133,9 +164,9 @@ export async function POST(request: NextRequest) {
         id: event.id,
         intentId,
         lastError: (obj.last_payment_error as { message?: string } | undefined)?.message,
-        bookingUpdated: updated,
+        bookingUpdated: updated.updated,
       });
-      return NextResponse.json({ ok: true, handled: true, bookingUpdated: updated });
+      return NextResponse.json({ ok: true, handled: true, bookingUpdated: updated.updated });
     }
     case 'charge.refunded': {
       const obj = event.data?.object ?? {};

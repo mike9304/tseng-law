@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import type { BookingService, Staff } from '@/lib/builder/bookings/types';
+import type { BookingResource, BookingService, Staff } from '@/lib/builder/bookings/types';
 import { textForLocale } from '@/lib/builder/bookings/types';
 import type { Locale } from '@/lib/locales';
 import styles from './BookingsAdmin.module.css';
@@ -19,16 +19,25 @@ type ServiceDraft = {
   image: string;
   category: string;
   staffIds: string[];
+  requiredResourceIds: string[];
   bufferBeforeMinutes: number;
   bufferAfterMinutes: number;
+  maxParticipants: number;
   slotStepMinutes: number;
   isActive: boolean;
   paymentMode: 'free' | 'paid';
   priceAmount: number;
   priceCurrency: 'KRW' | 'USD' | 'TWD' | 'JPY' | 'EUR';
+  depositAmount: number;
   meetingMode: 'in-person' | 'zoom' | 'phone' | 'hybrid';
   cancellationPolicyId: string;
+  reminderOffsetsHours: Array<1 | 24>;
 };
+
+function reminderOffsetsFromService(service?: BookingService): Array<1 | 24> {
+  if (service?.reminderOffsetsHours === undefined) return [24];
+  return service.reminderOffsetsHours.filter((hours): hours is 1 | 24 => hours === 1 || hours === 24);
+}
 
 function draftFromService(service?: BookingService): ServiceDraft {
   return {
@@ -44,15 +53,19 @@ function draftFromService(service?: BookingService): ServiceDraft {
     image: service?.image || '',
     category: service?.category || 'consultation',
     staffIds: service?.staffIds || [],
+    requiredResourceIds: service?.requiredResourceIds || [],
     bufferBeforeMinutes: service?.bufferBeforeMinutes || 0,
     bufferAfterMinutes: service?.bufferAfterMinutes ?? 15,
+    maxParticipants: service?.maxParticipants ?? 1,
     slotStepMinutes: service?.slotStepMinutes ?? 30,
     isActive: service?.isActive ?? true,
     paymentMode: service?.paymentMode ?? 'free',
     priceAmount: service?.priceAmount ?? service?.priceTwd ?? 0,
     priceCurrency: service?.priceCurrency ?? 'TWD',
+    depositAmount: service?.depositAmount ?? 0,
     meetingMode: service?.meetingMode ?? 'in-person',
     cancellationPolicyId: service?.cancellationPolicyId ?? '',
+    reminderOffsetsHours: reminderOffsetsFromService(service),
   };
 }
 
@@ -74,32 +87,44 @@ function servicePayload(draft: ServiceDraft) {
     image: draft.image,
     category: draft.category,
     staffIds: draft.staffIds,
+    requiredResourceIds: draft.requiredResourceIds,
     bufferBeforeMinutes: draft.bufferBeforeMinutes,
     bufferAfterMinutes: draft.bufferAfterMinutes,
+    maxParticipants: draft.maxParticipants,
     slotStepMinutes: draft.slotStepMinutes,
     isActive: draft.isActive,
     paymentMode: draft.paymentMode,
     priceAmount: draft.paymentMode === 'paid' ? draft.priceAmount : undefined,
     priceCurrency: draft.priceCurrency,
+    depositAmount: draft.paymentMode === 'paid' && draft.depositAmount > 0 ? draft.depositAmount : undefined,
     meetingMode: draft.meetingMode,
     cancellationPolicyId: draft.cancellationPolicyId || undefined,
+    reminderOffsetsHours: draft.reminderOffsetsHours,
   };
+}
+
+function toggleReminderHour(current: Array<1 | 24>, hour: 1 | 24, checked: boolean): Array<1 | 24> {
+  const next = checked ? [...current, hour] : current.filter((value) => value !== hour);
+  return Array.from(new Set(next)).sort((a, b) => b - a) as Array<1 | 24>;
 }
 
 export default function BookingServicesAdmin({
   locale,
   initialServices,
   staff,
+  resources,
 }: {
   locale: Locale;
   initialServices: BookingService[];
   staff: Staff[];
+  resources: BookingResource[];
 }) {
   const [services, setServices] = useState(initialServices);
   const [draft, setDraft] = useState<ServiceDraft | null>(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const staffById = useMemo(() => new Map(staff.map((member) => [member.staffId, member])), [staff]);
+  const resourceById = useMemo(() => new Map(resources.map((resource) => [resource.resourceId, resource])), [resources]);
 
   const save = async () => {
     if (!draft || saving) return;
@@ -152,6 +177,7 @@ export default function BookingServicesAdmin({
         {services.map((service) => (
           <article className={styles.card} key={service.serviceId}>
             <div className={styles.cardImage}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               {service.image ? <img src={service.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : 'BOOK'}
             </div>
             <div className={styles.cardBody}>
@@ -161,13 +187,25 @@ export default function BookingServicesAdmin({
                 <span className={styles.chip}>{service.durationMinutes} min</span>
                 <span className={styles.chip}>TWD {service.priceTwd?.toLocaleString() || 0}</span>
                 <span className={styles.chip}>{service.paymentMode === 'paid' ? `Paid ${service.priceCurrency ?? 'TWD'} ${(service.priceAmount ?? service.priceTwd ?? 0).toLocaleString()}` : 'Free booking'}</span>
+                {service.paymentMode === 'paid' && service.depositAmount ? <span className={styles.chip}>Deposit {service.priceCurrency ?? 'TWD'} {service.depositAmount.toLocaleString()}</span> : null}
                 <span className={styles.chip}>{service.meetingMode ?? 'in-person'}</span>
                 {service.cancellationPolicyId ? <span className={styles.chip}>Policy {service.cancellationPolicyId}</span> : null}
+                <span className={styles.chip}>{service.maxParticipants ?? 1} seats</span>
+                <span className={styles.chip}>
+                  {service.reminderOffsetsHours === undefined
+                    ? 'Reminder 24h'
+                    : service.reminderOffsetsHours.length > 0
+                      ? `Reminder ${service.reminderOffsetsHours.join('h + ')}h`
+                      : 'Reminders off'}
+                </span>
                 <span className={styles.chip}>Every {service.slotStepMinutes ?? 30} min</span>
                 <span className={styles.chip}>{service.isActive ? 'Active' : 'Inactive'}</span>
               </div>
               <p className={styles.muted}>
                 Staff: {service.staffIds.map((id) => textForLocale(staffById.get(id)?.name, locale)).filter(Boolean).join(', ') || 'Any active staff'}
+              </p>
+              <p className={styles.muted}>
+                Resources: {(service.requiredResourceIds ?? []).map((id) => textForLocale(resourceById.get(id)?.name, locale)).filter(Boolean).join(', ') || 'No shared resources'}
               </p>
               <div className={styles.actions}>
                 <button className={styles.buttonSecondary} type="button" onClick={() => setDraft(draftFromService(service))}>Edit</button>
@@ -221,6 +259,10 @@ export default function BookingServicesAdmin({
                 <input className={styles.input} type="number" min={0} value={draft.priceAmount} onChange={(e) => setDraft({ ...draft, priceAmount: Number(e.target.value) })} />
               </label>
               <label className={styles.field}>
+                <span className={styles.label}>Deposit due now</span>
+                <input className={styles.input} type="number" min={0} value={draft.depositAmount} onChange={(e) => setDraft({ ...draft, depositAmount: Number(e.target.value) })} />
+              </label>
+              <label className={styles.field}>
                 <span className={styles.label}>Payment currency</span>
                 <select className={styles.select} value={draft.priceCurrency} onChange={(e) => setDraft({ ...draft, priceCurrency: e.target.value as ServiceDraft['priceCurrency'] })}>
                   <option value="TWD">TWD</option>
@@ -266,9 +308,41 @@ export default function BookingServicesAdmin({
                 <input className={styles.input} type="number" min={0} value={draft.bufferAfterMinutes} onChange={(e) => setDraft({ ...draft, bufferAfterMinutes: Number(e.target.value) })} />
               </label>
               <label className={styles.field}>
+                <span className={styles.label}>Capacity</span>
+                <input className={styles.input} type="number" min={1} max={250} value={draft.maxParticipants} onChange={(e) => setDraft({ ...draft, maxParticipants: Number(e.target.value) })} />
+              </label>
+              <label className={styles.field}>
                 <span className={styles.label}>Booking interval</span>
                 <input className={styles.input} type="number" min={5} value={draft.slotStepMinutes} onChange={(e) => setDraft({ ...draft, slotStepMinutes: Number(e.target.value) })} />
               </label>
+              <fieldset className={`${styles.field} ${styles.fieldFull}`}>
+                <legend className={styles.label}>Reminder schedule</legend>
+                <div className={styles.metaRow}>
+                  <label className={styles.chip}>
+                    <input
+                      type="checkbox"
+                      checked={draft.reminderOffsetsHours.includes(24)}
+                      onChange={(event) => setDraft({
+                        ...draft,
+                        reminderOffsetsHours: toggleReminderHour(draft.reminderOffsetsHours, 24, event.target.checked),
+                      })}
+                    />{' '}
+                    24h before
+                  </label>
+                  <label className={styles.chip}>
+                    <input
+                      type="checkbox"
+                      checked={draft.reminderOffsetsHours.includes(1)}
+                      onChange={(event) => setDraft({
+                        ...draft,
+                        reminderOffsetsHours: toggleReminderHour(draft.reminderOffsetsHours, 1, event.target.checked),
+                      })}
+                    />{' '}
+                    1h before
+                  </label>
+                </div>
+                <p className={styles.muted}>Uncheck both to turn off email and SMS reminders for this service.</p>
+              </fieldset>
               <label className={`${styles.field} ${styles.fieldFull}`}>
                 <span className={styles.label}>Image URL</span>
                 <input className={styles.input} value={draft.image} onChange={(e) => setDraft({ ...draft, image: e.target.value })} />
@@ -304,6 +378,27 @@ export default function BookingServicesAdmin({
                     </label>
                   ))}
                 </div>
+              </label>
+              <label className={`${styles.field} ${styles.fieldFull}`}>
+                <span className={styles.label}>Required resources</span>
+                <div className={styles.metaRow}>
+                  {resources.map((resource) => (
+                    <label className={styles.chip} key={resource.resourceId}>
+                      <input
+                        type="checkbox"
+                        checked={draft.requiredResourceIds.includes(resource.resourceId)}
+                        onChange={(event) => {
+                          const requiredResourceIds = event.target.checked
+                            ? [...draft.requiredResourceIds, resource.resourceId]
+                            : draft.requiredResourceIds.filter((id) => id !== resource.resourceId);
+                          setDraft({ ...draft, requiredResourceIds });
+                        }}
+                      />{' '}
+                      {textForLocale(resource.name, locale)}
+                    </label>
+                  ))}
+                </div>
+                <p className={styles.muted}>When selected, slots close if another booking overlaps on the same room or equipment.</p>
               </label>
             </div>
             <div className={styles.actions}>

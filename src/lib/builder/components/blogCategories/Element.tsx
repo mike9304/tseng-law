@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { BuilderBlogCategoriesCanvasNode } from '@/lib/builder/canvas/types';
 import { DEFAULT_BLOG_CATEGORIES, type BlogCategory } from '@/lib/builder/blog/blog-engine';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 function colorToCss(value: unknown): string {
   if (typeof value === 'string') return value;
@@ -16,17 +17,19 @@ function colorToCss(value: unknown): string {
 interface BlogCategoriesElementProps {
   node: BuilderBlogCategoriesCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }
 
-export default function BlogCategoriesElement({ node, mode = 'edit' }: BlogCategoriesElementProps) {
+export default function BlogCategoriesElement({ node, mode = 'edit', locale }: BlogCategoriesElementProps) {
   const c = node.content;
   const isBuilder = mode !== 'published';
+  const effectiveLocale = normalizeLocale(locale || 'ko');
   const [counts, setCounts] = useState<Record<string, number>>({});
 
   useEffect(() => {
     if (isBuilder || !c.showPostCount) return;
     let cancelled = false;
-    fetch(`/api/builder/blog/posts?locale=ko&limit=100`)
+    fetch(`/api/builder/blog/posts?locale=${effectiveLocale}&limit=100`)
       .then((r) => r.json())
       .then((json) => {
         if (cancelled) return;
@@ -42,7 +45,7 @@ export default function BlogCategoriesElement({ node, mode = 'edit' }: BlogCateg
     return () => {
       cancelled = true;
     };
-  }, [isBuilder, c.showPostCount]);
+  }, [effectiveLocale, isBuilder, c.showPostCount]);
 
   const activeColorCss = useMemo(() => colorToCss(c.activeColor ?? '#0b3b2e'), [c.activeColor]);
   const items: Array<BlogCategory | { id: 'all'; slug: '__all'; name: { ko: string; 'zh-hant': string; en: string }; postCount: number }> = c.showAll
@@ -57,6 +60,7 @@ export default function BlogCategoriesElement({ node, mode = 'edit' }: BlogCateg
 
   return (
     <nav
+      data-builder-blog-categories="true"
       style={{
         width: '100%',
         height: '100%',
@@ -74,7 +78,7 @@ export default function BlogCategoriesElement({ node, mode = 'edit' }: BlogCateg
       {items.map((cat) => {
         const slug = (cat as BlogCategory).slug;
         const isAll = slug === '__all';
-        const href = isAll ? `/ko/columns` : `/ko/columns?category=${slug}`;
+        const href = isAll ? `/${effectiveLocale}/columns` : `/${effectiveLocale}/columns?category=${encodeURIComponent(slug)}`;
         const count = isAll
           ? Object.values(counts).reduce((a, b) => a + b, 0)
           : counts[slug] ?? 0;
@@ -82,11 +86,13 @@ export default function BlogCategoriesElement({ node, mode = 'edit' }: BlogCateg
           <a
             key={cat.id}
             href={href}
+            data-builder-blog-category={slug}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: 6,
-              padding: isVertical ? '10px 14px' : '6px 12px',
+              minHeight: 44,
+              padding: isVertical ? '10px 14px' : '8px 14px',
               borderRadius: 999,
               border: `1px solid ${activeColorCss}`,
               color: activeColorCss,
@@ -98,7 +104,7 @@ export default function BlogCategoriesElement({ node, mode = 'edit' }: BlogCateg
               transition: 'background 120ms ease',
             }}
           >
-            <span>{cat.name.ko ?? cat.id}</span>
+            <span>{cat.name[effectiveLocale] ?? cat.name.ko ?? cat.id}</span>
             {c.showPostCount && !isBuilder && <span style={{ opacity: 0.7, fontSize: 11 }}>({count})</span>}
             {c.showPostCount && isBuilder && <span style={{ opacity: 0.7, fontSize: 11 }}>(0)</span>}
           </a>

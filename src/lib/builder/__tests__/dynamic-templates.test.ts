@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { readBuilderCollectionRecordPreviews } from '@/lib/builder/cms';
 import { readBuilderDynamicTemplateDetail } from '@/lib/builder/dynamic-templates';
 
 describe('builder dynamic templates', () => {
@@ -20,6 +21,28 @@ describe('builder dynamic templates', () => {
       routePath: '/ko/services/investment',
     });
     expect(detail.exclusions.join(' ')).toContain('No freeform canvas layout editing');
+  });
+
+  it('keeps a requested item preview record in the template editor sample window', () => {
+    const allRecords = readBuilderCollectionRecordPreviews('columns', 'ko');
+    expect(allRecords.length).toBeGreaterThan(6);
+
+    const requestedRecord = allRecords[6];
+    if (!requestedRecord) {
+      throw new Error('Expected columns collection to provide at least seven preview records.');
+    }
+
+    const detail = readBuilderDynamicTemplateDetail(
+      'columns.item-template',
+      'ko',
+      requestedRecord.recordId
+    );
+
+    expect(detail.previewRecords[0]).toMatchObject({
+      recordId: requestedRecord.recordId,
+      routePath: requestedRecord.routePath,
+    });
+    expect(detail.previewRecords).toHaveLength(6);
   });
 
   it('exposes collection list template block controls', () => {

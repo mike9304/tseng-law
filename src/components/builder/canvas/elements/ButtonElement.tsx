@@ -26,7 +26,15 @@ export default function ButtonElement({
     const Tag = (as ?? (href ? 'a' : 'button')) as keyof JSX.IntrinsicElements;
     const props: Record<string, unknown> = {
       className,
-      style: { display: 'inline-flex', alignItems: 'center', margin: 0 },
+      style: {
+        width: '100%',
+        height: '100%',
+        boxSizing: 'border-box',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 0,
+      },
     };
     if (Tag === 'a') {
       props.href = interactive ? (lightboxSlug ? '#' : href || undefined) : undefined;

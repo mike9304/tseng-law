@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type {
   ConditionalOperator,
   FormField,
@@ -8,10 +8,30 @@ import type {
   FormSchema,
   FormStep,
 } from '@/lib/builder/forms/form-engine';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import type {
+  BuilderCmsCollectionDetail,
+  BuilderCmsCollectionSummary,
+  BuilderCmsFieldDefinition,
+  BuilderCmsFieldType,
+  BuilderCmsRecordStatus,
+} from '@/lib/builder/cms-types';
 
 interface Props {
   initialSchema: FormSchema;
+  locale?: string;
+  siteId?: string;
 }
+
+type CollectionsPayload = {
+  ok?: boolean;
+  editableCollections?: BuilderCmsCollectionSummary[];
+};
+
+type CollectionDetailPayload = {
+  ok?: boolean;
+  detail?: BuilderCmsCollectionDetail;
+};
 
 const FIELD_TYPES: FormFieldType[] = [
   'text', 'email', 'phone', 'textarea', 'select', 'checkbox', 'radio', 'file', 'date', 'number',
@@ -33,26 +53,103 @@ function makeStepId(): string {
   return `step_${Math.random().toString(36).slice(2, 6)}`;
 }
 
+const compatibleCmsFieldTypesByFormType: Record<FormFieldType, BuilderCmsFieldType[]> = {
+  text: ['text', 'slug', 'url', 'email'],
+  email: ['email', 'text'],
+  phone: ['text'],
+  textarea: ['rich-text', 'text'],
+  select: ['text', 'string-list'],
+  checkbox: ['boolean', 'text', 'string-list'],
+  radio: ['text'],
+  file: ['image', 'url', 'text', 'string-list'],
+  date: ['date', 'text'],
+  number: ['number', 'text'],
+};
+
+function compatibleCmsFieldsForFormField(
+  formField: FormField,
+  cmsFields: BuilderCmsFieldDefinition[],
+): BuilderCmsFieldDefinition[] {
+  const compatibleTypes = compatibleCmsFieldTypesByFormType[formField.type];
+  return cmsFields.filter((cmsField) => compatibleTypes.includes(cmsField.type));
+}
+
 /**
  * PR #7 — Form schema editor (drag-drop reorder, multi-step, conditional logic builder, preview).
  *
  * Uses native HTML5 drag handles. Each field can be assigned to a step, given
  * a conditional visibility rule, and previewed on the right pane.
  */
-export default function FormSchemaEditor({ initialSchema }: Props) {
+export default function FormSchemaEditor({
+  initialSchema,
+  locale = 'ko',
+  siteId = DEFAULT_BUILDER_SITE_ID,
+}: Props) {
   const [schema, setSchema] = useState<FormSchema>(initialSchema);
   const [activeStep, setActiveStep] = useState(0);
   const [previewValues, setPreviewValues] = useState<Record<string, string>>({});
+  const [cmsCollections, setCmsCollections] = useState<BuilderCmsCollectionSummary[]>([]);
+  const [cmsCollectionDetail, setCmsCollectionDetail] = useState<BuilderCmsCollectionDetail | null>(null);
+  const [cmsCollectionsLoading, setCmsCollectionsLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
   const [dragIdx, setDragIdx] = useState<number | null>(null);
 
   const steps: FormStep[] = schema.steps ?? [{ id: 'default', label: '기본' }];
+  const selectedCmsCollectionId = schema.cmsMapping?.collectionId?.trim() ?? '';
+  const selectedCmsCollection = cmsCollections.find((collection) => (
+    collection.collectionId === selectedCmsCollectionId
+  ));
 
   const fieldsForActiveStep = useMemo(
     () => schema.fields.filter((f) => (f.step ?? 0) === activeStep),
     [schema.fields, activeStep],
   );
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadCmsCollections() {
+      setCmsCollectionsLoading(true);
+      try {
+        const response = await fetch(
+          `/api/builder/sites/${encodeURIComponent(siteId)}/collections?locale=${encodeURIComponent(locale)}`,
+          { credentials: 'same-origin' },
+        );
+        const payload = (await response.json().catch(() => ({}))) as CollectionsPayload;
+        if (!cancelled && response.ok && payload.ok !== false) {
+          setCmsCollections(payload.editableCollections ?? []);
+        }
+      } finally {
+        if (!cancelled) setCmsCollectionsLoading(false);
+      }
+    }
+    void loadCmsCollections();
+    return () => {
+      cancelled = true;
+    };
+  }, [locale, siteId]);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadCmsCollectionDetail() {
+      setCmsCollectionDetail(null);
+      if (!selectedCmsCollectionId) {
+        return;
+      }
+      const response = await fetch(
+        `/api/builder/sites/${encodeURIComponent(siteId)}/collections/${encodeURIComponent(selectedCmsCollectionId)}?locale=${encodeURIComponent(locale)}`,
+        { credentials: 'same-origin' },
+      );
+      const payload = (await response.json().catch(() => ({}))) as CollectionDetailPayload;
+      if (!cancelled && response.ok && payload.detail) {
+        setCmsCollectionDetail(payload.detail);
+      }
+    }
+    void loadCmsCollectionDetail();
+    return () => {
+      cancelled = true;
+    };
+  }, [locale, selectedCmsCollectionId, siteId]);
 
   function updateField(id: string, patch: Partial<FormField>) {
     setSchema((s) => ({
@@ -67,6 +164,73 @@ export default function FormSchemaEditor({ initialSchema }: Props) {
       fields: s.fields.map((f) => (
         f.id === id ? { ...f, validation: { ...(f.validation ?? {}), ...patch } } : f
       )),
+    }));
+  }
+
+  function updateCmsMapping(patch: Partial<NonNullable<FormSchema['cmsMapping']>>) {
+    setSchema((s) => ({
+      ...s,
+      cmsMapping: {
+        enabled: s.cmsMapping?.enabled ?? false,
+        fields: s.cmsMapping?.fields ?? [],
+        ...s.cmsMapping,
+        ...patch,
+      },
+    }));
+  }
+
+  function updateCmsFieldMapping(formFieldId: string, cmsFieldKey: string) {
+    setSchema((s) => {
+      const current = s.cmsMapping ?? { enabled: false, fields: [] };
+      const nextFields = current.fields.filter((mapping) => mapping.formFieldId !== formFieldId);
+      if (cmsFieldKey.trim()) {
+        nextFields.push({ formFieldId, cmsFieldKey: cmsFieldKey.trim() });
+      }
+      return {
+        ...s,
+        cmsMapping: {
+          ...current,
+          fields: nextFields,
+        },
+      };
+    });
+  }
+
+  function updateAntiSpam(patch: NonNullable<FormSchema['antiSpam']>) {
+    setSchema((s) => ({
+      ...s,
+      antiSpam: {
+        ...(s.antiSpam ?? {}),
+        ...patch,
+      },
+    }));
+  }
+
+  function toggleDuplicateField(fieldId: string, checked: boolean) {
+    const current = new Set(schema.antiSpam?.duplicateFields ?? []);
+    if (checked) {
+      current.add(fieldId);
+    } else {
+      current.delete(fieldId);
+    }
+    updateAntiSpam({ duplicateFields: Array.from(current) });
+  }
+
+  function autoMapCmsFields() {
+    if (!cmsCollectionDetail) return;
+    const cmsKeys = new Set(cmsCollectionDetail.fields.map((field) => field.key));
+    setSchema((s) => ({
+      ...s,
+      cmsMapping: {
+        enabled: s.cmsMapping?.enabled ?? true,
+        collectionId: s.cmsMapping?.collectionId,
+        siteId: s.cmsMapping?.siteId,
+        locale: s.cmsMapping?.locale,
+        status: s.cmsMapping?.status ?? 'pending',
+        fields: s.fields.flatMap((field) => (
+          cmsKeys.has(field.id) ? [{ formFieldId: field.id, cmsFieldKey: field.id }] : []
+        )),
+      },
     }));
   }
 
@@ -118,6 +282,34 @@ export default function FormSchemaEditor({ initialSchema }: Props) {
     setSaving(true);
     setMessage('');
     try {
+      const cmsMapping = schema.cmsMapping
+        ? {
+            enabled: schema.cmsMapping.enabled,
+            ...(schema.cmsMapping.siteId?.trim() ? { siteId: schema.cmsMapping.siteId.trim() } : {}),
+            ...(schema.cmsMapping.locale?.trim() ? { locale: schema.cmsMapping.locale.trim() } : {}),
+            ...(schema.cmsMapping.collectionId?.trim() ? { collectionId: schema.cmsMapping.collectionId.trim() } : {}),
+            ...(schema.cmsMapping.status ? { status: schema.cmsMapping.status } : {}),
+            fields: schema.cmsMapping.fields.filter((mapping) => (
+              mapping.formFieldId.trim() && mapping.cmsFieldKey.trim()
+            )),
+          }
+        : undefined;
+      const antiSpam = schema.antiSpam
+        ? {
+            ...(schema.antiSpam.honeypotFieldName?.trim()
+              ? { honeypotFieldName: schema.antiSpam.honeypotFieldName.trim() }
+              : {}),
+            ...(typeof schema.antiSpam.minimumSubmitMs === 'number'
+              ? { minimumSubmitMs: schema.antiSpam.minimumSubmitMs }
+              : {}),
+            ...(typeof schema.antiSpam.duplicateWindowMs === 'number'
+              ? { duplicateWindowMs: schema.antiSpam.duplicateWindowMs }
+              : {}),
+            ...(schema.antiSpam.duplicateFields?.length
+              ? { duplicateFields: schema.antiSpam.duplicateFields }
+              : {}),
+          }
+        : undefined;
       const res = await fetch(`/api/builder/forms/schemas/${schema.formId}`, {
         method: 'PATCH',
         credentials: 'same-origin',
@@ -132,6 +324,8 @@ export default function FormSchemaEditor({ initialSchema }: Props) {
           notifyEmail: schema.notifyEmail,
           redirectUrl: schema.redirectUrl,
           storeInCms: schema.storeInCms,
+          cmsMapping,
+          antiSpam,
         }),
       });
       if (!res.ok) {
@@ -148,7 +342,10 @@ export default function FormSchemaEditor({ initialSchema }: Props) {
   const allFieldIdx = (id: string) => schema.fields.findIndex((f) => f.id === id);
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: 24, padding: 24 }}>
+    <div
+      className="builder-form-schema-editor"
+      data-form-schema-editor={schema.formId}
+    >
       <section style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <input
@@ -157,11 +354,229 @@ export default function FormSchemaEditor({ initialSchema }: Props) {
             onChange={(e) => setSchema((s) => ({ ...s, name: e.target.value }))}
             style={{ fontSize: 16, fontWeight: 700, padding: '6px 10px', border: '1px solid #cbd5e1', borderRadius: 6, flex: 1 }}
           />
-          <button type="button" disabled={saving} onClick={save} style={{ padding: '8px 14px', border: 0, background: saving ? '#94a3b8' : '#0f172a', color: '#fff', borderRadius: 8, fontWeight: 700, cursor: saving ? 'not-allowed' : 'pointer' }}>
+          <button
+            type="button"
+            data-form-schema-save
+            disabled={saving}
+            onClick={save}
+            style={{ padding: '8px 14px', border: 0, background: saving ? '#94a3b8' : '#0f172a', color: '#fff', borderRadius: 8, fontWeight: 700, cursor: saving ? 'not-allowed' : 'pointer' }}
+          >
             {saving ? '저장 중...' : '저장'}
           </button>
         </div>
-        {message ? <div style={{ fontSize: 12, color: message.includes('실패') ? '#dc2626' : '#16a34a' }}>{message}</div> : null}
+        {message ? (
+          <div
+            data-form-schema-save-message
+            data-form-save-status
+            role="status"
+            aria-live="polite"
+            style={{ fontSize: 12, color: message.includes('실패') ? '#dc2626' : '#16a34a' }}
+          >
+            {message}
+          </div>
+        ) : null}
+
+        <div
+          data-form-cms-card
+          style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: 12, display: 'flex', flexDirection: 'column', gap: 10, background: '#fff', minWidth: 0 }}
+        >
+          <label style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, fontWeight: 700, color: '#0f172a' }}>
+            <input
+              type="checkbox"
+              data-form-cms-store-toggle
+              checked={Boolean(schema.storeInCms && schema.cmsMapping?.enabled)}
+              onChange={(e) => {
+                const enabled = e.target.checked;
+                setSchema((s) => ({
+                  ...s,
+                  storeInCms: enabled,
+                  cmsMapping: {
+                    enabled,
+                    collectionId: s.cmsMapping?.collectionId ?? '',
+                    siteId: s.cmsMapping?.siteId,
+                    locale: s.cmsMapping?.locale,
+                    status: s.cmsMapping?.status ?? 'pending',
+                    fields: s.cmsMapping?.fields ?? [],
+                  },
+                }));
+              }}
+            />
+            CMS 컬렉션에 제출값 저장
+          </label>
+          {schema.storeInCms && schema.cmsMapping?.enabled ? (
+            <>
+              <div className="builder-form-cms-controls">
+                <select
+                  aria-label="CMS collection"
+                  data-form-cms-collection-select
+                  value={schema.cmsMapping.collectionId ?? ''}
+                  onChange={(e) => updateCmsMapping({ collectionId: e.target.value })}
+                  style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                >
+                  <option value="">{cmsCollectionsLoading ? '컬렉션 불러오는 중...' : '컬렉션 선택'}</option>
+                  {cmsCollections.map((collection) => (
+                    <option key={collection.collectionId} value={collection.collectionId}>
+                      {collection.name} ({collection.collectionId})
+                    </option>
+                  ))}
+                  {selectedCmsCollectionId && !selectedCmsCollection ? (
+                    <option value={selectedCmsCollectionId}>{selectedCmsCollectionId}</option>
+                  ) : null}
+                </select>
+                <input
+                  type="text"
+                  aria-label="CMS site ID"
+                  data-form-cms-site-input
+                  placeholder="siteId 기본값"
+                  value={schema.cmsMapping.siteId ?? ''}
+                  onChange={(e) => updateCmsMapping({ siteId: e.target.value || undefined })}
+                  style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                />
+                <input
+                  type="text"
+                  aria-label="CMS locale"
+                  data-form-cms-locale-input
+                  placeholder="locale"
+                  value={schema.cmsMapping.locale ?? ''}
+                  onChange={(e) => updateCmsMapping({ locale: e.target.value || undefined })}
+                  style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                />
+                <select
+                  aria-label="CMS record status"
+                  data-form-cms-status-select
+                  value={schema.cmsMapping.status ?? 'pending'}
+                  onChange={(e) => updateCmsMapping({ status: e.target.value as BuilderCmsRecordStatus })}
+                  style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                >
+                  <option value="pending">검토 대기</option>
+                  <option value="approved">승인됨</option>
+                  <option value="rejected">거절됨</option>
+                  <option value="draft">초안 저장</option>
+                  <option value="published">바로 게시</option>
+                </select>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, minHeight: 24 }}>
+                <span style={{ fontSize: 11, color: '#64748b' }}>
+                  {selectedCmsCollection
+                    ? `권한: public create ${selectedCmsCollection.permissions.create.includes('public') ? '허용' : '필요'} · ${selectedCmsCollection.fieldCount} fields`
+                    : 'CMS 컬렉션을 선택하면 필드 목록으로 매핑할 수 있습니다.'}
+                </span>
+                <button
+                  type="button"
+                  onClick={autoMapCmsFields}
+                  disabled={!cmsCollectionDetail}
+                  style={{ marginLeft: 'auto', padding: '4px 8px', border: '1px solid #cbd5e1', background: '#fff', borderRadius: 4, fontSize: 11, color: '#0f172a', cursor: cmsCollectionDetail ? 'pointer' : 'not-allowed' }}
+                >
+                  같은 ID 자동 매핑
+                </button>
+              </div>
+              <div className="builder-form-cms-field-grid" data-form-cms-field-mapping-grid>
+                {schema.fields.map((field) => {
+                  const mapping = schema.cmsMapping?.fields.find((item) => item.formFieldId === field.id);
+                  const compatibleFields = cmsCollectionDetail
+                    ? compatibleCmsFieldsForFormField(field, cmsCollectionDetail.fields)
+                    : [];
+                  const mappedFieldStillExists = compatibleFields.some((cmsField) => (
+                    cmsField.key === mapping?.cmsFieldKey
+                  ));
+                  return (
+                    <div
+                      key={field.id}
+                      data-form-cms-field-mapping-row={field.id}
+                      style={{ display: 'contents' }}
+                    >
+                      <span style={{ fontSize: 11, color: '#475569', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {field.label} · {field.id}
+                      </span>
+                      {cmsCollectionDetail ? (
+                        <select
+                          aria-label={`${field.label} CMS field`}
+                          data-form-cms-field-select={field.id}
+                          value={mapping?.cmsFieldKey ?? ''}
+                          onChange={(e) => updateCmsFieldMapping(field.id, e.target.value)}
+                          style={{ padding: '5px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                        >
+                          <option value="">저장 안 함</option>
+                          {mapping?.cmsFieldKey && !mappedFieldStillExists ? (
+                            <option value={mapping.cmsFieldKey} disabled>
+                              현재 매핑을 찾을 수 없음 ({mapping.cmsFieldKey})
+                            </option>
+                          ) : null}
+                          {compatibleFields.map((cmsField) => (
+                            <option key={cmsField.fieldId} value={cmsField.key}>
+                              {cmsField.label} ({cmsField.key}, {cmsField.type})
+                            </option>
+                          ))}
+                        </select>
+                      ) : (
+                        <input
+                          type="text"
+                          aria-label={`${field.label} CMS field key`}
+                          data-form-cms-field-input={field.id}
+                          placeholder="CMS field key"
+                          value={mapping?.cmsFieldKey ?? ''}
+                          onChange={(e) => updateCmsFieldMapping(field.id, e.target.value)}
+                          style={{ padding: '5px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          ) : null}
+        </div>
+
+        <div
+          data-form-antispam-card
+          style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: 12, display: 'flex', flexDirection: 'column', gap: 10, background: '#fff', minWidth: 0 }}
+        >
+          <strong style={{ fontSize: 12, color: '#0f172a' }}>스팸/중복 제출 방어</strong>
+          <div className="builder-form-antispam-controls">
+            <input
+              type="text"
+              aria-label="Honeypot field name"
+              data-form-anti-spam-honeypot
+              placeholder="honeypot field name"
+              value={schema.antiSpam?.honeypotFieldName ?? ''}
+              onChange={(e) => updateAntiSpam({ honeypotFieldName: e.target.value || undefined })}
+              style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+            />
+            <input
+              type="number"
+              min={0}
+              aria-label="Minimum submit milliseconds"
+              data-form-anti-spam-minimum-submit
+              placeholder="minimum submit ms"
+              value={schema.antiSpam?.minimumSubmitMs ?? ''}
+              onChange={(e) => updateAntiSpam({ minimumSubmitMs: e.target.value === '' ? undefined : Number(e.target.value) })}
+              style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+            />
+            <input
+              type="number"
+              min={0}
+              aria-label="Duplicate window milliseconds"
+              data-form-anti-spam-duplicate-window
+              placeholder="duplicate window ms"
+              value={schema.antiSpam?.duplicateWindowMs ?? ''}
+              onChange={(e) => updateAntiSpam({ duplicateWindowMs: e.target.value === '' ? undefined : Number(e.target.value) })}
+              style={{ padding: '6px 8px', border: '1px solid #cbd5e1', borderRadius: 4, fontSize: 12 }}
+            />
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            {schema.fields.map((field) => (
+              <label key={field.id} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 11, color: '#475569' }}>
+                <input
+                  type="checkbox"
+                  data-form-anti-spam-duplicate-field={field.id}
+                  checked={schema.antiSpam?.duplicateFields?.includes(field.id) ?? false}
+                  onChange={(e) => toggleDuplicateField(field.id, e.target.checked)}
+                />
+                중복 기준: {field.label}
+              </label>
+            ))}
+          </div>
+        </div>
 
         <div style={{ display: 'flex', gap: 6, alignItems: 'center', borderBottom: '1px solid #e2e8f0', paddingBottom: 6 }}>
           {steps.map((step, idx) => (

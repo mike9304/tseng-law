@@ -33,6 +33,7 @@ import {
   statusDotStyle,
   statusMessageStyle,
   titleTextStyle,
+  warningMessageStyle,
 } from './PageSwitcher.styles';
 
 interface PageMeta {
@@ -42,7 +43,28 @@ interface PageMeta {
   title: Record<string, string>;
   isHomePage?: boolean;
   publishedAt?: string;
+  dynamicList?: {
+    collectionId: string;
+    targetId: string;
+  };
+  dynamicItem?: {
+    collectionId: string;
+    targetId: string;
+    defaultRecordSlug: string;
+  };
 }
+
+interface RenamePageResponse {
+  ok?: boolean;
+  redirectCreated?: boolean;
+  redirectWarnings?: Array<{
+    from: string;
+    to: string;
+    message: string;
+  }>;
+}
+
+type DynamicPageCollectionId = 'columns' | 'service-areas';
 
 interface ColumnQuickSummary {
   loading: boolean;
@@ -88,8 +110,10 @@ export default function PageSwitcher({
   const [editingPageId, setEditingPageId] = useState<string | null>(null);
   const [editingTitle, setEditingTitle] = useState('');
   const [editingSlug, setEditingSlug] = useState('');
+  const [editingCreateRedirect, setEditingCreateRedirect] = useState(true);
   const [submittingPageId, setSubmittingPageId] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [warningMessage, setWarningMessage] = useState<string | null>(null);
   const titleInputRef = useRef<HTMLInputElement | null>(null);
   const slugPromptRef = useRef<HTMLDivElement | null>(null);
   const slugPromptRestoreFocusRef = useRef<HTMLElement | null>(null);
@@ -303,18 +327,100 @@ export default function PageSwitcher({
     }
   };
 
+  const handleCreateDynamicListPage = async (collectionId: DynamicPageCollectionId) => {
+    if (creating) return;
+    const token = Date.now().toString(36);
+    const isColumns = collectionId === 'columns';
+    const slug = `${isColumns ? 'columns-list' : 'services-list'}-${token}`;
+    setCreating(true);
+    setErrorMessage(null);
+    try {
+      const response = await fetch('/api/builder/site/pages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({
+          locale,
+          slug,
+          title: isColumns ? `칼럼 동적 리스트 ${token}` : `서비스 동적 리스트 ${token}`,
+          addToNavigation: false,
+          dynamicListCollectionId: collectionId,
+          dynamicListLimit: isColumns ? 4 : 6,
+        }),
+      });
+      if (!response.ok) {
+        setErrorMessage(await readPageResponseError(response, '동적 리스트 페이지를 생성하지 못했습니다.'));
+        return;
+      }
+      const data = (await response.json()) as { success?: boolean; pageId?: string; page?: PageMeta; error?: string };
+      const nextPageId = data.pageId ?? data.page?.pageId ?? null;
+      if (!data.success || !nextPageId) {
+        setErrorMessage(data.error || '동적 리스트 페이지를 생성하지 못했습니다.');
+        return;
+      }
+      await fetchPages();
+      onSelectPage(nextPageId, data.page?.slug ?? slug);
+    } catch {
+      setErrorMessage('동적 리스트 페이지를 생성하지 못했습니다.');
+    } finally {
+      setCreating(false);
+    }
+  };
+
+  const handleCreateDynamicItemPage = async (collectionId: DynamicPageCollectionId) => {
+    if (creating) return;
+    const token = Date.now().toString(36);
+    const isColumns = collectionId === 'columns';
+    const slug = `${isColumns ? 'columns-item' : 'services-item'}-${token}`;
+    setCreating(true);
+    setErrorMessage(null);
+    try {
+      const response = await fetch('/api/builder/site/pages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({
+          locale,
+          slug,
+          title: isColumns ? `칼럼 동적 상세 ${token}` : `서비스 동적 상세 ${token}`,
+          addToNavigation: false,
+          dynamicItemCollectionId: collectionId,
+        }),
+      });
+      if (!response.ok) {
+        setErrorMessage(await readPageResponseError(response, '동적 상세 페이지를 생성하지 못했습니다.'));
+        return;
+      }
+      const data = (await response.json()) as { success?: boolean; pageId?: string; page?: PageMeta; error?: string };
+      const nextPageId = data.pageId ?? data.page?.pageId ?? null;
+      if (!data.success || !nextPageId) {
+        setErrorMessage(data.error || '동적 상세 페이지를 생성하지 못했습니다.');
+        return;
+      }
+      await fetchPages();
+      onSelectPage(nextPageId, data.page?.slug ?? slug);
+    } catch {
+      setErrorMessage('동적 상세 페이지를 생성하지 못했습니다.');
+    } finally {
+      setCreating(false);
+    }
+  };
+
   const startRename = (page: PageMeta) => {
     setEditingPageId(page.pageId);
     setEditingTitle(page.title[page.locale] || page.title[locale] || page.title.ko || page.slug || '');
     setEditingSlug(page.slug);
+    setEditingCreateRedirect(true);
     setOpenMenuPageId(null);
     setErrorMessage(null);
+    setWarningMessage(null);
   };
 
   const cancelRename = () => {
     setEditingPageId(null);
     setEditingTitle('');
     setEditingSlug('');
+    setEditingCreateRedirect(true);
   };
 
   const handleRename = async (page: PageMeta) => {
@@ -327,6 +433,7 @@ export default function PageSwitcher({
 
     setSubmittingPageId(page.pageId);
     setErrorMessage(null);
+    setWarningMessage(null);
     try {
       const response = await fetch(
         `/api/builder/site/pages/${page.pageId}?locale=${encodeURIComponent(page.locale)}`,
@@ -334,16 +441,27 @@ export default function PageSwitcher({
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'same-origin',
-          body: JSON.stringify({ title: nextTitle, slug: nextSlug }),
+          body: JSON.stringify({
+            title: nextTitle,
+            slug: nextSlug,
+            createRedirect: !page.isHomePage && page.slug !== nextSlug && editingCreateRedirect,
+          }),
         },
       );
       if (!response.ok) {
         setErrorMessage(await readPageResponseError(response, '페이지 이름을 저장하지 못했습니다.'));
         return;
       }
+      const result = await response.json() as RenamePageResponse;
 
       await fetchPages();
       cancelRename();
+      if (result.redirectWarnings?.length) {
+        const warning = result.redirectWarnings[0];
+        setWarningMessage(
+          `페이지는 저장됐지만 ${warning.from} redirect는 생성되지 않았습니다. 기존 redirect 규칙을 확인하세요. (${warning.message})`,
+        );
+      }
     } catch {
       setErrorMessage('페이지 이름을 저장하지 못했습니다.');
     } finally {
@@ -474,9 +592,62 @@ export default function PageSwitcher({
         </section>
       ) : null}
 
+      {!loading ? (
+        <section style={columnsQuickCardStyle} aria-label="동적 리스트 페이지 만들기">
+          <div style={columnsQuickTitleStyle}>
+            <span>CMS 동적 리스트</span>
+            <span style={columnsQuickMetaStyle}>draft page</span>
+          </div>
+          <div style={columnsQuickActionsStyle}>
+            <button
+              type="button"
+              style={columnsQuickButtonStyle}
+              disabled={creating}
+              data-builder-create-dynamic-list-page="columns"
+              onClick={() => { void handleCreateDynamicListPage('columns'); }}
+            >
+              칼럼 리스트
+            </button>
+            <button
+              type="button"
+              style={columnsQuickButtonStyle}
+              disabled={creating}
+              data-builder-create-dynamic-list-page="service-areas"
+              onClick={() => { void handleCreateDynamicListPage('service-areas'); }}
+            >
+              서비스 리스트
+            </button>
+            <button
+              type="button"
+              style={columnsQuickButtonStyle}
+              disabled={creating}
+              data-builder-create-dynamic-item-page="columns"
+              onClick={() => { void handleCreateDynamicItemPage('columns'); }}
+            >
+              칼럼 상세
+            </button>
+            <button
+              type="button"
+              style={columnsQuickButtonStyle}
+              disabled={creating}
+              data-builder-create-dynamic-item-page="service-areas"
+              onClick={() => { void handleCreateDynamicItemPage('service-areas'); }}
+            >
+              서비스 상세
+            </button>
+          </div>
+        </section>
+      ) : null}
+
       {errorMessage ? (
         <div style={statusMessageStyle} role="status" aria-live="polite">
           {errorMessage}
+        </div>
+      ) : null}
+
+      {warningMessage ? (
+        <div style={warningMessageStyle} role="status" aria-live="polite">
+          {warningMessage}
         </div>
       ) : null}
 
@@ -504,6 +675,8 @@ export default function PageSwitcher({
           const menuOpen = page.pageId === openMenuPageId;
           const showMoreButton = hoveredPageId === page.pageId || menuOpen;
           const isBusy = submittingPageId === page.pageId;
+          const isDynamicItemPage = Boolean(page.dynamicItem);
+          const isDynamicPage = Boolean(page.dynamicList || page.dynamicItem);
 
           return (
             <div
@@ -535,6 +708,41 @@ export default function PageSwitcher({
                     onChange={(event) => setEditingSlug(event.target.value)}
                     onKeyDown={(event) => { void handleEditKeyDown(event, page); }}
                   />
+                  {!page.isHomePage && page.slug !== editingSlug.trim() ? (
+                    <label
+                      style={{
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: 8,
+                        padding: '7px 9px',
+                        border: '1px solid #bfdbfe',
+                        borderRadius: 8,
+                        background: '#eff6ff',
+                        color: '#1e3a8a',
+                        fontSize: '0.72rem',
+                        lineHeight: 1.35,
+                      }}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={editingCreateRedirect}
+                        onChange={(event) => setEditingCreateRedirect(event.target.checked)}
+                        style={{ marginTop: 2 }}
+                      />
+                      <span>
+                        <strong>301 redirect 생성</strong><br />
+                        저장 시 /{page.locale}/{page.slug} 에서 새 URL로 이동합니다.
+                        {isDynamicItemPage ? (
+                          <>
+                            <br />
+                            CMS 레코드 상세 URL은 /old/* 에서 /new/* 로 함께 이동합니다.
+                          </>
+                        ) : null}
+                        <br />
+                        기존 redirect 규칙이 같은 URL을 쓰면 페이지는 저장되고 redirect만 건너뜁니다.
+                      </span>
+                    </label>
+                  ) : null}
                   <div style={editHintStyle}>
                     {isBusy ? '저장 중...' : 'Enter 저장 · Esc 취소'}
                   </div>
@@ -549,6 +757,7 @@ export default function PageSwitcher({
                     <span style={statusDotStyle(!!page.publishedAt)} title={page.publishedAt ? 'Published' : 'Draft'} />
                     <span style={titleTextStyle}>{page.title[locale] || page.title[page.locale] || page.title.ko || page.slug || 'Untitled'}</span>
                     {page.isHomePage ? <span style={homeBadgeStyle}>HOME</span> : null}
+                    {isDynamicPage ? <span style={homeBadgeStyle}>CMS</span> : null}
                     <span style={slugStyle}>/{page.slug}</span>
                   </button>
 

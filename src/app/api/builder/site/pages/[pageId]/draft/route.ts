@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 import {
   canProjectPageToLocale,
   readSiteDocument,
@@ -54,18 +54,20 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = await guardMutation(request, { permission: 'edit-pages' });
+  const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
 
-  const state = await readPageCanvasRecordState('default', params.pageId, 'draft');
+  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
+  const mismatch = await localeMismatchResponse(params.pageId, locale);
+  if (mismatch) return mismatch;
+
+  const draftState = await readPageCanvasRecordState('default', params.pageId, 'draft');
+  const state = draftState ?? await readPageCanvasRecordState('default', params.pageId, 'published');
 
   if (!state) {
     return NextResponse.json({ ok: false, error: 'Draft not found' }, { status: 404 });
   }
 
-  const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
-  const mismatch = await localeMismatchResponse(params.pageId, locale);
-  if (mismatch) return mismatch;
   const document = repairHomeCanvasLocale(
     normalizeCanvasDocument(state.record.document, locale),
     locale,
@@ -73,7 +75,8 @@ export async function GET(
 
   return NextResponse.json({
     ok: true,
-    draft: draftMeta(state.record),
+    draft: draftState ? draftMeta(state.record) : null,
+    recoveredFrom: draftState ? 'draft' : 'published',
     document,
   });
 }

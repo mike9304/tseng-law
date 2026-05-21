@@ -8,6 +8,8 @@ import { usePublishedOverlayFocus } from '@/components/builder/published/overlay
 
 type GalleryImage = BuilderGalleryCanvasNode['content']['images'][number];
 
+const EMPTY_GALLERY_IMAGES: GalleryImage[] = [];
+
 const FALLBACK_IMAGES: GalleryImage[] = [
   {
     src: '/images/header-skyline-buildings.webp',
@@ -105,7 +107,7 @@ export default function GalleryRender({
   mode?: 'edit' | 'preview' | 'published';
 }) {
   const {
-    images = [],
+    images = EMPTY_GALLERY_IMAGES,
     layout = 'grid',
     columns = 3,
     gap = 8,
@@ -117,7 +119,10 @@ export default function GalleryRender({
     thumbnailPosition = 'bottom',
     proStyle = 'clean',
   } = node.content;
-  const normalizedImages = images.length ? images : FALLBACK_IMAGES;
+  const normalizedImages = useMemo(
+    () => (images.length ? images : mode === 'published' ? EMPTY_GALLERY_IMAGES : FALLBACK_IMAGES),
+    [images, mode],
+  );
   const tags = useMemo(() => uniqueTags(normalizedImages), [normalizedImages]);
   const filteredImages = activeFilter === 'all'
     ? normalizedImages
@@ -175,6 +180,16 @@ export default function GalleryRender({
   };
 
   const activeImage = displayImages[Math.min(activeIndex, displayImages.length - 1)] ?? displayImages[0];
+  if (mode === 'published' && displayImages.length === 0) {
+    return (
+      <div
+        className="builder-gallery-root"
+        data-builder-gallery-empty="true"
+        data-builder-gallery-layout={layout}
+        aria-hidden="true"
+      />
+    );
+  }
 
   const filters = tags.length ? (
     <div className="builder-gallery-filterbar" data-builder-gallery-filterbar="true">

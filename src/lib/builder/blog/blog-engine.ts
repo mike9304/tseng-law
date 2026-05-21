@@ -116,9 +116,11 @@ export function sortPosts(posts: BlogPost[], sortBy: BlogFeedConfig['sortBy']): 
 
 export function filterPosts(
   posts: BlogPost[],
-  config: { category?: string; tag?: string; locale?: Locale },
+  config: { category?: string; tag?: string; locale?: Locale; author?: string; query?: string },
 ): BlogPost[] {
   let filtered = posts;
+  const normalizedAuthor = config.author?.trim().toLowerCase();
+  const normalizedQuery = config.query?.trim().toLowerCase();
   if (config.locale) {
     filtered = filtered.filter((p) => p.locale === config.locale);
   }
@@ -127,6 +129,21 @@ export function filterPosts(
   }
   if (config.tag) {
     filtered = filtered.filter((p) => p.tags.includes(config.tag!));
+  }
+  if (normalizedAuthor) {
+    filtered = filtered.filter((p) => p.author?.name?.toLowerCase() === normalizedAuthor);
+  }
+  if (normalizedQuery) {
+    filtered = filtered.filter((p) => [
+      p.title,
+      p.excerpt,
+      p.bodyMarkdown,
+      p.bodyHtml,
+      p.category,
+      p.author?.name,
+      p.author?.title,
+      ...(p.tags ?? []),
+    ].filter(Boolean).join(' ').toLowerCase().includes(normalizedQuery));
   }
   return filtered;
 }
@@ -149,11 +166,11 @@ export function paginatePosts(
 // ─── Default categories for law firm ──────────────────────────────
 
 export const DEFAULT_BLOG_CATEGORIES: BlogCategory[] = [
-  { id: 'company', slug: 'company-setup', name: { ko: '회사설립', 'zh-hant': '公司設立', en: 'Company Setup' }, postCount: 0, color: '#3b82f6' },
+  { id: 'company', slug: 'company-formation', name: { ko: '회사설립', 'zh-hant': '公司設立', en: 'Company Setup' }, postCount: 0, color: '#3b82f6' },
   { id: 'traffic', slug: 'traffic-accident', name: { ko: '교통사고', 'zh-hant': '交通事故', en: 'Traffic Accident' }, postCount: 0, color: '#ef4444' },
-  { id: 'labor', slug: 'labor', name: { ko: '노동법', 'zh-hant': '勞動法', en: 'Labor Law' }, postCount: 0, color: '#10b981' },
+  { id: 'labor', slug: 'labor-law', name: { ko: '노동법', 'zh-hant': '勞動法', en: 'Labor Law' }, postCount: 0, color: '#10b981' },
   { id: 'family', slug: 'family-law', name: { ko: '이혼/가사', 'zh-hant': '離婚/家事', en: 'Family Law' }, postCount: 0, color: '#f59e0b' },
-  { id: 'criminal', slug: 'criminal', name: { ko: '형사', 'zh-hant': '刑事', en: 'Criminal' }, postCount: 0, color: '#8b5cf6' },
+  { id: 'criminal', slug: 'criminal-law', name: { ko: '형사', 'zh-hant': '刑事', en: 'Criminal' }, postCount: 0, color: '#8b5cf6' },
   { id: 'inheritance', slug: 'inheritance', name: { ko: '상속', 'zh-hant': '繼承', en: 'Inheritance' }, postCount: 0, color: '#06b6d4' },
   { id: 'general', slug: 'general', name: { ko: '일반', 'zh-hant': '一般', en: 'General' }, postCount: 0, color: '#6b7280' },
 ];

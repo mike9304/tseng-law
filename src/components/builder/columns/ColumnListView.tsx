@@ -12,6 +12,7 @@ import {
 } from '@/components/builder/columns/blogAdminMeta';
 import { locales, type Locale } from '@/lib/locales';
 import type { ColumnFrontmatter, ColumnListItem } from '@/lib/builder/columns/types';
+import type { NativeBlogPostStatus } from '@/lib/builder/blog/admin-model';
 
 interface ColumnListViewProps {
   routeLocale: Locale;
@@ -36,6 +37,8 @@ const reviewLabels: Record<ColumnListItem['frontmatter']['attorneyReviewStatus']
   reviewed: 'reviewed',
   'needs-revision': 'needs revision',
 };
+
+type BlogStatusFilter = 'all' | NativeBlogPostStatus | 'needs-review';
 
 function formatDate(value: string | null | undefined): string {
   if (!value) return '-';
@@ -95,6 +98,13 @@ function getCardSearchText(column: ColumnListItem): string {
     .toLowerCase();
 }
 
+function getColumnPostStatus(column: ColumnListItem): NativeBlogPostStatus {
+  const publishedAt = column.frontmatter.publishedAt;
+  if (publishedAt && Date.parse(publishedAt) > Date.now()) return 'scheduled';
+  if (column.hasDraft) return 'draft';
+  return column.hasPublished ? 'published' : 'draft';
+}
+
 export default function ColumnListView({
   routeLocale,
   contentLocale,
@@ -103,6 +113,7 @@ export default function ColumnListView({
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
+  const [statusFilter, setStatusFilter] = useState<BlogStatusFilter>('all');
   const [columns, setColumns] = useState(initialColumns);
   const [createError, setCreateError] = useState<string | null>(null);
   const [createPending, setCreatePending] = useState(false);
@@ -119,16 +130,44 @@ export default function ColumnListView({
     return counts;
   }, [columns]);
 
+  const blogAdminStats = useMemo(() => {
+    const authors = new Set<string>();
+    const tags = new Set<string>();
+    let draft = 0;
+    let scheduled = 0;
+    let published = 0;
+    for (const column of columns) {
+      const status = getColumnPostStatus(column);
+      if (status === 'draft') draft += 1;
+      if (status === 'scheduled') scheduled += 1;
+      if (status === 'published') published += 1;
+      if (column.frontmatter.author?.name) authors.add(column.frontmatter.author.name);
+      for (const tag of column.frontmatter.tags ?? []) tags.add(tag);
+    }
+    return {
+      total: columns.length,
+      draft,
+      scheduled,
+      published,
+      authors: authors.size,
+      categories: categoryCounts.size,
+      tags: tags.size,
+    };
+  }, [categoryCounts.size, columns]);
+
   const filteredColumns = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return columns.filter((column) => {
       const category = getColumnBlogCategory(column.frontmatter);
+      const postStatus = getColumnPostStatus(column);
       const categoryMatches = activeCategory === 'all' || category.slug === activeCategory;
       if (!categoryMatches) return false;
+      if (statusFilter === 'needs-review' && column.frontmatter.attorneyReviewStatus !== 'needs-revision') return false;
+      if (statusFilter !== 'all' && statusFilter !== 'needs-review' && postStatus !== statusFilter) return false;
       if (!normalized) return true;
       return getCardSearchText(column).includes(normalized);
     });
-  }, [columns, query, activeCategory]);
+  }, [columns, query, activeCategory, statusFilter]);
 
   async function handleCreate(value: {
     slug: string;
@@ -356,6 +395,33 @@ export default function ColumnListView({
         </div>
       </header>
 
+      <section className="blog-native-admin-strip" data-blog-native-admin>
+        <article data-blog-admin-kpi="posts">
+          <strong>{blogAdminStats.total}</strong>
+          <span>Posts</span>
+        </article>
+        <article data-blog-admin-kpi="drafts">
+          <strong>{blogAdminStats.draft}</strong>
+          <span>Drafts</span>
+        </article>
+        <article data-blog-admin-kpi="scheduled">
+          <strong>{blogAdminStats.scheduled}</strong>
+          <span>Scheduled</span>
+        </article>
+        <article data-blog-admin-kpi="published">
+          <strong>{blogAdminStats.published}</strong>
+          <span>Published</span>
+        </article>
+        <article data-blog-admin-kpi="authors">
+          <strong>{blogAdminStats.authors}</strong>
+          <span>Authors</span>
+        </article>
+        <article data-blog-admin-kpi="taxonomy">
+          <strong>{blogAdminStats.categories}/{blogAdminStats.tags}</strong>
+          <span>Categories / tags</span>
+        </article>
+      </section>
+
       <div className="column-manager-shell">
         <aside className="column-manager-sidebar" aria-label="Column categories">
           <button
@@ -395,6 +461,20 @@ export default function ColumnListView({
                 aria-label="칼럼 검색"
               />
             </label>
+            <label className="column-manager-status-filter">
+              <span>Status</span>
+              <select
+                value={statusFilter}
+                onChange={(event) => setStatusFilter(event.target.value as BlogStatusFilter)}
+                data-blog-status-filter
+              >
+                <option value="all">All statuses</option>
+                <option value="draft">Drafts</option>
+                <option value="scheduled">Scheduled</option>
+                <option value="published">Published</option>
+                <option value="needs-review">Needs revision</option>
+              </select>
+            </label>
             <div className="column-manager-count">
               <strong>{filteredColumns.length}</strong>
               <span>posts</span>
@@ -426,11 +506,14 @@ export default function ColumnListView({
                 const readingTime = estimateReadingTime(`${column.summary} ${stripHtml(column.summary)}`);
                 const authorName = column.frontmatter.author?.name ?? '호정국제 법률사무소';
                 const imageUrl = column.frontmatter.featuredImage;
+                const postStatus = getColumnPostStatus(column);
                 return (
                   <article
                     key={`${column.locale}-${column.slug}`}
                     className="column-post-card"
                     style={{ '--column-category-color': category.color } as CSSProperties}
+                    data-blog-post-card={column.slug}
+                    data-blog-post-status={postStatus}
                   >
                     <div className="column-post-card-media">
                       {imageUrl ? (
@@ -484,7 +567,7 @@ export default function ColumnListView({
                       <div className="column-post-card-status">
                         <span>{freshnessLabels[column.frontmatter.freshness]}</span>
                         <span>{reviewLabels[column.frontmatter.attorneyReviewStatus]}</span>
-                        <span>{column.hasPublished ? 'published' : 'draft'}</span>
+                        <span>{postStatus}</span>
                       </div>
                     </div>
 

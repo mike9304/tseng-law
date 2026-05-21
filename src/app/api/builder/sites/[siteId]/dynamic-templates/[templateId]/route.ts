@@ -33,11 +33,16 @@ export async function GET(
   try {
     const url = new URL(request.url);
     const locale = normalizeLocale(url.searchParams.get('locale') ?? undefined);
-    const [detail, draft, published] = await Promise.all([
-      Promise.resolve(readBuilderDynamicTemplateDetail(templateId, locale)),
-      readBuilderDynamicTemplateDraft(templateId, locale),
-      readBuilderDynamicTemplatePublished(templateId, locale),
+    const previewRecordId = url.searchParams.get('previewRecordId');
+    const [draft, published] = await Promise.all([
+      readBuilderDynamicTemplateDraft(templateId, locale, previewRecordId),
+      readBuilderDynamicTemplatePublished(templateId, locale, previewRecordId),
     ]);
+    const detail = readBuilderDynamicTemplateDetail(
+      templateId,
+      locale,
+      previewRecordId ?? draft.snapshot.state.selectedRecordId ?? published.snapshot.state.selectedRecordId
+    );
     return NextResponse.json({ ok: true, siteId: params.siteId, locale, detail, draft, published });
   } catch (error) {
     console.error('[builder-dynamic-template-detail] failed', error);
@@ -74,13 +79,17 @@ export async function PUT(
   try {
     const url = new URL(request.url);
     const locale = normalizeLocale(url.searchParams.get('locale') ?? undefined);
-    const detail = readBuilderDynamicTemplateDetail(templateId, locale);
     const draft = await writeBuilderDynamicTemplateDraft({
       templateId,
       locale,
       state: body.state,
       updatedBy: typeof body.updatedBy === 'string' ? body.updatedBy : auth.username,
     });
+    const detail = readBuilderDynamicTemplateDetail(
+      templateId,
+      locale,
+      draft.snapshot.state.selectedRecordId
+    );
 
     return NextResponse.json({ ok: true, siteId: params.siteId, locale, detail, draft });
   } catch (error) {

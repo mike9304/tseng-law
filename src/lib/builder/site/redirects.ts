@@ -11,7 +11,9 @@
  *
  * Validation rules enforced here AND in the API layer:
  *   - `from` must start with "/", be ≤ 1024 chars, no whitespace
+ *   - `from` may end in `/*` for a prefix redirect
  *   - `to` must start with "/" or be a full URL (http(s)://)
+ *   - `to` may end in `/*` only when `from` is a prefix redirect
  *   - `from` must not equal `to` (loop)
  *   - `type` must be one of 301|302|307|308
  *   - simple A→B→C chain detection (best-effort)
@@ -68,6 +70,10 @@ export function validateRedirectInput(
   if (!from.startsWith('/')) return { field: 'from', message: 'from must start with "/"' };
   if (from.length > FROM_MAX) return { field: 'from', message: `from must be ≤ ${FROM_MAX} chars` };
   if (/\s/.test(from)) return { field: 'from', message: 'from must not contain whitespace' };
+  const fromWildcard = from.includes('*');
+  if (fromWildcard && (!from.endsWith('/*') || from.indexOf('*') !== from.length - 1)) {
+    return { field: 'from', message: 'from wildcard must be a trailing /* prefix pattern' };
+  }
 
   if (!to) return { field: 'to', message: 'to is required' };
   const isAbsolute = /^https?:\/\//i.test(to);
@@ -75,6 +81,13 @@ export function validateRedirectInput(
     return { field: 'to', message: 'to must start with "/" or be a full URL' };
   }
   if (to.length > TO_MAX) return { field: 'to', message: `to must be ≤ ${TO_MAX} chars` };
+  const toWildcard = to.includes('*');
+  if (toWildcard && (!to.startsWith('/') || !to.endsWith('/*') || to.indexOf('*') !== to.length - 1)) {
+    return { field: 'to', message: 'to wildcard must be a trailing /* path pattern' };
+  }
+  if (toWildcard && !fromWildcard) {
+    return { field: 'to', message: 'to wildcard requires a from wildcard' };
+  }
 
   if (from === to) {
     return { field: 'to', message: 'from and to must differ (loop)' };
@@ -205,17 +218,18 @@ export async function deleteRedirect(
   const existing = site.redirects ?? [];
   const filtered = existing.filter((r) => r.redirectId !== id);
   if (filtered.length === existing.length) return false;
-  await writeSiteWithRedirects(site, filtered);
+  await writeSiteWithRedirects(site, filtered, { deleteRedirectIds: [id] });
   return true;
 }
 
 async function writeSiteWithRedirects(
   site: BuilderSiteDocument,
   redirects: SiteRedirect[],
+  options: Parameters<typeof writeSiteDocument>[1] = {},
 ): Promise<void> {
   site.redirects = redirects;
   site.updatedAt = new Date().toISOString();
-  await writeSiteDocument(site);
+  await writeSiteDocument(site, options);
 }
 
 // ─── Match ────────────────────────────────────────────────────────────

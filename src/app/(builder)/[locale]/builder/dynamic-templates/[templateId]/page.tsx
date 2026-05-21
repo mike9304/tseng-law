@@ -32,22 +32,29 @@ export function generateMetadata({
 
 export default async function BuilderDynamicTemplateDetailPage({
   params,
+  searchParams,
 }: {
   params: { locale: Locale; templateId: string };
+  searchParams?: { previewRecordId?: string | string[] };
 }) {
   const locale = normalizeLocale(params.locale);
   const templateId = decodeBuilderDynamicTemplateParam(params.templateId);
+  const previewRecordId = parseSearchParam(searchParams?.previewRecordId);
 
   if (!templateId) {
     notFound();
   }
 
-  const [overview, detail, draft, published] = await Promise.all([
+  const [overview, draft, published] = await Promise.all([
     readBuilderSiteOverview(locale),
-    Promise.resolve(readBuilderDynamicTemplateDetail(templateId, locale)),
-    readBuilderDynamicTemplateDraft(templateId, locale),
-    readBuilderDynamicTemplatePublished(templateId, locale),
+    readBuilderDynamicTemplateDraft(templateId, locale, previewRecordId),
+    readBuilderDynamicTemplatePublished(templateId, locale, previewRecordId),
   ]);
+  const detail = readBuilderDynamicTemplateDetail(
+    templateId,
+    locale,
+    previewRecordId ?? draft.snapshot.state.selectedRecordId ?? published.snapshot.state.selectedRecordId
+  );
 
   return (
     <BuilderDynamicTemplateWorkspaceShell
@@ -56,6 +63,16 @@ export default async function BuilderDynamicTemplateDetailPage({
       detail={detail}
       draft={draft}
       published={published}
+      initialPreviewRecordId={previewRecordId}
     />
   );
+}
+
+function parseSearchParam(value: string | string[] | undefined) {
+  const firstValue = Array.isArray(value) ? value[0] : value;
+  if (!firstValue || !firstValue.trim()) {
+    return null;
+  }
+
+  return firstValue.trim();
 }

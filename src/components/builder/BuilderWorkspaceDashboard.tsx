@@ -95,6 +95,16 @@ export default function BuilderWorkspaceDashboard({
               <span>Template-first</span>
               <small>Real starting points only</small>
             </a>
+            <Link href={`/${locale}/admin-builder/apps`} className="builder-dashboard-nav-card">
+              <strong>App Market</strong>
+              <span>Install and manage</span>
+              <small>Manifest catalog and lifecycle</small>
+            </Link>
+            <Link href={`/${locale}/admin-builder/ai-generator`} className="builder-dashboard-nav-card">
+              <strong>AI Site Generator</strong>
+              <span>Prompt to sitemap</span>
+              <small>Goals, pages, brand brief</small>
+            </Link>
           </div>
         </section>
       }
@@ -205,6 +215,24 @@ export default function BuilderWorkspaceDashboard({
               <strong>{overview.starterTemplates.length}</strong>
               <span>Starter templates</span>
             </article>
+            <article className="builder-dashboard-kpi-card">
+              <strong>M161</strong>
+              <span>App Market</span>
+            </article>
+            <article className="builder-dashboard-kpi-card">
+              <strong>M166</strong>
+              <span>AI Site Generator</span>
+            </article>
+          </div>
+          <div className="builder-dashboard-page-actions" style={{ marginTop: 14 }}>
+            <Link href={`/${locale}/admin-builder/apps`} className="builder-dashboard-nav-card">
+              <strong>Open App Market</strong>
+              <span>Browse apps, install, enable, disable, and uninstall.</span>
+            </Link>
+            <Link href={`/${locale}/admin-builder/ai-generator`} className="builder-dashboard-nav-card">
+              <strong>Open AI Site Generator</strong>
+              <span>Create a sitemap, content plan, and editable first draft.</span>
+            </Link>
           </div>
         </section>
 

@@ -14,6 +14,9 @@ export interface ColumnPost {
   readTime: string;
   category: ColumnCategory;
   categoryLabel: string;
+  blogCategory?: string;
+  authorName?: string;
+  tags?: string[];
   featuredImage: string;
   content: string;
   summary: string;
@@ -187,6 +190,8 @@ export function getAllColumnPosts(locale: Locale = 'ko'): ColumnPost[] {
       readTime,
       category: cat,
       categoryLabel: categoryLabelFn(cat, locale),
+      blogCategory: cat === 'formation' ? 'company-formation' : 'general',
+      tags: [],
       featuredImage,
       content: contentText,
       summary,

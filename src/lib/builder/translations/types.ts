@@ -17,7 +17,21 @@ export type TranslationContentType =
   | 'site-setting'
   | 'column-title'
   | 'column-summary'
-  | 'column-body';
+  | 'column-body'
+  | 'app-manifest'
+  | 'app-widget'
+  | 'app-setting'
+  | 'app-content';
+
+export type TranslationContentCategory =
+  | 'pages'
+  | 'navigation'
+  | 'site'
+  | 'columns'
+  | 'forms'
+  | 'apps';
+
+export type TranslationAppContentKind = 'faq' | 'events' | 'portfolio';
 
 export interface TranslationTargetValue {
   text: string;
@@ -33,10 +47,16 @@ export interface TranslationContentRef {
   nodeId?: string;
   columnSlug?: string;
   navItemId?: string;
+  appId?: string;
+  widgetId?: string;
+  settingFieldId?: string;
+  routeId?: string;
+  appContentId?: string;
+  appContentKind?: TranslationAppContentKind;
   contentType: TranslationContentType;
   contentRef: string;
   contentPath?: string;
-  category: 'pages' | 'navigation' | 'site' | 'columns' | 'forms';
+  category: TranslationContentCategory;
   label: string;
   pageTitle?: string;
 }

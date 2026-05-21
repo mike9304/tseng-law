@@ -12,6 +12,7 @@
 import { get, list as listBlob, put } from '@vercel/blob';
 import { mkdir, readdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
+import type { BuilderCmsRecordStatus } from '@/lib/builder/cms-types';
 
 // ─── Form Schema ──────────────────────────────────────────────────
 
@@ -58,6 +59,27 @@ export interface FormStep {
   label: string;
 }
 
+export interface FormCmsFieldMapping {
+  formFieldId: string;
+  cmsFieldKey: string;
+}
+
+export interface FormCmsMapping {
+  enabled: boolean;
+  siteId?: string;
+  locale?: string;
+  collectionId?: string;
+  status?: BuilderCmsRecordStatus;
+  fields: FormCmsFieldMapping[];
+}
+
+export interface FormAntiSpamSettings {
+  honeypotFieldName?: string;
+  minimumSubmitMs?: number;
+  duplicateWindowMs?: number;
+  duplicateFields?: string[];
+}
+
 export interface FormSchema {
   formId: string;
   name: string;
@@ -70,6 +92,8 @@ export interface FormSchema {
   notifyEmail?: string;
   redirectUrl?: string;
   storeInCms?: boolean;
+  cmsMapping?: FormCmsMapping;
+  antiSpam?: FormAntiSpamSettings;
   createdAt: string;
   updatedAt: string;
 }
@@ -94,6 +118,14 @@ export interface FormSubmissionFile {
   size: number;
   type?: string;
   uploadedAt?: string;
+  scan?: FormUploadScanResult;
+}
+
+export interface FormUploadScanResult {
+  status: 'passed' | 'skipped';
+  provider: string;
+  scannedAt: string;
+  issues?: string[];
 }
 
 const FORMS_PREFIX = 'builder-forms/schemas/';

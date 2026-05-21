@@ -20,6 +20,11 @@ describe('D-POOL-6 public widget design assets', () => {
     const requiredFiles = [
       'src/lib/builder/components/blogPostCard/BlogPostCard.module.css',
       'src/lib/builder/components/blogFeed/BlogFeed.module.css',
+      'src/lib/builder/components/blogAuthor/BlogAuthor.module.css',
+      'src/lib/builder/components/blogRecentPosts/BlogRecentPosts.module.css',
+      'src/lib/builder/components/eventList/EventList.module.css',
+      'src/lib/builder/components/eventCalendar/EventCalendar.module.css',
+      'src/lib/builder/components/eventRsvp/EventRsvp.module.css',
       'src/components/builder/bookings/BookingFlowSteps.module.css',
       'src/lib/builder/components/contactForm/ContactForm.module.css',
       'src/lib/builder/components/faqList/FaqList.module.css',
@@ -58,6 +63,11 @@ describe('D-POOL-6 public widget design assets', () => {
     const mobileCriticalFiles = [
       'src/lib/builder/components/blogPostCard/BlogPostCard.module.css',
       'src/lib/builder/components/blogFeed/BlogFeed.module.css',
+      'src/lib/builder/components/blogAuthor/BlogAuthor.module.css',
+      'src/lib/builder/components/blogRecentPosts/BlogRecentPosts.module.css',
+      'src/lib/builder/components/eventList/EventList.module.css',
+      'src/lib/builder/components/eventCalendar/EventCalendar.module.css',
+      'src/lib/builder/components/eventRsvp/EventRsvp.module.css',
       'src/components/builder/bookings/BookingFlowSteps.module.css',
       'src/lib/builder/components/contactForm/ContactForm.module.css',
       'src/lib/builder/components/columnList/ColumnList.module.css',

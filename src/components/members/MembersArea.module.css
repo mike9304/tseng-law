@@ -1,0 +1,367 @@
+.authPage,
+.accountPage {
+  min-height: 72vh;
+  padding: 140px max(24px, calc((100vw - 1120px) / 2)) 80px;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.authPanel,
+.accountShell {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.authPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.authIntro,
+.accountHero,
+.protectedPanel,
+.profileForm {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+}
+
+.authIntro,
+.accountHero,
+.protectedPanel {
+  padding: 36px;
+}
+
+.authIntro p,
+.accountHero p {
+  margin: 0 0 12px;
+  color: #7c2d12;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.authIntro h1,
+.accountHero h1,
+.protectedPanel h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.authIntro span,
+.accountHero span,
+.protectedPanel p {
+  display: block;
+  margin-top: 16px;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: #e5e7eb;
+  border-radius: 8px;
+}
+
+.tabs button {
+  min-height: 44px;
+  flex: 1;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #374151;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tabs .activeTab {
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1);
+}
+
+.authForm,
+.profileForm {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.authForm {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.authForm label,
+.profileForm label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #374151;
+}
+
+.authForm input,
+.profileForm input {
+  min-height: 46px;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0 14px;
+  color: #111827;
+  font: inherit;
+  background: #ffffff;
+}
+
+.authForm button,
+.profileForm button,
+.accountLink,
+.protectedPanel a {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 18px;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.authForm button:disabled,
+.profileForm button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.message {
+  margin: 0;
+  color: #166534;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.accountShell {
+  display: grid;
+  gap: 24px;
+}
+
+.accountGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.accountCard {
+  min-height: 160px;
+  display: grid;
+  align-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.accountCard strong {
+  font-size: 1.1rem;
+}
+
+.accountCard p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.memberBadge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.memberBadge span {
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.memberBadge strong {
+  overflow-wrap: anywhere;
+}
+
+.bookingsPanel {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.bookingsHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.bookingsHeader p {
+  margin: 0 0 4px;
+  color: #7c2d12;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.bookingsHeader h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.bookingsHeader > span,
+.bookingStatus {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 10px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.bookingList {
+  display: grid;
+  gap: 10px;
+}
+
+.bookingRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.bookingMain {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.bookingMain strong,
+.bookingMain time {
+  overflow-wrap: anywhere;
+}
+
+.bookingMain time {
+  color: #374151;
+  font-size: 0.94rem;
+}
+
+.bookingMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  color: #4b5563;
+  font-size: 0.86rem;
+}
+
+.bookingActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bookingCode {
+  max-width: 220px;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-align: end;
+}
+
+.emptyState {
+  margin: 0;
+  padding: 18px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  color: #4b5563;
+  background: #f8fafc;
+}
+
+.protectedPanel {
+  display: grid;
+  gap: 20px;
+}
+
+@media (max-width: 780px) {
+  .authPage,
+  .accountPage {
+    padding: 104px 16px 48px;
+  }
+
+  .authPanel,
+  .accountGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .authIntro,
+  .accountHero,
+  .protectedPanel,
+  .profileForm,
+  .authForm,
+  .accountCard,
+  .bookingsPanel {
+    padding: 20px;
+  }
+
+  .bookingRow {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingActions,
+  .bookingActions .accountLink {
+    width: 100%;
+  }
+
+  .bookingCode {
+    max-width: 100%;
+    text-align: start;
+  }
+}

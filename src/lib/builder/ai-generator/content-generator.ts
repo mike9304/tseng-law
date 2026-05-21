@@ -42,12 +42,15 @@ const SECTION_PROMPTS: Record<string, string> = {
 function fallbackSection(sectionId: string, spec: SiteSpec, blueprint: SiteBlueprint): GeneratedSection {
   const name = spec.companyName;
   const slogan = spec.slogan ?? '';
+  const audience = spec.audience ? ` for ${spec.audience}` : '';
+  const primaryGoal = spec.goals?.[0] ? ` Primary goal: ${spec.goals[0]}.` : '';
+  const keyword = spec.brandKeywords?.[0] ? ` ${spec.brandKeywords[0]} should be visible in the brand voice.` : '';
   switch (sectionId) {
     case 'hero':
       return {
         sectionId,
         headline: slogan || `${name} — ${blueprint.heroHeadlineHint}`,
-        body: `Trusted ${spec.industry.replace('-', ' ')} services tailored for your needs.`,
+        body: `Trusted ${spec.industry.replace('-', ' ')} services${audience}. ${primaryGoal}${keyword}`.replace(/\s+/g, ' ').trim(),
         ctaLabel: '문의하기',
       };
     case 'services':
@@ -55,7 +58,9 @@ function fallbackSection(sectionId: string, spec: SiteSpec, blueprint: SiteBluep
         sectionId,
         headline: 'Services',
         body: 'We deliver dependable outcomes across our core service lines.',
-        bullets: ['Consultation', 'Execution', 'Review', 'Ongoing support'],
+        bullets: spec.goals && spec.goals.length > 0
+          ? spec.goals.slice(0, 4)
+          : ['Consultation', 'Execution', 'Review', 'Ongoing support'],
       };
     case 'expertise':
       return {
@@ -112,6 +117,12 @@ function buildLlmPrompt(spec: SiteSpec, blueprint: SiteBlueprint): string {
     `You are generating starter copy for a ${spec.industry} business website.`,
     `Tone: ${spec.tone}. Color preference: ${spec.colorPreference}.`,
     `Company: ${spec.companyName}. Slogan: ${spec.slogan ?? '(none provided)'}.`,
+    `Audience: ${spec.audience ?? '(infer from industry)'}.`,
+    `Business goals: ${spec.goals?.length ? spec.goals.join(', ') : '(infer from industry)'}.`,
+    `Desired pages: ${spec.desiredPages?.length ? spec.desiredPages.join(', ') : '(infer from industry)'}.`,
+    `Brand keywords: ${spec.brandKeywords?.length ? spec.brandKeywords.join(', ') : '(none provided)'}.`,
+    `Constraints and must-haves: ${spec.constraints ?? '(none provided)'}.`,
+    `Visual direction for image and layout art direction: ${spec.visualDirection ?? '(infer from industry and tone)'}.`,
     `Write in ${LOCALE_NAME[spec.locale]}.`,
     `Headline hint: ${blueprint.heroHeadlineHint}`,
     '',

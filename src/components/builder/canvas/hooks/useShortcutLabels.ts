@@ -45,5 +45,7 @@ export function useShortcutLabels(actions: ShortcutAction[]): Map<ShortcutAction
       });
     }
     return labels;
+  // revision is intentional: forces recompute when editor prefs change via event
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [actionKey, isMac, revision]);
 }

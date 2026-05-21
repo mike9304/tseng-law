@@ -6,6 +6,8 @@ import styles from './BookingsAdmin.module.css';
 const navItems = [
   { key: 'dashboard', label: 'Dashboard', href: 'dashboard' },
   { key: 'services', label: 'Services', href: 'services' },
+  { key: 'packages', label: 'Packages', href: 'packages' },
+  { key: 'resources', label: 'Resources', href: 'resources' },
   { key: 'staff', label: 'Staff', href: 'staff' },
   { key: 'calendar', label: 'Calendar', href: 'calendar' },
   { key: 'email-templates', label: 'Email', href: 'email-templates' },

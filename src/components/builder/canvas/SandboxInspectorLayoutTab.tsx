@@ -10,6 +10,7 @@ import {
   type Viewport,
   VIEWPORT_WIDTHS,
 } from '@/lib/builder/canvas/responsive';
+import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
 import {
   InspectorSection,
   LabeledRow,
@@ -140,6 +141,7 @@ export default function SandboxInspectorLayoutTab({
   updateNodeContent,
   updateResponsiveOverride,
   resetResponsiveOverride,
+  nodesById,
 }: {
   node: BuilderCanvasNode;
   viewport: Viewport;
@@ -148,6 +150,7 @@ export default function SandboxInspectorLayoutTab({
   updateNodeContent: UpdateNodeContent;
   updateResponsiveOverride: UpdateResponsiveOverride;
   resetResponsiveOverride: (nodeId: string, viewport: Viewport) => void;
+  nodesById: Map<string, BuilderCanvasNode>;
 }) {
   const isViewportOverride = viewport !== 'desktop';
   const responsiveViewport = isViewportOverride ? viewport : null;
@@ -167,6 +170,7 @@ export default function SandboxInspectorLayoutTab({
     isViewportOverride && activeOverride?.rect?.[field] !== undefined
   );
   const isHiddenAtVp = resolveViewportHidden(node, viewport);
+  const isInFlowContext = parentUsesFlowLayout(node, nodesById);
   const commitRect = (field: 'x' | 'y' | 'width' | 'height', nextValue: number) => {
     if (!isViewportOverride) {
       updateNode(node.id, (current) => updateRectField(current, field, nextValue));
@@ -299,7 +303,7 @@ export default function SandboxInspectorLayoutTab({
           viewport={viewport}
           value={effectiveRect.x}
           onCommit={(nextValue) => commitRect('x', nextValue)}
-          disabled={node.locked}
+          disabled={node.locked || isInFlowContext}
           hasOverride={fieldHasOverride('x')}
         />
         <LayoutField
@@ -307,9 +311,26 @@ export default function SandboxInspectorLayoutTab({
           viewport={viewport}
           value={effectiveRect.y}
           onCommit={(nextValue) => commitRect('y', nextValue)}
-          disabled={node.locked}
+          disabled={node.locked || isInFlowContext}
           hasOverride={fieldHasOverride('y')}
         />
+        {isInFlowContext ? (
+          <div
+            style={{
+              gridColumn: '1 / -1',
+              fontSize: '0.68rem',
+              color: '#64748b',
+              background: '#f8fafc',
+              border: '1px solid #e2e8f0',
+              borderRadius: 6,
+              padding: '5px 8px',
+              margin: '2px 0 4px',
+              lineHeight: 1.3,
+            }}
+          >
+            이 요소는 부모의 Flow 레이아웃(flex / grid)을 따릅니다. X/Y 위치는 무시됩니다.
+          </div>
+        ) : null}
         <LayoutField
           label="Width"
           viewport={viewport}

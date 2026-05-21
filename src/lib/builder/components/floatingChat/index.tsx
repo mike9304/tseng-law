@@ -9,6 +9,7 @@ const PROVIDER_GLYPH: Record<BuilderFloatingChatCanvasNode['content']['provider'
   kakao: 'K',
   telegram: 'TG',
   messenger: 'MS',
+  'live-chat': 'CHAT',
   custom: '?',
 };
 
@@ -18,6 +19,7 @@ const PROVIDER_COLOR_FALLBACK: Record<BuilderFloatingChatCanvasNode['content']['
   kakao: '#fee500',
   telegram: '#26a5e4',
   messenger: '#0084ff',
+  'live-chat': '#0f172a',
   custom: '#0f172a',
 };
 
@@ -31,24 +33,52 @@ function FloatingChatRender({
   const c = node.content;
   const safeHref = toSafeHref(c.href) ?? '#';
   const bg = c.color && c.color.trim() ? c.color : PROVIDER_COLOR_FALLBACK[c.provider];
+  const isNativeLiveChat = c.provider === 'live-chat';
+  const clickGuard = mode === 'edit'
+    ? {
+        onClick: (event: React.MouseEvent<HTMLElement>) => {
+          event.preventDefault();
+        },
+      }
+    : {};
+  const commonProps = {
+    className: 'builder-social-floating-chat',
+    'data-builder-social-widget': 'floating-chat',
+    'data-builder-floating-provider': c.provider,
+    'data-builder-floating-placement': c.placement,
+    'aria-label': c.label,
+    style: { background: bg },
+  } as const;
+
+  const content = (
+    <>
+      <span aria-hidden="true">{PROVIDER_GLYPH[c.provider]}</span>
+      {c.showLabel ? <span className="builder-social-floating-label">{c.label}</span> : null}
+    </>
+  );
+
+  if (isNativeLiveChat) {
+    return (
+      <button
+        {...commonProps}
+        type="button"
+        data-builder-live-chat-trigger="true"
+        {...clickGuard}
+      >
+        {content}
+      </button>
+    );
+  }
 
   return (
     <a
-      className="builder-social-floating-chat"
-      data-builder-social-widget="floating-chat"
-      data-builder-floating-provider={c.provider}
-      data-builder-floating-placement={c.placement}
+      {...commonProps}
       href={safeHref}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={c.label}
-      onClick={(event) => {
-        if (mode === 'edit') event.preventDefault();
-      }}
-      style={{ background: bg }}
+      {...clickGuard}
     >
-      <span aria-hidden="true">{PROVIDER_GLYPH[c.provider]}</span>
-      {c.showLabel ? <span className="builder-social-floating-label">{c.label}</span> : null}
+      {content}
     </a>
   );
 }
@@ -74,6 +104,7 @@ function FloatingChatInspector({
           <option value="kakao">Kakao</option>
           <option value="telegram">Telegram</option>
           <option value="messenger">Messenger</option>
+          <option value="live-chat">Live Chat</option>
           <option value="custom">Custom</option>
         </select>
       </label>

@@ -2,16 +2,19 @@ import {
   getService,
   getStaff,
   getStaffAvailability,
+  listResources,
   listBookings,
   listStaff,
 } from '@/lib/builder/bookings/storage';
 import { dayOfWeeks, type DayOfWeek } from '@/lib/builder/bookings/types';
 import { isHolidayDate } from '@/lib/builder/bookings/availability-templates';
+import { dateInTimezone, localDateTimeToUtcIso, normalizeBookingTimezone } from './timezone';
 
 export interface SlotRequest {
   serviceId: string;
   staffId: string;
   date: string;
+  excludeBookingId?: string;
 }
 
 export interface Slot {
@@ -19,14 +22,11 @@ export interface Slot {
   endAt: string;
   staffId: string;
   timezone: string;
+  capacityRemaining?: number;
+  capacityTotal?: number;
 }
 
 const SLOT_STEP_MINUTES = 30;
-
-function timezoneOffset(timezone: string): string {
-  if (timezone === 'Asia/Seoul') return '+09:00';
-  return '+08:00';
-}
 
 function dayOfWeekForDate(date: string): DayOfWeek {
   const index = new Date(`${date}T12:00:00.000Z`).getUTCDay();
@@ -44,10 +44,6 @@ function minutesToTime(minutes: number): string {
   return `${hours}:${mins}`;
 }
 
-function toIso(date: string, time: string, timezone: string): string {
-  return new Date(`${date}T${time}:00.000${timezoneOffset(timezone)}`).toISOString();
-}
-
 function addMinutes(iso: string, minutes: number): string {
   return new Date(new Date(iso).getTime() + minutes * 60_000).toISOString();
 }
@@ -56,7 +52,12 @@ function intervalsOverlap(aStart: string, aEnd: string, bStart: string, bEnd: st
   return aStart < bEnd && aEnd > bStart;
 }
 
-async function computeSlotsForStaff(serviceId: string, staffId: string, date: string): Promise<Slot[]> {
+async function computeSlotsForStaff(
+  serviceId: string,
+  staffId: string,
+  date: string,
+  excludeBookingId?: string,
+): Promise<Slot[]> {
   const [service, staff, availability] = await Promise.all([
     getService(serviceId),
     getStaff(staffId),
@@ -65,17 +66,27 @@ async function computeSlotsForStaff(serviceId: string, staffId: string, date: st
 
   if (!service || !service.isActive || !staff || !staff.isActive) return [];
   if (service.staffIds.length > 0 && !service.staffIds.includes(staffId)) return [];
+  const timezone = normalizeBookingTimezone(availability.timezone);
   if (isHolidayDate(date, availability.holidayCalendar)) return [];
 
   const day = dayOfWeekForDate(date);
   const blocks = availability.weekly[day] || [];
   if (blocks.length === 0) return [];
 
-  const from = toIso(date, '00:00', availability.timezone);
+  const from = localDateTimeToUtcIso(date, '00:00', timezone);
   const to = addMinutes(from, 36 * 60);
-  const bookings = await listBookings({ from, to, staffId });
+  const requiredResourceIds = service.requiredResourceIds ?? [];
+  const [allStaffBookings, allResourceBookings, resources] = await Promise.all([
+    listBookings({ from, to, staffId }),
+    requiredResourceIds.length > 0 ? listBookings({ from, to }) : Promise.resolve([]),
+    requiredResourceIds.length > 0 ? listResources(true) : Promise.resolve([]),
+  ]);
+  const staffBookings = allStaffBookings.filter((booking) => booking.bookingId !== excludeBookingId);
+  const resourceBookings = allResourceBookings.filter((booking) => booking.bookingId !== excludeBookingId);
+  const requiredResources = resources.filter((resource) => requiredResourceIds.includes(resource.resourceId));
   const bufferBefore = service.bufferBeforeMinutes;
   const bufferAfter = service.bufferAfterMinutes;
+  const maxParticipants = Math.max(1, service.maxParticipants ?? 1);
   const slotStepMinutes = service.slotStepMinutes ?? SLOT_STEP_MINUTES;
   const now = new Date().toISOString();
 
@@ -86,7 +97,7 @@ async function computeSlotsForStaff(serviceId: string, staffId: string, date: st
     const latestStart = blockEnd - service.durationMinutes;
 
     for (let cursor = blockStart; cursor <= latestStart; cursor += slotStepMinutes) {
-      const startAt = toIso(date, minutesToTime(cursor), availability.timezone);
+      const startAt = localDateTimeToUtcIso(date, minutesToTime(cursor), timezone);
       const endAt = addMinutes(startAt, service.durationMinutes);
       if (startAt <= now) continue;
 
@@ -97,10 +108,42 @@ async function computeSlotsForStaff(serviceId: string, staffId: string, date: st
 
       const candidateStartWithBuffer = addMinutes(startAt, -bufferBefore);
       const candidateEndWithBuffer = addMinutes(endAt, bufferAfter);
-      const hasConflict = bookings.some((booking) =>
+      const overlappingBookings = staffBookings.filter((booking) =>
         intervalsOverlap(candidateStartWithBuffer, candidateEndWithBuffer, booking.startAt, booking.endAt),
       );
-      if (!hasConflict) slots.push({ startAt, endAt, staffId, timezone: availability.timezone });
+      const exactSlotBookings = overlappingBookings.filter((booking) =>
+        booking.serviceId === service.serviceId
+        && booking.staffId === staffId
+        && booking.startAt === startAt
+        && booking.endAt === endAt,
+      );
+      const conflictingBookings = overlappingBookings.filter((booking) => !exactSlotBookings.includes(booking));
+
+      const hasResourceConflict = resourceBookings.some((booking) => {
+        if (!booking.resourceIds?.some((resourceId) => requiredResourceIds.includes(resourceId))) return false;
+        const isSameGroupSlot = booking.serviceId === service.serviceId
+          && booking.staffId === staffId
+          && booking.startAt === startAt
+          && booking.endAt === endAt;
+        return !isSameGroupSlot
+          && intervalsOverlap(candidateStartWithBuffer, candidateEndWithBuffer, booking.startAt, booking.endAt);
+      });
+      const hasResourceBlockedTime = requiredResources.some((resource) =>
+        (resource.blockedDates ?? []).some((blocked) =>
+          intervalsOverlap(candidateStartWithBuffer, candidateEndWithBuffer, blocked.start, blocked.end),
+        ),
+      );
+
+      if (!hasResourceConflict && !hasResourceBlockedTime && conflictingBookings.length === 0 && exactSlotBookings.length < maxParticipants) {
+        slots.push({
+          startAt,
+          endAt,
+          staffId,
+          timezone,
+          capacityRemaining: maxParticipants - exactSlotBookings.length,
+          capacityTotal: maxParticipants,
+        });
+      }
     }
   }
 
@@ -117,12 +160,12 @@ export async function computeAvailableSlots(request: SlotRequest): Promise<Slot[
     const candidateIds = (service.staffIds.length > 0 ? service.staffIds : staff.map((member) => member.staffId))
       .filter((staffId) => staff.some((member) => member.staffId === staffId && member.isActive));
     const results = await Promise.all(candidateIds.map((staffId) =>
-      computeSlotsForStaff(request.serviceId, staffId, request.date),
+      computeSlotsForStaff(request.serviceId, staffId, request.date, request.excludeBookingId),
     ));
     return results.flat().sort((a, b) => a.startAt.localeCompare(b.startAt));
   }
 
-  return computeSlotsForStaff(request.serviceId, request.staffId, request.date);
+  return computeSlotsForStaff(request.serviceId, request.staffId, request.date, request.excludeBookingId);
 }
 
 export async function isSlotAvailable(request: {
@@ -130,12 +173,15 @@ export async function isSlotAvailable(request: {
   staffId: string;
   startAt: string;
   durationMinutes?: number;
+  excludeBookingId?: string;
 }): Promise<boolean> {
-  const date = request.startAt.slice(0, 10);
+  const availability = await getStaffAvailability(request.staffId);
+  const date = dateInTimezone(request.startAt, availability.timezone);
   const slots = await computeAvailableSlots({
     serviceId: request.serviceId,
     staffId: request.staffId,
     date,
+    excludeBookingId: request.excludeBookingId,
   });
   return slots.some((slot) => slot.startAt === request.startAt);
 }

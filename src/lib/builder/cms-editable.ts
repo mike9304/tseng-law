@@ -8,6 +8,7 @@ import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persiste
 import {
   builderCmsFieldTypes,
   builderCmsPermissionActors,
+  builderCmsRecordStatuses,
   type BuilderCmsCollection,
   type BuilderCmsCollectionDetail,
   type BuilderCmsCollectionSummary,
@@ -17,6 +18,8 @@ import {
   type BuilderCmsImageValue,
   type BuilderCmsIndexDefinition,
   type BuilderCmsIndexField,
+  type BuilderCmsModerationEvent,
+  type BuilderCmsModerationState,
   type BuilderCmsPermissionActor,
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
@@ -62,6 +65,7 @@ type RecordInput = {
   status?: unknown;
   locale?: unknown;
   fields?: unknown;
+  moderationReason?: unknown;
 };
 
 export type BuilderCmsPermissionAction = keyof BuilderCmsPermissions;
@@ -235,11 +239,15 @@ export async function createEditableBuilderCmsRecord(
   ensureUniqueRecordId(collection, recordId);
   const fields = validateRecordFields(collection, input.fields, { recordId });
   await assertRecordMediaAssetsExist(collection, fields);
+  const status = normalizeRecordStatus(input.status);
   const record: BuilderCmsRecord = {
     recordId,
-    status: normalizeRecordStatus(input.status),
+    status,
     locale: input.locale ? normalizeLocale(String(input.locale)) : undefined,
     fields,
+    ...(shouldTrackModeration(status, input.moderationReason)
+      ? { moderation: buildModerationState(undefined, status, input.moderationReason, now, options) }
+      : {}),
     createdAt: now,
     updatedAt: now,
   };
@@ -281,11 +289,16 @@ export async function updateEditableBuilderCmsRecord(
   await assertRecordMediaAssetsExist(collection, fields);
   const status = input.status ? normalizeRecordStatus(input.status) : previous.status;
   const nextLocale = input.locale ? normalizeLocale(String(input.locale)) : previous.locale;
+  const moderation = (status !== previous.status || hasModerationReason(input.moderationReason))
+    && shouldTrackModeration(status, input.moderationReason)
+    ? buildModerationState(previous.moderation, status, input.moderationReason, now, options)
+    : previous.moderation;
   const nextRecord: BuilderCmsRecord = {
     ...previous,
     status,
     locale: nextLocale,
     fields,
+    ...(moderation ? { moderation } : {}),
     revisions: appendRecordRevision(previous, 'update', { status, locale: nextLocale, fields }, options),
     updatedAt: now,
   };
@@ -437,10 +450,12 @@ export async function bulkUpdateEditableBuilderCmsRecordStatus(
   collectionId: string,
   recordIdsInput: unknown,
   statusInput: unknown,
+  moderationReasonInput: unknown,
   options: BuilderCmsAccessOptions = {},
 ): Promise<BuilderCmsBulkStatusResult | null> {
   const recordIds = normalizeRecordIdList(recordIdsInput);
   const status = normalizeRecordStatusStrict(statusInput);
+  const hasReason = hasModerationReason(moderationReasonInput);
   const locale = normalizeLocale(localeInput ?? undefined);
   const site = await readSiteDocument(siteId, locale);
   const collections = normalizeCmsCollections(site.cmsCollections);
@@ -466,12 +481,16 @@ export async function bulkUpdateEditableBuilderCmsRecordStatus(
   const records = collection.records.map((record) => {
     if (!requestedRecordIds.has(record.recordId)) return record;
     const fields = validatedFields.get(record.recordId) ?? record.fields;
-    if (record.status === status) return { ...record, fields };
+    const moderation = shouldTrackModeration(status, moderationReasonInput)
+      ? buildModerationState(record.moderation, status, moderationReasonInput, now, options)
+      : record.moderation;
+    if (record.status === status && !hasReason) return { ...record, fields };
     updated += 1;
     return {
       ...record,
       status,
       fields,
+      ...(moderation ? { moderation } : {}),
       revisions: appendRecordRevision(record, 'update', { status, locale: record.locale, fields }, options),
       updatedAt: now,
     };
@@ -919,13 +938,14 @@ function normalizeRecords(input: unknown): BuilderCmsRecord[] {
     .filter((item): item is Partial<BuilderCmsRecord> => !!item && typeof item === 'object')
     .map((record) => ({
       recordId: normalizeRequiredId(record.recordId, 'recordId'),
-    status: normalizeRecordStatus(record.status),
-    locale: record.locale ? normalizeLocale(String(record.locale)) : undefined,
-    fields: isRecordObject(record.fields) ? record.fields : {},
-    revisions: normalizeRecordRevisions(record.revisions),
-    createdAt: normalizeTimestamp(record.createdAt),
-    updatedAt: normalizeTimestamp(record.updatedAt),
-  }));
+      status: normalizeRecordStatus(record.status),
+      locale: record.locale ? normalizeLocale(String(record.locale)) : undefined,
+      fields: isRecordObject(record.fields) ? record.fields : {},
+      revisions: normalizeRecordRevisions(record.revisions),
+      moderation: normalizeModerationState(record.moderation),
+      createdAt: normalizeTimestamp(record.createdAt),
+      updatedAt: normalizeTimestamp(record.updatedAt),
+    }));
 }
 
 function normalizeRecordRevisions(input: unknown): BuilderCmsRecordRevision[] {
@@ -948,6 +968,77 @@ function normalizeRecordRevisions(input: unknown): BuilderCmsRecordRevision[] {
         diff: normalizeRecordRevisionDiff(revision.diff),
       };
     });
+}
+
+function normalizeModerationState(input: unknown): BuilderCmsModerationState | undefined {
+  if (!isRecordObject(input)) return undefined;
+  const source = input as Partial<BuilderCmsModerationState>;
+  const history = normalizeModerationHistory(source.history);
+  const reason = normalizeOptionalModerationReason(source.reason);
+  return {
+    ...(reason ? { reason } : {}),
+    ...(typeof source.updatedAt === 'string' ? { updatedAt: normalizeTimestamp(source.updatedAt) } : {}),
+    ...(typeof source.updatedBy === 'string' && source.updatedBy.trim()
+      ? { updatedBy: source.updatedBy.trim().slice(0, 120) }
+      : {}),
+    history,
+  };
+}
+
+function normalizeModerationHistory(input: unknown): BuilderCmsModerationEvent[] {
+  if (!Array.isArray(input)) return [];
+  return input
+    .filter((item): item is Partial<BuilderCmsModerationEvent> => !!item && typeof item === 'object')
+    .map((event) => {
+      const reason = normalizeOptionalModerationReason(event.reason);
+      return {
+        status: normalizeRecordStatus(event.status),
+        ...(reason ? { reason } : {}),
+        createdAt: normalizeTimestamp(event.createdAt),
+        authorLabel: typeof event.authorLabel === 'string' && event.authorLabel.trim()
+          ? event.authorLabel.trim().slice(0, 120)
+          : 'Admin',
+      };
+    })
+    .slice(-50);
+}
+
+function hasModerationReason(input: unknown): boolean {
+  return Boolean(normalizeOptionalModerationReason(input));
+}
+
+function shouldTrackModeration(status: BuilderCmsRecordStatus, reasonInput: unknown): boolean {
+  return status === 'pending' || status === 'approved' || status === 'rejected' || hasModerationReason(reasonInput);
+}
+
+function normalizeOptionalModerationReason(input: unknown): string | undefined {
+  if (typeof input !== 'string') return undefined;
+  const reason = input.trim();
+  return reason ? reason.slice(0, 500) : undefined;
+}
+
+function buildModerationState(
+  current: BuilderCmsModerationState | undefined,
+  status: BuilderCmsRecordStatus,
+  reasonInput: unknown,
+  createdAt: string,
+  options: BuilderCmsAccessOptions,
+): BuilderCmsModerationState {
+  const previous = normalizeModerationState(current);
+  const reason = normalizeOptionalModerationReason(reasonInput);
+  const authorLabel = resolveCmsActorLabel(options);
+  const event: BuilderCmsModerationEvent = {
+    status,
+    ...(reason ? { reason } : {}),
+    createdAt,
+    authorLabel,
+  };
+  return {
+    ...(reason ? { reason } : previous?.reason ? { reason: previous.reason } : {}),
+    updatedAt: createdAt,
+    updatedBy: authorLabel,
+    history: [...(previous?.history ?? []), event].slice(-50),
+  };
 }
 
 function normalizePermissions(input: unknown): BuilderCmsPermissions {
@@ -1626,12 +1717,16 @@ function normalizeFieldType(input: unknown): BuilderCmsFieldType {
 }
 
 function normalizeRecordStatus(input: unknown): BuilderCmsRecordStatus {
-  return input === 'published' || input === 'archived' ? input : 'draft';
+  return typeof input === 'string' && builderCmsRecordStatuses.includes(input as BuilderCmsRecordStatus)
+    ? input as BuilderCmsRecordStatus
+    : 'draft';
 }
 
 function normalizeRecordStatusStrict(input: unknown): BuilderCmsRecordStatus {
-  if (input === 'draft' || input === 'published' || input === 'archived') return input;
-  throw new BuilderCmsValidationError('Record status must be draft, published, or archived.');
+  if (typeof input === 'string' && builderCmsRecordStatuses.includes(input as BuilderCmsRecordStatus)) {
+    return input as BuilderCmsRecordStatus;
+  }
+  throw new BuilderCmsValidationError('Record status must be draft, pending, approved, rejected, published, or archived.');
 }
 
 function normalizeRevisionAction(input: unknown): BuilderCmsRecordRevisionAction {

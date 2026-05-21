@@ -43,7 +43,7 @@ export default function CanvasStageToolbar({
         className={styles.toolbarButton}
         data-active={gridEnabled ? 'true' : undefined}
         aria-pressed={gridEnabled}
-        title={shortcutTitle('Grid snap', 'toggleGrid')}
+        title={shortcutTitle('그리드 스냅', 'toggleGrid')}
         style={gridEnabled ? {
           background: '#116dff',
           borderColor: '#116dff',
@@ -55,10 +55,10 @@ export default function CanvasStageToolbar({
           onToggleGrid();
         }}
       >
-        Grid
+        그리드
       </button>
       <label
-        title="Grid size"
+        title="그리드 크기"
         style={{
           alignItems: 'center',
           display: 'inline-flex',
@@ -102,7 +102,7 @@ export default function CanvasStageToolbar({
         }}
         disabled={!canUndo}
       >
-        Undo
+        실행 취소
       </button>
       <button
         type="button"
@@ -114,7 +114,7 @@ export default function CanvasStageToolbar({
         }}
         disabled={!canRedo}
       >
-        Redo
+        다시 실행
       </button>
     </div>
   );

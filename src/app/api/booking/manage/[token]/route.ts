@@ -6,8 +6,10 @@ import { verifyBookingManageToken } from '@/lib/builder/bookings/manage-token';
 import { getBooking, getService, getStaff, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { textForLocale } from '@/lib/builder/bookings/types';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
-import { applyRefundOutcome, computeRefundForCancel } from '@/lib/builder/bookings/refund';
+import { applyRefundOutcome, computeRefundForCancel, evaluateBookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
+import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -58,11 +60,13 @@ function bookingPayload(result: Awaited<ReturnType<typeof resolveBooking>>) {
       name: textForLocale(result.service.name, locale),
       durationMinutes: result.service.durationMinutes,
       meetingMode: result.service.meetingMode ?? 'in-person',
+      cancellationPolicyId: result.service.cancellationPolicyId,
     } : null,
     staff: result.staff ? {
       staffId: result.staff.staffId,
       name: textForLocale(result.staff.name, locale),
     } : null,
+    policy: evaluateBookingSelfServicePolicy(result.booking, result.service),
   };
 }
 
@@ -98,11 +102,15 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
   }
 
   if (parsed.data.action === 'cancel') {
+    const policy = evaluateBookingSelfServicePolicy(result.booking, result.service);
+    if (!policy.canCancel) {
+      return NextResponse.json({ error: policy.cancelBlockedReason || 'Cancellation is not available for this booking.' }, { status: 409 });
+    }
     // Apply the cancellation policy + Stripe refund so customer-link
     // cancellations don't bypass the refund math that /api/booking/cancel
     // enforces for admin/web flows.
     const outcome = await computeRefundForCancel(result.booking, result.service);
-    const cancelled = applyRefundOutcome(result.booking, outcome, parsed.data.reason);
+    const cancelled = await restorePackageCreditForBooking(applyRefundOutcome(result.booking, outcome, parsed.data.reason));
     const updated = timestamped(cancelled, result.booking.createdAt);
     await saveBooking(updated);
     await sendBookingCancellation(updated, { service: result.service, staff: result.staff });
@@ -123,28 +131,48 @@ export async function PATCH(request: NextRequest, { params }: { params: { token:
   }
 
   const nextStaffId = parsed.data.staffId || result.booking.staffId;
-  const available = await isSlotAvailable({
+  const policy = evaluateBookingSelfServicePolicy(result.booking, result.service);
+  if (!policy.canReschedule) {
+    return NextResponse.json({ error: policy.rescheduleBlockedReason || 'Reschedule is not available for this booking.' }, { status: 409 });
+  }
+  const resourceIds = result.service.requiredResourceIds ?? [];
+  const endAt = addBookingDuration(parsed.data.startAt, result.service.durationMinutes);
+  const slotKey = {
     serviceId: result.booking.serviceId,
     staffId: nextStaffId,
     startAt: parsed.data.startAt,
-  });
-  if (!available) return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
+    resourceIds,
+  };
+  if (!acquireSlotLock(slotKey)) {
+    return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
+  }
 
-  const nextStaff = await getStaff(nextStaffId);
-  if (!nextStaff || !nextStaff.isActive) return NextResponse.json({ error: 'Staff is not available' }, { status: 404 });
+  try {
+    const available = await isSlotAvailable({
+      ...slotKey,
+      excludeBookingId: result.booking.bookingId,
+    });
+    if (!available) return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
 
-  const updated = timestamped({
-    ...result.booking,
-    staffId: nextStaffId,
-    startAt: parsed.data.startAt,
-    endAt: addBookingDuration(parsed.data.startAt, result.service.durationMinutes),
-  }, result.booking.createdAt);
-  await saveBooking(updated);
-  emitEvent('booking.rescheduled', {
-    bookingId: updated.bookingId,
-    staffId: updated.staffId,
-    startAt: updated.startAt,
-    source: 'customer-link',
-  });
-  return NextResponse.json({ ok: true, booking: updated });
+    const nextStaff = await getStaff(nextStaffId);
+    if (!nextStaff || !nextStaff.isActive) return NextResponse.json({ error: 'Staff is not available' }, { status: 404 });
+
+    const updated = timestamped({
+      ...result.booking,
+      staffId: nextStaffId,
+      startAt: parsed.data.startAt,
+      endAt,
+      resourceIds,
+    }, result.booking.createdAt);
+    await saveBooking(updated);
+    emitEvent('booking.rescheduled', {
+      bookingId: updated.bookingId,
+      staffId: updated.staffId,
+      startAt: updated.startAt,
+      source: 'customer-link',
+    });
+    return NextResponse.json({ ok: true, booking: updated });
+  } finally {
+    releaseSlotLock(slotKey);
+  }
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import BookingsAdminShell from '@/components/builder/bookings/BookingsAdminShell';
 import BookingServicesAdmin from '@/components/builder/bookings/BookingServicesAdmin';
-import { listServices, listStaff } from '@/lib/builder/bookings/storage';
+import { listResources, listServices, listStaff } from '@/lib/builder/bookings/storage';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const dynamic = 'force-dynamic';
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default async function BookingServicesPage({ params }: { params: { locale: string } }) {
   const locale: Locale = normalizeLocale(params.locale);
-  const [services, staff] = await Promise.all([listServices(true), listStaff(true)]);
+  const [services, staff, resources] = await Promise.all([listServices(true), listStaff(true), listResources(true)]);
 
   return (
     <BookingsAdminShell
@@ -22,7 +22,7 @@ export default async function BookingServicesPage({ params }: { params: { locale
       title="Booking services"
       subtitle="Package consultations with duration, price, buffers, and eligible lawyers."
     >
-      <BookingServicesAdmin locale={locale} initialServices={services} staff={staff} />
+      <BookingServicesAdmin locale={locale} initialServices={services} staff={staff} resources={resources} />
     </BookingsAdminShell>
   );
 }

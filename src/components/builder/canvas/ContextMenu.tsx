@@ -318,7 +318,6 @@ export default function ContextMenu({
       aria-label={title}
     >
         <header className={styles.contextMenuHeader}>
-          <span>Context menu</span>
           <strong>{title}</strong>
         </header>
         <div className={styles.contextMenuActions}>

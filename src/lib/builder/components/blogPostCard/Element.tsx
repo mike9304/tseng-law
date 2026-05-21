@@ -9,12 +9,14 @@ import {
   legacyCardStyleToVariant,
   resolveCardVariantStyle,
 } from '@/lib/builder/site/component-variants';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from './BlogPostCard.module.css';
 
 interface BlogPostCardElementProps {
   node: BuilderBlogPostCardCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
   theme?: BuilderTheme;
+  locale?: Locale;
 }
 
 type CardContent = BuilderBlogPostCardCanvasNode['content'];
@@ -47,7 +49,7 @@ const MOCK_POST: CardItem = {
   locale: 'ko',
   title: '대만 회사 설립 가이드',
   excerpt: '외국인이 대만에서 법인을 설립하는 절차와 필요한 서류를 알아봅니다.',
-  category: 'company-setup',
+  category: 'company-formation',
   authorName: '호정국제 법률사무소',
   authorTitle: 'Taiwan Legal Desk',
   date: '2026-04-12',
@@ -196,22 +198,23 @@ function CardShell({
 
   if (href) {
     return (
-      <a className={className} href={href} aria-label={`${item.title} 글 보기`} style={vars}>
+      <a className={className} href={href} aria-label={`${item.title} 글 보기`} style={vars} data-builder-blog-card="true">
         {body}
       </a>
     );
   }
 
   return (
-    <article className={className} style={vars}>
+    <article className={className} style={vars} data-builder-blog-card="true">
       {body}
     </article>
   );
 }
 
-export default function BlogPostCardElement({ node, mode = 'edit', theme }: BlogPostCardElementProps) {
+export default function BlogPostCardElement({ node, mode = 'edit', theme, locale }: BlogPostCardElementProps) {
   const c = node.content;
   const isBuilder = mode !== 'published';
+  const effectiveLocale = normalizeLocale(locale || 'ko');
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -230,7 +233,7 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme }: Blog
     setLoading(true);
 
     const params = new URLSearchParams({
-      locale: 'ko',
+      locale: effectiveLocale,
       limit: '100',
       scope: isBuilder ? 'all' : 'public',
     });
@@ -258,7 +261,7 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme }: Blog
     return () => {
       cancelled = true;
     };
-  }, [c.postId, isBuilder]);
+  }, [c.postId, effectiveLocale, isBuilder]);
 
   const selectedItem = useMemo(() => (post ? toCardItem(post) : null), [post]);
 
@@ -291,7 +294,7 @@ export default function BlogPostCardElement({ node, mode = 'edit', theme }: Blog
     <CardShell
       item={selectedItem}
       content={c}
-      href={isBuilder ? `#${selectedItem.slug}` : `/${selectedItem.locale}/columns/${selectedItem.slug}`}
+      href={isBuilder ? `#${selectedItem.slug}` : `/${effectiveLocale}/columns/${selectedItem.slug}`}
       theme={theme}
     />
   );

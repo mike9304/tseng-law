@@ -14,6 +14,7 @@
  * The runner (`gate-runner.ts`) calls all of these and aggregates results.
  */
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { resolveBuilderStaleDataBindingFieldsForDocument } from '@/lib/builder/dataset-binding-validation';
 import { isLinkSafe, linkValueFromLegacy } from '@/lib/builder/links';
 import type { BuilderPageMeta, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { validateBuilderPageSeo } from '@/lib/builder/seo/validation';
@@ -26,6 +27,7 @@ export type CheckCategory =
   | 'images'
   | 'seo'
   | 'forms'
+  | 'data'
   | 'responsive'
   | 'accessibility'
   | 'performance';
@@ -504,6 +506,30 @@ export function checkH1Count(doc: BuilderCanvasDocument): CheckResult[] {
     }];
   }
   return [];
+}
+
+export function checkStaleDatasetBindings(doc: BuilderCanvasDocument): CheckResult[] {
+  const staleFields = resolveBuilderStaleDataBindingFieldsForDocument(doc);
+  if (staleFields.length === 0) return [];
+
+  const affectedNodeIds = Array.from(new Set(staleFields.map((field) => field.nodeId)));
+  const examples = staleFields.slice(0, 3).map((field) =>
+    `${field.nodeId} ${String(field.key)}: ${field.fieldId}`
+  );
+  const remaining = staleFields.length - examples.length;
+  const exampleSummary = [
+    ...examples,
+    ...(remaining > 0 ? [`+${remaining} more`] : []),
+  ].join(', ');
+
+  return [{
+    id: 'data-binding-stale-inventory',
+    severity: 'warning',
+    category: 'data',
+    message: `CMS data bindings need attention: ${affectedNodeIds.length} element${affectedNodeIds.length === 1 ? '' : 's'} / ${staleFields.length} field${staleFields.length === 1 ? '' : 's'} (${exampleSummary}).`,
+    affectedNodeIds,
+    fixHint: 'Review Content → Field binding for the affected elements, then choose replacement fields or set stale rows to Not bound.',
+  }];
 }
 
 export function checkEmptyContent(doc: BuilderCanvasDocument): CheckResult[] {

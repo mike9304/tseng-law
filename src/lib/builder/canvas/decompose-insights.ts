@@ -43,7 +43,7 @@ const copyByLocale = {
   },
 } as const;
 
-const INSIGHTS_ROOT_HEIGHT = 1120;
+const INSIGHTS_ROOT_HEIGHT = 1260;
 const INSIGHTS_LIST_ITEM_HEIGHT = 176;
 const INSIGHTS_LIST_ITEM_PITCH = 196;
 const INSIGHTS_LIST_MIN_HEIGHT = 620;

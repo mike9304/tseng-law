@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { generateSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
+import { siteSpecSchema } from '@/lib/builder/ai-generator/site-spec';
 import { selectBlueprint } from '@/lib/builder/ai-generator/template-selector';
 
 describe('AI site generator', () => {
@@ -60,5 +61,60 @@ describe('AI site generator', () => {
     });
     expect(draft.palette.primary).toMatch(/^#/);
     expect(draft.palette.background).toMatch(/^#/);
+  });
+
+  it('accepts only builder image asset ids for selected hero assets', () => {
+    expect(siteSpecSchema.safeParse({
+      industry: 'law',
+      companyName: '호정국제법률사무소',
+      heroImageAsset: {
+        assetId: 'builder/assets/ko/uploaded-office-hero.webp',
+        filename: 'uploaded-office-hero.webp',
+      },
+      tone: 'professional',
+      colorPreference: 'cool',
+      locale: 'ko',
+    }).success).toBe(true);
+
+    expect(siteSpecSchema.safeParse({
+      industry: 'law',
+      companyName: '호정국제법률사무소',
+      heroImageAsset: {
+        assetId: 'https://example.com/uploaded-office-hero.webp',
+        filename: 'uploaded-office-hero.webp',
+      },
+      tone: 'professional',
+      colorPreference: 'cool',
+      locale: 'ko',
+    }).success).toBe(false);
+  });
+
+  it('turns the expanded prompt brief into a sitemap and content plan', async () => {
+    const draft = await generateSiteDraft({
+      industry: 'law',
+      companyName: '호정국제법률사무소',
+      audience: '대만 진출을 준비하는 한국 기업',
+      goals: ['상담 문의 증가', '칼럼 검색 유입 확보'],
+      desiredPages: ['홈', '업무분야', '칼럼', '문의'],
+      brandKeywords: ['대만 법률', '한국어 상담'],
+      constraints: '모바일 CTA를 우선 노출',
+      visualDirection: '타이베이 야경과 인물 없는 전문 상담 장면',
+      tone: 'authoritative',
+      colorPreference: 'cool',
+      locale: 'ko',
+    });
+
+    expect(draft.plan.sitemap.map((page) => page.slug)).toEqual(['/', '/services', '/columns', '/contact']);
+    expect(draft.plan.brandBrief.audience).toBe('대만 진출을 준비하는 한국 기업');
+    expect(draft.plan.brandBrief.goals).toContain('칼럼 검색 유입 확보');
+    expect(draft.plan.brandBrief.keywords).toContain('대만 법률');
+    expect(draft.plan.brandBrief.constraints).toBe('모바일 CTA를 우선 노출');
+    expect(draft.plan.visualBrief.direction).toBe('타이베이 야경과 인물 없는 전문 상담 장면');
+    expect(draft.plan.visualBrief.imagePrompt).toContain('No readable text');
+    expect(draft.plan.visualBrief.treatment).toContain('documentary-style');
+    expect(draft.plan.contentPlan[0]).toMatchObject({
+      sectionId: 'hero',
+      intent: expect.stringContaining('포지셔닝'),
+    });
   });
 });

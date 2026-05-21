@@ -140,6 +140,18 @@ export const statusMessageStyle: CSSProperties = {
   color: '#b91c1c',
 };
 
+export const warningMessageStyle: CSSProperties = {
+  margin: '0 8px 4px',
+  padding: '7px 9px',
+  border: '1px solid #fbbf24',
+  borderRadius: 8,
+  background: '#fffbeb',
+  color: '#92400e',
+  fontSize: '0.75rem',
+  lineHeight: 1.4,
+  overflowWrap: 'anywhere',
+};
+
 export const emptyStateStyle: CSSProperties = {
   display: 'grid',
   gap: 8,

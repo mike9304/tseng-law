@@ -154,6 +154,40 @@
   min-width: 120px;
 }
 
+.blog-native-admin-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: -0.5rem 0 1.25rem;
+}
+
+.blog-native-admin-strip article {
+  min-width: 0;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--column-border);
+  border-radius: 8px;
+  background: var(--column-panel);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.blog-native-admin-strip strong {
+  display: block;
+  color: var(--column-ink);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.blog-native-admin-strip span {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--column-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
 .column-manager-back-btn {
   min-height: 34px;
   white-space: nowrap;
@@ -234,18 +268,20 @@
 
 .column-manager-toolbar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 220px) auto;
   gap: 0.8rem;
   align-items: end;
   margin-bottom: 1rem;
 }
 
-.column-manager-search {
+.column-manager-search,
+.column-manager-status-filter {
   display: grid;
   gap: 0.35rem;
 }
 
-.column-manager-search span {
+.column-manager-search span,
+.column-manager-status-filter span {
   color: #475467;
   font-size: 0.78rem;
   font-weight: 800;
@@ -253,7 +289,8 @@
   letter-spacing: 0.06em;
 }
 
-.column-manager-search input {
+.column-manager-search input,
+.column-manager-status-filter select {
   width: 100%;
   min-height: 44px;
   border: 1px solid #d0d5dd;
@@ -264,7 +301,8 @@
   font: inherit;
 }
 
-.column-manager-search input:focus {
+.column-manager-search input:focus,
+.column-manager-status-filter select:focus {
   outline: 3px solid var(--column-focus);
   border-color: #0b63a8;
 }
@@ -1370,6 +1408,10 @@
 }
 
 @media (max-width: 1280px) {
+  .blog-native-admin-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .column-post-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1431,6 +1473,10 @@
 }
 
 @media (max-width: 680px) {
+  .blog-native-admin-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .column-manager-toolbar,
   .new-column-form-grid,
   .new-column-template-grid {

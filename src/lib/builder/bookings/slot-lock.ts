@@ -2,9 +2,9 @@
  * PR #20 follow-up — best-effort booking slot lock.
  *
  * Holds a per-`(serviceId,staffId,startAt)` lock during the window between
- * isSlotAvailable() and saveBooking(). Two concurrent /api/booking/book
- * requests for the same slot can otherwise both pass availability and
- * create duplicate bookings.
+ * isSlotAvailable() and saveBooking(). Resource-backed services also hold a
+ * coarse per-`(resourceId,date)` lock so two different staff members cannot
+ * race into the same room before either booking is persisted.
  *
  * Per-process Set keyed on the slot tuple. This is single-instance only —
  * a real distributed setup (multiple Vercel functions) would need
@@ -15,19 +15,40 @@
 const heldUntil = new Map<string, number>();
 const HOLD_MS = 15_000;
 
-function slotKey(args: { serviceId: string; staffId: string; startAt: string }): string {
-  return `${args.serviceId}|${args.staffId}|${args.startAt}`;
+export interface SlotLockArgs {
+  serviceId: string;
+  staffId: string;
+  startAt: string;
+  resourceIds?: string[];
 }
 
-export function acquireSlotLock(args: { serviceId: string; staffId: string; startAt: string }): boolean {
-  const key = slotKey(args);
+function slotKeys(args: SlotLockArgs): string[] {
+  const keys = [`staff:${args.serviceId}|${args.staffId}|${args.startAt}`];
+  const date = args.startAt.slice(0, 10);
+  const resourceIds = Array.from(new Set(args.resourceIds ?? [])).sort();
+  for (const resourceId of resourceIds) {
+    keys.push(`resource:${resourceId}|${date}`);
+  }
+  return keys;
+}
+
+export function acquireSlotLock(args: SlotLockArgs): boolean {
+  const keys = slotKeys(args);
   const now = Date.now();
-  const existing = heldUntil.get(key);
-  if (existing && existing > now) return false;
-  heldUntil.set(key, now + HOLD_MS);
+  if (keys.some((key) => {
+    const existing = heldUntil.get(key);
+    return Boolean(existing && existing > now);
+  })) {
+    return false;
+  }
+  for (const key of keys) {
+    heldUntil.set(key, now + HOLD_MS);
+  }
   return true;
 }
 
-export function releaseSlotLock(args: { serviceId: string; staffId: string; startAt: string }): void {
-  heldUntil.delete(slotKey(args));
+export function releaseSlotLock(args: SlotLockArgs): void {
+  for (const key of slotKeys(args)) {
+    heldUntil.delete(key);
+  }
 }

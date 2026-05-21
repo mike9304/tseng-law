@@ -21,7 +21,7 @@ export function columnToBlogPost(column: ColumnDocument): BlogPost {
   // blogCategory isn't set — keeps existing posts grouped sensibly.
   const legacyCategoryFallback = fm.category
     ? fm.category === 'formation'
-      ? 'company-setup'
+      ? 'company-formation'
       : fm.category === 'case'
         ? 'general'
         : 'general'
@@ -69,9 +69,14 @@ export async function listAllBlogPosts(locale: Locale): Promise<BlogPost[]> {
  * Filters out drafts so unpublished content never leaks.
  */
 export async function listBlogPosts(locale: Locale): Promise<BlogPost[]> {
+  const now = Date.now();
   const bundles = await listColumnBundles(locale);
   return bundles
     .map((bundle) => bundle.published)
     .filter((doc): doc is ColumnDocument => Boolean(doc))
+    .filter((doc) => {
+      const publishedAt = doc.frontmatter.publishedAt;
+      return !publishedAt || Date.parse(publishedAt) <= now;
+    })
     .map(columnToBlogPost);
 }

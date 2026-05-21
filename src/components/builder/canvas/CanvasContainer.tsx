@@ -41,7 +41,13 @@ import {
 import {
   resolveCanvasNodeAbsoluteRectForViewport,
 } from '@/lib/builder/canvas/tree';
-import type { Viewport } from '@/lib/builder/canvas/responsive';
+import {
+  BUILDER_FAQ_ACCORDION_SECTION_HEIGHT,
+  BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT,
+  accordionPreviewExtra,
+  hasAccordionPreviewOpen,
+} from '@/lib/builder/canvas/accordion-preview';
+import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import {
   createDefaultZoomState,
@@ -255,6 +261,7 @@ export default function CanvasContainer({
     }));
   }, [updateEditorPrefs]);
 
+  const geometryViewport = activeViewport ?? currentViewport;
   const nodes = useBuilderCanvasStore((state) => state.document?.nodes ?? EMPTY_CANVAS_NODES);
   const stageWidth = useBuilderCanvasStore(
     (state) => state.document?.stageWidth ?? DEFAULT_STAGE_WIDTH,
@@ -262,6 +269,26 @@ export default function CanvasContainer({
   const stageHeight = useBuilderCanvasStore(
     (state) => state.document?.stageHeight ?? DEFAULT_STAGE_HEIGHT,
   );
+  const interactivePreview = useBuilderCanvasStore((state) => state.interactivePreview);
+  const previewStageExtra = useMemo(() => {
+    const servicesRoot = nodes.find((node) => node.id === 'home-services-root');
+    const faqRoot = nodes.find((node) => node.id === 'home-faq-root');
+    return accordionPreviewExtra(
+      servicesRoot ? resolveViewportRect(servicesRoot, geometryViewport).height : undefined,
+      BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT,
+      hasAccordionPreviewOpen(interactivePreview.servicesRevealedIndices),
+    ) + accordionPreviewExtra(
+      faqRoot ? resolveViewportRect(faqRoot, geometryViewport).height : undefined,
+      BUILDER_FAQ_ACCORDION_SECTION_HEIGHT,
+      hasAccordionPreviewOpen(interactivePreview.faqRevealedIndices),
+    );
+  }, [
+    geometryViewport,
+    interactivePreview.faqRevealedIndices,
+    interactivePreview.servicesRevealedIndices,
+    nodes,
+  ]);
+  const effectiveStageHeight = stageHeight + previewStageExtra;
   const visibleNodes = useMemo(
     () => nodes.filter((node) => node.visible),
     [nodes],
@@ -277,7 +304,6 @@ export default function CanvasContainer({
     }),
     [nodes, siteLightboxes, sitePages],
   );
-  const geometryViewport = activeViewport ?? currentViewport;
   const absoluteRectById = useMemo(() => {
     const nextMap = new Map<string, BuilderCanvasNode['rect']>();
     for (const node of nodes) {
@@ -339,7 +365,7 @@ export default function CanvasContainer({
     setSelectedNodeIds,
     setSelectionBox,
     setZoomState,
-    stageHeight,
+    stageHeight: effectiveStageHeight,
     stageWidth,
     updateNodeRectsForViewport,
     viewportRef,
@@ -378,8 +404,6 @@ export default function CanvasContainer({
       if (target.closest('[data-node-id]')) return;
 
       window.setTimeout(() => {
-        const state = useBuilderCanvasStore.getState();
-        if (!state.selectedNodeIds.includes(inlineEditingNodeId)) return;
         setSelectedNodeIds([], null);
       }, 0);
     };
@@ -516,7 +540,7 @@ export default function CanvasContainer({
     selectableNodes,
     setOverlapPicker,
     setZoomState,
-    stageHeight,
+    stageHeight: effectiveStageHeight,
     stageWidth,
     viewportRef,
     zoomState,
@@ -530,7 +554,7 @@ export default function CanvasContainer({
     editorPrefsRef,
     onActivity,
     resolveCanvasPoint,
-    stageHeight,
+    stageHeight: effectiveStageHeight,
     stageWidth,
     updateEditorPrefs,
   });
@@ -580,7 +604,7 @@ export default function CanvasContainer({
         className={`${styles.stageViewport} ${isSpacePressed ? styles.stageViewportPannable : ''} ${interaction?.type === 'pan' ? styles.stageViewportPanning : ''}`}
         style={{
           flex: '0 0 auto',
-          height: Math.max(240, Math.ceil(stageHeight * zoomState.zoom) + 2),
+          height: Math.max(240, Math.ceil(effectiveStageHeight * zoomState.zoom) + 2),
         }}
         onWheel={(event) => {
           if (event.metaKey || event.ctrlKey) {
@@ -603,7 +627,7 @@ export default function CanvasContainer({
               ref={containerRef}
               className={styles.stage}
               data-canvas-interaction={interaction?.type ?? 'idle'}
-              style={{ width: `${stageWidth}px`, height: `${stageHeight}px` }}
+              style={{ width: `${stageWidth}px`, height: `${effectiveStageHeight}px` }}
             role="application"
             aria-label="Canvas editor"
             aria-roledescription="freeform canvas"
@@ -670,7 +694,7 @@ export default function CanvasContainer({
             {editorPrefs.rulers.enabled ? (
               <CanvasRulers
                 onCreateGuide={createReferenceGuide}
-                stageHeight={stageHeight}
+                stageHeight={effectiveStageHeight}
                 stageWidth={stageWidth}
                 zoom={zoomState.zoom}
               />
@@ -691,7 +715,7 @@ export default function CanvasContainer({
               guides={editorPrefs.referenceGuides}
               onRemoveGuide={removeReferenceGuide}
               onStartGuideDrag={startReferenceGuideDrag}
-              stageHeight={stageHeight}
+              stageHeight={effectiveStageHeight}
               stageWidth={stageWidth}
             />
             <AlignmentGuides guides={guides} />

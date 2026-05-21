@@ -107,10 +107,10 @@ export default function CanvasContextMenuLayer({
 
   if (!contextMenu) return null;
 
-  const contextMenuTitle = selectedNodeIds.length > 1
-    ? `${selectedNodeIds.length} selected`
-    : contextMenu.nodeId ?? 'Context menu';
   const contextMenuNode = nodes.find((node) => node.id === contextMenu.nodeId) ?? null;
+  const contextMenuTitle = selectedNodeIds.length > 1
+    ? `${selectedNodeIds.length}개 선택됨`
+    : (contextMenuNode?.kind ?? '요소') + ' 메뉴';
   const contextPrimaryNode = contextMenuNode ?? selectedNodes[0] ?? null;
   const contextSelectionCount =
     contextMenuNode && !(selectedNodeIds.length > 1 && selectedNodeIds.includes(contextMenuNode.id))
@@ -144,7 +144,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'image-edit',
-          label: 'Crop / Filter / Alt...',
+          label: '자르기 / 필터 / Alt...',
           title: '이미지 자르기, 필터, alt 텍스트 편집',
           disabled:
             contextSelectionCount !== 1 ||
@@ -235,7 +235,7 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-clipboard', label: '', separator: true },
         {
           key: 'copy',
-          label: 'Copy',
+          label: '복사',
           shortcut: shortcutGlyph('copy'),
           title: shortcutTitle('복사', 'copy'),
           disabled: selectedNodeIds.length === 0,
@@ -243,7 +243,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'cut',
-          label: 'Cut',
+          label: '잘라내기',
           shortcut: shortcutGlyph('cut'),
           title: shortcutTitle('잘라내기', 'cut'),
           disabled: !hasUnlockedSelection,
@@ -251,7 +251,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'paste',
-          label: 'Paste',
+          label: '붙여넣기',
           shortcut: shortcutGlyph('paste'),
           title: shortcutTitle('붙여넣기', 'paste'),
           disabled: !clipboardHasContent,
@@ -259,7 +259,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'duplicate',
-          label: 'Duplicate',
+          label: '복제',
           shortcut: shortcutGlyph('duplicate'),
           title: shortcutTitle('복제', 'duplicate'),
           disabled: !hasUnlockedSelection,
@@ -267,7 +267,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'paste-style',
-          label: 'Paste style',
+          label: '스타일 붙여넣기',
           shortcut: shortcutGlyph('pasteStyle'),
           title: '선택 노드에 스타일만 붙여넣기',
           disabled: !styleClipboardHasContent || !hasUnlockedSelection,
@@ -278,7 +278,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'copy-style',
-          label: 'Copy style',
+          label: '스타일 복사',
           shortcut: shortcutGlyph('copyStyle'),
           title: '선택 노드의 스타일만 복사',
           disabled: contextSelectionCount !== 1 || !contextPrimaryNode,
@@ -290,7 +290,7 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-arrange', label: '', separator: true },
         {
           key: 'bring-front',
-          label: 'Bring to front',
+          label: '맨 앞으로',
           shortcut: shortcutGlyph('bringToFront'),
           title: '맨 앞으로 가져오기',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
@@ -298,7 +298,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'bring-forward',
-          label: 'Bring forward',
+          label: '한 단계 앞으로',
           shortcut: shortcutGlyph('bringForward'),
           title: '한 단계 앞으로',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
@@ -306,7 +306,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'send-backward',
-          label: 'Send backward',
+          label: '한 단계 뒤로',
           shortcut: shortcutGlyph('sendBackward'),
           title: '한 단계 뒤로',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
@@ -314,7 +314,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'send-back',
-          label: 'Send to back',
+          label: '맨 뒤로',
           shortcut: shortcutGlyph('sendToBack'),
           title: '맨 뒤로 보내기',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
@@ -322,7 +322,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'lock',
-          label: selectedNodes.every((node) => node.locked) ? 'Unlock selection' : 'Lock selection',
+          label: selectedNodes.every((node) => node.locked) ? '잠금 해제' : '잠금',
           title: '선택 잠금 토글',
           shortcut: shortcutGlyph('toggleLock'),
           disabled: selectedNodeIds.length === 0,
@@ -331,42 +331,42 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-align', label: '', separator: true },
         {
           key: 'align-left',
-          label: 'Align left',
+          label: '왼쪽 정렬',
           title: '왼쪽 정렬',
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('left'),
         },
         {
           key: 'align-center',
-          label: 'Align center',
+          label: '가로 중앙 정렬',
           title: '가운데 정렬',
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('center'),
         },
         {
           key: 'align-right',
-          label: 'Align right',
+          label: '오른쪽 정렬',
           title: '오른쪽 정렬',
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('right'),
         },
         {
           key: 'align-top',
-          label: 'Align top',
+          label: '위쪽 정렬',
           title: '상단 정렬',
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('top'),
         },
         {
           key: 'align-middle',
-          label: 'Align middle',
+          label: '세로 중앙 정렬',
           title: '중앙 정렬',
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('middle'),
         },
         {
           key: 'align-bottom',
-          label: 'Align bottom',
+          label: '아래쪽 정렬',
           title: '하단 정렬',
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => alignSelectedNodes('bottom'),
@@ -374,28 +374,28 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-distribute', label: '', separator: true, onSelect: () => {} },
         {
           key: 'distribute-horizontal',
-          label: 'Distribute horizontally',
+          label: '가로 균등 분배',
           title: '가로 균등 분배 (3개 이상)',
           disabled: selectedNodeIds.length < 3 || !hasUnlockedSelection,
           onSelect: () => distributeSelectedNodes('horizontal'),
         },
         {
           key: 'distribute-vertical',
-          label: 'Distribute vertically',
+          label: '세로 균등 분배',
           title: '세로 균등 분배 (3개 이상)',
           disabled: selectedNodeIds.length < 3 || !hasUnlockedSelection,
           onSelect: () => distributeSelectedNodes('vertical'),
         },
         {
           key: 'match-width',
-          label: 'Match width',
+          label: '너비 맞춤',
           title: '선택 요소 너비 동일화',
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => matchSelectedNodesSize('width'),
         },
         {
           key: 'match-height',
-          label: 'Match height',
+          label: '높이 맞춤',
           title: '선택 요소 높이 동일화',
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
           onSelect: () => matchSelectedNodesSize('height'),
@@ -403,13 +403,13 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-state', label: '', separator: true },
         {
           key: 'hide-on-viewport',
-          label: 'Hide on viewport',
+          label: '기기별 숨김',
           title: '현재 선택을 특정 viewport에서 숨깁니다',
           disabled: selectedNodeIds.length !== 1 || !hasUnlockedSelection,
           children: [
             {
               key: 'hide-desktop',
-              label: 'Hide on desktop',
+              label: '데스크탑에서 숨김',
               onSelect: () => {
                 if (!selectedNodes[0]) return;
                 updateNode(selectedNodes[0].id, (node) => ({ ...node, visible: false }));
@@ -417,7 +417,7 @@ export default function CanvasContextMenuLayer({
             },
             {
               key: 'hide-tablet',
-              label: 'Hide on tablet',
+              label: '태블릿에서 숨김',
               onSelect: () => {
                 if (!selectedNodes[0]) return;
                 updateResponsiveOverride(selectedNodes[0].id, 'tablet', { hidden: true });
@@ -425,7 +425,7 @@ export default function CanvasContextMenuLayer({
             },
             {
               key: 'hide-mobile',
-              label: 'Hide on mobile',
+              label: '모바일에서 숨김',
               onSelect: () => {
                 if (!selectedNodes[0]) return;
                 updateResponsiveOverride(selectedNodes[0].id, 'mobile', { hidden: true });
@@ -435,32 +435,32 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'pin-to-screen',
-          label: 'Pin to screen',
+          label: '화면 고정',
           title: 'Coming soon - Codex F-track',
           disabled: true,
         },
         {
           key: 'anchor-link',
-          label: 'Anchor link...',
+          label: '앵커 링크...',
           title: 'Use the Layout tab to edit anchor name',
           disabled: true,
         },
         {
           key: 'animations',
-          label: 'Animations...',
+          label: '애니메이션...',
           title: 'Open the Animations tab in the inspector',
           disabled: true,
         },
         {
           key: 'effects',
-          label: 'Effects...',
+          label: '효과...',
           title: 'Coming soon - Codex F-track',
           disabled: true,
         },
         { key: 'sep-pages', label: '', separator: true, onSelect: () => {} },
         {
           key: 'move-to-page',
-          label: 'Move to page...',
+          label: '페이지로 이동...',
           title: '다른 페이지로 이동',
           disabled: selectedNodeIds.length === 0 || !hasUnlockedSelection || !onRequestMoveToPage,
           onSelect: () => {
@@ -471,7 +471,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'save-as-section',
-          label: 'Save as section...',
+          label: '섹션으로 저장...',
           title: '컨테이너 + 자식을 라이브러리에 저장 (재사용)',
           disabled:
             selectedNodeIds.length !== 1 ||
@@ -487,37 +487,37 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'add-to-library',
-          label: 'Add to library',
+          label: '라이브러리에 추가',
           title: 'Coming soon - Codex F-track',
           disabled: true,
         },
         {
           key: 'convert-to-component',
-          label: 'Convert to component',
+          label: '컴포넌트로 변환',
           title: 'Coming soon - Codex F-track',
           disabled: true,
         },
         {
           key: 'style-override',
-          label: 'Style override',
+          label: '스타일 오버라이드',
           title: 'Coming soon - Codex F-track',
           disabled: true,
           children: [
-            { key: 'override-fill', label: 'Fill override', disabled: true, title: 'Coming soon - Codex F-track' },
-            { key: 'override-typography', label: 'Typography override', disabled: true, title: 'Coming soon - Codex F-track' },
-            { key: 'override-effects', label: 'Effects override', disabled: true, title: 'Coming soon - Codex F-track' },
+            { key: 'override-fill', label: '채색 오버라이드', disabled: true, title: 'Coming soon - Codex F-track' },
+            { key: 'override-typography', label: '서체 오버라이드', disabled: true, title: 'Coming soon - Codex F-track' },
+            { key: 'override-effects', label: '효과 오버라이드', disabled: true, title: 'Coming soon - Codex F-track' },
           ],
         },
         {
           key: 'reset-style',
-          label: 'Reset style',
+          label: '스타일 초기화',
           title: 'Coming soon - Codex F-track',
           disabled: true,
         },
         { key: 'sep-group', label: '', separator: true, onSelect: () => {} },
         {
           key: 'group',
-          label: 'Group',
+          label: '그룹',
           title: '그룹 만들기 (2개 이상)',
           shortcut: shortcutGlyph('group'),
           disabled: selectedNodeIds.length < 2 || !hasUnlockedSelection,
@@ -525,7 +525,7 @@ export default function CanvasContextMenuLayer({
         },
         {
           key: 'ungroup',
-          label: 'Ungroup',
+          label: '그룹 해제',
           title: '그룹 해제',
           shortcut: shortcutGlyph('ungroup'),
           disabled:
@@ -537,7 +537,7 @@ export default function CanvasContextMenuLayer({
         { key: 'sep-danger', label: '', separator: true },
         {
           key: 'delete',
-          label: 'Delete',
+          label: '삭제',
           shortcut: shortcutGlyph('delete'),
           title: shortcutTitle('삭제', 'delete'),
           tone: 'danger',

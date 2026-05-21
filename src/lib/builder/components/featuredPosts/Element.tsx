@@ -4,14 +4,16 @@ import { useEffect, useMemo, useState } from 'react';
 import type { BuilderFeaturedPostsCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { DEFAULT_BLOG_CATEGORIES } from '@/lib/builder/blog/blog-engine';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 interface FeaturedPostsElementProps {
   node: BuilderFeaturedPostsCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }
 
 const MOCK = [
-  { postId: 'm1', slug: 'm1', title: '대만 회사 설립 가이드', excerpt: '외국인 법인 설립 절차 총정리.', category: 'company-setup' },
+  { postId: 'm1', slug: 'm1', title: '대만 회사 설립 가이드', excerpt: '외국인 법인 설립 절차 총정리.', category: 'company-formation' },
   { postId: 'm2', slug: 'm2', title: '국제이혼 관할권 분쟁', excerpt: '국적이 다른 부부의 이혼소송 관할 결정.', category: 'family-law' },
   { postId: 'm3', slug: 'm3', title: '교통사고 합의금 산정', excerpt: '대만 교통사고 합의금 적정선 산출.', category: 'traffic-accident' },
 ];
@@ -21,15 +23,16 @@ function categoryLabel(slug: string): string {
   return cat?.name.ko ?? slug;
 }
 
-export default function FeaturedPostsElement({ node, mode = 'edit' }: FeaturedPostsElementProps) {
+export default function FeaturedPostsElement({ node, mode = 'edit', locale }: FeaturedPostsElementProps) {
   const c = node.content;
   const isBuilder = mode !== 'published';
+  const effectiveLocale = normalizeLocale(locale || 'ko');
   const [posts, setPosts] = useState<BlogPost[] | null>(null);
 
   useEffect(() => {
     if (isBuilder) return;
     let cancelled = false;
-    fetch(`/api/builder/blog/posts?locale=ko&featured=true&limit=${c.limit}`)
+    fetch(`/api/builder/blog/posts?locale=${effectiveLocale}&featured=true&limit=${c.limit}`)
       .then((r) => r.json())
       .then((json) => {
         if (cancelled) return;
@@ -39,7 +42,7 @@ export default function FeaturedPostsElement({ node, mode = 'edit' }: FeaturedPo
     return () => {
       cancelled = true;
     };
-  }, [isBuilder, c.limit]);
+  }, [effectiveLocale, isBuilder, c.limit]);
 
   const items = useMemo(() => {
     if (isBuilder) return MOCK.slice(0, c.limit);
@@ -54,7 +57,7 @@ export default function FeaturedPostsElement({ node, mode = 'edit' }: FeaturedPo
 
   if (items.length === 0) {
     return (
-      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f1f5f9', border: '2px dashed #cbd5e1', borderRadius: 8, color: '#94a3b8', fontSize: 13 }}>
+      <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f1f5f9', border: '2px dashed #cbd5e1', borderRadius: 8, color: '#94a3b8', fontSize: 13 }}>
         Featured Posts · 등록된 피처드 글이 없습니다.
       </div>
     );
@@ -63,9 +66,9 @@ export default function FeaturedPostsElement({ node, mode = 'edit' }: FeaturedPo
   if (c.layout === 'hero') {
     const [first, ...rest] = items;
     return (
-      <div style={{ width: '100%', height: '100%', display: 'grid', gridTemplateColumns: rest.length ? '2fr 1fr' : '1fr', gap: 16, boxSizing: 'border-box' }}>
+      <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'grid', gridTemplateColumns: rest.length ? '2fr 1fr' : '1fr', gap: 16, boxSizing: 'border-box' }}>
         <a
-          href={isBuilder ? '#' : `/ko/columns/${first.slug}`}
+          href={isBuilder ? '#' : `/${effectiveLocale}/columns/${first.slug}`}
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -89,7 +92,7 @@ export default function FeaturedPostsElement({ node, mode = 'edit' }: FeaturedPo
             {rest.map((p) => (
               <a
                 key={p.postId}
-                href={isBuilder ? '#' : `/ko/columns/${p.slug}`}
+                href={isBuilder ? '#' : `/${effectiveLocale}/columns/${p.slug}`}
                 style={{
                   flex: 1,
                   background: '#ffffff',
@@ -117,11 +120,11 @@ export default function FeaturedPostsElement({ node, mode = 'edit' }: FeaturedPo
 
   if (c.layout === 'side-by-side') {
     return (
-      <div style={{ width: '100%', height: '100%', display: 'grid', gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`, gap: 16 }}>
+      <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'grid', gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`, gap: 16 }}>
         {items.map((p) => (
           <a
             key={p.postId}
-            href={isBuilder ? '#' : `/ko/columns/${p.slug}`}
+            href={isBuilder ? '#' : `/${effectiveLocale}/columns/${p.slug}`}
             style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: 16, textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', gap: 6 }}
           >
             <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>★ {categoryLabel(p.category)}</span>
@@ -135,11 +138,11 @@ export default function FeaturedPostsElement({ node, mode = 'edit' }: FeaturedPo
 
   // stacked
   return (
-    <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 12, overflow: 'auto' }}>
+    <div data-builder-featured-posts="true" style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 12, overflow: 'auto' }}>
       {items.map((p) => (
         <a
           key={p.postId}
-          href={isBuilder ? '#' : `/ko/columns/${p.slug}`}
+          href={isBuilder ? '#' : `/${effectiveLocale}/columns/${p.slug}`}
           style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: 16, textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', gap: 4 }}
         >
           <span style={{ fontSize: 11, fontWeight: 700, color: '#0b3b2e', textTransform: 'uppercase' }}>★ {categoryLabel(p.category)}</span>

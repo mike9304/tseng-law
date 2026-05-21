@@ -98,6 +98,8 @@ export async function POST(
     // or ISR cycle.
   }
 
+  void rebuildSearchIndexAfterColumnPublish();
+
   return NextResponse.json({
     success: true,
     slug: published.slug,
@@ -105,4 +107,18 @@ export async function POST(
     revision: published.revision,
     publishedAt: published.updatedAt,
   });
+}
+
+async function rebuildSearchIndexAfterColumnPublish(): Promise<void> {
+  try {
+    const [{ collectAllSearchDocs }, { buildSearchIndex }, { saveSearchIndex }] = await Promise.all([
+      import('@/lib/builder/search/source-collector'),
+      import('@/lib/builder/search/index-builder'),
+      import('@/lib/builder/search/index-storage'),
+    ]);
+    const docs = await collectAllSearchDocs('default');
+    await saveSearchIndex(buildSearchIndex(docs));
+  } catch (error) {
+    console.warn('[columns] search index rebuild failed:', error);
+  }
 }

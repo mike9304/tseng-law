@@ -11,6 +11,7 @@ import { siteContent } from '@/data/site-content';
 import SearchOverlay from '@/components/SearchOverlay';
 import { buildHeaderMegaPanels, type HeaderMegaPanel } from '@/lib/builder/site/header-mega';
 import { usePublishedOverlayFocus } from '@/components/builder/published/overlayFocus';
+import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 
 type HeaderNavSpec = {
   key: string;
@@ -21,6 +22,11 @@ type HeaderNavSpec = {
 type HeaderNavItem = HeaderNavSpec & {
   href: string;
   source?: BuilderNavItem;
+};
+
+type MemberNavState = {
+  authenticated: boolean;
+  member?: Pick<PublicSiteMember, 'name' | 'role'>;
 };
 
 const HEADER_NAV_SPECS: HeaderNavSpec[] = [
@@ -147,6 +153,7 @@ export default function SiteHeader({
   onRequestEditNavItem,
   onRequestAddNavChild,
   onRequestEditSiteBrand,
+  onRequestOpenMobileMenu,
 }: {
   siteName: string;
   settings?: BuilderSiteSettings;
@@ -163,6 +170,7 @@ export default function SiteHeader({
   onRequestEditNavItem?: (itemId: string) => void;
   onRequestAddNavChild?: (parentItemId: string) => void;
   onRequestEditSiteBrand?: () => void;
+  onRequestOpenMobileMenu?: () => void;
 }) {
   const content = siteContent[locale];
   const brandText = settings?.firmName || (locale === 'ko'
@@ -184,6 +192,7 @@ export default function SiteHeader({
   const [pinnedMenu, setPinnedMenu] = useState<string | null>(null);
   const [builderEditingMenu, setBuilderEditingMenu] = useState<string | null>(null);
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, visible: false });
+  const [memberNav, setMemberNav] = useState<MemberNavState>({ authenticated: false });
   const mainNavRef = useRef<HTMLElement | null>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const closeTimeoutRef = useRef<number | null>(null);
@@ -211,6 +220,11 @@ export default function SiteHeader({
       ];
   const forceMobileNavigation = mobileMode || mobileHamburger === 'force';
   const suppressMobileNavigation = mobileHamburger === 'off';
+  const accountLabel = locale === 'ko' ? '내 계정' : locale === 'zh-hant' ? '我的帳戶' : 'Account';
+  const loginLabel = locale === 'ko' ? '로그인' : locale === 'zh-hant' ? '登入' : 'Sign in';
+  const premiumLabel = locale === 'ko' ? '프리미엄' : locale === 'zh-hant' ? '進階會員' : 'Premium';
+  const logoutLabel = locale === 'ko' ? '로그아웃' : locale === 'zh-hant' ? '登出' : 'Sign out';
+  const memberCanSeePremium = memberNav.member?.role === 'premium' || memberNav.member?.role === 'admin';
 
   const clearCloseTimeout = useCallback(() => {
     if (closeTimeoutRef.current) {
@@ -300,6 +314,30 @@ export default function SiteHeader({
     setBuilderEditingMenu(null);
   }, [builderEditable]);
 
+  useEffect(() => {
+    if (builderEditable) return undefined;
+    let cancelled = false;
+    fetch('/api/members/me', { credentials: 'same-origin' })
+      .then((response) => response.ok ? response.json() : null)
+      .then((json) => {
+        if (cancelled) return;
+        if (json?.ok && json.member) {
+          setMemberNav({
+            authenticated: true,
+            member: { name: json.member.name, role: json.member.role },
+          });
+          return;
+        }
+        setMemberNav({ authenticated: false });
+      })
+      .catch(() => {
+        if (!cancelled) setMemberNav({ authenticated: false });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [builderEditable]);
+
   useEffect(() => () => clearCloseTimeout(), [clearCloseTimeout]);
 
   function navigate(event: React.MouseEvent<HTMLElement>, href: string) {
@@ -327,24 +365,22 @@ export default function SiteHeader({
 
   function handleBuilderNavClick(event: React.MouseEvent<HTMLAnchorElement>, item: HeaderNavItem) {
     if (!builderEditable || !item.source) return false;
+    if (!megaPanelKeys.has(item.key)) return false;
+    if (!(event.altKey || event.metaKey)) return false;
     event.preventDefault();
     event.stopPropagation();
-    if (megaPanelKeys.has(item.key)) {
-      clearCloseTimeout();
-      setPinnedMenu(item.key);
-      setBuilderEditingMenu(item.key);
-      setOpenMenu(item.key);
-      moveIndicator(item.key, true);
-      onRequestEditNavItem?.(item.source.id);
-      return true;
-    }
-    closeMegaMenuNow();
+    clearCloseTimeout();
+    setPinnedMenu(item.key);
+    setBuilderEditingMenu(item.key);
+    setOpenMenu(item.key);
+    moveIndicator(item.key, true);
     onRequestEditNavItem?.(item.source.id);
     return true;
   }
 
   function handleBuilderMegaClick(event: React.MouseEvent<HTMLElement>, item: HeaderMegaPanel['links'][number], panelKey: string) {
     if (!builderEditable || !item.source) return false;
+    if (!(event.altKey || event.metaKey)) return false;
     event.preventDefault();
     event.stopPropagation();
     clearCloseTimeout();
@@ -356,14 +392,32 @@ export default function SiteHeader({
     return true;
   }
 
+  function handleBuilderMegaEdit(event: React.MouseEvent<HTMLElement>, item: HeaderMegaPanel['links'][number], panelKey: string) {
+    if (!builderEditable || !item.source) return;
+    event.preventDefault();
+    event.stopPropagation();
+    clearCloseTimeout();
+    setPinnedMenu(panelKey);
+    setBuilderEditingMenu(panelKey);
+    setOpenMenu(panelKey);
+    moveIndicator(panelKey, true);
+    onRequestEditNavItem?.(item.source.id);
+  }
+
   function handleBuilderMobileNavClick(event: React.MouseEvent<HTMLElement>, source?: BuilderNavItem) {
     if (!builderEditable || !source) return false;
+    if (!(event.altKey || event.metaKey)) return false;
     event.preventDefault();
     event.stopPropagation();
     setMobileMenuOpen(true);
     closeMegaMenuNow();
     onRequestEditNavItem?.(source.id);
     return true;
+  }
+
+  async function logoutMember() {
+    await fetch('/api/members/logout', { method: 'POST', credentials: 'same-origin' }).catch(() => undefined);
+    window.location.assign(buildSitePagePath(locale, 'login'));
   }
 
   return (
@@ -382,6 +436,25 @@ export default function SiteHeader({
                   {item.label}
                 </a>
               ))}
+              <span className="utility-member-nav" data-member-nav-state={memberNav.authenticated ? 'signed-in' : 'signed-out'}>
+                {memberNav.authenticated ? (
+                  <>
+                    <a href={`/${locale}/account`} onClick={(event) => navigate(event, `/${locale}/account`)}>
+                      {accountLabel}
+                    </a>
+                    {memberCanSeePremium ? (
+                      <a href={`/${locale}/account/premium`} data-member-role-link="premium" onClick={(event) => navigate(event, `/${locale}/account/premium`)}>
+                        {premiumLabel}
+                      </a>
+                    ) : null}
+                    <button type="button" onClick={logoutMember}>{logoutLabel}</button>
+                  </>
+                ) : (
+                  <a href={`/${locale}/login`} data-member-role-link="login" onClick={(event) => navigate(event, `/${locale}/login`)}>
+                    {loginLabel}
+                  </a>
+                )}
+              </span>
               <div className="utility-lang">
                 <Link
                   href={localeSwitchPath('ko', currentSlug)}
@@ -425,6 +498,7 @@ export default function SiteHeader({
               }}
             >
               <span className="logo-mark" aria-hidden>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img className="site-header-logo-light" src={logo} alt="" width={508} height={80} />
               </span>
               <strong className="logo-kr">{brandText}</strong>
@@ -443,8 +517,12 @@ export default function SiteHeader({
                 closeMegaMenuNow();
                 const opener = event.currentTarget;
                 setMobileMenuOpen((current) => {
-                  if (!current) mobileMenuOpenerRef.current = opener;
-                  return !current;
+                  const nextOpen = !current;
+                  if (nextOpen) {
+                    mobileMenuOpenerRef.current = opener;
+                    onRequestOpenMobileMenu?.();
+                  }
+                  return nextOpen;
                 });
               }}
             >
@@ -558,7 +636,8 @@ export default function SiteHeader({
             ref={mobilePanelRef}
             className="site-mobile-nav-panel"
             role="dialog"
-            aria-modal="true"
+            aria-modal={mobileMenuOpen ? 'true' : undefined}
+            aria-hidden={mobileMenuOpen ? undefined : 'true'}
             aria-label="Mobile menu"
             tabIndex={-1}
             onClick={(event) => event.stopPropagation()}
@@ -580,7 +659,7 @@ export default function SiteHeader({
                         data-builder-nav-item-id={builderEditable && item.source ? item.source.id : undefined}
                         data-builder-nav-active={builderEditable && item.source?.id === activeBuilderNavItemId ? 'true' : undefined}
                         onClick={(event) => {
-                          if (handleBuilderMobileNavClick(event, item.source)) return;
+                          if (panel && handleBuilderMobileNavClick(event, item.source)) return;
                           setMobileMenuOpen(false);
                           navigate(event, item.href);
                         }}
@@ -623,6 +702,35 @@ export default function SiteHeader({
                   {item.label}
                 </a>
               ))}
+              {memberNav.authenticated ? (
+                <>
+                  <a href={`/${locale}/account`} onClick={(event) => {
+                    setMobileMenuOpen(false);
+                    navigate(event, `/${locale}/account`);
+                  }}>
+                    {accountLabel}
+                  </a>
+                  {memberCanSeePremium ? (
+                    <a href={`/${locale}/account/premium`} data-member-role-link="premium-mobile" onClick={(event) => {
+                      setMobileMenuOpen(false);
+                      navigate(event, `/${locale}/account/premium`);
+                    }}>
+                      {premiumLabel}
+                    </a>
+                  ) : null}
+                  <button type="button" onClick={() => {
+                    setMobileMenuOpen(false);
+                    void logoutMember();
+                  }}>{logoutLabel}</button>
+                </>
+              ) : (
+                <a href={`/${locale}/login`} data-member-role-link="login-mobile" onClick={(event) => {
+                  setMobileMenuOpen(false);
+                  navigate(event, `/${locale}/login`);
+                }}>
+                  {loginLabel}
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -709,11 +817,7 @@ export default function SiteHeader({
                               type="button"
                               className="builder-mega-link-edit"
                               data-builder-header-action="mega-link-edit"
-                              onClick={(event) => {
-                                event.preventDefault();
-                                event.stopPropagation();
-                                handleBuilderMegaClick(event, link, panel.key);
-                              }}
+                              onClick={(event) => handleBuilderMegaEdit(event, link, panel.key)}
                             >
                               Edit
                             </button>

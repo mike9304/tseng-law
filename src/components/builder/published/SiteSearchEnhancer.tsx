@@ -50,10 +50,15 @@ export default function SiteSearchEnhancer() {
         if (!expanded) input.removeAttribute('aria-activedescendant');
       }
 
+      function setBusy(busy: boolean): void {
+        input.setAttribute('aria-busy', busy ? 'true' : 'false');
+      }
+
       function hideResults(): void {
         resultsBox.hidden = true;
         activeIndex = -1;
         updateExpanded(false);
+        setBusy(false);
       }
 
       function focusHit(index: number): void {
@@ -69,18 +74,31 @@ export default function SiteSearchEnhancer() {
       function showEmpty(): void {
         resultsBox.hidden = false;
         updateExpanded(true);
+        setBusy(false);
         resultsBox.innerHTML = '';
         const empty = document.createElement('div');
         empty.className = 'builder-site-search-empty';
         empty.setAttribute('role', 'status');
-        empty.textContent = '결과 없음';
+        empty.textContent = locale.startsWith('zh') ? '沒有結果' : locale.startsWith('en') ? 'No results' : '결과 없음';
         resultsBox.appendChild(empty);
+      }
+
+      function showStatus(message: string): void {
+        resultsBox.hidden = false;
+        updateExpanded(true);
+        resultsBox.innerHTML = '';
+        const status = document.createElement('div');
+        status.className = 'builder-site-search-empty';
+        status.setAttribute('role', 'status');
+        status.textContent = message;
+        resultsBox.appendChild(status);
       }
 
       async function runQuery(value: string): Promise<void> {
         if (!inline) return;
         if (abortController) abortController.abort();
-        abortController = new AbortController();
+        const controller = new AbortController();
+        abortController = controller;
         if (!value.trim()) {
           resultsBox.innerHTML = '';
           hideResults();
@@ -89,8 +107,13 @@ export default function SiteSearchEnhancer() {
         const params = new URLSearchParams({ q: value, locale, limit: String(max) });
         if (kinds) params.set('kinds', kinds);
         try {
-          const res = await fetch(`/api/search?${params.toString()}`, { signal: abortController.signal });
-          if (!res.ok) return;
+          setBusy(true);
+          showStatus(locale.startsWith('zh') ? '搜尋中...' : locale.startsWith('en') ? 'Searching...' : '검색 중...');
+          const res = await fetch(`/api/search?${params.toString()}`, { signal: controller.signal });
+          if (!res.ok) {
+            showStatus(locale.startsWith('zh') ? '搜尋暫時無法使用' : locale.startsWith('en') ? 'Search is temporarily unavailable' : '검색을 일시적으로 사용할 수 없습니다.');
+            return;
+          }
           const payload = (await res.json()) as { hits?: SearchHit[] };
           const hits = payload.hits ?? [];
           if (hits.length === 0) {
@@ -99,6 +122,7 @@ export default function SiteSearchEnhancer() {
           }
           resultsBox.hidden = false;
           updateExpanded(true);
+          setBusy(false);
           // Render via DOM creation so titles/summaries are auto-escaped and
           // a malicious title can't inject HTML.
           resultsBox.innerHTML = '';
@@ -123,8 +147,10 @@ export default function SiteSearchEnhancer() {
         } catch (err) {
           // AbortError is normal; ignore.
           if ((err as { name?: string } | null)?.name !== 'AbortError') {
-            hideResults();
+            showStatus(locale.startsWith('zh') ? '搜尋暫時無法使用' : locale.startsWith('en') ? 'Search is temporarily unavailable' : '검색을 일시적으로 사용할 수 없습니다.');
           }
+        } finally {
+          if (!controller.signal.aborted) setBusy(false);
         }
       }
 

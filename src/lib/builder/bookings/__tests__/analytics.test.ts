@@ -50,25 +50,42 @@ describe('booking analytics', () => {
       booking({ bookingId: 'b1', startAt: '2026-05-13T00:00:00.000Z', status: 'completed', paymentStatus: 'paid' }),
       booking({ bookingId: 'b2', startAt: '2026-05-14T00:00:00.000Z', status: 'cancelled', paymentStatus: 'refunded' }),
       booking({ bookingId: 'b3', startAt: '2026-05-15T00:00:00.000Z', status: 'no-show', paymentStatus: 'partial-refund' }),
-      booking({ bookingId: 'b4', startAt: '2026-05-16T00:00:00.000Z', status: 'pending' }),
+      booking({
+        bookingId: 'b4',
+        startAt: '2026-05-16T00:00:00.000Z',
+        status: 'confirmed',
+        paymentStatus: 'partially_paid',
+        manualPayments: [
+          {
+            paymentId: 'bmp-1',
+            amountCents: 2000,
+            currency: 'TWD',
+            method: 'bank_transfer',
+            status: 'succeeded',
+            actor: 'admin',
+            createdAt: '2026-05-16T00:00:00.000Z',
+          },
+        ],
+      }),
+      booking({ bookingId: 'b5', startAt: '2026-05-17T00:00:00.000Z', status: 'pending' }),
     ];
 
     const analytics = buildBookingAnalytics(bookings, [service], [staff], 'ko', Date.parse('2026-05-12T00:00:00.000Z'));
 
     expect(analytics).toMatchObject({
-      total: 4,
-      upcoming: 3,
+      total: 5,
+      upcoming: 4,
       pending: 1,
       completed: 1,
       cancelled: 1,
       noShow: 1,
-      completionRate: 25,
-      cancellationRate: 25,
-      noShowRate: 25,
-      revenueAmount: 7500,
+      completionRate: 20,
+      cancellationRate: 20,
+      noShowRate: 20,
+      revenueAmount: 9500,
     });
-    expect(analytics.byService[0]).toMatchObject({ id: 'svc-paid', label: '유료 상담', total: 4, revenueAmount: 7500 });
-    expect(analytics.byStaff[0]).toMatchObject({ id: 'staff-a', label: '담당 변호사', total: 4 });
+    expect(analytics.byService[0]).toMatchObject({ id: 'svc-paid', label: '유료 상담', total: 5, revenueAmount: 9500 });
+    expect(analytics.byStaff[0]).toMatchObject({ id: 'staff-a', label: '담당 변호사', total: 5 });
   });
 
   it('groups customer profiles by email with next and last booking dates', () => {

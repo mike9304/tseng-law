@@ -203,6 +203,26 @@ export function decorativeWidgetMatchesSearch(preset: CatalogSearchablePreset, q
   ], query);
 }
 
+export function designerWidgetMatchesSearch(preset: CatalogSearchablePreset, query: string): boolean {
+  return valuesMatchQuery([
+    preset.label,
+    preset.description,
+    preset.id,
+    preset.kind,
+    'designer widget',
+    'designer blocks',
+    'professional',
+    'wix',
+    'counter',
+    'testimonial',
+    'pricing',
+    'timeline',
+    'profile',
+    'comparison',
+    'service',
+  ], query);
+}
+
 export function locationWidgetMatchesSearch(preset: CatalogSearchablePreset, query: string): boolean {
   return valuesMatchQuery([
     preset.label,

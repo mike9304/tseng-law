@@ -80,6 +80,13 @@ interface ParsedSeoRequest {
   createRedirect: boolean;
 }
 
+interface RedirectCreationWarning {
+  from: string;
+  to: string;
+  field: 'from' | 'to' | 'type';
+  message: string;
+}
+
 function validationErrorResponse(error: ZodError): NextResponse {
   return NextResponse.json(
     {
@@ -124,6 +131,41 @@ function parseSeoRequest(rawBody: unknown): ParsedSeoRequest {
     rawSeoBody: rawBody,
     createRedirect: false,
   };
+}
+
+function appendRedirectIfValid(
+  site: Awaited<ReturnType<typeof readSiteDocument>>,
+  input: {
+    from: string;
+    to: string;
+    type: 301;
+    isActive: true;
+    note: string;
+  },
+  now: string,
+): { created: boolean; warning?: RedirectCreationWarning } {
+  const redirectError = validateRedirectInput(input, site.redirects ?? []);
+  if (redirectError) {
+    return {
+      created: false,
+      warning: {
+        from: input.from,
+        to: input.to,
+        field: redirectError.field,
+        message: redirectError.message,
+      },
+    };
+  }
+  site.redirects = [
+    ...(site.redirects ?? []),
+    {
+      redirectId: generateRedirectId(),
+      ...input,
+      createdAt: now,
+      updatedAt: now,
+    },
+  ];
+  return { created: true };
 }
 
 function updateNavigationHref(
@@ -363,27 +405,17 @@ export async function PATCH(
     page.updatedAt = now;
     site.updatedAt = now;
     let redirectCreated = false;
+    const redirectWarnings: RedirectCreationWarning[] = [];
     if (createRedirect && !page.isHomePage && previousPath !== nextPath) {
-      const redirectInput = {
+      const redirectResult = appendRedirectIfValid(site, {
         from: previousPath,
         to: nextPath,
         type: 301 as const,
         isActive: true,
         note: `Auto-created after SEO slug change for ${page.pageId}`,
-      };
-      const redirectError = validateRedirectInput(redirectInput, site.redirects ?? []);
-      if (!redirectError) {
-        site.redirects = [
-          ...(site.redirects ?? []),
-          {
-            redirectId: generateRedirectId(),
-            ...redirectInput,
-            createdAt: now,
-            updatedAt: now,
-          },
-        ];
-        redirectCreated = true;
-      }
+      }, now);
+      redirectCreated = redirectResult.created;
+      if (redirectResult.warning) redirectWarnings.push(redirectResult.warning);
     }
     site.navigation = updateNavigationHref(
       site.navigation,
@@ -415,6 +447,7 @@ export async function PATCH(
       },
       validation,
       redirectCreated,
+      redirectWarnings,
     });
   } catch (error) {
     if (error instanceof ZodError) return validationErrorResponse(error);

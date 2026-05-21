@@ -18,6 +18,10 @@ export default function BuilderDynamicRouteWorkspaceShell({
   overview: BuilderSiteOverview;
   detail: BuilderDynamicRouteDetail;
 }) {
+  const templateDetailHref = buildBuilderDynamicTemplateHref(locale, detail.templateId, {
+    previewRecordId: detail.previewContext.selectedRecordId,
+  });
+
   return (
     <BuilderWorkspaceFrame
       title={`${detail.title} dynamic route`}
@@ -94,7 +98,7 @@ export default function BuilderDynamicRouteWorkspaceShell({
                 <dt>Detail</dt>
                 <dd>
                   <Link
-                    href={buildBuilderDynamicTemplateHref(locale, detail.templateId)}
+                    href={templateDetailHref}
                     className="builder-link-inline"
                   >
                     Open template ownership detail
@@ -201,7 +205,7 @@ export default function BuilderDynamicRouteWorkspaceShell({
               </div>
               <div className="builder-dashboard-page-actions">
                 <Link
-                  href={buildBuilderDynamicTemplateHref(locale, detail.templateId)}
+                  href={templateDetailHref}
                   className="builder-action-btn builder-action-btn--primary"
                 >
                   Open template ownership detail

@@ -128,6 +128,7 @@ interface BuilderCanvasStoreState {
   ungroupSelectedNode: () => void;
   toggleSelectedNodeLock: () => void;
   addNode: (node: BuilderCanvasNode) => void;
+  addChildNode: (containerId: string, node: BuilderCanvasNode) => void;
   /**
    * Insert a connected set of nodes (root + descendants) atomically.
    * Caller is responsible for assigning fresh, unique ids and consistent
@@ -189,10 +190,10 @@ const jsonContentSignatureCache = new WeakMap<object, string>();
 
 function createDefaultInteractivePreviewState(): BuilderCanvasInteractivePreviewState {
   return {
-    servicesOpenIndex: 0,
-    servicesRevealedIndices: [0],
-    faqOpenIndex: 0,
-    faqRevealedIndices: [0],
+    servicesOpenIndex: -1,
+    servicesRevealedIndices: [],
+    faqOpenIndex: -1,
+    faqRevealedIndices: [],
   };
 }
 
@@ -203,35 +204,31 @@ function revealPreviewIndex(
 ): BuilderCanvasInteractivePreviewState {
   const clampedIndex = Math.max(0, Math.round(index));
   if (section === 'services') {
-    const currentRevealed = current.servicesRevealedIndices.length > 0
-      ? current.servicesRevealedIndices
-      : [current.servicesOpenIndex];
-    const servicesRevealedIndices = currentRevealed.includes(clampedIndex)
-      ? currentRevealed
-      : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
-    if (current.servicesOpenIndex === clampedIndex && servicesRevealedIndices === currentRevealed) {
+    if (
+      current.servicesOpenIndex === clampedIndex &&
+      current.servicesRevealedIndices.length === 1 &&
+      current.servicesRevealedIndices[0] === clampedIndex
+    ) {
       return current;
     }
     return {
       ...current,
       servicesOpenIndex: clampedIndex,
-      servicesRevealedIndices,
+      servicesRevealedIndices: [clampedIndex],
     };
   }
 
-  const currentRevealed = current.faqRevealedIndices.length > 0
-    ? current.faqRevealedIndices
-    : [current.faqOpenIndex];
-  const faqRevealedIndices = currentRevealed.includes(clampedIndex)
-    ? currentRevealed
-    : [...currentRevealed, clampedIndex].sort((a, b) => a - b);
-  if (current.faqOpenIndex === clampedIndex && faqRevealedIndices === currentRevealed) {
+  if (
+    current.faqOpenIndex === clampedIndex &&
+    current.faqRevealedIndices.length === 1 &&
+    current.faqRevealedIndices[0] === clampedIndex
+  ) {
     return current;
   }
   return {
     ...current,
     faqOpenIndex: clampedIndex,
-    faqRevealedIndices,
+    faqRevealedIndices: [clampedIndex],
   };
 }
 
@@ -407,6 +404,7 @@ function sameCanvasNodeContent(left: BuilderCanvasNode, right: BuilderCanvasNode
     && sameJsonContent(left.hoverStyle, right.hoverStyle)
     && sameJsonContent(left.animation, right.animation)
     && sameJsonContent(left.responsive, right.responsive)
+    && sameJsonContent(left.dataBinding, right.dataBinding)
     && sameJsonContent(left.content, right.content);
 }
 
@@ -682,7 +680,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         selectedSurfaceKey: null,
         interactivePreview: selectedNodeId
           ? revealPreviewForSelection(state.interactivePreview, state.nodesById, selectedNodeIds)
-          : state.interactivePreview,
+          : createDefaultInteractivePreviewState(),
       };
     }),
   setSelectedNodeIds: (selectedNodeIds, primaryNodeId = null) =>
@@ -692,6 +690,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         return {
           selectedNodeId: null,
           selectedNodeIds: [],
+          interactivePreview: createDefaultInteractivePreviewState(),
         };
       }
       const selectedId = primaryNodeId ?? selectedNodeIds[selectedNodeIds.length - 1] ?? null;
@@ -713,6 +712,7 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         return {
           selectedNodeId: null,
           selectedNodeIds: [],
+          interactivePreview: createDefaultInteractivePreviewState(),
         };
       }
       const selectedNodeId = exists
@@ -1149,6 +1149,19 @@ export const useBuilderCanvasStore = create<BuilderCanvasStoreState>((set) => ({
         : node;
       const document = updateNodes(state.document, (nodes) => [...nodes, nextNode]);
       return applyCommittedDocument(state, document, nextNode.id);
+    }),
+  addChildNode: (containerId, node) =>
+    set((state) => {
+      if (!state.document) return state;
+      const container = state.nodesById.get(containerId);
+      if (!container || !isContainerLikeKind(container.kind)) return state;
+      const nextNode: BuilderCanvasNode = {
+        ...node,
+        parentId: containerId,
+        zIndex: state.document.nodes.length,
+      };
+      const document = updateNodes(state.document, (nodes) => [...nodes, nextNode]);
+      return applyCommittedDocument(state, document, nextNode.id, [nextNode.id]);
     }),
   addNodes: (incomingNodes, rootNodeId) =>
     set((state) => {

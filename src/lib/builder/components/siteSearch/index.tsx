@@ -1,13 +1,24 @@
 import { defineComponent, type BuilderComponentInspectorProps } from '../define';
 import type { BuilderSiteSearchCanvasNode } from '@/lib/builder/canvas/types';
+import { normalizeLocale, type Locale } from '@/lib/locales';
+
+const SEARCH_KIND_OPTIONS: Array<{ id: 'page' | 'blog' | 'faq' | 'portfolio'; label: string }> = [
+  { id: 'page', label: '페이지' },
+  { id: 'blog', label: '칼럼' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'portfolio', label: '포트폴리오' },
+];
 
 function SiteSearchRender({
   node,
+  locale,
 }: {
   node: BuilderSiteSearchCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }) {
   const c = node.content;
+  const effectiveLocale = normalizeLocale(c.locale || locale || 'ko');
   const resultsId = `builder-site-search-results-${node.id}`;
   // Static markup; client-side enhancement (live results) is wired in
   // SiteSearchPublishedClient when present, otherwise the form falls back
@@ -17,11 +28,11 @@ function SiteSearchRender({
       className="builder-site-search"
       data-builder-site-search="true"
       data-builder-site-search-kinds={c.kinds.join(',')}
-      data-builder-site-search-locale={c.locale}
+      data-builder-site-search-locale={effectiveLocale}
       data-builder-site-search-max={c.maxResults}
       data-builder-site-search-inline={c.showResultsInline ? 'true' : 'false'}
       role="search"
-      action={c.locale ? `/${c.locale}/search` : '/ko/search'}
+      action={`/${effectiveLocale}/search`}
       method="get"
     >
       <input
@@ -35,6 +46,7 @@ function SiteSearchRender({
         aria-haspopup={c.showResultsInline ? 'listbox' : undefined}
         data-builder-site-search-input="true"
       />
+      {c.kinds.length > 0 ? <input type="hidden" name="kinds" value={c.kinds.join(',')} /> : null}
       <button type="submit">{c.submitLabel}</button>
       {c.showResultsInline ? (
         <div
@@ -56,6 +68,12 @@ function SiteSearchInspector({
 }: BuilderComponentInspectorProps) {
   const n = node as BuilderSiteSearchCanvasNode;
   const c = n.content;
+  const toggleKind = (kind: 'page' | 'blog' | 'faq' | 'portfolio', checked: boolean) => {
+    const next = checked
+      ? Array.from(new Set([...c.kinds, kind]))
+      : c.kinds.filter((item) => item !== kind);
+    onUpdate({ kinds: next });
+  };
   return (
     <>
       <label>
@@ -85,6 +103,21 @@ function SiteSearchInspector({
           onChange={(event) => onUpdate({ showResultsInline: event.target.checked })}
         />
       </label>
+      <fieldset>
+        <legend>검색 범위</legend>
+        <p>선택하지 않으면 전체 검색</p>
+        {SEARCH_KIND_OPTIONS.map((option) => (
+          <label key={option.id}>
+            <span>{option.label}</span>
+            <input
+              type="checkbox"
+              checked={c.kinds.includes(option.id)}
+              disabled={disabled}
+              onChange={(event) => toggleKind(option.id, event.target.checked)}
+            />
+          </label>
+        ))}
+      </fieldset>
       <label>
         <span>최대 결과수</span>
         <input
@@ -116,8 +149,8 @@ export default defineComponent({
   category: 'advanced',
   icon: '🔍',
   defaultContent: {
-    placeholder: '검색...',
-    submitLabel: 'Search',
+    placeholder: '어떻게 도와드릴까요?',
+    submitLabel: '검색',
     showResultsInline: true,
     kinds: [],
     locale: '',

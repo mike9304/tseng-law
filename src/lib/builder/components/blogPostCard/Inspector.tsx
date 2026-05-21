@@ -37,7 +37,10 @@ export default function BlogPostCardInspector({ node, onUpdate, disabled = false
 
   useEffect(() => {
     let cancelled = false;
-    fetch(`/api/builder/blog/posts?locale=ko&limit=100&scope=all`)
+    const locale = typeof window === 'undefined'
+      ? 'ko'
+      : window.location.pathname.split('/').filter(Boolean)[0] || 'ko';
+    fetch(`/api/builder/blog/posts?locale=${encodeURIComponent(locale)}&limit=100&scope=all`)
       .then((r) => r.json())
       .then((json) => {
         if (cancelled) return;

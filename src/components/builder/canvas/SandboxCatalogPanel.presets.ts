@@ -18,6 +18,16 @@ export type NavigationWidgetKind = Extract<BuilderCanvasNodeKind, 'menu-bar' | '
 export type SocialWidgetKind = Extract<BuilderCanvasNodeKind, 'social-bar' | 'share-buttons' | 'social-embed' | 'floating-chat'>;
 export type LocationWidgetKind = Extract<BuilderCanvasNodeKind, 'address-block' | 'business-hours' | 'multi-location-map' | 'map'>;
 export type DecorativeWidgetKind = Extract<BuilderCanvasNodeKind, 'shape' | 'pattern' | 'parallax-bg' | 'frame' | 'sticker' | 'divider' | 'spacer'>;
+export type DesignerWidgetKind = Extract<
+  BuilderCanvasNodeKind,
+  | 'counter'
+  | 'testimonial-carousel'
+  | 'pricing-table'
+  | 'comparison-table'
+  | 'timeline'
+  | 'team-member-card'
+  | 'service-feature-card'
+>;
 
 export interface TextWidgetPreset {
   id: string;
@@ -121,6 +131,18 @@ export interface DecorativeWidgetPreset {
   description: string;
   icon: string;
   kind: DecorativeWidgetKind;
+  width: number;
+  height: number;
+  content: Record<string, unknown>;
+  style?: Record<string, unknown>;
+}
+
+export interface DesignerWidgetPreset {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  kind: DesignerWidgetKind;
   width: number;
   height: number;
   content: Record<string, unknown>;
@@ -363,6 +385,71 @@ export const TEXT_WIDGET_PRESETS: TextWidgetPreset[] = [
       link: { href: '/ko/contact', target: '_self' },
     },
   },
+  {
+    id: 'designer-eyebrow-label',
+    label: 'Designer eyebrow',
+    description: '섹션 상단용 작은 라벨',
+    icon: 'EY',
+    kind: 'text',
+    width: 320,
+    height: 36,
+    content: {
+      text: 'LEGAL STRATEGY',
+      richText: richTextFromPlainText('LEGAL STRATEGY'),
+      fontSize: 13,
+      fontWeight: 'bold',
+      color: '#9f6b2c',
+      align: 'left',
+      lineHeight: 1.2,
+      letterSpacing: 0,
+      textTransform: 'uppercase',
+    },
+  },
+  {
+    id: 'designer-editorial-title',
+    label: 'Editorial title',
+    description: '잡지형 큰 제목',
+    icon: 'ET',
+    kind: 'heading',
+    width: 640,
+    height: 150,
+    content: {
+      text: '국제 사건을 읽는 더 정교한 관점',
+      richText: richTextFromPlainText('국제 사건을 읽는 더 정교한 관점'),
+      level: 2,
+      themePreset: 'title1',
+      fontSize: 54,
+      lineHeight: 1.05,
+      color: '#111827',
+    },
+  },
+  {
+    id: 'designer-pull-quote-panel',
+    label: 'Pull quote panel',
+    description: '강조 인용 패널',
+    icon: 'PQ',
+    kind: 'text',
+    width: 560,
+    height: 160,
+    content: {
+      text: '중요한 의사결정은 정보의 양보다 구조의 선명도에서 시작됩니다.',
+      richText: richTextFromPlainText('중요한 의사결정은 정보의 양보다 구조의 선명도에서 시작됩니다.'),
+      themePreset: 'quote',
+      quoteStyle: 'pull',
+      fontSize: 26,
+      lineHeight: 1.38,
+      color: '#0f172a',
+      backgroundColor: 'rgba(250, 245, 235, 0.92)',
+    },
+    style: {
+      borderRadius: 8,
+      borderWidth: 1,
+      borderColor: 'rgba(160, 116, 58, 0.24)',
+      shadowY: 18,
+      shadowBlur: 44,
+      shadowColor: 'rgba(86, 61, 34, 0.14)',
+    },
+  },
 ];
 
 const MEDIA_IMAGE_A = '/images/header-skyline-buildings.webp';
@@ -466,6 +553,52 @@ export const MEDIA_WIDGET_PRESETS: MediaWidgetPreset[] = [
         name: 'scales',
         color: { kind: 'token', token: 'primary' },
       },
+    },
+  },
+  {
+    id: 'image-editorial-portrait',
+    label: 'Editorial portrait',
+    description: '인물/프로필용 고급 크롭',
+    icon: 'EP',
+    kind: 'image',
+    width: 340,
+    height: 430,
+    content: {
+      src: '/images/team/son-jungmin.jpg',
+      alt: 'Editorial attorney portrait',
+      fit: 'cover',
+      cropAspect: '4:5',
+      focalPoint: { x: 50, y: 28 },
+      filters: { brightness: 104, contrast: 108, saturation: 92, blur: 0, grayscale: 0, sepia: 8 },
+    },
+    style: {
+      borderRadius: 8,
+      shadowY: 20,
+      shadowBlur: 42,
+      shadowColor: 'rgba(15, 23, 42, 0.18)',
+    },
+  },
+  {
+    id: 'image-hero-cinematic',
+    label: 'Cinematic hero image',
+    description: '히어로 배경용 와이드 이미지',
+    icon: '16',
+    kind: 'image',
+    width: 720,
+    height: 360,
+    content: {
+      src: MEDIA_IMAGE_A,
+      alt: 'Cinematic office skyline image',
+      fit: 'cover',
+      cropAspect: '16:9',
+      focalPoint: { x: 50, y: 46 },
+      filters: { brightness: 94, contrast: 118, saturation: 86, blur: 0, grayscale: 0, sepia: 12 },
+    },
+    style: {
+      borderRadius: 8,
+      shadowY: 22,
+      shadowBlur: 54,
+      shadowColor: 'rgba(15, 23, 42, 0.2)',
     },
   },
   {
@@ -996,6 +1129,82 @@ export const LAYOUT_WIDGET_PRESETS: LayoutWidgetPreset[] = [
       gridConfig: { columns: 3, rows: 2, columnGap: 14, rowGap: 14 },
     },
   },
+  {
+    id: 'designer-trust-bento',
+    label: 'Designer bento',
+    description: '신뢰 포인트 3단 카드',
+    icon: 'DB',
+    kind: 'container',
+    width: 780,
+    height: 300,
+    content: {
+      label: 'Designer bento',
+      layoutMode: 'repeater',
+      background: '#f7f3ed',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: 'rgba(134, 96, 56, 0.18)',
+      borderRadius: 8,
+      padding: 18,
+      variant: 'editorial',
+      layoutItems: [
+        { title: 'Cross-border', description: '한국어와 중국어 맥락을 함께 읽는 사건 검토', image: MEDIA_IMAGE_A },
+        { title: 'Evidence first', description: '자료 구조화 후 절차와 리스크를 분리해 판단', image: MEDIA_BLOG_IMAGE },
+        { title: 'Clear updates', description: '단계별 진행 상황과 다음 액션을 명확히 공유', image: MEDIA_IMAGE_B },
+      ],
+    },
+  },
+  {
+    id: 'designer-process-accordion',
+    label: 'Process accordion',
+    description: '상담 프로세스 패널',
+    icon: 'PA',
+    kind: 'container',
+    width: 560,
+    height: 320,
+    content: {
+      label: 'Process accordion',
+      layoutMode: 'accordion',
+      background: '#ffffff',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#e5ded4',
+      borderRadius: 8,
+      padding: 16,
+      activeIndex: 0,
+      variant: 'elevated',
+      layoutItems: [
+        { title: '1. Intake', description: '상담 전 사실관계와 긴급도를 먼저 정리합니다.' },
+        { title: '2. Strategy', description: '법적 쟁점, 비용, 일정, 선택지를 한 화면에 압축합니다.' },
+        { title: '3. Execution', description: '진행 중 필요한 문서와 연락 흐름을 지속적으로 관리합니다.' },
+      ],
+    },
+  },
+  {
+    id: 'designer-story-slideshow',
+    label: 'Story slideshow',
+    description: '이미지 오버레이 스토리',
+    icon: 'SS',
+    kind: 'container',
+    width: 700,
+    height: 360,
+    content: {
+      label: 'Story slideshow',
+      layoutMode: 'slideshow',
+      background: '#111827',
+      borderWidth: 0,
+      borderStyle: 'solid',
+      borderColor: 'transparent',
+      borderRadius: 8,
+      padding: 0,
+      activeIndex: 0,
+      layoutItems: [
+        { title: '기업 법무', description: '설립부터 분쟁 예방까지 한 흐름으로 설계합니다.', image: MEDIA_IMAGE_A },
+        { title: '가사·상속', description: '감정과 증거를 분리해 실행 가능한 전략을 만듭니다.', image: '/images/blog/016-taiwan-inheritance-custody-analysis/featured-01.jpg' },
+        { title: '소송 대응', description: '쟁점표와 타임라인으로 사건의 방향을 선명하게 만듭니다.', image: '/images/blog/010-taiwan-gym-injury-lawsuit/featured-01.jpg' },
+      ],
+    },
+  },
 ];
 
 export const INTERACTIVE_WIDGET_PRESETS: InteractiveWidgetPreset[] = [
@@ -1425,6 +1634,189 @@ export const LOCATION_WIDGET_PRESETS: LocationWidgetPreset[] = [
   },
 ];
 
+export const DESIGNER_WIDGET_PRESETS: DesignerWidgetPreset[] = [
+  {
+    id: 'designer-proof-counter',
+    label: 'Proof counter',
+    description: '성과 숫자 강조',
+    icon: '#',
+    kind: 'counter',
+    width: 240,
+    height: 130,
+    content: {
+      title: '국제 자문 경험',
+      prefix: '',
+      target: 18,
+      suffix: '+ yrs',
+      durationMs: 1400,
+      decimals: 0,
+    },
+    style: {
+      borderRadius: 8,
+      shadowY: 16,
+      shadowBlur: 36,
+      shadowColor: 'rgba(15, 23, 42, 0.12)',
+    },
+  },
+  {
+    id: 'designer-case-metric-card',
+    label: 'Case metric card',
+    description: '신뢰 지표용 프리미엄 카드',
+    icon: 'MC',
+    kind: 'counter',
+    width: 280,
+    height: 160,
+    content: {
+      title: 'Cross-border matters',
+      prefix: '',
+      target: 240,
+      suffix: '+',
+      durationMs: 1200,
+      decimals: 0,
+    },
+    style: {
+      borderRadius: 8,
+      shadowY: 18,
+      shadowBlur: 44,
+      shadowColor: 'rgba(11, 59, 46, 0.16)',
+    },
+  },
+  {
+    id: 'designer-testimonial-card',
+    label: 'Testimonial card',
+    description: '후기 슬라이더 카드',
+    icon: 'QT',
+    kind: 'testimonial-carousel',
+    width: 520,
+    height: 230,
+    content: {
+      items: [
+        { name: '기업 의뢰인', role: 'Cross-border matter', quote: '사실관계와 절차를 한 번에 정리해 주어 의사결정이 훨씬 빨라졌습니다.' },
+        { name: '개인 의뢰인', role: 'Family case', quote: '민감한 내용을 차분하게 구조화해 주었고 다음 단계가 분명했습니다.' },
+      ],
+      autoplayMs: 6000,
+      showStars: true,
+    },
+    style: {
+      borderRadius: 8,
+      borderWidth: 1,
+      borderColor: '#e5e7eb',
+    },
+  },
+  {
+    id: 'designer-service-gradient-card',
+    label: 'Service spotlight',
+    description: '대표 서비스 카드',
+    icon: 'SV',
+    kind: 'service-feature-card',
+    width: 330,
+    height: 230,
+    content: {
+      icon: '§',
+      title: '기업·투자 자문',
+      description: '회사 설립, 계약 검토, 투자 구조를 한·대 양국 관점에서 검토합니다.',
+      ctaLabel: '서비스 보기',
+      ctaHref: '/ko/services',
+      variant: 'gradient',
+    },
+  },
+  {
+    id: 'designer-team-profile',
+    label: 'Profile card',
+    description: '전문가 프로필',
+    icon: 'TM',
+    kind: 'team-member-card',
+    width: 310,
+    height: 360,
+    content: {
+      name: 'Son Jungmin',
+      role: 'International Counsel',
+      bio: '한국어 상담과 대만 현지 절차를 함께 연결해 사건의 실행 가능성을 정리합니다.',
+      avatar: '/images/team/son-jungmin.jpg',
+      socialLinks: [
+        { label: 'Profile', href: '/ko/lawyers' },
+        { label: 'Contact', href: '/ko/contact' },
+      ],
+      variant: 'glass',
+    },
+  },
+  {
+    id: 'designer-pricing-table',
+    label: 'Pricing cards',
+    description: '3단 가격 카드',
+    icon: '$',
+    kind: 'pricing-table',
+    width: 760,
+    height: 340,
+    content: {
+      plans: [
+        {
+          name: 'Initial',
+          price: 'NT$3,000',
+          period: '상담',
+          featured: false,
+          features: ['60분 상담', '쟁점 요약', '다음 단계 안내'],
+          ctaLabel: '예약하기',
+          ctaHref: '/ko/contact',
+        },
+        {
+          name: 'Strategy',
+          price: '견적',
+          period: '사건별',
+          featured: true,
+          features: ['자료 검토', '전략 메모', '일정·비용 계획'],
+          ctaLabel: '문의하기',
+          ctaHref: '/ko/contact',
+        },
+        {
+          name: 'Ongoing',
+          price: '월 자문',
+          period: '기업',
+          featured: false,
+          features: ['계약 검토', '컴플라이언스', '정기 미팅'],
+          ctaLabel: '상담 요청',
+          ctaHref: '/ko/contact',
+        },
+      ],
+    },
+  },
+  {
+    id: 'designer-timeline-roadmap',
+    label: 'Case timeline',
+    description: '사건 진행 타임라인',
+    icon: 'TL',
+    kind: 'timeline',
+    width: 560,
+    height: 280,
+    content: {
+      accentColor: '#9f6b2c',
+      orientation: 'vertical',
+      items: [
+        { year: 'Step 01', title: '자료 접수', description: '계약서, 메시지, 일정표를 먼저 정리합니다.' },
+        { year: 'Step 02', title: '쟁점 구조화', description: '법적 쟁점과 협상 포인트를 분리합니다.' },
+        { year: 'Step 03', title: '실행 계획', description: '문서, 연락, 기한을 기준으로 다음 액션을 확정합니다.' },
+      ],
+    },
+  },
+  {
+    id: 'designer-comparison-table',
+    label: 'Compare table',
+    description: '서비스 비교표',
+    icon: 'CP',
+    kind: 'comparison-table',
+    width: 620,
+    height: 260,
+    content: {
+      columns: ['상담', '전략', '수임'],
+      rows: [
+        { feature: '사실관계 정리', values: ['기본', '상세', '상세'] },
+        { feature: '문서 검토', values: ['선택', '포함', '포함'] },
+        { feature: '진행 관리', values: ['-', '일정표', '전담 관리'] },
+      ],
+    },
+  },
+];
+
 export const DECORATIVE_WIDGET_PRESETS: DecorativeWidgetPreset[] = [
   { id: 'decorative-shape-circle', label: 'Circle shape', description: '원형 도형', icon: '●', kind: 'shape', width: 160, height: 160, content: { shape: 'circle' } },
   { id: 'decorative-shape-blob', label: 'Blob shape', description: '블롭', icon: '☁', kind: 'shape', width: 200, height: 200, content: { shape: 'blob', fill: '#fcd34d' } },
@@ -1437,5 +1829,9 @@ export const DECORATIVE_WIDGET_PRESETS: DecorativeWidgetPreset[] = [
   { id: 'decorative-frame-photo', label: 'Photo frame', description: '사진 프레임', icon: '▣', kind: 'frame', width: 240, height: 280, content: { style: 'photo', width: 6, label: 'Featured' } },
   { id: 'decorative-sticker-star', label: 'Star sticker', description: '추천 스티커', icon: '⭐', kind: 'sticker', width: 140, height: 64, content: {} },
   { id: 'decorative-sticker-banner', label: 'Banner sticker', description: '리본 배너', icon: '🎀', kind: 'sticker', width: 200, height: 56, content: { variant: 'banner', emoji: '🎉', label: 'New' } },
+  { id: 'decorative-designer-corner-frame', label: 'Corner frame', description: '고급 코너 프레임', icon: 'CF', kind: 'frame', width: 360, height: 220, content: { style: 'corner', color: '#9f6b2c', width: 2, radius: 8, label: 'Selected' } },
+  { id: 'decorative-designer-fine-line', label: 'Fine rule', description: '섹션용 얇은 구분선', icon: '—', kind: 'divider', width: 560, height: 12, content: { orientation: 'horizontal', thickness: 1, color: '#b48a55', style: 'solid' } },
+  { id: 'decorative-designer-soft-halo', label: 'Soft halo', description: '은은한 배경 포인트', icon: 'HL', kind: 'shape', width: 280, height: 190, content: { shape: 'blob', fill: 'rgba(17, 109, 255, 0.14)', stroke: '', strokeWidth: 0 } },
+  { id: 'decorative-designer-diagonal-pattern', label: 'Diagonal texture', description: '편집형 배경 텍스처', icon: 'DX', kind: 'pattern', width: 420, height: 220, content: { pattern: 'diagonal', color: 'rgba(159, 107, 44, 0.18)', background: '#fbf7ef', scale: 34 } },
+  { id: 'decorative-designer-premium-tag', label: 'Premium tag', description: '작은 강조 배지', icon: 'PT', kind: 'sticker', width: 190, height: 54, content: { variant: 'pill', emoji: '✦', label: 'Featured insight', background: '#111827', color: '#ffffff', rotation: 0 } },
 ];
-

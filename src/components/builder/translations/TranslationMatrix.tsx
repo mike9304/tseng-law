@@ -73,7 +73,7 @@ export default function TranslationMatrix({
         </thead>
         <tbody>
           {visibleEntries.map((entry) => (
-            <tr key={entry.key}>
+            <tr key={entry.key} data-translation-entry={entry.key}>
               <td className={styles.labelCell}>
                 <div className={styles.rowLabel}>{entry.content.label}</div>
                 <div className={styles.rowMeta}>{entry.content.contentType}</div>

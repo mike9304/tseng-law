@@ -64,6 +64,13 @@ import './blogPostCard';
 import './blogCategories';
 import './blogArchive';
 import './featuredPosts';
+import './blogAuthor';
+import './blogRecentPosts';
+import './eventList';
+import './eventCalendar';
+import './eventRsvp';
+import './portfolioList';
+import './productGallery';
 
 // Phase 15 — Interactive widgets
 import './countdown';

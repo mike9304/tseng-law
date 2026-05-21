@@ -3,14 +3,27 @@ import { revalidatePath } from 'next/cache';
 import { normalizeLocale } from '@/lib/locales';
 import { listPages, createPage, readPageCanvas, readSiteDocument, writePageCanvas, writeSiteDocument } from '@/lib/builder/site/persistence';
 import { normalizeCanvasDocument, createDefaultCanvasDocument, createBlankCanvasDocument } from '@/lib/builder/canvas/types';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderRead, guardMutation } from '@/lib/builder/security/guard';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
+import {
+  createBuilderDynamicListCanvasDocument,
+  createBuilderDynamicListPageMeta,
+  getDynamicListDefaultTitle,
+  isSupportedDynamicListCollectionId,
+} from '@/lib/builder/dynamic-list-pages';
+import {
+  createBuilderDynamicItemCanvasDocument,
+  createBuilderDynamicItemPageMeta,
+  getDynamicItemDefaultTitle,
+  isSupportedDynamicItemCollectionId,
+} from '@/lib/builder/dynamic-item-pages';
+import type { BuilderPageDatasetFilter, BuilderPageDatasetSort } from '@/lib/builder/types';
 
 export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
-  const auth = await guardMutation(request, { permission: 'edit-pages' });
+  const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
@@ -30,6 +43,12 @@ export async function POST(request: NextRequest) {
     linkedFromPageId?: string;
     blank?: boolean;
     addToNavigation?: boolean;
+    dynamicListCollectionId?: string;
+    dynamicListFilters?: BuilderPageDatasetFilter[];
+    dynamicListSort?: BuilderPageDatasetSort[];
+    dynamicListLimit?: number;
+    dynamicItemCollectionId?: string;
+    dynamicItemRecordSlug?: string;
   };
   try {
     body = (await request.json()) as {
@@ -40,15 +59,65 @@ export async function POST(request: NextRequest) {
       linkedFromPageId?: string;
       blank?: boolean;
       addToNavigation?: boolean;
+      dynamicListCollectionId?: string;
+      dynamicListFilters?: BuilderPageDatasetFilter[];
+      dynamicListSort?: BuilderPageDatasetSort[];
+      dynamicListLimit?: number;
+      dynamicItemCollectionId?: string;
+      dynamicItemRecordSlug?: string;
     };
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
 
   const locale = normalizeLocale(body.locale || 'ko');
+  const rawDynamicListCollectionId = body.dynamicListCollectionId?.trim();
+  const dynamicListCollectionId = isSupportedDynamicListCollectionId(rawDynamicListCollectionId)
+    ? rawDynamicListCollectionId
+    : null;
+  if (rawDynamicListCollectionId && !dynamicListCollectionId) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'unsupported_dynamic_list_collection',
+        message: 'Only columns and service-areas can be used for dynamic list pages in this version.',
+      },
+      { status: 400 },
+    );
+  }
+  const rawDynamicItemCollectionId = body.dynamicItemCollectionId?.trim();
+  const dynamicItemCollectionId = isSupportedDynamicItemCollectionId(rawDynamicItemCollectionId)
+    ? rawDynamicItemCollectionId
+    : null;
+  if (rawDynamicItemCollectionId && !dynamicItemCollectionId) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'unsupported_dynamic_item_collection',
+        message: 'Only columns and service-areas can be used for dynamic item pages in this version.',
+      },
+      { status: 400 },
+    );
+  }
+  if (dynamicListCollectionId && dynamicItemCollectionId) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'ambiguous_dynamic_page_kind',
+        message: 'Create either a dynamic list page or a dynamic item page, not both.',
+      },
+      { status: 400 },
+    );
+  }
   const rawSlug = body.slug?.trim() || '';
   const slug = rawSlug || `page-${Date.now().toString(36)}`;
-  const title = body.title?.trim() || 'New Page';
+  const title =
+    body.title?.trim()
+    || (dynamicListCollectionId
+      ? getDynamicListDefaultTitle(dynamicListCollectionId, locale)
+      : dynamicItemCollectionId
+        ? getDynamicItemDefaultTitle(dynamicItemCollectionId, locale)
+        : 'New Page');
 
   if (slug.length > 200 || (rawSlug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))) {
     return NextResponse.json({ error: 'Invalid slug: lowercase alphanumeric with hyphens only' }, { status: 400 });
@@ -69,6 +138,39 @@ export async function POST(request: NextRequest) {
   }
 
   const page = await createPage('default', locale, slug, title);
+  let createdPage = page;
+
+  if (dynamicListCollectionId) {
+    const nextSite = await readSiteDocument('default', locale);
+    const dynamicPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
+    if (dynamicPage) {
+      dynamicPage.dynamicList = createBuilderDynamicListPageMeta({
+        collectionId: dynamicListCollectionId,
+        filters: body.dynamicListFilters,
+        sort: body.dynamicListSort,
+        limit: body.dynamicListLimit,
+      });
+      dynamicPage.updatedAt = new Date().toISOString();
+      nextSite.updatedAt = dynamicPage.updatedAt;
+      await writeSiteDocument(nextSite);
+      createdPage = dynamicPage;
+    }
+  }
+  if (dynamicItemCollectionId) {
+    const nextSite = await readSiteDocument('default', locale);
+    const dynamicPage = nextSite.pages.find((entry) => entry.pageId === page.pageId);
+    if (dynamicPage) {
+      dynamicPage.dynamicItem = createBuilderDynamicItemPageMeta({
+        collectionId: dynamicItemCollectionId,
+        locale,
+        recordSlug: body.dynamicItemRecordSlug,
+      });
+      dynamicPage.updatedAt = new Date().toISOString();
+      nextSite.updatedAt = dynamicPage.updatedAt;
+      await writeSiteDocument(nextSite);
+      createdPage = dynamicPage;
+    }
+  }
 
   if (body.linkedFromPageId) {
     const nextSite = await readSiteDocument('default', locale);
@@ -124,6 +226,10 @@ export async function POST(request: NextRequest) {
     : null;
   const canvasDoc = body.document
     ? normalizeCanvasDocument(body.document, locale)
+    : dynamicListCollectionId
+      ? createBuilderDynamicListCanvasDocument({ collectionId: dynamicListCollectionId, locale })
+    : dynamicItemCollectionId
+      ? createBuilderDynamicItemCanvasDocument({ collectionId: dynamicItemCollectionId, locale })
     : body.blank
       ? createBlankCanvasDocument(locale)
     : sourceCanvas
@@ -131,5 +237,5 @@ export async function POST(request: NextRequest) {
       : createDefaultCanvasDocument(locale);
   await writePageCanvas('default', page.pageId, 'draft', canvasDoc);
 
-  return NextResponse.json({ success: true, pageId: page.pageId, page });
+  return NextResponse.json({ success: true, pageId: page.pageId, page: createdPage });
 }

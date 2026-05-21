@@ -1,6 +1,12 @@
 import type { BuilderCanvasNode } from './types';
 import { resolveViewportRect, type Viewport } from '@/lib/builder/canvas/responsive';
-import { parentUsesFlowLayout } from './tree';
+import {
+  buildChildrenMap,
+  getCanvasNodeDescendantIds,
+  parentUsesFlowLayout,
+  resolveCanvasNodeAbsoluteRect,
+  resolveCanvasNodeAbsoluteRectForViewport,
+} from './tree';
 
 type CanvasRect = BuilderCanvasNode['rect'];
 
@@ -18,13 +24,42 @@ function compareFlowNodes(left: BuilderCanvasNode, right: BuilderCanvasNode): nu
     left.id.localeCompare(right.id);
 }
 
+function resolveSectionContentHeight(
+  section: BuilderCanvasNode,
+  nodes: BuilderCanvasNode[],
+  viewport?: Viewport,
+): number {
+  const nodesById = new Map(nodes.map((node) => [node.id, node]));
+  const childrenMap = buildChildrenMap(nodes);
+  const sectionRect = viewport
+    ? resolveCanvasNodeAbsoluteRectForViewport(section, nodesById, viewport)
+    : resolveCanvasNodeAbsoluteRect(section, nodesById);
+  const descendantIds = getCanvasNodeDescendantIds(section.id, childrenMap);
+  let contentBottom = sectionRect.y + sectionRect.height;
+
+  for (const descendantId of descendantIds) {
+    const descendant = nodesById.get(descendantId);
+    if (!descendant || descendant.visible === false) continue;
+    const descendantRect = viewport
+      ? resolveCanvasNodeAbsoluteRectForViewport(descendant, nodesById, viewport)
+      : resolveCanvasNodeAbsoluteRect(descendant, nodesById);
+    contentBottom = Math.max(contentBottom, descendantRect.y + descendantRect.height);
+  }
+
+  return Math.max(1, Math.ceil(contentBottom - sectionRect.y));
+}
+
 /**
- * Returns true if the node is a top-level composite (section) that should
- * participate in document flow layout (like in Published).
- * Matches the `flowAsSection` logic from public-page.tsx.
+ * Returns true if the node is a top-level page section that should participate
+ * in document flow layout. Older seeded pages use top-level `container` nodes
+ * with `as: "section"` for decomposed home sections, while newer generic
+ * sections may use `composite`.
  */
 export function isTopLevelFlowSection(node: BuilderCanvasNode): boolean {
-  return !node.parentId && node.kind === 'composite';
+  if (node.parentId) return false;
+  if (node.kind === 'composite') return true;
+  const content = node.content as { as?: unknown };
+  return content.as === 'section';
 }
 
 /**
@@ -89,9 +124,16 @@ export function computeTopLevelFlowSectionMetrics(
   const topLevelNodes = nodes.filter((node) => !node.parentId);
 
   const flowTopLevelCompositeNodes = topLevelNodes
-    .filter((node): node is BuilderCanvasNode => node.kind === 'composite');
+    .filter(isTopLevelFlowSection)
+    .map((node) => {
+      const rect = effectiveRect(node, viewport);
+      return withRect(node, {
+        ...rect,
+        height: Math.max(rect.height, resolveSectionContentHeight(node, nodes, viewport)),
+      });
+    });
 
-  return computeFlowSiblingMetrics(flowTopLevelCompositeNodes, viewport);
+  return computeFlowSiblingMetrics(flowTopLevelCompositeNodes);
 }
 
 /**
@@ -273,7 +315,7 @@ export function computeReorderedFlowSectionRects(
 
 /**
  * Returns the flow group identifier for drag/reorder purposes:
- * - `null` for top-level flow sections (no parentId, kind==='composite')
+ * - `null` for top-level flow sections
  * - the parent container's id (string) for direct children of a flex/grid container
  * - `null` otherwise (not a flow-layout participant for drag)
  *
@@ -291,7 +333,7 @@ export function getFlowGroupKey(
 
 /**
  * Returns the list of sibling nodes that participate in the same flow group.
- * - For `flowGroupKey === null`: top-level composites (flow sections)
+ * - For `flowGroupKey === null`: top-level page sections
  * - For string key: visible direct children of the container with that id
  *   (caller is responsible for ensuring the container actually uses flex/grid)
  */

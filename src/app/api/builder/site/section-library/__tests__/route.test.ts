@@ -8,6 +8,8 @@ import {
 import type { SavedSection } from '@/lib/builder/site/types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { createCanvasNodeTemplate } from '@/lib/builder/canvas/store';
+import { draftToSavedSectionSnapshots } from '@/lib/builder/ai-generator/canvas-import';
+import { generateSiteDraft } from '@/lib/builder/ai-generator/orchestrator';
 
 vi.mock('@/lib/builder/security/guard', () => ({
   guardMutation: vi.fn(async () => ({ user: { id: 'u1', email: 'a@b' } })),
@@ -100,6 +102,62 @@ describe('/api/builder/site/section-library', () => {
     expect(payload.ok).toBe(true);
     expect(payload.section.sectionId).toBe('sec-new');
     expect(createSection).toHaveBeenCalledTimes(1);
+  });
+
+  it('accepts AI-generated section snapshots and normalizes the root', async () => {
+    const draft = await generateSiteDraft({
+      industry: 'law',
+      companyName: '호정국제법률사무소',
+      goals: ['상담 문의 증가', '칼럼 검색 유입 확보'],
+      brandKeywords: ['대만 법률', '한국어 상담'],
+      tone: 'professional',
+      colorPreference: 'cool',
+      locale: 'ko',
+    });
+    const snapshot = draftToSavedSectionSnapshots({ draft, locale: 'ko', pageId: 'ai-library-api' })
+      .find((item) => item.sectionTemplateId === 'services');
+    expect(snapshot).toBeTruthy();
+    if (!snapshot) return;
+
+    vi.mocked(createSection).mockImplementation(async (_siteId, _locale, input) => ({
+      sectionId: 'sec-ai-services',
+      name: input.name,
+      description: input.description,
+      category: input.category,
+      thumbnail: input.thumbnail,
+      rootNodeId: input.rootNodeId,
+      nodes: input.nodes,
+      createdAt: '2026-05-13T00:00:00Z',
+      updatedAt: '2026-05-13T00:00:00Z',
+      usage: 0,
+    }));
+
+    const route = await import('../route');
+    const response = await route.POST(
+      postRequest({
+        name: snapshot.name,
+        description: snapshot.description,
+        category: snapshot.category,
+        rootNodeId: snapshot.rootNodeId,
+        nodes: snapshot.nodes,
+        locale: 'ko',
+      }),
+    );
+    const payload = await response.json();
+    const createInput = vi.mocked(createSection).mock.calls[0]?.[2];
+
+    expect(response.status).toBe(200);
+    expect(payload.ok).toBe(true);
+    expect(payload.section.sectionId).toBe('sec-ai-services');
+    expect(createInput?.nodes[0]).toMatchObject({
+      id: snapshot.rootNodeId,
+      parentId: undefined,
+      rect: expect.objectContaining({ x: 0, y: 0 }),
+    });
+    expect(createInput?.nodes.some((node) => (
+      node.kind === 'container'
+      && node.content.className?.includes('services-detail-card')
+    ))).toBe(true);
   });
 
   it('rejects empty name with 400 (zod validation error)', async () => {

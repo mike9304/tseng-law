@@ -4,6 +4,7 @@ import {
   computeNewZIndexOrderForFlowSiblings,
   computeReorderedFlowSiblingRects,
   computeResizedFlowSiblingRects,
+  computeTopLevelFlowSectionMetrics,
   getFlowSiblingInsertionIndex,
   getFlowSiblingOriginalIndex,
 } from '../flow';
@@ -30,6 +31,32 @@ function nodesById(nodes: BuilderCanvasNode[]): Map<string, BuilderCanvasNode> {
 }
 
 describe('builder canvas flow helpers', () => {
+  it('sizes top-level flow sections around overflowing descendants', () => {
+    const firstSection = node({
+      id: 'section-a',
+      kind: 'container',
+      content: { as: 'section' },
+      rect: { x: 0, y: 0, width: 1280, height: 420 },
+    });
+    const overflowingCta = node({
+      id: 'section-a-cta',
+      parentId: 'section-a',
+      kind: 'button',
+      rect: { x: 960, y: 390, width: 180, height: 72 },
+    });
+    const secondSection = node({
+      id: 'section-b',
+      kind: 'container',
+      content: { as: 'section' },
+      rect: { x: 0, y: 440, width: 1280, height: 320 },
+    });
+
+    const metrics = computeTopLevelFlowSectionMetrics([firstSection, overflowingCta, secondSection]);
+
+    expect(metrics.get('section-a')?.minHeight).toBe(462);
+    expect(metrics.get('section-b')?.marginTop).toBe(0);
+  });
+
   it('uses responsive viewport rects when reordering children inside flex containers', () => {
     const container = node({
       id: 'flow-parent',

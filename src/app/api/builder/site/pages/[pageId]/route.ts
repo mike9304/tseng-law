@@ -9,6 +9,7 @@ import {
   normalizeSeoSlugInput,
   validateBuilderPageSeo,
 } from '@/lib/builder/seo/validation';
+import { generateRedirectId, validateRedirectInput } from '@/lib/builder/site/redirects';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -16,7 +17,15 @@ export const dynamic = 'force-dynamic';
 const updatePageSchema = z.object({
   title: z.string().trim().min(1).max(200),
   slug: z.string().trim().max(200).optional(),
+  createRedirect: z.boolean().optional(),
 }).strict();
+
+interface RedirectCreationWarning {
+  from: string;
+  to: string;
+  field: 'from' | 'to' | 'type';
+  message: string;
+}
 
 function validationErrorResponse(error: ZodError): NextResponse {
   return NextResponse.json(
@@ -46,6 +55,41 @@ function updateNavigationPageReference(
   }));
 }
 
+function appendRedirectIfValid(
+  site: Awaited<ReturnType<typeof readSiteDocument>>,
+  input: {
+    from: string;
+    to: string;
+    type: 301;
+    isActive: true;
+    note: string;
+  },
+  now: string,
+): { created: boolean; warning?: RedirectCreationWarning } {
+  const redirectError = validateRedirectInput(input, site.redirects ?? []);
+  if (redirectError) {
+    return {
+      created: false,
+      warning: {
+        from: input.from,
+        to: input.to,
+        field: redirectError.field,
+        message: redirectError.message,
+      },
+    };
+  }
+  site.redirects = [
+    ...(site.redirects ?? []),
+    {
+      redirectId: generateRedirectId(),
+      ...input,
+      createdAt: now,
+      updatedAt: now,
+    },
+  ];
+  return { created: true };
+}
+
 export async function PATCH(
   request: NextRequest,
   { params }: { params: { pageId: string } },
@@ -65,6 +109,9 @@ export async function PATCH(
 
     const now = new Date().toISOString();
     const nextSlug = payload.slug !== undefined ? normalizeSeoSlugInput(payload.slug) : page.slug;
+    const previousSlug = page.slug;
+    const previousPath = pageHref(page.locale, previousSlug, page.isHomePage);
+    const nextPath = pageHref(page.locale, nextSlug, page.isHomePage);
     const validation = validateBuilderPageSeo({
       page: { ...page, slug: nextSlug },
       site,
@@ -83,6 +130,31 @@ export async function PATCH(
     page.slug = nextSlug;
     page.updatedAt = now;
     site.updatedAt = now;
+    let redirectCreated = false;
+    const redirectWarnings: RedirectCreationWarning[] = [];
+    if (payload.createRedirect === true && !page.isHomePage && previousPath !== nextPath) {
+      const exactRedirect = appendRedirectIfValid(site, {
+        from: previousPath,
+        to: nextPath,
+        type: 301 as const,
+        isActive: true,
+        note: `Auto-created after page slug change for ${page.pageId}`,
+      }, now);
+      redirectCreated = exactRedirect.created || redirectCreated;
+      if (exactRedirect.warning) redirectWarnings.push(exactRedirect.warning);
+
+      if (page.dynamicItem) {
+        const wildcardRedirect = appendRedirectIfValid(site, {
+          from: `${previousPath}/*`,
+          to: `${nextPath}/*`,
+          type: 301 as const,
+          isActive: true,
+          note: `Auto-created for dynamic item URLs after page slug change for ${page.pageId}`,
+        }, now);
+        redirectCreated = wildcardRedirect.created || redirectCreated;
+        if (wildcardRedirect.warning) redirectWarnings.push(wildcardRedirect.warning);
+      }
+    }
     site.navigation = updateNavigationPageReference(
       site.navigation,
       page,
@@ -94,6 +166,8 @@ export async function PATCH(
     return NextResponse.json({
       ok: true,
       page,
+      redirectCreated,
+      redirectWarnings,
     });
   } catch (error) {
     if (error instanceof ZodError) return validationErrorResponse(error);

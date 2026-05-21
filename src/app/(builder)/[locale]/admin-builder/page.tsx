@@ -16,12 +16,25 @@ import {
   type BuilderCanvasDocument,
   type BuilderCanvasNode,
 } from '@/lib/builder/canvas/types';
+import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
+import { readBuilderPageSnapshot } from '@/lib/builder/persistence';
+import {
+  createDefaultBuilderPageDatasets,
+  readBuilderPageDatasetOverviews,
+} from '@/lib/builder/datasets';
+import { buildBuilderDynamicListDatasetDocument } from '@/lib/builder/dynamic-list-pages';
+import { buildBuilderDynamicItemDatasetDocument } from '@/lib/builder/dynamic-item-pages';
 import { createHomePageCanvasDocument, SEED_VERSION } from '@/lib/builder/canvas/seed-home';
+import { HERO_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-hero';
+import { INSIGHTS_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-insights';
+import { FAQ_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-faq';
+import { SERVICES_SECTION_ROOT_HEIGHT } from '@/lib/builder/canvas/decompose-services';
 import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair';
 import { seedSitePages } from '@/lib/builder/canvas/seed-pages';
 import type { BuilderNavItem, BuilderSiteDocument } from '@/lib/builder/site/types';
 import { mergeHeaderMegaChildren, type HeaderMegaKey } from '@/lib/builder/site/header-mega';
 import { needsStandardPageSeedForLocale } from '@/lib/builder/site/standard-pages';
+import { listEnabledBuilderAppWidgetsFromInstalled } from '@/lib/builder/apps/widgets';
 
 export const dynamic = 'force-dynamic';
 
@@ -214,6 +227,52 @@ function upgradeHeroQuickMenu(document: BuilderCanvasDocument, locale: Locale): 
   };
 }
 
+function upgradeHomeHeroBoundarySpacing(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  const currentRoot = document.nodes.find((node) => node.id === 'home-hero-root');
+  if (!currentRoot) return document;
+
+  const oldHeroBottom = currentRoot.rect.y + currentRoot.rect.height;
+  const heroHeightDelta = HERO_SECTION_ROOT_HEIGHT - currentRoot.rect.height;
+  let changed = false;
+
+  const nextNodes = document.nodes.map((node) => {
+    if (node.id === 'home-hero-root' || node.id === 'home-hero-media' || node.id === 'home-hero-media-image') {
+      const result = withNodePatch(node, {
+        rect: {
+          ...node.rect,
+          height: HERO_SECTION_ROOT_HEIGHT,
+        },
+      });
+      changed = changed || result.changed;
+      return result.node;
+    }
+
+    if (heroHeightDelta !== 0 && !node.parentId && node.rect.y >= oldHeroBottom - 1) {
+      changed = true;
+      return {
+        ...node,
+        rect: {
+          ...node.rect,
+          y: node.rect.y + heroHeightDelta,
+        },
+      };
+    }
+
+    return node;
+  });
+
+  if (!changed) return document;
+  return {
+    ...document,
+    stageHeight: heroHeightDelta !== 0
+      ? Math.max(880, document.stageHeight + heroHeightDelta)
+      : document.stageHeight,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `${document.updatedBy || 'builder'}+hero-boundary`,
+    nodes: nextNodes,
+  };
+}
+
 function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {
   if (!document.nodes.some((node) => node.id === 'home-insights-root')) return document;
   const seeded = createHomePageCanvasDocument(locale);
@@ -231,7 +290,7 @@ function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Loca
   const currentRootY = currentRoot?.rect.y ?? 0;
   const oldInsightsBottom = currentRoot ? currentRoot.rect.y + currentRoot.rect.height : 0;
   const insightsHeightDelta = currentRoot && seededRoot
-    ? seededRoot.rect.height - currentRoot.rect.height
+    ? INSIGHTS_SECTION_ROOT_HEIGHT - currentRoot.rect.height
     : 0;
   let changed = false;
   const nextNodes = document.nodes.flatMap((node) => {
@@ -274,7 +333,7 @@ function upgradeHomeInsightsSource(document: BuilderCanvasDocument, locale: Loca
   }
 
   const nextStageHeight = insightsHeightDelta !== 0
-    ? Math.max(880, document.stageHeight + insightsHeightDelta, currentRootY + (seededRoot?.rect.height ?? 0) + 40)
+    ? Math.max(880, document.stageHeight + insightsHeightDelta, currentRootY + INSIGHTS_SECTION_ROOT_HEIGHT + 40)
     : document.stageHeight;
 
   if (!changed) return document;
@@ -355,10 +414,31 @@ function upgradeHomeOfficesTabbedLayout(document: BuilderCanvasDocument, locale:
 }
 
 function upgradeHomeServicesSection(document: BuilderCanvasDocument): BuilderCanvasDocument {
+  const currentRoot = document.nodes.find((node) => node.id === 'home-services-root');
+  const oldServicesBottom = currentRoot ? currentRoot.rect.y + currentRoot.rect.height : 0;
+  const servicesHeightDelta = currentRoot
+    ? SERVICES_SECTION_ROOT_HEIGHT - currentRoot.rect.height
+    : 0;
   let changed = false;
   const nextNodes = document.nodes.map((node) => {
-    if (node.id !== 'home-services-root') return node;
+    if (node.id !== 'home-services-root') {
+      if (servicesHeightDelta !== 0 && !node.parentId && node.rect.y >= oldServicesBottom - 1) {
+        changed = true;
+        return {
+          ...node,
+          rect: {
+            ...node.rect,
+            y: node.rect.y + servicesHeightDelta,
+          },
+        };
+      }
+      return node;
+    }
     const result = withNodePatch(node, {
+      rect: {
+        ...node.rect,
+        height: SERVICES_SECTION_ROOT_HEIGHT,
+      },
       content: {
         className: 'section section--light',
         htmlId: 'practice',
@@ -372,8 +452,65 @@ function upgradeHomeServicesSection(document: BuilderCanvasDocument): BuilderCan
   if (!changed) return document;
   return {
     ...document,
+    stageHeight: servicesHeightDelta !== 0
+      ? Math.max(880, document.stageHeight + servicesHeightDelta)
+      : document.stageHeight,
     updatedAt: new Date().toISOString(),
     updatedBy: `${document.updatedBy || 'builder'}+services-parity`,
+    nodes: nextNodes,
+  };
+}
+
+function upgradeHomeFaqSection(document: BuilderCanvasDocument, locale: Locale): BuilderCanvasDocument {
+  const currentRoot = document.nodes.find((node) => node.id === 'home-faq-root');
+  if (!currentRoot) return document;
+
+  const seeded = createHomePageCanvasDocument(locale);
+  const seededById = new Map(
+    seeded.nodes
+      .filter((node) => node.id.startsWith('home-faq-'))
+      .map((node) => [node.id, node]),
+  );
+  const oldFaqBottom = currentRoot.rect.y + currentRoot.rect.height;
+  const faqHeightDelta = FAQ_SECTION_ROOT_HEIGHT - currentRoot.rect.height;
+  let changed = false;
+
+  const nextNodes = document.nodes.map((node) => {
+    const seededNode = seededById.get(node.id);
+    if (!seededNode) {
+      if (faqHeightDelta !== 0 && !node.parentId && node.rect.y >= oldFaqBottom - 1) {
+        changed = true;
+        return {
+          ...node,
+          rect: {
+            ...node.rect,
+            y: node.rect.y + faqHeightDelta,
+          },
+        };
+      }
+      return node;
+    }
+
+    if (node.kind !== seededNode.kind) return node;
+
+    const result = withNodePatch(node, {
+      rect: seededNode.rect,
+      zIndex: seededNode.zIndex,
+      style: seededNode.style,
+      content: seededNode.content as Record<string, unknown>,
+    });
+    changed = changed || result.changed;
+    return result.node;
+  });
+
+  if (!changed) return document;
+  return {
+    ...document,
+    stageHeight: faqHeightDelta !== 0
+      ? Math.max(880, document.stageHeight + faqHeightDelta)
+      : document.stageHeight,
+    updatedAt: new Date().toISOString(),
+    updatedBy: `${document.updatedBy || 'builder'}+faq-parity`,
     nodes: nextNodes,
   };
 }
@@ -477,6 +614,7 @@ export default async function BuilderMainPage({
     }
   }
   const visiblePages = projectPagesForLocale(site.pages, locale);
+  const appWidgets = listEnabledBuilderAppWidgetsFromInstalled(site.installedApps ?? []);
   const homePage = visiblePages.find((p) => p.isHomePage) || visiblePages[0];
   const requestedPage = searchParams?.pageId
     ? visiblePages.find((page) => page.pageId === searchParams.pageId)
@@ -549,11 +687,17 @@ export default async function BuilderMainPage({
 
   const upgradedInitialDocument = upgradeHeroSearchForm(
     upgradeHeroQuickMenu(
-      upgradeHomeServicesSection(
-        upgradeHomeOfficesTabbedLayout(
-          upgradeHomeInsightsSource(upgradeOfficeMapPlaceholders(initialDocument), locale),
-          locale,
+      upgradeHomeFaqSection(
+        upgradeHomeServicesSection(
+          upgradeHomeOfficesTabbedLayout(
+            upgradeHomeInsightsSource(
+              upgradeHomeHeroBoundarySpacing(upgradeOfficeMapPlaceholders(initialDocument)),
+              locale,
+            ),
+            locale,
+          ),
         ),
+        locale,
       ),
       locale,
     ),
@@ -570,11 +714,40 @@ export default async function BuilderMainPage({
     initialDocument = upgradedInitialDocument;
   }
 
+  const [homeDatasetSnapshot, datasetPosts] = await Promise.all([
+    readBuilderPageSnapshot('home', 'draft', locale),
+    getAllColumnPostsIncludingBlob(locale),
+  ]);
+  const datasetDocument = initialPage?.dynamicList
+    ? buildBuilderDynamicListDatasetDocument(initialPage.dynamicList)
+    : initialPage?.dynamicItem
+      ? buildBuilderDynamicItemDatasetDocument(initialPage.dynamicItem)
+    : homeDatasetSnapshot.snapshot.document ?? {
+      pageKey: 'home' as const,
+      datasets: createDefaultBuilderPageDatasets('home'),
+    };
+  const datasetPreviewTargets = readBuilderPageDatasetOverviews(
+    'home',
+    datasetDocument,
+    locale,
+    datasetPosts,
+  ).map((overview) => ({
+    targetId: overview.targetId,
+    title: overview.title,
+    collectionId: overview.currentBinding.collectionId,
+    mode: overview.currentBinding.mode,
+    filters: overview.currentBinding.filters ?? [],
+    sort: overview.currentBinding.sort ?? [],
+    limit: overview.currentBinding.limit,
+    records: overview.sampleRecords,
+  }));
+
   return (
     <SandboxPage
       locale={locale}
       backend={backend}
       initialDocument={initialDocument}
+      datasetPreviewTargets={datasetPreviewTargets}
       initialPageId={initialPage?.pageId}
       siteName={site.name}
       siteSettings={site.settings}
@@ -583,6 +756,7 @@ export default async function BuilderMainPage({
       currentSlug={initialPage?.slug || ''}
       sitePages={visiblePages}
       siteLightboxes={site.lightboxes ?? []}
+      appWidgets={appWidgets}
     />
   );
 }

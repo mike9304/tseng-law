@@ -250,6 +250,7 @@ export default function SavedSectionsPanel({ locale }: { locale: Locale }) {
               {items.map((section) => (
                 <div
                   key={section.sectionId}
+                  data-builder-saved-section-card={section.sectionId}
                   draggable
                   onDragStart={(event) => {
                     event.dataTransfer.setData(DRAG_MIME, section.sectionId);
@@ -343,6 +344,7 @@ export default function SavedSectionsPanel({ locale }: { locale: Locale }) {
                   <div style={{ display: 'flex', gap: 4, marginTop: 2 }}>
                     <button
                       type="button"
+                      data-builder-saved-section-insert={section.sectionId}
                       onClick={() => { void handleInsert(section); }}
                       style={iconButtonStyle('#eff6ff', '#123b63')}
                       title="현재 페이지에 추가"

@@ -2,9 +2,19 @@
 
 import { useState, useCallback, useRef, useEffect, type ReactNode } from 'react';
 import { getComponent } from '@/lib/builder/components/registry';
-import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
-import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import { createCanvasNodeTemplate, useBuilderCanvasStore } from '@/lib/builder/canvas/store';
+import type {
+  BuilderCanvasNode,
+  BuilderDataBinding,
+  BuilderDataBindingFieldMap,
+} from '@/lib/builder/canvas/types';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
+import {
+  applyBuilderDatasetPreviewBindingToNode,
+  resolveBuilderDatasetPreviewRecord,
+} from '@/lib/builder/dataset-preview-binding';
+import { getBuilderBindableTarget } from '@/lib/builder/datasets';
+import { resolveBuilderStaleDataBindingFields } from '@/lib/builder/dataset-binding-validation';
 import {
   computeFlowSiblingMetrics,
   computeTopLevelFlowSectionMetrics,
@@ -27,6 +37,14 @@ import {
   getHomeSectionTemplateTarget,
   getHomeSectionTemplateVariant,
 } from '@/lib/builder/canvas/section-templates';
+import {
+  BUILDER_ACCORDION_PREVIEW_STACK_GAP,
+  BUILDER_FAQ_ACCORDION_ITEM_HEIGHT,
+  BUILDER_FAQ_ACCORDION_SECTION_HEIGHT,
+  BUILDER_SERVICES_ACCORDION_CARD_HEIGHT,
+  BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT,
+  accordionPreviewExtra,
+} from '@/lib/builder/canvas/accordion-preview';
 import {
   googleMapsSearchUrl,
   isOfficeMapNodeId,
@@ -51,6 +69,7 @@ import { CanvasNodeBadge } from './CanvasNodeBadge';
 import CanvasNodeErrorBoundary from './CanvasNodeErrorBoundary';
 import { CanvasNodeQuickPanels } from './CanvasNodeQuickPanels';
 import { buildCanvasNodeRenderStyles } from './CanvasNodeRenderStyles';
+import { useBuilderDatasetPreviewTargets } from './BuilderDatasetPreviewContext';
 import { CanvasNodeSelectionOverlay } from './CanvasNodeSelectionOverlay';
 import { InsightsArchiveListPreview } from './CanvasInsightsPreview';
 import type { ResizeHandle } from './canvasNodeTypes';
@@ -102,23 +121,294 @@ interface InlineTextVisualStyle {
   textTransform?: string;
 }
 
-const SERVICES_PREVIEW_EXPANDED_HEIGHT = 420;
-const SERVICES_PREVIEW_STACK_DELTA = 288;
-const FAQ_PREVIEW_EXPANDED_HEIGHT = 190;
-const FAQ_PREVIEW_STACK_DELTA = 122;
+const REPEATER_TEMPLATE_EDIT_KIND_PRIORITY = [
+  'text',
+  'heading',
+  'button',
+  'image',
+  'gallery',
+  'container',
+] as const;
+
+function pickRepeaterTemplateEditTarget(
+  childNodes: readonly BuilderCanvasNode[],
+  targetId: string | undefined,
+): BuilderCanvasNode | undefined {
+  const boundChildren = targetId
+    ? childNodes.filter((childNode) => childNode.dataBinding?.targetId === targetId)
+    : [];
+  const candidates = boundChildren.length > 0 ? boundChildren : [...childNodes];
+  return REPEATER_TEMPLATE_EDIT_KIND_PRIORITY
+    .map((kind) => candidates.find((childNode) => childNode.kind === kind))
+    .find((childNode): childNode is BuilderCanvasNode => Boolean(childNode))
+    ?? candidates[0];
+}
+
+const REPEATER_TEMPLATE_PRIMARY_FIELD_KEYS_BY_KIND: Partial<Record<
+  BuilderCanvasNode['kind'],
+  Array<keyof BuilderDataBindingFieldMap>
+>> = {
+  text: ['text', 'href'],
+  heading: ['text'],
+  image: ['src', 'alt', 'href'],
+  button: ['label', 'href'],
+  gallery: ['src', 'caption', 'alt'],
+  container: ['title', 'description', 'src'],
+};
+
+interface RepeaterTemplateBindingSummary {
+  nodeId: string;
+  kindLabel: string;
+  fieldId: string;
+  extraCount: number;
+}
+
+function formatRepeaterTemplateKindLabel(kind: BuilderCanvasNode['kind']) {
+  if (kind === 'heading') return 'Heading';
+  if (kind === 'image') return 'Image';
+  if (kind === 'button') return 'Button';
+  if (kind === 'gallery') return 'Gallery';
+  if (kind === 'container') return 'Box';
+  if (kind === 'text') return 'Text';
+  return kind;
+}
+
+function resolveRepeaterTemplateBindingSummary(
+  childNodes: readonly BuilderCanvasNode[],
+  targetId: BuilderDataBinding['targetId'] | undefined,
+): RepeaterTemplateBindingSummary[] {
+  if (!targetId) return [];
+  return childNodes
+    .map((childNode) => {
+      if (childNode.dataBinding?.targetId !== targetId) return null;
+      const fields = childNode.dataBinding.fields;
+      const mappedEntries = Object.entries(fields)
+        .filter((entry): entry is [keyof BuilderDataBindingFieldMap, string] => Boolean(entry[1]));
+      if (mappedEntries.length === 0) return null;
+      const preferredKeys = REPEATER_TEMPLATE_PRIMARY_FIELD_KEYS_BY_KIND[childNode.kind] ?? [];
+      const primaryKey = preferredKeys.find((key) => fields[key]) ?? mappedEntries[0][0];
+      const fieldId = fields[primaryKey] ?? mappedEntries[0][1];
+      return {
+        nodeId: childNode.id,
+        kindLabel: formatRepeaterTemplateKindLabel(childNode.kind),
+        fieldId,
+        extraCount: Math.max(0, mappedEntries.length - 1),
+      };
+    })
+    .filter((entry): entry is RepeaterTemplateBindingSummary => Boolean(entry));
+}
+
+function resolveRepeaterTemplateTextField(targetId: BuilderDataBinding['targetId'] | undefined) {
+  if (!targetId) return undefined;
+  try {
+    const target = getBuilderBindableTarget(targetId);
+    return target.bindableFields.find((field) => field.fieldId === 'title' && field.valueKind === 'text')?.fieldId
+      ?? target.bindableFields.find((field) => field.valueKind === 'text')?.fieldId;
+  } catch {
+    return undefined;
+  }
+}
+
+function resolveRepeaterTemplateImageField(targetId: BuilderDataBinding['targetId'] | undefined) {
+  if (!targetId) return undefined;
+  try {
+    const target = getBuilderBindableTarget(targetId);
+    return target.bindableFields.find((field) => field.fieldId === 'featuredImage' && field.valueKind === 'image')?.fieldId
+      ?? target.bindableFields.find((field) => field.valueKind === 'image')?.fieldId;
+  } catch {
+    return undefined;
+  }
+}
+
+function resolveRepeaterTemplateHrefField(targetId: BuilderDataBinding['targetId'] | undefined) {
+  if (!targetId) return undefined;
+  try {
+    const target = getBuilderBindableTarget(targetId);
+    return target.bindableFields.find((field) => field.fieldId === 'href' && field.valueKind === 'url')?.fieldId
+      ?? target.bindableFields.find((field) => field.valueKind === 'url')?.fieldId;
+  } catch {
+    return undefined;
+  }
+}
+
+function resolveRepeaterTemplateButtonLabelField(targetId: BuilderDataBinding['targetId'] | undefined) {
+  if (!targetId) return undefined;
+  try {
+    const target = getBuilderBindableTarget(targetId);
+    return target.bindableFields.find((field) => field.fieldId === 'readTime' && field.valueKind === 'text')?.fieldId
+      ?? target.bindableFields.find((field) => field.fieldId === 'title' && field.valueKind === 'text')?.fieldId
+      ?? target.bindableFields.find((field) => field.valueKind === 'text')?.fieldId;
+  } catch {
+    return undefined;
+  }
+}
+
+function resolveRepeaterTemplateChildMetrics(
+  childNodes: readonly BuilderCanvasNode[],
+  parentNode: BuilderCanvasNode,
+) {
+  const existingTemplateWidth = childNodes.reduce((width, childNode) => (
+    Math.max(width, childNode.rect.x + childNode.rect.width)
+  ), 0);
+  const nextY = childNodes.reduce((bottom, childNode) => (
+    Math.max(bottom, childNode.rect.y + childNode.rect.height)
+  ), 0);
+  return {
+    width: Math.max(180, Math.min(280, existingTemplateWidth || parentNode.rect.width - 40)),
+    y: nextY > 0 ? nextY + 12 : 0,
+  };
+}
+
+function createRepeaterTemplateTextNode({
+  childNodes,
+  parentNode,
+  targetId,
+  zIndex,
+}: {
+  childNodes: readonly BuilderCanvasNode[];
+  parentNode: BuilderCanvasNode;
+  targetId: BuilderDataBinding['targetId'] | undefined;
+  zIndex: number;
+}): BuilderCanvasNode {
+  const { width, y } = resolveRepeaterTemplateChildMetrics(childNodes, parentNode);
+  const fallbackText = 'Bound text';
+  const fieldId = resolveRepeaterTemplateTextField(targetId);
+  const template = createCanvasNodeTemplate('text', 0, y, zIndex);
+  return {
+    ...template,
+    parentId: parentNode.id,
+    rect: {
+      x: 0,
+      y,
+      width,
+      height: 64,
+    },
+    style: {
+      ...template.style,
+      borderRadius: 0,
+    },
+    content: {
+      ...template.content,
+      text: fallbackText,
+      richText: richTextFromPlainText(fallbackText),
+      fontSize: 18,
+      color: '#0f172a',
+      fontWeight: 'bold',
+      align: 'left',
+      lineHeight: 1.25,
+      letterSpacing: 0,
+    },
+    dataBinding: targetId && fieldId
+      ? {
+          targetId,
+          recordIndex: 0,
+          fields: { text: fieldId },
+        }
+      : undefined,
+  } as BuilderCanvasNode;
+}
+
+function createRepeaterTemplateImageNode({
+  childNodes,
+  parentNode,
+  targetId,
+  zIndex,
+}: {
+  childNodes: readonly BuilderCanvasNode[];
+  parentNode: BuilderCanvasNode;
+  targetId: BuilderDataBinding['targetId'] | undefined;
+  zIndex: number;
+}): BuilderCanvasNode {
+  const { width, y } = resolveRepeaterTemplateChildMetrics(childNodes, parentNode);
+  const srcField = resolveRepeaterTemplateImageField(targetId);
+  const altField = resolveRepeaterTemplateTextField(targetId);
+  const hrefField = resolveRepeaterTemplateHrefField(targetId);
+  const template = createCanvasNodeTemplate('image', 0, y, zIndex);
+  return {
+    ...template,
+    parentId: parentNode.id,
+    rect: {
+      x: 0,
+      y,
+      width,
+      height: Math.max(104, Math.round(width * 0.56)),
+    },
+    style: {
+      ...template.style,
+      borderRadius: 12,
+    },
+    content: {
+      ...template.content,
+      src: '/images/placeholder-image.svg',
+      alt: 'Bound image',
+      fit: 'cover',
+      link: null,
+    },
+    dataBinding: targetId && srcField
+      ? {
+          targetId,
+          recordIndex: 0,
+          fields: {
+            src: srcField,
+            ...(altField ? { alt: altField } : {}),
+            ...(hrefField ? { href: hrefField } : {}),
+          },
+        }
+      : undefined,
+  } as BuilderCanvasNode;
+}
+
+function createRepeaterTemplateButtonNode({
+  childNodes,
+  parentNode,
+  targetId,
+  zIndex,
+}: {
+  childNodes: readonly BuilderCanvasNode[];
+  parentNode: BuilderCanvasNode;
+  targetId: BuilderDataBinding['targetId'] | undefined;
+  zIndex: number;
+}): BuilderCanvasNode {
+  const { y } = resolveRepeaterTemplateChildMetrics(childNodes, parentNode);
+  const labelField = resolveRepeaterTemplateButtonLabelField(targetId);
+  const hrefField = resolveRepeaterTemplateHrefField(targetId);
+  const template = createCanvasNodeTemplate('button', 0, y, zIndex);
+  return {
+    ...template,
+    parentId: parentNode.id,
+    rect: {
+      x: 0,
+      y,
+      width: 148,
+      height: 44,
+    },
+    style: {
+      ...template.style,
+      borderRadius: 999,
+    },
+    content: {
+      ...template.content,
+      label: 'Bound button',
+      href: '',
+      style: 'primary-solid',
+      link: null,
+    },
+    dataBinding: targetId && (labelField || hrefField)
+      ? {
+          targetId,
+          recordIndex: 0,
+          fields: {
+            ...(labelField ? { label: labelField } : {}),
+            ...(hrefField ? { href: hrefField } : {}),
+          },
+        }
+      : undefined,
+  } as BuilderCanvasNode;
+}
 
 function parseCssNumber(value: string): number | undefined {
   const parsed = Number.parseFloat(value);
   return Number.isFinite(parsed) ? parsed : undefined;
-}
-
-function countRevealedBefore(revealedIndices: Set<number>, index: number | null): number {
-  if (index == null) return 0;
-  let count = 0;
-  revealedIndices.forEach((revealedIndex) => {
-    if (revealedIndex < index) count += 1;
-  });
-  return count;
 }
 
 function resolveInlineTextRenderElement(root: HTMLDivElement | null): HTMLElement | null {
@@ -164,9 +454,11 @@ export default function CanvasNode({
   const [mapQuickAddressDraft, setMapQuickAddressDraft] = useState('');
   const component = getComponent(node.kind);
   const theme = useBuilderTheme();
+  const datasetPreviewTargets = useBuilderDatasetPreviewTargets();
   const nodeRef = useRef<HTMLDivElement>(null);
   const mapQuickAddressRef = useRef<HTMLTextAreaElement>(null);
   const updateNode = useBuilderCanvasStore((s) => s.updateNode);
+  const addChildNode = useBuilderCanvasStore((s) => s.addChildNode);
   const updateNodeRectsForViewport = useBuilderCanvasStore((s) => s.updateNodeRectsForViewport);
   const beginMutationSession = useBuilderCanvasStore((s) => s.beginMutationSession);
   const commitMutationSession = useBuilderCanvasStore((s) => s.commitMutationSession);
@@ -246,7 +538,7 @@ export default function CanvasNode({
   const showColumnQuickActions = selected && isInteractive && isColumnManagerTarget(node);
   const showBlogFeedQuickEdit = selected && isInteractive && node.kind === 'blog-feed';
   const blogFeedLayout = blogFeedLayoutValue(node);
-  const sectionTemplate = getHomeSectionTemplateTarget(node.id);
+  const sectionTemplate = getHomeSectionTemplateTarget(node);
   const currentSectionTemplateVariant = getHomeSectionTemplateVariant(node);
   const sectionTemplateVariants = sectionTemplate
     ? getHomeSectionTemplateVariantOptions(sectionTemplate.id)
@@ -391,12 +683,54 @@ export default function CanvasNode({
   const servicesRevealedIndices = new Set(
     interactivePreview.servicesRevealedIndices?.length
       ? interactivePreview.servicesRevealedIndices
-      : [interactivePreview.servicesOpenIndex],
+      : interactivePreview.servicesOpenIndex >= 0
+        ? [interactivePreview.servicesOpenIndex]
+        : [],
   );
   const faqRevealedIndices = new Set(
     interactivePreview.faqRevealedIndices?.length
       ? interactivePreview.faqRevealedIndices
-      : [interactivePreview.faqOpenIndex],
+      : interactivePreview.faqOpenIndex >= 0
+        ? [interactivePreview.faqOpenIndex]
+        : [],
+  );
+  const servicesRootNode = nodesById.get('home-services-root');
+  const faqRootNode = nodesById.get('home-faq-root');
+  const servicesPreviewOpen = servicesRevealedIndices.size > 0;
+  const faqPreviewOpen = faqRevealedIndices.size > 0;
+  const previewExtraForNode = (
+    targetNode: BuilderCanvasNode | undefined,
+    expandedHeight: number,
+    isOpen: boolean,
+  ) => accordionPreviewExtra(
+    targetNode ? resolveViewportRect(targetNode, viewport).height : undefined,
+    expandedHeight,
+    isOpen,
+  );
+  const previewStackOffsetBefore = (
+    revealedIndices: Set<number>,
+    currentIndex: number,
+    nodePrefix: string,
+    expandedHeight: number,
+  ) => {
+    let offset = 0;
+    for (const revealedIndex of revealedIndices) {
+      if (revealedIndex >= currentIndex) continue;
+      const revealedNode = nodesById.get(`${nodePrefix}-${revealedIndex}`);
+      offset += previewExtraForNode(revealedNode, expandedHeight, true)
+        + BUILDER_ACCORDION_PREVIEW_STACK_GAP;
+    }
+    return offset;
+  };
+  const servicesSectionExtra = accordionPreviewExtra(
+    servicesRootNode ? resolveViewportRect(servicesRootNode, viewport).height : undefined,
+    BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT,
+    servicesPreviewOpen,
+  );
+  const faqSectionExtra = accordionPreviewExtra(
+    faqRootNode ? resolveViewportRect(faqRootNode, viewport).height : undefined,
+    BUILDER_FAQ_ACCORDION_SECTION_HEIGHT,
+    faqPreviewOpen,
   );
   const activeOfficeIndex = officeIndexFromNodeId(primarySelectedNodeId ?? '') ?? selectedNodeIds.reduce<number | null>((activeIndex, selectedId) => {
     const nextIndex = officeIndexFromNodeId(selectedId);
@@ -419,18 +753,41 @@ export default function CanvasNode({
       : false;
   const isServicePreviewFrame = serviceCardIndex != null && node.id === serviceCardAncestorId;
   const isFaqPreviewFrame = faqItemIndex != null && node.id === faqItemAncestorId;
-  const previewOffsetY = isServicePreviewFrame
-    ? countRevealedBefore(servicesRevealedIndices, serviceCardIndex) * SERVICES_PREVIEW_STACK_DELTA
+  const topLevelPreviewOffsetY = !node.parentId && !isFlowSection
+    ? (servicesRootNode && node.rect.y > servicesRootNode.rect.y ? servicesSectionExtra : 0)
+      + (faqRootNode && node.rect.y > faqRootNode.rect.y ? faqSectionExtra : 0)
+    : 0;
+  const localPreviewOffsetY = isServicePreviewFrame
+    ? previewStackOffsetBefore(
+      servicesRevealedIndices,
+      serviceCardIndex,
+      'home-services-card',
+      BUILDER_SERVICES_ACCORDION_CARD_HEIGHT,
+    )
     : isFaqPreviewFrame
-      ? countRevealedBefore(faqRevealedIndices, faqItemIndex) * FAQ_PREVIEW_STACK_DELTA
+      ? previewStackOffsetBefore(
+        faqRevealedIndices,
+        faqItemIndex,
+        'home-faq-item',
+        BUILDER_FAQ_ACCORDION_ITEM_HEIGHT,
+      )
       : 0;
-  const previewExpandedHeight = builderPreviewOpen && isServicePreviewFrame
-    ? SERVICES_PREVIEW_EXPANDED_HEIGHT
-    : builderPreviewOpen && isFaqPreviewFrame
-      ? FAQ_PREVIEW_EXPANDED_HEIGHT
-      : undefined;
-  const servicesOpenIndex = Math.max(0, Math.round(selectedServiceIndex));
-  const faqOpenIndex = Math.max(0, Math.round(selectedFaqIndex));
+  const previewExpandedHeight = node.id === 'home-services-root' && servicesPreviewOpen
+    ? BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT
+    : node.id === 'home-faq-root' && faqPreviewOpen
+      ? BUILDER_FAQ_ACCORDION_SECTION_HEIGHT
+      : builderPreviewOpen && isServicePreviewFrame
+        ? BUILDER_SERVICES_ACCORDION_CARD_HEIGHT
+        : builderPreviewOpen && isFaqPreviewFrame
+          ? BUILDER_FAQ_ACCORDION_ITEM_HEIGHT
+          : undefined;
+  const combinedPreviewOffsetY = topLevelPreviewOffsetY + localPreviewOffsetY;
+  const servicesOpenIndex = selectedServiceIndex >= 0
+    ? Math.round(selectedServiceIndex)
+    : null;
+  const faqOpenIndex = selectedFaqIndex >= 0
+    ? Math.round(selectedFaqIndex)
+    : undefined;
   const heroSearchActive = selectedNodeIds.some(isHeroSearchTarget);
   const showHeroSearchQuickEdit = selected && isInteractive && !node.locked && isHeroSearchTarget(node.id);
 
@@ -713,6 +1070,106 @@ export default function CanvasNode({
     return elements;
   };
 
+  const parentRepeaterNode = node.parentId ? nodesById.get(node.parentId) : undefined;
+  const parentRepeaterBinding =
+    parentRepeaterNode?.kind === 'container'
+    && parentRepeaterNode.content.layoutMode === 'repeater'
+    && parentRepeaterNode.dataBinding?.targetId === node.dataBinding?.targetId
+      ? parentRepeaterNode.dataBinding
+      : undefined;
+  const parentRepeaterPreviewTarget = parentRepeaterBinding
+    ? datasetPreviewTargets.find((target) => target.targetId === parentRepeaterBinding.targetId)
+    : undefined;
+  const parentRepeaterRecordCount = parentRepeaterPreviewTarget?.records.length ?? 0;
+  const parentRepeaterRecordIndex = parentRepeaterBinding && parentRepeaterRecordCount > 0
+    ? Math.max(0, Math.min(parentRepeaterRecordCount - 1, Math.trunc(parentRepeaterBinding.recordIndex ?? 0)))
+    : 0;
+  const showRepeaterTemplateChildBadge = selected
+    && isInteractive
+    && !isEditing
+    && Boolean(parentRepeaterBinding)
+    && parentRepeaterRecordCount > 0;
+  const staleDataBindingFields = selected ? resolveBuilderStaleDataBindingFields(node) : [];
+  const showDataBindingWarningBadge = selected
+    && isInteractive
+    && !isEditing
+    && staleDataBindingFields.length > 0;
+  const isRepeaterTemplateContainer = node.kind === 'container' && node.content.layoutMode === 'repeater';
+  const repeaterPreviewTarget = isRepeaterTemplateContainer && node.dataBinding
+    ? datasetPreviewTargets.find((target) => target.targetId === node.dataBinding?.targetId)
+    : undefined;
+  const repeaterRecordCount = repeaterPreviewTarget?.records.length ?? 0;
+  const repeaterRecordIndex = node.dataBinding && repeaterRecordCount > 0
+    ? Math.max(0, Math.min(repeaterRecordCount - 1, Math.trunc(node.dataBinding.recordIndex ?? 0)))
+    : 0;
+  const repeaterPreviewRecord = isRepeaterTemplateContainer
+    ? resolveBuilderDatasetPreviewRecord(datasetPreviewTargets, node.dataBinding)
+    : null;
+  const repeaterChildCount = isRepeaterTemplateContainer ? nestedChildren.length : 0;
+  const boundRepeaterChildCount = isRepeaterTemplateContainer && node.dataBinding
+    ? nestedChildren.filter((childNode) => childNode.dataBinding?.targetId === node.dataBinding?.targetId).length
+    : 0;
+  const repeaterTemplateBindingSummary = isRepeaterTemplateContainer
+    ? resolveRepeaterTemplateBindingSummary(nestedChildren, node.dataBinding?.targetId)
+    : [];
+  const repeaterTemplateEditTarget = isRepeaterTemplateContainer
+    ? pickRepeaterTemplateEditTarget(nestedChildren, node.dataBinding?.targetId)
+    : undefined;
+  const showRepeaterTemplateHud = selected
+    && isInteractive
+    && !isEditing
+    && isRepeaterTemplateContainer
+    && Boolean(node.dataBinding);
+  const updateRepeaterPreviewRecord = useCallback((nextIndex: number) => {
+    if (!node.dataBinding || repeaterRecordCount <= 0) return;
+    const recordIndex = Math.max(0, Math.min(repeaterRecordCount - 1, Math.trunc(nextIndex)));
+    updateNode(node.id, (current) => {
+      if (!current.dataBinding) return current;
+      return {
+        ...current,
+        dataBinding: {
+          ...current.dataBinding,
+          recordIndex,
+        },
+      };
+    });
+  }, [node.dataBinding, node.id, repeaterRecordCount, updateNode]);
+  const addRepeaterTemplateText = useCallback(() => {
+    if (!isRepeaterTemplateContainer || !node.dataBinding) return;
+    const childNode = createRepeaterTemplateTextNode({
+      childNodes: nestedChildren,
+      parentNode: node,
+      targetId: node.dataBinding.targetId,
+      zIndex: nodesById.size + 1,
+    });
+    addChildNode(node.id, childNode);
+  }, [addChildNode, isRepeaterTemplateContainer, nestedChildren, node, nodesById.size]);
+  const addRepeaterTemplateImage = useCallback(() => {
+    if (!isRepeaterTemplateContainer || !node.dataBinding) return;
+    const childNode = createRepeaterTemplateImageNode({
+      childNodes: nestedChildren,
+      parentNode: node,
+      targetId: node.dataBinding.targetId,
+      zIndex: nodesById.size + 1,
+    });
+    addChildNode(node.id, childNode);
+  }, [addChildNode, isRepeaterTemplateContainer, nestedChildren, node, nodesById.size]);
+  const addRepeaterTemplateButton = useCallback(() => {
+    if (!isRepeaterTemplateContainer || !node.dataBinding) return;
+    const childNode = createRepeaterTemplateButtonNode({
+      childNodes: nestedChildren,
+      parentNode: node,
+      targetId: node.dataBinding.targetId,
+      zIndex: nodesById.size + 1,
+    });
+    addChildNode(node.id, childNode);
+  }, [addChildNode, isRepeaterTemplateContainer, nestedChildren, node, nodesById.size]);
+  const renderNode = isEditing
+    ? node
+    : applyBuilderDatasetPreviewBindingToNode(node, datasetPreviewTargets, {
+        recordIndexOverride: parentRepeaterBinding?.recordIndex,
+      });
+
   const body = isEditing && isTextKind ? (
     <InlineTextEditor
       initialText={String(textContent.text || '')}
@@ -735,12 +1192,12 @@ export default function CanvasNode({
     />
   ) : component ? (
     <CanvasNodeErrorBoundary nodeKind={node.kind} nodeId={node.id}>
-      {isContainerLikeKind(node.kind) ? (
-        <component.Render node={node} mode="edit" theme={theme}>
+      {isContainerLikeKind(renderNode.kind) ? (
+        <component.Render node={renderNode} mode="edit" theme={theme} locale={builderLocale}>
           {renderNestedChildNodes()}
         </component.Render>
       ) : (
-        <component.Render node={node} mode="edit" theme={theme} />
+        <component.Render node={renderNode} mode="edit" theme={theme} locale={builderLocale} />
       )}
     </CanvasNodeErrorBoundary>
   ) : null;
@@ -768,7 +1225,7 @@ export default function CanvasNode({
     flowSectionMinHeight: flowSectionMetric?.minHeight,
     forceAbsoluteDuringInteraction: isFlowParticipantBeingInteracted,
     previewExpandedHeight,
-    previewOffsetY,
+    previewOffsetY: combinedPreviewOffsetY,
     selected,
     selectionZIndexBoost,
     theme,
@@ -792,8 +1249,16 @@ export default function CanvasNode({
       data-builder-hero-search-active={node.id === 'home-hero-quick-menu' && heroSearchActive ? 'true' : undefined}
       data-office-active={officeActiveIndex != null ? (Number(officeActiveIndex) === activeOfficeIndex ? 'true' : 'false') : undefined}
       data-builder-preview-open={builderPreviewOpen ? 'true' : undefined}
-      data-builder-services-open-index={node.id === 'home-services-root' ? String(servicesOpenIndex) : undefined}
-      data-builder-faq-open-index={node.id === 'home-faq-root' ? String(faqOpenIndex) : undefined}
+      data-builder-services-open-index={
+        node.id === 'home-services-root' && servicesOpenIndex != null
+          ? String(servicesOpenIndex)
+          : undefined
+      }
+      data-builder-faq-open-index={
+        node.id === 'home-faq-root' && faqOpenIndex != null
+          ? String(faqOpenIndex)
+          : undefined
+      }
       data-viewport={viewport}
       onPointerDown={(event) => {
         event.stopPropagation();
@@ -894,6 +1359,149 @@ export default function CanvasNode({
         animationSummary={animationSummary}
         onSelect={onSelect}
       />
+      {showRepeaterTemplateChildBadge ? (
+        <div
+          className={styles.repeaterTemplateChildBadge}
+          data-builder-repeater-template-child-badge="true"
+          aria-label="Repeater template child"
+        >
+          <span>Template child</span>
+          <strong>Record {parentRepeaterRecordIndex + 1} from parent</strong>
+        </div>
+      ) : null}
+      {showDataBindingWarningBadge ? (
+        <div
+          className={styles.dataBindingWarningBadge}
+          data-builder-data-binding-canvas-warning="true"
+          aria-label="Dataset binding needs attention"
+        >
+          <span>Dataset field missing</span>
+          <strong>{staleDataBindingFields.map((field) => field.fieldId).join(', ')}</strong>
+        </div>
+      ) : null}
+      {showRepeaterTemplateHud ? (
+        <div
+          className={styles.repeaterTemplateHud}
+          data-builder-repeater-template-hud="true"
+          onPointerDown={(event) => event.stopPropagation()}
+          onClick={(event) => event.stopPropagation()}
+        >
+          <div className={styles.repeaterTemplateHudMeta}>
+            <span data-builder-repeater-template-status="true">
+              Template {boundRepeaterChildCount}/{repeaterChildCount} bound
+            </span>
+            <strong data-builder-repeater-template-record="true">
+              {repeaterRecordCount > 0
+                ? `Record ${repeaterRecordIndex + 1} of ${repeaterRecordCount}`
+                : 'No matching records'}
+            </strong>
+            <small>
+              {repeaterPreviewRecord?.primaryLabel
+                ?? (repeaterRecordCount > 0 ? repeaterPreviewTarget?.title : 'Check dataset filters and CMS records')}
+            </small>
+            {repeaterTemplateBindingSummary.length > 0 ? (
+              <div
+                className={styles.repeaterTemplateHudBindings}
+                data-builder-repeater-template-field-summary="true"
+                aria-label="Repeater template field mappings"
+              >
+                {repeaterTemplateBindingSummary.map((entry) => (
+                  <span
+                    key={entry.nodeId}
+                    className={styles.repeaterTemplateHudFieldChip}
+                    data-builder-repeater-template-field-chip="true"
+                    title={`${entry.kindLabel}: ${entry.fieldId}${entry.extraCount > 0 ? ` +${entry.extraCount}` : ''}`}
+                  >
+                    <strong>{entry.kindLabel}</strong>
+                    <em>
+                      {entry.fieldId}
+                      {entry.extraCount > 0 ? ` +${entry.extraCount}` : ''}
+                    </em>
+                  </span>
+                ))}
+              </div>
+            ) : null}
+          </div>
+          <div className={styles.repeaterTemplateHudActions}>
+            <button
+              type="button"
+              aria-label="Preview previous dataset record"
+              data-builder-repeater-template-prev="true"
+              disabled={repeaterRecordIndex <= 0}
+              onPointerDown={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+                updateRepeaterPreviewRecord(repeaterRecordIndex - 1);
+              }}
+            >
+              Prev
+            </button>
+            <button
+              type="button"
+              aria-label="Preview next dataset record"
+              data-builder-repeater-template-next="true"
+              disabled={repeaterRecordIndex >= repeaterRecordCount - 1}
+              onPointerDown={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+                updateRepeaterPreviewRecord(repeaterRecordIndex + 1);
+              }}
+            >
+              Next
+            </button>
+            <button
+              type="button"
+              aria-label="Select first bound template child"
+              data-builder-repeater-template-edit-child="true"
+              disabled={!repeaterTemplateEditTarget}
+              onPointerDown={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+                if (!repeaterTemplateEditTarget) return;
+                onSelect(repeaterTemplateEditTarget.id, false);
+              }}
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              aria-label="Add bound text to repeater template"
+              data-builder-repeater-template-add-text="true"
+              onPointerDown={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+                addRepeaterTemplateText();
+              }}
+            >
+              Text
+            </button>
+            <button
+              type="button"
+              aria-label="Add bound image to repeater template"
+              data-builder-repeater-template-add-image="true"
+              onPointerDown={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+                addRepeaterTemplateImage();
+              }}
+            >
+              Image
+            </button>
+            <button
+              type="button"
+              aria-label="Add bound button to repeater template"
+              data-builder-repeater-template-add-button="true"
+              onPointerDown={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+                addRepeaterTemplateButton();
+              }}
+            >
+              Button
+            </button>
+          </div>
+        </div>
+      ) : null}
       <CanvasNodeQuickPanels
         nodeId={node.id}
         selected={selected}

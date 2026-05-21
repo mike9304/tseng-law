@@ -9,7 +9,7 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
   getService: vi.fn(async () => fixtures.service),
 }));
 
-import { applyRefundOutcome, computeRefundForCancel } from '@/lib/builder/bookings/refund';
+import { applyRefundOutcome, computeRefundForCancel, evaluateBookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
 
 function booking(startAt: string): Booking {
   return {
@@ -112,5 +112,50 @@ describe('booking refund policy', () => {
     expect(outcome).toMatchObject({ decision: 'none', refundResult: null });
     expect(fetchMock).not.toHaveBeenCalled();
     expect(applyRefundOutcome(booking('2026-05-12T02:00:00.000Z'), outcome, 'late').paymentStatus).toBe('paid');
+  });
+
+  it('evaluates self-service cancel and reschedule windows from service policy ids', () => {
+    const strict = { ...fixtures.service!, cancellationPolicyId: 'strict-48h' };
+    const blocked = evaluateBookingSelfServicePolicy(booking('2026-05-12T12:00:00.000Z'), strict);
+    const allowed = evaluateBookingSelfServicePolicy(booking('2026-05-14T12:00:00.000Z'), strict);
+
+    expect(blocked).toMatchObject({
+      canCancel: true,
+      canReschedule: false,
+      refundDecision: 'none',
+      cancelHoursBefore: 6,
+      rescheduleHoursBefore: 24,
+    });
+    expect(blocked.rescheduleBlockedReason).toContain('24 hours');
+    expect(allowed).toMatchObject({
+      canCancel: true,
+      canReschedule: true,
+      refundDecision: 'full',
+      fullRefundHoursBefore: 48,
+    });
+  });
+
+  it('blocks self-service management after the booking start time', () => {
+    const policy = evaluateBookingSelfServicePolicy(booking('2026-05-11T23:30:00.000Z'), fixtures.service!);
+
+    expect(policy).toMatchObject({
+      canCancel: false,
+      canReschedule: false,
+    });
+    expect(policy.cancelBlockedReason).toContain('already started');
+  });
+
+  it('blocks self-service management for inactive booking statuses', () => {
+    const completed = {
+      ...booking('2026-05-14T12:00:00.000Z'),
+      status: 'completed' as const,
+    };
+    const policy = evaluateBookingSelfServicePolicy(completed, fixtures.service!);
+
+    expect(policy).toMatchObject({
+      canCancel: false,
+      canReschedule: false,
+    });
+    expect(policy.cancelBlockedReason).toContain('no longer active');
   });
 });

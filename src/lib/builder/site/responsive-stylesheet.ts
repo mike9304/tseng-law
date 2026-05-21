@@ -4,6 +4,7 @@ import type {
   ResponsiveOverride,
 } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind } from '@/lib/builder/canvas/types';
+import { computeTopLevelFlowSectionMetrics, isTopLevelFlowSection } from '@/lib/builder/canvas/flow';
 import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
 import { resolveViewportRect, type Viewport, VIEWPORT_BREAKPOINTS } from '@/lib/builder/canvas/responsive';
 
@@ -21,18 +22,21 @@ function buildResponsiveOverrideRule(
 ): string {
   if (!override) return '';
   const declarations: string[] = [];
+  const isFlowSection = isTopLevelFlowSection(node);
   if (override.rect) {
     const r = override.rect;
     // M177: For nodes inside flex/grid containers, skip left/top entirely.
     // Their positioning is driven by flow (flex/grid + DOM order), not absolute rect coords.
     // Responsive overrides for x/y would incorrectly offset the element even when position:relative.
     // Width/height overrides remain valid and useful for sizing flex items.
-    if (!inFlowContext) {
+    if (!inFlowContext && !isFlowSection) {
       if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
       if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
     }
     if (r.width !== undefined) declarations.push(`width: ${r.width}px`);
-    if (r.height !== undefined) declarations.push(`height: ${r.height}px`);
+    if (r.height !== undefined) {
+      declarations.push(`${isFlowSection ? 'min-height' : 'height'}: ${r.height}px`);
+    }
   }
   if (override.hidden) {
     declarations.push('display: none');
@@ -89,6 +93,39 @@ function buildFlowGapStylesheetForViewport(
   return rules;
 }
 
+function buildTopLevelFlowSectionStylesheetForViewport(
+  nodes: BuilderCanvasNode[],
+  viewport: 'tablet' | 'mobile',
+): string[] {
+  const visibleNodes = nodes.filter((node) => node.visible !== false);
+  const flowSections = visibleNodes.filter(isTopLevelFlowSection);
+  const anyOverride = flowSections.some((node) => {
+    const responsive = node.responsive as ResponsiveConfig | undefined;
+    const bucket = viewport === 'mobile'
+      ? (responsive?.mobile ?? responsive?.tablet)
+      : responsive?.tablet;
+    return bucket?.rect?.y !== undefined || bucket?.rect?.height !== undefined;
+  });
+  if (!anyOverride) return [];
+
+  const metrics = computeTopLevelFlowSectionMetrics(visibleNodes, viewport);
+  return [...flowSections]
+    .sort((left, right) => {
+      const leftRect = resolveViewportRect(left, viewport);
+      const rightRect = resolveViewportRect(right, viewport);
+      return leftRect.y - rightRect.y
+        || left.zIndex - right.zIndex
+        || left.id.localeCompare(right.id);
+    })
+    .flatMap((node) => {
+      const metric = metrics.get(node.id);
+      if (!metric) return [];
+      return [
+        `[data-node-id="${escapeCssId(node.id)}"] { margin-top: ${metric.marginTop}px !important; min-height: ${metric.minHeight}px !important; }`,
+      ];
+    });
+}
+
 export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
   const tabletRules: string[] = [];
   const mobileRules: string[] = [];
@@ -124,16 +161,15 @@ export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
     }
   }
 
-  // Generalized flow gap rules (P0-03): top-level composites + direct children
+  // Generalized flow gap rules (P0-03): top-level sections + direct children
   // of any flex/grid containers. This ensures responsive y/height overrides on
   // inner flow children also produce correct margin-top spacing in published pages.
   const tabletGapRules: string[] = [];
   const mobileGapRules: string[] = [];
 
-  // Top-level flow sections (composites without parent)
-  const topLevelComposites = nodes.filter((node) => !node.parentId && node.kind === 'composite');
-  tabletGapRules.push(...buildFlowGapStylesheetForViewport(topLevelComposites, 'tablet'));
-  mobileGapRules.push(...buildFlowGapStylesheetForViewport(topLevelComposites, 'mobile'));
+  // Top-level flow sections.
+  tabletGapRules.push(...buildTopLevelFlowSectionStylesheetForViewport(nodes, 'tablet'));
+  mobileGapRules.push(...buildTopLevelFlowSectionStylesheetForViewport(nodes, 'mobile'));
 
   // Inner flow children: direct children of containers with layoutMode flex or grid
   for (const container of nodes) {

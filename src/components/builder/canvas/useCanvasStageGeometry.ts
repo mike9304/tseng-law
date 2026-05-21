@@ -71,6 +71,8 @@ export function useCanvasStageGeometry({
 
     setZoomState((currentState) => {
       const scaledStageWidth = stageWidth * currentState.zoom;
+      const scaledStageHeight = stageHeight * currentState.zoom;
+
       const centeredPanX = Math.round(
         (viewportRect.width - nodeRect.width * currentState.zoom) / 2
         - nodeRect.x * currentState.zoom,
@@ -80,10 +82,21 @@ export function useCanvasStageGeometry({
         ? Math.round((viewportRect.width - scaledStageWidth) / 2)
         : 0;
       const nextPanX = Math.max(minPanX, Math.min(maxPanX, centeredPanX));
-      if (nextPanX === currentState.panX) return currentState;
-      return { ...currentState, panX: nextPanX };
+
+      const centeredPanY = Math.round(
+        (viewportRect.height - nodeRect.height * currentState.zoom) / 2
+        - nodeRect.y * currentState.zoom,
+      );
+      const minPanY = Math.min(0, Math.round(viewportRect.height - scaledStageHeight));
+      const maxPanY = scaledStageHeight <= viewportRect.height
+        ? Math.round((viewportRect.height - scaledStageHeight) / 2)
+        : 0;
+      const nextPanY = Math.max(minPanY, Math.min(maxPanY, centeredPanY));
+
+      if (nextPanX === currentState.panX && nextPanY === currentState.panY) return currentState;
+      return { ...currentState, panX: nextPanX, panY: nextPanY };
     });
-  }, [absoluteRectById, geometryViewport, nodesById, setZoomState, stageWidth, viewportRef]);
+  }, [absoluteRectById, geometryViewport, nodesById, setZoomState, stageHeight, stageWidth, viewportRef]);
 
   useEffect(() => {
     function handleFocusCanvasNode(event: Event) {

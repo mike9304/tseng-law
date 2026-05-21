@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { getService } from '@/lib/builder/bookings/storage';
+import { findApplicablePackageCredit } from '@/lib/builder/bookings/packages';
+import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -58,7 +60,24 @@ export async function POST(request: NextRequest) {
   if (service.paymentMode !== 'paid') {
     return NextResponse.json({ error: 'Service is free; no payment required' }, { status: 400 });
   }
-  if (!service.priceAmount || service.priceAmount <= 0 || !service.priceCurrency) {
+
+  const packageCredit = await findApplicablePackageCredit({
+    customerEmail: parsed.data.customer.email,
+    serviceId: service.serviceId,
+  });
+  if (packageCredit) {
+    return NextResponse.json({
+      ok: true,
+      coveredByPackage: true,
+      packageCreditId: packageCredit.credit.creditId,
+      packageId: packageCredit.package.packageId,
+      packageName: packageCredit.package.name,
+      remainingCredits: packageCredit.credit.remainingCredits,
+    });
+  }
+
+  const price = bookingServicePriceSnapshot(service);
+  if (!price.amountDueNow || price.amountDueNow <= 0 || !price.currency) {
     return NextResponse.json({ error: 'Service price is not configured' }, { status: 400 });
   }
 
@@ -73,8 +92,12 @@ export async function POST(request: NextRequest) {
       stub: true,
       clientSecret: 'pi_stub_dev_secret',
       paymentIntentId: 'pi_stub_dev',
-      amount: service.priceAmount,
-      currency: service.priceCurrency.toLowerCase(),
+      amount: price.amountDueNow,
+      totalAmount: price.totalAmount,
+      depositAmount: price.depositAmount,
+      balanceDueAfterPayment: price.balanceDueAfterOnlinePayment,
+      isDeposit: price.isDeposit,
+      currency: price.currency.toLowerCase(),
       note: 'STRIPE_SECRET_KEY unset — returned stub client_secret for dev wiring only.',
     });
   }
@@ -87,13 +110,16 @@ export async function POST(request: NextRequest) {
 
   try {
     const formBody = new URLSearchParams();
-    formBody.set('amount', String(service.priceAmount));
-    formBody.set('currency', service.priceCurrency.toLowerCase());
+    formBody.set('amount', String(price.amountDueNow));
+    formBody.set('currency', price.currency.toLowerCase());
     formBody.set('description', `Booking: ${service.slug}`);
     formBody.set('receipt_email', parsed.data.customer.email);
     formBody.set('automatic_payment_methods[enabled]', 'true');
     formBody.set('metadata[serviceId]', service.serviceId);
     formBody.set('metadata[customerName]', parsed.data.customer.name);
+    formBody.set('metadata[bookingTotalAmount]', String(price.totalAmount));
+    formBody.set('metadata[bookingAmountDueNow]', String(price.amountDueNow));
+    if (price.depositAmount) formBody.set('metadata[bookingDepositAmount]', String(price.depositAmount));
 
     const res = await fetch('https://api.stripe.com/v1/payment_intents', {
       method: 'POST',
@@ -121,8 +147,12 @@ export async function POST(request: NextRequest) {
       clientSecret: data.client_secret,
       paymentIntentId: data.id,
       publishableKey,
-      amount: service.priceAmount,
-      currency: service.priceCurrency.toLowerCase(),
+      amount: price.amountDueNow,
+      totalAmount: price.totalAmount,
+      depositAmount: price.depositAmount,
+      balanceDueAfterPayment: price.balanceDueAfterOnlinePayment,
+      isDeposit: price.isDeposit,
+      currency: price.currency.toLowerCase(),
     });
   } catch (err) {
     console.warn('[booking/payment-intent] fetch failed', {

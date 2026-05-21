@@ -58,13 +58,13 @@ export default function SandboxTopBar({
   saveBlockReason?: string | null;
 }) {
   const { document, selectedNodeId, resetResponsiveOverride } = useBuilderCanvasStore();
-  const saveLabel = draftSaveState === 'saving' ? 'Saving...' : draftSaveState === 'saved' ? 'Saved' : draftSaveState === 'error' ? 'Save failed' : '';
+  const saveLabel = draftSaveState === 'saving' ? '저장 중...' : draftSaveState === 'saved' ? '저장됨' : draftSaveState === 'error' ? '저장 실패' : '';
   const saveClass = draftSaveState === 'saving' ? styles.statusBadgeSaving : draftSaveState === 'saved' ? styles.statusBadgeSaved : draftSaveState === 'error' ? styles.statusBadgeError : '';
   const canOpenSeo = Boolean(onOpenSeo && activePageId);
   const selectedNode = document?.nodes.find((node) => node.id === selectedNodeId) ?? null;
   const hasSelectedOverride = Boolean(selectedNode && hasResponsiveOverride(selectedNode, viewport));
   const canResetViewport = viewport !== 'desktop' && Boolean(selectedNode) && hasSelectedOverride;
-  const pageLabel = currentSlug?.trim() ? `/${currentSlug.trim()}` : 'Home';
+  const pageLabel = currentSlug?.trim() ? `/${currentSlug.trim()}` : '홈';
 
   return (
     <header className={styles.topBar}>
@@ -81,7 +81,7 @@ export default function SandboxTopBar({
         <button
           type="button"
           className={styles.pageDropdownButton}
-          title="Pages"
+          title="페이지 선택"
           onClick={onOpenPages}
         >
           <span>{pageLabel}</span>
@@ -123,15 +123,15 @@ export default function SandboxTopBar({
               className={styles.breakpointResetButton}
               disabled={!canResetViewport}
             title={selectedNode && viewport !== 'desktop'
-              ? `Reset ${viewport} overrides for ${selectedNode.id}`
-              : 'Select a node on tablet/mobile to reset overrides'}
+              ? `${viewport} 반응형 오버라이드 초기화`
+              : '태블릿/모바일에서 노드를 선택하면 초기화할 수 있습니다'}
             onClick={() => {
               if (!selectedNode || viewport === 'desktop') return;
               resetResponsiveOverride(selectedNode.id, viewport);
             }}
           >
             <BreakpointBadge viewport={viewport} active={hasSelectedOverride} label="override" />
-            <span>Reset</span>
+            <span>초기화</span>
           </button>
         </div>
       </div>
@@ -141,13 +141,13 @@ export default function SandboxTopBar({
         <EditorThemeToggle />
         {selectionCount > 0 ? (
           <span className={styles.selectionPill} title={selectedSummary}>
-            {selectionCount} selected
+            {selectionCount}개 선택됨
           </span>
         ) : null}
         {draftSaveState === 'saving' && <span className={styles.savingSpinner} />}
-        {saveLabel && <span className={`${styles.topBarChip} ${saveClass}`}>{saveLabel}</span>}
+        {saveLabel && <span className={`${styles.topBarChip} ${saveClass}`} data-builder-topbar-status="true">{saveLabel}</span>}
         {saveBlockReason ? (
-          <span className={`${styles.topBarChip} ${styles.statusBadgeError}`} title={saveBlockReason}>
+          <span className={`${styles.topBarChip} ${styles.statusBadgeError}`} title={saveBlockReason} data-builder-topbar-status="true">
             저장 차단
           </span>
         ) : null}
@@ -155,6 +155,7 @@ export default function SandboxTopBar({
           <button
             type="button"
             className={styles.topBarChip}
+            data-builder-topbar-secondary="true"
             title="버전 히스토리"
             style={{ cursor: 'pointer' }}
             onClick={onOpenHistory}
@@ -165,15 +166,17 @@ export default function SandboxTopBar({
         <button
           type="button"
           className={styles.topBarChip}
-          title="Preview"
+          data-builder-topbar-secondary="true"
+          title="미리보기"
           disabled={!onOpenPreview}
           onClick={onOpenPreview}
         >
-          Preview
+          미리보기
         </button>
         <button
           type="button"
           className={styles.topBarChip}
+          data-builder-topbar-secondary="true"
           title="현재 페이지 SEO"
           disabled={!canOpenSeo}
           onClick={onOpenSeo}
@@ -187,7 +190,7 @@ export default function SandboxTopBar({
           disabled={Boolean(saveBlockReason)}
           onClick={onPublish}
         >
-          Publish
+          발행
         </button>
       </div>
     </header>

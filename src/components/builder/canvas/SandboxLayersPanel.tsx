@@ -38,13 +38,20 @@ interface LayerDropIntent {
   mode: LayerDropMode;
 }
 
+const KIND_LABEL: Record<string, string> = {
+  container: '컨테이너', section: '섹션', text: '텍스트', heading: '제목',
+  image: '이미지', button: '버튼', divider: '구분선', spacer: '여백',
+  icon: '아이콘', 'video-embed': '동영상', form: '폼', map: '지도',
+  composite: '복합 요소', group: '그룹',
+};
+
 function getLayerLabel(node: BuilderCanvasNode): string {
   const content = node.content as Record<string, unknown>;
   const text = content.text ?? content.label ?? content.alt ?? content.title;
   if (typeof text === 'string' && text.trim()) {
     return text.trim().slice(0, 64);
   }
-  return node.id;
+  return KIND_LABEL[node.kind] ?? node.kind;
 }
 
 function getSearchText(node: BuilderCanvasNode): string {

@@ -54,13 +54,13 @@ export default function CanvasStageNodes({
   interaction,
 }: CanvasStageNodesProps) {
   // Display-sorted root nodes for DOM render order parity with Published.
-  // Mirrors exactly the `renderedTopLevelNodes` logic from public-page.tsx:344-353:
-  // composites (top-level) first, sorted by rect.y then zIndex; non-composites after.
+  // Mirrors the `renderedTopLevelNodes` logic from public-page.tsx:
+  // top-level flow sections first, sorted by rect.y then zIndex; non-flow roots after.
   // This ensures widgets placed between flow sections stack correctly in Editor (WYSIWYG).
   const sortedRootNodes = useMemo(() => {
     return [...rootVisibleNodes].sort((left, right) => {
-      const leftIsComposite = left.kind === 'composite';
-      const rightIsComposite = right.kind === 'composite';
+      const leftIsComposite = isTopLevelFlowSection(left);
+      const rightIsComposite = isTopLevelFlowSection(right);
       if (leftIsComposite && rightIsComposite) {
         return left.rect.y - right.rect.y || left.zIndex - right.zIndex;
       }
@@ -73,8 +73,12 @@ export default function CanvasStageNodes({
   // 2-2.1: Live Sibling Reflow Preview — insertion index based visual gap
   // between top-level flow sections (composites) while dragging one.
   const flowSectionNodes = useMemo(
-    () => sortedRootNodes.filter((n) => n.kind === 'composite'),
+    () => sortedRootNodes.filter(isTopLevelFlowSection),
     [sortedRootNodes]
+  );
+  const nonFlowRootNodes = useMemo(
+    () => sortedRootNodes.filter((node) => !isTopLevelFlowSection(node)),
+    [sortedRootNodes],
   );
   const flowSectionCount = flowSectionNodes.length;
 
@@ -129,7 +133,7 @@ export default function CanvasStageNodes({
 
   return (
     <>
-      {/* Flow sections (top-level composites) with preview gap inserted at live insertionIndex */}
+      {/* Flow sections with preview gap inserted at live insertionIndex */}
       {flowSectionNodes.map((node, flowIdx) => {
         const showGapBefore = previewGapInfo !== null && previewGapInfo.insertionIndex === flowIdx;
         return (
@@ -155,8 +159,8 @@ export default function CanvasStageNodes({
           data-preview-gap="flow-section"
         />
       )}
-      {/* Non-composite root nodes (widgets etc.) rendered after flow sections — unchanged order */}
-      {sortedRootNodes.slice(flowSectionCount).map((node) => renderCanvasNode(node))}
+      {/* Non-flow root nodes (widgets etc.) rendered after flow sections — unchanged order */}
+      {nonFlowRootNodes.map((node) => renderCanvasNode(node))}
       {selectionBoxRect ? <SelectionBox {...selectionBoxRect} /> : null}
       {rootVisibleNodes.length === 0 ? (
         <div className={styles.emptyCanvas}>

@@ -75,6 +75,7 @@ export default function BookingAvailabilityAdmin({
     <div className={styles.split}>
       <aside className={styles.panel}>
         <div className={styles.cardImage} style={{ height: 160, borderRadius: 8, marginBottom: 16 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           {staff.photo ? <img src={staff.photo} alt="" style={{ width: 96, height: 96, borderRadius: '50%', objectFit: 'cover' }} /> : textForLocale(staff.name, locale).slice(0, 2)}
         </div>
         <h2 className={styles.cardTitle}>{textForLocale(staff.name, locale)}</h2>

@@ -1,13 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/availability';
-import { bookingCreateSchema } from '@/lib/builder/bookings/types';
+import { bookingCreateSchema, type Booking } from '@/lib/builder/bookings/types';
 import { getService, getStaff, makeBookingId, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
 import { createZoomMeeting } from '@/lib/builder/bookings/zoom-client';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
-import { fetchPaymentIntentStatus, isPaymentIntentBookable } from '@/lib/builder/bookings/stripe-verify';
+import {
+  fetchPaymentIntentStatus,
+  isPaymentIntentBookable,
+  paymentIntentPriceMismatch,
+} from '@/lib/builder/bookings/stripe-verify';
 import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
+import {
+  findApplicablePackageCredit,
+  redeemPackageCreditForBooking,
+  restorePackageCreditForBooking,
+} from '@/lib/builder/bookings/packages';
+import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -43,7 +54,14 @@ export async function POST(request: NextRequest) {
   if (!service || !service.isActive || !staff || !staff.isActive) {
     return NextResponse.json({ error: 'Service or staff not available' }, { status: 404 });
   }
-  if (service.paymentMode === 'paid' && !parsed.data.paymentIntentId) {
+  const price = bookingServicePriceSnapshot(service);
+  const packageCreditAvailable = service.paymentMode === 'paid' && !parsed.data.paymentIntentId
+    ? await findApplicablePackageCredit({
+        customerEmail: parsed.data.customer.email,
+        serviceId: service.serviceId,
+      })
+    : null;
+  if (service.paymentMode === 'paid' && !parsed.data.paymentIntentId && !packageCreditAvailable) {
     return NextResponse.json({ error: 'Payment is required before booking this service.' }, { status: 402 });
   }
   if (service.paymentMode !== 'paid' && parsed.data.paymentIntentId) {
@@ -64,6 +82,13 @@ export async function POST(request: NextRequest) {
       if (intentServiceId && intentServiceId !== service.serviceId) {
         return NextResponse.json({ error: 'PaymentIntent does not match this service.' }, { status: 400 });
       }
+      const priceMismatch = paymentIntentPriceMismatch(intent, {
+        amount: price.amountDueNow,
+        currency: price.currency,
+      });
+      if (priceMismatch) {
+        return NextResponse.json({ error: priceMismatch }, { status: 400 });
+      }
       if (!isPaymentIntentBookable(intent)) {
         return NextResponse.json({ error: `Payment not settled (status: ${intent.status})` }, { status: 402 });
       }
@@ -74,62 +99,110 @@ export async function POST(request: NextRequest) {
     }
   }
 
+  const resourceIds = service.requiredResourceIds ?? [];
+  const endAt = addBookingDuration(parsed.data.startAt, service.durationMinutes);
   const slotKey = {
     serviceId: parsed.data.serviceId,
     staffId: parsed.data.staffId,
     startAt: parsed.data.startAt,
+    resourceIds,
   };
   if (!acquireSlotLock(slotKey)) {
     return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
   }
 
+  let booking: Booking | null = null;
   try {
     const available = await isSlotAvailable(slotKey);
     if (!available) {
-      releaseSlotLock(slotKey);
       return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
     }
-  } catch (err) {
-    releaseSlotLock(slotKey);
-    throw err;
-  }
 
-  let meetingLink: string | undefined;
-  if (service.meetingMode === 'zoom') {
-    const zoom = await createZoomMeeting({
-      topic: `${service.name?.ko || service.name?.en || 'Booking'} · ${parsed.data.customer.name}`,
-      startTimeISO: parsed.data.startAt,
-      durationMinutes: service.durationMinutes,
-      customerEmail: parsed.data.customer.email,
-    });
-    if (zoom.ok) {
-      meetingLink = zoom.meetingLink;
-    } else if (zoom.reason !== 'unconfigured') {
-      console.warn('[booking] zoom meeting creation failed', zoom.reason, zoom.details);
+    const bookingId = makeBookingId();
+    const packageRedemption = packageCreditAvailable
+      ? await redeemPackageCreditForBooking({
+          bookingId,
+          customerEmail: parsed.data.customer.email,
+          serviceId: service.serviceId,
+        })
+      : null;
+    if (packageCreditAvailable && !packageRedemption) {
+      return NextResponse.json({ error: 'Package credit is no longer available.' }, { status: 409 });
     }
-  }
 
-  const booking = timestamped({
-    bookingId: makeBookingId(),
-    serviceId: parsed.data.serviceId,
-    staffId: parsed.data.staffId,
-    customer: parsed.data.customer,
-    startAt: parsed.data.startAt,
-    endAt: addBookingDuration(parsed.data.startAt, service.durationMinutes),
-    status: 'confirmed' as const,
-    source: 'web' as const,
-    reminders: [],
-    ...(parsed.data.customerTimezone ? { customerTimezone: parsed.data.customerTimezone } : {}),
-    ...(meetingLink ? { meetingLink } : {}),
-    ...(parsed.data.paymentIntentId
-      ? {
-          paymentIntentId: parsed.data.paymentIntentId,
-          paymentStatus: (paymentSettled ? 'paid' : 'unpaid') as 'paid' | 'unpaid',
-        }
-      : {}),
-  });
-  await saveBooking(booking);
-  releaseSlotLock(slotKey);
+    let meetingLink: string | undefined;
+    if (service.meetingMode === 'zoom') {
+      const zoom = await createZoomMeeting({
+        topic: `${service.name?.ko || service.name?.en || 'Booking'} · ${parsed.data.customer.name}`,
+        startTimeISO: parsed.data.startAt,
+        durationMinutes: service.durationMinutes,
+        customerEmail: parsed.data.customer.email,
+      });
+      if (zoom.ok) {
+        meetingLink = zoom.meetingLink;
+      } else if (zoom.reason !== 'unconfigured') {
+        console.warn('[booking] zoom meeting creation failed', zoom.reason, zoom.details);
+      }
+    }
+
+    booking = timestamped({
+      bookingId,
+      serviceId: parsed.data.serviceId,
+      staffId: parsed.data.staffId,
+      customer: parsed.data.customer,
+      startAt: parsed.data.startAt,
+      endAt,
+      status: 'confirmed' as const,
+      source: 'web' as const,
+      reminders: [],
+      paymentAmount: price.totalAmount,
+      paymentCurrency: price.currency,
+      paymentDueNow: price.amountDueNow,
+      ...(price.depositAmount ? { depositAmount: price.depositAmount } : {}),
+      billingDocuments: [],
+      resourceIds,
+      ...(packageRedemption
+        ? {
+            packageId: packageRedemption.package.packageId,
+            packageCreditId: packageRedemption.credit.creditId,
+            packageCreditsUsed: 1,
+            paymentStatus: 'paid' as const,
+          }
+        : {}),
+      ...(parsed.data.customerTimezone ? { customerTimezone: parsed.data.customerTimezone } : {}),
+      ...(meetingLink ? { meetingLink } : {}),
+      ...(parsed.data.paymentIntentId
+        ? {
+            paymentIntentId: parsed.data.paymentIntentId,
+            ...(paymentSettled ? { onlinePaidAmount: price.amountDueNow } : {}),
+            paymentStatus: (paymentSettled
+              ? (price.balanceDueAfterOnlinePayment > 0 ? 'partially_paid' : 'paid')
+              : 'unpaid') as 'paid' | 'partially_paid' | 'unpaid',
+          }
+        : {}),
+    });
+    try {
+      await saveBooking(booking);
+    } catch (error) {
+      if (packageRedemption) {
+        await restorePackageCreditForBooking(booking).catch((restoreError) => {
+          console.error('[booking/book] package credit restore after save failure failed:', restoreError);
+        });
+      }
+      throw error;
+    }
+  } finally {
+    releaseSlotLock(slotKey);
+  }
+  if (!booking) {
+    return NextResponse.json({ error: 'Booking could not be created.' }, { status: 500 });
+  }
+  try {
+    const billingAutomation = await runBookingBillingAutomation(booking.bookingId, { trigger: 'created' });
+    if (billingAutomation?.owner) booking = billingAutomation.owner;
+  } catch (error) {
+    console.error('[booking/book] billing automation failed:', error);
+  }
   await sendBookingConfirmation(booking, { service, staff });
   emitEvent('booking.created', {
     bookingId: booking.bookingId,

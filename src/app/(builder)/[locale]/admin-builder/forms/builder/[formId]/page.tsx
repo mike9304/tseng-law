@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { loadFormSchema, createDefaultContactForm } from '@/lib/builder/forms/form-engine';
 import FormSchemaEditor from '@/components/builder/forms/FormSchemaEditor';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function FormBuilderPage({ params }: { params: { formId: string } }) {
+export default async function FormBuilderPage({ params }: { params: { locale: string; formId: string } }) {
   let schema = await loadFormSchema(params.formId);
   if (!schema && params.formId === 'default-contact') {
     schema = createDefaultContactForm();
@@ -24,7 +25,11 @@ export default async function FormBuilderPage({ params }: { params: { formId: st
           드래그앤드롭으로 필드를 재정렬하고, step 분할 + 조건부 로직을 적용하세요.
         </p>
       </header>
-      <FormSchemaEditor initialSchema={schema} />
+      <FormSchemaEditor
+        initialSchema={schema}
+        locale={params.locale}
+        siteId={DEFAULT_BUILDER_SITE_ID}
+      />
     </main>
   );
 }

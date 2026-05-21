@@ -72,6 +72,7 @@ export function buildPreflightItems(suite: PublishCheckSuite | null): PreflightI
     || (result.category === 'accessibility' && result.id.startsWith('image-')),
   );
   const linkResults = results.filter((result) => result.category === 'links');
+  const dataResults = results.filter((result) => result.category === 'data');
   const seoResults = results.filter((result) => result.category === 'seo');
   const formResults = results.filter((result) => result.category === 'forms');
 
@@ -91,6 +92,14 @@ export function buildPreflightItems(suite: PublishCheckSuite | null): PreflightI
       tone: itemTone(linkResults),
       blockerCount: linkResults.filter((result) => result.severity === 'blocker').length,
       warningCount: linkResults.filter((result) => result.severity === 'warning').length,
+    },
+    {
+      key: 'data',
+      label: 'CMS data',
+      detail: '누락되었거나 호환되지 않는 CMS field binding',
+      tone: itemTone(dataResults),
+      blockerCount: dataResults.filter((result) => result.severity === 'blocker').length,
+      warningCount: dataResults.filter((result) => result.severity === 'warning').length,
     },
     {
       key: 'seo',

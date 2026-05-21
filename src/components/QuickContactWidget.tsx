@@ -16,7 +16,11 @@ export default function QuickContactWidget({
   content?: SiteContent['quickContact'];
 }) {
   const pathname = usePathname();
-  const isUtilityPage = pathname?.includes('/bookings/manage/') ?? false;
+  const isUtilityPage = Boolean(
+    pathname?.includes('/bookings/manage/')
+    || pathname?.match(/^\/(?:ko|zh-hant|en)\/(?:login|account)(?:\/|$)/)
+    || pathname?.match(/^\/(?:ko|zh-hant|en)\/store\/checkout(?:\/|$)/),
+  );
   const resolvedContent = content ?? siteContent[locale].quickContact;
   // Start closed to match SSR, then sync with localStorage on mount
   const [chatOpen, setChatOpen] = useState(false);
@@ -34,10 +38,16 @@ export default function QuickContactWidget({
     }
     try {
       const collapsed = window.localStorage.getItem(STORAGE_KEY);
-      // First visit (no key) → open by default. Otherwise honor stored state.
-      setChatOpen(collapsed !== 'true');
+      // First visit on smaller screens should not cover primary page controls.
+      // Once the visitor opens/closes the widget, honor that stored state.
+      if (collapsed == null) {
+        const compactViewport = window.matchMedia('(max-width: 1024px)').matches;
+        setChatOpen(!compactViewport);
+      } else {
+        setChatOpen(collapsed !== 'true');
+      }
     } catch {
-      setChatOpen(true);
+      setChatOpen(false);
     }
     setHydrated(true);
   }, [isUtilityPage]);

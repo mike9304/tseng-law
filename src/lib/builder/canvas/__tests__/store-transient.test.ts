@@ -121,15 +121,15 @@ describe('canvas store transient updates', () => {
     useBuilderCanvasStore.getState().setSelectedNodeId('home-services-card-1-title');
     expect(useBuilderCanvasStore.getState().interactivePreview).toMatchObject({
       servicesOpenIndex: 1,
-      servicesRevealedIndices: [0, 1],
+      servicesRevealedIndices: [1],
     });
 
     useBuilderCanvasStore.getState().setSelectedNodeId('home-faq-item-2-question');
     expect(useBuilderCanvasStore.getState().interactivePreview).toEqual({
       servicesOpenIndex: 1,
-      servicesRevealedIndices: [0, 1],
+      servicesRevealedIndices: [1],
       faqOpenIndex: 2,
-      faqRevealedIndices: [0, 2],
+      faqRevealedIndices: [2],
     });
   });
 
@@ -140,9 +140,9 @@ describe('canvas store transient updates', () => {
 
     expect(useBuilderCanvasStore.getState().interactivePreview).toEqual({
       servicesOpenIndex: 2,
-      servicesRevealedIndices: [0, 2],
+      servicesRevealedIndices: [2],
       faqOpenIndex: 3,
-      faqRevealedIndices: [0, 3],
+      faqRevealedIndices: [3],
     });
 
     useBuilderCanvasStore.getState().replaceDocument({
@@ -151,10 +151,10 @@ describe('canvas store transient updates', () => {
     });
 
     expect(useBuilderCanvasStore.getState().interactivePreview).toEqual({
-      servicesOpenIndex: 0,
-      servicesRevealedIndices: [0],
-      faqOpenIndex: 0,
-      faqRevealedIndices: [0],
+      servicesOpenIndex: -1,
+      servicesRevealedIndices: [],
+      faqOpenIndex: -1,
+      faqRevealedIndices: [],
     });
   });
 
@@ -168,6 +168,32 @@ describe('canvas store transient updates', () => {
     const state = useBuilderCanvasStore.getState();
     expect(state.canUndo).toBe(false);
     expect(state.document?.updatedAt).toBe('2026-01-01T00:00:00.000Z');
+  });
+
+  it('persists dataset field binding metadata on canvas nodes', () => {
+    useBuilderCanvasStore.getState().replaceDocument(sortedDocumentFixture());
+    useBuilderCanvasStore.getState().updateNode('first', (node) => ({
+      ...node,
+      dataBinding: {
+        targetId: 'home.insights.feed',
+        recordIndex: 0,
+        fields: {
+          text: 'title',
+          href: 'href',
+        },
+      },
+    }));
+
+    const boundNode = useBuilderCanvasStore.getState().document?.nodes.find((node) => node.id === 'first');
+    expect(boundNode?.dataBinding).toEqual({
+      targetId: 'home.insights.feed',
+      recordIndex: 0,
+      fields: {
+        text: 'title',
+        href: 'href',
+      },
+    });
+    expect(useBuilderCanvasStore.getState().canUndo).toBe(true);
   });
 
   it('reuses JSON signatures for unchanged node payload comparisons', () => {

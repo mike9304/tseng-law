@@ -306,6 +306,94 @@
   white-space: nowrap;
 }
 
+.actionQueue {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(120, 137, 166, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 18px 55px rgba(30, 44, 72, 0.08);
+  display: grid;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding: 18px;
+}
+
+.actionFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actionFilters button {
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #dce4ef;
+  border-radius: 999px;
+  color: #334155;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 900;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 11px;
+}
+
+.actionFilters button[data-active='true'] {
+  background: #172033;
+  border-color: #172033;
+  color: #ffffff;
+}
+
+.actionFilters strong {
+  background: rgba(23, 107, 255, 0.12);
+  border-radius: 999px;
+  color: inherit;
+  font-size: 12px;
+  min-width: 22px;
+  padding: 3px 6px;
+  text-align: center;
+}
+
+.actionRows {
+  display: grid;
+  gap: 8px;
+}
+
+.actionRow {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(130px, 0.7fr) minmax(0, 1.35fr) minmax(170px, 1fr) auto;
+  padding: 12px;
+}
+
+.actionRow time {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.actionRow strong,
+.actionRow span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.actionRow span {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.45;
+  margin-top: 3px;
+}
+
+.actionBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .filterBar {
   display: grid;
   gap: 12px;
@@ -402,6 +490,143 @@
   display: grid;
   gap: 14px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.documents {
+  background: #f8fbff;
+  border: 1px solid #d6e6ff;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 16px;
+}
+
+.manualPayments {
+  background: #fffaf2;
+  border: 1px solid #f2d7aa;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 16px;
+}
+
+.documentHead {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.paymentSummary {
+  align-items: flex-end;
+  color: #8a5a20;
+  display: grid;
+  font-size: 12px;
+  font-weight: 800;
+  gap: 4px;
+  justify-items: end;
+  min-width: 180px;
+}
+
+.paymentSummary strong {
+  color: #172033;
+  font-size: 14px;
+}
+
+.manualPaymentRows {
+  display: grid;
+  gap: 8px;
+}
+
+.manualPaymentRows article {
+  align-items: start;
+  background: white;
+  border: 1px solid #f1dec4;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(160px, 0.8fr) minmax(0, 1fr);
+  padding: 12px;
+}
+
+.manualPaymentRows strong,
+.manualPaymentRows span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.manualPaymentRows span {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.manualPaymentForm {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.manualPaymentForm button {
+  align-self: end;
+}
+
+.documentActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.documentList {
+  display: grid;
+  gap: 8px;
+}
+
+.documentItem {
+  align-items: start;
+  background: #ffffff;
+  border: 1px solid #dce7f6;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(180px, 1fr) minmax(120px, 0.65fr) minmax(160px, 0.8fr);
+  padding: 12px;
+}
+
+.documentItem strong,
+.documentItem span {
+  overflow-wrap: anywhere;
+}
+
+.documentItem strong {
+  color: #172033;
+  display: block;
+  font-size: 13px;
+}
+
+.documentItem span {
+  color: #64748b;
+  display: block;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.documentItem a {
+  align-items: center;
+  border: 1px solid rgba(23, 107, 255, 0.22);
+  border-radius: 8px;
+  color: #1458cc;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 800;
+  justify-content: center;
+  margin-top: 6px;
+  min-height: 30px;
+  padding: 0 10px;
+  text-decoration: none;
 }
 
 .timeline {
@@ -892,16 +1117,27 @@
   .split,
   .emailTemplateLayout,
   .formGrid,
-  .filterBar,
-  .analyticsGrid,
-  .dashboardGrid,
-  .detailGrid,
-  .listItem,
-  .dayRow,
-  .timeRangeRow,
-  .steps {
-    grid-template-columns: 1fr;
-  }
+	  .filterBar,
+	  .actionRow,
+	  .analyticsGrid,
+	  .dashboardGrid,
+	  .detailGrid,
+	  .documentItem,
+	  .listItem,
+	  .dayRow,
+	  .timeRangeRow,
+	  .steps {
+	    grid-template-columns: 1fr;
+	  }
+
+	  .documentHead {
+	    align-items: stretch;
+	    flex-direction: column;
+	  }
+
+	  .documentActions {
+	    justify-content: flex-start;
+	  }
 
   .timeRangeRow {
     padding-left: 0;

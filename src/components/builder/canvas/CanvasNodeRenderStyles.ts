@@ -131,13 +131,18 @@ export function buildCanvasNodeRenderStyles({
       // For top-level flow sections (composites), use the design rect.height only as minHeight floor
       // so that content can grow (matches published behavior exactly).
       minHeight: isActiveTopLevelFlowSection
-        ? (flowSectionMinHeight ?? effectiveRect.height)
+        ? Math.max(
+          flowSectionMinHeight ?? effectiveRect.height,
+          previewExpandedHeight ?? effectiveRect.height,
+        )
         : isTextShapedNode
           ? `${effectiveRect.height}px`
           : undefined,
       zIndex: useSticky
         ? Math.max(node.zIndex + 10 + selectionZIndexBoost, 100) // +10 is editor chrome (rulers/grid/selection overlays); sticky min-100 for parity with published
-        : useFlowWrapper ? undefined : node.zIndex + 10 + selectionZIndexBoost,
+        : useFlowWrapper
+          ? (selected ? 10010 : undefined)
+          : node.zIndex + 10 + selectionZIndexBoost,
       // transform (rotation + previewOffsetY) applied directly on the sticky-positioned element.
       // This creates a new stacking context (per CSS spec) but exactly matches published
       // behavior in public-page.tsx:463. Acceptable parity for M175; inner wrapper refactor

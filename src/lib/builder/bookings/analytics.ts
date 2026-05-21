@@ -50,9 +50,20 @@ function serviceAmount(service?: BookingService): number {
   return Math.max(0, service?.priceAmount ?? service?.priceTwd ?? 0);
 }
 
+function manualPaymentTotal(booking: Booking): number {
+  return (booking.manualPayments ?? [])
+    .filter((payment) => payment.status === 'succeeded')
+    .reduce((total, payment) => total + payment.amountCents, 0);
+}
+
+function onlinePaymentTotal(booking: Booking): number {
+  return Math.max(0, booking.onlinePaidAmount ?? 0);
+}
+
 function bookingRevenueAmount(booking: Booking, service?: BookingService): number {
   const amount = serviceAmount(service);
   if (booking.paymentStatus === 'paid') return amount;
+  if (booking.paymentStatus === 'partially_paid') return onlinePaymentTotal(booking) + manualPaymentTotal(booking);
   if (booking.paymentStatus === 'partial-refund') return Math.ceil(amount / 2);
   return 0;
 }

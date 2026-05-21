@@ -57,6 +57,14 @@ interface ColumnDocumentFromBlob {
     attorneyReviewStatus?: 'pending' | 'reviewed' | 'needs-revision';
     freshness?: 'fresh' | 'review_needed' | 'unknown';
     category?: string;
+    blogCategory?: string;
+    tags?: string[];
+    author?: {
+      name?: string;
+      title?: string;
+      bio?: string;
+      photo?: string;
+    };
     featuredImage?: string;
     publishedAt?: string;
   };
@@ -86,6 +94,9 @@ function blobDocToColumnPost(doc: ColumnDocumentFromBlob): ColumnPost {
     readTime: estimateReadTime(content),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
+    blogCategory: doc.frontmatter?.blogCategory || legacyCategoryToBlogCategory(category),
+    authorName: doc.frontmatter?.author?.name,
+    tags: doc.frontmatter?.tags ?? [],
     featuredImage: doc.frontmatter?.featuredImage || '',
     content,
     summary: doc.summary || '',
@@ -107,6 +118,9 @@ function builderDocToColumnPost(doc: ColumnDocument): ColumnPost {
     readTime: estimateReadTime(content),
     category,
     categoryLabel: categoryLabel(category, doc.locale),
+    blogCategory: doc.frontmatter.blogCategory || legacyCategoryToBlogCategory(category),
+    authorName: doc.frontmatter.author?.name,
+    tags: doc.frontmatter.tags ?? [],
     featuredImage: doc.frontmatter.featuredImage || '',
     content,
     summary: doc.summary || '',
@@ -134,6 +148,11 @@ function categoryLabel(category: ColumnCategory, locale: Locale): string {
   }
   const map: Record<ColumnCategory, string> = { formation: '법인설립', legal: '법률정보', case: '소송사례' };
   return map[category];
+}
+
+function legacyCategoryToBlogCategory(category: ColumnCategory): string {
+  if (category === 'formation') return 'company-formation';
+  return 'general';
 }
 
 /**

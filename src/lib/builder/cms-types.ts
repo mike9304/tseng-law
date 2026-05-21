@@ -74,7 +74,16 @@ export interface BuilderCmsImageValue {
   };
 }
 
-export type BuilderCmsRecordStatus = 'draft' | 'published' | 'archived';
+export const builderCmsRecordStatuses = [
+  'draft',
+  'pending',
+  'approved',
+  'rejected',
+  'published',
+  'archived',
+] as const;
+
+export type BuilderCmsRecordStatus = (typeof builderCmsRecordStatuses)[number];
 export type BuilderCmsRecordRevisionAction = 'update' | 'restore';
 
 export interface BuilderCmsRecordRevisionFieldDiff {
@@ -107,12 +116,27 @@ export interface BuilderCmsRecordRevision {
   diff: BuilderCmsRecordRevisionDiff;
 }
 
+export interface BuilderCmsModerationEvent {
+  status: BuilderCmsRecordStatus;
+  reason?: string;
+  createdAt: string;
+  authorLabel: string;
+}
+
+export interface BuilderCmsModerationState {
+  reason?: string;
+  updatedAt?: string;
+  updatedBy?: string;
+  history: BuilderCmsModerationEvent[];
+}
+
 export interface BuilderCmsRecord {
   recordId: string;
   status: BuilderCmsRecordStatus;
   locale?: Locale;
   fields: Record<string, unknown>;
   revisions?: BuilderCmsRecordRevision[];
+  moderation?: BuilderCmsModerationState;
   createdAt: string;
   updatedAt: string;
 }

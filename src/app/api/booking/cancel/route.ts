@@ -3,8 +3,9 @@ import { z } from 'zod';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { getBooking, getService, getStaff, saveBooking } from '@/lib/builder/bookings/storage';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
-import { applyRefundOutcome, computeRefundForCancel } from '@/lib/builder/bookings/refund';
+import { applyRefundOutcome, computeRefundForCancel, evaluateBookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
+import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -57,8 +58,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Booking already cancelled' }, { status: 409 });
   }
 
-  const outcome = await computeRefundForCancel(booking);
-  const updated = applyRefundOutcome(booking, outcome, parsed.data.reason);
+  const service = await getService(booking.serviceId);
+  const policy = evaluateBookingSelfServicePolicy(booking, service);
+  if (!policy.canCancel) {
+    return NextResponse.json(
+      { error: policy.cancelBlockedReason || 'Cancellation is not available for this booking.', policy },
+      { status: 409 },
+    );
+  }
+
+  const outcome = await computeRefundForCancel(booking, service ?? undefined);
+  const updated = await restorePackageCreditForBooking(applyRefundOutcome(booking, outcome, parsed.data.reason));
   // Narrow the cancel race: re-read immediately before write so a parallel
   // cancel that already flipped status to 'cancelled' wins, and we don't
   // double-refund or clobber its updatedAt.
@@ -70,10 +80,7 @@ export async function POST(request: NextRequest) {
     );
   }
   await saveBooking(updated);
-  const [service, staff] = await Promise.all([
-    getService(updated.serviceId),
-    getStaff(updated.staffId),
-  ]);
+  const staff = await getStaff(updated.staffId);
   await sendBookingCancellation(updated, { service, staff });
   emitEvent('booking.cancelled', {
     bookingId: updated.bookingId,

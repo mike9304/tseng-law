@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createHash } from 'crypto';
 import { z } from 'zod';
 import {
   loadFormSchema,
   saveSubmission,
   validateSubmission,
+  type FormField,
+  type FormSchema,
   type FormSubmission,
   type FormSubmissionFile,
 } from '@/lib/builder/forms/form-engine';
@@ -13,6 +16,14 @@ import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { reasonUrlUnsafe } from '@/lib/builder/webhooks/url-guard';
 import { isLinkSafe } from '@/lib/builder/links';
+import {
+  BuilderCmsPermissionError,
+  BuilderCmsValidationError,
+  createEditableBuilderCmsRecord,
+  readEditableBuilderCmsCollection,
+} from '@/lib/builder/cms-editable';
+import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
+import type { BuilderCmsFieldDefinition } from '@/lib/builder/cms-types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -245,6 +256,234 @@ function parseImageDataUrl(value: string): { contentType: 'image/png' | 'image/j
   }
 }
 
+class FormCmsWriteError extends Error {
+  constructor(
+    message: string,
+    public readonly status: number,
+    public readonly issues: string[] = [message],
+  ) {
+    super(message);
+    this.name = 'FormCmsWriteError';
+  }
+}
+
+async function writeSubmissionToCms(
+  schema: FormSchema | null,
+  fields: Record<string, string>,
+  files: FormSubmissionFile[],
+  locale: string | undefined,
+): Promise<string | null> {
+  if (!schema?.storeInCms || !schema.cmsMapping?.enabled) return null;
+
+  const mapping = schema.cmsMapping;
+  const collectionId = mapping.collectionId?.trim();
+  if (!collectionId) {
+    throw new FormCmsWriteError('CMS 컬렉션이 설정되지 않았습니다.', 400);
+  }
+
+  const siteId = mapping.siteId?.trim() || DEFAULT_BUILDER_SITE_ID;
+  const recordLocale = mapping.locale?.trim() || locale;
+  let collectionDetail: Awaited<ReturnType<typeof readEditableBuilderCmsCollection>> | null = null;
+  try {
+    collectionDetail = await readEditableBuilderCmsCollection(siteId, recordLocale, collectionId);
+  } catch {
+    collectionDetail = null;
+  }
+  const recordFields = buildCmsRecordFields(schema, fields, files, collectionDetail?.fields ?? []);
+  if (Object.keys(recordFields).length === 0) {
+    throw new FormCmsWriteError('CMS에 저장할 필드 매핑이 없습니다.', 400);
+  }
+
+  const record = await createEditableBuilderCmsRecord(
+    siteId,
+    recordLocale,
+    collectionId,
+    {
+      status: mapping.status ?? 'pending',
+      locale: recordLocale,
+      fields: recordFields,
+    },
+    { actor: 'public', actorLabel: 'Public form visitor' },
+  );
+  if (!record) {
+    throw new FormCmsWriteError('대상 CMS 컬렉션을 찾을 수 없습니다.', 404);
+  }
+  return record.recordId;
+}
+
+function buildCmsRecordFields(
+  schema: FormSchema,
+  fields: Record<string, string>,
+  files: FormSubmissionFile[],
+  cmsFields: BuilderCmsFieldDefinition[] = [],
+): Record<string, unknown> {
+  const formFields = new Map(schema.fields.map((field) => [field.id, field]));
+  const cmsFieldsByKey = new Map(cmsFields.map((field) => [field.key, field]));
+  const recordFields: Record<string, unknown> = {};
+
+  for (const fieldMapping of schema.cmsMapping?.fields ?? []) {
+    const formFieldId = fieldMapping.formFieldId.trim();
+    const cmsFieldKey = fieldMapping.cmsFieldKey.trim();
+    if (!formFieldId || !cmsFieldKey) continue;
+
+    const formField = formFields.get(formFieldId);
+    const cmsField = cmsFieldsByKey.get(cmsFieldKey);
+    const value = formField?.type === 'file'
+      ? cmsFileValue(files.filter((file) => file.fieldId === formFieldId), cmsField)
+      : fields[formFieldId];
+    const normalized = normalizeCmsMappedValue(formField, value, cmsField);
+    if (normalized === undefined || normalized === '') continue;
+    recordFields[cmsFieldKey] = normalized;
+  }
+
+  return recordFields;
+}
+
+function cmsFileValue(
+  files: FormSubmissionFile[],
+  cmsField?: BuilderCmsFieldDefinition,
+): string | string[] | { url: string; filename?: string; altText?: string } | undefined {
+  if (files.length === 0) return undefined;
+  const urls = files
+    .map((file) => file.url || file.name)
+    .filter((value): value is string => Boolean(value));
+  if (urls.length === 0) return undefined;
+  if (cmsField?.type === 'image') {
+    if (files.length > 1) {
+      throw new FormCmsWriteError(
+        '이미지 CMS 필드에는 하나의 업로드 파일만 매핑할 수 있습니다.',
+        400,
+      );
+    }
+    const first = files.find((file) => file.url || file.name);
+    if (!first) return undefined;
+    if (first.type && !first.type.startsWith('image/')) {
+      throw new FormCmsWriteError(
+        '이미지 CMS 필드에는 이미지 업로드만 매핑할 수 있습니다.',
+        400,
+      );
+    }
+    return {
+      url: first.url || first.name,
+      filename: first.name,
+      altText: first.name.replace(/\.[^.]+$/, '').slice(0, 180),
+    };
+  }
+  if (cmsField?.repeated || cmsField?.type === 'string-list') return urls;
+  return urls.length === 1 ? urls[0] : urls;
+}
+
+function normalizeCmsMappedValue(
+  field: FormField | undefined,
+  value: unknown,
+  cmsField?: BuilderCmsFieldDefinition,
+): unknown {
+  if (value === undefined || value === null) return undefined;
+  if (Array.isArray(value)) return value;
+  if (typeof value === 'object') return value;
+  const text = String(value).trim();
+  if (!field) return text;
+
+  if (cmsField?.repeated || cmsField?.type === 'string-list') {
+    return text
+      .split(',')
+      .map((item) => item.trim())
+      .filter(Boolean);
+  }
+  if (field.type === 'number') {
+    const numeric = Number(text);
+    return Number.isFinite(numeric) ? numeric : text;
+  }
+  if (field.type === 'checkbox' && !field.options?.length) {
+    if (/^(true|1|yes|on|동의|checked)$/i.test(text)) return 'true';
+    if (/^(false|0|no|off|unchecked)$/i.test(text)) return 'false';
+  }
+  return text;
+}
+
+function cmsWriteErrorResponse(error: unknown): NextResponse | null {
+  if (error instanceof FormCmsWriteError) {
+    return NextResponse.json(
+      { error: 'CMS 저장 설정을 확인해 주세요.', cmsIssues: error.issues },
+      { status: error.status },
+    );
+  }
+  if (error instanceof BuilderCmsValidationError) {
+    return NextResponse.json(
+      { error: 'CMS 레코드 검증에 실패했습니다.', cmsIssues: error.issues },
+      { status: 400 },
+    );
+  }
+  if (error instanceof BuilderCmsPermissionError) {
+    return NextResponse.json(
+      { error: 'CMS 컬렉션의 공개 생성 권한이 필요합니다.', cmsIssues: [error.message] },
+      { status: 403 },
+    );
+  }
+  return null;
+}
+
+function antiSpamResponse(
+  schema: FormSchema | null,
+  body: z.infer<typeof submitBodySchema>,
+  fields: Record<string, string>,
+): NextResponse | null {
+  const antiSpam = schema?.antiSpam;
+  if (!antiSpam) return null;
+
+  const honeypotFieldName = antiSpam.honeypotFieldName?.trim();
+  if (honeypotFieldName && fields[honeypotFieldName]?.trim()) {
+    return NextResponse.json({ error: '잠시 후 다시 시도해 주세요.' }, { status: 400 });
+  }
+
+  const minimumSubmitMs = antiSpam.minimumSubmitMs;
+  if (
+    typeof minimumSubmitMs === 'number' &&
+    minimumSubmitMs > 0 &&
+    typeof body.loadedAt === 'number' &&
+    typeof body.submittedAt === 'number'
+  ) {
+    const elapsed = body.submittedAt - body.loadedAt;
+    if (elapsed >= 0 && elapsed < minimumSubmitMs) {
+      return NextResponse.json({ error: '잠시 후 다시 시도해 주세요.' }, { status: 400 });
+    }
+  }
+
+  return null;
+}
+
+async function duplicateSubmissionResponse(
+  schema: FormSchema | null,
+  fields: Record<string, string>,
+): Promise<NextResponse | null> {
+  const duplicateWindowMs = schema?.antiSpam?.duplicateWindowMs;
+  const duplicateFields = schema?.antiSpam?.duplicateFields?.filter(Boolean) ?? [];
+  if (!schema || !duplicateWindowMs || duplicateWindowMs <= 0 || duplicateFields.length === 0) {
+    return null;
+  }
+
+  const fingerprint = createHash('sha256')
+    .update(schema.formId)
+    .update('\n')
+    .update(duplicateFields.map((fieldId) => `${fieldId}:${fields[fieldId]?.trim() ?? ''}`).join('\n'))
+    .digest('hex')
+    .slice(0, 40);
+  const duplicate = await checkRateLimit(
+    `forms-duplicate:${schema.formId}:${fingerprint}`,
+    1,
+    duplicateWindowMs,
+  );
+  if (duplicate.allowed) return null;
+
+  return NextResponse.json(
+    { error: '이미 접수된 내용입니다. 잠시 후 다시 시도해 주세요.' },
+    {
+      status: 409,
+      headers: { 'Retry-After': String(Math.ceil(duplicate.retryAfterMs / 1000)) },
+    },
+  );
+}
+
 // ─── POST handler ────────────────────────────────────────────────────
 
 export async function POST(request: NextRequest) {
@@ -281,7 +520,7 @@ export async function POST(request: NextRequest) {
   const body = parsed.data;
 
   // Time-trap: reject if submitted within 3s of load (likely bot).
-  if (body.loadedAt && body.submittedAt) {
+  if (typeof body.loadedAt === 'number' && typeof body.submittedAt === 'number') {
     const elapsed = body.submittedAt - body.loadedAt;
     if (elapsed >= 0 && elapsed < 3_000) {
       return NextResponse.json({ error: '잠시 후 다시 시도해 주세요.' }, { status: 400 });
@@ -300,6 +539,8 @@ export async function POST(request: NextRequest) {
   const schema = body.formId
     ? await loadFormSchema(body.formId)
     : await loadFormSchema(body.formName);
+  const spamResponse = antiSpamResponse(schema, body, fields);
+  if (spamResponse) return spamResponse;
   if (schema) {
     const validationErrors = validateSubmission(schema, fields, { files });
     if (validationErrors.length > 0) {
@@ -309,6 +550,8 @@ export async function POST(request: NextRequest) {
       );
     }
   }
+  const duplicateResponse = await duplicateSubmissionResponse(schema, fields);
+  if (duplicateResponse) return duplicateResponse;
 
   const submissionId = makeSubmissionId();
   const submission: FormSubmission = {
@@ -329,12 +572,25 @@ export async function POST(request: NextRequest) {
     console.error('[forms/submit] storage save failed:', err);
     // Don't fail the request — fall through and try email/webhook.
   }
+  let cmsRecordId: string | null = null;
+  try {
+    cmsRecordId = await writeSubmissionToCms(schema, fields, files, body.locale);
+  } catch (err) {
+    const response = cmsWriteErrorResponse(err);
+    if (response) return response;
+    console.error('[forms/submit] CMS write failed:', err);
+    return NextResponse.json(
+      { error: 'CMS 저장 중 오류가 발생했습니다.' },
+      { status: 500 },
+    );
+  }
   emitEvent('form.submitted', {
     submissionId: submission.submissionId,
     formId: submission.formId,
     submittedAt: submission.submittedAt,
     fields: submission.data,
     files: submission.files,
+    cmsRecordId: cmsRecordId ?? undefined,
   });
 
   // Routing
@@ -361,5 +617,5 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  return NextResponse.json({ ok: true, submissionId }, { status: 200 });
+  return NextResponse.json({ ok: true, submissionId, cmsRecordId: cmsRecordId ?? undefined }, { status: 200 });
 }

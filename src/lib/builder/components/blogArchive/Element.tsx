@@ -3,10 +3,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { BuilderBlogArchiveCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 
 interface BlogArchiveElementProps {
   node: BuilderBlogArchiveCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }
 
 const MOCK = [
@@ -39,15 +41,16 @@ function toBuckets(posts: BlogPost[]): ArchiveBucket[] {
   return Array.from(map.values()).sort((a, b) => (b.year - a.year) || (b.month - a.month));
 }
 
-export default function BlogArchiveElement({ node, mode = 'edit' }: BlogArchiveElementProps) {
+export default function BlogArchiveElement({ node, mode = 'edit', locale }: BlogArchiveElementProps) {
   const c = node.content;
   const isBuilder = mode !== 'published';
+  const effectiveLocale = normalizeLocale(locale || 'ko');
   const [posts, setPosts] = useState<BlogPost[] | null>(null);
 
   useEffect(() => {
     if (isBuilder) return;
     let cancelled = false;
-    fetch(`/api/builder/blog/posts?locale=ko&limit=100`)
+    fetch(`/api/builder/blog/posts?locale=${effectiveLocale}&limit=100`)
       .then((r) => r.json())
       .then((json) => {
         if (cancelled) return;
@@ -57,7 +60,7 @@ export default function BlogArchiveElement({ node, mode = 'edit' }: BlogArchiveE
     return () => {
       cancelled = true;
     };
-  }, [isBuilder]);
+  }, [effectiveLocale, isBuilder]);
 
   const buckets: ArchiveBucket[] = useMemo(() => {
     if (isBuilder) return MOCK;
@@ -86,6 +89,7 @@ export default function BlogArchiveElement({ node, mode = 'edit' }: BlogArchiveE
 
   return (
     <aside
+      data-builder-blog-archive="true"
       style={{
         width: '100%',
         height: '100%',
@@ -113,11 +117,13 @@ export default function BlogArchiveElement({ node, mode = 'edit' }: BlogArchiveE
             <summary
               style={{
                 cursor: 'pointer',
+                minHeight: 44,
                 fontSize: 13,
                 fontWeight: 600,
                 color: '#0f172a',
                 listStyle: 'none',
                 display: 'flex',
+                alignItems: 'center',
                 justifyContent: 'space-between',
               }}
             >
@@ -133,8 +139,9 @@ export default function BlogArchiveElement({ node, mode = 'edit' }: BlogArchiveE
                 {group.rows.map((r) => (
                   <li key={`${r.year}-${r.month}`}>
                     <a
-                      href={`/ko/columns?year=${r.year}&month=${r.month}`}
-                      style={{ display: 'flex', justifyContent: 'space-between', textDecoration: 'none', color: '#475569', fontSize: 12 }}
+                      href={`/${effectiveLocale}/columns?year=${r.year}&month=${r.month}`}
+                      data-builder-blog-archive-link={`${r.year}-${String(r.month).padStart(2, '0')}`}
+                      style={{ display: 'flex', minHeight: 44, alignItems: 'center', justifyContent: 'space-between', textDecoration: 'none', color: '#475569', fontSize: 12 }}
                     >
                       <span>{r.year}-{String(r.month).padStart(2, '0')}</span>
                       {c.showCount && <span style={{ color: '#94a3b8' }}>({r.count})</span>}

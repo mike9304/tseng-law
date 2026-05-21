@@ -21,6 +21,8 @@ const querySchema = z.object({
   locale: columnLocaleSchema,
   category: z.string().trim().max(80).optional(),
   tag: z.string().trim().max(80).optional(),
+  author: z.string().trim().max(120).optional(),
+  q: z.string().trim().max(200).optional(),
   sort: z.enum(['newest', 'oldest', 'featured-first']).default('newest'),
   limit: z.coerce.number().int().min(1).max(100).default(50),
   featured: z.enum(['true', 'false']).optional(),
@@ -35,6 +37,8 @@ export async function GET(request: NextRequest) {
       locale: sp.get('locale') ?? 'ko',
       category: sp.get('category') ?? undefined,
       tag: sp.get('tag') ?? undefined,
+      author: sp.get('author') ?? undefined,
+      q: sp.get('q') ?? undefined,
       sort: sp.get('sort') ?? 'newest',
       limit: sp.get('limit') ?? 50,
       featured: sp.get('featured') ?? undefined,
@@ -57,6 +61,8 @@ export async function GET(request: NextRequest) {
     let filtered = filterPosts(all, {
       category: parsed.category,
       tag: parsed.tag,
+      author: parsed.author,
+      query: parsed.q,
       locale: parsed.locale,
     });
     if (parsed.featured === 'true') filtered = filtered.filter((p) => p.featured);

@@ -4,7 +4,7 @@ import { resolveViewportHidden } from '@/lib/builder/canvas/responsive';
 export type ViewportLite = 'desktop' | 'tablet' | 'mobile';
 
 export const DEVICE_META: Array<{ vp: ViewportLite; icon: string; short: string; label: string }> = [
-  { vp: 'desktop', icon: '🖥', short: 'D', label: 'Desktop' },
+  { vp: 'desktop', icon: '▭', short: 'D', label: 'Desktop' },
   { vp: 'tablet', icon: '⬜', short: 'T', label: 'Tablet' },
   { vp: 'mobile', icon: '▯', short: 'M', label: 'Mobile' },
 ];
@@ -47,7 +47,7 @@ export function ShowOnDeviceToggles({
           textTransform: 'uppercase',
         }}
       >
-        Show on
+        표시 기기
       </span>
       <div style={{ display: 'flex', gap: 4, marginLeft: 'auto' }}>
         {DEVICE_META.map(({ vp, icon, short, label }) => {
@@ -145,10 +145,10 @@ export function InspectorEmptyState() {
         <rect x="6" y="6" width="44" height="44" rx="8" fill="none" stroke="#cbd5e1" strokeDasharray="4 4" />
         <circle cx="28" cy="28" r="3" fill="#94a3b8" />
       </svg>
-      <p style={{ margin: 0, color: '#0f172a', fontSize: 13, fontWeight: 700 }}>Select an element to edit</p>
+      <p style={{ margin: 0, color: '#0f172a', fontSize: 13, fontWeight: 700 }}>편집할 요소를 선택하세요</p>
       <p style={{ margin: 0, color: '#475569', fontSize: 11, lineHeight: 1.5 }}>
-        Click any element on the canvas, or use the Layers panel.<br />
-        Press <kbd style={{ color: '#0f172a', fontWeight: 800 }}>Esc</kbd> to deselect.
+        캔버스에서 요소를 클릭하거나 레이어 패널을 사용하세요.<br />
+        선택 해제: <kbd style={{ color: '#0f172a', fontWeight: 800 }}>Esc</kbd>
       </p>
     </div>
   );

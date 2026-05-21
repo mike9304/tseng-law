@@ -20,6 +20,7 @@ import {
   type BuilderCmsImageValue,
   type BuilderCmsIndexDefinition,
   type BuilderCmsIndexSortDirection,
+  type BuilderCmsModerationEvent,
   type BuilderCmsPermissionActor,
   type BuilderCmsPermissions,
   type BuilderCmsRecord,
@@ -90,6 +91,16 @@ type RecordSortDirection = 'asc' | 'desc';
 type CsvImportMode = 'append' | 'replace';
 type CmsPermissionOperation = keyof BuilderCmsPermissions;
 
+interface DynamicItemPageReference {
+  pageId: string;
+  slug: string;
+  locale: Locale;
+  dynamicItem?: {
+    collectionId: string;
+    slugField: string;
+  };
+}
+
 const DEFAULT_RECORD_PAGE_SIZE = 10;
 const RECORD_VIEW_STORAGE_PREFIX = 'builder-cms-record-views';
 
@@ -106,6 +117,24 @@ const cmsPermissionActorLabels: Record<BuilderCmsPermissionActor, string> = {
   staff: 'Staff',
   admin: 'Admin',
 };
+
+const recordStatusActionLabels: Record<BuilderCmsRecordStatus, string> = {
+  draft: 'move to draft',
+  pending: 'mark pending',
+  approved: 'approve',
+  rejected: 'reject',
+  published: 'publish',
+  archived: 'archive',
+};
+
+const recordStatusActions: Array<{ status: BuilderCmsRecordStatus; label: string }> = [
+  { status: 'pending', label: 'Pending' },
+  { status: 'approved', label: 'Approve' },
+  { status: 'rejected', label: 'Reject' },
+  { status: 'published', label: 'Publish' },
+  { status: 'draft', label: 'Draft' },
+  { status: 'archived', label: 'Archive' },
+];
 
 const cmsFieldTypeLabels: Record<BuilderCmsFieldType, string> = {
   text: 'Text',
@@ -152,6 +181,19 @@ const labelStyle = {
   fontWeight: 700,
 } satisfies React.CSSProperties;
 
+const helperTextStyle = {
+  color: '#64748b',
+  fontSize: 12,
+  fontWeight: 500,
+  lineHeight: 1.4,
+  overflowWrap: 'anywhere',
+} satisfies React.CSSProperties;
+
+const warningTextStyle = {
+  ...helperTextStyle,
+  color: '#b45309',
+} satisfies React.CSSProperties;
+
 export default function ContentManagerClient({
   locale,
   siteId,
@@ -173,6 +215,7 @@ export default function ContentManagerClient({
   const [recordFilterField, setRecordFilterField] = useState('status');
   const [recordFilterOperator, setRecordFilterOperator] = useState<BuilderCmsRecordFilterOperator>('is');
   const [recordFilterValue, setRecordFilterValue] = useState('published');
+  const [moderationReason, setModerationReason] = useState('');
   const [recordPage, setRecordPage] = useState(1);
   const [recordPageSize, setRecordPageSize] = useState(DEFAULT_RECORD_PAGE_SIZE);
   const [savedViews, setSavedViews] = useState<BuilderCmsRecordSavedView[]>([]);
@@ -184,6 +227,7 @@ export default function ContentManagerClient({
   const [csvColumnMap, setCsvColumnMap] = useState<Record<string, string>>({});
   const [csvImportSummary, setCsvImportSummary] = useState<ApiCsvImport['summary'] | null>(null);
   const [assetFieldKey, setAssetFieldKey] = useState<string | null>(null);
+  const [dynamicItemPages, setDynamicItemPages] = useState<DynamicItemPageReference[]>([]);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -290,6 +334,27 @@ export default function ContentManagerClient({
   useEffect(() => {
     if (recordQueryResult.page !== recordPage) setRecordPage(recordQueryResult.page);
   }, [recordPage, recordQueryResult.page]);
+
+  useEffect(() => {
+    let ignore = false;
+    async function loadDynamicItemPages() {
+      try {
+        const response = await fetch(`/api/builder/site/pages?locale=${locale}`, {
+          credentials: 'same-origin',
+        });
+        if (!response.ok) return;
+        const payload = await response.json() as { pages?: DynamicItemPageReference[] };
+        if (ignore) return;
+        setDynamicItemPages((payload.pages ?? []).filter((page) => Boolean(page.dynamicItem)));
+      } catch {
+        if (!ignore) setDynamicItemPages([]);
+      }
+    }
+    void loadDynamicItemPages();
+    return () => {
+      ignore = true;
+    };
+  }, [locale]);
 
   async function refreshCollections(nextSelectedId?: string) {
     const response = await fetch(`${apiBase(siteId)}?locale=${locale}`, { credentials: 'same-origin' });
@@ -444,6 +509,24 @@ export default function ContentManagerClient({
   function clearRecordFilters() {
     setRecordQuery('');
     setRecordFilters([]);
+    setRecordPage(1);
+    setSelectedViewId('');
+  }
+
+  function applyModerationStatusFilter(status: BuilderCmsRecordStatus | 'all') {
+    setRecordFilters((current) => {
+      const withoutModerationFilter = current.filter((filter) => filter.filterId !== 'moderation-status');
+      if (status === 'all') return withoutModerationFilter;
+      return [
+        ...withoutModerationFilter,
+        {
+          filterId: 'moderation-status',
+          fieldKey: 'status',
+          operator: 'is',
+          value: status,
+        },
+      ];
+    });
     setRecordPage(1);
     setSelectedViewId('');
   }
@@ -712,8 +795,10 @@ export default function ContentManagerClient({
 
   async function bulkUpdateSelectedRecordsStatus(status: BuilderCmsRecordStatus) {
     if (!detail || selectedRecordIds.length === 0) return;
-    const actionLabel = status === 'published' ? 'publish' : status === 'draft' ? 'move to draft' : 'archive';
-    if (!window.confirm(`${actionLabel} ${selectedRecordIds.length} selected records?`)) return;
+    const actionLabel = recordStatusActionLabels[status];
+    const reason = moderationReason.trim();
+    const reasonSuffix = reason ? `\nReason: ${reason}` : '';
+    if (!window.confirm(`${actionLabel} ${selectedRecordIds.length} selected records?${reasonSuffix}`)) return;
     setBusy(true);
     setError(null);
     setMessage(null);
@@ -724,7 +809,12 @@ export default function ContentManagerClient({
           method: 'POST',
           credentials: 'same-origin',
           headers: cmsActorJsonHeaders(cmsActor),
-          body: JSON.stringify({ action: 'status', status, recordIds: selectedRecordIds }),
+          body: JSON.stringify({
+            action: 'status',
+            status,
+            recordIds: selectedRecordIds,
+            ...(reason ? { moderationReason: reason } : {}),
+          }),
         },
       );
       const result = await response.json() as ApiBulkRecordMutation;
@@ -734,6 +824,7 @@ export default function ContentManagerClient({
       await loadDetail(detail.collectionId);
       await refreshCollections(detail.collectionId);
       setSelectedRecordIds([]);
+      setModerationReason('');
       const missing = result.missingRecordIds?.length ? ` ${result.missingRecordIds.length} missing.` : '';
       setMessage(`Updated ${result.updated ?? 0} selected records.${missing}`);
     } catch (bulkError) {
@@ -1327,6 +1418,20 @@ export default function ContentManagerClient({
                       key={field.fieldId}
                       field={field}
                       value={recordForm[field.key]}
+                      collectionSlug={detail.slug}
+                      duplicateRecordId={findDuplicateFieldRecord(
+                        detail.records,
+                        field,
+                        recordForm[field.key],
+                        editingRecordId,
+                      )}
+                      dynamicItemUrlBases={dynamicItemPages
+                        .filter((page) => (
+                          page.dynamicItem?.collectionId === detail.collectionId
+                          && page.dynamicItem.slugField === field.key
+                        ))
+                        .map((page) => `/${page.locale}/${page.slug}`)}
+                      locale={locale}
                       disabled={busy}
                       onChange={(value) => setRecordForm((current) => ({ ...current, [field.key]: value }))}
                       onRequestAssetLibrary={
@@ -1516,6 +1621,30 @@ export default function ContentManagerClient({
                     </button>
                   </div>
                 ) : null}
+                <div className="builder-dashboard-page-actions" data-cms-moderation-filters>
+                  <span style={{ color: '#64748b', fontSize: 12, fontWeight: 700 }}>Moderation</span>
+                  {(['pending', 'approved', 'rejected'] as BuilderCmsRecordStatus[]).map((status) => (
+                    <button
+                      key={status}
+                      type="button"
+                      className="builder-action-btn"
+                      data-cms-moderation-filter={status}
+                      onClick={() => applyModerationStatusFilter(status)}
+                      disabled={busy}
+                    >
+                      {status}
+                    </button>
+                  ))}
+                  <button
+                    type="button"
+                    className="builder-action-btn"
+                    data-cms-moderation-filter="all"
+                    onClick={() => applyModerationStatusFilter('all')}
+                    disabled={busy}
+                  >
+                    All
+                  </button>
+                </div>
                 <div style={{ ...formGridStyle, alignItems: 'end' }}>
                   <label style={labelStyle}>
                     Saved views
@@ -1563,6 +1692,18 @@ export default function ContentManagerClient({
                   Showing {visibleRecords.length} of {recordQueryResult.total} matching records from {detail.records.length} total.
                   Page {recordQueryResult.page} of {recordQueryResult.pageCount}.
                 </p>
+                <label style={labelStyle}>
+                  Moderation reason
+                  <textarea
+                    data-cms-moderation-reason-input
+                    style={{ ...inputStyle, minHeight: 74, resize: 'vertical' }}
+                    value={moderationReason}
+                    maxLength={500}
+                    placeholder="Reason saved with pending/approve/reject history"
+                    disabled={busy}
+                    onChange={(event) => setModerationReason(event.target.value)}
+                  />
+                </label>
                 <div className="builder-dashboard-page-actions" style={{ justifyContent: 'space-between' }}>
                   <label
                     style={{
@@ -1585,30 +1726,17 @@ export default function ContentManagerClient({
                   <span style={{ color: '#64748b', fontSize: 12 }}>
                     {selectedRecordIds.length} selected
                   </span>
-                  <button
-                    type="button"
-                    className="builder-action-btn"
-                    onClick={() => void bulkUpdateSelectedRecordsStatus('published')}
-                    disabled={busy || selectedRecordIds.length === 0}
-                  >
-                    Publish
-                  </button>
-                  <button
-                    type="button"
-                    className="builder-action-btn"
-                    onClick={() => void bulkUpdateSelectedRecordsStatus('draft')}
-                    disabled={busy || selectedRecordIds.length === 0}
-                  >
-                    Draft
-                  </button>
-                  <button
-                    type="button"
-                    className="builder-action-btn"
-                    onClick={() => void bulkUpdateSelectedRecordsStatus('archived')}
-                    disabled={busy || selectedRecordIds.length === 0}
-                  >
-                    Archive
-                  </button>
+                  {recordStatusActions.map((action) => (
+                    <button
+                      key={action.status}
+                      type="button"
+                      className="builder-action-btn"
+                      onClick={() => void bulkUpdateSelectedRecordsStatus(action.status)}
+                      disabled={busy || selectedRecordIds.length === 0}
+                    >
+                      {action.label}
+                    </button>
+                  ))}
                   <button
                     type="button"
                     className="builder-action-btn"
@@ -1739,6 +1867,14 @@ export default function ContentManagerClient({
                         </span>
                       ))}
                       <span>{record.revisions?.length ?? 0} revisions</span>
+                      {record.moderation?.reason ? (
+                        <span data-cms-moderation-latest-reason={record.recordId}>
+                          Moderation reason: {record.moderation.reason}
+                        </span>
+                      ) : null}
+                      {record.moderation?.history?.length ? (
+                        <span>{record.moderation.history.length} moderation events</span>
+                      ) : null}
                     </div>
                     <div className="builder-dashboard-page-actions">
                       <button
@@ -1766,6 +1902,23 @@ export default function ContentManagerClient({
                         Delete
                       </button>
                     </div>
+                    {record.moderation?.history?.length ? (
+                      <div
+                        data-cms-moderation-history={record.recordId}
+                        style={{ borderTop: '1px solid #e2e8f0', display: 'grid', gap: 6, marginTop: 10, paddingTop: 10 }}
+                      >
+                        {latestModerationEvents(record.moderation.history).map((event) => (
+                          <div
+                            key={`${event.status}-${event.createdAt}-${event.authorLabel}`}
+                            className="builder-dashboard-page-meta"
+                          >
+                            <span>{event.status}</span>
+                            <span>{formatDateTime(event.createdAt)} by {event.authorLabel}</span>
+                            {event.reason ? <span>Reason: {event.reason}</span> : null}
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
                     {record.revisions?.length ? (
                       <div style={{ display: 'grid', gap: 10, marginTop: 10 }}>
                         {latestRevisions(record.revisions).map((revision) => (
@@ -1891,12 +2044,20 @@ export default function ContentManagerClient({
 function CmsFieldInput({
   field,
   value,
+  collectionSlug,
+  duplicateRecordId,
+  dynamicItemUrlBases,
+  locale,
   disabled,
   onChange,
   onRequestAssetLibrary,
 }: {
   field: BuilderCmsFieldDefinition;
   value: RecordFormValue | undefined;
+  collectionSlug: string;
+  duplicateRecordId?: string | null;
+  dynamicItemUrlBases?: string[];
+  locale: Locale;
   disabled: boolean;
   onChange: (value: RecordFormValue) => void;
   onRequestAssetLibrary?: () => void;
@@ -2065,8 +2226,95 @@ function CmsFieldInput({
         disabled={disabled}
         onChange={(event) => onChange(event.target.value)}
       />
+      {field.type === 'slug' ? (
+        <CmsSlugFieldHelper
+          collectionSlug={collectionSlug}
+          duplicateRecordId={duplicateRecordId}
+          dynamicItemUrlBases={dynamicItemUrlBases ?? []}
+          field={field}
+          locale={locale}
+          value={value}
+        />
+      ) : null}
     </label>
   );
+}
+
+function CmsSlugFieldHelper({
+  collectionSlug,
+  duplicateRecordId,
+  dynamicItemUrlBases,
+  field,
+  locale,
+  value,
+}: {
+  collectionSlug: string;
+  duplicateRecordId?: string | null;
+  dynamicItemUrlBases: string[];
+  field: BuilderCmsFieldDefinition;
+  locale: Locale;
+  value: RecordFormValue | undefined;
+}) {
+  const slugPreview = normalizeCmsSlugPreview(value) || '{slug}';
+  const previewBases = dynamicItemUrlBases.length > 0
+    ? dynamicItemUrlBases
+    : [`/${locale}/${collectionSlug || 'collection'}`];
+  return (
+    <span style={{ display: 'grid', gap: 4 }}>
+      <span style={helperTextStyle} data-cms-slug-helper={field.key}>
+        {dynamicItemUrlBases.length > 0 ? 'Dynamic URL' : 'Potential dynamic URL'}:{' '}
+        {previewBases.map((base, index) => (
+          <span key={`${base}-${index}`}>
+            {index > 0 ? ', ' : null}
+            {base}/{slugPreview}
+          </span>
+        ))}
+      </span>
+      <span style={helperTextStyle}>
+        Changing this value can change dynamic item URLs. Record-level 301 redirects are not created automatically yet.
+      </span>
+      {field.unique ? (
+        <span style={helperTextStyle}>Unique slug. Duplicate values are blocked before save.</span>
+      ) : null}
+      {duplicateRecordId ? (
+        <span style={warningTextStyle} role="alert" data-cms-slug-duplicate={field.key}>
+          This slug is already used by record {duplicateRecordId}. Choose a unique slug before save.
+        </span>
+      ) : null}
+    </span>
+  );
+}
+
+function normalizeCmsSlugPreview(value: RecordFormValue | undefined): string {
+  return String(typeof value === 'string' ? value : '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function comparableFieldValue(
+  field: BuilderCmsFieldDefinition,
+  value: unknown,
+): string {
+  if (field.type === 'slug') return normalizeCmsSlugPreview(String(value ?? ''));
+  return String(value ?? '').trim();
+}
+
+function findDuplicateFieldRecord(
+  records: BuilderCmsRecord[],
+  field: BuilderCmsFieldDefinition,
+  value: RecordFormValue | undefined,
+  editingRecordId: string | null,
+): string | null {
+  if (!field.unique) return null;
+  const nextValue = comparableFieldValue(field, value);
+  if (!nextValue) return null;
+  const duplicate = records.find((record) => (
+    record.recordId !== editingRecordId
+    && comparableFieldValue(field, record.fields[field.key]) === nextValue
+  ));
+  return duplicate?.recordId ?? null;
 }
 
 function defaultCmsPermissionDraft(): BuilderCmsPermissions {
@@ -2193,6 +2441,12 @@ function latestRevisions(revisions: BuilderCmsRecordRevision[]): BuilderCmsRecor
   return [...revisions]
     .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt))
     .slice(0, 3);
+}
+
+function latestModerationEvents(events: BuilderCmsModerationEvent[]): BuilderCmsModerationEvent[] {
+  return [...events]
+    .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt))
+    .slice(0, 5);
 }
 
 function revisionDiffItems(

@@ -92,4 +92,23 @@ describe('booking email templates', () => {
     expect(rendered.html).toContain('Company setup &lt;urgent&gt;');
     expect(rendered.html).not.toContain('Kim <script>');
   });
+
+  it('renders template times in the saved customer timezone', () => {
+    const rendered = renderBookingEmailTemplate(
+      {
+        ...defaultBookingEmailTemplate('customer-confirmation'),
+        subject: 'Starts {{startTime}}',
+        body: 'Starts {{startTime}}\nEnds {{endTime}}\nTimezone {{timezone}}',
+      },
+      booking({
+        customer: { ...booking().customer, locale: 'en' },
+        customerTimezone: 'America/New_York',
+      }),
+      { service, staff },
+    );
+
+    expect(rendered.text).toContain('1:00 AM');
+    expect(rendered.text).toContain('1:30 AM');
+    expect(rendered.text).toContain('America/New_York');
+  });
 });

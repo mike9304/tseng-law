@@ -20,6 +20,21 @@ describe('builder dynamic routes', () => {
     expect(detail.previewContext.seoPreview.keywords).toContain('대만 변호사');
   });
 
+  it('keeps a missing item-route preview record visible as a recoverable selection state', () => {
+    const detail = readBuilderDynamicRouteDetail('service-areas.item', 'ko', 'missing-record');
+
+    expect(detail.previewContext).toMatchObject({
+      status: 'record-missing',
+      selectedRecordId: 'missing-record',
+      resolvedPath: null,
+      seoPreview: {
+        status: 'record-missing',
+        canonicalPath: null,
+      },
+    });
+    expect(detail.previewContext.note).toContain('not available');
+  });
+
   it('keeps list routes collection-scoped while still exposing SEO preview defaults', () => {
     const detail = readBuilderDynamicRouteDetail('columns.list', 'ko');
 

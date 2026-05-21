@@ -8,6 +8,8 @@
  * MEM-05: App-linked tabs
  */
 
+import { promises as fs } from 'fs';
+import path from 'path';
 import { get, put, list } from '@vercel/blob';
 import crypto from 'crypto';
 import bcrypt from 'bcryptjs';
@@ -15,6 +17,7 @@ import bcrypt from 'bcryptjs';
 // ─── Member Model ─────────────────────────────────────────────────
 
 export type MemberRole = 'free' | 'premium' | 'admin';
+type MembersBackend = 'blob' | 'file';
 
 export interface SiteMember {
   memberId: string;
@@ -32,15 +35,137 @@ export interface SiteMember {
   blocked: boolean;
 }
 
+export type PublicSiteMember = Omit<SiteMember, 'passwordHash'>;
+
 export interface MemberSession {
   sessionId: string;
   memberId: string;
   expiresAt: string;
   createdAt: string;
+  revoked?: boolean;
 }
 
 const MEMBERS_PREFIX = 'builder-members/';
 const SESSIONS_PREFIX = 'builder-members/sessions/';
+export const MEMBER_SESSION_COOKIE = 'builder_member_session';
+const DEFAULT_MEMBERS_ROOT = path.join(process.cwd(), 'runtime-data', 'builder-members');
+
+function getBackend(): MembersBackend {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) return 'file';
+  if (process.env.CONSULTATION_LOG_BACKEND === 'local') return 'file';
+  if (process.env.BUILDER_MEMBERS_BACKEND === 'local') return 'file';
+  if (process.env.NODE_ENV !== 'production' && process.env.BUILDER_USE_BLOB_IN_DEV !== '1') return 'file';
+  return 'blob';
+}
+
+function membersRoot(): string {
+  return process.env.BUILDER_MEMBERS_ROOT?.trim() || DEFAULT_MEMBERS_ROOT;
+}
+
+function memberBlobPath(memberId: string): string {
+  return `${MEMBERS_PREFIX}${memberId}.json`;
+}
+
+function sessionBlobPath(sessionId: string): string {
+  return `${SESSIONS_PREFIX}${sessionId}.json`;
+}
+
+function memberFilePath(memberId: string): string {
+  return path.join(membersRoot(), 'members', `${memberId}.json`);
+}
+
+function sessionFilePath(sessionId: string): string {
+  return path.join(membersRoot(), 'sessions', `${sessionId}.json`);
+}
+
+async function writeJson(blobPath: string, filePath: string, data: unknown): Promise<void> {
+  const body = JSON.stringify(data, null, 2);
+  if (getBackend() === 'blob') {
+    await put(blobPath, body, {
+      access: 'private',
+      allowOverwrite: true,
+      contentType: 'application/json',
+    });
+    return;
+  }
+
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
+  await fs.writeFile(filePath, body, 'utf8');
+}
+
+async function readJson<T>(blobPath: string, filePath: string): Promise<T | null> {
+  try {
+    if (getBackend() === 'blob') {
+      const result = await get(blobPath, { access: 'private', useCache: false });
+      if (result?.statusCode === 200 && result.stream) {
+        return JSON.parse(await new Response(result.stream).text()) as T;
+      }
+      return null;
+    }
+
+    return JSON.parse(await fs.readFile(filePath, 'utf8')) as T;
+  } catch {
+    return null;
+  }
+}
+
+async function listMemberJson(): Promise<SiteMember[]> {
+  if (getBackend() === 'blob') {
+    const result = await list({ prefix: MEMBERS_PREFIX });
+    const members: SiteMember[] = [];
+    for (const blob of result.blobs) {
+      if (blob.pathname.includes('/sessions/')) continue;
+      const parsed = await readJson<SiteMember>(
+        blob.pathname,
+        memberFilePath(path.basename(blob.pathname, '.json')),
+      );
+      if (parsed) members.push(normalizeMember(parsed));
+    }
+    return members;
+  }
+
+  const dir = path.join(membersRoot(), 'members');
+  const files = await fs.readdir(dir).catch(() => []);
+  const values = await Promise.all(
+    files
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => readJson<SiteMember>('', path.join(dir, file))),
+  );
+  return values.filter((value): value is SiteMember => Boolean(value)).map(normalizeMember);
+}
+
+function safeTrim(value: unknown, max: number): string {
+  return typeof value === 'string' ? value.trim().slice(0, max) : '';
+}
+
+function normalizeRole(role: unknown): MemberRole {
+  return role === 'premium' || role === 'admin' ? role : 'free';
+}
+
+function normalizeMember(input: Partial<SiteMember>): SiteMember {
+  const now = new Date().toISOString();
+  return {
+    memberId: safeTrim(input.memberId, 120) || `member-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    email: safeTrim(input.email, 180).toLowerCase(),
+    name: safeTrim(input.name, 120) || safeTrim(input.email, 180).split('@')[0] || 'Member',
+    role: normalizeRole(input.role),
+    passwordHash: safeTrim(input.passwordHash, 240),
+    ...(safeTrim(input.profilePhoto, 2000) ? { profilePhoto: safeTrim(input.profilePhoto, 2000) } : {}),
+    ...(safeTrim(input.phone, 80) ? { phone: safeTrim(input.phone, 80) } : {}),
+    ...(safeTrim(input.locale, 20) ? { locale: safeTrim(input.locale, 20) } : {}),
+    ...(input.customFields && typeof input.customFields === 'object' ? { customFields: input.customFields } : {}),
+    createdAt: input.createdAt && Number.isFinite(Date.parse(input.createdAt)) ? input.createdAt : now,
+    ...(input.lastLoginAt && Number.isFinite(Date.parse(input.lastLoginAt)) ? { lastLoginAt: input.lastLoginAt } : {}),
+    verified: Boolean(input.verified),
+    blocked: Boolean(input.blocked),
+  };
+}
+
+export function publicMember(member: SiteMember): PublicSiteMember {
+  const { passwordHash, ...safe } = normalizeMember(member);
+  void passwordHash;
+  return safe;
+}
 
 // ─── Password hashing (bcrypt, production-safe) ──────────────────
 
@@ -61,24 +186,23 @@ export async function createMember(data: {
   name: string;
   password: string;
   role?: MemberRole;
+  verified?: boolean;
 }): Promise<SiteMember> {
   const existing = await getMemberByEmail(data.email);
   if (existing) throw new Error('이미 가입된 이메일입니다.');
 
-  const member: SiteMember = {
-    memberId: `member-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
-    email: data.email.toLowerCase().trim(),
+  const member = normalizeMember({
+    memberId: `member-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    email: data.email,
     name: data.name,
     role: data.role || 'free',
     passwordHash: await hashPassword(data.password),
     createdAt: new Date().toISOString(),
-    verified: false,
+    verified: data.verified ?? false,
     blocked: false,
-  };
-
-  await put(`${MEMBERS_PREFIX}${member.memberId}.json`, JSON.stringify(member), {
-    access: 'private', allowOverwrite: true, contentType: 'application/json',
   });
+
+  await writeJson(memberBlobPath(member.memberId), memberFilePath(member.memberId), member);
   // PR #13 — fire webhook event (best-effort dynamic import to avoid circular deps).
   void import('@/lib/builder/webhooks/dispatcher').then(({ emitEvent }) => {
     emitEvent('member.registered', {
@@ -92,13 +216,8 @@ export async function createMember(data: {
 }
 
 export async function getMember(memberId: string): Promise<SiteMember | null> {
-  try {
-    const result = await get(`${MEMBERS_PREFIX}${memberId}.json`, { access: 'private', useCache: false });
-    if (result?.statusCode === 200 && result.stream) {
-      return JSON.parse(await new Response(result.stream).text()) as SiteMember;
-    }
-  } catch { /* empty */ }
-  return null;
+  const member = await readJson<SiteMember>(memberBlobPath(memberId), memberFilePath(memberId));
+  return member ? normalizeMember(member) : null;
 }
 
 export async function getMemberByEmail(email: string): Promise<SiteMember | null> {
@@ -107,20 +226,54 @@ export async function getMemberByEmail(email: string): Promise<SiteMember | null
 }
 
 export async function listMembers(): Promise<SiteMember[]> {
-  try {
-    const result = await list({ prefix: MEMBERS_PREFIX });
-    const members: SiteMember[] = [];
-    for (const blob of result.blobs) {
-      if (blob.pathname.includes('/sessions/')) continue;
-      try {
-        const res = await get(blob.pathname, { access: 'private', useCache: false });
-        if (res?.statusCode === 200 && res.stream) {
-          members.push(JSON.parse(await new Response(res.stream).text()) as SiteMember);
-        }
-      } catch { /* skip */ }
-    }
-    return members;
-  } catch { return []; }
+  return listMemberJson();
+}
+
+export async function saveMember(member: SiteMember): Promise<SiteMember> {
+  const normalized = normalizeMember(member);
+  await writeJson(memberBlobPath(normalized.memberId), memberFilePath(normalized.memberId), normalized);
+  return normalized;
+}
+
+export async function updateMemberProfile(
+  memberId: string,
+  patch: { name?: string; phone?: string; profilePhoto?: string; customFields?: Record<string, string> },
+): Promise<SiteMember | null> {
+  const member = await getMember(memberId);
+  if (!member) return null;
+  return saveMember({
+    ...member,
+    ...(patch.name != null ? { name: safeTrim(patch.name, 120) || member.name } : {}),
+    ...(patch.phone != null ? { phone: safeTrim(patch.phone, 80) } : {}),
+    ...(patch.profilePhoto != null ? { profilePhoto: safeTrim(patch.profilePhoto, 2000) } : {}),
+    ...(patch.customFields ? { customFields: patch.customFields } : {}),
+  });
+}
+
+export async function updateMemberAdmin(
+  memberId: string,
+  patch: { role?: MemberRole; verified?: boolean; blocked?: boolean; name?: string; phone?: string },
+): Promise<SiteMember | null> {
+  const member = await getMember(memberId);
+  if (!member) return null;
+  return saveMember({
+    ...member,
+    ...(patch.role ? { role: patch.role } : {}),
+    ...(patch.verified != null ? { verified: patch.verified } : {}),
+    ...(patch.blocked != null ? { blocked: patch.blocked } : {}),
+    ...(patch.name != null ? { name: safeTrim(patch.name, 120) || member.name } : {}),
+    ...(patch.phone != null ? { phone: safeTrim(patch.phone, 80) } : {}),
+  });
+}
+
+export async function deleteMember(memberId: string): Promise<void> {
+  const existing = await getMember(memberId);
+  if (!existing) return;
+  await saveMember({
+    ...existing,
+    blocked: true,
+    email: `${existing.email}.deleted.${Date.now()}`,
+  });
 }
 
 // ─── Auth ─────────────────────────────────────────────────────────
@@ -137,26 +290,30 @@ export async function loginMember(email: string, password: string): Promise<Memb
     createdAt: new Date().toISOString(),
   };
 
-  await put(`${SESSIONS_PREFIX}${session.sessionId}.json`, JSON.stringify(session), {
-    access: 'private', allowOverwrite: true, contentType: 'application/json',
-  });
+  await writeJson(sessionBlobPath(session.sessionId), sessionFilePath(session.sessionId), session);
 
   member.lastLoginAt = new Date().toISOString();
-  await put(`${MEMBERS_PREFIX}${member.memberId}.json`, JSON.stringify(member), {
-    access: 'private', allowOverwrite: true, contentType: 'application/json',
-  });
+  await saveMember(member);
 
   return session;
 }
 
 export async function validateSession(sessionId: string): Promise<SiteMember | null> {
-  try {
-    const result = await get(`${SESSIONS_PREFIX}${sessionId}.json`, { access: 'private', useCache: false });
-    if (!result?.stream || result.statusCode !== 200) return null;
-    const session = JSON.parse(await new Response(result.stream).text()) as MemberSession;
-    if (new Date(session.expiresAt) < new Date()) return null;
-    return getMember(session.memberId);
-  } catch { return null; }
+  const session = await readJson<MemberSession>(sessionBlobPath(sessionId), sessionFilePath(sessionId));
+  if (!session || session.revoked || new Date(session.expiresAt) < new Date()) return null;
+  const member = await getMember(session.memberId);
+  if (!member || member.blocked) return null;
+  return member;
+}
+
+export async function revokeSession(sessionId: string): Promise<void> {
+  const session = await readJson<MemberSession>(sessionBlobPath(sessionId), sessionFilePath(sessionId));
+  if (!session) return;
+  await writeJson(
+    sessionBlobPath(sessionId),
+    sessionFilePath(sessionId),
+    { ...session, revoked: true, expiresAt: new Date(0).toISOString() },
+  );
 }
 
 // ─── Content Gating ───────────────────────────────────────────────

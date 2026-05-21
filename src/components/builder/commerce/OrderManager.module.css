@@ -1,0 +1,750 @@
+.page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.header span {
+  color: #2d5c48;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  margin: 4px 0;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.headerActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.headerActions a,
+.headerActions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  border: 1px solid rgba(45, 92, 72, 0.2);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #234938;
+  padding: 0 12px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.headerActions button:first-of-type {
+  border-color: #2d5c48;
+  background: #2d5c48;
+  color: #ffffff;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(96px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.kpis article,
+.order,
+.empty,
+.exportPanel {
+  border: 1px solid #dbe4ee;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.05);
+}
+
+.kpis article {
+  padding: 12px;
+}
+
+.kpis strong {
+  display: block;
+  font-size: 1.4rem;
+}
+
+.kpis span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(150px, 0.8fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.toolbar input,
+.toolbar select,
+.controls select,
+.exportPanel textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 9px 10px;
+  font: inherit;
+}
+
+.notice {
+  min-height: 20px;
+  margin: 0 0 12px;
+  color: #2563eb;
+  font-size: 0.82rem;
+}
+
+.paymentHero {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(280px, 0.75fr);
+  gap: 14px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(45, 92, 72, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(45, 92, 72, 0.1), rgba(14, 116, 144, 0.08)),
+    #ffffff;
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08);
+  padding: 18px;
+}
+
+.paymentHero > div:first-child {
+  min-width: 0;
+}
+
+.paymentHero span,
+.paymentPanelHeader span {
+  color: #2d5c48;
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.paymentHero strong {
+  display: block;
+  color: #0f172a;
+  font-size: 2.35rem;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.paymentHero p,
+.paymentEmpty {
+  margin: 8px 0 0;
+  color: #475569;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.paymentHeroStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-self: stretch;
+}
+
+.paymentHeroStats article {
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  min-width: 0;
+  border: 1px solid rgba(203, 213, 225, 0.82);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  padding: 12px;
+}
+
+.paymentHeroStats strong {
+  font-size: 1.45rem;
+}
+
+.paymentAnalyticsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 14px;
+}
+
+.paymentAnalyticsPanel {
+  min-width: 0;
+  border: 1px solid #dbe4ee;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.05);
+  padding: 16px;
+}
+
+.paymentPanelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.paymentPanelHeader h2 {
+  margin: 3px 0 0;
+  font-size: 1.02rem;
+}
+
+.paymentCurrencyTable {
+  display: grid;
+  gap: 8px;
+}
+
+.paymentCurrencyHeader,
+.paymentCurrencyTable > div:not(.paymentCurrencyHeader) {
+  display: grid;
+  grid-template-columns: 0.65fr repeat(4, minmax(92px, 1fr));
+  gap: 8px;
+  align-items: center;
+}
+
+.paymentCurrencyHeader {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.paymentCurrencyTable > div:not(.paymentCurrencyHeader) {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 10px;
+}
+
+.paymentCurrencyTable strong {
+  color: #0f172a;
+  font-size: 0.88rem;
+}
+
+.paymentCurrencyTable span {
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.paymentSourceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.paymentSourceGrid section {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 12px;
+}
+
+.paymentSourceGrid h3 {
+  margin: 0;
+  font-size: 0.96rem;
+}
+
+.paymentSourceGrid section > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.paymentSourceGrid span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.paymentSourceGrid strong {
+  color: #0f172a;
+  font-size: 0.82rem;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.paymentSourceGrid strong[data-tone='good'] {
+  color: #166534;
+}
+
+.paymentSourceGrid strong[data-tone='warn'] {
+  color: #b45309;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.order {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.1fr) minmax(160px, 0.6fr) minmax(320px, 1fr);
+  gap: 12px;
+  padding: 14px;
+}
+
+.identity,
+  .totals,
+  .controls,
+  .lines,
+  .audit,
+  .documents,
+  .refunds {
+  min-width: 0;
+}
+
+.identity strong,
+.totals strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.identity span,
+.identity small,
+.totals span,
+.lines span,
+.audit span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.identity span,
+.identity small,
+.totals span {
+  display: block;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.controls label {
+  display: grid;
+  gap: 5px;
+}
+
+.controls label span {
+  color: #334155;
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.controls label small {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lines,
+.audit {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lines span,
+.audit span {
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 5px 9px;
+}
+
+.audit span {
+  background: #eef6f0;
+  color: #234938;
+}
+
+.manualPayments,
+.refunds {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(45, 92, 72, 0.16);
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 12px;
+}
+
+.manualPayments {
+  border-color: rgba(14, 116, 144, 0.16);
+  background: #f0fdfa;
+}
+
+.documents {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  border-radius: 8px;
+  background: #f8fbff;
+  padding: 12px;
+}
+
+.documentHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.documentHead strong {
+  color: #0f172a;
+  font-size: 0.92rem;
+}
+
+.documentActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.documentActions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1d4ed8;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.documentList a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-start;
+  min-height: 32px;
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1d4ed8;
+  padding: 0 10px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.documentActions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.documentList {
+  display: grid;
+  gap: 8px;
+}
+
+.documentList article {
+  display: grid;
+  gap: 3px;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.documentList strong {
+  color: #0f172a;
+  font-size: 0.84rem;
+}
+
+.documentList span,
+.documents > span {
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.manualPaymentHead,
+.refundHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.manualPaymentHead strong,
+.refundHead strong {
+  color: #0f172a;
+  font-size: 0.92rem;
+}
+
+.manualPaymentHead button,
+.manualPaymentForm button,
+.refundHead button,
+.refundForm button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border: 1px solid rgba(45, 92, 72, 0.24);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #234938;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.refundHead button:disabled,
+.manualPaymentHead button:disabled,
+.manualPaymentForm button:disabled,
+.refundForm button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.manualPaymentSummary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.manualPaymentSummary span {
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0f766e;
+  padding: 5px 9px;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.manualPaymentList,
+.refundList {
+  display: grid;
+  gap: 8px;
+}
+
+.manualPaymentList article,
+.refundList article {
+  display: grid;
+  gap: 3px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.manualPaymentList strong,
+.refundList strong {
+  color: #0f172a;
+  font-size: 0.84rem;
+}
+
+.manualPaymentList span,
+.manualPayments > span,
+.refundList span,
+.refunds > span {
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.manualPaymentForm,
+.refundForm {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.4fr) minmax(220px, 1fr) auto;
+  gap: 8px;
+  align-items: end;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 10px;
+}
+
+.manualPaymentForm {
+  grid-template-columns: minmax(110px, 0.36fr) minmax(140px, 0.34fr) minmax(180px, 0.5fr) minmax(220px, 1fr) auto;
+}
+
+.manualPaymentForm label,
+.refundForm label {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.manualPaymentForm label span,
+.refundForm label span {
+  color: #334155;
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.manualPaymentForm input,
+.manualPaymentForm select,
+.manualPaymentForm textarea,
+.refundForm input,
+.refundForm textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 9px 10px;
+  font: inherit;
+}
+
+.manualPaymentForm textarea,
+.refundForm textarea {
+  resize: vertical;
+}
+
+.order[data-commerce-order-payment-status='partially_paid'] .manualPayments {
+  border-color: rgba(14, 116, 144, 0.28);
+  background: #ecfeff;
+}
+
+.order[data-commerce-order-payment-status='partially_refunded'] .refunds {
+  border-color: rgba(217, 119, 6, 0.28);
+  background: #fffbeb;
+}
+
+.order[data-commerce-order-payment-status='refunded'] .refunds {
+  border-color: rgba(37, 99, 235, 0.22);
+  background: #eff6ff;
+}
+
+.order[data-commerce-order-payment-status='failed'],
+.order[data-commerce-order-status='cancelled'] {
+  background: #fff7ed;
+}
+
+.empty {
+  display: grid;
+  gap: 8px;
+  padding: 28px;
+  color: #64748b;
+  text-align: center;
+}
+
+.empty strong {
+  color: #0f172a;
+}
+
+.exportPanel {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.exportPanel h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.exportPanel textarea {
+  resize: vertical;
+}
+
+@media (max-width: 1180px) {
+  .kpis {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .paymentHero,
+  .paymentAnalyticsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar,
+  .order {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px;
+  }
+
+  .header {
+    display: grid;
+    align-items: start;
+  }
+
+  .headerActions {
+    justify-content: flex-start;
+  }
+
+  .headerActions a,
+  .headerActions button {
+    flex: 1 1 130px;
+  }
+
+  .kpis,
+  .controls,
+  .manualPaymentForm,
+  .refundForm {
+    grid-template-columns: 1fr;
+  }
+
+  .paymentHeroStats,
+  .paymentSourceGrid,
+  .paymentCurrencyHeader,
+  .paymentCurrencyTable > div:not(.paymentCurrencyHeader) {
+    grid-template-columns: 1fr;
+  }
+
+  .paymentCurrencyHeader {
+    display: none;
+  }
+
+  .paymentHero strong {
+    font-size: 1.85rem;
+  }
+}

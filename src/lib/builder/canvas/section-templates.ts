@@ -369,11 +369,27 @@ export function getHomeSectionTemplateVariantOptions(
   return targetId ? HOME_SECTION_TEMPLATE_VARIANTS_BY_TARGET[targetId] : HOME_SECTION_TEMPLATE_VARIANTS;
 }
 
+const TARGET_BY_ID = new Map(HOME_SECTION_TEMPLATE_TARGETS.map((target) => [target.id, target]));
 const TARGET_BY_NODE_ID = new Map(HOME_SECTION_TEMPLATE_TARGETS.map((target) => [target.nodeId, target]));
 const SECTION_TEMPLATE_VARIANT_KEYS = new Set<string>(CARD_VARIANT_KEYS);
 
-export function getHomeSectionTemplateTarget(nodeId: string): HomeSectionTemplateTarget | null {
-  return TARGET_BY_NODE_ID.get(nodeId) ?? null;
+export function getHomeSectionTemplateTarget(
+  nodeOrId: string | BuilderCanvasNode,
+): HomeSectionTemplateTarget | null {
+  const nodeId = typeof nodeOrId === 'string' ? nodeOrId : nodeOrId.id;
+  const directTarget = TARGET_BY_NODE_ID.get(nodeId);
+  if (directTarget) return directTarget;
+  const node = typeof nodeOrId === 'string' ? null : nodeOrId;
+  const templateId = node?.kind === 'container' ? node.content.sectionTemplateId : null;
+  if (!templateId) return null;
+  const target = TARGET_BY_ID.get(templateId);
+  if (!target) return null;
+  return {
+    ...target,
+    nodeId,
+    label: `${target.label} AI`,
+    description: `${target.description} AI 생성 섹션에 디자인 풀 변형을 적용합니다.`,
+  };
 }
 
 export function getHomeSectionTemplateVariant(node: BuilderCanvasNode): HomeSectionTemplateVariant {
@@ -384,7 +400,7 @@ export function getHomeSectionTemplateVariant(node: BuilderCanvasNode): HomeSect
 }
 
 export function getHomeSectionTemplateMetadata(node: BuilderCanvasNode): HomeSectionTemplateMetadata | null {
-  const target = getHomeSectionTemplateTarget(node.id);
+  const target = getHomeSectionTemplateTarget(node);
   if (!target) return null;
   return {
     id: target.id,

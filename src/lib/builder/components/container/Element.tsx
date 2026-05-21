@@ -46,7 +46,7 @@ export default function ContainerElement({
 }) {
   const content = node.content;
   const layoutMode = content.layoutMode ?? 'absolute';
-  const { className, as, htmlId, dataTone } = content;
+  const { className, as, htmlId, dataTone, aiSectionTemplateKind } = content;
   const Tag = (as ?? 'div') as keyof JSX.IntrinsicElements;
   const link = sanitizeLinkValue(content.link);
   const interactive = mode === 'published';
@@ -144,6 +144,11 @@ export default function ContainerElement({
         <div className="builder-layout-repeater" data-builder-layout-widget="repeater">
           {layoutItems.map((item, index) => (
             <article key={`${item.title}-${index}`}>
+              {item.image ? (
+                <span className="builder-layout-repeater-image">
+                  <Image src={item.image} alt="" fill sizes="(max-width: 1280px) 33vw, 240px" style={{ objectFit: 'cover' }} />
+                </span>
+              ) : null}
               <strong>{item.title}</strong>
               <p>{item.description}</p>
             </article>
@@ -182,6 +187,7 @@ export default function ContainerElement({
       className,
       ...(htmlId ? { id: htmlId } : {}),
       ...(dataTone ? { 'data-tone': dataTone } : {}),
+      ...(aiSectionTemplateKind ? { 'data-ai-section-template-kind': aiSectionTemplateKind } : {}),
       style: {
         width: '100%',
         height: '100%',
@@ -213,6 +219,7 @@ export default function ContainerElement({
     <Tag
       {...(htmlId ? { id: htmlId } : {})}
       {...(dataTone ? { 'data-tone': dataTone } : {})}
+      {...(aiSectionTemplateKind ? { 'data-ai-section-template-kind': aiSectionTemplateKind } : {})}
       style={{
         width: '100%',
         height: '100%',

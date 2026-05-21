@@ -6,28 +6,13 @@ import {
   sendBookingReminder,
 } from '@/lib/builder/bookings/notifications';
 import type { Booking, BookingReminderType } from '@/lib/builder/bookings/types';
+import { reminderWindowsForService } from '@/lib/builder/bookings/reminders';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-interface ReminderWindow {
-  type: BookingReminderType;
-  hoursAhead: 1 | 24;
-  toleranceMinutes: number;
-}
-
-const WINDOWS: ReminderWindow[] = [
-  { type: 'email-reminder-24h', hoursAhead: 24, toleranceMinutes: 30 },
-  { type: 'email-reminder-1h', hoursAhead: 1, toleranceMinutes: 15 },
-];
-
 function alreadySent(booking: Booking, type: BookingReminderType): boolean {
   return booking.reminders.some((reminder) => reminder.type === type);
-}
-
-function reminderHoursFor(service: Awaited<ReturnType<typeof getService>>): Set<number> {
-  const configured = service?.reminderOffsetsHours?.filter((hours) => hours === 1 || hours === 24);
-  return new Set(configured && configured.length > 0 ? configured : [24]);
 }
 
 async function dispatch(): Promise<{
@@ -59,11 +44,10 @@ async function dispatch(): Promise<{
     }
     const service = await getService(booking.serviceId);
     const staff = await getStaff(booking.staffId);
-    const enabledHours = reminderHoursFor(service);
+    const windows = reminderWindowsForService(service, 'email');
     const minutesToStart = (startMs - now) / 60000;
 
-    for (const win of WINDOWS) {
-      if (!enabledHours.has(win.hoursAhead)) continue;
+    for (const win of windows) {
       if (alreadySent(booking, win.type)) continue;
       const targetMinutes = win.hoursAhead * 60;
       const delta = Math.abs(minutesToStart - targetMinutes);

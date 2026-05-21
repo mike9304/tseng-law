@@ -4,6 +4,8 @@ import { addBookingDuration, isSlotAvailable } from '@/lib/builder/bookings/avai
 import { bookingUpdateSchema } from '@/lib/builder/bookings/types';
 import { getBooking, getService, getStaff, saveBooking, timestamped } from '@/lib/builder/bookings/storage';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
+import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -27,20 +29,43 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   if (!service || !staff) return NextResponse.json({ error: 'Service or staff not found' }, { status: 404 });
 
   const timingChanged = nextStaffId !== existing.staffId || nextStartAt !== existing.startAt;
+  const resourceIds = service.requiredResourceIds ?? [];
+  const nextEndAt = timingChanged ? addBookingDuration(nextStartAt, service.durationMinutes) : existing.endAt;
+  let acquiredSlotKey: { serviceId: string; staffId: string; startAt: string; resourceIds: string[] } | null = null;
   if (timingChanged && parsed.data.status !== 'cancelled') {
-    const available = await isSlotAvailable({
+    const slotKey = {
       serviceId: existing.serviceId,
       staffId: nextStaffId,
       startAt: nextStartAt,
-    });
-    if (!available) return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
+      resourceIds,
+    };
+    if (!acquireSlotLock(slotKey)) {
+      return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
+    }
+    acquiredSlotKey = slotKey;
+    try {
+      const available = await isSlotAvailable({
+        ...slotKey,
+        excludeBookingId: existing.bookingId,
+      });
+      if (!available) {
+        releaseSlotLock(slotKey);
+        acquiredSlotKey = null;
+        return NextResponse.json({ error: 'Selected slot is no longer available' }, { status: 409 });
+      }
+    } catch (error) {
+      releaseSlotLock(slotKey);
+      acquiredSlotKey = null;
+      throw error;
+    }
   }
 
-  const next = timestamped({
+  const nextDraft = timestamped({
     ...existing,
     staffId: nextStaffId,
     startAt: nextStartAt,
-    endAt: timingChanged ? addBookingDuration(nextStartAt, service.durationMinutes) : existing.endAt,
+    endAt: nextEndAt,
+    resourceIds: timingChanged ? resourceIds : existing.resourceIds,
     status: parsed.data.status || existing.status,
     customer: { ...existing.customer, ...parsed.data.customer },
     customerTimezone: parsed.data.customerTimezone ?? existing.customerTimezone,
@@ -49,7 +74,14 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       ? existing.cancelledAt ?? new Date().toISOString()
       : existing.cancelledAt,
   }, existing.createdAt);
-  await saveBooking(next);
+  const next = parsed.data.status === 'cancelled'
+    ? await restorePackageCreditForBooking(nextDraft)
+    : nextDraft;
+  try {
+    await saveBooking(next);
+  } finally {
+    if (acquiredSlotKey) releaseSlotLock(acquiredSlotKey);
+  }
   if (existing.status !== 'cancelled' && next.status === 'cancelled') {
     await sendBookingCancellation(next, { service, staff });
   }

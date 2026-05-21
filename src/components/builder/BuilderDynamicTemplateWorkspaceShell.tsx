@@ -17,19 +17,28 @@ export default function BuilderDynamicTemplateWorkspaceShell({
   detail,
   draft,
   published,
+  initialPreviewRecordId,
 }: {
   locale: Locale;
   overview: BuilderSiteOverview;
   detail: BuilderDynamicTemplateDetail;
   draft: BuilderDynamicTemplateDraftReadResult;
   published: BuilderDynamicTemplateDraftReadResult;
+  initialPreviewRecordId?: string | null;
 }) {
+  const templateStageUrl = buildBuilderDynamicTemplateHref(locale, detail.templateId, {
+    previewRecordId: initialPreviewRecordId,
+  });
+  const routeRegistryHref = buildBuilderDynamicRouteHref(locale, detail.routeId, {
+    previewRecordId: initialPreviewRecordId,
+  });
+
   return (
     <BuilderWorkspaceFrame
       title={`${detail.title} template`}
       description="Dynamic template editor v0. This surface exposes record preview selection and block-level template controls before full canvas editing lands."
       activeRail="pages"
-      stageUrl={buildBuilderDynamicTemplateHref(locale, detail.templateId)}
+      stageUrl={templateStageUrl}
       railItems={[
         { key: 'pages', label: 'Pages', description: 'Workspace inventory', href: `/${locale}/builder`, active: true },
         { key: 'assets', label: 'Assets', description: 'Recent builder media', href: `/${locale}/builder` },
@@ -93,7 +102,7 @@ export default function BuilderDynamicTemplateWorkspaceShell({
               <div>
                 <dt>Route registry</dt>
                 <dd>
-                  <Link href={buildBuilderDynamicRouteHref(locale, detail.routeId)} className="builder-link-inline">
+                  <Link href={routeRegistryHref} className="builder-link-inline">
                     Open route detail
                   </Link>
                 </dd>
@@ -189,6 +198,7 @@ export default function BuilderDynamicTemplateWorkspaceShell({
         draft={draft}
         published={published}
         locale={locale}
+        initialPreviewRecordId={initialPreviewRecordId}
       />
     </BuilderWorkspaceFrame>
   );

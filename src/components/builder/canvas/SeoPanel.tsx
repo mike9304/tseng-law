@@ -156,6 +156,11 @@ interface SeoResponse {
   sitemapIncluded?: boolean;
   validation?: BuilderSeoValidationIssue[];
   redirectCreated?: boolean;
+  redirectWarnings?: Array<{
+    from: string;
+    to: string;
+    message: string;
+  }>;
   error?: string;
 }
 
@@ -323,6 +328,7 @@ export default function SeoPanel({
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [redirectWarning, setRedirectWarning] = useState<string | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const restoreFocusRef = useRef<HTMLElement | null>(null);
   const closingRef = useRef(false);
@@ -352,11 +358,13 @@ export default function SeoPanel({
     if (!pageId) {
       setForm(EMPTY_SEO);
       setError('현재 선택된 페이지가 없습니다.');
+      setRedirectWarning(null);
       return;
     }
 
     setLoading(true);
     setError(null);
+    setRedirectWarning(null);
 
     try {
       const response = await fetch(
@@ -635,6 +643,7 @@ export default function SeoPanel({
 
     setSaving(true);
     setError(null);
+    setRedirectWarning(null);
 
     try {
       const response = await fetch(
@@ -662,6 +671,14 @@ export default function SeoPanel({
       setDefaults(payload.defaults ?? defaults);
       setServerIssues(payload.validation ?? []);
       if (payload.page) onSaved?.(payload.page);
+      if (payload.redirectWarnings?.length) {
+        const warning = payload.redirectWarnings[0];
+        setRedirectWarning(
+          `SEO 메타데이터는 저장됐지만 ${warning.from} redirect는 생성되지 않았습니다. 기존 redirect 규칙을 확인하세요. (${warning.message})`,
+        );
+        setActiveTab('basics');
+        return;
+      }
       closePanel();
     } catch {
       setError('SEO 메타데이터를 저장하지 못했습니다.');
@@ -815,7 +832,23 @@ export default function SeoPanel({
         </div>
 
         <div style={footerStyle}>
-          <span style={{ minHeight: 18, color: '#dc2626', fontSize: '0.78rem' }}>{error ?? ''}</span>
+          <div style={{ display: 'grid', gap: 4, minHeight: 18, minWidth: 0, flex: 1 }}>
+            <span style={{ color: '#dc2626', fontSize: '0.78rem' }}>{error ?? ''}</span>
+            {redirectWarning ? (
+              <span
+                role="status"
+                aria-live="polite"
+                style={{
+                  color: '#92400e',
+                  fontSize: '0.78rem',
+                  lineHeight: 1.4,
+                  overflowWrap: 'anywhere',
+                }}
+              >
+                {redirectWarning}
+              </span>
+            ) : null}
+          </div>
           <div style={{ display: 'flex', gap: 8 }}>
             <button type="button" style={ghostButtonStyle} onClick={closePanel}>
               취소

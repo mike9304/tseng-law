@@ -16,12 +16,14 @@ import SandboxModalsRoot, {
   type ImageEditorRequest,
 } from '@/components/builder/canvas/SandboxModalsRoot';
 import type { SaveSectionPayload } from '@/components/builder/sections/SaveSectionModal';
+import type { BuilderRegisteredAppWidget } from '@/lib/builder/apps/widgets';
 import { insertSavedSection } from '@/lib/builder/sections/insertSection';
 import { getCanvasNodeDescendantIds } from '@/lib/builder/canvas/tree';
 import SandboxTopBar, { type ViewportMode } from '@/components/builder/canvas/SandboxTopBar';
 import GoogleFontsLoader from '@/components/builder/canvas/GoogleFontsLoader';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+import type { BuilderDataBindingPreviewTarget } from '@/lib/builder/datasets';
 import {
   applyComponentDesignPresetToNodes,
   getComponentDesignPreset,
@@ -57,7 +59,9 @@ export default function SandboxPage({
   navItems,
   currentSlug,
   sitePages,
+  datasetPreviewTargets = [],
   siteLightboxes = [],
+  appWidgets = [],
 }: {
   initialDocument: BuilderCanvasDocument;
   locale: Locale;
@@ -69,7 +73,9 @@ export default function SandboxPage({
   navItems?: BuilderNavItem[];
   currentSlug?: string;
   sitePages?: BuilderPageSummary[];
+  datasetPreviewTargets?: BuilderDataBindingPreviewTarget[];
   siteLightboxes?: BuilderLightbox[];
+  appWidgets?: BuilderRegisteredAppWidget[];
 }) {
   const {
     document: canvasDocument,
@@ -506,7 +512,7 @@ export default function SandboxPage({
         display: 'flex',
         flex: '0 0 auto',
         flexDirection: 'column',
-        minHeight: 'max(640px, calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px))',
+        minHeight: 'max(640px, calc(100vh - var(--editor-topbar-h, 56px) - var(--editor-statusbar-h, 28px) - 60px))',
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       }
     : {
@@ -516,7 +522,7 @@ export default function SandboxPage({
         display: 'flex',
         flex: '0 0 auto',
         flexDirection: 'column',
-        minHeight: 'max(640px, calc(100vh - var(--editor-topbar-h, 32px) - var(--editor-statusbar-h, 28px) - 60px))',
+        minHeight: 'max(640px, calc(100vh - var(--editor-topbar-h, 56px) - var(--editor-statusbar-h, 28px) - 60px))',
         transition: 'width 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       };
 
@@ -544,8 +550,12 @@ export default function SandboxPage({
       };
 
   const handleOpenColumnsPanel = useCallback(() => {
-    setActiveDrawer((current) => (current === 'columns' ? null : 'columns'));
-  }, []);
+    const nextDrawer = activeDrawer === 'columns' ? null : 'columns';
+    setActiveDrawer(nextDrawer);
+    if (nextDrawer === 'columns') {
+      void handleOpenColumnsPage(() => setActiveDrawer('pages'));
+    }
+  }, [activeDrawer, handleOpenColumnsPage]);
 
   useEffect(() => {
     if (activeDrawer === 'columns') refreshColumnsPageIfNeeded();
@@ -627,11 +637,18 @@ export default function SandboxPage({
           publicChromePanel={publicChromePanel}
           linkPickerLightboxes={linkPickerLightboxes}
           linkPickerSitePages={linkPickerSitePages}
+          datasetPreviewTargets={datasetPreviewTargets}
+          appWidgets={appWidgets}
           onToggleDrawer={toggleDrawer}
           onOpenColumnsPanel={handleOpenColumnsPanel}
-          onOpenColumnsPage={() => { void handleOpenColumnsPage(() => setActiveDrawer('pages')); }}
+          onOpenColumnsPage={() => {
+            void handleOpenColumnsPage(() => setActiveDrawer('pages')).then((opened) => {
+              if (opened) setActiveDrawer(null);
+            });
+          }}
           onOpenSettings={() => setSettingsOpen(true)}
           onOpenHistory={() => setHistoryOpen(true)}
+          onApplyComponentDesignPreset={handleApplyComponentDesignPreset}
           onSetActiveDrawer={setActiveDrawer}
           onSelectPage={handleSelectPage}
           onPagesChange={handlePagesChange}
@@ -640,7 +657,10 @@ export default function SandboxPage({
           onNavAddChildHandled={() => setAddNavChildParentId(null)}
           onSelectNode={setSelectedNodeId}
           onUpdateNodeContent={updateNodeContent}
-          onHeaderNavigate={handleHeaderNavigate}
+          onHeaderNavigate={(href) => {
+            setActiveDrawer(null);
+            handleHeaderNavigate(href);
+          }}
           onRequestEditNavItem={handleRequestEditNavItem}
           onRequestAddNavChild={handleRequestAddNavChild}
           onFooterLinkActivation={handleEditorFooterLinkActivation}

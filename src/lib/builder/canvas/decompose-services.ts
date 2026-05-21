@@ -10,7 +10,7 @@ import {
   createHomeTextNode,
 } from './decompose-home-shared';
 
-const SERVICES_ROOT_HEIGHT = 1400;
+const SERVICES_ROOT_HEIGHT = 1520;
 const RELATED_COLUMN_LINK_WIDTH = 220;
 const RELATED_COLUMN_LINK_GAP_X = 24;
 const RELATED_COLUMN_LINK_ROW_HEIGHT = 34;

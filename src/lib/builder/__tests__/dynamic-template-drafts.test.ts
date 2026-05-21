@@ -5,6 +5,7 @@ import {
   isBuilderDynamicTemplateBlockVisible,
   normalizeBuilderDynamicTemplateDraftState,
 } from '@/lib/builder/dynamic-template-drafts';
+import { readBuilderCollectionRecordPreviews } from '@/lib/builder/cms';
 import { readBuilderDynamicTemplateDetail } from '@/lib/builder/dynamic-templates';
 
 describe('builder dynamic template drafts', () => {
@@ -40,6 +41,32 @@ describe('builder dynamic template drafts', () => {
       version: 1,
       visibleBlockIds: ['columns.list.seo', 'columns.list.hero'],
       selectedRecordId: detail.previewRecords[0]?.recordId ?? null,
+    });
+  });
+
+  it('preserves a valid selected item record outside the default template sample window', () => {
+    const allRecords = readBuilderCollectionRecordPreviews('columns', 'ko');
+    expect(allRecords.length).toBeGreaterThan(6);
+
+    const requestedRecord = allRecords[6];
+    if (!requestedRecord) {
+      throw new Error('Expected columns collection to provide at least seven preview records.');
+    }
+
+    const detail = readBuilderDynamicTemplateDetail(
+      'columns.item-template',
+      'ko',
+      requestedRecord.recordId
+    );
+
+    expect(
+      normalizeBuilderDynamicTemplateDraftState(detail, {
+        version: 1,
+        visibleBlockIds: detail.editableBlocks.map((block) => block.blockId),
+        selectedRecordId: requestedRecord.recordId,
+      })
+    ).toMatchObject({
+      selectedRecordId: requestedRecord.recordId,
     });
   });
 

@@ -27,7 +27,7 @@ export interface DraftConflict {
 }
 
 interface DraftResponseBody {
-  draft?: DraftMeta;
+  draft?: DraftMeta | null;
   document?: BuilderCanvasDocument;
   snapshot?: { document?: BuilderCanvasDocument };
 }
@@ -273,7 +273,6 @@ export function useSandboxSiteState({
           setDraftConflict({ revision: draftMeta?.revision ?? 0 });
         }
         setDraftSaveState('error');
-        pushToast('Draft conflict — 다른 탭에서 저장됨', 'error');
         return false;
       }
 
@@ -348,10 +347,12 @@ export function useSandboxSiteState({
 
   const handleLocaleChange = useCallback(async (newLocale: Locale, linkedPageId: string | null) => {
     if (linkedPageId) {
+      activePageIdRef.current = linkedPageId;
+      localeRef.current = newLocale;
+      setActivePageId(linkedPageId);
       try {
         const loaded = await loadDraft(linkedPageId, newLocale);
         if (loaded) {
-          setActivePageId(linkedPageId);
           pushToast(`Switched to ${newLocale}`, 'success');
         }
       } catch {
@@ -365,6 +366,9 @@ export function useSandboxSiteState({
   }, [loadDraft, pushToast]);
 
   const handleSelectPage = useCallback(async (pageId: string, nextSlug?: string) => {
+    const previousPageId = activePageIdRef.current;
+    const previousSlug = currentSlugState;
+    activePageIdRef.current = pageId;
     setActivePageId(pageId);
     if (typeof nextSlug === 'string') {
       setCurrentSlugState(nextSlug);
@@ -374,13 +378,31 @@ export function useSandboxSiteState({
     }
     try {
       const loaded = await loadDraft(pageId, locale);
-      if (loaded) pushToast(`Loaded page: ${pageId}`, 'success');
+      if (loaded) {
+        pushToast(`Loaded page: ${pageId}`, 'success');
+        return true;
+      }
+      if (activePageIdRef.current === pageId) {
+        activePageIdRef.current = previousPageId;
+        setActivePageId(previousPageId);
+        setCurrentSlugState(previousSlug);
+      }
+      pushToast('페이지 draft를 불러오지 못했습니다. Pages에서 페이지 상태를 확인해주세요.', 'error', {
+        ttlMs: 8000,
+      });
+      return false;
     } catch {
+      if (activePageIdRef.current === pageId) {
+        activePageIdRef.current = previousPageId;
+        setActivePageId(previousPageId);
+        setCurrentSlugState(previousSlug);
+      }
       pushToast(NETWORK_ERROR_MESSAGE, 'error', {
         ttlMs: 8000,
       });
+      return false;
     }
-  }, [loadDraft, locale, pushToast, sitePagesState]);
+  }, [currentSlugState, loadDraft, locale, pushToast, sitePagesState]);
 
   const handlePagesChange = useCallback((pages: BuilderPageSummary[]) => {
     setSitePagesState(pages.map((page) => ({
@@ -405,19 +427,34 @@ export function useSandboxSiteState({
   const handleHeaderNavigate = useCallback((href: string) => {
     const normalizedHref = normalizeSiteHref(href, locale);
     const targetPath = comparableSitePath(normalizedHref, locale);
-    const targetPage = sitePagesState.find((page) => {
+    const findTargetPage = (pages: typeof sitePagesState) => pages.find((page) => {
       const pagePath = buildSitePagePath(locale, page.isHomePage ? '' : page.slug);
       return comparableSitePath(pagePath, locale) === targetPath;
     });
+    const targetPage = findTargetPage(sitePagesState);
 
     if (targetPage) {
       void handleSelectPage(targetPage.pageId, targetPage.slug);
       return;
     }
 
-    onMissingHeaderPage?.();
-    pushToast(`No builder page for ${normalizedHref}`, 'error');
-  }, [handleSelectPage, locale, onMissingHeaderPage, pushToast, sitePagesState]);
+    void refreshSitePages()
+      .then((pages) => {
+        const refreshedTargetPage = findTargetPage(pages);
+        if (refreshedTargetPage) {
+          void handleSelectPage(refreshedTargetPage.pageId, refreshedTargetPage.slug);
+          return;
+        }
+        onMissingHeaderPage?.();
+        pushToast(`No builder page for ${normalizedHref}`, 'error');
+      })
+      .catch(() => {
+        onMissingHeaderPage?.();
+        pushToast(NETWORK_ERROR_MESSAGE, 'error', {
+          ttlMs: 8000,
+        });
+      });
+  }, [handleSelectPage, locale, onMissingHeaderPage, pushToast, refreshSitePages, sitePagesState]);
 
   const headerNavItems = useMemo<BuilderNavItem[]>(() => {
     const hasColumns = navItemsState.some((item) => (
@@ -476,12 +513,12 @@ export function useSandboxSiteState({
     }
 
     if (targetPage) {
-      await handleSelectPage(targetPage.pageId, targetPage.slug);
-      return;
+      return await handleSelectPage(targetPage.pageId, targetPage.slug);
     }
 
     openPagesDrawer();
     pushToast('Columns page not found. Open Pages to create or restore it.', 'error');
+    return false;
   }, [columnsPage, handleSelectPage, pushToast, refreshSitePages]);
 
   const handleReloadDraftAfterConflict = useCallback(async () => {

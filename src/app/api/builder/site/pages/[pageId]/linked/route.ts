@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { locales, normalizeLocale, type Locale } from '@/lib/locales';
-import { guardMutation } from '@/lib/builder/security/guard';
+import { guardBuilderRead } from '@/lib/builder/security/guard';
 import { readSiteDocument } from '@/lib/builder/site/persistence';
 
 export const runtime = 'nodejs';
@@ -17,7 +17,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { pageId: string } },
 ) {
-  const auth = await guardMutation(request, { permission: 'edit-pages' });
+  const auth = guardBuilderRead(request);
   if (auth instanceof NextResponse) return auth;
 
   try {

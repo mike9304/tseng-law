@@ -1,6 +1,8 @@
 import type { Locale } from '@/lib/locales';
 
-export type SearchDocKind = 'page' | 'blog' | 'faq';
+export const SEARCH_DOC_KINDS = ['page', 'blog', 'faq', 'portfolio'] as const;
+
+export type SearchDocKind = (typeof SEARCH_DOC_KINDS)[number];
 
 export interface SearchDoc {
   /** Stable id across rebuilds (e.g. `${kind}:${slug}`). */

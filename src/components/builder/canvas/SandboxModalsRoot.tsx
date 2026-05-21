@@ -137,6 +137,7 @@ export default function SandboxModalsRoot({
       {imageEditorNode?.kind === 'image' ? (
         <ImageEditDialog
           open
+          locale={locale}
           imageSrc={String(imageEditorNode.content.src || '')}
           alt={String(imageEditorNode.content.alt || '')}
           cropAspect={typeof imageEditorNode.content.cropAspect === 'string' ? imageEditorNode.content.cropAspect : 'Free'}

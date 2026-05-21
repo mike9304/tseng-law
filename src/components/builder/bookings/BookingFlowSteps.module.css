@@ -127,6 +127,9 @@
   color: var(--builder-widget-accent);
   cursor: pointer;
   font-weight: 900;
+  line-height: 1.25;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .slot[data-active='true'] {

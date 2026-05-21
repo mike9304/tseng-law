@@ -112,6 +112,7 @@ export default function BookingStaffAdmin({
         {staff.map((member) => (
           <article className={styles.card} key={member.staffId}>
             <div className={styles.cardImage}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               {member.photo ? <img src={member.photo} alt="" style={{ width: 96, height: 96, borderRadius: '50%', objectFit: 'cover' }} /> : textForLocale(member.name, locale).slice(0, 2)}
             </div>
             <div className={styles.cardBody}>

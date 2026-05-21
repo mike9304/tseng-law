@@ -5,6 +5,9 @@ import type {
   Booking,
   BookingEmailTemplate,
   BookingEmailTemplateType,
+  BookingPackage,
+  BookingPackageCredit,
+  BookingResource,
   BookingService,
   BookingWaitlistEntry,
   BookingWaitlistStatus,
@@ -17,7 +20,16 @@ import { createLocalizedText, dayOfWeeks } from '@/lib/builder/bookings/types';
 const BOOKINGS_ROOT = path.join(process.cwd(), 'runtime-data', 'builder-bookings');
 const BLOB_PREFIX = 'builder-bookings/';
 
-type Collection = 'services' | 'staff' | 'availability' | 'bookings' | 'waitlist' | 'email-templates';
+type Collection =
+  | 'services'
+  | 'staff'
+  | 'availability'
+  | 'bookings'
+  | 'waitlist'
+  | 'email-templates'
+  | 'resources'
+  | 'packages'
+  | 'package-credits';
 type BookingBackend = 'blob' | 'file';
 
 function getBackend(): BookingBackend {
@@ -138,8 +150,10 @@ function seedServices(timestamp: string): BookingService[] {
       image: '',
       category: 'consultation',
       staffIds: ['staff-tseng', 'staff-lee'],
+      requiredResourceIds: ['res-consultation-room'],
       bufferBeforeMinutes: 0,
       bufferAfterMinutes: 15,
+      maxParticipants: 1,
       slotStepMinutes: 30,
       isActive: true,
       paymentMode: 'free',
@@ -161,8 +175,10 @@ function seedServices(timestamp: string): BookingService[] {
       image: '',
       category: 'consultation',
       staffIds: ['staff-tseng', 'staff-lee', 'staff-park'],
+      requiredResourceIds: ['res-consultation-room'],
       bufferBeforeMinutes: 0,
       bufferAfterMinutes: 15,
+      maxParticipants: 1,
       slotStepMinutes: 30,
       isActive: true,
       paymentMode: 'free',
@@ -184,12 +200,59 @@ function seedServices(timestamp: string): BookingService[] {
       image: '',
       category: 'consultation',
       staffIds: ['staff-tseng', 'staff-park'],
+      requiredResourceIds: ['res-conference-room'],
       bufferBeforeMinutes: 15,
       bufferAfterMinutes: 15,
+      maxParticipants: 1,
       slotStepMinutes: 30,
       isActive: true,
       paymentMode: 'free',
       priceCurrency: 'TWD',
+      createdAt: timestamp,
+      updatedAt: timestamp,
+    },
+  ];
+}
+
+function seedResources(timestamp: string): BookingResource[] {
+  return [
+    {
+      resourceId: 'res-consultation-room',
+      name: createLocalizedText('상담실'),
+      description: createLocalizedText('일반 상담과 화상 상담에 사용하는 기본 예약 공간입니다.'),
+      location: 'Taipei Office',
+      capacity: 4,
+      blockedDates: [],
+      isActive: true,
+      createdAt: timestamp,
+      updatedAt: timestamp,
+    },
+    {
+      resourceId: 'res-conference-room',
+      name: createLocalizedText('회의실'),
+      description: createLocalizedText('여러 참석자가 있는 방문 상담과 문서 검토 미팅에 사용하는 회의실입니다.'),
+      location: 'Taipei Office',
+      capacity: 8,
+      blockedDates: [],
+      isActive: true,
+      createdAt: timestamp,
+      updatedAt: timestamp,
+    },
+  ];
+}
+
+function seedPackages(timestamp: string): BookingPackage[] {
+  return [
+    {
+      packageId: 'pkg-consultation-3',
+      name: createLocalizedText('상담 3회 패키지'),
+      description: createLocalizedText('결제형 상담 서비스에 사용할 수 있는 3회 세션권입니다.'),
+      eligibleServiceIds: ['svc-initial-consultation', 'svc-deep-consultation'],
+      credits: 3,
+      validityDays: 180,
+      priceAmount: 15000,
+      priceCurrency: 'TWD',
+      isActive: true,
       createdAt: timestamp,
       updatedAt: timestamp,
     },
@@ -239,19 +302,25 @@ function seedStaff(timestamp: string): Staff[] {
 }
 
 async function ensureSeedData(): Promise<void> {
-  const [services, staff] = await Promise.all([
+  const [services, staff, resources, packages] = await Promise.all([
     listJson<BookingService>('services'),
     listJson<Staff>('staff'),
+    listJson<BookingResource>('resources'),
+    listJson<BookingPackage>('packages'),
   ]);
-  if (services.length > 0 && staff.length > 0) return;
+  if (services.length > 0 && staff.length > 0 && resources.length > 0 && packages.length > 0) return;
 
   const timestamp = nowIso();
   const nextServices = services.length > 0 ? services : seedServices(timestamp);
   const nextStaff = staff.length > 0 ? staff : seedStaff(timestamp);
+  const nextResources = resources.length > 0 ? resources : seedResources(timestamp);
+  const nextPackages = packages.length > 0 ? packages : seedPackages(timestamp);
 
   await Promise.all([
     ...nextServices.map((service) => writeJson('services', service.serviceId, service)),
     ...nextStaff.map((member) => writeJson('staff', member.staffId, member)),
+    ...nextResources.map((resource) => writeJson('resources', resource.resourceId, resource)),
+    ...nextPackages.map((pkg) => writeJson('packages', pkg.packageId, pkg)),
     ...nextStaff.map((member) => writeJson('availability', member.staffId, {
       staffId: member.staffId,
       weekly: weeklyDefaults(),
@@ -277,6 +346,18 @@ export function makeServiceId(): string {
 
 export function makeStaffId(): string {
   return `staff-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
+}
+
+export function makeResourceId(): string {
+  return `res-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
+}
+
+export function makePackageId(): string {
+  return `pkg-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
+}
+
+export function makePackageCreditId(): string {
+  return `pc-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
 }
 
 export function slugify(input: string): string {
@@ -319,6 +400,77 @@ export async function getStaff(staffId: string): Promise<Staff | null> {
 
 export async function saveStaff(staff: Staff): Promise<void> {
   await writeJson('staff', staff.staffId, staff);
+}
+
+export async function listResources(includeInactive = false): Promise<BookingResource[]> {
+  await ensureSeedData();
+  const resources = await listJson<BookingResource>('resources');
+  return resources
+    .filter((resource) => includeInactive || resource.isActive)
+    .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+}
+
+export async function getResource(resourceId: string): Promise<BookingResource | null> {
+  await ensureSeedData();
+  return readJson<BookingResource>('resources', resourceId);
+}
+
+export async function saveResource(resource: BookingResource): Promise<void> {
+  await writeJson('resources', resource.resourceId, resource);
+}
+
+export async function listPackages(includeInactive = false): Promise<BookingPackage[]> {
+  await ensureSeedData();
+  const packages = await listJson<BookingPackage>('packages');
+  return packages
+    .filter((pkg) => includeInactive || pkg.isActive)
+    .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+}
+
+export async function getPackage(packageId: string): Promise<BookingPackage | null> {
+  await ensureSeedData();
+  return readJson<BookingPackage>('packages', packageId);
+}
+
+export async function savePackage(pkg: BookingPackage): Promise<void> {
+  await writeJson('packages', pkg.packageId, pkg);
+}
+
+function normalizeEmail(email: string): string {
+  return email.trim().toLowerCase();
+}
+
+export async function listPackageCredits(options: {
+  customerEmail?: string;
+  packageId?: string;
+  status?: BookingPackageCredit['status'];
+  includeInactive?: boolean;
+} = {}): Promise<BookingPackageCredit[]> {
+  await ensureSeedData();
+  const credits = await listJson<BookingPackageCredit>('package-credits');
+  const customerEmail = options.customerEmail ? normalizeEmail(options.customerEmail) : null;
+  return credits
+    .filter((credit) => !customerEmail || normalizeEmail(credit.customerEmail) === customerEmail)
+    .filter((credit) => !options.packageId || credit.packageId === options.packageId)
+    .filter((credit) => !options.status || credit.status === options.status)
+    .filter((credit) => options.includeInactive || credit.status === 'active')
+    .sort((a, b) => {
+      const aExpiry = a.expiresAt || '9999-12-31T23:59:59.999Z';
+      const bExpiry = b.expiresAt || '9999-12-31T23:59:59.999Z';
+      return aExpiry.localeCompare(bExpiry) || a.createdAt.localeCompare(b.createdAt);
+    });
+}
+
+export async function getPackageCredit(creditId: string): Promise<BookingPackageCredit | null> {
+  await ensureSeedData();
+  return readJson<BookingPackageCredit>('package-credits', creditId);
+}
+
+export async function savePackageCredit(credit: BookingPackageCredit): Promise<void> {
+  await writeJson('package-credits', credit.creditId, {
+    ...credit,
+    customerEmail: normalizeEmail(credit.customerEmail),
+  });
 }
 
 export async function getStaffAvailability(staffId: string): Promise<StaffAvailability> {

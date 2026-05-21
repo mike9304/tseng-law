@@ -38,8 +38,9 @@ const SHORTCUT_ACTIONS: ShortcutAction[] = [
 
 export default function ShortcutsHelpModal({ onClose }: { onClose: () => void }) {
   const shortcutLabels = useShortcutLabels(SHORTCUT_ACTIONS);
-  const shortcut = (action: ShortcutAction, fallback = '') => shortcutLabels.get(action)?.glyph || fallback;
-  const groups: ShortcutGroup[] = useMemo(() => [
+  const groups: ShortcutGroup[] = useMemo(() => {
+    const shortcut = (action: ShortcutAction, fallback = '') => shortcutLabels.get(action)?.glyph || fallback;
+    return [
     {
       title: '편집',
       items: [
@@ -95,7 +96,8 @@ export default function ShortcutsHelpModal({ onClose }: { onClose: () => void })
         { keys: `${shortcut('showHelp')} 또는 ?`, description: '이 도움말 열기/닫기' },
       ],
     },
-  ], [shortcutLabels]);
+  ];
+  }, [shortcutLabels]);
 
   return (
     <ModalShell

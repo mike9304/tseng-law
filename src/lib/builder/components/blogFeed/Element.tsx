@@ -4,11 +4,13 @@ import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import type { BuilderBlogFeedCanvasNode } from '@/lib/builder/canvas/types';
 import type { BlogPost } from '@/lib/builder/blog/blog-engine';
 import { DEFAULT_BLOG_CATEGORIES, filterPosts, sortPosts } from '@/lib/builder/blog/blog-engine';
+import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from './BlogFeed.module.css';
 
 interface BlogFeedElementProps {
   node: BuilderBlogFeedCanvasNode;
   mode?: 'edit' | 'preview' | 'published';
+  locale?: Locale;
 }
 
 type BlogFeedLayout = BuilderBlogFeedCanvasNode['content']['layout'];
@@ -48,7 +50,7 @@ const MOCK_POSTS: BlogPost[] = [
     excerpt: '외국인이 대만에서 법인을 설립하는 절차와 필요한 서류를 알아봅니다.',
     bodyHtml: '',
     bodyMarkdown: '',
-    category: 'company-setup',
+    category: 'company-formation',
     tags: ['외투'],
     readingTimeMinutes: 6,
     featured: true,
@@ -80,7 +82,7 @@ const MOCK_POSTS: BlogPost[] = [
     excerpt: '연차/퇴직금/시간외 수당 등 외국인 근로자가 알아야 할 사항.',
     bodyHtml: '',
     bodyMarkdown: '',
-    category: 'labor',
+    category: 'labor-law',
     tags: ['연차'],
     readingTimeMinutes: 7,
     featured: false,
@@ -112,7 +114,7 @@ const MOCK_POSTS: BlogPost[] = [
     excerpt: '경찰 조사부터 검찰 송치, 공판까지의 변호인 역할.',
     bodyHtml: '',
     bodyMarkdown: '',
-    category: 'criminal',
+    category: 'criminal-law',
     tags: [],
     readingTimeMinutes: 3,
     featured: false,
@@ -185,7 +187,7 @@ function layoutClass(layout: BlogFeedLayout): string {
   }
 }
 
-function toFeedItem(post: BlogPost, isBuilder: boolean): FeedItem {
+function toFeedItem(post: BlogPost, isBuilder: boolean, locale: Locale): FeedItem {
   return {
     postId: post.postId,
     slug: post.slug,
@@ -198,7 +200,7 @@ function toFeedItem(post: BlogPost, isBuilder: boolean): FeedItem {
     featuredImage: post.featuredImage,
     authorName: post.author?.name ?? '',
     date: fmtDate(post.publishedAt ?? post.updatedAt),
-    href: isBuilder ? `#${post.slug}` : `/${post.locale}/columns/${post.slug}`,
+    href: isBuilder ? `#${post.slug}` : `/${locale}/columns/${post.slug}`,
   };
 }
 
@@ -211,9 +213,10 @@ function getMockPosts(content: BuilderBlogFeedCanvasNode['content'], postsPerPag
   return sortPosts(filtered, content.sortBy).slice(0, postsPerPage);
 }
 
-export default function BlogFeedElement({ node, mode = 'edit' }: BlogFeedElementProps) {
+export default function BlogFeedElement({ node, mode = 'edit', locale }: BlogFeedElementProps) {
   const c = node.content;
   const isBuilder = mode !== 'published';
+  const effectiveLocale = normalizeLocale(locale || 'ko');
   const [posts, setPosts] = useState<BlogPost[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -230,7 +233,7 @@ export default function BlogFeedElement({ node, mode = 'edit' }: BlogFeedElement
     setError(null);
 
     const params = new URLSearchParams();
-    params.set('locale', 'ko');
+    params.set('locale', effectiveLocale);
     params.set('sort', c.sortBy);
     params.set('limit', String(postsPerPage));
     params.set('scope', isBuilder ? 'all' : 'public');
@@ -255,12 +258,12 @@ export default function BlogFeedElement({ node, mode = 'edit' }: BlogFeedElement
     return () => {
       cancelled = true;
     };
-  }, [isBuilder, c.sortBy, c.filterByCategory, c.filterByTag, postsPerPage]);
+  }, [effectiveLocale, isBuilder, c.sortBy, c.filterByCategory, c.filterByTag, postsPerPage]);
 
   const items = useMemo(() => {
     const source = posts ?? (isBuilder ? getMockPosts(c, postsPerPage) : []);
-    return source.slice(0, postsPerPage).map((post) => toFeedItem(post, isBuilder));
-  }, [c, isBuilder, posts, postsPerPage]);
+    return source.slice(0, postsPerPage).map((post) => toFeedItem(post, isBuilder, effectiveLocale));
+  }, [c, effectiveLocale, isBuilder, posts, postsPerPage]);
 
   const rootStyle: FeedRootStyle = {
     '--blog-feed-columns': String(columns),
@@ -293,6 +296,7 @@ export default function BlogFeedElement({ node, mode = 'edit' }: BlogFeedElement
 
   return (
     <div
+      data-builder-blog-feed="true"
       className={[
         styles.feedRoot,
         layoutClass(layout),

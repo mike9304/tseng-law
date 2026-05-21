@@ -510,9 +510,9 @@ export default function PublishModal({
     <ModalShell
       open={open}
       onClose={onClose}
-      title="Publish Page"
+      title="페이지 발행"
       subtitle={activePageId ? `revision ${draftMeta?.revision ?? 0} 기준 발행 예정` : undefined}
-      size="md"
+      size="lg"
     >
 
           {publishState === 'checking' && (
@@ -524,11 +524,15 @@ export default function PublishModal({
           {publishState !== 'checking' && suite && (
             <>
               <p style={sectionTitleStyle}>
-                Automatic preflight checklist
+                자동 사전 검사
               </p>
               <div style={checklistGridStyle}>
                 {preflightItems.map((item) => (
-                  <div key={item.key} style={checklistCardStyle(item.tone)}>
+                  <div
+                    key={item.key}
+                    style={checklistCardStyle(item.tone)}
+                    data-builder-publish-preflight-item={item.key}
+                  >
                     <div style={checklistLabelStyle}>
                       <span>{item.label}</span>
                       <span style={checklistStatusStyle}>{itemStatus(item)}</span>
@@ -541,7 +545,7 @@ export default function PublishModal({
               {activePageId ? (
                 <div style={publishDiffPanelStyle}>
                   <div style={checklistLabelStyle}>
-                    <span>Draft vs published</span>
+                    <span>초안 vs 발행본</span>
                     <span style={checklistStatusStyle}>
                       {publishDiff.status === 'ready'
                         ? formatDocumentDiffSummary(publishDiff.summary)
@@ -596,7 +600,7 @@ export default function PublishModal({
               {grouped.blockers.length > 0 && (
                 <>
                   <p style={{ ...sectionTitleStyle, color: '#991b1b' }}>
-                    Blocker ({grouped.blockers.length}) — 발행 차단
+                    차단 오류 ({grouped.blockers.length}) — 발행 불가
                   </p>
                   <ul style={listStyle}>
                     {grouped.blockers.map((r) => (
@@ -609,7 +613,7 @@ export default function PublishModal({
               {grouped.warnings.length > 0 && (
                 <>
                   <p style={{ ...sectionTitleStyle, color: '#92400e' }}>
-                    Warning ({grouped.warnings.length})
+                    경고 ({grouped.warnings.length})
                   </p>
                   <ul style={listStyle}>
                     {grouped.warnings.map((r) => (
@@ -622,7 +626,7 @@ export default function PublishModal({
               {grouped.infos.length > 0 && (
                 <>
                   <p style={{ ...sectionTitleStyle, color: '#1e40af' }}>
-                    Info ({grouped.infos.length})
+                    안내 ({grouped.infos.length})
                   </p>
                   <ul style={listStyle}>
                     {grouped.infos.map((r) => (

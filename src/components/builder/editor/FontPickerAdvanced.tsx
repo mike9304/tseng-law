@@ -186,6 +186,7 @@ export default function FontPickerAdvanced({
     const panel = panelRef.current;
     if (!panel) return undefined;
 
+    const trigger = triggerRef.current;
     const focusFrame = window.requestAnimationFrame(() => {
       (searchInputRef.current ?? getFocusableElements(panel)[0] ?? panel).focus({ preventScroll: true });
     });
@@ -200,7 +201,7 @@ export default function FontPickerAdvanced({
       document.removeEventListener('focusin', handleFocusIn);
       if (!closingRef.current) return;
       window.setTimeout(() => {
-        if (triggerRef.current?.isConnected) triggerRef.current.focus({ preventScroll: true });
+        if (trigger?.isConnected) trigger.focus({ preventScroll: true });
         closingRef.current = false;
       }, 0);
     };

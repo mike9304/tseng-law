@@ -7,17 +7,38 @@ import { usePathname } from 'next/navigation';
 import { siteContent } from '@/data/site-content';
 import type { Locale } from '@/lib/locales';
 import { buildLocalePath } from '@/lib/path-utils';
+import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
+
+type MemberNavState = {
+  status: 'loading' | 'signed-out' | 'signed-in';
+  member?: PublicSiteMember;
+};
+
+type MemberLabels = {
+  login: string;
+  account: string;
+  premium: string;
+  logout: string;
+};
 
 export default function MobileNavDrawer({
   open,
   onClose,
   locale,
-  onSearch
+  onSearch,
+  memberNav,
+  memberLabels,
+  memberLoginHref,
+  onMemberLogout
 }: {
   open: boolean;
   onClose: () => void;
   locale: Locale;
   onSearch: () => void;
+  memberNav?: MemberNavState;
+  memberLabels?: MemberLabels;
+  memberLoginHref?: string;
+  onMemberLogout?: () => void | Promise<void>;
 }) {
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
@@ -97,6 +118,16 @@ export default function MobileNavDrawer({
   const drawerLabel = locale === 'ko' ? '모바일 메뉴' : locale === 'zh-hant' ? '行動選單' : 'Mobile menu';
   const brandText = locale === 'ko' ? '법무법인 호정' : locale === 'zh-hant' ? '昊鼎國際法律事務所' : 'Hovering International Law Firm';
   const brandLogo = locale === 'zh-hant' ? '/images/brand/hovering-logo-zh.png' : '/images/brand/hovering-logo-ko.png';
+  const labels =
+    memberLabels ??
+    (locale === 'ko'
+      ? { login: '로그인', account: '내 계정', premium: '프리미엄', logout: '로그아웃' }
+      : locale === 'zh-hant'
+        ? { login: '登入', account: '我的帳戶', premium: '進階內容', logout: '登出' }
+        : { login: 'Log in', account: 'My account', premium: 'Premium', logout: 'Log out' });
+  const memberState = memberNav ?? { status: 'signed-out' };
+  const loginHref = memberLoginHref ?? `/${locale}/login?next=${encodeURIComponent(current || `/${locale}/account`)}`;
+  const canSeePremium = memberState.member?.role === 'premium' || memberState.member?.role === 'admin';
 
   return (
     <div
@@ -143,6 +174,34 @@ export default function MobileNavDrawer({
           ))}
         </nav>
         <div className="drawer-footer">
+          <div className="utility-member-nav drawer-member-nav" data-member-nav-state={memberState.status}>
+            {memberState.status === 'signed-in' ? (
+              <>
+                <Link href={`/${locale}/account`} data-member-role-link="account" onClick={onClose}>
+                  {labels.account}
+                </Link>
+                {canSeePremium ? (
+                  <Link href={`/${locale}/account/premium`} data-member-role-link="premium" onClick={onClose}>
+                    {labels.premium}
+                  </Link>
+                ) : null}
+                <button
+                  type="button"
+                  data-member-role-link="logout"
+                  onClick={() => {
+                    void onMemberLogout?.();
+                    onClose();
+                  }}
+                >
+                  {labels.logout}
+                </button>
+              </>
+            ) : (
+              <Link href={loginHref} data-member-role-link="login" onClick={onClose}>
+                {labels.login}
+              </Link>
+            )}
+          </div>
           <Link href={content.nav.cta.href} className="button" onClick={onClose}>
             {content.nav.cta.label}
           </Link>

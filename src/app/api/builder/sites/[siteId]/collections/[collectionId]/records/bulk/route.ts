@@ -14,6 +14,7 @@ type BulkRecordPayload = {
   action?: unknown;
   recordIds?: unknown;
   status?: unknown;
+  moderationReason?: unknown;
 };
 
 export async function POST(
@@ -61,6 +62,7 @@ export async function POST(
       params.collectionId,
       payload.recordIds,
       status,
+      payload.moderationReason,
       routeActor,
     );
     if (!result) {

@@ -7,6 +7,7 @@ import SandboxCatalogPanel from '@/components/builder/canvas/SandboxCatalogPanel
 import SandboxLayersPanel from '@/components/builder/canvas/SandboxLayersPanel';
 import ComponentLibraryPanel from '@/components/builder/canvas/ComponentLibraryPanel';
 import UndoStackTimeline from '@/components/builder/canvas/UndoStackTimeline';
+import type { BuilderRegisteredAppWidget } from '@/lib/builder/apps/widgets';
 import type { BuilderCanvasDocument, BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { getCanvasNodesById } from '@/lib/builder/canvas/indexes';
 import {
@@ -18,6 +19,10 @@ import {
   type HomeSectionTemplateId,
 } from '@/lib/builder/canvas/section-templates';
 import { getAllTemplates } from '@/lib/builder/templates/registry';
+import {
+  COMPONENT_DESIGN_PRESETS,
+  type ComponentDesignPresetKey,
+} from '@/lib/builder/site/component-design-presets';
 import type { BuilderNavItem } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
 import styles from './SandboxPage.module.css';
@@ -53,12 +58,15 @@ type SandboxEditorRailProps = {
   selectedNode: BuilderCanvasNode | null;
   focusedNavItemId: string | null;
   addNavChildParentId: string | null;
+  appWidgets?: BuilderRegisteredAppWidget[];
   onToggleDrawer: (panel: SandboxDrawerPanel) => void;
   onOpenColumnsPanel: () => void;
   onOpenColumnsPage: () => void;
+  onCloseDrawer: () => void;
   onOpenSettings: () => void;
   onOpenHistory: () => void;
-  onSelectPage: (pageId: string, nextSlug?: string) => void | Promise<void>;
+  onApplyComponentDesignPreset: (presetKey: ComponentDesignPresetKey) => void;
+  onSelectPage: (pageId: string, nextSlug?: string) => boolean | void | Promise<boolean | void>;
   onPagesChange: (pages: BuilderPageSummary[]) => void;
   onNavigationChange: (items: BuilderNavItem[]) => void;
   onNavFocusHandled: () => void;
@@ -79,11 +87,14 @@ export default function SandboxEditorRail({
   selectedNode,
   focusedNavItemId,
   addNavChildParentId,
+  appWidgets = [],
   onToggleDrawer,
   onOpenColumnsPanel,
   onOpenColumnsPage,
+  onCloseDrawer,
   onOpenSettings,
   onOpenHistory,
+  onApplyComponentDesignPreset,
   onSelectPage,
   onPagesChange,
   onNavigationChange,
@@ -96,6 +107,11 @@ export default function SandboxEditorRail({
   const [focusedSectionTemplateId, setFocusedSectionTemplateId] = useState<HomeSectionTemplateId | null>(null);
   const [pageTemplateGalleryRequest, setPageTemplateGalleryRequest] = useState({ id: 0, query: '' });
   const pageTemplateCount = useMemo(() => getAllTemplates().length, []);
+  const selectPageAndClose = (pageId: string, nextSlug?: string) => {
+    void Promise.resolve(onSelectPage(pageId, nextSlug)).then((loaded) => {
+      if (loaded !== false) onCloseDrawer();
+    });
+  };
   const openPageTemplateGallery = (query?: string) => {
     const normalizedQuery = (query ?? '').trim();
     setPageTemplateGalleryRequest((current) => ({
@@ -116,7 +132,7 @@ export default function SandboxEditorRail({
     let current: BuilderCanvasNode | undefined = selectedNode;
 
     while (current) {
-      if (getHomeSectionTemplateTarget(current.id)) return current;
+      if (getHomeSectionTemplateTarget(current)) return current;
       if (!current.parentId) return null;
       current = nodesById.get(current.parentId);
     }
@@ -131,7 +147,7 @@ export default function SandboxEditorRail({
   }, [document, focusedSectionTemplateId]);
   const activeSectionTemplateNode = selectedSectionTemplateNode ?? focusedSectionTemplateNode;
   const selectedSectionTemplate = activeSectionTemplateNode
-    ? getHomeSectionTemplateTarget(activeSectionTemplateNode.id)
+    ? getHomeSectionTemplateTarget(activeSectionTemplateNode)
     : null;
   const selectedSectionTemplateVariant = activeSectionTemplateNode
     ? getHomeSectionTemplateVariant(activeSectionTemplateNode)
@@ -142,12 +158,14 @@ export default function SandboxEditorRail({
 
   return (
     <>
-      <div className={styles.iconRail}>
+      <div className={styles.iconRail} data-drawer-open={activeDrawer ? 'true' : 'false'}>
         <button
           type="button"
           className={`${styles.railButton} ${activeDrawer === 'pages' ? styles.railButtonActive : ''}`}
           onClick={() => onToggleDrawer('pages')}
           aria-pressed={activeDrawer === 'pages'}
+          aria-label="Pages"
+          data-builder-rail-item="pages"
           title="Pages"
         >
           <span className={styles.railButtonIcon} aria-hidden="true">▤</span>
@@ -158,6 +176,8 @@ export default function SandboxEditorRail({
           className={`${styles.railButton} ${activeDrawer === 'add' ? styles.railButtonActive : ''}`}
           onClick={() => onToggleDrawer('add')}
           aria-pressed={activeDrawer === 'add'}
+          aria-label="Add"
+          data-builder-rail-item="add"
           title="Add"
         >
           <span className={styles.railButtonIcon} aria-hidden="true">+</span>
@@ -199,6 +219,7 @@ export default function SandboxEditorRail({
           onClick={onOpenColumnsPanel}
           aria-pressed={activeDrawer === 'columns'}
           aria-label="Columns"
+          data-builder-rail-item="columns"
           title="칼럼 페이지로 이동 / 글 관리"
         >
           <span className={styles.railButtonIcon} aria-hidden="true">▦</span>
@@ -212,6 +233,24 @@ export default function SandboxEditorRail({
         >
           <span className={styles.railButtonIcon} aria-hidden="true">▥</span>
           <span className={styles.railButtonLabel}>CMS</span>
+        </a>
+        <a
+          className={styles.railButton}
+          href={`/${locale}/admin-builder/apps`}
+          aria-label="App Market"
+          title="App Market"
+        >
+          <span className={styles.railButtonIcon} aria-hidden="true">▣</span>
+          <span className={styles.railButtonLabel}>Apps</span>
+        </a>
+        <a
+          className={styles.railButton}
+          href={`/${locale}/admin-builder/ai-generator`}
+          aria-label="AI Site Generator"
+          title="AI Site Generator"
+        >
+          <span className={styles.railButtonIcon} aria-hidden="true">✦</span>
+          <span className={styles.railButtonLabel}>AI</span>
         </a>
         <button
           type="button"
@@ -228,6 +267,7 @@ export default function SandboxEditorRail({
       <aside
         className={`${styles.drawer} ${!activeDrawer ? styles.drawerHidden : ''}`}
         aria-hidden={!activeDrawer}
+        data-builder-drawer={activeDrawer ?? undefined}
       >
         {activeDrawer === 'pages' ? (
           <div className={styles.drawerBody}>
@@ -238,7 +278,7 @@ export default function SandboxEditorRail({
               columnPostsSummary={columnPostsSummary}
               templateGalleryInitialSearch={pageTemplateGalleryRequest.query}
               templateGalleryRequestId={pageTemplateGalleryRequest.id}
-              onSelectPage={onSelectPage}
+              onSelectPage={selectPageAndClose}
               onPagesChange={onPagesChange}
               onToast={onToast}
             />
@@ -249,6 +289,7 @@ export default function SandboxEditorRail({
           <div className={styles.drawerBody}>
             <SandboxCatalogPanel
               locale={locale}
+              appWidgets={appWidgets}
               onOpenPageTemplates={openPageTemplateGallery}
             />
             <ComponentLibraryPanel />
@@ -281,17 +322,6 @@ export default function SandboxEditorRail({
                   <p className={styles.panelCopy}>
                     {selectedSectionTemplate.label}의 글, 주소, 링크 데이터는 그대로 두고 디자인 템플릿만 바꿉니다.
                   </p>
-                  <button
-                    type="button"
-                    className={styles.panelHeaderButton}
-                    data-builder-section-template-back="true"
-                    onClick={() => {
-                      setFocusedSectionTemplateId(null);
-                      onSelectNode(null);
-                    }}
-                  >
-                    섹션 목록으로 돌아가기
-                  </button>
                   <div className={styles.sectionTemplateVariantGrid}>
                     {selectedSectionTemplateVariants.map((variant) => (
                       <button
@@ -380,6 +410,40 @@ export default function SandboxEditorRail({
                 브랜드, 연락처, 로고, 파비콘 같은 site-level design 설정은 modal에서 편집합니다.
               </p>
             </section>
+            <section className={styles.panelSection} data-builder-designer-polish="true">
+              <header className={styles.panelSectionHeader}>
+                <div>
+                  <span>Designer</span>
+                  <strong>Polish presets</strong>
+                </div>
+              </header>
+              <p className={styles.panelCopy}>
+                현재 페이지의 버튼, 카드, 폼 요소에 전문 디자이너가 정리한 시각 시스템을 즉시 적용합니다.
+              </p>
+              <div className={styles.designerPresetGrid}>
+                {COMPONENT_DESIGN_PRESETS.map((preset) => (
+                  <button
+                    key={preset.key}
+                    type="button"
+                    className={styles.designerPresetCard}
+                    data-builder-designer-preset={preset.key}
+                    onClick={() => onApplyComponentDesignPreset(preset.key)}
+                  >
+                    <span
+                      className={styles.designerPresetPreview}
+                      data-designer-preset={preset.key}
+                      aria-hidden="true"
+                    >
+                      <i />
+                      <i />
+                      <i />
+                    </span>
+                    <strong>{preset.label}</strong>
+                    <span>{preset.description}</span>
+                  </button>
+                ))}
+              </div>
+            </section>
           </div>
         ) : null}
 
@@ -452,6 +516,7 @@ export default function SandboxEditorRail({
                   type="button"
                   className={styles.actionButton}
                   disabled={columnsPageLookupPending}
+                  data-builder-open-columns-page="true"
                   onClick={onOpenColumnsPage}
                 >
                   {columnsPageLookupPending ? '페이지 확인 중...' : '칼럼 페이지로 이동'}

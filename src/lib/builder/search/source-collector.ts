@@ -4,6 +4,9 @@ import {
   listPages,
   readPageCanvas,
 } from '@/lib/builder/site/persistence';
+import { listBlogPosts } from '@/lib/builder/blog/column-adapter';
+import { listFaqSearchDocs } from '@/lib/builder/faq/faq-engine';
+import { listPortfolioSearchDocs } from '@/lib/builder/portfolio/portfolio-engine';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { buildSitePagePath } from '@/lib/builder/site/paths';
 import type { SearchDoc } from './types';
@@ -11,9 +14,8 @@ import type { SearchDoc } from './types';
 /**
  * PR #5 — Collect publishable docs to feed the search index.
  *
- * For now we pull builder pages (published variant) and extract every text-ish
- * node's content into `body`. Blog (columns) and FAQ adapters are kept as
- * separate helpers so they can be wired later without disturbing this entry.
+ * Pull builder pages, published Blog/Columns posts, FAQ records, and Portfolio
+ * projects into a single index source.
  */
 
 function extractTextFromNode(node: BuilderCanvasNode): string {
@@ -65,12 +67,44 @@ async function collectPageDocsForLocale(siteId: string, locale: Locale): Promise
   return docs;
 }
 
+function stripHtml(value: string): string {
+  return value.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+async function collectBlogDocsForLocale(locale: Locale): Promise<SearchDoc[]> {
+  const posts = await listBlogPosts(locale);
+  return posts.map((post): SearchDoc => ({
+    id: `blog:${locale}:${post.slug}`,
+    kind: 'blog',
+    locale,
+    title: post.title,
+    url: `/${locale}/columns/${post.slug}`,
+    summary: post.excerpt,
+    body: [
+      post.excerpt,
+      post.bodyMarkdown,
+      stripHtml(post.bodyHtml),
+      post.author?.name,
+      post.author?.title,
+      post.category,
+      ...(post.tags ?? []),
+    ].filter(Boolean).join('\n'),
+    publishedAt: post.publishedAt ?? post.updatedAt,
+    tags: post.tags,
+  }));
+}
+
 export async function collectAllSearchDocs(siteId = 'default'): Promise<SearchDoc[]> {
   const out: SearchDoc[] = [];
   for (const locale of locales) {
     try {
-      const localeDocs = await collectPageDocsForLocale(siteId, locale);
-      out.push(...localeDocs);
+      const [pageDocs, blogDocs, faqDocs, portfolioDocs] = await Promise.all([
+        collectPageDocsForLocale(siteId, locale),
+        collectBlogDocsForLocale(locale),
+        listFaqSearchDocs(locale),
+        listPortfolioSearchDocs(locale),
+      ]);
+      out.push(...pageDocs, ...blogDocs, ...faqDocs, ...portfolioDocs);
     } catch (err) {
       console.warn('[search/source-collector] failed for locale', locale, err);
     }

@@ -186,7 +186,8 @@ export function readBuilderDynamicTemplateSummaries(
 
 export function readBuilderDynamicTemplateDetail(
   templateId: BuilderDynamicTemplateId,
-  localeInput: string | null | undefined
+  localeInput: string | null | undefined,
+  previewRecordId?: string | null
 ): BuilderDynamicTemplateDetail {
   const summary = readBuilderDynamicTemplateSummaries(localeInput).find(
     (candidate) => candidate.templateId === templateId
@@ -196,13 +197,23 @@ export function readBuilderDynamicTemplateDetail(
     throw new Error(`Unknown builder dynamic template detail: ${templateId}`);
   }
 
+  const allPreviewRecords = readBuilderCollectionRecordPreviews(summary.collectionId, localeInput);
+  const sampleLimit = summary.kind === 'item' ? 6 : 4;
+  const basePreviewRecords = allPreviewRecords.slice(0, sampleLimit);
+  const requestedPreviewRecordId = parseBuilderDynamicTemplatePreviewRecordId(previewRecordId);
+  const requestedPreviewRecord =
+    summary.kind === 'item' && requestedPreviewRecordId
+      ? allPreviewRecords.find((record) => record.recordId === requestedPreviewRecordId) ?? null
+      : null;
+  const previewRecords =
+    requestedPreviewRecord && !basePreviewRecords.some((record) => record.recordId === requestedPreviewRecord.recordId)
+      ? [requestedPreviewRecord, ...basePreviewRecords.slice(0, Math.max(sampleLimit - 1, 0))]
+      : basePreviewRecords;
+
   return {
     ...summary,
     editableBlocks: buildDynamicTemplateEditableBlocks(summary),
-    previewRecords: readBuilderCollectionRecordPreviews(summary.collectionId, localeInput).slice(
-      0,
-      summary.kind === 'item' ? 6 : 4
-    ),
+    previewRecords,
     exclusions: [
       'Dynamic template editor is v0 block-control only in this batch.',
       'Record-scoped preview resolves collection fields, SEO, and canonical links.',
@@ -226,6 +237,14 @@ export function readBuilderDynamicTemplateEntries(
     editorStatus: template.editorStatus,
     previewStatus: template.previewStatus,
   }));
+}
+
+function parseBuilderDynamicTemplatePreviewRecordId(value: string | null | undefined) {
+  if (!value || !value.trim()) {
+    return null;
+  }
+
+  return value.trim();
 }
 
 function buildDynamicTemplateEditableBlocks(

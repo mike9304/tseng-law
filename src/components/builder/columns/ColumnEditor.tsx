@@ -3,10 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
 import Placeholder from '@tiptap/extension-placeholder';
-import Underline from '@tiptap/extension-underline';
 import AssetLibraryModal from '@/components/builder/editor/AssetLibraryModal';
 import ColumnTranslationStatusAlert from '@/components/builder/translations/ColumnTranslationStatusAlert';
 import type { BuilderAssetListItem } from '@/lib/builder/assets';
@@ -134,10 +132,9 @@ export default function ColumnEditor({
     extensions: [
       StarterKit.configure({
         heading: { levels: [1, 2, 3] },
+        link: { openOnClick: false, HTMLAttributes: { rel: 'noopener noreferrer nofollow' } },
       }),
-      Link.configure({ openOnClick: false, HTMLAttributes: { rel: 'noopener noreferrer nofollow' } }),
       Image,
-      Underline,
       Placeholder.configure({ placeholder: '칼럼 본문을 여기에 작성하세요...' }),
     ],
     content: initialContent.bodyHtml || '<p></p>',

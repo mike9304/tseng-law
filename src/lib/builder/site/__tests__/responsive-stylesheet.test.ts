@@ -64,8 +64,8 @@ describe('published responsive stylesheet', () => {
       }),
     ]);
 
-    expect(css).toContain('[data-node-id="section-a"] { margin-top: 0px !important; }');
-    expect(css).toContain('[data-node-id="section-b"] { margin-top: 24px !important; }');
+    expect(css).toContain('[data-node-id="section-a"] { margin-top: 0px !important; min-height: 220px !important; }');
+    expect(css).toContain('[data-node-id="section-b"] { margin-top: 24px !important; min-height: 300px !important; }');
   });
 
   it('uses flow gaps instead of left/top offsets for responsive flex children', () => {

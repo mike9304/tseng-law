@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
 import { hrefLocalePrefix, isForeignLocaleHref } from '@/lib/builder/site/paths';
-import type { BuilderNavItem } from '@/lib/builder/site/types';
+import type { BuilderNavItem, BuilderPageMeta } from '@/lib/builder/site/types';
 
 function nav(id: string, href: string, children?: BuilderNavItem[]): BuilderNavItem {
   return {
@@ -10,6 +10,18 @@ function nav(id: string, href: string, children?: BuilderNavItem[]): BuilderNavI
     pageId: id,
     label: { ko: id, 'zh-hant': id, en: id },
     children,
+  };
+}
+
+function page(pageId: string, publishedAt?: string): BuilderPageMeta {
+  return {
+    pageId,
+    slug: pageId,
+    title: { ko: pageId, 'zh-hant': pageId, en: pageId },
+    locale: 'ko',
+    createdAt: '2026-05-21T00:00:00.000Z',
+    updatedAt: '2026-05-21T00:00:00.000Z',
+    publishedAt,
   };
 }
 
@@ -54,5 +66,21 @@ describe('navigation locale filtering', () => {
 
     expect(filtered).toHaveLength(1);
     expect(filtered[0]?.children?.map((item) => item.id)).toEqual(['ko-child', 'relative-child']);
+  });
+
+  it('hides known unpublished page navigation items when requested', () => {
+    const filtered = filterNavigationForLocale([
+      nav('published-page', '/ko/published-page'),
+      nav('draft-page', '/ko/draft-page'),
+      nav('external', 'https://example.com'),
+    ], 'ko', {
+      pages: [
+        page('published-page', '2026-05-21T00:00:00.000Z'),
+        page('draft-page'),
+      ],
+      publishedOnly: true,
+    });
+
+    expect(filtered.map((item) => item.id)).toEqual(['published-page', 'external']);
   });
 });

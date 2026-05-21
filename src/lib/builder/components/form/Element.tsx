@@ -20,6 +20,12 @@ interface FormElementProps {
   children?: ReactNode;
 }
 
+type SubmitErrorResponse = {
+  error?: string;
+  validationErrors?: Array<{ fieldId?: unknown; message?: unknown }>;
+  cmsIssues?: string[];
+};
+
 export default function FormElement({ node, mode = 'edit', children }: FormElementProps) {
   const content = node.content;
   const layoutMode = content.layoutMode ?? 'absolute';
@@ -214,6 +220,7 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
     const validationErrors = validateVisibleFields(formEl);
     if (Object.keys(validationErrors).length > 0) {
       setFieldErrors(validationErrors);
+      focusFirstFieldError(formEl, validationErrors);
       setStatus('error');
       return;
     }
@@ -273,8 +280,14 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
         }),
       });
       if (!res.ok) {
-        const err = (await res.json().catch(() => ({}))) as { error?: string };
-        setErrorMsg(err.error || '전송에 실패했습니다.');
+        const err = (await res.json().catch(() => ({}))) as SubmitErrorResponse;
+        const serverFieldErrors = normalizeServerValidationErrors(err.validationErrors);
+        if (Object.keys(serverFieldErrors).length > 0) {
+          setFieldErrors(serverFieldErrors);
+          focusFirstFieldError(formEl, serverFieldErrors);
+        }
+        const cmsIssueText = err.cmsIssues?.length ? ` ${err.cmsIssues.join(' ')}` : '';
+        setErrorMsg((err.error || '전송에 실패했습니다.') + cmsIssueText);
         setStatus('error');
         return;
       }
@@ -428,6 +441,27 @@ export default function FormElement({ node, mode = 'edit', children }: FormEleme
 
     return errors;
   }
+}
+
+function normalizeServerValidationErrors(
+  validationErrors: SubmitErrorResponse['validationErrors'],
+): Record<string, string> {
+  if (!Array.isArray(validationErrors)) return {};
+  return validationErrors.reduce<Record<string, string>>((acc, item) => {
+    const fieldId = typeof item.fieldId === 'string' ? item.fieldId.trim() : '';
+    const message = typeof item.message === 'string' ? item.message.trim() : '';
+    if (fieldId && message && !acc[fieldId]) acc[fieldId] = message;
+    return acc;
+  }, {});
+}
+
+function focusFirstFieldError(formEl: HTMLFormElement, errors: Record<string, string | undefined>): void {
+  const firstName = Object.keys(errors).find((name) => Boolean(errors[name]));
+  if (!firstName) return;
+  const control = formEl.querySelector<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(
+    `[name="${CSS.escape(firstName)}"]`,
+  );
+  control?.focus({ preventScroll: false });
 }
 
 async function uploadFormFiles(formEl: HTMLFormElement, locale: string): Promise<FormSubmissionFile[]> {

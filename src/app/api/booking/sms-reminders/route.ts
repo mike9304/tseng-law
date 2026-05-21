@@ -3,6 +3,7 @@ import { isCronAuthorized } from '@/lib/builder/security/cron-auth';
 import { listBookings, saveBooking, getService } from '@/lib/builder/bookings/storage';
 import { sendSms } from '@/lib/builder/bookings/sms-client';
 import type { Booking, BookingReminderType } from '@/lib/builder/bookings/types';
+import { reminderWindowsForService } from '@/lib/builder/bookings/reminders';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -20,17 +21,6 @@ export const dynamic = 'force-dynamic';
  * Vercel Cron's `authorization: Bearer ${CRON_SECRET}`). Returns a JSON
  * summary suitable for cron observability dashboards.
  */
-
-interface ReminderWindow {
-  type: BookingReminderType;
-  hoursAhead: number;
-  toleranceMinutes: number;
-}
-
-const WINDOWS: ReminderWindow[] = [
-  { type: 'sms-reminder-24h', hoursAhead: 24, toleranceMinutes: 30 },
-  { type: 'sms-reminder-1h', hoursAhead: 1, toleranceMinutes: 15 },
-];
 
 function authorized(request: NextRequest): boolean {
   return isCronAuthorized(request);
@@ -83,9 +73,10 @@ async function dispatch(): Promise<{
     }
     const minutesToStart = (startMs - now) / 60000;
     const service = await getService(booking.serviceId);
+    const windows = reminderWindowsForService(service, 'sms');
     const serviceName = service?.name?.ko || service?.name?.en;
 
-    for (const win of WINDOWS) {
+    for (const win of windows) {
       if (alreadySent(booking, win.type)) continue;
       const targetMinutes = win.hoursAhead * 60;
       const delta = Math.abs(minutesToStart - targetMinutes);

@@ -10,6 +10,7 @@ import { siteContent } from '@/data/site-content';
 import SearchOverlay from '@/components/SearchOverlay';
 import MobileNavDrawer from '@/components/MobileNavDrawer';
 import SmartLink from '@/components/SmartLink';
+import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 
 type MegaLink = {
   label: string;
@@ -26,6 +27,11 @@ type MainNavItem = {
   key: string;
   label: string;
   href: string;
+};
+
+type MemberNavState = {
+  status: 'loading' | 'signed-out' | 'signed-in';
+  member?: PublicSiteMember;
 };
 
 function buildMainNavItems(locale: Locale): MainNavItem[] {
@@ -180,6 +186,7 @@ export default function Header({ locale }: { locale: Locale }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [memberNav, setMemberNav] = useState<MemberNavState>({ status: 'loading' });
   const [indicatorStyle, setIndicatorStyle] = useState<{ left: number; width: number; visible: boolean }>({
     left: 0,
     width: 0,
@@ -195,6 +202,12 @@ export default function Header({ locale }: { locale: Locale }) {
   const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : 'Close menu';
   const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : 'Open search';
   const skipLabel = locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : 'Skip to main content';
+  const memberLabels =
+    locale === 'ko'
+      ? { login: '로그인', account: '내 계정', premium: '프리미엄', logout: '로그아웃' }
+      : locale === 'zh-hant'
+        ? { login: '登入', account: '我的帳戶', premium: '進階內容', logout: '登出' }
+        : { login: 'Log in', account: 'My account', premium: 'Premium', logout: 'Log out' };
   const utilityLinks =
     locale === 'ko'
       ? [
@@ -234,6 +247,10 @@ export default function Header({ locale }: { locale: Locale }) {
     };
   }, [pathname]);
 
+  const currentPath = pathname ?? `/${locale}`;
+  const memberLoginHref = `/${locale}/login?next=${encodeURIComponent(currentPath || `/${locale}/account`)}`;
+  const canSeePremium = memberNav.member?.role === 'premium' || memberNav.member?.role === 'admin';
+
   const clearCloseTimeout = useCallback(() => {
     if (closeTimeoutRef.current) {
       window.clearTimeout(closeTimeoutRef.current);
@@ -269,6 +286,20 @@ export default function Header({ locale }: { locale: Locale }) {
     setDrawerOpen(false);
     setSearchOpen(true);
   }, []);
+
+  const handleMemberLogout = useCallback(async () => {
+    try {
+      await fetch('/api/members/logout', {
+        method: 'POST',
+        credentials: 'include'
+      });
+    } finally {
+      setMemberNav({ status: 'signed-out' });
+      if ((pathname ?? '').startsWith(`/${locale}/account`)) {
+        window.location.assign(`/${locale}/login`);
+      }
+    }
+  }, [locale, pathname]);
 
   const moveIndicator = useCallback((key: string | null, visible = true) => {
     if (!key) {
@@ -306,6 +337,39 @@ export default function Header({ locale }: { locale: Locale }) {
   }, [closeMegaMenuNow, drawerOpen, searchOpen]);
 
   useEffect(() => {
+    let active = true;
+
+    const loadMember = async () => {
+      try {
+        const response = await fetch('/api/members/me', {
+          cache: 'no-store',
+          credentials: 'include'
+        });
+
+        if (!active) return;
+
+        if (!response.ok) {
+          setMemberNav({ status: 'signed-out' });
+          return;
+        }
+
+        const data = (await response.json()) as { member?: PublicSiteMember };
+        setMemberNav(data.member ? { status: 'signed-in', member: data.member } : { status: 'signed-out' });
+      } catch {
+        if (active) {
+          setMemberNav({ status: 'signed-out' });
+        }
+      }
+    };
+
+    void loadMember();
+
+    return () => {
+      active = false;
+    };
+  }, [pathname]);
+
+  useEffect(() => {
     if (drawerOpen || !restoreMobileToggleOnCloseRef.current) return;
     restoreMobileToggleOnCloseRef.current = false;
     const frame = window.requestAnimationFrame(() => {
@@ -337,6 +401,27 @@ export default function Header({ locale }: { locale: Locale }) {
                 {item.label}
               </Link>
             ))}
+            <div className="utility-member-nav" data-member-nav-state={memberNav.status}>
+              {memberNav.status === 'signed-in' ? (
+                <>
+                  <Link href={`/${locale}/account`} data-member-role-link="account">
+                    {memberLabels.account}
+                  </Link>
+                  {canSeePremium ? (
+                    <Link href={`/${locale}/account/premium`} data-member-role-link="premium">
+                      {memberLabels.premium}
+                    </Link>
+                  ) : null}
+                  <button type="button" onClick={handleMemberLogout} data-member-role-link="logout">
+                    {memberLabels.logout}
+                  </button>
+                </>
+              ) : (
+                <Link href={memberLoginHref} data-member-role-link="login">
+                  {memberLabels.login}
+                </Link>
+              )}
+            </div>
             <div className="utility-lang">
               <Link href={koPath} aria-current={locale === 'ko' ? 'page' : undefined}>
                 KO
@@ -487,6 +572,10 @@ export default function Header({ locale }: { locale: Locale }) {
         onClose={closeMobileDrawer}
         onSearch={openSearchFromMobileDrawer}
         locale={locale}
+        memberNav={memberNav}
+        memberLabels={memberLabels}
+        memberLoginHref={memberLoginHref}
+        onMemberLogout={handleMemberLogout}
       />
     </header>
   );

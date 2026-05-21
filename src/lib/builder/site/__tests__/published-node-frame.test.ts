@@ -78,6 +78,18 @@ describe('buildPublishedSurfaceFrame', () => {
     expect(frame.attrs['data-section-variant']).toBe('glass');
   });
 
+  it('AI generated section metadata exposes template and variant attrs', () => {
+    const frame = buildPublishedSurfaceFrame(
+      mk({
+        id: 'ai-page-test-1-section',
+        kind: 'container',
+        content: { sectionTemplateId: 'services', variant: 'split' },
+      }),
+    );
+    expect(frame.attrs['data-builder-section-template']).toBe('services');
+    expect(frame.attrs['data-section-variant']).toBe('split');
+  });
+
   it('no anchor name → no data-anchor', () => {
     const frame = buildPublishedSurfaceFrame(mk({ anchorName: undefined }));
     expect(frame.attrs['data-anchor']).toBeUndefined();

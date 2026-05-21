@@ -21,6 +21,7 @@ import {
 } from '@/lib/builder/animations/presets';
 import { isLinkSafe, linkValueSchema } from '@/lib/builder/links';
 import { createBuilderRichTextSchema } from '@/lib/builder/rich-text/types';
+import { builderDatasetTargetIds } from '@/lib/builder/types';
 const imageFiltersSchema = z.object({
   brightness: z.number().min(0).max(200),
   contrast: z.number().min(0).max(200),
@@ -65,6 +66,16 @@ export const builderCanvasNodeKinds = [
   'blog-categories',
   'blog-archive',
   'featured-posts',
+  'blog-author',
+  'blog-recent-posts',
+  // F45 — Native Events widgets
+  'event-list',
+  'event-calendar',
+  'event-rsvp',
+  // F49 — Native Portfolio widgets
+  'portfolio-list',
+  // F57 — Native Store widgets
+  'product-gallery',
   // Phase 7 — Media / Domain widgets
   'gallery',
   'map',
@@ -140,6 +151,7 @@ export function isTextShapedKind(kind: string): boolean {
     || kind === 'notification-bar'
     || kind === 'address-block'
     || kind === 'business-hours'
+    || kind === 'product-gallery'
   );
 }
 
@@ -385,6 +397,39 @@ export const anchorNameSchema = z
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'Anchor must be lowercase alphanumeric with hyphens')
   .optional();
 
+export const builderDataBindingFieldMapSchema = z.object({
+  title: z.string().trim().min(1).max(80).optional(),
+  text: z.string().trim().min(1).max(80).optional(),
+  label: z.string().trim().min(1).max(80).optional(),
+  description: z.string().trim().min(1).max(80).optional(),
+  href: z.string().trim().min(1).max(80).optional(),
+  src: z.string().trim().min(1).max(80).optional(),
+  alt: z.string().trim().min(1).max(80).optional(),
+  caption: z.string().trim().min(1).max(80).optional(),
+}).strict();
+
+export const builderDataBindingSchema = z.object({
+  targetId: z.enum(builderDatasetTargetIds),
+  recordIndex: z.number().int().min(0).max(50).default(0),
+  fields: builderDataBindingFieldMapSchema,
+}).strict();
+
+export type BuilderDataBinding = z.infer<typeof builderDataBindingSchema>;
+export type BuilderDataBindingFieldMap = z.infer<typeof builderDataBindingFieldMapSchema>;
+
+const builderCanvasAppWidgetRefSchema = z.object({
+  appId: z.string()
+    .trim()
+    .min(2)
+    .max(80)
+    .regex(/^[a-z][a-z0-9-]*$/),
+  widgetId: z.string()
+    .trim()
+    .min(2)
+    .max(80)
+    .regex(/^[a-z][a-z0-9-]*$/),
+}).strict().optional();
+
 const baseCanvasNodeSchema = z.object({
   id: z.string().trim().min(1).max(120),
   kind: canvasNodeKindSchema,
@@ -400,6 +445,8 @@ const baseCanvasNodeSchema = z.object({
   hoverStyle: hoverStyleSchema,
   animation: animationConfigSchema,
   responsive: responsiveConfigSchema,
+  dataBinding: builderDataBindingSchema.optional(),
+  appWidget: builderCanvasAppWidgetRefSchema,
 });
 
 const textShadowSchema = z.object({
@@ -535,6 +582,8 @@ const imageCanvasNodeSchema = baseCanvasNodeSchema.extend({
       })
       .optional(),
     filters: imageFiltersSchema,
+    generationPrompt: z.string().max(1000).optional(),
+    visualDirection: z.string().max(600).optional(),
     link: linkValueSchema.nullish(),
   }),
 });
@@ -637,6 +686,8 @@ const containerCanvasNodeSchema = baseCanvasNodeSchema.extend({
     as: z.enum(['div', 'section', 'article', 'aside', 'header', 'footer', 'main', 'nav', 'form']).optional(),
     htmlId: z.string().max(120).optional(),
     dataTone: z.string().max(32).optional(),
+    sectionTemplateId: z.enum(['services', 'insights', 'faq', 'offices']).optional(),
+    aiSectionTemplateKind: z.string().max(64).optional(),
     action: z.string().max(500).optional(),
     method: z.enum(['get', 'post']).optional(),
     rawInlineStyle: z.boolean().optional(),
@@ -1014,6 +1065,99 @@ const featuredPostsCanvasNodeSchema = baseCanvasNodeSchema.extend({
   }),
 });
 
+const blogAuthorCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('blog-author'),
+  content: z.object({
+    authorName: z.string().max(120).optional(),
+    layout: z.enum(['card', 'list']).default('card'),
+    showBio: z.boolean().default(true),
+    showPostCount: z.boolean().default(true),
+    showRecentPosts: z.boolean().default(true),
+    maxPosts: z.number().int().min(1).max(10).default(3),
+  }),
+});
+
+const blogRecentPostsCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('blog-recent-posts'),
+  content: z.object({
+    limit: z.number().int().min(1).max(20).default(5),
+    layout: z.enum(['list', 'cards']).default('list'),
+    showExcerpt: z.boolean().default(true),
+    showAuthor: z.boolean().default(true),
+    showDate: z.boolean().default(true),
+    showCategory: z.boolean().default(true),
+  }),
+});
+
+// ─── F45 — Native Events widgets ──────────────────────────────────
+
+const eventListCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('event-list'),
+  content: z.object({
+    layout: z.enum(['cards', 'list']).default('cards'),
+    limit: z.number().int().min(1).max(50).default(6),
+    timeFilter: z.enum(['all', 'upcoming', 'past']).default('upcoming'),
+    category: z.string().max(80).optional(),
+    showDescription: z.boolean().default(true),
+    showCapacity: z.boolean().default(true),
+    showRsvp: z.boolean().default(true),
+    columns: z.number().int().min(1).max(4).default(3),
+  }),
+});
+
+const eventCalendarCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('event-calendar'),
+  content: z.object({
+    months: z.number().int().min(1).max(12).default(3),
+    category: z.string().max(80).optional(),
+    showPast: z.boolean().default(false),
+    showCapacity: z.boolean().default(true),
+  }),
+});
+
+const eventRsvpCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('event-rsvp'),
+  content: z.object({
+    eventId: z.string().max(120).optional(),
+    title: z.string().max(120).default('이벤트 신청'),
+    showTicketInfo: z.boolean().default(true),
+    successMessage: z.string().max(240).default('신청이 접수되었습니다. 확인 메일을 기다려 주세요.'),
+  }),
+});
+
+// ─── F49 — Native Portfolio widgets ───────────────────────────────
+
+const portfolioListCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('portfolio-list'),
+  content: z.object({
+    layout: z.enum(['cards', 'list', 'masonry']).default('cards'),
+    limit: z.number().int().min(1).max(50).default(6),
+    category: z.string().max(80).optional().default(''),
+    featuredOnly: z.boolean().default(false),
+    showSummary: z.boolean().default(true),
+    showDate: z.boolean().default(true),
+    showCategoryFilter: z.boolean().default(true),
+    columns: z.number().int().min(1).max(4).default(3),
+    sortBy: z.enum(['date-desc', 'date-asc', 'order-asc']).default('order-asc'),
+  }),
+});
+
+// ─── F57 — Native Store widgets ─────────────────────────────────────
+
+const productGalleryCanvasNodeSchema = baseCanvasNodeSchema.extend({
+  kind: z.literal('product-gallery'),
+  content: z.object({
+    layout: z.enum(['grid', 'list']).default('grid'),
+    category: z.string().max(120).optional().default(''),
+    showCategoryFilter: z.boolean().default(true),
+    showSort: z.boolean().default(true),
+    showQuickView: z.boolean().default(true),
+    columns: z.number().int().min(1).max(4).default(3),
+    pageSize: z.number().int().min(1).max(24).default(6),
+    sortBy: z.enum(['updated-desc', 'title-asc', 'price-asc', 'price-desc']).default('updated-desc'),
+  }),
+});
+
 // ─── Phase 7 — Media / Domain widgets ─────────────────────────────
 //
 // These schemas match each component's actual Element props and `defaultContent`
@@ -1115,15 +1259,25 @@ const attorneyCardCanvasNodeSchema = baseCanvasNodeSchema.extend({
 const faqListCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('faqList'),
   content: z.object({
+    source: z.enum(['static', 'app']).default('static').optional(),
     items: z
       .array(
         z.object({
+          faqId: z.string().max(120).optional(),
           question: z.string().max(500),
           answer: z.string().max(5000),
+          categoryId: z.string().max(120).optional(),
+          tags: z.array(z.string().max(60)).max(20).optional(),
         }),
       )
       .max(50)
       .default([]),
+    categoryId: z.string().max(120).default('all').optional(),
+    showSearch: z.boolean().default(false).optional(),
+    showCategoryFilter: z.boolean().default(true).optional(),
+    expandFirst: z.boolean().default(true).optional(),
+    schemaEnabled: z.boolean().default(true).optional(),
+    limit: z.number().int().min(1).max(100).default(50).optional(),
   }),
 });
 
@@ -1347,7 +1501,7 @@ const socialEmbedCanvasNodeSchema = baseCanvasNodeSchema.extend({
 const floatingChatCanvasNodeSchema = baseCanvasNodeSchema.extend({
   kind: z.literal('floating-chat'),
   content: z.object({
-    provider: z.enum(['whatsapp', 'line', 'kakao', 'telegram', 'messenger', 'custom']).default('whatsapp'),
+    provider: z.enum(['whatsapp', 'line', 'kakao', 'telegram', 'messenger', 'custom', 'live-chat']).default('whatsapp'),
     href: z.string().max(2000).default(''),
     label: z.string().max(80).default('문의하기'),
     placement: z.enum(['bottom-right', 'bottom-left', 'bottom-center']).default('bottom-right'),
@@ -1601,7 +1755,7 @@ const siteSearchCanvasNodeSchema = baseCanvasNodeSchema.extend({
     submitLabel: z.string().max(40).default('Search'),
     showResultsInline: z.boolean().default(true),
     /** Filter results by kind. Empty = all. */
-    kinds: z.array(z.enum(['page', 'blog', 'faq'])).max(3).default([]),
+    kinds: z.array(z.enum(['page', 'blog', 'faq', 'portfolio'])).max(4).default([]),
     /** Locale override; when empty, uses the page locale. */
     locale: z.string().max(20).default(''),
     maxResults: z.number().int().min(1).max(20).default(8),
@@ -1639,6 +1793,13 @@ export const builderCanvasNodeSchema = z.discriminatedUnion('kind', [
   blogCategoriesCanvasNodeSchema,
   blogArchiveCanvasNodeSchema,
   featuredPostsCanvasNodeSchema,
+  blogAuthorCanvasNodeSchema,
+  blogRecentPostsCanvasNodeSchema,
+  eventListCanvasNodeSchema,
+  eventCalendarCanvasNodeSchema,
+  eventRsvpCanvasNodeSchema,
+  portfolioListCanvasNodeSchema,
+  productGalleryCanvasNodeSchema,
   galleryCanvasNodeSchema,
   mapCanvasNodeSchema,
   customEmbedCanvasNodeSchema,
@@ -1712,6 +1873,13 @@ export type BuilderBlogPostCardCanvasNode = z.infer<typeof blogPostCardCanvasNod
 export type BuilderBlogCategoriesCanvasNode = z.infer<typeof blogCategoriesCanvasNodeSchema>;
 export type BuilderBlogArchiveCanvasNode = z.infer<typeof blogArchiveCanvasNodeSchema>;
 export type BuilderFeaturedPostsCanvasNode = z.infer<typeof featuredPostsCanvasNodeSchema>;
+export type BuilderBlogAuthorCanvasNode = z.infer<typeof blogAuthorCanvasNodeSchema>;
+export type BuilderBlogRecentPostsCanvasNode = z.infer<typeof blogRecentPostsCanvasNodeSchema>;
+export type BuilderEventListCanvasNode = z.infer<typeof eventListCanvasNodeSchema>;
+export type BuilderEventCalendarCanvasNode = z.infer<typeof eventCalendarCanvasNodeSchema>;
+export type BuilderEventRsvpCanvasNode = z.infer<typeof eventRsvpCanvasNodeSchema>;
+export type BuilderPortfolioListCanvasNode = z.infer<typeof portfolioListCanvasNodeSchema>;
+export type BuilderProductGalleryCanvasNode = z.infer<typeof productGalleryCanvasNodeSchema>;
 export type BuilderGalleryCanvasNode = z.infer<typeof galleryCanvasNodeSchema>;
 export type BuilderMapCanvasNode = z.infer<typeof mapCanvasNodeSchema>;
 export type BuilderCustomEmbedCanvasNode = z.infer<typeof customEmbedCanvasNodeSchema>;

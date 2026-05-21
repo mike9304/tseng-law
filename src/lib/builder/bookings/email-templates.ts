@@ -1,4 +1,5 @@
 import { buildBookingManageUrl } from '@/lib/builder/bookings/manage-token';
+import { formatDateTimeInTimezone } from '@/lib/builder/bookings/timezone';
 import {
   bookingEmailTemplateTypes,
   textForLocale,
@@ -94,12 +95,9 @@ export async function upsertBookingEmailTemplate(
   return next;
 }
 
-function formatDateTime(value: string, locale: Booking['customer']['locale']): string {
+function formatDateTime(value: string, locale: Booking['customer']['locale'], timezone?: string): string {
   try {
-    return new Date(value).toLocaleString(locale, {
-      dateStyle: 'medium',
-      timeStyle: 'short',
-    });
+    return formatDateTimeInTimezone(value, locale, timezone);
   } catch {
     return value;
   }
@@ -119,7 +117,7 @@ function bookingSummaryText(booking: Booking, context: BookingEmailRenderContext
   const rows = [
     `Service: ${serviceName(booking, context)}`,
     `Staff: ${staffName(booking, context)}`,
-    `Time: ${formatDateTime(booking.startAt, booking.customer.locale)}`,
+    `Time: ${formatDateTime(booking.startAt, booking.customer.locale, booking.customerTimezone)}`,
     booking.meetingLink ? `Meeting link: ${booking.meetingLink}` : '',
     booking.customerTimezone ? `Customer timezone: ${booking.customerTimezone}` : '',
     `Name: ${booking.customer.name}`,
@@ -142,7 +140,7 @@ function bookingSummaryHtml(booking: Booking, context: BookingEmailRenderContext
     <div style="border:1px solid #dbe4ef;border-radius:10px;padding:14px;margin:16px 0;background:#f8fafc">
       <p><strong>Service</strong>: ${escapeHtml(serviceName(booking, context))}</p>
       <p><strong>Staff</strong>: ${escapeHtml(staffName(booking, context))}</p>
-      <p><strong>Time</strong>: ${escapeHtml(formatDateTime(booking.startAt, booking.customer.locale))}</p>
+      <p><strong>Time</strong>: ${escapeHtml(formatDateTime(booking.startAt, booking.customer.locale, booking.customerTimezone))}</p>
       ${booking.meetingLink ? `<p><strong>Meeting link</strong>: <a href="${escapeHtml(booking.meetingLink)}">${escapeHtml(booking.meetingLink)}</a></p>` : ''}
       ${booking.customerTimezone ? `<p><strong>Customer timezone</strong>: ${escapeHtml(booking.customerTimezone)}</p>` : ''}
       <p><strong>Name</strong>: ${escapeHtml(booking.customer.name)}</p>
@@ -166,8 +164,8 @@ function replacementsForBooking(booking: Booking, context: BookingEmailRenderCon
     customerPhone: { text: booking.customer.phone || '-' },
     serviceName: { text: serviceName(booking, context) },
     staffName: { text: staffName(booking, context) },
-    startTime: { text: formatDateTime(booking.startAt, booking.customer.locale) },
-    endTime: { text: formatDateTime(booking.endAt, booking.customer.locale) },
+    startTime: { text: formatDateTime(booking.startAt, booking.customer.locale, booking.customerTimezone) },
+    endTime: { text: formatDateTime(booking.endAt, booking.customer.locale, booking.customerTimezone) },
     timezone: { text: booking.customerTimezone || '-' },
     meetingLink: { text: booking.meetingLink || 'Will be shared by the office' },
     manageUrl: { text: manageUrl, html: `<a href="${escapeHtml(manageUrl)}">${escapeHtml(manageUrl)}</a>` },

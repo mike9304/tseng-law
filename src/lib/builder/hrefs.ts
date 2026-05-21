@@ -38,8 +38,18 @@ export function buildBuilderDynamicRouteHref(
   return `/${locale}/builder/dynamic-routes/${encodeURIComponent(routeId)}${query ? `?${query}` : ''}`;
 }
 
-export function buildBuilderDynamicTemplateHref(locale: Locale, templateId: BuilderDynamicTemplateId) {
-  return `/${locale}/builder/dynamic-templates/${encodeURIComponent(templateId)}`;
+export function buildBuilderDynamicTemplateHref(
+  locale: Locale,
+  templateId: BuilderDynamicTemplateId,
+  options?: { previewRecordId?: string | null }
+) {
+  const searchParams = new URLSearchParams();
+  if (options?.previewRecordId) {
+    searchParams.set('previewRecordId', options.previewRecordId);
+  }
+
+  const query = searchParams.toString();
+  return `/${locale}/builder/dynamic-templates/${encodeURIComponent(templateId)}${query ? `?${query}` : ''}`;
 }
 
 export function buildBuilderStarterTemplateHref(

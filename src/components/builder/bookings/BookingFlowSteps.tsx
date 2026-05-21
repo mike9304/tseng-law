@@ -3,7 +3,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { BookingService, Staff } from '@/lib/builder/bookings/types';
 import type { Slot } from '@/lib/builder/bookings/availability';
+import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
 import { textForLocale } from '@/lib/builder/bookings/types';
+import { formatDateTimeInTimezone, formatTimeInTimezone } from '@/lib/builder/bookings/timezone';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from './BookingFlowSteps.module.css';
 
@@ -56,14 +58,6 @@ function browserTimezone(): string {
   }
 }
 
-function formatInTimezone(iso: string, locale: Locale, timezone: string): string {
-  return new Intl.DateTimeFormat(locale, {
-    timeZone: timezone,
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(iso));
-}
-
 function parseAttachmentLinks(value: string): string[] {
   return value
     .split(/\r?\n/)
@@ -78,6 +72,10 @@ function parseCustomFieldLabels(value: string): string[] {
     .map((item) => item.trim())
     .filter(Boolean)
     .slice(0, 12);
+}
+
+function formatBookingAmount(amount: number, currency: string): string {
+  return `${currency} ${Math.max(0, amount).toLocaleString()}`;
 }
 
 function loadStripeJs(): Promise<void> {
@@ -143,8 +141,16 @@ export default function BookingFlowSteps({
     clientSecret?: string;
     publishableKey?: string;
     amount?: number;
+    totalAmount?: number;
+    depositAmount?: number;
+    balanceDueAfterPayment?: number;
+    isDeposit?: boolean;
     currency?: string;
     stub?: boolean;
+    coveredByPackage?: boolean;
+    packageCreditId?: string;
+    packageName?: string;
+    remainingCredits?: number;
     error?: string;
   }>({ status: 'idle' });
   const stripeRefs = useRef<{ stripe: StripeLike; elements: StripeElementsLike; element: { unmount?(): void } } | null>(null);
@@ -153,6 +159,7 @@ export default function BookingFlowSteps({
   const selectedService = useMemo(() => services.find((service) => service.serviceId === serviceId), [serviceId, services]);
   const selectedStaff = useMemo(() => staff.find((member) => member.staffId === staffId), [staffId, staff]);
   const paidService = selectedService?.paymentMode === 'paid';
+  const selectedPrice = selectedService ? bookingServicePriceSnapshot(selectedService) : null;
 
   useEffect(() => {
     fetch(`/api/booking/services?locale=${locale}`)
@@ -245,10 +252,28 @@ export default function BookingFlowSteps({
         clientSecret?: string;
         publishableKey?: string;
         amount?: number;
+        totalAmount?: number;
+        depositAmount?: number;
+        balanceDueAfterPayment?: number;
+        isDeposit?: boolean;
         currency?: string;
         stub?: boolean;
+        coveredByPackage?: boolean;
+        packageCreditId?: string;
+        packageName?: { ko: string; 'zh-hant': string; en: string };
+        remainingCredits?: number;
         error?: string;
       };
+      if (payload.coveredByPackage) {
+        setPayment({
+          status: 'confirmed',
+          coveredByPackage: true,
+          packageCreditId: payload.packageCreditId,
+          packageName: textForLocale(payload.packageName, locale) || 'Session package',
+          remainingCredits: payload.remainingCredits,
+        });
+        return;
+      }
       if (!paymentRes.ok || !payload.clientSecret) {
         throw new Error(payload.error || 'payment intent failed');
       }
@@ -258,6 +283,10 @@ export default function BookingFlowSteps({
         clientSecret: payload.clientSecret,
         publishableKey: payload.publishableKey,
         amount: payload.amount,
+        totalAmount: payload.totalAmount,
+        depositAmount: payload.depositAmount,
+        balanceDueAfterPayment: payload.balanceDueAfterPayment,
+        isDeposit: payload.isDeposit,
         currency: payload.currency,
         stub: payload.stub,
       });
@@ -318,10 +347,10 @@ export default function BookingFlowSteps({
     try {
       let paymentIntentId: string | undefined;
       if (paidService) {
-        if (payment.status !== 'confirmed' || !payment.paymentIntentId) {
+        if (payment.status !== 'confirmed' || (!payment.paymentIntentId && !payment.coveredByPackage)) {
           throw new Error('payment confirmation required');
         }
-        paymentIntentId = payment.paymentIntentId;
+        paymentIntentId = payment.coveredByPackage ? undefined : payment.paymentIntentId;
       }
       const customFields = customLabels.map((label) => ({
         label,
@@ -411,7 +440,7 @@ export default function BookingFlowSteps({
         <div className={styles.panel} style={{ boxShadow: 'none' }}>
           <h2 className={styles.cardTitle}>{textForLocale(selectedService?.name, locale)}</h2>
           <p className={styles.muted}>{selectedStaff ? textForLocale(selectedStaff.name, locale) : ''}</p>
-          <p className={styles.muted}>{slot ? `${new Date(slot.startAt).toLocaleString(locale)} · ${customerTimezone}` : ''}</p>
+          <p className={styles.muted} data-booking-confirmed-timezone="true">{slot ? `${formatDateTimeInTimezone(slot.startAt, locale, customerTimezone)} · ${customerTimezone}` : ''}</p>
         </div>
       </div>
     );
@@ -433,12 +462,15 @@ export default function BookingFlowSteps({
               <strong>{textForLocale(service.name, locale)}</strong>
               <p className={styles.muted}>
                 {service.durationMinutes} min · {service.paymentMode === 'paid'
-                  ? `${service.priceCurrency ?? 'TWD'} ${(service.priceAmount ?? service.priceTwd ?? 0).toLocaleString()}`
+                  ? `${formatBookingAmount(bookingServicePriceSnapshot(service).amountDueNow, service.priceCurrency ?? 'TWD')} due now${bookingServicePriceSnapshot(service).isDeposit ? ` · Total ${formatBookingAmount(bookingServicePriceSnapshot(service).totalAmount, service.priceCurrency ?? 'TWD')}` : ''}`
                   : `TWD ${service.priceTwd?.toLocaleString() || 0}`}
               </p>
               <p className={styles.muted}>
                 {service.paymentMode === 'paid' ? '결제 후 예약 확정' : '결제 없이 예약 확정'} · {service.slotStepMinutes ?? 30}분 간격
               </p>
+              {(service.maxParticipants ?? 1) > 1 ? (
+                <p className={styles.muted}>그룹 예약 정원 {service.maxParticipants}명</p>
+              ) : null}
               <p className={styles.muted}>{textForLocale(service.description, locale)}</p>
             </button>
           ))}
@@ -465,12 +497,13 @@ export default function BookingFlowSteps({
           </label>
           <div className={`${styles.field} ${styles.fieldFull}`}>
             <span className={styles.label}>{loading ? 'Loading slots...' : 'Available times'}</span>
-            <p className={styles.muted}>내 시간대: {customerTimezone}</p>
+            <p className={styles.muted} data-booking-customer-timezone="true">내 시간대: {customerTimezone}</p>
             <div className={styles.slots}>
               {slots.map((item) => (
                 <button className={styles.slot} data-active={slot?.startAt === item.startAt} data-booking-slot-start={item.startAt} key={`${item.staffId}-${item.startAt}`} type="button" onClick={() => setSlot(item)}>
-                  {formatInTimezone(item.startAt, locale, customerTimezone)}
-                  {item.timezone !== customerTimezone ? ` / ${formatInTimezone(item.startAt, locale, item.timezone)} ${item.timezone}` : ''}
+                  <span data-booking-slot-customer-time="true">{formatTimeInTimezone(item.startAt, locale, customerTimezone)}</span>
+                  {item.timezone !== customerTimezone ? <span data-booking-slot-office-time="true"> / {formatTimeInTimezone(item.startAt, locale, item.timezone)} {item.timezone}</span> : null}
+                  {item.capacityTotal && item.capacityTotal > 1 ? ` · ${item.capacityRemaining ?? item.capacityTotal}/${item.capacityTotal} 자리` : ''}
                 </button>
               ))}
               {!loading && slots.length === 0 ? <span className={styles.muted}>No available slots for this date.</span> : null}
@@ -549,7 +582,11 @@ export default function BookingFlowSteps({
                 <div>
                   <span className={styles.label}>Payment Element</span>
                   <p className={styles.muted}>
-                    {selectedService?.priceCurrency ?? 'TWD'} {(selectedService?.priceAmount ?? selectedService?.priceTwd ?? 0).toLocaleString()} 결제 확인 후 예약이 확정됩니다.
+                    {payment.coveredByPackage
+                      ? `${payment.packageName || 'Session package'} 크레딧으로 예약합니다.`
+                      : selectedPrice?.isDeposit
+                        ? `${formatBookingAmount(selectedPrice.amountDueNow, selectedPrice.currency)} 예약금 결제 후 예약이 확정됩니다. 잔액 ${formatBookingAmount(selectedPrice.balanceDueAfterOnlinePayment, selectedPrice.currency)}은 나중에 결제합니다.`
+                        : `${formatBookingAmount(selectedPrice?.amountDueNow ?? 0, selectedPrice?.currency ?? selectedService?.priceCurrency ?? 'TWD')} 결제 확인 후 예약이 확정됩니다.`}
                   </p>
                 </div>
                 <span className={styles.paymentChip} data-payment-status={payment.status}>
@@ -578,7 +615,9 @@ export default function BookingFlowSteps({
               {payment.status === 'confirming' ? <p className={styles.muted}>Stripe 결제를 확인 중입니다...</p> : null}
               {payment.status === 'confirmed' ? (
                 <div className={styles.notice} data-booking-payment-confirmed="true">
-                  결제가 확인되었습니다. 이제 예약을 확정할 수 있습니다.
+                  {payment.coveredByPackage
+                    ? `세션권이 확인되었습니다. 예약 확정 시 1회 차감됩니다.${payment.remainingCredits ? ` 현재 ${payment.remainingCredits}회 남음.` : ''}`
+                    : '결제가 확인되었습니다. 이제 예약을 확정할 수 있습니다.'}
                 </div>
               ) : null}
               {payment.error ? <p className={styles.error}>{payment.error}</p> : null}
@@ -601,7 +640,7 @@ export default function BookingFlowSteps({
             className={styles.button}
             type="button"
             onClick={submit}
-            disabled={loading || !customer.name || !customer.email || (paidService && payment.status !== 'confirmed')}
+            disabled={loading || !customer.name || !customer.email || (paidService && (payment.status !== 'confirmed' || (!payment.paymentIntentId && !payment.coveredByPackage)))}
           >
             {loading ? 'Booking...' : 'Confirm booking'}
           </button>

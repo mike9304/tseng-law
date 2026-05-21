@@ -15,8 +15,19 @@ interface ColumnListItem {
   readTime: string;
   category: ColumnCategory;
   categoryLabel: string;
+  blogCategory?: string;
+  authorName?: string;
+  tags?: string[];
   featuredImage: string;
   summary: string;
+}
+
+interface ColumnsGridFilters {
+  category?: string;
+  author?: string;
+  q?: string;
+  year?: string;
+  month?: string;
 }
 
 const categoryLabels = {
@@ -25,11 +36,56 @@ const categoryLabels = {
   en: { all: 'All', formation: 'Company Setup', legal: 'Legal Info', case: 'Case Studies' }
 } as const;
 
-export default function ColumnsGrid({ locale, posts }: { locale: Locale; posts: ColumnListItem[] }) {
+function normalizeFilterValue(value: string | string[] | undefined): string {
+  return Array.isArray(value) ? value[0] ?? '' : value ?? '';
+}
+
+function postMatchesQuery(post: ColumnListItem, query: string): boolean {
+  if (!query) return true;
+  const normalized = query.toLowerCase();
+  return [
+    post.title,
+    post.summary,
+    post.categoryLabel,
+    post.blogCategory,
+    post.authorName,
+    ...(post.tags ?? []),
+  ].filter(Boolean).join(' ').toLowerCase().includes(normalized);
+}
+
+export default function ColumnsGrid({
+  locale,
+  posts,
+  initialFilters = {},
+}: {
+  locale: Locale;
+  posts: ColumnListItem[];
+  initialFilters?: ColumnsGridFilters;
+}) {
   const labels = categoryLabels[locale];
   const byline = locale === 'ko' ? '증준외 변호사 검토' : locale === 'zh-hant' ? '曾俊瑋律師審閱' : 'Reviewed by Wei Tseng';
-  const [active, setActive] = useState<ColumnCategory | 'all'>('all');
-  const filtered = active === 'all' ? posts : posts.filter((p) => p.category === active);
+  const requestedCategory = normalizeFilterValue(initialFilters.category);
+  const requestedAuthor = normalizeFilterValue(initialFilters.author);
+  const requestedQuery = normalizeFilterValue(initialFilters.q);
+  const requestedYear = normalizeFilterValue(initialFilters.year);
+  const requestedMonth = normalizeFilterValue(initialFilters.month);
+  const initialActive = requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case'
+    ? requestedCategory
+    : 'all';
+  const [active, setActive] = useState<ColumnCategory | 'all'>(initialActive);
+  const filtered = posts.filter((post) => {
+    const categoryMatches = requestedCategory
+      ? post.blogCategory === requestedCategory || post.category === requestedCategory
+      : active === 'all' || post.category === active;
+    if (!categoryMatches) return false;
+    if (requestedAuthor && post.authorName !== requestedAuthor) return false;
+    if (requestedYear && !post.date.startsWith(requestedYear)) return false;
+    if (requestedMonth) {
+      const month = post.date.slice(5, 7).replace(/^0/, '');
+      if (month !== requestedMonth.replace(/^0/, '')) return false;
+    }
+    return postMatchesQuery(post, requestedQuery);
+  });
 
   const cats: { id: ColumnCategory | 'all'; label: string }[] = [
     { id: 'all', label: labels.all },
@@ -46,6 +102,7 @@ export default function ColumnsGrid({ locale, posts }: { locale: Locale; posts: 
             <button
               key={cat.id}
               onClick={() => setActive(cat.id)}
+              disabled={Boolean(requestedCategory || requestedAuthor || requestedQuery || requestedYear || requestedMonth)}
               className={`columns-filter-btn ${active === cat.id ? 'active' : ''}`}
             >
               {cat.label}
@@ -65,7 +122,7 @@ export default function ColumnsGrid({ locale, posts }: { locale: Locale; posts: 
               </div>
               <div className="columns-card-body">
                 <div className="columns-card-meta">
-                  <span className="columns-card-byline">{byline}</span>
+                  <span className="columns-card-byline">{post.authorName || byline}</span>
                   {post.readTime ? <span className="columns-readtime-inline">{post.readTime}</span> : null}
                 </div>
                 <h3 className="columns-card-title">{post.title}</h3>

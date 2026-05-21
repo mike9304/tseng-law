@@ -27,6 +27,15 @@ const legacyColumnAliases = {
 const nextConfig = {
   distDir,
   reactStrictMode: true,
+  webpack(config, { dev }) {
+    if (dev) {
+      config.watchOptions = {
+        ...(config.watchOptions ?? {}),
+        ignored: '**/runtime-data/**',
+      };
+    }
+    return config;
+  },
   images: {
     formats: ['image/avif', 'image/webp']
   },

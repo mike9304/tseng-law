@@ -234,6 +234,16 @@ export default function ImageElement({
 
   const placeholder = isPlaceholderOrEmpty(node.content.src) && !svg && !compare;
   if (placeholder) {
+    if (mode === 'published') {
+      return (
+        <div
+          data-builder-image-empty="true"
+          aria-hidden="true"
+          style={{ width: '100%', height: '100%' }}
+        />
+      );
+    }
+
     return (
       <div
         style={{
@@ -277,6 +287,9 @@ export default function ImageElement({
     );
   }
 
+  const isHeroBackground =
+    /(^|-)hero(-|$)/i.test(node.id) && /(media|background|bg|image)/i.test(node.id);
+
   const baseImage = (
     <Image
       src={node.content.src}
@@ -285,6 +298,7 @@ export default function ImageElement({
       draggable={false}
       sizes="(max-width: 1280px) 100vw, 360px"
       unoptimized={Boolean(node.content.gif)}
+      priority={isHeroBackground}
       style={{
         objectFit: node.content.fit,
         objectPosition: node.content.focalPoint

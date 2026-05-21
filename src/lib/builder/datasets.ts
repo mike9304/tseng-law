@@ -19,6 +19,7 @@ import type {
 export interface BuilderDatasetFieldDefinition {
   fieldId: string;
   label: string;
+  valueKind?: 'text' | 'image' | 'url';
 }
 
 export interface BuilderBindableTargetDefinition {
@@ -31,6 +32,7 @@ export interface BuilderBindableTargetDefinition {
   mode: BuilderDatasetMode;
   modeOptions: BuilderDatasetMode[];
   defaultCollectionId: BuilderDatasetCollectionId;
+  bindableFields: BuilderDatasetFieldDefinition[];
   filterFields: BuilderDatasetFieldDefinition[];
   sortFields: BuilderDatasetFieldDefinition[];
   defaultSort?: BuilderPageDatasetSort[];
@@ -47,14 +49,28 @@ export interface BuilderPageDatasetOverview {
   description: string;
   collectionIds: BuilderDatasetCollectionId[];
   currentBinding: BuilderPageDatasetBinding;
-  sampleRecords: {
-    recordId: string;
-    primaryLabel: string;
-    secondaryLabel: string;
-    routePath: string;
-  }[];
+  sampleRecords: BuilderDatasetSampleRecord[];
   repeaterItems: BuilderDatasetRepeaterPreviewItem[];
   notes: string[];
+}
+
+export interface BuilderDatasetSampleRecord {
+  recordId: string;
+  primaryLabel: string;
+  secondaryLabel: string;
+  routePath: string;
+  fieldValues: Record<string, string>;
+}
+
+export interface BuilderDataBindingPreviewTarget {
+  targetId: BuilderDatasetTargetId;
+  title: string;
+  collectionId: BuilderDatasetCollectionId;
+  mode: BuilderDatasetMode;
+  filters: BuilderPageDatasetFilter[];
+  sort: BuilderPageDatasetSort[];
+  limit?: number;
+  records: BuilderDatasetSampleRecord[];
 }
 
 export interface BuilderPageDatasetBindingPatch {
@@ -89,6 +105,18 @@ const builderBindableTargetDefinitions: readonly BuilderBindableTargetDefinition
     mode: 'list',
     modeOptions: ['list'],
     defaultCollectionId: 'columns',
+    bindableFields: [
+      { fieldId: 'title', label: 'Title', valueKind: 'text' },
+      { fieldId: 'slug', label: 'Slug', valueKind: 'text' },
+      { fieldId: 'category', label: 'Category', valueKind: 'text' },
+      { fieldId: 'categoryLabel', label: 'Category label', valueKind: 'text' },
+      { fieldId: 'date', label: 'Date', valueKind: 'text' },
+      { fieldId: 'dateDisplay', label: 'Display date', valueKind: 'text' },
+      { fieldId: 'readTime', label: 'Read time', valueKind: 'text' },
+      { fieldId: 'summary', label: 'Summary', valueKind: 'text' },
+      { fieldId: 'featuredImage', label: 'Featured image', valueKind: 'image' },
+      { fieldId: 'href', label: 'Column link', valueKind: 'url' },
+    ],
     filterFields: [
       { fieldId: 'title', label: 'Title' },
       { fieldId: 'slug', label: 'Slug' },
@@ -116,6 +144,12 @@ const builderBindableTargetDefinitions: readonly BuilderBindableTargetDefinition
     mode: 'list',
     modeOptions: ['list'],
     defaultCollectionId: 'service-areas',
+    bindableFields: [
+      { fieldId: 'title', label: 'Title', valueKind: 'text' },
+      { fieldId: 'description', label: 'Description', valueKind: 'text' },
+      { fieldId: 'details', label: 'Details', valueKind: 'text' },
+      { fieldId: 'href', label: 'Service link', valueKind: 'url' },
+    ],
     filterFields: [
       { fieldId: 'title', label: 'Title' },
       { fieldId: 'description', label: 'Description' },
@@ -363,7 +397,7 @@ export function resolveServicesDatasetItems(
   ).map((service) => ({
     title: service.title[locale],
     description: service.subtitle[locale],
-    href: `/${locale}/services#${service.slug}`,
+    href: `/${locale}/services/${service.slug}`,
     details: service.keyPoints[locale].slice(0, 5),
     relatedColumns: service.columnSlugs.map((slug) => ({
       slug,
@@ -385,6 +419,23 @@ function readBuilderDatasetSampleRecords(
         primaryLabel: post.title,
         secondaryLabel: `${post.categoryLabel} · ${post.dateDisplay || post.date}`,
         routePath: `/${locale}/columns/${post.slug}`,
+        fieldValues: {
+          slug: post.slug,
+          title: post.title,
+          label: post.title,
+          category: post.category,
+          categoryLabel: post.categoryLabel,
+          date: post.date,
+          dateDisplay: post.dateDisplay,
+          readTime: post.readTime,
+          summary: post.summary,
+          content: post.content,
+          featuredImage: post.featuredImage,
+          image: post.featuredImage,
+          src: post.featuredImage,
+          href: `/${locale}/columns/${post.slug}`,
+          url: `/${locale}/columns/${post.slug}`,
+        },
       }));
     case 'home.services.list':
       return applyDatasetLimit(
@@ -402,18 +453,23 @@ function readBuilderDatasetSampleRecords(
           primaryLabel: service.title[locale],
           secondaryLabel: service.subtitle[locale],
           routePath: `/${locale}/services/${service.slug}`,
+          fieldValues: {
+            slug: service.slug,
+            title: service.title[locale],
+            label: service.title[locale],
+            description: service.subtitle[locale],
+            summary: service.subtitle[locale],
+            details: service.keyPoints[locale].join('\n'),
+            href: `/${locale}/services/${service.slug}`,
+            url: `/${locale}/services/${service.slug}`,
+          },
         }));
     default:
       return assertNever(targetId);
   }
 }
 
-function toRepeaterPreviewItem(record: {
-  recordId: string;
-  primaryLabel: string;
-  secondaryLabel: string;
-  routePath: string;
-}): BuilderDatasetRepeaterPreviewItem {
+function toRepeaterPreviewItem(record: BuilderDatasetSampleRecord): BuilderDatasetRepeaterPreviewItem {
   return {
     itemId: record.recordId,
     title: record.primaryLabel,

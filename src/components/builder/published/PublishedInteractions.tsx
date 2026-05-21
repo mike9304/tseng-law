@@ -1,15 +1,22 @@
 'use client';
 
 import { useEffect } from 'react';
-
-const SERVICE_EXPANDED_HEIGHT = 420;
-const SERVICE_BODY_EXPANDED_HEIGHT = 330;
-const FAQ_EXPANDED_HEIGHT = 190;
-const FAQ_BODY_EXPANDED_HEIGHT = 122;
+import {
+  BUILDER_FAQ_ACCORDION_BODY_HEIGHT,
+  BUILDER_FAQ_ACCORDION_ITEM_HEIGHT,
+  BUILDER_FAQ_ACCORDION_SECTION_HEIGHT,
+  BUILDER_SERVICES_ACCORDION_BODY_HEIGHT,
+  BUILDER_SERVICES_ACCORDION_CARD_HEIGHT,
+  BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT,
+} from '@/lib/builder/canvas/accordion-preview';
 
 function findByNodeIdPattern(pattern: RegExp): HTMLElement[] {
   return Array.from(document.querySelectorAll<HTMLElement>('[data-node-id]'))
     .filter((element) => pattern.test(element.dataset.nodeId ?? ''));
+}
+
+function findNodeElement(nodeId: string): HTMLElement | null {
+  return document.querySelector<HTMLElement>(`[data-node-id="${CSS.escape(nodeId)}"]`);
 }
 
 function toggleClass(element: Element | null, className: string, enabled: boolean): void {
@@ -59,13 +66,37 @@ function baseMetric(element: HTMLElement, key: 'builderBaseTop' | 'builderBaseHe
   return Number.isFinite(parsed) ? parsed : 0;
 }
 
+function setImportantPixelStyle(element: HTMLElement, property: string, value: number): void {
+  element.style.setProperty(property, `${value}px`, 'important');
+}
+
+function setExpandedElementSize(element: HTMLElement, minimumHeight: number, isOpen: boolean): void {
+  const position = window.getComputedStyle(element).position;
+  if (!isOpen) {
+    element.style.removeProperty('height');
+    element.style.removeProperty('min-height');
+    element.style.removeProperty('overflow');
+    return;
+  }
+
+  if (position === 'relative') {
+    element.style.setProperty('height', 'auto', 'important');
+    setImportantPixelStyle(element, 'min-height', minimumHeight);
+  } else {
+    setImportantPixelStyle(element, 'height', minimumHeight);
+    setImportantPixelStyle(element, 'min-height', minimumHeight);
+  }
+  element.style.setProperty('overflow', 'visible');
+}
+
 function logicalSiblingStack(elements: HTMLElement[]): HTMLElement[] {
   const reference = elements[0];
   const parentNodeId = reference?.dataset.parentNodeId;
-  if (!parentNodeId) return elements;
-  const siblings = Array.from(
-    document.querySelectorAll<HTMLElement>(`[data-parent-node-id="${CSS.escape(parentNodeId)}"]`),
-  );
+  const selector = parentNodeId
+    ? `[data-parent-node-id="${CSS.escape(parentNodeId)}"]`
+    : '[data-node-id]:not([data-parent-node-id])';
+  const siblings = Array.from(document.querySelectorAll<HTMLElement>(selector))
+    .filter((element) => parentNodeId || window.getComputedStyle(element).position === 'absolute');
   rememberBaseStackMetrics(siblings);
   return siblings.sort((a, b) => baseMetric(a, 'builderBaseTop') - baseMetric(b, 'builderBaseTop'));
 }
@@ -81,10 +112,73 @@ function applyExpandedSiblingStack(elements: HTMLElement[]): void {
     const baseHeight = baseMetric(element, 'builderBaseHeight');
     const expandedHeight = readPixelValue(element.dataset.builderExpandedHeight);
     const isExpanded = element.dataset.builderExpanded === 'true' && expandedHeight != null;
-    element.style.top = `${baseTop + offset}px`;
-    element.style.height = `${isExpanded ? expandedHeight : baseHeight}px`;
-    element.style.overflow = isExpanded ? 'visible' : '';
+    const position = window.getComputedStyle(element).position;
+    if (position === 'relative') {
+      element.style.setProperty('left', 'auto', 'important');
+      element.style.setProperty('top', 'auto', 'important');
+      setExpandedElementSize(element, expandedHeight ?? baseHeight, isExpanded);
+    } else {
+      setImportantPixelStyle(element, 'top', baseTop + offset);
+      setImportantPixelStyle(element, 'height', isExpanded ? expandedHeight : baseHeight);
+      if (isExpanded) {
+        setImportantPixelStyle(element, 'min-height', expandedHeight);
+        element.style.setProperty('overflow', 'visible');
+      } else {
+        element.style.removeProperty('min-height');
+        element.style.removeProperty('overflow');
+      }
+    }
     if (isExpanded) offset += Math.max(0, expandedHeight - baseHeight);
+  });
+}
+
+function setExpandedSectionHeight(sectionNodeId: string, expandedHeight: number, isOpen: boolean): void {
+  const section = findNodeElement(sectionNodeId);
+  if (!section) return;
+  section.dataset.builderExpanded = isOpen ? 'true' : 'false';
+  if (isOpen) {
+    section.dataset.builderExpandedHeight = String(expandedHeight);
+    setExpandedElementSize(section, expandedHeight, true);
+  } else {
+    delete section.dataset.builderExpandedHeight;
+    setExpandedElementSize(section, expandedHeight, false);
+  }
+  applyExpandedSiblingStack([section]);
+}
+
+function renderedContentHeight(element: HTMLElement, minimumHeight: number): number {
+  const rootRect = element.getBoundingClientRect();
+  let bottom = Math.max(minimumHeight, element.offsetHeight, element.scrollHeight);
+  const descendants = element.querySelectorAll<HTMLElement>([
+    '.builder-pub-node',
+    '.services-detail-card',
+    '.services-detail-body',
+    '.faq-item',
+    '.faq-answer-wrap',
+  ].join(','));
+
+  for (const descendant of descendants) {
+    if (window.getComputedStyle(descendant).display === 'none') continue;
+    const rect = descendant.getBoundingClientRect();
+    if (rect.width <= 0 && rect.height <= 0) continue;
+    bottom = Math.max(bottom, rect.bottom - rootRect.top);
+  }
+
+  return Math.ceil(bottom + 16);
+}
+
+function measuredExpandedHeight(element: HTMLElement, minimumHeight: number): number {
+  return renderedContentHeight(element, minimumHeight);
+}
+
+function measuredSectionHeight(sectionNodeId: string, minimumHeight: number): number {
+  const section = findNodeElement(sectionNodeId);
+  return section ? renderedContentHeight(section, minimumHeight) : minimumHeight;
+}
+
+function afterNextLayout(callback: () => void): void {
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(callback);
   });
 }
 
@@ -101,8 +195,7 @@ function setServiceDecomposedBodyVisibility(card: HTMLElement, isOpen: boolean):
   ].join(','));
 
   if (bodyNode) {
-    bodyNode.style.height = isOpen ? `${SERVICE_BODY_EXPANDED_HEIGHT}px` : '';
-    bodyNode.style.overflow = isOpen ? 'visible' : '';
+    setExpandedElementSize(bodyNode, BUILDER_SERVICES_ACCORDION_BODY_HEIGHT, isOpen);
   }
 
   for (const detail of details) {
@@ -118,8 +211,7 @@ function setFaqDecomposedBodyVisibility(item: HTMLElement, isOpen: boolean): voi
   const answerNode = item.querySelector<HTMLElement>(`[data-node-id="${escaped}-answer"]`);
 
   if (answerWrapNode) {
-    answerWrapNode.style.height = isOpen ? `${FAQ_BODY_EXPANDED_HEIGHT}px` : '';
-    answerWrapNode.style.overflow = isOpen ? 'visible' : '';
+    setExpandedElementSize(answerWrapNode, BUILDER_FAQ_ACCORDION_BODY_HEIGHT, isOpen);
   }
   if (answerNode) {
     answerNode.style.display = isOpen ? 'block' : 'none';
@@ -132,46 +224,92 @@ export default function PublishedInteractions() {
     const faqItems = findByNodeIdPattern(/^home-faq-item-\d+$/);
 
     const setOpenService = (activeCard: HTMLElement | null) => {
+      const isOpen = Boolean(activeCard);
       for (const card of serviceCards) {
         const isOpen = card === activeCard;
         const body = card.querySelector<HTMLElement>('.services-detail-body');
         const toggle = card.querySelector<HTMLElement>('.services-detail-toggle');
         card.dataset.builderExpanded = isOpen ? 'true' : 'false';
-        if (isOpen) {
-          card.dataset.builderExpandedHeight = String(SERVICE_EXPANDED_HEIGHT);
-        } else {
-          delete card.dataset.builderExpandedHeight;
-        }
         toggleClass(card.querySelector('.services-detail-card'), 'is-open', isOpen);
         toggleClass(body, 'is-open', isOpen);
         toggleClass(card.querySelector('.services-detail-chevron'), 'open', isOpen);
         setServiceDecomposedBodyVisibility(card, isOpen);
+        if (isOpen) {
+          card.dataset.builderExpandedHeight = String(
+            measuredExpandedHeight(card, BUILDER_SERVICES_ACCORDION_CARD_HEIGHT),
+          );
+        } else {
+          delete card.dataset.builderExpandedHeight;
+        }
         if (body) body.style.overflow = isOpen ? 'visible' : '';
         body?.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
         toggle?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       }
       applyExpandedSiblingStack(serviceCards);
+      setExpandedSectionHeight(
+        'home-services-root',
+        measuredSectionHeight('home-services-root', BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT),
+        isOpen,
+      );
+      if (isOpen) {
+        afterNextLayout(() => {
+          if (activeCard?.isConnected && activeCard.dataset.builderExpanded === 'true') {
+            activeCard.dataset.builderExpandedHeight = String(
+              measuredExpandedHeight(activeCard, BUILDER_SERVICES_ACCORDION_CARD_HEIGHT),
+            );
+            applyExpandedSiblingStack(serviceCards);
+          }
+          setExpandedSectionHeight(
+            'home-services-root',
+            measuredSectionHeight('home-services-root', BUILDER_SERVICES_ACCORDION_SECTION_HEIGHT),
+            true,
+          );
+        });
+      }
     };
 
     const setOpenFaq = (activeItem: HTMLElement | null) => {
+      const isOpen = Boolean(activeItem);
       for (const item of faqItems) {
         const isOpen = item === activeItem;
         const answer = item.querySelector<HTMLElement>('.faq-answer-wrap');
         const question = item.querySelector<HTMLElement>('.faq-question');
         item.dataset.builderExpanded = isOpen ? 'true' : 'false';
-        if (isOpen) {
-          item.dataset.builderExpandedHeight = String(FAQ_EXPANDED_HEIGHT);
-        } else {
-          delete item.dataset.builderExpandedHeight;
-        }
         toggleClass(item.querySelector('.faq-item'), 'is-open', isOpen);
         toggleClass(answer, 'is-open', isOpen);
         setFaqDecomposedBodyVisibility(item, isOpen);
+        if (isOpen) {
+          item.dataset.builderExpandedHeight = String(
+            measuredExpandedHeight(item, BUILDER_FAQ_ACCORDION_ITEM_HEIGHT),
+          );
+        } else {
+          delete item.dataset.builderExpandedHeight;
+        }
         if (answer) answer.style.overflow = isOpen ? 'visible' : '';
         answer?.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
         question?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       }
       applyExpandedSiblingStack(faqItems);
+      setExpandedSectionHeight(
+        'home-faq-root',
+        measuredSectionHeight('home-faq-root', BUILDER_FAQ_ACCORDION_SECTION_HEIGHT),
+        isOpen,
+      );
+      if (isOpen) {
+        afterNextLayout(() => {
+          if (activeItem?.isConnected && activeItem.dataset.builderExpanded === 'true') {
+            activeItem.dataset.builderExpandedHeight = String(
+              measuredExpandedHeight(activeItem, BUILDER_FAQ_ACCORDION_ITEM_HEIGHT),
+            );
+            applyExpandedSiblingStack(faqItems);
+          }
+          setExpandedSectionHeight(
+            'home-faq-root',
+            measuredSectionHeight('home-faq-root', BUILDER_FAQ_ACCORDION_SECTION_HEIGHT),
+            true,
+          );
+        });
+      }
     };
 
     for (const card of serviceCards) {

@@ -249,6 +249,7 @@ describe('editable builder CMS store', () => {
       'testimonials',
       [first!.recordId, second!.recordId, first!.recordId, 'missing-record'],
       'archived',
+      undefined,
     );
 
     expect(archived).toMatchObject({
@@ -288,6 +289,60 @@ describe('editable builder CMS store', () => {
       recordCount: 1,
       records: [{ recordId: second!.recordId }],
     });
+  });
+
+  it('supports visitor moderation record statuses', async () => {
+    await createEditableBuilderCmsCollection('test-site', 'ko', {
+      collectionId: 'leads',
+      name: 'Leads',
+    });
+    const created = await createEditableBuilderCmsRecord('test-site', 'ko', 'leads', {
+      status: 'pending',
+      fields: { title: 'Visitor lead', slug: 'visitor-lead' },
+    });
+
+    expect(created?.status).toBe('pending');
+
+    const approved = await bulkUpdateEditableBuilderCmsRecordStatus(
+      'test-site',
+      'ko',
+      'leads',
+      [created!.recordId],
+      'approved',
+      'Complete lead information',
+    );
+    expect(approved?.records[0]?.status).toBe('approved');
+    expect(approved?.records[0]?.moderation).toMatchObject({
+      reason: 'Complete lead information',
+      updatedBy: 'Admin',
+      history: [
+        { status: 'pending', authorLabel: 'Admin' },
+        { status: 'approved', reason: 'Complete lead information', authorLabel: 'Admin' },
+      ],
+    });
+
+    const rejected = await bulkUpdateEditableBuilderCmsRecordStatus(
+      'test-site',
+      'ko',
+      'leads',
+      [created!.recordId],
+      'rejected',
+      'Duplicate inquiry',
+    );
+    expect(rejected?.records[0]?.status).toBe('rejected');
+    expect(rejected?.records[0]?.moderation?.reason).toBe('Duplicate inquiry');
+
+    const latest = await readEditableBuilderCmsCollection('test-site', 'ko', 'leads');
+    expect(latest?.records[0]?.status).toBe('rejected');
+    expect(latest?.records[0]?.moderation?.history.map((event) => event.status)).toEqual([
+      'pending',
+      'approved',
+      'rejected',
+    ]);
+    expect(latest?.records[0]?.revisions?.map((revision) => revision.status)).toEqual([
+      'pending',
+      'approved',
+    ]);
   });
 
   it('filters and sorts records by searchable field values', async () => {

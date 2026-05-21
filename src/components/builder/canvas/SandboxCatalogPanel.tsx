@@ -6,6 +6,10 @@ import type { BuilderComponentCategory, BuilderComponentDefinition } from '@/lib
 import {
   useBuilderCanvasStore,
 } from '@/lib/builder/canvas/store';
+import {
+  builderAppWidgetMatchesSearch,
+  type BuilderRegisteredAppWidget,
+} from '@/lib/builder/apps/widgets';
 import type { BuilderCanvasNode, BuilderCanvasNodeKind } from '@/lib/builder/canvas/types';
 import { insertSectionSnapshot } from '@/lib/builder/sections/insertSection';
 import {
@@ -20,6 +24,7 @@ import TemplateThumbnailRenderer from './TemplateThumbnailRenderer';
 import { SandboxCatalogWidgetSection } from './SandboxCatalogWidgetSection';
 import {
   DECORATIVE_WIDGET_PRESETS,
+  DESIGNER_WIDGET_PRESETS,
   GALLERY_WIDGET_PRESETS,
   INTERACTIVE_WIDGET_PRESETS,
   LAYOUT_WIDGET_PRESETS,
@@ -29,6 +34,7 @@ import {
   SOCIAL_WIDGET_PRESETS,
   TEXT_WIDGET_PRESETS,
   type DecorativeWidgetPreset,
+  type DesignerWidgetPreset,
   type GalleryWidgetPreset,
   type InteractiveWidgetPreset,
   type LayoutWidgetPreset,
@@ -46,6 +52,7 @@ import {
   compareByCategoryPriority,
   componentMatchesSearch,
   decorativeWidgetMatchesSearch,
+  designerWidgetMatchesSearch,
   FEATURED_KINDS,
   galleryWidgetMatchesSearch,
   getDisplayCategory,
@@ -69,9 +76,11 @@ import styles from './SandboxPage.module.css';
 
 export default function SandboxCatalogPanel({
   locale,
+  appWidgets = [],
   onOpenPageTemplates,
 }: {
   locale?: Locale;
+  appWidgets?: BuilderRegisteredAppWidget[];
   onOpenPageTemplates?: (query?: string) => void;
 }) {
   const { document, addNode, addNodes, setSelectedNodeId, setDraftSaveState } = useBuilderCanvasStore();
@@ -130,6 +139,14 @@ export default function SandboxCatalogPanel({
     () => DECORATIVE_WIDGET_PRESETS.filter((preset) => decorativeWidgetMatchesSearch(preset, normalizedQuery)),
     [normalizedQuery],
   );
+  const visibleDesignerWidgetPresets = useMemo(
+    () => DESIGNER_WIDGET_PRESETS.filter((preset) => designerWidgetMatchesSearch(preset, normalizedQuery)),
+    [normalizedQuery],
+  );
+  const visibleAppWidgets = useMemo(
+    () => appWidgets.filter((widget) => builderAppWidgetMatchesSearch(widget, normalizedQuery)),
+    [appWidgets, normalizedQuery],
+  );
   const visibleBuiltInSectionTemplates = useMemo(
     () => getBuiltInSectionSearchResults(normalizedQuery),
     [normalizedQuery],
@@ -185,8 +202,8 @@ export default function SandboxCatalogPanel({
     (count, group) => count + group.components.length,
     0,
   );
-  const totalCatalogCount = components.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length + DECORATIVE_WIDGET_PRESETS.length + totalBuiltInSectionTemplateCount + pageTemplateCatalog.length;
-  const visibleCatalogCount = visibleComponentCount + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length + visibleDecorativeWidgetPresets.length + visibleBuiltInSectionTemplates.length + matchingPageTemplates.length;
+  const totalCatalogCount = components.length + appWidgets.length + TEXT_WIDGET_PRESETS.length + MEDIA_WIDGET_PRESETS.length + GALLERY_WIDGET_PRESETS.length + LAYOUT_WIDGET_PRESETS.length + INTERACTIVE_WIDGET_PRESETS.length + NAVIGATION_WIDGET_PRESETS.length + SOCIAL_WIDGET_PRESETS.length + LOCATION_WIDGET_PRESETS.length + DECORATIVE_WIDGET_PRESETS.length + DESIGNER_WIDGET_PRESETS.length + totalBuiltInSectionTemplateCount + pageTemplateCatalog.length;
+  const visibleCatalogCount = visibleComponentCount + visibleAppWidgets.length + visibleTextWidgetPresets.length + visibleMediaWidgetPresets.length + visibleGalleryWidgetPresets.length + visibleLayoutWidgetPresets.length + visibleInteractiveWidgetPresets.length + visibleNavigationWidgetPresets.length + visibleSocialWidgetPresets.length + visibleLocationWidgetPresets.length + visibleDecorativeWidgetPresets.length + visibleDesignerWidgetPresets.length + visibleBuiltInSectionTemplates.length + matchingPageTemplates.length;
 
   function toggleCategory(categoryId: string, defaultOpen = true) {
     setCategoryOpen((current) => ({
@@ -199,6 +216,34 @@ export default function SandboxCatalogPanel({
     const sequence = addSequenceRef.current;
     addSequenceRef.current += 1;
     addNode(resolveCenteredNode(kind, nodes.length + sequence, sequence));
+    setDraftSaveState('saving');
+  }
+
+  function handleAddAppWidget(widget: BuilderRegisteredAppWidget) {
+    if (!widget.canvasKind) return;
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(widget.canvasKind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      appWidget: {
+        appId: widget.appId,
+        widgetId: widget.widgetId,
+      },
+      content: {
+        ...seed.content,
+        ...(widget.defaultContent ?? {}),
+      },
+      rect: {
+        ...seed.rect,
+        ...(widget.defaultSize ? {
+          width: widget.defaultSize.width,
+          height: widget.defaultSize.height,
+        } : {}),
+      },
+    } as BuilderCanvasNode;
+
+    addNode(node);
     setDraftSaveState('saving');
   }
 
@@ -304,6 +349,31 @@ export default function SandboxCatalogPanel({
   }
 
   function handleAddDecorativeWidgetPreset(preset: DecorativeWidgetPreset) {
+    const sequence = addSequenceRef.current;
+    addSequenceRef.current += 1;
+    const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
+    const node = {
+      ...seed,
+      rect: {
+        ...seed.rect,
+        width: preset.width,
+        height: preset.height,
+      },
+      content: {
+        ...seed.content,
+        ...preset.content,
+      },
+      style: {
+        ...seed.style,
+        ...(preset.style ?? {}),
+      },
+    } as BuilderCanvasNode;
+
+    addNode(node);
+    setDraftSaveState('saving');
+  }
+
+  function handleAddDesignerWidgetPreset(preset: DesignerWidgetPreset) {
     const sequence = addSequenceRef.current;
     addSequenceRef.current += 1;
     const seed = resolveCenteredNode(preset.kind, nodes.length + sequence, sequence);
@@ -646,6 +716,104 @@ export default function SandboxCatalogPanel({
           </div>
         ) : null}
 
+        {(!normalizedQuery || visibleAppWidgets.length > 0) && appWidgets.length > 0 ? (
+          <div
+            className={styles.catalogCategorySection}
+            data-builder-app-widget-section="true"
+          >
+            <button
+              type="button"
+              className={`${styles.catalogCategoryButton} ${
+                (categoryOpen['app-widgets'] ?? true) ? styles.catalogCategoryButtonOpen : ''
+              }`}
+              onClick={() => toggleCategory('app-widgets')}
+            >
+              <span className={styles.catalogCategoryMeta}>
+                <span className={styles.catalogCategoryIcon}>APP</span>
+                <span className={styles.catalogCategoryTitle}>
+                  <span className={styles.catalogCategoryName}>App widgets</span>
+                  <span
+                    className={styles.catalogCategoryHint}
+                    data-builder-app-widget-count="true"
+                  >
+                    Enabled apps · {visibleAppWidgets.length} widgets
+                  </span>
+                </span>
+              </span>
+              <span className={styles.catalogCategoryToggle}>
+                {(categoryOpen['app-widgets'] ?? true) ? '−' : '+'}
+              </span>
+            </button>
+
+            {(categoryOpen['app-widgets'] ?? true) ? (
+              <div className={`${styles.catalogSectionGrid} ${styles.appWidgetGrid}`}>
+                {visibleAppWidgets.map((widget) => {
+                  const iconLabel = widget.appIcon.length > 3
+                    ? widget.appIcon.slice(0, 2).toUpperCase()
+                    : widget.appIcon;
+                  const widgetKey = `${widget.appId}:${widget.widgetId}`;
+                  return (
+                    <div
+                      key={widget.id}
+                      className={styles.catalogCard}
+                      data-builder-app-widget-card={widget.id}
+                      data-builder-app-widget-key={widgetKey}
+                      data-builder-app-widget-kind={widget.canvasKind ?? ''}
+                    >
+                      <button
+                        type="button"
+                        className={styles.catalogDragButton}
+                        title={
+                          widget.insertable
+                            ? `${widget.name} 캔버스로 드래그하여 추가`
+                            : widget.unavailableReason ?? 'Widget runtime is not available yet.'
+                        }
+                        draggable={widget.insertable}
+                        disabled={!widget.insertable}
+                        onDragStart={(event) => {
+                          if (!widget.canvasKind) return;
+                          event.dataTransfer.setData('application/x-builder-node-kind', widget.canvasKind);
+                          event.dataTransfer.setData('application/x-builder-app-widget', JSON.stringify({
+                            appId: widget.appId,
+                            widgetId: widget.widgetId,
+                            defaultContent: widget.defaultContent ?? {},
+                            defaultSize: widget.defaultSize ?? null,
+                          }));
+                          event.dataTransfer.effectAllowed = 'copy';
+                        }}
+                      >
+                        <span className={styles.catalogCardIcon}>{iconLabel}</span>
+                        <span className={styles.catalogCardName}>{widget.name}</span>
+                        <span className={styles.catalogCardMeta}>
+                          {widget.appName} · {widget.area} widget
+                        </span>
+                        <span className={styles.catalogCardMeta}>
+                          {widget.description ?? `Provided by ${widget.appName}`}
+                        </span>
+                      </button>
+
+                      <button
+                        type="button"
+                        className={styles.catalogQuickAddButton}
+                        data-builder-app-widget-add={widget.id}
+                        title={
+                          widget.insertable
+                            ? `${widget.name} 캔버스 중앙에 추가`
+                            : widget.unavailableReason ?? 'Widget runtime is not available yet.'
+                        }
+                        disabled={!widget.insertable}
+                        onClick={() => handleAddAppWidget(widget)}
+                      >
+                        {widget.insertable ? 'Quick add' : 'Runtime unavailable'}
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
         <SandboxCatalogWidgetSection
           categoryId="text-widgets"
           icon="T"
@@ -747,12 +915,24 @@ export default function SandboxCatalogPanel({
           categoryId="decorative-widgets"
           icon="◆"
           name="Decorative widget pack"
-          hint={`shape, pattern, parallax, frame, sticker · ${visibleDecorativeWidgetPresets.length}`}
+          hint={`shape, pattern, parallax, frame, sticker, designer accents · ${visibleDecorativeWidgetPresets.length}`}
           presets={visibleDecorativeWidgetPresets}
           isOpen={categoryOpen['decorative-widgets'] ?? true}
           dataAttribute="data-builder-decorative-widget-preset"
           onAdd={handleAddDecorativeWidgetPreset}
           onToggle={() => toggleCategory('decorative-widgets')}
+        />
+
+        <SandboxCatalogWidgetSection
+          categoryId="designer-widgets"
+          icon="✦"
+          name="Designer blocks pack"
+          hint={`counter, testimonial, service, profile, pricing, timeline · ${visibleDesignerWidgetPresets.length}`}
+          presets={visibleDesignerWidgetPresets}
+          isOpen={categoryOpen['designer-widgets'] ?? true}
+          dataAttribute="data-builder-designer-widget-preset"
+          onAdd={handleAddDesignerWidgetPreset}
+          onToggle={() => toggleCategory('designer-widgets')}
         />
 
         {/* Built-in section templates — normalized section snapshots. */}

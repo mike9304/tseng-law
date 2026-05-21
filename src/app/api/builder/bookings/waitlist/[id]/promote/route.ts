@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { addBookingDuration, computeAvailableSlots, isSlotAvailable } from '@/lib/builder/bookings/availability';
-import { bookingWaitlistPromoteSchema } from '@/lib/builder/bookings/types';
+import { bookingWaitlistPromoteSchema, type Booking } from '@/lib/builder/bookings/types';
 import {
   getService,
   getStaff,
@@ -14,6 +14,8 @@ import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
 import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import { guardMutation } from '@/lib/builder/security/guard';
+import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
+import { redeemPackageCreditForBooking, restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -53,7 +55,9 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
   const slot = slots[0];
   if (!slot) return NextResponse.json({ error: 'No available slot to promote this waitlist entry.' }, { status: 409 });
 
-  const slotKey = { serviceId: service.serviceId, staffId, startAt: slot.startAt };
+  const resourceIds = service.requiredResourceIds ?? [];
+  const endAt = addBookingDuration(slot.startAt, service.durationMinutes);
+  const slotKey = { serviceId: service.serviceId, staffId, startAt: slot.startAt, resourceIds };
   if (!acquireSlotLock(slotKey)) {
     return NextResponse.json({ error: 'Selected slot is being booked by another request.' }, { status: 409 });
   }
@@ -62,20 +66,55 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     const available = await isSlotAvailable(slotKey);
     if (!available) return NextResponse.json({ error: 'Selected slot is no longer available.' }, { status: 409 });
 
-    const booking = timestamped({
-      bookingId: makeBookingId(),
+    const bookingId = makeBookingId();
+    const packageRedemption = service.paymentMode === 'paid'
+      ? await redeemPackageCreditForBooking({
+          bookingId,
+          customerEmail: existing.customer.email,
+          serviceId: service.serviceId,
+        })
+      : null;
+
+    let booking: Booking = timestamped({
+      bookingId,
       serviceId: service.serviceId,
       staffId,
       customer: existing.customer,
       startAt: slot.startAt,
-      endAt: addBookingDuration(slot.startAt, service.durationMinutes),
+      endAt,
       status: 'confirmed' as const,
       source: 'admin' as const,
       reminders: [],
+      paymentAmount: service.priceAmount ?? service.priceTwd ?? 0,
+      paymentCurrency: service.priceCurrency ?? 'TWD',
+      billingDocuments: [],
+      resourceIds,
+      ...(packageRedemption
+        ? {
+            packageId: packageRedemption.package.packageId,
+            packageCreditId: packageRedemption.credit.creditId,
+            packageCreditsUsed: 1,
+          }
+        : {}),
       ...(existing.customerTimezone ? { customerTimezone: existing.customerTimezone } : {}),
-      ...(service.paymentMode === 'paid' ? { paymentStatus: 'unpaid' as const } : {}),
+      ...(service.paymentMode === 'paid' ? { paymentStatus: packageRedemption ? 'paid' as const : 'unpaid' as const } : {}),
     });
-    await saveBooking(booking);
+    try {
+      await saveBooking(booking);
+    } catch (error) {
+      if (packageRedemption) {
+        await restorePackageCreditForBooking(booking).catch((restoreError) => {
+          console.error('[builder/bookings/waitlist/promote] package credit restore after save failure failed:', restoreError);
+        });
+      }
+      throw error;
+    }
+    try {
+      const billingAutomation = await runBookingBillingAutomation(booking.bookingId, { trigger: 'created' });
+      if (billingAutomation?.owner) booking = billingAutomation.owner;
+    } catch (error) {
+      console.error('[builder/bookings/waitlist/promote] billing automation failed:', error);
+    }
 
     const waitlist = timestamped({
       ...existing,

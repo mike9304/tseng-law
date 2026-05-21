@@ -114,16 +114,18 @@ export function normalizeBuilderDynamicTemplateDraftState(
 
 export async function readBuilderDynamicTemplateDraft(
   templateId: BuilderDynamicTemplateId,
-  localeInput: string | null | undefined
+  localeInput: string | null | undefined,
+  previewRecordId?: string | null
 ): Promise<BuilderDynamicTemplateDraftReadResult> {
-  return readBuilderDynamicTemplateSnapshot('draft', templateId, localeInput);
+  return readBuilderDynamicTemplateSnapshot('draft', templateId, localeInput, previewRecordId);
 }
 
 export async function readBuilderDynamicTemplatePublished(
   templateId: BuilderDynamicTemplateId,
-  localeInput: string | null | undefined
+  localeInput: string | null | undefined,
+  previewRecordId?: string | null
 ): Promise<BuilderDynamicTemplateDraftReadResult> {
-  return readBuilderDynamicTemplateSnapshot('published', templateId, localeInput);
+  return readBuilderDynamicTemplateSnapshot('published', templateId, localeInput, previewRecordId);
 }
 
 export async function readBuilderDynamicTemplatePublishedBlockVisibility(
@@ -149,12 +151,17 @@ export function isBuilderDynamicTemplateBlockVisible(
 export async function readBuilderDynamicTemplateSnapshot(
   kind: BuilderDynamicTemplateSnapshotKind,
   templateId: BuilderDynamicTemplateId,
-  localeInput: string | null | undefined
+  localeInput: string | null | undefined,
+  previewRecordId?: string | null
 ): Promise<BuilderDynamicTemplateDraftReadResult> {
   const locale = normalizeLocale(localeInput ?? undefined);
-  const detail = readBuilderDynamicTemplateDetail(templateId, locale);
   const store = resolveBuilderDynamicTemplateDraftStore();
   const raw = await store.read(getBuilderDynamicTemplateSnapshotPath(templateId, locale, kind));
+  const detail = readBuilderDynamicTemplateDetail(
+    templateId,
+    locale,
+    parseBuilderDynamicTemplateDraftSelectedRecordId(raw) ?? previewRecordId
+  );
 
   if (!raw) {
     return {
@@ -184,9 +191,17 @@ export async function writeBuilderDynamicTemplateDraft(
   input: BuilderDynamicTemplateDraftWriteInput
 ): Promise<BuilderDynamicTemplateDraftWriteResult> {
   const locale = normalizeLocale(input.locale);
-  const detail = readBuilderDynamicTemplateDetail(input.templateId, locale);
+  const detail = readBuilderDynamicTemplateDetail(
+    input.templateId,
+    locale,
+    extractBuilderDynamicTemplateDraftSelectedRecordId(input.state)
+  );
   const store = resolveBuilderDynamicTemplateDraftStore();
-  const current = await readBuilderDynamicTemplateDraft(input.templateId, locale);
+  const current = await readBuilderDynamicTemplateDraft(
+    input.templateId,
+    locale,
+    extractBuilderDynamicTemplateDraftSelectedRecordId(input.state)
+  );
   const snapshot: BuilderDynamicTemplateDraftSnapshot = {
     version: 1,
     templateId: input.templateId,
@@ -304,6 +319,27 @@ function parseBuilderDynamicTemplateDraftSnapshot(
   } catch {
     return null;
   }
+}
+
+function parseBuilderDynamicTemplateDraftSelectedRecordId(raw: string | null): string | null {
+  if (!raw) return null;
+
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+    if (!isPlainObject(parsed)) return null;
+    return extractBuilderDynamicTemplateDraftSelectedRecordId(parsed.state);
+  } catch {
+    return null;
+  }
+}
+
+function extractBuilderDynamicTemplateDraftSelectedRecordId(input: unknown): string | null {
+  if (!isPlainObject(input) || typeof input.selectedRecordId !== 'string') {
+    return null;
+  }
+
+  const selectedRecordId = input.selectedRecordId.trim();
+  return selectedRecordId || null;
 }
 
 function resolveBuilderDynamicTemplateDraftStore(): BuilderDynamicTemplateDraftStore {

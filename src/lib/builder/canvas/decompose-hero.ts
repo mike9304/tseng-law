@@ -9,7 +9,7 @@ import {
   createHomeTextNode,
 } from './decompose-home-shared';
 
-const HERO_ROOT_HEIGHT = 820;
+const HERO_ROOT_HEIGHT = 1020;
 
 export const HERO_SECTION_ROOT_HEIGHT = HERO_ROOT_HEIGHT;
 

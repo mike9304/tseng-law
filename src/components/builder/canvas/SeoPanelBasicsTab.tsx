@@ -51,7 +51,7 @@ interface SeoPanelBasicsTabProps {
 }
 
 function counterColor(length: number, min: number, max: number): string {
-  if (length === 0) return '#dc2626';
+  if (length === 0) return '#94a3b8';
   if (length < min || length > max) return '#d97706';
   return '#16a34a';
 }
@@ -124,7 +124,12 @@ export function SeoPanelBasicsTab({
               checked={createRedirect}
               onChange={(event) => onChangeCreateRedirect(event.target.checked)}
             />
-            <span><strong>301 redirect 생성</strong><br />저장 시 기존 URL /{locale}/{page.slug}에서 새 URL로 이동 규칙을 추가합니다.</span>
+            <span>
+              <strong>301 redirect 생성</strong><br />
+              저장 시 기존 URL /{locale}/{page.slug}에서 새 URL로 이동 규칙을 추가합니다.
+              <br />
+              기존 redirect 규칙이 같은 URL을 쓰면 SEO는 저장되고 redirect만 건너뜁니다.
+            </span>
           </label>
         ) : null}
 

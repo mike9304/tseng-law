@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import { formatDateTimeInTimezone } from '@/lib/builder/bookings/timezone';
 import styles from './BookingsAdmin.module.css';
 
 type ManagePayload = {
@@ -11,9 +12,25 @@ type ManagePayload = {
     status: string;
     customer: { name: string; email: string; phone?: string; notes?: string };
     cancellationReason?: string;
+    customerTimezone?: string;
   };
   service: { name: string; durationMinutes: number; meetingMode?: string } | null;
   staff: { name: string; staffId: string } | null;
+  policy: {
+    name: string;
+    description?: string;
+    hoursUntilStart: number;
+    canCancel: boolean;
+    canReschedule: boolean;
+    cancelHoursBefore: number;
+    rescheduleHoursBefore: number;
+    fullRefundHoursBefore: number;
+    partialRefundHoursBefore: number;
+    partialRefundPercent: number;
+    refundDecision: 'full' | 'partial' | 'none';
+    cancelBlockedReason?: string;
+    rescheduleBlockedReason?: string;
+  };
 };
 
 function toLocalInputValue(iso: string): string {
@@ -26,8 +43,14 @@ function localInputToIso(value: string): string {
   return new Date(value).toISOString();
 }
 
-function displayDate(iso: string): string {
-  return new Date(iso).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' });
+function displayDate(iso: string, timezone?: string): string {
+  return formatDateTimeInTimezone(iso, [], timezone || Intl.DateTimeFormat().resolvedOptions().timeZone);
+}
+
+function refundLabel(policy: ManagePayload['policy']): string {
+  if (policy.refundDecision === 'full') return 'Full refund available if you cancel now.';
+  if (policy.refundDecision === 'partial') return `${policy.partialRefundPercent}% refund available if you cancel now.`;
+  return 'No automatic refund is available if you cancel now.';
 }
 
 export default function BookingManageClient({ token }: { token: string }) {
@@ -70,6 +93,7 @@ export default function BookingManageClient({ token }: { token: string }) {
       setPayload((current) => current ? { ...current, booking: data.booking! } : null);
       setStartAt(toLocalInputValue(data.booking.startAt));
       setMessage(successMessage);
+      await refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Booking update failed');
     } finally {
@@ -94,21 +118,40 @@ export default function BookingManageClient({ token }: { token: string }) {
                   <span className={styles.statusPill} data-booking-status={payload.booking.status}>{payload.booking.status}</span>
                   <span className={styles.chip}>{payload.service?.meetingMode || 'in-person'}</span>
                 </div>
-                <p><strong>Time:</strong> {displayDate(payload.booking.startAt)}</p>
+                <p data-booking-manage-timezone-summary="true"><strong>Time:</strong> <span data-booking-manage-customer-time="true">{displayDate(payload.booking.startAt, payload.booking.customerTimezone)}</span></p>
+                {payload.booking.customerTimezone ? <p><strong>Timezone:</strong> {payload.booking.customerTimezone}</p> : null}
                 <p><strong>Staff:</strong> {payload.staff?.name || '-'}</p>
                 <p><strong>Name:</strong> {payload.booking.customer.name}</p>
                 <p><strong>Email:</strong> {payload.booking.customer.email}</p>
                 {payload.booking.cancellationReason ? <p><strong>Reason:</strong> {payload.booking.cancellationReason}</p> : null}
               </div>
+              <div className={`${styles.panelCompact} ${styles.fieldFull}`} data-booking-manage-policy="true">
+                <h2 className={styles.cardTitle}>Policy</h2>
+                <div className={styles.metaRow}>
+                  <span className={styles.chip}>{payload.policy.name}</span>
+                  <span className={styles.chip}>{payload.policy.hoursUntilStart}h until start</span>
+                  <span className={styles.chip} data-booking-policy-cancel={payload.policy.canCancel ? 'allowed' : 'blocked'}>
+                    {payload.policy.canCancel ? 'Cancel allowed' : 'Cancel blocked'}
+                  </span>
+                  <span className={styles.chip} data-booking-policy-reschedule={payload.policy.canReschedule ? 'allowed' : 'blocked'}>
+                    {payload.policy.canReschedule ? 'Reschedule allowed' : 'Reschedule blocked'}
+                  </span>
+                </div>
+                {payload.policy.description ? <p className={styles.muted}>{payload.policy.description}</p> : null}
+                <p className={styles.notice} data-booking-policy-refund={payload.policy.refundDecision}>{refundLabel(payload.policy)}</p>
+                {payload.policy.rescheduleBlockedReason ? <p className={styles.muted}>{payload.policy.rescheduleBlockedReason}</p> : null}
+                {payload.policy.cancelBlockedReason ? <p className={styles.muted}>{payload.policy.cancelBlockedReason}</p> : null}
+              </div>
               <div className={styles.panelCompact}>
                 <h2 className={styles.cardTitle}>Reschedule</h2>
                 <label className={styles.field}>
                   <span className={styles.label}>New start time</span>
-                  <input className={styles.input} disabled={payload.booking.status === 'cancelled'} type="datetime-local" value={startAt} onChange={(event) => setStartAt(event.target.value)} />
+                  <input className={styles.input} disabled={payload.booking.status === 'cancelled' || !payload.policy.canReschedule} type="datetime-local" value={startAt} onChange={(event) => setStartAt(event.target.value)} />
                 </label>
                 <button
                   className={styles.button}
-                  disabled={saving || payload.booking.status === 'cancelled' || !startAt}
+                  disabled={saving || payload.booking.status === 'cancelled' || !payload.policy.canReschedule || !startAt}
+                  data-booking-manage-reschedule={payload.policy.canReschedule ? 'enabled' : 'disabled'}
                   onClick={() => updateBooking({ action: 'reschedule', startAt: localInputToIso(startAt) }, 'Booking rescheduled.')}
                   type="button"
                 >
@@ -119,11 +162,12 @@ export default function BookingManageClient({ token }: { token: string }) {
                 <h2 className={styles.cardTitle}>Cancel booking</h2>
                 <label className={styles.field}>
                   <span className={styles.label}>Reason</span>
-                  <textarea className={styles.textarea} disabled={payload.booking.status === 'cancelled'} value={reason} onChange={(event) => setReason(event.target.value)} />
+                  <textarea className={styles.textarea} disabled={payload.booking.status === 'cancelled' || !payload.policy.canCancel} value={reason} onChange={(event) => setReason(event.target.value)} />
                 </label>
                 <button
                   className={styles.buttonSecondary}
-                  disabled={saving || payload.booking.status === 'cancelled'}
+                  disabled={saving || payload.booking.status === 'cancelled' || !payload.policy.canCancel}
+                  data-booking-manage-cancel={payload.policy.canCancel ? 'enabled' : 'disabled'}
                   onClick={() => updateBooking({ action: 'cancel', reason }, 'Booking cancelled.')}
                   type="button"
                 >

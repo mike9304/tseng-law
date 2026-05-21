@@ -7,6 +7,9 @@ import {
   appendQueryLog,
   loadSearchIndex,
 } from '@/lib/builder/search/index-storage';
+import { buildSearchIndex } from '@/lib/builder/search/index-builder';
+import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
+import { SEARCH_DOC_KINDS, type SearchDocKind } from '@/lib/builder/search/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -41,15 +44,13 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ ok: true, query, hits: [], total: 0 });
   }
 
-  const index = await loadSearchIndex();
-  if (!index) {
-    return NextResponse.json({ ok: true, query, hits: [], total: 0, indexMissing: true });
-  }
+  const storedIndex = await loadSearchIndex();
+  const index = storedIndex ?? buildSearchIndex(await collectAllSearchDocs('default'));
 
   const kinds = kindsParam
     .split(',')
     .map((s) => s.trim())
-    .filter((s): s is 'page' | 'blog' | 'faq' => s === 'page' || s === 'blog' || s === 'faq');
+    .filter((s): s is SearchDocKind => SEARCH_DOC_KINDS.includes(s as SearchDocKind));
 
   const hits = runSearchQuery({ index, query, locale, limit, kinds: kinds.length > 0 ? kinds : undefined });
 
@@ -67,6 +68,7 @@ export async function GET(request: NextRequest) {
     ok: true,
     query,
     locale,
+    indexMissing: !storedIndex,
     total: hits.length,
     hits: hits.map((h) => ({
       id: h.doc.id,

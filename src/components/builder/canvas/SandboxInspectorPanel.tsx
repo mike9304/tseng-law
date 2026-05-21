@@ -9,12 +9,18 @@ import ContentTab from '@/components/builder/editor/ContentTab';
 import type { LinkPickerContext } from '@/components/builder/editor/LinkPicker';
 import StyleTab from '@/components/builder/editor/StyleTab';
 import { useBuilderCanvasStore } from '@/lib/builder/canvas/store';
-import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type {
+  BuilderCanvasNode,
+  BuilderDataBinding,
+  BuilderDataBindingFieldMap,
+} from '@/lib/builder/canvas/types';
 import {
   resolveOfficeNodeGroup,
   type OfficeNodeGroup,
 } from '@/lib/builder/canvas/office-locations';
 import { resolveBuilderCanvasRepeaterQuickEdit } from '@/lib/builder/canvas/repeater-quick-edit';
+import { getBuilderBindableTarget } from '@/lib/builder/datasets';
+import type { BuilderDatasetTargetId } from '@/lib/builder/types';
 import {
   InspectorNotice,
   InspectorSection,
@@ -26,6 +32,7 @@ import {
   renderCompositeSurfaceEditor,
 } from './SandboxInspectorPanel.widgets';
 import SandboxInspectorLayoutTab from './SandboxInspectorLayoutTab';
+import SandboxDataBindingPanel from './SandboxDataBindingPanel';
 import SandboxInspectorOfficeQuickEdit from './SandboxInspectorOfficeQuickEdit';
 import SandboxInspectorRepeaterQuickEdit from './SandboxInspectorRepeaterQuickEdit';
 import styles from './SandboxPage.module.css';
@@ -34,6 +41,54 @@ function resolveOfficeQuickEdit(nodes: BuilderCanvasNode[], selectedNode: Builde
   if (!selectedNode || selectedNode.kind !== 'map') return null;
   const byId = new Map(nodes.map((node) => [node.id, node]));
   return resolveOfficeNodeGroup(byId, selectedNode);
+}
+
+function createRepeaterChildDataBinding(
+  node: BuilderCanvasNode,
+  targetId: BuilderDatasetTargetId,
+): BuilderDataBinding | null {
+  const target = getBuilderBindableTarget(targetId);
+  const fieldsById = new Map(target.bindableFields.map((field) => [field.fieldId, field] as const));
+  const firstTextField = target.bindableFields.find((field) => (field.valueKind ?? 'text') === 'text')?.fieldId;
+  const firstImageField = target.bindableFields.find((field) => field.valueKind === 'image')?.fieldId;
+  const hrefField = fieldsById.has('href') ? 'href' : target.bindableFields.find((field) => field.valueKind === 'url')?.fieldId;
+  const titleField = fieldsById.has('title') ? 'title' : firstTextField;
+  const summaryField = fieldsById.has('summary')
+    ? 'summary'
+    : fieldsById.has('description')
+      ? 'description'
+      : titleField;
+  const fields: BuilderDataBindingFieldMap = {};
+
+  if (node.kind === 'text') {
+    if (titleField) fields.text = titleField;
+    if (hrefField) fields.href = hrefField;
+  } else if (node.kind === 'heading') {
+    if (titleField) fields.text = titleField;
+  } else if (node.kind === 'image') {
+    if (firstImageField) fields.src = firstImageField;
+    if (titleField) fields.alt = titleField;
+    if (hrefField) fields.href = hrefField;
+  } else if (node.kind === 'button') {
+    if (titleField) fields.label = titleField;
+    if (hrefField) fields.href = hrefField;
+  } else if (node.kind === 'gallery') {
+    if (firstImageField) fields.src = firstImageField;
+    if (titleField) fields.alt = titleField;
+    if (summaryField) fields.caption = summaryField;
+  } else if (node.kind === 'container' && node.content.layoutMode === 'repeater') {
+    if (titleField) fields.title = titleField;
+    if (summaryField) fields.description = summaryField;
+    if (firstImageField) fields.src = firstImageField;
+  }
+
+  return Object.keys(fields).length > 0
+    ? {
+        targetId,
+        recordIndex: 0,
+        fields,
+      }
+    : null;
 }
 
 export default function SandboxInspectorPanel({
@@ -68,6 +123,8 @@ export default function SandboxInspectorPanel({
     setViewport,
     updateResponsiveOverride,
     resetResponsiveOverride,
+    nodesById,
+    childrenMap,
   } = useBuilderCanvasStore();
   const [open, setOpen] = useState(true);
   const [activeTab, setActiveTab] = useState<'layout' | 'style' | 'content' | 'animations' | 'a11y' | 'seo'>('layout');
@@ -89,6 +146,26 @@ export default function SandboxInspectorPanel({
     () => document?.nodes.find((node) => node.id === selectedNodeId) ?? null,
     [document?.nodes, selectedNodeId],
   );
+  const selectedNodeChildren = useMemo(
+    () => selectedNode
+      ? (childrenMap[selectedNode.id] ?? [])
+          .map((childId) => nodesById.get(childId))
+          .filter((node): node is BuilderCanvasNode => Boolean(node))
+      : [],
+    [childrenMap, nodesById, selectedNode],
+  );
+  const selectedNodeParentRepeaterBinding = useMemo(() => {
+    if (!selectedNode?.parentId || !selectedNode.dataBinding) return undefined;
+    const parentNode = nodesById.get(selectedNode.parentId);
+    if (
+      parentNode?.kind !== 'container'
+      || parentNode.content.layoutMode !== 'repeater'
+      || parentNode.dataBinding?.targetId !== selectedNode.dataBinding.targetId
+    ) {
+      return undefined;
+    }
+    return parentNode.dataBinding;
+  }, [nodesById, selectedNode]);
 
   const singleSelection = selectedNodeIds.length === 1 && selectedNode;
   const builderLocale = document?.locale ?? 'ko';
@@ -168,7 +245,7 @@ export default function SandboxInspectorPanel({
       <header className={styles.panelSectionHeader}>
         <div>
           <span>Inspector</span>
-          <strong>{singleSelection ? `${selectedNode.kind} · inspector` : 'Phase 3 shell'}</strong>
+          <strong>{singleSelection ? `${selectedNode.kind}` : '캔버스'}</strong>
         </div>
         <button
           type="button"
@@ -285,7 +362,7 @@ export default function SandboxInspectorPanel({
             <section className={styles.panelSection} key={activeTab} style={{ animation: 'fadeIn 150ms ease' }}>
               <header className={styles.panelSectionHeader}>
                 <span>{activeTab}</span>
-                <strong>{selectedNode.kind} · {selectedNode.id}</strong>
+                <strong>{selectedNode.kind}</strong>
               </header>
               {activeTab === 'layout' ? (
                 <SandboxInspectorLayoutTab
@@ -296,6 +373,7 @@ export default function SandboxInspectorPanel({
                   updateNodeContent={updateNodeContent}
                   updateResponsiveOverride={updateResponsiveOverride}
                   resetResponsiveOverride={resetResponsiveOverride}
+                  nodesById={nodesById}
                 />
               ) : null}
 
@@ -348,6 +426,30 @@ export default function SandboxInspectorPanel({
                       linkPickerContext={linkPickerContext}
                     />
                   ) : null}
+                  <SandboxDataBindingPanel
+                    node={selectedNode}
+                    childNodes={selectedNodeChildren}
+                    childNodeCount={selectedNodeChildren.length}
+                    disabled={selectedNode.locked}
+                    previewRecordIndexOverride={selectedNodeParentRepeaterBinding?.recordIndex}
+                    onApplyRepeaterChildBindings={(targetId) => {
+                      selectedNodeChildren.forEach((childNode) => {
+                        const dataBinding = createRepeaterChildDataBinding(childNode, targetId);
+                        if (!dataBinding) return;
+                        updateNode(childNode.id, (node) => ({ ...node, dataBinding }));
+                      });
+                    }}
+                    onUpdateDataBinding={(dataBinding) => {
+                      updateNode(selectedNode.id, (node) => {
+                        if (!dataBinding) {
+                          const next = { ...node };
+                          delete (next as { dataBinding?: unknown }).dataBinding;
+                          return next;
+                        }
+                        return { ...node, dataBinding };
+                      });
+                    }}
+                  />
                 </>
               ) : null}
 

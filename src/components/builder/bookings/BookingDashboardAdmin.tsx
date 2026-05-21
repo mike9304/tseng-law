@@ -3,6 +3,8 @@
 import { useMemo, useState } from 'react';
 import type {
   Booking,
+  BookingBillingDocumentType,
+  BookingManualPaymentMethod,
   BookingService,
   BookingStatus,
   BookingWaitlistEntry,
@@ -30,6 +32,17 @@ const statusActions: Array<{ value: BookingStatus; label: string }> = [
   { value: 'cancelled', label: 'Cancel' },
 ];
 
+const actionFilterOptions = [
+  { value: 'today', label: 'Today' },
+  { value: 'pending', label: 'Pending' },
+  { value: 'unpaid', label: 'Unpaid' },
+  { value: 'waitlist', label: 'Waitlist' },
+  { value: 'no-show', label: 'No-show' },
+  { value: 'documents', label: 'Needs documents' },
+] as const;
+
+type ActionFilter = (typeof actionFilterOptions)[number]['value'];
+
 function toLocalInputValue(iso: string): string {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return '';
@@ -43,6 +56,62 @@ function localInputToIso(value: string): string {
 
 function formatDateTime(iso: string): string {
   return new Date(iso).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' });
+}
+
+function formatMoney(amount: number, currency: BookingService['priceCurrency'] = 'TWD'): string {
+  const divisor = currency === 'KRW' || currency === 'JPY' ? 1 : 100;
+  return new Intl.NumberFormat('en', { currency, style: 'currency' }).format(amount / divisor);
+}
+
+function documentTypeLabel(type: BookingBillingDocumentType): string {
+  return type === 'invoice' ? 'Invoice' : 'Receipt';
+}
+
+function successfulManualPaymentTotal(booking: Booking): number {
+  return (booking.manualPayments ?? [])
+    .filter((payment) => payment.status === 'succeeded')
+    .reduce((total, payment) => total + payment.amountCents, 0);
+}
+
+function successfulOnlinePaymentTotal(booking: Booking): number {
+  return Math.max(0, booking.onlinePaidAmount ?? 0);
+}
+
+function bookingPaymentAmount(booking: Booking, service?: BookingService): number {
+  return Math.max(0, booking.paymentAmount ?? service?.priceAmount ?? service?.priceTwd ?? 0);
+}
+
+function bookingBalanceDue(booking: Booking, service?: BookingService): number {
+  if (booking.paymentStatus === 'paid' || booking.paymentStatus === 'refunded' || booking.paymentStatus === 'partial-refund') return 0;
+  return Math.max(0, bookingPaymentAmount(booking, service) - successfulOnlinePaymentTotal(booking) - successfulManualPaymentTotal(booking));
+}
+
+function canRecordManualPayment(booking: Booking, service?: BookingService): boolean {
+  return booking.status !== 'cancelled'
+    && booking.paymentStatus !== 'paid'
+    && booking.paymentStatus !== 'refunded'
+    && booking.paymentStatus !== 'partial-refund'
+    && bookingBalanceDue(booking, service) > 0;
+}
+
+function localDateKey(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toLocaleDateString('en-CA');
+}
+
+function isTodayBooking(booking: Booking): boolean {
+  return localDateKey(booking.startAt) === localDateKey(new Date().toISOString());
+}
+
+function needsBillingDocument(booking: Booking, service?: BookingService): boolean {
+  const documents = booking.billingDocuments ?? [];
+  const hasInvoice = documents.some((document) => document.type === 'invoice' && document.status !== 'voided');
+  const hasReceipt = documents.some((document) => document.type === 'receipt' && document.status !== 'voided');
+  const paidLike = booking.paymentStatus === 'paid'
+    || booking.paymentStatus === 'refunded'
+    || booking.paymentStatus === 'partial-refund';
+  return (service?.paymentMode === 'paid' && !hasInvoice) || (paidLike && !hasReceipt);
 }
 
 export default function BookingDashboardAdmin({
@@ -64,6 +133,7 @@ export default function BookingDashboardAdmin({
   const [statusFilter, setStatusFilter] = useState<'' | BookingStatus>('');
   const [staffFilter, setStaffFilter] = useState('');
   const [serviceFilter, setServiceFilter] = useState('');
+  const [actionFilter, setActionFilter] = useState<ActionFilter>('today');
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
   const [selected, setSelected] = useState<Booking | null>(null);
@@ -71,6 +141,14 @@ export default function BookingDashboardAdmin({
   const [draftStartAt, setDraftStartAt] = useState('');
   const [saving, setSaving] = useState(false);
   const [waitlistActionId, setWaitlistActionId] = useState<string | null>(null);
+  const [documentActionId, setDocumentActionId] = useState<string | null>(null);
+  const [manualPaymentActionId, setManualPaymentActionId] = useState<string | null>(null);
+  const [manualPaymentDraft, setManualPaymentDraft] = useState<{
+    amount: string;
+    method: BookingManualPaymentMethod;
+    reference: string;
+    note: string;
+  }>({ amount: '', method: 'bank_transfer', reference: '', note: '' });
   const [error, setError] = useState<string | null>(null);
 
   const serviceById = useMemo(() => new Map(services.map((service) => [service.serviceId, service])), [services]);
@@ -85,6 +163,26 @@ export default function BookingDashboardAdmin({
     () => waitlistEntries.filter((entry) => entry.status === 'active' || entry.status === 'contacted'),
     [waitlistEntries],
   );
+  const actionBookings = useMemo(() => {
+    const byFilter = {
+      today: bookings.filter((booking) => isTodayBooking(booking) && booking.status !== 'cancelled'),
+      pending: bookings.filter((booking) => booking.status === 'pending'),
+      unpaid: bookings.filter((booking) => canRecordManualPayment(booking, serviceById.get(booking.serviceId))),
+      'no-show': bookings.filter((booking) => booking.status === 'no-show'),
+      documents: bookings.filter((booking) => needsBillingDocument(booking, serviceById.get(booking.serviceId))),
+    } satisfies Record<Exclude<ActionFilter, 'waitlist'>, Booking[]>;
+    return byFilter;
+  }, [bookings, serviceById]);
+  const actionCounts = useMemo(() => ({
+    today: actionBookings.today.length,
+    pending: actionBookings.pending.length,
+    unpaid: actionBookings.unpaid.length,
+    waitlist: activeWaitlist.length,
+    'no-show': actionBookings['no-show'].length,
+    documents: actionBookings.documents.length,
+  }), [actionBookings, activeWaitlist.length]);
+  const selectedActionBookings = actionFilter === 'waitlist' ? [] : actionBookings[actionFilter];
+  const selectedActionWaitlist = actionFilter === 'waitlist' ? activeWaitlist : [];
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -102,6 +200,7 @@ export default function BookingDashboardAdmin({
         booking.customer.caseSummary ?? '',
         textForLocale(service?.name, locale),
         textForLocale(member?.name, locale),
+        ...(booking.billingDocuments ?? []).map((document) => `${document.type} ${document.number} ${document.status}`),
       ].join(' ').toLowerCase();
       return (!needle || haystack.includes(needle))
         && (!statusFilter || booking.status === statusFilter)
@@ -113,9 +212,17 @@ export default function BookingDashboardAdmin({
   }, [bookings, fromDate, locale, query, serviceById, serviceFilter, staffById, staffFilter, statusFilter, toDate]);
 
   const openBooking = (booking: Booking) => {
+    const service = serviceById.get(booking.serviceId);
+    const balance = bookingBalanceDue(booking, service);
     setSelected(booking);
     setDraftStaffId(booking.staffId);
     setDraftStartAt(toLocalInputValue(booking.startAt));
+    setManualPaymentDraft({
+      amount: balance > 0 ? (balance / 100).toFixed(2) : '',
+      method: 'bank_transfer',
+      reference: '',
+      note: '',
+    });
     setError(null);
   };
 
@@ -142,6 +249,78 @@ export default function BookingDashboardAdmin({
       setError(err instanceof Error ? err.message : 'Booking update failed');
     } finally {
       setSaving(false);
+    }
+  };
+
+  const issueDocument = async (booking: Booking, type: BookingBillingDocumentType, email = false) => {
+    const actionId = `${booking.bookingId}:${type}:${email ? 'email' : 'issue'}`;
+    setDocumentActionId(actionId);
+    setError(null);
+    try {
+      const res = await fetch(`/api/builder/bookings/${booking.bookingId}/documents`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ type, email }),
+      });
+      if (!res.ok) {
+        const body = (await res.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(body?.error || 'Document action failed');
+      }
+      const data = (await res.json()) as { booking: Booking };
+      setBookings((current) => current.map((item) => item.bookingId === data.booking.bookingId ? data.booking : item));
+      setSelected(data.booking);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Document action failed');
+    } finally {
+      setDocumentActionId(null);
+    }
+  };
+
+  const recordManualPayment = async (booking: Booking) => {
+    const service = serviceById.get(booking.serviceId);
+    const balance = bookingBalanceDue(booking, service);
+    const amountCents = Math.round(Number(manualPaymentDraft.amount) * 100);
+    if (!Number.isFinite(amountCents) || amountCents <= 0) {
+      setError('Enter a valid manual payment amount');
+      return;
+    }
+    if (amountCents > balance) {
+      setError('Manual payment exceeds balance due');
+      return;
+    }
+
+    setManualPaymentActionId(booking.bookingId);
+    setError(null);
+    try {
+      const res = await fetch(`/api/builder/bookings/${booking.bookingId}/manual-payments`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({
+          amountCents,
+          method: manualPaymentDraft.method,
+          reference: manualPaymentDraft.reference,
+          note: manualPaymentDraft.note,
+        }),
+      });
+      const data = (await res.json().catch(() => null)) as { ok?: boolean; booking?: Booking; error?: string } | null;
+      if (!res.ok || !data?.ok || !data.booking) {
+        throw new Error(data?.error || 'Manual payment failed');
+      }
+      setBookings((current) => current.map((item) => item.bookingId === data.booking!.bookingId ? data.booking! : item));
+      setSelected(data.booking);
+      const nextBalance = bookingBalanceDue(data.booking, serviceById.get(data.booking.serviceId));
+      setManualPaymentDraft({
+        amount: nextBalance > 0 ? (nextBalance / 100).toFixed(2) : '',
+        method: manualPaymentDraft.method,
+        reference: '',
+        note: '',
+      });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Manual payment failed');
+    } finally {
+      setManualPaymentActionId(null);
     }
   };
 
@@ -210,6 +389,15 @@ export default function BookingDashboardAdmin({
         .filter((booking) => selectedCustomerProfile.bookingIds.includes(booking.bookingId))
         .sort((a, b) => b.startAt.localeCompare(a.startAt))
     : [];
+  const selectedDocuments = selected?.billingDocuments ?? [];
+  const selectedManualPayments = selected?.manualPayments ?? [];
+  const selectedPaymentAmount = selected ? bookingPaymentAmount(selected, selectedService) : 0;
+  const selectedPaid = selected ? successfulOnlinePaymentTotal(selected) + successfulManualPaymentTotal(selected) : 0;
+  const selectedBalanceDue = selected ? bookingBalanceDue(selected, selectedService) : 0;
+  const selectedManualPaymentAllowed = selected ? canRecordManualPayment(selected, selectedService) : false;
+  const selectedReceiptAllowed = selected?.paymentStatus === 'paid'
+    || selected?.paymentStatus === 'refunded'
+    || selected?.paymentStatus === 'partial-refund';
 
   return (
     <>
@@ -283,6 +471,86 @@ export default function BookingDashboardAdmin({
         </div>
       </section>
 
+      <section className={styles.actionQueue} data-booking-action-queue="true">
+        <div className={styles.sectionHeader}>
+          <div>
+            <h2 className={styles.cardTitle}>Today needs attention</h2>
+            <p className={styles.muted}>Fast access to booking operations that usually need same-day review.</p>
+          </div>
+          <span className={styles.chip}>{Object.values(actionCounts).reduce((total, count) => total + count, 0)} items</span>
+        </div>
+        <div className={styles.actionFilters} aria-label="Booking action filters">
+          {actionFilterOptions.map((option) => (
+            <button
+              key={option.value}
+              type="button"
+              data-active={actionFilter === option.value}
+              data-booking-action-filter={option.value}
+              onClick={() => setActionFilter(option.value)}
+            >
+              <span>{option.label}</span>
+              <strong>{actionCounts[option.value]}</strong>
+            </button>
+          ))}
+        </div>
+        <div className={styles.actionRows}>
+          {selectedActionBookings.slice(0, 6).map((booking) => {
+            const service = serviceById.get(booking.serviceId);
+            const member = staffById.get(booking.staffId);
+            const balance = bookingBalanceDue(booking, service);
+            return (
+              <article className={styles.actionRow} data-booking-action-row={`booking:${booking.bookingId}`} key={booking.bookingId}>
+                <time>{formatDateTime(booking.startAt)}</time>
+                <div>
+                  <strong>{booking.customer.name}</strong>
+                  <span>{textForLocale(service?.name, locale) || booking.serviceId} · {textForLocale(member?.name, locale) || booking.staffId}</span>
+                </div>
+                <div className={styles.actionBadges}>
+                  <span className={styles.statusPill} data-booking-status={booking.status}>{booking.status}</span>
+                  {balance > 0 ? <span className={styles.chip}>Due {formatMoney(balance, booking.paymentCurrency ?? service?.priceCurrency ?? 'TWD')}</span> : null}
+                  {needsBillingDocument(booking, service) ? <span className={styles.chip}>Docs</span> : null}
+                </div>
+                <button
+                  className={styles.buttonSecondary}
+                  type="button"
+                  data-booking-action-open={`booking:${booking.bookingId}`}
+                  onClick={() => openBooking(booking)}
+                >
+                  Open
+                </button>
+              </article>
+            );
+          })}
+          {selectedActionWaitlist.slice(0, 6).map((entry) => {
+            const service = serviceById.get(entry.serviceId);
+            const member = staffById.get(entry.staffId);
+            return (
+              <article className={styles.actionRow} data-booking-action-row={`waitlist:${entry.waitlistId}`} key={entry.waitlistId}>
+                <time>{entry.requestedDate}</time>
+                <div>
+                  <strong>{entry.customer.name}</strong>
+                  <span>{textForLocale(service?.name, locale) || entry.serviceId} · {textForLocale(member?.name, locale) || entry.staffId}</span>
+                </div>
+                <div className={styles.actionBadges}>
+                  <span className={styles.statusPill} data-waitlist-status={entry.status}>{entry.status}</span>
+                  <span className={styles.chip}>Waitlist</span>
+                </div>
+                <a
+                  className={styles.buttonSecondary}
+                  data-booking-action-open={`waitlist:${entry.waitlistId}`}
+                  href="#booking-waitlist-admin"
+                >
+                  Review
+                </a>
+              </article>
+            );
+          })}
+          {selectedActionBookings.length === 0 && selectedActionWaitlist.length === 0 ? (
+            <p className={styles.muted}>No booking actions for this filter.</p>
+          ) : null}
+        </div>
+      </section>
+
       <section className={styles.panel}>
         <div className={styles.filterBar}>
           <label className={styles.field}>
@@ -329,6 +597,7 @@ export default function BookingDashboardAdmin({
                 <th>Staff</th>
                 <th>Status</th>
                 <th>Payment</th>
+                <th>Documents</th>
               </tr>
             </thead>
             <tbody>
@@ -351,6 +620,7 @@ export default function BookingDashboardAdmin({
                     <td>{textForLocale(member?.name, locale) || booking.staffId}</td>
                     <td><span className={styles.statusPill} data-booking-status={booking.status}>{booking.status}</span></td>
                     <td>{booking.paymentStatus || (service?.paymentMode === 'paid' ? 'unpaid' : 'free')}</td>
+                    <td>{booking.billingDocuments?.length ? `${booking.billingDocuments.length} docs` : '-'}</td>
                   </tr>
                 );
               })}
@@ -360,7 +630,7 @@ export default function BookingDashboardAdmin({
         </div>
       </section>
 
-      <section className={styles.panel} data-booking-waitlist-admin="true">
+      <section className={styles.panel} data-booking-waitlist-admin="true" id="booking-waitlist-admin">
         <div className={styles.sectionHeader}>
           <div>
             <h2 className={styles.cardTitle}>Waitlist</h2>
@@ -452,7 +722,14 @@ export default function BookingDashboardAdmin({
                 <h2 className={styles.modalTitle}>{selected.customer.name}</h2>
                 <p className={styles.muted}>{textForLocale(selectedService?.name, locale) || selected.serviceId} · {textForLocale(selectedStaff?.name, locale) || selected.staffId}</p>
               </div>
-              <button className={styles.buttonSecondary} type="button" onClick={() => setSelected(null)}>Close</button>
+              <button
+                className={styles.buttonSecondary}
+                type="button"
+                data-booking-detail-close={selected.bookingId}
+                onClick={() => setSelected(null)}
+              >
+                Close
+              </button>
             </div>
             {error ? <p className={styles.error}>{error}</p> : null}
             <div className={styles.metaRow}>
@@ -495,6 +772,178 @@ export default function BookingDashboardAdmin({
                 >
                   {saving ? 'Saving...' : 'Save reschedule'}
                 </button>
+              </div>
+            </div>
+            <div className={styles.manualPayments} data-booking-manual-payments={selected.bookingId}>
+              <div className={styles.documentHead}>
+                <div>
+                  <h3 className={styles.cardTitle}>Manual payments</h3>
+                  <p className={styles.muted}>Record offline payments and keep booking invoice balances current.</p>
+                </div>
+                <div className={styles.paymentSummary} data-booking-manual-payment-summary={selected.bookingId}>
+                  <span>Total {formatMoney(selectedPaymentAmount, selected.paymentCurrency ?? selectedService?.priceCurrency ?? 'TWD')}</span>
+                  <span>Paid {formatMoney(selectedPaid, selected.paymentCurrency ?? selectedService?.priceCurrency ?? 'TWD')}</span>
+                  <strong>Due {formatMoney(selectedBalanceDue, selected.paymentCurrency ?? selectedService?.priceCurrency ?? 'TWD')}</strong>
+                </div>
+              </div>
+              {selectedManualPayments.length > 0 ? (
+                <div className={styles.manualPaymentRows}>
+                  {selectedManualPayments.map((payment) => (
+                    <article key={payment.paymentId} data-booking-manual-payment-row={payment.paymentId}>
+                      <div>
+                        <strong>{formatMoney(payment.amountCents, payment.currency)}</strong>
+                        <span>{payment.method.replace(/_/g, ' ')} · {payment.status} · {formatDateTime(payment.createdAt)}</span>
+                      </div>
+                      <div>
+                        <span>{payment.reference || 'No reference'}</span>
+                        <span>{payment.note || ''}</span>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <p className={styles.muted}>No manual payments recorded.</p>
+              )}
+              <div className={styles.manualPaymentForm} data-booking-manual-payment-form={selected.bookingId}>
+                <label className={styles.field}>
+                  <span className={styles.label}>Amount</span>
+                  <input
+                    className={styles.input}
+                    value={manualPaymentDraft.amount}
+                    inputMode="decimal"
+                    data-booking-manual-payment-amount={selected.bookingId}
+                    disabled={!selectedManualPaymentAllowed || manualPaymentActionId === selected.bookingId}
+                    onChange={(event) => setManualPaymentDraft((current) => ({ ...current, amount: event.target.value }))}
+                  />
+                </label>
+                <label className={styles.field}>
+                  <span className={styles.label}>Method</span>
+                  <select
+                    className={styles.select}
+                    value={manualPaymentDraft.method}
+                    data-booking-manual-payment-method={selected.bookingId}
+                    disabled={!selectedManualPaymentAllowed || manualPaymentActionId === selected.bookingId}
+                    onChange={(event) => setManualPaymentDraft((current) => ({
+                      ...current,
+                      method: event.target.value as BookingManualPaymentMethod,
+                    }))}
+                  >
+                    <option value="bank_transfer">Bank transfer</option>
+                    <option value="cash">Cash</option>
+                    <option value="check">Check</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+                <label className={styles.field}>
+                  <span className={styles.label}>Reference</span>
+                  <input
+                    className={styles.input}
+                    value={manualPaymentDraft.reference}
+                    data-booking-manual-payment-reference={selected.bookingId}
+                    disabled={!selectedManualPaymentAllowed || manualPaymentActionId === selected.bookingId}
+                    onChange={(event) => setManualPaymentDraft((current) => ({ ...current, reference: event.target.value }))}
+                  />
+                </label>
+                <label className={`${styles.field} ${styles.fieldFull}`}>
+                  <span className={styles.label}>Note</span>
+                  <textarea
+                    className={styles.textarea}
+                    value={manualPaymentDraft.note}
+                    rows={2}
+                    maxLength={500}
+                    data-booking-manual-payment-note={selected.bookingId}
+                    disabled={!selectedManualPaymentAllowed || manualPaymentActionId === selected.bookingId}
+                    onChange={(event) => setManualPaymentDraft((current) => ({ ...current, note: event.target.value }))}
+                  />
+                </label>
+                <button
+                  className={styles.button}
+                  type="button"
+                  disabled={!selectedManualPaymentAllowed || manualPaymentActionId === selected.bookingId}
+                  onClick={() => recordManualPayment(selected)}
+                  data-booking-manual-payment-submit={selected.bookingId}
+                >
+                  {manualPaymentActionId === selected.bookingId ? 'Recording...' : 'Record manual payment'}
+                </button>
+              </div>
+            </div>
+            <div className={styles.documents} data-booking-documents={selected.bookingId}>
+              <div className={styles.documentHead}>
+                <div>
+                  <h3 className={styles.cardTitle}>Billing documents</h3>
+                  <p className={styles.muted}>Issue snapshot invoices and receipts for this booking.</p>
+                </div>
+                <div className={styles.documentActions}>
+                  <button
+                    className={styles.buttonSecondary}
+                    data-booking-document-issue={`${selected.bookingId}:invoice`}
+                    disabled={Boolean(documentActionId)}
+                    type="button"
+                    onClick={() => issueDocument(selected, 'invoice')}
+                  >
+                    Issue invoice
+                  </button>
+                  <button
+                    className={styles.buttonSecondary}
+                    data-booking-document-email={`${selected.bookingId}:invoice`}
+                    disabled={Boolean(documentActionId)}
+                    type="button"
+                    onClick={() => issueDocument(selected, 'invoice', true)}
+                  >
+                    Email invoice
+                  </button>
+                  <button
+                    className={styles.buttonSecondary}
+                    data-booking-document-issue={`${selected.bookingId}:receipt`}
+                    disabled={Boolean(documentActionId) || !selectedReceiptAllowed}
+                    type="button"
+                    onClick={() => issueDocument(selected, 'receipt')}
+                  >
+                    Issue receipt
+                  </button>
+                  <button
+                    className={styles.buttonSecondary}
+                    data-booking-document-email={`${selected.bookingId}:receipt`}
+                    disabled={Boolean(documentActionId) || !selectedReceiptAllowed}
+                    type="button"
+                    onClick={() => issueDocument(selected, 'receipt', true)}
+                  >
+                    Email receipt
+                  </button>
+                  <a className={styles.buttonSecondary} href={`/${locale}/admin-builder/commerce/documents`}>
+                    All documents
+                  </a>
+                </div>
+              </div>
+              <div className={styles.documentList}>
+                {selectedDocuments.length === 0 ? <p className={styles.muted}>No billing documents yet.</p> : null}
+                {selectedDocuments.map((document) => (
+                  <div
+                    className={styles.documentItem}
+                    data-booking-document-row={`${selected.bookingId}:${document.type}`}
+                    data-booking-document-status={document.status}
+                    key={document.documentId}
+                  >
+                    <div>
+                      <strong>{documentTypeLabel(document.type)} {document.number}</strong>
+                      <span>{document.status}{document.emailedAt ? ` · emailed ${formatDateTime(document.emailedAt)}` : ''}</span>
+                    </div>
+                    <div>
+                      <span>{formatMoney(document.amount, document.currency)}</span>
+                      <span>Due {formatMoney(document.balanceDue, document.currency)}</span>
+                    </div>
+                    <div>
+                      <span>Refunded {formatMoney(document.refundedAmount, document.currency)}</span>
+                      <span>{document.recipientEmail}</span>
+                      <a
+                        href={`/api/builder/billing-documents/booking/${encodeURIComponent(selected.bookingId)}/${encodeURIComponent(document.documentId)}/download`}
+                        data-booking-document-download={`${selected.bookingId}:${document.documentId}`}
+                      >
+                        Download PDF
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
             <div className={styles.timeline} data-booking-timeline="true">

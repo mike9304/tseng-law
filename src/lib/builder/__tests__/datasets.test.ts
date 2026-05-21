@@ -43,6 +43,19 @@ describe('builder datasets', () => {
       'home.insights.feed',
       'home.services.list',
     ]);
+    expect(getBuilderBindableTargets('home')[0]?.bindableFields.map((field) => field.fieldId)).toEqual(
+      expect.arrayContaining(['title', 'featuredImage', 'href'])
+    );
+    expect(getBuilderBindableTargets('home')[0]?.bindableFields).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ fieldId: 'title', valueKind: 'text' }),
+        expect.objectContaining({ fieldId: 'featuredImage', valueKind: 'image' }),
+        expect.objectContaining({ fieldId: 'href', valueKind: 'url' }),
+      ])
+    );
+    expect(getBuilderBindableTargets('home')[1]?.bindableFields.map((field) => field.fieldId)).toEqual(
+      expect.arrayContaining(['title', 'description', 'href'])
+    );
 
     expect(createDefaultBuilderPageDatasets('home')).toMatchObject([
       {
@@ -79,7 +92,7 @@ describe('builder datasets', () => {
       '민사소송·손해배상',
       '가사소송',
     ]);
-    expect(items[0]?.href).toBe('/ko/services#investment');
+    expect(items[0]?.href).toBe('/ko/services/investment');
     expect(items[0]?.relatedColumns?.[0]).toEqual({
       slug: 'taiwan-company-establishment-basics',
       title: '대만 회사설립 기초편',

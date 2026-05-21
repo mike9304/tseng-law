@@ -1,0 +1,267 @@
+.page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.header span {
+  color: #2d5c48;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  margin: 4px 0;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.headerActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.headerActions a,
+.headerActions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  border: 1px solid rgba(45, 92, 72, 0.2);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #234938;
+  padding: 0 12px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.headerActions button:last-child {
+  border-color: #2d5c48;
+  background: #2d5c48;
+  color: #ffffff;
+}
+
+.headerActions button:disabled {
+  border-color: #cbd5e1;
+  background: #e2e8f0;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.kpis article,
+.policy,
+.settings,
+.currencyCard {
+  border: 1px solid #dbe4ee;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.05);
+}
+
+.kpis article {
+  padding: 12px;
+}
+
+.kpis strong {
+  display: block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.kpis span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.notice {
+  min-height: 20px;
+  margin: 0 0 12px;
+  color: #2563eb;
+  font-size: 0.82rem;
+}
+
+.policy {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 14px;
+}
+
+.policy strong {
+  color: #1d4ed8;
+  font-size: 0.92rem;
+}
+
+.policy span {
+  color: #475569;
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 14px;
+}
+
+.settings label,
+.currencyCard label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.settings label span,
+.currencyCard label span {
+  color: #334155;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.settings select,
+.currencyCard input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 9px 10px;
+  font: inherit;
+}
+
+.currencyCard input:disabled {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.currencyCard {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.currencyCard header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.currencyCard header div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.currencyCard header strong {
+  font-size: 1.35rem;
+}
+
+.currencyCard header span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.switch {
+  display: inline-grid !important;
+  grid-template-columns: 18px minmax(0, auto);
+  align-items: center;
+  color: #234938;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.switch input {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+}
+
+.currencyCard[data-commerce-currency-rate-state='missing'] {
+  border-color: rgba(180, 83, 9, 0.28);
+}
+
+.currencyCard[data-commerce-currency-rate-state='ready'],
+.currencyCard[data-commerce-currency-rate-state='base'] {
+  border-color: rgba(15, 118, 110, 0.22);
+}
+
+@media (max-width: 940px) {
+  .header {
+    display: grid;
+    align-items: start;
+  }
+
+  .headerActions {
+    justify-content: flex-start;
+  }
+
+  .matrix,
+  .settings {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px;
+  }
+
+  .headerActions {
+    justify-content: stretch;
+  }
+
+  .headerActions a,
+  .headerActions button {
+    flex: 1 1 130px;
+  }
+
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .currencyCard header {
+    display: grid;
+  }
+}

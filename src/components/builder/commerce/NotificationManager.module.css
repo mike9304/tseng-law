@@ -1,0 +1,221 @@
+.page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 4px 0;
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.header p,
+.header span,
+.notice,
+.list small {
+  color: #64748b;
+}
+
+.headerActions,
+.kpis,
+.settings,
+.templates,
+.grid,
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.headerActions {
+  grid-template-columns: repeat(auto-fit, minmax(112px, auto));
+  align-items: center;
+}
+
+.headerActions a,
+.headerActions button {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: #fff;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.headerActions button {
+  cursor: pointer;
+}
+
+.kpis {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.kpis article,
+.settings,
+.templates article,
+.list article {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.kpis article {
+  padding: 16px;
+}
+
+.kpis strong {
+  display: block;
+  font-size: 28px;
+}
+
+.notice {
+  min-height: 24px;
+  margin: 0 0 16px;
+}
+
+.settings {
+  grid-template-columns: 120px 1fr 1fr 160px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.paymentPolicy {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+}
+
+.paymentPolicy div,
+.paymentPolicy label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.paymentPolicy label {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.paymentPolicy summary {
+  cursor: pointer;
+  color: #0f172a;
+  font-size: 0.86rem;
+  font-weight: 900;
+  list-style-position: inside;
+}
+
+.paymentPolicy span,
+.paymentPolicy small {
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.paymentPolicy label span {
+  color: #0f172a;
+}
+
+.paymentPolicy small {
+  display: block;
+}
+
+.settings label,
+.templates label {
+  display: grid;
+  gap: 6px;
+}
+
+.settings input:not([type="checkbox"]),
+.templates input:not([type="checkbox"]) {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 9px 10px;
+}
+
+.templates {
+  margin-bottom: 20px;
+}
+
+.templates article {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+}
+
+.templates label {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.grid h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.list article {
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+}
+
+.list strong,
+.list span,
+.list small {
+  overflow-wrap: anywhere;
+}
+
+.eventSummary {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  padding: 5px 8px;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 20px;
+  }
+
+  .header,
+  .grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .headerActions,
+  .kpis,
+  .settings,
+  .templates article {
+    grid-template-columns: 1fr;
+  }
+}

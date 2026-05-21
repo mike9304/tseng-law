@@ -11,6 +11,14 @@ import type { Locale } from '@/lib/locales';
 import type { TranslationEntry } from '@/lib/builder/translations/types';
 import type { BuilderCmsCollection } from '@/lib/builder/cms-types';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
+import type {
+  BuilderDatasetCollectionId,
+  BuilderDatasetTargetId,
+  BuilderPageDatasetFilter,
+  BuilderPageDatasetSort,
+} from '@/lib/builder/types';
+import type { BuilderInstalledApp, BuilderUninstalledAppArchive } from '@/lib/builder/apps/types';
+import type { MemberRole } from '@/lib/builder/members/members-engine';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
 import {
   DEFAULT_DARK_THEME_COLORS,
@@ -28,6 +36,31 @@ export interface BuilderPageLifecycleMeta {
   activeDocumentFamily: BuilderPageDocumentFamily;
   publishBackend: 'builder-snapshot';
   sceneStatus: 'derived-only' | 'seeded' | 'promoted';
+}
+
+export interface BuilderDynamicListPageMeta {
+  kind: 'collection-list-v1';
+  collectionId: BuilderDatasetCollectionId;
+  targetId: BuilderDatasetTargetId;
+  filters: BuilderPageDatasetFilter[];
+  sort: BuilderPageDatasetSort[];
+  limit?: number;
+  createdAt: string;
+}
+
+export interface BuilderDynamicItemPageMeta {
+  kind: 'collection-item-v1';
+  collectionId: BuilderDatasetCollectionId;
+  targetId: BuilderDatasetTargetId;
+  slugField: string;
+  defaultRecordSlug: string;
+  createdAt: string;
+}
+
+export interface BuilderMemberAccessMeta {
+  requireLogin: boolean;
+  allowedRoles?: MemberRole[];
+  redirectPath?: string;
 }
 
 // P4-17: nav label 은 locale 별 다국어 지원
@@ -48,6 +81,8 @@ export interface BuilderPageMeta {
   documentKind?: 'section-snapshot-v1' | 'canvas-scene-vnext';
   lifecycle?: BuilderPageLifecycleMeta;
   linkedPageIds?: Partial<Record<Locale, string>>;
+  dynamicList?: BuilderDynamicListPageMeta;
+  dynamicItem?: BuilderDynamicItemPageMeta;
   seo?: BuilderSeoMetadata;
   createdAt: string;
   updatedAt: string;
@@ -59,6 +94,7 @@ export interface BuilderPageMeta {
   isHomePage?: boolean;
   noIndex?: boolean;
   password?: string;
+  memberAccess?: BuilderMemberAccessMeta;
 }
 
 export interface BuilderSeoMetadata {
@@ -387,6 +423,8 @@ export interface BuilderSiteDocument {
   cmsCollections?: BuilderCmsCollection[];
   sectionLibrary?: SavedSection[];
   redirects?: SiteRedirect[];
+  installedApps?: BuilderInstalledApp[];
+  uninstalledApps?: BuilderUninstalledAppArchive[];
   createdAt: string;
   updatedAt: string;
 }

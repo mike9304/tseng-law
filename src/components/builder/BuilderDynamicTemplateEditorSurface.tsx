@@ -14,17 +14,24 @@ export default function BuilderDynamicTemplateEditorSurface({
   draft,
   published,
   locale,
+  initialPreviewRecordId,
 }: {
   detail: BuilderDynamicTemplateDetail;
   draft: BuilderDynamicTemplateDraftReadResult;
   published: BuilderDynamicTemplateDraftReadResult;
   locale: Locale;
+  initialPreviewRecordId?: string | null;
 }) {
   const initialDraftState = draft.snapshot.state;
+  const initialSelectedRecordId = resolveInitialPreviewRecordId(
+    detail,
+    initialDraftState.selectedRecordId,
+    initialPreviewRecordId
+  );
   const [visibleBlockIds, setVisibleBlockIds] = useState(
     () => new Set(initialDraftState.visibleBlockIds)
   );
-  const [selectedRecordId, setSelectedRecordId] = useState(initialDraftState.selectedRecordId ?? '');
+  const [selectedRecordId, setSelectedRecordId] = useState(() => initialSelectedRecordId);
   const [draftMeta, setDraftMeta] = useState(() => ({
     persisted: draft.persisted,
     revision: draft.snapshot.revision,
@@ -42,10 +49,15 @@ export default function BuilderDynamicTemplateEditorSurface({
   const [saveError, setSaveError] = useState<string | null>(null);
   const [publishStatus, setPublishStatus] = useState<'idle' | 'publishing' | 'published' | 'error'>('idle');
   const [publishError, setPublishError] = useState<string | null>(null);
+  const requestedPreviewRecordId = initialPreviewRecordId?.trim() || null;
+  const requestedPreviewRecordMissing = Boolean(
+    requestedPreviewRecordId &&
+      !detail.previewRecords.some((record) => record.recordId === requestedPreviewRecordId)
+  );
 
   useEffect(() => {
     setVisibleBlockIds(new Set(draft.snapshot.state.visibleBlockIds));
-    setSelectedRecordId(draft.snapshot.state.selectedRecordId ?? '');
+    setSelectedRecordId(initialSelectedRecordId);
     setDraftMeta({
       persisted: draft.persisted,
       revision: draft.snapshot.revision,
@@ -70,6 +82,7 @@ export default function BuilderDynamicTemplateEditorSurface({
     draft.snapshot.savedAt,
     draft.snapshot.state,
     draft.snapshot.updatedBy,
+    initialSelectedRecordId,
     locale,
     published.persisted,
     published.snapshot.revision,
@@ -278,35 +291,87 @@ export default function BuilderDynamicTemplateEditorSurface({
       <section className="builder-preview-inspector-card">
         <h2>Preview record</h2>
         {detail.previewRecords.length > 0 ? (
+          <>
+            {requestedPreviewRecordMissing ? (
+              <div
+                className="builder-preview-server-alert builder-preview-server-alert--needs-review"
+                data-builder-dynamic-template-missing-record="true"
+              >
+                <strong>Preview record not found</strong>
+                <p>
+                  Requested record {requestedPreviewRecordId} is not available in this collection preview.
+                  {selectedRecord ? ` Showing ${selectedRecord.recordId} instead.` : ' No fallback record is available.'}
+                </p>
+              </div>
+            ) : null}
+            <div className="builder-dashboard-page-list">
+              {detail.previewRecords.map((record) => (
+                <button
+                  key={record.recordId}
+                  type="button"
+                  className={`builder-dashboard-page-card${
+                    record.recordId === selectedRecord?.recordId ? ' is-active' : ''
+                  }`}
+                  data-builder-dynamic-template-record={record.recordId}
+                  onClick={() => setSelectedRecordId(record.recordId)}
+                >
+                  <div className="builder-dashboard-page-head">
+                    <div>
+                      <strong>{record.primaryLabel}</strong>
+                      <span>{record.secondaryLabel}</span>
+                    </div>
+                    <span className="builder-stage-pill">
+                      {record.recordId === selectedRecord?.recordId ? 'Selected' : 'Record'}
+                    </span>
+                  </div>
+                  <div className="builder-dashboard-page-meta">
+                    <span>{record.recordId}</span>
+                    <span>{record.routePath}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </>
+        ) : (
+          <p>No record sample is required for this collection-level template.</p>
+        )}
+      </section>
+
+      <section className="builder-preview-inspector-card" data-builder-dynamic-template-binding-map="true">
+        <h2>Selected record field map</h2>
+        {selectedRecord ? (
           <div className="builder-dashboard-page-list">
-            {detail.previewRecords.map((record) => (
-              <button
-                key={record.recordId}
-                type="button"
-                className={`builder-dashboard-page-card${
-                  record.recordId === selectedRecord?.recordId ? ' is-active' : ''
-                }`}
-                data-builder-dynamic-template-record={record.recordId}
-                onClick={() => setSelectedRecordId(record.recordId)}
+            {detail.editableBlocks.map((block) => (
+              <article
+                key={block.blockId}
+                className="builder-dashboard-page-card"
+                data-builder-dynamic-template-binding-block={block.blockId}
               >
                 <div className="builder-dashboard-page-head">
                   <div>
-                    <strong>{record.primaryLabel}</strong>
-                    <span>{record.secondaryLabel}</span>
+                    <strong>{block.label}</strong>
+                    <span>{selectedRecord.recordId}</span>
                   </div>
                   <span className="builder-stage-pill">
-                    {record.recordId === selectedRecord?.recordId ? 'Selected' : 'Record'}
+                    {visibleBlockIds.has(block.blockId) ? 'Visible template block' : 'Hidden template block'}
                   </span>
                 </div>
                 <div className="builder-dashboard-page-meta">
-                  <span>{record.recordId}</span>
-                  <span>{record.routePath}</span>
+                  {block.boundFields.map((field) => (
+                    <span
+                      key={field}
+                      className="builder-dashboard-field-value"
+                      data-builder-dynamic-template-binding-field={field}
+                    >
+                      {field}: {resolvePreviewFieldValue(field, selectedRecord, detail)}
+                    </span>
+                  ))}
                 </div>
-              </button>
+              </article>
             ))}
           </div>
         ) : (
-          <p>No record sample is required for this collection-level template.</p>
+          <p>No selected CMS record is available for this template preview.</p>
         )}
       </section>
 
@@ -370,6 +435,37 @@ function resolvePreviewBlockCopy(
   return `${detail.collectionTitle} · ${detail.publicPathPattern}`;
 }
 
+function resolvePreviewFieldValue(
+  field: string,
+  record: BuilderDynamicTemplateDetail['previewRecords'][number],
+  detail: BuilderDynamicTemplateDetail
+) {
+  switch (field) {
+    case 'record.primaryLabel':
+      return record.primaryLabel;
+    case 'record.secondaryLabel':
+      return record.secondaryLabel;
+    case 'record.routePath':
+      return record.routePath;
+    case 'seo.title':
+      return record.seo.title;
+    case 'seo.description':
+      return record.seo.description;
+    case 'seo.canonicalPath':
+      return record.seo.canonicalPath;
+    case 'seo.noIndex':
+      return record.seo.noIndex ? 'true' : 'false';
+    case 'collection.title':
+      return detail.collectionTitle;
+    case 'route.notes':
+      return detail.notes;
+    case 'route.pathPattern':
+      return detail.publicPathPattern;
+    default:
+      return 'Not resolved in preview';
+  }
+}
+
 type DynamicTemplateDraftSaveResponse = {
   ok?: boolean;
   error?: string;
@@ -392,4 +488,20 @@ function serializeDraftState(state: BuilderDynamicTemplateDraftState): string {
     visibleBlockIds: state.visibleBlockIds,
     selectedRecordId: state.selectedRecordId ?? null,
   });
+}
+
+function resolveInitialPreviewRecordId(
+  detail: BuilderDynamicTemplateDetail,
+  draftSelectedRecordId: string | null,
+  initialPreviewRecordId: string | null | undefined
+) {
+  const requestedRecordId = initialPreviewRecordId?.trim();
+  if (
+    requestedRecordId &&
+    detail.previewRecords.some((record) => record.recordId === requestedRecordId)
+  ) {
+    return requestedRecordId;
+  }
+
+  return draftSelectedRecordId ?? '';
 }

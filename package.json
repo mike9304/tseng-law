@@ -15,6 +15,8 @@
     "eval:consultation": "vite-node --root . --config vitest.config.ts scripts/run-consultation-eval.ts",
     "security:builder-routes": "node scripts/assert-builder-route-guards.mjs",
     "smoke:builder": "node scripts/smoke-builder-api.mjs",
+    "qa:agent": "node scripts/run-qa-agent.mjs",
+    "qa:sweep": "node scripts/run-qa-sweep.mjs",
     "qa": "npm run typecheck && npm run lint && npm run test:unit && npm run security:builder-routes",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build -o storybook-static"

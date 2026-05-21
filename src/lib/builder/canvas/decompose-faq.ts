@@ -7,7 +7,9 @@ import {
   createHomeTextNode,
 } from './decompose-home-shared';
 
-const FAQ_ROOT_HEIGHT = 1280;
+const FAQ_ROOT_HEIGHT = 1460;
+const FAQ_CONTAINER_HEIGHT = 1280;
+const FAQ_LIST_HEIGHT = 1080;
 
 export const FAQ_SECTION_ROOT_HEIGHT = FAQ_ROOT_HEIGHT;
 
@@ -38,7 +40,7 @@ export function createFaqDecomposedNodes(
     createHomeContainerNode({
       id: containerId,
       parentId: rootId,
-      rect: { x: 72, y: 88, width: 1136, height: 1104 },
+      rect: { x: 72, y: 88, width: 1136, height: FAQ_CONTAINER_HEIGHT },
       zIndex: 0,
       label: 'home faq container',
       className: 'container',
@@ -65,7 +67,7 @@ export function createFaqDecomposedNodes(
     createHomeContainerNode({
       id: listId,
       parentId: containerId,
-      rect: { x: 0, y: 126, width: 1136, height: 940 },
+      rect: { x: 0, y: 126, width: 1136, height: FAQ_LIST_HEIGHT },
       zIndex: 2,
       label: 'home faq list',
       className: 'faq-list',

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import type { Locale } from '@/lib/locales';
 
 const COLUMNS_PAGE_SIZE = 12;
@@ -11,6 +12,30 @@ const loadMoreLabels = {
   ko: { button: '더 보기', remaining: '개 더 있음' },
   'zh-hant': { button: '載入更多', remaining: ' 篇待載入' },
   en: { button: 'Load more', remaining: ' more available' },
+} as const;
+
+const searchCopy = {
+  ko: {
+    label: '칼럼 검색',
+    placeholder: '제목, 요약, 태그로 검색',
+    submit: '검색',
+    clear: '검색 지우기',
+    resultCount: (n: number) => `${n}개 결과`,
+  },
+  'zh-hant': {
+    label: '搜尋專欄',
+    placeholder: '依標題、摘要或標籤搜尋',
+    submit: '搜尋',
+    clear: '清除搜尋',
+    resultCount: (n: number) => `${n} 篇結果`,
+  },
+  en: {
+    label: 'Search columns',
+    placeholder: 'Search title, summary or tag',
+    submit: 'Search',
+    clear: 'Clear search',
+    resultCount: (n: number) => `${n} result${n === 1 ? '' : 's'}`,
+  },
 } as const;
 
 type ColumnCategory = 'formation' | 'legal' | 'case';
@@ -80,8 +105,29 @@ export default function ColumnsGrid({
   const initialActive = requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case'
     ? requestedCategory
     : 'all';
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [active, setActive] = useState<ColumnCategory | 'all'>(initialActive);
+  const [searchInput, setSearchInput] = useState(requestedQuery);
   const [visibleCount, setVisibleCount] = useState(COLUMNS_PAGE_SIZE);
+  const searchLabels = searchCopy[locale];
+
+  useEffect(() => {
+    setSearchInput(requestedQuery);
+  }, [requestedQuery]);
+
+  const updateSearchParam = (nextQuery: string) => {
+    const next = new URLSearchParams(searchParams?.toString() ?? '');
+    const trimmed = nextQuery.trim();
+    if (trimmed) {
+      next.set('q', trimmed);
+    } else {
+      next.delete('q');
+    }
+    const target = pathname ? `${pathname}${next.toString() ? `?${next.toString()}` : ''}` : '';
+    router.replace(target || '?', { scroll: false });
+  };
   const filtered = useMemo(
     () =>
       posts.filter((post) => {
@@ -121,6 +167,51 @@ export default function ColumnsGrid({
   return (
     <section className="section section--light">
       <div className="container">
+        <form
+          className="columns-search"
+          role="search"
+          data-columns-search="true"
+          onSubmit={(event) => {
+            event.preventDefault();
+            updateSearchParam(searchInput);
+          }}
+        >
+          <label className="columns-search-label" htmlFor="columns-search-input">
+            {searchLabels.label}
+          </label>
+          <div className="columns-search-row">
+            <input
+              id="columns-search-input"
+              type="search"
+              value={searchInput}
+              onChange={(event) => setSearchInput(event.target.value)}
+              placeholder={searchLabels.placeholder}
+              className="columns-search-input"
+              data-columns-search-input="true"
+            />
+            <button type="submit" className="columns-search-submit">
+              {searchLabels.submit}
+            </button>
+            {requestedQuery ? (
+              <button
+                type="button"
+                className="columns-search-clear"
+                onClick={() => {
+                  setSearchInput('');
+                  updateSearchParam('');
+                }}
+                data-columns-search-clear="true"
+              >
+                {searchLabels.clear}
+              </button>
+            ) : null}
+          </div>
+          {requestedQuery ? (
+            <p className="columns-search-status" data-columns-search-results={filtered.length}>
+              {searchLabels.resultCount(filtered.length)}
+            </p>
+          ) : null}
+        </form>
         <div className="columns-filters">
           {cats.map((cat) => (
             <button

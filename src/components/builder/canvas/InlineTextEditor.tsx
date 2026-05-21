@@ -449,7 +449,7 @@ export default function InlineTextEditor({
               placement={toolbarBelow ? 'above' : 'below'}
               onApply={(text) => {
                 if (!editor) return;
-                editor.chain().focus().setContent(text, true).run();
+                editor.chain().focus().setContent(text, { emitUpdate: true }).run();
                 handleSave();
                 setAiPanelOpen(false);
               }}

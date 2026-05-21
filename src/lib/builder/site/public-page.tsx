@@ -44,6 +44,7 @@ import {
   findBuilderCollectionRecordSeo,
   isBuilderCollectionId,
 } from '@/lib/builder/cms';
+import { buildBuilderRecordJsonLd } from '@/lib/builder/seo/record-jsonld';
 import {
   generateBreadcrumbSchema,
   generateLegalServiceSchema,
@@ -400,6 +401,20 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
     locale,
   });
   const customStructuredDataPayloads = buildCustomStructuredDataPayloads(mergedSeo.structuredDataBlocks);
+
+  // F23 — when the page is a CMS dynamic item page and a record slug matched,
+  // emit a per-record schema.org payload (Article for columns, LegalService
+  // for service-areas, Attorney for attorney-profiles) so each generated
+  // record URL surfaces its own structured data.
+  const dynamicItemMeta = resolved.pageMeta.dynamicItem;
+  const recordJsonLd = (dynamicItemMeta && resolved.dynamicItemRecordSlug && isBuilderCollectionId(dynamicItemMeta.collectionId))
+    ? buildBuilderRecordJsonLd({
+        collectionId: dynamicItemMeta.collectionId,
+        locale,
+        recordSlug: resolved.dynamicItemRecordSlug,
+        siteUrl,
+      })
+    : null;
   const topLevelNodes = visibleNodes.filter((node) => !node.parentId);
   const hasTopLevelComposite = topLevelNodes.some(isTopLevelFlowSection);
   const flowSectionMetrics = computeTopLevelFlowSectionMetrics(visibleNodes);
@@ -978,6 +993,7 @@ export async function PublishedSitePageView({ resolved }: { resolved: ResolvedPu
       {organizationSchema ? <JsonLd data={organizationSchema} /> : null}
       {localBusinessSchema ? <JsonLd data={localBusinessSchema} /> : null}
       {breadcrumbSchema ? <JsonLd data={breadcrumbSchema} /> : null}
+      {recordJsonLd ? <JsonLd data={recordJsonLd} /> : null}
       {structuredDataPayloads.map((payload) => (
         <JsonLd key={payload.id} data={payload.data} />
       ))}

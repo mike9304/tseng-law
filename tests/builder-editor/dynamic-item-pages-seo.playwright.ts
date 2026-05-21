@@ -26,6 +26,7 @@ async function readPageMetadata(page: Page): Promise<{
   twitterTitle: string | null;
   canonical: string | null;
   robots: string | null;
+  recordJsonLd: Record<string, unknown> | null;
 }> {
   return page.evaluate(() => {
     const meta = (selector: string): string | null => {
@@ -36,6 +37,22 @@ async function readPageMetadata(page: Page): Promise<{
       const element = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
       return element?.href ?? null;
     };
+    const recordJsonLd = (() => {
+      const scripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]')) as HTMLScriptElement[];
+      for (const script of scripts) {
+        try {
+          const parsed = JSON.parse(script.textContent || 'null') as Record<string, unknown> | null;
+          if (!parsed || typeof parsed !== 'object') continue;
+          const type = parsed['@type'];
+          if (type === 'Article' || type === 'LegalService' || type === 'Attorney') {
+            return parsed;
+          }
+        } catch {
+          /* ignore non-JSON ld scripts */
+        }
+      }
+      return null;
+    })();
     return {
       title: document.title || null,
       description: meta('meta[name="description"]'),
@@ -45,6 +62,7 @@ async function readPageMetadata(page: Page): Promise<{
       twitterTitle: meta('meta[name="twitter:title"]'),
       canonical: link('canonical'),
       robots: meta('meta[name="robots"]'),
+      recordJsonLd,
     };
   });
 }
@@ -94,6 +112,9 @@ test('CMS dynamic item page exposes per-record SEO metadata when published', asy
     expect(firstMetadata.description).toBeTruthy();
     expect(firstMetadata.ogTitle).toContain(firstRecord.primaryLabel);
     expect(firstMetadata.canonical?.endsWith(`/ko/columns/${firstRecord.recordId}`)).toBe(true);
+    expect(firstMetadata.recordJsonLd).not.toBeNull();
+    expect(firstMetadata.recordJsonLd).toMatchObject({ '@type': 'Article' });
+    expect((firstMetadata.recordJsonLd as { headline?: string }).headline).toContain(firstRecord.primaryLabel);
 
     // Navigating to a different record on the same template page must yield
     // distinct per-record metadata — proves the SEO override is record-driven.
@@ -103,6 +124,11 @@ test('CMS dynamic item page exposes per-record SEO metadata when published', asy
     expect(secondMetadata.title).not.toBe(firstMetadata.title);
     expect(secondMetadata.canonical?.endsWith(`/ko/columns/${secondRecord.recordId}`)).toBe(true);
     expect(secondMetadata.description).not.toBe(firstMetadata.description);
+    expect(secondMetadata.recordJsonLd).toMatchObject({ '@type': 'Article' });
+    expect((secondMetadata.recordJsonLd as { headline?: string }).headline).toContain(secondRecord.primaryLabel);
+    expect((secondMetadata.recordJsonLd as { url?: string }).url).not.toBe(
+      (firstMetadata.recordJsonLd as { url?: string }).url,
+    );
   } finally {
     if (pageId) {
       await page.request

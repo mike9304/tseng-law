@@ -171,7 +171,8 @@ describe('/api/builder/ai-generator/text', () => {
     const payload = await response.json();
     expect(payload.text).toBe('Translated copy.');
     expect(payload.targetLocale).toBe('en');
-    const requestBody = JSON.parse((fetchMock.mock.calls[0]?.[1] as RequestInit | undefined)?.body as string ?? '{}');
+    const lastCall = fetchMock.mock.calls.at(0) as [string, RequestInit] | undefined;
+    const requestBody = JSON.parse((lastCall?.[1]?.body as string | undefined) ?? '{}');
     expect(requestBody.messages?.[1]?.content).toContain('Translate the source text into English');
   });
 });

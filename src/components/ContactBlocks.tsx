@@ -3,6 +3,7 @@ import type { Locale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
+import Reveal from '@/components/Reveal';
 
 export default function ContactBlocks({
   locale,
@@ -12,7 +13,11 @@ export default function ContactBlocks({
   showMainHeader?: boolean;
 }) {
   const { contact } = siteContent[locale];
+  // `.reveal-stagger` children stay at opacity 0 until a `.reveal.is-visible`
+  // ancestor exists, so the section must reveal itself — callers (legacy
+  // contact/about bodies) don't wrap it the way home-legacy does.
   return (
+    <Reveal>
     <section className="section">
       <div className="container">
         {showMainHeader ? (
@@ -62,5 +67,6 @@ export default function ContactBlocks({
         </Link>
       </div>
     </section>
+    </Reveal>
   );
 }

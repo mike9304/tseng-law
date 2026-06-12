@@ -32,6 +32,7 @@ import {
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import { normalizeBuilderInstalledApps, normalizeBuilderUninstalledApps } from '@/lib/builder/apps/types';
 import { normalizeBuilderSiteId } from '@/lib/builder/site/identity';
+import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 import { normalizeMobileSchemaForSiteDocument } from '@/lib/builder/site/mobile-schema';
 
 const BLOB_PREFIX = 'builder-site';
@@ -56,6 +57,8 @@ type WriteSiteDocumentOptions = {
   preserveNavigation?: boolean;
   /** Keep specific next-only pages even when the latest snapshot is newer. */
   preserveNextPageIds?: readonly string[];
+  /** Preserve newer publish metadata from the latest snapshot when merging site writes. */
+  preserveLatestPublishMeta?: boolean;
   /**
    * Preserve concurrently-created redirect rules for partial site writes.
    * Redirect Manager deletes can target specific IDs via deleteRedirectIds.
@@ -420,7 +423,9 @@ export async function writeSiteDocument(
       : doc;
     const seoMergedDoc = mergeUntouchedPageSeoForWrite({ ...navigationMergedDoc, siteId: normalizedSiteId }, latestDoc);
     const pageMergedDoc = reconcileSiteDocumentPagesForWrite(seoMergedDoc, latestDoc, options);
-    const publishMetaMergedDoc = mergeLatestPagePublishMetaForWrite(pageMergedDoc, latestDoc);
+    const publishMetaMergedDoc = options.preserveLatestPublishMeta === false
+      ? pageMergedDoc
+      : mergeLatestPagePublishMetaForWrite(pageMergedDoc, latestDoc);
     const redirectMergedDoc = reconcileSiteDocumentRedirectsForWrite(publishMetaMergedDoc, latestDoc, options);
     const appMergedDoc = reconcileSiteDocumentInstalledAppsForWrite(redirectMergedDoc, latestDoc, options);
     const appArchiveMergedDoc = reconcileSiteDocumentUninstalledAppsForWrite(appMergedDoc, latestDoc, options);
@@ -456,7 +461,15 @@ export interface PageCanvasRecordState {
   isEnvelope: boolean;
 }
 
+// Page ids are embedded in Blob pathnames and local file paths, and dynamic
+// API route segments arrive URL-decoded — a crafted id containing `..` or
+// separators must never reach path.join/Blob paths.
+const SAFE_PAGE_CANVAS_ID = /^[A-Za-z0-9][A-Za-z0-9_-]*$/;
+
 function pagePathname(siteId: string, pageId: string, variant: PageVariant): string {
+  if (!SAFE_PAGE_CANVAS_ID.test(pageId)) {
+    throw new Error(`Invalid builder page id: ${JSON.stringify(pageId)}`);
+  }
   const suffix = variant === 'draft' ? 'draft.json' : 'published.json';
   return `${BLOB_PREFIX}/${normalizeBuilderSiteId(siteId)}/pages/${pageId}.${suffix}`;
 }
@@ -680,8 +693,8 @@ export async function deletePage(siteId: string, pageId: string, locale: Locale)
   await writeSiteDocument(site, { deletePageIds: [pageId] });
 }
 
-function pageLocaleProjectionKey(page: BuilderPageMeta): string {
-  return page.isHomePage || page.slug === '' ? '__home__' : page.slug;
+function pageLocaleProjectionKey(page: BuilderPageMeta, locale: Locale): string {
+  return page.isHomePage || page.slug === '' ? '__home__' : resolveLocaleSlug(page, locale);
 }
 
 function hasLocaleEquivalentPage(
@@ -690,12 +703,16 @@ function hasLocaleEquivalentPage(
   locale: Locale,
 ): boolean {
   const linkedPageId = sourcePage.linkedPageIds?.[locale];
-  if (linkedPageId && pages.some((page) => page.pageId === linkedPageId && page.locale === locale)) {
+  if (linkedPageId && pages.some((page) => (
+    page.pageId === linkedPageId &&
+    page.locale === locale &&
+    resolveLocaleSlug(page, locale) === resolveLocaleSlug(sourcePage, locale)
+  ))) {
     return true;
   }
-  const sourceKey = pageLocaleProjectionKey(sourcePage);
+  const sourceKey = sourcePage.isHomePage ? '__home__' : resolveLocaleSlug(sourcePage, locale);
   return pages.some((page) => (
-    page.locale === locale && pageLocaleProjectionKey(page) === sourceKey
+    page.locale === locale && pageLocaleProjectionKey(page, locale) === sourceKey
   ));
 }
 

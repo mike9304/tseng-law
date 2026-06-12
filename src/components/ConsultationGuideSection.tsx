@@ -1,6 +1,7 @@
 import type { Locale } from '@/lib/locales';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
+import Reveal from '@/components/Reveal';
 
 const guideCopy = {
   ko: {
@@ -101,30 +102,34 @@ const guideCopy = {
 export default function ConsultationGuideSection({ locale }: { locale: Locale }) {
   const content = guideCopy[locale];
 
+  // Self-reveal: the `.reveal-stagger` card grid needs a `.reveal.is-visible`
+  // ancestor and callers don't provide one.
   return (
-    <section className="section section--gray consultation-guide-section">
-      <div className="container">
-        <SectionLabel data-builder-surface-key="section-label">{content.label}</SectionLabel>
-        <h2 className="section-title" data-builder-surface-key="headline">
-          {content.title}
-        </h2>
-        <p className="section-lede" data-builder-surface-key="description">
-          {content.description}
-        </p>
-        <OrnamentDivider />
-        <div className="grid-bento contact-grid reveal-stagger">
-          {content.cards.map((card) => (
-            <article key={card.title} className="card legal-card">
-              <h3 className="card-title">{card.title}</h3>
-              <ul className="contact-list legal-card-list">
-                {card.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
+    <Reveal>
+      <section className="section section--gray consultation-guide-section">
+        <div className="container">
+          <SectionLabel data-builder-surface-key="section-label">{content.label}</SectionLabel>
+          <h2 className="section-title" data-builder-surface-key="headline">
+            {content.title}
+          </h2>
+          <p className="section-lede" data-builder-surface-key="description">
+            {content.description}
+          </p>
+          <OrnamentDivider />
+          <div className="grid-bento contact-grid reveal-stagger">
+            {content.cards.map((card) => (
+              <article key={card.title} className="card legal-card">
+                <h3 className="card-title">{card.title}</h3>
+                <ul className="contact-list legal-card-list">
+                  {card.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Reveal>
   );
 }

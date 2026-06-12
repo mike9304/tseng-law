@@ -24,6 +24,7 @@
  */
 
 import type { Locale } from '@/lib/locales';
+import { findRedirectMatch } from './redirect-match';
 import {
   readSiteDocument,
   writeSiteDocument,
@@ -159,6 +160,24 @@ export async function createRedirect(
   };
 
   await writeSiteWithRedirects(site, [...existing, redirect]);
+
+  // The write path merges with the latest persisted document. If a
+  // concurrent create landed an active rule for the same `from` after our
+  // read, the merge keeps the already-committed rule and drops ours —
+  // report that as the same duplicate-source error instead of returning
+  // success for a rule that was never persisted.
+  const persisted = await readSiteDocument(siteId, locale);
+  const survived = (persisted.redirects ?? []).some(
+    (r) => r.redirectId === redirect.redirectId,
+  );
+  if (!survived) {
+    return {
+      error: {
+        field: 'from',
+        message: `from "${redirect.from}" already has an active redirect`,
+      },
+    };
+  }
   return { redirect };
 }
 
@@ -238,19 +257,15 @@ async function writeSiteWithRedirects(
  * Match a request path against the active redirect rules.
  *
  * The path must include the locale prefix when applicable (e.g.
- * `/ko/old-services`). Rules are matched verbatim — no glob support yet,
- * which is fine for the typical "renamed-page" use case.
+ * `/ko/old-services`). Exact rules win first. Trailing `/*` sources act as
+ * prefix redirects and can preserve the suffix when the destination also
+ * ends in `/*`.
  */
 export function matchRedirect(
   path: string,
   rules: SiteRedirect[],
 ): SiteRedirect | null {
-  if (!path.startsWith('/')) return null;
-  for (const rule of rules) {
-    if (!rule.isActive) continue;
-    if (rule.from === path) return rule;
-  }
-  return null;
+  return findRedirectMatch(path, rules);
 }
 
 // ─── Vercel-config compatibility (optional) ──────────────────────────

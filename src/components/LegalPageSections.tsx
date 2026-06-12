@@ -1,6 +1,7 @@
 import type { Locale } from '@/lib/locales';
 import type { LegalPageContent } from '@/data/legal-pages';
 import PageHeader from '@/components/PageHeader';
+import Reveal from '@/components/Reveal';
 
 export default function LegalPageSections({
   locale,
@@ -16,6 +17,9 @@ export default function LegalPageSections({
           {content.effectiveDateLabel}: {content.effectiveDate}
         </p>
       </PageHeader>
+      {/* Self-reveal: the `.reveal-stagger` card grid needs a
+          `.reveal.is-visible` ancestor and callers don't provide one. */}
+      <Reveal>
       <section className="section section--light legal-page-section">
         <div className="container">
           <div className="grid-bento contact-grid reveal-stagger">
@@ -39,6 +43,7 @@ export default function LegalPageSections({
           </div>
         </div>
       </section>
+      </Reveal>
     </>
   );
 }

@@ -185,6 +185,10 @@ export async function resolvePublishedSitePage(
   const pageMatch = findPageMetaForLocaleWithDynamicContext(site.pages, locale, slugPath);
   if (!pageMatch?.page.publishedAt) return null;
   const pageMeta = pageMatch.page;
+  // EN has no translated builder content yet: projecting the ko default-locale
+  // document onto /en would serve Korean to English visitors. Keep /en on the
+  // legacy static-English fallback until real EN documents exist.
+  if (locale === 'en' && pageMeta.locale !== 'en') return null;
   if (
     pageMeta.dynamicItem
     && pageMatch.dynamicItemRecordSlug

@@ -7,6 +7,10 @@ import {
   createHomeContainerNode,
   createHomeTextNode,
 } from './decompose-home-shared';
+import {
+  createOfficeMapPreviewNodes,
+  getOfficeMapPreviewCopy,
+} from './decompose-office-map-preview';
 import { getOfficeLocationPresets, telHrefFromPhone } from './office-locations';
 
 const OFFICES_ROOT_HEIGHT = 760;
@@ -19,6 +23,12 @@ export function createOfficesDecomposedNodes(
   zBase: number,
 ): BuilderCanvasNode[] {
   const offices = getOfficeLocationPresets(locale);
+  const useCompositeMapPreview = locale === 'zh-hant';
+  const useZhHantCompositeGeometry = locale === 'zh-hant';
+  const layoutWidth = useZhHantCompositeGeometry ? 1178 : 1136;
+  const mapWidth = useZhHantCompositeGeometry ? 687 : 660;
+  const cardX = useZhHantCompositeGeometry ? 704 : 700;
+  const cardWidth = useZhHantCompositeGeometry ? 474 : 436;
   const title = locale === 'ko' ? '오시는길' : locale === 'zh-hant' ? '事務所據點' : 'Office Locations';
   const officeLabel = locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : 'Office';
   const telLabel = locale === 'ko' ? '전화' : locale === 'zh-hant' ? '電話' : 'Phone';
@@ -29,6 +39,7 @@ export function createOfficesDecomposedNodes(
       : locale === 'zh-hant'
         ? '在 Google 地圖查看 (照片·評論)'
         : 'View on Google Maps (photos & reviews)';
+  const mapPreviewCopy = getOfficeMapPreviewCopy(locale);
 
   const rootId = 'home-offices-root';
   const containerId = 'home-offices-container';
@@ -49,7 +60,7 @@ export function createOfficesDecomposedNodes(
     createHomeContainerNode({
       id: containerId,
       parentId: rootId,
-      rect: { x: 72, y: 88, width: 1136, height: 600 },
+      rect: { x: useZhHantCompositeGeometry ? 51 : 72, y: 88, width: layoutWidth, height: 600 },
       zIndex: 0,
       label: 'home offices container',
       className: 'container',
@@ -105,34 +116,46 @@ export function createOfficesDecomposedNodes(
     const cardId = `${layoutId}-card`;
     const baseY = 184;
 
+    const mapNodes: BuilderCanvasNode[] = useCompositeMapPreview
+      ? createOfficeMapPreviewNodes({
+          mapId,
+          parentId: layoutId,
+          office,
+          width: mapWidth,
+          ...mapPreviewCopy,
+        })
+      : [
+          {
+            id: mapId,
+            kind: 'map',
+            parentId: layoutId,
+            rect: { x: 0, y: 0, width: mapWidth, height: 420 },
+            style: createDefaultCanvasNodeStyle({ borderRadius: 12 }),
+            zIndex: 0,
+            rotation: 0,
+            locked: false,
+            visible: true,
+            content: {
+              address: office.address,
+              zoom: 16,
+            },
+          },
+        ];
+
     nodes.push(
       createHomeContainerNode({
         id: layoutId,
         parentId: containerId,
-        rect: { x: 0, y: baseY, width: 1136, height: 420 },
+        rect: { x: 0, y: baseY, width: layoutWidth, height: 420 },
         zIndex: 3 + index,
         label: `home offices layout ${index + 1}`,
         className: `office-layout builder-office-layout-${index}`,
       }),
-      {
-        id: mapId,
-        kind: 'map',
-        parentId: layoutId,
-        rect: { x: 0, y: 0, width: 660, height: 420 },
-        style: createDefaultCanvasNodeStyle({ borderRadius: 12 }),
-        zIndex: 0,
-        rotation: 0,
-        locked: false,
-        visible: true,
-        content: {
-          address: office.address,
-          zoom: 16,
-        },
-      },
+      ...mapNodes,
       createHomeContainerNode({
         id: cardId,
         parentId: layoutId,
-        rect: { x: 700, y: 0, width: 436, height: 420 },
+        rect: { x: cardX, y: 0, width: cardWidth, height: 420 },
         zIndex: 1,
         label: `home offices card ${index + 1}`,
         className: 'card office-card',
@@ -141,7 +164,7 @@ export function createOfficesDecomposedNodes(
       createHomeTextNode({
         id: `${cardId}-label`,
         parentId: cardId,
-        rect: { x: 0, y: 0, width: 120, height: 24 },
+        rect: { x: useZhHantCompositeGeometry ? 25 : 0, y: useZhHantCompositeGeometry ? -47 : 0, width: 120, height: 24 },
         zIndex: 0,
         text: officeLabel,
         className: 'section-label',
@@ -151,7 +174,7 @@ export function createOfficesDecomposedNodes(
       createHomeTextNode({
         id: `${cardId}-title`,
         parentId: cardId,
-        rect: { x: 0, y: 42, width: 240, height: 34 },
+        rect: { x: useZhHantCompositeGeometry ? 25 : 0, y: useZhHantCompositeGeometry ? 32 : 42, width: useZhHantCompositeGeometry ? 424 : 240, height: 34 },
         zIndex: 1,
         text: office.title,
         className: 'card-title',
@@ -160,7 +183,7 @@ export function createOfficesDecomposedNodes(
       createHomeTextNode({
         id: `${cardId}-address`,
         parentId: cardId,
-        rect: { x: 0, y: 92, width: 360, height: 58 },
+        rect: { x: useZhHantCompositeGeometry ? 25 : 0, y: useZhHantCompositeGeometry ? 58 : 92, width: useZhHantCompositeGeometry ? 424 : 360, height: 58 },
         zIndex: 2,
         text: office.address,
         className: 'card-copy',
@@ -169,7 +192,7 @@ export function createOfficesDecomposedNodes(
       createHomeButtonNode({
         id: `${cardId}-phone`,
         parentId: cardId,
-        rect: { x: 0, y: 164, width: 220, height: 24 },
+        rect: { x: useZhHantCompositeGeometry ? 25 : 0, y: useZhHantCompositeGeometry ? 98 : 164, width: 220, height: 24 },
         zIndex: 3,
         label: `${telLabel}: ${office.phone}`,
         href: telHrefFromPhone(office.phone),
@@ -184,7 +207,7 @@ export function createOfficesDecomposedNodes(
         createHomeTextNode({
           id: `${cardId}-fax`,
           parentId: cardId,
-          rect: { x: 0, y: 198, width: 220, height: 24 },
+          rect: { x: useZhHantCompositeGeometry ? 25 : 0, y: useZhHantCompositeGeometry ? 137 : 198, width: 220, height: 24 },
           zIndex: 4,
           text: `${faxLabel}: ${office.fax}`,
           className: 'card-copy',
@@ -197,7 +220,7 @@ export function createOfficesDecomposedNodes(
       createHomeButtonNode({
         id: `${cardId}-map-link`,
         parentId: cardId,
-        rect: { x: 0, y: 302, width: 280, height: 40 },
+        rect: { x: useZhHantCompositeGeometry ? 25 : 0, y: useZhHantCompositeGeometry ? 195 : 302, width: useZhHantCompositeGeometry ? 250 : 280, height: 40 },
         zIndex: 5,
         label: viewMapLabel,
         href: office.mapsUrl,

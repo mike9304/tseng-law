@@ -312,9 +312,9 @@ describe('home seed canvas layout', () => {
 
     expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 72, y: 110, width: 1136, height: 1206 });
     expect(nodesById.get('home-faq-list')?.rect).toMatchObject({ x: 0, y: 149, width: 1136, height: 1074 });
-    expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 72, y: 149, width: 1136, height: 743 });
-    expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 132, width: 560, height: 36 });
-    expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 198, width: 1136, height: 548 });
+    expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 51, y: 149, width: 1178, height: 628 });
+    expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 132, width: 1178, height: 47 });
+    expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 198, width: 1178, height: 422 });
   });
 
   it('matches zh-hant attorney decomposition to the composite split portrait geometry', () => {

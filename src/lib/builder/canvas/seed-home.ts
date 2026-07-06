@@ -410,13 +410,32 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
         'home-offices-container',
         input.locale === 'ko'
           ? { x: 51, y: 149, width: 1178, height: 743 }
+          : input.locale === 'zh-hant'
+            ? { x: 51, y: 149, width: 1178, height: 628 }
           : { y: 149, height: 743 },
       );
-      setNodeRect(nodesById, 'home-offices-tabs', { y: 132 });
+      setNodeRect(nodesById, 'home-offices-tabs', input.locale === 'zh-hant' ? { y: 132, width: 1178, height: 47 } : { y: 132 });
       [0, 1, 2].forEach((index) => {
         const layoutId = `home-offices-layout-${index}`;
+        if (input.locale === 'zh-hant') {
+          setNodeRect(nodesById, layoutId, { y: 198, width: 1178, height: 422 });
+          setNodeRect(nodesById, `${layoutId}-map`, { width: 687, height: 422 });
+          setNodeRect(nodesById, `${layoutId}-map-embed`, { width: 687, height: 422 });
+          setNodeRect(nodesById, `${layoutId}-map-fallback`, { width: 687, height: 422 });
+          setNodeRect(nodesById, `${layoutId}-map-panel`, { x: 24, y: 247, height: 152 });
+          setNodeRect(nodesById, `${layoutId}-card`, { x: 704, width: 474, height: 422 });
+          setNodeRect(nodesById, `${layoutId}-card-label`, { x: 25, y: -47 });
+          setNodeRect(nodesById, `${layoutId}-card-title`, { x: 25, y: 32, width: 424 });
+          setNodeRect(nodesById, `${layoutId}-card-address`, { x: 25, y: 58, width: 424 });
+          setNodeRect(nodesById, `${layoutId}-card-phone`, { x: 25, y: 98 });
+          setNodeRect(nodesById, `${layoutId}-card-fax`, { x: 25, y: 137 });
+          setNodeRect(nodesById, `${layoutId}-card-map-link`, { x: 25, y: 195, width: 250 });
+          return;
+        }
         setNodeRect(nodesById, layoutId, { y: 198, height: 548 });
         setNodeRect(nodesById, `${layoutId}-map`, { height: 548 });
+        setNodeRect(nodesById, `${layoutId}-map-fallback`, { height: 548 });
+        setNodeRect(nodesById, `${layoutId}-map-panel`, { y: 366 });
         setNodeRect(nodesById, `${layoutId}-card`, { height: 548 });
         setNodeRect(nodesById, `${layoutId}-card-map-link`, { y: 430 });
       });

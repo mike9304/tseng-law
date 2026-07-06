@@ -272,6 +272,49 @@ describe('home seed canvas layout', () => {
     ).toEqual(EXPECTED_ZH_HANT_DECOMPOSED_SECTION_RECTS);
   });
 
+  it('matches zh-hant decomposed child anchors to the measured composite render', () => {
+    const doc = createHomePageCanvasDocument('zh-hant');
+    const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+
+    expect(nodesById.get('home-hero-inner')?.rect).toMatchObject({ x: 51, y: 175, width: 1178, height: 483 });
+    expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 286, width: 260, height: 32 });
+    expect(nodesById.get('home-hero-search-wrapper')?.rect).toMatchObject({ x: 51, y: 712, width: 1151, height: 62 });
+
+    const overlay = nodesById.get('home-hero-overlay');
+    expect(overlay).toBeDefined();
+    expect(overlay?.parentId).toBe('home-hero-root');
+    expect(overlay?.rect).toMatchObject({ x: 0, y: 0, width: 1280, height: 774 });
+    expect(String(overlay?.style.backgroundColor)).toContain('linear-gradient(118deg');
+    expect(doc.nodes.findIndex((node) => node.id === 'home-hero-overlay')).toBeGreaterThan(
+      doc.nodes.findIndex((node) => node.id === 'home-hero-media-image-3'),
+    );
+    expect(doc.nodes.findIndex((node) => node.id === 'home-hero-overlay')).toBeLessThan(
+      doc.nodes.findIndex((node) => node.id === 'home-hero-inner'),
+    );
+
+    expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 72, y: 110, width: 1136, height: 1206 });
+    expect(nodesById.get('home-faq-list')?.rect).toMatchObject({ x: 0, y: 149, width: 1136, height: 1074 });
+    expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 72, y: 149, width: 1136, height: 743 });
+    expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 132, width: 560, height: 36 });
+    expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 198, width: 1136, height: 548 });
+  });
+
+  it('keeps ko and en decomposed child geometry unchanged by zh-hant calibration', () => {
+    (['ko', 'en'] as const).forEach((locale) => {
+      const doc = createHomePageCanvasDocument(locale);
+      const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+
+      expect(nodesById.has('home-hero-overlay')).toBe(false);
+      expect(nodesById.get('home-hero-inner')?.rect).toMatchObject({ x: 51, y: 184, width: 1178, height: 483 });
+      expect(nodesById.get('home-hero-links')?.rect).toMatchObject({ x: 0, y: 338, width: 260, height: 32 });
+      expect(nodesById.get('home-hero-search-wrapper')?.rect).toMatchObject({ x: 0, y: HERO_SEARCH_WRAPPER_Y, width: 1280, height: 62 });
+      expect(nodesById.get('home-faq-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 1280 });
+      expect(nodesById.get('home-offices-container')?.rect).toMatchObject({ x: 72, y: 88, width: 1136, height: 600 });
+      expect(nodesById.get('home-offices-tabs')?.rect).toMatchObject({ x: 0, y: 116, width: 560, height: 36 });
+      expect(nodesById.get('home-offices-layout-0')?.rect).toMatchObject({ x: 0, y: 184, width: 1136, height: 420 });
+    });
+  });
+
   it('keeps zh-hant non-overlay descendants inside their localized section bounds', () => {
     const doc = createHomePageCanvasDocument('zh-hant');
     const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));

@@ -125,6 +125,7 @@ const MEASURED_SECTION_HEIGHTS_BY_LOCALE = {
 } satisfies Record<Locale, CompositeSectionHeights>;
 
 const ZH_HANT_DECOMPOSED_SECTION_HEIGHTS = MEASURED_SECTION_HEIGHTS_BY_LOCALE['zh-hant'];
+const ZH_HANT_HERO_OVERLAY_BACKGROUND = 'radial-gradient(circle at 14% 28%, rgba(159, 135, 82, 0.18), transparent 36%), linear-gradient(180deg, transparent 55%, rgba(6, 16, 11, 0.55) 100%), linear-gradient(118deg, rgba(6, 16, 11, 0.82), rgba(6, 16, 11, 0.58) 42%, rgba(6, 16, 11, 0.22) 78%, rgba(6, 16, 11, 0.12))';
 const ROOT_NODE_IDS = {
   hero: 'home-hero-root', insights: 'home-insights-root', services: 'home-services-root',
   attorney: 'home-attorney-root', caseResults: 'home-case-results-root', stats: 'home-stats-root',
@@ -158,6 +159,60 @@ function shiftDirectChildrenY(
   });
 }
 
+function setNodeZIndex(
+  nodesById: ReadonlyMap<string, BuilderCanvasNode>,
+  id: string,
+  zIndex: number,
+): void {
+  const node = nodesById.get(id);
+  if (!node) return;
+  node.zIndex = zIndex;
+}
+
+function createZhHantHeroOverlayNode(height: number): BuilderCanvasNode {
+  return {
+    id: 'home-hero-overlay',
+    kind: 'container',
+    parentId: 'home-hero-root',
+    rect: { x: 0, y: 0, width: STAGE_WIDTH, height },
+    style: createDefaultCanvasNodeStyle({
+      backgroundColor: ZH_HANT_HERO_OVERLAY_BACKGROUND,
+      borderRadius: 0,
+    }),
+    zIndex: 0,
+    rotation: 0,
+    locked: true,
+    visible: true,
+    content: {
+      label: 'home hero overlay',
+      background: 'transparent',
+      borderColor: '#cbd5e1',
+      borderStyle: 'solid',
+      borderWidth: 0,
+      borderRadius: 0,
+      padding: 0,
+      layoutMode: 'absolute',
+      className: 'home-hero-overlay',
+      as: 'div',
+    },
+  };
+}
+
+function upsertNodeAfter(
+  nodes: BuilderCanvasNode[],
+  afterId: string,
+  nextNode: BuilderCanvasNode,
+): void {
+  const existingIndex = nodes.findIndex((node) => node.id === nextNode.id);
+  if (existingIndex >= 0) {
+    nodes[existingIndex] = nextNode;
+    return;
+  }
+
+  const afterIndex = nodes.findIndex((node) => node.id === afterId);
+  nodes.splice(afterIndex >= 0 ? afterIndex + 1 : nodes.length, 0, nextNode);
+}
+
 function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): BuilderCanvasNode[] {
   if (input.locale !== 'zh-hant') return input.nodes;
 
@@ -167,7 +222,19 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
   switch (input.key) {
     case 'hero':
       setNodeRect(nodesById, 'home-hero-media', { height: input.height });
-      HERO_MEDIA_IMAGE_NODE_IDS.forEach((id) => setNodeRect(nodesById, id, { height: input.height }));
+      setNodeZIndex(nodesById, 'home-hero-media', 0);
+      HERO_MEDIA_IMAGE_NODE_IDS.forEach((id) => {
+        setNodeRect(nodesById, id, { height: input.height });
+        setNodeZIndex(nodesById, id, 0);
+      });
+      upsertNodeAfter(
+        input.nodes,
+        HERO_MEDIA_IMAGE_NODE_IDS[HERO_MEDIA_IMAGE_NODE_IDS.length - 1] ?? 'home-hero-media',
+        createZhHantHeroOverlayNode(input.height),
+      );
+      setNodeRect(nodesById, 'home-hero-inner', { y: 175 });
+      setNodeRect(nodesById, 'home-hero-links', { y: 286 });
+      setNodeRect(nodesById, 'home-hero-search-wrapper', { x: 51, y: 712, width: 1151 });
       setNodeRect(nodesById, 'home-hero-scroll-arrow', { y: input.height - 74 });
       break;
     case 'insights':
@@ -188,13 +255,15 @@ function applyLocalizedDecomposedGeometry(input: LocalizedGeometryInput): Builde
       shiftDirectChildrenY(input.nodes, 'home-case-results-content', 122);
       break;
     case 'faq':
-      setNodeRect(nodesById, 'home-faq-container', { height: 1206 });
+      setNodeRect(nodesById, 'home-faq-container', { y: 110, height: 1206 });
+      setNodeRect(nodesById, 'home-faq-list', { y: 149, height: 1074 });
       break;
     case 'offices':
-      setNodeRect(nodesById, 'home-offices-container', { height: 743 });
+      setNodeRect(nodesById, 'home-offices-container', { y: 149, height: 743 });
+      setNodeRect(nodesById, 'home-offices-tabs', { y: 132 });
       [0, 1, 2].forEach((index) => {
         const layoutId = `home-offices-layout-${index}`;
-        setNodeRect(nodesById, layoutId, { height: 548 });
+        setNodeRect(nodesById, layoutId, { y: 198, height: 548 });
         setNodeRect(nodesById, `${layoutId}-map`, { height: 548 });
         setNodeRect(nodesById, `${layoutId}-card`, { height: 548 });
         setNodeRect(nodesById, `${layoutId}-card-map-link`, { y: 430 });

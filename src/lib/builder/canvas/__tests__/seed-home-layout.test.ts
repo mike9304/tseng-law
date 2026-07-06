@@ -131,9 +131,14 @@ describe('home seed canvas layout', () => {
 
     expect(controls).toBeDefined();
     expect(textNodeText(pageIndicator)).toBe(`1 / ${expectedPageCount}`);
+    expect(listWrap?.rect.x).toBe(623);
+    expect(listWrap?.rect.width).toBe(536);
+    expect(list?.rect.x).toBe(20);
     expect(list?.rect.y).toBe(72);
+    expect(list?.rect.width).toBe(496);
     expect(list?.rect.height).toBe(620);
     expect(listWrap?.rect.height).toBe(720);
+    expect(firstListTitle?.rect.width).toBe(352);
     expect(textNodeText(featuredTitle)).toBe(publicHomePosts[0]?.title);
     expect(textNodeText(firstListTitle)).toBe(publicHomePosts[1]?.title);
   });

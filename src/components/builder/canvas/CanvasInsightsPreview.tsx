@@ -1,8 +1,10 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-import { DEFAULT_BLOG_CATEGORIES, type BlogPost } from '@/lib/builder/blog/blog-engine';
-import { loadInsightsPreviewPosts } from './insights-preview-cache';
+import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { getAttorneyProfilePath } from '@/data/attorney-profiles';
+import { resolveHomeInsightsCardLabels } from '@/lib/builder/home-insights-card-format';
+import type { Locale } from '@/lib/locales';
+import { useBuilderColumnPosts } from './BuilderDatasetPreviewContext';
 import { stopEditorPreviewNavigation } from './canvasNodeUtils';
 import styles from './CanvasInsightsPreview.module.css';
 
@@ -13,73 +15,53 @@ const insightsCopyByLocale = {
     dateFallback: '게시일 확인중',
     prevLabel: '이전',
     nextLabel: '다음',
-    readTimeSuffix: '분 읽기',
-    readMore: '자세히 보기',
   },
   'zh-hant': {
     dateFallback: '日期待確認',
     prevLabel: '上一頁',
     nextLabel: '下一頁',
-    readTimeSuffix: '分鐘閱讀',
-    readMore: '閱讀全文',
   },
   en: {
     dateFallback: 'Date pending',
     prevLabel: 'Previous',
     nextLabel: 'Next',
-    readTimeSuffix: 'min read',
-    readMore: 'Read more',
   },
 } as const;
 
 type InsightsLocale = keyof typeof insightsCopyByLocale;
 
-function insightsLocale(locale: string): InsightsLocale {
+function insightsLocale(locale: string): Locale {
   return locale === 'zh-hant' || locale === 'en' ? locale : 'ko';
 }
 
-function insightCategoryLabel(category: string | undefined, locale: InsightsLocale): string {
-  if (!category) return DEFAULT_BLOG_CATEGORIES.find((item) => item.slug === 'general')?.name[locale] ?? 'General';
-  return DEFAULT_BLOG_CATEGORIES.find((item) => item.slug === category)?.name[locale] ?? category;
-}
+const nodeInsightsPreviewStyle: CSSProperties = {
+  position: 'absolute',
+  inset: 0,
+  zIndex: 20000,
+  overflow: 'hidden',
+  boxSizing: 'border-box',
+  borderRadius: 'inherit',
+  padding: '0.9rem 1rem 0.2rem',
+  pointerEvents: 'auto',
+};
 
-function insightDateLabel(post: BlogPost, locale: InsightsLocale): string {
-  const value = post.publishedAt || post.updatedAt;
-  if (!value) return insightsCopyByLocale[locale].dateFallback;
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return value.slice(0, 10) || insightsCopyByLocale[locale].dateFallback;
-  return date.toISOString().slice(0, 10);
-}
-
-function insightReadTimeLabel(post: BlogPost, locale: InsightsLocale): string {
-  return post.readingTimeMinutes > 0
-    ? `${post.readingTimeMinutes}${locale === 'en' ? ' ' : ''}${insightsCopyByLocale[locale].readTimeSuffix}`
-    : '';
+function authorLabelForLocale(locale: InsightsLocale): string {
+  if (locale === 'zh-hant') return '曾俊瑋律師審閱';
+  if (locale === 'en') return 'Reviewed by Wei Tseng';
+  return '증준외 변호사 검토';
 }
 
 export function InsightsArchiveListPreview({ locale }: { locale: string }) {
   const resolvedLocale = insightsLocale(locale);
   const copy = insightsCopyByLocale[resolvedLocale];
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const posts = useBuilderColumnPosts();
   const [page, setPage] = useState(0);
-  const [loaded, setLoaded] = useState(false);
+  const authorHref = getAttorneyProfilePath(resolvedLocale);
+  const authorLabel = authorLabelForLocale(resolvedLocale);
 
   useEffect(() => {
-    let cancelled = false;
-    setLoaded(false);
     setPage(0);
-    loadInsightsPreviewPosts(resolvedLocale)
-      .then((nextPosts) => {
-        if (cancelled) return;
-        setPosts(nextPosts);
-      })
-      .finally(() => {
-        if (!cancelled) setLoaded(true);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [resolvedLocale]);
+  }, [posts.length, resolvedLocale]);
 
   const listPosts = useMemo(() => posts.slice(1), [posts]);
   const pageCount = Math.max(1, Math.ceil(listPosts.length / INSIGHTS_PAGE_SIZE));
@@ -88,13 +70,13 @@ export function InsightsArchiveListPreview({ locale }: { locale: string }) {
     [listPosts, page],
   );
 
-  if (!loaded || posts.length <= 1) return null;
+  if (posts.length <= 1) return null;
 
   return (
     <div
-      className={styles.nodeInsightsPreview}
       data-builder-insights-preview="true"
       data-builder-insights-page={`${page + 1} / ${pageCount}`}
+      style={nodeInsightsPreviewStyle}
       onPointerDown={(event) => event.stopPropagation()}
       onMouseDown={(event) => event.stopPropagation()}
       onClick={stopEditorPreviewNavigation}
@@ -129,8 +111,9 @@ export function InsightsArchiveListPreview({ locale }: { locale: string }) {
       <div className="insights-list" key={`builder-insights-page-${page}`}>
         {visibleItems.map((post) => {
           const image = post.featuredImage?.trim();
+          const labels = resolveHomeInsightsCardLabels(post, copy.dateFallback);
           return (
-            <article key={post.postId} className="insights-list-item">
+            <article key={post.slug} className="insights-list-item">
               <div className="insights-list-thumb">
                 <div
                   className={styles.nodeInsightsThumbImage}
@@ -139,14 +122,23 @@ export function InsightsArchiveListPreview({ locale }: { locale: string }) {
                   role="img"
                 />
                 <span className="insights-category-badge insights-category-badge--compact">
-                  {insightCategoryLabel(post.category, resolvedLocale)}
+                  {post.categoryLabel}
                 </span>
               </div>
               <div className="insights-list-copy">
                 <div className="insights-meta-row">
-                  <time className="insights-date">{insightDateLabel(post, resolvedLocale)}</time>
-                  <span className="insights-readtime">{insightReadTimeLabel(post, resolvedLocale)}</span>
+                  <time className="insights-date">{labels.date}</time>
+                  {labels.readTime ? <span className="insights-readtime">{labels.readTime}</span> : null}
                 </div>
+                <a
+                  className="insights-byline"
+                  href={authorHref}
+                  aria-disabled="true"
+                  draggable={false}
+                  tabIndex={-1}
+                >
+                  {authorLabel}
+                </a>
                 <h4 className="insights-list-title">
                   <a
                     className="link-underline"
@@ -158,16 +150,7 @@ export function InsightsArchiveListPreview({ locale }: { locale: string }) {
                     {post.title}
                   </a>
                 </h4>
-                <p className="insights-list-summary">{post.excerpt}</p>
-                <a
-                  className={styles.nodeInsightsReadMore}
-                  href={`/${resolvedLocale}/columns/${post.slug}`}
-                  aria-disabled="true"
-                  draggable={false}
-                  tabIndex={-1}
-                >
-                  {copy.readMore}
-                </a>
+                <p className="insights-list-summary">{post.summary}</p>
               </div>
             </article>
           );

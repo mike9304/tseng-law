@@ -1,6 +1,7 @@
 import type { BuilderCanvasNode } from './types';
 import type { Locale } from '@/lib/locales';
 import { getAttorneyProfilePath } from '@/data/attorney-profiles';
+import { resolveHomeInsightsCardLabels } from '@/lib/builder/home-insights-card-format';
 import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
 import {
   HOME_STAGE_WIDTH,
@@ -49,6 +50,13 @@ const INSIGHTS_LIST_ITEM_PITCH = 196;
 const INSIGHTS_LIST_MIN_HEIGHT = 620;
 const INSIGHTS_LIST_NO_CONTROLS_MIN_HEIGHT = 601;
 const INSIGHTS_PAGE_SIZE = 3;
+const INSIGHTS_LIST_WRAP_X = 623;
+const INSIGHTS_LIST_WRAP_WIDTH = 536;
+const INSIGHTS_LIST_INSET_X = 20;
+const INSIGHTS_LIST_WIDTH = 496;
+const INSIGHTS_LIST_COPY_X = 144;
+const INSIGHTS_LIST_COPY_WIDTH = 352;
+const INSIGHTS_LIST_READTIME_WIDTH = 78;
 
 type HomeInsightPost = {
   slug: string;
@@ -66,15 +74,19 @@ function resolveInsightsPosts(
   locale: Locale,
   sourcePosts: readonly ColumnPost[] = getAllColumnPosts(locale),
 ): HomeInsightPost[] {
-  return sourcePosts.map((post) => ({
-    slug: post.slug,
-    title: post.title,
-    dateDisplay: post.dateDisplay || post.date || '',
-    readTime: post.readTime || '',
-    categoryLabel: post.categoryLabel,
-    featuredImage: post.featuredImage,
-    summary: post.summary,
-  }));
+  const copy = copyByLocale[locale];
+  return sourcePosts.map((post) => {
+    const labels = resolveHomeInsightsCardLabels(post, copy.dateFallback);
+    return {
+      slug: post.slug,
+      title: post.title,
+      dateDisplay: labels.date,
+      readTime: labels.readTime,
+      categoryLabel: post.categoryLabel,
+      featuredImage: post.featuredImage,
+      summary: post.summary,
+    };
+  });
 }
 
 export function createInsightsDecomposedNodes(
@@ -298,7 +310,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: listWrapId,
       parentId: gridId,
-      rect: { x: 650, y: 0, width: 486, height: listWrapHeight },
+      rect: { x: INSIGHTS_LIST_WRAP_X, y: 0, width: INSIGHTS_LIST_WRAP_WIDTH, height: listWrapHeight },
       zIndex: 1,
       label: 'home insights list wrap',
       className: 'insights-list-wrap',
@@ -306,7 +318,7 @@ export function createInsightsDecomposedNodes(
     createHomeContainerNode({
       id: listId,
       parentId: listWrapId,
-      rect: { x: 20, y: listTop, width: 446, height: listHeight },
+      rect: { x: INSIGHTS_LIST_INSET_X, y: listTop, width: INSIGHTS_LIST_WIDTH, height: listHeight },
       zIndex: 1,
       label: 'home insights list',
       className: 'insights-list',
@@ -318,7 +330,7 @@ export function createInsightsDecomposedNodes(
       createHomeContainerNode({
         id: 'home-insights-controls',
         parentId: listWrapId,
-        rect: { x: 20, y: 16, width: 446, height: 32 },
+        rect: { x: INSIGHTS_LIST_INSET_X, y: 16, width: INSIGHTS_LIST_WIDTH, height: 32 },
         zIndex: 0,
         label: 'home insights controls',
         className: 'insights-controls',
@@ -337,7 +349,7 @@ export function createInsightsDecomposedNodes(
       createHomeTextNode({
         id: 'home-insights-page-indicator',
         parentId: 'home-insights-controls',
-        rect: { x: 156, y: 6, width: 134, height: 20 },
+        rect: { x: 156, y: 6, width: 184, height: 20 },
         zIndex: 1,
         text: `1 / ${pageCount}`,
         className: 'insights-page-indicator',
@@ -346,7 +358,7 @@ export function createInsightsDecomposedNodes(
       createHomeButtonNode({
         id: 'home-insights-next',
         parentId: 'home-insights-controls',
-        rect: { x: 350, y: 0, width: 96, height: 32 },
+        rect: { x: 400, y: 0, width: 96, height: 32 },
         zIndex: 2,
         label: `${copy.nextLabel} ›`,
         href: '#insights',
@@ -368,7 +380,7 @@ export function createInsightsDecomposedNodes(
       createHomeContainerNode({
         id: itemId,
         parentId: listId,
-        rect: { x: 0, y: itemY, width: 446, height: 176 },
+        rect: { x: 0, y: itemY, width: INSIGHTS_LIST_WIDTH, height: 176 },
         zIndex: index,
         label: `home insights list item ${index + 1}`,
         className: 'insights-list-item',
@@ -403,7 +415,7 @@ export function createInsightsDecomposedNodes(
       createHomeContainerNode({
         id: copyId,
         parentId: itemId,
-        rect: { x: 148, y: 0, width: 298, height: 150 },
+        rect: { x: INSIGHTS_LIST_COPY_X, y: 0, width: INSIGHTS_LIST_COPY_WIDTH, height: 150 },
         zIndex: 1,
         label: `home insights copy ${index + 1}`,
         className: 'insights-list-copy',
@@ -411,7 +423,7 @@ export function createInsightsDecomposedNodes(
       createHomeContainerNode({
         id: metaId,
         parentId: copyId,
-        rect: { x: 0, y: 0, width: 298, height: 18 },
+        rect: { x: 0, y: 0, width: INSIGHTS_LIST_COPY_WIDTH, height: 18 },
         zIndex: 0,
         label: `home insights meta ${index + 1}`,
         className: 'insights-meta-row',
@@ -428,7 +440,7 @@ export function createInsightsDecomposedNodes(
       createHomeTextNode({
         id: `${itemId}-readtime`,
         parentId: metaId,
-        rect: { x: 220, y: 0, width: 78, height: 18 },
+        rect: { x: INSIGHTS_LIST_COPY_WIDTH - INSIGHTS_LIST_READTIME_WIDTH, y: 0, width: INSIGHTS_LIST_READTIME_WIDTH, height: 18 },
         zIndex: 1,
         text: post.readTime,
         className: 'insights-readtime',
@@ -448,16 +460,16 @@ export function createInsightsDecomposedNodes(
       createHomeTextNode({
         id: `${itemId}-title`,
         parentId: copyId,
-        rect: { x: 0, y: 50, width: 298, height: 46 },
+        rect: { x: 0, y: 50, width: INSIGHTS_LIST_COPY_WIDTH, height: 46 },
         zIndex: 2,
         text: post.title,
-        className: 'insights-list-title link-underline',
+        className: 'insights-list-title',
         as: 'h4',
       }),
       createHomeTextNode({
         id: `${itemId}-summary`,
         parentId: copyId,
-        rect: { x: 0, y: 104, width: 298, height: 48 },
+        rect: { x: 0, y: 104, width: INSIGHTS_LIST_COPY_WIDTH, height: 48 },
         zIndex: 3,
         text: post.summary,
         className: 'insights-list-summary',

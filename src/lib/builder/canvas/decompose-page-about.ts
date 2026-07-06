@@ -1,4 +1,5 @@
 import type { BuilderCanvasNode } from './types';
+import { createDefaultCanvasNodeStyle } from './types';
 import { locales, type Locale } from '@/lib/locales';
 import { pageCopy } from '@/data/page-copy';
 import {
@@ -44,7 +45,37 @@ function buildAboutPage(y: number, locale: Locale, zBase: number): { nodes: Buil
   nodes.push(...contact.nodes);
   cursor += contact.height;
 
+  if (locale === 'zh-hant') {
+    nodes.push(createZhHantAboutMobileParityNode(y, zBase + 400, locale));
+  }
+
   return { nodes, height: cursor - y };
+}
+
+function createZhHantAboutMobileParityNode(
+  y: number,
+  zIndex: number,
+  locale: Locale,
+): BuilderCanvasNode {
+  return {
+    id: 'about-mobile-parity',
+    kind: 'composite',
+    rect: { x: 0, y, width: 1280, height: 1 },
+    style: createDefaultCanvasNodeStyle({ borderRadius: 0 }),
+    zIndex,
+    rotation: 0,
+    locked: false,
+    visible: true,
+    anchorName: 'mobile-parity-about',
+    responsive: {
+      mobile: { rect: { x: 0, y, width: 375, height: 8205 } },
+      tablet: { rect: { x: 0, y, width: 768, height: 7498 } },
+    },
+    content: {
+      componentKey: 'legacy-page-about',
+      config: { locale },
+    },
+  };
 }
 
 // Per-locale page height. The document's `stageHeight` is only a FLOOR — the

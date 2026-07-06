@@ -216,6 +216,493 @@ function setTextNodeText(
   node.content = { ...node.content, text };
 }
 
+type HomeResponsiveViewport = 'mobile' | 'tablet';
+type HomeResponsiveOverride = {
+  rect?: Partial<BuilderCanvasNode['rect']>;
+  hidden?: boolean;
+  fontSize?: number;
+};
+
+const COLLAPSED_RESPONSIVE_RECT_SIZE = 1;
+const FAQ_MOBILE_ITEM_TOPS = [0, 69, 138, 207, 276, 345, 414, 483, 552, 621, 690, 759, 828, 897] as const;
+const FAQ_MOBILE_ITEM_HEIGHTS = [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60] as const;
+
+const ZH_HANT_HOME_MOBILE_OVERRIDES: Record<string, HomeResponsiveOverride> = {
+  'home-hero-root': { rect: { height: 633 } },
+  'home-hero-media': { rect: { height: 633 } },
+  'home-hero-overlay': { rect: { height: 633 } },
+  'home-insights-root': { rect: { x: 0, y: 610, width: 375, height: 2507 } },
+  'home-insights-container': { rect: { x: 16, y: 48, width: 343, height: 2411 } },
+  'home-insights-label': { rect: { x: 0, y: 8, width: 131, height: 21 } },
+  'home-insights-title': { rect: { x: 0, y: 39, width: 343, height: 96 } },
+  'home-insights-description': { rect: { x: 0, y: 154, width: 343, height: 54 } },
+  'home-insights-divider': { rect: { x: 0, y: 226, width: 343, height: 12 } },
+  'home-insights-divider-mark': { rect: { x: 127, y: 0, width: 54, height: 12 } },
+  'home-insights-grid': { rect: { x: 0, y: 244, width: 343, height: 2088 } },
+  'home-insights-featured': { rect: { x: 0, y: 20, width: 343, height: 473 } },
+  'home-insights-featured-media': { rect: { x: 0, y: 0, width: 343, height: 326 } },
+  'home-insights-featured-image': { rect: { x: 0, y: 0, width: 343, height: 326 } },
+  'home-insights-featured-category': { rect: { x: 16, y: 16, width: 95, height: 31 } },
+  'home-insights-featured-body': { rect: { x: 0, y: 327, width: 343, height: 145 } },
+  'home-insights-featured-meta': { rect: { x: 18, y: 18, width: 307, height: 44 } },
+  'home-insights-featured-date': { rect: { x: 0, y: 0, width: 120, height: 20 } },
+  'home-insights-featured-readtime': { rect: { x: 196, y: 0, width: 78, height: 20 } },
+  'home-insights-featured-byline': { rect: { x: 18, y: 48, width: 200, height: 21 } },
+  'home-insights-featured-title': { rect: { x: 18, y: 80, width: 307, height: 52 } },
+  'home-insights-featured-summary': { rect: { x: 18, y: 139, width: 307, height: 47 } },
+  'home-insights-featured-link': { rect: { x: 18, y: 205, width: 180, height: 28 } },
+  'home-insights-list-wrap': { rect: { x: 0, y: 532, width: 343, height: 1577 } },
+  'home-insights-controls': { rect: { x: 17, y: 16, width: 309, height: 46 } },
+  'home-insights-prev': { rect: { x: 0, y: 0, width: 54, height: 34 } },
+  'home-insights-page-indicator': { rect: { x: 63, y: 6, width: 148, height: 21 } },
+  'home-insights-next': { rect: { x: 220, y: 0, width: 54, height: 34 } },
+  'home-insights-list': { rect: { x: 17, y: 96, width: 309, height: 1477 } },
+  'home-insights-view-all': { rect: { x: 81, y: 2140, width: 145, height: 47 } },
+  'home-services-root': { rect: { x: 0, y: 3132, width: 375, height: 1258 } },
+  'home-services-container': { rect: { x: 16, y: 49, width: 343, height: 1160 } },
+  'home-services-label': { rect: { x: 0, y: 8, width: 132, height: 21 } },
+  'home-services-title': { rect: { x: 0, y: 47, width: 343, height: 96 } },
+  'home-services-description': { rect: { x: 0, y: 162, width: 343, height: 54 } },
+  'home-services-divider': { rect: { x: 0, y: 226, width: 343, height: 12 } },
+  'home-services-divider-mark': { rect: { x: 127, y: 0, width: 54, height: 12 } },
+  'home-services-list': { rect: { x: 0, y: 244, width: 343, height: 915 } },
+  'home-attorney-root': { rect: { x: 0, y: 4390, width: 375, height: 1038 } },
+  'home-attorney-image-wrap': { rect: { x: 16, y: 48, width: 343, height: 477 } },
+  'home-attorney-image': { rect: { x: 0, y: 0, width: 343, height: 258 } },
+  'home-attorney-badge': { rect: { x: 24, y: 360, width: 295, height: 92 } },
+  'home-attorney-content': { rect: { x: 16, y: 525, width: 343, height: 510 } },
+  'home-attorney-label': { rect: { x: 18, y: 32, width: 180, height: 28 } },
+  'home-attorney-title': { rect: { x: 18, y: 76, width: 308, height: 108 } },
+  'home-attorney-divider': { rect: { x: 18, y: 200, width: 80, height: 4 } },
+  'home-attorney-intro-1': { rect: { x: 18, y: 226, width: 308, height: 58 } },
+  'home-attorney-intro-2': { rect: { x: 18, y: 296, width: 308, height: 58 } },
+  'home-attorney-summary': { rect: { x: 18, y: 366, width: 308, height: 82 } },
+  'home-attorney-contact-line': { rect: { x: 18, y: 462, width: 308, height: 40 } },
+  'home-attorney-cta': { rect: { x: 18, y: 485, width: 220, height: 28 } },
+  'home-case-results-root': { rect: { x: 0, y: 5427, width: 375, height: 551 } },
+  'home-case-results-content': { rect: { x: 1, y: 49, width: 341, height: 447 } },
+  'home-case-results-label': { rect: { x: 32, y: 32, width: 279, height: 40 } },
+  'home-case-results-title': { rect: { x: 32, y: 82, width: 279, height: 120 } },
+  'home-case-results-divider': { rect: { x: 32, y: 212, width: 80, height: 4 } },
+  'home-case-results-desc': { rect: { x: 32, y: 232, width: 279, height: 80 } },
+  'home-case-results-summary': { rect: { x: 32, y: 322, width: 279, height: 60 } },
+  'home-case-results-cta': { rect: { x: 32, y: 392, width: 200, height: 36 } },
+  'home-stats-root': { rect: { x: 0, y: 5979, width: 375, height: 742 } },
+  'home-stats-container': { rect: { x: 16, y: 49, width: 343, height: 644 } },
+  'home-stats-label': { rect: { x: 0, y: 8, width: 180, height: 28 } },
+  'home-stats-title': { rect: { x: 0, y: 47, width: 343, height: 120 } },
+  'home-stats-description': { rect: { x: 0, y: 187, width: 343, height: 96 } },
+  'home-stats-grid': { rect: { x: 0, y: 258, width: 343, height: 386 } },
+  'home-faq-root': { rect: { x: 0, y: 6721, width: 375, height: 1177 } },
+  'home-faq-container': { rect: { x: 16, y: 48, width: 343, height: 1081 } },
+  'home-faq-label': { rect: { x: 0, y: 0, width: 120, height: 28 } },
+  'home-faq-title': { rect: { x: 0, y: 40, width: 343, height: 54 } },
+  'home-faq-list': { rect: { x: 0, y: 115, width: 343, height: 966 } },
+  'home-offices-root': { rect: { x: 0, y: 7898, width: 375, height: 908 } },
+  'home-offices-container': { rect: { x: 16, y: 48, width: 343, height: 812 } },
+  'home-offices-label': { rect: { x: 0, y: 8, width: 180, height: 28 } },
+  'home-offices-title': { rect: { x: 0, y: 47, width: 343, height: 60 } },
+  'home-offices-tabs': { rect: { x: 0, y: 126, width: 343, height: 46 } },
+  'home-contact-root': { rect: { x: 0, y: 8806, width: 375, height: 378 } },
+  'home-contact-container': { rect: { x: 16, y: 49, width: 343, height: 280 } },
+  'home-contact-copy': { rect: { x: 0, y: 0, width: 343, height: 200 } },
+  'home-contact-label': { rect: { x: 0, y: 0, width: 200, height: 28 } },
+  'home-contact-title': { rect: { x: 0, y: 42, width: 343, height: 96 } },
+  'home-contact-description': { rect: { x: 0, y: 162, width: 343, height: 58 } },
+  'home-contact-actions': { rect: { x: 0, y: 224, width: 343, height: 56 } },
+  'home-contact-primary': { rect: { x: 0, y: 0, width: 180, height: 44 } },
+  'home-contact-phone': { rect: { x: 0, y: 56, width: 220, height: 44 } },
+};
+
+const ZH_HANT_HOME_TABLET_OVERRIDES: Record<string, HomeResponsiveOverride> = {
+  'home-insights-root': { rect: { x: 16, y: 692, width: 736, height: 1680 } },
+  'home-insights-container': { rect: { x: 31, y: 92, width: 675, height: 1495 } },
+  'home-insights-label': { rect: { x: 0, y: 8, width: 131, height: 21 } },
+  'home-insights-title': { rect: { x: 0, y: 39, width: 675, height: 60 } },
+  'home-insights-description': { rect: { x: 0, y: 118, width: 675, height: 27 } },
+  'home-insights-divider': { rect: { x: 0, y: 185, width: 675, height: 12 } },
+  'home-insights-divider-mark': { rect: { x: 310, y: 0, width: 54, height: 12 } },
+  'home-insights-grid': { rect: { x: 0, y: 229, width: 675, height: 1188 } },
+  'home-insights-featured': { rect: { x: 0, y: 20, width: 675, height: 646 } },
+  'home-insights-featured-media': { rect: { x: 0, y: 0, width: 675, height: 420 } },
+  'home-insights-featured-image': { rect: { x: 0, y: 0, width: 675, height: 420 } },
+  'home-insights-featured-category': { rect: { x: 16, y: 16, width: 95, height: 31 } },
+  'home-insights-featured-body': { rect: { x: 0, y: 421, width: 675, height: 223 } },
+  'home-insights-featured-meta': { rect: { x: 22, y: 22, width: 629, height: 20 } },
+  'home-insights-featured-date': { rect: { x: 0, y: 0, width: 120, height: 20 } },
+  'home-insights-featured-readtime': { rect: { x: 612, y: 0, width: 17, height: 20 } },
+  'home-insights-featured-byline': { rect: { x: 22, y: 51, width: 200, height: 21 } },
+  'home-insights-featured-title': { rect: { x: 22, y: 83, width: 629, height: 33 } },
+  'home-insights-featured-summary': { rect: { x: 22, y: 126, width: 629, height: 28 } },
+  'home-insights-featured-link': { rect: { x: 22, y: 171, width: 180, height: 28 } },
+  'home-insights-list-wrap': { rect: { x: 0, y: 704, width: 675, height: 504 } },
+  'home-insights-controls': { rect: { x: 17, y: 16, width: 641, height: 46 } },
+  'home-insights-prev': { rect: { x: 0, y: 0, width: 54, height: 34 } },
+  'home-insights-page-indicator': { rect: { x: 63, y: 6, width: 514, height: 21 } },
+  'home-insights-next': { rect: { x: 587, y: 0, width: 54, height: 34 } },
+  'home-insights-list': { rect: { x: 17, y: 65, width: 641, height: 435 } },
+  'home-insights-view-all': { rect: { x: 264, y: 1449, width: 145, height: 47 } },
+  'home-services-root': { rect: { x: 16, y: 2384, width: 736, height: 1166 } },
+  'home-services-container': { rect: { x: 31, y: 92, width: 675, height: 980 } },
+  'home-services-label': { rect: { x: 0, y: 8, width: 132, height: 21 } },
+  'home-services-title': { rect: { x: 0, y: 47, width: 675, height: 60 } },
+  'home-services-description': { rect: { x: 0, y: 126, width: 675, height: 27 } },
+  'home-services-divider': { rect: { x: 0, y: 185, width: 675, height: 12 } },
+  'home-services-divider-mark': { rect: { x: 310, y: 0, width: 54, height: 12 } },
+  'home-services-list': { rect: { x: 0, y: 229, width: 675, height: 750 } },
+  'home-attorney-root': { rect: { x: 16, y: 3562, width: 736, height: 1155 } },
+  'home-attorney-image-wrap': { rect: { x: 158, y: 92, width: 420, height: 560 } },
+  'home-attorney-image': { rect: { x: 0, y: 0, width: 420, height: 560 } },
+  'home-attorney-badge': { rect: { x: 24, y: 432, width: 372, height: 92 } },
+  'home-attorney-content': { rect: { x: 0, y: 652, width: 736, height: 411 } },
+  'home-attorney-label': { rect: { x: 31, y: 32, width: 180, height: 28 } },
+  'home-attorney-title': { rect: { x: 31, y: 76, width: 675, height: 96 } },
+  'home-attorney-divider': { rect: { x: 31, y: 188, width: 80, height: 4 } },
+  'home-attorney-intro-1': { rect: { x: 31, y: 216, width: 675, height: 58 } },
+  'home-attorney-intro-2': { rect: { x: 31, y: 286, width: 675, height: 58 } },
+  'home-attorney-summary': { rect: { x: 31, y: 356, width: 675, height: 82 } },
+  'home-attorney-contact-line': { rect: { x: 31, y: 452, width: 675, height: 40 } },
+  'home-attorney-cta': { rect: { x: 31, y: 516, width: 220, height: 28 } },
+  'home-case-results-root': { rect: { x: 16, y: 4729, width: 736, height: 631 } },
+  'home-case-results-content': { rect: { x: 1, y: 92, width: 734, height: 445 } },
+  'home-case-results-label': { rect: { x: 32, y: 32, width: 400, height: 40 } },
+  'home-case-results-title': { rect: { x: 32, y: 82, width: 670, height: 120 } },
+  'home-case-results-divider': { rect: { x: 32, y: 212, width: 80, height: 4 } },
+  'home-case-results-desc': { rect: { x: 32, y: 232, width: 670, height: 80 } },
+  'home-case-results-summary': { rect: { x: 32, y: 322, width: 670, height: 60 } },
+  'home-case-results-cta': { rect: { x: 32, y: 392, width: 200, height: 36 } },
+  'home-stats-root': { rect: { x: 16, y: 5372, width: 736, height: 610 } },
+  'home-stats-container': { rect: { x: 31, y: 92, width: 675, height: 424 } },
+  'home-stats-label': { rect: { x: 0, y: 8, width: 180, height: 28 } },
+  'home-stats-title': { rect: { x: 0, y: 47, width: 675, height: 60 } },
+  'home-stats-description': { rect: { x: 0, y: 126, width: 675, height: 64 } },
+  'home-stats-grid': { rect: { x: 0, y: 212, width: 675, height: 212 } },
+  'home-faq-root': { rect: { x: 16, y: 5994, width: 736, height: 1250 } },
+  'home-faq-container': { rect: { x: 31, y: 92, width: 675, height: 1066 } },
+  'home-faq-label': { rect: { x: 0, y: 0, width: 120, height: 28 } },
+  'home-faq-title': { rect: { x: 0, y: 40, width: 675, height: 54 } },
+  'home-faq-list': { rect: { x: 0, y: 126, width: 675, height: 939 } },
+  'home-offices-root': { rect: { x: 16, y: 7256, width: 736, height: 1064 } },
+  'home-offices-container': { rect: { x: 31, y: 92, width: 675, height: 880 } },
+  'home-offices-label': { rect: { x: 0, y: 8, width: 180, height: 28 } },
+  'home-offices-title': { rect: { x: 0, y: 47, width: 675, height: 60 } },
+  'home-offices-tabs': { rect: { x: 0, y: 126, width: 675, height: 46 } },
+  'home-contact-root': { rect: { x: 16, y: 8332, width: 736, height: 419 } },
+  'home-contact-container': { rect: { x: 31, y: 92, width: 675, height: 232 } },
+  'home-contact-copy': { rect: { x: 0, y: 0, width: 675, height: 153 } },
+  'home-contact-label': { rect: { x: 0, y: 0, width: 200, height: 28 } },
+  'home-contact-title': { rect: { x: 0, y: 42, width: 675, height: 56 } },
+  'home-contact-description': { rect: { x: 0, y: 114, width: 675, height: 58 } },
+  'home-contact-actions': { rect: { x: 0, y: 186, width: 675, height: 47 } },
+  'home-contact-primary': { rect: { x: 0, y: 0, width: 180, height: 44 } },
+  'home-contact-phone': { rect: { x: 194, y: 0, width: 220, height: 44 } },
+};
+
+function mergeResponsiveOverride(
+  node: BuilderCanvasNode,
+  viewport: HomeResponsiveViewport,
+  override: HomeResponsiveOverride,
+): void {
+  const previousResponsive = node.responsive ?? {};
+  const previousViewport = previousResponsive[viewport] ?? {};
+  const mergedOverride: HomeResponsiveOverride = {
+    ...previousViewport,
+    ...override,
+    rect: {
+      ...(previousViewport.rect ?? {}),
+      ...(override.rect ?? {}),
+    },
+  };
+  node.responsive = {
+    ...previousResponsive,
+    [viewport]: mergedOverride,
+  };
+}
+
+function serviceResponsiveOverride(
+  nodeId: string,
+  viewport: HomeResponsiveViewport,
+): HomeResponsiveOverride | null {
+  const isTablet = viewport === 'tablet';
+  const aliasMatch = /^home-services-card-(\d+)-alias-\d+$/.exec(nodeId);
+  if (aliasMatch) {
+    const index = Number(aliasMatch[1]);
+    const step = isTablet ? 130 : 162;
+    return { rect: { x: 0, y: Math.max(0, (index * step) - 72), width: 4, height: 4 } };
+  }
+
+  const cardMatch = /^home-services-card-(\d+)$/.exec(nodeId);
+  if (cardMatch) {
+    const index = Number(cardMatch[1]);
+    return isTablet
+      ? { rect: { x: 0, y: index * 130, width: 675, height: 98 } }
+      : { rect: { x: 0, y: index * 162, width: 308, height: 130 } };
+  }
+
+  if (/^home-services-card-\d+-toggle$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 675, height: 98 } }
+      : { rect: { x: 0, y: 0, width: 308, height: 130 } };
+  }
+  if (/^home-services-card-\d+-header$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 24, y: 20, width: 560, height: 56 } }
+      : { rect: { x: 24, y: 20, width: 240, height: 90 } };
+  }
+  if (/^home-services-card-\d+-icon$/.test(nodeId)) return { rect: { x: 0, y: 0, width: 46, height: 46 } };
+  if (/^home-services-card-\d+-icon-svg$/.test(nodeId)) return { rect: { x: 11, y: 11, width: 24, height: 24 } };
+  if (/^home-services-card-\d+-title$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 58, y: 16, width: 520, height: 25 } }
+      : { rect: { x: 58, y: 4, width: 206, height: 52 } };
+  }
+  if (/^home-services-card-\d+-chevron$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 629, y: 33, width: 20, height: 29 } }
+      : { rect: { x: 272, y: 33, width: 20, height: 29 } };
+  }
+  if (/^home-services-card-\d+-body$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 97, width: 675, height: COLLAPSED_RESPONSIVE_RECT_SIZE } }
+      : { rect: { x: 0, y: 97, width: 308, height: COLLAPSED_RESPONSIVE_RECT_SIZE } };
+  }
+  if (/^home-services-card-\d+-description$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 24, y: 0, width: 625, height: 82 } }
+      : { rect: { x: 24, y: 0, width: 260, height: 54 } };
+  }
+  if (/^home-services-card-\d+-(?:checklist|columns|columns-list|more|detail-\d+|column-\d+|columns-label)$/.test(nodeId)) {
+    return { rect: { x: 24, y: 0, width: COLLAPSED_RESPONSIVE_RECT_SIZE, height: COLLAPSED_RESPONSIVE_RECT_SIZE } };
+  }
+
+  return null;
+}
+
+function faqResponsiveOverride(
+  nodeId: string,
+  viewport: HomeResponsiveViewport,
+): HomeResponsiveOverride | null {
+  const isTablet = viewport === 'tablet';
+  const itemMatch = /^home-faq-item-(\d+)$/.exec(nodeId);
+  if (itemMatch) {
+    const index = Number(itemMatch[1]);
+    return isTablet
+      ? { rect: { x: 0, y: index * 71, width: 675, height: 60 } }
+      : {
+          rect: {
+            x: 0,
+            y: FAQ_MOBILE_ITEM_TOPS[index] ?? index * 99,
+            width: 308,
+            height: FAQ_MOBILE_ITEM_HEIGHTS[index] ?? 87,
+          },
+        };
+  }
+  if (/^home-faq-item-\d+-question$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 675, height: 60 } }
+      : { rect: { x: 0, y: 0, width: 343, height: 60 } };
+  }
+  if (/^home-faq-item-\d+-question-text$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 16, y: 18, width: 613, height: 24 } }
+      : { rect: { x: 16, y: 18, width: 291, height: 24 } };
+  }
+  if (/^home-faq-item-\d+-arrow$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 639, y: 18, width: 20, height: 20 } }
+      : { rect: { x: 307, y: 20, width: 20, height: 20 } };
+  }
+  if (/^home-faq-item-\d+-answer-wrap$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 16, y: 60, width: 643, height: COLLAPSED_RESPONSIVE_RECT_SIZE } }
+      : { rect: { x: 16, y: 60, width: 311, height: COLLAPSED_RESPONSIVE_RECT_SIZE } };
+  }
+  if (/^home-faq-item-\d+-answer$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 643, height: COLLAPSED_RESPONSIVE_RECT_SIZE } }
+      : { rect: { x: 0, y: 0, width: 311, height: COLLAPSED_RESPONSIVE_RECT_SIZE } };
+  }
+
+  return null;
+}
+
+function insightsResponsiveOverride(
+  nodeId: string,
+  viewport: HomeResponsiveViewport,
+): HomeResponsiveOverride | null {
+  const isTablet = viewport === 'tablet';
+  const itemMatch = /^home-insights-item-(\d+)$/.exec(nodeId);
+  if (itemMatch) {
+    const index = Number(itemMatch[1]);
+    return isTablet
+      ? { rect: { x: 0, y: index * 151, width: 641, height: 133 } }
+      : { rect: { x: 0, y: index * 414, width: 274, height: 414 } };
+  }
+  if (/^home-insights-item-\d+-thumb$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 128, height: 96 } }
+      : { rect: { x: 0, y: 0, width: 274, height: 217 } };
+  }
+  if (/^home-insights-item-\d+-image$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 128, height: 85 } }
+      : { rect: { x: 0, y: 0, width: 274, height: 192 } };
+  }
+  if (/^home-insights-item-\d+-badge$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 12, y: 56, width: 104, height: 28 } }
+      : { rect: { x: 12, y: 174, width: 104, height: 28 } };
+  }
+  if (/^home-insights-item-\d+-copy$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 144, y: 0, width: 497, height: 114 } }
+      : { rect: { x: 0, y: 232, width: 274, height: 162 } };
+  }
+  if (/^home-insights-item-\d+-meta$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 497, height: 20 } }
+      : { rect: { x: 0, y: 0, width: 274, height: 44 } };
+  }
+  if (/^home-insights-item-\d+-date$/.test(nodeId)) return { rect: { x: 0, y: 0, width: 120, height: 20 } };
+  if (/^home-insights-item-\d+-readtime$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 419, y: 0, width: 78, height: 20 } }
+      : { rect: { x: 196, y: 0, width: 78, height: 20 } };
+  }
+  if (/^home-insights-item-\d+-byline$/.test(nodeId)) return { rect: { x: 0, y: 28, width: 190, height: 21 } };
+  if (/^home-insights-item-\d+-title$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 60, width: 497, height: 24 } }
+      : { rect: { x: 0, y: 61, width: 274, height: 48 } };
+  }
+  if (/^home-insights-item-\d+-summary$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 90, width: 497, height: 23 } }
+      : { rect: { x: 0, y: 117, width: 274, height: 47 } };
+  }
+
+  return null;
+}
+
+function officesResponsiveOverride(
+  nodeId: string,
+  viewport: HomeResponsiveViewport,
+): HomeResponsiveOverride | null {
+  const isTablet = viewport === 'tablet';
+  const tabMatch = /^home-offices-tab-(\d+)$/.exec(nodeId);
+  if (tabMatch) {
+    const index = Number(tabMatch[1]);
+    return isTablet
+      ? { rect: { x: index * 118, y: 0, width: 104, height: 32 } }
+      : { rect: { x: index * 104, y: 0, width: 96, height: 32 } };
+  }
+  if (/^home-offices-layout-\d+$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 192, width: 675, height: 689 } }
+      : { rect: { x: 0, y: 170, width: 308, height: 652 } };
+  }
+  if (/^home-offices-layout-\d+-map$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 675, height: 371 } }
+      : { rect: { x: 0, y: 0, width: 308, height: 340 } };
+  }
+  if (/^home-offices-layout-\d+-card$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 387, width: 675, height: 301 } }
+      : { rect: { x: 0, y: 356, width: 308, height: 296 } };
+  }
+  if (/^home-offices-layout-\d+-card-label$/.test(nodeId)) return { rect: { x: 24, y: 24, width: 120, height: 24 } };
+  if (/^home-offices-layout-\d+-card-title$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 24, y: 66, width: 240, height: 34 } }
+      : { rect: { x: 24, y: 66, width: 260, height: 34 } };
+  }
+  if (/^home-offices-layout-\d+-card-address$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 24, y: 116, width: 627, height: 58 } }
+      : { rect: { x: 24, y: 116, width: 260, height: 58 } };
+  }
+  if (/^home-offices-layout-\d+-card-phone$/.test(nodeId)) return { rect: { x: 24, y: 188, width: 220, height: 24 } };
+  if (/^home-offices-layout-\d+-card-fax$/.test(nodeId)) return { rect: { x: 24, y: 222, width: 220, height: 24 } };
+  if (/^home-offices-layout-\d+-card-map-link$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 24, y: 278, width: 280, height: 40 } }
+      : { rect: { x: 24, y: 278, width: 260, height: 40 } };
+  }
+
+  return null;
+}
+
+function statsResponsiveOverride(
+  nodeId: string,
+  viewport: HomeResponsiveViewport,
+): HomeResponsiveOverride | null {
+  const isTablet = viewport === 'tablet';
+  const cardMatch = /^home-stats-card-(\d+)$/.exec(nodeId);
+  if (cardMatch) {
+    const index = Number(cardMatch[1]);
+    return isTablet
+      ? {
+          rect: {
+            x: (index % 2) * 343,
+            y: Math.floor(index / 2) * 112,
+            width: 331,
+            height: 100,
+          },
+        }
+      : { rect: { x: 0, y: 20 + (index * 107), width: 308, height: 95 } };
+  }
+  if (/^home-stats-number-\d+$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 16, y: 16, width: 180, height: 38 } }
+      : { rect: { x: 24, y: 16, width: 180, height: 38 } };
+  }
+  if (/^home-stats-label-\d+$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 16, y: 60, width: 299, height: 34 } }
+      : { rect: { x: 24, y: 56, width: 260, height: 34 } };
+  }
+  if (/^home-stats-progress-\d+$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 16, y: 88, width: 299, height: 1 } }
+      : { rect: { x: 24, y: 88, width: 260, height: 1 } };
+  }
+  if (/^home-stats-progress-bar-\d+$/.test(nodeId)) {
+    return isTablet
+      ? { rect: { x: 0, y: 0, width: 299, height: 1 } }
+      : { rect: { x: 0, y: 0, width: 260, height: 1 } };
+  }
+
+  return null;
+}
+
+function getZhHantHomeResponsiveOverride(
+  nodeId: string,
+  viewport: HomeResponsiveViewport,
+): HomeResponsiveOverride | null {
+  const explicit = viewport === 'tablet'
+    ? ZH_HANT_HOME_TABLET_OVERRIDES[nodeId]
+    : ZH_HANT_HOME_MOBILE_OVERRIDES[nodeId];
+  return explicit
+    ?? insightsResponsiveOverride(nodeId, viewport)
+    ?? serviceResponsiveOverride(nodeId, viewport)
+    ?? statsResponsiveOverride(nodeId, viewport)
+    ?? faqResponsiveOverride(nodeId, viewport)
+    ?? officesResponsiveOverride(nodeId, viewport);
+}
+
+function repairZhHantDecomposedHomeResponsiveLayout(nodes: BuilderCanvasNode[], locale: Locale): void {
+  if (locale !== 'zh-hant') return;
+  if (!nodes.some((node) => node.id === 'home-insights-root')) return;
+
+  nodes.forEach((node) => {
+    const tablet = getZhHantHomeResponsiveOverride(node.id, 'tablet');
+    if (tablet) mergeResponsiveOverride(node, 'tablet', tablet);
+    const mobile = getZhHantHomeResponsiveOverride(node.id, 'mobile');
+    if (mobile) mergeResponsiveOverride(node, 'mobile', mobile);
+  });
+}
+
 function createZhHantHeroOverlayNode(height: number): BuilderCanvasNode {
   return {
     id: 'home-hero-overlay',
@@ -494,6 +981,20 @@ function createCompositeNode(
   };
 }
 
+function createZhHantMobileParityCompositeNodes(locale: Locale, zBase: number): BuilderCanvasNode[] {
+  if (locale !== 'zh-hant') return [];
+
+  let y = 0;
+  return createCompositeHomeSections(locale).map((spec, index) => {
+    const node = createCompositeNode(spec, y, zBase + index, locale);
+    y += spec.height;
+    return {
+      ...node,
+      anchorName: `mobile-parity-${spec.id}`,
+    };
+  });
+}
+
 function buildHomeDocument(locale: Locale, sections: HomeSectionSpec[]): BuilderCanvasDocument {
   const updatedAt = new Date().toISOString();
   const nodes: BuilderCanvasNode[] = [];
@@ -523,6 +1024,9 @@ function buildHomeDocument(locale: Locale, sections: HomeSectionSpec[]): Builder
   });
   if (sections.some((spec) => spec.kind === 'decomposed')) {
     responsivize(nodes);
+    repairZhHantDecomposedHomeResponsiveLayout(nodes, locale);
+    const mobileParityNodes = createZhHantMobileParityCompositeNodes(locale, zBase);
+    nodes.push(...mobileParityNodes);
   }
 
   return {

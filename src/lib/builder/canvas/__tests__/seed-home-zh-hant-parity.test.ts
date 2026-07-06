@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { createHomePageCanvasDocumentDecomposed } from '../seed-home';
+import { computeTopLevelFlowSectionMetrics } from '../flow';
 import type { BuilderCanvasNode } from '../types';
+
+type ResponsiveRect = NonNullable<NonNullable<NonNullable<BuilderCanvasNode['responsive']>['mobile']>['rect']>;
 
 function textNodeText(node: BuilderCanvasNode | undefined): string | undefined {
   if (node?.kind !== 'text') return undefined;
@@ -10,6 +13,24 @@ function textNodeText(node: BuilderCanvasNode | undefined): string | undefined {
 function nodeContentLabel(node: BuilderCanvasNode | undefined): string | undefined {
   const value = node?.content && 'label' in node.content ? node.content.label : undefined;
   return typeof value === 'string' ? value : undefined;
+}
+
+function requireNode(nodesById: ReadonlyMap<string, BuilderCanvasNode>, id: string): BuilderCanvasNode {
+  const node = nodesById.get(id);
+  if (!node) throw new Error(`Expected ${id} to exist.`);
+  return node;
+}
+
+function mobileRect(node: BuilderCanvasNode): ResponsiveRect {
+  const rect = node.responsive?.mobile?.rect;
+  if (!rect) throw new Error(`Expected ${node.id} to have a mobile rect.`);
+  return rect;
+}
+
+function tabletRect(node: BuilderCanvasNode): ResponsiveRect {
+  const rect = node.responsive?.tablet?.rect;
+  if (!rect) throw new Error(`Expected ${node.id} to have a tablet rect.`);
+  return rect;
 }
 
 describe('zh-hant decomposed home parity nodes', () => {
@@ -79,5 +100,35 @@ describe('zh-hant decomposed home parity nodes', () => {
     expect(nodesById.get('home-offices-layout-0-card-map-link')?.content).toMatchObject({
       label: '在 Google 地圖查看 (照片·評論)',
     });
+  });
+
+  it('keeps inactive office tab layouts in one mobile/tablet slot instead of stacking them into page height', () => {
+    const doc = createHomePageCanvasDocumentDecomposed('zh-hant');
+    const nodesById = new Map(doc.nodes.map((node) => [node.id, node]));
+    const layoutRects = [0, 1, 2].map((index) => ({
+      mobile: mobileRect(requireNode(nodesById, `home-offices-layout-${index}`)),
+      tablet: tabletRect(requireNode(nodesById, `home-offices-layout-${index}`)),
+    }));
+    const mobileMetrics = computeTopLevelFlowSectionMetrics(doc.nodes, 'mobile');
+    const tabletMetrics = computeTopLevelFlowSectionMetrics(doc.nodes, 'tablet');
+    const contact = requireNode(nodesById, 'home-contact-root');
+    const contactMobile = mobileRect(contact);
+    if (typeof contactMobile.y !== 'number' || typeof contactMobile.height !== 'number') {
+      throw new Error('Expected home-contact-root mobile rect to include y and height.');
+    }
+
+    expect(layoutRects.map(({ mobile }) => mobile.y)).toEqual([
+      layoutRects[0].mobile.y,
+      layoutRects[0].mobile.y,
+      layoutRects[0].mobile.y,
+    ]);
+    expect(layoutRects.map(({ tablet }) => tablet.y)).toEqual([
+      layoutRects[0].tablet.y,
+      layoutRects[0].tablet.y,
+      layoutRects[0].tablet.y,
+    ]);
+    expect(mobileMetrics.get('home-offices-root')?.minHeight).toBeLessThanOrEqual(980);
+    expect(tabletMetrics.get('home-offices-root')?.minHeight).toBeLessThanOrEqual(1120);
+    expect(contactMobile.y + contactMobile.height).toBeLessThanOrEqual(9800);
   });
 });

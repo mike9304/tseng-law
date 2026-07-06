@@ -1014,6 +1014,12 @@ export async function PublishedSitePageView({
         .builder-pub-node[data-lightbox-target] {
           cursor: pointer;
         }
+        .builder-pub-node[data-anchor^='mobile-parity-home-'] {
+          display: none !important;
+        }
+        .builder-pub-node[data-anchor='mobile-parity-about'] {
+          display: none !important;
+        }
         .builder-pub-node[data-builder-hover='true']:hover {
           background: var(--builder-hover-background) !important;
           border-color: var(--builder-hover-border-color) !important;
@@ -1502,6 +1508,78 @@ export async function PublishedSitePageView({
             margin-left: -16px !important;
             margin-right: -16px !important;
           }
+          ${locale === 'zh-hant' && !slugPath ? `
+          .builder-pub-main.builder-pub-main .builder-pub-node[data-node-id='home-hero-root'] {
+            margin-top: -111px !important;
+          }
+          .builder-pub-main .builder-pub-node[data-anchor^='mobile-parity-home-'] {
+            display: block !important;
+          }
+          .builder-pub-main .builder-pub-node[data-anchor='mobile-parity-home-insights'] {
+            margin-bottom: -4px !important;
+          }
+          .builder-pub-main .builder-pub-node[data-anchor='mobile-parity-home-contact'] {
+            margin-bottom: -3px !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id='home-hero-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-insights-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-services-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-attorney-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-case-results-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-stats-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-faq-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-offices-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-contact-root'] {
+            display: none !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id='home-hero-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-insights-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-services-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-attorney-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-case-results-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-stats-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-faq-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-offices-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='home-contact-root'] {
+            width: calc(100% + 32px) !important;
+            max-width: none !important;
+            margin-left: -16px !important;
+            margin-right: -16px !important;
+          }
+          .builder-pub-main .builder-pub-node[data-builder-section-template='insights'] .builder-pub-node[data-node-id='home-insights-featured'] {
+            position: absolute !important;
+            left: 0 !important;
+            top: 20px !important;
+            width: 343px !important;
+            height: 473px !important;
+            min-height: 473px !important;
+          }
+          .builder-pub-main .builder-pub-node[data-builder-section-template='insights'] .builder-pub-node[data-node-id='home-insights-list-wrap'] {
+            position: absolute !important;
+            left: 0 !important;
+            top: 532px !important;
+            width: 343px !important;
+            height: 1577px !important;
+            min-height: 1577px !important;
+          }
+          ` : ''}
+          ${locale === 'zh-hant' && slugPath === 'about' ? `
+          .builder-pub-main .builder-pub-node[data-anchor='mobile-parity-about'] {
+            display: block !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-anchor='mobile-parity-about'] {
+            width: calc(100% + 32px) !important;
+            max-width: none !important;
+            margin-left: -16px !important;
+            margin-right: -16px !important;
+          }
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-page-header-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-firm-intro-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-attorney-root'],
+          .builder-pub-main > .builder-pub-node[data-node-id='page-about-contact-root'] {
+            display: none !important;
+          }
+          ` : ''}
           .builder-pub-main > .builder-pub-node[data-node-id='page-about-page-header-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-lawyers-page-header-root'],
           .builder-pub-main > .builder-pub-node[data-node-id='page-reviews-page-header-root'],
